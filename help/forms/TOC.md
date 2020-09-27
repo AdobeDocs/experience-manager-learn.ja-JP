@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '836'
 ht-degree: 3%
 
 ---
@@ -30,16 +30,17 @@ ht-degree: 3%
    + [アセットパネルの設定](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [カスタム関数とコードエディターの使用](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + フォーム送信の処理 {#handling-af-form-submissions}
-   + [レビューワークフローの作成](handling-form-submissions/create-workflow-to-review.md)
-   + [ワークフローをトリガーするアダプティブフォームの設定](handling-form-submissions/trigger-workflow-on-form-submission.md)
+   + [レビューワークフローの作成](handling-form-submissions/creating-a-review-workflow.md)
+   + [ワークフローをトリガーするアダプティブフォームの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [「ありがとうございます」ページの表示](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [外部エンドポイントに送信する](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [電子メールの送信](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+   + [有料休暇リクエストのワークフロー](handling-form-submissions/paid-time-off-request-workflow.md)
    + [AEMワークフローをトリガーするアダプティブフォームの設定 — ビデオ](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
-   + [PTO AEMワークフロー](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [タスクの割り当て通知のカスタマイズ](handling-form-submissions/customize-assign-task-notification.md)
 + 便利な統合{#some-useful-integrations}
    + [2要素認証](some-useful-integrations/two-factor-authentication.md)
+
 + アダプティブフォーム {#adaptive-forms}
    + [WindowsでのAEM Formsのインストール](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -169,17 +170,17 @@ ht-degree: 3%
    + [ドキュメントの認証](document-services/certifying-documents-aem-forms-tutorial.md)
 + 印刷チャネル用の対話型通信 {#ic-print-channel-tutorial}
    + [概要](ic-print-channel-tutorial/introduction.md)
-   + [Tomcatの設定](ic-print-channel-tutorial/partone.md)
-   + [データソースの作成](ic-print-channel-tutorial/parttwo.md)
-   + [フォームデータモデルを作成](ic-print-channel-tutorial/partthree.md)
-   + [Formsデザイナーを使用したXDPレイアウトの作成](ic-print-channel-tutorial/partfour.md)
-   + [ドキュメントフラグメントを作成](ic-print-channel-tutorial/partfive.md)
-   + [印刷チャネルドキュメントの作成](ic-print-channel-tutorial/partsix.md)
-   + [ターゲット領域へのコンテンツの追加](ic-print-channel-tutorial/partseven.md)
-   + [折れ線グラフの設定](ic-print-channel-tutorial/parteight.md)
-   + [印刷チャネルへのテーブルの追加](ic-print-channel-tutorial/partnine.md)
-   + [監視フォルダーを使用した印刷ドキュメントの生成](ic-print-channel-tutorial/partten.md)
-   + [フォーム送信時にエージェントUIを開く](ic-print-channel-tutorial/parteleven.md)
+   + [Tomcatの設定](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [データソースの作成](ic-print-channel-tutorial/create-data-source.md)
+   + [フォームデータモデルを作成](ic-print-channel-tutorial/create-form-data-model.md)
+   + [Formsデザイナーを使用したXDPレイアウトの作成](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [ドキュメントフラグメントを作成](ic-print-channel-tutorial/create-document-fragment.md)
+   + [印刷チャネルドキュメントの作成](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [ターゲット領域へのコンテンツの追加](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [折れ線グラフの設定](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [印刷チャネルへのテーブルの追加](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [監視フォルダーを使用したドキュメントの生成](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [フォーム送信時にエージェントUIを開く](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + インタラクティブコミュニケーション {#interactive-communications}
    + [Batch APIの使用](interactive-communications/batch-generation-interactive-communications.md)
    + [マルチシリーズグラフ](interactive-communications/multiseriescharts.md)
