@@ -1,0 +1,39 @@
+---
+title: 貢献度セクションへのテーブルの追加
+seo-title: 貢献度セクションへのテーブルの追加
+description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
+seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
+uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
+feature: interactive-communication
+topics: development
+audience: developer
+doc-type: tutorial
+activity: implement
+version: 6.4,6.5
+kt: 5994
+thumbnail: 37953.jpg
+discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
+translation-type: tm+mt
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
+
+---
+
+
+# 貢献度セクションへのテーブルの追加
+
+この部分では、貢献度セクションにテーブルを追加します。
+印刷チャネルドキュメントでの表の使用の詳細については、 [「印刷チャネルでの表の使用](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 」を参照してください。
+
+AEM Formsにログインし、Adobe Experience Manager/Forms/Forms&amp;ドキュメントに移動します。
+
+401KStatementPrintフォルダを開きます。
+
+401KStatementPrintを編集モードで開きます。
+
+次のビデオでは、印刷チャネルドキュメントでテーブルを設定する手順について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/22387t1?quality=9&learn=on)
+
