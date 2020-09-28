@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 1%
@@ -61,7 +61,7 @@ AEMのキーストアに証明書を追加するには、次の手順に従い�
    **以下のスクリーンショットに示すように、DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
    ![User-Mapper](assets/user-mapper-service.PNG)
 * [サンプルアダプティブフォームの読み込み](assets/certify-pdf-af.zip)
-* [クライアントライブラリとカスタム送信のインポート](assets/certify-document-assets.zip)
+* [カスタム送信の読み込みとインストール](assets/custom-submit-certify.zip)
 * [アダプティブフォームを開く](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * 認証が必要なPDFドキュメントをアップロードする
    **オプション** -ドキュメントの認証に使用する署名フィールドを指定します
