@@ -1,0 +1,95 @@
+---
+title: Adobe Experience Manager as Cloud Service のチュートリアル
+description: Cloud ServiceとしてのAdobe Experience Manager(AEM)向けのチュートリアルの集まり
+sub-product: サイト， cloud manager，基盤，アセット
+kt: 3289
+translation-type: tm+mt
+source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 11%
+
+---
+
+
+# 概要 {#overview}
+
+Adobe Experience Manager (AEM) は Cloud Service として利用可能になりました。AEMは、Cloud Serviceとして次世代のExperience Manager製品ラインを導入し、過去の投資や革新性に基づいて構築され、すべての使用事例や機能を保持し、拡張しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+
+## 新機能
+
+* **[Asset Compute microservicesの拡張機能（チュートリアル）](./asset-compute/overview.md)**
+
+   <br>
+   *アセット計算ワーカーを開発し、カスタムアセットレンディションを生成する方法を学びます。*
+
+* **[Cloud ServiceとしてのAEMへのアクセスの設定（チュートリアル）](./accessing/overview.md)**
+
+   <br>
+   *AEMにアクセスできるように、Adobe Admin ConsoleでIMSユーザーを設定する方法を説明します。*
+
+* **[Cloud ServiceとしてのAEMのデバッグ（チュートリアル）](./debugging/cloud-service/overview.md)**
+
+   <br>
+   *AEMをCloud Serviceとしてデバッグする方法の確認*
+
+* **[AEM SDKのデバッグ（チュートリアル）](./debugging/aem-sdk-local-quickstart/overview.md)**
+
+   <br>
+   *Cloud ServiceSDKのローカルクイックスタートとして、AEMでのアプリケーションのデバッグに使用する様々なツールを参照します。*
+
+* **[ローカル開発環境の設定（チュートリアル）](./local-development-environment/overview.md)**
+
+   <br>
+   *Cloud Service開発としてAEM用にローカル開発マシンを設定する方法を学びます。*
+
+## スタッフの選考
+
+<table>
+   <td>
+      <a href="./accessing/overview.md">
+      <img alt="Cloud ServiceとしてのAEMへのアクセスの設定" src="./assets/overview/staff-pick__accessing.png"/>
+      </a>
+      <div>
+         <a href="./accessing/overview.md">
+         <strong>AEMへのアクセスの設定</strong>
+         </a>
+      </div>
+      <p>
+         <em>AEMにアクセスするように、Adobe Admin ConsoleでIMSユーザーを設定します。</em>
+      <p>
+   </td>   
+   <td>
+      <a href="./local-development-environment/overview.md">
+      <img alt="ローカル開発環境のセットアップチュートリアル" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      </a>
+      <div>
+         <a href="./local-development-environment/overview.md">
+         <strong>ローカル開発環境のセットアップチュートリアル</strong>
+         </a>
+      </div>
+      <p>
+         <em>ローカルの開発マシンを、Cloud Service開発としてAEMに対応させます。</em>
+      <p>
+   </td>   
+   <td>
+      <a href="./debugging/aem-sdk-local-quickstart/overview.md">
+      <img alt="AEM SDKのローカルクイックスタートのデバッグ" src="./assets/overview/staff-pick__debugging.png"/>
+      </a>
+      <div>
+         <a href="./debugging/aem-sdk-local-quickstart/overview.md">
+         <strong>AEM SDKのデバッグ</strong>
+         </a>
+      </div>
+      <p>
+         <em>Cloud ServiceSDKのローカルクイックスタートとして、AEM上のアプリケーションのデバッグに使用するツールを調査します。</em>
+      <p>
+   </td>
+</table>
+
+## その他のリソース
+
+* [エクスペリエンスリーグ —Adobe Experience Managerを探検](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Cloud Service文書としてのAdobe Experience Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/landing/home.html)
