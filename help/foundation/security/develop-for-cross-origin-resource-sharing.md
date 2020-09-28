@@ -1,0 +1,129 @@
+---
+title: AEMとの接触チャネル間リソース共有(CORS)のための開発
+description: CORSを利用して、クライアント側のJavaScriptを介して外部WebアプリケーションからAEMコンテンツにアクセスする短い例です。
+version: 6.3, 6,4, 6.5
+sub-product: 基盤，コンテンツサービス，サイト
+feature: null
+topics: security, development, content-delivery
+activity: develop
+audience: developer
+doc-type: tutorial
+translation-type: tm+mt
+source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
+
+---
+
+
+# 接触チャネル間のリソース共有(CORS)のための開発
+
+クライアント側のJavaScriptを使用して外部Webアプリケーション [!DNL CORS] からAEMコンテンツにアクセスする方法の短い例です。
+
+>[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
+
+このビデオの内容：
+
+* **www.example.com** 、 `/etc/hosts`
+* **aem-publish.local** （ローカルホストを使用） `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) ( [[!DNL Python]のSimpleHTTPServerのラッパー](https://docs.python.org/2/library/simplehttpserver.html))は、ポート8000を介してHTMLページを提供しています。
+* [!DNL AEM Dispatcher] が2.4で実行され、 [!DNL Apache HTTP Web Server] に対するリバースプロキシ要求 `aem-publish.local` が実行され `localhost:4503`ています。
+
+詳しくは、AEMの「接触チャネル間のリソース共有(CORS)に [ついて」を参照してください](./understand-cross-origin-resource-sharing.md)。
+
+## www.example.comとJavaScriptの統合
+
+このウェブページには
+
+1. ボタンをクリックしたとき
+1. リクエストを [!DNL AJAX GET] 行う `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. JSON応答の `jcr:title` フォームを取得します
+1. をDOM `jcr:title` に挿入します。
+
+```xml
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>   
+</head>
+<body style="width: 960px; margin: 2rem auto; font-size: 2rem;">
+    <button style="font-size: 2rem;"
+            data="fn-getTitle">Get Title as JSON from AEM</button>
+    <pre id="title">The page title AJAX'd in from AEM will injected here</pre>
+    
+    <script>
+    $(function() { 
+        
+        /** Get Title as JSON **/
+        $('body').on('click', '[data="fn-getTitle"]', function(e) { 
+            $.get('http://aem-publish.local/content/we-retail/us/en/experience/_jcr_content.1.json', function(data) {
+                $('#title').text(data['jcr:title']);
+            },'json');
+            
+            e.preventDefault();
+            return false;
+        });
+    });
+    </script>
+</body>
+</html>
+```
+
+## OSGiファクトリ設定
+
+のOSGi設定ファクトリ [!DNL Cross-Origin Resource Sharing] は、次の場所から入手できます。
+
+* `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    alloworigin="[https://www.example.com:8000]"
+    alloworiginregexp="[]"
+    allowedpaths="[/content/we-retail/.*]"
+    exposedheaders="[]"
+    maxage="{Long}1800"
+    supportedheaders="[Origin,Accept,X-Requested-With,Content-Type,
+Access-Control-Request-Method,Access-Control-Request-Headers]"
+    supportedmethods="[GET]"
+    supportscredentials="{Boolean}false"
+/>
+```
+
+## Dispatcher configuration {#dispatcher-configuration}
+
+キャッシュされたコンテンツにヘッダーをキャッシュして提供できるようにするには、サポートするすべてのAEM発行 [!DNL CORS]`dispatcher.any` ファイルに次の設定を追加します。
+
+```
+/cache { 
+  ...
+  /headers {
+      "Access-Control-Allow-Origin",
+      "Access-Control-Expose-Headers",
+      "Access-Control-Max-Age",
+      "Access-Control-Allow-Credentials",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Headers"
+  }
+  ...
+}
+```
+
+**ファイルに変更を加えた後、Webサーバーアプリケーション** を再起動し `dispatcher.any` ます。
+
+設定の更新後、次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある場合があり `/headers` ます。
+
+## サポート資料 {#supporting-materials}
+
+* [クロス接触チャネルリソース共有ポリシーのAEM OSGi設定ファクトリ](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [SimpleHTTPServer for macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
+* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) （Windows/macOS/Linux互換）
+
+* [AEMでの接触チャネル間のリソース共有(CORS)について](./understand-cross-origin-resource-sharing.md)
+* [接触チャネル間のリソース共有(W3C)](https://www.w3.org/TR/cors/)
+* [HTTPアクセス制御(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+
