@@ -1,0 +1,44 @@
+---
+title: スマート切り抜きとAEM Assetsダイナミックメディアの使用
+seo-title: スマート切り抜きとAEM Assetsダイナミックメディアの使用
+description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
+seo-description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
+uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
+discoiquuid: e4b8534c-fa64-491f-86ec-4dbe50cd6bf7
+sub-product: dynamic-media
+feature: smart-crop, image-profiles
+topics: images, renditions, authoring
+doc-type: feature video
+audience: all
+activity: use
+version: 6.4, 6.5
+translation-type: tm+mt
+source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 13%
+
+---
+
+
+# Using Smart Crop with AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+
+スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/21519/)
+
+>[!NOTE]
+>
+>ビデオでは、AEMインスタンスがダイナミックメディアS7モードで実行されていることを前提としています。 [ダイナミックメディアを使用したAEMの設定手順については、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+
+## Adobe Experience Managerのダイナミックメディアスマート切り抜き機能には、
+
+* AEM Asset Adminは、デバイスの幅と高さに基づいて、スマート切り抜き用の画像プロファイルを簡単に作成できます。
+* スマート切り抜きは、個々のアセットに対して実行することも、フォルダー内のすべてのアセットに対して実行することもできます。
+* 見やすいように、スマート切り抜き編集レイアウトをサイズ変更できます。
+* AEMサイトのダイナミックメディアコンポーネントは、スマート切り抜きをサポートしています。
+* スマートトリミングされたアセットの公開済みURLは、ホストされたアセットを受け入れるサードパーティアプリケーションで使用できます。
+
+>[!NOTE]
+>
+>スマート切り抜きの座標は縦横比に依存します。 つまり、イメージプロファイルの各種スマート切り抜き設定で、イメージプロファイルに追加されたサイズの縦横比が同じ場合、同じ縦横比が Dynamic Media に送信されます。このため、スマート切り抜きエディタで同じ切り抜き領域が提示されます。 例えば、切り抜きの設定を100x100と200x200にすると、システムによって生成されるスマートな切り抜きと同じ画像が生成されます。
