@@ -1,0 +1,30 @@
+---
+title: AEMユーザー、グループ、権限
+description: Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、および製品プロファイルを基に構築されており、ユーザーがAEMへのカスタマイズ可能なアクセスを提供します。 AEMのグループと権限を定義する方法、およびAdobe IMSの抽象概念と連携して、AEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
+feature: users-and-groups
+topics: authentication
+version: cloud-service
+activity: setup
+audience: administrator
+doc-type: feature video
+kt: 6060
+thumbnail: 39151.jpg
+translation-type: tm+mt
+source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+workflow-type: tm+mt
+source-wordcount: '142'
+ht-degree: 14%
+
+---
+
+
+# AEMユーザー、グループ、権限
+
+Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、および製品プロファイルを基に構築されており、ユーザーがAEMへのカスタマイズ可能なアクセスを提供します。 AEMのグループと権限を定義する方法、およびAdobe IMSの抽象概念と連携して、AEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/39151/?quality=12&learn=on)
+
+## その他のリソース
+
++ [Adobe Experience Manager as a Cloud Service に対する IMS のサポート](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/security/ims-support.html)
++ [AEMが提供するユーザーグループとその権限](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
