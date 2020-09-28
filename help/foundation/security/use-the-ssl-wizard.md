@@ -1,0 +1,62 @@
+---
+title: AEMでのSSLウィザードの使用
+description: Adobe Experience ManagerのSSLセットアップウィザードを使用して、HTTPS経由で実行するAEMインスタンスを簡単にセットアップできます。
+seo-description: Adobe Experience ManagerのSSLセットアップウィザードを使用して、HTTPS経由で実行するAEMインスタンスを簡単にセットアップできます。
+version: 6.3, 6,4, 6.5
+feature: null
+topics: security, operations
+activity: use
+audience: administrator
+doc-type: technical video
+uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
+discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
+translation-type: tm+mt
+source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 0%
+
+---
+
+
+# AEMでのSSLウィザードの使用
+
+Adobe Experience ManagerのSSLセットアップウィザードを使用して、HTTPS経由で実行するAEMインスタンスを簡単にセットアップできます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
+
+>[!NOTE]
+>
+>管理対象環境の場合は、IT部門がCAの信頼できる証明書とキーを提供することが最適です。
+>
+>自己署名入り証明書は、開発目的でのみ使用します。
+
+## 秘密鍵と自己署名証明書のダウンロード
+
+次のzipには、ローカルホストでのAEM SSLの設定に必要なファイル [!DNL DER] と [!DNL CRT] ファイルが含まれています。このファイルは、ローカルでの開発を目的としています。
+
+これら [!DNL DER] と [!DNL CERT] ファイルは便宜上提供され、以下の「秘密鍵と自己署名証明書の生成」の手順に従って生成されます。
+
+必要に応じて、証明書のパスフレーズは **adminです**。
+
+localhost — 秘密鍵と自己署名証明書.zip（2028年7月に期限切れ）
+
+[証明書ファイルのダウンロード](assets/use-the-ssl-wizard/certificate.zip)
+
+## 秘密鍵と自己署名証明書の生成
+
+上記のビデオでは、自己署名入り証明書を使用したAEM作成者インスタンスでのSSLの設定と設定を説明しています。 [!DNL OpenSSL]を使用する次のコマンドは、ウィザードの手順2で使用する秘密鍵と証明書を生成できます [](https://www.openssl.org/) 。
+
+```shell
+### Create Private Key
+$ openssl genrsa -aes256 -out localhostprivate.key 4096
+
+### Generate Certificate Signing Request using private key
+$ openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
+
+### Generate the SSL certificate and sign with the private key, will expire one year from now
+$ openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
+
+### Convert Private Key to DER format - SSL wizard requires key to be in DER format
+$ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
+```
