@@ -1,0 +1,28 @@
+---
+title: AEM Formsとの関連データモデルの使用
+seo-title: AEM Formsとの関連データモデルの使用
+description: Form Data Model内の追加エンティティ間の関連付け
+seo-description: Form Data Model内の追加エンティティ間の関連付け
+uuid: 82626632-3251-4f7b-9af1-43a9161107c2
+discoiquuid: e01e9bd4-5b47-4356-9884-6968f385bb20
+feature: adaptive-forms, form-data-model
+topics: integrations
+audience: developer
+doc-type: technical video
+activity: setup
+version: 6.3,6.4,6.5
+translation-type: tm+mt
+source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+workflow-type: tm+mt
+source-wordcount: '45'
+ht-degree: 0%
+
+---
+
+
+# AEM Formsとの関連データモデルの使用{#using-association-data-models-with-aem-forms}
+
+フォームデータモデルで2つのエンティティ間の関連付けを作成する
+
+>[!VIDEO](https://video.tv.adobe.com/v/17737/?quality=9&learn=on)
+
