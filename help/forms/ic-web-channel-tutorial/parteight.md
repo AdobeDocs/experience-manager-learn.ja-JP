@@ -1,0 +1,51 @@
+---
+title: 最初の対話型通信ドキュメント用の折れ線グラフの設定
+seo-title: 最初の対話型通信ドキュメント用の折れ線グラフの設定
+description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、アカウントの進行状況パネルに折れ線グラフを追加します。
+seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、アカウントの進行状況パネルに折れ線グラフを追加します。
+uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
+feature: interactive-communication
+topics: development
+audience: developer
+doc-type: tutorial
+activity: implement
+version: 6.4,6.5
+discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
+translation-type: tm+mt
+source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+workflow-type: tm+mt
+source-wordcount: '228'
+ht-degree: 0%
+
+---
+
+
+# 最初の対話型通信ドキュメント用の折れ線グラフの設定
+
+この部分では、アカウントの進行状況パネルに折れ線グラフを追加します。
+
+AEM Formsにログインし、Adobe Experience Manager/Forms/Forms&amp;ドキュメントに移動します。
+
+401KStatementフォルダーを開きます。
+
+401KStatementを編集モードで開きます。
+
+AEM Forms6.4では、様々な種類のグラフを使用してデータを表示するのが非常に簡単になりました。 年別の残高を表示するために折れ線グラフを使用します。
+
+右側の「 **アカウントの進捗** ターゲット」領域をタップし、「+」アイコンをクリックしてコンポーネントの挿入ダイアログボックスを表示します。
+
+「グラフ」を選択して、グラフコンポーネントを挿入します。
+
+下のスクリーンショットの設定に従ってグラフコンポーネントを設定し、青いチェックマークアイコンをクリックして設定を保存します。
+
+X軸とY軸の正しいフォームデータモデル要素を選択していることを確認してください。
+
+**AEM Forms6.4の折れ線グラフの設定**
+
+![linechart64](assets/linechart.png)
+
+**AEM Forms6.5の折れ線グラフの設定**
+
+![linechart64](assets/linechart65.PNG)
+
+
