@@ -1,0 +1,65 @@
+---
+title: AEMアダプティブFormsでのCAPTCHAの使用
+seo-title: AEMアダプティブFormsでのCAPTCHAの使用
+description: AEMアダプティブFormsでのCAPTCHAの追加と使用
+seo-description: AEMアダプティブFormsでのCAPTCHAの追加と使用
+feature: adaptive-forms
+topics: integrations
+audience: developer
+doc-type: technical video
+activity: setup
+version: 6.4,6.5
+uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
+discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
+translation-type: tm+mt
+source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 9%
+
+---
+
+
+# AEMアダプティブFormsでのCAPTCHAの使用{#using-captchas-with-aem-adaptive-forms}
+
+AEMアダプティブFormsでのCAPTCHAの追加と使用
+
+この機能のライブデモへのリンクは、 [AEM Formsのサンプルページをご覧ください](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 。
+
+>[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
+
+*このビデオでは、組み込みのAEM CAPTCHAサービスとGoogleのreCAPTCHAサービスの両方を使用して、AEMアダプティブフォームにCAPTCHAを追加するプロセスについて説明します。*
+
+>[!NOTE]
+>
+>この機能はAEM 6.3以降でのみ使用できます。
+
+>[!NOTE]
+>
+>**発行インスタンスでreCaptchaを設定するには、次の手順に従います**
+>
+>オーサーインスタンスでのreCaptachの設定
+>
+>作成者インスタンスでfelix [web console](http://localhost:4502/system/console/bundles) (felix)を開く
+>
+>com.adobe.granite.crypto.fileバンドルの検索
+>
+>バンドルIDをメモしておきます。 私の場合は20です
+>
+>作成者インスタンス上のファイルシステム上のバンドルIDに移動します
+>
+>* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* HMACファイルとマスター・ファイルのコピー
+
+発行インスタンスで [Felix Webコンソール](http://localhost:4502/system/console/bundles) を開きます。 com.adobe.granite.crypto.file bundleを検索します。 バンドルIDをメモしておきます。
+発行インスタンスのファイルシステム上のバンドルIDに移動します。
+* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* 既存のHMACファイルとマスターファイルを削除します。
+* 作成者インスタンスからコピーしたHMACファイルとマスターファイルを貼り付けます。
+
+AEM公開サーバーの再起動
+
+## サポート資料 {#supporting-materials}
+
+* [Google reCAPTCHA](https://www.google.com/recaptcha)
+
