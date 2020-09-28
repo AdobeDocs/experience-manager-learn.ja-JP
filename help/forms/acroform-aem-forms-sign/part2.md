@@ -1,0 +1,35 @@
+---
+title: AEM FormsとのAcroforms
+seo-title: アダプティブフォームデータとAcroformの結合
+feature: adaptive-forms
+topics: development
+audience: developer
+doc-type: tutorial
+activity: implement
+version: 6.3,6.4
+translation-type: tm+mt
+source-git-commit: 1ba56ad44df4dc327cf37d39ac72539b5c7af4a2
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 2%
+
+---
+
+
+# Acroformからのスキーマの作成
+
+次の手順は、前の手順で作成したAcroformからスキーマを作成することです。 このチュートリアルの一部として、スキーマを作成するサンプルアプリケーションが用意されています。 スキーマを作成するには、次の手順に従います。
+
+1. [CRXDE Liteにログイン](http://localhost:4502/crx/de)
+2. ファイルを開く `/apps/AemFormsSamples/components/createxsd/POST.jsp`
+3. を、ハードドライブ `saveLocation` 上の適切なフォルダーに変更します。 保存先のフォルダーが既に作成されていることを確認します。
+4. AEMでホストされたXSD [ページを](http://localhost:4502/content/DocumentServices/CreateXsd.html) 作成するには、ブラウザーを指定します。
+5. Acroformをドラッグ&amp;ドロップします。
+6. 手順3で指定したフォルダを確認します。 スキーマファイルはこの場所に保存されます。
+
+## Acroformのアップロード
+
+このデモがお使いのシステムで動作するには、AEM Assetsでという名前のフォルダを作成する必要があ `acroforms` ります。 Acroformをこの `acroforms` フォルダーにアップロードします。
+
+>[!NOTE]
+サンプルコードは、このフォルダー内のacroformを探します。 アダプティブフォームの送信済みデータをマージするには、Acroformが必要です。
