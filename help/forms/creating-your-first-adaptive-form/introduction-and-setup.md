@@ -1,0 +1,43 @@
+---
+title: アダプティブFormsの使い始めに
+seo-title: アダプティブFormsの使い始めに
+description: 'このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学びます。 '
+seo-description: 'このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学びます。 '
+uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
+feature: adaptive-forms
+topics: authoring
+audience: developer
+doc-type: tutorial
+activity: understand
+version: 6.3,6.4,6.5
+discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
+translation-type: tm+mt
+source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 33%
+
+---
+
+
+# Getting Started With Adaptive Forms {#getting-started-with-adaptive-forms}
+
+このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学びます。
+
+アダプティブフォームを使用すると、動的で柔軟で応答の速い、魅力的なフォームを作成することができます。AEM Forms には、アダプティブフォームを作成して操作するための直感的なユーザーインターフェースと、すぐに使用できる各種のコンポーネントが用意されています。フォームモデルやスキーマをベースとしてアダプティブフォームを作成することも、フォームモデルを使用せずにアダプティブフォームを作成することもできます。フォームモデルを選択する場合は、そのモデルが業務上の要件を満たしているかどうかだけでなく、インフラに対する現在の投資や既存のアセットを拡張できるモデルであるかどうかについても慎重に検討することが重要になります。
+
+このチュートリアルでは、アダプティブフォームの作成にフォームモデルは使用しません。
+
+## 前提条件 {#prerequisites}
+
+以下が必要です。
+
+* フォームオンパッケージがインストールされ追加たAEMの作業インスタンス
+
+* **localhost:4502でAEM Formsバージョン6.4以降を実行していることを前提としています。**
+
+* [client-libs-and-logo](assets/client-libs-and-logo.zip) and [getting-started-fragmentをハードドライブにダウンロードします](assets/getting-started-fragment.zip) 。
+
+* パッ [ケージマネージャーを使用してzipファイルをAEMに読み込みます ](http://localhost:4502/crx/packmgr/index.jsp)
+
+
