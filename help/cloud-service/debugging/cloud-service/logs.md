@@ -10,9 +10,9 @@ audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
 translation-type: tm+mt
-source-git-commit: 1eb15af3d9d2904856218aaad4d5c52233603a71
+source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '990'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,12 @@ ht-degree: 2%
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
 + 例: `cm-p12345-e56789-aem-author-abcdefabde-98765`
+
+## カスタムログファイル
+
+AEM asCloud Servicesはカスタムログファイルをサポートしませんが、カスタムログはサポートしています。
+
+JavaログをAEMでCloud Serviceとして( [Cloud Manager](#cloud-manager) または [AdobeI/O CLIを介して](#aio))使用できるようにするには、カスタムログ文をに書き込む必要があり `error.log`ます。 カスタムの名前付きログ（など）に書き込まれたログ `example.log`は、AEMからはCloud Serviceとしてアクセスできません。
 
 ## AEM AuthorとPublishのサービスログ
 
@@ -54,7 +60,7 @@ Apache WebサーバーとディスパッチャーのログはAEM発行ディス�
    + ステージ: `WARN`
    + 実稼動: `ERROR`
 
-## Cloud Manager
+## Cloud Manager{#cloud-manager}
 
 AdobeCloud Managerでは、環境のログのダウンロードアクションを使用して、ログを日別にダウンロードできます。
 
@@ -62,7 +68,7 @@ AdobeCloud Managerでは、環境のログのダウンロードアクション�
 
 これらのログは、任意のログ分析ツールを使用してダウンロードおよび検査できます。
 
-## AdobeI/O CLIとCloud Managerプラグイン
+## AdobeI/O CLIとCloud Managerプラグイン{#aio}
 
 AdobeCloud Managerは、AEMI/O CLI用の [Cloud Managerプラグインを使用して、Cloud ServiceI/O CLI](https://github.com/adobe/aio-cli) ( [AdobeI/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager))経由でAdobeにログとしてアクセスできます。
 
