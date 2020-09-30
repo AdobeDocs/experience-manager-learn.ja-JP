@@ -9,7 +9,7 @@ activity: use
 version: 6.4,6.5
 kt: 6317
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
@@ -67,7 +67,9 @@ APIキーでサンプルアセットを使用する場合は、次の手順に�
 * サンプルのアダプティブフォームは、ここから [ダウンロードできます](assets/sms-2fa-verification-af.zip)。 このサンプルフォームは、この記事の一部として提供されるフォームデータモデルのサービス呼び出しを使用しています。
 * [FormsとドキュメントのUIからAEMにフォームを読み込む](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * フォームを編集モードで開きます。 次のフィールドのルールエディターを開きます
-   ![sms-send](assets/check-sms.PNG)
+
+![sms-send](assets/check-sms.PNG)
+
 * フィールドに関連付けられているルールを編集します。 適切なAPIキーの指定
 * フォームを保存する
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) 、および機能のテスト
