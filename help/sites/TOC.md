@@ -4,9 +4,9 @@ user-guide-description: A collection of videos and tutorials for Adobe Experienc
 breadcrumb-title: AEM Sites Tutorials
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '457'
 ht-degree: 11%
 
 ---
@@ -101,3 +101,12 @@ ht-degree: 11%
    + 分析 {#analytics}
       + [Adobe Analyticsとページデータを収集する](integrations/analytics/collect-data-analytics.md)
       + [Adobe Analyticsでクリックされたコンポーネントを追跡](integrations/analytics/track-clicked-component.md)
+   + Adobe Target {#target}
+      + [概要](integrations/adobe-target/overview.md)
+      + [Launchプロパティ追加のターゲット式](integrations/adobe-target/add-target-launch-extension.md)
+      + [ターゲット呼び出しの読み込みと実行](integrations/adobe-target/load-and-fire-target.md)
+      + [Adobe TargetCloud Serviceアカウントの作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [エクスペリエンスフラグメントをAdobe Targetに書き出し](integrations/adobe-target/export-experience-fragment-target.md)
+      + [エクスペリエンスフラグメントオファーを使用してターゲットアクティビティを作成する](integrations/adobe-target/create-target-activity.md)
+      + [Visual Experience Composerを使用したパーソナライゼーション](integrations/adobe-target/personalization-using-vec.md)
+      + [完全なWebページエクスペリエンスのパーソナライズ](integrations/adobe-target/personalization-web-page.md)
