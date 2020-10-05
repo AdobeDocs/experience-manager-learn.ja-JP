@@ -9,7 +9,7 @@ doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
 workflow-type: tm+mt
 source-wordcount: '3181'
 ht-degree: 3%
@@ -104,7 +104,7 @@ SPA開発はAEM開発では1フィート、SPA開発では1フィートです。
    >
    >このチュートリアルでは、 **1.2.1-SNAPSHOT** versionのプロジェクトを持つ **** マスターブランチに対して作業を行います。
 
-2. 次の構造が表示されます。
+1. 次の構造が表示されます。
 
    ![プロジェクトフォルダ構造](assets/spa-editor-helloworld-tutorial-use/folder-structure.png)
 
@@ -117,7 +117,7 @@ SPA開発はAEM開発では1フィート、SPA開発では1フィートです。
    * `react-app`:We.小売ジャーナルの反応申し込み。 これはMavenモジュールとWebPackプロジェクトの両方です。
    * `angular-app`:We.小売ジャーナルの角度適用 これは、 [!DNL Maven] モジュールとWebPackの両方のプロジェクトです。
 
-3. 新しいターミナルウィンドウを開き、次のコマンドを実行して、http://localhost:4502で実行されているローカルのAEMインスタンスにアプリケーション全体を構築してデプロイし [ます](http://localhost:4502)。
+1. 新しいターミナルウィンドウを開き、次のコマンドを実行して、http://localhost:4502で実行されているローカルのAEMインスタンスにアプリケーション全体を構築してデプロイし [ます](http://localhost:4502)。
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal
@@ -132,22 +132,22 @@ SPA開発はAEM開発では1フィート、SPA開発では1フィートです。
    >
    > ビルド中にエラーが発生した場合は、Maven settings.xmlファイルにAdobeのMavenアーティファクトリポジトリが含まれていることを [確認してください](https://helpx.adobe.com/jp/experience-manager/kb/SetUpTheAdobeMavenRepository.html)。
 
-4. 次の URL に移動します。
+1. 次の URL に移動します。
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
 
    We.RetailジャーナルアプリがAEM Sitesエディター内に表示されます。
 
-5. 編集 [!UICONTROL モードで] 、編集するコンポーネントを選択し、コンテンツを更新します。
+1. 編集 [!UICONTROL モードで] 、編集するコンポーネントを選択し、コンテンツを更新します。
 
    ![コンポーネントの編集](assets/spa-editor-helloworld-tutorial-use/editcontent.png)
 
-6. 「 [!UICONTROL ページプロパティ] 」アイコンを選択して、「 [!UICONTROL ページプロパティ]」を開きます。 「テンプレート [!UICONTROL の編集] 」を選択して、ページのテンプレートを開きます。
+1. 「 [!UICONTROL ページプロパティ] 」アイコンを選択して、「 [!UICONTROL ページプロパティ]」を開きます。 「テンプレート [!UICONTROL の編集] 」を選択して、ページのテンプレートを開きます。
 
    ![ページプロパティメニュー](assets/spa-editor-helloworld-tutorial-use/page-properties.png)
 
-7. 最新バージョンのSPA Editorでは、 [編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html) は、従来のサイト実装と同じ方法で使用できます。 これは、後でカスタムコンポーネントで再訪問します。
+1. 最新バージョンのSPA Editorでは、 [編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html) は、従来のサイト実装と同じ方法で使用できます。 これは、後でカスタムコンポーネントで再訪問します。
 
    >[!NOTE]
    >
@@ -160,8 +160,8 @@ SPA開発はAEM開発では1フィート、SPA開発では1フィートです。
 SPA開発反復は、AEMとは独立して発生します。 SPAをAEMに導入する準備ができたら、次の高レベルの手順を実行します（上図を参照）。
 
 1. AEMプロジェクトビルドが呼び出され、SPAプロジェクトのビルドがトリガされます。 We.Retailジャーナルは、 [**フロントエンドMaven-pluginを使用します**](https://github.com/eirslett/frontend-maven-plugin)。
-2. SPAプロジェクトの [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) は、コンパイル済みのSPAをAEMクライアントライブラリとしてAEMプロジェクトに埋め込みます。
-3. AEMプロジェクトは、コンパイル済みのSPAと他のサポートするAEMコードを含むAEMパッケージを生成します。
+1. SPAプロジェクトの [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) は、コンパイル済みのSPAをAEMクライアントライブラリとしてAEMプロジェクトに埋め込みます。
+1. AEMプロジェクトは、コンパイル済みのSPAと他のサポートするAEMコードを含むAEMパッケージを生成します。
 
 ## AEMコンポーネントを作成 {#aem-component}
 
@@ -197,8 +197,8 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
        </plugin>
    ```
 
-2. **we-retail-** ジャーナルコンテンツ`<src>/aem-sample-we-retail-journal/ui.apps`( `ui.apps/jcr_root/apps/we-retail-journal/components` )モジュールでは、 **cq:Component****** cqのタイプのhelloworldという名前の新しいノードを作成します。
-3. 次追加のXML( **)で表される、** helloworld`/helloworld/.content.xml`コンポーネントの次のプロパティ。
+1. **we-retail-** ジャーナルコンテンツ`<src>/aem-sample-we-retail-journal/ui.apps`( `ui.apps/jcr_root/apps/we-retail-journal/components` )モジュールでは、 **cq:Component****** cqのタイプのhelloworldという名前の新しいノードを作成します。
+1. 次追加のXML( **)で表される、** helloworld`/helloworld/.content.xml`コンポーネントの次のプロパティ。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -217,8 +217,8 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    >
    > 編集可能なテンプレートは、AEM 6.5およびAEM 6.4 + **Service Pack 5** でのみサポートされます。
 
-4. 次に、 **Hello World** コンポーネント用にカスタムメッセージを設定できるダイアログが作成されます。 ノード名 `/apps/we-retail-journal/components/helloworld` cq:dialog **of** nt:unstructured ****&#x200B;を追加します。
-5. **cq:dialog** は、という名前のプロパティにテキストを保持する1つのテキストフィールドを表示 **[!DNL message]**&#x200B;します。 新しく作成した **cq:dialogの下に** 、以下のXMLで示すノードとプロパティを追加します(`helloworld/_cq_dialog/.content.xml`)。
+1. 次に、 **Hello World** コンポーネント用にカスタムメッセージを設定できるダイアログが作成されます。 ノード名 `/apps/we-retail-journal/components/helloworld` cq:dialog **of** nt:unstructured ****&#x200B;を追加します。
+1. **cq:dialog** は、という名前のプロパティにテキストを保持する1つのテキストフィールドを表示 **[!DNL message]**&#x200B;します。 新しく作成した **cq:dialogの下に** 、以下のXMLで示すノードとプロパティを追加します(`helloworld/_cq_dialog/.content.xml`)。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -273,7 +273,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    上記のXMLノード定義は、1つのテキストフィールドを持つダイアログを作成し、ユーザーが「メッセージ」を入力できるようにします。 ノード `name="./message"` 内のプロパティをメモしておき `<message />` ます。 AEM内のJCRに保存されるプロパティの名前です。
 
-6. 次に、空のポリシーダイアログが作成されます(`cq:design_dialog`)。 テンプレートエディターでコンポーネントを表示するには、ポリシーダイアログが必要です。 この単純な使用例では、空のダイアログになります。
+1. 次に、空のポリシーダイアログが作成されます(`cq:design_dialog`)。 テンプレートエディターでコンポーネントを表示するには、ポリシーダイアログが必要です。 この単純な使用例では、空のダイアログになります。
 
    の下にノード名を `/apps/we-retail-journal/components/helloworld` 追加 `cq:design_dialog` し `nt:unstructured`ます。
 
@@ -285,7 +285,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    jcr:primaryType="nt:unstructured" />
    ```
 
-7. コマンドラインからAEMにコードベースをデプロイします。
+1. コマンドラインからAEMにコードベースをデプロイします。
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal/content
@@ -309,7 +309,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 >ベストプラクティスとして、開発者は [AEMコアコンポーネントを可能な限り使用するようにします](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) 。 特に、コアコンポーネントは「SPA対応」 [!DNL Sling Models] のJSON出力を提供し、開発者はフロントエンドでのプレゼンテーションに集中できます。
 
 1. In the editor of your choice, open the **we-retail-journal-commons** project ( `<src>/aem-sample-we-retail-journal/bundles/commons`).
-2. パッケージ内 `com.adobe.cq.sample.spa.commons.impl.models`:
+1. パッケージ内 `com.adobe.cq.sample.spa.commons.impl.models`:
    * という名前の新しいクラスを作成し `HelloWorld`ます。
    * ～追加の実装インターフェース `com.adobe.cq.export.json.ComponentExporter.`
 
@@ -331,7 +331,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
     }
    ```
 
-3. コンポー追加ネントのリソースタイプ `RESOURCE_TYPE`[!DNL HelloWorld] を識別するために名前を付けた静的変数：
+1. コンポー追加ネントのリソースタイプ `RESOURCE_TYPE`[!DNL HelloWorld] を識別するために名前を付けた静的変数：
 
    ```java
     ...
@@ -343,7 +343,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
     }
    ```
 
-4. と追加のOSGi注釈を参照し `@Model` てくだ `@Exporter`さい。 この `@Model` 注釈はクラスをに登録し [!DNL Sling Model]ます。 注 `@Exporter` 釈は、フレームワークを使用して、シリアライズされたJSONとしてメソッドを公開し [!DNL Jackson Exporter] ます。
+1. と追加のOSGi注釈を参照し `@Model` てくだ `@Exporter`さい。 この `@Model` 注釈はクラスをに登録し [!DNL Sling Model]ます。 注 `@Exporter` 釈は、フレームワークを使用して、シリアライズされたJSONとしてメソッドを公開し [!DNL Jackson Exporter] ます。
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -366,7 +366,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    ...
    ```
 
-5. JCRプロパティ `getDisplayMessage()` を返すメソッドを実装 `message`します。 の [!DNL Sling Model] 注釈を使用す `@ValueMapValue` ると、コンポーネントの下に `message` 保存されたプロパティを簡単に取得できます。 この `@Optional` 注釈は、コンポーネントが最初にページに追加される際には入力されないので、重要 `message` です。
+1. JCRプロパティ `getDisplayMessage()` を返すメソッドを実装 `message`します。 の [!DNL Sling Model] 注釈を使用す `@ValueMapValue` ると、コンポーネントの下に `message` 保存されたプロパティを簡単に取得できます。 この `@Optional` 注釈は、コンポーネントが最初にページに追加される際には入力されないので、重要 `message` です。
 
    ビジネスロジックの一部として、メッセージの前に「**Hello**」という文字列が付加されます。
 
@@ -401,7 +401,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    この方法 `getExportedType` も重要です。 コンポーネントの値 `resourceType` は、JSONデータをフロントエンドコンポーネントに「マップ」するために使用されます（角度/反応）。 次のセクションで、この点について説明します。
 
-6. コンポーネントのリソースタイプ `getExportedType()` を返すメソッドを実装し `HelloWorld` ます。
+1. コンポーネントのリソースタイプ `getExportedType()` を返すメソッドを実装し `HelloWorld` ます。
 
    ```java
     @Override
@@ -412,7 +412,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    HelloWorld.javaの完全なコードは [**こちら** 。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/bundles/commons/HelloWorld.java)
 
-7. Apache Mavenを使用してAEMにコードをデプロイします。
+1. Apache Mavenを使用してAEMにコードをデプロイします。
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content/bundles/commons
@@ -442,15 +442,15 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    ![reactコンポーネントファイル構造](assets/spa-editor-helloworld-tutorial-use/react-components.png)
 
-2. componentsフォルダー追加の下にあるという名前の新しいファイル `HelloWorld.js`。
-3. 開く `HelloWorld.js`. Reactコンポー追加ネントライブラリを読み込むための読み込みステートメント。 Adobeが提供する `MapTo` ヘルパーを読み込む2つ目の読み込みステートメント。 ヘルパーは、ReactコンポーネントとAEMコンポーネントのJSONとのマッピングを提供します。 `MapTo`
+1. componentsフォルダー追加の下にあるという名前の新しいファイル `HelloWorld.js`。
+1. 開く `HelloWorld.js`. Reactコンポー追加ネントライブラリを読み込むための読み込みステートメント。 Adobeが提供する `MapTo` ヘルパーを読み込む2つ目の読み込みステートメント。 ヘルパーは、ReactコンポーネントとAEMコンポーネントのJSONとのマッピングを提供します。 `MapTo`
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/cq-react-editable-components';
    ```
 
-4. インポートの下に、Reactインターフェイスを拡張するという名前の新しいクラス `HelloWorld` が作成され `Component` ます。 クラス追加に必要な `render()``HelloWorld` メソッド。
+1. インポートの下に、Reactインターフェイスを拡張するという名前の新しいクラス `HelloWorld` が作成され `Component` ます。 クラス追加に必要な `render()``HelloWorld` メソッド。
 
    ```js
    import React, {Component} from 'react';
@@ -464,7 +464,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    }
    ```
 
-5. この `MapTo` ヘルパーには、Reactコンポーネントのpropの一部として名前が付い `cqModel` たオブジェクトが自動的に含まれます。 には、によって公開されるすべてのプロパティが `cqModel` 含まれ [!DNL Sling Model]ます。
+1. この `MapTo` ヘルパーには、Reactコンポーネントのpropの一部として名前が付い `cqModel` たオブジェクトが自動的に含まれます。 には、によって公開されるすべてのプロパティが `cqModel` 含まれ [!DNL Sling Model]ます。
 
    前に [!DNL Sling Model] 作成したファイルにはメソッドが含まれてい `getDisplayMessage()`ます。 `getDisplayMessage()` は、出力時に名前が付けられたJSONキーとして変換 `displayMessage` されます。
 
@@ -488,7 +488,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    }
    ```
 
-6. 設定の編集メソッドを実装します。 このメソッドは `MapTo` ヘルパーを介して渡され、コンポーネントが空の場合にプレースホルダーを表示する情報をAEMエディターに提供します。 これは、コンポーネントがSPAに追加されているが、まだオーサリングされていない場合に発生します。 ク `HelloWorld` ラスの追加下に次のように記述します。
+1. 設定の編集メソッドを実装します。 このメソッドは `MapTo` ヘルパーを介して渡され、コンポーネントが空の場合にプレースホルダーを表示する情報をAEMエディターに提供します。 これは、コンポーネントがSPAに追加されているが、まだオーサリングされていない場合に発生します。 ク `HelloWorld` ラスの追加下に次のように記述します。
 
    ```js
    ...
@@ -509,7 +509,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    ...
    ```
 
-7. ファイルの最後で、 `MapTo` ヘルパーを呼び出し、 `HelloWorld` クラスとを渡し `HelloWorldEditConfig`ます。 これにより、AEMコンポーネントのリソースタイプに基づいて、React ComponentがAEMコンポーネントにマッピングされます。 `we-retail-journal/components/helloworld`.
+1. ファイルの最後で、 `MapTo` ヘルパーを呼び出し、 `HelloWorld` クラスとを渡し `HelloWorldEditConfig`ます。 これにより、AEMコンポーネントのリソースタイプに基づいて、React ComponentがAEMコンポーネントにマッピングされます。 `we-retail-journal/components/helloworld`.
 
    ```js
    MapTo('we-retail-journal/components/helloworld')(HelloWorld, HelloWorldEditConfig);
@@ -517,7 +517,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    HelloWorld.jsの完成したコ [**ードは** 、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/react-app/components/HelloWorld.js)
 
-8. Open the file `ImportComponents.js`. はを参照してください `<src>/aem-sample-we-retail-journal/react-app/src/ImportComponents.js`。
+1. Open the file `ImportComponents.js`. はを参照してください `<src>/aem-sample-we-retail-journal/react-app/src/ImportComponents.js`。
 
    コンパ追加イル済みJavaScriptバンドル内の他のコンポーネントと共に必要な行： `HelloWorld.js`
 
@@ -529,7 +529,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    ...
    ```
 
-9. フォルダー内に、「ファイル `components` に次の値を `HelloWorld.css` 入力」の兄弟として名前を付けた新しいファイルを作成し、コンポー `HelloWorld.js.``HelloWorld` ネントの基本的なスタイルを作成します。
+1. フォルダー内に、「ファイル `components` に次の値を `HelloWorld.css` 入力」の兄弟として名前を付けた新しいファイルを作成し、コンポー `HelloWorld.js.``HelloWorld` ネントの基本的なスタイルを作成します。
 
    ```css
    /* HelloWorld.css to style HelloWorld component */
@@ -542,7 +542,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    }
    ```
 
-10. インポート文の下で再び開 `HelloWorld.js` き、更新して次の条件を満たすようにし `HelloWorld.css`ます。
+1. インポート文の下で再び開 `HelloWorld.js` き、更新して次の条件を満たすようにし `HelloWorld.css`ます。
 
    ```js
    import React, {Component} from 'react';
@@ -553,14 +553,14 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    ...
    ```
 
-11. Apache Mavenを使用してAEMにコードをデプロイします。
+1. Apache Mavenを使用してAEMにコードをデプロイします。
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-12. CRXDE-Liteで [開き](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js) ま `/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`す。 app.jsでHelloWorldのクイック検索を実行し、コンパイル済みアプリにReactコンポーネントが含まれていることを確認します。
+1. CRXDE-Liteで [開き](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js) ま `/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`す。 app.jsでHelloWorldのクイック検索を実行し、コンパイル済みアプリにReactコンポーネントが含まれていることを確認します。
 
    >[!NOTE]
    >
@@ -581,7 +581,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    ![Angularファイル構造](assets/spa-editor-helloworld-tutorial-use/angular-file-structure.png)
 
-2. Add a new folder beneath the components folder named `helloworld`. フォルダーの下に、という名前の新しいファイルを `helloworld` 追加 `helloworld.component.css, helloworld.component.html, helloworld.component.ts`します。
+1. Add a new folder beneath the components folder named `helloworld`. フォルダーの下に、という名前の新しいファイルを `helloworld` 追加 `helloworld.component.css, helloworld.component.html, helloworld.component.ts`します。
 
    ```plain
    /angular-app
@@ -594,7 +594,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    +                    helloworld.component.ts
    ```
 
-3. 開く `helloworld.component.ts`. Angular `Component``Input` およびクラスをインポートするインポ追加ート文。 とを指して、新しいコンポーネント `styleUrls` を作成 `templateUrl` し `helloworld.component.css` ま `helloworld.component.html`す。 最後に、期待される入力値 `HelloWorldComponent` のクラスをエクスポート `displayMessage`します。
+1. 開く `helloworld.component.ts`. Angular `Component``Input` およびクラスをインポートするインポ追加ート文。 とを指して、新しいコンポーネント `styleUrls` を作成 `templateUrl` し `helloworld.component.css` ま `helloworld.component.html`す。 最後に、期待される入力値 `HelloWorldComponent` のクラスをエクスポート `displayMessage`します。
 
    ```js
    //helloworld.component.ts
@@ -617,7 +617,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    >
    > 以前に [!DNL Sling Model] 作成したメソッドを思い出すと、 **getDisplayMessage()メソッドがありました**。 このメソッドのシリアル化されたJSONは、 **displayMessage**&#x200B;です。現在、Angularアプリで読み取っています。
 
-4. を開き、 `helloworld.component.html` プロパティを印刷する `h1``displayMessage` タグを含めます。
+1. を開き、 `helloworld.component.html` プロパティを印刷する `h1``displayMessage` タグを含めます。
 
    ```html
    <h1 *ngIf="displayMessage" class="cmp-helloworld_message">
@@ -625,7 +625,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    </h1>
    ```
 
-5. コンポーネント `helloworld.component.css` に基本的なスタイルを含めるように更新します。
+1. コンポーネント `helloworld.component.css` に基本的なスタイルを含めるように更新します。
 
    ```css
    :host-context {
@@ -643,7 +643,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    }
    ```
 
-6. 次 `helloworld.component.spec.ts` のテストベッドで更新します。
+1. 次 `helloworld.component.spec.ts` のテストベッドで更新します。
 
    ```js
    import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -673,7 +673,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    });
    ```
 
-7. を含め `src/components/mapping.ts` るための次の更新 `HelloWorldComponent`。 コンポーネントが追加設定される前に、AEMエディタでプレースホルダーを示すマークが付きます。 `HelloWorldEditConfig` 最後に、ヘルパーを使用してAEMコンポーネントをAngularコンポーネントにマップする線を追加し `MapTo` ます。
+1. を含め `src/components/mapping.ts` るための次の更新 `HelloWorldComponent`。 コンポーネントが追加設定される前に、AEMエディタでプレースホルダーを示すマークが付きます。 `HelloWorldEditConfig` 最後に、ヘルパーを使用してAEMコンポーネントをAngularコンポーネントにマップする線を追加し `MapTo` ます。
 
    ```js
    // src/components/mapping.ts
@@ -698,7 +698,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    mapping.tsの完全な [**コードは** 、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/mapping.ts)
 
-8. NgModule `src/app.module.ts` を更新するには、 **を更新します**。 AppModule **`HelloWorldComponent`** に属する **宣言** と追加して **宣言**&#x200B;します。 また、JSONモデルの処理 `HelloWorldComponent` 時にアプリに動的に含まれるように、を **entryComponent** として追加します。
+1. NgModule `src/app.module.ts` を更新するには、 **を更新します**。 AppModule **`HelloWorldComponent`** に属する **宣言** と追加して **宣言**&#x200B;します。 また、JSONモデルの処理 `HelloWorldComponent` 時にアプリに動的に含まれるように、を **entryComponent** として追加します。
 
    ```js
    import { HelloWorldComponent } from './components/helloworld/helloworld.component';
@@ -737,14 +737,14 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    app.module.ts [**の完成したコードは** 、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/app.module.ts)
 
-9. Mavenを使用してAEMにコードをデプロイします。
+1. Mavenを使用してAEMにコードをデプロイします。
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-10. CRXDE-Liteで [開き](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js) ま `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`す。 でHelloWorldのクイック検索を実行し **て** 、Angularコンポーネントが含まれ `main.js` ていることを確認します。
+1. CRXDE-Liteで [開き](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js) ま `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`す。 でHelloWorldのクイック検索を実行し **て** 、Angularコンポーネントが含まれ `main.js` ていることを確認します。
 
    >[!NOTE]
    >
@@ -757,7 +757,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    * （角度） [http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
    * (React) [http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html)
 
-2. メインの [!UICONTROL レイアウトコンテナを選択し] 、 [!UICONTROL ポリシー] アイコンを選択してポリシーを開きます。
+1. メインの [!UICONTROL レイアウトコンテナを選択し] 、 [!UICONTROL ポリシー] アイコンを選択してポリシーを開きます。
 
    ![レイアウトポリシーの選択](assets/spa-editor-helloworld-tutorial-use/select-page-policy.png)
 
@@ -765,7 +765,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    ![レイアウトコンテナポリシーの設定](assets/spa-editor-helloworld-tutorial-use/layoutcontainer-update.png)
 
-3. 保存後は、 **[!DNL HelloWorld]** コンポーネントが許可コンポーネントとして [!UICONTROL レイアウトコンテナに表示されます]。
+1. 保存後は、 **[!DNL HelloWorld]** コンポーネントが許可コンポーネントとして [!UICONTROL レイアウトコンテナに表示されます]。
 
    ![許可されているコンポーネントが更新されました](assets/spa-editor-helloworld-tutorial-use/allowed-components.png)
 
@@ -784,7 +784,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
 
-2. コンポーネントを見つけ **[!DNL Hello World]** て、そのコンポー **[!DNL Hello World]** ネントをページにドラッグ&amp;ドロップします。
+1. コンポーネントを見つけ **[!DNL Hello World]** て、そのコンポー **[!DNL Hello World]** ネントをページにドラッグ&amp;ドロップします。
 
    ![hello worldドラッグ&amp;ドロップ](assets/spa-editor-helloworld-tutorial-use/fig7.png)
 
@@ -792,7 +792,7 @@ We.RetailジャーナルMavenプロジェクト [!DNL Eclipse]を使用する、
 
    ![ハローワールドプレースホルダー](assets/spa-editor-helloworld-tutorial-use/fig10.png)
 
-3. コンポーネントを選択し、ダイアログに「World」や「Your Name」などのメッセージを追加します。 変更内容を保存します。
+1. コンポーネントを選択し、ダイアログに「World」や「Your Name」などのメッセージを追加します。 変更内容を保存します。
 
    ![レンダリングコンポーネント](assets/spa-editor-helloworld-tutorial-use/fig11.png)
 
