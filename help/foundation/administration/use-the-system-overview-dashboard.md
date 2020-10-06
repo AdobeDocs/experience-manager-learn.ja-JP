@@ -9,7 +9,7 @@ audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: c9a11bcb01a5ec9f7390deab68e6d0e1dec273de
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Manager(AEM) [!UICONTROL System Overview] ()では、AEMイン�
 
 1. システム概要には次の場所からアクセスできます。 **AEM開始** / **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL システムの概要]**
 
-   直接 **[!DNL <server-host>/libs/granite/operations/content/systemoverview.html]**
+   直接 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
 1. 「 [!UICONTROL システム概要] 」の情報は、「 [!UICONTROL ダウンロード] 」ボタンをクリックしてエクスポートできます。 情報は、次のエンドポイントを介して公開され [!DNL REST] ます。
 1. 以下は、 [!UICONTROL システム概要から書き出されたJSONの出力例です]。
