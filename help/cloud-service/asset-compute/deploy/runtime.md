@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ AEMでCloud Service作成者サービスとして使用するためにAdobe I/O 
 + `AIO_runtime_namespace` adobeプロジェクトのFirefelly Workspaceが
 + `AIO_runtime_auth` は、AdobeProject Firefly workspaceの認証資格情報です
 
-この `.env` ファイルに定義されている他の標準変数は、AEMがAsset Compute Workerを呼び出すときにCloud Serviceとして暗黙的に提供されます。
+この `.env` ファイルに定義されている他の標準変数は、AEMがAsset Compute Workerを呼び出すときに、Cloud Serviceとして暗黙的に提供されます。
 
 ## 開発ワークスペース
 
@@ -37,7 +37,7 @@ AEMでCloud Service作成者サービスとして使用するためにAdobe I/O 
 
 プロジェクト `.env` ファイル内のワークスペース定義に配備するには：
 
-1. アセット計算アプリケーションプロジェクトのルートにあるコマンドラインを開きます
+1. アセット計算プロジェクトのルートにあるコマンドラインを開きます。
 1. コマンドを実行します。 `aio app deploy`
 1. このコマンドを実行 `aio app get-url` して、AEMでCloud Service処理プロファイルとして使用するワーカーURLを取得し、このカスタムAsset Compute Workerを参照します。 プロジェクトに複数のワーカーが含まれる場合、各ワーカーの個別のURLが表示されます。
 
@@ -54,7 +54,7 @@ true環境変数を設定すると、の同じ名前の変数の値が上書き�
 一般的なアプローチは、通常、CI/CDシステムによって自動化され、ステージおよび実稼働環境に展開する場合は次のようになります。
 
 1. AdobeI/O CLI npmモジュールとAsset Computeプラグインがインストールされている [ことを確認します](../set-up/development-environment.md#aio) 。
-1. Gitから展開するAsset Computeアプリケーションをチェックアウトします
+1. Gitから展開するAsset Computeプロジェクトをチェックアウトします
 1. 環境変数を、ターゲットワークスペース（ステージまたは実稼動）に対応する値で設定します
    + 必要な2つの変数は、ワークスペースごとに、Workspaceの「 `AIO_runtime_namespace` Download All `AIO_runtime_auth`____ 」機能を使用して、AdobeI/O Developer Consoleのワークスペースごとに取得されます。
 
@@ -74,7 +74,7 @@ $ export AIO_runtime_auth=27100f9f-2676-4cce-b73d-b3fb6bac47d1:0tDu307W6MboQf5VW
 1. AEMがCloud Service処理プロファイルとして参照するワーカーURLは、次の場所からも利用できます。
    + `aio app get-url`.
 
-「Asset Compute」アプリケーションのバージョンが変更されると、ワーカーURLも新しいバージョンを反映するように変更され、そのURLは「処理」プロファイルで更新する必要があります。
+「アセット計算プロジェクトのバージョン」で変更した場合、ワーカーURLも新しいバージョンを反映するように変更され、そのURLは「処理プロファイル」で更新する必要があります。
 
 ## Workspace APIプロビジョニング{#workspace-api-provisioning}
 
