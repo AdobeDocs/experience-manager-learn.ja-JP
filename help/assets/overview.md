@@ -5,9 +5,9 @@ description: Adobe Experience Managerアセットのビデオとチュートリ�
 seo-description: Adobe Experience Managerアセットのビデオとチュートリアルの集まり
 sub-product: アセット，ダイナミックメディア
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 6%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 6%
 Adobe Experience Managerアセットは、AEM Platformのデジタルアセット管理ツールで、Webベースのリポジトリでデジタルアセット(画像、ビデオ、ドキュメント、オーディオクリップ)を作成、管理、共有できます。 このユーザガイドには、AEM Assetsの多くの機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
+
+* **[透かし（ビデオ）](./advanced/watermarks.md)**
+
+   <br>
+   *AEMでアセットレンディションをCloud Serviceとして透かしを付ける方法を説明します。*
 
 * **[ベースライン権限（ビデオ）](./configuring/baseline-permissions.md)**
 
@@ -38,12 +43,6 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 
    <br>
    *AEM Assetsのコレクションがアセットを整理し発見する新しい方法を提供する方法を調べます。*
-
-* **[レビュータスクの使用（ビデオ）](./collaboration/review-task.md)**
-
-   <br>
-   *レビュータスクワークフローを使用して、アセットをすばやく簡単に承認（または拒否）できます*
-
 
 ## スタッフの選考
 
@@ -91,7 +90,7 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 
 ## その他のリソース
 
-* [エクスペリエンスリーグ — AEMの調査](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League- AEMの調査](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets文書](https://helpx.adobe.com/jp/experience-manager/6-5/assets/user-guide.html)
 * [CLOUD SERVICETutorialsとしてのAEM](/help/cloud-service/overview.md)
 * [AEM SitesTutorials](/help/sites/overview.md)
