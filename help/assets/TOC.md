@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: アセット
 team: TM
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '239'
 ht-degree: 29%
 
 ---
@@ -47,10 +47,11 @@ ht-degree: 29%
    + [検索ブースト](./search-and-discovery/search-boost.md)
 
 + 高度な機能{#advanced}
-   + [権限(CUG)](./advanced/closed-user-groups.md)
-   + [アセットレポート](./advanced/asset-reports.md)
-   + [アセットインサイト](./advanced/asset-insights-launch-tutorial.md)
    + [Annotations PDF Output](./advanced/customizing-annotations-pdf-output.md)
+   + [アセットインサイト](./advanced/asset-insights-launch-tutorial.md)
+   + [アセットレポート](./advanced/asset-reports.md)
+   + [権限(CUG)](./advanced/closed-user-groups.md)
+   + [透かし](./advanced/watermarks.md)
 
 + 高度なメタデータの管理{#metadata}
    + [カスケードメタデータ](metadata/cascade-metadata-feature-video-use.md)
