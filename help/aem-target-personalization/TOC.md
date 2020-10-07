@@ -1,7 +1,7 @@
 ---
 user-guide-title: 'AEMとAdobe Targetの使い始めに '
 user-guide-description: An end-to-end tutorial showing how to deliver personalized experiences using Experience Manager and Target.
-product: experience-manager, target
+product: experience manager
 version: 6.5
 sub-product: サイト
 audience: author, marketer, administrator, architect, developer
@@ -12,7 +12,7 @@ activity: develop, understand
 index: y
 kt: 2214
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
 workflow-type: tm+mt
 source-wordcount: '51'
 ht-degree: 5%
