@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 2%
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 ## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
-AEM Assets処理プロファイルを設定してカスタムのAsset Computeアプリケーションを呼び出すには、Cloud Service環境としてAEMにアクセスする必要があります。
+AEM Assets処理プロファイルがカスタムのAsset Compute Workerを呼び出すように設定するには、Cloud Service環境としてAEMにアクセスする必要があります。
 
 サンドボックスプログラムまたはサンドボックス以外の開発環境を使用できるのが理想的です。
 
@@ -47,7 +47,7 @@ AEM Assets処理プロファイルを設定してカスタムのAsset Computeア
 
 ## Adobeプロジェクトの蛍{#adobe-project-firefly}
 
-Adobe [プロジェクトのFirefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) Frameworkは、AdobeのサーバーレスプラットフォームであるAdobe I/O Runtimeにカスタムアプリケーションを構築し、導入するために使用されます。 AEM Asset Computeアプリケーションは、処理プロファイルを介してAEM Assetsに統合され、アセットバイナリにアクセスして処理する機能を提供する、特別に構築されたFireflyアプリケーションです。
+Adobe [プロジェクトのFirefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) Frameworkは、AdobeのサーバーレスプラットフォームであるAdobe I/O Runtimeに対するカスタムアクションを作成し、導入するために使用されます。 AEM Asset Computeプロジェクトは、処理プロファイルを介してAEM Assetsに統合され、アセットバイナリにアクセスして処理する機能を提供する、特別に構築されたFireflyプロジェクトです。
 
 Project Fireflyにアクセスするには、プレビューにサインアップします。
 
@@ -57,9 +57,9 @@ Project Fireflyにアクセスするには、プレビューにサインアッ�
 
 ## クラウドストレージ
 
-クラウドストレージは、Asset Computeアプリケーションのローカル開発に必要です。
+Asset Computeプロジェクトのローカル開発には、クラウドストレージが必要です。
 
-AEMがCloud Serviceとして直接使用するためにAsset ComputeアプリケーションをAdobe I/O Runtimeにデプロイする場合、AEMはアセットの読み取りとレンディションを行うクラウドストレージを提供するので、このクラウドストレージは厳密には必要ありません。
+AEMがCloud Serviceとして直接使用するためにアセット計算ワーカーをAdobe I/O Runtimeにデプロイする場合、このクラウドストレージは、アセットの読み取りとレンディションの書き込みが行われるクラウドストレージをAEMが提供するので、厳密には必要ありません。
 
 ### Microsoft Azure Blob Storage{#azure-blob-storage}
 
