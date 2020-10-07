@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: 53e4235c55d890765e9f13ffeb37a2c805fb307b
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # ローカル開発環境の設定
 
-Adobeアセット計算アプリケーションは、AEM SDKが提供するローカルAEMランタイムと統合できず、AEM Mavenプロジェクトアーキタイプに基づくAEMアプリケーションが必要とするものとは別に、独自のツールチェーンを使用して開発されます。
+Adobeアセット計算プロジェクトは、AEM SDKが提供するローカルAEMランタイムと統合できず、AEM Mavenプロジェクトアーキタイプに基づくAEMアプリケーションが必要とするものとは別に、独自のツールチェーンを使用して開発されます。
 
 Asset Computeマイクロサービスを拡張するには、ローカルの開発者マシンに次のツールをインストールする必要があります。
 
@@ -46,7 +46,7 @@ Asset Computeマイクロサービスを拡張するには、ローカルの開�
 
 ## Visual Studioコードのインストール{#vscode}
 
-[Microsoft Visual Studioコード](https://code.visualstudio.com/download) は、Asset Computeアプリケーションの開発とデバッグに使用されます。 アプリケーションの開発には他の [JavaScript互換のIDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) も使用できますが、Visual Studioコードのみを統合して [、アセット計算アプリケーションの](../test-debug/debug.md) デバッグに使用できます。
+[Microsoft Visual Studioコード](https://code.visualstudio.com/download) は、Asset Computeワーカーの開発とデバッグに使用されます。 ワーカーの開発には他の [JavaScript互換のIDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) を使用できますが、Visual Studioコードのみを統合して [、Asset Compute Workerを](../test-debug/debug.md) デバッグできます。
 
 _wskdebugを機能させるには、Visual Studio Code 1.48.x以[降が必要です](#wskdebug)。_
 
@@ -67,7 +67,7 @@ Windowsマシンの開発者は、上のイメージにLinuxコンテナを使�
 
 ## Node.js（およびnpm）のインストール{#node-js}
 
-アセット計算ワーカーは [Node.js](https://nodejs.org/) アプリケーションです。したがって、開発と構築にNode.js 10以降（およびnpm）が必要です。
+アセット計算ワーカーは [Node.js](https://nodejs.org/)ベースなので、開発と構築にNode.js 10以降（およびnpm）が必要です。
 
 + [従来のAEM開発と同じ方法でNode.js（およびnpm）](../../local-development-environment/development-tools.md#node-js) をインストールします。
 
@@ -89,7 +89,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## wskdebugのインストール{#wskdebug}
 
-Asset Computeアプリケーションのローカルデバッグを容易にするために、 [Apache OpenWisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールをダウンロードしてインストールします。
+Asset Computeワーカーのローカルデバッグを容易にするために、 [Apache OpenWisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールをダウンロードしてインストールします。
 
 _wskdebugを機能させるには、Visual Studio Code 1.48.x以[降が必要です](#wskdebug)。_
 
@@ -99,7 +99,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## ngrokのインストール{#ngrok}
 
-Asset Computeアプリケーションのローカルデバッグを容易にするために、ローカル開発マシンへの公開アクセスを提供するngrok [](https://www.npmjs.com/package/ngrok) npmモジュールをダウンロードしてインストールします。
+ローカル開発マシンへの公開アクセスを提供するngrok [](https://www.npmjs.com/package/ngrok) npmモジュールをダウンロードしてインストールし、Asset Compute workerのローカルデバッグを容易にします。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
