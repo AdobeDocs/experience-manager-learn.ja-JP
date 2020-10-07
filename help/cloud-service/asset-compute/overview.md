@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: ecee5f83dc778b016b6d236c1e3bcc4919ee55a7
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '985'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM 6.xでは、AEM Workflowプロセスはアセットレンディションの�
 
 アセットコンピューティングワーカーの拡張に適した準備を行い、プロビジョニングと設定が必要なサービスとアカウント、および開発用にローカルにインストールするソフトウェアを理解する方法を説明します。
 
-### アカウントとサービスのプロビジョニング
+### アカウントとサービスのプロビジョニング{#accounts-and-services}
 
 次のアカウントとサービスは、チュートリアルを完了するために、AEMをCloud Service開発環境またはSandboxプログラムとして、AdobeプロジェクトFireflyおよびMicrosoft Azure Blobストレージにアクセスするために、プロビジョニングとアクセスを必要とします。
 
@@ -50,13 +50,13 @@ AEM 6.xでは、AEM Workflowプロセスはアセットレンディションの�
 
 ### 現地開発環境
 
-アセット計算アプリケーションのローカル開発には、従来のAEM開発とは異なる固有の開発者ツールセットが必要です。以下に例を示します。Microsoft Visual Studioコード、Docker Desktop、Node.js、およびサポートするnpmモジュール
+アセット計算プロジェクトのローカル開発には、従来のAEM開発とは異なる、次のような固有の開発ツールセットが必要です。Microsoft Visual Studioコード、Docker Desktop、Node.js、およびサポートするnpmモジュール
 
 + [ローカル開発環境の設定](./set-up/development-environment.md)
 
 ### Adobeプロジェクトの蛍
 
-アセット計算プロジェクトは、特別に定義されたAdobeプロジェクトFireflyアプリケーションです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
+アセット計算プロジェクトは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
 
 + [Adobeプロジェクトの蛍光を設定](./set-up/firefly.md)
 
@@ -66,7 +66,7 @@ AEM 6.xでは、AEM Workflowプロセスはアセットレンディションの�
 
 ### 新しいAsset Computeプロジェクトの作成
 
-1つ以上のアセット計算ワーカーを含むアセット計算アプリケーションプロジェクトは、インタラクティブAdobeI/O CLIを使用して生成されます。 アセット計算アプリは、特別に構造化されたAdobeプロジェクトのFireflyアプリケーションで、Node.jsアプリケーションになっています。
+1つ以上のアセット計算ワーカーを含むアセット計算プロジェクトは、インタラクティブAdobeI/O CLIを使用して生成されます。 アセット計算プロジェクトは、特別に構造化されたAdobeプロジェクトFireflyプロジェクトで、Node.jsプロジェクトになっています。
 
 + [新しいAsset Computeプロジェクトの作成](./develop/project.md)
 
@@ -78,7 +78,7 @@ AEM 6.xでは、AEM Workflowプロセスはアセットレンディションの�
 
 ### manifest.ymlの設定
 
-アセット計算アプリケーションには、プロジェクトに含まれるすべてのアセット計算ワーカーを定義するマニフェストと、実行のためにAdobe I/O Runtimeに展開したときに使用できるリソースが含まれます。
+アセット計算プロジェクトには、プロジェクトに含まれるすべてのアセット計算作業者を定義するマニフェストと、実行のためにAdobe I/O Runtimeに展開したときに使用できるリソースが含まれます。
 
 + [manifest.ymlの設定](./develop/manifest.md)
 
@@ -106,7 +106,7 @@ Asset Compute Development Toolは、ワーカー生成レンディションの�
 
 ### ワーカーのデバッグ
 
-Asset Computeアプリケーションは、従来の `console.log(..)` 出力から、 __VS Code______&#x200B;およびwskdebugとの統合に至るまで、様々なレベルのデバッグを提供し、開発者はワーカーコードをリアルタイムで実行しながらステップスルーできます。
+アセット計算ワーカーは、従来の `console.log(..)` 出力から、 __VSコード______&#x200B;およびwskdebugとの統合に至るまで、様々なレベルのデバッグを提供し、開発者はワーカーコードをリアルタイムで実行しながらステップ実行できます。
 
 + [ワーカーのデバッグ](./test-debug/debug.md)
 
@@ -125,6 +125,14 @@ AEMと共にCloud Serviceとして使用するには、アセットコンピュ�
 Adobe I/O Runtimeに導入すると、アセットコンピューティングワーカーは、 [アセット処理プロファイルを介してCloud ServiceとしてAEMに登録できます](../../assets/configuring/processing-profiles.md)。 次に、処理プロファイルーは、そのアセットに適用されるアセットフォルダーに適用されます。
 
 + [AEM処理プロファイルとの統合](./deploy/processing-profiles.md)
+
+## Githubのチュートリアルのコードベース
+
+チュートリアルのコードベースは、次の場所でGithubで入手できます。
+
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ master branch
+
+ソースコードに必要なファイル `.env` または `config.json` ファイルが含まれていません。 アカウントおよびサービスの [情報を使用して、これらを追加および設定する必要があります](#accounts-and-services) 。
 
 ## その他のリソース
 
