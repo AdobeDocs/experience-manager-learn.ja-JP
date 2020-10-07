@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: 59bfc9ae08acca6c41234f23eaa60f56e2eda890
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '778'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,14 @@ ht-degree: 2%
 ## 完了!
 
 バリデーターがAEMをCloud Service資産計算マイクロサービスとして拡張する方法に関する [チュートリアルは終了です](../overview.md) 。 これで、AEMがCloud Service作成者サービスとして使用するカスタムのAsset Compute Workerを設定、開発、テスト、デバッグおよびデプロイする機能が必要になります。
+
+### Githubの完全なプロジェクトソースコードを確認します。
+
+最終的なアセット計算プロジェクトは、次の場所でGithubで利用できます。
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Githubにはプロジェクトの最後の状態が含まれ、ワーカーとテストケースが完全に入力されますが、資格情報は含まれません。`.env`,`.config.json`または`.aio`._
 
 ## トラブルシューティング
 
