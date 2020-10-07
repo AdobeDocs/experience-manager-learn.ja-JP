@@ -1,6 +1,6 @@
 ---
 title: 「アセット計算」の拡張機能用の「アセット計算」プロジェクトの作成
-description: アセット計算アプリケーションは、AdobeI/O CLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceして統合できます。
+description: アセット計算プロジェクトは、AdobeI/O CLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceして統合できます。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # アセット計算プロジェクトの作成
 
-アセット計算アプリケーションは、AdobeI/O CLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceして統合できます。 単一のアセット計算プロジェクトには、1人または複数のアセット計算ワーカーを含めることができます。各ワーカーは、Cloud Service処理プロファイルとしてAEMから参照可能な、個別のHTTPエンドポイントを持ちます。
+アセット計算プロジェクトは、AdobeI/O CLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceして統合できます。 単一のアセット計算プロジェクトには、1人または複数のアセット計算ワーカーを含めることができます。各ワーカーは、Cloud Service処理プロファイルとしてAEMから参照可能な、個別のHTTPエンドポイントを持ちます。
 
 ## プロジェクトの生成
 
@@ -51,7 +51,7 @@ I/O [AdobeI/O CLI Asset Computeプラグインを使用して](../set-up/develop
 
 ## プロジェクトの構造を確認する
 
-生成されるアセット計算プロジェクトは、特殊なAdobeのプロジェクトFireflyアプリケーション用のNode.jsプロジェクトです。以下は、アセット計算プロジェクトに固有のものです。
+生成されるアセット計算プロジェクトは、特殊なAdobeのプロジェクトFireflyプロジェクト用のNode.jsプロジェクトです。以下は、アセット計算プロジェクトに固有のものです。
 
 + `/actions` にはサブフォルダが含まれ、各サブフォルダは[アセット計算ワーカ]を定義します。
    + `/actions/<worker-name>/index.js` は、このワーカーの作業を実行するために実行するJavaScriptを定義します。
@@ -65,6 +65,14 @@ I/O [AdobeI/O CLI Asset Computeプラグインを使用して](../set-up/develop
 + `/.env` 構文で環境変数を定義し、共有しないシークレットを `key=value` 含めます。 これらのシークレットを保護するには、このファイルをGitにチェックインしないでください。このファイルは、プロジェクトのデフォルト `.gitignore` ファイルから無視されます。
    + このファイルで定義されている変数は、コマンドラインで変数を [書き出すことで上書きできます](../deploy/runtime.md) 。
 
-プロジェクト構造のレビューの詳細については、「Adobeプロジェクトの [構造」アプリケーションを参照してください](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
+プロジェクト構造のレビューの詳細については、「Adobeプロジェクトの [構造」プロジェクトを参照してください](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
 
 開発の大部分は、開発中のワーカーの実装 `/actions` フォルダ、およびカスタムアセットコンピューティングワーカーのテスト `/test/asset-compute` の作成で行われます。
+
+## Githubでのアセット計算プロジェクト
+
+最終的なアセット計算プロジェクトは、次の場所でGithubで利用できます。
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Githubにはプロジェクトの最後の状態が含まれ、ワーカーとテストケースが完全に入力されますが、資格情報は含まれません。`.env`、`.config.json`または`.aio`。_
