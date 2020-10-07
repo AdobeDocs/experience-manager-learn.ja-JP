@@ -1,6 +1,6 @@
 ---
 title: アセット計算の拡張機能用のAdobeプロジェクトファイアルの設定
-description: アセット計算アプリケーションは、特別に定義されたAdobeプロジェクトFireflyアプリケーションです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
+description: アセット計算プロジェクトは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Adobeプロジェクトの蛍光を設定
 
-アセット計算アプリケーションは、特別に定義されたAdobeプロジェクトFireflyアプリケーションです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
+アセット計算プロジェクトは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobe開発者コンソールでAdobeプロジェクトFireflyにアクセスして設定およびデプロイする必要があります。
 
 ## AdobeデベロッパーコンソールでAdobeプロジェクトファイアフリを作成および設定します{#set-up}
 
@@ -34,8 +34,8 @@ _Adobeプロジェクトのファイアフリを設定するクリックスル�
 
    + __プロジェクトタイトル__: `WKND AEM Asset Compute`
    + __アプリ名__: `wkndAemAssetCompute<YourName>`
-      + ア __プリ名はFireflyのすべてのアプリケーションで一意である必要があり__ 、後で変更することはできません。 会社または組織の名前の前に接頭辞を付け、意味のある接尾辞を付けるのは、次のような適切な方法です。 `wkndAemAssetCompute`.
-      + 自己有効化のためには、他のProject Fireflyアプリケーションとの競合を避けるなど、 __アプリ名を__&#x200B;アプリ名に接尾するのが最適です `wkndAemAssetComputeJaneDoe` 。
+      + ア __プリ名は__ 、すべてのFireflyプロジェクトで一意である必要があり、後で変更することはできません。 会社または組織の名前の前に接頭辞を付け、意味のある接尾辞を付けるのは、次のような適切な方法です。 `wkndAemAssetCompute`.
+      + 自己有効化のためには、他のProject Fireflyプロジェクトとの競合を避けるなど、 __アプリ名を__&#x200B;アプリ名に接尾するのが最適です `wkndAemAssetComputeJaneDoe` 。
    + 「 __ワークスペース__ 」の下に、「 `Development`
    + 「 __Adobe I/O Runtime____」で、「各ワークスペースにランタイムを含める__ 」が選択されていることを確認します。
    + Tap __Save__ to save the project
@@ -58,7 +58,7 @@ Asset Compute APIの統合を設定する際 [、新しいキーペアが生成�
 
 ## サービスアカウント(JWT)秘密鍵証明書の確認
 
-このAdobeI/Oプロジェクトの資格情報は、ローカルの [Asset Compute Development Tool](../develop/development-tool.md) (AAD)でAdobe I/O Runtimeとのやり取りに使用され、Asset Computeアプリケーションプロジェクトに組み込む必要があります。 サービスアカウント(JWT)の資格情報を確認します。
+このAdobeI/Oプロジェクトの資格情報は、ローカルの [Asset Compute Development Tool](../develop/development-tool.md) (AAD)でAdobe I/O Runtimeとのやり取りに使用され、Asset Computeプロジェクトに組み込む必要があります。 サービスアカウント(JWT)の資格情報を確認します。
 
 ![Adobe開発者サービスアカウント資格情報](./assets/firefly/service-account.png)
 
