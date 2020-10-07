@@ -1,6 +1,6 @@
 ---
 title: アセット計算プロジェクトのmanifest.ymlの設定
-description: Asset Computeプロジェクトのmanifest.ymlは、このアプリケーションでデプロイするすべてのワーカーを説明します。
+description: Asset Computeプロジェクトのmanifest.ymlは、このプロジェクトの展開対象となるすべてのワーカーを説明します。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,13 @@ packages:
         annotations:
           require-adobe-auth: true
 ```
+
+## manifest.yml on Github
+
+最終版 `.manifest.yml` は次の場所でGithubで入手できます。
+
++ [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
+
 
 ## manifest.ymlを検証しています
 
