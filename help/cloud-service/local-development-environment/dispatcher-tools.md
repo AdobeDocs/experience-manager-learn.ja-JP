@@ -1,6 +1,6 @@
 ---
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
-description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにし、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
+description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
 feature: dispatcher
 topics: development, caching, security
@@ -11,7 +11,7 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%
@@ -74,6 +74,7 @@ Cloud ServiceSDKとしてのAEMが既にダウンロードされていて、ロ�
 以下に示すすべてのコマンドは、現在の作業ディレクトリに拡張ディスパッチャーツールの内容が含まれていることを前提としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+
 *このビデオでは、例示的な目的でmacOSを使用しています。 同様の結果を得るために、同等のWindows/Linuxコマンドを使用できます*
 
 ## ディスパッチャー設定ファイルについて理解します。
@@ -86,6 +87,7 @@ Cloud ServiceSDKとしてのAEMが既にダウンロードされていて、ロ�
 これらのファイルは、Experience ManagerMavenプロジェクトにまだ存在しない場合は、Experience ManagerMavenプロジェクトにコピーされ `dispatcher/src` ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
+
 *このビデオでは、例示的な目的でmacOSを使用しています。 同様の結果を得るために、同等のWindows/Linuxコマンドを使用できます*
 
 設定ファイルの詳細な説明は、ディスパッチャーツールでは、として参照でき `dispatcher-sdk-x.x.x/docs/Config.html`ます。
@@ -142,6 +144,7 @@ Experience Managerプロジェクトのディスパッチャー設定に対し�
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
+
 *このビデオでは、例示的な目的でmacOSを使用しています。 同様の結果を得るために、同等のWindows/Linuxコマンドを使用できます*
 
 ## ディスパッチャーツールログ
@@ -177,6 +180,7 @@ Experience Managerプロジェクトのディスパッチャー設定に対し�
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
+
 *このビデオでは、例示的な目的でmacOSを使用しています。 同様の結果を得るために、同等のWindows/Linuxコマンドを使用できます*
 
 ## ディスパッチャーツールを更新するタイミング{#dispatcher-tools-version}
