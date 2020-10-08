@@ -12,7 +12,7 @@ doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 33%
@@ -30,7 +30,7 @@ AdobeI/Oを使用してAdobe Experience Manager(AEM)をスマートコンテン�
 
 >[!NOTE]
 >
-> Smart Content Serviceを設定するには、Smart Content Serviceが有効になっている組織の管理者権限を持つAdobe IDアカウントが必要です。
+>Smart Content Serviceを設定するには、Smart Content Serviceが有効になっている組織の管理者権限を持つAdobe IDアカウントが必要です。
 
 このビデオでは、Smart Content Serviceの設定に必要な次の主要タスクについて詳しく説明しています。
 
