@@ -10,10 +10,10 @@ version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 0%
+source-wordcount: '70'
+ht-degree: 2%
 
 ---
 
@@ -23,6 +23,10 @@ ht-degree: 0%
 AEMエクスペリエンスフラグメントをAdobe Targetオファーとして書き出す方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
+
+## 次の手順
+
+1. [エクスペリエンスフラグメントオファーを使用したターゲットアクティビティの作成](./create-target-activity.md)
 
 ## サポートリンク
 
