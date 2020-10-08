@@ -9,7 +9,7 @@ doc-type: technical video
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -26,7 +26,8 @@ ht-degree: 0%
 テーブルは、データを表形式で表示するために使用します。 テーブルの行は、データソースから返されるデータに応じて拡大または縮小する必要があります。 印刷チャネルドキュメントでテーブルを使用するには、AEM Formsデザイナを使用してレイアウトファイル（xdpファイル）を作成する必要があります。 このレイアウトファイルで、必要な列数のテーブルを追加します。 必要に応じて、列フィールドオブジェクトのタイプがTextFieldまたはNumeric Fieldであることを確認します。 各列について、フィールドのデータ連結が「名前を使用」に設定されていることを確認します。
 
 >[!NOTE]
-テーブルを動的にするには、行を繰り返しとしてマークしていることを確認します。
+>
+>テーブルを動的にするには、行を繰り返しとしてマークしていることを確認します。
 
 **独自のサーバーで試してみます**
 
