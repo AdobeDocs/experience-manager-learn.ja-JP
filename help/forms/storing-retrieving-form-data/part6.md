@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 6%
@@ -19,7 +19,12 @@ ht-degree: 6%
 # これをサーバーに展開する
 
 >[!NOTE]
-システム上でAEM Database（バージョン6.3以降）MYSQLデータベースを実行するには、次が必要です
+>
+>これをシステムで実行するには、以下が必要です
+>
+>* AEM Forms（バージョン6.3以降）
+>* MYSQLデータベース
+
 
 この機能をAEM Formsインスタンスでテストするには、次の手順に従ってください
 
