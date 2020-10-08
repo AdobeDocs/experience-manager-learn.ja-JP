@@ -10,7 +10,7 @@ version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
 translation-type: tm+mt
-source-git-commit: fc85af36c7619783045f172ccd4b88c265a63166
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 1%
@@ -61,7 +61,8 @@ ht-degree: 1%
 | 姓 | /newhire/lastName |
 
 >[!NOTE]
-テキストフィールドを追加し、それらを適切なフォームデータモデルの要素に連結することは自由に行ってください。
+>
+>テキストフィールドを追加し、それらを適切なフォームデータモデルの要素に連結することは自由に行ってください。
 
 ## 受益者テーブルの構成
 
