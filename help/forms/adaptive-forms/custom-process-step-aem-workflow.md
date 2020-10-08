@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -129,7 +129,8 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 残りのコードでは、APIを使用してattachmentFilePathを指すドキュメントの子オブジェクトを繰り返し処理することで、リソースオブジェクトを作成します。 このドキュメントオブジェクトはAEM Formsに固有です。 次に、ドキュメントオブジェクトのcopyToFileメソッドを使用して、ドキュメントオブジェクトを保存します。
 
 >[!NOTE]
-AEM Formsに固有のドキュメントオブジェクトを使用するので、mavenプロジェクトにaemfd-client-sdkの依存関係を含める必要があります。 グループIDはcom.adobe.aemfdで、アーティファクトIDはaemfd-client-sdkです。
+>
+>AEM Formsに固有のドキュメントオブジェクトを使用するので、mavenプロジェクトにaemfd-client-sdkの依存関係を含める必要があります。 グループIDはcom.adobe.aemfdで、アーティファクトIDはaemfd-client-sdkです。
 
 #### 構築と導入
 
