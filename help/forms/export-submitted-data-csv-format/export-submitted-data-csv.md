@@ -7,7 +7,7 @@ audience: developer
 doc-type: article
 activity: implement
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 1%
@@ -39,7 +39,8 @@ ht-degree: 1%
 * 89行目：これはサービスのエントリポイントです。メソッドは、formNameを入力パラメーターとして取り込み、指定されたフォーム名に関連する送信済みデータを取得します。 `getCSVFile(..)`
 
 >[!NOTE]
-このコードでは、Felix Web Consoleで接続プールされたDataSourceの「aemformstutorial」が定義済みであると想定しています。また、データベース内に「aemformstutorial」というスキーマがあると想定しています
+>
+>このコードでは、Felix Web Consoleで接続プールされたDataSourceの「aemformstutorial」が定義済みであると想定しています。また、データベース内に「aemformstutorial」というスキーマがあると想定しています
 
 ```java
 package com.aemforms.storeandexport.core;
