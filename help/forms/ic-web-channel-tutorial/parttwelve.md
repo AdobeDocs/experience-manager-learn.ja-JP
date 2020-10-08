@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 1%
@@ -68,5 +68,7 @@ AEM Formsにログインします。
 * [getad.htmlを開きます。](http://localhost:4502/content/getad.html)
 
 * このURLに関連付けられているコードは、ログインしたユーザーのアカウント番号を取得します。 次に、このaccountnumberがrequestattributeとしてFDMに渡されます。 次に、FDMは、このアカウント番号に関連付けられたデータを取得し、Webチャネル・ドキュメントに入力します。
+
 >[!NOTE]
-crxの/apps/AEMForms/fetchad/GET.jsp **ファイルを見てください** 。 String変数webChannelDocumentが有効な通信ドキュメントパスを指していることを確認してください。
+>
+>crxの/apps/AEMForms/fetchad/GET.jsp **ファイルを見てください** 。 String変数webChannelDocumentが有効な通信ドキュメントパスを指していることを確認してください。
