@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -25,6 +25,7 @@ ht-degree: 0%
 ## AdobeデベロッパーコンソールでAdobeプロジェクトファイアフリを作成および設定します{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+
 _Adobeプロジェクトのファイアフリを設定するクリックスルー（オーディオなし）_
 
 1. プロビジョニングされたア [カウントとサービスに関連付けられたAdobe IDを使用して、](https://console.adobe.io) Adobeデベロッパーコンソールにログインします [](./accounts-and-services.md)。 正しいAdobe組織の __システム管理者__ 、または __開発者ロール__ (Developer Role)であることを確認します。
