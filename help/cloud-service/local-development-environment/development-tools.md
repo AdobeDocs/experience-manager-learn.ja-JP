@@ -10,7 +10,7 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: cb5f3c323c433c9321ba26ac1194be0cd225a405
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 3%
@@ -88,8 +88,10 @@ Homebrewを使用している場合は、次のセクションの「Homebrewを�
 ![Node.jsとnpm](./assets/development-tools/nodejs-and-npm.png)
 
 >[!TIP]
-> [AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ベースのAEMプロジェクトは、ビルド時にNode.jsの独立したバージョンをインストールします。 ローカル開発システムのバージョンをAEM MavenプロジェクトのReactor pom.xmlで指定されたNode.jsとnpmのバージョンと同期（または近接）させておくことをお勧めします。
-Node.jsとnpmのビルドバージョンの場所については、次の [例のAEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) を参照してください。
+>
+>[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ベースのAEMプロジェクトは、ビルド時にNode.jsの独立したバージョンをインストールします。 ローカル開発システムのバージョンをAEM MavenプロジェクトのReactor pom.xmlで指定されたNode.jsとnpmのバージョンと同期（または近接）させておくことをお勧めします。
+>
+>Node.jsとnpmのビルドバージョンの場所については、次の [例のAEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) を参照してください。
 
 ## Mavenのインストール
 
