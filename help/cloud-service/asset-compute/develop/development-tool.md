@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
@@ -50,6 +50,7 @@ $ aio app run
 ### カスタムワーカーの実行
 
 >[!VIDEO](https://video.tv.adobe.com/v/40241?quality=12&learn=on)
+
 _開発ツールでのアセット計算作業の実行のクリックスルー（オーディオなし）_
 
 1. コマンドを使用して、プロジェクトルートからアセット計算開発ツールが起動していることを確認し `aio app run` ます。
