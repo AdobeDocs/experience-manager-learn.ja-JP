@@ -6,10 +6,10 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '843'
+ht-degree: 3%
 
 ---
 
@@ -169,7 +169,9 @@ ht-degree: 0%
    + [XDPレンダリングでのPDFへの使用権限の適用](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [アップロードされたPDFに使用権限を適用](document-services/apply-reader-extension-rights-to-pdf.md)
    + [ドキュメントの認証](document-services/certifying-documents-aem-forms-tutorial.md)
-+ 印刷チャネル用の対話型通信 {#ic-print-channel-tutorial}
+   + [Assemble Form Attachments](document-services/assemble-form-attachments.md)
++ 印刷チャネル用の対話型通信
+{#ic-print-channel-tutorial}
    + [概要](ic-print-channel-tutorial/introduction.md)
    + [Tomcatの設定](ic-print-channel-tutorial/set-up-tomcat.md)
    + [データソースの作成](ic-print-channel-tutorial/create-data-source.md)
