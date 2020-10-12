@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -137,7 +137,7 @@ session.save();
 * Assemble Form Attachments Form [](assets/assemble-form-attachments-af.zip) をローカルシステムにダウンロードします。
 * フォームとドキュメント[ページからフォーム](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) を読み込みます。
 * パッケージマネージャーを使用して、 [ワークフローをダウンロードし](assets/assemble-form-attachments.zip) 、AEMに読み込みます。
-* カスタムバンドル(assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)のダウンロード
+* カス [タムバンドルのダウンロード](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Webコンソールを使用したバンドルの展開と [開始](http://localhost:4502/system/console/bundles)
 * ブラウザがAssembleAttachments Formを指 [すように指定](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * IDドキュメント追加の添付ファイルと、銀行取引明細書セクションへの2つのpdfドキュメント
