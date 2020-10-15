@@ -1,18 +1,18 @@
 ---
-user-guide-title: AEM SitesのビデオとTutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Sites.
-breadcrumb-title: AEM Sites Tutorials
+user-guide-title: AEM Sites のビデオおよびチュートリアル
+user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
+breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
 source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 11%
+source-wordcount: '471'
+ht-degree: 16%
 
 ---
 
 
-# AEM SitesのビデオとTutorials {#sites}
+# AEM Sites のビデオおよびチュートリアル {#sites}
 
 + [概要](overview.md)
 + ページオーサリング {#page-authoring}
@@ -49,9 +49,9 @@ ht-degree: 11%
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
    + [はじめに —AEM Sites](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [AEMヘッドレス使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA EditorとReactの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPAエディタとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM ヘッドレス使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [スタイルシステムを使用した開発](developing/style-system-technical-video-understand.md)
    + [スタイルシステムのベストプラクティス](developing/style-organization-style-system-understand-article.md)
@@ -67,8 +67,8 @@ ht-degree: 11%
 + 単一ページアプリケーション {#spa-editor}
    + [SPAエディタの使用](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello Worldチュートリアル](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [AEM SPA EditorとReactの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPAエディタとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + Multi Site Management {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとBlueprint](./multi-site-management/live-copy-and-blueprint.md)
