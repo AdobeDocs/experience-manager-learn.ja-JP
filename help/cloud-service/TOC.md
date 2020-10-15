@@ -1,14 +1,14 @@
 ---
 user-guide-title: Adobe Experience Manager as a Cloud Service のチュートリアル
-user-guide-description: A collection of tutorials for Adobe Experience Manager as a Cloud Service.
-breadcrumb-title: AEM as a Cloud Service Tutorials
+user-guide-description: Adobe Experience Manager as a Cloud Service のチュートリアルのコレクションです。
+breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
 source-git-commit: 50519b9526182b528047069f211498099e3a4c88
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 31%
+source-wordcount: '197'
+ht-degree: 38%
 
 ---
 
