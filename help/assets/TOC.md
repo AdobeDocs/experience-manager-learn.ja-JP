@@ -1,19 +1,19 @@
 ---
-user-guide-title: AEM AssetsのビデオとTutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Assets.
-breadcrumb-title: AEM Assets Tutorials
+user-guide-title: AEM Assets のビデオおよびチュートリアル
+user-guide-description: Adobe Experience Manager Assets のビデオとチュートリアルのコレクションです。
+breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
 translation-type: tm+mt
 source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 29%
+source-wordcount: '253'
+ht-degree: 37%
 
 ---
 
 
-# AEM AssetsのビデオとTutorials {#assets}
+# AEM Assets のビデオおよびチュートリアル {#assets}
 
 + [概要](overview.md)
 
