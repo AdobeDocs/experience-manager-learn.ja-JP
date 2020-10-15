@@ -1,19 +1,19 @@
 ---
-user-guide-title: AEM FoundationのビデオとTutorials
-breadcrumb-title: AEM Foundation Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Foundation.
+user-guide-title: AEM Foundation のビデオおよびチュートリアル
+breadcrumb-title: AEM Foundation チュートリアル
+user-guide-description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 sub-product: 基礎
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 19%
 
 ---
 
 
-# AEM FoundationのビデオとTutorials {#foundation}
+# AEM Foundation のビデオおよびチュートリアル {#foundation}
 
 + [概要](./overview.md)
 + Administration {#administration}
