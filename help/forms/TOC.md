@@ -1,20 +1,20 @@
 ---
 sub-product: フォーム[ふぉーむ]
 audience: developer
-user-guide-title: AEM FormsのビデオとTutorials
-user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
-breadcrumb-title: AEM Forms Tutorials
+user-guide-title: AEM Forms のビデオとチュートリアル
+user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
+breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
 source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 3%
+source-wordcount: '858'
+ht-degree: 6%
 
 ---
 
 
-# AEM FormsのビデオとTutorials {#forms}
+# AEM Forms のビデオとチュートリアル {#forms}
 
 + [概要](overview.md)
 + [従うべきベストプラクティス](adaptive-forms/best-practices-adaptive-forms.md)
