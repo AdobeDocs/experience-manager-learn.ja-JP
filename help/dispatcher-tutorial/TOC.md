@@ -1,6 +1,6 @@
 ---
-user-guide-title: AEMディスパッチャーキャッシュのチュートリアル
-user-guide-description: A tutorial that helps you better understand how the Dispatcher works and how you can work with it.
+user-guide-title: AEM Dispatcher Cache のチュートリアル
+user-guide-description: Dispatcher のしくみと使用方法をより深く理解するためのチュートリアルです。
 version: 6.x
 sub-product: 基礎
 doc-type: tutorial
@@ -13,13 +13,13 @@ team: TM
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 5%
+source-wordcount: '37'
+ht-degree: 72%
 
 ---
 
 
-# AEMディスパッチャーキャッシュのチュートリアル{#dispatcher-tutorial}
+# AEM Dispatcher Cache のチュートリアル{#dispatcher-tutorial}
 
 + [概要](overview.md)
 + [1 — 概念、パターン、アンチパターン](chapter-1.md)
