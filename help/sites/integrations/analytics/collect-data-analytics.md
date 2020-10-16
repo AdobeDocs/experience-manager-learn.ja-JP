@@ -10,17 +10,17 @@ version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '2402'
-ht-degree: 4%
+source-wordcount: '2414'
+ht-degree: 5%
 
 ---
 
 
 # Adobe Analyticsとページデータを収集する
 
-Adobe Experience Manager Sitesのページに関するデータを収集するために、 [Adobeクライアントデータレイヤーの組み込み機能とAEMコアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) （英語）を使用する方法を説明します。 [Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) と [Adobe Analytics拡張子は](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) 、Adobe Analyticsにページデータを送信するルールの作成に使用されます。
+Learn to use the built-in features of the [Adobe Client Data Layer with AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) to collect data about a page in Adobe Experience Manager Sites. [Experience Platform Launch と Adobe Analytics 拡張は、ルールを作成して Adobe Analytics にページデータを送信するために使用されます。](https://www.adobe.com/experience-platform/launch.html)[](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
 
 ## 作成する内容
 
@@ -270,6 +270,10 @@ Adobe・クライアント・データ・レイヤーは、 **イベント** 駆
    >[!TIP]
    >
    >ライブラリの管理設定では、ライブラリを最新の状態に維持しやすいので *、「ライブラリを自分用に* 管理 `AppMeasurement.js` 」オプションを使用することをお勧めします。
+
+1. チェックボックスをオンにして、「 **Activity Mapを使用**」を有効にします。
+
+   ![Activity Mapの使用を有効にする](assets/track-clicked-component/analytic-track-click.png)
 
 1. **一般** / **トラッキングサーバー**、 `tmd.sc.omtrdc.net`. サイトで `https://`
 
