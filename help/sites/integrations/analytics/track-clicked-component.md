@@ -10,17 +10,17 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 2%
+source-wordcount: '1831'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Analyticsでクリックされたコンポーネントを追跡
 
-イベント主導型 [AdobeクライアントデータレイヤーをAEMコアコンポーネントと共に使用して](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) 、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launchのルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクトラックビーコンと共にデータをAdobe Analyticsに送信する方法について説明します。
+Use the event-driven [Adobe Client Data Layer with AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) to track clicks of specific components on an Adobe Experience Manager site. Experience Platform Launch でルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクのトラックビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
 
 ## 作成する内容
 
@@ -255,9 +255,13 @@ Adobe・クライアント・データ・レイヤーは、 **イベント** 駆
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
-   * `event8` - `CTA Clicked`
+   * `event8`
 
    ![eVarpropとイベントの設定](assets/track-clicked-component/set-evar-prop-event.png)
+
+   >[!NOTE]
+   >
+   > ここ `%Component ID%` は、クリックされたCTAの一意の識別子を取得するので使用されます。 を使用すると、Analyticsレポート `%Component ID%` に次のような値が含まれる可能性があり `button-2e6d32893a`ます。 を使用す `%Component Title%` ると、よりわかりやすい名前が付けられますが、値が一意でない可能性があります。
 
 1. 次に、 **Adobe Analyticsの右側に「アクション — 変数を設定** 」を追加します。次に、 **プラス** アイコンをタップします。
 
@@ -265,9 +269,11 @@ Adobe・クライアント・データ・レイヤーは、 **イベント** 駆
 
 1. 「 **Extension** type( **拡張のタイプ)」を** 「 **Adobe Analytics** 」に設定し、「Action Type（アクションのタイプ） **」を「Send Beacon**」に設定します。
 1. 「 **トラッキング** 」で、ラジオボタンをに設定し **`s.tl()`**&#x200B;ます。
-1. 「 **Link Type** 」で「 **Custom Link** 」を選択し、「 **Link Name******」でデータ要素の値を「Component Title」に設定します。次に例を示します。
+1. 「 **リンクタイプ** 」で「 **カスタムリンク** 」を選択し、「 **リンク名** 」で値を次に設定します。 **`%Component Title%: CTA Clicked`**:
 
    ![リンクビーコンの送信の設定](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+
+   これにより、データ要素の **コンポーネントタイトル** と静的文字列の **CTA Clicked**.の動的変数が組み合わされます。
 
 1. 変更内容を保存します。これで、 **CTA Clicked** ruleの設定は次のようになります。
 
