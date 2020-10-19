@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,6 @@ ht-degree: 1%
 Adobe Experience Manager(AEM)は、AEMをCloud ServiceSDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定、コンテンツをソース管理にコミットする前に、カスタムコード、設定、コンテンツをデプロイしてテストし、Cloud Service環境としてAEMにデプロイできます。
 
 は、ユーザーのディレクトリの略記法 `~` として使用されます。 Windowsでは、これはと同じで `%HOMEPATH%`す。
-
->[!VIDEO](https://video.tv.adobe.com/v/32551/?quality=12&learn=on)
-
->[!NOTE]
->
-> このビデオでは、AEM SDKのローカルクイックスタートを使用して、Adobe Experience Managerのローカルインスタンスを数分でインストールおよび実行する方法を示します。 このビデオでは、重複がquickstart JarファイルをクリックしてAEM SDKのローカルクイックスタートを開始する方法を示します。ただし、これは、Java 8がコンピューターにインストールされている場合は動作しません。 または、このページで `java -jar ...` 説明しているように、コマンドを使用して、AEM SDKのローカルクイックスタートをコマンドラインから起動することもで [きます](#set-up-local-aem-author-service)。
 
 ## Javaのインストール
 
@@ -55,9 +49,6 @@ AEMは、Cloud ServiceSDK、またはAEM SDKとして、開発のためにAEM Au
 ## AEM SDKのzipからQuickstart JARを抽出します。
 
 1. Unzip the downloaded `aem-sdk-XXX.zip` file
-1. Experience Manager開発者用の __license.properties__ ファイルが使用可能であることを確認します。
-
-同じQuickstart Jarファイルとlicense.propertiesファイルを使用して、 _AEM AuthorとPublish_ Servicesの両方を開始します。
 
 ## ローカルのAEM Authorサービスのセットアップ{#set-up-local-aem-author-service}
 
@@ -65,7 +56,6 @@ AEMは、Cloud ServiceSDK、またはAEM SDKとして、開発のためにAEM Au
 
 1. フォルダーの作成 `~/aem-sdk/author`
 1. Quickstart __JAR__ ファイルをにコピー `~/aem-sdk/author` し、 `aem-author-p4502.jar`
-1. license.properties ____ ファイルを  `~/aem-sdk/author`
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM Author Serviceを開始します。
    + `java -jar aem-author-p4502.jar`
       + 管理者パスワードをに指定し `admin`ます。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
@@ -78,7 +68,6 @@ Windows：
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\author
 $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
@@ -88,7 +77,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/author
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
-$ cp ../license.properties ~/aem-sdk/author
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
@@ -99,7 +87,6 @@ $ java -jar aem-author-p4502.jar
 
 1. フォルダーの作成 `~/aem-sdk/publish`
 1. Quickstart __JAR__ ファイルをにコピー `~/aem-sdk/publish` し、 `aem-publish-p4503.jar`
-1. license.properties ____ ファイルを  `~/aem-sdk/publish`
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM発行サービスを開始します。
    + `java -jar aem-publish-p4503.jar`
       + 管理者パスワードをに指定し `admin`ます。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
@@ -112,7 +99,6 @@ Windows：
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\publish
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\publish
 $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
@@ -122,7 +108,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
-$ cp ../license.properties ~/aem-sdk/publish
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
