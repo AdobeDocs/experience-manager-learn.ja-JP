@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 41e2c27cd089e7111b2eb1ef6c344d27980f0741
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 11%
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 編集可能なテンプレートを使用すると、専門の作成者はページテンプレートの作成と更新を行い、Adobe Experience Manager(AEM)サイトで高度なポリシー設定を管理できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/17455/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
 
 編集可能なテンプレートは、新しいAEM Sitesを作成する場合の推奨事項です。
 
