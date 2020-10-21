@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '476'
 ht-degree: 16%
 
 ---
@@ -101,6 +101,7 @@ ht-degree: 16%
    + 分析 {#analytics}
       + [Adobe Analyticsとページデータを収集する](integrations/analytics/collect-data-analytics.md)
       + [Adobe Analyticsでクリックされたコンポーネントを追跡](integrations/analytics/track-clicked-component.md)
+      + [Analysis Workspaceでデータを分析する](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概要](integrations/adobe-target/overview.md)
       + [Launchプロパティ追加のターゲット式](integrations/adobe-target/add-target-launch-extension.md)
