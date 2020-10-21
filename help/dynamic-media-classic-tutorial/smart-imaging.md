@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '694'
 ht-degree: 5%
 
 ---
@@ -48,7 +48,7 @@ Webサイト、モバイルサイト、アプリでの顧客体験の最も重�
 
 スマートイメージングは、Dynamic Media Classicの既存のライセンスに含まれています。 この機能に追加費用はかかりません。 この機能を活用するには、次の2つの要件を満たす必要があります。には、AdobeバンドルCDNと専用ドメインがあります。 その後、アカウントで有効にする必要があります。これは、アカウントでは自動的には有効にならないからです。
 
-テクニカルサポートへのお問い合わせをお送りいただき、スマートイメージング開始を有効にするには、s7support@adobe.comまで電子メールでお問い合わせ [ください](mailto:s7support@adobe.com)。 Smart Imagingに関連付けるカスタムドメインの設定については、ユーザーと相談して作業します。 キャッシュ(Time To Live(TTL)に関連する1つのパラメーターを変更すると、キャッシュがクリアされます。 また、実稼動環境にプッシュする前に、必要に応じてステージングのステップをオプションで実行することもできます。 その後、スマートイメージングをオンにすると、より小さいサイズの画像を顧客に提供し、要求された品質を維持します。 つまり、ページの読み込み時間が短くなります。これらの処理は、Adobe Senseiが最も効率的なサイズを選ぶのに役立つので、自動的に行われます。
+テクニカルサポートを送信した後に、スマートイメージング開始を有効にするには、 |サポートケースの作成| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 スマートイメージングに関連付けるカスタムドメインを設定する場合は、サポートがご協力いたします。 キャッシュ(Time To Live(TTL)に関連する1つのパラメーターを変更すると、キャッシュがクリアされます。 また、実稼動環境にプッシュする前に、必要に応じてステージングのステップをオプションで実行することもできます。 その後、スマートイメージングをオンにすると、より小さいサイズの画像を顧客に提供し、要求された品質を維持します。 つまり、ページの読み込み時間が短くなります。これらの処理は、Adobe Senseiが最も効率的なサイズを選ぶのに役立つので、自動的に行われます。
 
 スマートイメージングを有効にしたら、期待どおりに動作していることを確認します。
 
