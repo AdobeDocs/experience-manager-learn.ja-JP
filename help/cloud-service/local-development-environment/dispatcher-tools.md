@@ -1,6 +1,6 @@
 ---
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
-description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
+description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにし、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
 feature: dispatcher
 topics: development, caching, security
@@ -11,9 +11,9 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1534'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,8 @@ Adobe Experience Manager(AEM)のディスパッチャーは、CDNとAEM発行層
 Cloud ServiceSDKとしてのAEMには、推奨されるディスパッチャーツールバージョンが含まれており、これにより、ディスパッチャーをローカルで設定、検証、シミュレーションできます。 ディスパッチャーツールは、次のものから構成されます。
 
 + Apache HTTP Webサーバーとディスパッチャー設定ファイルのベースラインセット( `.../dispatcher-sdk-x.x.x/src`
-+ 設定検証CLIツール( `.../dispatcher-sdk-x.x.x/bin/validator`
++ 設定検証ツール( `.../dispatcher-sdk-x.x.x/bin/validate` （Dispatcher SDK 2.0.29以降）)
++ 構成生成CLIツール( `.../dispatcher-sdk-x.x.x/bin/validator`
 + 設定導入CLIツール( `.../dispatcher-sdk-x.x.x/bin/docker_run`
 + ディスパッチャーモジュールと共にApache HTTP Webサーバーを実行するドッカーイメージ
 
@@ -39,7 +40,7 @@ Cloud ServiceSDKとしてのAEMには、推奨されるディスパッチャー�
 ## 前提条件
 
 1. WindowsユーザーはWindows 10 Professionalを使用する必要がある
-1. ローカルの開発マシンにPublish QuickStart [](./aem-runtime.md) Experience Managerをインストールします。
+1. ローカルの開発マシンに [Experience ManagerPublish Quickstart Jar](./aem-runtime.md) をインストールします。
    + 必要に応じて、最新の [AEMリファレンスWebサイト](https://github.com/adobe/aem-guides-wknd/releases) をローカルAEM発行サービスにインストールします。 このWebサイトは、作業中のディスパッチャーを視覚化するためにこのチュートリアルで使用します。
 1. 最新バージョンの [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)をローカル開発マシンにインストールして開始します。
 
@@ -49,13 +50,10 @@ Cloud ServiceSDKまたはAEM SDKとしてのAEMには、開発用にApache HTTP 
 
 Cloud ServiceSDKとしてのAEMが既にダウンロードされていて、ローカルAEMランタイムを [セットアップする場合](./aem-runtime.md)、再ダウンロードする必要はありません。
 
-1. Log in to [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) with your Adobe ID
-   + AEMをCloud ServiceSDKとしてダウンロードするには、Adobe組織 __がAEM用にCloud Serviceとしてプロビジョニングされている必要があります__ 。
-1. 「 __AEM」タブにCloud Serviceとして移動します__ 。
-1. __発行日順に並べ替え__ ( ____ 降順順)
-1. 最新の __AEM SDK__ 結果行をクリックします
-1. EULAを確認して同意し、「 __ダウンロード__ 」ボタンをタップします
-1. AEM SDKのディスパッチャーツールv2.0.21以降が使用されていることを確認します。
+1. Log in to [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3AlastModified&amp;by.sort=&amp;layout=リスト&amp;p.offset=0&amp;p.limit=1) with your Adobe ID
+   + AEMをCloud ServiceSDKとしてダウンロードするには、AEMのAdobe組織 __がCloud Service用にプロビジョニングされている必要があります__ 。
+1. 最新の __AEM SDK__ result行をクリックしてダウンロードします
+   + AEM SDKのディスパッチャーツールv2.0.29以降がダウンロードの説明に記載されていることを確認します。
 
 ## AEM SDKのzipからディスパッチャーツールを抽出します。
 
@@ -92,20 +90,25 @@ Cloud ServiceSDKとしてのAEMが既にダウンロードされていて、ロ�
 
 設定ファイルの詳細な説明は、ディスパッチャーツールでは、として参照でき `dispatcher-sdk-x.x.x/docs/Config.html`ます。
 
+## 設定の検証
+
+オプションで、ディスパッチャーとApache Webサーバーの設定(経由 `httpd -t`)は、スクリプトを使用して検証できます( `validate``validator` 実行ファイルと混同しないでください)。
+
++ 使用方法:
+   + Windows：`bin\validate src`
+   + macOS/Linux: `./bin/validate ./src`
+
 ## ディスパッチャーをローカルで実行
 
-ディスパッチャーをローカルで実行するには、その設定に使用するディスパッチャー設定ファイルを、ディスパッチャーツールの `validator` CLIツールを使用して検証する必要があります。
+ディスパッチャーをローカルで実行するには、ディスパッチャーツールの `validator` CLIツールを使用してディスパッチャー設定ファイルを生成する必要があります。
 
 + 使用方法:
    + Windows：`bin\validator full -d out src`
    + macOS/Linux: `./bin/validator full -d ./out ./src`
 
-検証は、次の2つの目的で行われます。
+このコマンドは、設定をDockerコンテナのApache HTTP Webサーバーと互換性のあるファイルセットに変換します。
 
-+ Apache HTTP Webサーバーおよびディスパッチャー設定ファイルの正確性を検証します
-+ 設定を、DockerコンテナのApache HTTP Webサーバーと互換性のあるファイルセットに変換します。
-
-検証が完了すると、トランスパイルされた設定は、Dockerコンテナでローカルにディスパッチャーを実行します。 バリデーターの __オプションを使用して、最新の設定が検証__ され `-d` 、出力されていることを確認することが重要です。
+生成されると、トランスパイルされた設定は、Dockerコンテナでローカルにディスパッチャーを実行するために使用されます。 最新の設定が、バリデーターの `validate` オプションを使用して検証され __、出力されたことを確認することが重要で__`-d` す。
 
 + 使用方法:
    + Windows：`bin\docker_run <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
