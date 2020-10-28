@@ -5,10 +5,10 @@ breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -55,10 +55,9 @@ ht-degree: 37%
 
 + 高度なメタデータの管理{#metadata}
    + [カスケードメタデータ](metadata/cascade-metadata-feature-video-use.md)
-   + [スマートタグの概要](metadata/smart-tags-feature-video-use.md)
-   + [スマートタグの設定](metadata/smart-tags-technical-video-setup.md)
-   + [拡張スマートタグ](metadata/enhanced-smart-tags-feature-video-use.md)
-   + [拡張スマートタグの設定](metadata/enhanced-smart-tags-technical-video-setup.md)
+   + [画像のスマートタグ](metadata/image-smart-tags.md)
+   + [画像のカスタムスマートタグ](metadata/custom-smart-tags.md)
+   + [ビデオのスマートタグ](metadata/video-smart-tags.md)
    + [メタデータの読み込みと書き出し](metadata/metadata-import-feature-video-use.md)
 
 + 共有と配布{#sharing}
