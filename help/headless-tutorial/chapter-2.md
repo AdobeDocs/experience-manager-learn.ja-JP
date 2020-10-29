@@ -4,10 +4,10 @@ seo-title: AEM Content Servicesの概要 — 第2章 —イベントコンテン
 description: AEMヘッドレスチュートリアルの第2章では、イベントを作成するための正規化されたデータ構造とオーサリングインターフェイスを定義するために使用するコンテンツフラグメントモデルの有効化と定義を行います。
 seo-description: AEMヘッドレスチュートリアルの第2章では、イベントを作成するための正規化されたデータ構造とオーサリングインターフェイスを定義するために使用するコンテンツフラグメントモデルの有効化と定義を行います。
 translation-type: tm+mt
-source-git-commit: 885e30dea2a21dff789c98bdc5beb2f758b806f3
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 9%
+source-wordcount: '994'
+ht-degree: 8%
 
 ---
 
@@ -25,9 +25,9 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 
 ## コンテンツフラグメントモデルの有効化
 
-コンテンツフラグメントモデル **は** 、AEM **Configuration Browserを使用して有効にする必要があります**。
+コンテンツフラグメントモデル **は** 、AEM **[Configuration Browserを使用して有効にする必要があります ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**。
 
-コンテンツフラグメントモデルが設定に対して **有効になっていない場合** 、 **[!UICONTROL 作成]/[!UICONTROL コンテンツフラグメント]** ボタンは、関連するAEM設定に対しては表示されません。
+コンテンツフラグメントモデルが設定に対して **有効になっていない場合** 、 **[!UICONTROL 作成] / [!UICONTROL コンテンツフラグメント]** ボタンは、関連するAEM設定に対しては表示されません。
 
 >[!NOTE]
 >
@@ -36,10 +36,12 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 >設定がコンテンツ階層に影響を与えるには、そのコンテンツ階層の `cq:conf` プロパティを介して設定を参照する必要があります。 (これは、 [!DNL WKND Mobile] 次の手順5 **** の設定で行います)。
 >
 >設定を使用する場合、設定はすべてのコンテンツに適用され、設定する必要 `global``cq:conf` はありません。
+>
+>See the [[!UICONTROL Configuration Browser] documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) for more information.
 
 1. 適切な設定を変更する権限を持つユーザーとしてAEM Authorにログインします。
    * このチュートリアルでは、 **admin** userを使用できます。
-1. **[!UICONTROL ツール]/[!UICONTROL 一般]/[!UICONTROL 設定ブラウザに移動します。]**
+1. **[!UICONTROL ツール] / [!UICONTROL 一般] / [!UICONTROL 設定ブラウザに移動します。]**
 1. 選択する横の **フォルダーアイコン****[!DNL WKND Mobile]** をタップし、左上の **[!UICONTROL 「編集]** 」ボタンをタップします。
 1. 「 **[!UICONTROL コンテンツフラグメントモデル]**」を選択し、右上の「 **[!UICONTROL 保存して閉じる]** 」をタップします。
 
@@ -58,8 +60,8 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 
 1. 設定を **[!DNL WKND Mobile]** アセットフォルダーに適用して、コンテンツフラグメントモデルのコンテンツフラグメントをアセットフォルダー階層内に作成できるようにします **[!DNL WKND Mobile]** 。
 
-   1. **[!UICONTROL AEM]/[!UICONTROL アセット]/[!UICONTROL ファイルに移動します。]**
-   1. WKND Mobile **フォルダーの選択**
+   1. **[!UICONTROL AEM] / [!UICONTROL アセット] / [!UICONTROL ファイルに移動します。]**
+   1. WKND Mobile ** フォルダーの選択**
    1. 上部のアクションバーにある「 **[!UICONTROL プロパティ]** 」ボタンをタップして、「 [!UICONTROL フォルダーのプロパティ」を開きます]
    1. 「 [!UICONTROL フォルダーのプロパティ]」で、「 **[!UICONTROL Cloud Services]** 」タブをタップします
    1. 「 **[!UICONTROL Cloud Configuration]** 」フィールドが **/conf/wknd-mobileに設定されていることを確認します。**
@@ -79,7 +81,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 
 ## コンテンツフラグメントモデルの作成
 
-1. **[!UICONTROL ツール]/[!UICONTROL アセット]/**&#x200B;コンテンツフラグメントモデルに移動します。
+1. **[!UICONTROL ツール] / [!UICONTROL アセット] / **&#x200B;コンテンツフラグメントモデルに移動します。
 1. フォルダーをタップして開き **[!DNL WKND Mobile]** ます。
 1. 「 **[!UICONTROL 作成]** 」をタップして、コンテンツフラグメントモデル作成ウィザードを開きます。
 1. 「 **[!DNL Event]** モデルタイトル **** （説明はオプションです） *」と入力し、「* 作成 **** 」をタップして保存します。
@@ -88,9 +90,9 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 
 ## コンテンツフラグメントモデルの構造の定義
 
-1. **[!UICONTROL ツール]/[!UICONTROL アセット]/[!UICONTROL コンテンツフラグメントモデル]/に移動します[!DNL WKND]**。
+1. **[!UICONTROL ツール] / [!UICONTROL アセット] / [!UICONTROL コンテンツフラグメントモデル] /に移動します[!DNL WKND]**。
 1. コン **[!DNL Event]** テンツフラグメントモデルを選択し、上部のアクションバーで「 **[!UICONTROL 編集]** 」をタップします。
-1. 右側の「 **[!UICONTROL Data Types](** データタイプ) **[!UICONTROL 」タブで]** 、 **[!DNL Question]** 1行のテキスト入力を左のドロップゾーンにドラッグして、フィールドを定義します。
+1. 右側の「 **[!UICONTROL Data Types] (** データタイプ) **[!UICONTROL 」タブで]** 、 **[!DNL Question]** 1行のテキスト入力を左のドロップゾーンにドラッグして、フィールドを定義します。
 1. 左側で「 **[!UICONTROL 1行」の新しいテキスト入力]** が選択され、右側で「 **[!UICONTROL プロパティ]** 」タブが選択されていることを確認します。 次のように、プロパティフィールドに入力します。
 
    * [!UICONTROL レンダリング時の名前] : `textfield`
