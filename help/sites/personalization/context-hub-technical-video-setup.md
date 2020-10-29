@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '426'
 ht-degree: 25%
 
 ---
@@ -40,7 +40,7 @@ To enable the ContextHub features and to link to the ContextHub JavaScript libra
 
 ## サイト設定とContextHubセグメント {#site-configuration-and-contexthub-segments}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[ [!UICONTROL 設定ブラウザ]]で、サイトのContextHubセグメントを有効にします。
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[ [[!UICONTROL 設定ブラウザ]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)]で、サイトのContextHubセグメントを有効にします。
 
 ## セグメントの作成 {#create-segments}
 
