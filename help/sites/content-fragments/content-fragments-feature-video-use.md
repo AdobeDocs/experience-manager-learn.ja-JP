@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '396'
 ht-degree: 8%
 
 ---
@@ -39,7 +39,7 @@ AEMコンテンツフラグメントは、関連付けられた構造化デー�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEMコンテンツフラグメントモデル(コンテンツフラグメントのデータスキーマ)は、AEM [!UICONTROL 設定ブラウザー]( Configuration Browser)を使用して有効にする必要があります。これにより、コンテンツフラグメントモデルを設定ごとに定義できます。
+AEMコンテンツフラグメントモデル(コンテンツフラグメントのデータスキーマ)は、AEM [[!UICONTROL 設定ブラウザー]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)( Configuration Browser)を使用して有効にする必要があります。これにより、コンテンツフラグメントモデルを設定ごとに定義できます。
 
 ## コンテンツフラグメントの作成 {#creating-content-fragments}
 
