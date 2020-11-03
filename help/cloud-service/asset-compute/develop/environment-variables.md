@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '588'
 ht-degree: 1%
 
 ---
@@ -113,8 +113,4 @@ AWS_REGION=us-east-1
 
 ## トラブルシューティング
 
-### Asset Compute Local Development Toolsは、private.keyが見つからないため開始できません
-
-+ __エラー：__ ローカル開発サーバーエラー：validatePrivateKeyFileに必要なファイルがありません…. (標準出力 `aio app run` コマンドを使用)
-+ __原因：__ フ `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` ァイル内の `.env` 値が、現在のユーザーが参照し `private.key``private.key` ていない、または読み取りできない。
-+ __解像度：__ ファイル内の `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 値を確認し、ファイルシステム `.env``private.key` 上ののの完全で絶対パスが含まれていることを確認します。
++ [private.keyが見つからないため、開発ツールは開始できません](../troubleshooting.md#missing-private-key)
