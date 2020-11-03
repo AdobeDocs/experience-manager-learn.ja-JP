@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -103,40 +103,9 @@ _wskdebugを使用したAsset Compute Workerのデバッグのクリックスル
 
 ## トラブルシューティング
 
-### デバッガがアタッチしません
-
-+ __エラー__:起動の処理中にエラーが発生しました：エラー：次の時点でデバッグターゲットに接続できませんでした…
-+ __原因__:Docker Desktopがローカルシステムで実行されていません。 VSコードデバッグコンソール(表示/デバッグコンソール)を確認して、このエラーがレポートされることを確認します。
-+ __解像度__:開始 [ドッカーデスクトップで、必要なドッカーイメージがインストールされていることを確認し](../set-up/development-environment.md#docker)ます。
-
-### ブレークポイントが一時停止されない
-
-+ __エラー__:デバッグ可能な開発ツールからアセット計算ワーカーを実行する場合、VSコードはブレークポイントで一時停止しません。
-
-#### VSコードデバッガがアタッチされていません
-
-+ __原因：__ VSコードデバッガが停止または切断されました。
-+ __解像度：__ VSコードデバッガを再起動し、VSコードデバッグ出力コンソール(表示/デバッグコンソール)を見て接続を確認します。
-
-#### ワーカーの実行開始後に添付されたVSコードデバッガ
-
-+ __原因：__ 「開発ツールで __実行__ 」をタップする前に、VSコードデバッガーがアタッチされませんでした。
-+ __解像度：__ VSコードのデバッグコンソール(表示/デバッグコンソール)を確認し、デバッガがアタッチされていることを確認してから、開発ツールからAsset Compute workerを再実行します。
-
-### デバッグ中に作業者がタイムアウトする
-
-+ __エラー__:Debug Consoleレポートに「Action will timeout in -XXX milliseconds」または [Asset Compute Development Toolの](../develop/development-tool.md) Renditionプレビューが無限にスピンするか、
-+ __原因__:デバッグ中に [manifest.ymlで定義されているワーカーのタイムアウトを超えました](../develop/manifest.md) 。
-+ __解像度__:ワーカーのタイムアウトを [manifest.ymlで一時的に増やすか](../develop/manifest.md) 、デバッグアクティビティを高速化します。
-
-### デバッガープロセスを終了できません
-
-+ __エラー__: `Ctrl-C` コマンドラインでデバッガプロセスが終了しない(`npx adobe-asset-compute devtool`)。
-+ __原因__:1.3.xのバグ `@adobe/aio-cli-plugin-asset-compute` は、終了コマンドとして認識され `Ctrl-C` ません。
-+ __解像度__:バージョン1.4.1以降 `@adobe/aio-cli-plugin-asset-compute` へのアップデート
-
-   ```
-   $ aio update
-   ```
-
-   ![トラブルシューティング — aioの更新](./assets/debug/troubleshooting__terminate.png)
++ [デバッガがアタッチしません](../troubleshooting.md#debugger-does-not-attach)
++ [ブレークポイントが一時停止されない](../troubleshooting.md#breakpoints-no-pausing)
++ [VSコードデバッガがアタッチされていません](../troubleshooting.md#vs-code-debugger-not-attached)
++ [ワーカーの実行開始後に添付されたVSコードデバッガ](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [デバッグ中に作業者がタイムアウトする](../troubleshooting.md#worker-times-out-while-debugging)
++ [デバッガープロセスを終了できません](../troubleshooting.md#cannot-terminate-debugger-process)
