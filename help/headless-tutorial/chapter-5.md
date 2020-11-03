@@ -2,7 +2,7 @@
 title: 第5章 — Content Servicesページのオーサリング
 description: AEMヘッドレスチュートリアルの第5章では、第4章で定義したテンプレートからページを作成する方法について説明します。 これらのページは、JSON HTTPエンドポイントとして機能します。
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -20,7 +20,7 @@ AEMヘッドレスチュートリアルの第5章では、第4章で定義した
 
 ## イベントAPIページの作成
 
-1. **[!UICONTROL AEM]/[!UICONTROL サイト]/[!DNL WKND Mobile]/[!DNL English]/に移動しま[!DNL API]**&#x200B;す。
+1. **[!UICONTROL AEM] / [!UICONTROL サイト] / [!DNL WKND Mobile] / [!DNL English] /に移動しま[!DNL API]**&#x200B;す。
 1. **APIページのラベルをタップし**、上部アクションバーの「 **作成** 」ボタンをタップして、APIページの下に新しいイベントAPIページを作成します。
    1. 上部のアクションバーで **「** 作成」をタップします
    1. Select **イベントAPI** template
@@ -44,7 +44,7 @@ AEMヘッドレスチュートリアルの第5章では、第4章で定義した
 1. イベントの追加上に表示する **タグ行** 。
    1. 「 **テキスト** 」コンポーネントの編集
    1. テキストを入力します。
-      1. `The WKND is here.`
+      * `The WKND is here.`
 
 1. 表示する **イベント** :
    1. 「 **プロパティ** 」タブで次の設定を行います。
