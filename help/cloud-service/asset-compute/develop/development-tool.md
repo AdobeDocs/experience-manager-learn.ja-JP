@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -84,24 +84,10 @@ _開発ツールでのアセット計算作業の実行のクリックスルー�
 
 ## トラブルシューティング
 
-### ソースファイルのドロップダウンが正しくない{#troubleshooting__dev-tool-application-cache}
-
-アセット計算開発ツールは、古いデータを取り込む状態に入る場合があり、 __ソースファイル__ (Source File)ドロップダウンに誤った項目が表示されるのが最も顕著になります。
-
-+ __エラー：__ ソースファイルのドロップダウンに正しくない項目が表示される。
-+ __原因：__ キャッシュされたブラウザーの状態が古い場合、
-+ __解像度：__ ブラウザーで、ブラウザータブの「アプリケーション状態」、ブラウザーのキャッシュ、ローカルストレージおよびサービスワーカーが完全にクリアされます。
-
-### devToolTokenクエリパラメーターがないか、無効です{#troubleshooting__devtooltoken}
-
-+ __エラー：__ Asset Compute Development Toolの「未認証」通知
-+ __原因：__`devToolToken` が見つからないか、無効です
-+ __解像度：__ 「Asset Compute Development Tool」ブラウザウィンドウを閉じ、 `aio app run` コマンドを使用して開始した実行中の開発ツールプロセスを終了し、再開始開発ツール(を使用 `aio app run`)を終了します。
-
-### ソースファイルを削除できません{#troubleshooting__remove-source-files}
-
-+ __エラー：__ 開発ツールのUIから追加したソースファイルを削除する方法はありません
-+ __原因：__ この機能は実装されていません
-+ __解像度：__ で定義されている資格情報を使用して、クラウドストレージプロバイダーにログインし `.env`ます。 開発ツールで使用するコンテナ(で指定 `.env`)を探し、 ____ ソースフォルダーに移動して、ソース画像を削除します。 削除したソースファイルが開発ツールの「 [アプリケーションの状態」でローカルにキャッシュされる場合があるので、ドロップダウンに引き続き表示される場合は](#troubleshooting__dev-tool-application-cache) 、「ソースファイル」のドロップダウンに記載された手順を正しく実行しないといけません。
-
-   ![Microsoft Azure Blob Storage](./assets/development-tool/troubleshooting__remove-source-files.png)
++ [誤ったYAMLインデント](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize制限が低すぎます](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [private.keyが見つからないため、開発ツールは開始できません](../troubleshooting.md#missing-private-key)
++ [ソースファイルのドロップダウンが正しくない](../troubleshooting.md#source-files-dropdown-incorrect)
++ [devToolTokenクエリパラメーターがないか、無効です](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [ソースファイルを削除できません](../troubleshooting.md#unable-to-remove-source-files)
++ [レンディションが部分的に描画または破損して返されました](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
