@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '630'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
    + __拡張子：__ `png`
       + 生成されるレンディションの拡張。 をに設定します。ワーカーのWebサービスがサポートしているサポートされている出力形式です。これにより、円の切り取りの後ろに透明な背景が作成されます。 `png`
    + __エンドポイント：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + これは、を介して取得したワーカーのURLで `aio app get-url`す。 URLが、処理プロファイルが設定されるCloud Service環境ーとしてのAEMに基づいて、適切なワークスペースを指していることを確認します。 このサブドメインは、ワークス `development` ペースと一致します。
+      + これは、を介して取得したワーカーのURLで `aio app get-url`す。 URLが、Cloud Service環境ーとしてのAEMに基づく正しいワークスペースを指していることを確認します。
       + ワーカーURLが正しいワークスペースを指していることを確認します。 AEMをCloud Serviceステージとして使用する場合はステージワークスペースURLを、AEMをCloud Service制作として使用する場合は実稼働ワークスペースURLを使用します。
    + __サービスパラメーター__
       + タップ __追加パラメータ__
@@ -54,7 +54,7 @@ ht-degree: 2%
       + アセット計算ワーカーに渡され、JavaScriptオブジェクトを介して使用できるこれらのキー/値のペアです。 `rendition.instructions`
    + __MIME タイプ__
       + __以下を含みます。__`image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
-         + ワーカーのWebサービスでサポートされるMIMEタイプは次のみです。これにより、カスタムワーカーで処理できるアセットが制限されます。
+         + ワーカーのnpmモジュールには、これらのMIMEタイプのみが含まれます。 このリストは、カスタムワーカーが処理するアセットを制限します。
       + __除外：__ `Leave blank`
          + このサービス設定を使用して、これらのMIMEタイプを持つアセットを処理しないでください。 この場合、許可リストのみを使用します。
 1. 右上の「 __保存__ 」をタップします
@@ -83,26 +83,9 @@ ht-degree: 2%
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Githubにはプロジェクトの最後の状態が含まれ、ワーカーとテストケースが完全に入力されますが、資格情報は含まれません。`.env`,`.config.json`または`.aio`._
+_Githubにはプロジェクトの最後の状態が含まれ、ワーカーとテストケースが完全に入力されますが、資格情報は含まれません。 `.env`, `.config.json` または `.aio`._
 
 ## トラブルシューティング
 
-### アセットにカスタムレンディションが見つかりません
-
-+ __エラー：__ 新しく再処理されたアセットは正常に処理されますが、カスタムレンディションが見つかりません。
-
-#### 処理プロファイルが上位フォルダーに適用されていません
-
-+ __原因：__ カスタムワーカーを使用する処理プロファイルを含むフォルダーの下にアセットが存在しません
-+ __解像度：__ 処理プロファイルのアセットの上位フォルダーへの適用
-
-#### 低い処理プロファイルで置き換えられた処理プロファイル
-
-+ __原因：__ このアセットは、カスタムワーカーの処理プロファイルが適用されたフォルダーの下に存在しますが、そのカスタマーワーカーを使用しない別の処理プロファイルが、そのフォルダーとアセットの間で適用されています。
-+ __解像度：__ 2つの処理プロファイルを組み合わせて、または調整し、中間処理プロファイルを削除する
-
-### アセットの処理に失敗しました
-
-+ __エラー：__ アセットに表示されるアセット処理に失敗したバッジ
-+ __原因：__ カスタムワーカーの実行中にエラーが発生しました
-+ __解像度：__ を使用したAdobe I/O Runtimeアクティベーションの [デバッグに関する手順に従い](../test-debug/debug.md#aio-app-logs)`aio app logs`ます。
++ [AEMのアセットにカスタムレンディションが見つかりません](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [AEMでのアセットの処理が失敗する](../troubleshooting.md#asset-processing-fails)
