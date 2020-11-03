@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Asset Compute Development Toolは、ワーカー生成レンディションの�
 
 ## デプロイ
 
-カスタムのアセットコンピューティングワーカーをAEMにCloud Serviceとして統合する方法を説明します。まず、ワーカーをAdobe I/O Runtimeに展開し、次にAEM Assets処理プロファイルを使用してAEMからCloud Service作成者として呼び出します。
+カスタムのアセット計算ワーカーをAEMにCloud Serviceとして統合する方法について説明します。まず、それらをAdobe I/O Runtimeにデプロイし、次にAEM Assetsの処理プロファイルを介してAEMからCloud Service作成者を呼び出します。
 
 ### Adobe I/O Runtimeに展開
 
@@ -122,11 +122,17 @@ AEMと共にCloud Serviceとして使用するには、アセットコンピュ�
 
 ### AEM処理プロファイルを使用したワーカーの統合
 
-Adobe I/O Runtimeに導入すると、アセットコンピューティングワーカーは、 [アセット処理プロファイルを介してCloud ServiceとしてAEMに登録できます](../../assets/configuring/processing-profiles.md)。 次に、処理プロファイルーは、そのアセットに適用されるアセットフォルダーに適用されます。
+Adobe I/O Runtimeに導入すると、アセットコンピューティングワーカーは、 [アセット処理プロファイルを介してCloud ServiceとしてAEMに登録できます](../../assets/configuring/processing-profiles.md)。 次に、処理プロファイルは、そのアセットに適用されるアセットフォルダに適用されます。
 
 + [AEM処理プロファイルとの統合](./deploy/processing-profiles.md)
 
-## Githubのチュートリアルのコードベース
+## アドバンス
+
+これらの要約チュートリアルは、前章で確立した基礎知識に基づく、より高度な使用例に取り組みます。
+
++ [メタデータを](./advanced/metadata.md)
+
+## Githubのコードベース
 
 チュートリアルのコードベースは、次の場所でGithubで入手できます。
 
@@ -142,14 +148,13 @@ Adobe I/O Runtimeに導入すると、アセットコンピューティングワ
 
 + [Asset Compute Serviceドキュメント](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
 + [Asset Compute Development Toolのお読みください](https://github.com/adobe/asset-compute-devtool)
-
-### その他のコードサンプル
-
 + [資産計算サンプルワーカー](https://github.com/adobe/asset-compute-example-workers)
 
 ### APIとSDK
 
 + [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk)
    + [資産計算コモンズ](https://github.com/adobe/asset-compute-commons)
+   + [アセット計算XMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [AdobeクラウドBlobstoreラッパーライブラリ](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adobeノード取得の再試行ライブラリ](https://github.com/adobe/node-fetch-retry)
++ [資産計算サンプルワーカー](https://github.com/adobe/asset-compute-example-workers)
