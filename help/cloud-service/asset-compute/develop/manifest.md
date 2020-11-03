@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -122,14 +122,5 @@ packages:
 
 ## トラブルシューティング
 
-### 誤ったYAMLインデント
-
-+ __エラー：__ YAMLException:行X、列Y:(標準out from `aio app run` コマンドを使用)のマッピングエントリのインデントが正しくありません
-+ __原因：__ Yamlファイルは空白が区別されます。インデントが正しくない可能性があります。
-+ __解像度：__ を確認し `manifest.yml` 、すべてのインデントが正しいことを確認します。
-
-### memorySize制限が低すぎます
-
-+ __エラー：__ ローカルデベロッパーサーバーOpenWiskError:PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=trueがHTTP 400を返しました（無効な要求） —> &quot;要求内容が正しくありません：要件が失敗しました：メモリ64 MBが許容しきい値134217728 Bインチを下回っています。
-+ __原因：__ マニフェスト内の `memorySize` 制限が、エラーメッセージで報告される最小許容しきい値（バイト単位）を下回るように設定されました。
-+ __解像度：__ の `memorySize` 制限を確認し、すべて許容され `manifest.yml` る最小しきい値より大きいことを確認します。
++ [誤ったYAMLインデント](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize制限が低すぎます](../troubleshooting.md#memorysize-limit-is-set-too-low)
