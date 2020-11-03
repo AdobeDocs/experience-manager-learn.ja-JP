@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -30,16 +30,18 @@ Asset Computeプロジェクトは、アセットの元のバイナリを名前�
 
 アセットコンピューティングワーカーは、概念的に次に示す関数に、Asset Compute SDKのWorker API契約を実装し `renditionCallback(...)` ます。
 
-+ __入力：__ AEMアセットの元のアセットのバイナリとパラメーター
++ __入力：__ AEMアセットの元のバイナリパラメーターと処理プロファイルパラメーター
 + __出力：__ AEMアセットに追加する1つ以上のレンディション
 
 ![資産計算作業者の論理フロー](./assets/worker/logical-flow.png)
 
-1. アセット計算ワーカーがAEM Authorサービスから呼び出された場合、処理プロファイルを介してAEMアセットに対して実行されます。 アセットの __(1a)__ 元のバイナリは、レンダリングコールバック関数のパラメータを介してワーカーに渡され、 `source` (1b) __(処理プロファイルでパラメータセットを介して定義された__`rendition.instructions` パラメータがすべてワーカーに渡されます。
-1. Asset Compute SDKレイヤーは、処理プロファイルからの要求を受け入れ、カスタムのAsset Compute Worker `renditionCallback(...)` 関数の実行を調整し、 __(1b)が提供する任意のパラメータに基づいて(1a)______ に提供するソースバイナリを変換して、ソースバイナリのレンダリングを生成します。
+1. AEM AuthorサービスはAsset Compute Workerを呼び出し、アセットの __(1a)__ 元のバイナリ(`source` パラメーター)と(1b)処理プロファイルで定義されているパラメーターを提供します( ____`rendition.instructions` パラメーター)。
+1. Asset Compute SDKは、カスタムAsset Computeメタデータワーカーの `renditionCallback(...)` 関数の実行を調整し、アセットの元のバイナリ(1a) __と任意のパラメータ__ (1b)に基づいて新しいバイナリレンディションを生成し __ます__。
+
    + このチュートリアルでは、レンディションが「処理中」に作成されます。つまり、ワーカーはレンディションを構成しますが、ソースバイナリはレンディションの生成用に他のWebサービスAPIにも送信できます。
-1. アセット計算ワーカーは、レンディションのバイナリ表現を保存し `rendition.path` ます。これにより、レンディションはAEM Authorサービスに保存できます。
-1. 完了すると、に書き込まれるバイナリデータ `rendition.path` は、Asset Compute SDKを介して転送され、AEM UIで使用できるレンディションとしてAEM Author Serviceを介して公開されます。
+
+1. アセット計算ワーカーは、新しいレンディションのバイナリデータをに保存し `rendition.path`ます。
+1. に書き込まれたバイナリデータ `rendition.path` は、Asset Compute SDKを介してAEM Author Serviceに転送され、 __(4a)テキストレンディション__ として公開され、 ____ (4b)はアセットのメタデータノードに持続します。
 
 上の図は、Asset Compute Worker呼び出しに対する開発者向けの懸念事項と論理的な流れを示しています。 興味深い点は、Asset Computeの実行の [内部詳細を利用できる点ですが](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) 、信頼できるのはパブリックAsset Compute SDK APIの契約に限られます。
 
@@ -316,7 +318,7 @@ class RenditionInstructionsError extends ClientError {
 これでワーカーコードが完了し、以前に [manifest.ymlに登録および設定されたので](./manifest.md)、ローカルのAsset Compute Development Toolを使用して実行し、結果を確認できます。
 
 1. アセット計算プロジェクトのルートから
-1. 実行 `app aio run`
+1. 実行 `aio app run`
 1. アセット計算開発ツールが新しいウィンドウで開くのを待つ
 1. 「 __Select a file...__ 」ドロップダウンで、処理するサンプル画像を選択します。
    + ソースアセットのバイナリとして使用するサンプル画像ファイルを選択します
@@ -391,11 +393,4 @@ class RenditionInstructionsError extends ClientError {
 
 ## トラブルシューティング
 
-### レンディションが部分的に描画されて返される
-
-+ __エラー__:レンディションのファイルサイズの合計が大きい場合、レンディションが完全にレンダリングされません
-
-   ![トラブルシューティング — レンディションが部分的に描画されて返される](./assets/worker/troubleshooting__await.png)
-
-+ __原因__:レンディションの書き込みが完了する前に、ワーカーの `renditionCallback` 機能を終了してい `rendition.path`ます。
-+ __解像度__:カスタムワーカーコードを確認し、すべての非同期呼び出しが同期されていることを確認します。
++ [レンディションが部分的に描画または破損して返されました](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
