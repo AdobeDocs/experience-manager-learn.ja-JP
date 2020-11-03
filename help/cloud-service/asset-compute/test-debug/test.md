@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 ...
 /test/
   asset-compute/
-    <worker-name>/           <--- Test suite for the worker
+    <worker-name>/           <--- Test suite for the worker, must match the yaml key for this worker in manifest.yml
         <test-case-1>/       <--- Specific test case 
             file.jpg         <--- Input file (ie. `source.path` or `source.url`)
             params.json      <--- Parameters (ie. `rendition.instructions`)
@@ -118,21 +118,5 @@ ht-degree: 0%
 
 ## トラブルシューティング
 
-### レンディションが生成されませんでした
-
-レンディションを生成せずにテストケースが失敗する。
-
-+ __エラー：__ 失敗：レンディションが生成されません。
-+ __原因：__ JavaScript構文エラーなどの予期しないエラーが発生したため、ワーカーはレンディションの生成に失敗しました。
-+ __解像度：__ テストの実行を確認 `test.log` し `/build/test-results/test-worker/test.log`ます。 失敗したテストケースに対応するこのファイル内のセクションを見つけ、エラーを確認します。
-
-   ![トラブルシューティング — レンディションが生成されません](./assets/test/troubleshooting__no-rendition-generated.png)
-
-### テストで誤ったレンディションが生成される
-
-テストケースで、正しくないレンディションの生成に失敗する。
-
-+ __エラー：__ 失敗：レンディション&#39;rendition.xxx&#39;が期待どおりではありません。
-+ __原因：__ ワーカーは、テストケースで `rendition.<extension>` 指定されたレンディションと異なるレンディションを出力しました。
-   + 期待される `rendition.<extension>` ファイルが、テストケースでローカルに生成されたレンディションと完全に同じ方法で作成されない場合、ビットに何らかの違いがあるので、テストが失敗する可能性があります。 テストケースで期待されるレンディションが、Adobe I/O Runtime内で生成される開発ツールから保存される場合、ビットが技術的に異なる場合があり、人間の観点から見ると、期待されるレンディションファイルと実際のレンディションファイルが同じであっても、テストが失敗します。
-+ __解像度：__ テストから出力されたレンディションをレビューします。その際に `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`移動し、テストケースで予想されるレンディションファイルと比較します。
++ [テストの実行中にレンディションが生成されませんでした](../troubleshooting.md#test-no-rendition-generated)
++ [テストで誤ったレンディションが生成される](../troubleshooting.md#tests-generates-incorrect-rendition)
