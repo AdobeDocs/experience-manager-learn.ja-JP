@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Asset Computeマイクロサービスを拡張するには、ローカルの開�
 1. [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストールし、必要なDockerイメージを取り出します。
 
    ```
-   $ docker pull openwhisk/action-nodejs-v10:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
+   $ docker pull openwhisk/action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
    ```
 
 1. [Visual Studioコードのインストール](https://code.visualstudio.com/download)
@@ -44,11 +44,13 @@ Asset Computeマイクロサービスを拡張するには、ローカルの開�
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
+簡体的なインストール手順の詳細については、以下の節を参照してください。
+
 ## Visual Studioコードのインストール{#vscode}
 
 [Microsoft Visual Studioコード](https://code.visualstudio.com/download) は、Asset Computeワーカーの開発とデバッグに使用されます。 ワーカーの開発には他の [JavaScript互換のIDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) を使用できますが、Visual Studioコードのみを統合して [、Asset Compute Workerを](../test-debug/debug.md) デバッグできます。
 
-_wskdebugを機能させるには、Visual Studio Code 1.48.x以[降が必要です](#wskdebug)。_
+_wskdebugを機能させるには、Visual Studio Code 1.48.x以 [降が必要です](#wskdebug) 。_
 
 このチュートリアルでは、Visual Studioコードを使用することを前提としています。Visual Studioコードを使用すると、アセット計算を拡張するための最高の開発者エクスペリエンスが得られます。
 
@@ -59,7 +61,7 @@ _wskdebugを機能させるには、Visual Studio Code 1.48.x以[降が必要で
 Docker Desktopをインストールした後、開始し、コマンドラインから次のDockerイメージをインストールします。
 
 ```
-$ docker pull openwhisk/action-nodejs-v10:latest
+$ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
@@ -91,7 +93,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 Asset Computeワーカーのローカルデバッグを容易にするために、 [Apache OpenWisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールをダウンロードしてインストールします。
 
-_wskdebugを機能させるには、Visual Studio Code 1.48.x以[降が必要です](#wskdebug)。_
+_wskdebugを機能させるには、Visual Studio Code 1.48.x以 [降が必要です](#wskdebug) 。_
 
 ```
 $ npm install -g @openwhisk/wskdebug
