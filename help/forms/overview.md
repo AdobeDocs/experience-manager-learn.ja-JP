@@ -5,10 +5,10 @@ description: 初心者・経験者向けのAEM Forms資料集
 seo-description: 初心者・経験者向けのAEM Forms資料集
 sub-product: フォーム[ふぉーむ]
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -21,18 +21,15 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 * **[Invoke Form Data Modelサービスの手順でのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   <br>
    *ワークフローモデルの変数は、そのデータ型に基づいて値を格納する方法です*
 
 * **[Interactive Communicationドキュメント（ビデオ）のマルチシリーズ・グラフ](./interactive-communications/multiseriescharts.md)**
 
-   <br>
    *同じグラフに複数のシリーズをプロットします。通常、複数のシリーズグラフは、折れ線グラフ、棒グラフ、列グラフの種類と関連付けて使用されます。*
 
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
-   <br>
-   _特定のフォームに関連付けられていないワークフローモデルの作成_
+   *特定のフォームに関連付けられていないワークフローモデルの作成*
 
 ## スタッフの選考
 
@@ -82,12 +79,12 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 ## その他のリソース
 
-* [エクスペリエンスリーグ — AEMの調査](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League- AEMの調査](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sitesオーサリングドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites開発文書](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理文書](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites導入ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [CLOUD SERVICETutorialsとしてのAEM](/help/cloud-service/overview.md)
-* [AEM AssetsTutorials](/help/assets/overview.md)
-* [AEM FormsTutorials](/help/forms/overview.md)
-* [AEM FoundationTutorials](/help/foundation/overview.md)
+* [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
+* [AEM Assets チュートリアル](/help/assets/overview.md)
+* [AEM Forms チュートリアル](/help/forms/overview.md)
+* [AEM Foundation チュートリアル](/help/foundation/overview.md)
