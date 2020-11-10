@@ -1,14 +1,12 @@
 ---
-title: AEM AssetsのビデオとTutorials
-seo-title: AEM AssetsのビデオとTutorials
+title: AEM Assets のビデオおよびチュートリアル
 description: Adobe Experience Managerアセットのビデオとチュートリアルの集まり
-seo-description: Adobe Experience Managerアセットのビデオとチュートリアルの集まり
 sub-product: アセット，ダイナミックメディア
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 6%
+source-wordcount: '228'
+ht-degree: 16%
 
 ---
 
@@ -21,27 +19,22 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 
 * **[透かし（ビデオ）](./advanced/watermarks.md)**
 
-   <br>
    *AEMでアセットレンディションをCloud Serviceとして透かしを付ける方法を説明します。*
 
 * **[ベースライン権限（ビデオ）](./configuring/baseline-permissions.md)**
 
-   <br>
    *基本権限を持つAEM Assetsを設定する方法とその重要性について説明します。*
 
 * **[自動開始ワークフロー（ビデオ）](./configuring/auto-start-workflows.md)**
 
-   <br>
    *アップロードされたアセットまたは再処理されたアセットでAEMワークフローを自動的に呼び出す方法を学びます。*
 
 * **[処理プロファイル（ビデオ）](./configuring/processing-profiles.md)**
 
-   <br>
    *レンディションアセットに対してアセットマイクロサービスを呼び出す方法の確認*
 
 * **[アセットコレクション（ビデオ）の使用](./search-and-discovery/collections.md)**
 
-   <br>
    *AEM Assetsのコレクションがアセットを整理し発見する新しい方法を提供する方法を調べます。*
 
 ## スタッフの選考
@@ -92,7 +85,7 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 
 * [Experience League- AEMの調査](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets文書](https://helpx.adobe.com/jp/experience-manager/6-5/assets/user-guide.html)
-* [CLOUD SERVICETutorialsとしてのAEM](/help/cloud-service/overview.md)
-* [AEM SitesTutorials](/help/sites/overview.md)
-* [AEM FormsTutorials](/help/forms/overview.md)
-* [AEM FoundationTutorials](/help/foundation/overview.md)
+* [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
+* [AEM Sites チュートリアル](/help/sites/overview.md)
+* [AEM Forms チュートリアル](/help/forms/overview.md)
+* [AEM Foundation チュートリアル](/help/foundation/overview.md)
