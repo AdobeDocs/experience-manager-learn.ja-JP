@@ -1,0 +1,71 @@
+---
+title: フォームデータの保存
+description: フォームデータと新しい添付ファイルマップをデータベースに格納する
+feature: adaptive-forms
+topics: development
+audience: developer
+doc-type: tutorial
+activity: implement
+version: 6.3,6.4,6.5
+kt: 6538
+thumbnail: 6538.jpg
+translation-type: tm+mt
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 0%
+
+---
+
+# フォームデータの保存
+
+次の手順では、アダプティブフォームデータと関連付けられたattachmentsinfoを保存する新しい行をデータベースに挿入するサービスを作成します。
+次のスクリーンショットは、データベース内の行を示しています。
+
+
+![サンプル行](assets/sample-row.JPG)
+
+
+次のコードは、適切なデータを持つ新しい行をデータベースに挿入します
+
+```java
+public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
+    log.debug("******Inside my AEMFormsWith DB service*****");
+    log.debug("### Inserting data ... " + formData + "and the telephone number to insert is  " + telephoneNumber);
+    String insertRowSQL = "INSERT INTO aemformstutorial.formdatawithattachments(guid,afdata,attachmentsInfo,telephoneNumber) VALUES(?,?,?,?)";
+    UUID uuid = UUID.randomUUID();
+    String randomUUIDString = uuid.toString();
+    log.debug("The insert query is " + insertRowSQL);
+    Connection c = getConnection();
+    PreparedStatement pstmt = null;
+    try {
+        pstmt = null;
+        pstmt = c.prepareStatement(insertRowSQL);
+        pstmt.setString(1, randomUUIDString);
+        pstmt.setString(2, formData);
+        pstmt.setString(3, attachmentsInfo);
+        pstmt.setString(4, telephoneNumber);
+        log.debug("Executing the insert statment  " + pstmt.executeUpdate());
+        c.commit();
+    } catch (SQLException e) {
+
+        log.error("unable to insert data in the table", e.getMessage());
+    } finally {
+        if (pstmt != null) {
+            try {
+                pstmt.close();
+            } catch (SQLException e) {
+                log.debug("error in closing prepared statement " + e.getMessage());
+            }
+        }
+        if (c != null) {
+            try {
+                c.close();
+            } catch (SQLException e) {
+                log.debug("error in closing connection " + e.getMessage());
+            }
+        }
+    }
+    return randomUUIDString;
+}
+```
