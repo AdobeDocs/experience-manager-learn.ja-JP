@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '898'
 ht-degree: 6%
 
 ---
@@ -94,7 +94,18 @@ ht-degree: 6%
    + [追加カスタム列](inbox-customization/add-married-column.md)
    + [Sightlyテンプレートの使用](inbox-customization/use-sightly-template.md)
 
-
++ アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
+   + [概要](store-and-retrieve-af-with-2fa/introduction.md)
+   + [データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [Store Form Attachments](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [Store Form Data](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [サーブレットの作成](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [保存されたデータでフォームをレンダリング](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [クライアントライブラリの作成](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [OTPサービスとの統合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [メインフォームの作成](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [マイアカウントフォームの作成](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [サンプルのデプロイ](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 送信したデータをCSV形式でエクスポート{#export-submitted-data-csv-format}
    + [送信データのエクスポート](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 のフォーム{#html5-forms}
@@ -109,7 +120,7 @@ ht-degree: 6%
    + [アダプティブフォームの作成と設定](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [単一の署名者に対するアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [2人の署名者に対するアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [自動Formsコンバージョンサービスの設定](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [automated forms conversionサービスの設定](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [PDFフォームをアダプティブフォームに変換](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [変換されたアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Adobe SignでのXDPテンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
