@@ -12,7 +12,7 @@ activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 translation-type: tm+mt
-source-git-commit: f07680e73316efb859a675f4b2212d8c3e03f6a0
+source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 2%
@@ -46,7 +46,7 @@ afData.afUnboundData.data.initialStep,N
 
 * [DevelopingWithServiceUserBundleのダウンロードと展開](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-*setvalueバンドルを[ダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 これは、送信されたjsonデータ内の要素の値を設定できるカスタムOSGIバンドルです。
+* [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 これは、送信されたjsonデータ内の要素の値を設定できるカスタムOSGIバンドルです。
 
 * [zipファイルの内容をダウンロードして抽出します。](assets/set-value-jsondata.zip)
    * ブラウザーで [パッケージマネージャーを指定](http://localhost:4502/crx/packmgr/index.jsp)
@@ -63,10 +63,8 @@ afData.afUnboundData.data.initialStep,N
 * 最初のパネルのフィールドが無効になっています。
 * 要求の承認または却下のパネルが表示されます。
 
-
-
 >[!NOTE]
-
+>
 >ユーザープロファイルを使用してアダプティブフォームに事前入力するので、管理者 [ユーザーのプロファイル情報を確認 ](http://localhost:4502/security/users.html)します。 FirstName、LastName、Emailの各フィールドの値は、最低でも設定済みであることを確認してください。
 >ここ [からcom.aemforms.setvalue.core.SetValueInJsonのロガーを有効にすることで、デバッグログを有効にすることができます。](http://localhost:4502/system/console/slinglog)
 
