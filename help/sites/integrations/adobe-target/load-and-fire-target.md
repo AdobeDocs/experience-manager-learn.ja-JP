@@ -10,17 +10,17 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 3%
+source-wordcount: '613'
+ht-degree: 2%
 
 ---
 
 
 # ターゲット呼び出しの読み込みと実行 {#load-fire-target}
 
-起動ルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからターゲット呼び出しを実行する方法を学びます。 ページ情報を取得し、パラメーターとして渡すには、Adobeクライアントデータレイヤーを使用します。このレイヤーを使用すると、Webページ上での訪問者の体験に関するデータを収集して保存でき、このデータに簡単にアクセスできます。
+起動ルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからターゲット呼び出しを実行する方法を学びます。 Webページ情報を取得し、パラメーターとして渡すには、Adobeクライアントデータレイヤーを使用します。このレイヤーを使用すると、Webページ上での訪問者の体験に関するデータを収集し、保存して、このデータに簡単にアクセスできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
@@ -28,98 +28,134 @@ ht-degree: 3%
 
 Adobe・クライアント・データ・レイヤーは、イベント主導のデータ・レイヤーです。 AEMページのデータレイヤーが読み込まれると、イベントがトリガーされ `cmp:show` ます。 このビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールが呼び出されます。 以下に、カスタムイベントおよびデータ要素に関するビデオで使用されているコードスニペットを示します。
 
-### カスタムイベント
+### カスタムページ表示イベント{#page-event}
 
-以下のコードスニペットでは、関数をデータレイヤーにプッシュしてイベントリスナーを追加します。 イベントがトリガされると、 `cmp:show` 関数が呼び出され `pageShownEventHandler` ます。 この関数では、いくつかのサニティチェックが追加され、イベントをトリガーしたコンポーネントのデータレイヤーの最新の状態 `dataObject` で新しく構築されます。
+![イベント設定とカスタムコードを示すページ](assets/load-and-fire-target-call.png)
 
-その後 `trigger(dataObject)` に。 `trigger()` は、起動で予約された名前で、起動ルールを「トリガー」します。 イベントオブジェクトをパラメータとして渡し、その後、Launchの名前付きイベントで別の予約名で公開されます。 起動のデータ要素は、次のような様々なプロパティを参照できるようになりました。 `event.component['someKey']`.
+Launchプロパティで、新しい **イベント** を **ルールに追加します**
+
++ __拡張子：__ コア
++ __イベントタイプ:__ カスタムコード
++ __名前：__ ページ表示イベントハンドラ（または説明的な内容）
+
+次のコードスニペットに __貼り付けるには、「エディターを__ 開く」ボタンをタップします。 このコード __は__ 、 __イベント設定__ とその後の ____&#x200B;アクションに追加する必要があります。
 
 ```javascript
-var pageShownEventHandler = function(evt) {
-// defensive coding to avoid a null pointer exception
-if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-   //trigger Launch Rule and pass event
-   console.debug("cmp:show event: " + evt.eventInfo.path);
-   var event = {
-      //include the id of the component that triggered the event
-      id: evt.eventInfo.path,
-      //get the state of the component that triggered the event
-      component: window.adobeDataLayer.getState(evt.eventInfo.path)
-   };
+// Define the event handler function
+var pageShownEventHandler = function(coreComponentEvent) {
 
-      //Trigger the Launch Rule, passing in the new `event` object
-      // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
-      // i.e `event.component['someKey']`
-      trigger(event);
+    // Check to ensure event trigger via AEM Core Components is shaped correctly
+    if (coreComponentEvent.hasOwnProperty("eventInfo") && 
+        coreComponentEvent.eventInfo.hasOwnProperty("path")) {
+    
+        // Debug the AEM Component path the show event is associated with
+        console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
+
+        // Create the Launch Event object
+        var launchEvent = {
+            // Include the ID of the AEM Component that triggered the event
+            id: coreComponentEvent.eventInfo.path,
+            // Get the state of the AEM Component that triggered the event           
+            component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
+        };
+
+        //Trigger the Launch Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // i.e `event.component['someKey']`
+        trigger(launchEvent);
    }
 }
 
-//set the namespace to avoid a potential race condition
+// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+
+// Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
-//push the event listener for cmp:show into the data layer
-window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:show` and callback to the `pageShownEventHandler` function
-   dl.addEventListener("cmp:show", pageShownEventHandler);
+
+// Push the event custom listener onto the Adobe Data Layer
+window.adobeDataLayer.push(function (dataLayer) {
+   // Add event listener for the `cmp:show` event, and the custom `pageShownEventHandler` function as the callback
+   dataLayer.addEventListener("cmp:show", pageShownEventHandler);
 });
 ```
 
-### データレイヤーページID
+カスタム関数は、AEM Core Componentsが発行するイベントを定義 `pageShownEventHandler`し、リッスンし、コアコンポーネントの関連情報を派生させ、イベントオブジェクトにパッケージ化し、そのペイロードで派生イベント情報を使用して起動イベントをトリガーします。
+
+起動ルールは、起動機能を使用してトリガされます。起動 `trigger(...)` 機能は、ルールのイベントのカスタムコードスニペット定義内での __み使用できます__ 。
+
+この `trigger(...)` 関数は、イベントオブジェクトをパラメーターとして受け取り、Launch Data Elementsで、Launchの別の予約名で公開され `event`ます。 起動のデータ要素は、のような構文を使用して、 `event` オブジェクトからこのイベントオブジェクトのデータを参照できるようになり `event.component['someKey']`ました。
+
+イベント `trigger(...)` のカスタムコードイベントタイプのコンテキスト以外（例えば、アクション内）で使用すると、JavaScriptエラーがLaunchプロパティと統合されたWebサイトでスローされ `trigger is undefined` ます。
+
+
+### データ要素
+
+![データ要素](assets/data-elements.png)
+
+「Adobe起動データ要素」は、カスタムページ表示イベントで [](#page-event) トリガーされたイベントオブジェクトのデータを、コア拡張のカスタムコードデータ要素タイプを介して、Adobe Targetで使用可能な変数にマップします。
+
+#### ページIDデータ要素
 
 ```
-if(event && event.id) {
+if (event && event.id) {
     return event.id;
 }
 ```
 
+このコードは、コアコンポーネントの一意の生成IDを返します。
+
 ![ページID](assets/pageid.png)
 
-### ページパス
+### ページパスデータ要素
 
 ```
-if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+if (event && event.component && event.component.hasOwnProperty('repo:path')) {
     return event.component['repo:path'];
 }
 ```
 
+このコードは、AEMページのパスを返します。
+
 ![ページパス](assets/pagepath.png)
 
-### ページタイトル
+### ページタイトルデータ要素
 
 ```
-if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+if (event && event.component && event.component.hasOwnProperty('dc:title')) {
     return event.component['dc:title'];
 }
 ```
 
+このコードは、AEMページのタイトルを返します。
+
 ![ページタイトル](assets/pagetitle.png)
 
-### 一般的な問題
+## トラブルシューティング
 
-#### Webページでmboxが実行されないのはなぜですか。
+### Webページでmboxが実行されないのはなぜですか。
 
-**mboxDisable Cookieが設定されていない場合のエラーメッセージ**
+#### mboxDisable Cookieが設定されていない場合のエラーメッセージ**
 
 ![ターゲットcookieドメインエラー](assets/target-cookie-error.png)
 
-**解決策**
+#### 解決策
 
 ターゲットのお客様は、テストや概念配達確認の目的で、ターゲットを持つクラウドベースのインスタンスを使用する場合があります。 これらのドメインは、パブリックサフィックスリストの一部で、その他多数のドメインが含まれます。
 これらのドメインを使用している場合、を使用して設定をカスタマイズしない限り、最新のブラウザーではcookieが保存されません `cookieDomain``targetGlobalSettings()`。
 
 ```
 window.targetGlobalSettings = {  
-   cookieDomain: 'your-domain' //set the cookie directly on this subdomain 
+   cookieDomain: 'your-domain' //set the cookie directly on this subdomain, for example: 'publish-p1234-e5678.adobeaemcloud.com'
 };
 ```
 
 ## 次の手順
 
-1. [エクスペリエンスフラグメントをAdobe Targetに書き出し](./export-experience-fragment-target.md)
++ [エクスペリエンスフラグメントをAdobe Targetに書き出し](./export-experience-fragment-target.md)
 
 ## サポートリンク
 
-* [Adobeクライアントデータレイヤードキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobe Experience Cloudデバッガー — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloudデバッガ — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-* [Adobeクライアントデータレイヤーおよびコアコンポーネントドキュメントの使用](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
-* [Adobe Experience Platformデバッガの概要](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Adobeクライアントデータレイヤードキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Experience Cloudデバッガー — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloudデバッガ — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobeクライアントデータレイヤーおよびコアコンポーネントドキュメントの使用](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platformデバッガの概要](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
