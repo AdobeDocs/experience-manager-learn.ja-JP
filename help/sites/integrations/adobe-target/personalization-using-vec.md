@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 1%
 
 Visual Experience Composer(VEC)を使用してA/Bテストターゲットアクティビティを作成する方法を説明します。
 
-ターゲットでアクティビティを作成する前に、次の設定を行う必要があります。
+## 前提条件
 
-1. [Experience Platform LaunchとAEMの統合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [Cloud Servicesを使ってAdobe Experience ManagerとAdobe Targetを統合する](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+AEM WebサイトでVECを使用するには、次の設定を完了する必要があります。
+
+1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
+1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
 
 ## シナリオの概要
 
@@ -33,7 +35,10 @@ WKNDサイトのホームページは、地域のアクティビティや、情�
 
 ## Visual Experience Composer(VEC)を使用したA/Bテストの作成手順
 
-1. Adobe Targetにログインし、「アクティビティ」タブに移動します
+1. [Adobe Experience Cloudにログインし](https://experience.adobe.com/)、 __ターゲットをタップして__、「アクティビティ ____ 」タブに移動します。
+
+   + Experience Cloudダッシュボードに __ターゲットが表示されない場合は、右上の組織切り替えボタンで正しいAdobe組織が選択されていること、およびユーザーに__ Adobe Admin Consoleのターゲットへのアクセス権が付与されていることを確認してください [](https://adminconsole.adobe.com/)。
+
 1. 「 **アクティビティを作成** 」ボタンをクリックし、「 **A/Bテスト** アクティビティ」を選択します
 
    ![A/Bアクティビティ](assets/ab-target-activity.png)
@@ -82,5 +87,5 @@ WKNDサイトのホームページは、地域のアクティビティや、情�
 
 ## サポートリンク
 
-* [Adobe Experience Cloudデバッガー — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloudデバッガ — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloudデバッガー — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloudデバッガ — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
