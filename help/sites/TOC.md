@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 16%
@@ -48,7 +48,7 @@ ht-degree: 16%
    + [コンテンツフラグメントとエクスペリエンスフラグメントの理解](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
-   + [はじめに —AEM Sites](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [はじめに —AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM ヘッドレス使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
@@ -107,7 +107,7 @@ ht-degree: 16%
       + [Launchプロパティ追加のターゲット式](integrations/adobe-target/add-target-launch-extension.md)
       + [ターゲット呼び出しの読み込みと実行](integrations/adobe-target/load-and-fire-target.md)
       + [Adobe TargetCloud Serviceアカウントの作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [エクスペリエンスフラグメントをAdobe Targetに書き出し](integrations/adobe-target/export-experience-fragment-target.md)
+      + [エクスペリエンスフラグメントのAdobe Targetへの書き出し](integrations/adobe-target/export-experience-fragment-target.md)
       + [エクスペリエンスフラグメントオファーを使用してターゲットアクティビティを作成する](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composerを使用したパーソナライゼーション](integrations/adobe-target/personalization-using-vec.md)
       + [完全なWebページエクスペリエンスのパーソナライズ](integrations/adobe-target/personalization-web-page.md)
