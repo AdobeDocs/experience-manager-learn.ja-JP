@@ -1,6 +1,6 @@
 ---
-title: Adobe TargetCloud Serviceアカウントの作成
-description: Cloud ServiceとAdobeのIMS認証を使用して、Adobe Experience ManagerをCloud ServiceとしてAdobe Targetに統合する方法に関する手順説明を順を追って説明します。
+title: AEMでのAdobe TargetCloud Serviceアカウントの作成
+description: Cloud ServiceとAdobeのIMS認証を使用して、Adobe Experience ManagerをAdobe TargetとのCloud Serviceとして統合します。
 feature: cloud-services
 topics: integrations, administration, development
 audience: administrator, developer
@@ -10,40 +10,23 @@ version: cloud-service
 kt: 6044
 thumbnail: 41244.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 1%
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
 # Adobe TargetCloud Serviceアカウントの作成 {#adobe-target-cloud-service}
 
-Cloud ServiceとAdobeのIMS認証を使用して、Adobe Experience ManagerをCloud ServiceとしてAdobe Targetと統合する方法に関する手順説明を順を追って説明します。
+次のビデオでは、AEMをCloud ServiceとしてAdobe Targetに接続する方法について説明します。
+
+この統合により、AEM AuthorサービスはAdobe Targetと直接通信でき、Experience FragmentsをAEMからターゲットにオファーとしてプッシュできます。  この統合 *では* 、ターゲット式を使用したLaunchとの統合 [AEMのAEM Sites Webページに、Adobe Target JavaScript(AT.js)は追加されません](../experience-platform-launch/connect-aem-launch-adobe-io.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
->このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 このビデオと同じ手順に従う代わりに、 [レガシーAdobe TargetCloud Servicesの設定を使用することをお勧めします](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
+>このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 この問題が解決するまで、ビデオの同じ手順に従いますが、 [従来のAdobe TargetCloud Services設定を使用します](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
 
-## 一般的な問題
-
-エクスペリエンスフラグメントをAdobeターゲットに書き出す際に、管理コンソールのターゲット統合に適切な権限がない場合、次に示すようなエラーが表示される場合があります。
-
-**UIエラー**![ターゲットAPI UIエラー](assets/error-target-offer.png)
-
-**ログエラー**![ターゲットAPIコンソールエラー](assets/target-console-error.png)
-
-
-**解決策**
-
-1. [Admin Consoleに移動](https://adminconsole.adobe.com/)
-2. 製品を選択/Adobe Target/製品プロファイル
-3. 「統合」タブで、統合(AdobeI/Oプロジェクト)を選択します。
-4. エディタまたは承認者の役割を割り当てます。
-
-![ターゲットAPIエラー](assets/target-permissions.png)
-
-ターゲット統合に適切な権限を追加すると、上記の問題の解決に役立ちます。
