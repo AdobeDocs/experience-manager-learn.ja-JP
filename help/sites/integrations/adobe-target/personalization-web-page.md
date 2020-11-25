@@ -1,6 +1,6 @@
 ---
 title: 完全なWebページエクスペリエンスのパーソナライズ
-description: AEM上でホストされているサイトページを、Adobe Targetを使用して新しいページにリダイレクトするアクティビティを作成する方法を説明します。
+description: Adobe Targetを使用してAEM Webサイトのページを新しいページにリダイレクトするターゲットアクティビティを作成する方法を説明します。
 feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,12 @@ ht-degree: 1%
 
 AEM上でホストされているサイトページを、Adobe Targetを使用して新しいページにリダイレクトするアクティビティを作成する方法を説明します。
 
-ターゲットでアクティビティを作成する前に、次の設定を行う必要があります。
+## 前提条件
 
-1. [Experience Platform LaunchとAEMの統合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+AEM Webサイトのページ全体をパーソナライズするには、次の設定を行う必要があります。
+
+1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
+1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
 
 ## シナリオの概要
 
