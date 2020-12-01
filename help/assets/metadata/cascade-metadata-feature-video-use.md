@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Assetsでのカスケード・メタデータの使用{#using-cascading-metadata-in-aem-assets}
+# AEM Assets{#using-cascading-metadata-in-aem-assets}でのカスケード・メタデータの使用
 
 高度なメタデータ管理機能を使用すると、ユーザーはカスケードフィールドルールを作成して、AEM Assetsでメタデータ間のコンテキスト上の関係を形成できます。 以下のビデオでは、フィールド要件、表示、コンテキストの選択に関する新しい動的ルールを示します。 このビデオでは、管理者がこれらのルールをカスタムメタデータスキーマに適用するのに必要な手順についても説明しています。
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 >
 >カスケードルールは、ドロップダウンフィールドの値に基づいてのみ作成できます。 3つのルールセットをすべて同じメタデータフィールドに適用することもできますが、ベストプラクティスとして、各ルールセットを同じメタデータドロップダウンに依存させることをお勧めします。
 
-カス [タムメタデータパッケージのダウンロード](assets/cascade-metadata-values-001.zip)
+[カスタムメタデータパッケージ](assets/cascade-metadata-values-001.zip)をダウンロード
 
 ## その他のリソース{#additional-resources}
 
-カスタムメタデータスキーマの作成場所： `/conf/global/settings/dam/adminui-extension/metadataschema/custom`. 次のAEMパッケージは、カスタムスキーマをフォルダーに適用します。 `/content/dam/we-retail/en/activities`:
+カスタムメタデータスキーマの作成場所：`/conf/global/settings/dam/adminui-extension/metadataschema/custom`. 次のAEMパッケージは、カスタムスキーマをフォルダーに適用します。`/content/dam/we-retail/en/activities`:
 
