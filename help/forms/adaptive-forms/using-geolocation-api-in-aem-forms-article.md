@@ -22,13 +22,13 @@ ht-degree: 4%
 
 # アダプティブFormsでのGeolocation APIの使用{#using-geolocation-api-s-in-adaptive-forms}
 
-この機能のライブデモへのリンクは、 [AEM Formsのサンプルページをご覧ください](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 。
+[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページをご覧になって、この機能のライブデモへのリンクをご覧ください。
 
 この記事では、GoogleのGeolocation APIを使用してアダプティブフォームのフィールドに入力する方法を見ていきます。 この使用例は、フォーム上の現在の住所フィールドに値を入力する場合に一般的に使用されます。
 
 次の手順に従って、アダプティブFormsのGeolocation APIを使用しました。
 
-1. [Google Mapsプラットフォームを使用するには](https://developers.google.com/maps/documentation/javascript/get-api-key) 、APIキーをGoogleから取得します。 1年間有効な試用版キーを取得できます。
+1. [Google](https://developers.google.com/maps/documentation/javascript/get-api-key) からAPIキーを取得して、Googleマッププラットフォームを使用します。1年間有効な試用版キーを取得できます。
 
 1. 現在の住所を保持するフィールドを持つアダプティブフォームフラグメントが作成されました
 
