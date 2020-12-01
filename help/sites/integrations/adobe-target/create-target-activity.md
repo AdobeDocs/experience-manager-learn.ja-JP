@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# エクスペリエンスフラグメントオファーを使用したAdobe Targetアクティビティの作成 {#target-activity-experience-fragment}
+# エクスペリエンスフラグメントオファーを使用してAdobe Targetアクティビティを作成{#target-activity-experience-fragment}
 
 AEMエクスペリエンスフラグメントオファーを使用して、Adobe Targetアクティビティを作成およびテストする方法を説明します。
 
