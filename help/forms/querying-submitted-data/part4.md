@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >このチュートリアルの現在のバージョンでは、複数の列のクエリはサポートされていません。
 
-クエリを実行するフォームを選択すると、 **/bin/getdatakeysfromschemaに対してGET呼び出しが行われます**。 このGET呼び出しは、フォームのスキーマに関連付けられた必須フィールドを返します。 その後、必須フィールドがQueryBuilderのドロップダウンリストに入力され、クエリを作成できます。
+クエリを実行するフォームを選択すると、**/bin/getdatakeysfromschema**&#x200B;に対するGET呼び出しが行われます。 このGET呼び出しは、フォームのスキーマに関連付けられた必須フィールドを返します。 その後、必須フィールドがQueryBuilderのドロップダウンリストに入力され、クエリを作成できます。
 
 次のコードスニペットでは、JSONSchemaOperationsサービスのgetRequiredColumnsFromSchemaメソッドを呼び出します。 このメソッド呼び出しに、スキーマのプロパティと必須要素を渡します。 次に、この関数呼び出しによって返される配列を使用して、クエリビルダーのドロップダウンリストを設定します
 
@@ -62,7 +62,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-「GetResult」ボタンがクリックされると、「/ **bin/querydata」に対するGet呼び出しが行われ**&#x200B;ます。 QueryBuilder UIで作成したクエリを、クエリパラメータを介してサーブレットに渡します。 次に、サーブレットはこのクエリをSQLクエリにマッセージし、データベースのクエリに使用できます。 例えば、&#39;Mouse&#39;という名前のすべてのクエリを取得しようとする場合、製品ビルダーのクエリ文字列は$.productname = &#39;Mouse&#39;になります。 このクエリは、次の形式に変換されます。
+GetResultボタンがクリックされると、**&quot;/bin/querydata&quot;**&#x200B;に対するGet呼び出しが行われます。 QueryBuilder UIで作成したクエリを、クエリパラメータを介してサーブレットに渡します。 次に、サーブレットはこのクエリをSQLクエリにマッセージし、データベースのクエリに使用できます。 例えば、&#39;Mouse&#39;という名前のすべてのクエリを取得しようとする場合、製品ビルダーのクエリ文字列は$.productname = &#39;Mouse&#39;になります。 このクエリは、次の形式に変換されます。
 
 aemformswithjsonから*を選択します。  JSON_EXTRACT( formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;のフォーム送信
 
@@ -75,6 +75,6 @@ aemformswithjsonから*を選択します。  JSON_EXTRACT( formsubmissions .for
 1. サンプルのjsonスキーマを使用したアダプティブフォームの作成
 1. 「customsubmithelpx」カスタム送信アクションに送信するようにアダプティブフォームを設定する
 1. フォームに入力し、送信
-1. ブラウザーで [ダッシュボードを指定します。html](http://localhost:4502/content/AemForms/dashboard.html)
+1. ブラウザーで[ダッシュボード.html](http://localhost:4502/content/AemForms/dashboard.html)を指定します。
 1. フォームを選択し、単純なクエリを実行します
 
