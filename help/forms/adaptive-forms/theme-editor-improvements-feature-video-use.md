@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsでのテーマエディターの改善{#theme-editor-improvements-in-aem-forms}
+# AEM Formsでのテーマエディタの改善{#theme-editor-improvements-in-aem-forms}
 
 AEM 6.3でのアダプティブフォームのテーマエディターの改善
 
