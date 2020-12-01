@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## WorkflowProcessインターフェイスを実装するOSGiコンポーネントの作成
 
-com.adobe.granite.workflow.exec.WorkflowProcessインターフェイスを実装する [OSGiコンポーネントを作成します](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)。 このコンポーネント内のコードは、AEMワークフローのプロセスステップコンポーネントに関連付けることができます。 このコンポーネントには、インターフェイスcom.adobe.granite.workflow.exec.WorkflowProcessのexecuteメソッドが実装されています。
+[com.adobe.granite.workflow.exec.WorkflowProcessインターフェイス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)を実装するOSGiコンポーネントを作成します。 このコンポーネント内のコードは、AEMワークフローのプロセスステップコンポーネントに関連付けることができます。 このコンポーネントには、インターフェイスcom.adobe.granite.workflow.exec.WorkflowProcessのexecuteメソッドが実装されています。
 
 AEMワークフローをトリガーするためにアダプティブフォームが送信されると、送信されたデータはペイロードフォルダーの下の指定されたファイルに保存されます。 例えば、これは送信されたデータファイルです。 idcardタグとbankstatementsタグで指定された添付ファイルをアセンブリする必要があります。
 ![submitted-data](assets/submitted-data.JPG).
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 添付ファイル名からのDDXの作成
 
-次に、Assemblerサービスでドキュメントをアセンブルするために使用される [ドキュメント記述XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) ドキュメントを作成する必要があります。 プロセス引数から作成されたDDXを次に示します。 PDFソース要素は、プロセスの引数で指定した順序に従って正しい順序になっています。
+次に、Assemblerサービスでドキュメントをアセンブルするために使用される[ドキュメント記述XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)ドキュメントを作成する必要があります。 プロセス引数から作成されたDDXを次に示します。 PDFソース要素は、プロセスの引数で指定した順序に従って正しい順序になっています。
 
 ![ddx-xml](assets/ddx-xml.JPG)
 
@@ -134,15 +134,15 @@ session.save();
 
 ### この機能をAEMサーバーで動作させるには
 
-* Assemble Form Attachments Form [](assets/assemble-form-attachments-af.zip) をローカルシステムにダウンロードします。
-* フォームとドキュメント[ページからフォーム](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) を読み込みます。
-* パッケージマネージャーを使用して、 [ワークフローをダウンロードし](assets/assemble-form-attachments.zip) 、AEMに読み込みます。
-* カス [タムバンドルのダウンロード](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
-* Webコンソールを使用したバンドルの展開と [開始](http://localhost:4502/system/console/bundles)
-* ブラウザがAssembleAttachments Formを指 [すように指定](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* [Assemble Form Attachments Form](assets/assemble-form-attachments-af.zip)をローカルシステムにダウンロードします。
+* [Formsとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)ページからフォームを読み込みます。
+* [ワークフロー](assets/assemble-form-attachments.zip)をダウンロードし、パッケージマネージャーを使用してAEMに読み込みます。
+* [カスタムバンドル](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)をダウンロード
+* [Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルを展開し、開始します。
+* ブラウザーに[AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)を指定します。
 * IDドキュメント追加の添付ファイルと、銀行取引明細書セクションへの2つのpdfドキュメント
 * フォームを送信してワークフローをトリガーする
-* アセンブリ済みPDFのcrx [内のワークフローの](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) ペイロードフォルダーを確認します
+* アセンブリされたpdfのcrx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)内のワークフローの[ペイロードフォルダーを確認します
 
 >[!NOTE]
 > カスタムバンドルのロガーを有効にした場合、DDXとアセンブリ済みのファイルがAEMインストールのフォルダーに書き込まれます。
