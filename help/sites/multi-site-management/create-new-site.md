@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 国サイトの作成 {#create-country-site}
+# 国サイトの作成{#create-country-site}
 
 サイトの作成ウィザードを使用して、既存の言語コピーから国のサイトを作成する方法を説明します。
 
