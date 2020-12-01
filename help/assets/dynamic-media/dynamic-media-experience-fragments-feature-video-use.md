@@ -29,8 +29,8 @@ AEM Assetsダイナミックメディアは、インタラクティブメディ�
 
 >[!NOTE]
 >
->AEMエクスペリエンスフラグメントをAEM Assetsダイナミックメディアホットスポットと共に使用する場合は、 [AEMをダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html) モードで実行する必要があります。
+>AEMエクスペリエンスフラグメントをAEM Assetsダイナミックメディアホットスポットと共に使用する場合は、[AEMをダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)モードで実行する必要があります。
 
 このビデオに示すポップアップエクスペリエンスフラグメントのバリエーションは、以下のAEMパッケージで入手できます。
 
-エクスペリエンスフラグメントダ [イナミックメディアアセットのダウンロード](assets/experience-fragmentsdynamic-mediaassets-100.zip)
+[エクスペリエンスフラグメントダイナミックメディアアセット](assets/experience-fragmentsdynamic-mediaassets-100.zip)のダウンロード
