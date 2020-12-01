@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# AEM FormsでのAssemblerサービスの使用{#using-assembler-service-in-aem-forms}
+# AEM Forms{#using-assembler-service-in-aem-forms}でのAssemblerサービスの使用
 
 この記事では、複数のPDFファイルをブラウザーにドラッグ&amp;ドロップし、アセンブリされたPDFファイルをファイルシステムに保存する機能を示すアセットを提供します。 以下は、ブラウザーを使用してアップロードされたpdfファイルをアセンブルするサーブレットのコードです。
 
@@ -107,19 +107,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 この機能をAEMサーバーで動作させるには
 
-* AssembleMultipleFiles.zip [をローカルシステムにダウンロードします](assets/assemble-multiple-files.zip) 。
-* パッケージマネージャーを使用してパッケージをアップロードし、イ [ンストールします](http://localhost:4502/crx/packmgr/index.jsp)
-* [DownloadCustomドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Service User Bundleで [開発中のダウンロード](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Felix Webコンソールを使用したバンドルのデプロイと [開始](http://localhost:4502/system/console/bundles)
-* ブラウザーでAssemblePdfs.htmlを指 [定します。](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)をローカルシステムにダウンロードします。
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、パッケージをアップロードしてインストールします
+* [カスタムドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)をダウンロード
+* [サービスユーザーバンドルで開発中](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)のダウンロード
+* [felix Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをデプロイおよび開始します。
+* ブラウザーに[AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)を指定します。
 * 2つのPDFファイルをドラッグ&amp;ドロップする
 
 >[!NOTE]
 >
 >AEM Formsのインストールが完了していることを確認します。 すべてのバンドルがアクティブ状態になっている必要があります。
 >
->「AEM Formsの [インストール」で説明されているように、ブート委任RSAライブラリとBouncyCastleライブラリが追加されていることを確認します。](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>「[AEM Formsのインストール](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)」に記載されているように、ブート委任RSAライブラリとBouncyCastleライブラリが追加されていることを確認します。
 >
 >**このデモに関する注意事項**
 >
