@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# アダプティブフォーム送信時のキャンペーンプロファイルの作成 {#creating-campaign-profile-on-adaptive-form-submission}
+# アダプティブフォーム送信でのキャンペーンプロファイルの作成{#creating-campaign-profile-on-adaptive-form-submission}
 
 この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 * アダプティブフォームの送信を処理するためのカスタム送信アクションの作成
 * CampaignServiceのcreateProfileメソッドを呼び出します
 
-## AEMサービスの作成 {#create-aem-service}
+## AEMサービスの作成{#create-aem-service}
 
 AEMサービスを作成して、Adobe Campaignプロファイルを作成します。 このAEMサービスは、OSGI設定からAdobe Campaign資格情報を取得します。 キャンペーン資格情報が取得されたら、アクセストークンが生成され、アクセストークンHTTP Post呼び出しを使用して、Adobe Campaign内のプロファイルが作成されます。 プロファイルを作成するコードを次に示します。
 
@@ -245,11 +245,11 @@ return null;
 }
 ```
 
-## Custom Submit {#custom-submit}
+## カスタム送信{#custom-submit}
 
 アダプティブフォームの送信を処理するカスタム送信ハンドラーを作成します。 このカスタム送信ハンドラーでは、CampaignServiceのcreateProfileメソッドを呼び出します。 createProfileメソッドは、作成する必要があるプロファイルを表すJSONObjectを受け取ります。
 
-AEM Formsでのカスタム送信ハンドラーの詳細については、次の [リンクを参照してください。](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+AEM Formsでのカスタム送信ハンドラーの詳細については、次の[リンク](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)を参照してください。
 
 カスタム送信のコードを次に示します
 
@@ -264,13 +264,13 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## ソリューションのテスト {#test-the-solution}
+## ソリューション{#test-the-solution}をテストします。
 
 サービスとカスタム送信アクションを定義したら、ソリューションをテストする準備が整います。 ソリューションをテストするには、次の手順を実行します
 
 
 * [ここで説明する手順に従っていることを確認します](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [パッケージマネージャーを使用してアダプティブフォームとカスタム送信ハンドラーを読み込みます](assets/create-acs-profile-on-af-submission.zip)。このパッケージには、カスタム送信アクションに送信するように設定されたアダプティブフォームが含まれています。
-* [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [フォーム](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)のプレビュー
 * すべてのフィールドに入力し、
 * ACSインスタンスに新しいプロファイルが作成されます
