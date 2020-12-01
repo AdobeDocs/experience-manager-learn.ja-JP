@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # PDF送信の処理
 
-この部分では、AEM Publish上で実行し、Acrobat/ReaderからのPDF送信を処理する単純なサーブレットを作成します。 次に、このサーブレットは、送信されたデータをAEM Authorのリポジトリの `nt:file` ノードとして保存するAEM作成者インスタンスで実行しているサーブレットにHTTPPOSTリクエストを行います。
+この部分では、AEM Publish上で実行し、Acrobat/ReaderからのPDF送信を処理する単純なサーブレットを作成します。 次に、このサーブレットは、送信されたデータをAEM Authorのリポジトリの`nt:file`ノードとして保存するAEM作成者インスタンスで実行しているサーブレットにHTTPPOSTリクエストを行います。
 
-PDF送信を処理するサーブレットのコードを次に示します。 このサーブレットでは、AEM Authorインスタンスの **/bin/startworkflow** にマウントされたサーブレットに対するPOST呼び出しを行います。 このサーブレットは、フォームデータをAEM Authorのリポジトリに保存します。
+PDF送信を処理するサーブレットのコードを次に示します。 このサーブレットでは、AEM Authorインスタンスの&#x200B;**/bin/startworkflow**&#x200B;にマウントされたサーブレットに対するPOST呼び出しを行います。 このサーブレットは、フォームデータをAEM Authorのリポジトリに保存します。
 
 
 ## AEM Publishサーブレット
@@ -102,7 +102,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM Authorサーブレット
 
-次の手順は、送信されたデータをAEM作成者のリポジトリに保存することです。 にマウントされたサーブレットは、送信されたデータを `/bin/startworkflow` 保存します。
+次の手順は、送信されたデータをAEM作成者のリポジトリに保存することです。 `/bin/startworkflow`にマウントされたサーブレットは、送信されたデータを保存します。
 
 ```java
 import java.io.BufferedReader;
@@ -200,7 +200,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-AEMワークフローランチャーは、ノードの下にタイプの新しいリソースが作成されるたびにトリガーさ `nt:file` れるように設定され `/content/pdfsubmissions` ます。 このワークフローでは、送信されたデータとxdpテンプレートを結合して、非インタラクティブPDFまたは静的PDFを作成します。 生成されたpdfがレビューと承認のためにユーザーに割り当てられます。
+AEMワークフローランチャーは、`/content/pdfsubmissions`ノードの下に`nt:file`型の新しいリソースが作成されるたびにトリガーするように構成されます。 このワークフローでは、送信されたデータとxdpテンプレートを結合して、非インタラクティブPDFまたは静的PDFを作成します。 生成されたpdfがレビューと承認のためにユーザーに割り当てられます。
 
-送信したデータを `/content/pdfsubmissions` ノードに格納するには、 `GetResolver` OSGiサービスを使用して、送信したデータを保存できます。このデータは、AEM Formsの各インストール環境で使用できる `fd-service` システムユーザーを使用して保存します。
+送信データを`/content/pdfsubmissions`ノードに保存するには、`GetResolver` OSGiサービスを利用して、送信データを`fd-service`システムユーザーを使用して保存します。このユーザーはAEM Formsの各インストール環境で利用できます。
 
