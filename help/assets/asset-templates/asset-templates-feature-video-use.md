@@ -16,13 +16,13 @@ ht-degree: 0%
 ---
 
 
-# AEM AssetsとInDesign Serverでのアセットテンプレートの使用{#using-asset-templates-with-aem-assets-and-indesign-server}
+# AEM AssetsとInDesign Server{#using-asset-templates-with-aem-assets-and-indesign-server}でのアセットテンプレートの使用
 
 AEM Assetsテンプレートを使用すると、マーケティング担当者はデジタルおよび印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバと統合したアセットテンプレートを使用すると、パンフレット、名刺、チラシ、広告、およびはがきを作成しやすくなります。
 
 >[!NOTE]
 >
->InDesign Serverの設定手順については、「InDesign Serverを使用したアセットテンプレートの [設定](asset-templates-technical-video-setup.md)」を参照してください。
+>InDesign Serverの設定手順については、「[InDesign Server](asset-templates-technical-video-setup.md)でアセットテンプレートを設定する」を参照してください。
 
 ## 概要 {#overview}
 
@@ -30,7 +30,7 @@ AEM Assetsテンプレートを使用すると、マーケティング担当者�
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## 技術概要 {#technical-overview}
+## 技術概要{#technical-overview}
 
 このビデオでは、AEM Assetsアサートテンプレート機能の技術的な概要と、AEMがAEM Assetsとコンテンツの構成をInDesignによって容易にし、豊かで魅力的な印刷体験を作成する方法を説明します。
 
