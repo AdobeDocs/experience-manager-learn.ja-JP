@@ -36,7 +36,7 @@ WKNDサイトはホームページを再設計し、現在のホームページ�
 ### 前提条件
 
 * **AEM**
-   * [AEM authorインスタンス](./implementation.md#getting-aem) 、およびlocalhost 4502および4503でそれぞれ実行されているパブリッシュインスタンス。
+   * [AEM authorおよびpublish](./implementation.md#getting-aem) インスタンスは、それぞれlocalhost 4502および4503で実行されます。
    * [ADOBE EXPERIENCE PLATFORM LAUNCHを使ってAdobe Targetと統合されたAEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 組織へのアクセス：Adobe Experience Cloud- <https://>`<yourcompany>`.experiencecloud.adobe.com
@@ -52,29 +52,29 @@ WKNDサイトはホームページを再設計し、現在のホームページ�
 ## マーケティング担当者のアクティビティ
 
 1. マーケティング担当者は、リダイレクトオファーをエクスペリエンスとしてA/Bターゲットアクティビティを作成し、成功目標と指標を追加して、100%のWebサイトトラフィックを新しいホームページに割り当てます。
-   1. Adobe Target・ウィンドウから「 **アクティビティ** 」タブに移動します。
-   2. 「 **アクティビティを作成** 」ボタンをクリックし、アクティビティタイプを **A/Bテストとして選択します**
+   1. Adobe Targetのウィンドウで、**アクティビティ**&#x200B;タブに移動します。
+   2. 「**アクティビティを作成**」ボタンをクリックし、アクティビティの種類を「**A/Bテスト**」に選択します
 
       ![Adobe Target-アクティビティの作成](assets/personalization-use-case-2/create-ab-activity.png)
-   3. 「 **Web** 」チャネルを選択し、「 **Visual Experience Composer**」を選択します。
-   4. **アクティビティURLを入力し** 、「 **次へ** 」をクリックしてVisual Experience Composerを開きます。
+   3. 「**Web**」チャネルを選択し、「**Visual Experience Composer**」を選択します。
+   4. **アクティビティURL**&#x200B;を入力し、「**次へ**」をクリックしてVisual Experience Composerを開きます。
       ![Adobe Target-アクティビティの作成](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. **Visual Experience Composerを読み込むには、ブラウザーで「安全でないスクリプトの読み込みを** 許可 **** 」を有効にし、ページを再読み込みします。
+   5. **Visual Experience Composer**&#x200B;を読み込むには、ブラウザーで「安全でないスクリプトを読み込むことを許可&#x200B;**」を有効にし、ページを再読み込みします。**
       ![エクスペリエンスのターゲット設定アクティビティ](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Visual Experience ComposerエディターでWKNDサイトホームページが開きます。
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. エクス **ペリエンスBの上にカーソルを置き** 、「その他の表示」を選択します。
+   7. **エクスペリエンスB**の上にカーソルを置き、「その他の表示」を選択します。
       ![エクスペリエンス B](assets/personalization-use-case-2/redirect-url.png)
-   8. 「 **URLにリダイレクト** 」オプションを選択し、新しいWKNDホームページへのURLを入力します。 (http://localhost:4503/content/wknd/en1.html)
+   8. 「**URLにリダイレクト**」オプションを選択し、新しいWKNDホームページへのURLを入力します。 (http://localhost:4503/content/wknd/en1.html)
       ![エクスペリエンス B](assets/personalization-use-case-2/redirect-url-2.png)
-   9. **変更を保存し** 、アクティビティの作成の次の手順に進みます。
-   10. 「 **トラフィック配分方法** 」を手動で選択し、100%のトラフィックを **エクスペリエンスBに割り当てます**。
+   9. **変更を** 保存し、アクティビティの作成の次の手順に進みます。
+   10. **トラフィック配分方法**&#x200B;を手動で選択し、100%のトラフィックを&#x200B;**エクスペリエンスB**に割り当てます。
       ![エクスペリエンスBトラフィック](assets/personalization-use-case-2/traffic.png)
    11. 「**次へ**」をクリックします。
-   12. アクティビティの **目標指標を指定し** 、A/Bテストを保存して閉じます。
+   12. アクティビティに&#x200B;**目標指標**を指定し、A/Bテストを保存して閉じます。
       ![A/Bテスト目標指標](assets/personalization-use-case-2/goal-metric.png)
    13. アクティビティの名前(**WKNDホームページの再設計**)を指定し、変更を保存します。
-   14. アクティビティの詳細画面で、「アクティビティを **アクティブ化** 」を確認します。
+   14. アクティビティの詳細画面で、**アクティビティを**アクティブにします。
       ![アクティビティのアクティブ化](assets/personalization-use-case-2/ab-activate.png)
    15. WKNDホームページ(http://localhost:4503/content/wknd/en.html)に移動すると、再設計されたWKNDサイトホームページ(http://localhost:4503/content/wknd/en1.html)にリダイレクトされます。
       ![WKNDホームページの設計変更](assets/personalization-use-case-2/WKND-home-page-redesign.png)
