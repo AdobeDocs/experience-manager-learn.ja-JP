@@ -20,7 +20,7 @@ ht-degree: 11%
 ---
 
 
-# AEM Formsとのデータ統合の設定 {#set-up-data-integration-with-aem-forms}
+# AEM Formsとのデータ統合のセットアップ{#set-up-data-integration-with-aem-forms}
 
 JDBCデータソースへのデータ接続の設定
 
@@ -30,9 +30,9 @@ JDBCデータソースへのデータ接続の設定
 >
 >MySQL JDBCドライバーは、AEMインスタンスのOSGiバンドルを使用してインストールする必要があります。
 
-## サポート資料 {#supporting-materials}
+## サポート資料{#supporting-materials}
 
 * [MySQL JDBC OSGiバンドルのダウンロード](https://dev.mysql.com/downloads/connector/j/)
 
-   * AEM WebコンソールからJARファイルをダウンロード、解凍、インストールし [ます。](http://localhost:4502/system/console/bundles)
+   * [AEM Webコンソール](http://localhost:4502/system/console/bundles)からJARファイルをダウンロードし、解凍してインストールします。
 
