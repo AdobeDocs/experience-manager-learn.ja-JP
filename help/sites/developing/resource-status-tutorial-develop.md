@@ -15,7 +15,7 @@ ht-degree: 2%
 ---
 
 
-# リソース・ステータスの開発 {#developing-resource-statuses-in-aem-sites}
+# リソースのステータスの開発{#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience ManagerのリソースステータスAPIは、AEMの各種エディタWeb UIでステータスメッセージを公開するためのプラグ可能なフレームワークです。
 
@@ -33,7 +33,7 @@ Resource Status for Editorsフレームワークは、標準的かつ均一な�
 
 ![AEMエディターのリソースの状態の概要](assets/sample-editor-resource-status-screenshot.png)
 
-## リソース状態プロバイダーのフレームワーク {#resource-status-provider-framework}
+## リソースステータスプロバイダーフレームワーク{#resource-status-provider-framework}
 
 カスタムのリソースステータスを開発する場合、開発作業は次のものから構成されます。
 
@@ -42,21 +42,21 @@ Resource Status for Editorsフレームワークは、標準的かつ均一な�
 
    ![資源状態アーキテクチャ](assets/sample-editor-resource-status-application-architecture.png)
 
-3. ページ、エクスペリエンスフラグメント、テンプレートの各エディターに含まれるステータスリソースには、リソースの「[!DNL statusType]」プロパティを介して型が割り当てられます。
+3. ページ、エクスペリエンスフラグメント、テンプレートエディターの一部として提供されるステータスリソースには、リソースの「[!DNL statusType]」プロパティを介して型が割り当てられます。
 
-   * Page editor: `editor`
-   * Experience Fragment editor: `editor`
+   * ページエディタ：`editor`
+   * エクスペリエンスフラグメントエディター：`editor`
    * テンプレートエディター: `template-editor`
 
-4. ステータスリソースの `statusType` 値は、登録済みの `CompositeStatusType` OSGi設定済み `name` プロパティと一致します。
+4. ステータスリソースの`statusType`は、登録された`CompositeStatusType` OSGiが`name`設定したプロパティと一致します。
 
-   すべての一致に対して、 `CompositeStatusType's` 型が収集され、を介してこの型を持つ `ResourceStatusProvider` 実装が収集されます `ResourceStatusProvider.getType()`。
+   すべての一致に対して、`CompositeStatusType's`型が収集され、`ResourceStatusProvider.getType()`を介して、この型を持つ`ResourceStatusProvider`実装を収集するために使用されます。
 
-5. 一致 `ResourceStatusProvider` はエディタ `resource` ーで渡され、表示するステータス `resource` があるかどうかが判別されます。 ステータスが必要な場合、この実装は0または多数の返される値を作成し、それぞれが表示するステータス `ResourceStatuses` を表します。
+5. 一致する`ResourceStatusProvider`がエディターの`resource`に渡され、`resource`が表示するステータスを持つかどうかが判断されます。 状態が必要な場合、この実装は0または多数の`ResourceStatuses`を作成して返す必要があります。それぞれが表示する状態を表します。
 
-   通常、は、1回につき0または1 `ResourceStatusProvider` を返し `ResourceStatus``resource`ます。
+   通常、`ResourceStatusProvider`は`resource`ごとに0または1 `ResourceStatus`を返します。
 
-6. ResourceStatusは、顧客が実装できるインターフェイスです。または、有用な機能を使用してステータスを構築す `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` ることもできます。 ステータスは次のもので構成されます。
+6. ResourceStatusは、顧客が実装できるインターフェイスです。または、有用な`com.day.cq.wcm.commons.status.EditorResourceStatus.Builder`を使用してステータスを構築できます。 ステータスは次のもので構成されます。
 
    * タイトル
    * メッセージ
@@ -66,7 +66,7 @@ Resource Status for Editorsフレームワークは、標準的かつ均一な�
    * アクション
    * データ
 
-7. 必要に応じて、 `Actions``ResourceStatus` オブジェクトに対してclientlibを指定する場合は、機能をアクションリンクとステータスバーに連結するために、clientlibをサポートする必要があります。
+7. 必要に応じて、`ResourceStatus`オブジェクトに`Actions`を指定する場合は、アクションリンクに機能をステータスバーにバインドするために、clientlibをサポートする必要があります。
 
    ```js
    (function(jQuery, document) {
@@ -81,11 +81,11 @@ Resource Status for Editorsフレームワークは、標準的かつ均一な�
 
 8. アクションをサポートするJavaScriptまたはCSSをサポートする場合は、フロントエンドコードをエディターで確実に使用できるように、各エディターの対応するクライアントライブラリを通じてプロキシ化する必要があります。
 
-   * ページエディタカテゴリ: `cq.authoring.editor.sites.page`
-   * エクスペリエンスフラグメントエディターのカテゴリ: `cq.authoring.editor.sites.page`
-   * テンプレートエディターカテゴリ: `cq.authoring.editor.sites.template`
+   * ページエディタカテゴリ:`cq.authoring.editor.sites.page`
+   * エクスペリエンスフラグメントエディターのカテゴリ:`cq.authoring.editor.sites.page`
+   * テンプレートエディターカテゴリ:`cq.authoring.editor.sites.template`
 
-## コードの表示 {#view-the-code}
+## コード{#view-the-code}の表示
 
 [GitHubのコードを参照](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
