@@ -23,7 +23,7 @@ AEMは、PDFへの注釈の出力のカスタマイズをサポートしてい�
 
 ## PDF注釈スリング：OsgiConfig定義
 
-PDF注釈をカスタマイズするには、AEMプロジェクトの下に **sling:OsgiConfig** ノードを作成します。
+PDF注釈をカスタマイズするには、AEMプロジェクトの下に&#x200B;**sling:OsgiConfig**&#x200B;ノードを作成します。
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 必要に応じて値を調整します。
 
