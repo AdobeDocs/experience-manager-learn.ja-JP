@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 言語コピーの起動による更新 {#update-language-copy-launch}
+# 言語コピーを起動回数{#update-language-copy-launch}で更新
 
 言語コピーの変更を更新、確認、承認する方法と、起動回数の支援を受ける方法について説明します。
 
