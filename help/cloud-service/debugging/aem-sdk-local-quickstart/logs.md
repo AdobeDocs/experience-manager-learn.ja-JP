@@ -27,33 +27,33 @@ AEM SDKのログにアクセスすると、AEM SDKのローカルquickstart JAR�
 
 ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログ記録に依存します。 Adobeでは、AEM SDKのローカルクイックスタートとAEMのログ表示をCloud Serviceの開発環境として正しく認識するので、ローカル開発およびAEMをCloud Service開発ログ設定として可能な限り維持することを推奨します。これにより、設定の混乱と再展開が軽減されます。
 
-AEM [プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype) は、AEMアプリケーションのJavaパッケージのDEBUGレベルでログを設定し、ローカル開発を行います。ログは、次のURLにあるSling Logger OSGi設定を使用して設定します。
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)は、
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
-ログに記録され `error.log`ます。
+`error.log`にログインします。
 
 デフォルトのログがローカル開発に不十分な場合、アドホックログはAEM SDKのローカルクイックスタートのLog Support Webコンソール([/system/console/slinglog](http://localhost:4502/system/console/slinglog))を介して設定できますが、Cloud Service開発環境と同じログ設定がAEMで必要な場合以外は、Gitに対して非推奨です。 ただし、ログサポートコンソールを使用した変更は、AEM SDKのローカルクイックスタートリポジトリに直接保持されます。
 
-Javaログ文は、次の `error.log` ファイル内の表示にすることができます。
+Javaログ文は、`error.log`ファイル内の表示にすることができます。
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-出力を端末に流し込む&quot;tail&quot; `error.log` が役に立つ場合が多い。
+出力を端末に送る`error.log`を「しっぽを付ける」のは役に立つことが多い。
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windowsには、 [サードパーティのテールアプリケーション](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) 、または [PowershellのGet-Contentコマンドの使用が必要](https://stackoverflow.com/a/46444596/133936)。
++ Windowsには、[サードパーティのテールアプリケーション](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command)、または[PowershellのGet-Contentコマンド](https://stackoverflow.com/a/46444596/133936)を使用する必要があります。
 
 ## Dispatcher ログ
 
-ディスパッチャーログは、呼び出し時にstdoutに出力されます `bin/docker_run` が、Dockerに格納されている内のでログに直接アクセスできます。
+ディスパッチャーログは、`bin/docker_run`の呼び出し時にstdoutに出力されますが、Dockerに格納されている内のでログに直接アクセスできます。
 
 ### Dockerコンテナ内のログへのアクセス
 
-ディスパッチャーログは、のDockerコンテナで直接アクセスでき `/etc/httpd/logs`ます。
+ディスパッチャーログは、`/etc/httpd/logs`のDockerコンテナで直接アクセスできます。
 
 ```shell
 $ docker ps
@@ -75,7 +75,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Dockerログをローカルファイルシステムにコピーする
 
-ディスパッチャーログは、Dockerコンテナからローカルファイルシステム `/etc/httpd/logs` にコピーし、お気に入りのログ分析ツールを使用して検査できます。 これはポイント・イン・タイム・コピーであり、ログにリアルタイムの更新を提供しません。
+ディスパッチャーログは、`/etc/httpd/logs`のDockerコンテナからローカルファイルシステムにコピーし、お気に入りのログ分析ツールを使用して検査できます。 これはポイント・イン・タイム・コピーであり、ログにリアルタイムの更新を提供しません。
 
 ```shell
 $ docker ps
