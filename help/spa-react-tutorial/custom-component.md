@@ -1,6 +1,6 @@
 ---
-title: カスタムコンポーネントの作成 | AEM SPAエディターとReactの使い始めに
-description: AEM SPAエディターで使用するカスタムコンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
+title: カスタムコンポーネントの作成 | AEM SPA EditorとReactの使い始めに
+description: AEM SPAエディタで使用するカスタムコンポーネントを作成する方法を学びます。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
 sub-product: サイト
 feature: SPA Editor
 doc-type: tutorial
@@ -19,27 +19,27 @@ ht-degree: 3%
 ---
 
 
-# カスタムコンポーネントの作成 {#custom-component}
+# カスタムコンポーネントの作成{#custom-component}
 
-AEM SPAエディターで使用するカスタムコンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
+AEM SPAエディタで使用するカスタムコンポーネントを作成する方法を学びます。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
 
 ## 目的
 
 1. AEMが提供するJSONモデルAPIを操作する際のSlingモデルの役割を理解します。
 2. 新しいAEMコンポーネントダイアログを作成する方法を理解します。
-3. SPAエディターフレームワークと互換性のある **カスタム** AEMコンポーネントの作成方法を説明します。
+3. SPAエディタのフレームワークと互換性のある&#x200B;**カスタム** AEMコンポーネントを作成する方法を説明します。
 
 ## 作成する内容
 
-前の章では、SPAコンポーネントの開発と、 *既存のAEMコアコンポーネントへのマッピングに重点を置いていました* 。 この章では、AEMが提供する ** 新しいAEMコンポーネントの作成および拡張方法、およびJSONモデルの操作方法に焦点を当てます。
+前の章では、SPAコンポーネントを開発し、それらを&#x200B;*既存の* AEMコアコンポーネントにマッピングすることに重点を置いていました。 この章では、*新しい* AEMコンポーネントを作成および拡張し、AEMが提供するJSONモデルを操作する方法に焦点を当てます。
 
-簡単な例は、新しいAEMコンポーネントを作成するために必要な手順を `Custom Component` 示しています。
+単純な`Custom Component`は、新しい新しいAEMコンポーネントを作成するために必要な手順を説明しています。
 
 ![すべて大文字で表示されるメッセージ](assets/custom-component/message-displayed.png)
 
 ## 前提条件
 
-Review the required tooling and instructions for setting up a [local development environment](overview.md#local-dev-environment).
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
 
 ### コードの取得
 
@@ -57,29 +57,29 @@ Review the required tooling and instructions for setting up a [local development
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   AEM 6.x [を使用している場合](overview.md#compatibility) 、 `classic` プロファイルを追加します。
+   [AEM 6.x](overview.md#compatibility)を使用している場合は、`classic`プロファイルを追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 従来の [WKNDリファレンスサイト用に完成したパッケージをインストールし](https://github.com/adobe/aem-guides-wknd/releases/latest)ます。 WKNDリファレンスサイトから提供される [画像は](https://github.com/adobe/aem-guides-wknd/releases/latest) 、WKND SPAで再利用されます。 パッケージは、 [AEM Package Managerを使用してインストールできます](http://localhost:4502/crx/packmgr/index.jsp)。
+3. 従来の[WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)用に完成したパッケージをインストールします。 [WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)から提供された画像は、WKND SPAで再利用されます。 パッケージは、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
 
    ![Package Managerのインストールwknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-GitHubでの完了したコードの表示を常に行う [か](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution) 、ブランチに切り替えてコードをローカルでチェックアウトすることができ `React/custom-component-solution`ます。
+終了したコードは、[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)に常に表示できます。また、ブランチ`React/custom-component-solution`に切り替えて、コードをローカルでチェックアウトすることもできます。
 
 ## AEMコンポーネントの定義
 
-AEMコンポーネントは、ノードとプロパティとして定義されます。 プロジェクトでは、これらのノードとプロパティは、 `ui.apps` モジュール内でXMLファイルとして表されます。 次に、 `ui.apps` モジュールでAEMコンポーネントを作成します。
+AEMコンポーネントは、ノードとプロパティとして定義されます。 プロジェクトでは、これらのノードとプロパティは`ui.apps`モジュールでXMLファイルとして表されます。 次に、`ui.apps`モジュールでAEMコンポーネントを作成します。
 
 >[!NOTE]
 >
-> AEMコンポーネントの [基本に関する簡単なリフレッシャが役立つ場合があります](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)。
+> AEMコンポーネントの[基本に関するクイックリフレッシャーが役立つ](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)場合があります。
 
-1. In the IDE of your choice open the `ui.apps` folder.
-2. に移動し、という名前 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components` の新しいフォルダーを作成し `custom-component`ます。
-3. Create a new file named `.content.xml` beneath the `custom-component` folder. Populate the `custom-component/.content.xml` with the following:
+1. 選択したIDEで`ui.apps`フォルダを開きます。
+2. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components`に移動し、`custom-component`という名前の新しいフォルダーを作成します。
+3. `custom-component`フォルダーの下に`.content.xml`という名前の新しいファイルを作成します。 `custom-component/.content.xml`に次の値を入力します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -93,10 +93,10 @@ AEMコンポーネントは、ノードとプロパティとして定義され�
 
    `jcr:primaryType="cq:Component"`  — このノードがAEMコンポーネントであることを示します。
 
-   `jcr:title` は、コンテンツ作成者に表示される値です。 `componentGroup` は、オーサリングUIでのコンポーネントのグループを決定します。
+   `jcr:title` は、コンテンツ作成者に表示される値です。この値によって、オーサリングUIでのコンポーネントのグループが `componentGroup` 決まります。
 
-4. フォルダーの下に、 `custom-component` という名前の別のフォルダーを作成し `_cq_dialog`ます。
-5. フォルダーの下に、という名前の新しいファイル `_cq_dialog``.content.xml` を作成し、次のように入力します。
+4. `custom-component`フォルダーの下に、`_cq_dialog`という名前の別のフォルダーを作成します。
+5. `_cq_dialog`フォルダーの下に、`.content.xml`という名前の新しいファイルを作成し、次の情報を入力します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -149,35 +149,35 @@ AEMコンポーネントは、ノードとプロパティとして定義され�
 
    ![カスタムコンポーネント定義](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上記のXMLファイルは、の非常に単純なダイアログを生成し `Custom Component`ます。 ファイルの重要な部分は、内側の `<message>` ノードです。 このダイアログには単純な名前が含ま `textfield` れ、テキストフィールドの値はという名前のプロパティに保持され `Message``message`ます。
+   上記のXMLファイルは、`Custom Component`のための非常に単純なダイアログを生成します。 ファイルの重要な部分は、内部の`<message>`ノードです。 このダイアログには`Message`という名前の単純な`textfield`が含まれ、textfieldの値は`message`という名前のプロパティに保持されます。
 
-   JSONモデルを介してプロパティの値を公開するために、次にSlingモデルが作成され `message` ます。
+   `message`プロパティの値をJSONモデルを介して公開するために、次にSlingモデルが作成されます。
 
    >[!NOTE]
    >
-   > コアコンポーネントの定義を表示すると、さらに多くの [ダイアログの例を表示できます](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)。 CRXDE-Liteの下にある、 `select`、などの追加のフォームフィールドを表示す `textarea`るこ `pathfield`ともで `/libs/granite/ui/components/coral/foundation/form` き [](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)ます。
+   > コアコンポーネントの定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を参照すると、[ダイアログの例を表示できます。 `select`、`textarea`、`pathfield`など、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)の`/libs/granite/ui/components/coral/foundation/form`の下で利用できる追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、通常、 [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは必要ありません。
+   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
 
 ## Slingモデルの作成
 
-Slingモデルは、JCRからJava変数へのデータのマッピングを容易にする注釈駆動のJava 「POJO」(Plain Old Java Objects)です。 [Slingモデル](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) は、通常、AEMコンポーネント用の複雑なサーバー側のビジネスロジックをカプセル化するために機能します。
+Slingモデルは、JCRからJava変数へのデータのマッピングを容易にする注釈駆動のJava 「POJO」(Plain Old Java Objects)です。 [Sling](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models)  Modelsticは通常、AEMコンポーネント用の複雑なサーバー側のビジネスロジックをカプセル化するために機能します。
 
-SPAエディターのコンテキストでは、Slingモデルは、Slingモデルエクスポーターを使用する機能を使用して、JSONモデルを介してコンポ [ーネントのコンテンツを公開します](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)。
+SPAエディターのコンテキストでは、Slingモデルは、[Slingモデルエクスポーター](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)を使用する機能を使用して、JSONモデルを介してコンポーネントのコンテンツを公開します。
 
-1. In the IDE of your choice open the `core` module. `CustomComponent.java` を作成 `CustomComponentImpl.java` し、チャプタースターターコードの一部としてスタブアウトしている。
+1. 選択したIDEで`core`モジュールを開きます。 `CustomComponent.java` チャプタ `CustomComponentImpl.java` ースターターコードの一部として、既に作成され、スタブアウトされています。
 
    >[!NOTE]
    >
-   > Visual StudioコードIDEを使用する場合は、Java用の [拡張機能をインストールすると便利です](https://code.visualstudio.com/docs/java/extensions)。
+   > Visual StudioコードIDEを使用している場合は、Java](https://code.visualstudio.com/docs/java/extensions)用の[拡張機能をインストールすると便利です。
 
-2. 次の場所でJavaインターフェイス `CustomComponent.java` を開き `core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/CustomComponent.java`ます。
+2. `core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/CustomComponent.java`にあるJavaインターフェイス`CustomComponent.java`を開きます。
 
    ![CustomComponent.javaインターフェイス](assets/custom-component/custom-component-interface.png)
 
    これは、Slingモデルによって実装されるJavaインターフェイスです。
 
-3. インターフェイス `CustomComponent.java` が拡張されるように更新し `ComponentExporter` ます。
+3. `CustomComponent.java`を更新して`ComponentExporter`インターフェイスを拡張します。
 
    ```java
    package com.adobe.aem.guides.wknd.spa.react.core.models;
@@ -190,15 +190,15 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
    }
    ```
 
-   インター `ComponentExporter` フェイスの実装は、SlingモデルがJSONモデルAPIによって自動的に取得される必要があります。
+   `ComponentExporter`インターフェイスの実装は、SlingモデルがJSONモデルAPIによって自動的に取得される必要があります。
 
-   この `CustomComponent` インターフェースは、単一のgetterメソッドを含む `getMessage()`。 これは、JSONモデルを介して作成者ダイアログの値を公開するメソッドです。 空のパラメーターを持つパブリックgetterメソッドのみ `()` が、JSONモデルにエクスポートされます。
+   `CustomComponent`インターフェイスは、単一のgetterメソッド`getMessage()`を含む。 これは、JSONモデルを介して作成者ダイアログの値を公開するメソッドです。 空のパラメーター`()`を持つパブリックgetterメソッドのみがJSONモデルにエクスポートされます。
 
-4. を開 `CustomComponentImpl.java` き `core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java`ます。
+4. `CustomComponentImpl.java`を`core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java`で開きます。
 
-   This is the implementation of the `CustomComponent` interface. 注 `@Model` 釈は、JavaクラスをSlingモデルとして識別します。 この `@Exporter` 注釈を使用すると、Javaクラスをシリアライズし、Slingモデルエクスポーターを使用してエクスポートできます。
+   これは`CustomComponent`インターフェイスの実装です。 `@Model`注釈は、JavaクラスをSlingモデルとして識別します。 `@Exporter`注釈を使用すると、Javaクラスをシリアライズし、Slingモデルエクスポーターを通じてエクスポートできます。
 
-5. 静的変数を更新 `RESOURCE_TYPE` して、前の練習で作成したAEMコンポーネント `wknd-spa-react/components/custom-component` を指すようにします。
+5. 静的変数`RESOURCE_TYPE`を更新して、前の演習で作成したAEMコンポーネント`wknd-spa-react/components/custom-component`を指すようにします。
 
    ```java
    static final String RESOURCE_TYPE = "wknd-spa-react/components/custom-component";
@@ -206,7 +206,7 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
 
    コンポーネントのリソースタイプは、SlingモデルをAEMコンポーネントにバインドし、最終的にReactコンポーネントにマッピングされます。
 
-6. コンポー追加ネントリソースタイプを返す `getExportedType()``CustomComponentImpl` メソッドを、クラスに対して次のように指定します。
+6. コ追加ンポーネントリソースタイプを返す`CustomComponentImpl`クラスに対する`getExportedType()`メソッド：
 
    ```java
    @Override
@@ -215,9 +215,9 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
    }
    ```
 
-   このメソッドは、インター `ComponentExporter` フェイスを実装する際に必要となり、Reactコンポーネントへのマッピングを可能にするリソースタイプを公開します。
+   このメソッドは、`ComponentExporter`インターフェイスを実装する際に必要で、Reactコンポーネントへのマッピングを可能にするリソースタイプを公開します。
 
-7. 作成者ダイアログで保持される `getMessage()``message` プロパティの値を返すようにメソッドを更新します。 注釈の使用：JCR値をJava変数 `@ValueMap``message` にマップします。
+7. 作成者ダイアログで保持される`message`プロパティの値を返すように`getMessage()`メソッドを更新します。 `@ValueMap`注釈を使用して、JCR値`message`をJava変数にマップします。
 
    ```java
    import org.apache.commons.lang3.StringUtils;
@@ -236,14 +236,14 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
 
    >[!NOTE]
    >
-   > ここで、 [完成したCustomComponentImpl.javaを表示できます](https://github.com/adobe/aem-guides-wknd-spa/blob/React/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java)。
+   > [完了したCustomComponentImpl.javaをここ](https://github.com/adobe/aem-guides-wknd-spa/blob/React/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/react/core/models/impl/CustomComponentImpl.java)で表示できます。
 
 ## Reactコンポーネントの更新
 
 カスタムコンポーネントのリアクトコードは既に作成されています。 次に、ReactコンポーネントをAEMコンポーネントにマップするために、いくつかの更新を行います。
 
-1. モジュールで、ファイルを `ui.frontend` 開き `ui.frontend/src/components/Custom/Custom.js`ます。
-2. メソッドの一部として `{this.props.message}` 変数を確認し `render()` ます。
+1. `ui.frontend`モジュールで、`ui.frontend/src/components/Custom/Custom.js`ファイルを開きます。
+2. `{this.props.message}`変数を`render()`メソッドの一部として確認します。
 
    ```js
    return (
@@ -253,9 +253,9 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
        );
    ```
 
-   Slingモデルの変換後の大文字の値は、この `message` プロパティにマップされる必要があります。
+   Slingモデルの変換後の大文字の値は、この`message`プロパティにマップされる必要があります。
 
-3. AEM SPA Editor JS SDKから `MapTo` オブジェクトを読み込み、それを使用してAEMコンポーネントにマッピングします。
+3. AEM SPA Editor JS SDKから`MapTo`オブジェクトを読み込み、それを使用してAEMコンポーネントにマッピングします。
 
    ```diff
    + import {MapTo} from '@adobe/aem-react-editable-components';
@@ -277,9 +277,9 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
 
 ## テンプレートポリシーの更新
 
-次に、AEMに移動して更新を検証し、SPAへの更新 `Custom Component` を許可します。
+次に、AEMに移動してアップデートを確認し、`Custom Component`をSPAに追加できるようにします。
 
-1. http://localhost:4502/system/console/status-slingmodelsに移動して、新しいSlingモデルの登録を確認し [ます](http://localhost:4502/system/console/status-slingmodels)。
+1. [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)に移動して、新しいSlingモデルの登録を確認します。
 
    ```plain
    com.adobe.aem.guides.wknd.spa.react.core.models.impl.CustomComponentImpl - wknd-spa-react/components/custom-component
@@ -287,23 +287,23 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
    com.adobe.aem.guides.wknd.spa.react.core.models.impl.CustomComponentImpl exports 'wknd-spa-react/components/custom-component' with selector 'model' and extension '[Ljava.lang.String;@6fb4a693' with exporter 'jackson'
    ```
 
-   上記の2行は、がコンポーネントに関連付けられ `CustomComponentImpl``wknd-spa-react/components/custom-component` ていて、Slingモデルエクスポータを介して登録されていることを示しています。
+   上記の2行は、`CustomComponentImpl`が`wknd-spa-react/components/custom-component`コンポーネントに関連付けられ、Slingモデルエクスポータを介して登録されていることを示しています。
 
-2. Navigate to the SPA Page Template at [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-3. レイアウトコンテナのポリシーを更新し、新しいコンポーネントを許可コンポーネント `Custom Component` として追加します。
+2. [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)にあるSPAページテンプレートに移動します。
+3. レイアウトコンテナのポリシーを更新し、新しい`Custom Component`を許可されたコンポーネントとして追加します。
 
    ![レイアウトコンテナポリシーの更新](assets/custom-component/custom-component-allowed.png)
 
-   ポリシーに対する変更を保存し、許可されているコンポーネント `Custom Component` として確認します。
+   ポリシーに対する変更を保存し、`Custom Component`を許可されたコンポーネントとして確認します。
 
    ![許可されるコンポーネントとしてのカスタムコンポーネント](assets/custom-component/custom-component-allowed-layout-container.png)
 
 ## カスタムコンポーネントの作成
 
-次に、AEM SPAエディタ `Custom Component` ーを使用して作成します。
+次に、AEM SPAエディタを使用して`Custom Component`を作成します。
 
-1. http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.htmlに移動し [ます](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。
-2. モ `Edit` ードで、を次 `Custom Component` に追加し `Layout Container`ます。
+1. [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)に移動します。
+2. `Edit`モードで、`Custom Component`を`Layout Container`に追加します。
 
    ![新規コンポーネントを挿入](assets/custom-component/insert-custom-component.png)
 
@@ -317,7 +317,7 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
 
    ![すべて大文字で表示されるメッセージ](assets/custom-component/message-displayed.png)
 
-5. http://localhost:4502/content/wknd-spa-react/us/en.model.jsonに移動してJSONモデルを表示 [します](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。 Search for `wknd-spa-react/components/custom-component`:
+5. [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)に移動してJSONモデルを表示します。 `wknd-spa-react/components/custom-component`を検索：
 
    ```json
    "custom_component_208183317": {
@@ -330,10 +330,10 @@ SPAエディターのコンテキストでは、Slingモデルは、Slingモデ�
 
 ## バリデーターが{#congratulations}
 
-これで、SPAエディタで使用するカスタムAEMコンポーネントの作成方法を学びました。 また、ダイアログ、JCRプロパティ、Slingモデルとのやり取りによるJSONモデルの出力方法も学習しました。
+SPAエディタで使用するカスタムAEMコンポーネントの作成方法を学びました。 また、ダイアログ、JCRプロパティ、Slingモデルとのやり取りによるJSONモデルの出力方法も学習しました。
 
-GitHubに完了したコードを表示するか、 [ブランチに切り替えてコードをローカルにチェックアウトでき](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)`React/custom-component-solution`ます。
+[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/custom-component-solution)に完了したコードを表示するか、ブランチ`React/custom-component-solution`に切り替えてコードをローカルにチェックアウトできます。
 
 ### 次の手順 {#next-steps}
 
-[コアコンポーネントの拡張](extend-component.md) - AEM SPAエディターで使用する既存のコアコンポーネントを拡張する方法を学びます。 既存のコンポーネントにプロパティやコンテンツを追加する方法を理解することは、AEM SPA Editorの実装機能を拡張する強力なテクニックです。
+[コアコンポーネントの拡張](extend-component.md) - AEM SPAエディタで使用する既存のコアコンポーネントを拡張する方法を学びます。既存のコンポーネントにプロパティやコンテンツを追加する方法を理解することは、AEM SPA Editorの実装機能を拡張する強力なテクニックです。
