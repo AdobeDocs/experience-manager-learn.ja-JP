@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# Using Smart Crop with AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# AEM Assetsダイナミックメディアでのスマート切り抜きの使用{#using-smart-crop-with-aem-assets-dynamic-media}
 
 スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
 
