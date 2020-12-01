@@ -10,7 +10,7 @@ doc-type: technical video
 translation-type: tm+mt
 source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '449'
 ht-degree: 3%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/21475/?quality=9&learn=on)
 
-* 使用する [[!DNL oak-run.jar]のバージョンは、AEMインスタンスで使用するOakのバージョンと一致する必要があります](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) 。
-* を使用したインデックスの管理では、様々な操作をサポートするために、様々なフラグを付けた [!DNL oak-run.jar]**[!DNL index]** コマンドを使用します。
+* 使用する[[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0)のバージョンは、AEMインスタンスで使用するOakのバージョンと一致する必要があります。
+* [!DNL oak-run.jar]を使用したインデックスの管理では、**[!DNL index]**&#x200B;コマンドを様々なフラグと共に使用して、異なる操作をサポートします。
 
    * `java -jar oak-run*.jar index ...`
 
@@ -47,34 +47,34 @@ ht-degree: 3%
 * `oak-run.jar` lucene Oakインデックスが壊れているかどうかをすばやく確認します。
 * 整合性チェックは、整合性チェックレベル1と2の使用中のAEMインスタンスで安全に実行できます。
 
-## TarMKオンラインインデックス [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
+## [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}でのTarMKオンラインインデックス
 
 >[!VIDEO](https://video.tv.adobe.com/v/21479/?quality=12&learn=on)
 
-* を使用したオンラインインデックス [!DNL TarMK] の方が、 [!DNL oak-run.jar] ノードでの設定よりも高速 `reindex=true``oak:queryIndexDefinition` です。 このパフォーマンスは向上しますが、を使用したオンラインインデックス作成には、インデックス作成を実行するた [!DNL oak-run.jar] めのメンテナンスウィンドウが必要です。
+* [!DNL oak-run.jar]を使用した[!DNL TarMK]のオンラインインデックスは、`oak:queryIndexDefinition`ノードで`reindex=true`を設定するよりも高速です。 このパフォーマンスは向上しますが、[!DNL oak-run.jar]を使用したオンラインインデックス作成では、インデックス作成を実行するためにメンテナンスウィンドウが必要です。
 
-* を使用したオンラインインデックス [!DNL TarMK] は、AEMインスタンスメンテナンスウィンドウの外部にあるAEMインスタンスに対して実行しないで [!DNL oak-run.jar] ください **** 。
+* [!DNL oak-run.jar]を使用した[!DNL TarMK]のオンラインインデックス作成は、AEMインスタンスメンテナンスウィンドウの外部にあるAEMインスタンスに対しては、****&#x200B;実行しないでください。
 
 ## oak-run.jarを使用したTarMKオフラインインデックス
 
 >[!VIDEO](https://video.tv.adobe.com/v/21478/?quality=12&learn=on)
 
-* オフラインでのインデックス作成 [!DNL TarMK] は、1つの [!DNL oak-run.jar] コマンドが必要なので、に対する最もシンプルな [!DNL oak-run.jar][!DNL TarMK][!DNL oak-run.jar] ベースのインデックス作成アプローチですが、AEMインスタンスをシャットダウンする必要があります。
+* [!DNL oak-run.jar]を使用した[!DNL TarMK]のオフラインインデックス作成は、1つの[!DNL oak-run.jar]コマンドが必要な[!DNL TarMK]の場合に、[!DNL oak-run.jar]に基づく最も簡単なインデックス作成アプローチですが、AEMインスタンスをシャットダウンする必要があります。
 
 ## TarMK oak-run.jarを使用した帯域外インデックス
 
 >[!VIDEO](https://video.tv.adobe.com/v/21480/?quality=12&learn=on)
 
-* 使用時の帯域外インデックス作成は、使用中のAEMインスタンス [!DNL TarMK] に対するインデックス作成の影響を最小限 [!DNL oak-run.jar] に抑えます。
+* [!DNL TarMK]で[!DNL oak-run.jar]を使用して&lt;a0/>に対する帯域外インデックスを作成すると、使用中のAEMインスタンスに対するインデックス作成の影響を最小限に抑えることができます。
 * 帯域外インデックスは、再インデックス処理に要する時間が利用可能なメンテナンス期間を超えるAEMでのインデックス処理に推奨される方法です。
 
 ## oak-run.jarを使用したMongoMKオンラインインデックス
 
-* オンのオンラインインデックス [!DNL oak-run.jar] と [!DNL MongoMK] は、AEMでのインデックスの再作成 [!DNL RDBMK] (および [!DNL MongoMK][!DNL RDBMK])に推奨される方法です。 **またはに対して他のメソッドを使用し[!DNL MongoMK]ないでくだ[!DNL RDBMK]さい。**
+* [!DNL MongoMK]の[!DNL oak-run.jar]と[!DNL RDBMK]のオンラインインデックスは、[!DNL MongoMK] （および[!DNL RDBMK]） AEMのインストールの再/インデックス付けに推奨される方法です。 **またはに対して他のメソッドを使用し [!DNL MongoMK] ないでください [!DNL RDBMK]。**
 * このインデックス作成は、クラスター内の1つのAEMインスタンスに対してのみ実行する必要があります。
-* オンラインインデックス [!DNL MongoMK] の作成は、実行中のAEMクラスタに対して安全に実行できます。リポジトリトラバーサルは1つの [!DNL MongoDB] ノードでのみ発生し、他のノードはパフォーマンスに大きな影響を与えることなく要求を処理し続けることができます。
+* [!DNL MongoMK]のオンラインインデックスは、実行中のAEMクラスタに対して安全に実行できます。リポジトリトラバーサルは1つの[!DNL MongoDB]ノードで行われ、他のノードはパフォーマンスに大きな影響を与えることなく要求を処理し続けます。
 
-のオンラインインデックス作成を実行する [!DNL oak-run.jar] インデックスコマンド [!DNL MongoMK] は [、セグメントストアパラメータがNode storeを含む [!DNL TarMK]  [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)[!DNL MongoDB] インスタンスを指すのとは異なる値を持つ、Onlineインデックスと同じです。
+[!DNL MongoMK]のオンラインインデックスを実行する[!DNL oak-run.jar] indexコマンドは、[ [!DNL TarMK]  [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)を使用したオンラインインデックスと同じです。ただし、セグメントストアパラメーターがNode Storeを含む[!DNL MongoDB]インスタンスを指すのとは異なります。
 
 ```
 java -jar oak-run*.jar index
