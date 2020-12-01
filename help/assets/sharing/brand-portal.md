@@ -19,7 +19,7 @@ ht-degree: 44%
 ---
 
 
-# Using Brand Portal with AEM Assets{#using-brand-portal-with-aem-assets}
+# ブランドポータルとAEM Assets{#using-brand-portal-with-aem-assets}の連携
 
 Adobe Experience Manager(AEM)Assets Brand Portal統合のビデオガイド。
 
@@ -35,9 +35,9 @@ Brand Portalのアセットソーシングは、サードパーティのエー�
 
 *Asset Sourcingを使用するには、Experience Manager作成者6.5 SP2 (6.5.2)以降が必要です*
 
-「アセット作成者に対してExperience Manager作成者を [有効にする](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) 」を参照して、Experience Manager作成者に対してアセット作成元を設定および設定する方法の手順を確認してください。
+Experience Manager作成者でアセットソーシングを設定および設定する方法については、「[アセットソーシング用のExperience Manager作成者を有効にする](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html)」を参照してください。
 
-## Brand Portalの2019年2月の機能および機能強化{#brand-portal-features-and-enhancements-644}
+## Brand Portal 2019年2月の機能と機能強化{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -49,7 +49,7 @@ Brand Portalの2019年2月リリースでは、テキスト検索とトップ顧
 
 部分テキスト検索およびワイルドカード検索について詳しくは、以下の説明を参照してください。
 
-#### 部分フレーズ検索       
+#### 部分フレーズ検索
 
 フィルタリングウィンドウで、検索対象フレーズの一部分（1 つか 2 つの単語）のみを指定してアセットを検索できます。
 
@@ -77,8 +77,7 @@ Brand Portal では、検索クエリに、検索対象フレーズの単語の�
 * 有効にすると、ルートフォルダーから始まるフォルダーツリーは、管理者以外のユーザーに対して表示されます。 これにより、管理者と同じようなナビゲーション体験を提供できます。
 * 無効にすると、共有ランディングページーのみがフォルダーに表示されます。
 
-[フォルダ階層を有効にする](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) （有効な場合）機能を使用すると、異なる階層と同じ名前を持つフォルダを区別できます。 管理者以外のユーザーがログインすると、共有フォルダーの仮想親フォルダー（とその上位層）が表示されます。
-
+[フォルダ](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 階層を有効にする機能（有効になっている場合）を使用すると、異なる階層と同じ名前を持つフォルダを区別できます。管理者以外のユーザーがログインすると、共有フォルダーの仮想親フォルダー（とその上位層）が表示されます。
 
 共有フォルダーは、仮想フォルダー内のそれぞれのディレクトリ内で整理されます。仮想フォルダーは鍵のアイコン付きで表示されます。
 
@@ -155,14 +154,14 @@ Brand Portal ユーザーは、最大 25 倍の速度を実現できる Aspera �
 
 ### その他の機能強化
 
-* *カードフォルダーとリスト表示ーのフォルダー階層パス* — ブランドポータルインスタンス内に保存されているフォルダーの場所をユーザーが知ることができます。 異なるフォルダー階層内に同じ名前を持つフォルダーを区別しやすくします。
-* *概要オプション* — 管理者以外のユーザーが、アセット/フォルダーを選択し、ツールバーから概要オプションを選択して、アセット/フォルダーに関するメタデータを提供します。 現在、タイトル、作成日、パスが表示されます。
+* *カードフォルダーとリスト表示ーのフォルダー階層パス*  — ブランドポータルインスタンス内に保存されているフォルダーの場所をユーザーが把握できるようにします。異なるフォルダー階層内に同じ名前を持つフォルダーを区別しやすくします。
+* *概要オプション*  — 管理者以外のユーザーが、アセット/フォルダーを選択し、ツールバーから概要オプションを選択して、アセット/フォルダーに関するメタデータを提供します。現在、タイトル、作成日、パスが表示されます。
 
-### AdobeI/OホストUIを使用したoAuth統合の構成
+### Adobe I/OホストUIを使用したoAuth統合の設定
 
-Brand Portal uses Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) interface to create JWT application, which enables configuring oAuth integrations to allow AEM Assets integration with Brand Portal. OAuth 統合を設定するための UI は、以前、`https://marketing.adobe.com/developer/` / でホストされていました。Brand Portal にアセットとコレクションを公開するための、AEM Assets と Brand Portal の統合について詳しくは、[AEM Assets と Brand Portal の統合の設定](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)を参照してください。
+Brand Portalは、Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)のインターフェイスを使用してJWTアプリケーションを作成します。これにより、AEM AssetsがBrand Portalと統合できるようにoAuth統合を設定できます。 OAuth 統合を設定するための UI は、以前、`https://marketing.adobe.com/developer/` / でホストされていました。Brand Portal にアセットとコレクションを公開するための、AEM Assets と Brand Portal の統合について詳しくは、[AEM Assets と Brand Portal の統合の設定](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)を参照してください。
 
-## Brand Portalの2018年2月の機能および機能強化{#brand-portal-features-and-enhancements-632}
+## Brand Portal 2018年2月の機能と機能強化{#brand-portal-features-and-enhancements-632}
 
 ブランドポータルとAEMの連携に向けた新機能が強化されました。
 
@@ -207,7 +206,7 @@ Brand Portal uses Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legac
 ## その他のリソース{#additional-resources}
 
 * [ブランドポータルの新機能](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [AEM作成者レプリケーションエージェント](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [AEM作成者レプリケーションエージェント](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [高速ダウンロードガイド](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM AssetsブランドポータルAdobeドキュメント](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM AssetsダイナミックメディアAdobeドキュメント](https://docs.adobe.com/docs/ja/aem/6-3/author/assets/dynamic-media.html)
