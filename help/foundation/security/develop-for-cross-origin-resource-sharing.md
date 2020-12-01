@@ -11,7 +11,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,27 @@ ht-degree: 0%
 
 # 接触チャネル間のリソース共有(CORS)のための開発
 
-クライアント側のJavaScriptを使用して外部Webアプリケーション [!DNL CORS] からAEMコンテンツにアクセスする方法の短い例です。
+[!DNL CORS]を活用して、クライアント側のJavaScriptを介して外部WebアプリケーションからAEMコンテンツにアクセスする短い例です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 このビデオの内容：
 
-* **www.example.com** 、 `/etc/hosts`
-* **aem-publish.local** （ローカルホストを使用） `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) ( [[!DNL Python]のSimpleHTTPServerのラッパー](https://docs.python.org/2/library/simplehttpserver.html))は、ポート8000を介してHTMLページを提供しています。
-* [!DNL AEM Dispatcher] が2.4で実行され、 [!DNL Apache HTTP Web Server] に対するリバースプロキシ要求 `aem-publish.local` が実行され `localhost:4503`ています。
+* **www.example.** commapsをlocalhostに(  `/etc/hosts`
+* **aem-publish.** localmapsをlocalhostに(  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) ( [[!DNL Python]のSimpleHTTPServerのラッパー](https://docs.python.org/2/library/simplehttpserver.html))は、ポート8000を介してHTMLページを提供します。
+* [!DNL AEM Dispatcher] は、 [!DNL Apache HTTP Web Server] 2.4で実行され、に対するリバースプロキシ要求 `aem-publish.local` を実行し `localhost:4503`ます。
 
-詳しくは、AEMの「接触チャネル間のリソース共有(CORS)に [ついて」を参照してください](./understand-cross-origin-resource-sharing.md)。
+詳しくは、AEM](./understand-cross-origin-resource-sharing.md)の[接触チャネル間のリソース共有(CORS)についてを参照してください。
 
 ## www.example.comとJavaScriptの統合
 
 このウェブページには
 
 1. ボタンをクリックしたとき
-1. リクエストを [!DNL AJAX GET] 行う `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. JSON応答の `jcr:title` フォームを取得します
-1. をDOM `jcr:title` に挿入します。
+1. [!DNL AJAX GET]リクエストを`http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`に送信
+1. JSON応答から`jcr:title`を取得します
+1. `jcr:title`をDOMに挿入します。
 
 ```xml
 <html>
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## OSGiファクトリ設定
 
-のOSGi設定ファクトリ [!DNL Cross-Origin Resource Sharing] は、次の場所から入手できます。
+[!DNL Cross-Origin Resource Sharing]のOSGi Configurationファクトリは、次の場所から入手できます。
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -94,9 +94,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcher configuration {#dispatcher-configuration}
+## ディスパッチャーの設定{#dispatcher-configuration}
 
-キャッシュされたコンテンツにヘッダーをキャッシュして提供できるようにするには、サポートするすべてのAEM発行 [!DNL CORS]`dispatcher.any` ファイルに次の設定を追加します。
+キャッシュされたコンテンツで[!DNL CORS]ヘッダーのキャッシュと提供を可能にするには、サポートするすべてのAEM Publish `dispatcher.any`ファイルに次の設定を追加します。
 
 ```
 /cache { 
@@ -113,11 +113,11 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**ファイルに変更を加えた後、Webサーバーアプリケーション** を再起動し `dispatcher.any` ます。
+**フ** ァイルに変更を加えた後、Webサーバー `dispatcher.any` アプリケーションを再起動します。
 
-設定の更新後、次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある場合があり `/headers` ます。
+`/headers`構成の更新後の次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある可能性があります。
 
-## サポート資料 {#supporting-materials}
+## サポート資料{#supporting-materials}
 
 * [クロス接触チャネルリソース共有ポリシーのAEM OSGi設定ファクトリ](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer for macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
