@@ -15,11 +15,11 @@ ht-degree: 4%
 ---
 
 
-# アセットメタデータを使用した倍率検索 {#search-boost-asset}
+# アセットメタデータを使用したブースト検索{#search-boost-asset}
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
 
-## AEM Assetsでの検索の促進について{#understanding-search-boosting-in-aem-assets}
+## AEM Assetsでの検索の向上について{#understanding-search-boosting-in-aem-assets}
 
 AEM Assets検索の機能強化と、AEMの幅広いコンテキストでの動作について詳しく説明します。
 
