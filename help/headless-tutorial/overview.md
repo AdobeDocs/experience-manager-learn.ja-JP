@@ -1,16 +1,16 @@
 ---
-title: AEMヘッドレス使用の手引き
-description: AEMヘッドレスを使用してコンテンツを構築し、公開する方法を示す、エンドツーエンドのチュートリアルです。
+title: AEM ヘッドレス使用の手引き
+description: AEM ヘッドレスを使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
 
-# AEMヘッドレス使用の手引き
+# AEM ヘッドレス使用の手引き
 
 AEMを使用してコンテンツを構築し、公開し、ネイティブモバイルアプリで使用され、ヘッドレスのCMSシナリオでコンテンツを利用する方法を説明するエンドツーエンドのチュートリアルです。
 
@@ -28,6 +28,6 @@ AEMを使用してコンテンツを構築し、公開し、ネイティブモ�
 
 ## GitHubプロジェクト
 
-ソースコードとコンテンツパッケージは、 [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)で入手できます。
+ソースコードとコンテンツパッケージは、[AEM GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)で入手できます。
 
-チュートリアルまたはコードに問題がある場合は、 [GitHubの問題を残してください](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
+チュートリアルまたはコードに問題がある場合は、[GitHubの問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)を残してください。
