@@ -20,7 +20,7 @@ ht-degree: 24%
 ---
 
 
-# オーサリングの概要 {#authoring-overview}
+# オーサリングの概要{#authoring-overview}
 
 次のビデオでは、AEM Sites向けのAEM作成者環境でのオーサリングに関する基本的な概念の概要を説明します。
 
