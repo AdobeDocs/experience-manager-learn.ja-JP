@@ -30,7 +30,7 @@ ht-degree: 1%
    * パッケージマネージャーを使用して、StoreAFInDBWorkflow.zipをAEMに読み込みます。 パッケージには、AFデータをDBに格納するサンプルワークフローが含まれています。 ワークフローモデルを開きます。 ワークフローには1つのステップしかありません。 この手順では、バンドルに書き込まれたコードを呼び出し、AFデータをデータベースに格納します。 私はそのプロセスに1つの引数を渡す。 データを保存するアダプティブフォームの名前です。
    * Felix Webコンソールを使用して、insertdata.core-0.0.1-SNAPSHOT.jarをデプロイします。 このバンドルには、送信されたフォームデータをデータベースに書き込むためのコードが含まれています
 
-* ConfigMgrに移動し [ます](http://localhost:4502/system/console/configMgr)
+* [ConfigMgr](http://localhost:4502/system/console/configMgr)に移動
 
    * 「JDBC Connection Pool」を検索します。 新しいDay Commons JDBC Connection Poolを作成します。 データベースに固有の設定を指定します。
 
