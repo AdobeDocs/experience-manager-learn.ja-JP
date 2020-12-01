@@ -34,6 +34,6 @@ ht-degree: 0%
 
 Form Data Modelは、すべての対話型通信の基盤です。 Form Data ModelのGet/Read操作は、バックエンドデータソースからデータを取得し、Interactive Communicationsドキュメントの入力に使用されます。
 
-データソースの設定の詳細については、次の [リンクを参照してください。](parttwo.md)
+データソースの設定の詳細については、[リンク`](parttwo.md)を参照してください
 
 Form Data Modelを作成すると、作成したForm Data Modelを、ドキュメントフラグメントやインタラクティブ通信ドキュメントの作成の基盤として使用できます。
