@@ -27,7 +27,7 @@ ht-degree: 0%
 * 管理者がフォームを開きます。 管理者は、送信者が入力した情報を編集できません。
 * 「承認者」セクションは、承認者に対して表示される必要があります(この場合は、AEM管理者ユーザーです)。
 
-上記の要件を満たすために、フォームで **initialstep** という名前の非表示フィールドを使用し、そのデフォルト値をYesに設定します。フォームが送信されると、ワークフローの最初の手順でinitialstepの値がNoに設定されます。 フォームには、initialstep値に基づいて適切なセクションの表示と非表示を切り替えるビジネスルールがあります。
+上記の要件を満たすために、フォームで&#x200B;**initialstep**&#x200B;という名前の非表示フィールドを使用し、そのデフォルト値をYesに設定します。フォームが送信されると、ワークフローの最初の手順でinitialstepの値がNoに設定されます。 フォームには、initialstep値に基づいて適切なセクションの表示と非表示を切り替えるビジネスルールがあります。
 
 **AEMワークフローをトリガーするフォームの設定**
 
@@ -51,8 +51,8 @@ ht-degree: 0%
 * [DevelopingWithServiceUserBundleのダウンロードと展開](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [SetValueカスタムOSGIバンドルのダウンロードと展開](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [この記事に関連するアセットをAEMに読み込む](assets/helpxworkflow.zip)
-* オフ [時間の要求フォームを開く](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* [タイムオフ要求フォーム](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を開く
 * 詳細を入力し、
-* Open the [inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). 新しいタスクが割り当てられていることが確認できます。 フォームを開きます。 送信者のデータは読み取り専用で、新しい承認者セクションが表示されている必要があります。
-* ワークフ [ローモデルの調査](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* [インボックス](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)を開きます。 新しいタスクが割り当てられていることが確認できます。 フォームを開きます。 送信者のデータは読み取り専用で、新しい承認者セクションが表示されている必要があります。
+* [ワークフローモデル](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)を調べます。
 * プロセス手順を調べます。 initialstepの値をNoに設定する手順です。
