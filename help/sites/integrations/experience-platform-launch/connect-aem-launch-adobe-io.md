@@ -1,6 +1,6 @@
 ---
-title: AdobeI/Oを使用して起動でAEMに接続
-description: 起動APIでAEMを認証するためのAdobeI/Oを使用したIMS設定の作成方法について説明します。 この統合が実施されると、AEMはLaunch APIを介して通信し、Launchプロパティにアクセスできます。
+title: Adobe I/Oを使用してAEMを起動と接続
+description: Launch APIでAEMを認証するために、Adobe I/OでIMS設定を作成する方法を説明します。 この統合が実施されると、AEMはLaunch APIを介して通信し、Launchプロパティにアクセスできます。
 feature: launch
 topics: integrations
 audience: administrator
@@ -18,9 +18,9 @@ ht-degree: 2%
 ---
 
 
-# AdobeI/Oを使用して起動でAEMに接続 {#connect-aem-launch-adobe-io}
+# Adobe I/O{#connect-aem-launch-adobe-io}を使用してAEMを起動に接続
 
-起動APIでAEMを認証するためのAdobeI/Oを使用したIMS設定の作成方法について説明します。 この統合が実施されると、AEMはLaunch APIを介して通信し、Launchプロパティにアクセスできます。
+Launch APIでAEMを認証するために、Adobe I/OでIMS設定を作成する方法を説明します。 この統合が実施されると、AEMはLaunch APIを介して通信し、Launchプロパティにアクセスできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38555?quality=12&learn=on)
 
