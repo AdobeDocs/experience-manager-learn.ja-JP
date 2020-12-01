@@ -20,11 +20,11 @@ ht-degree: 20%
 ---
 
 
-# AEM Formsでの監視フォルダーの使用{#using-watched-folders-in-aem-forms}
+# AEM Forms{#using-watched-folders-in-aem-forms}での監視フォルダーの使用
 
 管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトの詳細を参照してください。
 
-監視フォルダーの作成の詳細については、ここを [クリックしてください](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
+監視フォルダーの作成の詳細については、[ここをクリック](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)してください
 
 監視フォルダーは、バッチモードでドキュメントを生成するために使用します。 監視チャネルーのメカニズムを使用して、印刷フォルダー用のインタラクティブ通信を生成したり、Outputサービスを使用してデータをテンプレートとマージしたりできます。
 
@@ -32,7 +32,7 @@ ht-degree: 20%
 
 出力サービスは、AEM ドキュメントサービスの一部である OSGi サービスの一種です。Outputサービスは、AEM Formsデザイナーの様々な出力形式と出力設計機能をサポートしています。 出力サービスでは、XFA テンプレートと XML データを変換することにより、様々な形式の印刷ドキュメントを生成することができます。
 
-Outputサービスの詳細については、ここをクリック [してください](https://helpx.adobe.com/aem-forms/6/output-service.html)。
+出力サービスの詳細については、[ここをクリック](https://helpx.adobe.com/aem-forms/6/output-service.html)してください。
 システム上に監視フォルダーを設定するには、次の手順に従います。
 * [zipファイルの内容をダウンロードして抽出します](assets/outputservicewatchedfolderkt.zip)。このzipファイルには、監視フォルダーメカニズムを使用して出力サービスをテストするための監視フォルダーとサンプルファイルを作成するパッケージが含まれています
    * Windowsシステム
