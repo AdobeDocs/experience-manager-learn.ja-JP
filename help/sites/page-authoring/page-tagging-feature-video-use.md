@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# ページのタグ付け {#using-page-tagging-with-aem-sites}
+# ページのタグ付け{#using-page-tagging-with-aem-sites}
 
 タグ付けを使用して、Adobe Experience ManagerのWebページを管理、整理する方法を説明します。
 
