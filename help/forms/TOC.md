@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 + [概要](overview.md)
 + [従うべきベストプラクティス](adaptive-forms/best-practices-adaptive-forms.md)
 + [AEM AuthorでのOKTA認証の設定](adaptive-forms/single-sign-on-with-okta.md)
-+ Creating Your First Adaptive Form {#creating-your-first-adaptive-form}
++ 最初のアダプティブフォームの作成{#creating-your-first-adaptive-form}
    + [概要とセットアップ](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [アダプティブフォームテンプレートの作成](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [フォームフラグメントの作成](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -29,7 +29,7 @@ ht-degree: 6%
    + [所得パネルへの表の追加](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [アセットパネルの設定](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [カスタム関数とコードエディターの使用](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ フォーム送信の処理 {#handling-af-form-submissions}
++ フォーム送信の処理{#handling-af-form-submissions}
    + [レビューワークフローの作成](handling-form-submissions/creating-a-review-workflow.md)
    + [ワークフローをトリガーするアダプティブフォームの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [「ありがとうございます」ページの表示](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -106,7 +106,7 @@ ht-degree: 6%
    + [メインフォームの作成](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [マイアカウントフォームの作成](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [サンプルのデプロイ](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 送信したデータをCSV形式でエクスポート{#export-submitted-data-csv-format}
++ 送信したデータをCSV形式でエクスポートする{#export-submitted-data-csv-format}
    + [送信データのエクスポート](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 のフォーム{#html5-forms}
    + [HTML5フォームの作成](html5-forms/create-html5-form.md)
@@ -132,11 +132,11 @@ ht-degree: 6%
    + [ArrayList変数](variables-aem-workflow/part4.md)
    + [Form Data Model変数](variables-aem-workflow/form-data-model.md)
    + [AEMワークフローのルールエディタ](variables-aem-workflow/part5.md)
-+ MySQL DBへのフォームデータの格納と取得{#storing-and-retrieving-form-data}
++ MySQL DB{#storing-and-retrieving-form-data}でのフォームデータの格納と取得
    + [概要](storing-retrieving-form-data/introduction.md)
    + [データソースの設定](storing-retrieving-form-data/part1.md)
-   + [データを保存するサーブレット](storing-retrieving-form-data/part2.md)
-   + [データ取得サービス](storing-retrieving-form-data/part3.md)
+   + [データ保存サービス](storing-retrieving-form-data/part3.md)
+   + [サーブレットの作成](storing-retrieving-form-data/part2.md)
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
@@ -146,22 +146,22 @@ ht-degree: 6%
    + [PDF送信の処理](offline-mobile-form-submission/part-two.md)
    + [PDFのレビューのワークフロー](offline-mobile-form-submission/part-three.md)
    + [システムに展開する](offline-mobile-form-submission/part-four.md)
-+ 送信データのクエリ{#querying-submitted-data}
++ 送信されたデータのクエリ{#querying-submitted-data}
    + [概要](querying-submitted-data/introduction.md)
    + [JSONスキーマに基づくフォームの作成](querying-submitted-data/part1.md)
    + [送信データの保存](querying-submitted-data/part2.md)
    + [JSONスキーマの格納](querying-submitted-data/part3.md)
-   + [送信データのクエリ](querying-submitted-data/part4.md)
+   + [送信されたデータのクエリ](querying-submitted-data/part4.md)
 + Formsポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [部品1 — カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [パート2 — カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
-+ AEM Formsとマーケット{#aem-forms-with-marketo}
++ AEM Formsとマーケット人{#aem-forms-with-marketo}
    + [第1部 — 概要](aem-forms-with-marketo/part1.md)
    + [パート2 — カスタム認証](aem-forms-with-marketo/part2.md)
    + [パート3 — データソース](aem-forms-with-marketo/part3.md)
    + [パート4 — すべてをまとめる](aem-forms-with-marketo/part4.md)
 
-+ Adobe Campaign StandardとAEM Forms{#aem-forms-with-adobe-campaign}
++ AEM FormsとAdobe Campaign Standard{#aem-forms-with-adobe-campaign}
    + [概要](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
    + [パート1 — トークンの生成](aem-forms-with-adobe-campaign/partone.md)
    + [パート2 — フォーム送信時にACSプロファイルを作成する](aem-forms-with-adobe-campaign/parttwo.md)
@@ -204,7 +204,7 @@ ht-degree: 6%
    + [AEM Forms印刷チャネルドキュメントでの表コンポーネントの使用](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [監視フォルダーを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ Interactive Communications For Web Channel {#ic-web-channel-tutorial}
++ Webチャネル用の対話型通信{#ic-web-channel-tutorial}
    + [概要](ic-web-channel-tutorial/introduction.md)
    + [Tomcatの設定](ic-web-channel-tutorial/partone.md)
    + [データソースの作成](ic-web-channel-tutorial/parttwo.md)
