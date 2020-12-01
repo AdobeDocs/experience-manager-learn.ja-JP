@@ -14,7 +14,7 @@ ht-degree: 18%
 
 # 概要 {#overview}
 
-Adobe Experience Managerは、AEM Sitesのユーザーに共通の機能セットを提供し [!DNL Assets] てい [!DNL Forms]ます。
+Adobe Experience Managerは、AEM Sites、[!DNL Assets]、[!DNL Forms]の各ユーザが利用できる共通の機能セットを提供しています。
 
 ## 新機能
 
@@ -24,8 +24,8 @@ Adobe Experience Managerは、AEM Sitesのユーザーに共通の機能セッ�
 * **[Cloud Manager for AEMについて（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *AEM向けCloud Managerを使用すると、AEM環境の管理、検査、およびセルフサービスを簡単に行うことができます。*
 
-* **[AdobeI/Oで使用する公開鍵と秘密鍵を設定する（チュートリアル）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *AEMおよびAdobeI/Oでのキーとキーストア [!DNL openssl] の生成方法を説明します。*
+* **[Adobe I/Oで使用する公開鍵と秘密鍵を設定する（チュートリアル）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *AEMおよびAdobe I/Oでのキーとキーストアの生成方法 [!DNL openssl] を説明します。*
 
 * **[Cloud ManagerのCI/CDパイプライン（ビデオ）の使用](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Cloud ManagerのCI/CDパイプラインを使用して安全で一貫性のあるデプロイメントを行う方法を説明します。*
