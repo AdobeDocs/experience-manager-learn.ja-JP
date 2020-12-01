@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# コンポーネントのライブコピーの継承を管理 {#manage-live-copy-component}
+# コンポーネント{#manage-live-copy-component}のライブコピーの継承を管理
 
 ライブコピーとそのBlueprint間の継承をコンポーネントレベルで管理する方法を理解します。
 
