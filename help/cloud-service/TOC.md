@@ -16,20 +16,20 @@ ht-degree: 38%
 # Adobe Experience Manager as a Cloud Service のチュートリアル {#cloud-service}
 
 + [概要](./overview.md)
-+ 基盤となるテクノロジ {#underlying-technology}
++ 基盤となるテクノロジ{#underlying-technology}
    + [AEMアーキテクチャの概要](./underlying-technology/introduction-architecture.md)
    + [OSGiの概要](./underlying-technology/introduction-osgi.md)
    + [Java Content Repositoryの概要](./underlying-technology/introduction-jcr.md)
    + [Sling の概要](./underlying-technology/introduction-sling.md)
    + [作成者層と発行層の概要](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher の概要](./underlying-technology/introduction-dispatcher.md)
-+ Local Development Environment Set up {#local-development-environment-set-up}
++ ローカル開発環境のセットアップ{#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [ローカルAEMランタイム](./local-development-environment/aem-runtime.md)
    + [ローカルディスパッチャーツール](./local-development-environment/dispatcher-tools.md)
-+ デバッグAEM{#debugging}
-   + AEM SDKのデバッグ{#debugging-aem-sdk}
++ AEM{#debugging}のデバッグ
+   + AEM SDK{#debugging-aem-sdk}のデバッグ
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
       + [ログ](./debugging/aem-sdk-local-quickstart/logs.md)
       + [リモートデバッグ](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
@@ -42,7 +42,7 @@ ht-degree: 38%
       + [構築と導入](./debugging/cloud-service/build-and-deployment.md)
       + [開発者コンソール](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
-+ AEMへのアクセス{#accessing}
++ AEM{#accessing}へのアクセス
    + [概要](./accessing/overview.md)
    + [AdobeIMSユーザー](./accessing/adobe-ims-users.md)
    + [AdobeIMSユーザーグループ](./accessing/adobe-ims-user-groups.md)
@@ -51,14 +51,14 @@ ht-degree: 38%
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
-+ アセット計算の拡張機能{#asset-compute}
++ asset computeの拡張機能{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
       + [アカウントとサービスのプロビジョニング](./asset-compute/set-up/accounts-and-services.md)
       + [現地開発環境](./asset-compute/set-up/development-environment.md)
       + [Adobeプロジェクトの蛍](./asset-compute/set-up/firefly.md)
    + 開発{#develop}
-      + [アセット計算プロジェクトの作成](./asset-compute/develop/project.md)
+      + [asset computeプロジェクトの作成](./asset-compute/develop/project.md)
       + [環境変数の設定](./asset-compute/develop/environment-variables.md)
       + [manifest.ymlの設定](./asset-compute/develop/manifest.md)
       + [労働者の育成](./asset-compute/develop/worker.md)
