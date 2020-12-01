@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Assetsとの接続アセットの使用{#using-connected-assets-with-aem-assets}
+# 接続されたアセットをAEM Assetsと共に使用{#using-connected-assets-with-aem-assets}
 
 「接続されたアセット」機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされるデジタルアセットをシームレスに共有できます。
 
@@ -28,4 +28,4 @@ ht-degree: 0%
 * 03:30 — 接続されているアセットの画像を使用
 * 04:42 — 接続されたアセット機能を有効にする管理者設定
 
-接続されたアセットに対して [サポートされているデプロイメントを確認し、AEMのデプロイメントで接続されたアセットがサポートされるかどうかを確認してください](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) 。
+接続されたアセット](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites)の[対応デプロイメントを確認し、AEMデプロイメントで接続されたアセットがサポートされるかどうかを確認してください。
