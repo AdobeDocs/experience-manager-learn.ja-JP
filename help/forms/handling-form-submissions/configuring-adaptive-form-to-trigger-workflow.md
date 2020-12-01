@@ -27,16 +27,16 @@ ht-degree: 8%
 
 ### アダプティブフォームテンプレートの取得
 
-* アダプティブ [フォームテンプレートのダウンロード](assets/af-form-template.zip)
+* [アダプティブフォームテンプレート](assets/af-form-template.zip)のダウンロード
 * [パッケージマネージャーを使用したテンプレートの読み込み](http://localhost:4502/crx/packmgr/index.jsp)
 * アダプティブフォームテンプレートのアップロードとインストール
 
 ### アダプティブフォームのサンプルの取得
 
-* アダプティブ [フォームのダウンロード](assets/peak-application-form.zip)
-* フ [ォームとドキュメントの参照](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [アダプティブフォーム](assets/peak-application-form.zip)をダウンロード
+* [フォームとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を参照
 * 「作成/ファイルのアップロード」をクリックします。
-* サンプルのアダプティブフォームは、 [Application Serverというフォルダーに配置されます](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* サンプルのアダプティブフォームは、[アプリケーションForms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)というフォルダーに配置されます
 
 次のビデオでは、AEMワークフローをトリガーするアダプティブフォームの設定方法を説明します
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
