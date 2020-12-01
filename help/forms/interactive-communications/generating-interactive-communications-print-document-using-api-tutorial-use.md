@@ -110,9 +110,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **ローカルシステムでテストするには、次の手順に従ってください。**
 
-* この [記事の説明に従って、Tomcatを設定します。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcatには、サンプルデータを生成するwarファイルがあります。
-* この [記事で説明するように、サービス（システムユーザー）を設定します](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。
-このシステムユーザーが次のノードで読み取り権限を持っていることを確認してください。 ユーザー管理者に権限ログインを付与し、 [](https://localhost:4502/useradmin) システムユーザー「data」を検索し、Tabキーで「権限」タブに移動して次のノードの読み取り権限を付与するには
+* この[記事の説明に従って、Tomcatを設定します。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcatには、サンプルデータを生成するwarファイルがあります。
+* この[記事](/help/forms/adaptive-forms/service-user-tutorial-develop.md)で説明するように、サービス（システムユーザー）を設定します。
+このシステムユーザーが次のノードで読み取り権限を持っていることを確認してください。 [ユーザーadmin](https://localhost:4502/useradmin)に権限ログインを与え、システムユーザー「data」を検索し、次のノードでTabキーで「権限」タブに移動して読み取り権限を付与するには
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
