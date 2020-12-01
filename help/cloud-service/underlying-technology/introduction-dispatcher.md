@@ -18,9 +18,9 @@ ht-degree: 29%
 ---
 
 
-# 概要 [!DNL Dispatcher] {#introduction-dispatcher}
+# [!DNL Dispatcher] {#introduction-dispatcher}の紹介
 
-AEMアーキテクチャの一部としてのの機能と機能 [!DNL dispatcher] の紹介。
+AEMアーキテクチャの一部としての[!DNL dispatcher]の機能と機能の紹介。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
 
