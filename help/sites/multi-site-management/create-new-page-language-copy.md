@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 言語コピーの作成ページ {#create-language-copy-page}
+# 言語コピーページの作成{#create-language-copy-page}
 
 既存の言語コピーでページを作成し、そのコンテンツを別の言語コピーに翻訳する方法を説明します。
 
