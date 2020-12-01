@@ -1,6 +1,6 @@
 ---
-title: アセット計算の拡張機能用のアカウントとサービスの設定
-description: アセットコンピューティングワーカーの開発には、AEMを含むアカウントやサービス(Cloud Serviceとして)、AdobeプロジェクトのFirefly、およびMicrosoftやAmazonが提供するクラウドストレージにアクセスする必要があります。
+title: asset computeの拡張用のアカウントとサービスの設定
+description: asset computeワーカーの開発では、AEMを含むアカウントやサービス(Cloud Service、AdobeプロジェクトのFirefly、MicrosoftまたはAmazonが提供するクラウドストレージ)にアクセスする必要があります。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -24,12 +24,12 @@ ht-degree: 2%
 
 すべてのAdobeサービスは、Adobe IDを使用して、同じAdobe組織を通じてアクセスできる必要があります。
 
-+ [AEM as a Cloud Service](#aem-as-a-cloud-service)
++ [CLOUD SERVICEとしてのAEM](#aem-as-a-cloud-service)
 + [AdobeプロジェクトFireFly](#adobe-project-firefly)
    + プロビジョニングには2 ～ 10日かかる場合があります
 + クラウドストレージ
    + [Azure Blobストレージ](https://azure.microsoft.com/en-us/services/storage/blobs/)
-   + または [AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
+   + または[AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
 
 >[!WARNING]
 >
@@ -39,54 +39,54 @@ ht-degree: 2%
 
 ## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
-AEM Assets処理プロファイルがカスタムのAsset Compute Workerを呼び出すように設定するには、Cloud Service環境としてAEMにアクセスする必要があります。
+AEM Assets処理プロファイルがカスタムAsset computeワーカーを呼び出すように設定するには、Cloud Service環境としてAEMにアクセスする必要があります。
 
 サンドボックスプログラムまたはサンドボックス以外の開発環境を使用できるのが理想的です。
 
-ローカルAEM SDKは、このチュートリアルを完了するのに十分ではありません。ローカルのAEM SDKは、Asset Computeマイクロサービスと通信できず、代わりに、Cloud Service環境としての真のAEMが必要です。
+ローカルAEM SDKは、このチュートリアルを完了するのに十分ではありません。ローカルのAEM SDKは、Asset computeのマイクロサービスと通信できないので、Cloud Service環境としてのtrue AEMが必要です。
 
-## Adobeプロジェクトの蛍{#adobe-project-firefly}
+## Adobeプロジェクトの蛍光{#adobe-project-firefly}
 
-Adobe [プロジェクトのFirefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) Frameworkは、AdobeのサーバーレスプラットフォームであるAdobe I/O Runtimeに対するカスタムアクションを作成し、導入するために使用されます。 AEM Asset Computeプロジェクトは、処理プロファイルを介してAEM Assetsに統合され、アセットバイナリにアクセスして処理する機能を提供する、特別に構築されたFireflyプロジェクトです。
+[AdobeプロジェクトFirefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html)フレームワークは、AdobeのサーバーレスプラットフォームであるAdobe I/O Runtimeにカスタムアクションを作成し、導入するために使用されます。 AEMAsset computeプロジェクトは、処理プロファイルを介してAEM Assetsと統合し、アセットバイナリにアクセスして処理する機能を提供する、特別に構築されたFireflyプロジェクトです。
 
 Project Fireflyにアクセスするには、プレビューにサインアップします。
 
 1. [Project Fireflyプレビューにサインアップします](https://adobeio.typeform.com/to/obqgRm)。
 1. プロビジョニングが完了したことを電子メールで通知されるまで、約2 ～ 10日待ってから、チュートリアルに進みます。
-   + プロビジョニングが完了しているかどうかが不明な場合は、次の手順に進みます。まだプロビジョニングされていない __Adobeデベロッパーコンソールで__ プロジェクトFirefly [プロジェクトを作成できない場合は](https://console.adobe.io) 、次の手順に進みます。
+   + プロビジョニングが完了しているかどうかが不明な場合は、次の手順に進みます。まだプロビジョニングされていない[Adobe開発者コンソール](https://console.adobe.io)に&#x200B;__プロジェクトのFirefly__&#x200B;プロジェクトを作成できない場合は、次の手順に進みます。
 
 ## クラウドストレージ
 
-Asset Computeプロジェクトのローカル開発には、クラウドストレージが必要です。
+クラウドストレージは、Asset computeプロジェクトのローカル開発に必要です。
 
-AEMがCloud Serviceとして直接使用するためにアセット計算ワーカーをAdobe I/O Runtimeにデプロイする場合、このクラウドストレージは、アセットの読み取りとレンディションの書き込みが行われるクラウドストレージをAEMが提供するので、厳密には必要ありません。
+AEMがCloud Serviceとして直接使用するためにAsset computeワーカーをAdobe I/O Runtimeにデプロイする場合、このクラウドストレージは、アセットの読み取りとレンディションの書き込みを行うクラウドストレージをAEMが提供するので、厳密には必要ありません。
 
 ### Microsoft Azure Blob Storage{#azure-blob-storage}
 
-Microsoft Azure Blobストレージへのアクセス権をまだ持っていない場合は、12か月 [無料のアカウントにサインアップ](https://azure.microsoft.com/en-us/free/)します。
+Microsoft Azure Blobストレージへのアクセス権をまだ持っていない場合は、[無料の12ヶ月のアカウント](https://azure.microsoft.com/en-us/free/)にサインアップします。
 
-このチュートリアルではAzure Blobストレージを使用しますが、 [AmazonS3](#amazon-s3) はチュートリアルに対する小さなバリエーションのみでも使用できます。
+このチュートリアルではAzure Blobストレージを使用しますが、[AmazonS3](#amazon-s3)は、チュートリアルに対する小さなバリエーションのみでも使用できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40377/?quality=12&learn=on)
 
 _Azure Blobストレージのプロビジョニングのクリックスルー（オーディオなし）_
 
 
-1. [Microsoft Azureアカウントにログインします](https://azure.microsoft.com/en-us/account/)。
-1. [ __ストレージアカウント__ ] [Azureサービス]セクションに移動します
-1. 「 ____ +追加」をタップして、新しいBLOBストレージアカウントを作成します
-1. 必要に応じて、新しい __リソースグループを作成します__ 。例： `aem-as-a-cloud-service`
-1. 次のように、 __ストレージアカウント名を入力します__。 `aemguideswkndassetcomput`
-   + この __ストレージアカウント名__ は、ローカルのAsset Compute Development Toolのクラウドストレージ [(Cloud Development)の](../develop/environment-variables.md) 設定に使用されます。
-   + クラウドストレージの __設定時には、ストレージアカウントに関連付けられた__ アクセスキー [も必要です](../develop/environment-variables.md)。
-1. その他はすべてデフォルトのままにし、「 __レビュー__ 」ボタンと「作成」ボタンをタップします。
-   + 必要に応じて、 __身近な場所を選択します__ 。
-1. プロビジョニングの正確性の要求を確認し、満たされた場合は「 __作成__ 」ボタンをタップします
+1. [Microsoft Azureアカウント](https://azure.microsoft.com/en-us/account/)にログインします。
+1. __ストレージアカウント__ Azureサービスセクションに移動します
+1. __+ 追加__&#x200B;をタップして、新しいBLOBストレージアカウントを作成します
+1. 必要に応じて、新しい&#x200B;__リソースグループ__&#x200B;を作成します。例：`aem-as-a-cloud-service`
+1. __ストレージアカウント名__&#x200B;を指定します。例：`aemguideswkndassetcomput`
+   + __ストレージアカウント名__&#x200B;は、ローカルAsset compute開発ツールの[クラウドストレージ](../develop/environment-variables.md)の設定に使用されます
+   + [クラウドストレージ](../develop/environment-variables.md)を設定する際にも、ストレージアカウントに関連付けられた&#x200B;__アクセスキー__&#x200B;が必要です。
+1. その他はすべてデフォルトのままにし、__「レビュー」+「作成」__&#x200B;ボタンをタップします
+   + オプションで、身近な&#x200B;__場所__&#x200B;を選択します。
+1. プロビジョニングの正確性の要求を確認し、満たされた場合は「__作成__」ボタンをタップします
 
 ### Amazon S3{#amazon-s3}
 
-このチュートリアルを完了するには、 [Microsoft Azure Blobストレージを使用することをお勧めします](#azure-blob-storage) 。ただし、 [AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) も使用できます。
+このチュートリアルを完了するには、[Microsoft Azure Blobストレージ](#azure-blob-storage)を使用することをお勧めしますが、[AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)も使用できます。
 
-AmazonS3ストレージを使用する場合は、プロジェクトの環境変数を [設定する際に、AmazonS3クラウドストレージ資格情報を指定し](../develop/environment-variables.md#amazon-s3)ます。
+AmazonS3ストレージを使用する場合、[プロジェクトの環境変数](../develop/environment-variables.md#amazon-s3)を設定する際に、AmazonS3クラウドストレージ資格情報を指定します。
 
-このチュートリアル用にクラウドストレージを特別にプロビジョニングする必要がある場合は、 [Azure Blobストレージを使用することをお勧めします](#azure-blob-storage)。
+このチュートリアルでクラウドストレージを特別にプロビジョニングする必要がある場合は、[Azure Blobストレージ](#azure-blob-storage)を使用することをお勧めします。
