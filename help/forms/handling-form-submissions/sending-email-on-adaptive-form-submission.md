@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# アダプティブフォーム送信時の電子メールの送信 {#sending-email-on-adaptive-form-submission}
+# アダプティブフォーム送信時の電子メールの送信{#sending-email-on-adaptive-form-submission}
 
 一般的な操作の1つは、アダプティブフォームの送信が成功したときに確認電子メールを送信者に送信することです。 これを行うには、送信アクションとして「電子メールの送信」を選択します。
 
@@ -31,9 +31,9 @@ ht-degree: 2%
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## 必要な設定 {#configurations-needed}
+## 必要な構成{#configurations-needed}
 
-Day CQ Mailサービスを設定する必要があります。 これは、ブラウザーで [Felix Configuration Managerを指定することで設定できます](http://localhost:4502/system/console/configMgr)
+Day CQ Mailサービスを設定する必要があります。 これは、ブラウザに[Felix Configuration Manager](http://localhost:4502/system/console/configMgr)を指定することで設定できます
 
 スクリーンショットは、アドビのメールサーバーの設定プロパティを示しています。
 
@@ -41,9 +41,9 @@ Day CQ Mailサービスを設定する必要があります。 これは、ブ�
 
 サーバーでこれを試すには、次の手順に従います。
 
-* [パッケージマネージャーを使用して、AEMでこの記事に関連付けられたアセットを読み込みます](assets/timeoffrequest.zip) 。
+* [パッケージマネージャーを使用して、AEMでこの記事に関連付けら](assets/timeoffrequest.zip) れたアセットを読み込みます。
 
-* TimeOffRequestFormを開き [ます](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。
+* [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を開きます。
 
 * 詳細を入力します。電子メールフィールドに有効な電子メールアドレスを入力してください。
 
