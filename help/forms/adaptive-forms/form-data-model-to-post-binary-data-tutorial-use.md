@@ -46,24 +46,24 @@ Service Input
 
 >[!NOTE]
 >
->トラブルシューティングのヒント — 何らかの理由でDOR.pdfがDAMに作成されていない場合は、 [ここをクリックしてデータソース認証設定をリセットします](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)。 これらはAEM認証の設定で、デフォルトはadmin/adminです。
+>トラブルシューティングのヒント — 何らかの理由でDOR.pdfがDAMに作成されていない場合は、[ここ](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)をクリックして、データソース認証設定をリセットします。 これらはAEM認証の設定で、デフォルトはadmin/adminです。
 
 ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
 
-1. Developingwithserviceuserバンドルの[デプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1.[Developingwithserviceuserバンドル](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)を展開します。
 
 1. [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。このカスタムOSGIバンドルは、メタデータプロパティを作成し、送信されたフォームデータから値を設定するために使用されます。
 
-1. [パッケージマネージャーを使用して、この記事に関連付けられたアセット](assets/postdortodam.zip) 、AEMに読み込みます。次の情報が表示されます
+1. [パッケージマネージャーを使用して、この記事に関連付けられた](assets/postdortodam.zip) アセットをAEMに読み込みます。次の情報が表示されます
 
    1. ワークフローモデル
    1. AEMワークフローに送信するように設定されたアダプティブフォーム
    1. PostToDam.JSONファイルを使用するように設定されたデータソース
    1. データソースを使用するフォームデータモデル
 
-1. ブラウ [ザーを指してアダプティブフォームを開きます](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. [ブラウザーを指して、アダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を開きます
 1. フォームに入力し、送信します。
 1. レコードのドキュメントが作成され、保存されている場合は、Assetsアプリケーションを確認します。
 
 
-[データソースの作成に使用するSwaggerファイル](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) （英語のみ）を参照できます
+[データソースの作成に使用されるSwagger](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile)  Fileは、参照可能です
