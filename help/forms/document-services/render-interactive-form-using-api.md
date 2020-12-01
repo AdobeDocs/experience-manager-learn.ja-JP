@@ -26,7 +26,7 @@ AEM FormsでFormsサービスAPIを使用してインタラクティブPDFをレ
 
 * FormsService - PDFファイルへのデータの書き出し/読み込みを可能にし、XMLデータをxdpテンプレートに結合してインタラクティブpdfを生成する、非常に用途の広いサービスです。
 
-AEM FormsAPIの公式Javadocは [ここに記載されています](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+AEM FormsAPIの公式Javadocは[ここ](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)に記載されています
 
 次のコードスニペットは、FormsServiceのrenderPDFForm操作を使用してインタラクティブpdfをレンダリングします。 schengen.xdpは、xmlデータのマージに使用されるテンプレートです。
 
@@ -63,10 +63,10 @@ return interactivePDF;
 1. 除外されたセクション追加の次のパスに移動し、
 1. /bin/generateinteractivepdf
 1. [モバイルフォームを開く](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 2つのフィールドに入力し、「 ***ダウンロード」をクリックして入力します。.*** button
+1. 2つのフィールドに入力し、***ダウンロードして入力….*** button
 1. インタラクティブpdfをローカルシステムにダウンロードする必要があります
 
 
-サンプルパッケージには、Mobile Formに関連付けられたカスタムプロファイルが含まれています。 customtoolbar.jsp [ファイルを参照してください](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 。 このjspは、モバイルフォームからデータを抽出し、 ***/bin/generateinteractivepdf*** パスにマウントされたサーブレットにPOSTリクエストを行います。 サーブレットは、インタラクティブpdfを呼び出し元のアプリケーションに返します。 次に、customtoolbar.jspのコードは、ファイルをローカルシステムにダウンロードします
+サンプルパッケージには、Mobile Formに関連付けられたカスタムプロファイルが含まれています。 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)ファイルを調べてください。 このjspは、モバイルフォームからデータを抽出し、***/bin/generateinteractivepdf***&#x200B;パスにマウントされたサーブレットにPOSTリクエストを行います。 サーブレットは、インタラクティブpdfを呼び出し元のアプリケーションに返します。 次に、customtoolbar.jspのコードは、ファイルをローカルシステムにダウンロードします
 
 
