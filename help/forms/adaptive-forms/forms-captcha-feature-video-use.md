@@ -24,7 +24,7 @@ ht-degree: 9%
 
 AEMアダプティブFormsでのCAPTCHAの追加と使用
 
-この機能のライブデモへのリンクは、 [AEM Formsのサンプルページをご覧ください](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 。
+[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページをご覧になって、この機能のライブデモへのリンクをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ AEMアダプティブFormsでのCAPTCHAの追加と使用
 >
 >オーサーインスタンスでのreCaptachの設定
 >
->作成者インスタンスでfelix [web console](http://localhost:4502/system/console/bundles) (felix)を開く
+>作成者インスタンスでfelix [webコンソール](http://localhost:4502/system/console/bundles)を開きます
 >
 >com.adobe.granite.crypto.fileバンドルの検索
 >
@@ -51,7 +51,7 @@ AEMアダプティブFormsでのCAPTCHAの追加と使用
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * HMACファイルとマスター・ファイルのコピー
 
-発行インスタンスで [Felix Webコンソール](http://localhost:4502/system/console/bundles) を開きます。 com.adobe.granite.crypto.file bundleを検索します。 バンドルIDをメモしておきます。
+発行インスタンスで[felix Webコンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file bundleを検索します。 バンドルIDをメモしておきます。
 発行インスタンスのファイルシステム上のバンドルIDに移動します。
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 既存のHMACファイルとマスターファイルを削除します。
@@ -59,7 +59,7 @@ AEMアダプティブFormsでのCAPTCHAの追加と使用
 
 AEM公開サーバーの再起動
 
-## サポート資料 {#supporting-materials}
+## サポート資料{#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
 
