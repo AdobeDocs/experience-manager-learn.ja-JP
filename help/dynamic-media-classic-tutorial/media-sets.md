@@ -16,7 +16,7 @@ ht-degree: 2%
 ---
 
 
-# 画像、スウォッチ、スピン、混在メディアセット {#media-sets}
+# 画像、スウォッチ、スピン、混在メディアセット{#media-sets}
 
 動的なサイズ変更とズームのために、1つの画像以上に多くの画像を移動できるDynamic Media Classicのセットコレクションを使用すると、より豊富なオンライン操作を実現できます。 チュートリアルのこの節では、Dynamic Media Classicで次のリッチメディアセットを作成する方法について説明します。
 
@@ -49,8 +49,8 @@ _画像セットの例_
 
 ![画像](assets/media-sets/image-set-url-1.png)
 
-- 画像セットのクイック開始で、画像セットについて詳し [く説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)。
-- 画像セットの [作成方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
+- 画像セットに関する詳細は、[画像セットへのクイック開始](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)を参照してください。
+- [画像セットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)を説明します。
 
 ### スウォッチセット
 
@@ -68,8 +68,8 @@ _スウォッチセットの例_
 
 ![画像](assets/media-sets/image-set_url.png)
 
-- スウォッチセットのクイック開始で、スウォッチセットについて詳し [く説明し](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)ます。
-- スウォッチセットの [作成方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
+- スウォッチセットに関する詳細は、[スウォッチセットへのクイック開始](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)を参照してください。
+- [スウォッチセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)の作成方法を説明します。
 
 ### スピンセット
 
@@ -85,8 +85,8 @@ _スピンセットの例_
 
 ![画像](assets/media-sets/spin-set.png)
 
-- スピンセットに対する [クイック開始を使用して、スピンセットについて詳しく説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)。
-- スピンセットを [作成する方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
+- スピンセットに関する詳細は、[スピンセットへのクイック開始](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)を参照してください。
+- [スピンセットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)を説明します。
 
 ## 混在メディアセット
 
@@ -100,13 +100,13 @@ _混在メディアセットの例_
 
 ![画像](assets/media-sets/image-set-url-1.png)
 
-- 混在メディアセットの詳細については、「混在メディアセットに [すばやく開始](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)」を参照してください。
+- 混在メディアセットの詳細については、[混在メディアセットへのクイック開始](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)を参照してください。
 
-- 混在メディアセットを [作成する方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
+- [混在メディアセットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)を説明します。
 
 Webサイト上でズーム、セットまたはビデオの画像を表示するには、ダイナミックメディアクラシックの「ビューア」と呼び出します。 Dynamic Media Classicには、スウォッチセット、スピンセット、ビデオなどのリッチメディアアセット用のビューアが含まれています。
 
-詳しくは、 [AEM Assetsおよびダイナミックメディアクラシックの](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.translate.html)ビューアについて。
+[AEM Assetsおよびダイナミックメディアクラシックのビューア](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.translate.html)について詳しく説明します。
 
 ## バッチセットプリセット
 
@@ -114,7 +114,7 @@ Webサイト上でズーム、セットまたはビデオの画像を表示す�
 
 各プリセットは、定義された命名規則に一致する画像を使用してセットの構成方法を定義する、固有の名前を持ち自己完結した命令のセットです。 プリセットでは、まず、セットにグループ化するアセットの命名規則を定義します。 次に、バッチセットプリセットを作成して、これらの画像を参照します。
 
-プリセットは自分で作成できますが( **設定/アプリケーション設定/バッチセットプリセットにあります** )、ベストプラクティスとして、コンサルティングチームまたはテクニカルサポートにプリセットを設定してもらう必要があります。 理由は次のとおりです。
+プリセットは自分で作成できますが（**設定/アプリケーション設定/バッチセットプリセット**&#x200B;にあります）、ベストプラクティスとして、コンサルティングチームまたはテクニカルサポートに設定してもらう必要があります。 理由は次のとおりです。
 
 - バッチセットプリセットは複雑に設定する場合があります。通常の式が動作します。開発者以外の場合は、この構文はなじみのないものか、わかりにくい場合があります。
 - 作成した後は、デフォルトでオンになります。 「元に戻す」関数はありません。 何千もの画像のアップロード開始でプリセットが正しく設定されていない場合、何百もの壊れたセットが表示され、手動で検索して削除する必要があります。
@@ -123,17 +123,17 @@ Webサイト上でズーム、セットまたはビデオの画像を表示す�
 
 バッチセットプリセットは、アップロード時にのみ適用されます。画像がアップロードされた後は実行できません。 したがって、命名規則を計画し、すべての画像の読み込みを開始する前にプリセットを作成することが重要です。
 
-プリセットを作成すると、会社管理者は、プリセットがアクティブか非アクティブかを選択できます。 「アクティブ」は、これらのプリセットが「 **ジョブオプション**」の下のアップロードページに表示されることを意味し、非アクティブなプリセットは非表示のままになります。
+プリセットを作成すると、会社管理者は、プリセットがアクティブか非アクティブかを選択できます。 「アクティブ」は、ユーザーが&#x200B;**ジョブオプション**&#x200B;の下のアップロードページに表示されることを意味し、非アクティブなプリセットは非表示のままになります。
 
-バッチセットプリセットを [作成する方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
+[バッチセットプリセットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)を説明します。
 
 ### アップロード時のバッチセットプリセットの使用
 
 次に、作成後のアップロード時にバッチセットプリセットを使用する方法を示します。
 
-1. 「 **アップロード** 」をクリックし **、「デスクトップ** から」または「FTP **経由」を選択します**。
-2. 「 **オプション**」をクリックします。
-3. 「 **バッチセットプリセット** 」オプションを開き、プリセットのチェックボックスをオンまたはオフにして、アップロードで使用します。
+1. 「**アップロード**」をクリックし、「**デスクトップから**」または「**FTP経由**」を選択します。
+2. 「**ジョブオプション**」をクリックします。
+3. 「**バッチセットプリセット**」オプションを開き、プリセットのチェックボックスをオンまたはオフにして、アップロードで使用します。
 4. アップロードが完了したら、フォルダー内で完了したセットを探します。
 
-バッチセットプリセットについて詳し [く説明し](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)ます。
+[バッチセットプリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)について詳しく説明します。
