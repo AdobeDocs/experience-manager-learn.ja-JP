@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Create a Language Copy {#create-language-copy}
+# 言語コピーの作成{#create-language-copy}
 
 言語コピーを作成ウィザードを使用して、AEMサイト用の言語コピーを作成する方法を学びます。
 
