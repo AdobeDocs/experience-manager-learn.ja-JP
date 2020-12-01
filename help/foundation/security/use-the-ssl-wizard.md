@@ -13,7 +13,7 @@ discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ Adobe Experience ManagerのSSLセットアップウィザードを使用して�
 
 ## 秘密鍵と自己署名証明書のダウンロード
 
-次のzipには、ローカルホストでのAEM SSLの設定に必要なファイル [!DNL DER] と [!DNL CRT] ファイルが含まれています。このファイルは、ローカルでの開発を目的としています。
+次のzipファイルには、ローカルホストでのAEM SSLの設定に必要な[!DNL DER]ファイルと[!DNL CRT]ファイルが含まれています。これは、ローカル開発を目的としたファイルです。
 
-これら [!DNL DER] と [!DNL CERT] ファイルは便宜上提供され、以下の「秘密鍵と自己署名証明書の生成」の手順に従って生成されます。
+[!DNL DER]ファイルと[!DNL CERT]ファイルは便宜上提供され、下の「秘密鍵と自己署名証明書の生成」の手順に従って生成されます。
 
-必要に応じて、証明書のパスフレーズは **adminです**。
+必要に応じて、証明書のパスフレーズは&#x200B;**admin**&#x200B;です。
 
 localhost — 秘密鍵と自己署名証明書.zip（2028年7月に期限切れ）
 
@@ -45,7 +45,7 @@ localhost — 秘密鍵と自己署名証明書.zip（2028年7月に期限切れ
 
 ## 秘密鍵と自己署名証明書の生成
 
-上記のビデオでは、自己署名入り証明書を使用したAEM作成者インスタンスでのSSLの設定と設定を説明しています。 [!DNL OpenSSL]を使用する次のコマンドは、ウィザードの手順2で使用する秘密鍵と証明書を生成できます [](https://www.openssl.org/) 。
+上記のビデオでは、自己署名入り証明書を使用したAEM作成者インスタンスでのSSLの設定と設定を説明しています。 [[!DNL OpenSSL]](https://www.openssl.org/)を使用する次のコマンドは、ウィザードの手順2で使用する秘密鍵と証明書を生成できます。
 
 ```shell
 ### Create Private Key
