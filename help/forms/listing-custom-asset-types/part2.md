@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsでのカスタムアセットタイプのリスト {#listing-custom-asset-types-in-aem-forms}
+# AEM Forms{#listing-custom-asset-types-in-aem-forms}でのカスタムアセットタイプのリスト
 
-## Creating custom template {#creating-custom-template}
+## カスタムテンプレート{#creating-custom-template}を作成しています
 
 
 この記事の目的で、カスタムアセットタイプとOOTBアセットタイプを同じページに表示するカスタムテンプレートを作成します。 カスタムテンプレートを作成するには、次の手順に従います
 
 1. スリングの作成：/appsの下のフォルダー。 名前を「 myportalcomponent 」にします。
-1. &quot;fpContentType&quot; プロパティを追加この値を「**/libs/fd/ fp/formTemplate」に設定します。**
+1. &quot;fpContentType&quot; プロパティを追加この値を&quot;**/libs/fd/ fp/formTemplate&quot;に設定します。**
 1. 「追加title」プロパティを追加し、その値を「custom template」に設定します。 これは、Search &amp; Listerコンポーネントのドロップダウンリストに表示される名前です
 1. このフォルダーの下に「template.html」を作成します。 このファイルには、様々なアセットタイプのスタイルを設定し、表示するコードが保持されます。
 
@@ -76,9 +76,9 @@ ht-degree: 0%
 >
 >このテンプレート内のアダプティブFormsをリストするには、新しいdivを作成し、そのdata-type属性を&quot;guide&quot;に設定します。 data-type=&quot;printForm&quot;のdivをコピーして貼り付け、新しくコピーしたdivのデータタイプを&quot;guide&quot;に設定できます
 
-## Configure Search And Lister Component {#configure-search-and-lister-component}
+## Search &amp; Listerコンポーネントの設定{#configure-search-and-lister-component}
 
-カスタムテンプレートを定義したら、このカスタムテンプレートを「Search &amp; Lister」コンポーネントに関連付ける必要があります。 ブラウザー [にこのURLを指定し ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)ます。
+カスタムテンプレートを定義したら、このカスタムテンプレートを「Search &amp; Lister」コンポーネントに関連付ける必要があります。 ブラウザー[にこのURL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)を指定します。
 
 デザインモードに切り替え、許可されているコンポーネントグループにSearch &amp; Listerコンポーネントが含まれるように段落システムを設定します。 Search &amp; Listerコンポーネントは、ドキュメントサービスグループの一部です。
 
@@ -108,10 +108,11 @@ ht-degree: 0%
 
 ![assettypes](assets/assettypes.png)
 
-これで、Search &amp; Listerポータルコンポーネントを設定したら、リスターの動作を確認します。 ブラウザー [にこのURLを指定し ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)ます。 結果は次の図のようになります。
+これで、Search &amp; Listerポータルコンポーネントを設定したら、リスターの動作を確認します。 ブラウザー[にこのURL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)を指定します。 結果は次の図のようになります。
 
 >[!NOTE]
 >
->ポータルがパブリッシュサーバーでカスタムアセットタイプをリストしている場合は、ノード/apps/fd/fp/extensions/querybuilderに対して「fd-service」ユーザーに「読み取り」権限を与えていることを確認して **ください**
+>ポータルがパブリッシュサーバーにカスタムアセットタイプをリストしている場合は、「fd-service」ユーザーに「読み取り」権限を&#x200B;**/apps/fd/fp/extensions/querybuilder**&#x200B;ノードに付与してください
 
-![assettypes](assets/assettypeslistings.png)[パッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、search &amp; listerコンポーネントを使用してリストするアセットタイプとして使用されるサンプルmp4、ワードドキュメント、xdpファイルが含まれます
+![アセッ](assets/assettypeslistings.png)
+[トの種類パッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、search &amp; listerコンポーネントを使用してリストするアセットタイプとして使用されるサンプルmp4、ワードドキュメント、xdpファイルが含まれます
