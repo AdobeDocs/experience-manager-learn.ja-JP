@@ -25,11 +25,12 @@ ht-degree: 0%
 
 * RDBMSバックアップフォームデータモデルの作成
 * 2つのエンティティ間の関連付けを作成
-* Form Data Modelの _get_ サービスから返されたデータをテーブルに入力する
+* フォームデータモデルの&#x200B;_get_&#x200B;サービスから返されたデータをテーブルに入力
 * Form Data Modelのリクエスト属性を使用
 
 
-[クリックすると、機能の実況デモをご覧いただけます](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)。次のビデオでは、コースの概要を説明します。
+[クリックして、](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+機能の実況デモをご覧ください。次のビデオでは、コースの概要を説明しています。
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## 前提条件
