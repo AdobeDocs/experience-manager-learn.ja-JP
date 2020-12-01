@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsとの関連データモデルの使用{#using-association-data-models-with-aem-forms}
+# AEM Forms{#using-association-data-models-with-aem-forms}との関連データモデルの使用
 
 フォームデータモデルで2つのエンティティ間の関連付けを作成する
 
