@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 概要 [!DNL OSGi] {#introduction-osgi}
+# [!DNL OSGi] {#introduction-osgi}の紹介
 
-Adobe Experience Managerの基盤 [!DNL OSGi]となるアプリケーション用の動的なモジュラーアーキテクチャ [!DNL Java] の紹介。
+[!DNL OSGi]の紹介は、[!DNL Java]アプリケーションの動的なモジュラーアーキテクチャで、Adobe Experience Managerの基盤です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031/?quality=12&learn=on)
