@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -64,12 +64,12 @@ ht-degree: 36%
    + [アセットのダウンロード](./sharing/download.md)
    + [Brand Portal](./sharing/brand-portal.md)
    + アセット共有{#assets-share}
-      + [アセット共有コモンズ](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
+      + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [ローカルAEMでのアセット共有コモンの設定](./sharing/asset-share-commons-technical-video-setup.md)
       + [アセット共有コモンズの主題設定](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
-+ Creativeワークフローとの連携{#creative-workflows}
++ クリエイティブワークフローとの連携{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
