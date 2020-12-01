@@ -15,12 +15,12 @@ translation-type: tm+mt
 source-git-commit: fc456c868bdfe2fbb71387f36432a134fbff7dbb
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 
-# スタイルシステムの使用 {#using-the-style-system-with-aem-sites}
+# スタイルシステムの使用{#using-the-style-system-with-aem-sites}
 
 Adobe Experience Managerスタイルシステムでは、バックエンド開発を行わずにコンポーネントの視覚的なバリエーションを実現でき、AEMコンポーネントの再利用性が向上し、汎用性と効率性に優れたコンテンツのオーサリングが可能です。 スタイルシステムをAEMコアコンポーネント、テンプレートエディター、レスポンシブレイアウトと組み合わせて使用すると、オファーの強力な機能により、豊富なエクスペリエンスをすばやく作成できます。
 
@@ -28,7 +28,7 @@ Adobe Experience Managerスタイルシステムでは、バックエンド開�
 
 このビデオでは、CSSのみを使用して、1つのコンポーネントに対してスタイルシステムをどのように活用して、大幅に異なる外観を作成できるかを示します。
 
-表示されるスタイルは、 [WKNDアプリケーションによって提供されます](https://github.com/adobe/aem-guides-wknd)。 これらのスタイルはCSSとして定義され、コンポーネントのバックエンドロジック、HTLスクリプト、Slingモデルに対する変更は必要ありません。
+表示されるスタイルは、[WKNDアプリケーション](https://github.com/adobe/aem-guides-wknd)によって提供されます。 これらのスタイルはCSSとして定義され、コンポーネントのバックエンドロジック、HTLスクリプト、Slingモデルに対する変更は必要ありません。
 
 ## その他のリソース {#additional-resources}
 
