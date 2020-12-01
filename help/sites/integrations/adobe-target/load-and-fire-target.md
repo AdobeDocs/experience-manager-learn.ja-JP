@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 
-# ターゲット呼び出しの読み込みと実行 {#load-fire-target}
+# ターゲット呼び出し{#load-fire-target}を読み込んで起動
 
 起動ルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからターゲット呼び出しを実行する方法を学びます。 Webページ情報を取得し、パラメーターとして渡すには、Adobeクライアントデータレイヤーを使用します。このレイヤーを使用すると、Webページ上での訪問者の体験に関するデータを収集し、保存して、このデータに簡単にアクセスできます。
 
@@ -26,19 +26,19 @@ ht-degree: 2%
 
 ## ページ型ルール
 
-Adobe・クライアント・データ・レイヤーは、イベント主導のデータ・レイヤーです。 AEMページのデータレイヤーが読み込まれると、イベントがトリガーされ `cmp:show` ます。 このビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールが呼び出されます。 以下に、カスタムイベントおよびデータ要素に関するビデオで使用されているコードスニペットを示します。
+Adobe・クライアント・データ・レイヤーは、イベント主導のデータ・レイヤーです。 AEMページのデータレイヤーが読み込まれると、イベント`cmp:show`がトリガされます。 このビデオでは、カスタムイベントを使用して`Launch Library Loaded`ルールが呼び出されます。 以下に、カスタムイベントおよびデータ要素に関するビデオで使用されているコードスニペットを示します。
 
-### カスタムページ表示イベント{#page-event}
+### 表示されたカスタムページイベント{#page-event}
 
 ![イベント設定とカスタムコードを示すページ](assets/load-and-fire-target-call.png)
 
-Launchプロパティで、新しい **イベント** を **ルールに追加します**
+Launchプロパティで、新しい&#x200B;**イベント**&#x200B;を&#x200B;**ルール**&#x200B;に追加します
 
-+ __拡張子：__ コア
++ __拡張機能：__ コア
 + __イベントタイプ:__ カスタムコード
-+ __名前：__ ページ表示イベントハンドラ（または説明的な内容）
++ __名前：__ ページ表示イベントハンドラー（または説明的な内容）
 
-次のコードスニペットに __貼り付けるには、「エディターを__ 開く」ボタンをタップします。 このコード __は__ 、 __イベント設定__ とその後の ____&#x200B;アクションに追加する必要があります。
+__エディターを開く__&#x200B;ボタンをタップし、次のコードスニペットに貼り付けます。 このコード&#x200B;__は、__&#x200B;イベント設定&#x200B;__とその後の__&#x200B;アクション&#x200B;__に__&#x200B;追加する必要があります。
 
 ```javascript
 // Define the event handler function
@@ -78,20 +78,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-カスタム関数は、AEM Core Componentsが発行するイベントを定義 `pageShownEventHandler`し、リッスンし、コアコンポーネントの関連情報を派生させ、イベントオブジェクトにパッケージ化し、そのペイロードで派生イベント情報を使用して起動イベントをトリガーします。
+カスタム関数は`pageShownEventHandler`を定義し、AEM Core Componentsが発行するイベントをリッスンし、コアコンポーネントの関連情報を派生させ、イベントオブジェクトにパッケージ化し、そのペイロードで派生イベント情報を使用して起動イベントをトリガします。
 
-起動ルールは、起動機能を使用してトリガされます。起動 `trigger(...)` 機能は、ルールのイベントのカスタムコードスニペット定義内での __み使用できます__ 。
+起動ルールは、起動の`trigger(...)`関数を使用してトリガされます。この関数は、規則のイベントのカスタムコードスニペット定義内で使用できる&#x200B;____&#x200B;のみです。
 
-この `trigger(...)` 関数は、イベントオブジェクトをパラメーターとして受け取り、Launch Data Elementsで、Launchの別の予約名で公開され `event`ます。 起動のデータ要素は、のような構文を使用して、 `event` オブジェクトからこのイベントオブジェクトのデータを参照できるようになり `event.component['someKey']`ました。
+`trigger(...)`関数は、イベントオブジェクトをパラメーターとして受け取り、Launch Data Elementsで公開され、Launchの`event`という名前の別の予約名で公開されます。 Launchのデータ要素は、`event.component['someKey']`のような構文を使用して、`event`オブジェクトからこのイベントオブジェクトのデータを参照できるようになりました。
 
-イベント `trigger(...)` のカスタムコードイベントタイプのコンテキスト以外（例えば、アクション内）で使用すると、JavaScriptエラーがLaunchプロパティと統合されたWebサイトでスローされ `trigger is undefined` ます。
+`trigger(...)`がイベントのカスタムコードイベントタイプのコンテキスト外（例えば、アクション内）で使用された場合、Launchプロパティと統合されたWebサイトでJavaScriptエラー`trigger is undefined`がスローされます。
 
 
 ### データ要素
 
 ![データ要素](assets/data-elements.png)
 
-「Adobe起動データ要素」は、カスタムページ表示イベントで [](#page-event) トリガーされたイベントオブジェクトのデータを、コア拡張のカスタムコードデータ要素タイプを介して、Adobe Targetで使用可能な変数にマップします。
+「Adobe起動データ要素」は、カスタムページ表示イベント](#page-event)でトリガーされたイベントオブジェクト[のデータを、コア拡張機能のカスタムコードデータ要素タイプを介してAdobe Targetで使用可能な変数にマップします。
 
 #### ページIDデータ要素
 
@@ -140,7 +140,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 #### 解決策
 
 ターゲットのお客様は、テストや概念配達確認の目的で、ターゲットを持つクラウドベースのインスタンスを使用する場合があります。 これらのドメインは、パブリックサフィックスリストの一部で、その他多数のドメインが含まれます。
-これらのドメインを使用している場合、を使用して設定をカスタマイズしない限り、最新のブラウザーではcookieが保存されません `cookieDomain``targetGlobalSettings()`。
+`targetGlobalSettings()`を使用して`cookieDomain`設定をカスタマイズしない限り、これらのドメインを使用している場合、最新のブラウザーではcookieが保存されません。
 
 ```
 window.targetGlobalSettings = {  
@@ -157,5 +157,5 @@ window.targetGlobalSettings = {
 + [Adobeクライアントデータレイヤードキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloudデバッガー — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloudデバッガ — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobeクライアントデータレイヤーおよびコアコンポーネントドキュメントの使用](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobeクライアントデータレイヤーおよびコアコンポーネントドキュメントの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Adobe Experience Platformデバッガの概要](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
