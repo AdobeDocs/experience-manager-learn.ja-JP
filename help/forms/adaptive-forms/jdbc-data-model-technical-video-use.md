@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM FormsでのJDBCベースのフォームデータモデルの使用 {#using-jdbc-based-form-data-models-with-aem-forms}
+# JDBCベースのフォームデータモデルとAEM Forms{#using-jdbc-based-form-data-models-with-aem-forms}の使用
 
 このビデオでは、JDBCデータソースに基づくForm Data Modelの作成方法、Form Data Modelに基づくAdaptive Formの作成方法、Form Data Modelを使用する「INSERT」操作の使用方法を説明します。
 
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->必要なデータベースドライバーがAEMにOSGiバンドルとしてデプロイされている限り、任意のRDBMSデータソースを使用できます。 AEMでのRDBMSデータソースの設定については、「AEM Formsとのデータ統合の [設定](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)」を参照してください。
+>必要なデータベースドライバーがAEMにOSGiバンドルとしてデプロイされている限り、任意のRDBMSデータソースを使用できます。 AEMでのRDBMSデータソースの設定については、[AEM Forms](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)とのデータ統合の設定で説明します。
 
