@@ -20,19 +20,19 @@ ht-degree: 0%
 ---
 
 
-# JSON Webトークンとアクセストークンの生成 {#generating-json-web-token-and-access-token}
+# JSON Webトークンとアクセストークン{#generating-json-web-token-and-access-token}を生成中
 
 この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
 
-## JSON Webトークンの生成 {#generate-json-web-token}
+## JSON Webトークンの生成{#generate-json-web-token}
 
-Adobe CampaignAPIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 JWTを生成するには、次の [Javaコードのサンプルに従います](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 。
+Adobe CampaignAPIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 この[Javaコードサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)に従ってJWTを生成できます。
 
 ACS APIをAEM Formsで使用するには、OSGiバンドル内にJWTを作成する必要があります。 このサンプルOSGIバンドルでJWTを生成する際に、次のコードスニペットを使用します。 ACSインスタンスに関する詳細は、上に示すように設定されたOSGIコンフィギュレーションプロパティからフェッチされます。
 
 ![設定](assets/campaignconfiguration.gif)
 
-**A.** ここに示す値はダミー値です。
+**A.ここ** に示す値はダミー値です。
 
 次のコードは、OSGI設定からAdobe Campaignサーバーに関する詳細を取得します。 80行から104行までの秘密鍵を作成します。
 
@@ -245,6 +245,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## アクセストークンの生成 {#generate-access-token}
+## アクセストークン{#generate-access-token}を生成
 
 次に、生成されたJWTをPOSTコールを行ってアクセストークンと交換します。 その後、このアクセストークンは、以降のREST呼び出しに対して、HTTPヘッダーの認証キーとして送信されます
