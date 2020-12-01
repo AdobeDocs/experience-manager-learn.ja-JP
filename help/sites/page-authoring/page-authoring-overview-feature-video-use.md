@@ -20,7 +20,7 @@ ht-degree: 17%
 ---
 
 
-# ページのオーサリング {#authoring-page-aem-sites}
+# ページのオーサリング{#authoring-page-aem-sites}
 
 サイトエディターのUIを使用してAdobe Experience Manager Sitesでページを作成する方法を学びます。
 
