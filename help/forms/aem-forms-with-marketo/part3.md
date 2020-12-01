@@ -28,7 +28,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 1. SOAP ベース Web サービス
 1. OData サービス
 
-AEM FormsとMarketoの統合に関しては、RESTful Webサービスを使用します。 統合の最初の手順は、 [データソースを設定することです。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) このチュートリアルの一部として提供されているSwaggerファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
+AEM FormsとMarketoの統合に関しては、RESTful Webサービスを使用します。 統合の最初の手順は、[データソースを設定することです。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) このチュートリアルの一部として提供されているSwaggerファイルを使用してください。次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
 ![datasource](assets/datasource.jfif)
 
 「marketo.json」はSwaggerファイルで、このチュートリアルのアセットの一部として提供されます。
@@ -39,7 +39,7 @@ AEM FormsとMarketoの統合に関しては、RESTful Webサービスを使用�
 
 データソースの設定後、次の手順では、前の手順で設定したデータソースに基づくForm Data Modelを作成します。 フォームデータモデルを作成するには、次の手順に従います。
 
-ブラウザーで [データ統合ページを指定します。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) これは、AEMインスタンスで作成されるすべてのデータ統合をリストします。
+ブラウザーで[データ統合ページを指定します。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) これは、AEMインスタンスで作成されるすべてのデータ統合をリストします。
 
 1. 「作成」をクリックします |フォームデータモデル
 1. FormsAndMarketorなどの意味のあるタイトルを指定し、「次へ」をクリックします。
