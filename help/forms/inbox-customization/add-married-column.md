@@ -82,12 +82,12 @@ return isMarried(inboxItem);
 * [AEM Webコンソールにログイン](http://localhost:4502/system/console/bundles)
 * [展開と開始インボックスカスタマイズバンドル](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [受信トレイを開く](http://localhost:4502/aem/inbox)
-* 「 _作成_ 」ボタンの横にある _リスト表示_ アイコンをクリックして、管理コントロールを開きます。
+* _「作成_」ボタンの横の&#x200B;_リスト表示_&#x200B;アイコンをクリックして、管理コントロールを開きます
 * 既婚の追加列を受信トレイに追加し、変更内容を保存
 * [FormsAndDocuments UIに移動](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [作成](assets/snap-form.zip) メニューから「 _ファイルのアップロード_ 」を選択して、サンプルフォームを読み込みます __ 。
+* [Createmenuから「](assets/snap-form.zip) File  _Uploads」を選択して、サンプル_  __ フォームを読み込みます。
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 婚姻状況 _を選択し_ 、フォームを送信します
+* 「_婚姻状況_」を選択し、フォームを送信します
    [表示受信トレイ](http://localhost:4502/aem/inbox)
 
 フォームを送信するとワークフローがトリガーされ、タスクが「管理者」ユーザーに割り当てられます。 このスクリーンショットに示すように、「既婚」列の下に値が表示されます。
