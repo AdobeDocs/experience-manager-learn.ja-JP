@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 作成者層と発行層の概要 {#introduction-author-publish}
+# 作成者層と発行層の紹介{#introduction-author-publish}
 
 Adobe Experience Managerの建築の一部として、作成者層と発行層を紹介します。
 
