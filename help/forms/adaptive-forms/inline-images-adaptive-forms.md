@@ -67,7 +67,7 @@ function consumeImage (file) {
 
 ### サーバーにデプロイする
 
-* AEM package managerを使用して、AEM [インスタンスにクライアントライブラリ](assets/inline-image-client-library.zip) をダウンロードしてインストールします。
-* AEM package managerを使用して、AEMインスタンスに [サンプルフォーム](assets/inline-image-af.zip) をダウンロードしてインストールします。
-* ブラウザーで [追加インライン画像を指定](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* AEM package managerを使用して、AEMインスタンスに[クライアントライブラリ](assets/inline-image-client-library.zip)をダウンロードしてインストールします。
+* AEM package managerを使用して、AEMインスタンスに[サンプルフォーム](assets/inline-image-af.zip)をダウンロードしてインストールします。
+* ブラウザーに[追加インライン画像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)を指定します
 * 「写真を添付」ボタンをクリックして、画像を追加します
