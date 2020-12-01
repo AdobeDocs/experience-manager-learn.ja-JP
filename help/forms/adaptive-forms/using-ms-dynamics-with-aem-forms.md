@@ -20,7 +20,7 @@ ht-degree: 31%
 ---
 
 
-# Microsoft DynamicsとAEM Formsの使用{#using-microsoft-dynamics-with-aem-forms}
+# Microsoft DynamicsとAEM Forms{#using-microsoft-dynamics-with-aem-forms}を使用する
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下の機能は、すぐに使用することができます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
