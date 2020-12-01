@@ -29,11 +29,11 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->[AEMでダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) を有効にして、この機能を使用します。
+>[Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Median AEMでこの機能を使用できるようにします。
 
 この機能は、AEM 6.1および6.2バージョンの機能パックで使用できます。
 
-## カラーマネジメント設定ノードのXMLテンプレート {#xml-template-for-the-color-management-configuration-node}
+## カラーマネジメント設定ノードのXMLテンプレート{#xml-template-for-the-color-management-configuration-node}
 
 カラーマネジメント設定ノードのXMLテンプレートを次に示します。 このXMLテンプレートはAEM開発プロジェクトにコピーし、プロジェクトに適した設定で構成できます。
 
@@ -91,7 +91,7 @@ ht-degree: 24%
 />
 ```
 
-### デフォルトのAdobeカラープロファイルのリストを次に示します {#list-of-default-adobe-color-profiles-are-listed-below}
+### デフォルトのAdobeカラープロファイルのリストは{#list-of-default-adobe-color-profiles-are-listed-below}の下に一覧表示されます
 
 | 名前 | カラースペース | 説明 |
 | ------------------- | ---------- | ------------------------------------- |
@@ -110,7 +110,7 @@ ht-degree: 24%
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
 | JapanWebCoated | CMYK | Japan Web Coated (Ad) |
-| NewsprintSNAP2007 | CMYK | US Newsprint(SNAP 2007) |
+| 新聞印刷SNAP2007 | CMYK | US Newsprint(SNAP 2007) |
 | NTSC | RGB | NTSC(1953) |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
