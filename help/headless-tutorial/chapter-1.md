@@ -6,7 +6,7 @@ seo-description: AEMヘッドレスチュートリアルの第1章では、チ�
 translation-type: tm+mt
 source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -18,16 +18,16 @@ AEMおよびAEM WCMコアコンポーネントの最新バージョンを常に�
 
 * AEM 6.5 以降
 * AEM WCMコアコンポーネント2.4.0以降
-   * 以下の [WKND Mobile AEMアプリケーションコンテンツパッケージに含まれています](#wknd-mobile-application-packages)
+   * ](#wknd-mobile-application-packages)の下の[WKND Mobile AEMアプリケーションコンテンツパッケージに含まれます
 
-このチュートリアルを開始する前に、次のAEMインスタンスがローカルマシンに [インストールされ、実行されていることを確認してください](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)。
+このチュートリアルを開始する前に、次のAEMインスタンスがローカルマシン](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)に[インストールされ、実行されていることを確認してください。
 
-* **AEM作成者** ( **ポート4502)**
-* **ポート4503でのAEM Publish****。**
+* **AEM** Authoron **ポート4502**
+* **AEM** Publishon **ポート4503**
 
 ## WKNDモバイルアプリケーションパッケージ{#wknd-mobile-application-packages}
 
-を使用して、AEM AuthorとAEM Publishの **両方に** 、次のAEMコンテンツパッケージをインストール [!DNL AEM Package Manager]します。
+[!DNL AEM Package Manager]を使用して、**** AEM AuthorとAEM Publishの両方に、次のAEMコンテンツパッケージをインストールします。
 
 * [ui.apps:GitHub/アセット/com.adobe.aem.guides.wknd-mobile.ui.apps-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile Empty Template Type]
@@ -38,9 +38,9 @@ AEMおよびAEM WCMコアコンポーネントの最新バージョンを常に�
    * [!DNL WKND Mobile] DAMフォルダー構造
    * [!DNL WKND Mobile] 画像アセット
 
-第7 [章では、](./chapter-7.md) Android Studio [!DNL WKND Mobile] と付属のAPK(Android Application Package)を使用して [](https://developer.android.com/studio) Androidモバイルアプリを実行します。
+[第7章](./chapter-7.md)では、[Android Studio](https://developer.android.com/studio)と提供されたAPK（Androidアプリケーションパッケージ）を使用して[!DNL WKND Mobile] Androidモバイルアプリを実行します。
 
-* [[!DNL Androidモバイルアプリ：GitHub/アセット/wknd-mobile.x.x.x.apk]](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+* [[!DNL Android Mobile App: GitHub > Assets > wknd-mobile.x.x.x.apk]](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
 ## 第AEMコンテンツパッケージ
 
@@ -53,13 +53,13 @@ AEMおよびAEM WCMコアコンポーネントの最新バージョンを常に�
 
 ## ソースコード
 
-AEMプロジェクトととの両方のソースコード [!DNL Android Mobile App] は、 [[!DNL AEM Guides - WKND Mobile GitHub Project]で入手できます](https://github.com/adobe/aem-guides-wknd-mobile)。 このチュートリアルでは、ソースコードを作成または変更する必要はありません。チュートリアルのあらゆる要素を構築する方法を完全に透明にするために用意されています。
+AEMプロジェクトと[!DNL Android Mobile App]の両方のソースコードは、[[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile)で入手できます。 このチュートリアルでは、ソースコードを作成または変更する必要はありません。チュートリアルのあらゆる要素を構築する方法を完全に透明にするために用意されています。
 
-チュートリアルまたはコードに問題がある場合は、 [GitHubの問題を残してください](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
+チュートリアルまたはコードに問題がある場合は、[GitHubの問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)を残してください。
 
 ## 最後までスキップ
 
-チュートリアルの最後まで進むために、 [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) コンテンツパッケージをAEM AuthorとAEM Publishの **** 両方にインストールできます。 コンテンツと設定はAEM Authorで公開されたものとして表示されませんが、手動でのデプロイにより、必要なすべてのコンテンツと設定がAEM Publishで利用でき、コンテンツにアクセスでき [!DNL WKND Mobile App] るようになります。
+チュートリアルの最後までスキップするには、[com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージを&#x200B;**AEM AuthorとAEM Publishの両方にインストールします。**&#x200B;コンテンツと設定はAEM Authorで公開されたものとして表示されませんが、手動でのデプロイにより、必要なすべてのコンテンツと設定がAEM Publishで利用でき、[!DNL WKND Mobile App]からコンテンツにアクセスできるようになります。
 
 
 ## 次の手順
