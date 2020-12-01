@@ -26,16 +26,16 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 前提条件 {#prerequisites}
 
-Review the required tooling and instructions for setting up a [local development environment](overview.md#local-dev-environment).
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
 
-また、 [](client-side-libraries.md) クライアント側ライブラリとフロントエンドワークフローのチュートリアルを確認し、クライアント側ライブラリの基本原則とAEMプロジェクトに組み込まれた様々なフロントエンドツールについて理解することをお勧めします。
+また、[クライアント側ライブラリとフロントエンドワークフロー](client-side-libraries.md)のチュートリアルを確認し、クライアント側ライブラリの基本原則とAEMプロジェクトに組み込まれた様々なフロントエンドツールについて理解することをお勧めします。
 
 ### スタータープロジェクト
 
 チュートリアルが構築する基本行コードを調べます。
 
-1. github.com/adobe/aem-guides-wknd [リポジトリをコピーします](https://github.com/adobe/aem-guides-wknd) 。
-1. ブランチをチェックアウトし `style-system/start` ます
+1. [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)リポジトリをコピーします。
+1. `style-system/start`ブランチをチェックアウト
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
@@ -50,7 +50,7 @@ Review the required tooling and instructions for setting up a [local development
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-GitHubでの完了したコードの表示を常に行う [か](https://github.com/adobe/aem-guides-wknd/tree/style-system/solution) 、ブランチに切り替えてコードをローカルでチェックアウトすることができ `style-system/solution`ます。
+終了したコードは、[GitHub](https://github.com/adobe/aem-guides-wknd/tree/style-system/solution)に常に表示できます。また、ブランチ`style-system/solution`に切り替えて、コードをローカルでチェックアウトすることもできます。
 
 ## 目的
 
@@ -60,7 +60,7 @@ GitHubでの完了したコードの表示を常に行う [か](https://github.c
 
 ## 作成する内容 {#what-you-will-build}
 
-この章では、 [スタイルシステム機能を使用して](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) 、記事ページで使用するコンポーネントのバリエーションを作成します。 また、スタイルシステムを使用して、[ヘッダ/フッタ]や[レイアウト]コンテナなどの構造要素のバリエーションを作成します。
+この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用するコンポーネントのバリエーションを作成します。 また、スタイルシステムを使用して、[ヘッダ/フッタ]や[レイアウト]コンテナなどの構造要素のバリエーションを作成します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30386/?quality=12&learn=on)
 
@@ -70,15 +70,15 @@ GitHubでの完了したコードの表示を常に行う [か](https://github.c
 
 スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
 
-You can find [detailed documentation for Style System here](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/components/style-system.html). There is also a great [technical video for understanding the Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+[スタイルシステムに関する詳細なドキュメントは、](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html)を参照してください。 また、スタイルシステム](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための[テクニカルビデオもあります。
 
-## タイトルコンポーネントスタイル {#title-component}
+## タイトルコンポーネントスタイル{#title-component}
 
-この時点で、 [Titleコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/title.html) は、 `/apps/wknd/components/content/title` ui.apps **** モジュールの一部として、下のプロジェクトにプロキシ化されました。 見出し要素(`H1`、な `H2`ど)のデフォルトのスタイルは、下のフ `H3`ァイルのui.frontend **モジュールに既に実装されてい**`_elements.scss``ui.frontend/src/main/webpack/base/sass/_elements.scss`ます。
+この時点で、[タイトルコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/title.html)が&#x200B;**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/content/title`の下のプロジェクトにプロキシ化されました。 見出し要素(`H1`、`H2`、`H3`...)のデフォルトのスタイルは、`ui.frontend/src/main/webpack/base/sass/_elements.scss`の下の`_elements.scss`ファイルの&#x200B;**ui.frontend**&#x200B;モジュールに既に実装されています。
 
 ### 下線のスタイル
 
-The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contain a unique style for the Title component with an underline. 2つのコンポーネントを作成したり、コンポーネントダイアログを変更する代わりに、スタイルシステムを使用して、下線スタイルを追加するオプションを作成できます。
+[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、タイトルコンポーネントに対して一意のスタイルが含まれ、下線が引かれています。 2つのコンポーネントを作成したり、コンポーネントダイアログを変更する代わりに、スタイルシステムを使用して、下線スタイルを追加するオプションを作成できます。
 
 ![下線スタイル — タイトルコンポーネント](assets/style-system/title-underline-style.png)
 
@@ -86,13 +86,13 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
 
 フロントエンド開発者として、コアコンポーネントのスタイル設定を行う最初の手順は、コンポーネントによって生成されるマークアップを理解することです。
 
-生成されたプロジェクトの一部として、アーキタイプの埋め込み **コアコンポーネントの例** (Core Component Examples)プロジェクトが含まれます。 開発者やコンテンツ作成者にとっては、コアコンポーネントで使用可能なすべての機能を理解しやすいリファレンスが含まれています。 ライブバージョンも [利用できます](https://opensource.adobe.com/aem-core-wcm-components/library.html)。
+生成されたプロジェクトの一部として、アーキタイプは、**コアコンポーネントの例**&#x200B;プロジェクトを埋め込みました。 開発者やコンテンツ作成者にとっては、コアコンポーネントで使用可能なすべての機能を理解しやすいリファレンスが含まれています。 ライブバージョンも[利用可能な](https://opensource.adobe.com/aem-core-wcm-components/library.html)です。
 
 1. 新しいブラウザーを開き、タイトルコンポーネントを表示します。
 
-   ローカルAEMインスタンス： [http://localhost:4502/editor.html/content/core-components-examples/library/title.html](http://localhost:4502/editor.html/content/core-components-examples/library/title.html)
+   ローカルAEMインスタンス：[http://localhost:4502/editor.html/content/core-components-examples/library/title.html](http://localhost:4502/editor.html/content/core-components-examples/library/title.html)
 
-   ライブの例： [https://opensource.adobe.com/aem-core-wcm-components/library/title.html](https://opensource.adobe.com/aem-core-wcm-components/library/title.html)
+   ライブの例：[https://opensource.adobe.com/aem-core-wcm-components/library/title.html](https://opensource.adobe.com/aem-core-wcm-components/library/title.html)
 
 1. 次に、Titleコンポーネントのマークアップを示します。
 
@@ -121,9 +121,9 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
 
 ### 下線スタイルの実装 — ui.frontend
 
-次に、プロジェクトの **ui.frontend** モジュールを使用してUnderlineスタイルを実装します。 AEMのローカルインスタンスに展開する **前に、** ui.frontend *モジュールにバンドルされているWebPack開発サーバーを使用してスタイルをプレビューします* 。
+次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用してUnderlineスタイルを実装します。 **ui.frontend**&#x200B;モジュールに組み込まれているWebPack開発サーバーを使用して、*導入前のスタイル*&#x200B;をAEMのローカルインスタンスにプレビューします。
 
-1. 次のコマンドを **ui.frontend** モジュールから実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -133,7 +133,7 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
    > webpack-dev-server --open --config ./webpack.dev.js
    ```
 
-   これにより、ブラウザー(http://localhost:8080)が開き [ます](http://localhost:8080)。
+   これにより、[http://localhost:8080](http://localhost:8080)でブラウザが開きます。
 
    >[!NOTE]
    >
@@ -141,8 +141,8 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
 
    ![Webpack開発サーバー](assets/style-system/static-webpack-server.png)
 
-1. Eclipseまたは選択したIDEで、次の場所にあるファイル `index.html` を開きます。 `ui.frontend/src/main/webpack/static/index.html`. これは、WebPack開発サーバーで使用される静的マークアップです。
-1. で、ドキュメントで `index.html` cmp-titleを検索して、下線スタイルを追加するTitleコンポーネントのインスタンスを *探します*。 「壁のスケートパークから離れたバン」 *というテキスト(218行目* )を持つタイトルコンポーネントを選択します。 周囲追加のdivのクラス： `cmp-title--underline`
+1. Eclipseまたは任意のIDEで、次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`. これは、WebPack開発サーバーで使用される静的マークアップです。
+1. `index.html`で、*cmp-title*&#x200B;をドキュメントで検索して、下線のスタイルを追加するTitleコンポーネントのインスタンスを探します。 「タイトル」コンポーネントを選択し、「壁のスケートパークから離れたバン」*（行218）というテキストを入力します。*&#x200B;周囲追加のdivに対するクラス`cmp-title--underline`:
 
    ```html
     <!-- before -->
@@ -163,7 +163,7 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
    ```
 
 1. ブラウザに戻り、追加のクラスがマークアップに反映されていることを確認します。
-1. ui.frontend **モジュールに戻り、次の場所に**`title.scss` あるファイルを更新します。 `ui.frontend/src/main/webpack/components/content/title/scss/title.scss`:
+1. **ui.frontend**&#x200B;モジュールに戻り、次の場所にあるファイル`title.scss`を更新します。`ui.frontend/src/main/webpack/components/content/title/scss/title.scss`:
 
    ```css
    /* Add Title Underline Style */
@@ -188,7 +188,7 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
    >
    >ベストプラクティスとしては、スタイルをターゲットコンポーネントで使用する範囲に収めることが推奨されます。これにより、ページの他の領域が余分なスタイルの影響を受けることを回避できます。
    >
-   >All Core Components adhere to **[BEM notation](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. ベストプラクティスとしては、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定することが推奨されます。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
+   >すべてのコアコンポーネントは、**[BEM表記](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**&#x200B;に従います。 ベストプラクティスとしては、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定することが推奨されます。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
 
 1. もう一度ブラウザに戻ると、下線スタイルが追加されます。
 
@@ -207,9 +207,9 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigate to the **Article Page Template** located at: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. **構造** コンテナのメイン **レイアウトモードで**、「Title Allowed Components」の下に表示されている「 **Title Components」の横にある「** Policy ******」アイコンを選択します。
+1. **構造**&#x200B;モードのメイン&#x200B;**レイアウトコンテナ**&#x200B;で、*許可されているコンポーネント*&#x200B;の下に表示されている&#x200B;**タイトル**&#x200B;コンポーネントの横の&#x200B;**ポリシー**&#x200B;アイコンを選択します。
 
    ![タイトルポリシーの構成](assets/style-system/article-template-title-policy-icon.png)
 
@@ -217,42 +217,42 @@ The [WKND Article designs](assets/pages-templates/wknd-article-design.xd) contai
 
    *ポリシータイトル**: **WKNDタイトル**
 
-   *プロパティ* /「 *スタイル」タブ**/追加新しいスタイル*
+   *プロパティ* / *スタイルタブ*  */追加新しいスタイル*
 
-   **下線** : `cmp-title--underline`
+   **下線** :  `cmp-title--underline`
 
    ![タイトルのスタイルポリシー設定](assets/style-system/title-style-policy.gif)
 
-   「 **完了** 」をクリックして、Titleポリシーの変更を保存します。
+   「**完了**」をクリックして、タイトルポリシーの変更を保存します。
 
    >[!NOTE]
    >
-   > この値は、 `cmp-title--underline` ui.frontend **** モジュールで開発する際に、先ほどターゲットにしたCSSクラスと一致します。
+   > 値`cmp-title--underline`は、**ui.frontend**&#x200B;モジュールで開発する際に、先ほどターゲットにしたCSSクラスと一致します。
 
 ### 下線のスタイルを適用する
 
 最後に、作成者は、特定のタイトルコンポーネントに下線のスタイルを適用することを選択できます。
 
-1. AEM Sites編集者の **La Skateparks** 記事（以下）に移動します。 [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. 編集 **モードで** 、「タイトル」コンポーネントを選択します。 ブラシ **アイコンをクリックし** 、 **下線** スタイルを選択します。
+1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. **編集**&#x200B;モードで、タイトルコンポーネントを選択します。 **paintbrush**&#x200B;アイコンをクリックし、**下線**&#x200B;スタイルを選択します。
 
    ![下線のスタイルを適用する](assets/style-system/apply-underline-style-title.png)
 
    作成者は、スタイルのオン/オフを切り替えることができます。
 
-1. ページ情報 **アイコン** / **** 表示を発行済みとしてクリックし、AEMエディタの外部でページを調べます。
+1. **ページ情報**&#x200B;アイコン/**発行済みの表示**&#x200B;をクリックして、AEMエディターの外部のページを検査します。
 
    ![公開済みとして表示](assets/style-system/view-as-published.png)
 
-   ブラウザー開発者ツールを使用して、Titleコンポーネントの周りのマークアップに外側のdivにCSSクラスが `cmp-title--underline` 適用されていることを確認します。
+   ブラウザー開発者ツールを使用して、Titleコンポーネントの周りのマークアップに、外側のdivに適用されたCSSクラス`cmp-title--underline`があることを確認します。
 
-## テキストコンポーネントスタイル {#text-component}
+## テキストコンポーネントスタイル{#text-component}
 
-次に、同様の手順を繰り返して、 [テキストコンポーネントに独自のスタイルを適用します](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)。 テキストコンポーネントは、 `/apps/wknd/components/content/text` ui.apps **** モジュールの一部として、下のプロジェクトにプロキシされました。 段落要素のデフォルトスタイルは、の **ファイル内の** ui.frontend `_elements.scss` モジュールに既に実装されてい `ui.frontend/src/main/webpack/base/sass/_elements.scss`ます。
+次に、同様の手順を繰り返して、[テキストコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)に一意のスタイルを適用します。 テキストコンポーネントは、**ui.apps**&#x200B;モジュールの一部として、`/apps/wknd/components/content/text`下のプロジェクトにプロキシされました。 段落要素のデフォルトのスタイルは、`ui.frontend/src/main/webpack/base/sass/_elements.scss`の下の`_elements.scss`ファイルの&#x200B;**ui.frontend**&#x200B;モジュールに既に実装されています。
 
 ### 引用ブロックのスタイル
 
-WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には、引用符ブロックを含むテキストコンポーネントに固有のスタイルが含まれます。
+[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、引用符ブロックを含むテキストコンポーネントの一意のスタイルが含まれています。
 
 ![引用ブロックスタイル — 文字コンポーネント](assets/style-system/quote-block-style.png)
 
@@ -260,9 +260,10 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
 
 もう一度、Textコンポーネントのマークアップを調べます。
 
-1. 新しいブラウザーを開き、テキストコンポーネントをコアコンポーネントライブラリの一部として表示します。ローカルAEMインスタンス： [http://localhost:4502/editor.html/content/core-components-examples/library/text.html](http://localhost:4502/editor.html/content/core-components-examples/library/text.html)
+1. 新しいブラウザーを開き、テキストコンポーネントをコアコンポーネントライブラリの一部として表示します。
+ローカルAEMインスタンス：[http://localhost:4502/editor.html/content/core-components-examples/library/text.html](http://localhost:4502/editor.html/content/core-components-examples/library/text.html)
 
-   ライブの例： [https://opensource.adobe.com/aem-core-wcm-components/library/text.html](https://opensource.adobe.com/aem-core-wcm-components/library/text.html)
+   ライブの例：[https://opensource.adobe.com/aem-core-wcm-components/library/text.html](https://opensource.adobe.com/aem-core-wcm-components/library/text.html)
 
 1. 次に、Textコンポーネントのマークアップを示します。
 
@@ -295,9 +296,9 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
 
 ### Quote Blockスタイルの実装 — ui.frontend
 
-次に、プロジェクトの **ui.frontend** モジュールを使用して、Quote Blockスタイルを実装します。
+次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用して、Quote Blockスタイルを実装します。
 
-1. 次のコマンドを **ui.frontend** モジュールから実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -307,8 +308,8 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    > webpack-dev-server --open --config ./webpack.dev.js
    ```
 
-1. Eclipseまたは選択したIDEで、次の場所にあるファイル `index.html` を開きます。 `ui.frontend/src/main/webpack/static/index.html`. これは、WebPack開発サーバーで使用される静的マークアップです。
-1. で、テキスト「Jacob Wester」 `index.html` （210行目）を検索して、テキストコンポーネントのインスタンス ** を検索します。 周囲追加のdivのクラス： `cmp-text--quote`
+1. Eclipseまたは任意のIDEで、次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`. これは、WebPack開発サーバーで使用される静的マークアップです。
+1. `index.html`で、テキスト&#x200B;*&quot;Jacob Wester&quot;*&#x200B;を検索して、テキストコンポーネントのインスタンスを探します（210行目）。 周囲追加のdivに対するクラス`cmp-text--quote`:
 
    ```html
     <!-- before -->
@@ -331,7 +332,7 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    ```
 
 1. ブラウザに戻り、追加のクラスがマークアップに反映されていることを確認します。
-1. ui.frontend **モジュールに戻り、次の場所に**`text.scss` あるファイルを更新します。 `ui.frontend/src/main/webpack/components/content/text/scss/text.scss`:
+1. **ui.frontend**&#x200B;モジュールに戻り、次の場所にあるファイル`text.scss`を更新します。`ui.frontend/src/main/webpack/components/content/text/scss/text.scss`:
 
    ```css
    /* WKND Text Quote style */
@@ -390,9 +391,9 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigate to the **Article Page Template** located at: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. **構造** コンテナのメイン **レイアウトモードで**、「Allowed Text」コンポーネントの下に表示される「Allowed Text」コンポーネントの横にある「 **Policy********」アイコンを選択します。
+1. **構造**&#x200B;モードのメイン&#x200B;**レイアウトコンテナ**&#x200B;で、*許可されているコンポーネント*&#x200B;の下に表示されている&#x200B;**テキスト**&#x200B;コンポーネントの横の&#x200B;**ポリシー**&#x200B;アイコンを選択します。
 
    ![テキストポリシーの構成](assets/style-system/article-template-text-policy-icon.png)
 
@@ -402,24 +403,24 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
 
    *プラグイン* / *段落スタイル* /段落スタイルを *有効にする*
 
-   *「スタイル」タブ* /新しいスタイル *を選択します。*
+   *[スタイル]タブ* > *新しいスタイル*
 
-   **引用ブロック** : `cmp-text--quote`
+   **引用ブロック** :  `cmp-text--quote`
 
    ![テキストコンポーネントポリシー](assets/style-system/text-policy-enable-paragraphstyles.png)
 
    ![テキストコンポーネントポリシー2](assets/style-system/text-policy-enable-quotestyle.png)
 
-   「 **完了** 」をクリックして、変更をテキストポリシーに保存します。
+   「**完了**」をクリックして、変更をテキストポリシーに保存します。
 
 ### 見積もりブロックスタイルの適用
 
-1. AEM Sites編集者の **La Skateparks** 記事（以下）に移動します。 [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. 編集 **モードで** 、テキストコンポーネントを選択します。 コンポーネントを編集して、引用要素を含めます。
+1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. **編集**&#x200B;モードで、テキストコンポーネントを選択します。 コンポーネントを編集して、引用要素を含めます。
 
    ![テキストコンポーネントの設定](assets/style-system/configure-text-component.png)
 
-1. テキストコンポーネントを選択し、 **paintbrush** アイコンをクリックして、「 **引用ブロック** 」スタイルを選択します。
+1. テキストコンポーネントを選択し、**paintbrush**&#x200B;アイコンをクリックし、**ブロックを引用**&#x200B;スタイルを選択します。
 
    ![見積もりブロックスタイルの適用](assets/style-system/quote-block-style-applied.png)
 
@@ -429,25 +430,25 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
 
 レイアウトコンテナは、記事ページテンプレートの基本構造を作成し、コンテンツ作成者がページにコンテンツを追加するためのドロップゾーンを提供するために使用されています。 レイアウトコンテナはスタイルシステムも活用でき、コンテンツ作成者はレイアウトのデザインに関するより多くのオプションを利用できます。
 
-現在、ページ全体に対して、固定幅を適用するCSSルールが適用されています。 代わりに、コンテンツ作成者がオン/オフを切り替えることができる **固定幅** スタイルを作成する、より柔軟な方法があります。
+現在、ページ全体に対して、固定幅を適用するCSSルールが適用されています。 代わりに、より柔軟なアプローチは、コンテンツ作成者がオン/オフを切り替える&#x200B;**固定幅**&#x200B;スタイルを作成することです。
 
 ### 固定幅スタイルの実装 — ui.frontend
 
-プロジェクトの **ui.frontend** モジュールに固定幅スタイルを実装する開始を示します。
+プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールに固定幅スタイルを実装する開始があります。
 
-1. 次のコマンドを **ui.frontend** モジュールから実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
    $ npm start
    ```
 
-1. Open the file `index.html` located at: `ui.frontend/src/main/webpack/static/index.html`.
-1. 記事ページテンプレートの本文の幅を固定し、「ヘッダー」と「フッター」は自由にして、幅を広くしたいと考えています。 したがって、2番目の `<div class='responsivegrid aem-GridColumn aem-GridColumn--default--12'` (レイアウトコンテナ)を2つのエクスペリエンスフラグメントの間にターゲットしたいと思います（136行目）
+1. 次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`.
+1. 記事ページテンプレートの本文の幅を固定し、「ヘッダー」と「フッター」は自由にして、幅を広くしたいと考えています。 したがって、2番目の`<div class='responsivegrid aem-GridColumn aem-GridColumn--default--12'` (レイアウトコンテナ)を2つのエクスペリエンスフラグメントの間にターゲットしたいと思います（136行目）
 
    ![メインボディレイアウトコンテナのDiv](assets/style-system/main-body-layoutContainer.png)
 
-1. 前の追加手順で特定したのクラス。 `cmp-layout-container--fixed``div`
+1. 前の追加手順で識別した`div`のクラス`cmp-layout-container--fixed`。
 
    ```html
    <!-- Experience Fragment Header -->
@@ -464,7 +465,7 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    </div>
    ```
 
-1. 次の場所にあるファイル `container.scss` を更新します。 `ui.frontend/src/main/webpack/components/content/container/scss/container.scss`:
+1. 次の場所にあるファイル`container.scss`を更新します。`ui.frontend/src/main/webpack/components/content/container/scss/container.scss`:
 
    ```css
    /* WKND Layout Container - Fixed Width */
@@ -481,7 +482,7 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    }
    ```
 
-1. 次の場所にあるファイル `_elements.scss` を更新します。 `ui.frontend/src/main/webpack/base/sass/_elements.scss` ルールを変更して、新しい最大幅を変数に設定し `.root``$max-body-width`ます。
+1. 次の場所にあるファイル`_elements.scss`を更新します。`ui.frontend/src/main/webpack/base/sass/_elements.scss`を変更し、`.root`ルールを変更して、新しい最大幅を変数`$max-body-width`に設定します。
 
    ```css
     /* Before */
@@ -511,7 +512,7 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
 
    >[!NOTE]
    >
-   > 変数と値の完全なリストは、次を参照してください。 `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
+   > 変数と値の完全なリストは、次を参照してください。`ui.frontend/src/main/webpack/base/sass/_variables.scss`.
 
 1. ブラウザーに戻ると、ページのメインコンテンツは同じように表示されますが、ヘッダーとフッターは幅が広くなります。 これは期待されることです。
 
@@ -528,44 +529,44 @@ WKND [記事デザイン](assets/pages-templates/wknd-article-design.xd) には�
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigate to the **Article Page Template** located at: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. **構造** モードで、メインの **レイアウトコンテナ** （「エクスペリエンスフラグメントヘッダー」と「フッター」の間）を選択し、 **** ポリシーアイコンを選択します。
+1. **構造**&#x200B;モードで、メインの&#x200B;**レイアウトコンテナ**（エクスペリエンスフラグメントヘッダーとフッターの間）を選択し、**ポリシー**&#x200B;アイコンを選択します。
 
    ![メインボディのレイアウトコンテナポリシーの設定](assets/style-system/layout-container-article-template-policy-icon.png)
 
-1. 「 **WKNDサイトの既定の** 」ポリシーを更新し、「 **固定幅**`cmp-layout-container--fixed`」に次の値を持つ追加のスタイルを含めます。
+1. **WKNDサイトの既定**&#x200B;ポリシーを更新し、**固定幅**&#x200B;の追加のスタイルを`cmp-layout-container--fixed`に含めます。
 
-   ![WKNDサイトの既定のポリシーの更新 ](assets/style-system/wknd-site-default-policy-update-fixed-width.png)
+   ![WKNDサイトの既定のポリシーの更新  ](assets/style-system/wknd-site-default-policy-update-fixed-width.png)
 
    変更を保存し、記事ページテンプレートページを更新します。
 
-1. メインの **レイアウトコンテナ** （エクスペリエンスフラグメントヘッダーとフッターの間）を再度選択します。 今回は **ペイントブラシ** アイコンが表示され、「スタイル」ドロップダウンから「 **固定幅** 」を選択できます。
+1. メインの&#x200B;**レイアウトコンテナ**&#x200B;を再度選択します（エクスペリエンスフラグメントヘッダーとフッターの間）。 今回は&#x200B;**ペイントブラシ**&#x200B;アイコンが表示され、「スタイル」ドロップダウンから「**固定幅**」を選択できます。
 
    ![固定幅レイアウトコンテナの適用](assets/style-system/apply-fixed-width-layout-container.png)
 
    スタイルのオン/オフを切り替えることができます。
 
-1. AEM Sites編集者の **La Skateparks** 記事（以下）に移動します。 [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 固定幅のコンテナが実行されていることが確認できます。
+1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 固定幅のコンテナが実行されていることが確認できます。
 
-## Header/Footer - Experience Fragment {#experience-fragment}
+## ヘッダー/フッター — エクスペリエンスフラグメント{#experience-fragment}
 
 次に、ヘッダーとフッターにスタイルを追加して、記事ページテンプレートを完成させます。 ヘッダーとフッターの両方が、コンテナ内のコンポーネントをグループ化したエクスペリエンスフラグメントとして実装されました。 スタイルシステムを持つ他のコアコンポーネントコンポーネントと同様に、エクスペリエンスフラグメントコンポーネントに固有のCSSクラスを適用できます。
 
 ### ヘッダースタイルの実装 — ui.frontend
 
-Headerコンポーネント内のコンポーネントは、AdobeXDのデザインと同じスタイルに既に設定されています [](assets/pages-templates/wknd-article-design.xd)。レイアウトの変更が少しだけ必要です。
+Headerコンポーネント内のコンポーネントは、[AdobeXDデザイン](assets/pages-templates/wknd-article-design.xd)に合わせて既にスタイル設定されています。少しだけレイアウトの変更が必要です。
 
-1. 次のコマンドを **ui.frontend** モジュールから実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
    $ npm start
    ```
 
-1. Open the file `index.html` located at: `ui.frontend/src/main/webpack/static/index.html`.
-1. Experience Fragmentコンポーネントの **最初のインスタンスを探すには、** class=&quot;experiencefragment ** （48行目）を検索します。
-1. 前の追加手順で特定したのクラス。 `cmp-experiencefragment--header``div`
+1. 次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`.
+1. *class=&quot;experiencefragment*&#x200B;を検索して、エクスペリエンスフラグメントコンポーネントの最初の&#x200B;**インスタンスを探します（48行目）。**
+1. 前の追加手順で識別した`div`のクラス`cmp-experiencefragment--header`。
 
    ```html
        ...
@@ -577,7 +578,7 @@ Headerコンポーネント内のコンポーネントは、AdobeXDのデザイ�
                ...
    ```
 
-1. Open the file `experiencefragment.scss` located at: `ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. ファイルに次のスタイルを追加します。
+1. 次の場所にあるファイル`experiencefragment.scss`を開きます。`ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. ファイルに次のスタイルを追加します。
 
    ```css
    /* Header Style */
@@ -620,20 +621,20 @@ Headerコンポーネント内のコンポーネントは、AdobeXDのデザイ�
 
 ### フッタースタイルの実装 — ui.frontend
 
-AdobeXDデザインのフッターには [](assets/pages-templates/wknd-article-design.xd) 、明るいテキストを含む黒の背景が含まれます。 これを反映するには、エクスペリエンスフラグメントフッター内のコンテンツのスタイルを設定する必要があります。
+[AdobeXDデザイン](assets/pages-templates/wknd-article-design.xd)のフッターには、明るいテキストを含む黒の背景が含まれます。 これを反映するには、エクスペリエンスフラグメントフッター内のコンテンツのスタイルを設定する必要があります。
 
-1. Open the file `index.html` located at: `ui.frontend/src/main/webpack/static/index.html`.
+1. 次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`.
 
-1. 「 **class=&quot;experiencefragment** （385行目）」を検索して、エクスペリエンスフラグメントコンポーネントの ** 2番目のインスタンスを探します。
+1. *class=&quot;experiencefragment*&#x200B;を検索して、エクスペリエンスフラグメントコンポーネントの2番目の&#x200B;**インスタンスを探します（385行目）。**
 
-1. 前の追加手順で特定したのクラス。 `cmp-experiencefragment--footer``div`
+1. 前の追加手順で識別した`div`のクラス`cmp-experiencefragment--footer`。
 
    ```html
    <!-- add cmp-experiencefragment--footer -->
    <div class="experiencefragment cmp-experiencefragment--footer aem-GridColumn aem-GridColumn--default--12">
    ```
 
-1. 次の場所にあるファイルを再び開 `experiencefragment.scss` きます。 `ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. **ファイルに次のスタイルを追加します** 。
+1. 次の場所にあるファイル`experiencefragment.scss`を再度開きます。`ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. **ファイルに次のスタイルを** 追加します。
 
    ```css
    /* Footer Style */
@@ -703,13 +704,13 @@ AdobeXDデザインのフッターには [](assets/pages-templates/wknd-article-
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigate to the **Article Page Template** located at: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. 「 **構造** 」モードで、「ヘッダー **エクスペリエンスフラグメント**」を選択し、「 **ポリシー** 」アイコンを選択します。
+1. **構造**&#x200B;モードで、「ヘッダー&#x200B;**エクスペリエンスフラグメント**」を選択し、**ポリシー**&#x200B;アイコンを選択します。
 
    ![エクスペリエンスフラグメントポリシーの設定](assets/style-system/experience-fragment-click-policy.png)
 
-1. **WKNDサイトエクスペリエンスフラグメントの更新 — ヘッダー** ポリシーを更新し、次の値を持つ **デフォルトのCSSクラス**`cmp-experiencefragment--header`を追加します。
+1. **WKNDサイトエクスペリエンスフラグメント — ヘッダー**&#x200B;ポリシーを更新し、**デフォルトのCSSクラス**&#x200B;を`cmp-experiencefragment--header`の値で追加します。
 
    ![WKNDサイトエクスペリエンスフラグメント — ヘッダーの更新](assets/style-system/experience-fragment-header-policy-configure.png)
 
@@ -719,9 +720,9 @@ AdobeXDデザインのフッターには [](assets/pages-templates/wknd-article-
    >
    > テンプレート以外のヘッダースタイルを切り替える必要はないので、単純にデフォルトのCSSスタイルとして設定できます。
 
-1. 次に、フッター **エクスペリエンスフラグメントを選択し** 、 **ポリシー** アイコンをクリックして、ポリシー設定を開きます。
+1. 次に、フッター&#x200B;**エクスペリエンスフラグメント**&#x200B;を選択し、**ポリシー**&#x200B;アイコンをクリックして、ポリシー設定を開きます。
 
-1. **WKNDサイトエクスペリエンスフラグメントの更新 — フッター** ポリシーを更新し、次の値を持つ **デフォルトのCSSクラス**`cmp-experiencefragment--footer`を追加します。
+1. **WKNDサイトエクスペリエンスフラグメント — フッター**&#x200B;ポリシーを更新し、**デフォルトのCSSクラス**&#x200B;を`cmp-experiencefragment--footer`の値で追加します。
 
    ![WKNDサイトエクスペリエンスフラグメント — フッターの更新](assets/style-system/experience-fragment-footer-policy-configure.png)
 
@@ -729,7 +730,7 @@ AdobeXDデザインのフッターには [](assets/pages-templates/wknd-article-
 
    ![WKND記事テンプレート — 最終スタイル](assets/style-system/final-header-footer-applied.png)
 
-1. AEM Sites編集者の **La Skateparks** 記事（以下）に移動します。 [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 更新されたヘッダーとフッターが適用されていることが確認できます。
+1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 更新されたヘッダーとフッターが適用されていることが確認できます。
 
 ## レビュー {#review}
 
@@ -743,9 +744,9 @@ AdobeXDデザインのフッターには [](assets/pages-templates/wknd-article-
 
 ### 次の手順 {#next-steps}
 
-ダイアログで作成されたコンテンツを表示する [カスタムAEMコンポーネントをエンドツーエンドで作成する手順を説明します。また](custom-component.md) 、Slingモデルの開発により、コンポーネントのHTLを埋め込むビジネスロジックをカプセル化します。
+ダイアログで作成されたコンテンツを表示する[カスタムAEMコンポーネント](custom-component.md)をエンドツーエンドで作成する手順を説明します。また、Slingモデルの開発で、コンポーネントのHTLを埋め込むビジネスロジックをカプセル化します。
 
-GitHubに完了したコードを表示する [か](https://github.com/adobe/aem-guides-wknd) 、コードをローカルのGitブラッチに確認してデプロイ `style-system/solution`します。
+[GitHub](https://github.com/adobe/aem-guides-wknd)上の完了したコードを表示するか、Gitブラック`style-system/solution`上のローカルにコードを確認して展開します。
 
-1. github.com/adobe/aem-wknd-guides [リポジトリをコピーします](https://github.com/adobe/aem-guides-wknd) 。
-1. ブランチをチェックアウトし `style-system/solution` ます。
+1. [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)リポジトリをコピーします。
+1. `style-system/solution`ブランチを調べます。
