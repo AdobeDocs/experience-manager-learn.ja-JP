@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Formsデザイナーを使用したレイアウトの作成 {#create-layout-using-forms-designer}
+# Formsデザイナを使用したレイアウトの作成{#create-layout-using-forms-designer}
 
 ここでは、AEM Formsデザイナを使用して作成したレイアウトファイルを見てみましょう。
 
