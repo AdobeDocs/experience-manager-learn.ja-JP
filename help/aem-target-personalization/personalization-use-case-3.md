@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Visual Experience Composerを使用したパーソナライゼーション
 
-この章では、ターゲット内からWebページのレイアウトとコンテンツをドラッグ&amp;ドロップ、入れ替え **、変更することにより、** Visual Experience Composerを使用したエクスペリエンスの作成について説明します。
+この章では、ターゲット内からWebページのレイアウトとコンテンツをドラッグ&amp;ドロップ、入れ替え、変更することで、**Visual Experience Composer**&#x200B;を使用したエクスペリエンスの作成について説明します。
 
 ## シナリオの概要
 
@@ -34,31 +34,31 @@ WKNDサイトのホームページは、市内のアクティビティ、また�
 ### 前提条件
 
 * **AEM**
-   * [AEM 4503で実行される発行インスタンス](./implementation.md#getting-aem)
+   * [AEM 4503での発行](./implementation.md#getting-aem) インスタンス
    * [ADOBE EXPERIENCE PLATFORM LAUNCHを使ってAdobe Targetと統合されたAEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 組織へのアクセス：Adobe Experience Cloud- <https://>`<yourcompany>`.experiencecloud.adobe.com
-   * [Adobe Targetで準備されたExperience Cloud](https://experiencecloud.adobe.com)
+   * [Adobe Target](https://experiencecloud.adobe.com)でプロビジョニングされたExperience Cloud
 
 ## マーケティング担当者のアクティビティ
 
 1. マーケターはAdobe Target内にA/Bターゲットアクティビティを作成します。
-   1. Adobe Target・ウィンドウから「 **アクティビティ** 」タブに移動します。
-   2. 「 **アクティビティを作成** 」ボタンをクリックし、アクティビティタイプを **A/Bテストとして選択します**
+   1. Adobe Targetのウィンドウで、**アクティビティ**&#x200B;タブに移動します。
+   2. 「**アクティビティを作成**」ボタンをクリックし、アクティビティの種類を「**A/Bテスト**」に選択します
 
       ![Adobe Target-アクティビティの作成](assets/personalization-use-case-2/create-ab-activity.png)
-   3. 「 **Web** 」チャネルを選択し、「 **Visual Experience Composer**」を選択します。
-   4. **アクティビティURLを入力し** 、「 **次へ** 」をクリックしてVisual Experience Composerを開きます。
+   3. 「**Web**」チャネルを選択し、「**Visual Experience Composer**」を選択します。
+   4. **アクティビティURL**&#x200B;を入力し、「**次へ**」をクリックしてVisual Experience Composerを開きます。
       ![Adobe Target-アクティビティの作成](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. **Visual Experience Composerを読み込むには、ブラウザーで「安全でないスクリプトの読み込みを** 許可 **** 」を有効にし、ページを再読み込みします。
+   5. **Visual Experience Composer**&#x200B;を読み込むには、ブラウザーで「安全でないスクリプトを読み込むことを許可&#x200B;**」を有効にし、ページを再読み込みします。**
       ![エクスペリエンスのターゲット設定アクティビティ](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Visual Experience ComposerエディターでWKNDサイトホームページが開きます。
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. **エクスペリエンスA** はデフォルトのWKNDホームページを提供します。エクスペリエンスB ****のコンテンツレイアウトを編集します。
+   7. **エクスペリエンス** AはデフォルトのWKNDホームページです。エクスペリエンスBのコンテンツレイアウトを編集し **ます**。
       ![エクスペリエンス B](assets/personalization-use-case-3/use-case3-experience-b.png)
-   8. カードレイアウトコンテナの1つ(「*Best Roasters*」)をクリックし、「 **Reargand** 」オプションを選択します。
+   8. カードレイアウトコンテナの1つ(*Best Roasters*)をクリックし、「**Rearrange**」オプションを選択します。
       ![コンテナの選択](assets/personalization-use-case-3/container-selection.png)
-   9. 整列するコンテナをクリックし、目的の位置にドラッグ&amp;ドロップします。 1行目の1列目から1行目の3列目まで、 *最良のばいせん* コンテナを並べ替えます。 「 *ベスト・ロースター* 」コンテナは、「 *フォトグラフィー展示会* 」コンテナの隣にあります。
+   9. 整列するコンテナをクリックし、目的の位置にドラッグ&amp;ドロップします。 *最良のばいせん業者*&#x200B;のコンテナを、1行目の1列目から1行目の3列目に並べ替えます。 *Best Roasters*&#x200B;コンテナは、*フォトグラフィー展覧会*コンテナの隣に置かれる。
       ![コンテナの入れ替え](assets/personalization-use-case-3/container-swap.png)
 
       **スワップ後**
@@ -66,7 +66,7 @@ WKNDサイトのホームページは、市内のアクティビティ、また�
    10. 同様に、他のカードコンテナの位置を並べ替えます。
       ![コンテナの入れ替え](assets/personalization-use-case-3/after-swap-all.png)
    11. また、カルーセルコンポーネントの下、およびカードレイアウトの上にヘッダーテキストを追加します。
-   12. カルーセルコンテナをクリックし、「 **後に挿入」/「HTML** 」オプションを選択してHTMLを追加します。
+   12. カルーセルコンテナをクリックし、HTMLを追加するには、**後に挿入/HTML**オプションを選択します。
       ![テキストを追加](assets/personalization-use-case-3/add-text.png)
 
       ```html
@@ -74,14 +74,14 @@ WKNDサイトのホームページは、市内のアクティビティ、また�
       ```
 
       ![テキストを追加](assets/personalization-use-case-3/after-changes.png)
-   13. 「 **次へ** 」をクリックしてアクティビティに進みます。
-   14. 「 **トラフィック配分方法** 」を手動で選択し、100%のトラフィックを **エクスペリエンスBに割り当てます**。
+   13. 「**次へ**」をクリックして、アクティビティを続行します。
+   14. **トラフィック配分方法**&#x200B;を手動で選択し、100%のトラフィックを&#x200B;**エクスペリエンスB**に割り当てます。
       ![エクスペリエンスBトラフィック](assets/personalization-use-case-2/traffic.png)
    15. 「**次へ**」をクリックします。
-   16. アクティビティの **目標指標を指定し** 、A/Bテストを保存して閉じます。
+   16. アクティビティに&#x200B;**目標指標**を指定し、A/Bテストを保存して閉じます。
       ![A/Bテスト目標指標](assets/personalization-use-case-2/goal-metric.png)
    17. アクティビティの名前(**WKNDホームページ更新**)を指定し、変更を保存します。
-   18. アクティビティの詳細画面で、「アクティビティを **アクティブ化** 」を確認します。
+   18. アクティビティの詳細画面で、**アクティビティを**アクティブにします。
       ![アクティビティのアクティブ化](assets/personalization-use-case-3/save-activity.png)
    19. WKNDホームページ(http://localhost:4503/content/wknd/en.html)に移動すると、WKNDホームページの更新A/Bテストアクティビティに追加した変更が表示されます。
       ![WKNDホームページが更新されました](assets/personalization-use-case-3/activity-result.png)
