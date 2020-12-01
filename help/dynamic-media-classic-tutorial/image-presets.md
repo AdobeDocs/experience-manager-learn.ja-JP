@@ -38,8 +38,8 @@ Dynamic Media Classicのお客様のURLを確認すると、おそらく使用�
 >
 >サイト上の固有の画像サイズごとに1つの画像プリセットを作成します。 例えば、商品詳細ページに350 X 350の画像、ブラウズ/検索ページに120 X 120の画像、クロス販売/特集アイテムに90 X 90の画像が必要な場合、500画像か500,000画像かにかかわらず、3つの画像プリセットが必要です。
 
-- 詳しくは、 [画像プリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
-- 画像プリセットを [作成する方法を説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- [画像プリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)についての詳細。
+- [画像プリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)の作成方法を説明します。
 
 ## 画像プリセットとシャープの適用
 
@@ -61,12 +61,12 @@ Dynamic Media Classicにアップロードする高解像度画像をズーム�
 
 Dynamic Media Classicでは、次の3種類のシャープを適用できます。シンプルなシャープ、再サンプルモード、アンシャープマスク
 
-ダイナミック [Media Classicのシャープの適用オプションについて詳しく説明します](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
+[ダイナミックメディアクラシックのシャープの適用オプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)についての詳細。
 
 ## その他のリソース
 
-[画像プリセットガイド](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。 画質と読み込み速度の最適化に使用する設定です。
+[画像プリセットガイド](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。画質と読み込み速度の最適化に使用する設定です。
 
-[ImageはすべてPart 2:ただのぼかしではありません品質と速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。 高品質で高速読み込みが可能な画像プリセットの使用について、ブログの投稿です。
+[ImageはすべてPart 2:ただのぼかしではありません品質と速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。高品質で高速読み込みが可能な画像プリセットの使用について、ブログの投稿です。
 
-[イメージはすべてウェビナー](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。 Image Is Everything __ Seriesの3つすべてのウェビナーの録画へのリンクです。 [ウェビナー2](https://seminars.adobeconnect.com/p6lqaotpjnd3) ：画像プリセットについて説明します。
+[イメージはすべてウェビナー](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。_Image Is Everything_&#x200B;シリーズの3つのウェビナーすべての録画へのリンクです。 [ウェビナー2では、画像プリセットにつ](https://seminars.adobeconnect.com/p6lqaotpjnd3) いて説明します。
