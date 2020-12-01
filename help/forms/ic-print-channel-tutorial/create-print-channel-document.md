@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Create Interactive Communication For Print Channel {#create-interactive-communication-for-print-channel}
+# 印刷チャネル用の対話型通信の作成{#create-interactive-communication-for-print-channel}
 
 ここでは、印刷チャネル用の対話型通信ドキュメントを作成します。
 
