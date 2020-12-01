@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# ローカルAEMでのアセット共有コモンの設定 {#setup-asset-share-commons}
+# ローカルAEMでのアセット共有コモンの設定{#setup-asset-share-commons}
 
 ローカルAEMインスタンスで実行するアセット共有コモンを取得する手順を簡単に説明します。
 
