@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 17%
+ht-degree: 33%
 
 ---
 
@@ -19,15 +19,15 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 
 ## 新機能
 
-* **[AEM SPA EditorとReactの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) （チュートリアル）**
+* **[AEM SPA EditorとReactの使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html) （チュートリアル）**
 
    *Reactを使用して、単一のページアプリ(SPA)とAEMを統合する開発者向けの入門ガイドです。*
 
-* **[AEM SPA EditorとAngular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （チュートリアル）の使用の手引き**
+* **[AEM SPA EditorとAngular](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html) （チュートリアル）の使用の手引き**
 
    *単一のページアプリ(SPA)をAngularを使用してAEMと統合するための開始ガイド*
 
-* **[AEMヘッドレス使用の手引き（チュートリアル）](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
+* **[AEMヘッドレス使用の手引き（チュートリアル）](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
 
    *ヘッドレスなCMSシナリオで、AEMのコンテンツを公開してネイティブモバイルアプリで使用する方法。*
 
@@ -48,12 +48,12 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="AEM Sites の概要 - WKND チュートリアル" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
       <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
-    <strong>はじめに —AEM Sites</strong>
+    <strong>AEM Sites 使用の手引き</strong>
     </a>
     </div>
     <p>
