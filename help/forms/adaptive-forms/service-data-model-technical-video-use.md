@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsでのサービスデータモデルの使用{#using-service-data-models-with-aem-forms}
+# AEM Forms{#using-service-data-models-with-aem-forms}でのサービスデータモデルの使用
 
 AEMアダプティブFormsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
 
