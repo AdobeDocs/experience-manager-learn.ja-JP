@@ -20,7 +20,7 @@ ht-degree: 11%
 ---
 
 
-# 基本的なページ操作 {#basic-page-operations-aem-sites}
+# 基本的なページ操作{#basic-page-operations-aem-sites}
 
 Adobe Experience Manager Sitesページの基本的なページ管理操作を実行する方法を学びます。
 
