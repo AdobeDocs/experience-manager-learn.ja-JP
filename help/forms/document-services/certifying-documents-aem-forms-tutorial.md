@@ -25,16 +25,16 @@ ht-degree: 1%
 
 ドキュメントを認証するには、デスクトップでAcrobatDCを使用するか、サーバーでの自動化プロセスの一環としてAEM Formsドキュメントサービスを使用します。
 
-この記事では、AEM Formsドキュメントサービスを使用してPDFドキュメントを認証するためのサンプルOSGIバンドルを提供します。サンプルで使用されているコードは、こちら [から参照できます](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+この記事では、AEM Formsドキュメントサービスを使用してPDFドキュメントを認証するためのサンプルOSGIバンドルを提供します。サンプルで使用されているコードは[こちら](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)で入手できます
 
 AEM Formsを使用してドキュメントを認証するには、次の手順に従う必要があります
 
-## 証明書をTrust Storeに追加する {#adding-certificate-to-trust-store}
+## 証明書をTrust Storeに追加{#adding-certificate-to-trust-store}
 
 AEMのキーストアに証明書を追加するには、次の手順に従います
 
 * [グローバルTrust Storeの初期化](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [fd-service](http://localhost:4502/security/users.html) userを検索します
+* [fd-](http://localhost:4502/security/users.html) serviceuserを検索します
 * **fd-serviceユーザーを見つけるには、結果ページをスクロールしてすべてのユーザーを読み込む必要があります**
 * 重複がfd-serviceユーザーをクリックして、ユーザー設定ウィンドウを開きます
 * 「キーストアファイルからの追加秘密鍵」をクリックします。証明書に固有のエイリアスとパスワードを指定します。
@@ -56,11 +56,11 @@ AEMのキーストアに証明書を追加するには、次の手順に従い�
 
 ## ローカルシステムでのサンプルのテスト
 
-* カスタム [ドキュメントサービスバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Service User Bundleを使用した [開発版のダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [カスタムドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)をダウンロードしてインストールします
+* [サービスユーザーバンドルで開発中](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)をダウンロードしてインストールします。
 * [Apache Sling Service User Mapper Serviceに次のエントリが追加されていることを確認します](http://localhost:4502/system/console/configMgr)
 
-   **以下のスクリーンショットに示すように、DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
+   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-** serviceasが下のスクリーンショットに表示されています
    ![User-Mapper](assets/user-mapper-service.PNG)
 * [サンプルアダプティブフォームの読み込み](assets/certify-pdf-af.zip)
 * [カスタム送信の読み込みとインストール](assets/custom-submit-certify.zip)
