@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# AEM AssetsとInDesign Serverを使用したアセットテンプレートの設定{#set-up-asset-templates-with-aem-assets-and-indesign-server}
+# AEM AssetsとInDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}を使用したアセットテンプレートの設定
 
 アセットテンプレートを使用すると、マーケティング担当者はデジタルおよび印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用してマーケティング資料、名刺、チラシ、広告、およびはがきを簡単に作成できます。 AEMでのInDesignサーバの設定については、この節で説明します。
 
@@ -24,13 +24,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM **は** 、INDDテンプレートをアップロードするときに、実行中のInDesignサーバーに接続する必要があります。 INDDファイルの初期処理の一部にはInDesignサーバーが必要です。
+>AEM **は、INDDテンプレートをアップロードする際に、実行中のInDesignサーバーに**&#x200B;接続する必要があります。 INDDファイルの初期処理の一部にはInDesignサーバーが必要です。
 
-## InDesign Server体験版のダウンロード {#download-indesign-server-trial}
+## InDesign Server体験版のダウンロード{#download-indesign-server-trial}
 
-InDesign Server版の体験版ダウンロードWebサイトのダウンロード [](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+[InDesign Server版の体験版ダウンロードWebサイト](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)をダウンロード
 
-## 開始InDesign Server {#starting-indesign-server}
+## InDesign Server{#starting-indesign-server}を開始しています
 
 ```shell
 # macOS command
