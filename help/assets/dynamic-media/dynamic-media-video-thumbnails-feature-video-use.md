@@ -33,4 +33,4 @@ AEM Assetsのカスタムビデオサムネールを使用すると、作成者�
 
 >[!NOTE]
 >
->AEM [インスタンスは、ダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html) モードで実行する必要があります
+>[AEMインスタンスをダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)モードで実行する必要があります
