@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # カスタムプロファイルの作成
 
-この部では、 [カスタムプロファイルを作成します。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDPをHTMLとしてレンダリングする必要があります。 XDPをHTMLとしてレンダリングするためのデフォルトのプロファイルがデフォルトで提供されます。 これは、MobileFormsレンディションサービスのカスタマイズされたバージョンを表します。 Mobile Form Renditionサービスを使用すると、Mobile Serverの外観、動作、およびやりとりをカスタマイズできます。 アドビのカスタムプロファイルでは、guidebridge APIを使用してモバイルフォームに入力されたデータを取得します。 次に、このデータをカスタムサーブレットに送信し、そのサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
+この部分では、[カスタムプロファイルを作成します。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDPをHTMLとしてレンダリングする必要があります。XDPをHTMLとしてレンダリングするためのデフォルトのプロファイルがデフォルトで提供されます。 これは、MobileFormsレンディションサービスのカスタマイズされたバージョンを表します。 Mobile Form Renditionサービスを使用すると、Mobile Serverの外観、動作、およびやりとりをカスタマイズできます。 アドビのカスタムプロファイルでは、guidebridge APIを使用してモバイルフォームに入力されたデータを取得します。 次に、このデータをカスタムサーブレットに送信し、そのサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
 
-JavaScript APIを使用してフォームデータを取得し `formBridge` ます。 我々はこの `getDataXML()` 方法を利用する。
+`formBridge` JavaScript APIを使用してフォームデータを取得します。 `getDataXML()`メソッドを使用します。
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -61,7 +61,7 @@ var suc = function(obj) {
 
 ## Generate Interactive PDF
 
-次に、インタラクティブpdfをレンダリングし、pdfを呼び出し元のアプリケーションに返すサーブレットコードを示します。 サーブレットは、カスタムDocumentServices OSGiサービスの `mobileFormToInteractivePdf` メソッドを呼び出します。
+次に、インタラクティブpdfをレンダリングし、pdfを呼び出し元のアプリケーションに返すサーブレットコードを示します。 サーブレットは、カスタムDocumentServices OSGiサービスの`mobileFormToInteractivePdf`メソッドを呼び出します。
 
 ```java
 import java.io.File;
@@ -123,7 +123,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### Render Interactive PDF
 
-次のコードは、 [](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) FormsサービスAPIを使用して、モバイルフォームのデータを使用してインタラクティブPDFをレンダリングします。
+次のコードは、[FormsサービスAPI](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)を使用して、モバイルフォームのデータを使用してインタラクティブPDFをレンダリングします。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -146,7 +146,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を表示するには、ここを [クリックしてください](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)。
+部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を表示するには、[ここをクリック](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)してください。
 PDFがダウンロードされたら、次の手順でPDFを送信してAEMワークフローをトリガーします。 このワークフローは、送信されたPDFのデータを結合し、レビュー用の非インタラクティブPDFを生成します。
 
 この使用例で作成したカスタムプロファイルは、このチュートリアルのアセットの一部として使用できます。
