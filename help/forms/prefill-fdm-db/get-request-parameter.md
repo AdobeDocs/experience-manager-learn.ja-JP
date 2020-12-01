@@ -21,17 +21,17 @@ ht-degree: 2%
 
 ## empIDパラメータの取得
 
-次の手順では、URLからempIDパラメータにアクセスします。 次に、empIDリクエストパラメーターの値が、フォームデータモデルの **_get_** service操作に渡されます。
+次の手順では、URLからempIDパラメータにアクセスします。 次に、empIDリクエストパラメーターの値が、フォームデータモデルの&#x200B;**_get_**サービス操作に渡されます。
 このコースの目的に合わせて、以下を作成し、提供します。
 
-* FDMDemoというアダプティブフォームテンプレ **_ート_**
-* fdmemoというページコンポー **_ネント_**
+* **_FDMDemo_**&#x200B;という名前のアダプティブフォームテンプレート
+* **_fdmemo_**&#x200B;というページコンポーネント
 * ページコンポーネントにカスタムJSPを含めました
 * アダプティブフォームテンプレートとページコンポーネントとの関連付け
 
 これを行うと、カスタムjspのコードは、このカスタムテンプレートに基づくアダプティブフォームがレンダリングされたときにのみ実行されます
 
-* [パッケージマネージャーを使用して](assets/template-page-component.zip) 、パッケージを [読み込みます](http://localhost:4502/crx/packmgr/index.jsp)
+* [パッケー](assets/template-page-component.zip) ジマネージャーを使用した [パッケージの読み込み](http://localhost:4502/crx/packmgr/index.jsp)
 * [fdmrequest.jspを開きます。](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * コメント化された行のコメントを解除します。
 * 変更を保存する
