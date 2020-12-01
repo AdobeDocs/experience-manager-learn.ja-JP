@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Assetsでのスマート翻訳検索の使用{#using-smart-translation-search-with-aem-assets}
+# AEM Assets{#using-smart-translation-search-with-aem-assets}でのスマート翻訳検索の使用
 
 スマート翻訳検索を使用すると、AEMコンテンツ、アセットとページの両方にわたって自動的に多言語間の検索と検出が可能になり、50以上の言語をサポートし、手動コンテンツ翻訳の必要性を減らすことができます。
 
@@ -29,9 +29,9 @@ AEM Smart Translation Searchを使用すると、ユーザーは英語以外の�
 
 スマート翻訳検索は、英語でアセットに適用されるAEMのスマートタグに対して完璧な補完機能です。
 
-このビデオでは、 [AEM Smart Translation Search](smart-translation-search-technical-video-setup.md) （スマート翻訳検索）が設定済みであることを前提としています。
+このビデオでは、[AEM Smart Translation Search](smart-translation-search-technical-video-setup.md)が設定済みであることを前提としています。
 
-## スマート翻訳検索の仕組み {#how-smart-translation-search-works}
+## スマート翻訳検索の仕組み{#how-smart-translation-search-works}
 
 ![スマート翻訳検索のフロー図](assets/smart-translation-search-flow.png)
 
