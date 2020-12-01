@@ -17,8 +17,8 @@ ht-degree: 7%
 ---
 
 
-# 概要 [!DNL Sling] {#introduction-sling}
+# [!DNL Sling] {#introduction-sling}の紹介
 
-Adobe Experience Managerの基盤とな [!DNL Sling]るテクノロジスタックの一部であるオープンソースの [!DNL RESTful] Webフレームワークの紹介。
+[!DNL Sling]の紹介は、Adobe Experience Managerの基盤となるテクノロジスタックの一部であるオープンソースの[!DNL RESTful]ウェブフレームワークです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32032/?quality=12&learn=on)
