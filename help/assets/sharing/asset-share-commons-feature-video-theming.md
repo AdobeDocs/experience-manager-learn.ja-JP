@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# アセット共有コモンズのテーマ設定の概要 {#asset-share-commons-theme}
+# アセット共有コモンズでのテーマ設定の概要{#asset-share-commons-theme}
 
 アセット共有コモンズでのテーマ設定について簡単に説明します。 このビデオでは、カスタムカラースキームを使用して新しいテーマを作成するプロセスについて説明します。
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-カス [タムクライアントライブラリテーマのダウンロード](assets/asc-theme-demo.zip)
+[カスタムクライアントライブラリテーマ](assets/asc-theme-demo.zip)のダウンロード
 
 ## その他のリソース{#additional-resources}
 
