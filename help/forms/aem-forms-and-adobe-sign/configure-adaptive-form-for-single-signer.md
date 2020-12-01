@@ -24,4 +24,4 @@ ht-degree: 0%
 
 このビデオに関連するアセットは、次のリンクからダウンロードできます
 
-* [受益者の変更 ](assets/change-of-beneficiary-form.zip)
+* [受益者の変更  ](assets/change-of-beneficiary-form.zip)
