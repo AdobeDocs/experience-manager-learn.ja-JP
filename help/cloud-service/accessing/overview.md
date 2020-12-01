@@ -24,22 +24,22 @@ AEMは、AEMCloud Serviceをクラウドネイティブで活用する手段で�
 
 ## AdobeIMSユーザー
 
-AEM Authorサービスへのアクセスを必要とするユーザーは、 [Adobeの管理コンソールで](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) AdobeIMSユーザーとして管理され [](https://adminconsole.adobe.com)ます。 AdobeIMSユーザーの概要、およびAdmin Consoleでのユーザーのアクセス方法と管理方法について説明します。
+AEM Authorサービスへのアクセスを必要とするユーザーは、[AdobeのAdminConsole](https://adminconsole.adobe.com)で、[AdobeIMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)として管理されます。 AdobeIMSユーザーの概要、およびAdmin Consoleでのユーザーのアクセス方法と管理方法について説明します。
 
 [AdobeIMSユーザーについて](./adobe-ims-users.md)
 
 ## AdobeIMSユーザーグループ
 
-AEM Authorサービスにアクセスするユーザーは、 [Adobeの管理コンソールで](https://helpx.adobe.com/enterprise/using/user-groups.html) AdobeIMSユーザーグループを使用して論理グループにまとめる必要があります [](https://adminconsole.adobe.com)。 AdobeIMSユーザーグループは、直接権限やAEMへのアクセス権を提供しません( [AdobeIMS製品プロファイルの役割です](#adobe-ims-product-profiles))が、AEMグループと権限を使用して、AEM Authorサービスの特定のアクセスレベルに翻訳できるユーザーの論理グループを定義する優れた方法です。
+AEM Authorサービスにアクセスするユーザーは、[AdobeのAdminConsole](https://adminconsole.adobe.com)の[AdobeIMSユーザーグループ](https://helpx.adobe.com/enterprise/using/user-groups.html)を使用して論理グループにまとめる必要があります。 AdobeIMSユーザーグループは、直接権限やAEMへのアクセス権を提供しません(これは[AdobeIMSプロファイル](#adobe-ims-product-profiles)の職務です)が、AEMグループと権限を使用して、AEM Authorサービスで特定のレベルのアクセス権に変換できるユーザーの論理グループを定義する優れた方法です。
 
 [AdobeのIMSユーザーグループについて説明します](./adobe-ims-user-groups.md)
 
 ## AdobeIMS製品プロファイル
 
-[AdobeIMS製品プロファイル](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)は、 [AdobeのAdminConsoleで管理され、](https://adminconsole.adobe.com)[](#adobe-ims-users) AdobeIMSユーザーに基本レベルのアクセス権でAEM Authorサービスにログインするためのアクセス権を提供するメカニズムです。
+[AdobeIMS製品プロファイル](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)は、 [AdobeのAdminConsoleで管理され、](https://adminconsole.adobe.com) [](#adobe-ims-users) AdobeIMSユーザーがアクセスの基本レベルでAEM Authorサービスにログインするためのアクセス権を提供するメカニズムです。
 
-+ AEM __ユーザ__ 製品プロファイルを使用すると、AEM寄稿者グループのメンバーシップを介して、AEMに対する読み取り専用アクセス権をユーザに付与できます。
-+ AEM __管理者__ 製品プロファイルを使用すると、ユーザーはAEMに対して完全な管理アクセスが可能になります。
++ __AEM Users__&#x200B;製品プロファイルを使用すると、AEM Contributorsグループのメンバーシップを介したAEMへの読み取り専用アクセスが可能になります。
++ __AEM管理者__&#x200B;製品プロファイルは、ユーザーに対してフルな管理アクセスを提供します。
 
 [AdobeIMS製品プロファイルについて説明します。](./adobe-ims-product-profiles.md)
 
@@ -57,8 +57,8 @@ Adobe管理コンソールのAdobeIMSユーザー、ユーザーグループ、�
 
 ## その他のAdobe Admin Console資源
 
-以下のドキュメントは、 [Adobe Admin Console](https://adminconsole.adobe.com)固有の詳細と懸念事項を扱っており、Adobe Admin Consoleをより良く理解し、それを使用してExperience Cloudの管理やアクセスに役立てることができます。
+以下のドキュメントは、[Adobe Admin Console](https://adminconsole.adobe.com)に固有の詳細と懸念事項を扱っており、Adobe Admin Consoleをより深く理解し、それを使用してExperience Cloudを管理し、複数の製品にアクセスするのに役立ちます。
 
-+ [Adobe Admin Consoleアイデンティティの概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
++ [Adobe Admin Consoleアイデンティティの概要](https://helpx.adobe.com/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
 + [Adobe Admin Console開発者ロール](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)
