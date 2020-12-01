@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# AEMアーキテクチャスタックの概要 {#introduction-architecture}
+# AEMアーキテクチャスタックの紹介{#introduction-architecture}
 
-Adobe Experience Managerの技術スタックの一部として、 [!DNL OSGi]、、 [!DNL JCR]、 [!DNL Oak]およびの技術 [!DNL Sling] を紹介します。
+[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]、[!DNL Sling]のテクノロジをAdobe Experience Managerのテクノロジスタックの一部として紹介します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
