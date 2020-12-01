@@ -151,7 +151,7 @@ ht-degree: 6%
    + [JSONスキーマに基づくフォームの作成](querying-submitted-data/part1.md)
    + [送信データの保存](querying-submitted-data/part2.md)
    + [JSONスキーマの格納](querying-submitted-data/part3.md)
-   + [送信されたデータのクエリ](querying-submitted-data/part4.md)
+   + [送信データのクエリ](querying-submitted-data/part4.md)
 + Formsポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [部品1 — カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [パート2 — カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
