@@ -61,11 +61,11 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [パッケージマネージャーを使用して、この記事に関連するアセットを読み込み、インストールします。](assets/launch-agent-ui.zip)
 * [configMgrにログイン](http://localhost:4502/system/console/configMgr)
-* Granite _CSRFフィルタのAdobeを検索_
-* 「Excluded Paths追加」の/content/getprintchannel __
+* _AdobeGranite CSRF Filter_&#x200B;を検索します
+* 除外された追加パスの&#x200B;_/content/getprintchannel_
 * 変更を保存します。
-* [POST.jspを開きます](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 FormFieldRequestParameterに渡される文字列が有効なdocumentIdであることを確認します。（19行目）。
-* [Webページを開き](http://localhost:4502/content/OpenPrintChannel.html) 、accountnumberを入力してフォームを送信します。
+* [POST.jspを開きます](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。FormFieldRequestParameterに渡される文字列が有効なdocumentIdであることを確認します。（19行目）。
+* [Webページを開き、accountnumberと入力して](http://localhost:4502/content/OpenPrintChannel.html) フォームを送信します。
 * エージェントUIインターフェイスが開き、フォームに入力したアカウント番号に固有のデータが事前に入力されている必要があります。
 
 >[!NOTE]
