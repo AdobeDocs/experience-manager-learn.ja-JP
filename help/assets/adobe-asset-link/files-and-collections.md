@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# ファイルとコレクション {#files-and-collections}
+# ファイルとコレクション{#files-and-collections}
 
 アセットリンクパネルからAEM Assetsファイルやコレクションにすばやく簡単にアクセスする方法を説明します。
 
