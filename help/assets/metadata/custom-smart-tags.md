@@ -25,19 +25,19 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## AEM 6.x用の画像用のカスタムスマートタグの設定{#set-up}
+## AEM 6.x{#set-up}用の画像にカスタムスマートタグを設定する
 
 >[!NOTE]
 > 画像のカスタムスマートタグは、AEM用にCloud Serviceとして自動的にプロビジョニングされます。
 
-画像のカスタムスマートタグを使用するには、画像の [スマートタグを設定する必要があります](./image-smart-tags.md#set-up)。
+画像のカスタムスマートタグを使用するには、[画像を設定するためのスマートタグ](./image-smart-tags.md#set-up)が必要です。
 
-スマートコンテンツサービスとAdobeI/Oを使用して、AEM Assetsでスマートタグのトレーニングを設定する方法を説明します。画像のカスタムスマートタグ
+Smart Content ServiceとAdobe I/Oを使用して、AEM Assetsでスマートタグのトレーニングを設定する方法について説明します。画像のカスタムスマートタグ
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
 ## その他のリソース
 
-* AEM 6.4では、 [最新のService Packが必要です](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
+* AEM 6.4では、[最新のService Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)が必要です。
 
 
