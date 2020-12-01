@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms印刷チャネルドキュメントでの表コンポーネントの使用 {#using-table-component-in-aem-forms-print-channel-document}
+# AEM Forms印刷チャネルドキュメントでの表コンポーネントの使用{#using-table-component-in-aem-forms-print-channel-document}
 
 次のビデオでは、印刷チャネルドキュメントに対してInteractive Communicationsの表コンポーネントを使用するために必要な手順について説明します。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
    * 対話型通信ドキュメント
    * sampleretirementaccountdata.json
 
-* 対話型通信ドキュメントを [編集モードで開きます](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)。
+* [編集モード](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)で対話型通信ドキュメントを開きます。
 
 * 貢献追加度セクションへのTableDemoレイアウトフラグメント。
 * ビデオで示すように、表のセルを適切なフォームデータモデルの要素に連結します
