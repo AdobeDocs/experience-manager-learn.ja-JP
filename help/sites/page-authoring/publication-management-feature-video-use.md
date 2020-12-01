@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Publishing pages {#using-publication-management-with-aem-sites}
+# ページの公開{#using-publication-management-with-aem-sites}
 
 AEM Sitesには、コンテンツの公開と非公開を行うためのオプションがいくつか用意されています。 このビデオでは、様々な方法とその機能について説明します。
 
