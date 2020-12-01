@@ -27,14 +27,14 @@ ht-degree: 2%
 
 この記事では、システムユーザーの作成、およびユーザーマッパーのプロパティの設定に関する手順を説明します。
 
-1. http://localhost:4502/crx/explorer/index.jspに移動し [ます。](http://localhost:4502/crx/explorer/index.jsp)
+1. [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)に移動します。
 1. 「管理者」としてログイン
 1. 「ユーザ管理」をクリックします。
 1. 「システムユーザーの作成」をクリックします。
 1. useridタイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します
 1. [configMgrを開きます](http://localhost:4502/system/console/configMgr)
 1. 「Apache Sling Service User Mapper Service」を検索し、をクリックしてプロパティを開きます
-1. + ** アイコン（プラス）をクリックして、次のサービスマッピングを追加します
+1. *+*&#x200B;アイコン（プラス）をクリックして、次のサービスマッピングを追加します
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -46,14 +46,14 @@ ht-degree: 2%
 fd-serviceユーザーに代わってリソースリゾルバーを取得することもできます。 このサービスユーザーは、ドキュメントサービスで使用されます。 例えば、使用権限などの認証や適用を行う場合、fd-serviceユーザーのリソースリゾルバーを使用して操作を実行します
 
 1. [この記事に関連付けられたzipファイルをダウンロードして解凍します。](assets/developingwithserviceuser.zip)
-1. Navigate to [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)に移動します。
 1. OSGiバンドルのアップロードと開始
 1. バンドルがアクティブ状態であることを確認します。
-1. これで、 *システムユーザーの作成と* 、 *サービスユーザーバンドルの展開が完了しました*。
+1. これで、*システムユーザー*&#x200B;が正常に作成され、*サービスユーザーバンドル*&#x200B;も展開されました。
 
    /contentへのアクセスを提供するには、システムユーザー（「データ」）にコンテンツノードの読み取り権限を与えます。
 
-   1. http://localhost:4502/useradminに移動し [ます。](http://localhost:4502/useradmin)
+   1. [http://localhost:4502/useradmin](http://localhost:4502/useradmin)に移動します。
    1. ユーザー「 data 」を検索します。 これは、前の手順で作成したのと同じシステムユーザーです。
    1. 重複がユーザーをクリックし、「権限」タブをクリックします
    1. 「読み取り」アクセスを「コンテンツ」フォルダに与えます。
