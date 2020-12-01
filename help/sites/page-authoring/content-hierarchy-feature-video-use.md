@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# コンテンツの構造と階層 {#content-hierarchy}
+# コンテンツ構造と階層{#content-hierarchy}
 
 AEM Sitesで組織のサイトページを作成し、整理する方法を学びます。
 
