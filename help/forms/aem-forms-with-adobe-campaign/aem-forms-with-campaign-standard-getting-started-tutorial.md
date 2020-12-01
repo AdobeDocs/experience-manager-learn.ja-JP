@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# AEM FormsとAdobe Campaign Standardの使い始めに {#getting-started-with-aem-forms-and-adobe-campaign-standard}
+# AEM FormsとAdobe Campaign Standardの使い始めに{#getting-started-with-aem-forms-and-adobe-campaign-standard}
 
 ![formsandcampaign](assets/helpx-cards-forms.png)
 
@@ -38,8 +38,8 @@ AEM FormsをACSと統合するには、次の手順に従う必要がありま�
 開始するには、次の手順に従ってください
 
 * [このチュートリアルに関連するアセットをダウンロードして解凍します。](assets/aem-forms-and-acs-bundles.zip)
-* Felix Webコンソールを使用したバンドルのデプ [ロイ](http://localhost:4502/system/console/bundles)
+* [Felix Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをデプロイします
 * Felix OSGI ConfigurationでAdobe Campaignに適した設定を指定します。
-* [この記事で説明するように、サービスユーザーを作成します](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。 記事に関連付けられたOSGiバンドルをデプロイしてください。
+* [この記事で説明するように、サービスユーザーを作成します](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。記事に関連付けられたOSGiバンドルをデプロイしてください。
 * ACS秘密鍵をetc/key/campaign/private.keyに保存します。 etc/keyの下にキャンペーンという名前のフォルダーを作成する必要があります。
 * [サービスユーザー「data」にキャンペーンフォルダーへの読み取りアクセス権を付与します。](http://localhost:4502/useradmin)
