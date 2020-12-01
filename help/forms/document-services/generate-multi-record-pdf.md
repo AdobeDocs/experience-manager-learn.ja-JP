@@ -23,7 +23,8 @@ OutputServiceには、フォームデザインを使用してドキュメント�
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-データxmlには2つのレコードがあります。 各レコードは、form1要素で表されます。 このxmlはOutputService [generatePDFOutputBatchメソッドに渡され](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 、pdfドキュメントのリスト（レコードごとに1つ）を取得します。generatePDFOutputBatchメソッドの署名では、次のパラメーターを使用します
+データxmlには2つのレコードがあります。 各レコードは、form1要素で表されます。 このxmlはOutputService [generatePDFOutputBatchメソッド](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)に渡され、pdfドキュメントのリストが取得されます（レコードごとに1つ）
+generatePDFOutputBatchメソッドの署名は、次のパラメーターを使用します
 
 * templates — キーで識別されるテンプレートを含むマップ
 * data — キーで識別されるxmlデータドキュメントを含むマップ
@@ -32,7 +33,7 @@ OutputServiceには、フォームデザインを使用してドキュメント�
 
 >[!NOTE]
 >
->この使用例は、この [Webサイトで本番用の例として提供されています](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。
+>この使用例は、この[webサイト](https://forms.enablementadobe.com/content/samples/samples.html?query=0)で実例として参照できます。
 
 ## 使用事例の詳細{#use-case-details}
 
@@ -124,7 +125,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### サーバーにデプロイする{#Deploy-on-your-server}
+### サーバーに展開{#Deploy-on-your-server}
 
 ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
 
@@ -133,7 +134,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 * [DevelopingWithServiceUser Bundleをデプロイします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * [OutputService APIを使用してPDFを生成するカスタムAEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Customバンドルのデプロイ
 * [ブラウザーでパッケージマネージャーを指定](http://localhost:4502/crx/packmgr/index.jsp)
-* [パッケージを読み込んでインストールします](assets/generate-multiple-pdf-from-xml.zip)。 このパッケージには、テンプレートとデータファイルをドロップできるhtmlページが含まれています。
+* [パッケージを読み込んでインストールします](assets/generate-multiple-pdf-from-xml.zip)。このパッケージには、テンプレートとデータファイルをドロップできるhtmlページが含まれています。
 * [ブラウザーがMultiRecords.htmlを指すように指定します。](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * テンプレートとxmlデータファイルを一緒にドラッグ&amp;ドロップします
 * 作成したzipファイルをダウンロードします。 このzipファイルには、Outputサービスで生成されたpdfファイルが含まれています。
