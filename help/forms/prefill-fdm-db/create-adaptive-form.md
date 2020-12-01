@@ -22,30 +22,30 @@ ht-degree: 1%
 
 これまで、以下を作成しました
 
-* 2つのテーブルを持つデータベース — `newhire` および `beneficiaries`
+* 2つのテーブルを持つデータベース — `newhire`と`beneficiaries`
 * 設定済みのApache Sling接続プール済みデータソース
 * RDBMSベースのフォームデータモデル
 
-次のステップは、フォームデータモデルを使用するアダプティブフォームを作成し、設定することです。  ヘッド開始を取得するには、サンプルフォームを [ダウンロードして読み込み](assets/fdm-demo-af.zip) ます。 サンプルフォームには、従業員の詳細を表示するセクションと、リスト従業員の受益者に対する別のセクションがあります。
+次のステップは、フォームデータモデルを使用するアダプティブフォームを作成し、設定することです。  ヘッド開始を取得するには、[サンプルフォーム](assets/fdm-demo-af.zip)を&lt;a0/>ダウンロードして読み込みます。 サンプルフォームには、従業員の詳細を表示するセクションと、リスト従業員の受益者に対する別のセクションがあります。
 
 ## フォームをフォームデータモデルに関連付ける
 
 このコースで提供されるサンプルフォームは、どのフォームデータモデルにも関連付けられていません。 フォームデータモデルを使用するようにフォームを設定するには、次の手順を実行する必要があります。
 
 * FDMDemoフォームを選択
-* 「 _プロパティ_」 —>「_フォームモデル」をクリックします。_
+* 「_プロパティ_->_フォームモデル_」をクリックします。
 * ドロップダウンリストから「Form Data Model」を選択します
 * 前のレッスンで作成したフォームデータモデルを検索して選択します。
-* Click on _Save &amp; Close_
+* 「_保存して閉じる_」をクリックします
 
 ## 事前入力サービスの設定
 
 最初の手順は、フォームに事前入力サービスを関連付けることです。 事前入力サービスを関連付けるには、次の手順に従ってください
 
-* フォームを選択し `FDMDemo` ます
-* 「 _編集_ 」をクリックしてフォームを編集モードで開きます
+* `FDMDemo`フォームを選択
+* 「_編集_」をクリックしてフォームを編集モードで開きます
 * コンテンツ階層でフォームコンテナを選択し、レンチアイコンをクリックして、プロパティシートを開きます
-* 「事前入力サービス」ドロップダウンリストから _、「_ フォームデータモデルの事前入力サービス」を選択します。
+* 「事前入力サービス」ドロップダウンリストから「_Form Data Model Prefillサービス_」を選択します。
 * 青色をクリック☑して変更を保存します
 
 * ![事前入力サービス](assets/fdm-prefill.png)
@@ -71,7 +71,7 @@ ht-degree: 1%
 * フォームを編集モードで開きます。
 * 「Root Panel」>「Your Wensaries」>「Table」を展開します。
 * 「Row1」を選択し、レンチアイコンをクリックして、プロパティシートを開きます。
-* バインド参照を/newhire/GetEmployeeWensitariesに設定し **ます。**
+* バインド参照を&#x200B;**/newhire/GetEmployeeWensitaries**&#x200B;に設定します。
 * 「繰り返しの設定 — 最小値」を1、「最大値」を5に設定します。
 * Row1設定は、次のスクリーンショットのようになります
    ![行構成](assets/configure-row.PNG)
@@ -95,7 +95,9 @@ ht-degree: 1%
 
 ## フォームのテスト
 
-次に、適切なempIDを含むフォームをURLで開く必要があります。 次の2つのリンクは、empID=207のDatabase[Form With empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)[Formからの情報をフォームに埋め込みます](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
+次に、適切なempIDを含むフォームをURLで開く必要があります。 次の2つのリンクは、データベースからの情報をフォームに埋め込みます
+[empID=207](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)のフォーム
+[empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)のフォーム
 
 ## トラブルシューティング
 
