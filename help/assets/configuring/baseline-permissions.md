@@ -21,6 +21,6 @@ ht-degree: 2%
 
 # 基本権限
 
-ベースラインアセットフォルダーでのユーザーアクセスの管理は、 [ガバナンスの重要な側面であり](./baseline-folders.md) 、プロセスを適切にサポートできるようにします。
+[ベースラインアセットフォルダー](./baseline-folders.md)でのユーザーアクセスの管理は、ガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
