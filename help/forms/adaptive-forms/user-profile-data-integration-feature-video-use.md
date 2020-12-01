@@ -20,7 +20,7 @@ ht-degree: 46%
 ---
 
 
-# AEM Formsとのユーザプロファイルデータ統合の使用{#using-user-profile-data-integration-with-aem-forms}
+# AEM Forms{#using-user-profile-data-integration-with-aem-forms}とのユーザプロファイルデータ統合の使用
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下の機能は、すぐに使用することができます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
