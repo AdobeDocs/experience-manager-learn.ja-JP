@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Using Adobe Sign with AEM Forms{#using-adobe-sign-with-aem-forms}
+# Adobe SignとAEM Forms{#using-adobe-sign-with-aem-forms}を使う
 
 Adobe SignとAEM Formsの併用
 
@@ -32,4 +32,4 @@ Adobe SignとAEM Formsの併用
 >
 >この機能はAEM 6.3以降でのみ使用できます。
 
-この機能のライブデモへのリンクは、 [AEM Formsのサンプルページをご覧ください](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 。
+[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページをご覧になって、この機能のライブデモへのリンクをご覧ください。
