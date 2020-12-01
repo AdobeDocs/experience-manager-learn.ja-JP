@@ -25,7 +25,7 @@ ht-degree: 0%
 # 貢献度セクションへのテーブルの追加
 
 この部分では、貢献度セクションにテーブルを追加します。
-印刷チャネルドキュメントでの表の使用の詳細については、 [「印刷チャネルでの表の使用](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 」を参照してください。
+印刷チャネルドキュメントでのテーブルの使用の詳細については、[印刷チャネルでのテーブルの使用](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)を参照してください。
 
 AEM Formsにログインし、Adobe Experience Manager/Forms/Forms&amp;ドキュメントに移動します。
 
