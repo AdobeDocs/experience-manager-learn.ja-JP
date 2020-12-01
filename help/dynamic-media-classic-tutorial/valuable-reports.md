@@ -16,7 +16,7 @@ ht-degree: 9%
 ---
 
 
-# 管理者向けの貴重なレポート {#valuable-reports}
+# 管理者向けの貴重なレポート{#valuable-reports}
 
 この最後の章では、管理者の場合に設定を検討できる重要なレポート2つについて知っておきたいと思います。帯域幅とストレージレポートおよび画像エラーレポート。
 
@@ -42,9 +42,9 @@ _画像エラーレポート。_
 
 Dynamic Media Classicの詳細については、次のリソースを参照してください。
 
-- [Experience LeagueのDynamic Media Classic — 価値を引き出す](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Experience LeagueのDynamic Media Classic — さらに多くの成果を上げる](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Experience Leagueのダイナミックメディアクラシック — 価値のある情報](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Experience Leagueのダイナミックメディアクラシック — 詳細](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletterアーカイブ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [ダイナミックメディアニュースレター購読ページ](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [Dynamic Media Classicドキュメント](https://docs.adobe.com/content/help/ja-JP/dynamic-media-classic/using/home.translate.html)
+- [Dynamic Media Classicドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
 - [リッチメディアブログ投稿](https://theblog.adobe.com/tag/dynamic-media)
