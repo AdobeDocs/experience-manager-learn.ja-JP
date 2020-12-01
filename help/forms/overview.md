@@ -45,7 +45,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     </div>
     <p>
-    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。You can use Adaptive forms to deliver personalized experiences</em>
+    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用して、パーソナライズされたエクスペリエンスを提供することができます</em>
     <p>
   </td>
    <td>
@@ -58,7 +58,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     </div>
     <p>
-    <em>Interactive Communicationsは、ビジネス通信、ドキュメント、明細書、メリット通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。 </em>
+    <em>Interactive Communicationsは、ビジネス通信、ドキュメント、明細書、メリット通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。  </em>
     <p>
   </td>
   <td>
