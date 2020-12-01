@@ -29,7 +29,7 @@ ht-degree: 0%
 
 フォームの送信を処理するためにカスタム送信を作成しました。 このカスタム送信のpost.POST.jspでは、リクエストをサーブレットに転送します。
 
-カスタム送信プリースの詳細については、この [記事を参照してください](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+カスタム送信プリースの詳細については、この[記事](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)を参照してください。
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storeafsubmission&quot;,null,null);
 
