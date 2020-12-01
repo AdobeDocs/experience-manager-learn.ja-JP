@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsの特定のグループにルールエディタを制限する {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
+# ルールエディタをAEM Forms{#restricting-the-rule-editor-to-specific-groups-in-aem-forms}の特定のグループに制限する
 
 アダプティブフォームのルールエディターをAEMの特定のグループに制限する
 
