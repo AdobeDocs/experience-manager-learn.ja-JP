@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 受信者名とアドレスを保持するドキュメントフラグメントの作成 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# 受信者名とアドレス{#creating-document-fragments-to-hold-the-recipient-name-and-address}を保持するドキュメントフラグメントの作成
 
 この部分では、受信者名とアドレスを保持するドキュメントフラグメントを作成します。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 リッチテキストエディターは直感的な機能で、ビジネスユーザーはテキストを作成し、フォームデータ要素を挿入できます。 ドキュメントフラグメントエディターでは、テキストの書式設定、フォントの種類とスタイルの指定、特殊文字の挿入、ハイパーリンクの作成を行うことができます。
 
-また、ドキュメントフラグメントエディターでは、この [ビデオで示すように、テキストにインライン条件を挿入することもできます。](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+また、ドキュメントフラグメントエディターには、この[ビデオ](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)で示すように、テキストにインライン条件を挿入する機能もあります。
 
 >[!NOTE]
 >
