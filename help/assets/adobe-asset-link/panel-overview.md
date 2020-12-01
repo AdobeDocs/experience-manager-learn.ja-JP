@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Adobeアセットリンクパネルの概要 {#adobe-asset-link-panel-overview}
+# Adobeアセットリンクパネルの概要{#adobe-asset-link-panel-overview}
 
 Adobeアセットリンクを使用すると、クリエイティブユーザーは、InDesign、PhotoshopおよびIllustratorのアプリケーション内パネルを使用して、AEM Assetsに保存されたアセットを参照、検索、チェックアウトおよびチェックインできます。 AdobeアセットリンクパネルのUIとその機能について説明します。
 
