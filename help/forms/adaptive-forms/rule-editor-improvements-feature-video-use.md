@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# AEM Formsでのルールエディタの改善 {#rule-editor-improvements-in-aem-forms}
+# AEM Formsでのルールエディタの改善{#rule-editor-improvements-in-aem-forms}
 
 ルールエディターを使用すると、AEMアダプティブFormsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術者ユーザーと技術者以外のユーザーの両方がインテリジェンスを追加しやすくなり、高速になります。
 
