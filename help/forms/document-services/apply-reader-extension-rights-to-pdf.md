@@ -21,10 +21,10 @@ ht-degree: 12%
 
 # Reader拡張の適用
 
-Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。Reader拡張で制御される機能には、ドキュメントにコメントを追加する機能、フォームに入力する機能、ドキュメントを保存する機能があります。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。この機能をテストするには、この [リンクを使用します](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 サンプル名は「Render XDP with RE」です。
+Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。Reader拡張で制御される機能には、ドキュメントにコメントを追加する機能、フォームに入力する機能、ドキュメントを保存する機能があります。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。この機能をテストするには、[リンク](https://forms.enablementadobe.com/content/samples/samples.html?query=0)を試してみてください。 サンプル名は「Render XDP with RE」です。
 
 この使用例を達成するには、次の作業を行う必要があります。
-* Reader追加拡張証明書を&quot;fd-service&quot;ユーザーに送信する必要があります。 Reader拡張証明書を追加する手順は、 [ここに示します](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* Reader追加拡張証明書を&quot;fd-service&quot;ユーザーに送信する必要があります。 Reader拡張機能証明書を追加する手順は、[ここ](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)に一覧表示されます
 
 * ドキュメントに使用権限を適用するカスタムOSGiサービスを作成します。 これを達成するコードを次に示します。
 
@@ -66,12 +66,12 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 }
 ```
 
-## PDFをストリーミングするサーブレットの作成 {#create-servlet-to-stream-the-pdf}
+## PDFをストリーミングするサーブレットの作成{#create-servlet-to-stream-the-pdf}
 
 次の手順は、POSTメソッドを使用してサーブレットを作成し、Reader用の拡張PDFをユーザーに返すことです。 この場合、PDFをファイルシステムに保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザに付属するPDFビューアではダイナミックPDFは処理されないためです。
 
-次に、サーブレットのコードを示します。 サーブレットは、アダプティブフォームの **customsubmit** アクションから呼び出されます。
-サーブレットはUsageRightsオブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてそのプロパティを設定します。 次に、サーブレットは、この目的で作成されたサービスの **applyUsageRights** メソッドを呼び出します。
+次に、サーブレットのコードを示します。 サーブレットは、アダプティブフォームの&#x200B;**customsubmit**アクションから呼び出されます。
+サーブレットはUsageRightsオブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてそのプロパティを設定します。 次に、サーブレットは、この目的で作成されたサービスの**applyUsageRights**&#x200B;メソッドを呼び出します。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -190,7 +190,7 @@ try {
 
 ローカルサーバーでテストするには、次の手順に従います。
 1. [DevelopingWithServiceUserバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [ares.ares.core-ares Bundleをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。 これには、使用権限を適用し、pdfをストリーミングバックするカスタムサービスとサーブレットが含まれます。
+1. [ares.ares.core-ares Bundleをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これには、使用権限を適用し、pdfをストリーミングバックするカスタムサービスとサーブレットが含まれます。
 1. [クライアントライブラリとカスタム送信の読み込み](assets/applyaresdemo.zip)
 1. [アダプティブフォームの読み込み](assets/applyaresform.zip)
 1. Reader拡張追加証明書を&quot;fd-service&quot;ユーザーに送信
