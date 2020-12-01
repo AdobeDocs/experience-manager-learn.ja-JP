@@ -31,7 +31,7 @@ ht-degree: 0%
 
 次のコードはバーコードをデコードし、デコードされた値をJSONオブジェクトに入力します。 次に、サーブレットは、呼び出し元のアプリケーションに応答してJSONオブジェクトを返します。
 
-この機能はライブで確認できます。 [サンプルポータルで](https://forms.enablementadobe.com/content/samples/samples.html?query=0) 、「バーコードサービスのデモ」を検索してください。
+この機能はライブで確認できます。[サンプルポータル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)にアクセスし、「バーコードサービスのデモ」を検索してください。
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -146,11 +146,11 @@ $(document).ready(function()
 
 これをシステムで実行するには、次の手順に従ってください
 
-1. [BarcodeService.zipをダウンロードし](assets/barcodeservice.zip) 、パッケージマネージャーを使用してAEMに読み込みます
+1. [BarcodeService.](assets/barcodeservice.zip) zipをダウンロードし、パッケージマネージャーを使用してAEMに読み込みます
 1. [カスタムDocumentServicesバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [DevelopingWithServiceUserバンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [サンプルPDFフォームのダウンロード](assets/barcode.pdf)
-1. ブラウザーでアダプティブフォームの [サンプルを参照](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. ブラウザーで[サンプルのアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)を指定します。
 1. 提供されたサンプルPDFのアップロード
 1. フォームにデータが入力されていることが確認できます
 
