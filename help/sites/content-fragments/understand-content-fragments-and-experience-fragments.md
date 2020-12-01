@@ -29,17 +29,17 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 <td><strong>エクスペリエンスフラグメント(XF)</strong></td>
 </tr><tr><td><strong>定義</strong></td>
 <td><ul>
-<li>再利用可能でプレゼンテーションにとらわれない <strong>コンテンツ</strong>。構造化されたデータ要素（テキスト、日付、参照など）で構成され、</li>
+<li>再利用可能で、プレゼンテーションにとらわれない<strong>コンテンツ</strong>。構造化されたデータ要素（テキスト、日付、参照など）で構成されます。</li>
 </ul>
 </td>
 <td><ul>
-<li>独自に意味を持つエクスペリエンスを形成するコンテンツと表示を定義する1つ以上のAEMコンポーネントを組み合わせた、 <strong>再利用可能な</strong> 1つ以上の複合コンポーネント</li>
+<li>独自に意味を持つ<strong>エクスペリエンス</strong>を形成するコンテンツと表示を定義する1つ以上のAEMコンポーネントの再利用可能な複合体</li>
 </ul>
 </td>
 </tr><tr><td><strong>コアテナント</strong></td>
 <td><ul>
 <li>コンテンツ中心</li>
-<li>構造化されたフォームベースのデータモデル <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">によって定義されます。</a></li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">構造化されたフォームベースのデータモデルによって定義されます。</a></li>
 <li>デザインとレイアウトにとらわれません。</li>
 <li>チャネルは、コンテンツフラグメントのコンテンツ（レイアウトとデザイン）のプレゼンテーションを所有しています</li>
 </ul>
@@ -53,12 +53,12 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>技術的詳細</strong></td>
 <td><ul>
-<li><strong>damとして実装：Asset</strong></li>
-<li>コン <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">テンツフラグメントモデルによる定義</a></li>
+<li><strong>dam:Asset</strong>として実装</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">コンテンツフラグメントモデル</a>で定義</li>
 </ul>
 </td>
 <td><ul>
-<li>cq: <strong>Pageとして実装</strong></li>
+<li><strong>cq:Page</strong>として実装</li>
 <li>編集可能なテンプレートで定義</li>
 <li>ネイティブHTMLレンダリング</li>
 </ul>
@@ -72,17 +72,17 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 <td><ul>
 <li>バリエーションは、チャネルまたはコンテキストに固有です。</li>
 <li>バリエーションはAEM Live Copyを使用して同期されます。</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">構築ブロック</a> ：バリエーション間でコンテンツを再利用できます。</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">バリエーションを超えて</a> コンテンツを再利用できるように構築</li>
 </ul>
 </td>
 </tr><tr><td><strong>機能</strong></td>
 <td><ul>
 <li>バリエーション</li>
 <li>バージョン</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank">バリエーション間のコンテンツの同期</a></li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">コンテンツフラグメントバージョンのVisual Diff</a></li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">複数行テキスト要素の注釈</a> 。</li>
-<li>複数行のテキスト要素のインテリジェント <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">要約</a> 。</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank">バリエーション間のコンテンツの</a> 同期</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">Visual </a> Diff Content Fragment versions</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">複数行のテキスト要素</a> の注釈</li>
+<li>複数行のテキスト要素のインテリジェントな<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">要約</a>。</li>
 <li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/creating-translation-projects-for-content-fragments.html" target="_blank">翻訳/ローカライゼーション</a></li>
 </ul>
 </td>
@@ -98,15 +98,15 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM SITES、AEM Screens、またはエクスペリエンスフラグメントで使用するAEMコアコンポーネントコンテンツフラグメントコンポーネント</a> 。</li>
-<li>AEM Content Services <a href="https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">を介したJSONエクスポート</a> （サードパーティの使用に対応）</li>
+<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM SITES、AEM Screens、またはエクスペリエンスフラグメントで使用するAEMコアコンポーネントコンテンツフラグメント</a> コンポーネント。</li>
+<li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>を介したJSONエクスポートによるサードパーティの利用</li>
 <li>AEM HTTP Assets APIを介したJSONによるサードパーティの利用。</li>
 </ul>
 </td>
 <td><ul>
 <li>AEM SITES、AEM Screensまたはその他のエクスペリエンスフラグメントで使用するAEMエクスペリエンスフラグメントコンポーネント。</li>
-<li>サードパーティ製システムで使用する <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">プレーンHTML</a> として書き出し</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">ターゲットオファー用のHTMLをAdobe Target</a> に書き出す</li>
+<li>サードパーティ製システムで使用する<a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">プレーンHTML</a>として書き出し</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">ターゲットオファー用のHTMLのAdobe</a> ターゲットへの書き出し</li>
 <li>ターゲットオファー用のJSONエクスポートをAdobe Targetに送信</li>
 </ul>
 </td>
@@ -143,26 +143,26 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 !![コンテンツフラグメントのアーキテクチャ](./assets/content-fragments-architecture.png)
 
 + **コンテンツフラグメントモデル** は、コンテンツフラグメントが取り込んで公開するコンテンツを定義する要素（またはフィールド）を定義します。
-+ コン **テンツフラグメント** は、論理コンテンツエンティティを表すコンテンツフラグメントモデルのインスタンスです。
-+ ただし、コンテンツフラグメントの **バリエーション** は、コンテンツフラグメントモデルに従います。コンテンツのバリエーションはあります。
++ **コンテンツフラグメント**&#x200B;は、論理コンテンツエンティティを表すコンテンツフラグメントモデルのインスタンスです。
++ ただし、コンテンツフラグメント&#x200B;**バリエーション**&#x200B;は、コンテンツフラグメントモデルに従います。
 + コンテンツフラグメントは次の方法で公開/使用できます。
-   + AEM WCM Core ComponentsのContent Fragmentコンポーネントを使用した **AEM Sites** (またはAEM Screens)でのコンテンツフラグメントの使用
-   + AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネントを介して **エクスペリエンスフラグメントにコンテンツフラグメントを埋め込み** 、任意のエクスペリエンスフラグメントの使用例で使用できます。
-   + コンテンツフラグメントのバリエーションコンテンツを **AEM Content Services** /APIページ経由でJSONとして公開する（読み取り専用の場合）。
-   + CRUDの使用例に対する **AEM AssetsHTTP API** （JSON形式）での直接呼び出しを介して、コンテンツフラグメントコンテンツ（すべてのバリエーション）をJSON形式で直接公開します。
+   + AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネントを介して、**AEM Sites**(またはAEM Screens)上のコンテンツフラグメントを使用する。
+   + AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネントを介して、コンテンツフラグメントを&#x200B;**エクスペリエンスフラグメント**&#x200B;に埋め込み、エクスペリエンスフラグメントの使用例に使用します。
+   + **AEM Content Services**&#x200B;およびAPIページを介した、コンテンツフラグメントのバリエーションコンテンツのJSONとしての公開（読み取り専用の使用例）。
+   + CRUDの使用例に対して、**AEM AssetsHTTP API**&#x200B;経由でAEM Assetsに直接呼び出して、コンテンツフラグメントコンテンツ（すべてのバリエーション）をJSONとして直接公開します。
 
 ## エクスペリエンスフラグメントのアーキテクチャ
 
 !![エクスペリエンスフラグメントのアーキテクチャ](./assets/experience-fragments-architecture.png)
 
-+ **編集可能なテンプレート**(これは、 **編集可能なテンプレートタイプ** 、および **** AEMページコンポーネントの実装で定義されます)は、エクスペリエンスフラグメントの作成に使用できる許可されたAEMコンポーネントを定義します。
-+ エ **クスペリエンスフラグメント** は、論理的なエクスペリエンスを表す編集可能なテンプレートのインスタンスです。
-+ エクスペリエンスフラグメントの **バリエーション** は、編集可能なテンプレートに従いますが、エクスペリエンス（コンテンツおよびデザイン）のバリエーションもあります。
++ **編集可能なテンプレート**(これは、 **編集可能なテンプレート** タイプと **AEMページコンポーネントの実装で定義されます**)は、エクスペリエンスフラグメントの作成に使用できる許可されたAEMコンポーネントを定義します。
++ **エクスペリエンスフラグメント**&#x200B;は、論理エクスペリエンスを表す編集可能なテンプレートのインスタンスです。
++ エクスペリエンスフラグメント&#x200B;**バリエーション**&#x200B;は編集可能なテンプレートに従いますが、エクスペリエンス（コンテンツとデザイン）のバリエーションがあります。
 + エクスペリエンスフラグメントは、次の方法で公開/消費できます。
    + AEM Experience Fragmentコンポーネントを使用した、AEM Sites(またはAEM Screens)でのエクスペリエンスフラグメントの使用。
-   + エクスペリエンスフラグメントのバリエーションコンテンツを **AEM Content Services** /APIページ経由でJSON（埋め込みHTMLを含む）として公開する。
-   + エクスペリエンスフラグメントのバリエーションを「プレーンHTML」 **として直接公開**&#x200B;します。
-   + エクスペリエンスフラグメントの **Adobe Targetへの書き出し** (HTMLオファーまたはJSONイベント)
+   + エクスペリエンスフラグメントのバリエーションコンテンツをJSON（埋め込みHTMLを含む）として&#x200B;**AEM Content Services**&#x200B;およびAPIページで公開します。
+   + エクスペリエンスフラグメントのバリエーションを&#x200B;**&quot;Plain HTML&quot;**&#x200B;として直接公開します。
+   + エクスペリエンスフラグメントを&#x200B;**Adobe Target**&#x200B;にHTMLまたはJSONオファーとして書き出します。
    + AEM SitesはHTMLオファーをネイティブでサポートしますが、JSONオファーはカスタム開発が必要です。
 
 ## コンテンツフラグメントのサポート資料
