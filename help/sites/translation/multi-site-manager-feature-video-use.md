@@ -15,20 +15,20 @@ translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
 
 # マルチサイトマネージャの使用 {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy Overview] (ライブコピーの概要 [!UICONTROL )と] Blueprint Configuration Manager (Blueprint Configuration Manager)は、Adobe Experience Manager SitesのMulti Site Manager機能を利用するためのAEM Authorインターフェイスです。
+[!UICONTROL Live Copy ] Overviewと [!UICONTROL Blueprint Configuration ] Managerは、Adobe Experience Manager SitesのMulti Site Manager機能を使用するためのAEM Authorインターフェイスです。
 
 ## ライブコピーの概要 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
 
-*ライブコピーの概要は、ライブコピーとそれぞれの設計図を管理するために使用されるタッチUIインターフェイスです。 この機能は、AEM 6.3で導入され、従来のUI Blueprintコントロールセンターに取って代わるものです。*
+*ライブコピーの概要は、ライブコピーとそれぞれの設計図を管理するために使用されるタッチUIインターフェイスです。この機能は、AEM 6.3で導入され、従来のUI Blueprintコントロールセンターに取って代わるものです。*
 
 ## Blueprint Configuration Manager — タッチ操作対応UI {#blueprint-config-mgr}
 
