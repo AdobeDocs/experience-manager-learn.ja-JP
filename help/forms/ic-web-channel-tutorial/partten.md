@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 除・売却Outlookパネルの構成{#configuring-retirement-outlook-panel}
+# リタイアメントOutlookパネルの構成{#configuring-retirement-outlook-panel}
 
 * これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 このパートでは、テキストとグラフのコンポーネントを追加して、Retierion Outlookパネルを構成します。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 * デフォルトのテキストを編集するには、「鉛筆」アイコンを選択します。
 
-* デフォルトのテキストを「退職所得見&#x200B;**通し」に置き換えます。**
+* デフォルトのテキストを「**退職所得見込み&quot;**」に置き換えます。
 
 **RightPanelターゲット領域の設定**
 
@@ -52,15 +52,15 @@ ht-degree: 0%
 
 * デフォルトのテキストを編集するには、「鉛筆」アイコンを選択します。
 
-* デフォルトのテキストを「**推定月次退職所得」に置き換えます。**
+* デフォルトのテキストを「**月次退職金の見積もり」**&#x200B;に置き換えます。
 
-## 除追加・売却所得見出しドキュメント・フラグメント {#add-retirement-income-outlook-document-fragment}
+## 除追加・売上高見出しドキュメントフラグメント{#add-retirement-income-outlook-document-fragment}
 
 * アセットアイコンをクリックし、フィルターを適用して「ドキュメントフラグメント」タイプのアセットを表示します。 RetiarementIncomeOutlookドキュメントフラグメントを左パネルのターゲット領域にドラッグ&amp;ドロップします。
 
-* コンテンツ領域 [にドキュメントフラグメントを追加する場合は](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) 、このページを参照してください。
+* ドキュメントフラグメントをコンテンツ領域に追加する場合は、[このページ](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)を参照してください。
 
-## 月別予想収入グラフの追加 {#adding-estimated-monthly-income-chart}
+## 月別予想収入グラフの追加{#adding-estimated-monthly-income-chart}
 
 * 右側のRightPanelターゲット領域をクリックします。 「+」アイコンをクリックして、グラフコンポーネントを挿入します。 月別予想収入は、列グラフで表示します。 新しく挿入したグラフコンポーネントをゆっくりタップします。 「レンチ」アイコンを選択して、設定プロパティシートを開きます。下のスクリーンショットに示すように、次のプロパティを使用してグラフを設定します。
 
