@@ -50,7 +50,7 @@ AEMがサポートする認証（および時々は認証）メカニズムに�
             <td>✔</td>
         </tr>
         <tr>
-            <td>トークンベース( <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化されたトークン</a>)</td>
+            <td>トークンベース（<a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化されたトークン</a>を含む）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -93,4 +93,4 @@ AEMがサポートする認証（および時々は認証）メカニズムに�
     </tbody>
 </table>
 
-コミュニティプロジェクトを介して⁕提供されますが、Adobeが直接サポートするわけではありません。 **
+&lt;⁕a0/>コミュニティプロジェクトを介して提供されますが、Adobeが直接サポートしていません。**
