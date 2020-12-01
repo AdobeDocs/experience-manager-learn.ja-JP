@@ -19,16 +19,16 @@ ht-degree: 0%
 
 # システム概要ダッシュボードの使用
 
-Adobe Experience Manager(AEM) [!UICONTROL System Overview] ()では、AEMインスタンスの設定、ハードウェア、および正常性を、すべて1つのダッシュボードから表示できます。
+Adobe Experience Manager(AEM) [!UICONTROL システム概要]は、AEMインスタンスの構成、ハードウェア、および正常性を、すべて1つのダッシュボードから高度に表示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. システム概要には次の場所からアクセスできます。 **AEM開始** / **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL システムの概要]**
+1. システム概要には次の場所からアクセスできます。**AEM開始** > **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL システムの概要]**
 
-   直接 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   **`<server-host>/libs/granite/operations/content/systemoverview.html`**&#x200B;に直接
 
-1. 「 [!UICONTROL システム概要] 」の情報は、「 [!UICONTROL ダウンロード] 」ボタンをクリックしてエクスポートできます。 情報は、次のエンドポイントを介して公開され [!DNL REST] ます。
-1. 以下は、 [!UICONTROL システム概要から書き出されたJSONの出力例です]。
+1. 「[!UICONTROL システム概要]」の情報は、「[!UICONTROL ダウンロード]」ボタンをクリックするとエクスポートできます。 この情報は、次の[!DNL REST]エンドポイントを介しても公開されます。
+1. 以下は、[!UICONTROL システム概要]からエクスポートされたJSONの出力例です。
 
    ```json
    {
