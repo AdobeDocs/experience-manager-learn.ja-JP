@@ -40,14 +40,14 @@ ht-degree: 6%
 >* Microsoft Visual C++ 2013再配布可能（6.5以降）
 
 
-AEM Formsの設置に関する [公式文書に従うことをお勧めします](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) 。 Windows環境にAEM Formsをインストールして設定するには、次の手順に従います。
+AEM Formsのインストールに関する[公式ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)に従うことをお勧めします。 Windows環境にAEM Formsをインストールして設定するには、次の手順に従います。
 
 * 適切なJDKがインストールされていることを確認します
-   * AEM 6.2が必要：Oracle SE 8 JDK 1.8.x (64bit)
+   * AEM 6.2が必要：OracleSE 8 JDK 1.8.x（64ビット）
 * 
-   * AEM 6.3およびAEM 6.4が必要：Oracle SE 8 JDK 1.8.x (64bit)
+   * AEM 6.3およびAEM 6.4が必要：OracleSE 8 JDK 1.8.x（64ビット）
 * AEM 6.5 JDK 8またはJDK 11が必要
-* [公式JDKの要件](https://helpx.adobe.com/jp/experience-manager/6-3/sites/deploying/using/technical-requirements.html) :
+* [公式JDK](https://helpx.adobe.com/jp/experience-manager/6-3/sites/deploying/using/technical-requirements.html) の要件は次のとおりです。
 * JAVA_HOMEが、インストール済みのJDKを指すように設定されていることを確認します。
    * WindowsでJAVA_HOME変数を作成するには、次の手順に従います。
       * 「マイコンピューター」を右クリックし、「プロパティ」を選択します。
@@ -78,20 +78,20 @@ AEM Formsの設置に関する [公式文書に従うことをお勧めします
 
    * パッケージ共有にログインするにはAdobe IDが必要です
    * お使いのバージョンのAEM Formsとオペレーティングシステムに適したパッケージで、追加AEM Formsを検索してください。
-   * または、適切 [なフォームアドオンパッケージをダウンロードできます](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
+   * または[適切なフォームアドオンパッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードできます
    * アドオンパッケージをインストールしたら、次の手順に従う必要があります
 
-      * **すべてのバンドルがアクティブ状態になっていることを確認します。 （AEMFD Signaturesバンドルを除く）。**
+      * **すべてのバンドルがアクティブ状態になっていることを確認します。（AEMFD Signaturesバンドルを除く）。**
       * **通常、すべてのバンドルがアクティブ状態になるまで5分以上かかります。**
    * **すべてのバンドルがアクティブになったら（AEMFD Signaturesバンドルを除く）、システムを再起動してAEM Formsのインストールを完了します**
 
 
-* 許可リストに追加 `sun.util.calendar` パッケージ化：
+* 許可リスト追加への`sun.util.calendar`パッケージ：
 
-   1. ブラウザーウィンドウでFelix Webコンソールを開き [ます](http://localhost:4502/system/console/configMgr)
-   2. Search and open Deserialization Firewall Configuration: `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-   3. ～ `sun.util.calendar` の新追加参入 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+   1. [ブラウザーウィンドウ](http://localhost:4502/system/console/configMgr)でFelix Webコンソールを開きます。
+   2. 検索して、デシリアル化ファイアウォール構成を開きます：`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+   3. 追加`sun.util.calendar`を`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`の下の新しいエントリとして
    4. 変更内容を保存します。
 
 おめでとう！!! これで、お使いのシステムにAEM Formsをインストールし、設定しました。
-必要に応じて、サーバー上で [Reader拡張機能](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) 、 [ またはPDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) を設定できます
+必要に応じて、サーバー上に[Reader拡張機能](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)または[ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html)を設定できます
