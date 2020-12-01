@@ -29,11 +29,11 @@ ht-degree: 0%
 
 AEMで監視フォルダーを設定する場合、ファイルが監視フォルダーに配置されたときに実行されるECMAスクリプトまたはJavaコードを関連付けます。 この記事では、印刷チャネルドキュメントを生成してファイルシステムに保存するECMAスクリプトについて説明します。
 
-監視フォルダーの設定とECMAスクリプトは、このチュートリアルの [最初に読み込んだアセットの一部です](introduction.md)
+監視フォルダーの設定とECMAスクリプトは、このチュートリアル](introduction.md)の[先頭で読み込んだアセットの一部です
 
 監視フォルダーに配置される入力ファイルの構造は次のとおりです。 ECMAスクリプトは、アカウント番号を読み取り、これらの各アカウントの印刷チャネルドキュメントを生成します。
 
-ドキュメント生成用のECMAスクリプトの詳細につ [いては、この記事を参照してください](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+ドキュメントを生成するためのECMAスクリプトの詳細については、[この記事](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)を参照してください。
 
 ```xml
 <accountnumbers>
