@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# AEM 6.5ワークフローでの手順としてのForm Data Model Serviceの使用 {#using-form-data-model-service-as-step-in-workflow}
+# AEM 6.5ワークフロー{#using-form-data-model-service-as-step-in-workflow}での手順としてのForm Data Model Serviceの使用
 
 AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Model Serviceを使用できるようになりました。 次のビデオでは、AEMワークフローでフォームデータモデルを設定する手順に必要な手順について説明します
 
@@ -29,7 +29,7 @@ AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Mode
 
 この機能をサーバーでテストするには、次の手順に従ってください
 
-* SampleRest.warファイルを使用してTomcatを [設定します](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)。 Tomcatにデプロイされたwarファイルには、申込者のクレジットスコアを返すコードが含まれています。クレジットスコアは、200 ～ 800の乱数です
+* [ここ](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)で説明したようにSampleRest.warファイルを使用してTomcatを設定します。 Tomcatにデプロイされたwarファイルには、申込者のクレジットスコアを返すコードが含まれます。クレジットスコアは200 ～ 800の乱数です
 
 * [ パッケージマネージャーを使用して、AEMにアセットを読み込みます](assets/aem65-loanapplication.zip)
 * パッケージには次の内容が含まれます。
@@ -37,7 +37,7 @@ AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Mode
    * FDM手順を使用するワークフロー・モデル。
    * FDMの手順で使用するフォーム・データ・モデル。
    * 送信時にワークフローをトリガーするアダプティブフォーム。
-* MortgageApplicationFormを開き [ます](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 詳細を入力し、送信します。 フォームの送信時に、 [申込みワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) がトリガーされます。
+* [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)を開きます。 詳細を入力し、送信します。 フォームの送信時に、[アプリケーションワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガされます。
 
 ![ ワークフロー ](assets/invokefdm651.PNG).
 ワークフローは、Or Splitコンポーネントを使用して、クレジットスコアが500を超える場合は、アプリをadminにルーティングします。 クレジットスコアが500未満の場合、アプリはキャバリにルーティングされます。
