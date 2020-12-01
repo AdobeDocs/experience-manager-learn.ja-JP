@@ -21,32 +21,32 @@ ht-degree: 0%
 
 # MyAccountFormの作成
 
-フォームMyAccountForm **** は、ユーザーがアプリケーションIDと、そのアプリケーションIDに関連付けられたモバイル番号を確認した後に、部分的に完了したアダプティブフォームを取得するために使用されます。
+ユーザーが申込みIDと、申込みIDに関連付けられたモバイル番号を確認した後、フォーム&#x200B;**MyAccountForm**&#x200B;を使用して、部分的に完了したアダプティブフォームを取得します。
 
 ![マイアカウントフォーム](assets/6599.JPG)
 
-ユーザーがアプリケーションIDを入力し、「FetchApplication **** 」ボタンをクリックすると、フォームデータモデルの「Get」操作を使用して、アプリケーションIDに関連付けられたモバイル番号がデータベースから取得されます。
+ユーザーがアプリケーションIDを入力し、**FetchApplication**&#x200B;ボタンをクリックすると、フォームデータモデルのGet操作を使用して、アプリケーションIDに関連付けられたモバイル番号がデータベースから取得されます。
 
-このフォームでは、Form Data ModelのPOST呼び出しを使用して、OTPを使用してモバイル番号を検証します。 次のコードを使用して、モバイル番号の検証が成功した場合に、フォームの送信アクションがトリガーされます。 submitFormという名前の送信ボタンのクリックイベントをトリガし **ます**。
+このフォームでは、Form Data ModelのPOST呼び出しを使用して、OTPを使用してモバイル番号を検証します。 次のコードを使用して、モバイル番号の検証が成功した場合に、フォームの送信アクションがトリガーされます。 **submitForm**&#x200B;という送信ボタンのクリックイベントをトリガーします。
 
 >[!NOTE]
-> MyAccountFormの適切なフィールドに、ご使用の [Nexmo](https://dashboard.nexmo.com/) アカウントに固有のAPIキーとAPIシークレットの値を指定する必要があります
+> [Nexmo](https://dashboard.nexmo.com/)アカウントに固有のAPIキーとAPIシークレットの値を、MyAccountFormの適切なフィールドに入力する必要があります
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-このフォームは、 **/bin/renderafにマウントされたサーブレットにフォーム送信を転送するカスタム送信アクションに関連付けられています**
+このフォームは、**/bin/renderaf**&#x200B;にマウントされたサーブレットにフォーム送信を転送するカスタム送信アクションに関連付けられています
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-/bin/renderafにマウントされているサーブレット内のコードは、保存されたデータが事前に入力されたアダプティブフォームstoreafwithattachmentsをレンダリングするためのリクエストを転送します。 ****
+**/bin/renderaf**&#x200B;にマウントされているサーブレット内のコードは、保存されたデータが事前に入力されたアダプティブフォームstoreafwithattachmentsをレンダリングする要求を転送します。
 
 
-* MyAccountFormは、こちらから [ダウンロードできます](assets/my-account-form.zip)
+* MyAccountFormは、[ここから](assets/my-account-form.zip)ダウンロードできます
 
-* サンプルフォームは、 [カスタムのアダプティブフォームテンプレートに基づいており](assets/custom-template-with-page-component.zip) 、サンプルフォームが正しくレンダリングされるためにはAEMに読み込む必要があります。
+* サンプルフォームは、サンプルフォームが正しくレンダリングされるためにAEMに読み込む必要がある、[カスタムアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip)に基づいています。
 
-* [MyAccountForm送信に関連付けられたカスタム送信ハンドラー](assets/custom-submit-my-account-form.zip) 、AEMにインポートする必要があります。
+* [MyAccountForm送信に関連付けられたカスタム送信](assets/custom-submit-my-account-form.zip) ハンドラをAEMにインポートする必要があります。
