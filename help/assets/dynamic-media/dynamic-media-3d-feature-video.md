@@ -17,18 +17,18 @@ ht-degree: 0%
 ---
 
 
-# ダイナミックメディア3DとAEM Assetsの連携{#using-dynamic-3d-with-aem-assets}
+# ダイナミックメディア3DとAEM Assets{#using-dynamic-3d-with-aem-assets}の使用
 
 ダイナミックメディア3DのAdobe Experience Manager対応により、インタラクティブな3Dパワーエクスペリエンスを容易にスケール設定および配信できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
-3D [次元ビューアをご覧ください](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) 。
+3D [次元ビューア](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/)をこちらで確認します。
 
 
 ## 3D Experience Viewerの使用
 
 * **カメラを回転** :オブジェクトの周りをオービットするには — 左クリック+ドラッグまたはPress + Drag
-* **カメラをパン** :パンするには(表示を左、右、上、下に) — 右クリック+ドラッグ/ Control +ドラッグ/2本指を押しながらドラッグ
-* **ズームカメラ** :ズームするには — スクロールホイールまたはピンチ
+* **カメラのパン** :パンするには(表示を左、右、上、下に) — 右クリック+ドラッグ/ Control +ドラッグ/2本指を押しながらドラッグ
+* **カメラのズーム** :ズームするには — スクロールホイールまたはピンチ
 * **カメラをリセット/中央配置** :オブジェクトを中央に配置するには —重複クリックまたは重複タップ
