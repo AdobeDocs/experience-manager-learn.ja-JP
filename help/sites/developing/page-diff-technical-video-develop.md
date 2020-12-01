@@ -16,27 +16,27 @@ ht-degree: 6%
 ---
 
 
-# ページの差異に対する開発 {#developing-for-page-difference}
+# ページの違いを考慮した開発{#developing-for-page-difference}
 
 このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを使用する方法を示します。
 
-## ページの差異スタイルのカスタマイズ {#customizing-page-difference-styles}
+## ページ差異スタイルのカスタマイズ{#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->このビデオでは、カスタムCSSをwe.Retailクライアントライブラリに追加します。このライブラリでは、カスタマイザのAEM Sitesプロジェクトに対してこれらの変更を行う必要があります。次のコード例では、 `my-project`.
+>このビデオでは、カスタムCSSをwe.Retailクライアントライブラリに追加します。このライブラリでは、カスタマイザのAEM Sitesプロジェクトに対してこれらの変更を行う必要があります。次のコード例では、`my-project`.
 
-AEMのページ差は、の直接読み込みを介してOOTB CSSを取得 `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`します。
+AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`の直接読み込みを介してOOTB CSSを取得します。
 
 クライアントライブラリカテゴリを使用する代わりにCSSを直接読み込むので、カスタムスタイルの新しい注入ポイントを見つける必要があります。このカスタム注入ポイントは、プロジェクトのオーサリングclientlibです。
 
 これは、これらのカスタムスタイルの上書きをテナント固有にするメリットを持ちます。
 
-### オーサリングclientlibの準備 {#prepare-the-authoring-clientlib}
+### オーサリングclientlib {#prepare-the-authoring-clientlib}を準備する
 
-プロジェクトの `authoring` clientlibが `/apps/my-project/clientlib/authoring.`
+`/apps/my-project/clientlib/authoring.`にプロジェクト用の`authoring` clientlibが存在することを確認します
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -45,9 +45,9 @@ AEMのページ差は、の直接読み込みを介してOOTB CSSを取得 `/lib
         categories="[my-project.authoring]"/>
 ```
 
-### カスタムCSSの指定 {#provide-the-custom-css}
+### カスタムCSSを指定{#provide-the-custom-css}
 
-を追加プロジェクトのclientlibに対して、上書きスタイルを提供するLESSファイルを指し示す。 `authoring``css.txt` [便利な機能が多数あるので](https://lesscss.org/) 、LESS（以下の例で使用するクラスラップを含む）が望ましくありません。
+プロジ追加ェクトの`authoring` clientlib a `css.txt`に対して、優先スタイルを提供するLESSファイルを指します。 [この例で](https://lesscss.org/) 使用するクラスラップを含む便利な機能が多数あるので、リストをお勧めします。
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-でスタイルの上書きを含む `less` ファイルを作成し、必要に応じてオーバーリングスタイルを指定し `/apps/my-project/clientlibs/authoring/css/htmldiff.less`ます。
+`/apps/my-project/clientlibs/authoring/css/htmldiff.less`に優先スタイルを含む`less`ファイルを作成し、必要に応じてオーバーリングスタイルを指定します。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -101,11 +101,11 @@ body {
 }
 ```
 
-### ページコンポーネントを介して、オーサリングclientlib CSSを含める {#include-the-authoring-clientlib-css-via-the-page-component}
+### ページコンポーネント{#include-the-authoring-clientlib-css-via-the-page-component}を介して、オーサリングclientlib CSSを含めます。
 
-オーサリングclientlibsカテゴリをプロジェクトのベースページのタグの `/apps/my-project/components/structure/page/customheaderlibs.html` 直前に含め、スタイルが確実に読み込まれるよう `</head>` にします。
+オーサリングclientlibsカテゴリをプロジェクトの基本ページの`/apps/my-project/components/structure/page/customheaderlibs.html`の直前に`</head>`タグに含め、スタイルが読み込まれるようにします。
 
-これらのスタイルは、 [!UICONTROL 編集] WCMモードと [!UICONTROL プレビュー] WCMモードに制限する必要があります。
+これらのスタイルは、[!UICONTROL 編集]と[!UICONTROL プレビュー]のWCMモードに制限する必要があります。
 
 ```xml
 <head>
