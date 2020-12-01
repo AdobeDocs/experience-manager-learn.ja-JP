@@ -29,9 +29,9 @@ Apache SlingはJackson JSONエクスポーターを提供しており、Slingモ
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] は、 [!DNL Apache Sling] プロジェクトの機能であり、AEM製品のリリースサイクルに直接結び付けられていません。 [!DNL Sling Model Exporter] はAEM 6.3以降と互換性があります。
+[!DNL Sling Model Exporter] は、 [!DNL Apache Sling] プロジェクトの機能で、AEM製品のリリースサイクルに直接結び付けられていません。[!DNL Sling Model Exporter] はAEM 6.3以降と互換性があります。
 
-## の使用例 [!DNL Sling Model Exporter]
+## [!DNL Sling Model Exporter]の使用例
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
 
@@ -41,32 +41,32 @@ Apache SlingはJackson JSONエクスポーターを提供しており、Slingモ
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
 
-Javaクラスに [!DNL Exporter] 注釈を追加するのと同じくらい簡単に、でのサポート [!DNL Sling Model]`@Exporter` を有効にできます。
+[!DNL Sling Model]で[!DNL Exporter]サポートを有効にするのは、`@Exporter`注釈をJavaクラスに追加するのと同じくらい簡単です。
 
 ## Slingモデルエクスポータのオプションの適用
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] は、モデルごとのエクスポーターオプションをエクスポーター実装に渡して、最終的にどのようにエクスポートされるかを決定する [!DNL Sling Model] のをサポートします。 これらのオプションは、一般に、後述のインライン注釈を使用して実行できるデータポイントご [!DNL Sling Model] とに、が書き出される方法に「グローバル」に適用されます。
+[!DNL Sling Model Exporter] は、モデルごとのエクスポーターオプションをエクスポーター実装に渡して、最終的にエクスポーターがどのようにエクスポートされ [!DNL Sling Model] るかを決定できます。これらのオプションは、通常、[!DNL Sling Model]の書き出し方法に「グローバル」に適用されます。以下に説明するインライン注釈を使用して行うことができるデータポイントごとに適用されます。
 
 [!DNL Jackson Exporter] 次のオプションがあります。
 
 * [マッパー機能のオプション](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [シリアル化機能のオプション](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 注 [!DNL Jackson] 釈の適用
+## [!DNL Jackson]注釈の適用
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
 
-また、Exporters実装は、クラスにインラインで適用できる注釈をサポートしている場合があります。これにより、データのエクスポート方法をより詳細に制御できます。 [!DNL Sling Model]
+また、[!DNL Sling Model]クラスにインラインで適用できる注釈をエクスポーター実装でサポートしている場合もあります。これにより、データのエクスポート方法をより詳細に制御できます。
 
 * [[!DNL Jackson Exporter] 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
-## コードの表示 {#view-the-code}
+## コード{#view-the-code}の表示
 
 [SampleSlingModelExporter.java](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleSlingModelExporter.java)
 
-## サポート資料 {#supporting-materials}
+## サポート資料{#supporting-materials}
 
 * [[!DNL Jackson Mapper] 機能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [[!DNL Jackson Serialization] 機能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
