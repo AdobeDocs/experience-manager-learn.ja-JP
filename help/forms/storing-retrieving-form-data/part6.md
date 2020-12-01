@@ -8,10 +8,10 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '278'
+ht-degree: 11%
 
 ---
 
@@ -23,18 +23,28 @@ ht-degree: 6%
 >これをシステムで実行するには、以下が必要です
 >
 >* AEM Forms（バージョン6.3以降）
->* MYSQLデータベース
+>* MySqlデータベース
 
 
 この機能をAEM Formsインスタンスでテストするには、次の手順に従ってください
 
-* チュートリアルアセットをローカルシステムにダウンロードして [解凍し](assets/store-retrieve-form-data.zip) ます。
-* Felix Webコンソールを使用して、techmarketingdemos.jarおよびmysqldriver.jarバンドルをデプロイおよび開始します。 [](http://localhost:4502/system/console/configMgr)
-* MYSQL Workbenchを使用して、aemformstutorial.sqlを読み込みます。 これにより、このチュートリアルを機能させるために必要なスキーマとテーブルがデータベースに作成されます。
-* AEMパッケージマネージャーを使用してStoreAndRetrieve.zipを読み込み [ます。](http://localhost:4502/crx/packmgr/index.jsp) このパッケージには、アダプティブフォームテンプレート、ページコンポーネントのクライアントライブラリ、アダプティブフォームとデータソースのサンプル設定が含まれています。
-* configMgrにログインし [ます。](http://localhost:4502/system/console/configMgr) 「Apache Sling Connection Pooled DataSource」を検索します。 電子メールのチュートリアルに関連付けられたデータソースエントリを開き、データベースインスタンスに固有のユーザー名とパスワードを入力します。
-* アダプティブ [フォームを開く](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
-* 詳細を入力し、「保存して後で続行」ボタンをクリックします
+* [felix Webコンソール](http://localhost:4502/system/console/bundles)を使用して、[MySql Driver Jar](assets/mysqldriver.jar)ファイルをダウンロードし、展開します
+* [felix Webコンソール](http://localhost:4502/system/console/bundles)を使用して[OSGiバンドル](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar)をダウンロードし、展開します
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、クライアントlib、アダプティブフォームテンプレート、カスタムページコンポーネント](assets/store-and-fetch-af-with-data.zip)を含む[パッケージをダウンロードし、インストールします
+* [FormsAndDocumentsインターフェイス](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を使用して[サンプルのアダプティブフォーム](assets/sample-adaptive-form.zip)を読み込みます
+
+* MySql Workbenchを使用して[form-data-db.sql](assets/form-data-db.sql)を読み込みます。 これにより、このチュートリアルを機能させるために必要なスキーマとテーブルがデータベースに作成されます。
+* [configMgrにログインします。](http://localhost:4502/system/console/configMgr) 「Apache Sling Connection Pooled DataSource」を検索します。次のプロパティを使用して、**SaveAndContinue**&#x200B;という名前の新しいApache Sling接続プール済みデータソースエントリを作成します。
+
+| プロパティ名 | 値 |
+------------------------|---------------------------------------
+| Datasource Name | SaveAndContinue |
+| JDBCドライバークラス | com.mysql.cj.jdbc.Driver |
+| JDBC接続URI | jdbc:mysql://localhost:3306/aemformstutorial |
+
+
+* [アダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)を開きます
+* 詳細を入力し、「保存して後で続行」ボタンをクリックします。
 * GUIDが含まれるURLを取得する必要があります。
 * URLをコピーして、新しいブラウザータブに貼り付けます。 **URLの末尾に空白がないことを確認します。**
-* アダプティブフォームには、前の手順のデータが入力されます
+* アダプティブフォームには、前の手順のデータが入力されます。
