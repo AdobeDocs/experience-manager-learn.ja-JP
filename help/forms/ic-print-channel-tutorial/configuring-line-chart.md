@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 最初の対話型通信ドキュメント用の折れ線グラフの設定 {#configuring-line-chart-for-your-first-interactive-communication-document}
+# 最初の対話型通信ドキュメント用の折れ線グラフの設定{#configuring-line-chart-for-your-first-interactive-communication-document}
 
 この部分では、勘定残高を表示する折れ線グラフを追加します。
 
