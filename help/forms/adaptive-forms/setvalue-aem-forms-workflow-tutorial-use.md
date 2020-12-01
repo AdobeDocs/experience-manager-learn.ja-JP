@@ -44,18 +44,18 @@ AEMワークフローでは、プロセスステップを使用します。 こ�
 
 * [Developingwithserviceuserバンドルのデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [サンプルバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 これは、送信されたxmlデータ内の要素の値を設定できるカスタムOSGIバンドルです
+* [サンプルバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、送信されたxmlデータ内の要素の値を設定できるカスタムOSGIバンドルです
 
 * [zipファイルの内容をダウンロードして抽出します。](assets/setvalueassets.zip)
-* ブラウザーで [パッケージマネージャーを指定](http://localhost:4502/crx/packmgr/index.jsp)
+* ブラウザーに[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を指定します。
 * setValueWorkflow.zipを読み込んでインストールします。 これはサンプルのワークフローモデルです。
-* ブラウザーが [Formsとドキュメントを指すように指示](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* ブラウザーで[Formsと](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)ドキュメントを指定
 * 「作成」をクリックします |ファイルのアップロード
 * TimeOfRequestForm.zipをアップロードします。
-* TimeOffRequestformを開 [く](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)を開きます。
 * 3つの必須フィールドに入力し、
 * AEMに「管理者」としてログインする（まだログインしていない場合）
-* AEM受信トレイに移動 [](http://localhost:4502/aem/inbox)
+* [&quot;AEM受信トレイ&quot;](http://localhost:4502/aem/inbox)に移動
 * 「レビュータイムオフリクエスト」フォームを開きます
 * 最初のパネルのフィールドが無効になっています。 これは、レビュー担当者がフォームを開いているためです。 また、要求の承認または却下のパネルが表示されます
 
