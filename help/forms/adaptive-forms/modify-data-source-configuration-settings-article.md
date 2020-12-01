@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# データソースの設定を変更する機能{#ability-to-modify-data-source-configuration-settings}
+# データソース構成設定の変更{#ability-to-modify-data-source-configuration-settings}
 
 AEM Forms6.4リリースまでは、データソースの設定後は、RESTfulサービスのスキーム、ホスト、Base Pathを変更できませんでした。 この問題は、データソースを異なる環境に対してテストする場合に発生していました。
 
@@ -30,5 +30,7 @@ AEM Forms6.5のリリースにより、上記の特性を簡単に変更でき�
 
 **AEM 6.4でのデータソースの設定**
 
-![64DataSource Configuration](assets/64release.gif)**Editable Data Source Configuration in AEM 6.5以降**![65DataSource Configuration](assets/modifiabledatasource.jfif)
+![64DataSource ](assets/64release.gif)
+**ConfigurationAEM 6.5以降での編集可能なデータソースの設定**
+![65DataSourceの設定](assets/modifiabledatasource.jfif)
 
