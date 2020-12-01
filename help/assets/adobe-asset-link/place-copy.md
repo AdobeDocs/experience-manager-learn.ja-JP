@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# コピーを配置 {#place-copy}
+# コピーを配置{#place-copy}
 
 「コピーを配置」操作を使用して、AEM Assetsのアセットを使用する方法を説明します。
 
