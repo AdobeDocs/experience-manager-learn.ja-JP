@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# 起動プロパティ追加のターゲット式 {#adobe-target-extension}
+# 起動プロパティの追加ターゲット式{#adobe-target-extension}
 
-このビデオに続いて作業を行うには、AEMとの [統合Experience Platform Launchが既に完了している必要があります](../experience-platform-launch/overview.md)。
+このビデオに続けて説明するには、AEM](../experience-platform-launch/overview.md)との[統合Experience Platform Launchが既に存在する必要があります。
 
 Experience Platform Launchを使用してAdobe TargetをAEM Webサイトに対して有効にする方法を説明します。
 
