@@ -24,9 +24,9 @@ HTML5フォームは、AEMでホストされるサーブレットに送信でき
 
 ## 送信ハンドラーの作成
 
-単純なサーブレットを作成して、HTML5フォームの送信を処理できます。 送信されたデータは、次のコードを使用して抽出できます。 この [サーブレット](assets/html5-submit-handler.zip) は、このチュートリアルの一部として使用できます。 パッ [ケージマネージャを使用して](assets/html5-submit-handler.zip) サーブレットをインストールしてください [](http://localhost:4502/crx/packmgr/index.jsp)
+単純なサーブレットを作成して、HTML5フォームの送信を処理できます。 送信されたデータは、次のコードを使用して抽出できます。 この[サーブレット](assets/html5-submit-handler.zip)は、このチュートリアルの一環として利用できます。 [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[サーブレット](assets/html5-submit-handler.zip)をインストールしてください
 
-9行目のコードは、J2EEプロセスの呼び出しに使用できます。 コードを使用してJ2EEプロセスを呼び出す場合は、 [AdobeLiveCycleのクライアントSDKの設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) (Configuration)を設定していることを確認してください。
+9行目のコードは、J2EEプロセスの呼び出しに使用できます。 コードを使用してJ2EEプロセスを呼び出す場合は、[AdobeLiveCycleのクライアントSDKの設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)を設定していることを確認してください。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -60,14 +60,14 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ![submit-url](assets/submit-url.PNG)
 
-* xdpをタップし、 _プロパティ_/_詳細をクリックします_
+* xdpをタップし、_プロパティ_->_詳細_&#x200B;をクリックします
 * http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.htmlをコピーして、「Submit URL」テキストフィールドに貼り付けます。
-* 「 _保存して閉じる_ 」ボタンをクリックします。
+* 「_SaveAndClose_」ボタンをクリックします。
 
 ### 除外パス追加のエントリ
 
-* configMgrに移動し [ます](http://localhost:4502/system/console/configMgr)。
-* Granite _CSRFフィルタのAdobeを検索_
+* [configMgr](http://localhost:4502/system/console/configMgr)に移動します。
+* _AdobeGranite CSRF Filter_&#x200B;を検索します
 * 「Excluded Paths」追加セクションの次のエントリ
 * _/content/AemFormsSamples/handlehml5formsubmission_
 * 変更を保存する
@@ -75,13 +75,13 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ### フォームのテスト
 
 * xdpテンプレートをタップします。
-* 「 _プレビュー_/プレビューをHTMLとして」をクリックします。
+* _プレビュー_->プレビューをHTMLでクリック
 * フォームにデータを入力し、「送信」をクリックします
 * サーバーのstdout.logファイルに送信されたデータが表示されます
 
 ### 追加の読み取り
 
-HTML5フォーム送信からPDFを生成する場合も、この [記事](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) （英語のみ）を使用することをお勧めします。
+HTML5フォームの送信からPDFを生成する場合は、この[記事](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)も推奨します。
 
 
 
