@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 計算済フォームデータモデル要素のAEM Formsでの作成{#creating-computed-form-data-model-elements-in-aem-forms}
+# 計算済みフォームデータモデル要素のAEM Forms{#creating-computed-form-data-model-elements-in-aem-forms}での作成
 
 計算済みフォームデータモデル要素を使用すると、1つ以上のフォームデータモデル要素に操作結果を格納できます。 例えば、月給フィールドに対して数学演算を実行して月給を計算し、格納するとします。 これを行うには、給与を12で割り、結果をmonthlySalaryという計算済みフォームデータモデル要素に格納します。
 
