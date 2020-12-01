@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 28%
+ht-degree: 32%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-このチュートリアルは、 **AEMをCloud Serviceとして使用するように設計されており、** AEM 6.5+ **および** AEM 6.4.2+と下位互換性があり ****&#x200B;ます。 サイトは次を使用して実装されます。
+このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5+**&#x200B;および&#x200B;**AEM 6.4.2+**&#x200B;と下位互換性があります。 サイトは次を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
@@ -47,14 +47,14 @@ WKND は、いくつかの海外の都市のナイトライフ、アクティビ
 
 ### Adobe XDUIキット
 
-To make this tutorial closer to a real-world scenario Adobe&#39;s talented UX designers created the mockups for the site using [Adobe XD](https://www.adobe.com/products/xd.html). チュートリアルの過程で、さまざまなデザインが完全にオーサリング可能なAEMサイトに実装されます。 Special thanks to **Lorenzo Buosi** and **Kilian Amendola** who created the beautiful design for the WKND site.
+このチュートリアルを現実のシナリオに近づけるために、Adobeの有能なUXデザイナーが、[Adobe XD](https://www.adobe.com/products/xd.html)を使ってサイトのモックアップを作成しました。 チュートリアルの過程で、さまざまなデザインが完全にオーサリング可能なAEMサイトに実装されます。 WKND地域の美しいデザインを作った&#x200B;**ロレンツォ・ブオシ**&#x200B;と&#x200B;**キリアン・アメンデーション・オラ**&#x200B;に感謝。
 
 XD UIキットをダウンロードします。
 
 * [AEMコアコンポーネントUIキット](assets/overview/AEM-CoreComponents-UI-Kit.xd)
 * [WKND UIキット](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
 
-WKNDという名前は、開発者が ***週末の大部分をチュートリアルに費やすのに適しているので*** 、適しています。
+WKNDという名前は、開発者がチュートリアルを完了するために&#x200B;***週末***&#x200B;の方が良いと思うので、適切です。
 
 ### GitHub {#github}
 
@@ -66,47 +66,47 @@ WKNDという名前は、開発者が ***週末の大部分をチュートリア
 
 >[!NOTE]
 >
-> このチュートリアルの前のバージョンで作業していた場合でも、 [ソリューションパッケージ](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1) と [コードはGitHubにあります](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1) 。
+> このチュートリアルの前のバージョンで作業していた場合、GitHubには[ソリューションパッケージ](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1)と[コード](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1)が残っています。
 
 ## ローカル開発環境 {#local-dev-environment}
 
 このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS環境で実行しているCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立している必要があります。
 
-**AEMを初めてCloud Serviceに？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
 **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ### 必要なソフトウェア
 
-次のファイルをローカルにインストールする必要があります。
+以下をローカルにインストールしておく必要があります。
 
-* [CLOUD SERVICESDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) 、 [AEM 6.5](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/technical-requirements.html) 、 [AEM 6.4 + SP2としてのAEM](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM as a Cloud Service の SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) または[AEM 6.5](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/technical-requirements.html)または[AEM 6.4 + SP2](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) (AEM 6.5以降のみ)
-* [Apache Maven](https://maven.apache.org/) （3.3.9以降）
-* [Node.js v10 以降](https://nodejs.org/en/)
+* [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
+* [Node.js v10 以降](https://nodejs.org/ja/)
 * [npm 6 以降](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
 
 ### 統合開発環境(IDE)
 
-このチュートリアルでは、 [AEM Developer](https://www.eclipse.org/)[](https://eclipse.adobe.com/aem/dev-tools/) Tool PluginをIDEとして使用しますが、JavaおよびMavenプロジェクトをサポートするIDEはどれでも使用できます。 このチュートリアルでは、IDEの特定の機能への依存が最小限に抑えられます。
+このチュートリアルでは、[Eclipse](https://www.eclipse.org/)と[AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/)をIDEとして使用しますが、JavaおよびMavenプロジェクトをサポートするIDEはどれでも使用できます。 このチュートリアルでは、IDEの特定の機能への依存が最小限に抑えられます。
 
-Eclipseまたは [Visual Studioコード](https://code.visualstudio.com/) 、 [IntelliJなどの他のIDEを使用する詳細な手順については、](https://www.jetbrains.com/idea/)次のガイドを [参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+[Visual Studioコード](https://code.visualstudio.com/)や[IntelliJ](https://www.jetbrains.com/idea/)など、Eclipseや他のIDEを使用する詳細な手順については、[次のガイド](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)を参照してください。
 
 ## 参照サイト {#reference-site}
 
-WKNDサイトの完成版も参考にしてください。 [https://wknd.site/](https://wknd.site/)
+WKNDサイトの完成版も参考にしてください。[https://wknd.site/](https://wknd.site/)
 
-このチュートリアルでは、AEM開発者に必要な主な開発スキルについて説明しますが、サイト全体をエンドツーエンドに構築する *わけではありません* 。 完成したリファレンスサイトも、すぐに使えるAEMの機能をさらに詳しく調べ、確認するための大きなリソースです。
+このチュートリアルでは、AEM開発者に必要な主な開発スキルを習得しますが、**&#x200B;ではなく&lt;a1/>、サイト全体をエンドツーエンドに構築します。 完成したリファレンスサイトも、すぐに使えるAEMの機能をさらに詳しく調べ、確認するための大きなリソースです。
 
-To test the latest code before jumping into the tutorial, download and install the **[latest release from GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
+チュートリアルに進む前に最新のコードをテストするには、GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**から**[&#x200B;最新のリリースをダウンロードしてインストールします。
 
 ### Adobe Stock電力
 
-WKNDリファレンスWebサイトの画像の多くは、 [Adobe Stockのもので、https://www.adobe.com/legal/terms.htmlの「Demo Asset Additional Terms」で定義されているサードパーティのマテリアルで](https://stock.adobe.com/) す [](https://www.adobe.com/jp/legal/terms.html)。 Adobe Stockの画像を、Webサイトやマーケティング資料など、このデモWebサイトを閲覧する以外の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
+WKNDリファレンスWebサイトの画像の多くは、[Adobe Stock](https://stock.adobe.com/)のもので、[https://www.adobe.com/legal/terms.html](https://www.adobe.com/jp/legal/terms.html)のDemo Asset Additional Termsで定義されているThird Party Materialです。 Adobe Stockの画像を、Webサイトやマーケティング資料など、このデモWebサイトを閲覧する以外の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
 
 Adobe Stockでは、1億4000万を超える高品質でロイヤリティフリーの画像にアクセスでき、写真、グラフィック、ビデオ、テンプレートなど、クリエイティブプロジェクトを急速に開始できます。
 
 ## 次の手順 {#next-steps}
 
-何を待ってる！!「 [プロジェクト設定](project-setup.md) 」の章に進み、AEMプロジェクトアーキタイプを使用して新しいAdobe Experience Managerプロジェクトを生成する方法を学び、チュートリアルを開始します。
+何を待ってる！!「[プロジェクト設定](project-setup.md)」の章に進み、AEMプロジェクトアーキタイプを使用して新しいAdobe Experience Managerプロジェクトを生成する方法を学び、チュートリアルを開始します。
