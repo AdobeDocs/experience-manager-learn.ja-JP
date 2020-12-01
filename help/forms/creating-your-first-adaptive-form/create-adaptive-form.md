@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# Creating Adaptive Form {#creating-adaptive-form}
+# アダプティブフォームの作成{#creating-adaptive-form}
 
 パート1では、前のレッスンで作成したテンプレートに基づいてアダプティブフォームを作成し、適切なボタンを持つツールバーを設定します。
 
