@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Java Content Repository(JCR)の概要 {#introduction-jcr}
+# Java Content Repository (JCR)の概要{#introduction-jcr}
 
 Adobe Experience Managerが使用するJava Content Repository(JCR)の概要です。 JCRはAEMテクノロジスタックの基本レベルで、基本的なコンテンツの持続性、ストレージ、検索、アクセス制御などを担当します。
 
