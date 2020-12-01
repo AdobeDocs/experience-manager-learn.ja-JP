@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Creating a Page {#creating-page-aem-sites}
+# ページの作成{#creating-page-aem-sites}
 
 Adobe Experience Managerのページテンプレートを使用してサイトページを作成する方法を学びます。
 
