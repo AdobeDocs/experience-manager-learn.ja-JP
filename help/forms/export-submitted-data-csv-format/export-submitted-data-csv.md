@@ -22,13 +22,18 @@ ht-degree: 1%
 >
 >このサンプルは、スキーマやフォームデータモデルに基づいていないアダプティブFormsでのみ機能します
 
-![表構造](assets/tablestructure.PNG)スキーマの名前が表示されているので、次の列が定義された表のフォーム送信がこのスキーマ内にあります。
+![表](assets/tablestructure.PNG)
+構造スキーマの名前が「aemformstutorial」です。このスキーマ内部には、次の列が定義された表のフォーム送信があります
 
 * formdata:この列には、送信されたフォームデータが格納されます
 * formname:この列には、送信されたフォームの名前が保持されます
 * id:これは主キーで、自動増分に設定されます
 
-テーブル名と2列の名前は、以下のスクリーンショットに示すように、OSGi設定プロパティとして表示されます。![osgi-configuration](assets/configuration.PNG)コードはこれらの値を読み込み、実行する適切なSQLクエリを構築します。 例えば、次のクエリは、上記の値&#x200B;**SELECT formdata FROM aemformstutorial.formsubmissionsに基づいて実行されます。ここで、formname=timeoffrequestform**&#x200B;上のクエリでは、フォームの名前(timeoffrequestform)がリクエストパラメーターとしてサーブレットに渡されます。
+テーブル名と2列の名前は、以下のスクリーンショットに示すように、OSGi設定プロパティとして表示されます。
+![osgi-configuration](assets/configuration.PNG)
+コードはこれらの値を読み取り、実行する適切なSQLクエリを構築します。 例えば、上記の値に基づいて次のクエリが実行されます
+**SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform**
+上記のクエリでは、フォームの名前(timeoffrequestform)がリクエストパラメーターとしてサーブレットに渡されます。
 
 ## **OSGiサービスの作成**
 
@@ -36,7 +41,7 @@ ht-degree: 1%
 
 * 37行目：Apache Sling接続プールされたデータソースにアクセスしています。
 
-* 89行目：これはサービスのエントリポイントです。メソッドは、formNameを入力パラメーターとして取り込み、指定されたフォーム名に関連する送信済みデータを取得します。 `getCSVFile(..)`
+* 89行目：これはサービスのエントリポイントです。メソッド`getCSVFile(..)`は、formNameを入力パラメーターとして取り込み、指定されたフォーム名に関連する送信済みデータを取得します。
 
 >[!NOTE]
 >
@@ -256,7 +261,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-次に、サービスの `getCSVFile(..)` メソッドを呼び出すサーブレットコードを示します。 サービスはStringBufferオブジェクトを返し、このオブジェクトが呼び出し元のアプリケーションにストリーミングバックされます
+次に、サービスの`getCSVFile(..)`メソッドを呼び出すサーブレットコードを示します。 サービスはStringBufferオブジェクトを返し、このオブジェクトが呼び出し元のアプリケーションにストリーミングバックされます
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -298,6 +303,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### サーバーにデプロイする
 
-* MySQL Workbenchを使用して [SQLファイルを](assets/formsubmissions.sql) MySQLサーバーに読み込みます。 これにより、 **aemformstutorialと呼ばれるスキーマ** と、formsubmissionsと呼ばれるテーブルがいくつかのサンプルデータと共に作成され **** ます。
-* Felix Webコンソールを使用した [OSGi Bundle](assets/store-export.jar) のデプロイ
-* [TimeOffRequest Submissionsを取得するには](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。 CSVファイルを元に戻す必要があります。
+* MySQL Workbenchを使用して、[SQLファイル](assets/formsubmissions.sql)をMySQLサーバーにインポートします。 これにより、**aemformstutorial**&#x200B;というスキーマと、**formsubmissions**&#x200B;というテーブルがサンプルデータと共に作成されます。
+* Felix Webコンソールを使用して[OSGi Bundle](assets/store-export.jar)をデプロイします
+* [TimeOffRequest Submissionsを取得するには](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。CSVファイルを元に戻す必要があります。
