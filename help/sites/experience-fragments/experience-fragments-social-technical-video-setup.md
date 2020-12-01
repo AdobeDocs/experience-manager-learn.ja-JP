@@ -17,21 +17,21 @@ ht-degree: 0%
 ---
 
 
-# エクスペリエンスフラグメントを使用したソーシャル投稿の設定 {#set-up-social-posting-with-experience-fragments}
+# エクスペリエンスフラグメントを使用したソーシャル投稿の設定{#set-up-social-posting-with-experience-fragments}
 
 エクスペリエンスフラグメントを使用すると、マーケターはAEMで作成したエクスペリエンスをソーシャルメディアプラットフォームに投稿できます。 以下のビデオでは、エクスペリエンスフラグメントをFacebookやPinterestに公開するために必要な設定と設定について詳しく説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
 
-*[エクスペリエンスフラグメント]- FacebookやPinterestへのソーシャル投稿のセットアップと設定*
+*[エクスペリエンスフラグメント] - FacebookやPinterestへのソーシャル投稿のセットアップと設定*
 
 ## FacebookおよびPinterestに投稿するエクスペリエンスフラグメントの設定のチェックリスト
 
 1. AEM作成者インスタンスがHTTPSで実行されている
 2. Facebookアカウント+ Facebook開発者アプリ
 3. Pinterestアカウント+ Pinterest開発版アプリ
-4. [!UICONTROL AEMクラウドサービス] - Facebook
-5. [!UICONTROL AEMクラウドサービス] - Pinterest
+4. [!UICONTROL AEMクラウド] サービスの設定 — Facebook
+5. [!UICONTROL AEMクラウド] サービスの設定 — Pinterest
 6. Facebook + PinterestのCloud Servicesを含むAEMエクスペリエンスフラグメント
 7. Facebookテンプレートを使用したエクスペリエンスフラグメントのバリエーション
 8. Pinterestテンプレートを使用したエクスペリエンスフラグメントのバリエーション
