@@ -27,11 +27,11 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350/?quality=9&learn=on)
 
-ドキュメントフラグメントは、対話型通信ドキュメントのテキストコンテンツを保持します。 このテキストコンテンツは、静的テキストにすることも、基になるデータモデル要素の値から挿入することもできます。 例えば、 **親&#x200B;_{name}_**様（Dearはスタティックテキスト、nameはフォームデータモデルの要素名）。 実行時に、これはname要素の値に応じて&#x200B;**Gloria Rios**様&#x200B;**、**Dear John Jacobs様に解決されます。
+ドキュメントフラグメントは、対話型通信ドキュメントのテキストコンテンツを保持します。 このテキストコンテンツは、静的テキストにすることも、基になるデータモデル要素の値から挿入することもできます。 例えば、**様&#x200B;_{name}_**様（Dearはスタティックテキスト、nameはフォームデータモデル要素名）。 実行時に、これはname要素の値に応じて&#x200B;**Gloria Rios様**様または&#x200B;**John Jacobs様**様に解決されます。
 
 リッチテキストエディターは、ビジネスユーザーがテキストを作成し、フォームデータ要素を挿入できる直感的なエディターです。 ドキュメントフラグメントエディターでは、テキストの書式設定、フォントの種類とスタイルの指定、特殊文字の挿入、ハイパーリンクの作成を行うことができます。
 
-また、ドキュメントフラグメントエディターには、この [ビデオで示すように、テキストにインライン条件を挿入する機能もあります](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+また、この[ビデオ](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)で示すように、ドキュメントフラグメントエディターでは、テキストにインライン条件を挿入することもできます。
 
 >[!NOTE]
 >
