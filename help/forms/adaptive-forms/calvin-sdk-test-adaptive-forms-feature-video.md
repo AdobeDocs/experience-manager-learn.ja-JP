@@ -20,7 +20,7 @@ ht-degree: 10%
 ---
 
 
-# AEM Formsでの自動Formsテストの理解{#understanding-automated-forms-testing-with-aem-forms}
+# AEM Forms{#understanding-automated-forms-testing-with-aem-forms}との自動Formsテストについて
 
 AEM 6.3Formsでは、hobbes.jsフレームワーク上に構築されたCalvin SDKを使用して、アダプティブForms向けのAEM内でテストケースを作成できる機能が導入されています。
 
