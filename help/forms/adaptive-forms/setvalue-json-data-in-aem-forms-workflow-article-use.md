@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# AEM FormsワークフローのJSONデータ要素の値の設定 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# AEM Formsワークフロー{#setting-value-of-json-data-element-in-aem-forms-workflow}のJSONデータ要素の値の設定
 
 アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされる際、フォームの確認者に応じて、特定のフィールドやパネルを非表示または無効にする必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、適切なパネルまたはフィールドを非表示/無効にするビジネスルールを作成できます。
 
@@ -46,27 +46,27 @@ afData.afUnboundData.data.initialStep,N
 
 * [DevelopingWithServiceUserBundleのダウンロードと展開](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 これは、送信されたjsonデータ内の要素の値を設定できるカスタムOSGIバンドルです。
+* [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、送信されたjsonデータ内の要素の値を設定できるカスタムOSGIバンドルです。
 
 * [zipファイルの内容をダウンロードして抽出します。](assets/set-value-jsondata.zip)
-   * ブラウザーで [パッケージマネージャーを指定](http://localhost:4502/crx/packmgr/index.jsp)
+   * ブラウザーに[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を指定します。
       * SetValueOfElementInJSONDataWorkflow.zipを読み込んでインストールします。このパッケージには、フォームに関連付けられているサンプルワークフローモデルとフォームデータモデルが含まれています。
 
-* ブラウザーが [Formsとドキュメントを指すように指示](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* ブラウザーで[Formsと](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)ドキュメントを指定
 * 「作成」をクリックします |ファイルのアップロード
 * TimeOffRequestForm.zipファイルのアップロード
    **このフォームはAEM Forms6.4を使用して作成されました。AEM Forms6.4以降を使用していることを確認してください**
-* フ [ォームを開く](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* [フォーム](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)を開きます
 * 「開始」と「終了日」に入力し、フォームを送信します。
-* [受信トレイ] [に移動](http://localhost:4502/aem/inbox)
+* [&quot;受信トレイ&quot;](http://localhost:4502/aem/inbox)に移動
 * タスクに関連付けられているフォームを開きます。
 * 最初のパネルのフィールドが無効になっています。
 * 要求の承認または却下のパネルが表示されます。
 
 >[!NOTE]
 >
->ユーザープロファイルを使用してアダプティブフォームに事前入力するので、管理者 [ユーザーのプロファイル情報を確認 ](http://localhost:4502/security/users.html)します。 FirstName、LastName、Emailの各フィールドの値は、最低でも設定済みであることを確認してください。
->ここ [からcom.aemforms.setvalue.core.SetValueInJsonのロガーを有効にすることで、デバッグログを有効にすることができます。](http://localhost:4502/system/console/slinglog)
+>ユーザープロファイルを使用してアダプティブフォームに事前入力するので、管理者[ユーザープロファイル情報](http://localhost:4502/security/users.html)を確認してください。 FirstName、LastName、Emailの各フィールドの値は、最低でも設定済みであることを確認してください。
+>com.aemforms.setvalue.core.SetValueInJson [のロガーを有効にすると、デバッグログを有効にできます（ここから](http://localhost:4502/system/console/slinglog)）。
 
 >[!NOTE]
 >
