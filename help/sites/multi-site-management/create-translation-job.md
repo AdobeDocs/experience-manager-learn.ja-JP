@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 翻訳ジョブ {#translation-jobs}
+# 翻訳ジョブ{#translation-jobs}
 
 既存の翻訳プロジェクトに翻訳ジョブを追加する方法を説明します。
 
