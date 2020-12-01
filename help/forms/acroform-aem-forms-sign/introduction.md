@@ -22,7 +22,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM Forms6.5を使用している場合は、自動Formsコンバージョン機能を使用してください。
+>AEM Forms6.5を使用している場合は、Automated forms conversion機能を使用してください。
 
 ## 前提条件
 
@@ -32,14 +32,14 @@ ht-degree: 4%
 
 ### この機能をシステムで動作させるには、以下が必要です。
 
-* Felix Webコンソールを使用したバンドルのダウンロードとデプロイ [](http://localhost:4502/system/console/bundles)
+* [Felix Web Console](http://localhost:4502/system/console/bundles)を使用してバンドルをダウンロードし、デプロイします
 * [DocumentServicesBundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * [DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [AcroFormsToAEMFormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
-* [このパッケージをダウンロードし、AEMにインポートします](assets/acro-form-aem-form.zip)。 このパッケージには、acroformからXSDを作成するためのサンプルワークフローとhtmlページが含まれています
-* configMgrを開き [ます](http://localhost:4502/system/console/configMgr)
+* [このパッケージをダウンロードし、AEMにインポートします](assets/acro-form-aem-form.zip)。このパッケージには、acroformからXSDを作成するためのサンプルワークフローとhtmlページが含まれています
+* [configMgr](http://localhost:4502/system/console/configMgr)を開きます。
    * 「Apache Sling Service User Mapper Service」を検索し、をクリックしてプロパティを開きます
-   * アイコン（プラス）をクリックして、次のサービスマッピングを追加します `+`
+   * `+`アイコン（プラス）をクリックして、次のサービスマッピングを追加します
       * `DevelopingWithServiceUser.core:getresourceresolver=data`
       * `DevelopingWithServiceUser.core:getformsresourceresolver=fd-service`
    * 「保存」をクリックします
