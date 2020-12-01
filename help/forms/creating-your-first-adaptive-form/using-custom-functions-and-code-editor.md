@@ -22,24 +22,24 @@ ht-degree: 0%
 ---
 
 
-# カスタム関数とコードエディターの使用 {#using-functions-and-code-editor}
+# カスタム関数とコードエディターの使用{#using-functions-and-code-editor}
 
 この部分では、カスタム関数とコードエディターを使用してビジネスルールを作成します。
 
-このチュートリアルの前の [手順で、ClientLibをカスタム関数と共に既にインストール済みです](assets/client-libs-and-logo.zip) 。
+このチュートリアルの前の[カスタム関数](assets/client-libs-and-logo.zip)を使用して、既に&lt;a0/>ClientLibをインストール済みです。
 
 通常、クライアントライブラリはCSSとJavaScriptファイルで構成されます。 このクライアントライブラリには、コンボボックスのリスト値を入力する関数を公開するjavascriptファイルが含まれています。
 
 
-## ドロップダウンリストを入力する関数 {#function-to-populate-drop-down-list}
+## ドロップダウンリストを入力する関数{#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### パネルの概要タイトルを設定 {#set-the-summary-title-of-panels}
+### パネルの概要タイトルを設定{#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### 検証パネル {#validate-panels-using-rule-editor}
+#### パネルを検証{#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
