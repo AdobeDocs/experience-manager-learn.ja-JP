@@ -17,13 +17,13 @@ ht-degree: 6%
 ---
 
 
-# AEMコンテンツフラグメントを使用した翻訳の使用{#using-translation-with-aem-content-fragments}
+# AEMコンテンツフラグメントでの翻訳の使用{#using-translation-with-aem-content-fragments}
 
 AEM 6.3では、コンテンツフラグメントを翻訳する機能が導入されています。 混在メディアアセットと、コンテンツフラグメントに関連付けられたアセットコレクションも、抽出および翻訳が可能です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
 
-## コンテンツフラグメントの変換の使用例 {#content-fragment-translation-use-cases}
+## コンテンツフラグメント変換の使用例{#content-fragment-translation-use-cases}
 
 コンテンツフラグメントは、AEMが抽出して外部翻訳サービスに送信する、認識されるコンテンツタイプです。 次の使用例が初期設定でサポートされています。
 
@@ -32,9 +32,9 @@ AEM 6.3では、コンテンツフラグメントを翻訳する機能が導入�
 3. コンテンツフラグメント内に埋め込まれたインラインメディアアセットは、抽出および翻訳が可能です。
 4. コンテンツフラグメントに関連付けられたアセットコレクションは、抽出および翻訳の対象となります
 
-## 翻訳設定オプション {#translation-config-options}
+## 変換設定オプション{#translation-config-options}
 
-初期設定の翻訳設定では、コンテンツフラグメントの変換に関する複数のオプションがサポートされています。 初期設定では、インラインメディアアセットと関連付けられたアセットコレクションは変換されません。 翻訳設定を更新するには、http://localhost:4502/etc/cloudservices/translation/default_translation.htmlに移動し [ます](http://localhost:4502/etc/cloudservices/translation/default_translation.html)。
+初期設定の翻訳設定では、コンテンツフラグメントの変換に関する複数のオプションがサポートされています。 初期設定では、インラインメディアアセットと関連付けられたアセットコレクションは変換されません。 翻訳設定を更新するには、[http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html)に移動します。
 
 コンテンツフラグメントアセットの変換には、次の4つのオプションがあります。
 
