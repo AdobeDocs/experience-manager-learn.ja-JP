@@ -20,7 +20,7 @@ ht-degree: 27%
 ---
 
 
-# AEM SitesUIとナビゲーション {#basic-handling-aem-sites}
+# AEM SitesUIとナビゲーション{#basic-handling-aem-sites}
 
 次のビデオでは、AEM作成者環境を使用する場合の基本操作の概要を説明します。 これはサイトコンソールを基礎として使用します。
 
