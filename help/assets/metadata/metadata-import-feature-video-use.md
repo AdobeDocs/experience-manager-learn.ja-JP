@@ -31,22 +31,22 @@ AEM Assetsメタデータの読み込みと書き出しの機能により、コ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/21374/?quality=9&learn=on)
 
-WebRetailスポ [ーツフォルダーのダウンロード](assets/we-retail-sports.zip)
+[WeRetailスポーツフォルダー](assets/we-retail-sports.zip)をダウンロード
 
-ア [セットメタデータパッケージのダウンロード](assets/we-retail-sports-asset-metadata.zip)
+[アセットメタデータパッケージ](assets/we-retail-sports-asset-metadata.zip)をダウンロード
 
-## メタデータファイルの形式 {#metadata-file-format}
+## メタデータファイル形式{#metadata-file-format}
 
 ### CSVファイル形式
 
 #### 最初の行
 
 * CSVファイルの最初の行は、メタデータスキーマを定義します。
-* 最初の列のデフォルトは `assetPath`に設定され、アセットの絶対JCRパスが保持されます。
+* 最初の列はデフォルトで`assetPath`に設定され、アセットの絶対JCRパスが保持されます。
 
 * 最初の行の後続の列は、アセットの他のメタデータプロパティを指します。
 
-   * 次に例を示します。`dc:title, dc:description, jcr:title`
+   * 例： : `dc:title, dc:description, jcr:title`
 
 * 単一値プロパティの形式
 
@@ -59,7 +59,7 @@ WebRetailスポ [ーツフォルダーのダウンロード](assets/we-retail-sp
    * 不正解`Dc:Ttle {{String}}`
 
 * プロパティの種類では大文字と小文字が区別されません
-* すべての有効な [JCRプロパティタイプ](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) がサポートされています
+* すべての有効な[JCRプロパティタイプ](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)がサポートされます
 
 * 複数値プロパティの形式 — `<metadata property name> {{<property type : MULTI }}`
 
