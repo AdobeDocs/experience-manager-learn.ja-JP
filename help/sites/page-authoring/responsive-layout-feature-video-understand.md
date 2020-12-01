@@ -20,7 +20,7 @@ ht-degree: 21%
 ---
 
 
-# レスポンシブレイアウトについて {#understanding-responsive-layout-with-aem-sites}
+# レスポンシブレイアウトについて{#understanding-responsive-layout-with-aem-sites}
 
 Adobe Experience Manager Sitesでは、レスポンシブサイトのデザインを容易にするために、デバイスの幅に基づいてコンポーネントの幅を作成者が管理できます。 レイアウトモードとレイアウトコンテナを使用すると、AEM UIから移動することなく、様々なデバイスやプレビュー向けのレスポンシブコンテンツを作成でき、エンドユーザーの体験に合わせたコンテンツを作成できます。
 
