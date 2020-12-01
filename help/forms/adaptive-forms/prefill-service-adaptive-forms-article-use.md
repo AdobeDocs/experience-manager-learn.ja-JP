@@ -25,7 +25,7 @@ ht-degree: 7%
 
 既存データを使用して、アダプティブフォームのフィールドを事前入力することができます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。 この記事では、AEM Formsの事前入力サービスを使用したアダプティブフォームの事前入力について見てみます。
 
-アダプティブフォームを事前入力する様々な方法の詳細につ [いては、次のドキュメントを参照してください](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+アダプティブフォームの事前入力のための様々な方法の詳細については、[次のドキュメント](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)に従ってください。
 
 事前入力サービスを使用してアダプティブフォームに事前入力するには、DataProviderインターフェイスを実装するクラスを作成する必要があります。 getPrefillDataメソッドは、アダプティブフォームがフィールドの自動埋め込みに使用するデータを作成し返すロジックを持ちます。 このメソッドでは、任意のソースからデータを取得し、データドキュメントの入力ストリームを返すことができます。 以下のサンプルコードは、ログインしたユーザーのプロファイル情報を取得し、XMLドキュメントを構築します。このXML情報の入力ストリームは、アダプティブフォームで使用されるように返されます。
 
@@ -88,8 +88,8 @@ public class PrefillAdaptiveForm implements DataProvider {
 この機能をサーバーでテストするには、次の手順を実行してください
 
 * [zipファイルの内容をコンピュータにダウンロードして抽出する](assets/prefillservice.zip)
-* ログインした [ユーザーのプロファイル](http://localhost:4502/libs/granite/security/content/useradmin) 情報が完全に入力されていることを確認します。 これは、サンプルが機能するために必要です。 このサンプルには、見つからないユーザープロファイルプロパティに関するエラーチェックはありません。
-* AEM Webコンソールを使用してバンドルを [デプロイします](http://localhost:4502/system/console/bundles)
+* ログインした[ユーザーのプロファイル](http://localhost:4502/libs/granite/security/content/useradmin)情報が完全に入力されていることを確認します。 これは、サンプルが機能するために必要です。 このサンプルには、見つからないユーザープロファイルプロパティに関するエラーチェックはありません。
+* [AEM Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルを展開します
 * XSDを使用したアダプティブフォームの作成
 * アダプティブフォームの事前入力サービスとして「Custom Aem Form Pre Fill Service」を関連付ける
 * スキーマ要素をフォームにドラッグ&amp;ドロップする
@@ -99,5 +99,5 @@ public class PrefillAdaptiveForm implements DataProvider {
 >
 >アダプティブフォームがXSDに基づいている場合は、事前入力サービスによって返されるXMLドキュメントが、アダプティブフォームのXSDと一致していることを確認してください。
 >
->アダプティブフォームがXSDに基づいていない場合は、フィールドを手動で連結する必要があります。 例えば、アダプティブフォームフィールドの連結参照で使用するXMLデータのfname要素 `/data/fname` にアダプティブフォームフィールドを連結するとします。
+>アダプティブフォームがXSDに基づいていない場合は、フィールドを手動で連結する必要があります。 例えば、アダプティブフォームのフィールドをXMLデータのfname要素に連結するには、アダプティブフォームのフィールドの連結参照で`/data/fname`を使用します。
 
