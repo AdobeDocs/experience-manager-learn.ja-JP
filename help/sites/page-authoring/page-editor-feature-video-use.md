@@ -20,7 +20,7 @@ ht-degree: 10%
 ---
 
 
-# ページエディタの使用 {#using-page-editor-with-aem-sites}
+# ページエディタの使用{#using-page-editor-with-aem-sites}
 
 AEMサイトのページエディタは、Webコンテンツを作成および編集するための強力なツールです。 ページエディターのツールと機能は、ページエディターのUIツールバーからアクセスします。
 
