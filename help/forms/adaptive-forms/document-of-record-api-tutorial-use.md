@@ -20,11 +20,11 @@ ht-degree: 4%
 ---
 
 
-# APIを使用したAEM Formsでのレコードのドキュメントの生成 {#using-api-to-generate-document-of-record-with-aem-forms}
+# APIを使用したAEM Forms{#using-api-to-generate-document-of-record-with-aem-forms}のレコードのドキュメントの生成
 
 レコードのドキュメント(DOR)をプログラムで生成する
 
-次の記事は、を使用して、レコードの `com.adobe.aemds.guide.addon.dor.DoRService API` ドキュメントをプログラムで生成する方法を説明します **** 。 [レコードのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) は、アダプティブフォームで取り込まれたデータのPDF版です。
+この記事では、`com.adobe.aemds.guide.addon.dor.DoRService API`を使用して、**レコード**&#x200B;のドキュメントをプログラム的に生成する方法を説明します。 [「](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 記録のドキュメント」は、アダプティブフォームで取り込まれたデータのPDF版です。
 
 1. コードスニペットを次に示します。 最初の行には、DORサービスが表示されます。
 1. DoROptionsを設定します。
@@ -45,10 +45,10 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 ローカルシステムで試すには、次の手順に従ってください
 
 1. [Package Managerを使用して記事アセットをダウンロードし、インストールします](assets/dor-with-api.zip)
-1. 「サービスユーザーを [作成」記事の一部として提供されたDevelopingWithServiceUserバンドルがインストールされ、開始されていることを確認します](service-user-tutorial-develop.md)
+1. [サービスユーザーの作成記事](service-user-tutorial-develop.md)の一部として提供されたDevelopingWithServiceUserバンドルがインストールされ、開始されていることを確認してください
 1. [configMgrにログイン](http://localhost:4502/system/console/configMgr)
 1. Apache Sling Service User Mapper Service   を探します。
-1. 「サービスのマッピング」セクションで、次のエントリ _DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_ を確認します。
+1. 「サービスのマッピング」セクションで、次のエントリ&#x200B;_DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_&#x200B;を確認します。
 1. [フォームを開く](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. フォームに入力し、「表示PDF」をクリックします。
 1. ブラウザーの新しいタブにDORが表示されます
@@ -59,7 +59,7 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 PDFは新しいブラウザータブに表示されません：
 
 1. ブラウザーでポップアップをブロックしていないことを確認します
-1. この [記事で説明されている手順に従っていること](service-user-tutorial-develop.md)
-1. &#39;DevelopingWithServiceUser&#39;バンドルがアク *ティブ状態であることを確認してください*
-1. システムユーザー&#39;データ&#39;に、次のノードで読み取り、変更、および作成の権限があることを確認してください `/content/usergenerated/content/aemformsenablement`
+1. この[記事](service-user-tutorial-develop.md)で説明されている手順に従ってください。
+1. &#39;DevelopingWithServiceUser&#39;バンドルが&#x200B;*アクティブ状態*&#x200B;であることを確認してください
+1. システムユーザー&#39;データ&#39; &#39;に、次のノード`/content/usergenerated/content/aemformsenablement`で読み取り、変更、作成の権限があることを確認してください
 
