@@ -32,7 +32,7 @@ AEM Desktop Appを使用すると、任意のアプリケーションおよび�
 
 >[!NOTE]
 >
-> [Adobeアセットリンク](./adobe-asset-link.md) は、AdobeがAdobe Creative Cloudアプリケーション内でAEMアセットを操作するための専用ソリューションです。Photoshop、Illustrator、InDesign。 これらのアプリケーションでAEM Assetsを使用する場合、AEM Desktop Appよりも「Adobeアセットリンク」の方が優先されます。
+> [Adobeアセット](./adobe-asset-link.md) リンクは、AdobeがAdobe Creative Cloudアプリケーション内でAEMアセットを操作するための専用ソリューションです。Photoshop、Illustrator、InDesign。これらのアプリケーションでAEM Assetsを使用する場合、AEM Desktop Appよりも「Adobeアセットリンク」の方が優先されます。
 
 ## その他のリソース
 
