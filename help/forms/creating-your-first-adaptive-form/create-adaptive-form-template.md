@@ -24,9 +24,9 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-詳しくは、 [アダプティブフォームテンプレートのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) を参照してください。
+詳しくは、[アダプティブフォームテンプレートドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)を参照してください
 
-必要に応じて、 [パッケージマネージャーを使用して、アダプティブフォームテンプレートをダウンロードし](assets/peak-application-template.zip)[、AEMに読み込むことができます](http://localhost:4502/crx/packmgr/index.jsp)
+必要に応じて、[アダプティブフォームテンプレート](assets/peak-application-template.zip)をダウンロードし、[パッケージマネージャ](http://localhost:4502/crx/packmgr/index.jsp)を使用してAEMに読み込むことができます
 
 
 
