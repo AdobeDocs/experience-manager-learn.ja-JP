@@ -24,19 +24,20 @@ ht-degree: 1%
 
 AEM Formsを使用したドラッグ&amp;ドロップ機能によるPDF作成のデモ
 
-PDFGは、PDF Generationの略です。 これは、様々なファイル形式をPDFに変換できることを意味します。 最も一般的なのはMicrosoft Officeドキュメントです。 PDFGは6.1以降AEM Formsに含まれています。PDFG APIのJavadoc[は次のとおりです。](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
+PDFGは、PDF Generationの略です。 これは、様々なファイル形式をPDFに変換できることを意味します。 最も一般的なのはMicrosoft Officeドキュメントです。 PDFGは6.1以降AEM Formsに属しています。
+[PDFG APIのJavadocは、ここにリスト](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
 
 この記事に関連付けられたアセットを使用して、MS OfficeドキュメントまたはJPGファイルをHTMLページのドロップゾーンにドラッグ&amp;ドロップできます。 ドキュメントが削除されると、PDFGサービスが呼び出され、ドキュメントがPDFに変換されてAEM Serverのファイルシステムに保存されます。
 
 デモアセットをインストールするには、次の手順を実行してください
 
-1. このドキュメントに記載されているようにPDFGを設定 [します](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)。
+1. このドキュメント[ここ](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)に記載されているようにPDFGを設定します。
 1. ご使用のAEM Forms版に関する適切な文書に従ってください。
 1. [パッケージマネージャーを使用して、この記事に関連するアセットを読み込んでインストールします。](assets/createpdfgdemov2.zip)
-1. [CRXのpost.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) に移動します。
+1. [CRXのpost.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspinに移動します。
 1. 希望に応じて保存場所を変更します（9行目）。
 1. 変更を保存します。
-1. 変換するファイルをドラッグ&amp;ドロップする [ ためのhtmlページを開きます](http://localhost:4502/content/DocumentServices/CreatePDFG.html) 。
+1. 変換するファイルをドラッグ&amp;ドロップするには、[ htmlページ](http://localhost:4502/content/DocumentServices/CreatePDFG.html)を開きます。
 1. Wordファイルまたはjpgをドロップゾーンにドロップします。
 1. 入力ドキュメントはPDFに変換され、ポイント4で指定した場所に保存されます。
 
