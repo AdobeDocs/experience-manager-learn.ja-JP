@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 言語コピーの概要 {#introduction-language-copy}
+# 言語コピーの紹介{#introduction-language-copy}
 
 AEM Sitesの言語コピーを使用して、多言語サイトを作成する方法の概要を説明します。
 
