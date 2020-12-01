@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -22,16 +22,16 @@ ht-degree: 5%
 # タスクの割り当て通知のカスタマイズ
 
 タスクの割り当てコンポーネントは、タスクをワークフロー参加者に割り当てるために使用します。 タスクがユーザーまたはグループに割り当てられると、定義済みのユーザーまたはグループメンバーに電子メール通知が送信されます。
-この電子メール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、システム生成の [メタデータプロパティを使用して取得されます](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)。
+この電子メール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、システムで生成された[メタデータプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)を使用して取得されます。
 送信されたフォームデータの値を電子メール通知に含めるには、カスタムメタデータプロパティを作成し、電子メールテンプレートでこれらのカスタムメタデータプロパティを使用する必要があります
 
 
 
 ## カスタムメタデータプロパティの作成
 
-推奨される方法は、WorkitemUserMetadataServiceのgetUserMetadataメソッドを実装するOSGIコンポーネントを作成するこ [とです](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
+推奨される方法は、[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)のgetUserMetadataメソッドを実装するOSGIコンポーネントを作成することです
 
-次のコードは、4つのメタデータプロパティ(_firstName_、_lastName_、reason _、amountRequestedName_ )を作成し、送信されたデータから __&#x200B;値を設定します。 例えば、メタデータプロパティ _firstName_&#x200B;の値は、送信されたデータからfirstNameと呼ばれる要素の値に設定されます。 次のコードは、アダプティブフォームの送信データがxml形式であることを前提としています。 JSONスキーマまたはフォームデータモデルに基づくアダプティブFormsは、JSON形式でデータを生成します。
+次のコードは、4つのメタデータプロパティ（_firstName_、_lastName_、_reason_&#x200B;および&#x200B;_amountRequested_）を作成し、送信データから値を設定します。 例えば、メタデータプロパティ&#x200B;_firstName_&#x200B;の値は、送信されたデータからfirstNameと呼ばれる要素の値に設定されます。 次のコードは、アダプティブフォームの送信データがxml形式であることを前提としています。 JSONスキーマまたはフォームデータモデルに基づくアダプティブFormsは、JSON形式でデータを生成します。
 
 
 ```java
@@ -113,7 +113,7 @@ return customMetadataMap;
 
 ## タスク通知電子メールテンプレートのカスタムメタデータプロパティを使用します
 
-電子メールテンプレートには、次の構文を使用してメタデータプロパティを含めることができます（amountRequestedはメタデータプロパティ）。 `${amountRequested}`
+電子メールテンプレートには、次の構文を使用してメタデータプロパティを含めることができます。amountRequestedはメタデータプロパティ`${amountRequested}`です
 
 ## カスタムメタデータプロパティを使用するための割り当てタスクの設定
 
@@ -128,11 +128,11 @@ OSGiコンポーネントを構築し、AEMサーバーにデプロイした後�
 
 ## サーバーで試すには
 
-* [Day CQ 電子メールサービスの設定](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
-* 有効な電子メールIDと [管理者ユーザーの関連付け](http://localhost:4502/security/users.html)
-* [パッケージマネージャーを使用して、](assets/workflow-and-task-notification-template.zip) Workflow-and-notification-templateをダウンロードし [、インストールします](http://localhost:4502/crx/packmgr/index.jsp)
-* ア [ダプティブフォーム](assets/request-travel-authorization.zip) をダウンロードし [、フ](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)ォームとドキュメントのuiからAEMに読み込みます。
-* [Webコンソールを使用した](assets/work-items-user-service-bundle.jar) カスタムバンドルの展開と開始 [](http://localhost:4502/system/console/bundles)
+* [Day CQ 電子メールサービスの設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* 有効な電子メールIDを[管理者ユーザー](http://localhost:4502/security/users.html)に関連付ける
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)をダウンロードし、インストールします
+* [アダプティブフォーム](assets/request-travel-authorization.zip)をダウンロードし、[フォームとドキュメントui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)からAEMに読み込みます。
+* [Webコンソール](http://localhost:4502/system/console/bundles)を使用して&lt;a0/>カスタムバンドル](assets/work-items-user-service-bundle.jar)を展開し、開始します[
 * [フォームをプレビューして送信する](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
 フォーム送信時に、タスク割り当て通知が管理者ユーザーに関連付けられた電子メールIDに送信されます。 次のスクリーンショットは、タスク割り当ての通知の例を示しています
