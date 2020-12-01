@@ -22,9 +22,9 @@ ht-degree: 0%
 ---
 
 
-# ルートパネルに子パネルを追加する {#adding-child-panels-to-root-panel}
+# ルートパネルに子パネルを追加する{#adding-child-panels-to-root-panel}
 
-子パネルをルートパネルに追加する場合は、編集モードになっていることを **確認してください。 編集ボタンは、ブラウザーの右上にあります。**
+ルートパネルに子パネルを追加する場合は、**編集モードになっていることを確認してください。 編集ボタンは、ブラウザーの右上にあります。**
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=9&learn=on)
