@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# AEMコマースおよびInDesign Serverでのアセットカタログの使用{#using-asset-catalog-with-aem-commerce-and-indesign-server}
+# AEMコマースおよびInDesign Server{#using-asset-catalog-with-aem-commerce-and-indesign-server}でのアセットカタログの使用
 
 AEM 6.4のカタログ機能が強化され、AEMアセットテンプレートとInDesign Serverを使用してカタログページを作成できるようになりました。  ユーザは、InDesignテンプレートを使用してカタログページを作成し、商品のプロパティを編集可能なフィールドにマップできます。編集可能なフィールドは、後で様々な商品用に類似したページを作成する場合に使用します。
 
