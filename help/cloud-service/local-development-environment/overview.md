@@ -28,9 +28,9 @@ ht-degree: 1%
 
 AEMのローカル開発環境は、次の3つの論理グループに分類できます。
 
-+ AEM __プロジェクト__ には、カスタムAEMアプリケーションのカスタムコード、設定、およびコンテンツが含まれます。
-+ AEM Authorサービスと __Publishサービスのローカルバージョンをローカルで実行するLocal AEM Runtime__ 。
-+ Apache HTTP Web Serverおよび __Dispatcherのローカルバージョンを実行するLocal Dispatcher Runtime__ 。
++ __AEMプロジェクト__&#x200B;には、カスタムAEMアプリケーションのカスタムコード、設定、およびコンテンツが含まれています。
++ AEM AuthorサービスとPublishサービスのローカルバージョンをローカルで実行する&#x200B;__Local AEM Runtime__。
++ Apache HTTP Webサーバーとディスパッチャーのローカルバージョンを実行する&#x200B;__Local Dispatcher Runtime__。
 
 このチュートリアルでは、上の図で強調表示されている項目をインストールして設定する方法を紹介し、AEMの開発に安定したローカル開発環境を提供します。
 
@@ -44,16 +44,16 @@ AEMのローカル開発環境は、次の3つの論理グループに分類で�
 + `~/aem-sdk/dispatcher` には、ディスパッチャーツールが含まれます。
 + `~/code/<project name>` カスタムAEMプロジェクトソースコードが含まれます。
 
-は、ユーザーのディレクトリ `~` の略記法です。 Windowsでは、次と同じで `%HOMEPATH%`す。
+`~`はユーザーのディレクトリの略記法です。 Windowsでは、`%HOMEPATH%`；と同じです。
 
 ## AEMプロジェクト用開発ツール
 
-AEMプロジェクトは、Cloud Managerを介してAEMにCloud Serviceとしてデプロイされるコード、設定およびコンテンツを含むカスタムコードベースです。 基準プロジェクト構造は、 [AEM Project Mavenアーキタイプを介して生成され](https://github.com/adobe/aem-project-archetype)ます。
+AEMプロジェクトは、Cloud Managerを介してAEMにCloud Serviceとしてデプロイされるコード、設定およびコンテンツを含むカスタムコードベースです。 基準プロジェクト構造は、[AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype)を介して生成されます。
 
 チュートリアルのこの節では、次の方法を示します。
 
 + インストール [!DNL Java]
-+ インストール [!DNL Node.js] （およびnpm）
++ [!DNL Node.js] （およびnpm）をインストールします
 + インストール [!DNL Maven]
 + インストール [!DNL Git]
 
@@ -61,25 +61,25 @@ AEMプロジェクトは、Cloud Managerを介してAEMにCloud Serviceとして
 
 ## ローカルAEMランタイム
 
-Cloud ServiceSDKとしてのAEMは、ローカルバージョンのAEM [!DNL QuickStart Jar] を実行するサービスを提供します。 は、AEM Author ServiceまたはAEM Publish Serviceをローカルで実行するために使用 [!DNL QuickStart Jar] できます。 にはローカルの開発経験が [!DNL QuickStart Jar] ありますが、AEMでCloud Serviceとして利用できる機能の一部はに含まれていません [!DNL QuickStart Jar]。
+Cloud ServiceSDKとしてのAEMは、AEMのローカルバージョンを実行する[!DNL QuickStart Jar]を提供します。 [!DNL QuickStart Jar]は、AEM Author ServiceまたはAEM Publish Serviceをローカルで実行するために使用できます。 [!DNL QuickStart Jar]はローカルな開発経験を提供しますが、AEMでCloud Serviceとして利用できる機能の一部が[!DNL QuickStart Jar]に含まれているわけではありません。
 
 チュートリアルのこの節では、次の方法を示します。
 
 + インストール [!DNL Java]
 + AEM SDKのダウンロード
-+ JavaScriptコードの [!DNL AEM Author Service]
-+ JavaScriptコードの [!DNL AEM Publish Service]
++ [!DNL AEM Author Service]を実行
++ [!DNL AEM Publish Service]を実行
 
 [ローカルAEMランタイムの設定](./aem-runtime.md)
 
-## ローカル [!DNL Dispatcher] ランタイム
+## ローカル[!DNL Dispatcher]ランタイム
 
-AEMは、Cloud ServiceSDKのディスパッチャーツールとして、ローカル [!DNL Dispatcher] ランタイムの設定に必要なすべてを提供します。 [!DNL Dispatcher] ツールは [!DNL Docker]ベースで、Webサーバーと [!DNL Apache HTTP] 設定ファイルを互換性のある形式に変換し、 [!DNL Dispatcher] コンテナでの [!DNL Dispatcher][!DNL Docker] 実行に導入するためのコマンドラインツールを提供します。
+AEMは、Cloud ServiceSDKのディスパッチャーツールとして、ローカル[!DNL Dispatcher]ランタイムのセットアップに必要なすべてを提供します。 [!DNL Dispatcher] ツールは [!DNL Docker]ベースで、 [!DNL Apache HTTP] Webサーバーと [!DNL Dispatcher] 設定ファイルを互換性のある形式に変換し、 [!DNL Dispatcher] コンテナで [!DNL Docker] 実行するように展開するためのコマンドラインツールを提供します。
 
 チュートリアルのこの節では、次の方法を示します。
 
 + AEM SDKのダウンロード
-+ ツールのインスト [!DNL Dispatcher] ール
-+ ローカル [!DNL Dispatcher] ランタイムの実行
++ [!DNL Dispatcher]ツールをインストール
++ ローカル[!DNL Dispatcher]ランタイムを実行
 
 [LocalRuntimeの設定 [!DNL Dispatcher] ](./dispatcher-tools.md)
