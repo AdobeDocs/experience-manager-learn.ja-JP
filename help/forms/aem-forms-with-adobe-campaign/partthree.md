@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ---
 
-# ACSプロファイルを使用したアダプティブフォームの事前入力 {#prefilling-adaptive-form-using-acs-profile}
+# ACSプロファイルを使用したアダプティブフォームの事前入力{#prefilling-adaptive-form-using-acs-profile}
 
 このパートでは、ACSから取得したプロファイル情報を使用してアダプティブフォームに事前入力します。 AEM Formsには、アダプティブフォームの事前入力に使用できる強力な機能があります。
 
-アダプティブフォームの事前入力の詳細については、この [チュートリアルを参照してください](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+アダプティブフォームへの事前入力の詳細については、この[チュートリアル](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)を参照してください。
 
 ACSからデータを取得してアダプティブフォームを自動埋め込むには、ACSに、ログインしたAEMユーザーと同じ電子メールを持つプロファイルがあると想定します。 例えば、AEMにログインしたユーザーの電子メールIDがcsimms@adobe.comの場合、ACSに電子メールがcsimms@adobe.comであるプロファイルがあると想定します。
 
