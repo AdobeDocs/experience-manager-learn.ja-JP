@@ -26,9 +26,9 @@ ht-degree: 38%
 
 
 
-詳しくは、 [アダプティブフォームテンプレートのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) を参照してください。
+詳しくは、[アダプティブフォームテンプレートドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)を参照してください
 
-必要に応じて、 [Spouse-details-fragmentをダウンロードし、 ](assets/spouse-details-fragment.zip) パッケージマネージャーを使用してAEMに読み込むこ [とができます](http://localhost:4502/crx/packmgr/index.jsp)
+必要に応じて、[Spouse-details-fragment ](assets/spouse-details-fragment.zip)をダウンロードし、[パッケージマネージャ](http://localhost:4502/crx/packmgr/index.jsp)を使用してAEMに読み込むことができます
 
 
 
