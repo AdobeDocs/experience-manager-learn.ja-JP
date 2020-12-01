@@ -23,11 +23,11 @@ AEM Assetsは、直観的なユーザー操作により、大規模なリポジ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22140/?quality=12&learn=on)
 
-## Microsoft Excelの数式 {#excel-formulas}
+## Microsoft Excelの数式{#excel-formulas}
 
 Microsoft Excelでアセットのサイズ別グラフを生成するには、ビデオで次の数式を使用します。
 
-### アセットサイズのバイトへの正規化 {#asset-size-normalization-to-bytes}
+### アセットサイズのバイトへの正規化{#asset-size-normalization-to-bytes}
 
 ```
 =IF(RIGHT(D2,2)="KB",
@@ -40,9 +40,9 @@ Microsoft Excelでアセットのサイズ別グラフを生成するには、�
       LEFT(D2,(LEN(D2)-2))*1024*1024*1024*1024, 0))))
 ```
 
-### サイズ別のアセット数 {#asset-count-by-size}
+### サイズ別のアセット数{#asset-count-by-size}
 
-#### 200 KB未満 {#less-than-kb}
+#### 200 KB未満{#less-than-kb}
 
 ```
 =COUNTIFS(E2:E1000,"< 200000")
@@ -54,7 +54,7 @@ Microsoft Excelでアセットのサイズ別グラフを生成するには、�
 =COUNTIFS(E2:E1000,">= 200000", E2:E1000,"<= 500000")
 ```
 
-#### 500 KBを超える {#greater-than-kb}
+#### 500 KBを超える{#greater-than-kb}
 
 ```
 =COUNTIFS(E2:E1000,"> 500000")
@@ -62,4 +62,4 @@ Microsoft Excelでアセットのサイズ別グラフを生成するには、�
 
 ## その他のリソース{#additional-resources}
 
-グラフ付きの [すべてのアセットExcelファイルをダウンロード](./assets/asset-reports/all-assets.xlsx)
+[グラフ](./assets/asset-reports/all-assets.xlsx)を含むすべてのアセットのExcelファイルをダウンロード
