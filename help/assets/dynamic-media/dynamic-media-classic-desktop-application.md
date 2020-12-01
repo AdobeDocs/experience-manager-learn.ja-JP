@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# ダイナミックメディアクラシックデスクトップアプリケーションの使用{#using-dynamic-media-desktop-application}
+# Dynamic Media Classicデスクトップアプリケーションの使用{#using-dynamic-media-desktop-application}
 
 Adobeには、Adobeと同等の機能を持つインターフェイスで、ブラウザーのFlashプレイヤーに依存しない、Dynamic Media Classic用のデスクトップアプリケーションが導入されています。
 
