@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# DAMでのAEM FormsDoRのタグ付けと保存 {#tagging-and-storing-aem-forms-dor-in-dam}
+# DAMにAEM FormsDoRをタグ付けして保存する{#tagging-and-storing-aem-forms-dor-in-dam}
 
 この記事では、AEM DAMでAEM Formsが生成したDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 
@@ -46,7 +46,7 @@ tagManager.setTags(metadata, tagArray, true);
 このサンプルをシステムで動作させるには、次の手順に従ってください。
 * [Developingwithserviceuserバンドルのデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 これは、送信済みフォームデータのタグを設定するカスタムOSGIバンドルです。
+* [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、送信済みフォームデータのタグを設定するカスタムOSGIバンドルです。
 
 * [サンプルアダプティブフォームのダウンロード](assets/tag-and-store-in-dam-assets.zip)
 
@@ -54,12 +54,12 @@ tagManager.setTags(metadata, tagArray, true);
 
 * 「作成」をクリックします。 |ファイルのアップロードとsampleadaptiveform.zipのアップロード
 
-* [AEM Package](assets/tag-and-store-in-dam-assets.zip) Managerを使用して記事のアセットを読み込む
-* プレビューモードで [サンプルフォームを開きます](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)。 「人」セクションに入力し、フォームを送信します。
-* [DAMのPeakフォルダーに移動します](http://localhost:4502/assets.html/content/dam/Peak)。 PeakフォルダーにDoRが表示されます。 ドキュメントのプロパティを確認します。 適切にタグ付けする必要があります。
+* [AEM Package Managerを使用して記事](assets/tag-and-store-in-dam-assets.zip) アセットを読み込む
+* [サンプルフォームをプレビューモード](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)で開きます。 「人」セクションに入力し、フォームを送信します。
+* [DAMのPeakフォルダーに移動します](http://localhost:4502/assets.html/content/dam/Peak)。PeakフォルダーにDoRが表示されます。 ドキュメントのプロパティを確認します。 適切にタグ付けする必要があります。
 おめでとう！! サンプルがシステムに正常にインストールされました
 
-* フォームの送信時にトリガーされる [ワークフローを調べます](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 。
+* フォーム送信時にトリガーされる[ワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)を調べます。
 * ワークフローの最初の手順では、申込者の名前と住所の州名を連結して、一意のファイル名を作成します。
 * ワークフローの2番目の手順では、タグ階層と、タグ付けが必要なフォームフィールド要素を渡します。 プロセス手順は、送信されたデータから値を抽出し、ドキュメントへのタグ付けが必要なタグタイトルを作成します。
 * DoRをDAMの別のフォルダーに保存する場合は、次のスクリーンショットに示す設定プロパティを使用して、フォルダーの場所を指定します。
