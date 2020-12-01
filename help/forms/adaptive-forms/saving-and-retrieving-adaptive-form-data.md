@@ -30,7 +30,7 @@ ht-degree: 0%
 * [機能のデモ](#capability-demo)
 * [サーバーにデプロイする](#deploy-on-your-server)
 
-## データソースの設定 {#Configure-Data-Source}
+## データソースの設定{#Configure-Data-Source}
 
 Apache Sling接続プールされたDataSourceは、アダプティブフォームデータの保存に使用されるデータベースを指すように設定されています。 次のスクリーンショットは、マイインスタンスの設定を示しています。 次のプロパティをコピーして貼り付けることができます
 
@@ -42,7 +42,7 @@ Apache Sling接続プールされたDataSourceは、アダプティブフォー�
 
 ![connectionpool](assets/storingdata.PNG)
 
-### サーブレットの作成 {#create-servlet}
+### サーブレットを作成{#create-servlet}
 
 次のコードは、アダプティブフォームデータをデータベースに挿入または更新するサーブレットのコードです。 Apache Sling接続プールされたDataSourceはAEM ConfigMgrを使用して設定され、26行目で参照されます。 残りのコードは非常に単純です。 コードは、データベースに新しい行を挿入するか、既存の行を更新します。 保存されたアダプティブフォームデータは、GUIDに関連付けられています。 次に、同じGUIDを使用してフォームデータが更新されます。
 
@@ -212,7 +212,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## データを取り込むためのOSGIサービスの作成 {#create-osgi-service}
+## データを取り込むためのOSGIサービスの作成{#create-osgi-service}
 
 次のコードは、保存されたアダプティブフォームデータを取得するために記述されています。 単純なクエリを使用して、特定のGUIDに関連付けられたアダプティブフォームデータを取得します。 取り込まれたデータは呼び出し元のアプリケーションに返される。 このコードで参照されている最初の手順で作成したのと同じデータソースです。
 
@@ -277,7 +277,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## クライアントライブラリの作成 {#create-client-library}
+## クライアントライブラリの作成{#create-client-library}
 
 AEMクライアントライブラリは、すべてのクライアント側のJavaScriptコードを管理します。 この記事では、Guide Bridge APIを使用してアダプティブフォームデータを取得するための単純なJavaScriptを作成しました。 アダプティブフォームデータが取り込まれると、POSTの呼び出しがサーブレットに対して行われ、アダプティブフォームデータがデータベースに挿入または更新されます。 関数getALLUrlParamsは、URL内のパラメーターを返します。 これは、データを更新する場合に使用します。 残りの機能は、.savebuttonクラスのclickイベントに関連付けられたコードで処理されます。 URLにguidパラメーターが存在する場合、挿入操作でない場合は、更新操作を実行する必要があります。
 
@@ -405,16 +405,16 @@ $(document).ready(function()
 });
 ```
 
-## アダプティブフォームテンプレートとページコンポーネントの作成 {#form-template-and-page-component}
+## アダプティブフォームテンプレートとページコンポーネントの作成{#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 機能のデモ {#capability-demo}
+### {#capability-demo}機能のデモ
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### サーバーにデプロイする {#deploy-on-your-server}
+#### サーバーに展開する{#deploy-on-your-server}
 
 この機能をAEM Formsインスタンスでテストするには、次の手順に従ってください
 
