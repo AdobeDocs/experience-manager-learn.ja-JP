@@ -30,7 +30,7 @@ CRXDE Liteは、JCR、AEMデータリポジトリと対話用のWebベースの�
 CRXDE Liteの場所：
 
 + ツール/一般/CRXDE Lite
-+ または [http://localhost:4502/crx/de/index.jspに直接](http://localhost:4502/crx/de/index.jsp)
++ または[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)に直接
 
 ## クエリの説明を実行
 
@@ -47,7 +47,7 @@ AEM SDKのローカルクイックスタートで、クエリのWebベースの�
 
 ![QueryBuilderデバッガー](./assets/other-tools/query-debugger.png)
 
-QueryBuilderデバッガーは、AEM QueryBuilderの構文を使用して検索クエリをデバッグし、理解するのに役立つWebベースのツールで [す](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 。
+QueryBuilderデバッガーは、AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)構文を使用した検索クエリのデバッグと理解に役立つWebベースのツールです。
 
 QueryBuilderデバッガーは次の場所にあります。
 
@@ -57,9 +57,9 @@ QueryBuilderデバッガーは次の場所にあります。
 
 ![Sling Log TracerおよびAEM Chromeプラグイン](./assets/other-tools/log-tracer.png)
 
-[AEM SDKのローカルクイックスタートに付属するSling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)(Sling Log Tracer)は、HTTP要求を詳細にトレースし、要求ごとの詳細なデバッグ情報を公開することを可能にします。 この機能を有効にするには、 [ログトレーサーOSGiの設定を構成する必要があります](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) 。
+[AEM SDKのローカルクイックスタートに付属するSling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)(Sling Log Tracer)は、HTTP要求を詳細にトレースし、要求ごとの詳細なデバッグ情報を公開することを可能にします。[ログトレーサーOSGiの設定は、この機能を有効にするために](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)設定する必要があります。
 
-[Google Chrome Webブラウザー用のオープンソースの](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=ja-JP) AEM Chromeプラグイン [](https://www.google.com/chrome/)。ログトレーサーと統合されており、Chromeの開発ツールでデバッグ情報が直接公開されます。
+[Google Chrome Webブラウザー](https://www.google.com/chrome/)用のオープンソース[AEM Chromeプラグイン](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=ja-JP)は、ログトレーサーと統合されており、Chromeの開発ツールでデバッグ情報を直接公開しています。
 
 _AEM Chromeプラグインはオープンソースのツールで、Adobeはこの機能をサポートしていません。_
 
