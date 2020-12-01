@@ -26,7 +26,7 @@ AEMをCloud Serviceの透かし機能として使用すると、カスタムの�
 
 ## OSGi設定
 
-次のOSGi構成スタブを更新し、AEMプロジェクトの `ui.config` サブプロジェクトに追加できます。
+次のOSGi構成スタブを更新し、AEMプロジェクトの`ui.config`サブプロジェクトに追加できます。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
