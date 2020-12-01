@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsでカスタム送信を作成する {#writing-a-custom-submit-in-aem-forms}
+# AEM Formsでのカスタム送信の作成{#writing-a-custom-submit-in-aem-forms}
 
 アダプティブフォーム用に独自のカスタム送信アクションをすばやく簡単に作成する方法
 
