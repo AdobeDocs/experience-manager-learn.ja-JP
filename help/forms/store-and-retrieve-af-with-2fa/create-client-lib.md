@@ -19,7 +19,7 @@ ht-degree: 6%
 
 # クライアントライブラリの作成
 
-CSSクラスの [savebuttonで識別されるボタンのclickイベントで](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html) APIのメソッド `doAjaxSubmitWithFileAttachment` を呼び出すコードを含むクライアントlib `guideBridge` を作成します ****。  アダプティブフォームデータ `fileMap`と、をリッスンしているエンドポイント `mobileNumber` に渡します。 `**/bin/storeafdatawithattachments`
+CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのクリックイベントで、`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードを含む[クライアントlib](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を作成します。  アダプティブフォームデータ`fileMap`と`mobileNumber`を`**/bin/storeafdatawithattachments`でリッスンしているエンドポイントに渡します
 
 フォームデータを保存すると、一意のアプリケーションIDが生成され、ダイアログボックスにユーザーに表示されます。 ダイアログボックスを閉じると、ユーザーはフォームに移動し、保存済みのアダプティブフォームを一意のアプリケーションIDを使用して取得できるようになります。
 
@@ -67,6 +67,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> ダイアログボックスの表示に [ブートボックスのJavaScriptライブラリ](http://bootboxjs.com/examples.html) を使用しました。
+> [ブートボックスjavascriptライブラリ](http://bootboxjs.com/examples.html)を使用してダイアログボックスを表示しました
 
-このサンプルで使用するクライアントライブラリは、こちらから [ダウンロードできます。](assets/client-libraries.zip)
+このサンプルで使用するクライアントライブラリは、[ここから](assets/client-libraries.zip)ダウンロードできます。
