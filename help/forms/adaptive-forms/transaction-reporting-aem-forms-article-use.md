@@ -20,11 +20,11 @@ ht-degree: 1%
 ---
 
 
-# AEM Formsでの取引レポートの使用{#using-transaction-reporting-in-aem-forms}
+# AEM Formsでのトランザクションレポートの使用{#using-transaction-reporting-in-aem-forms}
 
 AEM Forms6.4.1では、フォームの送信数、ドキュメントサービスを使用したドキュメントのレンダリング、対話型通信(Webおよび印刷チャネル)のレンダリングを取得するトランザクションレポートが導入されています。この機能は、主にフォームの送信数やドキュメント数に基づいてソフトウェアのライセンスを取得するお客様向けです。 この機能は現在、AEM FormsOSGIスタックでのみ使用できます。
 
-## トランザクションレポートの有効化 {#enabling-transaction-reporting}
+## トランザクションレポートを有効にする{#enabling-transaction-reporting}
 
 デフォルトでは、トランザクションの記録は無効になっています。 トランザクションの記録を有効にするには、次の手順に従います。
 
@@ -35,13 +35,13 @@ AEM Forms6.4.1では、フォームの送信数、ドキュメントサービス
 
 トランザクションレポートを有効にすると、アダプティブFormsを送信し、ドキュメントサービスを使用してドキュメントを生成するか、Interactive Communicationドキュメントをレンダリングして、実行中のトランザクションレポートを確認できます。
 
-## 取引レポートの表示 {#viewing-transaction-report}
+## トランザクションレポートの表示{#viewing-transaction-report}
 
 トランザクションレポートを表示するには、管理者としてAEM Formsにログインします。 fd-Administratorグループのメンバーのみがトランザクションレポートを表示できます。
 
 ツールの選択 |Forms |表示トランザクションレポート
 
-または、 [ここをクリックしてトランザクションレポートを表示します。](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+または、[ここ](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)をクリックしてトランザクションレポートを表示します。
 
 ![TransactionReporting](assets/transactionreporting.gif)
 
@@ -53,5 +53,5 @@ PDFフォームの送信、エージェントUIを使用した対話型通信の
 
 作成者インスタンスに関するトランザクションレポートを表示している場合は、すべての発行インスタンスで逆複製が設定されていることを確認します。
 
-トランザクションのレポートの詳細については、こちらを [参照してください。](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+トランザクションレポート[の詳細については、こちら](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)をクリックしてください
 
