@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Formsの産出・Forms事業を活用した開発{#developing-with-output-and-forms-services-in-aem-forms}
+# AEM FormsのOutputとForms・サービスを使った開発{#developing-with-output-and-forms-services-in-aem-forms}
 
 AEM FormsでのOutputとFormsサービスAPIの使用
 
@@ -29,7 +29,7 @@ AEM FormsでのOutputとFormsサービスAPIの使用
 * Outputサービス — 通常、このサービスは、xmlデータをxdpテンプレートまたはpdfにマージして統合済みpdfを生成する際に使用されます。
 * FormsService - PDFファイルのデータを書き出したり、PDFファイルにデータを読み込んだりする、用途の広いサービスです。
 
-AEM FormsAPIの公式Javadocは [ここに記載されています](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+AEM FormsAPIの公式Javadocは[ここ](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)に記載されています
 
 次のコードスニペットは、PDFファイルからデータを書き出します
 
@@ -67,10 +67,16 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 「Sling転送者フィルター」を検索します
-1. 「空白を許可」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用できます）サンプルコードをテストする方法はいくつかあります。 最も簡単で迅速な方法は、Postmanアプリを使用することです。 Postmanは、サーバーにPOSTリクエストを行うことを許可します。 システムにPostmanアプリをインストールします。
+1. 「空白を許可」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用します）。
+サンプルコードをテストする方法はいくつかあります。 最も簡単で迅速な方法は、Postmanアプリを使用することです。 Postmanは、サーバーにPOSTリクエストを行うことを許可します。 システムにPostmanアプリをインストールします。
 アプリを起動し、次のURLを入力してExport Data APIをテストします
 
-ドロップダウンリストから「POST」を選択したことを確認します。http://localhost:4502/content/AemFormsSamples/exportdata.html「認証」に「基本認証」と指定していることを確認します。 AEM Serverのユーザー名とパスワードを指定「Body」タブに移動し、以下の画像に示すようにリクエストパラメーターを指定します![](assets/postexport.png)。次に、「送信」ボタンをクリックします
+ドロップダウンリストから「POST」を選択したことを確認します
+http://localhost:4502/content/AemFormsSamples/exportdata.html
+「認証」には「基本認証」を指定してください。 AEM Serverのユーザー名とパスワードを指定します
+「Body」タブに移動し、次の画像に示すようにリクエストパラメーターを指定します
+![エクスポート](assets/postexport.png)
+次に、「送信」ボタンをクリックします
 
 パッケージには3つのサンプルが含まれています。 次の段落では、OutputサービスまたはFormsサービスを使用するタイミング、サービスのURL、各サービスが想定する入力パラメーターについて説明します
 
