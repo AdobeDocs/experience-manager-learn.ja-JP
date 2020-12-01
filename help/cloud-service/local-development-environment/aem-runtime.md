@@ -22,16 +22,16 @@ ht-degree: 1%
 
 Adobe Experience Manager(AEM)は、AEMをCloud ServiceSDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定、コンテンツをソース管理にコミットする前に、カスタムコード、設定、コンテンツをデプロイしてテストし、Cloud Service環境としてAEMにデプロイできます。
 
-は、ユーザーのディレクトリの略記法 `~` として使用されます。 Windowsでは、これはと同じで `%HOMEPATH%`す。
+`~`は、ユーザーのディレクトリの略記法として使用されます。 Windowsでは、`%HOMEPATH%`と同じです。
 
 ## Javaのインストール
 
 Experience ManagerはJavaアプリケーションなので、開発ツールをサポートするJava SDKが必要です。
 
-1. [最新のJava SDK 11をダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+11%7E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
+1. [最新のJava SDK 11をダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
 1. 次のコマンドを実行して、Java 11 SDKがインストールされていることを確認します。
    + Windows：`java -version`
-   + macOS/Linux: `java --version`
+   + macOS/Linux:`java --version`
 
 ![Java](./assets/aem-runtime/java.png)
 
@@ -39,29 +39,29 @@ Experience ManagerはJavaアプリケーションなので、開発ツールを�
 
 AEMは、Cloud ServiceSDK、またはAEM SDKとして、開発のためにAEM AuthorとPublishをローカルで実行するためのQuickstart Jarと、互換性のあるバージョンのディスパッチャーツールを含みます。
 
-1. Log in to [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) with your Adobe ID
-   + AEMをCloud ServiceSDKとしてダウンロードするには、Adobe組織 __がAEM用にCloud Serviceとしてプロビジョニングされている必要があります__ 。
-1. 「 __AEM」タブにCloud Serviceとして移動します__ 。
-1. __発行日順に並べ替え__ ( ____ 降順順)
-1. 最新の __AEM SDK__ 結果行をクリックします
-1. EULAを確認して同意し、「 __ダウンロード__ 」ボタンをタップします
+1. [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads)にAdobe IDとログインします
+   + Adobe組織&#x200B;__は、AEMをCloud ServiceSDKとしてダウンロードするCloud ServiceとしてAEM用に__&#x200B;プロビジョニングされている必要があります。
+1. 「Cloud Service __」タブで__ AEMに移動します
+1. __発行日__&#x200B;で並べ替え(__降順__&#x200B;順)
+1. 最新の&#x200B;__AEM SDK__&#x200B;結果行をクリックします
+1. EULAを確認して同意し、「__ダウンロード__」ボタンをタップします
 
 ## AEM SDKのzipからQuickstart JARを抽出します。
 
-1. Unzip the downloaded `aem-sdk-XXX.zip` file
+1. ダウンロードした`aem-sdk-XXX.zip`ファイルを解凍します。
 
-## ローカルのAEM Authorサービスのセットアップ{#set-up-local-aem-author-service}
+## ローカルAEM Authorサービス{#set-up-local-aem-author-service}のセットアップ
 
 ローカルのAEM Authorサービスは、デジタルマーケターやコンテンツの作成者がコンテンツの作成と管理を共有する、ローカルエクスペリエンスのデジタルマーケターを開発者に提供します。  AEM Author Serviceは、オーサリングとプレビューの両方の環境として設計されており、これに対して機能開発のほとんどの検証を実行できるので、ローカル開発プロセスの重要な要素です。
 
-1. フォルダーの作成 `~/aem-sdk/author`
-1. Quickstart __JAR__ ファイルをにコピー `~/aem-sdk/author` し、 `aem-author-p4502.jar`
+1. フォルダー`~/aem-sdk/author`を作成
+1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/author`にコピーし、`aem-author-p4502.jar`に名前を変更します
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM Author Serviceを開始します。
    + `java -jar aem-author-p4502.jar`
-      + 管理者パスワードをに指定し `admin`ます。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
+      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
 
-   重複 *をクリックして、AEMをCloud ServiceQuickstart Jarとして* 開始することはできません [](#troubleshooting-double-click)。
-1. Webブラウザーでhttp://localhost:4502 [からローカルのAEM Author Serviceにアクセスします](http://localhost:4502) 。
+   *重複がクリックして](#troubleshooting-double-click)、AEMをCloud ServiceクイックスタートJAR [として開始することはできません。*
+1. Webブラウザーで、[http://localhost:4502](http://localhost:4502)にあるローカルのAEM Author Serviceにアクセスします。
 
 Windows：
 
@@ -83,16 +83,16 @@ $ java -jar aem-author-p4502.jar
 
 ## ローカルAEM発行サービスのセットアップ
 
-ローカルのAEM発行サービスは、AEM上に保存されているWebサイトの参照など、AEMのエンドユーザーが持つローカルエクスペリエンスを開発者に提供します。 ローカルのAEM発行サービスは、AEM SDKの [ディスパッチャーツールと統合し](./dispatcher-tools.md) 、開発者がエンドユーザーの体験を煙でテストし、微調整できるようにするため、重要です。
+ローカルのAEM発行サービスは、AEM上に保存されているWebサイトの参照など、AEMのエンドユーザーが持つローカルエクスペリエンスを開発者に提供します。 ローカルのAEM発行サービスは、AEM SDKの[ディスパッチャーツール](./dispatcher-tools.md)と統合し、開発者がエンドユーザーに対する最終的なエクスペリエンスをスモークテストおよび微調整できるので、重要です。
 
-1. フォルダーの作成 `~/aem-sdk/publish`
-1. Quickstart __JAR__ ファイルをにコピー `~/aem-sdk/publish` し、 `aem-publish-p4503.jar`
+1. フォルダー`~/aem-sdk/publish`を作成
+1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/publish`にコピーし、`aem-publish-p4503.jar`に名前を変更します
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM発行サービスを開始します。
    + `java -jar aem-publish-p4503.jar`
-      + 管理者パスワードをに指定し `admin`ます。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
+      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
 
-   重複 *をクリックして、AEMをCloud ServiceQuickstart Jarとして* 開始することはできません [](#troubleshooting-double-click)。
-1. Webブラウザーのhttp://localhost:4503 [で、ローカルのAEM Publish Serviceにアクセスします](http://localhost:4503) 。
+   *重複がクリックして](#troubleshooting-double-click)、AEMをCloud ServiceクイックスタートJAR [として開始することはできません。*
+1. Webブラウザーの[http://localhost:4503](http://localhost:4503)にあるローカルのAEM Publish Serviceにアクセスします。
 
 Windows：
 
@@ -114,16 +114,16 @@ $ java -jar aem-publish-p4503.jar
 
 ## Quickstart JAR開始アップモード
 
-Quickstart Jarの名前は、開始アップの方法を `aem-<tier>_<environment>-p<port number>.jar` 指定します。 AEMを特定の層、作成者、または発行で起動した後は、別の層に変更することはできません。 これを行うには、最初の実行時に生成された `crx-Quickstart` フォルダーを削除し、Quickstart Jarを再度実行する必要があります。 環境とポートは変更できますが、ローカルAEMインスタンスの停止/開始が必要です。
+クイックスタートJARの名前`aem-<tier>_<environment>-p<port number>.jar`は、開始アップの方法を指定します。 AEMを特定の層、作成者、または発行で起動した後は、別の層に変更することはできません。 これを行うには、最初の実行時に生成された`crx-Quickstart`フォルダーを削除し、Quickstart Jarを再度実行する必要があります。 環境とポートは変更できますが、ローカルAEMインスタンスの停止/開始が必要です。
 
-環境 `dev`、 `stage``prod`およびの変更は、環境固有の設定がAEMで正しく定義され、解決されることを確認する開発者にとって役立ちます。 ローカル開発は、主にデフォルトの `dev` 環境実行モードに対して行うことをお勧めします。
+環境`dev`、`stage`、`prod`の変更は、AEMで環境固有の設定が正しく定義され、解決されることを確認する開発者にとって役立ちます。 ローカル開発は、主にデフォルトの`dev`環境実行モードに対して行うことをお勧めします。
 
 次の順に並べ替えます。
 
 + `aem-author-p4502.jar`
    + ポート4502でのDev実行モードでの作成者
 + `aem-author_dev-p4502.jar`
-   + ポート4502でのDev実行モードの作成者(同じ `aem-author-p4502.jar`)
+   + ポート4502上のDev実行モードの作成者（`aem-author-p4502.jar`と同じ）
 + `aem-author_stage-p4502.jar`
    + ポート4502でのステージング実行モードでの作成者
 + `aem-author_prod-p4502.jar`
@@ -131,7 +131,7 @@ Quickstart Jarの名前は、開始アップの方法を `aem-<tier>_<environmen
 + `aem-publish-p4503.jar`
    + ポート4503でのDev実行モードでの作成者
 + `aem-publish_dev-p4503.jar`
-   + ポート4503でのDev実行モードの作成者(同じ `aem-publish-p4503.jar`)
+   + ポート4503上のDev実行モードの作成者（`aem-publish-p4503.jar`と同じ）
 + `aem-publish_stage-p4503.jar`
    + ポート4503でのステージング実行モードでの作成者
 + `aem-publish_prod-p4503.jar`
@@ -139,14 +139,14 @@ Quickstart Jarの名前は、開始アップの方法を `aem-<tier>_<environmen
 
 ポート番号は、ローカル開発マシン上で使用可能な任意のポートにすることができますが、規則に従う必要があります。
 
-+ ポート __4502__ は、 __ローカルのAEM Authorサービスに使用されます。__
-+ ポート __4503__ は、 __ローカルAEM発行サービスで使用されます。__
++ ポート&#x200B;__4502__&#x200B;は、__ローカルAEM Authorサービス__&#x200B;に使用されます
++ ポート&#x200B;__4503__&#x200B;は、__ローカルAEM発行サービス__&#x200B;に使用されます
 
 これらの変更を行うと、AEM SDK設定の調整が必要になる場合があります
 
 ## ローカルAEMランタイムの停止
 
-ローカルAEMランタイムを停止するには、AEM Authorまたは発行サービスのいずれかを停止し、AEMランタイムの開始に使用したコマンドラインウィンドウを開いてをタップし `Ctrl-C`ます。 AEMがシャットダウンするまで待ちます。 シャットダウン処理が完了すると、コマンドラインプロンプトが表示されます。
+ローカルAEMランタイムを停止するには、AEM Authorまたは発行サービスのいずれかを停止するには、AEMランタイムの開始に使用したコマンドラインウィンドウを開き、`Ctrl-C`をタップします。 AEMがシャットダウンするまで待ちます。 シャットダウン処理が完了すると、コマンドラインプロンプトが表示されます。
 
 ## Quickstart Jarを更新するタイミング
 
@@ -161,14 +161,14 @@ AEM SDKを毎月少なくとも毎月、または毎月の最終木曜日に更�
 AEM SDKをアップグレードすると、新しいリポジトリを含む新しいAEMランタイムが効果的に作成されます。つまり、以前のAEM SDKのリポジトリに対して行われた変更はすべて失われます。 以下は、AEM SDKのアップグレード間でコンテンツを継続的に保持するための実行可能な戦略で、個別に使用することも、連携して使用することもできます。
 
 1. 開発に役立つ「サンプル」コンテンツを含む専用のコンテンツパッケージを作成し、Gitで維持します。 AEM SDKのアップグレードを通じて保持する必要のあるコンテンツはすべて、このパッケージに格納され、AEM SDKのアップグレード後に再デプロイされます。
-1. 以前のAEM SDKリポジトリから新しいAEM SDKリポジトリに [コンテンツをコピーするには、](https://jackrabbit.apache.org/oak/docs/migration.html) ディレクティブと共にoak-upgrade `includepaths` (oak-upgrade)を使用します。
+1. [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html)を`includepaths`ディレクティブと共に使用して、以前のAEM SDKリポジトリから新しいAEM SDKリポジトリにコンテンツをコピーします。
 1. AEM Package Managerを使用してコンテンツをバックアップし、以前のAEM SDKのコンテンツパッケージを新しいAEM SDKに再インストールします。
 
 AEM SDKのアップグレード間でコードを維持するために上記の方法を使用すると、開発のアンチパターンを示すことに注意してください。 使い捨てでないコードは、開発IDEから派生し、デプロイメントを介してAEM SDKに流れ込む必要があります。
 
 ## トラブルシューティング
 
-## 重複がQuickstart Jarファイルをクリックすると、エラーが発生する{#troubleshooting-double-click}
+## Quickstart Jarファイルを重複がクリックすると、エラー{#troubleshooting-double-click}が発生します
 
 Quickstart Jarを重複クリックして開始すると、エラーモーダルが表示され、AEMがローカルで起動できなくなります。
 
@@ -176,15 +176,15 @@ Quickstart Jarを重複クリックして開始すると、エラーモーダル
 
 これは、AEM Quickstart JarとしてのCloud Serviceは、開始AEMに対するQuickstart Jarの重複クリックをローカルでサポートしていないためです。 代わりに、そのコマンドラインからJarファイルを実行する必要があります。
 
-AEM Authorサービスを開始す `cd` るには、Quickstart Jarを含むディレクトリに移動し、次のコマンドを実行します。
+AEM Authorサービスを開始するには、`cd`をQuickstart Jarを含むディレクトリに移動し、次のコマンドを実行します。
 
 `$ java -jar aem-author-p4502.jar`
 
-または、AEM発行サービスに開始す `cd` るには、Quickstart Jarを含むディレクトリに移動し、次のコマンドを実行します。
+または、AEM発行サービスに開始するには、`cd`をQuickstart Jarを含むディレクトリに移動し、次のコマンドを実行します。
 
 `$ java -jar aem-author-p4503.jar`
 
-## コマンドラインからQuickstart Jarを起動すると、すぐに中止されます{#troubleshooting-java-8}
+## コマンドラインからQuickstart Jarを起動すると、すぐに{#troubleshooting-java-8}が中止されます。
 
 コマンドラインからQuickstart Jarを開始すると、プロセスは直ちに中止され、AEMサービスは開始しません。次のエラーが発生します。
 
@@ -199,13 +199,13 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-これは、AEMがCloud Serviceとして必要なJava SDK 11が異なるバージョンを実行している場合、おそらくJava 8が必要なためです。 この問題を解決するには、 [Oracle Java SDK 11をダウンロードしてインストールし](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+11%7E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)ます。
+これは、AEMがCloud Serviceとして必要なJava SDK 11が異なるバージョンを実行している場合、おそらくJava 8が必要なためです。 この問題を解決するには、[OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)をダウンロードしてインストールします。
 Java SDK 11がインストールされたら、コマンドラインから次のコマンドを実行して、アクティブバージョンであることを確認します。
 
 Java 11 SDKがインストールされたら、コマンドラインから次のコマンドを実行して、アクティブなバージョンであることを確認します。
 
 + Windows：`java -version`
-+ macOS/Linux: `java --version`
++ macOS/Linux:`java --version`
 
 ## その他のリソース
 
