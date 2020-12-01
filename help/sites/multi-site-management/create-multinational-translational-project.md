@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Create a multi-language Translation Project {#create-multi-language-translation-projects}
+# 多言語翻訳プロジェクトの作成{#create-multi-language-translation-projects}
 
 AEMプロジェクトコンソールから言語コピー用の複数言語翻訳プロジェクトを作成、編集、管理する方法を学びます。
 
