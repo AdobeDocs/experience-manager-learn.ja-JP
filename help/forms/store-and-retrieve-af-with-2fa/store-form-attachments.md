@@ -31,7 +31,7 @@ OSGiサービスは、フォーム添付ファイルをCRXリポジトリの新�
 }
 ```
 
-次のコードは、リクエストから添付ファイルを抽出し、 **/content/afattachments** フォルダーに保存するコードです
+次のコードは、リクエストから添付ファイルを抽出し、**/content/afattachments**&#x200B;フォルダーに保存するコードです
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
