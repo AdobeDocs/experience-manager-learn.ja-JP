@@ -20,16 +20,16 @@ ht-degree: 2%
 
 次の手順は、前の手順で作成したAcroformからスキーマを作成することです。 このチュートリアルの一部として、スキーマを作成するサンプルアプリケーションが用意されています。 スキーマを作成するには、次の手順に従います。
 
-1. [CRXDE Liteにログイン](http://localhost:4502/crx/de)
-2. ファイルを開く `/apps/AemFormsSamples/components/createxsd/POST.jsp`
-3. を、ハードドライブ `saveLocation` 上の適切なフォルダーに変更します。 保存先のフォルダーが既に作成されていることを確認します。
-4. AEMでホストされたXSD [ページを](http://localhost:4502/content/DocumentServices/CreateXsd.html) 作成するには、ブラウザーを指定します。
+1. [CRXDE Lite](http://localhost:4502/crx/de)にログイン
+2. ファイル`/apps/AemFormsSamples/components/createxsd/POST.jsp`を開きます
+3. `saveLocation`をハードドライブ上の適切なフォルダーに変更します。 保存先のフォルダーが既に作成されていることを確認します。
+4. AEMでホストされている[Create XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html)ページがブラウザーに表示されることを指定します。
 5. Acroformをドラッグ&amp;ドロップします。
 6. 手順3で指定したフォルダを確認します。 スキーマファイルはこの場所に保存されます。
 
 ## Acroformのアップロード
 
-このデモがお使いのシステムで動作するには、AEM Assetsでという名前のフォルダを作成する必要があ `acroforms` ります。 Acroformをこの `acroforms` フォルダーにアップロードします。
+このデモがお使いのシステムで動作するには、AEM Assetsに`acroforms`という名前のフォルダを作成する必要があります。 この`acroforms`フォルダーにAcroformをアップロードします。
 
 >[!NOTE]
 >
