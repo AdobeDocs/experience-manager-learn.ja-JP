@@ -24,7 +24,7 @@ ht-degree: 83%
 + [プロジェクトのセットアップ](project-setup.md)
 + [コンポーネントの基本](component-basics.md)
 + [ページとテンプレート](pages-templates.md)
-+ [クライアント側ライブラリ](client-side-libraries.md)
++ [クライアントサイドライブラリ](client-side-libraries.md)
 + [スタイルシステム](style-system.md)
 + [カスタムコンポーネント](custom-component.md)
 + [単体テスト](unit-testing.md)
