@@ -16,28 +16,28 @@ ht-degree: 1%
 ---
 
 
-# AEM AssetsのInDesignファイルとアセットテンプレートについて {#understanding-indesign-files-and-asset-templates-in-aem-assets}
+# AEM Assets{#understanding-indesign-files-and-asset-templates-in-aem-assets}のInDesignファイルとアセットテンプレートについて
 
 このビデオチュートリアルでは、AEM Assetsのアセットテンプレート機能で使用するInDesignファイルの定義と、それに付随するすべての考慮事項について順を追って説明します。
 
-## InDesignテンプレートファイルの作成 {#constructing-the-indesign-template-file}
+## InDesignテンプレートファイルの構築{#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
-1. [**InDesignファイルテンプレートをダウンロードして開く**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **タグパネルを開き、タグの命名規則を確認し** 、InDesignファイル内の作成者可能な要素には既にタグが付いていることに注意してください。 AEMでは、タグ付き要素のみを編集できます。
+1. [**InDesignファイルテンプレート**](assets/asset-templates-tutorial-video--supporting-files.zip)&#x200B;をダウンロードして開きます
+2. **タグパネルを開き、タグの命名規則を** 確認します。InDesignファイル内の作成者可能な要素には既にタグが付いていることに注意してください。AEMでは、タグ付き要素のみを編集できます。
 
    * **ウィンドウ/ユーティリティ/タグ**
 
-3. 「ページ」追加に、新しいテキスト要素「ヘッダー」を入力し、「 **見出し** 」段落スタイルを適用します。
+3. ページに、追加新しいテキスト要素を追加し、「Header」というテキストを指定して、**見出し**&#x200B;段落スタイルを適用します。
 
    * **ウィンドウ/スタイル/段落スタイル**
 
-   次に、 **Page2Headingという名前の新しいタグを作成して適用します。**
+   次に、**Page2Heading.**&#x200B;という名前の新しいタグを作成し、適用します。
 
-4. FPO追加ロゴ画像(zipで[](assets/asset-templates-tutorial-video--supporting-files.zip)提供)を、マスターページのLogo要素に追加します。
+4. 追加マスターページのLogo要素にFPOロゴ画像（zip](assets/asset-templates-tutorial-video--supporting-files.zip)に含まれる[）を表示します。
 
-   * **右クリック**&#x200B;し、「継ぎ手」**/「フレーム継ぎ手のオプション」。../コンテンツ継ぎ手/フレームの縦横の比率を維持」を選択します。**
+   * **右クリックし**&#x200B;て、「継ぎ手」>「フレーム継ぎ手のオプション」。../コンテンツ継ぎ手」>「フレームの縦横の比率を維持して埋める」を&#x200B;**選択します**
    [フレームフィッティングオプションの詳細](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)（使用事例に最適）
 
 5. 「ページ」のマスターテンプレートからヘッダー(「ロゴ」と「会社名」)をコピーし、「ページを同じ位置に貼り付け」を使用してページをコピーします。
@@ -52,28 +52,28 @@ ht-degree: 1%
    >
    >AEMアセットテンプレートでの問題の最も一般的な原因は、InDesignファイルの構造が不適切なことです。したがって、タグ付けと構造がクリーンで正しいことを確認してください。
 
-## AEM Assetsでのアセットテンプレートの作成とオーサリング {#creating-and-authoring-an-asset-template-in-aem-assets}
+## AEM Assets{#creating-and-authoring-an-asset-template-in-aem-assets}でのアセットテンプレートの作成とオーサリング
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
 
-1. **ポート8080の開始InDesign Server** 。
-2. AEM作成者インスタンスがInDesign Serverと対話操作する **（またはその逆）ように設定されていることを確認し**&#x200B;ます。
+1. **開始InDesign** サーバーのポートは8080です。
+2. **AEM作成者インスタンスがInDesign Server**&#x200B;とやり取りするように設定されていることを確認します（逆も同じです）。
 
    * [IDSワーカーCloud Serviceの構成](http://localhost:4502/etc/cloudservices/proxy/ids.html)
    * [クラウドプロキシCloud Serviceの設定](http://localhost:4502/etc/cloudservices/proxy.html)
    * [AEM Externalizer OSGiの設定](http://localhost:4502/system/console/configMgr)
 
-3. **InDesignファイルをAEM Assetsにアップロードし** 、AEMワークフローとInDesign Serverがアセットを完全に処理できるようにします。
-4. **ア** セット/テンプレートの下に新しいテンプレートを作成し **** 、手順4でAEMにアップロードしたInDesignファイルを選択します。
-5. **手順** 5で作成したアセットテンプレートを編集し、編集可能なフィールドを作成します。
-6. 「 **完了** 」をクリックして、アセットテンプレートの最終的な高忠実度レンディションを生成します。
+3. **InDesignファイルをAEM Assetにアップロードし、AEM** ワークフローとInDesign Serverがアセットを完全に処理できるようにします。
+4. **アセット/テ** ンプレートの下に新しい **** InDesignを作成し、手順4でAEMにアップロードしたテンプレートファイルを選択します。
+5. **手順5で作成したアセット** テンプレートを編集し、編集可能なフィールドを作成します。
+6. 「**完了**」をクリックして、アセットテンプレートの最終的な高忠実度レンディションを生成します。
 7. アセットテンプレートカードをクリックして開き、アセットレンディションを確認して高忠実度レンディションをダウンロードします。
 
 ## その他のリソース {#additional-resources}
 
 InDesignテンプレートファイルとサポートする画像
 
-InDesignテンプレートファイルとサポートする [画像のダウンロード](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+[InDesignテンプレートファイルとサポートする画像](assets/asset-templates-tutorial-video--supporting-files-1.zip)をダウンロード
 
 * [InDesignCC体験版のダウンロード](https://creative.adobe.com/products/download/indesign)
 * [InDesign Server体験版のダウンロード](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
