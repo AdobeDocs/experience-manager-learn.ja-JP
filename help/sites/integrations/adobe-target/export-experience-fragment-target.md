@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# Export Experience Fragment to Adobe Target {#experience-fragment-target}
+# エクスペリエンスフラグメントをAdobe Targetに書き出し{#experience-fragment-target}
 
 AEMエクスペリエンスフラグメントをAdobe Targetオファーとして書き出す方法を説明します。
 
@@ -38,16 +38,16 @@ Adobe Admin Consoleで適切な権限を持たないエクスペリエンスフ�
 
     ! [ターゲットAPI UIエラー](assets/error-target-offer.png)
 
-...および次のログメッセージが `aemerror` ログに記録されます。
+...と`aemerror`ログの次のログメッセージ：
 
     ! [ターゲットAPIコンソールエラー](assets/target-console-error.png)
 
 #### 解決方法
 
-1. 使用しているが、AEM統合では、 [Admin Consoleに対して管理権限を持つAdobe Target製品プロファイルにログインする](https://adminconsole.adobe.com/)
-2. 「 __商品」>「Adobe Target」>「製品プロファイル」を選択します。__
-3. 「 __Integrations__ 」タブで、AEM用のCloud Service環境(AdobeI/Oプロジェクトと同じ名前)を選択します。
-4. エ __ディタ__ または __承認者の役割の割り当て__
+1. 使用しているAdobe Target製品プロファイルの管理権限で[Admin Console](https://adminconsole.adobe.com/)にログインしますが、AEM統合
+2. __製品/Adobe Target/製品プロファイル__&#x200B;を選択します。
+3. 「__統合__」タブで、AEMの統合をCloud Service環境として選択します(Adobe I/Oプロジェクトと同じ名前)。
+4. __エディター__&#x200B;または&#x200B;__承認者__&#x200B;の役割を割り当てる
 
    ![ターゲットAPIエラー](assets/target-permissions.png)
 
