@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 23%
 + [AEM フォーム](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEMをCloud Serviceとして](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/overview.html)
 + [AEM の基盤](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
-+ 複数手順のTutorials {#multi}
-   + [はじめに —AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
++ マルチステップTutorials{#multi}
+   + [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM ヘッドレス使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA EditorとReactの使い方](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA EditorとAngularの使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
