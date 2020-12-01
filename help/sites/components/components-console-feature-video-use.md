@@ -15,7 +15,7 @@ ht-degree: 1%
 ---
 
 
-# コンポーネントコンソールの使用 {#using-the-components-console-with-aem-sites}
+# コンポーネントコンソールを使用する{#using-the-components-console-with-aem-sites}
 
 コンポーネントコンソールは、開発者と管理者がサイト実装の様々なコンポーネントを一元的に管理できる場所です。 次のビデオでは、コンポーネントコンソールの機能について詳しく説明します。
 
@@ -28,8 +28,8 @@ ht-degree: 1%
 * [!UICONTROL ポリシー]:特定のコンポーネントに対する既存のポリシーと関連付けられたテンプレートを表示します
 * [!UICONTROL Live Usage]:コンポーネントが含まれているページのリストを表示します
 
-コンポーネントコンソールは、 **[!UICONTROL ツール]** / **[!UICONTROL 一般]** /コンポー **[!UICONTROL ネントからアクセスできます]**。
-コンポーネントコンソールURL（ローカルAEM作成者）: [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+コンポーネントコンソールは、**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL コンポーネント]**にあります。
+コンポーネントコンソールURL（ローカルAEM作成者）:[http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## その他のリソース {#additional-resources}
 
