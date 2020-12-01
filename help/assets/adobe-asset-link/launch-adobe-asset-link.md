@@ -18,7 +18,7 @@ ht-degree: 25%
 ---
 
 
-# Adobeアセットリンクにアクセス {#access-adobe-asset-link}
+# Adobeアセットリンク{#access-adobe-asset-link}にアクセス
 
 Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケティング担当者のコラボレーションを強化できます。Adobe Experience Managerアセット(AEM Assets)に保存されたコンテンツには、最もなじみのあるCreative Cloudデスクトップアプリケーションを残さずにアクセスできます。 Creative CloudデスクトップアプリケーションからAdobeのアセットリンクパネルを起動する方法を説明します。
 
