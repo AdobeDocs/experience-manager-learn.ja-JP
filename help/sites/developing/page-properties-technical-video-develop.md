@@ -16,13 +16,13 @@ ht-degree: 13%
 ---
 
 
-# ページプロパティの拡張 {#extending-page-properties-in-aem-sites}
+# ページプロパティの拡張{#extending-page-properties-in-aem-sites}
 
 ページプロパティのメタデータフィールドのカスタマイズは、サイトの導入では一般的な要件です。 このビデオでは、Sling Resource Mangerの機能を使用してこれを実現する最も効果的な方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
 
-上記のビデオでは、 **AEM 6.4のWe.Retailアプリケーションのページプロパティを、Sling Resource Margeの様々な機能を使用してカスタマイズする方法を示しています** 。 次のカスタマイズを有効にします。
+上記のビデオでは、Sling Resource Mangerの様々な機能を使用して、**AEM 6.4**&#x200B;のWe.Retailアプリケーションのページプロパティをカスタマイズする方法を示しています。 次のカスタマイズを有効にします。
 
 * 「基本」タブの前に挿入されたカスタムタブ。
 * 「基本」タブの一部として挿入される新しいテキストフィールド。
