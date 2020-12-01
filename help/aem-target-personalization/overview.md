@@ -1,18 +1,18 @@
 ---
-title: AEMとAdobe Targetの使い始めに
-seo-title: AEMとAdobe Targetの使い始めに
+title: AEM と Adobe Target の使用の手引き
+seo-title: AEM と Adobe Target の使用の手引き
 description: Adobe Experience ManagerとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。 このチュートリアルでは、エンドツーエンドプロセスに関与する様々な人物と、それらの人々がお互いにどのように共同作業を行うかについても学びます。
 seo-description: Adobe Experience ManagerとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。 このチュートリアルでは、エンドツーエンドプロセスに関与する様々な人物と、それらの人々がお互いにどのように共同作業を行うかについても学びます。
 translation-type: tm+mt
 source-git-commit: c4ddafe392f74be8401f3ef6e07fc9d463d7620a
 workflow-type: tm+mt
 source-wordcount: '889'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# AEMとAdobe Targetの使い始めに {#getting-started-with-aem-target}
+# AEM と Adobe Target の使用の手引き {#getting-started-with-aem-target}
 
 AEMとターゲットは、両方とも、一見重なり合うような機能を持つ強力なソリューションです。 お客様は、これらの製品をどのように、いつどのように組み合わせて使用し、パーソナライズされたエクスペリエンスを提供するかを理解するのに苦労する場合があります。 エンドユーザーごとに最適化されたエクスペリエンスを提供するには、社内の異なるチームが緊密に連携し、誰が何を行うかを定義する必要があります。
 
@@ -22,15 +22,15 @@ AEMとターゲットは、両方とも、一見重なり合うような機能�
 * シナリオ2:Visual Experience Composerを使用したパーソナライゼーション
 * シナリオ3:フルWebページエクスペリエンスのパーソナライズ
 
-## AEMエクスペリエンスフラグメントを使用したパーソナライゼーション {#personalization-using-aem-experience-fragment}
+## AEMエクスペリエンスフラグメントを使用したパーソナライゼーション{#personalization-using-aem-experience-fragment}
 
-このシナリオでは、AEMとターゲットを使用します。 明らかに、両方の製品には独自の強みがあり、パーソナライズされたエクスペリエンスをサイトのユーザーに提供するには、 **パーソナライズされたコンテンツ(AEMのコンテンツ)** とインテリジェントな方法(ターゲット) **** が必要です。
+このシナリオでは、AEMとターゲットを使用します。 明らかに、両方の製品には独自の強みがあり、パーソナライズされたコンテンツ(AEMのコンテンツ)**と、特定のユーザーに基づいてコンテンツを提供する**&#x200B;インテリジェントな方法(ターゲット)**が必要です。**
 
 AEMを使用すると、パーソナライズされたコンテンツを作成し、コンテンツとアセットを一元的に集約して、パーソナライズ戦略を強化できます。 AEMを使用すると、コードを記述することなく、デスクトップ、タブレットおよびモバイルデバイス用のコンテンツを1か所で簡単に作成できます。 すべてのデバイスにページを作成する必要はありません。AEMでは、コンテンツを使用して各エクスペリエンスを自動的に調整します。 ボタンを押すと、コンテンツをAEMからAdobe Targetにオファーとして書き出すこともできます。
 
 現在は、ターゲットのAEMからのオファーの形でパーソナライズされたコンテンツを提供しています。 ターゲットにより、これらのオファーを、動作、コンテキストおよびオフラインの変数を組み込んだ、ルールベースの学習アプローチとAI主導の機械学習アプローチの組み合わせに基づいて、規模の大きい方法で配信できます。  ターゲットを使用すると、A/Bおよび多変量分析(MVT)アクティビティを簡単に設定および実行して、最適なオファー、コンテンツおよびエクスペリエンスを決定できます。
 
-**エクスペリエンスフラグメントは** 、コンテンツやエクスペリエンスの作成者を、ターゲットを使用してビジネスの成果をもたらすパーソナライズの専門家と結び付けるための大きな一歩となります。
+**エクスペリエンスの** フラグメントは、コンテンツ/エクスペリエンスの作成者を、ターゲットを使用してビジネスの成果をもたらすパーソナライズの専門家と結び付けるための大きな一歩となります。
 
 * AEMコンテンツエディターでは、エクスペリエンスフラグメントとそのバリエーションとしてパーソナライズされたコンテンツを作成できます。
 * AEMは、エクスペリエンスフラグメントHTMLをターゲットに&#x200B;書き出します
@@ -41,10 +41,10 @@ AEMを使用すると、パーソナライズされたコンテンツを作成�
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [起動とAdobeI/Oを使用してAEMとAdobe Targetを統合](./implementation.md#integrating-aem-target-options)
+* [起動とAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 * [レガシーCloud Servicesを使用したAEMとAdobe Target](./implementation.md#integrating-aem-target-options)
 
-***上記の統合を実装した後、[シナリオの詳細を調査します](./personalization-use-case-1.md)。***
+***上記の統合を実装した後、 [シナリオの詳細を調査します](./personalization-use-case-1.md)。***
 
 ## Visual Experience Composerを使用したパーソナライゼーション
 
@@ -62,9 +62,9 @@ VECはAdobe Targetの主な特徴の一つだ。 VECを使用すると、マー�
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [起動とAdobeI/Oを使用してAEMとAdobe Targetを統合](./implementation.md#integrating-aem-target-options)
+* [起動とAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 
-***上記の統合を実装した後、[シナリオを詳しく調べます。](./personalization-use-case-3.md)***
+***上記の統合を実装した後、 [シナリオを詳しく調べます。](./personalization-use-case-3.md)***
 
 ## フルWebページエクスペリエンスのパーソナライズ
 
@@ -80,6 +80,6 @@ Adobe Experience ManagerとAdobe Targetの統合により、パーソナライ�
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [起動とAdobeI/Oを使用してAEMとAdobe Targetを統合](./implementation.md#integrating-aem-target-options)
+* [起動とAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 
-***上記の統合を実装した後、[シナリオを詳しく調べます。](./personalization-use-case-2.md)***
+***上記の統合を実装した後、 [シナリオを詳しく調べます。](./personalization-use-case-2.md)***
