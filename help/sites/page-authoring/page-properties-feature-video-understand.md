@@ -20,7 +20,7 @@ ht-degree: 40%
 ---
 
 
-# ページプロパティについて {#understanding-page-properties-aem-sites}
+# ページのプロパティについて{#understanding-page-properties-aem-sites}
 
 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティを紹介します。
 
