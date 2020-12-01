@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 起動Cloud Service設定の作成 {#create-launch-cloud-service}
+# 起動Cloud Serviceの構成{#create-launch-cloud-service}の作成
 
 Adobe Experience Managerで新しい起動Cloud Services設定を作成する方法を説明します。 AEMの起動Cloud Serviceの設定を既存のサイトに適用し、起動ライブラリを作成者ライブラリと発行環境の両方で読み込み中と見なすことができます。
 
