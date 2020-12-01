@@ -1,6 +1,6 @@
 ---
-title: AEM SPAエディタとAngularの使用の手引き
-description: WKND SPAを使用し、AEMのAdobe Experience Managerで編集可能な最初のAngular Single Page Application(SPA)を作成します。 AEM SPAエディターでAngular JSフレームワークを使用してSPAを作成する方法を説明します。 このマルチパートチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 このチュートリアルでは、SPAの作成とAEMとの統合の最後までを説明します。
+title: AEM SPA エディターと Angular の使用の手引き
+description: WKND SPAを備えたAdobe Experience Manager、AEMで編集可能な最初のAngular Single Page Application(SPA)を作成します。 AEM SPAエディタでAngular JSフレームワークを使用してSPAを作成する方法を説明します。 このマルチパートチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 このチュートリアルでは、SPAの作成とAEMとの統合の最後までを説明します。
 sub-product: サイト
 topics: development
 version: cloud-service
@@ -13,70 +13,70 @@ translation-type: tm+mt
 source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 12%
+ht-degree: 18%
 
 ---
 
 
-# AEMで最初のAngular SPAを作成する {#introduction}
+# AEM での Angular SPA の作成（チュートリアル） {#introduction}
 
-Adobe Experience Manager(AEM)の **SPAエディタ** (SPA Editor)機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 Angularアプリケーションは、AngularコンポーネントをAEMコンポーネントにマッピングするAEM SPA Editorと共にデプロイするように開発および設計されます。 完成したSPAはAEMに展開され、AEMの従来のインライン編集ツールで動的に作成できます。
+Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 Angularアプリは、AngularコンポーネントをAEMコンポーネントにマッピングするAEM SPA Editorでデプロイするように開発および設計されます。 完成したSPAは、AEMに導入され、従来のAEMのインライン編集ツールで動的に作成できます。
 
-![最終的なSPA実装](assets/wknd-spa-implementation.png)
+![最終的なSPAの実装](assets/wknd-spa-implementation.png)
 
 *WKND SPAの実装*
 
-## バージョン情報
+##  について
 
-このマルチパートチュートリアルの目標は、AEMのSPAエディタ機能を使用するAngularアプリケーションの実装方法を開発者に教えることです。 In a real-world scenario the development activities are broken down by persona, often involving a **Front End developer** and a **Back End developer**. AEM SPAエディタのプロジェクトに参加する開発者にとって、このチュートリアルを完了するのは有益なことだと思います。
+このマルチパートチュートリアルの目標は、AEMのSPAエディタ機能を使用してAngularアプリケーションを実装する方法を開発者に教えることです。 現実世界のシナリオでは、開発アクティビティはパーソナ別に分類され、多くの場合、**フロントエンド開発者**&#x200B;と&#x200B;**バックエンド開発者**&#x200B;が関与します。 AEM SPAエディタのプロジェクトに参加する開発者にとって、このチュートリアルを完了するのは有益なことだと思います。
 
-このチュートリアルは、 **AEMをCloud Serviceとして使用するように設計されており、** AEM 6.5.4+ **および** AEM 6.4.8+と下位互換性があり ****&#x200B;ます。 SPAは次を使用して実装されます。
+このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.4+**&#x200B;および&#x200B;**AEM 6.4.8+**&#x200B;と下位互換性があります。 SPAは次を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPAエディタ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [角](https://angular.io/)
+* [Angular](https://angular.io/)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
 
 ## 最新コード
 
-チュートリアルのコードはすべて [GitHubにあります](https://github.com/adobe/aem-guides-wknd-spa)。
+チュートリアルコードはすべて[GitHub](https://github.com/adobe/aem-guides-wknd-spa)にあります。
 
-最 [新のコードベース](https://github.com/adobe/aem-guides-wknd-spa/releases) は、AEM Packagesをダウンロードして入手できます。
+[最新のコードベース](https://github.com/adobe/aem-guides-wknd-spa/releases)は、ダウンロード可能なAEMパッケージとして入手できます。
 
 ## 前提条件
 
 このチュートリアルを開始する前に、次の情報が必要です。
 
 * HTML、CSS、JavaScriptに関する基本的な知識
-* Angularに関する基本的な知識 [](https://angular.io/)
-* [CLOUD SERVICESDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) または [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [Angular](https://angular.io/)に関する基本的な知識
+* [CLOUD SERVICESDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、AEM 6.5.4+ [または](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) （3.3.9以降）
-* [Node.js](https://nodejs.org/en/) と [npm](https://www.npmjs.com/)
+* [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
+* [Node.](https://nodejs.org/ja/) jsand  [npm](https://www.npmjs.com/)
 
-*AEM Sitesの伝統的な部品の[開発に関する基本的な理解を得ることは必須ではありませんが](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)、*
+*AEM Sitesの伝統的な部品の [開発に関する基本的な理解を得ることは必須ではありませんが](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)、*
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、 [Visual StudioコードをIDEとして使用し、Mac OS環境上で実行するCloud ServiceSDKとしてAEMを使用してキャプチャされ](https://code.visualstudio.com/) ます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立している必要があります。
+このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS環境上で[Visual Studio Code](https://code.visualstudio.com/)をIDEとして実行するCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立している必要があります。
 
 >[!NOTE]
 >
-> **AEMを初めてCloud Serviceに？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
 > **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## 次の手順 {#next-steps}
 
-何を待ってる！!「 [SPAエディタのプロジェクト](create-project.md) 」の章に進み、AEMプロジェクトのアーキタイプを使用してSPAエディタが有効なプロジェクトを生成する方法を学び、チュートリアルを開始します。
+何を待ってる！!「[SPA Editor Project](create-project.md)」の章に移動してチュートリアルを開始し、AEM Project Archetypeを使用してSPA Editor対応プロジェクトを生成する方法を学びます。
 
-## Backward compatibility {#compatibility}
+## 下位互換性{#compatibility}
 
-このチュートリアルのプロジェクトコードは、AEM用にCloud Serviceとして構築されています。 プロジェクトコードを **6.5.4+と6.4.8+で下位互換性を持たせるために、いくつかの変更が行われました****** 。
+このチュートリアルのプロジェクトコードは、AEM用にCloud Serviceとして構築されています。 プロジェクトコードを&#x200B;**6.5.4+**&#x200B;と&#x200B;**6.4.8+**&#x200B;に対して後方互換性を持たせるために、いくつかの変更が加えられました。
 
-UberJar [](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) v6.4.4 **** は、次の依存関係に含まれています。
+[UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;が依存関係として含まれています。
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
@@ -89,7 +89,7 @@ UberJar [](https://docs.adobe.com/content/help/en/experience-manager-65/developi
 </dependency>
 ```
 
-ターゲットAEM 6.xのプロファイルにビルドを変更するため `classic` に、次の名前のMaven環境が追加されました。
+`classic`という名前のMavenプロファイルが追加され、ターゲットAEM 6.x環境にビルドを変更しました。
 
 ```xml
   <!-- AEM 6.x Profile to include Core Components-->
@@ -103,10 +103,10 @@ UberJar [](https://docs.adobe.com/content/help/en/experience-manager-65/developi
     </profile>
 ```
 
-The `classic` profile is disabled by default. AEM 6.xでのチュートリアルに従う場合は、Mavenビルドの実行を指示されたときに `classic` プロファイルを追加してください。
+`classic`プロファイルはデフォルトで無効になっています。 AEM 6.xでチュートリアルを実行する場合は、Mavenビルドの実行を指示された時に`classic`プロファイルを追加してください。
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-AEM実装用の新しいプロジェクトを生成する場合は、常に最新バージョンの [AEMプロジェクトアーキタイプを使用し](https://github.com/adobe/aem-project-archetype) 、意図したバージョンのAEM `aemVersion` ターゲットに更新します。
+AEM実装用の新しいプロジェクトを生成する場合、必ず最新バージョンの[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用し、意図したバージョンのAEMをターゲットするように`aemVersion`を更新してください。
