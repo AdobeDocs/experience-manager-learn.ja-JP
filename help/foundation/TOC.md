@@ -23,7 +23,7 @@ ht-degree: 19%
    + [システム概要ダッシュボードの使用](./administration/use-the-system-overview-dashboard.md)
 + 認証 {#authentication}
    + [OAuth認証](authentication/oauth-code-sample-develop.md)
-   + [AdobeI/Oで使用する公開鍵と秘密鍵を設定する](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
+   + [Adobe I/Oで使用する公開鍵と秘密鍵を設定する](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [認証について](authentication/authentication-support-article-understand.md)
    + [AMSでのIMS認証について理解する](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobeクラウドマネージャー{#cloud-manager}
