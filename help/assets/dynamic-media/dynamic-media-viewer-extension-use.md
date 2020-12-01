@@ -19,7 +19,7 @@ ht-degree: 34%
 ---
 
 
-# Using Dynamic Media Viewers with Adobe Analytics and Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# ダイナミックメディアビューアとAdobe AnalyticsとAdobeの起動{#using-dynamic-media-viewers-adobe-analytics-launch}の使用
 
 ダイナミックメディアおよびAdobe Analyticsをご利用のお客様は、Dynamic Media Viewer Extensionを使用して、Webサイト上のダイナミックメディアビューアの使用状況を追跡できるようになりました。
 
@@ -27,7 +27,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
-> この機能を使用するには、ダイナミックメディアScene7モードでAdobe Experience Managerを実行します。 また、Adobe Experience Platform LaunchをAEMインスタンスと [統合する必要があります](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)。
+> この機能を使用するには、ダイナミックメディアScene7モードでAdobe Experience Managerを実行します。 また、[Adobe Experience Platform LaunchをAEMインスタンス](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)と統合する必要もあります。
 
 Dynamic Media Viewer拡張機能の導入に伴い、Adobe Experience Managerでは、Dynamic Media Viewer(5.13)で提供されるアセットの高度な解析サポートをオファーが実現し、Dynamic Media Viewerをサイトページで使用する際のイベントの追跡をより詳細に制御できるようになりました。
 
