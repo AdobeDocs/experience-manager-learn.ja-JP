@@ -28,7 +28,7 @@ ht-degree: 0%
 
 この要件を満たすために、コメントを取り込み、これらのコメントをワークフローメタデータプロパティとして保存するために使用できるサンプルのOSGiバンドルが提供されます。
 
-次のスクリーンショットは、 [](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) AEMワークフローのプロセスステップを使用して、コメントを取り込み、メタデータプロパティとして保存する方法を示しています。 「Capture Workflow Comments」は、プロセスステップで使用する必要があるJavaクラスの名前です。 コメントを保持するメタデータプロパティ名を渡す必要があります。 下のスクリーンショットでは、managerCommentsはコメントを保存するメタデータプロパティです。
+次のスクリーンショットは、[AEMワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)のプロセス手順を使用してコメントを取り込み、メタデータプロパティとして保存する方法を示しています。 「Capture Workflow Comments」は、プロセスステップで使用する必要があるJavaクラスの名前です。 コメントを保持するメタデータプロパティ名を渡す必要があります。 下のスクリーンショットでは、managerCommentsはコメントを保存するメタデータプロパティです。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 * [Developingwithserviceuserバンドルのデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [SetValueバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 このバンドルには、コメントを取り込み、メタデータプロパティとして保存するためのサンプルコードが含まれています
+* [SetValueバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。このバンドルには、コメントを取り込み、メタデータプロパティとして保存するためのサンプルコードが含まれています
 
-* [この記事に関連するアセットをファイルシステムにダウンロードして解凍します](assets/capturecomments.zip) 。アセットにはワークフローモデルとサンプルのアダプティブフォームが含まれています。
+* [この記事に関連するアセットをダウンロードし、ファイル](assets/capturecomments.zip) システムに解凍します。アセットには、ワークフローモデルとサンプルのアダプティブフォームが含まれています。
 
 * パッケージマネージャーを使用して2つのzipファイルをAEMに読み込みます
 
