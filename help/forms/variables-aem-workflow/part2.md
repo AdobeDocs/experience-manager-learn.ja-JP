@@ -37,7 +37,7 @@ AEM Forms6.5以降、AEMワークフローでJSON型の変数を作成できる�
 システム上でアセットを動作させるには、次の手順に従います。
 
 * [パッケージマネージャーを使用して、アセットをダウンロードし、AEMに読み込みます](assets/jsonandstringvariable.zip)
-* [ワークフローモデルを調べ](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) 、ワークフローで使用される変数を理解します。
+* [ワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) モデルを調べ、ワークフローで使用される変数を理解します。
 * [電子メールサービスの設定](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [アダプティブフォームを開く](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * 詳細を入力し、フォームを送信します
