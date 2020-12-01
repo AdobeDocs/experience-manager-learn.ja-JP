@@ -203,5 +203,5 @@ public class MarketoConfigurationService {
 ```
 
 1. バンドルを構築し、AEMサーバーにデプロイします。
-1. [ブラウザーでconfigMgrを指定し](http://localhost:4502/system/console/configMgr) 、「Marketto Credentials Service Configuration」を検索します。
+1. [ブラウザーで、「Marketo Credentials Service Configuration」のconfigMgrand検索を指](http://localhost:4502/system/console/configMgr) 定します。
 1. Marketorインスタンスに固有の適切なプロパティを指定します
