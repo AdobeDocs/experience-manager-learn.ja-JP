@@ -22,10 +22,10 @@ ht-degree: 0%
 ---
 
 
-# AEM Formsでのデータソース設定の作成{#creating-datasource-configuration-in-aem-forms}
+# AEM Forms{#creating-datasource-configuration-in-aem-forms}でのデータソース設定の作成
 
 この部では、RESTバックアップデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
 
-提供されたSwaggerファイルを、このチュートリアルに関連するアセットの一部として使用してください。 アセットは、このチュートリアルの [概要](introduction.md) .で利用できます。
+提供されたSwaggerファイルを、このチュートリアルに関連するアセットの一部として使用してください。 アセットは、このチュートリアルの[はじめに](introduction.md)で参照できます。
