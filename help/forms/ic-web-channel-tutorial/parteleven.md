@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * アカウント保持者の現在とモデルの投資の組み合わせを表す円グラフを2つ追加します。
 
-## 現在のアセットの混在 {#current-asset-mix}
+## 現在のアセットミックス{#current-asset-mix}
 
 * 右側の「現在のアセットミックス」パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「現在のアセットミックス」に変更します。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
-## モデルアセットミックス {#model-asset-mix}
+## モデルアセットミックス{#model-asset-mix}
 
 * 右側の「RecommendedAssetMix」パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「Model Asset Mix」に変更します。
 
