@@ -27,7 +27,7 @@ ht-degree: 26%
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## Flash以外のビデオプレーヤーの概要 {#quick-look-into-non-flash-video-player}
+## Flash以外のビデオプレーヤー{#quick-look-into-non-flash-video-player}の概要
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
