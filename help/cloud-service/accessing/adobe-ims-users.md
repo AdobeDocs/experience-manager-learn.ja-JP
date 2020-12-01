@@ -20,7 +20,7 @@ ht-degree: 12%
 
 # AdobeIMSユーザー
 
-AEM Authorサービスへのアクセスを必要とするユーザーは、 [AdobeのAdmin Consoleで](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) AdobeIMSユーザーとして管理され [](https://adminconsole.adobe.com)ます。 AdobeIMSユーザーの概要、およびAdmin Consoleでのユーザーのアクセス方法と管理方法について説明します。
+AEM Authorサービスへのアクセスを必要とするユーザーは、[AdobeのAdmin Console](https://adminconsole.adobe.com)で、[AdobeIMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)として管理されます。 AdobeIMSユーザーの概要、およびAdmin Consoleでのユーザーのアクセス方法と管理方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
 
