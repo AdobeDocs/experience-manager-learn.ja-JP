@@ -1,6 +1,6 @@
 ---
-title: アセット計算ワーカーのデバッグ
-description: アセット計算ワーカーは、簡単なデバッグログ文から、接続されたVSコード（リモートデバッガ）まで、AEMから開始されたAdobe I/O RuntimeのアクティベーションのログをCloud Serviceとして取り込むまで、様々な方法でデバッグできます。
+title: asset computeワーカーのデバッグ
+description: asset computeワーカーは、簡単なデバッグログ文から、接続されたVS Code（リモートデバッガ）、AEMでCloud Serviceとして開始されたAdobe I/O Runtimeのアクティベーションのログを取り込むまで、様々な方法でデバッグできます。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -18,23 +18,23 @@ ht-degree: 0%
 ---
 
 
-# アセット計算ワーカーのデバッグ
+# asset computeワーカーのデバッグ
 
-アセット計算ワーカーは、簡単なデバッグログ文から、接続されたVSコード（リモートデバッガ）まで、AEMから開始されたAdobe I/O RuntimeのアクティベーションのログをCloud Serviceとして取り込むまで、様々な方法でデバッグできます。
+asset computeワーカーは、簡単なデバッグログ文から、接続されたVS Code（リモートデバッガ）、AEMでCloud Serviceとして開始されたAdobe I/O Runtimeのアクティベーションのログを取り込むまで、様々な方法でデバッグできます。
 
 ## ログ
 
-アセット計算ワーカーをデバッグする最も基本的な形式は、ワーカーコード内で従来の `console.log(..)` 文を使用します。 JavaScriptオブジェクトは、暗黙的なグローバルオブジェクトなので、すべての `console` コンテキストに常に存在するので、読み込みや要求を行う必要はありません。
+asset computeワーカーのデバッグで最も基本的な形式は、ワーカーコード内で従来の`console.log(..)`文を使用します。 `console` JavaScriptオブジェクトは暗黙的なグローバルオブジェクトなので、読み込みや要求を行う必要はありません。これは、すべてのコンテキストで常に存在するためです。
 
-これらのログ文は、アセット計算ワーカーの実行方法に応じて、様々な方法でレビューできます。
+これらのログ文は、Asset computeワーカーの実行方法に応じて、様々な方法でレビューできます。
 
-+ ログ `aio app run`は、標準出力と [開発ツールの](../develop/development-tool.md) アクティベーションログに印刷されます。
++ `aio app run`から、ログは標準出力に出力され、[開発ツールの](../develop/development-tool.md)アクティベーションログに出力されます。
    ![aioアプリ実行console.log(...)](./assets/debug/console-log__aio-app-run.png)
-+ ログ `aio app test`の印刷元 `/build/test-results/test-worker/test.log`
++ `aio app test`から`/build/test-results/test-worker/test.log`にログを印刷
    ![aioアプリテストコンソール.log(...)](./assets/debug/console-log__aio-app-test.png)
-+ を使用 `wskdebug`すると、ログ文はVSコードデバッグコンソール(表示/デバッグコンソール)に、標準出力で印刷されます。
++ `wskdebug`を使用して、ログ文はVSコードデバッグコンソール(表示/デバッグコンソール)に出力され、標準出力になります。
    ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
-+ を使用 `aio app logs`すると、ログ文はアクティベーションログ出力に出力されます。
++ `aio app logs`を使用して、ログ文をアクティベーションログ出力に出力します。
 
 ## 添付されたデバッガーを使用したリモートデバッグ
 
@@ -42,25 +42,25 @@ ht-degree: 0%
 >
 >wskdebugとの互換性を確保するために、Microsoft Visual Studio Code 1.48.0以降を使用する
 
-wskdebug [](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールは、VSコードでブレークポイントを設定し、コードをステップスルーする機能など、デバッガーをアセット計算ワーカーに接続できます。
+[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールは、VSコードにブレークポイントを設定し、コードをステップスルーする機能など、Asset computeワーカーへのデバッガの接続をサポートしています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
 
-_wskdebugを使用したAsset Compute Workerのデバッグのクリックスルー（オーディオなし）_
+_wskdebugを使用したAsset computeワーカーのデバッグのクリックスルー（オーディオなし）_
 
-1. wskdebug [と](../set-up/development-environment.md#wskdebug) ngrok [](../set-up/development-environment.md#ngork) npmモジュールがインストールされていることを確認します。
-1. Docker Desktopと [サポートするDockerイメージがインストールされ](../set-up/development-environment.md#docker) 、実行されていることを確認します。
+1. [wskdebug](../set-up/development-environment.md#wskdebug)と[ngrok](../set-up/development-environment.md#ngork) npmモジュールがインストールされていることを確認します。
+1. [Docker DesktopとサポートするDockerイメージ](../set-up/development-environment.md#docker)がインストールされ、実行されていることを確認します。
 1. 開発ツールのアクティブな実行中のインスタンスをすべて閉じます。
-1. デプロイ済みのアクション名(間に名前 `aio app deploy` を入力)を使用して最新のコードをデプロイし、記録 `[...]`します。 これは、手順8のを更新するた `launch.json` めに使用されます。
+1. `aio app deploy`を使用して最新のコードをデプロイし、デプロイ済みのアクション名（`[...]`の間の名前）を記録します。 これは、手順8の`launch.json`を更新する際に使用します。
 
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
-1. コマンドを使用して、Asset Compute Development Toolの新しいインスタンスを開始します。 `npx adobe-asset-compute devtool`
+1. `npx adobe-asset-compute devtool`コマンドを使用して、Asset compute開発ツールの新しいインスタンスを開始する
 1. VSコードで、左側のナビゲーションのデバッグアイコンをタップします
-   + プロンプトが表示されたら、launch.jsonファイルを __作成/Node.jsをタップして、新しい__`launch.json` ファイルを作成します。
-   + それ以外の場合は、「 __プログラムを__ 起動 __」ドロップダウンの右にある歯車__ アイコンをタップして、 `launch.json` 既存のアイコンをエディターで開きます。
-1. 追加配列に対する次のJSONオブジェクトの設定： `configurations`
+   + プロンプトが表示されたら、__launch.jsonファイルを作成>Node.js__&#x200B;をタップして、新しい`launch.json`ファイルを作成します。
+   + それ以外の場合は、「__プログラムを起動__」ドロップダウンの右にある&#x200B;__ギア__&#x200B;アイコンをタップして、エディター内の既存の`launch.json`を開きます。
+1. 追加`configurations`配列に対する次のJSONオブジェクトの設定：
 
    ```json
    {
@@ -82,22 +82,22 @@ _wskdebugを使用したAsset Compute Workerのデバッグのクリックスル
    }
    ```
 
-1. ドロップダウンから新しい __wskdebug__ を選択します。
-1. wskdebugドロップダウンの左にある緑色の __「__ 実行 __」ボタンをタップします__ 。
-1. 改行番号 `/actions/worker/index.js` の左側を開き、をタップして、改行点1を追加します。 手順6で開いたAsset Compute Development Tool Webブラウザウィンドウに移動します。
-1. 「 __実行__ 」ボタンをタップして、ワーカーを実行します
-1. VSコードに戻り、コードを順に実行 `/actions/worker/index.js` します。
-1. デバッグ可能な開発ツールを終了するには、手順6 `Ctrl-C` のコマンドを実行した端末でをタップ `npx adobe-asset-compute devtool` します
+1. ドロップダウンから新しい&#x200B;__wskdebug__&#x200B;を選択します
+1. __wskdebug__&#x200B;ドロップダウンの左にある緑色の&#x200B;__Run__&#x200B;ボタンをタップします
+1. `/actions/worker/index.js`を開き、行番号の左側をタップして、ブレークポイント1を追加します。 手順6で開いたAsset compute開発ツールのWebブラウザ・ウィンドウに移動します。
+1. 「__実行__」ボタンをタップして、ワーカーを実行します
+1. VSコードに戻り、`/actions/worker/index.js`に戻り、コードを順に実行します
+1. デバッグ可能な開発ツールを終了するには、手順6で`npx adobe-asset-compute devtool`コマンドを実行したターミナルで`Ctrl-C`をタップします
 
-## Adobe I/O Runtimeからのログへのアクセス{#aio-app-logs}
+## Adobe I/O Runtime{#aio-app-logs}からログにアクセス中
 
-[AEMをCloud Serviceとして使用する場合は、Adobe I/O Runtimeで直接呼び出すことで、処理プロファイル](../deploy/processing-profiles.md) (Processing Worker)を介してAsset Computeワーカーを活用します。 これらの呼び出しにはローカル開発は関与しないので、その実行はAsset Compute Development Toolやwskdebugなどのローカルツールを使用してデバッグすることはできません。 代わりに、AdobeI/O CLIを使用して、Adobe I/O Runtimeの特定のワークスペースで実行されるワーカーからログを取得できます。
+[AEMをCloud Serviceとして使用する場合は、Adobe I/O Runtimeで直接呼び出すことで、処理プロファイルを介してAsset compute](../deploy/processing-profiles.md) ワーカーを活用します。これらの呼び出しにはローカル開発は関与しないので、Asset compute開発ツールやwskdebugなどのローカルツールを使用して実行をデバッグすることはできません。 代わりに、Adobe I/OCLIを使用して、Adobe I/O Runtimeの特定のワークスペースで実行されるワーカーからログを取得できます。
 
-1. デバッグが必要なワ [ークスペースに基づいて、](../deploy/runtime.md) ワークスペース固有の環境変数 `AIO_runtime_namespace` が `AIO_runtime_auth`、およびを介して設定されていることを確認します。
-1. コマンドラインから、 `aio app logs`
-   + ワークスペースに大量のトラフィックが発生している場合は、次の `--limit` フラグを使用してアクティベーションログの数を拡張します。
+1. デバッグが必要なワークスペースに基づいて、[ワークスペース固有の環境変数](../deploy/runtime.md)が`AIO_runtime_namespace`と`AIO_runtime_auth`を介して設定されていることを確認します。
+1. コマンドラインで`aio app logs`を実行します。
+   + ワークスペースに大量のトラフィックが発生している場合は、`--limit`フラグを使用してアクティベーションログの数を増やします。
       `$ aio app logs --limit=25`
-1. レビュー用のコマンドの出力として、最新(指定された `--limit`)のアクティベーションログが返されます。
+1. 最新（指定された`--limit`まで）のアクティベーションログは、レビュー用のコマンドの出力として返されます。
 
    ![aioアプリログ](./assets/debug/aio-app-logs.png)
 
