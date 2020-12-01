@@ -30,14 +30,14 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 ```
 
 + `address` は、ポートAEMがリモートデバッグ接続をリッスンするように指定します。ローカル開発マシン上の使用可能なポートに変更できます。
-+ 最後のパラメーター( `aem-author-p4502.jar`)はAEM SDK Quickstart Jarです。 これは、AEM Authorサービス(`aem-author-p4502.jar`)またはAEM Publishサービス(`aem-publish-p4503.jar`)のいずれかです。
++ 最後のパラメーター( `aem-author-p4502.jar`)はAEM SDK Quickstart Jarです。これは、AEM Authorサービス(`aem-author-p4502.jar`)またはAEM Publishサービス(`aem-publish-p4503.jar`)のいずれかです。
 
 ## IDEの設定手順
 
 ほとんどのJava IDEはJavaプログラムのリモートデバッグをサポートしていますが、各IDEの正確な設定手順は異なります。 IDEのリモートデバッグの設定手順を正確な手順で確認してください。 通常、IDEの構成には次の要件があります。
 
-+ ホストAEM SDKのローカルクイックスタートがリッスンしています(つまり、 `localhost`)。
-+ ポートAEM SDKのローカルクイックスタートは、リモートデバッグ接続をリッスンしています。このポートは、AEM SDKのローカルクイックスタートを開始する際に、 `address` パラメーターによって指定されたポートです。
++ ホストAEM SDKのローカルクイックスタートがリッスンしています(`localhost`)。
++ ポートAEM SDKのローカルクイックスタートは、リモートデバッグ接続をリッスンしています。これは、AEM SDKのローカルクイックスタートを開始する際に`address`パラメーターで指定されたポートです。
 + 場合によっては、リモートデバッグにソースコードを提供するMavenプロジェクトを指定する必要があります。これは、OSGiバンドルmavenプロジェクトです。
 
 ### 手順の設定
