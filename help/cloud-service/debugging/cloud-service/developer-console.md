@@ -26,13 +26,13 @@ Cloud Service環境としての各AEMには、独自の開発者コンソール�
 
 ## 開発者コンソールへのアクセス
 
-Developer Consoleにアクセスして使用するには、 [AdobeのAdmin Consoleを介して開発者のAdobe IDに次の権限を与える必要があります](https://adminconsole.adobe.com)。
+Developer Consoleにアクセスして使用するには、[AdobeのAdmin Console](https://adminconsole.adobe.com)を介して、開発者のAdobe IDに次の権限を与える必要があります。
 
 1. Cloud MangerおよびAEMにCloud Service製品として影響を与えたAdobe組織が、Adobe組織の切り替えボタンでアクティブであることを確認します。
-1. 開発者は、Cloud Manager製品の ____ 開発者 —Cloud Service製品プロファイルのメンバーである必要があります。
+1. 開発者は、Cloud Manager製品の&#x200B;__開発者 —Cloud Service__&#x200B;製品プロファイルのメンバーである必要があります。
    + このメンバーシップが存在しない場合、開発者はDeveloper Consoleにログインできません。
-1. 開発者は、AEM AuthorおよびPublishサービスの __AEM Administrators__ Productプロファイルのメンバーである必要があります。
-   + このメンバーシップが存在しない場合、 [](#status) ステータスダンプは401 Unauthorizedエラーでタイムアウトします。
+1. 開発者は、AEM Authorおよび発行サービスの&#x200B;__AEM Administrators__&#x200B;製品プロファイルのメンバーである必要があります。
+   + このメンバーシップが存在しない場合、[status](#status)ダンプは401 Unauthorizedエラーでタイムアウトします。
 
 ### Developer Consoleへのアクセスのトラブルシューティング
 
@@ -72,7 +72,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### バンドル
 
-すべてのOSGiバンドルのリストをAEMにバンドルします。 この機能は、AEM SDKのローカルクイックスタートの [OSGiバンドル](http://localhost:4502/system/console/bundles) ( `/system/console/bundles`)に似ています。
+すべてのOSGiバンドルのリストをAEMにバンドルします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Bundles[(](http://localhost:4502/system/console/bundles))に似ています。`/system/console/bundles`
 
 バンドルは次の方法でデバッグに役立ちます。
 
@@ -82,7 +82,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### コンポーネント
 
-コンポーネントリストは、AEMのすべてのOSGiコンポーネントを選択します。 この機能は、 [AEM SDKのローカルクイックスタートのOSGiコンポーネント](http://localhost:4502/system/console/components) ( `/system/console/components`)に似ています。
+コンポーネントリストは、AEMのすべてのOSGiコンポーネントを選択します。 この機能は、AEM SDKのローカルクイックスタートの](http://localhost:4502/system/console/components)にあるOSGiコンポーネント[に似ています。`/system/console/components`
 
 コンポーネントは次の方法でデバッグするのに役立ちます。
 
@@ -93,7 +93,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### 設定
 
-設定リストは、すべてのOSGiコンポーネントの設定（OSGiのプロパティと値）をします。 この機能は、AEM SDKのローカルクイックスタートの [OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) ( `/system/console/configMgr`)と似ています。
+設定リストは、すべてのOSGiコンポーネントの設定（OSGiのプロパティと値）をします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Configuration Manager[(](http://localhost:4502/system/console/configMgr))に似ています。`/system/console/configMgr`
 
 設定は、次の方法でデバッグするのに役立ちます。
 
@@ -102,7 +102,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### Oak インデックス
 
-Oak Indexesは、下に定義されたノードのダンプを提供 `/oak:index`します。 AEMインデックスが変更された場合に、マージされたインデックスは表示されないことに注意してください。
+Oakインデックスは、`/oak:index`の下に定義されたノードのダンプを提供します。 AEMインデックスが変更された場合に、マージされたインデックスは表示されないことに注意してください。
 
 Oakインデックスは、次の方法でデバッグに役立ちます。
 
@@ -110,7 +110,7 @@ Oakインデックスは、次の方法でデバッグに役立ちます。
 
 ### OSGiサービス
 
-コンポーネントは、すべてのOSGiサービスをリストします。 この機能は、AEM SDKのローカルクイックスタートの [OSGiサービス](http://localhost:4502/system/console/services) ( `/system/console/services`)に似ています。
+コンポーネントは、すべてのOSGiサービスをリストします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Services[ (](http://localhost:4502/system/console/services))に似ています。`/system/console/services`
 
 OSGi Servicesヘルプ：
 
@@ -118,7 +118,7 @@ OSGi Servicesヘルプ：
 
 ### Sling ジョブ
 
-Sling JobsリストはすべてのSling Jobsキューを選択します。 この機能は、AEM SDKのローカルクイッ [クスタートのジョブ](http://localhost:4502/system/console/slingevent) ( `/system/console/slingevent`at)に似ています。
+Sling JobsリストはすべてのSling Jobsキューを選択します。 この機能は、AEM SDKのローカルクイックスタートのジョブ[ (](http://localhost:4502/system/console/slingevent))に似ています。`/system/console/slingevent`
 
 Slingジョブは、次の方法でデバッグする際に役立ちます。
 
@@ -127,7 +127,7 @@ Slingジョブは、次の方法でデバッグする際に役立ちます。
 
 ## Javaパッケージ
 
-Javaパッケージを使用すると、JavaパッケージとバージョンがAEMでCloud Serviceとして使用できるかどうかを確認できます。 この機能は、 [AEM SDKのローカルクイックスタートの依存関係ファインダー](http://localhost:4502/system/console/depfinder) ( `/system/console/depfinder`)と同じです。
+Javaパッケージを使用すると、JavaパッケージとバージョンがAEMでCloud Serviceとして使用できるかどうかを確認できます。 この機能は、AEM SDKのローカルクイックスタートの[依存関係ファインダー](http://localhost:4502/system/console/depfinder) (`/system/console/depfinder`)と同じです。
 
 ![開発者コンソール — Javaパッケージ](./assets/developer-console/java-packages.png)
 
@@ -136,11 +136,11 @@ Javaパッケージは、未解決のインポートまたはスクリプト（H
 + プロジェクトのAEM API maven依存関係のバージョンが環境のAEMリリースバージョンと一致していることを確認します（可能であれば、すべて最新のバージョンに更新してください）。
 + Mavenプロジェクトで追加のMaven依存関係が使用される場合
    + AEM SDK API依存関係が提供する代替APIを代わりに使用できるかどうかを判断します。
-   + 追加の依存関係が必要な場合は、コアOSGiバンドルがパッケージに埋め込まれるのと同様に、（プレーンJARではなく）OSGiバンドルとして提供され、プロジェクトのコードパッケージ(`ui.apps``ui.apps` )に埋め込まれていることを確認してください。
+   + 追加の依存関係が必要な場合は、コアOSGiバンドルが`ui.apps`パッケージに埋め込まれるのと同様に、（プレーンJARではなく）OSGiバンドルとして提供され、プロジェクトのコードパッケージ(`ui.apps`)に埋め込まれていることを確認します。
 
 ## サーブレット
 
-サーブレットは、AEMがURLをJavaサーブレットまたはスクリプト(HTL、JSP)に解決し、最終的に要求を処理する方法に関するインサイトを提供するために使用します。 この機能は、 [AEM SDKのローカルクイックスタートのSling Servlet Resolver](http://localhost:4502/system/console/servletresolver) ( `/system/console/servletresolver`)と同じです。
+サーブレットは、AEMがURLをJavaサーブレットまたはスクリプト(HTL、JSP)に解決し、最終的に要求を処理する方法に関するインサイトを提供するために使用します。 この機能は、AEM SDKのローカルクイックスタートの[`/system/console/servletresolver`にあるSling Servlet Resolver](http://localhost:4502/system/console/servletresolver)と同じです。
 
 ![デベロッパーコンソール — サーブレット](./assets/developer-console/servlets.png)
 
@@ -151,7 +151,7 @@ Javaパッケージは、未解決のインポートまたはスクリプト（H
 
 ## クエリ
 
-クエリは、AEMで検索クエリが実行される内容と方法に関する洞察を提供するのに役立ちます。 この機能は、AEM SDKのローカルクイックスタートのツール/ [クエリパフォーマンス ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) コンソールと同じです。
+クエリは、AEMで検索クエリが実行される内容と方法に関する洞察を提供するのに役立ちます。 この機能は、AEM SDKのローカルクイックスタートのツール/クエリパフォーマンス[コンソールと同じです。](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)
 
 クエリは、特定のポッドが選択されている場合にのみ機能します。ポッドのクエリパフォーマンスWebコンソールが開くので、開発者はAEMサービスにログインするためのアクセス権を持つ必要があります。
 
