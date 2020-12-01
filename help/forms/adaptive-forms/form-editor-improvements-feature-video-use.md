@@ -20,7 +20,7 @@ ht-degree: 14%
 ---
 
 
-# AEM Formsでのフォームエディターの機能強化 {#form-editor-improvements-in-aem-forms}
+# AEM Formsでのフォームエディタの改善{#form-editor-improvements-in-aem-forms}
 
 AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリング体験を簡略化するために、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、マーケティングに要する時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
 
