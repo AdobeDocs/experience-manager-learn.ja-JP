@@ -20,7 +20,7 @@ ht-degree: 5%
 ---
 
 
-# 「ありがとうございます」ページへの送信 {#submitting-to-thank-you-page}
+# ありがとうございますページへの送信{#submitting-to-thank-you-page}
 
 「RESTエンドポイントへの送信」オプションでは、フォームに入力されたGETを、HTTPデータリクエストの一環として設定済みの確認ページに渡します。 フィールド名をリクエストに追加することができます。リクエストのフォーマットは次のとおりです。
 
@@ -39,8 +39,8 @@ POSTを介して外部エンドポイントに送信することもできます�
 
 ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* パッケージマネージャーを使用して、この記事に関連付けられた [アセットファイルをAEMに読み込みます](assets/submittingtorestendpoint.zip)
-* ブラウザーで [タイムオフリクエストフォームを指定](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* パッケージマネージャー](assets/submittingtorestendpoint.zip)を使用して、この記事に関連付けられた[アセットファイルをAEMに読み込みます
+* ブラウザーで[Time Off Request Form](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を指定します。
 * 必須フィールドに入力し、フォームを送信します
 * ページに情報を入力した「ありがとうございます」ページが表示されます。
 
