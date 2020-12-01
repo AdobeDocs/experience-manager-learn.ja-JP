@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Check-In Check-Out {#check-in-check-out}
+# チェックインチェックアウト{#check-in-check-out}
 
 Adobeアセットを使用すると、作業中のクリエイティブアプリケーションから直接AEM Assetsをチェックアウトし、すぐに編集を開始できます。 Creative Cloudアプリでの編集が終了すると、適切なバージョン管理とコメントを使用して、アセットを簡単にAEM Assetsにチェックインできます。
 
