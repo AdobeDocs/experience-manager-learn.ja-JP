@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Create a Live Copy {#create-livecopy}
+# ライブコピーの作成{#create-livecopy}
 
 ライブコピーの作成ウィザードを使用して、Blueprintからサイトのライブコピーを作成する方法を理解します。
 
