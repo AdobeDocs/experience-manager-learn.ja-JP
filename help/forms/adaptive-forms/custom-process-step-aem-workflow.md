@@ -31,18 +31,20 @@ ht-degree: 1%
 
 ## Mavenプロジェクトの作成
 
-最初の手順は、適切なAdobeMavenアーキタイプを使用してMavenプロジェクトを作成することです。 この [記事では、詳細な手順を説明します](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)。 MavenプロジェクトをEclipseにインポートしたら、プロセス手順で使用できる最初のOSGiコンポーネントを書き込む開始の準備が整います。
+最初の手順は、適切なAdobeMavenアーキタイプを使用してMavenプロジェクトを作成することです。 詳細な手順は、この[記事](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)に記載されています。 MavenプロジェクトをEclipseにインポートしたら、プロセス手順で使用できる最初のOSGiコンポーネントを書き込む開始の準備が整います。
 
 
 ### WorkflowProcessを実装するクラスを作成します
 
-Eclipse IDEでMavenプロジェクトを開きます。 「 **projectname** / **core** 」フォルダーを展開します。 src/main/javaフォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージにWorkflowProcessを実装するJavaクラスを作成します。 executeメソッドをオーバーライドする必要があります。 executeメソッドの署名は、次のように無効なexecute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)によってスローされます。 WorkflowException以下の3つの変数にアクセスできます。
+Eclipse IDEでMavenプロジェクトを開きます。 **projectname** > **core**フォルダーを展開します。 src/main/javaフォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージにWorkflowProcessを実装するJavaクラスを作成します。 executeメソッドをオーバーライドする必要があります。 executeメソッドのシグネチャは次のとおりです。
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
+executeメソッドは、次の3つの変数にアクセスします
 
-**WorkItem**:workItem変数は、ワークフローに関連するデータへのアクセスを提供します。 パブリックAPIドキュメントは、こちら [から入手できます。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**:workItem変数は、ワークフローに関連するデータへのアクセスを提供します。パブリックAPIドキュメントは[こちらから入手できます。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**:このworkflowSession変数を使用すると、ワークフローを制御できます。 パブリックAPIドキュメントは [こちらから入手できます](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**:このworkflowSession変数を使用すると、ワークフローを制御できます。パブリックAPIドキュメントは、[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)で入手できます
 
-**MetaDataMap**:ワークフローに関連付けられているすべてのメタデータ。 プロセスステップに渡されるプロセス引数は、MetaDataMapオブジェクトを使用して使用できます。[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**:ワークフローに関連付けられているすべてのメタデータ。プロセスステップに渡されるプロセス引数は、MetaDataMapオブジェクトを使用して使用できます。[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 このチュートリアルでは、アダプティブフォームに追加された添付ファイルをAEMワークフローの一部としてファイルシステムに書き込みます。
 
@@ -134,7 +136,8 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 #### 構築と導入
 
-[ここで説明するようにバンドルを構築します](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[。バンドルが展開され、アクティブ状態であることを確認します。](http://localhost:4502/system/console/bundles)
+[説明に従ってバンドルを構築します。バンドルが展開され、アクティブな状態であることを確認します。](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[](http://localhost:4502/system/console/bundles)
 
 ワークフローモデルを作成する. ワークフローモデルにプロセスステップをドラッグ&amp;ドロップします。 プロセス手順を「アダプティブフォームの添付ファイルをファイルシステムに保存」に関連付けます。
 
