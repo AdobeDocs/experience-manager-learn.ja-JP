@@ -22,7 +22,7 @@ Webサイト、モバイルサイト、アプリでの顧客体験の最も重�
 
 また、スマートイメージングは、Adobeのクラス最高のプレミアムサービスと完全に統合され、パフォーマンスの向上をももたらします。 このサービスが、サーバー、ネットワークおよびピアリングポイント間を結ぶ、最適なインターネットルートを見つけます。最適なインターネットルートとは、待ち時間が最小限であったり、インターネット上のデフォルトルートよりもパケット損失率が低かったりするルートです。
 
-ス [マートイメージングの詳細を表示します](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+[スマートイメージング](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)の詳細を表示します。
 
 ## スマートイメージングの利点
 
@@ -34,7 +34,7 @@ Webサイト、モバイルサイト、アプリでの顧客体験の最も重�
 
 前述したように、スマートイメージングはAdobe SenseiのAI機能を活用し、既存の画像プリセットと連携して、画像を視覚的な忠実度を維持しながら、WebPなどの最適な次世代画像形式に自動的に変換します。
 
-スマートイメージングの [仕組み](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)(サポートされている画像形式などの詳細（およびこれらの形式を使用しない場合の動作）、および使用中の既存の画像プリセットへの影響など)について詳しく説明します。
+[スマートイメージングの仕組み](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)について、サポートされている画像形式（およびこれらの形式を使用しない場合は何が起こります）や、使用中の既存の画像プリセットへの影響について詳しく説明します。
 
 ## スマートイメージングの影響
 
@@ -48,12 +48,12 @@ Webサイト、モバイルサイト、アプリでの顧客体験の最も重�
 
 スマートイメージングは、Dynamic Media Classicの既存のライセンスに含まれています。 この機能に追加費用はかかりません。 この機能を活用するには、次の2つの要件を満たす必要があります。には、AdobeバンドルCDNと専用ドメインがあります。 その後、アカウントで有効にする必要があります。これは、アカウントでは自動的には有効にならないからです。
 
-テクニカルサポートを送信した後に、スマートイメージング開始を有効にするには、 |サポートケースの作成| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 スマートイメージングに関連付けるカスタムドメインを設定する場合は、サポートがご協力いたします。 キャッシュ(Time To Live(TTL)に関連する1つのパラメーターを変更すると、キャッシュがクリアされます。 また、実稼動環境にプッシュする前に、必要に応じてステージングのステップをオプションで実行することもできます。 その後、スマートイメージングをオンにすると、より小さいサイズの画像を顧客に提供し、要求された品質を維持します。 つまり、ページの読み込み時間が短くなります。これらの処理は、Adobe Senseiが最も効率的なサイズを選ぶのに役立つので、自動的に行われます。
+テクニカルサポートを送信した後に、スマートイメージング開始を有効にするには、 |サポートケースの作成| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). スマートイメージングに関連付けるカスタムドメインを設定する場合は、サポートがご協力いたします。 キャッシュ(Time To Live(TTL)に関連する1つのパラメーターを変更すると、キャッシュがクリアされます。 また、実稼動環境にプッシュする前に、必要に応じてステージングのステップをオプションで実行することもできます。 その後、スマートイメージングをオンにすると、より小さいサイズの画像を顧客に提供し、要求された品質を維持します。 つまり、ページの読み込み時間が短くなります。これらの処理は、Adobe Senseiが最も効率的なサイズを選ぶのに役立つので、自動的に行われます。
 
 スマートイメージングを有効にしたら、期待どおりに動作していることを確認します。
 
-スマートイメージングに関するその他の質問があると思います。 よくある質問(FAQ)のリストをまとめ、回答を記載しました。 FAQを読み [なさい](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+スマートイメージングに関するその他の質問があると思います。 よくある質問(FAQ)のリストをまとめ、回答を記載しました。 [FAQs](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)を読んでください。
 
 ## その他のリソース
 
-スマートイメージングの詳細については、 [Dynamic Media Classic Optimizing Page Performance Skill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demandのウェビナーを参照してください。
+スマートイメージングの詳細については、[Dynamic Media Classic Optimizing Page Performance Skill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv)のオンデマンドウェビナーを参照してください。
