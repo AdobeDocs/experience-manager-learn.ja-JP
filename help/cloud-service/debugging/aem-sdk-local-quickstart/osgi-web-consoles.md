@@ -32,7 +32,7 @@ AEMは多くのOSGiコンソールを提供し、それぞれがAEMのさまざ�
 Bundlesコンソールは次の場所にあります。
 
 + ツール/操作/Webコンソール/OSGi/バンドル
-+ Or directly at: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ または直接次の場所：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 各バンドルをクリックすると、アプリケーションのデバッグに役立つ詳細が表示されます。
 
@@ -49,7 +49,7 @@ Bundlesコンソールは次の場所にあります。
 コンポーネントコンソールは次の場所にあります。
 
 + ツール/操作/Webコンソール/OSGi/コンポーネント
-+ Or directly at: [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ または直接次の場所：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
 デバッグアクティビティに役立つ主要な側面：
 
@@ -66,7 +66,7 @@ Bundlesコンソールは次の場所にあります。
 Slingモデルコンソールは、次の場所にあります。
 
 + ツール/操作/Webコンソール/ステータス/Slingモデル
-+ Or directly at: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ または直接次の場所：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 デバッグアクティビティに役立つ主要な側面：
 
