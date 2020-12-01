@@ -20,7 +20,7 @@ ht-degree: 33%
 ---
 
 
-# Getting Started With Adaptive Forms {#getting-started-with-adaptive-forms}
+# アダプティブFormsの使い始めに{#getting-started-with-adaptive-forms}
 
 このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学びます。
 
@@ -36,8 +36,8 @@ ht-degree: 33%
 
 * **localhost:4502でAEM Formsバージョン6.4以降を実行していることを前提としています。**
 
-* [client-libs-and-logo](assets/client-libs-and-logo.zip) and [getting-started-fragmentをハードドライブにダウンロードします](assets/getting-started-fragment.zip) 。
+* [クライアントライブラリと](assets/client-libs-and-logo.zip) ロ [ゴ、使い始める際のフラグメ](assets/getting-started-fragment.zip) ントをハードドライブにダウンロードします。
 
-* パッ [ケージマネージャーを使用してzipファイルをAEMに読み込みます ](http://localhost:4502/crx/packmgr/index.jsp)
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してzipファイルをAEMに読み込みます。
 
 
