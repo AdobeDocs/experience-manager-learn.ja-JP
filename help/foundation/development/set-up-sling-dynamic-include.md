@@ -19,7 +19,7 @@ ht-degree: 9%
 
 # 設定 [!DNL Sling Dynamic Include]
 
-AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL Apache Sling Dynamic Include] に関するビデオのウォークスルー [](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)[!DNL Apache HTTP Web Server]です。
+[!DNL Apache Sling Dynamic Include]を[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)と共に&lt;a0/>を[!DNL Apache HTTP Web Server]で実行し、使用する場合のビデオウォークスルーです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -27,10 +27,10 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
 >
 > AEM Dispatcherの最新バージョンがローカルにインストールされていることを確認します。
 
-1. バンドルをダウンロードしてインスト [[!DNL Sling Dynamic Include] ールします](https://sling.apache.org/downloads.cgi)。
-1. http://&lt; [!DNL Sling Dynamic Include] host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configurationを [!DNL OSGi Configuration Factory] 使用して設定を行います ****。
+1. [[!DNL Sling Dynamic Include] バンドル](https://sling.apache.org/downloads.cgi)をダウンロードしてインストールします。
+1. [!DNL OSGi Configuration Factory]経由で[!DNL Sling Dynamic Include]を&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;に設定します。
 
-   AEMコードベースに追加するには、次の場所で適切な **sling:OsgiConfig** ノードを作成します。
+   AEMコードベースに追加するには、次の場所に適切な&#x200B;**sling:OsgiConfig**&#x200B;ノードを作成します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +54,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
    -->
    ```
 
-1. （オプション）最後の手順を繰り返して、編集可能なテンプレートの [ロックされた（初期の）コンテンツのコンポーネントも](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 、を介して提供でき [!DNL SDI] るようにします。 追加の設定が行われる理由は、編集可能なテンプレートのロックされたコンテンツが、ではなく、から提供され `/conf` ること `/content`です。
+1. （オプション）最後の手順を繰り返して、編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html)の[ロックされた（初期の）コンポーネントのコンテンツも[!DNL SDI]経由で提供できるようにします。 編集可能なテンプレートのロックされたコンテンツが`/content`ではなく`/conf`から提供されるのが追加の設定の理由です。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -78,7 +78,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
    -->
    ```
 
-1. の [!DNL Apache HTTPD Web server]ファイルを更新して `httpd.conf`[!DNL Include] モジュールを有効にします。
+1. [!DNL Apache HTTPD Web server]の`httpd.conf`ファイルを更新して[!DNL Include]モジュールを有効にします。
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -88,7 +88,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. インクルードディレクティブに従うように [!DNL vhost] ファイルを更新します。
+1. [!DNL vhost]ファイルを更新して、インクルードディレクティブを適用します。
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -113,7 +113,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
    </VirtualHost>
    ```
 
-1. dispatcher.any設定ファイルを更新して、(1)セレクターをサポートし、(2) TTL `nocache` を有効にします。
+1. dispatcher.any設定ファイルを更新して、(1) `nocache`セレクターをサポートし、(2) TTLを有効にします。
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -131,7 +131,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
 
    >[!TIP]
    >
-   > 上記のグローブ `*` ルールの末尾をオフにしたままにすると、サブリソースの要求で `*.nocache.html*` 問題が発生する可能性があります [](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)。
+   > 上記のグローバル`*.nocache.html*`ルールの末尾の`*`をオフにしたままにすると、サブリソース](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)の要求で[問題が発生する可能性があります。
 
    ```shell
    /cache {
@@ -140,7 +140,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
    }
    ```
 
-1. 設定ファイルまたはを変更 [!DNL Apache HTTP Web Server] した後は、必ず再起動してく `dispatcher.any`ださい。
+1. 設定ファイルまたは`dispatcher.any`に変更を加えた後は、必ず[!DNL Apache HTTP Web Server]を再起動してください。
 
    ```shell
    $ sudo apachectl restart
@@ -148,7 +148,7 @@ AEM Dispatcherを実行してインストールおよび使用する方法 [!DNL
 
 >[!NOTE]
 >
->エッジ側インクルード(ESI) [!DNL Sling Dynamic Includes] を提供するためにを使用する場合は、関連する [応答ヘッダーをディスパッチャーキャッシュにキャッシュします](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)。 使用可能なヘッダーは次のとおりです。
+>エッジ側インクルード(ESI)の提供に[!DNL Sling Dynamic Includes]を使用する場合は、関連する[応答ヘッダーをディスパッチャーキャッシュ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)にキャッシュしてください。 使用可能なヘッダーは次のとおりです。
 >
 >* 「Cache-Control」
 >* 「Content-Disposition」
