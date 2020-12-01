@@ -29,7 +29,7 @@ Acroformsは、Acrobatを使用して作成されたフォームです。 Acroba
 
 >[!NOTE]
 >
->Adobe Signを使用して署名するために入力可能なAcrobatフォームを送信する場合は、それに応じてフィールドに名前を付けてください。 例えば、フィールドに **Sig_es_:signer1:signatureという名前を付けることができます**。 これがAdobe Signが理解する構文です。
+>Adobe Signを使用して署名するために入力可能なAcrobatフォームを送信する場合は、それに応じてフィールドに名前を付けてください。 例えば、フィールドに&#x200B;**Sig_es_:signer1:signature**&#x200B;という名前を付けることができます。 これがAdobe Signが理解する構文です。
 
 >[!NOTE]
 >
