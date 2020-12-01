@@ -28,5 +28,5 @@ ht-degree: 46%
 + [フルWebページエクスペリエンスのパーソナライズ](./personalization-use-case-2.md)
 + 実装 {#aem-target-implementation}
    + [概要](./implementation.md)
-   + [起動とAdobeI/Oを使用したAEMおよびAdobe Target](./using-launch-adobe-io.md)
+   + [起動とAdobe I/Oを使用したAEMとAdobe Target](./using-launch-adobe-io.md)
    + [レガシーCloud Servicesを使用したAEMとAdobe Target](./using-aem-cloud-services.md)
