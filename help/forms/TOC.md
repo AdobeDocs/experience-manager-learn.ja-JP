@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: c0db84f25334106c798d555c754d550113e91eac
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 6%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 6%
    + [タスクの割り当て通知のカスタマイズ](handling-form-submissions/customize-assign-task-notification.md)
 + 便利な統合{#some-useful-integrations}
    + [2要素認証](some-useful-integrations/two-factor-authentication.md)
+   + [OCRデータ抽出](some-useful-integrations/ocr-data-extraction.md)
 
 + アダプティブフォーム {#adaptive-forms}
    + [WindowsでのAEM Formsのインストール](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
@@ -151,7 +152,7 @@ ht-degree: 6%
    + [JSONスキーマに基づくフォームの作成](querying-submitted-data/part1.md)
    + [送信データの保存](querying-submitted-data/part2.md)
    + [JSONスキーマの格納](querying-submitted-data/part3.md)
-   + [送信データのクエリ](querying-submitted-data/part4.md)
+   + [送信されたデータのクエリ](querying-submitted-data/part4.md)
 + Formsポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [部品1 — カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [パート2 — カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
