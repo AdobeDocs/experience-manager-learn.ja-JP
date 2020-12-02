@@ -1,33 +1,58 @@
 ---
-title: AEM ヘッドレス使用の手引き
-description: AEM ヘッドレスを使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
+title: AEMヘッドレスチュートリアル
+description: ヘッドレスCMSとしてAdobe Experience Managerを使用する方法に関するチュートリアルの集まりです。
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 10%
+source-wordcount: '364'
+ht-degree: 5%
 
 ---
 
 
-# AEM ヘッドレス使用の手引き
+# AEMヘッドレスチュートリアル
 
-AEMを使用してコンテンツを構築し、公開し、ネイティブモバイルアプリで使用され、ヘッドレスのCMSシナリオでコンテンツを利用する方法を説明するエンドツーエンドのチュートリアルです。
+Adobe Experience Managerには、ヘッドレスエンドポイントを定義し、そのコンテンツをJSONとして配信するための複数のオプションがあります。 実践チュートリアルを使用して、さまざまなオプションの使い方を学び、最適なオプションを選択します。
 
->[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+## AEM GraphQL APIのチュートリアル
 
-このチュートリアルでは、AEM Content Servicesを使用して、イベント情報（音楽、パフォーマンス、アートなど）を表示するモバイルアプリの操作性を最大限に引き出す方法を説明します。 それはWKNDチームによってキュレーションされます。
+>[!CAUTION]
+>
+> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
+> 関連ドキュメントは、プレビュー目的で利用できます。
 
-このチュートリアルでは、次のトピックについて説明します。
+AEM GraphQL API for Content Fragments
+は、AEMで管理されたコンテンツを使用して外部クライアントアプリケーションがエクスペリエンスをレンダリングするヘッドレスCMSシナリオをサポートしています。
 
-* コンテンツフラグメントを使用したイベントを表すコンテンツの作成
-* イベントデータをJSONとして公開するAEMサイトのテンプレートとページを使用してAEM Content Servicesエンドポイントを定義する
-* AEM WCM Core Componentsを使用して、マーケターがJSONエンドポイントを作成できるようにする方法を学びます。
-* モバイルアプリからAEM Content Services JSONを使用する
-   * Androidを使用する理由は、このチュートリアルのすべてのユーザー（Windows、macOSおよびLinux）がネイティブのアプリケーションを実行する際に使用できるクロスプラットフォームエミュレーターがあるからです。
+最新のコンテンツ配信APIは、JavaScriptベースのフロントエンドアプリケーションの効率性とパフォーマンスを高めるための重要な要素です。 REST APIを使用すると、次のような課題が生じます。
 
-## GitHubプロジェクト
+* 1回に1つのオブジェクトをフェッチする大量の要求
+* 多くの場合、「過剰に配信」されるコンテンツ、つまりアプリケーションが必要以上に受信することを意味します
 
-ソースコードとコンテンツパッケージは、[AEM GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)で入手できます。
+これらの課題を克服するために、GraphQLはクエリベースのAPIを提供し、クライアントは必要なコンテンツのみをクエリAEMに提供し、1回のAPI呼び出しで受け取ることができます。
 
-チュートリアルまたはコードに問題がある場合は、[GitHubの問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)を残してください。
+* AEM GraphQL APIの使い方を学ぶには、「AEM GraphQL APIの使い始めに」チュートリアル[を参照してください。](./graphql/overview.md)
+
+## AEM Content Servicesチュートリアル
+
+AEM Content Servicesは、従来のAEMページを利用してヘッドレスなREST APIエンドポイントを構成し、AEMコンポーネントは、これらのエンドポイントに公開するコンテンツを定義（参照）します。
+
+AEM Content Servicesでは、AEM SitesのWebページのオーサリングに使用したのと同じコンテンツ抽象概念を使用して、これらのHTTP APIのコンテンツとスキーマを定義できます。 AEMページとAEMコンポーネントを使用すると、マーケターはあらゆるアプリケーションに電源を投入できる柔軟なJSON APIを迅速に作成および更新できます。
+
+* AEM Content Servicesの使用方法について学ぶには、「[AEM Content Services使用の手引き」チュートリアル](./content-services/overview.md)を参照してください。
+
+## AEM GraphQLとAEM Content Servicesの比較
+
+|  | AEM GraphQL API | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| スキーマ定義 | 構造化コンテンツフラグメントモデル | AEMコンポーネント |
+| コンテンツ | コンテンツフラグメント | AEMコンポーネント |
+| コンテンツの検出 | GraphQLクエリ別 | AEMページ |
+| 配信形式 | GraphQL JSON | AEM ComponentExporter JSON |
+
+## その他の役に立つチュートリアル
+
+ヘッドレスコンセプトに関するその他のAEMチュートリアルは以下のとおりです。
+
+* [AEM SPA エディターと Angular の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
