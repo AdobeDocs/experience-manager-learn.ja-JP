@@ -7,12 +7,12 @@ topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: cloud-service
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 10%
+source-wordcount: '374'
+ht-degree: 11%
 
 ---
 
@@ -20,11 +20,6 @@ ht-degree: 10%
 # コンテンツフラグメントのオーサリング{#authoring-content-fragments}
 
 コンテンツフラグメントはAEMのコンテンツ抽象です。この機能を使用すると、テキストベースのコンテンツを、サポートするチャネルとは独立して作成および管理できます。
-
->[!NOTE]
->
->これらのビデオで扱うAEMコンテンツフラグメント機能は、最初に[AEM 6.3 + FP 19008およびFP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html)で導入されました。
-
 
 AEMコンテンツフラグメントは、関連付けられた構造化データ要素の一部を含む場合があり、デザイン情報やレイアウト情報を持たない純粋なコンテンツと見なされる、テキストベースの編集コンテンツです。 コンテンツフラグメントは通常、チャネルにとらわれないコンテンツとして作成されます。これは複数のチャネルで使用および再利用され、その後コンテンツをコンテキスト固有のエクスペリエンスにまとめることを目的としています。
 
