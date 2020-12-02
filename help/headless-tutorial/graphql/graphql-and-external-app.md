@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -208,40 +208,40 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
 1. IDEで次のファイルを開きます。`src/components/Adventures.js`. このファイルは、Adventuresカードのクエリと表示を表すホームエクスペリエンスのアドベンチャーコンポーネントを表します。
 1. Inspect関数`filterQuery(activity)`は未使用ですが、`activity`がフィルターを冒険させるGraphQLクエリを作る準備ができています。
 
-パラメータ`activity`は、`adventureActivity`フィールドの`filter`の一部としてGraphQLクエリに挿入されます。この場合、フィールドの値がパラメータの値と一致する必要があります。
+   パラメータ`activity`は、`adventureActivity`フィールドの`filter`の一部としてGraphQLクエリに挿入されます。この場合、フィールドの値がパラメータの値と一致する必要があります。
 
-    &quot;
-    javascriptfunction filterQuery(アクティビティ) {
-    return `
-    {
-    adventures (フィルタ：{
-    adventureActivity:{
-    _式:[
-    {
-    value:&quot;${アクティビティ}
-    }
-    }}}
-    }}}
-    {items {_
-    pathadventure}}titems {
-    _pathiceadventure}titites{
-    
-    
-    
-    items_adventure}adventureadventureTripTripPrimary}ime.{
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }.phe.....p............................................................................................................................................
+   ```javascript
+   function filterQuery(activity) {
+       return `
+           {
+           adventures (filter: {
+               adventureActivity: {
+               _expressions: [
+                   {
+                   value: "${activity}"
+                   }
+                 ]
+               }
+           }){
+               items {
+               _path
+               adventureTitle
+               adventurePrice
+               adventureTripLength
+               adventurePrimaryImage {
+               ... on ImageRef {
+                   _path
+                   mimeType
+                   width
+                   height
+               }
+               }
+             }
+         }
+       }
+       `;
+   }
+   ```
 
 1. React Adventuresコンポーネントの`return`ステートメントを更新し、新しいパラメータ化`filterQuery(activity)`を呼び出すボタンを追加して、リストにアドベンチャーを提供します。
 
@@ -342,7 +342,7 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
 
    ![エラーJSONオブジェクト](assets/graphql-and-external-app/error-json-response.png)
 
-   `errors`オブジェクトは冗長であり、無効なクエリの場所とエラーの分類に関する情報が含まれています。
+   `errors`オブジェクトは冗長であり、無効なクエリの場所とエラーの分類に関する情報が含まれます。
 
 1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリケーションを正しい状態に戻します。
 
