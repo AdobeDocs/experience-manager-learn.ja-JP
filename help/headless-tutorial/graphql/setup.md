@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1553'
 ht-degree: 2%
 
 ---
@@ -109,27 +109,15 @@ WKNDリファレンスサイトのサンプルコンテンツが、チュート�
 >
 > Cloud Service環境を使用している場合は、WKNDリファレンスサイトのようなコードベースをCloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying)に[導入する方法に関するドキュメントを参照してください。
 
-## GraphQL要求を許可
+## GraphQLエンドポイントのインストール{#graphql-endpoint}
 
-AEMは、デフォルトでセキュリティ保護されているので、接触チャネル間のリクエストをブロックし、許可されていないアプリケーションがコンテンツに接続して表示するのを防ぎます。
+GraphQLエンドポイントを設定する必要があります。 これにより、GraphQL APIが公開される正確なエンドポイントを柔軟に決定できます。 [CORS](#cors-config)は、外部アプリケーションへのアクセスを許可するためにも必要です。 パッケージが事前に作成されている場合のチュートリアルを迅速に実行できます。
 
-このチュートリアルのReactアプリでAEM GraphQL APIエンドポイントとのやり取りを可能にするため、接触チャネル間のリソース共有の設定が定義されています。
+1. [aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)パッケージをダウンロードします。
+1. **AEM開始**&#x200B;メニューから&#x200B;**ツール**/**展開**/**パッケージ**&#x200B;に移動します。
+1. 「パッケージ&#x200B;**アップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。 **「**&#x200B;をインストール」をクリックして、パッケージをインストールします。
 
-![接触チャネル間のリソース共有の設定](./assets/setup/cross-origin-resource-sharing-configuration.png)
-
-1. **ツール**/**操作**/**Webコンソール**&#x200B;にあるAEM SDKのWebコンソールに移動します。
-1. **AdobeGranite Cross-接触チャネルリソース共有ポリシー**&#x200B;のラベルの付いた行をクリックして、新しい構成を作成します
-1. 他のフィールドはデフォルト値のままにして、次のフィールドを更新します。
-   * 許可されている接触チャネル:`localhost:3000`
-   * 許可されている接触チャネル(Regex):`.* `
-   * 許可されているパス: `/content/graphql/endpoint.gql`
-   * 許可されているメソッド：`GET`、`HEAD`、`POST`
-      * GraphQLでは`POST`のみが必要ですが、AEMとヘッドレスに対話する場合は他の方法が役に立ちます。
-   * 秘密鍵証明書のサポート：`Yes`
-      * これは、React AppがAEM Authorサービス上の保護されたGraphQLエンドポイントと通信する際に必要となります。
-1. 「**保存**」をクリックします。
-
-この設定では、`localhost:3000`からAEM Authorサービスに対する`POST` HTTP要求をパス`/content/graphql/endpoint.gql`で許可します。
+上記のパッケージには、後の章で使用する[GraphicQLツール](https://github.com/graphql/graphiql)も含まれています。 CORS設定に関する詳細は、[](#cors-config)の下にあります。
 
 ## サンプルアプリ{#sample-app}をインストール
 
@@ -209,3 +197,29 @@ GraphQLを使用して、AEMコンテンツを消費する外部アプリケー�
 ## 次の手順 {#next-steps}
 
 次の章「[コンテンツフラグメントモデルの定義](content-fragment-models.md)」では、コンテンツをモデル化し、**コンテンツフラグメントモデル**&#x200B;を使用してスキーマを構築する方法を説明します。 既存のモデルをレビューし、新しいモデルを作成します。 また、スキーマをモデルの一部として定義するために使用できる様々なデータタイプについても学習します。
+
+## （賞与）CORSの設定{#cors-config}
+
+AEMは、デフォルトでセキュリティ保護されているので、接触チャネル間のリクエストをブロックし、許可されていないアプリケーションがコンテンツに接続して表示するのを防ぎます。
+
+このチュートリアルのReactアプリがAEM GraphQL APIエンドポイントとやり取りできるように、GraphQLエンドポイントパッケージで接触チャネル間のリソース共有の設定が定義されています。
+
+![接触チャネル間のリソース共有の設定](./assets/setup/cross-origin-resource-sharing-configuration.png)
+
+手動で設定するには：
+
+1. **ツール**/**操作**/**Webコンソール**&#x200B;にあるAEM SDKのWebコンソールに移動します。
+1. **AdobeGranite Cross-接触チャネルリソース共有ポリシー**&#x200B;のラベルの付いた行をクリックして、新しい構成を作成します
+1. 他のフィールドはデフォルト値のままにして、次のフィールドを更新します。
+   * 許可されている接触チャネル:`localhost:3000`
+   * 許可されている接触チャネル(Regex):`.* `
+   * 許可されているパス: `/content/graphql/endpoint.gql`
+   * 許可されているメソッド：`GET`、`HEAD`、`POST`
+      * GraphQLでは`POST`のみが必要ですが、AEMとヘッドレスに対話する場合は他の方法が役に立ちます。
+   * 秘密鍵証明書のサポート：`Yes`
+      * これは、React AppがAEM Authorサービス上の保護されたGraphQLエンドポイントと通信する際に必要となります。
+1. 「**保存**」をクリックします。
+
+この設定では、`localhost:3000`からAEM Authorサービスに対する`POST` HTTP要求をパス`/content/graphql/endpoint.gql`で許可します。
+
+この設定とGraphQLエンドポイントは、AEMプロジェクトから生成されます。 [詳細はこちら](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project)。
