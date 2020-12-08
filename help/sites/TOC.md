@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 28%
+source-wordcount: '441'
+ht-degree: 34%
 
 ---
 
@@ -16,36 +16,36 @@ ht-degree: 28%
 
 + [概要](overview.md)
 + ページオーサリング {#page-authoring}
-   + [オーサリングの概要](page-authoring/aem-sites-authoring-overview.md)
-   + [AEM Sitesの基本航法と取扱い](page-authoring/basic-handling-sites-feature-video-use.md)
-   + [AEM Sitesのコンテンツ階層](page-authoring/content-hierarchy-feature-video-use.md)
-   + [AEM Sitesでのページオーサリング](page-authoring/page-authoring-overview-feature-video-use.md)
-   + [新しいページの作成](page-authoring/creating-page-feature-video-use.md)
-   + [ページエディタの使用](page-authoring/page-editor-feature-video-use.md)
-   + [レスポンシブレイアウトについて](page-authoring/responsive-layout-feature-video-understand.md)
-   + [AEM Sitesでのページタグ付け](page-authoring/page-tagging-feature-video-use.md)
+   + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
+   + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)
+   + [サイト構造](page-authoring/content-hierarchy-feature-video-use.md)
+   + [ページの作成](page-authoring/creating-page-feature-video-use.md)
+   + [ページオーサリング](page-authoring/page-authoring-overview-feature-video-use.md)
+   + [ページエディター](page-authoring/page-editor-feature-video-use.md)
+   + [ページのタグ付け](page-authoring/page-tagging-feature-video-use.md)
    + [ページのバージョン管理](page-authoring/page-versioning-feature-video-use.md)
    + [ページバージョンの比較](page-authoring/page-diff-feature-video-use.md)
-   + [ページプロパティについて](page-authoring/page-properties-feature-video-understand.md)
-   + [基本ページ操作](page-authoring/page-operations-feature-video-use.md)
-   + [ページの公開](page-authoring/publication-management-feature-video-use.md)
-   + [編集可能なページテンプレートの使用](page-authoring/template-editor-feature-video-use.md)
-   + [スタイルシステムの使用](page-authoring/style-system-feature-video-use.md)
-   + [タイムワープの使用](page-authoring/timewarp-feature-video-use.md)
+   + [ページプロパティ](page-authoring/page-properties-feature-video-understand.md)
+   + [ページ操作](page-authoring/page-operations-feature-video-use.md)
+   + [レイアウトモード](page-authoring/responsive-layout-feature-video-understand.md)
+   + [公開](page-authoring/publication-management-feature-video-use.md)
+   + [編集可能なテンプレート](page-authoring/template-editor-feature-video-use.md)
+   + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
+   + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
 + コンポーネント {#components}
    + [コンポーネントの開発](components/component-development.md)
-   + [コアコンポーネントについて](components/core-components-feature-video-understand.md)
-   + [コンポーネントコンソールの使用](components/components-console-feature-video-use.md)
+   + [コアコンポーネント](components/core-components-feature-video-understand.md)
+   + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
    + [コンテンツフラグメントの配信](content-fragments/content-fragments-delivery-feature-video-use.md)
-   + [コンテンツフラグメントでの翻訳の使用](content-fragments/content-fragments-translation-feature-video-use.md)
-   + [コンテンツフラグメントとエクスペリエンスフラグメントの理解](content-fragments/understand-content-fragments-and-experience-fragments.md)
+   + [コンテンツフラグメントとの変換](content-fragments/content-fragments-translation-feature-video-use.md)
+   + [コンテンツフラグメントとエクスペリエンスフラグメント](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [エクスペリエンスフラグメントについて](experience-fragments/experience-fragments-feature-video-understand.md)
    + [エクスペリエンスフラグメントを使用したソーシャル投稿の設定](experience-fragments/experience-fragments-social-technical-video-setup.md)
-   + [コンテンツフラグメントとエクスペリエンスフラグメントの理解](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [コンテンツフラグメントとエクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
    + [AEM Sites 使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
