@@ -8,13 +8,13 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6714
+thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 0%
+source-wordcount: '1030'
+ht-degree: 1%
 
 ---
 
@@ -278,6 +278,10 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
   }
 }
 ```
+
+## その他のリソース
+
+GraphQLクエリの他の多くの例については、以下を参照してください。[AEMでのGraphQLの使い方の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
 
 ## バリデーターが{#congratulations}
 
