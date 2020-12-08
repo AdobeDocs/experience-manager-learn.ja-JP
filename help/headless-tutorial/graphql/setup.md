@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6386
+thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1590'
 ht-degree: 2%
 
 ---
@@ -67,6 +67,10 @@ ht-degree: 2%
 1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
 1. 数分後、AEMインスタンスがインストールを終了し、新しいブラウザーウィンドウが[http://localhost:4502](http://localhost:4502)に開きます。
 1. ユーザー名`admin`とパスワード`admin`を使用してログインします。
+
+>[!CAUTION]
+>
+> セットアップを続行するには、Quickstart SDKでGraphQL機能を手動で有効にする必要があります。 詳しい手順については、Adobeの担当者にお問い合わせください。 この手動の手順は、2021年に機能をリリースするまでのみ必要です。
 
 ## サンプルコンテンツ{#wknd-site}のインストール
 
