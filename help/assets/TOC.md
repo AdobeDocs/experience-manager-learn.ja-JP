@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 37%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 37%
    + [アセットの検索](./adobe-asset-link/asset-search.md)
 
 + Dynamic Media{#dynamic-media}
-   + [ダイナミックメディアの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Dynamic Media概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
    + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
@@ -99,9 +99,10 @@ ht-degree: 37%
    + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
    + [パノラマおよび垂直画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
    + [Adobe Analyticsの視聴者](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [ダイナミックMedia Classicデスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [ダイナミックメディア3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [ダイナミックメディアスマート切り抜きビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Mediaクラシックデスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + [Dynamic Mediaスマート切り抜きビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Mediaコアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
 + 翻訳 {#translation}
    + [ソースファイルの変換](translation/source-file-translation-feature-video-use.md)
