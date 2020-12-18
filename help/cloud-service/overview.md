@@ -4,9 +4,9 @@ description: Cloud ServiceとしてのAdobe Experience Manager(AEM)向けのチ�
 sub-product: サイト， cloud manager，基盤，アセット
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 11%
 
 ---
@@ -20,6 +20,14 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
 ## 新機能
 
+* **[一括インポート（ビデオ）](./migration/bulk-import.md)**
+
+   *Azure BlobストレージまたはAmazonS3からAEMにアセットを一括インポートする方法を説明します*
+
+* **[asset computeメタデータワーカー（チュートリアル）](./asset-compute/advanced/metadata.md)**
+
+   *asset computeワーカーからAEMにアセットのメタデータを書き戻す方法を説明します。*
+
 * **[asset computeマイクロサービスの拡張機能（チュートリアル）](./asset-compute/overview.md)**
 
    *asset computeワーカーを開発し、カスタムアセットレンディションを生成する方法を学びます。*
@@ -31,14 +39,6 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 * **[Cloud ServiceとしてのAEMのデバッグ（チュートリアル）](./debugging/cloud-service/overview.md)**
 
    *AEMをCloud Serviceとしてデバッグする方法の確認*
-
-* **[AEM SDKのデバッグ（チュートリアル）](./debugging/aem-sdk-local-quickstart/overview.md)**
-
-   *Cloud ServiceSDKのローカルクイックスタートとして、AEMでのアプリケーションのデバッグに使用する様々なツールを参照します。*
-
-* **[ローカル開発環境の設定（チュートリアル）](./local-development-environment/overview.md)**
-
-   *Cloud Service開発としてAEM用にローカル開発マシンを設定する方法を学びます。*
 
 ## スタッフの選考
 
