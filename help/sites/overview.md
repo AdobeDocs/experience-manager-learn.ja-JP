@@ -5,10 +5,10 @@ description: 'Adobe Experience Manager Sites のビデオとチュートリア�
 seo-description: Adobe Experience Manager Sites向けのビデオとチュートリアルの集まり
 sub-product: サイト、content services
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 33%
+source-wordcount: '337'
+ht-degree: 31%
 
 ---
 
@@ -19,21 +19,13 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 
 ## 新機能
 
-* **[AEM SPA EditorとReactの使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html) （チュートリアル）**
+* **[AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *Reactを使用して、単一のページアプリ(SPA)とAEMを統合する開発者向けの入門ガイドです。*
+   *Adobeクライアントデータレイヤーを、カスタムのAEMコンポーネントのコンテンツで更新する方法について説明します。*
 
-* **[AEM SPA EditorとAngular](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html) （チュートリアル）の使用の手引き**
+* **[AEM Headless GraphQLの使用の手引き（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *単一のページアプリ(SPA)をAngularを使用してAEMと統合するための開始ガイド*
-
-* **[AEMヘッドレス使用の手引き（チュートリアル）](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
-
-   *ヘッドレスなCMSシナリオで、AEMのコンテンツを公開してネイティブモバイルアプリで使用する方法。*
-
-* **[エクスペリエンスフラグメントの使用（ビデオシリーズ）](./experience-fragments/experience-fragments-feature-video-use.md)**
-
-   *複数のチャネルにまたがるコンテンツを推進するAEMエクスペリエンスフラグメントについて説明します。*
+   *AEM GraphQL APIを使用して、AEMのコンテンツを公開し、ネイティブモバイルアプリで使用する方法。*
 
 * **[コンテンツフラグメントの使用（ビデオシリーズ）](./content-fragments/content-fragments-feature-video-use.md)**
 
@@ -61,7 +53,7 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
     <p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <img alt="AEM ヘッドレス使用の手引き" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
@@ -74,7 +66,7 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
     </p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+    <a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html">
       <img alt="AEM SPA Editor使用の手引き" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
