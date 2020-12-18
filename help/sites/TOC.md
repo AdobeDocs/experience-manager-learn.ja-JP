@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '447'
 ht-degree: 34%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 34%
       + [Launch実装のデバッグ](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [Adobeクライアントデータレイヤーの使用](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [Adobeクライアントデータレイヤーのカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
    + 分析 {#analytics}
       + [Adobe Analyticsとページデータを収集する](integrations/analytics/collect-data-analytics.md)
       + [Adobe Analyticsでクリックされたコンポーネントを追跡](integrations/analytics/track-clicked-component.md)
