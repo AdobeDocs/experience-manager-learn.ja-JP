@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '788'
 ht-degree: 8%
 
 ---
@@ -174,6 +174,8 @@ Adobeのクライアントデータレイヤーの組み込み機能は、お使
 ## 次の手順
 
 次のチュートリアルを見て、イベント主導型のAdobeクライアントデータレイヤーを[収集ページデータに使用し、Adobe Analytics](../analytics/collect-data-analytics.md)に送信する方法を学びます。
+
+または、[AdobeクライアントデータレイヤーをAEMコンポーネントでカスタマイズする方法](./data-layer-customize.md)を学びます。
 
 
 ## その他のリソース {#additional-resources}
