@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 38%
+source-wordcount: '205'
+ht-degree: 37%
 
 ---
 
@@ -51,6 +51,7 @@ ht-degree: 38%
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
+   + [アセットの一括インポート](./migration/bulk-import.md)
 + asset computeの拡張機能{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
