@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '902'
 ht-degree: 6%
 
 ---
@@ -182,6 +182,7 @@ ht-degree: 6%
    + [アップロードされたPDFに使用権限を適用](document-services/apply-reader-extension-rights-to-pdf.md)
    + [ドキュメントの認証](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Assemble Form Attachments](document-services/assemble-form-attachments.md)
+   + [役に立つユーティリティサービス](document-services/useful-utility-services.md)
 + 印刷チャネル用の対話型通信
 {#ic-print-channel-tutorial}
    + [概要](ic-print-channel-tutorial/introduction.md)
