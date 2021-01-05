@@ -187,4 +187,4 @@ WKNDサイトは、自社のウェブサイトを通じて、アメリカ全土�
 
 ## 概要
 
-この章では、コンテンツエディターで、Adobe Experience Manager内でWKND SkateFestキャンペーンをサポートするすべてのコンテンツを作成し、HTMLオファーとしてAdobe Targetに書き出して、ユーザーの地域に基づくエクスペリエンスターゲット設定を作成できました。
+この章では、コンテンツエディターで、Adobe Experience Manager内でWKND SkateFestキャンペーンをサポートするすべてのコンテンツを作成し、HTMLオファーとしてAdobe Targetに書き出して、ユーザーの地域に基づいたエクスペリエンスターゲット設定を作成できました。
