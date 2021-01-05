@@ -1,8 +1,8 @@
 ---
 title: AEM Dynamic Media でのアセットビューアについて
 seo-title: AEM Dynamic Media でのアセットビューアについて
-description: AEMダイナミックメディアビューアの機能強化により、AEM作成者は、Webサイトユーザーに表示されるエクスペリエンスアセットを定義し、カスタマイズできます。
-seo-description: AEMダイナミックメディアビューアの機能強化により、AEM作成者は、Webサイトユーザーに表示されるエクスペリエンスアセットを定義し、カスタマイズできます。
+description: AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
+seo-description: AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
 uuid: 5762c0a2-4371-4719-8400-849c7a11926d
 discoiquuid: a0be2cd0-4fdb-431f-a8c7-e4620b8b129b
 products: SG_EXPERIENCEMANAGER/6.3/ASSETS
@@ -24,7 +24,7 @@ ht-degree: 16%
 
 # AEM Dynamic Media でのアセットビューアについて{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEMダイナミックメディアビューアの機能強化により、AEM作成者は、Webサイトユーザーに表示されるエクスペリエンスアセットを定義し、カスタマイズできます。
+AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
 
