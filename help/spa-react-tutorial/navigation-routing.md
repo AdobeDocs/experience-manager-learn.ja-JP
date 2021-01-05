@@ -68,7 +68,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
 ## Inspectヘッダーの更新{#inspect-header}
 
-前の章では、`Header`コンポーネントは、`App.js`を介して含まれる純粋なReactコンポーネントとして追加されました。 この章では、`Header`コンポーネントは削除され、[テンプレートエディター](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)を使用して追加されます。 これにより、ユーザーはAEM内から`Header`のナビゲーションメニューを設定できます。
+前の章では、`Header`コンポーネントは、`App.js`を介して含まれる純粋なReactコンポーネントとして追加されました。 この章では、`Header`コンポーネントは削除され、[テンプレートエディター](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)を使用して追加されます。 これにより、ユーザーはAEM内から`Header`のナビゲーションメニューを設定できます。
 
 >[!NOTE]
 >
