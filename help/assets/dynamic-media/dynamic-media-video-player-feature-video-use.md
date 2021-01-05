@@ -1,8 +1,8 @@
 ---
 title: AEM Dynamic Media でのビデオプレーヤーの使用
 seo-title: AEM Dynamic Media でのビデオプレーヤーの使用
-description: デスクトップクライアントやブラウザでのアダプティブビデオストリーミングをサポートするために、Flashランタイムに依存していたAEM Dynamic Mediaビデオプレーヤーは、Flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
-seo-description: デスクトップクライアントやブラウザでのアダプティブビデオストリーミングをサポートするために、Flashランタイムに依存していたAEM Dynamic Mediaビデオプレーヤーは、Flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
+description: AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
+seo-description: AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
 uuid: aac6f471-4bed-4773-890f-0dd2ceee381d
 discoiquuid: b01cc46b-ef64-4db9-b3b4-52d3f27bddf5
 sub-product: dynamic-media
@@ -23,7 +23,7 @@ ht-degree: 26%
 
 # AEM Dynamic Media でのビデオプレーヤーの使用{#using-the-video-player-in-aem-dynamic-media}
 
-デスクトップクライアントやブラウザでのアダプティブビデオストリーミングをサポートするために、Flashランタイムに依存していたAEM Dynamic Mediaビデオプレーヤーは、Flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
+AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
