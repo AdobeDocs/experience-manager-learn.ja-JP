@@ -1,8 +1,8 @@
 ---
-title: エクスペリエンスフラグメントとAEM Assetsダイナミックメディアの使用
-seo-title: エクスペリエンスフラグメントとAEM Assetsダイナミックメディアの使用
-description: 'AEM Assetsダイナミックメディアは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。 '
-seo-description: 'AEM Assetsダイナミックメディアは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。 '
+title: エクスペリエンスフラグメントのAEM AssetsDynamic Mediaでの使用
+seo-title: エクスペリエンスフラグメントのAEM AssetsDynamic Mediaでの使用
+description: 'AEM AssetsDynamic Mediaは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。 '
+seo-description: 'AEM AssetsDynamic Mediaは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。 '
 uuid: 3a1ad864-2b63-4761-816b-e4fd1fda0232
 discoiquuid: 5e411dba-5e6c-4256-87d4-84f618aa29b5
 sub-product: dynamic-media、content-services
@@ -21,16 +21,16 @@ ht-degree: 4%
 ---
 
 
-# エクスペリエンスフラグメントとAEM Assetsダイナミックメディアの使用{#using-experience-fragments-with-aem-assets-dynamic-media}
+# エクスペリエンスフラグメントのAEM AssetsDynamic Mediaでの使用{#using-experience-fragments-with-aem-assets-dynamic-media}
 
-AEM Assetsダイナミックメディアは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。
+AEM AssetsDynamic Mediaは、インタラクティブメディアビューアを使用して、アセットのホットスポットとエクスペリエンスフラグメントを統合します。 マーケターは、テキスト、画像およびリンクを含むエクスペリエンスフラグメントを作成してカスタムポップアップを設定し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22115/?quality=9&learn=on)
 
 >[!NOTE]
 >
->AEMエクスペリエンスフラグメントをAEM Assetsダイナミックメディアホットスポットと共に使用する場合は、[AEMをダイナミックメディア](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)モードで実行する必要があります。
+>AEM Experience FragmentsをAEM AssetsDynamic Mediaホットスポットで使用するには、[AEMをDynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)モードで実行する必要があります。
 
 このビデオに示すポップアップエクスペリエンスフラグメントのバリエーションは、以下のAEMパッケージで入手できます。
 
-[エクスペリエンスフラグメントダイナミックメディアアセット](assets/experience-fragmentsdynamic-mediaassets-100.zip)のダウンロード
+[エクスペリエンスフラグメントDynamic Mediaアセット](assets/experience-fragmentsdynamic-mediaassets-100.zip)のダウンロード
