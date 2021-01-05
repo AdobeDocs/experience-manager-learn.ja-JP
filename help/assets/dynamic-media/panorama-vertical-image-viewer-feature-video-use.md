@@ -1,8 +1,8 @@
 ---
-title: パノラマと縦置き画像ビューアをAEM Assetsダイナミックメディアと併用する
-seo-title: パノラマと縦置き画像ビューアをAEM Assetsダイナミックメディアと併用する
-description: AEM 6.4のダイナミックメディアビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
-seo-description: AEM 6.4のダイナミックメディアビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
+title: AEM AssetsDynamic Mediaとのパノラマ&垂直画像ビューアの使用
+seo-title: AEM AssetsDynamic Mediaとのパノラマ&垂直画像ビューアの使用
+description: AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
+seo-description: AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
 sub-product: dynamic-media
 feature: video-profiles, video-profiles, vr-360
 topics: videos, renditions, authoring
@@ -19,15 +19,15 @@ ht-degree: 2%
 ---
 
 
-# パノラマと縦置き画像ビューアをAEM Assetsダイナミックメディアと併用する{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# パノラマと縦置き画像ビューアのAEM AssetsDynamic Mediaでの使用{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-AEM 6.4のダイナミックメディアビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
+AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
 
 >[!NOTE]
 >
->ビデオでは、AEMインスタンスがダイナミックメディアS7モードで実行されていることを前提としています。 [ダイナミックメディアを使用したAEMの設定手順については、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## パノラマVRビューアおよびパノラマVRビューア
 
@@ -51,9 +51,9 @@ AEM 6.4のダイナミックメディアビューアの機能強化には、パ�
    <td>垂直画像ビューア</td>
   </tr>
   <tr>
-   <td>ダイナミックメディア実行モード</td>
-   <td>ダイナミックメディアScene7モードのみ</td>
-   <td>DMS7およびダイナミックメディア</td>
+   <td>Dynamic Media実行モード</td>
+   <td>Dynamic MediaScene7モードのみ</td>
+   <td>DMS7とDynamic Media</td>
   </tr>
   <tr>
    <td>使用例</td>
@@ -68,9 +68,9 @@ AEM 6.4のダイナミックメディアビューアの機能強化には、パ�
  </tbody>
 </table>
 
-[Scene7モードでのダイナミックメディアの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
+[Scene7モードでのDynamic Mediaの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
 
-[ハイブリッドモードでのダイナミックメディアの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dynamic.html)
+[ハイブリッドモードでのDynamic Mediaの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >
