@@ -30,4 +30,4 @@ Adobe Experience Manager(AEM)は、主要なエクスペリエンス管理プラ
 + [AEM SPA EditorとAngularの使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 + [AEM と Adobe Target の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
 + [AEM 6.xディスパッチャーキャッシュのチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
-+ [AEM 6.x Dynamic Media Classicチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
++ [AEM 6.xDynamic Mediaクラシックチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
