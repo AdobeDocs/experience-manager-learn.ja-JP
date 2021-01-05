@@ -1,6 +1,6 @@
 ---
-title: ダイナミックメディア3DとAEM Assetsの連携
-description: ダイナミックメディア3DのAdobe Experience Manager対応により、インタラクティブな3Dパワーエクスペリエンスを容易にスケール設定および配信できます
+title: AEM AssetsでのDynamic Media3Dの使用
+description: Adobe Experience ManagerのDynamic Media3Dサポートにより、インタラクティブな3Dパワーエクスペリエンスを容易にスケールでカスタマイズおよび配信できます
 feature: 3d
 topics: authoring, integrations, videos, renditions, dynamic media
 audience: all
@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# ダイナミックメディア3DとAEM Assets{#using-dynamic-3d-with-aem-assets}の使用
+# Dynamic Media3DとAEM Assets{#using-dynamic-3d-with-aem-assets}の使用
 
-ダイナミックメディア3DのAdobe Experience Manager対応により、インタラクティブな3Dパワーエクスペリエンスを容易にスケール設定および配信できます。
+Adobe Experience ManagerのDynamic Media3Dサポートを使用すると、インタラクティブな3Dパワーエクスペリエンスを容易にスケールでカスタマイズおよび配信できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
