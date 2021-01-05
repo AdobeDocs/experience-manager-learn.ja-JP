@@ -48,7 +48,7 @@ ht-degree: 7%
 
 ### CoralUIアイコン{#coralui-icons}
 
-AEMが提供するCoralUIアイコンは、コンポーネントのアイコンに使用できます。 CoralUIアイコンを設定するには、**[cq:Component]@cq:icon**&#x200B;プロパティを目的のCoralUIアイコンのHTMLアイコン属性値に設定します（[CoralUIドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)に列挙されます）。
+AEMが提供するCoralUIアイコンは、コンポーネントのアイコンに使用できます。 CoralUIアイコンを設定するには、**[cq:Component]@cq:icon**&#x200B;プロパティを目的のCoralUIアイコンのHTMLアイコン属性値に設定します（[CoralUIドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)に列挙されます）。
 
 ```plain
 /apps/.../components/content/my-component
