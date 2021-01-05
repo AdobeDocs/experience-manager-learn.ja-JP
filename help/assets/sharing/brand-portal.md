@@ -209,6 +209,6 @@ Brand Portalは、Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 * [AEM作成者レプリケーションエージェント](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [高速ダウンロードガイド](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM AssetsブランドポータルAdobeドキュメント](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM AssetsダイナミックメディアAdobeドキュメント](https://docs.adobe.com/docs/ja/aem/6-3/author/assets/dynamic-media.html)
+* [AEM AssetsDynamic MediaAdobe文書](https://docs.adobe.com/docs/ja/aem/6-3/author/assets/dynamic-media.html)
 * [Aspera接続をダウンロード](https://downloads.asperasoft.com/connect2/)
 * [Aspera接続テストサーバ](https://test-connect.asperasoft.com/)
