@@ -1,6 +1,6 @@
 ---
-title: スマート切り抜きとAEM Assetsダイナミックメディアの使用
-seo-title: スマート切り抜きとAEM Assetsダイナミックメディアの使用
+title: AEM AssetsDynamic Mediaでのスマートクロップの使用
+seo-title: AEM AssetsDynamic Mediaでのスマートクロップの使用
 description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
 seo-description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
 uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# AEM Assetsダイナミックメディアでのスマート切り抜きの使用{#using-smart-crop-with-aem-assets-dynamic-media}
+# AEM AssetsDynamic Mediaとのスマート切り抜きの使用{#using-smart-crop-with-aem-assets-dynamic-media}
 
 スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
 
@@ -29,14 +29,14 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->ビデオでは、AEMインスタンスがダイナミックメディアS7モードで実行されていることを前提としています。 [ダイナミックメディアを使用したAEMの設定手順については、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
-## Adobe Experience Managerのダイナミックメディアスマート切り抜き機能には、
+## Adobe Experience ManagerのDynamic Media・スマート・クロップ機能には、
 
 * AEM Asset Adminは、デバイスの幅と高さに基づいて、スマート切り抜き用の画像プロファイルを簡単に作成できます。
 * スマート切り抜きは、個々のアセットに対して実行することも、フォルダー内のすべてのアセットに対して実行することもできます。
 * 見やすいように、スマート切り抜き編集レイアウトをサイズ変更できます。
-* AEMサイトのダイナミックメディアコンポーネントは、スマート切り抜きをサポートしています。
+* AEMサイトのDynamic Mediaコンポーネントは、スマート切り抜きをサポートしています。
 * スマートトリミングされたアセットの公開済みURLは、ホストされたアセットを受け入れるサードパーティアプリケーションで使用できます。
 
 >[!NOTE]
