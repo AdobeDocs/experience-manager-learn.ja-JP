@@ -1,6 +1,6 @@
 ---
-title: Adobe AnalyticsとAdobeの起動でのダイナミックメディアビューアの使用
-seo-title: Adobe AnalyticsとAdobeの起動でのダイナミックメディアビューアの使用
+title: Adobe AnalyticsとAdobeの起動でのDynamic Mediaビューアの使用
+seo-title: Adobe AnalyticsとAdobeの起動でのDynamic Mediaビューアの使用
 description: Dynamic Media ビューア 5.13 のリリースと共に、Adobe Launch の Dynamic Media ビューア拡張機能を使用すると、Dynamic Media、Adobe Analytics、Adobe Launch のユーザーは、Adobe Launch 設定で Dynamic Media ビューア固有のイベントとデータを使用できます。
 seo-description: 'Dynamic Media ビューア 5.13 のリリースと共に、Adobe Launch の Dynamic Media ビューア拡張機能を使用すると、Dynamic Media、Adobe Analytics、Adobe Launch のユーザーは、Adobe Launch 設定で Dynamic Media ビューア固有のイベントとデータを使用できます。 '
 sub-product: 動的メディア， analytics
@@ -19,21 +19,21 @@ ht-degree: 34%
 ---
 
 
-# ダイナミックメディアビューアとAdobe AnalyticsとAdobeの起動{#using-dynamic-media-viewers-adobe-analytics-launch}の使用
+# Adobe AnalyticsとAdobeでのDynamic Mediaビューアの使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-ダイナミックメディアおよびAdobe Analyticsをご利用のお客様は、Dynamic Media Viewer Extensionを使用して、Webサイト上のダイナミックメディアビューアの使用状況を追跡できるようになりました。
+Dynamic MediaとAdobe Analyticsをご利用のお客様は、Dynamic Mediaビューア拡張機能を使用して、Webサイト上のDynamic Mediaビューアの使用状況を追跡できるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> この機能を使用するには、ダイナミックメディアScene7モードでAdobe Experience Managerを実行します。 また、[Adobe Experience Platform LaunchをAEMインスタンス](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)と統合する必要もあります。
+> この機能には、Dynamic MediaScene7モードでAdobe Experience Managerを実行してください。 また、[Adobe Experience Platform LaunchをAEMインスタンス](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)と統合する必要もあります。
 
-Dynamic Media Viewer拡張機能の導入に伴い、Adobe Experience Managerでは、Dynamic Media Viewer(5.13)で提供されるアセットの高度な解析サポートをオファーが実現し、Dynamic Media Viewerをサイトページで使用する際のイベントの追跡をより詳細に制御できるようになりました。
+Dynamic Mediaビューア拡張機能の導入に伴い、Adobe Experience ManagerオファーはDynamic Mediaビューアで提供されるアセットの高度な解析サポート(5.13)を行い、Dynamic Mediaビューアをサイトページで使用する際のイベント追跡をより詳細に制御できるようになりました。
 
 既にAEM Assetsとサイトをお持ちの場合は、起動プロパティをAEM作成者インスタンスと統合できます。 起動の統合がWebサイトに関連付けられると、ビューアのイベント追跡を有効にして、動的メディアコンポーネントをページに追加できます。
 
-AEM Assetsのみのお客様またはDynamic Media Classicのお客様は、ビューアの埋め込みコードを取得して、ページに追加できます。 その後、起動スクリプトライブラリをページに手動で追加して、ビューアのイベントを追跡できます。
+AEM Assetsのみのお客様またはDynamic Mediaクラシックのお客様は、ビューアの埋め込みコードを取得して、ページに追加できます。 その後、起動スクリプトライブラリをページに手動で追加して、ビューアのイベントを追跡できます。
 
 次の表に、Dynamic Media ビューアイベントと、サポートされている引数を示します。
 
@@ -169,5 +169,5 @@ AEM Assetsのみのお客様またはDynamic Media Classicのお客様は、ビ�
 ## その他のリソース{#additional-resources}
 
 * [Adobe Experience ManagerとAdobe発表の統合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
-* [ダイナミックメディアScene7モードでのAdobe Experience Managerの実行](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
+* [Dynamic MediaScene7モードでAdobe Experience Managerを走る](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
 * [Dynamic Media ビューアと Adobe Analytics および Adobe Launch の統合](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
