@@ -263,7 +263,7 @@ AEMを初めて使用する場合は、次の2つの基本的な実行モード�
 
 1. **「 [!UICONTROL パッケージ]** マネージャー」をチェックし、コードパッケージがアップロードおよびインストールされていることを確認します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).タイムスタンプを確認して、パッケージが最近インストールされたことを確認します。
 1. [!DNL Repo]や[!DNL AEM Developer Tools]のようなツールを使用してファイルの増分更新を行う場合、**は[!DNL CRXDE Lite]**&#x200B;にファイルがローカルのAEMインスタンスにプッシュされ、ファイルの内容が更新されたことを確認します。[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. **OSGiバンドルでJavaコードに関連する問題が見つかった場合に、バンドルがアップロードされていることを** 確認します。[!UICONTROL Adobe Experience ManagerWebコンソール]を開きます。[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)を開き、バンドルを検索します。 バンドルのステータスが&#x200B;**[!UICONTROL アクティブ]**&#x200B;であることを確認します。 **[!UICONTROL Installed]**&#x200B;状態のバンドルのトラブルシューティングに関する詳細は、以下を参照してください。
+1. **OSGiバンドル内のJavaコードに関連する問題が見つかった場合に、バンドルがアップロードされていることを確認し** ます。[!UICONTROL Adobe Experience ManagerWebコンソール]を開きます。[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)を開き、バンドルを検索します。 バンドルのステータスが&#x200B;**[!UICONTROL アクティブ]**&#x200B;であることを確認します。 **[!UICONTROL Installed]**&#x200B;状態のバンドルのトラブルシューティングに関する詳細は、以下を参照してください。
 
 #### ログの確認
 
