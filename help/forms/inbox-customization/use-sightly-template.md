@@ -25,7 +25,7 @@ ht-degree: 8%
 
 ## Sightlyテンプレート
 
-次に、適切なテンプレートを示します。 テンプレート内のコードは、収入に応じてアイコンが表示されます。 このアイコンは、AEMに付属の[coral ui icon library](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)の一部として使用できます。
+次に、適切なテンプレートを示します。 テンプレート内のコードは、収入に応じてアイコンが表示されます。 このアイコンは、AEMに付属の[coral ui icon library](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)の一部として使用できます。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
