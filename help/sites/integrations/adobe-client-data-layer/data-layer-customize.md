@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -38,9 +38,9 @@ ht-degree: 4%
 
 このチュートリアルを完了するには、**ローカル開発環境**&#x200B;が必要です。 スクリーンショットとビデオは、macOSで実行されているCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立しています。
 
-**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
-**AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+**AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## WKNDリファレンスサイト{#set-up-wknd-site}をダウンロードして展開します
 
@@ -112,6 +112,8 @@ ht-degree: 4%
 1. 次追加のimport文をファイルの先頭に追加します。
 
    ```java
+   import java.util.HashMap;
+   import java.util.Map;
    import org.apache.sling.api.resource.Resource;
    import com.fasterxml.jackson.core.JsonProcessingException;
    import com.fasterxml.jackson.databind.ObjectMapper;
@@ -163,17 +165,6 @@ ht-degree: 4%
 
    `ObjectMapper`は、プロパティをシリアル化してJSON文字列を返すために使用します。 その後、このJSON文字列をデータレイヤーに挿入できます。
 
-1. `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java`にある`package-info.java`ファイルを開き、`1.0`から`2.0`にバージョンを更新します。
-
-   ```java
-   @Version("2.0")
-   package com.adobe.aem.guides.wknd.core.models;
-   
-   import org.osgi.annotation.versioning.Version;
-   ```
-
-   インターフェイス`Byline.java`が変更されたので、Javaパッケージのバージョンを更新する必要があります。
-
 1. ターミナルウィンドウを開きます。Mavenのスキルを使って`core`モジュールだけを構築し、展開します。
 
    ```shell
@@ -194,13 +185,11 @@ ht-degree: 4%
 
 1. `byline.html`を更新して`data-cmp-data-layer`属性を含めます。
 
-   ```html
-    <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
+   ```diff
+     <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        data-sly-test.hasContent="${!byline.empty}"
-       <!--/* Add the data-cmp-data-layer */-->
-       data-cmp-data-layer="${byline.data}"
-   
+   +   data-cmp-data-layer="${byline.data}"
        class="cmp-byline">
        ...
    ```
@@ -243,7 +232,7 @@ ht-degree: 4%
        parentId: "page-30d989b3f8"
    ```
 
-   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認します。
+   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認してください。
 
 ## 追加クリックイベント{#click-event}
 
@@ -256,8 +245,11 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
 1. `byline.html`を更新して、Bylineの&#x200B;**name**&#x200B;要素に`data-cmp-clickable`属性を含めます。
 
-   ```html
-   <h2 class="cmp-byline__name" data-cmp-clickable>${byline.name}</h2>
+   ```diff
+     <h2 class="cmp-byline__name" 
+   +    data-cmp-clickable="${byline.data ? true : false}">
+        ${byline.name}
+     </h2>
    ```
 
 1. 新しいターミナルを開きます。 Mavenのスキルを使って`ui.apps`モジュールだけを構築し、展開します。
@@ -289,7 +281,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
-        dl.addEventListener("cmp:show", bylineClickHandler);
+        dl.addEventListener("cmp:click", bylineClickHandler);
    });
    ```
 
@@ -419,6 +411,13 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
    ```
 
    `byline`コンポーネントエントリ内に`image`オブジェクトが存在することを確認してください。 DAMのアセットに関する情報が多くあります。 また、`@type`と一意のid（この場合は`byline-136073cfcb`）が自動的に入力され、コンポーネントが変更されたときに示す`repo:modifyDate`が自動的に入力されていることも確認してください。
+
+## 追加の例{#additional-examples}
+
+1. データレイヤーの拡張の別の例は、WKNDコードベースの`ImageList`コンポーネントを検査することで表示できます。
+   * `ImageList.java` - `core` モジュール内のJavaインターフェイス。
+   * `ImageListImpl.java` - `core` モジュール内のSlingモデル。
+   * `image-list.html` - `ui.apps` モジュール内のHTLテンプレート。
 
    >[!NOTE]
    >
