@@ -20,7 +20,7 @@ ht-degree: 47%
 
 # Dynamic Media Classic の概要 {#dynamic-media-classic-tutorial}
 
-+ [Dynamic Media Classicの概要](./overview.md)
++ [Dynamic Mediaクラシックの概要](./overview.md)
 + [アセットのワークフローとプレビュー](./main-workflow.md)
 + [フォルダー構造とファイルの命名規則の決定](./folder-structure-filenaming.md)
 + [画像プリセット](./image-presets.md)
