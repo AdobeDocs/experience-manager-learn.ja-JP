@@ -1,8 +1,8 @@
 ---
 title: AEM Dynamic Media でのカラーマネジメントについて
 seo-title: AEM Dynamic Media でのカラーマネジメントについて
-description: このビデオでは、Dynamic Media Color Managementについて説明し、それを使用してAEM Assetsで色補正プレビュー機能を提供する方法を説明します。
-seo-description: このビデオでは、Dynamic Media Color Managementについて説明し、それを使用してAEM Assetsで色補正プレビュー機能を提供する方法を説明します。
+description: このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
+seo-description: このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
 uuid: dc14d067-11a2-4662-acfd-f9f6f1d738ee
 discoiquuid: b2b9ccc9-96b5-4bea-9995-2e6b353c469d
 sub-product: dynamic-media
@@ -23,7 +23,7 @@ ht-degree: 24%
 
 # AEM Dynamic Media でのカラーマネジメントについて{#understanding-color-management-with-aem-dynamic-media}
 
-このビデオでは、Dynamic Media Color Managementについて説明し、それを使用してAEM Assetsで色補正プレビュー機能を提供する方法を説明します。
+このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
