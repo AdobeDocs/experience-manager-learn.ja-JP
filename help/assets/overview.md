@@ -68,15 +68,15 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="ダイナミックメディアの概要" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media概要" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>ダイナミックメディアの概要</strong>
+      <strong>Dynamic Media概要</strong>
       </a>
    </div>
    <p>
-      <em>ダイナミックメディアを使用したメディアコンテンツの管理とアクセス</em>
+      <em>Dynamic Mediaを使用したメディアコンテンツの管理とアクセス</em>
    <p>
 </td>
 </table>
