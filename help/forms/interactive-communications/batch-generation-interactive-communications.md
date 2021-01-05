@@ -60,6 +60,6 @@ REST要求を使用して[Batch API](https://helpx.adobe.com/jp/experience-manag
 
 * [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して&lt;a0/>ICTemplate](assets/ICTemplate.zip)を読み込み[
 * [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[カスタム送信ハンドラー](assets/BatchAPICustomSubmit.zip)を読み込む
-* [Formsおよびドキュメントインターフェイス](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を使用して&lt;a0/>[アダプティブフォーム](assets/BatchGenerationAPIAF.zip)を読み込む
+* [[Formsおよびドキュメントインターフェイス](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を使用して&lt;a0/>アダプティブフォーム](assets/BatchGenerationAPIAF.zip)を読み込む
 * [Felix Webコンソール](http://localhost:4502/system/console/bundles)を使用した[カスタムOSGIバンドル](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar)のデプロイと開始
 * [フォームを送信してバッチ生成をトリガーする](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
