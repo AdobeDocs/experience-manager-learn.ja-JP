@@ -54,7 +54,7 @@ AEM Assetsは、DAMの使用、管理、理解を向上させるため、豊富�
 + **Adobe** 在庫の統合により、AEM Assetsの経験からAdobe Stockの画像に直接アクセスでき、シームレスなコンテンツ検出を実現します。
 + **AEM Desktop** Apprelasesバージョン2.0をリリースし、パフォーマンスと安定性を向上させつつ自身を再エンビジョンします。
 + **接続** アセットは、別のAEM Assetsインスタンスのアセットにシームレスにアクセスし、使用するために、個別のAEM Sitesインスタンスをサポートします。
-+ **ダイナミックメディア**&#x200B;のビデオサポートを更新しました。**360ビデオ**&#x200B;および&#x200B;**カスタムビデオサムネール**&#x200B;が含まれます。
++ **Dynamic Media**&#x200B;のビデオサポートを更新しました。**360ビデオ**&#x200B;と&#x200B;**カスタムビデオサムネール**&#x200B;が含まれます。
 
 ### コンテンツ情報
 
@@ -213,7 +213,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作のダッシュボード</a>：保守の</strong>
+            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作のダッシュボード</a>：保守の</strong>
  実行、サーバーの正常性の監視、AEM内でのパフォーマンスの分析を行います。</td>
             <td></td>
             <td>✔</td>
@@ -884,7 +884,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
     </tbody>
 </table>
 
-### AEM Assetsダイナミックメディア
+### AEM AssetsDynamic Media
 
 ***このバージョンの✔機能に対する重要な機能強化です。<sup></sup>***
 
@@ -894,7 +894,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
 <table>
     <thead>
         <tr>
-            <td>ダイナミックメディア機能</td>
+            <td>Dynamic Media機能</td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -963,7 +963,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">配信</a></strong>
-            ：ダイナミックメディアコンテンツと配信をHTTP/2プロトコル経由でリンクまたは埋め込むための柔軟なオプション。</td>
+            :Dynamic Mediaコンテンツのリンクまたは埋め込みと、HTTP/2プロトコルを介した配信の柔軟なオプション。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -973,7 +973,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Scene7からダイナミックメディアへのアップグレード：マスターアセットを移行し、既存のS7 URLを引き続き使用する</strong>
+            <td><strong>Scene7からDynamic Mediaへのアップグレード：マスターアセットを移行し、既存のS7 URLを引き続き使用する</strong>
             機能。</td>
             <td> </td>
             <td> </td>
