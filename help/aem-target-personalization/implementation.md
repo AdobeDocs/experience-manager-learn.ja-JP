@@ -68,7 +68,7 @@ username :**admin**
    ![AEM発行インスタンス](assets/implementation/aem-author-home-page.png)
 7. 重複が`aem-publish-p4503.jar`ファイルをクリックして、発行インスタンスをインストールします。 発行インスタンスの新しいタブがブラウザーで開き、ポート4503で実行され、WebRetailホームページが表示されています。 このチュートリアルでは、WKNDリファレンスサイトを使用して、パッケージを作成者インスタンスにインストールします。
 8. Webブラウザー(`http://localhost:4502`)で「AEM作成者」に移動します。 AEM開始画面で、*[ツール/展開/パッケージ](http://localhost:4502/crx/packmgr/index.jsp)*&#x200B;に移動します。
-9. AEM用のパッケージをダウンロードしてアップロードします(上記の&#x200B;*[前提条件/AEM](#aem)*&#x200B;に記載されています)。
+9. AEM用のパッケージをダウンロードしてアップロードします(上記の&#x200B;*[前提条件/AEM](#aem)*&#x200B;に記載)。
    * [aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)
    * [aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)
    * [core.wcm.components.all-2.5.0.zip](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
