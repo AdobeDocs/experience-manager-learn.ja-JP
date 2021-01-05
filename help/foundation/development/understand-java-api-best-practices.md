@@ -64,7 +64,7 @@ AEMがAPIを提供する場合は、[!DNL Sling]、JCR、OSGiよりもAPIを優�
 
 AEM APIは、生産された使用例に特有の抽象的な機能と機能を提供します。
 
-例えば、AEM [PageManager](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)および[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html)APIは、Webページを表すAEMの`cq:Page`ノードの抽象概念を提供します。
+例えば、AEM [PageManager](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)および[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html)APIは、Webページを表すAEMの`cq:Page`ノードの抽象概念を提供します。
 
 これらのノードはリソースとして[!DNL Sling] APIを介して、ノードとしてJCR APIを介して使用できますが、AEM APIは一般的な使用例の抽象概念を提供します。 AEM APIを使用すると、AEM製品間での動作、およびAEMのカスタマイズと拡張機能の一貫性が保たれます。
 
