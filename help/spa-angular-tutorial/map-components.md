@@ -11,7 +11,7 @@ audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
 source-wordcount: '2387'
 ht-degree: 2%
@@ -481,7 +481,7 @@ SPAコンポーネントをAEMコンポーネントにマップする方法を�
 
    ![VSCodeインポートテンプレート](assets/map-components/import-aem-servervscode.png)
 
-4. コンテンツを読み込む手順を繰り返しますが、`/conf/wknd-spa-angular/settings/wcm/templates/policies`にある&#x200B;**ポリシー**&#x200B;フォルダーを選択します。
+4. コンテンツを読み込む手順を繰り返しますが、`/conf/wknd-spa-angular/settings/wcm/policies`にある&#x200B;**ポリシー**&#x200B;フォルダーを選択します。
 
 5. `filter.xml`ファイルをInspect`ui.content/src/main/content/META-INF/vault/filter.xml`に置きます。
 
