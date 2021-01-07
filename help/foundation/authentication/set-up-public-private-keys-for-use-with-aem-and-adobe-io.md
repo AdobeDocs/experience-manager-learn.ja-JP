@@ -9,9 +9,9 @@ audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 3f973e36531a2d04cbaf6bb8dd70b39fef7d8b2f
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -114,10 +114,14 @@ AEMは、生成された&#x200B;**秘密鍵**&#x200B;を使用して、Adobe I/O
 ユーザーのキーストアコンソールで、「**[!UICONTROL Private Key form KeyStore file]**」をクリックし、追加次の情報を追加します。
 
 * **[!UICONTROL 新しいエイリアス]**:aemのキーのエイリアス。これは任意の値を指定でき、opensslコマンドで作成されたキーストアの名前と対応する必要はありません。
-* **[!UICONTROL キーストアファイル]**:openssl pkcs12コマンドの出力(keystore.p12)
-* **[!UICONTROL Private Key Alias]**:openssl pkcs12コマンドで `-  passout` 引数を介して設定されたパスワード。
+* **[!UICONTROL KeyStore File]**:openssl pkcs12コマンドの出力(keystore.p12)
+* **[!UICONTROL KeyStore File Password]**:openssl pkcs12コマンドで `-passout` 引数を介して設定されたパスワード。
+* **[!UICONTROL Private Key Alias]**:上記のopenssl pkcs12コマンドで `-name` 引数に指定する値(例： `my-key`)をクリックします。
+* **[!UICONTROL Private Key Password]**:openssl pkcs12コマンドで `-passout` 引数を介して設定されたパスワード。
 
-* **[!UICONTROL Private Key Password]**:openssl pkcs12コマンドで `-  passout` 引数を介して設定されたパスワード。
+>[!CAUTION]
+>
+>KeyStore File PasswordとPrivate Key Passwordは、両方の入力で同じです。 パスワードが一致しない場合は、キーがインポートされません。
 
 ### 秘密鍵がAEMキーストアに読み込まれていることを確認します{#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
