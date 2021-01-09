@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: 81c704240f163ccd151a61643f589f825a288705
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '218'
 ht-degree: 37%
 
 ---
@@ -23,6 +23,12 @@ ht-degree: 37%
    + [Sling の概要](./underlying-technology/introduction-sling.md)
    + [作成者層と発行層の概要](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher の概要](./underlying-technology/introduction-dispatcher.md)
++ Cloud Manager {#cloud-manager}
+   + [プログラム](./cloud-manager/programs.md)
+   + [環境](./cloud-manager/environments.md)
+   + [CI/CD実稼働パイプライン](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD非実稼働パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
+   + [アクティビティ](./cloud-manager/activity.md)
 + ローカル開発環境のセットアップ{#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
