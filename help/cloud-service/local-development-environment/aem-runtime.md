@@ -10,10 +10,10 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
+source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
 workflow-type: tm+mt
-source-wordcount: '1406'
-ht-degree: 1%
+source-wordcount: '1614'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ AEMは、Cloud ServiceSDK、またはAEM SDKとして、開発のためにAEM Au
 
 ## ローカルAEM Authorサービス{#set-up-local-aem-author-service}のセットアップ
 
-ローカルのAEM Authorサービスは、デジタルマーケターやコンテンツの作成者がコンテンツの作成と管理を共有する、ローカルエクスペリエンスのデジタルマーケターを開発者に提供します。  AEM Author Serviceは、オーサリングとプレビューの両方の環境として設計されており、これに対して機能開発のほとんどの検証を実行できるので、ローカル開発プロセスの重要な要素です。
+ローカルのAEM Authorサービスは、デジタルマーケターやコンテンツの作成者がコンテンツの作成と管理を共有する、ローカルエクスペリエンスのデベロッパーを提供します。  AEM Author Serviceは、オーサリングとプレビューの両方の環境として設計されており、これに対して機能開発のほとんどの検証を実行できるので、ローカル開発プロセスの重要な要素です。
 
 1. フォルダー`~/aem-sdk/author`を作成
 1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/author`にコピーし、`aem-author-p4502.jar`に名前を変更します
@@ -111,6 +111,39 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
+
+## コンテンツの配信をシミュレート{#content-distribution}
+
+真のCloud Serviceの環境コンテンツは、[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)とAdobeパイプラインを使用して、Author ServiceからPublish Serviceに配布されます。 [Adobeパイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)は、クラウド環境でのみ使用可能な独立したマイクロサービスです。
+
+開発中は、ローカルのAuthorおよびPublishサービスを使用したコンテンツの配布をシミュレートすることが望ましい場合があります。 これは、レガシー・レプリケーション・エージェントを有効にすることで実現できます。
+
+>[!NOTE]
+>
+> レプリケーションエージェントは、ローカルのQuickstart JARでのみ使用でき、コンテンツ配信のシミュレーションのみを提供します。
+
+1. **作成者**&#x200B;サービスにログインし、[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)に移動します。
+1. [**デフォルトのエージェント（発行）**]をクリックして、デフォルトの複製エージェントを開きます。
+1. 「**編集**」をクリックして、エージェントの設定を開きます。
+1. 「**設定**」タブで、次のフィールドを更新します。
+
+   + **有効**  — チェックtrue
+   + **エージェントユーザーID**  — このフィールドは空のままにします。
+
+   ![レプリケーションエージェントの構成 — 設定](assets/aem-runtime/settings-config.png)
+
+1. 「**Transport**」タブで、次のフィールドを更新します。
+
+   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **User** - `admin`
+   + **パスワード** - `admin`
+
+   ![レプリケーションエージェントの構成 — トランスポート](assets/aem-runtime/transport-config.png)
+
+1. **「OK**」をクリックして設定を保存し、**デフォルト**&#x200B;レプリケーションエージェントを有効にします。
+1. これで、Authorサービスのコンテンツに変更を加えて、それらをPublishサービスに発行できます。
+
+![ページを公開](assets/aem-runtime/publish-page-changes.png)
 
 ## Quickstart JAR開始アップモード
 
