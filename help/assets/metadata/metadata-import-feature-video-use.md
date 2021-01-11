@@ -1,19 +1,16 @@
 ---
 title: AEM Assetsでのメタデータの読み込みと書き出しの使用
-seo-title: AEM Assetsでのメタデータの読み込みと書き出しの使用
 description: AEM Assetsメタデータの読み込みと書き出しの機能により、コンテンツ作成者はアセットメタデータをAEMの内外に簡単に移動でき、Microsoft Excelの機能を活用してメタデータをスケールで操作でき、AEMの既存のアセットのメタデータを一括更新できます。
-seo-description: AEM Assetsメタデータの読み込みと書き出しの機能により、コンテンツ作成者はアセットメタデータをAEMの内外に簡単に移動でき、Microsoft Excelの機能を活用してメタデータをスケールで操作でき、AEMの既存のアセットのメタデータを一括更新できます。
-uuid: db7e57a4-b0c1-4a48-906d-802c19964313
-discoiquuid: 72dd9230-73e1-454e-a3e0-9281e621d901
 topics: metadata
 audience: all
 doc-type: feature video
 activity: use
+kt: 647
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 2c0818d0223a3db55e6407068f4802b9e7f7dd83
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '256'
 ht-degree: 3%
 
 ---
@@ -56,7 +53,7 @@ AEM Assetsメタデータの読み込みと書き出しの機能により、コ�
 
 * プロパティ名では大文字と小文字が区別されます。
    * 正解`dc:title {{String}}`
-   * 不正解`Dc:Ttle {{String}}`
+   * 不正解`Dc:Title {{String}}`
 
 * プロパティの種類では大文字と小文字が区別されません
 * すべての有効な[JCRプロパティタイプ](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)がサポートされます
