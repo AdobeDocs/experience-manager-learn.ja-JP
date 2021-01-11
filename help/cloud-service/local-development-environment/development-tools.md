@@ -10,7 +10,7 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 translation-type: tm+mt
-source-git-commit: cb5f3c323c433c9321ba26ac1194be0cd225a405
+source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 3%
@@ -132,7 +132,7 @@ Aio CLIは、Adobe I/O Cloud Managerプラグインを使用して、`aio cloudm
 
 Aio CLIは、Adobe I/O Cloud Managerプラグインを使用して、`aio asset-compute`コマンドを使用してAsset computeワーカーを生成し、実行できます。
 
-1. `aio plugins:install @adobe/aio-cli-plugin-cloudmanager`を実行して[aioAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)をインストールします。
+1. `aio plugins:install @adobe/aio-cli-plugin-asset-compute`を実行して[aioAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)をインストールします。
 
 ### Adobe I/OCLI認証の設定
 
