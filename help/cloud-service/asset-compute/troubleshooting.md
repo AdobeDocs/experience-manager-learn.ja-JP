@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,15 @@ ht-degree: 0%
 + __解像度__:カスタムワーカーコードを確認し、を使用してすべての非同期呼び出しが同期されることを確認 `await`します。
 
 ## 開発ツール{#development-tool}
+
+### asset computeプロジェクト{#missing-console-json}にConsole.jsonファイルがありません
+
++ __エラー：__ エラー：検証時に必要なファイルが見つかりません(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)(非同期setupAssetCompute (...)/node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __原因：__ フ `console.json` ァイルがAsset computeプロジェクトのルートにありません
++ __解決策：Adobe I/Oプロジェクトの新しい__ フォームを `console.json` ダウンロードする
+   1. console.adobe.ioで、Asset computeプロジェクトが使用するように設定されているAdobe I/Oプロジェクトを開きます
+   1. 右上の「__ダウンロード__」ボタンをタップします
+   1. ファイル名`console.json`を使用して、ダウンロードしたファイルをAsset computeプロジェクトのルートに保存します。
 
 ### manifest.yml{#incorrect-yaml-indentation}のYAMLインデントが正しくありません
 
@@ -95,7 +104,6 @@ asset compute開発ツールは、古いデータを取り込む状態に入る�
    + または、`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`にあるテスト生成ファイルを検証し、正しいことを検証して、期待どおりのレンディションファイルとして使用します
 
 ## デバッグ
-
 
 ### デバッガは{#debugger-does-not-attach}をアタッチしません
 
