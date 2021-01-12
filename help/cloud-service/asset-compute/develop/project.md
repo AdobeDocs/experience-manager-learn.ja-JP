@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: c551eb984d8fefe19a979ce8c556289caa6805d8
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ _asset computeプロジェクトの生成時のクリックスルー（オーデ
 $ aio app use
 ```
 
-現在のワークスペースの詳細が正しく、`Y`か、またはEnterキーを押して`console.json`を生成します。 `.env`と`.aio`が既に存在すると検出された場合は、`x`をタップして作成をスキップします。
+現在のワークスペースの詳細が正しいことを確認し、`Y`を押すか、enterを押して`console.json`を生成します。 `.env`と`.aio`が既に存在すると検出された場合は、`x`をタップして作成をスキップします。
 
 ## プロジェクトの構造を確認する
 
