@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1427'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
-> 関連ドキュメントは、プレビュー目的で利用できます。
+> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
+> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 この章では、AEM GraphQL APIを使用して外部アプリケーションのエクスペリエンスを駆動する方法について説明します。
 
@@ -330,7 +330,7 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
    `;
    ```
 
-   `adventurePetPolicy`がアドベンチャーモデルに含まれていないので、エラーを引き起こすはずです。
+   `adventurePetPolicy`がアドベンチャーモデルに含まれていないので、トリガーにエラーが発生するはずです。
 
 1. 変更を保存し、ブラウザーに戻ります。 次のようなエラーメッセージが表示されます。
 
