@@ -2,9 +2,9 @@
 title: AEMヘッドレスチュートリアル
 description: ヘッドレスCMSとしてAdobe Experience Managerを使用する方法に関するチュートリアルの集まりです。
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '373'
 ht-degree: 5%
 
 ---
@@ -18,8 +18,8 @@ Adobe Experience Managerには、ヘッドレスエンドポイントを定義�
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
-> 関連ドキュメントは、プレビュー目的で利用できます。
+> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
+> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 AEM GraphQL API for Content Fragments
 は、AEMで管理されたコンテンツを使用して外部クライアントアプリケーションがエクスペリエンスをレンダリングするヘッドレスCMSシナリオをサポートしています。
@@ -31,7 +31,7 @@ AEM GraphQL API for Content Fragments
 
 これらの課題を克服するために、GraphQLはクエリベースのAPIを提供し、クライアントは必要なコンテンツのみをクエリAEMに提供し、1回のAPI呼び出しで受け取ることができます。
 
-* AEM GraphQL APIの使い方を学ぶには、「AEM GraphQL APIの使い始めに」チュートリアル[を参照してください。](./graphql/overview.md)
+* AEM GraphQL APIの使い方を学ぶには、「AEM GraphQL APIの使い始めに」チュートリアル](./graphql/overview.md)を参照してください。[
 
 ## AEM Content Servicesチュートリアル
 
