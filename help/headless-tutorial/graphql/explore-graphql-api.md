@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1039'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
-> 関連ドキュメントは、プレビュー目的で利用できます。
+> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
+> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 AEMのGraphQL APIは、コンテンツフラグメントのデータを下流のアプリケーションに公開するための強力なクエリ言語を提供します。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルを作成または更新するたびに、スキーマが変換され、GraphQL APIを構成する「グラフ」に追加されます。
 
@@ -63,7 +63,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
 
    ![寄稿者リストの結果](assets/explore-graphql-api/contributorlist-results.png)
 
-1. カーソルを`_path`テキストの下に置き、**Ctrl +スペース**&#x200B;キーを押して、コードヒントをトリガします。 追加`fullName`と`occupation`をクエリに送信します。
+1. カーソルを`_path`テキストの下に置き、**Ctrl +スペース**&#x200B;キーを押して、トリガーコードのヒントを入力します。 追加`fullName`と`occupation`をクエリに送信します。
 
    ![コード編集でクエリを更新](assets/explore-graphql-api/update-query-codehinting.png)
 
