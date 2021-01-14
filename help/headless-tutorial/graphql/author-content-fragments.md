@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -23,10 +23,10 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
-> 関連ドキュメントは、プレビュー目的で利用できます。
+> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
+> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
-この章では、新しく定義した寄稿者コンテンツフラグメントモデル[に基づいて、新しいコンテンツフラグメントを作成および編集します。 ](./content-fragment-models.md)また、コンテンツフラグメントのバリエーションを作成する方法も学習します。
+この章では、新しく定義した寄稿者コンテンツフラグメントモデル](./content-fragment-models.md)に基づいて、新しいコンテンツフラグメントを作成および編集します。 [また、コンテンツフラグメントのバリエーションを作成する方法も学習します。
 
 ## 前提条件 {#prerequisites}
 
@@ -69,7 +69,7 @@ ht-degree: 2%
 
 1. **フルネーム**&#x200B;に対して、次を入力します。**Stacey Roswells**。
 1. **伝記**&#x200B;に短い伝記を入力します。 何かインスピレーションが必要？ この[テキストファイル](assets/author-content-fragments/stacey-roswells-bio.txt)を自由に使用してください。
-1. **画像参照**&#x200B;の場合は、**フォルダー**&#x200B;アイコンをクリックし、**WKNDサイト****英語** > **寄稿者** > **stacey-roswells.jpg&lt;a11>.**&#x200B;これは次のパスに評価されます。`/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
+1. **画像参照**&#x200B;の場合は、**フォルダー**&#x200B;アイコンをクリックし、**WKNDサイト****英語** > **寄稿者** > **stacey-roswells.jpg**. これは次のパスに評価されます。`/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
 1. **占有**&#x200B;は&#x200B;**写真家**&#x200B;を選びます。
 
    ![作成済みフラグメント](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
