@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment配信は、2021年の初めにリリースされます。
-> 関連ドキュメントは、プレビュー目的で利用できます。
+> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
+> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 AEM GraphQL APIを使用してコンテンツを構築し、公開する方法、および外部アプリで使用されるヘッドレスCMSシナリオを例示する、エンドツーエンドのチュートリアルです。
 
