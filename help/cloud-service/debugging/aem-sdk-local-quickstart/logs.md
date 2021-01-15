@@ -9,10 +9,10 @@ activity: develop
 audience: developer
 kt: 5252
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 3%
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 ディスパッチャーログは、`bin/docker_run`の呼び出し時にstdoutに出力されますが、Dockerに格納されている内のでログに直接アクセスできます。
 
-### Dockerコンテナ内のログへのアクセス
+### Dockerコンテナのログへのアクセス{#dispatcher-tools-access-logs}
 
 ディスパッチャーログは、`/etc/httpd/logs`のDockerコンテナで直接アクセスできます。
 
@@ -73,7 +73,10 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### Dockerログをローカルファイルシステムにコピーする
+_`<CONTAINER ID>` inは、 `docker exec -it <CONTAINER ID> /bin/sh` コマンドで指定したターゲットドッカーコンテナIDに置き換える必要があり `docker ps` ます。_
+
+
+### Dockerログをローカルファイルシステム{#dispatcher-tools-copy-logs}にコピーする
 
 ディスパッチャーログは、`/etc/httpd/logs`のDockerコンテナからローカルファイルシステムにコピーし、お気に入りのログ分析ツールを使用して検査できます。 これはポイント・イン・タイム・コピーであり、ログにリアルタイムの更新を提供しません。
 
@@ -90,3 +93,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
+_`<CONTAINER_ID>` inは、 `docker cp <CONTAINER_ID>:/var/log/apache2 ./` コマンドで指定したターゲットドッカーコンテナIDに置き換える必要があり `docker ps` ます。_
