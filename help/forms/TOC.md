@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '938'
 ht-degree: 6%
 
 ---
@@ -31,12 +31,12 @@ ht-degree: 6%
    + [カスタム関数とコードエディターの使用](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + フォーム送信の処理{#handling-af-form-submissions}
    + [レビューワークフローの作成](handling-form-submissions/creating-a-review-workflow.md)
-   + [ワークフローをトリガーするアダプティブフォームの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
+   + [アダプティブフォームからトリガーへのワークフローの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [「ありがとうございます」ページの表示](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [外部エンドポイントに送信する](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [電子メールの送信](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [有料休暇リクエストのワークフロー](handling-form-submissions/paid-time-off-request-workflow.md)
-   + [AEMワークフローをトリガーするアダプティブフォームの設定 — ビデオ](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
+   + [トリガーAEMワークフローへのアダプティブフォームの設定 — ビデオ](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [タスクの割り当て通知のカスタマイズ](handling-form-submissions/customize-assign-task-notification.md)
 + 便利な統合{#some-useful-integrations}
    + [2要素認証](some-useful-integrations/two-factor-authentication.md)
@@ -125,6 +125,18 @@ ht-degree: 6%
    + [PDFフォームをアダプティブフォームに変換](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [変換されたアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Adobe SignでのXDPテンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
++ 複数のFormsに署名{#sign-multiple-documents}
+   + [概要](sign-multiple-documents/introduction.md)
+   + [データソースの設定](sign-multiple-documents/configure-data-source.md)
+   + [OSGiサービスの作成](sign-multiple-documents/create-osgi-service.md)
+   + [メインワークフローの作成](sign-multiple-documents/create-main-workflow.md)
+   + [署名ステータスの更新ワークフロー](sign-multiple-documents/update-signature-status.md)
+   + [概要コンポーネントのカスタマイズ](sign-multiple-documents/customize-summary-component.md)
+   + [クライアントライブラリの作成](sign-multiple-documents/create-client-lib.md)
+   + [フォームテンプレートの作成](sign-multiple-documents/create-af-template.md)
+   + [初期フォームの作成](sign-multiple-documents/create-initial-form.md)
+   + [署名用にFormsを作成](sign-multiple-documents/create-forms-for-signing.md)
+   + [ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
 + AEMワークフローの変数{#variables-aem-workflow}
    + [概要 — ワークフローの変数](variables-aem-workflow/introduction.md)
    + [XML変数](variables-aem-workflow/part1.md)
