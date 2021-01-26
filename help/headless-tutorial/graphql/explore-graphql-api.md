@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 1%
@@ -73,7 +73,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
 
    `fullName` と `occupation` は単純な特性です。「[コンテンツフラグメントモデルの定義](./content-fragment-models.md)」の章から、`fullName`と`occupation`が、各フィールドの&#x200B;**プロパティ名**&#x200B;を定義する際に使用される値であることを思い出してください。
 
-1. `pictureReference` とは、より複雑なフィールドを `biography` 表します。`pictureReference`フィールドと`biography`フィールドに関するデータを返すには、クエリを次の値に更新します。
+1. `pictureReference` とは、より複雑なフィールドを `biographyText` 表します。`pictureReference`フィールドと`biographyText`フィールドに関するデータを返すには、クエリを次の値に更新します。
 
    ```graphql
    {
@@ -82,7 +82,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
          _path
          fullName
          occupation
-         biography {
+         biographyText {
            html
          }
          pictureReference {
@@ -97,7 +97,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
    }
    ```
 
-   `biography` は複数行のテキストフィールドで、GraphQL APIを使用すると、、 `html`、などの結果に対して様々な形式を選択でき `markdown` `json`  `plaintext`ます。
+   `biographyText` は複数行のテキストフィールドで、GraphQL APIを使用すると、、 `html`、などの結果に対して様々な形式を選択でき `markdown` `json`  `plaintext`ます。
 
    `pictureReference` はコンテンツ参照であり、画像であると見なされるので、組み込み `ImageRef` オブジェクトが使用されます。これにより、`width`や`height`のように、参照中のイメージに関する追加のデータを要求できます。
 
