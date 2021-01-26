@@ -2,10 +2,10 @@
 title: AEMヘッドレスチュートリアル
 description: ヘッドレスCMSとしてAdobe Experience Managerを使用する方法に関するチュートリアルの集まりです。
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 5%
+source-wordcount: '460'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,13 @@ AEM GraphQL API for Content Fragments
 
 これらの課題を克服するために、GraphQLはクエリベースのAPIを提供し、クライアントは必要なコンテンツのみをクエリAEMに提供し、1回のAPI呼び出しで受け取ることができます。
 
-* AEM GraphQL APIの使い方を学ぶには、「AEM GraphQL APIの使い始めに」チュートリアル](./graphql/overview.md)を参照してください。[
+* AEM GraphQL APIの使用方法については、「[AEM GraphQL APIの使用の手引き](./graphql/overview.md)」のチュートリアルを参照してください。
+
+## トークンベースの認証のチュートリアル
+
+AEMは様々なHTTPエンドポイントを公開し、GraphQL、AEM Content ServicesからAssets HTTP APIまで、ヘッドレスな方法でやり取りが可能です。 多くの場合、ヘッドレスのユーザーは、保護されたコンテンツやアクションにアクセスするためにAEMの認証が必要になる場合があります。 これを容易にするため、AEMは、外部のアプリケーション、サービス、またはシステムからのHTTP要求に対するトークンベースの認証をサポートしています。
+
+* 「[外部アプリケーションのチュートリアル](./authentication/overview.md)でのAEMとしてのCloud Serviceの認証」のアクセストークンを使用して、AEMに対してHTTP経由で認証する方法を説明します。
 
 ## AEM Content Servicesチュートリアル
 
@@ -39,7 +45,7 @@ AEM Content Servicesは、従来のAEMページを利用してヘッドレスな
 
 AEM Content Servicesでは、AEM SitesのWebページのオーサリングに使用したのと同じコンテンツ抽象概念を使用して、これらのHTTP APIのコンテンツとスキーマを定義できます。 AEMページとAEMコンポーネントを使用すると、マーケターはあらゆるアプリケーションに電源を投入できる柔軟なJSON APIを迅速に作成および更新できます。
 
-* AEM Content Servicesの使用方法について学ぶには、「[AEM Content Services使用の手引き」チュートリアル](./content-services/overview.md)を参照してください。
+* AEM Content Servicesの使用方法については、「[AEM Content Services使用の手引き](./content-services/overview.md)」のチュートリアルを参照してください。
 
 ## AEM GraphQLとAEM Content Servicesの比較
 
