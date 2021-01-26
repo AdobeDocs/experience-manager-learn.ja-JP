@@ -4,9 +4,9 @@ description: Cloud ServiceとしてのAdobe Experience Manager(AEM)向けのチ�
 sub-product: サイト， cloud manager，基盤，アセット
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '277'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,10 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## 新機能
+
+* **[外部アプリケーションからのCloud ServiceとしてのAEMへの認証（チュートリアル）](../headless-tutorial/authentication/overview.md)**
+
+   *HTTP経由のCloud ServiceとしてAEMとやり取りするために、トークンベースの認証を使用する方法を学びます。*
 
 * **[一括インポート（ビデオ）](./migration/bulk-import.md)**
 
@@ -36,9 +40,6 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
    *AEMにアクセスできるように、Adobe Admin ConsoleでIMSユーザーを設定する方法を説明します。*
 
-* **[Cloud ServiceとしてのAEMのデバッグ（チュートリアル）](./debugging/cloud-service/overview.md)**
-
-   *AEMをCloud Serviceとしてデバッグする方法の確認*
 
 ## スタッフの選考
 
