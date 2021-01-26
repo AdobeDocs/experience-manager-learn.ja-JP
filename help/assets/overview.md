@@ -3,9 +3,9 @@ title: AEM Assets のビデオおよびチュートリアル
 description: Adobe Experience Managerアセットのビデオとチュートリアルの集まり
 sub-product: アセット，ダイナミックメディア
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '227'
 ht-degree: 16%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 16%
 Adobe Experience Managerアセットは、AEM Platformのデジタルアセット管理ツールで、Webベースのリポジトリでデジタルアセット(画像、ビデオ、ドキュメント、オーディオクリップ)を作成、管理、共有できます。 このユーザガイドには、AEM Assetsの多くの機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
+
+
+* **[アセットの公開（ビデオ）](./sharing/publish.md)**
+
+   *AEM AuthorからAEM Publishへのアセットの発行に関する説明*
 
 * **[透かし（ビデオ）](./advanced/watermarks.md)**
 
@@ -32,10 +37,6 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 * **[処理プロファイル（ビデオ）](./configuring/processing-profiles.md)**
 
    *レンディションアセットに対してアセットマイクロサービスを呼び出す方法の確認*
-
-* **[アセットコレクション（ビデオ）の使用](./search-and-discovery/collections.md)**
-
-   *AEM Assetsのコレクションがアセットを整理し発見する新しい方法を提供する方法を調べます。*
 
 ## スタッフの選考
 
