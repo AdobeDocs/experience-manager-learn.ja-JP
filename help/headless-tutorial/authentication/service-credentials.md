@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ Cloud ServiceとしてAEMとの統合では、AEMに対して安全に認証で�
 
 サービス資格情報は、[ローカル開発アクセストークン](./local-development-access-token.md)と似ていても、いくつかの主な点で異なります。
 
-+ サービス資格情報は、_アクセストークンではなく_&#x200B;アクセストークンで、の取得に使用される資格情報です。
-+ サービス資格情報は永続的で、失効しない限り変更されません。ローカル開発アクセストークンの有効期限は毎日切れます。
-+ Cloud Service環境としてのAEM用のサービス資格情報は、1人のAEMアクセストークンにマッピングされます。一方、ローカル開発ユーザーは、アクセストークンを生成したAEMユーザーとして認証されます。
++ サービス資格情報は、_アクセストークンではなく_、_obtain_&#x200B;アクセストークンに使用される資格情報です。
++ サービス資格情報はより永久的で（365日ごとに期限切れになる）、ローカル開発アクセストークンの期限が毎日切れるのに対して、失効しない限り変更しません。
++ Cloud Service環境としてのAEMのサービス資格情報は、1人のAEMテクニカルアカウントアクセストークンにマップされます。一方、ローカル開発ユーザーは、アクセストークンを生成したAEMとして認証されます。
+
+3つのすべてを使用してCloud Service環境としてそれぞれのAEMへのアクセス権を取得できるので、サービス資格情報と生成するアクセストークン、およびローカル開発アクセストークンの両方を秘密にする必要があります
 
 ## サービス資格情報の生成
 
@@ -39,7 +41,7 @@ Cloud ServiceとしてAEMとの統合では、AEMに対して安全に認証で�
 
 ### サービス資格情報の初期化
 
-サービス資格情報は、ローカル開発アクセストークンとは異なり、ダウンロードするには、Adobe組織IMS管理者による1回限りの初期化が必要です。
+サービス資格情報は、ローカル開発アクセストークンとは異なり、ダウンロードするには、Adobe組織IMS管理者が&#x200B;_1回限りの初期化_&#x200B;を行う必要があります。
 
 ![サービス資格情報の初期化](assets/service-credentials/initialize-service-credentials.png)
 
@@ -55,7 +57,7 @@ __これは、Cloud Service環境としてのAEMごとの1回限りの初期化�
 
 ![AEM Developer Console — 統合 — サービス資格情報の取得](./assets/service-credentials/developer-console.png)
 
-AEM asCloud Service環境のサービス資格情報が初期化されると、他のユーザーはそれらをダウンロードできます。
+AEM asCloud Service環境のサービス資格情報が初期化されると、AdobeIMS組織の他のAEM開発者がそれらをダウンロードできます。
 
 ### サービス資格情報のダウンロード
 
@@ -71,7 +73,7 @@ AEM asCloud Service環境のサービス資格情報が初期化されると、�
 1. 「__統合__」タブをタップします
 1. 「__サービス資格情報を取得__」ボタンをタップします
 1. 左上隅の「ダウンロード」ボタンをタップして、サービス秘密鍵証明書の値を含むJSONファイルをダウンロードし、ファイルを安全な場所に保存します。
-   + _これらのサービス資格情報が侵害された場合は、すぐにAdobeサポートに問い合わせて、資格情報の失効を依頼してください_
+   + _サービス資格情報が侵害された場合は、すぐにAdobeサポートに問い合わせて、資格情報の失効を依頼してください_
 
 ## サービス資格情報のインストール
 
@@ -137,39 +139,39 @@ function getCommandLineParams() {
 
 1. `getAccessToken(..)`を更新して、JSONファイルの内容を調べ、それがローカル開発アクセストークンかサービス秘密鍵証明書かを判断します。 これは、ローカル開発アクセストークンJSONに対してのみ存在する`.accessToken`プロパティが存在するかどうかを確認することで、簡単に実現できます。
 
-サービス資格情報が指定されている場合、アプリケーションはJWTを生成し、アクセストークン用のAdobeIMSと交換します。 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)の`auth(...)`関数を使用します。この関数は、両方ともJWTを生成し、1回の関数呼び出しでアクセストークンと交換します。  `auth(..)`に対するパラメーターは[JSONオブジェクトで、以下のコードで説明するように、サービス資格情報JSONから取得できる特定の情報](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)で構成されます。
+   サービス資格情報が指定されている場合、アプリケーションはJWTを生成し、アクセストークン用のAdobeIMSと交換します。 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)の`auth(...)`関数を使用します。この関数は、両方ともJWTを生成し、1回の関数呼び出しでアクセストークンと交換します。  `auth(..)`に対するパラメーターは[JSONオブジェクトで、以下のコードで説明するように、サービス資格情報JSONから取得できる特定の情報](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)で構成されます。
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   現在は、ローカル開発アクセストークンのJSONまたはサービス資格情報のJSONのいずれかのJSONファイルが`file`コマンドラインパラメーターを介して渡される場合、アクセストークンが発生します。
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
+   サービス資格情報は期限切れになりませんが、JWTおよび対応するアクセストークンは期限切れになる前に更新する必要があります。 これは、AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)が提供する`refresh_token` [を使用して行うことができます。
 
-         return access_token;
-     }
- }
-```
-
-    現在は、どのJSONファイル(ローカル開発アクセストークンのJSONまたはサービス資格情報のJSON)がこの「file」コマンドラインパラメーターを介して渡されるかに応じて、アクセストークンが派生します。
-    
-    サービス資格情報は期限切れになりませんが、JWTおよび対応するアクセストークンは期限切れになり、発行から12時間後に更新する必要があることに注意してください。これは、&#39;refresh_token&#39; [AdobeIMSで提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
-を使用して行うことができます。
 1. これらの変更とAEM Developer Consoleからダウンロードしたサービス資格情報JSON（およびわかりやすく、この`index.js`と同じフォルダーに`service_token.json`として保存）を使用して、コマンドラインパラメーター`file`を`service_token.json`に置き換え、`propertyValue`を新しい値に更新し、AEMで効果を明らかにします。
 
    ```shell
@@ -241,11 +243,6 @@ $ node index.js \
 1. __更新された`metadata/dc:rights`JCRプロパティにマップされている著作権__&#x200B;の値を確認します。これは、__WKND Restricted Use__&#x200B;のように、`propertyValue`パラメーターに指定された値を反映します。
 
 ![WKND制限付きメタデータの更新](./assets/service-credentials/asset-metadata.png)
-
-## サービス資格情報の失効
-
-
-
 
 ## バリデーターが
 
