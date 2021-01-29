@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330477.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 
 ![ローカル開発アクセストークンの取得](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-ローカル開発アクセストークンでは、トークンを生成したユーザーとしてのAEM作成者サービスおよび発行サービスと、その権限にアクセスできます。 これは開発トークンですが、このトークンは共有しないでください。
+ローカル開発アクセストークンでは、トークンを生成したユーザーとしてのAEM作成者サービスおよび発行サービスと、その権限にアクセスできます。 これは開発トークンですが、このトークンを共有したり、ソース管理に保存したりしないでください。
 
 1. [AdobeAdminConsole](https://adminconsole.adobe.com/)で、開発者が次のメンバーの1人であることを確認します。
    + __Cloud Manager -__ DeveloperIMS製品プロファイル(AEM Developer Consoleへのアクセス権を付与)
@@ -44,7 +44,7 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 
 ![AEM Developer Console — 統合 — ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
 
-## ローカル開発アクセストークンのダウンロード{#download-local-development-access-token}
+## ローカル開発アクセストークン{#use-local-development-access-token}を使用
 
 ![ローカル開発アクセストークン — 外部アプリケーション](assets/local-development-access-token/local-development-access-token-external-application.png)
 
@@ -55,11 +55,11 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 1. 外部アプリケーションは、AEMにHTTP要求をCloud Serviceとして構築し、BearerトークンとしてLocal DevelopmentアクセストークンをHTTP要求のAuthorizationヘッダーに追加します
 1. AEMは、HTTP要求を受け取り、要求を認証し、HTTP要求によって要求された作業を実行し、HTTP応答を外部アプリケーションに返します
 
-### 外部アプリケーション
+### サンプル外部アプリケーション
 
 簡単な外部JavaScriptアプリケーションを作成して、ローカル開発者アクセストークンを使用して、HTTPS経由のCloud ServiceとしてAEMにプログラム的にアクセスする方法を説明します。 これは、AEMの外部で動作する&#x200B;_アプリケーションやシステムが、フレームワークや言語に関係なく、どのようにして、AEMに対してプログラム的に認証を行い、アクセストークンをCloud Serviceとしてアクセスできるかを示しています。_[次のセクション](./service-credentials.md)では、本番用にトークンを生成する方法をサポートするように、このアプリケーションコードを更新します。
 
-このアプリケーションはコマンドラインから実行され、次のフローを使用して、AEM AssetsHTTP APIを使用してAEMアセットメタデータを更新します。
+このサンプルアプリケーションは、コマンドラインから実行され、次のフローを使用して、AEM AssetsHTTP APIを使用してAEMアセットメタデータを更新します。
 
 1. コマンドライン(`getCommandLineParams()`)からパラメータを読み込みます。
 1. AEMへの認証に使用するアクセストークンをCloud Serviceとして取得(`getAccessToken(...)`)
@@ -208,11 +208,11 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
    }
    ```
 
-   `listAssetsByFolder(...)`と`updateMetadata(...)`の`fetch(..)`呼び出しを確認し、`headers`が`Bearer <ACCESS TOKEN>`の値を持つ`Authorization` HTTPリクエストヘッダーを定義していることを知らせます。 外部アプリケーションからのHTTP要求は、AEMに対してCloud Serviceとして認証されます。
+   `listAssetsByFolder(...)`と`updateMetadata(...)`の`fetch(..)`呼び出しを確認し、`headers`が`Bearer ACCESS_TOKEN`の値を持つ`Authorization` HTTPリクエストヘッダーを定義していることを知らせます。 外部アプリケーションからのHTTP要求は、AEMに対してCloud Serviceとして認証されます。
 
    ```javascript
    ...
-   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json?configid=ims`, {
+   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json`, {
                method: 'get',
                headers: { 
                    'Content-Type': 'application/json',
@@ -267,4 +267,6 @@ Cloud Service環境としてAEMにログインし、メタデータが更新さ�
 
 ## 次の手順
 
-ローカル開発トークンを使用してAEMにCloud Serviceとしてプログラムからアクセスできたので、にコードを更新する必要があります。
+ローカル開発トークンを使用してAEMにプログラム的にアクセスできたので、サービス資格情報を使用して処理するアプリを更新し、実稼働コンテキストで使用できるようにする必要があります。
+
++ [サービス資格情報の使用方法](./service-credentials.md)
