@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '950'
 ht-degree: 2%
 
 ---
 
 
 # コンテンツフラグメントモデルの定義{#content-fragment-models}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
-> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 この章では、コンテンツをモデル化し、**コンテンツフラグメントモデル**&#x200B;を使用してスキーマを構築する方法について説明します。 既存のモデルをレビューし、新しいモデルを作成します。 また、スキーマをモデルの一部として定義するために使用できる様々なデータタイプについても学習します。
 
