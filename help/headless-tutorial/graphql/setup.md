@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1532'
 ht-degree: 3%
 
 ---
 
 
 # クイックセットアップ{#setup}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
-> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 この章では、AEM GraphQL APIを使用して、外部環境がAEMのコンテンツを使用するのを確認するための、ローカルアプリケーションの簡単なセットアップについて説明します。 チュートリアルの後半の章では、この設定をまとめます。
 
@@ -67,10 +62,6 @@ ht-degree: 3%
 1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
 1. 数分後、AEMインスタンスがインストールを終了し、新しいブラウザーウィンドウが[http://localhost:4502](http://localhost:4502)に開きます。
 1. ユーザー名`admin`とパスワード`admin`を使用してログインします。
-
->[!CAUTION]
->
-> セットアップを続行するには、Quickstart SDKでGraphQL機能を手動で有効にする必要があります。 詳しい手順については、Adobeの担当者にお問い合わせください。 この手動の手順は、2021年に機能をリリースするまでのみ必要です。
 
 ## サンプルコンテンツ{#wknd-site}のインストール
 
