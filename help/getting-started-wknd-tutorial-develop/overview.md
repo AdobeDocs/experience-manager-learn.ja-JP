@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 32%
+source-wordcount: '873'
+ht-degree: 33%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5+**&#x200B;および&#x200B;**AEM 6.4.2+**&#x200B;と下位互換性があります。 サイトは次を使用して実装されます。
+このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.5.0+**&#x200B;および&#x200B;**AEM 6.4.8.1+**&#x200B;と下位互換性があります。 サイトは次を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
@@ -40,6 +40,27 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 * [スタイルシステム](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
+
+## ローカル開発環境 {#local-dev-environment}
+
+このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS環境上で[Visual Studio Code](https://code.visualstudio.com/)をIDEとして実行するCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立している必要があります。
+
+### 必要なソフトウェア
+
+以下をローカルにインストールしておく必要があります。
+
+* ローカルAEM **作成者**&#x200B;インスタンス(Cloud ServiceSDK、6.5.5以上、6.4.8.1以上)
+* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
+* [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）
+* [npm 6 以降](https://www.npmjs.com/)
+* [Git](https://git-scm.com/)
+
+>[!NOTE]
+>
+> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+>
+> **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## このチュートリアルについて {#about-tutorial}
 
@@ -68,36 +89,11 @@ WKNDという名前は、開発者がチュートリアルを完了するため�
 >
 > このチュートリアルの前のバージョンで作業していた場合、GitHubには[ソリューションパッケージ](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1)と[コード](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1)が残っています。
 
-## ローカル開発環境 {#local-dev-environment}
-
-このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS環境で実行しているCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立している必要があります。
-
-**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
-
-**AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
-
-### 必要なソフトウェア
-
-以下をローカルにインストールしておく必要があります。
-
-* [AEM as a Cloud Service の SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) または[AEM 6.5](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/technical-requirements.html)または[AEM 6.4 + SP2](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) (AEM 6.5以降のみ)
-* [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
-* [Node.js v10 以降](https://nodejs.org/ja/)
-* [npm 6 以降](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
-
-### 統合開発環境(IDE)
-
-このチュートリアルでは、[Eclipse](https://www.eclipse.org/)と[AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/)をIDEとして使用しますが、JavaおよびMavenプロジェクトをサポートするIDEはどれでも使用できます。 このチュートリアルでは、IDEの特定の機能への依存が最小限に抑えられます。
-
-[Visual Studioコード](https://code.visualstudio.com/)や[IntelliJ](https://www.jetbrains.com/idea/)など、Eclipseや他のIDEを使用する詳細な手順については、[次のガイド](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)を参照してください。
-
 ## 参照サイト {#reference-site}
 
 WKNDサイトの完成版も参考にしてください。[https://wknd.site/](https://wknd.site/)
 
-このチュートリアルでは、AEM開発者に必要な主な開発スキルを習得しますが、**&#x200B;ではなく&lt;a1/>、サイト全体をエンドツーエンドに構築します。 完成したリファレンスサイトも、すぐに使えるAEMの機能をさらに詳しく調べ、確認するための大きなリソースです。
+このチュートリアルでは、AEM開発者に必要な主な開発スキルを習得しますが、**&#x200B;ではなく、サイト全体をエンドツーエンドに構築します。 完成したリファレンスサイトも、すぐに使えるAEMの機能をさらに詳しく調べ、確認するための大きなリソースです。
 
 チュートリアルに進む前に最新のコードをテストするには、GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**から**[&#x200B;最新のリリースをダウンロードしてインストールします。
 
