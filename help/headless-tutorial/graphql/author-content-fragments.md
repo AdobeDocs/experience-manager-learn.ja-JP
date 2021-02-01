@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 2%
+source-wordcount: '785'
+ht-degree: 3%
 
 ---
 
 
 # オーサリングコンテンツフラグメント{#authoring-content-fragments}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
-> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 この章では、新しく定義した寄稿者コンテンツフラグメントモデル](./content-fragment-models.md)に基づいて、新しいコンテンツフラグメントを作成および編集します。 [また、コンテンツフラグメントのバリエーションを作成する方法も学習します。
 
