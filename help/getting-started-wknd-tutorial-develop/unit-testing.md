@@ -10,10 +10,10 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 translation-type: tm+mt
-source-git-commit: 836ef9b7f6a9dcb2ac78f5d1320797897931ef8c
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '3544'
-ht-degree: 39%
+source-wordcount: '3015'
+ht-degree: 28%
 
 ---
 
@@ -24,18 +24,40 @@ ht-degree: 39%
 
 ## 前提条件 {#prerequisites}
 
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
+
+_Java 8とJava 11の両方がシステムにインストールされている場合、VSコードテストランナーは、テストの実行時に低いJavaランタイムを選択し、テストエラーを引き起こす可能性があります。この場合は、Java 8._&#x200B;をアンインストールします。
+
+### スタータープロジェクト
+
+>[!NOTE]
+>
+> 前の章を正常に完了した場合は、プロジェクトを再利用し、スタータープロジェクトをチェックアウトする手順をスキップできます。
+
 チュートリアルが構築する基本行コードを調べます。
 
-1. [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)リポジトリをコピーします。
-1. `unit-testing/start`ブランチをチェックアウト
+1. [GitHub](https://github.com/adobe/aem-guides-wknd)の`tutorial/unit-testing-start`ブランチを調べます。
 
-```shell
-$ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
-$ cd ~/code/aem-guides-wknd
-$ git checkout unit-testing/start
-```
+   ```shell
+   $ cd aem-guides-wknd
+   $ git checkout tutorial/unit-testing-start
+   ```
 
-終了したコードは、[GitHub](https://github.com/adobe/aem-guides-wknd/tree/unit-testing/solution)に常に表示できます。また、ブランチ`unit-testing/solution`に切り替えて、コードをローカルでチェックアウトすることもできます。
+1. Mavenのスキルを使用して、ローカルAEMインスタンスにコードベースをデプロイします。
+
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage
+   ```
+
+   >[!NOTE]
+   >
+   > AEM 6.5または6.4を使用している場合は、Mavenコマンドに`classic`プロファイルを追加します。
+
+   ```shell
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
+   ```
+
+終了したコードは、[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start)に常に表示できます。また、ブランチ`tutorial/unit-testing-start`に切り替えて、コードをローカルでチェックアウトすることもできます。
 
 ## 目的
 
@@ -52,8 +74,6 @@ $ git checkout unit-testing/start
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito テストフレームワーク](https://site.mockito.org/)
 * [wcm.io Test Framework](https://wcm.io/testing/) ( [](https://sling.apache.org/documentation/development/sling-mock.html)Apache Sling Mock上に構築)
-
->[!VIDEO](https://video.tv.adobe.com/v/30207/?quality=12&learn=on)
 
 ## ユニットテストとAdobeクラウドマネージャ{#unit-testing-and-adobe-cloud-manager}
 
@@ -76,31 +96,25 @@ $ git checkout unit-testing/start
 
    ```xml
    <dependencies>
-       ...
+       ...       
        <!-- Testing -->
        <dependency>
            <groupId>org.junit</groupId>
            <artifactId>junit-bom</artifactId>
-           <version>5.5.2</version>
+           <version>5.6.2</version>
            <type>pom</type>
            <scope>import</scope>
        </dependency>
        <dependency>
-           <groupId>org.slf4j</groupId>
-           <artifactId>slf4j-simple</artifactId>
-           <version>1.7.25</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
            <groupId>org.mockito</groupId>
            <artifactId>mockito-core</artifactId>
-           <version>2.25.1</version>
+           <version>3.3.3</version>
            <scope>test</scope>
        </dependency>
        <dependency>
            <groupId>org.mockito</groupId>
            <artifactId>mockito-junit-jupiter</artifactId>
-           <version>2.25.1</version>
+           <version>3.3.3</version>
            <scope>test</scope>
        </dependency>
        <dependency>
@@ -113,9 +127,9 @@ $ git checkout unit-testing/start
            <groupId>io.wcm</groupId>
            <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
            <!-- Prefer the latest version of AEM Mock Junit5 dependency -->
-           <version>2.5.2</version>
+           <version>3.0.2</version>
            <scope>test</scope>
-       </dependency>
+       </dependency>        
        ...
    </dependencies>
    ```
@@ -124,6 +138,7 @@ $ git checkout unit-testing/start
 
    ```xml
    ...
+   <!-- Testing -->
    <dependency>
        <groupId>org.junit.jupiter</groupId>
        <artifactId>junit-jupiter</artifactId>
@@ -142,10 +157,29 @@ $ git checkout unit-testing/start
    <dependency>
        <groupId>junit-addons</groupId>
        <artifactId>junit-addons</artifactId>
+       <scope>test</scope>
    </dependency>
    <dependency>
        <groupId>io.wcm</groupId>
        <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
+       <exclusions>
+           <exclusion>
+               <groupId>org.apache.sling</groupId>
+               <artifactId>org.apache.sling.models.impl</artifactId>
+           </exclusion>
+           <exclusion>
+               <groupId>org.slf4j</groupId>
+               <artifactId>slf4j-simple</artifactId>
+           </exclusion>
+       </exclusions>
+       <scope>test</scope>
+   </dependency>
+   <!-- Required to be able to support injection with @Self and @Via -->
+   <dependency>
+       <groupId>org.apache.sling</groupId>
+       <artifactId>org.apache.sling.models.impl</artifactId>
+       <version>1.4.4</version>
+       <scope>test</scope>
    </dependency>
    ...
    ```
@@ -156,68 +190,88 @@ $ git checkout unit-testing/start
 
 単体テストは一般的に、Java クラスと 1 対 1 でマッピングします。この章では、署名コンポーネントを支える Sling Model である **BylineImpl.java** 用に JUnit テストを記述します。
 
-![単体テストパッケージエクスプローラー](assets/unit-testing/core-src-test-folder.png)
+![単体テストsrcフォルダー](assets/unit-testing/core-src-test-folder.png)
 
 *単体テストが保存される場所。*
 
-1. Eclipseでこれを行うには、テストするJavaクラスを右クリックし、**新規/その他/Java/JUnit/JUnitテストケース**&#x200B;を選択します。
+1. `BylineImpl.java`の単体テストは、テストするJavaクラスの場所を反映するJavaパッケージのフォルダー構造で、`src/test/java`の下に新しいJavaクラスを作成することで作成します。
 
-   ![BylineImpl.javaを右クリックして、単体テストを作成します。](assets/unit-testing/junit-test-case-1.png)
+   ![新しいBylineImplTest.javaファイルを作成します](assets/unit-testing/new-bylineimpltest.png)
 
-1. 最初のウィザード画面で以下を検証します。
+   我々が試しているので
 
-   * JUnitテストタイプは&#x200B;**新しいJUnit Jupiterテスト**&#x200B;です。これは、**pom.xmlの**&#x200B;に設定されたJUnit Maven依存関係です。
-   * **package**&#x200B;は、テスト対象のクラスのJavaパッケージです(`BylineImpl.java`)。
-   * Sourceフォルダーは、**core**&#x200B;プロジェクト(`aem-guides-wknd.core/src/test/java`)を指し、これがEclipseにユニットテストファイルの格納場所を指示します。
-   * `setUp()`メソッドスタブは手動で作成されます。後でどのように使うかを見てみましょう。
-   * テスト対象のクラスは`BylineImpl.java`です。これは、テスト対象のJavaクラスです。
+   * `src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`
 
-   ![ユニットテストウィザードの手順2](assets/unit-testing/junit-wizard-testcase.png)
+   対応する単体テストJavaクラスを
 
-   *「JUnitテストケース」ウィザード — 手順2*
+   * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-1. ウィザード下部にある「**次へ**」ボタンをクリックします。
-
-   次のステップは、テストメソッドの自動生成に役立ちます。通常、Javaクラスの各パブリックメソッドは、少なくとも1つの対応するテストメソッドを持ち、その動作を検証します。 単体テストには 1 つのパブリックメソッドをテストする複数のテストメソッドがあり、それぞれが異なる入力または状態を表すということがよくあります。
-
-   ウィザードで、`BylineImpl`の下のすべてのメソッドを選択します。ただし、`init()`はSlingモデルが内部的に使用するメソッドです（`@PostConstruct`を介して）。 `init()`の実行に他のメソッドは`init()`の実行に依存しているので、他のすべてのメソッドをテストすることで、&lt;a0/>を効率的にテストします。
-
-   新しいテストメソッドはいつでも JUnit テストクラスに追加できます。ウィザードのこのページは便宜上のものです。
-
-   ![ユニットテストウィザードの手順3](assets/unit-testing/junit-test-case-3.png)
-
-   *JUnit テストケースウィザード（続き）*
-
-1. JUnit5 テストファイルを生成するには、ウィザードの下部にある「終了」ボタンをクリックします。
-1. **aem-guides-wknd.core** > **/src/test/java**&#x200B;上の対応するパッケージ構造に、JUnit5テストファイルが`BylineImplTest.java`という名前のファイルとして作成されていることを確認します。
+2.テストファイルを区別する    ユニットテストファイル`BylineImplTest.java`の`Test`サフィックスは、次の操作を行うための規則です。
+1.テストファイル_for_ `BylineImpl.java`として簡単に識別できます。
+2.また、テストファイル_と_&#x200B;を区別し、テスト対象のクラス`BylineImpl.java`を区別します。
 
 ## BylineImplTest.java のレビュー {#reviewing-bylineimpltest-java}
 
-テストファイルには多数の自動生成メソッドがあります。この時点で、この JUnit テストファイルには AEM 固有のものはありません。
+この時点で、JUnitテストファイルは空のJavaクラスです。 次のコードでファイルを更新します。
 
-最初のメソッドは`public void setUp() { .. }`で、`@BeforeEach`で注釈を付けます。
+```java
+package com.adobe.aem.guides.wknd.core.models.impl;
 
-`@BeforeEach`注釈はJUnit注釈で、このクラスの各テストメソッドを実行する前に、JUnitテストの実行時にこのメソッドを実行するように指示します。
+import static org.junit.jupiter.api.Assertions.*;
 
-以降のメソッドは、テストメソッド自体であり、`@Test`注釈でそのメソッドとしてマークされます。 デフォルトでは、すべてのテストが失敗するように設定されています。
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-このJUnitテストクラス（JUnitテストケースとも呼ばれます）が実行されると、`@Test`でマークされた各メソッドが、成功または失敗のどちらかのテストとして実行されます。
+public class BylineImplTest {
 
-![生成されたBylineImplTest](assets/unit-testing/bylineimpltest-new.png)
+    @BeforeEach
+    void setUp() throws Exception {
+
+    }
+
+    @Test 
+    void testGetName() { 
+        fail("Not yet implemented");
+    }
+    
+    @Test 
+    void testGetOccupations() { 
+        fail("Not yet implemented");
+    }
+
+    @Test 
+    void testIsEmpty() { 
+        fail("Not yet implemented");
+    }
+}
+```
+
+1. 最初のメソッド`public void setUp() { .. }`にはJUnitの`@BeforeEach`で注釈を付けます。これにより、JUnitテストランナーは、このクラスの各テストメソッドを実行する前に、このメソッドを実行するように指示します。 これは、すべてのテストで必要とされる一般的なテスト状態を初期化する便利な場所です。
+
+2. 以降のメソッドは、テストメソッドです。テストメソッドの名前の先頭には`test`という規則が付き、`@Test`注釈が付きます。 デフォルトでは、まだテストを実装していないので、すべてのテストが失敗に設定されています。
+
+   まず、テストするクラスのパブリックメソッドごとに1つのテストメソッドを開始します。
+
+   | BylineImpl.java |  | BylineImplTest.java |
+   | ------------------|--------------|---------------------|
+   | getName() | が | testGetName() |
+   | getOccuptions() | が | testGetOccupations() |
+   | isEmpty() | が | testIsEmpty() |
+
+   これらのメソッドは、必要に応じて拡張できます。この章で後述します。
+
+   このJUnitテストクラス（JUnitテストケースとも呼ばれます）が実行されると、`@Test`でマークされた各メソッドが、成功または失敗のどちらかのテストとして実行されます。
+
+![生成されたBylineImplTest](assets/unit-testing/bylineimpltest-stub-methods.png)
 
 *`core/src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`*
 
-1. クラス名を右クリックし、**実行ユーザー／JUnit テスト**&#x200B;を選択して、JUnit テストケースを実行します。
+1. `BylineImplTest.java`ファイルを右クリックし、**Run**をタップして、JUnitテストケースを実行します。
+まだ実装されていないため、予想どおり、すべてのテストは失敗します。
 
-   ![junitテストとして実行](assets/unit-testing/run-as-junit-test.png)
+   ![junitテストとして実行](assets/unit-testing/run-junit-tests.png)
 
-   *BylineImplTests.java ／実行ユーザー／JUnit テストを右クリックします。*
-
-1. 想定どおり、すべてのテストは失敗します。
-
-   ![試験の失敗](assets/unit-testing/all-tests-fail.png)
-
-   *Eclipse／Window／ビューを表示／Java／JUnit の JUnit ビュー*
+   *BylineImplTests.javaを右クリックし、「実行」を選択します。*
 
 ## BylineImpl.java のレビュー {#reviewing-bylineimpl-java}
 
@@ -226,17 +280,15 @@ $ git checkout unit-testing/start
 * [TDD またはテスト駆動開発](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA)。実装を開発する直前に単体テストの増分を記述、テストを記述、実装を記述してテストを合格します。
 * 最初に実装をおこなう開発。動作するコードを最初に開発してから、そのコードを検証するテストを記述します。
 
-このチュートリアルでは、後者のアプローチを使用します（前の章で動作する **BylineImpl.java** を作成済みのため）。このため、パブリックメソッドの動作だけでなく、いくつかの実装の詳細についても確認および理解しておく必要があります。優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
+このチュートリアルでは、後者のアプローチを使用します（前の章で動作する **BylineImpl.java** を作成済みのため）。このため、パブリックメソッドの動作だけでなく、いくつかの実装の詳細についても確認および理解しておく必要があります。これは正しくないと思われる場合があります。良いテストは入力と出力のみを考慮する必要がありますが、AEMで作業する場合は、作業テストを作成するために必要な実装上の考慮事項が多数あります。
 
 AEM における TDD には高度な専門知識が必要です。AEM 開発や AEM コードの単体テストを熟知した AEM 開発者が使用することで最大限の効果を発揮できます。
-
->[!VIDEO](https://video.tv.adobe.com/v/30208/?quality=12&learn=on)
 
 ## AEM テストコンテキストの設定  {#setting-up-aem-test-context}
 
 AEM で記述されるコードの大部分は JCR、Sling または AEM API に依存しているので、正常に実行するためには実行中の AEM のコンテキストが必要となります。
 
-単位テストはビルド時に実行されるので、実行中のAEMインスタンスのコンテキスト外では、そのようなリソースはありません。 これを容易にするために、[wcm.ioのAEM Mocks](https://wcm.io/testing/aem-mock/usage.html)はモックコンテキストを作成し、これらのAPIをAEMで動作しているかのように動作させます。
+単体テストはビルド時に実行されるので、実行中のAEMインスタンスのコンテキスト外では、そのようなコンテキストはありません。 これを容易にするために、[wcm.ioのAEM Mocks](https://wcm.io/testing/aem-mock/usage.html)は、AEMで動いているかのように、これらのAPIを&#x200B;_ほとんど_&#x200B;動作させるモックコンテキストを作成します。
 
 1. **BylineImplTest.java**&#x200B;ファイルに&#x200B;**BylineImplTest.java**&#x200B;でデコレーションされたJUnit拡張子として追加し、**wcm.ioの** `AemContext`を使用してAEMコンテキストを作成します。 `@ExtendWith`拡張機能は、必要な初期化とクリーンアップのタスクをすべて処理します。 すべてのテストメソッドで使用できる`AemContext`のクラス変数を作成します。
 
@@ -292,9 +344,9 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
    ![BylineImplTest.json](assets/unit-testing/bylineimpltest-json.png)
 
-   この JSON は、署名コンポーネント単体テストのモックリソースを定義します。この時点で、JSON には、署名コンポーネントコンテンツリソースを表す最小限のプロパティのセットである `jcr:primaryType` および `sling:resourceType`.
+   このJSONは、Bylineコンポーネントの単体テスト用のモックリソース（JCRノード）を定義します。 この時点で、JSONには、Bylineコンポーネントのコンテンツリソース`jcr:primaryType`と`sling:resourceType`を表すのに必要な最小限のプロパティセットがあります。
 
-   単体テストを扱う場合の一般的な規則は、各テストを満たすのに必要なモックコンテンツ、コンテキスト、コードの最小セットを作成することです。 テストを記述する前に完全なモックコンテキストを作成したいという誘惑は避けてください。不要なアーチファクトが生じることがよくあります。
+   単体テストを扱う場合の一般的なルールは、各テストを満たすのに必要なモックコンテンツ、コンテキスト、コードの最小セットを作成することです。 テストを記述する前に完全なモックコンテキストを作成したいという誘惑は避けてください。不要なアーチファクトが生じることがよくあります。
 
    **BylineImplTest.json**&#x200B;が存在する場合、`ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")`が実行されると、モックリソース定義が&#x200B;**/contentのパスにあるコンテキストに読み込まれます。**
 
@@ -306,7 +358,6 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
    ```java
    import com.adobe.aem.guides.wknd.core.components.Byline;
-   import static org.junit.jupiter.api.Assertions.assertEquals;
    ...
    @Test
    public void testGetName() {
@@ -331,7 +382,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
    モックJSONに`name`プロパティを定義していないので、このテストは失敗しません。この結果、テストは失敗しますが、テストの実行はその時点に達していません。 このテストは、bylineオブジェクト自体の`NullPointerException`が原因で失敗します。
 
-1. 上記の[BylineImpl.java](#reviewing-bylineimpl-java)の確認ビデオでは、`@PostConstruct init()`が例外をスローしてSlingモデルのインスタンス化を防ぐかどうかを説明します。これはここで起こっていることです。
+1. `BylineImpl.java`内で、`@PostConstruct init()`が例外をスローした場合、Slingモデルのインスタンス化を防ぎ、そのSlingモデルオブジェクトをNULLにします。
 
    ```java
    @PostConstruct
@@ -340,7 +391,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    }
    ```
 
-   ModelFactory OSGiサービスは（Apache Slingコンテキストを介して）`AemContext`を介して提供されますが、BylineImplの`init()`メソッドで呼び出される`getModelFromWrappedRequest(...)`を含むすべてのメソッドが実装されているわけではありません。 その結果、[AbstractMethodError](https://docs.oracle.com/javase/8/docs/api/java/lang/AbstractMethodError.html)が発生します。これは、`init()`が失敗し、結果の`ctx.request().adaptTo(Byline.class)`の適応はnullオブジェクトになります。
+   ModelFactory OSGiサービスは（Apache Slingコンテキストを介して）`AemContext`を介して提供されますが、BylineImplの`init()`メソッドで呼び出される`getModelFromWrappedRequest(...)`を含むすべてのメソッドが実装されているわけではありません。 その結果、[AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html)が発生します。これは、`init()`が失敗し、結果の`ctx.request().adaptTo(Byline.class)`の適応はnullオブジェクトになります。
 
    指定されたモックはコードを受け入れられないので、モックコンテキストを自分で実装する必要があります。この場合、Mockitoを使用して、モックImageオブジェクトを`getModelFromWrappedRequest(...)`呼び出したときに返すモックModelFactoryオブジェクトを作成できます。
 
@@ -363,8 +414,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    import org.junit.jupiter.api.Test;
    import org.junit.jupiter.api.extension.ExtendWith;
    
-   import static org.junit.jupiter.api.Assertions.assertEquals;
-   import static org.junit.jupiter.api.Assertions.fail;
+   import static org.junit.jupiter.api.Assertions.*;
    import static org.mockito.Mockito.*;
    import org.apache.sling.api.resource.Resource;
    
@@ -425,6 +475,9 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 1. テストを再実行すると、**`testGetName()`**&#x200B;が合格！
 
+   ![テスト名パス](assets/unit-testing/testgetname-pass.png)
+
+
 ## getOccuptions() {#testing-get-occupations}のテスト
 
 成功です。最初のテストはうまくいきました。`getOccupations()`のテストを続けましょう。 モックコンテキストの初期化は`@Before setUp()`メソッドで行われるので、`getOccupations()`を含む、このテストケースのすべての`@Test`メソッドで使用できます。
@@ -462,7 +515,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 1. 上述の&#x200B;**`getName()`**&#x200B;と同様に、**BylineImplTest.json**&#x200B;は職業を定義していないので、`byline.getOccupations()`が空のリストを返すので、このテストを実行すると失敗します。
 
-   **BylineImplTest.json** を更新して職業のリストを含めます。すると、**`getOccupations()`** () によって職業が並べ替えられていることをテストで検証できるよう、このリストはアルファベット順以外に設定されます。
+   **BylineImplTest.json**&#x200B;を更新して職業のリストを含めます。これらの値はアルファベット以外の順序で設定され、テストでは職業が&#x200B;**`getOccupations()`**&#x200B;のアルファベット順に並べ替えられていることを確認します。
 
    ```json
    {
@@ -477,7 +530,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 1. テストを実行すると、再び成功します。職業を並べ替えたことが良かったようです。
 
-   ![Get Accupationsパス](assets/unit-testing/testgetoccupations-success.png)
+   ![Get Accupationsパス](assets/unit-testing/testgetoccupations-pass.png)
 
    *testGetOccupations() は成功*
 
@@ -503,14 +556,14 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    ```json
    {
        "byline": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline",
-       "name": "Jane Doe",
-       "occupations": ["Photographer", "Blogger", "YouTuber"]
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline",
+           "name": "Jane Doe",
+           "occupations": ["Photographer", "Blogger", "YouTuber"]
        },
        "empty": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline"
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline"
        }
    }
    ```
@@ -540,24 +593,24 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    ```json
    {
        "byline": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline",
-       "name": "Jane Doe",
-       "occupations": ["Photographer", "Blogger", "YouTuber"]
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline",
+           "name": "Jane Doe",
+           "occupations": ["Photographer", "Blogger", "YouTuber"]
        },
        "empty": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline"
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline"
        },
        "without-name": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline",
-       "occupations": "[Photographer, Blogger, YouTuber]"
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline",
+           "occupations": "[Photographer, Blogger, YouTuber]"
        },
        "without-occupations": {
-       "jcr:primaryType": "nt:unstructured",
-       "sling:resourceType": "wknd/components/content/byline",
-       "name": "Jane Doe"
+           "jcr:primaryType": "nt:unstructured",
+           "sling:resourceType": "wknd/components/content/byline",
+           "name": "Jane Doe"
        }
    }
    ```
@@ -632,98 +685,18 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    ```java
    @Test
    public void testIsNotEmpty() {
-   ctx.currentResource("/content/byline");
-   when(image.getSrc()).thenReturn("/content/bio.png");
-   
-   Byline byline = ctx.request().adaptTo(Byline.class);
-   
-   assertFalse(byline.isEmpty());
-   }
-   ```
-
-## コードの有効範囲 {#code-coverage}
-
-コードの有効範囲とは、単体テストの対象となるソースコードの量のことです。最近の IDE は、単体テストでどのソースコードが実行されたかを自動的にチェックするツールを提供します。コードの有効範囲自体はコード品質を表すものではありませんが、単体テストの対象とならない、ソースコードの重要な領域があるかどうかを理解するのに役立ちます。
-
-1. Eclipse のプロジェクトエクスプローラーで **BylineImplTest.java** を右クリックし、**有効範囲の設定／JUnit テスト**&#x200B;を選択します。
-
-   有効範囲概要ビューが開いていることを確認します（Window／ビューを表示／その他／Java／有効範囲）。
-
-   これにより、このファイル内で単体テストを実行し、コードの有効範囲を示すレポートを提供します。クラスやメソッドを掘り下げると、ファイルのどの部分がテストされ、どの部分がテストされていないかが明確にわかります。
-
-   ![コードカバレージとして実行する](assets/unit-testing/bylineimpl-coverage.png)
-
-   *コードの有効範囲の概要*
-
-   Eclipse では、単体テストでカバーされる各クラスとメソッドの範囲をすばやく確認できます。Eclipse はコード行をカラーコード化します。
-
-   * **緑**&#x200B;は、1 つ以上のテストで実行されたコードです。
-   * **黄色**&#x200B;は、どのテストでも検証されていないブランチを示します。
-   * **赤**&#x200B;は、どのテストでの実行されていないコードを示します。
-
-1. 有効範囲レポートでは、職業フィールドが null で空のリストを返したブランチが、一度も評価されていないことがわかります。これは、黄色の線571,86で示され、if/elseの分岐が実行されないことを示し、赤の線75で示され、コードの線は実行されないことを示す。
-
-   ![カバー範囲の色分け](assets/unit-testing/coverage-color-coding.png)
-
-1. これは、リソースに占有値がない場合に空のリストを返すというテストを`getOccupations()`に追加することで改善できます。 次の新しいテストメソッドを **BylineImplTests.java** に追加します。
-
-   ```java
-   @Test
-   public void testGetOccupations_WithoutOccupations() {
-       List<String> expected = Collections.emptyList();
-   
-       ctx.currentResource("/content/empty");
-       Byline byline = ctx.request().adaptTo(Byline.class);
-   
-       List<String> actual = byline.getOccupations();
-   
-       assertEquals(expected, actual);
-   }
-   ```
-
-   **`Collections.emptyList();`** は、期待値を空のリストに設定します。
-
-   **`ctx.currentResource("/content/empty")`** 現在のリソースを/content/emptyに設定します。これは、「occumentations」プロパティが定義されていないことがわかっています。
-
-1. Coverage Asを再実行すると、**BylineImpl.java**&#x200B;が現在100%の範囲にあると報告しますが、isEmpty()ではまだ評価されていない分岐が1つあり、これが職業と関係しています。 この場合、occumentations == nullは評価中ですが、occumentations.isEmpty()は`"occupations": []`を設定するモックリソース定義がないので、評価されません。
-
-   ![testGetOccupations_WithoutOccupations() の有効範囲](assets/unit-testing/getoccupations-withoutoccupations.png)
-
-   *testGetOccupations_WithoutOccupations() の有効範囲*
-
-1. この問題は、職業を空のアレイに設定するモックリソース定義を使用する別のテストメソッドを作成することで簡単に解決できます。
-
-   **追加BylineImplTest.json**&#x200B;に対する新しいモックリソース定義。これは&#x200B;**&quot;without-occuptions&quot;**&#x200B;のコピーで、空の配列に「copuctions」プロパティを追加し、**&quot;without-ocumentations-empty-array&quot;**&#x200B;という名前を付けます。
-
-   ```json
-   "without-occupations-empty-array": {
-      "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "wknd/components/content/byline",
-      "name": "Jane Doe",
-      "occupations": []
-    }
-   ```
-
-   **@Test**&#x200B;メソッドを`BylineImplTest.java`に作成し、この新しいモックリソースを使用します。`isEmpty()`はtrueを返します。
-
-   ```java
-   @Test
-   public void testIsEmpty_WithEmptyArrayOfOccupations() {
-       ctx.currentResource("/content/without-occupations-empty-array");
+       ctx.currentResource("/content/byline");
+       when(image.getSrc()).thenReturn("/content/bio.png");
    
        Byline byline = ctx.request().adaptTo(Byline.class);
    
-       assertTrue(byline.isEmpty());
+       assertFalse(byline.isEmpty());
    }
    ```
 
-   ![testIsEmpty_WithEmptyArrayOfOccupations() の有効範囲](assets/unit-testing/testisempty_withemptyarrayofoccupations.png)
+1. 次に、BylineImplTest.javaファイル内のすべての単体テストを実行し、Java Test Reportの出力を確認します。
 
-   *testIsEmpty_WithEmptyArrayOfOccupations() の有効範囲*
-
-1. 最後に追加した内容により、`BylineImpl.java` は条件パスをすべて評価して、100 ％のコード有効範囲を利用できます。
-
-   テストでは、実装の詳細の最小限のセットに頼らずに、`BylineImpl`の期待される動作を検証します。
+![すべてのテストが合格](./assets/unit-testing/all-tests-pass.png)
 
 ## ビルドの一部として単体テストを実行する {#running-unit-tests-as-part-of-the-build}
 
@@ -745,4 +718,4 @@ $ mvn package
 
 ## コード{#review-the-code}を確認
 
-[GitHub](https://github.com/adobe/aem-guides-wknd)上の完了したコードを表示するか、Gitブラック`unit-testing/solution`上のローカルにコードを確認して展開します。
+[GitHub](https://github.com/adobe/aem-guides-wknd)上の完了したコードを表示するか、Gitブラック`tutorial/unit-testing-solution`上のローカルにコードを確認して展開します。
