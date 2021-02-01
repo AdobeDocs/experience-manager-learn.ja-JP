@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1009'
 ht-degree: 1%
 
 ---
 
 
 # GraphQL APIを参照{#explore-graphql-apis}
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
-> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 AEMのGraphQL APIは、コンテンツフラグメントのデータを下流のアプリケーションに公開するための強力なクエリ言語を提供します。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルを作成または更新するたびに、スキーマが変換され、GraphQL APIを構成する「グラフ」に追加されます。
 
