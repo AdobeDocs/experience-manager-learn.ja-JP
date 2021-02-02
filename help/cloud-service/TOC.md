@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 37%
+source-wordcount: '270'
+ht-degree: 41%
 
 ---
 
@@ -16,24 +16,48 @@ ht-degree: 37%
 # Adobe Experience Manager as a Cloud Service のチュートリアル {#cloud-service}
 
 + [概要](./overview.md)
++ AEM as a Cloud Service の概要{#introduction}
+   + [Cloud ServiceとしてのAEMとは](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [展開](./introduction/evolution.md)
+   + [アーキテクチャ](./introduction/architecture.md)
+   + [Cloud Manager](./introduction/cloud-manager.md)
 + 基盤となるテクノロジ{#underlying-technology}
-   + [AEMアーキテクチャの概要](./underlying-technology/introduction-architecture.md)
-   + [OSGiの概要](./underlying-technology/introduction-osgi.md)
-   + [Java Content Repositoryの概要](./underlying-technology/introduction-jcr.md)
-   + [Sling の概要](./underlying-technology/introduction-sling.md)
-   + [作成者層と発行層の概要](./underlying-technology/introduction-author-publish.md)
-   + [Dispatcher の概要](./underlying-technology/introduction-dispatcher.md)
+   + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
+   + [OSGi](./underlying-technology/introduction-osgi.md)
+   + [Java コンテンツリポジトリ](./underlying-technology/introduction-jcr.md)
+   + [Sling](./underlying-technology/introduction-sling.md)
+   + [作成者と発行サービス](./underlying-technology/introduction-author-publish.md)
+   + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD実稼働パイプライン](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非実稼働パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
+   + 開発作業{#devops}
+      + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
+      + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
+      + [パイプラインを設定](./cloud-manager/devops/configure-pipelines.md)
+      + [連続統合](./cloud-manager/devops/continuous-integration.md)
+      + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
+      + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
 + ローカル開発環境のセットアップ{#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [ローカルAEMランタイム](./local-development-environment/aem-runtime.md)
    + [ローカルディスパッチャーツール](./local-development-environment/dispatcher-tools.md)
++ 開発{#developing}
+   + 開発の基礎{#basics}
+      + [AEM SDK](./developing/basics/aem-sdk.md)
+      + [ローカル開発環境](./developing/basics/local-development-environment.md)
+      + [AEM プロジェクトアーキタイプ](./developing/basics/aem-project-archetype.md)
+      + [AEM プロジェクトの構造](./developing/basics/project-structure.md)
+      + [可変コンテンツと不変コンテンツ](./developing/basics/mutable-immutable.md)
+      + [リポジトリ構造パッケージ](./developing/basics/repository-structure-package.md)
+      + [コンテンツの公開](./developing/basics/content-publishing.md)
+      + [OSGi 設定](./developing/basics/osgi-configurations.md)
+      + [ディスパッチャー設定の移行](./developing/basics/dispatcher-configuration.md)
 + AEM{#debugging}のデバッグ
    + AEM SDK{#debugging-aem-sdk}のデバッグ
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
