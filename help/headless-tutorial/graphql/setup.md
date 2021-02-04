@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1547'
 ht-degree: 3%
 
 ---
@@ -49,6 +49,10 @@ ht-degree: 3%
 1. **[Cloud Service](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)** > **AEMに移動して**、**AEM SDK**&#x200B;の最新バージョンをダウンロードします。
 
    ![ソフトウェア配布ポータル](assets/setup/software-distribution-portal-download.png)
+
+   >[!CAUTION]
+   >
+   > GraphQL機能は、デフォルトで2021-02-04以降のAEM SDKでのみ有効になります。
 
 1. ダウンロードを解凍し、Quickstart jar(`aem-sdk-quickstart-XXX.jar`)を専用のフォルダー(`~/aem-sdk/author`)にコピーします。
 1. jarファイルの名前を`aem-author-p4502.jar`に変更します。
