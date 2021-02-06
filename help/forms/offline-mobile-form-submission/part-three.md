@@ -1,8 +1,8 @@
 ---
-title: HTM5フォーム送信でのAEMワークフローのトリガー
-seo-title: HTML5フォーム送信時のAEMワークフローのトリガー
-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
-seo-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
+title: HTM5フォーム送信時のトリガーAEMワークフロー
+seo-title: HTML5フォーム送信時のトリガーAEMワークフロー
+description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
+seo-description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
 feature: mobile-forms
 topics: development
 audience: developer
