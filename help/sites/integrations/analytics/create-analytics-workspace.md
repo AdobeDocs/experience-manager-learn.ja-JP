@@ -51,7 +51,7 @@ WKNDマーケティングチームは、ホームページで最もパフォー�
 
 このチュートリアルは、[クリックされたコンポーネントをAdobe Analytics](./track-clicked-component.md)で追跡するのと同じで、次の点が想定されています。
 
-* **[Adobe Analytics拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な&lt;a0/>起動プロパティ**
+* **[Adobe Analytics拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な起動プロパティ**
 * **Adobe** 分析/開発レポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
 * [Experience Platformデ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) ータレイヤーが有効なAEMサイトのhttps://wknd.site/us/en. [](https://wknd.site/us/en.html) htmlまたはに読み込まれたLaunchプロパティを使用して設定されたAdobeデバッガーブラウザー拡張機能。
 
