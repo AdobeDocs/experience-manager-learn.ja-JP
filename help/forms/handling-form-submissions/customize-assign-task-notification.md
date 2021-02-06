@@ -132,7 +132,7 @@ OSGiコンポーネントを構築し、AEMサーバーにデプロイした後�
 * 有効な電子メールIDを[管理者ユーザー](http://localhost:4502/security/users.html)に関連付ける
 * [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)をダウンロードし、インストールします
 * [アダプティブフォーム](assets/request-travel-authorization.zip)をダウンロードし、[フォームとドキュメントui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)からAEMに読み込みます。
-* [Webコンソール](http://localhost:4502/system/console/bundles)を使用して&lt;a0/>カスタムバンドル](assets/work-items-user-service-bundle.jar)を展開し、開始します[
+* [Webコンソール](http://localhost:4502/system/console/bundles)を使用して[カスタムバンドル](assets/work-items-user-service-bundle.jar)を展開し、開始します
 * [フォームをプレビューして送信する](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
 フォーム送信時に、タスク割り当て通知が管理者ユーザーに関連付けられた電子メールIDに送信されます。 次のスクリーンショットは、タスク割り当ての通知の例を示しています
