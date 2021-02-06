@@ -163,7 +163,7 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 });
 ```
 
-* assetAnalytics.core.assetLoaded() :は、ページの読み込み完了時に呼び出され、すべての追跡可能な画像に対してアセットのインプレッション数をトリガーします。
+* assetAnalytics.core.assetLoaded() :は、ページの読み込み完了時に呼び出され、すべての追跡可能な画像に対するトリガーのアセットインプレッション数
 * 読み込まれたアセットリストを含むAnalytics変数：**contextData[&#39;c.a.assets.idList&#39;]**
 * assetAnalytics.core.assetClicked() :は、アセットのDOM要素に有効なhref値のアンカータグがある場合に呼び出されます。 アセットがクリックされると、クリックされたアセットIDを値として持つcookieが作成されます。**(Cookie名：a.assets.clickdid)**
 * 読み込まれたアセットリストを含むAnalytics変数：**contextData[&#39;c.a.assets.clickedid&#39;]**
