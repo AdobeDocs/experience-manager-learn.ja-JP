@@ -29,7 +29,7 @@ Adobe Experience Manager(AEM)とAdobe Targetは、競合と誤解されるほど
 * __シナリオ1:AEMエクスペリエンスフラグメントオファーを使用した__ パーソナライゼーション
 
    1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
-   1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
+   1. [トリガーとAdobe Targetが起動から](./load-and-fire-target.md)
    1. [AEM AuthorサービスとAdobe Targetの統合](./setup-aem-target-cloud-service.md)
    1. [AEMエクスペリエンスフラグメントのAdobe Targetへの書き出し](./export-experience-fragment-target.md)
    1. [エクスペリエンスフラグメントオファーを使用してWebページの一部をパーソナライズする](./create-target-activity.md)
@@ -37,13 +37,13 @@ Adobe Experience Manager(AEM)とAdobe Targetは、競合と誤解されるほど
 * __シナリオ2:Visual Experience Composer(VEC)を使用した__ パーソナライゼーション
 
    1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
-   1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
+   1. [トリガーとAdobe Targetが起動から](./load-and-fire-target.md)
    1. [Visual Experience Composerを使用したWebページの一部のパーソナライズ](./personalization-using-vec.md)
 
 * __シナリオ3：完全なWebページエクスペリエンスの__ パーソナライゼーション
 
    1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
-   1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
+   1. [トリガーとAdobe Targetが起動から](./load-and-fire-target.md)
    1. [完全なWebページエクスペリエンスのパーソナライズ](./personalization-web-page.md)
 
 
