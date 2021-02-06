@@ -28,7 +28,7 @@ ht-degree: 1%
 
 [com.adobe.granite.workflow.exec.WorkflowProcessインターフェイス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)を実装するOSGiコンポーネントを作成します。 このコンポーネント内のコードは、AEMワークフローのプロセスステップコンポーネントに関連付けることができます。 このコンポーネントには、インターフェイスcom.adobe.granite.workflow.exec.WorkflowProcessのexecuteメソッドが実装されています。
 
-AEMワークフローをトリガーするためにアダプティブフォームが送信されると、送信されたデータはペイロードフォルダーの下の指定されたファイルに保存されます。 例えば、これは送信されたデータファイルです。 idcardタグとbankstatementsタグで指定された添付ファイルをアセンブリする必要があります。
+アダプティブフォームがAEMワークフローに送信されると、送信されたデータは、トリガーフォルダーの下の指定されたファイルに保存されます。 例えば、これは送信されたデータファイルです。 idcardタグとbankstatementsタグで指定された添付ファイルをアセンブリする必要があります。
 ![submitted-data](assets/submitted-data.JPG).
 
 ### タグ名を取得する
@@ -141,7 +141,7 @@ session.save();
 * [Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルを展開し、開始します。
 * ブラウザーに[AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)を指定します。
 * IDドキュメント追加の添付ファイルと、銀行取引明細書セクションへの2つのpdfドキュメント
-* フォームを送信してワークフローをトリガーする
+* ワークフローをトリガーにフォームを送信する
 * アセンブリされたpdfのcrx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)内のワークフローの[ペイロードフォルダーを確認します
 
 >[!NOTE]
