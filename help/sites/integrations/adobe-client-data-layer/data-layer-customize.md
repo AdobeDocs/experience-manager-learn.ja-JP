@@ -232,11 +232,11 @@ ht-degree: 4%
        parentId: "page-30d989b3f8"
    ```
 
-   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認してください。
+   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認します。
 
 ## 追加クリックイベント{#click-event}
 
-Adobeクライアントデータレイヤーはイベント駆動型で、アクションをトリガーする最も一般的なイベントの1つは`cmp:click`イベントです。 AEMコアコンポーネントを使用すると、データ要素を使用してコンポーネントを簡単に登録できます。`data-cmp-clickable`.
+Adobe・クライアント・データ・レイヤーはイベント主導型であり、トリガーに最も一般的なイベントの1つは`cmp:click`イベントです。 AEMコアコンポーネントを使用すると、データ要素を使用してコンポーネントを簡単に登録できます。`data-cmp-clickable`.
 
 クリック可能な要素は、通常、CTAボタンまたはナビゲーションリンクです。 残念ながら、Bylineコンポーネントにはこれらの要素はありませんが、他のカスタムコンポーネントではこれが一般的である可能性があるので、任意の場所に登録します。
 
@@ -289,7 +289,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
    >[!CAUTION]
    >
-   > この演習全体でブラウザを更新することは&#x200B;****&#x200B;ではなく&lt;a0/>重要です。そうしないと、コンソールJavaScriptが失われます。
+   > この演習全体でブラウザを更新することは&#x200B;****&#x200B;ではなく重要です。そうしないと、コンソールJavaScriptが失われます。
 
 1. ブラウザーの&#x200B;**コンソール**&#x200B;を開き、Bylineコンポーネントで作成者の名前をクリックします。
 
@@ -297,7 +297,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
    コンソールメッセージ`Byline Clicked!`と署名名が表示されます。
 
-   `cmp:click`イベントは最も簡単に接続できます。 より複雑なコンポーネントを作成し、その他の動作を追跡する場合は、カスタムJavaScriptを追加して新しいイベントを追加および登録できます。 優れた例はカルーセルコンポーネントです。このコンポーネントは、スライドが切り替えられるたびに`cmp:show`イベントをトリガします。 詳細は[ソースコードを参照してください](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219)。
+   `cmp:click`イベントは最も簡単に接続できます。 より複雑なコンポーネントを作成し、その他の動作を追跡する場合は、カスタムJavaScriptを追加して新しいイベントを追加および登録できます。 優れた例はカルーセルコンポーネントです。カルーセルコンポーネントは、スライドが切り替えられるたびに`cmp:show`イベントをトリガーします。 詳細は[ソースコードを参照してください](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219)。
 
 ## DataLayerBuilderユーティリティ{#data-layer-builder}を使用
 
