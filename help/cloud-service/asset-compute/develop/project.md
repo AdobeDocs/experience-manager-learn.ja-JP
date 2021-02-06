@@ -59,7 +59,7 @@ $ aio app use
 
 現在のワークスペースの詳細が正しいことを確認し、`Y`を押すか、enterを押して`console.json`を生成します。 `.env`と`.aio`が既に存在すると検出された場合は、`x`をタップして作成をスキップします。
 
-新しい`.env`を作成するか、または&lt;a0/>を上書きする場合は、見つからないキーや値を新しい`.env`に再度追加します。
+新しい`.env`を作成するか、またはを上書きする場合は、見つからないキーや値を新しい`.env`に再度追加します。
 
 ```
 ## please provide the following environment variables for the Asset Compute devtool. You can use AWS or Azure, not both:
