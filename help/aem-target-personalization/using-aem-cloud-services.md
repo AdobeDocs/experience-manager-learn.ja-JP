@@ -20,7 +20,7 @@ ht-degree: 3%
 >
 > Adobe TargetとのAEMレガシーCloud Serviceは、AEMからターゲットへのコンテンツの公開を容易にするAEM AuthorからAdobe Targetへの直接接続を確立するために使用される&#x200B;**唯一**&#x200B;です。 Adobeの開始は、AEMが提供する公開されたWebサイトエクスペリエンスにAdobe Targetを公開するために使用されます。
 
-AEMエクスペリエンスフラグメントオファーを使用してアクティビティのパーソナライズを強化するには、次の章に進み、レガシークラウドサービスを使用してAEMをAdobe Targetと統合します。 この統合は、エクスペリエンスフラグメントをAEMからHTML/JSONオファーとしてターゲットにプッシュし、ターゲットオファーをAEMと同期させるために必要です。 この統合は、[概要セクション](./overview.md#personalization-using-aem-experience-fragment)で説明されている&lt;a0/>シナリオ1の実装に必要です。
+AEMエクスペリエンスフラグメントオファーを使用してアクティビティのパーソナライズを強化するには、次の章に進み、レガシークラウドサービスを使用してAEMをAdobe Targetと統合します。 この統合は、エクスペリエンスフラグメントをAEMからHTML/JSONオファーとしてターゲットにプッシュし、ターゲットオファーをAEMと同期させるために必要です。 この統合は、[概要セクション](./overview.md#personalization-using-aem-experience-fragment)で説明されているシナリオ1の実装に必要です。
 
 ## 前提条件
 
