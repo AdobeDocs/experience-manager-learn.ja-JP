@@ -1,8 +1,8 @@
 ---
-title: HTM5フォーム送信でのAEMワークフローのトリガー
-seo-title: HTML5フォーム送信時のAEMワークフローのトリガー
-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
-seo-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
+title: HTM5フォーム送信時のトリガーAEMワークフロー
+seo-title: HTML5フォーム送信時のトリガーAEMワークフロー
+description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
+seo-description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
 feature: mobile-forms
 topics: development
 audience: developer
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 * モバイルフォームに入力したデータを含むインタラクティブ/入力可能なPDFを生成する機能
 * Acrobat/ReaderからのPDF送信の処理
-* Adobe Experience Manager(AEM)ワークフローをトリガーして、送信されたPDFを確認する
+* トリガーAdobe Experience Manager(AEM)ワークフローを使用した送信済みPDFのレビュー
 
 このチュートリアルでは、上記の使用例を達成するために必要な手順について説明します。 このチュートリアルに関連するサンプルコードとアセットは、[こちらから参照できます。](part-four.md)
 
