@@ -38,7 +38,7 @@ WKNDマーケティングチームは、ホームページでどの誘い文句(
 
 このチュートリアルは[Adobe Analytics](./collect-data-analytics.md)とのページデータ収集の続きで、次の点を想定しています。
 
-* **[Adobe Analytics拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な&lt;a0/>起動プロパティ**
+* **[Adobe Analytics拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な起動プロパティ**
 * **Adobe** 分析/開発レポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
 * [Experience Platformデ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) ータレイヤーが有効なAEMサイトのhttps://wknd.site/us/en. [](https://wknd.site/us/en.html) htmlまたはに読み込まれたLaunchプロパティを使用して設定されたAdobeデバッガーブラウザー拡張機能。
 
@@ -127,7 +127,7 @@ Adobe・クライアント・データ・レイヤーは、**イベント**&#x20
 
    上記のコードスニペットでは、[関数](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)をデータレイヤーにプッシュすることで、イベントリスナーを追加します。 `cmp:click`イベントがトリガされると、`componentClickedHandler`関数が呼び出されます。 この関数では、いくつかのサニティチェックが追加され、イベントをトリガーしたコンポーネントの最新の[状態のデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)で新しい`event`オブジェクトが構築されます。
 
-   その後`trigger(event)`が呼び出されます。 `trigger()` は、起動で予約された名前で、起動ルールを「トリガー」します。`event`オブジェクトをパラメータとして渡し、その後、`event`という名前のLaunchで別の予約名で公開されます。 起動のデータ要素は、次のような様々なプロパティを参照できるようになりました。`event.component['someKey']`.
+   その後`trigger(event)`が呼び出されます。 `trigger()` は、起動で予約された名前で、起動ルールが「トリガー」されます。`event`オブジェクトをパラメータとして渡し、その後、`event`という名前のLaunchで別の予約名で公開されます。 起動のデータ要素は、次のような様々なプロパティを参照できるようになりました。`event.component['someKey']`.
 
 1. 変更内容を保存します。
 1. **アクション**&#x200B;の次に&#x200B;**追加**&#x200B;をクリックして、**アクションの設定**&#x200B;ウィザードを開きます。
@@ -235,9 +235,9 @@ Adobe・クライアント・データ・レイヤーは、**イベント**&#x20
 
 1. 変更内容を保存します。
 
-## Analytics変数の設定とリンク追跡ビーコンのトリガー
+## Analytics変数とトリガー追跡リンクビーコンの設定
 
-現在、**CTA Clicked**&#x200B;ルールは、単にコンソールステートメントを出力します。 次に、データ要素とAnalytics拡張機能を使用して、Analytics変数を&#x200B;**アクション**&#x200B;として設定します。 また、**リンクの追跡**&#x200B;をトリガーし、収集したデータをAdobe Analyticsに送信する追加のアクションも設定します。
+現在、**CTA Clicked**&#x200B;ルールは、単にコンソールステートメントを出力します。 次に、データ要素とAnalytics拡張機能を使用して、Analytics変数を&#x200B;**アクション**&#x200B;として設定します。 また、**リンクを追跡**&#x200B;をトリガーするための追加のアクションを設定し、収集したデータをAdobe Analyticsに送信します。
 
 1. **CTAクリック**&#x200B;ルール&#x200B;**削除****コア — カスタムコード**&#x200B;アクション（コンソール文）内：
 
@@ -306,7 +306,7 @@ Adobe・クライアント・データ・レイヤーは、**イベント**&#x20
 
 1. ブラウザーコンソールで、ルール「CTA Clicked」のメッセージ&#x200B;*「Custom Code」が満たされなかったことを確認します。*
 
-   これは、Navigationコンポーネントが`cmp:click`イベント&#x200B;*をトリガするが*&#x200B;をトリガするのは、リソースタイプに対するチェックの結果、何も行われないからです。
+   これは、Navigationコンポーネントが`cmp:click`イベント&#x200B;*をトリガーし、*&#x200B;を行うのは、リソースタイプに対するチェックの結果、何も行われないからです。
 
    >[!NOTE]
    >
