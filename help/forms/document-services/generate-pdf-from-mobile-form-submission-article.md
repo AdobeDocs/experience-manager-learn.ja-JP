@@ -74,7 +74,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 モバイルフォームに画像を追加し、その画像をPDFに表示するには、次の手順を実行します
 
-XDPテンプレート — xdpテンプレートに、btnAddImageという画像フィールドとボタンを追加しました。 次のコードは、カスタムプロファイルでのbtnAddImageのクリックイベントを処理します。 見ての通り、file1 clickイベントがトリガされます。 この使用例を達成するためにxdpでコーディングする必要はありません
+XDPテンプレート — xdpテンプレートに、btnAddImageという画像フィールドとボタンを追加しました。 次のコードは、カスタムプロファイルでのbtnAddImageのクリックイベントを処理します。 表示されているように、file1 clickイベントをトリガーします。 この使用例を達成するためにxdpでコーディングする必要はありません
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -84,7 +84,7 @@ $("#file1").click();
 });
 ```
 
-[カスタムプロファイル](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。カスタムプロファイルを使用すると、モバイルフォームのHTML DOMオブジェクトを簡単に操作できます。 非表示のファイル要素がHTML.jspに追加されます。 ユーザーが「追加Your Photo」をクリックすると、ファイル要素のクリックイベントがトリガーされます。 これにより、添付する写真をユーザが参照して選択できます。 次に、javascript FileReaderオブジェクトを使用して、画像のbase64エンコードされた文字列を取得します。 base64画像文字列は、フォームのテキストフィールドに格納されます。 フォームが送信されたら、この値を抽出し、XMLのimg要素に挿入します。 次に、このXMLを使用してxdpとマージし、最終的なpdfを生成します。
+[カスタムプロファイル](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。カスタムプロファイルを使用すると、モバイルフォームのHTML DOMオブジェクトを簡単に操作できます。 非表示のファイル要素がHTML.jspに追加されます。 ユーザーが「追加Your Photo」をクリックすると、ファイル要素のclickイベントがトリガーされます。 これにより、添付する写真をユーザが参照して選択できます。 次に、javascript FileReaderオブジェクトを使用して、画像のbase64エンコードされた文字列を取得します。 base64画像文字列は、フォームのテキストフィールドに格納されます。 フォームが送信されたら、この値を抽出し、XMLのimg要素に挿入します。 次に、このXMLを使用してxdpとマージし、最終的なpdfを生成します。
 
 この記事に使用するカスタムプロファイルは、この記事のアセットの一部として利用できるようになっています。
 
@@ -106,7 +106,7 @@ function readURL(input) {
         }
 ```
 
-上記のコードは、ファイル要素のclickイベントをトリガーすると実行されます。 5行目では、アップロードされたファイルの内容をbase64文字列として抽出し、テキストフィールドに格納します。 この値は、フォームがサーブレットに送信されたときに抽出されます。
+上記のコードは、file要素のclickイベントをトリガーすると実行されます。 5行目では、アップロードされたファイルの内容をbase64文字列として抽出し、テキストフィールドに格納します。 この値は、フォームがサーブレットに送信されたときに抽出されます。
 
 その後、AEMでモバイルフォームの次のプロパティ（詳細）を設定します
 
