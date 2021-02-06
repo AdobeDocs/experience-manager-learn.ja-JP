@@ -84,6 +84,6 @@ JSONの出力とその形式は、`.model.json`セレクターを使用してペ
 
 ## 次の手順
 
-必要に応じて、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を介して、&lt;a0/>com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージをAEM Authorにインストールします。 [このパッケージには、チュートリアルのこの章と前の章で概要を説明している設定と内容が含まれています。
+必要に応じて、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を介して、[com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージをAEM Authorにインストールします。 このパッケージには、チュートリアルのこの章と前の章で概要を説明している設定と内容が含まれています。
 
 * [第6章 — JSONとして公開するAEMのコンテンツの公開](./chapter-6.md)
