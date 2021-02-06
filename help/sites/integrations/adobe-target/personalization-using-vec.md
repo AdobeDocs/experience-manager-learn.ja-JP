@@ -27,7 +27,7 @@ Visual Experience Composer(VEC)を使用してA/Bテストターゲットアク�
 AEM WebサイトでVECを使用するには、次の設定を完了する必要があります。
 
 1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
-1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
+1. [トリガーとAdobe Targetが起動から](./load-and-fire-target.md)
 
 ## シナリオの概要
 
