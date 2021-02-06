@@ -63,6 +63,6 @@ AEMヘッドレスチュートリアルの第3章では、[第2章](./chapter-2.
 
 ## 次の手順
 
-[AEM [!UICONTROL Package Manager]](http://localhost:4502/crx/packmgr/index.jsp)を介して、AEM Authorに&lt;a0/>com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージをインストールすることをお勧めします。 [このパッケージには、チュートリアルのこの章と前の章で概要を説明している設定と内容が含まれています。
+[AEM [!UICONTROL Package Manager]](http://localhost:4502/crx/packmgr/index.jsp)を介して、AEM Authorに[com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージをインストールすることをお勧めします。 このパッケージには、チュートリアルのこの章と前の章で概要を説明している設定と内容が含まれています。
 
 * [第4章 — AEM Content Servicesテンプレートの定義](./chapter-4.md)
