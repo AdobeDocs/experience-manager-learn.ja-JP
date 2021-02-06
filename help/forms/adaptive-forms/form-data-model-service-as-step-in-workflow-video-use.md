@@ -37,7 +37,7 @@ AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Mode
 
    * FDM手順を使用するワークフロー・モデル。
    * FDMの手順で使用するフォーム・データ・モデル。
-   * 送信時にワークフローをトリガーするアダプティブフォーム。
+   * 送信時のワークフローをトリガーするアダプティブフォーム。
 * [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)を開きます。 詳細を入力し、送信します。 フォームの送信時に、[アプリケーションワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガされます。
 
 ![ ワークフロー ](assets/fdm-as-service-step-workflow.PNG).
