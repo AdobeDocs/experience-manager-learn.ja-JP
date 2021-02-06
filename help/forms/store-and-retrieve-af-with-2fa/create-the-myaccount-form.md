@@ -32,7 +32,7 @@ ht-degree: 0%
 >[!NOTE]
 > [Nexmo](https://dashboard.nexmo.com/)アカウントに固有のAPIキーとAPIシークレットの値を、MyAccountFormの適切なフィールドに入力する必要があります
 
-![trigger-submit](assets/trigger-submit.JPG)
+![トリガー送信](assets/trigger-submit.JPG)
 
 
 
