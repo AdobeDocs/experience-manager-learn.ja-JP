@@ -26,7 +26,7 @@ ht-degree: 0%
 
 この部分では、カスタム関数とコードエディターを使用してビジネスルールを作成します。
 
-このチュートリアルの前の[カスタム関数](assets/client-libs-and-logo.zip)を使用して、既に&lt;a0/>ClientLibをインストール済みです。
+このチュートリアルの前の[カスタム関数](assets/client-libs-and-logo.zip)を使用して、既にClientLibをインストール済みです。
 
 通常、クライアントライブラリはCSSとJavaScriptファイルで構成されます。 このクライアントライブラリには、コンボボックスのリスト値を入力する関数を公開するjavascriptファイルが含まれています。
 
