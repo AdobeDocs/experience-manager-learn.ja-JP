@@ -1,8 +1,8 @@
 ---
-title: AEMワークフローをトリガーするアダプティブフォームの設定
-seo-title: AEMワークフローをトリガーするアダプティブフォームの設定
-description: AEMワークフローをトリガーするアダプティブフォームの設定における様々なオプションについて理解する
-seo-description: AEMワークフローをトリガーするアダプティブフォームの設定における様々なオプションについて理解する
+title: アダプティブフォームのトリガーAEMワークフローへの設定
+seo-title: アダプティブフォームのトリガーAEMワークフローへの設定
+description: アダプティブフォームをトリガーAEMワークフローに設定する際の各種オプションについて
+seo-description: アダプティブフォームをトリガーAEMワークフローに設定する際の各種オプションについて
 sub-product: フォーム[ふぉーむ]
 feature: workflow
 topics: integrations
@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# AEMワークフローをトリガーするアダプティブフォームの設定
+# アダプティブフォームのトリガーAEMワークフローへの設定
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28316?quality=9&learn=on)
