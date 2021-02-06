@@ -53,5 +53,5 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)を展開し、バンドルを開始する必要があります。
 
 
-これらのUtilityサービスを使用してCRXリポジトリにドキュメントを保存する場合は、[サービスユーザー記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)を使用して開発中の記事&lt;a0/>に従ってください。 fd-serviceユーザーに、適切なCRXフォルダーの[必要な権限](http://localhost:4502/useradmin)を必ず指定してください。
+これらのUtilityサービスを使用してCRXリポジトリにドキュメントを保存する場合は、[サービスユーザー記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)を使用して開発中の記事に従ってください。 fd-serviceユーザーに、適切なCRXフォルダーの[必要な権限](http://localhost:4502/useradmin)を必ず指定してください。
 
