@@ -61,7 +61,7 @@ AdobeCloud Managerは、AEM環境の管理、内省、セルフサービスを�
 
 ### 設定
 
-[CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)構成は、パイプラインを開始するトリガーを定義します。このトリガーは、実稼働環境の展開とパフォーマンステストのパラメーターを制御するパラメーターです。
+[CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)構成は、パイプラインを開始するトリガーを定義します。このパラメータは、実稼働環境の展開とパフォーマンステストのパラメータを制御するパラメータです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
