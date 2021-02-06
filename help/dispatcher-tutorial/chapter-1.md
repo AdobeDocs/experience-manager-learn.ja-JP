@@ -6,7 +6,7 @@ seo-description: AEMヘッドレスチュートリアルの第1章では、チ�
 translation-type: tm+mt
 source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '17502'
 ht-degree: 0%
 
 ---
@@ -450,9 +450,9 @@ HTMLページが変更された場合、またはHTMLページが変更された
 
 1. 自分が何をしているか本当に分かっている。 無効権を取るのは大変だ。 これが自動無効化が非常に厳密な理由の一つだ。古いコンテンツを配信しないようにする。
 
-2. エージェントがHTTPヘッダー`CQ-Action-Scope: ResourceOnly`を送信した場合、つまり、この1つの無効化要求で自動無効化はトリガーされません。 このコード([https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle))の部分は、独自のレプリケーションエージェントを使用する場合に適した開始点となる場合があります。
+2. エージェントがHTTPヘッダー`CQ-Action-Scope: ResourceOnly`を送信した場合、つまり、この1つの無効化リクエストは自動無効化をトリガーしません。 このコード([https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle))の部分は、独自のレプリケーションエージェントを使用する場合に適した開始点となる場合があります。
 
-3. `ResourceOnly`に設定すると、自動無効化を防ぐだけです。必要な依存関係の解決と無効化を実際に行うには、自分で無効化要求をトリガーする必要があります。 パッケージのディスパッチャーフラッシュルール([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html))を調べて、実際にどのように実行されるかを調べることができます。
+3. `ResourceOnly`に設定すると、自動無効化を防ぐだけです。必要な依存関係の解決と無効化を実際に行うには、無効化要求を自分でトリガーする必要があります。 パッケージのディスパッチャーフラッシュルール([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html))を調べて、実際にどのように実行されるかを調べることができます。
 
 依存関係解決スキームを構築することはお勧めしません。 労力が多すぎて利益が少なすぎて、前にも言ったように、誤りが多すぎる。
 
@@ -771,7 +771,7 @@ AEMは依存関係もほとんど知りません。 適切なセマンティッ�
 
 AEMでは、いくつかの参照が認識されています。 この知識を使用して、参照先のページやアセットを削除または移動しようとするときに警告を受け取ります。 これは、アセットの削除時に内部検索をクエリすることで行います。 コンテンツ参照は非常に特殊な形式を持っています。 これらは、「/content」で始まるパス式ーです。 したがって、必要に応じて、フルテキストのインデックスを作成し、クエリを行うことが簡単にできます。
 
-この場合、パブリッシュシステムにカスタマイズされた複製エージェントが必要で、パスが変更されたときに特定のパスの検索をトリガします。
+この場合、パブリッシュシステムにカスタマイズされた複製エージェントが必要です。このエージェントは、パスが変更されたときに特定のパスを検索するトリガーを持ちます。
 
 例えば
 
@@ -1201,7 +1201,7 @@ www.shiny-brand.de
 
 Googleなどの検索エンジンは、同じコンテンツを異なるURLに持つことを「欺く」と考えます。 同じコンテンツを提供するファームを作成することで、より高いランク付けや高いランク付けを行ったり、より頻繁にリストに登録したりできます。 検索エンジンはこれらの試行を認識し、実際にはページのランクを低くして、単にコンテンツをリサイクルします。
 
-透明にして下位レベルにならないようにする、同じコンテンツを持つページが複数あり、システムを「ゲーム」しないようにする、各ページのヘッダーセクションに[タグを設定します。](https://support.google.com/webmasters/answer/189077?hl=en)`<link rel="alternate">`
+透明にして下位レベルにならないようにする、同じコンテンツを持つページが複数あり、システムを「ゲーム」しないようにする、各ページのヘッダーセクションに`<link rel="alternate">`タグを設定します。[](https://support.google.com/webmasters/answer/189077?hl=en)
 
 ```
 # URL: www.shiny-brand.fr/fr/home/produits.html
@@ -1255,7 +1255,7 @@ SEOの専門家の中には、これが高位ランクのウェブサイトの�
 
 当社のプロジェクトでは、新しい相対ページが頻繁に表示されていました。 しかし、「代替」リンクとしては具現化されなかった。 例えば、`de-de/produkte`ページがドイツ語のWebサイトに公開された時点で、他のサイトにはすぐには表示されませんでした。
 
-その理由は、当社の設定では、サイトは独立しているはずだったからです。 ドイツのウェブサイトでの変更はフランスのウェブサイトでの無効化を引き起こすものではありませんでした
+その理由は、当社の設定では、サイトは独立しているはずだったからです。 ドイツのウェブサイトの変更はフランスのウェブサイトの無効化にトリガーしなかった。
 
 その問題を解決する方法は既に1つ分かっている。 statfileslevelを2に減らすだけで、無効化ドメインを拡張できます。 もちろん、これは、特にパブリケーションの場合など、キャッシュヒット率も低下し、無効化がより頻繁に発生する場合も少なくなります。
 
@@ -1616,7 +1616,7 @@ Content-Length: 207
 /content/my-brand/products/product-2.html
 ```
 
-ディスパッチャーは、このようなリクエストを見ると、通常どおり自動無効化をトリガーし、直ちにキューに入れられて発行システムから新しいコンテンツを再取得します。
+このようなリクエストをディスパッチャーが見ると、通常どおりトリガーの自動無効化が行われ、新しいコンテンツを発行システムから再取得するためのリクエストが直ちにキューに入れられます。
 
 現在はリクエスト本文を使用しているので、HTTP標準に従ってcontent-typeとcontent-lengthを設定する必要もあります。
 
