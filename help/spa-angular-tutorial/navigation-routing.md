@@ -171,7 +171,7 @@ AEMページとSPAエディタSDKを使用して、SPAで複数の表示をサ�
 
    ![ページを新規作成](assets/navigation-routing/create-new-page.png)
 
-2. 「**[!UICONTROL テンプレート]**」で、「**[!UICONTROL SPAページ]**」を選択します。 「**[!UICONTROL プロパティ]**」に、**「**[!UICONTROL &#x200B;タイトル&#x200B;]**」に&lt;a2/>「ページ1」**&#x200B;を、名前に&#x200B;**「page-1」**&#x200B;を入力します。
+2. 「**[!UICONTROL テンプレート]**」で、「**[!UICONTROL SPAページ]**」を選択します。 「**[!UICONTROL プロパティ]**」に、**「**[!UICONTROL &#x200B;タイトル&#x200B;]**」に「ページ1」**&#x200B;を、名前に&#x200B;**「page-1」**&#x200B;を入力します。
 
    ![初期ページプロパティの入力](assets/navigation-routing/initial-page-properties.png)
 
