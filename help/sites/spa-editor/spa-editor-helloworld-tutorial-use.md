@@ -159,7 +159,7 @@ SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は�
 
 SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導入する準備ができたら、次の高レベルの手順を実行します（上図を参照）。
 
-1. AEMプロジェクトビルドが呼び出され、SPAプロジェクトのビルドがトリガされます。 We.Retailジャーナルは、[**フロントエンド —maven-plugin**](https://github.com/eirslett/frontend-maven-plugin)を使用します。
+1. AEMプロジェクトビルドが呼び出され、続いてSPAプロジェクトのビルドがトリガーされます。 We.Retailジャーナルは、[**フロントエンド —maven-plugin**](https://github.com/eirslett/frontend-maven-plugin)を使用します。
 1. SPAプロジェクトの&#x200B;[**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator)は、コンパイル済みのSPAをAEMプロジェクトのAEMクライアントライブラリとして埋め込みます。
 1. AEMプロジェクトは、コンパイル済みのSPAと他のサポートするAEMコードを含むAEMパッケージを生成します。
 
