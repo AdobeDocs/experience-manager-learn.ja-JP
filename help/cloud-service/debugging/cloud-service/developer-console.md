@@ -72,7 +72,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### バンドル
 
-すべてのOSGiバンドルのリストをAEMにバンドルします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Bundles[(](http://localhost:4502/system/console/bundles))に似ています。`/system/console/bundles`
+すべてのOSGiバンドルのリストをAEMにバンドルします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Bundles](http://localhost:4502/system/console/bundles)(`/system/console/bundles`)に似ています。[
 
 バンドルは次の方法でデバッグに役立ちます。
 
@@ -82,7 +82,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### コンポーネント
 
-コンポーネントリストは、AEMのすべてのOSGiコンポーネントを選択します。 この機能は、AEM SDKのローカルクイックスタートの](http://localhost:4502/system/console/components)にあるOSGiコンポーネント[に似ています。`/system/console/components`
+コンポーネントリストは、AEMのすべてのOSGiコンポーネントを選択します。 この機能は、AEM SDKのローカルクイックスタートの`/system/console/components`にあるOSGiコンポーネント](http://localhost:4502/system/console/components)に似ています。[
 
 コンポーネントは次の方法でデバッグするのに役立ちます。
 
@@ -93,7 +93,7 @@ CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、ト�
 
 ### 設定
 
-設定リストは、すべてのOSGiコンポーネントの設定（OSGiのプロパティと値）をします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Configuration Manager[(](http://localhost:4502/system/console/configMgr))に似ています。`/system/console/configMgr`
+設定リストは、すべてのOSGiコンポーネントの設定（OSGiのプロパティと値）をします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Configuration Manager](http://localhost:4502/system/console/configMgr)(`/system/console/configMgr`)に似ています。[
 
 設定は、次の方法でデバッグするのに役立ちます。
 
@@ -110,7 +110,7 @@ Oakインデックスは、次の方法でデバッグに役立ちます。
 
 ### OSGiサービス
 
-コンポーネントは、すべてのOSGiサービスをリストします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Services[ (](http://localhost:4502/system/console/services))に似ています。`/system/console/services`
+コンポーネントは、すべてのOSGiサービスをリストします。 この機能は、AEM SDKのローカルクイックスタートのOSGi Services](http://localhost:4502/system/console/services) (`/system/console/services`)に似ています。[
 
 OSGi Servicesヘルプ：
 
@@ -118,7 +118,7 @@ OSGi Servicesヘルプ：
 
 ### Sling ジョブ
 
-Sling JobsリストはすべてのSling Jobsキューを選択します。 この機能は、AEM SDKのローカルクイックスタートのジョブ[ (](http://localhost:4502/system/console/slingevent))に似ています。`/system/console/slingevent`
+Sling JobsリストはすべてのSling Jobsキューを選択します。 この機能は、AEM SDKのローカルクイックスタートのジョブ](http://localhost:4502/system/console/slingevent) (`/system/console/slingevent`)に似ています。[
 
 Slingジョブは、次の方法でデバッグする際に役立ちます。
 
@@ -151,7 +151,7 @@ Javaパッケージは、未解決のインポートまたはスクリプト（H
 
 ## クエリ
 
-クエリは、AEMで検索クエリが実行される内容と方法に関する洞察を提供するのに役立ちます。 この機能は、AEM SDKのローカルクイックスタートのツール/クエリパフォーマンス[コンソールと同じです。](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)
+クエリは、AEMで検索クエリが実行される内容と方法に関する洞察を提供するのに役立ちます。 この機能は、AEM SDKのローカルクイックスタートのツール/クエリパフォーマンス](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)コンソールと同じです。[
 
 クエリは、特定のポッドが選択されている場合にのみ機能します。ポッドのクエリパフォーマンスWebコンソールが開くので、開発者はAEMサービスにログインするためのアクセス権を持つ必要があります。
 
