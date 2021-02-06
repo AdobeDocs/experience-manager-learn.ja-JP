@@ -128,7 +128,7 @@ private void initApp(final List<ViewBinder> viewBinders) {
 
 `onCreate(..)` はモバイルアプリの初期化フックで、JSONを解析し、値を `ViewBinders` 要素にバインドする3つのカスタムを `View` 担当します。
 
-`initApp(...)` が呼び出され、AEM Publish上のAEM Content Servicesエンドポイントに対してHTTPGETリクエストが行われ、コンテンツが収集されます。有効なJSON応答を受け取ると、JSON応答が各`ViewBinder`に渡されます。各&lt;a0/>は、JSONを解析し、モバイル`View`要素にバインドします。
+`initApp(...)` が呼び出され、AEM Publish上のAEM Content Servicesエンドポイントに対してHTTPGETリクエストが行われ、コンテンツが収集されます。有効なJSON応答を受け取ると、JSON応答が各`ViewBinder`に渡されます。各は、JSONを解析し、モバイル`View`要素にバインドします。
 
 #### JSON応答の解析
 
