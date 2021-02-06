@@ -1,5 +1,5 @@
 ---
-title: AEMワークフローをトリガーするアダプティブフォームの設定
+title: アダプティブフォームのトリガーAEMワークフローへの設定
 description: フォーム送信時にAEMワークフローをトリガーする場合のペイロードオプションの設定
 sub-product: フォーム[ふぉーむ]
 feature: workflow
@@ -19,7 +19,7 @@ ht-degree: 8%
 ---
 
 
-# AEMワークフローをトリガーするアダプティブフォームの設定
+# アダプティブフォームのトリガーAEMワークフローへの設定
 
 ## 前提条件
 
@@ -38,7 +38,7 @@ ht-degree: 8%
 * 「作成/ファイルのアップロード」をクリックします。
 * サンプルのアダプティブフォームは、[アプリケーションForms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)というフォルダーに配置されます
 
-次のビデオでは、AEMワークフローをトリガーするアダプティブフォームの設定方法を説明します
+次のビデオでは、AEMワークフローをトリガーするためのアダプティブフォームの設定方法を説明します
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
 
 次のビデオでは、crxリポジトリ内のワークフローペイロードとその他の詳細を示します
