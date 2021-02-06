@@ -388,7 +388,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 
    ![画像のドラッグ&amp;ドロップ](./assets/map-components/drag-drop-image.gif)
 
-8. &lt;a0/追加>AEM Assets[を通して自分のイメージを作るか、標準の](http://localhost:4502/assets.html/content/dam)WKNDリファレンスサイト[の完成したコードベースをインストールします。 ](https://github.com/adobe/aem-guides-wknd/releases/latest)[WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)には、WKND SPAで再利用できる多くの画像が含まれています。 パッケージは、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
+8. &lt;a0/追加>AEM Assets](http://localhost:4502/assets.html/content/dam)を通して自分のイメージを作るか、標準の[WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)の完成したコードベースをインストールします。 [[WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)には、WKND SPAで再利用できる多くの画像が含まれています。 パッケージは、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
 
    ![Package Managerのインストールwknd.all](./assets/map-components/package-manager-wknd-all.png)
 
