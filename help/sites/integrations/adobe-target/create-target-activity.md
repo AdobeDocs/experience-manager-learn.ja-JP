@@ -29,7 +29,7 @@ AEMエクスペリエンスフラグメントオファーを使用して、Adobe
 エクスペリエンスフラグメントオファーを使用してAdobe Targetアクティビティを作成するには、次の設定を行う必要があります。
 
 1. [Adobe Target追加のAEM Webサイト](./add-target-launch-extension.md)
-1. [開始からのAdobe Target呼び出しのトリガ](./load-and-fire-target.md)
+1. [トリガーとAdobe Targetが起動から](./load-and-fire-target.md)
 1. [AEM AuthorサービスとAdobe Targetの統合](./setup-aem-target-cloud-service.md)
 1. [AEMエクスペリエンスフラグメントのAdobe Targetへの書き出し](./export-experience-fragment-target.md)
 
