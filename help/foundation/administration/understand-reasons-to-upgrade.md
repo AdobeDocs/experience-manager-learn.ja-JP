@@ -1626,7 +1626,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
     </tbody>
 </table>
 
-AEM Communitiesは、[改良](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html)をリリースし、組織がユーザーを惹きつけ、ユーザーを有効にするための&lt;a0/>改良&lt;a1/>を加えました。
+AEM Communitiesは、[改良](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html)をリリースし、組織がユーザーを惹きつけ、ユーザーを有効にするための改良を加えました。
 
 + **ユーザー生成コンテンツでの@** mentionsupport。
 + **有効化**&#x200B;コンポーネントの&#x200B;**キーボードナビゲーション**&#x200B;を使用してアクセシビリティを改善。
