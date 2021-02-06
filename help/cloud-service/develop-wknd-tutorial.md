@@ -42,4 +42,4 @@ WKNDチュートリアルが完了したら、次のビデオを見て、WKNDプ
 2. Cloud ServiceプログラムとしてAEMに登録されたアップストリームのAdobeCloud Manager Gitリポジトリにプッシュされます
 3. Cloud Managerのパイプライン経由でAEMにCloud Service環境としてデプロイ
 
-AEMプロジェクトをクラウドサービスとしてAEMにデプロイする方法の詳細については、ビデオシリーズ「a0/>GitとAdobeクラウドマネージャー[を統合する方法」を参照してください。](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)
+AEMプロジェクトをクラウドサービスとしてAEMにデプロイする方法の詳細については、ビデオシリーズ「a0/>GitとAdobeクラウドマネージャー](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)を統合する方法」を参照してください。[
