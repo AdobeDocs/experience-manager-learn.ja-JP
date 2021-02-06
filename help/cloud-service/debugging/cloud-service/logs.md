@@ -70,7 +70,7 @@ AdobeCloud Managerでは、環境のログのダウンロードアクション�
 
 ## Adobe I/OCLIとCloud Managerプラグイン{#aio}
 
-AdobeCloud Managerは、[Adobe I/OCLI](https://github.com/adobe/aio-cli)を介したCloud ServiceログとしてのAEMへのアクセスをサポートしています。Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)用の[Cloud Managerプラグインを使用します。
+AdobeCloud Managerは、[Adobe I/OCLI](https://github.com/adobe/aio-cli)を介したCloud ServiceログとしてのAEMへのアクセスをサポートしています。Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)のCloud Managerプラグインを使用します。[
 
 まず、[Cloud Managerプラグイン](../../local-development-environment/development-tools.md#aio-cli)でAdobe I/Oを設定します。
 
