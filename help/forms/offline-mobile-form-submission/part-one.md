@@ -1,8 +1,8 @@
 ---
-title: HTM5フォーム送信でのAEMワークフローのトリガー
-seo-title: HTML5フォーム送信時のAEMワークフローのトリガー
-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
-seo-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームを送信してAEMワークフローをトリガーする
+title: HTM5フォーム送信時のトリガーAEMワークフロー
+seo-title: HTML5フォーム送信時のトリガーAEMワークフロー
+description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
+seo-description: オフラインモードでのモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
 feature: mobile-forms
 topics: development
 audience: developer
@@ -147,6 +147,6 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 ```
 
 部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を表示するには、[ここをクリック](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)してください。
-PDFがダウンロードされたら、次の手順でPDFを送信してAEMワークフローをトリガーします。 このワークフローは、送信されたPDFのデータを結合し、レビュー用の非インタラクティブPDFを生成します。
+PDFをダウンロードしたら、次の手順は、PDFをAEMワークフローのトリガーに送信することです。 このワークフローは、送信されたPDFのデータを結合し、レビュー用の非インタラクティブPDFを生成します。
 
 この使用例で作成したカスタムプロファイルは、このチュートリアルのアセットの一部として使用できます。
