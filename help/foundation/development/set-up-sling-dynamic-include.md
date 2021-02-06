@@ -19,7 +19,7 @@ ht-degree: 9%
 
 # 設定 [!DNL Sling Dynamic Include]
 
-[!DNL Apache Sling Dynamic Include]を[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)と共に&lt;a0/>を[!DNL Apache HTTP Web Server]で実行し、使用する場合のビデオウォークスルーです。
+[!DNL Apache Sling Dynamic Include]を[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)と共にを[!DNL Apache HTTP Web Server]で実行し、使用する場合のビデオウォークスルーです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
