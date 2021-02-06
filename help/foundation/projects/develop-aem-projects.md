@@ -126,7 +126,7 @@ AEMプロジェクトには、[OOTBプロジェクトテンプレート](https:/
    ```
 
 1. このプロジェクトテンプレートでは、タスクを利用します。
-   1. authoring-project/gadgetsの下に新しい追加&#x200B;**nt:unstructured**&#x200B;タスク&#x200B;**が追加されました。このノードは、**&lt;a3/>と呼ばれます。
+   1. authoring-project/gadgetsの下に新しい追加&#x200B;**nt:unstructured**&#x200B;タスク&#x200B;**が追加されました。このノードは、**&#x200B;と呼ばれます。
    1. **cardWeight** = &quot;100&quot;、**jcr:title**=&quot;タスク&quot;、追加および&#x200B;**sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;のタスクノードへの文字列プロパティ。
 
    これで、新しいプロジェクトが作成されると、[タスクタイル](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks)がデフォルトで表示されます。
