@@ -10,9 +10,9 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3291'
 ht-degree: 10%
 
 ---
@@ -144,7 +144,7 @@ Adobe Experience Manager(AEM)サイト実装のCSSとJavaScriptをデプロイ�
 
    各ファイルは、[アコーディオンコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components)のようなコアコンポーネントにマッピングされます。 各コアコンポーネントは、[ブロック要素修飾子](https://getbem.com/)またはBEM表記を使用して構築され、スタイル規則を使用して特定のCSSクラスを簡単にターゲットできます。 `/components`の下のファイルは、AEMプロジェクトアーキタイプでコンポーネントごとに異なるBEM規則でスタブアウトされました。
 
-1. WKND基本スタイル&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)**&#x200B;と&#x200B;**unzip**&#x200B;をファイルからダウンロードします。
+1. WKND基本スタイル&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-srcv2.zip)**&#x200B;と&#x200B;**unzip**&#x200B;をファイルからダウンロードします。
 
    ![WKND基本スタイル](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
@@ -307,6 +307,10 @@ AEMプロジェクトのアーキタイプによって、この統合が自動�
    ...
    </body>
    ```
+
+   >[!NOTE]
+   >
+   > 6.5/6.4で後に続く場合、クライアント側のライブラリは自動的に縮小されません。 [HTML Library Managerのドキュメントを参照して、最小化（推奨）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)を有効にしてください。
 
    >[!WARNING]
    >
