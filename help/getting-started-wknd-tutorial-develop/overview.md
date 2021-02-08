@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 33%
+source-wordcount: '893'
+ht-degree: 32%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 * [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/getting-started/getting-started.html)
 * Sling Model
 * [編集可能なテンプレート](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [スタイルシステム](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [スタイルシステム](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
 
@@ -55,6 +55,8 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 * [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）
 * [npm 6 以降](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
+* [Visual Studio](https://code.visualstudio.com/) コードまたは同等のIDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — チュートリアル全体で使用されるツール
 
 >[!NOTE]
 >
