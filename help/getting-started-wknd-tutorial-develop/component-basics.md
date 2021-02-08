@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1145'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 4%
 ## 前提条件 {#prerequisites}
 
 [ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
+
+このビデオで使用されるIDEは、[Visual Studioコード](https://code.visualstudio.com/)と[VSCode AEM同期](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)プラグインです。
 
 ## 目的 {#objective}
 
@@ -110,7 +112,7 @@ HTML Template Language(HTML Template Language)または&#x200B;**[HTL](https://d
 
 1. IDEに切り替え、`ui.apps`モジュールへのプロジェクトを開きます。
 1. `helloworld.html`ファイルを開き、HTMLマークアップに変更を加えます。
-1. IDEツールを使用して、ファイル変更をローカルAEMインスタンスと同期します。
+1. [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)などのIDEツールを使用して、ファイル変更をローカルAEMインスタンスと同期します。
 1. ブラウザに戻り、コンポーネントのレンダリングが変更されたことを確認します。
 1. `.content.xml`ファイルを開き、`HelloWorld`コンポーネントのダイアログを定義します。次の場所にあります。
 
@@ -209,14 +211,14 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
        ...
    
        @ValueMapValue
-       protected String title;
+       private String title;
    
        @ValueMapValue
-       protected String text;
+       private String text;
    
-           @PostConstruct
-           protected void init() {
-               ...
+       @PostConstruct
+       protected void init() {
+           ...
    ```
 
 1. &lt;a2/追加>という名前のプロパティの値を返す、次のメソッド`getTitle()`を`HelloWorldModel`クラスに渡します。 `title`このメソッドは、「Default Value here!」という文字列値を返すロジックを追加します。 プロパティ`title`がnullまたは空白の場合：
@@ -349,6 +351,10 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
    ```
 
 1. 開発者プラグインを使用するか、Mavenスキルを使用して、AEMのローカルインスタンスに変更をデプロイします。
+
+   >[!NOTE]
+   >
+   > パフォーマンス上の理由から、CSSとJavaScriptはブラウザーによって頻繁にキャッシュされます。 クライアントライブラリに対する変更がすぐに表示されない場合は、ハードリフレッシュを実行し、ブラウザーのキャッシュをクリアします。 匿名ウィンドウを使用して新しいキャッシュを確実に作成すると便利です。
 
 ## バリデーターが{#congratulations}
 
