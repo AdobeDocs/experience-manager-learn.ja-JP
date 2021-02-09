@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
+source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1652'
 ht-degree: 2%
 
 ---
@@ -135,7 +135,7 @@ $ java -jar aem-publish-p4503.jar
 1. 「**Transport**」タブで、次のフィールドを更新します。
 
    + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
-   + **User** - `admin`
+   + **ユーザー** - `admin`
    + **パスワード** - `admin`
 
    ![レプリケーションエージェントの構成 — トランスポート](assets/aem-runtime/transport-config.png)
@@ -180,6 +180,10 @@ $ java -jar aem-publish-p4503.jar
 ## ローカルAEMランタイムの停止
 
 ローカルAEMランタイムを停止するには、AEM Authorまたは発行サービスのいずれかを停止するには、AEMランタイムの開始に使用したコマンドラインウィンドウを開き、`Ctrl-C`をタップします。 AEMがシャットダウンするまで待ちます。 シャットダウン処理が完了すると、コマンドラインプロンプトが表示されます。
+
+## オプションのローカルAEMランタイム設定タスク
+
++ __OSGi設定環境変数と秘密__ 変数は、AEM CLIを使用して管理する代わりに、ローカルランタイム用に [特別に設定されます](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#local-development)。
 
 ## Quickstart Jarを更新するタイミング
 
