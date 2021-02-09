@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 + [概要](overview.md)
 + [従うべきベストプラクティス](adaptive-forms/best-practices-adaptive-forms.md)
-+ [AEM AuthorでのOKTA認証の設定](adaptive-forms/single-sign-on-with-okta.md)
++ [AEM Authorを使用したOKTA認証の設定](adaptive-forms/single-sign-on-with-okta.md)
 + [最初のOSGiバンドルの作成](adaptive-forms/create-your-first-osgi-bundle.md)
 + 最初のアダプティブフォームの作成{#creating-your-first-adaptive-form}
    + [概要とセットアップ](creating-your-first-adaptive-form/introduction-and-setup.md)
@@ -91,7 +91,7 @@ ht-degree: 6%
    + [フォームデータモデルの設定](prefill-fdm-db/configuring-form-data-model.md)
    + [リクエストパラメーターの取得](prefill-fdm-db/get-request-parameter.md)
    + [アダプティブフォームの作成](prefill-fdm-db/create-adaptive-form.md)
-+ インボックスのカスタマイズ{#inbox-customization}
++ 受信トレイ{#inbox-customization}のカスタマイズ
    + [概要](inbox-customization/introduction.md)
    + [追加カスタム列](inbox-customization/add-married-column.md)
    + [Sightlyテンプレートの使用](inbox-customization/use-sightly-template.md)
@@ -183,6 +183,7 @@ ht-degree: 6%
    + [パート4 — フォームデータモデルを使用したACSプロファイルの作成](aem-forms-with-adobe-campaign/partfour.md)
 
 + ドキュメントサービス {#document-services}
+   + [PDF formsのタイプ](document-services/pdf-forms-and-documents.md)
    + [AEM FormsでのAssemblerサービスの使用](document-services/using-assembler-service-in-aem-forms.md)
    + [AEM Formsでの監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Formsでのバーコードサービスの使用](document-services/barcode-service-adaptive-forms-article.md)
