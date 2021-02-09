@@ -3,9 +3,9 @@ title: AEM Assets のビデオおよびチュートリアル
 description: Adobe Experience Managerアセットのビデオとチュートリアルの集まり
 sub-product: アセット，ダイナミックメディア
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '230'
 ht-degree: 16%
 
 ---
@@ -17,6 +17,9 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 
 ## 新機能
 
+* **[関連付けと関連付け解除（ビデオ）](./authoring/relate-unrelate.md)**
+
+   *AEMでアセット間の関係を確立し、管理する方法を学びます。*
 
 * **[アセットの公開（ビデオ）](./sharing/publish.md)**
 
@@ -33,10 +36,6 @@ Adobe Experience Managerアセットは、AEM Platformのデジタルアセッ�
 * **[自動開始ワークフロー（ビデオ）](./configuring/auto-start-workflows.md)**
 
    *アップロードされたアセットまたは再処理されたアセットでAEMワークフローを自動的に呼び出す方法を学びます。*
-
-* **[処理プロファイル（ビデオ）](./configuring/processing-profiles.md)**
-
-   *レンディションアセットに対してアセットマイクロサービスを呼び出す方法の確認*
 
 ## スタッフの選考
 
