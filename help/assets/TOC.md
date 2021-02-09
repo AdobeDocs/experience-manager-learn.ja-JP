@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '262'
 ht-degree: 37%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 37%
    + [基本操作](./authoring/basic-operations.md)
    + [メタデータ](./authoring/metadata.md)
    + [レンディション](./authoring/renditions.md)
+   + [関連付けと関連付け解除](./authoring/relate-unrelate.md)
 
 + コラボレーション{#collaboration}
    + [タイムラインとインボックス](./collaboration/timeline-and-inbox.md)
