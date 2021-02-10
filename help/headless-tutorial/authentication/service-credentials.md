@@ -10,7 +10,7 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
+source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Cloud ServiceとしてAEMとの統合では、AEMに対して安全に認証できる必要があります。 AEM Developer Consoleでは、サービス資格情報へのアクセス権限が付与されます。この資格情報は、外部のアプリケーション、システムおよびサービスが、HTTP経由でAEM AuthorまたはPublishサービスとプログラム的にやり取りするのに使用されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
 サービス資格情報は、[ローカル開発アクセストークン](./local-development-access-token.md)と似ていても、いくつかの主な点で異なります。
 
