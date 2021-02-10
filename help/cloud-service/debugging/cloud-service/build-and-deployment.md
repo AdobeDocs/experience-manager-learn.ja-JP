@@ -10,9 +10,9 @@ audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
 translation-type: tm+mt
-source-git-commit: a405cf14d3f71bf51e32e50c828c3216d29aa253
+source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
 workflow-type: tm+mt
-source-wordcount: '2517'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -231,6 +231,7 @@ AEMは、各AEMリリースで最新のコアコンポーネントバージョ�
    1. `/var`リソースが不要な場合は、`/var`下のリソースを、アプリケーションの一部として展開されているコンテンツパッケージから削除します。
    2. `/var`リソースが必要な場合は、[repoint](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使用してノード構造を定義します。 レポイントスクリプトは、OSGi実行モードを介して、AEM Author、AEM Publish、またはその両方を対象にすることができます。
    3. `/var`リソースがAEMの作成者に対してのみ必要で、[repoint](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使って適切にモデル化できない場合は、AEM Authorに[embedded](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)するだけでインストールされる個別のコンテンツパッケージ(`<target>/apps/example-packages/content/install.author</target>`)に移動します。`all`
+   4. この[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)で説明されているように、`sling-distribution-importer`サービスユーザーに適切なACLを指定します。
 
 ### Adobeサポートケースの作成
 
