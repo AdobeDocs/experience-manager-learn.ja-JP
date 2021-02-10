@@ -8,12 +8,12 @@ feature: APIs
 activity: develop
 audience: developer
 kt: 6785
-thumbnail: 330519.jpg
+thumbnail: 330460.jpg
 translation-type: tm+mt
-source-git-commit: 733382dc0e0ca14d4bd6e49174ba33f8d7fc517d
+source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
 workflow-type: tm+mt
 source-wordcount: '585'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 このチュートリアルでは、外部アプリケーションがアクセストークンを使用して、HTTP経由のCloud ServiceとしてAEMをプログラム的に認証し、やり取りする方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
 ## 前提条件
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 外部アプリケーションの概要
 
-このチュートリアルでは、コマンドラインから[単純なNode.jsアプリケーション](./assets/aem-guides_token-authentication-external-application.zip)を実行し、[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)を使用してAEMのアセットメタデータをCloud Serviceとして更新します。
+このチュートリアルでは、コマンドラインから[単純なNode.jsアプリケーション](./assets/aem-guides_token-authentication-external-application.zip)を実行し、[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=ja)を使用してAEMのアセットメタデータをCloud Serviceとして更新します。
 
 Node.jsアプリケーションの実行フローは次のとおりです。
 
