@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## ディスパッチャーの設定{#dispatcher-configuration}
 
-キャッシュされたコンテンツで[!DNL CORS]ヘッダーのキャッシュと提供を可能にするには、サポートするすべてのAEM Publish `dispatcher.any`ファイルに次の設定を追加します。
+キャッシュされたコンテンツでCORSヘッダーのキャッシュと提供を可能にするには、[/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)の後に、すべてのサポートするAEM Publish `dispatcher.any`ファイルを追加します。
 
 ```
 /cache { 
   ...
-  /headers {
+  /clientheaders {
       "Access-Control-Allow-Origin",
       "Access-Control-Expose-Headers",
       "Access-Control-Max-Age",
@@ -115,7 +115,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 **フ** ァイルに変更を加えた後、Webサーバー `dispatcher.any` アプリケーションを再起動します。
 
-`/headers`構成の更新後の次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある可能性があります。
+`/clientheaders`構成の更新後の次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある可能性があります。
 
 ## サポート資料{#supporting-materials}
 
