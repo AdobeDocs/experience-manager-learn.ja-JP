@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobeアセットリンクv1.1で、AdobeアセットリンクとAEM Assets間�
 
 >[!NOTE]
 >
->Adobe Creative CloudのEnterprise IDまたはFederated IDのみを使用してください。 [Adobeアセットリンク](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html)用にAEMを設定していることを確認してください。
+>Adobe Creative CloudのEnterprise IDまたはFederated IDのみを使用してください。 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)用にAEMを設定していることを確認してください。
 
 
 ### Adobeアセットリンク機能
@@ -73,8 +73,6 @@ FPOレンディションは、元のアセットの軽量の代替レンディ�
 * BMP
 
 AEM Assetsの特定のアセットでFPOレンディションが使用できない場合、元の高解像度アセットが代わりに参照されます。 FPO画像の場合、ステータスFPOはInDesignリンクパネルに表示されます。
-
-
 
 ## AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}とのAdobeアセットリンク認証について
 
