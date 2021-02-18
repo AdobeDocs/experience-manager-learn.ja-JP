@@ -5,9 +5,9 @@ description: 'Adobe Experience Manager Sites のビデオとチュートリア�
 seo-description: Adobe Experience Manager Sites向けのビデオとチュートリアルの集まり
 sub-product: サイト、content services
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '363'
 ht-degree: 31%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 
 ## 新機能
 
-* **[AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[AEM Sitesでの起動の使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+
+   *AEMサイトの起動について、およびAEMサイトの起動回数を使用して将来のリリース向けにWebサイトのコンテンツを準備する方法について説明します。*
+
+* **[AEMコンポーネントを使用したAdobeクライアントデータレイヤーのカスタマイズ（チュートリアル）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
    *Adobeクライアントデータレイヤーを、カスタムのAEMコンポーネントのコンテンツで更新する方法について説明します。*
 
-* **[AEM Headless GraphQLの使用の手引き（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[AEM Headless GraphQLの使用の手引き（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
 
    *AEM GraphQL APIを使用して、AEMのコンテンツを公開し、ネイティブモバイルアプリで使用する方法。*
 
