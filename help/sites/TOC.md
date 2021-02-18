@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 34%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 34%
    + [編集可能なテンプレート](page-authoring/template-editor-feature-video-use.md)
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
+   + [ローンチ](page-authoring/launches.md)
 + コンポーネント {#components}
    + [コンポーネントの開発](components/component-development.md)
    + [コアコンポーネント](components/core-components-feature-video-understand.md)
