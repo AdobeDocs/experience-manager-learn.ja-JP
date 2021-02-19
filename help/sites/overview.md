@@ -5,7 +5,7 @@ description: 'Adobe Experience Manager Sites のビデオとチュートリア�
 seo-description: Adobe Experience Manager Sites向けのビデオとチュートリアルの集まり
 sub-product: サイト、content services
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 31%
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 
 ## 新機能
 
-* **[AEM Sitesでの起動の使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[AEM Sitesでの起動の使用（ビデオ）](./page-authoring/launches.md)**
 
    *AEMサイトの起動について、およびAEMサイトの起動回数を使用して将来のリリース向けにWebサイトのコンテンツを準備する方法について説明します。*
 
