@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 41%
+source-wordcount: '282'
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 41%
 + 基盤となるテクノロジ{#underlying-technology}
    + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
-   + [Java コンテンツリポジトリ](./underlying-technology/introduction-jcr.md)
+   + [Java コンテンツリポジトリー](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
    + [作成者と発行サービス](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
@@ -70,7 +70,7 @@ ht-degree: 41%
       + [概要](./debugging/cloud-service/overview.md)
       + [ログ](./debugging/cloud-service/logs.md)
       + [構築と導入](./debugging/cloud-service/build-and-deployment.md)
-      + [開発者コンソール](./debugging/cloud-service/developer-console.md)
+      + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + AEM{#accessing}へのアクセス
    + [概要](./accessing/overview.md)
@@ -103,5 +103,11 @@ ht-degree: 41%
    + アドバンス{#advanced}
       + [メタデータワーカー](./asset-compute/advanced/metadata.md)
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
++ 複数手順のTutorials{#multi-step-tutorials}
+   + [AEM Sites開発](./develop-wknd-tutorial.md)
+   + [GraphQL](../headless-tutorial/graphql/overview.md)
+   + [SPAエディタ（反応）](../spa-react-tutorial/overview.md)
+   + [SPAエディタ(Angular)](../spa-angular-tutorial/overview.md)
+   + [AEM SitesとAdobe Target](../aem-target-personalization/overview.md)
+   + [トークンベースの認証](../headless-tutorial/authentication/overview.md)
 
-+ [AEM Sites の開発の手引き - WKND チュートリアル](./develop-wknd-tutorial.md)
