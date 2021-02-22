@@ -1,8 +1,8 @@
 ---
-title: カスタムコンポーネントの作成 | AEM SPA EditorとAngularの使い始めに
+title: カスタムコンポーネントの作成 | AEM SPAエディタとAngularの使い始めに
 description: AEM SPAエディタで使用するカスタムコンポーネントを作成する方法を学びます。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
 sub-product: サイト
-feature: SPA Editor
+feature: SPAエディタ
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5831-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1507'
 ht-degree: 3%
 
 ---
@@ -238,9 +238,9 @@ SPAエディターのコンテキストでは、Slingモデルは、[Slingモデ
    >
    > [完了したCustomComponentImpl.javaをここ](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で表示できます。
 
-## 角度コンポーネントを更新する
+## Angularコンポーネントの更新
 
-カスタムコンポーネントの角度コードは既に作成されています。 次に、AngularコンポーネントをAEMコンポーネントにマップするために、いくつかの更新を行います。
+カスタムコンポーネントのAngularコードは既に作成されています。 次に、AngularコンポーネントをAEMコンポーネントにマップするために、いくつかの更新を行います。
 
 1. `ui.frontend`モジュールで`ui.frontend/src/app/components/custom/custom.component.ts`ファイルを開きます
 2. `@Input() message: string;`の行を確認します。 変換後の大文字の値は、この変数にマップされることが期待されます。
@@ -328,7 +328,7 @@ SPAエディターのコンテキストでは、Slingモデルは、[Slingモデ
 
    JSON値は、Slingモデルに追加されたロジックに基づいて、すべての大文字に設定されます。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 おめでとうございます。カスタムAEMコンポーネントの作成方法と、SlingモデルとダイアログがJSONモデルと連携する方法を学びました。
 
