@@ -1,8 +1,8 @@
 ---
-title: SPAコンポーネントのAEMコンポーネントへのマッピング | AEM SPA EditorとAngularの使い始めに
-description: AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマップする方法を学びます。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
+title: SPAコンポーネントのAEMコンポーネントへのマッピング | AEM SPAエディタとAngularの使い始めに
+description: AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
 sub-product: サイト
-feature: SPA Editor
+feature: SPAエディタ
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2389'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # SPAコンポーネントをAEMコンポーネントにマップ{#map-components}
 
-AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマップする方法を学びます。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
+AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
 
 この章では、AEM JSONモデルAPIについて詳しく説明し、AEMコンポーネントによって公開されたJSONコンテンツを、propとしてAngularコンポーネントに自動的に挿入する方法について説明します。
 
@@ -69,9 +69,9 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 基本的な概念は、SPAコンポーネントをAEMコンポーネントにマップすることです。 AEMコンポーネントでは、サーバーサイドで実行し、JSONモデルAPIの一部としてコンテンツを書き出します。 JSONコンテンツは、ブラウザーでクライアント側を実行するSPAで使用されます。 SPAコンポーネントとAEMコンポーネント間の1:1マッピングが作成されます。
 
-![AEMコンポーネントをAngularコンポーネントにマッピングする際の概要](./assets/map-components/high-level-approach.png)
+![AEMコンポーネントとAngularコンポーネントのマッピングの概要](./assets/map-components/high-level-approach.png)
 
-*AEMコンポーネントをAngularコンポーネントにマッピングする際の概要*
+*AEMコンポーネントとAngularコンポーネントのマッピングの概要*
 
 ## テキストコンポーネントのInspect
 
@@ -109,9 +109,9 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 3. 選択したIDEで、WKND SPA用のAEMプロジェクトを開きます。 `ui.frontend`モジュールを展開し、`ui.frontend/src/app/components/text/text.component.ts`の下の&#x200B;**text.component.ts**&#x200B;を開きます。
 
-   ![Text.js Angularコンポーネントのソースコード](assets/map-components/vscode-ide-text-js.png)
+   ![Text.jsAngularコンポーネントのソースコード](assets/map-components/vscode-ide-text-js.png)
 
-4. 最初に調べる領域は、～行35の`class TextComponent`です。
+4. 最初に調査する領域は、～行35の`class TextComponent`です。
 
    ```js
    export class TextComponent {
@@ -132,7 +132,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
    [@Input()](https://angular.io/api/core/Input) decoratorは、マップされたJSONオブジェクトを介して値が設定されるフィールドを宣言する際に使用します。
 
-   `@HostBinding('innerHtml') get content()` は、の値からオーサリング済みのテキストコンテンツを公開するメソッド `this.text`です。コンテンツがリッチテキストの場合（`this.richText`フラグで決まる）、Angularの組み込みセキュリティは無視されます。 Angularの[DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer)は、生のHTMLを「スクラブ」し、クロスサイトスクリプティングの脆弱性を防ぐために使用されます。 このメソッドは、[@HostBinding](https://angular.io/api/core/HostBinding)デコレーターを使用して`innerHtml`プロパティにバインドされます。
+   `@HostBinding('innerHtml') get content()` は、の値からオーサリング済みのテキストコンテンツを公開するメソッド `this.text`です。コンテンツがリッチテキストの場合（`this.richText`フラグで決定）、Angularの組み込みセキュリティは迂回されます。 Angularの[DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer)は、生のHTMLを「スクラブ」し、クロスサイトスクリプティングの脆弱性を防ぐために使用されます。 このメソッドは、[@HostBinding](https://angular.io/api/core/HostBinding)デコレーターを使用して`innerHtml`プロパティにバインドされます。
 
 5. 次に`TextEditConfig`を調べます。
 
@@ -152,7 +152,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
    MapTo('wknd-spa-angular/components/text')(TextComponent, TextEditConfig );
    ```
 
-   **aem** SPAエディタJS SDK(`@adobe/cq-angular-editable-components`)で提供されるMapTois。パス`wknd-spa-angular/components/text`は、AEMコンポーネントの`sling:resourceType`を表します。 このパスは、前に確認したJSONモデルによって公開された`:type`と一致します。 **MapToparsesはJSONモデルの応答を解析し、正しい値をSPAコンポーネントの**  `@Input()` 変数に渡します。
+   **AEM** SPAエディタJS SDK(`@adobe/cq-angular-editable-components`)で提供されるMapTois。パス`wknd-spa-angular/components/text`は、AEMコンポーネントの`sling:resourceType`を表します。 このパスは、前に確認したJSONモデルによって公開された`:type`と一致します。 **MapToparsesはJSONモデルの応答を解析し、正しい値をSPAコンポーネントの**  `@Input()` 変数に渡します。
 
    AEM `Text`コンポーネント定義は`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/text`にあります。
 
@@ -199,7 +199,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 ## 画像コンポーネントの作成
 
-次に、AEM [イメージコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)にマップする`Image`Angularコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
+次に、AEM [Angularコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)にマップする`Image`イメージコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
 
 ### InspectJSON
 
@@ -253,7 +253,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 ### 画像コンポーネントの実装
 
 1. **webpack dev server**&#x200B;を起動した場合は停止します。
-2. `ui.frontend`フォルダ内からAngular CLI `ng generate component`コマンドを実行して、新しいイメージコンポーネントを作成します。
+2. `ui.frontend`フォルダ内からAngularCLI `ng generate component`コマンドを実行して、新しいイメージコンポーネントを作成します。
 
    ```shell
    $ ng generate component components/image
@@ -300,7 +300,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 
    `hasImage()` は、イメージをレンダリングする必要があるかどうかを決定するメソッドです。
 
-   `MapTo` spaコンポーネントをにあるAEMコンポーネントにマップし `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`ます。
+   `MapTo` SPAコンポーネントをにあるAEMコンポーネントにマップし `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`ます。
 
 4. **image.component.html**&#x200B;を開き、次のように更新します。
 
@@ -363,7 +363,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. AEM開始画面で、**[!UICONTROL ツール]** > **[!UICONTROL テンプレート]** > **[WKND SPA Angular](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)**&#x200B;に移動します。
+2. AEM開始画面で、**[!UICONTROL ツール]** > **[!UICONTROL テンプレート]** > **[WKND SPAAngular](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)**&#x200B;に移動します。
 
    **SPAページ**&#x200B;を選択して編集します。
 
@@ -373,11 +373,11 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 
    ![レイアウトコンテナポリシー](./assets/map-components/layout-container-policy.png)
 
-4. **許可されているコンポーネント** > **WKND SPA Angular - Content**&#x200B;の下で、**イメージ**&#x200B;コンポーネントを確認します。
+4. **許可されているコンポーネント** > **WKND SPAAngular — コンテンツ** > **イメージ**&#x200B;コンポーネントを確認します。
 
    ![画像コンポーネントが選択されました](assets/map-components/check-image-component.png)
 
-   「**デフォルトコンポーネント** > **追加マッピング**」の下で、「**画像 — WKND SPA Angular — コンテンツ**」コンポーネントを選択します。
+   **デフォルトコンポーネント** > **追加マッピング**&#x200B;の下で、**画像 — WKND SPAAngular — コンテンツ**&#x200B;コンポーネントを選択します。
 
    ![デフォルトコンポーネントの設定](assets/map-components/default-components.png)
 
@@ -455,7 +455,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 
    ![チャプターサンプル最終オーサリング](assets/map-components/final-page.png)
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPAコンポーネントをAEMコンポーネントにマップする方法を学び、新しい`Image`コンポーネントを実装しました。 **レイアウトコンテナ**&#x200B;のレスポンシブ機能を調べる機会もあります。
 
@@ -463,7 +463,7 @@ SPAコンポーネントをAEMコンポーネントにマップする方法を�
 
 ### 次の手順 {#next-steps}
 
-[ナビゲーションとルーティング](navigation-routing.md) - SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数の表示をどのようにサポートできるかを学びます。ダイナミックナビゲーションはAngular Routerを使用して実装され、既存のヘッダコンポーネントに追加されます。
+[ナビゲーションとルーティング](navigation-routing.md) - SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数の表示をどのようにサポートできるかを学びます。ダイナミックナビゲーションは、Angularルータを使用して実装され、既存のヘッダコンポーネントに追加されます。
 
 ## ボーナス — ソース管理{#bonus}に対する構成の永続化
 
