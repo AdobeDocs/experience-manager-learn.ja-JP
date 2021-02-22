@@ -1,8 +1,8 @@
 ---
-title: SPAの統合 | AEM SPA EditorとAngularの使い始めに
-description: Angularで記述された単一ページアプリケーション(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対するSPAの開発を迅速に行うために、AngularのCLIツールなど、最新のフロントエンドツールを使用する方法を学びます。
+title: SPAの統合 | AEM SPAエディタとAngularの使い始めに
+description: Angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AngularのCLIツールなど、最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を学びます。
 sub-product: サイト
-feature: SPA Editor
+feature: SPAエディタ
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5310-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2204'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # SPAを統合する{#integrate-spa}
 
-Angularで記述された単一ページアプリケーション(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
+Angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
 
 ## 目的
 
@@ -100,7 +100,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
    "@angular/router": "~9.1.10",
    ```
 
-   `ui.frontend`モジュールは、ルーティングを含む[Angular CLIツール](https://angular.io/cli)を使用して生成された[Angularアプリケーション](https://angular.io)です。
+   `ui.frontend`モジュールは、ルーティングを含む[AngularCLIツール](https://angular.io/cli)を使用して生成された[Angularアプリケーション](https://angular.io)です。
 
 4. また、`@adobe`というプリフィックスが付いた3つの依存関係もあります。
 
@@ -124,11 +124,11 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
    }
    ```
 
-   これらのスクリプトは、一般的な[Angular CLIコマンド](https://angular.io/cli/build)に基づいていますが、大規模なAEMプロジェクトで動作するように若干変更されています。
+   これらのスクリプトは、一般的な[AngularCLIコマンド](https://angular.io/cli/build)に基づいていますが、大規模なAEMプロジェクトで動作するように若干変更されています。
 
-   `start` - AngularアプリをローカルWebサーバーを使用してローカルで実行します。ローカルAEMインスタンスのコンテンツをプロキシするように更新されました。
+   `start` -AngularアプリをローカルWebサーバーを使用してローカルで実行します。ローカルAEMインスタンスのコンテンツをプロキシするように更新されました。
 
-   `build` - Angularアプリケーションをコンパイルして実稼働環境に配布します。`&& clientlib`を追加すると、ビルド中にコンパイルされたSPAをクライアント側ライブラリとして`ui.apps`モジュールにコピーします。 npmモジュール[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)を使用して、この処理を容易にします。
+   `build` -Angular版アプリをコンパイルして実稼働版を配布します。`&& clientlib`を追加すると、ビルド中にコンパイルされたSPAをクライアント側ライブラリとして`ui.apps`モジュールにコピーします。 npmモジュール[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)を使用して、この処理を容易にします。
 
    使用可能なスクリプトの詳細は、[](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
 
@@ -175,7 +175,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
    $ cd aem-guides-wknd-spa/ui.frontend
    ```
 
-2. [Angular CLI](https://angular.io/cli#installing-angular-cli)をグローバルにインストール：Angularコンポーネントの生成、および&#x200B;**ng**&#x200B;コマンドを使用したAngularアプリケーションの構築と処理に使用します。
+2. [AngularCLI](https://angular.io/cli#installing-angular-cli)をグローバルにインストールします。これは、Angularコンポーネントの生成、および&#x200B;**ng**&#x200B;コマンドを使用したAngularアプリケーションの構築と提供に使用します。
 
    ```shell
    $ npm install -g @angular/cli
@@ -183,9 +183,9 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
 
    >[!CAUTION]
    >
-   > このプロジェクトで使用される&#x200B;**@angular/cli**&#x200B;のバージョンは&#x200B;**9.1.7**&#x200B;です。 Angular CLIのバージョンを同期させておくことを推奨します。
+   > このプロジェクトで使用される&#x200B;**@angular/cli**&#x200B;のバージョンは&#x200B;**9.1.7**&#x200B;です。 AngularのCLIのバージョンを同期させておくことをお勧めします。
 
-3. `ui.frontend`フォルダ内からAngular CLI `ng generate component`コマンドを実行して、新しい`Header`コンポーネントを作成します。
+3. 新しい`Header`コンポーネントを作成するには、`ui.frontend`フォルダ内からAngularCLI `ng generate component`コマンドを実行します。
 
    ```shell
    $ ng generate component components/header
@@ -197,7 +197,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
    UPDATE src/app/app.module.ts (1809 bytes)
    ```
 
-   これにより、`ui.frontend/src/app/components/header`に新しいAngular Headerコンポーネントのスケルトンが作成されます。
+   これにより、`ui.frontend/src/app/components/header`に新しいAngularヘッダコンポーネント用のスケルトンが作成されます。
 
 4. 任意のIDEで`aem-guides-wknd-spa`プロジェクトを開きます。 `ui.frontend/src/app/components/header` フォルダーに移動し、
 
@@ -214,7 +214,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
    </header>
    ```
 
-   これは静的な内容を表示するので、このAngularコンポーネントは、デフォルトで生成された`header.component.ts`に対する調整を必要としません。
+   これは静的コンテンツを表示するので、このAngularコンポーネントでは、デフォルトで生成された`header.component.ts`を調整する必要はありません。
 
 6. `ui.frontend/src/app/app.component.html`にある&#x200B;**app.component.html**&#x200B;を開きます。 追加`app-header`:
 
@@ -403,7 +403,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
        },
    ```
 
-   ![Angular JSON開発アセットの更新フォルダー](assets/integrate-spa/dev-assets-update-folder.png)
+   ![AngularJSON開発アセットの更新フォルダー](assets/integrate-spa/dev-assets-update-folder.png)
 
    専用の&#x200B;**dev**&#x200B;設定を作成すると、**mocks**&#x200B;フォルダーは開発時にのみ使用され、実稼働ビルドではAEMにはデプロイされません。
 
@@ -420,7 +420,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
      ...
    ```
 
-   ![Angular JSONビルド開発の更新](assets/integrate-spa/angular-json-build-dev-update.png)
+   ![AngularJSONビルド開発の更新](assets/integrate-spa/angular-json-build-dev-update.png)
 
 7. ファイル`ui.frontend/package.json`を開き、新しい&#x200B;**開始:mock**&#x200B;コマンドを追加して、**proxy.mock.conf.json**&#x200B;ファイルを参照します。
 
@@ -458,7 +458,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
 
 次に、更新された一部のスタイルがプロジェクトに追加されます。 このプロジェクトは、変数のような役に立つ機能を[Sass](https://sass-lang.com/)に追加します。
 
-1. ターミナルウィンドウを開き、起動した場合は&#x200B;**webpack dev server**&#x200B;を停止します。 `ui.frontend`フォルダー内から次のコマンドを入力し、Angularアプリを更新して&#x200B;**.scss**&#x200B;ファイルを処理します。
+1. ターミナルウィンドウを開き、起動した場合は&#x200B;**webpack dev server**&#x200B;を停止します。 `ui.frontend`フォルダー内から次のコマンドを入力し、**.scss**&#x200B;ファイルを処理するようにAngularアプリを更新します。
 
    ```shell
    $ cd ui.frontend
@@ -647,7 +647,7 @@ Angularで記述された単一ページアプリケーション(SPA)のソー�
 
    更新されたSPAがAEMになったので、オーサリングを続行できます。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPAを更新し、AEMとの統合を確認しました。 これで、**webpack dev server**&#x200B;を使用してAEM JSONモデルAPIに対してSPAを開発する2つの異なる方法がわかります。
 
@@ -655,4 +655,4 @@ SPAを更新し、AEMとの統合を確認しました。 これで、**webpack 
 
 ### 次の手順 {#next-steps}
 
-[SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md) - AEM SPAエディタJS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマップする方法を学びます。コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントに対して動的な更新を行うことができます。
+[SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md) - AEMSPA  Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントに対して動的な更新を行うことができます。
