@@ -1,8 +1,8 @@
 ---
-title: SPA Editorプロジェクト | AEM SPA EditorとAngularの使い始めに
-description: AEM SPAエディタと統合されたAngularアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を学びます。
+title: SPA Editorプロジェクト | AEM SPAエディタとAngularの使い始めに
+description: AEM SPA Editorと統合されたAngularアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を説明します。
 sub-product: サイト
-feature: maven-archetype
+feature: メーブン・アーキタイプ
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -13,7 +13,7 @@ thumbnail: 5309-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1110'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 # SPAエディタプロジェクト{#create-project}
 
-AEM SPAエディタと統合されたAngularアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を学びます。
+AEM SPA Editorと統合されたAngularアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を説明します。
 
 ## 目的
 
@@ -30,9 +30,9 @@ AEM SPAエディタと統合されたAngularアプリケーションの起点と
 
 ## 作成する内容
 
-この章では、[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)に基づいて、新しいAEMプロジェクトを導入します。 AEMプロジェクトは、Angular SPAの非常に簡単な開始点でブートストラップされます。 本章で使用するプロジェクトは、WKND SPAの実装の基盤となり、今後の章で構築される予定です。
+この章では、[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)に基づいて、新しいAEMプロジェクトを導入します。 AEMプロジェクトは、AngularSPAの非常に簡単な開始点でブートストラップされます。 本章で使用するプロジェクトは、WKND SPAの実装の基盤となり、今後の章で構築される予定です。
 
-![WKND SPA Angular Starterプロジェクト](./assets/create-project/what-you-will-build.png)
+![WKND SPAAngularスタータープロジェクト](./assets/create-project/what-you-will-build.png)
 
 *古典的な「ハローワールド」メッセージです。*
 
@@ -46,7 +46,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
 >[!CAUTION]
 >
->[アーキタイプ](https://github.com/adobe/aem-project-archetype)の&#x200B;**最新**&#x200B;版を使用して、現実世界での実装用の新しいプロジェクトを生成することがベストプラクティスです。 AEMプロジェクトでは、アーキタイプの`aemVersion`プロパティを使用してAEMの単一バージョンをターゲットする必要があります。
+>[アーキタイプ](https://github.com/adobe/aem-project-archetype)の&#x200B;**最新バージョン**&#x200B;を使用して、現実世界での実装用の新しいプロジェクトを生成することがベストプラクティスです。 AEMプロジェクトでは、アーキタイプの`aemVersion`プロパティを使用してAEMの単一バージョンをターゲットする必要があります。
 
 1. Gitを介して、このチュートリアルのスタートポイントをダウンロードします。
 
@@ -79,7 +79,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    | プロパティ | 値 |
    |-----------------|---------------------------------------|
    | aemVersion | クラウド |
-   | appTitle | WKND SPA角度 |
+   | appTitle | WKNDSPAAngular |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
    | frontendModule | 角 |
@@ -88,7 +88,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
    >[!NOTE]
    >
-   > `frontendModule=angular`プロパティに注目してください。 これにより、AEM SPAエディタで使用するスターター[Angularコードベース](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を使用して、AEMプロジェクトのアーキタイプにプロジェクトをブートストラップするように指示します。
+   > `frontendModule=angular`プロパティに注目してください。 これにより、AEM SPAエディタで使用するスターター[Angularコードベース](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を使用して、AEMプロジェクトのアーキタイプがプロジェクトをブートストラップするように指示します。
 
 ## プロジェクトの構築
 
@@ -192,7 +192,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    ...
    ```
 
-   `clientlib-angular.min.js` は、ページに読み込まれ、コンテンツのレンダリングを行うAngular SPAです。
+   `clientlib-angular.min.js` は、ページに読み込まれ、コンテンツのレンダリングを行うAngularSPAです。
 
    *コンテンツの提供元*
 
@@ -229,7 +229,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    >
    > JSON出力の形式を自動的に設定するには、ブラウザー拡張機能をインストールすると便利です。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 AEM SPA Editorプロジェクトを初めて作成しました。
 
