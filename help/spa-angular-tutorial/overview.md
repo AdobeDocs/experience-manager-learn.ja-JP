@@ -1,6 +1,6 @@
 ---
 title: AEM SPA エディターと Angular の使用の手引き
-description: WKND SPAを備えたAdobe Experience Manager、AEMで編集可能な最初のAngular Single Page Application(SPA)を作成します。 AEM SPAエディタでAngular JSフレームワークを使用してSPAを作成する方法を説明します。 このマルチパートチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 このチュートリアルでは、SPAの作成とAEMとの統合の最後までを説明します。
+description: WKND SPAを使用し、Adobe Experience Manager(AEM)で編集可能な最初のAngularシングルページアプリケーション(SPA)を作成します。 SPA editorでAngularJSフレームワークを使用してSPAを作成する方法を説明します。 このマルチパートチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの導入について説明します。 このチュートリアルでは、SPAの作成とAEMとの統合の最後までを説明します。
 sub-product: サイト
 topics: development
 version: cloud-service
@@ -20,7 +20,7 @@ ht-degree: 18%
 
 # AEM での Angular SPA の作成（チュートリアル） {#introduction}
 
-Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの実装について説明します。 Angularアプリは、AngularコンポーネントをAEMコンポーネントにマッピングするAEM SPA Editorでデプロイするように開発および設計されます。 完成したSPAは、AEMに導入され、従来のAEMのインライン編集ツールで動的に作成できます。
+Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの導入について説明します。 Angularアプリは、AEM SPA Editorでデプロイされるように開発、設計されます。  Editorは、AngularコンポーネントをAEMコンポーネントにマッピングします。 完成したSPAは、AEMに導入され、AEMの従来のインライン編集ツールで動的に作成できます。
 
 ![最終的なSPAの実装](assets/wknd-spa-implementation.png)
 
@@ -50,8 +50,8 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 このチュートリアルを開始する前に、次の情報が必要です。
 
 * HTML、CSS、JavaScriptに関する基本的な知識
-* [Angular](https://angular.io/)に関する基本的な知識
-* [CLOUD SERVICESDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、AEM 6.5.4+ [または](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [Angular](https://angular.io/)の基本的な知識
+* [Cloud ServiceSDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、AEM 6.5.4+ [または](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.](https://nodejs.org/ja/) jsand  [npm](https://www.npmjs.com/)
