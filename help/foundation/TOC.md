@@ -5,10 +5,10 @@ user-guide-description: 'Adobe Experience Manager Foundation のビデオやチ�
 sub-product: 基礎
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 19%
+source-wordcount: '147'
+ht-degree: 21%
 
 ---
 
@@ -46,6 +46,5 @@ ht-degree: 19%
 + ワークフロー {#workflow}
    + [ワークフローエディターの使用](./workflow/use-the-workflow-editor.md)
    + [ワークフロー管理の使用](./workflow/use-workflow-management.md)
-   + [AEMプロジェクトと受信トレイでカレンダー表示を使用する](./workflow/use-the-calendar-view-with-aem-projects-and-inbox.md)
    + [受信トレイを使用する](./workflow/use-the-inbox.md)
 
