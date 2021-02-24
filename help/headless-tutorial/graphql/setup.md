@@ -11,10 +11,10 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 3%
+source-wordcount: '1819'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 次のツールをローカルにインストールする必要があります。
 
-* [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
+* [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
 * [Node.js v10 以降](https://nodejs.org/ja/)
 * [npm 6 以降](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
@@ -38,9 +38,9 @@ ht-degree: 3%
 1. WKNDリファレンスサイトからサンプルコンテンツをダウンロードしてインストールします。
 1. GraphQL APIを使用して、コンテンツを利用するためのサンプルアプリをダウンロードしてインストールします。
 
-## AEM SDK{#aem-sdk}のインストール
+## AEM SDK {#aem-sdk}のインストール
 
-このチュートリアルでは、[AEMをCloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk)として使用し、AEM GraphQL APIを調べます。 この節では、AEM SDKをインストールして作成者モードで実行するクイックガイドを示します。 ローカル開発環境[の設定に関する詳細なガイドは、](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up)にあります。
+このチュートリアルでは、[AEMをCloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk)として使用し、AEM GraphQL APIを調べます。 この節では、AEM SDKをインストールして作成者モードで実行するクイックガイドを示します。 ローカル開発環境[の設定に関する詳細なガイドは、](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja#local-development-environment-set-up)にあります。
 
 >[!NOTE]
 >
@@ -56,6 +56,9 @@ ht-degree: 3%
 
 1. ダウンロードを解凍し、Quickstart jar(`aem-sdk-quickstart-XXX.jar`)を専用のフォルダー(`~/aem-sdk/author`)にコピーします。
 1. jarファイルの名前を`aem-author-p4502.jar`に変更します。
+
+   `author`名は、Quickstart jarが作成者モードで開始することを示します。 `p4502`は、Quickstartサーバーがポート4502で実行されることを指定します。
+
 1. 新しいターミナルウィンドウを開き、jarファイルを含むフォルダに移動します。 次のコマンドを実行して、AEMインスタンスをインストールし、開始します。
 
    ```shell
@@ -67,9 +70,11 @@ ht-degree: 3%
 1. 数分後、AEMインスタンスがインストールを終了し、新しいブラウザーウィンドウが[http://localhost:4502](http://localhost:4502)に開きます。
 1. ユーザー名`admin`とパスワード`admin`を使用してログインします。
 
-## サンプルコンテンツ{#wknd-site}のインストール
+## サンプルコンテンツとGraphQLエンドポイント{#wknd-site-content-endpoints}をインストールします。
 
-WKNDリファレンスサイトのサンプルコンテンツが、チュートリアルの迅速化のためにインストールされます。 WKNDは架空のライフスタイルのブランドで、AEMトレーニングと組み合わせてよく使用されます。
+**WKNDリファレンスサイト**&#x200B;のサンプルコンテンツが、チュートリアルの迅速化のためにインストールされます。 WKNDは架空のライフスタイルのブランドで、AEMトレーニングと組み合わせてよく使用されます。
+
+WKNDリファレンスサイトには、[GraphQLエンドポイント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint)を公開するために必要な設定が含まれています。 実際の実装では、ドキュメントに記載されている手順に従って[お客様のプロジェクトにGraphQLエンドポイント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint)を含めます。 [CORS](#cors-config)もWKNDサイトの一部としてパッケージ化されました。 外部アプリケーションへのアクセスを許可するには、CORS設定が必要です。[CORS](#cors-config)に関する詳細は、以下を参照してください。
 
 1. WKND用に最新のコンパイル済みAEMパッケージをダウンロードします。[aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest)
 
@@ -108,16 +113,6 @@ WKNDリファレンスサイトのサンプルコンテンツが、チュート�
 >
 > Cloud Service環境を使用している場合は、WKNDリファレンスサイトのようなコードベースをCloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=ja#deploying)に[導入する方法に関するドキュメントを参照してください。
 
-## GraphQLエンドポイントのインストール{#graphql-endpoint}
-
-GraphQLエンドポイントを設定する必要があります。 これにより、GraphQL APIが公開される正確なエンドポイントを柔軟に決定できます。 [CORS](#cors-config)は、外部アプリケーションへのアクセスを許可するためにも必要です。 パッケージが事前に作成されている場合のチュートリアルを迅速に実行できます。
-
-1. [aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)パッケージをダウンロードします。
-1. **AEM開始**&#x200B;メニューから&#x200B;**ツール**/**展開**/**パッケージ**&#x200B;に移動します。
-1. 「パッケージ&#x200B;**アップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。 **「**&#x200B;をインストール」をクリックして、パッケージをインストールします。
-
-上記のパッケージには、後の章で使用する[GraphicQLツール](https://github.com/graphql/graphiql)も含まれています。 CORS設定に関する詳細は、[](#cors-config)の下にあります。
-
 ## サンプルアプリ{#sample-app}をインストール
 
 このチュートリアルの目標の1つは、GraphQL APIを使用して、外部アプリケーションからAEMコンテンツを使用する方法を示すことです。 このチュートリアルでは、部分的に完成したReact Appの例を使用して、このチュートリアルをすばやく実行します。 iOS、Android、その他のプラットフォームで作成したアプリにも、同じレッスンと概念が適用されます。 Reactアプリは、不必要な複雑さを避けるため、意図的に単純です。これは、リファレンス実装ではありません。
@@ -132,11 +127,11 @@ GraphQLエンドポイントを設定する必要があります。 これによ
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
-   REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/endpoint.gql
+   REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   `React_APP_HOST_URI`がローカルのAEMインスタンスと一致することを確認します。 この章では、React AppをAEM **作成者**&#x200B;環境に直接接続します。したがって、認証が必要になります。 これは、AEM環境ーにすばやく変更を加え、アプリに即座に反映されるので、開発時の一般的な方法です。
+   `React_APP_HOST_URI`がローカルのAEMインスタンスと一致することを確認します。 この章では、React AppをAEM **作成者**&#x200B;環境に直接接続します。 **デフォルトの** 認証環境では認証が必要なので、アプリは `admin` ユーザーとして接続します。これは、AEM環境ーにすばやく変更を加え、アプリに即座に反映されるので、開発時の一般的な方法です。
 
    >[!NOTE]
    >
@@ -160,7 +155,7 @@ GraphQLエンドポイントを設定する必要があります。 これによ
 
    ![アドベンチャー詳細表示](assets/setup/adventure-details-view.png)
 
-1. ブラウザーの開発者ツールを使用して、**ネットワーク**&#x200B;リクエストを調べます。 **XHR**&#x200B;リクエストを表示し、`/content/graphql/endpoint.gql`に対する複数のPOSTリクエストを観察します。これは、AEM用に設定されたGraphQLエンドポイントです。
+1. ブラウザーの開発者ツールを使用して、**ネットワーク**&#x200B;リクエストを調べます。 **XHR**&#x200B;リクエストを表示し、`/content/graphql/global/endpoint.json`に対する複数のPOSTリクエストを観察します。これは、AEM用に設定されたGraphQLエンドポイントです。
 
    ![GraphQL Endpoint XHR要求](assets/setup/endpoint-gql.png)
 
@@ -189,7 +184,29 @@ Reactアプリが実行されたら、AEMのコンテンツを更新し、変更
 
    ![更新版バリサーフキャンプアドベンチャー](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## バリデーターが{#congratulations}
+## GraphiQLツールのインストール{#install-graphiql}
+
+[](https://github.com/graphql/graphiql) GraphiQLは開発ツールで、開発やローカルインスタンスのような下位レベルの環境でのみ必要です。GraphicQL IDEを使用すると、返されたクエリとデータをすばやくテストし、調整できます。 また、GraphiQLではドキュメントに簡単にアクセスでき、使用可能な方法を簡単に確認し、理解できます。
+
+1. **[Cloud Service**&#x200B;として、Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**>** AEMに移動します。
+1. 「GraphiQL」を探します（**GraphiQL**&#x200B;には&#x200B;**i**&#x200B;を必ず含めてください）。
+1. 最新の&#x200B;**GraphicQL Content Package v.x.x.x**&#x200B;をダウンロードします。
+
+   ![GraphiQLパッケージのダウンロード](assets/explore-graphql-api/software-distribution.png)
+
+   zipファイルは、直接インストールできるAEMパッケージです。
+
+1. **AEM開始**&#x200B;メニューから&#x200B;**ツール**/**展開**/**パッケージ**&#x200B;に移動します。
+1. 「パッケージ&#x200B;**アップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。 **「**&#x200B;をインストール」をクリックして、パッケージをインストールします。
+
+   ![GraphiQLパッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)
+1. [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)にあるGraphiQL IDEに移動し、GraphQL APIの調査を開始します。
+
+   >[!NOTE]
+   >
+   > GraphiQLツールとGraphQL APIについては、[詳細は、チュートリアル](./explore-graphql-api.md)で後述します。
+
+## これで完了です! {#congratulations}
 
 GraphQLを使用して、AEMコンテンツを消費する外部アプリケーションが提供されました。 Reactアプリ内のコードを自由に調べて、既存のコンテンツフラグメントの変更を試し続けます。
 
@@ -201,24 +218,30 @@ GraphQLを使用して、AEMコンテンツを消費する外部アプリケー�
 
 AEMは、デフォルトでセキュリティ保護されているので、接触チャネル間のリクエストをブロックし、許可されていないアプリケーションがコンテンツに接続して表示するのを防ぎます。
 
-このチュートリアルのReactアプリがAEM GraphQL APIエンドポイントとやり取りできるように、GraphQLエンドポイントパッケージで接触チャネル間のリソース共有の設定が定義されています。
+このチュートリアルのReact AppがAEM GraphQL APIエンドポイントとやり取りできるように、接触チャネル間のリソース共有の設定がWKNDサイトリファレンスプロジェクトに定義されています。
 
-![接触チャネル間のリソース共有の設定](./assets/setup/cross-origin-resource-sharing-configuration.png)
+![接触チャネル間のリソース共有の設定](assets/setup/cross-origin-resource-sharing-configuration.png)
 
-手動で設定するには：
+デプロイ済みの設定を表示するには：
 
-1. **ツール**/**操作**/**Webコンソール**&#x200B;にあるAEM SDKのWebコンソールに移動します。
-1. **AdobeGranite Cross-接触チャネルリソース共有ポリシー**&#x200B;のラベルの付いた行をクリックして、新しい構成を作成します
-1. 他のフィールドはデフォルト値のままにして、次のフィールドを更新します。
-   * 許可されている接触チャネル:`localhost:3000`
-   * 許可されている接触チャネル(Regex):`.* `
-   * 許可されているパス: `/content/graphql/endpoint.gql`
+1. AEM SDKのWebコンソール([http://localhost:4502/system/console](http://localhost:4502/system/console))に移動します。
+
+   >[!NOTE]
+   >
+   > Webコンソールは、SDKでのみ使用できます。 AEMでは、Cloud Service環境としてこの情報は[デベロッパーコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html)から表示できます。
+
+1. 上部のメニューで、**OSGI** > **設定**&#x200B;をクリックして、すべての[OSGi設定](http://localhost:4502/system/console/configMgr)を表示します。
+1. **AdobeGranite Cross-接触チャネルリソース共有**&#x200B;ページを下にスクロールします。
+1. `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`の設定をクリックします。
+1. 次のフィールドが更新されました。
+   * 許可されている接触チャネル(Regex):`http://localhost:.*`
+      * すべてのローカルホスト接続を許可します。
+   * 許可されているパス: `/content/graphql/global/endpoint.json`
+      * これは、現在設定されている唯一のGraphQLエンドポイントです。 ベストプラクティスとして、CORの設定は、可能な限り制限を加える必要があります。
    * 許可されているメソッド：`GET`、`HEAD`、`POST`
       * GraphQLでは`POST`のみが必要ですが、AEMとヘッドレスに対話する場合は他の方法が役に立ちます。
+   * サポートされるヘッダー：作成者環境の基本認証で渡す&#x200B;**authorization**&#x200B;が追加されました。
    * 秘密鍵証明書のサポート：`Yes`
-      * これは、React AppがAEM Authorサービス上の保護されたGraphQLエンドポイントと通信する際に必要となります。
-1. 「**保存**」をクリックします。
+      * これは、React AppがAEM Authorサービスの保護されたGraphQLエンドポイントと通信する際に必要となります。
 
-この設定では、`localhost:3000`からAEM Authorサービスに対する`POST` HTTP要求をパス`/content/graphql/endpoint.gql`で許可します。
-
-この設定とGraphQLエンドポイントは、AEMプロジェクトから生成されます。 [詳細はこちら](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project)。
+この設定とGraphQLエンドポイントは、AEM WKNDプロジェクトの一部です。 すべての[OSGi設定を表示するには、](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig)ここを参照してください。
