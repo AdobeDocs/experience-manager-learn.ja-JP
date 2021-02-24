@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
+source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 35%
+source-wordcount: '329'
+ht-degree: 36%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 35%
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ ローカル開発環境のセットアップ{#local-development-environment-set-up}
++ ローカル開発環境のセットアップ{#local-development-environment-setup}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [ローカルAEMランタイム](./local-development-environment/aem-runtime.md)
@@ -58,6 +58,7 @@ ht-degree: 35%
       + [コンテンツの公開](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [ディスパッチャー設定の移行](./developing/basics/dispatcher-configuration.md)
+   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service-javadoc/)
 + AEM{#debugging}のデバッグ
    + AEM SDK{#debugging-aem-sdk}のデバッグ
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
