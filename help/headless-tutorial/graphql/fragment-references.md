@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '848'
 ht-degree: 2%
 
 ---
@@ -234,13 +234,10 @@ ht-degree: 2%
 
    ![寄稿者がアプリに追加された](assets/fragment-references/contributor-added-detail.png)
 
-## その他のリソース
-
-コンテンツフラグメントとGraphQLの詳細については、次のリソースを参照してください。
-
-* [GraphQLでのコンテンツフラグメントを使用したヘッドレスコンテンツ配信](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [AEM GraphQL API（コンテンツフラグメントで使用）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-
-## おめでとう！{#congratulations}
+## これで完了です!{#congratulations}
 
 バリデーターが既存のコンテンツフラグメントモデルを更新し、**フラグメント参照**&#x200B;フィールドを使用して、ネストされたコンテンツフラグメントを参照するようにしました。 また、GraphQLクエリを修正して、参照モデルからフィールドを含める方法も学びました。
+
+## 次の手順 {#next-steps}
+
+次章「[AEM発行環境を使用した実稼働環境へのデプロイメント](./production-deployment.md)」では、AEMの作成者サービスと発行サービス、およびヘッドレスアプリケーション向けの推奨されるデプロイメントパターンについて説明します。 環境変数を使用してターゲット環境に基づいてGraphQLエンドポイントを動的に変更するように、既存のアプリケーションを更新します。 また、接触チャネル間のリソース共有(CORS)にAEMを適切に設定する方法も学習します。
