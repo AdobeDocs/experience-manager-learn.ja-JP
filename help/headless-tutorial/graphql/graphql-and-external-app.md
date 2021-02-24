@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 1%
@@ -68,11 +68,11 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
 
 1. [http://localhost:3000/](http://localhost:3000/)にあるアプリを確認します。 サンプルのReactアプリには、2つの主要な部分があります。
 
-   * ホームエクスペリエンスはWKND Adventuresのインデックスとして機能しますが、AEMでGraphQLを使用して&#x200B;__Adventure__ Content Fragmentsをクエリします。 この章では、この表示を変更して、アクティビティによる冒険のフィルタリングをサポートします。
+   * ホームエクスペリエンスは、AEMの&#x200B;__アドベンチャー__&#x200B;コンテンツフラグメントにGraphQLを使用してクエリを実行することで、WKNDアドベンチャーのインデックスとして機能します。 この章では、この表示を変更して、アクティビティによる冒険のフィルタリングをサポートします。
 
       ![WKND GraphQL Reactアプリ — ホームエクスペリエンス](./assets/graphql-and-external-app/react-home-view.png)
 
-   * アドベンチャー詳細エクスペリエンス。GraphQLを使用して、特定の&#x200B;__アドベンチャー__&#x200B;コンテンツフラグメントをクエリし、さらに多くのデータポイントを表示します。
+   * アドベンチャーの詳細エクスペリエンス。GraphQLを使用して、特定の&#x200B;__アドベンチャー__&#x200B;コンテンツフラグメントをクエリし、さらに多くのデータポイントを表示します。
 
       ![WKND GraphQL Reactアプリ — 詳細なエクスペリエンス](./assets/graphql-and-external-app/react-details-view.png)
 
@@ -341,7 +341,7 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
 
 1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリケーションを正しい状態に戻します。
 
-## おめでとう！{#congratulations}
+## これで完了です!{#congratulations}
 
 バリデーターがサンプルWKND GraphQL Reactアプリのコードを確認し、パラメータ化されたGraphQLクエリを使用して、アクティビティによるリストのアドベンチャーにフィルターするように更新しました。 また、基本的なエラー処理を調べることもできます。
 
