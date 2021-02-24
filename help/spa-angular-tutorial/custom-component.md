@@ -238,7 +238,7 @@ SPAエディターのコンテキストでは、Slingモデルは、[Slingモデ
    >
    > [完了したCustomComponentImpl.javaをここ](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で表示できます。
 
-## Angularコンポーネントの更新
+## angularコンポーネントの更新
 
 カスタムコンポーネントのAngularコードは既に作成されています。 次に、AngularコンポーネントをAEMコンポーネントにマップするために、いくつかの更新を行います。
 
