@@ -313,7 +313,7 @@ AEMページとSPAエディタSDKを使用して、SPAで複数の表示をサ�
 
    AEMページの階層性は、ナビゲーションメニューの入力に使用できるJSONでモデル化されます。 `Header`コンポーネントは[ナビゲーションコアコンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/templating/navigation.html)のすべての機能を継承し、JSONを通じて公開されたコンテンツはAngular`@Input`注釈に自動的にマッピングされます。
 
-2. 新しいターミナルウィンドウを開き、SPAプロジェクトの`ui.frontend`フォルダに移動します。 AngularCLIツールを使用して、新しい`NavigationComponent`を作成します。
+2. 新しいターミナルウィンドウを開き、SPAプロジェクトの`ui.frontend`フォルダに移動します。 angularCLIツールを使用して、新しい`NavigationComponent`を作成します。
 
    ```shell
    $ cd ui.frontend
@@ -700,7 +700,7 @@ AEMページとSPAエディタSDKを使用して、SPAで複数の表示をサ�
 
    >[!CAUTION]
    >
-   > Angularプロジェクトでは、非常に厳密なリント規則が有効になっています。 Mavenビルドが失敗した場合は、エラーを確認し、**Lintエラーがリストファイルに見つかったかどうかを確認します。**」を選択します。リンターで見つかった問題を修正し、Mavenコマンドを再実行します。
+   > angularプロジェクトでは、非常に厳密なリント規則が有効になっています。 Mavenビルドが失敗した場合は、エラーを確認し、**Lintエラーがリストファイルに見つかったかどうかを確認します。**」を選択します。リンターで見つかった問題を修正し、Mavenコマンドを再実行します。
 
 2. AEMのSPAホームページに移動します。[http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html)を開き、ブラウザーの開発者ツールを開きます。 以下のスクリーンショットは、Google Chromeブラウザーからキャプチャされたものです。
 
