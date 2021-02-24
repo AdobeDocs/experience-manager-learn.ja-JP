@@ -1,6 +1,6 @@
 ---
 title: SPAの統合 | AEM SPAエディタとAngularの使い始めに
-description: Angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AngularのCLIツールなど、最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を学びます。
+description: angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 angularのCLIツールなど、最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を学びます。
 sub-product: サイト
 feature: SPAエディタ
 topics: development
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # SPAを統合する{#integrate-spa}
 
-Angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
+angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
 
 ## 目的
 
@@ -183,7 +183,7 @@ Angularで記述された単一ページアプリ(SPA)のソースコードを�
 
    >[!CAUTION]
    >
-   > このプロジェクトで使用される&#x200B;**@angular/cli**&#x200B;のバージョンは&#x200B;**9.1.7**&#x200B;です。 AngularのCLIのバージョンを同期させておくことをお勧めします。
+   > このプロジェクトで使用される&#x200B;**@angular/cli**&#x200B;のバージョンは&#x200B;**9.1.7**&#x200B;です。 angularのCLIのバージョンを同期させておくことをお勧めします。
 
 3. 新しい`Header`コンポーネントを作成するには、`ui.frontend`フォルダ内からAngularCLI `ng generate component`コマンドを実行します。
 
@@ -556,7 +556,7 @@ Angularで記述された単一ページアプリ(SPA)のソースコードを�
    }
    ```
 
-6. **angular.json**&#x200B;を更新し、**style.css**&#x200B;へのすべての参照を&#x200B;**styles.scss**&#x200B;で再度名前付けします。 参考文献は3つあります。
+6. **angular.json**&#x200B;を更新し、**style.css**&#x200B;へのすべての参照を&#x200B;**styles.scss**&#x200B;で再命名します。 参考文献は3つあります。
 
    ```diff
      "styles": [
