@@ -4,10 +4,10 @@ description: Cloud ServiceとしてのAdobe Experience Manager(AEM)向けのチ�
 sub-product: サイト， cloud manager，基盤，アセット
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 11%
+source-wordcount: '275'
+ht-degree: 13%
 
 ---
 
@@ -20,9 +20,13 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
 ## 新機能
 
-* **[トークンベースの認証（チュートリアル）](../headless-tutorial/authentication/overview.md)**
+* **[トークンベースの認証（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
    *HTTP経由のCloud ServiceとしてAEMとやり取りするために、トークンベースの認証を使用する方法を学びます。*
+
+* **[ヘッドレスGraphQL（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+
+   *AEM GraphQL APIを使用して外部アプリケーションでエクスペリエンスをパワーにする方法を学びます。*
 
 * **[一括インポート（ビデオ）](./migration/bulk-import.md)**
 
@@ -35,11 +39,6 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 * **[asset computeマイクロサービスの拡張機能（チュートリアル）](./asset-compute/overview.md)**
 
    *asset computeワーカーを開発し、カスタムアセットレンディションを生成する方法を学びます。*
-
-* **[Cloud ServiceとしてのAEMへのアクセスの設定（チュートリアル）](./accessing/overview.md)**
-
-   *AEMにアクセスできるように、Adobe Admin ConsoleでIMSユーザーを設定する方法を説明します。*
-
 
 ## スタッフの選考
 
