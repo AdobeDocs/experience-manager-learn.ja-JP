@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 34%
+source-wordcount: '447'
+ht-degree: 35%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 34%
    + [コンテンツフラグメントとエクスペリエンスフラグメント](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
-   + [エクスペリエンスフラグメントについて](experience-fragments/experience-fragments-feature-video-understand.md)
+   + [構築ブロック](experience-fragments/building-blocks.md)
    + [エクスペリエンスフラグメントを使用したソーシャル投稿の設定](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [コンテンツフラグメントとエクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開発 {#developing}
@@ -52,7 +52,7 @@ ht-degree: 34%
    + [AEM Sites 使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM ヘッドレス使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA EditorおよびAngularの概要](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [スタイルシステムを使用した開発](developing/style-system-technical-video-understand.md)
    + [スタイルシステムのベストプラクティス](developing/style-organization-style-system-understand-article.md)
@@ -69,7 +69,7 @@ ht-degree: 34%
    + [SPAエディタの使用](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello Worldチュートリアル](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA EditorおよびAngularの概要](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + マルチサイト管理{#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとBlueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -94,7 +94,7 @@ ht-degree: 34%
    + Experience Platform Launch{#experience-platform-launch}
       + [概要](integrations/experience-platform-launch/overview.md)
       + [Launch プロパティの作成](integrations/experience-platform-launch/create-launch-property.md)
-      + [Adobe I/Oを使用してAEMを起動と接続](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
+      + [Adobe I/Oを使用して起動でAEMに接続](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [起動Cloud Serviceの作成](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [Launch実装のデバッグ](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
