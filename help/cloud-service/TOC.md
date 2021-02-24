@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
+source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 36%
@@ -42,7 +42,7 @@ ht-degree: 36%
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ ローカル開発環境のセットアップ{#local-development-environment-setup}
++ ローカル開発環境のセットアップ{#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [ローカルAEMランタイム](./local-development-environment/aem-runtime.md)
