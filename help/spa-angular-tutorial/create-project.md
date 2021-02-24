@@ -82,7 +82,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    | appTitle | WKNDSPAAngular |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
-   | frontendModule | 角 |
+   | frontendModule | angular |
    | package | com.adobe.aem.guides.wknd.spa.angular |
    | includeExamples | n |
 
