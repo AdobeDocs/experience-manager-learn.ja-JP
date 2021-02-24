@@ -20,7 +20,7 @@ ht-degree: 18%
 
 # AEM での Angular SPA の作成（チュートリアル） {#introduction}
 
-Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの導入について説明します。 Angularアプリは、AEM SPA Editorでデプロイされるように開発、設計されます。  Editorは、AngularコンポーネントをAEMコンポーネントにマッピングします。 完成したSPAは、AEMに導入され、AEMの従来のインライン編集ツールで動的に作成できます。
+Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するAngularアプリケーションの導入について説明します。 angularアプリは、AEM SPA Editorでデプロイされるように開発、設計されます。  Editorは、AngularコンポーネントをAEMコンポーネントにマッピングします。 完成したSPAは、AEMに導入され、AEMの従来のインライン編集ツールで動的に作成できます。
 
 ![最終的なSPAの実装](assets/wknd-spa-implementation.png)
 
