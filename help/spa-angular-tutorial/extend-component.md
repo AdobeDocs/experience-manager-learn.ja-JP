@@ -379,7 +379,7 @@ AEM SPAエディタで使用する既存のコアコンポーネントを拡張�
 
    `CardImpl` Slingモデルのメソッドを更新すると、JSONモデルがキーと値のペアを追加して更新されます。
 
-## Angularコンポーネントの更新
+## angularコンポーネントの更新
 
 JSONモデルに`ctaLinkURL`、`ctaText`、`cardTitle`および`cardLastModified`の新しいプロパティが入力されたので、これらを表示するAngularコンポーネントを更新できます。
 
