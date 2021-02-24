@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1134'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 AEMのGraphQL APIは、コンテンツフラグメントのデータを下流のアプリケーションに公開するための強力なクエリ言語を提供します。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルを作成または更新するたびに、スキーマが変換され、GraphQL APIを構成する「グラフ」に追加されます。
 
-この章では、コンテンツを収集するための一般的なGraphQLクエリをいくつか紹介します。 AEMに組み込まれているIDEは、[GraphiQL](https://github.com/graphql/graphiql)と呼ばれます。 GraphicQL IDEを使用すると、返されたクエリとデータをすばやくテストし、調整できます。 また、GraphiQLではドキュメントに簡単にアクセスでき、使用可能な方法を簡単に確認し、理解できます。
+この章では、[GraphiQL](https://github.com/graphql/graphiql)と呼ばれるIDEを使用してコンテンツを収集する、一般的なGraphQLクエリをいくつか紹介します。 GraphicQL IDEを使用すると、返されたクエリとデータをすばやくテストし、調整できます。 また、GraphiQLではドキュメントに簡単にアクセスでき、使用可能な方法を簡単に確認し、理解できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -36,6 +36,23 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
 * 特定のデータ属性をフィルタリングして要求する方法を説明します。
 * コンテンツフラグメントのバリエーションをクエリする方法を説明します。
 * 複数のコンテンツフラグメントモデルのクエリを結合する方法を学びます。
+
+## GraphiQLツールのインストール{#install-graphiql}
+
+GraphiQL IDEは開発ツールで、開発またはローカルインスタンスのような下位レベルの環境でのみ必要です。 したがって、AEMプロジェクトには含まれず、アドホックにインストールできる別のパッケージとして提供されます。
+
+1. **[Cloud Service**&#x200B;として、Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)**>** AEMに移動します。
+1. 「GraphiQL」を探します（**GraphiQL**&#x200B;には&#x200B;**i**&#x200B;を必ず含めてください）。
+1. 最新の&#x200B;**GraphicQL Content Package v.x.x.x**&#x200B;をダウンロードします。
+
+   ![GraphiQLパッケージのダウンロード](assets/explore-graphql-api/software-distribution.png)
+
+   zipファイルは、直接インストールできるAEMパッケージです。
+
+1. **AEM開始**&#x200B;メニューから&#x200B;**ツール**/**展開**/**パッケージ**&#x200B;に移動します。
+1. 「パッケージ&#x200B;**アップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。 **「**&#x200B;をインストール」をクリックして、パッケージをインストールします。
+
+   ![GraphiQLパッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)
 
 ## コンテンツフラグメントのリストのクエリ{#query-list-cf}
 
@@ -181,7 +198,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -205,7 +222,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -278,7 +295,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
 
 GraphQLクエリの他の多くの例については、以下を参照してください。[AEMでのGraphQLの使い方の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 GraphQLクエリをいくつか作成し、実行しました。
 
