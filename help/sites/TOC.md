@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites のビデオとチュー�
 breadcrumb-title: AEM Sites チュートリアル
 sub-product: サイト
 translation-type: tm+mt
-source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
+source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '446'
 ht-degree: 35%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 35%
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
    + [コンテンツフラグメントの配信](content-fragments/content-fragments-delivery-feature-video-use.md)
-   + [コンテンツフラグメントとの変換](content-fragments/content-fragments-translation-feature-video-use.md)
+   + [コンテンツフラグメントの変換](content-fragments/content-fragments-translation-feature-video-use.md)
    + [コンテンツフラグメントとエクスペリエンスフラグメント](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
