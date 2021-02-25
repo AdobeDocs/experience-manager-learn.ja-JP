@@ -1,46 +1,41 @@
 ---
-title: AEMコンテンツフラグメントを使用した翻訳の使用
-description: AEM 6.3では、コンテンツフラグメントを翻訳する機能が導入されています。 混在メディアアセットと、コンテンツフラグメントに関連付けられたアセットコレクションも、抽出および翻訳が可能です。
-sub-product: サイト、アセット、content services
-feature: content-fragments, multi-site-manager
-topics: localization, content-architecture
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+title: AEMコンテンツフラグメントの翻訳のサポート
+description: コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられた混在メディアアセットも、抽出および変換できます。
+feature: コンテンツフラグメント、マルチサイトマネージャー
+topics: Localization
+role: 開業医
+level: 中間
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 201
+thumbnail: 18131.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 6%
+source-wordcount: '250'
+ht-degree: 2%
 
 ---
 
 
-# AEMコンテンツフラグメントでの翻訳の使用{#using-translation-with-aem-content-fragments}
+# AEMコンテンツフラグメントの翻訳のサポート{#translation-support-content-fragments}
 
-AEM 6.3では、コンテンツフラグメントを翻訳する機能が導入されています。 混在メディアアセットと、コンテンツフラグメントに関連付けられたアセットコレクションも、抽出および翻訳が可能です。
+コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられた混在メディアアセットも、抽出および変換できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
 ## コンテンツフラグメント変換の使用例{#content-fragment-translation-use-cases}
 
-コンテンツフラグメントは、AEMが抽出して外部翻訳サービスに送信する、認識されるコンテンツタイプです。 次の使用例が初期設定でサポートされています。
+コンテンツフラグメントは、AEMが外部翻訳サービスに送信するために抽出する、認識されるコンテンツタイプです。 次の使用例が初期設定でサポートされています。
 
 1. コンテンツフラグメントは、アセットコンソールで直接選択して、言語コピーと翻訳を行うことができます
-2. サイトページで参照されるコンテンツフラグメントは、言語コピー用にサイトページを選択した場合に、適切な言語フォルダーにコピーされ、翻訳用に抽出されます
+2. サイトページで参照されるコンテンツフラグメントは、言語コピーの対象としてサイトページが選択されている場合、適切な言語フォルダーにコピーされ、翻訳用に抽出されます
 3. コンテンツフラグメント内に埋め込まれたインラインメディアアセットは、抽出および翻訳が可能です。
 4. コンテンツフラグメントに関連付けられたアセットコレクションは、抽出および翻訳の対象となります
 
-## 変換設定オプション{#translation-config-options}
+## 翻訳ルールエディター {#translation-rules-editor}
 
-初期設定の翻訳設定では、コンテンツフラグメントの変換に関する複数のオプションがサポートされています。 初期設定では、インラインメディアアセットと関連付けられたアセットコレクションは変換されません。 翻訳設定を更新するには、[http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html)に移動します。
+Experience Manager変換の動作は、**変換ルールエディター**&#x200B;を使用して更新できます。 翻訳を更新するには、[http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)にある&#x200B;**ツール**/**一般**/**翻訳設定**&#x200B;に移動します。
 
-コンテンツフラグメントアセットの変換には、次の4つのオプションがあります。
+初期設定では、`fragmentPath`にあるリソースタイプ`core/wcm/components/contentfragment/v1/contentfragment`のコンテンツフラグメントを参照します。 `v1/contentfragment`から継承するすべてのコンポーネントは、デフォルト設定で認識されます。
 
-1. **翻訳しない（デフォルト）**
-2. **インラインメディアアセットのみ**
-3. **関連付けられているアセットコレクションのみ**
-4. **インラインメディアアセットと関連付けられているコレクション**
-
-![翻訳設定](assets/classic-ui-dialog.png)
+![翻訳ルールエディター](assets/translation-configuration.png)
