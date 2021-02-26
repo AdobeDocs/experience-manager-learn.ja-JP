@@ -1,26 +1,22 @@
 ---
-title: 検索ブースト
-description: AEM Assets検索の機能強化と、AEMの幅広いコンテキストでの動作について詳しく説明します。
-topics: metadata, search
-audience: all
-doc-type: feature video
-activity: understand
-version: 6.3, 6.4, 6.5
+title: AEM Assetsの検索ブーストとは
+description: Adobe Experience Managerでアセットの検索関連性を高めるためのキーワードやフレーズの追加方法を説明します。
+topic: コンテンツ管理
+feature: 検索
+role: 開業医
+level: 中間
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 103
+thumbnail: 16766.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7a06a9ae0c57669578e1c11fa035f80583c90dd8
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 4%
+source-wordcount: '33'
+ht-degree: 15%
 
 ---
 
 
-# アセットメタデータを使用したブースト検索{#search-boost-asset}
+# 検索ブースト
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
-
-## AEM Assetsでの検索の向上について{#understanding-search-boosting-in-aem-assets}
-
-AEM Assets検索の機能強化と、AEMの幅広いコンテキストでの動作について詳しく説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/16770/?quality=12&learn=on)
