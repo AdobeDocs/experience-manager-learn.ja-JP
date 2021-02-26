@@ -1,18 +1,17 @@
 ---
 title: AEM Assetsの画像用のスマートタグ
 description: 画像のスマートタグは、画像のコンテンツに基づいてメタデータタグを画像アセットに自動的かつインテリジェントに追加することで、AEM検索機能を強化します。
-feature: smart-tags
-topics: metadata, search
-audience: all
-doc-type: feature video
-activity: understand
-version: 6.3, 6.4, 6.5
-kt: 5244
+topic: コンテンツ管理
+feature: スマートタグ
+role: 開業医
+level: 中間
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 645
 thumbnail: 17019.jpg
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: a5fb96275194ddc46169832c0fb79a2587833564
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '225'
 ht-degree: 34%
 
 ---
@@ -36,7 +35,7 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 * 組織の管理者権限を持つAdobe IDアカウント
 * Smart Content Serviceサービスが組織で有効になっている
 
-このビデオでは、スマートタグ画像に使用するAdobe I/Oスマートコンテンツサービスを設定するために必要な以下のタスクについて詳しく説明しています。
+このビデオでは、Adobe I/Oのスマートタグ画像に使用される画像スマートコンテンツサービスを設定するために必要な以下のタスクについて詳しく説明しています。
 
 * AEM でスマートコンテンツサービス設定を作成して、公開鍵を生成します。OAuth 統合用の公開証明書を取得します。
 * Adobe I/O で統合を作成し、生成した公開鍵をアップロードします。
@@ -45,4 +44,4 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 ## その他のリソース
 
-* [AEM Assetsスマートタグドキュメント](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)
+* [AEM Assetsスマートタグドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
