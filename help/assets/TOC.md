@@ -5,7 +5,7 @@ breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
 translation-type: tm+mt
-source-git-commit: d302444e74f8c2a548d2e08b5ec2991cc7347324
+source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 37%
@@ -59,7 +59,7 @@ ht-degree: 37%
    + [画像のスマートタグ](metadata/image-smart-tags.md)
    + [画像のカスタムスマートタグ](metadata/custom-smart-tags.md)
    + [ビデオのスマートタグ](metadata/video-smart-tags.md)
-   + [メタデータの読み込みと書き出し](metadata/metadata-import-feature-video-use.md)
+   + [メタデータの読み込みと書き出し](metadata/metadata-import-export.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)
