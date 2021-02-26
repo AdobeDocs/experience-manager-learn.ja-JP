@@ -1,20 +1,18 @@
 ---
 title: AEM Assetsでのカスケード・メタデータの使用
-seo-title: AEM Assetsでのカスケード・メタデータの使用
 description: 高度なメタデータ管理機能を使用すると、ユーザーはカスケードフィールドルールを作成して、AEM Assetsでメタデータ間のコンテキスト上の関係を形成できます。 以下のビデオでは、フィールド要件、表示、コンテキストの選択に関する新しい動的ルールを示します。 このビデオでは、管理者がこれらのルールをカスタムメタデータスキーマに適用するのに必要な手順についても説明しています。
-seo-description: 高度なメタデータ管理機能を使用すると、ユーザーはカスケードフィールドルールを作成して、AEM Assetsでメタデータ間のコンテキスト上の関係を形成できます。 以下のビデオでは、フィールド要件、表示、コンテキストの選択に関する新しい動的ルールを示します。 このビデオでは、管理者がこれらのルールをカスタムメタデータスキーマに適用するのに必要な手順についても説明しています。
-uuid: 470c1b1a-f888-4c90-87d7-acfa9a5fa6b1
-discoiquuid: ccd1acb1-bb7f-48c2-91e0-cccbeedad831
-topics: metadata
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+version: 6.3, 6.4, 6.5, cloud-service
+topic: コンテンツ管理
+feature: メタデータ
+role: 開業医
+level: 中間
+kt: 616
+thumbnail: 20702.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '196'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +21,7 @@ ht-degree: 0%
 
 高度なメタデータ管理機能を使用すると、ユーザーはカスケードフィールドルールを作成して、AEM Assetsでメタデータ間のコンテキスト上の関係を形成できます。 以下のビデオでは、フィールド要件、表示、コンテキストの選択に関する新しい動的ルールを示します。 このビデオでは、管理者がこれらのルールをカスタムメタデータスキーマに適用するのに必要な手順についても説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=12&learn=on)
 
 特定のメタデータフィールドに対して有効にできる動的ルールセットは3つあります。
 
@@ -32,14 +30,3 @@ ht-degree: 0%
 2. **表示** :フィールドは、常に表示することも、別のドロップダウンフィールドの値に基づいてのみ表示することもできます。
 
 3. **選択肢** :（ドロップダウンフィールドにのみ適用可能）別のドロップダウンフィールドで現在選択されている値に基づいて、ユーザーに表示される選択肢をフィルタリングします。
-
->[!NOTE]
->
->カスケードルールは、ドロップダウンフィールドの値に基づいてのみ作成できます。 3つのルールセットをすべて同じメタデータフィールドに適用することもできますが、ベストプラクティスとして、各ルールセットを同じメタデータドロップダウンに依存させることをお勧めします。
-
-[カスタムメタデータパッケージ](assets/cascade-metadata-values-001.zip)をダウンロード
-
-## その他のリソース{#additional-resources}
-
-カスタムメタデータスキーマの作成場所：`/conf/global/settings/dam/adminui-extension/metadataschema/custom`. 次のAEMパッケージは、カスタムスキーマをフォルダーに適用します。`/content/dam/we-retail/en/activities`:
-
