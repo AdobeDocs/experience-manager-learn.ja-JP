@@ -6,7 +6,7 @@ version: 6.5
 sub-product: サイト
 audience: author, marketer, administrator, architect, developer
 doc-type: tutorial
-feature: experience-fragments
+feature: エクスペリエンスフラグメント
 topics: personalization, activities, experiences, integrations, offers
 activity: develop, understand
 index: y
@@ -14,8 +14,8 @@ kt: 2214
 translation-type: tm+mt
 source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 46%
+source-wordcount: '66'
+ht-degree: 45%
 
 ---
 
