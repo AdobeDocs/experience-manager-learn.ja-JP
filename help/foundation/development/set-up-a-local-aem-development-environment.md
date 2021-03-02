@@ -2,14 +2,14 @@
 title: ローカル AEM 開発環境の設定
 description: AEM、Adobe Experience Managerの地域開発を始めるためのガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、およびIntelliJを使用した開発について説明します。
 version: 6.4, 6.5
-feature: maven-archetype
+feature: メーブン・アーキタイプ
 topics: development
 activity: develop
 audience: developer
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 947ffbfcc64f0e2e010a0515c8e6cf1530ec4ea9
 workflow-type: tm+mt
-source-wordcount: '2590'
+source-wordcount: '2653'
 ht-degree: 8%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience ManagerやAEM向けに開発する場合は、ローカル開�
 
 ## ローカルAEMインスタンスのインストール
 
-ローカルのAEMインスタンスを指す場合、開発者のパーソナルマシン上で稼働しているAdobe Experience Managerのコピーについてお話します。 ****** AllAEM開発では、ローカルのAEMインスタンスに対してコードを記述し、実行することで開始を行う必要があります。
+ローカルのAEMインスタンスを指す場合、開発者のパーソナルマシン上で動作しているAdobe Experience Managerのコピーについてお話します。 ****** AllAEM開発では、ローカルのAEMインスタンスに対してコードを記述し、実行することで開始を行う必要があります。
 
 AEMを初めて使用する場合は、次の2つの基本的な実行モードをインストールできます。***作成者***&#x200B;と&#x200B;***発行***。 ***作成者*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)は、デジタルマーケターがコンテンツの作成と管理に使用する環境です。 **ほとんど**&#x200B;を開発する場合は、作成者インスタンスにコードをデプロイします。 これにより、新しいページを作成したり、コンポーネントを追加および設定したりできます。 AEM SitesはWYSIWYGオーサリングCMSなので、CSSとJavaScriptのほとんどはオーサリングインスタンスに対してテストできます。
 
@@ -71,7 +71,7 @@ AEMを初めて使用する場合は、次の2つの基本的な実行モード�
    >
    >開発マシンのハードウェアによっては、**作成者インスタンスと発行**&#x200B;インスタンスの両方を同時に実行するのは難しい場合があります。 ローカルセットアップで同時に両方を実行する必要がある場合はほとんどありません。
 
-   詳しくは、[AEMインスタンスのデプロイと保守](https://helpx.adobe.com/ja/experience-manager/6-5/sites/deploying/using/deploy.html)を参照してください。
+   詳しくは、[AEMインスタンスのデプロイと保守](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)を参照してください。
 
 ## Apache Mavenのインストール
 
@@ -189,6 +189,20 @@ AEMを初めて使用する場合は、次の2つの基本的な実行モード�
 
 次に、ローカルAEMインスタンスとの統合を示す対応ビデオを含むAEM開発で使用される、より一般的なIDEのいくつかを示します。
 
+>[!NOTE]
+>
+> WKNDプロジェクトは、AEMでCloud Serviceとして動作するようにデフォルトに更新されました。 6.5/6.4](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx)と[下位互換性を持つように更新されました。 AEM 6.5または6.4を使用している場合は、Mavenコマンドに`classic`プロファイルを追加します。
+
+```shell
+$ mvn clean install -PautoInstallSinglePackage -Pclassic
+```
+
+IDEを使用する場合は、Mavenプロファイルタブの`classic`を確認してください。
+
+![Mavenプロファイルタブ](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
+
+*IntelliJ Mavenプロファイル*
+
 ### [!DNL Eclipse] IDE
 
 **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;は、Java開発で最も一般的なIDEの1つで、大部分はオープンソースで、***free***！です。 Adobeは、**[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)**&#x200B;というプラグインを提供し、[!DNL Eclipse]の開発を容易にし、良いGUIでコードをローカルのAEMインスタンスと同期できるようにします。 [!DNL Eclipse] IDEは、AEMを初めて使う開発者には大部分推奨されます。これは、[!DNL AEM Developer Tools]がGUIをサポートしているからです。
@@ -208,7 +222,7 @@ AEMを初めて使用する場合は、次の2つの基本的な実行モード�
 
 ### IntelliJ IDEA
 
-**[IntelliJ IDEA](https://www.jetbrains.com/idea/)**&#x200B;は、Javaの専門的な開発を行う強力なIDEです。 [!DNL IntelliJ IDEA] フレディションと商用（有料）の2種類の味 ****** [!DNL Community] が [!DNL Ultimate] あります。[!DNL Community]の無料版[!DNL IntellIJ IDEA]は、より多くのAEM開発を行うには十分ですが、[!DNL Ultimate] [は機能セット](https://www.jetbrains.com/idea/download)を拡張します。
+**[IntelliJ IDEA](https://www.jetbrains.com/idea/)**&#x200B;は、Javaの専門的な開発を行う強力なIDEです。 [!DNL IntelliJ IDEA] フレディションとコマーシャル（有料）の2種類の味が ****** [!DNL Community] あ [!DNL Ultimate] ります。[!DNL Community]の無料版[!DNL IntellIJ IDEA]は、より多くのAEM開発を行うには十分ですが、[!DNL Ultimate] [は機能セット](https://www.jetbrains.com/idea/download)を拡張します。
 
 #### [!DNL Installation and Setup]
 
