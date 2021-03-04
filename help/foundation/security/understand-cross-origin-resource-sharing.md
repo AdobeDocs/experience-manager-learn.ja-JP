@@ -3,17 +3,15 @@ title: AEMでの接触チャネル間のリソース共有(CORS)について理�
 description: Adobe Experience Managerのクロス接触チャネルリソース共有(CORS)は、AEM以外のWebプロパティを容易にし、コンテンツの取得やAEMとの直接のやり取りを行うために、認証済みと非認証の両方のAEMに対してクライアント側の呼び出しを行います。
 version: 6.3, 6,4, 6.5
 sub-product: 基盤，コンテンツサービス，サイト
+feature: null
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
-topic: セキュリティ
-role: デベロッパー
-level: 中間
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '917'
 ht-degree: 1%
 
 ---
