@@ -4,21 +4,18 @@ seo-title: Microsoft DynamicsとAEM Formsの使用
 description: このビデオでは、AEM FormsがバックエンドデータソースとしてMicrosoft Dynamicsを使用して、インタラクティブでパーソナライズされたコミュニケーションを提供する方法を示すワークフローについて説明します。
 seo-description: このビデオでは、AEM FormsがバックエンドデータソースとしてMicrosoft Dynamicsを使用して、インタラクティブでパーソナライズされたコミュニケーションを提供する方法を示すワークフローについて説明します。
 uuid: 33d63899-1f58-49b3-a05e-6c57b01ef911
-feature: アダプティブフォーム
+feature: アダプティブフォーム、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
-topic: 開発
-role: デベロッパー
-level: 中間
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 33%
+source-wordcount: '169'
+ht-degree: 31%
 
 ---
 
