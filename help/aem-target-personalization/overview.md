@@ -2,11 +2,15 @@
 title: AEM と Adobe Target の使用の手引き
 seo-title: AEM と Adobe Target の使用の手引き
 description: Adobe Experience ManagerとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。 このチュートリアルでは、エンドツーエンドプロセスに関与する様々な人物と、それらの人々がお互いにどのように共同作業を行うかについても学びます。
-seo-description: Adobe Experience ManagerとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。 このチュートリアルでは、エンドツーエンドプロセスに関与する様々な人物と、それらの人々がお互いにどのように共同作業を行うかについても学びます。
+seo-description: Adobe Experience ManagerとAdobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。 このチュートリアルでは、エンドツーエンドプロセスに関与する様々な人物と、それらの人々がお互いにどのように共同作業を行うかについても学びます。
+feature: エクスペリエンスフラグメント
+topic: パーソナライズ機能
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: c4ddafe392f74be8401f3ef6e07fc9d463d7620a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '894'
 ht-degree: 2%
 
 ---
