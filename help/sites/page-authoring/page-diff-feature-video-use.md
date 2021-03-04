@@ -3,7 +3,6 @@ title: ページの違いをAEM Sitesと併用
 seo-title: ページの違いをAEM Sitesと併用
 description: AEMサイトのページ差異機能では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できます。
 seo-description: AEMサイトのページ差異機能では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できます。
-feature: page-diff
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -12,11 +11,14 @@ version: 6.3, 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '156'
+ht-degree: 2%
 
 ---
 
