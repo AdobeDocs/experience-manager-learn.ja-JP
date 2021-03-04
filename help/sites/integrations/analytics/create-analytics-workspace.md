@@ -1,7 +1,7 @@
 ---
 title: Analysis Workspaceでデータを分析する
 description: Adobe Experience Managerサイトから収集したデータを、Adobe Analyticsのレポートスイートの指標およびディメンションにマップする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を学びます。
-feature: analytics
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
+topic: 統合
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
@@ -30,8 +33,8 @@ WKNDマーケティングチームは、ホームページで最もパフォー�
 
 以下に、現在追跡中のAnalytics変数を示します。
 
-* `eVar5` -  `Page template`
-* `eVar6` - `Page Id`
+* `eVar5` -   `Page template`
+* `eVar6` -  `Page Id`
 * `eVar7` -  `Page last modified date`
 * `eVar8` -  `CTA Button Id`
 * `eVar9` -  `Page Name`
