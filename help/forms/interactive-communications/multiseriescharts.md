@@ -3,17 +3,20 @@ title: AEM Formsの複数シリーズグラフ
 seo-title: AEM Formsの複数シリーズグラフ
 description: 印刷およびWebチャネルードキュメントで複数シリーズのグラフを作成する場合は、適切なForm Data Modelを作成します。
 seo-description: 印刷およびWebチャネルードキュメントで複数シリーズのグラフを作成する場合は、適切なForm Data Modelを作成します。
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ AEM Forms6.5では、複数のシリーズグラフを作成および設定す�
 
 ![多系列](assets/seriescharts.jfif)
 
-AEM Formsで複数シリーズのグラフを作成するには、必要なエンティティとエンティティ間の関連付けを持つ適切なフォームデータモデルを作成する必要があります。 次のスクリーンショットは、エンティティと3つのエンティティ間の関連付けを示しています。 トップレベルでは、「組織」というエンティティがあり、このエンティティとIMFのエンティティとの間に1対多の関連があります。 同様に、FNDエンティティは、Performanceエンティティと1対多の関係を持ちます。
+AEM Formsで複数シリーズのグラフを作成するには、必要なエンティティとエンティティ間の関連付けを持つ適切なフォームデータモデルを作成する必要があります。 次のスクリーンショットは、エンティティと3つのエンティティ間の関連付けを示しています。 トップレベルでは、「組織」というエンティティがあり、このエンティティとIMFのエンティティとの間に1対多の関連があります。 同様に、FNDエンティティは、Performanceエンティティと1対多の関連付けを持ちます。
 
 ![フォームデータモデル](assets/formdatamodel.jfif)
 
