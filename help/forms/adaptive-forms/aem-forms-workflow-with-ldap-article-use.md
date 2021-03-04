@@ -3,7 +3,7 @@ title: AemForms WorkflowでのLDAPの使用
 seo-title: AemForms WorkflowでのLDAPの使用
 description: 送信者の管理者へのAEM Formsワークフロータスクの割り当て
 seo-description: 送信者の管理者へのAEM Formsワークフロータスクの割り当て
-feature: adaptive-forms,workflow
+feature: '"アダプティブForms，ワークフロー"'
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 3e32c3a7-387f-4652-8a94-4e6aa6cd5ab8
 discoiquuid: 671872b3-3de0-40da-9691-f8b7e88a9443
+topic: 開発
+role: Administrator
+level: 中間
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 1%
+source-wordcount: '549'
+ht-degree: 2%
 
 ---
 
