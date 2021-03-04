@@ -2,21 +2,18 @@
 title: 単純な有料休暇リクエストのワークフロー
 description: AEMワークフローでのアダプティブフォームパネルの表示/非表示
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
-feature: アダプティブフォーム
+feature: 統合
 topics: workflow
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
-topic: 開発
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 1%
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
