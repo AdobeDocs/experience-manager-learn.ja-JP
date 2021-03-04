@@ -1,9 +1,9 @@
 ---
 title: AEM SitesとのSPAエディタの使用
 seo-title: AEM SitesとのSPA Editorフレームワークの使用
-description: AEM Single Page Application Editorフレームワークでは、作成者は単一ページアプリケーションまたはSPA用のコンテンツを編集できます。 ReactまたはAngularフレームワークを使用する開発者はSPAを作成し、SPAの領域をAEMコンポーネントにマッピングして、使い慣れたAEM Sites編集ツールを使用できるようにします。
+description: AEM Single Page Application Editorフレームワークでは、作成者は単一ページアプリケーションまたはSPA用のコンテンツを編集できます。 ReactまたはAngularフレームワークを使用する開発者は、SPAを作成し、SPAの領域をAEMコンポーネントにマッピングします。これにより、作成者は使い慣れたAEM Sites編集ツールを使用できます。
 sub-product: サイト、content services
-feature: spa-editor
+feature: スパエディタ
 topics: authoring, single-page-applications
 audience: all
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.4, 6.5, cloud-service
 kt: 1047
 thumbnail: 22229.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '289'
 ht-degree: 12%
 
 ---
@@ -24,7 +27,7 @@ ht-degree: 12%
 
 AEM Sitesのシングルページアプリ用のコンテンツオーサリングの概要を説明するビデオ。
 
-AEM SPA Editorでは、シングルページアプリケーションまたはSPA用にコンテンツを編集する機能が提供されます。 選択したフレームワーク（ReactまたはAngular）を使用する開発者はSPAを作成し、SPAの領域をAEMコンポーネントにマッピングして、使い慣れたAEM Sites編集ツールを使用できるようにします。 次のビデオでは、WKND SPAサンプルサイトでコンテキスト内編集機能の一部を示します。 WKND SPAプロジェクトには、ReactとAngularの両方の実装が含まれます。
+AEM SPA Editorでは、シングルページアプリケーションまたはSPA用にコンテンツを編集する機能が提供されます。 選択したフレームワーク(ReactまたはAngular)を使用する開発者は、SPAを作成し、SPAの領域をAEMコンポーネントにマッピングして、使い慣れたAEM Sites編集ツールを使用できるようにします。 次のビデオでは、WKND SPAサンプルサイトでコンテキスト内編集機能の一部を示します。 WKND SPAプロジェクトには、ReactとAngularの両方の実装が含まれます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
@@ -32,7 +35,7 @@ AEM SPA Editorでは、シングルページアプリケーションまたはSPA
 >
 > シングルページアプリケーション(SPA)エディタ機能には、AEM 6.4 service pack 2以降が必要です。
 >
-> SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+> SPAフレームワークベースのクライアント側レンダリング(ReactやAngularなど)を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## その他のリソース {#additional-resources}
 
