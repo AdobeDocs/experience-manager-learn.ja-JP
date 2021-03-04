@@ -4,7 +4,7 @@ seo-title: Adobe TargetでのAEMエクスペリエンスフラグメントオフ
 description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
 seo-description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
 sub-product: content-services
-feature: experience-fragments
+feature: エクスペリエンスフラグメント
 topics: integrations, personalization
 audience: all
 doc-type: feature video
@@ -12,11 +12,14 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
+topic: パーソナライズ機能
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 11%
+source-wordcount: '465'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +36,7 @@ Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナラ�
 
 >[!NOTE]
 >
->ADOBE TARGETのAEM Experience Fragmentオファーは、AEM 6.3ユーザー向けの機能パックとしても利用できます。 フィーチャパックと依存関係については、次のセクションを参照してください。
+>Adobe TargetのAEM Experience Fragmentオファーは、AEM 6.3ユーザー向けの機能パックとしても利用できます。 フィーチャパックと依存関係については、次のセクションを参照してください。
 
 
 * Adobe Experience Managerの使いやすくパワフルなコンテンツ作成メカニズム、Adobe TargetのArtifical Intelligence(AI)とMachine Learningは、コンテンツ作成者が一元的にすべてのチャネルのコンテンツを作成および管理できるようにします。 エクスペリエンスフラグメントをHTMLオファーとしてAdobe Targetに書き出す機能により、マーケティング担当者は、これらのオファーを使用してパーソナライズされたエクスペリエンスをより柔軟に作成でき、作成した各エクスペリエンスをテストおよび拡大できます。
