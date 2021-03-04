@@ -3,16 +3,19 @@ title: 選択グループコンポーネントへの項目の追加
 seo-title: 選択グループコンポーネントへの項目の追加
 description: 選択追加グループコンポーネントの動的な項目
 seo-description: 選択追加グループコンポーネントの動的な項目
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: 開発
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '533'
 ht-degree: 3%
 
 ---
@@ -21,7 +24,7 @@ ht-degree: 3%
 
 # 選択グループコンポーネントへの項目の動的な追加
 
-AEM Forms6.5では、チェックボックス、ラジオボタン、画像リストなど、アダプティブForms選択グループコンポーネントに項目を動的に追加する機能が導入されました。
+AEM Forms6.5では、チェックボックス、ラジオボタン、画像リストなどのアダプティブForms選択グループコンポーネントに、項目を動的に追加する機能が導入されました。
 
 [この機能は、Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0).動的チェックボックス項目カードを検索し、「試す」をクリックします。
 
