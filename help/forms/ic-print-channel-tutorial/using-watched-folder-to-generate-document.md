@@ -4,7 +4,7 @@ seo-title: 監視フォルダーを使用した印刷チャネルドキュメン
 description: これは、印刷チャネル用の最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの10部分です。 ここでは、監視フォルダーのメカニズムを使用して印刷チャネルドキュメントを生成します。
 seo-description: これは、印刷チャネル用の最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの10部分です。 ここでは、監視フォルダーのメカニズムを使用して印刷チャネルドキュメントを生成します。
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 0%
+source-wordcount: '383'
+ht-degree: 1%
 
 ---
 
