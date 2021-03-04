@@ -9,11 +9,14 @@ activity: use
 version: cloud-service
 kt: 6873
 thumbnail: 26316.jpg
+topic: アーキテクチャ
+role: アーキテクト、開発者、管理者
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 46%
+source-wordcount: '157'
+ht-degree: 45%
 
 ---
 
