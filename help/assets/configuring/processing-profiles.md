@@ -2,19 +2,18 @@
 title: 処理プロファイル
 description: 処理プロファイルでは、AEMのアセットに対して作成されるレンディションをCloud Serviceとして定義します。
 sub-product: アセット
-feature: processing-profiles
-topics: renditions
-audience: administrator, implementer
-doc-type: feature-video
-activity: use
+feature: asset computeマイクロサービス
 version: cloud-service
 kt: 4993
 thumbnail: 35597.jpg
+topic: 統合
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: c258b679b335070bbfe1b78489b5730052ee7971
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 13%
+source-wordcount: '43'
+ht-degree: 16%
 
 ---
 
