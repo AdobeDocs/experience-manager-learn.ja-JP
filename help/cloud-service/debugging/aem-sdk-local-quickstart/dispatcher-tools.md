@@ -1,18 +1,21 @@
 ---
 title: ディスパッチャーツールのデバッグ
 description: ディスパッチャーツールは、コンテナ化されたApache Webサーバー環境を提供します。このサーバーを使用して、AEMをCloud ServicesのAEM発行サービスのディスパッチャーとしてローカルにシミュレートできます。 ディスパッチャーツールのログとキャッシュの内容のデバッグは、エンドツーエンドのAEMアプリケーションを確実に作成し、キャッシュとセキュリティの設定をサポートする上で重要です。
-feature: dispatcher, aem-sdk
+feature: Dispatcher
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
+topic: 開発
+role: デベロッパー
+level: 初級者、中級者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 0%
+source-wordcount: '234'
+ht-degree: 1%
 
 ---
 
