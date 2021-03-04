@@ -1,22 +1,17 @@
 ---
 title: AEM Dynamic Media でのビデオプレーヤーの使用
-seo-title: AEM Dynamic Media でのビデオプレーヤーの使用
 description: AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
-seo-description: AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
-uuid: aac6f471-4bed-4773-890f-0dd2ceee381d
-discoiquuid: b01cc46b-ef64-4db9-b3b4-52d3f27bddf5
 sub-product: dynamic-media
-feature: media-player, video-profiles
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: ビデオプロファイル
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 26%
+source-wordcount: '221'
+ht-degree: 30%
 
 ---
 
@@ -65,7 +60,7 @@ HLSブラウザーのサポートは次のとおりです。サポートされ�
   <tr> 
    <td> <p>デスクトップ</p> </td>
    <td> <p>Chrome</p> </td>
-   <td> <p>HLS ビデオストリーミング</p> </td>
+   <td> <p>HLSビデオストリーミング</p> </td>
   </tr>
   <tr> 
    <td> <p>デスクトップ</p> </td>
