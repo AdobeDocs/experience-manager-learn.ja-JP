@@ -3,23 +3,21 @@ title: AEM Desktop App
 description: AEM Desktop Appを使用すると、任意のアプリケーションおよびファイル形式で、デスクトップ上のAEMで管理される任意のアセットに簡単にアクセスできます。
 kt: 2551
 sub-product: アセット
-feature: desktop-app
-topics: authoring, collaboration, content-velocity
+feature: Experience Manager Desktop App
 version: 6.5, 6.4, 6.3
-doc-type: feature video
-activity: use
-team: TM
-audience: author, marketer
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 13%
+source-wordcount: '146'
+ht-degree: 16%
 
 ---
 
 
-# AEM Desktop App の使用
+# Adobe Experience Manager デスクトップアプリケーションの概要
 
 AEM Desktop Appを使用すると、任意のアプリケーションおよびファイル形式で、デスクトップ上のAEMで管理される任意のアセットに簡単にアクセスできます。
 
@@ -36,4 +34,4 @@ AEM Desktop Appを使用すると、任意のアプリケーションおよび�
 
 ## その他のリソース
 
-+ [最新のAEM Desktop Appをダウンロードする](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
++ [最新のAEM Desktop Appをダウンロードする](https://docs.adobe.com/content/help/ja/experience-manager-desktop-app/using/release-notes.html)
