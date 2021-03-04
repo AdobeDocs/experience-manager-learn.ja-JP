@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用にAdobeプロジェクトの蛍光ファイルを設定します
 description: asset computeプロジェクトとは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobeプロジェクトを設定してデプロイするには、Adobe開発者コンソールでプロジェクトFireflyにアクセスする必要があります。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 asset computeプロジェクトとは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobeプロジェクトを設定してデプロイするには、Adobe開発者コンソールでプロジェクトFireflyにアクセスする必要があります。
 
-## Adobe開発者コンソールでAdobeプロジェクトのFireflyを作成し、設定します{#set-up}
+## Adobe開発者コンソールでAdobeプロジェクトの蛍光ファイルを作成し、設定する{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
 
@@ -52,19 +55,19 @@ _Adobeプロジェクトのファイアフリを設定するクリックスル�
 
 ## private.key{#private-key}にアクセスします
 
-[Asset computeAPI統合](#set-up)を設定する際に、新しいキーペアが生成され、`config.zip`ファイルが自動的にダウンロードされました。 この`config.zip`には、生成された公開証明書と一致する`private.key`ファイルが含まれています。
+[Asset computeAPI統合](#set-up)を設定すると、新しいキーペアが生成され、`config.zip`ファイルが自動的にダウンロードされました。 この`config.zip`には、生成された公開証明書と一致する`private.key`ファイルが含まれています。
 
 1. `private.key`は[後で](../develop/environment-variables.md)使用されるため、`config.zip`をファイルシステム上の安全な場所に解凍します。
    + セキュリティ上、秘密鍵と秘密鍵をGitに追加しないでください。
 
 ## サービスアカウント(JWT)秘密鍵証明書の確認
 
-このAdobe I/Oプロジェクトの資格情報は、ローカルの[Asset compute開発ツール](../develop/development-tool.md)がAdobe I/O Runtimeとのやり取りに使用し、Asset computeプロジェクトに組み込む必要があります。 サービスアカウント(JWT)の資格情報を確認します。
+このAdobe I/Oプロジェクトの資格情報は、ローカルの[Asset compute開発ツール](../develop/development-tool.md)でAdobe I/O Runtimeとのやり取りに使用され、Asset computeプロジェクトに組み込む必要があります。 サービスアカウント(JWT)の資格情報を確認します。
 
 ![Adobe開発者サービスアカウント資格情報](./assets/firefly/service-account.png)
 
-1. Adobe I/OプロジェクトのFireflyプロジェクトで、`Development`ワークスペースが選択されていることを確認します。
+1. Adobe I/OプロジェクトFireflyプロジェクトから、`Development`ワークスペースが選択されていることを確認します
 1. __資格情報__&#x200B;の下の&#x200B;__サービスアカウント(JWT)__&#x200B;をタップします
 1. 表示されたAdobe I/O資格情報の確認
    + 下部に表示される&#x200B;__公開鍵__&#x200B;は、__Asset computeAPI__&#x200B;がこのプロジェクトに追加されたときに、`config.zip`内の&#x200B;__private.key__&#x200B;に対応するものです。
-      + 秘密鍵が失われたり侵害されたりした場合、一致する公開鍵を削除でき、このインターフェイスを使用してAdobe I/Oで生成またはアップロードされた新しい鍵ペアを削除できます。
+      + 秘密鍵が失われたり侵害されたりした場合、一致する公開鍵を削除でき、このインターフェイスを使用してAdobe I/Oで生成またはアップロードされる新しいキーペアを削除できます。
