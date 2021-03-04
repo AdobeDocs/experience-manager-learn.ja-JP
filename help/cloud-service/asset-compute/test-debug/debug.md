@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーのデバッグ
 description: asset computeワーカーは、簡単なデバッグログ文から、接続されたVS Code（リモートデバッガ）、AEMでCloud Serviceとして開始されたAdobe I/O Runtimeのアクティベーションのログを取り込むまで、様々な方法でデバッグできます。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -32,7 +35,7 @@ asset computeワーカーのデバッグで最も基本的な形式は、ワー�
    ![aioアプリ実行console.log(...)](./assets/debug/console-log__aio-app-run.png)
 + `aio app test`から`/build/test-results/test-worker/test.log`にログを印刷
    ![aioアプリテストコンソール.log(...)](./assets/debug/console-log__aio-app-test.png)
-+ `wskdebug`を使用して、ログ文はVSコードデバッグコンソール(表示/デバッグコンソール)に出力され、標準出力になります。
++ `wskdebug`を使用すると、ログ文はVSコードデバッグコンソール(表示/デバッグコンソール)に出力され、標準出力されます。
    ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
 + `aio app logs`を使用して、ログ文をアクティベーションログ出力に出力します。
 
