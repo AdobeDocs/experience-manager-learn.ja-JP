@@ -1,19 +1,18 @@
 ---
 title: AEM Assetsのビデオスマートタグ
 description: Experience Managerアセットは、Adobe Senseiを利用して、ビデオの主要要素を説明するキーワードでビデオアセットにインテリジェントにタグ付けし、AEMユーザーがキーワード検索を使用して簡単に見つけることができます。
-feature: smart-tags
-topics: metadata, search
-audience: all
-doc-type: feature-video
-activity: setup
+feature: スマートタグ
 version: cloud-service
 kt: 6445
 thumbnail: 327005.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 0%
+source-wordcount: '80'
+ht-degree: 5%
 
 ---
 
