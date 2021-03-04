@@ -1,18 +1,18 @@
 ---
 title: AEM Sitesでの起動回数の使用方法
 description: AEM Sitesでの起動により、将来のリリースで使用できるコンテンツの作成、作成およびレビューを行うことができます。
-topic: Content Management
-feature: Launches
-level: Intermediate, Experienced
-role: Business Practitioner
+topic: コンテンツ管理
+feature: ローンチ
+level: 中級、経験豊富
+role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 1%
+source-wordcount: '71'
+ht-degree: 7%
 
 ---
 
