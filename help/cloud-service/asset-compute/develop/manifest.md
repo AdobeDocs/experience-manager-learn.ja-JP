@@ -1,7 +1,7 @@
 ---
 title: asset computeプロジェクトのmanifest.ymlの設定
 description: asset computeプロジェクトのmanifest.ymlは、このプロジェクトの展開対象となるすべてのワーカーを説明します。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,14 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 2%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +31,7 @@ asset computeプロジェクトのルートにある`manifest.yml`は、この�
 
 ワーカーは`actions`の下でAdobe I/O Runtimeのアクションエントリと定義され、一連の構成で構成されます。
 
-他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。この[は、`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開します。 これは通常、作業者がAdobe PhotoshopAPI、LightroomAPI、先生APIなどのAdobe I/OAPIに呼び出す際に必要となり、作業者ごとに切り替えることができます。
+他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。この[は、`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開します。 これは通常、ワーカーがAdobe PhotoshopAPI、LightroomAPI、先生APIなどのAdobe I/OAPIを呼び出す際に必要となり、ワーカーごとに切り替えることができます。
 
 1. を開き、自動生成ワーカー`manifest.yml`を確認します。 複数のAsset computeワーカーを含むプロジェクトでは、`actions`配列の下で各ワーカーのエントリを定義する必要があります。
 
