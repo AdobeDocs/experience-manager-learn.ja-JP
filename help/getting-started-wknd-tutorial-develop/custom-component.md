@@ -2,7 +2,7 @@
 title: カスタムコンポーネント
 description: 作成したコンテンツを表示するカスタム署名コンポーネントのエンドツーエンドの作成について扱います。ビジネスロジックをカプセル化して署名コンポーネントおよび対応する HTL を入力し、コンポーネントをレンダリングする Sling Model の開発を含みます。
 sub-product: サイト
-feature: sling-models
+feature: コアコンポーネント、API
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3969'
 ht-degree: 20%
 
 ---
@@ -104,7 +107,7 @@ Bylineコンポーネントの実装には、署名の内容を収集するダ�
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   上記のXMLファイルは、タイトル、説明、グループなど、コンポーネントの定義を提供します。 `sling:resourceSuperType`は`core/wcm/components/image/v2/image`を指します。これは[コアイメージコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)です。
+   上記のXMLファイルは、タイトル、説明、グループなど、コンポーネントの定義を提供します。 `sling:resourceSuperType`は`core/wcm/components/image/v2/image`を指します。これは[コアイメージコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)です。
 
 ### HTL スクリプトの作成 {#create-the-htl-script}
 
@@ -609,7 +612,7 @@ public class BylineImpl implements Byline {
 
 これに対処するには、2 つの方法があります。
 
-`fileReference` JCRプロパティがアセットに解決されるかどうかを確認します。 *ORC* このリソースをコアコンポーネントの画像スリングモデルに変換し、 `getSrc()` メソッドが空でないことを確認します。
+`fileReference` JCRプロパティがアセットに解決されるかどうかを確認します。 *ORC* このリソースをコアコンポーネントのイメージスリングモデルに変換し、 `getSrc()` メソッドが空でないことを確認します。
 
 **2番目の**&#x200B;アプローチを選択します。 最初のアプローチは十分と思われますが、このチュートリアルでは、Slingモデルの他の機能を調べるのに後者を使用します。
 
@@ -1087,7 +1090,7 @@ AEM Components用のほとんどのHTLスクリプトは、**プレースホル�
 
 ![完成したバイラインコンポーネント](assets/custom-component/final-byline-component.png)
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 Adobe Experience Managerを使用してカスタムコンポーネントをゼロから作成しました。
 
