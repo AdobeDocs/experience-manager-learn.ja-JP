@@ -1,24 +1,27 @@
 ---
 title: AEM Sitesのページ差向け開発
-description: このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを使用する方法を示します。
-feature: page-diff
+description: このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを設定する方法を示します。
+feature: オーサリング
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 6%
+source-wordcount: '297'
+ht-degree: 7%
 
 ---
 
 
 # ページの違いを考慮した開発{#developing-for-page-difference}
 
-このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを使用する方法を示します。
+このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを設定する方法を示します。
 
 ## ページ差異スタイルのカスタマイズ{#customizing-page-difference-styles}
 
