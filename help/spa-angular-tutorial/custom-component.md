@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5831
 thumbnail: 5831-spa-angular.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1510'
 ht-degree: 3%
 
 ---
@@ -157,7 +160,7 @@ AEMコンポーネントは、ノードとプロパティとして定義され�
    >
    > コアコンポーネントの定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を参照すると、[ダイアログの例を表示できます。 `select`、`textarea`、`pathfield`など、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)の`/libs/granite/ui/components/coral/foundation/form`の下で利用できる追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
+   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
 
 ## Slingモデルの作成
 
