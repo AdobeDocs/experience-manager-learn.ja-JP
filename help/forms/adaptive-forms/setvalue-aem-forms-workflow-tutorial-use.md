@@ -4,17 +4,20 @@ seo-title: AEM Formsワークフローでのsetvalueの使用
 description: アダプティブFormsでの要素の値の設定で、AEM FormsOSGIに送信されたデータ
 seo-description: アダプティブFormsでの要素の値の設定で、AEM FormsOSGIに送信されたデータ
 uuid: fe431e48-f05b-4b23-94d2-95d34d863984
-feature: adaptive-forms,workflow
+feature: アダプティブフォーム
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 discoiquuid: dbd87302-f770-4e61-b5ad-3fc5831b4613
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: f07680e73316efb859a675f4b2212d8c3e03f6a0
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
