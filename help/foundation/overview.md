@@ -3,11 +3,13 @@ title: AEM Foundation のビデオおよびチュートリアル
 seo-title: AEM Foundation のビデオおよびチュートリアル
 description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 seo-description: Adobe Experience Manager財団のビデオやチュートリアルの集まり
+role: 「リーダー、アーキテクト、開発者、管理者、実業家」
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 18%
+source-wordcount: '268'
+ht-degree: 17%
 
 ---
 
@@ -25,7 +27,7 @@ Adobe Experience Managerは、AEM Sites、[!DNL Assets]、[!DNL Forms]の各ユ�
    *AEM向けCloud Managerを使用すると、AEM環境の管理、検査、およびセルフサービスを簡単に行うことができます。*
 
 * **[Adobe I/Oで使用する公開鍵と秘密鍵を設定する（チュートリアル）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *AEMおよびAdobe I/Oでのキーとキーストアの生成方法 [!DNL openssl] を説明します。*
+   *AEMおよびAdobe I/Oで機能するキーとキーストア [!DNL openssl] の生成方法を説明します。*
 
 * **[Cloud ManagerのCI/CDパイプライン（ビデオ）の使用](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Cloud ManagerのCI/CDパイプラインを使用して安全で一貫性のあるデプロイメントを行う方法を説明します。*
