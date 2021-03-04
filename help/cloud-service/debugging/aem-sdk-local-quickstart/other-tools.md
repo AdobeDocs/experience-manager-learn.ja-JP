@@ -1,17 +1,20 @@
 ---
 title: AEM SDKのデバッグ用のその他のツール
 description: その他の様々なツールは、AEM SDKのローカルクイックスタートのデバッグに役立ちます。
-feature: null
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
+topic: 開発
+role: デベロッパー
+level: 初級者、中級者
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 12%
 
 ---
