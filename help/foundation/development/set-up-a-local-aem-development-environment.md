@@ -2,17 +2,14 @@
 title: ローカル AEM 開発環境の設定
 description: AEM、Adobe Experience Managerの地域開発を始めるためのガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、およびIntelliJを使用した開発について説明します。
 version: 6.4, 6.5
-feature: 開発者ツール
+feature: メーブン・アーキタイプ
 topics: development
 activity: develop
 audience: developer
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2653'
 ht-degree: 8%
 
 ---
@@ -33,7 +30,7 @@ Adobe Experience ManagerやAEM向けに開発する場合は、ローカル開�
 
 ## ローカルAEMインスタンスのインストール
 
-ローカルのAEMインスタンスを指す場合、開発者のパーソナルマシン上で動作しているAdobe Experience Managerのコピーについてお話します。 ****** AllAEM開発では、ローカルのAEMインスタンスに対してコードを記述し、実行することで開始を行う必要があります。
+ローカルのAEMインスタンスを指す場合、開発者のパーソナルマシン上で稼働しているAdobe Experience Managerのコピーについてお話します。 ****** AllAEM開発では、ローカルのAEMインスタンスに対してコードを記述し、実行することで開始を行う必要があります。
 
 AEMを初めて使用する場合は、次の2つの基本的な実行モードをインストールできます。***作成者***&#x200B;と&#x200B;***発行***。 ***作成者*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)は、デジタルマーケターがコンテンツの作成と管理に使用する環境です。 **ほとんど**&#x200B;を開発する場合は、作成者インスタンスにコードをデプロイします。 これにより、新しいページを作成したり、コンポーネントを追加および設定したりできます。 AEM SitesはWYSIWYGオーサリングCMSなので、CSSとJavaScriptのほとんどはオーサリングインスタンスに対してテストできます。
 
@@ -280,7 +277,7 @@ IDEを使用する場合は、Mavenプロファイルタブの`classic`を確認
 
 1. **「 [!UICONTROL パッケージ]** マネージャー」をチェックし、コードパッケージがアップロードおよびインストールされていることを確認します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).タイムスタンプを確認して、パッケージが最近インストールされたことを確認します。
 1. [!DNL Repo]や[!DNL AEM Developer Tools]のようなツールを使用してファイルの増分更新を行う場合、**は[!DNL CRXDE Lite]**&#x200B;にファイルがローカルのAEMインスタンスにプッシュされ、ファイルの内容が更新されたことを確認します。[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. **OSGiバンドル内のJavaコードに関連する問題が見つかった場合に、バンドルがアップロードされていることを** 確認します。[!UICONTROL Adobe Experience ManagerWebコンソール]を開きます。[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)を開き、バンドルを検索します。 バンドルのステータスが&#x200B;**[!UICONTROL アクティブ]**&#x200B;であることを確認します。 **[!UICONTROL Installed]**&#x200B;状態のバンドルのトラブルシューティングに関する詳細は、以下を参照してください。
+1. **OSGiバンドル内のJavaコードに関連する問題が見つかった場合に、バンドルがアップロードされていることを確認し** ます。[!UICONTROL Adobe Experience ManagerWebコンソール]を開きます。[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)を開き、バンドルを検索します。 バンドルのステータスが&#x200B;**[!UICONTROL アクティブ]**&#x200B;であることを確認します。 **[!UICONTROL Installed]**&#x200B;状態のバンドルのトラブルシューティングに関する詳細は、以下を参照してください。
 
 #### ログの確認
 
