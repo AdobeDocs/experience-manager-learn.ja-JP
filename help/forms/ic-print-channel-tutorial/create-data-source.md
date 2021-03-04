@@ -4,7 +4,7 @@ seo-title: AEM Formsでのデータソース設定の作成
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート2です。 この部では、RESTバックアップデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート2です。 この部では、RESTバックアップデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
 kt: 5954
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 2%
 
 ---
 
