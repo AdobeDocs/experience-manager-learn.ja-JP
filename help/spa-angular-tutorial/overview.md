@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 5913
 thumbnail: 5913-spa-angular.jpg
+feature: SPAエディタ
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '720'
 ht-degree: 18%
 
 ---
@@ -32,9 +36,9 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 
 このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.4+**&#x200B;および&#x200B;**AEM 6.4.8+**&#x200B;と下位互換性があります。 SPAは次を使用して実装されます。
 
-* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPAエディタ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [Angular](https://angular.io/)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
