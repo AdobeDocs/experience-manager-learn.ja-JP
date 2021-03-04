@@ -5,16 +5,20 @@ description: AEM の開発が初めての方や、ベストプラクティスの
 seo-description: AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
 content-type: reference
 topic-tags: introduction
+feature: AEMプロジェクトのアーキタイプ，コアコンポーネント，ページエディター，編集可能なテンプレート
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 57%
+source-wordcount: '366'
+ht-degree: 56%
 
 ---
 
 
-# AEM Sites の開発の手引き - WKND チュートリアル{#getting-started-developing-aem-sites-wknd-tutorial}
+# AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
 
 ## 概要 {#overview}
 
