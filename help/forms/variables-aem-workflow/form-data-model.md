@@ -1,7 +1,7 @@
 ---
 title: フォームデータモデル型の変数
 description: AEMワークフローでのフォームデータモデル型の変数の使用。
-feature: ワークフロー
+feature: workflow
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,14 +9,11 @@ activity: understand
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 4%
+source-wordcount: '62'
+ht-degree: 1%
 
 ---
 
