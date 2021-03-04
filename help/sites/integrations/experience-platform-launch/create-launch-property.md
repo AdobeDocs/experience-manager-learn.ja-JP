@@ -1,7 +1,6 @@
 ---
 title: Launch プロパティの作成
 description: 残りの統合を設定するために必要な最小の設定でLaunchプロパティを作成する方法を説明します。 ユーザーは、起動UIに導入され、拡張機能、ルール、および発行ワークフローについて学習します。
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 5980
 thumbnail: 38553.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 14%
+source-wordcount: '112'
+ht-degree: 16%
 
 ---
 
@@ -26,7 +28,7 @@ Adobe Experience Managerとの統合の残りの部分を設定するために�
 
 ## 次の手順
 
-[Adobe I/Oを使用してAEMを起動と接続](connect-aem-launch-adobe-io.md)
+[Adobe I/Oを使用して起動でAEMに接続](connect-aem-launch-adobe-io.md)
 
 ## その他のリソース {#additional-resources}
 
