@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用のローカル開発環境の設定
 description: Node.js JavaScriptAsset computeである開発ワーカーは、従来のAEM開発とは異なる、特定の開発ツール（Node.jsや様々なnpmモジュール、Docker Desktop、Microsoft Visual Studio Codeなど）を必要とします。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -75,7 +78,7 @@ asset computeワーカーは[Node.js](https://nodejs.org/)ベースであるた�
 
 ## Adobe I/OCLI{#aio}のインストール
 
-[Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)、または ____ aioisは、Adobe I/Oテクノロジの使用と操作を容易にするコマンドライン(CLI) npmモジュールで、カスタムAsset computeワーカーの生成とローカル開発の両方に使用します。
+[Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli) ____ 、またはAdobe I/Oテクノロジの使用と操作を容易にするCLI （コマンドライン） npmモジュールをインストールし、カスタムAsset computeワーカーの生成とローカル開発の両方に使用します。
 
 ```
 $ npm install -g @adobe/aio-cli
