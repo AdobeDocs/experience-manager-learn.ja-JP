@@ -1,7 +1,7 @@
 ---
 title: Cloud ServiceとしてのAEM用のasset computeマイクロサービス拡張機能
 description: このチュートリアルでは、単純なAsset computeワーカーの作成について説明します。このワーカーは、元のアセットを丸に切り抜いてアセットのレンディションを作成し、設定可能なコントラストと明るさを適用します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発および配置を検討するために使用します。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1036'
 ht-degree: 3%
 
 ---
@@ -44,7 +47,7 @@ asset computeワーカーの拡張に適した準備を行い、プロビジョ�
 
 ### アカウントとサービスのプロビジョニング{#accounts-and-services}
 
-次のアカウントとサービスは、チュートリアルを完了するために、AEMをCloud Service開発環境またはSandboxプログラムとして、AdobeプロジェクトFireflyおよびMicrosoft Azure Blobストレージにアクセスするために、プロビジョニングとアクセスを必要とします。
+次のアカウントとサービスは、チュートリアルを完了するために、AEMをCloud Service開発環境またはSandboxプログラムとして、AdobeプロジェクトFireflyおよびMicrosoft Azure Blobストレージにアクセスするために、プロビジョニングとアクセスが必要です。
 
 + [アカウントとサービスのプロビジョニング](./set-up/accounts-and-services.md)
 
@@ -66,13 +69,13 @@ asset computeプロジェクトを作成および設定し、特注アセット�
 
 ### 新しいAsset computeプロジェクトの作成
 
-1人以上のAsset computeワーカーを含むasset computeプロジェクトは、インタラクティブなAdobe I/OCLIを使用して生成されます。 asset computeプロジェクトは、特別に構成されたAdobeプロジェクトFireflyプロジェクトで、Node.jsプロジェクトになっています。
+1つ以上のAsset computeワーカーを含むasset computeプロジェクトは、対話型Adobe I/OCLIを使用して生成されます。 asset computeプロジェクトは、特別に構成されたAdobeプロジェクトFireflyプロジェクトで、Node.jsプロジェクトになっています。
 
 + [新しいAsset computeプロジェクトの作成](./develop/project.md)
 
 ### 環境変数の設定
 
-環境変数は、ローカル開発のために`.env`ファイルに保持され、Adobe I/Oの資格情報と、ローカル開発に必要なクラウドストレージの資格情報を提供するために使用されます。
+環境変数は、ローカル開発のために`.env`ファイルに保持され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
 
 + [環境変数の設定](./develop/environment-variables.md)
 
