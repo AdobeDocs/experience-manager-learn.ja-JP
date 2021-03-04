@@ -1,7 +1,6 @@
 ---
 title: 起動プロパティ追加のターゲット式
 description: Adobe Experience Platform LaunchプロパティにAdobe Target拡張機能を追加する方法を説明します。
-feature: launch
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 6131
 thumbnail: 41247.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 1%
+source-wordcount: '112'
+ht-degree: 3%
 
 ---
 
