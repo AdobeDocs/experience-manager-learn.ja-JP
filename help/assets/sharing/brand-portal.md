@@ -1,20 +1,16 @@
 ---
 title: ブランドポータルの使用
-seo-title: ブランドポータルとAEM Assetsの連携
 description: AEM AuthorとAEM Assetsブランドポータルの統合に関するビデオウォークスルー。
-seo-description: AEM AuthorとAEM Assetsブランドポータルの統合に関するビデオウォークスルー。
-feature: brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions, administration
-audience: all
-doc-type: feature video
-activity: use
+feature: Brand Portal
 version: 6.3, 6.4, 6.5
-team: tm
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 44%
+source-wordcount: '1777'
+ht-degree: 45%
 
 ---
 
@@ -49,7 +45,7 @@ Brand Portalの2019年2月リリースでは、テキスト検索とトップ顧
 
 部分テキスト検索およびワイルドカード検索について詳しくは、以下の説明を参照してください。
 
-#### 部分フレーズ検索
+#### 部分フレーズ検索  
 
 フィルタリングウィンドウで、検索対象フレーズの一部分（1 つか 2 つの単語）のみを指定してアセットを検索できます。
 
@@ -97,7 +93,7 @@ Dynamic Media ビデオは以下の場所でプレビューできます。
 
 Dynamic Media ビデオエンコードは以下の場所からダウンロードできます。
 
-* Brand Portal
+* ブランドポータル
 * 共有リンク
 
 ### Brand Portal への公開のスケジュール設定
@@ -139,7 +135,7 @@ Brand Portal ユーザーは、最大 25 倍の速度を実現できる Aspera �
 
 ### オリジナルレンディションへのアクセス
 
-管理者は、元の画像ファイル(jpeg、tiff、png、bmp、gif、pjpeg、x-portable-anymap、x-portable-bitmap、x-portable-graymap、x-portable-pixmap、x-rgb、x-xbitmap、x-icon、image/photoshop、psd、image/vnd.adobe.photoshop)へのアクセスを制限し、低解像度のレンディションからのアクセスを許可できます。ブランドポータルまたは共有リンク。 このアクセス権は、管理ツールパネルのユーザーの役割ページの「グループ」タブからユーザーグループレベルで制御できます。
+管理者は、元の画像ファイル(jpeg、tiff、png、bmp、gif、pjpeg、x-portable-anymap、x-portable-bitmap、x-portable-graymap、x-portable-pixmap、x-rgb、x-xbitmap、x-icon、image/photoshop、image/x-photoshop、image/vnd.adobe.photoshop)へのアクセスを制限し、低解像度レンディションからのレンディションにダウンロードできます。ブランドポータルまたは共有リンク。 このアクセス権は、管理ツールパネルのユーザーの役割ページの「グループ」タブからユーザーグループレベルで制御できます。
 
 ### 新しい設定
 
@@ -157,7 +153,7 @@ Brand Portal ユーザーは、最大 25 倍の速度を実現できる Aspera �
 * *カードフォルダーとリスト表示ーのフォルダー階層パス*  — ブランドポータルインスタンス内に保存されているフォルダーの場所をユーザーが把握できるようにします。異なるフォルダー階層内に同じ名前を持つフォルダーを区別しやすくします。
 * *概要オプション*  — 管理者以外のユーザーが、アセット/フォルダーを選択し、ツールバーから概要オプションを選択して、アセット/フォルダーに関するメタデータを提供します。現在、タイトル、作成日、パスが表示されます。
 
-### Adobe I/OホストUIを使用したoAuth統合の設定
+### Adobe I/OホストUIを使用したoAuth統合の構成
 
 Brand Portalは、Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)のインターフェイスを使用してJWTアプリケーションを作成します。これにより、AEM AssetsがBrand Portalと統合できるようにoAuth統合を設定できます。 OAuth 統合を設定するための UI は、以前、`https://marketing.adobe.com/developer/` / でホストされていました。Brand Portal にアセットとコレクションを公開するための、AEM Assets と Brand Portal の統合について詳しくは、[AEM Assets と Brand Portal の統合の設定](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)を参照してください。
 
@@ -191,7 +187,7 @@ Brand Portalは、Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 * ユーザーは、リンク共有オプションを使用してアセットを共有できます。
 * アセットを共有する際に、ユーザーは各アセットの有効期限を設定できます。 共有するアセットをユーザーがより詳細に制御できるようにします。
 * アセット共有リンクを持つ外部ユーザーは、画像をダウンロードし、そのプロパティを表示できます。
-* ダウンロードしたアセットフォルダに対しては、元のネストされたフォルダ階層が保持されます。
+* 元のネストされたフォルダ階層は、ダウンロードしたアセットフォルダ用に保持されます。
 
 ### レポートおよび管理機能
 
