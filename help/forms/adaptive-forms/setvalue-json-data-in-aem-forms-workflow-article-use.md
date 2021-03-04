@@ -4,20 +4,17 @@ seo-title: AEM FormsワークフローでのJsonデータ要素の値の設定
 description: アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされる際、フォームの確認者に応じて、特定のフィールドやパネルを非表示または無効にする必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、適切なパネルまたはフィールドを非表示/無効にするビジネスルールを作成できます。
 seo-description: アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされる際、フォームの確認者に応じて、特定のフィールドやパネルを非表示または無効にする必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、適切なパネルまたはフィールドを非表示/無効にするビジネスルールを作成できます。
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: アダプティブフォーム
+feature: アダプティブフォーム，ワークフロー
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
-topic: 開発
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '764'
 ht-degree: 2%
 
 ---
