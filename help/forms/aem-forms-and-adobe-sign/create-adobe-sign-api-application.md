@@ -1,18 +1,21 @@
 ---
 title: Adobe SignAPIアプリケーションの作成
 description: Adobe SignAPIアプリケーションを使用すると、AEM FormsをAdobe Signと統合できます
-feature: アダプティブフォーム
+feature: アダプティブForms、Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 kt: 6032
 thumbnail: 38178.jpg
+topic: 開発
+role: Administrator
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 0%
+source-wordcount: '89'
+ht-degree: 2%
 
 ---
 
