@@ -1,8 +1,8 @@
 ---
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
-description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
+description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにし、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
-feature: dispatcher
+feature: ディスパッチャー、開発者ツール
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -92,7 +95,7 @@ Cloud ServiceSDKとしてのAEMが既に[ローカルAEMランタイム](./aem-r
 
 ## 設定の検証
 
-オプションで、ディスパッチャーとApache Webサーバーの設定（`httpd -t`経由）は、`validate`スクリプトを使用して検証できます（`validator`実行可能ファイルと混同しないでください）。
+オプションで、ディスパッチャーとApache Webサーバーの設定（`httpd -t`経由）は、`validate`スクリプトを使用して検証できます（`validator`実行ファイルと混同しないでください）。
 
 + 使用方法:
    + Windows：`bin\validate src`
@@ -163,7 +166,7 @@ Experience Managerプロジェクトのディスパッチャー設定に対し�
 + `REWRITE_LOG_LEVEL=Debug` Apache HTTP Webサーバー書き換えモジュールログをデバッグレベルに設定します
    + デフォルト値：`Warn`
 + `DISP_RUN_MODE` ディスパッチャー環境の「実行モード」を設定し、対応する実行モードのディスパッチャー設定ファイルを読み込みます。
-   + デフォルト に設定`dev`
+   + デフォルトは `dev`
 + 有効な値：`dev`、`stage`、または`prod`
 
 `docker_run`に渡すことができる1つ以上のパラメータ
