@@ -3,7 +3,7 @@ title: AEM Sitesとレスポンシブレイアウトについて
 seo-title: AEM Sitesとレスポンシブレイアウトについて
 description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者はAEM内で様々なデバイスやプレビューのエンドユーザーエクスペリエンス向けのレスポンシブコンテンツを作成できます。
 seo-description: 様々なデバイス用のレスポンシブレイアウトを作成する手順について説明します。
-feature: template-editor, page-editor
+feature: ページエディター，編集可能なテンプレート
 topics: authoring, responsive
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '137'
 ht-degree: 21%
 
 ---
