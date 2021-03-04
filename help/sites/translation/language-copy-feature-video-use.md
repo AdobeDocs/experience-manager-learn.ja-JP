@@ -1,16 +1,19 @@
 ---
 title: AEM Sitesとの言語コピーの使用
-feature: language-copy
+feature: 言語コピー
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
+topic: ローカリゼーション
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 8%
+source-wordcount: '65'
+ht-degree: 12%
 
 ---
 
