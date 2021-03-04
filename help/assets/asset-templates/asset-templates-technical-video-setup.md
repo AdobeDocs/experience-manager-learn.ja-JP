@@ -1,17 +1,15 @@
 ---
 title: AEM AssetsとInDesign Serverを使用したアセットテンプレートの設定
 description: アセットテンプレートを使用すると、マーケティング担当者はデジタルおよび印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用してマーケティング資料、名刺、チラシ、広告、およびはがきを簡単に作成できます。 AEMでのInDesignサーバの設定については、この節で説明します。
-feature: catalogs, asset-templates
-topics: authoring, renditions, documents
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 0%
+source-wordcount: '161'
+ht-degree: 1%
 
 ---
 
