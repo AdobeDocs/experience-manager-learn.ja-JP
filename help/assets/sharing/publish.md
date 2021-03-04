@@ -2,19 +2,18 @@
 title: AEMを使用してアセットを公開する方法
 description: AEM AuthorからAEM Publishにアセットとそのレンディションを公開する方法を説明します。
 sub-product: アセット
-feature: Publishing
-topics: Content Management
-audience: author
-doc-type: feature video
-activity: use
+feature: アセット管理
 version: cloud-service
 kt: 330932
 thumbnail: 32194.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 3%
+source-wordcount: '58'
+ht-degree: 6%
 
 ---
 
