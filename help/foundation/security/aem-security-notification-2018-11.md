@@ -4,21 +4,18 @@ seo-title: AEMセキュリティ通知（2018年11月）
 description: AEMExperience Managerセキュリティ通知ディスパッチャー
 seo-description: AEMExperience Managerセキュリティ通知ディスパッチャー
 version: 6.4
-feature: Dispatcher
+feature: dispatcher
 topics: security
 activity: understand
 audience: all
 doc-type: article
 uuid: 3ccf7323-4061-49d7-ae95-eb003099fd77
 discoiquuid: 9d181b3e-fbd5-476d-9e97-4452176e495c
-topic: セキュリティ
-role: アーキテクト
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 18%
+source-wordcount: '439'
+ht-degree: 17%
 
 ---
 
