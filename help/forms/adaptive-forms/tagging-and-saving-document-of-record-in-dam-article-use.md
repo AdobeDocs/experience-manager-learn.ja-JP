@@ -4,17 +4,20 @@ seo-title: DAMでのAEM FormsDoRのタグ付けと保存
 description: この記事では、AEM DAMでAEM Formsが生成したDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 seo-description: この記事では、AEM DAMでAEM Formsが生成したDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: adaptive-forms,workflow
+feature: '"アダプティブForms，ワークフロー"'
 topics: developing
 audience: implementer
 doc-type: article
 activity: develop
 version: 6.4,6.5
 discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
@@ -57,7 +60,7 @@ tagManager.setTags(metadata, tagArray, true);
 * [AEM Package Managerを使用して記事](assets/tag-and-store-in-dam-assets.zip) アセットを読み込む
 * [サンプルフォームをプレビューモード](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)で開きます。 「人」セクションに入力し、フォームを送信します。
 * [DAMのPeakフォルダーに移動します](http://localhost:4502/assets.html/content/dam/Peak)。PeakフォルダーにDoRが表示されます。 ドキュメントのプロパティを確認します。 適切にタグ付けする必要があります。
-おめでとう！! サンプルがシステムに正常にインストールされました
+これで完了です!! サンプルがシステムに正常にインストールされました
 
 * フォーム送信時にトリガーされる[ワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)を調べます。
 * ワークフローの最初の手順では、申込者の名前と住所の州名を連結して、一意のファイル名を作成します。
