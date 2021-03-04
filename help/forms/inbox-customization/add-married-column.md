@@ -8,14 +8,11 @@ doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 開発
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 8%
+source-wordcount: '307'
+ht-degree: 7%
 
 ---
 
