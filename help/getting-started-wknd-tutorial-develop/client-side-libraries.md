@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
+feature: 「コアコンポーネント、AEMプロジェクトのアーキタイプ」
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3291'
+source-wordcount: '3301'
 ht-degree: 10%
 
 ---
@@ -79,7 +83,7 @@ Adobe Experience Manager(AEM)サイト実装のCSSとJavaScriptをデプロイ�
 
 1. CSS／JS を、開発および管理が簡単な個別の小さなファイルに保存する
 1. 組織立った方法で、サードパーティのフレームワークへの依存関係を管理する
-1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする。
+1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする.
 
 クライアント側ライブラリの使用の詳細については、[こちら](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を参照してください。
 
@@ -89,7 +93,7 @@ Adobe Experience Manager(AEM)サイト実装のCSSとJavaScriptをデプロイ�
 
 ## クライアント側ライブラリ組織{#organization}
 
-次に、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)で生成されたclientlibの組織を調べます。
+次に、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)で生成されたclientlibの組織を調べます。
 
 ![高レベルのクライアントライブラリ組織](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -335,7 +339,7 @@ AEMプロジェクトのアーキタイプによって、この統合が自動�
    <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.js"></script>
    ```
 
-   これらの参照は削除できます。これは、webpack開発サーバーがこれらのアーティファクトを自動的に生成するからです。
+   これらの参照は削除できます。webpack開発サーバーによってこれらのアーティファクトが自動的に生成されるからです。
 
 1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行し、新しい端末からwebpack開発サーバを開始します。
 
@@ -413,7 +417,7 @@ AEMプロジェクトのアーキタイプによって、この統合が自動�
 
    再び`ui.frontend`モジュールがコンパイルされ、クライアントライブラリに変換され、`ui.apps`モジュールを介してAEMにデプロイされます。 しかし今回はMavenが私たちのために全てを行います
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 おめでとうございます。記事ページにはWKNDブランドと一致する一貫したスタイルがいくつか用意され、**ui.frontend**&#x200B;モジュールに慣れています。
 
