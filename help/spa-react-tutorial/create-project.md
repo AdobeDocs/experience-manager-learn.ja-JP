@@ -2,7 +2,7 @@
 title: SPA Editorプロジェクト | AEM SPA EditorとReactの使い始めに
 description: AEM SPAエディタと統合されたReactアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を説明します。
 sub-product: サイト
-feature: maven-archetype, SPA Editor
+feature: SPAエディタ、AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 413
 thumbnail: 413-spa-react.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1136'
 ht-degree: 4%
 
 ---
@@ -46,7 +49,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
 >[!CAUTION]
 >
-> [アーキタイプ](https://github.com/adobe/aem-project-archetype)の&#x200B;**最新**&#x200B;版を使用して、現実世界での実装用の新しいプロジェクトを生成することがベストプラクティスです。 AEMプロジェクトでは、アーキタイプの`aemVersion`プロパティを使用してAEMの単一バージョンをターゲットする必要があります。
+> [アーキタイプ](https://github.com/adobe/aem-project-archetype)の&#x200B;**最新バージョン**&#x200B;を使用して、現実世界での実装用の新しいプロジェクトを生成することがベストプラクティスです。 AEMプロジェクトでは、アーキタイプの`aemVersion`プロパティを使用してAEMの単一バージョンをターゲットする必要があります。
 
 1. Gitを介して、このチュートリアルのスタートポイントをダウンロードします。
 
@@ -150,7 +153,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
    プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEMランタイムにインストールされます。
 
-6. また、`spa.project.core`と`core.wcm.components`のパッケージもいくつか見てください。 これらの依存関係は、アーキタイプによって自動的に含まれます。 [AEMコアコンポーネントの詳細は、](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
+6. また、`spa.project.core`と`core.wcm.components`のパッケージもいくつか見てください。 これらの依存関係は、アーキタイプによって自動的に含まれます。 [AEMコアコンポーネントの詳細は、](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を参照してください。
 
    `spa.project.core` は、SPAエディターで必要なJSONモデルAPIの生成に必要な依存関係です。
 
@@ -234,7 +237,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    >
    > JSON出力の形式を自動的に設定するには、ブラウザー拡張機能をインストールすると便利です。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 AEM SPA Editorプロジェクトを初めて作成しました。
 
