@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーの開発
 description: asset compute作業者は、アセットに対して実行した作業を新しいレンディションの作成のために実行、または調整するカスタム機能を提供する、Asset computeプロジェクトの中核となります。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -28,7 +31,7 @@ asset computeプロジェクトは、アセットの元のバイナリを名前�
 
 ## asset computeワーカー呼び出しの論理フロー
 
-asset computeワーカーは、Asset computeSDKのワーカーAPI契約を`renditionCallback(...)`関数に実装します。この関数は概念的には次のようになります。
+asset computeワーカーは、Asset computeSDKのワーカーAPI契約を`renditionCallback(...)`関数に実装します。この関数は概念上次のとおりです。
 
 + __入力：AEMアセット__ の元のバイナリパラメーターと処理プロファイルパラメーター
 + __出力：AEMアセットに追加する1つ__ 以上のレンディション
