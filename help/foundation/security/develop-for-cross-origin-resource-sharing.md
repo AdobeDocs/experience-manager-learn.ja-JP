@@ -3,15 +3,17 @@ title: AEMとの接触チャネル間リソース共有(CORS)のための開発
 description: CORSを利用して、クライアント側のJavaScriptを介して外部WebアプリケーションからAEMコンテンツにアクセスする短い例です。
 version: 6.3, 6,4, 6.5
 sub-product: 基盤，コンテンツサービス，サイト
-feature: null
 topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
+topic: セキュリティ
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -113,7 +115,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**フ** ァイルに変更を加えた後、Webサーバー `dispatcher.any` アプリケーションを再起動します。
+**フ**  `dispatcher.any` ァイルに変更を加えた後、Webサーバーアプリケーションを再起動します。
 
 `/clientheaders`構成の更新後の次の要求でヘッダーが適切にキャッシュされるように、キャッシュを完全にクリアする必要がある可能性があります。
 
