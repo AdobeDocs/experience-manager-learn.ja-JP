@@ -1,22 +1,17 @@
 ---
 title: AEM AssetsDynamic Mediaでのスマートクロップの使用
-seo-title: AEM AssetsDynamic Mediaでのスマートクロップの使用
 description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
-seo-description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
-uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
-discoiquuid: e4b8534c-fa64-491f-86ec-4dbe50cd6bf7
 sub-product: dynamic-media
-feature: smart-crop, image-profiles
-topics: images, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: スマート切り抜き、画像プロファイル
 version: 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 13%
+source-wordcount: '256'
+ht-degree: 17%
 
 ---
 
@@ -29,7 +24,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Adobe Experience ManagerのDynamic Media・スマート・クロップ機能には、
 
