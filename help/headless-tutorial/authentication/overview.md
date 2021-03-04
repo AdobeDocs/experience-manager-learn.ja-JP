@@ -4,15 +4,18 @@ description: ローカル開発アクセストークンとサービス資格情�
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
+topic: 「ヘッドレス、統合」
+role: デベロッパー
+level: 「中級、経験豊富」
 translation-type: tm+mt
-source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
