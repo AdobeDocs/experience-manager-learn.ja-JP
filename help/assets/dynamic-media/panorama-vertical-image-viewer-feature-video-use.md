@@ -1,20 +1,17 @@
 ---
 title: AEM AssetsDynamic Mediaとのパノラマ&垂直画像ビューアの使用
-seo-title: AEM AssetsDynamic Mediaとのパノラマ&垂直画像ビューアの使用
 description: AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
-seo-description: AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
 sub-product: dynamic-media
-feature: video-profiles, video-profiles, vr-360
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: ビデオプロファイル、ビデオプロファイル、360 VRビデオ
 version: 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 2%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +24,7 @@ AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像
 
 >[!NOTE]
 >
->ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## パノラマVRビューアおよびパノラマVRビューア
 
