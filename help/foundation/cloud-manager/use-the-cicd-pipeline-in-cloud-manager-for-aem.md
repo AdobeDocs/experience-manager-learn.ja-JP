@@ -2,15 +2,17 @@
 title: AdobeのCloud ManagerでのCI/CDパイプラインの使用
 description: AdobeCloud Managerは、AMSでホストされるすべてのAEM環境に、簡単で柔軟なセルフサービスCI/CDパイプラインを提供します。AEMプロジェクトチームは、AMSでホストされるすべてのに、コードを迅速、安全、一貫して導入できます。 このビデオシリーズでは、Cloud ManagerのCI/CDパイプラインのセットアップと実行を、失敗シナリオと成功シナリオの両方で詳しく説明します。
 sub-product: クラウドマネージャー，ファンデーション
-feature: pipelines, quality-gates
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
+topic: アーキテクチャ
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -44,7 +46,7 @@ Cloud ManagerとCloud Managerのプログラムを簡単に紹介します。
 
 ## 成功したパイプライン実行
 
-このビデオでは、**[!DNL master]**&#x200B;リポジトリブランチを使用して、Cloud Managerの必要な品質チェックに合格するコードを使用して、CI/CDパイプラインの正常な実行を調べます。
+このビデオでは、**[!DNL master]**&#x200B;リポジトリブランチを使用して、Cloud Managerの必要な品質チェックに合格するコードを使用して、CI/CDパイプラインの正常な実行を調査します。
 
 また、このビデオは、Cloud Managerの[!UICONTROL アクティビティ]コンソールにもタッチします。これにより、アクティブな実行に再び参加したり、完了した実行や失敗した実行を確認したりできます。
 
