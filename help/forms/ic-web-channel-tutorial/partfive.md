@@ -4,18 +4,21 @@ seo-title: 受信者名とアドレスを保持するドキュメントフラグ
 description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 この部分では、受信者名とアドレスを保持するドキュメントフラグメントを作成します。 '
 seo-description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 この部分では、受信者名とアドレスを保持するドキュメントフラグメントを作成します。 '
 uuid: 689931e4-a026-4e62-9acd-552918180819
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 404eed65-ec55-492a-85b5-59773896b217
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 1%
 
 ---
 
