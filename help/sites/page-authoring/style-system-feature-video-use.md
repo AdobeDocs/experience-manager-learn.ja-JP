@@ -3,7 +3,7 @@ title: AEM Sitesでのスタイルシステムの使用
 seo-title: AEM Sites・Adobe Experience Managerでのスタイル制の活用
 description: Adobe Experience Managerスタイルシステムでは、バックエンド開発を行わずにコンポーネントの視覚的なバリエーションを実現でき、AEMコンポーネントの再利用性が向上し、汎用性と効率性に優れたコンテンツのオーサリングが可能です。 スタイルシステムをAEMコアコンポーネント、テンプレートエディター、レスポンシブレイアウトと組み合わせて使用すると、オファーの強力な機能により、豊富なエクスペリエンスをすばやく作成できます。
 seo-description: Adobe Experience Managerスタイルシステムでは、バックエンド開発を行わずにコンポーネントの視覚的なバリエーションを実現でき、AEMコンポーネントの再利用性が向上し、汎用性と効率性に優れたコンテンツのオーサリングが可能です。 スタイルシステムをAEMコアコンポーネント、テンプレートエディター、レスポンシブレイアウトと組み合わせて使用すると、オファーの強力な機能により、豊富なエクスペリエンスをすばやく作成できます。
-feature: style-system
+feature: スタイルシステム
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: fc456c868bdfe2fbb71387f36432a134fbff7dbb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 4%
+source-wordcount: '263'
+ht-degree: 5%
 
 ---
 
