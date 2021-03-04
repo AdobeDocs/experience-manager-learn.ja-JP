@@ -2,17 +2,20 @@
 title: コンテンツフラグメントとエクスペリエンスフラグメントについて
 description: Adobe Experience Managerのコンテンツフラグメントとエクスペリエンスフラグメントは、表面的に似ているように見える場合がありますが、それぞれが異なる用途で重要な役割を果たします。 コンテンツフラグメントとエクスペリエンスフラグメントの類似性、違い、それぞれの用途、使用方法を説明します。
 sub-product: アセット、サイト、コンテンツサービス
-feature: content fragments, experience fragments
+feature: コンテンツフラグメント、エクスペリエンスフラグメント
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 03db12de4d95ced8fabf36b8dc328581ec7a2749
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 6%
+source-wordcount: '1007'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +28,7 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 
 <table>
 <tbody><tr><td><strong> </strong></td>
-<td><strong>コンテンツフラグメント(CF)</strong></td>
+<td><strong>コンテンツフラグメント（CF）</strong></td>
 <td><strong>エクスペリエンスフラグメント(XF)</strong></td>
 </tr><tr><td><strong>定義</strong></td>
 <td><ul>
@@ -96,17 +99,17 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 <li>翻訳/ローカライゼーション</li>
 </ul>
 </td>
-</tr><tr><td><strong>使用方法</strong></td>
+</tr><tr><td><strong>以下のように</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM SITES、AEM Screens、またはエクスペリエンスフラグメントで使用するAEMコアコンポーネントコンテンツフラグメント</a> コンポーネント。</li>
-<li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>を介したJSONエクスポートによるサードパーティの利用</li>
+<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用するAEMコアコンポーネントコンテンツフラグメント</a> コンポーネント。</li>
+<li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>を介したJSONエクスポート。サードパーティの利用が可能</li>
 <li>AEM HTTP Assets APIを介したJSONによるサードパーティの利用。</li>
 </ul>
 </td>
 <td><ul>
-<li>AEM SITES、AEM Screensまたはその他のエクスペリエンスフラグメントで使用するAEMエクスペリエンスフラグメントコンポーネント。</li>
+<li>AEM Sites、AEM Screensまたはその他のエクスペリエンスフラグメントで使用するAEMエクスペリエンスフラグメントコンポーネント。</li>
 <li>サードパーティ製システムで使用する<a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">プレーンHTML</a>として書き出し</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">ターゲットオファー用のHTMLのAdobe</a> ターゲットへの書き出し</li>
+<li><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">ターゲットオファー用のHTMLのAdobe</a> ターゲットへの書き出し</li>
 <li>ターゲットオファー用のJSONエクスポートをAdobe Targetに送信</li>
 </ul>
 </td>
