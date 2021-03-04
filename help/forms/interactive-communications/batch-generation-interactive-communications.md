@@ -1,17 +1,20 @@
 ---
 title: Batch APIを使用した対話型通信ドキュメントの生成
 description: バッチAPIを使用して印刷チャネルドキュメントを生成するためのサンプルアセット
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 3dc1bd3f2f7b6324c53640f01a263fa0728d439c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 6%
+source-wordcount: '421'
+ht-degree: 7%
 
 ---
 
