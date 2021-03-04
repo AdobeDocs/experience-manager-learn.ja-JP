@@ -2,7 +2,7 @@
 title: コンポーネントの拡張 | AEM SPAエディタとAngularの使い始めに
 description: AEM SPAエディタで使用する既存のコアコンポーネントを拡張する方法を説明します。 既存のコンポーネントにプロパティやコンテンツを追加する方法を理解することは、AEM SPA Editorの実装機能を拡張する強力なテクニックです。 Sling Resource MangerのSlingモデルと機能を拡張するための委任パターの使用方法を説明します。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPAエディタ、コアコンポーネント
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 5871
 thumbnail: 5871-spa-angular.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1986'
-ht-degree: 3%
+source-wordcount: '1991'
+ht-degree: 4%
 
 ---
 
@@ -31,13 +34,13 @@ AEM SPAエディタで使用する既存のコアコンポーネントを拡張�
 
 ## 作成する内容
 
-この章では、新しい`Card`コンポーネントが作成されます。 `Card`コンポーネントは、[Image Core Component](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)を拡張して、「タイトル」や「行動喚起」ボタンなどの追加のコンテンツフィールドを追加し、SPA内の他のコンテンツに対してティーザーの役割を実行します。
+この章では、新しい`Card`コンポーネントが作成されます。 `Card`コンポーネントは、[Image Core Component](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)を拡張して、「タイトル」や「行動喚起」ボタンなどの追加のコンテンツフィールドを追加し、SPA内の他のコンテンツに対してティーザーの役割を実行します。
 
 ![カードコンポーネントの最終オーサリング](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 実際の実装では、単に[Teaserコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html)を使用し、次に[Image Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)を拡張して、プロジェクトの要件に応じて`Card`コンポーネントを作成する方が適している場合があります。 可能な場合は、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を直接使用することをお勧めします。
+> 実際の実装では、単に[Teaserコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/teaser.html)を使用し、次に[Image Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)を拡張して、プロジェクトの要件に応じて`Card`コンポーネントを作成する方が適している場合があります。 可能な場合は、[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を直接使用することをお勧めします。
 
 ## 前提条件
 
