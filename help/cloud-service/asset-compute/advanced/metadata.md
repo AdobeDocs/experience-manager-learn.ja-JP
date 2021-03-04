@@ -1,7 +1,7 @@
 ---
 title: asset computeメタデータワーカーの開発
 description: asset computeアセット内で最も一般的に使用される色を派生させ、色の名前をAEM内のアセットのメタデータに書き戻す画像メタデータワーカーの作成方法を説明します。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: c2a8e6c3ae6dcaa45816b1d3efe569126c6c1e60
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1442'
 ht-degree: 1%
 
 ---
@@ -38,7 +41,7 @@ ht-degree: 1%
 
 asset computeメタデータワーカーの呼び出しは、ワーカーを生成する[バイナリレンディション](../develop/worker.md)の呼び出しとほぼ同じです。主な違いは、戻り値の型がXMP(XML)レンディションで、値もアセットのメタデータに書き込まれます。
 
-asset computeワーカーは、Asset computeSDKのワーカーAPI契約を`renditionCallback(...)`関数に実装します。この関数は概念的には次のようになります。
+asset computeワーカーは、Asset computeSDKのワーカーAPI契約を`renditionCallback(...)`関数に実装します。この関数は概念上次のとおりです。
 
 + __入力：AEMアセット__ の元のバイナリパラメーターと処理プロファイルパラメーター
 + __出力：AEMアセット__ にレンディションとして保持され、アセットのメタデータに保存されるXMP(XML)レンディション
