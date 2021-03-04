@@ -1,18 +1,21 @@
 ---
 title: PDFフォームをアダプティブフォームに変換
 description: 'Adobe Sensei をベースとして開発された AEM Forms 自動フォーム変換サービスを実行すると、使用しているデバイスに合わせて、PDF フォームが自動的にアダプティブフォームに変換されます。 自動フォーム変換サービスを使用すると、非インタラクティブ PDF フォーム、AcroForms、XFA ベースの PDF フォームなど、各種フォームを簡単にアダプティブフォームに変換することができます。 '
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39495.jpg
 kt: 6115
+topic: 開発
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 75%
+source-wordcount: '131'
+ht-degree: 74%
 
 ---
 
