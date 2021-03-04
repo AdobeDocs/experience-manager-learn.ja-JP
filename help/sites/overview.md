@@ -4,11 +4,12 @@ seo-title: AEM Sites チュートリアル
 description: 'Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。 '
 seo-description: Adobe Experience Manager Sites向けのビデオとチュートリアルの集まり
 sub-product: サイト、content services
+topic: コンテンツ管理
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 31%
+source-wordcount: '365'
+ht-degree: 33%
 
 ---
 
@@ -91,7 +92,7 @@ Adobe Experience Manager(AEM)サイトは、主要なエクスペリエンス管
 * [AEM Sitesオーサリングドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites開発文書](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理文書](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites導入ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites導入ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/user-guide.html)
 * [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
 * [AEM Assets チュートリアル](/help/assets/overview.md)
 * [AEM Forms チュートリアル](/help/forms/overview.md)
