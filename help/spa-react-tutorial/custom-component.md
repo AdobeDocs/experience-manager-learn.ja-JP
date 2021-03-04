@@ -2,7 +2,7 @@
 title: カスタムコンポーネントの作成 | AEM SPA EditorとReactの使い始めに
 description: AEM SPAエディタで使用するカスタムコンポーネントを作成する方法を学びます。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
 sub-product: サイト
-feature: SPA Editor
+feature: SPAエディタ
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5878
 thumbnail: 5878-spa-react.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: e6da018a21155eca3a52dd562e469296b3c68c0d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1491'
 ht-degree: 3%
 
 ---
@@ -157,7 +160,7 @@ AEMコンポーネントは、ノードとプロパティとして定義され�
    >
    > コアコンポーネントの定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を参照すると、[ダイアログの例を表示できます。 `select`、`textarea`、`pathfield`など、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)の`/libs/granite/ui/components/coral/foundation/form`の下で利用できる追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
+   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
 
 ## Slingモデルの作成
 
@@ -328,7 +331,7 @@ SPAエディターのコンテキストでは、Slingモデルは、[Slingモデ
 
    JSON値は、Slingモデルに追加されたロジックに基づいて、すべての大文字に設定されます。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPAエディタで使用するカスタムAEMコンポーネントの作成方法を学びました。 また、ダイアログ、JCRプロパティ、Slingモデルとのやり取りによるJSONモデルの出力方法も学習しました。
 
