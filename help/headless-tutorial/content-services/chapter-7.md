@@ -1,10 +1,14 @@
 ---
 title: 第7章 — モバイルアプリからのAEM Content Servicesの利用 — Content Services
 description: チュートリアルの第7章では、AEM Content Servicesで作成したコンテンツをAndroidモバイルアプリで使用する方法を説明します。
+feature: コンテンツフラグメント、API
+topic: 「頭がない、コンテンツ管理」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -60,7 +64,7 @@ AEM Publishが&#x200B;**http://localhost:4503**&#x200B;で実行されていな�
    1. **ピクセル2**&#x200B;を選択します。
    1. 「**次へ**」ボタンをクリックします。
    1. **Q**&#x200B;と&#x200B;**APIレベル29**&#x200B;を選択します。
-      * AVDマネージャーの初回起動時に、「Download the versioned API」というメッセージが表示されます。 「Q」リリースの横の「ダウンロード」リンクをクリックし、ダウンロードとインストールを完了します。
+      * AVDマネージャーの初回起動時に、「Download the versioned API」を選択するように求められます。 「Q」リリースの横の「ダウンロード」リンクをクリックし、ダウンロードとインストールを完了します。
    1. 「**次へ**」ボタンをクリックします。
    1. 「**完了**」ボタンをクリックします。
 1. **AVDマネージャー**&#x200B;ウィンドウを閉じます。
@@ -191,14 +195,14 @@ public class Image {
 1. **既存の[!DNL Event]コンテンツフラグメント**&#x200B;の非公開
 1. **タグ行**&#x200B;に更新を発行
 
-## これで完了です。
+## これで完了です
 
 **AEM Headless Tutorialは終了です。**
 
 ヘッドレスCMSとしてのAEM Content ServicesとAEMについて詳しくは、Adobeの他のドキュメントおよび有効化に関する資料を参照してください。
 
 * [コンテンツフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCMコアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [AEM WCMコアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [AEM WCMコアコンポーネントコンポーネントライブラリ](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCMコアコンポーネントGitHubプロジェクト](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCMコアコンポーネント — エキスパートにお問い合わせ](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
