@@ -6,10 +6,14 @@ doc-type: tutorial
 topics: best-practices, development, authoring, configuring
 audience: all
 activity: develop, use
+feature: Dynamic Mediaクラシック
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
