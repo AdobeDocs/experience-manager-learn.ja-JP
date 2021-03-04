@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張用のアカウントとサービスの設定
 description: asset computeワーカーの開発では、AEMを含むアカウントやサービス(Cloud Service、AdobeプロジェクトのFirefly、MicrosoftまたはAmazonが提供するクラウドストレージ)にアクセスする必要があります。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '635'
 ht-degree: 2%
 
 ---
@@ -24,7 +27,7 @@ ht-degree: 2%
 
 すべてのAdobeサービスは、Adobe IDを使用して、同じAdobe組織を通じてアクセスできる必要があります。
 
-+ [CLOUD SERVICEとしてのAEM](#aem-as-a-cloud-service)
++ [Cloud ServiceとしてのAEM](#aem-as-a-cloud-service)
 + [AdobeプロジェクトFireFly](#adobe-project-firefly)
    + プロビジョニングには2 ～ 10日かかる場合があります
 + クラウドストレージ
