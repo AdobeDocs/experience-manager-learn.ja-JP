@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
+feature: 「コンテンツフラグメント、GraphQL API」
+topic: 「頭がない、コンテンツ管理」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '794'
 ht-degree: 3%
 
 ---
@@ -119,7 +123,7 @@ ht-degree: 3%
 
    これで、2つの&#x200B;**寄稿者**&#x200B;フラグメントが作成されます。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 これは、複数のコンテンツフラグメントを作成し、バリエーションを作成しただけです。
 
