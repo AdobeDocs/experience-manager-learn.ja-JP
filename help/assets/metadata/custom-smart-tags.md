@@ -1,19 +1,18 @@
 ---
 title: AEM Assetsの画像用のカスタムスマートタグ
 description: AEM Assetsのスマートタグをトレーニングして、アセットにカスタムキーワードを適用する方法について説明します。
-feature: smart-tags
-topics: metadata
-audience: developer, administrator
-doc-type: technical video
-activity: setup
+feature: スマートタグ
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
+topic: コンテンツ管理
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 1%
+source-wordcount: '155'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +31,7 @@ ht-degree: 1%
 
 画像のカスタムスマートタグを使用するには、[画像を設定するためのスマートタグ](./image-smart-tags.md#set-up)が必要です。
 
-Smart Content ServiceとAdobe I/Oを使用して、AEM Assetsでスマートタグのトレーニングを設定する方法について説明します。画像のカスタムスマートタグ
+スマートコンテンツサービスとAdobe I/Oを使用して、AEM Assetsでスマートタグのトレーニングを設定する方法について説明します。画像のカスタムスマートタグ
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
