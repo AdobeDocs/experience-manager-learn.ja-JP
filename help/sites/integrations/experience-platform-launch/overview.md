@@ -1,7 +1,6 @@
 ---
 title: Experience Platform LaunchとAEMの統合
 description: Experience Platform Launchは、Adobeの次世代タグ管理プラットフォームであり、Adobe Analytics、ターゲット、Audience Manager、その他多くのソリューションを導入する最善の方法です。 Launchの概要と、推奨されるAdobe Experience Managerとの統合について説明します。
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 5979
 thumbnail: 39090.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: d1ab6e59d817ef103b76960b260b7958d1fa5953
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 20%
+source-wordcount: '142'
+ht-degree: 21%
 
 ---
 
