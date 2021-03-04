@@ -4,7 +4,7 @@ seo-title: 所得パネルへのコンポーネントの追加
 description: 所得パネルにテーブルを追加します。 テーブル行を設定し、ルールエディタを使用して総合計を計算します。
 seo-description: 所得パネルにテーブルを追加します。 テーブル行を設定し、ルールエディタを使用して総合計を計算します。
 uuid: d5c98561-c559-4624-976a-7a1486da7e69
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
 discoiquuid: fa483260-38ff-40d8-96a7-1de11d8b792b
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 0%
+source-wordcount: '216'
+ht-degree: 1%
 
 ---
 
