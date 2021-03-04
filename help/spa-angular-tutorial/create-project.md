@@ -2,7 +2,7 @@
 title: SPA Editorプロジェクト | AEM SPAエディタとAngularの使い始めに
 description: AEM SPA Editorと統合されたAngularアプリケーションの起点として、Adobe Experience Manager(AEM) Mavenプロジェクトを使用する方法を説明します。
 sub-product: サイト
-feature: メーブン・アーキタイプ
+feature: SPAエディタ、AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 5309
 thumbnail: 5309-spa-angular.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 4%
+source-wordcount: '1117'
+ht-degree: 5%
 
 ---
 
@@ -147,7 +150,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
    プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEMランタイムにインストールされます。
 
-6. また、`spa.project.core`と`core.wcm.components`のパッケージもいくつか見てください。 これらは、アーキタイプによって自動的に追加される依存関係です。 [AEMコアコンポーネントの詳細は、](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
+6. また、`spa.project.core`と`core.wcm.components`のパッケージもいくつか見てください。 これらは、アーキタイプによって自動的に追加される依存関係です。 [AEMコアコンポーネントの詳細は、](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を参照してください。
 
 ## 作成者コンテンツ
 
