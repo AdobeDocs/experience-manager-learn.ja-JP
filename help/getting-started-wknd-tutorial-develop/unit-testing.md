@@ -9,10 +9,14 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+feature: API、AEM Project Archetype
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '3024'
 ht-degree: 28%
 
 ---
@@ -77,7 +81,7 @@ _Java 8とJava 11の両方がシステムにインストールされている場
 
 ## ユニットテストとAdobeクラウドマネージャ{#unit-testing-and-adobe-cloud-manager}
 
-[AdobeCloud ](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Managerは、ユニットテストの実行と [コードカバレッジのレポート](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) をCI/CDパイプラインに統合し、ユニットテストAEMコードのベストプラクティスを促進します。
+[AdobeCloud ](https://docs.adobe.com/content/help/ja/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Managerは、ユニットテストの実行と [コードカバレッジのレポート](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) をCI/CDパイプラインに統合し、ユニットテストAEMコードのベストプラクティスを促進します。
 
 コードの単体テストはあらゆるコードベースで有益ですが、Cloud Manager を使用している場合は、Cloud Manager で実行できる単体テストを提供して、コード品質のテストや報告機能を活用することが重要です。
 
@@ -451,7 +455,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    * **`@Mock private Image`** タイプがmockオブジェクトを作成 `com.adobe.cq.wcm.core.components.models.Image`します。これは、必要に応じて`@Test`メソッドがその動作を変更できるように、クラスレベルで定義されていることに注意してください。
    * **`@Mock private ModelFactory`** モデルファクトリ型のモックオブジェクトを作成します。これは純粋な Mockito モックであり、メソッドは実装されません。これは、必要に応じて`@Test`メソッドが必要に応じて動作を変更できるように、クラスレベルで定義されていることに注意してください。
    * **`when(modelFactory.getModelFromWrappedRequest(..)`** モックModelFactoryオブジェクトで呼び出さ `getModelFromWrappedRequest(..)` れたときのモック動作を登録します。`thenReturn (..)`で定義された結果は、モック画像オブジェクトを返すことです。 この動作は、次の場合にのみ呼び出されます。1番目のパラメーターは`ctx`のリクエストオブジェクトと等しく、2番目のパラメーターは任意のResourceオブジェクトで、3番目のパラメーターはCore Components Imageクラスである必要があります。 テストの間、`ctx.currentResource(...)`を&#x200B;**BylineImplTest.json**&#x200B;に定義された様々なモックリソースに設定するので、すべてのリソースを受け入れます。 後でModelFactoryのこの動作を上書きしたいので、**lenient()**&#x200B;の厳密さを追加します。
-   * **`ctx.registerService(..)`.** モックのModelFactoryオブジェクトをAemContextに登録し、最も高いサービスランクを付けます。BylineImplの`init()`で使用されるModelFactoryは`@OSGiService ModelFactory model`フィールドを介して挿入されるので、この値は必須です。 `getModelFromWrappedRequest(..)`への呼び出しを処理する&#x200B;****&#x200B;モックオブジェクトをAemContextに挿入するには、そのタイプ(ModelFactory)の最上位のサービスとして登録する必要があります。
+   * **`ctx.registerService(..)`** モックのModelFactoryオブジェクトをAemContextに登録し、最も高いサービスランクを付けます。BylineImplの`init()`で使用されるModelFactoryは`@OSGiService ModelFactory model`フィールドを介して挿入されるので、この値は必須です。 `getModelFromWrappedRequest(..)`への呼び出しを処理する&#x200B;****&#x200B;モックオブジェクトをAemContextに挿入するには、そのタイプ(ModelFactory)の最上位のサービスとして登録する必要があります。
 
 1. テストを再実行すると再び失敗しますが、今回は失敗の理由が明白です。
 
