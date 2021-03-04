@@ -3,17 +3,20 @@ title: JSONスキーマとデータを持つAEM Forms[パート1]
 seo-title: JSONスキーマとデータを持つAEM Forms[Part1]
 description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
 seo-description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 2%
+source-wordcount: '299'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +28,7 @@ AEM Forms6.3リリースでは、JSONスキーマを基にアダプティブForm
 
 JSONスキーマに基づいてアダプティブフォームを作成したら、次の手順は、送信されたデータをデータベースに保存することです。 この目的で、様々なデータベースベンダーが導入した新しいJSONデータ型を使用します。 この記事の目的で、MySql 8データベースを使用して送信データを保存します。
 
-この記事にはMySql 8データベースが使用されています。 MySQLには、[JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)という新しいデータ型が導入されました。 これにより、JSONオブジェクトの保存とクエリが容易になります。 送信されたデータは、データベース内のJSON型の列に格納されます。
+この記事ではMySql 8データベースが使用されています。 MySQLには、[JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)という新しいデータ型が導入されました。 これにより、JSONオブジェクトの保存とクエリが容易になります。 送信されたデータは、データベース内のJSON型の列に格納されます。
 
 以下のスクリーンショットは、送信されたフォームデータをJSONデータタイプに保存したものです。 列「formdata」の型はJSONです。 また、データに関連付けられたフォームの名前を列のformnameに保存しました
 
