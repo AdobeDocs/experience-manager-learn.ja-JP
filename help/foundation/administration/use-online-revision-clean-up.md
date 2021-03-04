@@ -2,16 +2,18 @@
 title: オンラインリビジョンのクリーンアップを使用
 description: 'オンラインリビジョンのクリーンアップの簡単な説明。 オンラインリビジョンのクリーンアップは、オフラインリビジョンのクリーンアップを頻繁に行う必要性を緩和します。 '
 version: 6.3, 6.4, 6.5
-feature: oak, compaction
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
+topic: Administration
+role: Administrator
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 1%
+source-wordcount: '77'
+ht-degree: 2%
 
 ---
 
