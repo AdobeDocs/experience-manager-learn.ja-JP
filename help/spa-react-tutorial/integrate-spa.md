@@ -2,17 +2,20 @@
 title: SPAの統合 | AEM SPA EditorとReactの使い始めに
 description: Reactで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
 sub-product: サイト
-feature: maven-archetype, SPA Editor
+feature: SPAエディタ
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4853
 thumbnail: 4853-spa-react.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: ff75a9d10e9d00510e4c49dea0dcc36e68ca46c4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2109'
 ht-degree: 5%
 
 ---
@@ -610,7 +613,7 @@ Node Sass could not find a binding for your current environment: macOS 64-bit wi
    </execution>
    ```
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPAを更新し、AEMとの統合を確認しました。 これで、**webpack-dev-server**&#x200B;を使用してAEM JSONモデルAPIに対してSPAを開発する2つの異なる方法がわかります。
 
