@@ -3,7 +3,7 @@ title: AEM Sitesとのページエディタの使用
 seo-title: Adobe Experience Manager Sitesとのページエディタの使用
 description: 次のビデオでは、Adobe Experience Managerのタッチ操作対応UIサイトエディターの主な機能のいくつかに焦点を当てています。
 seo-description: 次のビデオでは、Adobe Experience Managerのタッチ操作対応UIサイトエディターの主な機能のいくつかに焦点を当てています。
-feature: page-editor
+feature: ページエディター
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4248
 thumbnail: 32011.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 10%
+source-wordcount: '249'
+ht-degree: 12%
 
 ---
 
