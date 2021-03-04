@@ -1,22 +1,17 @@
 ---
 title: AEM AssetsでのDynamic Media360ビデオとカスタムビデオサムネールの使用
-seo-title: AEM AssetsでのDynamic Media360ビデオとカスタムビデオサムネールの使用
 description: AEM 6.5でのDynamic Mediaビューアの機能強化に加え、360ビデオレンダリング、360メディアビューア（video360Socialおよびvideo360VR）のサポートおよびカスタムビデオサムネールの選択機能が追加されました。
-seo-description: AEM 6.5でのDynamic Mediaビューアの機能強化に加え、360ビデオレンダリング、360メディアビューア（video360Socialおよびvideo360VR）のサポートおよびカスタムビデオサムネールの選択機能が追加されました。
-uuid: 44b91c22-635c-48c2-af27-49bdbfb61639
-discoiquuid: 67d5e0f2-3fde-4ea7-9e53-4fc0cf8b9f2a
 sub-product: dynamic-media
-feature: video-profiles, viewer-presets
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-doc-type: feature video
-audience: all
-activity: use
+feature: ビデオプロファイル
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '402'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +24,7 @@ AEM 6.5でのDynamic Mediaビューアの機能強化に加え、360ビデオレ
 
 >[!NOTE]
 >
->ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。  [Dynamic MediaでAEMを設定する手順は、こちらを参照してください](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。ビデオをアップロードする場合、縦横比が2:1の場合、Dynamic Mediaは初期設定で360ビデオとしてフッテージを処理します。 例えば、幅と高さの比率は2:1です。
+>ビデオでは、AEMインスタンスがDynamic MediaS7モードで実行されていることを前提としています。  [Dynamic MediaでAEMを設定する手順は、こちらを参照してください](https://helpx.adobe.com/jp/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。ビデオをアップロードする場合、縦横比が2:1の場合、Dynamic Mediaは初期設定で360ビデオとしてフッテージを処理します。 例えば、幅と高さの比率は2:1です。
 
 >[!NOTE]
 >
