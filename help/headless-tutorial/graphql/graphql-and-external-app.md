@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
+feature: 「コンテンツフラグメント、GraphQL API」
+topic: 「頭がない、コンテンツ管理」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -337,7 +341,7 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
 
    ![エラーJSONオブジェクト](assets/graphql-and-external-app/error-json-response.png)
 
-   `errors`オブジェクトは冗長であり、無効なクエリの場所とエラーの分類に関する情報が含まれています。
+   `errors`オブジェクトは冗長であり、無効なクエリの場所とエラーの分類に関する情報が含まれます。
 
 1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリケーションを正しい状態に戻します。
 
