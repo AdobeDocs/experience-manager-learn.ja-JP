@@ -1,10 +1,14 @@
 ---
 title: AEMヘッドレスチュートリアル
 description: ヘッドレスCMSとしてAdobe Experience Managerを使用する方法に関するチュートリアルの集まりです。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
