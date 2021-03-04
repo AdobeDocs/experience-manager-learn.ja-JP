@@ -1,20 +1,16 @@
 ---
 title: AEM Assetsでのスマート翻訳検索の使用
-seo-title: AEM Assetsでのスマート翻訳検索の使用
 description: スマート翻訳検索を使用すると、AEMコンテンツ、アセットとページの両方にわたって自動的に多言語間の検索と検出が可能になり、50以上の言語をサポートし、手動コンテンツ翻訳の必要性を減らすことができます。
-seo-description: スマート翻訳検索を使用すると、AEMコンテンツ、アセットとページの両方にわたって自動的に多言語間の検索と検出が可能になり、50以上の言語をサポートし、手動コンテンツ翻訳の必要性を減らすことができます。
-uuid: daa6f20f-a4d3-402d-83b9-57d852062a89
-discoiquuid: eb2e484a-0068-458f-acff-42dd95a40aab
-topics: authoring, search, metadata, localization
-audience: all
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
+feature: 検索
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 1%
 
 ---
 
