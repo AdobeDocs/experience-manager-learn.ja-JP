@@ -2,7 +2,7 @@
 title: AEM Sites使用の手引き — コンポーネントの基本
 description: シンプルな「HelloWorld」の例を通して、Adobe Experience Manager(AEM)サイトコンポーネントの基盤となる技術を理解します。 HTL、Slingモデル、クライアント側ライブラリ、および作成者ダイアログのトピックについて説明します。
 sub-product: サイト
-feature: components, sling-models, htl
+feature: コアコンポーネント、開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1154'
 ht-degree: 4%
 
 ---
@@ -356,7 +359,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
    >
    > パフォーマンス上の理由から、CSSとJavaScriptはブラウザーによって頻繁にキャッシュされます。 クライアントライブラリに対する変更がすぐに表示されない場合は、ハードリフレッシュを実行し、ブラウザーのキャッシュをクリアします。 匿名ウィンドウを使用して新しいキャッシュを確実に作成すると便利です。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 おめでとうAdobe Experience Managerでコンポーネント開発の基礎を学びました！
 
