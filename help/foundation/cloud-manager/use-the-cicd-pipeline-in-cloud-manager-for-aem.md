@@ -2,17 +2,15 @@
 title: AdobeのCloud ManagerでのCI/CDパイプラインの使用
 description: AdobeCloud Managerは、AMSでホストされるすべてのAEM環境に、簡単で柔軟なセルフサービスCI/CDパイプラインを提供します。AEMプロジェクトチームは、AMSでホストされるすべてのに、コードを迅速、安全、一貫して導入できます。 このビデオシリーズでは、Cloud ManagerのCI/CDパイプラインのセットアップと実行を、失敗シナリオと成功シナリオの両方で詳しく説明します。
 sub-product: クラウドマネージャー，ファンデーション
+feature: パイプライン、クォリティゲート
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
-topic: アーキテクチャ
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
