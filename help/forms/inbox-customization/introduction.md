@@ -1,18 +1,21 @@
 ---
 title: インボックスのカスタマイズ
 description: 'ワークフローデータに基づいて新しい列を追加してインボックスをカスタマイズする '
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 24%
+source-wordcount: '206'
+ht-degree: 25%
 
 ---
 
