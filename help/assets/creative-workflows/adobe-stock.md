@@ -1,16 +1,15 @@
 ---
 title: AEM AssetsでのAdobe Stockアセットの使用
 description: 'AEMでは、AEMから直接、Adobe Stockアセットを検索、プレビュー、保存、ライセンス認証できます。 組織は、Adobe Stockエンタープライズ計画をAEM Assetsと統合し、ライセンスされたアセットがAEMの強力なアセット管理機能を備え、クリエイティブやマーケティングプロジェクトで広く利用できるようにします。 '
-feature: creative-cloud-integration
-topics: authoring, collaboration, operations, sharing, metadata, images, stock
-audience: all
-doc-type: feature video
-activity: use
+feature: Adobe Stock
 version: 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '973'
 ht-degree: 15%
 
 ---
@@ -46,7 +45,7 @@ Adobe StockとAEM Assetsの統合により、コンテンツ作成者やマー�
 
 ### 資産の在庫プロファイル
 
-* ユーザーは、*ユーザー/環境設定/在庫設定*&#x200B;の下のAdobe Stockプロファイルを選択できます。
+* ユーザーは、*ユーザー/環境設定/株価プロファイル*&#x200B;の下のAdobe Stock環境を選択できます。
 * 必須およびオプションの参照は、アセットライセンスウィンドウに追加できます。
 * 領域に基づいて、アセットライセンスウィンドウの言語設定を選択できます。
 
@@ -64,7 +63,7 @@ Adobe StockとAEM Assetsの統合により、コンテンツ作成者やマー�
 
 ## Adobe StockをAEM Assetsとセットアップ{#set-up-adobe-stock-with-aem-assets}
 
-AEM 6.4.2では、AEMから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス認証を行うことができます。 このビデオでは、Adobe I/Oコンソールを使用してAEM AssetsでAdobeストックを設定する方法の概要を説明します。
+AEM 6.4.2では、AEMから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス認証を行うことができます。 このビデオでは、Adobe I/Oコンソールを使用してAdobeストックをAEM Assetsで設定する方法の概要を簡単に説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
 
@@ -74,14 +73,14 @@ AEM 6.4.2では、AEMから直接、Adobe Stockアセットの検索、プレビ
 
 >[!NOTE]
 >
->この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。[](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.2.0-Service-Pack)AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。また、[Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)、Adobe Experience Managerの管理者権限も必要です。
+>この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。[](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.2.0-Service-Pack)AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。また、統合を設定するには、[Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)、Adobe Experience Managerの管理者権限も必要です。
 
 ### インストール {#installations}
 
 * AEM 6.4の場合、[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)をインストールし、cq-dam-stock-integration-content-1.0.4.zipファイルを再インストールする必要があります。
-* [Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)、Adobe Experience Managerの管理者権限があることを確認して、統合を設定します。
+* [Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)、Adobe Experience Managerの管理者権限を持っていることを確認して、統合を設定します。
 
-#### Adobe I/Oコンソールを使用したAdobeIMS設定{#set-up-adobe-ims-configuration-using-adobe-i-o-console}
+#### Adobe I/Oコンソール{#set-up-adobe-ims-configuration-using-adobe-i-o-console}を使用してAdobeIMS設定を設定
 
 1. **ツール/セキュリティ**&#x200B;で、AdobeIMSテクニカルアカウント設定を作成します。
 2. *Cloud Solution*&#x200B;を&#x200B;*Adobe Stock*&#x200B;として選択し、新しい証明書を作成するか、既存の証明書を設定に再使用します。
