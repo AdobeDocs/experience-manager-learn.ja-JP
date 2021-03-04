@@ -2,17 +2,20 @@
 title: SPAコンポーネントのAEMコンポーネントへのマッピング | AEM SPA EditorとReactの使い始めに
 description: AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
 sub-product: サイト
-feature: maven-archetype, SPA Editor
+feature: SPAエディタ
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4854
 thumbnail: 4854-spa-react.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 52748ff530e98c4ec21b84250bd73543899db4e4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2264'
 ht-degree: 2%
 
 ---
@@ -182,7 +185,7 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
 ## 画像コンポーネントの作成
 
-次に、AEM [画像コンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)にマッピングされる`Image`リアクトコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
+次に、AEM [画像コンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)にマッピングされる`Image`リアクトコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
 
 ### InspectJSON
 
@@ -424,7 +427,7 @@ SPAコードにジャンプする前に、AEMが提供するJSONモデルを調�
 
    ![チャプターサンプル最終オーサリング](./assets/map-components/final-page.png)
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPAコンポーネントをAEMコンポーネントにマップする方法を学び、新しい`Image`コンポーネントを実装しました。 **レイアウトコンテナ**&#x200B;のレスポンシブ機能を調べる機会もあります。
 
