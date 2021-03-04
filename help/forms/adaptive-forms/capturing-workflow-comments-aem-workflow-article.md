@@ -4,18 +4,21 @@ seo-title: アダプティブForms Workflowでのワークフローコメント�
 description: AEMワークフローでのワークフローコメントの取り込み
 seo-description: AEMワークフローでのワークフローコメントの取り込み
 uuid: df41fc6f-9abf-47b4-a014-b3b9fb58b6f7
-feature: workflow
+feature: ワークフロー
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4
 discoiquuid: d5e40650-3b1f-4875-91b2-e22d932b5e7c
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 0%
+source-wordcount: '397'
+ht-degree: 1%
 
 ---
 
