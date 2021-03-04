@@ -3,7 +3,7 @@ title: AEM Sitesの使い始めに — ページとテンプレート
 seo-title: AEM Sitesの使い始めに — ページとテンプレート
 description: 基本ページコンポーネントと編集可能なテンプレートとの関係について説明します。 コアコンポーネントがプロジェクト内でどのようにプロキシ化されるかを理解し、Adobe XDのモックアップに基づいて、適切に構成された記事ページテンプレートを作成するための、編集可能なテンプレートの高度なポリシー設定を学びます。
 sub-product: サイト
-feature: template-editor, core-components
+feature: コアコンポーネント、編集可能なテンプレート
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3074'
+source-wordcount: '3083'
 ht-degree: 2%
 
 ---
@@ -258,7 +261,7 @@ AEMプロジェクトのアーキタイプで、ヘッダーとフッターが�
 
    ページコンポーネントの下には、2つのHTLスクリプト（`customfooterlibs.html`と`customheaderlibs.html`）しかありません。 *では、このコンポーネントはどのようにページをレンダリングするのか？*
 
-   `sling:resourceSuperType`プロパティは`core/wcm/components/page/v2/page`を指します。 このプロパティを使用すると、WKNDのページコンポーネントは、コアコンポーネントページコンポーネントの機能の&#x200B;**すべて**&#x200B;を継承できます。 これは、[プロキシコンポーネントパターン](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)を参照してください。。
+   `sling:resourceSuperType`プロパティは`core/wcm/components/page/v2/page`を指します。 このプロパティを使用すると、WKNDのページコンポーネントは、コアコンポーネントページコンポーネントの機能の&#x200B;**すべて**&#x200B;を継承できます。 これは、[プロキシコンポーネントパターン](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)を参照してください。.
 
 1. WKNDコンポーネント内の別のコンポーネント`Breadcrumb`をInspectが配置している場所：`/apps/wknd/components/breadcrumb`. 同じ`sling:resourceSuperType`プロパティが見つかりますが、今回は`core/wcm/components/breadcrumb/v2/breadcrumb`を指すことに注意してください。 これは、Proxyコンポーネントパターンを使用してCoreコンポーネントを含める別の例です。 実際、WKNDコードベースのコンポーネントはすべて、AEMコアコンポーネントのプロキシです（当社の有名なHelloWorldコンポーネントを除く）。 カスタムコードを記述する前に、コアコンポーネントの機能をできるだけ多く&#x200B;*使用し直すことをお勧めします。*
 
@@ -357,7 +360,7 @@ AEMプロジェクトのアーキタイプで、ヘッダーとフッターが�
    >
    > WKNDリファレンスサイトで一貫したデプロイを行うために、プロジェクトの一部のブランチがセットアップされ、`ui.content`によってJCRの変更が上書きされます。 これは、特定のポリシーに対してコード/スタイルが書き込まれるので、ソリューションの分岐などに対して設計されています。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 新しいテンプレートとページがAdobe Experience Manager Sitesに作成されました。
 
