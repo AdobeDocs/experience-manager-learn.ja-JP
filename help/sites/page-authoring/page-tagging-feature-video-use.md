@@ -3,7 +3,7 @@ title: AEM Sitesでのページタグの使用
 seo-title: Adobe Experience Manager Sitesでのページタグの使用
 description: 次のビデオでは、ページタグを使用して、Adobe Experience ManagerのWebサイト内のコンテンツを迅速かつ容易に分類する方法に焦点を当てています。
 seo-description: 次のビデオでは、ページタグを使用して、Adobe Experience ManagerのWebサイト内のコンテンツを迅速かつ容易に分類する方法に焦点を当てています。
-feature: page-editor
+feature: ページエディター
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4632
 thumbnail: 32150.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '81'
+ht-degree: 4%
 
 ---
 
