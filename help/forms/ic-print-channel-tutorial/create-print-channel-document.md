@@ -4,7 +4,7 @@ seo-title: 印刷チャネル用の対話型通信の作成
 description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチパートチュートリアルのパート6です。 ここでは、印刷チャネル用の対話型通信ドキュメントを作成します。
 seo-description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチパートチュートリアルのパート6です。 ここでは、印刷チャネル用の対話型通信ドキュメントを作成します。
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
-feature: インタラクティブコミュニケーション
+feature: 対話型通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,11 @@ version: 6.4,6.5
 discoiquuid: 6e3f9c8c-8ec4-4084-bf35-1c97a5b463f1
 kt: 5972
 thumbnail: 37888.jpg
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 3%
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
