@@ -4,18 +4,21 @@ seo-title: AEM Formsでのカスタムアセットタイプのリスト
 description: Part 2 of Listing Custom Asset Types inAEM Forms
 seo-description: Part 2 of Listing Custom Asset Types inAEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 1%
 
 ---
 
