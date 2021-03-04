@@ -3,16 +3,19 @@ title: アダプティブフォームデータの保存
 seo-title: アダプティブフォームデータの保存
 description: アダプティブフォームデータのDataBaseへの格納(AEMワークフローの一部)
 seo-description: アダプティブフォームデータのDataBaseへの格納(AEMワークフローの一部)
-feature: アダプティブフォーム，ワークフロー
+feature: アダプティブForms，ワークフロー，フォームデータモデル
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
