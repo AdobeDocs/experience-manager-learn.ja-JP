@@ -1,7 +1,7 @@
 ---
 title: AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ
 description: カスタムのAEMコンポーネントのコンテンツを使用してAdobeクライアントデータレイヤーをカスタマイズする方法について説明します。 AEMコアコンポーネントが提供するAPIを使用して、データレイヤーを拡張およびカスタマイズする方法について説明します。
-feature: core-component
+feature: Adobeクライアントデータレイヤー、コアコンポーネント
 topics: integrations
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: use
 version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
+topic: 統合
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 4%
+source-wordcount: '2037'
+ht-degree: 5%
 
 ---
 
@@ -232,7 +235,7 @@ ht-degree: 4%
        parentId: "page-30d989b3f8"
    ```
 
-   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認します。
+   公開されるプロパティがSlingモデルの`HashMap`に追加されたものと同じであることを確認してください。
 
 ## 追加クリックイベント{#click-event}
 
@@ -301,7 +304,7 @@ Adobe・クライアント・データ・レイヤーはイベント主導型で
 
 ## DataLayerBuilderユーティリティ{#data-layer-builder}を使用
 
-この章で[更新](#sling-model)したSlingモデルの場合、`HashMap`を使用し、各プロパティを手動で設定してJSON文字列を作成することを選択しました。 この方法は、小さな1回限りのコンポーネントでは適切に機能しますが、AEMコアコンポーネントを拡張するコンポーネントでは、多くの余分なコードが生じる可能性があります。
+この章で[更新](#sling-model)したSlingモデルの場合、`HashMap`を使用し、各プロパティを手動で設定してJSON文字列を作成することを選択しました。 この方法は、小さな1回限りのコンポーネントでは問題ありませんが、AEMコアコンポーネントを拡張するコンポーネントでは、多くの余分なコードが生じる可能性があります。
 
 重い持ち上げのほとんどを実行するユーティリティクラス`DataLayerBuilder`が存在します。 これにより、実装で必要なプロパティのみを拡張できます。 `DataLayerBuilder`を使用するようにSlingモデルを更新します。
 
@@ -427,7 +430,7 @@ Adobe・クライアント・データ・レイヤーはイベント主導型で
    >
    > 実装全体で再利用されるオブジェクト用に高度なデータレイヤーを作成する場合は、データレイヤー要素を独自のデータレイヤー固有のJavaオブジェクトに抽出することをお勧めします。 例えば、Commerce Core Componentsは、コマース実装内の多くのコンポーネントで使用できる`ProductData`と`CategoryData`のインターフェイスを追加しました。 詳しくは、aem-cif-core-components repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)の[コードを確認してください。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 AEMコンポーネントを使用してAdobeクライアントデータレイヤーを拡張およびカスタマイズする方法をいくつか試してみました。
 
