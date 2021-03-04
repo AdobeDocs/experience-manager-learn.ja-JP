@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてのAEM用のローカルAEMランタイムの設定
 description: AEMをCloud ServiceSDKのQuickstart Jarとして使用して、Local AEM Runtimeをセットアップします。
-feature: null
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1657'
 ht-degree: 2%
 
 ---
@@ -28,7 +31,7 @@ Adobe Experience Manager(AEM)は、AEMをCloud ServiceSDKのQuickstart Jarとし
 
 Experience ManagerはJavaアプリケーションなので、開発ツールをサポートするJava SDKが必要です。
 
-1. [最新のJava SDK 11をダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
+1. [最新のJava SDK 11をダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
 1. 次のコマンドを実行して、Java 11 SDKがインストールされていることを確認します。
    + Windows：`java -version`
    + macOS/Linux:`java --version`
@@ -236,7 +239,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-これは、AEMがCloud Serviceとして必要なJava SDK 11が異なるバージョンを実行している場合、おそらくJava 8が必要なためです。 この問題を解決するには、[OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)をダウンロードしてインストールします。
+これは、AEMがCloud Serviceとして必要なJava SDK 11が異なるバージョンを実行している場合、おそらくJava 8が必要なためです。 この問題を解決するには、[OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)をダウンロードしてインストールします。
 Java SDK 11がインストールされたら、コマンドラインから次のコマンドを実行して、アクティブバージョンであることを確認します。
 
 Java 11 SDKがインストールされたら、コマンドラインから次のコマンドを実行して、アクティブなバージョンであることを確認します。
