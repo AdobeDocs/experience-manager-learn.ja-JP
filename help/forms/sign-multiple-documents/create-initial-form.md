@@ -1,7 +1,7 @@
 ---
 title: プロセスをトリガーするための初期フォームの作成
 description: 署名プロセスを開始に送信する電子メール通知をトリガーするための初期フォームを作成します。
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
+topic: 開発
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 11%
+source-wordcount: '174'
+ht-degree: 13%
 
 ---
 
