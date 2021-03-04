@@ -2,17 +2,20 @@
 title: AEMでのコンテンツフラグメントのオーサリング
 description: 'コンテンツフラグメントはAEMのコンテンツ抽象です。この機能を使用すると、テキストベースのコンテンツを、サポートするチャネルとは独立して作成および管理できます。 '
 sub-product: content-services
-feature: content-fragments
+feature: コンテンツフラグメント
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 11%
+source-wordcount: '381'
+ht-degree: 12%
 
 ---
 
@@ -62,7 +65,7 @@ AEMコンテンツフラグメントは、バリアント、要素、メタデ�
 
 >[!NOTE]
 >
-> コンテンツフラグメントの注釈とバージョンの比較が、[AEM 6.4 Service Pack 2](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)と[AEM 6.3 Service Pack 3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/sp3-release-notes.html)で導入されました。
+> コンテンツフラグメントの注釈とバージョンの比較が、[AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)と[AEM 6.3 Service Pack 3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/sp3-release-notes.html)で導入されました。
 
 ## 次の手順
 
