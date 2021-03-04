@@ -1,19 +1,16 @@
 ---
 title: AEMでのOKTAの設定
 description: oktaを使用したシングルサインオンを使用するための様々な設定の理解
-feature: アダプティブフォーム
+feature: administration
 topics: development, authentication, security
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.5
-topic: Administration
-role: Administrator
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
