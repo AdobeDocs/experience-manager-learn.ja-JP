@@ -2,16 +2,19 @@
 title: AEMでのOAuthスコープの開発
 description: Adobe Experience Managerの拡張可能なOAuthスコープを使用すると、エンドユーザーによって承認されたクライアントアプリケーションからのリソースをアクセス制御できます。 次の図は、AEMのコンテキストでのリクエストフローを示しています。
 version: 6.3, 6.4, 6.5
-feature: authentication
+feature: 'ユーザーとグループ '
 topics: authentication, security
 activity: develop
 audience: developer
 doc-type: code
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: b351a57e6e5be0fe5696dc09842fa77fdd036a27
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 1%
+source-wordcount: '185'
+ht-degree: 3%
 
 ---
 
