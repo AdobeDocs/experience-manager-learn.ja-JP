@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてAEM用の開発ツールを設定する
 description: AEMに対してローカルで開発するために必要なすべてのベースラインツールを備えたローカル開発マシンをセットアップします。
-feature: null
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1366'
-ht-degree: 3%
+source-wordcount: '1371'
+ht-degree: 4%
 
 ---
 
@@ -28,7 +31,7 @@ Adobe Experience Manager(AEM)の開発には、開発者用マシンに最小限
 
 Experience ManagerはJavaアプリケーションなので、開発をサポートするJava SDKと、AEMSDKとしてのCloud Serviceが必要です。
 
-1. [最新リリースのJava 11 SDKをダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+1%7E&amp;orderby=%40jcr3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
+1. [最新リリースのJava 11 SDKをダウンロードしてインストールします](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Content%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Content%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=リスト&amp;p.offset=0&amp;p.limit=14)
 1. 次のコマンドを実行して、Java 11 SDKがインストールされていることを確認します。
    + Windows：`java -version`
    + macOS/Linux:`java --version`
@@ -116,34 +119,34 @@ Apache Mavenは、AEM Project Mavenアーキタイプから生成されたAEMプ
 + Cloud ServicesサービスとしてのAEMからの末尾ログ
 + CLIからのCloud Managerパイプラインの管理
 
-### Adobe I/OCLIのインストール
+### Adobe I/OのインストールCLI
 
-1. [Node.jsが](#node-js)インストールされていることを確認します。これは、Adobe I/OCLIがnpmモジュールであるためです。
+1. [Node.jsが](#node-js)インストールされていることを確認します。Adobe I/OCLIはnpmモジュールです
    + `node --version`を実行して確認
 1. `npm install -g @adobe/aio-cli`を実行して`aio` npmモジュールをグローバルにインストールします
 
-### Adobe I/OCLI Cloud Managerプラグインのセットアップ{#aio-cloud-manager}
+### Adobe I/OCLI Cloud Managerプラグイン{#aio-cloud-manager}のセットアップ
 
-Aio CLIは、Adobe I/O Cloud Managerプラグインを使用して、`aio cloudmanager`コマンドを使用してAdobeCloud Managerとやり取りできます。
+Adobe I/OCloud Managerプラグインを使用すると、aio CLIは`aio cloudmanager`コマンドを使用してAdobeCloud Managerとやり取りできます。
 
 1. `aio plugins:install @adobe/aio-cli-plugin-cloudmanager`を実行して[aio Cloud Managerプラグイン](https://github.com/adobe/aio-cli-plugin-cloudmanager)をインストールします。
 
-### Adobe I/OCLIAsset computeプラグインのセットアップ{#aio-asset-compute}
+### Adobe I/OCLIAsset computeプラグイン{#aio-asset-compute}のセットアップ
 
-Aio CLIは、Adobe I/O Cloud Managerプラグインを使用して、`aio asset-compute`コマンドを使用してAsset computeワーカーを生成し、実行できます。
+Adobe I/OCloud Managerプラグインを使用すると、aio CLIで`aio asset-compute`コマンドを使用してAsset computeワーカーを生成し、実行できます。
 
 1. `aio plugins:install @adobe/aio-cli-plugin-asset-compute`を実行して[aioAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)をインストールします。
 
 ### Adobe I/OCLI認証の設定
 
-Adobe I/OのCLIがCloud Managerと通信するには、Cloud Manager統合をAdobe I/Oコンソールで作成し、認証を正常に行うために資格情報を取得する必要があります。
+Adobe I/OCLIがCloud Managerと通信するには、Adobe I/OコンソールでCloud Manager統合を作成し、認証を正常に行うために資格情報を取得する必要があります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35094?quality=12&learn=on)
 
 1. [console.adobe.io](https://console.adobe.io)にログインします。
 1. Adobe組織の切り替えボタンで、接続先のCloud Manager製品を含む組織がアクティブであることを確認します。
 1. 新規作成するか、既存の[Adobe I/Oプログラム](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)を開きます
-   + Adobe I/Oコンソールプログラムは、統合の管理方法に基づいて、プログラム、作成または使用、既存の統合を組織的にグループ化したものです
+   + Adobe I/Oコンソールプログラムは、統合の管理方法に基づいて、プログラム、作成または使用、既存の統合を単に組織的にグループ化したものです
    + 新しいプロジェクトを作成する場合、指示に従って「空のプロジェクト」を選択します（「テンプレートから作成」と比較）。
    + Adobe I/Oコンソールのプログラムは、Cloud Managerプログラムとは異なる概念です
 1. 「開発者 —Cloud Service」プロファイルとの新しいCloud Manager API統合の作成
@@ -153,7 +156,7 @@ Adobe I/OのCLIがCloud Managerと通信するには、Cloud Manager統合をAdo
 1. `private.key`ファイルをAdobe I/OCLIにロードする
    + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
-Adobe I/OCLIを使用して、Cloud Managerの[コマンド](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)の実行を開始します。
+Adobe I/OCLIを使用して、Cloud Manager用の[コマンド](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)の実行を開始します。
 
 ## 開発IDEの設定
 
