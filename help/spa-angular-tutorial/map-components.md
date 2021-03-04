@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2392'
 ht-degree: 2%
 
 ---
@@ -199,7 +202,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 ## 画像コンポーネントの作成
 
-次に、AEM [Angularコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)にマップする`Image`イメージコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
+次に、AEM [Angularコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)にマップする`Image`イメージコンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
 
 ### InspectJSON
 
