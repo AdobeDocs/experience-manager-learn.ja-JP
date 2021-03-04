@@ -3,19 +3,16 @@ title: AEM Formsとマーケット（パート1）
 seo-title: AEM Formsとマーケット（パート1）
 description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
 seo-description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
-feature: 「アダプティブForms、フォームデータモデル」
+feature: アダプティブフォーム、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開発
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
