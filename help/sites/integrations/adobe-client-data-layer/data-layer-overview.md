@@ -1,7 +1,7 @@
 ---
 title: AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用
 description: Adobeクライアントデータレイヤーでは、Webページ上での訪問者エクスペリエンスに関するデータを収集して保存し、そのデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
-feature: core-component
+feature: コア成分
 topics: integrations
 audience: developer
 doc-type: feature video
@@ -9,10 +9,13 @@ activity: use
 version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 8%
 
 ---
@@ -135,7 +138,7 @@ Adobeのクライアントデータレイヤーの組み込み機能は、お使
    });
    ```
 
-1. ページに戻り、カルーセルスライドを切り替えます。 これ以上の文はログに記録されず、イベントが聞かれていないことを確認します。
+1. ページに戻り、カルーセルスライドを切り替えます。 これ以上文がログに記録されず、イベントが聞かれていないことを確認します。
 
 1. 次に、ページ表示イベントがトリガされたときに呼び出されるイベントハンドラを入力します。
 
