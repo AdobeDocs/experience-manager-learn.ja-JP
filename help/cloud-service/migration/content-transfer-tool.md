@@ -4,16 +4,19 @@ description: コンテンツ転送ツールは、オンプレミスまたはAMS�
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: content-transfer-tool
+feature: 移行
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
+topic: 移行
+role: アーキテクト、開発者
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 44734103ede53f559bbdfe848f5ca308ff4e128b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 2%
+source-wordcount: '87'
+ht-degree: 16%
 
 ---
 
@@ -26,4 +29,4 @@ ht-degree: 2%
 
 ## その他のリソース {#additional-resources}
 
-* [コンテンツ転送ツールの概要](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [コンテンツ転送ツールの概要](https://docs.adobe.com/content/help/ja/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
