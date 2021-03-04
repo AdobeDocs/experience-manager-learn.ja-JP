@@ -3,10 +3,14 @@ title: 第2章 —イベントコンテンツフラグメントモデルの定�
 seo-title: AEM Content Servicesの概要 — 第2章 —イベントコンテンツフラグメントモデルの定義
 description: AEMヘッドレスチュートリアルの第2章では、イベントを作成するための正規化されたデータ構造とオーサリングインターフェイスを定義するために使用するコンテンツフラグメントモデルの有効化と定義を行います。
 seo-description: AEMヘッドレスチュートリアルの第2章では、イベントを作成するための正規化されたデータ構造とオーサリングインターフェイスを定義するために使用するコンテンツフラグメントモデルの有効化と定義を行います。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1004'
 ht-degree: 10%
 
 ---
