@@ -7,11 +7,14 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
+topic: アップグレード
+role: 「リーダー、アーキテクト、開発者、管理者、実業家」
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 1519856731758ece2860615c06fc0d64edb104a5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3540'
-ht-degree: 5%
+source-wordcount: '3548'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +29,7 @@ ht-degree: 5%
 
 ### 基盤の強化
 
-Adobe Experience Manager6.5は、次の機能を通じて、システムの安定性、パフォーマンス、サポート性を引き続き強化します。
+Adobe Experience Manager6.5は、次の機能を通じて、システムの安定性、パフォーマンス、サポート性を引き続き強化しています。
 
 + **Java 11の** サポート（Java 8のサポートを維持しながら）。
 
@@ -72,7 +75,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
 
 [Adobe Managed Services](https://adobe.ly/2HODmsv)(AMS)のお客様専用のCloud Managerでは、次の機能がオファーに提供されます。
 
-+ Cloud Managerは、AEM Sitesから&#x200B;**AEM Assets**&#x200B;までAEMの展開サポートを拡張します。これには、**アセット処理**&#x200B;の自動パフォーマンステストも含まれます。
++ Cloud Managerでは、AEMの導入サポートをAEM Sitesから&#x200B;**AEM Assets**&#x200B;に拡張できます。これには、**アセット処理**&#x200B;の自動パフォーマンステストも含まれます。
 + **事前に定義されたしきい値でAEM Publish層を自動** 拡張することで、エンドユーザーの操作性を最適化できます。
 + **非実稼働** パイプラインでは、開発チームはCloud Managerを利用して、コードの品質を継続的に確認し、環境（開発とQA）の削減に導入できます。
 + **CI/CDパイプライン** APICloud Managerとプログラム的に連携し、オンプレミスの開発インフラストラクチャとの統合の可能性を深めます。
@@ -146,7 +149,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">オンラインリビジョンのクリーンアップ</a>：サーバーのダウンタイムを伴わずにリポジトリの保守を</strong>
+            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">オンラインリビジョンのクリーンアップ</a>：サーバーのダウンタイムを伴わずにリポジトリの保守を</strong>
                 実行します。</td>
             <td> </td>
             <td> </td>
@@ -307,7 +310,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">キーストアの</a></strong>
+        <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">キーストアの</a></strong>
             <br> 管理グローバル信頼ストア、証明書、およびキーはすべてリポジトリ内で管理されます。</td>
         <td></td>
         <td>✔</td>
@@ -491,7 +494,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPAエディタ</a>:ReactまたはAngularに基づいて構築されたシングルページアプリケーション(SPA)フレームワークを使用して、承認可能なWebエクスペリエンスを</strong>
-            作成し、有効にします。</td>
+            作成し、エネージメント化します。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -512,7 +515,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">マルチサイトマネージャー(MSM)</a>：共通のコンテンツを共有する複数のWebサイト（多言語、複数のブランド）を</strong>
+            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">マルチサイトマネージャー(MSM)</a>：共通のコンテンツを共有する複数のWebサイト（多言語、複数のブランド）を</strong>
             管理します。</td>
             <td>✔</td>
             <td>✔</td>
@@ -837,7 +840,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEMデスクトップアプリ</a>:Creative Suite製品で編集するために、アセットをローカルデスクトップに</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja" target="_blank">AEMデスクトップアプリ</a>:Creative Suite製品で編集するために、アセットをローカルデスクトップに</strong>
             同期します。
             </td>
             <td> </td>
@@ -872,7 +875,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stockとの統合</a>:Adobe Stockの画像に</strong>
-            直接アクセスし、使用します。</td>
+            シームレスにAEMから直接アクセスし、使用できます。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -951,7 +954,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">ビューア</a></strong>
+            <td><strong><a href="https://docs.adobe.com/docs/ja-JP/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">ビューア</a></strong>
             ：様々な画面/デバイスをサポートするカスタムブランドのリッチメディアプレイヤーおよびプリセット。</td>
             <td> </td>
             <td>✔</td>
