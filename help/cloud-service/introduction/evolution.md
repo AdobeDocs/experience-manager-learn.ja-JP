@@ -1,17 +1,17 @@
 ---
 title: Cloud ServiceとしてのAEMの進化
 description: 'AEMの履歴と、オンプレミスAEM、Adobe Managed Services AEM、およびAEM(Cloud Service)との違いを調べます。 '
-role: Architect
-level: Beginner
-type: Tutorial
-topic: Architecture
+role: アーキテクト、開発者
+level: 初心者
+type: チュートリアル
+topic: アーキテクチャ
 kt: 6920
 thumbnail: 330543.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 0%
+source-wordcount: '63'
+ht-degree: 3%
 
 ---
 
