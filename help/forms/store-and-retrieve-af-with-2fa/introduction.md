@@ -1,7 +1,7 @@
 ---
 title: MySQLデータベースからの添付ファイル付きフォームデータの格納と取得
 description: 添付ファイルを含むフォームデータの格納と取得に関する手順について説明するマルチパートチュートリアル
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 2%
+source-wordcount: '212'
+ht-degree: 4%
 
 ---
 
