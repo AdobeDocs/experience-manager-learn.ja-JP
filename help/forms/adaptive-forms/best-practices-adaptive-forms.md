@@ -3,17 +3,20 @@ title: アダプティブフォームの作成時に従う命名規則とベス�
 seo-title: アダプティブフォームの作成時に従う命名規則とベストプラクティス
 description: アダプティブフォームの作成時に従う命名規則とベストプラクティス
 seo-description: アダプティブフォームの作成時に従う命名規則とベストプラクティス
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: best-practices
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 5b05dbe45babfcfcfc81995d9d48bc9b26b9b6c8
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 8%
+source-wordcount: '316'
+ht-degree: 9%
 
 ---
 
