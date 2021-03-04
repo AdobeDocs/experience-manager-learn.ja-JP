@@ -4,21 +4,18 @@ seo-title: AEM FormsとAdobe Campaign Standardの使い始めに
 description: ACSキャンペーンプロファイル情報などを取得するために、AEM Formsフォームデータモデルを使用してAEM FormsをAdobe Campaign Standardと統合します。
 seo-description: ACSキャンペーンプロファイル情報などを取得するために、AEM Formsフォームデータモデルを使用してAEM FormsをAdobe Campaign Standardと統合します。
 uuid: 56450c9b-3752-4a64-b1b3-8c78e81f5921
-feature: 「アダプティブForms、フォームデータモデル」
+feature: アダプティブフォーム、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 89245554-7b99-4e7e-9810-52191f9ea365
-topic: 開発
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 3%
+source-wordcount: '282'
+ht-degree: 2%
 
 ---
 
