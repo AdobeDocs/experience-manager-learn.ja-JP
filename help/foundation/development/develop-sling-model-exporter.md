@@ -3,19 +3,16 @@ title: AEMでのSlingモデルエクスポーターの開発
 description: この技術的な説明では、Slingモデルエクスポータで使用するAEMの設定、エクスポータフレームワークを使用した既存のSlingモデルのJSONとしてのレンダリングの拡張、エクスポータオプションとJackson注釈を使用した出力のカスタマイズ方法について説明します。
 version: 6.3, 6.4, 6.5
 sub-product: 基盤， content-services
-feature: API
+feature: slingモデル、slingモデルエクスポーター
 topics: content-delivery, development, headless
 activity: develop
 audience: developer
 doc-type: technical video
-topic: 開発
-role: デベロッパー
-level: 中間
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 4%
+source-wordcount: '423'
+ht-degree: 3%
 
 ---
 
