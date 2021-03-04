@@ -6,10 +6,14 @@ audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.3, 6.4, 6.5
+feature: 検索
+topic: 開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '907'
 ht-degree: 11%
 
 ---
@@ -140,7 +144,7 @@ ht-degree: 11%
 
 5. **同じクエリ内の複数のパスを検索する方法**
 
-   AEM 6.3で新たに追加された機能は、同じクエリで複数のパスをクエリできる機能です。 次のQueryBuilderクエリです。 各「サブクエリ」は、独自のインデックスに解決される可能性があることに注意してください。
+   AEM 6.3で新たに追加された機能は、同じクエリで複数のパスをクエリできる機能です。 次のQueryBuilderクエリです。 各「サブクエリ」は、独自のインデックスに解決される場合があることに注意してください。
 
    ```plain
    group.p.or=true
