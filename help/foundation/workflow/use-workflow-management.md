@@ -1,17 +1,22 @@
 ---
 title: AEMでワークフローを管理する方法
 description: 'AEMワークフロー管理では、ワークフローの下でコンテンツの視認性が高まり、ワークフローモデル定義の管理が容易になります。 '
-version: 6.5, cloud-service
+version: 6.5
+sub-product: 基盤，サイト，アセット
 feature: ワークフロー
-topic: コンテンツ管理
-role: Administrator
-level: 中間
+topics: governance, collaboration
+activity: use
+audience: administrator
+doc-type: feature video
+topic: コラボレーション
+role: デベロッパー
+level: 初心者
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '138'
 ht-degree: 2%
 
 ---
