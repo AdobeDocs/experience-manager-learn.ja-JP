@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用のAsset computeプロジェクトの作成
-description: asset computeプロジェクトは、Adobe I/OCLIを使用して生成されるNode.jsプロジェクトです。このプロジェクトは、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceとして統合することができます。
-feature: asset-compute
+description: asset computeプロジェクトは、Adobe I/OCLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceとして統合できます。
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,18 +9,21 @@ audience: developer
 doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 23c91551673197cebeb517089e5ab6591f084846
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 4%
 
 ---
 
 
 # asset computeプロジェクトの作成
 
-asset computeプロジェクトは、Adobe I/OCLIを使用して生成されるNode.jsプロジェクトです。このプロジェクトは、Adobe I/O Runtimeに展開し、AEMとCloud Serviceとして統合できる特定の構造に従って作成されます。 1つのAsset computeプロジェクトに1人以上のAsset computeワーカーを含めることができます。各ワーカーは、AEMからCloud Service処理プロファイルとして参照可能な、個別のHTTPエンドポイントを持ちます。
+asset computeプロジェクトは、Adobe I/OCLIを使用して生成されるNode.jsプロジェクトです。このプロジェクトは、Adobe I/O Runtimeに展開し、AEMとCloud Serviceとして統合できる特定の構造に従って生成されます。 1つのAsset computeプロジェクトに1人以上のAsset computeワーカーを含めることができます。各ワーカーは、AEMからCloud Service処理プロファイルとして参照可能な、個別のHTTPエンドポイントを持ちます。
 
 ## プロジェクトの生成
 
@@ -32,7 +35,7 @@ _asset computeプロジェクトの生成時のクリックスルー（オーデ
 
 1. コマンドラインから、プロジェクトを含むフォルダに移動します。
 1. コマンドラインで`aio app init`を実行し、対話型プロジェクトの生成CLIを開始します。
-   + このコマンドは、Adobe I/Oに対する認証を要求するWebブラウザを生成する場合があります。ログインしている場合は、[必要なAdobeサービスと製品](../set-up/accounts-and-services.md)に関連付けられたAdobe資格情報を提供してください。 ログインできない場合は、[プロジェクトの生成方法に関する次の手順に従ってください](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)。
+   + このコマンドは、Adobe I/Oに対する認証を求めるWebブラウザを生成する場合があります。ログインしている場合は、[必要なAdobeサービスと製品](../set-up/accounts-and-services.md)に関連付けられたAdobe資格情報を提供してください。 ログインできない場合は、[プロジェクトの生成方法に関する次の手順に従ってください](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)。
 1. __組織の選択__
    + AEMをCloud Serviceとして持つAdobe組織を選択し、Project Fireflyを登録します。
 1. __プロジェクトを選択__
@@ -51,7 +54,7 @@ _asset computeプロジェクトの生成時のクリックスルー（オーデ
 
 ## console.jsonを生成
 
-開発者ツールには、`console.json`という名前のファイルが必要です。このファイルには、Adobe I/Oへの接続に必要な資格情報が含まれています。このファイルは、Adobe I/Oのコンソールからダウンロードされます。
+開発者ツールには、Adobe I/Oに接続するために必要な資格情報を含む`console.json`という名前のファイルが必要です。このファイルは、Adobe I/Oコンソールからダウンロードされます。
 
 1. asset computeワーカーの[Adobe I/O](https://console.adobe.io)プロジェクトを開きます
 1. `console.json`資格情報をダウンロードするプロジェクトワークスペースを選択します。この場合は`Development`を選択します
@@ -67,7 +70,7 @@ _asset computeプロジェクトの生成時のクリックスルー（オーデ
 
 
 > 注意
-> ファイルには秘密鍵証明書が含まれています。 プロジェクト内にファイルを保存する場合は、`.gitignore`ファイルにファイルを追加して、共有されないようにしてください。 `.env`ファイルにも同じことが言えます。これらの資格情報ファイルを共有したり、Gitに保存したりすることはできません。
+>  ファイルには資格情報が含まれています。プロジェクト内にファイルを保存する場合は、`.gitignore`ファイルにファイルを追加して、共有されないようにしてください。 `.env`ファイルにも同じことが言えます。これらの資格情報ファイルを共有したり、Gitに保存したりすることはできません。
 
 ## プロジェクトの構造を確認する
 
@@ -77,11 +80,11 @@ _asset computeプロジェクトの生成時のクリックスルー（オーデ
    + `/actions/<worker-name>/index.js` は、このワーカーの作業を実行するために使用するJavaScriptを定義します。
       + フォルダー名`worker`はデフォルトで、`manifest.yml`に登録されている限り、任意の名前を指定できます。
       + 必要に応じて`/actions`に複数のワーカーフォルダーを定義できますが、`manifest.yml`に登録する必要があります。
-+ `/test/asset-compute` には、各ワーカーのテストスイートが含まれます。`/actions`フォルダーと同様、`/test/asset-compute`には複数のサブフォルダーを含めることができ、それぞれがテストするワーカーに対応します。
++ `/test/asset-compute` には、各ワーカーのテストスイートが含まれます。`/actions`フォルダーと同様、`/test/asset-compute`には複数のサブフォルダーを含めることができ、それぞれがテストするワーカーに対応しています。
    + `/test/asset-compute/worker`は、特定のワーカーのテストスイートを表し、特定のテストケースを表すサブフォルダーと、テスト入力、パラメーター、期待出力が含まれます。
 + `/build` asset computeテストケース実行の出力、ログおよびアーティファクトが含まれます。
 + `/manifest.yml` プロジェクトが提供するAsset computeワーカーを定義します。AEMがCloud Serviceとして使用できるようにするには、各ワーカー実装をこのファイルに列挙する必要があります。
-+ `/console.json` adobe i/o構成を定義する
++ `/console.json` Adobe I/O設定の定義
    + このファイルは、`aio app use`コマンドを使用して生成/更新できます。
 + `/.aio` に、aio CLIツールで使用される設定を示します。
    + このファイルは、`aio app use`コマンドを使用して生成/更新できます。
