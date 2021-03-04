@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用の環境変数の設定
-description: 環境変数は、ローカル開発のために.envファイルに保持され、Adobe I/Oの資格情報と、ローカル開発に必要なクラウドストレージ資格情報を提供するために使用されます。
-feature: asset-compute
+description: 環境変数は、ローカル開発のために.envファイルに保持され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
@@ -22,16 +25,16 @@ ht-degree: 1%
 
 ![ドット環境ファイル](assets/environment-variables/dot-env-file.png)
 
-asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/Oおよびクラウドストレージ情報が設定されていることを確認します。 この情報は、プロジェクトの`.env`に保存されます。これは、ローカル開発にのみ使用され、Gitには保存されません。 `.env`ファイルは、キーと値のペアをローカルAsset computeのローカル開発環境に公開する便利な方法を提供します。 [](../deploy/runtime.md)Asset computeワーカーをAdobe I/O Runtimeに導入する場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 サードパーティWebサービスの開発資格情報など、その他のカスタムパラメーターやシークレットを`.env`ファイルに保存することもできます。
+asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/O情報とクラウドストレージ情報が設定されていることを確認します。 この情報は、プロジェクトの`.env`に保存されます。これは、ローカル開発にのみ使用され、Gitには保存されません。 `.env`ファイルは、キーと値のペアをローカルAsset computeのローカル開発環境に公開する便利な方法を提供します。 [](../deploy/runtime.md)Asset computeワーカーをAdobe I/O Runtimeに導入する場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 サードパーティWebサービスの開発資格情報など、その他のカスタムパラメーターやシークレットを`.env`ファイルに保存することもできます。
 
 ## `private.key`
 
 ![秘密鍵](assets/environment-variables/private-key.png)
 
-`.env`ファイルを開き、`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`キーのコメントを解除し、ファイルシステムの`private.key`への絶対パスを指定します。このパスと、Adobe I/OFireFlyプロジェクトに追加された公開証明書とのペアを指定します。
+`.env`ファイルを開き、`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`キーのコメントを解除し、Adobe I/OFireFlyプロジェクトに追加された公開証明書とペアになるファイルシステムの`private.key`への絶対パスを指定します。
 
 + キーペアがAdobe I/Oによって生成された場合は、`config.zip`の一部として自動的にダウンロードされました。
-+ 公開鍵をAdobe I/Oに提供した場合は、一致する秘密鍵も所有する必要があります。
++ Adobe I/Oに公開鍵を提供した場合は、一致する秘密鍵も所有する必要があります。
 + これらのキーペアがない場合は、新しいキーペアを生成するか、次の下部に新しい公開鍵をアップロードできます。
    [https://console.adobe.com](https://console.adobe.io) >Asset computeの蛍光プロジェクト> Workspaces @開発>サービスアカウント(JWT)。
 
