@@ -3,13 +3,11 @@ title: AEM Foundation のビデオおよびチュートリアル
 seo-title: AEM Foundation のビデオおよびチュートリアル
 description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 seo-description: Adobe Experience Manager財団のビデオやチュートリアルの集まり
-role: 「リーダー、アーキテクト、開発者、管理者、実業家」
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 17%
+source-wordcount: '261'
+ht-degree: 18%
 
 ---
 
