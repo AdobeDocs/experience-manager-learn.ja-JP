@@ -1,17 +1,20 @@
 ---
 title: OCRデータ抽出
 description: 政府発行のドキュメントからデータを抽出し、フォームに入力します。
-feature: integrations
+feature: バーコードForms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '652'
 ht-degree: 3%
 
 ---
@@ -28,7 +31,7 @@ ID Analyzerサービスを使用して、AEM FormsでOCRデータ抽出を実装
 
 ## 開発者アカウントの作成
 
-[IDアナライザ](https://portal.idanalyzer.com/signin.html)を使用して開発者アカウントを作成します。 APIキーをメモしておきます。 このキーは、IDアナライザーのサービスのREST APIを呼び出すために必要です。
+[IDアナライザー](https://portal.idanalyzer.com/signin.html)を使用して開発者アカウントを作成します。 APIキーをメモしておきます。 このキーは、IDアナライザーのサービスのREST APIを呼び出すために必要です。
 
 ## Swagger/OpenAPIファイルの作成
 
