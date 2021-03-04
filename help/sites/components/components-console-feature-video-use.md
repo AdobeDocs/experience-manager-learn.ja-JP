@@ -6,11 +6,15 @@ audience: all
 doc-type: feature video
 version: 6.3, 6.4, 6.5
 activity: use
+feature: コアコンポーネント
+topic: コンテンツ管理
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 1%
+source-wordcount: '181'
+ht-degree: 3%
 
 ---
 
