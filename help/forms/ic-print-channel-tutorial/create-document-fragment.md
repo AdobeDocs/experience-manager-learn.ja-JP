@@ -3,7 +3,7 @@ title: ドキュメントフラグメントの作成
 description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 この部分では、受信者名とアドレスを保持するドキュメントフラグメントを作成します。 '
 seo-description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 この部分では、受信者名とアドレスを保持するドキュメントフラグメントを作成します。 '
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 kt: 5958
 thumbnail: 22350.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 0%
+source-wordcount: '257'
+ht-degree: 1%
 
 ---
 
