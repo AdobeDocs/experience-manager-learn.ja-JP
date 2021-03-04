@@ -3,20 +3,17 @@ title: AEMワークフローの変数
 seo-title: AEMワークフローの変数
 description: aemワークフローでのxml,json,arraylist,ドキュメント型の変数の使用
 seo-description: aemワークフローでのxml,json,arraylist,ドキュメント型の変数の使用
-feature: ワークフロー
+feature: workflow
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 9%
+source-wordcount: '125'
+ht-degree: 8%
 
 ---
 
