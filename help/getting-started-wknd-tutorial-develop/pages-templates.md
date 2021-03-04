@@ -3,7 +3,7 @@ title: AEM Sitesの使い始めに — ページとテンプレート
 seo-title: AEM Sitesの使い始めに — ページとテンプレート
 description: 基本ページコンポーネントと編集可能なテンプレートとの関係について説明します。 コアコンポーネントがプロジェクト内でどのようにプロキシ化されるかを理解し、Adobe XDのモックアップに基づいて、適切に構成された記事ページテンプレートを作成するための、編集可能なテンプレートの高度なポリシー設定を学びます。
 sub-product: サイト
-feature: コアコンポーネント、編集可能なテンプレート
+feature: テンプレートエディター，コアコンポーネント
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,13 +12,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-topic: 「コンテンツ管理、開発」
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3076'
 ht-degree: 2%
 
 ---
