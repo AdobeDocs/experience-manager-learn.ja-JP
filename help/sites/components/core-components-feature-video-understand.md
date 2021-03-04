@@ -1,7 +1,7 @@
 ---
 title: コアコンポーネントについて
 description: 'AEMコアコンポーネントは、Adobe Experience Managerで使用される標準セットコンポーネントです。 コアコンポーネントは、Adobeのベストプラクティスと標準を基に構築され、すべてのサイト実装に対して機能の基本セットを提供します。 '
-feature: core-components
+feature: コアコンポーネント
 topics: authoring
 audience: all
 activity: use
@@ -9,11 +9,14 @@ doc-type: feature video
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4676
 thumbnail: 18926.jpg
+topic: 開発
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 16%
+source-wordcount: '104'
+ht-degree: 18%
 
 ---
 
@@ -28,6 +31,6 @@ AEMコアコンポーネントは、Adobe Experience Managerで使用される�
 
 * [GitHubプロジェクト](https://github.com/adobe/aem-core-wcm-components)
 * [コアコンポーネントの例](https://www.aemcomponents.dev/)
-* [コアコンポーネントドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネントドキュメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 
 
