@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 5912
 thumbnail: 5912-spa-react.jpg
+feature: SPAエディタ
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '734'
 ht-degree: 18%
 
 ---
@@ -20,7 +24,7 @@ ht-degree: 18%
 
 # AEM での React SPA の作成（チュートリアル） {#overview}
 
-Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するReactアプリケーションの実装について説明します。 Reactアプリは、AEM SPA Editorでデプロイするように開発、設計されます。  Editorは、ReactコンポーネントをAEMコンポーネントにマッピングします。 完成したSPAは、AEMに導入され、従来のAEMのインライン編集ツールで動的に作成できます。
+Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルをご利用いただき、ありがとうございます。 このチュートリアルでは、架空のライフスタイルブランドであるWKNDに対するReactアプリケーションの実装について説明します。 Reactアプリは、AEM SPA Editorでデプロイするように開発、設計されます。  Editorは、ReactコンポーネントをAEMコンポーネントにマッピングします。 完成したSPAは、AEMに導入され、AEMの従来のインライン編集ツールで動的に作成できます。
 
 ![最終的なSPAの実装](assets/wknd-spa-implementation.png)
 
@@ -32,9 +36,9 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 
 このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.4+**&#x200B;および&#x200B;**AEM 6.4.8+**&#x200B;と下位互換性があります。 SPAは次を使用して実装されます。
 
-* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPAエディタ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [React JS](https://reactjs.org/)
 * [リアクトアプリを作成](https://create-react-app.dev/)
 
@@ -52,7 +56,7 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 
 * HTML、CSS、JavaScriptに関する基本的な知識
 * [反応](https://reactjs.org/tutorial/tutorial.html)の基本的な知識
-* [CLOUD SERVICESDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、AEM 6.5.4+ [または](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [Cloud ServiceSDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、AEM 6.5.4+ [または](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8+としてのAEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.](https://nodejs.org/ja/) jsand  [npm](https://www.npmjs.com/)
