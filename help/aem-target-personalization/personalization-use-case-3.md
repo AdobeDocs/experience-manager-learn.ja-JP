@@ -3,11 +3,15 @@ title: Visual Experience Composerを使用したパーソナライゼーショ�
 seo-title: Visual Experience Composer(VEC)を使用したパーソナライゼーション
 description: Adobe TargetVisual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
 seo-description: Adobe TargetVisual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
+feature: エクスペリエンスフラグメント
+topic: パーソナライズ機能
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +39,7 @@ WKNDサイトのホームページは、市内のアクティビティ、また�
 
 * **AEM**
    * [AEM 4503での発行](./implementation.md#getting-aem) インスタンス
-   * [ADOBE EXPERIENCE PLATFORM LAUNCHを使ってAdobe Targetと統合されたAEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [Adobe Experience Platform Launchを使ってAdobe Targetと統合されたAEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 組織へのアクセス：Adobe Experience Cloud- <https://>`<yourcompany>`.experiencecloud.adobe.com
    * [Adobe Target](https://experiencecloud.adobe.com)でプロビジョニングされたExperience Cloud
@@ -77,7 +81,7 @@ WKNDサイトのホームページは、市内のアクティビティ、また�
    13. 「**次へ**」をクリックして、アクティビティを続行します。
    14. **トラフィック配分方法**&#x200B;を手動で選択し、100%のトラフィックを&#x200B;**エクスペリエンスB**に割り当てます。
       ![エクスペリエンスBトラフィック](assets/personalization-use-case-2/traffic.png)
-   15. 「**次へ**」をクリックします。
+   15. 「**Next**」をクリックします。
    16. アクティビティに&#x200B;**目標指標**を指定し、A/Bテストを保存して閉じます。
       ![A/Bテスト目標指標](assets/personalization-use-case-2/goal-metric.png)
    17. アクティビティの名前(**WKNDホームページ更新**)を指定し、変更を保存します。
