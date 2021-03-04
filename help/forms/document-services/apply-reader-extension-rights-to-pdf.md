@@ -9,11 +9,14 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: forms-service
+feature: Forms サービス
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '395'
 ht-degree: 12%
 
 ---
@@ -188,7 +191,7 @@ try {
 }
 ```
 
-ローカルサーバーでテストするには、次の手順に従います。
+ローカルサーバーでテストするには、次の手順に従ってください。
 1. [DevelopingWithServiceUserバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [ares.ares.core-ares Bundleをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これには、使用権限を適用し、pdfをストリーミングバックするカスタムサービスとサーブレットが含まれます。
 1. [クライアントライブラリとカスタム送信の読み込み](assets/applyaresdemo.zip)
