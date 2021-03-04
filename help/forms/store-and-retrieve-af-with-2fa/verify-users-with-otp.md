@@ -1,7 +1,7 @@
 ---
 title: OTPでのユーザーの確認
 description: OTPを使用して、申込番号に関連付けられている携帯電話番号を確認します。
-feature: 統合
+feature: アダプティブフォーム
 topics: adaptive forms
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: use
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 0%
+source-wordcount: '430'
+ht-degree: 1%
 
 ---
 
