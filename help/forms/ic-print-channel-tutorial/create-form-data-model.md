@@ -4,7 +4,7 @@ seo-title: フォームデータモデルの作成
 description: これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの3つ目の部分です。 この部分では、Form Data Modelを作成します。 Form Data Modelを使用すると、異なるデータソースを構成し、接続できます。直感的なユーザーインターフェイスで、接続されたデータソース全体でビジネスエンティティとサービスの統合データ表現スキーマを作成できます。次のビデオでは、Form Data Modelの作成手順を説明します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの3つ目の部分です。 この部分では、Form Data Modelを作成します。 Form Data Modelを使用すると、異なるデータソースを構成し、接続できます。直感的なインターフェイスにより、接続されたデータソース間でビジネスエンティティとサービスの統合データ表現スキーマを作成できます。 次のビデオでは、フォームデータモデルの作成手順を順を追って説明します。
 uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5952
 thumbnail: 27763.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 0%
+source-wordcount: '308'
+ht-degree: 1%
 
 ---
 
