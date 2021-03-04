@@ -4,18 +4,17 @@ user-guide-description: AEM ヘッドレスを使用してコンテンツを構�
 breadcrumb-title: AEM ヘッドレスチュートリアル
 version: cloud-service
 sub-product: content-services
-doc-type: tutorial
-feature: content-fragment, core-components
-topics: content-delivery
 audience: architect, developer, implementer
+doc-type: tutorial
+topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 29%
+source-wordcount: '105'
+ht-degree: 30%
 
 ---
 
