@@ -1,17 +1,20 @@
 ---
 title: AEMでの翻訳の強化
 description: AEM堅牢な翻訳フレームワークを使用すると、AEMコンテンツをサポート対象の翻訳ベンダーがシームレスに翻訳できます。 最新の機能強化について説明します。
-feature: multi-site-manager, language-copy
+feature: マルチサイトマネージャ、言語コピー
 topics: localization, authoring, content-architecture
 audience: author, marketer, developer
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
+topic: ローカリゼーション
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 2%
+source-wordcount: '340'
+ht-degree: 5%
 
 ---
 
@@ -32,7 +35,7 @@ AEM 6.5の翻訳には、次の機能が含まれます。
 
 **JSON形式での変換オブジェクトの書き出し**:AEM 6.4以前のバージョンは、変換オブジェクトのXMLおよびXLIFF形式をサポートしています。これで、システムコンソール[!UICONTROL Config Manager]を使用して、書き出し形式をJSON形式に設定できるようになりました。 [!UICONTROL Translation Platform Configuration]を探し、エクスポート形式をJSONとして選択できます。
 
-**翻訳済みのAEMコンテンツをTranslation Memory(TMS)**:aemにアクセスできないローカルの作成者は、AEMに直接取り込まれた翻訳済みコンテンツを更新し、TMSからAEMに翻訳ジョブを再送信することでAEMの翻訳を更新できます。
+**翻訳済みのAEMコンテンツをTranslation Memory(TMS)**:AEMにアクセスできないローカルの作成者は、AEMに直接取り込まれた翻訳済みコンテンツを更新し、TMSからAEMに翻訳ジョブを再送信することでAEMの翻訳を更新できます。
 
 ## AEM 6.4での翻訳の強化
 
@@ -42,6 +45,6 @@ AEM 6.5の翻訳には、次の機能が含まれます。
 
 ## その他のリソース {#additional-resources}
 
-* [多言語サイトのコンテンツの翻訳](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
+* [多言語サイトのコンテンツの翻訳](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
 * [翻訳のベストプラクティス](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
