@@ -1,18 +1,18 @@
 ---
 title: メタデータ
 description: AEM Assetsのメタデータにアクセスし、操作する方法を説明します。
-feature: Metadata
-topics: Content Management
-role: Business Practitioner
-level: Beginner
+feature: メタデータ
+role: 開業医
+level: 初心者
 version: cloud-service
 kt: 4303
 thumbnail: 32045.jpg
+topic: コンテンツ管理
 translation-type: tm+mt
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 8%
+source-wordcount: '30'
+ht-degree: 16%
 
 ---
 
