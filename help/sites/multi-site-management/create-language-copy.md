@@ -1,7 +1,7 @@
 ---
 title: 言語コピーの作成
 description: '言語コピーを作成ウィザードを使用して、AEMサイト用の言語コピーを作成する方法を学びます。  '
-feature: language-copy, live-copy, multi-site-manager
+feature: 言語コピー、マルチサイトマネージャ
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,11 +9,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5371
 thumbnail: 36483.jpg
+topic: ローカリゼーション
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 0%
+source-wordcount: '51'
+ht-degree: 1%
 
 ---
 
