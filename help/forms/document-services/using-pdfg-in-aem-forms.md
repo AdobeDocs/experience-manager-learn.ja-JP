@@ -11,11 +11,14 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 7f570f12-ce43-4da7-a249-ef6bd0fe48e5
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 1%
+source-wordcount: '285'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +34,7 @@ PDFGは、PDF Generationの略です。 これは、様々なファイル形式�
 
 デモアセットをインストールするには、次の手順を実行してください
 
-1. このドキュメント[ここ](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)に記載されているようにPDFGを設定します。
+1. このドキュメント[ここ](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)に記載されているようにPDFGを設定します。
 1. ご使用のAEM Forms版に関する適切な文書に従ってください。
 1. [パッケージマネージャーを使用して、この記事に関連するアセットを読み込んでインストールします。](assets/createpdfgdemov2.zip)
 1. [CRXのpost.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspinに移動します。
