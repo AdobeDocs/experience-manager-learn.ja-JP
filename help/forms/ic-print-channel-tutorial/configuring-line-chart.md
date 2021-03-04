@@ -4,7 +4,7 @@ seo-title: 最初の対話型通信ドキュメント用の折れ線グラフの
 description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、勘定残高を表示する折れ線グラフを追加します。
 seo-description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、勘定残高を表示する折れ線グラフを追加します。
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 0%
+source-wordcount: '175'
+ht-degree: 2%
 
 ---
 
