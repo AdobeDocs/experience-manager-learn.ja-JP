@@ -4,18 +4,21 @@ seo-title: WindowsでのAEM Formsのインストールの簡単な手順
 description: WindowsにAEM Formsを簡単にインストールする手順
 seo-description: WindowsにAEM Formsを簡単にインストールする手順
 uuid: a148b8f0-83db-47f6-89d3-c8a9961be289
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: administration
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 6%
+source-wordcount: '618'
+ht-degree: 8%
 
 ---
 
@@ -93,5 +96,5 @@ AEM Formsのインストールに関する[公式ドキュメント](https://hel
    3. 追加`sun.util.calendar`を`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`の下の新しいエントリとして
    4. 変更内容を保存します。
 
-おめでとう！!! これで、お使いのシステムにAEM Formsをインストールし、設定しました。
+これで完了です!!! これで、お使いのシステムにAEM Formsをインストールし、設定しました。
 必要に応じて、サーバー上に[Reader拡張機能](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)または[ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html)を設定できます
