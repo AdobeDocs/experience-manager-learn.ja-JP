@@ -4,21 +4,18 @@ seo-title: AEM Formsでのサービスデータモデルの使用
 description: AEMアダプティブFormsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
 seo-description: AEMアダプティブFormsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
 uuid: fb4a331f-231a-4864-9325-6dceb288ad75
-feature: 「アダプティブForms、フォームデータモデル」
+feature: アダプティブフォーム、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: e3ff47c3-9ab3-41cb-83ba-38f3eb7b2299
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 2%
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
