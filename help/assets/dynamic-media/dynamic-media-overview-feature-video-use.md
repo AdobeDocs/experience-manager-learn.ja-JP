@@ -1,20 +1,17 @@
 ---
 title: AEM AssetsとDynamic Mediaの概況
-seo-title: AEM AssetsとDynamic Mediaの概況
 description: このビデオシリーズでは、Adobe Experience ManagerDynamic Mediaをコンテンツサービングサービスとして使用して、メディアコンテンツの管理方法とアクセス方法の概要を説明します。 Dynamic Mediaでは、動的なデジタルエクスペリエンスを管理および公開できます。これはExperience Managerアセットに特有の機能です。 アドビのフレームワークとコンポーネントスイートを使用すると、マーケターはインタラクティブでマルチメディアのエクスペリエンスをすべてのデバイスでカスタマイズおよび配信できます。
-seo-description: このビデオシリーズでは、Adobe Experience ManagerDynamic Mediaをコンテンツサービングサービスとして使用して、メディアコンテンツの管理方法とアクセス方法の概要を説明します。 Dynamic Mediaでは、動的なデジタルエクスペリエンスを管理および公開できます。これはExperience Managerアセットに特有の機能です。 アドビのフレームワークとコンポーネントスイートを使用すると、マーケターはインタラクティブでマルチメディアのエクスペリエンスをすべてのデバイスでカスタマイズおよび配信できます。
 sub-product: dynamic-media
-feature: smart-crop, video-profiles, image-profiles, viewer-presets, vr-360, sets
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: スマート切り抜き、ビデオプロファイル、画像プロファイル、ビューアプリセット、360 VRビデオ、画像セット、スピンセット
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 0%
+source-wordcount: '891'
+ht-degree: 1%
 
 ---
 
@@ -83,7 +80,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
 
-このビデオでは、ソースファイル自体の機能(クリッピングパスに組み込まれる背景の透明化、Dynamic MediaのURL修飾子を使用した変数として組み込まれるトリミングとテキスト)を活用するため、画像のサイズ変更を進める方法について説明します。
+このビデオでは、ソースファイル自体の機能(クリッピングパスに組み込まれている背景の透明化、Dynamic MediaのURL修飾子を使用した変数としてのトリミングおよびテキスト)を活用するため、画像のサイズ変更以外にも方法を説明します。
 
 * Dynamic Media修飾子フィールドでのURL修飾子の使用
 * 透明部分を含む画像の背景色の変更
