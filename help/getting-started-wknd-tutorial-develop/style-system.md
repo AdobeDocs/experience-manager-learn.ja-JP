@@ -11,10 +11,14 @@ audience: developer
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
+feature: '"コアコンポーネント、スタイルシステム"'
+topic: 「コンテンツ管理、開発」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2005'
 ht-degree: 11%
 
 ---
@@ -69,7 +73,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 作成する内容 {#what-you-will-build}
 
-この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;と&#x200B;**テキスト**&#x200B;のコンポーネントのバリエーションを作成します。
+この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;と&#x200B;**テキスト**&#x200B;のコンポーネントのバリエーションを作成します。
 
 ![タイトルに使用できるスタイル](assets/style-system/styles-added-title.png)
 
@@ -87,7 +91,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 [タイトルコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)が&#x200B;**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/title`の下のプロジェクト内にプロキシ化されました。 見出し要素(`H1`、`H2`、`H3`...)のデフォルトのスタイルは、既に&#x200B;**ui.frontend**&#x200B;モジュールに実装されています。
 
-[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、タイトルコンポーネントに対して一意のスタイルが含まれ、下線が引かれています。 2つのコンポーネントを作成したり、コンポーネントダイアログを変更する代わりに、スタイルシステムを使用して、下線スタイルを追加するオプションを作成できます。
+[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、タイトルコンポーネントに対して一意のスタイルが含まれ、下線が引かれています。 2つのコンポーネントを作成したり、コンポーネントダイアログを修正する代わりに、スタイルシステムを使用して、下線スタイルを追加するオプションを作成できます。
 
 ![下線スタイル — タイトルコンポーネント](assets/style-system/title-underline-style.png)
 
@@ -223,7 +227,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 最後に、作成者は、特定のタイトルコンポーネントに下線のスタイルを適用することを選択できます。
 
-1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. AEM Sitesの編集長の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. **編集**&#x200B;モードで、タイトルコンポーネントを選択します。 **paintbrush**&#x200B;アイコンをクリックし、**下線**&#x200B;スタイルを選択します。
 
    ![下線のスタイルを適用する](assets/style-system/apply-underline-style-title.png)
@@ -380,7 +384,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ### 見積もりブロックスタイルの適用
 
-1. AEM Sites編集者の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. AEM Sitesの編集長の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. **編集**&#x200B;モードで、テキストコンポーネントを選択します。 コンポーネントを編集して、引用要素を含めます。
 
    ![テキストコンポーネントの設定](assets/style-system/configure-text-component.png)
@@ -421,7 +425,7 @@ main.container {
 
 1. **ボーナスチャレンジ** ：前の練習で学んだレッスンを使用し、スタイルシステムを使用して、コンテナコンポーネントの **固定** 幅 **流体** 幅スタイルを実装します。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 記事ページのスタイルはほぼ完成し、AEM Style Systemを使用した実際の操作を体験できました。
 
