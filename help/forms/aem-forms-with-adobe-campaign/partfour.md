@@ -4,18 +4,21 @@ seo-title: フォームデータモデルを使用したキャンペーンプロ
 description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
 seo-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive-forms, form-data-model
+feature: Output サービス
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 3%
+source-wordcount: '452'
+ht-degree: 4%
 
 ---
 
@@ -124,7 +127,7 @@ Swaggerファイルを使用してデータソースが作成されます。 デ
 * 次の要素をデータソースタブからアダプティブフォームにドラッグ&amp;ドロップします
 
    * 電子メール
-   * 名
+   * firstName
    * 姓
    * 携帯電話
 
