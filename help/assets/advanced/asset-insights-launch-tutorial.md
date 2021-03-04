@@ -1,19 +1,16 @@
 ---
 title: AEM AssetsとAdobeの開始を使用したアセットインサイトの設定
 description: この5つの部分のビデオシリーズでは、Launch by Adobeを介してデプロイされたExperience Manager用のアセットインサイトの設定と設定について説明します。
-contentOwner: selvaraj
-feature: asset-insights
-topics: integrations, development, metadata
-audience: developer, architect, administrator
-doc-type: article
-activity: implement
+feature: アセットインサイト
 version: 6.3, 6.4, 6.5
-redirect-form: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/analytics/asset-insights-launch-tutorial-setup.html
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 1%
+source-wordcount: '826'
+ht-degree: 2%
 
 ---
 
