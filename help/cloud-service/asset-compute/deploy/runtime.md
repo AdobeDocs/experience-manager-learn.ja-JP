@@ -1,7 +1,7 @@
 ---
 title: AEMでCloud Serviceとして使用するために、Asset computeワーカーをAdobe I/O Runtimeに配置する
 description: 'asset computeプロジェクトとその従業員を含む労働者は、AEMがCloud Serviceとして使用するために、Adobe I/O Runtimeに配備する必要があります。 '
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -20,18 +23,18 @@ ht-degree: 0%
 
 # Adobe I/O Runtimeに展開
 
-asset computeプロジェクトとそれらに含まれる従業員は、AEMがCloud Serviceとして使用するために、Adobe I/OCLIを介してAdobe I/O Runtimeに導入する必要があります。
+asset computeプロジェクトとその従業員を含む従業員は、AEMがCloud Serviceとして使用するAdobe I/OCLIを介してAdobe I/O Runtimeに導入する必要があります。
 
 AEMでCloud Service作成者サービスとして使用するためにAdobe I/O Runtimeに展開する場合は、2つの環境変数が必要です。
 
-+ `AIO_runtime_namespace` adobeプロジェクトのFirefelly Workspaceが
++ `AIO_runtime_namespace` AdobeプロジェクトのFirefelly Workspaceが
 + `AIO_runtime_auth` は、AdobeProject Firefly workspaceの認証資格情報です
 
 `.env`ファイルに定義されている他の標準変数は、AEMがAsset computeワーカーを呼び出すときに、Cloud Serviceとして暗黙的に提供されます。
 
 ## 開発ワークスペース
 
-このプロジェクトは`Development`ワークスペースを使用して`aio app init`を使用して生成されたので、`AIO_runtime_namespace`は、ローカルの`.env`ファイル内の`AIO_runtime_auth`と一致する`81368-wkndaemassetcompute-development`に自動的に設定されます。  deployコマンドの発行に使用されるディレクトリに`.env`ファイルが存在する場合、その値が使用されます。ただし、ファイルがOSレベルの変数エクスポートで置き換えられる場合は除きます。この場合、[stageとproduction](#stage-and-production)のワークスペースがターゲットになります。
+このプロジェクトは`Development`ワークスペースを使用して`aio app init`を使用して生成されたので、`AIO_runtime_namespace`は、ローカルの`.env`ファイル内の`AIO_runtime_auth`と一致する`81368-wkndaemassetcompute-development`に自動的に設定されます。  deployコマンドの発行に使用されるディレクトリに`.env`ファイルが存在する場合、その値が使用されます。ただし、ファイルがOSレベルの変数エクスポートで置き換えられる場合は除きます。これは、[stageおよびproduction](#stage-and-production)ワークスペースをターゲットにします。
 
 ![.env変数を使用したaioアプリのデプロイ](./assets/runtime/development__aio.png)
 
@@ -56,7 +59,7 @@ true環境変数を設定すると、`.env`内の同じ名前の変数の値が�
 1. [Adobe I/OCLI npmモジュールとAsset computeプラグイン](../set-up/development-environment.md#aio)がインストールされていることを確認します。
 1. Gitから展開するAsset computeプロジェクトをチェックアウトします
 1. 環境変数を、ターゲットワークスペース（ステージまたは実稼動）に対応する値で設定します
-   + 必須の変数は`AIO_runtime_namespace`と`AIO_runtime_auth`の2つで、Adobe I/Oデベロッパーコンソールのワークスペースごとに、ワークスペースの&#x200B;__すべてをダウンロード__&#x200B;機能を通じて取得されます。
+   + 必須の変数は`AIO_runtime_namespace`と`AIO_runtime_auth`の2つで、Adobe I/Oデベロッパーコンソールのワークスペースごとに、ワークスペースの&#x200B;__すべてをダウンロード__&#x200B;機能を介して取得されます。
 
 ![Adobe開発者コンソール — AIOランタイム名前空間と認証](./assets/runtime/stage-auth-namespace.png)
 
@@ -78,6 +81,6 @@ asset computeプロジェクトのバージョンが変更された場合、ワ�
 
 ## Workspace APIプロビジョニング{#workspace-api-provisioning}
 
-[Adobe I/O](../set-up/firefly.md)にAdobeプロジェクトFireflyプロジェクトを設定してローカル開発をサポートすると、新しい開発ワークスペースが作成され、__Asset compute、I/Oイベント__、__I/Oイベント管理API__&#x200B;が追加されました。
+ローカル開発をサポートするために、Adobe I/O](../set-up/firefly.md)にAdobeプロジェクトFireflyプロジェクトを設定すると、新しい開発ワークスペースが作成され、__Asset compute、I/Oイベント__、__I/Oイベント管理API__&#x200B;が追加されました。[
 
 __Asset compute、I/Oイベント__&#x200B;および&#x200B;__I/Oイベント管理API__ APIは、ローカル開発に使用されるワークスペースにのみ明示的に追加されます。 Cloud Service環境としてAEMに統合（排他的）されるワークスペースは、APIとして明示的に追加されたこれらのAPIを&#x200B;__必要としません__、AEMではCloud Serviceとして自動的に利用できます。
