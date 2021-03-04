@@ -2,19 +2,18 @@
 title: レビュータスク
 description: AEM Assetsのレビュータスクが最も一般的なレビューおよび承認ワークフローを容易にする方法を学習します。
 sub-product: アセット
-feature: review-task
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: コラボレーション
 version: cloud-service
 kt: 4670
 thumbnail: 32050.jpg
+topic: コラボレーション
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 15%
+source-wordcount: '38'
+ht-degree: 18%
 
 ---
 
