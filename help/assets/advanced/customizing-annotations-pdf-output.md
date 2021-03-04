@@ -1,18 +1,16 @@
 ---
 title: AEM Assetsの注釈のカスタマイズ
-seo-title: AEM Assetsの注釈のカスタマイズ
 description: AEM Assets形式と、PDFに出力する際のスタイルは、AEM開発者が設定できます。
-feature: asset-share
-topics: authoring, collaboration, operations, sharing
-audience: developer
-doc-type: feature video
-activity: developer
+feature: コラボレーション
 version: 6.3, 6.4, 6.5
+topic: コラボレーション
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 4%
 
 ---
 
