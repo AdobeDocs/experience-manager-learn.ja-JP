@@ -11,10 +11,13 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
