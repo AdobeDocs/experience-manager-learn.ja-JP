@@ -1,20 +1,16 @@
 ---
 title: マルチテナンシーと同時開発について
-seo-title: マルチテナンシーと同時開発について
 description: Adobe Experience Managerアセットを使用してマルチテナント導入を管理する利点、課題、およびテクニックについて説明します。
-uuid: 682093fe-ce55-4ef8-af10-99f7062f8b1b
-discoiquuid: 0dfcdf39-7423-459f-8f35-ee5b4b829f2c
-feature: connected-assets
-topics: authoring, operations, sharing, publishing
-audience: all
-doc-type: article
-activity: understand
+feature: Connected Assets
 version: 6.5
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '2024'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -156,4 +152,4 @@ JCRリポジトリの特性により、従来のバックアップは、個々�
 
 ### ACL {#acls}
 
-もちろん、アクセス制御リスト(ACL)を使用して、表示グループの作成と管理が必要なコンテンツパスに基づいて、ユーザーにアクセスできるユーザーを制御できます。 ACLとグループの管理の困難さは、各テナントが他のユーザーの知識をゼロにすること、およびデプロイされたアプリケーションが共有リソースに依存しているかどうかに重点が置かれています。 効率的なACL、ユーザー、グループ管理を確保するために、必要な監視を持つ一元化されたグループを作成し、効率とセキュリティを向上させるために、これらのアクセス制御とプリンシパルが重複（または重複しない）ことを確認することをお勧めします。
+もちろん、アクセス制御リスト(ACL)を使用して、表示グループの作成と管理が必要なコンテンツパスに基づいて、ユーザーにアクセスできるユーザーを制御できます。 ACLとグループの管理の困難さは、各テナントが他のユーザーの知識をゼロにすること、およびデプロイされたアプリケーションが共有リソースに依存しているかどうかを強調することに依存します。 効率的なACL、ユーザー、グループ管理を確保するために、必要な監視を持つ一元化されたグループを作成し、効率とセキュリティを向上させるために、これらのアクセス制御とプリンシパルが重複（または重複しない）ことを確認することをお勧めします。
