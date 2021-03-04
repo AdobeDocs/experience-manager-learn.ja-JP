@@ -3,17 +3,20 @@ title: AEMワークフローの変数
 seo-title: AEMワークフローの変数
 description: aemワークフローでのxml,json,arraylist,ドキュメント型の変数の使用
 seo-description: aemワークフローでのxml,json,arraylist,ドキュメント型の変数の使用
-feature: workflow
+feature: ワークフロー
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 7%
+source-wordcount: '128'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +29,7 @@ AEM 6.5以降では、AEMワークフローで変数を作成して使用でき�
 
 * Long
 * 倍精度浮動小数点
-* Boolean
+* ブール値
 * String
 * 日付
 * JSON
