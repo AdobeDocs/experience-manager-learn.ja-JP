@@ -1,7 +1,7 @@
 ---
 title: エクスペリエンスフラグメントのAdobe Targetへの書き出し
 description: AEMエクスペリエンスフラグメントをAdobe Targetオファーとして発行および書き出す方法について説明します。
-feature: experience-fragments
+feature: エクスペリエンスフラグメント
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -9,11 +9,14 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
+topic: 統合
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 3%
+source-wordcount: '198'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +49,7 @@ Adobe Admin Consoleで適切な権限を持たないエクスペリエンスフ�
 
 1. 使用しているAdobe Target製品プロファイルの管理権限で[Admin Console](https://adminconsole.adobe.com/)にログインしますが、AEM統合
 2. __製品/Adobe Target/製品プロファイル__&#x200B;を選択します。
-3. 「__統合__」タブで、AEMの統合をCloud Service環境として選択します(Adobe I/Oプロジェクトと同じ名前)。
+3. 「__統合__」タブで、AEM用の統合をCloud Service環境として選択します(Adobe I/Oプロジェクトと同じ名前)。
 4. __エディター__&#x200B;または&#x200B;__承認者__&#x200B;の役割を割り当てる
 
    ![ターゲットAPIエラー](assets/target-permissions.png)
