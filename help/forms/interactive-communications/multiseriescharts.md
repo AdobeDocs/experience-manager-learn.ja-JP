@@ -3,20 +3,17 @@ title: AEM Formsの複数シリーズグラフ
 seo-title: AEM Formsの複数シリーズグラフ
 description: 印刷およびWebチャネルードキュメントで複数シリーズのグラフを作成する場合は、適切なForm Data Modelを作成します。
 seo-description: 印刷およびWebチャネルードキュメントで複数シリーズのグラフを作成する場合は、適切なForm Data Modelを作成します。
-feature: インタラクティブコミュニケーション
+feature: 対話型通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-topic: 開発
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 1%
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
