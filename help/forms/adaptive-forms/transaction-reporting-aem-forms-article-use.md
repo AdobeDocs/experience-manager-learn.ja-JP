@@ -4,18 +4,21 @@ seo-title: AEM Formsでの取引レポートの使用
 description: AEM Formsのトランザクションレポートを使用すると、AEM Forms導入の指定日以降に行われたすべてのトランザクションをカウントできます。
 seo-description: AEM Formsのトランザクションレポートを使用すると、AEM Forms導入の指定日以降に行われたすべてのトランザクションをカウントできます。
 uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: developing
 audience: administrator
 doc-type: article
 activity: setup
 version: 6.4.1,6.5
 discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 1%
+source-wordcount: '403'
+ht-degree: 2%
 
 ---
 
