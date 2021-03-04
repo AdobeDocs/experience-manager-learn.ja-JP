@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーとAEM処理プロファイルの統合
 description: AEMは、AEM Assets加工プロファイルを介してAdobe I/O Runtimeに配備されたAsset computeワーカーとCloud Serviceとして統合されます。 処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理し、ワーカーが生成したファイルをアセットレンディションとして保存するようにAuthorサービスで設定されます。
-feature: asset-compute, processing-profiles
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '638'
 ht-degree: 2%
 
 ---
