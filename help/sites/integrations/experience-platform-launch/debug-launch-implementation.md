@@ -1,7 +1,6 @@
 ---
 title: Launch実装のデバッグ
 description: 起動の実装をデバッグするための一般的なツールとテクニックの紹介。 ブラウザーの開発者コンソールとExperience Platformデバッガー拡張機能を使用して、起動の実装の主要な側面を特定し、トラブルシューティングする方法について説明します。
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 6047
 thumbnail: 38567.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 1%
+source-wordcount: '104'
+ht-degree: 3%
 
 ---
 
