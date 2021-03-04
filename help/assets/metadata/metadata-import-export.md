@@ -2,17 +2,17 @@
 title: AEM Assetsでのメタデータの読み込みと書き出しの使用
 description: Adobe Experience Managerアセットのメタデータの読み込み機能と書き出し機能の使用方法を説明します。 読み込みと書き出しの機能により、コンテンツ作成者は既存のアセットのメタデータを一括更新できます。
 version: 6.3, 6.4, 6.5, cloud-service
-topics: Content Management
+topic: コンテンツ管理
 feature: メタデータ
 role: 管理者
 level: 中間
 kt: 647, 917
 thumbnail: 22132.jpg
 translation-type: tm+mt
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 4%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Managerアセットのメタデータの読み込み機能と�
 * 最初の列はデフォルトで`assetPath`に設定され、アセットの絶対JCRパスが保持されます。
 
 * 最初の行の後続の列は、アセットの他のメタデータプロパティを指します。
-   * 次に例を示します。`dc:title, dc:description, jcr:title`
+   * 例：`dc:title, dc:description, jcr:title`
 
 * 単一値プロパティの形式
 
