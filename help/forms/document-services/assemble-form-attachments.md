@@ -1,7 +1,7 @@
 ---
 title: フォーム添付ファイルのアセンブリ
 description: 指定された順序でフォーム添付ファイルをアセンブリ
-feature: assembler
+feature: Assembler
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 3e8b820939c2d39ef9a17f7d7aaef87cd9cdbbbb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '637'
+ht-degree: 2%
 
 ---
 
