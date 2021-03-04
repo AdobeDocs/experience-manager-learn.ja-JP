@@ -1,7 +1,7 @@
 ---
 title: ログ
 description: ログは、AEMでAEMアプリケーションをCloud Serviceとしてデバッグする際の最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログの記録に依存します。
-feature: null
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '995'
 ht-degree: 3%
 
 ---
@@ -50,7 +53,7 @@ AEM AuthorサービスとPublishサービスの両方で、AEMランタイムサ
 
 Apache WebサーバーとディスパッチャーのログはAEM発行ディスパッチャーのみが提供します。これらの要素はAEM発行層にのみ存在し、AEM作成者層には存在しません。
 
-+ `httpdaccess` aemサービスのApache Webサーバー/ディスパッチャーに対して行われたリストHTTPリクエスト。
++ `httpdaccess` AEMサービスのApache Webサーバー/ディスパッチャーに対して行われたリストHTTPリクエスト。
 + `httperror`  リストは、Apache Webサーバーからのメッセージをログに記録し、などのサポートされるApacheモジュールのデバッグに役立ち `mod_rewrite`ます。
    + 開発: `DEBUG`
    + ステージ: `WARN`
@@ -70,7 +73,7 @@ AdobeCloud Managerでは、環境のログのダウンロードアクション�
 
 ## Adobe I/OCLIとCloud Managerプラグイン{#aio}
 
-AdobeCloud Managerは、[Adobe I/OCLI](https://github.com/adobe/aio-cli)を介したCloud ServiceログとしてのAEMへのアクセスをサポートしています。Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)のCloud Managerプラグインを使用します。[
+AdobeCloud Managerは、[Adobe I/OCLI](https://github.com/adobe/aio-cli)を介したCloud ServiceログとしてのAEMへのアクセスをサポートしています。Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)用の[Cloud Managerプラグインを使用します。
 
 まず、[Cloud Managerプラグイン](../../local-development-environment/development-tools.md#aio-cli)でAdobe I/Oを設定します。
 
@@ -106,7 +109,7 @@ Environment Id Service    Name
 
 ### 尾行ログ{#aio-cli-tail-logs}
 
-Adobe I/OCLIは、[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)コマンドを使用して、AEMからリアルタイムでログをCloud Serviceとして送信できます。 尾行は、AEM上でCloud Service環境としてアクションが実行される際に、リアルタイムログアクティビティを監視するのに役立ちます。
+Adobe I/OCLIは、[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)コマンドを使用して、AEMからリアルタイムでログをCloud Serviceとして記録する機能を提供します。 尾行は、AEM上でCloud Service環境としてアクションが実行される際に、リアルタイムログアクティビティを監視するのに役立ちます。
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
