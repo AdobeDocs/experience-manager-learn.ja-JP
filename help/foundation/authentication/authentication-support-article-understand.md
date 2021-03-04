@@ -2,17 +2,20 @@
 title: AEMでの認証のサポートについて
 description: 'AEMがサポートする認証（および時々は認証）メカニズムに統合された表示。 '
 version: 6.3, 6.4, 6.5
-feature: authentication
+feature: 'ユーザーとグループ '
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
+topic: アーキテクチャ
+role: アーキテクト
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 703321483454435e33c0aa26d66110271fc095d8
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 9%
+source-wordcount: '144'
+ht-degree: 12%
 
 ---
 
