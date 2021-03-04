@@ -1,7 +1,7 @@
 ---
 title: Cloud ServiceとしてのAEMへのアクセスの設定
 description: 'AEMは、AEMCloud Serviceをクラウドネイティブで活用する手段です。したがって、AdobeIMS(Identity Managementシステム)を利用して、ユーザー、管理者、正規ユーザーの両方をAEM Authorサービスに容易にログインできます。 AdobeのIMSユーザー、ユーザーグループ、製品プロファイルを、AEMグループと共に使用し、AEM Authorへの特定のアクセス権を提供する方法について説明します。  '
-feature: users-and-groups
+feature: 'ユーザーとグループ '
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,11 +9,14 @@ audience: administrator
 doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
+topic: 管理、セキュリティ
+role: Administrator
+level: 初心者
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 4%
+source-wordcount: '602'
+ht-degree: 5%
 
 ---
 
