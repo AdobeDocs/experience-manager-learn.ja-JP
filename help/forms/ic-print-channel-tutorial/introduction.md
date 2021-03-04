@@ -3,17 +3,20 @@ title: 印刷チャネル向けの最初の対話型通信を作成する
 seo-title: 印刷チャネル向けの最初の対話型通信を作成する
 description: Interactive Communicationsは、AEM Forms6.4で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブな通信を作成するために必要な手順を順を追って説明します。
 seo-description: Interactive Communicationsは、AEM Forms6.4で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブな通信を作成するために必要な手順を順を追って説明します。
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
