@@ -3,15 +3,18 @@ title: AEMでのSlingモデルエクスポーターについて
 description: Apache Slingモデル1.3.0には、Slingモデルオブジェクトをカスタムの抽象概念に書き出したり、シリアル化したりするエレガントな方法であるSlingモデルエクスポータが導入されています。 この記事では、Slingモデルを使用してHTLスクリプトを入力する従来の使用例と、Slingモデルエクスポーターのフレームワークを利用してSlingモデルをJSONにシリアル化する方法について説明します。
 version: 6.3, 6.4, 6.5
 sub-product: 基盤， content-services
-feature: sling-models, sling-model-exporter
+feature: API
 topics: development, content-delivery, headless
 activity: understand
 audience: developer, architect
 doc-type: article
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 63295cbc353a796959ba2e98e3e21c188f596372
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
