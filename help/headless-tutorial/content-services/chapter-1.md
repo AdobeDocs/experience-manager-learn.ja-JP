@@ -3,14 +3,10 @@ title: 第1章 — チュートリアルの設定とダウンロード — Conte
 seo-title: AEM Content Services使用の手引き — 第1章 — チュートリアルの設定
 description: AEMヘッドレスチュートリアルの第1章では、チュートリアル用のAEMインスタンスの基準設定について説明します。
 seo-description: AEMヘッドレスチュートリアルの第1章では、チュートリアル用のAEMインスタンスの基準設定について説明します。
-feature: コンテンツフラグメント、API
-topic: 「頭がない、コンテンツ管理」
-role: デベロッパー
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '438'
 ht-degree: 1%
 
 ---
