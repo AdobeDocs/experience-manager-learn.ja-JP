@@ -2,17 +2,20 @@
 title: 追加ナビゲーションとルーティング | AEM SPA EditorとReactの使い始めに
 description: SPA Editor SDKを使用してAEMページにマッピングすることで、SPAで複数の表示をサポートする方法を説明します。 ダイナミックナビゲーションはReact Routerを使用して実装され、既存のヘッダコンポーネントに追加されます。
 sub-product: サイト
-feature: maven-archetype, SPA Editor
+feature: SPAエディタ
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4988
 thumbnail: 4988-spa-react.jpg
+topic: SPA
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2117'
 ht-degree: 3%
 
 ---
@@ -485,7 +488,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
 1. 次の場所に直接移動して、ディープリンクをテストします。[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). ブラウザーの「戻る」ボタンが引き続き機能することを確認します。
 
-## バリデーターが{#congratulations}
+## これで完了です! {#congratulations}
 
 SPA Editor SDKを使用してAEMページにマッピングすることで、SPAで複数の表示をサポートする方法を学びました。 ダイナミックナビゲーションは、React Routerを使用して実装され、`Header`コンポーネントに追加されました。
 
