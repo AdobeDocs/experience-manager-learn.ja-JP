@@ -3,11 +3,15 @@ title: Cloud Servicesを使用したAdobe Experience ManagerとAdobe Targetの�
 seo-title: レガシーCloud Servicesを使用したAdobe Experience Manager(AEM)とAdobe Targetの統合
 description: AEMCloud Serviceを使用してAdobe Experience Manager(AEM)をAdobe Targetと統合する方法に関する手順説明を順を追って説明します。
 seo-description: AEMCloud Serviceを使用してAdobe Experience Manager(AEM)をAdobe Targetと統合する方法に関する手順説明を順を追って説明します。
+feature: エクスペリエンスフラグメント
+topic: パーソナライズ機能
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 3%
+source-wordcount: '388'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +39,7 @@ AEMエクスペリエンスフラグメントオファーを使用してアク�
 
       >[!NOTE]
       >
-      > お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oのプロビジョニングを受けるか、システム管理者に連絡する必要があります。
+      > お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oを利用してプロビジョニングするか、システム管理者に連絡する必要があります。
 
 
 
