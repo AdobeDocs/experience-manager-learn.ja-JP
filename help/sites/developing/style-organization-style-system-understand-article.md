@@ -1,17 +1,20 @@
 ---
 title: スタイルシステムのベストプラクティスとAEM Sitesについて
 description: Adobe Experience Manager Sitesでのスタイル制度の導入に際し、ベストプラクティスを説明した詳細な記事。
-feature: style-system
+feature: スタイルシステム
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
+topic: 開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 3%
+source-wordcount: '1544'
+ht-degree: 4%
 
 ---
 
