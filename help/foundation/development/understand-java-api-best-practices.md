@@ -3,23 +3,26 @@ title: AEMのJava APIのベストプラクティスについて
 description: AEMは、開発中に使用する多数のJava APIを公開する、リッチなオープンソースソフトウェアスタック上に構築されています。 この記事では、主要なAPIと、その用途をいつ、なぜ説明します。
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: 基盤，アセット，サイト
-feature: null
+feature: API
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: fcb47ee3878f6a789b2151e283431c4806e12564
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '2023'
-ht-degree: 6%
+source-wordcount: '2027'
+ht-degree: 8%
 
 ---
 
 
 # Java APIのベストプラクティスについて
 
-Adobe Experience Manager(AEM)は、開発中に使用する多くのJava APIを公開する、リッチなオープンソースソフトウェアスタック上に構築されています。 この記事では、主要なAPIと、その用途をいつ、なぜ説明します。
+Adobe Experience Manager（AEM）は、開発時に使用可能な多数の Java API を公開する豊富なオープンソースソフトウェアスタックに基づいて構築されています。この記事では、主要なAPIと、その用途をいつ、なぜ説明します。
 
 AEMは、4つのプライマリJava APIセットを基に構築されています。
 
@@ -84,7 +87,7 @@ AEM APIのパッケージ内環境設定は、次のJavaパッケージで識別
 
 ### クエリAPI
 
-AEMは複数のクエリ言語をサポートしています。 3つの主な言語は、[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPathおよび[AEMクエリビルダー](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)です。
+AEMは複数のクエリ言語をサポートしています。 3つの主な言語は、[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPathおよび[AEMクエリビルダー](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/querybuilder-api.html)です。
 
 最も重要な懸念事項は、コードベース全体で一貫したクエリ言語を維持し、理解するための複雑さとコストを軽減することです。
 
@@ -93,7 +96,7 @@ AEMは複数のクエリ言語をサポートしています。 3つの主な言
 推奨されるAPIは[AEMクエリビルダー](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)です。これは最高レベルの抽象で、クエリの結果を構築、実行、取得するための堅牢なAPIを提供し、次の機能を提供します。
 
 * 単純なパラメータ化クエリ構造(Mapとしてモデル化されたクエリパラメータ)
-* ネイティブ[Java APIおよびHTTP API](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
+* ネイティブ[Java APIおよびHTTP API](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
 * [OOTBクエリデバッガ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
 * [OOTB](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 予測一般的なクエリ要件のサポート
 
@@ -265,7 +268,7 @@ Resource resource = ResourceResolver.getResource("/path/to/the/resource");
 Resource resource = resourceResolver.getResource(node.getPath());
 ```
 
-### [!DNL Sling] [!DNL Resource] aem Asset
+### [!DNL Sling] [!DNL Resource] AEM Asset
 
 #### 推奨される方法
 
