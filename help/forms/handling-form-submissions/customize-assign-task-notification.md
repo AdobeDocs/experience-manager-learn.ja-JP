@@ -2,7 +2,7 @@
 title: タスクの割り当て通知のカスタマイズ
 description: タスク割り当て通知電子メールにフォームデータを含める
 sub-product: フォーム[ふぉーむ]
-feature: workflow
+feature: ワークフロー
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,11 +10,14 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 7%
+source-wordcount: '450'
+ht-degree: 8%
 
 ---
 
