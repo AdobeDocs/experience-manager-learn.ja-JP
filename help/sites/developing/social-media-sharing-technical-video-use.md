@@ -1,17 +1,20 @@
 ---
 title: AEM Sitesでソーシャルメディアシェアを使用する
 description: ソーシャルメディア共有コンポーネントの設定と使用に関するトピックを参照してください。
-feature: core-components
+feature: コアコンポーネント
 topics: integrations
 audience: developer, implementer
 doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 9%
+source-wordcount: '215'
+ht-degree: 11%
 
 ---
 
@@ -22,7 +25,7 @@ ht-degree: 9%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
 
-このビデオでは、[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)サンプルWebサイトを使用して、ソーシャルメディア共有コンポーネント([AEMコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)の一部)の次の機能について説明します。
+このビデオでは、[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)サンプルWebサイトを使用して、ソーシャルメディア共有コンポーネント([AEMコアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)の一部)の次の機能について説明します。
 
 * 0:00 — ソーシャルメディア共有コンポーネントの追加と設定
 * 1:00 - Facebookでの共有
