@@ -4,13 +4,11 @@ seo-title: AEM FormsTutorialsとビデオ
 description: 初心者・経験者向けのAEM Forms資料集
 seo-description: 初心者・経験者向けのAEM Forms資料集
 sub-product: フォーム[ふぉーむ]
-topic: 開発
-role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 21%
+source-wordcount: '303'
+ht-degree: 20%
 
 ---
 
