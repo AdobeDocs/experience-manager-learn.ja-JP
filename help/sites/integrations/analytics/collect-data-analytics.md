@@ -1,7 +1,7 @@
 ---
 title: Adobe Analyticsとページデータを収集する
 description: イベント主導型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerで作成されたWebサイト上のユーザーアクティビティに関するデータを収集します。 Experience Platform Launchのルールを使用してこれらのイベントをリッスンし、データをAdobe Analyticsのレポートスイートに送信する方法について説明します。
-feature: analytics
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2415'
+source-wordcount: '2419'
 ht-degree: 5%
 
 ---
@@ -92,7 +95,7 @@ AEM環境を設定してWKNDコードベースをインストールする代わ�
    ```json
    page-2eee4f8914:
        @type: "wknd/components/page"
-       dc:description: "WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world."
+       dc:description: WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world.
        dc:title: "WKND Adventures and Travel"
        repo:modifyDate: "2020-08-31T21:02:21Z"
        repo:path: "/content/wknd/us/en.html"
