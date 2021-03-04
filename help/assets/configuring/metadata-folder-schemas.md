@@ -2,19 +2,18 @@
 title: メタデータフォルダーのスキーマ
 description: メタデータフォルダスキーマを使用すると、アセット上で直接操作する代わりに、アセットフォルダ自体に関連付けられたメタデータを管理および確認することができます。
 sub-product: アセット
-feature: metadata-schemas
-topics: configuring, content-architecture, metadata
-audience: administrator, implementer
-doc-type: feature video
-activity: use
+feature: メタデータ
 version: cloud-service
 kt: 4983
 thumbnail: 34071.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 2%
+source-wordcount: '53'
+ht-degree: 7%
 
 ---
 
