@@ -1,10 +1,14 @@
 ---
 title: 第6章 — JSONとして発行するAEM上のコンテンツの公開 — Content Services
 description: AEMヘッドレスチュートリアルの第6章では、必要なパッケージ、設定、コンテンツをすべてAEM Publish上に置いて、モバイルアプリからの消費を許可する方法について説明します。
+feature: コンテンツフラグメント、API
+topic: 「頭がない、コンテンツ管理」
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '473'
 ht-degree: 2%
 
 ---
@@ -18,7 +22,7 @@ AEMヘッドレスチュートリアルの第6章では、必要なパッケー�
 
 AEM Content Servicesを通じてイベントを導くために作成した設定とコンテンツは、AEM Publishに公開して、Mobile Appがアクセスできるようにする必要があります。
 
-AEM Content Servicesは設定（コンテンツフラグメントモデル、編集可能なテンプレート）、アセット（コンテンツフラグメント、画像）、ページから構築されているので、これらの要素はすべて自動的にAEMコンテンツ管理機能を利用します。次に例を示します。
+AEM Content Servicesは設定（コンテンツフラグメントモデル、編集可能なテンプレート）、アセット（コンテンツフラグメント、画像）およびページから構築されているので、これらの要素はすべて自動的にAEMコンテンツ管理機能を利用します。次に例を示します。
 
 * レビューと処理のワークフロー
 * およびAEM PublishのAEM Content Servicesエンドポイントからコンテンツをプッシュおよびプルするためのアクティベーション/非アクティブ化
