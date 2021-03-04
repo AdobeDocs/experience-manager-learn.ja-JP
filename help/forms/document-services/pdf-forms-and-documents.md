@@ -3,17 +3,17 @@ title: 様々なタイプのPDF formsとドキュメントの理解
 description: PDFは実際にはファイル形式のファミリーです。この記事では、フォーム開発者にとって重要で関連性のあるPDFの種類について説明します。
 solution: Experience Manager Forms
 product: aem
-type: Documentation
-role: Developer
-level: Beginner,Intermediate
+type: ドキュメント
+role: デベロッパー
+level: 初級者、中級者
 version: 6.3,6.4,6.5
-feature: Document Services
-topic: development
+feature: ドキュメントサービス
+topic: 開発
 kt: 7071
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1301'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # PDF形式
 
-Portableドキュメント形式(PDF)は、実際にはファイル形式のファミリーで、フォーム開発者にとって最も重要なファイル形式について説明します。 様々なPDFタイプの技術的な詳細や標準の多くは、進化し、変化しています。 これらの形式や仕様の一部は、国際標準化機構(ISO)規格で、一部はAdobeが所有する特殊な知的財産です。
+Portableドキュメント形式(PDF)は、実際にはファイル形式のファミリーで、フォーム開発者にとって最も重要なファイル形式の詳細を示しています。 様々なPDFタイプの技術的な詳細や標準の多くは、進化し、変化しています。 これらの形式や仕様の一部は、国際標準化機構(ISO)規格で、一部はAdobeが所有する特殊な知的財産です。
 
 この記事では、様々な種類のPDFを作成する方法を説明します。 それぞれの使い方と使い方を理解するのに役立ちます。 これらのタイプはすべて、プレミアクライアントツールのPDF(Adobe AcrobatDC)の表示と操作に最適です。
 
@@ -79,7 +79,7 @@ Adobeでは、「PDFフォーム」という用語を使用して、AEM Formsデ
 
 ## Acroforms
 
-Acroformsは、Adobeの古いインタラクティブフォームテクノロジーです。acrobatバージョン3に遡る。 Adobeは、2003年5月に発表された[AcrobatFormsAPIリファレンス](assets/FormsAPIReference.pdf)に、この技術の技術的詳細を記載した情報を提供しています。 Acroformsは、
+Acroformsは、Adobeの古いインタラクティブフォームテクノロジーです。Acrobatバージョン3に遡る。 Adobeは、2003年5月に発表された[AcrobatFormsAPIリファレンス](assets/FormsAPIReference.pdf)に、この技術の技術的詳細を記載した情報を提供しています。 Acroformsは、
 次の項目に従います。
 
 * フォームのスタティックレイアウトとグラフィックを定義する従来のPDFです。
