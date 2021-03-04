@@ -8,13 +8,10 @@ doc-type: article
 activity: implement
 thumbnail: 39495.jpg
 kt: 6115
-topic: 開発
-role: 開業医
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '126'
 ht-degree: 74%
 
 ---
