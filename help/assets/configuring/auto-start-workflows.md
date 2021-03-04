@@ -2,19 +2,18 @@
 title: 自動開始ワークフロー
 description: 自動開始ワークフローは、アップロード時または再処理時にカスタムワークフローを自動的に呼び出すことで、アセット処理を拡張します。
 sub-product: アセット
-feature: workflows
-topics: workflow
-audience: administrator, implementer
-doc-type: feature-video
-activity: use
+feature: asset computeマイクロサービス，ワークフロー
 version: cloud-service
 kt: 4994
 thumbnail: 37323.jpg
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 4e4f04e93113c863fc8de416917df8ed40dd676a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 2%
+source-wordcount: '46'
+ht-degree: 6%
 
 ---
 
