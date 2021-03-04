@@ -3,11 +3,15 @@ title: 第3章 —イベントコンテンツフラグメントのオーサリ�
 seo-title: AEM Content Services使用の手引き — 第3章 —イベントコンテンツのフラグメントのオーサリング
 description: AEMヘッドレスチュートリアルの第3章では、第2章で作成したコンテンツフラグメントモデルから、イベントコンテンツフラグメントを作成し、オーサリングする方法について説明します。
 seo-description: AEMヘッドレスチュートリアルの第3章では、第2章で作成したコンテンツフラグメントモデルから、イベントコンテンツフラグメントを作成し、オーサリングする方法について説明します。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '518'
+ht-degree: 4%
 
 ---
 
