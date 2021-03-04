@@ -1,7 +1,7 @@
 ---
 title: AEM AssetsのAsset compute拡張機能のトラブルシューティング
 description: 以下は、AEM AssetsのカスタムAsset computeワーカーを開発および配置する際に発生する可能性がある、一般的な問題とエラー、および解決策のインデックスです。
-feature: asset-compute
+feature: asset computeマイクロサービス
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: 統合、開発
+role: デベロッパー
+level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -39,7 +42,7 @@ ht-degree: 0%
 
 + __エラー：__ エラー：検証時に必要なファイルが見つかりません(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)(非同期setupAssetCompute (...)/node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
 + __原因：__ フ `console.json` ァイルがAsset computeプロジェクトのルートにありません
-+ __解決策：Adobe I/Oプロジェクトの新しい__ フォームを `console.json` ダウンロードする
++ __解決方法：Adobe I/Oプロジェクトの新しい__ フォームを `console.json` ダウンロードする
    1. console.adobe.ioで、Asset computeプロジェクトが使用するように設定されているAdobe I/Oプロジェクトを開きます
    1. 右上の「__ダウンロード__」ボタンをタップします
    1. ファイル名`console.json`を使用して、ダウンロードしたファイルをAsset computeプロジェクトのルートに保存します。
