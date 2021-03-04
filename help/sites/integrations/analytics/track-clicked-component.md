@@ -1,7 +1,7 @@
 ---
 title: Adobe Analyticsでクリックされたコンポーネントを追跡
 description: イベント主導型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launchのルールを使用して、これらのイベントをリッスンし、リンクトラッキングビーコンと共にデータをAdobe Analyticsに送信する方法について説明します。
-feature: analytics
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1835'
 ht-degree: 5%
 
 ---
@@ -244,11 +247,11 @@ Adobe・クライアント・データ・レイヤーは、**イベント**&#x20
    ![カスタムコードアクションの削除](assets/track-clicked-component/remove-console-statements.png)
 
 1. 「アクション」の下の&#x200B;**追加**&#x200B;をクリックして、新しいアクションを追加します。
-1. **拡張子**&#x200B;の種類を&#x200B;**Adobe Analytics**&#x200B;に設定し、**アクションの種類**&#x200B;を&#x200B;**変数を設定**&#x200B;に設定します。
+1. **拡張子**&#x200B;の種類を&#x200B;**Adobe Analytics**&#x200B;に設定し、**アクションタイプ**&#x200B;を&#x200B;**変数を設定**&#x200B;に設定します。
 
 1. **eVars**、**Props**、**イベント**&#x200B;に次の値を設定します。
 
-   * `evar8` - `%Component ID%`
+   * `evar8` -  `%Component ID%`
    * `prop8` -  `%Component ID%`
    * `event8`
 
