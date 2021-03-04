@@ -1,17 +1,16 @@
 ---
 title: AEM AssetsでのAdobeアセットリンク拡張の使用
 description: 'Adobe Experience Managerアセットは、お気に入りのAdobe Creative Cloudデスクトップアプリケーション内で、デザイナーやクリエイティブユーザーが使用できるようになりました。 Adobe Creative Cloudエンタープライズ向けAdobeアセットリンク拡張機能は、Adobe Photoshop、InDesign、表示のようなCreative Cloudツール内で、AEMアセットの検索と参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、Illustratorのメタデータを拡張します。 '
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images
-audience: all
-doc-type: feature video
-activity: use
+feature: Adobe Asset Link
 version: 6.4, 6.5
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1094'
-ht-degree: 1%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -86,7 +85,7 @@ AdobeIdentity Managementサービス(IMS)およびAdobe Experience Manager作成
 2. Adobeアセットリンクの拡張は、**手順1**&#x200B;で取得したベアラトークンを含むHTTP(S)を介してAEM Authorに接続し、スキーム(HTTP/HTTPS)、拡張の設定JSONで指定されたホストおよびポートを使用します。
 3. AEMのBearer Authentication Handlerは、要求からBearerトークンを抽出し、AdobeIMSと比較して検証します。
 4. AdobeIMSがBearerトークンを検証すると、ユーザーがAEMに作成され（存在しない場合）、AdobeIMSからプロファイルおよびグループ/メンバーシップデータを同期します。 AEMユーザーには標準のAEMログイントークンが発行され、これがHTTP(S)応答上のCookieとしてAdobeアセットリンク拡張に返されます。
-5. 後続の操作( アセットの参照、検索、チェックイン/チェックアウトなど) adobeアセットリンク拡張を使用すると、AEM作成者に対するHTTP(S)リクエストが生成されます。このリクエストは、標準のAEMトークン認証ハンドラーを使用して、AEMログイントークンを使用して検証されます。
+5. 後続の操作( アセットの参照、検索、チェックイン/チェックアウトなど) Adobeアセットリンク拡張を使用すると、AEM作成者に対するHTTP(S)リクエストが生成されます。このリクエストは、標準のAEMトークン認証ハンドラーを使用して、AEMログイントークンを使用して検証されます。
 
 >[!NOTE]
 >
