@@ -4,18 +4,21 @@ seo-title: 除・売却Outlookパネルの構成
 description: これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 このパートでは、テキストとグラフのコンポーネントを追加して、Retierion Outlookパネルを構成します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 このパートでは、テキストとグラフのコンポーネントを追加して、Retierion Outlookパネルを構成します。
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 0%
+source-wordcount: '383'
+ht-degree: 1%
 
 ---
 
