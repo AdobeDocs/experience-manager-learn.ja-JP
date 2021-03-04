@@ -1,17 +1,20 @@
 ---
 title: OCRデータ抽出
 description: 政府発行のドキュメントからデータを抽出し、フォームに入力します。
-feature: 統合
+feature: バーコードForms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '652'
 ht-degree: 3%
 
 ---
