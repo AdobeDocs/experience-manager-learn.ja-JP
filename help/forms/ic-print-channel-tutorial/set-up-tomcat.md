@@ -4,7 +4,7 @@ seo-title: Tomcatのインストールと設定
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート1です。このパートでは、TOMCATをインストールし、sampleRest.warファイルをTOMCATにデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基本になります。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート1です。このパートでは、TOMCATをインストールし、sampleRest.warファイルをTOMCATにデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基本になります。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 0%
+source-wordcount: '324'
+ht-degree: 1%
 
 ---
 
