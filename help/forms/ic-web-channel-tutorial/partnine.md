@@ -4,18 +4,21 @@ seo-title: 勘定残高パネルへの表の追加
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、アカウントの残高パネルに表を追加します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、アカウントの残高パネルに表を追加します。
 uuid: 8f268c73-c543-418d-b65e-5beaf9660e42
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 28a9d88d-635b-47a2-8a78-54ddeabc4406
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 0%
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
