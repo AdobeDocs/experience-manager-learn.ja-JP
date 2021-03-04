@@ -1,22 +1,19 @@
 ---
 title: Dynamic Mediaクラシックデスクトップアプリケーションの使用
-seo-title: Dynamic Mediaクラシックデスクトップアプリケーションの使用
 description: Adobeでは、ブラウザーのAdobeFlashテクノロジーに依存しなくなった、Dynamic Mediaクラシックユーザー向けのデスクトップアプリケーションが導入されています。
-seo-description: Adobeでは、ブラウザーのAdobeFlashテクノロジーに依存しなくなった、Dynamic Mediaクラシックユーザー向けのデスクトップアプリケーションが導入されています。
 sub-product: dynamic-media
-feature: desktop-application, classic
-topics: authoring, operations
-doc-type: feature-video
-audience: all
-activity: use
+feature: Dynamic Mediaクラシック
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 0%
+source-wordcount: '212'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +28,7 @@ Adobeでは、AdobeのFlashプレーヤーに依存しない、ブラウザー�
 >
 > 2020年10月1日までに、新しいAdobeのDynamic Mediaクラシックデスクトップアプリをインストールすることをお勧めします。 これにより、スムーズなトランジションが得られ、AdobeFlash Playerは2020年12月31日に廃止されます。 この日、製品に「Scene7パブリッシングシステム」と表示されたAdobeDynamic Mediaクラシックユーザーインターフェイスのブラウザーバージョンにログオンできなくなります。
 
-## システム要件
+## 必要システム構成
 
 AdobeDynamic Mediaクラシックデスクトップアプリは、次のオペレーティングシステムと互換性があります。
 
