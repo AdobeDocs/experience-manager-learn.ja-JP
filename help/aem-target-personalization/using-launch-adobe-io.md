@@ -1,13 +1,17 @@
 ---
 title: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する
 seo-title: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する
-description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明
-seo-description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明
+description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明します。
+seo-description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明します。
+feature: エクスペリエンスフラグメント
+topic: パーソナライズ機能
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 1209064fd81238d4611369b8e5b517365fc302e3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 5%
 
 ---
 
@@ -134,9 +138,9 @@ Adobe Targetの拡張機能は、最新のWeb用ターゲットJavaScript SDKを
 
 >[!NOTE]
 >
-> Adobe I/O統合に適切な[ロールを持つ選択したワークスペースへのアクセスを許可し、中央チームが少数のワークスペース](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)でのみAPIに基づく変更を行えるようにします。
+> Adobe I/O統合に適切な[ロールを持つ選択ワークスペースへのアクセスを許可し、中央チームが少数のワークスペース](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)でのみAPIに基づく変更を行えるようにします。
 
-1. Adobe I/Oの資格情報を使用して、AEMでIMS統合を作成します(01:12 ～ 03:55)。
+1. Adobe I/Oの資格情報を使用して、AEMでIMS統合を作成します。(01:12 ～ 03:55)
 2. Experience Platform Launchで、プロパティを作成します。 （[上](#create-launch-property)をカバー）
 3. 手順1のIMS統合を使用して、Experience Platform Launch統合を作成し、Launchプロパティをインポートします。
 4. AEMで、ブラウザーの設定を使用してExperience Platform Launch統合をサイトにマッピングします。 (05:28 ～ 06:14)
