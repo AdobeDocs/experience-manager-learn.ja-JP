@@ -1,7 +1,6 @@
 ---
 title: 完全なWebページエクスペリエンスのパーソナライズ
 description: Adobe Targetを使用してAEM Webサイトのページを新しいページにリダイレクトするターゲットアクティビティを作成する方法を説明します。
-feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -9,10 +8,13 @@ activity: use
 version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
+topic: 統合
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '464'
 ht-degree: 1%
 
 ---
