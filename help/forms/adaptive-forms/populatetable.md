@@ -3,17 +3,20 @@ title: 'アダプティブフォームの表の入力 '
 seo-title: アダプティブフォームの表の入力
 description: アダプティブフォームの表へのForm Data Model Service呼び出しの結果の入力
 seo-description: アダプティブフォームの表へのForm Data Model Service呼び出しの結果の入力
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開発
+role: 開業医
+level: 中間
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 0%
+source-wordcount: '260'
+ht-degree: 1%
 
 ---
 
