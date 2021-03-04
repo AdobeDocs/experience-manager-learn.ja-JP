@@ -2,18 +2,16 @@
 title: Adobeクラウドマネージャーについて
 description: AdobeCloud Managerは、AEM環境の管理、内省、セルフサービスを容易にする、シンプルで堅牢なソリューションです。
 sub-product: クラウドマネージャー，ファンデーション
+feature: パイプライン，プログラム，プロジェクト，クォリティゲート，レポート
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
-topic: アーキテクチャ
-role: アーキテクト
-level: 初心者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 22%
+source-wordcount: '536'
+ht-degree: 21%
 
 ---
 
