@@ -1,10 +1,12 @@
 ---
 title: 第3章 — 高度なキャッシュに関するトピック
+seo-title: AEM Dispatcherキャッシュの詳細 — 第3章 — 高度なキャッシュのトピック
 description: AEMディスパッチャーキャッシュの非識別チュートリアルの第3章では、第2章で説明されている制限を克服する方法について説明します。
+seo-description: AEMディスパッチャーキャッシュの非識別チュートリアルの第3章では、第2章で説明されている制限を克服する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '6162'
+source-wordcount: '6187'
 ht-degree: 0%
 
 ---
