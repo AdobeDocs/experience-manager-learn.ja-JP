@@ -3,17 +3,20 @@ title: アダプティブFormsでのインライン画像の表示
 seo-title: アダプティブFormsでのインライン画像の表示
 description: アップロードされた画像をアダプティブFormsでインラインで表示
 seo-description: アップロードされた画像をアダプティブFormsでインラインで表示
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 0%
+source-wordcount: '243'
+ht-degree: 1%
 
 ---
 
