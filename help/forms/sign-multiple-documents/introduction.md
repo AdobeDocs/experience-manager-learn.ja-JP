@@ -1,18 +1,21 @@
 ---
 title: はじめに
 description: 複数フォームへの署名の使用例のデモビデオ
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 thumbnail: 330165.jpg
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 2%
+source-wordcount: '124'
+ht-degree: 5%
 
 ---
 
@@ -28,7 +31,7 @@ ht-degree: 2%
 このコースでは、以下を前提としています。
 
 * パッケージがインストールおよび設定されているAEM 6.4または6.5サーバー追加へのアクセス権がある
-* ADOBE SIGNで構成されたAEM
+* Adobe Signで構成されたAEM
 * SMTPサーバーへのアクセス
 * AEM/AEM Formsでの経験
 
