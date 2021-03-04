@@ -1,10 +1,14 @@
 ---
 title: 第6章 — JSONとして発行するAEM上のコンテンツの公開 — Content Services
 description: AEMヘッドレスチュートリアルの第6章では、必要なパッケージ、設定、コンテンツをすべてAEM Publish上に置いて、モバイルアプリからの消費を許可する方法について説明します。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '473'
 ht-degree: 2%
 
 ---
