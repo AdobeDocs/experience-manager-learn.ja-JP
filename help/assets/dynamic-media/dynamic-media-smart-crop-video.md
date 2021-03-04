@@ -2,19 +2,18 @@
 title: ビデオでのDynamic Mediaスマート切り抜きの使用
 description: Dynamic Mediaのスマート切り抜き（ビデオ用）では、Adobe Senseiを使用して、ビデオの注目点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 sub-product: dynamic-media
-feature: smart-crop, video-profiles, viewer-presets
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: スマート切り抜き、ビデオプロファイル、ビューアプリセット
 version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 0%
+source-wordcount: '114'
+ht-degree: 9%
 
 ---
 
@@ -27,5 +26,5 @@ Dynamic Mediaのスマート切り抜き（ビデオ用）では、Adobe Sensei�
 
 >[!NOTE]
 >
->上記のビデオでは、AEMサービスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>上記のビデオでは、AEMサービスがDynamic MediaS7モードで実行されていることを前提としています。 [Dynamic MediaでAEMを設定する手順は、こちらを参照してください。](https://docs.adobe.com/content/help/ja/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
 
