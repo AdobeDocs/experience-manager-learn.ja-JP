@@ -4,17 +4,20 @@ seo-title: AEM Formsのサービス利用者と共に発展
 description: この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します。
 seo-description: この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します。
 uuid: 996f30df-3fc5-4232-a104-b92e1bee4713
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development,administration
 audience: implementer,developer
 doc-type: article
 activity: setup
 discoiquuid: 65bd4695-e110-48ba-80ec-2d36bc53ead2
+topic: 開発
+role: デベロッパー
+level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 2%
+source-wordcount: '451'
+ht-degree: 3%
 
 ---
 
