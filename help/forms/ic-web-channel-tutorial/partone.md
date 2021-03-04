@@ -4,18 +4,21 @@ seo-title: Tomcatのインストールと設定
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート1です。このパートでは、TOMCATをインストールし、sampleRest.warファイルをTOMCATにデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基本になります。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート1です。このパートでは、TOMCATをインストールし、sampleRest.warファイルをTOMCATにデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基本になります。
 uuid: c6d4c74c-ea16-4c63-92c9-182d087fd88c
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4f400c22-6c96-4018-851c-70d988ce7c6c
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 0%
+source-wordcount: '313'
+ht-degree: 1%
 
 ---
 
@@ -39,4 +42,4 @@ tomcatを設定するには、次の手順に従います。
 11. tomcatを起動したら、[ここをクリックして](http://localhost:8080/SampleRest/webapi/getStatement/9586)、WARファイルで公開されたエンドポイントをテストします
 12. この呼び出しの結果として、サンプルデータを取得する必要があります。
 
-おめでとう！!!.. tomcatを設定し、SampleRest.warファイルをデプロイした。
+これで完了です !!!. tomcatを設定し、SampleRest.warファイルをデプロイした。
