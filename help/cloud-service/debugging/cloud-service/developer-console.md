@@ -1,7 +1,7 @@
 ---
 title: 開発者コンソール
 description: AEMCloud Serviceは、実行中のAEMサービスの様々な詳細を表示する各環境に対して開発者コンソールを提供します。この詳細はデバッグに役立ちます。
-feature: null
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 1af3661e5c18206d58d339d51d5189834e843023
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -45,14 +48,14 @@ Developer Consoleにアクセスして使用するには、[AdobeのAdmin Consol
 401 Unauthorizedの問題を解決するには：
 
 1. ユーザーが、Developer Consoleの関連AEMに対応する適切なAdobeIMS製品プロファイル(AEM AdministratorsまたはAEM Users)のメンバーであることを、Cloud Service製品インスタンスとして確認します。
-   + Developer Consoleは2つのAdobeIMS製品インスタンスにアクセスします。aemはCloud Serviceの作成者および発行製品インスタンスとして使用されているので、開発者コンソールを介したアクセスが必要なサービス層に応じて、適切な製品プロファイルが使用されていることを確認してください。
+   + Developer Consoleは2つのAdobeIMS製品インスタンスにアクセスします。AEMはCloud Serviceの作成者および発行製品インスタンスとして使用されているので、開発者コンソールを介したアクセスが必要なサービス層に応じて、適切な製品プロファイルが使用されていることを確認してください。
 1. AEMにCloud Service（作成者または公開）としてログインし、ユーザーとグループが正しくAEMに同期されていることを確認します。
    + Developer Consoleでは、対応するAEMサービス層にユーザーレコードを作成し、そのサービス層に対して認証を行う必要があります。
 1. ブラウザーのCookieとアプリケーションの状態(ローカルストレージ)を消去し、Developer Consoleに再ログインします。アクセストークンーDeveloper Consoleで正しく使用され、有効期限が切れていないことを確認します。
 
 ## ポッド
 
-CLOUD SERVICE作成者サービスとしてのAEMと発行サービスは、トラフィックの変動と周期的な更新をダウンタイムなしに処理するために、それぞれ複数のインスタンスで構成されています。 これらのインスタンスは、「ポッド」と呼ばれます。 開発者コンソールのポッド選択は、他のコントロールを介して公開されるデータの範囲を定義します。
+Cloud Service作成者サービスとしてのAEMと発行サービスは、トラフィックの変動と周期的な更新をダウンタイムなしに処理するために、それぞれ複数のインスタンスで構成されています。 これらのインスタンスは、「ポッド」と呼ばれます。 開発者コンソールのポッド選択は、他のコントロールを介して公開されるデータの範囲を定義します。
 
 ![開発者コンソール — ポッド](./assets/developer-console/pod.png)
 
