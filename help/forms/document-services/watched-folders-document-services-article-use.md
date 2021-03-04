@@ -4,17 +4,20 @@ seo-title: AEM Formsでの監視フォルダーの使用
 description: AEM Formsの監視フォルダーの設定と使用
 seo-description: AEM Formsの監視フォルダーの設定と使用
 uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: output-service
+feature: Output サービス
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
+topic: 開発
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '444'
 ht-degree: 20%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 20%
 
 # AEM Forms{#using-watched-folders-in-aem-forms}での監視フォルダーの使用
 
-管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトの詳細を参照してください。
+管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトの詳細については、を参照してください。
 
 監視フォルダーの作成の詳細については、[ここをクリック](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)してください
 
