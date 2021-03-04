@@ -3,7 +3,7 @@ title: AEM Sitesの基本取り扱い
 seo-title: Adobe Experience Manager Sitesで新しいページを作成
 description: 次のビデオでは、AEM作成者環境を使用する場合の基本操作の概要を説明します。 これはサイトコンソールを基礎として使用します。
 seo-description: 次のビデオでは、AEM作成者環境を使用する場合の基本操作の概要を説明します。 これはサイトコンソールを基礎として使用します。
-feature: page-editor, template-editor
+feature: ページエディター，編集可能なテンプレート
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 26760a76cfa523d28399c8e44c8db070cac49496
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '379'
 ht-degree: 27%
 
 ---
@@ -39,7 +42,7 @@ ht-degree: 27%
       | フォーム | このコンソールを使用すると、フォームとドキュメントを作成、管理および処理できます |
       | パーソナライズ機能 | このコンソールは、ターゲットコンテンツをオーサリングし、パーソナライズされたエクスペリエンスを提示するためのツールのフレームワークを提供します |
       | プロジェクト | プロジェクトコンソールでは、プロジェクトに直接アクセスできます。プロジェクトは仮想ダッシュボードです。チームを構築し、そのチームにリソース、ワークフロー、タスクへのアクセスを与えて、共通の目標に取り組ませることができます。 |
-      | Sites | サイトコンソールでは、AEM インスタンス上で実行される Web サイトを作成、参照および管理できます。これらのコンソールを使用して、Webサイトページ、開始ワークフロー、ページの作成、編集、コピー、移動、削除が可能です |
+      | Sites | サイトコンソールでは、AEM インスタンス上で実行される Web サイトを作成、参照および管理できます。これらのコンソールを使用して、Webサイトのページ、開始ワークフロー、ページの作成、編集、コピー、移動、削除が可能です |
 
    * ツール - ハンマーで表される
 * オムニ検索
