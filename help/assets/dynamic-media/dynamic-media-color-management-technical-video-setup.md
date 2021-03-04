@@ -1,21 +1,16 @@
 ---
 title: AEM Dynamic Media でのカラーマネジメントについて
-seo-title: AEM Dynamic Media でのカラーマネジメントについて
 description: このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
-seo-description: このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
-uuid: dc14d067-11a2-4662-acfd-f9f6f1d738ee
-discoiquuid: b2b9ccc9-96b5-4bea-9995-2e6b353c469d
 sub-product: dynamic-media
-feature: image-profiles, video-profiles
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
+feature: 画像プロファイル、ビデオプロファイル
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '330'
 ht-degree: 24%
 
 ---
