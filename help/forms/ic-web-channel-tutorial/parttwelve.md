@@ -4,18 +4,21 @@ seo-title: Webチャネルドキュメントの配信の設定
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルの最後の部分です。 ここでは、EメールでのWebチャネルドキュメントの配信について見てみます。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルの最後の部分です。 ここでは、EメールでのWebチャネルドキュメントの配信について見てみます。
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: 対話型通信
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 1%
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
 
