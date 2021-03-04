@@ -3,11 +3,15 @@ title: Adobe Experience ManagerとAdobe Targetの統合
 seo-title: パーソナライズされたコンテンツを配信するための、様々な方法でAdobe Experience Manager(AEM)とAdobe Targetを統合する記事。
 description: 様々なシナリオでのAdobe TargetとのAdobe Experience Managerの設定方法を取り上げた記事。
 seo-description: 様々なシナリオでのAdobe TargetとのAdobe Experience Managerの設定方法を取り上げた記事。
+feature: エクスペリエンスフラグメント
+topic: パーソナライズ機能
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 5%
+source-wordcount: '704'
+ht-degree: 6%
 
 ---
 
@@ -46,7 +50,7 @@ AEMのお客様は、エクスペリエンスフラグメントオファーを�
 
 >[!NOTE]
 >
-> お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oのプロビジョニングを受けるか、システム管理者に連絡する必要があります。
+> お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oを利用してプロビジョニングするか、システム管理者に連絡する必要があります。
 
 ### AEM{#set-up-aem}のセットアップ
 
@@ -59,7 +63,7 @@ AEMのお客様は、エクスペリエンスフラグメントオファーを�
    ![フォルダー構造](assets/implementation/aem-setup-1.png)
 3. Quickstart jarの名前を`aem-author-p4502.jar`に変更し、`/author`ディレクトリの下に配置します。 追加`/author`ディレクトリの下の`license.properties`ファイル。
    ![AEM作成者インスタンス](assets/implementation/aem-setup-author.png)
-4. Quickstart jarのコピーを作成し、名前を`aem-publish-p4503.jar`に変更して、`/publish`ディレクトリの下に配置します。 追加`/publish`ディレクトリの下の`license.properties`ファイルのコピー。
+4. Quickstart jarのコピーを作成し、`aem-publish-p4503.jar`に名前を変更して`/publish`ディレクトリの下に配置します。 追加`/publish`ディレクトリの下の`license.properties`ファイルのコピー。
    ![AEM発行インスタンス](assets/implementation/aem-setup-publish.png)
 5. 重複が`aem-author-p4502.jar`ファイルをクリックして、作成者インスタンスをインストールします。 これにより、ローカルコンピューターのポート4502で実行されている作成者インスタンスが開始されます。
 6. 以下の資格情報を使用してサインインします。ログインに成功すると、AEMホームページ画面に誘導されます。
@@ -68,7 +72,7 @@ username :**admin**
    ![AEM発行インスタンス](assets/implementation/aem-author-home-page.png)
 7. 重複が`aem-publish-p4503.jar`ファイルをクリックして、発行インスタンスをインストールします。 発行インスタンスの新しいタブがブラウザーで開き、ポート4503で実行され、WebRetailホームページが表示されています。 このチュートリアルでは、WKNDリファレンスサイトを使用して、パッケージを作成者インスタンスにインストールします。
 8. Webブラウザー(`http://localhost:4502`)で「AEM作成者」に移動します。 AEM開始画面で、*[ツール/展開/パッケージ](http://localhost:4502/crx/packmgr/index.jsp)*&#x200B;に移動します。
-9. AEM用のパッケージをダウンロードしてアップロードします(上記の&#x200B;*[前提条件/AEM](#aem)*&#x200B;に記載されています)。
+9. AEM用のパッケージをダウンロードしてアップロードします(上記の&#x200B;*[前提条件/AEM](#aem)*&#x200B;に記載)。
    * [aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)
    * [aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)
    * [core.wcm.components.all-2.5.0.zip](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
