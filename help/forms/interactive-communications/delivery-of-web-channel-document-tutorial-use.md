@@ -3,17 +3,20 @@ title: 対話型通信ドキュメントの配信 — ウェブチャネルAEM F
 seo-title: 対話型通信ドキュメントの配信 — ウェブチャネルAEM Forms
 description: 電子メール内のリンクを介したWebチャネルドキュメントの配信
 seo-description: 電子メール内のリンクを介したWebチャネルドキュメントの配信
-feature: interactive-communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 0%
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ Webチャネルの対話型通信ドキュメントを定義してテストし�
 
 次のコードスニペットを見てみましょう。 このコードは、Webチャネルドキュメントへの電子メール内のリンクをユーザーがクリックしたときにトリガーされるGET.jspの一部です。 jackrabbit UserManagerを使用してログインユーザーを取得します。 ログインしたユーザーを取得したら、そのユーザーのプロファイルに関連付けられたaccountNumberプロパティの値を取得します。
 
-次に、accountNumber値をマップ内のaccountnumberというキーに関連付けます。 キー&#x200B;**accountnumber**&#x200B;は、フォームデータモーダルでRequest属性として定義されています。 この属性の値は、Form Data Modal読み取りサービスメソッドに入力パラメーターとして渡されます。
+次に、accountNumber値をマップ内のaccountnumberというキーに関連付けます。 キー&#x200B;**accountnumber**&#x200B;は、フォームデータモーダルでRequest属性として定義されます。 この属性の値は、Form Data Modal読み取りサービスメソッドに入力パラメーターとして渡されます。
 
 7行目：Interactive CommunicationドキュメントURLで識別されるリソースタイプに基づいて、受信したリクエストを別のサーブレットに送信します。 この2つ目のサーブレットが返す応答は、1つ目のサーブレットの応答に含まれます。
 
