@@ -3,7 +3,7 @@ title: AEM Formsとのデータ統合の設定
 seo-title: AEM Formsとのデータ統合の設定
 description: JDBCデータソースへのデータ接続の設定
 seo-description: JDBCデータソースへのデータ接続の設定
-feature: アダプティブフォーム，form-data-model
+feature: アダプティブForms，ワークフロー
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,11 +11,14 @@ activity: setup
 version: 6.4,6.5
 uuid: 267de794-4462-4421-adee-d40a469fabb3
 discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 10%
+source-wordcount: '96'
+ht-degree: 12%
 
 ---
 
