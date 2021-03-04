@@ -2,18 +2,17 @@
 title: ファイルのバージョン管理とコメント
 description: 'Adobeアセットリンクパネルを使用すると、AEM Assets内のアセット（サムネール、基本メタデータ、バージョンなど）のファイルの詳細に、パネル内からアクセスできます。 ファイルのバージョンを作成、プレビュー、比較する方法を学びます。  '
 sub-product: アセット
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images, operations
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: 6.4, 6.5, cloud-service
 thumbnail: 34048.jpg
+topic: コンテンツ管理
+role: 開業医
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 1%
+source-wordcount: '89'
+ht-degree: 6%
 
 ---
 
