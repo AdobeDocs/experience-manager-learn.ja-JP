@@ -1,12 +1,14 @@
 ---
-title: 第3章 — 高度なキャッシュに関するトピック
-seo-title: AEM Dispatcherキャッシュの詳細 — 第3章 — 高度なキャッシュのトピック
-description: AEMディスパッチャーキャッシュの非識別チュートリアルの第3章では、第2章で説明されている制限を克服する方法について説明します。
-seo-description: AEMディスパッチャーキャッシュの非識別チュートリアルの第3章では、第2章で説明されている制限を克服する方法について説明します。
+title: 第3章 — 高度なディスパッチャーキャッシュのトピック
+description: これは、AEMでキャッシュする3つの部分シリーズのパート3です。 最初の2つの部分は、ディスパッチャーのプレーンHTTPキャッシュに焦点を当てており、その制限事項は何か。 ここでは、これらの制限を克服する方法に関するアイデアをいくつか説明します。
+feature: Dispatcher
+topic: アーキテクチャ
+role: アーキテクト
+level: 中間
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6191'
 ht-degree: 0%
 
 ---
