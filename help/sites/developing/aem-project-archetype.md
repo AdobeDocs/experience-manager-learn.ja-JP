@@ -1,7 +1,7 @@
 ---
 title: AEM プロジェクトアーキタイプ
 description: 'AEM プロジェクトのアーキタイプは、最小限のベストプラクティスベースの Adobe Experience Manager プロジェクトを独自の AEM プロジェクトの起点として作成します。 '
-feature: maven-archetype
+feature: AEM プロジェクトアーキタイプ
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,11 +9,14 @@ activity: understand
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4675
 thumbnail: 32550.jpg
+topic: 開発
+role: デベロッパー
+level: 初心者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 51%
+source-wordcount: '83'
+ht-degree: 54%
 
 ---
 
@@ -27,4 +30,4 @@ AEMプロジェクトには、実装のすべてのコードと設定が含ま�
 ## その他のリソース {#additional-resources}
 
 * [GitHubプロジェクト](https://github.com/adobe/aem-project-archetype)
-* [AEMプロジェクトのアーキタイプドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEMプロジェクトのアーキタイプドキュメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)
