@@ -2,19 +2,16 @@
 title: oak-run.jarを使用したインデックスの管理
 description: oak-run.jarのindexコマンドは、インデックス統計の収集、インデックス整合性チェックの実行、インデックス自体の再インデックス作成から、AEMでOakインデックスを管理する多数の機能を統合します。
 version: 6.4, 6.5
-feature: 検索
+feature: オーク
 topics: search
 activity: use
 audience: architect, developer, implementer
 doc-type: technical video
-topic: パフォーマンス
-role: デベロッパー
-level: 経験豊富な
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 4%
+source-wordcount: '450'
+ht-degree: 3%
 
 ---
 
