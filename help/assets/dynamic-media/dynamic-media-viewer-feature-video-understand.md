@@ -1,23 +1,17 @@
 ---
 title: AEM Dynamic Media でのアセットビューアについて
-seo-title: AEM Dynamic Media でのアセットビューアについて
 description: AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
-seo-description: AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
-uuid: 5762c0a2-4371-4719-8400-849c7a11926d
-discoiquuid: a0be2cd0-4fdb-431f-a8c7-e4620b8b129b
-products: SG_EXPERIENCEMANAGER/6.3/ASSETS
-sub-product: dynamic-media
-feature: viewer-presets, image-profiles
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: understand
+sub-product: Dynamic Media Classic
+feature: ビューアプリセット、画像プロファイル
 version: 6.3, 6.4, 6.5
+topic: コンテンツ管理
+role: デベロッパー
+level: 中間
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 16%
+source-wordcount: '132'
+ht-degree: 14%
 
 ---
 
