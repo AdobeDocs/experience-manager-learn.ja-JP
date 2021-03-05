@@ -15,9 +15,9 @@ topic: ヘッドレス、コンテンツ管理
 role: デベロッパー
 level: 初心者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1027'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 2%
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 上記のビデオでは、コンテンツフラグメントモデルの操作に関する概要を説明しています。
+
+>[!CAUTION]
+>
+> 上記のビデオでは、`Contributors`という名前の&#x200B;**寄稿者**&#x200B;モデルの作成を示しています。 独自の環境で手順を実行する場合は、タイトルに単数形が使用されていることを確認します。`Contributor`には&#x200B;**s**&#x200B;がありません。 コンテンツフラグメントモデルの命名は、チュートリアルの後半で実行するGraphQL API呼び出しを駆動します。
 
 ## Inspect冒険コンテンツフラグメントモデル
 
