@@ -6,10 +6,10 @@ topic: ヘッドレス、コンテンツ管理
 role: デベロッパー
 level: 初心者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 4%
+source-wordcount: '438'
+ht-degree: 5%
 
 ---
 
@@ -19,11 +19,6 @@ ht-degree: 4%
 Adobe Experience Managerには、ヘッドレスエンドポイントを定義し、そのコンテンツをJSONとして配信するための複数のオプションがあります。 実践チュートリアルを使用して、さまざまなオプションの使い方を学び、最適なオプションを選択します。
 
 ## AEM GraphQL APIのチュートリアル
-
->[!CAUTION]
->
-> AEM GraphQL API for Content Fragments配信は、リクエストに応じて使用できます。
-> お使いのAEM用のAPIをCloud Serviceプログラムとして有効にするには、Adobeサポートにお問い合わせください。
 
 AEM GraphQL API for Content Fragments
 は、AEMで管理されたコンテンツを使用して外部クライアントアプリケーションがエクスペリエンスをレンダリングするヘッドレスCMSシナリオをサポートしています。
