@@ -15,9 +15,9 @@ topic: ヘッドレス、コンテンツ管理
 role: デベロッパー
 level: 初心者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1832'
 ht-degree: 4%
 
 ---
@@ -127,11 +127,12 @@ WKNDリファレンスサイトには、[GraphQLエンドポイント](https://e
    $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 任意のIDEで、`aem-guides-wknd-graphql/react-app/.env.development`にある`.env.development`ファイルを開きます。 `REACT_APP_AUTHORIZATION`行のコメントを解除し、ファイルが次のようになるようにします。
+1. 任意のIDEで、`aem-guides-wknd-graphql/react-app/.env.development`にある`.env.development`ファイルを開きます。 `REACT_APP_AUTHORIZATION`行のコメントが解除され、ファイルが次のようになっていることを確認します。
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
    REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
+   # Use Authorization when connecting to an AEM Author environment
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
@@ -139,7 +140,7 @@ WKNDリファレンスサイトには、[GraphQLエンドポイント](https://e
 
    >[!NOTE]
    >
-   > 実稼働環境では、アプリはAEM **発行**&#x200B;環境に接続します。 これについては、チュートリアルの後半で詳しく説明します。
+   > 実稼働環境では、アプリはAEM **発行**&#x200B;環境に接続します。 詳しくは、「[実稼働環境の導入](production-deployment.md)」の章を参照してください。
 
 1. `aem-guides-wknd-graphql/react-app`フォルダーに移動します。 アプリのインストールと開始:
 
