@@ -13,7 +13,7 @@ topic: 統合、開発
 role: デベロッパー
 level: 中級、経験豊富
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 1%
@@ -35,7 +35,7 @@ asset computeマイクロサービスを拡張するには、ローカルの開�
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
    ```
 
 1. [Visual Studioコードのインストール](https://code.visualstudio.com/download)
