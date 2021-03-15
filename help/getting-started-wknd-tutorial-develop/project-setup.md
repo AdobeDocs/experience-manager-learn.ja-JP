@@ -16,9 +16,9 @@ topic: コンテンツ管理、開発
 role: デベロッパー
 level: 初心者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1947'
 ht-degree: 13%
 
 ---
@@ -134,6 +134,24 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
            |--- pom.xml
            |--- README.md
            |--- .gitignore
+   ```
+
+### Project Analyserのバージョンの更新
+
+>[!CAUTION]
+>
+> アーキタイプバージョン25には[既知の問題](https://github.com/adobe/aem-project-archetype/issues/638)が存在し、生成されたプロジェクト内の&#x200B;**Project Analyser**&#x200B;のバージョンを更新する必要があります。 以下の手順は&#x200B;**`aemVersion="cloud"`で生成されたプロジェクトに必要な**&#x200B;のみです。
+
+1. お気に入りのテキストエディターを使って`aem-guides-wknd/poml.xml`ファイルを開きます。
+1. `aemanalyser.version`を&#x200B;**`0.9.2`**&#x200B;に更新します。
+
+   ```diff
+    <properties>
+       ...
+   -   <aemanalyser.version>0.0.18</aemanalyser.version>
+   +   <aemanalyser.version>0.9.2</aemanalyser.version>
+       ...
+    </properties>
    ```
 
 ## プロジェクト{#build}を展開してビルド
