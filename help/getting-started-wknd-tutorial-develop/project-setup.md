@@ -16,9 +16,9 @@ topic: コンテンツ管理、開発
 role: デベロッパー
 level: 初心者
 translation-type: tm+mt
-source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
+source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1890'
 ht-degree: 13%
 
 ---
@@ -50,11 +50,11 @@ ht-degree: 13%
 
 ## プロジェクト{#create}を作成
 
-AEM用のMavenマルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、[Maven AEMプロジェクトのアーキタイプ&#x200B;**25**](https://github.com/adobe/aem-project-archetype)を活用します。 また、Cloud Managerには、AEMアプリケーションプロジェクトの作成を開始するためのUIウィザード[が用意されています。 ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html)Cloud Manager UIで生成される基になるプロジェクトの結果は、アーキタイプを直接使用する場合と同じ構造になります。
+AEM用のMavenマルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、[Maven AEMプロジェクトのアーキタイプ&#x200B;**26**](https://github.com/adobe/aem-project-archetype)を活用します。 また、Cloud Managerには、AEMアプリケーションプロジェクトの作成を開始するためのUIウィザード[が用意されています。 ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html)Cloud Manager UIで生成される基になるプロジェクトの結果は、アーキタイプを直接使用する場合と同じ構造になります。
 
 >[!NOTE]
 >
->このチュートリアルでは、アーキタイプのバージョン&#x200B;**25**&#x200B;を使用します。 新しいプロジェクトを生成する際には、常に、アーキタイプの&#x200B;**最新**&#x200B;バージョンを使用することをお勧めします。
+>このチュートリアルでは、アーキタイプのバージョン&#x200B;**26**&#x200B;を使用します。 新しいプロジェクトを生成する際には、常に、アーキタイプの&#x200B;**最新**&#x200B;バージョンを使用することをお勧めします。
 
 次の一連の手順は、UNIXベースのコマンド・ライン・ターミナルを使用して行われますが、Windowsターミナルを使用する場合と同じである必要があります。
 
@@ -100,7 +100,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
    mvn -B archetype:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=25 \
+       -D archetypeVersion=26 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
        -D groupId="com.adobe.aem.guides.wknd" \
@@ -111,7 +111,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
 
    >[!NOTE]
    >
-   > AEM 6.5.5.0+または6.4.8.1+を使用している場合は、`aemVersion="cloud"`をターゲット版のAEM i.e `aemVersion="6.5.5"`または`aemVersion="6.4.8.1"`に置き換えます。
+   > AEM 6.5.5+をターゲットにする場合は、`aemVersion="cloud"`を`aemVersion="6.5.5"`に置き換えます。 6.4.8以降を対象にする場合は、`aemVersion="6.4.8"`を使用します。
 
    プロジェクト[を構成するために使用できるプロパティの完全なリストは、](https://github.com/adobe/aem-project-archetype#available-properties)を参照してください。
 
@@ -134,24 +134,6 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
            |--- pom.xml
            |--- README.md
            |--- .gitignore
-   ```
-
-### Project Analyserのバージョンの更新
-
->[!CAUTION]
->
-> アーキタイプバージョン25には[既知の問題](https://github.com/adobe/aem-project-archetype/issues/638)が存在し、生成されたプロジェクト内の&#x200B;**Project Analyser**&#x200B;のバージョンを更新する必要があります。 以下の手順は&#x200B;**`aemVersion="cloud"`で生成されたプロジェクトに必要な**&#x200B;のみです。
-
-1. お気に入りのテキストエディターを使って`aem-guides-wknd/poml.xml`ファイルを開きます。
-1. `aemanalyser.version`を&#x200B;**`0.9.2`**&#x200B;に更新します。
-
-   ```diff
-    <properties>
-       ...
-   -   <aemanalyser.version>0.0.18</aemanalyser.version>
-   +   <aemanalyser.version>0.9.2</aemanalyser.version>
-       ...
-    </properties>
    ```
 
 ## プロジェクト{#build}を展開してビルド
