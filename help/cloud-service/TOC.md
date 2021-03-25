@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
+source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 36%
+source-wordcount: '353'
+ht-degree: 35%
 
 ---
 
@@ -83,6 +83,15 @@ ht-degree: 36%
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括インポート](./migration/bulk-import.md)
++ Forms{#forms}
+   + [Salesforceとの統合]{#integrate-with-salesforce}
+      + [概要](./forms/integrate-with-salesforce/introduction.md)
+      + [接続されたアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [データソースの作成](./forms/integrate-with-salesforce/create-data-source.md)
+      + [フォームデータモデルを作成する](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset computeの拡張機能{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
@@ -111,4 +120,3 @@ ht-degree: 36%
    + [SPAエディタ(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM SitesとAdobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-
