@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 35%
+source-wordcount: '413'
+ht-degree: 32%
 
 ---
 
@@ -84,7 +84,26 @@ ht-degree: 35%
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括インポート](./migration/bulk-import.md)
 + Forms{#forms}
-   + [Salesforceとの統合]{#integrate-with-salesforce}
+   + アダプティブフォームの作成{#create-first-af}
+      + [テーマを作成](./forms/create-first-af/create-theme.md)
+      + [テンプレートを作成](./forms/create-first-af/create-template.md)
+      + [フラグメントを作成](./forms/create-first-af/create-fragments.md)
+      + [フォームを作成](./forms/create-first-af/create-af.md)
+      + [ルートパネルの設定](./forms/create-first-af/configure-root-panel.md)
+      + [ユーザーの設定パネル](./forms/create-first-af/configure-people-panel.md)
+      + [所得パネルの設定](./forms/create-first-af/configure-income-panel.md)
+      + [アセットパネルの設定](./forms/create-first-af/configure-assets-panel.md)
+      + [開始設定パネル](./forms/create-first-af/configure-start-panel.md)
+      + [ツールバー追加と設定](./forms/create-first-af/add-configure-toolbar.md)
+   + レビューワークフローの作成{#create-aem-workflow}
+      + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
+      + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
+   + Adobe SignとAEM Forms
+      + [Adobe SignAPIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
+      + [入力および署名の設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Salesforce{#integrate-with-salesforce}との統合
       + [概要](./forms/integrate-with-salesforce/introduction.md)
       + [接続されたアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
