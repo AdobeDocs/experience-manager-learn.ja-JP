@@ -98,7 +98,7 @@ ht-degree: 32%
    + レビューワークフローの作成{#create-aem-workflow}
       + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
-   + Adobe SignとAEM Forms
+   + Adobe SignとAEM Forms{#forms-and-sign}
       + [Adobe SignAPIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
