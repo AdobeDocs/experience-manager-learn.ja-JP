@@ -1,7 +1,6 @@
 ---
 title: 'ボタンのクリックイベント上のSalesforceデータベースにリードオブジェクトを作成する '
 description: Form Data Modelの後処理を呼び出してリードを作成
-product: aem
 type: ドキュメント
 role: デベロッパー
 level: 初級者、中級者
@@ -10,7 +9,7 @@ feature: アダプティブフォーム
 topic: 開発
 kt: 7193
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 12%
