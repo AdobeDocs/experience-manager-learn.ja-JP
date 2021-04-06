@@ -15,9 +15,9 @@ topic: 開発
 role: デベロッパー
 level: 中間
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
@@ -29,10 +29,9 @@ AEM FormsでのOutputとFormsサービスAPIの使用
 
 この記事では、以下を見てみます。
 
-* Outputサービス — 通常、このサービスは、xmlデータをxdpテンプレートまたはpdfにマージして統合済みpdfを生成する際に使用されます。
-* FormsService - PDFファイルのデータを書き出したり、PDFファイルにデータを読み込んだりする、用途の広いサービスです。
+* Outputサービス — 通常、このサービスは、xmlデータをxdpテンプレートまたはpdfにマージして統合済みpdfを生成する際に使用されます。 詳しくは、Outputサービスの[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)を参照してください。
+* FormsService - PDFファイルへのデータの書き出しと読み込みを可能にする、用途の広いサービスです。 詳しくは、Formsサービスの[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html)を参照してください。
 
-AEM FormsAPIの公式Javadocは[ここ](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)に記載されています
 
 次のコードスニペットは、PDFファイルからデータを書き出します
 
