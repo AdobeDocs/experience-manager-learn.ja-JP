@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 5d567c3ed2275e50065aa1ad1576b0d621a3895b
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '413'
 ht-degree: 32%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 32%
    + [アセットの一括インポート](./migration/bulk-import.md)
 + Forms{#forms}
    + アダプティブフォームの作成{#create-first-af}
+      + [概要](./forms/create-first-af/introduction.md)
       + [テーマを作成](./forms/create-first-af/create-theme.md)
       + [テンプレートを作成](./forms/create-first-af/create-template.md)
       + [フラグメントを作成](./forms/create-first-af/create-fragments.md)
