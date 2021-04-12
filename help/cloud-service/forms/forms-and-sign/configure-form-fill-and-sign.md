@@ -1,19 +1,19 @@
 ---
 title: ユーザーが入力および署名できるようにアダプティブフォームを設定する
 description: このシナリオでは、フォームの入力者と署名者が同じ人物です。
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
-kt: 7438
+kt: 7432
 thumbnail: 332439.jpg
 translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 8%
+source-wordcount: '52'
+ht-degree: 5%
 
 ---
 
