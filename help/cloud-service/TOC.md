@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
+source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 32%
+source-wordcount: '414'
+ht-degree: 31%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 32%
       + [コンテンツの公開](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [ディスパッチャー設定の移行](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service-javadoc/)
+   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + AEM{#debugging}のデバッグ
    + AEM SDK{#debugging-aem-sdk}のデバッグ
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
