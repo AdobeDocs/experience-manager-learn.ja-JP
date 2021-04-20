@@ -12,12 +12,12 @@ kt: 6712
 thumbnail: 22452.jpg
 feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1025'
 ht-degree: 2%
 
 ---
