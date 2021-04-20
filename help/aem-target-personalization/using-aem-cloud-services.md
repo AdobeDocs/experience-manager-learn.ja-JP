@@ -5,13 +5,13 @@ description: AEMCloud Serviceを使用してAdobe Experience Manager(AEM)をAdob
 seo-description: AEMCloud Serviceを使用してAdobe Experience Manager(AEM)をAdobe Targetと統合する方法に関する手順説明を順を追って説明します。
 feature: エクスペリエンスフラグメント
 topic: パーソナライズ機能
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 4%
+source-wordcount: '386'
+ht-degree: 3%
 
 ---
 
