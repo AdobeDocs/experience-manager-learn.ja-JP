@@ -12,13 +12,13 @@ version: 6.5
 uuid: 31e297c9-3d12-4a7a-b1ff-1e347e17b24c
 discoiquuid: de227e8f-0f59-4506-828b-3b6b18b61eb1
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 2%
+source-wordcount: '159'
+ht-degree: 1%
 
 ---
 
