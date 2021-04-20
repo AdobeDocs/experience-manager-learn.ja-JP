@@ -12,12 +12,12 @@ activity: develop
 version: 6.4,6.5
 discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
 topic: 開発
-role: デベロッパー
-level: 経験豊富な
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
