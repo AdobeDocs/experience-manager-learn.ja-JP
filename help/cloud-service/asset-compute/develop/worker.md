@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -351,7 +351,7 @@ class RenditionInstructionsError extends ClientError {
 
 >[!WARNING]
 >
->ローカル開発では、AEMからCloud Service処理プロファイルーとして渡された値を文字列として様々なデータ型を使用して渡すことができるので、必要に応じて正しいデータ型が解析されることを確認します。
+>ローカル開発時に、AEMからCloud Service処理プロファイルーとして渡される場合、様々なデータ型を使用して値を渡すことができます。したがって、必要に応じて正しいデータ型が解析されることを確認してください。
 > 例えば、Jimpの`crop(width, height)`関数のパラメーターは`int`である必要があります。`parseInt(rendition.instructions.size)`がintで解析されない場合、`jimp.crop(SIZE, SIZE)`の呼び出しは失敗します。パラメーターの型に互換性がないためです。
 
 コードは次のパラメーターを受け付けます。
