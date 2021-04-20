@@ -9,13 +9,13 @@ activity: develop
 audience: architect, developer
 doc-type: technical video
 topic: 開発
-role: デベロッパー
-level: 経験豊富な
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 10%
+source-wordcount: '265'
+ht-degree: 9%
 
 ---
 
