@@ -10,12 +10,12 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
