@@ -4,15 +4,15 @@ description: Adobeクラウドマネージャーを使用したベストプラ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: Developer Tools
+topic: 開発
+feature: 開発者ツール
 kt: 6914
 thumbnail: 330536.jpg
 translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '32'
-ht-degree: 0%
+source-wordcount: '35'
+ht-degree: 8%
 
 ---
 
