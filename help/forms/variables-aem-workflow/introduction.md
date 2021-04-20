@@ -10,13 +10,13 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 9%
+source-wordcount: '126'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ AEM 6.5以降では、AEMワークフローで変数を作成して使用でき�
 
 * Long
 * 倍精度浮動小数点
-* ブール値
+* ブール型
 * String
 * 日付
 * JSON
