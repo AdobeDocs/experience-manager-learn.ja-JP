@@ -2,9 +2,9 @@
 title: Salesforce接続アプリを作成します。
 description: 接続されたアプリを使用すると、Salesforceを、AEM Formsなどのサードパーティ製アプリケーションとSalesforceと統合できます。
 solution: Experience Manager, Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 331757.jpg
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 4%
+source-wordcount: '97'
+ht-degree: 3%
 
 ---
 
