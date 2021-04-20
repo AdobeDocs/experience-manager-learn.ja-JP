@@ -8,13 +8,13 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 8%
+source-wordcount: '699'
+ht-degree: 9%
 
 ---
 
