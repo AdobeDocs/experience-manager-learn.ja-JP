@@ -5,11 +5,11 @@ description: 初心者・経験者向けのAEM Forms資料集
 seo-description: 初心者・経験者向けのAEM Forms資料集
 sub-product: フォーム[ふぉーむ]
 topic: 開発
-role: デベロッパー
+role: Developer
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '304'
 ht-degree: 21%
 
 ---
