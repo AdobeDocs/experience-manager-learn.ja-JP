@@ -8,12 +8,12 @@ doc-type: technical video
 activity: understand
 version: 6.4, 6.5
 topic: 開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEMスタイルシステムは、[AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [機能パック20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)で導入されました。
+>AEMスタイルシステムは、[AEM 6.3 SP1](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/sp1-release-notes.html) + [機能パック20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)で導入されました。
 >
 >このビデオでは、We.Retail Titleコンポーネントが[コアコンポーネントv2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)を継承するように更新されたことを前提としています。
 
