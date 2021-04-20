@@ -4,15 +4,15 @@ description: ワークフローは、Experience Manager上のビジネス・プ�
 version: 6.4, 6.5, cloud-service
 feature: ワークフロー
 topic: コンテンツ管理
-level: 中間
-role: 管理者、デベロッパー
+level: Intermediate
+role: Administrator, Developer
 kt: 657
 thumbnail: 22201.jpg
 translation-type: tm+mt
 source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 5%
+source-wordcount: '90'
+ht-degree: 3%
 
 ---
 
