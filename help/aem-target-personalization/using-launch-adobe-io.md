@@ -5,13 +5,13 @@ description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience 
 seo-description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明します。
 feature: エクスペリエンスフラグメント
 topic: パーソナライズ機能
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 5%
+source-wordcount: '1101'
+ht-degree: 4%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 5%
 
 この統合では、次のオーディエンスが関与し、一部のタスクを実行するには、管理者アクセスが必要になる場合があります。
 
-* デベロッパー
+* 開発者
 * AEM管理者
 * Experience Cloud管理者
 
