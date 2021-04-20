@@ -13,12 +13,12 @@ index: y
 thumbnail: 30476.jpg
 feature: コアコンポーネント，ページエディタ，編集可能なテンプレート， AEMプロジェクトのアーキタイプ
 topic: コンテンツ管理、開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '905'
 ht-degree: 32%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用するローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
 > **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
