@@ -8,12 +8,12 @@ doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '213'
 ht-degree: 11%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 11%
 このビデオでは、[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)サンプルWebサイトを使用して、ソーシャルメディア共有コンポーネント([AEMコアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)の一部)の次の機能について説明します。
 
 * 0:00 — ソーシャルメディア共有コンポーネントの追加と設定
-* 1:00 - Facebookでの共有
-* 3:10 - Pinterestとの共有
+* 1:00 -Facebookとの共有
+* 3:10 -Pinterestとの共有
 * 6:25 — 製品ページでのソーシャルメディア共有コンポーネントの使用
 
 ## 外部化設定{#externalizer-setup}
