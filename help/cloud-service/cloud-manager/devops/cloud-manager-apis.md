@@ -4,15 +4,15 @@ description: 'Cloud Manager APIを使用して他のシステムを拡張およ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
+topic: 開発
 feature: Cloud Manager
 kt: 6918
 thumbnail: 330541
 translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 0%
+source-wordcount: '42'
+ht-degree: 7%
 
 ---
 
