@@ -11,11 +11,11 @@ kt: 5882
 thumbnail: KT-5882.jpg
 topic: 管理、セキュリティ
 role: Administrator
-level: 初心者
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 5%
 
 ---
@@ -67,6 +67,6 @@ Adobe管理コンソールのAdobeIMSユーザー、ユーザーグループ、�
 
 以下のドキュメントは、[Adobe Admin Console](https://adminconsole.adobe.com)に固有の詳細と懸念事項を扱っており、Adobe Admin Consoleをより深く理解し、それを使用してExperience Cloudを管理し、複数の製品にアクセスするのに役立ちます。
 
-+ [Adobe Admin Consoleアイデンティティの概要](https://helpx.adobe.com/enterprise/using/identity.html)
++ [Adobe Admin Consoleアイデンティティの概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
 + [Adobe Admin Console開発者ロール](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)
