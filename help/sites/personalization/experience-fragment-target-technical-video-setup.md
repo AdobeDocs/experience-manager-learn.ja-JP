@@ -13,13 +13,13 @@ version: 6.4, 6.5
 uuid: 05fd477d-0c1a-42c0-ab92-2bca86602e2e
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
 topic: パーソナライズ機能
-role: 管理者、デベロッパー
-level: 中間
+role: Administrator, Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 3%
+source-wordcount: '272'
+ht-degree: 2%
 
 ---
 
