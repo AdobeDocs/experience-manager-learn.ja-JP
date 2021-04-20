@@ -10,12 +10,12 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1033'
 ht-degree: 3%
 
 ---
@@ -51,9 +51,9 @@ asset computeワーカーの拡張に適した準備を行い、プロビジョ�
 
 + [アカウントとサービスのプロビジョニング](./set-up/accounts-and-services.md)
 
-### 現地開発環境
+### ローカル開発環境
 
-asset computeプロジェクトのローカル開発には、従来のAEM開発とは異なる、次のような固有の開発ツールセットが必要です。Microsoft Visual Studioコード、Docker Desktop、Node.js、およびサポートするnpmモジュール
+Asset computeプロジェクトのローカル開発には、従来のAEM開発とは異なる、次のような特定の開発者ツールセットが必要です。Microsoft Visual Studioコード、Docker Desktop、Node.js、およびサポートするnpmモジュール
 
 + [ローカル開発環境の設定](./set-up/development-environment.md)
 
@@ -75,7 +75,7 @@ asset computeプロジェクトを作成および設定し、特注アセット�
 
 ### 環境変数の設定
 
-環境変数は、ローカル開発のために`.env`ファイルに保持され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
+環境変数は、ローカル開発用に`.env`ファイルに保持され、Adobe I/Oの資格情報とローカル開発に必要なクラウドストレージの資格情報を提供するために使用されます。
 
 + [環境変数の設定](./develop/environment-variables.md)
 
