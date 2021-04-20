@@ -15,7 +15,7 @@ ht-degree: 39%
 
 + [AEMTutorialsの概要](overview.md)
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
-+ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
++ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 + [AEM フォーム](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEMをCloud Serviceとして](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/overview.html)
 + [AEM の基盤](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
