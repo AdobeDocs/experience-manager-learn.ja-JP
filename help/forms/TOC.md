@@ -69,7 +69,7 @@ ht-degree: 6%
    + [Form Data Model Service Invocationの結果をテーブルに埋め込む](adaptive-forms/populatetable.md)
    + [ワークフローコメントのキャプチャ](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [送信したフォームデータのDBへの格納](adaptive-forms/storing-adaptive-form-data-in-db.md)
-   + [AEM 6.4ワークフローにおけるForm Data Model Service](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
+   + [AEM 6.4ワークフローのForm Data Model Service](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [Form Data Modelサービスの手順でのエラーメッセージの処理](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [AEM 6.5.1ワークフローのForm Data Model Service](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
    + [データソースのないForm Data Model](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
