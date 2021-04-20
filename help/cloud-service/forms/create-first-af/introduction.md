@@ -2,9 +2,9 @@
 title: 最初のアダプティブフォームを作成する
 description: 最初のアダプティブフォームの作成に関するコースの概要ビデオ
 solution: Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 332571.jpg
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '25'
-ht-degree: 40%
+source-wordcount: '21'
+ht-degree: 38%
 
 ---
 
