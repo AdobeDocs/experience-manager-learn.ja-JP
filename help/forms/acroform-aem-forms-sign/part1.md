@@ -2,7 +2,7 @@
 title: AEM FormsとのAcroforms
 seo-title: アダプティブフォームデータとAcroformの結合
 description: パート1:AcroformsとAEM Formsの統合 Acroformを使用したアダプティブフォームの作成とデータの結合によるPDFの取得
-feature: adaptive-forms
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -11,7 +11,7 @@ version: 6.3,6.4
 translation-type: tm+mt
 source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 3%
 
 ---
