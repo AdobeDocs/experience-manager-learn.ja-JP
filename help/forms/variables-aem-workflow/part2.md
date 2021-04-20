@@ -10,13 +10,13 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 1%
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
