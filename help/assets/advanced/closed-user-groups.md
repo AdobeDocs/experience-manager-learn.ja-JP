@@ -4,14 +4,14 @@ description: Closed User Groups(CUGs)は、公開済みサイト上の特定の�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: 管理、セキュリティ
 feature: ユーザーとグループ
-role: 管理者
-level: 中間
+role: Admin
+level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
 translation-type: tm+mt
 source-git-commit: 407840a0e0c90c4f004390a052d036f9b69fa8df
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '382'
 ht-degree: 2%
 
 ---
