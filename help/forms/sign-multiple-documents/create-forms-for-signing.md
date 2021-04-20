@@ -10,12 +10,12 @@ version: 6.4,6.5
 kt: 6893
 thumbnail: 6893.jpg
 topic: 開発
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '329'
 ht-degree: 1%
 
 ---
