@@ -1,6 +1,6 @@
 ---
 title: asset computeの拡張機能用の環境変数の設定
-description: 環境変数は、ローカル開発のために.envファイルに保持され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
+description: 環境変数は、ローカル開発用に.envファイルに保持され、Adobe I/O資格情報とローカル開発に必要なクラウドストレージ資格情報を提供するために使用されます。
 feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![ドット環境ファイル](assets/environment-variables/dot-env-file.png)
 
-asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/O情報とクラウドストレージ情報が設定されていることを確認します。 この情報は、プロジェクトの`.env`に保存されます。これは、ローカル開発にのみ使用され、Gitには保存されません。 `.env`ファイルは、キーと値のペアをローカルAsset computeのローカル開発環境に公開する便利な方法を提供します。 [](../deploy/runtime.md)Asset computeワーカーをAdobe I/O Runtimeに導入する場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 サードパーティWebサービスの開発資格情報など、その他のカスタムパラメーターやシークレットを`.env`ファイルに保存することもできます。
+asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/O情報とクラウドストレージ情報が設定されていることを確認します。 この情報はプロジェクトの`.env`に保存されます。これはローカル開発のためにのみ使用され、Gitには保存されません。 `.env`ファイルは、キーと値のペアをローカルAsset computeローカル開発環境に公開する便利な方法を提供します。 [](../deploy/runtime.md)Asset computeワーカーをAdobe I/O Runtimeに導入する場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 サードパーティWebサービスの開発資格情報など、その他のカスタムパラメーターやシークレットを`.env`ファイルに保存することもできます。
 
 ## `private.key`
 
@@ -50,7 +50,7 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## クラウドストレージ資格情報の設定
 
-asset computeワーカーのローカル開発では、[クラウドストレージ](../set-up/accounts-and-services.md#cloud-storage)へのアクセスが必要です。 ローカル開発に使用するクラウドストレージの資格情報は、`.env`ファイルに格納されます。
+Asset computeワーカーのローカル開発には、[クラウドストレージ](../set-up/accounts-and-services.md#cloud-storage)へのアクセスが必要です。 ローカル開発に使用するクラウドストレージの資格情報は、`.env`ファイルに格納されます。
 
 このチュートリアルはAzure Blobストレージの使用を優先しますが、AmazonS3および`.env`ファイル内の対応するキーを代わりに使用できます。
 
