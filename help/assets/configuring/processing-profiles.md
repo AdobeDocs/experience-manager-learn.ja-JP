@@ -7,13 +7,13 @@ version: cloud-service
 kt: 4993
 thumbnail: 35597.jpg
 topic: 統合
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 16%
+source-wordcount: '41'
+ht-degree: 14%
 
 ---
 
