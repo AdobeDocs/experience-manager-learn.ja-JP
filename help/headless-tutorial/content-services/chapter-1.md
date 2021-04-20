@@ -5,12 +5,12 @@ description: AEMヘッドレスチュートリアルの第1章では、チュー
 seo-description: AEMヘッドレスチュートリアルの第1章では、チュートリアル用のAEMインスタンスの基準設定について説明します。
 feature: コンテンツフラグメント、API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
