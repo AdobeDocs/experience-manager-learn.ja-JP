@@ -2,9 +2,9 @@
 title: Form Data Modelの送信アクションを使用したフォームの送信
 description: フォーム送信時にリードオブジェクトを作成し、Salesforce統合をテストするアダプティブフォームを作成します。
 solution: Experience Manager, Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 331758.jpg
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 7%
+source-wordcount: '60'
+ht-degree: 5%
 
 ---
 
