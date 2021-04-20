@@ -4,14 +4,14 @@ description: AEM inboxは、タスクとワークフローに関するコラボ�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: コラボレーション
 feature: インボックス
-role: 開業医
-level: 中間
+role: Business Practitioner
+level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
 translation-type: tm+mt
 source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '78'
 ht-degree: 2%
 
 ---
