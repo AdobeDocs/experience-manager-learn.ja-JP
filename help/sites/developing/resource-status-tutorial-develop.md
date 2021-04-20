@@ -58,7 +58,7 @@ Resource Status for Editorsフレームワークは、標準的かつ均一な�
 
 6. ResourceStatusは、顧客が実装できるインターフェイスです。または、有用な`com.day.cq.wcm.commons.status.EditorResourceStatus.Builder`を使用してステータスを構築できます。 ステータスは次のもので構成されます。
 
-   * タイトル
+   * title（タイトル）
    * メッセージ
    * アイコン
    * バリアント
