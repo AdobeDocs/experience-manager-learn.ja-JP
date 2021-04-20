@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 22%
+ht-degree: 29%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Manager(AEM)は、主要なエクスペリエンス管理プラ
 ## AEM のビデオおよびチュートリアル
 
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
-+ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
++ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 + [AEM フォーム](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEMをCloud Serviceとして](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 + [AEM の基盤](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
@@ -25,9 +25,9 @@ Adobe Experience Manager(AEM)は、主要なエクスペリエンス管理プラ
 ## AEM MultistepTutorials
 
 + [AEM Sites の概要 - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-+ [AEM ヘッドレス使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
++ [AEM ヘッドレス使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
 + [AEM SPA EditorとReactの使い方](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-+ [AEM SPA EditorとAngularの使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
++ [AEM SPA EditorおよびAngularの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 + [AEM と Adobe Target の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
 + [AEM 6.xディスパッチャーキャッシュのチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
 + [AEM 6.xDynamic Mediaクラシックチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
