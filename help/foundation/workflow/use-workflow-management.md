@@ -5,13 +5,13 @@ version: 6.5, cloud-service
 feature: ワークフロー
 topic: コンテンツ管理
 role: Administrator
-level: 中間
+level: Intermediate
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt
 source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '134'
 ht-degree: 2%
 
 ---
