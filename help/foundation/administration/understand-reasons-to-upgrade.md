@@ -8,12 +8,12 @@ audience: all
 activity: understand
 doc-type: article
 topic: アップグレード
-role: リーダー、アーキテクト、開発者、管理者、実業家
-level: 初心者
+role: Leader, Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3548'
+source-wordcount: '3541'
 ht-degree: 6%
 
 ---
@@ -1567,7 +1567,7 @@ AEMは、他のAdobeサービスとの統合機能を拡張します。
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/communities/using/social-login.html" target="_blank">ソーシャルログイン</a>:</strong>
-            FacebookアカウントまたはTwitterアカウントでログインします。</td>
+            FacebookまたはTwitterのアカウントでログインします。</td>
             <td> </td>
             <td> </td>
             <td>✔<sup>+</sup></td>
