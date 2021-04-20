@@ -12,12 +12,12 @@ kt: 6386
 thumbnail: KT-6386.jpg
 feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1830'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
 >
 > Cloud Service環境としてAEMを使用して、チュートリアルに従うこともできます。 クラウド環境の使用に関するその他の注意事項は、このチュートリアル全体で説明しています。
 
-1. **[Cloud Service](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)** > **AEMに移動して**、**AEM SDK**&#x200B;の最新バージョンをダウンロードします。
+1. **[Cloud Service](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMに移動して**、**AEM SDK**&#x200B;の最新バージョンをダウンロードします。
 
    ![ソフトウェア配布ポータル](assets/setup/software-distribution-portal-download.png)
 
@@ -70,7 +70,7 @@ ht-degree: 4%
    $ java -jar aem-author-p4502.jar
    ```
 
-1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
+1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発のデフォルトを使用することをお勧めします。
 1. 数分後、AEMインスタンスがインストールを終了し、新しいブラウザーウィンドウが[http://localhost:4502](http://localhost:4502)に開きます。
 1. ユーザー名`admin`とパスワード`admin`を使用してログインします。
 
