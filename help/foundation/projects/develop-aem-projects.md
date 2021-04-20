@@ -8,12 +8,12 @@ activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '4654'
+source-wordcount: '4652'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEMプロジェクトには、[OOTBプロジェクトテンプレート](https:/
 * [チュートリアルパッケージの完了](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-このチュートリアルでは、[AEM開発慣行](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/the-basics.html)の基本的な知識と、[AEM Mavenプロジェクトの設定](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)に関する知識を前提としています。 ここに挙げたコードはすべて参照として使用することを目的としており、[ローカル開発用AEMインスタンス](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)にのみデプロイする必要があります。
+このチュートリアルでは、[AEM開発慣行](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/the-basics.html)の基本的な知識と、[AEM Mavenプロジェクトの設定](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)に関する知識を前提としています。 前述のすべてのコードは参照として使用することを目的としており、[ローカル開発AEMインスタンス](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)にのみデプロイする必要があります。
 
 ## プロジェクトテンプレートの構造
 
