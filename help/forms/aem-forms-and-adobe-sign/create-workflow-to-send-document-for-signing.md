@@ -9,13 +9,13 @@ activity: implement
 thumbnail: 38182.jpg
 kt: 6035
 topic: 開発
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 2%
+source-wordcount: '95'
+ht-degree: 1%
 
 ---
 
