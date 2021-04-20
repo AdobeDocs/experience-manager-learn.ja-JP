@@ -5,13 +5,13 @@ description: このチュートリアルの目標は、ディスパッチャー�
 seo-description: このチュートリアルの目標は、ディスパッチャーのしくみとその使い方をより深く理解することです。
 feature: Dispatcher
 topic: アーキテクチャ
-role: アーキテクト
-level: 初心者
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 8%
+source-wordcount: '182'
+ht-degree: 7%
 
 ---
 
