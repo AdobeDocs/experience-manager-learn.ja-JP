@@ -4,8 +4,8 @@ description: エクスペリエンスフラグメントを使用すると、コ�
 sub-product: サイト、content services
 feature: エクスペリエンスフラグメント
 topic: コンテンツ管理
-role: アーキテクト、開発者、管理者、実業家
-level: 初心者
+role: Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 doc-type: feature video
 version: cloud-service
 kt: 194
@@ -13,7 +13,7 @@ thumbnail: 331785.jpg
 translation-type: tm+mt
 source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '124'
 ht-degree: 5%
 
 ---
@@ -32,4 +32,4 @@ ht-degree: 5%
 * 複数のチャネル(所有するチャネルーとサードパーティのタッチポイントの両方)でのエクスペリエンスの再利用
 * 特定の使用例に合わせてエクスペリエンスのバリエーションを作成する
 * ライブコピーの使用に伴うバリエーションの同期を維持する
-* SocialでFacebookやPinterestにエクスペリエンスをすぐに投稿
+* facebookとPinterestに対するエクスペリエンスをすぐに投稿
