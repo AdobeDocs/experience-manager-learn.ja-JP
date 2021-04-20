@@ -9,14 +9,14 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
-feature: コアコンポーネント、AEMプロジェクトアーキタイプ
+feature: コアコンポーネント、AEM プロジェクトアーキタイプ
 topic: コンテンツ管理、開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3301'
+source-wordcount: '3299'
 ht-degree: 10%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Manager(AEM)サイト実装のCSSとJavaScriptをデプロイ�
 
 1. CSS／JS を、開発および管理が簡単な個別の小さなファイルに保存する
 1. 組織立った方法で、サードパーティのフレームワークへの依存関係を管理する
-1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする.
+1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする。
 
 クライアント側ライブラリの使用の詳細については、[こちら](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を参照してください。
 
