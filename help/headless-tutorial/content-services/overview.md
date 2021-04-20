@@ -3,13 +3,13 @@ title: AEMヘッドレス — Content Services使用の手引き
 description: AEM ヘッドレスを使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 feature: コンテンツフラグメント、API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 6%
+source-wordcount: '221'
+ht-degree: 5%
 
 ---
 
