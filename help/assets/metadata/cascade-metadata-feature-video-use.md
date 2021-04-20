@@ -4,14 +4,14 @@ description: 高度なメタデータ管理機能を使用すると、ユーザ�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: コンテンツ管理
 feature: メタデータ
-role: 開業医
-level: 中間
+role: Business Practitioner
+level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 translation-type: tm+mt
 source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '193'
 ht-degree: 1%
 
 ---
