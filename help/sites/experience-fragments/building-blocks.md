@@ -5,15 +5,15 @@ sub-product: サイト、content services
 version: cloud-service
 feature: エクスペリエンスフラグメント
 topic: コンテンツ管理
-level: 初級者、中級者
-role: アーキテクト、開発者、管理者、実業家
+level: Beginner, Intermediate
+role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '104'
 ht-degree: 3%
 
 ---
