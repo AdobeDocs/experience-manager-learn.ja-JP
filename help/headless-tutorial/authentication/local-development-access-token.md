@@ -1,6 +1,6 @@
 ---
-title: 現地開発アクセストークン
-description: AEMローカル開発アクセストークンは、AEM AuthorまたはPublishサービスとHTTP経由でプログラム的にやり取りするCloud Serviceとして、AEMとの連携の開発を高速化するために使用されます。
+title: ローカル開発アクセストークン
+description: AEMローカル開発アクセストークンは、HTTP経由でAEM AuthorまたはPublishサービスとプログラム的にやり取りするCloud Serviceとして、AEMとの連携の開発を促進するために使用されます。
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
@@ -10,20 +10,20 @@ audience: developer
 kt: 6785
 thumbnail: 330477.jpg
 topic: ヘッドレス、統合
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
 
 
-# 現地開発アクセストークン
+# ローカル開発アクセストークン
 
-Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とする統合を構築する開発者は、ローカル開発アクティビティを容易にするAEM用の一時アクセストークンを簡単かつ迅速に取得する必要があります。 このニーズを満たすために、AEM Developer Consoleを使用すると、プログラムによってAEMにアクセスする際に使用できる一時アクセストークンを開発者が自己生成できます。
+Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とする統合を構築する開発者は、AEMでローカル開発アクティビティを容易にするための一時的なアクセストークンを簡単かつ迅速に取得する必要があります。 このニーズを満たすために、AEM Developer Consoleを使用すると、プログラムによってAEMにアクセスする際に使用できる一時アクセストークンを開発者が自己生成できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
 
@@ -31,7 +31,7 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 
 ![ローカル開発アクセストークンの取得](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-ローカル開発アクセストークンでは、トークンを生成したユーザーとしてのAEM作成者サービスおよび発行サービスと、その権限にアクセスできます。 これは開発トークンですが、このトークンを共有したり、ソース管理に保存したりしないでください。
+ローカル開発アクセストークンでは、トークンを生成したユーザーとしてのAEM作成者サービスおよび発行サービスへのアクセス権と権限を提供します。 これは開発トークンですが、このトークンを共有したり、ソース管理に保存したりしないでください。
 
 1. [AdobeAdminConsole](https://adminconsole.adobe.com/)で、開発者が次のメンバーの1人であることを確認します。
    + __Cloud Manager -__ DeveloperIMS製品プロファイル(AEM Developer Consoleへのアクセス権を付与)
@@ -45,17 +45,17 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 1. 左上隅の&#x200B;__ダウンロードボタン__&#x200B;をタップして`accessToken`値を含むJSONファイルをダウンロードし、JSONファイルを開発マシン上の安全な場所に保存します。
    + これは、AEMにCloud Service環境として24時間、開発者アクセストークンです。
 
-![AEM Developer Console — 統合 — ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
+![AEM Developer Console — 統合 —ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
 
 ## ローカル開発アクセストークン{#use-local-development-access-token}を使用
 
 ![ローカル開発アクセストークン — 外部アプリケーション](assets/local-development-access-token/local-development-access-token-external-application.png)
 
-1. AEM Developer Consoleから一時的なローカル開発アクセストークンをダウンロードします。
+1. AEM Developer Consoleから一時ローカル開発アクセストークンをダウンロードします
    + ローカル開発アクセストークンは24時間ごとに期限切れになるので、開発者は新しいアクセストークンを毎日ダウンロードする必要があります。
 1. Cloud ServiceとしてAEMとプログラム的にやり取りする外部アプリケーションが開発中です
-1. 外部アプリケーションは、ローカル開発アクセストークンで読み取ります
-1. 外部アプリケーションは、AEMにHTTP要求をCloud Serviceとして構築し、BearerトークンとしてLocal DevelopmentアクセストークンをHTTP要求のAuthorizationヘッダーに追加します
+1. 外部アプリケーションは、ローカル開発アクセストークンに
+1. 外部アプリケーションは、AEMへのHTTP要求をCloud Serviceとして構築し、ローカル開発アクセストークンをBearerトークンとしてHTTP要求のAuthorizationヘッダーに追加します
 1. AEMは、HTTP要求を受け取り、要求を認証し、HTTP要求によって要求された作業を実行し、HTTP応答を外部アプリケーションに返します
 
 ### サンプル外部アプリケーション
@@ -75,7 +75,7 @@ Cloud ServiceとしてAEMへのプログラム的なアクセスを必要とす�
 
 ## 外部アプリケーションの実行
 
-1. [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)がローカル開発マシンにインストールされていることを確認します。このマシンは、外部アプリケーションの実行に使用されます
+1. [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)がローカル開発マシンにインストールされていることを確認します。これは、外部アプリケーションの実行に使用されます
 1. [サンプル外部アプリケーション](./assets/aem-guides_token-authentication-external-application.zip)をダウンロードして解凍します。
 1. コマンドラインから、このプロジェクトのフォルダーで`npm install`を実行します
 1. [ダウンロードしたローカル開発アクセストークン](#download-local-development-access-token)を、プロジェクトのルートにある`local_development_token.json`という名前のファイルにコピーします
@@ -270,6 +270,6 @@ Cloud Service環境としてAEMにログインし、メタデータが更新さ�
 
 ## 次の手順
 
-ローカル開発トークンを使用してAEMにプログラム的にアクセスできたので、サービス資格情報を使用して処理するアプリを更新し、実稼働コンテキストで使用できるようにする必要があります。
+ローカル開発トークンを使用してAEMにプログラム的にアクセスできたので、Cloud Serviceを更新してサービス資格情報を処理する必要があります。これにより、このアプリケーションを実稼動コンテキストで使用できます。
 
 + [サービス資格情報の使用方法](./service-credentials.md)
