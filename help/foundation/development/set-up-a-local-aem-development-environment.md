@@ -1,18 +1,18 @@
 ---
 title: ローカル AEM 開発環境の設定
-description: AEM、Adobe Experience Managerの地域開発を始めるためのガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、およびIntelliJを使用した開発について説明します。
+description: AEM,Adobe Experience Manager用のローカル開発の設定ガイド ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、およびIntelliJを使用した開発について説明します。
 version: 6.4, 6.5
 feature: 開発者ツール
 topics: development
 activity: develop
 audience: developer
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2655'
 ht-degree: 8%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 8%
 
 # ローカル AEM 開発環境の設定
 
-AEM、Adobe Experience Managerの地域開発を始めるためのガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 **[!DNL Eclipse IDE]、[!DNL CRXDE Lite]、[!DNL Visual Studio Code]、[!DNL IntelliJ]**&#x200B;との開発について説明します。
+AEM,Adobe Experience Manager用のローカル開発の設定ガイド ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 **[!DNL Eclipse IDE]、[!DNL CRXDE Lite]、[!DNL Visual Studio Code]、[!DNL IntelliJ]**&#x200B;との開発について説明します。
 
 ## 概要
 
-Adobe Experience ManagerやAEM向けに開発する場合は、ローカル開発環境の設定が最初に行われます。 品質開発環境の設定に時間をかけて、生産性を高め、より優れたコードをより速く作成できます。 AEMのローカル開発環境を次の4つの領域に分割できます。
+ローカル開発環境の設定は、Adobe Experience ManagerまたはAEM向けに開発する際の最初の手順です。 品質開発環境の設定に時間をかけて、生産性を高め、より優れたコードをより速く作成できます。 AEMローカル開発の環境を次の4つの領域に分割できます。
 
 * ローカルAEMインスタンス
 * [!DNL Apache Maven] project
