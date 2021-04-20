@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '2361'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -65,7 +65,7 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
 ローカル開発環境[の設定に関する詳細なガイドは、](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja#local-development-environment-set-up)にあります。
 
 1. ローカルファイルシステムで、発行インスタンスをインストールする専用のフォルダー（`~/aem-sdk/publish`という名前）を作成します。
-1. 前のチャプターの作成者インスタンスに使用するQuickstart jarファイルをコピーし、`publish`ディレクトリに貼り付けます。 または、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)に移動し、最新のSDKをダウンロードしてQuickstart jarファイルを抽出します。
+1. 前のチャプターの作成者インスタンスに使用するQuickstart jarファイルをコピーし、`publish`ディレクトリに貼り付けます。 または、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)に移動し、最新のSDKをダウンロードしてQuickstart jarファイルを抽出します。
 1. jarファイルの名前を`aem-publish-p4503.jar`に変更します。
 
    `publish`文字列は、発行モードでのQuickstart jar開始を指定します。 `p4503`は、Quickstartサーバーがポート4503で動作することを指定します。
@@ -77,7 +77,7 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
    $ java -jar aem-publish-p4503.jar
    ```
 
-1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、追加の設定を避けるために、ローカル開発ではデフォルトを使用することをお勧めします。
+1. 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、余分な設定を避けるために、ローカル開発のデフォルトを使用することをお勧めします。
 1. AEMインスタンスのインストールが完了すると、新しいブラウザーウィンドウが[http://localhost:4503/content.html](http://localhost:4503/content.html)に開きます。
 
    404エラーページが返されることが予想されます。 これは新しいAEMインスタンスで、コンテンツがインストールされていません。
@@ -409,7 +409,7 @@ AEMはデフォルトで保護されており、AEM以外のwebプロパティ�
 
 コンテンツフラグメントとGraphQLの詳細については、次のリソースを参照してください。
 
-* [GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [コンテンツフラグメントと共に使用する AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-* [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
+* [GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=ja)
+* [コンテンツフラグメントと共に使用する AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=ja)
+* [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja#authentication)
 * [Cloud ServiceとしてのAEMへのコードのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)
