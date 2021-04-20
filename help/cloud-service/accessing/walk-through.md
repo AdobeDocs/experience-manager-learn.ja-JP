@@ -11,12 +11,12 @@ kt: 6061
 thumbnail: 39155.jpg
 topic: 管理、セキュリティ
 role: Administrator
-level: 初心者
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 3%
+source-wordcount: '120'
+ht-degree: 2%
 
 ---
 
