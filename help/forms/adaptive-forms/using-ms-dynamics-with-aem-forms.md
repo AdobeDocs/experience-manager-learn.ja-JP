@@ -12,13 +12,13 @@ activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
 topic: 開発
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 33%
+source-wordcount: '170'
+ht-degree: 32%
 
 ---
 
