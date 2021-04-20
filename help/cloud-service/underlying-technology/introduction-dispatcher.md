@@ -10,13 +10,13 @@ version: cloud-service
 kt: 4644
 thumbnail: 32029.jpg
 topic: アーキテクチャ、パフォーマンス
-role: アーキテクト、開発者
-level: 初心者
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 28%
+source-wordcount: '50'
+ht-degree: 30%
 
 ---
 
