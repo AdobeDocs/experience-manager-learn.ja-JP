@@ -4,15 +4,15 @@ description: AEM Mavenプロジェクトのアーキタイプを使用して新�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: AEM Project Archetype
+topic: 開発
+feature: AEM プロジェクトアーキタイプ
 kt: 6929
 thumbnail: 330551.jpg
 translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '78'
+ht-degree: 5%
 
 ---
 
