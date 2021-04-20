@@ -10,12 +10,12 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1655'
 ht-degree: 2%
 
 ---
@@ -55,13 +55,13 @@ AEMは、Cloud ServiceSDK、またはAEM SDKとして、開発のためにAEM Au
 
 ## ローカルAEM Authorサービス{#set-up-local-aem-author-service}のセットアップ
 
-ローカルのAEM Authorサービスは、デジタルマーケターやコンテンツの作成者がコンテンツの作成と管理を共有する、ローカルエクスペリエンスのデベロッパーを提供します。  AEM Author Serviceは、オーサリングとプレビューの両方の環境として設計されており、これに対して機能開発のほとんどの検証を実行できるので、ローカル開発プロセスの重要な要素です。
+ローカルのAEM Authorサービスは、デジタルマーケターやコンテンツの作成者がコンテンツの作成と管理を共有する、ローカルエクスペリエンスのデベロッパーを提供します。  AEM Author Serviceは、オーサリングとプレビューの両方の環境として設計されており、これに対して機能開発のほとんどの検証を実行できるので、ローカル開発プロセスの重要な要素となります。
 
 1. フォルダー`~/aem-sdk/author`を作成
 1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/author`にコピーし、`aem-author-p4502.jar`に名前を変更します
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM Author Serviceを開始します。
    + `java -jar aem-author-p4502.jar`
-      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
+      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発のデフォルトを使用することをお勧めします。
 
    *重複がクリックして](#troubleshooting-double-click)、AEMをCloud ServiceクイックスタートJAR [として開始することはできません。*
 1. Webブラウザーで、[http://localhost:4502](http://localhost:4502)にあるローカルのAEM Author Serviceにアクセスします。
@@ -92,7 +92,7 @@ $ java -jar aem-author-p4502.jar
 1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/publish`にコピーし、`aem-publish-p4503.jar`に名前を変更します
 1. コマンドラインから次のコマンドを実行して、ローカルのAEM発行サービスを開始します。
    + `java -jar aem-publish-p4503.jar`
-      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発でデフォルトを使用することをお勧めします。
+      + 管理者パスワードを`admin`として指定します。 任意の管理者パスワードを使用できますが、再設定の必要性を減らすために、ローカル開発のデフォルトを使用することをお勧めします。
 
    *重複がクリックして](#troubleshooting-double-click)、AEMをCloud ServiceクイックスタートJAR [として開始することはできません。*
 1. Webブラウザーの[http://localhost:4503](http://localhost:4503)にあるローカルのAEM Publish Serviceにアクセスします。
@@ -152,7 +152,7 @@ $ java -jar aem-publish-p4503.jar
 
 クイックスタートJARの名前`aem-<tier>_<environment>-p<port number>.jar`は、開始アップの方法を指定します。 AEMを特定の層、作成者、または発行で起動した後は、別の層に変更することはできません。 これを行うには、最初の実行時に生成された`crx-Quickstart`フォルダーを削除し、Quickstart Jarを再度実行する必要があります。 環境とポートは変更できますが、ローカルAEMインスタンスの停止/開始が必要です。
 
-環境`dev`、`stage`、`prod`の変更は、AEMで環境固有の設定が正しく定義され、解決されることを確認する開発者にとって役立ちます。 ローカル開発は、主にデフォルトの`dev`環境実行モードに対して行うことをお勧めします。
+環境`dev`、`stage`、`prod`の変更は、AEMで環境固有の設定が正しく定義され、解決されることを確認する開発者にとって役立ちます。 ローカル開発は主にデフォルトの`dev`環境実行モードに対して行うことをお勧めします。
 
 次の順に並べ替えます。
 
@@ -173,7 +173,7 @@ $ java -jar aem-publish-p4503.jar
 + `aem-publish_prod-p4503.jar`
    + ポート4503での実稼働実行モードの作成者
 
-ポート番号は、ローカル開発マシン上で使用可能な任意のポートにすることができますが、規則に従う必要があります。
+ポート番号は、ローカル開発マシン上で使用可能な任意のポートにすることができますが、規則に従ってください。
 
 + ポート&#x200B;__4502__&#x200B;は、__ローカルAEM Authorサービス__&#x200B;に使用されます
 + ポート&#x200B;__4503__&#x200B;は、__ローカルAEM発行サービス__&#x200B;に使用されます
