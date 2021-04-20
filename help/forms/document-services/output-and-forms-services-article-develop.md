@@ -12,12 +12,12 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 57f478a9-8495-469e-8a06-ce1251172fda
 topic: 開発
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
 
 
 
-**パッケージのインストール後、AdobeGranite CSRF Filterに次のURLを許可リストする必要があります。**
+**パッケージのインストール後、AdobeGranite CSRF Filterで許可リスト次のURLをする必要があります。**
 
 1. 上記のパスを許可リストするには、次の手順に従ってください。
 1. [configMgrにログイン](http://localhost:4502/system/console/configMgr)
