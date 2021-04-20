@@ -10,12 +10,12 @@ audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
 topic: 移行
-role: アーキテクト、開発者
-level: 初心者
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '84'
 ht-degree: 16%
 
 ---
