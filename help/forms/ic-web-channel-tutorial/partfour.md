@@ -12,13 +12,13 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 2%
+source-wordcount: '154'
+ht-degree: 1%
 
 ---
 
