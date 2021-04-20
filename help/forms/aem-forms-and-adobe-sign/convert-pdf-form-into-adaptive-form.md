@@ -9,13 +9,13 @@ activity: implement
 thumbnail: 39495.jpg
 kt: 6115
 topic: 開発
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 74%
+source-wordcount: '128'
+ht-degree: 75%
 
 ---
 
