@@ -42,5 +42,5 @@ ht-degree: 30%
    + [7 — 実稼働環境の導入](./graphql/production-deployment.md)
 + トークンベースの認証{#authentication}
    + [概要](./authentication/overview.md)
-   + [1 — 地域開発アクセストークン](./authentication/local-development-access-token.md)
+   + [1 -ローカル開発アクセストークン](./authentication/local-development-access-token.md)
    + [2 — サービス資格情報](./authentication/service-credentials.md)
