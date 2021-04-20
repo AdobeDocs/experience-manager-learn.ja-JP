@@ -2,9 +2,9 @@
 title: ルートパネルの設定
 description: 子追加パネルをルートパネルに追加します。
 solution: Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 332238.jpg
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 14%
+source-wordcount: '31'
+ht-degree: 9%
 
 ---
 
