@@ -14,13 +14,13 @@ kt: 4210
 thumbail: 28385.jpg
 discoiquuid: 520c8633-925f-4d3f-b800-ea34710f68d7
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 3%
+source-wordcount: '114'
+ht-degree: 2%
 
 ---
 
