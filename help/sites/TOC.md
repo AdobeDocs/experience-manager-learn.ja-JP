@@ -70,7 +70,7 @@ ht-degree: 35%
    + [Hello Worldチュートリアル](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA EditorとReactの使い方](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA EditorおよびAngularの概要](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-+ マルチサイト管理{#multi-site-management}
++ マルチサイト管理 {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとBlueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [ライブコピーの作成](./multi-site-management/create-live-copy.md)
