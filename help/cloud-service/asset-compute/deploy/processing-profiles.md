@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '635'
 ht-degree: 2%
 
 ---
