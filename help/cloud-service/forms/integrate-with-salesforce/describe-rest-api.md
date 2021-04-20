@@ -2,9 +2,9 @@
 title: Salesforce REST APIを説明するSwaggerファイルを作成する
 description: Swaggerファイルは、APIエンドポイントと、入力および出力のパラメーターを定義します
 solution: Experience Manager, Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 331754.jpg
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 9%
+source-wordcount: '51'
+ht-degree: 5%
 
 ---
 
