@@ -10,12 +10,12 @@ kt: 6032
 thumbnail: 38178.jpg
 topic: 開発
 role: Administrator
-level: 初心者
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 2%
+source-wordcount: '87'
+ht-degree: 1%
 
 ---
 
