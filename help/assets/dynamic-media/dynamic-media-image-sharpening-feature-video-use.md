@@ -5,13 +5,13 @@ sub-product: dynamic-media
 feature: 画像プロファイル、ビューアプリセット
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 12%
+source-wordcount: '122'
+ht-degree: 13%
 
 ---
 
