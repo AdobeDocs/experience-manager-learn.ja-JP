@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 5918
 topic: 開発
-role: デベロッパー
-level: 初級者、中級者
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 1%
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
