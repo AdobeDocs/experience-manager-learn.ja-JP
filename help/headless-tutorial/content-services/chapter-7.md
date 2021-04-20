@@ -3,12 +3,12 @@ title: 第7章 — モバイルアプリからのAEM Content Servicesの利用 �
 description: チュートリアルの第7章では、AEM Content Servicesで作成したコンテンツをAndroidモバイルアプリで使用する方法を説明します。
 feature: コンテンツフラグメント、API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1414'
 ht-degree: 1%
 
 ---
