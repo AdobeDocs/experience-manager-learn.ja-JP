@@ -1,7 +1,7 @@
 ---
 title: AEM Sitesのマルチサイト管理の概要
 description: 次のビデオでは、AEM Sitesのマルチサイト管理に関する基本的な概念の概要を説明します。
-feature: language-copy, live-copy, multi-site-manager
+feature: 言語コピー、ライブコピー、マルチサイトマネージャ
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -12,7 +12,7 @@ thumbnail: 33594.jpg
 translation-type: tm+mt
 source-git-commit: 0d4d1140dd226bbb02de0b19942b55495e3e2b2c
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
