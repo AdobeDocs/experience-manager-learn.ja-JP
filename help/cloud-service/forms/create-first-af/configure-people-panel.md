@@ -2,9 +2,9 @@
 title: ユーザーの設定パネル
 description: 配偶者の詳細フラグメントを追加して、人のパネルを設定します。
 solution: Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 332234.jpg
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '29'
-ht-degree: 17%
+source-wordcount: '25'
+ht-degree: 12%
 
 ---
 
