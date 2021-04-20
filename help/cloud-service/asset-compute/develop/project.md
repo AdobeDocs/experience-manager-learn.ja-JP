@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '909'
 ht-degree: 4%
 
 ---
