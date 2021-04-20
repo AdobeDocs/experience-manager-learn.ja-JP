@@ -6,12 +6,12 @@ feature: Adobeアセットリンク
 version: cloud-service
 thumbnail: 33733.jpg
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '118'
 ht-degree: 28%
 
 ---
