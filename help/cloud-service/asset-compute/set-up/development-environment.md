@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -104,7 +104,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## ngrok{#ngrok}のインストール
 
-[ngrok](https://www.npmjs.com/package/ngrok) npmモジュールをダウンロードしてインストールします。このモジュールは、ローカル開発マシンに対する一般的なアクセスを提供し、Asset compute作業者のローカルデバッグを容易にします。
+[ngrok](https://www.npmjs.com/package/ngrok) npmモジュールをダウンロードしてインストールします。このモジュールは、ローカル開発マシンに対するパブリックアクセスを提供し、Asset computeワーカーのローカルデバッグを容易にします。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
