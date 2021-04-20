@@ -1,6 +1,6 @@
 ---
 title: automated forms conversionサービス
-description: 'automated forms conversionサービス この記事では、AEM管理者がAutomated forms conversionサービスを設定して、PDF formsのアダプティブフォームへの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。 '
+description: automated forms conversionサービス この記事では、AEM管理者がAutomated forms conversionサービスを設定して、PDF formsのアダプティブフォームへの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。
 feature: アダプティブフォーム
 topics: development
 audience: developer
@@ -10,18 +10,18 @@ thumbnail: 39493.jpg
 kt: 6114
 topic: 開発
 role: Administrator
-level: 初心者
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '256'
 ht-degree: 55%
 
 ---
 
 # automated forms conversionサービス
 
-この記事では、AEM管理者がAutomated forms conversionサービスを設定して、PDF formsのアダプティブフォームへの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
+この記事では、AEM管理者がAutomated forms conversionサービスを設定して、PDF formsのアダプティブフォームへの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
 * Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
 * Linux オペレーティングシステムと Microsoft Windows オペレーティングシステムの使用
