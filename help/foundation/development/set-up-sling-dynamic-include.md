@@ -3,12 +3,12 @@ title: AEM用のSling動的インクルードの設定
 description: Apache HTTP Webサーバー上で実行されるAEMディスパッチャーと共にApache Sling Dynamic Includeをインストールして使用するビデオのウォークスルーです。
 version: 6.3, 6.4, 6.5
 sub-product: 基盤、サイト
-feature: API
+feature: APIs
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

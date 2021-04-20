@@ -4,14 +4,14 @@ seo-title: WindowsでのAEM Formsのインストールの簡単な手順
 description: WindowsにAEM Formsを簡単にインストールする手順
 seo-description: WindowsにAEM Formsを簡単にインストールする手順
 uuid: a148b8f0-83db-47f6-89d3-c8a9961be289
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: administration
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

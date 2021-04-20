@@ -1,7 +1,7 @@
 ---
 title: ログ
 description: ログは、AEMでAEMアプリケーションをCloud Serviceとしてデバッグする際の最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログの記録に依存します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

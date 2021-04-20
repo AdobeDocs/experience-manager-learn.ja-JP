@@ -1,11 +1,11 @@
 ---
 title: AEM Assetsの透かし
 description: AEMをCloud Serviceの透かし機能として使用すると、カスタムの画像レンディションを任意のPNG画像を使用して透かし表示できます。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
 translation-type: tm+mt

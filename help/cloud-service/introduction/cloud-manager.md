@@ -4,7 +4,7 @@ description: Cloud Managerの目的と、AEMとのCloud Serviceでの動作方�
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: アーキテクチャ
+topic: Architecture
 kt: 6922
 thumbnail: 330545.jpg
 translation-type: tm+mt

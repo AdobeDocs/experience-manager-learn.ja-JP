@@ -1,14 +1,14 @@
 ---
 title: AEM FormsおよびAdobe SignでのXDPテンプレートの使用
 description: AEM FormsおよびAdobe SignでのXDPテンプレートの使用 既存のXDPテンプレートとAEM Formsおよび署名の統合を活用する方法を詳しく説明するビデオです。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39705.jpg
 kt: 6143
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

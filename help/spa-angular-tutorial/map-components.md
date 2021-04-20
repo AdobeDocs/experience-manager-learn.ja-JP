@@ -2,7 +2,7 @@
 title: SPAコンポーネントのAEMコンポーネントへのマッピング | AEM SPAエディタとAngularの使い始めに
 description: AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、従来のAEMオーサリングと同様、AEM SPAエディタ内でSPAコンポーネントを動的に更新できます。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPA Editor
 topics: development
 doc-type: tutorial
 version: cloud-service

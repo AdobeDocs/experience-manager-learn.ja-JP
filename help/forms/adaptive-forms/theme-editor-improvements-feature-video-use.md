@@ -4,14 +4,14 @@ seo-title: AEM Formsでのテーマエディターの改善
 description: AEM 6.3でのアダプティブフォームのテーマエディターの改善
 seo-description: AEM 6.3でのアダプティブフォームのテーマエディターの改善
 uuid: cd1f01ee-2603-4d9a-a8ad-2981e3937956
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: feature video
 activity: use
 version: 6.3,6.4,6.5
 discoiquuid: 9ba8c552-bf3f-445c-b0d1-17e62b34f1a2
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

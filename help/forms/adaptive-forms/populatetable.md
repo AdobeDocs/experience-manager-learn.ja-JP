@@ -3,13 +3,13 @@ title: 'アダプティブフォームの表の入力 '
 seo-title: アダプティブフォームの表の入力
 description: アダプティブフォームの表へのForm Data Model Service呼び出しの結果の入力
 seo-description: アダプティブフォームの表へのForm Data Model Service呼び出しの結果の入力
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

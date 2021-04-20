@@ -1,7 +1,7 @@
 ---
 title: AEMでのSSLの有効化
 description: Adobe Experience ManagerのSSLセットアップウィザードを使用して、HTTPS経由で実行するAEMインスタンスを設定します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
-topic: 開発
+topic: Development
 role: Administrator
 level: Intermediate
 translation-type: tm+mt

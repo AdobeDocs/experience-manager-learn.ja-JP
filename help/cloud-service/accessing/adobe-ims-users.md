@@ -1,7 +1,7 @@
 ---
 title: AdobeIMSユーザおよびAEM
 description: AEM Authorサービスへのアクセスを必要とするユーザーは、AdobeのAdmin ConsoleでAdobeIMSユーザーとして管理されます。 AdobeIMSユーザーの概要、およびAdmin Consoleでのユーザーのアクセス方法と管理方法について説明します。
-feature: 'ユーザーとグループ '
+feature: Users and Groups
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,7 +9,7 @@ audience: administrator
 doc-type: feature video
 kt: 4997
 thumbnail: 39149.jpg
-topic: 管理、セキュリティ
+topic: Administration, Security
 role: Administrator
 level: Beginner
 translation-type: tm+mt

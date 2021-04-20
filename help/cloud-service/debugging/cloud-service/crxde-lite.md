@@ -1,7 +1,7 @@
 ---
 title: CRXDE Lite
 description: 'CRXDE Liteは、AEM開発者環境としてCloud Serviceをデバッグするための、従来の強力なツールです。 CRXDE Liteは、すべてのリソースとプロパティの検査、JCRの可変部分の操作、権限の調査からデバッグを支援する一連の機能を提供します。 '
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: KT-5481
 thumbnail: kt-5481.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

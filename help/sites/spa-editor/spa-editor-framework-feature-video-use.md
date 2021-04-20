@@ -3,7 +3,7 @@ title: AEM SitesとのSPAエディタの使用
 seo-title: AEM SitesとのSPA Editorフレームワークの使用
 description: AEM Single Page Application Editorフレームワークでは、作成者は単一ページアプリケーションまたはSPA用のコンテンツを編集できます。 ReactまたはAngularフレームワークを使用する開発者は、SPAを作成し、SPAの領域をAEMコンポーネントにマッピングします。これにより、作成者は使い慣れたAEM Sites編集ツールを使用できます。
 sub-product: サイト、content services
-feature: スパエディタ
+feature: Spa Editor
 topics: authoring, single-page-applications
 audience: all
 doc-type: feature video

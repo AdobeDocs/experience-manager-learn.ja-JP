@@ -11,7 +11,7 @@ audience: all
 doc-type: article
 uuid: 3ccf7323-4061-49d7-ae95-eb003099fd77
 discoiquuid: 9d181b3e-fbd5-476d-9e97-4452176e495c
-topic: セキュリティ
+topic: Security
 role: Architect
 level: Beginner
 translation-type: tm+mt

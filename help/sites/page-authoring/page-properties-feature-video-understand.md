@@ -3,7 +3,7 @@ title: AEM Sitesのページプロパティについて
 seo-title: Adobe Experience Manager Sitesのページプロパティについて
 description: 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティメタデータを紹介します。
 seo-description: '次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティメタデータを紹介します。 '
-feature: ページエディター
+feature: Page Editor
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

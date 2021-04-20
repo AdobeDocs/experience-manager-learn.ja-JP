@@ -4,14 +4,14 @@ seo-title: AEM FormsでのJDBCベースのフォームデータモデルの使�
 description: このビデオでは、JDBCデータソースに基づくForm Data Modelの作成方法、Form Data Modelに基づくAdaptive Formの作成方法、Form Data Modelを使用する「INSERT」操作の使用方法を説明します。
 seo-description: このビデオでは、JDBCデータソースに基づくForm Data Modelの作成方法、Form Data Modelに基づくAdaptive Formの作成方法、Form Data Modelを使用する「INSERT」操作の使用方法を説明します。
 uuid: 5c664b16-c089-48ad-8bf6-9766d0ddc3c4
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: form-data-model
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 4e5f947c-b49a-423e-9139-51c0c5648318
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

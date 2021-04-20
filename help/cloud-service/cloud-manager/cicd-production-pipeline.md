@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6872, 6875
 thumbnail: 26317.jpg
-topic: アーキテクチャ
+topic: Architecture
 role: Architect, Developer, Administrator
 level: Beginner
 translation-type: tm+mt

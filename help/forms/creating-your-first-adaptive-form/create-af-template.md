@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームテンプレートの作成
 description: テンプレートは、アダプティブフォームの構造と初期コンテンツを定義します。
-feature: アダプティブフォーム
+feature: adaptive-forms
 topics: authoring
 audience: developer
 doc-type: tutorial

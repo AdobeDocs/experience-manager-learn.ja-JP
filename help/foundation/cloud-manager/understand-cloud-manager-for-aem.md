@@ -6,7 +6,7 @@ topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Beginner
 translation-type: tm+mt

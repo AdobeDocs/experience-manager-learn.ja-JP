@@ -3,7 +3,7 @@ title: ブランドポータルの使用
 description: AEM AuthorとAEM Assetsブランドポータルの統合に関するビデオウォークスルー。
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

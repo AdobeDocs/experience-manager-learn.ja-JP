@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

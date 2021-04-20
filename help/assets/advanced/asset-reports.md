@@ -1,7 +1,7 @@
 ---
 title: AEM Assetsの資産レポート
 description: 'AEM Assetsは、直観的なユーザー操作により、大規模なリポジトリに適したレポートフレームワークを提供します。 '
-feature: アセットレポート
+feature: Asset Reports
 topic: Administration
 role: Business Practitioner
 level: Intermediate

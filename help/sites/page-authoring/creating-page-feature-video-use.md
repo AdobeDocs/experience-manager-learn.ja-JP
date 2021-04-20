@@ -3,7 +3,7 @@ title: AEM Sitesでの新しいページの作成
 seo-title: Adobe Experience Manager Sitesで新しいページを作成
 description: 次のビデオでは、Adobe Experience Managerのテンプレートを基にしたサイトページの作成方法に焦点を当てています。
 seo-description: 次のビデオでは、Adobe Experience Managerのテンプレートを基にしたサイトページの作成方法に焦点を当てています。
-feature: ページエディター，編集可能なテンプレート
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4244
 thumbnail: 31827.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

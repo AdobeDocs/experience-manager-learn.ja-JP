@@ -1,13 +1,13 @@
 ---
 title: AEM Sitesでソーシャルメディアシェアを使用する
 description: ソーシャルメディア共有コンポーネントの設定と使用に関するトピックを参照してください。
-feature: コアコンポーネント
+feature: Core Components
 topics: integrations
 audience: developer, implementer
 doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
 translation-type: tm+mt

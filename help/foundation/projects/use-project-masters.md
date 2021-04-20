@@ -2,8 +2,8 @@
 title: AEMでプロジェクトマスターを使用する方法
 description: プロジェクトマスターは、AEMプロジェクトを使用したユーザーおよびチーム管理を大幅にシンプル化します。
 version: 6.4, 6.5, cloud-service
-topic: コンテンツ管理、コラボレーション
-feature: プロジェクト
+topic: Content Management, Collaboration
+feature: Projects
 level: Intermediate
 role: Business Practitioner
 kt: 256

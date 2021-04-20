@@ -1,7 +1,7 @@
 ---
 title: Analysis Workspaceでデータを分析する
 description: Adobe Experience Managerサイトから収集したデータを、Adobe Analyticsのレポートスイートの指標およびディメンションにマップする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を学びます。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
-topic: 統合
+topic: Integrations
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

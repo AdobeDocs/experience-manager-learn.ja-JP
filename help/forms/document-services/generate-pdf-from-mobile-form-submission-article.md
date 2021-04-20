@@ -4,14 +4,14 @@ seo-title: HTML5フォーム送信からPDFを生成
 description: Mobile FormからPDFを生成送信
 seo-description: Mobile FormからPDFを生成送信
 uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

@@ -2,13 +2,13 @@
 title: AEMでのコンテンツフラグメントのオーサリング
 description: 'コンテンツフラグメントはAEMのコンテンツ抽象です。この機能を使用すると、テキストベースのコンテンツを、サポートするチャネルとは独立して作成および管理できます。 '
 sub-product: content-services
-feature: コンテンツフラグメント
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

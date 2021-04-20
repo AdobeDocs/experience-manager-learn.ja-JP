@@ -1,7 +1,7 @@
 ---
 title: フォームデータの保存
 description: フォームデータと新しい添付ファイルマップをデータベースに格納する
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

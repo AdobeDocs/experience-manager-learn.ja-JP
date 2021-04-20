@@ -2,9 +2,9 @@
 title: AEM Dynamic Media でのアセットビューアについて
 description: AEMDynamic Media Viewerの機能強化により、AEMで作成者はエクスペリエンスアセットを定義してカスタマイズし、Webサイトのユーザーに表示できます。
 sub-product: Dynamic Media Classic
-feature: ビューアプリセット、画像プロファイル
+feature: Viewer Presets, Image Profiles
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
 translation-type: tm+mt

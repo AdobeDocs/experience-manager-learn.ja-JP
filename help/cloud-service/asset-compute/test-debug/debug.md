@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーのデバッグ
 description: asset computeワーカーは、簡単なデバッグログ文から、接続されたVS Code（リモートデバッガ）、AEMでCloud Serviceとして開始されたAdobe I/O Runtimeのアクティベーションのログを取り込むまで、様々な方法でデバッグできます。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

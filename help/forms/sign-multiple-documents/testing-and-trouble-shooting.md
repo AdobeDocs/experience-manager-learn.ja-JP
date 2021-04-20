@@ -1,7 +1,7 @@
 ---
 title: 複数のドキュメントへの署名のトラブルシューティング
 description: ソリューションのテストとトラブルシューティング
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

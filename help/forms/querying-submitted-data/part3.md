@@ -3,13 +3,13 @@ title: JSONスキーマとデータを持つAEM Forms[Part3]
 seo-title: JSONスキーマとデータを持つAEM Forms[Part3]
 description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
 seo-description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

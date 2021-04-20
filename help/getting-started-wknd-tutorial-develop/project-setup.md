@@ -3,7 +3,7 @@ title: AEM Sitesの使用の手引き — プロジェクトのセットアッ�
 seo-title: AEM Sitesの使用の手引き — プロジェクトのセットアップ
 description: AEM Sites のコードおよび設定を管理するための、Maven のマルチモジュールプロジェクトの作成について説明します。
 sub-product: サイト
-feature: AEM プロジェクトアーキタイプ
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,7 +12,7 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-topic: コンテンツ管理、開発
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

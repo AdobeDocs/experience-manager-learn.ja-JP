@@ -2,7 +2,7 @@
 title: SPAの統合 | AEM SPAエディタとAngularの使い始めに
 description: angularで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 angularのCLIツールなど、最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を学びます。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPA Editor
 topics: development
 doc-type: tutorial
 version: cloud-service

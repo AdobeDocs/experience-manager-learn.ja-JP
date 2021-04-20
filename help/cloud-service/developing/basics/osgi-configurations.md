@@ -4,8 +4,8 @@ description: AEMでOSGi設定をCloud Serviceとして定義し、デプロイ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: API
+topic: Development
+feature: APIs
 kt: 6934
 thumbnail: 330559.jpg
 translation-type: tm+mt

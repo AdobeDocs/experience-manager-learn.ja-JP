@@ -1,7 +1,7 @@
 ---
 title: 概要コンポーネントのカスタマイズ
 description: 概要手順のコンポーネントを拡張して、パッケージ内の次のフォームに移動する機能を含めます。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

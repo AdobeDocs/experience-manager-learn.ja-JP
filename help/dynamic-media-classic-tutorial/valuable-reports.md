@@ -2,12 +2,12 @@
 title: 管理者向けの貴重なレポート
 description: Dynamic Mediaクラシックの管理者が設定を検討する必要がある2つの重要なレポートを見つけます。
 sub-product: ダイナミックメディア、アセット
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Administrator
 level: Intermediate
 translation-type: tm+mt

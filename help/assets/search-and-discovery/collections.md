@@ -2,11 +2,11 @@
 title: コレクション
 description: コレクションがAEM Assetsに対してどのように表示を提供し、代替手段を提供するかを説明します。
 sub-product: アセット
-feature: コレクション
+feature: Collections
 version: cloud-service
 kt: 4301
 thumbnail: 32053.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

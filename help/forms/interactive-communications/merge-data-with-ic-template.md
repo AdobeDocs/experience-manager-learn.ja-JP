@@ -3,13 +3,13 @@ title: データのマージによる印刷チャネルドキュメントの生�
 seo-title: データのマージによる印刷チャネルドキュメントの生成
 description: 入力ストリームに含まれるデータを結合して印刷チャネルドキュメントを生成する方法を学びます
 seo-description: 入力ストリームに含まれるデータを結合して印刷チャネルドキュメントを生成する方法を学びます
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

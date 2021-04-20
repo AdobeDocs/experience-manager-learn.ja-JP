@@ -6,7 +6,7 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-topic: 開発
+topic: Development
 kt: 7148
 thumbnail: 331755.jpg
 translation-type: tm+mt

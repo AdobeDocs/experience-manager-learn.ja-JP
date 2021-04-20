@@ -1,7 +1,7 @@
 ---
 title: メインのアダプティブフォームの作成
 description: 申込者の情報とアダプティブフォームを取り込み、保存されたアダプティブフォームを取得するためのアダプティブフォームの作成
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

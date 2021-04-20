@@ -2,8 +2,8 @@
 title: AEM Assetsの非公開ユーザーグループ
 description: Closed User Groups(CUGs)は、公開済みサイト上の特定のユーザーグループに対してコンテンツへのアクセスを制限するために使用される機能です。 このビデオでは、閉じたユーザーグループをAdobe Experience Managerアセットと共に使用して、アセットの特定のフォルダへのアクセスを制限する方法を示します。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: 管理、セキュリティ
-feature: ユーザーとグループ
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Intermediate
 kt: 649

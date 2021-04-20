@@ -2,7 +2,7 @@
 title: AEM Sites使用の手引き — コンポーネントの基本
 description: シンプルな「HelloWorld」の例を通して、Adobe Experience Manager(AEM)サイトコンポーネントの基盤となる技術を理解します。 HTL、Slingモデル、クライアント側ライブラリ、および作成者ダイアログのトピックについて説明します。
 sub-product: サイト
-feature: コアコンポーネント、開発者ツール
+feature: Core Components, Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,7 +11,7 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-topic: コンテンツ管理、開発
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 構築と導入
 description: AdobeCloud Managerは、コードの構築とAEMへのCloud Serviceとしてのデプロイを容易にします。 エラーは、ビルドプロセスのステップ中に発生し、解決のために操作が必要になる場合があります。 このガイドでは、展開時に発生する一般的なエラーと、その最適なアプローチ方法について詳しく説明します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

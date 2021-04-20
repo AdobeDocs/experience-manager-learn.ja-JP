@@ -1,14 +1,14 @@
 ---
 title: ログを使用したAEM SDKのデバッグ
 description: ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログ記録に依存します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

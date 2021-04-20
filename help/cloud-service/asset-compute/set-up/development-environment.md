@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用のローカル開発環境の設定
 description: Node.js JavaScriptAsset computeである開発ワーカーは、従来のAEM開発とは異なる、特定の開発ツール（Node.jsや様々なnpmモジュール、Docker Desktop、Microsoft Visual Studio Codeなど）を必要とします。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

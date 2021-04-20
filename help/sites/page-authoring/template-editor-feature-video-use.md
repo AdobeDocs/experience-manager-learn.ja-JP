@@ -3,14 +3,14 @@ title: 編集可能なページテンプレートのAEM Sitesでの使用
 seo-title: 編集可能なページテンプレートのAdobe Experience Manager Sitesでの使用
 description: 編集可能なテンプレートを使用すると、専門の作成者は、ページテンプレートの作成と更新、およびAEM Sitesでの高度なポリシー設定の管理を行うことができます。
 seo-description: 編集可能なテンプレートを使用すると、専門の作成者は、ページテンプレートの作成と更新、およびAdobe Experience Manager Sitesでの高度なポリシー設定の管理を行うことができます。
-feature: 編集可能なテンプレート
+feature: Editable Templates
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

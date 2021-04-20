@@ -2,8 +2,8 @@
 title: AEMで受信トレイを使用する方法
 description: AEM inboxは、タスクとワークフローに関するコラボレーションと可視性を強化します。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: コラボレーション
-feature: インボックス
+topic: Collaboration
+feature: Inbox
 role: Business Practitioner
 level: Intermediate
 kt: 159

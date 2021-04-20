@@ -4,14 +4,14 @@ seo-title: アダプティブFormsでのGeolocation APIの使用
 description: 位置情報APIの
 seo-description: 位置情報APIの
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

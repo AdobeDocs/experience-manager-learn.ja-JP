@@ -1,7 +1,7 @@
 ---
 title: AEM FormsとのAcroforms
 description: Acroformを使用したアダプティブフォームの作成、データの結合、PDFの取得に関する手順を説明するチュートリアルです。 結合されたデータを含むPDFを、Adobe Signを使用して署名用に送信できます。
-feature: アダプティブフォーム
+feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial

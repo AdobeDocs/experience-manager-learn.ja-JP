@@ -2,11 +2,11 @@
 title: コメントと注釈
 description: AEMでコメントと注釈を使用して、アセットに関する通信と共同作業を行う方法を説明します。
 sub-product: アセット
-feature: コラボレーション
+feature: Collaboration
 version: cloud-service
 kt: 4541
 thumbnail: 32049.jpg
-topic: コラボレーション
+topic: Collaboration
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

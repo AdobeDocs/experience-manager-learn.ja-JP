@@ -2,9 +2,9 @@
 title: AEM Dynamic Media でのカスタムビデオサムネールの使用
 description: AEM Assetsのカスタムビデオサムネールを使用すると、作成者は生成された一連のサムネールから適切なサムネールを選択できます。 ビデオに対して生成されるサムネールの数は、簡単にカスタマイズできます。
 sub-product: dynamic-media
-feature: ビデオプロファイル
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

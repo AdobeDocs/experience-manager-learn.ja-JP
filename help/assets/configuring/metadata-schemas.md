@@ -2,11 +2,11 @@
 title: メタデータスキーマ
 description: メタデータスキーマは、ユーザーがAEMでアセットメタデータとやり取りするインターフェイスを定義します。メタデータの定義とアセットへの適用は、デジタルアセット管理にとって重要です。
 sub-product: アセット
-feature: メタデータ
+feature: Metadata
 version: cloud-service
 kt: 4981
 thumbnail: 33696.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -2,9 +2,9 @@
 title: AEM Dynamic Media でのインタラクティブビデオの使用
 description: AEM Assetsには、インタラクティブビデオを作成する機能が追加されました。ユーザーは、ビデオを小さなセグメントに分割したり、小さなセグメントを組み合わせて大きなセグメントを作成したり、誘い文句（CTA：コールトゥアクション）を関連付けることができます。
 sub-product: dynamic-media
-feature: ビデオプロファイル、ビューアプリセット、ミックスメディアセット
+feature: Video Profiles, Viewer Presets, Mix Media Sets
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

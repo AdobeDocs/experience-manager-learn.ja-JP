@@ -1,14 +1,14 @@
 ---
 title: 変換されたアダプティブフォームの設定
 description: 変換されたアダプティブフォームの設定
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39574.jpg
 kt: 6126
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

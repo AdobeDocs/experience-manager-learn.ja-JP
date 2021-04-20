@@ -2,8 +2,8 @@
 title: AEM Assetsでのスマート翻訳検索の使用
 description: スマート翻訳検索を使用すると、AEMコンテンツ、アセットとページの両方にわたって自動的に多言語間の検索と検出が可能になり、50以上の言語をサポートし、手動コンテンツ翻訳の必要性を減らすことができます。
 version: 6.3, 6.4, 6.5
-feature: 検索
-topic: コンテンツ管理
+feature: Search
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

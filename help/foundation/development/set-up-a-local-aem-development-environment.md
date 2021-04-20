@@ -2,11 +2,11 @@
 title: ローカル AEM 開発環境の設定
 description: AEM,Adobe Experience Manager用のローカル開発の設定ガイド ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックをカバーしています。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、およびIntelliJを使用した開発について説明します。
 version: 6.4, 6.5
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 activity: develop
 audience: developer
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

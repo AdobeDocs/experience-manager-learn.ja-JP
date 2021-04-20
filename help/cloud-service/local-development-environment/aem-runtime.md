@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてのAEM用のローカルAEMランタイムの設定
 description: AEMをCloud ServiceSDKのQuickstart Jarとして使用して、Local AEM Runtimeをセットアップします。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

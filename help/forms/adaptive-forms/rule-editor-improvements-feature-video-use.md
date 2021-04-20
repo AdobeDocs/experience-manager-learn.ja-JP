@@ -4,7 +4,7 @@ seo-title: AEM Formsでのルールエディタの改善
 description: 'ルールエディターを使用すると、AEMアダプティブFormsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術者ユーザーと技術者以外のユーザーの両方がインテリジェンスを追加しやすくなり、高速になります。 '
 seo-description: 'ルールエディターを使用すると、AEMアダプティブFormsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術者ユーザーと技術者以外のユーザーの両方がインテリジェンスを追加しやすくなり、高速になります。 '
 uuid: 35e8cc7c-04cf-43b4-bbc7-41bfd909cfba
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: author
 doc-type: technical video

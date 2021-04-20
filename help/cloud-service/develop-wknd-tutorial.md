@@ -5,8 +5,8 @@ description: AEM の開発が初めての方や、ベストプラクティスの
 seo-description: AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
 content-type: reference
 topic-tags: introduction
-feature: AEMプロジェクトのアーキタイプ，コアコンポーネント，ページエディター，編集可能なテンプレート
-topic: 開発
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

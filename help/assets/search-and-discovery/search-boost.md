@@ -1,8 +1,8 @@
 ---
 title: AEM Assetsの検索ブーストとは
 description: Adobe Experience Managerでアセットの検索関連性を高めるためのキーワードやフレーズの追加方法を説明します。
-topic: コンテンツ管理
-feature: 検索
+topic: Content Management
+feature: Search
 role: Business Practitioner
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service

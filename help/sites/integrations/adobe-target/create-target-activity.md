@@ -1,7 +1,7 @@
 ---
 title: エクスペリエンスフラグメントオファーを使用したターゲットアクティビティの作成
 description: AEMエクスペリエンスフラグメントオファーを使用して、Adobe Targetアクティビティを作成およびテストする方法を説明します。
-feature: エクスペリエンスフラグメント
+feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
-topic: 統合
+topic: Integrations
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

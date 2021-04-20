@@ -1,7 +1,7 @@
 ---
 title: データベーステーブルの作成
 description: フォームデータモデルで使用するデータベースの作成
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 5811
 thumbnail: kt-5811.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

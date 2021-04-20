@@ -4,7 +4,7 @@ description: Cloud ServiceとしてのAEMとは何か、および他のバージ
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: アーキテクチャ
+topic: Architecture
 kt: 6923
 thumbnail: 330546.jpg
 translation-type: tm+mt

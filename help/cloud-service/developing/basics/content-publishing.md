@@ -4,8 +4,8 @@ description: コンテンツ配信やAdobeパイプラインの概念など、AE
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 公開
+topic: Development
+feature: Publishing
 kt: 6911
 thumbnail: 330554.jpg
 translation-type: tm+mt

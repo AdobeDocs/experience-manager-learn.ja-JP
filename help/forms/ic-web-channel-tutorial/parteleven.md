@@ -4,14 +4,14 @@ seo-title: 投資混合パネルの設定
 description: これは、最初の対話型通信ドキュメントの作成に関するマルチステップチュートリアルのパート11です。このパートでは、現在とモデルの投資ミックスを表示する円グラフを追加します。
 seo-description: これは、最初の対話型通信ドキュメントの作成に関するマルチステップチュートリアルのパート11です。このパートでは、現在とモデルの投資ミックスを表示する円グラフを追加します。
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

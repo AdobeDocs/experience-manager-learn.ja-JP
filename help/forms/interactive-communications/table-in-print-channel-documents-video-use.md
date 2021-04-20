@@ -2,13 +2,13 @@
 title: AEM Forms印刷チャネルドキュメントでの表コンポーネントの使用
 seo-title: AEM Forms印刷チャネルドキュメントでの表コンポーネントの使用
 description: 次のビデオでは、印刷チャネルドキュメントに対してInteractive Communicationsの表コンポーネントを使用するために必要な手順について説明します。
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

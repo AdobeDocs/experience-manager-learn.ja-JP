@@ -4,7 +4,7 @@ seo-title: POSTの送信時にエージェントUIを開く
 description: これは、印刷チャネル用の最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの11部です。 この部分では、フォーム送信時にアドホック通信を作成するエージェントuiインターフェイスを起動します。
 seo-description: これは、印刷チャネル用の最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの11部です。 この部分では、フォーム送信時にアドホック通信を作成するエージェントuiインターフェイスを起動します。
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

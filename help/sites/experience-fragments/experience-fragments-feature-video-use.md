@@ -2,8 +2,8 @@
 title: AEMエクスペリエンスフラグメントの使用
 description: エクスペリエンスフラグメントを使用すると、コンテンツ作成者は、サイトページやサードパーティ製システムなどのチャネル間でコンテンツを再利用できます。
 sub-product: サイト、content services
-feature: エクスペリエンスフラグメント
-topic: コンテンツ管理
+feature: Experience Fragments
+topic: Content Management
 role: Architect, Developer, Administrator, Business Practitioner
 level: Beginner
 doc-type: feature video

@@ -3,8 +3,8 @@ title: 第4章 — Content Servicesのテンプレートの定義 — Content Se
 seo-title: AEMヘッドレス使用の手引き — 第4章 — Content Servicesテンプレートの定義
 description: AEM Headless Tutorialの第4章では、AEM Content ServicesでのAEM編集可能テンプレートの役割について説明します。 編集可能なテンプレートは、AEM Content Servicesが最終的に公開するJSONコンテンツ構造を定義するために使用されます。
 seo-description: AEM Headless Tutorialの第4章では、AEM Content ServicesでのAEM編集可能テンプレートの役割について説明します。 編集可能なテンプレートは、AEM Content Servicesが最終的に公開するJSONコンテンツ構造を定義するために使用されます。
-feature: コンテンツフラグメント、API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
 translation-type: tm+mt

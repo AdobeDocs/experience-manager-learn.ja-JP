@@ -9,8 +9,8 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
-feature: API、AEM Project Archetype
-topic: コンテンツ管理、開発
+feature: APIs, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

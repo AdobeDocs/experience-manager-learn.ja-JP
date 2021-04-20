@@ -4,14 +4,14 @@ seo-title: フォームデータモデルを使用したバイナリデータの
 description: フォームデータモデルを使用したAEM DAMへのバイナリデータの送信
 seo-description: フォームデータモデルを使用したAEM DAMへのバイナリデータの送信
 uuid: dd344ed8-69f7-4d63-888a-3c96993fe99d
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
 discoiquuid: 6e99df7d-c030-416b-83d2-24247f673b33
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

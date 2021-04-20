@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

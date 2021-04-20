@@ -2,12 +2,12 @@
 title: 基本テンプレートの概要
 description: Image Serverから呼び出され、画像とレンダリングされたテキストから構成される、Dynamic Mediaクラシックの基本テンプレートについて説明します。 テンプレートは、テンプレートが公開された後、URLを介して動的に変更できます。 PhotoshopのPSDをDynamic Mediaクラシックにアップロードして、テンプレートの基本として使用する方法を学びます。 画像レイヤーから成るシンプルなマーチャンダイジング基本テンプレートを作成します。 テ追加キストレイヤーを作成し、パラメータを使用して可変にします。 テンプレートURLを作成し、Webブラウザーを使用して画像を動的に操作します。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

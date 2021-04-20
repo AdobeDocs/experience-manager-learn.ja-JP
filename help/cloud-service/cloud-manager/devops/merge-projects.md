@@ -4,8 +4,8 @@ description: Github Desktopを使用して、Cloud Managerを使用して、AEM�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6913
 thumbnail: 330535.jpg
 translation-type: tm+mt

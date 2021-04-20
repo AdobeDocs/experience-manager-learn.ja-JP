@@ -1,11 +1,11 @@
 ---
 title: 検索
 description: AEM Omnisearchを使用してアセットを迅速に検出する方法を説明します。
-feature: 検索
+feature: Search
 version: cloud-service
 kt: 4312
 thumbnail: 32054.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

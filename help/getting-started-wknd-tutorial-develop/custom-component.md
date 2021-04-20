@@ -2,7 +2,7 @@
 title: カスタムコンポーネント
 description: 作成したコンテンツを表示するカスタム署名コンポーネントのエンドツーエンドの作成について扱います。ビジネスロジックをカプセル化して署名コンポーネントおよび対応する HTL を入力し、コンポーネントをレンダリングする Sling Model の開発を含みます。
 sub-product: サイト
-feature: コアコンポーネント、API
+feature: Core Components, APIs
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,7 +11,7 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-topic: コンテンツ管理、開発
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

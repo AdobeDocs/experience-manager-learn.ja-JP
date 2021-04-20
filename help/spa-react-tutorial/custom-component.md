@@ -2,7 +2,7 @@
 title: カスタムコンポーネントの作成 | AEM SPA EditorとReactの使い始めに
 description: AEM SPAエディタで使用するカスタムコンポーネントを作成する方法を学びます。 JSONモデルを拡張してカスタムコンポーネントに入力するための作成者ダイアログとSlingモデルの開発方法を学びます。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPA Editor
 doc-type: tutorial
 topics: development
 version: cloud-service

@@ -1,13 +1,13 @@
 ---
 title: AEMでの翻訳の強化
 description: AEM堅牢な翻訳フレームワークを使用すると、AEMコンテンツをサポート対象の翻訳ベンダーがシームレスに翻訳できます。 最新の機能強化について説明します。
-feature: マルチサイトマネージャ、言語コピー
+feature: multi-site-manager, language-copy
 topics: localization, authoring, content-architecture
 audience: author, marketer, developer
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -4,12 +4,12 @@ description: コンテンツ転送ツールは、オンプレミスまたはAMS�
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: 移行
+feature: Migration
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
-topic: 移行
+topic: Migration
 role: Architect, Developer
 level: Beginner
 translation-type: tm+mt

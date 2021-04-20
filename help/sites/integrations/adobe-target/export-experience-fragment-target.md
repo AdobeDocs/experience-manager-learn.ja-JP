@@ -1,7 +1,7 @@
 ---
 title: エクスペリエンスフラグメントのAdobe Targetへの書き出し
 description: AEMエクスペリエンスフラグメントをAdobe Targetオファーとして発行および書き出す方法について説明します。
-feature: エクスペリエンスフラグメント
+feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
-topic: 統合
+topic: Integrations
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

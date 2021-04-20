@@ -1,7 +1,7 @@
 ---
 title: Cloud ServiceとしてのAEMのローカル開発環境
 description: Adobe Experience Manager(AEM)ローカル開発環境の概要
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: article
@@ -9,7 +9,7 @@ activity: troubleshoot
 audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

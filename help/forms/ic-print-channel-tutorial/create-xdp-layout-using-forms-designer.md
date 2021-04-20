@@ -4,7 +4,7 @@ seo-title: Formsデザイナーを使用したレイアウトの作成
 description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチパート形式のチュートリアルのパート4です。このパートでは、AEM Formsデザイナを使用して作成したレイアウトファイルを見てみましょう。
 seo-description: これは、印刷チャネル用の最初の対話型通信ドキュメントを作成するためのマルチパート形式のチュートリアルのパート4です。このパートでは、AEM Formsデザイナを使用して作成したレイアウトファイルを見てみましょう。
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,7 +13,7 @@ version: 6.4,6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 kt: 5957
 thumbnail: 37890.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

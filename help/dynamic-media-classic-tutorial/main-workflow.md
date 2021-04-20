@@ -2,12 +2,12 @@
 title: Dynamic Mediaクラシックのメインワークフローとアセットのプレビュー
 description: 作成（およびアップロード）、作成（および公開）、配信の3つの手順を含む、Dynamic Mediaクラシックの主なワークフローについて説明します。 次に、Dynamic Mediaクラシックでのアセットのプレビュー方法を説明します。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

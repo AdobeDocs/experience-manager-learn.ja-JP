@@ -1,7 +1,7 @@
 ---
 title: AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ
 description: カスタムのAEMコンポーネントのコンテンツを使用してAdobeクライアントデータレイヤーをカスタマイズする方法について説明します。 AEMコアコンポーネントが提供するAPIを使用して、データレイヤーを拡張およびカスタマイズする方法について説明します。
-feature: Adobeクライアントデータレイヤー、コアコンポーネント
+feature: Adobe Client Data Layer, Core Component
 topics: integrations
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

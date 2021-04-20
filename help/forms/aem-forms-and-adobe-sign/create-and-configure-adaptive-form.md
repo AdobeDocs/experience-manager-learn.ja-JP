@@ -1,14 +1,14 @@
 ---
 title: アダプティブフォームの作成と設定
 description: アダプティブフォームの作成と設定 次のビデオでは、DoRを自動生成するアダプティブフォームの作成と設定に必要な手順について説明します。 このビデオでは、アダプティブフォームを設定してAEMワークフローをトリガーするために必要な手順についても説明します。
-feature: アダプティブForms、Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38348.jpg
 kt: 6039
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

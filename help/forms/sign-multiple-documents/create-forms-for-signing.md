@@ -1,7 +1,7 @@
 ---
 title: 署名用にFormsを作成
 description: 署名パッケージに含める必要があるフォームを作成します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6893
 thumbnail: 6893.jpg
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

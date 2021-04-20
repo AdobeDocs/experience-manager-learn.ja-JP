@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5913
 thumbnail: 5913-spa-angular.jpg
-feature: SPAエディタ
+feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner

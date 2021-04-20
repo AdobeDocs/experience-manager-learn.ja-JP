@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5912
 thumbnail: 5912-spa-react.jpg
-feature: SPAエディタ
+feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner

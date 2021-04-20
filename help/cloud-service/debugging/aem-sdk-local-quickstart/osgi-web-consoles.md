@@ -1,14 +1,14 @@
 ---
 title: OSGi Webコンソールを使用したAEM SDKのデバッグ
 description: AEM SDKのローカルクイックスタートにはOSGi Webコンソールがあり、このコンソールは、アプリケーションがどのように認識され、AEM内で機能するかを理解するのに役立つ、様々な情報と、ローカルAEMランタイムの内省を提供します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

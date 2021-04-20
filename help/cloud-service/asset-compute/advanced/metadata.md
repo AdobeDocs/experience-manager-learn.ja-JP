@@ -1,7 +1,7 @@
 ---
 title: asset computeメタデータワーカーの開発
 description: asset computeアセット内で最も一般的に使用される色を派生させ、色の名前をAEM内のアセットのメタデータに書き戻す画像メタデータワーカーの作成方法を説明します。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

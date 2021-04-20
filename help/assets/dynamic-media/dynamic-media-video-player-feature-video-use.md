@@ -2,9 +2,9 @@
 title: AEM Dynamic Media でのビデオプレーヤーの使用
 description: AEMDynamic Mediaビデオプレーヤーは、デスクトップクライアント上でアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していたため、flashベースのコンテンツストリーミングに対して積極的になりました。 HLS(AppleのHTTP Live Streamingビデオ配信プロトコル)の導入により、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
 sub-product: dynamic-media
-feature: ビデオプロファイル
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

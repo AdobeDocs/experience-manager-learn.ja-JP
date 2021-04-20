@@ -9,8 +9,8 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
-feature: コアコンポーネント、AEM プロジェクトアーキタイプ
-topic: コンテンツ管理、開発
+feature: Core Components, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

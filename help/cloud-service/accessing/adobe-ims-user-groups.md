@@ -1,7 +1,7 @@
 ---
 title: AdobeIMSユーザーグループおよびAEM
 description:  AdobeIMSユーザーグループは、AEMに公開されるユーザーの論理セットを確立します。AEMユーザーに対する権限を微調整するために利用できます。
-feature: 'ユーザーとグループ '
+feature: Users and Groups
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,7 +9,7 @@ audience: administrator
 doc-type: feature video
 kt: 4999
 thumbnail: 39150.jpg
-topic: 管理、セキュリティ
+topic: Administration, Security
 role: Administrator
 level: Beginner
 translation-type: tm+mt

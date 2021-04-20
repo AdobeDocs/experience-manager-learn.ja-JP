@@ -3,13 +3,13 @@ title: Webチャネルー向けの最初のインタラクティブな通信の�
 seo-title: Webチャネルー向けの最初のインタラクティブな通信の作成
 description: Interactive Communicationsは、AEM Forms6.4で新たに導入されました。このドキュメントでは、Webチャネル用の対話型コミュニケーションを作成するために必要な手順を順を追って説明します。
 seo-description: Interactive Communicationsは、AEM Forms6.4で新たに導入されました。このドキュメントでは、Webチャネル用の対話型コミュニケーションを作成するために必要な手順を順を追って説明します。
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

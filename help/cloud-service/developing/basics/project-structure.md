@@ -4,8 +4,8 @@ description: AEM用のMavenプロジェクトをCloud Serviceとして構築す�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: AEM プロジェクトアーキタイプ
+topic: Development
+feature: AEM Project Archetype
 kt: 6932
 thumbnail: 330557.jpg
 translation-type: tm+mt

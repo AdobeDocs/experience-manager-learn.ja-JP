@@ -4,14 +4,14 @@ seo-title: AEM Formsでの監視フォルダーの使用
 description: AEM Formsの監視フォルダーの設定と使用
 seo-description: AEM Formsの監視フォルダーの設定と使用
 uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: Output サービス
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

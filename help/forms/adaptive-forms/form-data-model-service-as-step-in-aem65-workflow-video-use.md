@@ -3,13 +3,13 @@ title: AEM 6.5ワークフローでの手順としてのForm Data Model Service�
 seo-title: AEM 6.5ワークフローでの手順としてのForm Data Model Serviceの使用
 description: AEM Forms6.5では、AEMワークフローで変数を作成する機能が導入されました。 AEMワークフローの「Invoke Form Data Model Service」を使用するこの新しい機能により、非常に簡単になりました。 次のビデオでは、AEMワークフローのInvoke Form Data Model Serviceの使用に関する手順を説明します。
 seo-description: AEM Forms6.5では、AEMワークフローで変数を作成する機能が導入されました。 AEMワークフローの「Invoke Form Data Model Service」を使用するこの新しい機能により、非常に簡単になりました。 次のビデオでは、AEMワークフローのInvoke Form Data Model Serviceの使用に関する手順を説明します。
-feature: ワークフロー
+feature: Workflow
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

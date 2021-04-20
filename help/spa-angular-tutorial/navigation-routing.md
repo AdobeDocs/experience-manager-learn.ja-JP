@@ -2,7 +2,7 @@
 title: 追加ナビゲーションとルーティング | AEM SPAエディタとAngularの使い始めに
 description: AEMページとSPAエディタSDKを使用して、SPAで複数の表示をサポートする方法を説明します。 動的ナビゲーションはAngularルートを使用して実装され、既存のヘッダーコンポーネントに追加されます。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPA Editor
 topics: development
 doc-type: tutorial
 version: cloud-service

@@ -2,9 +2,9 @@
 title: AEM AssetsDynamic Mediaでのスマートクロップの使用
 description: スマート切り抜きでは、Adobe Senseiを使用して、レスポンシブデザインのために、時間とコストのかかるコンテンツの切り抜きタスクを排除します。
 sub-product: dynamic-media
-feature: スマート切り抜き、画像プロファイル
+feature: Smart Crop, Image Profiles
 version: 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -6,9 +6,9 @@ type: Documentation
 role: Developer
 level: Beginner,Intermediate
 version: 6.3,6.4,6.5
-feature: ドキュメントサービス
+feature: Document Services
 kt: 7071
-topic: 開発
+topic: Development
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt

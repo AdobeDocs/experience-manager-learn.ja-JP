@@ -2,8 +2,8 @@
 title: AEMでワークフローを作成する方法
 description: ワークフローは、Experience Manager上のビジネス・プロセス管理を可能にし、コンテンツの自動処理に加えて、人的な意思決定を必要とするガバナンスやプロセスの促進に使用されます。
 version: 6.4, 6.5, cloud-service
-feature: ワークフロー
-topic: コンテンツ管理
+feature: Workflow
+topic: Content Management
 level: Intermediate
 role: Administrator, Developer
 kt: 657

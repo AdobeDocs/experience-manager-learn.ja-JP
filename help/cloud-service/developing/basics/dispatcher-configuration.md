@@ -4,7 +4,7 @@ description: AEM Dispatcher設定をAdobe Managed Services(AMS)からAEMにCloud
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: 開発、移行
+topic: Development, Migration
 feature: Dispatcher
 kt: 6931
 thumbnail: 330556.jpg

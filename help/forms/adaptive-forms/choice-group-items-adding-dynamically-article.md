@@ -3,13 +3,13 @@ title: 選択グループコンポーネントへの項目の追加
 seo-title: 選択グループコンポーネントへの項目の追加
 description: 選択追加グループコンポーネントの動的な項目
 seo-description: 選択追加グループコンポーネントの動的な項目
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

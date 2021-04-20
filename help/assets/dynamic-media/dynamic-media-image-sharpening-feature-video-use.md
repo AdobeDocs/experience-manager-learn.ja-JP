@@ -2,9 +2,9 @@
 title: AEM Dynamic Media での画像シャープニングの使用
 description: このビデオでは、画像にシャープを適用することが画像の忠実度を維持するうえで重要な理由と、詳細設定を使用して完全な画像を作成する方法について説明します。
 sub-product: dynamic-media
-feature: 画像プロファイル、ビューアプリセット
+feature: Image Profiles, Viewer Presets
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -2,12 +2,12 @@
 title: 切り抜き、調整した画像、ズームターゲット
 description: Dynamic Mediaクラシックのマスター画像では、詳細を表示したりスウォッチを表示したりするために、各画像の切り抜きバージョンを個別に作成することがサポートされています。 Dynamic Mediaクラシックで画像を切り抜き、新しいマスターファイルまたは仮想画像として保存し、仮想調整された画像を保存してマスターアセットの代わりに使用し、画像上でズームターゲットを作成して、強調表示された詳細を表示する方法を説明します。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

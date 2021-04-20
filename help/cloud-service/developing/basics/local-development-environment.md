@@ -4,8 +4,8 @@ description: AEMをCloud ServiceSDKとして使用して、ローカル開発環
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6933
 thumbnail: 330558.jpg
 translation-type: tm+mt

@@ -4,14 +4,14 @@ seo-title: アダプティブフォームの外部サーバーへの送信
 description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
 seo-description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

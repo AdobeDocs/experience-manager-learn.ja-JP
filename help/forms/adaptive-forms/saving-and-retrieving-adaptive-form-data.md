@@ -3,7 +3,7 @@ title: アダプティブフォームデータの保存と取得
 seo-title: アダプティブフォームデータの保存と取得
 description: アダプティブフォームデータを保存し、データベースから取得する。 この機能を使用すると、フォームの入力者はフォームを保存し、後でフォームの入力を続行できます。
 seo-description: アダプティブフォームデータを保存し、データベースから取得する。 この機能を使用すると、フォームの入力者はフォームを保存し、後でフォームの入力を続行できます。
-feature: アダプティブフォーム
+feature: adaptive-forms
 topics: developing
 audience: developer,implementer
 doc-type: article

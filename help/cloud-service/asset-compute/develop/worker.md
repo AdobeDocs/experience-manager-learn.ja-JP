@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーの開発
 description: asset compute作業者は、アセットに対して実行した作業を新しいレンディションの作成のために実行、または調整するカスタム機能を提供する、Asset computeプロジェクトの中核となります。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: AEMでCloud Serviceとして使用するために、Asset computeワーカーをAdobe I/O Runtimeに配置する
 description: 'asset computeプロジェクトとその従業員を含む労働者は、AEMがCloud Serviceとして使用するために、Adobe I/O Runtimeに配備する必要があります。 '
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

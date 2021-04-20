@@ -2,11 +2,11 @@
 title: 処理プロファイル
 description: 処理プロファイルでは、AEMのアセットに対して作成されるレンディションをCloud Serviceとして定義します。
 sub-product: アセット
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 4993
 thumbnail: 35597.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Beginner
 translation-type: tm+mt

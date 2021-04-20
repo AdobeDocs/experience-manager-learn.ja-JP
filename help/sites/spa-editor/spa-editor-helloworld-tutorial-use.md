@@ -2,7 +2,7 @@
 title: AEM SPAエディタを使用した開発 — Hello Worldチュートリアル
 description: AEM SPA Editorでは、シングルページアプリケーションまたはSPAのコンテキスト内編集がサポートされています。 このチュートリアルでは、AEM SPAエディタJS SDKで使用するSPA開発の概要を説明します。 このチュートリアルでは、カスタムHello Worldコンポーネントを追加してWe.Retailジャーナルアプリを拡張します。 ユーザーは、ReactフレームワークまたはAngularフレームワークを使用して、このチュートリアルを完了できます。
 sub-product: サイト、content services
-feature: スパエディタ
+feature: Spa Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial

@@ -4,13 +4,13 @@ seo-title: アダプティブフォーム送信時の電子メールの送信
 description: 電子メールの送信コンポーネントを使用して、アダプティブフォーム送信時に確認電子メールを送信する
 seo-description: 電子メールの送信コンポーネントを使用して、アダプティブフォーム送信時に確認電子メールを送信する
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring, integrations
 audience: developer
 doc-type: article
 activity: use
 discoiquuid: 1187357f-2f36-4a04-b708-44bb9c174fb5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

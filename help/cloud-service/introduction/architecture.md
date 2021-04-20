@@ -4,7 +4,7 @@ description: 基盤となるアーキテクチャとAEMの重要な部分をClou
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: アーキテクチャ
+topic: Architecture
 kt: 6919
 thumbnail: 330542.jpg
 translation-type: tm+mt

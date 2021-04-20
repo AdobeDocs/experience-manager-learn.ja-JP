@@ -5,13 +5,13 @@ description: レジューサ関数は、グラフに表示される集計値や�
 seo-description: レジューサ関数は、グラフに表示される集計値やグループ値に使用します。次のビデオでは、レジューサ関数の使用に関する手順について説明します。
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

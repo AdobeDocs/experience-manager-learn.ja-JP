@@ -4,7 +4,7 @@ description: 'AEMの履歴と、オンプレミスAEM、Adobe Managed Services A
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: アーキテクチャ
+topic: Architecture
 kt: 6920
 thumbnail: 330543.jpg
 translation-type: tm+mt

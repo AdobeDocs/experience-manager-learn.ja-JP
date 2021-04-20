@@ -1,11 +1,11 @@
 ---
 title: AEM Assetsの画像用のカスタムスマートタグ
 description: AEM Assetsのスマートタグをトレーニングして、アセットにカスタムキーワードを適用する方法について説明します。
-feature: スマートタグ
+feature: Smart Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
 translation-type: tm+mt

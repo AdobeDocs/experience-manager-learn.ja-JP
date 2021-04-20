@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張用のアカウントとサービスの設定
 description: asset computeワーカーの開発では、AEMを含むアカウントやサービス(Cloud Service、AdobeプロジェクトのFirefly、MicrosoftまたはAmazonが提供するクラウドストレージ)にアクセスする必要があります。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

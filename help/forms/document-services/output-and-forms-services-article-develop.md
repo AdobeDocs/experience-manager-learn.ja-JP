@@ -4,14 +4,14 @@ seo-title: AEM Formsの産出・Forms事業を活用した開発
 description: AEM FormsでのOutputとFormsサービスAPIの使用
 seo-description: AEM FormsでのOutputとFormsサービスAPIの使用
 uuid: be018eb5-dbe7-4101-a1a9-bee11ac97273
-feature: Output サービス
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 57f478a9-8495-469e-8a06-ce1251172fda
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

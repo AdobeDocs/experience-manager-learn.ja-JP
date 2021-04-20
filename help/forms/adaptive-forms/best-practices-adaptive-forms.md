@@ -3,13 +3,13 @@ title: アダプティブフォームの作成時に従う命名規則とベス�
 seo-title: アダプティブフォームの作成時に従う命名規則とベストプラクティス
 description: アダプティブフォームの作成時に従う命名規則とベストプラクティス
 seo-description: アダプティブフォームの作成時に従う命名規則とベストプラクティス
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: best-practices
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

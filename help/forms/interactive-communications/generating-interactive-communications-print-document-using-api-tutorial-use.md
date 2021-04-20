@@ -3,13 +3,13 @@ title: 監視フォルダーメカニズムを使用した印刷チャネル用�
 seo-title: 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
 description: 監視フォルダーを使用した印刷チャネルドキュメントの生成
 seo-description: 監視フォルダーを使用した印刷チャネルドキュメントの生成
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

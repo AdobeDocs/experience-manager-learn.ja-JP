@@ -3,13 +3,13 @@ title: AEM Formsとマーケット（パート4）
 seo-title: AEM Formsとマーケット（パート4）
 description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
 seo-description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
-feature: アダプティブForms、フォームデータモデル
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

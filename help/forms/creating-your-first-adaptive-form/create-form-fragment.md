@@ -1,14 +1,14 @@
 ---
 title: フォームフラグメントの作成
 description: AEM formsは、パネルやフィールドのグループのようなフォームセグメントを1回だけ作成し、アダプティブフォーム間で再利用する便利なメカニズムを備えています。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

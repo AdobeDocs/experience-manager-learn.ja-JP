@@ -6,7 +6,7 @@ topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
-topic: アーキテクチャ
+topic: Architecture
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -3,7 +3,7 @@ title: マルチサイトマネージャとAEM Sitesの使用
 seo-title: Multi Site Manager Touch UIインターフェイスとAdobe Experience Managerの使用
 description: Live Copy OverviewとBluePrint Configuration Managerは、Multi Site Managerを操作するためのタッチUI対応インターフェイスです。
 seo-description: Live Copy OverviewとBluePrint Configuration Managerは、Multi Site ManagerとAdobe Experience Managerを連携させるためのタッチUI対応インターフェイスです。
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

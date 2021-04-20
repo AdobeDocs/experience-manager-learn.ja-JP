@@ -8,7 +8,7 @@ activity: understand
 version: cloud-service
 kt: 4260
 thumbnail: 32034.jpg
-topic: アーキテクチャ
+topic: Architecture
 role: Architect, Developer
 level: Beginner
 translation-type: tm+mt

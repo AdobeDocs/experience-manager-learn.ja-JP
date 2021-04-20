@@ -5,7 +5,7 @@ kt: 2551
 sub-product: アセット
 feature: Experience Manager Desktop App
 version: 6.5, 6.4, 6.3
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

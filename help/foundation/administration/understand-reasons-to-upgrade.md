@@ -7,7 +7,7 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
-topic: アップグレード
+topic: Upgrade
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームの作成
 description: フォームデータモデルの事前入力サービスを使用するアダプティブフォームの作成および設定
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

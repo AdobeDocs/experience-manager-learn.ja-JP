@@ -1,7 +1,7 @@
 ---
 title: データソースの設定
 description: MySQLデータベースを指すDataSourceを作成します
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6541
 thumbnail: 6541.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

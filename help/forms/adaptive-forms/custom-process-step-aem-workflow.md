@@ -3,13 +3,13 @@ title: カスタムプロセス手順の実装
 seo-title: カスタムプロセス手順の実装
 description: カスタムプロセス手順を使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
 seo-description: カスタムプロセス手順を使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
-feature: ワークフロー
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

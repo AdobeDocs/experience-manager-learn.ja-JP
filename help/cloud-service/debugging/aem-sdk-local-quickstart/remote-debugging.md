@@ -1,14 +1,14 @@
 ---
 title: AEM SDKのリモートデバッグ
 description: AEM SDKのローカルクイックスタートでは、IDEからのリモートJavaデバッグが可能で、AEMでのライブコード実行を順を追って実行フローを正確に把握できます。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

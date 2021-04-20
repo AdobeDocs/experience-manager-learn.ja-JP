@@ -1,8 +1,8 @@
 ---
 title: AEM SitesでのTimeWarpの使用
 description: TimewarpはAdobe Experience Manager Sitesの機能で、過去の特定の時刻にページの状態を簡単に確認する方法を作成者に提供します。
-topic: コンテンツ管理
-feature: オーサリング
+topic: Content Management
+feature: Authoring
 role: Business Practitioner
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service

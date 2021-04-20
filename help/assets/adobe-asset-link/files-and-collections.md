@@ -5,7 +5,7 @@ sub-product: アセット
 feature: Adobe Asset Link
 version: 6.4, 6.5, cloud-service
 thumbnail: 33884.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

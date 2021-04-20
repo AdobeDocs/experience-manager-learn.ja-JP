@@ -4,14 +4,14 @@ seo-title: 'JSON Webトークンとアクセストークンの生成 '
 description: この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
 seo-description: この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: アダプティブForms、フォームデータモデル
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

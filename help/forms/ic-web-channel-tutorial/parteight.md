@@ -4,14 +4,14 @@ seo-title: 最初の対話型通信ドキュメント用の折れ線グラフの
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、アカウントの進行状況パネルに折れ線グラフを追加します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート8です。 この部分では、アカウントの進行状況パネルに折れ線グラフを追加します。
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,13 +1,13 @@
 ---
 title: AEM Sitesのページ差向け開発
 description: このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを設定する方法を示します。
-feature: オーサリング
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

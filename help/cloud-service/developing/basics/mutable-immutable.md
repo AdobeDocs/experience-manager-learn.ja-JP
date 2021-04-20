@@ -4,8 +4,8 @@ description: 'リポジトリとパッケージで可変コンテンツと不変
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6930
 thumbnail: 330555.jpg
 translation-type: tm+mt

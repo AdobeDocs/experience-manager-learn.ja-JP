@@ -1,13 +1,13 @@
 ---
 title: ナビゲーション
 description: AEM Assetsナビゲーションの基本を学びましょう。
-feature: アセット管理
+feature: Asset Management
 role: Business Practitioner
 level: Beginner
 version: cloud-service
 kt: 4305
 thumbnail: 32046.jpg
-topic: コンテンツ管理
+topic: Content Management
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

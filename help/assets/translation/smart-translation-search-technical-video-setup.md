@@ -2,8 +2,8 @@
 title: AEM Assetsでのスマート翻訳検索の設定
 description: スマート翻訳検索では、英語以外の検索用語を使用して英語のコンテンツに解決できます。 スマート翻訳検索用のAEMを設定するには、Apache Oak Search Machine Translation OSGiバンドルと、該当するフリーおよびオープンソースのApache Joshua言語パック（翻訳ルールを含む）をインストールし、設定する必要があります。
 version: 6.3, 6.4, 6.5
-feature: 検索
-topic: コンテンツ管理
+feature: Search
+topic: Content Management
 role: Developer
 level: Beginner
 translation-type: tm+mt

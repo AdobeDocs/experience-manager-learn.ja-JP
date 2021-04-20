@@ -2,7 +2,7 @@
 title: アダプティブフォームのトリガーAEMワークフローへの設定
 description: フォーム送信時にAEMワークフローをトリガーする場合のペイロードオプションの設定
 sub-product: フォーム[ふぉーむ]
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,7 +10,7 @@ activity: setup
 version: 6.4,6.5
 kt: 5407
 thumbnail: 40258.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

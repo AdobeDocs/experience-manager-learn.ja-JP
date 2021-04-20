@@ -3,7 +3,7 @@ title: AEM Formsとのデータ統合の設定
 seo-title: AEM Formsとのデータ統合の設定
 description: JDBCデータソースへのデータ接続の設定
 seo-description: JDBCデータソースへのデータ接続の設定
-feature: アダプティブForms，ワークフロー
+feature: Adaptive Forms,Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,7 +11,7 @@ activity: setup
 version: 6.4,6.5
 uuid: 267de794-4462-4421-adee-d40a469fabb3
 discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

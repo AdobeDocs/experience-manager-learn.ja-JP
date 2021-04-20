@@ -2,11 +2,11 @@
 title: Dynamic Mediaクラシックデスクトップアプリケーションの使用
 description: Adobeでは、ブラウザーのAdobeFlashテクノロジーに依存しなくなった、Dynamic Mediaクラシックユーザー向けのデスクトップアプリケーションが導入されています。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -1,14 +1,14 @@
 ---
 title: はじめに
 description: 複数フォームへの署名の使用例のデモビデオ
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 thumbnail: 330165.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

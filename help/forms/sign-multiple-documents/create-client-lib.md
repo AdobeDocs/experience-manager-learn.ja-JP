@@ -1,7 +1,7 @@
 ---
 title: クライアントライブラリの作成
 description: 署名する次のフォームを取得するクライアントライブラリコード
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

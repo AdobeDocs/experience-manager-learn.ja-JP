@@ -5,13 +5,13 @@ description: これは、最初の対話型通信ドキュメントを作成す�
 seo-description: これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルの6部目です。 ここでは、Webチャネル用のInteractive Communicationを作成します。
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

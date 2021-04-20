@@ -3,7 +3,7 @@ title: AEM Sitesでのページのオーサリング
 seo-title: 次のビデオでは、サイトエディタのUIを使用してAdobe Experience Manager Sitesで新しいページを作成する方法に焦点を当てています。
 description: 次のビデオでは、サイトエディタのUIを使用してAdobe Experience Manager Sitesで新しいページを作成する方法に焦点を当てています。
 seo-description: 次のビデオでは、サイトエディタのUIを使用してAdobe Experience Manager Sitesで新しいページを作成する方法に焦点を当てています。
-feature: ページエディター，編集可能なテンプレート
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -3,13 +3,13 @@ title: ワークフローの手順としてのForm Data Modelサービスでの�
 seo-title: ワークフローの手順としてのForm Data Modelサービスでのエラーメッセージの取得
 description: AEM Forms6.5.1以降では、AEMワークフローのステップとして「フォームデータモデルサービスの呼び出し」を使用した場合に生成されるエラーメッセージを取り込めるようになりました。 ワークフロー.
 seo-description: AEM Forms6.5.1以降では、AEMワークフローのステップとして「フォームデータモデルサービスの呼び出し」を使用した場合に生成されるエラーメッセージを取り込めるようになりました。 ワークフロー.
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.5.1,6.5.2
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

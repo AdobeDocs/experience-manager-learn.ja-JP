@@ -1,14 +1,14 @@
 ---
 title: automated forms conversionサービス
 description: automated forms conversionサービス この記事では、AEM管理者がAutomated forms conversionサービスを設定して、PDF formsのアダプティブフォームへの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39493.jpg
 kt: 6114
-topic: 開発
+topic: Development
 role: Administrator
 level: Beginner
 translation-type: tm+mt

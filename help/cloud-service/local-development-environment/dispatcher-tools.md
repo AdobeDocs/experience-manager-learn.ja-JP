@@ -2,7 +2,7 @@
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
 description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
-feature: ディスパッチャー、開発者ツール
+feature: Dispatcher, Developer Tools
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,7 +10,7 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,9 +1,9 @@
 ---
 title: AEM Assetsの注釈のカスタマイズ
 description: AEM Assets形式と、PDFに出力する際のスタイルは、AEM開発者が設定できます。
-feature: コラボレーション
+feature: Collaboration
 version: 6.3, 6.4, 6.5
-topic: コラボレーション
+topic: Collaboration
 role: Developer
 level: Intermediate
 translation-type: tm+mt

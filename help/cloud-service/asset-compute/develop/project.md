@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用のAsset computeプロジェクトの作成
 description: asset computeプロジェクトは、Adobe I/OCLIを使用して生成されるNode.jsプロジェクトで、特定の構造に従って、Adobe I/O Runtimeに展開し、AEMとCloud Serviceとして統合できます。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

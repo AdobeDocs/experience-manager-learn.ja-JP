@@ -1,7 +1,7 @@
 ---
 title: リクエストパラメーターの取得
 description: フォームデータモデルの事前入力サービスからリクエストパラメーターにアクセスする
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 5815
 thumbnail: kt-5815.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

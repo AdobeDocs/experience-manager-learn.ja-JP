@@ -1,13 +1,13 @@
 ---
 title: MySQLデータベースからのフォームデータの格納と取得
 description: フォームデータの格納と取得に関する手順について説明するマルチパートチュートリアル
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

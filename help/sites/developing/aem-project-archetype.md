@@ -1,7 +1,7 @@
 ---
 title: AEM プロジェクトアーキタイプ
 description: 'AEM プロジェクトのアーキタイプは、最小限のベストプラクティスベースの Adobe Experience Manager プロジェクトを独自の AEM プロジェクトの起点として作成します。 '
-feature: AEM プロジェクトアーキタイプ
+feature: AEM Project Archetype
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,7 +9,7 @@ activity: understand
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4675
 thumbnail: 32550.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

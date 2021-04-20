@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用の環境変数の設定
 description: 環境変数は、ローカル開発用に.envファイルに保持され、Adobe I/O資格情報とローカル開発に必要なクラウドストレージ資格情報を提供するために使用されます。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

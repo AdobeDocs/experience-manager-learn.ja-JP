@@ -1,14 +1,14 @@
 ---
 title: OCRデータ抽出
 description: 政府発行のドキュメントからデータを抽出し、フォームに入力します。
-feature: バーコードForms
+feature: Barcoded Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

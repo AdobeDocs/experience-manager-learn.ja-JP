@@ -7,7 +7,7 @@ topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
-topic: セキュリティ
+topic: Security
 role: Developer
 level: Intermediate
 translation-type: tm+mt

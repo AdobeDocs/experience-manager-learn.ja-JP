@@ -2,9 +2,9 @@
 title: Adobe AnalyticsとAdobeの起動でのDynamic Mediaビューアの使用
 description: Dynamic Media ビューア 5.13 のリリースと共に、Adobe Launch の Dynamic Media ビューア拡張機能を使用すると、Dynamic Media、Adobe Analytics、Adobe Launch のユーザーは、Adobe Launch 設定で Dynamic Media ビューア固有のイベントとデータを使用できます。
 sub-product: Dynamic Media
-feature: アセットインサイト
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

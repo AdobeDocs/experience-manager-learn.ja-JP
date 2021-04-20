@@ -1,14 +1,14 @@
 ---
 title: Adobe Signクラウド設定の作成
 description: AEMのクラウドサービス設定を使用すると、AEMと他のクラウドアプリケーションの間で統合を作成できます。 次のビデオでは、AEMとAdobe Signを統合するクラウドサービス設定を作成するために必要な手順について説明します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38179.jpg
 kt: 6033
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

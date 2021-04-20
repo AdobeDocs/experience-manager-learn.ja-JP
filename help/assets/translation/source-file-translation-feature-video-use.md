@@ -2,7 +2,7 @@
 title: ソースファイル変換のAEM Assetsでの使用
 description: Adobe Experience Manager(AEM)アセットを使用すると、共通の属性を共有するアセットを識別し、新しい関連アセット機能を使用して、アセットを関連としてマークできます。 また、アセット間のソース/派生関係をユーザーが定義できるので、ユーザーはアセットの接触チャネルを簡単に特定できます。 派生アセットに対して翻訳ワークフローを実行すると、ソースファイルが参照するアセットを取得して変換に含めるので、マルチサイトの管理作業を削減できます。
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

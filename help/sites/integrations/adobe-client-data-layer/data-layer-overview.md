@@ -1,7 +1,7 @@
 ---
 title: AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用
 description: Adobeクライアントデータレイヤーでは、Webページ上での訪問者エクスペリエンスに関するデータを収集して保存し、そのデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
-feature: コア成分
+feature: core-component
 topics: integrations
 audience: developer
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

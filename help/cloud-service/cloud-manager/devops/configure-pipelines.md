@@ -4,8 +4,8 @@ description: AEMでパイプラインを設定し、様々なタイプのパイ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6916
 thumbnail: 330539.jpg
 translation-type: tm+mt

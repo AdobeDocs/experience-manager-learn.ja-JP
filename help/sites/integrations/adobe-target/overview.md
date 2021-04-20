@@ -1,7 +1,7 @@
 ---
 title: AEMとAdobe Targetの概要
 description: Adobe Experience ManagerをCloud ServiceとAdobe Targetとして使用し、パーソナライズされたエクスペリエンスを作成し、配信する方法を説明します。
-feature: エクスペリエンスフラグメント、コアコンポーネント、Adobeクライアントデータレイヤー
+feature: Experience Fragments, Core Components, Adobe Client Data Layer
 topics: integrations, personalization, administration, development
 audience: all
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: cloud-service
 kt: 6043
 thumbnail: 41241.jpg
-topic: 統合
+topic: Integrations
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

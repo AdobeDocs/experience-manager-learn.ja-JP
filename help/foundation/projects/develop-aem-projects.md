@@ -2,12 +2,12 @@
 title: AEMでのプロジェクトの開発
 description: AEMプロジェクト用の開発方法を示す開発チュートリアル。  このチュートリアルでは、コンテンツオーサリングのワークフローとタスクを管理するために、AEM内で新しいプロジェクトを作成するのに使用できるカスタムプロジェクトテンプレートを作成します。
 version: 6.3, 6.4, 6.5
-feature: プロジェクト、ワークフロー
+feature: Projects, Workflow
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,10 +1,10 @@
 ---
 title: AdobeIMS製品プロファイルおよびAEM
 description: AdobeIMS製品プロファイルは、ユーザーがAEM Authorサービスにログインする権利をユーザーに与え、どの製品プロファイルに属しているかに応じて、アクセスの基準を提供します。
-feature: 'ユーザーとグループ '
+feature: Users and Groups
 kt: 5000
 thumbnail: 39156.jpg
-topic: 管理、セキュリティ
+topic: Administration, Security
 role: Administrator
 level: Beginner
 translation-type: tm+mt

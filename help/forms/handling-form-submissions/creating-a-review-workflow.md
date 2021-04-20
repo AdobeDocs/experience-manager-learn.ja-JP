@@ -2,7 +2,7 @@
 title: 送信データをレビューするワークフローの作成
 description: AEM Formsワークフローコンポーネントを使用して、送信されたデータをレビューするAEMワークフローモデルを作成します。
 sub-product: フォーム[ふぉーむ]
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,7 +10,7 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

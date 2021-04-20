@@ -3,8 +3,8 @@ title: エクスペリエンスフラグメント構築ブロックの使用方�
 description: 構築ブロックは、エクスペリエンスフラグメントのサブ機能で、エクスペリエンスフラグメントの様々なバリエーションにわたって作成したコンポーネントを再利用できます。
 sub-product: サイト、content services
 version: cloud-service
-feature: エクスペリエンスフラグメント
-topic: コンテンツ管理
+feature: Experience Fragments
+topic: Content Management
 level: Beginner, Intermediate
 role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video

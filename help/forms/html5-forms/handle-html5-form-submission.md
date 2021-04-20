@@ -1,7 +1,7 @@
 ---
 title: HTML5フォーム送信の処理
 description: HTML5フォーム送信ハンドラーの作成
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 5269
 thumbnail: kt-5269.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

@@ -3,7 +3,7 @@ title: APIを使用したAEM Formsとのレコードのドキュメントの生�
 seo-title: APIを使用したAEM Formsとのレコードのドキュメントの生成
 description: レコードのドキュメント(DOR)をプログラムで生成する
 seo-description: APIを使用したAEM Formsとのレコードのドキュメントの生成
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -11,7 +11,7 @@ activity: implement
 version: 6.4,6.5
 uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
 discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

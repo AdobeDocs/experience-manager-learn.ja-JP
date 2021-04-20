@@ -4,12 +4,12 @@ description: AEMの一括インポートツールをCloud Serviceとして使用
 version: cloud-service
 doc-type: technical-video
 topics: Migration
-feature: 移行
+feature: Migration
 activity: develop
 audience: developer
 kt: 6729
 thumbnail: 329680.jpg
-topic: 移行
+topic: Migration
 role: Architect, Developer
 level: Beginner
 translation-type: tm+mt

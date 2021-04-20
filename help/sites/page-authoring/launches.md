@@ -1,8 +1,8 @@
 ---
 title: AEM Sitesでの起動回数の使用方法
 description: AEM Sitesでの起動により、将来のリリースで使用できるコンテンツの作成、作成およびレビューを行うことができます。
-topic: コンテンツ管理
-feature: ローンチ
+topic: Content Management
+feature: Launches
 level: Intermediate, Experienced
 role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service

@@ -1,13 +1,13 @@
 ---
 title: 1つのデータファイルからの複数のPDFの生成
 seo-title: 1つのデータファイルからの複数のPDFの生成
-feature: Output サービス
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

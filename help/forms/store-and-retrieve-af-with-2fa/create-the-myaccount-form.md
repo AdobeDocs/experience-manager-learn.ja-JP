@@ -1,7 +1,7 @@
 ---
 title: MyAccountFormの作成
 description: 申し込みIDと電話番号の検証が成功した場合に、部分的に記入済みのフォームを取得するためのmyaccountフォームを作成します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6599
 thumbnail: 6599.jpg
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

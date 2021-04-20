@@ -1,7 +1,7 @@
 ---
 title: サーブレットの作成
 description: サーブレットを作成し、POST要求を処理してフォームデータを保存します
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

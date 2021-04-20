@@ -2,12 +2,12 @@
 title: 画像、スウォッチ、スピン、混在メディアセット
 description: Dynamic Mediaクラシックの最も役に立つ強力な機能の1つは、画像、スウォッチ、スピン、混在メディアセットなどのリッチメディアセットの作成をサポートしている点です。 各リッチメディアセットの概要と、各タイプを作成する方法をDynamic Mediaクラシックで説明します。 次に、アップロード時にリッチメディアセットを作成するプロセスを自動化するバッチセットプリセットについて詳しく説明します。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック、画像セット、メディアセットの混在、スピンセット
+feature: Dynamic Media Classic, Image Sets, Mix Media Sets, Spin Sets
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

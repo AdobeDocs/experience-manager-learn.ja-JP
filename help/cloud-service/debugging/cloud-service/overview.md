@@ -1,14 +1,14 @@
 ---
 title: Cloud ServiceとしてのAEMのデバッグ
 description: セルフサービスで拡張性の高いクラウドインフラストラクチャに基づき、AEM開発者は、AEMの様々なファセットをCloud Serviceとして理解し、デバッグする方法を理解し、構築とデプロイから、実行中のAEMアプリケーションの詳細を入手する必要があります。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

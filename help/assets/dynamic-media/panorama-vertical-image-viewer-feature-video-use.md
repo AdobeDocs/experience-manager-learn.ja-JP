@@ -2,9 +2,9 @@
 title: AEM AssetsDynamic Mediaとのパノラマ&垂直画像ビューアの使用
 description: AEM 6.4でのDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアでは、特別な開発を行うことなく、魅力的で没入型のルーム、プロパティ、場所、または景観を楽しめます。
 sub-product: dynamic-media
-feature: ビデオプロファイル、ビデオプロファイル、360 VRビデオ
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

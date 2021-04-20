@@ -4,8 +4,8 @@ description: 'AEMアプリケーションのRepository Structureパッケージ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: AEM プロジェクトアーキタイプ
+topic: Development
+feature: AEM Project Archetype
 kt: 6928
 thumbnail: 330550.jpg
 translation-type: tm+mt

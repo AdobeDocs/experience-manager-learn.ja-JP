@@ -4,14 +4,14 @@ seo-title: AEMプロジェクトと受信トレイでカレンダー表示を使
 description: 'AEMカレンダー表示は、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュールを容易にします。 カレンダー表示を使用すると、現在進行中、予定中、期限切れ、期限切れのプロジェクトやタスクを全体的に表示できます。 '
 seo-description: AEMカレンダー表示は、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュールを容易にします。 カレンダー表示を使用すると、現在進行中、予定中、期限切れ、期限切れのプロジェクトやタスクを全体的に表示できます。
 version: 6.3, 6.4, 6.5
-feature: ワークフロー、プロジェクト
+feature: Workflow, Projects
 topics: governance, collaboration
 activity: use
 audience: author, analyst
 doc-type: feature video
 uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
 discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
-topic: コラボレーション
+topic: Collaboration
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

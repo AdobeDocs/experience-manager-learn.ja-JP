@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーのテスト
 description: asset computeプロジェクトは、Asset computeワーカーのテストを容易に作成し、実行するためのパターンを定義する。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

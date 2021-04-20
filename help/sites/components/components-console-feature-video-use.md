@@ -6,8 +6,8 @@ audience: all
 doc-type: feature video
 version: 6.3, 6.4, 6.5
 activity: use
-feature: コアコンポーネント
-topic: コンテンツ管理
+feature: Core Components
+topic: Content Management
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

@@ -2,13 +2,13 @@
 title: AEMエクスペリエンスフラグメントを使用したソーシャル投稿の設定
 description: エクスペリエンスフラグメントを使用すると、マーケターはAEMで作成したエクスペリエンスをソーシャルメディアプラットフォームに投稿できます。 以下のビデオでは、エクスペリエンスフラグメントをFacebookとPinterestに公開するために必要な設定と設定について詳しく説明しています。
 sub-product: サイト、content services
-feature: エクスペリエンスフラグメント
+feature: Experience Fragments
 topics: integrations, content-delivery
 audience: administrator, implementer, developer
 doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Administrator, Developer
 level: Intermediate
 translation-type: tm+mt

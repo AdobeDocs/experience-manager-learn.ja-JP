@@ -4,14 +4,14 @@ seo-title: ワークフローのステップとしてのForm Data Modelサービ
 description: AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Modelを使用できるようになりました。 次のビデオでは、AEMワークフローでフォームデータモデルを設定する手順に必要な手順について説明します。
 seo-description: AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Modelを使用できるようになりました。 次のビデオでは、AEMワークフローでフォームデータモデルを設定する手順に必要な手順について説明します。
 uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

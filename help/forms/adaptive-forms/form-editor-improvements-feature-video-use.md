@@ -3,7 +3,7 @@ title: AEM Formsでのフォームエディターの機能強化
 seo-title: AEM Formsでのフォームエディターの機能強化
 description: AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリング体験を簡略化するために、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、マーケティングに要する時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
 seo-description: AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリング体験を簡略化するために、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、マーケティングに要する時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -11,7 +11,7 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

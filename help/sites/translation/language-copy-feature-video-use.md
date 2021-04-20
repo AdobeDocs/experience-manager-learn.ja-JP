@@ -1,12 +1,12 @@
 ---
 title: AEM Sitesとの言語コピーの使用
-feature: 言語コピー
+feature: Language Copy
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -3,13 +3,13 @@ title: 対話型通信ドキュメントの配信 — ウェブチャネルAEM F
 seo-title: 対話型通信ドキュメントの配信 — ウェブチャネルAEM Forms
 description: 電子メール内のリンクを介したWebチャネルドキュメントの配信
 seo-description: 電子メール内のリンクを介したWebチャネルドキュメントの配信
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

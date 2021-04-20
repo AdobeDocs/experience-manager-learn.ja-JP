@@ -4,8 +4,8 @@ description: AEM Cloud Managerからのレポート結果の確認と修正
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6917
 thumbnail: 330540.jpg
 translation-type: tm+mt

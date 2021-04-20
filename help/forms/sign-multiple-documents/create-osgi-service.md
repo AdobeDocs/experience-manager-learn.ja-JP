@@ -1,7 +1,7 @@
 ---
 title: OSGiサービスの作成
 description: 署名するフォームを保存するOSGiサービスの作成
-feature: ワークフロー
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

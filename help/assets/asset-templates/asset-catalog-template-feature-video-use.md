@@ -2,7 +2,7 @@
 title: AEMコマースおよびInDesign Serverでのアセットカタログの使用
 description: AEM 6.4のカタログ機能が強化され、AEMアセットテンプレートとInDesign Serverを使用してカタログページを作成できるようになりました。  ユーザは、InDesignテンプレートを使用してカタログページを作成し、商品のプロパティを編集可能なフィールドにマップできます。編集可能なフィールドは、後で様々な商品用に類似したページを作成する場合に使用します。
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

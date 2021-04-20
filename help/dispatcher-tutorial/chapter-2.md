@@ -2,7 +2,7 @@
 title: 「第2章 — ディスパッチャーのインフラストラクチャ」
 description: 発行とディスパッチャーのトポロジを理解します。 最も一般的なトポロジと設定について説明します。
 feature: Dispatcher
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Beginner
 translation-type: tm+mt

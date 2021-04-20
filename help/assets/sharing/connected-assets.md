@@ -3,7 +3,7 @@ title: 接続されたアセットのAEM Sitesでの使用
 description: 「接続されたアセット」機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされるデジタルアセットをシームレスに共有できます。
 feature: Connected Assets
 version: 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
 translation-type: tm+mt

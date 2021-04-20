@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

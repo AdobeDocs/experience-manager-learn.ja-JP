@@ -4,7 +4,7 @@ seo-title: 関数とコードエディターの使用
 description: 関数とコードエディターを使用したビジネスルールの作成
 seo-description: 関数とコードエディターを使用したビジネスルールの作成
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,7 +13,7 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: Adobe Analyticsでクリックされたコンポーネントを追跡
 description: イベント主導型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launchのルールを使用して、これらのイベントをリッスンし、リンクトラッキングビーコンと共にデータをAdobe Analyticsに送信する方法について説明します。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

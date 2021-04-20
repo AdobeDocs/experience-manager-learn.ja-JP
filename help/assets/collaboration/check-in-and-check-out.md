@@ -2,11 +2,11 @@
 title: チェックインとチェックアウト
 description: アセットに対するマルチユーザーコラボレーションを容易にするAEMのチェックインおよびチェックアウト機能の使用方法を説明します。
 sub-product: アセット
-feature: アセット管理
+feature: Asset Management
 version: cloud-service
 kt: 4542
 thumbnail: 32048.jpg
-topic: コラボレーション
+topic: Collaboration
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

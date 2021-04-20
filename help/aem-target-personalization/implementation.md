@@ -3,8 +3,8 @@ title: Adobe Experience ManagerとAdobe Targetの統合
 seo-title: パーソナライズされたコンテンツを配信するための、様々な方法でAdobe Experience Manager(AEM)とAdobe Targetを統合する記事。
 description: 様々なシナリオでのAdobe TargetとのAdobe Experience Managerの設定方法を取り上げた記事。
 seo-description: 様々なシナリオでのAdobe TargetとのAdobe Experience Managerの設定方法を取り上げた記事。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
 translation-type: tm+mt

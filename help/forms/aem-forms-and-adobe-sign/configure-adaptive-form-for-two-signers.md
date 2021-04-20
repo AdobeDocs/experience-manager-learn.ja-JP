@@ -1,14 +1,14 @@
 ---
 title: 2人の署名者とのレンタル契約
 description: 2人の署名者とのレンタル契約。 このビデオでは、2人の署名者を含むアダプティブフォームを設定するために必要な様々な手順を説明しています。
-feature: アダプティブForms、Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39294.jpg
 kt: 6071
-topic: 開発
+topic: Development
 role: Administrator
 level: Beginner
 translation-type: tm+mt

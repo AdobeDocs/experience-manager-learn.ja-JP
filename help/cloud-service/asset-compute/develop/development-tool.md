@@ -1,7 +1,7 @@
 ---
 title: asset compute開発ツール
 description: asset compute開発ツールは、Adobe I/O RuntimeのAsset computeリソースに対するAEM SDKのコンテキストを除き、開発者がローカルでAsset Computer Workerを設定および実行できるローカルWebハーネスです。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

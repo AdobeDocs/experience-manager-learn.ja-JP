@@ -2,13 +2,13 @@
 title: AEMでの認証のサポートについて
 description: 'AEMがサポートする認証（および時々は認証）メカニズムに統合された表示。 '
 version: 6.3, 6.4, 6.5
-feature: 'ユーザーとグループ '
+feature: Users and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Experienced
 translation-type: tm+mt

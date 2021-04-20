@@ -3,14 +3,14 @@ title: 'AEMアダプティブFormsでの自動テストの使用 '
 seo-title: 'AEMアダプティブFormsでの自動テストの使用 '
 description: Calvin SDKを使用したアダプティブFormsの自動テスト
 seo-description: Calvin SDKを使用したアダプティブFormsの自動テスト
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

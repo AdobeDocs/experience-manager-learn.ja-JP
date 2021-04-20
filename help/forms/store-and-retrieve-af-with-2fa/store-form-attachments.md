@@ -1,7 +1,7 @@
 ---
 title: フォームの添付ファイルの保存
 description: フォームの添付ファイルを抽出し、CRXリポジトリの新しい場所に保存します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6537
 thumbnail: 6537.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

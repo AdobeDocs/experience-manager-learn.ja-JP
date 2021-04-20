@@ -3,8 +3,8 @@ title: Adobe Targetを使用したパーソナライゼーション
 seo-title: Adobe Targetを使用したパーソナライゼーション
 description: Adobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
 seo-description: Adobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
 translation-type: tm+mt

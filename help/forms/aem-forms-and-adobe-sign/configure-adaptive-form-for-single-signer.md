@@ -1,14 +1,14 @@
 ---
 title: 単一署名者を含むアダプティブフォーム
 description: 単一の署名者を含むアダプティブフォーム このビデオでは、単一の署名者を使用してアダプティブフォームを設定するために必要な様々な手順を説明しています。
-feature: アダプティブForms、Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
-topic: 開発
+topic: Development
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

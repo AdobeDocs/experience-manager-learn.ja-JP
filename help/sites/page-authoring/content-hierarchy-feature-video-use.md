@@ -3,7 +3,7 @@ title: AEM Sitesコンテンツ階層の概要
 seo-title: AEM Sitesコンテンツ階層の概要
 description: 次のビデオでは、貴社のAEM内でのサイトページの保存方法に焦点を当てています。
 seo-description: 次のビデオでは、貴社のAEM内でのサイトページの保存方法に焦点を当てています。
-feature: ページエディター
+feature: Page Editor
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4243
 thumbnail: 31785.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

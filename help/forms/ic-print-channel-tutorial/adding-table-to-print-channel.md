@@ -4,7 +4,7 @@ seo-title: 貢献度セクションへのテーブルの追加
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,7 +13,7 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

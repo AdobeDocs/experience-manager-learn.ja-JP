@@ -6,7 +6,7 @@ feature: Adobe Asset Link
 version: 6.4, 6.5, cloud-service
 kt: 4908
 thumbnail: 33885.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

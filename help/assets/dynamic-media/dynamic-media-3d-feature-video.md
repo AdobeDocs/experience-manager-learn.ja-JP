@@ -1,10 +1,10 @@
 ---
 title: AEM AssetsでのDynamic Media3Dの使用
 description: Adobe Experience ManagerのDynamic Media3Dサポートにより、インタラクティブな3Dパワーエクスペリエンスを容易にスケールでカスタマイズおよび配信できます
-feature: 3D アセット
+feature: 3D Assets
 version: 6.5
 kt: 5349
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

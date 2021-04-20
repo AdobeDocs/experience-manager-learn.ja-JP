@@ -4,7 +4,7 @@ seo-title: AEM Dispatcher Cache のチュートリアル
 description: このチュートリアルの目標は、ディスパッチャーのしくみとその使い方をより深く理解することです。
 seo-description: このチュートリアルの目標は、ディスパッチャーのしくみとその使い方をより深く理解することです。
 feature: Dispatcher
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Beginner
 translation-type: tm+mt

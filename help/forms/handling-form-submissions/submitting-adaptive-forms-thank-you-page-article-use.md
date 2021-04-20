@@ -4,14 +4,14 @@ seo-title: 「ありがとうございます」ページへの送信
 description: アダプティブフォームの送信時に「ありがとうございます」ページを表示する
 seo-description: アダプティブフォームの送信時に「ありがとうございます」ページを表示する
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

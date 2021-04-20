@@ -2,13 +2,13 @@
 seo: Set up public and private keys for use with AEM and Adobe I/O
 description: 'AEMは、公開鍵と秘密鍵のペアを使用して、Adobe I/Oや他のWebサービスと安全に通信します。 この短いチュートリアルでは、AEMとAdobe I/Oの両方で動作するopensslコマンドラインツールを使用して、キーとキーストアの互換性をどのように生成できるかを説明します。 '
 version: 6.4, 6.5
-feature: 'ユーザーとグループ '
+feature: Users and Groups
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 title: 「第1章 — ディスパッチャーの概念、パターン、アンチパターン」
 description: 本章では、ディスパッチャーの履歴と仕組みを簡単に紹介し、AEM開発者がコンポーネントを設計する方法に影響を与える方法を説明します。
 feature: Dispatcher
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Beginner
 translation-type: tm+mt

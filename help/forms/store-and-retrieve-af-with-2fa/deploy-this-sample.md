@@ -1,7 +1,7 @@
 ---
 title: サンプルのデプロイ
 description: ローカルのAEM Formsインスタンスで実行するユースケースを取得する
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

@@ -4,7 +4,7 @@ seo-title: Adobe TargetでのAEMエクスペリエンスフラグメントオフ
 description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
 seo-description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
 sub-product: content-services
-feature: エクスペリエンスフラグメント
+feature: Experience Fragments
 topics: integrations, personalization
 audience: all
 doc-type: feature video
@@ -12,7 +12,7 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
-topic: パーソナライズ機能
+topic: Personalization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

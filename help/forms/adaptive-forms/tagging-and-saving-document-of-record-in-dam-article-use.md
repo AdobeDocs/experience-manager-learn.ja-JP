@@ -4,14 +4,14 @@ seo-title: DAMでのAEM FormsDoRのタグ付けと保存
 description: この記事では、AEM DAMでAEM Formsが生成したDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 seo-description: この記事では、AEM DAMでAEM Formsが生成したDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: アダプティブForms，ワークフロー
+feature: Adaptive Forms,Workflow
 topics: developing
 audience: implementer
 doc-type: article
 activity: develop
 version: 6.4,6.5
 discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

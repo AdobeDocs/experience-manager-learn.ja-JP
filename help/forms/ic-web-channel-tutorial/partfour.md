@@ -4,14 +4,14 @@ seo-title: Webチャネルドキュメントテンプレートの作成AEM Forms
 description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート4です。 ここでは、Webチャネルドキュメント用のテンプレートを作成します。
 seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート4です。 ここでは、Webチャネルドキュメント用のテンプレートを作成します。
 uuid: b4c9f68b-3091-4f87-988d-705f0296a8d8
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

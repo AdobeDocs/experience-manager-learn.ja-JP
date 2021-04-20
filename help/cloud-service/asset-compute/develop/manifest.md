@@ -1,7 +1,7 @@
 ---
 title: asset computeプロジェクトのmanifest.ymlの設定
 description: asset computeプロジェクトのmanifest.ymlは、このプロジェクトの展開対象となるすべてのワーカーを説明します。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

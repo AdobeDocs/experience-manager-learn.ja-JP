@@ -11,8 +11,8 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: コアコンポーネント，ページエディタ，編集可能なテンプレート， AEMプロジェクトのアーキタイプ
-topic: コンテンツ管理、開発
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

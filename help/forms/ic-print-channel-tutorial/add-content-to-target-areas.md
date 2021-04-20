@@ -4,7 +4,7 @@ seo-title: 印刷チャネルドキュメントへのテキストおよび画像
 description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルのパート7です。 この部分では、レイアウト(xdp)で定義されたターゲット領域に画像とテキストコンテンツを追加します。 '
 seo-description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルのパート7です。 この部分では、レイアウト(xdp)で定義されたターゲット領域に画像とテキストコンテンツを追加します。 '
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,7 +13,7 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 開発者コンソール
 description: AEMCloud Serviceは、実行中のAEMサービスの様々な詳細を表示する各環境に対して開発者コンソールを提供します。この詳細はデバッグに役立ちます。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

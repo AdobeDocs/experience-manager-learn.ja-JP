@@ -1,7 +1,7 @@
 ---
 title: ページのライブコピーの継承を管理
 description: ライブコピーとそのブループリント間の継承をページレベルで管理する方法を学びます。
-feature: 言語コピー、マルチサイトマネージャ
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5374
 thumbnail: 36679.jpg
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

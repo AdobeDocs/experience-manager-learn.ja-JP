@@ -1,7 +1,7 @@
 ---
 title: ターゲット呼び出しの読み込みと実行
 description: 起動ルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからターゲット呼び出しを実行する方法を学びます。 ページ情報を取得し、パラメーターとして渡すには、Adobeクライアントデータレイヤーを使用します。このレイヤーを使用すると、Webページ上での訪問者の体験に関するデータを収集して保存でき、このデータに簡単にアクセスできます。
-feature: コアコンポーネント、Adobe Client Data Layer
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -9,7 +9,7 @@ activity: setup
 version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

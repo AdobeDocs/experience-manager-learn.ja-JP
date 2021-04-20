@@ -3,12 +3,12 @@ title: AEMのJava APIのベストプラクティスについて
 description: AEMは、開発中に使用する多数のJava APIを公開する、リッチなオープンソースソフトウェアスタック上に構築されています。 この記事では、主要なAPIと、その用途をいつ、なぜ説明します。
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: 基盤，アセット，サイト
-feature: API
+feature: APIs
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

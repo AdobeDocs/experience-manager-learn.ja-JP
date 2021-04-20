@@ -2,9 +2,9 @@
 title: AEM AssetsとDynamic Mediaの概況
 description: このビデオシリーズでは、Adobe Experience ManagerDynamic Mediaをコンテンツサービングサービスとして使用して、メディアコンテンツの管理方法とアクセス方法の概要を説明します。 Dynamic Mediaでは、動的なデジタルエクスペリエンスを管理および公開できます。これはExperience Managerアセットに特有の機能です。 アドビのフレームワークとコンポーネントスイートを使用すると、マーケターはインタラクティブでマルチメディアのエクスペリエンスをすべてのデバイスでカスタマイズおよび配信できます。
 sub-product: dynamic-media
-feature: スマート切り抜き、ビデオプロファイル、画像プロファイル、ビューアプリセット、360 VRビデオ、画像セット、スピンセット
+feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

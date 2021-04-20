@@ -2,11 +2,11 @@
 title: アセット管理者の検索レール
 description: アセット管理者の検索レールを使用すると、Omnisearchでカスタム条件を使用してアセットを検索できます。
 sub-product: アセット
-feature: 検索
+feature: Search
 version: cloud-service
 kt: 4995
 thumbnail: 35842.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Administrator
 level: Intermediate
 translation-type: tm+mt

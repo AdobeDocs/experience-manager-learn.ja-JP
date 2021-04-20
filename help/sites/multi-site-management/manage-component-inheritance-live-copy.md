@@ -1,7 +1,7 @@
 ---
 title: コンポーネントのライブコピーの継承を管理
 description: ライブコピーとそのBlueprint間の継承をコンポーネントレベルで管理する方法を理解する
-feature: 言語コピー、マルチサイトマネージャ
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,7 +9,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5372
 thumbnail: 36678.jpg
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

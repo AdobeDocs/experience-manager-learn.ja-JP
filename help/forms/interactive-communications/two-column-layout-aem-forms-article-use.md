@@ -3,13 +3,13 @@ title: 印刷チャネルドキュメント用に2列レイアウトを作成す
 seo-title: 印刷チャネルドキュメント用に2列レイアウトを作成する
 description: 印刷チャネルドキュメント用に2列レイアウトを作成する
 seo-description: 印刷チャネルドキュメント用に2列レイアウトを作成する
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

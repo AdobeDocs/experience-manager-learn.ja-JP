@@ -1,7 +1,7 @@
 ---
 title: Adobe Analyticsとページデータを収集する
 description: イベント主導型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerで作成されたWebサイト上のユーザーアクティビティに関するデータを収集します。 Experience Platform Launchのルールを使用してこれらのイベントをリッスンし、データをAdobe Analyticsのレポートスイートに送信する方法について説明します。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

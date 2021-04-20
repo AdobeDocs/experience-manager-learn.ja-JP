@@ -1,7 +1,7 @@
 ---
 title: asset computeの拡張機能用にAdobeプロジェクトの蛍光ファイルを設定します
 description: asset computeプロジェクトとは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobeプロジェクトを設定してデプロイするには、Adobe開発者コンソールでプロジェクトFireflyにアクセスする必要があります。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,7 +9,7 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

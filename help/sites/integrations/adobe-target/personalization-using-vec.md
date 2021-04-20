@@ -8,7 +8,7 @@ activity: use
 version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

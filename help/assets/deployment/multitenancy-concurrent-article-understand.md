@@ -3,7 +3,7 @@ title: マルチテナンシーと同時開発について
 description: Adobe Experience Managerアセットを使用してマルチテナント導入を管理する利点、課題、およびテクニックについて説明します。
 feature: Connected Assets
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

@@ -3,7 +3,7 @@ title: AEM Formsでカスタム送信を作成する
 seo-title: AEM Formsでカスタム送信を作成する
 description: アダプティブフォーム用に独自のカスタム送信アクションをすばやく簡単に作成する方法
 seo-description: アダプティブフォーム用に独自のカスタム送信アクションをすばやく簡単に作成する方法
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,7 +11,7 @@ activity: implement
 version: 6.3,6.4,6.5
 uuid: a26db0b9-7db4-4e80-813d-5c0438fabd1e
 discoiquuid: 28611011-2ff9-477e-b654-e62e7374096a
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

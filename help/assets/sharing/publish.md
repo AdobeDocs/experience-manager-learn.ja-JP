@@ -2,11 +2,11 @@
 title: AEMを使用してアセットを公開する方法
 description: AEM AuthorからAEM Publishにアセットとそのレンディションを公開する方法を説明します。
 sub-product: アセット
-feature: アセット管理
+feature: Asset Management
 version: cloud-service
 kt: 330932
 thumbnail: 32194.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

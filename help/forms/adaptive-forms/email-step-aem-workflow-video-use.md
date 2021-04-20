@@ -4,14 +4,14 @@ seo-title: Forms Workflowの「電子メールの送信」手順の使用
 description: 「電子メールの送信」手順は、AEM Forms6.4で導入されました。この手順を使用すると、添付ファイルの有無に関係なく電子メールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、電子メール送信コンポーネントの設定手順について説明します
 seo-description: 「電子メールの送信」手順は、AEM Forms6.4で導入されました。この手順を使用すると、添付ファイルの有無に関係なく電子メールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、電子メール送信コンポーネントの設定手順について説明します
 uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
-feature: ワークフロー
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

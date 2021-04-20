@@ -4,14 +4,14 @@ seo-title: フォームデータモデルを使用したキャンペーンプロ
 description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
 seo-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: Output サービス
+feature: Output Service
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

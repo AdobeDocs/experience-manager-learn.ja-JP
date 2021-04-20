@@ -4,8 +4,8 @@ description: Cloud Managerを使用したCloud ServiceーとしてのAEMコー�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6912
 thumbnail: 330534.jpg
 translation-type: tm+mt

@@ -6,8 +6,8 @@ audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: コアコンポーネント
-topic: 開発
+feature: Core Components
+topic: Development
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

@@ -7,7 +7,7 @@ audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: パーソナライズ機能
+topic: Personalization
 role: Developer
 level: Intermediate
 translation-type: tm+mt

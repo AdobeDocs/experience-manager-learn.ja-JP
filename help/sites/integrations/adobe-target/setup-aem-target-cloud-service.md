@@ -8,7 +8,7 @@ activity: setup
 version: cloud-service
 kt: 6044
 thumbnail: 41244.jpg
-topic: 統合
+topic: Integrations
 role: Administrator
 level: Intermediate
 translation-type: tm+mt

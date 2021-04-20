@@ -2,7 +2,7 @@
 title: コンポーネントの拡張 | AEM SPAエディタとAngularの使い始めに
 description: AEM SPAエディタで使用する既存のコアコンポーネントを拡張する方法を説明します。 既存のコンポーネントにプロパティやコンテンツを追加する方法を理解することは、AEM SPA Editorの実装機能を拡張する強力なテクニックです。 Sling Resource MangerのSlingモデルと機能を拡張するための委任パターの使用方法を説明します。
 sub-product: サイト
-feature: SPAエディタ、コアコンポーネント
+feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
 version: cloud-service

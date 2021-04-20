@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 7f570f12-ce43-4da7-a249-ef6bd0fe48e5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

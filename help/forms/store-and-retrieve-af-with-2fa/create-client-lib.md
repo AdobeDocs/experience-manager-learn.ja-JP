@@ -1,7 +1,7 @@
 ---
 title: クライアントライブラリの作成
 description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成します
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

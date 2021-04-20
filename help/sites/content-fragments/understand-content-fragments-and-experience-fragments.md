@@ -2,13 +2,13 @@
 title: コンテンツフラグメントとエクスペリエンスフラグメントについて
 description: Adobe Experience Managerのコンテンツフラグメントとエクスペリエンスフラグメントは、表面的に似ているように見える場合がありますが、それぞれが異なる用途で重要な役割を果たします。 コンテンツフラグメントとエクスペリエンスフラグメントの類似性、違い、それぞれの用途、使用方法を説明します。
 sub-product: アセット、サイト、コンテンツサービス
-feature: コンテンツフラグメント、エクスペリエンスフラグメント
+feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

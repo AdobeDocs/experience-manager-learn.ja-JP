@@ -2,7 +2,7 @@
 title: 'AEM AssetsのInDesignファイルとアセットテンプレートについて '
 description: このビデオチュートリアルでは、AEM Assetsのアセットテンプレート機能で使用するInDesignファイルの定義と、それに付随するすべての考慮事項について順を追って説明します。
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

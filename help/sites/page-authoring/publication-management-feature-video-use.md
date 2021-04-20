@@ -10,8 +10,8 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4322
 thumbnail: 32193.jpg
-feature: 公開
-topic: コンテンツ管理
+feature: Publishing
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

@@ -1,8 +1,8 @@
 ---
 title: 第5章 — Content Servicesページのオーサリング — Content Services
 description: AEMヘッドレスチュートリアルの第5章では、第4章で定義したテンプレートからページを作成する方法について説明します。 これらのページは、JSON HTTPエンドポイントとして機能します。
-feature: コンテンツフラグメント、API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: AEMでのOKTAの設定
 description: oktaを使用したシングルサインオンを使用するための様々な設定の理解
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development, authentication, security
 audience: developer
 doc-type: tutorial

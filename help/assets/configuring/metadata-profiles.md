@@ -2,11 +2,11 @@
 title: メタデータプロファイル
 description: メタデータプロファイルを使用すると、初期設定のメタデータをアセットフォルダ内のアセットに自動的に適用できるので、AEMユーザーに対するメタデータ管理の負荷を軽減し、メタデータの一貫性を向上できます。
 sub-product: アセット
-feature: メタデータ
+feature: Metadata
 version: cloud-service
 kt: 4984
 thumbnail: 33974.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

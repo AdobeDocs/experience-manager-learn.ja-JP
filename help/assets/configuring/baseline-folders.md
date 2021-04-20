@@ -2,11 +2,11 @@
 title: ベースラインフォルダ
 description: 'AEM Assetsでベースラインフォルダーを定義すると、デジタルアセット管理の堅実なコンテンツアーキテクチャと基盤を確立できます。 '
 sub-product: アセット
-feature: アセット管理
+feature: Asset Management
 version: cloud-service
 kt: 4870
 thumbnail: 33496.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

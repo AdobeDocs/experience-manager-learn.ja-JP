@@ -3,7 +3,7 @@ title: AEM Sitesの基本取り扱い
 seo-title: Adobe Experience Manager Sitesで新しいページを作成
 description: 次のビデオでは、AEM作成者環境を使用する場合の基本操作の概要を説明します。 これはサイトコンソールを基礎として使用します。
 seo-description: 次のビデオでは、AEM作成者環境を使用する場合の基本操作の概要を説明します。 これはサイトコンソールを基礎として使用します。
-feature: ページエディター，編集可能なテンプレート
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

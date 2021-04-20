@@ -2,7 +2,7 @@
 title: SPAの統合 | AEM SPA EditorとReactの使い始めに
 description: Reactで記述された単一ページアプリ(SPA)のソースコードを、Adobe Experience Manager(AEM)プロジェクトと統合する方法を理解します。 AEM JSONモデルAPIに対してSPAを迅速に開発するために、webpack開発サーバーなどの最新のフロントエンドツールを使用する方法を説明します。
 sub-product: サイト
-feature: SPAエディタ
+feature: SPA Editor
 topics: development
 version: cloud-service
 activity: develop

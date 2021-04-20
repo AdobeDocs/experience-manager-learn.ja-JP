@@ -3,7 +3,7 @@ title: 多言語翻訳プロジェクトの作成
 seo-title: 多言語翻訳プロジェクトの作成
 description: 'AEMプロジェクトコンソールから言語コピー用の複数言語翻訳プロジェクトを作成、編集、管理する方法を学びます。 '
 seo-description: AEMプロジェクトコンソールから言語コピー用の複数言語翻訳プロジェクトを作成、編集、管理する方法を学びます。
-feature: 言語コピー、マルチサイトマネージャ
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5368
 thumbnail: 36485.jpg
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

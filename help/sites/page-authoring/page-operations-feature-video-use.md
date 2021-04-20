@@ -3,7 +3,7 @@ title: AEM Sitesの基本的なページ操作
 seo-title: AEM Sitesの基本的なページ操作
 description: 次のビデオでは、Adobe Experience Manager Sitesページの基本的なページ管理操作の実行方法に焦点を当てています。
 seo-description: 次のビデオでは、Adobe Experience Manager Sitesページの基本的なページ管理操作の実行方法に焦点を当てています。
-feature: ページエディター，編集可能なテンプレート
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4245
 thumbnail: 32147.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

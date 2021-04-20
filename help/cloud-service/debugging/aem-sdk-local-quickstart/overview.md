@@ -1,14 +1,14 @@
 ---
 title: AEM SDKのデバッグ
 description: AEM SDKは、開発者が使用する主な開発環境で、AEMおよびデプロイ済みのアプリケーションのデバッグに多数の方法をサポートしています。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: null
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt

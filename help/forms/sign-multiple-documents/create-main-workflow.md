@@ -1,7 +1,7 @@
 ---
 title: 署名プロセスをトリガーするためのメインワークフローの作成
 description: 署名用のフォームをデータベースに保存するためのワークフローの作成
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

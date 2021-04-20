@@ -6,8 +6,8 @@ doc-type: tutorial
 topics: best-practices, development, authoring, configuring
 audience: all
 activity: develop, use
-feature: Dynamic Mediaクラシック
-topic: コンテンツ管理
+feature: Dynamic Media Classic
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

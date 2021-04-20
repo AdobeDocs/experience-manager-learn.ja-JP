@@ -2,11 +2,11 @@
 title: バージョン
 description: アセットバージョンの作成方法と管理方法を確認します。
 sub-product: アセット
-feature: アセット管理
+feature: Asset Management
 version: cloud-service
 kt: 4671
 thumbnail: 32052.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

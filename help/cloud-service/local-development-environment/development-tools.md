@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてAEM用の開発ツールを設定する
 description: AEMに対してローカルで開発するために必要なすべての基準ツールを備えたローカル開発マシンをセットアップします。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -4,8 +4,8 @@ description: AEM Cloud Managerでディスパッチャー設定を管理しま�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール、ディスパッチャー
+topic: Development
+feature: Developer Tools, Dispatcher
 kt: 6915
 thumbnail: 330538.jpg
 translation-type: tm+mt

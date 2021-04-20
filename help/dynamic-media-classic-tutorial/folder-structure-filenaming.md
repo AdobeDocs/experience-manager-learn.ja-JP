@@ -2,12 +2,12 @@
 title: フォルダー構造とファイルの命名規則の決定
 description: ファイルの命名は、おそらく、Dynamic Mediaクラシックを実装する際に決定する最も重要な決定です。 フォルダー構造も重要です。 フォルダー構造とファイル名に対して、これが非常に重要で考えられる方法について説明します。
 sub-product: dynamic-media
-feature: Dynamic Mediaクラシック
+feature: Dynamic Media Classic
 doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

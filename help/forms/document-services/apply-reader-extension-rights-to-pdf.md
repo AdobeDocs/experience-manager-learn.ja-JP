@@ -9,8 +9,8 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: Forms サービス
-topic: 開発
+feature: Forms Service
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

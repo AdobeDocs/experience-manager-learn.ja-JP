@@ -1,13 +1,13 @@
 ---
 title: AEMフォームでの最初のOSGiバンドルの作成
 description: mavenとeclipseを使用した最初のOSGiバンドルの構築
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

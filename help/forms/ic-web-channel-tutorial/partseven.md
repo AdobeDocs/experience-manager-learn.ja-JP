@@ -4,14 +4,14 @@ seo-title: Webチャネルドキュメントへのテキストおよび画像コ
 description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルのパート7です。 この部分では、画像とテキストコンテンツをヘッダーパネルに追加します。 '
 seo-description: 'これは、最初の対話型通信ドキュメントを作成するための複数手順のチュートリアルのパート7です。 この部分では、画像とテキストコンテンツをヘッダーパネルに追加します。 '
 uuid: 440f8b74-3be7-4e58-a46e-4110065b7705
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 3dd64e7d-3f13-4022-bb75-c9dc1884bc19
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -2,11 +2,11 @@
 title: ビデオでのDynamic Mediaスマート切り抜きの使用
 description: Dynamic Mediaのスマート切り抜き（ビデオ用）では、Adobe Senseiを使用して、ビデオの注目点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 sub-product: dynamic-media
-feature: スマート切り抜き、ビデオプロファイル、ビューアプリセット
+feature: Smart Crop, Video Profiles, Viewer Presets
 version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

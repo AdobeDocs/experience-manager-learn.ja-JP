@@ -4,14 +4,14 @@ seo-title: AEM Formsとのユーザプロファイルデータ統合の使用
 description: AEMユーザプロファイル情報とアダプティブFormsの統合
 seo-description: AEMユーザプロファイル情報とアダプティブFormsの統合
 uuid: c8cfe575-8732-4d8b-99de-fb09e7c2497d
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: ca01dfce-abab-4bc1-9c5e-3bafdbed4836
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 title: アセット共有コモンズのユーザーエクスペリエンスについて
 description: 資産共有コモンズに関する機能的および技術的な理解のための資料
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

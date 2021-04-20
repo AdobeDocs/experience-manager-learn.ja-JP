@@ -4,12 +4,12 @@ description: ローカル開発アクセストークンとサービス資格情�
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: ヘッドレス、統合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

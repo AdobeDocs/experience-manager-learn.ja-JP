@@ -9,7 +9,7 @@ activity: understand
 version: cloud-service
 kt: 4644
 thumbnail: 32029.jpg
-topic: アーキテクチャ、パフォーマンス
+topic: Architecture, Performance
 role: Architect, Developer
 level: Beginner
 translation-type: tm+mt

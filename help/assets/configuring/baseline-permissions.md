@@ -2,11 +2,11 @@
 title: 基本権限
 description: ベースラインアセットフォルダーでのユーザーアクセスの管理は、ガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
 sub-product: アセット
-feature: アセット管理
+feature: Asset Management
 version: cloud-service
 kt: 4870
 thumbnail: 37696.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

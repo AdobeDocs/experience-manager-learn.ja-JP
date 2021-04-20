@@ -3,13 +3,13 @@ title: アダプティブFormsでのインライン画像の表示
 seo-title: アダプティブFormsでのインライン画像の表示
 description: アップロードされた画像をアダプティブFormsでインラインで表示
 seo-description: アップロードされた画像をアダプティブFormsでインラインで表示
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

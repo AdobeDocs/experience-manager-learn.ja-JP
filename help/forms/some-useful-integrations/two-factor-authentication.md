@@ -1,14 +1,14 @@
 ---
 title: SMS 2要素認証
 description: 特定追加のアクティビティを実行する場合にユーザーのIDを確認するのに役立つ、セキュリティの追加層
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6317
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

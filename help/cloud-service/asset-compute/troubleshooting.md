@@ -1,7 +1,7 @@
 ---
 title: AEM AssetsのAsset compute拡張機能のトラブルシューティング
 description: 以下は、AEM AssetsのカスタムAsset computeワーカーを開発および配置する際に発生する可能性がある、一般的な問題とエラー、および解決策のインデックスです。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

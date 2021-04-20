@@ -1,12 +1,12 @@
 ---
 title: 送信されたフォームデータをCSV形式で書き出す
 description: 送信されたアダプティブフォームデータをCSV形式で書き出す
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

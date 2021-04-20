@@ -4,7 +4,7 @@ seo-title: AEM Formsの特定のグループにルールエディタを制限す
 description: アダプティブフォームのルールエディターをAEMの特定のグループに制限する
 seo-description: アダプティブフォームのルールエディターをAEMの特定のグループに制限する
 uuid: b50f3736-b72e-4154-9ca5-95e10606f4ad
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: technical video

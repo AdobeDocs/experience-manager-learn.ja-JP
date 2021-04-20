@@ -9,7 +9,7 @@ audience: administrator
 doc-type: technical video
 uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
 discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
-topic: セキュリティ
+topic: Security
 role: Developer
 level: Beginner
 translation-type: tm+mt

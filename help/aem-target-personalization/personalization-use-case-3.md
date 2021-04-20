@@ -3,8 +3,8 @@ title: Visual Experience Composerを使用したパーソナライゼーショ�
 seo-title: Visual Experience Composer(VEC)を使用したパーソナライゼーション
 description: Adobe TargetVisual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
 seo-description: Adobe TargetVisual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
 translation-type: tm+mt

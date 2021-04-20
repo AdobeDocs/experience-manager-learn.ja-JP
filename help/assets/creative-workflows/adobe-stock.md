@@ -3,7 +3,7 @@ title: AEM AssetsでのAdobe Stockアセットの使用
 description: 'AEMでは、AEMから直接、Adobe Stockアセットを検索、プレビュー、保存、ライセンス認証できます。 組織は、Adobe Stockエンタープライズ計画をAEM Assetsと統合し、ライセンスされたアセットがAEMの強力なアセット管理機能を備え、クリエイティブやマーケティングプロジェクトで広く利用できるようにします。 '
 feature: Adobe Stock
 version: 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

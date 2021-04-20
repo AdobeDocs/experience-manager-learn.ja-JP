@@ -8,7 +8,7 @@ activity: setup
 version: cloud-service
 kt: 5981
 thumbnail: 38555.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

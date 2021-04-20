@@ -4,7 +4,7 @@ seo-title: アダプティブFormsでの事前入力サービス
 description: バックエンドデータソースからデータを取得して、アダプティブフォームを事前入力します。
 seo-description: バックエンドデータソースからデータを取得して、アダプティブフォームを事前入力します。
 sub-product: フォーム[ふぉーむ]
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: article
@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 uuid: 26a8cba3-7921-4cbb-a182-216064e98054
 discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
 translation-type: tm+mt

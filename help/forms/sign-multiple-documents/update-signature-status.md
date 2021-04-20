@@ -1,7 +1,7 @@
 ---
 title: データベース内のフォームの署名ステータスの更新
 description: AEMワークフローを使用して、データベース内の署名済みフォームの署名ステータスを更新します
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

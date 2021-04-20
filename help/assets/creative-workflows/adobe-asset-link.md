@@ -3,7 +3,7 @@ title: AEM AssetsでのAdobeアセットリンク拡張の使用
 description: 'Adobe Experience Managerアセットは、お気に入りのAdobe Creative Cloudデスクトップアプリケーション内で、デザイナーやクリエイティブユーザーが使用できるようになりました。 Adobe Creative Cloudエンタープライズ向けAdobeアセットリンク拡張機能は、Adobe Photoshop、InDesign、表示のようなCreative Cloudツール内で、AEMアセットの検索と参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、Illustratorのメタデータを拡張します。 '
 feature: Adobe Asset Link
 version: 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

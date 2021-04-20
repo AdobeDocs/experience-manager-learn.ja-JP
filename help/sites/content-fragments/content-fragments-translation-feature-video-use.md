@@ -1,8 +1,8 @@
 ---
 title: AEMコンテンツフラグメントの翻訳のサポート
 description: コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられた混在メディアアセットも、抽出および変換できます。
-feature: コンテンツフラグメント、マルチサイトマネージャー
-topic: ローカリゼーション
+feature: Content Fragments, Multi Site Manager
+topic: Localization
 role: Business Practitioner
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service

@@ -1,13 +1,13 @@
 ---
 title: AEMでの翻訳ルールの設定
 description: 翻訳設定UIを使用すると、AEM Sitesでコンテンツを翻訳するためのルールを管理できます。 このビデオでは、カスタムコンポーネント用の新しい翻訳ルールの作成について詳しく説明します。
-feature: 言語コピー
+feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: ローカリゼーション
+topic: Localization
 role: Business Practitioner
 level: Beginner
 translation-type: tm+mt

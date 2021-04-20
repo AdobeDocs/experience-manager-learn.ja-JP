@@ -4,14 +4,14 @@ seo-title: カスタムアセットタイプの登録
 description: AEM Forms Portalでのリスト表示に使用するカスタムアセットタイプの有効化
 seo-description: AEM Forms Portalでのリスト表示に使用するカスタムアセットタイプの有効化
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

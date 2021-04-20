@@ -2,8 +2,8 @@
 title: AEM Assetsでのメタデータの読み込みと書き出しの使用
 description: Adobe Experience Managerアセットのメタデータの読み込み機能と書き出し機能の使用方法を説明します。 読み込みと書き出しの機能により、コンテンツ作成者は既存のアセットのメタデータを一括更新できます。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: コンテンツ管理
-feature: メタデータ
+topic: Content Management
+feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917

@@ -8,8 +8,8 @@ activity: understand
 version: cloud-service
 kt: 4639
 thumbnail: 32033.jpg
-feature: 公開
-topic: アーキテクチャ
+feature: Publishing
+topic: Architecture
 role: Architect, Developer
 level: Beginner
 translation-type: tm+mt

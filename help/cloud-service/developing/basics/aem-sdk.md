@@ -4,8 +4,8 @@ description: AEM用SDKをCloud Serviceとして使用および設定します。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6927
 thumbnail: 330552.jpg
 translation-type: tm+mt

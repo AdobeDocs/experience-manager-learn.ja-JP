@@ -4,14 +4,14 @@ seo-title: アダプティブフォーム送信時のキャンペーンプロフ
 description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 seo-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: アダプティブForms、フォームデータモデル
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

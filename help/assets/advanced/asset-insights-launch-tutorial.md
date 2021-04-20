@@ -1,9 +1,9 @@
 ---
 title: AEM AssetsとAdobeの開始を使用したアセットインサイトの設定
 description: この5つの部分のビデオシリーズでは、Launch by Adobeを介してデプロイされたExperience Manager用のアセットインサイトの設定と設定について説明します。
-feature: アセットインサイト
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
 translation-type: tm+mt

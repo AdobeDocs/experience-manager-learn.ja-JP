@@ -4,7 +4,7 @@ seo-title: ルートパネルに子パネルを追加する
 description: ルートパネルレイアウトを「左側のタブ」に設定し、子パネルをルートパネルに追加する。
 seo-description: ルートパネルレイアウトを「左側のタブ」に設定し、子パネルをルートパネルに追加する。
 uuid: ef9f7c02-ead8-4f96-aabd-40d586127aa7
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,7 +13,7 @@ version: 6.4,6.5
 discoiquuid: e748b7c3-99c9-4caa-98b1-4433046c24b8
 thumbnail: 28536.jpg
 kt: 4209
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 translation-type: tm+mt

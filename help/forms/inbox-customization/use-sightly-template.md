@@ -1,14 +1,14 @@
 ---
 title: インボックスのカスタマイズ
 description: 適切なテンプレートを使用してワークフローの追加データを表示する追加カスタム列
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
 translation-type: tm+mt

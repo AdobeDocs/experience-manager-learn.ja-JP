@@ -1,13 +1,13 @@
 ---
 title: AEMスタイルシステムのコードの作成方法について
 description: このビデオでは、スタイルシステムを使用してAdobe Experience Managerのコアタイトルコンポーネントのスタイル設定に使用するCSS（またはLESS）とJavaScriptの構造、およびこれらのスタイルがHTMLとDOMにどのように適用されるかを見てみます。
-feature: スタイルシステム
+feature: Style System
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt

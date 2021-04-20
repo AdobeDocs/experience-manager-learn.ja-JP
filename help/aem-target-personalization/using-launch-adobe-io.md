@@ -3,8 +3,8 @@ title: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience Manage
 seo-title: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する
 description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明します。
 seo-description: Experience Platform LaunchとAdobe I/Oを使ってAdobe Experience ManagerとAdobe Targetを統合する方法を順を追って説明します。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
 translation-type: tm+mt
