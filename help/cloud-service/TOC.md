@@ -42,7 +42,7 @@ ht-degree: 31%
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ ローカル開発環境のセットアップ{#local-development-environment-set-up}
++ ローカル開発環境セットアップ{#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [ローカルAEMランタイム](./local-development-environment/aem-runtime.md)
@@ -116,7 +116,7 @@ ht-degree: 31%
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
       + [アカウントとサービスのプロビジョニング](./asset-compute/set-up/accounts-and-services.md)
-      + [現地開発環境](./asset-compute/set-up/development-environment.md)
+      + [ローカル開発環境](./asset-compute/set-up/development-environment.md)
       + [Adobeプロジェクトの蛍](./asset-compute/set-up/firefly.md)
    + 開発{#develop}
       + [asset computeプロジェクトの作成](./asset-compute/develop/project.md)
