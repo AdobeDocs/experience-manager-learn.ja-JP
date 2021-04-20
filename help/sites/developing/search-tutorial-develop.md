@@ -8,12 +8,12 @@ activity: develop
 version: 6.3, 6.4, 6.5
 feature: 検索
 topic: 開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '904'
 ht-degree: 11%
 
 ---
