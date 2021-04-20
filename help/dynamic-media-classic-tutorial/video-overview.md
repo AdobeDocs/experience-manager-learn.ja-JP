@@ -8,12 +8,12 @@ topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6234'
+source-wordcount: '6231'
 ht-degree: 1%
 
 ---
@@ -247,7 +247,7 @@ Dynamic Mediaクラシックに付属の多数のプリビルドプリセット�
 
 場合によっては、ビデオにキャプションを追加すると便利です。例えば、複数の言語のビデオを視聴者に提供する必要があるが、別の言語でオーディオをダビングしたり、別の言語で再度ビデオを録画したりしたくない場合などです。 また、キャプションを追加すると、難聴者やクローズドキャプションを使用するユーザーにとって、より高いアクセシビリティを提供できます。 Dynamic Mediaクラシックでは、ビデオにキャプションを簡単に追加できます。
 
-[ビデオの追加キャプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-captions-video.html)の方法を説明します。
+[ビデオ追加のキャプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-captions-video.html)の方法を説明します。
 
 ## ビデオ追加のチャプターマーカー
 
