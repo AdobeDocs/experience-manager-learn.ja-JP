@@ -10,12 +10,12 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 topic: ヘッドレス、統合
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Cloud ServiceとしてAEMとの統合では、AEMに対して安全に認証で�
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
-サービス資格情報は、[ローカル開発アクセストークン](./local-development-access-token.md)と似ていても、いくつかの主な点で異なります。
+サービス資格情報は、[ローカル開発アクセストークン](./local-development-access-token.md)と似ていますが、いくつかの主な点で異なります。
 
 + サービス資格情報は、_アクセストークンではなく_、_obtain_&#x200B;アクセストークンに使用される資格情報です。
-+ サービス資格情報はより永久的で（365日ごとに期限切れになる）、ローカル開発アクセストークンの期限が毎日切れるのに対して、失効しない限り変更しません。
-+ Cloud Service環境としてのAEMのサービス資格情報は、1人のAEMテクニカルアカウントアクセストークンにマップされます。一方、ローカル開発ユーザーは、アクセストークンを生成したAEMとして認証されます。
++ サービス資格情報はより永久的です（365日ごとに期限切れになります）。ローカル開発アクセストークンは毎日期限切れになるのに対し、失効しない限り変更しません。
++ AEM環境としてのCloud Serviceのサービス資格情報は、1人のAEMテクニカルアカウントユーザーにマップされます。一方、ローカル開発アクセストークンは、アクセストークンを生成したAEMユーザーとして認証されます。
 
-3つのすべてを使用してCloud Service環境としてそれぞれのAEMへのアクセス権を取得できるので、サービス資格情報と生成するアクセストークン、およびローカル開発アクセストークンの両方を秘密にする必要があります
+サービス資格情報と、それらが生成するアクセストークン、およびローカル開発アクセストークンは、どちらも秘密にしておく必要があります。3つすべてを使用して、それぞれのAEMへのアクセスをCloud Service環境として取得できます
 
 ## サービス資格情報の生成
 
@@ -44,7 +44,7 @@ Cloud ServiceとしてAEMとの統合では、AEMに対して安全に認証で�
 
 ### サービス資格情報の初期化
 
-サービス資格情報は、ローカル開発アクセストークンとは異なり、ダウンロードするには、Adobe組織IMS管理者が&#x200B;_1回限りの初期化_&#x200B;を行う必要があります。
+サービス資格情報は、ローカル開発アクセストークンとは異なり、ダウンロードするには、Adobe組織IMS管理者による&#x200B;_1回限りの初期化_&#x200B;が必要です。
 
 ![サービス資格情報の初期化](assets/service-credentials/initialize-service-credentials.png)
 
@@ -111,13 +111,13 @@ AEM asCloud Service環境のサービス資格情報が初期化されると、A
    + 簡単にするために、ダウンロードしたJSONファイルからこれらを読み取りますが、実際に使用するシナリオでは、サービス資格情報が組織のセキュリティガイドラインに従って安全に保存されている必要があります
 1. サービス資格情報からJWTを生成
 1. JWTをアクセストークンと交換する
-   + サービス資格情報が存在する場合、外部アプリケーションは、AEMにCloud Serviceとしてアクセスする際に、ローカル開発アクセストークンではなく、このアクセストークンを使用します
+   + サービス資格情報が存在する場合、外部アプリケーションは、AEMにCloud Serviceとしてアクセスする際に、ローカル開発アクセストークンではなくこのアクセストークンを使用します
 
 このチュートリアルでは、Adobeの`@adobe/jwt-auth` npmモジュールを使用して両方を行い、(1)サービス秘密鍵証明書からJWTを生成し、(2)1回の関数呼び出しでアクセストークンと交換します。 アプリケーションがJavaScriptベースでない場合は、他の言語](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)の[サンプルコードを参照して、サービス資格情報からJWTを作成し、AdobeIMSとのアクセストークンと交換する方法を確認してください。
 
 ## サービス資格情報を読み取ります
 
-`getCommandLineParams()`を確認し、ローカル開発アクセストークンJSONで読み取るのと同じコードを使用して、サービス資格情報のJSONファイルを読み取れることを確認します。
+`getCommandLineParams()`を確認し、ローカル開発アクセストークンJSONで読み取るのと同じコードを使用して、サービス資格情報JSONファイルで読み取れることを確認します。
 
 ```javascript
 function getCommandLineParams() {
@@ -140,7 +140,7 @@ function getCommandLineParams() {
 
 このサンプルアプリケーションはNode.jsベースなので、[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npmモジュールを使用すると、(1) JWT生成と(20)AdobeIMSとの交換が容易になります。 アプリケーションが別の言語を使用して開発されている場合は、[適切なコードサンプル](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)を参照し、他のプログラミング言語を使用してAdobeIMSに対するHTTPリクエストを作成する方法を確認してください。
 
-1. `getAccessToken(..)`を更新して、JSONファイルの内容を調べ、それがローカル開発アクセストークンかサービス秘密鍵証明書かを判断します。 これは、ローカル開発アクセストークンJSONに対してのみ存在する`.accessToken`プロパティが存在するかどうかを確認することで、簡単に実現できます。
+1. `getAccessToken(..)`を更新して、JSONファイルの内容を検査し、ローカル開発アクセストークンかサービス資格情報かを判断します。 これは、ローカル開発アクセストークンJSONに対してのみ存在する`.accessToken`プロパティの存在を確認することで、簡単に実現できます。
 
    サービス資格情報が指定されている場合、アプリケーションはJWTを生成し、アクセストークン用のAdobeIMSと交換します。 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)の`auth(...)`関数を使用します。この関数は、両方ともJWTを生成し、1回の関数呼び出しでアクセストークンと交換します。  `auth(..)`に対するパラメーターは[JSONオブジェクトで、以下のコードで説明するように、サービス資格情報JSONから取得できる特定の情報](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)で構成されます。
 
@@ -171,7 +171,7 @@ function getCommandLineParams() {
     }
    ```
 
-   現在は、ローカル開発アクセストークンのJSONまたはサービス資格情報のJSONのいずれかのJSONファイルが`file`コマンドラインパラメーターを介して渡される場合、アクセストークンが発生します。
+   現在は、ローカル開発アクセストークンJSONまたはサービス資格情報JSONのいずれかのJSONファイルが`file`コマンドラインパラメーターを介して渡される場合、アクセストークンが派生します。
 
    サービス資格情報は期限切れになりませんが、JWTおよび対応するアクセストークンは期限切れになる前に更新する必要があります。 これは、AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)が提供する`refresh_token` [を使用して行うことができます。
 
@@ -249,5 +249,5 @@ $ node index.js \
 
 ## バリデーターが
 
-これで、ローカル開発アクセストークンと、運用に対応したサービス間アクセストークンを使用して、Cloud ServiceとしてAEMにプログラムからアクセスできました。
+これで、ローカル開発アクセストークンを使用したCloud ServiceとしてAEMにプログラム的にアクセスでき、運用に対応したサービス対サービスアクセストークンを利用できるようになりました。
 
