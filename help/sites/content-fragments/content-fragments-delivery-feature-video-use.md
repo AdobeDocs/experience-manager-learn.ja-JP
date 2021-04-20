@@ -13,12 +13,12 @@ version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '596'
 ht-degree: 7%
 
 ---
