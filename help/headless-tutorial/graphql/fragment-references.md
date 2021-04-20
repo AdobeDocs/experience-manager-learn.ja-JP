@@ -12,12 +12,12 @@ kt: 6718
 thumbnail: KT-6718.jpg
 feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 2%
 
 ---
