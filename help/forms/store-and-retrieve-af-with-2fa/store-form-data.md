@@ -10,13 +10,13 @@ version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
 topic: 開発
-role: デベロッパー
-level: 経験豊富な
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 5%
+source-wordcount: '72'
+ht-degree: 4%
 
 ---
 
