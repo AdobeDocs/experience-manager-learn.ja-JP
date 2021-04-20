@@ -12,13 +12,13 @@ kt: 6714
 thumbnail: KT-6714.jpg
 feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 1%
+source-wordcount: '1141'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータを下流の
 
 GraphiQL IDEは開発ツールで、開発またはローカルインスタンスのような下位レベルの環境でのみ必要です。 したがって、AEMプロジェクトには含まれず、アドホックにインストールできる別のパッケージとして提供されます。
 
-1. **[Cloud Service**&#x200B;として、Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)**>** AEMに移動します。
+1. **[Cloud Service**&#x200B;として、Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**>** AEMに移動します。
 1. 「GraphiQL」を探します（**GraphiQL**&#x200B;には&#x200B;**i**&#x200B;を必ず含めてください）。
 1. 最新の&#x200B;**GraphicQL Content Package v.x.x.x**&#x200B;をダウンロードします。
 
@@ -297,7 +297,7 @@ GraphiQL IDEは開発ツールで、開発またはローカルインスタン�
 
 ## その他のリソース
 
-GraphQLクエリの他の多くの例については、以下を参照してください。[AEMでのGraphQLの使い方の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)
+GraphQLクエリの他の多くの例については、以下を参照してください。[AEMでのGraphQLの使い方の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=ja)
 
 ## これで完了です! {#congratulations}
 
