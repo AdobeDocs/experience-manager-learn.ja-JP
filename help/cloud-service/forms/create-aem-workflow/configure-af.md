@@ -2,9 +2,9 @@
 title: アダプティブフォームからトリガーへのワークフローの設定
 description: アダプティブフォーム送信時のトリガーワークフロー
 solution: Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 332435.pg
 translation-type: tm+mt
 source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 10%
+source-wordcount: '44'
+ht-degree: 6%
 
 ---
 
