@@ -2,9 +2,9 @@
 title: 様々なタイプのPDF formsとドキュメントの理解
 description: PDFは実際にはファイル形式のファミリーです。この記事では、フォーム開発者にとって重要で関連性のあるPDFの種類について説明します。
 solution: Experience Manager, Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner,Intermediate
 version: 6.3,6.4,6.5
 feature: ドキュメントサービス
 kt: 7071
@@ -12,7 +12,7 @@ topic: 開発
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
