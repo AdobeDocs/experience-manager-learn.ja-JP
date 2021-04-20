@@ -11,12 +11,12 @@ audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
 topic: SPA
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2390'
 ht-degree: 2%
 
 ---
