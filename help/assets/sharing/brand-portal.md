@@ -4,12 +4,12 @@ description: AEM AuthorとAEM Assetsブランドポータルの統合に関す�
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1774'
 ht-degree: 45%
 
 ---
@@ -45,7 +45,7 @@ Brand Portalの2019年2月リリースでは、テキスト検索とトップ顧
 
 部分テキスト検索およびワイルドカード検索について詳しくは、以下の説明を参照してください。
 
-#### 部分フレーズ検索  
+#### 部分フレーズ検索
 
 フィルタリングウィンドウで、検索対象フレーズの一部分（1 つか 2 つの単語）のみを指定してアセットを検索できます。
 
