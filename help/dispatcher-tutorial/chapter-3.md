@@ -3,12 +3,12 @@ title: 第3章 — 高度なディスパッチャーキャッシュのトピッ�
 description: これは、AEMでキャッシュする3つの部分シリーズのパート3です。 最初の2つの部分は、ディスパッチャーのプレーンHTTPキャッシュに焦点を当てており、その制限事項は何か。 ここでは、これらの制限を克服する方法に関するアイデアをいくつか説明します。
 feature: Dispatcher
 topic: アーキテクチャ
-role: アーキテクト
-level: 中間
+role: Architect
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6191'
+source-wordcount: '6189'
 ht-degree: 0%
 
 ---
