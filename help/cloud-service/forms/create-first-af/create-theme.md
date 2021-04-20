@@ -2,9 +2,9 @@
 title: アダプティブフォームテーマの作成
 description: テーマは、アダプティブフォームのルック&フィールを定義するAEMクライアントライブラリです。
 solution: Experience Manager Forms
-type: ドキュメント
-role: デベロッパー
-level: 初級者、中級者
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: アダプティブフォーム
 topic: 開発
@@ -13,8 +13,8 @@ thumbnail: 332229.jpg
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 68%
+source-wordcount: '75'
+ht-degree: 69%
 
 ---
 
