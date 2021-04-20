@@ -4,21 +4,21 @@ description: 'AEMアプリケーションのRepository Structureパッケージ�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: AEM Project Archetype
+topic: 開発
+feature: AEM プロジェクトアーキタイプ
 kt: 6928
 thumbnail: 330550.jpg
 translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 0%
+source-wordcount: '54'
+ht-degree: 20%
 
 ---
 
 
 # Repository構造パッケージ
 
-AEMアプリケーションの[リポジトリ構造パッケージ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html)を調べます。その重要性と、それを最適に定義する方法を調べます。
+AEMアプリケーションの[リポジトリ構造パッケージ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=ja)を調べます。その重要性と、それを最適に定義する方法を調べます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330550/?quality=12&learn=on)
