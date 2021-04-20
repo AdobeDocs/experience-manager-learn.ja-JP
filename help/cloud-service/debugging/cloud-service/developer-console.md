@@ -10,12 +10,12 @@ audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1347'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Oakインデックスは、次の方法でデバッグに役立ちます。
 
 OSGi Servicesヘルプ：
 
-+ AEM内のすべてのOSGiサービスのリスト、および提供するOSGiバンドルと、それを使用するすべてのOSGiバンドル
++ AEM内のすべてのOSGiサービスの一覧、および提供するOSGiバンドルと、それを使用するすべてのOSGiバンドル
 
 ### Sling ジョブ
 
