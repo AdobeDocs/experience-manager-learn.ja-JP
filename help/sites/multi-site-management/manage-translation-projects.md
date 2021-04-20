@@ -12,12 +12,12 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 5369
 thumbnail: 36486.jpg
 topic: ローカリゼーション
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '57'
+source-wordcount: '54'
 ht-degree: 12%
 
 ---
