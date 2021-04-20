@@ -13,12 +13,12 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 topic: コンテンツ管理、開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3104'
 ht-degree: 2%
 
 ---
@@ -151,7 +151,7 @@ ht-degree: 2%
 1. 追加&#x200B;****&#x200B;セパレータ&#x200B;**コンポーネントの下に**&#x200B;コンポーネントをダウンロードします。
 1. 追加&#x200B;****&#x200B;コンポーネントの下にある&#x200B;**リスト**&#x200B;コンポーネント。
 1. テンプレートの&#x200B;**初期ページプロパティ**&#x200B;を更新します。
-   * **ソーシャルメディア**/**ソーシャルメディアシェア**&#x200B;の下で、**Facebook**&#x200B;と&#x200B;**Pinterest**&#x200B;をオンにします
+   * **ソーシャルメディア**/**ソーシャルメディアシェア**&#x200B;の下で、**Facebook**&#x200B;と&#x200B;**Pinterest**&#x200B;をチェックします
 
 ### テンプレートを有効にし、サムネールを追加する
 
