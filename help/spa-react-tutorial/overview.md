@@ -11,12 +11,12 @@ kt: 5912
 thumbnail: 5912-spa-react.jpg
 feature: SPAエディタ
 topic: SPA
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '732'
 ht-degree: 18%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.](https://nodejs.org/ja/) jsand  [npm](https://www.npmjs.com/)
 
-*AEM Sitesの伝統的な部品の [開発に関する基本的な理解を得ることは必須ではありませんが](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)、*
+*AEM Sitesの伝統的な部品の [開発に関する基本的な理解を持つことは必須ではありませんが](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)、*
 
 ## ローカル開発環境 {#local-dev-environment}
 
@@ -69,7 +69,7 @@ Adobe Experience Manager(AEM)の&#x200B;**SPAエディタ**&#x200B;機能を初�
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用するローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
 > **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
