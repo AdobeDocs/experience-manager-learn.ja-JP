@@ -9,12 +9,12 @@ activity: develop
 audience: developer
 kt: 5252
 topic: 開発
-role: デベロッパー
-level: 初級者、中級者
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '397'
 ht-degree: 3%
 
 ---
@@ -28,15 +28,15 @@ AEM SDKのログにアクセスすると、AEM SDKのローカルquickstart JAR�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334/?quality=12&learn=on)
 
-ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログ記録に依存します。 Adobeでは、AEM SDKのローカルクイックスタートとAEMのログ表示をCloud Serviceの開発環境として正しく認識するので、ローカル開発およびAEMをCloud Service開発ログ設定として可能な限り維持することを推奨します。これにより、設定の混乱と再展開が軽減されます。
+ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされたAEMアプリケーションでの適切なログ記録に依存します。 Adobeでは、AEM SDKのローカルクイックスタートとAEMのCloud Serviceの開発環境としてのログ表示を正規化するので、ローカル開発とAEMを可能な限りCloud Service開発ログ設定に保つことをお勧めします。これにより、設定の混乱と再展開が軽減されます。
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)は、
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)は、次の場所にあるSling Logger OSGi設定を使用したローカル開発用に、AEMアプリケーションのJavaパッケージのDEBUGレベルでログを設定します。
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
 `error.log`にログインします。
 
-デフォルトのログがローカル開発に不十分な場合、アドホックログはAEM SDKのローカルクイックスタートのLog Support Webコンソール([/system/console/slinglog](http://localhost:4502/system/console/slinglog))を介して設定できますが、Cloud Service開発環境と同じログ設定がAEMで必要な場合以外は、Gitに対して非推奨です。 ただし、ログサポートコンソールを使用した変更は、AEM SDKのローカルクイックスタートリポジトリに直接保持されます。
+デフォルトのログがローカル開発に不十分な場合、アドホックログはAEM SDKのローカルクイックスタートのLog Support Webコンソール([/system/console/slinglog](http://localhost:4502/system/console/slinglog))を介して設定できますが、Cloud Service開発環境と同じログ設定がAEMに必要な場合以外は、Gitに対して非推奨です。 ただし、ログサポートコンソールを使用した変更は、AEM SDKのローカルクイックスタートリポジトリに直接保持されます。
 
 Javaログ文は、`error.log`ファイル内の表示にすることができます。
 
