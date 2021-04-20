@@ -1,6 +1,6 @@
 ---
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
-description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにし、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
+description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
 feature: ディスパッチャー、開発者ツール
 topics: development, caching, security
@@ -11,12 +11,12 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 # ローカルディスパッチャーツールの設定
 
-Adobe Experience Manager(AEM)のディスパッチャーは、CDNとAEM発行層の間にセキュリティとパフォーマンスの層を提供するApache HTTP Webサーバーモジュールです。 ディスパッチャーは、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発のセットアップに含める必要があります。
+Adobe Experience Manager(AEM)のディスパッチャーは、CDNとAEM発行層の間にセキュリティとパフォーマンスの層を提供するApache HTTP Webサーバーモジュールです。 ディスパッチャーは、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発の設定の一部にする必要があります。
 
 Cloud ServiceSDKとしてのAEMには、推奨されるディスパッチャーツールバージョンが含まれており、これにより、ディスパッチャーをローカルで設定、検証、シミュレーションできます。 ディスパッチャーツールは、次のものから構成されます。
 
@@ -155,7 +155,7 @@ Experience Managerプロジェクトのディスパッチャー設定に対し�
 
 ## ディスパッチャーツールログ
 
-ディスパッチャーログは、ローカルの開発時に、HTTP要求がブロックされているかどうかとその理由を理解するのに役立ちます。 ログレベルは、`docker_run`の実行に環境パラメーターを付加することで設定できます。
+ローカル開発中は、ディスパッチャーログが役立ち、HTTP要求がブロックされているかどうかとその理由を理解できます。 ログレベルは、`docker_run`の実行に環境パラメーターを付加することで設定できます。
 
 ディスパッチャーツールログは、`docker_run`が実行されると標準出力に発行されます。
 
@@ -198,7 +198,7 @@ Apache WebサーバーおよびAEM Dispatcherのログは、Dockerコンテナ�
 
 ## ディスパッチャーツールを更新するタイミング{#dispatcher-tools-version}
 
-ディスパッチャーツールのバージョンは、Experience Managerよりも増分の頻度が少ないので、ローカル開発環境では、ディスパッチャーツールの更新が必要となる回数が少なくなります。
+ディスパッチャーツールのバージョンは、Experience Managerよりも増分の頻度が少ないので、ローカル開発環境では、ディスパッチャーツールの更新が必要となる回数は少なくなります。
 
 推奨されるディスパッチャーツールのバージョンは、AEMにCloud ServiceSDKとしてバンドルされていて、Experience ManagerのCloud Serviceバージョンと一致するものです。 Cloud ServiceとしてのAEMのバージョンは、[Cloud Manager](https://my.cloudmanager.adobe.com/)で確認できます。
 
