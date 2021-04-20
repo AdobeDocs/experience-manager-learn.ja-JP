@@ -5,12 +5,12 @@ description: AEMヘッドレスチュートリアルの第2章では、イベン
 seo-description: AEMヘッドレスチュートリアルの第2章では、イベントを作成するための正規化されたデータ構造とオーサリングインターフェイスを定義するために使用するコンテンツフラグメントモデルの有効化と定義を行います。
 feature: コンテンツフラグメント、API
 topic: ヘッドレス、コンテンツ管理
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1002'
 ht-degree: 10%
 
 ---
@@ -109,7 +109,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 
 >[!NOTE]
 >
-> **プロパティ名**&#x200B;フィールドは、Androidアプリケーションがこれらの名前をキーオフにするようにプログラムされているので、完全に一致する必要があります。
+> **プロパティ名**&#x200B;フィールドは、Androidアプリケーションがこれらの名前をキーで消すようにプログラムされているので、完全に一致する必要があります。
 
 ### イベントの説明
 
