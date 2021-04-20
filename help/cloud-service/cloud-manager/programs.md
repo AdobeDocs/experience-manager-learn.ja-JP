@@ -10,12 +10,12 @@ version: cloud-service
 kt: 6845
 thumbnail: 26313.jpg
 topic: アーキテクチャ
-role: アーキテクト、開発者、管理者
-level: 初心者
+role: Architect, Developer, Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
