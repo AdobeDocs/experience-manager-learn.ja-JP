@@ -10,12 +10,12 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ AEMでCloud Service作成者サービスとして使用するためにAdobe I/O 
 1. コマンド`aio app deploy`を実行します
 1. コマンド`aio app get-url`を実行して、AEMでCloud Service処理プロファイルとして使用するワーカーURLを取得し、このカスタムAsset computeワーカーを参照します。 プロジェクトに複数のワーカーが含まれる場合、各ワーカーの個別のURLが表示されます。
 
-Cloud Service開発環境としてのローカル開発およびAEMで別々のAsset computeデプロイメントを使用する場合、AEMへのデプロイメントは、[Stage and Production deployments](#stage-and-production)と同じ方法で管理できます。
+Cloud Service開発環境としてのローカル開発とAEMで別々のAsset computeデプロイメントを使用する場合、AEMへのデプロイメントは、[Stage and Production deployments](#stage-and-production)と同じ方法でCloud Service開発として管理できます。
 
 ## ステージと実稼働のワークスペース{#stage-and-production}
 
@@ -81,6 +81,6 @@ asset computeプロジェクトのバージョンが変更された場合、ワ�
 
 ## Workspace APIプロビジョニング{#workspace-api-provisioning}
 
-ローカル開発をサポートするために、Adobe I/O](../set-up/firefly.md)にAdobeプロジェクトFireflyプロジェクトを設定すると、新しい開発ワークスペースが作成され、__Asset compute、I/Oイベント__、__I/Oイベント管理API__&#x200B;が追加されました。[
+ローカル開発をサポートするためにAdobeプロジェクトFireflyプロジェクトをAdobe I/O](../set-up/firefly.md)に設定すると、新しい開発ワークスペースが作成され、__Asset compute、I/Oイベント__、__I/Oイベント管理API__&#x200B;が追加されました。[
 
-__Asset compute、I/Oイベント__&#x200B;および&#x200B;__I/Oイベント管理API__ APIは、ローカル開発に使用されるワークスペースにのみ明示的に追加されます。 Cloud Service環境としてAEMに統合（排他的）されるワークスペースは、APIとして明示的に追加されたこれらのAPIを&#x200B;__必要としません__、AEMではCloud Serviceとして自動的に利用できます。
+__Asset compute、I/Oイベント__&#x200B;および&#x200B;__I/Oイベント管理API__ APIは、ローカル開発に使用するワークスペースにのみ明示的に追加されます。 Cloud Service環境としてAEMに統合（排他的）されるワークスペースは、APIとして明示的に追加されたこれらのAPIを&#x200B;__必要としません__、AEMではCloud Serviceとして自動的に利用できます。
