@@ -4,15 +4,15 @@ description: Adobe Experience Managerアセットのメタデータの読み込�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: コンテンツ管理
 feature: メタデータ
-role: 管理者
-level: 中間
+role: Admin
+level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 5%
+source-wordcount: '263'
+ht-degree: 4%
 
 ---
 
