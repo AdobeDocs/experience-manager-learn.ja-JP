@@ -10,12 +10,12 @@ kt: 6044
 thumbnail: 41244.jpg
 topic: 統合
 role: Administrator
-level: 中間
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 1%
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
