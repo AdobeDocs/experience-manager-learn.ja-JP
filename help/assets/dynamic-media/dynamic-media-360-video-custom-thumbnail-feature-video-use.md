@@ -5,12 +5,12 @@ sub-product: dynamic-media
 feature: ビデオプロファイル
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '399'
 ht-degree: 7%
 
 ---
@@ -71,8 +71,8 @@ Dynamic Mediaビデオで、ビデオのカスタムサムネールを選択で�
    </tr>
    <tr>
       <td>ビデオ再生</td>
-      <td>可</td>
-      <td>可</td>
+      <td>はい</td>
+      <td>はい</td>
    </tr>
    <tr>
       <td>表示地点ナビゲーション</td>
@@ -91,13 +91,13 @@ Dynamic Mediaビデオで、ビデオのカスタムサムネールを選択で�
    </tr>
    <tr>
       <td>HTML5 Player</td>
-      <td>可</td>
-      <td>可</td>
+      <td>はい</td>
+      <td>はい</td>
    </tr>
    <tr>
       <td>ソーシャルシェアのオプション</td>
-      <td>可</td>
-      <td>不可</td>
+      <td>はい</td>
+      <td>いいえ</td>
    </tr>
 </tbody>
 </table>
