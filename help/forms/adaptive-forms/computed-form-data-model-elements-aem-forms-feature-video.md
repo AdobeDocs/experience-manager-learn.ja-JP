@@ -12,12 +12,12 @@ activity: setup
 version: 6.4,6.5
 discoiquuid: b7b6d05b-7378-4028-add3-4f2a03a7455d
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
