@@ -10,13 +10,13 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 topic: 統合、開発
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 3%
+source-wordcount: '442'
+ht-degree: 2%
 
 ---
 
@@ -106,7 +106,7 @@ packages:
 
 ## manifest.ymlを検証しています
 
-生成されたAsset compute`manifest.yml`が更新されたら、ローカル開発ツールを実行し、更新された`manifest.yml`設定で開始が正常に動作することを確認します。
+生成されたAsset compute`manifest.yml`が更新されたら、ローカル開発ツールを実行し、更新された`manifest.yml`設定で開始が正常に実行されることを確認します。
 
 asset computeプロジェクト用の開始Asset compute開発ツールを作成するには：
 
