@@ -3,15 +3,15 @@ title: AEM Sitesでのページプロパティの拡張
 description: Adobe Experience Manager Sitesのページプロパティのメタデータフィールドを拡張する方法を説明します。 このビデオでは、Sling Resource Mangerの機能を使用してこれを実現する最も効果的な方法について説明します。
 topic: 開発
 feature: コアコンポーネント
-role: デベロッパー
+role: Developer
 version: cloud-service
 kt: 243
 thumbnail: 25173.jpg
 translation-type: tm+mt
 source-git-commit: ee63be85f124bd547fcf566efe38f4af74681b21
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 8%
+source-wordcount: '94'
+ht-degree: 7%
 
 ---
 
