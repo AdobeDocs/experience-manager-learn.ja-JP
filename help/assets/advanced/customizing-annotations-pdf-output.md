@@ -4,13 +4,13 @@ description: AEM Assets形式と、PDFに出力する際のスタイルは、AEM
 feature: コラボレーション
 version: 6.3, 6.4, 6.5
 topic: コラボレーション
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 4%
+source-wordcount: '62'
+ht-degree: 3%
 
 ---
 
