@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
 translation-type: tm+mt
-source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
+source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 31%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 31%
       + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
    + Adobe SignとAEM Forms{#forms-and-sign}
+      + [概要](./forms/forms-and-sign/introduction.md)
       + [Adobe SignAPIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
