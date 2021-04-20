@@ -1,6 +1,6 @@
 ---
 title: 外部アプリケーションからのCloud ServiceとしてのAEMへの認証
-description: ローカル開発アクセストークンとサービス資格情報を使用して、HTTP経由のCloud Serviceとして、外部アプリケーションがAEMをプログラムで認証し、やり取りする方法を調べます。
+description: ローカル開発アクセストークンとサービス資格情報を使用して、外部アプリケーションがAEMをHTTP経由のCloud Serviceとしてプログラム的に認証し、やり取りする方法を調べます。
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
@@ -10,13 +10,13 @@ audience: developer
 kt: 6785
 thumbnail: 330460.jpg
 topic: ヘッドレス、統合
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 2%
+source-wordcount: '588'
+ht-degree: 3%
 
 ---
 
@@ -52,17 +52,17 @@ Node.jsアプリケーションの実行フローは次のとおりです。
    + AEMにCloud Serviceとしてアクセスするために必要な資格情報を提供するファイルへのローカルパス(`file`)
 1. AEMへの認証に使用されるアクセストークンは、コマンドラインパラメータ`file`で指定されたJSONファイルから得られます
 
-   a.ローカルでない開発に使用されたサービス資格情報がJSONファイル(`file`)に含まれている場合、アクセストークンはAdobeIMS APIから取得されます
+   a.非ローカル開発に使用されるサービス資格情報がJSONファイル(`file`)に指定されている場合、アクセストークンはAdobeIMS APIから取得されます
 1. このアクセストークンを使用してAEMにアクセスし、コマンドラインパラメータ`folder`で指定されたリスト内のすべてのアセットにします
 1. フォルダー内の各アセットに対して、アプリケーションは、コマンドラインパラメーター`propertyName`と`propertyValue`で指定されたプロパティ名と値に基づいてメタデータを更新します
 
 この例のアプリケーションはNode.jsですが、これらのインタラクションは異なるプログラミング言語を使用して開発され、他の外部システムから実行できます。
 
-## 現地開発アクセストークン
+## ローカル開発アクセストークン
 
-特定のAEM用に、Cloud Service環境としてローカル開発アクセストークンが生成され、作成者および発行サービスへのアクセスが提供されます。  これらのアクセストークンは一時的なもので、AEMとHTTPを介してやり取りする外部アプリケーションまたはシステムの開発時にのみ使用されます。 開発者は、適切なサービス資格情報を取得して管理する必要がなく、一時的なアクセストークンをすばやく簡単に自己生成して、統合を開発できます。
+ローカル開発アクセストークンは、Cloud Service環境としての特定のAEM用に生成され、作成者および発行サービスへのアクセスを提供します。  これらのアクセストークンは一時的なもので、AEMとHTTPを介してやり取りする外部アプリケーションまたはシステムの開発時にのみ使用されます。 開発者は、適切なサービス資格情報を取得して管理する必要がなく、一時的なアクセストークンをすばやく簡単に自己生成して、統合を開発できます。
 
-+ [ローカル開発アクセストークンの使用方法](./local-development-access-token.md)
++ [ローカル開発アクセストークンの使い方](./local-development-access-token.md)
 
 ## サービス資格情報
 
