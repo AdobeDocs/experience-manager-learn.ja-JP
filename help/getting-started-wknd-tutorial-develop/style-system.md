@@ -13,13 +13,13 @@ mini-toc-levels: 1
 thumbnail: 30386.jpg
 feature: コアコンポーネント、スタイルシステム
 topic: コンテンツ管理、開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2005'
-ht-degree: 11%
+source-wordcount: '2003'
+ht-degree: 12%
 
 ---
 
@@ -85,7 +85,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
 
-[スタイルシステムに関する詳細なドキュメントは、](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)を参照してください。 また、スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための[テクニカルビデオもあります。
+[スタイルシステムに関する詳細なドキュメントは、](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=ja)を参照してください。 また、スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための[テクニカルビデオもあります。
 
 ## 下線のスタイル — タイトル{#underline-style}
 
