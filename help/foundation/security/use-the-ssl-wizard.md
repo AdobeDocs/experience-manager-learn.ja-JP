@@ -10,12 +10,12 @@ doc-type: technical video
 uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
 discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 topic: セキュリティ
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '214'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience ManagerのSSLセットアップウィザードを使用して�
 
 ## 秘密鍵と自己署名証明書のダウンロード
 
-次のzipファイルには、ローカルホストでのAEM SSLの設定に必要な[!DNL DER]ファイルと[!DNL CRT]ファイルが含まれています。これは、ローカル開発を目的としたファイルです。
+次のzipファイルには、AEM SSLをlocalhostに設定するために必要な[!DNL DER]ファイルと[!DNL CRT]ファイルが含まれています。これらのファイルはローカル開発目的でのみ使用されます。
 
 [!DNL DER]ファイルと[!DNL CERT]ファイルは便宜上提供され、下の「秘密鍵と自己署名証明書の生成」の手順に従って生成されます。
 
