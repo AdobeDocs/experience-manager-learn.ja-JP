@@ -58,11 +58,11 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
    </td>   
    <td>
       <a href="./local-development-environment/overview.md">
-      <img alt="ローカル開発環境のセットアップチュートリアル" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      <img alt="ローカル開発環境の設定のチュートリアル" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>ローカル開発環境のセットアップチュートリアル</strong>
+         <strong>ローカル開発環境の設定のチュートリアル</strong>
          </a>
       </div>
       <p>
