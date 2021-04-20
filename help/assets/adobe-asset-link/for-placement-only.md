@@ -7,12 +7,12 @@ version: cloud-service
 kt: 4916
 thumbnail: 34259.jpg
 topic: コンテンツ管理
-role: 開業医
-level: 中間
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '92'
 ht-degree: 6%
 
 ---
