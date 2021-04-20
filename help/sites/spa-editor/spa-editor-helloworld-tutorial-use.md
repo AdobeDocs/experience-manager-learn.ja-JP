@@ -9,12 +9,12 @@ doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3176'
+source-wordcount: '3174'
 ht-degree: 4%
 
 ---
@@ -91,7 +91,7 @@ SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は�
 
 ![アーティファクトとデプロイメントの概要](assets/spa-editor-helloworld-tutorial-use/spa-artifact-deployment.png)
 
-*SPAの開発はAEMの開発において1つの足があり、もう1つは独自にSPAの開発を可能にし、（ほとんどは）AEMにとらわれないようにします。*
+*SPAの開発はAEMの開発において1つの足があり、もう1つは独自にSPAの開発を可能にし、（ほとんどは）AEMにとらわれない方法での開発を可能にします。*
 
 このチュートリアルの目標は、We.Retailジャーナルアプリを新しいコンポーネントで拡張することです。 Web.Retailジャーナルアプリのソースコードをダウンロードし、ローカルAEMに展開することで開始します。
 
@@ -545,7 +545,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    }
    ```
 
-1. `HelloWorld.js`を再度開き、インポート文の下で更新して`HelloWorld.css`が必要になるようにします。
+1. `HelloWorld.js`を再度開き、インポート文の下で更新して`HelloWorld.css`を必要とします：
 
    ```js
    import React, {Component} from 'react';
