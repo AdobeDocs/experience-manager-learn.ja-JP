@@ -4,14 +4,14 @@ description: プロジェクトマスターは、AEMプロジェクトを使用�
 version: 6.4, 6.5, cloud-service
 topic: コンテンツ管理、コラボレーション
 feature: プロジェクト
-level: 中間
-role: 開業医
+level: Intermediate
+role: Business Practitioner
 kt: 256
 thumbnail: 17740.jpg
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
