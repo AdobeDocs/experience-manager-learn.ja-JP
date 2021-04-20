@@ -12,12 +12,12 @@ uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
 topic: コンテンツ管理
-role: 開業医
-level: 初心者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '153'
 ht-degree: 2%
 
 ---
