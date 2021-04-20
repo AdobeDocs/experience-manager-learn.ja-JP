@@ -12,18 +12,18 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 topic: コンテンツ管理、開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3969'
+source-wordcount: '3967'
 ht-degree: 20%
 
 ---
 
 
-# カスタムコンポーネント{#custom-component}
+# カスタムコンポーネント {#custom-component}
 
 このチュートリアルでは、ダイアログで作成されたコンテンツを表示するAEM Bylineコンポーネントのエンドツーエンドの作成について説明し、Slingモデルの開発を進め、コンポーネントのHTLを埋め込むビジネスロジックをカプセル化します。
 
@@ -369,7 +369,7 @@ Byline Slingモデルは、AEMが提供する複数のJava APIに依存します
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk)には、AEMで公開されているパブリックJava APIがすべて含まれています。 `aem-sdk-api`は、このプロジェクトの構築時にデフォルトで使用されます。 バージョンは、`aem-guides-wknd/pom.xml`にあるプロジェクトのルートにある親リアクタのpomに保持されます。
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja#building-for-the-sdk)には、AEMで公開されているパブリックJava APIがすべて含まれています。 `aem-sdk-api`は、このプロジェクトの構築時にデフォルトで使用されます。 バージョンは、`aem-guides-wknd/pom.xml`にあるプロジェクトのルートにある親リアクタのpomに保持されます。
 
 1. `uber-jar` - **AEM 6.5/6.4のみ**
 
