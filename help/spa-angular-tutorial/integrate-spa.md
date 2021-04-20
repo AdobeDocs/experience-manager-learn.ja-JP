@@ -11,12 +11,12 @@ audience: developer
 kt: 5310
 thumbnail: 5310-spa-angular.jpg
 topic: SPA
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2205'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ angularで記述された単一ページアプリ(SPA)のソースコードを�
 ## 目的
 
 1. SPAプロジェクトがAEMとクライアント側ライブラリを統合する方法を理解します。
-2. ローカル開発サーバーを専用のフロントエンド開発に使用する方法を説明します。
+2. 専用のフロントエンド開発にローカル開発サーバを使用する方法を学びます。
 3. AEM JSONモデルAPIに対する開発に&#x200B;**プロキシ**&#x200B;と静的&#x200B;**モック**&#x200B;ファイルの使用を調べます。
 
 ## 作成する内容
