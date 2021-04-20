@@ -5,12 +5,12 @@ description: Adobe Experience Managerのエクスペリエンスフラグメン�
 seo-description: Adobe Experience ManagerのエクスペリエンスフラグメントとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を示すエンドツーエンドのチュートリアルです。
 feature: エクスペリエンスフラグメント
 topic: パーソナライズ機能
-role: デベロッパー
-level: 中間
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 1%
 
 ---
