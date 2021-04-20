@@ -10,13 +10,13 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 topic: 統合
-role: デベロッパー
-level: 中級、経験豊富
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2037'
-ht-degree: 5%
+source-wordcount: '2034'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 5%
 
 このチュートリアルを完了するには、**ローカル開発環境**&#x200B;が必要です。 スクリーンショットとビデオは、macOSで実行されているCloud ServiceSDKとしてAEMを使用してキャプチャされます。 コマンドとコードは、特に断りのない限り、ローカルのオペレーティングシステムとは独立しています。
 
-**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用してローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service は初めてですか？** AEMをCloud ServiceSDKとして使用するローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
 **AEM 6.5を初めて使用する場合** ローカル開発環境を設定するには、 [次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
