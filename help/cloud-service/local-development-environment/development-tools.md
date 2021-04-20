@@ -1,6 +1,6 @@
 ---
 title: Cloud Service開発としてAEM用の開発ツールを設定する
-description: AEMに対してローカルで開発するために必要なすべてのベースラインツールを備えたローカル開発マシンをセットアップします。
+description: AEMに対してローカルで開発するために必要なすべての基準ツールを備えたローカル開発マシンをセットアップします。
 feature: 開発者ツール
 topics: development
 version: cloud-service
@@ -10,12 +10,12 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1369'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,7 @@ Homebrewを使用している場合は、次のセクションの&#x200B;__Insta
 
 >[!TIP]
 >
->[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ベースのAEMプロジェクトは、ビルド時にNode.jsの独立したバージョンをインストールします。ローカル開発システムのバージョンをAEM MavenプロジェクトのReactor pom.xmlで指定されたNode.jsとnpmのバージョンと同期（または近接）させておくことをお勧めします。
+>[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ベースのAEMプロジェクトは、ビルド時にNode.jsの独立したバージョンをインストールします。AEM MavenプロジェクトのReactor pom.xmlで指定されているNode.jsとnpmバージョンを、ローカル開発システムのバージョンの同期（またはそれに近い）状態に保つことをお勧めします。
 >
 >Node.jsとnpmのビルドバージョンの場所については、次の例[AEMプロジェクトリアクタpom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118)を参照してください。
 
