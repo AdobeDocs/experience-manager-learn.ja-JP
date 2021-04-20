@@ -10,12 +10,12 @@ version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
 topic: 統合
-role: 開業医
-level: 中間
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '195'
 ht-degree: 5%
 
 ---
