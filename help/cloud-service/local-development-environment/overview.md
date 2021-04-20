@@ -1,6 +1,6 @@
 ---
 title: Cloud ServiceとしてのAEMのローカル開発環境
-description: Adobe Experience Manager(AEM)現地開発環境の概要
+description: Adobe Experience Manager(AEM)ローカル開発環境の概要
 feature: 開発者ツール
 topics: development
 version: cloud-service
@@ -10,12 +10,12 @@ audience: developer
 kt: 3290
 thumbnail: 32565.jpg
 topic: 開発
-role: デベロッパー
-level: 初心者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '480'
 ht-degree: 2%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 2%
 
 # ローカル開発環境の設定
 
-このチュートリアルでは、AEMをCloud ServiceSDKとして使用して、Adobe Experience Manager(AEM)用のローカル開発環境をセットアップする手順を説明します。 AEMプロジェクトの開発、構築、コンパイルに必要な開発ツールや、ローカルの実行時に開発者が新機能をローカルで検証し、AEMにCloud ServiceとしてAdobeCloud Managerを介して展開できるようにするツールが含まれます。
+AEMをCloud ServiceSDKとして使用したAdobe Experience Manager(AEM)用のローカル開発環境のセットアップに関する手順を説明します。 AEMプロジェクトの開発、構築、コンパイルに必要な開発ツールや、ローカルの実行時に開発者が新機能をローカルで検証し、AEMにCloud ServiceとしてAdobeCloud Managerを介して展開できるようにするツールが含まれます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32565/?quality=12&learn=on)
 
-![Cloud Serviceのローカル開発環境テクノロジスタックとしてのAEM](./assets/overview/aem-sdk-technology-stack.png)
+![Cloud Serviceローカル開発環境スタックとしてのAEM](./assets/overview/aem-sdk-technology-stack.png)
 
 AEMのローカル開発環境は、次の3つの論理グループに分類できます。
 
@@ -35,7 +35,7 @@ AEMのローカル開発環境は、次の3つの論理グループに分類で�
 + AEM AuthorサービスとPublishサービスのローカルバージョンをローカルで実行する&#x200B;__Local AEM Runtime__。
 + Apache HTTP Webサーバーとディスパッチャーのローカルバージョンを実行する&#x200B;__Local Dispatcher Runtime__。
 
-このチュートリアルでは、上の図で強調表示されている項目をインストールして設定する方法を紹介し、AEMの開発に安定したローカル開発環境を提供します。
+このチュートリアルでは、AEM開発用の安定したローカル開発環境を提供する、上の図で強調表示されている項目のインストールおよび設定方法について説明します。
 
 ## ファイルシステムの構成
 
@@ -64,7 +64,7 @@ AEMプロジェクトは、Cloud Managerを介してAEMにCloud Serviceとして
 
 ## ローカルAEMランタイム
 
-Cloud ServiceSDKとしてのAEMは、AEMのローカルバージョンを実行する[!DNL QuickStart Jar]を提供します。 [!DNL QuickStart Jar]は、AEM Author ServiceまたはAEM Publish Serviceをローカルで実行するために使用できます。 [!DNL QuickStart Jar]はローカルな開発経験を提供しますが、AEMでCloud Serviceとして利用できる機能の一部が[!DNL QuickStart Jar]に含まれているわけではありません。
+Cloud ServiceSDKとしてのAEMは、AEMのローカルバージョンを実行する[!DNL QuickStart Jar]を提供します。 [!DNL QuickStart Jar]は、AEM Author ServiceまたはAEM Publish Serviceをローカルで実行するために使用できます。 [!DNL QuickStart Jar]はローカル開発を提供しますが、AEMでCloud Serviceとして利用できる機能の一部は[!DNL QuickStart Jar]に含まれていません。
 
 チュートリアルのこの節では、次の方法を示します。
 
