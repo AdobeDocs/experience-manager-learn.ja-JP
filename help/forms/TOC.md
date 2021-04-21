@@ -6,9 +6,9 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 breadcrumb-title: AEM Forms チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '952'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 6%
 
 + アダプティブフォーム {#adaptive-forms}
    + [WindowsでのAEM Formsのインストール](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+   + [Linuxでの32ビットパッケージのインストール](adaptive-forms/installing-aem-form-on-linux.md)
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsのカプチャ](adaptive-forms/forms-captcha-feature-video-use.md)
@@ -165,11 +166,11 @@ ht-degree: 6%
    + [JSONスキーマに基づくフォームの作成](querying-submitted-data/part1.md)
    + [送信データの保存](querying-submitted-data/part2.md)
    + [JSONスキーマの格納](querying-submitted-data/part3.md)
-   + [送信されたデータのクエリ](querying-submitted-data/part4.md)
+   + [送信データのクエリ](querying-submitted-data/part4.md)
 + Formsポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [部品1 — カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [パート2 — カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
-+ AEM Formsとマーケット人{#aem-forms-with-marketo}
++ AEM FormsとMarketo{#aem-forms-with-marketo}
    + [第1部 — 概要](aem-forms-with-marketo/part1.md)
    + [パート2 — カスタム認証](aem-forms-with-marketo/part2.md)
    + [パート3 — データソース](aem-forms-with-marketo/part3.md)
