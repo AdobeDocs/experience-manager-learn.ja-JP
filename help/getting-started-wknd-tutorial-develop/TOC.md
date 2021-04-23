@@ -10,10 +10,10 @@ user-guide-description: AEM を初めて使う開発者向けに作られた、�
 breadcrumb-title: AEM Sites WKND チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 66%
+source-wordcount: '59'
+ht-degree: 64%
 
 ---
 
@@ -21,10 +21,12 @@ ht-degree: 66%
 # AEM Sites の概要 - WKND チュートリアル {#getting-started-wknd-tutorial-develop}
 
 + [WKNDチュートリアルの概要](overview.md)
-+ [1 — プロジェクト設定](project-setup.md)
-+ [2 — コンポーネントの基本](component-basics.md)
-+ [3 — ページとテンプレート](pages-templates.md)
-+ [4 — クライアント側ライブラリ](client-side-libraries.md)
-+ [5 — スタイルシステム](style-system.md)
-+ [6 — カスタムコンポーネント](custom-component.md)
-+ [7 — ユニットテスト](unit-testing.md)
++ プロジェクトアーキタイプ{#project-archetype}
+   + [概要](./project-archetype/overview.md)
+   + [1 — プロジェクト設定](./project-archetype/project-setup.md)
+   + [2 — コンポーネントの基本](./project-archetype/component-basics.md)
+   + [3 — ページとテンプレート](./project-archetype/pages-templates.md)
+   + [4 — クライアント側ライブラリ](./project-archetype/client-side-libraries.md)
+   + [5 — スタイルシステム](./project-archetype/style-system.md)
+   + [6 — カスタムコンポーネント](./project-archetype/custom-component.md)
+   + [7 — ユニットテスト](./project-archetype/unit-testing.md)
