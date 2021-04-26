@@ -1,7 +1,7 @@
 ---
 title: 開発者コンソール
 description: AEMCloud Serviceは、実行中のAEMサービスの様々な詳細を表示する各環境に対して開発者コンソールを提供します。この詳細はデバッグに役立ちます。
-feature: Developer Tools
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1351'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Developer Consoleにアクセスして使用するには、[AdobeのAdmin Consol
 1. Cloud MangerおよびAEMにCloud Service製品として影響を与えたAdobe組織が、Adobe組織の切り替えボタンでアクティブであることを確認します。
 1. 開発者は、Cloud Manager製品の&#x200B;__開発者 —Cloud Service__&#x200B;製品プロファイルのメンバーである必要があります。
    + このメンバーシップが存在しない場合、開発者はDeveloper Consoleにログインできません。
-1. 開発者は、AEM Authorおよび発行サービスの&#x200B;__AEM Administrators__&#x200B;製品プロファイルのメンバーである必要があります。
+1. 開発者は、AEM作成者または発行の&#x200B;__AEMユーザー__&#x200B;または&#x200B;__AEM管理者__&#x200B;製品プロファイルのメンバーである必要があります。
    + このメンバーシップが存在しない場合、[status](#status)ダンプは401 Unauthorizedエラーでタイムアウトします。
 
 ### Developer Consoleへのアクセスのトラブルシューティング
