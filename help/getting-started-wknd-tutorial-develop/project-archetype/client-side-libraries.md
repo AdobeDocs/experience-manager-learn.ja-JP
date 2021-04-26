@@ -2,19 +2,16 @@
 title: クライアント側ライブラリとフロントエンドワークフロー
 description: Adobe Experience Manager(AEM)サイト実装のCSSとJavaScriptをデプロイおよび管理するために、クライアント側ライブラリまたはclientlibを使用する方法について説明します。 このチュートリアルでは、WebPackプロジェクトであるui.frontendモジュールをエンドツーエンドのビルドプロセスに統合する方法についても説明します。
 sub-product: サイト
-topics: front-end-development,responsive
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4083
-thumbnail: 30359.jpg
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: コアコンポーネント、AEM プロジェクトアーキタイプ
 topic: コンテンツ管理、開発
 role: Developer
 level: Beginner
+kt: 4083
+thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '3299'
 ht-degree: 10%
