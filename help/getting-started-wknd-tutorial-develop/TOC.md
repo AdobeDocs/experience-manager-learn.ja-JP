@@ -10,10 +10,10 @@ user-guide-description: AEM を初めて使う開発者向けに作られた、�
 breadcrumb-title: AEM Sites WKND チュートリアル
 index: y
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 64%
+source-wordcount: '76'
+ht-degree: 60%
 
 ---
 
@@ -30,3 +30,8 @@ ht-degree: 64%
    + [5 — スタイルシステム](./project-archetype/style-system.md)
    + [6 — カスタムコンポーネント](./project-archetype/custom-component.md)
    + [7 — ユニットテスト](./project-archetype/unit-testing.md)
++ サイトテンプレート {#site-template}
+   + [1.サイトの作成](./site-template/create-site.md)
+   + [2.コンテンツの作成と変更の発行](./site-template/author-content-publish.md)
+   + [ 3.ページテンプレート](./site-template/page-templates.md)
+   + [4.主題設定](./site-template/theming.md)
