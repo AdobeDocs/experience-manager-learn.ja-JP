@@ -210,9 +210,10 @@ _Java 8とJava 11の両方がシステムにインストールされている場
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-2.テストファイルを区別する    ユニットテストファイル`BylineImplTest.java`の`Test`サフィックスは、次の操作を行うための規則です。
-1.テストファイル_for_ `BylineImpl.java`として簡単に識別できます。
-2.また、テストファイル_と_&#x200B;を区別し、テスト対象のクラス`BylineImpl.java`を区別します。
+   ユニットテストファイル`BylineImplTest.java`の`Test`サフィックスは、次の操作を行うための規則です。
+
+   1.テストファイル_for_ `BylineImpl.java`として簡単に識別できます。
+   2.また、テストファイル_と_&#x200B;を区別し、テスト対象のクラス`BylineImpl.java`を区別します。
 
 ## BylineImplTest.java のレビュー {#reviewing-bylineimpltest-java}
 
