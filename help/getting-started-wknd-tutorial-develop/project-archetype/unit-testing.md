@@ -14,9 +14,9 @@ topic: コンテンツ管理、開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3016'
 ht-degree: 28%
 
 ---
@@ -212,8 +212,10 @@ _Java 8とJava 11の両方がシステムにインストールされている場
 
    ユニットテストファイル`BylineImplTest.java`の`Test`サフィックスは、次の操作を行うための規則です。
 
-   1.テストファイル_for_ `BylineImpl.java`として簡単に識別できます。
-   2.また、テストファイル_と_&#x200B;を区別し、テスト対象のクラス`BylineImpl.java`を区別します。
+   1. _`BylineImpl.java`のテストファイル_&#x200B;として簡単に識別できます。
+   1. しかし、テストファイル&#x200B;_と_&#x200B;を`BylineImpl.java`と区別して、テストするクラスを
+
+
 
 ## BylineImplTest.java のレビュー {#reviewing-bylineimpltest-java}
 
