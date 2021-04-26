@@ -16,10 +16,10 @@ topic: コンテンツ管理、開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 17%
+source-wordcount: '632'
+ht-degree: 10%
 
 ---
 
@@ -34,11 +34,19 @@ Adobe Experience Manager(AEM)を初めて使用する開発者向けのマルチ
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## このチュートリアルについて {#about-tutorial}
+## サイトプロジェクトを開始するためのオプション
 
-WKND は、いくつかの海外の都市のナイトライフ、アクティビティ、およびイベントに焦点を当てた架空のオンラインマガジンとブログです。
+AEM Sites事業を始めるには2つの基本的なアプローチがある。
 
-### Adobe XDUIキット
+**AEMプロジェクトアーキタイプ** - Mavenテンプレートを使用して最小限のAEMプロジェクトを生成することで、AEM開発に対する従来のアプローチです。これは、大量のカスタマイズを予想するCloud Serviceプロジェクトとして、AEM 6.5/6.4のプロジェクトとAEMに推奨されるアプローチです。 このチュートリアルでは、AEMの開発について詳しく説明します。
+
+[AEM Project Archetypeとのチュートリアルの開始](./project-archetype/overview.md)
+
+**AEMサイトテンプレート**  — 定義済みのサイトテンプレートを使用してAEMサイトを生成する低コードのアプローチです。すぐに使用できるコンポーネントとテンプレートを使用して、サイトをすばやく起動し、実行します。 テーマ設定ワークフローを使用して、CSSとJavaScriptのみを使用してブランド固有のスタイルとカスタマイズを適用します。 新しいプロジェクトおよび開発者にお勧めします。 現在、Cloud ServiceとしてAEMでのみ使用できます。
+
+[サイトテンプレートを使用したチュートリアルの開始](./site-template/create-site.md)
+
+## Adobe XDUIキット
 
 このチュートリアルを現実のシナリオに近づけるために、Adobeの有能なUXデザイナーが、[Adobe XD](https://www.adobe.com/products/xd.html)を使ってサイトのモックアップを作成しました。 チュートリアルの過程で、さまざまなデザインが完全にオーサリング可能なAEMサイトに実装されます。 WKND地域の美しいデザインを作った&#x200B;**ロレンツォ・ブオシ**&#x200B;と&#x200B;**キリアン・アメンデーション・オラ**&#x200B;に感謝。
 
@@ -63,4 +71,4 @@ Adobe Stockでは、1億4000万を超える高品質でロイヤリティフリ�
 
 ## 次の手順 {#next-steps}
 
-何を待ってる！!チュートリアルを開始し、AEMプロジェクトアーキタイプ](./project-archetype/overview.md)を使用して新しいAdobe Experience Managerプロジェクトを[生成する方法を学びます。
+何を待ってる！!AEMプロジェクトアーキタイプ](./project-archetype/overview.md)を使用して新しいAdobe Experience Managerプロジェクトを[生成する方法、または[サイトテンプレート](./site-template/create-site.md)を使用してサイトを作成する方法を説明します。
