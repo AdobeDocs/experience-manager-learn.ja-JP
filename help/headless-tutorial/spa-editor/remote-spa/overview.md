@@ -8,9 +8,9 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '694'
 ht-degree: 5%
 
 ---
@@ -67,35 +67,37 @@ SPA editorを使用して、既存のReact-based（またはNext.js）リモー�
 
 WKND App SPAおよびAEM SPA Editorを15分で起動および実行できます。 この高速設定では、チュートリアルの最後の状態に直接進み、AEM SPAエディタでSPAのオーサリングを試すことができます。
 
-+ [クイックセットアップ](./quick-setup.md)
++ [クイックセットアップの詳細](./quick-setup.md)
 
-## SPAエディタ用のAEMの設定
+## 1. SPAエディタ用のAEMの設定
 
 SPAをSPA editorと統合するには、AEMの設定が必要です。 これらの設定は、AEMプロジェクトで管理および展開されます。 この章では、設定が必要となるものと、設定を定義する方法について説明します。
 
-+ [AEM の設定](./aem-configure.md)
++ [SPA Editor用のAEMの設定方法を学びます。](./aem-configure.md)
 
-## BootstrapSPA
+## 2.SPAのBootstrap
 
 AEM SPAエディタでSPAをオーサリングコンテキストに統合するには、SPAにいくつかの追加が必要です。
 
-+ [SPA for SPA EditorのBootstrap](./spa-bootstrap.md)
++ [AEM SPAエディター用SPAのブートストラップ方法を学習します。](./spa-bootstrap.md)
 
-## 編集可能な固定コンポーネント
+## 3.編集可能な固定コンポーネント
 
 まず、編集可能な「固定コンポーネント」をSPAに追加します。 この例では、開発者がSPA内に特定の編集可能コンポーネントを配置する方法を示します。 作成者はコンポーネントのコンテンツを変更できますが、コンポーネントを削除したり、配置、位置、サイズを変更したりすることはできません。
 
-+ [編集可能な固定コンポーネント](./spa-fixed-component.md)
++ [編集可能な固定コンポーネントについて学習します。](./spa-fixed-component.md)
 
-## 編集可能なコンテナコンポーネント
+## 4.編集可能なコンテナコンポーネント
 
 次に、編集可能な「コンテナコンポーネント」をSPAに追加します。 これは、開発者がSPAにコンテナコンポーネントを配置する方法を示します。 コンテナコンポーネントを使用すると、作成者は許可されたコンポーネントをその中に配置し、コンポーネントのレイアウトを調整できます。
 
-## 動的ルートと編集可能コンポーネント
++ [編集可能なコンテナコンポーネントについて説明します](./spa-container-component.md)
+
+## 5.動的ルートと編集可能コンポーネント
 
 最後に、前章で説明した概念を使用して、動的ルートを設定します。ルートのパラメーターに基づいて異なるコンテンツを表示するルート。 次に、プログラムによって駆動され、派生するルートのコンテンツをAEM SPA Editorを使用して作成する方法を示します。
 
-+ [ダイナミックルートと編集可能コンポーネント](./spa-dynamic-routes.md)
++ [動的ルートと編集可能コンポーネントについて学習します。](./spa-dynamic-routes.md)
 
 ## その他のリソース
 
