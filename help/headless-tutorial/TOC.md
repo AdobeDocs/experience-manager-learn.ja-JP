@@ -11,7 +11,7 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 25%
@@ -40,12 +40,12 @@ ht-degree: 25%
 + SPAエディタ{#spa-editor}
    + リモートSPA{#remote-spa}
       + [概要](./spa-editor/remote-spa/overview.md)
-      + [1 — クイックセットアップ](./spa-editor/remote-spa/quick-setup.md)
-      + [2 - AEMの設定](./spa-editor/remote-spa/aem-configure.md)
-      + [3 - SPAのBootstrap](./spa-editor/remote-spa/spa-bootstrap.md)
-      + [4 — 固定コンポーネント](./spa-editor/remote-spa/spa-fixed-component.md)
-      + [5 -コンテナコンポーネント](./spa-editor/remote-spa/spa-container-component.md)
-      + [6 — 動的ルート](./spa-editor/remote-spa/spa-dynamic-routes.md)
+      + [クイックセットアップ](./spa-editor/remote-spa/quick-setup.md)
+      + [1 - AEMの設定](./spa-editor/remote-spa/aem-configure.md)
+      + [2 - SPAのBootstrap](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [3 — 固定コンポーネント](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [4 -コンテナコンポーネント](./spa-editor/remote-spa/spa-container-component.md)
+      + [5 — 動的ルート](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + トークンベースの認証{#authentication}
    + [概要](./authentication/overview.md)
    + [1 -ローカル開発アクセストークン](./authentication/local-development-access-token.md)
