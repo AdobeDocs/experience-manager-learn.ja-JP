@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてAEM用の開発ツールを設定する
 description: AEMに対してローカルで開発するために必要なすべての基準ツールを備えたローカル開発マシンをセットアップします。
-feature: Developer Tools
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1426'
 ht-degree: 4%
 
 ---
 
 
 # 開発ツールのセットアップ
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_devtools"
+>title="開発ツールのセットアップ"
+>abstract="Adobe Experience Manager(AEM)の開発には、開発者用マシンに最小限の開発ツールをインストールしてセットアップする必要があります。 これらのツールには、Java、Maven、Adobe I/OCLI、開発IDEなどが含まれます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開発の基本"
 
 Adobe Experience Manager(AEM)の開発には、開発者用マシンに最小限の開発ツールをインストールしてセットアップする必要があります。 これらのツールは、AEMプロジェクトの開発と構築をサポートしています。
 
