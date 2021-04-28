@@ -1,7 +1,7 @@
 ---
 title: Cloud ServiceとしてのAEMのローカル開発環境
 description: Adobe Experience Manager(AEM)ローカル開発環境の概要
-feature: Developer Tools
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: article
@@ -9,19 +9,26 @@ activity: troubleshoot
 audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 2%
+source-wordcount: '549'
+ht-degree: 3%
 
 ---
 
 
 # ローカル開発環境の設定
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_overview"
+>title="概要"
+>abstract="AEM用のローカル開発環境をCloud Serviceとして設定するには、AEMプロジェクトの開発、構築、コンパイルに必要な開発ツールに加え、ローカル実行時に開発者が新機能を迅速に検証し、AEMをAdobeCloud Manager経由でCloud Serviceにデプロイします。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開発の基本"
 
 AEMをCloud ServiceSDKとして使用したAdobe Experience Manager(AEM)用のローカル開発環境のセットアップに関する手順を説明します。 AEMプロジェクトの開発、構築、コンパイルに必要な開発ツールや、ローカルの実行時に開発者が新機能をローカルで検証し、AEMにCloud ServiceとしてAdobeCloud Managerを介して展開できるようにするツールが含まれます。
 
