@@ -1,7 +1,7 @@
 ---
 title: Cloud Service開発としてのAEM用のローカルAEMランタイムの設定
 description: AEMをCloud ServiceSDKのQuickstart Jarとして使用して、Local AEM Runtimeをセットアップします。
-feature: Developer Tools
+feature: 開発者ツール
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 2%
+source-wordcount: '1734'
+ht-degree: 3%
 
 ---
 
 
 # ローカルAEM Runtimeのセットアップ
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_aemruntime"
+>title="ローカルAEMランタイム"
+>abstract="Adobe Experience Manager(AEM)は、AEMをCloud ServiceSDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定、コンテンツをソース管理にコミットする前に、カスタムコード、設定、コンテンツをデプロイしてテストし、Cloud Service環境としてAEMにデプロイできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service の SDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Cloud ServiceSDKとしてAEMをダウンロードする"
 
 Adobe Experience Manager(AEM)は、AEMをCloud ServiceSDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定、コンテンツをソース管理にコミットする前に、カスタムコード、設定、コンテンツをデプロイしてテストし、Cloud Service環境としてAEMにデプロイできます。
 
