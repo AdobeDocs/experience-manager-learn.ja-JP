@@ -2,7 +2,7 @@
 title: Cloud Service開発としてのAEM用のディスパッチャーツールの設定
 description: AEM SDKのディスパッチャーツールは、Dispatcherをローカルに簡単にインストール、実行、トラブルシューティングできるようにして、Adobe Experience Manager(AEM)プロジェクトのローカル開発を促進します。
 sub-product: 基礎
-feature: Dispatcher, Developer Tools
+feature: ディスパッチャー、開発者ツール
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,19 +10,26 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1570'
-ht-degree: 1%
+source-wordcount: '1639'
+ht-degree: 2%
 
 ---
 
 
 # ローカルディスパッチャーツールの設定
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_dispatcher"
+>title="ローカルディスパッチャーツール"
+>abstract="ディスパッチャーは、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発の設定の一部にする必要があります。 Cloud ServiceSDKとしてのAEMには、推奨されるディスパッチャーツールバージョンが含まれており、これにより、ディスパッチャーをローカルで設定、検証、シミュレーションできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="クラウド内の Dispatcher"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Cloud ServiceSDKとしてAEMをダウンロードする"
 
 Adobe Experience Manager(AEM)のディスパッチャーは、CDNとAEM発行層の間にセキュリティとパフォーマンスの層を提供するApache HTTP Webサーバーモジュールです。 ディスパッチャーは、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発の設定の一部にする必要があります。
 
