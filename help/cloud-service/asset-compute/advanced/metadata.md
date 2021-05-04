@@ -1,7 +1,7 @@
 ---
 title: asset computeメタデータワーカーの開発
 description: asset computeアセット内で最も一般的に使用される色を派生させ、色の名前をAEM内のアセットのメタデータに書き戻す画像メタデータワーカーの作成方法を説明します。
-feature: Asset Compute Microservices
+feature: asset computeマイクロサービス
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,11 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -205,6 +205,7 @@ function getColorName(colorsFamily, color) {
        ]
    }
    ```
+
 1. __「Run__」をタップし、XMLレンディションが生成されるのを待ちます
    + 両方のワーカーがプロファイル定義に表示されるので、両方のレンディションが生成されます。 必要に応じて、[サークルレンディションのワーカー](../develop/worker.md)を指すトッププロファイル定義を削除して、開発ツールから実行しないようにできます。
 1. __レンディション__&#x200B;セクションには、生成されたレンディションがプレビューされます。 `rendition.xml`をタップしてダウンロードし、VSコード（またはお気に入りのXML/テキストエディター）で開いて確認します。
