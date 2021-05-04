@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーの開発
 description: asset compute作業者は、アセットに対して実行した作業を新しいレンディションの作成のために実行、または調整するカスタム機能を提供する、Asset computeプロジェクトの中核となります。
-feature: Asset Compute Microservices
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,11 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -340,6 +340,7 @@ class RenditionInstructionsError extends ClientError {
        ]
    }
    ```
+
 1. 「__実行__」をタップし、レンディションが生成されるのを待ちます
 1. __レンディション__&#x200B;セクションには、生成されたレンディションがプレビューされます。 レンディションのプレビューをタップして、完全なレンディションをダウンロードします
 
