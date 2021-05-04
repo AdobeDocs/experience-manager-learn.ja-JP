@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーのデバッグ
 description: asset computeワーカーは、簡単なデバッグログ文から、接続されたVS Code（リモートデバッガ）、AEMでCloud Serviceとして開始されたAdobe I/O Runtimeのアクティベーションのログを取り込むまで、様々な方法でデバッグできます。
-feature: Asset Compute Microservices
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,11 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -59,6 +59,7 @@ _wskdebugを使用したAsset computeワーカーのデバッグのクリック�
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 1. `npx adobe-asset-compute devtool`コマンドを使用して、Asset compute開発ツールの新しいインスタンスを開始する
 1. VSコードで、左側のナビゲーションのデバッグアイコンをタップします
    + プロンプトが表示されたら、__launch.jsonファイルを作成>Node.js__&#x200B;をタップして、新しい`launch.json`ファイルを作成します。
