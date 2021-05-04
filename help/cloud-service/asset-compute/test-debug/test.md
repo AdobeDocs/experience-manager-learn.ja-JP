@@ -1,7 +1,7 @@
 ---
 title: asset computeワーカーのテスト
 description: asset computeプロジェクトは、Asset computeワーカーのテストを容易に作成し、実行するためのパターンを定義する。
-feature: Asset Compute Microservices
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,11 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 1%
@@ -80,7 +80,9 @@ asset computeプロジェクトのテストの構造は次のとおりです。
        "brightness": "-0.50"
    }
    ```
+
    これらは[開発ツールのAsset computeプロファイル定義](../develop/development-tool.md)に渡されるキー/値と同じで、`worker`キーより小さい値です。
+
 1. このテ追加ストケースに対して[レンディションファイル](./assets/test/success-parameterized/rendition.png)が必要です。`rendition.png`という名前を付けます。 このファイルは、指定された入力`file.jpg`に対するワーカーの期待される出力を表します。
 1. コマンドラインで`aio app test`を実行し、プロジェクトルートをテストします
    + [Docker Desktop](../set-up/development-environment.md#docker)およびサポートするDockerイメージがインストールされ、起動されていることを確認します。
