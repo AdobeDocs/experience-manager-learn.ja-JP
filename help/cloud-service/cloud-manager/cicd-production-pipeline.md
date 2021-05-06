@@ -9,19 +9,26 @@ activity: use
 version: cloud-service
 kt: 6872, 6875
 thumbnail: 26317.jpg
-topic: Architecture
+topic: アーキテクチャ
 role: Architect, Developer, Administrator
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 21%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Adobeクラウドマネージャーの使用 — CI/CD実稼働パイプライン
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_prodpipeline"
+>title="CI/CD実稼働パイプライン"
+>abstract="CI／CD 実稼動パイプラインの設定は、パイプラインを開始するトリガー、実稼動環境のデプロイメントを制御するパラメーター、およびテストパラメーターのパフォーマンスを定義します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="コードのデプロイ"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="実稼動フェーズへのデプロイメント"
 
 ## 設定
 
