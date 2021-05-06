@@ -4,20 +4,27 @@ description: Cloud Managerを使用したCloud ServiceーとしてのAEMコー�
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: Developer Tools
+topic: 開発
+feature: 開発者ツール
 kt: 6912
 thumbnail: 330534.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # コードの導入
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_deploycode"
+>title="コードの導入"
+>abstract="Cloud Managerのgitリポジトリと外部gitリポジトリを統合し、Cloud ServiceとしてAEMにプロジェクトをデプロイします"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="プロジェクトの結合"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#how-to-use" text="Cloud Manager でのコードのデプロイ"
 
 Cloud Managerのgitリポジトリと外部gitリポジトリを統合し、Cloud ServiceとしてAEMにプロジェクトをデプロイします
 
