@@ -6,12 +6,12 @@ feature: SPAエディター，コアコンポーネント， API，開発
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: kt-7629.jpeg
+thumbnail: 333181.jpeg
 translation-type: tm+mt
-source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
+source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 5%
+source-wordcount: '801'
+ht-degree: 6%
 
 ---
 
@@ -22,11 +22,15 @@ ht-degree: 5%
 
 クイックセットアップでは、このチュートリアルの終了状態を直接確認できます。
 
+>[!VIDEO](https://video.tv.adobe.com/v/333181/?quality=12&learn=on)
+
+_クイックセットアップのビデオウォークスルー_
+
 ## 前提条件
 
 このチュートリアルでは、以下が必要です。
 
-+ [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
++ [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=ja)
 + [Node.js v14 以降](https://nodejs.org/ja/)
 + [npm v7+](https://www.npmjs.com/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
