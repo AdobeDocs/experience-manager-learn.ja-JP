@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 255d6bd403d240b2c18a0ca46c15b0bb98cf9593
 workflow-type: tm+mt
 source-wordcount: '3967'
 ht-degree: 20%
@@ -453,7 +453,7 @@ Byline Slingモデルは、AEMが提供する複数のJava APIに依存します
 
    ![Byline Impl File](assets/custom-component/byline-impl-file.png)
 
-1. 開く `BylineImpl.java`. `Byline`インターフェイスが実装されていることを指定します。 IDEのオートコンプリート機能を使用するか、または手動でファイルを更新し、`Byline`インタフェースの実装に必要なメソッドを含めます。
+1. `BylineImpl.java` を開きます。`Byline`インターフェイスが実装されていることを指定します。 IDEのオートコンプリート機能を使用するか、または手動でファイルを更新し、`Byline`インタフェースの実装に必要なメソッドを含めます。
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -860,10 +860,10 @@ public class BylineImpl implements Byline {
    <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        class="cmp-byline">
            <div class="cmp-byline__image">
-               <!-- Include the Core Components Image Component -->
+               <!--/* Include the Core Components Image Component */-->
            </div>
-           <h2 class="cmp-byline__name"><!-- Include the name --></h2>
-           <p class="cmp-byline__occupations"><!-- Include the occupations --></p>
+           <h2 class="cmp-byline__name"><!--/* Include the name */--></h2>
+           <p class="cmp-byline__occupations"><!--/* Include the occupations */--></p>
    </div>
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
    ```
