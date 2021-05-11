@@ -8,10 +8,10 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
 workflow-type: tm+mt
 source-wordcount: '694'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,13 +35,13 @@ SPA editorを使用して、既存のReact-based（またはNext.js）リモー�
 
 ## 最新のコード
 
-+ このチュートリアルのコードは、`feature/spa-editor`ブランチの[GitHub](https://github.com/adobe/aem-guides-wknd-graphq)にあります。
++ このチュートリアルのコードは、`feature/spa-editor`ブランチの[GitHub](https://github.com/adobe/aem-guides-wknd-graphql)にあります。
 
 ## 前提条件
 
 このチュートリアルでは、以下が必要です。
 
-+ [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
++ [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=ja)
 + [Node.js v14 以降](https://nodejs.org/ja/)
 + [npm v7+](https://www.npmjs.com/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
