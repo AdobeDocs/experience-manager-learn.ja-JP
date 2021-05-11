@@ -26,8 +26,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_nonprodpipeline"
 >title="CI/CD非実稼働パイプライン"
->abstract="CI／CD 非実稼動パイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。
-デプロイメントパイプラインは、Gitリポジトリから実稼働以外の環境(StageまたはProduction以外のプロビジョニング済みAEM環境)へのコードの自動デプロイをサポートしています。"
+>abstract="CI／CD 非実稼動パイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。デプロイメントパイプラインは、Gitリポジトリから実稼働以外の環境(StageまたはProduction以外のプロビジョニング済みAEM環境)へのコードの自動デプロイをサポートしています。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#non-production-%26-code-quality-only-pipelines" text="非実稼動パイプラインとコード品質専用パイプライン"
 
 [CI／CD 非実稼動パイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#non-production-%26-code-quality-only-pipelines)コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。
