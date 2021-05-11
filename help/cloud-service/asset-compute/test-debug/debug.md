@@ -13,7 +13,7 @@ topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -59,6 +59,7 @@ _wskdebugを使用したAsset computeワーカーのデバッグのクリック�
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 
 1. `npx adobe-asset-compute devtool`コマンドを使用して、Asset compute開発ツールの新しいインスタンスを開始する
 1. VSコードで、左側のナビゲーションのデバッグアイコンをタップします
