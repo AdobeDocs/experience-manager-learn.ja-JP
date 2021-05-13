@@ -6,9 +6,8 @@ feature: SPAエディター，コアコンポーネント， API，開発
 role: Developer, Architect
 level: Beginner
 kt: 7630
-thumbnail: kt-7630.jpg
-translation-type: tm+mt
-source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
+thumbnail: 333272.jpeg
+source-git-commit: cede0c97e0f322fe5d20d5c4f685ed10b90af1d4
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 6%
@@ -21,6 +20,8 @@ ht-degree: 6%
 SPA editorを使用して、既存のReact-based（またはNext.js）リモートSPAと編集可能なAEMコンテンツを拡張する開発者向けのマルチパートチュートリアルをご利用いただけます。
 
 このチュートリアルは、[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)上に構築されています。AEM GraphQL APIではAEMコンテンツフラグメントコンテンツを使用するReactアプリですが、SPAコンテンツの文脈依存オーサリングは提供されません。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
 
 ## このチュートリアルについて
 
