@@ -2,13 +2,12 @@
 title: 'AEM AssetsのInDesignファイルとアセットテンプレートについて '
 description: このビデオチュートリアルでは、AEM Assetsのアセットテンプレート機能で使用するInDesignファイルの定義と、それに付随するすべての考慮事項について順を追って説明します。
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: コンテンツ管理
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -74,4 +73,4 @@ InDesignテンプレートファイルとサポートする画像
 [InDesignテンプレートファイルとサポートする画像](assets/asset-templates-tutorial-video--supporting-files-1.zip)をダウンロード
 
 * [InDesignCC体験版のダウンロード](https://creative.adobe.com/products/download/indesign)
-* [InDesign Server体験版のダウンロード](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+* [CC Enterpriseのお客様は、アカウント担当者に連絡して、InDesign Server体験版のライセンスをご請求いただけます](https://www.adobe.com/products/indesignserver/faq.html)
