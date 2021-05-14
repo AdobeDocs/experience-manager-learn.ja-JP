@@ -4,10 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '440'
 ht-degree: 31%
 
 ---
@@ -85,7 +84,7 @@ ht-degree: 31%
    + [アセットの一括インポート](./migration/bulk-import.md)
 + Forms{#forms}
    + アダプティブフォームの作成{#create-first-af}
-      + [概要](./forms/create-first-af/introduction.md)
+      + [はじめに](./forms/create-first-af/introduction.md)
       + [テーマを作成](./forms/create-first-af/create-theme.md)
       + [テンプレートを作成](./forms/create-first-af/create-template.md)
       + [フラグメントを作成](./forms/create-first-af/create-fragments.md)
@@ -96,21 +95,29 @@ ht-degree: 31%
       + [アセットパネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [開始設定パネル](./forms/create-first-af/configure-start-panel.md)
       + [ツールバー追加と設定](./forms/create-first-af/add-configure-toolbar.md)
+   + Document CloudAPIとAEM FormsCS{#doc-cloud-sdk}
+      + [はじめに](./forms/doc-cloud-sdk/introduction.md)
+      + [AdobeIOプロジェクトの作成](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [OSGI設定の作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [インターフェイスの定義](./forms/doc-cloud-sdk/create-interface.md)
+      + [インターフェイスの実装](./forms/doc-cloud-sdk/implement-interface.md)
+      + [JSONパーツの作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [カスタムプロセス手順](./forms/doc-cloud-sdk/custom-process-step.md)
    + レビューワークフローの作成{#create-aem-workflow}
       + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
    + Adobe SignとAEM Forms{#forms-and-sign}
-      + [概要](./forms/forms-and-sign/introduction.md)
+      + [はじめに](./forms/forms-and-sign/introduction.md)
       + [Adobe SignAPIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
       + [入力および署名の設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + Salesforce{#integrate-with-salesforce}との統合
-      + [概要](./forms/integrate-with-salesforce/introduction.md)
+      + [はじめに](./forms/integrate-with-salesforce/introduction.md)
       + [接続されたアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
       + [データソースの作成](./forms/integrate-with-salesforce/create-data-source.md)
-      + [フォームデータモデルを作成する](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset computeの拡張機能{#asset-compute}
