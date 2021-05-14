@@ -9,11 +9,10 @@ role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 2%
+source-wordcount: '89'
+ht-degree: 1%
 
 ---
 
@@ -22,5 +21,10 @@ ht-degree: 2%
 
 GraphQLで使用する、Adobe Experience Manager(AEM)のコンテンツフラグメントを定義して使用する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
+このビデオでは、次の操作を行います。
 
++ コンテンツフラグメントモデルの作成および定義方法を学習します。
++ コンテンツフラグメントモデルの作成に使用する様々なデータタイプと検証について説明します
++ コンテンツフラグメントモデルがGraphQL APIを駆動する方法を理解する
+
+>[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
