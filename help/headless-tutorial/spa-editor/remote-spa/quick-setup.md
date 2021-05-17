@@ -6,9 +6,8 @@ feature: SPAエディター，コアコンポーネント， API，開発
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: 333181.jpeg
-translation-type: tm+mt
-source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
+thumbnail: 333181.jpg
+source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 6%
@@ -82,8 +81,8 @@ AEM SDKは開始し、[http://localhost:4502](http://localhost:4502)で自動的
 
 簡単なセットアップを実行するために、チュートリアルの最終的なAEM設定とコンテンツを含むAEMパッケージが用意されています。
 
-1. [ダウンロード `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [ダウンロード `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
+1. [ダウンロード ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [ダウンロード ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)にあるAEM SDKのPackage Managerに、`admin`資格情報を使用してログインします。
 1. __手順1で__  `wknd-app.all.x.x.x.zip` ダウンロードした
 1. __「__&#x200B;をインストール」ボタンをタップして、`wknd-app.all.x.x.x.zip`というエントリを作成します
