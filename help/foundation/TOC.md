@@ -4,10 +4,9 @@ breadcrumb-title: AEM Foundation チュートリアル
 user-guide-description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 sub-product: 基礎
 index: y
-translation-type: tm+mt
-source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '146'
 ht-degree: 21%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 21%
 # AEM Foundation のビデオおよびチュートリアル {#foundation}
 
 + [概要](./overview.md)
-+ Administration {#administration}
++ 管理 {#administration}
    + [AEMをアップグレードする理由の理解](./administration/understand-reasons-to-upgrade.md)
    + [oak-run.jarを使用したインデックスの管理](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [オンラインリビジョンのクリーンアップを使用](./administration/use-online-revision-clean-up.md)
@@ -45,6 +44,6 @@ ht-degree: 21%
    + [SSLウィザードの使用](./security/use-the-ssl-wizard.md)
 + ワークフロー {#workflow}
    + [ワークフローエディターの使用](./workflow/use-the-workflow-editor.md)
-   + [ワークフロー管理の使用](./workflow/use-workflow-management.md)
+   + [ワークフローを使用](./workflow/use-workflow.md)
    + [受信トレイを使用する](./workflow/use-the-inbox.md)
 
