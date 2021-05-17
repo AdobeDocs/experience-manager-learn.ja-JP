@@ -5,8 +5,7 @@ description: 'Adobe Experience Manager Foundation のビデオやチュートリ
 seo-description: Adobe Experience Manager財団のビデオやチュートリアルの集まり
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 18%
@@ -20,8 +19,9 @@ Adobe Experience Managerは、AEM Sites、[!DNL Assets]、[!DNL Forms]の各ユ�
 
 ## 新機能
 
-* **[AEMでのワークフロー管理の使用（ビデオ）](./workflow/use-workflow-management.md)**
-   *AEMでは、実行中のワークフローを明確に把握し、 [!DNL Workflow] 定義の管理を容易にします。*
+* **[ワークフローAEMの使用（ビデオ）](./workflow/use-workflow.md)**
+
+   *AEMワークフローは、AEMでコンテンツの共同作業、管理および処理を行う手段を提供します。*
 
 * **[Cloud Manager for AEMについて（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *AEM向けCloud Managerを使用すると、AEM環境の管理、検査、およびセルフサービスを簡単に行うことができます。*
