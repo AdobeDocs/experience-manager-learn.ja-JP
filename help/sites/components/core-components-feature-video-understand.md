@@ -22,12 +22,6 @@ ht-degree: 14%
 
 # コアコンポーネントについて{#understanding-core-components}
 
->[!CONTEXTUALHELP]
->id="intro_core_components"
->title="Cloud ServiceとしてのAEMのコアコンポーネントの概要"
->abstract="このタブでは、AEMと互換性のある最新のサイトをCloud Serviceとして構築するのに役立つ表示コンテンツを作成できます。 これを行うための重要なポイントは、コアコンポーネントを使用することです"
->additional-url="https://video.tv.adobe.com/v/18926" text="コアコンポーネントの概要"
-
 AEMコアコンポーネントは、Adobe Experience Managerで使用される標準セットコンポーネントです。 コアコンポーネントは、Adobeのベストプラクティスと標準を基に構築され、すべてのサイト実装に対して機能の基本セットを提供します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18926/?quality=12&learn=on)
