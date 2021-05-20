@@ -1,19 +1,18 @@
 ---
-title: 使用権限を持つPDFへのXDPのレンダリング
-seo-title: 使用権限を持つPDFへのXDPのレンダリング
-description: 使用権限をPDFに適用
-seo-description: 使用権限をPDFに適用
+title: 使用権限を持つXDPをPDFにレンダリング
+seo-title: 使用権限を持つXDPをPDFにレンダリング
+description: PDFへの使用権限の適用
+seo-description: PDFへの使用権限の適用
 uuid: 5e60c61e-821d-439c-ad89-ab169ffe36c0
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: Forms Service
-topic: Development
+feature: Forms サービス
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '393'
@@ -24,12 +23,12 @@ ht-degree: 12%
 
 # Reader拡張の適用
 
-Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。Reader拡張で制御される機能には、ドキュメントにコメントを追加する機能、フォームに入力する機能、ドキュメントを保存する機能があります。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。この機能をテストするには、[リンク](https://forms.enablementadobe.com/content/samples/samples.html?query=0)を試してみてください。 サンプル名は「Render XDP with RE」です。
+Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。「Reader拡張機能」で制御される機能には、ドキュメントにコメントを追加したり、フォームに入力したり、ドキュメントを保存したりする機能が含まれます。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。この機能をテストするには、[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)を試してみます。 サンプル名は「Render XDP with RE」です。
 
-この使用例を達成するには、次の作業を行う必要があります。
-* Reader追加拡張証明書を&quot;fd-service&quot;ユーザーに送信する必要があります。 Reader拡張機能証明書を追加する手順は、[ここ](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)に一覧表示されます
+この使用例を達成するには、次の手順を実行する必要があります。
+* Reader拡張証明書を「fd-service」ユーザーに追加します。 ReaderExtensions証明書を追加する手順は、[ここ](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)に記載されています。
 
-* ドキュメントに使用権限を適用するカスタムOSGiサービスを作成します。 これを達成するコードを次に示します。
+* ドキュメントに使用権限を適用するカスタムOSGiサービスを作成します。 これをおこなうコードを次に示します
 
 ```java
 import org.osgi.service.component.annotations.Component;
@@ -69,12 +68,12 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 }
 ```
 
-## PDFをストリーミングするサーブレットの作成{#create-servlet-to-stream-the-pdf}
+## PDFをストリーミングするサーブレットを作成{#create-servlet-to-stream-the-pdf}
 
-次の手順は、POSTメソッドを使用してサーブレットを作成し、Reader用の拡張PDFをユーザーに返すことです。 この場合、PDFをファイルシステムに保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザに付属するPDFビューアではダイナミックPDFは処理されないためです。
+次の手順では、POSTメソッドを使用してサーブレットを作成し、Reader用の拡張PDFをユーザーに返します。 この場合、ユーザーはPDFをファイルシステムに保存するよう求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザに付属しているPDFビューアではダイナミックPDFは処理されないためです。
 
 次に、サーブレットのコードを示します。 サーブレットは、アダプティブフォームの&#x200B;**customsubmit**アクションから呼び出されます。
-サーブレットはUsageRightsオブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてそのプロパティを設定します。 次に、サーブレットは、この目的で作成されたサービスの**applyUsageRights**&#x200B;メソッドを呼び出します。
+サーブレットは、UsageRightsオブジェクトを作成し、アダプティブフォームにユーザーが入力した値に基づいてプロパティを設定します。 次に、サーブレットは、この目的で作成されたサービスの**applyUsageRights**&#x200B;メソッドを呼び出します。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -191,15 +190,15 @@ try {
 }
 ```
 
-ローカルサーバーでテストするには、次の手順に従ってください。
+ローカルサーバーでこれをテストするには、次の手順に従います。
 1. [DevelopingWithServiceUserバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [ares.ares.core-ares Bundleをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これには、使用権限を適用し、pdfをストリーミングバックするカスタムサービスとサーブレットが含まれます。
-1. [クライアントライブラリとカスタム送信の読み込み](assets/applyaresdemo.zip)
+1. [ares.ares.core-aresバンドルをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これには、使用権限を適用し、PDFをストリーミング戻すためのカスタムサービスとサーブレットが含まれます
+1. [クライアントライブラリとカスタム送信を読み込む](assets/applyaresdemo.zip)
 1. [アダプティブフォームの読み込み](assets/applyaresform.zip)
-1. Reader拡張追加証明書を&quot;fd-service&quot;ユーザーに送信
-1. [プレビューアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. 適切な権限を選択し、PDFファイルをアップロードします
-1. 「Submit」をクリックしてReader拡張PDFを取得
+1. 「fd-service」Readerに拡張機能証明書を追加する
+1. [アダプティブフォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
+1. 適切な権限を選択し、PDFファイルをアップロードします。
+1. 「送信」をクリックして、Reader拡張PDFを取得
 
 
 
