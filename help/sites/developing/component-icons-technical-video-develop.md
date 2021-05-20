@@ -1,16 +1,15 @@
 ---
 title: Adobe Experience Manager Sitesのコンポーネントアイコンのカスタマイズ
-description: コンポーネントアイコンを使用すると、アイコンや意味のある省略形を持つコンポーネントをすばやく特定できます。 作成者は、Webエクスペリエンスを構築するのに必要なコンポーネントを以前に比べて迅速に見つけることができます。
+description: コンポーネントアイコンを使用すると、作成者は、アイコンや意味のある省略形でコンポーネントをすばやく識別できます。 作成者は、Webエクスペリエンスを構築するのに必要なコンポーネントを、以前よりも迅速に見つけることができるようになりました。
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: Core Components
-topic: Development
+feature: コアコンポーネント
+topic: 開発
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '378'
@@ -21,11 +20,11 @@ ht-degree: 8%
 
 # コンポーネントアイコンのカスタマイズ{#developing-component-icons-in-aem-sites}
 
-コンポーネントアイコンを使用すると、アイコンや意味のある省略形を持つコンポーネントをすばやく特定できます。 作成者は、Webエクスペリエンスを構築するのに必要なコンポーネントを以前に比べて迅速に見つけることができます。
+コンポーネントアイコンを使用すると、作成者は、アイコンや意味のある省略形でコンポーネントをすばやく識別できます。 作成者は、Webエクスペリエンスを構築するのに必要なコンポーネントを、以前よりも迅速に見つけることができるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
 
-コンポーネントブラウザに一貫したグレーのテーマが表示され、次のテーマが表示されます。
+コンポーネントブラウザーが一貫したグレーのテーマで表示され、次の項目が表示されます。
 
 * **[!UICONTROL コンポーネントグループ]**
 * **[!UICONTROL コンポーネントのタイトル]**
@@ -36,13 +35,13 @@ ht-degree: 8%
    * カスタムSVG画像&#x200B;*（開発者が設定）*
    * CoralUIアイコン&#x200B;*（開発者が設定）*
 
-## コンポーネントアイコンの設定オプション{#component-icon-configuration-options}
+## コンポーネントアイコン設定オプション{#component-icon-configuration-options}
 
-### 略語{#abbreviations}
+### 略語 {#abbreviations}
 
-デフォルトでは、コンポーネントタイトルの最初の2文字(**[cq:Component]@jcr:title**)が省略形として使用されます。 例えば、**[cq:Component]@jcr:title=Articleリスト**&#x200B;の場合、省略形は「**Ar**」と表示されます。
+デフォルトでは、コンポーネントタイトルの最初の2文字(**[cq:Component]@jcr:title**)が省略形として使用されます。 例えば、 **[cq:Component]@jcr:title=Article List**&#x200B;の場合、省略形は「**Ar**」と表示されます。
 
-省略形は、**[cq:Component]@abbreviation**&#x200B;プロパティを使用してカスタマイズできます。 この値には2文字を超える文字を使用できますが、視覚的な障害を回避するため、省略形を2文字に制限することをお勧めします。
+省略形は、 **[cq:Component]@abbreviation**&#x200B;プロパティを使用してカスタマイズできます。 この値は2文字を超える場合がありますが、視覚的な障害を避けるために、省略形を2文字に制限することをお勧めします。
 
 ```plain
 /apps/.../components/content/my-component
@@ -52,7 +51,7 @@ ht-degree: 8%
 
 ### CoralUIアイコン{#coralui-icons}
 
-AEMが提供するCoralUIアイコンは、コンポーネントのアイコンに使用できます。 CoralUIアイコンを設定するには、**[cq:Component]@cq:icon**&#x200B;プロパティを目的のCoralUIアイコンのHTMLアイコン属性値に設定します（[CoralUIドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)に列挙されます）。
+AEMが提供するCoralUIアイコンは、コンポーネントアイコンに使用できます。 CoralUIアイコンを設定するには、**[cq:Component]@cq:icon**&#x200B;プロパティを目的のCoralUIアイコンのHTMLアイコン属性値に設定します（[CoralUIのドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)に列挙されています）。
 
 ```plain
 /apps/.../components/content/my-component
@@ -62,11 +61,11 @@ AEMが提供するCoralUIアイコンは、コンポーネントのアイコン�
 
 ### PNG画像{#png-images}
 
-PNG画像は、コンポーネントのアイコンに使用できます。 PNG画像をコンポーネントアイコンとして設定するには、**[cq:Component]**&#x200B;の下に&#x200B;**cq:icon.png**&#x200B;という名前の&#x200B;**nt:file**&#x200B;として目的の画像を追加します。
+コンポーネントアイコンにはPNG画像を使用できます。 PNG画像をコンポーネントアイコンとして設定するには、**[cq:Component]**&#x200B;の下に&#x200B;**nt:file**&#x200B;という名前の&#x200B;**cq:icon.png**&#x200B;を付けて、目的の画像を追加します。
 
-PNGは、透明な背景、または背景色を&#x200B;**#707070**&#x200B;に設定する必要があります。
+PNGは、透明な背景にするか、背景色を&#x200B;**#707070**&#x200B;に設定する必要があります。
 
-PNG画像は&#x200B;**20px x 20px**&#x200B;に縮小されます。 ただし、Retinaディスプレイを収容するには、**40px** by **40px**&#x200B;をお勧めします。
+PNG画像は、**20pxに合わせて20px**&#x200B;拡大/縮小されます。 ただし、Retinaディスプレイ&#x200B;**40px**&#x200B;を&#x200B;**40px**&#x200B;に収めるのが望ましい場合があります。
 
 ```plain
 /apps/.../components/content/my-component
@@ -77,9 +76,9 @@ PNG画像は&#x200B;**20px x 20px**&#x200B;に縮小されます。 ただし、
 
 ### SVG画像{#svg-images}
 
-SVG画像（ベクトルベース）は、コンポーネントのアイコンに使用できます。 SVG画像をコンポーネントアイコンとして設定するには、**[cq:Component]**&#x200B;の下に&#x200B;**nt:file****cq:icon.svg**&#x200B;という名前で追加します。
+SVG画像（ベクトルベース）はコンポーネントアイコンに使用できます。 SVG画像をコンポーネントアイコンとして設定するには、**[cq:Component]**&#x200B;の下に&#x200B;**nt:file**&#x200B;として&#x200B;**cq:icon.svg**&#x200B;を追加します。
 
-SVG画像の背景色は&#x200B;**#707070**&#x200B;に、サイズは&#x200B;**20px by 20pxに設定する必要があります。**
+SVG画像の背景色は&#x200B;**#707070**&#x200B;に、サイズは&#x200B;**20px x 20pxに設定する必要があります。**
 
 ```plain
 /apps/.../components/content/my-component
