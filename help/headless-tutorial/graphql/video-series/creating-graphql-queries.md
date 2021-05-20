@@ -1,6 +1,6 @@
 ---
 title: GraphQLクエリの作成
-description: GraphQLクエリを作成してAdobe Experience Manager(AEM)からコンテンツを返す方法、およびGraphiQLツールを使用してクエリを迅速にテスト、調整、デバッグする方法について説明します。
+description: Adobe Experience Manager(AEM)からコンテンツを返すGraphQLクエリを作成する方法と、GraphQLツールを使用してクエリをすばやくテスト、調整、デバッグする方法について説明します。
 sub-product: アセット
 version: cloud-service
 topic: ヘッドレス、コンテンツ管理
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # GraphQLクエリの作成
 
-GraphQLクエリを作成してAdobe Experience Manager(AEM)からコンテンツを返す方法、およびGraphiQLツールを使用してクエリを迅速にテスト、調整、デバッグする方法について説明します。
+Adobe Experience Manager(AEM)からコンテンツを返すGraphQLクエリを作成する方法と、GraphQLツールを使用してクエリをすばやくテスト、調整、デバッグする方法について説明します。
 
-このビデオでは、次の操作を行います。
+このビデオでは、次の操作を実行します。
 
-+ GraphQL言語の背後にあるパワーを理解する
-+ コンテンツフラグメントと1つのコンテンツフラグメントのリストをクエリする方法を学びます。
-+ 特定のデータ属性をフィルタリングして要求する方法を学びます。
-+ GraphicQLツールのインストール方法と使用方法
++ GraphQL言語の背後にある機能を理解する
++ コンテンツフラグメントと単一のコンテンツフラグメントのリストをクエリする方法を説明します。
++ 特定のデータ属性をフィルターして要求する方法を説明します
++ GraphiQLツールのインストールおよび使用方法を説明します
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860/?quality=12&learn=on)
