@@ -1,7 +1,7 @@
 ---
-title: 保存されたアダプティブフォームの取得
-description: 保存されたデータを使用してアダプティブフォームをレンダリングするサーブレット
-feature: Adaptive Forms
+title: 保存済みアダプティブフォームの取得
+description: 保存されたデータでアダプティブフォームをレンダリングするサーブレット
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '106'
@@ -20,10 +19,10 @@ ht-degree: 2%
 
 ---
 
-# 保存されたフォームを取得
+# 保存されたフォームの取得
 
-次のステップは、保存されたデータとその添付ファイルを含むアダプティブフォームをレンダリングするサーブレットを作成することです。
-次のサーブレットコードは、OTPコードの検証後に実行されます。 アダプティブフォームデータと、その一意のアプリケーションIDに関連付けられた添付ファイルマップがデータベースから取得されます。 リクエストオブジェクトには、保存されたアダプティブフォームデータと添付ファイルマップが入力されます。 その後、この要求が転送され、元のデータと添付ファイルが事前に入力された「storeafwithattachments」フォームがレンダリングされます。
+次の手順では、保存されたデータとその添付ファイルを使用してアダプティブフォームをレンダリングするサーブレットを作成します。
+次のサーブレットコードは、OTPコードの検証後に実行されます。 一意のアプリケーションIDに関連付けられたアダプティブフォームデータとその添付ファイルマップがデータベースから取得されます。 リクエストオブジェクトには、保存されたアダプティブフォームデータと添付ファイルマップが入力されます。 その後、要求が転送され、元のデータとその添付ファイルが事前に入力された「storeafwithattachments」フォームがレンダリングされます。
 
 ```java
 package store.and.fetch.core.servlets;
