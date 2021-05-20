@@ -6,10 +6,9 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-topic: Development
+topic: 開発
 kt: 7148
 thumbnail: 331755.jpg
-translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '35'
@@ -19,6 +18,6 @@ ht-degree: 2%
 
 # データソースの作成
 
-前の手順で作成したSwaggerファイルを使用して、RESTバックアップデータソースを作成します
+前の手順で作成したSwaggerファイルを使用して、RESTベースのデータソースを作成します
 
 >[!VIDEO](https://video.tv.adobe.com/v/331755/?quality=12&learn=on)
