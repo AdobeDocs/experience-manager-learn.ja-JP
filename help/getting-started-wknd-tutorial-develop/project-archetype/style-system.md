@@ -1,7 +1,7 @@
 ---
 title: スタイルシステムを使用した開発
 seo-title: スタイルシステムを使用した開発
-description: Experience Managerのスタイルシステムを使用して、個々のスタイルを実装し、コアコンポーネントを再利用する方法を説明します。 このチュートリアルでは、スタイルシステムで、ブランド固有のCSSとテンプレートエディターの高度なポリシー設定を使用してコアコンポーネントを拡張するための開発について説明します。
+description: Experience Managerのスタイルシステムを使用して、個々のスタイルを実装し、コアコンポーネントを再利用する方法について説明します。 このチュートリアルでは、スタイルシステムの開発と、ブランド固有のCSSを使用したコアコンポーネントの拡張、およびテンプレートエディターの高度なポリシー設定について説明します。
 sub-product: サイト
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -12,7 +12,6 @@ level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-translation-type: tm+mt
 source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '2003'
@@ -23,13 +22,13 @@ ht-degree: 12%
 
 # スタイルシステムを使用した開発 {#developing-with-the-style-system}
 
-Experience Managerのスタイルシステムを使用して、個々のスタイルを実装し、コアコンポーネントを再利用する方法を説明します。 このチュートリアルでは、スタイルシステムで、ブランド固有のCSSとテンプレートエディターの高度なポリシー設定を使用してコアコンポーネントを拡張するための開発について説明します。
+Experience Managerのスタイルシステムを使用して、個々のスタイルを実装し、コアコンポーネントを再利用する方法について説明します。 このチュートリアルでは、スタイルシステムの開発と、ブランド固有のCSSを使用したコアコンポーネントの拡張、およびテンプレートエディターの高度なポリシー設定について説明します。
 
 ## 前提条件 {#prerequisites}
 
 [ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
 
-また、[クライアント側ライブラリとフロントエンドワークフロー](client-side-libraries.md)のチュートリアルを確認し、クライアント側ライブラリの基本原則とAEMプロジェクトに組み込まれた様々なフロントエンドツールについて理解することをお勧めします。
+また、クライアント側ライブラリとAEMプロジェクトに組み込まれた様々なフロントエンドツールの基本を理解するには、 [クライアント側ライブラリとフロントエンドワークフロー](client-side-libraries.md)のチュートリアルを確認することをお勧めします。
 
 ### スタータープロジェクト
 
@@ -37,16 +36,16 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 >
 > 前の章を正常に完了した場合は、プロジェクトを再利用し、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
-チュートリアルが構築する基本行コードを調べます。
+チュートリアルで構築するベースラインコードを確認します。
 
-1. [GitHub](https://github.com/adobe/aem-guides-wknd)の`tutorial/style-system-start`ブランチを調べます。
+1. [GitHub](https://github.com/adobe/aem-guides-wknd)の`tutorial/style-system-start`ブランチを確認します。
 
    ```shell
    $ cd aem-guides-wknd
    $ git checkout tutorial/style-system-start
    ```
 
-1. Mavenのスキルを使用して、ローカルAEMインスタンスにコードベースをデプロイします。
+1. Mavenのスキルを使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -54,23 +53,23 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
    >[!NOTE]
    >
-   > AEM 6.5または6.4を使用している場合は、Mavenコマンドに`classic`プロファイルを追加します。
+   > AEM 6.5または6.4を使用している場合は、任意のMavenコマンドに`classic`プロファイルを追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-終了したコードは、[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution)に常に表示できます。また、ブランチ`tutorial/style-system-solution`に切り替えて、コードをローカルでチェックアウトすることもできます。
+[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution)で完成したコードをいつでも表示したり、ブランチ`tutorial/style-system-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
 
 ## 目的
 
 1. スタイルシステムを使用して、ブランド固有のCSSをAEMコアコンポーネントに適用する方法を説明します。
-1. BEM表記の概要と、スタイルを慎重にスコープする方法について説明します。
-1. 編集可能なテンプレートを使用して、ポリシー設定の詳細を適用します。
+1. BEM表記と、BEM表記を使用してスタイルを慎重にスコープする方法について説明します。
+1. 編集可能なテンプレートを使用して、詳細なポリシー設定を適用します。
 
 ## 作成する内容 {#what-you-will-build}
 
-この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;と&#x200B;**テキスト**&#x200B;のコンポーネントのバリエーションを作成します。
+この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;コンポーネントと&#x200B;**テキスト**&#x200B;コンポーネントのバリエーションを作成します。
 
 ![タイトルに使用できるスタイル](assets/style-system/styles-added-title.png)
 
@@ -82,23 +81,23 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
 
-[スタイルシステムに関する詳細なドキュメントは、](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=ja)を参照してください。 また、スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための[テクニカルビデオもあります。
+スタイルシステムの詳細なドキュメントは、[で確認できます。 ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=ja)また、スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための優れた[テクニカルビデオもあります。
 
-## 下線のスタイル — タイトル{#underline-style}
+## 下線スタイル — タイトル{#underline-style}
 
-[タイトルコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)が&#x200B;**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/title`の下のプロジェクト内にプロキシ化されました。 見出し要素(`H1`、`H2`、`H3`...)のデフォルトのスタイルは、既に&#x200B;**ui.frontend**&#x200B;モジュールに実装されています。
+[タイトルコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)は、**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/title`の下のプロジェクトにプロキシ化されています。 見出し要素(`H1`、`H2`、`H3`...)のデフォルトのスタイルは、**ui.frontend**&#x200B;モジュールに既に実装されています。
 
-[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、タイトルコンポーネントに対して一意のスタイルが含まれ、下線が引かれています。 2つのコンポーネントを作成したり、コンポーネントダイアログを修正する代わりに、スタイルシステムを使用して、下線スタイルを追加するオプションを作成できます。
+[WKND Article designs](assets/pages-templates/wknd-article-design.xd)には、下線付きのタイトルコンポーネント用の一意のスタイルが含まれています。 2つのコンポーネントを作成したり、コンポーネントダイアログを変更する代わりに、スタイルシステムを使用して、作成者が下線スタイルを追加できるようにします。
 
 ![下線スタイル — タイトルコンポーネント](assets/style-system/title-underline-style.png)
 
 ### Inspectタイトルマークアップ
 
-フロントエンド開発者として、コアコンポーネントのスタイル設定を行う最初の手順は、コンポーネントによって生成されるマークアップを理解することです。
+フロントエンド開発者は、コアコンポーネントのスタイル設定をおこなう最初の手順は、コンポーネントによって生成されたマークアップを理解することです。
 
-1. 新しいブラウザーを開き、AEMコアコンポーネントライブラリサイトのタイトルコンポーネントを表示します。[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
+1. 新しいブラウザーを開き、AEMコアコンポーネントライブラリサイトでタイトルコンポーネントを表示します。[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
 
-1. 次に、Titleコンポーネントのマークアップを示します。
+1. 以下に、タイトルコンポーネントのマークアップを示します。
 
    ```html
    <div class="cmp-title">
@@ -113,7 +112,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
        ELEMENT cmp-title__text
    ```
 
-1. スタイルシステムは、コンポーネントを囲む外側のdivにCSSクラスを追加します。 したがって、対象とするマークアップは次のようになります。
+1. スタイルシステムは、コンポーネントを囲む外側のdivにCSSクラスを追加します。 したがって、ターゲットとするマークアップは次のようになります。
 
    ```html
    <div class="STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
@@ -125,9 +124,9 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ### 下線スタイルの実装 — ui.frontend
 
-次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用してUnderlineスタイルを実装します。 **ui.frontend**&#x200B;モジュールに組み込まれているWebPack開発サーバーを使用して、*導入前のスタイル*&#x200B;をAEMのローカルインスタンスにプレビューします。
+次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用して、Underlineスタイルを実装します。 **ui.frontend**&#x200B;モジュールにバンドルされているWebPack開発サーバーを使用して、AEMのローカルインスタンスにデプロイする前に、*スタイル*&#x200B;をプレビューします。
 
-1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内から次のコマンドを実行して、webpack開発サーバーを起動します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -137,16 +136,16 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
    > webpack-dev-server --open --config ./webpack.dev.js
    ```
 
-   これにより、[http://localhost:8080](http://localhost:8080)でブラウザが開きます。
+   [http://localhost:8080](http://localhost:8080)でブラウザーが開きます。
 
    >[!NOTE]
    >
-   > 画像が壊れているように見える場合は、スタータープロジェクトがAEMのローカルインスタンス（ポート4502で実行）にデプロイされており、使用されるブラウザーもローカルのAEMインスタンスにログインしていることを確認してください。
+   > 画像が壊れているように見える場合は、スタータープロジェクトがAEMのローカルインスタンス（ポート4502で実行）にデプロイされ、使用するブラウザーもローカルAEMインスタンスにログインしていることを確認します。
 
    ![Webpack開発サーバー](assets/style-system/static-webpack-server.png)
 
 1. IDEで、次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`. これは、WebPack開発サーバーで使用される静的マークアップです。
-1. `index.html`で、*cmp-title*&#x200B;をドキュメントで検索して、下線のスタイルを追加するTitleコンポーネントのインスタンスを探します。 「タイトル」コンポーネントを選択し、「壁のスケートパークから離れたバン」*（行218）というテキストを入力します。*&#x200B;周囲追加のdivに対するクラス`cmp-title--underline`:
+1. `index.html`で、下線スタイルを追加するタイトルコンポーネントのインスタンスを探し、ドキュメントで&#x200B;*cmp-title*&#x200B;を検索します。 「タイトル」コンポーネントを選択し、テキスト「*&quot;Vans off the Wall Skatepark&quot;*」（218行目）を指定します。 周囲のdivにクラス`cmp-title--underline`を追加します。
 
    ```diff
    - <div class="title aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
@@ -157,7 +156,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
     </div>
    ```
 
-1. ブラウザに戻り、追加のクラスがマークアップに反映されていることを確認します。
+1. ブラウザーに戻り、追加のクラスがマークアップに反映されていることを確認します。
 1. **ui.frontend**&#x200B;モジュールに戻り、次の場所にあるファイル`title.scss`を更新します。`ui.frontend/src/main/webpack/components/_title.scss`:
 
    ```css
@@ -179,19 +178,19 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
    >
    >ベストプラクティスとしては、スタイルをターゲットコンポーネントで使用する範囲に収めることが推奨されます。これにより、ページの他の領域が余分なスタイルの影響を受けることを回避できます。
    >
-   >すべてのコアコンポーネントは、**[BEM表記](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**&#x200B;に従います。 ベストプラクティスとしては、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定することが推奨されます。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
+   >すべてのコアコンポーネントは、**[BEM表記](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**&#x200B;に準拠しています。 ベストプラクティスとしては、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定することが推奨されます。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
 
-1. もう一度ブラウザに戻ると、下線スタイルが追加されます。
+1. ブラウザーに戻ると、下線スタイルが追加されます。
 
-   ![WebPack Devサーバーで表示されるスタイルに下線を引く](assets/style-system/underline-implemented-webpack.png)
+   ![webpack devサーバーで表示されるスタイルに下線を引く](assets/style-system/underline-implemented-webpack.png)
 
 1. WebPack開発サーバーを停止します。
 
-### 権追加原政策
+### タイトルポリシーの追加
 
-次に、Titleコンポーネントの新しいポリシーを追加して、コンテンツ作成者が特定のコンポーネントに適用する下線スタイルを選択できるようにする必要があります。 これは、AEMのテンプレートエディターを使用して行います。
+次に、タイトルコンポーネント用の新しいポリシーを追加し、コンテンツ作成者が特定のコンポーネントに適用する下線スタイルを選択できるようにする必要があります。 これは、AEM内のテンプレートエディターを使用しておこないます。
 
-1. Mavenのスキルを使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
+1. Mavenのスキルを使用して、コードベースをローカルのAEMインスタンスにデプロイします。
 
    ```shell
    $ cd ~/code/aem-guides-wknd
@@ -200,58 +199,58 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 1. 次の場所にある&#x200B;**記事ページ**&#x200B;テンプレートに移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
 
-1. **構造**&#x200B;モードのメイン&#x200B;**レイアウトコンテナ**&#x200B;で、*許可されているコンポーネント*&#x200B;の下に表示されている&#x200B;**タイトル**&#x200B;コンポーネントの横の&#x200B;**ポリシー**&#x200B;アイコンを選択します。
+1. **構造**&#x200B;モードのメインの&#x200B;**レイアウトコンテナ**&#x200B;で、「*許可されるコンポーネント*」に表示されている&#x200B;**タイトル**&#x200B;コンポーネントの横にある&#x200B;**ポリシー**&#x200B;アイコンを選択します。
 
-   ![タイトルポリシーの構成](assets/style-system/article-template-title-policy-icon.png)
+   ![タイトルポリシーの設定](assets/style-system/article-template-title-policy-icon.png)
 
-1. 次の値を持つTitleコンポーネントの新しいポリシーを作成します。
+1. 次の値を持つタイトルコンポーネントの新しいポリシーを作成します。
 
-   *ポリシータイトル**: **WKNDタイトル**
+   *ポリシーのタイトル**: **WKNDタイトル**
 
-   *プロパティ* / *スタイルタブ*  */追加新しいスタイル*
+   *プロパティ* /「 *スタイル」タブ* / *新しいスタイルを追加*
 
    **下線** :  `cmp-title--underline`
 
    ![タイトルのスタイルポリシー設定](assets/style-system/title-style-policy.png)
 
-   「**完了**」をクリックして、タイトルポリシーの変更を保存します。
+   「**完了**」をクリックして、タイトルポリシーに対する変更を保存します。
 
    >[!NOTE]
    >
    > 値`cmp-title--underline`は、**ui.frontend**&#x200B;モジュールで開発する際に、先ほどターゲットにしたCSSクラスと一致します。
 
-### 下線のスタイルを適用する
+### 下線スタイルの適用
 
-最後に、作成者は、特定のタイトルコンポーネントに下線のスタイルを適用することを選択できます。
+最後に、作成者は、特定のタイトルコンポーネントに下線スタイルを適用することを選択できます。
 
-1. AEM Sitesの編集長の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. AEM Sitesエディターの&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. **編集**&#x200B;モードで、タイトルコンポーネントを選択します。 **paintbrush**&#x200B;アイコンをクリックし、**下線**&#x200B;スタイルを選択します。
 
-   ![下線のスタイルを適用する](assets/style-system/apply-underline-style-title.png)
+   ![下線スタイルの適用](assets/style-system/apply-underline-style-title.png)
 
    作成者は、スタイルのオン/オフを切り替えることができます。
 
-1. **ページ情報**&#x200B;アイコン/**発行済みの表示**&#x200B;をクリックして、AEMエディターの外部のページを検査します。
+1. **ページ情報**&#x200B;アイコン/**公開済みとして表示**&#x200B;をクリックして、AEMエディターの外部でページを調べます。
 
    ![公開済みとして表示](assets/style-system/view-as-published.png)
 
-   ブラウザー開発者ツールを使用して、Titleコンポーネントの周りのマークアップに、外側のdivに適用されたCSSクラス`cmp-title--underline`があることを確認します。
+   ブラウザー開発者ツールを使用して、タイトルコンポーネントの周囲のマークアップに、外側のdivに適用されたCSSクラス`cmp-title--underline`があることを確認します。
 
-## 引用ブロックのスタイル — テキスト{#text-component}
+## Quote Block Style - Text {#text-component}
 
-次に、同様の手順を繰り返して、[テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)に一意のスタイルを適用します。 テキストコンポーネントは、**ui.apps**&#x200B;モジュールの一部として、`/apps/wknd/components/text`下のプロジェクトにプロキシされました。 段落要素のデフォルトのスタイルは、既に&#x200B;**ui.frontend**&#x200B;に実装されています。
+次に、同様の手順を繰り返して、[テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)に独自のスタイルを適用します。 テキストコンポーネントは、**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/text`の下のプロジェクトにプロキシ化されています。 **ui.frontend**&#x200B;には、段落要素のデフォルトスタイルが既に実装されています。
 
-[WKND記事デザイン](assets/pages-templates/wknd-article-design.xd)には、引用符ブロックを含むテキストコンポーネントの一意のスタイルが含まれています。
+[WKND Article designs](assets/pages-templates/wknd-article-design.xd)には、引用符ブロックを含むテキストコンポーネント用の一意のスタイルが含まれます。
 
-![引用ブロックスタイル — 文字コンポーネント](assets/style-system/quote-block-style.png)
+![Quote Block Style — テキストコンポーネント](assets/style-system/quote-block-style.png)
 
-### Inspect文字コンポーネントマークアップ
+### Inspectテキストコンポーネントのマークアップ
 
-もう一度、Textコンポーネントのマークアップを調べます。
+テキストコンポーネントのマークアップを再度調べます。
 
-1. 次の場所で、テキストコンポーネントのマークアップを確認します。[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html)
+1. テキストコンポーネントのマークアップを次の場所で確認します。[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html)
 
-1. 次に、Textコンポーネントのマークアップを示します。
+1. 次に、テキストコンポーネントのマークアップを示します。
 
    ```html
    <div class="text">
@@ -268,7 +267,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
        ELEMENT
    ```
 
-1. スタイルシステムは、コンポーネントを囲む外側のdivにCSSクラスを追加します。 したがって、対象とするマークアップは次のようになります。
+1. スタイルシステムは、コンポーネントを囲む外側のdivにCSSクラスを追加します。 したがって、ターゲットとするマークアップは次のようになります。
 
    ```html
    <div class="text STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
@@ -278,11 +277,11 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
    </div>
    ```
 
-### Quote Blockスタイルの実装 — ui.frontend
+### Quote Block Styleの実装 — ui.frontend
 
-次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用して、Quote Blockスタイルを実装します。
+次に、プロジェクトの&#x200B;**ui.frontend**&#x200B;モジュールを使用してQuote Blockスタイルを実装します。
 
-1. **ui.frontend**&#x200B;モジュール内で次のコマンドを実行して、webpackデベロッパーサーバーを開始します。
+1. **ui.frontend**&#x200B;モジュール内から次のコマンドを実行して、webpack開発サーバーを起動します。
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -290,7 +289,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
    ```
 
 1. IDEで、次の場所にあるファイル`index.html`を開きます。`ui.frontend/src/main/webpack/static/index.html`.
-1. `index.html`で、テキスト&#x200B;*&quot;Jacob Wester&quot;*&#x200B;を検索して、テキストコンポーネントのインスタンスを探します（210行目）。 周囲追加のdivに対するクラス`cmp-text--quote`:
+1. `index.html`で、テキスト&#x200B;*&quot;Jacob Wester&quot;*（210行目）を検索して、テキストコンポーネントのインスタンスを見つけます。 周囲のdivにクラス`cmp-text--quote`を追加します。
 
    ```diff
    - <div class="text aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
@@ -338,75 +337,75 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
    >[!CAUTION]
    >
-   > この場合、生のHTML要素は、スタイルによってターゲット設定されます。 これは、テキストコンポーネントが、コンテンツ作成者向けのリッチテキストエディターを提供するためです。 RTEコンテンツに対して直接スタイルを作成する場合は、慎重に行う必要があり、スタイルを厳密にスコープすることがさらに重要です。
+   > この場合、生のHTML要素はスタイルのターゲットになります。 これは、テキストコンポーネントがコンテンツ作成者にリッチテキストエディターを提供するからです。 RTEコンテンツに対して直接スタイルを作成する場合は、慎重におこなう必要があり、スタイルを厳密にスコープ設定する方がさらに重要です。
 
-1. もう一度ブラウザに戻ると、次のようなQuoteブロックスタイルが追加されます。
+1. ブラウザーに戻ると、Quoteブロックのスタイルが追加されます。
 
-   ![WebPack Devサーバーに表示される引用ブロックスタイル](assets/style-system/quoteblock-implemented-webpack.png)
+   ![Webpack開発サーバーで表示されるQuoteブロックスタイル](assets/style-system/quoteblock-implemented-webpack.png)
 
 1. WebPack開発サーバーを停止します。
 
-### テ追加キストポリシー
+### テキストポリシーの追加
 
-次に、Textコンポーネント用の新しいポリシーを追加します。
+次に、テキストコンポーネントの新しいポリシーを追加します。
 
-1. Mavenのスキルを使用して、ローカルAEMインスタンスにコードベースをデプロイします。
+1. Mavenのスキルを使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
 
    ```shell
    $ cd ~/code/aem-guides-wknd
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html))。
+1. 次の場所にある&#x200B;**記事ページテンプレート**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html))を読み込みます。
 
-1. **構造**&#x200B;モードのメイン&#x200B;**レイアウトコンテナ**&#x200B;で、*許可されているコンポーネント*&#x200B;の下に表示されている&#x200B;**テキスト**&#x200B;コンポーネントの横の&#x200B;**ポリシー**&#x200B;アイコンを選択します。
+1. **構造**&#x200B;モードのメインの&#x200B;**レイアウトコンテナ**&#x200B;で、「*許可されるコンポーネント*」に表示されている&#x200B;**テキスト**&#x200B;コンポーネントの横にある&#x200B;**ポリシー**&#x200B;アイコンを選択します。
 
-   ![テキストポリシーの構成](assets/style-system/article-template-text-policy-icon.png)
+   ![テキストポリシーの設定](assets/style-system/article-template-text-policy-icon.png)
 
-1. 次の値でTextコンポーネントポリシーを更新します。
+1. 次の値を使用して、テキストコンポーネントポリシーを更新します。
 
-   *ポリシータイトル**: **コンテンツテキスト**
+   *ポリシーのタイトル**: **コンテンツテキスト**
 
-   *プラグイン* / *段落スタイル* /段落スタイルを *有効にする*
+   *プラグイン* / *段落スタイル* / *段落スタイルを有効にする*
 
-   *[スタイル]タブ* > *新しいスタイル*
+   *「スタイル」タブ* / *新しいスタイルを追加*
 
-   **引用ブロック** :  `cmp-text--quote`
+   **見積もりブロック** :  `cmp-text--quote`
 
    ![テキストコンポーネントポリシー](assets/style-system/text-policy-enable-paragraphstyles.png)
 
    ![テキストコンポーネントポリシー2](assets/style-system/text-policy-enable-quotestyle.png)
 
-   「**完了**」をクリックして、変更をテキストポリシーに保存します。
+   「**完了**」をクリックして、テキストポリシーに対する変更を保存します。
 
-### 見積もりブロックスタイルの適用
+### Quote Blockスタイルの適用
 
-1. AEM Sitesの編集長の&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. **編集**&#x200B;モードで、テキストコンポーネントを選択します。 コンポーネントを編集して、引用要素を含めます。
+1. AEM Sitesエディターの&#x200B;**La Skateparks**&#x200B;記事に移動します。[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. **編集**&#x200B;モードで、テキストコンポーネントを選択します。 コンポーネントを編集して、引用符要素を含めます。
 
    ![テキストコンポーネントの設定](assets/style-system/configure-text-component.png)
 
-1. テキストコンポーネントを選択し、**paintbrush**&#x200B;アイコンをクリックし、**ブロックを引用**&#x200B;スタイルを選択します。
+1. テキストコンポーネントを選択し、**paintbrush**&#x200B;アイコンをクリックして、**ブロックを引用**&#x200B;スタイルを選択します。
 
-   ![見積もりブロックスタイルの適用](assets/style-system/quote-block-style-applied.png)
+   ![Quote Blockスタイルの適用](assets/style-system/quote-block-style-applied.png)
 
    作成者は、スタイルのオン/オフを切り替えることができます。
 
-## 固定幅 —コンテナ（賞与） {#layout-container}
+## 固定幅 — コンテナ（ボーナス） {#layout-container}
 
-コンテナコンポーネントは、記事ページテンプレートの基本的な構造を作成し、コンテンツ作成者がページにコンテンツを追加するためのドロップゾーンを提供するために使用されています。 また、コンテナはスタイルシステムを活用して、コンテンツ作成者にレイアウトのデザインに関するより多くのオプションを提供できます。
+コンテナコンポーネントは、記事ページテンプレートの基本構造を作成し、コンテンツ作成者がページにコンテンツを追加するためのドロップゾーンを提供するために使用されています。 コンテナはスタイルシステムを活用して、コンテンツ作成者がレイアウトをデザインするためのさらに多くのオプションを提供することもできます。
 
-記事ページテンプレートの&#x200B;**メインコンテナ**&#x200B;には、2つの作成者可能なコンテナが含まれ、固定された幅を持ちます。
+記事ページテンプレートの&#x200B;**メインコンテナ**&#x200B;には、2つの作成者可能なコンテナが含まれ、幅は固定されています。
 
 ![メインコンテナ](assets/style-system/main-container-article-page-template.png)
 
-*記事ページテンプレートのメインコンテナ*。
+*記事ページテンプレートのメインコンテナ*&#x200B;を参照してください。
 
-**メインコンテナ**&#x200B;のポリシーは、デフォルトの要素を`main`に設定します。
+**メインコンテナ**&#x200B;のポリシーでは、デフォルトの要素を`main`に設定します。
 
 ![メインコンテナポリシー](assets/style-system/main-container-policy.png)
 
-**メインコンテナ**&#x200B;を固定するCSSは、`ui.frontend/src/main/webpack/site/styles/container_main.scss`の&#x200B;**ui.frontend**&#x200B;モジュールに設定されます。
+**メインコンテナ**&#x200B;を固定するCSSは、 `ui.frontend/src/main/webpack/site/styles/container_main.scss`にある&#x200B;**ui.frontend**&#x200B;モジュールに設定されます。
 
 ```SCSS
 main.container {
@@ -418,19 +417,19 @@ main.container {
 }
 ```
 
-`main` HTML要素をターゲットにする代わりに、スタイルシステムを使用して、コンテナポリシーの一部として&#x200B;**固定幅**&#x200B;スタイルを作成できます。 スタイルシステムでは、**固定幅**&#x200B;と&#x200B;**流体幅**&#x200B;のコンテナを切り替えるオプションをユーザーに提供できます。
+`main` HTML要素のターゲット設定の代わりに、スタイルシステムを使用して、コンテナポリシーの一部として&#x200B;**固定幅**&#x200B;スタイルを作成できます。 スタイルシステムでは、**固定幅**&#x200B;コンテナと&#x200B;**可変幅**&#x200B;コンテナを切り替えるオプションを使用できます。
 
-1. **ボーナスチャレンジ** ：前の練習で学んだレッスンを使用し、スタイルシステムを使用して、コンテナコンポーネントの **固定** 幅 **流体** 幅スタイルを実装します。
+1. **ボーナスチャレンジ**  — 前の演習で学んだレッスンを使用し、スタイルシステムを使用して、コンテナコンポーネントの固定幅方 **向の流** 体幅スタイルを実装しま **** す。
 
-## これで完了です! {#congratulations}
+## バリデーターが {#congratulations}
 
-記事ページのスタイルはほぼ完成し、AEM Style Systemを使用した実際の操作を体験できました。
+これで、記事ページのスタイルはほぼ完全に設定され、AEM Style Systemを使用した実際の操作が可能になりました。
 
 ### 次の手順 {#next-steps}
 
-ダイアログで作成されたコンテンツを表示する[カスタムAEMコンポーネント](custom-component.md)をエンドツーエンドで作成する手順を説明します。また、Slingモデルの開発で、コンポーネントのHTLを埋め込むビジネスロジックをカプセル化します。
+ダイアログで作成されたコンテンツを表示する[カスタムAEMコンポーネント](custom-component.md)をエンドツーエンドで作成する手順を説明します。また、Sling Modelの開発で、コンポーネントのHTLに入力するビジネスロジックをカプセル化する方法を検討します。
 
-[GitHub](https://github.com/adobe/aem-guides-wknd)上の完了したコードを表示するか、Gitブラック`tutorial/style-system-solution`上のローカルにコードを確認して展開します。
+[GitHub](https://github.com/adobe/aem-guides-wknd)で完成したコードを表示するか、Gitブラッチ`tutorial/style-system-solution`でコードをローカルに確認してデプロイします。
 
-1. [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)リポジトリをコピーします。
-1. `tutorial/style-system-solution`ブランチを調べます。
+1. [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)リポジトリのクローンを作成します。
+1. `tutorial/style-system-solution`ブランチを確認します。
