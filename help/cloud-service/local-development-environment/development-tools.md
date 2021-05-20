@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1430'
 ht-degree: 4%
 
 ---
@@ -145,22 +145,20 @@ Adobe I/OCloud Managerプラグインを使用すると、aio CLIで`aio asset-c
 
 ### Adobe I/OCLI認証の設定
 
-Adobe I/OCLIとCloud Managerとの通信をおこなうには、Adobe I/OコンソールでCloud Manager統合を作成し、認証を正常におこなうために資格情報を取得する必要があります。
-
->[!VIDEO](https://video.tv.adobe.com/v/35094?quality=12&learn=on)
+Adobe I/OCLIとCloud Managerとの通信を行うには、Adobe I/Oコンソールで[Cloud Manager統合を作成し、認証を正常におこなうために資格情報を取得する必要があります。](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 
 1. [console.adobe.io](https://console.adobe.io)にログインします。
 1. Adobe組織切り替えボタンで、接続先のCloud Manager製品を含む組織がアクティブになっていることを確認します。
 1. 新しい[Adobe I/Oプログラムを作成するか、既存の](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)を開きます。
    + Adobe I/Oコンソールプログラムは、統合の管理方法に基づいて、統合、作成または使用および既存のプログラムの単なる組織的なグループです
-   + 新しいプロジェクトを作成する場合は、プロンプトが表示されたら「空のプロジェクト」を選択します（テンプレートから作成するのとは異なります）。
+   + 新しいプロジェクトを作成する場合は、「空のプロジェクト」を選択します(「テンプレートから作成」)
    + Adobe I/Oコンソールプログラムは、Cloud Managerプログラムとは異なる概念です
 1. 「開発者 —Cloud Service」プロファイルを使用した、新しいCloud Manager API統合の作成
 1. Adobe I/OCLIの[config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)に入力する必要があるサービスアカウント(JWT)資格情報を取得します
 1. `config.json`ファイルをAdobe I/OCLIに読み込む
-   + `$ aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
 1. `private.key`ファイルをAdobe I/OCLIに読み込む
-   + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 Adobe I/OCLIを使用して、Cloud Managerの[コマンド](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)の実行を開始します。
 
