@@ -1,7 +1,7 @@
 ---
-title: Cloud ServiceとしてのAEM用のasset computeマイクロサービス拡張機能
-description: このチュートリアルでは、単純なAsset computeワーカーの作成について説明します。このワーカーは、元のアセットを丸に切り抜いてアセットのレンディションを作成し、設定可能なコントラストと明るさを適用します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発および配置を検討するために使用します。
-feature: Asset Compute Microservices
+title: AEM as aCloud Serviceのasset computeマイクロサービス拡張機能
+description: このチュートリアルでは、元のAsset computeを円に切り抜いてアセットレンディションを作成し、設定可能なコントラストと明るさを適用する、シンプルなアセットワーカーの作成について説明します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発およびデプロイを検討するために、このワーカーを使用します。
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '1033'
@@ -23,135 +22,135 @@ ht-degree: 3%
 
 # asset computeマイクロサービス拡張機能
 
-AEM asCloud ServiceAsset computeマイクロサービスは、AEMに保存されたアセットのバイナリデータを読み取り、操作し、カスタムアセットレンディションを作成するために使用されるカスタムワーカーの開発と展開をサポートしています。
+AEM as a AEM as a Asset Microservicesは、Cloud Serviceに保存されたアセットのバイナリデータの読み取りと操作に使用されるカスタムワーカーの開発とデプロイメントをサポートしています。最も一般的に、カスタムAsset computeレンディションの作成に使用されます。
 
-AEM 6.xでは、AEM Workflowプロセスはアセットレンディションの読み取り、変換、書き込みに使用されていましたが、AEMではCloud ServiceAsset computeの作業者はこのニーズを満たしています。
+AEM 6.xでは、Cloud ServiceAsset computeワーカーはこのニーズを満たすので、アセットレンディションの読み取り、変換、書き戻しにAEM 6.xのカスタムAEM Workflowプロセスが使用されていました。
 
-## 今後の作業
+## どうするか
 
 >[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
 
-このチュートリアルでは、単純なAsset computeワーカーの作成について説明します。このワーカーは、元のアセットを丸に切り抜いてアセットのレンディションを作成し、設定可能なコントラストと明るさを適用します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発および配置を検討するために使用します。
+このチュートリアルでは、元のAsset computeを円に切り抜いてアセットレンディションを作成し、設定可能なコントラストと明るさを適用する、シンプルなアセットワーカーの作成について説明します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発およびデプロイを検討するために、このワーカーを使用します。
 
 ### 目的 {#objective}
 
-1. asset computeワーカーを構築しデプロイするために必要なアカウントとサービスのプロビジョニングと設定
+1. asset compute・ワーカーの構築とデプロイに必要なアカウントとサービスのプロビジョニングと設定
 1. asset computeプロジェクトの作成と設定
-1. カスタムレンディションを生成するAsset computeワーカーの開発
-1. カスタムAsset computeワーカーのテストを作成し、デバッグする方法を学びます
-1. asset computeワーカーをデプロイし、処理プロファイルを介してAEMをCloud Service作成者サービスとして統合します
+1. カスタムレンディションを生成するamAsset computeワーカーの開発
+1. テストの書き込みと、カスタムAsset computeワーカーのデバッグ方法の学習
+1. asset computeワーカーをデプロイし、処理プロファイルを介してAEMをCloud Serviceオーサーサービスとして統合する
 
 ## 設定
 
-asset computeワーカーの拡張に適した準備を行い、プロビジョニングと設定が必要なサービスとアカウント、および開発用にローカルにインストールするソフトウェアを理解する方法を説明します。
+asset computeワーカーの拡張に適切に対応し、プロビジョニングと設定が必要なサービスとアカウント、および開発用にローカルにインストールされたソフトウェアを理解する方法を説明します。
 
 ### アカウントとサービスのプロビジョニング{#accounts-and-services}
 
-次のアカウントとサービスは、チュートリアルを完了するために、AEMをCloud Service開発環境またはSandboxプログラムとして、AdobeプロジェクトFireflyおよびMicrosoft Azure Blobストレージにアクセスするために、プロビジョニングとアクセスが必要です。
+次のアカウントとサービスでは、 AEM as aCloud Service開発環境またはサンドボックスプログラム、AdobeプロジェクトFireflyおよびMicrosoft Azure Blob Storageへのアクセスを完了するために、プロビジョニングとへのアクセスが必要です。
 
 + [アカウントとサービスのプロビジョニング](./set-up/accounts-and-services.md)
 
 ### ローカル開発環境
 
-Asset computeプロジェクトのローカル開発には、従来のAEM開発とは異なる、次のような特定の開発者ツールセットが必要です。Microsoft Visual Studioコード、Docker Desktop、Node.js、およびサポートするnpmモジュール
+Asset computeプロジェクトのローカル開発には、従来のAEM開発とは異なり、特定の開発者ツールセットが必要です。次に例を示します。Microsoft Visual Studio Code、Docker Desktop、Node.jsおよびサポートするnpmモジュール。
 
 + [ローカル開発環境の設定](./set-up/development-environment.md)
 
-### Adobeプロジェクトの蛍
+### AdobeプロジェクトFirefly
 
-asset computeプロジェクトとは、特別に定義されたAdobeプロジェクトFireflyプロジェクトです。そのため、Adobeプロジェクトを設定してデプロイするには、Adobe開発者コンソールでプロジェクトFireflyにアクセスする必要があります。
+asset computeプロジェクトは、特別に定義されたAdobeProject Fireflyプロジェクトです。そのため、設定およびデプロイするには、Adobe開発者コンソールのAdobeProject Fireflyにアクセスする必要があります。
 
-+ [Adobeプロジェクトの蛍光を設定](./set-up/firefly.md)
++ [AdobeProject Fireflyの設定](./set-up/firefly.md)
 
 ## 開発
 
-asset computeプロジェクトを作成および設定し、特注アセットのレンディションを生成するカスタムワーカーを開発する方法を説明します。
+カスタムワーカーを開発し、カスタムAsset computeレンディションを生成するプロジェクトプロジェクトの作成と設定の方法について説明します。
 
-### 新しいAsset computeプロジェクトの作成
+### 新しいAsset computeプロジェクト
 
-1つ以上のAsset computeワーカーを含むasset computeプロジェクトは、対話型Adobe I/OCLIを使用して生成されます。 asset computeプロジェクトは、特別に構成されたAdobeプロジェクトFireflyプロジェクトで、Node.jsプロジェクトになっています。
+asset computeプロジェクトは、1つ以上のAsset computeワーカーを含み、インタラクティブAdobe I/OCLIを使用して生成されます。 asset computeプロジェクトは、特別に構造化されたAdobeProject Fireflyプロジェクトで、Node.jsプロジェクトになります。
 
-+ [新しいAsset computeプロジェクトの作成](./develop/project.md)
++ [新しいAsset computeプロジェクト](./develop/project.md)
 
 ### 環境変数の設定
 
-環境変数は、ローカル開発用に`.env`ファイルに保持され、Adobe I/Oの資格情報とローカル開発に必要なクラウドストレージの資格情報を提供するために使用されます。
+環境変数は、ローカル開発用に`.env`ファイルで管理され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
 
-+ [環境変数の設定](./develop/environment-variables.md)
++ [ 環境変数の設定](./develop/environment-variables.md)
 
 ### manifest.ymlの設定
 
-asset computeプロジェクトには、プロジェクトに含まれるすべてのAsset computeワーカーを定義するマニフェストと、Adobe I/O Runtimeに展開して実行する際に使用できるリソースが含まれます。
+asset computeプロジェクトには、プロジェクト内に含まれるすべてのAsset computeワーカーを定義するマニフェストと、Adobe I/O Runtimeにデプロイして実行する際に使用可能なリソースが含まれます。
 
 + [manifest.ymlの設定](./develop/manifest.md)
 
-### 労働者の育成
+### 作業者の育成
 
-asset computeワーカーの開発は、Asset computeマイクロサービスの拡張の中核となります。ワーカーには、結果のアセットレンディションの生成を生成（調整）するカスタムコードが含まれています。
+asset computeワーカーの開発は、Asset computeマイクロサービスを拡張する中核となります。ワーカーには、結果のアセットレンディションの生成を生成または編成するカスタムコードが含まれます。
 
 + [asset computeワーカーの開発](./develop/worker.md)
 
 ### asset compute開発ツールの使用
 
-asset compute開発ツールは、ワーカー生成レンディションの展開、実行、およびプレビューを行うローカルWebハーネスを提供し、Asset computeワーカーの迅速な開発と反復的な開発をサポートします。
+asset compute開発ツールは、ワーカー生成レンディションをデプロイ、実行、プレビューし、迅速かつ反復的なAsset computeワーカー開発をサポートするローカルWebハーネスを提供します。
 
 + [asset compute開発ツールの使用](./develop/development-tool.md)
 
 ## テストとデバッグ
 
-カスタムAsset computeワーカーの動作に自信があるかどうかをテストし、Asset computeワーカーをデバッグして、カスタムコードの実行方法を理解し、トラブルシューティングする方法を説明します。
+カスタムAsset computeワーカーをテストして操作に自信を持つようにし、Asset computeワーカーをデバッグしてカスタムコードの実行方法を理解し、トラブルシューティングする方法を説明します。
 
 ### ワーカーのテスト
 
-asset computeは、ワーカーのテストスイートを作成するためのテストフレームワークを提供し、適切な動作を容易にするテストを定義します。
+asset computeは、適切な動作が容易になるようにテストを定義する、ワーカー用のテストスイートを作成するためのテストフレームワークを提供します。
 
 + [ワーカーのテスト](./test-debug/test.md)
 
 ### ワーカーのデバッグ
 
-asset computeワーカーは、従来の`console.log(..)`出力から、__VSコード__&#x200B;および&#x200B;__wskdebug__&#x200B;との統合に至るまで、様々なレベルのデバッグを提供し、開発者はワーカーコードをリアルタイムで実行します。
+asset computeワーカーは、従来の`console.log(..)`出力から、__VS Code__&#x200B;および&#x200B;__wskdebug__&#x200B;との統合に至るまで、様々なレベルのデバッグを提供し、開発者はリアルタイムで実行されるワーカーコードを順を追って実行できます。
 
 + [ワーカーのデバッグ](./test-debug/debug.md)
 
 ## デプロイ
 
-カスタムAsset computeワーカーをCloud ServiceとしてAEMに統合する方法について説明します。まず、カスタムワーカーをAdobe I/O Runtimeにデプロイし、次にAEM Assetsの処理プロファイルを介してAEMをCloud Service作成者として呼び出します。
+カスタムAsset computeワーカーをAEM as aCloud Serviceと統合する方法について説明します。まずAdobe I/O Runtimeにデプロイし、次に、AEM Assetsの処理プロファイルを介してAEMをCloud Service作成者として呼び出します。
 
-### Adobe I/O Runtimeに展開
+### Adobe I/O Runtimeへのデプロイ
 
-AEMでCloud Serviceとして使用するには、asset computeワーカーをAdobe I/O Runtimeに配置する必要があります。
+asset computeワーカーをAEM as a Adobe I/O Runtimeで使用するには、Cloud Serviceにデプロイする必要があります。
 
 + [処理プロファイルの使用](./deploy/runtime.md)
 
 ### AEM処理プロファイルを使用したワーカーの統合
 
-Adobe I/O Runtimeに導入すると、Asset computeワーカーは、[アセット処理プロファイル](../../assets/configuring/processing-profiles.md)を介して、AEMにCloud Serviceとして登録できます。 次に、処理プロファイルは、そのアセットに適用されるアセットフォルダに適用されます。
+Adobe I/O Runtimeにデプロイすると、Asset computeワーカーは、[Assets処理プロファイル](../../assets/configuring/processing-profiles.md)を介してAEMにCloud Serviceとして登録できます。 処理プロファイルは、そのアセットに適用されるアセットフォルダーにも適用されます。
 
 + [AEM処理プロファイルとの統合](./deploy/processing-profiles.md)
 
-## アドバンス
+## 詳細
 
-これらの要約チュートリアルは、前章で確立した基礎知識に基づく、より高度な使用例に取り組みます。
+これらの簡潔なチュートリアルは、前の章で確立された基礎的な学習に基づいて構築された、より高度な使用例に取り組んでいます。
 
-+ [メタデータを](./advanced/metadata.md) 
++ [にメタデータを書き戻す](./advanced/metadata.md) ことができるAsset computeメタデータワーカーを開発する
 
 ## Githubのコードベース
 
-チュートリアルのコードベースは、次の場所でGithubで入手できます。
+チュートリアルのコードベースは、GitHubで次の場所から入手できます。
 
 + [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ master branch
 
-ソースコードに必要な`.env`または`config.json`ファイルが含まれていません。 これらは、[アカウントとサービス](#accounts-and-services)の情報を使用して追加および設定する必要があります。
+ソースコードに必要な`.env`ファイルや`config.json`ファイルが含まれていません。 [アカウントとサービス](#accounts-and-services)情報を使用して、これらを追加し、設定する必要があります。
 
 ## その他のリソース
 
-以下は、Asset computeワーカーの開発に役立つAPIおよびSDKに関する詳細情報や役立つ情報を提供する様々なAdobeリソースです。
+以下に、Adobeワーカーを開発するための参考情報と役立つAPIおよびSDKを提供する様々なAsset computeリソースを示します。
 
 ### ドキュメント
 
 + [asset computeサービスドキュメント](https://docs.adobe.com/content/help/ja-JP/asset-compute/using/extend/understand-extensibility.html)
-+ [asset compute開発ツールのお読みください](https://github.com/adobe/asset-compute-devtool)
-+ [asset computeサンプル作業者](https://github.com/adobe/asset-compute-example-workers)
++ [asset compute開発ツールのreadme](https://github.com/adobe/asset-compute-devtool)
++ [asset computeサンプルワーカー](https://github.com/adobe/asset-compute-example-workers)
 
 ### APIとSDK
 
@@ -160,4 +159,4 @@ Adobe I/O Runtimeに導入すると、Asset computeワーカーは、[アセッ�
    + [asset computeXMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [AdobeクラウドBlobstoreラッパーライブラリ](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adobeノード取得の再試行ライブラリ](https://github.com/adobe/node-fetch-retry)
-+ [asset computeサンプル作業者](https://github.com/adobe/asset-compute-example-workers)
++ [asset computeサンプルワーカー](https://github.com/adobe/asset-compute-example-workers)
