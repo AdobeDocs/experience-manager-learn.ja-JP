@@ -1,6 +1,6 @@
 ---
 title: サービスインターフェイスの作成
-description: 公開するインターフェイスのメソッドを定義します
+description: インターフェイスで、公開するメソッドを定義します
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 # インターフェイス
 
-次の2つのメソッド定義を使用してインターフェイスを作成します。
+次の2つのメソッド定義を持つインターフェイスを作成します。
 
 ```java
 package com.aemforms.doccloud.core;
