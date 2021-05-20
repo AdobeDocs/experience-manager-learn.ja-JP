@@ -4,7 +4,7 @@ seo-title: 関数とコードエディターの使用
 description: 関数とコードエディターを使用したビジネスルールの作成
 seo-description: 関数とコードエディターを使用したビジネスルールの作成
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: Adaptive Forms
+feature: アダプティブフォーム
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,10 +13,9 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '153'
@@ -25,16 +24,16 @@ ht-degree: 1%
 ---
 
 
-# カスタム関数とコードエディターの使用{#using-functions-and-code-editor}
+# カスタム関数とコードエディター{#using-functions-and-code-editor}の使用
 
-この部分では、カスタム関数とコードエディターを使用してビジネスルールを作成します。
+ここでは、カスタム関数とコードエディターを使用してビジネスルールを作成します。
 
-このチュートリアルの前の[カスタム関数](assets/client-libs-and-logo.zip)を使用して、既にClientLibをインストール済みです。
+このチュートリアルでは、既にカスタム関数](assets/client-libs-and-logo.zip)を使用して[ClientLibをインストールしています。
 
-通常、クライアントライブラリはCSSとJavaScriptファイルで構成されます。 このクライアントライブラリには、コンボボックスのリスト値を入力する関数を公開するjavascriptファイルが含まれています。
+通常、クライアントライブラリはCSSとJavaScriptファイルで構成されます。 このクライアントライブラリには、コンボボックス値を入力する関数を公開するJavaScriptファイルが含まれています。
 
 
-## ドロップダウンリストを入力する関数{#function-to-populate-drop-down-list}
+## ドロップダウンリストに入力する機能{#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
@@ -42,11 +41,11 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### パネルを検証{#validate-panels-using-rule-editor}
+#### パネル{#validate-panels-using-rule-editor}を検証
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
-パネルのフィールドの検証に使用するコードを次に示します
+次に、パネルのフィールドを検証するためのコードを示します
 
 ```javascript
 //debugger;
@@ -71,7 +70,7 @@ else
 
 1行目のコメントを解除して、ブラウザーウィンドウでコードをデバッグできます。
 
-4行目 — 現在のパネルを取得します。
+4行目 — 現在のパネルを取得します
 
 5行目 — 現在のパネルを検証します。
 
