@@ -1,6 +1,6 @@
 ---
 title: AEMでのAdobe TargetCloud Serviceアカウントの作成
-description: Cloud ServiceとAdobeのIMS認証を使用して、Adobe Experience ManagerをAdobe TargetとのCloud Serviceとして統合します。
+description: Cloud ServiceとAdobeのIMS認証を使用して、Adobe Experience Manager as a Adobe TargetをCloud Serviceと統合します。
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -8,10 +8,9 @@ activity: setup
 version: cloud-service
 kt: 6044
 thumbnail: 41244.jpg
-topic: Integrations
+topic: 統合
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '144'
@@ -20,15 +19,15 @@ ht-degree: 0%
 ---
 
 
-# Adobe TargetCloud Serviceアカウントを作成{#adobe-target-cloud-service}
+# Adobe TargetCloud Serviceアカウント{#adobe-target-cloud-service}の作成
 
-次のビデオでは、AEMをCloud ServiceとしてAdobe Targetに接続する方法について説明します。
+次のビデオでは、AEM as a Adobe Targetとの接続方法について説明します。
 
-この統合により、AEM AuthorサービスはAdobe Targetと直接通信でき、Experience FragmentsをAEMからターゲットにオファーとしてプッシュできます。  この統合では、*Adobe TargetJavaScript (AT.js)をAEM SitesのWebページに*&#x200B;追加しません。[AEMとLaunchをターゲット式](../experience-platform-launch/connect-aem-launch-adobe-io.md)で統合します。
+この統合により、AEMオーサーサービスはAdobe Targetと直接通信し、エクスペリエンスフラグメントをAEMからTargetにオファーとしてプッシュできます。  [AEMをTarget拡張機能](../experience-platform-launch/connect-aem-launch-adobe-io.md)を使用してLaunchと統合する場合、この統合では、Adobe Target JavaScript(AT.js)がAEM Sites Webページに追加されません。**
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
->このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 この問題が解決するまで、ビデオの同じ手順に従いますが、[従来のAdobe TargetCloud Servicesの設定](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)を使用してください。
+>このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 この問題が解決されるまでは、ビデオ内の同じ手順に従いますが、従来のAdobe TargetCloud Services設定](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)を使用します。[
 
