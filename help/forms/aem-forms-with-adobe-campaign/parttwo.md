@@ -1,20 +1,19 @@
 ---
 title: アダプティブフォーム送信時のキャンペーンプロファイルの作成
 seo-title: アダプティブフォーム送信時のキャンペーンプロファイルの作成
-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
-seo-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
+description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
+seo-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: Adaptive Forms, Form Data Model
+feature: アダプティブForms、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '406'
@@ -23,19 +22,19 @@ ht-degree: 0%
 ---
 
 
-# アダプティブフォーム送信でのキャンペーンプロファイルの作成{#creating-campaign-profile-on-adaptive-form-submission}
+# アダプティブフォーム送信時のキャンペーンプロファイルの作成{#creating-campaign-profile-on-adaptive-form-submission}
 
-この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順を説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
+この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 
-このチュートリアルでは、アダプティブフォームの送信時にキャンペーンプロファイルを作成する手順について説明します。 この使用例を達成するには、次の作業を行う必要があります。
+このチュートリアルでは、アダプティブフォーム送信時にCampaignプロファイルを作成する手順について説明します。 この使用例を達成するには、次の手順を実行する必要があります
 
-* REST APIを使用してAEMサービス(CampaignService)を作成し、Adobe Campaign Standardプロファイルを作成する
+* AEMサービス(CampaignService)の作成（REST APIを使用）
 * アダプティブフォームの送信を処理するためのカスタム送信アクションの作成
-* CampaignServiceのcreateProfileメソッドを呼び出します
+* CampaignServiceのcreateProfileメソッドを呼び出す
 
-## AEMサービスの作成{#create-aem-service}
+## AEMサービス{#create-aem-service}の作成
 
-AEMサービスを作成して、Adobe Campaignプロファイルを作成します。 このAEMサービスは、OSGI設定からAdobe Campaign資格情報を取得します。 キャンペーン資格情報が取得されたら、アクセストークンが生成され、アクセストークンHTTP Post呼び出しを使用して、Adobe Campaign内のプロファイルが作成されます。 プロファイルを作成するコードを次に示します。
+AEM Serviceを作成して、Adobe Campaignプロファイルを作成します。 このAEMサービスは、Adobe Campaignの資格情報をOSGI設定から取得します。 キャンペーン資格情報が取得されたアクセストークンが生成され、アクセストークンHTTP Post呼び出しを使用して、Adobe Campaignでプロファイルが作成されます。 次に、プロファイルを作成するためのコードを示します。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -250,11 +249,11 @@ return null;
 
 ## カスタム送信{#custom-submit}
 
-アダプティブフォームの送信を処理するカスタム送信ハンドラーを作成します。 このカスタム送信ハンドラーでは、CampaignServiceのcreateProfileメソッドを呼び出します。 createProfileメソッドは、作成する必要があるプロファイルを表すJSONObjectを受け取ります。
+アダプティブフォームの送信を処理するためのカスタム送信ハンドラーを作成します。 このカスタム送信ハンドラーでは、CampaignServiceのcreateProfileメソッドを呼び出します。 createProfileメソッドは、作成する必要があるプロファイルを表すJSONObjectを受け取ります。
 
-AEM Formsでのカスタム送信ハンドラーの詳細については、次の[リンク](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)を参照してください。
+AEM Formsのカスタム送信ハンドラーの詳細については、次の[リンク](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)を参照してください。
 
-カスタム送信のコードを次に示します
+次に、カスタム送信のコードを示します
 
 ```java
 aemforms.campaign.core.CampaignService addNewProfile = sling.getService(aemforms.campaign.core.CampaignService.class);
@@ -267,13 +266,13 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## ソリューション{#test-the-solution}をテストします。
+## {#test-the-solution}ソリューションをテストします。
 
 サービスとカスタム送信アクションを定義したら、ソリューションをテストする準備が整います。 ソリューションをテストするには、次の手順を実行します
 
 
-* [ここで説明する手順に従っていることを確認します](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [パッケージマネージャーを使用してアダプティブフォームとカスタム送信ハンドラーを読み込みます](assets/create-acs-profile-on-af-submission.zip)。このパッケージには、カスタム送信アクションに送信するように設定されたアダプティブフォームが含まれています。
-* [フォーム](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)のプレビュー
+* [フォーム](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)をプレビューします。
 * すべてのフィールドに入力し、
 * ACSインスタンスに新しいプロファイルが作成されます
