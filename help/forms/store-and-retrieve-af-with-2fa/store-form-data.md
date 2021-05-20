@@ -1,7 +1,7 @@
 ---
 title: フォームデータの保存
-description: フォームデータと新しい添付ファイルマップをデータベースに格納する
-feature: Adaptive Forms
+description: 新しい添付ファイルマップと共にフォームデータをデータベースに格納する
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: implement
 version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '72'
@@ -22,14 +21,14 @@ ht-degree: 4%
 
 # フォームデータの保存
 
-次の手順では、アダプティブフォームデータと関連付けられたattachmentsinfoを保存する新しい行をデータベースに挿入するサービスを作成します。
+次に、アダプティブフォームのデータと関連するattachmentsinfoを格納する新しい行をデータベースに挿入するサービスを作成します。
 次のスクリーンショットは、データベース内の行を示しています。
 
 
 ![サンプル行](assets/sample-row.JPG)
 
 
-次のコードは、適切なデータを持つ新しい行をデータベースに挿入します
+次のコードは、データベースに適切なデータを含む新しい行を挿入します
 
 ```java
 public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
