@@ -1,6 +1,6 @@
 ---
 title: カスタムプロセスステップの作成
-description: Document Cloudを使用してWord、Excelの添付ファイルをPDFに変換するカスタムプロセスステップです。
+description: WordやExcelの添付ファイルをPDFに変換するためのカスタムプロセスステップ(Document Cloud)
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ---
 
-# カスタムプロセス手順
+# カスタムプロセスステップ
 
-次の表は、ネイティブファイルを変換して変換後のpdfに置き換えるカスタムプロセスステップの完全なコードです。
-このカスタム手順では、ワークフローのプロセス引数として指定された、フォルダー名に含まれるすべての添付ファイルを検索します。
-このカスタムプロセスの手順では、カスタムのDocumentCloudSDKServiceのメソッドを使用してPDFを作成します。
+次に、カスタムプロセスステップの完全なコードを示します。このコードにより、ネイティブファイルが変換され、変換されたPDFに置き換えられます。
+このカスタムステップでは、ワークフローのプロセス引数として指定されたフォルダー名の下にあるすべての添付ファイルを検索します。
+このカスタムプロセスステップでは、カスタムのDocumentCloudSDKServiceのメソッドを使用してPDFを作成します。
 
 
 ```java
