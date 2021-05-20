@@ -1,7 +1,7 @@
 ---
 title: サーブレットの作成
-description: サーブレットを作成し、POST要求を処理してフォームデータを保存します
-feature: Adaptive Forms
+description: サーブレットを作成し、フォームデータを保存するPOST要求を処理します
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '86'
@@ -22,7 +21,7 @@ ht-degree: 3%
 
 # サーブレットの作成
 
-次の手順は、カスタムOSGiサービスの適切なメソッドを呼び出すサーブレットを作成することです。 サーブレットは、アダプティブフォームデータ、添付ファイル情報にアクセスできます。 サーブレットは、部分的に完成したアダプティブフォームを取得するために使用できる一意のアプリケーションIDを返します。
+次に、カスタムOSGiサービスの適切なメソッドを呼び出すサーブレットを作成します。 このサーブレットは、アダプティブフォームデータの添付ファイル情報にアクセスできます。 このサーブレットは、部分的に入力されたアダプティブフォームを取得するために使用できる、一意のアプリケーションIDを返します。
 
 このサーブレットは、ユーザーがアダプティブフォームの「保存して終了」ボタンをクリックすると呼び出されます
 
