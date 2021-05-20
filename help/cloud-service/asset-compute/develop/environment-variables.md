@@ -1,7 +1,7 @@
 ---
-title: asset computeの拡張機能用の環境変数の設定
-description: 環境変数は、ローカル開発用に.envファイルに保持され、Adobe I/O資格情報とローカル開発に必要なクラウドストレージ資格情報を提供するために使用されます。
-feature: Asset Compute Microservices
+title: 環境変数の拡張機能のAsset compute
+description: 環境変数は、ローカル開発用に.envファイルで管理され、ローカル開発に必要なAdobe I/O資格情報とクラウドストレージ資格情報を提供するために使用されます。
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '593'
@@ -25,20 +24,20 @@ ht-degree: 1%
 
 ![ドット環境ファイル](assets/environment-variables/dot-env-file.png)
 
-asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/O情報とクラウドストレージ情報が設定されていることを確認します。 この情報はプロジェクトの`.env`に保存されます。これはローカル開発のためにのみ使用され、Gitには保存されません。 `.env`ファイルは、キーと値のペアをローカルAsset computeローカル開発環境に公開する便利な方法を提供します。 [](../deploy/runtime.md)Asset computeワーカーをAdobe I/O Runtimeに導入する場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 サードパーティWebサービスの開発資格情報など、その他のカスタムパラメーターやシークレットを`.env`ファイルに保存することもできます。
+asset computeワーカーの開発を開始する前に、プロジェクトにAdobe I/Oとクラウドストレージの情報が設定されていることを確認します。 この情報は、ローカル開発にのみ使用され、Gitには保存されない、プロジェクトの`.env`に保存されます。 `.env`ファイルは、キーと値のペアをローカルAsset computeローカル開発環境に公開する便利な方法を提供します。 [Asset computeワーカーをAdobe I/O Runtimeにデプロイする場合、`.env`ファイルは使用されず、値のサブセットが環境変数を介して渡されます。 ](../deploy/runtime.md)その他のカスタムパラメーターおよびシークレットは、サードパーティWebサービスの開発用資格情報など、 `.env`ファイルにも保存できます。
 
 ## `private.key`
 
 ![秘密鍵](assets/environment-variables/private-key.png)
 
-`.env`ファイルを開き、`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`キーのコメントを解除し、Adobe I/OFireFlyプロジェクトに追加された公開証明書とペアになるファイルシステムの`private.key`への絶対パスを指定します。
+`.env`ファイルを開き、`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`キーのコメントを解除し、Adobe I/OのFireFlyプロジェクトに追加された公開証明書とペアになる`private.key`へのファイルシステムの絶対パスを指定します。
 
-+ キーペアがAdobe I/Oによって生成された場合は、`config.zip`の一部として自動的にダウンロードされました。
-+ Adobe I/Oに公開鍵を提供した場合は、一致する秘密鍵も所有する必要があります。
-+ これらのキーペアがない場合は、新しいキーペアを生成するか、次の下部に新しい公開鍵をアップロードできます。
-   [https://console.adobe.com](https://console.adobe.io) >Asset computeの蛍光プロジェクト> Workspaces @開発>サービスアカウント(JWT)。
++ キーペアがAdobe I/Oによって生成された場合は、`config.zip`の一部として自動ダウンロードされました。
++ 公開鍵をAdobe I/Oに指定した場合は、一致する秘密鍵も所有する必要があります。
++ これらのキーペアがない場合は、新しいキーペアを生成するか、新しい公開鍵をの下部にアップロードできます。
+   [https://console.adobe.com](https://console.adobe.io) /Asset computeのFireflyプロジェクト/ Workspaces @開発/サービスアカウント(JWT)。
 
-`private.key`ファイルは、シークレットを含むのでGitにチェックインしないでください。プロジェクトの外部の安全な場所に保存する必要があります。
+`private.key`ファイルはシークレットが含まれているのでGitにチェックインしないでください。プロジェクトの外の安全な場所に保存する必要があります。
 
 例えば、macOSでは次のようになります。
 
@@ -52,11 +51,11 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 Asset computeワーカーのローカル開発には、[クラウドストレージ](../set-up/accounts-and-services.md#cloud-storage)へのアクセスが必要です。 ローカル開発に使用するクラウドストレージの資格情報は、`.env`ファイルに格納されます。
 
-このチュートリアルはAzure Blobストレージの使用を優先しますが、AmazonS3および`.env`ファイル内の対応するキーを代わりに使用できます。
+このチュートリアルではAzure Blob Storageの使用を推奨しますが、Amazon S3と、 `.env`ファイル内の対応するキーを代わりに使用できます。
 
-### Azure Blobストレージを使用しています
+### Azure Blob Storageの使用
 
-`.env`ファイルの次のキーのコメントを解除して入力し、Azure Portalで見つかったプロビジョニングされたクラウドストレージの値を入力します。
+`.env`ファイルで次のキーのコメントを解除して入力し、Azure Portalで見つかったプロビジョニング済みクラウドストレージの値をそれらのキーに入力します。
 
 ![Azure Blobストレージ](./assets/environment-variables/azure-portal-credentials.png)
 
@@ -64,7 +63,7 @@ Asset computeワーカーのローカル開発には、[クラウドストレー
 1. `AZURE_STORAGE_ACCOUNT`キーの値
 1. `AZURE_STORAGE_KEY`キーの値
 
-例えば、次のようになります（図の値のみ）。
+例えば、次のようになります（説明用の値のみ）。
 
 ```
 ...
@@ -76,15 +75,15 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 
 結果の`.env`ファイルは次のようになります。
 
-![Azure Blobストレージ資格情報](assets/environment-variables/cloud-storage-credentials.png)
+![Azure BLOBストレージ資格情報](assets/environment-variables/cloud-storage-credentials.png)
 
-Microsoft Azure Blobストレージを使用していない場合は、（`#`の前に付けて）コメントアウトしたものを削除するか、そのままにします。
+Microsoft Azure Blob Storageを使用していない場合は、（`#`のプレフィックスを付けて）コメントアウトしたままにするか、削除します。
 
-### AmazonS3クラウドストレージ{#amazon-s3}の使用
+### Amazon S3クラウドストレージの使用{#amazon-s3}
 
-AmazonS3クラウドストレージを使用している場合は、コメントを解除し、`.env`ファイルに次のキーを入力します。
+Amazon S3クラウドストレージを使用している場合は、コメントを解除して`.env`ファイルに次のキーを入力します。
 
-例えば、次のようになります（図の値のみ）。
+例えば、次のようになります（説明用の値のみ）。
 
 ```
 ...
@@ -95,25 +94,25 @@ AWS_REGION=us-east-1
 ...
 ```
 
-## プロジェクト構成の検証
+## プロジェクト設定の検証
 
-生成されたAsset computeプロジェクトが構成されたら、コードを変更する前に設定を検証し、サポートするサービスがプロビジョニングされていることを`.env`ファイルで確認します。
+生成されたAsset computeプロジェクトを設定したら、コードを変更する前に設定を検証し、サポートするサービスが`.env`ファイルでプロビジョニングされていることを確認します。
 
-asset computeプロジェクト用の開始Asset compute開発ツールを作成するには：
+asset computeプロジェクトのAsset compute開発ツールを開始するには：
 
-1. asset computeプロジェクトのルート（VSコード）でコマンドラインを開き（IDEで端末/新しい端末を介して直接開くことができます）、次のコマンドを実行します。
+1. asset computeプロジェクトのルート（VS Codeで、ターミナル/新しいターミナルからIDEで直接開くことができます）のコマンドラインを開き、次のコマンドを実行します。
 
    ```
    $ aio app run
    ```
 
-1. ローカルAsset compute開発ツールがデフォルトのWebブラウザー(__http://localhost:9000__)で開きます。
+1. ローカルAsset compute開発ツールが、デフォルトのWebブラウザー(__http://localhost:9000__)で開きます。
 
-   ![aioアプリの実行](assets/environment-variables/aio-app-run.png)
+   ![aioアプリ実行](assets/environment-variables/aio-app-run.png)
 
-1. 開発ツールの初期化時に、コマンドライン出力とWebブラウザーでエラーメッセージが表示されないかを確認します。
+1. 開発ツールの初期化時に、コマンドライン出力とWebブラウザでエラーメッセージを確認します。
 1. asset compute開発ツールを停止するには、`aio app run`を実行したウィンドウで`Ctrl-C`をタップし、プロセスを終了します。
 
 ## トラブルシューティング
 
-+ [private.keyが見つからないため、開発ツールは開始できません](../troubleshooting.md#missing-private-key)
++ [private.keyが見つからないため、開発ツールを開始できません](../troubleshooting.md#missing-private-key)
