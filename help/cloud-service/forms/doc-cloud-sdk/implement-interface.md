@@ -1,6 +1,6 @@
 ---
 title: インターフェイスのメソッドの実装
-description: Document CloudREST APIを使用してpdfを作成するためのインターフェイスメソッドを実装します。
+description: Document CloudREST APIを使用してPDFを作成するためのインターフェイスメソッドを実装します。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 インターフェイスを実装するクラスの完全なコードを次に示します。
 
-このクラスは、2つのユーティリティメソッド`getAccessToken`、`getJWTToken`、および`GetContentAnalyser`クラスの静的メソッド`getContentAnalyserRequest`を使用します。
+このクラスは、`getAccessToken`、`getJWTToken`、`GetContentAnalyser`クラスの静的メソッド`getContentAnalyserRequest`の2つを使用します。
 
 
 ```java
