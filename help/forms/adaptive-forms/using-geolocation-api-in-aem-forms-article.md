@@ -1,20 +1,19 @@
 ---
-title: アダプティブFormsでのGeolocation APIの使用
-seo-title: アダプティブFormsでのGeolocation APIの使用
-description: 位置情報APIの
-seo-description: 位置情報APIの
+title: アダプティブFormsでのジオロケーションAPIの使用
+seo-title: アダプティブFormsでのジオロケーションAPIの使用
+description: 位置情報APIを使用して、フォーム上の住所フィールドを設定する
+seo-description: 位置情報APIを使用して、フォーム上の住所フィールドを設定する
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: Adaptive Forms
+feature: アダプティブフォーム
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '432'
@@ -23,21 +22,21 @@ ht-degree: 4%
 ---
 
 
-# アダプティブFormsでのGeolocation APIの使用{#using-geolocation-api-s-in-adaptive-forms}
+# アダプティブForms{#using-geolocation-api-s-in-adaptive-forms}でのGeolocation APIの使用
 
-[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページをご覧になって、この機能のライブデモへのリンクをご覧ください。
+この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
 
-この記事では、GoogleのGeolocation APIを使用してアダプティブフォームのフィールドに入力する方法を見ていきます。 この使用例は、フォーム上の現在の住所フィールドに値を入力する場合に一般的に使用されます。
+この記事では、GoogleのジオロケーションAPIを使用してアダプティブフォームのフィールドにデータを入力する方法について説明します。 この使用例は、一般的に、フォーム上の現在の住所フィールドに値を入力する場合に使用します。
 
-次の手順に従って、アダプティブFormsのGeolocation APIを使用しました。
+次の手順に従って、アダプティブFormsでGeolocation APIを使用しました。
 
-1. [Google](https://developers.google.com/maps/documentation/javascript/get-api-key) からAPIキーを取得して、Googleマッププラットフォームを使用します。1年間有効な試用版キーを取得できます。
+1. [Googleマッププ](https://developers.google.com/maps/documentation/javascript/get-api-key) ラットフォームを使用するには、GoogleからAPIキーを取得します。1年間有効な試用版キーを入手できます。
 
-1. 現在の住所を保持するフィールドを持つアダプティブフォームフラグメントが作成されました
+1. アダプティブフォームフラグメントは、現在のアドレスを格納するフィールドを使用して作成されました
 
-1. Geolocation APIは、アダプティブフォームの画像オブジェクトのクリックイベント時に呼び出されました。
+1. 位置情報APIは、アダプティブフォームの画像オブジェクトのclickイベントで呼び出されました。
 
-1. API呼び出しによって返されたJSONデータが解析され、それに応じてアダプティブフォームのフィールド値が設定されました。
+1. API呼び出しによって返されたJSONデータが解析され、それに応じてアダプティブフォームフィールドの値が設定されました。
 
 ```javascript
 navigator.geolocation.getCurrentPosition(showPosition);
@@ -84,28 +83,28 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 }
 ```
 
-![GeoLocation APIで入力されるフィールド](assets/capture-4.gif)
+![ジオロケーションapiで入力されるフィールド](assets/capture-4.gif)
 
-1行目では、現在の場所を取得するためにHTML Geolocation APIを使用します。 現在の位置が取得されたら、現在の位置をshowPosition関数に渡します。
+1行目では、HTML Geolocation APIを使用して現在の場所を取得します。 現在の位置を取得したら、現在の位置をshowPosition関数に渡します。
 
-showPosition関数では、Google APIを使用して、指定した緯度と経度に関する住所の詳細を取得します。
+showPosition関数では、Google APIを使用して、指定した緯度と経度のアドレスの詳細を取得します。
 
 次に、APIから返されたJSONが解析され、アダプティブフォームのフィールドが設定されます。
 
 >[!NOTE]
 >
->テスト用に、URLにlocalhostを含むHTTPプロトコルを使用できます。
+>テストの目的で、URLにlocalhostを含むHTTPプロトコルを使用できます。
 >
->実稼働サーバーでこの機能を使用するには、AEMサーバーでSSLを有効にする必要があります。
+>実稼動サーバーでこの機能を取得するには、AEM ServerのSSLを有効にする必要があります。
 >
->この記事に関連付けられているサンプルは、米国の住所でテスト済みです。 この機能を他の地域で使用する場合は、JSON解析を調整する必要があります。
+>この記事に関連するサンプルは、米国の住所でテストされています。 この機能を他の地理的な場所で使用する場合は、JSON解析を調整する必要が生じる場合があります。
 
-この機能をサーバーに接続するには、次の手順に従ってください
+この機能をサーバーに取り込むには、次の手順に従います
 
-* AEM Forms・サーバをインストールして開始します。
+* AEM Formsサーバーをインストールして起動します。
 
->!![NOTE] この機能は、AEM Forms6.3以降でテストされました。
-* [Google APIキーの取得](https://developers.google.com/maps/documentation/javascript/get-api-key)。
+>!![NOTE] この機能は、AEM Forms 6.3以降でテストされました。
+* [Google APIキーの取得](https://developers.google.com/maps/documentation/javascript/get-api-key)を参照してください。
 * [この記事に関連するアセットをAEMに読み込みます。](assets/geolocationapi.zip)
 * [アダプティブフォームフラグメントを編集モードで開きます。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * 画像選択コンポーネントのルールエディターを開きます。
@@ -113,4 +112,4 @@ showPosition関数では、Google APIを使用して、指定した緯度と経�
 * 変更を保存します。
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
 * 「位置情報」アイコンをクリックします。
-* フォームに現在の場所が入力されます。
+* フォームには、現在の場所が入力されます。
