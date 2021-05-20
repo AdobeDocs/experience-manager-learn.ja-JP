@@ -1,7 +1,7 @@
 ---
 title: クライアントライブラリの作成
-description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成します
-feature: Adaptive Forms
+description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成する
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Development
+topic: 開発
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '144'
@@ -22,9 +21,9 @@ ht-degree: 8%
 
 # クライアントライブラリの作成
 
-CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのクリックイベントで、`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードを含む[クライアントlib](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を作成します。  アダプティブフォームデータ`fileMap`と`mobileNumber`を`**/bin/storeafdatawithattachments`でリッスンしているエンドポイントに渡します
+[クライアントlib](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を作成します。このコードには、CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのclickイベントで`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードが含まれます。  アダプティブフォームのデータ`fileMap`と`mobileNumber`を、`**/bin/storeafdatawithattachments`をリッスンするエンドポイントに渡します。
 
-フォームデータを保存すると、一意のアプリケーションIDが生成され、ダイアログボックスにユーザーに表示されます。 ダイアログボックスを閉じると、ユーザーはフォームに移動し、保存済みのアダプティブフォームを一意のアプリケーションIDを使用して取得できるようになります。
+フォームデータを保存すると、一意のアプリケーションIDが生成され、ダイアログボックスに表示されます。 ダイアログボックスを閉じると、ユーザーは、一意のアプリケーションIDを使用して保存済みのアダプティブフォームを取得できるフォームに移動します。
 
 ```java
 $(document).ready(function () {
@@ -70,6 +69,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> [ブートボックスjavascriptライブラリ](http://bootboxjs.com/examples.html)を使用してダイアログボックスを表示しました
+> [bootbox javascript library](http://bootboxjs.com/examples.html)を使用してダイアログボックスを表示しています
 
-このサンプルで使用するクライアントライブラリは、[ここから](assets/client-libraries.zip)ダウンロードできます。
+このサンプルで使用されるクライアントライブラリは、[こちら](assets/client-libraries.zip)からダウンロードできます。
