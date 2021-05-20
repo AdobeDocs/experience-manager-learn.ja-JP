@@ -1,19 +1,18 @@
 ---
 title: アダプティブフォームのトリガーAEMワークフローへの設定
 seo-title: アダプティブフォームのトリガーAEMワークフローへの設定
-description: アダプティブフォームをトリガーAEMワークフローに設定する際の各種オプションについて
-seo-description: アダプティブフォームをトリガーAEMワークフローに設定する際の各種オプションについて
+description: 「アダプティブフォームをトリガーにする」ワークフローの各種オプションについてAEM
+seo-description: 「アダプティブフォームをトリガーにする」ワークフローの各種オプションについてAEM
 sub-product: フォーム[ふぉーむ]
-feature: Workflow
+feature: ワークフロー
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '48'
