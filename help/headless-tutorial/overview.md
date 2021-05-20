@@ -1,11 +1,10 @@
 ---
 title: AEMヘッドレスチュートリアル
-description: ヘッドレスCMSとしてAdobe Experience Managerを使用する方法に関するチュートリアルの集まりです。
-feature: Content Fragments, APIs
-topic: Headless, Content Management
+description: Adobe Experience ManagerをヘッドレスCMSとして使用する方法に関するチュートリアルのコレクションです。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
 source-wordcount: '436'
@@ -16,48 +15,48 @@ ht-degree: 4%
 
 # AEMヘッドレスチュートリアル
 
-Adobe Experience Managerには、ヘッドレスエンドポイントを定義し、そのコンテンツをJSONとして配信するための複数のオプションがあります。 実践チュートリアルを使用して、さまざまなオプションの使い方を学び、最適なオプションを選択します。
+Adobe Experience Managerには、ヘッドレスエンドポイントを定義し、そのコンテンツをJSONとして配信する複数のオプションがあります。 実践チュートリアルを使用して、様々なオプションの使用方法を学び、何が適切かを選択します。
 
 ## AEM GraphQL APIのチュートリアル
 
-AEM GraphQL API for Content Fragments
-は、AEMで管理されたコンテンツを使用して外部クライアントアプリケーションがエクスペリエンスをレンダリングするヘッドレスCMSシナリオをサポートしています。
+コンテンツフラグメント用のAEM GraphQL API
+は、外部クライアントアプリケーションがAEMで管理されたコンテンツを使用してエクスペリエンスをレンダリングするヘッドレスCMSシナリオをサポートします。
 
-最新のコンテンツ配信APIは、JavaScriptベースのフロントエンドアプリケーションの効率性とパフォーマンスを高めるための重要な要素です。 REST APIを使用すると、次のような課題が生じます。
+最新のコンテンツ配信APIは、JavaScriptベースのフロントエンドアプリケーションの効率とパフォーマンスを高めるための重要な要素です。 REST APIを使用すると、次のような課題が生じます。
 
-* 1回に1つのオブジェクトをフェッチする大量の要求
-* 多くの場合、「過剰に配信」されるコンテンツ、つまりアプリケーションが必要以上に受信することを意味します
+* 一度に1つのオブジェクトを取得するリクエストの数が多い
+* 多くの場合、「過剰配信」のコンテンツ。つまり、アプリケーションが必要以上にコンテンツを受信する
 
-これらの課題を克服するために、GraphQLはクエリベースのAPIを提供し、クライアントは必要なコンテンツのみをクエリAEMに提供し、1回のAPI呼び出しで受け取ることができます。
+GraphQLは、これらの課題を克服するために、クライアントが必要なコンテンツに対してのみAEMをクエリし、1回のAPI呼び出しで受け取ることを可能にするクエリベースのAPIを提供します。
 
-* AEM GraphQL APIの使用方法については、「[AEM GraphQL APIの使用の手引き](./graphql/overview.md)」のチュートリアルを参照してください。
+* AEM GraphQL APIの使用方法については、 AEM GraphQL APIの使用の手引きのチュートリアル](./graphql/overview.md)を参照してください。[
 
-## トークンベースの認証のチュートリアル
+## トークンベースの認証に関するチュートリアル
 
-AEMは様々なHTTPエンドポイントを公開し、GraphQL、AEM Content ServicesからAssets HTTP APIまで、ヘッドレスな方法でやり取りが可能です。 多くの場合、ヘッドレスのユーザーは、保護されたコンテンツやアクションにアクセスするためにAEMの認証が必要になる場合があります。 これを容易にするため、AEMは、外部のアプリケーション、サービス、またはシステムからのHTTP要求に対するトークンベースの認証をサポートしています。
+AEMは、GraphQL、AEMコンテンツサービスからAssets HTTP APIへ、ヘッドレスな方法で操作できる様々なHTTPエンドポイントを公開します。 多くの場合、これらのヘッドレスな消費者は、保護されたコンテンツやアクションにアクセスするために、AEMに対する認証が必要になる場合があります。 これを容易にするために、AEMは、外部のアプリケーション、サービスまたはシステムからのHTTPリクエストのトークンベースの認証をサポートします。
 
-* 「[外部アプリケーションのチュートリアル](./authentication/overview.md)でのAEMとしてのCloud Serviceの認証」のアクセストークンを使用して、AEMに対してHTTP経由で認証する方法を説明します。
+* [外部アプリケーションからのCloud ServiceとしてのAEMの認証に関するチュートリアル](./authentication/overview.md)で、アクセストークンを使用してHTTP経由でAEMを認証する方法について説明します。
 
 ## AEM Content Servicesチュートリアル
 
-AEM Content Servicesは、従来のAEMページを利用してヘッドレスなREST APIエンドポイントを構成し、AEMコンポーネントは、これらのエンドポイントに公開するコンテンツを定義（参照）します。
+AEM Content Servicesは、従来のAEM Pagesを活用してヘッドレスなREST APIエンドポイントを構成し、これらのエンドポイントで公開するコンテンツをAEMコンポーネントが定義（参照）します。
 
-AEM Content Servicesでは、AEM SitesのWebページのオーサリングに使用したのと同じコンテンツ抽象概念を使用して、これらのHTTP APIのコンテンツとスキーマを定義できます。 AEMページとAEMコンポーネントを使用すると、マーケターはあらゆるアプリケーションに電源を投入できる柔軟なJSON APIを迅速に作成および更新できます。
+AEM Content Servicesでは、AEM SitesでWebページのオーサリングに使用するのと同じコンテンツの抽象化を使用して、これらのHTTP APIのコンテンツとスキーマを定義できます。 AEMページとAEMコンポーネントを使用すると、マーケターはあらゆるアプリケーションを強化できる柔軟なJSON APIを迅速に作成および更新できます。
 
-* AEM Content Servicesの使用方法については、「[AEM Content Services使用の手引き](./content-services/overview.md)」のチュートリアルを参照してください。
+* AEM Content Servicesの使用方法については、『 AEM Content Services使用の手引き』チュートリアル](./content-services/overview.md)を参照してください。[
 
 ## AEM GraphQLとAEM Content Servicesの比較
 
 |  | AEM GraphQL API | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
-| スキーマ定義 | 構造化コンテンツフラグメントモデル | AEMコンポーネント |
-| コンテンツ | コンテンツフラグメント | AEMコンポーネント |
-| コンテンツの検出 | GraphQLクエリ別 | AEMページ |
+| スキーマ定義 | 構造化コンテンツフラグメントモデル | AEM Components |
+| コンテンツ | コンテンツフラグメント | AEM Components |
+| コンテンツ検出 | GraphQLクエリ別 | AEM Page |
 | 配信形式 | GraphQL JSON | AEM ComponentExporter JSON |
 
-## その他の役に立つチュートリアル
+## その他の役立つチュートリアル
 
-ヘッドレスコンセプトに関するその他のAEMチュートリアルは以下のとおりです。
+ヘッドレス概念に関するその他のAEMチュートリアルは、次のとおりです。
 
 * [AEM SPA エディターと Angular の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
