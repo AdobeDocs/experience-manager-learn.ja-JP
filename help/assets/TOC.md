@@ -4,7 +4,6 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
-translation-type: tm+mt
 source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
 workflow-type: tm+mt
 source-wordcount: '262'
@@ -18,12 +17,12 @@ ht-degree: 37%
 + [概要](overview.md)
 
 + 設定{#configuring}
-   + [ベースラインフォルダ](configuring/baseline-folders.md)
+   + [ベースラインフォルダー](configuring/baseline-folders.md)
    + [基本権限](configuring/baseline-permissions.md)
    + [タグ付け](configuring/tagging.md)
    + [メタデータスキーマ](configuring/metadata-schemas.md)
    + [メタデータプロファイル](configuring/metadata-profiles.md)
-   + [メタデータフォルダーのスキーマ](configuring/metadata-folder-schemas.md)
+   + [メタデータフォルダースキーマ](configuring/metadata-folder-schemas.md)
    + [アセット管理者の検索レール](configuring/assets-admin-search-rail.md)
    + [処理プロファイル](configuring/processing-profiles.md)
    + [自動開始ワークフロー](configuring/auto-start-workflows.md)
@@ -48,9 +47,9 @@ ht-degree: 37%
    + [検索ブースト](./search-and-discovery/search-boost.md)
 
 + 高度な機能{#advanced}
-   + [Annotations PDF Output](./advanced/customizing-annotations-pdf-output.md)
+   + [注釈のPDF出力](./advanced/customizing-annotations-pdf-output.md)
    + [アセットインサイト](./advanced/asset-insights-launch-tutorial.md)
-   + [アセットレポート](./advanced/asset-reports.md)
+   + [Assetsレポート](./advanced/asset-reports.md)
    + [権限(CUG)](./advanced/closed-user-groups.md)
    + [透かし](./advanced/watermarks.md)
 
@@ -67,43 +66,43 @@ ht-degree: 37%
    + [Brand Portal](./sharing/brand-portal.md)
    + アセット共有{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
-      + [ローカルAEMでのアセット共有コモンの設定](./sharing/asset-share-commons-technical-video-setup.md)
-      + [アセット共有コモンズの主題設定](./sharing/asset-share-commons-feature-video-theming.md)
+      + [ローカルAEMでのAsset Share Commonsの設定](./sharing/asset-share-commons-technical-video-setup.md)
+      + [Asset Share Commonsのテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
-+ クリエイティブワークフローとの連携{#creative-workflows}
++ クリエイティブワークフローとの統合{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
 + Adobe Asset Link{#adobe-asset-link}
-   + [Adobeアセットリンクにアクセス](./adobe-asset-link/launch-adobe-asset-link.md)
+   + [Adobeアセットリンクへのアクセス](./adobe-asset-link/launch-adobe-asset-link.md)
    + [パネルの概要](./adobe-asset-link/panel-overview.md)
    + [ファイルとコレクション](./adobe-asset-link/files-and-collections.md)
    + [ダウンロードとアップロード](./adobe-asset-link/download-and-upload.md)
-   + [Check-In Check-Out](./adobe-asset-link/check-in-check-out.md)
+   + [チェックインとチェックアウト](./adobe-asset-link/check-in-check-out.md)
    + [バージョン管理とコメント](./adobe-asset-link/file-versioning-and-comments.md)
    + [コピーを配置](./adobe-asset-link/place-copy.md)
-   + [リンクを配置](./adobe-asset-link/place-linked.md)
+   + [リンク場所](./adobe-asset-link/place-linked.md)
    + [配置のみ(FPO)](./adobe-asset-link/for-placement-only.md)
-   + [アセットの検索](./adobe-asset-link/asset-search.md)
+   + [アセット検索](./adobe-asset-link/asset-search.md)
 
 + Dynamic Media{#dynamic-media}
-   + [Dynamic Media概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Dynamic Mediaの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
    + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
    + [ビデオプレーヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + [360 ビデオ](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
    + [カスタムビデオのサムネール](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [画像へのシャープの適用](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+   + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
    + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
-   + [パノラマおよび垂直画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [Adobe Analyticsの視聴者](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Mediaクラシックデスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [Dynamic Media3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Dynamic Mediaスマート切り抜きビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [パノラマおよび縦長画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
+   + [Adobe Analyticsを使用したビューア](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [Dynamic Media Classicデスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
    + [Dynamic Mediaコアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
 + 翻訳 {#translation}
@@ -118,5 +117,5 @@ ht-degree: 37%
    + [アセットカタログの使用](asset-templates/asset-catalog-template-feature-video-use.md)
 
 + デプロイメント{#deployment}
-   + [マルチテナンシーと同時開発](deployment/multitenancy-concurrent-article-understand.md)
+   + [マルチテナント機能と同時開発](deployment/multitenancy-concurrent-article-understand.md)
 
