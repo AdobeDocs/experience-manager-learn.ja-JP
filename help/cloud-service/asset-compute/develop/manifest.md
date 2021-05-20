@@ -1,7 +1,7 @@
 ---
 title: asset computeプロジェクトのmanifest.ymlの設定
-description: asset computeプロジェクトのmanifest.ymlは、このプロジェクトの展開対象となるすべてのワーカーを説明します。
-feature: Asset Compute Microservices
+description: asset computeプロジェクトのmanifest.ymlには、このプロジェクトでデプロイされるすべてのワーカーが記述されています。
+feature: asset computeマイクロサービス
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '442'
@@ -23,17 +22,17 @@ ht-degree: 2%
 
 # manifest.ymlの設定
 
-asset computeプロジェクトのルートにある`manifest.yml`は、このプロジェクトの展開対象となるすべてのワーカーを示します。
+asset computeプロジェクトのルートにある`manifest.yml`は、このプロジェクトでデプロイされるすべてのワーカーを記述します。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## 既定の作業者定義
 
-ワーカーは`actions`の下でAdobe I/O Runtimeのアクションエントリと定義され、一連の構成で構成されます。
+ワーカーは、`actions`の下のAdobe I/O Runtimeアクションエントリとして定義され、一連の設定で構成されます。
 
-他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。この[は、`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開します。 これは通常、ワーカーがAdobe PhotoshopAPI、LightroomAPI、先生APIなどのAdobe I/OAPIを呼び出す際に必要となり、ワーカーごとに切り替えることができます。
+他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。これは、[が`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開するためです。 これは、通常、ワーカーがAdobe Photoshop、Lightroom、Sensei APIなどのAdobe I/OAPIを呼び出す際に必要で、ワーカーごとに切り替えることができます。
 
-1. を開き、自動生成ワーカー`manifest.yml`を確認します。 複数のAsset computeワーカーを含むプロジェクトでは、`actions`配列の下で各ワーカーのエントリを定義する必要があります。
+1. を開き、自動生成ワーカー`manifest.yml`を確認します。 複数のAsset computeワーカーを含むプロジェクトでは、`actions`配列の下に各ワーカーのエントリを定義する必要があります。
 
 ```yml
 packages:
@@ -52,11 +51,11 @@ packages:
 
 ## 制限の定義
 
-各ワーカーは、Adobe I/O Runtimeでの実行コンテキストに対して[制限](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)を構成できます。 これらの値は、計算するアセットの量、率、タイプ、および実行する作業のタイプに基づいて、作業者に最適なサイズを提供するように調整する必要があります。
+各ワーカーは、Adobe I/O Runtimeでの実行コンテキストの[制限](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)を設定できます。 これらの値は、計算するアセットのボリューム、レート、タイプ、およびワークのタイプに基づいて、ワーカーに最適なサイズ設定を提供するように調整する必要があります。
 
-制限を設定する前に、[Adobeサイズガイダンス](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)を確認してください。 asset computeワーカーは、アセットの処理時にメモリ不足になる場合があり、結果としてAdobe I/O Runtimeの実行が中止されるので、すべての候補アセットを処理できるように適切なサイズに設定します。
+制限を設定する前に、[Adobeのサイズ設定に関するガイダンス](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)を確認してください。 asset computeワーカーは、アセットを処理する際にメモリ不足になる可能性があり、Adobe I/O Runtimeの実行が強制終了するので、ワーカーのサイズがすべての候補アセットを処理するように適切に設定されます。
 
-1. 新しい追加`wknd-asset-compute`アクションエントリの`inputs`セクション。 これにより、Asset computeワーカーの全体的なパフォーマンスとリソース割り当てを調整できます。
+1. 新しい`wknd-asset-compute`アクションエントリに`inputs`セクションを追加します。 これにより、Asset computeワーカーの全体的なパフォーマンスとリソース割り当てを調整できます。
 
 ```yml
 packages:
@@ -97,33 +96,33 @@ packages:
           require-adobe-auth: true
 ```
 
-## manifest.yml on Github
+## GitHubのmanifest.yml
 
-最終版`.manifest.yml`はGithubで次の場所で入手できます。
+最終的な`.manifest.yml`は、GitHubで次の場所から入手できます。
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
-## manifest.ymlを検証しています
+## manifest.ymlの検証
 
-生成されたAsset compute`manifest.yml`が更新されたら、ローカル開発ツールを実行し、更新された`manifest.yml`設定で開始が正常に実行されることを確認します。
+生成されたAsset compute`manifest.yml`が更新されたら、ローカル開発ツールを実行し、更新された`manifest.yml`設定で正常に起動するようにします。
 
-asset computeプロジェクト用の開始Asset compute開発ツールを作成するには：
+asset computeプロジェクトのAsset compute開発ツールを開始するには：
 
-1. asset computeプロジェクトのルート（VSコード）でコマンドラインを開き（IDEで端末/新しい端末を介して直接開くことができます）、次のコマンドを実行します。
+1. asset computeプロジェクトのルート（VS Codeで、ターミナル/新しいターミナルからIDEで直接開くことができます）のコマンドラインを開き、次のコマンドを実行します。
 
    ```
    $ aio app run
    ```
 
-1. ローカルAsset compute開発ツールがデフォルトのWebブラウザー(__http://localhost:9000__)で開きます。
+1. ローカルAsset compute開発ツールが、デフォルトのWebブラウザー(__http://localhost:9000__)で開きます。
 
-   ![aioアプリの実行](assets/environment-variables/aio-app-run.png)
+   ![aioアプリ実行](assets/environment-variables/aio-app-run.png)
 
-1. 開発ツールの初期化時に、コマンドライン出力とWebブラウザーでエラーメッセージが表示されないかを確認します。
+1. 開発ツールの初期化時に、コマンドライン出力とWebブラウザでエラーメッセージを確認します。
 1. asset compute開発ツールを停止するには、`aio app run`を実行したウィンドウで`Ctrl-C`をタップし、プロセスを終了します。
 
 ## トラブルシューティング
 
-+ [誤ったYAMLインデント](../troubleshooting.md#incorrect-yaml-indentation)
-+ [memorySize制限が低すぎます](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [YAMLインデントが正しくありません](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize制限が小さすぎます](../troubleshooting.md#memorysize-limit-is-set-too-low)
