@@ -1,10 +1,10 @@
 ---
-title: Adobe TargetでのAEMエクスペリエンスフラグメントオファーの使用
-seo-title: Adobe TargetでのAEMエクスペリエンスフラグメントオファーの使用
-description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
-seo-description: Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
+title: Adobe Target内でのAEMエクスペリエンスフラグメントオファーの使用
+seo-title: Adobe Target内でのAEMエクスペリエンスフラグメントオファーの使用
+description: Adobe Experience Manager 6.4では、AEMとTargetの間のパーソナライゼーションワークフローが再設計されました。 AEM内で作成されたエクスペリエンスを、HTMLオファーとしてAdobe Targetに直接配信できるようになりました。 これにより、マーケターは様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
+seo-description: Adobe Experience Manager 6.4では、AEMとTargetの間のパーソナライゼーションワークフローが再設計されました。 AEM内で作成されたエクスペリエンスを、HTMLオファーとしてAdobe Targetに直接配信できるようになりました。 これにより、マーケターは様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 sub-product: content-services
-feature: Experience Fragments
+feature: エクスペリエンスフラグメント
 topics: integrations, personalization
 audience: all
 doc-type: feature video
@@ -12,10 +12,9 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
-topic: Personalization
+topic: パーソナライズ機能
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '462'
@@ -26,24 +25,24 @@ ht-degree: 12%
 
 # Adobe Target{#using-experience-fragment-offers-within-adobe-target}内でのエクスペリエンスフラグメントオファーの使用
 
-Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナライズワークフローを再考します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとして直接Adobe Targetに配信できるようになりました。 これにより、マーケティング担当者は、様々なチャネルでコンテンツをシームレスにテストし、パーソナライズすることができます。
+Adobe Experience Manager 6.4では、AEMとTargetの間のパーソナライゼーションワークフローが再設計されました。 AEM内で作成されたエクスペリエンスを、HTMLオファーとしてAdobe Targetに直接配信できるようになりました。 これにより、マーケターは様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22383/?quality=12&learn=on)
 
 >[!NOTE]
 >
->at.jsクライアントライブラリの使用をお勧めします。ベストプラクティスは、Launch by Adobe、AdobeDTM、またはサードパーティのtag managementソリューションなどのtag managementソリューションを使用して、サイトページにターゲットライブラリを追加することです
+>at.jsクライアントライブラリの使用をお勧めします。ベストプラクティスは、Launch by Adobe、AdobeDTM、またはサードパーティのタグ管理ソリューションなどのタグ管理ソリューションを使用して、サイトページにターゲットライブラリを追加することです
 
 >[!NOTE]
 >
->Adobe TargetのAEM Experience Fragmentオファーは、AEM 6.3ユーザー向けの機能パックとしても利用できます。 フィーチャパックと依存関係については、次のセクションを参照してください。
+>Adobe Target内のAEMエクスペリエンスフラグメントオファーは、AEM 6.3ユーザー向けの機能パックとしても利用できます。 機能パックと依存関係については、以下の節を参照してください。
 
 
-* Adobe Experience Managerの使いやすくパワフルなコンテンツ作成メカニズム、Adobe TargetのArtifical Intelligence(AI)とMachine Learningは、コンテンツ作成者が一元的にすべてのチャネルのコンテンツを作成および管理できるようにします。 エクスペリエンスフラグメントをHTMLオファーとしてAdobe Targetに書き出す機能により、マーケティング担当者は、これらのオファーを使用してパーソナライズされたエクスペリエンスをより柔軟に作成でき、作成した各エクスペリエンスをテストおよび拡大できます。
-* HTMLオファーとエクスペリエンスフラグメントオファーの主な違いは、後で行うための編集はAEMでのみ行え、Adobe Targetと同期できることです
-* エクスペリエンスフラグメントフォルダーに適用されるターゲットクラウドサービス設定は、親フォルダーの直下に作成されるすべてのエクスペリエンスフラグメントに継承されます。 子フォルダーは、親のクラウドサービスの構成を継承しません。
+* Adobe Experience Managerの使いやすく強力なコンテンツ作成メカニズム、Adobe Targetの人工知能(AI)と機械学習に加えて、コンテンツ作成者は、すべてのチャネルのコンテンツを一元的に作成および管理できます。 エクスペリエンスフラグメントをAdobe TargetにHTMLオファーとして書き出す機能により、マーケターは、これらのオファーを使用して、よりパーソナライズされたエクスペリエンスを柔軟に作成し、作成する各エクスペリエンスをテストおよび拡大できます。
+* HTMLオファーとエクスペリエンスフラグメントオファーの主な違いは、後での編集はAEMでのみおこなえ、その後Adobe Targetと同期できる点です
+* エクスペリエンスフラグメントフォルダーに適用されたTarget Cloudサービス設定は、親フォルダーの直下に作成されたすべてのエクスペリエンスフラグメントを継承します。 子フォルダーは親クラウドサービスの構成を継承しません。
 * パーソナライズされたオファーを作成するために、AEM内に保存されたコンテンツを簡単に活用できるようになりました。
-* 自動配分、自動ターゲット、Automated Personalizationなど先生を使用したアクティビティを含む、ターゲットアクティビティのタイプを作成できます
+* 自動配分、自動ターゲット、Automated PersonalizationなどのSenseiを利用したアクティビティを含む、Targetアクティビティのタイプを作成できます
 
 ## AEM 6.3機能パックと依存関係{#aem-feature-packs-and-dependencies}
 
@@ -55,5 +54,5 @@ Adobe Experience Manager6.4は、AEMとターゲットの間のパーソナラ�
 
 ## その他のリソース {#additional-resources}
 
-* [エクスペリエンスフラグメントドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
+* [エクスペリエンスフラグメントのドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
 * [エクスペリエンスフラグメントの使用](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
