@@ -1,16 +1,15 @@
 ---
-title: AEM Sitesのページ差向け開発
-description: このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを設定する方法を示します。
-feature: Authoring
+title: AEM Sitesでのページの違いに対する開発
+description: このビデオでは、AEM Sitesのページの違い機能にカスタムスタイルを提供する方法を説明します。
+feature: オーサリング
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '295'
@@ -19,9 +18,9 @@ ht-degree: 6%
 ---
 
 
-# ページの違いを考慮した開発{#developing-for-page-difference}
+# ページ差{#developing-for-page-difference}の開発
 
-このビデオでは、AEMサイトのページの違い機能にカスタムスタイルを設定する方法を示します。
+このビデオでは、AEM Sitesのページの違い機能にカスタムスタイルを提供する方法を説明します。
 
 ## ページ差異スタイルのカスタマイズ{#customizing-page-difference-styles}
 
@@ -29,17 +28,17 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->このビデオでは、カスタムCSSをwe.Retailクライアントライブラリに追加します。このライブラリでは、カスタマイザのAEM Sitesプロジェクトに対してこれらの変更を行う必要があります。次のコード例では、`my-project`.
+>このビデオでは、カスタムCSSをwe.Retailクライアントライブラリに追加します。このライブラリでは、これらの変更をカスタマイザーのAEM Sitesプロジェクトに加える必要があります。以下のコード例：`my-project`.
 
-AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`の直接読み込みを介してOOTB CSSを取得します。
+AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`の直接の読み込みを介してOOTB CSSを取得します。
 
-クライアントライブラリカテゴリを使用する代わりにCSSを直接読み込むので、カスタムスタイルの新しい注入ポイントを見つける必要があります。このカスタム注入ポイントは、プロジェクトのオーサリングclientlibです。
+クライアントライブラリカテゴリを使用するのではなく、CSSのこの直接読み込みのため、カスタムスタイルに別の挿入ポイントを見つける必要があります。このカスタム挿入ポイントは、プロジェクトのオーサリングクライアントライブラリです。
 
-これは、これらのカスタムスタイルの上書きをテナント固有にするメリットを持ちます。
+これには、これらのカスタムスタイルの上書きをテナント固有にできるという利点があります。
 
-### オーサリングclientlib {#prepare-the-authoring-clientlib}を準備する
+### オーサリングクライアントライブラリ{#prepare-the-authoring-clientlib}を準備します。
 
-`/apps/my-project/clientlib/authoring.`にプロジェクト用の`authoring` clientlibが存在することを確認します
+`/apps/my-project/clientlib/authoring.`にプロジェクト用の`authoring`クライアントライブラリが存在することを確認します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,9 +47,9 @@ AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/client
         categories="[my-project.authoring]"/>
 ```
 
-### カスタムCSSを指定{#provide-the-custom-css}
+### カスタムCSS {#provide-the-custom-css}を指定します。
 
-プロジ追加ェクトの`authoring` clientlib a `css.txt`に対して、優先スタイルを提供するLESSファイルを指します。 [この例で](https://lesscss.org/) 使用するクラスラップを含む便利な機能が多数あるので、リストをお勧めします。
+上書きスタイルを提供するLESSファイルを指すプロジェクトの`authoring`クライアントライブラリ`css.txt`にを追加します。 [](https://lesscss.org/) この例で利用されるクラスラッピングを含む、便利な機能の多くは、より少ない方が望ましいです。
 
 ```shell
 base=./css
@@ -58,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-`/apps/my-project/clientlibs/authoring/css/htmldiff.less`に優先スタイルを含む`less`ファイルを作成し、必要に応じてオーバーリングスタイルを指定します。
+`/apps/my-project/clientlibs/authoring/css/htmldiff.less`にスタイルの上書きを含む`less`ファイルを作成し、必要に応じてオーバーリングスタイルを指定します。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -104,9 +103,9 @@ body {
 }
 ```
 
-### ページコンポーネント{#include-the-authoring-clientlib-css-via-the-page-component}を介して、オーサリングclientlib CSSを含めます。
+### ページコンポーネント{#include-the-authoring-clientlib-css-via-the-page-component}を介してオーサリングクライアントライブラリCSSを含めます。
 
-オーサリングclientlibsカテゴリをプロジェクトの基本ページの`/apps/my-project/components/structure/page/customheaderlibs.html`の直前に`</head>`タグに含め、スタイルが読み込まれるようにします。
+オーサリングclientlibsカテゴリをプロジェクトの基本ページの`/apps/my-project/components/structure/page/customheaderlibs.html`の`</head>`タグの直前に含めて、スタイルが読み込まれるようにします。
 
 これらのスタイルは、[!UICONTROL 編集]と[!UICONTROL プレビュー]のWCMモードに制限する必要があります。
 
@@ -118,12 +117,12 @@ body {
 </head>
 ```
 
-上記のスタイルが適用されたdiff&#39;dページの最終結果は、次のようになります（HTMLが追加され、コンポーネントが変更されました）。
+上記のスタイルが適用された差分ページの最終結果は、次のようになります（HTMLが追加され、コンポーネントが変更されました）。
 
-![ページの差異](assets/page-diff.png)
+![ページの差](assets/page-diff.png)
 
 ## その他のリソース {#additional-resources}
 
 * [we.Retailサンプルサイトのダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [AEMクライアントライブラリの使用](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [CSSに関するドキュメントを減らす](https://lesscss.org/)
+* [CSSのドキュメントを減らす](https://lesscss.org/)
