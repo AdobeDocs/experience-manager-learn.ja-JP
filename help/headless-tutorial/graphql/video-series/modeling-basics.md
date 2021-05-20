@@ -1,6 +1,6 @@
 ---
 title: GraphQLモデリングの基本
-description: GraphQLで使用する、Adobe Experience Manager(AEM)のコンテンツフラグメントを定義して使用する方法を説明します。
+description: Adobe Experience Manager(AEM)でGraphQLで使用するコンテンツフラグメントを定義して使用する方法を説明します。
 sub-product: アセット
 version: cloud-service
 topic: ヘッドレス、コンテンツ管理
@@ -19,12 +19,12 @@ ht-degree: 1%
 
 # GraphQLモデリングの基本
 
-GraphQLで使用する、Adobe Experience Manager(AEM)のコンテンツフラグメントを定義して使用する方法を説明します。
+Adobe Experience Manager(AEM)でGraphQLで使用するコンテンツフラグメントを定義して使用する方法を説明します。
 
-このビデオでは、次の操作を行います。
+このビデオでは、次の操作を実行します。
 
-+ コンテンツフラグメントモデルの作成および定義方法を学習します。
-+ コンテンツフラグメントモデルの作成に使用する様々なデータタイプと検証について説明します
-+ コンテンツフラグメントモデルがGraphQL APIを駆動する方法を理解する
++ コンテンツフラグメントモデルを作成および定義する方法を説明します
++ コンテンツフラグメントモデルの構築に使用される様々なデータタイプと検証について説明します
++ コンテンツフラグメントモデルがGraphQL APIを駆動する仕組みを理解する
 
 >[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
