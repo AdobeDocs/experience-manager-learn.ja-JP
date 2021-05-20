@@ -1,18 +1,17 @@
 ---
-title: AEM Formsとマーケット（パート2）
-seo-title: AEM Formsとマーケット（パート2）
-description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
-seo-description: AEM Formsフォームデータモデルを使用したAEM Formsとマーケティングツールの統合に関するチュートリアルです。
-feature: Adaptive Forms, Form Data Model
+title: AEM FormsとMarketo（パート2）
+seo-title: AEM FormsとMarketo（パート2）
+description: AEM Formsフォームデータモデルを使用したAEM FormsとMarketoの統合に関するチュートリアルです。
+seo-description: AEM Formsフォームデータモデルを使用したAEM FormsとMarketoの統合に関するチュートリアルです。
+feature: アダプティブForms、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '380'
@@ -23,11 +22,11 @@ ht-degree: 2%
 
 # Marketo Authentication Service
 
-MarketoのREST APIは、2本足のOAuth 2.0で認証されます。Marketoに対して認証を行うには、カスタム認証を作成する必要があります。 このカスタム認証は、通常、OSGIバンドル内に書き込まれます。 次のコードは、このチュートリアルの一部として使用されたカスタム認証子を示しています。
+MarketoのREST APIは、2本脚のOAuth 2.0で認証されます。Marketoに対して認証をおこなうには、カスタム認証を作成する必要があります。 このカスタム認証は、通常、OSGIバンドル内に書き込まれます。 次のコードは、このチュートリアルの一部として使用されたカスタム認証子を示しています。
 
 ## カスタム認証サービス
 
-次のコードは、Marketorに対する認証に必要なaccess_tokenを持つAuthenticationDetailsオブジェクトを作成します
+次のコードは、Marketoに対する認証に必要なaccess_tokenを持つAuthenticationDetailsオブジェクトを作成します
 
 ```java
 package com.marketoandforms.core;
@@ -59,13 +58,13 @@ MarketoService marketoService;
 }
 ```
 
-MarketoAuthenticationServiceは、IAuthenticationインターフェイスを実装します。 このインターフェイスは、AEM FormsクライアントSDKの一部です。 サービスは、アクセストークンを取得し、AuthenticationDetailsのHttpHeaderにトークンを挿入します。 AuthenticationDetailsオブジェクトのHttpHeadersが設定されると、AuthenticationDetailsオブジェクトはフォームデータモデルの真皮層に戻されます。
+MarketoAuthenticationServiceは、IAuthenticationインターフェイスを実装します。 このインターフェイスは、AEM Forms Client SDKに含まれています。 サービスはアクセストークンを取得し、トークンをAuthenticationDetailsのHttpHeaderに挿入します。 AuthenticationDetailsオブジェクトのHttpHeadersが設定されると、AuthenticationDetailsオブジェクトがフォームデータモデルのDermisレイヤーに返されます。
 
-getAuthenticationTypeメソッドが返す文字列に注意してください。 この文字列は、データソースを設定する際に使用します。
+getAuthenticationTypeメソッドで返される文字列に注意してください。 この文字列は、データソースを設定する際に使用されます。
 
 ### アクセストークンの取得
 
-単純なインターフェイスは、access_tokenを返す1つのメソッドで定義されます。 このインターフェイスを実装するクラスのコードは、ページの下の方に一覧表示されます。
+シンプルなインターフェイスは、access_tokenを返す1つのメソッドで定義されます。 このインターフェイスを実装するクラスのコードは、ページの下部に表示されます。
 
 ```java
 package com.marketoandforms.core;
@@ -74,7 +73,7 @@ public interface MarketoService {
 }
 ```
 
-次のコードは、REST API呼び出しを行う際に使用されるaccess_tokenを返すサービスのコードです。 このサービスのコードは、GET呼び出しを行うために必要な設定パラメーターにアクセスします。 このように、GETURLにclient_id,client_secretを渡してaccess_tokenを生成します。 次に、このaccess_tokenが呼び出し元のアプリケーションに返されます。
+次のコードは、REST API呼び出しの実行に使用されるaccess_tokenを返すサービスのコードです。 このサービスのコードは、GET呼び出しの実行に必要な設定パラメーターにアクセスします。 ご覧のように、GETURLにclient_id,client_secretを渡して、access_tokenを生成します。 次に、このaccess_tokenが呼び出し元のアプリケーションに返されます。
 
 ```java
 package com.marketoandforms.core.impl;
@@ -133,13 +132,13 @@ MarketoConfigurationService config;
 }
 ```
 
-次のスクリーンショットに、設定する必要がある設定プロパティを示します。 これらの設定プロパティは、前述のコードで読み取り、access_tokenを取得します
+次のスクリーンショットは、設定する必要がある設定プロパティを示しています。 これらの設定プロパティは、上記のコードで読み取られ、 access_token
 
 ![config](assets/marketoconfig.jfif)
 
 ### 設定
 
-次のコードは、設定プロパティの作成に使用されました。 これらのプロパティは、Marketorインスタンスに固有です
+次のコードは、設定プロパティの作成に使用されています。 これらのプロパティは、Marketoインスタンスに固有です
 
 ```java
 package com.marketoandforms.core;
@@ -160,7 +159,7 @@ public @interface MarketoConfiguration {
 }
 ```
 
-次のコードは、設定プロパティを読み取り、getterメソッドを介して同じ値を返します
+次のコードは、設定プロパティを読み取り、ゲッターメソッドを使用して同じを返します
 
 ```java
 package com.marketoandforms.core;
@@ -206,5 +205,5 @@ public class MarketoConfigurationService {
 ```
 
 1. バンドルを構築し、AEMサーバーにデプロイします。
-1. [ブラウザーで、「Marketo Credentials Service Configuration」のconfigMgrand検索を指](http://localhost:4502/system/console/configMgr) 定します。
-1. Marketorインスタンスに固有の適切なプロパティを指定します
+1. [ブラウザーでconfigMgrandを参照](http://localhost:4502/system/console/configMgr) し、「Marketo Credentials Service Configuration」を検索します。
+1. Marketoインスタンスに固有の適切なプロパティを指定します
