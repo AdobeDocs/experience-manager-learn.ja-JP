@@ -1,20 +1,19 @@
 ---
 title: アダプティブフォームの作成
-description: アダプティブフォームを作成し、作成したテンプレートを基にして作成します。
+description: アダプティブフォームを作成し、作成したテンプレートをベースにします。
 solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Forms
-topic: Development
+feature: アダプティブフォーム
+topic: 開発
 kt: 7376
 thumbnail: 332237.jpg
-translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 9%
+ht-degree: 22%
 
 ---
 
