@@ -1,17 +1,16 @@
 ---
-title: AEM用のSling動的インクルードの設定
-description: Apache HTTP Webサーバー上で実行されるAEMディスパッチャーと共にApache Sling Dynamic Includeをインストールして使用するビデオのウォークスルーです。
+title: AEM用のSling Dynamic Includeの設定
+description: Apache HTTP Webサーバー上で動作するAEM Dispatcherと共にApache Sling Dynamic Includeをインストールおよび使用する方法に関するビデオのウォークスルーです。
 version: 6.3, 6.4, 6.5
 sub-product: 基盤、サイト
-feature: APIs
+feature: API
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '265'
@@ -22,18 +21,18 @@ ht-degree: 9%
 
 # 設定 [!DNL Sling Dynamic Include]
 
-[!DNL Apache Sling Dynamic Include]を[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)と共にを[!DNL Apache HTTP Web Server]で実行し、使用する場合のビデオウォークスルーです。
+[!DNL Apache HTTP Web Server]上で動作する[!DNL Apache Sling Dynamic Include]と[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)をインストールして使用するビデオのウォークスルーです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> AEM Dispatcherの最新バージョンがローカルにインストールされていることを確認します。
+> 最新バージョンのAEM Dispatcherがローカルにインストールされていることを確認します。
 
-1. [[!DNL Sling Dynamic Include] バンドル](https://sling.apache.org/downloads.cgi)をダウンロードしてインストールします。
-1. [!DNL OSGi Configuration Factory]経由で[!DNL Sling Dynamic Include]を&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;に設定します。
+1. [[!DNL Sling Dynamic Include] bundle](https://sling.apache.org/downloads.cgi)をダウンロードしてインストールします。
+1. **http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;の[!DNL OSGi Configuration Factory]を使用して[!DNL Sling Dynamic Include]を設定します。
 
-   AEMコードベースに追加するには、次の場所に適切な&#x200B;**sling:OsgiConfig**&#x200B;ノードを作成します。
+   または、AEMコードベースにを追加するには、次の場所に適切な&#x200B;**sling:OsgiConfig**&#x200B;ノードを作成します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -57,7 +56,7 @@ ht-degree: 9%
    -->
    ```
 
-1. （オプション）最後の手順を繰り返して、編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html)の[ロックされた（初期の）コンポーネントのコンテンツも[!DNL SDI]経由で提供できるようにします。 編集可能なテンプレートのロックされたコンテンツが`/content`ではなく`/conf`から提供されるのが追加の設定の理由です。
+1. （オプション）最後の手順を繰り返して、編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html)の[ロックされた（初期）コンテンツ上のコンポーネントも[!DNL SDI]経由で提供できるようにします。 追加の設定の理由は、編集可能なテンプレートのロックされたコンテンツが`/content`ではなく`/conf`から提供されるからです。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -81,7 +80,7 @@ ht-degree: 9%
    -->
    ```
 
-1. [!DNL Apache HTTPD Web server]の`httpd.conf`ファイルを更新して[!DNL Include]モジュールを有効にします。
+1. [!DNL Apache HTTPD Web server]の`httpd.conf`ファイルを更新して、[!DNL Include]モジュールを有効にします。
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -91,7 +90,7 @@ ht-degree: 9%
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. [!DNL vhost]ファイルを更新して、インクルードディレクティブを適用します。
+1. インクルードディレクティブに従うように[!DNL vhost]ファイルを更新します。
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -116,7 +115,7 @@ ht-degree: 9%
    </VirtualHost>
    ```
 
-1. dispatcher.any設定ファイルを更新して、(1) `nocache`セレクターをサポートし、(2) TTLを有効にします。
+1. dispatcher.any設定ファイルを更新して、(1) `nocache`セレクターをサポートし、(2)TTLサポートを有効にします。
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -134,7 +133,7 @@ ht-degree: 9%
 
    >[!TIP]
    >
-   > 上記のグローバル`*.nocache.html*`ルールの末尾の`*`をオフにしたままにすると、サブリソース](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)の要求で[問題が発生する可能性があります。
+   > 上記のglobの`*.nocache.html*`ルールで末尾の`*`をオフのままにすると、サブリソース](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)のリクエストで[の問題が発生する可能性があります。
 
    ```shell
    /cache {
@@ -151,16 +150,16 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->エッジ側インクルード(ESI)の提供に[!DNL Sling Dynamic Includes]を使用する場合は、関連する[応答ヘッダーをディスパッチャーキャッシュ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)にキャッシュしてください。 使用可能なヘッダーは次のとおりです。
+>エッジ側インクルード(ESI)を提供するために[!DNL Sling Dynamic Includes]を使用する場合は、関連する[応答ヘッダーをDispatcherキャッシュ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)にキャッシュします。 ヘッダーの例を次に示します。
 >
->* 「Cache-Control」
+>* 「キャッシュ制御」
 >* 「Content-Disposition」
 >* &quot;Content-Type&quot;
 >* &quot;有効期限&quot;
->* 「最終変更日」
+>* &quot;最終変更日&quot;
 >* &quot;ETag&quot;
 >* &quot;X-Content-Type-Options&quot;
->* 「最終変更日」
+>* &quot;最終変更日&quot;
 
 >
 
@@ -168,5 +167,5 @@ ht-degree: 9%
 
 ## サポート資料
 
-* [Sling動的インクルードバンドルのダウンロード](https://sling.apache.org/downloads.cgi)
-* [Apache Sling動的インクルードドキュメント](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [Sling Dynamic Includeバンドルのダウンロード](https://sling.apache.org/downloads.cgi)
+* [Apache Sling Dynamic Includeドキュメント](https://github.com/Cognifide/Sling-Dynamic-Include)
