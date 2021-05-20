@@ -1,20 +1,19 @@
 ---
 title: Adobe Experience Manager as Cloud Service のチュートリアル
-description: Cloud ServiceとしてのAdobe Experience Manager(AEM)向けのチュートリアルの集まり
-sub-product: サイト， cloud manager，基盤，アセット
+description: Adobe Experience Manager(AEM) as a TutorialのCloud Serviceのコレクション
+sub-product: サイト， cloud-manager，基盤，アセット
 kt: 3289
-translation-type: tm+mt
 source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
 
 # 概要 {#overview}
 
-Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEMは、Cloud Serviceとして次世代のExperience Manager製品ラインを導入し、過去の投資や革新性に基づいて構築され、すべての使用事例や機能を保持し、拡張しています。
+Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEM as a Cloud Serviceは、過去の投資と革新に基づいて構築され、すべての使用例と機能を維持および拡張する、次世代のExperience Manager製品ラインを導入します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -22,51 +21,51 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
 * **[トークンベースの認証（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *HTTP経由のCloud ServiceとしてAEMとやり取りするために、トークンベースの認証を使用する方法を学びます。*
+   *トークンベースの認証を使用して、HTTP経由でAEMをCloud Serviceとして操作する方法を説明します*
 
 * **[ヘッドレスGraphQL（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *AEM GraphQL APIを使用して外部アプリケーションでエクスペリエンスをパワーにする方法を学びます。*
+   *AEM GraphQL APIを使用して、外部アプリケーションでエクスペリエンスを強化する方法を説明します。*
 
 * **[一括インポート（ビデオ）](./migration/bulk-import.md)**
 
-   *Azure BlobストレージまたはAmazonS3からAEMにアセットを一括インポートする方法を説明します*
+   *Azure Blob StorageまたはAmazon S3からAEMにアセットを一括で読み込む方法を説明します。*
 
 * **[asset computeメタデータワーカー（チュートリアル）](./asset-compute/advanced/metadata.md)**
 
-   *asset computeワーカーからAEMにアセットのメタデータを書き戻す方法を説明します。*
+   *アセットワーカーからAEMにアセットメタデータを書き戻す方法をAsset computeする*
 
 * **[asset computeマイクロサービスの拡張機能（チュートリアル）](./asset-compute/overview.md)**
 
-   *asset computeワーカーを開発し、カスタムアセットレンディションを生成する方法を学びます。*
+   *カスタムアセットレンディションを生成するAsset computeワーカーを開発する方法を説明します。*
 
-## スタッフの選考
+## スタッフのおすすめ
 
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="Cloud ServiceとしてのAEMへのアクセスの設定" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="AEM as aCloud Serviceへのアクセスの設定" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>AEMへのアクセスの設定</strong>
+         <strong>AEM Tutorialへのアクセスの設定</strong>
          </a>
       </div>
       <p>
-         <em>AEMにアクセスするように、Adobe Admin ConsoleでIMSユーザーを設定します。</em>
+         <em>AEMにアクセスするようにAdobe Admin ConsoleでIMSユーザーを設定します。</em>
       <p>
    </td>   
    <td>
       <a href="./local-development-environment/overview.md">
-      <img alt="ローカル開発環境の設定のチュートリアル" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      <img alt="ローカル開発環境の設定チュートリアル" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>ローカル開発環境の設定のチュートリアル</strong>
+         <strong>ローカル開発環境の設定チュートリアル</strong>
          </a>
       </div>
       <p>
-         <em>ローカルの開発マシンを、Cloud Service開発としてAEMに対応させます。</em>
+         <em>ローカル開発マシンを、AEM as a  as a Cloud Service開発用に準備します。</em>
       <p>
    </td>   
    <td>
@@ -79,12 +78,12 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
          </a>
       </div>
       <p>
-         <em>Cloud ServiceSDKのローカルクイックスタートとして、AEM上のアプリケーションのデバッグに使用するツールを調査します。</em>
+         <em>AEM as a Application SDKのローカルクイックスタートで、アプリケーションのデバッグに使用されるCloud Serviceを参照します。</em>
       <p>
    </td>
 </table>
 
 ## その他のリソース
 
-* [Experience League-Adobe Experience Managerを探索](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Cloud Service文書としてのAdobe Experience Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/landing/home.html)
+* [Experience League -Adobe Experience Managerを参照](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Adobe Experience Manager as a Cloud Service ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/landing/home.html)
