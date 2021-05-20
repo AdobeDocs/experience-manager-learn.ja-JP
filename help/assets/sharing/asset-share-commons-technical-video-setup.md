@@ -1,11 +1,10 @@
 ---
-title: ローカルAEMでのアセット共有コモンの設定
-description: 資産共有コモンズに関する機能的および技術的な理解のための資料
+title: ローカルAEMでのAsset Share Commonsの設定
+description: Assets Share Commonsの機能と技術の両方に関する資料
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: コンテンツ管理
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '77'
@@ -14,14 +13,14 @@ ht-degree: 2%
 ---
 
 
-# ローカルAEMでのアセット共有コモンの設定{#setup-asset-share-commons}
+# ローカルAEM {#setup-asset-share-commons}でのAsset Share Commonsの設定
 
-ローカルAEMインスタンスで実行するアセット共有コモンを取得する手順を簡単に説明します。
+ローカルのAEMインスタンスでAsset Share Commonsを実行する方法を簡単に説明します。
 
 >[!NOTE]
 >
->アセット共有コモンズには、最低でもAEM 6.3とService Pack 1 (SP1)がインストールされている必要があります。
+>Asset Share Commonsには、Service Pack 1(SP1)がインストールされたAEM 6.3以降が必要です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20499/?quality=9&learn=on)
 
-ローカルのAEMインスタンスにAsset Share Commonsとそのサンプルコンテンツをダウンロードしてインストールする簡単なビデオウォークスルーです。
+ローカルのAEMインスタンスへのAsset Share Commonsのダウンロードとインストールに関する簡単なビデオのウォークスルーとサンプルコンテンツです。
