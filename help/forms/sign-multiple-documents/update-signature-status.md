@@ -1,7 +1,7 @@
 ---
 title: データベース内のフォームの署名ステータスの更新
-description: AEMワークフローを使用して、データベース内の署名済みフォームの署名ステータスを更新します
-feature: Adaptive Forms
+description: AEMワークフローを使用して、データベース内の署名済みフォームの署名ステータスを更新する
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '107'
@@ -21,15 +20,15 @@ ht-degree: 3%
 ---
 
 
-# 署名の状態の更新
+# 署名ステータスの更新
 
-ユーザーが署名式を完了すると、UpdateSignatureStatusワークフローがトリガーされます。 ワークフローの流れを次に示します
+ユーザーが署名処理を完了すると、 UpdateSignatureStatusワークフローがトリガーされます。 次に、ワークフローのフローを示します
 
-![主なワークフロー](assets/update-signature.PNG)
+![メインワークフロー](assets/update-signature.PNG)
 
 「Update Signature Status」は、カスタムプロセスステップです。
-カスタムプロセス手順を実装する主な理由は、AEMワークフローを拡張することです。 署名ステータスの更新に使用するカスタムコードを次に示します。
-このカスタムプロセス手順のコードは、SignMultipleFormsサービスを参照します。
+カスタムプロセスステップを実装する主な理由は、AEM Workflowを拡張することです。 以下は、署名ステータスの更新に使用するカスタムコードです。
+このカスタムプロセスステップのコードは、SignMultipleFormsサービスを参照します。
 
 
 ```java
@@ -75,5 +74,5 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-アップデート署名ステータスワークフローは、[ここから](assets/update-signature-status-workflow.zip)ダウンロードできます
+署名ステータスの更新ワークフローは、[ここから](assets/update-signature-status-workflow.zip)ダウンロードできます。
 
