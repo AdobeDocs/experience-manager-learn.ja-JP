@@ -1,43 +1,42 @@
 ---
-title: アダプティブフォームの外部サーバーへの送信
-seo-title: アダプティブフォームの外部サーバーへの送信
+title: 外部サーバーへのアダプティブフォームの送信
+seo-title: 外部サーバーへのアダプティブフォームの送信
 description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
 seo-description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: Adaptive Forms
+feature: アダプティブフォーム
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 6%
+ht-degree: 12%
 
 ---
 
 
-# アダプティブフォームの外部サーバーへの送信{#submitting-adaptive-form-to-external-server}
+# 外部サーバーへのアダプティブフォームの送信{#submitting-adaptive-form-to-external-server}
 
-RESTエンドポイントへの送信アクションを使用して、送信されたデータをREST URLにPOSTします。 URLには、内部（フォームがレンダリングされるサーバー）または外部サーバーを使用できます。
+RESTエンドポイントへの送信アクションを使用して、送信されたデータをREST URLに送信します。 URL は、内部（フォームがレンダリングされるサーバー）または外部サーバーのどちらのものでも使用できます。
 
-通常、顧客はフォームデータを外部サーバーに送信して、さらに処理する必要があります。
+通常、顧客は、追加の処理を行うために外部サーバーにフォームデータを送信する必要があります。
 
-内部サーバーにデータをPOST送信するには、リソースのパスを指定します。 データは、リソースのパスに POST されます。例えば、&lt;/content/restEndPoint>のように指定します。 このようなPOSTリクエストの場合は、送信リクエストの認証情報が使用されます。
+内部サーバーにデータをPOST送信するには、リソースのパスを指定します。 データは、リソースのパスに POST されます。例えば、 &lt;/content/restEndPoint> 。 このようなPOSTリクエストでは、送信リクエストの認証情報が使用されます。
 
-内部サーバーにデータを POST 送信するには、URL を指定します。URLの形式は<http://host:port/path_to_rest_end_point>です。 POST要求を匿名で処理するようにパスを設定していることを確認します。
+外部サーバーにデータを POST 送信するには、URL を指定します。URL の形式は、<http://host:port/path_to_rest_end_point> です。匿名で要求を処理するパスが設定されていることを確認してPOSTリクエストを処理します。
 
-この記事の目的で、tomcatインスタンスにデプロイできる単純なwarファイルを作成しました。 tomcatがポート8080で実行されている場合、POSTURLは
+この記事の目的のために、Tomcatインスタンスにデプロイできる単純なwarファイルを作成しました。 Tomcatがポート8080で実行されている場合、POSTURLは
 
 <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>
 
-このエンドポイントに送信するようにアダプティブフォームを設定する場合、次のコードによってフォームデータと添付ファイルがサーブレット内で抽出できる場合は添付ファイルが抽出されます
+アダプティブフォームをこのエンドポイントに送信するように設定する場合、次のコードによってフォームデータと添付ファイル（存在する場合）がサーブレットで抽出されます
 
 ```java
 System.out.println("form was submitted");
@@ -56,13 +55,13 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 ```
 
 ![](assets/formsubmission.gif)
-formsubmissionサーバーでテストするには、次の手順を実行してください
+formsubmissionお使いのサーバーでテストするには、次の手順を実行してください
 
-1. Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらを参照してください](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
-1. この記事に関連付けられている[zipファイル](assets/aemformsenablement.zip)をダウンロードします。 ファイルを解凍して、warファイルを取得します。
-1. tomcatサーバーにwarファイルをデプロイします。
-1. 添付ファイルコンポーネントを含む単純なアダプティブフォームを作成し、上のスクリーンショットに示すようにその送信アクションを設定します。 POSTURLは<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>です。 AEMとtomcatがlocalhostで実行されていない場合は、それに応じてURLを変更してください。
-1. tomcatへのマルチパートフォームデータ送信を有効にするには、次の属性を&lt;tomcatInstallDir>\conf\context.xmlのコンテキスト要素に追加し、Tomcatサーバーを再起動してください。
+1. Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
+1. この記事に関連付けられた[zipファイル](assets/aemformsenablement.zip)をダウンロードします。 ファイルを解凍し、warファイルを取得します。
+1. Tomcatサーバーにwarファイルをデプロイします。
+1. 添付ファイルを含むシンプルなアダプティブフォームを作成し、上のスクリーンショットに示すように、その送信アクションを設定します。 POSTURLは<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>です。 AEMとtomcatがlocalhostで実行されていない場合は、URLを適宜変更してください。
+1. Tomcatへのマルチパートフォームデータ送信を有効にするには、 &lt;tomcatInstallDir>\conf\context.xmlのコンテキスト要素に次の属性を追加し、Tomcatサーバーを再起動します。
 1. **&lt;context allowCasualMultipartParsing=&quot;true&quot;>**
-1. アダプティブフォームをプレビューし、添付ファイルを追加して送信します。 tomcatコンソールウィンドウでメッセージを確認します。
+1. アダプティブフォームをプレビューし、添付ファイルを追加して送信します。 Tomcatコンソールウィンドウでメッセージを確認します。
 
