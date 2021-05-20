@@ -1,5 +1,5 @@
 ---
-title: Cloud ServiceとしてAdobe Experience Manager FormsをDocument Cloudと統合
+title: Adobe Experience Manager FormsとDocument CloudのCloud Serviceの統合
 description: Document CloudREST APIを使用したPDFの作成
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 # はじめに
 
-Cloud ServiceAPIおよびDocument CloudAPIとしてAdobe Experience Manager Formsを統合する使用例を紹介します。
+Adobe Experience Manager Forms as aCloud ServiceおよびDocument CloudAPIの統合の使用例の概要です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333241/?quality=12&learn=on)
 
