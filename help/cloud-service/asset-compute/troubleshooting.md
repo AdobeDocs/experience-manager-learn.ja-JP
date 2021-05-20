@@ -1,7 +1,7 @@
 ---
 title: AEM AssetsのAsset compute拡張機能のトラブルシューティング
-description: 以下は、AEM AssetsのカスタムAsset computeワーカーを開発および配置する際に発生する可能性がある、一般的な問題とエラー、および解決策のインデックスです。
-feature: Asset Compute Microservices
+description: 次に、AEM Assets用のカスタムAsset computeワーカーを開発およびデプロイする際に発生する可能性のある、一般的な問題とエラーのインデックスと、解決策を示します。
+feature: asset computeマイクロサービス
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,9 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrations, Development
+topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '1246'
@@ -23,122 +22,122 @@ ht-degree: 0%
 
 # asset computeの拡張機能のトラブルシューティング
 
-以下は、AEM AssetsのカスタムAsset computeワーカーを開発および配置する際に発生する可能性がある、一般的な問題とエラー、および解決策のインデックスです。
+次に、AEM Assets用のカスタムAsset computeワーカーを開発およびデプロイする際に発生する可能性のある、一般的な問題とエラーのインデックスと、解決策を示します。
 
 ## 開発{#develop}
 
-### レンディションが部分的に描画/破損した{#rendition-returned-partially-drawn-or-corrupt}として返される
+### レンディションが部分的に描画/破損した{#rendition-returned-partially-drawn-or-corrupt}
 
-+ __エラー__:レンディションが完全にレンダリングされない（画像が破損している場合）、または開くことができない。
++ __エラー__:レンディションが（画像の場合）完全にレンダリングされない、または壊れていて開けない。
 
    ![レンディションが部分的に描画されて返される](./assets/troubleshooting/develop__await.png)
 
-+ __原因__:レンディションの書き込みが完了する前に、ワーカーの `renditionCallback` 機能を終了してい `rendition.path`ます。
-+ __解像度__:カスタムワーカーコードを確認し、を使用してすべての非同期呼び出しが同期されることを確認 `await`します。
++ __原因__:レンディションの `renditionCallback` に完全に書き込みが完了する前に、ワーカーの関数が終了し `rendition.path`ます。
++ __解像度__:カスタムワーカーコードを確認し、を使用してすべての非同期呼び出しが同期されていることを確認しま `await`す。
 
 ## 開発ツール{#development-tool}
 
 ### asset computeプロジェクト{#missing-console-json}にConsole.jsonファイルがありません
 
-+ __エラー：__ エラー：検証時に必要なファイルが見つかりません(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)(非同期setupAssetCompute (...)/node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
-+ __原因：__ フ `console.json` ァイルがAsset computeプロジェクトのルートにありません
-+ __解決方法：Adobe I/Oプロジェクトの新しい__ フォームを `console.json` ダウンロードする
-   1. console.adobe.ioで、Asset computeプロジェクトが使用するように設定されているAdobe I/Oプロジェクトを開きます
++ __エラー：__ エラー：検証時に必要なファイルが見つかりません(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)を非同期setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __原因：__ ファイルが `console.json` Asset computeプロジェクトのルートにありません
++ __解決方法：__ Adobe I/Oプロジェクトから新しいフ `console.json` ォームをダウンロードしてください
+   1. console.adobe.ioで、Asset computeプロジェクトが使用するように設定されているAdobe I/Oプロジェクトを開きます。
    1. 右上の「__ダウンロード__」ボタンをタップします
    1. ファイル名`console.json`を使用して、ダウンロードしたファイルをAsset computeプロジェクトのルートに保存します。
 
 ### manifest.yml{#incorrect-yaml-indentation}のYAMLインデントが正しくありません
 
-+ __エラー：__ YAMLException:行X、列Y:(標準out from `aio app run` コマンドを使用)のマッピングエントリのインデントが正しくありません
-+ __原因：__ Yamlファイルは空白が区別されます。インデントが正しくない可能性があります。
-+ __解像度：__ 確認 `manifest.yml` し、すべてのインデントが正しいことを確認します。
++ __エラー：__ YAMLException:行X、列Y:（標準out fromコマンドを使用）のマッピングエントリの不正なインデ `aio app run` ント
++ __原因：__ Yamlファイルはホワイトスペースに依存しているので、インデントが正しくない可能性があります。
++ __解決方法：__ を確認し、す `manifest.yml` べてのインデントが正しいことを確認します。
 
-### memorySize制限が小さすぎます{#memorysize-limit-is-set-too-low}
+### memorySizeの上限が小さすぎます{#memorysize-limit-is-set-too-low}
 
-+ __エラー：__  ローカル開発サーバーOpenWiskError:PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=trueがHTTP 400を返しました（無効な要求） —> &quot;要求内容が正しくありません：要件が失敗しました：メモリ64 MBが許容しきい値134217728 Bインチを下回っています。
-+ __原因：内のワーカーの__ 制限が、エラーメッセージ（バイト単位）で報告さ `memorySize`  `manifest.yml` れる最小許容しきい値を下回っていました。
-+ __解像度：の__  制限を `memorySize` 確認し、すべて許容される最小しきい値より大きいことを確認し `manifest.yml` ます。
++ __エラー：__  ローカル開発サーバーOpenWhiskError:PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=trueがHTTP 400（不正なリクエスト）を返しました —> 「リクエストの内容が正しくありません：requirementが失敗しました：メモリ64 MBが許容しきい値134217728 Bを下回る
++ __原因：__ 内のワーカ `memorySize` ーの制限が、エラーメッセージで報告される最小許容しきい値 `manifest.yml` （バイト単位）を下回って設定されました。
++ __解決方法：__  の制限を確 `memorySize` 認 `manifest.yml` し、すべて許可された最小しきい値を超えていることを確認します。
 
-### private.key{#missing-private-key}が見つからないため、開発ツールは開始できません
+### private.key{#missing-private-key}が見つからないため、開発ツールを起動できません
 
 + __エラー：__ ローカル開発サーバーエラー：validatePrivateKeyFileに必要なファイルがありません….（`aio app run`コマンドから標準出力）
-+ __原因：__ ファイル内の `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`  `.env` 値。現在のユーザーが参照し `private.key` ていない `private.key` か、読み取り可能ではありません。
-+ __解決：フ__ ァイル内の `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 値を確認し、ファイルシステム `.env` 上ののの完全で絶対パスが含まれていること `private.key` を確認します。
++ __原因：__ ファイル内 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` の `.env` 値が、現在のユーザーに `private.key` よ `private.key` って読み取り不可を指していない。
++ __解決方法：__ ファイル内の `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 値を確認 `.env` し、ファイルシステム上のへの完全な絶対パスが含まれてい `private.key` ることを確認します。
 
 ### ソースファイルのドロップダウンが正しくない{#source-files-dropdown-incorrect}
 
-asset compute開発ツールは、古いデータを取り込む状態に入る場合があり、不適切な項目が表示される&#x200B;__ソースファイル__&#x200B;ドロップダウンで最も顕著になります。
+asset compute開発ツールは、古いデータを取り込む状態に入る場合があり、「__ソースファイル__」ドロップダウンに間違った項目が表示されるのが最も顕著です。
 
-+ __エラー：__ ソースファイルドロップダウンに正しくない項目が表示される。
-+ __原因：キャッシュされ__ た状態が古い場合、
-+ __解像度：ブラウザ__ ーで、ブラウザータブの「アプリケーションの状態」、ブラウザーのキャッシュ、ローカルストレージ、サービスワーカーを完全にクリアします。
++ __エラー：__ ソースファイルドロップダウンに誤った項目が表示される。
++ __原因：__ キャッシュされたブラウザーの状態が古いと、
++ __解決方法：__ ブラウザーで、ブラウザータブの「アプリケーション状態」、ブラウザーキャッシュ、ローカルストレージ、サービスワーカーを完全にクリアします。
 
-### devToolTokenクエリパラメーター{#missing-or-invalid-devtooltoken-query-parameter}がないか無効です
+### devToolTokenクエリパラメーター{#missing-or-invalid-devtooltoken-query-parameter}が見つからないか、無効です
 
-+ __エラー：__ Asset compute開発ツールでの「未認証」通知
++ __エラー：__ Asset compute開発ツールの「未承認」通知
 + __原因：__ `devToolToken` が見つからないか無効です
-+ __解像度：Asset compute開発ツールブラウザーウィンドウを__ 閉じ、 `aio app run` コマンドを使用して開始した実行中の開発ツールプロセスを終了し、(を使用して `aio app run`)再開始開発ツールを終了します。
++ __解決方法：__ Asset compute開発ツールブラウザーウィンドウを閉じ、コマンドを使用して開始した実行中の開発ツールプロセスを終了 `aio app run` し、（を使用して）開発ツールを再起動しま `aio app run`す。
 
 ### ソースファイル{#unable-to-remove-source-files}を削除できません
 
-+ __エラー：追加__ されたソースファイルを開発ツールUIから削除する方法がありません
++ __エラー：__ 開発ツールUIから追加されたソースファイルを削除する方法はありません
 + __原因：__ この機能は実装されていません
-+ __解決：で定義されている資格情報を使用して、クラウドストレージプロバイダーに__ ログイン `.env`します。開発ツールで使用するコンテナ（`.env`で指定）を探し、__source__&#x200B;フォルダーに移動して、ソース画像を削除します。 削除したソースファイルが開発ツールの「application state」でローカルにキャッシュされるので、ドロップダウンに引き続き表示される場合は、[ソースファイルのドロップダウンに記載されている手順を実行する必要があります。](#source-files-dropdown-incorrect)
++ __解決方法：__ で定義された資格情報を使用して、クラウドストレージプロバイダーにログインしま `.env`す。開発ツールで使用されるコンテナ（`.env`でも指定）を探し、__source__&#x200B;フォルダーに移動して、ソース画像を削除します。 削除されたソースファイルが開発ツールの「アプリケーションの状態」でローカルにキャッシュされる可能性があるので、ドロップダウンに引き続き表示される場合は、[「ソースファイル」ドロップダウンに記載されている手順を実行する必要があります。](#source-files-dropdown-incorrect)
 
    ![Microsoft Azure Blob Storage](./assets/troubleshooting/dev-tool__remove-source-files.png)
 
 ## テスト{#test}
 
-### テストの実行中にレンディションが生成されません{#test-no-rendition-generated}
+### テストの実行中にレンディションが生成されません。{#test-no-rendition-generated}
 
-+ __エラー：__ 失敗：レンディションが生成されません。
-+ __原因：JavaScript__ 構文エラーなどの予期しないエラーが発生したため、ワーカーはレンディションの生成に失敗しました。
-+ __解決：テスト実行の__ レビュー `test.log` が `/build/test-results/test-worker/test.log`あります。失敗したテストケースに対応するこのファイル内のセクションを見つけ、エラーを確認します。
++ __エラー：__ エラー：レンディションが生成されません。
++ __原因：__ JavaScript構文エラーなどの予期しないエラーが原因で、ワーカーがレンディションを生成できませんでした。
++ __解決方法：__ でテスト実行を確認し `test.log` ま `/build/test-results/test-worker/test.log`す。このファイル内で、失敗したテストケースに対応するセクションを探し、エラーを確認します。
 
-   ![トラブルシューティング — レンディションが生成されません](./assets/troubleshooting/test__no-rendition-generated.png)
+   ![トラブルシューティング — レンディションが生成されない](./assets/troubleshooting/test__no-rendition-generated.png)
 
 ### テストで誤ったレンディションが生成され、テストが失敗する{#tests-generates-incorrect-rendition}
 
-+ __エラー：__ 失敗：レンディション&#39;rendition.xxx&#39;が期待どおりではありません。
-+ __原因：__ ワーカーは、テストケースで `rendition.<extension>` 提供されたレンディションと異なるレンディションを出力しました。
-   + 期待される`rendition.<extension>`ファイルが、テストケースでローカルに生成されたレンディションと完全に同じ方法で作成されない場合、ビットに何らかの違いがあるので、テストが失敗する可能性があります。 例えば、Asset computeワーカーがAPIを使用してコントラストを変更し、期待される結果がAdobe Photoshop CCでコントラストを調整して作成された場合、ファイルは同じように見えますが、ビットの小さなバリエーションは異なる場合があります。
-+ __解像度：テストからのレンディション出力を__ レビューします。レンディション出力は、テストケースに移動し `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`て確認し、テストケースで期待されるレンディションファイルと比較します。正確に予想されるアセットを作成するには、次のいずれかを行います。
-   + 開発ツールを使用して、レンディションを生成し、正しいことを検証し、期待どおりのレンディションファイルとして使用します
-   + または、`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`にあるテスト生成ファイルを検証し、正しいことを検証して、期待どおりのレンディションファイルとして使用します
++ __エラー：__ エラー：レンディション「rendition.xxx」が期待どおりではありません。
++ __原因：__ ワーカーは、テストケースで指定されたと異なるレンデ `rendition.<extension>` ィションを出力します。
+   + 想定される`rendition.<extension>`ファイルが、テストケースでローカルに生成されたレンディションとまったく同じ方法で作成されない場合、ビットに何らかの違いがあるので、テストが失敗する可能性があります。 例えば、Asset computeワーカーがAPIを使用してコントラストを変更し、期待される結果がAdobe Photoshop CCでコントラストを調整して作成された場合、ファイルは同じように見えますが、ビットの小さなバリエーションが異なる場合があります。
++ __解決方法：__ に移動してテストからのレンディション出力を確認 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`し、テストケースで期待されるレンディションファイルと比較します。正確に予測されるアセットを作成するには、次のいずれかを実行します。
+   + 開発ツールを使用して、レンディションを生成し、正しいことを検証し、それを期待されるレンディションファイルとして使用します
+   + または、`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`でテスト生成ファイルを検証し、正しいことを検証して、それを期待されるレンディションファイルとして使用します
 
 ## デバッグ
 
-### デバッガは{#debugger-does-not-attach}をアタッチしません
+### Debuggerは{#debugger-does-not-attach}をアタッチしません
 
-+ __エラー__:起動の処理中にエラーが発生しました：エラー：次の時点でデバッグターゲットに接続できませんでした…
-+ __原因__:Docker Desktopがローカルシステムで実行されていません。VSコードデバッグコンソール(表示/デバッグコンソール)を確認して、このエラーがレポートされることを確認します。
-+ __解像度__:開始 [ドッカーデスクトップで、必要なドッカーイメージがインストールされていることを確認し](./set-up/development-environment.md#docker)ます。
++ __エラー__:起動の処理中にエラーが発生しました：エラー：デバッグターゲットに接続できませんでした…
++ __原因__:Docker Desktopがローカルシステムで動作していません。VS Codeデバッグコンソール（表示/デバッグコンソール）を確認して、このエラーが報告されていることを確認します。
++ __解像度__:Docker Desktopを起 [動し、必要なDockerイメージがインストールされていることを確認します](./set-up/development-environment.md#docker)。
 
-### {#breakpoints-no-pausing}を一時停止していないブレークポイント
+### ブレークポイントが一時停止しない{#breakpoints-no-pausing}
 
-+ __エラー__:デバッグ可能な開発ツールからAsset computeワーカーを実行する場合、VSコードはブレークポイントで一時停止しません。
++ __エラー__:デバッグ可能な開発ツールからAsset computeワーカーを実行する場合、VS Codeはブレークポイントで一時停止しません。
 
-#### VSコードデバッガがアタッチされていません{#vs-code-debugger-not-attached}
+#### VS Codeデバッガが接続されていません{#vs-code-debugger-not-attached}
 
-+ __原因： VSコ__ ードデバッガーが停止または切断されました。
-+ __解決：VSコードデバッガーを__ 再起動し、VSコードデバッグ出力コンソール(表示/デバッグコンソール)を見て接続を確認します。
++ __原因：__ VS Codeデバッガーが停止したか、接続が切断されました。
++ __解決方法：__ VS Codeデバッガーを再起動し、VS Codeデバッグ出力コンソール（表示/デバッグコンソール）を見て、デバッガーが接続されていることを確認します。
 
-#### ワーカーの実行開始後に添付されたVSコードデバッガ{#vs-code-debugger-attached-after-worker-execution-began}
+#### ワーカーの実行開始後に添付されるVS Codeデバッガ{#vs-code-debugger-attached-after-worker-execution-began}
 
-+ __原因：__  ____ Runin Development Toolをタップする前に、VSコードデバッガーがアタッチされませんでした。
-+ __解決：VSコードのデバッグコンソール(表示/デバッグコンソール)を確認し、Asset computeツールからデバッガーを再実行して、デバッガーが接続されていることを__ 確認します。
++ __原因：__  Runin Development Toolをタップする前に、VS Codeデバッガーがア ____ タッチされませんでした。
++ __解決方法：__ VS Codeのデバッグコンソール（表示/デバッグコンソール）を確認し、開発ツールからAsset computeワーカーを再実行して、デバッガーが接続されていることを確認します。
 
-### {#worker-times-out-while-debugging}のデバッグ中にワーカーがタイムアウトしました
+### {#worker-times-out-while-debugging}のデバッグ中にワーカーがタイムアウトする
 
-+ __エラー__:Debug Consoleレポートに「Action will timeout in -XXX milliseconds」または [Asset compute開発ツールのレンディションプレビューが無期限に回](./develop/development-tool.md) 転するか、
-+ __原因__:デバッグ中に [manifest.](./develop/manifest.md) ymlisで定義されたワーカーのタイムアウトを超えました。
-+ __解像度__:manifest. [ymlorでワーカーのタイムアウトを一時的に長くすると、デバッグアクティビティが](./develop/manifest.md) 高速化します。
++ __エラー__:デバッグコンソールが「 —XXXミリ秒でアクションがタイムアウトする」、または [Asset compute開発ツールのレンディションプ](./develop/development-tool.md) レビューが無期限または無期限にスピンする
++ __原因__:デバッグ中にmanifest.ymlisで定義されたワーカ [ーのタイムア](./develop/manifest.md) ウトを超えました。
++ __解像度__:manifest.ymlorでワーカーのタイムアウトを一時的に増やすと、デ [バッグアクティビティが](./develop/manifest.md) 高速化します。
 
-### デバッガープロセス{#cannot-terminate-debugger-process}を終了できません
+### デバッガプロセス{#cannot-terminate-debugger-process}を終了できません
 
-+ __エラー__: `Ctrl-C` コマンドラインでデバッガプロセスが終了しない(`npx adobe-asset-compute devtool`)。
-+ __原因__:1.3.xのバグ `@adobe/aio-cli-plugin-asset-compute` は、終了コマンドとして認識され `Ctrl-C` ません。
-+ __解像度__:バージョン1.4.1以降 `@adobe/aio-cli-plugin-asset-compute` へのアップデート
++ __エラー__: `Ctrl-C` コマンドラインで、デバッガープロセスを終了しない(`npx adobe-asset-compute devtool`)。
++ __原因__:1.3.xのバ `@adobe/aio-cli-plugin-asset-compute` グにより、終了コマンドとし `Ctrl-C` て認識されなくなります。
++ __解像度__:バー `@adobe/aio-cli-plugin-asset-compute` ジョン1.4.1以降に更新
 
    ```
    $ aio update
@@ -148,24 +147,24 @@ asset compute開発ツールは、古いデータを取り込む状態に入る�
 
 ## デプロイ{#deploy}
 
-### AEM{#custom-rendition-missing-from-asset}のアセットにカスタムレンディションが見つかりません
+### AEM{#custom-rendition-missing-from-asset}のアセットにカスタムレンディションが見つからない
 
-+ __エラー：__ 新しいアセットと再処理されたアセットは正常に処理されますが、カスタムレンディションが見つかりません
++ __エラー：__ 新しい再処理されたアセットは正常に処理されましたが、カスタムレンディションが見つかりません
 
-#### 処理プロファイルが上位フォルダーに適用されていません
+#### 上位フォルダーに処理プロファイルが適用されていません
 
-+ __原因：__ カスタムワーカーを使用する処理プロファイルを含むフォルダーの下にアセットが存在しません
-+ __解像度：処理プロファイルーをアセットの上位フォルダーに__ 適用
++ __原因：__ カスタムワーカーを使用する処理プロファイルを持つフォルダーの下にアセットが存在しません
++ __解決方法：__ アセットの上位フォルダーへの処理プロファイルの適用
 
-#### 低い処理プロファイルで置き換えられた処理プロファイル
+#### 低い処理プロファイルに置き換えられた処理プロファイル
 
-+ __原因：__ このアセットは、カスタムワーカーの処理プロファイルが適用されたフォルダーの下に存在しますが、そのカスタマーワーカーを使用しない別の処理プロファイルが、そのフォルダーとアセットの間で適用されています。
-+ __解決：2つの処理プロファイルを__ 結合または調整し、中間処理プロファイルを削除します
++ __原因：__ カスタムワーカーの処理プロファイルが適用されたフォルダーの下にアセットが存在しますが、そのフォルダーとアセットの間に、カスタマーワーカーを使用しない別の処理プロファイルが適用されています。
++ __解決方法：__ 2つの処理プロファイルを組み合わせるか、調整して、中間の処理プロファイルを削除します
 
-### AEM{#asset-processing-fails}でのアセットの処理に失敗
+### AEM{#asset-processing-fails}でのアセット処理が失敗する
 
-+ __エラー：ア__ セットに表示されるアセット処理に失敗したバッジ
-+ __原因：カ__ スタムワーカーの実行中にエラーが発生しました
-+ __解像度：を__ 使用したAdobe I/O Runtimeアクティビティの [デバッグに関する手順に従](./test-debug/debug.md#aio-app-logs)  `aio app logs`います。
++ __エラー：__ アセット処理に失敗したバッジがアセットに表示される
++ __原因：__ カスタムワーカーの実行中にエラーが発生しました
++ __解決方法：__ を使用したAdobe I/O Runtimeのアクティベーションのデ [バッグ手順に](./test-debug/debug.md#aio-app-logs) 従ってく `aio app logs`ださい。
 
 
