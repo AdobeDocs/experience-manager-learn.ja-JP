@@ -1,63 +1,62 @@
 ---
 title: アダプティブフォームデータの保存
 seo-title: アダプティブフォームデータの保存
-description: アダプティブフォームデータのDataBaseへの格納(AEMワークフローの一部)
-seo-description: アダプティブフォームデータのDataBaseへの格納(AEMワークフローの一部)
-feature: Adaptive Forms,Workflow,Form Data Model
+description: アダプティブフォームデータをAEMワークフローの一部としてデータベースに保存する
+seo-description: アダプティブフォームデータをAEMワークフローの一部としてデータベースに保存する
+feature: アダプティブForms，ワークフロー，フォームデータモデル
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '397'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# アダプティブフォーム送信のデータベースへの保存
+# アダプティブフォーム送信のデータベースへの格納
 
-送信されたフォームデータを任意のデータベースに格納する方法はいくつかあります。 JDBCデータソースを使用して、データを直接データベースに格納できます。 カスタムOSGIバンドルを書き込んで、データをデータベースに格納できます。 この記事では、AEMワークフローのカスタムプロセスステップを使用してデータを保存します。
-使用例は、アダプティブフォームの送信時にAEMワークフローをトリガーし、ワークフローの手順で送信されたデータをデータベースに保存する場合です。
+送信されたフォームデータを、選択したデータベースに格納する方法は多数あります。 JDBCデータソースを使用して、データをデータベースに直接格納できます。 カスタムOSGIバンドルを書き込んで、データをデータベースに保存できます。 この記事では、AEMワークフローのカスタムプロセスステップを使用して、データを保存します。
+使用例では、アダプティブフォームの送信時にAEMワークフローをトリガーし、ワークフローの手順で送信されたデータをデータベースに保存します。
 
-**ご使用のシステムで動作させるには、次の手順に従ってください**
+**以下の手順に従って、システムで動作させてください**
 
-* [Zipファイルをダウンロードし、その内容をハードドライブに展開します](assets/storeafdataindb.zip)
+* [Zipファイルをダウンロードし、その内容をハードドライブに抽出します。](assets/storeafdataindb.zip)
 
-   * パッケージマネージャーを使用して、StoreAFInDBWorkflow.zipをAEMに読み込みます。 パッケージには、AFデータをDBに格納するサンプルワークフローが含まれています。 ワークフローモデルを開きます。 ワークフローには1つのステップしかありません。 この手順では、バンドルに書き込まれたコードを呼び出し、AFデータをデータベースに格納します。 私はそのプロセスに1つの引数を渡す。 データを保存するアダプティブフォームの名前です。
-   * Felix Webコンソールを使用して、insertdata.core-0.0.1-SNAPSHOT.jarをデプロイします。 このバンドルには、送信されたフォームデータをデータベースに書き込むためのコードが含まれています
+   * パッケージマネージャーを使用して、 StoreAFInDBWorkflow.zipをAEMに読み込みます。 パッケージには、AFデータをDBに格納するサンプルワークフローが含まれています。 ワークフローモデルを開きます。 ワークフローには1つの手順しかありません。 この手順は、バンドルに記述されたコードを呼び出し、AFデータをデータベースに保存します。 私はその過程に一つの議論を引き継いでいる。 これは、データが保存されるアダプティブフォームの名前です。
+   * Felix Webコンソールを使用して、insertdata.core-0.0.1-SNAPSHOT.jarをデプロイします。 このバンドルには、送信されたフォームデータをデータベースに書き込むためのコードが含まれます
 
-* [ConfigMgr](http://localhost:4502/system/console/configMgr)に移動
+* [ConfigMgr](http://localhost:4502/system/console/configMgr)に移動します。
 
-   * 「JDBC Connection Pool」を検索します。 新しいDay Commons JDBC Connection Poolを作成します。 データベースに固有の設定を指定します。
+   * 「JDBC Connection Pool」を検索します。 新しいDay Commons JDBC接続プールを作成します。 データベースに固有の設定を指定します。
 
    * ![jdbc接続プール](assets/jdbc-connection-pool.png)
    * 「**Insert Form Data Into DB**」を検索します。
    * データベースに固有のプロパティを指定します。
-      * DataSourceName：前に設定したデータソースの名前。
+      * DataSourceName:Nameは、以前設定したデータソースの名前です。
       * TableName - AFデータを格納するテーブルの名前
-      * FormName — フォーム名を保持する列名
+      * FormName — フォームの名前を格納する列の名前
       * ColumnName - AFデータを保持する列名
 
    ![insertdata](assets/insertdata.PNG)
 
-* アダプティブフォームの作成を参照してください。
+* アダプティブフォームの作成.
 
-* 以下のスクリーンショットに示すように、アダプティブフォームをAEM Workflow(StoreAFValusinDB)に関連付けます。
+* 以下のスクリーンショットに示すように、アダプティブフォームをAEM Workflow(StoreAFValuesinDB)に関連付けます。
 
-* 以下のスクリーンショットに示すように、データファイルのパスに「data.xml」を必ず指定してください。
+* 次のスクリーンショットに示すように、データファイルパスに「data.xml」を必ず指定してください
 
-   ![提出](assets/submissionafforms.png)
+   ![送信](assets/submissionafforms.png)
 
-* フォームのプレビューと送信
+* フォームをプレビューして送信する
 
-* すべてうまくいけば、指定したテーブルと列にフォームデータが保存されていることを確認できます
+* すべて正常に動作している場合は、フォームデータが、指定したテーブルと列に格納されているのが確認できます
 
 
 
