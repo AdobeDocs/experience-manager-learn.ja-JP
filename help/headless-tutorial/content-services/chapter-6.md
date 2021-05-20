@@ -1,11 +1,10 @@
 ---
-title: 第6章 — JSONとして発行するAEM上のコンテンツの公開 — Content Services
-description: AEMヘッドレスチュートリアルの第6章では、必要なパッケージ、設定、コンテンツをすべてAEM Publish上に置いて、モバイルアプリからの消費を許可する方法について説明します。
-feature: Content Fragments, APIs
-topic: Headless, Content Management
+title: 第6章 — JSONとしてAEMパブリッシュにコンテンツを公開する — コンテンツサービス
+description: AEMヘッドレスチュートリアルの第6章では、モバイルアプリからの使用を許可するために、必要なすべてのパッケージ、設定およびコンテンツをAEM Publish上で確認する方法について説明します。
+feature: コンテンツフラグメント、API
+topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '471'
@@ -14,58 +13,58 @@ ht-degree: 2%
 ---
 
 
-# 第6章 — AEM Publish上のコンテンツを配信用に公開する
+# 第6章 — 配信用にAEMパブリッシュにコンテンツを公開する
 
-AEMヘッドレスチュートリアルの第6章では、必要なパッケージ、設定、コンテンツをすべてAEM Publish上に置いて、モバイルアプリでの利用を許可する方法について説明します。
+AEMヘッドレスチュートリアルの第6章では、モバイルアプリでの使用を許可するために必要なすべてのパッケージ、設定およびコンテンツをAEM Publishで確認する方法について説明します。
 
-## AEM Content Services用コンテンツの公開
+## AEM Content Servicesのコンテンツの公開
 
-AEM Content Servicesを通じてイベントを導くために作成した設定とコンテンツは、AEM Publishに公開して、Mobile Appがアクセスできるようにする必要があります。
+モバイルアプリがアクセスできるように、AEM Content Servicesを通じてイベントを駆動するために作成された設定とコンテンツをAEM Publishに公開する必要があります。
 
-AEM Content Servicesは設定（コンテンツフラグメントモデル、編集可能なテンプレート）、アセット（コンテンツフラグメント、画像）およびページから構築されているので、これらの要素はすべて自動的にAEMコンテンツ管理機能を利用します。次に例を示します。
+AEM Content Servicesは設定（コンテンツフラグメントモデル、編集可能テンプレート）、アセット（コンテンツフラグメント、画像）およびページから構築されているので、これらすべての要素でAEMコンテンツ管理機能を自動的に利用できます。以下が含まれます。
 
 * レビューと処理のワークフロー
-* およびAEM PublishのAEM Content Servicesエンドポイントからコンテンツをプッシュおよびプルするためのアクティベーション/非アクティブ化
+* AEMパブリッシュのAEM Content Servicesエンドポイントからのコンテンツのプッシュおよびプルに対するアクティベーション/非アクティブ化
 
-1. [第1章](./chapter-1.md#wknd-mobile-application-packages)に示す&#x200B;**[!DNL WKND Mobile]アプリケーションパッケージ**&#x200B;が、**AEMパブリッシュ**&#x200B;上に[!UICONTROL パッケージマネージャー]を使用してインストールされていることを確認します。
+1. [第1章](./chapter-1.md#wknd-mobile-application-packages)に示す&#x200B;**[!DNL WKND Mobile]アプリケーションパッケージ**&#x200B;が、[!UICONTROL パッケージマネージャー]を使用して&#x200B;**AEMパブリッシュ**&#x200B;にインストールされていることを確認します。
    * [http://localhost:4503/crx/packmgr](http://localhost:4503/crx/packmgr)
 
-1. **[!DNL WKND Mobile Events API]編集可能なテンプレート**&#x200B;を公開
-   1. **[!UICONTROL AEM] > [!UICONTROL ツール] > [!UICONTROL 一般] > [!UICONTROL テンプレート] >[!DNL WKND Mobile]**&#x200B;に移動します。
-   1. **[!DNL Event API]**&#x200B;テンプレートを選択
-   1. 上部のアクションバーで「**[!UICONTROL 発行]**」をタップします
-   1. **template**&#x200B;と&#x200B;**すべての参照**&#x200B;を公開します（コンテンツポリシー、コンテンツポリシーのマッピング、テンプレート）
+1. **[!DNL WKND Mobile Events API]編集可能なテンプレート**&#x200B;を公開します。
+   1. **[!UICONTROL AEM] / [!UICONTROL ツール] / [!UICONTROL 一般] / [!UICONTROL テンプレート] /[!DNL WKND Mobile]**&#x200B;に移動します。
+   1. **[!DNL Event API]**&#x200B;テンプレートを選択します。
+   1. 上部のアクションバーで「**[!UICONTROL 公開]**」をタップします。
+   1. **テンプレート**&#x200B;と&#x200B;**すべての参照**（コンテンツポリシー、コンテンツポリシーのマッピング、テンプレート）を公開します
 
-1. **[!DNL WKND Mobile Events]コンテンツフラグメント**&#x200B;を発行します。
+1. **[!DNL WKND Mobile Events]コンテンツフラグメント**&#x200B;を公開します。
 
-イベントAPIがコンテンツフラグメントリストコンポーネントを使用する場合は、コンテンツフラグメントを特に参照しないので、これが必要になることに注意してください。
-1. **[!UICONTROL AEM] > [!UICONTROL アセット] > [!UICONTROL ファイル] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]**に移動します。
-1.すべての**[!DNL Event]**コンテンツフラグメントを選択
-1.上部のアクションバーにある「**[!UICONTROL パブリケーションの管理]**」をタップします
-1.デフォルトの**「**&#x200B;を現状のまま発行」アクションをそのままにし、上部のアクションバーにある「**[!UICONTROL 次へ]**」をタップします
-1. **すべての**コンテンツフラグメントを選択
-1.上部のアクションバーにある「**[!UICONTROL 発行]**」をタップします
+イベントAPIはコンテンツフラグメントリストコンポーネントを使用し、コンテンツフラグメントを特別に参照しないので、これが必要です。
+1. **[!UICONTROL AEM] > [!UICONTROL Assets] > [!UICONTROL Files] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]**に移動します。
+1.すべての**[!DNL Event]**コンテンツフラグメントを選択します
+1.上部のアクションバーの「**[!UICONTROL 公開を管理]**」をタップします
+1.デフォルトの「**公開**」アクションをそのままにして、上部のアクションバーの「**[!UICONTROL 次へ]**」をタップします
+1. **すべての**コンテンツフラグメントを選択します。
+1.上部のアクションバーで「**[!UICONTROL 公開]**」をタップします
 * *[!DNL Events]コンテンツフラグメントモデルと参照イベント画像は、コンテンツフラグメントと共に自動的に公開されます。*
 
 1. **[!DNL Events API]ページ**&#x200B;を公開します。
-   1. **[!UICONTROL AEM] > [!UICONTROL サイト] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**&#x200B;に移動します。
-   1. **[!DNL Events]**&#x200B;ページを選択
-   1. 上部のアクションバーにある&#x200B;**[!UICONTROL パブリケーションの管理]**&#x200B;をタップします
-   1. デフォルトの&#x200B;**「**&#x200B;を公開」アクションをそのままにして、上部のアクションバーにある「**[!UICONTROL 次へ]**」をタップします
-   1. **[!DNL Events]**&#x200B;ページを選択
-   1. 上部のアクションバーで&#x200B;**[!DNL Publish]**&#x200B;をタップします
+   1. **[!UICONTROL AEM] > [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**&#x200B;に移動します。
+   1. **[!DNL Events]**&#x200B;ページを選択します。
+   1. 上部のアクションバーの「**[!UICONTROL 公開を管理]**」をタップします
+   1. デフォルトの「****&#x200B;を公開」アクションをそのまま使用し、上部のアクションバーで「**[!UICONTROL 次へ]**」をタップします
+   1. **[!DNL Events]**&#x200B;ページを選択します。
+   1. 上部のアクションバーの&#x200B;**[!DNL Publish]**&#x200B;をタップします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28343/?quality=12&learn=on)
 
-## AEM Publishの検証
+## AEMパブリッシュの検証
 
-1. 新しいWebブラウザーで、AEM Publishからログアウトし、次のURLを要求します（ホスト：port AEM Publishが実行されているものは`http://localhost:4503`に置き換えます）。
+1. 新しいWebブラウザーで、AEMパブリッシュからログアウトし、次のURLを要求します（ `http://localhost:4503`は、AEMパブリッシュが実行されているホスト：ポートに置き換えます）。
 
    * [http://localhost:4503/content/wknd-mobile/en/api/events.model.json](http://localhost:4503/content/wknd-mobile/en/api/events.model.tidy.json)
-   これらのリクエストは、対応するAEM Authorエンドポイントがレビューされた場合と同じJSON応答を返す必要があります。 そうでない場合は、すべてのパブリケーションが成功したことを確認（レプリケーションキューを確認）し、[!DNL WKND Mobile] `ui.apps`パッケージがAEM Publishにインストールされていることを確認し、`error.log` for AEM Publishを確認します。
+   これらのリクエストは、対応するAEMオーサーエンドポイントがレビューされた場合と同じJSON応答を返す必要があります。 そうでない場合は、すべてのパブリケーションが成功したことを確認し（レプリケーションキューを確認）、 [!DNL WKND Mobile] `ui.apps`パッケージがAEMパブリッシュにインストールされ、AEMパブリッシュの`error.log`を確認します。
 
 ## 次の手順
 
-インストールする追加のパッケージはありません。 このセクションで説明するコンテンツと設定がAEM Publishに公開されていることを確認してください。そうしないと、後続のチャプターは機能しません。
+インストールする追加のパッケージはありません。 この節で説明するコンテンツと設定がAEMパブリッシュに公開されていることを確認してください。公開されていない場合、後続の章は機能しません。
 
-* [第7章 — モバイルアプリからのAEM Content Servicesの利用](./chapter-7.md)
+* [第7章 — モバイルアプリからのAEM Content Servicesの使用](./chapter-7.md)
