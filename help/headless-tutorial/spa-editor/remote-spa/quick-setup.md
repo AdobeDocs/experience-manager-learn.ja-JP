@@ -1,8 +1,8 @@
 ---
-title: クイックセットアップSPAエディタとリモートSPA
-description: 15分でリモートのSPAおよびAEM SPAエディタを起動し、実行する方法を学びます。
+title: クイックセットアップSPA EditorとリモートSPA
+description: リモートSPAとAEM SPA Editorを15分で使い始める方法を説明します。
 topic: ヘッドレス、SPA、開発
-feature: SPAエディター，コアコンポーネント， API，開発
+feature: SPAエディター、コアコンポーネント、API、開発
 role: Developer, Architect
 level: Beginner
 kt: 7629
@@ -17,9 +17,9 @@ ht-degree: 6%
 
 # クイックセットアップ
 
-クイックセットアップは、WKND Appをインストールして実行する方法、およびリモートSPAとして実行する方法を示す、AEM SPA Editorを使用して作成する迅速なウォークスルーです。
+クイックセットアップは、WKNDアプリをインストールしてリモートSPAとして実行し、AEM SPA Editorを使用して作成する方法を示す、迅速なウォークスルーです。
 
-クイックセットアップでは、このチュートリアルの終了状態を直接確認できます。
+クイックセットアップでは、このチュートリアルの終了状態に直接移動します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333181/?quality=12&learn=on)
 
@@ -27,34 +27,34 @@ _クイックセットアップのビデオウォークスルー_
 
 ## 前提条件
 
-このチュートリアルでは、以下が必要です。
+このチュートリアルでは、次の項目が必要です。
 
 + [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=ja)
 + [Node.js v14 以降](https://nodejs.org/ja/)
 + [npm v7+](https://www.npmjs.com/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-+ [Maven 3.6+](https://maven.apache.org/)
++ [Maven 3.6以降](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ macOSの前提条件のみ
-   + [](https://developer.apple.com/xcode/) Xcodeor  [Xcodeコマンドラインツール](https://developer.apple.com/xcode/resources/)
++ macOSのみの前提条件
+   + [](https://developer.apple.com/xcode/) XcodeまたはXcode [コマンドラインツール](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all.0.3.0.zip以降](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphqlソースコード](https://github.com/adobe/aem-guides-wknd-graphql)
 
 
 このチュートリアルでは、次の点を前提としています。
 
-+ [IDEのMicrosoft® Visual Studio](https://visualstudio.microsoft.com/) コード
++ [IDEとしてのMicrosoft® Visual Studio ](https://visualstudio.microsoft.com/) Codeas
 + `~/Code/wknd-app`の作業ディレクトリ
-+ `http://localhost:4502`上での作成者サービスとしてのAEM SDKの実行
-+ ローカルの`admin`アカウントとパスワード`admin`を使用したAEM SDKの実行
-+ `http://localhost:3000`上でSPAを実行する
++ `http://localhost:4502`でのAEM SDKのオーサーサービスとしての実行
++ パスワード`admin`を使用したローカル`admin`アカウントでのAEM SDKの実行
++ `http://localhost:3000`でのSPAの実行
 
-## AEM SDKクイックスタートの開始
+## AEM SDKクイックスタートの起動
 
-デフォルトの`admin/admin`資格情報を使用して、ポート4502にAEM SDK Quickstartをダウンロードしてインストールします。
+デフォルトの`admin/admin`資格情報を使用して、AEM SDK Quickstartをポート4502にダウンロードし、インストールします。
 
-1. [最新のAEM SDKをダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
-1. AEM SDKを`~/aem-sdk`に解凍
+1. [最新のAEM SDKのダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
+1. AEM SDKを`~/aem-sdk`に解凍します。
 1. AEM SDK Quickstart Jarの実行
 
    ```
@@ -63,19 +63,19 @@ _クイックセットアップのビデオウォークスルー_
    # Provide `admin` as the admin user's password
    ```
 
-AEM SDKは開始し、[http://localhost:4502](http://localhost:4502)で自動的に起動します。 次の資格情報を使用してログインします。
+AEM SDKは[http://localhost:4502](http://localhost:4502)で起動し、自動的に起動します。 次の資格情報を使用してログインします。
 
 + ユーザー名: `admin`
 + パスワード: `admin`
 
-## WKNDサイトパッケージのダウンロードとインストール
+## WKNDサイトパッケージをダウンロードしてインストールする
 
-このチュートリアルは、__WKND 0.3.0+&#39;s__&#x200B;プロジェクト（コンテンツ用）に依存しています。
+このチュートリアルは、 __WKND 0.3.0+の__&#x200B;プロジェクトに依存しています（コンテンツ用）。
 
-1. [最新バージョンの  `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)にあるAEM SDKのPackage Managerに、`admin`資格情報を使用してログインします。
-1. __手順1で__  `aem-guides-wknd.all.x.x.x.zip` ダウンロードした
-1. __「__&#x200B;をインストール」ボタンをタップして、`aem-guides-wknd.all-x.x.x.zip`というエントリを作成します
+1. [の最新バージョンをダウンロードする  `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
+1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)にあるAEM SDKのパッケージマネージャーに、`admin`資格情報を使用してログインします。
+1. ____ 手順1でダウンロ `aem-guides-wknd.all.x.x.x.zip` ードしたをアップロードします。
+1. エントリ`aem-guides-wknd.all-x.x.x.zip`の&#x200B;__「__&#x200B;をインストール」ボタンをタップします
 
 ## WKND App SPAパッケージのダウンロードとインストール
 
@@ -83,13 +83,13 @@ AEM SDKは開始し、[http://localhost:4502](http://localhost:4502)で自動的
 
 1. [ダウンロード ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
 1. [ダウンロード ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
-1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)にあるAEM SDKのPackage Managerに、`admin`資格情報を使用してログインします。
-1. __手順1で__  `wknd-app.all.x.x.x.zip` ダウンロードした
-1. __「__&#x200B;をインストール」ボタンをタップして、`wknd-app.all.x.x.x.zip`というエントリを作成します
-1. __手順2で__  `wknd-app.ui.content.sample.x.x.x.zip` ダウンロードした
-1. __「__&#x200B;をインストール」ボタンをタップして、`wknd-app.ui.content.sample.x.x.x.zip`というエントリを作成します
+1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)にあるAEM SDKのパッケージマネージャーに、`admin`資格情報を使用してログインします。
+1. ____ 手順1でダウンロ `wknd-app.all.x.x.x.zip` ードしたをアップロードします。
+1. エントリ`wknd-app.all.x.x.x.zip`の&#x200B;__「__&#x200B;をインストール」ボタンをタップします
+1. ____ 手順2でダウンロ `wknd-app.ui.content.sample.x.x.x.zip` ードしたをアップロードします。
+1. エントリ`wknd-app.ui.content.sample.x.x.x.zip`の&#x200B;__「__&#x200B;をインストール」ボタンをタップします
 
-## WKND Appソースのダウンロード
+## WKNDアプリソースのダウンロード
 
 Github.comからWKNDアプリのソースコードをダウンロードし、このチュートリアルで実行するSPAに対する変更を含むブランチを切り替えます。
 
@@ -102,9 +102,9 @@ $ git checkout -b feature/spa-editor
 $ git pull origin feature/spa-editor
 ```
 
-## SPAアプリケーションの開始
+## SPAアプリケーションの起動
 
-プロジェクトのルートから、SPAプロジェクトのnpm依存関係をインストールし、アプリケーションを実行します。
+プロジェクトのルートから、SPA projects npmの依存関係をインストールし、アプリケーションを実行します。
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -112,7 +112,7 @@ $ npm install
 $ npm run start
 ```
 
-`npm install`の実行中にエラーが発生した場合は、次の手順を実行してください。
+`npm install`の実行時にエラーが発生した場合は、次の手順を実行してください。
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -123,39 +123,39 @@ $ npm run start
 
 SPAが[http://localhost:3000](http://localhost:3000)で実行されていることを確認します。
 
-## AEM SPA Editorでのコンテンツの作成
+## AEM SPA Editorでのコンテンツのオーサリング
 
-コンテンツをオーサリングする前に、AEM作成者(`http://localhost:4502`)が左側に、リモートSPA(`http://localhost:3000`)が右側に表示されるようにブラウザーウィンドウを調整します。 この配置により、AEMソースのコンテンツに対する変更がSPAに直ちに反映される方法を確認できます。
+コンテンツをオーサリングする前に、AEMオーサー(`http://localhost:4502`)が左側に配置され、リモートSPA(`http://localhost:3000`)が右側に表示されるように、ブラウザーウィンドウを配置します。 この構成により、AEMソースのコンテンツに対する変更がSPAに即座に反映される方法を確認できます。
 
-1. [AEM SDK作成者サービス](http://localhost:4502)に`admin`としてログインします
+1. [AEM SDKオーサーサービス](http://localhost:4502)に`admin`としてログインします。
 1. __サイト/WKND App > us > en__&#x200B;に移動します。
-1. __WKNDアプリホームページ__&#x200B;を編集
-1. __編集__&#x200B;モードに切り替え
+1. __WKNDアプリのホームページ__&#x200B;を編集
+1. __編集__&#x200B;モードに切り替えます。
 
-### ホーム表示の固定コンポーネントのオーサリング
+### ホームビューの固定コンポーネントのオーサリング
 
-1. テキスト&#x200B;__WKND Adventures__&#x200B;をタップして、固定タイトルコンポーネントをアクティブにします(SPA Home表示にハードコード化)
-1. タイトルコンポーネントのアクションバーにある&#x200B;__レンチ__&#x200B;アイコンをタップします
-1. Titleコンポーネントのコンテンツを変更し、保存します
-1. `http://localhost:3000`上で実行しているSPAを更新し、変更が反映されていることを確認します
+1. テキスト「__WKND Adventures__」をタップして、固定タイトルコンポーネントをアクティブ化します(SPAのホームビューにハードコード化)。
+1. タイトルコンポーネントのアクションバーにある&#x200B;__レンチ__&#x200B;アイコンをタップします。
+1. タイトルコンポーネントの内容を変更して保存する
+1. `http://localhost:3000`上で実行中のSPAを更新し、変更が反映されていることを確認します。
 
-### ホーム表示のコンテナコンポーネントの作成
+### ホームビューのコンテナコンポーネントのオーサリング
 
-1. __WKNDアプリホームページ__&#x200B;を編集中…
-1. __SPAエディターのサイドバー__&#x200B;を展開します（左側）。
-1. __コンポーネント__&#x200B;アイコンをタップします
-1. WKNDロゴの下、追加および固定タイトルコンポーネントの上に配置されたコンテナコンポーネントから、コンポーネントを、変更、または削除します。
-1. `http://localhost:3000`上で実行しているSPAを更新し、変更が反映されていることを確認します
+1. __WKNDアプリのホームページ__&#x200B;を編集中…
+1. __SPA Editorのサイドバー__（左側）を展開します。
+1. __コンポーネント__&#x200B;アイコンをタップします。
+1. WKNDロゴの下、および固定タイトルコンポーネントの上にあるコンテナコンポーネントに、コンポーネントを追加、変更または削除します。
+1. `http://localhost:3000`上で実行中のSPAを更新し、変更が反映されていることを確認します。
 
-### 動的ルートでのコンテナコンポーネントの作成
+### 動的ルートでのコンテナコンポーネントのオーサリング
 
-1. SPAエディタで&#x200B;__プレビュー__&#x200B;モードに切り替え
-1. __Bali Surf Camp__&#x200B;カードをタップし、動的ルートに移動します
-1. 追加&#x200B;__Itinerary__&#x200B;の見出しの上にあるコンテナコンポーネントのコンポーネント、変更、または削除
-1. `http://localhost:3000`上で実行しているSPAを更新し、変更が反映されていることを確認します
+1. SPAエディターで&#x200B;__プレビュー__&#x200B;モードに切り替えます。
+1. __Bali Surf Camp__&#x200B;カードをタップし、動的なルートに移動します。
+1. __旅程__&#x200B;の見出しの上にあるコンテナコンポーネントに対して、コンポーネントを追加、変更、削除します。
+1. `http://localhost:3000`上で実行中のSPAを更新し、変更が反映されていることを確認します。
 
-__WKNDアプリホームページ>Adventure__ _の下の新しいAEMページには、対応するアドベンチャーのコンテンツフラグメント名と一致するAEMページ名が必要です。_&#x200B;これは、SPAからAEMページへのルートのマッピングは、コンテンツフラグメントの名前であるルートの最後のセグメントに基づいているからです。
+__WKND App Home page > Adventure__ _の下の新しいAEMページには、対応するアドベンチャーのコンテンツフラグメントの名前と一致するAEMページ名が必要です。_ これは、SPAのAEMページマッピングへのルートは、ルートの最後のセグメント（コンテンツフラグメントの名前）に基づいているからです。
 
 ## バリデーターが
 
-AEM SPA Editorで、制御可能な領域を使用してSPAを拡張する方法を簡単に理解できました。 もし興味があるなら、残りのチュートリアルを見て、開始は必ず新しくしてください。この簡単なセットアップで、ローカル開発環境はチュートリアルの最後の状態になっているからです。
+AEM SPA Editorで、制御可能な編集可能な領域を使用してSPAを強化する方法を簡単に理解できました。 興味がある場合は、残りのチュートリアルを確認して、必ず新規に開始してください。このクイックセットアップでは、ローカル開発環境がチュートリアルの最後の状態になっているからです。
