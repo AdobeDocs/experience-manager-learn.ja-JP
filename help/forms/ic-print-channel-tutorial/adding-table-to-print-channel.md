@@ -1,10 +1,10 @@
 ---
-title: 貢献度セクションへのテーブルの追加
-seo-title: 貢献度セクションへのテーブルの追加
-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
-seo-description: これは、最初の対話型通信ドキュメントを作成するためのマルチステップチュートリアルのパート9です。このパートでは、貢献度セクションにテーブルを追加します。
+title: 投稿セクションへの表の追加
+seo-title: 投稿セクションへの表の追加
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第9部です。この部分では、投稿の節に表を追加します。
+seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第9部です。この部分では、投稿の節に表を追加します。
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: Interactive Communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,10 +13,9 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '136'
@@ -25,12 +24,12 @@ ht-degree: 2%
 ---
 
 
-# 貢献度セクションへのテーブルの追加
+# 投稿セクションへの表の追加
 
-この部分では、貢献度セクションにテーブルを追加します。
+このパートでは、投稿の節に表を追加します。
 印刷チャネルドキュメントでのテーブルの使用の詳細については、[印刷チャネルでのテーブルの使用](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)を参照してください。
 
-AEM Formsにログインし、Adobe Experience Manager/Forms/Forms&amp;ドキュメントに移動します。
+AEM Formsにログインし、 Adobe Experience Manager / Forms / Forms &amp; Documentsに移動します。
 
 401KStatementPrintフォルダを開きます。
 
