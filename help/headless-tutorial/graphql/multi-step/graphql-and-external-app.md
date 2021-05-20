@@ -1,6 +1,6 @@
 ---
-title: 外部アプリからGraphQLを使用したクエリAEM- AEMヘッドレス — GraphQLの概要
-description: Adobe Experience Manager(AEM)とGraphQLの使い始めに AEM GraphQL APIを参照し、サンプルのWKND GraphQL Reactアプリを参照してください。 この外部アプリがAEMに対してGraphQL呼び出しを行い、体験を強化する方法を説明します。 基本的なエラー処理を実行する方法を説明します。
+title: 外部アプリからGraphQLを使用したクエリAEM - AEMヘッドレスの概要 — GraphQL
+description: Adobe Experience Manager(AEM)とGraphQLの概要。 AEM GraphQL APIを参照し、サンプルのWKND GraphQL Reactアプリを参照してください。 この外部アプリがAEMに対してGraphQL呼び出しをおこなってエクスペリエンスを強化する方法を説明します。 基本的なエラー処理を実行する方法を説明します。
 sub-product: アセット
 topics: headless
 version: cloud-service
@@ -14,7 +14,6 @@ feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '1404'
@@ -25,104 +24,104 @@ ht-degree: 1%
 
 # 外部アプリからGraphQLを使用したクエリAEM
 
-この章では、AEM GraphQL APIを使用して外部アプリケーションのエクスペリエンスを駆動する方法について説明します。
+この章では、外部アプリケーションでエクスペリエンスを推進するためにAEM GraphQL APIを使用する方法について説明します。
 
-このチュートリアルでは、簡単なReact Appをクエリに使用し、AEM GraphQL APIによって公開されたアドベンチャーコンテンツを表示します。 Reactの使用はほとんど重要ではありません。消費する外部アプリケーションは、どのプラットフォームのフレームワークでも記述できます。
+このチュートリアルでは、シンプルなReactアプリを使用して、AEM GraphQL APIによって公開されたアドベンチャーコンテンツをクエリし、表示します。 Reactの使用はほとんど重要ではなく、消費する外部アプリケーションはあらゆるプラットフォームのあらゆるフレームワークに書き込むことができます。
 
 ## 前提条件
 
-これはマルチパートのチュートリアルで、前の部分で説明した手順が完了していることを前提としています。
+これは複数のパートから成るチュートリアルで、前のパートで説明した手順が完了していることを前提としています。
 
-_この章のIDEのスクリーンショットは、 [Visual Studio Codeに基づいています。](https://code.visualstudio.com/)_
+_この章のIDEスクリーンショットは、 [Visual Studio Codeから取得したものです](https://code.visualstudio.com/)_
 
-必要に応じて、[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)のようなブラウザ拡張をインストールし、GraphQLクエリに関する詳細を表示できるようにします。
+オプションで、[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)などのブラウザー拡張機能をインストールして、GraphQLクエリの詳細を表示できるようにします。
 
 ## 目的
 
-この章では、次の方法について学びます。
+この章では、次の方法について説明します。
 
-* サンプルReactアプリの機能の開始と理解
-* 外部アプリからAEM GraphQLエンドポイントへの呼び出しの実施方法の調査
-* GraphQLクエリを定義し、コンテンツフラグメントのリストをアクティビティでフィルタリングする
-* Reactアプリを更新し、GraphQL(アクティビティによるアドベンチャーのリスト)でフィルタリングするコントロールを提供
+* サンプルReactアプリの機能を開始および理解する
+* 外部アプリからAEM GraphQLエンドポイントへの呼び出しの方法を調べる
+* GraphQLクエリを定義し、アクティビティ別にアドベンチャーコンテンツフラグメントのリストをフィルタリングします
+* Reactアプリを更新して、GraphQL（アクティビティ別の冒険のリスト）を介してフィルタリングするコントロールを提供します。
 
-## Reactアプリの開始
+## Reactアプリを起動します。
 
-この章では、GraphQL上でコンテンツフラグメントを使用するクライアントの開発に重点を置いているので、サンプル[WKND GraphQL Reactアプリソースコードをダウンロードしてローカルマシンに](./setup.md#react-app)設定し、[AEM SDKを[サンプルWKNDサイトと共に実行します](./setup.md#wknd-site)。](./setup.md#aem-sdk)
+この章では、GraphQL経由でコンテンツフラグメントを使用するクライアントの開発に重点を置いているので、サンプルの[WKND GraphQL Reactアプリソースコードをダウンロードしてローカルマシンに設定](./setup.md#react-app)し、[AEM SDKを[サンプルのWKNDサイトと共に実行します](./setup.md#wknd-site).](./setup.md#aem-sdk)
 
-Reactアプリの起動について詳しくは、[クイックセットアップ](./setup.md)の章で説明されていますが、簡潔な説明に従うこともできます。
+Reactアプリの起動について詳しくは、[クイックセットアップ](./setup.md)の章で説明していますが、簡潔な説明は以下の通りです。
 
-1. まだサンプルのWKND GraphQL Reactアプリをコピーしていない場合は、[Github.com](https://github.com/adobe/aem-guides-wknd-graphql)からコピーします。
+1. まだの場合、サンプルWKND GraphQL Reactアプリを[Github.com](https://github.com/adobe/aem-guides-wknd-graphql)からコピーしてください。
 
    ```shell
    $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. IDEでWKND GraphQL Reactアプリケーションを開きます
+1. IDEでWKND GraphQL Reactアプリを開きます
 
-   ![VSCodeでのアプリの反応](./assets/graphql-and-external-app/react-app-in-vscode.png)
+   ![VSCodeでのReactアプリ](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. コマンドラインから`react-app`フォルダーに移動します
-1. WKND GraphQL Reactアプリの開始。プロジェクトルート（`react-app`フォルダー）から次のコマンドを実行します。
+1. コマンドラインから`react-app`フォルダーに移動します。
+1. プロジェクトのルート（`react-app`フォルダー）から次のコマンドを実行して、WKND GraphQL Reactアプリを起動します。
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
    $ npm start
    ```
 
-1. [http://localhost:3000/](http://localhost:3000/)にあるアプリを確認します。 サンプルのReactアプリには、2つの主要な部分があります。
+1. [http://localhost:3000/](http://localhost:3000/)でアプリを確認します。 サンプルReactアプリには、次の2つの主要な部分があります。
 
-   * ホームエクスペリエンスは、AEMの&#x200B;__アドベンチャー__&#x200B;コンテンツフラグメントにGraphQLを使用してクエリを実行することで、WKNDアドベンチャーのインデックスとして機能します。 この章では、この表示を変更して、アクティビティによる冒険のフィルタリングをサポートします。
+   * GraphQLを使用してAEM内のコンテンツフラグメントに対して&#x200B;__アドベンチャー__&#x200B;をクエリすることで、ホームエクスペリエンスはWKNDアドベンチャーのインデックスとして機能します。 この章では、アクティビティによる冒険のフィルタリングをサポートするために、このビューを変更します。
 
       ![WKND GraphQL Reactアプリ — ホームエクスペリエンス](./assets/graphql-and-external-app/react-home-view.png)
 
    * アドベンチャーの詳細エクスペリエンス。GraphQLを使用して、特定の&#x200B;__アドベンチャー__&#x200B;コンテンツフラグメントをクエリし、さらに多くのデータポイントを表示します。
 
-      ![WKND GraphQL Reactアプリ — 詳細なエクスペリエンス](./assets/graphql-and-external-app/react-details-view.png)
+      ![WKND GraphQL Reactアプリ — 詳細エクスペリエンス](./assets/graphql-and-external-app/react-details-view.png)
 
-1. ブラウザの開発ツールと[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)のようなブラウザ拡張機能を使用して、AEMに送信されるGraphQLクエリとそのJSON応答を調べます。 このアプローチは、GraphQLリクエストと応答を監視し、正しく作成され、期待どおりの応答が得られるかを確認するために使用できます。
+1. ブラウザーの開発ツールと、[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)などのブラウザー拡張を使用して、AEMに送信されたGraphQLクエリとそのJSON応答を調べます。 このアプローチは、GraphQL要求と応答を監視して、正しく作成され、応答が期待どおりにおこなわれていることを確認するために使用できます。
 
    ![adventureListの生のクエリ](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
-   *ReactアプリからAEMに送信されるGraphQLクエリ*
+   *ReactアプリからAEMに送信されたGraphQLクエリ*
 
    ![GraphQL JSONの応答](assets/graphql-and-external-app/graphql-json-response.png)
 
    *AEMからReactアプリへのJSON応答*
 
-   クエリと応答は、GraphiQL IDEでの表示と一致する必要があります。
+   クエリと応答は、GraphiQL IDEで確認された内容と一致する必要があります。
 
    >[!NOTE]
    >
-   > 開発中に、Reactアプリは、WebPack開発サーバーを介してAEMにHTTPリクエストをプロキシするように設定されます。 Reactアプリが`http://localhost:3000`にリクエストを行い、`http://localhost:4502`上で実行されているAEM Authorサービスにプロキシします。 詳細については、ファイル`src/setupProxy.js`と`env.development`を確認してください。
+   > 開発時に、Reactアプリは、webpack開発サーバーを介してAEMにHTTPリクエストをプロキシするように設定されます。 Reactアプリは、`http://localhost:4502`上で動作するAEMオーサーサービスにプロキシする`http://localhost:3000`にリクエストを送信します。 詳細については、ファイル`src/setupProxy.js`と`env.development`を確認してください。
    >
-   > 開発環境以外のシナリオでは、ReactアプリはAEMに直接リクエストを行うように設定されます。
+   > 非開発シナリオでは、ReactアプリはAEMに直接リクエストをおこなうように設定されます。
 
-## アプリのGraphQLコードの確認
+## アプリのGraphQLコードの参照
 
 1. IDEで`src/api/useGraphQL.js`ファイルを開きます。
 
-   これは、アプリの`query`に対する変更をリッスンする[リアクション効果フック](https://reactjs.org/docs/hooks-overview.html#effect-hook)で、変更時にAEM GraphQLエンドポイントにHTTPPOSTリクエストを行い、アプリに対するJSON応答を返します。
+   これは、アプリの`query`に対する変更をリッスンする[React効果フック](https://reactjs.org/docs/hooks-overview.html#effect-hook)で、変更時にAEM GraphQLエンドポイントに対してHTTPPOSTリクエストを実行し、アプリにJSON応答を返します。
 
-   ReactアプリがGraphQLクエリを行う必要が生じた場合は常に、このカスタム`useGraphQL(query)`フックを呼び出し、GraphQLを渡してAEMに送信します。
+   Reactアプリは、GraphQLクエリを作成する必要が生じるたびに、このカスタム`useGraphQL(query)`フックを呼び出し、GraphQLを渡してAEMに送信します。
 
-   このフックは、単純な`fetch`モジュールを使ってHTTPPOSTGraphQLリクエストを行いますが、[Apollo GraphQLクライアント](https://www.apollographql.com/docs/react/)などの他のモジュールも同様に使用できます。
+   このフックは、単純な`fetch`モジュールを使用してHTTPPOSTGraphQLリクエストを作成しますが、[Apollo GraphQLクライアント](https://www.apollographql.com/docs/react/)などの他のモジュールも同様に使用できます。
 
-1. IDEで`src/components/Adventures.js`を開きます。これは、ホーム表示のアドベンチャーリストを作成し、`useGraphQL`フックの呼び出しを確認します。
+1. IDEで`src/components/Adventures.js`を開き、ホームビューの冒険リストを作成し、`useGraphQL`フックの呼び出しを確認します。
 
-   このコードは、このファイルの下部で定義されている`query`を`allAdventuresQuery`に設定します。
+   このコードは、このファイルで下に定義された`query`をデフォルトの`allAdventuresQuery`に設定します。
 
    ```javascript
    const [query, setQuery] = useState(allAdventuresQuery);
    ```
 
-   ...そして`query`変数が変更されるたびに`useGraphQL`フックが呼び出され、これによりAEMに対してGraphQLクエリが実行され、JSONが`data`変数に返されます。この変数は、冒険のリストをレンダリングするために使用されます。
+   と`query`変数が変更されるたびに`useGraphQL`フックが呼び出され、次にAEMに対してGraphQLクエリが実行され、JSONが`data`変数に返されます。この変数は、冒険のリストをレンダリングするために使用されます。
 
    ```javascript
    const { data, errorMessage } = useGraphQL(query);
    ```
 
-   `allAdventuresQuery`は、すべてのAdventure Content Fragmentsをフィルタリングせずにクエリする、ファイル内で定義されている定数のGraphQLクエリで、ホーム表示をレンダリングする必要のあるデータポイントのみを返します。
+   `allAdventuresQuery`は、ファイルで定義された定数のGraphQLクエリで、すべてのアドベンチャーコンテンツフラグメントに対してフィルタリングを行わずにクエリを実行し、ホームビューをレンダリングする必要のあるデータポイントのみを返します。
 
    ```javascript
    const allAdventuresQuery = `
@@ -147,23 +146,23 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
    `;
    ```
 
-1. `src/components/AdventureDetail.js`を開き、アドベンチャーの詳細エクスペリエンスを表示するのは、Reactコンポーネントです。 この表示は、JCRパスを一意のIDとして使用して特定のコンテンツフラグメントをリクエストし、提供された詳細をレンダリングします。
+1. `src/components/AdventureDetail.js`を開きます。アドベンチャーの詳細エクスペリエンスを表示するReactコンポーネントです。 この表示は、JCRパスを一意のIDとして使用して、特定のコンテンツフラグメントを要求し、提供された詳細をレンダリングします。
 
-   `Adventures.js`と同様に、カスタムの`useGraphQL` ReactHookはAEMに対するGraphQLクエリの実行に再利用されます。
+   `Adventures.js`と同様に、カスタムの`useGraphQL` React Hookを使用して、AEMに対してGraphQLクエリを実行します。
 
-   コンテンツフラグメントのパスは、コンポーネントの`props`上部から収集され、クエリするコンテンツフラグメントを指定するために使用されます。
+   コンテンツフラグメントのパスは、コンポーネントの`props`上部から収集され、クエリ対象のコンテンツフラグメントを指定するために使用されます。
 
    ```javascript
    const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
    ```
 
-   ... GraphQLパラメータ化クエリは`adventureDetailQuery(..)`関数を使って構築され、`useGraphQL(query)`に渡されます。この関数はAEMに対してGraphQLクエリを実行し、結果を`data`変数に返します。
+   ...およびGraphQLパラメーター化クエリは、`adventureDetailQuery(..)`関数を使用して構築され、`useGraphQL(query)`に渡されます。このa1/>は、AEMに対してGraphQLクエリを実行し、結果を`data`変数に返します。
 
    ```javascript
    const { data, errorMessage } = useGraphQL(adventureDetailQuery(contentFragmentPath));
    ```
 
-   `adventureDetailQuery(..)`関数は、フィルタリングを行うGraphQLクエリを単純にラップします。この構文はAEM `<modelName>ByPath`構文を使用して、JCRパスで識別される単一のコンテンツフラグメントをクエリし、アドベンチャーの詳細をレンダリングするために必要な指定したすべてのデータポイントを返します。
+   `adventureDetailQuery(..)`関数は、フィルタリングGraphQLクエリをラップするだけです。このクエリでは、AEM `<modelName>ByPath`構文を使用して、JCRパスで識別される単一のコンテンツフラグメントをクエリし、アドベンチャーの詳細をレンダリングするために必要な指定したすべてのデータポイントを返します。
 
    ```javascript
    function adventureDetailQuery(_path) {
@@ -200,14 +199,14 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
    }
    ```
 
-## パラメータ化GraphQLクエリの作成
+## パラメーター化されたGraphQLクエリの作成
 
-次に、React Appを変更して、パラメータ化を実行し、GraphQLクエリをフィルタリングして、アドベンチャーのアクティビティでホーム表示を制限します。
+次に、Reactアプリを変更して、パラメーター化されたフィルタリングを実行し、アドベンチャーのアクティビティによってホームビューを制限するGraphQLクエリを実行します。
 
-1. IDEで次のファイルを開きます。`src/components/Adventures.js`. このファイルは、Adventuresカードのクエリと表示を表すホームエクスペリエンスのアドベンチャーコンポーネントを表します。
-1. Inspect関数`filterQuery(activity)`は未使用ですが、`activity`がフィルターを冒険させるGraphQLクエリを作る準備ができています。
+1. IDEで、次のファイルを開きます。`src/components/Adventures.js`. このファイルは、ホームエクスペリエンスの冒険コンポーネントを表し、冒険カードを照会して表示します。
+1. Inspect関数`filterQuery(activity)`は未使用ですが、`activity`によって冒険をフィルターするGraphQLクエリを作成するための準備が整っています。
 
-   パラメータ`activity`は、`adventureActivity`フィールドの`filter`の一部としてGraphQLクエリに挿入されます。この場合、フィールドの値がパラメータの値と一致する必要があります。
+   `activity`パラメーターは、`adventureActivity`フィールドの`filter`の一部としてGraphQLクエリに挿入され、そのパラメーターの値と一致するためにそのフィールドの値が必要になります。
 
    ```javascript
    function filterQuery(activity) {
@@ -242,7 +241,7 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
    }
    ```
 
-1. React Adventuresコンポーネントの`return`ステートメントを更新し、新しいパラメータ化`filterQuery(activity)`を呼び出すボタンを追加して、リストにアドベンチャーを提供します。
+1. React Adventuresコンポーネントの`return`ステートメントを更新し、新しいパラメーター化`filterQuery(activity)`を呼び出すボタンを追加して、リストに表示するアドベンチャーを指定します。
 
    ```javascript
    function Adventures() {
@@ -265,17 +264,17 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
    }
    ```
 
-1. 変更を保存し、WebブラウザーでReactアプリを再読み込みします。 上部に3つの新しいボタンが表示され、ボタンをクリックすると、自動的にAEMのアドベンチャーコンテンツフラグメントのクエリが、一致するアクティビティに再度行われます。
+1. 変更を保存し、WebブラウザーでReactアプリをリロードします。 上部に3つの新しいボタンが表示され、それらをクリックすると、一致するアクティビティを持つAEM for Adventure Content Fragmentsに対するクエリが自動的に再実行されます。
 
-   ![アクティビティによる冒険のフィルタリング](./assets/graphql-and-external-app/filter-by-activity.png)
+   ![アクティビティによるアドベンチャーのフィルタリング](./assets/graphql-and-external-app/filter-by-activity.png)
 
-1. アクティビティ用のフィルターボタンをさらに追加してみます。`Rock Climbing`、`Cycling`、`Skiing`
+1. アクティビティのフィルターボタンをさらに追加してみます。`Rock Climbing`、`Cycling`および`Skiing`
 
 ## GraphQLエラーの処理
 
-GraphQLは厳密に型指定されているので、クエリが無効な場合は役に立つエラーメッセージを返す可能性があります。 次に、誤ったクエリをシミュレートして、返されたエラーメッセージを確認します。
+GraphQLは厳密に型指定されているので、クエリが無効な場合は役立つエラーメッセージを返す可能性があります。 次に、誤ったクエリをシミュレートして、返されたエラーメッセージを確認します。
 
-1. ファイル`src/api/useGraphQL.js`を再度開きます。 Inspectでのエラー処理を確認するには、次のスニペットを使用します。
+1. ファイル`src/api/useGraphQL.js`を再度開きます。 Inspectでエラー処理を確認するには、次のスニペットを使用します。
 
    ```javascript
    //useGraphQL.js
@@ -294,12 +293,12 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
        });
    ```
 
-   応答に`errors`オブジェクトが含まれているかどうかを調べます。 GraphQLクエリに問題がある場合(スキーマに基づく未定義のフィールドなど)、AEMは`errors`オブジェクトを送信します。 `errors`オブジェクトがない場合、`data`が設定されて返されます。
+   応答に`errors`オブジェクトが含まれているかどうかが調べられます。 GraphQLクエリに問題がある場合（スキーマに基づく未定義のフィールドなど）、AEMから`errors`オブジェクトが送信されます。 `errors`オブジェクトがない場合は、`data`が設定されて返されます。
 
-   `window.fetch`には、無効なHTTP要求などの一般的なエラー、またはサーバーへの接続ができない場合に、*catch*&#x200B;に対する`.catch`ステートメントが含まれています。
+   `window.fetch`には、*catch*&#x200B;に対する`.catch`ステートメントが含まれます。このステートメントは、無効なHTTPリクエストや、サーバーへの接続を確立できない場合などに発生します。
 
 1. `src/components/Adventures.js` ファイルを開きます。
-1. `allAdventuresQuery`を変更して無効なプロパティ`adventurePetPolicy`を含めます。
+1. `allAdventuresQuery`を変更して、無効なプロパティ`adventurePetPolicy`を含めます。
 
    ```javascript
    /**
@@ -329,26 +328,26 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
    `;
    ```
 
-   `adventurePetPolicy`がアドベンチャーモデルに含まれていないので、トリガーにエラーが発生するはずです。
+   `adventurePetPolicy`はアドベンチャーモデルの一部ではないので、エラーがトリガーするはずです。
 
 1. 変更を保存し、ブラウザーに戻ります。 次のようなエラーメッセージが表示されます。
 
-   ![無効なプロパティエラー](assets/graphql-and-external-app/invalidProperty.png)
+   ![無効なプロパティのエラー](assets/graphql-and-external-app/invalidProperty.png)
 
-   GraphQL APIは、`AdventureModel`内で`adventurePetPolicy`が未定義であることを検出し、適切なエラーメッセージを返します。
+   GraphQL APIは、`AdventureModel`で`adventurePetPolicy`が定義されていないことを検出し、適切なエラーメッセージを返します。
 
-1. AEMからの応答をInspectし、ブラウザーの開発者ツールを使用して`errors` JSONオブジェクトを表示します。
+1. ブラウザーの開発者ツールを使用してAEMからの応答をInspectし、`errors` JSONオブジェクトを確認します。
 
    ![エラーJSONオブジェクト](assets/graphql-and-external-app/error-json-response.png)
 
-   `errors`オブジェクトは冗長であり、無効なクエリの場所とエラーの分類に関する情報が含まれています。
+   `errors`オブジェクトは詳細で、形式が正しくないクエリの場所やエラーの分類に関する情報が含まれます。
 
-1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリケーションを正しい状態に戻します。
+1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリを適切な状態に戻します。
 
-## これで完了です!{#congratulations}
+## バリデーターが{#congratulations}
 
-バリデーターがサンプルWKND GraphQL Reactアプリのコードを確認し、パラメータ化されたGraphQLクエリを使用して、アクティビティによるリストのアドベンチャーにフィルターするように更新しました。 また、基本的なエラー処理を調べることもできます。
+バリデーターがサンプルWKND GraphQL Reactアプリのコードを確認し、パラメーター化されたGraphQLクエリを使用してGraphQLクエリをフィルタリングし、アクティビティ別の冒険をリストに追加しました。 また、基本的なエラー処理を調べる機会もありました。
 
 ## 次の手順 {#next-steps}
 
-次の章[フラグメント参照を使用した高度なデータモデリング](./fragment-references.md)では、フラグメント参照機能を使用して2つの異なるコンテンツフラグメント間の関係を作成する方法を学びます。 また、GraphQLクエリを修正して、参照モデルのフィールドを含める方法も学習します。
+次の章の[フラグメント参照を使用した高度なデータモデリング](./fragment-references.md)では、フラグメント参照機能を使用して2つの異なるコンテンツフラグメント間の関係を作成する方法について説明します。 また、GraphQLクエリを変更して、参照モデルのフィールドを含める方法についても学習します。
