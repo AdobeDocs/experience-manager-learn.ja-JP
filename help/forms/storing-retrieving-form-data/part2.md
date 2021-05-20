@@ -1,16 +1,15 @@
 ---
 title: MySQLデータベースからのフォームデータの格納と取得
-description: フォームデータの格納と取得に関する手順について説明するマルチパートチュートリアル
-feature: Adaptive Forms
+description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '94'
@@ -21,7 +20,7 @@ ht-degree: 3%
 
 # フォームデータを保存するサーブレット
 
-次の手順は、フォームデータを挿入または更新するサーブレットを作成することです。 サーブレットは、OSGiサービスの適切なメソッドを呼び出して、データベースを挿入または更新します。 保存されたアダプティブフォームデータは、GUIDに関連付けられています。 次に、同じGUIDを使用してフォームデータが更新されます。 このサーブレットは、「SaveAndContinueLater」ボタンがクリックされたときに呼び出されます。
+次の手順では、フォームデータを挿入または更新するサーブレットを作成します。 このサーブレットは、OSGiサービスの適切なメソッドを呼び出して、データベースを挿入または更新します。 保存されたアダプティブフォームデータは、GUIDに関連付けられています。 次に、同じGUIDを使用してフォームデータが更新されます。 このサーブレットは、「SaveAndContinueLater」ボタンがクリックされると呼び出されます。
 
 ```java
 package com.aemforms.saveandcontinue.core.servlets;
