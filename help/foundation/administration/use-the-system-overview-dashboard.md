@@ -1,16 +1,15 @@
 ---
 title: AEMのシステム概要ダッシュボードの使用
-description: 以前のバージョンのAEM管理者は、AEMインスタンスの全体像を取得するために複数の場所を調べる必要がありました。 システム概要では、AEMインスタンスの設定、ハードウェア、および正常性の高レベルの表示をすべて1つのダッシュボードから提供することで、この問題を解決することを目的としています。
+description: 以前のバージョンのAEM管理者は、AEMインスタンスの全体像を把握するために、複数の場所を調べる必要がありました。 「システム概要」では、AEMインスタンスの設定、ハードウェア、ヘルスの概要を1つのダッシュボードで表示することで、この問題を解決します。
 version: 6.4, 6.5
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
-topic: Administration
+topic: 管理
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '143'
@@ -21,16 +20,16 @@ ht-degree: 0%
 
 # システム概要ダッシュボードの使用
 
-Adobe Experience Manager(AEM) [!UICONTROL システム概要]は、AEMインスタンスの構成、ハードウェア、および正常性を、すべて1つのダッシュボードから高度に表示します。
+Adobe Experience ManagerAEM()の[!UICONTROL システム概要]では、1つのダッシュボードから、AEMインスタンスの設定、ハードウェア、ヘルスの概要をすべて確認できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. システム概要には次の場所からアクセスできます。**AEM開始** > **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL システムの概要]**
+1. システム概要には、次の場所からアクセスできます。**AEM Start** > **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL システム概要]**
 
    **`<server-host>/libs/granite/operations/content/systemoverview.html`**&#x200B;に直接
 
-1. 「[!UICONTROL システム概要]」の情報は、「[!UICONTROL ダウンロード]」ボタンをクリックするとエクスポートできます。 この情報は、次の[!DNL REST]エンドポイントを介しても公開されます。
-1. 以下は、[!UICONTROL システム概要]からエクスポートされたJSONの出力例です。
+1. 「[!UICONTROL システム概要]」の情報は、「[!UICONTROL ダウンロード]」ボタンをクリックして書き出すことができます。 情報は、次の[!DNL REST]エンドポイントを介しても公開されます。
+1. 以下は、[!UICONTROL システム概要]から書き出されたJSONの出力例です。
 
    ```json
    {
