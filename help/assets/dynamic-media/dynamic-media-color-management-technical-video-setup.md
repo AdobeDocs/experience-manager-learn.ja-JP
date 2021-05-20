@@ -1,13 +1,12 @@
 ---
 title: AEM Dynamic Media でのカラーマネジメントについて
-description: このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
+description: このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのカラー補正プレビュー機能を提供するために使用する方法について説明します。
 sub-product: dynamic-media
-feature: Image Profiles, Video Profiles
+feature: イメージプロファイル、ビデオプロファイル
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: コンテンツ管理
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '328'
@@ -18,19 +17,19 @@ ht-degree: 24%
 
 # AEM Dynamic Media でのカラーマネジメントについて{#understanding-color-management-with-aem-dynamic-media}
 
-このビデオでは、Dynamic Mediaのカラーマネジメントについて説明し、AEM Assetsでのカラー補正プレビュー機能の提供に使用する方法を説明します。
+このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのカラー補正プレビュー機能を提供するために使用する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
 >[!NOTE]
 >
->[Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Median AEMでこの機能を使用できるようにします。
+>[この機能を使](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) 用するには、 Dynamic Media AEMを有効にします。
 
-この機能は、AEM 6.1および6.2バージョンの機能パックで使用できます。
+この機能は、AEM 6.1および6.2バージョンの機能パックとして使用できます。
 
-## カラーマネジメント設定ノードのXMLテンプレート{#xml-template-for-the-color-management-configuration-node}
+## カラーマネジメント設定ノード{#xml-template-for-the-color-management-configuration-node}のXMLテンプレート
 
-カラーマネジメント設定ノードのXMLテンプレートを次に示します。 このXMLテンプレートはAEM開発プロジェクトにコピーし、プロジェクトに適した設定で構成できます。
+次に、カラーマネジメント設定ノードのXMLテンプレートを示します。 このXMLテンプレートは、AEM開発プロジェクトにコピーし、プロジェクトに適した設定で設定できます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +85,7 @@ ht-degree: 24%
 />
 ```
 
-### デフォルトのAdobeカラープロファイルのリストは{#list-of-default-adobe-color-profiles-are-listed-below}の下に一覧表示されます
+### デフォルトのAdobeカラープロファイルのリストを{#list-of-default-adobe-color-profiles-are-listed-below}に示します。
 
 | 名前 | カラースペース | 説明 |
 | ------------------- | ---------- | ------------------------------------- |
@@ -95,33 +94,33 @@ ht-degree: 24%
 | CIERGB | RGB | CIE RGB |
 | CoatedFogra27 | CMYK | Coated FOGRA27 (ISO 12647-2:2004) |
 | CoatedFogra39 | CMYK | Coated FOGRA39 (ISO 12647-2:2004) |
-| CoatedGraCol | CMYK | Coated GRACoL 2006 (ISO 12647-2:2004) |
+| CoatedGraCol | CMYK | Coated GRACoL 2006(ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatch RGB |
 | EuropeISOCoated | CMYK | Europe ISO Coated FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
 | JapanColorCoated | CMYK | Japan Color 2001 Coated |
-| JapanColorNewspaper | CMYK | Japan Color 2002新聞 |
+| JapanColorNewspar | CMYK | 日本カラー2002年新聞 |
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
 | JapanWebCoated | CMYK | Japan Web Coated (Ad) |
-| 新聞印刷SNAP2007 | CMYK | US Newsprint(SNAP 2007) |
-| NTSC | RGB | NTSC(1953) |
+| NewsprintSNAP2007 | CMYK | 米国新聞印刷(SNAP 2007) |
+| NTSC | RGB | NTSC (1953) |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
-| PS4Default | CMYK | Photoshop4のデフォルトCMYK |
-| PS5Default | CMYK | Photoshop5のデフォルトCMYK |
+| PS4Default | CMYK | Photoshop 4デフォルトCMYK |
+| PS5Default | CMYK | Photoshop 5デフォルトCMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC61966-2.1 |
-| UncoatedFogra29 | CMYK | Uncoated FOGRA29 (ISO 12647-2:2004) |
+| UncoatedFogra29 | CMYK | 非コーティングFOGRA29(ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
-| WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
-| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5 Paper |
+| WebCoatedFogra28 | CMYK | Web Coated FOGRA28(ISO 12647-2:2004) |
+| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3用紙 |
+| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5用紙 |
 | WebUncoated | CMYK | U.S. Web Uncoated v2 |
-| WideGamotRGB | RGB | 広域RGB |
+| WideGamutRGB | RGB | 広色域RGB |
 
 ## その他のリソース{#additional-resources}
 
