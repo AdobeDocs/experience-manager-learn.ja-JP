@@ -1,11 +1,10 @@
 ---
-title: AEMヘッドレスの使用の手引き — GraphQL
-description: AEM GraphQLのAPIと機能の概要を示します。
+title: AEMヘッドレスの概要 — GraphQL
+description: AEM GraphQL APIと機能の概要です。
 feature: コンテンツフラグメント、API
 topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '118'
@@ -14,20 +13,20 @@ ht-degree: 0%
 ---
 
 
-# AEMヘッドレスの使用の手引き — GraphQL
+# AEMヘッドレスの概要 — GraphQL
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
-このビデオでは、AEMで実装されたGraphQL APIの概要を説明します。 AEMのGraphQL APIは、主に、ヘッドレスデプロイメントの一環としてAEMコンテンツフラグメントをダウンストリームアプリケーションに配信するように設計されています。
+このビデオは、AEMで実装されたGraphQL APIの概要を示します。 AEMのGraphQL APIは、主に、ヘッドレスデプロイメントの一環として、AEMコンテンツフラグメントをダウンストリームアプリケーションに配信するように設計されています。
 
-## AEM Headless GraphQLビデオシリーズ
+## AEMヘッドレスGraphQLビデオシリーズ
 
-コンテンツフラグメントとAEM GraphQL APIおよび開発ツールの詳しいウォークスルーを通じて、AEM GraphQL機能について説明します。
+コンテンツフラグメントとAEM GraphQL APIおよび開発ツールの詳細なウォークスルーを通じて、AEM GraphQL機能について説明します。
 
-+ [AEM Headless GraphQLビデオシリーズ](./video-series/modeling-basics.md)
++ [AEMヘッドレスGraphQLビデオシリーズ](./video-series/modeling-basics.md)
 
-## AEM Headless GraphQLハンズオンチュートリアル
+## AEMヘッドレスGraphQL実践チュートリアル
 
-AEM GraphQL APIを使用してコンテンツフラグメントを消費するリアクトアプリを作成し、AEM GraphQL機能を調べます。
+AEM GraphQL APIを使用してコンテンツフラグメントを使用するReactアプリを構築し、AEM GraphQL機能を調べます。
 
-+ [AEM Headless GraphQLハンズオンチュートリアル](./multi-step/overview.md)
++ [AEMヘッドレスGraphQL実践チュートリアル](./multi-step/overview.md)
