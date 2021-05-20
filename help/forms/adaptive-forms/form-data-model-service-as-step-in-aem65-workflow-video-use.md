@@ -1,18 +1,17 @@
 ---
-title: AEM 6.5ワークフローでの手順としてのForm Data Model Serviceの使用
-seo-title: AEM 6.5ワークフローでの手順としてのForm Data Model Serviceの使用
-description: AEM Forms6.5では、AEMワークフローで変数を作成する機能が導入されました。 AEMワークフローの「Invoke Form Data Model Service」を使用するこの新しい機能により、非常に簡単になりました。 次のビデオでは、AEMワークフローのInvoke Form Data Model Serviceの使用に関する手順を説明します。
-seo-description: AEM Forms6.5では、AEMワークフローで変数を作成する機能が導入されました。 AEMワークフローの「Invoke Form Data Model Service」を使用するこの新しい機能により、非常に簡単になりました。 次のビデオでは、AEMワークフローのInvoke Form Data Model Serviceの使用に関する手順を説明します。
-feature: Workflow
+title: AEM 6.5ワークフローでのフォームデータモデルサービスの手順としての使用
+seo-title: AEM 6.5ワークフローでのフォームデータモデルサービスの手順としての使用
+description: AEM Forms 6.5では、AEMワークフローで変数を作成する機能が導入されました。 この新しい機能により、AEMワークフローで「フォームデータモデルサービスを起動」を使用することが非常に簡単になりました。 次のビデオでは、AEMワークフローで「フォームデータモデルを起動」サービスを使用する手順について説明します。
+seo-description: AEM Forms 6.5では、AEMワークフローで変数を作成する機能が導入されました。 この新しい機能により、AEMワークフローで「フォームデータモデルサービスを起動」を使用することが非常に簡単になりました。 次のビデオでは、AEMワークフローで「フォームデータモデルを起動」サービスを使用する手順について説明します。
+feature: ワークフロー
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
-topic: Development
+topic: 開発
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '336'
@@ -21,26 +20,26 @@ ht-degree: 0%
 ---
 
 
-# AEM 6.5ワークフロー{#using-form-data-model-service-as-step-in-workflow}での手順としてのForm Data Model Serviceの使用
+# AEM 6.5 Workflow {#using-form-data-model-service-as-step-in-workflow}でのフォームデータモデルサービスの手順としての使用
 
-AEM Forms6.4以降では、AEMワークフローの一部としてForm Data Model Serviceを使用できるようになりました。 次のビデオでは、AEMワークフローでフォームデータモデルを設定する手順に必要な手順について説明します
+AEM Forms 6.4以降では、フォームデータモデルサービスをAEM Workflowの一部として使用できるようになりました。 次のビデオでは、AEM Workflowでフォームデータモデルを設定するために必要な手順について説明します
 
->!![NOTE]このビデオで示す機能には、AEM Forms6.5.1が必要です。
+>!![NOTE]このビデオで示される機能には、AEM Forms 6.5.1が必要です。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=9&learn=on)
 
-この機能をサーバーでテストするには、次の手順に従ってください
+この機能をサーバーでテストするには、次の手順に従います
 
-* [ここ](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)で説明したようにSampleRest.warファイルを使用してTomcatを設定します。 Tomcatにデプロイされたwarファイルには、申込者のクレジットスコアを返すコードが含まれます。クレジットスコアは200 ～ 800の乱数です
+* [ここ](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)で説明するように、SampleRest.warファイルを使用してtomcatを設定します。Tomcatにデプロイされたwarファイルには、申込者のクレジットスコアを返すコードが含まれています。クレジットスコアは200から800の間の乱数です
 
-* [ パッケージマネージャーを使用して、AEMにアセットを読み込みます](assets/aem65-loanapplication.zip)
+* [ パッケージマネージャーを使用したAEMへのアセットの読み込み](assets/aem65-loanapplication.zip)
 * パッケージには次の内容が含まれます。
 
-   * FDM手順を使用するワークフロー・モデル。
-   * FDMの手順で使用するフォーム・データ・モデル。
-   * 送信時のワークフローをトリガーするアダプティブフォーム。
-* [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)を開きます。 詳細を入力し、送信します。 フォームの送信時に、[アプリケーションワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガされます。
+   * FDMステップを使用するワークフローモデル。
+   * FDM手順で使用されるフォームデータモデル。
+   * 送信時にワークフローをトリガーするアダプティブフォーム。
+* [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)を開きます。 詳細を入力し、送信します。 フォームの送信時に、[loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガーされます。
 
 ![ ワークフロー ](assets/invokefdm651.PNG).
-ワークフローは、Or Splitコンポーネントを使用して、クレジットスコアが500を超える場合は、アプリをadminにルーティングします。 クレジットスコアが500未満の場合、アプリはキャバリにルーティングされます。
+クレジットスコアが500を超える場合、ワークフローは、 OR分割コンポーネントを使用してアプリケーションを管理者にルーティングします。 クレジットスコアが500未満の場合、申し込みはキャバリにルーティングされます。
