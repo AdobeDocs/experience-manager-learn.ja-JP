@@ -1,17 +1,16 @@
 ---
-title: Adobe Managed ServicesでのAEMとのAdobeIMS認証について
-description: Adobe Experience Managerは、Managed Services上のAEM用に、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースのAdmin Console認証のサポートを導入しました。   この統合により、AEMManaged Servicesのお客様は、1つの統合WebコンソールですべてのExperience Cloudユーザーを管理できます。 ユーザとグループは、AEMインスタンスに関連付けられた製品プロファイルに割り当てることができ、特定のAEMインスタンスに対する一元的な管理アクセスを許可できます。
+title: Adobe Managed ServicesでのAdobeIMS認証についてAEM
+description: Adobe Experience Managerでは、Managed Services上のAEMで、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースの認証のAdmin Consoleサポートが導入されました。   この統合により、AEM Managed Servicesのお客様は、1つの統合WebコンソールですべてのExperience Cloudユーザーを管理できます。 ユーザーとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のAEMインスタンスに対して一元的に管理されたアクセスを許可できます。
 version: 6.4, 6.5
-feature: Users and Groups
+feature: 'ユーザーとグループ '
 topics: authentication, security
 activity: understand
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 kt: 781
-topic: Architecture
+topic: アーキテクチャ
 role: Architect
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '452'
@@ -20,33 +19,33 @@ ht-degree: 4%
 ---
 
 
-# Adobe Managed ServicesでのAEMとのAdobeIMS認証について{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
+# Adobe Managed ServicesのAEMを使用したAdobeIMS認証について{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
-Adobe Experience Managerは、Managed Services上のAEM用に、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースのAdmin Console認証のサポートを導入しました。   この統合により、AEMManaged Servicesのお客様は、1つの統合WebコンソールですべてのExperience Cloudユーザーを管理できます。 ユーザとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のAEMインスタンスに対する一元的な管理アクセスを許可できます。
+Adobe Experience Managerでは、Managed Services上のAEMで、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースの認証のAdmin Consoleサポートが導入されました。   この統合により、AEM Managed Servicesのお客様は、1つの統合WebコンソールですべてのExperience Cloudユーザーを管理できます。 AEMインスタンスに関連付けられた製品プロファイルにユーザーとグループを割り当て、特定のAEMインスタンスに対して一元的に管理されたアクセスを許可できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
-* Adobe Experience ManagerIMS認証のサポートは、「内部」ユーザー（作成者、レビュー担当者、管理者、開発者など）に対してのみ行われ、Webサイト訪問者などの外部エンドユーザーには行われません。
-* [管理](https://adminconsole.adobe.com/) コンソールは、AEMManaged Servicesのお客様をIMS Orgsとして、AEMインスタンスを製品コンテキストとして表します。Admin Consoleシステム管理者および製品管理者は、
-* AEMManaged Servicesでは、トポロジをAdmin Consoleと同期して、製品コンテキストとAEMインスタンス間の1対1のマッピングを作成します。
-* Admin Consoleの製品プロファイルは、ユーザーがアクセスできるAEMインスタンスを決定します。
-* 認証サポートには、SSO用の顧客のSAML2準拠IDPが含まれます。
-* Enterprise IDまたはFederated ID（お客様のSSO用）のみがサポートされます(PersonalAdobeIDはサポートされません)。
+* Adobe Experience Manager IMS認証のサポートは、「内部」ユーザー（作成者、レビュー担当者、管理者、開発者など）に対してのみ有効で、Webサイト訪問者などの外部エンドユーザーには適用されません。
+* [Admin Console](https://adminconsole.adobe.com/) は、AEM Managed Servicesのお客様をIMS組織として、AEMインスタンスを製品コンテキストとして表します。Admin Consoleシステムおよび製品管理者は、を定義および管理できます。
+* AEM Managed Servicesは、トポロジをAdmin Consoleと同期し、製品コンテキストとAEMインスタンスの間に1対1のマッピングを作成します。
+* ユーザーがアクセスできるAEMインスタンスは、Admin Console内の製品プロファイルによって決まります。
+* 認証のサポートには、SSO用の顧客のSAML2準拠IDPが含まれます。
+* Enterprise IDまたはFederated IDのみ（お客様SSO用）がサポートされます(個人AdobeIDはサポートされていません)。
 
 **この機能は、Adobe Managed Servicesのお客様向けにAEM 6.4 SP3以降でサポートされます。*
 
 ## ベストプラクティス {#best-practices}
 
-### Admin Consoleでの権限の適用
+### 権限のAdmin Console
 
-ユーザーレベルでの権限の適用とアクセスは、Admin ConsoleーとAdobe Experience Managerの両方で避ける必要があります。
+ユーザーレベルで権限とアクセスを適用する場合は、Admin ConsoleとAdobe Experience Managerの両方で避ける必要があります。
 
-Admin Consoleでは、ユーザーは、製品コンテキストレベルでユーザーグループを介してアクセス権を付与される必要があります。 一般的に、ユーザーグループは、Adobe Experience Cloud製品全体でのグループの再利用を促進するために、組織内の論理的な役割で表現するのが最適です。
+Admin Consoleでは、ユーザーは製品コンテキストレベルでユーザーグループを介してアクセス権を付与される必要があります。 通常、ユーザーグループは、Adobe Experience Cloud製品全体でグループの再利用性を高めるために、組織内の論理的な役割によって最も適切に表現されます。
 
 >[!NOTE]
 >
-> AEMをCloud Serviceとして使用している場合は、Admin Consoleプロファイルを直接製品ユーザーに割り当てます。 Admin Consoleユーザーグループを介したAdmin Consoleプロファイル間の移行権限は、AEMのCloud Serviceとしてのではサポートされていません。
+> AEMをCloud Serviceとして使用する場合は、Admin Consoleユーザーを製品プロファイルに直接割り当てます。 AEM as a Cloud Serviceでは、Admin Consoleユーザーグループを介した製品プロファイルへのAdmin Consoleユーザー間の推移的な権限はサポートされていません。
 
 ### Adobe Experience Managerでの権限の適用
 
-Adobe Experience Managerでは、AdobeIMSから同期されたユーザーグループは、AEMで特定のタスクセットを実行する適切な権限で事前に設定された[AEMが提供するユーザーグループ](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/security.html)に追加する必要があります。 AdobeIMSから同期されたユーザーは、[AEMが提供するユーザーグループ](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)に直接追加しないでください。
+Adobe Experience Managerでは、AdobeIMSから同期されたユーザーグループは、AEMが提供するユーザーグループ](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/security.html)に追加される必要があります。このグループは、AEMで特定のタスクのセットを実行するための適切な権限で事前設定されます。 [AdobeIMSから同期されたユーザーは、AEMが提供するユーザーグループ](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)に直接追加しないでください。[
