@@ -1,18 +1,17 @@
 ---
-title: JSONスキーマとデータを持つAEM Forms[Part2]
-seo-title: JSONスキーマとデータを持つAEM Forms[Part2]
-description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
-seo-description: マルチパートチュートリアルを参照し、JSONスキーマを使用したアダプティブフォームの作成、送信されたデータのクエリに関する手順を実行してください。
-feature: Adaptive Forms
+title: JSONスキーマとデータを使用したAEM Forms[Part2]
+seo-title: JSONスキーマとデータを使用したAEM Forms[Part2]
+description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
+seo-description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '374'
@@ -21,18 +20,18 @@ ht-degree: 0%
 ---
 
 
-# データベースへの送信データの格納
+# 送信されたデータのデータベースへの格納
 
 
 >[!NOTE]
 >
->JSONデータ型がサポートされているので、MySQL 8をデータベースとして使用することをお勧めします。 また、MySQL DB用の適切なドライバーをインストールする必要があります。 この場所のドライバを使用しています。 https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
+>JSONデータタイプがサポートされているので、MySQL 8をデータベースとして使用することをお勧めします。 また、MySQL DB用の適切なドライバをインストールする必要があります。 この場所https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12にあるドライバを使用しました。
 
-送信されたデータをデータベースに保存するには、サーブレットを作成し、連結されたデータとフォーム名と保存を抽出します。 フォームの送信を処理し、afBoundDataをデータベースに格納するための完全なコードを以下に示します。
+送信されたデータをデータベースに格納するには、連結されたデータとフォーム名とストアを抽出するサーブレットを作成します。 フォームの送信を処理し、afBoundDataをデータベースに保存するための完全なコードを以下に示します。
 
-フォームの送信を処理するためにカスタム送信を作成しました。 このカスタム送信のpost.POST.jspでは、リクエストをサーブレットに転送します。
+フォームの送信を処理するために、カスタム送信を作成しました。 このカスタム送信のpost.submit.jspでは、POSTをサーブレットに転送します。
 
-カスタム送信プリースの詳細については、この[記事](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)を参照してください。
+カスタム送信プリースについて詳しくは、この記事[を参照してください。](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storeafsubmission&quot;,null,null);
 
@@ -144,14 +143,14 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 
 ![connectionpool](assets/connectionpooled.gif)
 
-これをシステムで動作させるには、次の手順に従ってください
+これをシステムで動作させるには、次の手順に従ってください。
 
 * [zipファイルをダウンロードして解凍します。](assets/aemformswithjson.zip)
-* 「Create AdaptiveForm With JSON」スキーマを参照してください。 この記事アセットの一部として指定されたJSONスキーマを使用できます。 フォームの送信アクションが適切に設定されていることを確認します。 送信アクションは、「CustomSubmitHelpx」に設定する必要があります。
-* MySQL Workbenchツールを使用してスキーマ.sqlファイルを読み込み、MySQLインスタンスでスキーマを作成します。 スキーマ.sqlファイルは、このチュートリアルアセットの一部としても提供されます。
-* Felix WebコンソールからApache Sling接続プール済みデータソースを設定します
-* データソース名を「aemformswithjson」と指定してください。 これは、提供されるサンプルOSGiバンドルで使用される名前です
-* プロパティについては、上記の画像を参照してください。 これは、MySQLをデータベースとして使用すると仮定しています。
-* この記事アセットの一部として提供されるOSGiバンドルをデプロイします。
-* フォームをプレビューし、送信します。
-* JSONデータは、「スキーマ.sql」ファイルを読み込んだときに作成されたデータベースに保存されます。
+* JSONスキーマを使用してアダプティブフォームを作成します。 この記事のアセットの一部として提供されているJSONスキーマを使用できます。 フォームの送信アクションが適切に設定されていることを確認します。 送信アクションは、「CustomSubmitHelpx」に設定する必要があります。
+* MySQL Workbenchツールを使用してschema.sqlファイルをインポートし、MySQLインスタンスでスキーマを作成します。 schema.sqlファイルは、このチュートリアルアセットの一部として提供されています。
+* Felix WebコンソールからApache Sling接続プールに入れられたデータソースを設定する
+* データソース名に「aemformswithjson」という名前を付けてください。 これは、指定されたサンプルOSGiバンドルで使用される名前です
+* プロパティについては、上記の画像を参照してください。 これは、MySQLをデータベースとして使用することを前提としています。
+* この記事のアセットの一部として提供されているOSGiバンドルをデプロイします。
+* フォームをプレビューして送信します。
+* JSONデータは、「schema.sql」ファイルをインポートした際に作成されたデータベースに保存されます。
