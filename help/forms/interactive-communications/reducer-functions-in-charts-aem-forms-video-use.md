@@ -1,20 +1,19 @@
 ---
-title: チャートでのレジューサ関数の使用
-seo-title: AEM Formsでのレジューサ関数の使用 — チャート
-description: レジューサ関数は、グラフに表示される集計値やグループ値に使用します。次のビデオでは、レジューサ関数の使用に関する手順について説明します。
-seo-description: レジューサ関数は、グラフに表示される集計値やグループ値に使用します。次のビデオでは、レジューサ関数の使用に関する手順について説明します。
+title: チャートでのレジューサー関数の使用
+seo-title: AEM Formsでのレデューサー関数の使用 — チャート
+description: 次のビデオでは、レジューサ関数を使用して、グラフに表示される値を集計またはグループ化します。レジューサ関数の使用手順を説明します。
+seo-description: 次のビデオでは、レジューサ関数を使用して、グラフに表示される値を集計またはグループ化します。レジューサ関数の使用手順を説明します。
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: Interactive Communication
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '130'
@@ -23,12 +22,12 @@ ht-degree: 2%
 ---
 
 
-# AEM Formsでのレジューサ関数の使用 — チャート{#using-reducer-functions-in-aem-forms-charts}
+# AEM Formsでのレデューサー関数の使用 — チャート{#using-reducer-functions-in-aem-forms-charts}
 
-レジューサー関数は、グラフに表示される値を集計またはグループ化するために使用します。
+Reducer関数は、グラフに表示される値を集計またはグループ化するために使用します。
 
 
-たとえば、reducer関数を使用して、カテゴリあたりのトランザクション数を表示したり、以下に示すサンプルデータからカテゴリあたりの最も高い経費を表示したりできます
+例えば、レジューサー関数を使用して、カテゴリごとのトランザクション数を表示したり、以下のサンプルデータからカテゴリごとの最も費用の高いものを表示したりできます
 
 ```json
 [{
@@ -62,7 +61,7 @@ ht-degree: 2%
 ]
 ```
 
-次のビデオでは、レジューサ関数の使用に関する手順について説明します。
+次のビデオでは、レデューサ関数の使用に関する手順を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21368/?quality=9&learn=on)
 
