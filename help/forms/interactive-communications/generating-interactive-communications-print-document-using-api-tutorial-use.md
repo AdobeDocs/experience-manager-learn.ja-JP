@@ -1,35 +1,34 @@
 ---
-title: 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
-seo-title: 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
-description: 監視フォルダーを使用した印刷チャネルドキュメントの生成
-seo-description: 監視フォルダーを使用した印刷チャネルドキュメントの生成
-feature: Interactive Communication
+title: 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
+seo-title: 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
+description: 印刷チャネルドキュメントの生成に監視フォルダーを使用する
+seo-description: 印刷チャネルドキュメントの生成に監視フォルダーを使用する
+feature: インタラクティブコミュニケーション
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
+# 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
 
-印刷チャネルのドキュメントを設計およびテストした後は、通常、REST呼び出しを行ってドキュメントを生成するか、監視フォルダーのメカニズムを使用して印刷ドキュメントを生成する必要があります。
+印刷チャネルドキュメントの設計とテストが完了したら、通常はREST呼び出しを行ってドキュメントを生成するか、監視フォルダーメカニズムを使用して印刷ドキュメントを生成する必要があります。
 
-この記事では、監視フォルダーのメカニズムを使用して印刷チャネルードキュメントを生成する場合の使用例を説明します。
+この記事では、監視フォルダーメカニズムを使用して印刷チャネルドキュメントを生成する使用例を説明します。
 
-ファイルを監視フォルダーにドロップすると、監視フォルダーに関連付けられたスクリプトが実行されます。 このスクリプトについては、下の記事で説明します。
+ファイルを監視フォルダーにドロップすると、監視フォルダーに関連付けられたスクリプトが実行されます。 このスクリプトについては、以下の記事で説明します。
 
-監視フォルダーに配置されるファイルの構造は次のとおりです。 このコードは、XMLドキュメントにリストされているすべてのアカウント番号に関するステートメントを生成します。
+監視フォルダーにドロップされるファイルの構造は次のとおりです。 このコードは、XMLドキュメントにリストされているすべてのアカウント番号に関するステートメントを生成します。
 
 &lt;accountnumbers>
 
@@ -45,21 +44,21 @@ ht-degree: 1%
 
 以下のコードは次の処理を行います。
 
-行1 - InteractiveCommunicationsDocumentへのパス
+1行目 — InteractiveCommunicationsDocumentのパス
 
-行15 ～ 20:監視フォルダーにドロップされたXMLドキュメントーから、accountnumbersのリストを取得します
+15～20行目：監視フォルダーにドロップされたXMLドキュメントのアカウント番号のリストを取得する
 
-24-25行目：ドキュメントに関連付けられたPrintChannelServiceおよびPrintチャネルを取得します。
+24～25行目：ドキュメントに関連付けられたPrintChannelServiceと印刷チャネルを取得します。
 
 30行目：accountnumberをキー要素としてフォームデータモデルに渡します。
 
-32～36行目：生成するドキュメントの「Data Options」を設定します。
+32～36行目：生成するドキュメントのデータオプションを設定します。
 
 38行目：ドキュメントをレンダリングします。
 
-39 ～ 40行：生成されたドキュメントをファイルシステムに保存します。
+39～40行目 — 生成されたドキュメントをファイルシステムに保存します。
 
-フォームデータモデルのRESTエンドポイントでは、IDが入力パラメーターとして必要です。 このidは、以下のスクリーンショットに示すように、「accountnumber」というリクエスト属性にマップされます。
+フォームデータモデルのRESTエンドポイントには、IDが入力パラメーターとして必要です。 このidは、以下のスクリーンショットに示すように、「 accountnumber 」と呼ばれる要求属性にマッピングされます。
 
 ![requestattribute](assets/requestattributeprintchannel.gif)
 
@@ -111,26 +110,26 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**ローカルシステムでテストするには、次の手順に従ってください。**
+**ローカルシステムでこれをテストするには、次の手順に従います。**
 
 * この[記事の説明に従って、Tomcatを設定します。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcatには、サンプルデータを生成するwarファイルがあります。
-* この[記事](/help/forms/adaptive-forms/service-user-tutorial-develop.md)で説明するように、サービス（システムユーザー）を設定します。
-このシステムユーザーが次のノードで読み取り権限を持っていることを確認してください。 [ユーザーadmin](https://localhost:4502/useradmin)に権限ログインを与え、システムユーザー「data」を検索し、次のノードでTabキーで「権限」タブに移動して読み取り権限を付与するには
+* この[記事](/help/forms/adaptive-forms/service-user-tutorial-develop.md)で説明するように、サービスユーザー（システムユーザー）を設定します。
+このシステムユーザーが次のノードに対する読み取り権限を持っていることを確認します。 [ユーザーadmin](https://localhost:4502/useradmin)にログイン権限を付与し、システムユーザー「data」を検索し、次のノードでTabキーを押して読み取り権限を付与するには、「権限」タブに移動します。
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
-* パッケージマネージャーを使用して、次のパッケージをAEMに読み込みます。 このパッケージには、次の内容が含まれています。
+* パッケージマネージャーを使用して、次のパッケージをAEMに読み込みます。 このパッケージには、次の内容が含まれます。
 
 
-* [対話型通信ドキュメントの例](assets/retirementstatementprint.zip)
+* [インタラクティブ通信ドキュメントのサンプル](assets/retirementstatementprint.zip)
 * [監視フォルダースクリプト](assets/printchanneldocumentusingwatchedfolder.zip)
 * [データソース設定](assets/datasource.zip)
 
-* /etc/fd/watchfolder/scripts/PrintPDF.ecmaファイルを開きます。 1行目のinteractiveCommunicationsDocumentのパスが、印刷する正しいドキュメントを指していることを確認してください
+* /etc/fd/watchfolder/scripts/PrintPDF.ecmaファイルを開きます。 1行目のinteractiveCommunicationsDocumentへのパスが、印刷する正しいドキュメントを指していることを確認します
 
-* 2行目の環境設定に従ってsaveLocationを変更します
+* 2行目の設定に従ってsaveLocationを変更します。
 
-* 次の内容のaccountnumbers.xmlファイルを作成します
+* 次の内容のaccountnumbers.xmlファイルを作成します。
 
 ```xml
 <accountnumbers>
@@ -150,7 +149,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 >[!NOTE]
 >
->Windows以外のオペレーティングシステムで使用する場合は、
+>Windows以外のオペレーティングシステムで使用する場合は、に移動してください。
 >
->/etc/fd/watchfolder /config/PrintChannelDocumentに置き換え、環境設定に従ってfolderPathを変更します。
+>/etc/fd/watchfolder /config/PrintChannelDocumentを開き、設定に従ってfolderPathを変更します。
 
