@@ -1,20 +1,19 @@
 ---
 title: フォームデータモデルを使用したキャンペーンプロファイルの作成
 seo-title: フォームデータモデルを使用したキャンペーンプロファイルの作成
-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
-seo-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
+description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
+seo-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: Output Service
+feature: Output サービス
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '450'
@@ -23,13 +22,13 @@ ht-degree: 4%
 ---
 
 
-# フォームデータモデルを使用したキャンペーンプロファイルの作成{#create-campaign-profile-using-form-data-model}
+# フォームデータモデル{#create-campaign-profile-using-form-data-model}を使用したキャンペーンプロファイルの作成
 
-AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成手順
+AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
 
 ## カスタム認証の作成{#create-custom-authentication}
 
-Swaggerファイルを使用してデータソースを作成する場合、AEM Formsでは次の種類の認証をサポートしています
+Swaggerファイルを使用してデータソースを作成する場合、AEM Formsは次の種類の認証をサポートします
 
 * なし
 * OAuth 2.0
@@ -39,13 +38,13 @@ Swaggerファイルを使用してデータソースを作成する場合、AEM 
 
 ![campaignfdm](assets/campaignfdm.gif)
 
-Adobe Campaign StandardにREST呼び出しを行うには、カスタム認証を使用する必要があります。
+Adobe Campaign StandardへのREST呼び出しをおこなうには、カスタム認証を使用する必要があります。
 
 カスタム認証を使用するには、IAuthenticationインターフェイスを実装するOSGiコンポーネントを開発する必要があります
 
-メソッドgetAuthDetailsを実装する必要があります。 このメソッドは、AuthenticationDetailsオブジェクトを返します。 このAuthenticationDetailsオブジェクトには、REST API呼び出しをAdobe Campaignに行うために必要なHTTPヘッダーが必要になります。
+getAuthDetailsメソッドを実装する必要があります。 このメソッドは、 AuthenticationDetailsオブジェクトを返します。 このAuthenticationDetailsオブジェクトには、Adobe CampaignへのREST API呼び出しをおこなうために必要なHTTPヘッダーが設定されます。
 
-次に、カスタム認証の作成に使用したコードを示します。 getAuthDetailsメソッドは、すべての処理を実行します。 AuthenticationDetailsオブジェクトを作成します。 次に、このオブジェクトに適切なHttpHeadersを追加し、このオブジェクトを返します。
+次に、カスタム認証の作成に使用したコードを示します。 getAuthDetailsメソッドは、すべての処理を実行します。 AuthenticationDetailsオブジェクトを作成します。 次に、適切なHttpHeadersをこのオブジェクトに追加し、このオブジェクトを返します。
 
 ```java
 package aemfd.campaign.core;
@@ -108,30 +107,30 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## データソースの作成{#create-data-source}
+## データソース{#create-data-source}の作成
 
 最初の手順は、Swaggerファイルを作成することです。 Swaggerファイルは、Adobe Campaign Standardでのプロファイルの作成に使用されるREST APIを定義します。 Swaggerファイルは、REST APIの入力パラメーターと出力パラメーターを定義します。
 
-Swaggerファイルを使用してデータソースが作成されます。 データソースを作成する場合は、認証の種類を指定できます。 この場合、Adobe Campaignに対する認証にカスタム認証を使用します。上記のコードは、Adobe Campaignに対する認証に使用されました。
+データソースはSwaggerファイルを使用して作成されます。 データソースの作成時に、認証タイプを指定できます。 この場合、Adobe Campaignに対する認証にカスタム認証を使用します。上記のコードは、Adobe Campaignに対する認証に使用されました。
 
-この記事に関連するアセットの一部として、サンプルのSwaggerファイルが提供されます。**Swaggerファイル内のhostとbasePathを、ACSインスタンスと一致するように変更してください**
+この記事に関連するアセットの一部として、サンプルのSwaggerファイルが提供されます。**ACSインスタンスに合わせて、SwaggerファイルのhostとbasePathを必ず変更してください。**
 
-## ソリューション{#test-the-solution}をテストします。
+## {#test-the-solution}ソリューションをテストします。
 
 ソリューションをテストするには、次の手順に従います。
-* [ここで説明する手順に従っていることを確認します](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [このファイルをダウンロードして解凍し、Swaggerファイルを取得します](assets/create-acs-profile-swagger-file.zip)
 * Swaggerファイルを使用したデータソースの作成
-フォームデータモデルを作成し、前の手順で作成したデータソースを基にします。
+フォームデータモデルを作成し、前の手順で作成したデータソースをベースにします。
 * 前の手順で作成したフォームデータモデルに基づいてアダプティブフォームを作成します。
-* 次の要素をデータソースタブからアダプティブフォームにドラッグ&amp;ドロップします
+* 次の要素を「データソース」タブからアダプティブフォームにドラッグ&amp;ドロップします
 
    * 電子メール
    * firstName
    * 姓
    * 携帯電話
 
-* 送信アクションが「Submit using Form Data Model」に設定されるようにします。
+* 送信アクションを「フォームデータモデルを使用して送信」に設定します。
 * 適切に送信するようにデータモデルを設定します。
-* フォームをプレビューする. フィールドに入力し、送信します。
-* プロファイルがAdobe Campaign Standardに作成されていることを確認します。
+* フォームをプレビューする. フィールドに入力し、を送信します。
+* プロファイルがAdobe Campaign Standardで作成されたことを確認します。
