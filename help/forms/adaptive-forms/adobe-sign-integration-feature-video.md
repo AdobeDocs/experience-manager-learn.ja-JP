@@ -1,8 +1,8 @@
 ---
-title: Adobe SignとAEM Formsの併用
-seo-title: Adobe SignとAEM Formsの併用
-description: Adobe SignとAEM Formsの併用
-seo-description: Adobe SignとAEM Formsの併用
+title: AEM FormsでのAdobe Signの使用
+seo-title: AEM FormsでのAdobe Signの使用
+description: AEM FormsでのAdobe Signの使用
+seo-description: AEM FormsでのAdobe Signの使用
 uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
 products: SG_EXPERIENCEMANAGER/6.3/FORMS, SG_ESIGNSERVICES
 topic-tags: forms, adaptive_forms
@@ -11,7 +11,6 @@ targetaudience: target-audience advanced
 index: y
 internal: n
 snippet: y
-translation-type: tm+mt
 source-git-commit: 4e1db553d9e8b4fcf5460c805874d3fc2ae5527c
 workflow-type: tm+mt
 source-wordcount: '91'
@@ -20,16 +19,16 @@ ht-degree: 0%
 ---
 
 
-# Adobe SignとAEM Forms{#using-adobe-sign-with-aem-forms}を使う
+# AEM FormsでのAdobe Signの使用{#using-adobe-sign-with-aem-forms}
 
-Adobe SignとAEM Formsの併用
+AEM FormsでのAdobe Signの使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=9&learn=on)
 
-*このビデオでは、Adobe Signクラウドサービスの設定、AEMアダプティブフォームへの複数の署名フィールドの追加のプロセスについて説明します。*
+*このビデオでは、Adobe Sign Cloud Serviceを設定し、AEMアダプティブフォームに複数の署名フィールドを追加するプロセスについて説明します。*
 
 >[!NOTE]
 >
->この機能はAEM 6.3以降でのみ使用できます。
+>この機能は、AEM 6.3以降でのみ使用できます。
 
-[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページをご覧になって、この機能のライブデモへのリンクをご覧ください。
+この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
