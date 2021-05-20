@@ -1,17 +1,16 @@
 ---
 title: フォームフラグメントの作成
-description: AEM formsは、パネルやフィールドのグループのようなフォームセグメントを1回だけ作成し、アダプティブフォーム間で再利用する便利なメカニズムを備えています。
-feature: Adaptive Forms
+description: AEM formsは、パネルやフィールドのグループのようなフォームセグメントを1回だけ作成し、アダプティブフォーム間で再利用する便利なメカニズムです。
+feature: アダプティブフォーム
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: Development
+topic: 開発
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '110'
@@ -29,9 +28,9 @@ ht-degree: 40%
 
 
 
-詳しくは、[アダプティブフォームテンプレートドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)を参照してください
+詳しくは、[アダプティブフォームテンプレートのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)を参照してください。
 
-必要に応じて、[Spouse-details-fragment ](assets/spouse-details-fragment.zip)をダウンロードし、[パッケージマネージャ](http://localhost:4502/crx/packmgr/index.jsp)を使用してAEMに読み込むことができます
+必要に応じて、[Spouse-details-fragment ](assets/spouse-details-fragment.zip)をダウンロードし、[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してAEMに読み込むことができます
 
 
 
