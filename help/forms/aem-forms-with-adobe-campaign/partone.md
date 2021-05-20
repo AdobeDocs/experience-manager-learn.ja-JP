@@ -1,20 +1,19 @@
 ---
 title: 'JSON Webトークンとアクセストークンの生成 '
 seo-title: 'JSON Webトークンとアクセストークンの生成 '
-description: この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
-seo-description: この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
+description: この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
+seo-description: この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: Adaptive Forms, Form Data Model
+feature: アダプティブForms、フォームデータモデル
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '267'
@@ -23,21 +22,21 @@ ht-degree: 0%
 ---
 
 
-# JSON Webトークンとアクセストークン{#generating-json-web-token-and-access-token}を生成中
+# JSON Webトークンとアクセストークン{#generating-json-web-token-and-access-token}の生成
 
-この記事では、JWTの生成に必要なコードと、Adobe Campaign StandardにRESTコールを送信するために必要なアクセストークンを説明します
+この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
 
-## JSON Webトークンの生成{#generate-json-web-token}
+## JSON Webトークン{#generate-json-web-token}を生成します
 
-Adobe CampaignAPIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 この[Javaコードサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)に従ってJWTを生成できます。
+Adobe Campaign APIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 この[javaコードのサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)に従ってJWTを生成できます。
 
-ACS APIをAEM Formsで使用するには、OSGiバンドル内にJWTを作成する必要があります。 このサンプルOSGIバンドルでJWTを生成する際に、次のコードスニペットを使用します。 ACSインスタンスに関する詳細は、上に示すように設定されたOSGIコンフィギュレーションプロパティからフェッチされます。
+AEM FormsでACS APIを使用するには、OSGiバンドル内にJWTを作成する必要があります。 このサンプルOSGIバンドルでJWTを生成するには、次のコードスニペットを使用します。 ACSインスタンスに関する詳細は、上に示すように設定されたOSGI設定プロパティから取得されます。
 
 ![設定](assets/campaignconfiguration.gif)
 
-**A.ここ** に示す値はダミー値です。
+**A.** ここに示す値はダミー値です
 
-次のコードは、OSGI設定からAdobe Campaignサーバーに関する詳細を取得します。 80行から104行までの秘密鍵を作成します。
+次のコードは、OSGi設定からAdobe Campaignサーバーに関する詳細を取得します。 80～104行目の秘密鍵を作成します。
 
 秘密鍵を取得したら、JSON Webトークンを作成します。
 
@@ -248,6 +247,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## アクセストークン{#generate-access-token}を生成
+## アクセストークン{#generate-access-token}の生成
 
-次に、生成されたJWTをPOSTコールを行ってアクセストークンと交換します。 その後、このアクセストークンは、以降のREST呼び出しに対して、HTTPヘッダーの認証キーとして送信されます
+次に、生成されたJWTをアクセストークンと交換するために、POST呼び出しをおこないます。 その後、このアクセストークンは、後続のREST呼び出しのHTTPヘッダーで認証キーとして送信されます
