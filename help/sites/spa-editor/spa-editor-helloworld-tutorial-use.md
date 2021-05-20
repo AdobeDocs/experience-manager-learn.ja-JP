@@ -1,8 +1,8 @@
 ---
-title: AEM SPAエディタを使用した開発 — Hello Worldチュートリアル
-description: AEM SPA Editorでは、シングルページアプリケーションまたはSPAのコンテキスト内編集がサポートされています。 このチュートリアルでは、AEM SPAエディタJS SDKで使用するSPA開発の概要を説明します。 このチュートリアルでは、カスタムHello Worldコンポーネントを追加してWe.Retailジャーナルアプリを拡張します。 ユーザーは、ReactフレームワークまたはAngularフレームワークを使用して、このチュートリアルを完了できます。
-sub-product: サイト、content services
-feature: Spa Editor
+title: AEM SPA Editorを使用した開発 — Hello Worldチュートリアル
+description: AEM SPA Editorは、シングルページアプリケーションまたはSPAのコンテキスト内編集をサポートします。 このチュートリアルでは、AEM SPA Editor JS SDKで使用するSPA開発の概要を説明します。 このチュートリアルでは、カスタムHello Worldコンポーネントを追加して、We.Retailジャーナルアプリを拡張します。 ユーザーは、ReactフレームワークまたはAngularフレームワークを使用して、チュートリアルを完了できます。
+sub-product: サイト、コンテンツサービス
+feature: Spaエディター
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
@@ -11,7 +11,6 @@ version: 6.3, 6.4, 6.5
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '3174'
@@ -20,43 +19,43 @@ ht-degree: 4%
 ---
 
 
-# AEM SPAエディタを使用した開発 — Hello World Tutorial {#developing-with-the-aem-spa-editor-hello-world-tutorial}
+# AEM SPA Editorを使用した開発 — Hello Worldチュートリアル{#developing-with-the-aem-spa-editor-hello-world-tutorial}
 
 >[!WARNING]
 >
-> このチュートリアルは&#x200B;**非推奨**&#x200B;です。 次のいずれかを行うことをお勧めします。[AEM SPA EditorとAngularの使い始めに](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)または[AEM SPA EditorとReact](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)を使用する
+> このチュートリアルは&#x200B;**非推奨**&#x200B;です。 次のいずれかを実行することをお勧めします。[AEM SPA EditorおよびAngularの概要](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)または[AEM SPA EditorおよびReactの概要](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
 
-AEM SPA Editorでは、シングルページアプリケーションまたはSPAのコンテキスト内編集がサポートされています。 このチュートリアルでは、AEM SPAエディタJS SDKで使用するSPA開発の概要を説明します。 このチュートリアルでは、カスタムHello Worldコンポーネントを追加してWe.Retailジャーナルアプリを拡張します。 ユーザーは、ReactフレームワークまたはAngularフレームワークを使用して、このチュートリアルを完了できます。
+AEM SPA Editorは、シングルページアプリケーションまたはSPAのコンテキスト内編集をサポートします。 このチュートリアルでは、AEM SPA Editor JS SDKで使用するSPA開発の概要を説明します。 このチュートリアルでは、カスタムHello Worldコンポーネントを追加して、We.Retailジャーナルアプリを拡張します。 ユーザーは、ReactフレームワークまたはAngularフレームワークを使用して、チュートリアルを完了できます。
 
 >[!NOTE]
 >
-> シングルページアプリケーション(SPA)エディタ機能には、AEM 6.4 service pack 2以降が必要です。
+> シングルページアプリケーション(SPA)エディター機能には、AEM 6.4サービスパック2以降が必要です。
 >
-> SPAフレームワークベースのクライアント側レンダリング(ReactやAngularなど)を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+> SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
-## 前提条件となる読み取り{#prereq}
+## 前提条件の読み取り {#prereq}
 
-このチュートリアルでは、文脈依存編集を有効にするために、SPAコンポーネントをAEMコンポーネントにマップするために必要な手順を強調します。 このチュートリアルを開始するユーザは、Adobe Experience ManagerとAEMの開発に関する基本的な概念と、Angularのフレームワークを使用した開発に関する基本的な概念を理解している必要があります。 このチュートリアルでは、バックエンドおよびフロントエンドの開発タスクについて説明します。
+このチュートリアルでは、コンテキスト内編集を有効にするために、SPAコンポーネントをAEMコンポーネントにマッピングするために必要な手順を説明します。 このチュートリアルを開始するユーザーは、Adobe Experience Manager、AEMの開発の基本概念と、AngularフレームワークのReactを使用した開発に精通している必要があります。 このチュートリアルでは、バックエンドとフロントエンドの両方の開発タスクについて説明します。
 
 このチュートリアルを開始する前に、次のリソースを確認することをお勧めします。
 
-* [SPA Editor機能のビデオ](spa-editor-framework-feature-video-use.md) -SPA EditorおよびWe.Retailジャーナルアプリの概要をビデオで紹介します。
-* [React.js Tutorial](https://reactjs.org/tutorial/tutorial.html) - Reactフレームワークを使用した開発の紹介です。
-* [Angularチュートリアル](https://angular.io/tutorial) -Angularを使用した開発の概要
+* [SPA Editor機能のビデオ](spa-editor-framework-feature-video-use.md)  - SPA EditorおよびWe.Retail Journalアプリの概要を示すビデオです。
+* [React.jsチュートリアル](https://reactjs.org/tutorial/tutorial.html)  - Reactフレームワークを使用した開発の概要です。
+* [Angularチュートリアル](https://angular.io/tutorial)  -Angularを使用した開発の概要
 
 ## ローカル開発環境 {#local-dev}
 
-このチュートリアルは、次の目的で開発されています。
+このチュートリアルは、次の用途に設計されています。
 
-[Adobe Experience Manager6.5](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html) または [Adobe Experience Manager6.4](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/technical-requirements.html) +  [Service Pack 5](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
+[Adobe Experience Manager 6.5](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html) または [Adobe Experience Manager 6.4](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/technical-requirements.html)  +  [Service Pack 5](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
 
 このチュートリアルでは、次のテクノロジーとツールをインストールする必要があります。
 
 1. [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 2. [Apache Maven - 3.3.1以降](https://maven.apache.org/)
-3. [Node.js - 8.11.1+](https://nodejs.org/ja/) およびnpm 5.6.0+（npmはnode.jsと共にインストールされます）
+3. [Node.js - 8.11.1以降お](https://nodejs.org/ja/) よびnpm 5.6.0以降（npmはnode.jsと共にインストールされます）
 
-重複は、新しいターミナルを開いて次のコマンドを実行し、上記のツールのインストールを確認します。
+新しいターミナルを開き、次のコマンドを実行して、上記のツールのインストールを再確認します。
 
 ```shell
 $ java -version
@@ -74,30 +73,30 @@ $ npm --version
 
 ## 概要 {#overview}
 
-基本的な概念は、SPAコンポーネントをAEMコンポーネントにマップすることです。 AEMコンポーネントは、サーバーサイドで実行し、JSON形式でコンテンツを書き出します。 JSONコンテンツは、ブラウザーでクライアント側を実行するSPAで使用されます。 SPAコンポーネントとAEMコンポーネント間の1:1マッピングが作成されます。
+基本的な概念は、SPAコンポーネントをAEMコンポーネントにマッピングすることです。 AEMコンポーネントは、サーバー側で実行され、JSON形式でコンテンツを書き出します。 JSONコンテンツは、ブラウザーでクライアント側を実行するSPAで使用されます。 SPAコンポーネントとAEMコンポーネントの間に1対1のマッピングが作成されます。
 
-![SPAコンポーネントマッピング](assets/spa-editor-helloworld-tutorial-use/mapto.png)
+![SPAコンポーネントのマッピング](assets/spa-editor-helloworld-tutorial-use/mapto.png)
 
-一般的なフレームワーク[React JS](https://reactjs.org/)と[Angular](https://angular.io/)は、すぐに使用できます。 最も使いやすいフレームワークを使用して、AngularーまたはReactでこのチュートリアルを完了できます。
+一般的なフレームワーク[React JS](https://reactjs.org/)と[Angular](https://angular.io/)は、すぐに使用できます。 ユーザーは、最も慣れたAngularまたはReactのいずれでも、このチュートリアルを完了できます。
 
 ## プロジェクトのセットアップ {#project-setup}
 
-SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は、SPAの開発を独立して行い、AEMにとって（ほとんど）不可知な状態で行うことです。
+SPAの開発はAEMの開発で1フィート、もう1フィートです。 目標は、SPAの開発を独立して（ほとんどが）AEMに依存しないようにすることです。
 
-* SPAプロジェクトは、フロントエンド開発時にAEMプロジェクトとは独立して動作します。
-* Webpack、NPM、[!DNL Grunt]、[!DNL Gulp]などのフロントエンドビルドツールおよびテクノロジーは引き続き使用できます。
-* AEM用にビルドするには、SPAプロジェクトをコンパイルし、自動的にAEMプロジェクトに含めます。
-* SPAのAEMへの展開に使用する標準AEMパッケージです。
+* SPAプロジェクトは、フロントエンド開発時に、AEMプロジェクトとは独立して動作します。
+* Webpack、NPM、[!DNL Grunt]、[!DNL Gulp]などのフロントエンドビルドツールとテクノロジーは、引き続き使用されます。
+* AEM用にビルドするには、SPAプロジェクトがコンパイルされ、AEMプロジェクトに自動的に含まれます。
+* SPAをAEMにデプロイする際に使用する標準AEMパッケージです。
 
 ![アーティファクトとデプロイメントの概要](assets/spa-editor-helloworld-tutorial-use/spa-artifact-deployment.png)
 
-*SPAの開発はAEMの開発において1つの足があり、もう1つは独自にSPAの開発を可能にし、（ほとんどは）AEMにとらわれない方法での開発を可能にします。*
+*SPAの開発にはAEMの開発が1つあり、もう1つはSPAの開発が独立しておこなわれ、（ほとんどが）AEMに依存しないことが可能です。*
 
-このチュートリアルの目標は、We.Retailジャーナルアプリを新しいコンポーネントで拡張することです。 Web.Retailジャーナルアプリのソースコードをダウンロードし、ローカルAEMに展開することで開始します。
+このチュートリアルの目標は、 We.Retailジャーナルアプリを新しいコンポーネントで拡張することです。 まず、We.Retail Journalアプリのソースコードをダウンロードし、ローカルAEMにデプロイします。
 
-1. **最新の** We.RetailジャーナルコードをGitHubから [ダウンロードします](https://github.com/adobe/aem-sample-we-retail-journal)。
+1. **** 最新の [We.RetailジャーナルコードをGitHubからダウンロードします](https://github.com/adobe/aem-sample-we-retail-journal)。
 
-   または、次のコマンド・ラインからリポジトリをコピーします。
+   または、コマンドラインからリポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-sample-we-retail-journal.git
@@ -105,22 +104,22 @@ SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は�
 
    >[!NOTE]
    >
-   >このチュートリアルは、プロジェクトの&#x200B;**1.2.1-SNAPSHOT**&#x200B;バージョンの&#x200B;**マスター**&#x200B;ブランチに対して作業を行います。
+   >このチュートリアルは、**1.2.1-SNAPSHOT**&#x200B;バージョンのプロジェクトで、**master**&#x200B;ブランチに対して動作します。
 
 1. 次の構造が表示されます。
 
-   ![プロジェクトフォルダ構造](assets/spa-editor-helloworld-tutorial-use/folder-structure.png)
+   ![プロジェクトフォルダー構造](assets/spa-editor-helloworld-tutorial-use/folder-structure.png)
 
    プロジェクトには、次のMavenモジュールが含まれています。
 
    * `all`:プロジェクト全体を1つのパッケージに埋め込んでインストールします。
-   * `bundles`:2つのOSGiバンドルが含まれます。コモンとコア。この中には、 [!DNL Sling Models] および他のJavaコードが含まれています。
-   * `ui.apps`:には、プロジェクトの/apps部分、ie JSおよびCSSクライアントライブラリ、コンポーネント、runmode固有の設定が含まれます。
-   * `ui.content`:構造コンテンツと構成を含む(`/content`、 `/conf`)
-   * `react-app`:We.小売ジャーナルの反応申し込み。これはMavenモジュールとWebPackプロジェクトの両方です。
-   * `angular-app`:We.小売ジャーナルAngularの申し込み。これは[!DNL Maven]モジュールとwebpackプロジェクトの両方です。
+   * `bundles`:次の2つのOSGiバンドルが含まれます。とその他のJavaコードを含 [!DNL Sling Models] むコモンとコア。
+   * `ui.apps`:には、プロジェクトの/apps部分（JSおよびCSS clientlib、コンポーネント、実行モード固有の設定）が含まれます。
+   * `ui.content`:構造コンテンツと設定(`/content`、 `/conf`)を含む
+   * `react-app`:We.RetailジャーナルReactアプリケーション。これは、MavenモジュールとWebpackプロジェクトの両方です。
+   * `angular-app`:We.RetailジャーナルAngularアプリケーション。これは[!DNL Maven]モジュールとwebpackプロジェクトの両方です。
 
-1. 新しいターミナルウィンドウを開き、次のコマンドを実行して、[http://localhost:4502](http://localhost:4502)上で実行されているローカルAEMインスタンスにアプリケーション全体を構築してデプロイします。
+1. 新しいターミナルウィンドウを開き、次のコマンドを実行して、[http://localhost:4502](http://localhost:4502)上で実行されているローカルAEMインスタンスにアプリ全体をビルドしてデプロイします。
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal
@@ -129,11 +128,11 @@ SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は�
 
    >[!NOTE]
    >
-   > このプロジェクトでは、プロジェクト全体を構築しパッケージ化するMavenプロファイルは`autoInstallSinglePackage`です
+   > このプロジェクトでは、プロジェクト全体をビルドおよびパッケージ化するMavenプロファイルは`autoInstallSinglePackage`です。
 
    >[!CAUTION]
    >
-   > ビルド中にエラーが発生した場合は、[Maven settings.xmlファイルにAdobeのMavenアーティファクトリポジトリ](https://helpx.adobe.com/jp/experience-manager/kb/SetUpTheAdobeMavenRepository.html)が含まれていることを確認してください。
+   > ビルド中にエラーが発生した場合は、[Maven settings.xmlファイルにAdobeのMavenアーティファクトリポジトリ](https://helpx.adobe.com/jp/experience-manager/kb/SetUpTheAdobeMavenRepository.html)が含まれていることを確認します。
 
 1. 次の URL に移動します。
 
@@ -146,37 +145,37 @@ SPAの開発はAEMの開発に1足ずつ、もう1足ずつある。 目標は�
 
    ![コンポーネントの編集](assets/spa-editor-helloworld-tutorial-use/editcontent.png)
 
-1. [!UICONTROL ページプロパティ]アイコンを選択して、[!UICONTROL ページプロパティ]を開きます。 「[!UICONTROL テンプレートを編集]」を選択して、ページのテンプレートを開きます。
+1. [!UICONTROL ページのプロパティ]アイコンを選択して、[!UICONTROL ページのプロパティ]を開きます。 「[!UICONTROL テンプレートを編集]」を選択して、ページのテンプレートを開きます。
 
    ![ページプロパティメニュー](assets/spa-editor-helloworld-tutorial-use/page-properties.png)
 
-1. 最新バージョンのSPAエディタでは、[編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html)は、従来のサイト実装と同じ方法で使用できます。 これは、後でカスタムコンポーネントで再訪問します。
+1. SPAエディターの最新バージョンでは、従来のSites実装と同じ方法で[編集可能なテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/page-templates-editable.html)を使用できます。 これは、後でカスタムコンポーネントで再度表示されます。
 
    >[!NOTE]
    >
-   > 編集可能なテンプレートは、AEM 6.5およびAEM 6.4 + **Service Pack 5**&#x200B;でのみサポートされます。
+   > 編集可能なテンプレートは、AEM 6.5とAEM 6.4 + **Service Pack 5**&#x200B;でのみサポートされます。
 
 ## 開発の概要{#development-overview}
 
-![概要開発](assets/spa-editor-helloworld-tutorial-use/diagramv2.png)
+![開発の概要](assets/spa-editor-helloworld-tutorial-use/diagramv2.png)
 
-SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導入する準備ができたら、次の高レベルの手順を実行します（上図を参照）。
+SPAの開発の繰り返しは、AEMとは独立しておこなわれます。 SPAをAEMにデプロイする準備が整ったら、（上の図に示すように）次の大まかな手順を実行します。
 
-1. AEMプロジェクトビルドが呼び出され、続いてSPAプロジェクトのビルドがトリガーされます。 We.Retailジャーナルは、[**フロントエンド —maven-plugin**](https://github.com/eirslett/frontend-maven-plugin)を使用します。
-1. SPAプロジェクトの&#x200B;[**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator)は、コンパイル済みのSPAをAEMプロジェクトのAEMクライアントライブラリとして埋め込みます。
-1. AEMプロジェクトは、コンパイル済みのSPAと他のサポートするAEMコードを含むAEMパッケージを生成します。
+1. AEMプロジェクトビルドが呼び出され、SPAプロジェクトのビルドがトリガーされます。 We.Retailジャーナルは、[**frontend-maven-plugin**](https://github.com/eirslett/frontend-maven-plugin)を使用します。
+1. SPAプロジェクトの&#x200B;[**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator)は、コンパイル済みのSPAをAEMプロジェクトにAEMクライアントライブラリとして埋め込みます。
+1. AEMプロジェクトは、コンパイル済みのSPAと、その他のサポートするAEMコードを含むAEMパッケージを生成します。
 
-## AEMコンポーネントを作成{#aem-component}
+## AEMコンポーネント{#aem-component}の作成
 
 **担当者：AEM 開発者**
 
-最初にAEMコンポーネントが作成されます。 AEMコンポーネントは、Reactコンポーネントによって読み取られるJSONプロパティのレンダリングを担当します。 AEMコンポーネントは、コンポーネントの編集可能なプロパティに関するダイアログを提供する役割も果たします。
+最初にAEMコンポーネントが作成されます。 AEMコンポーネントは、Reactコンポーネントによって読み取られるJSONプロパティのレンダリングを担当します。 AEMコンポーネントは、コンポーネントの編集可能なプロパティのダイアログを提供する役割も果たします。
 
-[!DNL Eclipse]または他の[!DNL IDE]を使用して、We.RetailジャーナルMavenプロジェクトをインポートします。
+[!DNL Eclipse]または他の[!DNL IDE]を使用して、We.Retail Journal Mavenプロジェクトをインポートします。
 
-1. リアクタ&#x200B;**pom.xml**&#x200B;を更新し、[!DNL Apache Rat]プラグインを削除します。 このプラグインは、各ファイルをチェックして、ライセンスヘッダーがあることを確認します。 当社の目的上、この機能に関心を持つ必要はありません。
+1. リアクター&#x200B;**pom.xml**&#x200B;を更新して、[!DNL Apache Rat]プラグインを削除します。 このプラグインは、各ファイルをチェックして、Licenseヘッダーがあることを確認します。 この機能に関心を持つ必要はありません。
 
-   **aem-sample-we-retail-journal/pom.xml**&#x200B;から&#x200B;**apache-rate-plugin**&#x200B;を削除します。
+   **aem-sample-we-retail-journal/pom.xml**&#x200B;で、**apache-rate-plugin**&#x200B;を削除します。
 
    ```xml
    <!-- Remove apache-rat-plugin -->
@@ -200,8 +199,8 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
        </plugin>
    ```
 
-1. **we-retail-ジャーナル-content** (`<src>/aem-sample-we-retail-journal/ui.apps`)モジュールで、`ui.apps/jcr_root/apps/we-retail-journal/components`の下に&#x200B;**cq:Component**&#x200B;というタイプの&#x200B;**helloworld**&#x200B;という新しいノードを作成します。
-1. **helloworld追加**&#x200B;コンポーネントに対する次のプロパティ。以下のXML(`/helloworld/.content.xml`)で表されます。
+1. **we-retail-journal-content** (`<src>/aem-sample-we-retail-journal/ui.apps`)モジュールで、`ui.apps/jcr_root/apps/we-retail-journal/components`の下に&#x200B;**cq:Component**&#x200B;型の&#x200B;**helloworld**&#x200B;という名前の新しいノードを作成します。
+1. **helloworld**&#x200B;コンポーネントに次のプロパティを追加します。以下に示すXML(`/helloworld/.content.xml`)で表されます。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -216,12 +215,12 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    >[!NOTE]
    >
-   > 編集可能なテンプレート機能を理解するために、意図的に`componentGroup="Custom Components"`を設定しました。 実際のプロジェクトでは、コンポーネントグループの数を最小に抑えることが最善策なので、他のコンテンツコンポーネントに合わせて「[!DNL We.Retail Journal]」の方が適切なグループにします。
+   > 編集可能テンプレート機能を説明するために、意図的に`componentGroup="Custom Components"`を設定しました。 実際のプロジェクトでは、コンポーネントグループの数を最小限に抑えることをお勧めします。そのため、他のコンテンツコンポーネントに合わせて「[!DNL We.Retail Journal]」を適切なグループにします。
    >
-   > 編集可能なテンプレートは、AEM 6.5およびAEM 6.4 + **Service Pack 5**&#x200B;でのみサポートされます。
+   > AEM 6.5とAEM 6.4 + **Service Pack 5**&#x200B;のみが編集可能なテンプレートをサポートしています。
 
-1. 次に、**Hello World**&#x200B;コンポーネント用にカスタムメッセージを設定できるダイアログが作成されます。 `/apps/we-retail-journal/components/helloworld`の下に、**nt:unstructured**&#x200B;のノード名&#x200B;**cq:dialog**&#x200B;を追加します。
-1. **cq:dialog**&#x200B;には、**[!DNL message]**&#x200B;という名前のプロパティに対するテキストを保持する1つのテキストフィールドが表示されます。 新しく作成した&#x200B;**cq:dialog**&#x200B;の下に、次のノードとプロパティを追加します。これらのノードとプロパティは、下のXML(`helloworld/_cq_dialog/.content.xml`)で示します。
+1. 次に、**Hello World**&#x200B;コンポーネント用にカスタムメッセージを設定するためのダイアログが作成されます。 `/apps/we-retail-journal/components/helloworld`の下に、**nt:unstructured**&#x200B;のノード名&#x200B;**cq:dialog**&#x200B;を追加します。
+1. **cq:dialog**&#x200B;には、**[!DNL message]**&#x200B;という名前のプロパティに対するテキストを保持する1つのテキストフィールドが表示されます。 新しく作成した&#x200B;**cq:dialog**&#x200B;の下に、以下のノードとプロパティを追加します。これらのノードとプロパティは、以下のXML(`helloworld/_cq_dialog/.content.xml`)で表されます。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -274,13 +273,13 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    ![ファイル構造](assets/spa-editor-helloworld-tutorial-use/updated-with-dialog.png)
 
-   上記のXMLノード定義は、1つのテキストフィールドを持つダイアログを作成し、ユーザーが「メッセージ」を入力できるようにします。 `<message />`ノード内のプロパティ`name="./message"`をメモしておきます。 AEM内のJCRに保存されるプロパティの名前です。
+   上記のXMLノード定義は、ユーザーが「メッセージ」を入力できる単一のテキストフィールドを持つダイアログを作成します。 `<message />`ノード内のプロパティ`name="./message"`に注意してください。 これは、AEM内のJCRに保存されるプロパティの名前です。
 
-1. 次に、空のポリシーダイアログが作成されます(`cq:design_dialog`)。 テンプレートエディターでコンポーネントを表示するには、ポリシーダイアログが必要です。 この単純な使用例では、空のダイアログになります。
+1. 次に、空のポリシーダイアログが作成されます(`cq:design_dialog`)。 テンプレートエディターでコンポーネントを表示するには、ポリシーダイアログが必要です。 このシンプルな使用例では、空のダイアログになります。
 
    `/apps/we-retail-journal/components/helloworld`の下に、`nt:unstructured`のノード名`cq:design_dialog`を追加します。
 
-   設定は次のXMLで表されます(`helloworld/_cq_design_dialog/.content.xml`)
+   設定は、以下のXMLで表されます(`helloworld/_cq_design_dialog/.content.xml`)。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -295,30 +294,30 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    $ mvn -PautoInstallPackage clean install
    ```
 
-   [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/global/components/helloworld)で、`/apps/we-retail-journal/components:`の下のフォルダーを検査して、コンポーネントが展開されたことを検証します
+   [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/global/components/helloworld)で、`/apps/we-retail-journal/components:`の下のフォルダーを調べて、コンポーネントがデプロイされたことを検証します。
 
-   ![CRXDE Liteにデプロイされたコンポーネント構造](assets/spa-editor-helloworld-tutorial-use/updated-component-withdialogs.png)
+   ![デプロイ済みのコンポーネント構造のCRXDE Lite](assets/spa-editor-helloworld-tutorial-use/updated-component-withdialogs.png)
 
-## Slingモデルを作成{#create-sling-model}
+## Slingモデル{#create-sling-model}の作成
 
 **担当者：AEM 開発者**
 
-次に[!DNL Sling Model]が作成され、[!DNL Hello World]コンポーネントをバックします。 従来のWCMの使用例では、[!DNL Sling Model]がビジネスロジックを実装し、サーバー側レンダリングスクリプト(HTL)が[!DNL Sling Model]を呼び出します。 これにより、レンダリングスクリプトが比較的単純になります。
+次に、[!DNL Sling Model]コンポーネントをバックする[!DNL Hello World]が作成されます。 従来のWCMの使用例では、 [!DNL Sling Model]がビジネスロジックを実装し、サーバー側レンダリングスクリプト(HTL)が[!DNL Sling Model]を呼び出します。 これにより、レンダリングスクリプトが比較的シンプルになります。
 
-[!DNL Sling Models] は、サーバー側のビジネスロジックを実装するSPAの使用例でも使用されます。[!DNL SPA]の使用例では、[!DNL Sling Models]がそのメソッドをシリアル化されたJSONとして公開する点が異なります。
+[!DNL Sling Models] は、サーバー側のビジネスロジックを実装するSPAの使用例でも使用されます。違いは、[!DNL SPA]の使用例では、[!DNL Sling Models]がそのメソッドをシリアル化されたJSONとして公開する点です。
 
 >[!NOTE]
 >
->ベストプラクティスとして、開発者は可能な限り、[AEMコアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を使用するようにしてください。 他の機能の中でも、コアコンポーネントは「SPA対応」のJSON出力を[!DNL Sling Models]に提供し、開発者はよりフロントエンドでのプレゼンテーションに集中できます。
+>ベストプラクティスとして、開発者は可能な限り[AEMコアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を使用するようにしてください。 他の機能の中でも、コアコンポーネントは「SPA対応」のJSON出力を[!DNL Sling Models]に提供し、開発者はフロントエンドプレゼンテーションに専念できます。
 
-1. 任意のエディターで、**we-retail-commons**&#x200B;プロジェクト(`<src>/aem-sample-we-retail-journal/bundles/commons`)を開きます。
+1. 任意のエディターで、**we-retail-journal-commons**&#x200B;プロジェクト(`<src>/aem-sample-we-retail-journal/bundles/commons`)を開きます。
 1. パッケージ`com.adobe.cq.sample.spa.commons.impl.models`内：
    * `HelloWorld`という名前の新しいクラスを作成します。
-   * &lt;a0追加/>の実装インターフェイス`com.adobe.cq.export.json.ComponentExporter.`
+   * `com.adobe.cq.export.json.ComponentExporter.`の実装インターフェイスを追加します。
 
-   ![新規Javaクラスウィザード](assets/spa-editor-helloworld-tutorial-use/fig5.png)
+   ![新しいJavaクラスウィザード](assets/spa-editor-helloworld-tutorial-use/fig5.png)
 
-   [!DNL Sling Model]がAEM Content Servicesと互換性を持つようにするには、`ComponentExporter`インターフェイスを実装する必要があります。
+   `ComponentExporter`インターフェイスは、[!DNL Sling Model]がAEM Content Servicesと互換性を持つように実装する必要があります。
 
    ```java
     package com.adobe.cq.sample.spa.commons.impl.models;
@@ -334,7 +333,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
     }
    ```
 
-1. 追加`RESOURCE_TYPE`という静的変数。[!DNL HelloWorld]コンポーネントのリソースタイプを識別します。
+1. `RESOURCE_TYPE`という名前の静的変数を追加して、[!DNL HelloWorld]コンポーネントのリソースタイプを識別します。
 
    ```java
     ...
@@ -346,7 +345,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
     }
    ```
 
-1. 追加`@Model`と`@Exporter`のOSGi注釈。 `@Model`注釈は、クラスを[!DNL Sling Model]として登録します。 `@Exporter`注釈は、[!DNL Jackson Exporter]フレームワークを使用して、シリアル化されたJSONとしてメソッドを公開します。
+1. `@Model`と`@Exporter`のOSGi注釈を追加します。 `@Model`注釈は、クラスを[!DNL Sling Model]として登録します。 `@Exporter`注釈は、[!DNL Jackson Exporter]フレームワークを使用して、メソッドをシリアル化されたJSONとして公開します。
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -369,9 +368,9 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    ...
    ```
 
-1. メソッド`getDisplayMessage()`を実装して、JCRプロパティ`message`を返します。 `@ValueMapValue`の[!DNL Sling Model]注釈を使用すると、コンポーネントの下に保存されているプロパティ`message`を簡単に取得できます。 `@Optional`注釈は重要です。コンポーネントが最初にページに追加されたときに、`message`に値が入力されないからです。
+1. メソッド`getDisplayMessage()`を実装して、JCRプロパティ`message`を返します。 `@ValueMapValue`の[!DNL Sling Model]注釈を使用すると、コンポーネントの下に保存されているプロパティ`message`を簡単に取得できます。 `@Optional`注釈は重要です。コンポーネントが最初にページに追加されると、`message`に値が入力されなくなるからです。
 
-   ビジネスロジックの一部として、「**Hello**」という文字列がメッセージの先頭に付加されます。
+   ビジネスロジックの一部として、文字列「**Hello**」がメッセージの先頭に追加されます。
 
    ```java
    import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
@@ -400,9 +399,9 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    >[!NOTE]
    >
-   > メソッド名`getDisplayMessage`は重要です。 [!DNL Sling Model]が[!DNL Jackson Exporter]でシリアル化されると、JSONプロパティとして公開されます。`displayMessage`。 [!DNL Jackson Exporter]は、（無視するように明示的にマークされていない限り）パラメーターを取らないすべての`getter`メソッドをシリアル化して公開します。 後ほど、リアクト/Angularアプリでこのプロパティ値を読み取り、アプリの一部として表示します。
+   > メソッド名`getDisplayMessage`は重要です。 [!DNL Sling Model]が[!DNL Jackson Exporter]でシリアル化されると、JSONプロパティとして公開されます。`displayMessage`. [!DNL Jackson Exporter]は、（無視するように明示的にマークされていない限り）パラメーターを受け取らないすべての`getter`メソッドをシリアル化して公開します。 後でReact /Angularアプリで、このプロパティ値を読み取り、アプリの一部として表示します。
 
-   メソッド`getExportedType`も重要です。 コンポーネント`resourceType`の値は、JSONデータをフロントエンドコンポーネント(Angular/反応)に「マップ」するために使用されます。 次のセクションで、この点について説明します。
+   メソッド`getExportedType`も重要です。 コンポーネント`resourceType`の値を使用して、JSONデータをフロントエンドコンポーネント(Angular/React)に「マッピング」します。 次の節でこれについて説明します。
 
 1. メソッド`getExportedType()`を実装して、`HelloWorld`コンポーネントのリソースタイプを返します。
 
@@ -413,7 +412,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
        }
    ```
 
-   [**HelloWorld.java**&#x200B;の完全なコードは、こちらから参照できます。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/bundles/commons/HelloWorld.java)
+   [**HelloWorld.java**&#x200B;の完全なコードは、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/bundles/commons/HelloWorld.java)
 
 1. Apache Mavenを使用してAEMにコードをデプロイします。
 
@@ -422,38 +421,38 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    $ mvn -PautoInstallPackage clean install
    ```
 
-   OSGiコンソールで[[!UICONTROL ステータス] > [!UICONTROL スリングモデル]](http://localhost:4502/system/console/status-slingmodels)に移動して、[!DNL Sling Model]の展開と登録を確認します。
+   OSGiコンソールで[[!UICONTROL Status] / [!UICONTROL Sling Models]](http://localhost:4502/system/console/status-slingmodels)に移動して、[!DNL Sling Model]のデプロイメントと登録を確認します。
 
-   `HelloWorld` Slingモデルが`we-retail-journal/components/helloworld` Slingリソースタイプにバインドされ、[!DNL Sling Model Exporter Servlet]として登録されていることがわかります。
+   `HelloWorld` Sling Modelが`we-retail-journal/components/helloworld` Slingリソースタイプにバインドされ、[!DNL Sling Model Exporter Servlet]として登録されていることがわかります。
 
    ```shell
    com.adobe.cq.sample.spa.commons.impl.models.HelloWorld - we-retail-journal/components/helloworld
    com.adobe.cq.sample.spa.commons.impl.models.HelloWorld exports 'we-retail-journal/components/helloworld' with selector 'model' and extension '[Ljava.lang.String;@6480f3e5' with exporter 'jackson'
    ```
 
-## 反応コンポーネントを作成{#react-component}
+## Reactコンポーネントの作成{#react-component}
 
 **担当者：フロントエンド開発者**
 
-次に、Reactコンポーネントが作成されます。 **react-app**&#x200B;モジュール(`<src>/aem-sample-we-retail-journal/react-app`)を開き、任意のエディターを使用します。
+次に、Reactコンポーネントが作成されます。 **react-app**&#x200B;モジュール(`<src>/aem-sample-we-retail-journal/react-app`)を、任意のエディターで開きます。
 
 >[!NOTE]
 >
-> [Angular開発](#angular-component)にだけ興味がある場合は、このセクションを省略してください。
+> [Angular開発](#angular-component)のみをご利用の場合は、このセクションを省略してください。
 
 1. `react-app`フォルダー内で、srcフォルダーに移動します。 componentsフォルダーを展開して、既存のReactコンポーネントファイルを表示します。
 
-   ![reactコンポーネントファイル構造](assets/spa-editor-helloworld-tutorial-use/react-components.png)
+   ![Reactコンポーネントのファイル構造](assets/spa-editor-helloworld-tutorial-use/react-components.png)
 
-1. componentsフォルダーの追加下に、`HelloWorld.js`という名前の新しいファイルがあります。
-1. 開く `HelloWorld.js`. Reactコンポー追加ネントライブラリを読み込むための読み込みステートメント。 Adobeが提供する追加`MapTo`ヘルパーをインポートする2つ目のインポートステートメント。 `MapTo`ヘルパーは、ReactコンポーネントとAEMコンポーネントのJSONとのマッピングを提供します。
+1. componentsフォルダーの下に`HelloWorld.js`という名前の新しいファイルを追加します。
+1. `HelloWorld.js` を開きます。Reactコンポーネントライブラリを読み込むためのimport文を追加します。 2つ目のimport文を追加して、Adobeが提供する`MapTo`ヘルパーをインポートします。 `MapTo`ヘルパーは、ReactコンポーネントのAEMコンポーネントのJSONへのマッピングを提供します。
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/cq-react-editable-components';
    ```
 
-1. インポートの下に、`HelloWorld`という名前の新しいクラスが作成され、React `Component`インターフェイスが拡張されます。 追加`HelloWorld`クラスに必要な`render()`メソッド。
+1. インポートの下に、React `Component`インターフェイスを拡張する`HelloWorld`という新しいクラスを作成します。 必要な`render()`メソッドを`HelloWorld`クラスに追加します。
 
    ```js
    import React, {Component} from 'react';
@@ -467,11 +466,11 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    }
    ```
 
-1. `MapTo`ヘルパーは、`cqModel`という名前のオブジェクトをReactコンポーネントのpropの一部として自動的に含めます。 `cqModel`には、[!DNL Sling Model]によって公開されるすべてのプロパティが含まれます。
+1. `MapTo`ヘルパーには、Reactコンポーネントのpropの一部として`cqModel`という名前のオブジェクトが自動的に含まれます。 `cqModel`には、[!DNL Sling Model]によって公開されるすべてのプロパティが含まれます。
 
-   前に作成した[!DNL Sling Model]には、`getDisplayMessage()`メソッドが含まれています。 `getDisplayMessage()` は、出力時に名前が付けられたJSONキー `displayMessage` として変換されます。
+   前に作成した[!DNL Sling Model]には、メソッド`getDisplayMessage()`が含まれています。 `getDisplayMessage()` は、出力時にという名前のJSONキーとし `displayMessage` て変換されます。
 
-   `render()`メソッドを実装して、`displayMessage`の値を含む`h1`タグを出力します。 [JavaScriptの構文拡張子であるJSX](https://reactjs.org/docs/introducing-jsx.html)(JSX)は、コンポーネントの最終的なマークアップを返すために使用されます。
+   `render()`メソッドを実装して、`displayMessage`の値を含む`h1`タグを出力します。 [JSX](https://reactjs.org/docs/introducing-jsx.html)（JavaScriptの構文拡張）は、コンポーネントの最終的なマークアップを返すために使用されます。
 
    ```js
    ...
@@ -491,7 +490,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    }
    ```
 
-1. 設定の編集メソッドを実装します。 このメソッドは`MapTo`ヘルパーを介して渡され、コンポーネントが空の場合にプレースホルダーを表示する情報をAEMエディターに提供します。 これは、コンポーネントがSPAに追加されているが、まだオーサリングされていない場合に発生します。 追加`HelloWorld`クラスの下に次のように記述します。
+1. 設定編集メソッドを実装します。 このメソッドは`MapTo`ヘルパーを介して渡され、コンポーネントが空の場合にプレースホルダーを表示する情報をAEMエディターに提供します。 これは、コンポーネントがSPAに追加されたが、まだオーサリングされていない場合に発生します。 `HelloWorld`クラスの下に次を追加します。
 
    ```js
    ...
@@ -512,7 +511,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    ...
    ```
 
-1. ファイルの末尾で`MapTo`ヘルパーを呼び出し、`HelloWorld`クラスと`HelloWorldEditConfig`を渡します。 これにより、AEMコンポーネントのリソースタイプに基づいて、React ComponentがAEMコンポーネントにマッピングされます。`we-retail-journal/components/helloworld`.
+1. ファイルの最後で、 `MapTo`ヘルパーを呼び出し、 `HelloWorld`クラスと`HelloWorldEditConfig`を渡します。 これにより、AEMコンポーネントのリソースタイプに基づいて、ReactコンポーネントがAEMコンポーネントにマッピングされます。`we-retail-journal/components/helloworld`.
 
    ```js
    MapTo('we-retail-journal/components/helloworld')(HelloWorld, HelloWorldEditConfig);
@@ -522,7 +521,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
 1. `ImportComponents.js` ファイルを開きます。`<src>/aem-sample-we-retail-journal/react-app/src/ImportComponents.js`にあります。
 
-   コンパイ追加ルされたJavaScriptバンドル内の他のコンポーネントと`HelloWorld.js`を必要とする行：
+   コンパイル済みJavaScriptバンドル内の他のコンポーネントと`HelloWorld.js`を必要とする行を追加します。
 
    ```js
    ...
@@ -532,7 +531,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    ...
    ```
 
-1. `components`フォルダーに、`HelloWorld.js.`の兄弟として`HelloWorld.css`という名前の新しいファイルを作成します。次のようにファイルに入力して、`HelloWorld`コンポーネントの基本的なスタイルを作成します。
+1. `components`フォルダーに、`HelloWorld.css`という名前の新しいファイルを`HelloWorld.js.`の兄弟として作成します。次のようにファイルを設定して、`HelloWorld`コンポーネントの基本的なスタイルを作成します。
 
    ```css
    /* HelloWorld.css to style HelloWorld component */
@@ -545,7 +544,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    }
    ```
 
-1. `HelloWorld.js`を再度開き、インポート文の下で更新して`HelloWorld.css`を必要とします：
+1. `HelloWorld.js`を再度開き、`HelloWorld.css`が必要になるようにimport文の下で更新します。
 
    ```js
    import React, {Component} from 'react';
@@ -563,28 +562,28 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-1. [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js)で`/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`を開きます。 app.jsでHelloWorldのクイック検索を実行し、コンパイル済みアプリにReactコンポーネントが含まれていることを確認します。
+1. [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js)で、`/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`を開きます。 app.jsでHelloWorldをクイック検索し、Reactコンポーネントがコンパイル済みアプリに含まれていることを確認します。
 
    >[!NOTE]
    >
-   > **app.** jsは、バンドルされたReactアプリと同じです。コードが人間に読み取り可能でなくなりました。 `npm run build`コマンドは、最新のブラウザーで解釈できるコンパイル済みJavaScriptを出力する最適化ビルドをトリガーしました。
+   > **app.js** は、バンドルされたReactアプリを表示します。コードは人間が読み取れなくなりました。 `npm run build`コマンドは、最新のブラウザーで解釈できるコンパイル済みのJavaScriptを出力する最適化されたビルドをトリガーしました。
 
 
-## angularコンポーネントの作成{#angular-component}
+## angularコンポーネント{#angular-component}の作成
 
 **担当者：フロントエンド開発者**
 
 >[!NOTE]
 >
-> Reactの開発に関心がある場合は、このセクションを省略してかまいません。
+> Reactの開発にのみ関心がある場合は、この節をスキップしてください。
 
-次に、Angularコンポーネントが作成されます。 **angularアプリ**&#x200B;モジュール(`<src>/aem-sample-we-retail-journal/angular-app`)を開き、任意のエディターを使用します。
+次に、Angularコンポーネントが作成されます。 **angularアプリ**&#x200B;モジュール(`<src>/aem-sample-we-retail-journal/angular-app`)を任意のエディターで開きます。
 
-1. `angular-app`フォルダー内で、`src`フォルダーに移動します。 componentsフォルダーを展開し、既存のAngularコンポーネントファイルを表示します。
+1. `angular-app`フォルダー内で、 `src`フォルダーに移動します。 componentsフォルダーを展開して、既存のAngularコンポーネントファイルを表示します。
 
    ![Angularファイル構造](assets/spa-editor-helloworld-tutorial-use/angular-file-structure.png)
 
-1. componentsフォルダーの追加下に、`helloworld`という名前の新しいフォルダーがあります。 `helloworld`フォルダーの下に、`helloworld.component.css, helloworld.component.html, helloworld.component.ts`という名前の新しいファイルを追加します。
+1. componentsフォルダーの下に`helloworld`という名前の新しいフォルダーを追加します。 `helloworld`フォルダーの下に、`helloworld.component.css, helloworld.component.html, helloworld.component.ts`という名前の新しいファイルを追加します。
 
    ```plain
    /angular-app
@@ -597,7 +596,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    +                    helloworld.component.ts
    ```
 
-1. 開く `helloworld.component.ts`. angular追加`Component`および`Input`クラスを読み込む読み込みステートメント。 `styleUrls`と`templateUrl`を`helloworld.component.css`と`helloworld.component.html`に向けて、新しいコンポーネントを作成します。 最後に、`HelloWorldComponent`の予期された入力を`displayMessage`にエクスポートします。
+1. `helloworld.component.ts` を開きます。angular`Component`および`Input`クラスをインポートするimport文を追加します。 `styleUrls`と`templateUrl`を`helloworld.component.css`と`helloworld.component.html`に向けて、新しいコンポーネントを作成します。 最後に、`displayMessage`の入力を想定してクラス`HelloWorldComponent`を書き出します。
 
    ```js
    //helloworld.component.ts
@@ -618,7 +617,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    >[!NOTE]
    >
-   > 以前に作成した[!DNL Sling Model]を思い出すと、**getDisplayMessage()**&#x200B;メソッドがありました。 このメソッドのシリアル化されたJSONは&#x200B;**displayMessage**&#x200B;です。現在、Angularアプリで読んでいます。
+   > 前に作成した[!DNL Sling Model]を思い出すと、**getDisplayMessage()**&#x200B;メソッドがあります。 このメソッドのシリアル化されたJSONは、**displayMessage**&#x200B;で、Angularアプリで読み上げます。
 
 1. `helloworld.component.html`を開き、`displayMessage`プロパティを印刷する`h1`タグを含めます。
 
@@ -628,7 +627,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    </h1>
    ```
 
-1. `helloworld.component.css`を更新して、コンポーネントの基本的なスタイルを含めます。
+1. コンポーネントの基本的なスタイルを含めるように`helloworld.component.css`を更新します。
 
    ```css
    :host-context {
@@ -646,7 +645,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    }
    ```
 
-1. `helloworld.component.spec.ts`を次のテストベッドに更新します：
+1. `helloworld.component.spec.ts`を次のテストベッドに更新します。
 
    ```js
    import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -676,7 +675,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    });
    ```
 
-1. 次に`src/components/mapping.ts`を更新し、`HelloWorldComponent`を含めます。 コンポーネントが追加設定される前に、AEMエディタでプレースホルダーを示す`HelloWorldEditConfig`。 最後に、`MapTo`ヘルパーを使用してAEMコンポーネントをAngularコンポーネントにマップする行を追加します。
+1. 次に`src/components/mapping.ts`を更新し、`HelloWorldComponent`を含めます。 コンポーネントが設定される前に、AEMエディターでプレースホルダーをマークする`HelloWorldEditConfig`を追加します。 最後に、`MapTo`ヘルパーを使用してAEMコンポーネントをAngularコンポーネントにマッピングする行を追加します。
 
    ```js
    // src/components/mapping.ts
@@ -699,9 +698,9 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    MapTo('we-retail-journal/components/helloworld')(HelloWorldComponent, HelloWorldEditConfig);
    ```
 
-   [**mapping.ts**&#x200B;の完全なコードはこちらにあります。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/mapping.ts)
+   [**mapping.ts**&#x200B;の完全なコードは、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/mapping.ts)
 
-1. `src/app.module.ts`を更新して&#x200B;**NgModule**&#x200B;を更新します。 追加&#x200B;**`HelloWorldComponent`**&#x200B;は、**AppModule**&#x200B;に属する&#x200B;**宣言**&#x200B;として指定します。 また、`HelloWorldComponent`を&#x200B;**entryComponent**&#x200B;として追加し、コンパイルして、JSONモデルの処理時にアプリに動的に含めることもできます。
+1. `src/app.module.ts`を更新して、**NgModule**&#x200B;を更新します。 **`HelloWorldComponent`**&#x200B;を、**AppModule**&#x200B;に属する&#x200B;**宣言**&#x200B;として追加します。 また、JSONモデルの処理時にコンパイルされ、アプリに動的に含められるように、 `HelloWorldComponent`を&#x200B;**entryComponent**&#x200B;として追加します。
 
    ```js
    import { HelloWorldComponent } from './components/helloworld/helloworld.component';
@@ -747,17 +746,17 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-1. [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js)で`/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`を開きます。 `main.js`で&#x200B;**HelloWorld**&#x200B;のクイック検索を実行し、Angularコンポーネントが含まれていることを確認します。
+1. [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js)で、`/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`を開きます。 `main.js`で&#x200B;**HelloWorld**&#x200B;のクイック検索を実行し、Angularコンポーネントが含まれていることを確認します。
 
    >[!NOTE]
    >
-   > **main.** jsは、バンドル済みのAngularアプリを表します。コードが人間に読み取り可能でなくなりました。 npm run buildコマンドは、最新のブラウザーで解釈できるコンパイル済みJavaScriptを出力する最適化ビルドをトリガーしました。
+   > **main.js** は、バンドルされたAngularアプリです。コードは人間が読み取れなくなりました。 npm run buildコマンドにより、最新のブラウザーで解釈できるコンパイル済みのJavaScriptを出力する最適化ビルドがトリガーされました。
 
-## テンプレートの更新{#template-update}
+## テンプレート{#template-update}の更新
 
-1. ReactまたはAngularのバージョンの編集可能なテンプレートに移動します。
+1. ReactまたはAngular版の編集可能テンプレートに移動します。
 
-   * (Angular)[http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
+   * (Angular) [http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
    * (React) [http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html)
 
 1. メインの[!UICONTROL レイアウトコンテナ]を選択し、[!UICONTROL ポリシー]アイコンを選択してポリシーを開きます。
@@ -768,21 +767,21 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    ![レイアウトコンテナポリシーの設定](assets/spa-editor-helloworld-tutorial-use/layoutcontainer-update.png)
 
-1. 保存後は、**[!DNL HelloWorld]**&#x200B;コンポーネントが[!UICONTROL レイアウトコンテナ]で許可されているコンポーネントとして表示されます。
+1. 保存後、**[!DNL HelloWorld]**&#x200B;コンポーネントが[!UICONTROL レイアウトコンテナ]に許可されたコンポーネントとして表示されます。
 
-   ![許可されているコンポーネントが更新されました](assets/spa-editor-helloworld-tutorial-use/allowed-components.png)
+   ![許可されたコンポーネントの更新](assets/spa-editor-helloworld-tutorial-use/allowed-components.png)
 
    >[!NOTE]
    >
-   > SPAエディタの編集可能なテンプレート機能をサポートしているのはAEM 6.5およびAEM 6.4.5のみです。 AEM 6.4を使用している場合は、次のCRXDE Liteを介して、許可されたコンポーネントのポリシーを手動で設定する必要があります。`/conf/we-retail-journal/react/settings/wcm/policies/wcm/foundation/components/responsivegrid/default`または`/conf/we-retail-journal/angular/settings/wcm/policies/wcm/foundation/components/responsivegrid/default`
+   > AEM 6.5およびAEM 6.4.5のみが、SPA Editorの編集可能なテンプレート機能をサポートしています。 AEM 6.4を使用している場合は、CRXDE Liteを使用して、許可されたコンポーネントのポリシーを手動で設定する必要があります。`/conf/we-retail-journal/react/settings/wcm/policies/wcm/foundation/components/responsivegrid/default`または`/conf/we-retail-journal/angular/settings/wcm/policies/wcm/foundation/components/responsivegrid/default`
 
-   [!UICONTROL レイアウトコンテナ]の[!UICONTROL 許可されているコンポーネント]の更新されたポリシー設定を示すCRXDE Lite:
+   [!UICONTROL レイアウトコンテナ]の[!UICONTROL 許可されたコンポーネント]の更新されたポリシー設定を示すCRXDE Lite:
 
-   ![レイアウトコンテナの許可されたコンポーネントの更新されたポリシー設定を示すCRXDE Lite](assets/spa-editor-helloworld-tutorial-use/editable-template-policy.png)
+   ![レイアウトコンテナ内の許可されたコンポーネントの更新されたポリシー設定を示すCRXDE Lite](assets/spa-editor-helloworld-tutorial-use/editable-template-policy.png)
 
 ## まとめ {#putting-together}
 
-1. angularまたはリアクトページに移動します。
+1. angularまたはReactページに移動します。
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
@@ -795,7 +794,7 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
    ![ハローワールドプレースホルダー](assets/spa-editor-helloworld-tutorial-use/fig10.png)
 
-1. コンポーネントを選択し、ダイアログに「World」や「Your Name」などのメッセージを追加します。 変更内容を保存します。
+1. コンポーネントを選択し、ダイアログに「World」または「Your Name」というメッセージを追加します。 変更内容を保存します。
 
    ![レンダリングコンポーネント](assets/spa-editor-helloworld-tutorial-use/fig11.png)
 
@@ -803,39 +802,39 @@ SPA開発の反復は、AEMとは独立して発生します。 SPAをAEMに導�
 
 ## 次の手順 {#next-steps}
 
-[HelloWorldコンポーネントの完了したソリューション](assets/spa-editor-helloworld-tutorial-use/aem-sample-we-retail-journal-HelloWorldSolution.zip)
+[HelloWorldコンポーネントの完成したソリューション](assets/spa-editor-helloworld-tutorial-use/aem-sample-we-retail-journal-HelloWorldSolution.zip)
 
-* GitHub](https://github.com/adobe/aem-sample-we-retail-journal)の[[!DNL We.Retail Journal] の完全なソースコード
-* [[!DNL Getting Started with the AEM SPA Editor - WKND Tutorial]](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)と反応を開発する際の詳細なチュートリアルを見てみましょう。
+* GitHubの[[!DNL We.Retail Journal] の完全なソースコード](https://github.com/adobe/aem-sample-we-retail-journal)
+* [[!DNL Getting Started with the AEM SPA Editor - WKND Tutorial]](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)でのReactの開発に関する、より詳しいチュートリアルをご覧ください。
 
 ## トラブルシューティング {#troubleshooting}
 
-### Eclipse {#unable-to-build-project-in-eclipse}にプロジェクトを構築できません
+### Eclipseにプロジェクトを構築できません{#unable-to-build-project-in-eclipse}
 
-**エラー：認識さ** れない目標実行に対して [!DNL We.Retail Journal] プロジェクトをEclipseに読み込むときにエラーが発生しました：
+**エラー：** 認識されていない目標の実行に対し [!DNL We.Retail Journal] て、プロジェクトをEclipseに読み込む際にエラーが発生しました。
 
 `Execution npm install, Execution npm run build, Execution default-analyze-classes*`
 
 ![eclipseエラーウィザード](assets/spa-editor-helloworld-tutorial-use/fig9.png)
 
-**解像度**:後でこれらを解決するには、「完了」をクリックします。これにより、チュートリアルが完了します。
+**解像度**:「完了」をクリックして、後で解決します。これにより、チュートリアルが完了することを妨げないでください。
 
-**エラー**:Reactモジュール `react-app`は、Mavenのビルド中は正常にビルドされません。
+**エラー**:Reactモジュール( ) `react-app`は、Mavenビルド中に正常にビルドされません。
 
-**解像度：リアクトアプリの下にある** フォルダーの削除を `node_modules` 試みてみ **ます**。プロジェクトのルートからApache Mavenコマンド`mvn  clean install -PautoInstallSinglePackage`を再実行します。
+**解決方法：** react-appの下にあ `node_modules` るフォルダーを **削除してみてください**。プロジェクトのルートからApache Mavenコマンド`mvn  clean install -PautoInstallSinglePackage`を再実行します。
 
-### AEM {#unsatisfied-dependencies-in-aem}で満たされていない依存関係
+### AEM {#unsatisfied-dependencies-in-aem}内の未満の依存関係
 
-![パッケージマネージャーの依存関係エラー](assets/spa-editor-helloworld-tutorial-use/we-retail-journal-package-dependency.png)
+![パッケージマネージャーの依存関係のエラー](assets/spa-editor-helloworld-tutorial-use/we-retail-journal-package-dependency.png)
 
-AEMの依存関係が満たされない場合、**[!UICONTROL AEM Package Manager]**&#x200B;または&#x200B;**[!UICONTROL AEM Webコンソール]**（Felixコンソール）で、SPAエディタ機能が使用できないことを示します。
+AEMの依存関係が満たされない場合、**[!UICONTROL AEM Package Manager]**&#x200B;または&#x200B;**[!UICONTROL AEM Webコンソール]**（Felixコンソール）で、SPAエディター機能が使用できないことを示します。
 
-### コンポーネントが表示されません
+### コンポーネントが表示されない
 
-**エラー**:デプロイが成功し、コンパイルされたバージョンのReact/ReactAngularアプリに更新された `helloworld` コンポーネントがあることを確認した後でも、コンポーネントをページにドラッグしても表示されません。コンポーネントはAEM UIで確認できます。
+**エラー**:デプロイメントが正常に完了し、React/Angularアプリのコンパイル済みバージョンに更新済みコンポーネントがあることを確認した後で `helloworld` も、コンポーネントをページにドラッグしてもコンポーネントが表示されません。コンポーネントはAEM UIで確認できます。
 
-**解像度**:ブラウザの履歴/キャッシュをクリアしたり、新しいブラウザを開いたり、匿名モードを使用したりします。それでも問題が発生しない場合は、ローカルのAEMインスタンスのクライアントライブラリキャッシュを無効にします。 AEMは、大きなクライアントライブラリをキャッシュして効率を高めようとします。 古いコードがキャッシュされる問題を修正するために、手動でキャッシュを無効にする必要がある場合があります。
+**解像度**:ブラウザの履歴/キャッシュをクリアし、新しいブラウザを開くか、匿名モードを使用します。それが機能しない場合は、ローカルのAEMインスタンス上のクライアントライブラリキャッシュを無効にします。 AEMは、効率を上げるために、大規模なクライアントライブラリをキャッシュしようとします。 古いコードがキャッシュされる問題を修正するために、キャッシュを手動で無効にする必要が生じる場合があります。
 
-移動先：[http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html)を開き、「キャッシュを無効にする」をクリックします。 反応/Angularページに戻り、ページを更新します。
+次の場所に移動します。[http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html)を開き、「キャッシュを無効にする」をクリックします。 React/Reactページに戻り、Angularを更新します。
 
 ![クライアントライブラリの再構築](assets/spa-editor-helloworld-tutorial-use/invalidatecache.png)
