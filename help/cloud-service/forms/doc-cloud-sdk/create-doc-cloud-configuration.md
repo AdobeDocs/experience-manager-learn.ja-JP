@@ -1,6 +1,6 @@
 ---
 title: カスタムOSGi設定の作成
-description: ドキュメントクラウド固有の詳細を取り込むためのカスタムOSGi設定
+description: Document Cloud固有の詳細を取り込むためのカスタムOSGi設定
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,15 +18,15 @@ ht-degree: 3%
 
 # はじめに
 
-ドキュメントクラウドアカウントの秘密鍵証明書を取り込むためのカスタムOSGi設定の作成
+カスタムOSGi設定を作成して、Document Cloudアカウントの資格情報を取り込みます
 
 
-カスタムOSGi設定を行うには、まず、パブリックメソッドが設定内のフィールドを表すインターフェイスを作成する必要があります。
+カスタムOSGi設定を作成するには、まず、パブリックメソッドで設定内のフィールドを表すインターフェイスを作成する必要があります。
 
 ![doc-cloud-config](assets/doc-cloud-configuration.JPG)
 
 
-DocumentCloudConfigurationという名前のインターフェイスを作成し、その中に次のコードを貼り付けます。
+DocumentCloudConfigurationという名前のインターフェイスを作成し、そこに次のコードを貼り付けます。
 
 ```java
 package com.aemforms.doccloud.core;
