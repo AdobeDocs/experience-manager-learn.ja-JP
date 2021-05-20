@@ -1,16 +1,15 @@
 ---
 title: MySQLデータベースからのフォームデータの格納と取得
-description: フォームデータの格納と取得に関する手順について説明するマルチパートチュートリアル
-feature: Adaptive Forms
+description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
+feature: アダプティブフォーム
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開発
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '96'
@@ -19,9 +18,9 @@ ht-degree: 4%
 ---
 
 
-# データを取得するOSGiサービスの作成
+# OSGiサービスを作成してデータを取得する
 
-次のコードは、保存されたアダプティブフォームデータを保存し、取得するために記述されています。 単純なクエリを使用して、特定のGUIDに関連付けられたアダプティブフォームデータを取得します。 取り込まれたデータは呼び出し元のアプリケーションに返される。 前の手順で作成したのと同じデータソースが、このコードで参照されます。
+次のコードは、保存されたアダプティブフォームのデータを保存して取得するために記述されています。 簡単なクエリを使用して、特定のGUIDに関連付けられたアダプティブフォームデータを取得します。 取得したデータは、呼び出し元のアプリケーションに返されます。 前の手順で作成したのと同じデータソースがこのコードで参照されます
 
 
 ```java
