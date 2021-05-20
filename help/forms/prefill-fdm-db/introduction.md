@@ -1,6 +1,6 @@
 ---
 title: フォームデータモデルを使用した事前入力フォーム
-description: 'フォームデータモデルのリクエスト属性を使用してアダプティブフォームに事前入力 '
+description: 'フォームデータモデルの要求属性を使用してアダプティブフォームに事前入力する '
 feature: アダプティブフォーム
 audience: developer
 doc-type: article
@@ -11,7 +11,6 @@ thumbnail: 36387.jpg
 topic: 開発
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
 source-wordcount: '128'
@@ -22,22 +21,22 @@ ht-degree: 3%
 
 # フォームデータモデルを使用した事前入力フォーム
 
-フォームデータモデルのrequest属性を使用して、アダプティブフォームに入力するデータを取得する方法を学びます。
-このコースを修了すると、以下の内容を学習できます。
+フォームデータモデルのrequest属性を使用して、アダプティブフォームにデータを入力するためのデータを取得する方法を学習します。
+このコースを修了すると、次の内容を学習できます。
 
-* RDBMSバックアップフォームデータモデルの作成
-* 2つのエンティティ間の関連付けを作成
-* フォームデータモデルの&#x200B;_get_&#x200B;サービスから返されたデータをテーブルに入力
-* Form Data Modelのリクエスト属性を使用
+* RDBMSでバックアップされたフォームデータモデルの作成
+* 2エンティティ間の関連付けを作成
+* フォームデータモデルの&#x200B;_get_&#x200B;サービスから返されたデータをテーブルに入力する
+* フォームデータモデルの要求属性を使用する
 
 
-[クリックして、](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
-機能の実況デモをご覧ください。次のビデオでは、コースの概要を説明しています。
+[クリックして、機能の実際のデモを](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+ご覧ください。次のビデオでは、コースの概要を説明します
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## 前提条件
 
 * AEM Formsの作業インスタンス
-* MySQLデータベースとMySQL Workbenchに精通していること
+* MySQLデータベースとMySQL Workbenchについて
 * アダプティブFormsの作成の経験
 
