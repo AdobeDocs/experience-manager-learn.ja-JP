@@ -1,14 +1,13 @@
 ---
 title: AEM Assetsの透かし
-description: AEMをCloud Serviceの透かし機能として使用すると、カスタムの画像レンディションを任意のPNG画像を使用して透かし表示できます。
-feature: Asset Compute Microservices
+description: AEM as a Cloud Serviceの透かし処理機能を使用すると、カスタムの画像レンディションを、任意のPNG画像を使用して透かし処理できます。
+feature: asset computeマイクロサービス
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
-topic: Content Management
+topic: コンテンツ管理
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '63'
@@ -19,13 +18,13 @@ ht-degree: 3%
 
 # 透かし
 
-AEMをCloud Serviceの透かし機能として使用すると、カスタムの画像レンディションを任意のPNG画像を使用して透かし表示できます。
+AEM as a Cloud Serviceの透かし処理機能を使用すると、カスタムの画像レンディションを、任意のPNG画像を使用して透かし処理できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41536/?quality=12&learn=on)
 
 ## OSGi設定
 
-次のOSGi構成スタブを更新し、AEMプロジェクトの`ui.config`サブプロジェクトに追加できます。
+次のOSGi設定スタブを更新し、AEMプロジェクトの`ui.config`サブプロジェクトに追加できます。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
