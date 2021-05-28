@@ -7,7 +7,7 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 1%
@@ -277,7 +277,7 @@ AEMレスポンシブグリッドSCSSファイルをSPAに追加します。
 1. 次の2つのファイルをダウンロードして`src/styles`にコピーします。
    + [_grid.scss](./assets/spa-bootstrap/_grid.scss)
       + AEMレスポンシブグリッドSCSSジェネレーター
-   + [_grid-init.scss](./assets/spa-bootstrap/_grid.scss)
+   + [_grid-init.scss](./assets/spa-bootstrap/_grid-init.scss)
       + SPA固有のブレークポイント（デスクトップおよびモバイル）と列(12)を使用して、`_grid.scss`を呼び出します。
 1. `src/App.scss`を開き、`./styles/grid-init.scss`を読み込みます。
 
