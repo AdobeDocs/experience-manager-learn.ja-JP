@@ -12,15 +12,17 @@ thumbnail: 330460.jpg
 topic: ヘッドレス、統合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 3%
+source-wordcount: '647'
+ht-degree: 2%
 
 ---
 
 
 # AEM as aCloud Serviceへのトークンベースの認証
+
+AEMは、GraphQL、AEMコンテンツサービスからAssets HTTP APIへ、ヘッドレスな方法で操作できる様々なHTTPエンドポイントを公開します。 多くの場合、これらのヘッドレスな消費者は、保護されたコンテンツやアクションにアクセスするために、AEMに対する認証が必要になる場合があります。 これを容易にするために、AEMは、外部のアプリケーション、サービスまたはシステムからのHTTPリクエストのトークンベースの認証をサポートします。
 
 このチュートリアルでは、外部アプリケーションが、アクセストークンを使用して、HTTP経由でCloud ServiceとしてAEMに対してプログラムによる認証とやり取りをおこなう方法をよく調べます。
 
