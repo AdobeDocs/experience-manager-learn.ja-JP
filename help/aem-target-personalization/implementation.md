@@ -7,10 +7,10 @@ feature: エクスペリエンスフラグメント
 topic: パーソナライズ機能
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 6%
+source-wordcount: '700'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 6%
 この節では、様々なシナリオでAdobe Experience ManagerとAdobe Targetを設定する方法について説明します。 シナリオと組織の要件に基づきます。
 
 * **Adobe Target JavaScriptライブラリの追加（すべてのシナリオで必要）**
-AEMでホストされるサイトの場合、Launchを使用してTargetライブラリをサイトに追 [加できます。](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)Launchは、関連する顧客体験の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
+AEMでホストされるサイトの場合、Launchを使用してTargetライブラリをサイトに追 [加できます。](https://experienceleague.adobe.com/docs/launch/using/home.html)Launchは、関連する顧客体験の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
 * **Adobe TargetCloud Servicesの追加（エクスペリエンスフラグメントのシナリオで必要）**
  AEMのお客様は、エクスペリエンスフラグメントオファーを使用してAdobe Target内でアクティビティを作成する場合、従来のCloud Servicesを使用してAdobe TargetをAEMと統合する必要があります。この統合は、エクスペリエンスフラグメントをHTML/JSONオファーとしてAEMからTargetにプッシュし、オファーをAEMと同期させるために必要です。 
 *この統合は、シナリオ1の実装に必要です。*
