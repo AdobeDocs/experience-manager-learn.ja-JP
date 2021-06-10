@@ -6,10 +6,10 @@ feature: アダプティブフォーム
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 3%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
@@ -116,7 +116,12 @@ Enterキーを押して、その他のプロパティのデフォルト値を受
 ## プロジェクトを構築する
 
 
-OSGiサービスまたはサーブレットを作成したら、Felix Webコンソールを使用してデプロイできるOSGiバンドルを生成するために、プロジェクトを構築する必要があります。 [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)を参照して、適切なクライアントSDKをMavenプロジェクトに含めてください。 以下に示すように、コアプロジェクトの`pom.xml`のdependenciesセクションにAEM FD Client SDKを含める必要があります。
+
+
+OSGiサービスまたはサーブレットを作成したら、Felix Webコンソールを使用してデプロイできるOSGiバンドルを生成するために、プロジェクトを構築する必要があります。 [AEMFD Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-)を参照して、適切なクライアントSDKをMavenプロジェクトに含めてください。 以下に示すように、コアプロジェクトの`pom.xml`のdependenciesセクションにAEM FD Client SDKを含める必要があります。
+
+
+
 
 
 ```xml
@@ -131,5 +136,6 @@ OSGiサービスまたはサーブレットを作成したら、Felix Webコン�
 
 * **コマンドプロンプトウィンドウ**&#x200B;を開きます。
 * `c:\aemformsbundles\learningaemforms\core` に移動します。
-* コマンド`mvn clean install`を実行します。
-すべて正常に動作する場合は、次の場所`C:\AEMFormsBundles\learningaemforms\core\target`にバンドルが表示されます。 これで、このバンドルをFelix Webコンソールを使用してAEMにデプロイする準備が整いました。
+* コマンド`mvn clean install -PautoInstallBundle`を実行します。
+上記のコマンドは、`http://localhost:4502`上で実行されているAEMサーバーにバンドルをビルドおよびインストールします。 バンドルは、ファイルシステム上の
+   `C:\AEMFormsBundles\learningaemforms\core\target` とは、Felix Webコンソールを使用し [てデプロイできます](http://localhost:4502/system/console/bundles)
