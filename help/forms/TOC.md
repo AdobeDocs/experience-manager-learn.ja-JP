@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '977'
 ht-degree: 6%
 
 ---
@@ -98,9 +98,10 @@ ht-degree: 6%
    + [はじめに](inbox-customization/introduction.md)
    + [カスタム列の追加](inbox-customization/add-married-column.md)
    + [sightlyテンプレートの使用](inbox-customization/use-sightly-template.md)
-+ フォーム添付ファイルの圧縮{#zipping-form-attachments}
++ Eメールフォームの添付ファイル{#zipping-form-attachments}
    + [はじめに](zipping-form-attachments/introduction.md)
-   + [カスタムプロセス](zipping-form-attachments/custom-process-step.md)
+   + [Zipフォームの添付ファイル](zipping-form-attachments/custom-process-step.md)
+   + [Email Form Attachments](zipping-form-attachments/populating-list-of-documents.md)
    + [ソリューションのテスト](zipping-form-attachments/test.md)
 + アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
    + [はじめに](store-and-retrieve-af-with-2fa/introduction.md)
