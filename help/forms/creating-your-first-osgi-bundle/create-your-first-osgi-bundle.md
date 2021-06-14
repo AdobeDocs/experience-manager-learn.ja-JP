@@ -6,7 +6,7 @@ feature: アダプティブフォーム
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 4%
@@ -119,6 +119,8 @@ Enterキーを押して、その他のプロパティのデフォルト値を受
 
 
 OSGiサービスまたはサーブレットを作成したら、Felix Webコンソールを使用してデプロイできるOSGiバンドルを生成するために、プロジェクトを構築する必要があります。 [AEMFD Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-)を参照して、適切なクライアントSDKをMavenプロジェクトに含めてください。 以下に示すように、コアプロジェクトの`pom.xml`のdependenciesセクションにAEM FD Client SDKを含める必要があります。
+
+
 
 
 
