@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
-source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
+source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 31%
       + [AEM プロジェクトアーキタイプ](./developing/basics/aem-project-archetype.md)
       + [AEM プロジェクトの構造](./developing/basics/project-structure.md)
       + [可変コンテンツと不変コンテンツ](./developing/basics/mutable-immutable.md)
-      + [リポジトリ構造パッケージ](./developing/basics/repository-structure-package.md)
+      + [リポジトリー構造パッケージ](./developing/basics/repository-structure-package.md)
       + [コンテンツ公開](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [Dispatcher設定の移行](./developing/basics/dispatcher-configuration.md)
@@ -69,7 +69,7 @@ ht-degree: 31%
    + AEMをCloud Serviceとしてデバッグ{#debugging-aem-as-a-cloud-service}
       + [概要](./debugging/cloud-service/overview.md)
       + [ログ](./debugging/cloud-service/logs.md)
-      + [ビルドとデプロイメント](./debugging/cloud-service/build-and-deployment.md)
+      + [ビルドとデプロイ](./debugging/cloud-service/build-and-deployment.md)
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + AEM{#accessing}へのアクセス
@@ -138,11 +138,11 @@ ht-degree: 31%
    + デプロイ{#deploy}
       + [Adobe I/O Runtimeへのデプロイ](./asset-compute/deploy/runtime.md)
       + [AEMとの統合](./asset-compute/deploy/processing-profiles.md)
-   + アドバンス{#advanced}
+   + 詳細{#advanced}
       + [メタデータワーカー](./asset-compute/advanced/metadata.md)
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 + マルチステップTutorials{#multi-step-tutorials}
-   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)
    + [SPAエディター(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
