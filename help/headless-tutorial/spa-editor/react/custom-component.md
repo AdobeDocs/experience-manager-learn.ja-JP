@@ -11,7 +11,7 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 3%
@@ -155,7 +155,7 @@ SPA Editorのコンテキストでは、Sling Modelsは、[Sling Model Exporter]
 
 1. 任意のIDEで、`aem-guides-wknd-spa.react/core`にある`core`モジュールを開きます。
 1. `OpenWeatherModel.java`の`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`に、という名前のファイルを作成します。
-1. `OpenWeather.java` に以下を入力します。
+1. `OpenWeatherModel.java` に以下を入力します。
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
@@ -391,7 +391,7 @@ SPA Editorのコンテキストでは、Sling Modelsは、[Sling Model Exporter]
 
    JSON値はSling Modelから出力されます。 これらのJSON値は、propとしてReactコンポーネントに渡されます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPA Editorで使用するカスタムAEMコンポーネントの作成方法を学びました。 また、ダイアログ、JCRプロパティ、Sling ModelがJSONモデルを出力する方法も学びました。
 
