@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
+source-git-commit: aa4fb5afc2d30bb499493b93c51940ea6db56e41
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1226'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## WKNDアプリソースのダウンロード
 
-まだおこなっていない場合は、Github.comからWKNDアプリのソースコードをダウンロードし、このチュートリアルで実行するSPAに対する変更を含むブランチを切り替えます。
+まだおこなっていない場合は、WKNDアプリのソースコードをGithub.comからダウンロードし、このチュートリアルで実行するSPAに対する変更を含むブランチを切り替えます。
 
 ```
 $ mkdir -p ~/Code/wknd-app
@@ -337,7 +337,7 @@ SPAがAEMとの統合のためにブートストラップ処理されたので�
 
    ![http://localhost:3000上で動作するSPA](./assets/spa-bootstrap/spa-editor.png)
 
-## バリデーターが
+## おめでとうございます。
 
 AEM SPA Editorと互換性を持たせるために、リモートSPAをブートストラップしました。 次の方法がわかりました。
 
