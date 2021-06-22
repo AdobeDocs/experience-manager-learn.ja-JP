@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
-source-git-commit: bfca379bf2722dc1658400f375e65d2943f27ed7
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '67'
+source-wordcount: '78'
 ht-degree: 1%
 
 ---
@@ -28,3 +28,5 @@ AEMで永続化クエリを有効化、作成、更新、実行する方法を�
 + サーバー側クエリとクライアント側クエリの長所と短所を理解する
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429/?quality=12&learn=on)
+
+_AEMヘッドレスビデオシ [リーズ全](./assets/aem-headless-video-series.postman_collection.json) 体で使用されるPostmanコレクションをダウンロードします。_
