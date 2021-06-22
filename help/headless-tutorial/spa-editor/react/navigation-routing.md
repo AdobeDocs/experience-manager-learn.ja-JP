@@ -12,7 +12,7 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 1%
@@ -54,7 +54,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
    「**許可されているコンポーネント** > **一般** 」で、**レイアウトコンテナ**&#x200B;コンポーネントを選択します。
 
-   **許可されているコンポーネント** > **WKND SPA REACT - STRUCTURE**&#x200B;の下で、**ヘッダー**&#x200B;コンポーネントを選択します。
+   **許可されているコンポーネント** > **WKND SPA REACT - STRUCTURE**&#x200B;の下で、**ナビゲーション**&#x200B;コンポーネントを選択します。
 
    ![ナビゲーションコンポーネントの選択](assets/navigation-routing/select-navigation-component.png)
 
@@ -326,7 +326,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
    これは、SPAルーティングと通常のWebページリンクの違いを説明するのに役立ちます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を学びました。 React Routerを使用してダイナミックナビゲーションが実装され、`Header`コンポーネントに追加されました。
 
