@@ -11,7 +11,7 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 4%
@@ -328,7 +328,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
    helloworld.js
    ```
 
-1. `clientlib-helloworld/.conten.xml`ファイルを更新して、次のプロパティを含めます。
+1. `clientlib-helloworld/.content.xml`ファイルを更新して、次のプロパティを含めます。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -355,7 +355,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
    >
    > パフォーマンス上の理由から、CSSとJavaScriptはブラウザーによって頻繁にキャッシュされます。 クライアントライブラリの変更がすぐに確認されない場合は、ハードリフレッシュを実行し、ブラウザのキャッシュをクリアします。 新しいキャッシュを確実に作成するには、匿名ウィンドウを使用すると便利です。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 おめでとう、Adobe Experience Managerでのコンポーネント開発の基本を学びました。
 
