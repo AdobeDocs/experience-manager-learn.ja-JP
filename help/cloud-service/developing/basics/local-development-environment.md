@@ -8,9 +8,9 @@ topic: 開発
 feature: 開発者ツール
 kt: 6933
 thumbnail: 330558.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: f707c8e7cce413ecdcfb5d406fd1b38f26d965c4
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '91'
 ht-degree: 3%
 
 ---
@@ -22,4 +22,6 @@ AEM as a Experience SDKを使用して、ローカル開発環境をダウンロ
 
 >[!VIDEO](https://video.tv.adobe.com/v/330558/?quality=12&learn=on)
 
-_ AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)._を使用して[完全なローカル開発環境を設定するには、以下の手順を確認してください。
+_このビ `license.properties` デオに示す内容は、AEM SDKを実行する際には不要になりました。_
+
+AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)を使用して[完全なローカル開発環境を設定するには、以下の手順を確認してください。
