@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
-source-git-commit: bfca379bf2722dc1658400f375e65d2943f27ed7
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '76'
 ht-degree: 1%
 
 ---
@@ -28,3 +28,5 @@ GraphQLエンドポイントを有効化、実行、および公開し、保護�
 + GraphQLエンドポイントの公開と保護の方法について
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339/?quality=12&learn=on)
+
+_AEMヘッドレスビデオシ [リーズ全](./assets/aem-headless-video-series.postman_collection.json) 体で使用されるPostmanコレクションをダウンロードします。_
