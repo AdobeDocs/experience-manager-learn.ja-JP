@@ -10,10 +10,10 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '3299'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -130,7 +130,8 @@ Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよ
 
    `main.scss` は、モジュール内のすべてのSassファイルへのエントリポイン `ui.frontend` トです。`_variables.scss`ファイルが含まれます。このファイルには、プロジェクト内の様々なSassファイルで使用される一連のブランド変数が含まれます。 `_base.scss`ファイルも含まれ、HTML要素の基本的なスタイルを定義します。 正規表現には、`src/main/webpack/components`の下にある個々のコンポーネントスタイルのすべてのスタイルが含まれます。 別の正規表現には、`src/main/webpack/site/styles`の下にあるすべてのファイルが含まれます。
 
-1. `main.ts` ファイルを検査します。`main.ts` に `main.scss` は、プロジェクト内のファイルやファイルを収集す `.js` る正 `.ts` 規表現が含まれます。このエントリポイントは、[webpack設定ファイル](https://webpack.js.org/configuration/)によって`ui.frontend`モジュール全体のエントリポイントとして使用されます。
+1. 
+   1. `main.ts` ファイルを検査します。これには、`main.scss`と、プロジェクト内の`.js`ファイルまたは`.ts`ファイルを収集するための正規表現が含まれます。 このエントリポイントは、[webpack設定ファイル](https://webpack.js.org/configuration/)によって`ui.frontend`モジュール全体のエントリポイントとして使用されます。
 
 1. Inspect `src/main/webpack/site/styles`の下のファイル：
 
@@ -201,7 +202,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
    >
    >また、JSとCSSを縮小する`npm run prod`プロファイルもあります。 これは、WebpackビルドがMaven経由でトリガーされる場合は常に、標準コンパイルです。 [ui.frontendモジュールの詳細は、](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)を参照してください。
 
-1. `ui.frontend/dist/clientlib-site/css/site.css`の下の`site.css`ファイルをInspectします。 これは、Sassソースファイルに基づくコンパイル済みCSSです。
+1. `ui.frontend/dist/clientlib-site/site.css`の下の`site.css`ファイルをInspectします。 これは、Sassソースファイルに基づくコンパイル済みCSSです。
 
    ![分散サイトCSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
@@ -310,7 +311,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!NOTE]
    >
-   > 6.5/6.4に従うと、クライアント側ライブラリは自動的に縮小されません。 [HTMLライブラリマネージャーのドキュメントを参照して、最小化（推奨）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)を有効にしてください。
+   > 6.5/6.4に従うと、クライアント側ライブラリは自動的に縮小されません。 [HTMLライブラリマネージャーのドキュメントを参照して、最小化（推奨）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja#using-preprocessors)を有効にしてください。
 
    >[!WARNING]
    >
@@ -413,7 +414,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    繰り返しますが、 `ui.frontend`モジュールはコンパイルされ、クライアントライブラリに変換され、 `ui.apps`モジュールを介してAEMにデプロイされます。 しかし、今回はMavenがすべてを実行します。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、記事ページにWKNDブランドと一致する一貫したスタイルが追加され、**ui.frontend**&#x200B;モジュールに慣れました。
 
