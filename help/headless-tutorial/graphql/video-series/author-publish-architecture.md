@@ -9,10 +9,10 @@ role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 1%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -28,3 +28,5 @@ AEM GraphQL APIを使用する際にAEMオーサー環境とパブリッシュ�
 + オーサー環境をアプリケーションのプレビューとして使用する方法の確認
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
+
+_AEMヘッドレスビデオシ [リーズ全](./assets/aem-headless-video-series.postman_collection.json) 体で使用されるPostmanコレクションをダウンロードします。_
