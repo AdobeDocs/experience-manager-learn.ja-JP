@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '265'
 ht-degree: 37%
 
 ---
@@ -86,6 +86,9 @@ ht-degree: 37%
    + [リンク場所](./adobe-asset-link/place-linked.md)
    + [配置のみ(FPO)](./adobe-asset-link/for-placement-only.md)
    + [アセット検索](./adobe-asset-link/asset-search.md)
+
++ コンテンツの自動化{#content-automation}
+   + [概要](./content-automation/overview.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Mediaの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
