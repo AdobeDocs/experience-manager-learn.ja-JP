@@ -10,7 +10,7 @@ version: 6.4,6.5
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3a9778c97d57e55e3da740b492472456768fb32c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 3%
@@ -77,7 +77,7 @@ Mavenの`settings.xml`ファイルは、Mavenの実行を様々な方法で設�
 Mavenプロジェクトはインタラクティブに生成され、次のような様々なプロパティに値を指定するよう求められます。
 
 | プロパティ名 | 有意性 | 値 |
-------------------------|---------------------------------------|---------------------
+|------------------------|---------------------------------------|---------------------|
 | groupId | groupIdは、すべてのプロジェクトでプロジェクトを一意に識別します | com.learningaemforms.adobe |
 | appsFolderName | プロジェクト構造を保持するフォルダーの名前 | 学習フォーム |
 | artifactId | artifactIdは、バージョンのないjarの名前です。 作成した場合は、小文字で変な記号を使用せずに、任意の名前を選択できます。 | 学習フォーム |
