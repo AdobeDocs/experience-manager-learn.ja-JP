@@ -5,7 +5,7 @@ feature: Dispatcher
 topic: アーキテクチャ
 role: Architect
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67e55e92cf95e03388ab3de49eff5a80786fb3a7
 workflow-type: tm+mt
 source-wordcount: '17487'
 ht-degree: 0%
@@ -684,8 +684,10 @@ statfileレベルを「0に減らす」という考え方は、基本的に/cont
 
 実際には、同じサイト内で、同じ「サブツリー」内にある限り、Dispatcherに無効にするように指示するパスは関係ありません。 実際のリソースパスを使用する必要もありません。 「仮想」にすることもできます。
 
-`GET /dispatcher-invalidate
-Invalidate-path /content/mysite/dummy`
+```
+GET /dispatcher-invalidate
+Invalidate-path /content/mysite/dummy
+```
 
 ![](assets/chapter-1/resource-path.png)
 
@@ -908,8 +910,10 @@ ITに関するすべての点と同様に、答えは次のとおりです。「
 
 セレクターの数を減らすのが良いスタートでした。 経験則として、有効なパラメーターの数は必ず絶対最小限に制限する必要があります。 その場合は、AEMの外部にあるWebアプリケーションファイアウォールを、基盤となるAEMシステムに関する深い知識がなくても、静的なフィルターセットを使用して活用し、システムを保護することもできます。
 
-`Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
-\.respi\.q-(20|40|60|80|100)\.jpg`
+```
+Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
+       \.respi\.q-(20|40|60|80|100)\.jpg
+```
 
 Webアプリケーションファイアウォールがない場合は、DispatcherまたはAEM自体でフィルタリングする必要があります。 AEMで実行する場合は、
 
