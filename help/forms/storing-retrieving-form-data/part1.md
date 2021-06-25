@@ -1,18 +1,14 @@
 ---
 title: MySQLデータベースからのフォームデータの格納と取得
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
-feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
 version: 6.3,6.4,6.5
+feature: アダプティブフォーム
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '199'
 ht-degree: 6%
 
 ---
@@ -35,9 +31,7 @@ Apache Sling接続プールに入れられたデータソースを作成し、�
 >データソースに&#x200B;**SaveAndContinue**&#x200B;という名前を付けてください。 サンプルコードでは、という名前を使用してデータベースに接続します。
 
 | プロパティ名 | 値 |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Datasource Name | SaveAndContinue |
 | JDBCドライバクラス | com.mysql.cj.jdbc.Driver |
 | JDBC接続uri | jdbc:mysql://localhost:3306/aemformstutorial |
-
-
