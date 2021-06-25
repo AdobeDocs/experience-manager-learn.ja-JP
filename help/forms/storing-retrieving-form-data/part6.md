@@ -2,17 +2,13 @@
 title: MySQLデータベースからのフォームデータの格納と取得
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.3,6.4,6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.3,6.4,6.5
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 12%
 
 ---
@@ -39,11 +35,10 @@ AEM Formsインスタンスでこの機能をテストするには、次の手�
 * [configMgrにログインします。](http://localhost:4502/system/console/configMgr) 「Apache Sling Connection Pooled DataSource」を検索します。次のプロパティを使用して、新しいApache Sling接続プール済みデータソースエントリ&#x200B;**SaveAndContinue**&#x200B;を作成します。
 
 | プロパティ名 | 値 |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Datasource Name | SaveAndContinue |
 | JDBCドライバクラス | com.mysql.cj.jdbc.Driver |
 | JDBC接続uri | jdbc:mysql://localhost:3306/aemformstutorial |
-
 
 * [アダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)を開きます。
 * 詳細を入力し、「保存して後で続行」ボタンをクリックします。
