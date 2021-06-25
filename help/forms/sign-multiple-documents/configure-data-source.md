@@ -2,19 +2,15 @@
 title: AEMデータソースの設定
 description: フォームデータを保存および取得するためのMySQLベースのデータソースの設定
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.4,6.5
-kt: 6899
-thumbnail: 6899.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.4,6.5
+kt: 6899
+thumbnail: 6899.jpg
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '193'
 ht-degree: 7%
 
 ---
@@ -36,7 +32,7 @@ Apache Sling接続プールに入れられたデータソースを作成し、�
 >データソースに&#x200B;**aemformstutorial**&#x200B;という名前を付けてください。 サンプルコードでは、という名前を使用してデータベースに接続します。
 
 | プロパティ名 | 値 |
-------------------------|---------------------------------------
+| ------------------------|--------------------------------------- |
 | Datasource Name | SaveAndContinue |
 | JDBCドライバクラス | com.mysql.cj.jdbc.Driver |
 | JDBC接続uri | jdbc:mysql://localhost:3306/aemformstutorial |
@@ -44,5 +40,3 @@ Apache Sling接続プールに入れられたデータソースを作成し、�
 ## Assets
 
 スキーマを作成するSQLファイルは、[ここから](assets/sign-multiple-forms.sql)ダウンロードできます。 MySql Workbenchを使用してこのファイルをインポートし、スキーマとテーブルを作成する必要があります。
-
-
