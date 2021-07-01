@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: ヘッドレス、統合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ function getCommandLineParams() {
 
    現在は、ローカル開発のアクセストークンJSONまたはサービス資格情報JSONのいずれかのJSONファイルが`file`コマンドラインパラメーターを介して渡されるかどうかに応じて、アプリケーションはアクセストークンを取得します。
 
-   サービス資格情報には期限切れはありませんが、JWTと対応するアクセストークンには期限切れになる前に更新する必要があります。 これは、AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)で提供される`refresh_token` [を使用しておこなうことができます。
+   サービス資格情報は365日ごとに期限切れになりますが、JWTと対応するアクセストークンは頻繁に期限切れになり、期限が切れる前に更新する必要があります。 これは、AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)で提供される`refresh_token` [を使用しておこなうことができます。
 
 1. これらの変更を適用し、AEM Developer Consoleからダウンロードしたサービス資格情報JSONを（簡単に、`service_token.json`と同じ`index.js`として保存するために）、コマンドラインパラメーター&lt;a2/を`service_token.json`に置き換えてアプリケーションを実行し、`propertyValue`を新しい値に更新して、効果をAEMで確認します。`file`
 
@@ -246,7 +246,7 @@ $ node index.js \
 
 ![WKNDでのメタデータの使用の制限の更新](./assets/service-credentials/asset-metadata.png)
 
-## バリデーターが
+## おめでとうございます。
 
 これで、ローカル開発のアクセストークンと、実稼動に対応したサービス間アクセストークンを使用して、プログラムによってAEMにCloud Serviceとしてアクセスできるようになりました。
 
