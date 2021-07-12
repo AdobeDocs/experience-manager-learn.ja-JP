@@ -3,12 +3,12 @@ title: AEM Foundation のビデオおよびチュートリアル
 seo-title: AEM Foundation のビデオおよびチュートリアル
 description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 seo-description: Adobe Experience Manager Foundationのビデオとチュートリアルのコレクションです
-role: Leader, Architect, Developer, Administrator, Business Practitioner
+role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -80,7 +80,7 @@ Adobe Experience Managerは、AEM Sites、[!DNL Assets]および[!DNL Forms]の�
 
 ## その他のリソース
 
-* [Experience League - AEMの参照](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League- AEMの参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
 * [AEM Sites のビデオおよびチュートリアル](/help/sites/overview.md)
 * [AEM Assets のビデオおよびチュートリアル](/help/assets/overview.md)
