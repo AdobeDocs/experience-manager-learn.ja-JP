@@ -8,9 +8,9 @@ activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# フォルダー構造とファイル命名規則を決定します。{#folder-structure-filenaming}
+# フォルダー構造とファイル命名規則を決定する {#folder-structure-filenaming}
 
 ジャンプしてすべてのコンテンツのアップロードを開始する前に、使用するフォルダー構造と、特にファイル命名規則を検討することをお勧めします。 時間を節約し、後でタスクをやり直す必要が生じる可能性があります。 すべてのグループにわたって、これらの決定を調整することをお勧めします。
 
