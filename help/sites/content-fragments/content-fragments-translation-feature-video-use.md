@@ -3,12 +3,12 @@ title: AEMコンテンツフラグメントの翻訳のサポート
 description: コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられた混在メディアアセットも、抽出および翻訳の対象となります。
 feature: コンテンツフラグメント、マルチサイトマネージャー
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 ---
 
 
-# AEMコンテンツフラグメントの翻訳サポート{#translation-support-content-fragments}
+# AEMコンテンツフラグメントの翻訳のサポート {#translation-support-content-fragments}
 
 コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられた混在メディアアセットも、抽出および翻訳の対象となります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
-## コンテンツフラグメント翻訳の使用例{#content-fragment-translation-use-cases}
+## コンテンツフラグメント翻訳の使用例 {#content-fragment-translation-use-cases}
 
 コンテンツフラグメントは、外部翻訳サービスに送信するAEM抽出のコンテンツタイプとして認識されます。 次のようないくつかの使用例が標準でサポートされています。
 
