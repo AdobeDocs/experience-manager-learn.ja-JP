@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 9%
@@ -50,7 +50,7 @@ Webサイト、モバイルサイトまたはアプリで顧客体験の最も�
 
 スマートイメージングは、Dynamic Media Classicの既存のライセンスに含まれています。 この機能に追加費用はかかりません。 この機能を活用するには、次の2つの要件を満たす必要があります。AdobeバンドルCDNと専用ドメインを持っている。 次に、自動的に有効化されないので、アカウントに対して有効にする必要があります。
 
-スマートイメージングを有効にするには、まず、次の方法でテクニカルサポートにリクエストを送信します。 |サポートケースの作成| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 スマートイメージングに関連付けるカスタムドメインを設定する際に、サポートがお客様と連携します。 キャッシュに関連する1つのパラメーター（有効期間、TTL）を変更すると、キャッシュがクリアされます。 実稼動環境にプッシュする前に、必要に応じてオプションのステージング手順を実行することもできます。 スマートイメージングをオンにすると、より小さいサイズの画像を、要求された画質と同じ画質で顧客に配信します。 つまり、ページ読み込み時間が短縮されます。Adobe Senseiが最も効率的なサイズを選択するのに役立つので、これらすべてが自動的におこなわれます。
+スマートイメージングを有効にするには、まず、次の方法でテクニカルサポートにリクエストを送信します。 |サポートケースの作成| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 スマートイメージングに関連付けるカスタムドメインを設定する際に、サポートがお客様と連携します。 キャッシュに関連する1つのパラメーター（Time To Live、またはTTL）を変更すると、キャッシュがクリアされます。 実稼動環境にプッシュする前に、必要に応じてオプションのステージング手順を実行することもできます。 スマートイメージングをオンにすると、より小さいサイズの画像を、要求された画質と同じ画質で顧客に配信します。 つまり、ページ読み込み時間が短縮されます。Adobe Senseiが最も効率的なサイズを選択するのに役立つので、これらすべてが自動的におこなわれます。
 
 スマートイメージングを有効にしたら、期待どおりに動作していることを確認できます。
 
