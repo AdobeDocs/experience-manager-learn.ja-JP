@@ -3,9 +3,9 @@ title: AEM CommerceおよびAsset CatalogとのInDesign Server
 description: AEM 6.4のカタログの機能強化により、AEM Asset TemplatesとInDesign Serverを使用してカタログページを作成できます。  ユーザーは、InDesignテンプレートを使用してカタログページを作成し、製品プロパティを編集可能フィールドにマッピングできます。この編集フィールドは、後で様々な製品用に類似したページを作成するために使用できます。
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# AEM CommerceおよびInDesign Server{#using-asset-catalog-with-aem-commerce-and-indesign-server}でのアセットカタログの使用
+# AEM CommerceおよびAsset CatalogとのInDesign Server{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 
 AEM 6.4のカタログの機能強化により、AEM Asset TemplatesとInDesign Serverを使用してカタログページを作成できます。  ユーザーは、InDesignテンプレートを使用してカタログページを作成し、製品プロパティを編集可能フィールドにマッピングできます。この編集フィールドは、後で様々な製品用に類似したページを作成するために使用できます。
 
