@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 topic: 統合
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 ---
 
 
-# エクスペリエンスフラグメントオファーを使用してAdobe Targetアクティビティを作成{#target-activity-experience-fragment}
+# エクスペリエンスフラグメントオファーを使用したAdobe Targetアクティビティの作成 {#target-activity-experience-fragment}
 
 AEMエクスペリエンスフラグメントオファーを使用して、Adobe Targetアクティビティを作成およびテストする方法について説明します。
 
