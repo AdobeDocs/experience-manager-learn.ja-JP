@@ -10,9 +10,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 5848
 thumbnail: 36682.jpg
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# 言語コピーページの作成{#create-language-copy-page}
+# 言語コピーの作成ページ {#create-language-copy-page}
 
 既存の言語コピーでページを作成し、コンテンツを別の言語コピーに翻訳する方法を説明します。
 
