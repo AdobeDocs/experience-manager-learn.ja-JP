@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4632
 thumbnail: 32150.jpg
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 5%
@@ -22,7 +22,7 @@ ht-degree: 5%
 ---
 
 
-# ページのタグ付け{#using-page-tagging-with-aem-sites}
+# ページのタグ付け {#using-page-tagging-with-aem-sites}
 
 タグ付けを使用してAdobe Experience ManagerでWebページを管理、整理する方法について説明します。
 
