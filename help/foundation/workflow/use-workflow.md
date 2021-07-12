@@ -4,11 +4,11 @@ description: AEMワークフローは、AEMでコンテンツを共同作業、�
 version: 6.5, cloud-service
 feature: ワークフロー
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 2557
 thumbnail: 27848.jpg
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 4%
