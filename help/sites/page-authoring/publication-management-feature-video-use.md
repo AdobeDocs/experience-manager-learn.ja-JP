@@ -12,9 +12,9 @@ kt: 4322
 thumbnail: 32193.jpg
 feature: 公開
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# ページの公開{#using-publication-management-with-aem-sites}
+# ページの公開 {#using-publication-management-with-aem-sites}
 
 AEM Sitesには、コンテンツの公開と非公開を行うためのオプションがいくつか用意されています。 このビデオでは、様々な方法とその機能について説明します。
 
