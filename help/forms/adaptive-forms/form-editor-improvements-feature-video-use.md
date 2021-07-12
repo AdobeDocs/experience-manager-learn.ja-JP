@@ -12,9 +12,9 @@ version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
 topic: 開発
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 15%
@@ -22,7 +22,7 @@ ht-degree: 15%
 ---
 
 
-# AEM Forms {#form-editor-improvements-in-aem-forms}のフォームエディターの改善点
+# AEM Formsのフォームエディターの改善点 {#form-editor-improvements-in-aem-forms}
 
 AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを操作できるようになります
 
