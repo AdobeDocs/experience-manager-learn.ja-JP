@@ -8,9 +8,9 @@ topics: development, authoring, configuring
 audience: all
 activity: use
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 切り抜き、調整した画像、ズームターゲット{#crop-adjusted-zoom-targets}
+# 切り抜き、調整した画像、ズームターゲット {#crop-adjusted-zoom-targets}
 
 Dynamic Media Classicのマスター画像概念の主な強みの1つは、多くの用途で画像アセットを再利用できる点です。 従来は、詳細を表示したりスウォッチを表示するには、切り抜く個々のバージョンを画像に作成する必要がありました。 Dynamic Media Classicを使用する場合は、1つのマスターに対して同じタスクを実行し、切り抜いたバージョンを新しい物理ファイルとして保存するか、ストレージ領域を必要としない仮想派生ファイルとして保存できます。
 
@@ -30,7 +30,7 @@ Dynamic Media Classicのマスター画像概念の主な強みの1つは、多�
 
 ## 切り抜き
 
-Dynamic Media Classicには、切り抜きツールなど、UIで便利に使用できる画像編集ツールがいくつか用意されています。 様々な理由で、Dynamic Media Classic内でマスター画像を切り抜くことができます。 以下に例を示します。
+Dynamic Media Classicには、切り抜きツールなど、UIで便利に使用できる画像編集ツールがいくつか用意されています。 様々な理由で、Dynamic Media Classic内でマスター画像を切り抜くことができます。 次に例を示します。
 
 - 元のファイルへのアクセス権がありません。 切り抜きや縦横比が異なる画像を表示したいが、元のファイルがコンピューターにないか、自宅で作業している。 この場合は、Dynamic Media Classicを開き、画像を探し、切り抜いて保存するか、新しいバージョンとして保存します。
 - 余分な空白を取り除く。 白いスペースで撮影し過ぎたため、商品が小さく見えます。 サムネール画像をできるだけキャンバスいっぱいにしたい場合。
