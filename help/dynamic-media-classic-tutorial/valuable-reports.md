@@ -8,9 +8,9 @@ topics: development, authoring, configuring, reports
 audience: all
 activity: use
 topic: コンテンツ管理
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 9%
@@ -18,7 +18,7 @@ ht-degree: 9%
 ---
 
 
-# 管理者向けの貴重なレポート{#valuable-reports}
+# 管理者向けの貴重なレポート {#valuable-reports}
 
 この章では、管理者が次の2つの重要なレポートについて知っておきたいと思います。帯域幅とストレージレポートと画像エラーレポート。
 
@@ -44,8 +44,8 @@ _画像エラーレポート。_
 
 Dynamic Media Classicの詳細については、次のリソースを参照してください。
 
-- [Dynamic Media Classic on Experience League — 価値を創る](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic on Experience League — 詳細を表示](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media ClassicExperience League — 価値を引き出す](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media ClassicExperience League — 詳細を表示](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Mediaニュースレター購読ページ](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classicドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
