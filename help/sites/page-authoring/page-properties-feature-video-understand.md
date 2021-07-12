@@ -12,17 +12,17 @@ version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
 
-# ページのプロパティ{#understanding-page-properties-aem-sites}について
+# ページプロパティについて {#understanding-page-properties-aem-sites}
 
 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティを紹介します。
 
@@ -51,7 +51,7 @@ ht-degree: 41%
    * クラウド設定
    * テンプレート設定
    * 認証要件
-   * export
+   * 書き出し
 * サムネール
 * ソーシャルメディア共有
 * クラウドサービスの設定
