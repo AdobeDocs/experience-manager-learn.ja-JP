@@ -3,9 +3,9 @@ title: 'AEM AssetsのInDesignファイルとアセットテンプレートにつ
 description: このビデオチュートリアルでは、AEM AssetsのInDesignテンプレート機能で使用するアセットファイルの定義と、それに伴うすべての考慮事項について説明します。
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%
@@ -13,11 +13,11 @@ ht-degree: 1%
 ---
 
 
-# AEM Assets {#understanding-indesign-files-and-asset-templates-in-aem-assets}のInDesignファイルとアセットテンプレートについて
+# AEM AssetsのInDesignファイルとアセットテンプレートについて {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
 このビデオチュートリアルでは、AEM AssetsのInDesignテンプレート機能で使用するアセットファイルの定義と、それに伴うすべての考慮事項について説明します。
 
-## InDesignテンプレートファイル{#constructing-the-indesign-template-file}の作成
+## テンプレートInDesignファイルの作成 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
@@ -49,7 +49,7 @@ ht-degree: 1%
    >
    >AEM Asset Templatesの問題の最も一般的な原因は、InDesignファイルの構造が不完全なことです。したがって、タグ付けと構造が正しく、明確になっていることを確認してください。
 
-## AEM Assets {#creating-and-authoring-an-asset-template-in-aem-assets}でのアセットテンプレートの作成とオーサリング
+## AEM Assetsでのアセットテンプレートの作成とオーサリング {#creating-and-authoring-an-asset-template-in-aem-assets}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
 
