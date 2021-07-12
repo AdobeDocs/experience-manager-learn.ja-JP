@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 ---
 
 
-# マルチサイトマネージャ{#translation-enhancements}による翻訳の強化
+# マルチサイトマネージャーによる翻訳の強化 {#translation-enhancements}
 
 AEMの堅牢な翻訳フレームワークを使用すると、AEMコンテンツをサポートされている翻訳ベンダーによってシームレスに翻訳できます。
 
