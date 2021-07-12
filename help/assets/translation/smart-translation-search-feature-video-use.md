@@ -4,9 +4,9 @@ description: スマート翻訳検索を使用すると、アセットとペー�
 version: 6.3, 6.4, 6.5
 feature: 検索
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Assets{#using-smart-translation-search-with-aem-assets}でのスマート翻訳検索の使用
+# AEM Assetsでのスマート翻訳検索の使用{#using-smart-translation-search-with-aem-assets}
 
 スマート翻訳検索を使用すると、アセットとページの両方のAEMコンテンツで、言語をまたいだ検索と検出を自動的に実行でき、50以上の言語をサポートし、手動でのコンテンツ翻訳の必要性を軽減できます。
 
@@ -26,7 +26,7 @@ AEM Smart Translation Searchを使用すると、英語以外の用語を使用�
 
 このビデオでは、[AEM Smart Translation Search](smart-translation-search-technical-video-setup.md)が設定されていることを前提としています。
 
-## スマート翻訳検索の仕組み{#how-smart-translation-search-works}
+## スマート翻訳検索の仕組み {#how-smart-translation-search-works}
 
 ![スマート翻訳検索のフロー図](assets/smart-translation-search-flow.png)
 
