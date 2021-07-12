@@ -4,9 +4,9 @@ description: 'AEMでは、Adobe StockアセットをAEMから直接検索、プ�
 feature: Adobe Stock
 version: 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 15%
@@ -60,7 +60,7 @@ Adobe StockとAEM Assetsの統合により、コンテンツ作成者やマー�
 * 管理者は、Adobe Stock Cloud Serviceの設定時に、Stockアセットのライセンスを取得する権限を特定のユーザー/グループに付与できます。
 * 特定のユーザー/グループにStockアセットのライセンス権限がない場合、*Stockアセットの検索/アセットのライセンス*&#x200B;機能が無効になります。
 
-## AEM AssetsとのAdobe Stockのセットアップ{#set-up-adobe-stock-with-aem-assets}
+## AEM AssetsでのAdobe Stockの設定{#set-up-adobe-stock-with-aem-assets}
 
 AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュー、保存およびライセンスを取得できます。 このビデオでは、Adobe I/Oコンソールを使用してAEM AssetsでAdobe在庫を設定する方法の概要を説明します。
 
@@ -79,7 +79,7 @@ AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュ
 * AEM 6.4の場合は、[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)をインストールしてから、cq-dam-stock-integration-content-1.0.4.zipファイルを再インストールする必要があります。
 * [Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)およびAdobe Experience Managerの管理者権限を持っていることを確認して、統合を設定します。
 
-#### Adobeコンソール{#set-up-adobe-ims-configuration-using-adobe-i-o-console}を使用したAdobe I/OIMS設定
+#### Adobeコンソールを使用したAdobe I/OIMS設定 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
 1. **ツール/セキュリティ**&#x200B;でAdobeIMSテクニカルアカウント設定を作成します。
 2. *Cloud Solution*&#x200B;として&#x200B;*Adobe Stock*&#x200B;を選択し、新しい証明書を作成するか、既存の証明書を設定に再使用します。
@@ -91,7 +91,7 @@ AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュ
 
 ![Adobe IMS テクニカルアカウント](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### Adobe StockCloud Services{#set-up-adobe-stock-cloud-services}の設定
+#### Adobe StockCloud Servicesの設定 {#set-up-adobe-stock-cloud-services}
 
 1. **ツール/Cloud ServicesでAdobe Stockの新しいクラウドサービス設定を作成します。**
 2. *Adobe Stock Cloud*&#x200B;設定に対して、上記の節で作成した&#x200B;*AdobeIMS設定*&#x200B;を選択します。
