@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 18%
@@ -22,7 +22,7 @@ ht-degree: 18%
 ---
 
 
-# ページのオーサリング{#authoring-page-aem-sites}
+# ページのオーサリング {#authoring-page-aem-sites}
 
 サイトエディターのUIを使用してAdobe Experience Manager Sitesでページを作成する方法を説明します。
 
@@ -34,7 +34,7 @@ ht-degree: 18%
 * ページに異なるオーサリングモードを導入します
    * 編集
    * レイアウト
-   * 開発者
+   * デベロッパー
    * タイムワープ
 * ページエディターの機能
    * コンポーネントファインダー
