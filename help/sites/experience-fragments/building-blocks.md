@@ -6,11 +6,11 @@ version: cloud-service
 feature: エクスペリエンスフラグメント
 topic: コンテンツ管理
 level: Beginner, Intermediate
-role: Architect, Developer, Administrator, Business Practitioner
+role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# エクスペリエンスフラグメントを含む構築ブロック{#building-blocks}
+# エクスペリエンスフラグメントを使用した構築ブロック {#building-blocks}
 
 構築ブロックは、エクスペリエンスフラグメントのサブ機能です。 コンテンツ作成者は、構築ブロックを使用して、エクスペリエンスフラグメントの様々なバリエーションでコンポーネントを再利用できます。
 
