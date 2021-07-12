@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 13%
@@ -22,7 +22,7 @@ ht-degree: 13%
 ---
 
 
-# マルチサイトマネージャの使用 {#using-multi-site-manager-with-aem-sites}
+# マルチサイトマネージャーの使用 {#using-multi-site-manager-with-aem-sites}
 
 [!UICONTROL ライブコピーの] 概要とブ [!UICONTROL ループリント設] 定マネージャーは、Adobe Experience Manager Sitesのマルチサイトマネージャー機能を操作するためのAEMオーサーインターフェイスです。
 
