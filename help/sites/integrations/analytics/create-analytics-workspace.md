@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
 topic: 統合
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2204'
 ht-degree: 1%
@@ -32,8 +32,8 @@ WKNDマーケティングチームは、ホームページで最も効果が高�
 
 現在追跡中のAnalytics変数を以下に示します。
 
-* `eVar5` -  `Page template`
-* `eVar6` - `Page Id`
+* `eVar5` -   `Page template`
+* `eVar6` -  `Page Id`
 * `eVar7` -  `Page last modified date`
 * `eVar8` -  `CTA Button Id`
 * `eVar9` -  `Page Name`
@@ -112,7 +112,7 @@ eVarは、次のような原因と効果の測定に最適です。
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## Analysis Workspace {#workspace-project}で新しいプロジェクトを作成します。
+## Analysis Workspaceでの新しいプロジェクトの作成 {#workspace-project}
 
 Analysis Workspaceは、分析を構築し、インサイトをすばやく共有できる、柔軟なブラウザーツールです。 ドラッグ&amp;ドロップインターフェイスを使用すると、分析を作成し、ビジュアライゼーションを追加して、データを有効にし、データセットをキュレーションし、組織内の任意のユーザーとプロジェクトを共有、スケジュールできます。
 
@@ -266,7 +266,7 @@ Analytics分類は、Analytics変数データを分類し、レポートを生�
 
    ![プロジェクトを共有](assets/create-analytics-workspace/share.png)
 
-## バリデーターが
+## おめでとうございます。
 
 Adobe Experience Manager Siteから取り込んだデータをAdobe Analyticsのレポートスイートの指標やディメンションにマッピングする方法、指標の分類を実行する方法、Adobe AnalyticsのAnalysis Workspace機能を使用して詳細なレポートダッシュボードを作成する方法を学びました。
 
