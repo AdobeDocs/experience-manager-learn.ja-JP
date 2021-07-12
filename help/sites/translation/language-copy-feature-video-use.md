@@ -7,9 +7,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 12%
@@ -17,7 +17,7 @@ ht-degree: 12%
 ---
 
 
-# 言語コピー{#using-language-copy}の使用
+# 言語コピーの使用 {#using-language-copy}
 
 AEM 6.3言語コピーを作成ウィザードのサイト翻訳機能の強化により、ユーザーは、ルートページを作成する必要なく、マスター言語から言語コピーを作成できます。
 
