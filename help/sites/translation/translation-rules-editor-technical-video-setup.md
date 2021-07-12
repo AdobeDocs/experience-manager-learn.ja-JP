@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 topic: ローカリゼーション
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 ---
 
 
-# 翻訳ルールの設定{#set-up-translation-rules-in-aem}
+# 翻訳ルールの設定 {#set-up-translation-rules-in-aem}
 
 翻訳設定UIを使用すると、AEM Sitesでコンテンツを翻訳するルールを管理できます。 このビデオでは、カスタムコンポーネントの新しい翻訳ルールの作成について詳しく説明します。
 
@@ -40,7 +40,7 @@ ht-degree: 7%
 
 * **[!UICONTROL AEM Start Menu] / [!UICONTROL Tools] / [!UICONTROL General] / [[!UICONTROL Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
-## AEM 6.3より前{#prior-to-aem}
+## AEM 6.3より前 {#prior-to-aem}
 
 以前のAEMバージョンの翻訳ルールは、翻訳ワークフローの下にあるXMLファイルを編集することで手動で更新されていました。`/etc/workflow/models/translation/translation_rules.xml`.
 
