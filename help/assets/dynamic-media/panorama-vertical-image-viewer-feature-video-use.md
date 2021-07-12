@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: ビデオプロファイル、ビデオプロファイル、360 VRビデオ
 version: 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 ---
 
 
-# AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}でのパノラマビューアと垂直画像ビューアの使用
+# AEM Assets Dynamic Mediaでのパノラマビューアと垂直画像ビューアの使用{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
 AEM 6.4のDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマ仮想現実画像ビューア、および垂直画像ビューアが追加されました。 パノラマビューアは、カスタム開発をおこなわずに、部屋、物件、場所、風景などの魅力的で没入感のあるエクスペリエンスを簡単に提供します。
 
@@ -52,7 +52,7 @@ AEM 6.4のDynamic Mediaビューアの機能強化には、パノラマ画像ビ
    <td>DMS7とDynamic Media</td>
   </tr>
   <tr>
-   <td>使用例</td>
+   <td>ユースケース</td>
    <td><p>パノラマビューアとバーチャルリアリティビューアは、より魅力的なエクスペリエンスを提供します。 ユーザは予約を行う前でもホテルの部屋をチェックアウトしたり、予約をする必要がなくレンタル物件をチェックアウトすることができる。 ユーザーは、場所や他の多くの可能性をチェックアウトできます。 ここでの主な焦点は、消費者がWebサイトを訪問した際のより優れたエクスペリエンスを提供し、最終的にコンバージョン率を高めることです。</p> <p> </p> </td> 
    <td><p>垂直画像ビューアは、製品画像の表示エクスペリエンスを最大限に高め、消費者に製品の最適な表現を提供することで、コンバージョンを促進し、収益を最小限に抑えるのに役立ちます。</p> <p> </p> </td>
   </tr>
