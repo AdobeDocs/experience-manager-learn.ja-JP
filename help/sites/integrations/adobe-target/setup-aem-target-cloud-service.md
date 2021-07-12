@@ -9,9 +9,9 @@ version: cloud-service
 kt: 6044
 thumbnail: 41244.jpg
 topic: 統合
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe TargetCloud Serviceアカウント{#adobe-target-cloud-service}の作成
+# Adobe TargetCloud Serviceアカウントの作成 {#adobe-target-cloud-service}
 
 次のビデオでは、AEM as a Adobe Targetとの接続方法について説明します。
 
