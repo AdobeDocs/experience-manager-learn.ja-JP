@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
 topic: 統合
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 ---
 
 
-# エクスペリエンスフラグメントをAdobe Targetに書き出す{#experience-fragment-target}
+# エクスペリエンスフラグメントをAdobe Targetに書き出す {#experience-fragment-target}
 
 AEMエクスペリエンスフラグメントをAdobe Targetオファーとして書き出す方法を説明します。
 
