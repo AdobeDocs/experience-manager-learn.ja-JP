@@ -12,9 +12,9 @@ version: 6.3,6.4,6.5
 uuid: 3e32c3a7-387f-4652-8a94-4e6aa6cd5ab8
 discoiquuid: 671872b3-3de0-40da-9691-f8b7e88a9443
 topic: 開発
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 1%
@@ -68,7 +68,7 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 
 managerプロパティをLDAPに保存する方法に応じて、マネージャーIDを取得するには、文字列操作が必要になる場合があります。
 
-この記事を読んで、独自の[ ParticipantChooser .](https://helpx.adobe.com/jp/experience-manager/using/dynamic-steps.html)を実装してください。
+この記事を読んで、独自の[ ParticipantChooser .](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)を実装してください。
 
 (Adobe従業員の場合は、このサンプルをすぐに使用できます)
 
