@@ -12,9 +12,9 @@ uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 2%
@@ -22,11 +22,11 @@ ht-degree: 2%
 ---
 
 
-# ページ差異機能{#using-page-difference-with-aem-sites}の使用
+# ページの違い機能の使用 {#using-page-difference-with-aem-sites}
 
 AEM Sitesのページ差異機能の表示では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく確認できます。
 
-## ページのバージョンの比較{#comparing-page-versions}
+## ページのバージョンの比較 {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
 
@@ -41,7 +41,7 @@ AEM Sitesのページ差異機能の表示では、ページ内で変更され�
 * **赤**:削除されたコンポーネント
 * **青**:変更されたコンポーネント
 
-## 起動ページの比較{#comparing-launch-pages}
+## ローンチページの比較 {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
