@@ -8,9 +8,9 @@ topics: sets, development, authoring, configuring
 audience: all
 activity: use
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 画像、スウォッチ、スピンおよび混在メディアセット{#media-sets}
+# 画像、スウォッチ、スピン、混在メディアセット {#media-sets}
 
 動的なサイズ変更とズームのために1つの画像以外にも対応できるDynamic Media Classicのセットコレクションを使用すると、より豊富なオンラインエクスペリエンスを実現できます。 このチュートリアルの節では、Dynamic Media Classicで次のリッチメディアセットを作成する方法について説明します。
 
