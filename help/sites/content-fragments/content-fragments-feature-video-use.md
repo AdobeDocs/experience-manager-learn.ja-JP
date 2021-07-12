@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: cloud-service
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 12%
@@ -19,7 +19,7 @@ ht-degree: 12%
 ---
 
 
-# コンテンツフラグメントのオーサリング{#authoring-content-fragments}
+# コンテンツフラグメントのオーサリング {#authoring-content-fragments}
 
 コンテンツフラグメントは、AEMのコンテンツを抽象化したもので、サポートするチャネルとは独立して、テキストベースのコンテンツを作成および管理できます。
 
@@ -32,7 +32,7 @@ AEMコンテンツフラグメントは、テキストベースの編集コン�
 3. コンテンツフラグメントのダウンロード
 4. 編集機能
 
-## コンテンツフラグメントモデルの定義{#defining-content-fragment-models}
+## コンテンツフラグメントモデルの定義 {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
@@ -49,7 +49,7 @@ AEMの設定は、AEM Assetsのフォルダー階層に適用され、コンテ�
 *輸入用のアスリート伝記の例：*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## コンテンツフラグメントのダウンロード{#downloading-content-fragments}
+## コンテンツフラグメントのダウンロード {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
 
@@ -58,7 +58,7 @@ AEMコンテンツフラグメントは、バリエーション、要素、メ�
 *コンテンツフラグメントのダウンロードZipファイルの例：*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## コンテンツフラグメントの編集機能{#editorial-capabilities}
+## コンテンツフラグメントの編集機能 {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
 
