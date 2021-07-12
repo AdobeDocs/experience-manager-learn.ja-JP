@@ -4,9 +4,9 @@ description: AEMオーサーとAEM Assets Brand Portalの統合のビデオウ�
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 45%
@@ -32,7 +32,7 @@ Brand Portalのアセットソーシングは、サードパーティのエー�
 
 Experience Manager作成者でExperience Managerソーシングを設定および設定する方法については、「アセットソーシング用のアセット作成者の有効化](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) 」を参照してください。[
 
-## Brand Portal 2019年2月の機能と機能強化{#brand-portal-features-and-enhancements-644}
+## Brand Portal 2019年2月の機能および機能強化{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -111,7 +111,7 @@ Dynamic Media ビデオエンコードは以下の場所からダウンロード
 
 **使用例** :Adobeから提供されたURLをそのまま使用するのではなく、カスタマイズされたポータルURLを取得して、ブランディングのニーズを満たすことができます。
 
-## Brand Portal 2018年12月の機能と機能強化{#brand-portal-features-and-enhancements-642}
+## Brand Portal 2018年12月の機能および機能強化{#brand-portal-features-and-enhancements-642}
 
 >[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
 
@@ -156,7 +156,7 @@ Brand Portal ユーザーは、最大 25 倍の速度を実現できる Aspera �
 
 Brand Portalは、Adobe I/Oの[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)インターフェイスを使用してJWTアプリケーションを作成します。このアプリケーションでは、AEM AssetsとBrand Portalの統合を許可するようにOAuth統合を設定できます。 OAuth 統合を設定するための UI は、以前、`https://marketing.adobe.com/developer/` / でホストされていました。Brand Portal にアセットとコレクションを公開するための、AEM Assets と Brand Portal の統合について詳しくは、[AEM Assets と Brand Portal の統合の設定](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)を参照してください。
 
-## Brand Portal 2018年2月の機能と機能強化{#brand-portal-features-and-enhancements-632}
+## Brand Portal 2018年2月の機能および機能強化{#brand-portal-features-and-enhancements-632}
 
 Brand PortalとAEMの連携に向けた機能強化が新たに追加されました。
 
