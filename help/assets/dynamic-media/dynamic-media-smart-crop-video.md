@@ -7,9 +7,9 @@ version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 9%
@@ -17,7 +17,7 @@ ht-degree: 9%
 ---
 
 
-# ビデオのDynamic Mediaスマート切り抜きの使用{#using-smart-crop-video}
+# ビデオ用Dynamic Mediaスマート切り抜きの使用 {#using-smart-crop-video}
 
 Dynamic Media Smart Crop for Videoは、Adobe Senseiを使用してビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 
