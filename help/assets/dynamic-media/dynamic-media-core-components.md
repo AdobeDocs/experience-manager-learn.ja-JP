@@ -6,9 +6,9 @@ feature: コアコンポーネント、スマート切り抜き、画像プロ�
 version: cloud-service
 kt: 6630
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 ---
 
 
-# AEM SitesコアコンポーネントでのDynamic Mediaの使用{#dynamic-media-sites-core-components}
+# AEM SitesコアコンポーネントでのDynamic Mediaの使用 {#dynamic-media-sites-core-components}
 
 画像コンポーネントは、Experience Managerコアコンポーネントの一部で、Dynamic Mediaの組み込みサポートを備えています。 画像コンポーネントを使用すると、コンテンツ作成者は、AEM Sitesページ上で画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Mediaの機能を使用できます。
 
