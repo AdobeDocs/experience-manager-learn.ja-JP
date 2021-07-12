@@ -1,5 +1,5 @@
 ---
-title: AEM as aCloud Serviceへのアクセスの設定
+title: AEM as a Cloud Service へのアクセスの設定
 description: 'AEM as a AEMCloud Serviceは、アプリケーションを利用するクラウドネイティブな方法です。そのため、AdobeIMS(Identity Management System)を活用して、管理者と通常のユーザーの両方をAEM Authorサービスにログインしやすくします。 AdobeのIMSユーザー、ユーザーグループ、製品プロファイルを、AEMグループと共に使用し、AEMオーサーへの特定のアクセス権を付与する方法について説明します。  '
 feature: 'ユーザーとグループ '
 topics: authentication
@@ -10,17 +10,17 @@ doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
 topic: 管理、セキュリティ
-role: Administrator
+role: Admin
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '600'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 
-# AEM as aCloud Serviceへのアクセスの設定
+# AEM as a Cloud Service へのアクセスの設定
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
@@ -66,6 +66,6 @@ AdobeAdminConsoleでのAdobeIMSユーザー、ユーザーグループ、Adobe�
 
 次のドキュメントでは、Adobe Admin Console](https://adminconsole.adobe.com)に関する詳細と懸念事項を説明します。Adobe Admin Consoleをより深く理解し、を使用してExperience Cloud製品間のユーザー管理やアクセスを行う際に役立ちます。[
 
-+ [Adobe Admin Console IDの概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
++ [Adobe Admin Console IDの概要](https://helpx.adobe.com/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
 + [Adobe Admin Console開発者ロール](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)
