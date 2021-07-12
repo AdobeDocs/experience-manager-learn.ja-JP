@@ -3,9 +3,9 @@ title: AEM Assetsでのソースファイル変換の使用
 description: Adobe Experience Manager(AEM)Assetsでは、共通の属性を共有するアセットを識別し、新しい関連アセット機能を使用して関連のアセットとしてマークできます。 また、ユーザーはアセット間のソース/派生関係を定義できるので、アセットの出所を簡単に特定できます。 派生アセットで翻訳ワークフローを実行すると、ソースファイルが参照するアセットが取得され、翻訳に含まれるので、マルチサイトの管理の手間が軽減されます。
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# AEM Assets {#using-source-file-translation-with-aem-assets}でのソースファイル変換の使用
+# AEM Assetsでのソースファイル変換の使用 {#using-source-file-translation-with-aem-assets}
 
 Adobe Experience Manager(AEM)Assetsでは、共通の属性を共有するアセットを識別し、新しい関連アセット機能を使用して関連のアセットとしてマークできます。 また、ユーザーはアセット間のソース/派生関係を定義できるので、アセットの出所を簡単に特定できます。 派生アセットで翻訳ワークフローを実行すると、ソースファイルが参照するアセットが取得され、翻訳に含まれるので、マルチサイトの管理の手間が軽減されます。
 
-## マルチサイトアセットソースファイル管理{#multisite-asset-source-file-management}
+## マルチサイトアセットソースファイル管理 {#multisite-asset-source-file-management}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
 
