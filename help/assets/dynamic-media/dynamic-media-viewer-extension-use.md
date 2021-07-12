@@ -5,9 +5,9 @@ sub-product: Dynamic Media
 feature: アセットインサイト
 version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 28%
@@ -15,7 +15,7 @@ ht-degree: 28%
 ---
 
 
-# Adobe AnalyticsとAdobeLaunchでのDynamic Mediaビューアの使用{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Adobe AnalyticsとAdobeLaunchでのDynamic Media Viewersの使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 Dynamic MediaとAdobe Analyticsをお使いのお客様は、 Dynamic Media Viewer拡張機能を使用して、WebサイトでのDynamic Mediaビューアの使用状況を追跡できるようになりました。
 
