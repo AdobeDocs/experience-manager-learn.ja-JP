@@ -13,9 +13,9 @@ version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: コンテンツ管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 7%
@@ -23,7 +23,7 @@ ht-degree: 7%
 ---
 
 
-# コンテンツフラグメントの配信{#delivering-content-fragments}
+# コンテンツフラグメントの配信 {#delivering-content-fragments}
 
 Adobe Experience Manager(AEM)コンテンツフラグメントは、テキストベースの編集コンテンツで、関連付けられた構造化されたデータ要素が含まれていても、デザイン情報やレイアウト情報のない純粋なコンテンツと見なされる場合があります。 コンテンツフラグメントは、通常、チャネルに依存しないコンテンツとして作成され、チャネル間で使用および再使用することを目的としています。その後、コンテンツをコンテキスト固有のエクスペリエンスにラップします。
 
@@ -35,7 +35,7 @@ Adobe Experience Manager(AEM)コンテンツフラグメントは、テキスト
 2. AEM Content Servicesを使用したJSONとしてのコンテンツフラグメントの公開
 3. Assets HTTP APIの使用
 
-## Webページでのコンテンツフラグメントの使用{#using-content-fragments-in-web-pages}
+## Webページでのコンテンツフラグメントの使用 {#using-content-fragments-in-web-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
@@ -43,7 +43,7 @@ Adobe Experience Manager(AEM)コンテンツフラグメントは、テキスト
 
 コンテンツフラグメントコンポーネントは、必要に応じてAEMスタイルシステムを使用してスタイルを設定し、コンテンツを表示することができます。
 
-## コンテンツフラグメントをJSONとして公開する{#exposing-content-fragments-as-json}
+## コンテンツフラグメントをJSONとして公開する {#exposing-content-fragments-as-json}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
 
