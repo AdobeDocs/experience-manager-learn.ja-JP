@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 255d6bd403d240b2c18a0ca46c15b0bb98cf9593
+source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
 workflow-type: tm+mt
-source-wordcount: '3967'
+source-wordcount: '4108'
 ht-degree: 20%
 
 ---
@@ -84,7 +84,7 @@ WKNDチュートリアルのこのパートでは、署名コンポーネント�
 
 ダイアログは、コンテンツ作成者が提供できるインターフェイスを表示します。この実装では、AEM WCMコアコンポーネントの&#x200B;**画像**&#x200B;コンポーネントを署名の画像のオーサリングとレンダリングの処理に利用するので、アドビのコンポーネントの`sling:resourceSuperType`として設定されます。
 
-### コンポーネント定義の作成{#create-component-definition}
+### コンポーネント定義の作成 {#create-component-definition}
 
 1. **ui.apps**&#x200B;モジュールで、`/apps/wknd/components`に移動し、`byline`という名前の新しいフォルダーを作成します。
 1. `byline`フォルダーの下に、`.content.xml`という名前の新しいファイルを追加します。
@@ -289,7 +289,7 @@ WKNDチュートリアルのこのパートでは、署名コンポーネント�
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-## ページ{#add-the-component-to-a-page}にコンポーネントを追加します。
+## ページへのコンポーネントの追加 {#add-the-component-to-a-page}
 
 AEMコンポーネントの開発に重点を置いた作業を簡単におこなうために、記事ページに現在の状態の署名コンポーネントを追加し、`cq:Component`ノード定義がデプロイされ、正しく適用され、AEMが新しいコンポーネント定義を認識し、コンポーネントのダイアログがオーサリングに機能することを確認します。
 
@@ -345,13 +345,13 @@ AEMコンポーネントの開発に重点を置いた作業を簡単におこ�
 
    ![CRXDEの署名プロパティ](assets/custom-component/byline-properties-crxde.png)
 
-## 署名Sling Model {#create-sling-model}を作成
+## 署名Slingモデルの作成 {#create-sling-model}
 
 次に、データモデルとして機能し、署名コンポーネントのビジネスロジックを格納する Sling Model を作成します。
 
 Slingモデルは、JCRからJava変数へのデータのマッピングを容易にし、AEMのコンテキストで開発する際に他の多くの点を提供する、注釈駆動型のJava「POJO」(Plain Old Java Objects)です。
 
-### Mavenの依存関係の確認{#maven-dependency}
+### Mavenの依存関係の確認 {#maven-dependency}
 
 署名Slingモデルは、AEMが提供する複数のJava APIに依存します。 これらのAPIは、 `core`モジュールのPOMファイルにリストされている`dependencies`を通じて使用できます。 このチュートリアルで使用するプロジェクトは、AEM as a Cloud Service用に構築されています。 ただし、AEM 6.5/6.4との下位互換性がある点で一意です。したがって、Cloud ServiceとAEM 6.xの両方の依存関係が含まれます。
 
@@ -443,6 +443,19 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
 
    画像に対するメソッドがないことに注意してください。[後で](#tackling-the-image-problem)となる理由を見てみましょう。
 
+1. パブリックJavaクラス（この場合はSlingモデル）を含むJavaパッケージは、パッケージの`package-info.java`ファイルを使用してバージョン管理する必要があります。
+
+WKNDソースのJavaパッケージ`com.adobe.aem.guides.wknd.core.models`で宣言されているのは`2.0.0`のバージョンであり、新しいパブリックインターフェイスとメソッドを追加するので、バージョンを`2.1.0`に増やす必要があります。 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java`にあるファイルを開き、`@Version("2.0.0")`を`@Version("2.1.0")`に更新します。
+
+    &quot;&#39;
+    @Version(&quot;2.1.0&quot;)
+    package com.adobe.aem.guides.wknd.core.models;
+    
+    import org.osgi.annotation.versioning.Version;
+    &quot;&#39;
+
+このパッケージ内のファイルに変更が加えられた場合は、[パッケージのバージョンを意味的に](https://semver.org/)調整する必要があります。 そうでない場合、Mavenプロジェクトの[bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin)は無効なパッケージバージョンを検出し、ビルドを中断します。 幸いなことに、Mavenプラグインが失敗すると、無効なJavaパッケージのバージョンと、そのバージョンが表示されるはずです。 Iveraging Javaパッケージの`package-info.java`の`@Version("...")`宣言を、プラグインが推奨するバージョンに更新しました。
+
 ### 署名実装 {#byline-implementation}
 
 `BylineImpl.java` は、前に定義したインターフェイスを実装するSling `Byline.java`  Modelの実装です。`BylineImpl.java` の完全なコードは、この節の最後に記載しています。
@@ -452,7 +465,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
 
    ![署名Implファイル](assets/custom-component/byline-impl-file.png)
 
-1. `BylineImpl.java` を開きます。`Byline`インターフェイスを実装するように指定します。 IDEのオートコンプリート機能を使用するか、手動でファイルを更新して`Byline`インターフェイスの実装に必要なメソッドを含めます。
+1. 次を開きます： `BylineImpl.java`. `Byline`インターフェイスを実装するように指定します。 IDEのオートコンプリート機能を使用するか、手動でファイルを更新して`Byline`インターフェイスの実装に必要なメソッドを含めます。
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -507,7 +520,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
    * `adapters`パラメーターを使用すると、実装クラスを署名インターフェイスの下に登録できます。 これにより、HTLスクリプトは（implを直接呼び出すのではなく）インターフェイスを介してSling Modelを呼び出すことができます。 adapters について詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)を参照してください。
    * `resourceType`は、（前に作成した）署名コンポーネントのリソースタイプを指し、複数の実装がある場合は正しいモデルの解決に役立ちます。 モデルクラスのリソースタイプとの関連付けについて詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)を参照してください。
 
-### Sling Model メソッドの実装  {#implementing-the-sling-model-methods}
+### Sling Model メソッドの実装 {#implementing-the-sling-model-methods}
 
 #### getName() {#implementing-get-name}
 
@@ -602,7 +615,7 @@ public class BylineImpl implements Byline {
 ```
 
 
-#### 「画像の問題」への対処{#tackling-the-image-problem}
+#### 「画像の問題」への対処 {#tackling-the-image-problem}
 
 名前と占有条件の確認は簡単です（Apache Commons Lang3は常に便利な[StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html)クラスを提供します）が、コアコンポーネント画像コンポーネントを使用して画像を表示するので、**の存在を検証する方法は不明です。**
 
@@ -643,7 +656,7 @@ public class BylineImpl implements Byline {
    >
    >実際の実装では、よりシンプルでエレガントなソリューションなので、`@Self`を使用したアプローチが推奨されます。 このチュートリアルでは、2つ目のアプローチを使用します。非常に役立つSling Modelのより多くのファセットを調べる必要があるので、より複雑なコンポーネントを使用します。
 
-   SlingモデルはOSGiサービスではなくJava POJOなので、通常のOSGiインジェクション注釈`@Reference` **は使用できません**。代わりに、Slingモデルは、類似の機能を提供する特別な&#x200B;**[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)**&#x200B;注釈を提供します。
+   SlingモデルはOSGiサービスではなくJava POJOなので、通常のOSGiインジェクション注釈`@Reference` **は使用できません**。代わりに、Slingモデルは、同様の機能を提供する特別な&#x200B;**[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)**&#x200B;注釈を提供します。
 
 1. `BylineImpl.java`を更新して、`OSGiService`注釈を含め、`ModelFactory`を挿入します。
 
@@ -869,7 +882,7 @@ public class BylineImpl implements Byline {
 
    CSS クラスは [BEM 命名規則](https://getbem.com/naming/)に従うことに注意してください。BEM 規則の使用は必須ではありませんが、コアコンポーネント CSS クラスで使用され、一般的にクリーンで読みやすい CSS ルールになるので、BEM をお勧めします。
 
-### HTL での Sling Model オブジェクトのインスタンス化  {#instantiating-sling-model-objects-in-htl}
+### HTL での Sling Model オブジェクトのインスタンス化 {#instantiating-sling-model-objects-in-htl}
 
 [Use block statement](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use)は、HTLスクリプトでSling Modelオブジェクトをインスタンス化し、HTL変数に割り当てる場合に使用します。
 
@@ -887,7 +900,7 @@ public class BylineImpl implements Byline {
 
 ### Sling Model メソッドへのアクセス {#accessing-sling-model-methods}
 
-HTLはJSTLから借用し、同じ短縮形のJavaゲッターメソッド名を使用します。
+HTL は、 JSTL、およびは、同じ短縮形のJavaゲッターメソッド名を使用します。
 
 例えば、署名Sling Modelの`getName()`メソッドを呼び出すと、`byline.isEmpty`ではなく`byline.name`に短縮でき、同様に`byline.empty`に短縮できます。 完全なメソッド名`byline.getName`または`byline.isEmpty`を使用することもできます。 HTLでメソッドを呼び出す際に`()`は使用されないことに注意してください（JSTLと同様）。
 
@@ -913,7 +926,7 @@ HTLはJSTLから借用し、同じ短縮形のJavaゲッターメソッド名を
    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
    ```
 
-### プレースホルダーの条件付き表示  {#conditionally-displaying-the-placeholder}
+### プレースホルダーの条件付き表示 {#conditionally-displaying-the-placeholder}
 
 AEMコンポーネント用のほとんどのHTLスクリプトでは、**プレースホルダーパラダイム**&#x200B;を利用して、コンポーネントが誤って作成され、AEMパブリッシュ&#x200B;**に表示されないことを作成者に視覚的に示します。** この判断を推進するには、コンポーネントの背後の Sling Model のメソッド（この場合 `Byline.isEmpty()`()）を実装する必要があります。
 
@@ -940,7 +953,7 @@ AEMコンポーネント用のほとんどのHTLスクリプトでは、**プレ
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-### コアコンポーネント{#using-the-core-components-image}を使用した画像の表示
+### コアコンポーネントを使用した画像の表示 {#using-the-core-components-image}
 
 `byline.html`のHTLスクリプトは、ほぼ完了し、画像が見つからなくなりました。
 
@@ -989,7 +1002,7 @@ AEMコンポーネント用のほとんどのHTLスクリプトでは、**プレ
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-### スタイル設定されていない署名コンポーネント{#reviewing-the-unstyled-byline-component}のレビュー
+### スタイル設定されていない署名コンポーネントの確認 {#reviewing-the-unstyled-byline-component}
 
 1. アップデートをデプロイしたら、「 [Ultimate Guide to LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) 」ページ、または前の章で署名コンポーネントを追加した場所に移動します。
 
@@ -1086,7 +1099,7 @@ AEMコンポーネント用のほとんどのHTLスクリプトでは、**プレ
 
 ![署名コンポーネント](assets/custom-component/final-byline-component.png)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 Adobe Experience Managerを使用してカスタムコンポーネントを最初から作成しました。
 
