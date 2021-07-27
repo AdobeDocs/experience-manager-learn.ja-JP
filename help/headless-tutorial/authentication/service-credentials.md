@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: ヘッドレス、統合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
+source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ AEM as a AEMとの統合では、Cloud Serviceに対して安全に認証でき�
 
 __これは、AEM as a Cloud Service環境ごとに1回のみ初期化されます。__
 
-1. AdobeIMS Orgの管理者としてログインしていることを確認します。
+1. 次の方法でログインしていることを確認します。
+   + AdobeIMS組織の管理者
+   + __Cloud Manager - Developer__ IMS製品プロファイルのメンバー
+   + __AEM User__&#x200B;または&#x200B;__AEM Administrators__ IMS製品プロファイル(__AEM Author__)のメンバー
 1. [AdobeCloud Manager](https://my.cloudmanager.adobe.com)にログインします。
 1. AEM as a Cloud Service環境を含むプログラムを開き、のサービス資格情報を設定できるようにします。
 1. 「__環境__」セクションで環境の横にある省略記号をタップし、「__開発者コンソール__」を選択します。
@@ -67,8 +70,10 @@ AEM as a Cloud Service環境のサービス資格情報が初期化されると�
 
 サービス資格情報のダウンロードは、初期化と同じ手順に従います。 初期化がまだおこなわれていない場合は、「__サービス資格情報を取得__」ボタンをタップすると、エラーが表示されます。
 
-1. 自分が&#x200B;__Cloud Manager - Developer__ IMS製品プロファイル(AEM Developer Consoleへのアクセスを許可)のメンバーであることを確認します。
-   + Cloud Service環境としてのSandbox AEMは、__AEM Administrators__&#x200B;または&#x200B;__AEM Users__&#x200B;製品プロファイルのメンバーシップのみ必要です
+1. 次の形式でログインしていることを確認します。
+   + __Cloud Manager — 開発者__ IMS製品プロファイルのメンバー(AEM Developer Consoleへのアクセスを許可)
+      + Cloud Service環境としてのSandbox AEMには、この&#x200B;__Cloud Manager - Developer__&#x200B;メンバーシップは必要ありません
+   + __AEM User__&#x200B;または&#x200B;__AEM Administrators__ IMS製品プロファイル(__AEM Author__)のメンバー
 1. [AdobeCloud Manager](https://my.cloudmanager.adobe.com)にログインします。
 1. と統合するAEM環境としてのCloud Serviceを含むプログラムを開きます。
 1. 「__環境__」セクションで環境の横にある省略記号をタップし、「__開発者コンソール__」を選択します。
