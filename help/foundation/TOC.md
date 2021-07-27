@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation チュートリアル
 user-guide-description: 'Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。 '
 sub-product: foundation
 index: y
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 21%
+source-wordcount: '221'
+ht-degree: 16%
 
 ---
 
@@ -40,10 +40,20 @@ ht-degree: 21%
 + セキュリティ {#security}
    + [AEMセキュリティ通知（2018年11月）](./security/aem-security-notification-2018-11.md)
    + [クロスオリジンリソース共有(CORS)の開発](./security/develop-for-cross-origin-resource-sharing.md)
-   + [クロスオリジンリソース共有(CORS)について](./security/understand-cross-origin-resource-sharing.md)
+   + [クロスオリジンリソース共有（CORS）について](./security/understand-cross-origin-resource-sharing.md)
    + [SSLウィザードの使用](./security/use-the-ssl-wizard.md)
 + ワークフロー {#workflow}
    + [ワークフローエディターの使用](./workflow/use-the-workflow-editor.md)
    + [ワークフローの使用](./workflow/use-workflow.md)
    + [インボックスの使用](./workflow/use-the-inbox.md)
-
++ トラブルシューティング {#troubleshooting}
+   + [アセットのダウンロードレポートを有効にする方法](./troubleshooting/how-to-enable-asset-download-report.md)
+   + [AEM 6.4での再コンパイルの強制方法](./troubleshooting/how-to-force-recompilation.md)
+   + [AEMでインデックス関連の問題を調査する方法](./troubleshooting/how-to-investigate-indexing-related-issues.md)
+   + [AEMでのSAML関連の問題の調査方法](./troubleshooting/how-to-investigate-saml-related-issues.md)
+   + [AEMでの検索関連の問題の調査方法](./troubleshooting/how-to-investigate-search-related-issues.md)
+   + [Oakログイントークンのセッションの有効期限を設定する方法](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
+   + [Jetty設定に関する問題のトラブルシューティング方法](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
+   + [パフォーマンスに関する問題のトラブルシューティング方法](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
+   + [AEMのメモリ関連の問題を解決する手順](./troubleshooting/steps-to-resolve-memory-related-issues.md)
+   + [AEMでのレプリケーションの問題を解決する手順](./troubleshooting/steps-to-resolve-replication-issues.md)
