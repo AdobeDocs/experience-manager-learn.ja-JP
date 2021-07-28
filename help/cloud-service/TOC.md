@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
-source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
+source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 32%
+source-wordcount: '460'
+ht-degree: 31%
 
 ---
 
@@ -57,7 +57,14 @@ ht-degree: 32%
       + [コンテンツ公開](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [Dispatcher設定の移行](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + AEM プロジェクト{#aem-projects}
+      + [AEM Maven Project](./developing/projects/maven-project-structure.md)
++ OSGi Services{#osgi-services}
+   + [OSGiサービスの基本](./developing/osgi-services/basics.md)
+   + [OSGiコンポーネントのライフサイクル](./developing/osgi-services/lifecycle.md)
+   + [OSGi設定の基本](./developing/osgi-services/configurations.md)
+   + [OCDを使用したOSGi設定](./developing/osgi-services/configurations-ocd.md)
++ [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + デバッグAEM{#debugging}
    + AEM SDKのデバッグ{#debugging-aem-sdk}
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
