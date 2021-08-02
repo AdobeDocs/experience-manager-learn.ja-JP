@@ -8,8 +8,8 @@ version: cloud-service
 feature: ドキュメントサービス
 topic: 開発
 kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+thumbnail: 334859.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 4%
@@ -24,3 +24,5 @@ ht-degree: 4%
 1. サービス資格情報からJSON Webトークン(JWT)を作成し、アクセストークンと交換します
 1. AEMでのテクニカルアカウントへのアクセスの設定
 1. アクセストークンを使用したHTTP呼び出し
+
+>[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
