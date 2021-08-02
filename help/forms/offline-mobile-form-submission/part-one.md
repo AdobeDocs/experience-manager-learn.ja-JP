@@ -12,9 +12,9 @@ version: 6.4, 6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を確認するには、[ここ](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)をクリックしてください。
+部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を確認するには、[ここ](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)をクリックしてください。
 PDFがダウンロードされたら、次の手順はPDFをAEMワークフローにトリガーすることです。 このワークフローは、送信されたPDFのデータを結合し、レビュー用に非インタラクティブPDFを生成します。
 
 この使用例用に作成されたカスタムプロファイルは、このチュートリアルアセットの一部として利用できます。
