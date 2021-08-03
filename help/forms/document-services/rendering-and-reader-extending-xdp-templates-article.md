@@ -14,29 +14,29 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 0%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
 
-# 使用権限{#rendering-xdp-into-pdf-with-usage-rights}を使用してXDPをPDFにレンダリング
+# 使用権限を持つXDPをPDFにレンダリング{#rendering-xdp-into-pdf-with-usage-rights}
 
 一般的な使用例は、xdpをPDFにレンダリングし、レンダリングされたPDFにReader拡張を適用する場合です。
 
 例えば、AEM Formsのフォームポータルで、ユーザーがXDPをクリックすると、XDPをPDFとしてレンダリングし、ReaderでPDFを拡張できます。
 
-この機能をテストするには、[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)を試してみます。 サンプル名は「Render XDP with RE」です。
+この機能をテストするには、[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse2)を試してみます。 サンプル名は「Render and Extend XDP」です。
 
 この使用例を達成するには、次の手順を実行する必要があります。
 
-* Reader拡張証明書を「fd-service」ユーザーに追加します。 ReaderExtensions証明書を追加する手順は、[ここ](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)に記載されています。
+* Reader拡張証明書を「fd-service」ユーザーに追加します。 ReaderExtensions証明書を追加する手順は、[ここ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja)に記載されています。
 
 * 使用権限をレンダリングして適用するカスタムOSGiサービスを作成します。 これをおこなうコードを次に示します
 
-## XDPのレンダリングと使用権限の適用{#render-xdp-and-apply-usage-rights}
+## XDPのレンダリングと使用権限の適用 {#render-xdp-and-apply-usage-rights}
 
 * 7行目：FormsServiceのrenderPDFFormを使用して、XDPからPDFを生成します。
 
@@ -125,7 +125,7 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## PDFをストリーミングするサーブレットを作成{#create-servlet-to-stream-the-pdf}
+## PDFをストリーミングするサーブレットの作成 {#create-servlet-to-stream-the-pdf}
 
 次の手順では、GETメソッドを使用してサーブレットを作成し、リーダー用の拡張PDFをユーザーに返します。 この場合、ユーザーはPDFをファイルシステムに保存するよう求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザに付属しているPDFビューアではダイナミックPDFは処理されないためです。
 
@@ -202,6 +202,8 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 ローカルサーバーでテストするには、次の手順に従います
 1. [DevelopingWithServiceUserバンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [AEM FormsDocumentServicesバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+
+1. [カスタムポータルテンプレートのhtmlをダウンロードする](assets/render-and-extend-template.zip)
 1. [パッケージマネージャーを使用して、この記事に関連するアセットをAEMにダウンロードおよび読み込みます](assets/renderandextendxdp.zip)
    * このパッケージには、サンプルポータルとxdpファイルが含まれています
 1. 「fd-service」Readerに拡張機能証明書を追加する
