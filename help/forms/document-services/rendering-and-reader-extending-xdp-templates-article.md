@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '464'
 ht-degree: 2%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 2%
 この使用例を達成するには、次の手順を実行する必要があります。
 
 * Reader拡張証明書を「fd-service」ユーザーに追加します。 ReaderExtensions証明書を追加する手順は、[ここ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja)に記載されています。
+
+
+* [Reader拡張の資格情報](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)の設定に関するビデオもご覧ください。
+
 
 * 使用権限をレンダリングして適用するカスタムOSGiサービスを作成します。 これをおこなうコードを次に示します
 
