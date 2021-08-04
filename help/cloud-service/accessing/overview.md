@@ -12,9 +12,9 @@ thumbnail: KT-5882.jpg
 topic: 管理、セキュリティ
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '603'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,11 @@ ht-degree: 7%
 >title="AdobeIMSの概要"
 >abstract="AEM as aCloud Serviceでは、AdobeIMS(Identity Management System)を利用して、管理者と通常のユーザーの両方をAEMオーサーサービスにログインしやすくします。 AEMオーサーサービスへの詳細なアクセスを提供するために、AdobeのIMSユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用する方法について説明します。"
 
-AEM as a AEMCloud Serviceは、アプリケーションを利用するクラウドネイティブな方法です。そのため、AdobeIMS(Identity Management System)を活用して、管理者と通常のユーザーの両方をAEM Authorサービスにログインしやすくします。 AEMオーサーサービスへの詳細なアクセスを提供するために、AdobeのIMSユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用する方法について説明します。
+AEM as a AEMCloud Serviceは、アプリケーションを利用するクラウドネイティブな方法です。そのため、AdobeIMS(Identity Management System)を活用して、管理者と通常のユーザーの両方をAEM Authorサービスにログインしやすくします。
+
+![Adobe Admin Console](./assets/hero.png)
+
+AEMオーサーサービスへの詳細なアクセスを提供するために、AdobeのIMSユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用する方法について説明します。
 
 ## AdobeIMSユーザー
 
