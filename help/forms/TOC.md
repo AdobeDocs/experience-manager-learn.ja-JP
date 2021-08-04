@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1603'
 ht-degree: 3%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 3%
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsのCaptcha](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [Webページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
    + [OSGIワークフローでのXMLでのSet Valueの使用](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [OSGIワークフローでのJSONでの値の設定の使用](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [AEM Formsワークフローでの電子メールコンポーネントの送信](adaptive-forms/email-step-aem-workflow-video-use.md)
@@ -198,8 +199,8 @@ ht-degree: 3%
    + [AEM FormsでのOutputとForms Serviceの使用](document-services/output-and-forms-services-article-develop.md)
    + [1つのデータファイルからの複数のPDFの生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時にPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [Reader拡張の秘密鍵証明書の設定](document-services/configuring-reader-extension-osgi.md)
    + [モバイルフォームからインタラクティブPDFを生成する](document-services/render-interactive-form-using-api.md)
+   + [Reader拡張の秘密鍵証明書の設定](document-services/configuring-reader-extension-osgi.md)
    + [XDPレンディションでのPDFへの使用権限の適用](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [アップロードされたPDFへの使用権限の適用](document-services/apply-reader-extension-rights-to-pdf.md)
    + [ドキュメントの認証](document-services/certifying-documents-aem-forms-tutorial.md)
