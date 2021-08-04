@@ -2,10 +2,10 @@
 title: AEM Assets Essentialsビデオ
 description: Adobe Experience Manager Assets Essentialsのビデオのコレクション
 sub-product: アセット
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 882c7ce872533ab4848c8db6145172b8cce4e270
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 15%
+source-wordcount: '128'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 15%
 Experience ManagerAssets Essentialsは、軽量なアセット管理とコラボレーションを実現する、合理化されたユーザーインターフェイスを提供します。
 
 Assets Essentialsを使用したAdobeの管理方法、およびアセットをAdobe Assets Orchestratorと統合する方法に関するビデオをご覧ください。
+
+## Assets Essentialsの詳細
 
 <table>
 <td>
@@ -32,27 +34,25 @@ Assets Essentialsを使用したAdobeの管理方法、およびアセットをA
       <em>Assets Essentialsの基本を学びましょう。</em>
    </p>
 </td>
-<!--
 <td>
-   <a href="./creative-cloud.md">
-   <img alt="" src="./assets/overview/x.png"/>
+   <a href="./basics/collaborating.md">
+   <img alt="" src="./assets/overview/collaboration.png"/>
    </a>
    <div>
-      <a href="./provisioning/getting-access.md">
-      <strong>Creative Cloud and Assets Essentials</strong>
+      <a href="./basics/collaborating.md">
+      <strong>共同作業Assets Essentials</strong>
       </a>
    </div>
    <p>
-      <em>Learn how Assets Essentials can integrate with your Creative Cloud Enterprise Libraries!</em>
+      <em>Assets Essentialsが軽量なタスク管理を提供し、アセットのライフサイクルを管理する方法を説明します。</em>
    <p>
 </td>
--->
 <td>
-   <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/create-messages/assets-essentials.html?lang=ja">
+   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
    <img alt="Adobe Journey Optimizer" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/create-messages/assets-essentials.html">
+      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
       <strong>Adobe Journey Optimizer</strong>
       </a>
    </div>
