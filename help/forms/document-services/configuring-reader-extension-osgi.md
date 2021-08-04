@@ -11,10 +11,10 @@ version: 6.4,6.5
 topic: 管理
 role: Admin
 level: Beginner
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 8%
+source-wordcount: '212'
+ht-degree: 6%
 
 ---
 
@@ -40,6 +40,15 @@ Reader Extensionsの秘密鍵証明書はfd-serviceユーザーに関連付け�
 ビデオに従って、fd-serviceユーザーに資格情報を追加してください
 
 >[!VIDEO](https://video.tv.adobe.com/v/335849?quality=9&learn=on)
+
+
+pfxファイルの詳細をリストするコマンドは、です。 次のコマンドは、 pfxファイルと同じディレクトリにあることを前提としています。
+
+**keytool -v -list -storetype pkcs12 -keystore  &lt;name of=&quot;&quot; your=&quot;&quot;>**
+
+例えば、 keytool -v -list -storetype pkcs12 -keystore 1005566.pfx ( 1005566.pfxは私のpfxファイルの名前)
+
+
 
 
 
