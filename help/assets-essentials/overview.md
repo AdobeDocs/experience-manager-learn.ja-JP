@@ -2,15 +2,15 @@
 title: AEM Assets Essentialsビデオ
 description: Adobe Experience Manager Assets Essentialsのビデオのコレクション
 sub-product: アセット
-source-git-commit: 882c7ce872533ab4848c8db6145172b8cce4e270
+source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 2%
+source-wordcount: '126'
+ht-degree: 3%
 
 ---
 
 
-# AEM Assets Essentials
+# 概要
 
 ![Assets Essentials](./assets/overview/hero.png)
 
