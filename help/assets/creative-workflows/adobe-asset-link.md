@@ -7,9 +7,9 @@ topic: コンテンツ管理
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1029'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,13 @@ ht-degree: 3%
 Adobe Experience Managerアセットは、デザイナーやクリエイティブユーザーが好きなAdobe Creative Cloudデスクトップアプリケーション内で使用できます。
 
 Adobe Creative Cloud for enterpriseのAdobeアセットリンク拡張機能は、Creative Cloudアプリケーション内でAEMアセットのメタデータを検索、参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張しました。
+
+
+## AdobeアセットリンクとAEMクリエイティブワークフロー
+
+次のビデオでは、Adobe Creative Cloudアプリケーションで作業し、AEM Asset Linkを使用して直接Adobeと統合するクリエイティブで使用される一般的なワークフローを示します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
 
 ## Adobeアセットリンクの機能
 
