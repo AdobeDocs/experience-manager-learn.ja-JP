@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 sub-product: アセット
 team: TM
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 37%
+source-wordcount: '273'
+ht-degree: 36%
 
 ---
 
@@ -121,3 +121,5 @@ ht-degree: 37%
 
 + デプロイメント{#deployment}
    + [マルチテナント機能と同時開発](deployment/multitenancy-concurrent-article-understand.md)
+
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
