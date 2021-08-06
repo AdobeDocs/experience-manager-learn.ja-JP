@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets Essentialsのビデオ�
 breadcrumb-title: AEM Assets Essentialsビデオ
 sub-product: アセット
 team: TM
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+source-git-commit: 5438fd521e08b37405f18e5fc2e7fc1f02592a78
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 19%
+source-wordcount: '42'
+ht-degree: 21%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 19%
 # AEM Assets Essentialsビデオ {#assets-essentials}
 
 + [概要](overview.md)
+
++ [プロビジョニング](./provisioning.md)
 
 + 基本{#basics}
    + [管理](basics/managing.md)
