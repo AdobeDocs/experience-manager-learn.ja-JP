@@ -12,10 +12,10 @@ thumbnail: kt-5432.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e2473a1584ccf315fffe5b93cb6afaed506fdbce
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,11 +37,21 @@ AEM as aCloud Servicesは、カスタムログファイルをサポートしま�
 
 AEM as aCloud Service([Cloud Manager](#cloud-manager)または[Adobe I/OCLI](#aio)を介してJavaログを使用できるようにするには、カスタムログステートメントを`error.log`に記述する必要があります。 `example.log`などのカスタム名付きログに書き込まれたログは、AEM as a Cloud Serviceからはアクセスできません。
 
+ログは、アプリケーションの`org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`ファイルのSling LogManager OSGi設定プロパティを使用して`error.log`に書き込むことができます。
+
+```
+{
+   ...
+   "org.apache.sling.commons.log.file": "logs/error.log"
+   ...
+}
+```
+
 ## AEMオーサーとパブリッシュのサービスログ
 
 AEMオーサーサービスとパブリッシュサービスの両方がAEMランタイムサーバーログを提供します。
 
-+ `aemerror` はJavaエラーログです(AEM SDKのローカ `/crx-quickstart/error.log` ルクイックスタートにあります)。環境タイプごとのカスタムロガーに推奨される[ログレベル](#log-levels)を次に示します。
++ `aemerror` はJavaエラーログです(AEM SDKのローカ `/crx-quickstart/logs/error.log` ルクイックスタートにあります)。環境タイプごとのカスタムロガーに推奨される[ログレベル](#log-levels)を次に示します。
    + 開発: `DEBUG`
    + ステージ: `WARN`
    + 実稼動: `ERROR`
@@ -106,7 +116,7 @@ Environment Id Service    Name
 22295          dispatcher aemdispatcher 
 ```
 
-### ログの追跡{#aio-cli-tail-logs}
+### 追跡ログ{#aio-cli-tail-logs}
 
 Adobe I/OCLIは、[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)コマンドを使用して、AEMからリアルタイムでログをCloud Serviceとして追跡する機能を提供します。 テーリングは、AEM as a Cloud Service環境でアクションが実行されるので、リアルタイムログアクティビティを見るのに役立ちます。
 
@@ -123,7 +133,7 @@ $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 
 `com.example.MySlingModel`から生成されたログ文や、その文字列を含むログ文のみを表示します。
 
-### ログ{#aio-cli-download-logs}をダウンロードしています
+### ログのダウンロード{#aio-cli-download-logs}
 
 Adobe I/OCLIは、[download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days))コマンドを使用して、AEMからログをCloud Serviceとしてダウンロードする機能を提供します。 これにより、 Cloud Manager Web UIからログをダウンロードするのと同じ結果が得られます。`download-logs`コマンドは、ログがリクエストされた日数に基づいてログを日単位で統合します。
 
@@ -157,7 +167,7 @@ __ポッドcm-p12345-e56789-aem-author-abcdefg-2222__
 01.01.2020 12:00:01.002 [cm-p12345-e56789-aem-author-abcdefg-2222] *WARN*  [qtp2078364989-269] com.example.services.impl.ExampleServiceImpl Unable to resolve resource [ /content/example ] to a resource. Aborting.
 ```
 
-## 推奨ログレベル{#log-levels}
+## 推奨されるログレベル{#log-levels}
 
 Adobe環境としてのAEMあたりのログレベルに関するCloud Serviceの一般的なガイダンスは次のとおりです。
 
@@ -177,7 +187,7 @@ Adobe環境としてのAEMあたりのログレベルに関するCloud Service�
 
 各環境に静的な既知のJavaログレベルを設定する代わりに、AEMをCloud Serviceの[環境変数](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)として使用してログレベルをパラメータ化し、[Adobe I/OCLIとCloud Managerプラグイン](#aio-cli)を使用して値を動的に変更できます。
 
-そのためには、環境固有の変数プレースホルダーを使用するようにログOSGi設定を更新する必要があります。 [ログレ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) ベルのデフォルト値は、 [Adobeの推奨事項](#log-levels)に従って設定する必要があります。以下に例を示します。
+そのためには、環境固有の変数プレースホルダーを使用するようにログOSGi設定を更新する必要があります。 [ログレ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) ベルのデフォルト値は、 [Adobeの推奨事項](#log-levels)に従って設定する必要があります。次に例を示します。
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
