@@ -10,10 +10,10 @@ doc-type: article
 topic: セキュリティ
 role: Developer
 level: Intermediate
-source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
+source-git-commit: 3418cd424cc82fece9e7d13de72c0d8dde346d7c
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -123,7 +123,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## Dispatcherのキャッシュに関する問題と設定{#dispatcher-caching-concerns-and-configuration}
+## Dispatcherのキャッシュに関する問題と設定 {#dispatcher-caching-concerns-and-configuration}
 
 Dispatcher 4.1.1以降の応答ヘッダーはキャッシュ可能です。 これにより、リクエストが匿名である限り、[!DNL CORS]リクエストされたリソースに沿って[!DNL CORS]ヘッダーをキャッシュできます。
 
@@ -133,7 +133,7 @@ Dispatcher 4.1.1以降の応答ヘッダーはキャッシュ可能です。 こ
 |-----------|-------------|-----------------------|-------------|
 | 不可 | AEM パブリッシュ | 認証済み | AEMオーサー上のDispatcherのキャッシュは、静的で、作成されていないアセットに制限されます。 これにより、HTTP応答ヘッダーを含むAEMオーサー上のほとんどのリソースをキャッシュするのが困難で実用的ではありません。 |
 | 不可 | AEM パブリッシュ | 認証済み | 認証済みリクエストではCORSヘッダーをキャッシュしないでください。 これは、要求元ユーザーの認証/承認ステータスが配信されたリソースに与える影響を判断するのは困難なので、認証済み要求のキャッシュに関しない一般的なガイダンスに従います。 |
-| 可 | AEM パブリッシュ | 匿名 | Dispatcherでキャッシュ可能な匿名リクエストの応答ヘッダーもキャッシュでき、今後のCORSリクエストでキャッシュされたコンテンツにアクセスできるようになります。 AEMパブリッシュでのCORS設定の変更には、影響を受けるキャッシュリソースを無効にする必要があります。**** キャッシュされたコンテンツを特定するのは困難なので、コードまたは設定のデプロイメントではDispatcherキャッシュがパージされるのがベストプラクティスです。 |
+| ○ | AEM パブリッシュ | 匿名 | Dispatcherでキャッシュ可能な匿名リクエストの応答ヘッダーもキャッシュでき、今後のCORSリクエストでキャッシュされたコンテンツにアクセスできるようになります。 AEMパブリッシュでのCORS設定の変更には、影響を受けるキャッシュリソースを無効にする必要があります。**** キャッシュされたコンテンツを特定するのは困難なので、コードまたは設定のデプロイメントではDispatcherキャッシュがパージされるのがベストプラクティスです。 |
 
 CORSヘッダーのキャッシュを許可するには、サポートするすべてのAEMパブリッシュdispatcher.anyファイルに次の設定を追加します。
 
@@ -141,7 +141,7 @@ CORSヘッダーのキャッシュを許可するには、サポートするす�
 /cache { 
   ...
   /headers {
-      "Origin",
+      "Origin"
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
