@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: クラウドサービス
 team: TM
-source-git-commit: e442c6d67a02aae4c6ce9241e754c15abc920c67
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 31%
+source-wordcount: '478'
+ht-degree: 30%
 
 ---
 
@@ -110,6 +110,12 @@ ht-degree: 31%
       + [インターフェイスの実装](./forms/doc-cloud-sdk/implement-interface.md)
       + [JSONパーツの作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [カスタムプロセスステップ](./forms/doc-cloud-sdk/custom-process-step.md)
+   + Azure Portal Storage{#forms-cs-azure-portal}
+      + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
+      + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
+      + [Azure Storageへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
+      + [事前入力フォーム](./forms/forms-cs-azure-portal/prefill-af-storage.md)
+      + [クエリの送信](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + レビューワークフローの作成{#create-aem-workflow}
       + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
