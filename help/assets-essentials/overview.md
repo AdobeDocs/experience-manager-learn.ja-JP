@@ -2,9 +2,9 @@
 title: AEM Assets Essentialsビデオ
 description: Adobe Experience Manager Assets Essentialsのビデオのコレクション
 sub-product: アセット
-source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
+source-git-commit: 21d6df065fe61614d3bbd68ce2f20d3dc23a9cef
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '132'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Assets Essentialsを使用したAdobeの管理方法、およびアセットをA
       </a>
    </div>
    <p>
-      <em>Assets Essentialsの基本を学びましょう。</em>
+      <em>Assets Essentialsの基本を学べ！</em>
    </p>
 </td>
 <td>
