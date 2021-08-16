@@ -1,6 +1,6 @@
 ---
 title: 1つのデータファイルからの複数のPDFの生成
-seo-title: 1つのデータファイルからの複数のPDFの生成
+description: OutputServiceは、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。 複数の個々のレコードを含む1つの大きなxmlから複数のpdfを生成する方法を説明します。
 feature: Output サービス
 topics: development
 audience: developer
@@ -10,9 +10,9 @@ version: 6.4,6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
