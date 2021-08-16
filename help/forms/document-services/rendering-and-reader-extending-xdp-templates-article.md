@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
@@ -212,7 +212,7 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
    * このパッケージには、サンプルポータルとxdpファイルが含まれています
 1. 「fd-service」Readerに拡張機能証明書を追加する
 1. ブラウザーで[ポータルWebページ](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)を参照します。
-1. PDFアイコンをクリックしてxdpをレンダリングし、「Extended」のPDFを取得します。Reader
+1. 使用権限が適用されたpdfファイルとしてxdpをレンダリングするには、pdfアイコンをクリックします。
 
 
 
