@@ -12,10 +12,10 @@ thumbnail: KT-6266.jpg
 topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
+source-git-commit: fd72f3c85db8a56ec8abfd1609da53492ee54be2
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 1%
+source-wordcount: '505'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ asset computeマイクロサービスを拡張するには、ローカルの開�
 1. 必要なnpmモジュールとAdobe I/OCLIプラグインをコマンドラインからインストールします。
 
    ```
-   $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
+   $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
@@ -51,8 +51,6 @@ asset computeマイクロサービスを拡張するには、ローカルの開�
 ## Visual Studio Codeのインストール{#vscode}
 
 [Microsoft Visual Studio Codeは、](https://code.visualstudio.com/download) Asset compute・ワーカーの開発とデバッグに使用されます。他の[JavaScript互換のIDE](../../local-development-environment/development-tools.md#set-up-the-development-ide)を使用してワーカーを開発できますが、Visual Studioコードのみを[debug](../test-debug/debug.md)Asset computeワーカーに統合できます。
-
-_wskdebugを機能させるには、Visual Studio Code 1.48.x以降が [](#wskdebug) 必要です。_
 
 このチュートリアルでは、Visual Studio Codeを使用することを前提としています。Visual Studio Codeは、Asset computeを拡張するための最適な開発者エクスペリエンスを提供します。
 
@@ -69,7 +67,7 @@ $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 
 Windowsマシンの開発者は、上記のイメージにLinuxコンテナを使用していることを確認する必要があります。 Linuxコンテナに切り替える手順は、[Docker for Windowsのドキュメント](https://docs.docker.com/docker-for-windows/)に記載されています。
 
-## Node.js （およびnpm）{#node-js}のインストール
+## Node.js（およびnpm）のインストール{#node-js}
 
 asset computeワーカーは[Node.js](https://nodejs.org/)ベースなので、開発と構築にはNode.js 10以降（およびnpm）が必要です。
 
@@ -80,10 +78,13 @@ asset computeワーカーは[Node.js](https://nodejs.org/)ベースなので、�
 [Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)、または ____ aioisは、Adobe I/Oテクノロジーの使用と操作を容易にするコマンドライン(CLI) npmモジュールをインストールし、カスタムAsset computeワーカーの生成とローカル開発の両方に使用します。
 
 ```
-$ npm install -g @adobe/aio-cli
+$ npm install -g @adobe/aio-cli@7.1.0
 ```
 
-## Adobe I/OCLIAsset computeプラグイン{#aio-asset-compute}をインストールします。
+_Adobe I/OCLIバージョン7.1.0が必要です。現時点では、Adobe I/OCLIの新しいバージョンはサポートされていません。_
+
+
+## Adobe I/OCLIAsset computeプラグインのインストール{#aio-asset-compute}
 
 [Adobe I/OCLIAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
