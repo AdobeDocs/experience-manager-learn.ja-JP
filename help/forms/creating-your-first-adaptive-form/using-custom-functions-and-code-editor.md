@@ -1,30 +1,22 @@
 ---
 title: 関数とコードエディターの使用
-seo-title: 関数とコードエディターの使用
 description: 関数とコードエディターを使用したビジネスルールの作成
-seo-description: 関数とコードエディターを使用したビジネスルールの作成
-uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
 feature: アダプティブフォーム
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.4,6.5
-discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 1%
+source-wordcount: '139'
+ht-degree: 2%
 
 ---
 
 
-# カスタム関数とコードエディター{#using-functions-and-code-editor}の使用
+# カスタム関数とコードエディターの使用 {#using-functions-and-code-editor}
 
 ここでは、カスタム関数とコードエディターを使用してビジネスルールを作成します。
 
@@ -33,15 +25,15 @@ ht-degree: 1%
 通常、クライアントライブラリはCSSとJavaScriptファイルで構成されます。 このクライアントライブラリには、コンボボックス値を入力する関数を公開するJavaScriptファイルが含まれています。
 
 
-## ドロップダウンリストに入力する機能{#function-to-populate-drop-down-list}
+## コンボボックスに入力する機能 {#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### パネルの概要タイトルを設定{#set-the-summary-title-of-panels}
+### パネルの概要タイトルを設定 {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### パネル{#validate-panels-using-rule-editor}を検証
+#### 検証パネル {#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
