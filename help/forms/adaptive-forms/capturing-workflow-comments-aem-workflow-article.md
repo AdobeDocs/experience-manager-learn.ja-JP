@@ -1,28 +1,20 @@
 ---
 title: アダプティブワークフローでのワークフローコメントの取り込みForms Workflow
-seo-title: アダプティブワークフローでのワークフローコメントの取り込みForms Workflow
 description: AEM Workflowでのワークフローコメントの取り込み
-seo-description: AEM Workflowでのワークフローコメントの取り込み
-uuid: df41fc6f-9abf-47b4-a014-b3b9fb58b6f7
 feature: ワークフロー
-topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4
-discoiquuid: d5e40650-3b1f-4875-91b2-e22d932b5e7c
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
 
-# アダプティブForms Workflowでのワークフローコメントのキャプチャ{#capturing-workflow-comments-in-adaptive-forms-workflow}
+# アダプティブワークフローでのワークフローコメントの取り込みForms Workflow{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
 >[AEM Forms 6.4にのみ適用されます。AEM Forms 6.5では、変数機能を使用してこの使用例を実現してください。]
 
