@@ -1,20 +1,15 @@
 ---
 title: アダプティブFormsでのインライン画像の表示
-seo-title: アダプティブFormsでのインライン画像の表示
 description: アップロードされた画像をアダプティブFormsにインラインで表示
-seo-description: アップロードされた画像をアダプティブFormsにインラインで表示
 feature: アダプティブフォーム
 topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
@@ -23,6 +18,8 @@ ht-degree: 1%
 # アダプティブFormsのインライン画像
 
 一般的な使用例として、アップロードした画像をアダプティブフォーム内のインライン画像として表示します。 デフォルトでは、アップロードされた画像はリンクとして表示され、画像をアダプティブフォームに表示することで、このエクスペリエンスを強化できます。 この記事では、インライン画像の表示に関する手順について説明します。
+
+[この機能の実例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
 
 ## プレースホルダー画像を追加
 
