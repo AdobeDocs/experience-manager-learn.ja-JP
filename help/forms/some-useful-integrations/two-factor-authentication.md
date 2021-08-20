@@ -2,18 +2,14 @@
 title: SMS 2要素認証
 description: 特定のアクティビティを実行する際にユーザーのIDを確認するのに役立つ、セキュリティのレイヤーを追加します。
 feature: アダプティブフォーム
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6317
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 3%
 
 ---
@@ -51,11 +47,11 @@ OpenAPI仕様（旧称Swagger仕様）は、REST APIのAPI説明形式です。 
 
 ## データソースの作成
 
-AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソース](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を作成する必要があります。
+AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソース](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を作成する必要があります。
 
-## フォームデータモデルを作成
+## フォームデータモデルの作成
 
-AEM Formsのデータ統合機能は、[フォームデータモデル](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 フォームデータモデルは、データの交換にデータソースを利用します。
+AEM Formsのデータ統合機能は、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 フォームデータモデルは、データの交換にデータソースを利用します。
 完成したフォームデータモデルは、[こちら](assets/sms-2fa-fdm.zip)からダウンロードできます。
 
 ![fdm](assets/2FA-fdm.PNG)
