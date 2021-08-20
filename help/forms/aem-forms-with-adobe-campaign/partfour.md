@@ -1,32 +1,24 @@
 ---
 title: フォームデータモデルを使用したキャンペーンプロファイルの作成
-seo-title: フォームデータモデルを使用したキャンペーンプロファイルの作成
 description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
-seo-description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
-uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: Output サービス
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+feature: アダプティブフォーム
 version: 6.3,6.4,6.5
-discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '429'
 ht-degree: 4%
 
 ---
 
 
-# フォームデータモデル{#create-campaign-profile-using-form-data-model}を使用したキャンペーンプロファイルの作成
+# フォームデータモデルを使用したキャンペーンプロファイルの作成 {#create-campaign-profile-using-form-data-model}
 
 AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
 
-## カスタム認証の作成{#create-custom-authentication}
+## カスタム認証の作成 {#create-custom-authentication}
 
 Swaggerファイルを使用してデータソースを作成する場合、AEM Formsは次の種類の認証をサポートします
 
@@ -107,7 +99,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## データソース{#create-data-source}の作成
+## データソースの作成 {#create-data-source}
 
 最初の手順は、Swaggerファイルを作成することです。 Swaggerファイルは、Adobe Campaign Standardでのプロファイルの作成に使用されるREST APIを定義します。 Swaggerファイルは、REST APIの入力パラメーターと出力パラメーターを定義します。
 
@@ -115,7 +107,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 この記事に関連するアセットの一部として、サンプルのSwaggerファイルが提供されます。**ACSインスタンスに合わせて、SwaggerファイルのhostとbasePathを必ず変更してください。**
 
-## {#test-the-solution}ソリューションをテストします。
+## ソリューションのテスト {#test-the-solution}
 
 ソリューションをテストするには、次の手順に従います。
 * [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
