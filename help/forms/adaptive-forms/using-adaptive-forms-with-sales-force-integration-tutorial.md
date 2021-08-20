@@ -1,28 +1,21 @@
 ---
 title: AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定
-seo-title: AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定
 description: フォームデータモデルを使用したAEM FormsとSalesforceの統合
-seo-description: フォームデータモデルを使用したAEM FormsとSalesforceの統合
-uuid: 0124526d-f1a3-4f57-b090-a418a595632e
 feature: アダプティブForms、フォームデータモデル
 topics: integrations
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 8e314fc3-62d0-4c42-b1ff-49ee34255e83
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
 
 
-# AEM Forms 6.3および6.4{#configuring-datasource-with-salesforce-in-aem-forms-and}でのSalesforceを使用したデータソースの設定
+# AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
 ## 前提条件 {#prerequisites}
 
