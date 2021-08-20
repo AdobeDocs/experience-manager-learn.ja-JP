@@ -1,20 +1,14 @@
 ---
 title: 選択グループコンポーネントへの項目の追加
-seo-title: 選択グループコンポーネントへの項目の追加
 description: 項目を選択グループコンポーネントに動的に追加する
-seo-description: 項目を選択グループコンポーネントに動的に追加する
 feature: アダプティブフォーム
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 開発
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
@@ -96,7 +90,7 @@ else
 **Visual Editorを使用した項目の追加**
 
 * [アセットのダウンロード](assets/usingthevisualeditor.zip)
-* Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [TomcatでのSampleRest.warファイルのデプロイ](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
 * [Formsとドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 「作成 「|ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします。
