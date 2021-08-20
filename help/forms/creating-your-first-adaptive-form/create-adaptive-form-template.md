@@ -2,17 +2,13 @@
 title: アダプティブフォームテンプレートの作成
 description: テンプレートは、アダプティブフォームの構造と初期コンテンツを定義します。
 feature: アダプティブフォーム
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 thumbnail: 37324.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '134'
 ht-degree: 5%
 
 ---
@@ -26,7 +22,7 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-詳しくは、[アダプティブフォームテンプレートのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)を参照してください。
+詳しくは、[アダプティブフォームテンプレートのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)を参照してください。
 
 必要に応じて、[アダプティブフォームテンプレート](assets/peak-application-template.zip)をダウンロードし、[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してAEMに読み込むことができます
 
