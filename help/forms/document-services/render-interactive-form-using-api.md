@@ -1,20 +1,14 @@
 ---
 title: AEM FormsでのOutputおよびForms Servicesを使用した開発
-seo-title: AEM FormsでのOutputおよびForms Servicesを使用した開発
 description: AEM FormsでのOutputおよびForms Service APIの使用
-seo-description: AEM FormsでのOutputおよびForms Service APIの使用
 feature: Forms サービス
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
