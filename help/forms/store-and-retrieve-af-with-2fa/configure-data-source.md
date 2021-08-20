@@ -2,17 +2,14 @@
 title: データソースの設定
 description: MySQLデータベースを指すデータソースの作成
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6541
 thumbnail: 6541.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 4%
@@ -49,7 +46,7 @@ AEMで外部データベースとの統合を有効にする方法は多数あ�
 [データベーススキーマ](assets/data-base-schema.sql)をインポートして、データベースを作成してください
 MySQL Workbenchを使用する。
 
-## フォームデータモデルを作成
+## フォームデータモデルの作成
 
 フォームデータモデルを作成し、前の手順で作成したデータソースをベースにします。
 以下のスクリーンショットに示すように、このフォームデータモデルの**get**サービスを設定します。
