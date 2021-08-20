@@ -1,28 +1,20 @@
 ---
 title: アダプティブFormsを使用したバーコードサービス
-seo-title: アダプティブFormsを使用したバーコードサービス
-description: バーコードサービスを使用したバーコードのデコードと、抽出したデータからのフォームフィールドの入力
-seo-description: バーコードサービスを使用したバーコードのデコードと、抽出したデータからのフォームフィールドの入力
-uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
-feature: barcoded-forms
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+description: バーコードサービスを使用してバーコードをデコードし、抽出したデータからフォームフィールドを設定する。
+feature: Barcoded Forms
 version: 6.4,6.5
-discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 
-# アダプティブForms{#barcode-service-with-adaptive-forms}を使用したバーコードサービス
+# アダプティブFormsを使用したバーコードサービス{#barcode-service-with-adaptive-forms}
 
 この記事では、アダプティブフォームに入力するためのバーコードサービスの使用方法について説明します。 使用例を次に示します。
 
