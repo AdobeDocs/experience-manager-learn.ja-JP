@@ -1,28 +1,20 @@
 ---
 title: アダプティブフォーム送信時のキャンペーンプロファイルの作成
-seo-title: アダプティブフォーム送信時のキャンペーンプロファイルの作成
 description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
-seo-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
-uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
 feature: アダプティブForms、フォームデータモデル
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# アダプティブフォーム送信時のキャンペーンプロファイルの作成{#creating-campaign-profile-on-adaptive-form-submission}
+# アダプティブフォーム送信時のキャンペーンプロファイルの作成 {#creating-campaign-profile-on-adaptive-form-submission}
 
 この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタム送信メカニズムを使用してアダプティブフォームの送信を処理します。
 
@@ -32,7 +24,7 @@ ht-degree: 0%
 * アダプティブフォームの送信を処理するためのカスタム送信アクションの作成
 * CampaignServiceのcreateProfileメソッドを呼び出す
 
-## AEMサービス{#create-aem-service}の作成
+## AEM Serviceの作成 {#create-aem-service}
 
 AEM Serviceを作成して、Adobe Campaignプロファイルを作成します。 このAEMサービスは、Adobe Campaignの資格情報をOSGI設定から取得します。 キャンペーン資格情報が取得されたアクセストークンが生成され、アクセストークンHTTP Post呼び出しを使用して、Adobe Campaignでプロファイルが作成されます。 次に、プロファイルを作成するためのコードを示します。
 
@@ -247,7 +239,7 @@ return null;
 }
 ```
 
-## カスタム送信{#custom-submit}
+## カスタム送信 {#custom-submit}
 
 アダプティブフォームの送信を処理するためのカスタム送信ハンドラーを作成します。 このカスタム送信ハンドラーでは、CampaignServiceのcreateProfileメソッドを呼び出します。 createProfileメソッドは、作成する必要があるプロファイルを表すJSONObjectを受け取ります。
 
@@ -266,7 +258,7 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## {#test-the-solution}ソリューションをテストします。
+## ソリューションのテスト {#test-the-solution}
 
 サービスとカスタム送信アクションを定義したら、ソリューションをテストする準備が整います。 ソリューションをテストするには、次の手順を実行します
 
