@@ -1,21 +1,14 @@
 ---
 title: AEM Formsでのドキュメントの認証
-seo-title: AEM Formsでのドキュメントの認証
 description: Docassuranceサービスを使用したAEM FormsでのPDFドキュメントの認証
-seo-description: Docassuranceサービスを使用したAEM FormsでのPDFドキュメントの認証
-uuid: ecb1f9b6-bbb3-43a3-a0e0-4c04411acc9f
 feature: Document Security
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '403'
 ht-degree: 1%
 
 ---
@@ -31,7 +24,7 @@ ht-degree: 1%
 
 AEM Formsを使用してドキュメントを認証するには、次の手順に従う必要があります
 
-## Trust Storeに証明書を追加しています{#adding-certificate-to-trust-store}
+## Trust Storeへの証明書の追加 {#adding-certificate-to-trust-store}
 
 以下の手順に従って、AEMのキーストアに証明書を追加してください
 
