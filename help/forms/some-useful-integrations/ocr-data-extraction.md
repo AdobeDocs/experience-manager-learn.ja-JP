@@ -2,18 +2,14 @@
 title: OCRデータ抽出
 description: 政府発行ドキュメントからデータを抽出し、フォームに入力します。
 feature: Barcoded Forms
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6679
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 3%
 
 ---
@@ -51,11 +47,11 @@ OpenAPI仕様（旧称Swagger仕様）は、REST APIのAPI説明形式です。 
 
 ## データソースの作成
 
-AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソース](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を作成する必要があります。 [swaggerファイル](assets/drivers-license-swagger.zip)を使用して、データソースを作成してください。
+AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソース](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を作成する必要があります。 [swaggerファイル](assets/drivers-license-swagger.zip)を使用して、データソースを作成してください。
 
-## フォームデータモデルを作成
+## フォームデータモデルの作成
 
-AEM Formsのデータ統合機能は、[フォームデータモデル](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 前の手順で作成したデータソースを基にフォームデータモデルを作成します。
+AEM Formsのデータ統合機能は、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 前の手順で作成したデータソースを基にフォームデータモデルを作成します。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
