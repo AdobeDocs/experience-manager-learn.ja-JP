@@ -2,17 +2,15 @@
 title: JBoss Admin Console用の管理ユーザーの追加方法
 description: JBOSS Admin Consoleの管理ユーザーの設定
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
-feature: 'Foundation JEE '
 topic: 管理
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 2%
 
 ---
 
