@@ -1,28 +1,20 @@
 ---
 title: アダプティブFormsの概要
-seo-title: アダプティブFormsの概要
 description: 'このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学習します。 '
-seo-description: 'このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学習します。 '
-uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
 feature: アダプティブフォーム
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.3,6.4,6.5
-discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 34%
+source-wordcount: '210'
+ht-degree: 39%
 
 ---
 
 
-# アダプティブFormsの概要{#getting-started-with-adaptive-forms}
+# アダプティブFormsの概要 {#getting-started-with-adaptive-forms}
 
 このチュートリアルでは、複数のタブを持つアダプティブフォームを作成する手順について説明します。 テーブル、アコーディオンレイアウト、ルールエディターを使用して、ビジネスルールを作成する方法を学習します。
 
