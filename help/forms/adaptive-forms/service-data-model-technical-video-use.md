@@ -1,28 +1,20 @@
 ---
 title: AEM Formsでのサービスデータモデルの使用
-seo-title: AEM Formsでのサービスデータモデルの使用
 description: AEM Adaptive Formsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
-seo-description: AEM Adaptive Formsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
-uuid: fb4a331f-231a-4864-9325-6dceb288ad75
 feature: アダプティブForms、フォームデータモデル
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: e3ff47c3-9ab3-41cb-83ba-38f3eb7b2299
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '52'
 ht-degree: 1%
 
 ---
 
 
-# AEM Forms{#using-service-data-models-with-aem-forms}でのサービスデータモデルの使用
+# AEM Formsでのサービスデータモデルの使用{#using-service-data-models-with-aem-forms}
 
 AEM Adaptive Formsのルールエディターは、フォームデータモデルで作成されたサービスを利用できます。
 
