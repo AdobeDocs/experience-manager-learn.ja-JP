@@ -1,32 +1,24 @@
 ---
 title: APIを使用したAEM Formsでのレコードのドキュメントの生成
-seo-title: APIを使用したAEM Formsでのレコードのドキュメントの生成
 description: レコードのドキュメント(DOR)をプログラムで生成する
-seo-description: APIを使用したAEM Formsでのレコードのドキュメントの生成
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
-discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 5%
+source-wordcount: '257'
+ht-degree: 6%
 
 ---
 
 
-# APIを使用してAEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}でレコードのドキュメントを生成する
+# APIを使用したAEM Formsでのレコードのドキュメントの生成 {#using-api-to-generate-document-of-record-with-aem-forms}
 
 レコードのドキュメント(DOR)をプログラムで生成する
 
-この記事では、`com.adobe.aemds.guide.addon.dor.DoRService API`を使用して&#x200B;**レコードのドキュメント**&#x200B;をプログラムで生成する方法を説明します。 [Document of Recordは、](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) アダプティブフォームで取り込まれるデータのPDF版です。
+この記事では、`com.adobe.aemds.guide.addon.dor.DoRService API`を使用して&#x200B;**レコードのドキュメント**&#x200B;をプログラムで生成する方法を説明します。 [Document of Recordは、](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) アダプティブフォームで取り込まれるデータのPDF版です。
 
 1. コードスニペットを次に示します。 最初の行にDORサービスが表示されます。
 1. DoROptionsを設定します。
