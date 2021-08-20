@@ -1,28 +1,20 @@
 ---
 title: 電子メールを送信ステップのForms Workflow
-seo-title: 電子メールを送信ステップのForms Workflow
 description: AEM Forms 6.4で導入された電子メールの送信手順。この手順を使用して、添付ファイルの有無に関わらず電子メールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、電子メール送信コンポーネントの設定手順を説明します
-seo-description: AEM Forms 6.4で導入された電子メールの送信手順。この手順を使用して、添付ファイルの有無に関わらず電子メールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、電子メール送信コンポーネントの設定手順を説明します
-uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
 feature: ワークフロー
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '445'
 ht-degree: 3%
 
 ---
 
 
-# Forms Workflow{#using-send-email-step-of-forms-workflow}の電子メール送信手順の使用
+# 電子メールを送信ステップのForms Workflow {#using-send-email-step-of-forms-workflow}
 
 AEM Forms 6.4で導入された電子メールの送信手順。この手順を使用して、添付ファイルの有無に関わらず電子メールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、電子メール送信コンポーネントの設定手順を説明します。
 
