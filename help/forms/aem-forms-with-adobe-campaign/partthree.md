@@ -1,27 +1,19 @@
 ---
 title: ACSプロファイルを使用したアダプティブフォームの事前入力
-seo-title: ACSプロファイルを使用したアダプティブフォームの事前入力
 description: ACSプロファイルを使用したアダプティブFormsの事前入力
-seo-description: ACSプロファイルを使用したアダプティブFormsの事前入力
-uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
 feature: アダプティブForms、フォームデータモデル
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '339'
 ht-degree: 1%
 
 ---
 
-# ACSプロファイル{#prefilling-adaptive-form-using-acs-profile}を使用したアダプティブフォームの事前入力
+# ACSプロファイルを使用したアダプティブフォームの事前入力 {#prefilling-adaptive-form-using-acs-profile}
 
 ここでは、ACSから取得したプロファイル情報を使用して、アダプティブフォームに事前入力します。 AEM Formsには、アダプティブフォームの事前入力に使用できる強力な機能があります。
 
