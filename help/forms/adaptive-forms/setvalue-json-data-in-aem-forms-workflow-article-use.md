@@ -1,28 +1,20 @@
 ---
 title: AEM FormsワークフローでのJsonデータ要素の値の設定
-seo-title: AEM FormsワークフローでのJsonデータ要素の値の設定
 description: アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされるので、フォームのレビュー担当者に基づいて特定のフィールドやパネルの表示/非表示を切り替える必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、ビジネスルールを作成し、適切なパネルまたはフィールドを非表示/無効にできます。
-seo-description: アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされるので、フォームのレビュー担当者に基づいて特定のフィールドやパネルの表示/非表示を切り替える必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、ビジネスルールを作成し、適切なパネルまたはフィールドを非表示/無効にできます。
-uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
 feature: アダプティブフォーム
-topics: developing
-audience: implementer
-doc-type: article
-activity: setup
 version: 6.4
-discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '692'
 ht-degree: 2%
 
 ---
 
 
-# AEM FormsワークフローのJSONデータ要素の値の設定{#setting-value-of-json-data-element-in-aem-forms-workflow}
+# AEM FormsワークフローでのJSONデータ要素の値の設定 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
 アダプティブフォームがAEMワークフロー内の別のユーザーにルーティングされるので、フォームのレビュー担当者に基づいて特定のフィールドやパネルの表示/非表示を切り替える必要があります。 これらの使用例を満たすために、通常は非表示フィールドの値を設定します。 この非表示フィールドの値に基づいて、ビジネスルールを作成し、適切なパネルまたはフィールドを非表示/無効にできます。
 
