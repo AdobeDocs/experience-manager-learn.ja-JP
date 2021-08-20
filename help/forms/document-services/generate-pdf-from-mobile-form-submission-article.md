@@ -1,28 +1,20 @@
 ---
 title: HTM5フォーム送信からPDFを生成
-seo-title: HTML5フォーム送信からPDFを生成
 description: モバイルフォームの送信からPDFを生成
-seo-description: モバイルフォームの送信からPDFを生成
-uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
 feature: 'モバイルフォーム '
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# HTM5フォーム送信からPDFを生成{#generate-pdf-from-htm-form-submission}
+# HTM5フォーム送信からPDFを生成 {#generate-pdf-from-htm-form-submission}
 
 この記事では、HTML5(Mobile Forms)フォームの送信からpdfを生成する手順について説明します。 このデモでは、HTML5フォームに画像を追加し、画像を最終的なpdfに結合するために必要な手順も説明します。
 
