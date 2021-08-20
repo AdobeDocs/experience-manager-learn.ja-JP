@@ -2,17 +2,13 @@
 title: WebページへのアダプティブForms/HTML5フォームの埋め込み
 description: アダプティブFormsまたはHTML5フォームをAEM以外のWebページに埋め込むために必要な設定手順。
 feature: アダプティブフォーム
-feature-set: Adaptive Forms
-topics: development
-audience: developer
-doc-type: Tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
-topic: 管理
-role: Admin
+topic: 開発
+role: Developer
 level: Beginner
 kt: 8390
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 28%
