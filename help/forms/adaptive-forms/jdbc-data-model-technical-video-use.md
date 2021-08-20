@@ -1,28 +1,20 @@
 ---
 title: AEM FormsでのJDBCベースのフォームデータモデルの使用
-seo-title: AEM FormsでのJDBCベースのフォームデータモデルの使用
 description: このビデオでは、JDBCデータソースに基づくフォームデータモデルの作成方法、フォームデータモデルに基づくアダプティブフォームの作成方法、およびフォームデータモデルを使用した「INSERT」操作の使用方法を説明します。
-seo-description: このビデオでは、JDBCデータソースに基づくフォームデータモデルの作成方法、フォームデータモデルに基づくアダプティブフォームの作成方法、およびフォームデータモデルを使用した「INSERT」操作の使用方法を説明します。
-uuid: 5c664b16-c089-48ad-8bf6-9766d0ddc3c4
 feature: アダプティブフォーム
-topics: form-data-model
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-discoiquuid: 4e5f947c-b49a-423e-9139-51c0c5648318
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '129'
+ht-degree: 2%
 
 ---
 
 
-# AEM Forms {#using-jdbc-based-form-data-models-with-aem-forms}でのJDBCベースのフォームデータモデルの使用
+# AEM FormsでのJDBCベースのフォームデータモデルの使用 {#using-jdbc-based-form-data-models-with-aem-forms}
 
 このビデオでは、JDBCデータソースに基づくフォームデータモデルの作成方法、フォームデータモデルに基づくアダプティブフォームの作成方法、およびフォームデータモデルを使用した「INSERT」操作の使用方法を説明します。
 
