@@ -2,15 +2,12 @@
 title: MySQLデータベースからのフォームデータの格納と取得
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.3,6.4,6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 4%
