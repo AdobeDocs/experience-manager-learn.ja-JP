@@ -1,26 +1,21 @@
 ---
 title: AEM 6.5ワークフローでのフォームデータモデルサービスの手順としての使用
-seo-title: AEM 6.5ワークフローでのフォームデータモデルサービスの手順としての使用
-description: AEM Forms 6.5では、AEMワークフローで変数を作成する機能が導入されました。 この新しい機能により、AEMワークフローで「フォームデータモデルサービスを起動」を使用することが非常に簡単になりました。 次のビデオでは、AEMワークフローで「フォームデータモデルを起動」サービスを使用する手順について説明します。
-seo-description: AEM Forms 6.5では、AEMワークフローで変数を作成する機能が導入されました。 この新しい機能により、AEMワークフローで「フォームデータモデルサービスを起動」を使用することが非常に簡単になりました。 次のビデオでは、AEMワークフローで「フォームデータモデルを起動」サービスを使用する手順について説明します。
+description: AEM Forms 6.5では、AEMワークフローで変数を作成する機能が導入されました。 この新しい機能により、AEMワークフローで「フォームデータモデルサービスを起動」を使用することが非常に簡単になりました。 次のビデオでは、AEMワークフローで「フォームデータモデルサービスを起動」を使用する手順について説明します。
 feature: ワークフロー
-topics: workflow.
-audience: developer.
-doc-type: technical video.
-activity: setup.
+type: Tutorial
 version: 6.5.
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 0%
+source-wordcount: '274'
+ht-degree: 1%
 
 ---
 
 
-# AEM 6.5 Workflow {#using-form-data-model-service-as-step-in-workflow}でのフォームデータモデルサービスの手順としての使用
+# AEM 6.5ワークフローでのフォームデータモデルサービスの手順としての使用 {#using-form-data-model-service-as-step-in-workflow}
 
 AEM Forms 6.4以降では、フォームデータモデルサービスをAEM Workflowの一部として使用できるようになりました。 次のビデオでは、AEM Workflowでフォームデータモデルを設定するために必要な手順について説明します
 
