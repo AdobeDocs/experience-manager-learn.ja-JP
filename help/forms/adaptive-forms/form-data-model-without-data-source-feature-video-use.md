@@ -1,28 +1,20 @@
 ---
 title: データソースを使用しないフォームデータモデルの作成
-seo-title: データソースを使用しないフォームデータモデルの作成
 description: AEM Forms 6.4以降では、フォームデータモデル(FDM)をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずにFDMを作成する手順を説明します。
-seo-description: AEM Forms 6.4以降では、フォームデータモデル(FDM)をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずにFDMを作成する手順を説明します。
 feature: ワークフロー
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: eeb6165c-5465-4692-a3a9-8ef10780678d
-discoiquuid: 54fdce05-486b-4fb5-aed4-8552fe2040fd
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
 
 
-# データソース{#creating-form-data-model-without-data-source}を使用しないフォームデータモデルの作成
+# データソースを使用しないフォームデータモデルの作成 {#creating-form-data-model-without-data-source}
 
 AEM Forms 6.4以降では、フォームデータモデル(FDM)をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずにFDMを作成する手順を説明します。
 
