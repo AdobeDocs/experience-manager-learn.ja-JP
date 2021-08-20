@@ -2,26 +2,23 @@
 title: クライアントライブラリの作成
 description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成する
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 8%
+source-wordcount: '142'
+ht-degree: 2%
 
 ---
 
 # クライアントライブラリの作成
 
-[クライアントlib](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を作成します。このコードには、CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのclickイベントで`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードが含まれます。  アダプティブフォームのデータ`fileMap`と`mobileNumber`を、`**/bin/storeafdatawithattachments`をリッスンするエンドポイントに渡します。
+[クライアントlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)を作成します。このコードには、CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのclickイベントで`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードが含まれます。  アダプティブフォームのデータ`fileMap`と`mobileNumber`を、`**/bin/storeafdatawithattachments`をリッスンするエンドポイントに渡します。
 
 フォームデータを保存すると、一意のアプリケーションIDが生成され、ダイアログボックスに表示されます。 ダイアログボックスを閉じると、ユーザーは、一意のアプリケーションIDを使用して保存済みのアダプティブフォームを取得できるフォームに移動します。
 
