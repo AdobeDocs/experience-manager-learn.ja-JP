@@ -2,19 +2,16 @@
 title: OTPを使用したユーザーの検証
 description: OTPを使用して、アプリケーション番号に関連付けられている携帯番号を確認します。
 feature: アダプティブフォーム
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
+type: Tutorial
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -52,11 +49,11 @@ OpenAPI仕様（旧称Swagger仕様）は、REST APIのAPI説明形式です。 
 
 ## データソースの作成
 
-AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定のSwaggerファイル](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を使用して[RESTベースのデータソースを使用する必要があります。 完成したデータソースは、このコースの一部として提供されます。
+AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定のSwaggerファイル](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を使用して[RESTベースのデータソースを使用する必要があります。 完成したデータソースは、このコースの一部として提供されます。
 
-## フォームデータモデルを作成
+## フォームデータモデルの作成
 
-AEM Formsのデータ統合機能は、[フォームデータモデル](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 フォームデータモデルは、データの交換にデータソースを利用します。
+AEM Formsのデータ統合機能は、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 フォームデータモデルは、データの交換にデータソースを利用します。
 完成したフォームデータモデルは、[こちら](assets/sms-2fa-fdm.zip)からダウンロードできます。
 
 ![fdm](assets/2FA-fdm.PNG)
