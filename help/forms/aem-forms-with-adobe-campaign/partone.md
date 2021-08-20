@@ -1,32 +1,24 @@
 ---
 title: 'JSON Webトークンとアクセストークンの生成 '
-seo-title: 'JSON Webトークンとアクセストークンの生成 '
 description: この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
-seo-description: この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
-uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
 feature: アダプティブForms、フォームデータモデル
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# JSON Webトークンとアクセストークン{#generating-json-web-token-and-access-token}の生成
+# JSON Webトークンとアクセストークンの生成 {#generating-json-web-token-and-access-token}
 
 この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
 
-## JSON Webトークン{#generate-json-web-token}を生成します
+## JSON Webトークンを生成 {#generate-json-web-token}
 
 Adobe Campaign APIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 この[javaコードのサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)に従ってJWTを生成できます。
 
@@ -247,6 +239,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## アクセストークン{#generate-access-token}の生成
+## アクセストークンの生成 {#generate-access-token}
 
 次に、生成されたJWTをアクセストークンと交換するために、POST呼び出しをおこないます。 その後、このアクセストークンは、後続のREST呼び出しのHTTPヘッダーで認証キーとして送信されます
