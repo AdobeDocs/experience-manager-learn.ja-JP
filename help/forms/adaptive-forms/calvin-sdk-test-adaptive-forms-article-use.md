@@ -1,31 +1,26 @@
 ---
 title: 'AEM Adaptive Formsでの自動テストの使用 '
-seo-title: 'AEM Adaptive Formsでの自動テストの使用 '
 description: Calvin SDKを使用したアダプティブFormsの自動テスト
-seo-description: Calvin SDKを使用したアダプティブFormsの自動テスト
 feature: アダプティブフォーム
-topics: development
-audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
-uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 6%
+source-wordcount: '446'
+ht-degree: 4%
 
 ---
 
 
-# AEM Adaptive Formsでの自動テストの使用{#using-automated-tests-with-aem-adaptive-forms}
+# AEM Adaptive Formsでの自動テストの使用 {#using-automated-tests-with-aem-adaptive-forms}
 
 Calvin SDKを使用したアダプティブFormsの自動テスト
 
-Calvin SDK は、アダプティブフォームをテストするためのアダプティブフォーム開発者用のユーティリティ API です。Calvin SDKは、[Hobbes.jsテストフレームワーク](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)上に構築されています。 Calvin SDKは、AEM Forms 6.3以降で使用できます。
+Calvin SDK は、アダプティブフォームをテストするためのアダプティブフォーム開発者用のユーティリティ API です。Calvin SDKは、[Hobbes.jsテストフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)上に構築されています。 Calvin SDKは、AEM Forms 6.3以降で使用できます。
 
 このチュートリアルでは、次の内容を作成します。
 
@@ -80,13 +75,13 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 * テストケースを作成したら、テストケースにアクションを追加できます。
 * `navigateTo`、`asserts.isTrue`などのアクションをアクションとしてテストケースに追加できます。
 
-## 自動化されたテストの実行{#running-the-automated-tests}
+## 自動化されたテストの実行 {#running-the-automated-tests}
 
 [](http://localhost:4502/libs/granite/testing/hobbes.html)testsuiteを開き、テストスイートを展開してテストを実行します。すべてが正常に実行された場合は、次の出力が表示されます。
 
 ![calvinsdk](assets/calvinimage.png)
 
-## サンプルテストスイート{#try-out-the-sample-test-suites}を試してみます。
+## サンプルテストスイートを試す {#try-out-the-sample-test-suites}
 
 サンプルパッケージの一部として、追加のテストスイートが3つあります。 次に示すように、クライアントライブラリのjs.txtファイルに適切なファイルを含めることで、ファイルを試すことができます。
 
