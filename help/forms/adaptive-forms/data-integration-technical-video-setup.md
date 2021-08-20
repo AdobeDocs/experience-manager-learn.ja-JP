@@ -1,28 +1,20 @@
 ---
 title: AEM Formsとのデータ統合の設定
-seo-title: AEM Formsとのデータ統合の設定
 description: JDBCデータソースへのデータ接続の設定
-seo-description: JDBCデータソースへのデータ接続の設定
 feature: アダプティブForms，ワークフロー
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: 267de794-4462-4421-adee-d40a469fabb3
-discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 11%
+source-wordcount: '78'
+ht-degree: 14%
 
 ---
 
 
-# AEM Formsとのデータ統合のセットアップ{#set-up-data-integration-with-aem-forms}
+# AEM Formsとのデータ統合の設定 {#set-up-data-integration-with-aem-forms}
 
 JDBCデータソースへのデータ接続の設定
 
@@ -32,7 +24,7 @@ JDBCデータソースへのデータ接続の設定
 >
 >MySQL JDBCドライバーは、AEMインスタンス上のOSGiバンドルを介してインストールする必要があります。
 
-## サポート資料{#supporting-materials}
+## サポート資料 {#supporting-materials}
 
 * [MySQL JDBC OSGiバンドルのダウンロード](https://dev.mysql.com/downloads/connector/j/)
 
