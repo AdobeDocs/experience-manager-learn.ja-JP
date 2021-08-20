@@ -1,20 +1,14 @@
 ---
 title: カスタムプロセスステップの実装
-seo-title: カスタムプロセスステップの実装
 description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
-seo-description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
 feature: ワークフロー
-topics: development
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '818'
 ht-degree: 4%
 
 ---
@@ -46,7 +40,7 @@ executeメソッドを使用すると、次の3つの変数にアクセスでき
 
 **WorkflowSession**:このworkflowSession変数を使用すると、ワークフローを制御できます。パブリックAPIドキュメントは、[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)から入手できます。
 
-**MetaDataMap**:ワークフローに関連付けられているすべてのメタデータ。プロセスステップに渡されるプロセス引数は、 MetaDataMapオブジェクトを使用して使用できます。[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html?lang=ja)
+**MetaDataMap**:ワークフローに関連付けられているすべてのメタデータ。プロセスステップに渡されるプロセス引数は、 MetaDataMapオブジェクトを使用して使用できます。[API に関するドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 このチュートリアルでは、アダプティブフォームに追加された添付ファイルをAEMワークフローの一部としてファイルシステムに書き込みます。
 
