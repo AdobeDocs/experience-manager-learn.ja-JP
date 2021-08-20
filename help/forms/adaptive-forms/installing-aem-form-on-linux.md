@@ -2,15 +2,13 @@
 title: LinuxへのAEM Formsのインストール
 description: Linuxのインストールで動作するAEM Forms用の32ビットライブラリをインストールする方法を説明します。
 feature: アダプティブフォーム
-audience: developer
-doc-type: article
-activity: setup
+type: Tutorial
 version: 6.4, 6.5
 topic: 開発
 role: Developer
 level: Beginner
 kt: 7593
-source-git-commit: 9583006352ca6a20a763c9d5ec7ba15c3791e897
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -88,7 +86,7 @@ yum remove glibc32-2.28-42.1.el8.x86_64
 これらすべてを実行した場合、x86_64とi686のバージョンは、次の出力からコマンドに出力されるのと同じにする必要があります。
 yum info glibc
 
-最後のメタデータの有効期限の確認：0:41:33前2020年1月18日（土） 11:37:08 AM EST。
+最後のメタデータの有効期限の確認：0:41:33前（2020年1月18日午前11時:37:08時）
 インストール済みパッケージ
 名前：glibc
 バージョン：2.28
