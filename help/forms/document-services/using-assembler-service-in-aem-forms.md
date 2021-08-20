@@ -1,28 +1,20 @@
 ---
 title: AEM FormsでのAssemblerサービスの使用
-seo-title: AEM FormsでのAssemblerサービスの使用
 description: AEM FormsでのAssemblerサービスを使用した複数のpdfファイルのアセンブリ
-seo-description: AEM FormsでのAssemblerサービスを使用した複数のpdfファイルのアセンブリ
-uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
 feature: Assembler
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 5%
 
 ---
 
 
-# AEM Forms{#using-assembler-service-in-aem-forms}でのAssemblerサービスの使用
+# AEM FormsでのAssemblerサービスの使用{#using-assembler-service-in-aem-forms}
 
 この記事では、複数のPDFファイルをブラウザーにドラッグ&amp;ドロップし、アセンブリされたPDFファイルをファイルシステムに保存する機能を示すアセットを提供します。 次に、ブラウザーを使用してアップロードされたpdfファイルをアセンブルするサーブレットのコードを示します。
 
