@@ -1,17 +1,14 @@
 ---
 title: アダプティブフォームデータの保存と取得
-seo-title: アダプティブフォームデータの保存と取得
 description: アダプティブフォームデータを保存し、データベースから取得する。 この機能を使用すると、フォーム入力者はフォームを保存し、後でフォームの入力を続行できます。
-seo-description: アダプティブフォームデータを保存し、データベースから取得する。 この機能を使用すると、フォーム入力者はフォームを保存し、後でフォームの入力を続行できます。
-feature: adaptive-forms
-topics: developing
-audience: developer,implementer
-doc-type: article
-activity: setup
+feature: アダプティブフォーム
+topic: 開発
+role: Developer
+type: Tutorial
 version: 6.3,6.4,6.5
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
 * [機能のデモ](#capability-demo)
 * [サーバーにデプロイする](#deploy-on-your-server)
 
-## データソース{#Configure-Data-Source}の設定
+## データソースの設定 {#Configure-Data-Source}
 
 Apache Sling接続プールに入れられたデータソースは、アダプティブフォームデータの保存に使用されるデータベースを指すように設定されています。 次のスクリーンショットは、インスタンスの設定を示しています。 次のプロパティをコピーして貼り付けることができます
 
@@ -41,7 +38,7 @@ Apache Sling接続プールに入れられたデータソースは、アダプ�
 
 ![connectionpool](assets/storingdata.PNG)
 
-### サーブレット{#create-servlet}を作成
+### サーブレットの作成 {#create-servlet}
 
 以下は、アダプティブフォームデータをデータベースに挿入/更新するサーブレットのコードです。 Apache Sling接続プールに入れられたデータソースはAEM ConfigMgrを使用して設定され、同じデータソースが26行目で参照されます。 残りのコードは、かなり簡単です。 コードは、データベースに新しい行を挿入するか、既存の行を更新します。 保存されたアダプティブフォームデータは、GUIDに関連付けられます。 次に、同じGUIDを使用してフォームデータが更新されます。
 
@@ -211,7 +208,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## データを取得するOSGIサービスを作成する{#create-osgi-service}
+## データを取得するOSGIサービスの作成 {#create-osgi-service}
 
 次のコードは、保存されたアダプティブフォームデータを取得するために書き込まれています。 簡単なクエリを使用して、特定のGUIDに関連付けられたアダプティブフォームデータを取得します。 取得したデータは、呼び出し元のアプリケーションに返されます。 このコードで参照される最初の手順で作成されたのと同じデータソース。
 
@@ -276,7 +273,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## クライアントライブラリの作成{#create-client-library}
+## クライアントライブラリの作成 {#create-client-library}
 
 AEMクライアントライブラリは、すべてのクライアント側JavaScriptコードを管理します。 この記事では、Guide Bridge APIを使用してアダプティブフォームのデータを取得する簡単なJavaScriptを作成しました。 アダプティブフォームのデータが取得されると、POSTの呼び出しがサーブレットに対しておこなわれ、アダプティブフォームのデータがデータベースに挿入または更新されます。 getALLUrlParams関数は、URL内のパラメーターを返します。 これは、データを更新する場合に使用します。 残りの機能は、 .savebuttonクラスのclickイベントに関連付けられたコードで処理されます。 URLにguidパラメーターが存在する場合、挿入操作でない場合は、更新操作を実行する必要があります。
 
@@ -404,16 +401,16 @@ $(document).ready(function()
 });
 ```
 
-## アダプティブフォームのテンプレートとページコンポーネントの作成{#form-template-and-page-component}
+## アダプティブフォームのテンプレートとページコンポーネントの作成 {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 機能のデモ{#capability-demo}
+### 機能のデモ {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### サーバー{#deploy-on-your-server}にデプロイします。
+#### サーバーにデプロイする {#deploy-on-your-server}
 
 AEM Formsインスタンスでこの機能をテストするには、次の手順に従います
 
