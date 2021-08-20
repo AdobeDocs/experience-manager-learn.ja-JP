@@ -1,28 +1,20 @@
 ---
 title: DAMでのAEM Forms DoRのタグ付けと保存
-seo-title: DAMでのAEM Forms DoRのタグ付けと保存
 description: この記事では、AEM DAMでAEM Formsによって生成されたDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいておこなわれます。
-seo-description: この記事では、AEM DAMでAEM Formsによって生成されたDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいておこなわれます。
-uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: アダプティブForms，ワークフロー
-topics: developing
-audience: implementer
-doc-type: article
-activity: develop
+feature: アダプティブフォーム
 version: 6.4,6.5
-discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
 
 
-# AEM Forms DoRのDAM {#tagging-and-storing-aem-forms-dor-in-dam}でのタグ付けと保存
+# DAMでのAEM Forms DoRのタグ付けと保存 {#tagging-and-storing-aem-forms-dor-in-dam}
 
 この記事では、AEM DAMでAEM Formsによって生成されたDoRの保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいておこなわれます。
 
