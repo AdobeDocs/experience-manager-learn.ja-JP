@@ -1,28 +1,20 @@
 ---
 title: データ属性を使用してHTML5 Formsを事前入力します。
-seo-title: データ属性を使用してHTML5 Formsを事前入力します。
 description: バックエンドソースからデータを取得してHTML5フォームを設定する。
-seo-description: バックエンドソースからデータを取得してHTML5フォームを設定する。
 feature: アダプティブフォーム
-topics: mobile-forms
-audience: developer
-doc-type: article
-activity: implement
 version: 6.3,6.4,6.5.
-uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
-discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
 
 
-# データ属性{#prepopulate-html-forms-using-data-attribute}を使用してHTML5 Formsを事前入力する
+# データ属性を使用したHTML5 Formsの事前入力 {#prepopulate-html-forms-using-data-attribute}
 
 この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
 
