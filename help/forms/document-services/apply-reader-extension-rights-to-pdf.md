@@ -1,21 +1,14 @@
 ---
 title: 使用権限を持つXDPをPDFにレンダリング
-seo-title: 使用権限を持つXDPをPDFにレンダリング
 description: PDFへの使用権限の適用
-seo-description: PDFへの使用権限の適用
-uuid: 5e60c61e-821d-439c-ad89-ab169ffe36c0
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-feature: Forms サービス
+feature: Reader Extensions
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '363'
 ht-degree: 13%
 
 ---
