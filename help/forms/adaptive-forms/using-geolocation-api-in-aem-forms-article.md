@@ -1,30 +1,22 @@
 ---
 title: アダプティブFormsでのジオロケーションAPIの使用
-seo-title: アダプティブFormsでのジオロケーションAPIの使用
 description: 位置情報APIを使用して、フォーム上の住所フィールドを設定する
-seo-description: 位置情報APIを使用して、フォーム上の住所フィールドを設定する
-uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
 feature: アダプティブフォーム
-topics: integrations
-audience: developer
-doc-type: article
-activity: develop
 version: 6.3,6.4,6.5
-discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 4%
+source-wordcount: '417'
+ht-degree: 5%
 
 ---
 
 
-# アダプティブForms{#using-geolocation-api-s-in-adaptive-forms}でのGeolocation APIの使用
+# アダプティブFormsでのジオロケーションAPIの使用{#using-geolocation-api-s-in-adaptive-forms}
 
-この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
+この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)ページを参照してください。
 
 この記事では、GoogleのジオロケーションAPIを使用してアダプティブフォームのフィールドにデータを入力する方法について説明します。 この使用例は、一般的に、フォーム上の現在の住所フィールドに値を入力する場合に使用します。
 
