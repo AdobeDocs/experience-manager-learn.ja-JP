@@ -1,28 +1,20 @@
 ---
 title: データソースの設定を変更します。
-seo-title: データソースの設定を変更します。
 description: 「Data Source Configuration Settings」でホスト名やその他の設定を変更します。
-seo-description: 「データソース設定」でホスト名やその他の設定を変更します。
 feature: アダプティブフォーム
-topics: form-data-model
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.5
-uuid: 31e297c9-3d12-4a7a-b1ff-1e347e17b24c
-discoiquuid: de227e8f-0f59-4506-828b-3b6b18b61eb1
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 2%
 
 ---
 
 
-# データソースの設定を変更する機能{#ability-to-modify-data-source-configuration-settings}
+# データソース設定を変更する機能{#ability-to-modify-data-source-configuration-settings}
 
 AEM Forms 6.4リリースまでは、データソースが設定されると、RESTfulサービスのスキーム、ホスト、ベースパスを変更できませんでした。 これは、異なる環境に対してデータソースをテストする場合に問題が発生していました。
 
