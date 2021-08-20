@@ -2,17 +2,13 @@
 title: クライアントライブラリの作成
 description: 署名する次のフォームを取得するクライアントライブラリコード
 feature: アダプティブフォーム
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
 topic: 開発
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 4%
@@ -21,7 +17,7 @@ ht-degree: 4%
 
 # クライアントライブラリの作成
 
-カスタムクライアントライブラリを作成し、 urlパラメーターを抽出してGET呼び出しに渡します。 GET呼び出しは、/bin/getnextformtosignにマウントされたサーブレットに対しておこなわれ、このサーブレットは、パッケージにサインインする次のフォームのURLを返します。
+カスタムクライアントライブラリを作成し、 urlパラメーターを抽出してGET呼び出しに渡します。 GET呼び出しは、 /bin/getnextformtosignにマウントされたサーブレットに対しておこなわれ、このサーブレットはパッケージにサインインする次のフォームのURLを返します。
 
 次に、JavaScript関数clientlibで使用されるコードを示します
 
