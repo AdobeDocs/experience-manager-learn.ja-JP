@@ -1,28 +1,20 @@
 ---
 title: AEM Formsでのカスタム送信の作成
-seo-title: AEM Formsでのカスタム送信の作成
 description: アダプティブフォーム向けに独自のカスタム送信アクションを簡単かつ迅速に作成する方法
-seo-description: アダプティブフォーム向けに独自のカスタム送信アクションを簡単かつ迅速に作成する方法
 feature: アダプティブフォーム
-topics: integrations
-audience: developer
-doc-type: article
-activity: implement
 version: 6.3,6.4,6.5
-uuid: a26db0b9-7db4-4e80-813d-5c0438fabd1e
-discoiquuid: 28611011-2ff9-477e-b654-e62e7374096a
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '209'
 ht-degree: 1%
 
 ---
 
 
-# AEM Formsでのカスタム送信の書き込み{#writing-a-custom-submit-in-aem-forms}
+# AEM Formsでのカスタム送信の作成 {#writing-a-custom-submit-in-aem-forms}
 
 アダプティブフォーム向けに独自のカスタム送信アクションを簡単かつ迅速に作成する方法
 
