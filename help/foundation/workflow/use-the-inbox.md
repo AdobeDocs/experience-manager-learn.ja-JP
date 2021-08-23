@@ -3,12 +3,12 @@ title: AEMのインボックスの使用方法
 description: AEM inboxは、タスクとワークフローに関するより優れたコラボレーションと可視性を促進します。
 version: 6.3, 6.4, 6.5, cloud-service
 topic: コラボレーション
-feature: インボックス
+feature: ワークフロー
 role: User
 level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 2%
