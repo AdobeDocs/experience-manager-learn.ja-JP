@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1428'
 ht-degree: 4%
 
 ---
@@ -66,7 +66,7 @@ Homebrewを使用している場合は、以下のセクションの&#x200B;__Ho
 
 ## Gitのインストール
 
-[](https://git-scm.com/)  [Git](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/source-code-repository.html)は、AdobeCloud Managerで使用されるソース管理システムなので、開発に必要です。
+[](https://git-scm.com/)  [Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)は、AdobeCloud Managerで使用されるソース管理システムなので、開発に必要です。
 
 + Homebrewを使用したGitのインストール
    1. ターミナル/コマンドプロンプトを開きます。
@@ -79,7 +79,7 @@ Homebrewを使用している場合は、以下のセクションの&#x200B;__Ho
 
 ![Git](./assets/development-tools/git.png)
 
-## Node.js （およびnpm）{#node-js}のインストール
+## Node.js（およびnpm）のインストール{#node-js}
 
 [Node.](https://nodejs.org) jsは、AEMプロジェクトの __ui.frontendsub-projectのフロントエンドアセットを操作するために使用されるJavaScriptランタイム環境__ です。Node.jsは[npm](https://www.npmjs.com／)と共に配布され、JavaScriptの依存関係の管理に使用される事実上のNode.jsパッケージマネージャーです。
 
@@ -118,7 +118,7 @@ Apache Mavenは、AEMプロジェクトMavenアーキタイプから生成され
 
 ![Maven](./assets/development-tools/maven.png)
 
-## Adobe I/OCLI{#aio-cli}の設定
+## Adobe I/OCLIの設定{#aio-cli}
 
 [Adobe I/OCLI](https://github.com/adobe/aio-cli)(`aio`)は、[Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager)や[Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)など、様々なAdobeサービスに対するコマンドラインアクセスを提供します。 Adobe I/OCLIは、開発者に次の機能を提供するので、Cloud ServiceとしてAEMの開発に不可欠です。
 
@@ -137,7 +137,7 @@ Adobe I/OCloud Managerプラグインを使用すると、aio CLIは`aio cloudma
 
 1. `aio plugins:install @adobe/aio-cli-plugin-cloudmanager`を実行して、[aio Cloud Managerプラグイン](https://github.com/adobe/aio-cli-plugin-cloudmanager)をインストールします。
 
-### Adobe I/OCLIAsset computeプラグイン{#aio-asset-compute}の設定
+### Adobe I/OCLIAsset computeプラグインの設定{#aio-asset-compute}
 
 Adobe I/OCloud Managerプラグインを使用すると、aio CLIで`aio asset-compute`コマンドを使用してAsset computeワーカーを生成し、実行できます。
 
