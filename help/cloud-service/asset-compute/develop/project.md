@@ -61,7 +61,7 @@ _asset computeプロジェクトの生成のクリックスルー（オーディ
 1. ファイルは、次のように、プロジェクトとワークスペースのプレフィックスが付いた`.json`ファイルとしてダウンロードされます。`wkndAemAssetCompute-81368-Development.json`
 1. 次のいずれかの操作を実行できます。
    + ファイルの名前を`config.json`に変更し、Asset computeワーカープロジェクトのルートに移動します。 これは、このチュートリアルのアプローチです。
-   + 任意のフォルダーに移動し、設定エントリ`ASSET_COMPUTE_INTEGRATION_FILE_PATH`を使用して`.env`ファイルからそのフォルダーを参照します。 ファイルパスは、絶対パスまたはプロジェクトのルートを基準とした相対パスにすることができます。 以下に例を示します。
+   + 任意のフォルダーに移動し、設定エントリ`ASSET_COMPUTE_INTEGRATION_FILE_PATH`を使用して`.env`ファイルからそのフォルダーを参照します。 ファイルパスは、絶対パスまたはプロジェクトのルートを基準とした相対パスにすることができます。 次に例を示します。
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
       または
