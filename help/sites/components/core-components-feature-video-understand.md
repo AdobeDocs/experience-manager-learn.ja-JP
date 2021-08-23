@@ -12,10 +12,10 @@ thumbnail: 18926.jpg
 topic: 開発
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 14%
+source-wordcount: '146'
+ht-degree: 13%
 
 ---
 
@@ -36,4 +36,4 @@ AEMコアコンポーネントは、Adobe Experience Managerで使用する標�
 
 * [GitHubプロジェクト](https://github.com/adobe/aem-core-wcm-components)
 * [コアコンポーネントの例](https://www.aemcomponents.dev/)
-* [コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
