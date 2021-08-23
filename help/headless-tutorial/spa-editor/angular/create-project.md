@@ -13,9 +13,9 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1111'
 ht-degree: 4%
 
 ---
@@ -90,7 +90,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
    >[!NOTE]
    >
-   > `frontendModule=angular`プロパティに注意してください。 これにより、AEMプロジェクトアーキタイプは、スターター[Angularコードベース](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を使用して、AEM SPA Editorでプロジェクトをブートストラップするようになります。
+   > `frontendModule=angular`プロパティに注意してください。 これにより、AEMプロジェクトアーキタイプは、スターター[Angularコードベース](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を使用して、AEM SPA Editorでプロジェクトをブートストラップするようになります。
 
 ## プロジェクトの構築
 
@@ -149,7 +149,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
 
    プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEMランタイムにインストールされます。
 
-6. また、`spa.project.core`と`core.wcm.components`の複数のパッケージも表示されます。 これらは、アーキタイプによって自動的に含まれる依存関係です。 [AEMコアコンポーネントの詳細については、](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を参照してください。
+6. また、`spa.project.core`と`core.wcm.components`の複数のパッケージも表示されます。 これらは、アーキタイプによって自動的に含まれる依存関係です。 [AEMコアコンポーネントの詳細については、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を参照してください。
 
 ## 作成者コンテンツ
 
@@ -231,7 +231,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成するには、
    >
    > JSON出力を自動的にフォーマットするには、ブラウザー拡張機能をインストールすると便利です。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、最初のAEM SPA Editorプロジェクトが作成されました。
 
