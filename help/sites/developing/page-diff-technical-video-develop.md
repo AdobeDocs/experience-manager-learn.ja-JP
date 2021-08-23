@@ -18,11 +18,11 @@ ht-degree: 6%
 ---
 
 
-# ページ差{#developing-for-page-difference}の開発
+# ページの違いに対する開発 {#developing-for-page-difference}
 
 このビデオでは、AEM Sitesのページの違い機能にカスタムスタイルを提供する方法を説明します。
 
-## ページ差異スタイルのカスタマイズ{#customizing-page-difference-styles}
+## ページ差異スタイルのカスタマイズ {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
@@ -36,7 +36,7 @@ AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/client
 
 これには、これらのカスタムスタイルの上書きをテナント固有にできるという利点があります。
 
-### オーサリングクライアントライブラリ{#prepare-the-authoring-clientlib}を準備します。
+### オーサリングクライアントライブラリの準備 {#prepare-the-authoring-clientlib}
 
 `/apps/my-project/clientlib/authoring.`にプロジェクト用の`authoring`クライアントライブラリが存在することを確認します。
 
@@ -47,7 +47,7 @@ AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/client
         categories="[my-project.authoring]"/>
 ```
 
-### カスタムCSS {#provide-the-custom-css}を指定します。
+### カスタムCSSの提供 {#provide-the-custom-css}
 
 上書きスタイルを提供するLESSファイルを指すプロジェクトの`authoring`クライアントライブラリ`css.txt`にを追加します。 [](https://lesscss.org/) この例で利用されるクラスラッピングを含む、便利な機能の多くは、より少ない方が望ましいです。
 
@@ -103,7 +103,7 @@ body {
 }
 ```
 
-### ページコンポーネント{#include-the-authoring-clientlib-css-via-the-page-component}を介してオーサリングクライアントライブラリCSSを含めます。
+### ページコンポーネントを介してオーサリングクライアントライブラリCSSを含める {#include-the-authoring-clientlib-css-via-the-page-component}
 
 オーサリングclientlibsカテゴリをプロジェクトの基本ページの`/apps/my-project/components/structure/page/customheaderlibs.html`の`</head>`タグの直前に含めて、スタイルが読み込まれるようにします。
 
