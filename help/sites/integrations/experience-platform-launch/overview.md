@@ -11,10 +11,10 @@ thumbnail: 39090.jpg
 topic: 統合
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 15%
+source-wordcount: '134'
+ht-degree: 16%
 
 ---
 
@@ -31,6 +31,6 @@ Experience Platform Launchは、Adobeの次世代タグ管理プラットフォ�
 
 ## その他のリソース {#additional-resources}
 
-* [Experience PlatformアプリケーションとのExperience Cloud統合](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-* [Experience Platform Launch ユーザーガイド](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Launch を使用した Web サイトでの Experience Cloud の実装](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/index.html)
+* [Experience PlatformアプリケーションとのExperience Cloud統合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
+* [Experience Platform Launch ユーザーガイド](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [Launch を使用した Web サイトでの Experience Cloud の実装](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/index.html)
