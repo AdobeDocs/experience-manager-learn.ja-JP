@@ -1,19 +1,18 @@
 ---
 title: AEMパブリッシュサービスを使用した実稼動のデプロイメント — AEMヘッドレスの概要 — GraphQL
 description: AEMオーサーサービスとパブリッシュサービス、およびヘッドレスアプリケーション向けに推奨されるデプロイメントパターンについて説明します。 このチュートリアルでは、環境変数を使用して、ターゲット環境に基づいてGraphQLエンドポイントを動的に変更する方法を説明します。 クロスオリジンリソース共有(CORS)用にAEMを適切に設定する方法を説明します。
-sub-product: アセット
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: コンテンツフラグメント、GraphQL API
+topic: ヘッドレス、コンテンツ管理
+role: Developer
+level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2361'
-ht-degree: 4%
+source-wordcount: '2367'
+ht-degree: 7%
 
 ---
 
@@ -34,11 +33,11 @@ ht-degree: 4%
 * 環境変数を管理するためのベストプラクティスを説明します。
 * クロスオリジンリソース共有(CORS)用にAEMを適切に設定する方法を説明します。
 
-## オーサーパブリッシュのデプロイメントパターン{#deployment-pattern}
+## オーサーパブリッシュのデプロイメントパターン {#deployment-pattern}
 
-完全なAEM環境は、オーサー、パブリッシュ、ディスパッチャーで構成されます。 オーサーサービスは、内部ユーザーがコンテンツを作成、管理、プレビューする場所です。 パブリッシュサービスは「ライブ」環境と見なされ、通常はエンドユーザーがやり取りします。 コンテンツは、オーサーサービスで編集および承認された後、パブリッシュサービスに配信されます。
+完全な AEM 環境は、オーサー、パブリッシュ、ディスパッチャーで構成されます。オーサーサービスでは、内部ユーザーがコンテンツの作成、管理、プレビューを行います。パブリッシュサービスは「ライブ」環境と見なされ、通常はエンドユーザーがやり取りします。 コンテンツは、オーサーサービスで編集および承認された後、パブリッシュサービスに配信されます。
 
-AEMヘッドレスアプリケーションで最も一般的なデプロイメントパターンは、実稼動版のアプリケーションをAEMパブリッシュサービスに接続させることです。
+AEM ヘッドレスアプリケーションで最も一般的なデプロイメントパターンは、実稼動版のアプリケーションを AEM パブリッシュサービスに接続させることです。
 
 ![デプロイメントの概要パターン](assets/publish-deployment/high-level-deployment.png)
 
@@ -57,14 +56,14 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
 * http://localhost:4503 — パブリッシュインスタンス
 * http://localhost:5000 — 実稼動モードでのReactアプリ。パブリッシュインスタンスに接続します。
 
-## AEM SDKのインストール — パブリッシュモード{#aem-sdk-publish}
+## AEM SDK — パブリッシュモードのインストール {#aem-sdk-publish}
 
 現在、**Author**&#x200B;モードでSDKのインスタンスが実行されています。 SDKは、**パブリッシュ**&#x200B;モードで起動して、AEMパブリッシュ環境をシミュレートすることもできます。
 
 ローカル開発環境の設定に関する詳細なガイドは[こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja#local-development-environment-set-up)を参照してください。
 
 1. ローカルファイルシステムで、パブリッシュインスタンスをインストールする専用のフォルダー(`~/aem-sdk/publish`)を作成します。
-1. 前の章のオーサーインスタンスで使用したクイックスタートjarファイルをコピーし、`publish`ディレクトリに貼り付けます。 または、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aemcloud.html)に移動し、最新のSDKをダウンロードして、クイックスタートjarファイルを抽出します。
+1. 前の章のオーサーインスタンスで使用したクイックスタートjarファイルをコピーし、`publish`ディレクトリに貼り付けます。 または、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)に移動し、最新のSDKをダウンロードして、クイックスタートjarファイルを抽出します。
 1. jarファイルの名前を`aem-publish-p4503.jar`に変更します。
 
    `publish`文字列は、クイックスタートjarがパブリッシュモードで開始することを指定します。 `p4503`は、クイックスタートサーバーがポート4503で実行されることを指定します。
@@ -81,7 +80,7 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
 
    404 Not Foundページが返されることが予想されます。 これは新しいAEMインスタンスで、コンテンツがインストールされていません。
 
-## サンプルコンテンツとGraphQLエンドポイント{#wknd-site-content-endpoints}のインストール
+## サンプルコンテンツとGraphQLエンドポイントのインストール {#wknd-site-content-endpoints}
 
 オーサーインスタンスと同様に、パブリッシュインスタンスではGraphQLエンドポイントを有効にし、サンプルコンテンツを必要とします。 次に、 WKND参照サイトをパブリッシュインスタンスにインストールします。
 
@@ -101,7 +100,7 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
 
    AEMオーサーインスタンスとは異なり、AEMパブリッシュインスタンスは、デフォルトで匿名の読み取り専用アクセスに設定されます。 Reactアプリケーションを実行する際の匿名ユーザーのエクスペリエンスをシミュレートします。
 
-## 環境変数を更新して、パブリッシュインスタンス{#react-app-publish}を指すようにします。
+## 環境変数を更新して、パブリッシュインスタンスを指すようにします。 {#react-app-publish}
 
 次に、Reactアプリケーションが使用する環境変数を更新し、パブリッシュインスタンスを指すようにします。 Reactアプリは、実稼動モードでパブリッシュインスタンスに&#x200B;**のみ**&#x200B;接続する必要があります。
 
@@ -125,7 +124,7 @@ AEMヘッドレスアプリケーションで最も一般的なデプロイメ�
    >
    > パブリッシュ環境は、デフォルトでコンテンツへの匿名アクセスを提供するので、認証情報は含まれていないことを確認します。
 
-## 静的ノードサーバ{#static-server}の展開
+## 静的ノードサーバの展開 {#static-server}
 
 Reactアプリはwebpackサーバーを使用して起動できますが、開発専用です。 次に、[serve](https://github.com/vercel/serve)を使用して、Node.jsを使用してReactアプリの実稼動ビルドをホストすることで、実稼動デプロイメントをシミュレートします。
 
@@ -186,7 +185,7 @@ Reactアプリはwebpackサーバーを使用して起動できますが、開�
 
    `adventureContributor`に対してGraphQLエラーがスローされることを確認します。 次の演習では、壊れた画像と`adventureContributor`の問題を修正します。
 
-## 絶対画像参照{#absolute-image-references}
+## 絶対画像参照 {#absolute-image-references}
 
 `<img src`属性が相対パスに設定され、`http://localhost:5000/`にあるNode静的サーバーを指しているので、画像が壊れているように見えます。 代わりに、これらの画像はAEMパブリッシュインスタンスを指す必要があります。 これに対して、いくつかの解決策が考えられます。 webpack開発サーバーを使用する場合、ファイル`react-app/src/setupProxy.js`は、`/content`に対する要求に対して、webpackサーバーとAEMオーサーインスタンスの間にプロキシを設定します。 プロキシ設定は、実稼動環境で使用できますが、Webサーバーレベルで設定する必要があります。 例えば、[Apacheのプロキシモジュール](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html)です。
 
@@ -301,7 +300,7 @@ Reactアプリはwebpackサーバーを使用して起動できますが、開�
 
    ![壊れた画像を修正](assets/publish-deployment/broken-images-fixed.png)
 
-## コンテンツの公開をシミュレート{#content-publish}
+## コンテンツ公開のシミュレート {#content-publish}
 
 アドベンチャーの詳細ページが要求されると、`adventureContributor`に対してGraphQLエラーがスローされることを思い出してください。 **コントリビューター**&#x200B;コンテンツフラグメントモデルは、パブリッシュインスタンスにまだ存在しません。 **アドベンチャー**&#x200B;コンテンツフラグメントモデルに対する更新は、パブリッシュインスタンスでは利用できません。 これらの変更はオーサーインスタンスに直接加えられたので、パブリッシュインスタンスに配布する必要があります。
 
@@ -400,9 +399,9 @@ AEMはデフォルトで保護されており、AEM以外のWebプロパティ�
 
    ![CORSエラー修正](assets/publish-deployment/cors-error-corrected.png)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
-バリデーターがこれで、AEMパブリッシュ環境を使用した実稼動デプロイメントの完全なシミュレーションが完了しました。 また、AEMでのCORS設定の使用方法も学習しました。
+おめでとうございます。これで、AEMパブリッシュ環境を使用した実稼動デプロイメントの完全なシミュレーションが完了しました。 また、AEMでのCORS設定の使用方法も学習しました。
 
 ## その他のリソース
 
