@@ -1,12 +1,7 @@
 ---
 title: 外部アプリからGraphQLを使用したクエリAEM - AEMヘッドレスの概要 — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 AEM GraphQL APIを参照し、サンプルのWKND GraphQL Reactアプリを参照してください。 この外部アプリがAEMに対してGraphQL呼び出しをおこなってエクスペリエンスを強化する方法を説明します。 基本的なエラー処理を実行する方法を説明します。
-sub-product: アセット
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
@@ -14,9 +9,9 @@ feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1403'
 ht-degree: 1%
 
 ---
@@ -344,9 +339,9 @@ GraphQLは厳密に型指定されているので、クエリが無効な場合�
 
 1. `Adventures.js`に戻り、クエリの変更を元に戻して、アプリを適切な状態に戻します。
 
-## バリデーターが{#congratulations}
+## おめでとうございます。{#congratulations}
 
-バリデーターがサンプルWKND GraphQL Reactアプリのコードを確認し、パラメーター化されたGraphQLクエリを使用してGraphQLクエリをフィルタリングし、アクティビティ別の冒険をリストに追加しました。 また、基本的なエラー処理を調べる機会もありました。
+おめでとうございます。サンプルWKND GraphQL Reactアプリのコードを確認し、パラメーター化されたGraphQLクエリを使用してフィルタリングし、アクティビティ別の冒険をリストするように更新しました。 また、基本的なエラー処理を調べる機会もありました。
 
 ## 次の手順 {#next-steps}
 
