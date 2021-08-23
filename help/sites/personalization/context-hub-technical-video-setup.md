@@ -10,15 +10,15 @@ version: 6.4, 6.5
 topic: パーソナライズ機能
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 35%
+source-wordcount: '427'
+ht-degree: 33%
 
 ---
 
 
-# パーソナライゼーション用のContextHubのセットアップ{#set-up-contexthub}
+# パーソナライゼーション用のContextHubの設定 {#set-up-contexthub}
 
 ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。 このページでは、AEMサイトページにContext Hubを追加する方法について説明します。
 
@@ -40,15 +40,15 @@ ContextHub機能を有効にし、ContextHub JavaScriptライブラリにリン�
 */-->
 ```
 
-## サイトの設定とContextHubセグメント{#site-configuration-and-contexthub-segments}
+## サイト設定とContextHubセグメント {#site-configuration-and-contexthub-segments}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[[!UICONTROL 設定ブラウザー]](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/configurations.html)で、サイトのContextHubセグメントを有効にします。
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)で、サイトのContextHubセグメントを有効にします。
 
-## セグメントの作成{#create-segments}
+## セグメントの作成 {#create-segments}
 
 ティーザーのルールとして機能するAEMセグメントを作成します。 つまり、ティーザー内のコンテンツがWebページに表示されるタイミングを定義します。 一致するセグメントに基づいて、訪問者のニーズと関心に特化したコンテンツを表示できます。
 
-## クラウド設定、セグメントパス、ContextHubパスのサイトへの割り当て{#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## サイトへのクラウド設定、セグメントパス、ContextHubパスの割り当て {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
 クラウド設定のパス、セグメント化のパス、ContextHubのパスをサイトのルートノードに割り当てて、オーディエンスに合わせてパーソナライズされたエクスペリエンスを作成できます。 ContextHubを使用すると、コンテキストデータを操作し、解決されたセグメントをテストできます。
 
