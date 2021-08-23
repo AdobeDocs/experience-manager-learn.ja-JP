@@ -11,9 +11,9 @@ thumbnail: 41244.jpg
 topic: 統合
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -29,5 +29,5 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 この問題が解決されるまでは、ビデオ内の同じ手順に従いますが、従来のAdobe TargetCloud Services設定](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)を使用します。[
+>このビデオに示すAdobe TargetCloud Servicesの設定に関する既知の問題があります。 この問題が解決されるまでは、ビデオ内の同じ手順に従いますが、従来のAdobe TargetCloud Services設定](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)を使用します。[
 
