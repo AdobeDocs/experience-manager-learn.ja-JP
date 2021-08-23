@@ -12,15 +12,15 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2273'
+source-wordcount: '2267'
 ht-degree: 2%
 
 ---
 
 
-# SPAコンポーネントのAEMコンポーネントへのマッピング{#map-components}
+# SPAコンポーネントのAEMコンポーネントへのマッピング {#map-components}
 
 AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、AEM SPA Editor内で、従来のAEMオーサリングと同様に、SPAコンポーネントを動的に更新できます。
 
@@ -52,7 +52,7 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
 ## Inspect the Text Component
 
-[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)にマッピングされる`Text`コンポーネントを提供します。 これは、AEMから&#x200B;*content*&#x200B;をレンダリングする&#x200B;**content**&#x200B;コンポーネントの例です。
+[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)にマッピングされる`Text`コンポーネントを提供します。 これは、AEMから&#x200B;*content*&#x200B;をレンダリングする&#x200B;**content**&#x200B;コンポーネントの例です。
 
 コンポーネントの動作を見てみましょう。
 
@@ -223,7 +223,7 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
    **レイアウトコンテナ**&#x200B;コンポーネントは`wcm/foundation/components/responsivegrid`の`sling:resourceType`を持ち、`Text`コンポーネントと`Image`コンポーネントと同様に、`:type`プロパティを使用してSPAエディターで認識されます。
 
-   [レイアウトモード](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)を使用してコンポーネントのサイズを変更する場合と同じ機能をSPA Editorで使用できます。
+   [レイアウトモード](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)を使用してコンポーネントのサイズを変更する場合と同じ機能をSPA Editorで使用できます。
 
 2. [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)に戻ります。 **画像**&#x200B;コンポーネントを追加し、**レイアウト**&#x200B;オプションを使用してサイズ変更を試みます。
 
@@ -243,7 +243,7 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
    ![チャプターサンプルの最終オーサリング](assets/map-components/final-page.png)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPAコンポーネントをAEMコンポーネントにマッピングする方法と、Reactコアコンポーネントを使用した方法を学びました。 また、**レイアウトコンテナ**&#x200B;のレスポンシブ機能を調べることもできます。
 
@@ -251,7 +251,7 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
 [ナビゲーションとルーティング](navigation-routing.md)  - SPAエディターSDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を説明します。動的なナビゲーションは、React RouterとReactコアコンポーネントを使用して実装されます。
 
-## （ボーナス）ソース管理{#bonus-configs}に対する構成の保持
+## （ボーナス）ソース管理に対する設定の保持 {#bonus-configs}
 
 多くの場合、特にAEMプロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソース管理に保持すると役立ちます。 これにより、すべての開発者が同じコンテンツと設定のセットに対して作業を行い、環境間の一貫性をさらに高めることができます。 プロジェクトがある程度の成熟度に達すると、テンプレート管理の手法を特別なパワーユーザーのグループに引き継ぐことができます。
 
@@ -286,9 +286,9 @@ AEM SPA Editor JS SDKを使用して、ReactコンポーネントをAdobe Experi
 
    `ui.content/src/main/content/META-INF/vault/filter.xml`と`ui.apps/src/main/content/META-INF/vault/filter.xml`を比較して、各モジュールで管理される異なるノードを理解します。
 
-## （ボーナス）カスタム画像コンポーネントの作成{#bonus-image}
+## （ボーナス）カスタム画像コンポーネントの作成 {#bonus-image}
 
-SPA画像コンポーネントは、Reactコアコンポーネントによって既に提供されています。 ただし、追加のプラクティスが必要な場合は、AEMの[画像コンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)にマッピングする独自のReact実装を作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
+SPA画像コンポーネントは、Reactコアコンポーネントによって既に提供されています。 ただし、追加のプラクティスが必要な場合は、AEMの[画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)にマッピングする独自のReact実装を作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
 
 ### Inspect the JSON
 
