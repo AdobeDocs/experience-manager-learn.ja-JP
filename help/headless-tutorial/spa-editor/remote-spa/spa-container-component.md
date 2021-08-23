@@ -311,7 +311,7 @@ SPAを更新して`<AEMResponsiveGrid...>`を埋め込み、3つのAEM React Cor
    ![SPAのコンテナコンポーネント](./assets/spa-container-component/localhost-final.png)
 
 
-## バリデーターが
+## おめでとうございます。
 
 作成者がWKNDアプリに編集可能なコンポーネントを追加できるコンテナコンポーネントを追加しました。 次の方法がわかりました。
 
