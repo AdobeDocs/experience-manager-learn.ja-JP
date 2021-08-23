@@ -12,15 +12,15 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3100'
 ht-degree: 2%
 
 ---
 
 
-# ページとテンプレート{#pages-and-template}
+# ページとテンプレート {#pages-and-template}
 
 この章では、ベースページコンポーネントと編集可能なテンプレートの関係について説明します。 [AdobeXD](https://www.adobe.com/products/xd.html)のモックアップに基づいて、スタイルが設定されていない記事テンプレートを作成します。 テンプレートの作成プロセスでは、コアコンポーネントと編集可能テンプレートの詳細なポリシー設定について説明します。
 
@@ -157,9 +157,9 @@ ht-degree: 2%
 
    ![記事ページテンプレートのサムネール](assets/pages-templates/article-page-template-thumbnail.png)
 
-## ヘッダーとフッターをエクスペリエンスフラグメントで更新{#experience-fragments}
+## エクスペリエンスフラグメントを使用したヘッダーとフッターの更新 {#experience-fragments}
 
-ヘッダーやフッターなどのグローバルコンテンツを作成する場合、一般的な方法は、[エクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)を使用することです。 エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、単一の参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、マルチサイト管理と[ローカライゼーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)をサポートする利点があります。
+ヘッダーやフッターなどのグローバルコンテンツを作成する場合、一般的な方法は、[エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)を使用することです。 エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、単一の参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、マルチサイト管理と[ローカライゼーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)をサポートする利点があります。
 
 ヘッダーとフッターがAEMプロジェクトアーキタイプで生成されました。 次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。 次のビデオの手順に従います。
 
@@ -233,7 +233,7 @@ ht-degree: 2%
    * **Parent Page**&#x200B;を`/content/wknd/us/en/magazine`に設定します。
    * 「**項目設定**」で「**項目をリンク**」をオンにし、「**日付を表示**」をオンにします。
 
-## Inspectノード構造{#node-structure}
+## Inspectノード構造 {#node-structure}
 
 この時点で、記事ページのスタイルが明確に解除されます。 ただし、基本的な構造は用意されています。 次に、記事ページのノード構造を調べて、テンプレート、ページ、コンポーネントの役割をより深く理解します。
 
@@ -261,7 +261,7 @@ ht-degree: 2%
 
    ページコンポーネントの下には、HTLスクリプト`customfooterlibs.html`と`customheaderlibs.html`の2つしかありません。 *では、このコンポーネントはページをどのようにレンダリングしますか？*
 
-   `sling:resourceSuperType`プロパティが`core/wcm/components/page/v2/page`を指している。 このプロパティを使用すると、WKNDのページコンポーネントは、コアコンポーネントページコンポーネントの機能の&#x200B;**すべて**&#x200B;を継承できます。 これは、[プロキシコンポーネントパターン](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)を参照してください。。
+   `sling:resourceSuperType`プロパティが`core/wcm/components/page/v2/page`を指している。 このプロパティを使用すると、WKNDのページコンポーネントは、コアコンポーネントページコンポーネントの機能の&#x200B;**すべて**&#x200B;を継承できます。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。。
 
 1. Inspect WKNDコンポーネント内の別のコンポーネントである`Breadcrumb`コンポーネントは、次の場所にあります。`/apps/wknd/components/breadcrumb`. 同じ`sling:resourceSuperType`プロパティが見つかりますが、今回は`core/wcm/components/breadcrumb/v2/breadcrumb`を指します。 これは、プロキシコンポーネントパターンを使用してコアコンポーネントを組み込む別の例です。 実際、WKNDコードベース内のすべてのコンポーネントは、AEMコアコンポーネント（弊社の有名なHelloWorldコンポーネントを除く）のプロキシです。 カスタムコードを記述する前に、可能な限りコアコンポーネントの機能を使用し直すことをお勧めします。**
 
@@ -315,7 +315,7 @@ ht-degree: 2%
 
 1. 別のコアコンポーネント（`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`のパンくずリストなど）をInspectします。 `breadcrumb.html`スクリプトを表示して、パンくずコンポーネントのマークアップが最終的にどのように生成されるかを理解します。
 
-## ソース管理{#configuration-persistence}への構成の保存
+## ソース管理への設定の保存 {#configuration-persistence}
 
 多くの場合、特にAEMプロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソース管理に保持すると役立ちます。 これにより、すべての開発者が同じコンテンツと設定のセットに対して作業を行い、環境間の一貫性をさらに高めることができます。 プロジェクトがある程度の成熟度に達すると、テンプレート管理の手法を特別なパワーユーザーのグループに引き継ぐことができます。
 
@@ -360,7 +360,7 @@ ht-degree: 2%
    >
    > WKNDリファレンスサイトの一貫したデプロイメントを確実におこなうために、プロジェクトの一部のブランチが設定され、JCR内の変更が`ui.content`によって上書きされます。 コード/スタイルは特定のポリシーに対して書き込まれるので、これは設計によって（ソリューションブランチに対して）おこなわれます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、Adobe Experience Manager Sitesで新しいテンプレートとページが作成されました。
 
