@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# Asset Share Commonsでのテーマの概要{#asset-share-commons-theme}
+# Asset Share Commonsのテーマの概要 {#asset-share-commons-theme}
 
 Asset Share Commonsでのテーマの概要です。 このビデオでは、カスタムカラースキームを使用して新しいテーマを作成するプロセスを順を追って説明します。
 
