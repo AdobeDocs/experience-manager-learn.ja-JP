@@ -11,10 +11,10 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 4%
+source-wordcount: '1150'
+ht-degree: 3%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 この章では、非常に単純な`HelloWorld`コンポーネントに対していくつかの変更を行います。 `HelloWorld`コンポーネントを更新する過程で、AEMコンポーネント開発の主な領域について学びます。
 
-## チャプタースタータープロジェクト{#starter-project}
+## チャプタースタータープロジェクト {#starter-project}
 
 この章は、[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)で生成された汎用プロジェクトに基づいて構築されます。 以下のビデオを見て、[前提条件](#prerequisites)を確認してください。
 
@@ -83,7 +83,7 @@ ht-degree: 4%
 
 1. [ローカル開発環境](overview.md#local-dev-environment)を設定する手順に従って、優先IDEにプロジェクトを読み込みます。
 
-## コンポーネントオーサリング{#component-authoring}
+## コンポーネントオーサリング {#component-authoring}
 
 コンポーネントは、Webページの小さなモジュール式構成要素と考えることができます。 コンポーネントを再利用するには、コンポーネントを設定できる必要があります。 これは、オーサーダイアログを通じて実行します。 次に、単純なコンポーネントを作成し、ダイアログの値がAEMでどのように保持されるかを調べます。
 
@@ -97,9 +97,9 @@ ht-degree: 4%
 1. 開発者モードに切り替えて、CRXDE-Liteでコンテンツパスを表示し、コンポーネントインスタンスのプロパティを調べます。
 1. CRXDE-Liteを使用して、`/apps/wknd/components/content/helloworld`にある`cq:dialog`スクリプトと`helloworld.html`スクリプトを表示します。
 
-## HTL（HTMLテンプレート言語）とダイアログ{#htl-dialogs}
+## HTL（HTMLテンプレート言語）とダイアログ {#htl-dialogs}
 
-HTML Template Language(**[HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/getting-started/getting-started.html)**)は、コンテンツをレンダリングするためにAEMコンポーネントで使用される、軽量のサーバー側テンプレート言語です。
+HTML Template Language(**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)**)は、コンテンツをレンダリングするためにAEMコンポーネントで使用される、軽量のサーバー側テンプレート言語です。
 
 **** ダイアログでは、コンポーネントに対して作成できる設定を定義します。
 
