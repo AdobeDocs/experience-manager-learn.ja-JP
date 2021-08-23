@@ -15,7 +15,7 @@ level: Intermediate, Experienced
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '632'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 > 
 > 必要なサービスの設定およびプロビジョニング方法に関する以下の節を確認します。
 
-## AEM as a Cloud Service{#aem-as-a-cloud-service}
+## AEM as aCloud Service{#aem-as-a-cloud-service}
 
 AEM as a Cloud Service環境へのアクセスは、AEM Assets処理プロファイルを設定してカスタムAsset computeワーカーを呼び出すために必要です。
 
