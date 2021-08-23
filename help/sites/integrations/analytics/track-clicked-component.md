@@ -1,28 +1,24 @@
 ---
 title: Adobe Analyticsを使用したクリックされたコンポーネントの追跡
 description: イベントドリブン型Adobeクライアントデータレイヤーを使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launchでルールを使用してこれらのイベントをリッスンし、トラックリンクビーコンと共にAdobe Analyticsにデータを送信する方法を説明します。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6296
-thumbnail: KT-6296.jpg
 topic: 統合
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6296
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 5%
+source-wordcount: '1814'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Analyticsを使用したクリックされたコンポーネントの追跡
 
-イベント駆動型の[AdobeクライアントデータレイヤーとAEMコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/data-layer/overview.html)を使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launch でルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクのトラックビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
+イベント駆動型の[AdobeクライアントデータレイヤーとAEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)を使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launch でルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクのトラックビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
 
 ## 作成する内容
 
@@ -40,13 +36,13 @@ WKNDマーケティングチームは、どのコールトゥアクション(CTA
 
 このチュートリアルは、[Adobe Analytics](./collect-data-analytics.md)を使用してページデータを収集するのと同じです。以下の点が前提となっています。
 
-* [Adobe Analytics拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な&#x200B;**Launchプロパティ**
-* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) データレイヤーが有効なAEMサイトに読み込まれたLaunchプロパ [ティを使用して設定されたAdobeデバッガーブラウザー拡張機能。https://wknd.site/us/en](https://wknd.site/us/en.html) 
+* [Adobe Analytics拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)が有効な&#x200B;**Launchプロパティ**
+* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) データレイヤーが有効なAEMサイトに読み込まれたLaunchプロパ [ティを使用して設定されたAdobeデバッガーブラウザー拡張機能。https://wknd.site/us/en](https://wknd.site/us/en.html) 
 
 ## Inspect the ButtonおよびTeaser Schema
 
-Launchでルールを作成する前に、ボタンとティーザー](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)の[スキーマを確認し、データレイヤー実装でそれらを調べると役に立ちます。
+Launchでルールを作成する前に、ボタンとティーザー](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)の[スキーマを確認し、データレイヤー実装でそれらを調べると役に立ちます。
 
 1. [https://wknd.site/us/en.html](https://wknd.site/us/en.html)に移動します。
 1. ブラウザーの開発者ツールを開き、**コンソール**&#x200B;に移動します。 次のコマンドを実行します。
@@ -82,7 +78,7 @@ Launchでルールを作成する前に、ボタンとティーザー](https://d
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   これらは、[コンポーネント/コンテナ項目スキーマ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)に基づいています。 Launchで作成するルールでは、このスキーマを使用します。
+   これらは、[コンポーネント/コンテナ項目スキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)に基づいています。 Launchで作成するルールでは、このスキーマを使用します。
 
 ## CTAクリックルールの作成
 
@@ -148,11 +144,11 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
    `event`オブジェクトは、カスタムイベントで呼び出される`trigger()`メソッドから渡されます。 `component` は、クリックをトリガーしたデータレイヤーから派生したコンポ `getState` ーネントの現在の状態です。
 
-1. 変更を保存し、Launchで[ビルド](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)にコードを昇格させます。
+1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)にコードを昇格させます。
 
    >[!NOTE]
    >
-   > [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)を使用して、埋め込みコードを&#x200B;**開発**&#x200B;環境に切り替えると非常に役立ちます。
+   > [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)を使用して、埋め込みコードを&#x200B;**開発**&#x200B;環境に切り替えると非常に役立ちます。
 
 1. [WKND Site](https://wknd.site/us/en.html)に移動し、開発者ツールを開いてコンソールを表示します。 **ログを保存**&#x200B;を選択します。
 
@@ -250,7 +246,7 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
 1. **eVars**、**Props**&#x200B;および&#x200B;**Events**&#x200B;に次の値を設定します。
 
-   * `evar8` - `%Component ID%`
+   * `evar8` -  `%Component ID%`
    * `prop8` -  `%Component ID%`
    * `event8`
 
@@ -308,12 +304,12 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
 1. ブラウザーコンソールで、ルール「CTAクリック」のメッセージ「*」「カスタムコード」が満たされなかったことを確認します。*
 
-   これは、ナビゲーションコンポーネントが`cmp:click`イベント&#x200B;*をトリガーし、*&#x200B;をチェックしているので、アクションが実行されないためです。
+   これは、ナビゲーションコンポーネントが`cmp:click`イベント&#x200B;*をトリガーし、*&#x200B;をチェックしているので、アクションは実行されないからです。
 
    >[!NOTE]
    >
    > コンソールログが表示されない場合は、Experience Platformデバッガーの&#x200B;**Launch**&#x200B;で&#x200B;**コンソールログ**&#x200B;がオンになっていることを確認してください。
 
-## バリデーターが
+## おめでとうございます。
 
 イベントドリブン型のAdobeクライアントデータレイヤーとExperience Platform Launchを使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡しただけです。
