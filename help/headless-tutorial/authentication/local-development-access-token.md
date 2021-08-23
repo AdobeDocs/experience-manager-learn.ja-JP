@@ -46,7 +46,7 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
 
 ![AEM開発者コンソール — 統合 —ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
 
-## ローカル開発アクセストークン{#use-local-development-access-token}を使用
+## ローカル開発アクセストークンを使用{#use-local-development-access-token}
 
 ![ローカル開発アクセストークン — 外部アプリケーション](assets/local-development-access-token/local-development-access-token-external-application.png)
 
