@@ -223,7 +223,7 @@ AEM SPA Editorと統合されたReactアプリケーションの出発点とし�
    >
    > JSON出力を自動的にフォーマットするには、ブラウザー拡張機能をインストールすると便利です。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、最初のAEM SPA Editorプロジェクトが作成されました。
 
