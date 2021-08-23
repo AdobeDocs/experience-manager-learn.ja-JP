@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# リソースのステータス{#developing-resource-statuses-in-aem-sites}の開発
+# リソースのステータスの作成 {#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience ManagerのリソースステータスAPIは、AEMの様々なエディターのWeb UIでステータスメッセージを公開するためのプラグ可能なフレームワークです。
 
@@ -32,7 +32,7 @@ Adobe Experience ManagerのリソースステータスAPIは、AEMの様々な�
 
 ![AEMエディターのリソースステータスの概要](assets/sample-editor-resource-status-screenshot.png)
 
-## リソース状態プロバイダーフレームワーク{#resource-status-provider-framework}
+## リソース状態プロバイダーフレームワーク {#resource-status-provider-framework}
 
 カスタムリソースステータスを作成する場合、開発作業は次の要素で構成されます。
 
@@ -84,7 +84,7 @@ Adobe Experience ManagerのリソースステータスAPIは、AEMの様々な�
    * エクスペリエンスフラグメントエディターカテゴリ：`cq.authoring.editor.sites.page`
    * テンプレートエディターカテゴリ：`cq.authoring.editor.sites.template`
 
-## コード{#view-the-code}を表示します。
+## コードを表示する {#view-the-code}
 
 [GitHubのコードを参照してください。](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
