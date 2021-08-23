@@ -12,10 +12,10 @@ level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2003'
-ht-degree: 12%
+source-wordcount: '1999'
+ht-degree: 11%
 
 ---
 
@@ -69,7 +69,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 作成する内容 {#what-you-will-build}
 
-この章では、[スタイルシステム機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;コンポーネントと&#x200B;**テキスト**&#x200B;コンポーネントのバリエーションを作成します。
+この章では、[スタイルシステム機能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)を使用して、記事ページで使用する&#x200B;**タイトル**&#x200B;コンポーネントと&#x200B;**テキスト**&#x200B;コンポーネントのバリエーションを作成します。
 
 ![タイトルに使用できるスタイル](assets/style-system/styles-added-title.png)
 
@@ -77,13 +77,13 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 背景 {#background}
 
-開発者およびテンプレート編集者は、[スタイルシステム](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/components/style-system.html)を使用して、コンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、どのスタイルを使用するかを決めることができます。以降のすべてのチュートリアルでは、ローコードの手法でコアコンポーネントを使用しながら、スタイルシステムを使用して、いくつかの独自のスタイルを創出していきます。
+開発者およびテンプレート編集者は、[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)を使用して、コンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、どのスタイルを使用するかを決めることができます。以降のすべてのチュートリアルでは、ローコードの手法でコアコンポーネントを使用しながら、スタイルシステムを使用して、いくつかの独自のスタイルを創出していきます。
 
 スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
 
 スタイルシステムの詳細なドキュメントは、[で確認できます。 ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=ja)また、スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)を理解するための優れた[テクニカルビデオもあります。
 
-## 下線スタイル — タイトル{#underline-style}
+## 下線スタイル — タイトル {#underline-style}
 
 [タイトルコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)は、**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/title`の下のプロジェクトにプロキシ化されています。 見出し要素(`H1`、`H2`、`H3`...)のデフォルトのスタイルは、**ui.frontend**&#x200B;モジュールに既に実装されています。
 
@@ -236,7 +236,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
    ブラウザー開発者ツールを使用して、タイトルコンポーネントの周囲のマークアップに、外側のdivに適用されたCSSクラス`cmp-title--underline`があることを確認します。
 
-## Quote Block Style - Text {#text-component}
+## 見積ブロックのスタイル — テキスト {#text-component}
 
 次に、同様の手順を繰り返して、[テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)に独自のスタイルを適用します。 テキストコンポーネントは、**ui.apps**&#x200B;モジュールの一部として`/apps/wknd/components/text`の下のプロジェクトにプロキシ化されています。 **ui.frontend**&#x200B;には、段落要素のデフォルトスタイルが既に実装されています。
 
@@ -421,7 +421,7 @@ main.container {
 
 1. **ボーナスチャレンジ**  — 前の演習で学んだレッスンを使用し、スタイルシステムを使用して、コンテナコンポーネントの固定幅方 **向の流** 体幅スタイルを実装しま **** す。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、記事ページのスタイルはほぼ完全に設定され、AEM Style Systemを使用した実際の操作が可能になりました。
 
