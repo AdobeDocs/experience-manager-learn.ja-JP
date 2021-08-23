@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# コンテンツのオーサリングと変更のパブリッシュ{#author-content-publish}
+# コンテンツのオーサリングと変更のパブリッシュ {#author-content-publish}
 
 >[!CAUTION]
 >
@@ -37,7 +37,7 @@ ht-degree: 3%
 1. Webサイトのコンテンツを更新する方法を説明します。
 1. ライブサイトに変更を公開する方法を説明します。
 
-## 新しいページ{#create-page}を作成します。
+## 新しいページの作成 {#create-page}
 
 通常、Webサイトは複数ページに分割されて複数ページのエクスペリエンスを形成します。 AEMは、コンテンツを同じ方法で構造化します。 次に、サイトの新しいページを作成します。
 
@@ -60,7 +60,7 @@ ht-degree: 3%
 
 1. ダイアログのポップアップで、「**開く**」をクリックして、新しく作成したページを開きます。
 
-## コンポーネントのオーサリング{#author-component}
+## コンポーネントのオーサリング {#author-component}
 
 AEMコンポーネントは、Webページの小さなモジュール式構成要素と考えることができます。 UIを論理チャンクまたはコンポーネントに分割することで、管理がはるかに容易になります。 コンポーネントを再利用するには、コンポーネントを設定できる必要があります。 これは、オーサーダイアログを通じて実行します。
 
@@ -96,7 +96,7 @@ AEMは、実稼動で使用できる[コアコンポーネント](https://experi
 
 他のコンポーネントを自由に試してみてください。 各[コアコンポーネントに関するドキュメントは、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)で参照できます。 [ページのオーサリングに関する詳細なビデオシリーズは、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)で参照できます。
 
-## 更新を公開{#publish-updates}
+## 更新の公開 {#publish-updates}
 
 AEM環境は、**オーサーサービス**&#x200B;と&#x200B;**パブリッシュサービス**&#x200B;に分割されます。 この章では、**オーサーサービス**&#x200B;のサイトにいくつかの変更を加えました。 サイト訪問者が変更を表示するには、変更を&#x200B;**パブリッシュサービス**&#x200B;にパブリッシュする必要があります。
 
@@ -136,7 +136,7 @@ AEM環境は、**オーサーサービス**&#x200B;と&#x200B;**パブリッシ�
 
 次に、パブリッシュサービスに移動して変更を表示します。
 
-1. パブリッシュサービスのURLを簡単に取得するには、オーサーURLをコピーして、`author`の単語を`publish`に置き換えます。 以下に例を示します。
+1. パブリッシュサービスのURLを簡単に取得するには、オーサーURLをコピーして、`author`の単語を`publish`に置き換えます。 次に例を示します。
 
    * **作成者 URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **パブリッシュURL**  -  `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
@@ -167,7 +167,7 @@ AEM環境は、**オーサーサービス**&#x200B;と&#x200B;**パブリッシ�
 
    **環境セグメント**&#x200B;の下に、**オーサー**&#x200B;および&#x200B;**パブリッシュ**&#x200B;サービスへのリンクがあります。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 AEM Siteに対する変更を作成し、公開しました。
 
