@@ -4,12 +4,13 @@ description: OSGi設定プロパティの基本と、OSGiサービスでのOSGi�
 role: Developer
 level: Beginner
 topic: 開発
+feature: OSGi
 kt: 8268
 thumbnail: 335729.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 3%
+source-wordcount: '77'
+ht-degree: 5%
 
 ---
 
