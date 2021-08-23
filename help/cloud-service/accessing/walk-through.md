@@ -1,21 +1,17 @@
 ---
 title: AEMウォークスルーへのアクセスの設定
 description: AdobeAdminConsoleでのAdobeIMSAdobe、ユーザーグループ、製品プロファイルの簡潔なウォークスルー設定と、AEM AuthorでこれらのユーザーIMSの抽象概念を活用して特定のグループベースの権限を定義および管理する方法。
-feature: 'ユーザーとグループ '
-topics: authentication, permissions
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: technical video
-kt: 6061
-thumbnail: 39155.jpg
 topic: 管理、セキュリティ
+feature: ユーザーとグループ
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6061
+thumbnail: 39155.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
