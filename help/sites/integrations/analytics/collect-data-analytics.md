@@ -1,28 +1,24 @@
 ---
 title: Adobe Analyticsでのページデータの収集
 description: イベントドリブン型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerで作成されたWebサイト上のユーザーアクティビティに関するデータを収集します。 Experience Platform Launchでルールを使用してこれらのイベントをリッスンし、データをAdobe Analyticsレポートスイートに送信する方法を説明します。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 5332
-thumbnail: 5332-collect-data-analytics.jpg
 topic: 統合
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 5332
+thumbnail: 5332-collect-data-analytics.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2417'
-ht-degree: 5%
+source-wordcount: '2378'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Analyticsでのページデータの収集
 
-[Adobeクライアントデータレイヤーの組み込み機能とAEMコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/data-layer/overview.html)を使用して、Adobe Experience Manager Sitesのページに関するデータを収集する方法を説明します。 [Experience Platform Launch と Adobe Analytics 拡張は、ルールを作成して Adobe Analytics にページデータを送信するために使用されます。](https://www.adobe.com/experience-platform/launch.html)[](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
+[Adobeクライアントデータレイヤーの組み込み機能とAEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)を使用して、Adobe Experience Manager Sitesのページに関するデータを収集する方法を説明します。 [Experience Platform Launch と Adobe Analytics 拡張は、ルールを作成して Adobe Analytics にページデータを送信するために使用されます。](https://www.adobe.com/experience-platform/launch.html)[](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
 
 ## 作成する内容
 
@@ -41,9 +37,9 @@ ht-degree: 5%
 以下が必要です。
 
 * **Experience Platform** LaunchProperty
-* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
-* [Experience Platformデ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) バッガーブラウザー拡張機能。このチュートリアルのスクリーンショットは、Chromeブラウザーからキャプチャしたものです。
-* （オプション）[Adobeクライアントデータレイヤーが有効なAEM Site](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 このチュートリアルでは、公開サイト[https://wknd.site/us/en.html](https://wknd.site/us/en.html)を使用しますが、独自のサイトを使用しても構いません。
+* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
+* [Experience Platformデ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) バッガーブラウザー拡張機能。このチュートリアルのスクリーンショットは、Chromeブラウザーからキャプチャしたものです。
+* （オプション）[Adobeクライアントデータレイヤーが有効なAEM Site](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 このチュートリアルでは、公開サイト[https://wknd.site/us/en.html](https://wknd.site/us/en.html)を使用しますが、独自のサイトを使用しても構いません。
 
 >[!NOTE]
 >
@@ -51,12 +47,12 @@ ht-degree: 5%
 
 ## WKNDサイトのLaunch環境の切り替え
 
-[https://wknd.](https://wknd.site) siteは、AEM実装のリファレンスとチュートリアルとして設計されたオープンソ [ースプロジ](https://github.com/adobe/aem-guides-wknd) ェクトに基づいて構築された、公開 [](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) サイトです。
+[https://wknd.](https://wknd.site) siteは、AEM実装のリファレンスとチュートリアルとして設計されたオープンソ [ースプロジ](https://github.com/adobe/aem-guides-wknd) ェクトに基づいて構築された、公開 [](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) サイトです。
 
-AEM環境を設定してWKNDコードベースをインストールする代わりに、Experience Platformデバッガーを使用して、ライブ[https://wknd.site/](https://wknd.site/)を&#x200B;** Launchプロパティに&#x200B;**切り替えることができます。**&#x200B;もちろん、既に[Adobeクライアントデータレイヤーが有効になっている場合は、独自のAEMサイトを使用できます。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
+AEM環境を設定してWKNDコードベースをインストールする代わりに、Experience Platformデバッガーを使用して、ライブ[https://wknd.site/](https://wknd.site/)を&#x200B;** Launchプロパティに&#x200B;**切り替えることができます。**&#x200B;もちろん、既に[Adobeクライアントデータレイヤーが有効になっている場合は、独自のAEMサイトを使用できます。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
-1. Experience Platform Launchにログインし、[Launchプロパティ](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)を作成します（まだ作成していない場合）。
-1. 最初のLaunch [ライブラリが作成され、](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library)Launch [環境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)に昇格されていることを確認します。
+1. Experience Platform Launchにログインし、[Launchプロパティ](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)を作成します（まだ作成していない場合）。
+1. 最初のLaunch [ライブラリが作成され、](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)Launch [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)に昇格されていることを確認します。
 1. ライブラリの公開先の環境からLaunch埋め込みコードをコピーします。
 
    ![Launch埋め込みコードのコピー](assets/collect-data-analytics/launch-environment-copy.png)
@@ -76,7 +72,7 @@ AEM環境を設定してWKNDコードベースをインストールする代わ�
 
 ## WKNDサイト上のAdobeクライアントデータレイヤーの確認
 
-[WKND参照プロジェクト](https://github.com/adobe/aem-guides-wknd)は、AEMコアコンポーネントを使用して構築され、[Adobeクライアントデータレイヤーがデフォルトで有効](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)になっています。 次に、Adobeクライアントデータレイヤーが有効になっていることを確認します。
+[WKND参照プロジェクト](https://github.com/adobe/aem-guides-wknd)は、AEMコアコンポーネントを使用して構築され、[Adobeクライアントデータレイヤーがデフォルトで有効](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)になっています。 次に、Adobeクライアントデータレイヤーが有効になっていることを確認します。
 
 1. [https://wknd.site](https://wknd.site)に移動します。
 1. ブラウザーの開発者ツールを開き、**コンソール**&#x200B;に移動します。 次のコマンドを実行します。
@@ -103,11 +99,11 @@ AEM環境を設定してWKNDコードベースをインストールする代わ�
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   データレイヤーの[ページスキーマ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`および`xdm:template`から派生した標準プロパティを使用して、Adobe Analyticsにページデータを送信します。
+   データレイヤーの[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`および`xdm:template`から派生した標準プロパティを使用して、Adobe Analyticsにページデータを送信します。
 
    >[!NOTE]
    >
-   > `adobeDataLayer` JavaScriptオブジェクトが表示されない場合 サイトで[Adobeクライアントデータレイヤーが有効](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)になっていることを確認します。
+   > `adobeDataLayer` JavaScriptオブジェクトが表示されない場合 サイトで[Adobeクライアントデータレイヤーが有効](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)になっていることを確認します。
 
 ## 「Page Loaded」ルールの作成
 
@@ -174,13 +170,13 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   `event`オブジェクトは、カスタムイベントで呼び出される`trigger()`メソッドから渡されます。 `component` は、カスタムイベントのデータレイヤーから派生 `getState` した現在のページです。以前の[ページスキーマ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)をデータレイヤーで公開して、すぐに使用できる様々なキーを確認できるようにしたことを思い出してください。
+   `event`オブジェクトは、カスタムイベントで呼び出される`trigger()`メソッドから渡されます。 `component` は、カスタムイベントのデータレイヤーから派生 `getState` した現在のページです。以前の[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)をデータレイヤーで公開して、すぐに使用できる様々なキーを確認できるようにしたことを思い出してください。
 
-1. 変更を保存し、Launchで[ビルド](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)にコードを昇格させます。
+1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)にコードを昇格させます。
 
    >[!NOTE]
    >
-   > [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)を使用して、埋め込みコードを&#x200B;**開発**&#x200B;環境に切り替えると非常に役立ちます。
+   > [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)を使用して、埋め込みコードを&#x200B;**開発**&#x200B;環境に切り替えると非常に役立ちます。
 
 1. AEMサイトに移動し、開発者ツールを開いてコンソールを表示します。 ページを更新すると、コンソールメッセージがログに記録されていることが確認できます。
 
@@ -190,7 +186,7 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
 次に、複数のデータ要素を作成し、Adobeクライアントデータレイヤーから異なる値を取り込みます。 前の演習で見たように、カスタムコードを使用してデータレイヤーのプロパティに直接アクセスできます。 データ要素を使用する利点は、Launchルール全体で再利用できる点です。
 
-以前の[ページスキーマ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)をデータレイヤーで公開した後に呼び出します。
+以前の[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)をデータレイヤーで公開した後に呼び出します。
 
 データ要素は、`@type`、`dc:title`および`xdm:template`プロパティにマッピングされます。
 
@@ -373,7 +369,7 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
 1. [西オーストラリア](https://wknd.site/us/en/magazine/western-australia.html)のような記事ページに移動します。 「ページ名」と「テンプレートタイプ」が変更されるのを確認します。
 
-## バリデーターが
+## おめでとうございます。
 
 イベントドリブン型のAdobeクライアントデータレイヤーとExperience Platform Launchを使用して、AEM Siteからデータページデータを収集し、Adobe Analyticsに送信しただけです。
 
