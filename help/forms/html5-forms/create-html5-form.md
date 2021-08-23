@@ -12,9 +12,9 @@ thumbnail: kt-4419.jpg
 topic: 開発
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '484'
 ht-degree: 12%
 
 ---
@@ -26,7 +26,7 @@ HTML5フォームはAdobe Experience Managerの新しい機能で、HTML5形式�
 
 ## 前提条件
 
-AEM Formsのインスタンスが動作していることを確認してください。 [インストールガイド](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)に従って、AEM Formsをインストールし、設定してください。
+AEM Formsのインスタンスが動作していることを確認してください。 [インストールガイド](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)に従って、AEM Formsをインストールし、設定してください。
 
 ## 最初のHTML5フォームを作成する
 
@@ -58,7 +58,7 @@ xdpテンプレートの高度なプロパティを使用すると、発行日�
 
 **送信URL**  - HTML5フォームの送信を処理するURLです。次のレッスンでは、これについて説明します。 ここで送信URLが指定されていない場合は、デフォルトの送信ハンドラーが呼び出され、フォームデータがブラウザーに返されます。
 
-**HTMLレンダリングプロファイル**  - HTML5フォームは、フォームテンプレートのモバイルレンダリングを可能にするために、RESTエンドポイントとして公開されるプロファイルの概念を持っています。多くの場合、デフォルトのレンダリングプロファイルでフォームをレンダリングすれば十分です。 デフォルトのレンダリングプロファイルがニーズを満たさない場合は、[カスタムプロファイル](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html)を作成し、フォームに関連付けることができます。
+**HTMLレンダリングプロファイル**  - HTML5フォームは、フォームテンプレートのモバイルレンダリングを可能にするために、RESTエンドポイントとして公開されるプロファイルの概念を持っています。多くの場合、デフォルトのレンダリングプロファイルでフォームをレンダリングすれば十分です。 デフォルトのレンダリングプロファイルがニーズを満たさない場合は、[カスタムプロファイル](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html)を作成し、フォームに関連付けることができます。
 
 **事前入力サービス**  — 事前入力サービスは、通常、バックエンドデータソースから取得したデータをフォームに入力するために使用されます。
 
