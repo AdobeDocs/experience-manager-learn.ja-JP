@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 受信者名とアドレス{#creating-document-fragments-to-hold-the-recipient-name-and-address}を格納するドキュメントフラグメントの作成
+# 受信者の名前と住所を格納するドキュメントフラグメントの作成 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 ここでは、受信者の名前と住所を格納するドキュメントフラグメントを作成します。
 
