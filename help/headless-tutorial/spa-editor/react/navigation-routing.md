@@ -12,15 +12,15 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 1%
+source-wordcount: '1623'
+ht-degree: 0%
 
 ---
 
 
-# ナビゲーションとルーティングを追加{#navigation-routing}
+# ナビゲーションとルーティングの追加 {#navigation-routing}
 
 SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的なナビゲーションは、React RouterとReactコアコンポーネントを使用して実装されます。
 
@@ -32,7 +32,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
 ## 作成する内容
 
-この章では、AEMのSPAにナビゲーションを追加します。 ナビゲーションメニューはAEMページ階層によって駆動され、[ナビゲーションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/navigation.html)が提供するJSONモデルを利用します。
+この章では、AEMのSPAにナビゲーションを追加します。 ナビゲーションメニューはAEMページ階層によって駆動され、[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)が提供するJSONモデルを利用します。
 
 ![ナビゲーションの追加](assets/navigation-routing/navigation-added.png)
 
@@ -40,7 +40,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
 [ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。 この章は、「[コンポーネントのマップ](map-components.md)」の章の続きですが、必要な操作に従うのは、ローカルのAEMインスタンスにデプロイされるSPA対応のAEMプロジェクトです。
 
-## テンプレートにナビゲーションを追加します{#add-navigation-template}
+## テンプレートへのナビゲーションの追加 {#add-navigation-template}
 
 1. ブラウザーを開き、 AEM [http://localhost:4502/](http://localhost:4502/)にログインします。 開始コードベースは、既にデプロイされている必要があります。
 1. **SPA Page Template**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
@@ -121,7 +121,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
    最初のページ読み込みの後、以降のナビゲーションでは完全なページ更新がおこなわれず、以前に訪問したページに戻る際にネットワークトラフィックが最小限に抑えられることを確認します。
 
-## 階層ページのJSONモデル{#hierarchy-page-json-model}
+## 階層ページのJSONモデル {#hierarchy-page-json-model}
 
 次に、SPAのマルチビューエクスペリエンスを推進するJSONモデルを調べます。
 
@@ -208,7 +208,7 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
 1. 次の場所に直接移動して、ディープリンクを試してみます。[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). また、ブラウザーの「戻る」ボタンが引き続き機能することを確認します。
 
-## Inspect Reactルーティング{#react-routing}
+## Inspect React Routing  {#react-routing}
 
 ナビゲーションとルーティングは、[React Router](https://reactrouter.com/)で実装されます。 React Routerは、Reactアプリケーション用のナビゲーションコンポーネントの集まりです。 [AEM Reactコアコンポー](https://github.com/adobe/aem-react-core-wcm-components-base) ネントは、React Routerの機能を使用して、前の手順で使用し **** たナビゲーションコンポーネントを実装します。
 
