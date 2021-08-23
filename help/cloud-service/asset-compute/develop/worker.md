@@ -12,9 +12,9 @@ thumbnail: KT-6282.jpg
 topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ asset computeワーカーは、Asset computeSDKワーカーAPI契約を、概念
 1. asset computeワーカーは、新しいレンディションのバイナリデータを`rendition.path`に保存します。
 1. `rendition.path`に書き込まれたバイナリデータは、Asset computeSDKを介してAEMオーサーサービスに転送され、__(4a)__&#x200B;テキストレンディションおよび&#x200B;__(4b)__&#x200B;としてアセットのメタデータノードに公開されます。
 
-上の図は、開発者が直面するAsset computeの問題と、Asset computeワーカーの呼び出しへの論理的な流れを示しています。 興味深いことに、[Asset computeの実行](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)の内部詳細は利用可能ですが、パブリックAsset computeSDK APIの契約のみに依存できます。
+上の図は、開発者が直面するAsset computeの問題と、Asset computeワーカーの呼び出しへの論理的な流れを示しています。 興味深いことに、[Asset computeの実行](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html)の内部詳細は利用可能ですが、パブリックAsset computeSDK APIの契約のみに依存できます。
 
 ## 作業者の分析
 
