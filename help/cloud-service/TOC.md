@@ -19,7 +19,7 @@ ht-degree: 30%
    + [AEM as aCloud Serviceとは](./introduction/what-is-aem-as-a-cloud-service.md)
    + [変化](./introduction/evolution.md)
    + [アーキテクチャ](./introduction/architecture.md)
-   + [Cloud Manager](./introduction/cloud-manager.md)
+   + [Cloud Manager ](./introduction/cloud-manager.md)
 + 基盤となるテクノロジー{#underlying-technology}
    + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
