@@ -11,10 +11,10 @@ version: cloud-service
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 12%
+source-wordcount: '372'
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ AEMコンテンツフラグメントは、テキストベースの編集コン�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEMコンテンツフラグメントモデル（コンテンツフラグメントのデータスキーマ）は、AEM [[!UICONTROL 設定ブラウザー]](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/configurations.html)を使用して有効にする必要があります。これにより、設定ごとにコンテンツフラグメントモデルを定義できます。
+AEMコンテンツフラグメントモデル（コンテンツフラグメントのデータスキーマ）は、AEM [[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)を使用して有効にする必要があります。これにより、設定ごとにコンテンツフラグメントモデルを定義できます。
 
 ## コンテンツフラグメントの作成 {#creating-content-fragments}
 
@@ -73,8 +73,8 @@ AEMコンテンツフラグメントは、バリエーション、要素、メ�
 ## その他のリソース {#additional-resources}
 
 * [コンテンツフラグメントの配信](content-fragments-delivery-feature-video-use.md)
-* [AEM WCMコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [AEM WCMコアコンテンツフラグメントコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+* [AEM WCMコアコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 ビデオシリーズから最終状態のAEM 6.4以降のインスタンスに以下のパッケージをダウンロードしてインストールするには：
 
