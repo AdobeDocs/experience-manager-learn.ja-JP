@@ -10,9 +10,9 @@ activity: use
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6306'
+source-wordcount: '6292'
 ht-degree: 0%
 
 ---
@@ -66,8 +66,8 @@ Photoshopと同様に、すべてのレイヤーを1つのファイルに配置�
 
 テンプレートプロジェクトは、アプリケーションのビジネスルールやニーズに応じて、比較的シンプルな場合も非常に複雑な場合もあります。 基本テンプレートはImage Serverから呼び出されますが、Dynamic Media Classic環境は柔軟性があるので、他のテンプレート内にテンプレートをネストすることもでき、一般的な名前の変数でリンクできる、かなり複雑な画像を作成できます。
 
-- [テンプレートの基本](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)の詳細を説明します。
-- [基本テンプレート](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)の作成方法を説明します。
+- [テンプレートの基本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)の詳細を説明します。
+- [基本テンプレート](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)の作成方法を説明します。
 
 ## 基本テンプレートの作成
 
@@ -189,7 +189,7 @@ _ドロップシャドウのあるレイヤーとないレイヤー_
 
 シャドウ効果は、レイヤーから水平または垂直にオフセットされますが、グロー効果はすべての方向に均等に適用されます。 内側のエフェクトは、レイヤーの不透明部分の上に作用しますが、外側のエフェクトは透明部分にのみ作用します。
 
-[レイヤー効果](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)の追加について詳しく説明します。
+[レイヤー効果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)の追加について詳しく説明します。
 
 ### パラメーターの追加
 
@@ -226,7 +226,7 @@ Dynamic Media Classicの用語では、パラメーターは、URLを使用し�
 >
 >プロパティが表示されないため、パラメータを追加できませんか？ レイヤーのプロパティをデフォルトから（移動、サイズ変更、非表示など）変更するだけです。 これで、そのプロパティが公開されたのがわかります。
 
-[テンプレートパラメーター](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html)の詳細をご覧ください。
+[テンプレートパラメーター](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html)の詳細をご覧ください。
 
 ## テキストレイヤーを使用したテンプレートの作成
 
@@ -315,7 +315,7 @@ RTFを調べる際に、各設定を変更する場所を見つけ出す必要�
 - RGB値を確認できます。\red56\green53\blue4  — これはテキストカラーです。
 - フォントサイズは20ですが、20の数字は表示されません。 しかし、\fs40というコマンドは、何か奇妙な理由で、RTFはフォントをハーフポイントとして測定します。 したがって、\fs40はフォントサイズです！
 
-パラメータを作成するのに十分な情報がありますが、画像サービングのドキュメントには、すべてのRTFコマンドの完全な参照が記載されています。 [画像サービングのドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)を参照してください。
+パラメータを作成するのに十分な情報がありますが、画像サービングのドキュメントには、すべてのRTFコマンドの完全な参照が記載されています。 [画像サービングのドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)を参照してください。
 
 #### テキストレイヤーにパラメータを追加する
 
@@ -333,7 +333,7 @@ RTFを調べる際に、各設定を変更する場所を見つけ出す必要�
 >
 >テキストの色にパラメータを追加するには、赤、緑、青のパラメータを別途追加します。 例えば、RTFが`\red56\green53\blue46`の場合、値56、53、46に赤、緑、青の各パラメータを個別に追加します。 URLで、3つすべてを呼び出して色を変更します。`&$red=56&$green=53&$blue=46`.
 
-[ダイナミックテキストパラメーター](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)の作成方法を説明します。
+[ダイナミックテキストパラメーター](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)の作成方法を説明します。
 
 ## テンプレートURLの公開と作成
 
@@ -347,7 +347,7 @@ RTFを調べる際に、各設定を変更する場所を見つけ出す必要�
 
 Image Serverにプッシュされた変更を確認するには、公開を実行する必要があります。 公開する必要がある点に注意してください。様々な画像アセットレイヤー、ダイナミックテキストのフォント、およびテンプレート自体。 基本テンプレートは、画像セットやスピンセットなど、他のDynamic Media Classicのリッチメディアアセットと同様に、人工的な構成です。一連の画像サービングコマンドを使用して画像とフォントを参照する、データベース内の行項目です。 そのため、テンプレートを公開する際には、Image Server上のデータを更新するだけです。
 
-[テンプレートのパブリッシュ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/publishing-templates.html)の詳細をご覧ください。
+[テンプレートのパブリッシュ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html)の詳細をご覧ください。
 
 ### テンプレートURLの構成
 
