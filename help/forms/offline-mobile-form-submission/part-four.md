@@ -12,9 +12,9 @@ version: 6.4,6.5
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 ローカルシステムでこの使用例を機能させるには、次の手順に従います。
 
 * ポート4502のAEMオーサーインスタンスと、ポート4503のAEMパブリッシュインスタンスをインストールします。
-* [AEM Formsでのサービスユーザーを使用した開発の手順に従います](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。サービスユーザーを作成し、AEMオーサーインスタンスとパブリッシュインスタンスにバンドルをデプロイしてください。
+* [AEM Formsでのサービスユーザーを使用した開発の手順に従います](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。サービスユーザーを作成し、AEMオーサーインスタンスとパブリッシュインスタンスにバンドルをデプロイしてください。
 * [osgi設定を開きま ](http://localhost:4503/system/console/configMgr)す。
 * **Apache Sling Referrer Filter**&#x200B;を検索します。 「 Allow Empty 」チェックボックスがオンになっていることを確認します。
 * [カスタムAEMormDocumentServiceバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。このバンドルは、AEMパブリッシュインスタンスにデプロイする必要があります。このバンドルには、モバイルフォームからインタラクティブPDFを生成するコードが含まれます。
