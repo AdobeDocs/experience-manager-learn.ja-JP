@@ -10,9 +10,9 @@ activity: use
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6231'
+source-wordcount: '6195'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Dynamic Media ClassicはHTML5ビデオをサポートしているので、Webお
 
 一部のお客様に適用されるDynamic Media Classicビデオに関する最後の注意事項：すべての企業が、自分のアカウントで自動変換、ストリーミングまたはビデオプリセットを有効にしているわけではありません。 何らかの理由でストリーミングビデオのURLにアクセスできない場合は、これが原因の可能性があります。 プログレッシブにダウンロードされたビデオをアップロードして公開し、すべてのビデオビューアにアクセスできるようになります。 ただし、Dynamic Media Classicのビデオ機能をフルに活用するには、担当のアカウントマネージャーまたはセールスマネージャーに連絡して、これらの機能を有効にしてもらう必要があります。
 
-[Dynamic Media Classicのビデオ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/quick-start-video.html)の詳細をご覧ください。
+[Dynamic Media Classicのビデオ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)の詳細をご覧ください。
 
 ## ビデオ 101
 
@@ -138,8 +138,8 @@ Dynamic Media Classicでビデオを操作する場合は、画像の操作と�
 
 ![画像](assets/video-overview/video-overview-2.png)
 
-1. まず、ビデオファイルをDynamic Media Classicにアップロードします。 これをおこなうには、Dynamic Media Classic拡張機能パネルの下部にある&#x200B;**ツールメニュー**&#x200B;を開き、**Dynamic Media Classicにアップロード/フォルダー名**&#x200B;にファイルを、**Dynamic Media Classicにアップロード/フォルダー名**&#x200B;を選択します。 「フォルダー名」は、拡張子を使用して現在参照しているフォルダーの名前になります。 ビデオファイルは大きい場合があるので、大きなファイルのアップロードにはFTPを使用することをお勧めします。 アップロードの一環として、ビデオのエンコーディング用に1つ以上のビデオプリセットを選択します。 ビデオは、アップロード時にMP4ビデオにトランスコードできます。 エンコーディングプリセットの使用と作成について詳しくは、以下のビデオプリセットのトピックを参照してください。 [ビデオのアップロードとエンコーディング](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html)について説明します。
-2. ビデオビューアプリセットを選択または変更し、ビデオをプレビューします。 事前にビルドされたビューアプリセットを選択するか、独自のビューアプリセットをカスタマイズします。 モバイルユーザーをターゲットに設定する場合、モバイルプラットフォームではビューアやプリセットが不要なので、ここで何もする必要はありません。 [ビデオビューアでのビデオのプレビュー](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html)および[ビデオビューアプリセットの追加または編集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset)について説明します。
+1. まず、ビデオファイルをDynamic Media Classicにアップロードします。 これをおこなうには、Dynamic Media Classic拡張機能パネルの下部にある&#x200B;**ツールメニュー**&#x200B;を開き、**Dynamic Media Classicにアップロード/フォルダー名**&#x200B;にファイルを、**Dynamic Media Classicにアップロード/フォルダー名**&#x200B;を選択します。 「フォルダー名」は、拡張子を使用して現在参照しているフォルダーの名前になります。 ビデオファイルは大きい場合があるので、大きなファイルのアップロードにはFTPを使用することをお勧めします。 アップロードの一環として、ビデオのエンコーディング用に1つ以上のビデオプリセットを選択します。 ビデオは、アップロード時にMP4ビデオにトランスコードできます。 エンコーディングプリセットの使用と作成について詳しくは、以下のビデオプリセットのトピックを参照してください。 [ビデオのアップロードとエンコーディング](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html)について説明します。
+2. ビデオビューアプリセットを選択または変更し、ビデオをプレビューします。 事前にビルドされたビューアプリセットを選択するか、独自のビューアプリセットをカスタマイズします。 モバイルユーザーをターゲットに設定する場合、モバイルプラットフォームではビューアやプリセットが不要なので、ここで何もする必要はありません。 [ビデオビューアでのビデオのプレビュー](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html)および[ビデオビューアプリセットの追加または編集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset)について説明します。
 3. ビデオ公開を実行し、URLを取得して、統合します。 ビデオワークフローと画像ワークフローの主な違いは、標準の画像サービング公開の代わりに（または同様に）特別なビデオ公開を実行することです。 デスクトップでのビデオビューアの統合は、画像ビューアの統合と同じように機能しますが、モバイルデバイスではさらに簡単です。必要なのはビデオ自体のURLだけです。
 
 ### トランスコードについて
@@ -174,11 +174,11 @@ Dynamic Media Classicはファイルを変換するだけでなく、使いや�
 
 ビデオをアップロードする際に、マスタービデオをエンコーディングを通じてWebに適した形式に変換するための設定を含む1つ以上のプリセットから選択します。 ビデオプリセットには、アダプティブビデオプリセットとシングルエンコーディングプリセットの2種類があります。
 
-[利用可能なビデオプリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
+[利用可能なビデオプリセット](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
 
 アダプティブビデオプリセットは、デフォルトで有効になっています。つまり、エンコーディングに使用できます。 単一のエンコーディングプリセットを使用する場合、ビデオプリセットのリストに表示するには、管理者がアクティブ化する必要があります。
 
-[ビデオプリセットをアクティブ化または非アクティブ化する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets)について説明します。
+[ビデオプリセットをアクティブ化または非アクティブ化する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets)について説明します。
 
 Dynamic Media Classicに付属する多数の事前ビルドプリセットのいずれかを選択するか、独自のプリセットを作成することができます。ただし、デフォルトでは、アップロード用のプリセットは選択されていません。 つまり、**アップロード時にビデオプリセットを選択しないと、ビデオは変換されず、公開できない**&#x200B;可能性があります。 ただし、ビデオをオフラインで変換して、アップロードして公開することはできます。 ビデオプリセットは、Dynamic Media Classicで変換をおこなう場合にのみ必要です。
 
@@ -240,19 +240,19 @@ Dynamic Media Classicに付属する多数の事前ビルドプリセットの�
 11. 「**保存**」をクリックして、プリセットを保存します。 他のすべてのプリセットとは異なり、この時点では公開する必要はありません。プリセットはファイルのアップロード専用です。 エンコードされたビデオは後で公開する必要がありますが、プリセットは内部でのDynamic Media Classicの使用のみに使用されます。
 12. ビデオプリセットがアップロードリストに含まれていることを確認するには、**アップロード**&#x200B;に移動します。**ジョブオプション**&#x200B;を選択し、**ビデオオプション**&#x200B;を展開します。 プリセットは、選択した再生デバイス（コンピューター、モバイル、タブレット）のカテゴリに表示されます。
 
-[ビデオプリセットの追加または編集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset)について詳しくは、こちらを参照してください。
+[ビデオプリセットの追加または編集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset)について詳しくは、こちらを参照してください。
 
 ## ビデオへのキャプションの追加
 
 場合によっては、ビデオにキャプションを追加すると便利です。例えば、ビデオを複数の言語で視聴者に提供する必要があるが、別の言語で音声を吹き飛ばしたり、別の言語でビデオを再度記録したくない場合などです。 また、キャプションを追加すると、聴覚障碍を持ち、クローズドキャプションを使用しているユーザーに対してアクセシビリティが向上します。 Dynamic Media Classicを使用すると、ビデオにキャプションを簡単に追加できます。
 
-[ビデオにキャプションを追加する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-captions-video.html)を説明します。
+[ビデオにキャプションを追加する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html)を説明します。
 
 ## ビデオへのチャプターマーカーの追加
 
 長い形式のビデオの場合、視聴者は、チャプターマーカーを使用してビデオをナビゲートすることで、機能と利便性に感謝する可能性があります。 Dynamic Media Classicを使用すると、ビデオにチャプターマーカーを簡単に追加できます。
 
-[ビデオにチャプターマーカーを追加する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-chapter-markers-video.html)を説明します。
+[ビデオにチャプターマーカーを追加する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html)を説明します。
 
 ## ビデオ実装に関するトピック
 
@@ -262,20 +262,20 @@ Dynamic Media Classicワークフローの最後の手順は、ビデオコン�
 
 ![画像](assets/video-overview/video-overview-6.jpg)
 
-[ビデオを公開する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video)を説明します。
+[ビデオを公開する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video)を説明します。
 
 ビデオの公開を実行すると、Webブラウザーでビデオや既製のDynamic Media ClassicビューアプリセットにアクセスするためのURLを取得できます。 ただし、独自のビデオビューアプリセットをカスタマイズまたは作成した場合は、別個のImage Server公開を実行する必要があります。
 
-- [URLをモバイルサイトまたはWebサイトにリンクする方法を説明します。](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)
-- [Webページにビデオビューアを埋め込む方法を説明します。](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)
+- [URLをモバイルサイトまたはWebサイトにリンクする方法を説明します。](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)
+- [Webページにビデオビューアを埋め込む方法を説明します。](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)
 
 サードパーティ製またはカスタム製のビデオプレーヤーを使用してビデオをデプロイすることもできます。
 
-[サードパーティのビデオプレーヤーを使用してビデオをデプロイする方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player)を説明します。
+[サードパーティのビデオプレーヤーを使用してビデオをデプロイする方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player)を説明します。
 
 さらに、ビデオのサムネール（ビデオから抽出された画像）も使用する場合は、Image Serverの公開も実行する必要があります。 これは、ビデオのサムネール画像がImage Server上に存在するのに対して、ビデオ自体はVideo Server上に存在するからです。 ビデオサムネールは、ビデオ検索結果、ビデオ再生リストで使用でき、ビデオ再生前にビデオビューアに表示される最初の「ポスターフレーム」として使用できます。
 
-[ビデオサムネールの操作](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails)について詳しくは、こちらを参照してください。
+[ビデオサムネールの操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails)について詳しくは、こちらを参照してください。
 
 ### ビューアプリセットの選択とカスタマイズ
 
@@ -310,15 +310,15 @@ XMPメタデータを使用してアップロードする前に、このデー�
 
 この方法に従えば、Dynamic Media Classicを使用して手動でこのデータを入力する必要がなくなります。 ただし、Dynamic Media Classicのメタデータプリセットを使用すると、毎回同じデータをすばやく入力することができます。
 
-このトピックについて詳しくは、[メタデータの表示、追加、書き出し](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html)を参照してください。
+このトピックについて詳しくは、[メタデータの表示、追加、書き出し](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html)を参照してください。
 
 ![画像](assets/video-overview/video-overview-7.jpg)
 
 メタデータが入力されると、そのビデオアセットの詳細表示でそのメタデータを確認できます。 キーワードも存在する場合がありますが、「キーワード」タブに表示されます。
 
-- [キーワード](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)の追加の詳細
-- [ビデオSEO](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)の詳細をご覧ください。
-- [ビデオSEO](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)の設定について説明します。
+- [キーワード](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)の追加の詳細
+- [ビデオSEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)の詳細をご覧ください。
+- [ビデオSEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)の設定について説明します。
 
 #### ビデオSEOの設定
 
