@@ -11,15 +11,15 @@ thumbnail: 41247.jpg
 topic: 統合
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '107'
 ht-degree: 2%
 
 ---
 
 
-# Launchプロパティ{#adobe-target-extension}にTarget拡張機能を追加します。
+# LaunchプロパティへのTarget拡張機能の追加 {#adobe-target-extension}
 
 このビデオに沿うには、AEM](../experience-platform-launch/overview.md)と[統合Experience Platform Launchが既にある必要があります。
 
@@ -35,4 +35,4 @@ Experience Platform Launchを使用してAdobe TargetをAEM Webサイトに有�
 
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobe Experience Platform Debuggerの概要](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Adobe Experience Platform Debuggerの概要](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
