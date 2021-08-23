@@ -309,7 +309,7 @@ public class MyClass {
 
 ![AEMでのログ設定](./assets/set-up-a-local-aem-development-environment/logging.png)
 
-#### バンドルはインストール済みの状態です{#bundle-active}
+#### バンドルがインストール済みの状態である {#bundle-active}
 
 すべてのバンドル（フラグメントを除く）は、**[!UICONTROL アクティブ]**&#x200B;状態である必要があります。 コードバンドルが[!UICONTROL Installed]の状態にある場合は、解決する必要がある問題があります。 ほとんどの場合、これは依存関係の問題です。
 
@@ -323,7 +323,7 @@ public class MyClass {
 
 上記の例では、AEMインスタンスにインストールされているバージョンが、バンドルが予期していた&#x200B;**12.2**&#x200B;対&#x200B;**12.6**&#x200B;であることがわかります。 そこから後方に進み、AEM上の[!DNL Maven]依存関係がAEMプロジェクト内の[!DNL Maven]依存関係と一致するかどうかを確認できます。 上記の例では、 [!DNL Core Components] **v2.2.0**&#x200B;がAEMインスタンスにインストールされていますが、コードバンドルは&#x200B;**v2.2.2**&#x200B;に依存関係を持って構築されたので、依存関係の問題が発生します。
 
-#### Slingモデルの登録の確認{#osgi-component-sling-models}
+#### Slingモデルの登録の検証 {#osgi-component-sling-models}
 
 AEMコンポーネントは、常に[!DNL Sling Model]を使用して、あらゆるビジネスロジックをカプセル化し、HTLレンダリングスクリプトをクリーンな状態に維持する必要があります。 Slingモデルが見つからない問題が発生した場合は、コンソールから[!DNL Sling Models]を確認すると役立つ場合があります。[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). これにより、Slingモデルが登録されているかどうか、およびSlingモデルが関連付けられているリソースタイプ（コンポーネントパス）が示されます。
 
