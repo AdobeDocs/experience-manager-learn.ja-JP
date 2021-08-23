@@ -2,7 +2,7 @@
 title: AEMでの認証サポートについて
 description: 'AEMでサポートされている認証（および時々）メカニズムの統合ビュー。 '
 version: 6.3, 6.4, 6.5
-feature: 'ユーザーとグループ '
+feature: ユーザーとグループ
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
@@ -11,10 +11,10 @@ kt: 406
 topic: アーキテクチャ
 role: Architect
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 11%
+source-wordcount: '134'
+ht-degree: 15%
 
 ---
 
@@ -52,7 +52,7 @@ AEMでサポートされている認証（および時々）メカニズムの�
             <td>✔</td>
         </tr>
         <tr>
-            <td>トークンベース（<a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化されたトークン</a>を含む）</td>
+            <td>トークンベース（<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化されたトークン</a>を含む）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -63,19 +63,19 @@ AEMでサポートされている認証（および時々）メカニズムの�
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=ja" target="_blank">SSO</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
