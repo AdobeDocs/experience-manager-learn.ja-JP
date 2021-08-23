@@ -2,8 +2,7 @@
 title: ガイドタイトル
 seo-title: seoタイトル
 description: ガイドの説明
-seo-description: seo説明
-translation-type: tm+mt
+seo-description: seo-description
 source-git-commit: f6b1af99eb9eb5602234c89ea25f1a7d03d64cc0
 workflow-type: tm+mt
 source-wordcount: '108'
@@ -14,66 +13,66 @@ ht-degree: 4%
 
 # 概要 {#overview}
 
-このユーザーガイドが中心とする製品の1 ～ 2文の概要です。 このユーザガイドには、 *xyzの多くの機能に関するビデオとチュートリアルが含まれてい*&#x200B;ます。
+このユーザーガイドが中心とする製品の1 ～ 2文の概要。 このユーザーガイドには、*xyz*&#x200B;の様々な機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
 
-* **[新機能のビデオ（ビデオ）](README.md)**
+* **[新機能ビデオ（ビデオ）](README.md)**
 
    <br>
-   *この新しい優れた機能について説明します。*
+   *このクールな新機能について説明します。*
 
-* **[新機能のビデオ（ビデオ）](README.md)**
-
-   <br>
-   *この新しい優れた機能について説明します。*
-
-* **[新しい記事（記事）](README.md)**
+* **[新機能ビデオ（ビデオ）](README.md)**
 
    <br>
-   *機能xyzについて詳しくは、こちらをクリックしてください。*
+   *このクールな新機能について説明します。*
 
-## スタッフの選考
+* **[新記事（記事）](README.md)**
+
+   <br>
+   *機能xyzについて詳しくは、ここをクリックしてください。*
+
+## スタッフのおすすめ
 
 <table>
 <tr>
   <td>
     <a href="#">
-      <img alt="400 x 225px" src="myimage.png" />
+      <img alt="400 x 225 px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>有効化コンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ1</strong>
     </a>
     </div>
     <p>
-    <em>有効化コンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明です。</em>
     <p>
   </td>
    <td>
     <a href="#">
-      <img alt="400 x 225px" src="myimage.png" />
+      <img alt="400 x 225 px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>有効化コンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ1</strong>
     </a>
     </div>
     <p>
-    <em>有効化コンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明です。</em>
     <p>
   </td>
   <td>
     <a href="#">
-      <img alt="400 x 225px" src="myimage.png" />
+      <img alt="400 x 225 px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>有効化コンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ1</strong>
     </a>
     </div>
     <p>
-    <em>有効化コンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明です。</em>
     <p>
   </td>
 </tr>
