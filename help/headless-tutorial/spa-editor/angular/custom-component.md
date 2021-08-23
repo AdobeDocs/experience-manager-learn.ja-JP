@@ -13,15 +13,15 @@ thumbnail: 5831-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1502'
 ht-degree: 3%
 
 ---
 
 
-# カスタムコンポーネント{#custom-component}の作成
+# カスタムコンポーネントの作成 {#custom-component}
 
 AEM SPA Editorで使用するカスタムコンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログとSlingモデルの開発方法について説明します。
 
@@ -77,7 +77,7 @@ AEMコンポーネントは、ノードおよびプロパティとして定義�
 
 >[!NOTE]
 >
-> AEMコンポーネントの[基本に関する簡単なリフレッシャーが役立つ場合があります。](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)
+> AEMコンポーネントの[基本に関する簡単なリフレッシャーが役立つ場合があります。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)
 
 1. 任意のIDEで、`ui.apps`フォルダーを開きます。
 2. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components`に移動し、`custom-component`という名前の新しいフォルダーを作成します。
@@ -159,13 +159,13 @@ AEMコンポーネントは、ノードおよびプロパティとして定義�
    >
    > コアコンポーネントの定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を参照すると、さらに多くの[ダイアログの例を確認できます。 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)の`/libs/granite/ui/components/coral/foundation/form`の下にある`select`、`textarea`、`pathfield`など、追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
+   従来のAEMコンポーネントでは、通常、[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
 
 ## Slingモデルの作成
 
-Slingモデルは、JCRからJava変数へのデータのマッピングを容易にする注釈駆動型のJava「POJO」(Plain Old Java Objects)です。 [Sling Modelstypcalに](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) より、AEM Components用の複雑なサーバー側のビジネスロジックがカプセル化されます。
+Slingモデルは、JCRからJava変数へのデータのマッピングを容易にする注釈駆動型のJava「POJO」(Plain Old Java Objects)です。 [Sling Modelstypcalに](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) より、AEM Components用の複雑なサーバー側のビジネスロジックがカプセル化されます。
 
-SPA Editorのコンテキストでは、Sling Modelsは、[Sling Model Exporter](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)を使用する機能を使用して、JSONモデルを介してコンポーネントのコンテンツを公開します。
+SPA Editorのコンテキストでは、Sling Modelsは、[Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)を使用する機能を使用して、JSONモデルを介してコンポーネントのコンテンツを公開します。
 
 1. 任意のIDEで、`core`モジュールを開きます。 `CustomComponent.java` チャプ `CustomComponentImpl.java` タースターターコードの一部として既に作成およびスタブ化されている。
 
@@ -330,7 +330,7 @@ SPA Editorのコンテキストでは、Sling Modelsは、[Sling Model Exporter]
 
    JSON値は、Sling Modelに追加されたロジックに基づいて、すべての大文字に設定されます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、カスタムAEMコンポーネントの作成方法と、SlingモデルおよびダイアログがJSONモデルと連携する仕組みを学びました。
 
