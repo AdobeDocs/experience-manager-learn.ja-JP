@@ -74,11 +74,11 @@ asset computeワーカーがクラウドストレージなど、その他の変�
 1. ターゲットワークスペースのデプロイ先となるすべての環境変数を設定したら、次のdeployコマンドを実行します。
    + `aio app deploy`
 1. AEM as a Cloud Service処理プロファイルで参照されるワーカーURLは、次の場所からも使用できます。
-   + `aio app get-url`
+   + `aio app get-url`。
 
 asset computeプロジェクトのバージョンが変更されると、ワーカーURLも新しいバージョンを反映するように変更され、URLを処理プロファイルで更新する必要があります。
 
-## Workspace APIプロビジョニング{#workspace-api-provisioning}
+## Workspace APIのプロビジョニング{#workspace-api-provisioning}
 
 ローカル開発をサポートするために[Adobe I/OにAdobeProject Fireflyプロジェクトを設定する際に、新しいDevelopment Workspaceが作成され、__Asset compute、I/Oイベント__、__I/O Events Management API__&#x200B;が追加されました。](../set-up/firefly.md)
 
