@@ -9,15 +9,15 @@ feature: AEMプロジェクトのアーキタイプ、コアコンポーネン�
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 56%
+source-wordcount: '362'
+ht-degree: 54%
 
 ---
 
 
-# AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
+# AEM Sites の開発の手引き - WKND チュートリアル{#getting-started-developing-aem-sites-wknd-tutorial}
 
 ## 概要 {#overview}
 
@@ -31,9 +31,9 @@ Adobe Experience Manager as a Cloud Service を使用した開発が初めての
 
 このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5+**&#x200B;および&#x200B;**AEM 6.4.2+**&#x200B;と後方互換性があります。
 
-**[こちらでチュートリアルをご覧ください。](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[こちらでチュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## WKNDをCloud ServiceとしてAEMにデプロイする{#deploying-wknd-to-aem-as-a-cloud-service}
+## WKNDのAEM as aCloud Serviceへのデプロイ{#deploying-wknd-to-aem-as-a-cloud-service}
 
 WKNDチュートリアルを完了したら、以下のビデオを視聴して、WKNDプロジェクトをAEMにCloud Serviceとしてデプロイする方法の概要を確認してください。
 
