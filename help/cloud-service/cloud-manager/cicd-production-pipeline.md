@@ -15,7 +15,7 @@ level: Beginner
 source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 35%
+ht-degree: 39%
 
 ---
 
@@ -31,12 +31,12 @@ ht-degree: 35%
 
 ## 設定
 
-[CI/CD実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)設定は、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーター、パフォーマンステストパラメーターを定義します。
+[CI/CD実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=ja)設定は、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーター、パフォーマンステストパラメーターを定義します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
 ### パイプラインの実行
 
-[CI/CD実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)は、ステージングを通じてコードを構築し実稼動環境にデプロイするために使用され、価値創出までの時間を短縮します。
+[CI/CD実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=ja)は、ステージングを通じてコードを構築し実稼動環境にデプロイするために使用され、価値創出までの時間を短縮します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
