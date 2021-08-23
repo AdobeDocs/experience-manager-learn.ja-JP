@@ -14,10 +14,10 @@ thumbnail: 32192.jpg
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 42%
+source-wordcount: '168'
+ht-degree: 33%
 
 ---
 
@@ -62,6 +62,6 @@ ht-degree: 42%
 
 ## その他のリソース {#additional-resources}
 
-* [ページプロパティの編集ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/authoring/authoring/editing-page-properties.translate.html)
-* [ページコンテンツの編集ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sitesオーサリングユーザーガイド](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [ページプロパティの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [ページコンテンツの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Sitesオーサリングユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
