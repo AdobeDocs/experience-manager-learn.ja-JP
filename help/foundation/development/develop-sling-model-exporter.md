@@ -64,11 +64,11 @@ Apache Slingは、Jackson JSONエクスポーターを提供し、他のWebサ�
 
 * [[!DNL Jackson Exporter] 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
-## コード{#view-the-code}を表示します。
+## コードを表示する {#view-the-code}
 
 [SampleSlingModelExporter.java](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleSlingModelExporter.java)
 
-## サポート資料{#supporting-materials}
+## サポート資料 {#supporting-materials}
 
 * [[!DNL Jackson Mapper] 機能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [[!DNL Jackson Serialization] 機能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
