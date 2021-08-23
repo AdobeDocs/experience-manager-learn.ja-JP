@@ -19,7 +19,7 @@ ht-degree: 7%
 ---
 
 
-# ページテンプレート{#page-templates}
+# ページテンプレート {#page-templates}
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ ht-degree: 7%
 
 ページを作成するとき、テンプレートを選択する必要があります。これは新しいページを作成するための基本として使用されます。テンプレートは、作成されるページの構造、初期コンテンツ、許可されるコンポーネントを定義します。
 
-[ページテンプレート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html)には、主に次の3つの領域があります。
+[ページテンプレート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=ja)には、主に次の3つの領域があります。
 
 1. **構造**  — テンプレートの一部であるコンポーネントを定義します。コンテンツ作成者はこれらを編集できません。
 1. **初期コンテンツ**  — テンプレートの開始時に使用するコンポーネントを定義します。コンテンツ作成者はこれらのコンポーネントを編集または削除できます
@@ -71,7 +71,7 @@ ht-degree: 7%
 
 完成した[マガジンテンプレート](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip)のソリューションは、パッケージマネージャーを通じてダウンロードし、インストールできます。
 
-## ヘッダーとフッターをエクスペリエンスフラグメントで更新{#experience-fragments}
+## エクスペリエンスフラグメントを使用したヘッダーとフッターの更新 {#experience-fragments}
 
 ヘッダーやフッターなどのグローバルコンテンツを作成する場合、一般的な方法は、[エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)を使用することです。 エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、単一の参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、マルチサイト管理と[ローカライゼーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)をサポートする利点があります。
 
@@ -91,7 +91,7 @@ Siteテンプレートでヘッダーとフッターが生成された。 次に
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917/?quality=12&learn=on)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、Adobe Experience Manager Sitesで新しいテンプレートとページが作成されました。
 
