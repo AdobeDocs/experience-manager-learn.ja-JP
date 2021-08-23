@@ -1,20 +1,15 @@
 ---
 title: AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用
 description: Adobeクライアントデータレイヤーは、Webページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに簡単にアクセスできるようにする標準的な方法を導入します。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
-feature: core-component
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: use
-version: cloud-service
-kt: 6261
-thumbnail: 41195.jpg
 topic: 統合
+feature: Adobeクライアントデータレイヤー、コアコンポーネント
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6261
+thumbnail: 41195.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '791'
 ht-degree: 8%
 
 ---
@@ -28,7 +23,7 @@ Adobeクライアントデータレイヤーは、Webページでの訪問者エ
 
 >[!NOTE]
 >
-> AEMサイトでAdobeクライアントデータレイヤーを有効にしますか？ [こちらの手順を参照してください](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> AEMサイトでAdobeクライアントデータレイヤーを有効にしますか？ [こちらの手順を参照してください](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
 ## データレイヤーの調査
 
@@ -183,4 +178,4 @@ Adobeクライアントデータレイヤーの組み込み機能は、ブラウ
 ## その他のリソース {#additional-resources}
 
 * [Adobeクライアントデータレイヤーのドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
