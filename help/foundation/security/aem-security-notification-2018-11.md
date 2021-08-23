@@ -36,7 +36,7 @@ ht-degree: 17%
 
 ## 脆弱性と解決策
 
-| OS クリップボードと内部 AEM クリップボードを使用した     | 解決方法 | リンク |
+| 問題 | 解決方法 | リンク |
 |-------|------------|-------|
 | AEM Dispatcherルールのバイパス | 最新バージョンのDispatcher(4.3.1)をインストールし、推奨されるDispatcher設定に従います。 | [AEM Dispatcherリリースノート](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)および[Dispatcherの設定](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を参照してください。 |
 | Dispatcherルールを回避するために使用される可能性があるURLフィルターバイパスの脆弱性 — CVE-2016-0957 | これは古いバージョンのDispatcherで修正されましたが、現在は、最新バージョンのDispatcher(4.3.1)をインストールし、推奨されるDispatcher設定に従うことをお勧めします。 | [AEM Dispatcherリリースノート](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)および[Dispatcherの設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)を参照してください。 |
