@@ -1,20 +1,16 @@
 ---
 title: Analysis Workspaceでのデータ分析
 description: Adobe Experience Managerサイトからキャプチャされたデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6409
-thumbnail: KT-6296.jpg
 topic: 統合
+feature: Adobe Client Data Layer
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6409
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2204'
+source-wordcount: '2184'
 ht-degree: 1%
 
 ---
@@ -45,17 +41,17 @@ WKNDマーケティングチームは、ホームページで最も効果が高�
 ### 目的 {#objective}
 
 1. 新しいレポートスイートを作成するか、既存のレポートスイートを使用します。
-1. レポートスイートで、 [コンバージョン変数(eVars)](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)と[成功イベント（イベント）](https://docs.adobe.com/help/en/analytics/admin/admin-tools/success-events/success-event.html)を設定します。
-1. [Analysis Workspaceプロジェクト](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html)を作成して、インサイトをすばやく作成、分析、共有できるツールを使用してデータを分析します。
+1. レポートスイートで、 [コンバージョン変数(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)と[成功イベント（イベント）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html)を設定します。
+1. [Analysis Workspaceプロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)を作成して、インサイトをすばやく作成、分析、共有できるツールを使用してデータを分析します。
 1. Analysis Workspaceプロジェクトを他のチームメンバーと共有します。
 
 ## 前提条件
 
 このチュートリアルは、Adobe Analytics](./track-clicked-component.md)を使用した[クリックされたコンポーネントの追跡の継続で、以下の点を前提としています。
 
-* [Adobe Analytics拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)が有効な&#x200B;**Launchプロパティ**
-* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) データレイヤーが有効なAEMサイトに読み込まれたLaunchプロパ [ティを使用して設定されたAdobeデバッガーブラウザー拡張機能。https://wknd.site/us/en](https://wknd.site/us/en.html) 
+* [Adobe Analytics拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)が有効な&#x200B;**Launchプロパティ**
+* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) データレイヤーが有効なAEMサイトに読み込まれたLaunchプロパ [ティを使用して設定されたAdobeデバッガーブラウザー拡張機能。https://wknd.site/us/en](https://wknd.site/us/en.html) 
 
 ## コンバージョン変数(eVar)と成功イベント(event)
 
@@ -116,19 +112,19 @@ eVarは、次のような原因と効果の測定に最適です。
 
 Analysis Workspaceは、分析を構築し、インサイトをすばやく共有できる、柔軟なブラウザーツールです。 ドラッグ&amp;ドロップインターフェイスを使用すると、分析を作成し、ビジュアライゼーションを追加して、データを有効にし、データセットをキュレーションし、組織内の任意のユーザーとプロジェクトを共有、スケジュールできます。
 
-次に、新しい[プロジェクト](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/t-freeform-project.html)を作成し、ダッシュボードを作成してサイト全体でのCTAボタンのパフォーマンスを分析します。
+次に、新しい[プロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)を作成し、ダッシュボードを作成してサイト全体でのCTAボタンのパフォーマンスを分析します。
 
 1. Analyticsツールバーで「**Workspace**」を選択し、「**新しいプロジェクトを作成**」をクリックします。
 
    ![ワークスペース](assets/create-analytics-workspace/create-workspace.png)
 
-1. **空白のプロジェクト**&#x200B;から開始するか、Adobeが提供する事前ビルドテンプレートか、組織が作成したカスタムテンプレートのいずれかを選択します。 想定している分析や使用事例に応じて、いくつかのテンプレートを使用できます。 [使用可能な](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 様々なテンプレートオプションについて詳しく説明します。
+1. **空白のプロジェクト**&#x200B;から開始するか、Adobeが提供する事前ビルドテンプレートか、組織が作成したカスタムテンプレートのいずれかを選択します。 想定している分析や使用事例に応じて、いくつかのテンプレートを使用できます。 [使用可能な](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 様々なテンプレートオプションについて詳しく説明します。
 
    Workspaceプロジェクトでは、左側のパネルからパネル、テーブル、ビジュアライゼーションおよびコンポーネントにアクセスします。 これらはプロジェクトの構成要素です。
 
-   * **[コンポーネント](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — コンポーネントは、ディメンション、指標、セグメントまたは日付範囲で、すべてフリーフォームテーブルに組み合わせて、ビジネスの質問への回答を開始できます。分析を開始する前に、各コンポーネントのタイプについて理解しておく必要があります。 コンポーネントの用語を習得したら、フリーフォームテーブルでドラッグ&amp;ドロップを開始し、分析を構築します。
-   * **[ビジュアライゼーション](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 棒グラフや折れ線グラフなどのビジュアライゼーションをデータに追加して、データに命を吹き込みます。左端のパネルで、中央のビジュアライゼーションアイコンを選択し、使用可能なビジュアライゼーションの完全なリストを表示します。
-   * **[パネル](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)**  — パネルは、テーブルとビジュアライゼーションのコレクションです。パネルには、Workspaceの左上のアイコンからアクセスできます。 パネルは、期間、レポートスイート、分析の使用例に従ってプロジェクトを整理する場合に役立ちます。 Analysis Workspaceでは、次のパネルタイプを使用できます。
+   * **[コンポーネント](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — コンポーネントは、ディメンション、指標、セグメントまたは日付範囲で、すべてフリーフォームテーブルに組み合わせて、ビジネスの質問への回答を開始できます。分析を開始する前に、各コンポーネントのタイプについて理解しておく必要があります。 コンポーネントの用語を習得したら、フリーフォームテーブルでドラッグ&amp;ドロップを開始し、分析を構築します。
+   * **[ビジュアライゼーション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 棒グラフや折れ線グラフなどのビジュアライゼーションをデータに追加して、データに命を吹き込みます。左端のパネルで、中央のビジュアライゼーションアイコンを選択し、使用可能なビジュアライゼーションの完全なリストを表示します。
+   * **[パネル](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)**  — パネルは、テーブルとビジュアライゼーションのコレクションです。パネルには、Workspaceの左上のアイコンからアクセスできます。 パネルは、期間、レポートスイート、分析の使用例に従ってプロジェクトを整理する場合に役立ちます。 Analysis Workspaceでは、次のパネルタイプを使用できます。
 
    ![テンプレートの選択](assets/create-analytics-workspace/workspace-tools.png)
 
@@ -170,7 +166,7 @@ Analysis Workspaceは、分析を構築し、インサイトをすばやく共�
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. Adobe Analytics Classificationsを使用して、ボタンIDの値を、よりわかりやすい名前に置き換えることができます。 特定の指標の分類を作成する方法について詳しくは、[こちら](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html)を参照してください。 この場合、ボタンIDをユーザーにわかりやすい名前にマッピングする`Button Section (Button ID)`分類指標を`eVar8`用に設定します。
+1. Adobe Analytics Classificationsを使用して、ボタンIDの値を、よりわかりやすい名前に置き換えることができます。 特定の指標の分類を作成する方法について詳しくは、[こちら](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)を参照してください。 この場合、ボタンIDをユーザーにわかりやすい名前にマッピングする`Button Section (Button ID)`分類指標を`eVar8`用に設定します。
 
    ![ボタンセクション](assets/create-analytics-workspace/button-section.png)
 
