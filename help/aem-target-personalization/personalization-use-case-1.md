@@ -7,9 +7,9 @@ feature: エクスペリエンスフラグメント
 topic: パーソナライズ機能
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1728'
 ht-degree: 1%
 
 ---
@@ -58,8 +58,8 @@ WKNDサイトは、自社のウェブサイトを通じてアメリカ全土で&
 1. 要件に基づいて、AEMコンテンツエディターはコンテンツブロックのエクスペリエンスフラグメントを作成し、Adobe Targetにオファーとして書き出します。 米国のすべての状態に対してパーソナライズされたコンテンツを提供するには、コンテンツ作成者がエクスペリエンスフラグメントマスターバリエーションを1つ作成し、その後、状態ごとに1つずつ他の50個のバリエーションを作成します。 状態のバリエーションごとに、関連する画像とテキストを含むコンテンツを手動で編集できます。 エクスペリエンスフラグメントをオーサリングする際、コンテンツエディターは、アセットファインダーオプションを使用して、AEM Assets内で使用可能なすべてのアセットにすばやくアクセスできます。 エクスペリエンスフラグメントがAdobe Targetに書き出されると、そのすべてのバリエーションもオファーとしてAdobe Targetにプッシュされます。
 
 1. エクスペリエンスフラグメントをAEMからAdobe Targetにオファーとして書き出した後、マーケターは、これらのオファーを使用してTargetでアクティビティを作成できます。 WKNDサイトのSkateFestキャンペーンに基づいて、マーケターは、各州からWKNDサイト訪問者に対して、パーソナライズされたエクスペリエンスを作成し、提供する必要があります。 エクスペリエンスのターゲット設定アクティビティを作成するには、マーケターがオーディエンスを特定する必要があります。 WKND SkateFestキャンペーンの場合、WKND Webサイトの訪問者の場所に基づいて、50人の個別のオーディエンスを作成する必要があります。
-   * [](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) オーディエンスは、アクティビティのターゲットを定義し、ターゲティングを使用できる任意の場所で使用します。ターゲットオーディエンスは、定義された訪問者条件のセットです。 オファーは、特定のオーディエンス（セグメント）をターゲットに設定できます。 そのオーディエンスに属する訪問者のみが、そのオーディエンスのターゲットとなるエクスペリエンスを表示します。  例えば、特定のブラウザーを使用する訪問者や特定の地域からの訪問者で構成されるオーディエンスにオファーを配信できます。
-   * [オファー](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)は、キャンペーンまたはアクティビティの間にWebページに表示されるコンテンツです。 Webページをテストする場合は、場所の様々なオファーを使用して各エクスペリエンスの成功を測定します。 オファーには、次のような様々なタイプのコンテンツを含めることができます。
+   * [](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) オーディエンスは、アクティビティのターゲットを定義し、ターゲティングを使用できる任意の場所で使用します。ターゲットオーディエンスは、定義された訪問者条件のセットです。 オファーは、特定のオーディエンス（セグメント）をターゲットに設定できます。 そのオーディエンスに属する訪問者のみが、そのオーディエンスのターゲットとなるエクスペリエンスを表示します。  例えば、特定のブラウザーを使用する訪問者や特定の地域からの訪問者で構成されるオーディエンスにオファーを配信できます。
+   * [オファー](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)は、キャンペーンまたはアクティビティの間にWebページに表示されるコンテンツです。 Webページをテストする場合は、場所の様々なオファーを使用して各エクスペリエンスの成功を測定します。 オファーには、次のような様々なタイプのコンテンツを含めることができます。
       * 画像
       * テキスト
       * **HTML**
@@ -77,7 +77,7 @@ WKNDサイトは、自社のウェブサイトを通じてアメリカ全土で&
 
 ## マーケターアクティビティ
 
-### GeoTargetingを使用するオーディエンスの作成{#marketer-audience}
+### GeoTargetingを使用するオーディエンスの作成 {#marketer-audience}
 
 1. 組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experiencecloud.adobe.com)に移動します。
 1. Adobe IDを使用してログインし、正しい組織に属していることを確認します。
