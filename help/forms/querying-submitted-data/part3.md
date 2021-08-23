@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# データベース{#storing-json-schema-in-database}へのJSONスキーマの格納
+# データベースへのJSONスキーマの格納 {#storing-json-schema-in-database}
 
 
 送信済みデータに対してクエリを実行するには、送信済みフォームに関連付けられたJSONスキーマを保存する必要があります。 JSONスキーマは、クエリビルダーでクエリを作成するために使用されます。
