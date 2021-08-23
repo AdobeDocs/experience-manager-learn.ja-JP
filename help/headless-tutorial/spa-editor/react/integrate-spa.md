@@ -9,15 +9,15 @@ thumbnail: 4853-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1851'
-ht-degree: 4%
+source-wordcount: '1843'
+ht-degree: 3%
 
 ---
 
 
-# SPA {#developer-workflow}を統合する
+# SPAの統合 {#developer-workflow}
 
 Reactで記述されたシングルページアプリケーション(SPA)のソースコードをAdobe Experience Manager(AEM)プロジェクトと統合する方法を説明します。 webpack開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を説明します。
 
@@ -40,7 +40,7 @@ Reactで記述されたシングルページアプリケーション(SPA)のソ�
 
 [ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。 この章は、「[プロジェクトを作成](create-project.md)」の章の続きですが、必要な操作は、SPA対応のAEMプロジェクトだけです。
 
-## 統合アプローチ{#integration-approach}
+## 統合アプローチ {#integration-approach}
 
 AEMプロジェクトの一部として、2つのモジュールが作成されました。`ui.apps`と`ui.frontend`が表示されます。
 
@@ -50,13 +50,13 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
 *SPA統合の概要です。*
 
-フロントエンドビルドに関する追加情報は、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)を参照してください。
+フロントエンドビルドに関する追加情報は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)を参照してください。
 
-## Inspect SPA統合{#inspect-spa-integration}
+## InspectとSPAの統合 {#inspect-spa-integration}
 
-次に、 `ui.frontend`モジュールを調べて、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)によって自動生成されたSPAを理解します。
+次に、 `ui.frontend`モジュールを調べて、[AEMプロジェクトのアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)によって自動生成されたSPAを理解します。
 
-1. 任意のIDEで、AEMプロジェクトを開きます。 このチュートリアルでは、[Visual Studio Code IDE](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)を使用します。
+1. 任意のIDEで、AEMプロジェクトを開きます。 このチュートリアルでは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)を使用します。
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -76,7 +76,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   上記のモジュールは、[AEM SPA Editor JS SDK](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-blueprint.html)を構成し、SPAコンポーネントをAEMコンポーネントにマッピングできるようにする機能を提供します。
+   上記のモジュールは、[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)を構成し、SPAコンポーネントをAEMコンポーネントにマッピングできるようにする機能を提供します。
 
    また、[AEM WCM Components - React Core実装](https://github.com/adobe/aem-react-core-wcm-components-base)および[AEM WCM Components - Spa Editor - React Core実装](https://github.com/adobe/aem-react-core-wcm-components-spa)も含まれます。 これらは、すぐに使用できるAEMコンポーネントにマッピングされる、再利用可能なUIコンポーネントのセットです。 これらは、そのまま使用するように設計され、プロジェクトのニーズに合わせてスタイル設定されます。
 
@@ -130,7 +130,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
 1. `ui.frontend/src/import-components.js`にある`import-component.js`ファイルをInspectします。 このファイルは、初期設定の&#x200B;**Reactコアコンポーネント**&#x200B;を読み込み、プロジェクトで使用できるようにします。 次の章では、AEMコンテンツとSPAコンポーネントのマッピングを調べます。
 
-## 静的なSPAコンポーネント{#static-spa-component}を追加します。
+## 静的なSPAコンポーネントの追加 {#static-spa-component}
 
 次に、新しいコンポーネントをSPAに追加し、変更をローカルのAEMインスタンスにデプロイします。 これは、SPAの更新方法を示すために、簡単な変更です。
 
@@ -223,7 +223,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    上記の手順は、プロジェクトのルートからMavenビルドをトリガーすると（つまり`mvn clean install -PautoInstallSinglePackage`）、自動的に実行されます。 これで、SPAとAEMのクライアント側ライブラリ間の統合の基本を理解する必要があります。 静的な`Header`コンポーネントの下のAEMでは、引き続き`Text`コンポーネントを編集および追加できます。
 
-## Webpack Dev Server - JSON APIをプロキシする{#proxy-json}
+## Webpack Dev Server - JSON APIのプロキシ {#proxy-json}
 
 前の演習で見たように、クライアントライブラリをビルドしてAEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストでは許容されますが、SPA開発の大部分には理想的ではありません。
 
@@ -343,7 +343,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    更新されたSPAがAEMになったので、オーサリングを続行できます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPAを更新し、AEMとの統合を確認しました。 **webpack-dev-server**&#x200B;を使用してAEM JSONモデルAPIに対するSPAを開発する方法を知っています。
 
