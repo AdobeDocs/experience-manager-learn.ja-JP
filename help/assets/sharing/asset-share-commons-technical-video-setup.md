@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# ローカルAEM {#setup-asset-share-commons}でのAsset Share Commonsの設定
+# ローカルAEMでのAsset Share Commonsの設定 {#setup-asset-share-commons}
 
 ローカルのAEMインスタンスでAsset Share Commonsを実行する方法を簡単に説明します。
 
