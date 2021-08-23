@@ -7,10 +7,10 @@ version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 8%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ AEM Assets Dynamic Mediaは、インタラクティブメディアビューア�
 
 >[!NOTE]
 >
->AEM Assets Dynamic MediaホットスポットでAEMエクスペリエンスフラグメントを使用するには、Dynamic Media](https://docs.adobe.com/docs/ja-JP/aem/6-3/administer/content/dynamic-media/config-dynamic.html)モードで[AEMを実行する必要があります。
+>AEM Assets Dynamic MediaホットスポットでAEMエクスペリエンスフラグメントを使用するには、Dynamic Media](https://experienceleague.adobe.com/docs/?lang=ja)モードで[AEMを実行する必要があります。
 
 このビデオに示すポップアップエクスペリエンスフラグメントバリアントは、以下のAEMパッケージとして利用できます。
 
