@@ -93,7 +93,7 @@ _wskdebugを使用したAsset computeワーカーのデバッグのクリック�
 1. VS Codeに戻り、`/actions/worker/index.js`に移動して、コードを順に進みます。
 1. デバッグ可能な開発ツールを終了するには、手順6で`npx adobe-asset-compute devtool`コマンドを実行したターミナルで`Ctrl-C`をタップします。
 
-## Adobe I/O Runtime{#aio-app-logs}からログにアクセスする
+## Adobe I/O Runtimeからのログへのアクセス{#aio-app-logs}
 
 [AEM as a Cloud Serviceは、Adobe I/O Runtimeで直接呼び出すことで、処理プロファイルを介し](../deploy/processing-profiles.md) てAsset computeワーカーを活用します。これらの呼び出しにはローカル開発が含まれないので、Asset compute開発ツールやwskdebugなどのローカルツールを使用して実行をデバッグすることはできません。 代わりに、Adobe I/OCLIを使用して、Adobe I/O Runtimeの特定のワークスペースで実行されたワーカーからログを取得できます。
 
