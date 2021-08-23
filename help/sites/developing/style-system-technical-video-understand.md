@@ -28,7 +28,7 @@ ht-degree: 4%
 >
 >このビデオでは、 We.Retailタイトルコンポーネントが更新され、[コアコンポーネントv2.0.0以降](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)を継承していることを前提としています。
 
-## スタイルシステムのコード化方法について{#understanding-how-to-code-for-the-style-system}
+## スタイルシステムのコーディング方法について {#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
 
@@ -151,9 +151,9 @@ jQuery(function ($) {
 });
 ```
 
-## 開発のベストプラクティス{#development-best-practices}
+## 開発のベストプラクティス {#development-best-practices}
 
-### HTMLのベストプラクティス{#html-best-practices}
+### HTMLのベストプラクティス {#html-best-practices}
 
 * HTML（HTLを使用して生成）は、できるだけ構造的に意味のあるものにする必要があります。要素の不要なグループ化やネストを回避する。
 * HTML要素は、BEMスタイルのCSSクラスを使用してアドレス可能にする必要があります。
@@ -187,7 +187,7 @@ jQuery(function ($) {
 
       * 最新の画像コンポーネントでは、多くの場合、JavaScriptを使用して、ユースケース（ビューポート）に最適な画像を選択して読み込みます。
 
-### CSSのベストプラクティス{#css-best-practices}
+### CSSのベストプラクティス {#css-best-practices}
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ CSSセレクターの構造の例を次に示します。
 
 コンポーネントがネストされている場合、これらのネストされたコンポーネント要素のCSSセレクターの深さは、第3レベルのセレクターを超えます。 ネストされたコンポーネントに対して同じパターンを繰り返しますが、親コンポーネントの`BLOCK`で範囲が指定されます。 つまり、ネストされたコンポーネントの`BLOCK`を3番目のレベルで開始し、ネストされたコンポーネントの`ELEMENT`を4番目のセレクターレベルで開始します。
 
-### JavaScriptのベストプラクティス{#javascript-best-practices}
+### JavaScriptのベストプラクティス {#javascript-best-practices}
 
 この節で定義するベストプラクティスは、「スタイルJavaScript」、つまり、機能的な目的ではなく、スタイル用にコンポーネントを操作することを目的としたJavaScriptに関係します。
 
@@ -254,7 +254,7 @@ CSSセレクターの構造の例を次に示します。
 * HTLを介してHTMLでこれらのDOM変更をJavaScriptのコストとマニフェストの両方を直接評価します。
    * スタイルJavaScriptを使用するコンポーネントでサーバー側の変更が必要な場合は、JavaScript操作がその時点で取り込めるかどうか、およびコンポーネントのパフォーマンスとサポートに与える影響と影響を評価します。
 
-#### パフォーマンスに関する考慮事項{#performance-considerations}
+#### パフォーマンスに関する考慮事項 {#performance-considerations}
 
 * Style-JavaScriptは明るく、傾いた状態に保つ必要があります。
 * ちらつきや不要な再描画を避けるために、最初に`BLOCK--MODIFIER BLOCK`を介してコンポーネントを非表示にし、JavaScriptでのすべてのDOM操作が完了したら表示します。
