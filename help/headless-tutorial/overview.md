@@ -8,7 +8,7 @@ level: Beginner
 source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
 source-wordcount: '419'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)には、ヘッドレスエンドポイントを定
 
 >[!TIP]
 >
->このチュートリアルのコレクションは、**を行って**&#x200B;学びたい人向けに設計されています。 詳しくは、[AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html)を参照してください。 この一連のチュートリアルとジャーニーは互いを補完し合っています。
+>このチュートリアルのコレクションは、**を行って**&#x200B;学びたい人向けに設計されています。 詳しくは、[AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html?lang=ja)を参照してください。 この一連のチュートリアルとジャーニーは互いを補完し合っています。
 
 ## APIによるTutorials
 
