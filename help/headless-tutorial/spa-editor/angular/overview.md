@@ -13,10 +13,10 @@ feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 18%
+source-wordcount: '702'
+ht-degree: 15%
 
 ---
 
@@ -29,15 +29,15 @@ ht-degree: 18%
 
 *WKND SPAの実装*
 
-##  について
+## について
 
 このマルチパートチュートリアルの目標は、AEMのSPA Editor機能を使用するAngularアプリケーションの実装方法を開発者に教えることです。 実際のシナリオでは、開発アクティビティはペルソナ別に分類され、多くの場合、**フロントエンド開発者**&#x200B;と&#x200B;**バックエンド開発者**&#x200B;が関与します。 このチュートリアルを完了するには、AEM SPA Editorプロジェクトに参加する開発者にとって有益です。
 
 このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.4+**&#x200B;および&#x200B;**AEM 6.4.8+**&#x200B;と後方互換性があります。 SPAは、次を使用して実装されます。
 
-* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
+* [Maven AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)
+* [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [Angular](https://angular.io/)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
@@ -54,12 +54,12 @@ ht-degree: 18%
 
 * HTML、CSS、JavaScriptに関する基本的な知識
 * [Angular](https://angular.io/)の基本的な知識
-* [AEM as aCloud ServiceSDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4以降、](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8以降](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [AEM as aCloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、 [AEM 6.5.4以降、](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65)  [AEM 6.4.8以降](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.](https://nodejs.org/ja/) jsand  [npm](https://www.npmjs.com/)
 
-*必須ではありませんが、従来のAEM Sitesコンポーネントの開発に関する基本的な [知識を持つことは有益です](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
+*必須ではありませんが、従来のAEM Sitesコンポーネントの開発に関する基本的な [知識を持つことは有益です](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。*
 
 ## ローカル開発環境 {#local-dev-environment}
 
@@ -67,9 +67,9 @@ ht-degree: 18%
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 
 ## 次の手順 {#next-steps}
 
@@ -79,7 +79,7 @@ ht-degree: 18%
 
 このチュートリアルのプロジェクトコードは、AEM as aCloud Service用に構築されています。 プロジェクトコードを&#x200B;**6.5.4+**&#x200B;と&#x200B;**6.4.8+**&#x200B;に対して後方互換性を保つために、いくつかの変更が加えられました。
 
-[UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;が依存関係として含まれています。
+[UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4**&#x200B;が依存関係として含まれています。
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
