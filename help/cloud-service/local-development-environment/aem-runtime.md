@@ -12,9 +12,9 @@ thumbnail: 32551.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 >title="Local AEM Runtime"
 >abstract="Adobe Experience Manager(AEM)は、AEM as a Cloud Service SDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストし、Cloud Service環境としてAEMにデプロイできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service の SDK"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/ja/aemcloud.html" text="AEMをCloud ServiceSDKとしてダウンロード"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMをCloud ServiceSDKとしてダウンロード"
 
 Adobe Experience Manager(AEM)は、AEM as a Cloud Service SDKのQuickstart Jarとして使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストし、Cloud Service環境としてAEMにデプロイできます。
 
@@ -59,7 +59,7 @@ AEM as aCloud ServiceSDK(AEM SDK)には、AEMオーサーとパブリッシュ�
 
 1. ダウンロードした`aem-sdk-XXX.zip`ファイルを解凍します。
 
-## ローカルのAEMオーサーサービス{#set-up-local-aem-author-service}を設定します。
+## ローカルのAEMオーサーサービスを設定する{#set-up-local-aem-author-service}
 
 ローカルのAEMオーサーサービスは、開発者にローカルエクスペリエンスのデジタルマーケターやコンテンツの作成者が共有し、コンテンツを作成および管理することを提供します。  AEMオーサーサービスは、オーサリングとプレビューの両方の環境として設計されており、機能開発のほとんどの検証をその環境に対して実行でき、ローカル開発プロセスの重要な要素となります。
 
@@ -121,7 +121,7 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-## コンテンツ配布をシミュレート{#content-distribution}
+## コンテンツ配布をシミュレート {#content-distribution}
 
 真のCloud Service環境では、[Slingコンテンツ配布](https://sling.apache.org/documentation/bundles/content-distribution.html)とAdobeパイプラインを使用して、コンテンツをオーサーサービスからパブリッシュサービスに配布します。 [Adobeパイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)は、クラウド環境でのみ使用可能な独立したマイクロサービスです。
 
@@ -152,7 +152,7 @@ $ java -jar aem-publish-p4503.jar
 1. **OK**&#x200B;をクリックして設定を保存し、**デフォルト**&#x200B;レプリケーションエージェントを有効にします。
 1. これで、オーサーサービスのコンテンツに変更を加えて、パブリッシュサービスにパブリッシュできます。
 
-![ページを公開](assets/aem-runtime/publish-page-changes.png)
+![ページを発行](assets/aem-runtime/publish-page-changes.png)
 
 ## クイックスタートJAR起動モード
 
@@ -214,7 +214,7 @@ AEM SDKをアップグレードすると、新しいリポジトリを含む新�
 
 ## トラブルシューティング
 
-## クイックスタートJARファイルをダブルクリックすると、エラー{#troubleshooting-double-click}が発生します。
+## クイックスタートJARファイルをダブルクリックするとエラーが発生する{#troubleshooting-double-click}
 
 クイックスタートJARをダブルクリックして起動すると、エラーモーダルが表示され、AEMがローカルで起動されない。
 
@@ -230,7 +230,7 @@ AEMオーサーサービスを起動するには、Quickstart Jarを含むディ
 
 `$ java -jar aem-publish-p4503.jar`
 
-## コマンドラインからのクイックスタートJARの起動は、直ちに{#troubleshooting-java-8}を中止します。
+## コマンドラインからのクイックスタートJARの起動は、直ちに中断します{#troubleshooting-java-8}
 
 コマンドラインからQuickstart Jarを起動すると、プロセスが直ちに中断され、AEMサービスが起動しません。次のエラーが発生します。
 
@@ -258,4 +258,4 @@ Java 11 SDKがインストールされたら、コマンドラインからコマ
 + [AEM SDKのダウンロード](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [Dockerのダウンロード](https://www.docker.com/)
-+ [Experience ManagerDispatcherのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcherのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
