@@ -19,7 +19,7 @@ ht-degree: 4%
 ---
 
 
-# サイト{#create-site}の作成
+# サイトの作成 {#create-site}
 
 >[!CAUTION]
 >
@@ -31,7 +31,7 @@ ht-degree: 4%
 
 この章の手順は、Adobe Experience Manager as a Cloud Service環境で実行します。 AEM環境への管理者アクセス権があることを確認します。 このチュートリアルを完了する際には、[サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)と[開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja)を使用することをお勧めします。
 
-詳しくは、[オンボーディングのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)を参照してください。
+詳しくは、[オンボーディングのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=ja)を参照してください。
 
 ## 目的 {#objective}
 
@@ -133,7 +133,7 @@ ht-degree: 4%
 
    *サイトテンプレートから提供されるサンプルコンテンツ*
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、最初のAEM Siteが作成されました。
 
