@@ -11,9 +11,9 @@ thumbnail: 38553.jpg
 topic: 統合
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '108'
 ht-degree: 15%
 
 ---
@@ -31,4 +31,4 @@ Adobe Experience Managerとの残りの統合を設定するために必要な�
 
 ## その他のリソース {#additional-resources}
 
-* [Launch プロパティの作成](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
+* [Launch プロパティの作成](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
