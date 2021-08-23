@@ -14,10 +14,10 @@ thumbnail: 31784.jpg
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 27%
+source-wordcount: '372'
+ht-degree: 25%
 
 ---
 
@@ -62,5 +62,5 @@ ht-degree: 27%
 
 ## その他のリソース {#additional-resources}
 
-* [ページコンテンツの編集ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
-* [ページのオーサリングのクイックスタートガイド](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [ページコンテンツの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
