@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 完全なWebページエクスペリエンスのパーソナライズ{#personalization-fpe}
+# 完全なWebページエクスペリエンスのパーソナライズ {#personalization-fpe}
 
 Adobe Targetを使用して、AEM上でホストされているサイトページを新しいページにリダイレクトするアクティビティの作成方法を説明します。
 
