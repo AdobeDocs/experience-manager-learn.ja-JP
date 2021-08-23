@@ -11,12 +11,12 @@ thumbnail: 17019.jpg
 source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
 
-# スマートタグ （画像用）
+# 画像のスマートタグ
 
 AEM Assetsの画像用スマートタグは、派生メタデータタグを画像アセットに自動的に追加することでAEM Assetsの検索を強化し、適切な画像を見つけやすく高速になり、オーサリングエクスペリエンスを向上します。
 
