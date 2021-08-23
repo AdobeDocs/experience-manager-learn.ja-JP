@@ -1,7 +1,7 @@
 ---
 title: タスクの割り当て通知のカスタマイズ
 description: タスクの割り当て通知電子メールにフォームデータを含める
-sub-product: フォーム[ふぉーむ]
+sub-product: forms
 feature: ワークフロー
 topics: integrations
 audience: developer
@@ -13,10 +13,10 @@ thumbnail: KT-6279.jpg
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 8%
+source-wordcount: '444'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 8%
 # タスクの割り当て通知のカスタマイズ
 
 タスクの割り当てコンポーネントは、タスクをワークフロー参加者に割り当てるために使用します。 タスクがユーザーまたはグループに割り当てられると、定義済みのユーザーまたはグループメンバーに電子メール通知が送信されます。
-この電子メール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、システムで生成された[メタデータプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)を使用して取得されます。
+この電子メール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、システムで生成された[メタデータプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)を使用して取得されます。
 電子メール通知に送信されたフォームデータの値を含めるには、カスタムメタデータプロパティを作成し、電子メールテンプレートでこれらのカスタムメタデータプロパティを使用する必要があります
 
 
@@ -130,7 +130,7 @@ OSGiコンポーネントを構築してAEMサーバーにデプロイした後�
 
 ## サーバーで試すには
 
-* [Day CQ 電子メールサービスの設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [Day CQ 電子メールサービスの設定](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 有効な電子メールIDを[管理者ユーザー](http://localhost:4502/security/users.html)に関連付ける
 * [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)をダウンロードし、インストールします。
 * [アダプティブフォーム](assets/request-travel-authorization.zip)をダウンロードし、[フォームとドキュメントのui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)からAEMに読み込みます。
