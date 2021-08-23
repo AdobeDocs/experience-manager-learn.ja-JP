@@ -8,9 +8,9 @@ thumbnail: 22254.jpg
 topic: コンテンツ管理
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## AEM 6.x{#set-up}の画像用のカスタムスマートタグの設定
+## AEM 6.x用の画像のカスタムスマートタグの設定{#set-up}
 
 >[!NOTE]
 > 画像用のカスタムスマートタグは、AEM as a Cloud Service用に自動的にプロビジョニングされます。
@@ -36,6 +36,6 @@ ht-degree: 3%
 
 ## その他のリソース
 
-* AEM 6.4には[最新のサービスパック](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)が必要です。
+* AEM 6.4には[最新のサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)が必要です。
 
 
