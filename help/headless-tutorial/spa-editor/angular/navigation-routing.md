@@ -13,15 +13,15 @@ thumbnail: 5312-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2723'
-ht-degree: 2%
+source-wordcount: '2717'
+ht-degree: 1%
 
 ---
 
 
-# ナビゲーションとルーティングを追加{#navigation-routing}
+# ナビゲーションとルーティングの追加 {#navigation-routing}
 
 AEM PagesとSPA Editor SDKを使用した、SPAの複数のビューのサポート方法について説明します。 動的ナビゲーションは、Angularルートを使用して実装され、既存のヘッダーコンポーネントに追加されます。
 
@@ -33,7 +33,7 @@ AEM PagesとSPA Editor SDKを使用した、SPAの複数のビューのサポー
 
 ## 作成する内容
 
-この章では、既存の`Header`コンポーネントにナビゲーションメニューを追加します。 ナビゲーションメニューは、AEMページ階層によって駆動され、[ナビゲーションコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/navigation.html)が提供するJSONモデルを使用します。
+この章では、既存の`Header`コンポーネントにナビゲーションメニューを追加します。 ナビゲーションメニューは、AEMページ階層によって駆動され、[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)が提供するJSONモデルを使用します。
 
 ![ナビゲーションの実装](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -69,9 +69,9 @@ AEM PagesとSPA Editor SDKを使用した、SPAの複数のビューのサポー
 
 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/navigation-routing-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
 
-## Inspect HeaderComponentの更新{#inspect-header}
+## Inspect HeaderComponentの更新 {#inspect-header}
 
-以前の章では、`HeaderComponent`コンポーネントは、`app.component.html`を介して含まれる純粋なAngularコンポーネントとして追加されました。 この章では、`HeaderComponent`コンポーネントをアプリから削除し、[テンプレートエディター](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)を使用して追加します。 これにより、ユーザーはAEM内から`HeaderComponent`のナビゲーションメニューを設定できます。
+以前の章では、`HeaderComponent`コンポーネントは、`app.component.html`を介して含まれる純粋なAngularコンポーネントとして追加されました。 この章では、`HeaderComponent`コンポーネントをアプリから削除し、[テンプレートエディター](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)を使用して追加します。 これにより、ユーザーはAEM内から`HeaderComponent`のナビゲーションメニューを設定できます。
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ AEM PagesとSPA Editor SDKを使用した、SPAの複数のビューのサポー
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`コンポーネントは、`sling:resourceSuperType`プロパティを介して[ナビゲーションコアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)のすべての機能を継承します。
+   AEM `Header`コンポーネントは、`sling:resourceSuperType`プロパティを介して[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)のすべての機能を継承します。
 
-## SPAテンプレートにHeaderComponentを追加します。 {#add-header-template}
+## HeaderComponentをSPAテンプレートに追加する {#add-header-template}
 
 1. ブラウザーを開き、 AEM [http://localhost:4502/](http://localhost:4502/)にログインします。 開始コードベースは、既にデプロイされている必要があります。
 2. **[!UICONTROL SPA Page Template]**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
@@ -726,7 +726,7 @@ AEM PagesとSPA Editor SDKを使用した、SPAの複数のビューのサポー
 
 5. 次の場所に直接移動して、ディープリンクを試してみます。[http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html). ブラウザーの戻るボタンが引き続き機能することを確認します。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を学びました。 動的ナビゲーションは、Angularルーティングを使用して実装され、`Header`コンポーネントに追加されました。
 
