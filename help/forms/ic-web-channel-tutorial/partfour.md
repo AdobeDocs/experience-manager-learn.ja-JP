@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# WebチャネルドキュメントテンプレートAEM Forms {#creating-web-channel-document-template-aem-forms}の作成
+# Webチャネルドキュメントテンプレートの作成AEM Forms {#creating-web-channel-document-template-aem-forms}
 
 ここでは、Webチャネルドキュメントのテンプレートを作成します。
 AEM Forms 6.4でのWebチャネルドキュメントテンプレートの作成
