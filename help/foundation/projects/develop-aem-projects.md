@@ -10,9 +10,9 @@ doc-type: tutorial
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4652'
+source-wordcount: '4585'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ AEMプロジェクトには、複数の[OOTBプロジェクトテンプレート
 
 このノードには追加のプロパティはありませんが、新しいプロジェクトの作成時にプロジェクトタイルがプロジェクトのダッシュボードに表示するガジェットノードの子は制御します。 [プロジェクトタイル](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （ガジェットやポッドとも呼ばれます）は、プロジェクトの作業場に入力する簡単なカードです。標準タイルの完全なリストは、次の場所にあります。**/libs/cq/gui/components/projects/admin/pod **プロジェクトの所有者は、プロジェクトの作成後、常にタイルを追加/削除できます。
 
-### 役割 {#roles}
+### ロール {#roles}
 
 各プロジェクトには、3つの[デフォルトの役割](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject)があります。**Observers**、**Editors**、**Owners**。 ロールノードの下に子ノードを追加することで、テンプレートにビジネス固有のプロジェクトロールを追加できます。 その後、これらの役割を、プロジェクトに関連付けられた特定のワークフローに関連付けることができます。
 
@@ -90,7 +90,7 @@ AEMプロジェクトには、複数の[OOTBプロジェクトテンプレート
                    - wizard = dialog used to start the workflow
 ```
 
-## プロジェクトテンプレート{#creating-project-template}の作成
+## プロジェクトテンプレートの作成 {#creating-project-template}
 
 主にノードのコピー/設定を行うので、CRXDE Liteを使用します。 ローカルのAEMインスタンスで、[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)を開きます。
 
@@ -131,7 +131,7 @@ AEMプロジェクトには、複数の[OOTBプロジェクトテンプレート
    1. **tasks**&#x200B;という新しい&#x200B;**nt:unstructured**&#x200B;ノードをauthoring-project/gadgetsの下に追加します。
    1. **cardWeight** = &quot;100&quot;、**jcr:title**=&quot;Tasks&quot;、および&#x200B;**sling:resourceType**=&quot;cq/gui/components/admin/pod/taskpod&quot;のタスクノードにStringプロパティを追加します。
 
-   これで、新しいプロジェクトの作成時に、[タスクタイル](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks)がデフォルトで表示されます。
+   これで、新しいプロジェクトの作成時に、[タスクタイル](https://experienceleague.adobe.com/docs/#Tasks)がデフォルトで表示されます。
 
    ```shell
    ../projects/templates/authoring-project
@@ -282,7 +282,7 @@ AEMプロジェクトには、複数の[OOTBプロジェクトテンプレート
 
 タスクには、参加者ステップに比べていくつかの利点がありますが、追加のオーバーヘッドを伴い、プロジェクト以外では役に立ちません。 さらに、タスクのすべての動的動作は、独自の制限を持つecmaスクリプトを使用してコーディングする必要があります。
 
-## 使用例の要件{#goals-tutorial}の例
+## 使用例の要件 {#goals-tutorial}
 
 ![ワークフロープロセスダイアグラム](./assets/develop-aem-projects/workflow-process-diagram.png)
 
@@ -623,7 +623,7 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-## 「ワークフローを開始」ウィザード{#start-workflow-wizard}を作成します
+## 「ワークフローを開始」ウィザードの作成 {#start-workflow-wizard}
 
 プロジェクト内からワークフローを開始する場合は、ワークフローを開始するウィザードを指定する必要があります。 デフォルトのウィザード：`/libs/cq/core/content/projects/workflowwizards/default_workflow`を使用すると、実行するワークフローのタイトル、開始コメント、ペイロードパスをユーザーが入力できます。 その他の例も以下に示します。`/libs/cq/core/content/projects/workflowwizards`.
 
@@ -631,13 +631,13 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. CRXDE Liteでは、`/apps/aem-guides/projects-tasks/projects`フォルダーの下に「wizards」というサブフォルダーを作成します。 次の場所からデフォルトのウィザードをコピーします。`/libs/cq/core/content/projects/workflowwizards/default_workflow`を新しく作成したウィザードフォルダーの下に置き、名前を&#x200B;**content-approval-start**&#x200B;に変更します。 完全パスは次のようになります。`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   デフォルトのウィザードは2列のウィザードで、最初の列にワークフローモデルのタイトル、説明、サムネールが選択されています。 2番目の列には、「ワークフローのタイトル」、「開始コメント」、「ペイロードパス」の各フィールドが含まれます。 ウィザードは標準のタッチUIフォームで、標準の[Granite UIフォームコンポーネント](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)を使用してフィールドに入力します。
+   デフォルトのウィザードは2列のウィザードで、最初の列にワークフローモデルのタイトル、説明、サムネールが選択されています。 2番目の列には、「ワークフローのタイトル」、「開始コメント」、「ペイロードパス」の各フィールドが含まれます。 ウィザードは標準のタッチUIフォームで、標準の[Granite UIフォームコンポーネント](https://experienceleague.adobe.com/docs/?lang=ja)を使用してフィールドに入力します。
 
    ![コンテンツ承認ワークフローウィザード](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. ウィザードにフィールドを追加します。このフィールドを使用して、ワークフローの最初のタスクの担当者を設定します（[ワークフローモデルの作成](#create-workflow-model)を参照）。手順5)。
 
-   `../content-approval-start/jcr:content/items/column2/items`の下に、**&quot;assign&quot;**&#x200B;という名前の新しいノードを作成します。 `nt:unstructured`プロジェクトユーザーピッカーコンポーネント（[Graniteユーザーピッカーコンポーネント](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)に基づく）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を、現在のプロジェクトに属するユーザーのみに制限することが簡単にできます。
+   `../content-approval-start/jcr:content/items/column2/items`の下に、**&quot;assign&quot;**&#x200B;という名前の新しいノードを作成します。 `nt:unstructured`プロジェクトユーザーピッカーコンポーネント（[Graniteユーザーピッカーコンポーネント](https://experienceleague.adobe.com/docs/)に基づく）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を、現在のプロジェクトに属するユーザーのみに制限することが簡単にできます。
 
    以下は、**assign**&#x200B;ノードのXML表現です。
 
@@ -657,7 +657,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. また、ワークフローの最初のタスクの優先度を決定する優先度選択フィールドも追加します（[ワークフローモデルの作成](#create-workflow-model)を参照）。手順5)。
 
-   `/content-approval-start/jcr:content/items/column2/items`の下に、**priority**&#x200B;という名前の新しいノードを作成します。 `nt:unstructured`[Granite UIコンポーネント](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html)を使用して、フォームフィールドに入力します。
+   `/content-approval-start/jcr:content/items/column2/items`の下に、**priority**&#x200B;という名前の新しいノードを作成します。 `nt:unstructured`[Granite UIコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)を使用して、フォームフィールドに入力します。
 
    **priority**&#x200B;ノードの下に、**nt:unstructured**&#x200B;の&#x200B;**items**&#x200B;ノードを追加します。 **items**&#x200B;ノードの下に、3つのノードを追加して、「高」、「中」、「低」の選択オプションを設定します。 各ノードのタイプは&#x200B;**nt:unstructured**&#x200B;で、**text**&#x200B;と&#x200B;**value**&#x200B;プロパティを持つ必要があります。 テキストと値の両方が同じ値である必要があります。
 
@@ -693,7 +693,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. ワークフロー開始者が最初のタスクの期限を設定できるようにします。 この入力を取り込むには、[Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html)フォームフィールドを使用します。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)を含む非表示フィールドを追加し、入力がJCRのDateタイププロパティとして保存されるようにします。
+1. ワークフロー開始者が最初のタスクの期限を設定できるようにします。 この入力を取り込むには、[Granite UI DatePicker](https://experienceleague.adobe.com/docs/)フォームフィールドを使用します。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)を含む非表示フィールドを追加し、入力がJCRのDateタイププロパティとして保存されるようにします。
 
    XMLで以下に示すプロパティを持つ&#x200B;**nt:unstructured**&#x200B;ノードを2つ追加します。
 
@@ -717,7 +717,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. ここで[](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml)にウィザードの起動ダイアログの完全なコードを表示できます。
 
-## ワークフローとプロジェクトテンプレートの接続{#connecting-workflow-project}
+## ワークフローとプロジェクトテンプレートの接続 {#connecting-workflow-project}
 
 最後に実行する必要があるのは、ワークフローモデルを1つのプロジェクト内から確実にキックオフできるようにすることです。 これをおこなうには、このシリーズのパート1で作成したプロジェクトテンプレートに再度アクセスする必要があります。
 
