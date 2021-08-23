@@ -10,17 +10,17 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3299'
-ht-degree: 11%
+source-wordcount: '3285'
+ht-degree: 9%
 
 ---
 
 
-# クライアントサイドライブラリとフロントエンドワークフロー{#client-side-libraries}
+# クライアントサイドライブラリとフロントエンドワークフロー {#client-side-libraries}
 
-Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよび管理するために、クライアント側ライブラリ(clientlib)を使用する方法について説明します。 このチュートリアルでは、[ui.frontend](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/uifrontend.html)モジュール（デカップ[webpack](https://webpack.js.org/)プロジェクト）をエンドツーエンドのビルドプロセスに統合する方法についても説明します。
+Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよび管理するために、クライアント側ライブラリ(clientlib)を使用する方法について説明します。 このチュートリアルでは、[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)モジュール（デカップ[webpack](https://webpack.js.org/)プロジェクト）をエンドツーエンドのビルドプロセスに統合する方法についても説明します。
 
 ## 前提条件 {#prerequisites}
 
@@ -81,7 +81,7 @@ Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよ
 1. 組織立った方法で、サードパーティのフレームワークへの依存関係を管理する
 1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする。
 
-クライアント側ライブラリの使用の詳細については、[こちら](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/introduction/clientlibs.html)を参照してください。
+クライアント側ライブラリの使用の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)を参照してください。
 
 クライアント側ライブラリにはいくつかの制限があります。 最も顕著なのは、Sass、LESS、TypeScriptなどの一般的なフロントエンド言語に対する制限付きサポートです。 このチュートリアルでは、**ui.frontend**&#x200B;モジュールがこの問題の解決にどのように役立つかを見ていきます。
 
@@ -89,7 +89,7 @@ Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよ
 
 ## クライアント側ライブラリ組織 {#organization}
 
-次に、[AEMプロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)で生成されたclientlibの組織を調べます。
+次に、[AEMプロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)で生成されたclientlibの組織を調べます。
 
 ![クライアントライブラリ組織の概要](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -117,11 +117,11 @@ Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよ
 
 1. `clientlib-site`と`clientlib-dependencies`がソース管理から無視されることを確認します。 これは設計により、ビルド時に`ui.frontend`モジュールで生成されるので、これは設計によるものです。
 
-## 基本スタイルを更新{#base-styles}
+## 基本スタイルを更新する {#base-styles}
 
-次に、**[ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;モジュールで定義されたベーススタイルを更新します。 `ui.frontend`モジュール内のファイルは、Siteテーマとサードパーティの依存関係を含む`clientlib-site`ライブラリと`clientlib-dependecies`ライブラリを生成します。
+次に、**[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)**&#x200B;モジュールで定義されたベーススタイルを更新します。 `ui.frontend`モジュール内のファイルは、Siteテーマとサードパーティの依存関係を含む`clientlib-site`ライブラリと`clientlib-dependecies`ライブラリを生成します。
 
-クライアント側ライブラリには、[Sass](https://sass-lang.com/)や[TypeScript](https://www.typescriptlang.org/)などの言語のサポートに関して、いくつかの制限があります。 フロントエンド開発を高速化および最適化するための、[NPM](https://www.npmjs.com/)や[webpack](https://webpack.js.org/)など、多数のオープンソースツールがあります。 **ui.frontend**&#x200B;モジュールの目的は、これらのツールを使用して、ほとんどのフロントエンドソースファイルを管理できることです。
+クライアント側ライブラリには、[Sass](https://sass-lang.com/)や[TypeScript](https://www.typescriptlang.org/)などの言語をサポートする際にいくつかの制限があります。 フロントエンド開発を高速化および最適化するための、[NPM](https://www.npmjs.com/)や[webpack](https://webpack.js.org/)など、多数のオープンソースツールがあります。 **ui.frontend**&#x200B;モジュールの目的は、これらのツールを使用して、ほとんどのフロントエンドソースファイルを管理できることです。
 
 1. **ui.frontend**&#x200B;モジュールを開き、`src/main/webpack/site`に移動します。
 1. ファイル`main.scss`を開きます。
@@ -164,7 +164,7 @@ Adobe Experience Manager(AEM)Sites実装のCSSとJavaScriptをデプロイおよ
 
    Inspect WKNDスタイルの実装の詳細を確認するために変更されたファイル。
 
-## Inspect ui.frontend統合{#ui-frontend-integration}
+## Inspect ui.frontend統合 {#ui-frontend-integration}
 
 **ui.frontend**&#x200B;モジュール[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)に組み込まれた主な統合要素は、コンパイル済みのCSSおよびJSアーティファクトをwebpack/npmプロジェクトから取り出し、AEMクライアント側ライブラリに変換します。
 
@@ -200,7 +200,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!NOTE]
    >
-   >また、JSとCSSを縮小する`npm run prod`プロファイルもあります。 これは、WebpackビルドがMaven経由でトリガーされる場合は常に、標準コンパイルです。 [ui.frontendモジュールの詳細は、](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)を参照してください。
+   >また、JSとCSSを縮小する`npm run prod`プロファイルもあります。 これは、WebpackビルドがMaven経由でトリガーされる場合は常に、標準コンパイルです。 [ui.frontendモジュールの詳細は、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)を参照してください。
 
 1. `ui.frontend/dist/clientlib-site/site.css`の下の`site.css`ファイルをInspectします。 これは、Sassソースファイルに基づくコンパイル済みCSSです。
 
@@ -236,7 +236,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 >
 > **ui.frontend**&#x200B;モジュールの使用は、すべてのプロジェクトで必要とは限りません。 **ui.frontend**&#x200B;モジュールは、さらに複雑さを増し、これらの高度なフロントエンドツール（Sass、webpack、npmなど）を使用する必要がない場合は、不要な場合があります。
 
-## ページとテンプレートのインクルージョン{#page-inclusion}
+## ページとテンプレートの追加 {#page-inclusion}
 
 次に、clientlibがAEMページでどのように参照されているかを確認します。 Web開発の一般的なベストプラクティスは、`</body>`タグを閉じる直前にHTMLヘッダー`<head>`とJavaScriptにCSSを含めることです。
 
@@ -315,9 +315,9 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!WARNING]
    >
-   >セキュリティ上の理由から、/apps パスは&#x200B;**** Dispatcher の filter セクション&#x200B;**にのみ使用すべきであるので、パブリッシュ側では、クライアントライブラリを /apps から提供**&#x200B;しない[](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)ことが重要となります。クライアントライブラリの[allowProxyプロパティ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)は、CSSとJSを&#x200B;**/etc.clientlibs**&#x200B;から提供するようにします。
+   >セキュリティ上の理由から、/apps パスは&#x200B;**** Dispatcher の filter セクション&#x200B;**にのみ使用すべきであるので、パブリッシュ側では、クライアントライブラリを /apps から提供**&#x200B;しない[](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)ことが重要となります。クライアントライブラリの[allowProxyプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)は、CSSとJSを&#x200B;**/etc.clientlibs**&#x200B;から提供するようにします。
 
-## Webpack DevServer — 静的マークアップ{#webpack-dev-static}
+## Webpack DevServer — 静的マークアップ {#webpack-dev-static}
 
 前の2つの演習では、 **ui.frontend**&#x200B;モジュール内の複数のSassファイルを更新し、ビルドプロセスを通じて、最終的にこれらの変更がAEMに反映されていることを確認しました。 次に、[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)を活用して、**静的** HTMLに対するフロントエンドスタイルを迅速に開発する手法を見てみます。
 
@@ -371,7 +371,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
 1. コマンドラインから&#x200B;**stop**&#x200B;と入力して、WebPackサーバーを停止します。`CTRL+C`
 
-## Webpack DevServer — 監視とaemsync {#webpack-dev-watch}
+## Webpack DevServer — 監視とaem同期 {#webpack-dev-watch}
 
 もう1つの方法は、`ui.frontend`モジュール内のsrcファイルに対するファイルの変更をNode.jsに監視させることです。 ファイルが変更されるたびに、クライアントライブラリがすばやくコンパイルされ、[aemsync](https://www.npmjs.com/package/aemsync) npmモジュールを使用して、実行中のAEMサーバーに変更を同期します。
 
@@ -427,9 +427,9 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 1. [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)リポジトリのクローンを作成します。
 1. `tutorial/client-side-libraries-solution`ブランチを確認します。
 
-## その他のツールとリソース{#additional-resources}
+## その他のツールとリソース {#additional-resources}
 
-### aemfed{#develop-aemfed} 
+### aemfed は {#develop-aemfed}
 
 [****](https://aemfed.io/) aemfedisは、フロントエンド開発の高速化に使用できるオープンソースのコマンドラインツールです。[aemsync](https://www.npmjs.com/package/aemsync)、[Browsersync](https://www.npmjs.com/package/browser-sync)、[Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)によって動作します。
 
@@ -437,7 +437,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 **ui.apps**&#x200B;モジュール内で多くの作業を行い、HTLスクリプトを変更し、カスタムコンポーネントを作成する場合、**aemfed**&#x200B;は非常に強力なツールとなります。 [完全なドキュメントは、こちらを参照してください](https://github.com/abmaonline/aemfed)。
 
-### クライアント側ライブラリのデバッグ{#debugging-clientlibs}
+### クライアント側ライブラリのデバッグ {#debugging-clientlibs}
 
 **categories**&#x200B;と&#x200B;**embeds**&#x200B;の異なる方法では、複数のクライアントライブラリを組み込む場合、トラブルシューティングに煩雑な場合があります。 AEM はそのためにいくつかのツールを公開しています。最も重要なツールの1つは、**クライアントライブラリの再構築**&#x200B;です。これは、AEMがLESSファイルを再コンパイルし、CSSを生成するよう強制します。
 
