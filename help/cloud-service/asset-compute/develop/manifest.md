@@ -12,9 +12,9 @@ thumbnail: KT-6281.jpg
 topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '438'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ asset computeプロジェクトのルートにある`manifest.yml`は、この�
 
 ワーカーは、`actions`の下のAdobe I/O Runtimeアクションエントリとして定義され、一連の設定で構成されます。
 
-他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。これは、[が`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開するためです。 これは、通常、ワーカーがAdobe Photoshop、Lightroom、Sensei APIなどのAdobe I/OAPIを呼び出す際に必要で、ワーカーごとに切り替えることができます。
+他のAdobe I/O統合にアクセスするワーカーは、`annotations -> require-adobe-auth`プロパティを`true`に設定する必要があります。これは、[が`params.auth`オブジェクトを介してワーカーのAdobe I/O資格情報](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)を公開するためです。 これは、通常、ワーカーがAdobe Photoshop、Lightroom、Sensei APIなどのAdobe I/OAPIを呼び出す際に必要で、ワーカーごとに切り替えることができます。
 
 1. を開き、自動生成ワーカー`manifest.yml`を確認します。 複数のAsset computeワーカーを含むプロジェクトでは、`actions`配列の下に各ワーカーのエントリを定義する必要があります。
 
@@ -53,7 +53,7 @@ packages:
 
 各ワーカーは、Adobe I/O Runtimeでの実行コンテキストの[制限](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)を設定できます。 これらの値は、計算するアセットのボリューム、レート、タイプ、およびワークのタイプに基づいて、ワーカーに最適なサイズ設定を提供するように調整する必要があります。
 
-制限を設定する前に、[Adobeのサイズ設定に関するガイダンス](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)を確認してください。 asset computeワーカーは、アセットを処理する際にメモリ不足になる可能性があり、Adobe I/O Runtimeの実行が強制終了するので、ワーカーのサイズがすべての候補アセットを処理するように適切に設定されます。
+制限を設定する前に、[Adobeのサイズ設定に関するガイダンス](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)を確認してください。 asset computeワーカーは、アセットを処理する際にメモリ不足になる可能性があり、Adobe I/O Runtimeの実行が強制終了するので、ワーカーのサイズがすべての候補アセットを処理するように適切に設定されます。
 
 1. 新しい`wknd-asset-compute`アクションエントリに`inputs`セクションを追加します。 これにより、Asset computeワーカーの全体的なパフォーマンスとリソース割り当てを調整できます。
 
