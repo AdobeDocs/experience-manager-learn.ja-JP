@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# Tomcat {#install-and-configure-tomcat}のインストールと設定
+# Tomcatのインストールと設定 {#install-and-configure-tomcat}
 
 このパートでは、TOMCATをインストールし、TOMCATにsampleRest.warファイルをデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基礎となります。
 
