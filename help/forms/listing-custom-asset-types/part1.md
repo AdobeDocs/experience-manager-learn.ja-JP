@@ -22,7 +22,7 @@ ht-degree: 3%
 ---
 
 
-# カスタムアセットタイプの登録{#registering-custom-asset-types}
+# カスタムアセットタイプの登録 {#registering-custom-asset-types}
 
 AEM Forms Portalでのリスト用のカスタムアセットタイプの有効化
 
@@ -30,7 +30,7 @@ AEM Forms Portalでのリスト用のカスタムアセットタイプの有効�
 >
 >AEM 6.3(SP1)と対応するAEM Formsアドオンがインストールされていることを確認します。 この機能は、AEM Forms 6.3 SP1以降でのみ機能します
 
-## ベースパスを指定{#specify-base-path}
+## ベースパスを指定 {#specify-base-path}
 
 ベースパスは、ユーザーがSearch &amp; Listerコンポーネントにリストする可能性のあるすべてのアセットを含む、最上位のリポジトリパスです。 必要に応じて、コンポーネント編集ダイアログからベースパス内の特定の場所を設定し、ベースパス内のすべてのノードを検索するのではなく、特定の場所で検索をトリガーすることもできます。 デフォルトでは、ベースパスがアセットを取得するための検索パス条件として使用されますが、この場所から特定のパスのセットを設定する場合を除きます。 パフォーマンスの高い検索をおこなうには、このパスの最適な値を持つことが重要です。 すべてのAEM Formsアセットは&#x200B;**_/content/dam/formsanddocuments._**&#x200B;に存在するので、ベースパスのデフォルト値は&#x200B;**_/content/dam/formsanddocuments_**&#x200B;のままです。
 
@@ -52,7 +52,7 @@ AEM Forms Portalでのリスト用のカスタムアセットタイプの有効�
 
 ![basepath](assets/basepath.png)
 
-## カスタムアセットタイプ{#register-custom-asset-types}の登録
+## カスタムアセットタイプの登録 {#register-custom-asset-types}
 
 Search &amp; Listerコンポーネントに新しいタブ（アセットリスト）を追加しました。 このタブには、標準で設定されているアセットタイプと、追加の設定済みアセットタイプが一覧表示されます。 デフォルトでは、次のアセットタイプが表示されます
 
