@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4106'
 ht-degree: 20%
 
 ---
@@ -381,7 +381,7 @@ Slingモデルは、JCRからJava変数へのデータのマッピングを容�
 
    `uber-jar`は、`classic`プロファイル(`mvn clean install -PautoInstallSinglePackage -Pclassic`)が呼び出された場合にのみ含まれます。 これもこのプロジェクトに固有のものです。 AEMプロジェクトアーキタイプから生成される実際のプロジェクトでは、指定したAEMのバージョンが6.5または6.4の場合、`uber-jar`がデフォルトになります。
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)には、AEM 6.xで公開されているパブリックJava APIがすべて含まれています。バージョンは、プロジェクト`aem-guides-wknd/pom.xml`のルートにある親リアクターPOMに保持されます。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)には、AEM 6.xで公開されているパブリックJava APIがすべて含まれています。バージョンは、プロジェクト`aem-guides-wknd/pom.xml`のルートにある親リアクターPOMに保持されます。
 
 1. `core.wcm.components.core`の依存関係を探します。
 
