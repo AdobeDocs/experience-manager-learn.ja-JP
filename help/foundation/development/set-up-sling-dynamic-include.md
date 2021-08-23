@@ -11,9 +11,9 @@ doc-type: technical video
 topic: 開発
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '261'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 # 設定 [!DNL Sling Dynamic Include]
 
-[!DNL Apache HTTP Web Server]上で動作する[!DNL Apache Sling Dynamic Include]と[AEM Dispatcher](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)をインストールして使用するビデオのウォークスルーです。
+[!DNL Apache HTTP Web Server]上で動作する[!DNL Apache Sling Dynamic Include]と[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)をインストールして使用するビデオのウォークスルーです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -150,7 +150,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->エッジ側インクルード(ESI)を提供するために[!DNL Sling Dynamic Includes]を使用する場合は、関連する[応答ヘッダーをDispatcherキャッシュ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)にキャッシュします。 ヘッダーの例を次に示します。
+>エッジ側インクルード(ESI)を提供するために[!DNL Sling Dynamic Includes]を使用する場合は、関連する[応答ヘッダーをDispatcherキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)にキャッシュします。 ヘッダーの例を次に示します。
 >
 >* 「キャッシュ制御」
 >* 「Content-Disposition」
