@@ -1,21 +1,17 @@
 ---
 title: AEMユーザー、グループ、権限
 description: Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を定義する方法、およびAdobeのIMS抽象概念と連携してAEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
-feature: 'ユーザーとグループ '
-topics: authentication
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: feature video
-kt: 6060
-thumbnail: 39151.jpg
 topic: 管理、セキュリティ
+feature: ユーザーとグループ
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6060
+thumbnail: 39151.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 20%
+source-wordcount: '226'
+ht-degree: 19%
 
 ---
 
@@ -27,7 +23,7 @@ ht-degree: 20%
 >title="AEMユーザー、グループ、権限"
 >abstract="Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を定義する方法、およびAdobeのIMS抽象概念と連携してAEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=ja" text="Adobe Experience Manager as a Cloud Service に対する IMS のサポート"
->additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEMが提供するユーザーグループとその権限"
+>additional-url="https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEMが提供するユーザーグループとその権限"
 
 Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を定義する方法、およびAdobeのIMS抽象概念と連携してAEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
 
@@ -35,5 +31,5 @@ Adobe Experience Managerは、AdobeIMSユーザー、ユーザーグループ、
 
 ## その他のリソース
 
-+ [Adobe Experience Manager as a Cloud Service に対する IMS のサポート](https://docs.adobe.com/content/help/ja/experience-manager-cloud-service/security/ims-support.html)
-+ [AEMが提供するユーザーグループとその権限](https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
++ [Adobe Experience Manager as a Cloud Service に対する IMS のサポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=ja)
++ [AEMが提供するユーザーグループとその権限](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
