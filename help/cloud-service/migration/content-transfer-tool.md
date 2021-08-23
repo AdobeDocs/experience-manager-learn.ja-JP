@@ -12,10 +12,10 @@ thumbnail: kt-5352.jpg
 topic: 移行
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 16%
+source-wordcount: '82'
+ht-degree: 4%
 
 ---
 
@@ -28,4 +28,4 @@ ht-degree: 16%
 
 ## その他のリソース {#additional-resources}
 
-* [コンテンツ転送ツールの概要](https://docs.adobe.com/content/help/ja/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [コンテンツ転送ツールの概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
