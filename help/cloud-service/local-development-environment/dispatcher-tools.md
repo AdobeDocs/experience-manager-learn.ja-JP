@@ -13,9 +13,9 @@ thumbnail: 30603.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1637'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 >title="ローカルDispatcherツール"
 >abstract="Dispatcherは、Experience Managerアーキテクチャ全体の不可欠な要素で、ローカル開発設定の一部にする必要があります。 AEM as a Dispatcher SDKには、Dispatcherをローカルで設定、検証、シミュレーションする、推奨されるDispatcherツールバージョンが含まれています。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="クラウド内の Dispatcher"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/ja/aemcloud.html" text="AEMをCloud ServiceSDKとしてダウンロード"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMをCloud ServiceSDKとしてダウンロード"
 
 Adobe Experience Manager(AEM)のDispatcherは、CDNとAEMパブリッシュ層の間にセキュリティとパフォーマンスの層を提供するApache HTTP Webサーバーモジュールです。 Dispatcherは、Experience Managerアーキテクチャ全体の不可欠な要素で、ローカル開発設定の一部にする必要があります。
 
@@ -262,7 +262,7 @@ operable program or batch file.
 ** error: Deployment folder not found: c:\Users\My User\aem-sdk\dispatcher\out
 ```
 
-### docker_runがWindowsで起動できない{#troubleshooting-windows-compatible}
+### docker_runがWindowsで起動に失敗する{#troubleshooting-windows-compatible}
 
 Windowsで`docker_run`を実行すると、次のエラーが発生し、Dispatcherが起動できなくなる可能性があります。 これは、Windows上のDispatcherに関して報告された問題で、今後のリリースで修正される予定です。
 
@@ -293,4 +293,4 @@ AH00016: Configuration Failed
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [Dockerのダウンロード](https://www.docker.com/)
 + [AEM Reference Webサイト(WKND)のダウンロード](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcherのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcherのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
