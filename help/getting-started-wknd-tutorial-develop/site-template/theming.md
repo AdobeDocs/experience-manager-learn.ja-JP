@@ -39,7 +39,7 @@ ht-degree: 1%
 1. リアルタイムプレビューのために、ライブサイトに対するコードを説明します。
 1. GitHubアクションを使用して、コンパイル済みのCSSとJavaScriptの更新をテーマの一部として配信する、エンドツーエンドのワークフローを理解します。
 
-## テーマ{#theme-update}の更新
+## テーマの更新 {#theme-update}
 
 次に、テーマのソースを変更し、サイトがWKNDブランドのルックアンドフィールに一致するようにします。
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 [WKNDテーマ](assets/theming/WKND-THEME-src.zip)の完成したスタイルをダウンロードします。
 
-## テーマ{#deploy-theme}を展開する
+## テーマのデプロイ {#deploy-theme}
 
 GitHubアクションを使用して、テーマの更新をAEM環境にデプロイします。
 
@@ -80,7 +80,7 @@ GitHubアクションを使用して、テーマの更新をAEM環境にデプ�
 * [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e)  - 「リアルワールド」プロジェクトの例として使用します。
 * [https://github.com/godanny86/wknd-theme](https://github.com/godanny86/wknd-theme)  — チュートリアルに続く例として使用します。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、テーマを作成し、AEMに展開しました。
 
