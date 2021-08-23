@@ -53,7 +53,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 `bin/docker_run`が呼び出されると、Dispatcherログがstdoutに出力されますが、Dockerに格納されているを使用してログに直接アクセスできます。
 
-### Dockerコンテナ{#dispatcher-tools-access-logs}のログへのアクセス
+### Dockerコンテナでのログへのアクセス{#dispatcher-tools-access-logs}
 
 Dispatcherログは、`/etc/httpd/logs`にあるDockerコンテナから直接アクセスできます。
 
@@ -78,7 +78,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 _のを、コ `<CONTAINER ID>` マ `docker exec -it <CONTAINER ID> /bin/sh` ンドにリストされたターゲットDocker CONTAINER IDに置き換える必要があ `docker ps` ります。_
 
 
-### Dockerログをローカルファイルシステムにコピーする{#dispatcher-tools-copy-logs}
+### Dockerログのローカルファイルシステムへのコピー{#dispatcher-tools-copy-logs}
 
 Dispatcherログは、 `/etc/httpd/logs`にあるDockerコンテナからローカルファイルシステムにコピーし、お気に入りのログ分析ツールを使用して検査できます。 これはポイントインタイムコピーで、ログにリアルタイムで更新されるわけではありません。
 
