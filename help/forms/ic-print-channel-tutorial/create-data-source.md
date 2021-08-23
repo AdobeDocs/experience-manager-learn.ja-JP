@@ -24,7 +24,7 @@ ht-degree: 2%
 ---
 
 
-# AEM Forms{#creating-datasource-configuration-in-aem-forms}でのデータソース設定の作成
+# AEM Formsでのデータソース設定の作成{#creating-datasource-configuration-in-aem-forms}
 
 このパートでは、RESTベースのデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
 
