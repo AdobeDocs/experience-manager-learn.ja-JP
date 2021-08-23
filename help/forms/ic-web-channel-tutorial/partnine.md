@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 勘定残高パネルに表を追加します{#adding-table-to-account-balance-panel}
+# 勘定残高パネルへの表の追加{#adding-table-to-account-balance-panel}
 
 このパートでは、アカウントの残高パネルに表を追加します。
 
