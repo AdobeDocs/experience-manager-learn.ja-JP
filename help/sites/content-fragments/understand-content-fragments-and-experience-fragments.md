@@ -11,10 +11,10 @@ audience: all
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 7%
+source-wordcount: '1000'
+ht-degree: 5%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Sites、AEM Screens、またはエクスペリエ</a> ンスフラグメントで使用するAEMコアコンポーネントのコンテンツフラグメントコンポーネント。</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Sites、AEM Screens、またはエクスペリエ</a> ンスフラグメントで使用するAEMコアコンポーネントのコンテンツフラグメントコンポーネント。</li>
 <li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>を介したJSON書き出しで、サードパーティでの利用が可能</li>
 <li>AEM HTTP Assets APIを介したサードパーティでの利用向けJSON。</li>
 </ul>
@@ -171,7 +171,7 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 
 + [コンテンツフラグメントユーザーガイド](https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html?topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [AEMでのコンテンツフラグメントの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html)
-+ [AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html)
++ [AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 + [コンテンツフラグメントとAEM Content Servicesの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 + [AEM Content Servicesの概要](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)
 
