@@ -12,10 +12,10 @@ thumbnail: kt-5424.jpg
 topic: 開発
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2540'
-ht-degree: 0%
+source-wordcount: '2529'
+ht-degree: 1%
 
 ---
 
@@ -71,11 +71,11 @@ AdobeCloud Managerは、コード構築とAEM as a Managerへのデプロイメ�
 
 コードスキャンは、JavaとAEM固有のベストプラクティスを組み合わせて使用し、静的コード分析を実行します。
 
-コードに重大なセキュリティの脆弱性が存在する場合、コードスキャンによってビルドエラーが発生します。 それより小さい違反は上書きできますが、修正することをお勧めします。 コードスキャンは不完全で、[偽陽性](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives)が発生する可能性があることに注意してください。
+コードに重大なセキュリティの脆弱性が存在する場合、コードスキャンによってビルドエラーが発生します。 それより小さい違反は上書きできますが、修正することをお勧めします。 コードスキャンは不完全で、[偽陽性](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives)が発生する可能性があることに注意してください。
 
 コードスキャンの問題を解決するには、「**詳細をダウンロード**」ボタンをクリックしてCloud ManagerからCSV形式のレポートをダウンロードし、エントリを確認します。
 
-詳しくは、 AEM固有のルールに関するドキュメントの[カスタムAEM固有のコードスキャンルール](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)を参照してください。
+詳しくは、 AEM固有のルールに関するドキュメントの[カスタムAEM固有のコードスキャンルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)を参照してください。
 
 ## 画像を作成
 
@@ -103,7 +103,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 #### 原因2
 
 + __原因：__  AEMプロジェクトに同じコードパッケージが誤って2回含まれている場合、そのパッケージに含まれるOSGi設定が重複しています。
-+ __解決方法：__ すべてのプロジェクトに埋め込まれているパッケージのすべてのpom.xmlを確認し、設定がに設定されているこ `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) とを確認し `<cloudManagerTarget>none</cloudManagerTarget>`ます。
++ __解決方法：__ すべてのプロジェクトに埋め込まれているパッケージのすべてのpom.xmlを確認し、設定がに設定されているこ `filevault-package-maven-plugin` [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) とを確認し `<cloudManagerTarget>none</cloudManagerTarget>`ます。
 
 ### repoinitスクリプトの形式が正しくありません
 
@@ -231,8 +231,8 @@ AEM as a AEMCloud Serviceでは、すべてのCloud Serviceリリースで最新
 + __原因：AEMパブリッシュサービスにコンテンツパッケージをデプロイする際に使用される__ AEMレプリケーションサービスユーザーは、AEMパブリッシュに書き込む `/var` ことができません。その結果、コンテンツパッケージのAEMパブリッシュサービスへのデプロイメントが失敗します。
 + __解決方法：__ この問題を解決するには、次の方法を好みの順序で示します。
    1. `/var`リソースが不要な場合は、アプリケーションの一部としてデプロイされたコンテンツパッケージから`/var`の下にあるリソースを削除します。
-   2. `/var`リソースが必要な場合は、[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使用してノード構造を定義します。 repoinitスクリプトは、OSGi実行モードを介して、AEMオーサー、AEMパブリッシュ、またはその両方をターゲットに設定できます。
-   3. `/var`リソースがAEMオーサーでのみ必要で、[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使用して合理的にモデル化できない場合は、AEMオーサーの実行モードフォルダー(`<target>/apps/example-packages/content/install.author</target>`)の`all`パッケージに[埋め込むだけでAEMオーサーにインストールされる個別のコンテンツパッケージに移動します。](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)
+   2. `/var`リソースが必要な場合は、[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使用してノード構造を定義します。 repoinitスクリプトは、OSGi実行モードを介して、AEMオーサー、AEMパブリッシュ、またはその両方をターゲットに設定できます。
+   3. `/var`リソースがAEMオーサーでのみ必要で、[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)を使用して合理的にモデル化できない場合は、AEMオーサーの実行モードフォルダー(`<target>/apps/example-packages/content/install.author</target>`)の`all`パッケージに[埋め込むだけでAEMオーサーにインストールされる個別のコンテンツパッケージに移動します。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)
    4. この[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)の説明に従って、適切なACLを`sling-distribution-importer`サービスユーザーに提供します。
 
 ### Adobeサポートケースの作成
