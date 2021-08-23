@@ -3,13 +3,13 @@ title: AEM FormsTutorialsとビデオ
 seo-title: AEM FormsTutorialsとビデオ
 description: 初心者および経験豊富なAEM Forms開発者向けAEM Formsリソースのコレクション
 seo-description: 初心者および経験豊富なAEM Forms開発者向けAEM Formsリソースのコレクション
-sub-product: フォーム[ふぉーむ]
+sub-product: forms
 topic: 開発
 role: Developer
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '304'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -80,7 +80,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 ## その他のリソース
 
-* [Experience League - AEMの参照](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League- AEMの参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM Sitesオーサリングドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites開発ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
