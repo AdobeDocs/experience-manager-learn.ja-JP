@@ -1,7 +1,6 @@
 ---
 title: GraphQLエンドポイント
 description: 'GraphQLエンドポイントを有効化、実行、および公開し、保護する方法について説明します。 '
-sub-product: アセット
 version: cloud-service
 topic: ヘッドレス、コンテンツ管理
 feature: コンテンツフラグメント、GraphQL API
@@ -9,10 +8,10 @@ role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 1%
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
 
