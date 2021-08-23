@@ -10,10 +10,10 @@ activity: use
 topic: コンテンツ管理
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 9%
+source-wordcount: '338'
+ht-degree: 7%
 
 ---
 
@@ -46,7 +46,7 @@ Dynamic Media Classicの詳細については、次のリソースを参照し�
 
 - [Dynamic Media ClassicExperience League — 価値を引き出す](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media ClassicExperience League — 詳細を表示](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media Newsletter Archives](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Dynamic Media Newsletter Archives](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Mediaニュースレター購読ページ](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [Dynamic Media Classicドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
+- [Dynamic Media Classicドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
 - [リッチメディアのブログ投稿](https://theblog.adobe.com/tag/dynamic-media)
