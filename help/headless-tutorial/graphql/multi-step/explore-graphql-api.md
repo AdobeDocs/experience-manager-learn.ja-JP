@@ -1,12 +1,7 @@
 ---
 title: GraphQL APIの参照 — AEMヘッドレスの概要 — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 組み込みのGraphQL IDEを使用してAEM GraphQL APIを調べます。 コンテンツフラグメントモデルに基づいてAEMがGraphQLスキーマを自動的に生成する方法を説明します。 GraphQL構文を使用して、基本的なクエリを作成してみてください。
-sub-product: アセット
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
@@ -14,15 +9,15 @@ feature: コンテンツフラグメント、GraphQL API
 topic: ヘッドレス、コンテンツ管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 2%
 
 ---
 
 
-# GraphQL APIの参照{#explore-graphql-apis}
+# GraphQL APIの参照 {#explore-graphql-apis}
 
 AEMのGraphQL APIは、コンテンツフラグメントのデータをダウンストリームアプリケーションに公開する強力なクエリ言語を提供します。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルが作成または更新されるたびに、スキーマが翻訳され、GraphQL APIを構成する「グラフ」に追加されます。
 
@@ -40,11 +35,11 @@ AEMのGraphQL APIは、コンテンツフラグメントのデータをダウン
 * コンテンツフラグメントのバリエーションをクエリする方法を説明します。
 * 複数のコンテンツフラグメントモデルのクエリを結合する方法を説明します
 
-## GraphiQLツール{#install-graphiql}のインストール
+## GraphiQLツールのインストール {#install-graphiql}
 
 GraphiQL IDEは開発ツールで、開発インスタンスやローカルインスタンスなど、下位レベルの環境でのみ必要です。 したがって、AEMプロジェクトには含まれませんが、アドホックベースでインストールできる個別のパッケージとして提供されます。
 
-1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aemcloud.html)** > **AEM as aCloud Service**&#x200B;に移動します。
+1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as aCloud Service**&#x200B;に移動します。
 1. 「GraphiQL」を検索します（**GraphiQL**&#x200B;に&#x200B;**i**&#x200B;を必ず含めてください）。
 1. 最新の&#x200B;**GraphiQLコンテンツパッケージv.x.x.x**&#x200B;をダウンロードします。
 
@@ -57,7 +52,7 @@ GraphiQL IDEは開発ツールで、開発インスタンスやローカルイ�
 
    ![GraphiQLパッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)
 
-## コンテンツフラグメントのリストのクエリ{#query-list-cf}
+## コンテンツフラグメントのリストのクエリ {#query-list-cf}
 
 共通の要件は、複数のコンテンツフラグメントをクエリすることです。
 
@@ -137,7 +132,7 @@ GraphiQL IDEは開発ツールで、開発インスタンスやローカルイ�
 
    **Adventures**&#x200B;のリストが返されます。 クエリにフィールドを追加して、自由に試してみてください。
 
-## コンテンツフラグメントのリストのフィルタリング{#filter-list-cf}
+## コンテンツフラグメントのリストのフィルタリング {#filter-list-cf}
 
 次に、プロパティ値に基づいて結果をコンテンツフラグメントのサブセットにフィルタリングする方法を見てみましょう。
 
@@ -189,7 +184,7 @@ GraphiQL IDEは開発ツールで、開発インスタンスやローカルイ�
 
 複雑なクエリをフィルタリングして作成するためのその他のオプションは多数ありますが、上記の例はほんの一部です。
 
-## 単一のコンテンツフラグメントのクエリ{#query-single-cf}
+## 単一のコンテンツフラグメントのクエリ {#query-single-cf}
 
 単一のコンテンツフラグメントに対して直接クエリを実行することもできます。 AEMのコンテンツは階層的に保存され、フラグメントの一意の識別子はフラグメントのパスに基づきます。 単一のフラグメントに関するデータを返す場合は、パスを使用し、モデルに直接クエリを実行することをお勧めします。 この構文を使用すると、クエリの複雑さが非常に低くなり、より高速な結果が得られます。
 
@@ -237,7 +232,7 @@ GraphiQL IDEは開発ツールで、開発インスタンスやローカルイ�
 
 1. クエリを実行し、`biography`フィールドの結果がはるかに短いことを確認します。`html`
 
-## 複数のコンテンツフラグメントモデルのクエリ{#query-multiple-models}
+## 複数のコンテンツフラグメントモデルのクエリ {#query-multiple-models}
 
 別々のクエリを1つのクエリに組み合わせることもできます。 これは、アプリケーションの電源を入れるために必要なHTTP要求の数を最小限に抑えるのに役立ちます。 例えば、アプリケーションの&#x200B;*ホーム*&#x200B;ビューには、異なる&#x200B;**2つの**&#x200B;コンテンツフラグメントモデルに基づいてコンテンツが表示されます。 **2つの**&#x200B;個別のクエリを実行する代わりに、1つのリクエストにクエリを組み合わせることができます。
 
@@ -298,7 +293,7 @@ GraphiQL IDEは開発ツールで、開発インスタンスやローカルイ�
 
 GraphQLクエリのその他の例の多くは、次を参照してください。[AEMでのGraphQLの使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=ja)。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、複数のGraphQLクエリを作成し、実行しました。
 
