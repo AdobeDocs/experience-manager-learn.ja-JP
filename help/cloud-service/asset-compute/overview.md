@@ -12,9 +12,9 @@ thumbnail: KT-5802.jpg
 topic: 統合、開発
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1031'
 ht-degree: 3%
 
 ---
@@ -148,7 +148,7 @@ Adobe I/O Runtimeにデプロイすると、Asset computeワーカーは、[Asse
 
 ### ドキュメント
 
-+ [asset computeサービスドキュメント](https://docs.adobe.com/content/help/ja-JP/asset-compute/using/extend/understand-extensibility.html)
++ [asset computeサービスドキュメント](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=ja)
 + [asset compute開発ツールのreadme](https://github.com/adobe/asset-compute-devtool)
 + [asset computeサンプルワーカー](https://github.com/adobe/asset-compute-example-workers)
 
