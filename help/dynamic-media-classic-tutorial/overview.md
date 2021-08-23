@@ -10,9 +10,9 @@ feature: Dynamic Media Classic
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Dynamic Media Classicは、リッチメディアコンテンツの作成、作�
 - **ビデオ.** 最終的なビデオをアップロードし、公開し、設定可能なビデオビューアにプログレッシブにダウンロードします。
 - **スマートイメージング.** Adobe Sensei AIの機能を活用し、既存の「画像プリセット」と連携して、クライアントのブラウザー機能に基づいて画像形式、サイズ、画質を自動的に最適化し、画像配信のパフォーマンスを向上させるテクノロジー。
 
-このソリューションのその他の機能を見つけるには、Dynamic Media Classicの[ドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html)を参照してください。
+このソリューションのその他の機能を見つけるには、Dynamic Media Classicの[ドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html)を参照してください。
 
 ## Dynamic Media Classicユーザーインターフェイス(UI)
 
@@ -75,4 +75,4 @@ _Dynamic MediaクラシックUI_
 >
 >アップロードダイアログで「**アップロード後に公開**」チェックボックスをオンにして、アップロード時にアセットを自動的に公開します。
 
-[Dynamic Media ClassicのUIの操作](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html)について詳しくは、こちらを参照してください。
+[Dynamic Media ClassicのUIの操作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html)について詳しくは、こちらを参照してください。
