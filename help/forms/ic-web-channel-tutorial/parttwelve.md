@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# Webチャネルドキュメントの配信の設定{#setting-up-the-delivery-of-web-channel-document}
+# Webチャネルドキュメントの配信の設定 {#setting-up-the-delivery-of-web-channel-document}
 
 
 ここでは、Eメールを使用したWebチャネルドキュメントの配信について見ていきます。
@@ -52,7 +52,7 @@ AEM Formsにログインします。
 * 必ず変更を保存してください。
    ![fdm](assets/requestattribute.gif)
 
-## Webチャネルドキュメントの電子メール配信のテスト{#test-email-delivery-of-web-channel-document}
+## WebチャネルドキュメントのEメール配信のテスト {#test-email-delivery-of-web-channel-document}
 
 * [パッケージマネージャーを使用したサンプルアセットのインストール](assets/webchanneldelivery.zip)
 * [crxにログインします。](http://localhost:4502/crx/de/index.jsp#)
