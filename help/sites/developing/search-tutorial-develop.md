@@ -10,17 +10,17 @@ feature: 検索
 topic: 開発
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 11%
+source-wordcount: '899'
+ht-degree: 12%
 
 ---
 
 
-# 簡易検索実装ガイド{#simple-search-implementation-guide}
+# シンプル検索実装ガイド{#simple-search-implementation-guide}
 
-簡易検索の実装は、**AdobeサミットラボAEM Search Demystified**&#x200B;の資料です。 このページには、このラボの資料が含まれています。 実習のガイド付きツアーについては、このページの「プレゼンテーション」セクションでLabワークブックを参照してください。
+簡易検索の実装は、**Adobe SummitラボAEM Search Demystified**&#x200B;の資料です。 このページには、このラボの資料が含まれています。 実習のガイド付きツアーについては、このページの「プレゼンテーション」セクションでLabワークブックを参照してください。
 
 ![検索アーキテクチャの概要](assets/l4080/simple-search-application.png)
 
@@ -29,7 +29,7 @@ ht-degree: 11%
 * [ラボワークブック](assets/l4080/l4080-lab-workbook.pdf)
 * [プレゼンテーション](assets/l4080/l4080-presentation.pdf)
 
-## ブックマーク{#bookmarks-1}
+## ブックマーク {#bookmarks-1}
 
 ### ツール {#tools}
 
@@ -56,12 +56,12 @@ ht-degree: 11%
 
 ## パッケージ {#packages}
 
-### 初期パッケージ{#initial-packages}
+### 初期パッケージ {#initial-packages}
 
 * [タグ](assets/l4080/summit-tags.zip)
 * [シンプル検索アプリケーションパッケージ](assets/l4080/simple.ui.apps-0.0.1-snapshot.zip)
 
-### チャプターパッケージ{#chapter-packages}
+### チャプターパッケージ {#chapter-packages}
 
 * [第一章解決](assets/l4080/l4080-chapter1.zip)
 * [第2章解決](assets/l4080/l4080-chapter2.zip)
@@ -72,15 +72,15 @@ ht-degree: 11%
 * [第6章解決](assets/l4080/l4080-chapter6.zip)
 * [第9章解決](assets/l4080/l4080-chapter9.zip)
 
-## 参照マテリアル{#reference-materials}
+## 参照マテリアル {#reference-materials}
 
 * [Githubリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling Model](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/?lang=ja)
 * [AEM Chromeプラグイン](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([ドキュメントページ](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
-## 修正とフォローアップ{#corrections-and-follow-up}
+## 修正とフォローアップ {#corrections-and-follow-up}
 
 ラボでのディスカッションの修正と説明、参加者によるフォローアップ質問への回答。
 
@@ -97,7 +97,7 @@ ht-degree: 11%
 
    Oakは、コンテンツツリーを介したインデックスの配置をサポートし、これらのインデックスはそのサブツリー内でのみインデックスを作成します。 例えば、**`/content/site-a/oak:index/cqPageLucene`**&#x200B;を作成して、**`/content/site-a`.**&#x200B;の下にのみコンテンツのインデックスを作成できます。
 
-   同等の方法は、**`/oak:index`**&#x200B;の下のインデックスで&#x200B;**`includePaths`**&#x200B;プロパティと&#x200B;**`queryPaths`**&#x200B;プロパティを使用することです。 以下に例を示します。
+   同等の方法は、**`/oak:index`**&#x200B;の下のインデックスで&#x200B;**`includePaths`**&#x200B;プロパティと&#x200B;**`queryPaths`**&#x200B;プロパティを使用することです。 次に例を示します。
 
    * `/oak:index/siteAcqPageLucene@includePaths=/content/site-a`
    * `/oak:index/siteAcqPageLucene@queryPaths=/content/site-a`
