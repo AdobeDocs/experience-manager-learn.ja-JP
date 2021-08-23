@@ -10,9 +10,9 @@ activity: use
 topic: コンテンツ管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2659'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Dynamic Media Classicのマスター画像概念の主な強みの1つは、多�
 
 このチュートリアルの最後までに、次の方法を理解できます。
 
-- Dynamic Media Classicで画像を切り抜き、新しいマスターファイルまたは仮想画像として保存します。 [詳細情報](https://docs.adobe.com/help/en/dynamic-media-classic/using/master-files/cropping-image.html)を参照してください。
-- 仮想調整された画像を保存し、マスターアセットの代わりに使用します。 [詳細情報](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/adjusting-image.html)を参照してください。
-- 画像にズームターゲットを作成して、ハイライトを表示します。 [詳細情報](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)を参照してください。
+- Dynamic Media Classicで画像を切り抜き、新しいマスターファイルまたは仮想画像として保存します。 [詳細情報](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)を参照してください。
+- 仮想調整された画像を保存し、マスターアセットの代わりに使用します。 [詳細情報](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)を参照してください。
+- 画像にズームターゲットを作成して、ハイライトを表示します。 [詳細情報](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)を参照してください。
 
 ## 切り抜き
 
@@ -45,8 +45,8 @@ Dynamic Media Classicには、切り抜きツールなど、UIで便利に使用
 
 Dynamic Media Classicの切り抜きツールには、アセットの詳細ページから、または&#x200B;**編集**&#x200B;ボタンをクリックしてアクセスできます。 このツールを使用して、次の2つの方法で切り抜くことができます。
 
-- 切り抜きウィンドウのハンドルをドラッグするデフォルトの切り抜きモード、または「サイズ」ボックスに値を入力します。 [手動で切り抜く方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)を説明します。
-- トリミング 画像と一致しないピクセル数を計算して、画像の周囲の余分な空白を削除する場合に使用します。 [トリミングによる切り抜き](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)の方法を説明します。
+- 切り抜きウィンドウのハンドルをドラッグするデフォルトの切り抜きモード、または「サイズ」ボックスに値を入力します。 [手動で切り抜く方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)を説明します。
+- トリミング 画像と一致しないピクセル数を計算して、画像の周囲の余分な空白を削除する場合に使用します。 [トリミングによる切り抜き](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)の方法を説明します。
 
 ### _手動切り抜き_
 
@@ -137,7 +137,7 @@ _imageAdjustedマスター画像のビューASIAN_BR_MAIN_
 
 ズームターゲットを使用するかどうかを決定するもう1つの要因は、ビューアの選択です。 一部のビューアタイプでズームターゲットを表示できるわけではありません（例えば、フライアウトビューアではサポートされていません）。
 
-[ズームターゲットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)を説明します。
+[ズームターゲットを作成する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)を説明します。
 
 ![画像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
