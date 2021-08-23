@@ -2,11 +2,11 @@
 user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
-sub-product: サイト
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+feature-set: Experience Manager, Experience Manager Sites
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 28%
+source-wordcount: '439'
+ht-degree: 26%
 
 ---
 
@@ -45,13 +45,13 @@ ht-degree: 28%
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
    + [エクスペリエンスフラグメントを使用したソーシャル投稿の設定](experience-fragments/experience-fragments-social-technical-video-setup.md)
-   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
-   + [AEM Sites 使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [AEM ヘッドレス使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA EditorおよびReactの概要](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editorの概要とAngular](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM ヘッドレス使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM SPA EditorおよびReactの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM SPA Editorの概要とAngular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [スタイルシステムを使用した開発](developing/style-system-technical-video-understand.md)
    + [スタイルシステムのベストプラクティス](developing/style-organization-style-system-understand-article.md)
@@ -67,8 +67,8 @@ ht-degree: 28%
 + 単一ページアプリケーション {#spa-editor}
    + [SPA Editorの使用](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello Worldチュートリアル](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [AEM SPA EditorおよびReactの概要](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA Editorの概要とAngular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM SPA EditorおよびReactの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM SPA Editorの概要とAngular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + マルチサイト管理 {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとブループリント](./multi-site-management/live-copy-and-blueprint.md)
@@ -112,24 +112,3 @@ ht-degree: 28%
       + [エクスペリエンスフラグメントオファーを使用してTargetアクティビティを作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composerを使用したパーソナライゼーション](integrations/adobe-target/personalization-using-vec.md)
       + [完全なWebページエクスペリエンスのパーソナライズ](integrations/adobe-target/personalization-web-page.md)
-
-+ Dynamic MediaTutorials{#dynamic-media}
-   + [DMcアプリを使用したセキュアなプレビューのために、Dynamic Mediaにテストイメージサーバー（クライアントIPフィルター）の詳細を追加しました](dynamic-media/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
-   + [AEM Dynamic Mediaでの様々な種類のセットの作成 |カルーセルセット](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
-   + [AEM Dynamic Mediaでの様々な種類のセットの作成|画像セット](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
-   + [画像プリセットの作成](dynamic-media/creating-image-presets.md)
-   + [Dynamic Mediaでのイメージプロファイル（スマート切り抜き）の作成](dynamic-media/creating-image-profile-smart-crop.md)
-   + [Dynamic Mediaでビデオを処理するためのビデオプロファイルを作成する](dynamic-media/creating-video-profile-to-process-videos-in-dynamic-media.md)
-   + [Dynamic Media設定の削除](dynamic-media/deleting-dynamic-media-configuration.md)
-   + [Dynamic Media Classic Appでアセットをダウンロードする方法](dynamic-media/how-to-download-asset-in-dynamic-media-classic-app.md)
-   + [アセットの公開URLまたは埋め込みコードの生成方法](dynamic-media/how-to-generate-public-url-or-embed-code-for-an-asset.md)
-   + [Dynamic Mediaが有効なアセットに対してDAMアセットの更新ワークフローを実行する方法](dynamic-media/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
-   + [ジョブの送信操作パラメーター中にDynamic Mediaでエクスポートジョブをトリガーする方法](dynamic-media/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
-   + [Dynamic Media Classic IPS APIの概要](dynamic-media/introduction-to-dynamic-media-classic-ips-api.md)
-   + [Dynamic Media を使用した CDN キャッシュの無効化](dynamic-media/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
-   + [サイトページでのDMコンポーネントの使用](dynamic-media/using-dm-components-on-site-page.md)
-
-+ Brand PortalTutorials{#brand-portal}
-   + [Brand Portalとのアセットソーシングの設定](brand-portal/configuring-asset-sourcing-with-the-brand-portal.md)
-   + [レンディションのダウンロードを有効にする方法](brand-portal/how-to-enable-the-download-of-renditions.md)
-   + [AEM Assets Brand Portalの設定手順](brand-portal/steps-to-configure-aem-assets-brand-portal.md)
