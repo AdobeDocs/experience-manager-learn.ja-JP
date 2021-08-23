@@ -3,10 +3,10 @@ title: Adobe Experience Manager as Cloud Service のチュートリアル
 description: Adobe Experience Manager(AEM) as a TutorialのCloud Serviceのコレクション
 sub-product: サイト， cloud-manager，基盤，アセット
 kt: 3289
-source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 16%
+source-wordcount: '273'
+ht-degree: 17%
 
 ---
 
@@ -44,7 +44,7 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="AEM as aCloud Serviceへのアクセスの設定" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="AEM as a Cloud Service へのアクセスの設定" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
@@ -85,5 +85,5 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
 ## その他のリソース
 
-* [Experience League -Adobe Experience Managerを参照](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager as a Cloud Service ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/landing/home.html)
+* [Experience League-Adobe Experience Managerを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
+* [Adobe Experience Manager as aCloud Serviceドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=ja)
