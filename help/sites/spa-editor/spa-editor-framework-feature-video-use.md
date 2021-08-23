@@ -1,28 +1,22 @@
 ---
 title: AEM SitesでのSPAエディターの使用
-seo-title: AEM SitesでのSPA Editorフレームワークの使用
 description: AEM Single Page Application Editor Frameworkを使用すると、作成者は、シングルページアプリケーションまたはSPA用にコンテンツを編集できます。 ReactまたはAngularフレームワークのいずれかを使用する開発者は、SPAを作成し、SPAの領域をAEMコンポーネントにマッピングして、作成者が使い慣れたAEM Sites編集ツールを使用できるようにします。
-sub-product: サイト、コンテンツサービス
-feature: Spaエディター
-topics: authoring, single-page-applications
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, cloud-service
-kt: 1047
-thumbnail: 22229.jpg
 topic: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 1047
+thumbnail: 22229.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 12%
+source-wordcount: '277'
+ht-degree: 7%
 
 ---
 
 
-# AEM SitesでのSPAエディターの使用{#using-the-spa-editor-with-aem-sites}
+# AEM SitesでのSPAエディターの使用 {#using-the-spa-editor-with-aem-sites}
 
 AEM Sitesでのシングルページアプリケーションのコンテンツのオーサリングに関するビデオ概要。
 
@@ -44,5 +38,5 @@ WKND SPA実装は、AEM 6.4.8以降、AEM 6.5.5以降、AEM as aCloud Serviceの
 
 SPA Editorを使用した開発に関する詳細なチュートリアルについては、以下を参照してください。
 
-* [AEM SPA エディターと Angular の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA Editor と React の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
+* [AEM SPA エディターと Angular の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
