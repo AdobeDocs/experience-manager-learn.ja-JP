@@ -13,15 +13,15 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 2%
+source-wordcount: '2384'
+ht-degree: 1%
 
 ---
 
 
-# SPAコンポーネントのAEMコンポーネントへのマッピング{#map-components}
+# SPAコンポーネントのAEMコンポーネントへのマッピング {#map-components}
 
 AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、AEM SPA Editor内で、従来のAEMオーサリングと同様に、SPAコンポーネントを動的に更新できます。
 
@@ -77,7 +77,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 ## Inspect the Text Component
 
-[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)にマッピングされる`Text`コンポーネントを提供します。 これは、AEMから&#x200B;*content*&#x200B;をレンダリングする&#x200B;**content**&#x200B;コンポーネントの例です。
+[AEMプロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)にマッピングされる`Text`コンポーネントを提供します。 これは、AEMから&#x200B;*content*&#x200B;をレンダリングする&#x200B;**content**&#x200B;コンポーネントの例です。
 
 コンポーネントの動作を見てみましょう。
 
@@ -201,7 +201,7 @@ AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Expe
 
 ## 画像コンポーネントの作成
 
-次に、AEM [Angularコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)にマッピングされる`Image`画像コンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
+次に、AEM [Angularコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)にマッピングされる`Image`画像コンポーネントを作成します。 `Image`コンポーネントは、**content**&#x200B;コンポーネントの別の例です。
 
 ### Inspect the JSON
 
@@ -437,7 +437,7 @@ SPAコードを調べる前に、AEMから提供されたJSONモデルを調べ�
 
    **レイアウトコンテナ**&#x200B;コンポーネントは`wcm/foundation/components/responsivegrid`の`sling:resourceType`を持ち、`Text`コンポーネントと`Image`コンポーネントと同様に、`:type`プロパティを使用してSPAエディターで認識されます。
 
-   [レイアウトモード](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)を使用してコンポーネントのサイズを変更する場合と同じ機能をSPA Editorで使用できます。
+   [レイアウトモード](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)を使用してコンポーネントのサイズを変更する場合と同じ機能をSPA Editorで使用できます。
 
 3. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)に戻ります。 **画像**&#x200B;コンポーネントを追加し、**レイアウト**&#x200B;オプションを使用してサイズ変更を試みます。
 
@@ -457,7 +457,7 @@ SPAコードを調べる前に、AEMから提供されたJSONモデルを調べ�
 
    ![チャプターサンプルの最終オーサリング](assets/map-components/final-page.png)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPAコンポーネントをAEMコンポーネントにマッピングする方法と、新しい`Image`コンポーネントを実装する方法を学びました。 また、**レイアウトコンテナ**&#x200B;のレスポンシブ機能を調べることもできます。
 
