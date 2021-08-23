@@ -73,5 +73,5 @@ Sling Modelsコンソールは次の場所にあります。
 デバッグアクティビティに役立つ主な側面：
 
 + Slingモデルが適切なリソースタイプに登録されていることを確認する
-+ Slingモデルの検証は、正しいオブジェクト（ResourceまたはSlingHttpRequestServlet）から適応可能です。
++ Slingモデルの検証は、正しいオブジェクト（ResourceまたはSlingHttpRequestServlet）から適応可能です
 + Sling Model Exporterが正しく登録されていることを確認します
