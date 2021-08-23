@@ -21,7 +21,7 @@ ht-degree: 3%
 ---
 
 
-# アダプティブフォーム送信時の電子メールの送信{#sending-email-on-adaptive-form-submission}
+# アダプティブフォーム送信時の電子メールの送信 {#sending-email-on-adaptive-form-submission}
 
 一般的なアクションの1つは、アダプティブフォームの送信が成功したことを確認する電子メールを送信者に送信することです。 これを実現するには、送信アクションとして「Eメールを送信」を選択します。
 
@@ -33,7 +33,7 @@ Eメールテンプレートを使用するか、以下のスクリーンショ�
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## 必要な構成{#configurations-needed}
+## 必要な設定 {#configurations-needed}
 
 Day CQ Mailサービスを設定する必要があります。 これは、[Felix Configuration Manager](http://localhost:4502/system/console/configMgr)を指すことで設定できます
 
