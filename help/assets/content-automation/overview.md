@@ -4,11 +4,11 @@ description: Adobe Experience Manager Assetsコンテンツの自動化を使用
 version: cloud-service
 topic: コンテンツ管理
 feature: アセット処理、レンディション
-role: Leader, Architect, Developer, Administrator, Business Practitioner
+role: Leader, Architect, Developer, Admin, User
 level: Beginner
 kt: 7803
 thumbnail: 333197.jpeg
-source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 4%
