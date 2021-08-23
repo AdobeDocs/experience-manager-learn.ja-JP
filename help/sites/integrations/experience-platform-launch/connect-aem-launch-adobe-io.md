@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# Adobe I/O{#connect-aem-launch-adobe-io}を使用してAEMをLaunchに接続
+# Adobe I/Oを使用したAEMとLaunchの接続 {#connect-aem-launch-adobe-io}
 
 Launch APIでAEMを認証するためのAdobe I/Oを使用したIMS設定の作成方法について説明します。 この統合がおこなわれると、AEMはLaunch APIを介して通信し、Launchプロパティにアクセスできます。
 
