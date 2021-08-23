@@ -24,7 +24,7 @@ ht-degree: 0%
 
 asset computeプロジェクトは、特別に定義されたAdobeProject Fireflyプロジェクトです。そのため、設定およびデプロイするには、Adobe開発者コンソールのAdobeProject Fireflyにアクセスする必要があります。
 
-## Adobe開発者コンソールでAdobeProject Fireflyを作成し、設定します。{#set-up}
+## 開発者コンソールでAdobeProject Fireflyを作成し、Adobe{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
 
@@ -52,7 +52,7 @@ _Project Fireflyの設定のクリックスルー(Adobeなし)_
    + __Adobeサービス/I/Oイベントを選択__ し、「設定済みAPIを __保存」をタップします。__
    + __Adobeサービス/I/O管理APIを選択__ し、「設定済みAPIを __保存」をタップします。__
 
-## private.key{#private-key}へのアクセス
+## private.keyへのアクセス{#private-key}
 
 [Asset computeAPI統合](#set-up)を設定すると、新しいキーペアが生成され、`config.zip`ファイルが自動的にダウンロードされました。 この`config.zip`には、生成された公開証明書と一致する`private.key`ファイルが含まれます。
 
