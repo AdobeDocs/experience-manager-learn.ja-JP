@@ -7,9 +7,9 @@ version: 6.3, 6.4, 6.5
 topic: コンテンツ管理
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '326'
 ht-degree: 24%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->[この機能を使](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) 用するには、 Dynamic Media AEMを有効にします。
+>[この機能を使](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 用するには、 Dynamic Media AEMを有効にします。
 
 この機能は、AEM 6.1および6.2バージョンの機能パックとして使用できます。
 
-## カラーマネジメント設定ノード{#xml-template-for-the-color-management-configuration-node}のXMLテンプレート
+## カラーマネジメント設定ノードのXMLテンプレート {#xml-template-for-the-color-management-configuration-node}
 
 次に、カラーマネジメント設定ノードのXMLテンプレートを示します。 このXMLテンプレートは、AEM開発プロジェクトにコピーし、プロジェクトに適した設定で設定できます。
 
@@ -85,7 +85,7 @@ ht-degree: 24%
 />
 ```
 
-### デフォルトのAdobeカラープロファイルのリストを{#list-of-default-adobe-color-profiles-are-listed-below}に示します。
+### デフォルトのAdobeカラープロファイルのリストを次に示します {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | 名前 | カラースペース | 説明 |
 | ------------------- | ---------- | ------------------------------------- |
