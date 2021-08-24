@@ -12,15 +12,15 @@ thumbnail: 41243.jpg
 topic: 統合
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '615'
 ht-degree: 5%
 
 ---
 
 
-# Target呼び出し{#load-fire-target}の読み込みと実行
+# Target呼び出しの読み込みと実行 {#load-fire-target}
 
 Launchルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからTarget呼び出しを実行する方法について説明します。 Webページの情報は、Webページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに容易にアクセスできるようにする、Adobeクライアントデータレイヤーを使用して取得および渡されます。
 
@@ -163,5 +163,5 @@ window.targetGlobalSettings = {
 + [Adobeクライアントデータレイヤーのドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Adobe Experience Platform Debuggerの概要](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)
++ [Adobe Experience Platform Debuggerの概要](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
