@@ -1,20 +1,20 @@
 ---
 title: コンテンツフラグメントとエクスペリエンスフラグメントについて
 description: Adobe Experience Managerのコンテンツフラグメントとエクスペリエンスフラグメントは、表面的には似ているように見えますが、それぞれが異なる使用例で主な役割を果たします。 コンテンツフラグメントとエクスペリエンスフラグメントが似ている点、違う点、およびそれぞれの使用方法について説明します。
-sub-product: アセット，サイト，コンテンツサービス
-feature: コンテンツフラグメント、エクスペリエンスフラグメント
+sub-product: assets, sites, content services
+feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 5%
+source-wordcount: '1037'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </tr><tr><td><strong>コアテナント</strong></td>
 <td><ul>
 <li>コンテンツ中心の</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">構造化されたフォームベースのデータモデルで定義されます。</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=en" target="_blank">構造化されたフォームベースのデータモデルで定義されます。</a></li>
 <li>デザインとレイアウトに非依存。</li>
 <li>チャネルは、コンテンツフラグメントのコンテンツ（レイアウトとデザイン）のプレゼンテーションを所有します</li>
 </ul>
@@ -56,7 +56,7 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </tr><tr><td><strong>技術的詳細</strong></td>
 <td><ul>
 <li><strong>dam:Asset</strong>として実装</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">コンテンツフラグメントモデル</a>で定義</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=en" target="_blank">コンテンツフラグメントモデル</a>で定義</li>
 </ul>
 </td>
 <td><ul>
@@ -74,25 +74,25 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 <td><ul>
 <li>バリエーションは、チャネルまたはコンテキストに固有です</li>
 <li>バリエーションは、AEM Live Copyを使用して同期されます。</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">バリエー</a> ション間でのブロックローコンテンツの再利用の構築</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html" target="_blank">バリエー</a> ション間でのブロックローコンテンツの再利用の構築</li>
 </ul>
 </td>
 </tr><tr><td><strong>機能</strong></td>
 <td><ul>
 <li>バリエーション</li>
 <li>バージョン</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank"></a> バリエーション間でのコンテンツの同期</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">視覚的に異な</a> るコンテンツフラグメントのバージョン</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank"></a> 複数行テキスト要素の注釈</li>
-<li>複数行のテキスト要素のインテリジェントな<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">要約</a>。</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/creating-translation-projects-for-content-fragments.html" target="_blank">翻訳/ローカライゼーション</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#synchronizing-with-master" target="_blank"></a> バリエーション間でのコンテンツの同期</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-managing.html?lang=en#comparing-fragment-versions" target="_blank">視覚的に異な</a> るコンテンツフラグメントのバージョン</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#annotating-a-content-fragment" target="_blank"></a> 複数行テキスト要素の注釈</li>
+<li>複数行のテキスト要素のインテリジェントな<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-variations.html?lang=en#summarizing-text" target="_blank">要約</a>。</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/creating-translation-projects-for-content-fragments.html?lang=en" target="_blank">翻訳/ローカライゼーション</a></li>
 </ul>
 </td>
 <td><ul>
 <li>バリエーション</li>
 <li>バリエーションをライブコピーとして</li>
 <li>バージョン</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">構築ブロック</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en#building-blocks" target="_blank">構築ブロック</a></li>
 <li>注釈</li>
 <li>レスポンシブレイアウトとプレビュー</li>
 <li>翻訳/ローカライゼーション</li>
@@ -101,14 +101,14 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Sites、AEM Screens、またはエクスペリエ</a> ンスフラグメントで使用するAEMコアコンポーネントのコンテンツフラグメントコンポーネント。</li>
-<li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a>を介したJSON書き出しで、サードパーティでの利用が可能</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM Content Services</a>を介したJSON書き出しで、サードパーティでの利用が可能</li>
 <li>AEM HTTP Assets APIを介したサードパーティでの利用向けJSON。</li>
 </ul>
 </td>
 <td><ul>
 <li>AEM Sites、AEM Screens、またはその他のエクスペリエンスフラグメントで使用するAEMエクスペリエンスフラグメントコンポーネント。</li>
-<li>サードパーティシステムで使用するために、<a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">プレーンHTML</a>として書き出す</li>
-<li><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">ターゲットオファー用のAdobe</a> ターゲットへのHTML書き出し</li>
+<li>サードパーティシステムで使用するために、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">プレーンHTML</a>として書き出す</li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=en" target="_blank">ターゲットオファー用のAdobe</a> ターゲットへのHTML書き出し</li>
 <li>ターゲットオファー用のAdobe TargetへのJSON書き出し</li>
 </ul>
 </td>
@@ -128,12 +128,12 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>ドキュメント</strong></td>
 <td><ul>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html?topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEMコンテンツフラグメントユーザーガイド</a></li>
-<li><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html" target="_blank">AEMでのコンテンツフラグメントの使用</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEMコンテンツフラグメントユーザーガイド</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en" target="_blank">AEMでのコンテンツフラグメントの使用</a></li>
 </ul>
 </td>
 <td><ul>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html" target="_blank">エクスペリエンスフラグメントに関するAdobeドキュメント</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">エクスペリエンスフラグメントに関するAdobeドキュメント</a></li>
 </ul>
 </td>
 </tr></tbody></table>
@@ -169,15 +169,15 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 
 ## コンテンツフラグメントのサポート資料
 
-+ [コンテンツフラグメントユーザーガイド](https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html?topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
-+ [AEMでのコンテンツフラグメントの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html)
++ [コンテンツフラグメントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [AEMでのコンテンツフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
 + [AEM WCMコアコンポーネントのコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
-+ [コンテンツフラグメントとAEM Content Servicesの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-+ [AEM Content Servicesの概要](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)
++ [コンテンツフラグメントとAEMヘッドレスの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en)
++ [AEM Content Servicesの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
 
 ## エクスペリエンスフラグメントのサポート資料
 
-+ [エクスペリエンスフラグメントに関するAdobeドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
-+ [AEMエクスペリエンスフラグメントについて](https://helpx.adobe.com/experience-manager/kt/sites/using/experience-fragments-feature-video-understand.html)
-+ [AEMエクスペリエンスフラグメントの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/experience-fragments-feature-video-use.html)
++ [エクスペリエンスフラグメントに関するAdobeドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en)
++ [AEMエクスペリエンスフラグメントについて](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
++ [AEMエクスペリエンスフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
 + [Adobe TargetでのAEMエクスペリエンスフラグメントの使用](https://medium.com/adobetech/experience-fragments-and-adobe-target-d8d74381b9b2)
