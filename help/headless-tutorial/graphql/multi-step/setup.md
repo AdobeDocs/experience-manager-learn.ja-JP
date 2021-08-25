@@ -1,22 +1,17 @@
 ---
 title: クイックセットアップ — AEMヘッドレスの概要 — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 AEM SDKをインストールし、サンプルコンテンツを追加して、GraphQL APIを使用してAEMのコンテンツを使用するアプリケーションをデプロイします。 AEMがオムニチャネルエクスペリエンスを強化する方法を参照してください。
-sub-product: サイト
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1814'
 ht-degree: 4%
 
 ---
@@ -41,7 +36,7 @@ ht-degree: 4%
 1. WKNDリファレンスサイトからサンプルコンテンツをダウンロードしてインストールします。
 1. GraphQL APIを使用してコンテンツを使用するサンプルアプリをダウンロードしてインストールします。
 
-## AEM SDKのインストール{#aem-sdk}
+## AEM SDKのインストール {#aem-sdk}
 
 このチュートリアルでは、[AEM as aCloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk)を使用してAEM GraphQL APIを調べます。 この節では、AEM SDKをインストールしてオーサーモードで実行するクイックガイドを示します。 ローカル開発環境の設定に関する詳細なガイドは[こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja#local-development-environment-set-up)を参照してください。
 
@@ -49,7 +44,7 @@ ht-degree: 4%
 >
 > また、 AEMをチュートリアル環境として使用して、このCloud Serviceに従うこともできます。 クラウド環境を使用する際の注意事項は、このチュートリアル全体で追加されています。
 
-1. **[Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aemcloud.html)** > **AEM as aCloud Service**&#x200B;に移動し、**AEM SDK**&#x200B;の最新バージョンをダウンロードします。
+1. **[Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as aCloud Service**&#x200B;に移動し、**AEM SDK**&#x200B;の最新バージョンをダウンロードします。
 
    ![ソフトウェア配布ポータル](assets/setup/software-distribution-portal-download.png)
 
@@ -73,7 +68,7 @@ ht-degree: 4%
 1. 数分後にAEMインスタンスのインストールが完了し、新しいブラウザーウィンドウが[http://localhost:4502](http://localhost:4502)に開きます。
 1. ユーザー名`admin`とパスワード`admin`を使用してログインします。
 
-## サンプルコンテンツとGraphQLエンドポイント{#wknd-site-content-endpoints}のインストール
+## サンプルコンテンツとGraphQLエンドポイントのインストール {#wknd-site-content-endpoints}
 
 **WKNDリファレンスサイト**&#x200B;のサンプルコンテンツが、チュートリアルを高速化するためにインストールされます。 WKNDは架空のライフスタイルブランドで、AEMトレーニングと組み合わせて使用することが多いです。
 
@@ -116,7 +111,7 @@ WKNDリファレンスサイトには、[GraphQLエンドポイント](https://e
 >
 > Cloud Service環境を使用する場合は、 WKNDリファレンスサイトなどのコードベースをCloud Service環境にデプロイする方法に関するドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=ja#deploying)。[
 
-## サンプルアプリケーション{#sample-app}をインストールします。
+## サンプルアプリケーションのインストール{#sample-app}
 
 このチュートリアルの目標の1つは、GraphQL APIを使用して外部アプリケーションからAEMコンテンツを使用する方法を示すことです。 このチュートリアルでは、チュートリアルを高速化するために部分的に完了したReact Appの例を使用します。 同じレッスンと概念が、iOS、Androidまたはその他のプラットフォームで作成されたアプリに適用されます。 Reactアプリは、不要な複雑さを避けるために、意図的にシンプルです。参照実装ではありません。
 
@@ -163,11 +158,7 @@ WKNDリファレンスサイトには、[GraphQLエンドポイント](https://e
 
    ![GraphQLエンドポイントXHRリクエスト](assets/setup/endpoint-gql.png)
 
-1. また、ネットワークリクエストを調べて、パラメーターとJSON応答を表示することもできます。 クエリと応答をより深く理解するために、Chrome用[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)のようなブラウザー拡張機能をインストールすると役立つ場合があります。
-
-   ![GraphQLネットワーク拡張機能](assets/setup/GraphQL-extension.png)
-
-   *Chrome拡張機能GraphQLネットワークの使用*
+1. また、ネットワークリクエストを調べて、パラメーターとJSON応答を表示することもできます。 クエリと応答をより深く理解するために、Chrome用[GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)などのブラウザー拡張機能をインストールすると役立つ場合があります。
 
 ## コンテンツフラグメントの変更
 
@@ -188,7 +179,7 @@ Reactアプリが実行されたので、AEMのコンテンツを更新して、
 
    ![アップデートバリサーフキャンプアドベンチャー](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## GraphiQLツール{#install-graphiql}のインストール
+## GraphiQLツールのインストール {#install-graphiql}
 
 [](https://github.com/graphql/graphiql) GraphiQLは開発ツールで、開発インスタンスやローカルインスタンスなど、下位レベルの環境でのみ必要です。GraphiQL IDEを使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、GraphiQLはドキュメントに簡単にアクセスでき、使用可能な方法を簡単に学習し、理解できます。
 
@@ -210,7 +201,7 @@ Reactアプリが実行されたので、AEMのコンテンツを更新して、
    >
    > GraphiQLツールとGraphQL APIについては、後述のチュートリアル](./explore-graphql-api.md)で詳しく説明します。[
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、GraphQLを使用したAEMコンテンツを使用する外部アプリケーションが作成されました。 Reactアプリのコードを調べ、既存のコンテンツフラグメントの変更を引き続き試してみてください。
 
@@ -218,7 +209,7 @@ Reactアプリが実行されたので、AEMのコンテンツを更新して、
 
 次の章の[コンテンツフラグメントモデルの定義](content-fragment-models.md)では、コンテンツをモデル化し、**コンテンツフラグメントモデル**&#x200B;を使用してスキーマを構築する方法を説明します。 既存のモデルを確認し、新しいモデルを作成します。 また、モデルの一部としてスキーマを定義するために使用できる様々なデータ型についても学習します。
 
-## （ボーナス）CORS設定{#cors-config}
+## （ボーナス）CORSの設定 {#cors-config}
 
 AEMは、デフォルトでセキュリティで保護されているので、クロスオリジンリクエストをブロックし、権限のないアプリケーションがそのコンテンツに接続して表示されるのを防ぎます。
 
