@@ -1,7 +1,7 @@
 ---
 title: AEM as a Development用の開発ツールのCloud Service
 description: AEMに対してローカルで開発するために必要なすべてのローカル開発ツールを備えたベースラインマシンを設定します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,12 +9,12 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1435'
 ht-degree: 4%
 
 ---
@@ -190,9 +190,9 @@ Visual Studio Codeは、主にフロントエンドコードを作成するフ�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ は、Java開発向けの一般的なIDEで、  __[AEM Developer ](https://eclipse.adobe.com/aem/dev-tools/)__ Toolsplug-inをサポートし、Adobeが提供する、オーサリング用のIDE内GUIを提供し、JCRコンテンツをローカルAEMインスタンスと同期します。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ は、Java開発向けの一般的なIDEで、  __[AEM Developer ](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ Toolsplug-inをサポートし、Adobeが提供する、オーサリング用のIDE内GUIを提供し、JCRコンテンツをローカルAEMインスタンスと同期します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Eclipseのダウンロード](https://www.eclipse.org/ide/)
-+ [Eclipse開発ツールのダウンロード](https://eclipse.adobe.com/aem/dev-tools/)
++ [Eclipse開発ツールのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
