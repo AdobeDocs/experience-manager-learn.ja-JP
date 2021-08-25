@@ -2,17 +2,17 @@
 title: 画像プリセット
 description: 画像プリセット Dynamic Media Classicでは、特定のサイズ、形式、画質、シャープニングで画像を作成するのに必要なすべての設定が含まれています。 画像プリセットは、動的なサイズ設定の主要なコンポーネントです。 Dynamic Media ClassicのURLを見ると、画像プリセットが使用中かどうかを簡単に確認できます。 画像プリセットの概要、それが非常に役に立つ理由および画像プリセットの作成方法について説明します。
 sub-product: dynamic-media
-feature: Dynamic Media Classic、画像プリセット
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
@@ -40,8 +40,8 @@ ht-degree: 1%
 >
 >サイト上の一意の画像サイズごとに1つの画像プリセットを作成します。 例えば、商品の詳細ページに350 X 350の画像、閲覧/検索ページに120 X 120の画像、クロス販売/特集アイテムに90 X 90の画像が必要な場合、500画像か500,000画像かに関わらず、3つの画像プリセットが必要です。
 
-- [画像プリセット](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)の詳細をご覧ください。
-- [画像プリセットを作成する方法](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)を説明します。
+- [画像プリセット](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)の詳細をご覧ください。
+- [画像プリセットを作成する方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)を説明します。
 
 ## 画像プリセットとシャープ
 
@@ -63,12 +63,10 @@ Dynamic Media Classicにアップロードする高解像度画像は、ズー�
 
 Dynamic Media Classicでは、次の3種類のシャープニングが可能です。シンプルシャープ、再サンプルモードおよびアンシャープマスク
 
-[Dynamic Media Classicのシャープニングオプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)の詳細をご覧ください。
+[Dynamic Media Classicのシャープニングオプション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)の詳細をご覧ください。
 
 ## その他のリソース
 
 [画像プリセットガイド](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)を参照してください。画質と読み込み速度を最適化するために使用する設定。
 
 [画像はすべてパート2:ただのぼやけではありません。画質と速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。高品質で高速な読み込みをおこなうための画像プリセットの使用について説明するブログ投稿です。
-
-[画像がウェビナーです](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。_Image Is Everything_&#x200B;シリーズの3つのウェビナーの録画へのリンク。 [ウェビナー2](https://seminars.adobeconnect.com/p6lqaotpjnd3) で画像プリセットについて説明しています。
