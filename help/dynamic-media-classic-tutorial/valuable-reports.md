@@ -1,19 +1,14 @@
 ---
 title: 管理者向けの貴重なレポート
 description: Dynamic Media Classicの管理者が設定を検討する必要がある、2つの重要なレポートを見つけます。
-sub-product: dynamic-media, assets
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, reports
-audience: all
-activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 7%
+source-wordcount: '314'
+ht-degree: 6%
 
 ---
 
@@ -47,6 +42,4 @@ Dynamic Media Classicの詳細については、次のリソースを参照し�
 - [Dynamic Media ClassicExperience League — 価値を引き出す](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media ClassicExperience League — 詳細を表示](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Mediaニュースレター購読ページ](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classicドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
-- [リッチメディアのブログ投稿](https://theblog.adobe.com/tag/dynamic-media)
