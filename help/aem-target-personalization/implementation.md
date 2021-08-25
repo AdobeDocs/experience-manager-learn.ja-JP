@@ -1,16 +1,16 @@
 ---
 title: Adobe Experience ManagerとAdobe Targetの統合
-seo-title: パーソナライズされたコンテンツを配信するためにAdobe Experience Manager(AEM)をAdobe Targetと統合する様々な方法を取り上げる記事です。
+seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
 description: 様々なシナリオでAdobe Experience ManagerとAdobe Targetを設定する方法を説明する記事です。
-seo-description: 様々なシナリオでAdobe Experience ManagerとAdobe Targetを設定する方法を説明する記事です。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 5%
+source-wordcount: '662'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 この節では、様々なシナリオでAdobe Experience ManagerとAdobe Targetを設定する方法について説明します。 シナリオと組織の要件に基づきます。
 
 * **Adobe Target JavaScriptライブラリの追加（すべてのシナリオで必要）**
-AEMでホストされるサイトの場合、Launchを使用してTargetライブラリをサイトに追 [加できます。](https://experienceleague.adobe.com/docs/launch/using/home.html)Launchは、関連する顧客体験の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
+AEMでホストされるサイトの場合、Launchを使用してTargetライブラリをサイトに追 [加できます。](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)Launchは、関連する顧客体験の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
 * **Adobe TargetCloud Servicesの追加（エクスペリエンスフラグメントのシナリオで必要）**
  AEMのお客様は、エクスペリエンスフラグメントオファーを使用してAdobe Target内でアクティビティを作成する場合、従来のCloud Servicesを使用してAdobe TargetをAEMと統合する必要があります。この統合は、エクスペリエンスフラグメントをHTML/JSONオファーとしてAEMからTargetにプッシュし、オファーをAEMと同期させるために必要です。 
 *この統合は、シナリオ1の実装に必要です。*
@@ -36,7 +36,7 @@ AEMでホストされるサイトの場合、Launchを使用してTargetライ�
       * [デジタルデータレイヤー](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションでプロビジョニングされたExperience Cloud
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
@@ -51,7 +51,7 @@ AEMでホストされるサイトの場合、Launchを使用してTargetライ�
 >
 > お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oをプロビジョニングするか、システム管理者に問い合わせる必要があります
 
-### AEM{#set-up-aem}の設定
+### AEMの設定{#set-up-aem}
 
 このチュートリアルを完了するには、AEMオーサーインスタンスとパブリッシュインスタンスが必要です。 `http://localhost:4502`上で実行されているオーサーインスタンスと、`http://localhost:4503`上で実行されているパブリッシュインスタンスがあります。 詳しくは、以下を参照してください。[ローカルAEM開発環境](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html)を設定します。
 
