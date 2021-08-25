@@ -7,13 +7,13 @@ doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2734'
-ht-degree: 5%
+source-wordcount: '2710'
+ht-degree: 4%
 
 ---
 
@@ -34,12 +34,12 @@ Dynamic Media Classicソリューションのワークフローは、次の3つ�
 
 これは、ワークフローの開始です。 この手順では、使用しているワークフローに合ったソースコンテンツを収集または作成して、Dynamic Media Classicにアップロードします。 システムは、画像、ビデオ、フォントの複数のファイルタイプをサポートしますが、PDF、Adobe Illustrator、Adobe InDesignの場合もサポートします。
 
-[サポートされているファイルタイプ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)の完全なリストを参照してください。
+[サポートされているファイルタイプ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)の完全なリストを参照してください。
 
 ソースコンテンツは、様々な方法でアップロードできます。
 
-- デスクトップまたはローカルネットワークから直接。 [](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application)の方法を説明します。
-- Dynamic Media Classic FTPサーバーから。 [](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)の方法を説明します。
+- デスクトップまたはローカルネットワークから直接。 [](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application)の方法を説明します。
+- Dynamic Media Classic FTPサーバーから。 [](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)の方法を説明します。
 
 デフォルトのモードは「デスクトップから」です。ここでは、ローカルネットワーク上のファイルを参照し、アップロードを開始します。
 
@@ -64,11 +64,11 @@ Dynamic Media Classicソリューションのワークフローは、次の3つ�
 
 - **任意のフォルダーでベース名が同じファイルを上書き(拡張子**&#x200B;に関係なく)。このオプションは、最も包括的な置換規則です。置き換え画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置き換えることができます。元のファイルが別のフォルダーにある場合、置き換え画像は、アップロード先の新しいフォルダーに存在します。
 
-[画像を上書きオプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)の詳細を説明します。
+[画像を上書きオプション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)の詳細を説明します。
 
 必須ではありませんが、上記の2つの方法のいずれかを使用してアップロードする際に、特定のアップロードに対して「ジョブオプション」を指定できます。例えば、繰り返しアップロードのスケジュールを設定したり、アップロード時に切り抜きオプションを設定したりできます。 これらは一部のワークフローにとって有用なものなので、お客様のワークフローにとって有効かどうかを検討する価値があります。
 
-[ジョブオプション](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)の詳細をご覧ください。
+[ジョブオプション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)の詳細をご覧ください。
 
 Dynamic Media Classicは、まだシステムに含まれていないコンテンツを処理できないので、ワークフローで最初に必要な手順です。 アップロード中は、バックグラウンドで、アップロードされたすべてのアセットが一元化されたDynamic Media Classicデータベースに登録され、IDが割り当てられてストレージにコピーされます。 また、画像ファイルは、動的なサイズ変更やズームが可能な形式に変換され、ビデオファイルはMP4 Webに対応した形式に変換されます。
 
@@ -97,7 +97,7 @@ Dynamic Media Classicは、まだシステムに含まれていないコンテ�
 
 **画像サイズに関する最小要件はありませんが、大きな画像をアップロードすることはお勧めしません。** 巨大な画像は、4000ピクセル以上と見なすことができます。このサイズの画像をアップロードすると、画像内の埃や毛の粒などの潜在的な欠陥が表示される場合があります。 また、このような画像を使用すると、Dynamic Media Classicサーバーの容量が増え、契約されたストレージの制限を超える可能性があります。
 
-[ファイルのアップロード](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)の詳細をご覧ください。
+[ファイルのアップロード](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)の詳細をご覧ください。
 
 ## 手順2:オーサー（およびパブリッシュ）
 
@@ -139,14 +139,14 @@ Dynamic Media Classic URLの組み合わせ方法を理解したら、プログ�
 
 これは通常、誤りが発生し、画像/アセットの名前が以前に公開されたバージョンと同じでない限り、問題は発生しませんが、画像に問題があります。 例えば、誤って低解像度のバージョンをアップロードしたり、アートディレクターが画像を承認しなかったりします。 この場合、元の画像を呼び出し、同じアセットIDを使用する新しいバージョンに置き換えます。
 
-[更新が必要なURLのキャッシュを手動でクリアする方法を説明します](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html)。
+[更新が必要なURLのキャッシュを手動でクリアする方法を説明します](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en)。
 
 >[!TIP]
 >
 >キャッシュ遅延の問題を回避するには、必ず夜、日、2週間など前に作業を進めます。 内部の関係者が作業を証明してから公開するためのQA/承認に時間を設けます。 前の晩に作業しても、その晩に変更を加え、再公開できます。 朝までに、10時間が経過し、キャッシュが正しい画像で更新されます。
 
-- [公開ジョブの作成](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)の詳細を説明します。
-- [公開](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html)の詳細をご覧ください。
+- [公開ジョブの作成](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)の詳細を説明します。
+- [公開](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html)の詳細をご覧ください。
 
 ## 手順3:配信
 
@@ -184,4 +184,4 @@ ITチームまたは統合パートナーは、Dynamic Media Classic URLをサ�
 
 **ズーム**&#x200B;オプションを使用して、付属の様々なズームビューアに基づいた、多くの事前定義済みズームプリセットの1つで画像をプレビューすることもできます。
 
-[アセットのプレビュー](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html)の詳細を説明します。
+[アセットのプレビュー](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html)の詳細を説明します。
