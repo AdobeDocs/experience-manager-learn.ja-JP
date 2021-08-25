@@ -1,25 +1,20 @@
 ---
-title: AEMのJava APIのベストプラクティスについて
+title: AEMのJava APIのベストプラクティス
 description: AEMは、開発時に使用する多くのJava APIを公開する、豊富なオープンソースソフトウェアスタックに基づいて構築されています。 この記事では、主なAPIと、その使用のタイミングと理由について説明します。
 version: 6.2, 6.3, 6.4, 6.5
-sub-product: 基盤，アセット，サイト
-feature: API
-topics: best-practices, development
-activity: develop
-audience: developer
-doc-type: article
-topic: 開発
+feature: APIs
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2025'
-ht-degree: 8%
+source-wordcount: '2030'
+ht-degree: 7%
 
 ---
 
 
-# Java APIのベストプラクティスについて
+# Java APIのベストプラクティス
 
 Adobe Experience Manager（AEM）は、開発時に使用可能な多数の Java API を公開する豊富なオープンソースソフトウェアスタックに基づいて構築されています。この記事では、主なAPIと、その使用のタイミングと理由について説明します。
 
@@ -29,15 +24,15 @@ AEMは、4つのプライマリJava APIセットを基に構築されていま�
 
    * ページ、アセット、ワークフローなどの製品の抽象概念
 
-* **[!DNL Apache Sling]Webフレームワーク**
+* **Apache Sling Web Framework**
 
    * リソース、値マップ、HTTP要求など、RESTおよびリソースベースの抽象概念。
 
-* **JCR ([!DNL Apache Jackrabbit Oak])**
+* **JCR(Apache Jackrabbit Oak)**
 
    * ノード、プロパティ、セッションなどのデータとコンテンツの抽象化。
 
-* **[!DNL OSGi (Apache Felix)]**
+* **OSGi(Apache Felix)**
 
    * サービスや(OSGi)コンポーネントなどのOSGiアプリケーションコンテナの抽象概念。
 
@@ -46,7 +41,7 @@ AEMは、4つのプライマリJava APIセットを基に構築されていま�
 一般的なルールは、次の順序でAPI/抽象を優先することです。
 
 1. **AEM**
-1. **[!DNL Sling]**
+1. **Sling**
 1. **JCR**
 1. **OSGi**
 
@@ -96,16 +91,15 @@ AEMは複数のクエリ言語をサポートしています。 3つの主な言
 
 * 単純なパラメーター化されたクエリの構成（Mapとしてモデル化されたクエリパラメーター）
 * ネイティブの[Java APIおよびHTTP API](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
-* [OOTBクエリデバッガ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [一般的なク](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) エリ要件をサポートするOOTB述語
+* [AEM Query Debugger](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
+* [一般的な](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) クエリ要件をサポートするAEM述語
 
 * 拡張可能なAPI。カスタムの[クエリ述語](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)の開発を可能にします。
-* JCR-SQL2およびXPathは、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)および[JCR API](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)を介して直接実行でき、 [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)または[JCR Nodes](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)をそれぞれ返します。
+* JCR-SQL2およびXPathは、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)および[JCR API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)を介して直接実行でき、 [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)または[JCR Nodes](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)をそれぞれ返します。
 
 >[!CAUTION]
 >
 >AEM QueryBuilder APIは、ResourceResolverオブジェクトをリークします。 このリークを軽減するには、次の[コードサンプル](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164)に従います。
-
 
 ## [!DNL Sling] API
 
@@ -137,9 +131,9 @@ AEMは複数のクエリ言語をサポートしています。 3つの主な言
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)は、JCR実装の仕様の一部です(AEMの場合は[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 すべてのJCR実装は、これらのAPIに準拠し実装する必要があるので、AEMコンテンツを操作するための最も低いレベルのAPIです。
+[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)は、JCR実装の仕様の一部です(AEMの場合は[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 すべてのJCR実装は、これらのAPIに準拠し実装する必要があるので、AEMコンテンツを操作するための最も低いレベルのAPIです。
 
 JCR自体は、階層/ツリーベースのNoSQLデータストアAEMをコンテンツリポジトリとして使用します。 JCRには、コンテンツCRUDからコンテンツのクエリに至るまで、サポートされているAPIの広範な配列があります。 この堅牢なAPIにもかかわらず、上位レベルのAEMや[!DNL Sling]抽象よりも優先されることはまれです。
 
@@ -155,12 +149,12 @@ JCRはAEMコンテンツリポジトリですが、APIはコンテンツを操�
 
 ### JCR APIの一般的な使用方法
 
-* [アクセス制御管理](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
+* [アクセス制御管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 * [認証可能な管理（ユーザー/グループ）](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCRの監視（JCRイベントのリッスン）
 * ディープノード構造の作成
 
-   * Sling APIはリソースの作成をサポートしていますが、JCR APIには、[JcrUtils](https://jackrabbit.apache.org/api/2.10/index.html?org/apache/jackrabbit/commons/JcrUtils.html)と[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html)の便利なメソッドがあり、深い構造の作成を促進します。
+   * Sling APIはリソースの作成をサポートしていますが、JCR APIには、[JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html)と[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html)の便利なメソッドがあり、深い構造の作成を促進します。
 
 ## OSGi API
 
@@ -202,17 +196,17 @@ OSGiは、すべてのOSGiコンテナが実装および準拠する必要があ
 
 * AEM QueryBuilderは、[提案](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、スペルチェック、インデックスヒントなど、一般的でない関数をサポートしていません。 これらの関数でクエリを実行する場合は、JCR-SQL2をお勧めします。
 
-### [!DNL Sling] サーブレットの登録  {#sling-servlet-registration}
+### [!DNL Sling] サーブレットの登録 {#sling-servlet-registration}
 
 * [!DNL Sling] サーブレット登録、@ [SlingServletResourceTypesoverを使用したOSGi DS 1.2注釈の](https://sling.apache.org/documentation/the-sling-engine/servlets.html) 優先  `@SlingServlet`
 
-### [!DNL Sling] フィルターの登録  {#sling-filter-registration}
+### [!DNL Sling] フィルターの登録 {#sling-filter-registration}
 
 * [!DNL Sling] 登録のフィルター、@ [SlingServletFilteroverを含むOSGi DS 1.2注釈を](https://sling.apache.org/documentation/the-sling-engine/filters.html) 優先  `@SlingFilter`
 
 ## 便利なコードスニペット
 
-以下は、説明したAPIを使用する一般的な使用例のベストプラクティスを示すJavaコードスニペットです。 これらのスニペットでは、優先度の低いAPIからより優先度の高いAPIに移行する方法も示しています。
+以下は、説明したAPIを使用する一般的な使用例のベストプラクティスを示すJavaコードスニペットです。 また、これらのスニペットでは、優先度の低いAPIからより優先度の高いAPIに移行する方法を説明します。
 
 ### [!DNL Sling] ResourceResolverに対するJCRセッション
 
@@ -297,7 +291,7 @@ Page page = pageManager.getContainingPage(resource);
 Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or/component");
 ```
 
-#### 別のアプローチ{#alternative-approach-1}
+#### 別のアプローチ {#alternative-approach-1}
 
 リソースをページに適応させるには、リソース自体が`cq:Page`ノードである必要があります。
 
@@ -325,7 +319,7 @@ String title = asset.getMetadataValue("dc:title");
 Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 ```
 
-### [!DNL Sling] [!DNL Resource]プロパティ{#read-sling-resource-properties}を読み取ります。
+### [!DNL Sling] [!DNL Resource]プロパティを読み取ります {#read-sling-resource-properties}
 
 AEM API（ページ、アセット）が直接アクセスできない場所（プロパティまたは相対リソース）にプロパティが保存されている場合、 [!DNL Sling]リソースとValueMapsを使用してデータを取得できます。
 
