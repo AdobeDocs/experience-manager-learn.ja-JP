@@ -2,16 +2,16 @@
 title: Adobe Analyticsを使用したクリックされたコンポーネントの追跡
 description: イベントドリブン型Adobeクライアントデータレイヤーを使用して、Adobe Experience Managerサイト上の特定のコンポーネントのクリックを追跡します。 Experience Platform Launchでルールを使用してこれらのイベントをリッスンし、トラックリンクビーコンと共にAdobe Analyticsにデータを送信する方法を説明します。
 version: cloud-service
-topic: 統合
+topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1814'
-ht-degree: 4%
+source-wordcount: '1810'
+ht-degree: 3%
 
 ---
 
@@ -144,7 +144,7 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
    `event`オブジェクトは、カスタムイベントで呼び出される`trigger()`メソッドから渡されます。 `component` は、クリックをトリガーしたデータレイヤーから派生したコンポ `getState` ーネントの現在の状態です。
 
-1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)にコードを昇格させます。
+1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)にコードを昇格させます。
 
    >[!NOTE]
    >
