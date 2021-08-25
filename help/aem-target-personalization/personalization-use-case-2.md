@@ -1,15 +1,15 @@
 ---
 title: Adobe Targetを使用したパーソナライゼーション
-seo-title: Adobe Targetを使用したパーソナライゼーション
+seo-title: Personalization using Adobe Target
 description: Adobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、提供する方法を示す、エンドツーエンドのチュートリアルです。
-seo-description: Adobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、提供する方法を示す、エンドツーエンドのチュートリアルです。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '587'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ WKNDサイトのデザインが変更され、現在のホームページの訪�
    * [AEMオーサーインスタンスとパブリッシュイン](./implementation.md#getting-aem) スタンスは、それぞれlocalhost 4502と4503で実行されます。
    * [Adobe Experience Platform Launchを使用したAdobe Targetとの統合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションでプロビジョニングされたExperience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
