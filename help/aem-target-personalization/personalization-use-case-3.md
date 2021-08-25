@@ -1,15 +1,15 @@
 ---
 title: Adobe Target Visual Experience Composerを使用したパーソナライゼーション
-seo-title: Adobe Target Visual Experience Composer(VEC)を使用したパーソナライゼーション
+seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
 description: Adobe Target Visual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示す、エンドツーエンドのチュートリアルです。
-seo-description: Adobe Target Visual Experience Composer(VEC)を使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示す、エンドツーエンドのチュートリアルです。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '583'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ WKNDサイトのホームページには、ローカルのアクティビティ�
    * [4503でのAEMパブリ](./implementation.md#getting-aem) ッシュインスタンス
    * [Adobe Experience Platform Launchを使用したAdobe Targetとの統合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * [Adobe Target](https://experiencecloud.adobe.com)でプロビジョニングされたExperience Cloud
 
 ## マーケターアクティビティ
