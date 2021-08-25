@@ -1,15 +1,15 @@
 ---
 title: AEMエクスペリエンスフラグメントとAdobe Targetを使用したパーソナライゼーション
-seo-title: Adobe Experience Manager(AEM)エクスペリエンスフラグメントとAdobe Targetを使用したパーソナライゼーション
+seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
 description: Adobe Experience ManagerエクスペリエンスフラグメントとAdobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示す、エンドツーエンドのチュートリアルです。
-seo-description: Adobe Experience ManagerエクスペリエンスフラグメントとAdobe Targetを使用してパーソナライズされたエクスペリエンスを作成し、配信する方法を示す、エンドツーエンドのチュートリアルです。
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1692'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ WKNDサイトは、自社のウェブサイトを通じてアメリカ全土で&
 * **AEM**
    * [AEMオーサーインスタンスとパブリッシュイン](./implementation.md#getting-aem) スタンスは、それぞれlocalhost 4502と4503で実行されます。
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションでプロビジョニングされたExperience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -79,7 +79,7 @@ WKNDサイトは、自社のウェブサイトを通じてアメリカ全土で&
 
 ### GeoTargetingを使用するオーディエンスの作成 {#marketer-audience}
 
-1. 組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experiencecloud.adobe.com)に移動します。
+1. 組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`<https://<yourcompany>.experiencecloud.adobe.com`)に移動します。
 1. Adobe IDを使用してログインし、正しい組織に属していることを確認します。
 1. ソリューション切り替えボタンで、「**Target**」をクリックし、**Adobe Targetを起動します。**
 
