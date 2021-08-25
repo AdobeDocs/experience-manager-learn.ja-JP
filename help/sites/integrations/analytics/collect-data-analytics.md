@@ -2,15 +2,15 @@
 title: Adobe Analyticsでのページデータの収集
 description: イベントドリブン型のAdobeクライアントデータレイヤーを使用して、Adobe Experience Managerで作成されたWebサイト上のユーザーアクティビティに関するデータを収集します。 Experience Platform Launchでルールを使用してこれらのイベントをリッスンし、データをAdobe Analyticsレポートスイートに送信する方法を説明します。
 version: cloud-service
-topic: 統合
+topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2375'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 4%
 AEM環境を設定してWKNDコードベースをインストールする代わりに、Experience Platformデバッガーを使用して、ライブ[https://wknd.site/](https://wknd.site/)を&#x200B;** Launchプロパティに&#x200B;**切り替えることができます。**&#x200B;もちろん、既に[Adobeクライアントデータレイヤーが有効になっている場合は、独自のAEMサイトを使用できます。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Experience Platform Launchにログインし、[Launchプロパティ](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)を作成します（まだ作成していない場合）。
-1. 最初のLaunch [ライブラリが作成され、](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)Launch [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)に昇格されていることを確認します。
+1. 最初のLaunch [ライブラリが作成され、](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)Launch [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)に昇格されていることを確認します。
 1. ライブラリの公開先の環境からLaunch埋め込みコードをコピーします。
 
    ![Launch埋め込みコードのコピー](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Adobeクライアントデータレイヤーは、**イベント**&#x200B;駆動
 
    `event`オブジェクトは、カスタムイベントで呼び出される`trigger()`メソッドから渡されます。 `component` は、カスタムイベントのデータレイヤーから派生 `getState` した現在のページです。以前の[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)をデータレイヤーで公開して、すぐに使用できる様々なキーを確認できるようにしたことを思い出してください。
 
-1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)にコードを昇格させます。
+1. 変更を保存し、Launchで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEMサイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)にコードを昇格させます。
 
    >[!NOTE]
    >
