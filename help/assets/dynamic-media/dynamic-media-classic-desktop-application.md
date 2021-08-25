@@ -1,17 +1,16 @@
 ---
 title: Dynamic Media Classicデスクトップアプリケーションの使用
 description: Adobeでは、Dynamic Media Classicユーザー向けのデスクトップアプリケーションを導入し、ブラウザーでAdobeFlashテクノロジーに依存しなくなりました。
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '189'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 1%
 
 Adobeには、AdobeFlashプレーヤーに依存しない、ブラウザーや機能的に同等のインターフェイスと同様のエクスペリエンスを提供する、Dynamic Media Classic用のデスクトップアプリケーションが導入されています。
 
->[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -36,7 +35,6 @@ AdobeDynamic Media Classicデスクトップアプリケーションは、次の
 
 ## サポート資料
 
-* [AdobeDynamic Media Classicデスクトップアプリケーションのドキュメント](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [AdobeDynamic Mediaに関するよくある質問](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/new-ui-2020.html)
-* [ダウンロード — macOS用ディスクイメージファイル(.dmg)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.dmg)
-* [ダウンロード — Windowsの実行可能ファイル(.exe)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.exe)
+* [AdobeDynamic Media Classicデスクトップアプリケーションのドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
+* [AdobeDynamic Mediaに関するよくある質問](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Dynamic Media Classicデスクトップアプリケーションのダウンロード](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
