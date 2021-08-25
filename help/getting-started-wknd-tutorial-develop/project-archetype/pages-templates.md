@@ -1,20 +1,16 @@
 ---
 title: AEM Sitesの概要 — ページとテンプレート
-seo-title: AEM Sitesの概要 — ページとテンプレート
 description: ベースページコンポーネントと編集可能なテンプレートとの関係について説明します。 コアコンポーネントがプロジェクト内でどのようにプロキシされるかを理解し、Adobe XDのモックアップに基づいて適切に構造化された記事ページテンプレートを構築するための、編集可能なテンプレートの高度なポリシー設定を学びます。
-sub-product: サイト
-version: 6.4, 6.5, Cloud Service
-type: Tutorial
-feature: コアコンポーネント、編集可能なテンプレート、ページエディター
-topic: コンテンツ管理、開発
+feature: Core Components, Editable Templates, Page Editor
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3100'
+source-wordcount: '3082'
 ht-degree: 2%
 
 ---
@@ -57,7 +53,7 @@ ht-degree: 2%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-[GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution)で完成したコードをいつでも表示したり、ブランチ`tutorial/pages-templates-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
+[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/pages-templates-solution)で完成したコードをいつでも表示したり、ブランチ`tutorial/pages-templates-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
 
 ## 目的
 
