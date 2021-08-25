@@ -3,13 +3,13 @@ title: AEM AssetsでのAdobe Stock Assetsの使用
 description: 'AEMでは、Adobe StockアセットをAEMから直接検索、プレビュー、保存、ライセンスを取得できます。 Adobe Stock EnterpriseプランとAEM Assetsを統合して、AEMの強力なアセット管理機能を使用して、ライセンスが必要なアセットをクリエイティブプロジェクトやマーケティングプロジェクトに幅広く活用できるようになりました。 '
 feature: Adobe Stock
 version: 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 15%
+source-wordcount: '1037'
+ht-degree: 10%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 15%
 
 AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュー、保存およびライセンスを取得できます。 Adobe Stock EnterpriseプランとAEM Assetsを統合して、AEMの強力なアセット管理機能を使用して、ライセンスが必要なアセットをクリエイティブプロジェクトやマーケティングプロジェクトに幅広く活用できるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -72,11 +72,11 @@ AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュ
 
 >[!NOTE]
 >
->この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。[](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.2.0-Service-Pack)AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。また、[Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)およびAdobe Experience Managerに対する管理者権限も必要です。
+>この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。[](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atitleorderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。また、[Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)およびAdobe Experience Managerに対する管理者権限も必要です。
 
 ### インストール {#installations}
 
-* AEM 6.4の場合は、[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)をインストールしてから、cq-dam-stock-integration-content-1.0.4.zipファイルを再インストールする必要があります。
+* AEM 6.4の場合は、[AEM Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atitleorderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)をインストールしてから、cq-dam-stock-integration-content-1.0.4.zipファイルを再インストールする必要があります。
 * [Adobe I/Oコンソール](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)およびAdobe Experience Managerの管理者権限を持っていることを確認して、統合を設定します。
 
 #### Adobeコンソールを使用したAdobe I/OIMS設定 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
@@ -106,7 +106,7 @@ AEM 6.4.2では、Adobe StockアセットをAEMから直接検索、プレビュ
 ### その他のリソース
 
 * [エンタープライズストックプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
-* [AEM と Adobe Stock の統合](https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html#IntegrateAEMandAdobeStock)
+* [AEM 6.4 Service Pack 2リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/sp-release-notes.html?lang=en)
+* [AEM と Adobe Stock の統合](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [Adobe I/Oコンソール統合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock APIドキュメント](https://www.adobe.io/apis/creativecloud/stock/docs.html)
