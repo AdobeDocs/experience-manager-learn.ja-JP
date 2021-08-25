@@ -1,15 +1,15 @@
 ---
 title: Cloud Servicesを使用したAdobe Experience ManagerとAdobe Targetの統合
-seo-title: レガシーCloud Servicesを使用したAdobe Experience Manager(AEM)とAdobe Targetの統合
+seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
 description: AEMCloud Serviceを使用したAdobe Experience Manager(AEM)とAdobe Targetの統合方法に関する詳しい手順
-seo-description: AEMCloud Serviceを使用したAdobe Experience Manager(AEM)とAdobe Targetの統合方法に関する詳しい手順
-feature: エクスペリエンスフラグメント
-topic: パーソナライズ機能
+seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '351'
 ht-degree: 3%
 
 ---
@@ -32,14 +32,13 @@ AEMエクスペリエンスフラグメントオファーを使用してパー�
    * このチュートリアルを完了するには、AEMオーサーインスタンスとパブリッシュインスタンスが必要です。 AEMインスタンスをまだ設定していない場合は、[ここ](./implementation.md#set-up-aem)の手順に従います。
 
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションでプロビジョニングされたExperience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
       >[!NOTE]
       >
       > お客様は、[Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)からExperience Platform LaunchとAdobe I/Oをプロビジョニングするか、システム管理者に問い合わせる必要があります
-
 
 
 ### AEMとAdobe Targetの統合
