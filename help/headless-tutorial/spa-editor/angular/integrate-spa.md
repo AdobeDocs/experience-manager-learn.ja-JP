@@ -1,7 +1,7 @@
 ---
 title: SPAの統合 | AEM SPA EditorとAngularの概要
 description: angularで記述されたシングルページアプリケーション(SPA)のソースコードをAdobe Experience Manager(AEM)プロジェクトと統合する方法を説明します。 angularのCLIツールなどの最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対してSPAを迅速に開発する方法を説明します。
-sub-product: サイト
+sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -13,15 +13,15 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2191'
 ht-degree: 3%
 
 ---
 
 
-# SPA {#integrate-spa}の統合
+# SPAの統合 {#integrate-spa}
 
 angularで記述されたシングルページアプリケーション(SPA)のソースコードをAdobe Experience Manager(AEM)プロジェクトと統合する方法を説明します。 webpack開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を説明します。
 
@@ -67,7 +67,7 @@ angularで記述されたシングルページアプリケーション(SPA)の�
 
 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/integrate-spa-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
 
-## 統合アプローチ{#integration-approach}
+## 統合アプローチ {#integration-approach}
 
 AEMプロジェクトの一部として、2つのモジュールが作成されました。`ui.apps`と`ui.frontend`が表示されます。
 
@@ -77,13 +77,13 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
 *SPA統合の概要です。*
 
-フロントエンドビルドに関する追加情報は、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
+フロントエンドビルドに関する追加情報は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
 
-## Inspect SPA統合{#inspect-spa-integration}
+## InspectとSPAの統合 {#inspect-spa-integration}
 
-次に、 `ui.frontend`モジュールを調べて、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)によって自動生成されたSPAを理解します。
+次に、 `ui.frontend`モジュールを調べて、[AEMプロジェクトのアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)によって自動生成されたSPAを理解します。
 
-1. 任意のIDEで、WKND SPA用のAEMプロジェクトを開きます。 このチュートリアルでは、[Visual Studio Code IDE](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)を使用します。
+1. 任意のIDEで、WKND SPA用のAEMプロジェクトを開きます。 このチュートリアルでは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)を使用します。
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -112,7 +112,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上記のモジュールは、[AEM SPA Editor JS SDK](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-blueprint.html)を構成し、SPAコンポーネントをAEMコンポーネントにマッピングできるようにする機能を提供します。
+   上記のモジュールは、[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)を構成し、SPAコンポーネントをAEMコンポーネントにマッピングできるようにする機能を提供します。
 
 5. `package.json`ファイルでは、複数の`scripts`が定義されます。
 
@@ -132,11 +132,11 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    `build` ：実稼動用にAngularアプリをコンパイルします。ビルド中に、コンパイル済みのSPAをクライアント側ライブラリとして`ui.apps`モジュールにコピーする役割を`&& clientlib`を追加しました。 npmモジュール[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)を使用して、これを容易にします。
 
-   使用可能なスクリプトの詳細は、[こちら](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
+   使用可能なスクリプトの詳細は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
 
 6. `ui.frontend/clientlib.config.js` ファイルを検査します。この設定ファイルは、[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)でクライアントライブラリの生成方法を決定するために使用されます。
 
-7. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、`ui.frontend`フォルダーを[Mavenモジュール](http://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。 `pom.xml`ファイルが更新され、Mavenのビルド中に[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)を&#x200B;**test**&#x200B;および&#x200B;**build**&#x200B;にSPAを使用するようになりました。
+7. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、`ui.frontend`フォルダーを[Mavenモジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。 `pom.xml`ファイルが更新され、Mavenのビルド中に[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)を&#x200B;**test**&#x200B;および&#x200B;**build**&#x200B;にSPAを使用するようになりました。
 
 8. `ui.frontend/src/app/app.component.ts`にあるファイル`app.component.ts`をInspectにします。
 
@@ -167,7 +167,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    `app.component.js` は、SPAのエントリポイントです。`ModelManager` は、AEM SPA Editor JS SDKで提供されます。これは、を呼び出し、アプリケーションに`pageModel` （JSONコンテンツ）を挿入する役割を果たします。
 
-## ヘッダーコンポーネント{#header-component}を追加します。
+## ヘッダーコンポーネントの追加 {#header-component}
 
 次に、SPAに新しいコンポーネントを追加し、変更をローカルのAEMインスタンスにデプロイして統合を確認します。
 
@@ -265,7 +265,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    手順&#x200B;**7～9**&#x200B;は、プロジェクトのルートからMavenビルドをトリガーすると(`mvn clean install -PautoInstallSinglePackage`)自動的に実行されます。 これで、SPAとAEMのクライアント側ライブラリ間の統合の基本を理解する必要があります。 AEMでは引き続き`Text`コンポーネントを編集および追加できますが、`Header`コンポーネントは編集できません。
 
-## Webpack Dev Server - JSON APIをプロキシする{#proxy-json}
+## Webpack Dev Server - JSON APIのプロキシ {#proxy-json}
 
 前の演習で見たように、クライアントライブラリをビルドしてAEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストでは許容されますが、SPA開発の大部分には理想的ではありません。
 
@@ -649,7 +649,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    更新されたSPAがAEMになったので、オーサリングを続行できます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、SPAを更新し、AEMとの統合を確認しました。 **webpack開発サーバー**&#x200B;を使用してAEM JSONモデルAPIに対するSPAを開発する方法が2つあります。
 
