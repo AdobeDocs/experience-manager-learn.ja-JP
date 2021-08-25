@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1398'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 _この章のIDEスクリーンショットは、 [Visual Studio Codeから取得したものです](https://code.visualstudio.com/)_
 
-オプションで、[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)などのブラウザー拡張機能をインストールして、GraphQLクエリの詳細を表示できるようにします。
+オプションで、[GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)などのブラウザー拡張機能をインストールして、GraphQLクエリの詳細を表示できるようにします。
 
 ## 目的
 
@@ -74,7 +74,7 @@ Reactアプリの起動について詳しくは、[クイックセットアッ�
 
       ![WKND GraphQL Reactアプリ — 詳細エクスペリエンス](./assets/graphql-and-external-app/react-details-view.png)
 
-1. ブラウザーの開発ツールと、[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)などのブラウザー拡張を使用して、AEMに送信されたGraphQLクエリとそのJSON応答を調べます。 このアプローチは、GraphQL要求と応答を監視して、正しく作成され、応答が期待どおりにおこなわれていることを確認するために使用できます。
+1. ブラウザーの開発ツールと、[GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)などのブラウザー拡張を使用して、AEMに送信されたGraphQLクエリとそのJSON応答を調べます。 このアプローチは、GraphQL要求と応答を監視して、正しく作成され、応答が期待どおりにおこなわれていることを確認するために使用できます。
 
    ![adventureListの生のクエリ](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
