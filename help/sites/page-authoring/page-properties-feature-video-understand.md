@@ -1,23 +1,17 @@
 ---
 title: AEM Sitesのページプロパティについて
-seo-title: Adobe Experience Manager Sitesのページプロパティについて
 description: 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティメタデータを紹介します。
-seo-description: '次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティメタデータを紹介します。 '
-feature: ページエディター
-topics: authoring, metadata
-audience: author, marketer
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
-kt: 4321
-thumbnail: 32192.jpg
-topic: コンテンツ管理
+topic: Content Management
+feature: Page Editor
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4321
+thumbnail: 32192.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 33%
+source-wordcount: '138'
+ht-degree: 42%
 
 ---
 
@@ -64,4 +58,5 @@ ht-degree: 33%
 
 * [ページプロパティの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [ページコンテンツの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sitesオーサリングユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+
