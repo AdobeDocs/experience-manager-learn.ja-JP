@@ -2,16 +2,16 @@
 title: ローカル AEM 開発環境の設定
 description: Adobe Experience Manager、AEM用のローカル開発の設定ガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングの重要なトピックについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJを使用した開発について説明します。
 version: 6.4, 6.5
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
 activity: develop
 audience: developer
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2658'
 ht-degree: 8%
 
 ---
@@ -207,12 +207,12 @@ IDEを使用する場合は、「Mavenプロファイル」タブで`classic`を
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;は、オープンソースで&#x200B;***無料***&#x200B;なので、Java開発用のIDEの中でも一般的なものの1つです。 Adobeには、**[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)**&#x200B;というプラグインが用意されています。[!DNL Eclipse]を使用すると、優れたGUIで開発を容易にし、コードをローカルのAEMインスタンスと同期できます。 [!DNL Eclipse] IDEは、[!DNL AEM Developer Tools]によるGUIのサポートのため、AEMを初めて使用する開発者に推奨されます。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;は、オープンソースで&#x200B;***無料***&#x200B;なので、Java開発用のIDEの中でも一般的なものの1つです。 Adobeには、**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**&#x200B;というプラグインが用意されています。[!DNL Eclipse]を使用すると、優れたGUIで開発を容易にし、コードをローカルのAEMインスタンスと同期できます。 [!DNL Eclipse] IDEは、[!DNL AEM Developer Tools]によるGUIのサポートのため、AEMを初めて使用する開発者に推奨されます。
 
 #### インストールとセットアップ
 
 1. [!DNL Eclipse] IDEを[!DNL Java EE Developers]用にダウンロードしてインストールします。[https://www.eclipse.org](https://www.eclipse.org/)
-1. [!DNL AEM Developer Tools]プラグインをインストールする手順に従います。[https://eclipse.adobe.com/aem/dev-tools/](https://eclipse.adobe.com/aem/dev-tools/)
+1. [!DNL AEM Developer Tools]プラグインをインストールする手順に従います。[https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
