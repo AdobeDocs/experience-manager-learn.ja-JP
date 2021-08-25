@@ -2,17 +2,12 @@
 title: アップグレード理由の理解
 description: お客様が最新バージョンのAdobe Experience Managerへのアップグレードを検討する際の主な機能の大まかな分類。
 version: 6.5
-sub-product: アセット， cloud-manager，コマース，コンテンツサービス， dynamic-media，フォーム，基盤，スクリーン，サイト
-topics: best-practices, upgrade
-audience: all
-activity: understand
-doc-type: article
-topic: アップグレード
+topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3462'
 ht-degree: 6%
 
 ---
@@ -342,7 +337,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/security/saml-2-0-authenticationhandler.html" target="_blank">SAML認証のサポートの向</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/?lang=ja" target="_blank">SAML認証のサポートの向</a><br>
  </strong>上SAMLリダイレクト、最適化されたグループ情報、および鍵の暗号化の問題が解決されました。 
             <br>
         </td>
@@ -503,7 +498,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">スタイルシステム</a>:</strong>
+            <td><strong>スタイルシステム：</strong>
             コンテキスト内スタイルシステムを使用して外観を定義し、AEMコンポーネントの再利用を増やします。</td>
             <td> </td>
             <td> </td>
@@ -558,7 +553,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-understand.html" target="_blank">コンテンツフラグメント</a>:</strong>
+            <td><strong>コンテンツフラグメント：</strong>
             編集用コンテンツを作成およびキュレーションし、プレゼンテーションから組み合わせを解除して、再利用しやすくします。</td>
             <td> </td>
             <td> </td>
@@ -580,7 +575,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/content-services-fragments-featurepack.html" target="_blank">コンテンツサービス</a>:</strong>
+            <td><strong>コンテンツサービス：</strong>
             デバイスやアプリケーションをまたいで使用するために、AEMからJSON形式でコンテンツを書き出します。</td>
             <td> </td>
             <td> </td>
@@ -635,7 +630,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-screens-introduction.html" target="_blank">Screens</a>:</strong>
+            <td><strong>Screens:</strong>
             デジタルサイネージとキオスクのエクスペリエンスを管理します。</td>
             <td> </td>
             <td> </td>
@@ -953,7 +948,7 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/ja-JP/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">ビューア</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">ビューア</a>:</strong>
             様々な画面やデバイスをサポートするカスタムブランドのリッチメディアプレーヤーおよびプリセット。</td>
             <td> </td>
             <td>✔</td>
@@ -991,8 +986,6 @@ AEMは、他のAdobeサービスと統合する機能を拡大します。
 ## Formsの機能
 
 AEMが提供する主なAEM Formsアドオン機能の一覧を以下に示します。 これらの機能の一部は、以前のバージョンで、各リリースで追加された増分機能の強化で導入されました。
-
-+ [AEM Formsリリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
 
 ***✔<sup> + </sup> このバージョンの機能が大幅に強化されました。***
 
@@ -1148,7 +1141,7 @@ AEMが提供する主なAEM Formsアドオン機能の一覧を以下に示し�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/pdf/aem-forms/6-5/WorkbenchHelp.pdf" target="_blank">Forms処理のワークフロー(J2EE)</a>:</strong>
+            <td><strong>Forms処理用のワークフロー(J2EE):</strong>
             直感的なIDEを使用して、複雑なフォームやドキュメント中心のワークフローを構築します。</td>
             <td></td>
             <td>✔</td>
@@ -1187,8 +1180,6 @@ AEMが提供する主なAEM Formsアドオン機能の一覧を以下に示し�
 ## Communities の機能
 
 AEMが提供する主なAEM Communitiesアドオン機能の一覧を以下に示します。 これらの機能の一部は、以前のバージョンで、各リリースで追加された増分機能の強化で導入されました。
-
-+ [AEM Communitiesの新機能の概要](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
 ***✔<sup> + </sup> このバージョンの機能が大幅に強化されました。***
 
@@ -1628,7 +1619,7 @@ AEMが提供する主なAEM Communitiesアドオン機能の一覧を以下に�
     </tbody>
 </table>
 
-AEM Communitiesは、次の方法で組織がユーザーを惹きつけ、ユーザーを有効にできるようにする[機能強化](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html)をリリースを追加しました。
+AEM Communitiesは、次の方法で組織がユーザーをエンゲージメントおよび有効にできるように、リリースを通じて機能強化を追加しました。
 
 + **ユーザ** ー生成コンテンツでの@mentionsupport。
 + **イネーブルメント**&#x200B;コンポーネントの&#x200B;**キーボードナビゲーション**&#x200B;によるアクセシビリティの改善。
