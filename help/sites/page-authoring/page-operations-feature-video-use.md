@@ -1,23 +1,17 @@
 ---
 title: AEM Sitesでの基本的なページ操作
-seo-title: AEM Sitesでの基本的なページ操作
 description: 次のビデオでは、Adobe Experience Manager Sitesページに対して基本的なページ管理操作を実行する方法について重点的に説明します。
-seo-description: 次のビデオでは、Adobe Experience Manager Sitesページに対して基本的なページ管理操作を実行する方法について重点的に説明します。
-feature: ページエディター、編集可能なテンプレート
-topics: authoring, publishing
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
-kt: 4245
-thumbnail: 32147.jpg
-topic: コンテンツ管理
+topic: Content Management
+feature: Page Editor, Editable Templates
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4245
+thumbnail: 32147.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 3%
+source-wordcount: '69'
+ht-degree: 11%
 
 ---
 
@@ -32,4 +26,4 @@ Adobe Experience Manager Sitesページの基本的なページ管理操作を�
 ## その他のリソース {#additional-resources}
 
 * [ページコンテンツの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sitesオーサリングユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
