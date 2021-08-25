@@ -3,12 +3,12 @@ title: Brand Portalの使用
 description: AEMオーサーとAEM Assets Brand Portalの統合のビデオウォークスルー。
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1764'
 ht-degree: 45%
 
 ---
@@ -30,7 +30,7 @@ Brand Portalのアセットソーシングは、サードパーティのエー�
 
 *Experience Managerソーシングを使用するには、アセットオーサー6.5 SP2(6.5.2)以降が必要です*
 
-Experience Manager作成者でExperience Managerソーシングを設定および設定する方法については、「アセットソーシング用のアセット作成者の有効化](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) 」を参照してください。[
+Experience Manager作成者でExperience Managerソーシングを設定および設定する方法については、「アセットソーシング用のアセット作成者の有効化](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=ja) 」を参照してください。[
 
 ## Brand Portal 2019年2月の機能および機能強化{#brand-portal-features-and-enhancements-644}
 
@@ -204,6 +204,6 @@ Brand PortalとAEMの連携に向けた機能強化が新たに追加されま�
 * [AEMオーサーレプリケーションエージェント](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Accelerated Downloadガイド](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand PortalAdobeドキュメント](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM Assets Dynamic MediaAdobeドキュメント](https://docs.adobe.com/docs/ja/aem/6-3/author/assets/dynamic-media.html)
+* [AEM Assets Dynamic MediaAdobeドキュメント](https://experienceleague.adobe.com/docs/?lang=ja)
 * [Aspera Connectのダウンロード](https://downloads.asperasoft.com/connect2/)
 * [Aspera Connectテストサーバー](https://test-connect.asperasoft.com/)
