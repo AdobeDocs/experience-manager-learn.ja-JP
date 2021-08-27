@@ -1,28 +1,28 @@
 ---
 title: リタイアメントの[Outlook]パネルの構成
-seo-title: リタイアメントの[Outlook]パネルの構成
+seo-title: Configuring Retirement Outlook Panel
 description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 ここでは、テキストとグラフのコンポーネントを追加して、リタイアメントの[Outlookパネル]を構成します。
-seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 ここでは、テキストとグラフのコンポーネントを追加して、リタイアメントの[Outlookパネル]を構成します。
+seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 1%
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# リタイアメントのOutlookパネルの構成{#configuring-retirement-outlook-panel}
+# リタイアメントの[Outlook]パネルの構成{#configuring-retirement-outlook-panel}
 
 * これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 ここでは、テキストとグラフのコンポーネントを追加して、リタイアメントの[Outlookパネル]を構成します。
 
@@ -56,13 +56,13 @@ ht-degree: 1%
 
 * デフォルトのテキストを「**Estimated Monthly Retieration Income」**&#x200B;に置き換えます。
 
-## 除・売却所得のOutlookドキュメント・フラグメントの追加{#add-retirement-income-outlook-document-fragment}
+## 除・売却所得のOutlookドキュメント・フラグメントの追加 {#add-retirement-income-outlook-document-fragment}
 
 * アセットアイコンをクリックし、「ドキュメントフラグメント」タイプのアセットを表示するフィルターを適用します。 RetiermentIncomeOutlookドキュメントフラグメントを[左パネル]のターゲット領域にドラッグ&amp;ドロップします。
 
-* コンテンツ領域にドキュメントフラグメントを追加する場合は、このページ[を参照してください。](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)
+* コンテンツ領域にドキュメントフラグメントを追加する場合は、このページ[を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)
 
-## 月次予測収入チャートの追加{#adding-estimated-monthly-income-chart}
+## 月次予測収入チャートの追加 {#adding-estimated-monthly-income-chart}
 
 * 右側のRightPanelターゲット領域をクリックします。 「+」アイコンをクリックして、グラフコンポーネントを挿入します。 列グラフを使用して、推定月収を表示します。 新しく挿入したグラフコンポーネントをそっとタップします。 「レンチ」アイコンを選択して、設定プロパティシートを開きます。下のスクリーンショットに示すように、次のプロパティを使用してグラフを設定します。
 

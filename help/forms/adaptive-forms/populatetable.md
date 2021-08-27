@@ -1,15 +1,15 @@
 ---
 title: 'アダプティブフォームの表への入力 '
 description: フォームデータモデルサービスの呼び出しの結果をアダプティブフォームの表に入力する
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Row1は、サービス呼び出しで返されるデータに応じて拡大す�
 
 ## サーバーにデプロイします
 
-[ここで指定したTomcatをイ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[ンストールするSampleRest.warファイルをデプロイするAEMパッケージマネージャーを使用してアセットをインストールするフォームを開く適切な値を入力](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-[ ](assets/amortizationschedule.zip) 
+[ここで指定したTomcatをインス](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[トールこのzipファイルに含まれるSampleRest.warファイルをデプロイしま](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[す。 AEMパッケージマネージャーを使用してアセットをインストールしま ](assets/amortizationschedule.zip) 
 [](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-し、「計算計画」をクリックしてフォームに入力します
+す。
 

@@ -2,14 +2,14 @@
 title: AEM Formsでの最初のOSGiバンドルの作成
 description: MavenとEclipseを使用して最初のOSGiバンドルを構築
 version: 6.4,6.5
-feature: アダプティブフォーム
-topic: 開発
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 4%
+source-wordcount: '840'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +40,7 @@ OSGiバンドルは、Javaコード、リソース、バンドルとその依存
 Mavenは、主にJavaプロジェクトで使用されるビルド自動化ツールです。 次の手順に従って、ローカルシステムにmavenをインストールします。
 
 * Cドライブに`maven`という名前のフォルダーを作成します。
-* [バイナリzipアーカイブ](http://maven.apache.org/download.cgi)をダウンロードします。
+* [バイナリzipアーカイブ](https://maven.apache.org/download.cgi)をダウンロードします。
 * zipアーカイブの内容を`c:\maven`に展開します。
 * `M2_HOME`という環境変数を作成し、値を`C:\maven\apache-maven-3.6.0`にします。 私の場合、**mvn**&#x200B;のバージョンは3.6.0です。この記事を書く時点で、最新のMavenのバージョンは3.6.3です
 * パスに`%M2_HOME%\bin`を追加します。

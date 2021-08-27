@@ -1,15 +1,15 @@
 ---
 title: AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定
 description: フォームデータモデルを使用したAEM FormsとSalesforceの統合
-feature: アダプティブForms、フォームデータモデル
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    * **AEM Forms 6.3**&#x200B;を使用している場合、コールバックURLはhttps://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.htmlになります。 このURLでは、createleadはフォームデータモデルの名前になります。
 
-   * ** AEM Forms 6.4**を使用している場合、コールバックURLは[https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)になります。
+   * ** AEM Forms 6.4**を使用している場合、コールバックURLはhttps://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.htmlになります。
 
 この例では、 gbedekar -w7-1:6443は、AEMが実行されているサーバーとポートの名前です。
 

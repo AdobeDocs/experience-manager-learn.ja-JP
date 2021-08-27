@@ -1,17 +1,17 @@
 ---
 title: サンプルのデプロイ
 description: ローカルのAEM Formsインスタンスで実行するユースケース
-feature: アダプティブフォーム
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,8 @@ OTPコードを送信および検証するための[Nexmo](https://dashboard.nex
 ## 次のOSGiバンドルをデプロイします。
 
 データベース](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)からデータを保存および取得する[コードを含むバンドルをデプロイします。
-[DevelopingWithServiceUserバンドル](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)をデプロイします。
+[developing-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip)をダウンロードして解凍します。
+Felix Webコンソールを使用してDevelopingWithServiceUser.jarファイルをデプロイします。
 
 ## クライアントライブラリのデプロイ
 

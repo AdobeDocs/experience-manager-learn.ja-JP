@@ -1,21 +1,21 @@
 ---
 title: AEM Formsでの複数シリーズグラフ
-seo-title: AEM Formsでの複数シリーズグラフ
+seo-title: Multi Series Charts in AEM Forms
 description: 適切なフォームデータモデルを作成し、印刷チャネルとWebチャネルのドキュメントで複数系列グラフを作成します。
-seo-description: 適切なフォームデータモデルを作成し、印刷チャネルとWebチャネルのドキュメントで複数系列グラフを作成します。
-feature: インタラクティブコミュニケーション
+seo-description: Create appropriate Form Data Model to create multi series charts in print and web channel documents.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 1%
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ AEM Formsで複数シリーズグラフを作成するには、必要なエン�
 
 * [AEMパッケージマネージャーを使用して、MutualFundFactSheet.zipをダウンロードし、インポートします。](assets/mutualfundfactsheet.zip)
 * [SeriesChartSampleData.jsonをハードドライブにダウンロードします。](assets/serieschartsampledata.json) これは、グラフの入力に使用されるサンプルデータです。
-* [「Formsとドキュメント」に移動します。](https://helpx.adobe.com/aem/forms.html/content/dam/formsanddocuments.html)
+* [「Formsとドキュメント」に移動します。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 「MutualFundGrowthFactSheet」インタラクティブコミュニケーションテンプレートを緩やかに選択します。
 * 「プレビュー」をクリックします。 |サンプルデータをアップロードします。
 * この記事の一部として提供されているサンプルデータファイルを参照します。

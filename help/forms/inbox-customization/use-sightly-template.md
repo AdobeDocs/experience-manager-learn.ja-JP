@@ -1,20 +1,20 @@
 ---
 title: インボックスのカスタマイズ
 description: sightlyテンプレートを使用して、ワークフローの追加データを表示するカスタム列を追加します
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 9%
+source-wordcount: '289'
+ht-degree: 8%
 
 ---
 
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->この記事では、このシリーズの[前の記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md)の[サンプルワークフロー](assets/review-workflow.zip)と[サンプルフォーム](assets/snap-form.zip)をインストール済みであることを前提としています。
+>この記事では、このシリーズの[前の記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)の[サンプルワークフロー](assets/review-workflow.zip)と[サンプルフォーム](assets/snap-form.zip)をインストール済みであることを前提としています。
 
 * [crxに管理者ユーザーとしてログインします。](http://localhost:4502/crx/de/index.jsp)
 * [sightlyテンプレートのインポート](assets/sightly-template.zip)

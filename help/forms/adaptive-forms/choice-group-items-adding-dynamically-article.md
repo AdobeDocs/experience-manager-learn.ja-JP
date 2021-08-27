@@ -1,14 +1,14 @@
 ---
 title: 選択グループコンポーネントへの項目の追加
 description: 項目を選択グループコンポーネントに動的に追加する
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.5
-topic: 開発
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '520'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 AEM Forms 6.5では、チェックボックス、ラジオボタン、画像リストなど、アダプティブForms選択グループコンポーネントに項目を動的に追加する機能が導入されました。
 
-[この機能は、サンプルサーバー上で有効に使用できます](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。動的チェックボックス項目カードを検索し、「試す」をクリックします。
+[この機能は、サンプルサーバー上で有効に使用できます](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。動的チェックボックス項目カードを検索し、「試す」をクリックします。
 
 
 使用事例に応じて、Visual Editorやコードエディターを使用して項目を追加できます。
@@ -91,7 +91,7 @@ else
 
 * [アセットのダウンロード](assets/usingthevisualeditor.zip)
 * Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [TomcatでのSampleRest.warファイルのデプロイ](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+* [このzipファイルに含まれるSampleRest.warファイルをデプロイします](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
 * [Formsとドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 「作成 「|ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします。
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

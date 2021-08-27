@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1597'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 3%
 + [概要](overview.md)
 + [従うべきベストプラクティス](adaptive-forms/best-practices-adaptive-forms.md)
 + [AEMオーサーでのOKTA認証の設定](adaptive-forms/single-sign-on-with-okta.md)
-+ [最初のOSGiバンドルの作成](adaptive-forms/create-your-first-osgi-bundle.md)
 + 最初のアダプティブフォーム{#creating-your-first-adaptive-form}の作成
    + [概要とセットアップ](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [アダプティブフォームテンプレートの作成](creating-your-first-adaptive-form/create-adaptive-form-template.md)
