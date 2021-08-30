@@ -6,9 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Row1は、サービス呼び出しで返されるデータに応じて拡大す�
 ## サーバーにデプロイします
 
 [ここで指定したTomcatをインス](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[トールこのzipファイルに含まれるSampleRest.warファイルをデプロイしま](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[トールこのzipファイルに含まれるSampleRest.warファイルをTomcatにデプロイしま](assets/sample-rest.zip)
 [す。 AEMパッケージマネージャーを使用してアセットをインストールしま ](assets/amortizationschedule.zip) 
 [](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 す。

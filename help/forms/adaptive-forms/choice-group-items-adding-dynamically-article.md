@@ -6,9 +6,9 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
@@ -91,7 +91,7 @@ else
 
 * [アセットのダウンロード](assets/usingthevisualeditor.zip)
 * Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [このzipファイルに含まれるSampleRest.warファイルをデプロイします](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+* [このzipファイルに含まれるSampleRest.warファイルをTomcatにデプロイします。](assets/sample-rest.zip)
 * [Formsとドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 「作成 「|ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします。
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

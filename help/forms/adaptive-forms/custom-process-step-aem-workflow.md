@@ -1,14 +1,14 @@
 ---
 title: カスタムプロセスステップの実装
 description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
-feature: ワークフロー
+feature: Workflow
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '815'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ## Mavenプロジェクトの作成
 
-最初の手順は、適切なAdobeMavenアーキタイプを使用してMavenプロジェクトを作成することです。 詳細な手順は、この[記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en)に記載されています。 MavenプロジェクトをEclipseに読み込んだら、プロセスステップで使用できる最初のOSGiコンポーネントを記述する準備が整います。
+最初の手順は、適切なAdobeMavenアーキタイプを使用してMavenプロジェクトを作成することです。 詳細な手順は、この[記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)に記載されています。 MavenプロジェクトをEclipseに読み込んだら、プロセスステップで使用できる最初のOSGiコンポーネントを記述する準備が整います。
 
 
 ### WorkflowProcessを実装するクラスを作成する
