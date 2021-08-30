@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets Essentialsのビデオ�
 breadcrumb-title: AEM Assets Essentialsビデオ
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: 2edcaa0e10121f75ac3081eb00e8c1419400a205
+source-git-commit: 32917f4fe6be88b1ee1d1f7da1c02d0f81c20fe7
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '66'
 ht-degree: 15%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 15%
 
 + Adobeワークフロントの統合{#workfront}
    + [設定](./integrations/workfront/configure.md)
+   + [メタデータのマッピング](./integrations/workfront/map-metadata.md)
    + [ドキュメントの送信とアセットのリンク](./integrations/workfront/link-send.md)
    + [バージョン履歴](./integrations/workfront/versions.md)
 
