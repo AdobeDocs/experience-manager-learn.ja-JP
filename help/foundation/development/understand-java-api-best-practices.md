@@ -6,10 +6,10 @@ feature: APIs
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '2030'
-ht-degree: 7%
+source-wordcount: '2021'
+ht-degree: 6%
 
 ---
 
@@ -61,7 +61,7 @@ AEMがAPIを提供する場合は、[!DNL Sling]、JCR、OSGiよりもAPIを優�
 
 AEM APIは、製品化された使用例に固有の抽象概念と機能を提供します。
 
-例えば、AEM [PageManager](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)および[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) APIは、Webページを表すAEMの`cq:Page`ノードの抽象概念を提供します。
+例えば、AEM [PageManager](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)および[Page](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) APIは、Webページを表すAEMの`cq:Page`ノードの抽象概念を提供します。
 
 これらのノードはリソースとして[!DNL Sling] APIを介して、ノードとしてJCR APIを介して使用できますが、AEM APIは一般的な使用例の抽象概念を提供します。 AEM APIを使用すると、AEM製品と、AEMのカスタマイズおよび拡張との間で一貫した動作が保たれます。
 
@@ -95,7 +95,7 @@ AEMは複数のクエリ言語をサポートしています。 3つの主な言
 * [一般的な](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) クエリ要件をサポートするAEM述語
 
 * 拡張可能なAPI。カスタムの[クエリ述語](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)の開発を可能にします。
-* JCR-SQL2およびXPathは、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)および[JCR API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)を介して直接実行でき、 [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)または[JCR Nodes](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)をそれぞれ返します。
+* JCR-SQL2およびXPathは、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)および[JCR API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)を介して直接実行でき、 [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)または[JCR Nodes](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)をそれぞれ返します。
 
 >[!CAUTION]
 >
@@ -131,9 +131,9 @@ AEMは複数のクエリ言語をサポートしています。 3つの主な言
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)は、JCR実装の仕様の一部です(AEMの場合は[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 すべてのJCR実装は、これらのAPIに準拠し実装する必要があるので、AEMコンテンツを操作するための最も低いレベルのAPIです。
+[JCR(Java Content Repository)2.0 API](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)は、JCR実装の仕様の一部です(AEMの場合は[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))。 すべてのJCR実装は、これらのAPIに準拠し実装する必要があるので、AEMコンテンツを操作するための最も低いレベルのAPIです。
 
 JCR自体は、階層/ツリーベースのNoSQLデータストアAEMをコンテンツリポジトリとして使用します。 JCRには、コンテンツCRUDからコンテンツのクエリに至るまで、サポートされているAPIの広範な配列があります。 この堅牢なAPIにもかかわらず、上位レベルのAEMや[!DNL Sling]抽象よりも優先されることはまれです。
 
@@ -150,7 +150,7 @@ JCRはAEMコンテンツリポジトリですが、APIはコンテンツを操�
 ### JCR APIの一般的な使用方法
 
 * [アクセス制御管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
-* [認証可能な管理（ユーザー/グループ）](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/user/package-summary.html)
+* [認証可能な管理（ユーザー/グループ）](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCRの監視（JCRイベントのリッスン）
 * ディープノード構造の作成
 
@@ -175,7 +175,7 @@ OSGiは、すべてのOSGiコンテナが実装および準拠する必要があ
 
 * OSGiサービスおよびコンポーネントを宣言するためのOSGi注釈。
 
-   * OSGiサービスおよびコンポーネントを宣言するには、[OSGi Declarative Services(DS)1.2 Annotation](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)を[Felix SCR注釈](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html)よりも優先します。
+   * OSGiサービスおよびコンポーネントを宣言するには、[OSGi Declarative Services(DS)1.2 Annotations](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)を[Felix SCR注釈](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html)よりも優先します。
 
 * 動的なコード内の[のOSGi APIは、OSGiサービス/コンポーネント](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)の登録を解除します。
 
@@ -206,7 +206,7 @@ OSGiは、すべてのOSGiコンテナが実装および準拠する必要があ
 
 ## 便利なコードスニペット
 
-以下は、説明したAPIを使用する一般的な使用例のベストプラクティスを示すJavaコードスニペットです。 また、これらのスニペットでは、優先度の低いAPIからより優先度の高いAPIに移行する方法を説明します。
+以下は、説明したAPIを使用する一般的な使用例のベストプラクティスを示すJavaコードスニペットです。 これらのスニペットでは、優先度の低いAPIからより優先度の高いAPIに移行する方法も示しています。
 
 ### [!DNL Sling] ResourceResolverに対するJCRセッション
 

@@ -7,10 +7,10 @@ topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 3%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ _asset computeプロジェクトの生成のクリックスルー（オーディ
 
 1. コマンドラインから、プロジェクトを含むフォルダに移動します。
 1. コマンドラインから`aio app init`を実行し、インタラクティブなプロジェクト生成CLIを開始します。
-   + このコマンドは、認証を求めるWebブラウザを起動する場合があります。Adobe I/Oその場合は、必要なAdobeサービスと製品](../set-up/accounts-and-services.md)に関連付けられたAdobe資格情報を提供します。 [ログインできない場合は、以下の手順に従って、プロジェクト](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)を生成します。[
+   + このコマンドは、認証を求めるWebブラウザを起動する場合があります。Adobe I/Oその場合は、[必要なAdobe サービスと製品](../set-up/accounts-and-services.md)に関連付けられたAdobe資格情報を提供します。 ログインできない場合は、以下の手順に従って、プロジェクト](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)を生成します。[
 1. __組織を選択__
    + AEMをAdobeとして持つCloud Service組織を選択します。Project Fireflyは次の場所に登録されています。
 1. __プロジェクトを選択__
@@ -86,7 +86,7 @@ _asset computeプロジェクトの生成のクリックスルー（オーディ
    + このファイルは、`aio app use`コマンドを使用して生成/更新できます。
    + このファイルで定義された変数は、コマンドラインで[変数](../deploy/runtime.md)を書き出すことで上書きできます。
 
-プロジェクト構造のレビューの詳細については、「[AdobeProject Fireflyプロジェクトの分析](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)」を参照してください。
+プロジェクト構造のレビューの詳細については、「[AdobeProject Fireflyプロジェクトの分析](https://www.adobe.io/project-firefly/docs/guides/)」を参照してください。
 
 開発の大部分は、ワーカー実装を開発する`/actions`フォルダーと、カスタムAsset computeワーカーのテストを記述する`/test/asset-compute`フォルダーで行われます。
 

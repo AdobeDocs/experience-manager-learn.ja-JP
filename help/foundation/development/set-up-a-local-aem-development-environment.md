@@ -9,9 +9,9 @@ audience: developer
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '2658'
+source-wordcount: '2661'
 ht-degree: 8%
 
 ---
@@ -207,12 +207,12 @@ IDEを使用する場合は、「Mavenプロファイル」タブで`classic`を
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;は、オープンソースで&#x200B;***無料***&#x200B;なので、Java開発用のIDEの中でも一般的なものの1つです。 Adobeには、**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**&#x200B;というプラグインが用意されています。[!DNL Eclipse]を使用すると、優れたGUIで開発を容易にし、コードをローカルのAEMインスタンスと同期できます。 [!DNL Eclipse] IDEは、[!DNL AEM Developer Tools]によるGUIのサポートのため、AEMを初めて使用する開発者に推奨されます。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;は、オープンソースで&#x200B;***無料***&#x200B;なので、Java開発用のIDEの中でも一般的なものの1つです。 Adobeには、**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**&#x200B;というプラグインが用意されています。[!DNL Eclipse]を使用すると、優れたGUIで開発を容易にし、コードをローカルAEMインスタンスと同期できます。 [!DNL Eclipse] IDEは、[!DNL AEM Developer Tools]によるGUIのサポートのため、AEMを初めて使用する開発者に推奨されます。
 
 #### インストールとセットアップ
 
 1. [!DNL Eclipse] IDEを[!DNL Java EE Developers]用にダウンロードしてインストールします。[https://www.eclipse.org](https://www.eclipse.org/)
-1. [!DNL AEM Developer Tools]プラグインをインストールする手順に従います。[https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
+1. [!DNL AEM Developer Tools]プラグインをインストールする手順に従います。[https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 

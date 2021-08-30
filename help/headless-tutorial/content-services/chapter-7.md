@@ -1,13 +1,13 @@
 ---
 title: 第7章 — モバイルアプリからのAEM Content Servicesの使用 — Content Services
 description: チュートリアルの第7章では、AEM Content Servicesから作成したコンテンツを使用するためにAndroidモバイルアプリを実行します。
-feature: コンテンツフラグメント、API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -163,7 +163,7 @@ public class LogoViewBinder implements ViewBinder {
 
 AEM Content ServicesはJCRパス(例： `aemHost``/content/dam/wknd-mobile/images/wknd-logo.png`)を参照先のコンテンツに追加します。
 
-#### 画像POJO{#image-pojo}
+#### ザイメージPOJO{#image-pojo}
 
 オプションですが、Gsonなどの他のライブラリで提供される[Jackson ObjectMapper](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html)や類似の機能を使用すると、複雑なJSON構造をJava POJOにマッピングするのに役立ち、ネイティブのJSONオブジェクト自体を直接処理する必要はありません。 この単純なケースでは、 `image` JSONオブジェクトの`src`キーを、 `@JSONProperty`注釈を使用して、画像POJOの`src`属性に直接マッピングします。
 
@@ -201,8 +201,8 @@ JSONオブジェクトから多くのデータポイントを選択する必要�
 AEMコンテンツサービスとAEM as a Headless CMSの詳細については、Adobeの他のドキュメントおよびイネーブルメントに関する資料を参照してください。
 
 * [コンテンツフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCMコアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
+* [AEM WCMコアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [AEM WCMコアコンポーネントコンポーネントライブラリ](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCMコアコンポーネントGitHubプロジェクト](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCMコアコンポーネント — エキスパートへの質問](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [コンポーネントエクスポーターのコードサンプル](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/bundle/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
+* [コンポーネントエクスポーターのコードサンプル](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

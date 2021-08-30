@@ -1,22 +1,22 @@
 ---
 title: AEM Assetsでのメタデータの読み込みと書き出しの使用
 description: Adobe Experience Manager Assetsのメタデータの読み込みおよび書き出し機能の使用方法について説明します。 読み込みおよび書き出し機能を使用すると、コンテンツ作成者は既存のアセットのメタデータを一括更新できます。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: コンテンツ管理
-feature: メタデータ
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Content Management
+feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 4%
+source-wordcount: '260'
+ht-degree: 3%
 
 ---
 
 
-# AEM Assetsでのメタデータの読み込みと書き出しの使用{#metadata-import-and-export}
+# AEM Assetsでのメタデータの読み込みと書き出しの使用 {#metadata-import-and-export}
 
 Adobe Experience Manager Assetsのメタデータの読み込みおよび書き出し機能の使用方法について説明します。 読み込みおよび書き出し機能を使用すると、コンテンツ作成者は既存のアセットのメタデータを一括更新できます。
 
@@ -32,7 +32,7 @@ Adobe Experience Manager Assetsのメタデータの読み込みおよび書き�
 >
 > 読み込むCSVファイルを準備する際に、メタデータの書き出し機能を使用すると、アセットのリストを含むCSVを生成するほうが簡単です。 その後、生成されたCSVファイルを変更し、インポート機能を使用してインポートできます。
 
-## メタデータCSVファイル形式{#metadata-file-format}
+## メタデータCSVファイル形式 {#metadata-file-format}
 
 ### 最初の行
 
@@ -40,7 +40,7 @@ Adobe Experience Manager Assetsのメタデータの読み込みおよび書き�
 * 最初の列のデフォルト値は`assetPath`で、アセットのJCRパスの絶対パスが格納されます。
 
 * 1行目の後続の列は、アセットの他のメタデータプロパティを指します。
-   * 次に例を示します。`dc:title, dc:description, jcr:title`
+   * 例：`dc:title, dc:description, jcr:title`
 
 * 単一値プロパティの形式
 
@@ -53,7 +53,7 @@ Adobe Experience Manager Assetsのメタデータの読み込みおよび書き�
    * 不正解`Dc:Title {{String}}`
 
 * プロパティタイプでは大文字と小文字が区別されません
-* すべての有効な[JCRプロパティタイプ](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)がサポートされています
+* すべての有効な[JCRプロパティタイプ](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)がサポートされています
 
 * 複数値プロパティの形式 — `<metadata property name> {{<property type : MULTI }}`
 
