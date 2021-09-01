@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 team: TM
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '347'
 ht-degree: 34%
 
 ---
@@ -95,6 +95,8 @@ ht-degree: 34%
 
 + コンテンツの自動化{#content-automation}
    + [概要](./content-automation/overview.md)
+   + [クリエイティブ操作](./content-automation/creative-operations.md)
+   + [Photoshop Actions](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Mediaの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
