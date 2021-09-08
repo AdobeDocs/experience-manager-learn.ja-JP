@@ -1,20 +1,16 @@
 ---
 title: AEM用のローカルAEMランタイムをCloud Service開発として設定
 description: AEMをCloud ServiceSDKのQuickstart Jarとして使用して、Local AEM Runtimeを設定します。
-feature: 開発者ツール
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Developer Tools
+version: Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1729'
 ht-degree: 3%
 
 ---
@@ -64,7 +60,7 @@ AEM as aCloud ServiceSDK(AEM SDK)には、AEMオーサーとパブリッシュ�
 ローカルのAEMオーサーサービスは、開発者にローカルエクスペリエンスのデジタルマーケターやコンテンツの作成者が共有し、コンテンツを作成および管理することを提供します。  AEMオーサーサービスは、オーサリングとプレビューの両方の環境として設計されており、機能開発のほとんどの検証をその環境に対して実行でき、ローカル開発プロセスの重要な要素となります。
 
 1. フォルダー`~/aem-sdk/author`を作成します。
-1. __クイックスタートJAR__&#x200B;ファイルを`~/aem-sdk/author`にコピーし、`aem-author-p4502.jar`に名前を変更します。
+1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/author`にコピーし、`aem-author-p4502.jar`に名前を変更します。
 1. コマンドラインから次のコマンドを実行して、ローカルのAEMオーサーサービスを開始します。
    + `java -jar aem-author-p4502.jar`
       + 管理パスワードに`admin`を指定します。 adminパスワードはどれでも問題ありませんが、再設定の必要性を減らすために、ローカル開発のデフォルトを使用することをお勧めします。
@@ -95,7 +91,7 @@ $ java -jar aem-author-p4502.jar
 ローカルのAEMパブリッシュサービスは、AEM上にホストするWebサイトの参照など、AEMのエンドユーザーのローカルエクスペリエンスを開発者に提供します。 ローカルのAEMパブリッシュサービスは、AEM SDKの[Dispatcherツール](./dispatcher-tools.md)と統合され、開発者が最終的なエンドユーザー対応エクスペリエンスをスモークテストおよび微調整できるので、重要です。
 
 1. フォルダー`~/aem-sdk/publish`を作成します。
-1. __クイックスタートJAR__&#x200B;ファイルを`~/aem-sdk/publish`にコピーし、`aem-publish-p4503.jar`に名前を変更します。
+1. __Quickstart JAR__&#x200B;ファイルを`~/aem-sdk/publish`にコピーし、`aem-publish-p4503.jar`に名前を変更します。
 1. コマンドラインから次のコマンドを実行して、ローカルのAEMパブリッシュサービスを開始します。
    + `java -jar aem-publish-p4503.jar`
       + 管理パスワードに`admin`を指定します。 adminパスワードはどれでも問題ありませんが、再設定の必要性を減らすために、ローカル開発のデフォルトを使用することをお勧めします。
