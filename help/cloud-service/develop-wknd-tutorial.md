@@ -1,18 +1,15 @@
 ---
 title: AEM Sites の開発の手引き - WKND チュートリアル
-seo-title: AEM Sites の開発の手引き - WKND チュートリアル
 description: AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
-seo-description: AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
-content-type: reference
-topic-tags: introduction
-feature: AEMプロジェクトのアーキタイプ、コアコンポーネント、ページエディター、編集可能なテンプレート
-topic: 開発
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+thumbnail: 30476.jpeg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 54%
+source-wordcount: '300'
+ht-degree: 47%
 
 ---
 

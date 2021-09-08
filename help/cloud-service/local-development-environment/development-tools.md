@@ -2,17 +2,13 @@
 title: AEM as a Development用の開発ツールのCloud Service
 description: AEMに対してローカルで開発するために必要なすべてのローカル開発ツールを備えたベースラインマシンを設定します。
 feature: Developer Tools
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+version: Cloud Service
 kt: 4267
 thumbnail: 25907.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 4%
@@ -120,7 +116,7 @@ Apache Mavenは、AEMプロジェクトMavenアーキタイプから生成され
 
 ## Adobe I/OCLIの設定{#aio-cli}
 
-[Adobe I/OCLI](https://github.com/adobe/aio-cli)(`aio`)は、[Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager)や[Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)など、様々なAdobeサービスに対するコマンドラインアクセスを提供します。 Adobe I/OCLIは、開発者に次の機能を提供するので、Cloud ServiceとしてAEMの開発に不可欠です。
+[Adobe I/OCLI](https://github.com/adobe/aio-cli)(`aio`)は、[Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager)や[Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)など、様々なAdobe サービスに対するコマンドラインアクセスを提供します。 Adobe I/OCLIは、開発者に次の機能を提供するので、Cloud ServiceとしてAEMの開発に不可欠です。
 
 + AEM as a Cloud Servicesサービスからのテールログ
 + CLIからのCloud Managerパイプラインの管理

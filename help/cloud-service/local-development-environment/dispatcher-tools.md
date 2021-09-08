@@ -1,21 +1,16 @@
 ---
 title: DispatcherツールをCloud Service開発として設定するAEM
 description: AEM SDKのDispatcherツールは、Dispatcherをローカルで簡単にインストール、実行、トラブルシューティングできるようにすることで、Adobe Experience Manager(AEM)プロジェクトのローカル開発を容易にします。
-sub-product: foundation
-feature: Dispatcher、開発者ツール
-topics: development, caching, security
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4679
-thumbnail: 30603.jpg
-topic: 開発
+version: Cloud Service
+topic: Development
+feature: Dispatcher, Developer Tools
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4679
+thumbnail: 30603.jpg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1380'
 ht-degree: 2%
 
 ---
@@ -35,7 +30,7 @@ Adobe Experience Manager(AEM)のDispatcherは、CDNとAEMパブリッシュ層�
 AEM as a Dispatcher SDKには、Dispatcherをローカルで設定、検証、シミュレーションする、推奨されるDispatcherツールバージョンが含まれています。 Dispatcherツールは、次の要素で構成されます。
 
 + `.../dispatcher-sdk-x.x.x/src`にある、Apache HTTP WebサーバーとDispatcher設定ファイルのベースラインセット
-+ 設定バリデーターCLIツール(`.../dispatcher-sdk-x.x.x/bin/validate` （Dispatcher SDK 2.0.29以降）
++ 設定バリデーターCLIツール（`.../dispatcher-sdk-x.x.x/bin/validate`にあります）
 + `.../dispatcher-sdk-x.x.x/bin/validator`にある構成生成CLIツール
 + `.../dispatcher-sdk-x.x.x/bin/docker_run`にある構成導入CLIツール
 + Dispatcherモジュールを使用してApache HTTP Webサーバーを実行するDockerイメージ
@@ -48,7 +43,7 @@ AEM as a Dispatcher SDKには、Dispatcherをローカルで設定、検証、�
 
 ## 前提条件
 
-1. WindowsユーザーはWindows 10 Professionalを使用する必要がある
+1. Windowsユーザーは、Windows 10 Professional（またはDockerをサポートするバージョン）を使用する必要があります。
 1. ローカルの開発マシンに[Experience Manager公開クイックスタートJAR](./aem-runtime.md)をインストールします。
    + 必要に応じて、最新の[AEM参照Webサイト](https://github.com/adobe/aem-guides-wknd/releases)をローカルのAEMパブリッシュサービスにインストールします。 このWebサイトは、作業中のDispatcherを視覚化するためにこのチュートリアルで使用されます。
 1. ローカル開発マシンに[Docker](https://www.docker.com/)(Docker Desktop 2.2.0.5以降/Docker Engine v19.03.9+)の最新バージョンをインストールして起動します。
@@ -62,7 +57,6 @@ AEM as aCloud ServiceSDKが既に[ローカルAEMランタイム](./aem-runtime.
 1. Adobe IDで[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3Alast&amp;orderby.sort=&amp;layout=list&amp;p.offset=0&amp;p.limit=1)にログインします。
    + Adobe組織&#x200B;__は、AEMをCloud ServiceSDKとしてダウンロードするCloud ServiceとしてAEM用にプロビジョニングされている必要があります。__
 1. 最新の&#x200B;__AEM SDK__&#x200B;結果行をクリックして、ダウンロードします。
-   + AEM SDKのDispatcherツールv2.0.29以降がダウンロードの説明に記載されていることを確認します。
 
 ## AEM SDK zipからDispatcherツールを抽出します。
 
@@ -93,15 +87,11 @@ Dispatcherツールは、ローカル開発を含むすべての環境の動作�
 
 これらのファイルは、Experience ManagerのMavenプロジェクト内にまだ存在しない場合、Experience ManagerのMavenプロジェクト内の`dispatcher/src`フォルダーにコピーされることを意図しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
-
-*このビデオでは、例としてmacOSを使用しています。同等のWindows/Linuxコマンドを使用して、同じ結果を得ることができます。*
-
 設定ファイルの完全な説明は、展開されたDispatcherツールで`dispatcher-sdk-x.x.x/docs/Config.html`として入手できます。
 
 ## 設定の検証
 
-必要に応じて、`httpd -t`を介したDispatcherおよびApache Webサーバーの設定の検証は、`validate`スクリプトを使用しておこなえます（`validator`実行可能ファイルと混同しないようにする必要があります）。
+必要に応じて、`httpd -t`を介したDispatcherおよびApache Webサーバーの設定の検証は、`validate`スクリプトを使用しておこなえます（`validator`実行可能ファイルと混同しないようにする必要があります）。 `validate`スクリプトは、`validator`の[3段階](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/validation-debug.html?lang=en#local-validation-flexible-mode)を実行する便利な方法を提供します。
 
 + 使用方法:
    + Windows：`bin\validate src`
@@ -109,55 +99,36 @@ Dispatcherツールは、ローカル開発を含むすべての環境の動作�
 
 ## Dispatcherをローカルで実行する
 
-Dispatcherをローカルで実行するには、Dispatcherツールの`validator` CLIツールを使用してDispatcher設定ファイルを生成する必要があります。
+AEM Dispatcherは、Dockerを使用して、`src` DispatcherおよびApache Webサーバーの設定ファイルに対してローカルで実行されます。
 
 + 使用方法:
-   + Windows：`bin\validator full -d out src`
-   + macOS/Linux:`./bin/validator full -d ./out ./src`
+   + Windows：`bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
+   + macOS/Linux:`./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
 
-このコマンドは、設定を、DockerコンテナのApache HTTP Webサーバーと互換性のあるファイルセットに転送します。
-
-生成されると、トランスパイルされた設定がDockerコンテナでローカルにDispatcherを実行します。 バリデーターの`-d`オプションを使用して、`validate` __および__&#x200B;出力を使用して最新の設定が検証されていることを確認することが重要です。
-
-+ 使用方法:
-   + Windows：`bin\docker_run <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-   + macOS/Linux:`./bin/docker_run.sh <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-
-`aem-publish-host`は`host.docker.internal`に設定できます。この値は、ホストマシンのIPに解決されるコンテナ内にDockerが提供する特別なDNS名です。 `host.docker.internal`が解決しない場合は、以下の[トラブルシューティング](#troubleshooting-host-docker-internal)の節を参照してください。
+`<aem-publish-host>`は`host.docker.internal`に設定できます。この値は、ホストマシンのIPに解決されるコンテナ内にDockerが提供する特別なDNS名です。 `host.docker.internal`が解決しない場合は、以下の[トラブルシューティング](#troubleshooting-host-docker-internal)の節を参照してください。
 
 例えば、Dispatcherツールが提供するデフォルトの設定ファイルを使用してDispatcher Dockerコンテナを起動するには、次のようにします。
 
-1. 設定が変更されるたびに、規則に従って`out`という名前の`deployment-folder`を最初から生成します。
+Dispatcher設定srcフォルダーへのパスを指定するDispatcher Dockerコンテナを起動します。
 
-   + Windows：`del /Q out && bin\validator full -d out src`
-   + macOS/Linux:`rm -rf ./out && ./bin/validator full -d ./out ./src`
-
-2. （再）デプロイメントフォルダーへのパスを指定する、Dispatcher Dockerコンテナを起動します。
-
-   + Windows：`bin\docker_run out host.docker.internal:4503 8080`
-   + macOS/Linux:`./bin/docker_run.sh ./out host.docker.internal:4503 8080`
++ Windows：`bin\docker_run src host.docker.internal:4503 8080`
++ macOS/Linux:`./bin/docker_run.sh ./src host.docker.internal:4503 8080`
 
 ポート4503でローカルに動作するAEM as a Publish SDKのパブリッシュサービスは、Dispatcherを通じて`http://localhost:8080`で使用できます。
 
-Experience ManagerプロジェクトのDispatcher設定に対してDispatcherツールを実行するには、プロジェクトの`dispatcher/src`フォルダーを使用して`deployment-folder`を生成します。
+Experience ManagerプロジェクトのDispatcher設定に対してDispatcherツールを実行するには、プロジェクトの`dispatcher/src`フォルダーをポイントします。
 
 + Windows：
 
    ```shell
-   $ del -/Q out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-   $ bin\docker_run out host.docker.internal:4503 8080
+   $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
 + macOS/Linux:
 
    ```shell
-   $ rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
-   $ ./bin/docker_run.sh ./out host.docker.internal:4503 8080
+   $ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
-
->[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
-
-*このビデオでは、例としてmacOSを使用しています。同等のWindows/Linuxコマンドを使用して、同じ結果を得ることができます。*
 
 ## Dispatcherツールログ
 
@@ -180,20 +151,14 @@ Dispatcherのデバッグに役立つパラメーターは次のとおりです�
 + Windows：
 
    ```shell
-   $ bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
+   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
 + macOS/Linux:
 
    ```shell
-   $ ./bin/validator full -d out ~/code/my-project/dispatcher/src
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
+   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
-
->[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
-
-*このビデオでは、例としてmacOSを使用しています。同等のWindows/Linuxコマンドを使用して、同じ結果を得ることができます。*
 
 ### ログファイルのアクセス
 
@@ -222,44 +187,28 @@ _Dispatcherツールのバージョン自体は、バージョンのバージョ
 
 > Docker 18.03以降では、ホストが使用する内部IPアドレスに解決される特別なDNS名host.docker.internalに接続することをお勧めします。
 
-`bin/docker_run out host.docker.internal:4503 8080`の結果が「__host.docker.internalが使用可能になるまで待機する__」というメッセージになった場合は、次のようになります。
+`bin/docker_run src host.docker.internal:4503 8080`の結果が「__host.docker.internalが使用可能になるまで待機する__」というメッセージになった場合は、次のようになります。
 
 1. インストールされているDockerのバージョンが18.03以降であることを確認します。
 2. `host.docker.internal`名の登録/解決を妨げるローカルマシンがセットアップされている可能性があります。 代わりに、ローカルIPを使用します。
    + Windows：
       + コマンドプロンプトで`ipconfig`を実行し、ホストマシンの&#x200B;__IPv4アドレス__&#x200B;を記録します。
       + 次に、次のIPアドレスを使用して`docker_run`を実行します。
-         `bin\docker_run out <HOST IP>:4503 8080`
+         `bin\docker_run src <HOST IP>:4503 8080`
    + macOS/Linux:
       + ターミナルから、`ifconfig`を実行し、ホスト&#x200B;__inet__&#x200B;のIPアドレス（通常は&#x200B;__en0__&#x200B;デバイス）を記録します。
       + 次に、ホストのIPアドレスを使用して`docker_run`を実行します。
-         `bin/docker_run.sh out <HOST IP>:4503 8080`
+         `bin/docker_run.sh src <HOST IP>:4503 8080`
 
 #### エラーの例
 
 ```shell
-$ docker_run out host.docker.internal:4503 8080
+$ docker_run src host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
 Running script /docker_entrypoint.d/30-wait-for-backend.sh
 Waiting until host.docker.internal is available
-```
-
-### docker_runは「**」エラーを返します。展開フォルダが見つかりません&#39;
-
-`docker_run.cmd`を実行すると、__**エラーを読み込むエラーが表示されます。展開フォルダーが見つかりません：__。 これは、通常、パスにスペースが含まれているために発生します。 可能であれば、フォルダー内のスペースを削除するか、スペースを含まないパスに`aem-sdk`フォルダーを移動します。
-
-例えば、Windowsのユーザーフォルダーは`<First name> <Last name>`で、間にスペースが入る場合が多くあります。 以下の例では、ローカルのDispatcherツールの`docker_run`実行を中断するスペースが`...\My User\...`フォルダーに含まれています。 スペースがWindowsユーザーフォルダー内にある場合は、Windowsが壊れるので、このフォルダーの名前を変更しないでください。代わりに、ユーザーが完全に変更する権限を持っている新しい場所に`aem-sdk`フォルダーを移動します。 `aem-sdk`フォルダーがユーザーのホームディレクトリにあると仮定する手順は、新しい場所に調整する必要があります。
-
-#### エラーの例
-
-```shell
-$ \Users\My User\aem-sdk\dispatcher>bin\docker_run.cmd out host.internal.docker:4503 8080
-
-'User\aem-sdk\dispatcher\out\*' is not recognized as an internal or external command,
-operable program or batch file.
-** error: Deployment folder not found: c:\Users\My User\aem-sdk\dispatcher\out
 ```
 
 ### docker_runがWindowsで起動に失敗する{#troubleshooting-windows-compatible}
@@ -269,7 +218,7 @@ Windowsで`docker_run`を実行すると、次のエラーが発生し、Dispatc
 #### エラーの例
 
 ```shell
-$ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run out host.docker.internal:4503 8080
+$ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run src host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
