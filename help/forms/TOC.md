@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1601'
 ht-degree: 3%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 3%
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsのCaptcha](adaptive-forms/forms-captcha-feature-video-use.md)
    + [Webページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
+   + [文字列の配列の作成](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [OSGIワークフローでのXMLでのSet Valueの使用](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [OSGIワークフローでのJSONでの値の設定の使用](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [AEM Formsワークフローでの電子メールコンポーネントの送信](adaptive-forms/email-step-aem-workflow-video-use.md)
