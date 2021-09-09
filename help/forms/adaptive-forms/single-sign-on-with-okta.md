@@ -1,15 +1,15 @@
 ---
 title: AEMを使用したOKTAの設定
 description: oktaを使用したシングルサインオンの様々な設定について
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.5
-topic: 管理
+topic: Administration
 role: Admin
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 3109d406ed4788ab492a148d4eac94f7e5ad9f2d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 3%
+source-wordcount: '759'
+ht-degree: 2%
 
 ---
 
@@ -75,11 +75,11 @@ Trust Storeに証明書を追加すると、以下のスクリーンショット
 [configMgr](http://localhost:4502/system/console/configMgr)に移動します。
 「Apache Sling Referrer Filter」を検索して開きます。以下に指定するプロパティを設定します。
 
-* **空を許可**:true
+* **空を許可**:false
 * **ホストを許可**:IdPのホスト名（この場合は異なります）
 * **正規表現ホストを許可**:IdPのホスト名（この場合は異なります） Sling Referrer Filterリファラープロパティのスクリーンショット
 
-![referrer-filter](assets/sling-referrer-filter.PNG)
+![referrer-filter](assets/okta-referrer.png)
 
 #### OKTA統合用のDEBUGログの設定
 
