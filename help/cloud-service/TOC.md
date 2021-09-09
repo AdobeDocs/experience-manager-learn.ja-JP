@@ -2,12 +2,12 @@
 user-guide-title: Adobe Experience Manager as a Cloud Service のチュートリアル
 user-guide-description: Adobe Experience Manager as a Cloud Service のチュートリアルのコレクションです。
 breadcrumb-title: AEM as a Cloud Service チュートリアル
-sub-product: クラウドサービス
+sub-product: cloud-service
 team: TM
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 30%
+source-wordcount: '516'
+ht-degree: 31%
 
 ---
 
@@ -81,14 +81,26 @@ ht-degree: 30%
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + AEM{#accessing}へのアクセス
    + [概要](./accessing/overview.md)
-   + [AdobeIMSユーザー](./accessing/adobe-ims-users.md)
-   + [AdobeIMSユーザーグループ](./accessing/adobe-ims-user-groups.md)
-   + [AdobeIMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
+   + [Adobe IMSユーザー](./accessing/adobe-ims-users.md)
+   + [Adobe IMSユーザーグループ](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
    + [AEMユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
+   + Cloud Acceleration Manager {#cloud-acceleration-manager}
+      + [はじめに](./migration/cloud-acceleration-manager/introduction.md)
+      + [Readiness AnalyzerとBest Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [実装段階](./migration/cloud-acceleration-manager/implementation-phase.md)
+      + [コンテンツ転送ツール](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [コードリファクタリングツール](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [Code Repository Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
+      + [Dispatcher コンバーター](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [インデックスコンバーター](./migration/cloud-acceleration-manager/index-converter.md)
+      + [アセットワークフローの移行 ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [Cloud Acceleration Managerの操作](./migration/cloud-acceleration-manager/navigating.md)
+      + [Cloud Acceleration Managerの使用](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    + アダプティブフォームの作成{#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
@@ -104,8 +116,8 @@ ht-degree: 30%
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
    + Document CloudAPIとAEM Forms CS{#doc-cloud-sdk}
       + [はじめに](./forms/doc-cloud-sdk/introduction.md)
-      + [AdobeI/Oプロジェクトの作成](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [OSGI設定の作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Adobe I/Oプロジェクト](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [OSGi設定の作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [インターフェイスの定義](./forms/doc-cloud-sdk/create-interface.md)
       + [インターフェイスの実装](./forms/doc-cloud-sdk/implement-interface.md)
       + [JSONパーツの作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
@@ -116,23 +128,25 @@ ht-degree: 30%
       + [Azure Storageへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
       + [事前入力フォーム](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [クエリの送信](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + レビューワークフローの作成{#create-aem-workflow}
-      + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
-      + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
-   + Adobe SignとAEM Forms{#forms-and-sign}
-      + [はじめに](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign APIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-      + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
-      + [入力と署名の設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + Salesforce{#integrate-with-salesforce}との統合
-      + [はじめに](./forms/integrate-with-salesforce/introduction.md)
-      + [接続済みアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
-      + [データソースの作成](./forms/integrate-with-salesforce/create-data-source.md)
-      + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
-      + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
+
+
+      + レビューワークフローの作成{#create-aem-workflow}
+         + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
+         + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
+      + Adobe SignとAEM Forms{#forms-and-sign}
+         + [はじめに](./forms/forms-and-sign/introduction.md)
+         + [Adobe Sign APIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
+         + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+         + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
+         + [入力と署名の設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+      + Salesforce{#integrate-with-salesforce}との統合
+         + [はじめに](./forms/integrate-with-salesforce/introduction.md)
+         + [接続済みアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
+         + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
+         + [データソースの作成](./forms/integrate-with-salesforce/create-data-source.md)
+         + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
+         + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+         + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset computeの拡張機能{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
