@@ -3,18 +3,17 @@ title: Assets Essentialsを使用したコンテンツの作成
 description: Adobe Photoshop Expressを使用した、アセットのアップロード、バージョンの作成、およびアセットの編集の方法について説明します。
 version: cloud-service
 feature: Assets Essentials
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
 kt: 7914
 thumbnail: 335746.jpeg
-source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
+source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 9%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # Assets Essentialsを使用したコンテンツの作成
 
