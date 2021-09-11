@@ -1,6 +1,6 @@
 ---
 title: Assets Essentialsの共同作業
-description: コメント、注釈、タスクを使用したアセット管理での共同作業方法を説明します。
+description: コメント、注釈、タスクを使用して、アセット管理内で共同作業する方法を説明します。
 version: cloud-service
 feature: Assets Essentials
 topic: Content Management
@@ -8,12 +8,13 @@ role: User
 level: Beginner
 kt: 7916
 thumbnail: 335856.jpeg
-source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
+source-git-commit: 32662a9ad478f30dcd3efeec3aae540393d33d04
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
 
 ---
+
 
 # Assets Essentialsの共同作業
 
