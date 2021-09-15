@@ -1,21 +1,21 @@
 ---
 title: タイムラインとインボックス
 description: コラボレーションに使用されるAEM Assetsの主要なWebコンソールについて確認します。
-sub-product: アセット
-feature: ワークフロー
-version: cloud-service
+sub-product: assets
+feature: Workflow
+version: Cloud Service
 kt: 4540
 thumbnail: 32051.jpg
-topic: コラボレーション
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 868dc44b-23ca-4e52-a0bc-229480cfae10
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # タイムラインとインボックス
 

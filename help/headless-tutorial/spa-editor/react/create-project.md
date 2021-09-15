@@ -1,21 +1,21 @@
 ---
 title: プロジェクトを作成 | AEM SPA EditorとReactの概要
 description: AEM SPA Editorと統合されたReactアプリケーションの出発点として、Adobe Experience Manager(AEM)Mavenプロジェクトを生成する方法を説明します。
-sub-product: サイト
-feature: SPAエディター、AEMプロジェクトアーキタイプ
-version: cloud-service
+sub-product: sites
+feature: SPA Editor, AEM Project Archetype
+version: Cloud Service
 kt: 413
 thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1089'
 ht-degree: 3%
 
 ---
-
 
 # プロジェクトを作成 {#spa-editor-project}
 

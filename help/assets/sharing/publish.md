@@ -1,21 +1,21 @@
 ---
 title: AEM
 description: AEMオーサーからAEMパブリッシュにアセットとそのレンディションを公開する方法について説明します。
-sub-product: アセット
-feature: アセット管理
-version: cloud-service
+sub-product: assets
+feature: Asset Management
+version: Cloud Service
 kt: 330932
 thumbnail: 32194.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b69508c9-4be3-43c9-9d54-84ac0a2b4b6b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 10%
+source-wordcount: '50'
+ht-degree: 2%
 
 ---
-
 
 # 公開
 

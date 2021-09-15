@@ -1,24 +1,24 @@
 ---
 title: Target呼び出しの読み込みと実行
 description: Launchルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからTarget呼び出しを実行する方法について説明します。 ページ情報は、Webページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする、Adobeクライアントデータレイヤーを使用して取得および渡されます。
-feature: コアコンポーネント、Adobe Client Data Layer
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6133
 thumbnail: 41243.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 5%
+source-wordcount: '608'
+ht-degree: 4%
 
 ---
-
 
 # Target呼び出しの読み込みと実行 {#load-fire-target}
 

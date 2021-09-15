@@ -1,25 +1,25 @@
 ---
 title: カスタム天気コンポーネントを作成する | AEM SPA EditorとReactの概要
 description: AEM SPA Editorで使用するカスタム天気コンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログとSlingモデルの開発方法について説明します。 Open Weather APIとReact Open Weatherコンポーネントが使用されます。
-sub-product: サイト
+sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
-version: cloud-service
+version: Cloud Service
 kt: 5878
 thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+exl-id: 82466e0e-b573-440d-b806-920f3585b638
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 3%
 
 ---
 
-
-# カスタムWeatherComponent {#custom-component}の作成
+# カスタム天気コンポーネントを作成する {#custom-component}
 
 AEM SPA Editorで使用するカスタム天気コンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログとSlingモデルの開発方法について説明します。 [オープンウェザーAPI](https://openweathermap.org)と[Reactオープンウェザーコンポーネント](https://www.npmjs.com/package/react-open-weather)が使用されます。
 
@@ -145,7 +145,7 @@ AEMコンポーネントは、ノードおよびプロパティとして定義�
    >
    > コアコンポーネントの定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を参照すると、さらに多くの[ダイアログの例を確認できます。 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)の`/libs/granite/ui/components/coral/foundation/form`の下にある`select`、`textarea`、`pathfield`など、追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、通常、[HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
+   従来のAEMコンポーネントでは、通常、[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)スクリプトが必要です。 SPAはコンポーネントをレンダリングするので、HTLスクリプトは不要です。
 
 ## Slingモデルの作成
 

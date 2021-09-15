@@ -5,22 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: アダプティブフォーム
-topic: 開発
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7427
 thumbnail: 332436.jpg
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 4%
+source-wordcount: '70'
+ht-degree: 0%
 
 ---
-
 
 # Adobe Sign APIアプリケーションの作成
 
 Adobe Signプラットフォームと統合するには、Adobe SignでAPIアプリケーションを作成する必要があります。 APIアプリケーションは、クライアントアプリケーションを表す役割を果たし、Adobe Signプラットフォームとやり取りします。 APIアプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)
-

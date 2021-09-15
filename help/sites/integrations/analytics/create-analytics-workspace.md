@@ -1,20 +1,20 @@
 ---
 title: Analysis Workspaceでのデータ分析
 description: Adobe Experience Managerサイトからキャプチャされたデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
-version: cloud-service
-topic: 統合
+version: Cloud Service
+topic: Integrations
 feature: Adobe Client Data Layer
 role: User
 level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2184'
-ht-degree: 1%
+source-wordcount: '2179'
+ht-degree: 0%
 
 ---
-
 
 # Analysis Workspaceでのデータ分析
 
@@ -265,4 +265,3 @@ Analytics分類は、Analytics変数データを分類し、レポートを生�
 ## おめでとうございます。
 
 Adobe Experience Manager Siteから取り込んだデータをAdobe Analyticsのレポートスイートの指標やディメンションにマッピングする方法、指標の分類を実行する方法、Adobe AnalyticsのAnalysis Workspace機能を使用して詳細なレポートダッシュボードを作成する方法を学びました。
-

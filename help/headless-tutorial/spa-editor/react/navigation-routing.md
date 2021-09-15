@@ -1,10 +1,10 @@
 ---
 title: ナビゲーションとルーティングの追加 | AEM SPA EditorとReactの概要
 description: SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的なナビゲーションは、React RouterとReactコアコンポーネントを使用して実装されます。
-sub-product: サイト
+sub-product: sites
 feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4988
@@ -12,13 +12,13 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
-
 
 # ナビゲーションとルーティングの追加 {#navigation-routing}
 
@@ -329,4 +329,3 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 ## おめでとうございます。 {#congratulations}
 
 これで、SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を学びました。 React Routerを使用してダイナミックナビゲーションが実装され、`Header`コンポーネントに追加されました。
-

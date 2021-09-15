@@ -1,9 +1,9 @@
 ---
 title: AEM SPA Editor と React の使用の手引き
 description: WKND SPAを使用して、Adobe Experience Manager AEMで編集可能な最初のReactシングルページアプリケーション(SPA)を作成します。 AEM SPA EditorでReact JSフレームワークを使用してSPAを作成する方法を説明します。 このマルチパートチュートリアルでは、架空のライフスタイルブランドであるWKND向けのReactアプリケーションの実装について説明します。 このチュートリアルでは、SPAのエンドツーエンドの作成とAEMとの統合について説明します。
-sub-product: サイト
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -13,13 +13,13 @@ feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 18%
+source-wordcount: '466'
+ht-degree: 16%
 
 ---
-
 
 # AEM での React SPA の作成（チュートリアル） {#overview}
 
@@ -29,7 +29,7 @@ ht-degree: 18%
 
 *WKND SPAの実装*
 
-##  について
+## について
 
 このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.4+**&#x200B;および&#x200B;**AEM 6.4.8+**&#x200B;と後方互換性があります。
 
@@ -61,9 +61,9 @@ ht-degree: 18%
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 
 ## 次の手順 {#next-steps}
 

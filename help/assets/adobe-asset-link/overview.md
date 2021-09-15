@@ -2,15 +2,15 @@
 title: AdobeアセットリンクとAEM
 description: 'Adobe Experience Managerアセットは、デザイナーやクリエイティブユーザーが好きなAdobe Creative Cloudデスクトップアプリケーション内で使用できます。 Adobe Creative Cloud for enterpriseのAsset Link拡張機能は、Adobe XD、Photoshop、InDesign、IllustratorなどのCreative Cloudツール内でAEM Assetsのメタデータを検索および参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張しました。 '
 feature: Adobe Asset Link
-version: 6.4, 6.5, cloud-service
-topic: コンテンツ管理
+version: 6.4, 6.5, Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 3%
+source-wordcount: '992'
+ht-degree: 2%
 
 ---
 
@@ -85,8 +85,8 @@ AdobeIdentity Managementサービス(IMS)およびAdobe Experience Managerオー
 
 1. Adobeアセットリンク拡張は、Adobe Creative Cloud Desktop Appを介してAdobeID管理サービス(IMS)への認証リクエストをおこない、成功するとBearerトークンを受け取ります。
 1. Adobeアセットリンク拡張は、**手順1**&#x200B;で取得したBearerトークンを含むHTTP(S)を介して、拡張機能の設定JSONに指定されたスキーム(HTTP/HTTPS)、ホストおよびポートを使用してAEMオーサーに接続します。
-1. AEM Bearer Authentication Handlerは、リクエストからBearerトークンを抽出し、AdobeIMSを使用して検証します。
-1. AdobeIMSがBearerトークンを検証すると、AEMにユーザーが作成され（まだ存在しない場合）、AdobeIMSからプロファイルおよびグループ/メンバーシップデータを同期します。 AEMユーザーは、標準のAEMログイントークンが発行され、HTTP(S)応答のCookieとしてAdobeアセットリンク拡張に戻されます。
+1. AEM Bearer Authentication Handlerは、リクエストからBearerトークンを抽出し、Adobe IMSで検証します。
+1. Adobe IMSがBearerトークンを検証すると、AEMにユーザーが作成され（存在しない場合）、Adobe IMSからプロファイルおよびグループ/メンバーシップのデータを同期します。 AEMユーザーは、標準のAEMログイントークンが発行され、HTTP(S)応答のCookieとしてAdobeアセットリンク拡張に戻されます。
 1. 後続のインタラクション( アセットの参照、検索、チェックイン/チェックアウトなど) AdobeAsset Link拡張機能を使用すると、AEMオーサーに対するHTTP(S)リクエストが生成され、AEMログイントークンを使用して、標準のAEM Token Authentication Handlerを使用して検証されます。
 
 >[!NOTE]

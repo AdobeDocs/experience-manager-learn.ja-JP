@@ -1,24 +1,20 @@
 ---
 title: Adobe Experience Manager Sitesでのコンポーネント開発
 description: Adobe Experience Manager Sitesを使用したコンポーネント開発の概要です。 ダイアログ、Slingモデル、HTLスクリプトおよびクライアント側ライブラリの概要が含まれます。
-feature: sling-models、htl
-topics: components, development
-audience: administrator, developer
-doc-type: technical video
-activity: develop
-version: 6.3, 6.4, 6.5, cloud-service
-kt: 4235
-thumbnail: 32547.jpg
-topic: 開発
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Development
+feature: Sling Model, HTL or HTML Template Language
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 4235
+thumbnail: 32547.jpg
+exl-id: ad767329-58bc-44ec-83de-2f5e3c8a30a3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 1%
+source-wordcount: '55'
+ht-degree: 0%
 
 ---
-
 
 # コンポーネント開発の概要
 

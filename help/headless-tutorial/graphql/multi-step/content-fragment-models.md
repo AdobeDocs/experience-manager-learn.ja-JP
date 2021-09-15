@@ -1,28 +1,23 @@
 ---
 title: コンテンツフラグメントモデルの定義 — AEMヘッドレスの概要 — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 AEMでコンテンツをモデル化し、コンテンツフラグメントモデルを使用してスキーマを構築する方法について説明します。 既存のモデルを確認し、新しいモデルを作成します。 スキーマの定義に使用できる様々なデータタイプについて説明します。
-sub-product: アセット
-topics: headless
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
 
-
-# コンテンツフラグメントモデルの定義{#content-fragment-models}
+# コンテンツフラグメントモデルの定義 {#content-fragment-models}
 
 この章では、コンテンツのモデル化と、**コンテンツフラグメントモデル**&#x200B;を使用したスキーマの構築の方法について説明します。 既存のモデルを確認し、新しいモデルを作成します。 また、モデルの一部としてスキーマを定義するために使用できる様々なデータ型についても学習します。
 
@@ -72,7 +67,7 @@ ht-degree: 2%
 
    >[!CAUTION]
    >
-   > ****&#x200B;コンテンツフラグメントがモデルから派生された後に、フィールド&#x200B;**プロパティ名**&#x200B;を変更すると、ダウンストリームの影響を受けます。 既存のフラグメントのフィールド値は参照されなくなり、GraphQLで公開されるデータスキーマが変更され、既存のアプリケーションに影響が及びます。
+   > ****&#x200B;コンテンツフラグメントがモデルから派生された後に、フィールドの&#x200B;**プロパティ名**&#x200B;を変更すると、ダウンストリームの影響を受けます。 既存のフラグメントのフィールド値は参照されなくなり、GraphQLで公開されるデータスキーマが変更され、既存のアプリケーションに影響が及びます。
 
 1. 「**プロパティ**」タブで下にスクロールし、「**検証の種類**」ドロップダウンを表示します。
 
@@ -148,7 +143,7 @@ ht-degree: 2%
 
    カードの上にマウスポインターを置いて、**無効にする** / **有効にする**&#x200B;アイコンをクリックすると、コンテンツフラグメントモデルの状態を切り替えることができます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、最初のコンテンツフラグメントモデルが作成されました。
 

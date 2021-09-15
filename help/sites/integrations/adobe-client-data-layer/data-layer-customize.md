@@ -1,26 +1,22 @@
 ---
 title: AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ
 description: カスタムのAEMコンポーネントのコンテンツを使用してAdobeクライアントデータレイヤーをカスタマイズする方法について説明します。 AEMコアコンポーネントが提供するAPIを使用して、データレイヤーを拡張およびカスタマイズする方法について説明します。
-feature: Adobeクライアントデータレイヤー、コアコンポーネント
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: use
-version: cloud-service
-kt: 6265
-thumbnail: KT-6265.jpg
-topic: 統合
+version: Cloud Service
+topic: Integrations
+feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6265
+thumbnail: KT-6265.jpg
+exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2021'
 ht-degree: 4%
 
 ---
 
-
-# AdobeクライアントデータレイヤーをAEMコンポーネントでカスタマイズ{#customize-data-layer}
+# AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ {#customize-data-layer}
 
 カスタムのAEMコンポーネントのコンテンツを使用してAdobeクライアントデータレイヤーをカスタマイズする方法について説明します。 [AEMコアコンポーネントが提供するAPIを使用して](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)を拡張し、データレイヤーをカスタマイズする方法について説明します。
 
@@ -40,11 +36,11 @@ ht-degree: 4%
 
 このチュートリアルを完了するには、**ローカル開発環境**&#x200B;が必要です。 スクリーンショットとビデオは、macOS上で動作するAEM as aCloud ServiceSDKを使用してキャプチャされます。 特に断りのない限り、コマンドとコードはローカルのオペレーティングシステムとは独立しています。
 
-**AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
-**AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+**AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 
-## WKNDリファレンスサイト{#set-up-wknd-site}をダウンロードしてデプロイします。
+## WKNDリファレンスサイトのダウンロードとデプロイ {#set-up-wknd-site}
 
 このチュートリアルでは、WKNDリファレンスサイトの署名コンポーネントを拡張します。 WKNDコードベースのクローンを作成し、ローカル環境にインストールします。
 
@@ -85,7 +81,7 @@ ht-degree: 4%
 
    署名コンポーネントがデータレイヤーにリストされていないことを確認します。
 
-## 署名Slingモデル{#sling-model}の更新
+## 署名Slingモデルの更新 {#sling-model}
 
 データレイヤーにコンポーネントに関するデータを挿入するには、まずコンポーネントのSlingモデルを更新する必要があります。 次に、署名のJavaインターフェイスとSling Model実装を更新して、新しいメソッド`getData()`を追加します。 このメソッドには、データレイヤーに挿入するプロパティが含まれます。
 
@@ -236,7 +232,7 @@ ht-degree: 4%
 
    公開されるプロパティが、Sling Modelの`HashMap`に追加されたものと同じであることを確認します。
 
-## クリックイベント{#click-event}の追加
+## クリックイベントの追加 {#click-event}
 
 Adobeクライアントデータレイヤーはイベント駆動型で、アクションをトリガーする最も一般的なイベントの1つは`cmp:click`イベントです。 AEMコアコンポーネントを使用すると、データ要素を利用してコンポーネントを簡単に登録できます。`data-cmp-clickable`.
 
@@ -301,7 +297,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
    `cmp:click`イベントは、最も簡単に接続できます。 より複雑なコンポーネントの場合や、その他の動作を追跡する場合は、カスタムJavaScriptを追加して新しいイベントを追加し、登録することができます。 好例はカルーセルコンポーネントです。このコンポーネントは、スライドが切り替えられるたびに`cmp:show`イベントをトリガーします。 詳しくは、[ソースコード](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219)を参照してください。
 
-## DataLayerBuilderユーティリティ{#data-layer-builder}を使用する
+## DataLayerBuilderユーティリティの使用 {#data-layer-builder}
 
 この章の前述のSlingモデルが[更新された](#sling-model)の場合、`HashMap`を使用して各プロパティを手動で設定し、JSON文字列を作成することを選択しました。 この方法は、1回限りの小さなコンポーネントでは正常に機能しますが、AEMコアコンポーネントを拡張するコンポーネントでは、多くの追加コードが生じる可能性があります。
 
@@ -414,7 +410,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
 
    `byline`コンポーネントエントリ内に`image`オブジェクトが存在することを確認します。 DAM内のアセットに関する情報が多く含まれます。 また、`@type`と一意のID（この場合は`byline-136073cfcb`）が自動的に入力され、コンポーネントが変更された日時を示す`repo:modifyDate`も確認します。
 
-## その他の例{#additional-examples}
+## その他の例 {#additional-examples}
 
 1. データレイヤーを拡張するもう1つの例は、WKNDコードベース内の`ImageList`コンポーネントを調べることで確認できます。
    * `ImageList.java`  — モジュール内のJavaインターフ `core` ェイス。
@@ -429,7 +425,7 @@ Adobeクライアントデータレイヤーはイベント駆動型で、アク
    >
    > 実装全体で再利用されるオブジェクト用の高度なデータレイヤーを構築する場合は、データレイヤー要素を独自のデータレイヤー固有のJavaオブジェクトに抽出することをお勧めします。 例えば、コマースコアコンポーネントには、コマース実装内の多くのコンポーネントで使用できる`ProductData`と`CategoryData`用のインターフェイスが追加されています。 詳しくは、 aem-cif-core-componentsリポジトリの[コードを参照してください。](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 AEMコンポーネントを使用してクライアントデータレイヤーを拡張およびカスタマイズする方法をいくつか試しました。
 
@@ -437,4 +433,4 @@ AEMコンポーネントを使用してクライアントデータレイヤー�
 
 * [Adobeクライアントデータレイヤーのドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [コアコンポーネントとのデータレイヤーの統合](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

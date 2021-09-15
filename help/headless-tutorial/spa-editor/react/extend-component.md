@@ -1,24 +1,24 @@
 ---
 title: コアコンポーネントの拡張 | AEM SPA EditorとReactの概要
 description: 既存のコアコンポーネントのJSONモデルを拡張し、AEM SPA Editorで使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解することは、AEM SPA Editor実装の機能を拡張する強力な手法です。 Sling Resource MergerのSlingモデルおよび機能を拡張するための委任パターンの使用方法を説明します。
-sub-product: サイト
-feature: SPAエディター、コアコンポーネント
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1091'
 ht-degree: 4%
 
 ---
 
-
-# コアコンポーネントの拡張{#extend-component}
+# コアコンポーネントの拡張 {#extend-component}
 
 既存のコアコンポーネントを拡張してAEM SPA Editorで使用する方法を説明します。 既存のコンポーネントの拡張方法を理解することは、AEM SPA Editor実装の機能をカスタマイズおよび拡張する強力な手法です。
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 [ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。 この時点で、チュートリアルのユーザーがAEM SPA Editorの機能について明確に理解していることを前提としています。
 
-## Slingリソーススーパータイプ{#sling-resource-super-type}による継承
+## Slingリソーススーパータイプを使用した継承 {#sling-resource-super-type}
 
 既存のコンポーネントを拡張するには、コンポーネントの定義に`sling:resourceSuperType`という名前のプロパティを設定します。  `sling:resourceSuperType`は、別のコ [](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) ンポーネントを指すAEMコンポーネントの定義に設定できるプロパティです。これにより、`sling:resourceSuperType`と識別されたコンポーネントのすべての機能を継承するようにコンポーネントを明示的に設定します。
 
@@ -172,7 +172,7 @@ ht-degree: 4%
 
    ほとんどのコンポーネントには`_cq_editConfig`は必要ありません。 画像コンポーネントと子孫は例外です。
 
-## ダイアログ{#extend-dialog}の拡張
+## ダイアログの拡張 {#extend-dialog}
 
 `Banner`コンポーネントでは、`bannerText`を取り込むために、ダイアログに追加のテキストフィールドが必要です。 Sling継承を使用しているので、[Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja)の機能を使用して、ダイアログの一部を上書きまたは拡張できます。 このサンプルでは、作成者から追加データを取り込み、カードコンポーネントに入力するための新しいタブがダイアログに追加されています。
 
@@ -241,7 +241,7 @@ ht-degree: 4%
 
    ダイアログをプレビューする前に、SPAコンポーネントと`MapTo`関数を実装する必要があります。
 
-## SPAコンポーネント{#implement-spa-component}の実装
+## SPAコンポーネントの実装 {#implement-spa-component}
 
 SPAエディターでバナーコンポーネントを使用するには、`wknd-spa-react/components/banner`にマッピングする新しいSPAコンポーネントを作成する必要があります。 これは`ui.frontend`モジュールで行います。
 
@@ -324,7 +324,7 @@ SPAエディターでバナーコンポーネントを使用するには、`wknd
    >
    > このダイアログでは、**Banner Text**&#x200B;の値を保存できますが、この値はSPAコンポーネントには反映されません。 有効にするには、コンポーネントのSling Modelを拡張する必要があります。
 
-## Javaインターフェイスの追加{#java-interface}
+## Javaインターフェイスの追加 {#java-interface}
 
 最終的にコンポーネントダイアログの値をReactコンポーネントに公開するには、`Banner`コンポーネントのJSONを入力するSling Modelを更新する必要があります。 これは、SPAプロジェクトのすべてのJavaコードを含む`core`モジュールで実行されます。
 
@@ -349,7 +349,7 @@ SPAエディターでバナーコンポーネントを使用するには、`wknd
 
    これにより、すべてのメソッドがコアコンポーネントの`Image`インターフェイスから継承され、新しいメソッド`getBannerText()`が1つ追加されます。
 
-## Slingモデル{#sling-model}の実装
+## Slingモデルの実装 {#sling-model}
 
 次に、`BannerModel`インターフェイス用のSling Modelを実装します。
 
@@ -492,7 +492,6 @@ SPAエディターでバナーコンポーネントを使用するには、`wknd
 
    JSONモデルは、`BannerModelImpl.java`にSlingモデルを実装した後、追加のキーと値のペアで更新されます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、を使用してAEMコンポーネントを拡張する方法と、SlingのモデルとダイアログがJSONモデルと連携する方法を学びました。
-

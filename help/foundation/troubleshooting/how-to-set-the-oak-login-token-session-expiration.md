@@ -2,16 +2,16 @@
 title: Oakログイントークンのセッションの有効期限を設定する方法
 description: oak originトークンのセッションの有効期限タイムアウトを設定する手順
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 開発者ツール
-topic: 管理
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+version: 6.5, Cloud Service
+feature: Developer Tools
+topic: Administration
+exl-id: 940d3cca-6052-40b6-b4f7-c0689ad21c94
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 

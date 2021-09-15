@@ -1,20 +1,20 @@
 ---
 title: 検索
 description: AEM Omnisearchを使用してアセットをすばやく検出する方法を説明します。
-feature: 検索
-version: cloud-service
+feature: Search
+version: Cloud Service
 kt: 4312
 thumbnail: 32054.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 7ea8ff25-d7af-4fad-a027-1e6b5440f810
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '25'
-ht-degree: 20%
+source-wordcount: '22'
+ht-degree: 9%
 
 ---
-
 
 # 検索{#aem-assets-search}
 

@@ -5,19 +5,19 @@ topics: architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4260
 thumbnail: 32034.jpg
-topic: アーキテクチャ
+topic: Architecture
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: bb13fc39-fcb7-4241-8504-8ff999a6caa2
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 2%
+source-wordcount: '42'
+ht-degree: 0%
 
 ---
-
 
 # AEM Architecture Stackの概要 {#introduction-architecture}
 

@@ -5,22 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: アダプティブフォーム
-topic: 開発
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7389
 thumbnail: 332236.jpg
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+exl-id: 3155059c-fbe6-4b9a-8ef3-8f152658e1af
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 5%
+source-wordcount: '48'
+ht-degree: 0%
 
 ---
-
 
 # ツールバーの追加と設定
 
 ツールバーは通常、フォームコンテナレベルで追加されます。 ツールバーには、フォームの次のパネルや前のパネルに移動するボタン、フォームを送信するボタン、フォームデータを保存するボタンなどを含めることができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)
-

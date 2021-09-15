@@ -5,19 +5,20 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: アダプティブフォーム
-topic: 開発
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7149
 thumbnail: 331756.jpg
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+exl-id: 9dcbf06c-6dd0-4f26-bc5e-9074f4c78ac6
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 17%
+source-wordcount: '38'
+ht-degree: 10%
 
 ---
 
-# フォームデータモデルを作成
+# フォームデータモデルの作成
 
 前の手順で設定したデータソースに基づいてフォームデータモデルを作成する
 

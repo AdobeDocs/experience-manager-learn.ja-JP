@@ -1,28 +1,23 @@
 ---
 title: コンテンツフラグメントのオーサリング — AEMヘッドレスの概要 — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 コンテンツフラグメントモデルに基づいて、新しいコンテンツフラグメントを作成し、編集します。 コンテンツフラグメントのバリエーションを作成する方法を説明します。
-sub-product: アセット
-topics: headless
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 3%
+source-wordcount: '784'
+ht-degree: 2%
 
 ---
 
-
-# コンテンツフラグメントのオーサリング{#authoring-content-fragments}
+# コンテンツフラグメントのオーサリング {#authoring-content-fragments}
 
 この章では、新しく定義したコントリビューターコンテンツフラグメントモデル](./content-fragment-models.md)に基づいて、新しいコンテンツフラグメントを作成および編集します。 [また、コンテンツフラグメントのバリエーションを作成する方法についても説明します。
 
@@ -41,7 +36,7 @@ ht-degree: 3%
 
 上記のビデオでは、コンテンツフラグメントのオーサリングの概要を説明します。
 
-## コンテンツフラグメント{#create-content-fragment}の作成
+## コンテンツフラグメントの作成 {#create-content-fragment}
 
 前の章[コンテンツフラグメントモデルの定義](./content-fragment-models.md)では、**コントリビューター**&#x200B;モデルが作成されました。 このモデルを使用して、新しいコンテンツフラグメントを作成します。
 
@@ -122,7 +117,7 @@ ht-degree: 3%
 
    これで、2つの&#x200B;**寄稿者**&#x200B;フラグメントが作成されます。
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、複数のコンテンツフラグメントを作成し、バリエーションを作成しました。
 

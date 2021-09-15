@@ -1,20 +1,20 @@
 ---
 title: AEM Assetsを使用した画像用のスマートタグ
 description: 画像用のスマートタグは、画像のコンテンツに基づいて、メタデータタグを画像アセットに自動的かつインテリジェントに追加することで、AEMの検索機能を強化します。
-topic: コンテンツ管理
-feature: スマートタグ
+topic: Content Management
+feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 645
 thumbnail: 17019.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 35%
+source-wordcount: '218'
+ht-degree: 33%
 
 ---
-
 
 # 画像のスマートタグ
 

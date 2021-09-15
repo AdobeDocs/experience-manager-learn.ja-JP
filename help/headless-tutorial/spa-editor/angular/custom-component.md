@@ -1,11 +1,11 @@
 ---
 title: カスタムコンポーネントの作成 | AEM SPA EditorとAngularの概要
 description: AEM SPA Editorで使用するカスタムコンポーネントを作成する方法を説明します。 JSONモデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログとSlingモデルの開発方法について説明します。
-sub-product: サイト
+sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5831
@@ -13,13 +13,13 @@ thumbnail: 5831-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1498'
 ht-degree: 3%
 
 ---
-
 
 # カスタムコンポーネントの作成 {#custom-component}
 

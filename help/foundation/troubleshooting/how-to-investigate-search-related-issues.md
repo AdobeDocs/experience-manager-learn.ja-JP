@@ -2,20 +2,19 @@
 title: AEMでの検索関連の問題の調査方法
 description: 検索に関連する問題を調査する手順
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 開発者ツール
-topic: 管理
+version: 6.5, Cloud Service
+feature: Search, Developer Tools
+topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+exl-id: 66571dbe-e5bb-4ced-87a5-33ddc160a69a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # AEMでの検索関連の問題の調査方法
 

@@ -6,21 +6,21 @@ topics: architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4644
 thumbnail: 32029.jpg
-topic: アーキテクチャ、パフォーマンス
+topic: Architecture, Performance
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 06954993-c8bb-47f3-8ab6-76d6b1b8e8b0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 30%
+source-wordcount: '45'
+ht-degree: 31%
 
 ---
 
-
-# [!DNL Dispatcher] {#introduction-dispatcher}の概要
+# [!DNL Dispatcher] の概要 {#introduction-dispatcher}
 
 AEMアーキテクチャの一部としての[!DNL dispatcher]の機能の紹介です。
 
@@ -28,4 +28,4 @@ AEMアーキテクチャの一部としての[!DNL dispatcher]の機能の紹介
 
 ## その他のリソース {#additional-resources}
 
-* [[!DNL Dispatcher] 詳細を見る](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
+* [[!DNL Dispatcher] 詳細を見る](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)

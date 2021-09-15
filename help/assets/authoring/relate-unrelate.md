@@ -1,20 +1,20 @@
 ---
 title: AEMでのアセットの関連付けと関連付け解除
 description: AEMでアセット間の関係を確立および管理する方法について説明します。
-feature: アセット管理
+feature: Asset Management
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 6969
 thumbnail: 331107.jpg
-topic: コンテンツ管理
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: a05f995e-11bb-4b28-9aed-3033071244f7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 10%
+source-wordcount: '33'
+ht-degree: 0%
 
 ---
-
 
 # 関連付けと関連付け解除
 

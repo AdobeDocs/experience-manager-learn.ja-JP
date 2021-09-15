@@ -1,24 +1,24 @@
 ---
 title: asset computeワーカーとAEM処理プロファイルの統合
 description: AEM as a Cloud Serviceは、AEM Assets処理プロファイルを介してAdobe I/O RuntimeにデプロイされるAsset computeワーカーと統合されます。 処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理するようにAuthorサービスで設定され、アセットレンディションとしてワーカーによって生成されたファイルを保存します。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '630'
 ht-degree: 2%
 
 ---
-
 
 # AEM処理プロファイルとの統合
 
@@ -77,7 +77,7 @@ asset computeワーカーがCloud ServiceとしてAEMでカスタムレンディ
 
 ## 完了!
 
-バリデーターがAEM as aCloud ServiceAsset computeマイクロサービスの拡張方法に関する[チュートリアル](../overview.md)を完了しました。 AEM as a Cloud Service as a Authorサービスで使用するカスタムAsset computeワーカーを設定、開発、テスト、デバッグ、デプロイする機能が備わっています。
+おめでとうございます。AEM as aCloud ServiceAsset computeマイクロサービスの拡張方法に関する[チュートリアル](../overview.md)を完了しました。 AEM as a Cloud Service as a Authorサービスで使用するカスタムAsset computeワーカーを設定、開発、テスト、デバッグ、デプロイする機能が備わっています。
 
 ### Githubでプロジェクトのソースコード全体を確認する
 

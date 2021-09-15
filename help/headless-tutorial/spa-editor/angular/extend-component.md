@@ -1,11 +1,11 @@
 ---
 title: コンポーネントの拡張 | AEM SPA EditorとAngularの概要
 description: 既存のコアコンポーネントを拡張してAEM SPA Editorで使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解することは、AEM SPA Editor実装の機能を拡張する強力な手法です。 Sling Resource MergerのSlingモデルと機能を拡張するための委任パターンの使用方法を説明します。
-sub-product: サイト
-feature: SPAエディター、コアコンポーネント
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5871
@@ -13,15 +13,15 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 4%
+source-wordcount: '1961'
+ht-degree: 3%
 
 ---
 
-
-# コアコンポーネントの拡張{#extend-component}
+# コアコンポーネントの拡張 {#extend-component}
 
 既存のコアコンポーネントを拡張してAEM SPA Editorで使用する方法を説明します。 既存のコンポーネントの拡張方法を理解することは、AEM SPA Editor実装の機能をカスタマイズおよび拡張する強力な手法です。
 
@@ -33,13 +33,13 @@ ht-degree: 4%
 
 ## 作成する内容
 
-この章では、新しい`Card`コンポーネントが作成されます。 `Card`コンポーネントは、[画像コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)を拡張し、「タイトル」や「アクションの呼び出し」ボタンなどの追加のコンテンツフィールドを追加して、SPA内の他のコンテンツに対してティーザーの役割を実行します。
+この章では、新しい`Card`コンポーネントが作成されます。 `Card`コンポーネントは、[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)を拡張し、「タイトル」や「アクションの呼び出し」ボタンなどの追加のコンテンツフィールドを追加して、SPA内の他のコンテンツに対してティーザーの役割を実行します。
 
 ![カードコンポーネントの最終オーサリング](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 実際の実装では、単に[ティーザーコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/teaser.html)を使用し、次に[画像コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)を拡張して`Card`コンポーネントをプロジェクト要件に応じて作成する方が適しています。 可能な場合は、[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を直接使用することを常にお勧めします。
+> 実際の実装では、単に[ティーザーコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)を使用し、次に[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)を拡張して`Card`コンポーネントをプロジェクト要件に応じて作成する方が適しています。 可能な場合は、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を直接使用することを常にお勧めします。
 
 ## 前提条件
 
@@ -106,13 +106,13 @@ ht-degree: 4%
 
    `sling:resourceSuperType`が`core/wcm/components/image/v2/image`を指していることに注意してください。 これは、WKND SPA画像コンポーネントがコアコンポーネントの画像からすべての機能を継承していることを示しています。
 
-   [プロキシパターン](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern)とも呼ばれます。Slingリソースの継承は、子コンポーネントが機能を継承し、必要に応じて動作を拡張/上書きできる強力なデザインパターンです。 Slingの継承は複数レベルの継承をサポートするので、最終的に、新しい`Card`コンポーネントはコアコンポーネント画像の機能を継承します。
+   [プロキシパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern)とも呼ばれます。Slingリソースの継承は、子コンポーネントが機能を継承し、必要に応じて動作を拡張/上書きできる強力なデザインパターンです。 Slingの継承は複数レベルの継承をサポートするので、最終的に、新しい`Card`コンポーネントはコアコンポーネント画像の機能を継承します。
 
    多くの開発チームは、DRY(D.R.Y.)になるよう努めています（自分で繰り返さないでください）。 Slingの継承により、AEMでこれを実現できます。
 
 4. `card`フォルダーの下で、`_cq_dialog/.content.xml`ファイルを開きます。
 
-   このファイルは、`Card`コンポーネントのコンポーネントダイアログ定義です。 Slingの継承を使用する場合、[Sling Resource Merger](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/sling-resource-merger.html)の機能を使用して、ダイアログの一部を上書きまたは拡張できます。 このサンプルでは、作成者から追加データを取り込み、カードコンポーネントに入力するための新しいタブがダイアログに追加されています。
+   このファイルは、`Card`コンポーネントのコンポーネントダイアログ定義です。 Slingの継承を使用する場合、[Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja)の機能を使用して、ダイアログの一部を上書きまたは拡張できます。 このサンプルでは、作成者から追加データを取り込み、カードコンポーネントに入力するための新しいタブがダイアログに追加されています。
 
    `sling:orderBefore`などのプロパティを使用すると、開発者は新しいタブやフォームフィールドを挿入する場所を選択できます。 この場合、`Text`タブは`asset`タブの前に挿入されます。 Sling Resource Mergerを最大限に活用するには、[画像コンポーネントダイアログ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)の元のダイアログノード構造を知ることが重要です。
 
@@ -262,7 +262,7 @@ ht-degree: 4%
 
    これらのメソッドは、JSONモデルAPIを介して公開され、Angularコンポーネントに渡されます。
 
-3. `CardImpl.java` を開きます。これは`Card.java`インターフェイスの実装です。 この実装は、チュートリアルを高速化するために、既に部分的にスタブ化されています。  `@Model`および`@Exporter`注釈を使用して、Sling Model Exporterを介してSling ModelをJSONとしてシリアル化できることに注意してください。
+3. 次を開きます： `CardImpl.java`. これは`Card.java`インターフェイスの実装です。 この実装は、チュートリアルを高速化するために、既に部分的にスタブ化されています。  `@Model`および`@Exporter`注釈を使用して、Sling Model Exporterを介してSling ModelをJSONとしてシリアル化できることに注意してください。
 
    `CardImpl.java` また、はSling Modelの委 [任パターンを使用し](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) て、画像コアコンポーネントからすべてのロジックが書き換えられないようにします。
 
@@ -296,7 +296,7 @@ ht-degree: 4%
    }
    ```
 
-   `@PostConstruct initModel()`は、Sling Modelの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager`は、`@ScriptVariable`注釈を介してSling Modelで使用可能になる、多数の[Javaベースのグローバルオブジェクト](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)の1つです。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)メソッドはパスを受け取り、AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html)オブジェクトを返します。パスが有効なページを指していない場合はnullを返します。
+   `@PostConstruct initModel()`は、Sling Modelの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager`は、`@ScriptVariable`注釈を介してSling Modelで使用可能になる、多数の[Javaベースのグローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)の1つです。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)メソッドはパスを受け取り、AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)オブジェクトを返します。パスが有効なページを指していない場合はnullを返します。
 
    これにより、`cardPage`変数が初期化されます。この変数は、基になるリンクされたページに関するデータを返すために、他の新しいメソッドで使用されます。
 
@@ -468,7 +468,7 @@ ht-degree: 4%
 
    ![カードコンポーネントの最終オーサリング](assets/extend-component/final-authoring-card.png)
 
-## バリデーターが {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで、を使用してAEMコンポーネントを拡張する方法と、SlingのモデルとダイアログがJSONモデルと連携する方法を学びました。
 

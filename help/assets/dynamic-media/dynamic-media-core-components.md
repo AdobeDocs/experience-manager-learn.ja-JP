@@ -1,20 +1,19 @@
 ---
 title: AEM SitesコアコンポーネントでのDynamic Mediaの使用
 description: Adobe Experience Manager SitesでDynamic Mediaを使用する方法を説明します。 画像コンポーネントは、Experience Managerコアコンポーネントの一部で、Dynamic Mediaの組み込みサポートを備えています。 画像コンポーネントを使用すると、コンテンツ作成者は、AEM Sitesページ上で画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Mediaの機能を使用できます。
-sub-product: dynamic-media
-feature: コアコンポーネント、スマート切り抜き、画像プロファイル、画像プリセット
-version: cloud-service
-kt: 6630
-topic: コンテンツ管理
+feature: Core Components, Smart Crop, Image Profiles, Image Presets
+version: Cloud Service
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6630
+exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 2%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
-
 
 # AEM SitesコアコンポーネントでのDynamic Mediaの使用 {#dynamic-media-sites-core-components}
 

@@ -1,23 +1,23 @@
 ---
 title: OSGi Webコンソールを使用したAEM SDKのデバッグ
 description: AEM SDKのローカルクイックスタートには、OSGi Webコンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と、内の機能を理解するのに役立ちます。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 5%
+source-wordcount: '393'
+ht-degree: 4%
 
 ---
-
 
 # OSGi Webコンソールを使用したAEM SDKのデバッグ
 
@@ -73,5 +73,5 @@ Sling Modelsコンソールは次の場所にあります。
 デバッグアクティビティに役立つ主な側面：
 
 + Slingモデルが適切なリソースタイプに登録されていることを確認する
-+ Slingモデルの検証は、正しいオブジェクト（ResourceまたはSlingHttpRequestServlet）から適応可能です
++ Slingモデルの検証は、正しいオブジェクト（ResourceまたはSlingHttpRequestServlet）から適応可能です。
 + Sling Model Exporterが正しく登録されていることを確認します

@@ -1,23 +1,23 @@
 ---
 title: AEM SDKをデバッグするその他のツール
 description: その他の様々なツールが、AEM SDKのローカルクイックスタートのデバッグに役立ちます。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
+exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 13%
+source-wordcount: '217'
+ht-degree: 12%
 
 ---
-
 
 # AEM SDKをデバッグするその他のツール
 
@@ -49,9 +49,8 @@ AEM SDKのローカルクイックスタートでクエリWebベースのツー�
 
 ![QueryBuilderデバッガー](./assets/other-tools/query-debugger.png)
 
-QueryBuilder Debuggerは、AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)構文を使用して検索クエリをデバッグし、理解するのに役立つWebベースのツールです。
+QueryBuilder Debuggerは、AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)構文を使用して検索クエリをデバッグし、理解するのに役立つWebベースのツールです。
 
 QueryBuilder Debuggerは次の場所にあります。
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-

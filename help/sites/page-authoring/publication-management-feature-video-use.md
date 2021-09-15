@@ -1,26 +1,21 @@
 ---
 title: AEM Sitesでのページの公開
-seo-title: Adobe Experience Manager Sitesでのページの公開
 description: Adobe Experience Manager Sitesには、コンテンツの公開と非公開を行うためのオプションがいくつか用意されています。 このビデオでは、様々な方法とその機能について説明します。
-seo-description: Adobe Experience Manager Sitesには、コンテンツの公開と非公開を行うためのオプションがいくつか用意されています。 このビデオでは、様々な方法とその機能について説明します。
-topics: publishing
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+feature-set: Experience Manager
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4322
 thumbnail: 32193.jpg
-feature: 公開
-topic: コンテンツ管理
+feature: Publishing
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6dc66195-f438-4366-a5e2-486145e4b6d7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 2%
+source-wordcount: '134'
+ht-degree: 1%
 
 ---
-
 
 # ページの公開 {#using-publication-management-with-aem-sites}
 
@@ -40,4 +35,4 @@ AEM Sitesには、作成者のワークフローに基づいて、コンテン�
 
 ## その他のリソース {#additional-resources}
 
-* [ページの公開に関するドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [ページの公開に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)

@@ -1,21 +1,21 @@
 ---
 title: コメントと注釈
 description: AEMでコメントと注釈を使用して、アセットに関するコミュニケーションと共同作業を行う方法を説明します。
-sub-product: アセット
-feature: コラボレーション
-version: cloud-service
+sub-product: assets
+feature: Collaboration
+version: Cloud Service
 kt: 4541
 thumbnail: 32049.jpg
-topic: コラボレーション
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c3b4366b-cbb2-48d6-b101-78effb35130d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # コメントと注釈
 

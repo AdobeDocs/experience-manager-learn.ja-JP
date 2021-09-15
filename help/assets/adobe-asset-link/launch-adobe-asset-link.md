@@ -1,20 +1,20 @@
 ---
 title: Adobeアセットリンクへのアクセス
 description: Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケティング担当者のコラボレーションを強化できます。Adobe Experience Manager Assets(AEM Assets)に保存されたコンテンツには、最もなじみのあるCreative Cloudデスクトップアプリケーションを開いたままでアクセスできます。 Creative CloudデスクトップアプリケーションからAdobeアセットリンクパネルを起動する方法を説明します。
-sub-product: アセット
-feature: Adobeアセットリンク
-version: cloud-service
+sub-product: assets
+feature: Adobe Asset Link
+version: Cloud Service
 thumbnail: 33733.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 261135af-4d26-4b07-8ec9-6e9875a158ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 28%
+source-wordcount: '112'
+ht-degree: 25%
 
 ---
-
 
 # Adobeアセットリンクへのアクセス {#access-adobe-asset-link}
 

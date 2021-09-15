@@ -1,21 +1,20 @@
 ---
 title: AEM GraphQLを使用したオーサーとパブリッシュのアーキテクチャ
 description: AEM GraphQL APIを使用する際にAEMオーサー環境とパブリッシュ環境を活用する方法とタイミングについて説明します。
-sub-product: アセット
-version: cloud-service
-topic: ヘッドレス、コンテンツ管理
-feature: コンテンツフラグメント、GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # オーサーとパブリッシュのアーキテクチャ
 

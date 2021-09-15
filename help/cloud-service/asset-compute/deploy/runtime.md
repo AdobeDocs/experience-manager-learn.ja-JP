@@ -1,24 +1,24 @@
 ---
 title: AEM as a Adobe I/O Runtimeで使用するAsset computeワーカーのCloud Serviceへのデプロイ
-description: 'asset computeプロジェクトとその中に含まれるワーカーは、AEM as a Adobe I/O Runtimeで使用するために、Cloud Serviceにデプロイする必要があります。 '
-feature: asset computeマイクロサービス
+description: asset computeプロジェクトとその中に含まれるワーカーは、AEM as a Adobe I/O Runtimeで使用するために、Cloud Serviceにデプロイする必要があります。
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0327cf61-fd51-4fa7-856d-3febd49c01a0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
-
 
 # Adobe I/O Runtimeへのデプロイ
 

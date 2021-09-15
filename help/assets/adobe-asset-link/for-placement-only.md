@@ -1,21 +1,21 @@
 ---
 title: 配置専用(FPO)レンディション
-description: 'Adobe Experience Managerアセットは、デザイナーやクリエイティブユーザーが、お気に入りのAdobe Creative Cloudデスクトップアプリケーション内で使用できるようになりました。 Adobe Creative Cloud Enterprise用のAsset Link拡張機能は、Adobe Photoshop、InDesign、IllustratorなどのCreative Cloudツール内でAEM Assetsのメタデータを検索、参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張しました。 '
-sub-product: アセット
+description: Adobe Experience Managerアセットは、デザイナーやクリエイティブユーザーが、お気に入りのAdobe Creative Cloudデスクトップアプリケーション内で使用できるようになりました。 Adobe Creative Cloud Enterprise用のAsset Link拡張機能は、Adobe Photoshop、InDesign、IllustratorなどのCreative Cloudツール内でAEM Assetsのメタデータを検索、参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張しました。
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 kt: 4916
 thumbnail: 34259.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 940608db-6e84-441a-b031-e8cf52459597
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
-
 
 # 配置専用(FPO)レンディション{#for-placement-only-rendition}
 

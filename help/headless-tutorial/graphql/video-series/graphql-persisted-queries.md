@@ -1,21 +1,20 @@
 ---
 title: GraphQL永続クエリ
 description: AEMで永続化クエリを有効化、作成、更新、実行する方法を説明します。
-sub-product: アセット
-version: cloud-service
-topic: ヘッドレス、コンテンツ管理
+version: Cloud Service
+topic: Headless, Content Management
 feature: GraphQL API
 role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 1%
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
-
 
 # GraphQL永続クエリ
 

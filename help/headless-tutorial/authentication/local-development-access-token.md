@@ -1,24 +1,24 @@
 ---
 title: ローカル開発アクセストークン
 description: AEMローカル開発アクセストークンは、HTTPを介してプログラムによってAEMオーサーまたはパブリッシュサービスとやり取りするCloud ServiceとしてAEMとの統合の開発を高速化するために使用されます。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: ヘッドレス、統合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
-
 
 # ローカル開発アクセストークン
 

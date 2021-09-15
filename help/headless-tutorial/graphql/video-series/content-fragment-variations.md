@@ -1,20 +1,20 @@
 ---
 title: コンテンツフラグメントバリエーション
 description: コンテンツフラグメントのバリエーションを作成する方法と、一般的な使用例をいくつか確認する方法について説明します。
-version: cloud-service
-topic: ヘッドレス、コンテンツ管理
-feature: コンテンツフラグメント、GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+source-wordcount: '79'
+ht-degree: 0%
 
 ---
-
 
 # コンテンツフラグメントバリエーション
 

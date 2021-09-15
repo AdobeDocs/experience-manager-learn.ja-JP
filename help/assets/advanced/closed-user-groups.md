@@ -1,20 +1,20 @@
 ---
 title: AEM Assetsの閉じられたユーザーグループ
 description: 閉じられたユーザーグループ(CUG)は、公開されたサイト上の特定のユーザーグループに対してコンテンツへのアクセスを制限するために使用する機能です。 このビデオでは、閉じられたユーザーグループをAdobe Experience Manager Assetsと共に使用して、アセットの特定のフォルダーへのアクセスを制限する方法を示します。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 管理、セキュリティ
-feature: ユーザーとグループ
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
-source-git-commit: 407840a0e0c90c4f004390a052d036f9b69fa8df
+exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '377'
 ht-degree: 2%
 
 ---
-
 
 # 閉じられたユーザーグループ{#using-closed-user-groups-with-aem-assets}
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 * CUGポリシーは、サブフォルダーと適用されたアセットに自動的に継承されます。
 * CUGポリシーは、新しいCUGポリシーを設定することで、サブフォルダーで上書きできます。 これは慎重に使用する必要があり、ベストプラクティスとは見なされません。
 
-## 閉じられたユーザーグループとアクセス制御リスト{#closed-user-groups-vs-access-control-lists}
+## 閉じられたユーザーグループとアクセス制御リスト {#closed-user-groups-vs-access-control-lists}
 
 閉じられたユーザーグループ(CUG)とアクセス制御リスト(ACL)の両方が、AEMのコンテンツへのアクセスを制御するために使用され、AEMセキュリティのユーザーとグループに基づいて使用されます。 ただし、これらの機能の適用と実装は大きく異なります。 次の表に、2つの機能の違いを示します。
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 | 権限レベル | すべてのレベルのユーザー/グループに対して許可/拒否された権限を定義します。読み取り、変更、作成、削除、ACLの読み取り、ACLの編集、複製。 | 一連のユーザー/グループに対する読み取りアクセスを許可します。 *他の*&#x200B;ユーザー/グループへの読み取りアクセスを拒否します。 |
 | パブリケーション | ACLはコンテンツと共に公開されて&#x200B;*いません*。 | CUGポリシー&#x200B;*は、コンテンツと共に*&#x200B;公開されます。 |
 
-## サポートリンク{#supporting-links}
+## サポートリンク {#supporting-links}
 
 * [アセットと閉じられたユーザーグループの管理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
 * [閉じられたユーザーグループの作成](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)

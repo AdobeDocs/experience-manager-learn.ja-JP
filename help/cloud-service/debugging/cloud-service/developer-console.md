@@ -1,24 +1,24 @@
 ---
 title: 開発者コンソール
 description: AEM as a Cloud Serviceは、デバッグに役立つ、実行中のAEMサービスの様々な詳細を表示する、各環境の開発者コンソールを提供します。
-feature: 開発者ツール
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
+exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1348'
 ht-degree: 2%
 
 ---
-
 
 # 開発者コンソールを使用したCloud ServiceとしてのAEMのデバッグ
 
@@ -46,8 +46,8 @@ AEM as a Cloud Serviceは、デバッグに役立つ、実行中のAEMサービ�
 
 401 Unauthorizedの問題を解決するには：
 
-1. ユーザーが、開発者コンソールに関連付けられたAEM as aCloud Service製品インスタンス用の適切なAdobeIMS製品プロファイル(AEM管理者またはAEMユーザー)のメンバーであることを確認します。
-   + 開発者コンソールは、2つのAdobeIMS製品インスタンスにアクセスします。AEM as aCloud Serviceオーサーおよびパブリッシュ製品インスタンスを使用するので、開発者コンソールを介したアクセスが必要なサービス層に応じて、正しい製品プロファイルが使用されていることを確認します。
+1. ユーザーが、開発者コンソールに関連付けられたAEM as aCloud Service製品インスタンスの適切なAdobe IMS製品プロファイル(AEM管理者またはAEMユーザー)のメンバーであることを確認します。
+   + 開発者コンソールは2つの製品インスタンスにアクセスするAdobe IMSAEM as aCloud Serviceオーサーおよびパブリッシュ製品インスタンスを使用するので、開発者コンソールを介したアクセスが必要なサービス層に応じて、正しい製品プロファイルが使用されていることを確認します。
 1. AEMにCloud Service（オーサーまたはパブリッシュ）としてログインし、ユーザーとグループがAEMに正しく同期されていることを確認します。
    + 開発者コンソールでは、ユーザーレコードを対応するAEMサービス層に作成し、そのサービス層に対して認証する必要があります。
 1. ブラウザーのCookieとアプリケーションの状態（ローカルストレージ）を消去し、開発者コンソールに再ログインして、デベロッパーコンソールで使用されているアクセストークンが正しく、期限切れでないことを確認します。

@@ -1,20 +1,20 @@
 ---
 title: AEM Assetsの画像のカスタムスマートタグ
 description: AEM Assetsのスマートタグをトレーニングして、アセットにカスタム用語を適用する方法を説明します。
-feature: スマートタグ
-version: 6.4, 6.5, cloud-services
+feature: Smart Tags
+version: 6.4, 6.5, Cloud Services
 kt: 795
 thumbnail: 22254.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 06f2ae4d-c18e-45ed-96d7-ddc6f9c8d829
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 3%
+source-wordcount: '147'
+ht-degree: 1%
 
 ---
-
 
 # 画像のカスタムスマートタグ
 
@@ -37,5 +37,3 @@ ht-degree: 3%
 ## その他のリソース
 
 * AEM 6.4には[最新のサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)が必要です。
-
-

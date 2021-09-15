@@ -1,24 +1,24 @@
 ---
 title: AEM as aCloud Serviceのasset computeマイクロサービス拡張機能
 description: このチュートリアルでは、元のAsset computeを円に切り抜いてアセットレンディションを作成し、設定可能なコントラストと明るさを適用する、シンプルなアセットワーカーの作成について説明します。 ワーカー自体は基本的ですが、このチュートリアルでは、AEMをCloud Serviceとして使用するカスタムAsset computeワーカーの作成、開発およびデプロイを検討するために、このワーカーを使用します。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1026'
 ht-degree: 3%
 
 ---
-
 
 # asset computeマイクロサービス拡張機能
 

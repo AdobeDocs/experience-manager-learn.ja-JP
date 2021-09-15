@@ -5,21 +5,21 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 5982
 thumbnail: 38566.jpg
-topic: 統合
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 3%
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 
-
-# LaunchCloud Service設定{#create-launch-cloud-service}の作成
+# LaunchCloud Service設定の作成 {#create-launch-cloud-service}
 
 Adobe Experience Managerで新しいLaunchCloud Services設定を作成する方法を説明します。 その後、AEM LaunchCloud Service設定を既存のサイトに適用でき、Launchライブラリの読み込みをオーサー環境とパブリッシュ環境の両方で監視できます。
 

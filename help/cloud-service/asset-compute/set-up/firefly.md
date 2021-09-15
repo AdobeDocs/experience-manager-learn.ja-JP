@@ -1,24 +1,24 @@
 ---
 title: Adobeの拡張機能用のAsset computeProject Fireflyの設定
 description: asset computeプロジェクトは、特別に定義されたAdobeProject Fireflyプロジェクトです。そのため、設定およびデプロイするには、Adobe開発者コンソールのAdobeProject Fireflyにアクセスする必要があります。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
-
 
 # AdobeProject Fireflyの設定
 
@@ -49,8 +49,8 @@ _Project Fireflyの設定のクリックスルー(Adobeなし)_
       + 「__キーペアを生成__」を選択し、「__キーペアを生成__」ボタンをタップし、ダウンロードした`config.zip`を[後で](#private-key)を使用する安全な場所に保存します。
       + __次へ__&#x200B;をタップします
       + 製品プロファイル「__Integrations - integrations__」を選択し、「__設定済みAPIを保存__」をタップします。
-   + __Adobeサービス/I/Oイベントを選択__ し、「設定済みAPIを __保存」をタップします。__
-   + __Adobeサービス/I/O管理APIを選択__ し、「設定済みAPIを __保存」をタップします。__
+   + __Adobe サービス/I/Oイベントをタ__ ップし、「設定済みAPI __を保存」をタップします。__
+   + __Adobe サービス/I/O管理APIを選択__ し、「設定済みAPIを __保存」をタップします。__
 
 ## private.keyへのアクセス{#private-key}
 

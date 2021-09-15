@@ -2,17 +2,17 @@
 title: AEMのメモリ関連の問題を解決する手順
 description: メモリに関する問題を調査および解決する手順
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 開発者ツール
-topic: 管理
+version: 6.5, Cloud Service
+feature: Developer Tools
+topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+exl-id: 6477e9df-f33f-46b1-aa9b-535063da65dd
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 7%
+source-wordcount: '38'
+ht-degree: 0%
 
 ---
 

@@ -1,26 +1,21 @@
 ---
 title: フラグメントリファレンスを使用した高度なデータモデリング — AEMヘッドレス使用の手引き — GraphQL
 description: Adobe Experience Manager(AEM)とGraphQLの概要。 高度なデータモデリングでフラグメントリファレンス機能を使用し、2つの異なるコンテンツフラグメント間の関係を作成する方法を説明します。 GraphQLクエリを変更して、参照モデルのフィールドを含める方法を説明します。
-sub-product: アセット
-topics: headless
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '847'
 ht-degree: 2%
 
 ---
-
 
 # フラグメントリファレンスを使用した高度なデータモデリング
 
@@ -39,7 +34,7 @@ ht-degree: 2%
 * 「フラグメント参照」フィールドを使用するようにコンテンツフラグメントモデルを更新する
 * 参照モデルからフィールドを返すGraphQLクエリを作成する
 
-## フラグメント参照の追加{#add-fragment-reference}
+## フラグメント参照の追加 {#add-fragment-reference}
 
 コントリビューターモデルへの参照を追加するために、アドベンチャーコンテンツフラグメントモデルを更新します。
 
@@ -237,9 +232,9 @@ ht-degree: 2%
 
    ![アプリに追加された投稿者](assets/fragment-references/contributor-added-detail.png)
 
-## バリデーターが{#congratulations}
+## おめでとうございます。{#congratulations}
 
-バリデーターが既存のコンテンツフラグメントモデルを更新し、「**フラグメントの参照**」フィールドを使用して、ネストされたコンテンツフラグメントを参照するようにしました。 また、GraphQLクエリを変更して、参照モデルのフィールドを含める方法も学習しました。
+おめでとうございます。既存のコンテンツフラグメントモデルを更新し、「**フラグメントの参照**」フィールドを使用して、ネストされたコンテンツフラグメントを参照するようにしました。 また、GraphQLクエリを変更して、参照モデルのフィールドを含める方法も学習しました。
 
 ## 次の手順 {#next-steps}
 

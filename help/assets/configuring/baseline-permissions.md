@@ -1,21 +1,21 @@
 ---
 title: 基本権限
 description: ベースラインアセットフォルダーでのユーザーアクセスの管理は、ガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
-sub-product: アセット
-feature: アセット管理
-version: cloud-service
+sub-product: assets
+feature: Asset Management
+version: Cloud Service
 kt: 4870
 thumbnail: 37696.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b2ac2332-4d98-4866-8688-831f0282a736
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 9%
+source-wordcount: '48'
+ht-degree: 0%
 
 ---
-
 
 # 基本権限
 

@@ -1,24 +1,24 @@
 ---
 title: 外部アプリケーションからのCloud ServiceとしてのAEMの認証
 description: ローカル開発のアクセストークンとサービス資格情報を使用して、外部アプリケーションがHTTP経由でAEMをCloud Serviceとしてプログラムで認証およびやり取りする方法を調べます。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: ヘッドレス、統合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
-
 
 # AEM as aCloud Serviceへのトークンベースの認証
 
@@ -34,7 +34,7 @@ AEMは、GraphQL、AEMコンテンツサービスからAssets HTTP APIへ、ヘ�
 
 1. am AEM as aCloud Service環境（できれば、開発環境またはサンドボックスプログラム）へのアクセス
 1. AEM as a Cloud Service環境のオーサーサービスAEM Administrator製品プロファイルのメンバーシップ
-1. AdobeのIMS Org Administratorのメンバーシップまたはアクセス（[サービス資格情報](./service-credentials.md)の初期化を1回だけ実行する必要があります）
+1. Adobe IMS組織管理者のメンバーシップ（アクセス）（[サービス資格情報](./service-credentials.md)の初期化を1回だけ実行する必要があります）
 1. Cloud Service環境にデプロイされた最新の[WKNDサイト](https://github.com/adobe/aem-guides-wknd)
 
 ## 外部アプリケーションの概要
@@ -53,7 +53,7 @@ Node.jsアプリケーションの実行フローは次のとおりです。
    + AEM as aCloud Service(`file`)へのアクセスに必要な資格情報を提供するファイルへのローカルパス
 1. AEMへの認証に使用されるアクセストークンは、コマンドラインパラメーター`file`で提供されるJSONファイルから取得されます
 
-   a.非ローカル開発に使用されるサービス資格情報がJSONファイル(`file`)で指定されている場合、アクセストークンはAdobeIMS APIから取得されます
+   a.非ローカル開発に使用されるサービス資格情報がJSONファイル(`file`)で指定されている場合、アクセストークンはAdobe IMSAPIから取得されます
 1. アプリケーションはアクセストークンを使用してAEMにアクセスし、コマンドラインパラメーター`folder`で指定されたフォルダー内のすべてのアセットをリストします
 1. フォルダー内のアセットごとに、コマンドラインパラメーター`propertyName`と`propertyValue`で指定されたプロパティ名と値に基づいてメタデータが更新されます
 
@@ -67,7 +67,7 @@ Node.jsアプリケーションの実行フローは次のとおりです。
 
 ## サービス資格情報
 
-サービス資格情報は、非開発シナリオ（ほとんどの場合、実稼動環境で使用される）で使用される正式な資格情報で、HTTP経由のCloud ServiceとしてAEMを認証および操作する外部アプリケーションまたはシステムの機能を支援します。 サービス資格情報自体は認証のためにAEMに送信されるのではなく、外部アプリケーションがJWTを使用して生成します。JWTはAdobeIMSのAPI _で_&#x200B;用に交換され、AEMに対するHTTP要求をCloud Serviceとして認証するために使用できます。
+サービス資格情報は、非開発シナリオ（ほとんどの場合、実稼動環境で使用される）で使用される正式な資格情報で、HTTP経由のCloud ServiceとしてAEMを認証および操作する外部アプリケーションまたはシステムの機能を支援します。 サービス資格情報自体は認証用にAEMに送信されず、外部アプリケーションがJWTを生成します。JWTはAdobe IMSのAPI _と_&#x200B;用に交換され、AEMに対するHTTP要求をCloud Serviceとして認証するために使用できます。
 
 + [サービス資格情報の使用方法](./service-credentials.md)
 

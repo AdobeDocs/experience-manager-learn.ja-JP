@@ -1,18 +1,19 @@
 ---
 title: Azure Storageのデータを使用してアダプティブフォームに事前入力する
 description: AEM Formsの事前入力サービスを使用して、Azure BLOBストレージからアダプティブフォームにデータを埋め込む方法を説明します。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
-topic: 統合
+version: Cloud Service
+topic: Integrations
 thumbnail: 335714.jpg
 kt: 8240
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 12e0e3bb-d6b2-4c33-9105-18c3637d3e07
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 5%
+source-wordcount: '48'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +22,3 @@ ht-degree: 5%
 AEM Formsの事前入力サービスを使用して、Azure BLOBストレージからアダプティブフォームにデータを埋め込む方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335714/?quality=12&learn=on)
-

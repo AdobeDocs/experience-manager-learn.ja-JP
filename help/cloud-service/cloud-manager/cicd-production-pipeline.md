@@ -1,24 +1,24 @@
 ---
 title: AdobeCloud Managerの使用 — CI/CD実稼動パイプライン
-description: 'CI/CD実稼動パイプラインは、ステージングを通じてコードを構築し、実稼動環境にデプロイするために使用され、価値創出までの時間を短縮します。 CI／CD 実稼動パイプラインの設定は、パイプラインを開始するトリガー、実稼動環境のデプロイメントを制御するパラメーター、およびテストパラメーターのパフォーマンスを定義します。 '
+description: CI/CD実稼動パイプラインは、ステージングを通じてコードを構築し、実稼動環境にデプロイするために使用され、価値創出までの時間を短縮します。 CI／CD 実稼動パイプラインの設定は、パイプラインを開始するトリガー、実稼動環境のデプロイメントを制御するパラメーター、およびテストパラメーターのパフォーマンスを定義します。
 sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6872, 6875
 thumbnail: 26317.jpg
-topic: アーキテクチャ
+topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '177'
 ht-degree: 39%
 
 ---
-
 
 # AdobeCloud Managerの使用 — CI/CD実稼動パイプライン
 

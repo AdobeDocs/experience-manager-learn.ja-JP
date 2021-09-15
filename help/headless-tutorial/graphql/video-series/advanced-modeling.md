@@ -1,21 +1,20 @@
 ---
 title: GraphQLの高度なモデリング
 description: Adobe Experience Manager(AEM)のコンテンツフラグメントモデル間の関係を作成する方法と、GraphQLクエリでこれらの関係を活用する方法について説明します。
-sub-product: アセット
-version: cloud-service
-topic: ヘッドレス、コンテンツ管理
-feature: コンテンツフラグメント、GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
-
 
 # GraphQLの高度なモデリング
 

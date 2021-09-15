@@ -1,24 +1,24 @@
 ---
 title: asset computeメタデータワーカーの開発
 description: asset computeアセット内で最もよく使用される色を派生させ、色の名前をAEMのアセットのメタデータに書き戻す、画像メタデータワーカーの作成方法を説明します。
-feature: asset computeマイクロサービス
+feature: Asset Compute Microservices
 topics: metadata, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 統合、開発
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
-
 
 # asset computeメタデータワーカーの開発
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 一般的な使用例を次に示します。
 
 + 追加のメタデータを取得してアセットに保存する必要があるPIM（Product Information Managementシステム）などのサードパーティシステムとの統合
-+ コンテンツやコマースAIなどのAdobeサービスとの統合により、追加の機械学習属性でアセットメタデータを拡張
++ コンテンツやコマースAIなどのAdobe サービスとの統合により、追加の機械学習属性でアセットメタデータを拡張
 + バイナリからアセットに関するメタデータを取得し、アセットメタデータとしてAEMにCloud Serviceとして保存する
 
 ## どうするか
