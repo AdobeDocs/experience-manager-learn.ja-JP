@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
+source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 31%
+source-wordcount: '560'
+ht-degree: 32%
 
 ---
 
@@ -89,6 +89,24 @@ ht-degree: 31%
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
+
+   + AEM as a Cloud Service への移行 {#moving-to-aem-as-a-cloud-service}
+      + [はじめに](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [BPAおよびCAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
+      + [AEM Modernization tools](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
+      + [リポジトリの最新化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
+      + [オンボーディング ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Cloud Manager ](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + コンテンツの移行 {#content-migration}
+         + [一括インポートサービス](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
+         + [コンテンツ転送ツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+      + [検索およびインデックス作成](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
+      + [asset computeマイクロサービス](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + AEM Forms as aCloud Service{#aem-forms}
+         + [はじめに](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
+         + [デジタル登録](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
+         + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [はじめに](./migration/cloud-acceleration-manager/introduction.md)
       + [Readiness AnalyzerとBest Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
