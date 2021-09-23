@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '561'
 ht-degree: 32%
 
 ---
@@ -92,17 +92,18 @@ ht-degree: 32%
 
    + AEM as a Cloud Service への移行 {#moving-to-aem-as-a-cloud-service}
       + [はじめに](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [オンボーディング ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Cloud Manager ](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [BPAおよびCAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM Modernization tools](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [リポジトリの最新化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [オンボーディング ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
-      + [Cloud Manager ](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [asset computeマイクロサービス](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + [検索およびインデックス作成](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + コンテンツの移行 {#content-migration}
          + [一括インポートサービス](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [コンテンツ転送ツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
-      + [検索およびインデックス作成](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + [asset computeマイクロサービス](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [トラブルシューティング](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Forms as aCloud Service{#aem-forms}
          + [はじめに](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [デジタル登録](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
