@@ -1,6 +1,6 @@
 ---
-title: コンポーネントの拡張 | AEM SPA EditorとAngularの概要
-description: 既存のコアコンポーネントを拡張してAEM SPA Editorで使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解することは、AEM SPA Editor実装の機能を拡張する強力な手法です。 Sling Resource MergerのSlingモデルと機能を拡張するための委任パターンの使用方法を説明します。
+title: コンポーネントの拡張 | AEM SPA Editor とAngularの概要
+description: 既存のコアコンポーネントを拡張してAEM SPA Editor で使用する方法を説明します。 既存のコンポーネントにプロパティやコンテンツを追加する方法を理解することは、AEM SPA Editor の実装の機能を拡張するための強力な手法です。 Sling Resource Merger の Sling モデルおよび機能を拡張するための委任パターの使用方法を説明します。
 sub-product: sites
 feature: SPA Editor, Core Components
 doc-type: tutorial
@@ -14,40 +14,40 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1957'
 ht-degree: 3%
 
 ---
 
 # コアコンポーネントの拡張 {#extend-component}
 
-既存のコアコンポーネントを拡張してAEM SPA Editorで使用する方法を説明します。 既存のコンポーネントの拡張方法を理解することは、AEM SPA Editor実装の機能をカスタマイズおよび拡張する強力な手法です。
+既存のコアコンポーネントを拡張してAEM SPA Editor で使用する方法を説明します。 既存のコンポーネントの拡張方法を理解することは、AEM SPA Editor 実装の機能をカスタマイズおよび拡張するための強力な手法です。
 
 ## 目的
 
-1. 追加のプロパティとコンテンツを使用して、既存のコアコンポーネントを拡張します。
-2. `sling:resourceSuperType`を使用して、コンポーネントの継承の基本を理解します。
-3. Slingモデルの[委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)を活用して、既存のロジックと機能を再利用する方法を説明します。
+1. 追加のプロパティやコンテンツを使用して、既存のコアコンポーネントを拡張します。
+2. `sling:resourceSuperType` を使用して、コンポーネントの継承の基本を理解します。
+3. Sling モデルの [ 委任パターン ](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) を活用して、既存のロジックと機能を再利用する方法を説明します。
 
 ## 作成する内容
 
-この章では、新しい`Card`コンポーネントが作成されます。 `Card`コンポーネントは、[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)を拡張し、「タイトル」や「アクションの呼び出し」ボタンなどの追加のコンテンツフィールドを追加して、SPA内の他のコンテンツに対してティーザーの役割を実行します。
+この章では、新しい `Card` コンポーネントが作成されます。 `Card` コンポーネントは、[ 画像コアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja) を拡張して、「タイトル」や「アクションの呼び出し」ボタンなどの追加のコンテンツフィールドを追加し、SPA内の他のコンテンツに対してティーザーの役割を実行します。
 
 ![カードコンポーネントの最終オーサリング](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 実際の実装では、単に[ティーザーコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)を使用し、次に[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)を拡張して`Card`コンポーネントをプロジェクト要件に応じて作成する方が適しています。 可能な場合は、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を直接使用することを常にお勧めします。
+> 実際の実装では、[ ティーザーコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) を使用し、[ 画像コアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) を拡張して `Card` コンポーネントをプロジェクト要件に応じて作成する方が適切な場合があります。 可能な場合は、[ コアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) を直接使用することをお勧めします。
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
+[ローカル開発環境 ](overview.md#local-dev-environment) の設定に必要なツールと手順を確認します。
 
 ### コードの取得
 
-1. このチュートリアルの開始点をGitからダウンロードします。
+1. このチュートリアルの開始点を Git からダウンロードします。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -55,30 +55,30 @@ ht-degree: 3%
    $ git checkout Angular/extend-component-start
    ```
 
-2. Mavenを使用して、コードベースをローカルのAEMインスタンスにデプロイします。
+2. Maven を使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   [AEM 6.x](overview.md#compatibility)を使用する場合は、`classic`プロファイルを追加します。
+   [AEM 6.x](overview.md#compatibility) を使用する場合は、`classic` プロファイルを追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 従来の[WKNDリファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest)用に完成したパッケージをインストールします。 [WKND参照サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)から提供された画像は、WKND SPAで再利用されます。 パッケージは、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
+3. 従来の [WKND リファレンスサイト ](https://github.com/adobe/aem-guides-wknd/releases/latest) の完成したパッケージをインストールします。 [WKND 参照サイト ](https://github.com/adobe/aem-guides-wknd/releases/latest) から提供された画像は、WKND SPAで再利用されます。 パッケージは、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) を使用してインストールできます。
 
-   ![パッケージマネージャーによるwknd.allのインストール](./assets/map-components/package-manager-wknd-all.png)
+   ![パッケージマネージャーによる wknd.all のインストール](./assets/map-components/package-manager-wknd-all.png)
 
-[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/extend-component-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
+[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) で完成したコードをいつでも表示できます。また、ブランチ `Angular/extend-component-solution` に切り替えて、コードをローカルでチェックアウトすることもできます。
 
 ## Inspectの初期カード実装
 
 チャプタースターターコードによって、初期カードコンポーネントが提供されました。 Inspectカード実装の出発点。
 
-1. 任意のIDEで、`ui.apps`モジュールを開きます。
-2. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card`に移動し、`.content.xml`ファイルを表示します。
+1. 任意の IDE で、`ui.apps` モジュールを開きます。
+2. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` に移動し、`.content.xml` ファイルを表示します。
 
    ![カードコンポーネントのAEM定義の開始](assets/extend-component/aem-card-cmp-start-definition.png)
 
@@ -91,7 +91,7 @@ ht-degree: 3%
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   プロパティ`sling:resourceSuperType`が`wknd-spa-angular/components/image`を指し、`Card`コンポーネントがWKND SPA Imageコンポーネントからすべての機能を継承することを示します。
+   プロパティ `sling:resourceSuperType` が `wknd-spa-angular/components/image` を指し、`Card` コンポーネントが WKND SPA Image コンポーネントのすべての機能を継承することを示しています。
 
 3. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml` ファイルを検査します。
 
@@ -104,19 +104,19 @@ ht-degree: 3%
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   `sling:resourceSuperType`が`core/wcm/components/image/v2/image`を指していることに注意してください。 これは、WKND SPA画像コンポーネントがコアコンポーネントの画像からすべての機能を継承していることを示しています。
+   `sling:resourceSuperType` が `core/wcm/components/image/v2/image` を指していることに注意してください。 これは、WKND SPA画像コンポーネントがコアコンポーネント画像からすべての機能を継承していることを示しています。
 
-   [プロキシパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern)とも呼ばれます。Slingリソースの継承は、子コンポーネントが機能を継承し、必要に応じて動作を拡張/上書きできる強力なデザインパターンです。 Slingの継承は複数レベルの継承をサポートするので、最終的に、新しい`Card`コンポーネントはコアコンポーネント画像の機能を継承します。
+   [ プロキシパターン ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) とも呼ばれます。Sling リソースの継承は、子コンポーネントが機能を継承し、必要に応じて動作を拡張/上書きできるようにする強力なデザインパターンです。 Sling の継承は複数レベルの継承をサポートするので、最終的に、新しい `Card` コンポーネントはコアコンポーネント画像の機能を継承します。
 
-   多くの開発チームは、DRY(D.R.Y.)になるよう努めています（自分で繰り返さないでください）。 Slingの継承により、AEMでこれを実現できます。
+   多くの開発チームは、DRY になるよう努めています（繰り返さないでください）。 Sling の継承により、AEMでこれを実現できます。
 
-4. `card`フォルダーの下で、`_cq_dialog/.content.xml`ファイルを開きます。
+4. `card` フォルダーの下で、`_cq_dialog/.content.xml` ファイルを開きます。
 
-   このファイルは、`Card`コンポーネントのコンポーネントダイアログ定義です。 Slingの継承を使用する場合、[Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja)の機能を使用して、ダイアログの一部を上書きまたは拡張できます。 このサンプルでは、作成者から追加データを取り込み、カードコンポーネントに入力するための新しいタブがダイアログに追加されています。
+   このファイルは、`Card` コンポーネントのコンポーネントダイアログ定義です。 Sling の継承を使用する場合、 [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja) の機能を使用して、ダイアログの一部を上書きまたは拡張できます。 このサンプルでは、作成者から追加データを取り込み、カードコンポーネントを設定するための新しいタブがダイアログに追加されています。
 
-   `sling:orderBefore`などのプロパティを使用すると、開発者は新しいタブやフォームフィールドを挿入する場所を選択できます。 この場合、`Text`タブは`asset`タブの前に挿入されます。 Sling Resource Mergerを最大限に活用するには、[画像コンポーネントダイアログ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)の元のダイアログノード構造を知ることが重要です。
+   `sling:orderBefore` などのプロパティを使用すると、開発者は新しいタブやフォームフィールドを挿入する場所を選択できます。 この場合、`Text` タブは `asset` タブの前に挿入されます。 Sling Resource Merger を最大限に活用するには、[ 画像コンポーネントのダイアログ ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml) の元のダイアログノード構造を知っておくことが重要です。
 
-5. `card`フォルダーの下で、`_cq_editConfig.xml`ファイルを開きます。 このファイルは、AEMオーサリングUIでのドラッグ&amp;ドロップ動作を指示します。 画像コンポーネントを拡張する場合、リソースタイプがコンポーネント自体に一致することが重要です。 `<parameters>`ノードを確認します。
+5. `card` フォルダーの下で、`_cq_editConfig.xml` ファイルを開きます。 このファイルは、AEMオーサリング UI でのドラッグ&amp;ドロップ動作を指示します。 画像コンポーネントを拡張する場合は、リソースタイプがコンポーネント自体に一致することが重要です。 `<parameters>` ノードを確認します。
 
    ```xml
    <parameters
@@ -127,23 +127,23 @@ ht-degree: 3%
        imageRotate=""/>
    ```
 
-   ほとんどのコンポーネントには`cq:editConfig`は必要ありません。画像コンポーネントとその子コンポーネントは例外です。
+   ほとんどのコンポーネントには `cq:editConfig` は必要ありません。画像コンポーネントとその子コンポーネントは例外です。
 
-6. IDEスイッチで`ui.frontend`モジュールに移動し、`ui.frontend/src/app/components/card`に移動します。
+6. IDE スイッチで `ui.frontend` モジュールに移動し、`ui.frontend/src/app/components/card` に移動します。
 
    ![Angularコンポーネントの開始](assets/extend-component/angular-card-component-start.png)
 
 7. `card.component.ts` ファイルを検査します。
 
-   標準の`MapTo`関数を使用してAEM `Card`コンポーネントにマッピングするために、コンポーネントは既にスタブ化されています。
+   標準の `MapTo` 関数を使用してAEM `Card` コンポーネントにマッピングするために、コンポーネントは既にスタブ化されています。
 
    ```js
    MapTo('wknd-spa-angular/components/card')(CardComponent, CardEditConfig);
    ```
 
-   `src`、`alt`、`title`の3つの`@Input`パラメーターを確認します。 これらは、AngularコンポーネントにマッピングされるAEMコンポーネントの期待されるJSON値です。
+   `src`、`alt`、`title` の 3 つの `@Input` パラメーターを確認します。 これらは、AngularコンポーネントにマッピングされるAEMコンポーネントからの期待される JSON 値です。
 
-8. ファイル`card.component.html`を開きます。
+8. ファイル `card.component.html` を開きます。
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -151,11 +151,11 @@ ht-degree: 3%
    </div>
    ```
 
-   この例では、`card.component.ts`から`@Input`パラメーターを渡すだけで、既存のAngular画像コンポーネント`app-image`を再利用することを選択しました。 チュートリアルの後半で、追加のプロパティが追加され、表示されます。
+   この例では、`card.component.ts` から `@Input` パラメーターを渡すだけで、既存のAngular画像コンポーネント `app-image` を再利用することを選択しました。 チュートリアルの後半で、追加のプロパティが追加され、表示されます。
 
 ## テンプレートポリシーの更新
 
-この最初の`Card`実装で、AEM SPA Editorで機能を確認します。 初期の`Card`コンポーネントを確認するには、テンプレートポリシーを更新する必要があります。
+この最初の `Card` 実装で、AEM SPA Editor で機能を確認します。 初期の `Card` コンポーネントを確認するには、テンプレートポリシーを更新する必要があります。
 
 1. スターターコードをAEMのローカルインスタンスにデプロイします（まだデプロイしていない場合）。
 
@@ -164,63 +164,63 @@ ht-degree: 3%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)にあるSPAページテンプレートに移動します。
-3. レイアウトコンテナのポリシーを更新し、新しい`Card`コンポーネントを許可されたコンポーネントとして追加します。
+2. [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html) にあるSPAページテンプレートに移動します。
+3. レイアウトコンテナのポリシーを更新して、新しい `Card` コンポーネントを許可されたコンポーネントとして追加します。
 
    ![レイアウトコンテナポリシーの更新](assets/extend-component/card-component-allowed.png)
 
-   ポリシーに対する変更を保存し、`Card`コンポーネントを許可されたコンポーネントとして監視します。
+   ポリシーに対する変更を保存し、`Card` コンポーネントを許可されたコンポーネントとして監視します。
 
    ![許可されたコンポーネントとしてのカードコンポーネント](assets/extend-component/card-component-allowed-layout-container.png)
 
-## オーサーの初期カードコンポーネント
+## 初期カードコンポーネントの作成
 
-次に、AEM SPA Editorを使用して`Card`コンポーネントを作成します。
+次に、AEM SPA Editor を使用して `Card` コンポーネントを作成します。
 
-1. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)に移動します。
-2. `Edit`モードで、`Card`コンポーネントを`Layout Container`に追加します。
+1. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) に移動します。
+2. `Edit` モードで、`Card` コンポーネントを `Layout Container` に追加します。
 
    ![新規コンポーネントの挿入](assets/extend-component/insert-custom-component.png)
 
-3. アセットファインダーから`Card`コンポーネントに画像をドラッグ&amp;ドロップします。
+3. アセットファインダーから `Card` コンポーネントに画像をドラッグ&amp;ドロップします。
 
    ![画像を追加](assets/extend-component/card-add-image.png)
 
-4. `Card`コンポーネントダイアログを開き、「**テキスト**」タブが追加されていることを確認します。
+4. `Card` コンポーネントダイアログを開き、「**テキスト**」タブが追加されていることに注意してください。
 5. 「**テキスト**」タブで次の値を入力します。
 
    ![「テキストコンポーネント」タブ](assets/extend-component/card-component-text.png)
 
    **カードのパス**  - SPAホームページの下でページを選択します。
 
-   **CTAテキスト** - 「詳細を表示」
+   **CTA テキスト** - 「詳細を表示」
 
-   **カードタイトル**  — 空白のままにします。
+   **カードタイトル**  — 空白のまま
 
-   **リンクされたページからタイトルを取得する**  - trueを示すチェックボックスをオンにします。
+   **リンクされたページからタイトルを取得**  - true を示すチェックボックスをオンにします。
 
-6. **「アセットのメタデータ**」タブを更新して、**代替テキスト**&#x200B;と&#x200B;**キャプション**&#x200B;の値を追加します。
+6. **「アセットのメタデータ**」タブを更新して、**代替テキスト** と **キャプション** の値を追加します。
 
-   現在、ダイアログの更新後に追加の変更は表示されません。 新しいフィールドをAngularコンポーネントに公開するには、`Card`コンポーネントのSling Modelを更新する必要があります。
+   現在、ダイアログの更新後に追加の変更は表示されません。 新しいフィールドをAngularコンポーネントに公開するには、`Card` コンポーネントの Sling モデルを更新する必要があります。
 
-7. 新しいタブを開き、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card)に移動します。 `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid`の下のコンテンツノードをInspectして、`Card`コンポーネントのコンテンツを見つけます。
+7. 新しいタブを開き、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card) に移動します。 `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` の下のコンテンツノードをInspectして、`Card` コンポーネントのコンテンツを検索します。
 
-   ![CRXDE-Liteコンポーネントのプロパティ](assets/extend-component/crxde-lite-properties.png)
+   ![CRXDE-Lite コンポーネントのプロパティ](assets/extend-component/crxde-lite-properties.png)
 
-   プロパティ`cardPath`、`ctaText`、`titleFromPage`がダイアログで保持されることを確認します。
+   プロパティ `cardPath`、`ctaText`、`titleFromPage` がダイアログで保持されることを確認します。
 
-## カードSlingモデルの更新
+## カード Sling モデルの更新
 
-最終的に、コンポーネントダイアログの値をAngularコンポーネントに公開するには、`Card`コンポーネントのJSONを入力するSling Modelを更新する必要があります。 また、次の2つのビジネスロジックを実装する機会もあります。
+最終的に、コンポーネントダイアログの値をAngularコンポーネントに公開するには、`Card` コンポーネントの JSON を設定する Sling Model を更新する必要があります。 また、次の 2 つのビジネスロジックを実装する機会もあります。
 
-* `titleFromPage`から&#x200B;**true**&#x200B;の場合、`cardPath`で指定されたページのタイトルを返します。それ以外の場合は、`cardTitle`テキストフィールドの値を返します。
-* `cardPath`で指定されたページの最終変更日を返します。
+* `titleFromPage` から **true** の場合、`cardPath` で指定されたページのタイトルを返します。それ以外の場合は、`cardTitle` テキストフィールドの値を返します。
+* `cardPath` で指定されたページの最終変更日を返します。
 
-目的のIDEに戻り、`core`モジュールを開きます。
+任意の IDE に戻り、`core` モジュールを開きます。
 
 1. `Card.java`（`core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`）ファイルを開きます。
 
-   `Card`インターフェイスが現在`com.adobe.cq.wcm.core.components.models.Image`を拡張しているので、`Image`インターフェイスのすべてのメソッドを継承していることを確認します。 `Image`インターフェイスは、既に`ComponentExporter`インターフェイスを拡張しています。このインターフェイスを使用して、Sling ModelをJSONとして書き出し、SPAエディターでマッピングできます。 したがって、[カスタムコンポーネントの章](custom-component.md)で行ったように、`ComponentExporter`インターフェイスを明示的に拡張する必要はありません。
+   `Card` インターフェイスが現在 `com.adobe.cq.wcm.core.components.models.Image` を拡張しているので、`Image` インターフェイスのすべてのメソッドを継承していることを確認します。 `Image` インターフェイスは既に `ComponentExporter` インターフェイスを拡張しているので、Sling Model を JSON 形式で書き出し、SPAエディターでマッピングできます。 したがって、[ カスタムコンポーネントの章 ](custom-component.md) で行ったように、`ComponentExporter` インターフェイスを明示的に拡張する必要はありません。
 
 2. インターフェイスに次のメソッドを追加します。
 
@@ -260,11 +260,11 @@ ht-degree: 3%
    }
    ```
 
-   これらのメソッドは、JSONモデルAPIを介して公開され、Angularコンポーネントに渡されます。
+   これらのメソッドは、JSON モデル API を介して公開され、Angularコンポーネントに渡されます。
 
-3. 次を開きます： `CardImpl.java`. これは`Card.java`インターフェイスの実装です。 この実装は、チュートリアルを高速化するために、既に部分的にスタブ化されています。  `@Model`および`@Exporter`注釈を使用して、Sling Model Exporterを介してSling ModelをJSONとしてシリアル化できることに注意してください。
+3. 次を開きます： `CardImpl.java`. `Card.java` インターフェイスの実装です。 この実装は、チュートリアルを高速化するために、既に部分的にスタブ化されています。  `@Model` 注釈と `@Exporter` 注釈を使用して、Sling Model Exporter を介して Sling Model を JSON としてシリアル化できることに注意してください。
 
-   `CardImpl.java` また、はSling Modelの委 [任パターンを使用し](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) て、画像コアコンポーネントからすべてのロジックが書き換えられないようにします。
+   `CardImpl.java` また、は Sling Model の委 [任パターンを使用し](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) て、画像コアコンポーネントのすべてのロジックが書き換えられないようにします。
 
 4. 次の行を確認します。
 
@@ -274,7 +274,7 @@ ht-degree: 3%
    private Image image;
    ```
 
-   上記の注釈は、`Card`コンポーネントの`sling:resourceSuperType`継承に基づいて、`image`という名前の画像オブジェクトをインスタンス化します。
+   上記の注釈は、`Card` コンポーネントの `sling:resourceSuperType` 継承に基づいて、`image` という名前の画像オブジェクトをインスタンス化します。
 
    ```java
    @Override
@@ -283,9 +283,9 @@ ht-degree: 3%
    }
    ```
 
-   その後、`image`オブジェクトを使用するだけで、ロジックを自分で書く必要なく、`Image`インターフェイスで定義されたメソッドを実装できます。 この手法は、`getSrc()`、`getAlt()`および`getTitle()`に使用されます。
+   その後、`image` オブジェクトを使用するだけで、ロジックを自分で書く必要なく、`Image` インターフェイスで定義されたメソッドを実装できます。 この手法は `getSrc()`、`getAlt()`、`getTitle()` に使用されます。
 
-5. 次に、 `initModel()`メソッドを実装して、`cardPath`の値に基づいてプライベート変数`cardPage`を開始します
+5. 次に、 `initModel()` メソッドを実装して、`cardPath` の値に基づいてプライベート変数 `cardPage` を開始します。
 
    ```java
    @PostConstruct
@@ -296,11 +296,11 @@ ht-degree: 3%
    }
    ```
 
-   `@PostConstruct initModel()`は、Sling Modelの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager`は、`@ScriptVariable`注釈を介してSling Modelで使用可能になる、多数の[Javaベースのグローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)の1つです。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)メソッドはパスを受け取り、AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)オブジェクトを返します。パスが有効なページを指していない場合はnullを返します。
+   `@PostConstruct initModel()` は、Sling モデルの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager` は、`@ScriptVariable` 注釈を介して Sling Model で使用可能になった、多数の [Java ベースのグローバルオブジェクト ](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) の 1 つです。 [getPage()](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) メソッドはパスを取得し、AEM [Page](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html) オブジェクトを返します。パスが有効なページを指していない場合は null を返します。
 
-   これにより、`cardPage`変数が初期化されます。この変数は、基になるリンクされたページに関するデータを返すために、他の新しいメソッドで使用されます。
+   これにより、`cardPage` 変数が初期化され、他の新しいメソッドが基になるリンクされたページに関するデータを返すために使用されます。
 
-6. オーサーダイアログを保存したJCRプロパティに既にマッピングされているグローバル変数を確認します。 `@ValueMapValue`注釈は、マッピングを自動的に実行するために使用されます。
+6. オーサーダイアログを保存した JCR プロパティに既にマッピングされているグローバル変数を確認します。 `@ValueMapValue` 注釈は、マッピングを自動的に実行するために使用されます。
 
    ```java
    @ValueMapValue
@@ -316,9 +316,9 @@ ht-degree: 3%
    private String cardTitle;
    ```
 
-   これらの変数は、`Card.java`インターフェイス用の追加のメソッドを実装するために使用されます。
+   これらの変数は、`Card.java` インターフェイスの追加のメソッドを実装するために使用されます。
 
-7. `Card.java`インターフェイスで定義された追加のメソッドを実装します。
+7. `Card.java` インターフェイスで定義された追加のメソッドを実装します。
 
    ```java
    @Override
@@ -353,18 +353,18 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > [完成したCardImpl.javaは、](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)で確認できます。
+   > [ 完成した CardImpl.java は、](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java) で確認できます。
 
-8. ターミナルウィンドウを開き、`core`ディレクトリのMaven `autoInstallBundle`プロファイルを使用して、`core`モジュールの更新のみをデプロイします。
+8. ターミナルウィンドウを開き、`core` ディレクトリの Maven `autoInstallBundle` プロファイルを使用して、`core` モジュールの更新のみをデプロイします。
 
    ```shell
    $ cd core/
    $ mvn clean install -PautoInstallBundle
    ```
 
-   [AEM 6.x](overview.md#compatibility)を使用する場合は、`classic`プロファイルを追加します。
+   [AEM 6.x](overview.md#compatibility) を使用する場合は、`classic` プロファイルを追加します。
 
-9. JSONモデルの応答を次の場所に表示します。[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)を探し、`wknd-spa-angular/components/card`を探します。
+9. JSON モデルの応答を次の場所で確認します。[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) を検索し、`wknd-spa-angular/components/card` を探します。
 
    ```json
    "card": {
@@ -379,13 +379,13 @@ ht-degree: 3%
    }
    ```
 
-   `CardImpl` Sling Modelのメソッドを更新すると、JSONモデルが更新され、追加のキーと値のペアが追加されます。
+   JSON モデルは、`CardImpl` Sling モデルのメソッドを更新した後、追加のキーと値のペアで更新されます。
 
-## angularコンポーネントの更新
+## 更新Angularコンポーネント
 
-これで、JSONモデルに`ctaLinkURL`、`ctaText`、`cardTitle`および`cardLastModified`の新しいプロパティが入力され、Angularコンポーネントを更新して表示できます。
+これで、JSON モデルに `ctaLinkURL`、`ctaText`、`cardTitle` および `cardLastModified` の新しいプロパティが入力されました。これらを表示するようにAngularコンポーネントを更新できます。
 
-1. IDEに戻り、`ui.frontend`モジュールを開きます。 必要に応じて、新しいターミナルウィンドウからwebpack開発サーバーを起動して、変更をリアルタイムで確認します。
+1. IDE に戻り、`ui.frontend` モジュールを開きます。 必要に応じて、新しいターミナルウィンドウから webpack 開発サーバーを起動して、変更をリアルタイムで確認します。
 
    ```shell
    $ cd ui.frontend
@@ -393,7 +393,7 @@ ht-degree: 3%
    $ npm start
    ```
 
-2. `ui.frontend/src/app/components/card/card.component.ts`で`card.component.ts`を開きます。 追加の`@Input`注釈を追加して、新しいモデルをキャプチャします。
+2. `ui.frontend/src/app/components/card/card.component.ts` で `card.component.ts` を開きます。 追加の `@Input` 注釈を追加して、新しいモデルをキャプチャします。
 
    ```diff
    export class CardComponent implements OnInit {
@@ -407,7 +407,7 @@ ht-degree: 3%
    +    @Input() ctaText: string;
    ```
 
-3. コールトゥアクションの準備ができたかどうかを確認し、`cardLastModified`入力に基づいて日付/時間文字列を返すためのメソッドを追加します。
+3. コールトゥアクションの準備ができたかどうかを確認し、`cardLastModified` 入力に基づいて日付/時間文字列を返すためのメソッドを追加します。
 
    ```js
    export class CardComponent implements OnInit {
@@ -428,7 +428,7 @@ ht-degree: 3%
    }
    ```
 
-4. `card.component.html`を開き、次のマークアップを追加して、タイトル、コールトゥアクション、最終変更日を表示します。
+4. `card.component.html` を開き、次のマークアップを追加して、タイトル、行動喚起、最終変更日を表示します。
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -447,20 +447,20 @@ ht-degree: 3%
    </div>
    ```
 
-   `card.component.scss`に、タイトルのスタイル設定、コールトゥアクション、最終変更日の設定を行うためのSassルールが既に追加されています。
+   `card.component.scss` に、タイトルのスタイル設定、行動喚起、最終変更日の設定を行うための Sass ルールが既に追加されています。
 
    >[!NOTE]
    >
-   > 完成した[Angularカードコンポーネントコードは、](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)で確認できます。
+   > 完成した [Angular・カード・コンポーネント・コードは、](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card) で確認できます。
 
-5. Mavenを使用して、プロジェクトのルートからAEMに完全な変更をデプロイします。
+5. Maven を使用して、プロジェクトのルートからAEMに完全な変更をデプロイします。
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-6. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)に移動して、更新されたコンポーネントを確認します。
+6. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) に移動して、更新されたコンポーネントを確認します。
 
    ![AEMのカードコンポーネントの更新](assets/extend-component/updated-card-in-aem.png)
 
@@ -470,6 +470,6 @@ ht-degree: 3%
 
 ## おめでとうございます。 {#congratulations}
 
-これで、を使用してAEMコンポーネントを拡張する方法と、SlingのモデルとダイアログがJSONモデルと連携する方法を学びました。
+これで、を使用してAEMコンポーネントを拡張する方法と、Sling のモデルとダイアログが JSON モデルと連携する方法を学びました。
 
-[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/extend-component-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
+[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) で完成したコードをいつでも表示できます。また、ブランチ `Angular/extend-component-solution` に切り替えて、コードをローカルでチェックアウトすることもできます。

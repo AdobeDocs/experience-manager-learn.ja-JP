@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '564'
 ht-degree: 32%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 32%
 
 + [概要](./overview.md)
 + AEM as a Cloud Service の概要{#introduction}
-   + [AEM as aCloud Serviceとは](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [as a Cloud Serviceとは](./introduction/what-is-aem-as-a-cloud-service.md)
    + [変化](./introduction/evolution.md)
    + [アーキテクチャ](./introduction/architecture.md)
    + [Cloud Manager ](./introduction/cloud-manager.md)
-+ 基盤となるテクノロジー{#underlying-technology}
++ 基盤となるテクノロジー {#underlying-technology}
    + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java コンテンツリポジトリー](./underlying-technology/introduction-jcr.md)
@@ -30,10 +30,10 @@ ht-degree: 32%
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
-   + [CI/CD実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
-   + [CI/CD非実稼動パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
+   + [CI/CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD 非実稼動パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
-   + 開発オペレーション{#devops}
+   + Dev Ops{#devops}
       + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
       + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
       + [パイプラインの設定](./cloud-manager/devops/configure-pipelines.md)
@@ -41,13 +41,13 @@ ht-degree: 32%
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ ローカル開発環境のセットアップ{#local-development-environment-set-up}
++ ローカル開発環境のセットアップ {#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
-   + [ローカルDispatcherツール](./local-development-environment/dispatcher-tools.md)
+   + [ローカル Dispatcher ツール](./local-development-environment/dispatcher-tools.md)
 + 開発{#developing}
-   + 開発の基本{#basics}
+   + 開発の基本 {#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)
       + [AEM プロジェクトアーキタイプ](./developing/basics/aem-project-archetype.md)
@@ -56,35 +56,37 @@ ht-degree: 32%
       + [リポジトリー構造パッケージ](./developing/basics/repository-structure-package.md)
       + [コンテンツ公開](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
-      + [Dispatcher設定の移行](./developing/basics/dispatcher-configuration.md)
+      + [Dispatcher 設定の移行](./developing/basics/dispatcher-configuration.md)
    + AEM プロジェクト{#aem-projects}
       + [AEM Maven Project](./developing/projects/maven-project-structure.md)
-   + OSGi Services{#osgi-services}
-      + [OSGiサービスの基本](./developing/osgi-services/basics.md)
-      + [OSGiコンポーネントのライフサイクル](./developing/osgi-services/lifecycle.md)
-      + [OSGi設定の基本](./developing/osgi-services/configurations.md)
-      + [OCDを使用したOSGi設定](./developing/osgi-services/configurations-ocd.md)
+   + OSGi サービス {#osgi-services}
+      + [OSGi サービスの基本](./developing/osgi-services/basics.md)
+      + [OSGi コンポーネントのライフサイクル](./developing/osgi-services/lifecycle.md)
+      + [OSGi 設定の基本](./developing/osgi-services/configurations.md)
+      + [OCD を使用した OSGi 設定](./developing/osgi-services/configurations-ocd.md)
+   + 詳細{#advanced}
+      + [サービスユーザー](./developing/advanced/service-users.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + デバッグAEM{#debugging}
-   + AEM SDKのデバッグ{#debugging-aem-sdk}
+   + AEM SDK のデバッグ {#debugging-aem-sdk}
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
       + [ログ](./debugging/aem-sdk-local-quickstart/logs.md)
       + [リモートデバッグ](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
-      + [OSGi Webコンソール](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
+      + [OSGi Web コンソール](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher ツール](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [その他のツール](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + AEMをCloud Serviceとしてデバッグ{#debugging-aem-as-a-cloud-service}
+   + デバッグAEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概要](./debugging/cloud-service/overview.md)
       + [ログ](./debugging/cloud-service/logs.md)
       + [ビルドとデプロイ](./debugging/cloud-service/build-and-deployment.md)
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
-+ AEM{#accessing}へのアクセス
++ AEM{#accessing} へのアクセス
    + [概要](./accessing/overview.md)
    + [Adobe IMSユーザー](./accessing/adobe-ims-users.md)
-   + [Adobe IMSユーザーグループ](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMSのユーザーグループ](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
-   + [AEMユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
+   + [AEMのユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
@@ -94,8 +96,8 @@ ht-degree: 32%
       + [はじめに](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [オンボーディング ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager ](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
-      + [BPAおよびCAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
-      + [AEM Modernization tools](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
+      + [BPA および CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
+      + [AEM Modernization Tools](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [リポジトリの最新化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
       + [asset computeマイクロサービス](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
@@ -104,13 +106,13 @@ ht-degree: 32%
          + [一括インポートサービス](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [コンテンツ転送ツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [トラブルシューティング](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Forms as aCloud Service{#aem-forms}
+      + AEM Formsas a Cloud Service{#aem-forms}
          + [はじめに](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [デジタル登録](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [はじめに](./migration/cloud-acceleration-manager/introduction.md)
-      + [Readiness AnalyzerとBest Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [Readiness Analyzer と Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [実装段階](./migration/cloud-acceleration-manager/implementation-phase.md)
       + [コンテンツ転送ツール](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [コードリファクタリングツール](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
@@ -118,10 +120,10 @@ ht-degree: 32%
       + [Dispatcher コンバーター](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [インデックスコンバーター](./migration/cloud-acceleration-manager/index-converter.md)
       + [アセットワークフローの移行 ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
-      + [Cloud Acceleration Managerの操作](./migration/cloud-acceleration-manager/navigating.md)
-      + [Cloud Acceleration Managerの使用](./migration/cloud-acceleration-manager/using.md)
+      + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
+      + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
-   + アダプティブフォームの作成{#create-first-af}
+   + アダプティブフォームの作成 {#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
       + [テーマを作成](./forms/create-first-af/create-theme.md)
       + [テンプレートを作成](./forms/create-first-af/create-template.md)
@@ -133,52 +135,52 @@ ht-degree: 32%
       + [アセットパネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [スタートパネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
-   + Document CloudAPIとAEM Forms CS{#doc-cloud-sdk}
+   + Document CloudAPI とAEM Forms CS{#doc-cloud-sdk}
       + [はじめに](./forms/doc-cloud-sdk/introduction.md)
-      + [Adobe I/Oプロジェクト](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [OSGi設定の作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Adobe I/Oプロジェクトの作成](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [OSGi 設定の作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [インターフェイスの定義](./forms/doc-cloud-sdk/create-interface.md)
       + [インターフェイスの実装](./forms/doc-cloud-sdk/implement-interface.md)
-      + [JSONパーツの作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [JSON パーツの作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [カスタムプロセスステップ](./forms/doc-cloud-sdk/custom-process-step.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
-      + [Azure Storageへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
+      + [Azure Storage へのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
       + [事前入力フォーム](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [クエリの送信](./forms/forms-cs-azure-portal/query-submitted-data.md)
 
 
-      + レビューワークフローの作成{#create-aem-workflow}
+      + レビューワークフローの作成 {#create-aem-workflow}
          + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
          + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
       + Adobe SignとAEM Forms{#forms-and-sign}
          + [はじめに](./forms/forms-and-sign/introduction.md)
-         + [Adobe Sign APIアプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
+         + [Adobe Sign API アプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
          + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
          + [アダプティブフォームの作成](./forms/forms-and-sign/create-adaptive-form.md)
          + [入力と署名の設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-      + Salesforce{#integrate-with-salesforce}との統合
+      + Salesforce との統合 {#integrate-with-salesforce}
          + [はじめに](./forms/integrate-with-salesforce/introduction.md)
          + [接続済みアプリの作成](./forms/integrate-with-salesforce/create-connected-app.md)
-         + [Swaggerファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
+         + [Swagger ファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
          + [データソースの作成](./forms/integrate-with-salesforce/create-data-source.md)
          + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
-         + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+         + [テストフォームの送信](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
          + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
-+ asset computeの拡張機能{#asset-compute}
++ asset computeの拡張機能 {#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
       + [アカウントとサービスのプロビジョニング](./asset-compute/set-up/accounts-and-services.md)
       + [ローカル開発環境](./asset-compute/set-up/development-environment.md)
-      + [AdobeプロジェクトFirefly](./asset-compute/set-up/firefly.md)
-   + 開発{#develop}
+      + [Adobeプロジェクト Firefly](./asset-compute/set-up/firefly.md)
+   + 開発 {#develop}
       + [asset computeプロジェクト](./asset-compute/develop/project.md)
       + [環境変数の設定](./asset-compute/develop/environment-variables.md)
-      + [manifest.ymlの設定](./asset-compute/develop/manifest.md)
-      + [作業者の育成](./asset-compute/develop/worker.md)
+      + [manifest.yml の設定](./asset-compute/develop/manifest.md)
+      + [作業者の開発](./asset-compute/develop/worker.md)
       + [開発ツールの使用](./asset-compute/develop/development-tool.md)
-   + テストとデバッグ{#test-debug}
+   + テストとデバッグ {#test-debug}
       + [ワーカーのテスト](./asset-compute/test-debug/test.md)
       + [ワーカーのデバッグ](./asset-compute/test-debug/debug.md)
    + デプロイ{#deploy}
@@ -187,10 +189,10 @@ ht-degree: 32%
    + 詳細{#advanced}
       + [メタデータワーカー](./asset-compute/advanced/metadata.md)
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
-+ マルチステップTutorials{#multi-step-tutorials}
++ 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)
-   + [SPAエディター(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM SitesとAdobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
