@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+source-git-commit: c003632d82b6a3ba2046e494ff8e7911f619945c
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1961'
 ht-degree: 3%
 
 ---
@@ -296,7 +296,7 @@ ht-degree: 3%
    }
    ```
 
-   `@PostConstruct initModel()` は、Sling モデルの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager` は、`@ScriptVariable` 注釈を介して Sling Model で使用可能になった、多数の [Java ベースのグローバルオブジェクト ](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) の 1 つです。 [getPage()](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) メソッドはパスを取得し、AEM [Page](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html) オブジェクトを返します。パスが有効なページを指していない場合は null を返します。
+   `@PostConstruct initModel()` は、Sling モデルの初期化時に常に呼び出されるので、モデル内の他のメソッドで使用できるオブジェクトを初期化する良い機会です。 `pageManager` は、`@ScriptVariable` 注釈を介して Sling Model で使用可能になった、多数の [Java ベースのグローバルオブジェクト ](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) の 1 つです。 [getPage](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) メソッドはパスを取得し、AEM [Page](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) オブジェクトを返します。パスが有効なページを指していない場合は null を返します。
 
    これにより、`cardPage` 変数が初期化され、他の新しいメソッドが基になるリンクされたページに関するデータを返すために使用されます。
 
