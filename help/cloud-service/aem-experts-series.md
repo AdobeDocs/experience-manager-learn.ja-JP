@@ -2,10 +2,10 @@
 title: Adobe Experience Manager as a Cloud Service Experts Series
 description: Adobe Experience Manager(AEM) を構築するAdobe独自のエキスパートエンジニア、およびそれを提供するプロフェッショナルサービスからas a Cloud Service的に取得する方法について説明します。
 sub-product: sites, cloud-manager, assets
-source-git-commit: 5b3dd38d1fa2e3c35bfa2a867f51c7295907ecc7
+source-git-commit: 1e52e29051e219c4cd5ea83e2325fdae62ff833a
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 4%
+source-wordcount: '705'
+ht-degree: 3%
 
 ---
 
@@ -177,6 +177,43 @@ AEMas a Cloud Serviceの独自の機能について、Adobeの専門家にお問
       <p>
         <br/>
         AEM Assets のAsset computeマイクロサービス、AEM 6 のアセット処理を置き換える方法、およびカスタムアセットレンディションを生成するために拡張する方法について説明します。
+      </p>
+   </td>   
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video">
+      <img alt="コンテンツの一括読み込み" src="./assets/experts-series/bulk-import.png"/>
+      </a>
+      <div>
+         <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>コンテンツの一括読み込み</strong></a>
+         <br/><em>シニアクラウドアーキテクトの Kiran Murugulla 氏と</em>
+      </div>
+      <p>
+        <br/>
+        一括インポートサービスとAEMパッケージマネージャーを使用して、コンテンツをAEM as a Cloud Serviceに安全かつ効率的に一括インポートする方法を説明します。
+      </p>
+   </td> 
+    <td></td>
+  </tr>
+</table>
+
+## AEM as a Cloud Servicesのヘルプが必要な場合
+
+エキスパートによるAEM as a Cloud ServiceおよびAEM SDK のデバッグとトラブルシューティングの方法について説明します。
+
+<table>
+  <tr>
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
+      <img alt="トラブルシューティングAEM as a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
+      </a>
+      <div>
+         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         target="_aem-experts-series-video"><strong>トラブルシューティングAEM as a Cloud Service</strong></a>
+         <br/><em>クラウドアーキテクト、Kunwar Saluja との連携</em>
+      </div>
+      <p>
+        <br/>
+        AEM SDK とAEMのデバッグから、Cloud Manager のビルドおよびデプロイメントの失敗に至るまで、AEM as a Cloud Serviceの様々な側面をトラブルシューティングする方法について説明します。
       </p>
    </td>   
     <td></td>
