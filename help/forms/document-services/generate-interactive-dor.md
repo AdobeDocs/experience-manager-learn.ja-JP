@@ -6,9 +6,10 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+kt: 9226
+source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -20,18 +21,21 @@ ht-degree: 0%
 
 この使用例を達成するには、次の手順を実行する必要があります
 
-## xdp のサンプルデータを生成します
+## XDP のサンプルデータの生成
 
-XDP をAEM Forms Designer で開きます。
-ファイルをクリック |フォームのプロパティ |プレビュークリックしてプレビューデータを生成クリックして生成「form-data.xml」などの意味のあるファイル名を指定します。
+* XDP をAEM Forms Designer で開きます。
+* ファイルをクリック |フォームのプロパティ |プレビュー
+* 「プレビューデータを生成」をクリックします。
+* 「生成」をクリックします。
+* 「form-data.xml」など、意味のあるファイル名を指定する
 
 ## xml データから XSD を生成
 
-無料のオンラインツールを使用して、 [xsd を生成](https://www.freeformatter.com/xsd-generator.html) を、前の手順で生成した xml データから。
+無料のオンラインツールを使用して、 [XSD を生成](https://www.freeformatter.com/xsd-generator.html) を、前の手順で生成した xml データから。
 
-## アダプティブの作成
+## アダプティブフォームの作成
 
-前の手順で作成した xsd に基づいてアダプティブフォームを作成します。 クライアントライブラリ「irs」を使用するようにフォームを関連付けます。 このクライアントライブラリには、呼び出し元のアプリケーションにPDFを返すサーブレットにPOST呼び出しを行うコードが含まれています。次のコードは、 _ダウンロードPDF_ がクリックされた
+前の手順の XSD に基づいてアダプティブフォームを作成します。 クライアントライブラリ「irs」を使用するようにフォームを関連付けます。 このクライアントライブラリには、呼び出し元のアプリケーションにPDFを返すサーブレットにPOST呼び出しを行うコードが含まれています。次のコードは、 _ダウンロードPDF_ がクリックされた
 
 ```javascript
 $(document).ready(function() {
@@ -72,7 +76,7 @@ $(document).ready(function() {
 
 ## カスタムサーブレットの作成
 
-データを xdp テンプレートと結合し、pdf を返すカスタムサーブレットを作成します。 これをおこなうコードを次に示します。 カスタムサーブレットは、 [AEMformsDocumentServices.core-1.0-SNAPSHOT バンドル](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)) をクリックします。
+データを XDP テンプレートと結合し、PDF を返すカスタムサーブレットを作成します。 これをおこなうコードを次に示します。 カスタムサーブレットは、 [AEMformsDocumentServices.core-1.0-SNAPSHOT バンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)) をクリックします。
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -191,13 +195,16 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 このサンプルコードでは、テンプレート名 (f8918-r14e_redo-barcode_3 2.xdp) はハードコードされています。 テンプレート名をサーブレットに簡単に渡して、このコードをすべてのテンプレートに対して汎用的に機能させることができます。
 
 
+## サーバーにサンプルをデプロイします。
+
 ローカルサーバーでこれをテストするには、次の手順に従います。
+
 1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. 次のエントリを Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service に追加します。
 1. [カスタム DocumentServices バンドルをダウンロードしてインストールする](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). このサーブレットは、データを XDP テンプレートとマージし、PDF をストリーミングして戻す機能を持ちます
 1. [クライアントライブラリの読み込み](assets/irs.zip)
 1. [アダプティブフォームの読み込み](assets/f8918complete.zip)
-! [XDP テンプレートとスキーマの読み込み](assets/xdp-template-and-xsd.zip)
+1. [XDP テンプレートとスキーマの読み込み](assets/xdp-template-and-xsd.zip)
 1. [アダプティブフォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. フォームフィールドの一部に入力します。
 1. 「ダウンロードPDF」をクリックしてPDFを取得
