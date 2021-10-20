@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9226
-source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -201,10 +201,12 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 
 1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. 次のエントリを Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service に追加します。
-1. [カスタム DocumentServices バンドルをダウンロードしてインストールする](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). このサーブレットは、データを XDP テンプレートとマージし、PDF をストリーミングして戻す機能を持ちます
+1. [カスタム DocumentServices バンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). このサーブレットは、データを XDP テンプレートとマージし、PDF をストリーミングして戻す機能を持ちます
 1. [クライアントライブラリの読み込み](assets/irs.zip)
 1. [アダプティブフォームの読み込み](assets/f8918complete.zip)
 1. [XDP テンプレートとスキーマの読み込み](assets/xdp-template-and-xsd.zip)
 1. [アダプティブフォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. フォームフィールドの一部に入力します。
-1. 「ダウンロードPDF」をクリックしてPDFを取得
+1. 「ダウンロードPDF」をクリックして、PDFを取得します。 PDFのダウンロードが完了するまで、数秒待つ必要がある場合があります
+
+
