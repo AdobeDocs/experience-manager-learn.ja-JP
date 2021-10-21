@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 6%
+source-wordcount: '994'
+ht-degree: 4%
 
 ---
 
@@ -122,4 +122,106 @@ function useGraphQL(query, path) {
 
 主に Adventures のリストが表示され、アドベンチャーの詳細をクリックするオプションがユーザーに提供されます。
 
-`Adventures.js` - Adventures のカードリストを表示します。
+`Adventures.js` - Adventures のカードリストを表示します。  初期状態では、 [永続クエリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) これは [プリパッケージ](https://github.com/adobe/aem-guides-wknd/tree/master/ui.content/src/main/content/jcr_root/conf/wknd/settings/graphql/persistentQueries/adventures-all/_jcr_content) と WKND リファレンスサイトの両方に表示されます。 エンドポイントは `/wknd/adventures-all`. ユーザーがアクティビティに基づいて結果をフィルタリングして実験できるボタンはいくつかあります。
+
+```javascript
+function filterQuery(activity) {
+  return `
+    {
+      adventureList (filter: {
+        adventureActivity: {
+          _expressions: [
+            {
+              value: "${activity}"
+            }
+          ]
+        }
+      }){
+        items {
+          _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+        adventurePrimaryImage {
+          ... on ImageRef {
+            _path
+            mimeType
+            width
+            height
+          }
+        }
+      }
+    }
+  }
+  `;
+}
+```
+
+`AdventureDetail.js`  — アドベンチャーの詳細ビューを表示します。 URL から解析されるアドベンチャーへのパスに基づいて、graphQL クエリを作成します。
+
+```javascript
+//parse the content fragment from the url
+const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
+...
+function adventureDetailQuery(_path) {
+  return `{
+    adventureByPath (_path: "${_path}") {
+      item {
+        _path
+          adventureTitle
+          adventureActivity
+          adventureType
+          adventurePrice
+          adventureTripLength
+          adventureGroupSize
+          adventureDifficulty
+          adventurePrice
+          adventurePrimaryImage {
+            ... on ImageRef {
+              _path
+              mimeType
+              width
+              height
+            }
+          }
+          adventureDescription {
+            html
+          }
+          adventureItinerary {
+            html
+          }
+      }
+    }
+  }
+  `;
+}
+```
+
+### 環境変数
+
+複数 [環境変数](https://create-react-app.dev/docs/adding-custom-environment-variables) は、このプロジェクトでAEM環境に接続するために使用されます。 デフォルトでは、http://localhost:4502で実行されているAEMオーサー環境に接続します。 この動作を変更する場合は、 `.env.development` ファイルの内容に応じて、
+
+* `REACT_APP_HOST_URI=http://localhost:4502` - AEMターゲットホストに設定
+* `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json` - GraphQL エンドポイントパスの設定
+* `REACT_APP_AUTH_METHOD=`  — 推奨される認証方法。 オプション。デフォルトでは認証は使用されません。
+   * `service-token`  — クラウド環境 PROD 用のサービストークン交換を使用
+   * `dev-token` - Cloud Env でのローカル開発に開発トークンを使用
+   * `basic`  — ローカルオーサー環境でのローカル開発に user/pass を使用
+   * 認証方法を使用しない場合は空白のままにします。
+* `REACT_APP_AUTHORIZATION=admin:admin` - AEM オーサー環境に接続する場合に使用する基本認証資格情報を設定します（開発用のみ）。 パブリッシュ環境に接続する場合、この設定は不要です。
+* `REACT_APP_DEV_TOKEN`  — 開発トークン文字列。 リモートインスタンスに接続するには、Basic auth (user:pass) の横で、Cloud Console の DEV トークンで Bearer 認証を使用できます
+* `REACT_APP_SERVICE_TOKEN`  — サービストークンファイルのパス。 リモートインスタンスに接続する場合は、サービストークンでも認証をおこなうことができます（クラウドコンソールからファイルをダウンロード）。
+
+### プロキシ API リクエスト
+
+Webpack 開発サーバーを使用する場合 (`npm start`) プロジェクトが [プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) using `http-proxy-middleware`. このファイルは、 [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) とは、に設定された複数のカスタム環境変数を使用します。 `.env` および `.env.development`.
+
+AEMオーサー環境に接続する場合は、対応する認証方法を設定する必要があります。
+
+### CORS — クロスオリジンリソース共有
+
+このプロジェクトは、ターゲットAEM環境で実行されている CORS 設定に依存しており、アプリが開発モードでhttp://localhost:3000上で実行されていることを前提としています。 10. [COR の設定](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) は [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd).
+
+![CORS の設定](assets/cross-origin-resource-sharing-configuration.png)
+
+*オーサー環境の CORS 設定例*

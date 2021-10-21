@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 21%
+source-wordcount: '186'
+ht-degree: 22%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 21%
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
+      + [Android](./graphql/example-apps/android-app.md)
 + SPA Editor{#spa-editor}
    + React{#react}
       + [概要](./spa-editor/react/overview.md)
