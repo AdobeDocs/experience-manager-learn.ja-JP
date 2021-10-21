@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 20%
+source-wordcount: '185'
+ht-degree: 21%
 
 ---
 
@@ -22,20 +22,23 @@ ht-degree: 20%
    + ビデオシリーズ{#video-series}
       + [1 — モデリングの基本](./graphql/video-series/modeling-basics.md)
       + [2 — 高度なモデリング](./graphql/video-series/advanced-modeling.md)
-      + [3 - GraphQLクエリの作成](./graphql/video-series/creating-graphql-queries.md)
+      + [3 - GraphQL クエリの作成](./graphql/video-series/creating-graphql-queries.md)
       + [4 — コンテンツフラグメントバリエーション](./graphql/video-series/content-fragment-variations.md)
-      + [5 - GraphQLエンドポイント](./graphql/video-series/graphql-endpoints.md)
+      + [5 - GraphQL エンドポイント](./graphql/video-series/graphql-endpoints.md)
       + [6 — オーサーとパブリッシュのアーキテクチャ](./graphql/video-series/author-publish-architecture.md)
-      + [7 - GraphQL持続クエリ](./graphql/video-series/graphql-persisted-queries.md)
-   + 複数手順チュートリアル{#multi-step}
+      + [7 - GraphQL 永続クエリ](./graphql/video-series/graphql-persisted-queries.md)
+   + 複数手順のチュートリアル{#multi-step}
       + [概要](./graphql/multi-step/overview.md)
       + [1 — クイックセットアップ](./graphql/multi-step/setup.md)
       + [2 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
       + [3 — コンテンツフラグメントのオーサリング](./graphql/multi-step/author-content-fragments.md)
-      + [4 - GraphQL APIの参照](./graphql/multi-step/explore-graphql-api.md)
+      + [4 - GraphQL API の参照](./graphql/multi-step/explore-graphql-api.md)
       + [5 — 外部アプリからのクエリ](./graphql/multi-step/graphql-and-external-app.md)
       + [6 — フラグメントリファレンスを使用した高度なデータモデリング](./graphql/multi-step/fragment-references.md)
       + [7 — 実稼動のデプロイメント](./graphql/multi-step/production-deployment.md)
+   + 例 {#example-apps}
+      + [React](./graphql/example-apps/react-app.md)
+      + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
 + SPA Editor{#spa-editor}
    + React{#react}
       + [概要](./spa-editor/react/overview.md)
@@ -61,16 +64,16 @@ ht-degree: 20%
       + [3 — 固定コンポーネント](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — コンテナコンポーネント](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 動的ルート](./spa-editor/remote-spa/spa-dynamic-routes.md)
-+ トークンベースの認証{#authentication}
++ トークンベースの認証 {#authentication}
    + [概要](./authentication/overview.md)
    + [1 -ローカル開発アクセストークン](./authentication/local-development-access-token.md)
    + [2 — サービス資格情報](./authentication/service-credentials.md)
 + コンテンツサービス {#content-services}
    + [概要](./content-services/overview.md)
-   + [1 — チュートリアルのセットアップ](./content-services/chapter-1.md)
+   + [1 — チュートリアルの設定](./content-services/chapter-1.md)
    + [2 — イベントコンテンツフラグメントモデルの定義](./content-services/chapter-2.md)
    + [3 — イベントコンテンツフラグメントのオーサリング](./content-services/chapter-3.md)
    + [4 — コンテンツサービステンプレートの定義](./content-services/chapter-4.md)
    + [5 — コンテンツサービスページのオーサリング](./content-services/chapter-5.md)
-   + [6 - AEMパブリッシュでの配信用コンテンツの公開](./content-services/chapter-6.md)
-   + [7 — モバイルアプリからのAEM Content Servicesの使用](./content-services/chapter-7.md)
+   + [6 — 配信用に AEM パブリッシュにコンテンツを公開](./content-services/chapter-6.md)
+   + [7 — モバイルアプリからのAEM Content Services の使用](./content-services/chapter-7.md)
