@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8842
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '231'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
 
 このチュートリアルでは、AEM Formsプロジェクトを作成し、IntelliJ とリポジトリツールを使用してAEM FormsプロジェクトをローカルAEMインスタンスと同期するために必要な手順を説明します。 また、プロジェクトをローカル Git リポジトリに追加し、ローカル Git リポジトリを Cloud Manager リポジトリにプッシュする方法についても説明します。
 
-c ドライブに次のフォルダー構造を作成します。
-**c:\cloudmanager\adoberepo**
+
+
 
 このチュートリアルでは、今後、このフォルダー構造について説明します。
 
@@ -32,9 +32,9 @@ c ドライブに次のフォルダー構造を作成します。
 
 * という名前のフォルダーを作成します。 **cloudmanager**（任意の名前を付けることができます）
 * コマンドプロンプトウィンドウを開き、に移動します。 **c:\cloudmanager**
-* テキストファイル (assets/creating-maven-project.txt) の内容をコピーして、コマンドプロンプトウィンドウに貼り付けます。 DarchetypeVersion=30 は、 [最新バージョン](https://github.com/adobe/aem-project-archetype/releases). この記事の執筆時点での最新バージョンは 30 でした。
+* の内容をコピーして貼り付けます。 [テキストファイル](assets/creating-maven-project.txt) をクリックします。 DarchetypeVersion=30 は、 [最新バージョン](https://github.com/adobe/aem-project-archetype/releases). この記事の執筆時点での最新バージョンは 30 でした。
+* Enter キーを押してコマンドを実行します。すべてが正しく行われた場合は、ビルド成功メッセージが表示されます。
 
-* Enter キーを押してコマンドを実行します。  すべてが正しく動作する場合は、ビルド成功メッセージが表示されます
 
 
 

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,11 @@ ui.content プロジェクトの filter.xml に適切なエントリを含めま
 <filter root="/content/dam/formsanddocuments-fdm/registrations" mode="replace"/>
 ```
 
-プロジェクトを構築してデプロイすると、クラウドインスタンスで使用可能なクラウドサービス設定に基づいたフォームデータモデルがプロジェクトに作成されます
 
->!![NOTE]
-このクラウドサービス設定をクラウドインスタンスにプッシュする場合は、AEMユーザーインターフェイスを使用して Azure キーを手動で更新する必要があります。暗号化された値は、ユーザーインターフェイスを使用してクラウドインスタンスで更新する必要があります。
+>[!NOTE]
+
+>プロジェクトを構築してデプロイすると、クラウドインスタンスで使用可能なクラウドサービス設定に基づいたフォームデータモデルがプロジェクトに作成されます
+
 
 
 

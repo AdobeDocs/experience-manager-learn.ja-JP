@@ -8,18 +8,22 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8844
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 3%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
 # Cygwin のインストール
 
+
+Cygwin は、Microsoft Windows 上でネイティブに動作する POSIX 互換のプログラミングおよびランタイム環境です。
 インストール [シグウィン](https://www.cygwin.com/). C:\cygwin64 folderにインストールしました。
->[注意]
+>[!NOTE]
 > zip、unzip、curl、rsync パッケージを cygwin インストールと一緒にインストールしてください
+
+c:\cloudmanagerフォルダーの下に adoberepo というフォルダーを作成します。
 
 [リポジトリツールのインストール].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing repo ツールは、repo ファイルをコピーしてc:\cloudmanger\adoberepo folderに配置するだけです。
 
@@ -27,7 +31,12 @@ ht-degree: 3%
 
 ## 外部ツールの設定
 
-IntelliJ を起動 Ctrl+Alt+S キーを押して設定ウィンドウを起動しますツール/外部ツールを選択し、スクリーンショットに示すように+記号をクリックし、次のように入力します。 **repo** グループ
+* IntelliJ の起動
+* Ctrl + Alt + S キーを押して、設定ウィンドウを起動します。
+* ツール/外部ツールを選択し、「+」記号をクリックして、スクリーンショットに示すように次のように入力します。
+   ![rep](assets/repo.png)
+* 必ず、「グループ」ドロップダウンフィールドに「repo」と入力して、repo という名前のグループを作成し、作成したすべてのコマンドを **repo** グループ
+
 
 **Put コマンド**
 **プログラム**:C:\cygwin64\bin\bash
