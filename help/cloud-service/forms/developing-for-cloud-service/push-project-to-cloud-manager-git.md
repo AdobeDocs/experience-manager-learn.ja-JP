@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,10 @@ git commit -m "My First AF"
 これにより、ファイルがローカル Git リポジトリの master ブランチにコミットされます
 
 ```
-git push -f bankingapp master:"My First AF"
+git push -f bankingapp master:"MyFirstAF"
 ```
 
-上記のコマンドでは、ローカル Git リポジトリーから Cloud Manager リポジトリーの My First AF ブランチに、 bankingapp わかりやすい名前で識別されるマスターブランチをプッシュします。
+上記のコマンドでは、ローカル Git リポジトリーの master ブランチを、 bankingapp わかりやすい名前で識別される Cloud Manager リポジトリーの MyFirstAF ブランチにプッシュします。
 
 
 

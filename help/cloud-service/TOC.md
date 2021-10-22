@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 31%
+source-wordcount: '599'
+ht-degree: 32%
 
 ---
 
@@ -130,8 +130,9 @@ ht-degree: 31%
       + [Git の設定](./forms/developing-for-cloud-service/setup-git.md)
       + [IntelliJ とAEMを同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [Cloud Servicesと FDM を含める](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [開発環境へのデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
    + アダプティブフォームの作成{#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
       + [テーマを作成](./forms/create-first-af/create-theme.md)
@@ -198,7 +199,7 @@ ht-degree: 31%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 + [AEM Experts シリーズ](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
-   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)
    + [SPA Editor(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA Editor(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
