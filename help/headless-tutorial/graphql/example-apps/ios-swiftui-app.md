@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 3%
+source-wordcount: '960'
+ht-degree: 4%
 
 ---
 
@@ -20,6 +20,8 @@ ht-degree: 3%
 # iOS SwiftUI アプリ
 
 サンプルアプリケーションは、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションは、AEMの GraphQL API を使用してコンテンツをクエリする方法を示します。 Apollo Client iOSは、GraphQL クエリを生成し、データを Swift オブジェクトにマッピングしてアプリを強化するために使用されます。 SwiftUI は、コンテンツの単純なリスト表示と詳細表示をレンダリングするために使用されます。
+
+表示 [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
 
 >[!VIDEO](https://video.tv.adobe.com/v/338042/?quality=12&learn=on)
 
@@ -37,7 +39,7 @@ ht-degree: 3%
 * [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/introduction.html)
 * [AEM 6.5.10+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/new-features-latest-service-pack.html?lang=ja)
 
-推奨 [WKND リファレンスサイトのCloud Service環境へのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version). を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) または [AEM 6.5 QuickStart jar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances) また、を使用することもできます。
+推奨 [WKND リファレンスサイトのCloud Service環境へのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version). を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) または [AEM 6.5 QuickStart jar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=en#install-local-aem-instances) また、を使用することもできます。
 
 ## 使用方法
 
