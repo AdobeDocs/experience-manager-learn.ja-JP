@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1611'
 ht-degree: 3%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 3%
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsでの Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [役に立つ UI のヒント](adaptive-forms/forms-ui-tips.md)
    + [Web ページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
    + [文字列の配列の作成](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [OSGI ワークフローでの XML での値の設定の使用](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -312,7 +313,6 @@ ht-degree: 3%
    + [一般：AEM-Forms-JEE の Steps-to-reset-default-password-for-users-in--JEE](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
    + [一般：Steps-to-reset-default-password-for-users-in-AEM-Forms-OSGI](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-osgi.md)
    + [一般：クラスターで GemFire ロケーターを設定し、関連する設定を実行する手順](troubleshooting/steps-to-set-up-gemfire-locators-in-a-cluster-and-perform-related-configuration.md)
-
 
 
 

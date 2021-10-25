@@ -1,0 +1,76 @@
+---
+title: 役に立つ UI のヒントとテクニックをいくつか紹介します。
+description: 便利なユーザーインターフェイスのヒントを示すドキュメント
+feature: Adaptive Forms
+type: Tutorial
+version: 6.5
+topic: Development
+role: Developer
+level: Beginner
+kt: 9270
+source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 9%
+
+---
+
+# パスワードフィールドの表示/非表示を切り替える
+
+一般的な使用例としては、フォーム入力者が、パスワードフィールドに入力されたテキストの表示/非表示を切り替えることができます。
+この使用例を達成するために、 [Font Awesome ライブラリ](https://fontawesome.com/). このデモ用に作成したクライアントライブラリには、必要な CSS と eye.svg が含まれています。
+
+## ライブサンプル
+
+[この機能は、こちらでテストできます。](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
+
+## サンプルコード
+
+アダプティブフォームには、 **ssnField**.
+
+フォームの読み込み時に、次のコードが実行されます
+
+```javascript
+$(document).ready(function() {
+    $(".ssnField").append("<p id='fisheye' style='color: Dodgerblue';><i class='fa fa-eye'></i></p>");
+
+    $(document).on('click', 'p', function() {
+        var type = $(".ssnField").find("input").attr("type");
+
+        if (type == "text") {
+            $(".ssnField").find("input").attr("type", "password");
+        }
+
+        if (type == "password") {
+            $(".ssnField").find("input").attr("type", "text");
+        }
+
+    });
+
+});
+```
+
+次の CSS を使用して、 **眼** パスワードフィールド内のアイコン
+
+```javascript
+.svg-inline--fa {
+    /* display: inline-block; */
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+    position: absolute;
+    top: 45px;
+    right: 40px;
+}
+```
+
+## 切り替えパスワードのサンプルのデプロイ
+
+* をダウンロードします。 [クライアントライブラリ](assets/simple-ui-tips.zip)
+* をダウンロードします。 [サンプルフォーム](assets/simple-ui-tricks-form.zip)
+* を使用したクライアントライブラリの読み込み [パッケージマネージャー UI](http://localhost:4502/crx/packmgr/index.jsp)
+* サンプルフォームを読み込むには、 [Formsとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
+
+
