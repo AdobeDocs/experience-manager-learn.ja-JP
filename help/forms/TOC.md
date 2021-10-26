@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1618'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 3%
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsでの Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
-   + [役に立つ UI のヒント](adaptive-forms/forms-ui-tips.md)
    + [Web ページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
    + [文字列の配列の作成](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [OSGI ワークフローでの XML での値の設定の使用](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -96,6 +95,9 @@ ht-degree: 3%
    + [フォームデータモデルの設定](prefill-fdm-db/configuring-form-data-model.md)
    + [リクエストパラメーターの取得](prefill-fdm-db/get-request-parameter.md)
    + [アダプティブフォームの作成](prefill-fdm-db/create-adaptive-form.md)
++ UI のヒントとテクニック{#ui-tips-and-tricks}
+   + [パスワードフィールドのテキストの切り替え](ui-tips-tricks/toggle-password.md)
+   + [スペースツールバーのボタン](ui-tips-tricks/toolbar-buttons.md)
 + インボックスのカスタマイズ{#inbox-customization}
    + [はじめに](inbox-customization/introduction.md)
    + [カスタム列の追加](inbox-customization/add-married-column.md)
