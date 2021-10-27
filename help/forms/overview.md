@@ -1,20 +1,18 @@
 ---
 title: AEM FormsTutorialsとビデオ
-seo-title: AEM Forms Tutorials and Videos
-description: 初心者および経験豊富なAEM Forms開発者向けAEM Formsリソースのコレクション
-seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
+description: 初心者および経験者向けのAEM FormsリソースのコレクションAEM Forms開発者向け
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 14%
+source-wordcount: '516'
+ht-degree: 12%
 
 ---
 
-# 概要 {#overview}
+# AEM FormsTutorialsとビデオ {#overview}
 
 Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作成、管理、公開、および更新に特化した、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。このユーザーガイドには、AEM Formsの様々な機能に関するビデオとチュートリアルが含まれています
 
@@ -22,11 +20,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 * **[「フォームデータモデルサービスを起動」ステップでのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   *ワークフローモデル内の変数は、データタイプに基づいて値を保存する方法です*
+   *ワークフローモデル内の変数は、そのデータ型に基づいて値を保存する方法です*
 
-* **[インタラクティブ通信ドキュメントの複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
+* **[インタラクティブ通信ドキュメント内の複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
 
-   *同じグラフに複数の系列をプロットします。複数の系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフの種類と関連して使用されます。*
+   *同じグラフに複数の系列をプロットします。 複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
 
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
@@ -38,41 +36,41 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 <tr>
   <td>
     <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-      <img alt="400 x 225px" src="./assets/afhero.png" />
+      <img alt="最初のアダプティブフォームを作成する" src="./assets/afhero.png" />
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>最初のアダプティブフォームの作成</strong>
+    <strong>最初のアダプティブフォームを作成する</strong>
     </a>
     </div>
     <p>
-    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用してパーソナライズされたエクスペリエンスを提供する</em>
+    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用して、パーソナライズされたエクスペリエンスを提供することができます</em>
     <p>
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="400 x 225px" src="./assets/correspondence-management1.png" />
+      <img alt="最初の印刷チャネルドキュメントを作成する" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
-    <strong>最初の印刷チャネルドキュメントの作成</strong>
+    <strong>最初の印刷チャネルドキュメントを作成する</strong>
     </a>
     </div>
     <p>
-    <em>Interactive Communications は、ビジネス通信、ドキュメント、声明書、特典通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。 </em>
+    <em>Interactive Communications は、ビジネス通信、ドキュメント、声明書、福利厚生通知、マーケティングメール、請求、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。 </em>
     <p>
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="400 x 225px" src="./assets/fdmlogo.png" />
+      <img alt="AEM Workflow でのフォームデータモデルの使用" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>AEMワークフローでのフォームデータモデルの使用</strong>
+    <strong>AEM Workflow でのフォームデータモデルの使用</strong>
     </a>
     </div>
     <p>
-    <em>フォームデータモデルのサービスをAEMワークフローのステップとして呼び出す</em>
+    <em>フォームデータモデルのサービスをAEM Workflow のステップとして呼び出す</em>
     <p>
   </td>
 </tr>
@@ -80,7 +78,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 >[!TIP]
 >
->AEM Formsの様々な機能を示すサンプルのコレクションです。.
+>AEM Formsの様々な機能を示すサンプルのコレクションです。
 
 
 ## アダプティブフォームのサンプル
@@ -102,15 +100,15 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
   </td>
   <td>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
-    <img alt="フォームデータのプレビュー" src="./assets/preview.png" />
+    <img alt="フォームデータをプレビュー" src="./assets/preview.png" />
     </a>
     <div>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
-    <strong>フォームデータのレビュー</strong>
+    <strong>フォームデータを確認</strong>
     </a>
     </div>
     <p>
-    <em>フォーム送信前にフォームデータをプレビューします。</em>
+    <em>フォームを送信する前にフォームデータをプレビューします。</em>
     </p>
   </td>
   <td>
@@ -139,11 +137,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     <div>
       <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
-    <strong>サンプルの賃貸契約書フォーム</strong>
+    <strong>サンプルのレンタル契約フォーム</strong>
     </a>
     </div>
     <p>
-    <em>AEM FormsとAdobe Signを使用して記入し、署名したテナントと大家の間の賃貸契約</em>
+    <em>AEM FormsとAdobe Signを使用して満たされ、署名されたテナントと大家の間の賃貸契約</em>
     <p>
   </td>
   <td>
@@ -152,11 +150,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     <div>
     <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
-    <strong>非開示契約の生成</strong>
+    <strong>非公開契約の生成</strong>
     </a>
     </div>
     <p>
-    <em>NDA を動的に作成し、Adobe Signを使用して署名用に送信</em>
+    <em>NDA を動的に作成し、Adobe Signを使用して署名用に送信します</em>
     </p>
   </td>
   <td>
@@ -180,11 +178,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 ## その他のリソース
 
-* [Experience League- AEMの参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
-* [AEM Sites Authoring ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites開発ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites Deploying ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/user-guide.html)
+* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
+* [AEM Sites Authoring ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites Deploying Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
 * [AEM Assets チュートリアル](/help/assets/overview.md)
 * [AEM Forms チュートリアル](/help/forms/overview.md)

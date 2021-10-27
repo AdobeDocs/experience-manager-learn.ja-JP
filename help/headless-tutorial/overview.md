@@ -1,25 +1,25 @@
 ---
-title: AEMヘッドレスチュートリアル
+title: AEMヘッドレスTutorials
 description: Adobe Experience Managerをヘッドレス CMS として使用する方法に関するチュートリアルのコレクションです。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 7%
 
 ---
 
-# AEMヘッドレスチュートリアル
+# AEMヘッドレスTutorials
 
-Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションがあります。 実践チュートリアルを使用して、様々なオプションの使用方法を学び、何が適切かを選択します。
+Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションが用意されています。 実践チュートリアルを使用して、様々なオプションの使用方法を検討し、適切なオプションを選択します。
 
 >[!TIP]
 >
->このチュートリアルは、 **～して学ぶ**. 概念を一から学びたい場合は、 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html?lang=ja). この一連のチュートリアルとジャーニーは互いを補完し合っています。
+>このチュートリアルは、 **～することで学ぶ**. 詳しくは、次のページを参照してください。 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html?lang=ja). この一連のチュートリアルとジャーニーは互いを補完し合っています。
 
 ## Tutorials（API 別）
 
@@ -69,7 +69,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 
 ## サンプルアプリケーション
 
-サンプルアプリケーションは、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 これらの完成した例をダウンロードしてインストールし、すぐに使い始めてください。
+アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 これらの完成した例をダウンロードしてインストールし、すぐに使い始めます。
 
 <table>
 <tr>
@@ -92,11 +92,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android の例</strong>
+    <strong>Android™の例</strong>
     </a>
     </div>
     <p>
-    <em>AEM GraphQL API を利用した Android アプリケーション。</em>
+    <em>AEM GraphQL API を利用した Android™アプリケーション。</em>
     </p>
   </td>
   <td>
@@ -115,9 +115,9 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 </tr>
 </table>
 
-## Tutorials
+## Tutorials — フレームワーク別
 
-使用するテクノロジーに基づいて、次のチュートリアルを参照します。 コンテキスト内オーサリングとエクスペリエンス管理のオプションを使用して、AEMが純粋なヘッドレスユースケースを超える方法を説明します。
+使用するテクノロジーに基づいて、次のチュートリアルを参照します。 コンテキスト内オーサリングとエクスペリエンス管理のオプションを使用して、AEMが純粋なヘッドレスの使用例を超える方法を説明します。
 
 <table>
 <tr>
@@ -131,20 +131,20 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>GraphQL を使用して、純粋なヘッドレスシナリオで React JS アプリを構築します。</em>
+    <em>純粋なヘッドレスシナリオで GraphQL を使用して React JS アプリを構築します。</em>
     <p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <img alt="React — リモートエディタ" src="./assets/react-remote.png" />
+    <img alt="React — リモートエディター" src="./assets/react-remote.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <strong>React — リモートエディタ</strong>
+    <strong>React — リモートエディター</strong>
     </a>
     </div>
     <p>
-    <em>リモートでホストされた React アプリケーションの一部をコンテキスト内で作成する。</em>
+    <em>リモートでホストされる React アプリケーションの一部をコンテキスト内で作成する。</em>
     </p>
   </td>
   <td>
@@ -172,7 +172,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>AEM SPAエディターを使用して、アプリケーションの完全なAngularを管理します。</em>
+    <em>AEM SPAエディターを使用して、アプリケーションの完全なエクスペリエンスをAngularします。</em>
     <p>
   </td>
   <td>
@@ -185,7 +185,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>Content Services と REST を使用して、モバイル Android アプリケーションを強化します。</em>
+    <em>Content Services および REST を使用して、モバイル Android™アプリケーションを強化します。</em>
     </p>
   </td>
   <td>
@@ -198,7 +198,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
       </a>
     </div>
     <p>
-    <em>認証には、開発者とサービストークンを使用して Node.js アプリを構築します。</em>
+    <em>開発者とサービストークンを使用して Node.js アプリを構築し、認証します。</em>
     <p>
   </td>
 </tr>

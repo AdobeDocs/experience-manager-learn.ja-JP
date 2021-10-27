@@ -1,22 +1,22 @@
 ---
-title: AEM Assets Essentialsビデオ
-description: Adobe Experience Manager Assets Essentialsのビデオのコレクション
-sub-product: アセット
-source-git-commit: 21d6df065fe61614d3bbd68ce2f20d3dc23a9cef
+title: AEM Assets Essentials ビデオ
+description: Adobe Experience Manager Assets Essentials用のビデオのコレクション
+sub-product: assets
+exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 3%
+source-wordcount: '131'
+ht-degree: 12%
 
 ---
 
-
-# 概要
+# Assets Essentialsビデオ
 
 ![Assets Essentials](./assets/overview/hero.png)
 
-Experience ManagerAssets Essentialsは、軽量なアセット管理とコラボレーションを実現する、合理化されたユーザーインターフェイスを提供します。
+Experience Manager Assets Essentials は、軽量なアセット管理とコラボレーションを実現する、合理化されたユーザーインターフェイスを提供します。
 
-Assets Essentialsを使用したAdobeの管理方法、およびアセットをAdobe Assets Orchestratorと統合する方法に関するビデオをご覧ください。
+Assets Essentialsを使用したAdobeの管理方法、およびアセットを Adobe Orchestrator と統合する方法に関する以下のビデオをご覧ください。
 
 ## Assets Essentialsの詳細
 
@@ -31,7 +31,7 @@ Assets Essentialsを使用したAdobeの管理方法、およびアセットをA
       </a>
    </div>
    <p>
-      <em>Assets Essentialsの基本を学べ！</em>
+      <em>Assets Essentialsの基本を学ぶ！</em>
    </p>
 </td>
 <td>
@@ -48,7 +48,7 @@ Assets Essentialsを使用したAdobeの管理方法、およびアセットをA
    <p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
+   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja">
    <img alt="Adobe Journey Optimizer" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
@@ -57,7 +57,7 @@ Assets Essentialsを使用したAdobeの管理方法、およびアセットをA
       </a>
    </div>
    <p>
-      <em>Assets EssentialsとAdobe Journey Optimizerの統合</em>
+      <em>Assets EssentialsとAdobe Journey Optimizerの統合方法を説明します。</em>
    <p>
 </td>
 </table>

@@ -1,28 +1,28 @@
 ---
 title: AEM Assets のビデオおよびチュートリアル
-description: Adobe Experience Manager Assetsのビデオとチュートリアルのコレクションです
-sub-product: アセット、dynamic-media
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+description: Adobe Experience Manager Assets のビデオとチュートリアルのコレクションです
+sub-product: assets, dynamic-media
+exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 16%
+source-wordcount: '235'
+ht-degree: 17%
 
 ---
 
+# AEM Assets のビデオおよびチュートリアル {#overview}
 
-# 概要 {#overview}
-
-Adobe Experience Manager Assetsは、AEM Platformのデジタルアセット管理ツールで、Webベースのリポジトリーでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できます。 このユーザーガイドには、AEM Assetsの様々な機能に関するビデオとチュートリアルが含まれています。
+Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できる、AEM Platform のデジタルアセット管理ツールです。 このユーザーガイドには、AEM Assetsの様々な機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
 
 * **[関連付けと関連付け解除（ビデオ）](./authoring/relate-unrelate.md)**
 
-   *AEMでアセット間の関係を確立および管理する方法について説明します*
+   *AEMでアセット間の関係を確立および管理する方法について説明します。*
 
 * **[アセットを公開（ビデオ）](./sharing/publish.md)**
 
-   *AEMオーサーからAEMパブリッシュへのアセットの公開のイン/アウトについて説明します。*
+   *AEM オーサーから AEM パブリッシュにアセットを公開する際のイン/アウトについて説明します。*
 
 * **[透かし（ビデオ）](./advanced/watermarks.md)**
 
@@ -30,11 +30,11 @@ Adobe Experience Manager Assetsは、AEM Platformのデジタルアセット管�
 
 * **[基本権限（ビデオ）](./configuring/baseline-permissions.md)**
 
-   *AEM Assetsをベースライン権限で設定する方法と理由を説明します*
+   *ベースライン権限を使用してAEM Assetsを設定する方法と理由を説明します*
 
 * **[自動開始ワークフロー（ビデオ）](./configuring/auto-start-workflows.md)**
 
-   *アップロードされたアセットまたは再処理されたアセットでAEMワークフローを自動的に呼び出す方法の詳細*
+   *アップロードまたは再処理されたアセットでAEMワークフローを自動的に呼び出す方法を確認する*
 
 ## スタッフのおすすめ
 
@@ -49,7 +49,7 @@ Adobe Experience Manager Assetsは、AEM Platformのデジタルアセット管�
       </a>
    </div>
    <p>
-      <em>デスクトップからAEM内のアセットに直接アクセスする</em>
+      <em>デスクトップからAEM内のアセットに直接アクセス</em>
    </p>
 </td>
 <td>
@@ -58,7 +58,7 @@ Adobe Experience Manager Assetsは、AEM Platformのデジタルアセット管�
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>LaunchでのAEM Asset Insightsの使用</strong>
+      <strong>Launch でのAEM Asset Insights の使用</strong>
       </a>
    </div>
    <p>
@@ -75,15 +75,15 @@ Adobe Experience Manager Assetsは、AEM Platformのデジタルアセット管�
       </a>
    </div>
    <p>
-      <em>Dynamic Media</em>
+      <em>Dynamic Mediaを使用したメディアコンテンツの管理とアクセス</em>
    <p>
 </td>
 </table>
 
 ## その他のリソース
 
-* [Experience League - AEMの参照](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assetsドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/assets/user-guide.html)
+* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
+* [AEM Assets Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
 * [AEM Sites チュートリアル](/help/sites/overview.md)
 * [AEM Forms チュートリアル](/help/forms/overview.md)

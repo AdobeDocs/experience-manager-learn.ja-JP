@@ -1,50 +1,48 @@
 ---
-title: AEM Sites チュートリアル
-seo-title: AEM Sites チュートリアル
-description: 'Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。 '
-seo-description: Adobe Experience Manager Sitesのビデオとチュートリアルのコレクションです
-sub-product: サイト、コンテンツサービス
-topic: コンテンツ管理
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+title: AEM Sites のビデオおよびチュートリアル
+description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
+sub-product: sites, content-services
+topic: Content Management
+exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 25%
+source-wordcount: '345'
+ht-degree: 28%
 
 ---
 
+# AEM Sites のビデオおよびチュートリアル {#overview}
 
-# 概要 {#overview}
-
-Adobe Experience Manager(AEM)Sitesは、主要なエクスペリエンス管理プラットフォームです。 このユーザーガイドには、AEM Sitesの様々な機能に関するビデオとチュートリアルが含まれています。
+Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理プラットフォームです。 このユーザーガイドには、AEM Sitesの様々な機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
 
 * **[AEM Sitesでのローンチの使用（ビデオ）](./page-authoring/launches.md)**
 
-   *AEM Sitesのローンチと、AEM Sitesを使用して将来のリリース向けにWebサイトコンテンツを準備する方法について説明します。*
+   *AEM Sites のローンチと、それらを使用して、将来のリリース向けに Web サイトコンテンツを準備する方法について説明します。*
 
 * **[AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ（チュートリアル）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *カスタムのAEMコンポーネントのAdobeでコンテンツクライアントデータレイヤーを更新する方法を説明します。*
+   *カスタムAEMコンポーネントのコンテンツでAdobeクライアントデータレイヤーを更新する方法について説明します。*
 
-* **[AEMヘッドレスGraphQLの概要（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
+* **[AEMヘッドレス GraphQL の概要（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
 
-   *AEM GraphQL APIを使用して、AEMのコンテンツをネイティブモバイルアプリで使用する方法。*
+   *AEM GraphQL API を使用して、ネイティブモバイルアプリで使用されるAEMのコンテンツを公開する方法です。*
 
 * **[コンテンツフラグメントの使用（ビデオシリーズ）](./content-fragments/content-fragments-feature-video-use.md)**
 
    *コンテンツフラグメントは、チャネルに依存しない、再利用可能なコンテンツです。*
 
-* **[SPA Editorの使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[SPA Editor の使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
-   *シングルページアプリケーション(SPA)用のAEM編集機能について説明します。*
+   *シングルページアプリケーション (SPA) のAEM編集機能について説明します。*
 
 ## スタッフのおすすめ
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja">
       <img alt="AEM Sites の概要 - WKND チュートリアル" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
@@ -57,7 +55,7 @@ Adobe Experience Manager(AEM)Sitesは、主要なエクスペリエンス管理�
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja">
     <img alt="AEM ヘッドレス使用の手引き" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
@@ -66,20 +64,20 @@ Adobe Experience Manager(AEM)Sitesは、主要なエクスペリエンス管理�
     </a>
     </div>
     <p>
-    <em>ヘッドレスCMSとしてAEMを使用したい開発者向けの入門ガイドです。</em>
+    <em>AEMをヘッドレス CMS として使用する開発者向けの入門ガイドです。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="AEM SPA Editorの概要" src="./assets/aem-wknd-spa-editor-tutorial.png" />
+      <img alt="AEM SPA Editor の概要" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>AEM SPA Editorの概要</strong>
+        <strong>AEM SPA Editor の概要</strong>
       </a>
     </div>
     <p>
-    <em>単一ページアプリケーション(SPA)をAEMと統合する開発者向けの入門ガイドです。</em>
+    <em>シングルページアプリケーション (SPA) とAEMを統合する開発者向けの入門ガイドです。</em>
     <p>
   </td>
 </tr>
@@ -87,11 +85,11 @@ Adobe Experience Manager(AEM)Sitesは、主要なエクスペリエンス管理�
 
 ## その他のリソース
 
-* [Experience League- AEMの参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
-* [AEM Sitesオーサリングドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites開発ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites Deployingドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/user-guide.html)
+* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
+* [AEM Sites Authoring ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites Deploying Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
 * [AEM Assets チュートリアル](/help/assets/overview.md)
 * [AEM Forms チュートリアル](/help/forms/overview.md)
