@@ -1,31 +1,34 @@
 ---
 title: AEM Dynamic Media でのビデオプレーヤーの使用
-description: AEM Dynamic Media video playerは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムを利用していましたが、flashベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS（AppleのHTTPライブストリーミングビデオ配信プロトコル）の導入に伴い、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
+description: AEM Dynamic Media video player は、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していましたが、flash ベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS(Appleの HTTP ライブストリーミングビデオ配信プロトコル ) の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 sub-product: dynamic-media
-feature: ビデオプロファイル
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
+source-git-commit: 68c49f526146e2f2ba626dc2126fb96d4ae09854
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 31%
+source-wordcount: '223'
+ht-degree: 28%
 
 ---
 
-
 # AEM Dynamic Media でのビデオプレーヤーの使用{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media video playerは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムを利用していましたが、flashベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS（AppleのHTTPライブストリーミングビデオ配信プロトコル）の導入に伴い、フラッシュに依存せずにコンテンツをストリーミングできるようになりました。
+AEM Dynamic Media video player は、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していましたが、flash ベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS(Appleの HTTP ライブストリーミングビデオ配信プロトコル ) の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 非Flashビデオプレーヤーの概要 {#quick-look-into-non-flash-video-player}
+## 非Flashビデオプレーヤーのクイック参照 {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
-HLSブラウザーのサポートは次のとおりです。サポートされていないブラウザーの場合、アドビはプログレッシブビデオ配信にフォールバックします。
+HLS ブラウザーのサポートは次のとおりです。サポートされていないブラウザーの場合、アドビはプログレッシブビデオ配信にフォールバックします。
+
+>!![NOTE]
+Dynamic Media Hybrid は、2022 年 5 月以降、Internet Explorer 11 をサポートしません。
 
 <table> 
  <thead> 
@@ -44,7 +47,7 @@ HLSブラウザーのサポートは次のとおりです。サポートされ�
   <tr>
    <td> <p>デスクトップ</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
-   <td> <p>HLSビデオストリーミング</p> </td>
+   <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr>
    <td> <p>デスクトップ</p> </td>
@@ -59,7 +62,7 @@ HLSブラウザーのサポートは次のとおりです。サポートされ�
   <tr> 
    <td> <p>デスクトップ</p> </td>
    <td> <p>Chrome</p> </td>
-   <td> <p>HLSビデオストリーミング</p> </td>
+   <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
    <td> <p>デスクトップ</p> </td>
