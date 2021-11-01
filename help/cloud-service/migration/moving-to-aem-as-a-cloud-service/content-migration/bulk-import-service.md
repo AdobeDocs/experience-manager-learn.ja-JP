@@ -1,22 +1,39 @@
 ---
-title: 一括インポートサービスを使用したコンテンツの移行
-description: AEM as a AEM Bulk Import Serviceを使用して、非Cloud Servicesソースからアセットを読み込む方法を説明します。
+title: 一括読み込みサービスを使用したコンテンツの移行
+description: AEM as a AEM Bulk Import Service を使用して、非Cloud Servicesソースからアセットを読み込む方法を説明します。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
+source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 0%
+source-wordcount: '145'
+ht-degree: 2%
 
 ---
 
+# 一括読み込みサービス
 
-# 一括インポートサービス
-
-AEM as a AEM Bulk Import Serviceを使用して、非Cloud Servicesソースからアセットを読み込む方法を説明します。
+AEM as a AEM Bulk Import Service を使用して、非Cloud Servicesソースからアセットを読み込む方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336969/?quality=12&learn=on)
+
+## 一括読み込みサービスの使用
+
+![一括インポートサービスのライフサイクル](../assets/bulk-import-service.png)
+
+一括読み込みサービスは、Azure Blob ストレージまたはAmazon S3 ストレージに保存されたファイルを、アセットとしてAEM as a Cloud Serviceに転送するために使用されます。
+
+### 重要なアクティビティ
+
++ インポートするファイルをクラウドストレージプロバイダー (Azure Blob ストレージまたはAmazon S3) にアップロードします。
++ AEM as a Cloud Service Author サービスを設定して、一括読み込みサービスを実行します。
++ 一括サービスインポーターを 1 回限りのインポートとして実行するか、定期的なインポートのスケジュールを設定します。
+
+### Adobe  に関するその他のリソース
+
++ [Adobe取り込み時のアセット開発者ライブセッション](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
+
