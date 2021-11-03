@@ -1,62 +1,63 @@
 ---
 title: AEM Sitesの概要 — プロジェクトアーキタイプ
-description: AEM Sitesの概要 — プロジェクトアーキタイプ。 WKNDチュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドであるWKND向けのAEMサイトの実装について説明します。 このチュートリアルでは、プロジェクトの設定、Mavenアーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
-sub-product: サイト
+description: AEM Sitesの概要 — プロジェクトアーキタイプ。 WKND チュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAEMサイトの実装に関する手順を説明します。 このチュートリアルでは、プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: コアコンポーネント、ページエディター、編集可能テンプレート、AEMプロジェクトアーキタイプ
-topic: コンテンツ管理、開発
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
+recommendations: disable
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '475'
 ht-degree: 41%
 
 ---
 
+# AEM Sitesの概要 — プロジェクトアーキタイプ {#project-archetype}
 
-# AEM Sitesの概要 — プロジェクトアーキタイプ{#project-archetype}
+Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランド WKND 向けのAEMサイトの実装について説明します。
 
-このたびは、Adobe Experience Manager(AEM)を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルをご利用いただき、誠にありがとうございます。 このチュートリアルでは、WKNDの架空のライフスタイルブランド向けにAEMサイトを実装する方法について説明します。
+このチュートリアルでは、最初に [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) をクリックして、新しいプロジェクトを生成します。
 
-このチュートリアルでは、まず[AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を使用して新しいプロジェクトを生成します。
+このチュートリアルは、 **AEMas a Cloud Service** との後方互換性がある **AEM 6.5.5.0 以降** および **AEM 6.4.8.1 以降**. サイトは次を使用して実装されます。
 
-このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5.5.0+**&#x200B;および&#x200B;**AEM 6.4.8.1+**&#x200B;と後方互換性があります。 サイトの実装には以下が使用されます。
-
-* [Maven AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/getting-started/getting-started.html)
+* [Maven AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html?lang=ja)
 * Sling Model
-* [編集可能なテンプレート](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [スタイルシステム](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [編集可能なテンプレート](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=ja)
+* [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=ja)
 
 *チュートリアルの各パートの所要時間は 1～2 時間です。*
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS環境で動作するAEM as aCloud ServiceSDK（[Visual Studio Code](https://code.visualstudio.com/)をIDEとして使用）を使用してキャプチャされます。 特に断りのない限り、コマンドとコードはローカルのオペレーティングシステムとは独立している必要があります。
+このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、Mac OS 環境で動作しているAEMas a Cloud ServiceSDK を使用して、 [Visual Studio Code](https://code.visualstudio.com/) を IDE として使用します。 特に断りのない限り、コマンドとコードはローカルのオペレーティングシステムから独立している必要があります。
 
 ### 必要なソフトウェア
 
 以下をローカルにインストールしておく必要があります。
 
-* ローカルAEM **オーサー**&#x200B;インスタンス(Cloud ServiceSDK、6.5.5以降、6.4.8.1以降)
+* ローカルAEM **作成者** インスタンス (Cloud ServiceSDK、6.5.5 以降、6.4.8.1 以降 )
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）
 * [npm 6 以降](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studioコー](https://code.visualstudio.com/) ドまたは同等のIDE
+* [Visual Studio Code](https://code.visualstudio.com/) または同等の IDE
    * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — チュートリアル全体で使用されるツール
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service は初めてですか？** AEM as a  [Cloud ServiceSDKを使用したローカル開発環境のセットアップについては、次のガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service は初めてですか？** 以下を確認します。 [AEM as a Cloud Service SDK を使用したローカル開発環境の設定に関する以下のガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja).
 >
-> **AEM 6.5を初めて使用する場合** 次のガイドを参照し [て、ローカル開発環境を設定します](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5 を初めて使用する場合** 以下を確認します。 [次のガイドでは、ローカル開発環境を設定します](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja).
 
 ## GitHub {#github}
 
@@ -68,4 +69,4 @@ ht-degree: 41%
 
 ## 次の手順 {#next-steps}
 
-何を待ってる?!チュートリアルを開始するには、「[プロジェクトの設定](project-setup.md)」の章に移動し、AEMプロジェクトアーキタイプを使用して新しいAdobe Experience Managerプロジェクトを生成する方法を学びます。
+何を待ってる?!チュートリアルを開始するには、 [プロジェクト設定](project-setup.md) この章では、AEMプロジェクトアーキタイプを使用して新しいAdobe Experience Managerプロジェクトを生成する方法について説明します。

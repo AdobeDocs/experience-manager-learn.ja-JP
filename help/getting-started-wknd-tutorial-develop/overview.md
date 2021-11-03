@@ -1,10 +1,9 @@
 ---
 title: AEM Sites の概要 - WKND チュートリアル
-description: AEM Sites の概要 - WKND チュートリアル. WKNDチュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドであるWKND向けのAEMサイトの実装について説明します。 このチュートリアルでは、プロジェクトの設定、Mavenアーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
+description: AEM Sites の概要 - WKND チュートリアル. WKND チュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAEMサイトの実装に関する手順を説明します。 このチュートリアルでは、プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
 sub-product: sites
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
 KT: 4132
@@ -16,7 +15,8 @@ topic: Content Management, Development
 role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+recommendations: disable
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 10%
@@ -25,7 +25,7 @@ ht-degree: 10%
 
 # AEM Sites の概要 - WKND チュートリアル {#introduction}
 
-このたびは、Adobe Experience Manager(AEM)を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルをご利用いただき、誠にありがとうございます。 このチュートリアルでは、WKNDの架空のライフスタイルブランド向けにAEMサイトを実装する方法について説明します。 このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアント側ライブラリ、Adobe Experience Manager Sitesを使用したコンポーネント開発など、基本的なトピックについて説明します。
+Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランド WKND 向けのAEMサイトの実装について説明します。 このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能テンプレート、クライアント側ライブラリ、Adobe Experience Manager Sitesでのコンポーネント開発など、基本的なトピックについて説明します。
 
 ## 概要 {#wknd-tutorial-overview}
 
@@ -33,41 +33,41 @@ ht-degree: 10%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## Sitesプロジェクトを開始するためのオプション
+## Sites プロジェクトを開始するためのオプション
 
-AEM Sitesプロジェクトを開始するには、2つの基本的なアプローチがあります。
+AEM Sitesプロジェクトを開始するには、2 つの基本的な方法があります。
 
-**AEMプロジェクトアーキタイプ**  - Mavenテンプレートを使用して最小限のAEMプロジェクトを生成することで、AEM開発に対する従来のアプローチです。これは、大量のカスタマイズが予想されるCloud ServiceプロジェクトとしてのAEM 6.5/6.4プロジェクトおよびAEMに推奨されるアプローチです。 このチュートリアルでは、AEMの開発について詳しく説明します。
+**AEM Project Archetype** - Maven テンプレートを使用して最小限のAEMプロジェクトを生成することで、AEM開発に対する従来のアプローチです。 これは、大量のカスタマイズが予想されるAEM 6.5/6.4 プロジェクトおよびAEMas a Cloud Serviceプロジェクトで推奨されるアプローチです。 このチュートリアルでは、AEMの開発について詳しく説明します。
 
-[AEMプロジェクトアーキタイプのチュートリアルを開始する](./project-archetype/overview.md)
+[AEMプロジェクトアーキタイプを使用したチュートリアルの開始](./project-archetype/overview.md)
 
-**AEMサイトテンプレート**  — 事前に定義されたサイトテンプレートを使用してAEMサイトを生成する低コードのアプローチです。すぐに使用できるコンポーネントとテンプレートを使用して、サイトをすぐに起動および実行できます。 テーマの設定ワークフローを使用して、CSSとJavaScriptのみでブランド固有のスタイルとカスタマイズを適用します。 新しいプロジェクトおよび開発者に推奨されます。 現在、AEM as aCloud Serviceでのみ使用できます。
+**AEM Site Templates**  — 事前定義済みのサイトテンプレートを使用してAEMサイトを生成する低コードのアプローチ。 すぐに使用できるコンポーネントとテンプレートを使用して、サイトをすぐに使い始めます。 テーマの設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨されます。 現在、AEM as a Cloud Serviceでのみ使用できます。
 
 [サイトテンプレートを使用してチュートリアルを開始する](./site-template/create-site.md)
 
-## Adobe XD UIキット
+## Adobe XD UI キット
 
-このチュートリアルを実際のシナリオに近づけるために、Adobeの才能あるUXデザイナーは、[Adobe XD](https://www.adobe.com/products/xd.html)を使用してサイトのモックアップを作成しました。 チュートリアルの過程で、様々なデザインが完全に作成可能なAEMサイトに実装されます。 WKNDサイトの美しいデザインを作った&#x200B;**Lorenzo Buosi**&#x200B;と&#x200B;**Kilian Amendola**&#x200B;に特に感謝します。
+このチュートリアルを実際のシナリオに近づけるために、Adobeの才能ある UX デザイナーは、 [Adobe XD](https://www.adobe.com/products/xd.html). チュートリアルの過程で、様々なデザインが完全に作成可能なAEMサイトに実装されます。 特別感謝 **ロレンツォブオシ** および **キリアン・アメンドーラ** WKND サイト用の美しいデザインを作り上げたのは
 
-XD UIキットをダウンロードします。
+XD UI キットをダウンロードします。
 
-* [AEMコアコンポーネントUIキット](assets/overview/AEM-CoreComponents-UI-Kit.xd)
-* [WKND UIキット](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
+* [AEMコアコンポーネント UI キット](assets/overview/AEM-CoreComponents-UI-Kit.xd)
+* [WKND UI キット](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
 
 ## 参照サイト {#reference-site}
 
-WKNDサイトの完成版も参照用として利用できます。[https://wknd.site/](https://wknd.site/)
+WKND サイトの最終バージョンも参照できます。 [https://wknd.site/](https://wknd.site/)
 
-このチュートリアルでは、AEM開発者に必要な主な開発スキルについて説明しますが、サイト全体をエンドツーエンドで構築するのではなく、**&#x200B;構築します。 完成したリファレンスサイトは、すぐに使用できるAEMの機能をさらに詳しく調べ、確認するためのもう1つの優れたリソースです。
+このチュートリアルでは、AEM開発者に必要な主要な開発スキルについて説明しますが、次の操作をおこないます *not* エンドツーエンドでサイト全体を構築します。 完成したリファレンスサイトは、すぐに使用できるAEMの機能を参照して確認するためのもう 1 つの優れたリソースです。
 
-このチュートリアルに進む前に最新のコードをテストするには、GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**から**[&#x200B;最新リリースをダウンロードしてインストールします。
+このチュートリアルに進む前に最新のコードをテストするには、 **[GitHub からの最新リリース](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
 
-### Adobe Stockを利用
+### Powered by Adobe Stock
 
-WKNDリファレンスWebサイトの画像の多くは、[Adobe Stock](https://stock.adobe.com/)のもので、[https://www.adobe.com/legal/terms.html](https://www.adobe.com/jp/legal/terms.html)にある「Demo Asset Additional Terms」で定義されているサードパーティの資料です。 Adobe Stockの画像をWebサイトやマーケティング資料などで取り扱うなど、このデモWebサイトを閲覧する以外の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
+WKND リファレンス Web サイトの画像の多くは、 [Adobe Stock](https://stock.adobe.com/) とは、 [https://www.adobe.com/legal/terms.html](https://www.adobe.com/jp/legal/terms.html). Adobe Stockの画像を、Web サイトやマーケティング資料など、このデモ Web サイトを閲覧した後に、他の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
 
-Adobe Stockでは、写真、グラフィック、ビデオ、テンプレートなど、1億4000万を超える高品質でロイヤリティフリーの画像にアクセスして、クリエイティブなプロジェクトをすぐに開始できます。
+Adobe Stockでは、写真、グラフィック、ビデオ、テンプレートなど、1 億 4000 万を超える高品質のロイヤリティフリー画像を利用して、クリエイティブなプロジェクトをすぐに開始できます。
 
 ## 次の手順 {#next-steps}
 
-何を待ってる?!AEMプロジェクトアーキタイプ](./project-archetype/overview.md)または[を使用して新しいAdobe Experience Managerプロジェクトを生成する方法を説明します。また、サイトテンプレート](./site-template/create-site.md)を使用してサイトを作成する方法も説明します。[
+何を待ってる?!方法を学ぶ [AEMプロジェクトアーキタイプを使用して新しいAdobe Experience Managerプロジェクトを生成します](./project-archetype/overview.md) または [サイトテンプレートを使用してサイトを作成する](./site-template/create-site.md).

@@ -2,9 +2,9 @@
 user-guide-title: AEM Assets のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Assets のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Assets チュートリアル
-feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 34%
@@ -25,7 +25,7 @@ ht-degree: 34%
    + [メタデータフォルダースキーマ](configuring/metadata-folder-schemas.md)
    + [アセット管理者の検索レール](configuring/assets-admin-search-rail.md)
    + [処理プロファイル](configuring/processing-profiles.md)
-   + [自動開始ワークフロー](configuring/auto-start-workflows.md)
+   + [ワークフローの自動開始](configuring/auto-start-workflows.md)
 
 + オーサリング{#authoring}
    + [ナビゲーション](./authoring/navigation.md)
@@ -47,10 +47,10 @@ ht-degree: 34%
    + [検索ブースト](./search-and-discovery/search-boost.md)
 
 + 高度な機能{#advanced}
-   + [注釈のPDF出力](./advanced/customizing-annotations-pdf-output.md)
+   + [注釈PDF出力](./advanced/customizing-annotations-pdf-output.md)
    + [アセットインサイト](./advanced/asset-insights-launch-tutorial.md)
-   + [Assetsレポート](./advanced/asset-reports.md)
-   + [権限(CUG)](./advanced/closed-user-groups.md)
+   + [Assets レポート](./advanced/asset-reports.md)
+   + [権限 (CUG)](./advanced/closed-user-groups.md)
    + [透かし](./advanced/watermarks.md)
 
 + 高度なメタデータの管理{#metadata}
@@ -61,18 +61,18 @@ ht-degree: 34%
    + [メタデータの読み込みと書き出し](metadata/metadata-import-export.md)
 
 + 共有と配布{#sharing}
-   + [アセットのダウンロード](./sharing/download.md)
+   + [アセットをダウンロード](./sharing/download.md)
    + [アセットを公開](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
       + [AEM Brand Portalの設定](brand-portal/configure.md)
       + [アセットソーシングの設定](brand-portal/configure-asset-sourcing.md)
-      + [レンディションのダウンロードの有効化](brand-portal/enable-renditions-download.md)
+      + [レンディションダウンロードの有効化](brand-portal/enable-renditions-download.md)
    + アセット共有{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
-      + [ローカルAEMでのAsset Share Commonsの設定](./sharing/asset-share-commons-technical-video-setup.md)
-      + [Asset Share Commonsのテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
+      + [ローカルAEMでの Asset Share Commons の設定](./sharing/asset-share-commons-technical-video-setup.md)
+      + [Asset Share Commons のテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
 
@@ -82,7 +82,7 @@ ht-degree: 34%
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
 + Adobe Asset Link{#adobe-asset-link}
-   + [Adobeアセットリンクへのアクセス](./adobe-asset-link/launch-adobe-asset-link.md)
+   + [Adobeアセットリンクにアクセス](./adobe-asset-link/launch-adobe-asset-link.md)
    + [パネルの概要](./adobe-asset-link/panel-overview.md)
    + [ファイルとコレクション](./adobe-asset-link/files-and-collections.md)
    + [ダウンロードとアップロード](./adobe-asset-link/download-and-upload.md)
@@ -90,12 +90,12 @@ ht-degree: 34%
    + [バージョン管理とコメント](./adobe-asset-link/file-versioning-and-comments.md)
    + [コピーを配置](./adobe-asset-link/place-copy.md)
    + [リンク場所](./adobe-asset-link/place-linked.md)
-   + [配置のみ(FPO)](./adobe-asset-link/for-placement-only.md)
+   + [配置のみ (FPO)](./adobe-asset-link/for-placement-only.md)
    + [アセット検索](./adobe-asset-link/asset-search.md)
 
 + コンテンツの自動化{#content-automation}
    + [概要](./content-automation/overview.md)
-   + [クリエイティブ操作](./content-automation/creative-operations.md)
+   + [クリエイティブの操作](./content-automation/creative-operations.md)
    + [Photoshop Actions](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
@@ -111,10 +111,10 @@ ht-degree: 34%
    + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
    + [パノラマおよび縦長画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
    + [Adobe Analyticsを使用したビューア](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classicデスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media Classic Desktop Application](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Mediaコアコンポーネント](dynamic-media/dynamic-media-core-components.md)
+   + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
 
    + チュートリアル {#tutorials}
       + [カルーセルセットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
@@ -122,18 +122,18 @@ ht-degree: 34%
       + [画像プリセットの作成](dynamic-media/tutorials/creating-image-presets.md)
       + [スマート切り抜きイメージプロファイルの作成](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [ビデオプロファイルの作成](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [アセットの処理](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [アセットを処理中](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [セキュアプレビューサーバーの設定](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
-      + [URLと埋め込みコードの生成](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
-      + [エクスポートジョブのトリガー](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
-      + [CDNキャッシュの無効化](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+      + [URL と埋め込みコードの生成](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [書き出しジョブのトリガー](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+      + [CDN キャッシュの無効化](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Dynamic Mediaコアコンポーネントの使用](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [Dynamic Media設定の削除](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [Dynamic Media Classicアプリでのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Dynamic Media Classic App でのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + 翻訳 {#translation}
-   + [ソースファイルの変換](translation/source-file-translation-feature-video-use.md)
+   + [ソースファイルの翻訳](translation/source-file-translation-feature-video-use.md)
    + [スマート翻訳検索](translation/smart-translation-search-feature-video-use.md)
    + [スマート翻訳検索の設定](translation/smart-translation-search-technical-video-setup.md)
 
