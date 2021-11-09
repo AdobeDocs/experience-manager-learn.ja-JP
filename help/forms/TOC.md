@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1623'
 ht-degree: 3%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 3%
 + UI のヒントとテクニック{#ui-tips-and-tricks}
    + [パスワードフィールドのテキストを切り替え](ui-tips-tricks/toggle-password.md)
    + [スペースツールバーのボタン](ui-tips-tricks/toolbar-buttons.md)
+   + [ネストされたパネルを使用したタブのナビゲーション](ui-tips-tricks/nested-panels.md)
 + インボックスのカスタマイズ{#inbox-customization}
    + [はじめに](inbox-customization/introduction.md)
    + [カスタム列を追加](inbox-customization/add-married-column.md)
