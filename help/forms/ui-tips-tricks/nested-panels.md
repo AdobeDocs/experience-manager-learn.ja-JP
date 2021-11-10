@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -27,6 +27,7 @@ ht-degree: 0%
 ## アダプティブフォームを作成
 
 次の構造を持つアダプティブフォームを作成します。 ルートパネルには子パネルがあり、左側にタブとして表示されます。 これらの「**タブ**」には、追加の子パネルがあります。 例えば、[ ファミリ ] タブには、[ 配偶者 ] と [ 子 ] という 2 つの子パネルがあります。
+
 FormContainer の下には、「前へ」ボタンと「次へ」ボタンを含むツールバーも追加されます
 
 ![toolbar-spacing](assets/multiple-panels.png)
@@ -61,4 +62,5 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
 >[!NOTE]
-> この記事で説明されている機能は、最後のタブでは機能しません。 例えば、「アドレス」タブに子パネルがある場合、この機能は機能しません。
+>
+>この記事で説明されている機能は、最後のタブでは機能しません。 例えば、「アドレス」タブに子パネルがある場合、この機能は機能しません。
