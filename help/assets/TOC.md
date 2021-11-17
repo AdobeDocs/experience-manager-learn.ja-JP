@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 34%
+source-wordcount: '356'
+ht-degree: 33%
 
 ---
 
@@ -131,6 +131,11 @@ ht-degree: 34%
       + [Dynamic Media設定の削除](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Dynamic Media Classic App でのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
++ Workfront統合{#workfront}
+   + 拡張コネクタ{#enhanced-connector}
+      + [コネクタの基本機能の強化](./workfront/enhanced-connector/basics.md)
+      + [プロジェクトフォルダー](./workfront/enhanced-connector/project-folders.md)
 
 + 翻訳 {#translation}
    + [ソースファイルの翻訳](translation/source-file-translation-feature-video-use.md)
