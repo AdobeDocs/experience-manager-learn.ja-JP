@@ -1,45 +1,39 @@
 ---
-title: Webチャネル用の最初のインタラクティブ通信の作成
-seo-title: Webチャネル用の最初のインタラクティブ通信の作成
-description: AEM Forms 6.4では、インタラクティブ通信が新たに導入されました。このドキュメントでは、Webチャネル用のインタラクティブ通信を作成するために必要な手順について説明します。
-seo-description: AEM Forms 6.4では、インタラクティブ通信が新たに導入されました。このドキュメントでは、Webチャネル用のインタラクティブ通信を作成するために必要な手順について説明します。
-feature: インタラクティブコミュニケーション
+title: Web チャネル用の最初のインタラクティブ通信の作成
+seo-title: Creating your first interactive communication for the web channel
+description: インタラクティブ通信は、AEM Forms 6.4 で新たに導入されました。このドキュメントでは、Web チャネル用のインタラクティブ通信を作成するために必要な手順について説明します。
+seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the web channel.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '157'
 ht-degree: 3%
 
 ---
 
+# Web チャネル用の最初のインタラクティブ通信の作成
 
-# Webチャネル用の最初のインタラクティブ通信の作成
-
-AEM Forms 6.4では、Interactive Communicationsが新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順について説明します。
-
-この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
+インタラクティブ通信はAEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
 
 ## 前提条件 {#prerequistes}
 
-[パッケージマネージャーを使用して、このチュートリアルに関連するアセットをAEMにダウンロードおよび読み込みます。](assets/gettingstartedassets.zip)」を選択します。このzipファイルには、このチュートリアルで使用する画像とドキュメントフラグメントが含まれています
+[パッケージマネージャーを使用して、このチュートリアルに関連するアセットをAEMにダウンロードおよび読み込みます。](assets/gettingstartedassets.zip)」を選択します。この zip ファイルには、このチュートリアルで使用する画像とドキュメントフラグメントが含まれています
 
-[このファイルをダウンロードして解凍します。](assets/warfileandswaggerfile.zip) このファイルには、Tomcatにデプロイする必要があるSampleRest.warファイルと、データソースの設定に使用する必要があるSwaggerファイルが含まれています。
+[このファイルをダウンロードして展開します。](assets/warfileandswaggerfile.zip) このファイルには、Tomcat およびデータソースの設定に使用する必要のある Swagger ファイルにデプロイする必要がある SampleRest.war ファイルが含まれています。
 
-このチュートリアルでは、次の内容について学習します。
+このチュートリアルでは、次の内容について学習しました。
 
-* データソースの作成
+* データソースを作成
 * フォームデータモデルの作成
-* ドキュメントフラグメントの作成
+* ドキュメントフラグメントを作成
 * テーブルとグラフの設定
-* Webチャネルドキュメントの配信
-
-
-
-
+* Web チャネルドキュメントの配信

@@ -1,31 +1,31 @@
 ---
 title: アダプティブFormsを使用したバーコードサービス
-description: バーコードサービスを使用してバーコードをデコードし、抽出したデータからフォームフィールドを設定する。
+description: バーコードサービスを使用してバーコードをデコードし、抽出したデータからフォームフィールドを設定します。
 feature: Barcoded Forms
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
-
 # アダプティブFormsを使用したバーコードサービス{#barcode-service-with-adaptive-forms}
 
-この記事では、アダプティブフォームに入力するためのバーコードサービスの使用方法について説明します。 使用例を次に示します。
+この記事では、アダプティブフォームに入力するためのバーコードサービスの使用方法を紹介します。 使用例を次に示します。
 
-1. ユーザーがBarcodeをアダプティブフォームの添付ファイルとして追加する
+1. ユーザーが、PDFをアダプティブフォームの添付ファイルとして追加する
 1. 添付ファイルのパスがサーブレットに送信されます
-1. サーブレットがバーコードをデコードし、データをJSON形式で返します
+1. サーブレットがバーコードをデコードし、データを JSON 形式で返します
 1. 次に、デコードされたデータを使用してアダプティブフォームに値が入力されます
 
-次のコードは、バーコードをデコードし、JSONオブジェクトにデコードされた値を入力します。 次に、サーブレットは、呼び出し元のアプリケーションに応答してJSONオブジェクトを返します。
+次のコードは、バーコードをデコードし、JSON オブジェクトにデコードされた値を入力します。 次に、サーブレットは、呼び出し元のアプリケーションに対する応答で JSON オブジェクトを返します。
 
-この機能は実際に利用できます。 [サンプルポータル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)を参照し、バーコードサービスのデモを検索してください。
+
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -53,7 +53,7 @@ public JSONObject extractBarCode(Document pdfDocument) {
  }
 ```
 
-次に、サーブレットコードを示します。 このサーブレットは、ユーザーがアダプティブフォームに添付ファイルを追加すると呼び出されます。 このサーブレットは、JSONオブジェクトを呼び出し元のアプリケーションに返します。 次に、呼び出し元のアプリケーションが、JSONオブジェクトから抽出された値をアダプティブフォームに入力します。
+次に、サーブレットコードを示します。 このサーブレットは、ユーザーがアダプティブフォームに添付ファイルを追加すると呼び出されます。 このサーブレットは、JSON オブジェクトを呼び出し元のアプリケーションに戻します。 次に、呼び出し元のアプリケーションが、JSON オブジェクトから抽出された値をアダプティブフォームに入力します。
 
 ```java
 @Component(service = Servlet.class, property = {
@@ -95,7 +95,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-次のコードは、アダプティブフォームが参照するクライアントライブラリの一部です。 ユーザーがアダプティブフォームに添付ファイルを追加すると、このコードがトリガーされます。 このコードは、要求パラメーターで渡された添付ファイルのパスを使用して、GETをサーブレットに呼び出します。 サーブレット呼び出しから受信したデータは、アダプティブフォームの入力に使用されます。
+次のコードは、アダプティブフォームが参照するクライアントライブラリの一部です。 ユーザーがアダプティブフォームに添付ファイルを追加すると、このコードがトリガーされます。 コードは、要求パラメーターで渡された添付ファイルのパスを使用して、GETをサーブレットに呼び出します。 サーブレット呼び出しから受け取ったデータは、アダプティブフォームへの入力に使用されます。
 
 ```
 $(document).ready(function()
@@ -132,19 +132,18 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->このパッケージに含まれるアダプティブフォームは、AEM Forms 6.4を使用して構築されています。このパッケージをAEM Forms 6.3環境で使用する場合は、AEMフォーム6.3でアダプティブフォームを作成してください。
+>このパッケージに含まれるアダプティブフォームは、AEM Forms 6.4 を使用して構築されています。このパッケージをAEM Forms 6.3 環境で使用する場合は、AEMフォーム 6.3 でアダプティブフォームを作成してください。
 
-12行目 — サービスリゾルバーを取得するカスタムコード。 このバンドルは、この記事のアセットの一部として含まれています。
+12 行目：サービスリゾルバーを取得するカスタムコード。 このバンドルは、この記事のアセットの一部として含まれています。
 
-23行目 — DocumentServices extractBarCodeメソッドを呼び出して、デコードされたデータを使用してJSONオブジェクトを取得します
+23 行目 — DocumentServices extractBarCode メソッドを呼び出して、デコードされたデータを含む JSON オブジェクトを取得します
 
-これをシステムで実行するには、次の手順に従います
+これをシステムで実行するには、次の手順に従ってください
 
-1. [パッケージマネージャーを使](assets/barcodeservice.zip) 用してBarcodeService.zipをAEMに読み込みます。
-1. [カスタムDocumentServicesバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [DevelopingWithServiceUserバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [サンプルPDFフォームのダウンロード](assets/barcode.pdf)
-1. ブラウザーで、サンプルのアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)を参照します。[
-1. 提供されたサンプルPDFをアップロードします
-1. データが入力されたフォームが表示されます
-
+1. [BarcodeService.zip のダウンロード](assets/barcodeservice.zip) パッケージマネージャーを使用してAEMにインポートします。
+1. [カスタムドキュメントサービスバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [サンプルのPDFフォームをダウンロード](assets/barcode.pdf)
+1. ブラウザーで [サンプルアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 提供されたサンプルPDFをアップロード
+1. フォームにデータが入力されているのが確認できます

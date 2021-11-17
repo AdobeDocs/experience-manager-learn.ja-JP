@@ -1,29 +1,27 @@
 ---
 title: アダプティブFormsでのインライン画像の表示
-description: アップロードされた画像をアダプティブFormsにインラインで表示
-feature: アダプティブフォーム
+description: アップロードした画像をアダプティブFormsにインラインで表示する
+feature: Adaptive Forms
 topics: development
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 4a69513d-992c-435a-a520-feb9085820e7
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 1%
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
-
 # アダプティブFormsのインライン画像
 
-一般的な使用例として、アップロードした画像をアダプティブフォーム内のインライン画像として表示します。 デフォルトでは、アップロードされた画像はリンクとして表示され、画像をアダプティブフォームに表示することで、このエクスペリエンスを強化できます。 この記事では、インライン画像の表示に関する手順について説明します。
-
-[この機能の実例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
+一般的な使用例としては、アップロードした画像をアダプティブフォーム内のインライン画像として表示する場合があります。 デフォルトでは、アップロードされた画像はリンクとして表示され、画像をアダプティブフォームに表示することで、このエクスペリエンスを強化できます。 この記事では、インライン画像の表示に関する手順について説明します。
 
 ## プレースホルダー画像を追加
 
-最初の手順は、添付ファイルコンポーネントにプレースホルダーdivを追加することです。 添付ファイルコンポーネントの下のコードでは、photo-uploadのCSSクラス名で識別されます。 JavaScript関数は、アダプティブフォームに関連付けられたクライアントライブラリの一部です。 この関数は、添付ファイルコンポーネントのinitializeイベントで呼び出されます。
+最初の手順では、添付ファイルコンポーネントにプレースホルダー div を追加します。 以下のコードでは、添付ファイルコンポーネントは、photo-upload の CSS クラス名で識別されます。 JavaScript 関数は、アダプティブフォームに関連付けられているクライアントライブラリの一部です。 この関数は、添付ファイルコンポーネントの initialize イベントで呼び出されます。
 
 ```javascript
 /**
@@ -38,7 +36,7 @@ function addTempImage(){
 
 ### インライン画像を表示
 
-ユーザーが画像をアップロードした後、添付ファイルコンポーネントのcommitイベントで以下に示す関数が呼び出されます。 関数は、アップロードされたファイルオブジェクトを引数として受け取ります。
+ユーザーが画像をアップロードすると、以下に示す関数が、ファイル添付コンポーネントの commit イベントで呼び出されます。 関数は、アップロードされたファイルオブジェクトを引数として受け取ります。
 
 ```javascript
 /**
@@ -64,9 +62,9 @@ function consumeImage (file) {
 }
 ```
 
-### サーバーにデプロイする
+### サーバーにデプロイ
 
-* AEMパッケージマネージャーを使用して、AEMインスタンスに[クライアントライブラリ](assets/inline-image-client-library.zip)をダウンロードし、インストールします。
-* AEMパッケージマネージャーを使用して、AEMインスタンスに[サンプルフォーム](assets/inline-image-af.zip)をダウンロードし、インストールします。
-* ブラウザーで[インライン画像を追加](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)を参照します。
-* 「写真を添付」ボタンをクリックして画像を追加します
+* をダウンロードしてインストールする [クライアントライブラリ](assets/inline-image-client-library.zip) AEMパッケージマネージャーを使用してAEMインスタンス上で
+* をダウンロードしてインストールする [サンプルフォーム](assets/inline-image-af.zip) AEMパッケージマネージャーを使用してAEMインスタンス上で
+* ブラウザーで次の場所を指定します。 [インライン画像を追加](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 「写真を添付」ボタンをクリックして画像を追加

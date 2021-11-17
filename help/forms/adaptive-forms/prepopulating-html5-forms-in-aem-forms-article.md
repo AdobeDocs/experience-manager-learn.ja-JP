@@ -1,57 +1,56 @@
 ---
-title: データ属性を使用してHTML5 Formsを事前入力します。
-description: バックエンドソースからデータを取得してHTML5フォームを設定する。
-feature: アダプティブフォーム
+title: data 属性を使用したHTML5 Formsの事前入力
+description: バックエンドソースからHTMLを取得して、データを取得することによってデータ 5 フォームを生成します。
+feature: Adaptive Forms
 version: 6.3,6.4,6.5.
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
 
-
 # データ属性を使用したHTML5 Formsの事前入力 {#prepopulate-html-forms-using-data-attribute}
 
-この機能のライブデモへのリンクについては、[AEM Formsのサンプル](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ページを参照してください。
 
-AEM Formsを使用してHTML形式でレンダリングされるXDPテンプレートは、HTML5またはMobile Formsと呼ばれます。 一般的な使用例としては、これらのフォームのレンダリング時に事前入力する場合があります。
+AEM Formsを使用してHTML形式でレンダリングされた XDP テンプレートは、HTML5 またはモバイルFormsと呼ばれます。 一般的な使用例としては、フォームのレンダリング時にこれらのフォームに事前に値を設定する場合があります。
 
-データをHTMLとしてレンダリングする際に、xdpテンプレートとマージする方法は2つあります。
+データをテンプレートとしてレンダリングする際に、データを xdp テンプレートとマージする方法は 2 つあります。HTML
 
-**dataRef**:URLでdataRefパラメーターを使用できます。このパラメーターは、テンプレートと結合されるデータファイルの絶対パスを指定します。 このパラメーターには、XML形式のデータを返すRESTサービスへのURLを指定できます。
+**dataRef**:URL で dataRef パラメーターを使用できます。 このパラメーターは、テンプレートと結合されるデータファイルの絶対パスを指定します。 このパラメーターには、XML 形式のデータを返す REST サービスへの URL を指定できます。
 
-**データ**:このパラメーターは、テンプレートと結合されるUTF-8エンコードされたデータバイトを指定します。このパラメーターが指定されている場合、HTML5 form は dataRef パラメーターを無視します。ベストプラクティスとして、データアプローチの使用をお勧めします。
+**データ**:このパラメーターは、テンプレートと結合される UTF-8 でエンコードされたデータバイトを指定します。 このパラメーターが指定されている場合、HTML5 form は dataRef パラメーターを無視します。ベストプラクティスとして、データアプローチを使用することをお勧めします。
 
-推奨されるアプローチは、フォームに事前入力するデータをリクエストのデータ属性に設定することです。
+推奨される方法は、フォームに事前入力するデータをリクエストのデータ属性に設定することです。
 
 slingRequest.setAttribute(&quot;data&quot;, content);
 
-この例では、コンテンツを使用してdata属性を設定します。 コンテンツは、フォームに事前入力するデータを表します。 通常は、内部サービスに対してREST呼び出しをおこなうことで、「コンテンツ」を取得します。
+この例では、コンテンツを data 属性に設定します。 コンテンツは、フォームに事前入力するデータを表します。 通常は、内部サービスに対して REST 呼び出しをおこなうことで、「コンテンツ」を取得します。
 
-この使用例を実現するには、カスタムプロファイルを作成する必要があります。 カスタムプロファイルの作成に関する詳細は、こちらの[AEM Formsのドキュメント](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)に明確に記載されています。
+この使用例を実現するには、カスタムプロファイルを作成する必要があります。 カスタムプロファイルの作成に関する詳細については、 [AEM Formsドキュメントはこちら](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html).
 
-カスタムプロファイルを作成したら、バックエンドシステムに対して呼び出しをおこなってデータを取得するJSPファイルを作成します。 データを取得すると、 slingRequest.setAttribute(&quot;data&quot;, content)；を使用します。フォームに事前入力する
+カスタムプロファイルを作成したら、バックエンドシステムに対して呼び出しを実行してデータを取得する JSP ファイルを作成します。 データを取得すると、 slingRequest.setAttribute(&quot;data&quot;, content);フォームに事前入力する
 
-XDPがレンダリングされる際に、一部のパラメーターをxdpに渡すこともできます。また、パラメーターの値に基づいて、バックエンドシステムからデータを取得できます。
+XDP がレンダリングされる際に、一部のパラメーターを xdp に渡すこともできます。また、パラメーターの値に基づいて、バックエンドシステムからデータを取得できます。
 
-[例えば、このURLにはnameパラメーターが含まれます](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
+[例えば、この URL には名前パラメーターが含まれています](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
 
-書き込むJSPは、 request.getParameter(&quot;name&quot;)を使用してnameパラメーターにアクセスできます。 その後、このパラメーターの値をバックエンドプロセスに渡して、必要なデータを取得できます。
+書き込む JSP は、 request.getParameter(&quot;name&quot;) を使用して name パラメーターにアクセスできます。 その後、このパラメーターの値をバックエンドプロセスに渡して、必要なデータを取得できます。
 この機能をシステムで動作させるには、次の手順に従ってください。
 
-* [パッケージマネージャーを使用してアセットをダウンロードし、AEMに読み込み](assets/prepopulatemobileform.zip)
-ます。パッケージには次がインストールされます
+* [パッケージマネージャーを使用したAEMへのアセットのダウンロードと読み込み](assets/prepopulatemobileform.zip)
+パッケージは次をインストールします
 
    * CustomProfile
-   * サンプルXDP
-   * フォームに入力するデータを返すサンプルのPOSTエンドポイント
+   * サンプル XDP
+   * フォームに入力するデータを返すサンプルPOSTエンドポイント
 
 >[!NOTE]
 >
->Workbenchプロセスを呼び出してフォームに入力する場合は、 setdata.jspではなく、 /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jspにcallWorkbenchProcess.jspを含めることができます
+>workbench プロセスを呼び出してフォームに入力する場合は、 /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jspに setdata.jsp ではなく callWorkbenchProcess.jsp を含める必要があります
 
-* [お気に入りのブラウザーでこのURLを参照します](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems)。フォームには、nameパラメーターの値が事前に設定されている必要があります
+* [お気に入りのブラウザーでこの URL を参照](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). フォームには、name パラメーターの値が事前入力されている必要があります

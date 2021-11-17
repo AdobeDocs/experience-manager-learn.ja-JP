@@ -1,45 +1,42 @@
 ---
-title: 1つのデータファイルからの複数のPDFの生成
-description: OutputServiceは、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。 複数の個々のレコードを含む1つの大きなxmlから複数のpdfを生成する方法を説明します。
-feature: Output サービス
+title: 1 つのデータファイルからの複数の PDF の生成
+description: OutputService は、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。 複数の個々のレコードを含む 1 つの大きな xml から複数の pdf を生成する方法を説明します。
+feature: Output Service
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
 
+# 1 つの xml データファイルからPDFドキュメントのセットを生成
 
-# 1つのxmlデータファイルからPDFドキュメントのセットを生成する
-
-OutputServiceは、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。 次の記事では、複数の個々のレコードを含む1つの大きなxmlから複数のpdfを生成する使用例を説明します。
-次に、複数のレコードを含むxmlファイルのスクリーンショットを示します。
+OutputService は、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。 次の記事では、複数の個々のレコードを含む 1 つの大きな xml から複数の pdf を生成する使用例を説明します。
+次に、複数のレコードを含む xml ファイルのスクリーンショットを示します。
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-データxmlには2つのレコードがあります。 各レコードは、form1要素で表されます。 このxmlはOutputService [generatePDFOutputBatchメソッド](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)に渡され、pdfドキュメントのリスト（レコードごとに1つ）が取得されます。
-generatePDFOutputBatchメソッドの署名では、次のパラメーターを使用します
+データ xml には 2 つのレコードがあります。 各レコードは、form1 要素で表されます。 この xml は OutputService に渡されます [generatePDFOutputBatch メソッド](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) pdf ドキュメントのリストを取得します（レコードごとに 1 つ） generatePDFOutputBatch メソッドの署名では、次のパラメータを取得します
 
 * templates — キーで識別されるテンプレートを含むマップ
-* data — キーで識別されるxmlデータドキュメントを含むマップ
-* pdfOutputOptions - pdf生成を設定するオプション
+* data — キーで識別される xml データドキュメントを含むマップ
+* pdfOutputOptions - pdf 生成を設定するオプション
 * batchOptions — バッチを設定するオプション
 
->[!NOTE]
->
->この使用例は、この[Webサイト](https://forms.enablementadobe.com/content/samples/samples.html?query=0)で実際に利用できます。
+
 
 ## 使用例の詳細{#use-case-details}
 
-この使用例では、テンプレートとデータ(xml)ファイルをアップロードするためのシンプルなWebインターフェイスを提供します。 ファイルのアップロードが完了し、POSTリクエストがAEMサーブレットに送信されます。 このサーブレットは、ドキュメントを抽出し、OutputServiceのgeneratePDFOutputBatchメソッドを呼び出します。 生成されたPDFはzipファイルに圧縮され、エンドユーザーがWebブラウザーからダウンロードできるようになります。
+この使用例では、テンプレートおよび data(xml) ファイルをアップロードするためのシンプルな Web インターフェイスを提供します。 ファイルのアップロードが完了し、POSTリクエストがAEMサーブレットに送信されます。 このサーブレットは、ドキュメントを抽出し、OutputService の generatePDFOutputBatch メソッドを呼び出します。 生成された PDF は zip ファイルに圧縮され、エンドユーザーが Web ブラウザーからダウンロードできるようになります。
 
 ## サーブレットコード{#servlet-code}
 
-次に、サーブレットのコードスニペットを示します。 コードは、要求からテンプレート(xdp)とデータファイル(xml)を抽出します。 テンプレートファイルはファイルシステムに保存されます。 テンプレートとxml(data)ファイルをそれぞれ含むtemplateMapとdataFileMapの2つのマップが作成されます。 次に、DocumentServicesサービスのgenerateMultipleRecordsメソッドが呼び出されます。
+次に、サーブレットのコードスニペットを示します。 コードは、要求からテンプレート (xdp) とデータファイル (xml) を抽出します。 テンプレートファイルはファイルシステムに保存されます。 テンプレートと xml(data) ファイルをそれぞれ含む templateMap と dataFileMap の 2 つのマップが作成されます。 次に、DocumentServices サービスの generateMultipleRecords メソッドを呼び出します。
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -74,7 +71,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 
 ### インターフェイス実装コード{#Interface-Implementation-Code}
 
-次のコードは、OutputServiceのgeneratePDFOutputBatchを使用して複数のPDFを生成し、呼び出し側のサーブレットにPDFファイルを含むzipファイルを返します
+次のコードは、OutputService の generatePDFOutputBatch を使用して複数の PDF を生成し、呼び出し側のサーブレットに PDF ファイルを含む zip ファイルを返します
 
 ```java
 public Document generateMultiplePdfs(HashMap < String, String > templateMap, HashMap < String, Document > dataFileMap, String saveLocation) {
@@ -123,20 +120,19 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### サーバーにデプロイする{#Deploy-on-your-server}
+### サーバーにデプロイ{#Deploy-on-your-server}
 
-ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
+お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* [zipファイルの内容をダウンロードし、ファイルシステムに抽出します](assets/mult-records-template-and-xml-file.zip)。このzipファイルには、テンプレートとxmlデータファイルが含まれています。
-* [ブラウザーでFelix Webコンソールを参照します。](http://localhost:4502/system/console/bundles)
-* [DevelopingWithServiceUserバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
-* [OutputService APIを使用してPDFを生成するカスタムAEMormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Customバンドルをデプロイします
-* [ブラウザーでパッケージマネージャーを参照します。](http://localhost:4502/crx/packmgr/index.jsp)
-* [パッケージをインポートしてインストールします](assets/generate-multiple-pdf-from-xml.zip)。このパッケージには、テンプレートとデータファイルをドロップできるhtmlページが含まれています。
-* [ブラウザーでMultiRecords.htmlを参照します。](http://localhost:4502/content/DocumentServices/Multirecord.html?)
-* テンプレートとxmlデータファイルを一緒にドラッグ&amp;ドロップします
-* 作成したzipファイルをダウンロードします。 このzipファイルには、Outputサービスで生成されたPDFファイルが含まれます。
+* [zip ファイルの内容をダウンロードして、ファイルシステムに抽出します。](assets/mult-records-template-and-xml-file.zip).この zip ファイルには、テンプレートと xml データファイルが含まれています。
+* [ブラウザーで Felix Web コンソールを参照します。](http://localhost:4502/system/console/bundles)
+* [DevelopingWithServiceUser バンドルのデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+* [カスタム AEM FormsDocumentServices バンドルのデプロイ](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)OutputService API を使用して PDF を生成する.Custom バンドル
+* [ブラウザーでパッケージマネージャーを指定します。](http://localhost:4502/crx/packmgr/index.jsp)
+* [パッケージのインポートとインストール](assets/generate-multiple-pdf-from-xml.zip). このパッケージには、テンプレートとデータファイルをドロップできる html ページが含まれています。
+* [ブラウザーで MultiRecords.html を参照します。](http://localhost:4502/content/DocumentServices/Multirecord.html?)
+* テンプレートと xml データファイルを一緒にドラッグ&amp;ドロップします
+* 作成した zip ファイルをダウンロードします。 この zip ファイルには、Output サービスで生成された PDF ファイルが含まれています。
 
 >[!NOTE]
->この機能をトリガーする方法は複数あります。 この例では、Webインターフェイスを使用して、テンプレートとデータファイルをドロップし、機能を示しています。
-
+>この機能をトリガーする方法は複数あります。 この例では、Web インターフェイスを使用して、テンプレートとデータファイルをドロップし、機能を示しています。

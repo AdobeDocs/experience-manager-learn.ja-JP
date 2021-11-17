@@ -7,8 +7,8 @@ role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 19%
+source-wordcount: '516'
+ht-degree: 12%
 
 ---
 
@@ -76,6 +76,102 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 </tr>
 </table>
 
+>[!TIP]
+>
+>AEM Formsの様々な機能を示すサンプルのコレクションです。
+
+
+## アダプティブフォームのサンプル
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja">
+      <img alt= "AEM Formsのキャプチ" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>アダプティブフォームのGoogle Captcha</strong>
+    </a>
+    </div>
+    <p>
+    <em> フォームへの人間によるアクセスと自動アクセスを区別する</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="フォームデータをプレビュー" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>フォームデータを確認</strong>
+    </a>
+    </div>
+    <p>
+    <em>フォームを送信する前にフォームデータをプレビューします。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" インライン画像" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>インライン画像を表示</strong>
+      </a>
+    </div>
+    <p>
+    <em>フォームに追加された画像を表示します。</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## アダプティブフォームと署名のサンプル
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="賃貸契約" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>サンプルのレンタル契約フォーム</strong>
+    </a>
+    </div>
+    <p>
+    <em>AEM FormsとAdobe Signを使用して満たされ、署名されたテナントと大家の間の賃貸契約</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA 協定" src="./assets/nda1.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>非公開契約の生成</strong>
+    </a>
+    </div>
+    <p>
+    <em>NDA を動的に作成し、Adobe Signを使用して署名用に送信します</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="ドキュメントパッケージに署名" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>ドキュメントのパッケージに署名</strong>
+      </a>
+    </div>
+    <p>
+    <em>FormsとAdobe Signを使用して複数のドキュメントにシームレスに署名</em>
+    <p>
+  </td>
+</tr>
+</table>
 
 
 

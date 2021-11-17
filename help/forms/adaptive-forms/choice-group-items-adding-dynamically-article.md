@@ -1,38 +1,35 @@
 ---
 title: 選択グループコンポーネントへの項目の追加
-description: 項目を選択グループコンポーネントに動的に追加する
+description: 項目を選択グループコンポーネントに動的に追加
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 3%
 
 ---
 
+# 項目を選択グループコンポーネントに動的に追加する
+
+AEM Forms 6.5 では、チェックボックス、ラジオボタン、画像リストなどのアダプティブForms選択グループコンポーネントに項目を動的に追加する機能が導入されました。
 
 
-# 選択グループコンポーネントへの項目の動的な追加
+ユースケースに応じて、Visual Editor やコードエディターを使用して項目を追加できます。
 
-AEM Forms 6.5では、チェックボックス、ラジオボタン、画像リストなど、アダプティブForms選択グループコンポーネントに項目を動的に追加する機能が導入されました。
+**Visual Editor を使用する場合：** 関数呼び出しまたはサービス呼び出しの結果から、選択グループの項目を入力できます。 例えば、REST API 呼び出しの応答を使用して、選択グループの項目を設定できます。
 
-[この機能は、サンプルサーバー上で有効に使用できます](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。動的チェックボックス項目カードを検索し、「試す」をクリックします。
-
-
-使用事例に応じて、Visual Editorやコードエディターを使用して項目を追加できます。
-
-**ビジュアルエディターの使用：** 関数呼び出しまたはサービス呼び出しの結果から、選択グループの項目を入力できます。例えば、REST API呼び出しの応答を使用して、選択グループの項目を設定できます。
-
-下のスクリーンショットでは、「Loan Periods(years)」のオプションを、getLoanPeriodsというサービス呼び出しの結果に設定しています。
+以下のスクリーンショットでは、 Loan Period(years) のオプションを、getLoanPeriods というサービス呼び出しの結果に設定しています。
 
 ![ルールエディター](assets/ruleeditor.png)
 
-**コードエディターを使用して、次の操作を行います**。選択グループの項目を、フォームに入力された値に基づいて動的に設定する場合。例えば、次のコードスニペットでは、チェックボックスの項目を、アダプティブフォームの「 applicant name 」フィールドと「 spouse 」フィールドに入力された値に設定します。
+**コードエディターの使用**:選択グループの項目を、フォームに入力された値に基づいて動的に設定する場合。 例えば、次のコードスニペットでは、チェックボックスの項目を、アダプティブフォームの applicant name フィールドと spouse フィールドに入力された値に設定します。
 
-コードスニペットで、チェックボックスコンポーネントであるWorkingMembersの項目を設定します。 アイテムの配列は、アダプティブフォームのapplicantNameおよびspouseテキストフィールドの値を取得することで、動的に作成されます
+コードスニペットでは、チェックボックスコンポーネントである WorkingMembers の項目を設定します。 アイテムの配列は、アダプティブフォームの applicantName および spouse テキストフィールドの値を取得することで、動的に作成されています。
 
 ```javascript
  
@@ -46,7 +43,7 @@ else
   }
 ```
 
-送信データは次のようになります
+送信されたデータは次のようになります
 
 ```xml
 <afUnboundData>
@@ -79,26 +76,26 @@ else
 **コードエディターを使用した項目の追加**
 
 * [アセットのダウンロード](assets/usingthecodeeditor.zip)
-* [Formsとドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 「作成 「|ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします。
+* [Forms And Documents を開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 「作成」 「|ファイルのアップロード」と、前の手順でダウンロードしたファイルをアップロードします。
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
-* 応募者名を入力し、「婚姻状況」から「既婚」を選択します。
-* 配偶者の名前を入力します
-* 「次へ」をクリックします。
-* 婚姻状況が既婚の場合は、申込者名と配偶者名が入力されたチェックボックスが表示されます
+* 「応募者名」を入力し、「配偶者の有無」を「既婚」に選択します。
+* 配偶者の名前を入力
+* 次へをクリック
+* 配偶者の有無に関わらず、申込者名と配偶者の有無がチェックボックスに表示されます。
 
-**Visual Editorを使用した項目の追加**
+**Visual Editor を使用した項目の追加**
 
 * [アセットのダウンロード](assets/usingthevisualeditor.zip)
-* Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [このzipファイルに含まれるSampleRest.warファイルをTomcatにデプロイします。](assets/sample-rest.zip)
-* [Formsとドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 「作成 「|ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします。
+* Tomcat をインストールします（まだインストールしていない場合）。 [Tomcat のインストール手順は、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* [この zip ファイルに含まれる SampleRest.war ファイルを Tomcat にデプロイします。](assets/sample-rest.zip)
+* [Forms And Documents を開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 「作成」 「|ファイルのアップロード」と、前の手順でダウンロードしたファイルをアップロードします。
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
-* 「 Loan amount 」と入力し、フィールドの「 」タブをクリックします。 これにより、トリガーフィールドを表示するルールが設定されます。
-* 適切なローン期間を選択します（ローン期間の項目は残りの呼び出しから入力されます）。
+* 「 Loan amount 」を入力し、「 」フィールドの外側に「 」タブを入力します。 これにより、トリガーフィールドを表示するルールが設定されます。
+* 適切なローン期間を選択します（ローン期間の項目は残りの呼び出しから入力されます）
 * 利率を選択し、「償却スケジュールの取得」をクリックします。
-* 償却表に値が入力されます。 償却スケジュールは、REST呼び出しを使用して取得されます。
+* 償却テーブルには値が入力されます。 償却スケジュールは、REST 呼び出しを使用して取得されます。
 
 >[!NOTE]
-> Tomcatはポート8080で、AEMはポート4502で動作していると想定されます
+> Tomcat はポート 8080 で、AEMはポート 4502 で動作していると想定されます

@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ ht-degree: 0%
 # 複数のパネルを含むナビゲーションタブ
 
 フォームがナビゲーションタブから離れ、いずれかのタブに複数のパネルがある場合、子パネルのタイトルを非表示にし、引き続きこれらのタブのタブと子パネル間を移動できるようにする必要があります
-
-[この機能はこの形式で有効です。](https://forms.enablementadobe.com/content/forms/af/testnav1.html)
-
-
-
 
 ## アダプティブフォームを作成
 
