@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '624'
 ht-degree: 10%
 
 ---
@@ -37,11 +37,11 @@ Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計�
 
 AEM Sitesプロジェクトを開始するには、2 つの基本的な方法があります。
 
-**AEM Project Archetype** - Maven テンプレートを使用して最小限のAEMプロジェクトを生成することで、AEM開発に対する従来のアプローチです。 これは、大量のカスタマイズが予想されるAEM 6.5/6.4 プロジェクトおよびAEMas a Cloud Serviceプロジェクトで推奨されるアプローチです。 このチュートリアルでは、AEMの開発について詳しく説明します。
+**AEM Project Archetype** - Maven テンプレートを使用して最小限のAEMプロジェクトを生成する、AEM開発に対する従来のアプローチ。 これは、大量のカスタマイズが予想されるAEM 6.5/6.4 プロジェクトおよびAEMas a Cloud Serviceプロジェクトで推奨されるアプローチです。 このチュートリアルでは、AEMの開発について詳しく説明します。
 
 [AEMプロジェクトアーキタイプを使用したチュートリアルの開始](./project-archetype/overview.md)
 
-**AEM Site Templates**  — 事前定義済みのサイトテンプレートを使用してAEMサイトを生成する低コードのアプローチ。 すぐに使用できるコンポーネントとテンプレートを使用して、サイトをすぐに使い始めます。 テーマの設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨されます。 現在、AEM as a Cloud Serviceでのみ使用できます。
+**AEM Site Templates**  — クイックサイト作成とも呼ばれ、事前定義されたサイトテンプレートを使用してAEMサイトを生成する低コードのアプローチです。 すぐに使用できるコンポーネントとテンプレートを使用して、サイトをすぐに使い始めます。 テーマの設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨されます。 AEM as a Cloud Serviceでのみ使用できます。
 
 [サイトテンプレートを使用してチュートリアルを開始する](./site-template/create-site.md)
 

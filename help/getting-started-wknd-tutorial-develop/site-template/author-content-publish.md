@@ -1,176 +1,182 @@
 ---
-title: コンテンツのオーサリングと変更のパブリッシュ
-seo-title: AEM Sitesの概要 — コンテンツのオーサリングと変更の公開
-description: Adobe Experience Manager(AEM)のページエディターを使用して、Webサイトのコンテンツを更新します。 オーサリングを容易にするためにコンポーネントを使用する方法を説明します。 AEMオーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに変更を公開する方法を学びます。
-sub-product: サイト
+title: オーサリングと公開の概要 | AEMクイックサイト作成
+description: AEMのAdobe Experience Managerのページエディターを使用して、Web サイトのコンテンツを更新します。 オーサリングを容易にするためにコンポーネントを使用する方法について説明します。 AEM オーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに変更を公開する方法を学びます。
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-topic: コンテンツ管理
-feature: コアコンポーネント、ページエディター
+topic: Content Management
+feature: Core Components, Page Editor
 role: Developer
 level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1364'
 ht-degree: 3%
 
 ---
 
-
-# コンテンツのオーサリングと変更のパブリッシュ {#author-content-publish}
+# オーサリングと公開の概要 {#author-content-publish}
 
 >[!CAUTION]
 >
-> ここで紹介するクイックサイト作成機能は、2021年後半にリリースされます。 関連ドキュメントは、プレビュー用に提供されています。
+> 現在、クイックサイト作成ツールはテクニカルプレビューです。 テストおよび評価の目的で使用できるようになり、Adobeサポートに同意しない限り、実稼動での使用は意図されません。
 
-ユーザーがWebサイトのコンテンツを更新する方法を理解することが重要です。 この章では、**コンテンツ作成者**&#x200B;の人物を採用し、前の章で生成したサイトを編集用に更新します。 チャプターの最後に、変更を公開して、ライブサイトの更新方法を理解します。
+ユーザーが Web サイトのコンテンツを更新する方法を理解することが重要です。 この章では、以下のような **コンテンツ作成者** 前の章で生成したサイトを編集用に更新します。 チャプターの最後に変更を公開して、ライブサイトの更新方法を理解します。
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、[サイトの作成](./create-site.md)の章で説明した手順が完了していることを前提としています。
+これは複数のパートから成るチュートリアルで、 [サイトの作成](./create-site.md) チャプターが完了しました。
 
 ## 目的 {#objective}
 
-1. AEM Sitesの&#x200B;**ページ**&#x200B;と&#x200B;**コンポーネント**&#x200B;の概念を理解します。
-1. Webサイトのコンテンツを更新する方法を説明します。
+1. の概念を理解する **ページ** および **コンポーネント** AEM Sites
+1. Web サイトのコンテンツを更新する方法を説明します。
 1. ライブサイトに変更を公開する方法を説明します。
 
-## 新しいページの作成 {#create-page}
+## 新しいページを作成 {#create-page}
 
-通常、Webサイトは複数ページに分割されて複数ページのエクスペリエンスを形成します。 AEMは、コンテンツを同じ方法で構造化します。 次に、サイトの新しいページを作成します。
+通常、Web サイトは複数ページに分割されて、複数ページでのエクスペリエンスを形成します。 AEMはコンテンツを同じ方法で構造化します。 次に、サイトの新しいページを作成します。
 
-1. 前の章で使用したAEM **Author**&#x200B;サービスにログインします。
-1. AEMの開始画面で、**Sites** > **WKND Site** > **English** > **Article**&#x200B;をクリックします。
-1. 右上隅にある「**作成** /**ページ**」をクリックします。
+1. AEMにログインします。 **作成者** 前の章で使用したサービス。
+1. 「AEM Start」画面で、 **サイト** > **WKND サイト** > **英語** > **記事**
+1. 右上隅で、 **作成** > **ページ**.
 
    ![ページを作成](assets/author-content-publish/create-page-button.png)
 
-   これにより、**ページを作成**&#x200B;ウィザードが表示されます。
+   これで、 **ページを作成** ウィザード。
 
-1. **記事ページ**&#x200B;テンプレートを選択し、「**次へ**」をクリックします。
+1. を選択します。 **記事ページ** テンプレートを選択し、 **次へ**.
 
-   AEMのページは、ページテンプレートに基づいて作成されます。 ページテンプレートについて詳しくは、[ページテンプレート](page-templates.md)の章を参照してください。
+   AEMのページは、ページテンプレートに基づいて作成されます。 ページテンプレートについて詳しくは、 [ページテンプレート](page-templates.md) チャプター。
 
-1. 「**プロパティ**」に、「Hello World」の「**タイトル**」を入力します。
-1. **名前**&#x200B;を`hello-world`に設定し、「**作成**」をクリックします。
+1. の下 **プロパティ** 入力 **タイトル** &quot;Hello World&quot;の
+1. を **名前** 次の `hello-world` をクリックし、 **作成**.
 
    ![最初のページのプロパティ](assets/author-content-publish/initial-page-properties.png)
 
-1. ダイアログのポップアップで、「**開く**」をクリックして、新しく作成したページを開きます。
+1. ダイアログのポップアップで、 **開く** をクリックして、新しく作成されたページを開きます。
 
 ## コンポーネントのオーサリング {#author-component}
 
-AEMコンポーネントは、Webページの小さなモジュール式構成要素と考えることができます。 UIを論理チャンクまたはコンポーネントに分割することで、管理がはるかに容易になります。 コンポーネントを再利用するには、コンポーネントを設定できる必要があります。 これは、オーサーダイアログを通じて実行します。
+AEMコンポーネントは、Web ページの小さなモジュラー構築ブロックと考えることができます。 UI を論理チャンクまたはコンポーネントに分割することで、管理がはるかに容易になります。 コンポーネントを再利用するには、コンポーネントを設定できる必要があります。 これは、オーサーダイアログを通じて実行します。
 
-AEMは、実稼動で使用できる[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のセットを提供します。 **コアコンポーネント**&#x200B;は、[テキスト](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)や[画像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)などの基本要素から、[カルーセル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)などのより複雑なUI要素まで幅広く使用できます。
+AEMは、 [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) 実稼動環境で使用する準備が整っています。 この **コアコンポーネント** ～のような基本的な要素の範囲 [テキスト](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja) および [画像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja) を使用して、 [カルーセル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=ja).
 
 次に、AEMページエディターを使用して、いくつかのコンポーネントを作成します。
 
-1. 前の演習で作成した&#x200B;**Hello World**&#x200B;ページに移動します。
-1. **編集**&#x200B;モードで、左側のサイドレールで&#x200B;**コンポーネント**&#x200B;アイコンをクリックします。
+1. 次に移動： **Hello World** 前の演習で作成したページ。
+1. 次の場所にいることを確認します。 **編集** モードに切り替えて、左側のサイドレールで **コンポーネント** アイコン
 
    ![ページエディターのサイドレール](assets/author-content-publish/page-editor-siderail.png)
 
-   これにより、コンポーネントライブラリが開き、ページで使用できる使用可能なコンポーネントがリストされます。
+   これにより、コンポーネントライブラリが開き、ページで使用できる使用可能なコンポーネントが一覧表示されます。
 
-1. 下にスクロールし、**ドラッグ&amp;ドロップ**&#x200B;で&#x200B;**テキスト(v2)**&#x200B;コンポーネントをページのメインの編集可能領域にドラッグ&amp;ドロップします。
+1. 下にスクロールして **ドラッグ&amp;ドロップ** a **テキスト (v2)** ページのメインの編集可能領域上のコンポーネント。
 
    ![テキストコンポーネントをドラッグ&amp;ドロップ](assets/author-content-publish/drag-drop-text-cmp.png)
 
-1. **テキスト**&#x200B;コンポーネントをクリックしてハイライトし、**レンチ**&#x200B;アイコン![レンチアイコン](assets/author-content-publish/wrench-icon.png)をクリックして、コンポーネントのダイアログを開きます。 テキストを入力し、ダイアログに変更を保存します。
+1. 次をクリック： **テキスト** ハイライト表示するコンポーネントを選択し、 **レンチ** アイコン ![レンチアイコン](assets/author-content-publish/wrench-icon.png) をクリックして、コンポーネントのダイアログを開きます。 テキストを入力し、変更をダイアログに保存します。
 
    ![リッチテキストコンポーネント](assets/author-content-publish/rich-text-populated-component.png)
 
-   **テキスト**&#x200B;コンポーネントは、ページ上にリッチテキストを表示する必要があります。
+   この **テキスト** コンポーネントは、ページ上にリッチテキストを表示する必要があります。
 
-1. 上記の手順を繰り返しますが、**Image(v2)**&#x200B;コンポーネントのインスタンスをページにドラッグする点が異なります。 **画像**&#x200B;コンポーネントのダイアログを開きます。
+1. 上記の手順を繰り返します。ただし、 **画像 (v2)** コンポーネントをページに追加します。 を開きます。 **画像** コンポーネントのダイアログ。
 
-1. 左側のレールで、**アセット**&#x200B;アイコン![アセットアイコン](assets/author-content-publish/asset-icon.png)をクリックして、**アセットファインダー**&#x200B;に切り替えます。
-1. **コンポーネントのダ** イアログに画像をドラッグ&amp;ドロップし、「実行」をク **** リックして変更を保存します。
+1. 左側のレールで、 **アセットファインダー** クリックして **Assets** アイコン ![アセットアイコン](assets/author-content-publish/asset-icon.png).
+1. **ドラッグ&amp;ドロップ** 画像をコンポーネントのダイアログに追加し、 **完了** 変更を保存します。
 
    ![アセットをダイアログに追加](assets/author-content-publish/add-asset-dialog.png)
 
-1. **タイトル**、**ナビゲーション**、**検索**&#x200B;など、固定されたコンポーネントがページ上に存在することを確認します。 これらの領域はページテンプレートの一部として設定され、個々のページでは変更できません。 これについては、次の章で詳しく説明します。
+1. ページ上に、 **タイトル**, **ナビゲーション**, **検索** それは修正されました。 これらの領域は、ページテンプレートの一部として設定され、個々のページでは変更できません。 これについては、次の章で詳しく説明します。
 
-他のコンポーネントを自由に試してみてください。 各[コアコンポーネントに関するドキュメントは、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)で参照できます。 [ページのオーサリングに関する詳細なビデオシリーズは、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)で参照できます。
+他のコンポーネントを自由に試してみてください。 各 [コアコンポーネントは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). に関する詳細なビデオシリーズ [ページのオーサリングはこちらから参照できます](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 
-## 更新の公開 {#publish-updates}
+## 更新を公開 {#publish-updates}
 
-AEM環境は、**オーサーサービス**&#x200B;と&#x200B;**パブリッシュサービス**&#x200B;に分割されます。 この章では、**オーサーサービス**&#x200B;のサイトにいくつかの変更を加えました。 サイト訪問者が変更を表示するには、変更を&#x200B;**パブリッシュサービス**&#x200B;にパブリッシュする必要があります。
+AEM環境は **オーサーサービス** および **パブリッシュサービス**. この章では、 **オーサーサービス**. サイト訪問者が変更を表示するには、変更を **パブリッシュサービス**.
 
 ![概要図](assets/author-content-publish/author-publish-high-level-flow.png)
 
 *オーサーからパブリッシュへのコンテンツの大まかなフロー*
 
-**1.** コンテンツ作成者がサイトのコンテンツを更新します。更新内容のプレビュー、レビュー、承認を行い、ライブにプッシュすることができます。
+**1.** コンテンツ作成者がサイトのコンテンツを更新します。 更新内容のプレビュー、確認、承認を行って、ライブにプッシュすることができます。
 
-**2.**&#x200B;コンテンツが公開されました。公開は、オンデマンドで実行することも、将来の日付に対して予定することもできます。
+**2.**&#x200B;コンテンツが公開されました。パブリッシュは、オンデマンドで実行することも、将来の日付に対してスケジュール設定することもできます。
 
-**3.** サイトの訪問者には、変更がパブリッシュサービスに反映されていることが表示されます。
+**3.** サイトの訪問者には、変更がパブリッシュサービスに反映されているのが表示されます。
 
-### 変更の公開
+### 変更を公開
 
 次に、変更を公開します。
 
-1. AEMの開始画面から&#x200B;**Sites**&#x200B;に移動し、**WKND Site**&#x200B;を選択します。
-1. メニューバーの「**公開を管理**」をクリックします。
+1. AEM Start 画面からに移動します。 **サイト** をクリックし、 **WKND サイト**.
+1. 次をクリック： **公開を管理** をクリックします。
 
    ![公開を管理](assets/author-content-publish/click-manage-publiciation.png)
 
    これはまったく新しいサイトなので、すべてのページを公開し、公開を管理ウィザードを使用して、公開する必要があるものを正確に定義できます。
 
-1. 「**オプション**」では、デフォルト設定を「**公開**」のままにし、「**今すぐ**」にスケジュールします。 「**次へ**」をクリックします。
-1. **スコープ**&#x200B;で、**WKNDサイト**&#x200B;を選択し、「**子を含める**」をクリックします。 ダイアログで、すべてのボックスのチェックをオフにします。 完全なサイトを公開します。
+1. の下 **オプション** デフォルト設定を次のままにします。 **公開** そしてそれをスケジュールする **今すぐ**. 「**次へ**」をクリックします。
+1. の下 **範囲**&#x200B;を選択し、 **WKND サイト** をクリックし、 **子設定を含める**. ダイアログで、 **子を含める**. 残りのボックスのチェックをオフにして、サイト全体が公開されるようにします。
 
-   ![公開範囲の更新](assets/author-content-publish/update-scope-publish.png)
+   ![公開範囲を更新](assets/author-content-publish/update-scope-publish.png)
 
-1. 「**公開済みの参照**」ボタンをクリックします。 ダイアログで、すべてがオンになっていることを確認します。 これには、**基本的なAEMサイトテンプレート**&#x200B;と、サイトテンプレートによって生成されるいくつかの設定が含まれます。 「**完了**」をクリックして更新します。
+1. 次をクリック： **公開済みの参照** 」ボタンをクリックします。 ダイアログで、すべてがオンになっていることを確認します。 これには、 **標準サイトテンプレート** およびサイトテンプレートによって生成されるいくつかの設定。 クリック **完了** を更新します。
 
-   ![参照の公開](assets/author-content-publish/publish-references.png)
+   ![参照を公開](assets/author-content-publish/publish-references.png)
 
-1. 最後に、右上隅の「**公開**」をクリックして、コンテンツを公開します。
+1. 最後に、の横にあるチェックボックスをオンにします。 **WKND サイト** をクリックし、 **次へ** をクリックします。
+1. 内 **ワークフロー** ステップ、 **ワークフロータイトル**. 任意のテキストを指定でき、後で監査証跡の一部として使用する場合に役立ちます。 「初期公開」と入力し、 **公開**.
 
-## 公開済みコンテンツの表示 {#publish}
+![ワークフローステップの初期公開](assets/author-content-publish/workflow-step-publish.png)
 
-次に、パブリッシュサービスに移動して変更を表示します。
+## 公開済みコンテンツを表示 {#publish}
 
-1. パブリッシュサービスのURLを簡単に取得するには、オーサーURLをコピーして、`author`の単語を`publish`に置き換えます。 次に例を示します。
+次に、パブリッシュサービスに移動して、変更を表示します。
+
+1. パブリッシュサービスの URL を簡単に取得するには、オーサー URL をコピーして、 `author` 次の単語 `publish`. 次に例を示します。
 
    * **作成者 URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
-   * **パブリッシュURL**  -  `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
+   * **公開 URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
 
-1. 最終的なURLが次のようになるように、パブリッシュURLに`/content/wknd.html`を追加します。`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.
+1. 追加 `/content/wknd.html` を公開 URL に追加して、最終的な URL が次のようになるようにします。 `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.
 
    >[!NOTE]
    >
-   > [サイトの作成](create-site.md)中に一意の名前を指定した場合は、`wknd.html`をサイトの名前に一致するように変更します。
+   > 変更 `wknd.html` サイトの名前に一致させる ( [サイトの作成](create-site.md).
 
-1. AEMオーサリング機能を使用せずに、サイトが表示されるパブリッシュURLに移動します。
+1. AEMオーサリング機能を使用せずに、サイトが表示される公開 URL に移動します。
 
    ![公開済みサイト](assets/author-content-publish/publish-url-update.png)
 
-1. **ナビゲーション**&#x200B;メニューを使用して、**記事** / **Hello World**&#x200B;をクリックし、前に作成したHello Worldページに移動します。
-1. **AEMオーサーサービス**&#x200B;に戻り、ページエディターで追加のコンテンツ変更をおこないます。
-1. **ページのプロパティ**&#x200B;アイコン/ **ページを公開**&#x200B;をクリックして、これらの変更をページエディター内から直接公開します。
+1. の使用 **ナビゲーション** メニュークリック **記事** > **Hello World** をクリックして、前に作成した Hello World ページに移動します。
+1. に戻る **AEM オーサーサービス** ページエディターで、コンテンツをさらに変更します。
+1. これらの変更を、ページエディター内で **ページプロパティ** アイコン/ **ページを公開**
 
    ![直接公開](assets/author-content-publish/page-editor-publish.png)
 
-1. **AEMパブリッシュサービス**&#x200B;に戻り、変更を表示します。 おそらく、****&#x200B;はすぐには更新を確認できません。 これは、**AEMパブリッシュサービス**&#x200B;には、Apache WebサーバーとCDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)を介した[キャッシュが含まれるからです。 デフォルトでは、HTMLコンテンツは約5分間キャッシュされます。
+1. に戻る **AEM パブリッシュサービス** をクリックして変更を表示します。 おそらく **not** すぐに更新を確認します。 これは、 **AEM パブリッシュサービス** 次を含む [Apache Web サーバーおよび CDN を介したキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). デフォルトでは、HTMLコンテンツは約 5 分間キャッシュされます。
 
-1. テストやデバッグの目的でキャッシュをバイパスするには、`?nocache=true`のようなクエリパラメーターを追加します。 URLは`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`のようになります。 キャッシュ方法と設定の詳細については、[を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html)
+1. テストやデバッグの目的でキャッシュをバイパスするには、次のようなクエリパラメーターを追加します。 `?nocache=true`. URL は次のようになります。 `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. 使用可能なキャッシュ方法と設定の詳細 [ここにあります](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
 
-1. また、Cloud ManagerでパブリッシュサービスへのURLを確認することもできます。 **Cloud Managerプログラム** / **環境** / **環境**&#x200B;に移動します。
+1. また、Cloud Manager でパブリッシュサービスへの URL を見つけることもできます。 次に移動： **Cloud Manager プログラム** > **環境** > **環境**.
 
-   ![パブリッシュサービスの表示](assets/author-content-publish/view-environment-segments.png)
+   ![パブリッシュサービスを表示](assets/author-content-publish/view-environment-segments.png)
 
-   **環境セグメント**&#x200B;の下に、**オーサー**&#x200B;および&#x200B;**パブリッシュ**&#x200B;サービスへのリンクがあります。
+   の下 **環境セグメント** 次のリンクを検索： **作成者** および **公開** サービス。
 
 ## おめでとうございます。 {#congratulations}
 
-AEM Siteに対する変更を作成し、公開しました。
+これで、AEMサイトに対する変更を作成して公開しました。
 
 ### 次の手順 {#next-steps}
 
-[ページテンプレート](./page-templates.md)を作成および変更する方法を説明します。 ページテンプレートとページの関係を理解します。 コンテンツに対して詳細なガバナンスとブランドの一貫性を提供するために、ページテンプレートのポリシーを設定する方法を説明します。  Adobe XDのモックアップに基づいて、適切に構造化されたMagazine記事テンプレートが作成されます。
+実際の実装計画では、モックアップと UI デザインを含むサイトは通常、サイトの作成よりも前に作成されます。 Adobe XD UI キットを使用して、でAdobe Experience Manager Sitesの実装を設計および高速化する方法を説明します。 [Adobe XDでの UI 計画](./ui-planning-adobe-xd.md).
+
+AEM Sitesの機能を引き続き参照しますか？ ～に関する章にすぐに飛び込むのは自由だ [ページテンプレート](./page-templates.md) を使用して、ページテンプレートとページの関係を理解できます。
+
+

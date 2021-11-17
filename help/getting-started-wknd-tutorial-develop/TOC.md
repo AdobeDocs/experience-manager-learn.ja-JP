@@ -8,10 +8,10 @@ user-guide-title: AEM Sites の概要 - WKND チュートリアル
 user-guide-description: AEM を初めて使う開発者向けに作られた、複数のパートから成るチュートリアルです。架空のライフスタイルブランドである WKND 向けに AEM Sites を実装します。
 breadcrumb-title: AEM Sites WKND チュートリアル
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 56%
+source-wordcount: '78'
+ht-degree: 50%
 
 ---
 
@@ -28,9 +28,10 @@ ht-degree: 56%
    + [5 — スタイルシステム](./project-archetype/style-system.md)
    + [6 — カスタムコンポーネント](./project-archetype/custom-component.md)
    + [7 — 単体テスト](./project-archetype/unit-testing.md)
-+ サイトテンプレート {#site-template}
++ クイックサイト作成 {#site-template}
    + [概要](./site-template/overview.md)
    + [1 — サイトの作成](./site-template/create-site.md)
-   + [2 — コンテンツのオーサリングと変更の公開](./site-template/author-content-publish.md)
+   + [2 — オーサリングと公開の概要](./site-template/author-content-publish.md)
+   + [3 - Adobe XDでの UI 計画](./site-template/ui-planning-adobe-xd.md)
    + [3 — ページテンプレート](./site-template/page-templates.md)
    + [4 — テーマ設定](./site-template/theming.md)

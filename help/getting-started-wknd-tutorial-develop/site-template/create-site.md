@@ -1,37 +1,36 @@
 ---
-title: サイトの作成
-seo-title: AEM Sitesの概要 — サイトの作成
-description: AEMのAdobe Experience Managerのサイト作成ウィザードを使用して、新しいWebサイトを生成します。 Adobeが提供する標準サイトテンプレートは、新しいサイトの出発点として使用されます。
-sub-product: サイト
+title: サイトの作成 | AEMクイックサイト作成
+description: クイックサイト作成の一環として、AEMのAdobe Experience Managerのサイト作成ウィザードを使用して、新しい Web サイトを生成します。 Adobeが提供する標準サイトテンプレートは、新しいサイトの出発点として使用されます。
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-topic: コンテンツ管理
-feature: コアコンポーネント、ページエディター
+topic: Content Management
+feature: Core Components, Page Editor
 role: Developer
 level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 4%
+source-wordcount: '955'
+ht-degree: 3%
 
 ---
-
 
 # サイトの作成 {#create-site}
 
 >[!CAUTION]
 >
-> ここで紹介するクイックサイト作成機能は、2021年後半にリリースされます。 関連ドキュメントは、プレビュー用に提供されています。
+> 現在、クイックサイト作成ツールはテクニカルプレビューです。 テストおよび評価の目的で使用できるようになり、Adobeサポートに同意しない限り、実稼動での使用は意図されません。
 
-この章では、Adobe Experience Managerでの新しいサイトの作成について説明します。 Adobeが提供する標準サイトテンプレートを出発点として使用します。
+クイックサイト作成の一環として、AEMのAdobe Experience Managerのサイト作成ウィザードを使用して、新しい Web サイトを生成します。 Adobeが提供する標準サイトテンプレートは、新しいサイトの出発点として使用されます。
 
 ## 前提条件 {#prerequisites}
 
-この章の手順は、Adobe Experience Manager as a Cloud Service環境で実行します。 AEM環境への管理者アクセス権があることを確認します。 このチュートリアルを完了する際には、[サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)と[開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja)を使用することをお勧めします。
+この章の手順は、Adobe Experience Manager as a Cloud Service環境で実行します。 AEM環境への管理者アクセス権があることを確認します。 次を使用することをお勧めします。 [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) および [開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja) このチュートリアルを完了する際
 
-詳しくは、[オンボーディングのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=ja)を参照してください。
+以下を確認します。 [オンボーディングドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=ja) を参照してください。
 
 ## 目的 {#objective}
 
@@ -39,95 +38,98 @@ ht-degree: 4%
 1. サイトテンプレートの役割を理解します。
 1. 生成されたAEMサイトを参照します。
 
-## Adobe Experience Manager Authorへのログイン {#author}
+## Adobe Experience Manager Author にログインします。 {#author}
 
-最初の手順として、AEM as a Cloud Service環境にログインします。 AEM環境は、**オーサーサービス**&#x200B;と&#x200B;**パブリッシュサービス**&#x200B;に分割されます。
+最初の手順として、AEMas a Cloud Service環境にログインします。 AEM環境は **オーサーサービス** および **パブリッシュサービス**.
 
-* **オーサーサービス**  — サイトコンテンツを作成、管理および更新する場所。通常、**オーサーサービス**&#x200B;にアクセスできるのは内部ユーザーのみで、ログイン画面の後ろにあります。
-* **公開サービス**  — ライブWebサイトをホストします。これは、エンドユーザーに表示されるサービスで、通常は公開されています。
+* **オーサーサービス** ：サイトコンテンツが作成、管理、更新される場所。 通常、内部ユーザーのみが **オーサーサービス** とは、ログイン画面の後ろに表示されています。
+* **パブリッシュサービス** ：ライブ Web サイトをホストします。 これは、エンドユーザーに表示されるサービスで、通常は一般に利用可能です。
 
-このチュートリアルの大部分は、**オーサーサービス**&#x200B;を使用して実行されます。
+チュートリアルの大部分は、 **オーサーサービス**.
 
-1. Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/)に移動します。 個人用アカウントまたは会社/学校のアカウントを使用してログインします。
-1. メニューで正しい組織が選択されていることを確認し、「**Experience Manager**」をクリックします。
+1. Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). 個人用アカウント、または会社/学校のアカウントを使用してログインします。
+1. メニューで正しい組織が選択されていることを確認し、 **Experience Manager**.
 
    ![Experience Cloudホーム](assets/create-site/experience-cloud-home-screen.png)
 
-1. **Cloud Manager**&#x200B;で、「**Launch**」をクリックします。
-1. 使用するプログラムの上にマウスポインターを置き、**Cloud Managerプログラム**&#x200B;アイコンをクリックします。
+1. の下 **Cloud Manager** クリック **起動**.
+1. 使用するプログラムの上にマウスポインターを置き、 **Cloud Manager プログラム** アイコン
 
-   ![Cloud Managerプログラムアイコン](assets/create-site/cloud-manager-program-icon.png)
+   ![Cloud Manager プログラムアイコン](assets/create-site/cloud-manager-program-icon.png)
 
-1. 上部のメニューで、「**環境**」をクリックして、プロビジョニングされた環境を表示します。
+1. 上部のメニューで、 **環境** プロビジョニングされた環境を表示するには：
 
-1. 使用する環境を見つけ、**作成者URL**&#x200B;をクリックします。
+1. 使用する環境を見つけ、 **作成者 URL**.
 
-   ![開発者オーサーへのアクセス](assets/create-site/access-dev-environment.png)
+   ![開発者にアクセス](assets/create-site/access-dev-environment.png)
 
    >[!NOTE]
    >
-   >このチュートリアルでは、**開発**&#x200B;環境を使用することをお勧めします。
+   >次を使用することをお勧めします。 **開発** 環境を参照してください。
 
-1. AEM **オーサーサービス**&#x200B;に対して新しいタブが起動します。 「**Adobeでログイン**」をクリックすると、同じExperience Cloud資格情報で自動的にログインします。
+1. AEMに対して新しいタブが起動されます **オーサーサービス**. クリック **Adobe** 同じログイン資格情報で自動的にログインする必要がありますExperience Cloud。
 
-1. リダイレクトされて認証されると、AEMの開始画面が表示されます。
+1. リダイレクトされて認証された後に、AEMの開始画面が表示されます。
 
-   ![AEM Start画面](assets/create-site/aem-start-screen.png)
+   ![AEM Start 画面](assets/create-site/aem-start-screen.png)
 
 >[!NOTE]
 >
-> Experience Managerへのアクセス [オンボーディングドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)を確認します。
+> Experience Managerにアクセスできない場合 以下を確認します。 [オンボーディングドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
 
 ## 基本サイトテンプレートのダウンロード
 
-サイトテンプレートは、新しいサイトの出発点となります。 サイトテンプレートには、いくつかの基本的なテーマ、ページテンプレート、設定、サンプルコンテンツが含まれています。 サイトテンプレートに含まれる内容は、開発者が決定します。 Adobeには、新しい実装を高速化する&#x200B;**基本的なサイトテンプレート**&#x200B;が用意されています。
+サイトテンプレートは、新しいサイトの出発点となります。 サイトテンプレートには、いくつかの基本的なテーマ、ページテンプレート、設定、サンプルコンテンツが含まれています。 サイトテンプレートに含まれる内容は、開発者が自由に使用できます。 Adobeが **基本サイトテンプレート** を使用して、新しい実装を迅速におこなうことができます。
 
-1. 新しいブラウザータブを開き、GitHubの基本サイトテンプレートプロジェクトに移動します。[https://github.com/adobe/aem-site-template-basic](https://github.com/adobe/aem-site-template-basic). このプロジェクトはオープンソースで、誰でも使用できるライセンスが付与されています。
-1. **リリース**&#x200B;をクリックし、[最新のリリース](https://github.com/adobe/aem-site-template-basic/releases/latest)に移動します。
-1. **アセット**&#x200B;ドロップダウンを展開し、テンプレートzipファイルをダウンロードします。
+1. 新しいブラウザータブを開き、GitHub の基本サイトテンプレートプロジェクトに移動します。 [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard). このプロジェクトはオープンソースで、誰でも使用できるライセンスを持っています。
+1. クリック **リリース** をクリックし、 [最新リリース](https://github.com/adobe/aem-site-template-standard/releases/latest).
+1. を展開します。 **Assets** ドロップダウンし、テンプレート zip ファイルをダウンロードします。
 
-   ![基本サイトテンプレートのZip](assets/create-site/template-basic-zip-file.png)
+   ![基本サイトテンプレート Zip](assets/create-site/template-basic-zip-file.png)
 
-   このzipファイルは、次の演習で使用します。
+   この zip ファイルは、次の演習で使用します。
 
    >[!NOTE]
    >
-   > このチュートリアルは、基本的なサイトテンプレートのバージョン&#x200B;**5.0.0**&#x200B;を使用して記述します。 新しいプロジェクトを開始する場合は、常に最新バージョンを使用することをお勧めします。
+   > このチュートリアルは、バージョンを使用して記述します **1.1.0** 」をクリックします。 実稼動用に新しいプロジェクトを開始する場合は、常に最新バージョンを使用することをお勧めします。
 
-## 新しいサイトの作成
+## 新しいサイトを作成
 
-次に、前の演習の[サイトテンプレート]を使用して新しいサイトを生成します。
+次に、前の演習の [ サイトテンプレート ] を使用して新しいサイトを生成します。
 
-1. AEM環境に戻ります。 AEM Start画面から、**Sites**&#x200B;に移動します。
-1. 右上隅にある「**作成** / **サイト（テンプレート）** 」をクリックします。 これにより、**サイト作成ウィザード**&#x200B;が表示されます。
-1. 「**サイトテンプレート**&#x200B;を選択し、「****&#x200B;を読み込み」ボタンをクリックします。
+1. AEM環境に戻ります。 AEM Start 画面からに移動します。 **サイト**.
+1. 右上隅で、 **作成** > **サイト（テンプレート）**. これで、 **サイト作成ウィザード**.
+1. の下 **サイトテンプレートを選択** クリック **インポート** 」ボタンをクリックします。
 
-   前の演習でダウンロードした&#x200B;**.zip**&#x200B;テンプレートファイルをアップロードします。
+   をアップロードします。 **.zip** 前の演習でダウンロードしたテンプレートファイル。
 
-1. 「**基本AEMサイトテンプレート**」を選択し、「**次へ**」をクリックします。
+1. を選択します。 **基本AEMサイトテンプレート** をクリックし、 **次へ**.
 
-   ![サイトテンプレートの選択](assets/create-site/select-site-template.png)
+   ![サイトテンプレートを選択](assets/create-site/select-site-template.png)
 
-1. 「**Site Details** > **Site title**」に`WKND Site`と入力します。
-1. 「**サイト名**」に`wknd`と入力します。
+1. の下 **サイトの詳細** > **サイトのタイトル** 入力 `WKND Site`.
+
+   実際の実装では、「WKND サイト」は会社または組織のブランド名に置き換えられます。 このチュートリアルでは、気まぐれなライフスタイルブランド「WKND」のサイト作成のシミュレーションを行います。
+
+1. の下 **サイト名** 入力 `wknd`.
 
    ![サイトテンプレートの詳細](assets/create-site/site-template-details.png)
 
    >[!NOTE]
    >
-   > 共有AEM環境を使用する場合は、一意の識別子を&#x200B;**サイト名**&#x200B;に追加します。 例： `wknd-johndoe` これにより、複数のユーザーが衝突を起こさずに同じチュートリアルを完了できます。
+   > 共有AEM環境を使用する場合、に一意の ID を追加します。 **サイト名**. 例： `wknd-site-johndoe`. これにより、衝突を起こさずに複数のユーザーが同じチュートリアルを完了することができます。
 
-1. 「**作成**」をクリックして、サイトを生成します。 AEMがWebサイトの作成を終了したら、**成功**&#x200B;ダイアログで「**完了**」をクリックします。
+1. クリック **作成** をクリックしてサイトを生成します。 クリック **完了** 内 **成功** ダイアログが表示されます。
 
-## 新しいサイトの参照
+## 新しいサイトを参照
 
 1. AEM Sitesコンソールに移動します（まだ移動していない場合）。
-1. 新しい&#x200B;**WKNDサイト**&#x200B;が生成されました。 複数言語の階層を持つサイト構造が含まれます。
-1. ページを選択し、メニューバーの「**編集**」ボタンをクリックして、**英語** /**ホーム**&#x200B;ページを開きます。
+1. 新しい **WKND サイト** が生成されました。 多言語階層のサイト構造が含まれます。
+1. を開きます。 **英語** > **ホーム** ページを表示するには、ページを選択して **編集** ボタンをクリックします。
 
-   ![WKNDサイト階層](assets/create-site/wknd-site-starter-hierarchy.png)
+   ![WKND サイト階層](assets/create-site/wknd-site-starter-hierarchy.png)
 
-1. スターターコンテンツは既に作成済みで、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを使用してみることで、機能について大まかに把握できます。次の章では、コンポーネントの基本について学びます。
+1. スターターコンテンツは既に作成されており、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを使用してみることで、機能について大まかに把握できます。次の章では、コンポーネントの基本について学びます。
 
    ![ホームページを開始](assets/create-site/start-home-page.png)
 
@@ -135,8 +137,8 @@ ht-degree: 4%
 
 ## おめでとうございます。 {#congratulations}
 
-これで、最初のAEM Siteが作成されました。
+これで、最初のAEM Site が作成されました。
 
 ### 次の手順 {#next-steps}
 
-Adobe Experience Manager(AEM)のページエディターを使用して、[オーサーコンテンツとパブリッシュ](author-content-publish.md)の章でサイトのコンテンツを更新します。 アトミックコンポーネントを設定してコンテンツを更新する方法を説明します。 AEMオーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに更新を公開する方法を学びます。
+AEMのAdobe Experience Managerのページエディターを使用して、 [コンテンツのオーサリングと公開](author-content-publish.md) チャプター。 コンテンツを更新するためにアトミックコンポーネントを設定する方法を説明します。 AEM オーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに更新を公開する方法を学びます。
