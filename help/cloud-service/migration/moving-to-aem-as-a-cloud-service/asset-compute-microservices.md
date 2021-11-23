@@ -9,10 +9,10 @@ level: Experienced
 kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 9%
+source-wordcount: '323'
+ht-degree: 5%
 
 ---
 
@@ -28,10 +28,44 @@ AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来
 
 コードベースのリファクタリングの一環として、 [アセットワークフロー移行ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=ja) 既存のワークフローを移行して、AEM as a Cloud ServiceのAsset computeマイクロサービスを使用する場合。
 
-### 重要なアクティビティ
+## 主要なアクティビティ
 
-* 以下を使用： [Adobe I/OWorkflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) ツールを使用してアセット処理ワークフローを移行し、Asset computeマイクロサービスを使用する
-* の設定 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) 更新されたワークフローをデプロイします。 複雑なワークフローでは、手動の調整が必要になる場合があります。
-* 更新されたローカル開発が機能パリティと一致するまで、AEM SDK を使用したワークフロー環境で繰り返し処理を行います。
-* 更新されたコードベースをAEMas a Cloud Serviceの開発環境にデプロイし、検証を続行します。
++ 以下を使用： [Adobe I/OWorkflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) ツールを使用してアセット処理ワークフローを移行し、Asset computeマイクロサービスを使用する
++ の設定 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) 更新されたワークフローをデプロイします。 複雑なワークフローでは、手動の調整が必要になる場合があります。
++ 更新されたローカル開発が機能パリティと一致するまで、AEM SDK を使用したワークフロー環境で繰り返し処理を行います。
++ 更新されたコードベースをAEMas a Cloud Serviceの開発環境にデプロイし、検証を続行します。
 
+## 実践練習
+
+この実践練習で学んだことを試して、知識を適用します。
+
+実践練習を行う前に、上記のビデオを視聴し、理解し、次の資料を確認してください。
+
++ [AEM as a Cloud Serviceについての考え方](./introduction.md)
++ [オンボーディング ](./onboarding.md)
+
+また、前の実践演習を完了していることを確認します。
+
++ [検索とインデックス作成の実践演習](./search-and-indexing.md#hands-on-exercise)
+
+<table style="border-width:0">
+    <tr>
+        <td style="width:150px">
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices"><img alt="実践エクササイズ GitHub リポジトリ" src="./assets/github.png"/>
+            </a>        
+        </td>
+        <td style="width:100%;margin-bottom:1rem;">
+            <div style="font-size:1.25rem;font-weight:400;">アセットのアップロードに関する実践</div>
+            <p style="margin:1rem 0">
+                「aem-upload」 npm CLI モジュールを使用して、AEM Assets処理プロファイルを定義し、フォルダーに割り当て、アセットをAEMにアップロードする方法を確認します。
+            </p>
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">アセット管理の試み</span>
+            </a>
+        </td>
+    </tr>
+</table>

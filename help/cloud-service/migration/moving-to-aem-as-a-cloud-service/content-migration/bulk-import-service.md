@@ -8,7 +8,7 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 2%
@@ -27,13 +27,13 @@ AEM as a AEM Bulk Import Service を使用して、非Cloud Servicesソースか
 
 一括読み込みサービスは、Azure Blob ストレージまたはAmazon S3 ストレージに保存されたファイルを、アセットとしてAEM as a Cloud Serviceに転送するために使用されます。
 
-### 重要なアクティビティ
+## 重要なアクティビティ
 
 + インポートするファイルをクラウドストレージプロバイダー (Azure Blob ストレージまたはAmazon S3) にアップロードします。
 + AEM as a Cloud Service Author サービスを設定して、一括読み込みサービスを実行します。
 + 一括サービスインポーターを 1 回限りのインポートとして実行するか、定期的なインポートのスケジュールを設定します。
 
-### Adobe  に関するその他のリソース
+## Adobe  に関するその他のリソース
 
 + [Adobe取り込み時のアセット開発者ライブセッション](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
 
