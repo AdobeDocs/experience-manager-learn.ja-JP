@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
+source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1633'
 ht-degree: 3%
 
 ---
@@ -197,6 +197,7 @@ ht-degree: 3%
 
 + ドキュメントサービス {#document-services}
    + [PDF formsのタイプ](document-services/pdf-forms-and-documents.md)
+   + [アダプティブフォームに pdf を埋め込む](document-services/embed-pdf-inline.md)
    + [AEM Formsでの Assembler サービスの使用](document-services/using-assembler-service-in-aem-forms.md)
    + [AEM Formsでの監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Formsでの Barcode Service の使用](document-services/barcode-service-adaptive-forms-article.md)
