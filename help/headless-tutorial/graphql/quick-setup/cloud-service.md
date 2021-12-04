@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: f13f32de11bda924a2d255678e58e7c982d0d004
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1075'
 ht-degree: 2%
 
 ---
@@ -193,5 +193,7 @@ _手順のスクリーンキャスト_
 おめでとうございます。AEMヘッドレスを使用して React アプリを強化できました。
 
 React App がAEM as a Cloud Serviceからコンテンツをどのように消費するかを詳しく理解するには、 [AEMヘッドレスチュートリアル](../multi-step/overview.md). このチュートリアルでは、AEMでのコンテンツフラグメントの作成方法と、この React App が JSON としてコンテンツを使用する方法について説明します。
+
+### 次の手順
 
 + [AEMヘッドレスチュートリアルの開始](../multi-step/overview.md)

@@ -1,41 +1,42 @@
 ---
-user-guide-title: AEM ヘッドレス使用の手引き
+user-guide-title: AEM ヘッドレスの概要
 user-guide-description: AEM ヘッドレスを使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 breadcrumb-title: AEM ヘッドレスチュートリアル
 version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 22%
+source-wordcount: '190'
+ht-degree: 23%
 
 ---
 
 
-# AEM ヘッドレス使用の手引き{#getting-started-with-aem-headless}
+# AEM ヘッドレスの概要{#getting-started-with-aem-headless}
 
 + [AEMヘッドレスの概要](./overview.md)
 + GraphQL {#graphql}
    + [概要](./graphql/overview.md)
+   + [クイックセットアップ](./graphql/quick-setup/cloud-service.md)
+   + [ローカル SDK のクイックセットアップ](./graphql/quick-setup/local-sdk.md)
    + ビデオシリーズ{#video-series}
       + [1 — モデリングの基本](./graphql/video-series/modeling-basics.md)
       + [2 — 高度なモデリング](./graphql/video-series/advanced-modeling.md)
       + [3 - GraphQL クエリの作成](./graphql/video-series/creating-graphql-queries.md)
-      + [4 — コンテンツフラグメントバリエーション](./graphql/video-series/content-fragment-variations.md)
+      + [4 — コンテンツフラグメントのバリエーション](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL エンドポイント](./graphql/video-series/graphql-endpoints.md)
       + [6 — オーサーとパブリッシュのアーキテクチャ](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL 永続クエリ](./graphql/video-series/graphql-persisted-queries.md)
    + 複数手順のチュートリアル{#multi-step}
       + [概要](./graphql/multi-step/overview.md)
-      + [1 — クイックセットアップ](./graphql/multi-step/setup.md)
-      + [2 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
-      + [3 — コンテンツフラグメントのオーサリング](./graphql/multi-step/author-content-fragments.md)
-      + [4 - GraphQL API の参照](./graphql/multi-step/explore-graphql-api.md)
-      + [5 — 外部アプリからのクエリ](./graphql/multi-step/graphql-and-external-app.md)
-      + [6 — フラグメントリファレンスを使用した高度なデータモデリング](./graphql/multi-step/fragment-references.md)
-      + [7 — 実稼動のデプロイメント](./graphql/multi-step/production-deployment.md)
+      + [1 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
+      + [2 — コンテンツフラグメントのオーサリング](./graphql/multi-step/author-content-fragments.md)
+      + [3 - GraphQL API の参照](./graphql/multi-step/explore-graphql-api.md)
+      + [4 — 外部アプリからのクエリ](./graphql/multi-step/graphql-and-external-app.md)
+      + [5 — フラグメントリファレンスを使用した高度なデータモデリング](./graphql/multi-step/fragment-references.md)
+      + [6 — 実稼動のデプロイメント](./graphql/multi-step/production-deployment.md)
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
@@ -60,11 +61,11 @@ ht-degree: 22%
    + リモートSPA{#remote-spa}
       + [概要](./spa-editor/remote-spa/overview.md)
       + [クイックセットアップ](./spa-editor/remote-spa/quick-setup.md)
-      + [1 - AEMの設定](./spa-editor/remote-spa/aem-configure.md)
+      + [1 - AEMを設定](./spa-editor/remote-spa/aem-configure.md)
       + [2 - SPAのBootstrap](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 — 固定コンポーネント](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — コンテナコンポーネント](./spa-editor/remote-spa/spa-container-component.md)
-      + [5 — 動的ルート](./spa-editor/remote-spa/spa-dynamic-routes.md)
+      + [5 — ダイナミックルート](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + トークンベースの認証 {#authentication}
    + [概要](./authentication/overview.md)
    + [1 -ローカル開発アクセストークン](./authentication/local-development-access-token.md)
@@ -76,5 +77,5 @@ ht-degree: 22%
    + [3 — イベントコンテンツフラグメントのオーサリング](./content-services/chapter-3.md)
    + [4 — コンテンツサービステンプレートの定義](./content-services/chapter-4.md)
    + [5 — コンテンツサービスページのオーサリング](./content-services/chapter-5.md)
-   + [6 — 配信用に AEM パブリッシュにコンテンツを公開](./content-services/chapter-6.md)
+   + [6 — 配信用に AEM パブリッシュでのコンテンツの公開](./content-services/chapter-6.md)
    + [7 — モバイルアプリからのAEM Content Services の使用](./content-services/chapter-7.md)

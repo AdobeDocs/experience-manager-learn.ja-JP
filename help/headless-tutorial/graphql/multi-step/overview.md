@@ -1,42 +1,43 @@
 ---
 title: AEMヘッドレス実践チュートリアルの概要 — GraphQL
-description: AEM GraphQL APIを使用したコンテンツの構築と公開の方法を示す、エンドツーエンドのチュートリアルです。
+description: AEM GraphQL API を使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 doc-type: tutorial
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: コンテンツフラグメント、GraphQL API
-topic: ヘッドレス、コンテンツ管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '206'
+ht-degree: 4%
 
 ---
 
+# AEM ヘッドレスの概要 - GraphQL
 
-# AEMヘッドレスの概要 — GraphQL
+AEM GraphQL API を使用し、外部アプリで使用するコンテンツをヘッドレス CMS シナリオで構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 
-ヘッドレスなCMSシナリオで、AEM GraphQL APIを使用してコンテンツを構築し、外部アプリで使用する方法を示す、エンドツーエンドのチュートリアルです。
-
-このチュートリアルでは、AEM GraphQL APIとヘッドレス機能を使用して、外部アプリで表示されるエクスペリエンスを強化する方法を説明します。
+このチュートリアルでは、AEM GraphQL API とヘッドレス機能を使用して、外部アプリで表示されるエクスペリエンスを強化する方法を説明します。
 
 このチュートリアルでは、次のトピックについて説明します。
 
-* コンテンツフラグメントモデルを作成して、AEMでコントリビューターをモデル化する
-* 新しく作成されたコンテンツフラグメントモデルを使用してコントリビューターコンテンツフラグメントを作成する
-* 統合GraphiQL開発ツールを使用して、AEMのコンテンツフラグメントを照会する方法を確認します。
-* サンプルWKND GraphQL ReactアプリからAEM GraphQL APIを使用する
-* フラグメント参照を使用した高度なデータモデリングの実行
+* コンテンツフラグメントモデルを作成してAEMのコントリビューターをモデル化する
+* 新しく作成したコンテンツフラグメントモデルを使用してコントリビューターコンテンツフラグメントを作成する
+* 統合 GraphiQL 開発ツールを使用してAEMのコンテンツフラグメントを照会する方法を確認します。
+* サンプル WKND GraphQL React アプリからAEM GraphQL API を使用
+* フラグメントリファレンスを使用した高度なデータモデリングの実行
 
-## 始めましょう！
+## さあ始めましょう！
 
-AEM GraphQLチュートリアルを開始するには、[クイックセットアップ](./setup.md)の章を参照してください。
+1. を使用した開発環境の設定 [AEMas a Cloud Service](../quick-setup/cloud-service.md) または [ローカル SDK](../quick-setup/local-sdk.md).
+2. チュートリアルを開始する前に [コンテンツフラグメントモデルの定義](content-fragment-models.md).
 
-## GitHubプロジェクト
+## GitHub プロジェクト
 
-ソースコードとコンテンツパッケージは、[AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql)で入手できます。
+ソースコードとコンテンツパッケージは、 [AEMガイド — WKND GraphQL GitHub プロジェクト](https://github.com/adobe/aem-guides-wknd-graphql).
 
-チュートリアルまたはコードに問題がある場合は、[GitHubの問題](https://github.com/adobe/aem-guides-wknd-graphql/issues)を残してください。
+チュートリアルまたはコードに問題がある場合は、 [GitHub の問題](https://github.com/adobe/aem-guides-wknd-graphql/issues).

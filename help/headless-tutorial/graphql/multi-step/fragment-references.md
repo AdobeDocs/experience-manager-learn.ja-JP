@@ -1,6 +1,6 @@
 ---
-title: フラグメントリファレンスを使用した高度なデータモデリング — AEMヘッドレス使用の手引き — GraphQL
-description: Adobe Experience Manager(AEM)とGraphQLの概要。 高度なデータモデリングでフラグメントリファレンス機能を使用し、2つの異なるコンテンツフラグメント間の関係を作成する方法を説明します。 GraphQLクエリを変更して、参照モデルのフィールドを含める方法を説明します。
+title: フラグメントリファレンスを使用した高度なデータモデリング — AEMヘッドレスの概要 — GraphQL
+description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 高度なデータモデリングでフラグメントリファレンス機能を使用し、2 つの異なるコンテンツフラグメント間の関係を作成する方法を説明します。 GraphQL クエリを変更して、参照モデルのフィールドを含める方法を説明します。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6718
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 2%
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 # フラグメントリファレンスを使用した高度なデータモデリング
 
-別のコンテンツフラグメント内からコンテンツフラグメントを参照できます。 これにより、フラグメント間の関係を持つ複雑なデータモデルを作成できます。
+別のコンテンツフラグメント内からコンテンツフラグメントを参照できます。 これにより、ユーザーはフラグメント間の関係を持つ複雑なデータモデルを構築できます。
 
-この章では、「**フラグメント参照**」フィールドを使用して、コントリビューターモデルへの参照を含めるようにアドベンチャーモデルを更新します。 また、GraphQLクエリを変更して、参照モデルのフィールドを含める方法についても学習します。
+この章では、アドベンチャーモデルを更新し、 **フラグメント参照** フィールドに入力します。 また、GraphQL クエリを変更して、参照モデルのフィールドを含める方法についても学習します。
 
 ## 前提条件
 
@@ -32,64 +32,64 @@ ht-degree: 2%
 この章では、次の方法について説明します。
 
 * 「フラグメント参照」フィールドを使用するようにコンテンツフラグメントモデルを更新する
-* 参照モデルからフィールドを返すGraphQLクエリを作成する
+* 参照モデルからフィールドを返す GraphQL クエリを作成する
 
 ## フラグメント参照の追加 {#add-fragment-reference}
 
-コントリビューターモデルへの参照を追加するために、アドベンチャーコンテンツフラグメントモデルを更新します。
+コントリビューターモデルへの参照を追加するには、アドベンチャーコンテンツフラグメントモデルを更新します。
 
 1. 新しいブラウザーを開き、AEMに移動します。
-1. **AEM Start**&#x200B;メニューから、**ツール** / **アセット** / **コンテンツフラグメントモデル** / **WKNDサイト**&#x200B;に移動します。
-1. **アドベンチャー**&#x200B;コンテンツフラグメントモデルを開きます。
+1. 次の **AEM Start** メニュー移動先 **ツール** > **Assets** > **コンテンツフラグメントモデル** > **WKND サイト**.
+1. を開きます。 **冒険** コンテンツフラグメントモデル
 
    ![アドベンチャーコンテンツフラグメントモデルを開く](assets/fragment-references/adventure-content-fragment-edit.png)
 
-1. **データタイプ**&#x200B;の下で、**フラグメント参照**&#x200B;フィールドをメインパネルにドラッグ&amp;ドロップします。
+1. の下 **データタイプ**、ドラッグ&amp;ドロップ **フラグメント参照** フィールドをメインパネルに挿入します。
 
    ![フラグメント参照フィールドを追加](assets/fragment-references/add-fragment-reference-field.png)
 
-1. このフィールドの&#x200B;**プロパティ**&#x200B;を次のように更新します。
+1. を更新します。 **プロパティ** を次のように設定します。
 
    * レンダリング時の名前 - `fragmentreference`
-   * フィールドラベル — **アドベンチャーコントリビューター**
+   * フィールドラベル — **アドベンチャー寄稿者**
    * プロパティ名 - `adventureContributor`
-   * モデルタイプ — **コントリビューター**&#x200B;モデルを選択します。
+   * モデルタイプ — **寄稿者** モデル
    * ルートパス - `/content/dam/wknd`
 
-   ![フラグメント参照のプロパティ](assets/fragment-references/fragment-reference-properties.png)
+   ![フラグメント参照プロパティ](assets/fragment-references/fragment-reference-properties.png)
 
-   プロパティ名`adventureContributor`を使用して、コントリビューターコンテンツフラグメントを参照できるようになりました。
+   プロパティ名 `adventureContributor` これで、コントリビューターコンテンツフラグメントを参照するために使用できるようになりました。
 
 1. 変更内容をモデルに保存します。
 
-## コントリビューターのアドベンチャーへの割り当て
+## コントリビューターをアドベンチャーに割り当てる
 
-アドベンチャーコンテンツフラグメントモデルが更新されたので、既存のフラグメントを編集し、コントリビューターを参照できます。 コンテンツフラグメントモデル&#x200B;*を編集すると、そのモデルから作成された既存のコンテンツフラグメントが*&#x200B;影響を受けることに注意してください。
+アドベンチャーコンテンツフラグメントモデルが更新されたので、既存のフラグメントを編集し、コントリビューターを参照できます。 コンテンツフラグメントモデルの編集に注意してください *影響* そこから作成された既存のコンテンツフラグメント。
 
-1. **アセット** > **ファイル** > **WKNDサイト** > **英語** > **冒険**[&#x200B;バリCamp&lt;a11/](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)に移動します。2/>.****
+1. に移動します。 **Assets** > **ファイル** > **WKND サイト** > **英語** > **冒険** > **[バリサーフキャンプ](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**.
 
-   ![バリサーフキャンプフォルダ](assets/setup/bali-surf-camp-folder.png)
+   ![バリサーフキャンプフォルダ](../quick-setup/assets/setup/bali-surf-camp-folder.png)
 
-1. **Bali Surf Camp**&#x200B;コンテンツフラグメントをクリックして、コンテンツフラグメントエディターを開きます。
-1. **アドベンチャーコントリビューター**&#x200B;フィールドを更新し、フォルダーアイコンをクリックしてコントリビューターを選択します。
+1. をクリックして、 **バリサーフキャンプ** コンテンツフラグメントを使用して、コンテンツフラグメントエディターを開きます。
+1. を更新します。 **アドベンチャー寄稿者** 「寄稿者」フィールドに入力し、フォルダアイコンをクリックして投稿者を選択します。
 
-   ![「Stacey Roswells」を「寄稿者」として選択します。](assets/fragment-references/stacey-roswell-contributor.png)
+   ![寄稿者として [Stacey Roswels] を選択します。](assets/fragment-references/stacey-roswell-contributor.png)
 
-   *寄稿者フラグメントへのパスを選択します*
+   *寄稿者フラグメントへのパスを選択*
 
    ![投稿者への入力済みパス](assets/fragment-references/populated-path.png)
 
-   **寄稿者**&#x200B;モデルを使用して作成されたフラグメントのみを選択できます。
+   フラグメントは、 **寄稿者** モデルを選択できます。
 
-1. フラグメントに対する変更を保存します。
+1. フラグメントへの変更を保存します。
 
-1. 上記の手順を繰り返して、[Yosemite Backpacking](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking)や[Colorado Rock Climing](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)のような冒険に貢献者を割り当てます。
+1. 上記の手順を繰り返して、コントリビューターを次のような冒険に割り当てます。 [ヨセミテバックパッキン](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking) および [コロラドロッククライミング](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)
 
-## GraphiQLを使用したクエリネストされたコンテンツフラグメント
+## GraphiQL を使用した、入れ子になったコンテンツフラグメントのクエリ
 
-次に、アドベンチャーのクエリを実行し、参照されるコントリビューターモデルのネストされたプロパティを追加します。 GraphiQLツールを使用して、クエリの構文をすばやく確認します。
+次に、アドベンチャーのクエリを実行し、参照されるコントリビューターモデルのネストされたプロパティを追加します。 GraphiQL ツールを使用して、クエリの構文をすばやく確認します。
 
-1. AEMのGraphiQLツールに移動します。[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
+1. AEMの GraphiQL ツールに移動します。 [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
 
 1. 次のクエリを入力します。
 
@@ -113,9 +113,9 @@ ht-degree: 2%
    }
    ```
 
-   上記のクエリは、パスによる単一のアドベンチャー用です。 `adventureContributor`プロパティは寄稿者モデルを参照し、ネストされたコンテンツフラグメントからプロパティを要求できます。
+   上記のクエリは、そのパスで 1 つのアドベンチャー用です。 この `adventureContributor` プロパティは寄稿者モデルを参照し、ネストされたコンテンツフラグメントからプロパティを要求できます。
 
-1. クエリを実行すると、次のような結果が得られます。
+1. クエリを実行すると、次のような結果が返されます。
 
    ```json
    {
@@ -137,19 +137,19 @@ ht-degree: 2%
    }
    ```
 
-1. `adventureList`などの他のクエリを試し、参照されるコンテンツフラグメントのプロパティを`adventureContributor`の下に追加します。
+1. などの他のクエリを使用して実験する `adventureList` 参照されるコンテンツフラグメントのプロパティをの下に追加します。 `adventureContributor`.
 
-## Reactアプリを更新してコントリビューターコンテンツを表示する
+## 寄稿者コンテンツを表示するように React アプリを更新する
 
-次に、Reactアプリケーションで使用されるクエリを更新し、新しい寄稿者を含めて、その寄稿者に関する情報をアドベンチャーの詳細ビューの一部として表示します。
+次に、React アプリケーションで使用されるクエリを更新して、新しい寄稿者を含め、その寄稿者に関する情報をアドベンチャーの詳細ビューの一部として表示します。
 
-1. IDEでWKND GraphQL Reactアプリを開きます。
+1. IDE で WKND GraphQL React アプリを開きます。
 
 1. `src/components/AdventureDetail.js` ファイルを開きます。
 
-   ![アドベンチャー詳細コンポーネントIDE](assets/fragment-references/adventure-detail-ide.png)
+   ![アドベンチャー詳細コンポーネント IDE](assets/fragment-references/adventure-detail-ide.png)
 
-1. 関数`adventureDetailQuery(_path)`を探します。 `adventureDetailQuery(..)`関数は、フィルタリングGraphQLクエリをラップするだけです。このクエリでは、AEM `<modelName>ByPath`構文を使用して、JCRパスで識別される単一のコンテンツフラグメントをクエリします。
+1. 関数を検索する `adventureDetailQuery(_path)`. この `adventureDetailQuery(..)` 関数は、AEMを使用するフィルタリング GraphQL クエリをラップするだけです `<modelName>ByPath` 構文を使用して、JCR パスで識別される単一のコンテンツフラグメントをクエリします。
 
 1. クエリを更新して、参照先の寄稿者に関する情報を含めます。
 
@@ -197,11 +197,11 @@ ht-degree: 2%
    }
    ```
 
-   この更新により、`adventureContributor`、`fullName`、`occupation`および`pictureReference`に関する追加のプロパティがクエリに含まれます。
+   この更新により、 `adventureContributor`, `fullName`, `occupation`、および `pictureReference` がクエリに含まれます。
 
-1. `function Contributor(...)`にある`AdventureDetail.js`ファイルに埋め込まれた`Contributor`コンポーネントをInspectします。 プロパティが存在する場合、このコンポーネントは寄稿者の名前、職業、画像をレンダリングします。
+1. Inspect `Contributor` 埋め込まれたコンポーネント `AdventureDetail.js` ～にファイルを送る `function Contributor(...)`. このコンポーネントは、プロパティが存在する場合に、寄稿者の名前、職業、画像をレンダリングします。
 
-   `Contributor`コンポーネントは、`AdventureDetail(...)` `return`メソッドで参照されます。
+   この `Contributor` コンポーネントが `AdventureDetail(...)` `return` メソッド：
 
    ```javascript
    function AdventureDetail(props) {
@@ -220,22 +220,22 @@ ht-degree: 2%
    }
    ```
 
-1. ファイルに変更を保存します。
-1. Reactアプリを起動します（まだ実行していない場合）。
+1. 変更をファイルに保存します。
+1. React アプリを起動します（まだ実行していない場合）。
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
    $ npm start
    ```
 
-1. [http://localhost:3000](http://localhost:3000/)に移動し、参照元のコントリビューターを持つアドベンチャーをクリックします。 **旅程**&#x200B;の下に投稿者情報が表示されます。
+1. に移動します。 [http://localhost:3000](http://localhost:3000/) そして、参照先の寄稿者を持つアドベンチャーをクリックします。 これで、以下にコントリビューター情報が表示されます。 **旅程**:
 
-   ![アプリに追加された投稿者](assets/fragment-references/contributor-added-detail.png)
+   ![アプリに追加されたコントリビューター](assets/fragment-references/contributor-added-detail.png)
 
 ## おめでとうございます。{#congratulations}
 
-おめでとうございます。既存のコンテンツフラグメントモデルを更新し、「**フラグメントの参照**」フィールドを使用して、ネストされたコンテンツフラグメントを参照するようにしました。 また、GraphQLクエリを変更して、参照モデルのフィールドを含める方法も学習しました。
+おめでとうございます。既存のコンテンツフラグメントモデルを更新し、 **フラグメント参照** フィールドに入力します。 また、GraphQL クエリを変更して、参照モデルのフィールドを含める方法も学習しました。
 
 ## 次の手順 {#next-steps}
 
-次の章の[AEMパブリッシュ環境を使用した実稼動デプロイメント](./production-deployment.md)では、AEMオーサーサービスとパブリッシュサービス、およびヘッドレスアプリケーション向けに推奨されるデプロイメントパターンについて説明します。 環境変数を使用するように既存のアプリケーションを更新し、ターゲット環境に基づいてGraphQLエンドポイントを動的に変更します。 また、クロスオリジンリソース共有(CORS)用にAEMを適切に設定する方法についても説明します。
+次の章では、 [AEM パブリッシュ環境を使用した実稼動のデプロイメント](./production-deployment.md)AEM オーサーサービスとパブリッシュサービス、およびヘッドレスアプリケーションで推奨されるデプロイメントパターンについて説明します。 環境変数を使用するように既存のアプリケーションを更新し、ターゲット環境に基づいて GraphQL エンドポイントを動的に変更します。 また、クロスオリジンリソース共有 (CORS) 用にAEMを適切に設定する方法についても説明します。
