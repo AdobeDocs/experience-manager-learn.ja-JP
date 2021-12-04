@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: f3f373b2bc553b0ebd570a65ddc526784e504198
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 23%
+ht-degree: 25%
 
 ---
 
@@ -19,8 +19,9 @@ ht-degree: 23%
 + [AEMヘッドレスの概要](./overview.md)
 + GraphQL {#graphql}
    + [概要](./graphql/overview.md)
-   + [クイックセットアップ](./graphql/quick-setup/cloud-service.md)
-   + [ローカル SDK のクイックセットアップ](./graphql/quick-setup/local-sdk.md)
+   + クイックセットアップ {#quick-setup}
+      + [Cloud Service](./graphql/quick-setup/cloud-service.md)
+      + [ローカル SDK](./graphql/quick-setup/local-sdk.md)
    + ビデオシリーズ{#video-series}
       + [1 — モデリングの基本](./graphql/video-series/modeling-basics.md)
       + [2 — 高度なモデリング](./graphql/video-series/advanced-modeling.md)
