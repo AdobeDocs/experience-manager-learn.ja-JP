@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
+source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1072'
 ht-degree: 2%
 
 ---
-
 
 # AEM AEM as a Cloud Serviceのヘッドレスクイックセットアップ
 
@@ -26,13 +26,13 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
 
 + AEMas a Cloud Serviceサンドボックス環境（できれば開発）
 + AEM as a Cloud Serviceおよび Cloud Manager へのアクセス
-   + `AEM Administrator` AEM as a Cloud Serviceへのアクセス
-   + `Cloud Manager - Deployment Manager` Cloud Manager へのアクセス
+   + __AEM Administrator__ AEM as a Cloud Serviceへのアクセス
+   + __Cloud Manager — デプロイメントマネージャー__ Cloud Manager へのアクセス
 + 以下のツールをローカルにインストールする必要があります。
    + [Node.js v10 以降](https://nodejs.org/ja/)
    + [npm 6 以降](https://www.npmjs.com/)
    + [Git](https://git-scm.com/)
-   + IDE( 例： [Microsoft® Visual Studio Code](https://code.visualstudio.com/)
+   + IDE( 例： [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ## 1. Cloud Manager Git リポジトリを作成する
 
@@ -74,15 +74,13 @@ _手順のスクリーンキャスト_
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
       ```
 
-1. サンプルプロジェクトのソースコードを Cloud Manager Git リポジトリにプッシュします。
+1. サンプルプロジェクトのソースコードをローカル Git リポジトリーから Cloud Manager Git リポジトリーにプッシュします。
 
-   1. ローカルの Git リポジトリーから Cloud Manager Git リポジトリーにコードをプッシュします。
+   ```shell
+   $ git push adobe master:main
+   ```
 
-      ```shell
-      $ git push adobe master:main
-      ```
-
-      資格情報の入力を求められたら、 __ユーザー名__ および __パスワード__ Cloud Manager の __リポジトリ情報__ モーダルです。
+   資格情報の入力を求められたら、 __ユーザー名__ および __パスワード__ Cloud Manager の __リポジトリ情報__ モーダルです。
 
 ## 3. WKND サイトをAEM as a Cloud Serviceにデプロイ
 
