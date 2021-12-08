@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: e8b3bcaeee40b4bfd4f967f929ad664e8d168cb0
+source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 34%
+source-wordcount: '636'
+ht-degree: 33%
 
 ---
 
@@ -89,6 +89,16 @@ ht-degree: 34%
    + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
    + [AEMのユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
++ 高度なネットワーク{#networking}
+   + [概要](./networking/advanced-networking.md)
+   + [柔軟なポート出力](./networking/flexible-port-egress.md)
+   + [出力専用 IP アドレス](./networking/dedicated-egress-ip-address.md)
+   + [仮想プライベートネットワーク](./networking/vpn.md)
+   + コード例{#examples}
+      + [非標準ポートでの HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
+      + [DataSourcePool を使用した SQL 接続](./networking/examples/sql-datasourcepool.md)
+      + [Java SQL API を使用した SQL 接続](./networking/examples/sql-java-apis.md)
+      + [電子メールサービス](./networking/examples/email-service.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
