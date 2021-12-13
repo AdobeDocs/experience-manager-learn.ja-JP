@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 33%
+source-wordcount: '651'
+ht-degree: 32%
 
 ---
 
@@ -95,7 +95,8 @@ ht-degree: 33%
    + [出力専用 IP アドレス](./networking/dedicated-egress-ip-address.md)
    + [仮想プライベートネットワーク](./networking/vpn.md)
    + コード例{#examples}
-      + [非標準ポートでの HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
+      + [非標準ポートでの HTTP/HTTPS（柔軟なポート出力用）](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
+      + [専用の出力 IP アドレス/VPN 用の非標準ポート上の HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
       + [DataSourcePool を使用した SQL 接続](./networking/examples/sql-datasourcepool.md)
       + [Java SQL API を使用した SQL 接続](./networking/examples/sql-java-apis.md)
       + [電子メールサービス](./networking/examples/email-service.md)

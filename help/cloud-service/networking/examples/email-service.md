@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
 
 ---
-
 
 # Email サービス[Email さーびす]
 
@@ -22,7 +22,7 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 
 （ほとんどの）メールサービスは HTTP/HTTPS 経由で実行されないので、AEM as a Cloud Serviceからのメールサービスへの接続をプロキシ化する必要があります。
 
-+ `smtp.host` が OSGi 環境変数に設定されている `$[env:AEM_PROXY_HOST]` したがって、出力を通過します。
++ `smtp.host` が OSGi 環境変数に設定されている `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` したがって、出力を通過します。
 + `smtp.port` が `portForward.portOrig` 宛先の電子メールサービスのホストおよびポートにマッピングするポート。 この例では、マッピングを使用します。 `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
 
 秘密鍵はコードに格納できないので、電子メールサービスのユーザー名とパスワードは、 [シークレットの OSGi 設定変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、AIO CLI または Cloud Manager API を使用して設定します。
@@ -55,7 +55,7 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 
 ```json
 {
-    "smtp.host": "$[env:AEM_PROXY_HOST]",
+    "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
     "smtp.user": "$[env:EMAIL_USERNAME;default=apikey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",

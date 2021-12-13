@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9355
 thumbnail: KT-9355.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
-
 
 # JDBC DataSourcePool を使用した SQL 接続
 
@@ -32,7 +32,7 @@ SQL データベース（およびその他の非 HTTP/HTTPS サービス）へ�
 
 OSGi 設定の接続文字列には、次の値が使用されます。
 
-+ `AEM_PROXY_HOST` 値を [OSGi 設定環境変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST]` 接続のホストとして
++ `AEM_PROXY_HOST` 値を [OSGi 設定環境変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 接続のホストとして
 + `30001` これは `portOrig` Cloud Manager のポートフォワードマッピングの値 `30001` → `mysql.example.com:3306`
 
 シークレットはコードに保存できないので、SQL 接続のユーザー名とパスワードは、OSGi 設定変数、AIO CLI または Cloud Manager API を使用して設定することで最適に提供されます。
@@ -43,7 +43,7 @@ OSGi 設定の接続文字列には、次の値が使用されます。
 {
   "datasource.name": "wknd-examples-mysql",
   "jdbc.driver.class": "com.mysql.jdbc.Driver",
-  "jdbc.connection.uri": "jdbc:mysql://$[env:AEM_PROXY_HOST]:30001/wknd-examples",
+  "jdbc.connection.uri": "jdbc:mysql://$[env:AEM_PROXY_HOST;default=proxy.tunnel]:30001/wknd-examples",
   "jdbc.username": "$[env:MYSQL_USERNAME;default=mysql-user]",
   "jdbc.password": "$[secret:MYSQL_PASSWORD]"
 }
