@@ -3,9 +3,9 @@ user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '435'
 ht-degree: 29%
 
 ---
@@ -44,7 +44,6 @@ ht-degree: 29%
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
-   + [エクスペリエンスフラグメントを使用したソーシャル投稿の設定](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
