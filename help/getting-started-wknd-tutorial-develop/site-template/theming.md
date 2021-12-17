@@ -11,18 +11,14 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 0%
+source-wordcount: '484'
+ht-degree: 1%
 
 ---
 
 # テーマ設定ワークフロー {#theming}
-
->[!CAUTION]
->
-> 現在、クイックサイト作成ツールはテクニカルプレビューです。 テストおよび評価の目的で使用できるようになり、Adobeサポートに同意しない限り、実稼動での使用は意図されません。
 
 この章では、Adobe Experience Manager Site のテーマソースを更新して、ブランド固有のスタイルを適用します。 プロキシサーバーを使用して、ライブサイトに対してコードを作成する際に、CSS と JavaScript の更新のプレビューを表示する方法を学びます。 このチュートリアルでは、Cloud Manager のフロントエンドパイプラインを使用して、Adobeの更新をAEMサイトにデプロイする方法についても説明します。
 

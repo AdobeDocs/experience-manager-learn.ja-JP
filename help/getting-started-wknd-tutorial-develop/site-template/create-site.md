@@ -11,18 +11,14 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 3%
+source-wordcount: '924'
+ht-degree: 4%
 
 ---
 
 # サイトの作成 {#create-site}
-
->[!CAUTION]
->
-> 現在、クイックサイト作成ツールはテクニカルプレビューです。 テストおよび評価の目的で使用できるようになり、Adobeサポートに同意しない限り、実稼動での使用は意図されません。
 
 クイックサイト作成の一環として、AEMのAdobe Experience Managerのサイト作成ウィザードを使用して、新しい Web サイトを生成します。 Adobeが提供する標準サイトテンプレートは、新しいサイトの出発点として使用されます。
 
