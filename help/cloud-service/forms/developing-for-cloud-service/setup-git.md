@@ -1,6 +1,6 @@
 ---
 title: Git のインストールとセットアップ
-description: ローカル Git リポジトリの初期化
+description: ローカル Git リポジトリを初期化します
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -8,7 +8,8 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8848
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+exl-id: 31487027-d528-48ea-b626-a740b94dceb8
+source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -18,24 +19,24 @@ ht-degree: 0%
 # Git のインストール
 
 
-[Git のインストール](https://git-scm.com/downloads). デフォルト設定を選択して、インストールプロセスを完了できます。
-コマンドプロンプトに移動c:\cloudmanager\aem-banking-app type in git —version に移動します。 システムにインストールされている GIT のバージョンが表示されます
+[Git のインストール](https://git-scm.com/downloads). デフォルトの設定を選択し、インストールプロセスを完了できます。
+コマンドプロンプトに移動します。 c:\cloudmanager\aem-banking-app type in git —version に移動します。 システムにインストールされている GIT のバージョンが表示されます
 
-## ローカル Git リポジトリの初期化
+## ローカル Git リポジトリを初期化
 
-c:\cloudmanager\aem-banking-app folderフォルダー内にあることを確認します。
+次の場所にいることを確認します。 c:\cloudmanager\aem-banking-app folder
 
 ```
 git init
 ```
 
-上記のコマンドは、プロジェクトを Git ローカルリポジトリとして初期化します
+上記のコマンドは、プロジェクトを Git ローカルリポジトリーとして初期化します
 
 ```
 git add .
 ```
 
-これにより、Git リポジトリにコミットできる状態で、すべてのプロジェクトファイルが Git リポジトリに追加されます
+これにより、Git リポジトリにコミットする準備が整った Git リポジトリに、すべてのプロジェクトファイルが追加されます
 
 ```
 git commit -m "initial commit"
@@ -47,9 +48,9 @@ git commit -m "initial commit"
 
 ## Cloud Manager リポジトリをローカル Git リポジトリに登録する
 
-Cloud Manager リポジトリへのアクセス
+Cloud Manager リポジトリーへのアクセス
 ![担当者情報にアクセス](assets/cloud-manager-repo.png)
-Cloud Manager のリポジトリ資格情報の取得
+Cloud Manager のリポジトリ資格情報を取得します。
 ![get-credentials](assets/cloud-manager-repo1.png)
 
 ユーザー名を設定ファイルに保存します。
@@ -61,25 +62,22 @@ git config --global credential.username "gbedekar-adobe-com"
 パスワードを設定ファイルに保存します。
 
 ```java
-git config --global user.password "bqwxfvxq2akawtqx3oztacb5wax5a7"
+git config --global user.password "XXXX"
 ```
 
 （パスワードは Cloud Manager の Git リポジトリのパスワードです）
 
-Cloud Manager の Git リポジトリをローカル Git リポジトリに登録します。 以下のコマンドは関連付けられます。 **adobe** リモート cloud manager git リポジトリに置き換えます。 代わりに任意の名前を使用できました。 **adobe**
+Cloud Manager の Git リポジトリをローカル Git リポジトリに登録します。 以下のコマンドは関連付けられます。 **bankingapp** リモート cloud manager git リポジトリを使用します。 の代わりに任意の名前を使用できました。 **bankingapp**
 
 
-```java
-git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Program2-p24107/
+```shell
+git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo-path>
 ```
 
-（リポジトリ URL を使用していることを確認してください）。
+（リポジトリ URL を使用していることを確認）
 
 リモートリポジトリが登録されているかどうかを確認します
 
 ```java
 git remote -v
 ```
-
-
-
