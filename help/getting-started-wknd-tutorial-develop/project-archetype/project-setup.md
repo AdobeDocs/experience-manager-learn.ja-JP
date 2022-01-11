@@ -1,5 +1,5 @@
 ---
-title: AEM Sites使用の手引き — プロジェクトの設定
+title: AEM Sitesの概要 — プロジェクトの設定
 seo-title: Getting Started with AEM Sites - Project Setup
 description: AEM Sites のコードおよび設定を管理するための、Maven のマルチモジュールプロジェクトの作成について説明します。
 sub-product: sites
@@ -12,49 +12,49 @@ level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 12%
 
 ---
 
-
 # プロジェクトのセットアップ {#project-setup}
 
-このチュートリアルでは、Adobe Experience Manager Siteのコードと設定を管理するためのMavenマルチモジュールプロジェクトの作成について説明します。
+このチュートリアルでは、Adobe Experience Manager Site のコードと設定を管理するための Maven マルチモジュールプロジェクトの作成について説明します。
 
 ## 前提条件 {#prerequisites}
 
-[ローカル開発環境](../overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。 Adobe Experience Managerの新しいインスタンスがローカルで使用でき、追加のサンプル/デモパッケージ（必要なサービスパック以外）がインストールされていないことを確認します。
+設定に必要なツールと手順を確認します。 [ローカル開発環境](./overview.md#local-dev-environment). Adobe Experience Managerの新しいインスタンスがローカルで使用でき、追加のサンプル/デモパッケージ（必要なサービスパック以外）がインストールされていないことを確認します。
 
 ## 目的 {#objective}
 
-1. Mavenアーキタイプを使用して新しいAEMプロジェクトを生成する方法を説明します。
-1. AEMプロジェクトアーキタイプで生成される様々なモジュールとそれらの連携方法を理解します。
-1. AEMコアコンポーネントがAEMプロジェクトに含まれる仕組みを説明します。
+1. Maven アーキタイプを使用して新しいAEMプロジェクトを生成する方法を説明します。
+1. AEMプロジェクトアーキタイプで生成される様々なモジュールとそれらの連携の仕組みを理解します。
+1. AEMコアコンポーネントがAEMプロジェクトにどのように含まれるかを説明します。
 
 ## 作成する内容 {#what-build}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-この章では、[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)を使用して新しいAdobe Experience Managerプロジェクトを生成します。 AEMプロジェクトには、Sites実装で使用されるすべてのコード、コンテンツ、設定が含まれています。 この章で生成されるプロジェクトは、WKNDサイトの実装の基礎となり、今後の章で構築される予定です。
+この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). AEMプロジェクトには、Sites 実装で使用されるすべてのコード、コンテンツ、設定が含まれています。 この章で生成されるプロジェクトは、WKND サイトの実装の基礎となり、今後の章で構築される予定です。
 
-**Mavenプロジェクトとは** -  [Apache Mavenis](https://maven.apache.org/) は、プロジェクトを構築するソフトウェア管理ツールです。*すべてのAdobe Experience Manager実* 装では、Mavenプロジェクトを使用して、AEM上にカスタムコードを作成、管理およびデプロイします。
+**Maven プロジェクトとは** - [Apache Maven](https://maven.apache.org/) は、プロジェクトを構築するためのソフトウェア管理ツールです。 *すべてのAdobe Experience Manager* 実装では、Maven プロジェクトを使用して、AEM上にカスタムコードを作成、管理およびデプロイします。
 
-**Mavenアーキタイプとは** - Mavenアーキタ [イ](https://maven.apache.org/archetype/index.html) プは、新しいプロジェクトを生成するためのテンプレートまたはパターンです。AEMプロジェクトのアーキタイプを使用すると、カスタム名前空間を持つ新しいプロジェクトを生成し、ベストプラクティスに従うプロジェクト構造を含めて、プロジェクトを大幅に高速化できます。
+**Maven アーキタイプとは** - A [Maven アーキタイプ](https://maven.apache.org/archetype/index.html) は、新しいプロジェクトを生成するためのテンプレートまたはパターンです。 AEMプロジェクトのアーキタイプを使用すると、カスタム名前空間を持つ新しいプロジェクトを生成し、ベストプラクティスに従ったプロジェクト構造を含めて、プロジェクトを大幅に高速化できます。
 
-## プロジェクトの作成 {#create}
+## プロジェクトを作成する {#create}
 
-AEM用のMavenマルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、[Maven AEMプロジェクトアーキタイプ&#x200B;**26**](https://github.com/adobe/aem-project-archetype)を活用します。 また、Cloud Managerには、AEMアプリケーションプロジェクトの作成を開始するためのUIウィザード](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html)も用意されています。 [Cloud Manager UIで生成される基になるプロジェクトの結果は、アーキタイプを直接使用するのと同じ構造になります。
+AEM用の Maven マルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、 [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager も [UI ウィザードを提供します。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) :AEMアプリケーションプロジェクトの作成を開始します。 Cloud Manager UI で生成される基になるプロジェクトの結果は、アーキタイプを直接使用する場合と同じ構造になります。
 
 >[!NOTE]
 >
->このチュートリアルでは、アーキタイプのバージョン&#x200B;**26**&#x200B;を使用します。 新しいプロジェクトを生成する場合は、常にアーキタイプの&#x200B;**最新の**&#x200B;バージョンを使用することをお勧めします。
+>このチュートリアルではバージョンを使用します **26** を使用します。 常に、 **latest** 新しいプロジェクトを生成するためのアーキタイプのバージョン。
 
-次の一連の手順は、UNIXベースのコマンドラインターミナルを使用して実行されますが、Windowsターミナルを使用する場合は同様の手順を実行する必要があります。
+次の一連の手順は、UNIX ベースのコマンドラインターミナルを使用して実行されますが、Windows ターミナルを使用する場合は同様の手順を実行する必要があります。
 
-1. コマンドラインターミナルを開きます。 Mavenがインストールされていることを確認します。
+1. コマンドラインターミナルを開きます。 Maven がインストールされていることを確認します。
 
    ```shell
    $ mvn --version
@@ -63,7 +63,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. 次のコマンドを実行して、**adobe-public**&#x200B;プロファイルがアクティブであることを確認します。
+1. を確認します。 **adobe-public** 次のコマンドを実行すると、プロファイルがアクティブになります。
 
    ```shell
    $ mvn help:effective-settings
@@ -82,15 +82,15 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
    [INFO] Total time:  0.856 s
    ```
 
-   **not** **adobe-public**&#x200B;を参照すると、Adobeリポジトリが`~/.m2/settings.xml`ファイルで正しく参照されていないことを示しています。 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven)にApache Mavenをインストールして設定する手順を再度参照してください。
+   もし **not** 参照 **adobe-public** Adobeリポジトリが `~/.m2/settings.xml` ファイル。 で Apache Maven をインストールおよび設定する手順を再度お読みください。 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
 
-1. AEMプロジェクトを生成するディレクトリに移動します。 これには、プロジェクトのソースコードを管理する任意のディレクトリを指定できます。 例えば、ユーザーのホームディレクトリの下に`code`という名前のディレクトリがあるとします。
+1. AEMプロジェクトを生成するディレクトリに移動します。 これには、プロジェクトのソースコードを管理する任意のディレクトリを指定できます。 例えば、 `code` ユーザーのホームディレクトリの下に、次の設定を行います。
 
    ```shell
    $ cd ~/code
    ```
 
-1. 次の内容をコマンドラインに貼り付けて、[バッチモード](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html)でプロジェクトを生成します。
+1. 次の内容をコマンドラインに貼り付けます。 [プロジェクトをバッチモードで生成](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
    mvn -B archetype:generate \
@@ -107,11 +107,11 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
 
    >[!NOTE]
    >
-   > AEM 6.5.5以降をターゲットにする場合は、 `aemVersion="cloud"`を`aemVersion="6.5.5"`に置き換えます。 6.4.8以降をターゲットにする場合は、`aemVersion="6.4.8"`を使用します。
+   > AEM 6.5.5 以降をターゲットにする場合は、 `aemVersion="cloud"` と `aemVersion="6.5.5"`. 6.4.8 以降をターゲットにする場合は、 `aemVersion="6.4.8"`.
 
-   プロジェクト[の設定に使用できるプロパティの完全なリストは、](https://github.com/adobe/aem-project-archetype#available-properties)にあります。
+   プロジェクトを設定するために使用できるプロパティの完全なリスト [ここにあります](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. 次のフォルダーとファイル構造は、ローカルファイルシステム上のMavenアーキタイプによって生成されます。
+1. 次のフォルダーおよびファイル構造は、ローカルファイルシステム上の Maven アーキタイプによって生成されます。
 
    ```plain
     ~/code/
@@ -134,10 +134,10 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
 
 ## プロジェクトのデプロイとビルド {#build}
 
-プロジェクトコードを構築し、AEMのローカルインスタンスにデプロイします。
+プロジェクトコードをビルドし、AEMのローカルインスタンスにデプロイします。
 
-1. AEMのオーサーインスタンスがポート&#x200B;**4502**&#x200B;でローカルに実行されていることを確認します。
-1. コマンドラインから`aem-guides-wknd`プロジェクトディレクトリに移動します。
+1. AEMのオーサーインスタンスがポート上でローカルで実行されていることを確認します。 **4502**.
+1. コマンドラインから、 `aem-guides-wknd` プロジェクトディレクトリ。
 
    ```shell
    $ cd aem-guides-wknd
@@ -149,7 +149,7 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   ビルドには約1分かかり、最後に次のメッセージが表示されます。
+   ビルドは約 1 分かかり、最後に次のメッセージが表示されます。
 
    ```
    ...
@@ -176,17 +176,17 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Mavenプロファイル`autoInstallSinglePackage`は、プロジェクトの個々のモジュールをコンパイルし、AEMインスタンスに1つのパッケージをデプロイします。 デフォルトでは、このパッケージは、ポート&#x200B;**4502**&#x200B;でローカルに実行され、資格情報`admin:admin`を持つAEMインスタンスにデプロイされます。
+   Maven プロファイル `autoInstallSinglePackage` プロジェクトの個々のモジュールをコンパイルし、1 つのパッケージをAEMインスタンスにデプロイします。 デフォルトでは、このパッケージは、ポートでローカルに実行されているAEMインスタンスにデプロイされます **4502** そして `admin:admin`.
 
-1. ローカルのAEMインスタンス上でパッケージマネージャーに移動します。[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). `aem-guides-wknd.ui.apps`、`aem-guides-wknd.ui.config`、`aem-guides-wknd.ui.content`、`aem-guides-wknd.all`のパッケージが表示されます。
+1. ローカルのAEMインスタンスでパッケージマネージャーに移動します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). のパッケージが表示されます。 `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`、および `aem-guides-wknd.all`.
 
-1. サイトコンソールに移動します。[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). サイトの 1 つに WKND サイトがあります。US階層と言語階層を持つサイト構造が含まれるマスターです。 このサイト階層は、アーキタイプを使用してプロジェクトを生成する際の`language_country`と`isSingleCountryWebsite`の値に基づきます。
+1. サイトコンソールに移動します。 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). サイトの 1 つに WKND サイトがあります。US と言語の階層を持つサイト構造が含まれますマスター。 このサイト階層は、 `language_country` および `isSingleCountryWebsite` アーキタイプを使用してプロジェクトを生成する際に使用します。
 
-1. ページを選択し、メニューバーの「**編集**」ボタンをクリックして、**米国** `>` **英語**&#x200B;ページを開きます。
+1. を開きます。 **US** `>` **英語** ページを表示するには、ページを選択して **編集** ボタンをクリックします。
 
    ![サイトコンソール](assets/project-setup/aem-sites-console.png)
 
-1. スターターコンテンツは既に作成済みで、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを使用してみることで、機能について大まかに把握できます。次の章では、コンポーネントの基本について学びます。
+1. スターターコンテンツは既に作成されており、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを使用してみることで、機能について大まかに把握できます。次の章では、コンポーネントの基本について学びます。
 
    ![ホームスターターコンテンツ](assets/project-setup/start-home-page.png)
 
@@ -194,36 +194,36 @@ AEM用のMavenマルチモジュールプロジェクトを作成する方法は
 
 ## Inspect {#project-structure}
 
-生成されるAEMプロジェクトは、個々のMavenモジュールで構成され、それぞれ異なる役割を持ちます。 このチュートリアルと開発の大部分は、次のモジュールに焦点を当てています。
+生成されたAEMプロジェクトは、個々の Maven モジュールで構成され、それぞれ異なる役割を持ちます。 このチュートリアルと大部分の開発では、次のモジュールに焦点を当てています。
 
-* [コア](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)  - Javaコード。主にバックエンド開発者。
-* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)  — 主にフロントエンド開発者向けのCSS、JavaScript、Sass、Type Scriptのソースコードを含みます。
-* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)  — コンポーネントとダイアログの定義を含み、コンパイル済みのCSSとJavaScriptをクライアントライブラリとして埋め込みます。
-* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)  — 編集可能なテンプレート、メタデータスキーマ(/content、/conf)などの構造的なコンテンツや設定が含まれます。
+* [コア](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html) - Java コード。主にバックエンド開発者。
+* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja)  — 主にフロントエンド開発者向けの CSS、JavaScript、Sass、Type Script のソースコードが含まれます。
+* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)  — コンポーネントおよびダイアログ定義が含まれ、コンパイル済みの CSS と JavaScript がクライアントライブラリとして埋め込まれます。
+* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)  — 編集可能なテンプレート、メタデータスキーマ (/content、/conf) などの構造的なコンテンツや設定が含まれます。
 
-* **all**  - AEM環境にデプロイできる、1つのパッケージに上記のモジュールを組み合わせた空のMavenモジュール。
+* **すべて**  — これは、上記のモジュールを組み合わせた空の Maven モジュールで、AEM環境にデプロイできる単一のパッケージになります。
 
-![Mavenプロジェクト図](assets/project-setup/project-pom-structure.png)
+![Maven プロジェクト図](assets/project-setup/project-pom-structure.png)
 
-**すべての** Mavenモジュールの詳細については、[AEMプロジェクトアーキタイプのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)を参照してください。
+詳しくは、 [AEM Project Archetype ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 詳細を学ぶ **すべて** Maven モジュール。
 
 ### コアコンポーネントを組み込む {#core-components}
 
-[AEMコアコン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) ポーネントは、AEM用の標準化されたWebコンテンツ管理(WCM)コンポーネントのセットです。これらのコンポーネントは、機能のベースラインセットを提供し、個々のプロジェクト用にスタイル設定、カスタマイズ、拡張するように設計されています。
+[AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) は、AEM用の標準化された Web コンテンツ管理 (WCM) コンポーネントのセットです。 これらのコンポーネントは、機能のベースラインセットを提供し、個々のプロジェクトに対してスタイル設定、カスタマイズ、拡張を行うように設計されています。
 
-AEM as a Cloud Service環境には、[AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)の最新バージョンが含まれています。 したがって、AEM as aCloud Service用に生成されたプロジェクトには、AEMコアコンポーネントの埋め込みが&#x200B;**含まれていません**。
+AEMas a Cloud Service環境には、 [AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). したがって、AEMas a Cloud Service用に生成されたプロジェクトでは、 **not** AEMコアコンポーネントの埋め込みを含めます。
 
-AEM 6.5/6.4で生成されたプロジェクトの場合、アーキタイプによって、プロジェクトに[AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)が自動的に埋め込まれます。 AEM 6.5/6.4では、AEMコアコンポーネントを埋め込んで、最新バージョンがプロジェクトに確実にデプロイされるようにすることをお勧めします。 コアコンポーネントがプロジェクトに[含まれる方法について詳しくは、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)を参照してください。
+AEM 6.5/6.4 で生成されたプロジェクトの場合、アーキタイプは自動的に埋め込みます [AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) プロジェクト内で使用されます。 AEM 6.5/6.4 では、AEMコアコンポーネントを埋め込んで、最新バージョンがプロジェクトに確実にデプロイされるようにすることがベストプラクティスです。 コアコンポーネントの機能について詳しくは、 [プロジェクトに含まれるは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
 
 ## ソース管理システムによる管理 {#source-control}
 
 アプリケーションのコードを管理するために、何らかのソース管理システムを使用することが常に推奨されます。このチュートリアルでは git および GitHub を使用します。Maven などの任意の IDE では、SCM で無視すべきいくつかのファイルが生成されます。
 
-Maven は、コードパッケージをビルドおよびインストールするたびにターゲットフォルダーを作成します。ターゲットフォルダーとコンテンツは、SCMから除外する必要があります。
+Maven は、コードパッケージをビルドおよびインストールするたびにターゲットフォルダーを作成します。ターゲットフォルダーとコンテンツは、SCM から除外する必要があります。
 
-`ui.apps`の下に、多数の`.content.xml`ファイルが作成されるのを観察します。 これらの XML ファイルは、JCR にインストールされているコンテンツのノードタイプおよびプロパティをマッピングします。これらのファイルは重要で、**無視しないでください**。
+の下 `ui.apps` 多くの人々を観察する `.content.xml` ファイルが作成されます。 これらの XML ファイルは、JCR にインストールされているコンテンツのノードタイプおよびプロパティをマッピングします。これらのファイルは重要で、 **not** 無視されます。
 
-AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`ファイルを生成します。このファイルを出発点として使用し、ファイルを安全に無視できます。 ファイルは`<src>/aem-guides-wknd/.gitignore`に生成されます。
+AEMプロジェクトアーキタイプでは、サンプルが生成されます `.gitignore` ファイルを安全に無視できる出発点として使用できるファイル。 ファイルは次の場所に生成されます。 `<src>/aem-guides-wknd/.gitignore`.
 
 ## おめでとうございます。 {#congratulations}
 
@@ -231,19 +231,19 @@ AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`フ�
 
 ### 次の手順 {#next-steps}
 
-[コンポーネントの基本](component-basics.md)のチュートリアルを使用して、簡単な`HelloWorld`例を通じて、Adobe Experience Manager(AEM)Sitesコンポーネントの基盤となるテクノロジーを理解します。
+シンプルなを使用して、Adobe Experience Manager(AEM)Sites コンポーネントの基盤となるテクノロジーを理解します `HelloWorld` 例 [コンポーネントの基本](component-basics.md) チュートリアル
 
-## 高度なMavenコマンド（ボーナス） {#advanced-maven-commands}
+## 高度な Maven コマンド（ボーナス） {#advanced-maven-commands}
 
-開発時には、1つのモジュールで作業を行う場合があり、時間を節約するためにプロジェクト全体を構築する必要がない場合があります。 また、AEMパブリッシュインスタンスに直接デプロイする場合や、ポート4502で実行されていないAEMのインスタンスにデプロイする場合もあります。
+開発時には、1 つのモジュールだけを使用して作業している可能性があり、時間を節約するために、プロジェクト全体を構築したくない場合があります。 また、AEM パブリッシュインスタンスに直接デプロイする場合や、ポート 4502 で実行されていないAEMのインスタンスにデプロイする場合もあります。
 
-次に、開発時の柔軟性を高めるために使用できる、追加のMavenプロファイルおよびコマンドについて説明します。
+次に、開発時の柔軟性を高めるために使用できる、追加の Maven プロファイルおよびコマンドについて説明します。
 
 ### コアモジュール {#core-module}
 
-**[core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)**&#x200B;モジュールには、プロジェクトに関連付けられたすべてのJavaコードが含まれます。 ビルド時に、AEMにOSGiバンドルがデプロイされます。 このモジュールのみを構築するには：
+この **[コア](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)** モジュールには、プロジェクトに関連付けられたすべての Java コードが含まれます。 ビルド時に、AEMに OSGi バンドルがデプロイされます。 このモジュールのみを構築するには：
 
-1. `core`フォルダー（`aem-guides-wknd`の下）に移動します。
+1. 次に移動： `core` フォルダー ( `aem-guides-wknd`):
 
    ```shell
    $ cd core/
@@ -263,23 +263,23 @@ AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`フ�
    [INFO] Total time:  8.558 s
    ```
 
-1. [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)に移動します。 これはOSGi Webコンソールで、AEMインスタンスにインストールされているすべてのバンドルに関する情報が含まれます。
+1. に移動します。 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles). これは OSGi Web コンソールで、AEMインスタンスにインストールされているすべてのバンドルに関する情報が含まれます。
 
-1. **Id**&#x200B;並べ替え列を切り替えると、WKNDバンドルがインストールされ、アクティブになっていることがわかります。
+1. 切り替え **ID** 並べ替え列が表示され、WKND バンドルがインストールされ、アクティブになっていることが確認できます。
 
    ![コアバンドル](assets/project-setup/wknd-osgi-console.png)
 
-1. jarの「物理的な」場所は[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd-packages/application/install/aem-guides-wknd.core-1.0.0-SNAPSHOT.jar)で確認できます。
+1. jar の「物理的な」場所は、 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd-packages/application/install/aem-guides-wknd.core-1.0.0-SNAPSHOT.jar):
 
-   ![JARのCRXDEの場所](assets/project-setup/jcr-bundle-location.png)
+   ![JAR の CRXDE の場所](assets/project-setup/jcr-bundle-location.png)
 
-### Ui.appsおよびUi.contentモジュール {#apps-content-module}
+### Ui.apps および Ui.content モジュール {#apps-content-module}
 
-**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** mavenモジュールには、`/apps`の下のサイトで必要となるすべてのレンダリングコードが含まれます。 これには CSS／JS が含まれ、それらは [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) と呼ばれる AEM の形式で保存されます。また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。**ui.apps**&#x200B;モジュールは、JCR内の構造へのマップと考えることができますが、ファイルシステムに保存し、ソース管理にコミットできる形式です。 **ui.apps**&#x200B;モジュールには、コードのみが含まれます。
+この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、の下のサイトで必要となるすべてのレンダリングコードが含まれます。 `/apps`. これには CSS／JS が含まれ、それらは [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) と呼ばれる AEM の形式で保存されます。また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
 
 このモジュールのみを構築するには：
 
-1. コマンドラインから。 `ui.apps`フォルダー（`aem-guides-wknd`の下）に移動します。
+1. コマンドラインから。 次に移動： `ui.apps` フォルダー ( `aem-guides-wknd`):
 
    ```shell
    $ cd ../ui.apps
@@ -299,11 +299,11 @@ AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`フ�
    [INFO] ------------------------------------------------------------------------
    ```
 
-1. [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)に移動します。 `ui.apps`パッケージが最初にインストールされたパッケージとして表示され、他のパッケージのタイムスタンプよりも新しいものが表示されます。
+1. に移動します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). 次のように表示されます。 `ui.apps` パッケージは最初にインストールされたパッケージとして使用し、他のパッケージのタイムスタンプよりも新しいタイムスタンプを使用する必要があります。
 
-   ![Ui.appsパッケージがインストールされている](assets/project-setup/ui-apps-package.png)
+   ![Ui.apps パッケージがインストールされています](assets/project-setup/ui-apps-package.png)
 
-1. コマンドラインに戻り、次のコマンドを実行します（`ui.apps`フォルダー内）。
+1. コマンドラインに戻り、次のコマンドを実行します ( `ui.apps` フォルダー ):
 
    ```shell
    $ mvn -PautoInstallPackagePublish clean install
@@ -324,9 +324,9 @@ AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`フ�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   プロファイル`autoInstallPackagePublish`は、ポート&#x200B;**4503**&#x200B;で実行されているパブリッシュ環境にパッケージをデプロイすることを目的としています。 上記のエラーは、http://localhost:4503で実行されているAEMインスタンスが見つからない場合に発生します。
+   プロファイル `autoInstallPackagePublish` は、ポートで実行されているパブリッシュ環境にパッケージをデプロイすることを目的としています **4503**. 上記のエラーは、http://localhost:4503で実行中のAEMインスタンスが見つからない場合に発生します。
 
-1. 最後に、次のコマンドを実行して、`ui.apps`パッケージをポート&#x200B;**4504**&#x200B;にデプロイします。
+1. 最後に、次のコマンドを実行して、 `ui.apps` ポート上のパッケージ **4504**:
 
    ```shell
    $ mvn -PautoInstallPackage clean install -Daem.port=4504
@@ -344,8 +344,8 @@ AEMプロジェクトのアーキタイプは、サンプルの`.gitignore`フ�
    [INFO] --------------------------------------------------------------------
    ```
 
-   この場合も、ポート&#x200B;**4504**&#x200B;で実行されているAEMインスタンスがない場合、ビルドエラーが発生することが予想されます。 パラメーター`aem.port`は、POMファイル(`aem-guides-wknd/pom.xml`)で定義されます。
+   この場合も、ポートでAEMインスタンスが実行されていない場合、ビルドエラーが発生することが予想されます **4504** が使用可能です。 パラメーター `aem.port` は、次の場所にある POM ファイルで定義されます。 `aem-guides-wknd/pom.xml`.
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)**&#x200B;モジュールの構造は、**ui.apps**&#x200B;モジュールと同じです。 唯一の違いは、**ui.content**&#x200B;モジュールには、**可変**&#x200B;コンテンツと呼ばれるものが含まれる点です。 **** 多言語コンテンツとは、基本的に、ソース管理下に保存されているがAEMインスタンス上で直接変更できる、テンプレート、ポリシー、フォルダー構造などの非コード設定を指しま **** す。これについては、ページとテンプレートの章で詳しく説明します。
+この **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** モジュールは、 **ui.apps** モジュール。 唯一の違いは **ui.content** モジュールには、 **可変** コンテンツ。 **可変** コンテンツとは、基本的に、ソース管理下に保存されている、テンプレート、ポリシー、フォルダー構造などの非コード設定を指します。 **しかし** をAEMインスタンス上で直接変更できます。 これについては、ページとテンプレートの章で詳しく説明します。
 
-**ui.apps**&#x200B;モジュールの構築に使用するのと同じMavenコマンドを、**ui.content**&#x200B;モジュールの構築に使用できます。 **ui.content**&#x200B;フォルダー内から上記の手順を自由に繰り返してください。
+をビルドするために使用するのと同じ Maven コマンド **ui.apps** モジュールは、 **ui.content** モジュール。 上記の手順を、 **ui.content** フォルダー。

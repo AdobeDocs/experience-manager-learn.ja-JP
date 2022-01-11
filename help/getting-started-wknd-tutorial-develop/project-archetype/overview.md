@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '478'
 ht-degree: 41%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計�
 
 以下をローカルにインストールしておく必要があります。
 
-* ローカルAEM **作成者** インスタンス (Cloud ServiceSDK、6.5.5 以降、6.4.8.1 以降 )
+* [ローカルAEM **作成者** インスタンス](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK、6.5.5 以降または 6.4.8.1 以降 )
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）
