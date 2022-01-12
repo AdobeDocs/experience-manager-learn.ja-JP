@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 32%
 
 ---
@@ -157,14 +157,14 @@ ht-degree: 32%
       + [アセットパネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [スタートパネルを設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーを追加して設定](./forms/create-first-af/add-configure-toolbar.md)
-   + Document CloudAPI とAEM Forms CS{#doc-cloud-sdk}
-      + [はじめに](./forms/doc-cloud-sdk/introduction.md)
-      + [AdobeI/O プロジェクトを作成](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [OSGi 設定を作成](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
-      + [インターフェイスを定義](./forms/doc-cloud-sdk/create-interface.md)
-      + [インターフェイスの実装](./forms/doc-cloud-sdk/implement-interface.md)
-      + [JSON パーツを作成](./forms/doc-cloud-sdk/get-content-analyzer.md)
-      + [カスタムプロセスステップ](./forms/doc-cloud-sdk/custom-process-step.md)
+   + AEM Forms CS でのドキュメントの生成{#doc-gen-formscs}
+      + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
+      + [サービス資格情報の作成](./forms/doc-gen-forms-cs/service-credentials.md)
+      + [JWT トークンを作成](./forms/doc-gen-forms-cs/create-jwt.md)
+      + [アクセストークンを作成](./forms/doc-gen-forms-cs/create-access-token.md)
+      + [データをテンプレートと結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
+      + [ソリューションをテストする](./forms/doc-gen-forms-cs/test.md)
+      + [課題](./forms/doc-gen-forms-cs/challenge.md)
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)

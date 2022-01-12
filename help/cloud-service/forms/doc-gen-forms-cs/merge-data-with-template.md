@@ -1,17 +1,17 @@
 ---
-title: XDPテンプレートとのデータの結合
-description: 必要なPOSTーを使用してエンドポイントにパラメーターリクエストを送信する
+title: データと XDP テンプレートの結合
+description: 必要なPOSTーを使用してエンドポイントにパラメーターリクエストを実行します
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
-feature: Document Services
+feature: Output Service
 topic: Development
 kt: 8185
 thumbnail: 332439.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 # POST呼び出し
 
 
-次の手順では、必要なパラメーターを使用してエンドポイントに対するHTTPPOST呼び出しをおこないます。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成されるPDFのプロパティは、リクエストのオプションのパラメーターで指定されます。 プロパティはoptions.jsonリソースファイルで指定します。 そのため、エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
+次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTPPOST呼び出しをおこないます。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、リクエストのオプションのパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。[このドキュメントに従って、Formsクラウドインスタンスにカスタムフォントをデプロイしてください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
 
-次のコードは、アクセストークン用のexchange JWTの生成に使用されました。
+次のコードは、データをテンプレートと結合して pdf を生成する場合に使用しました
 
 ```java
 public class DocumentGeneration
@@ -34,7 +34,7 @@ public class DocumentGeneration
                 String accessToken = cu.getAccessToken();
                 httpPost.addHeader("Authorization", "Bearer " + accessToken);
                 ClassLoader classLoader = DocumentGeneration.class.getClassLoader();
-                URL templateFile = classLoader.getResource("templates/address.xdp");
+                URL templateFile = classLoader.getResource("templates/custom_fonts.xdp");
                 File xdpTemplate = new File(templateFile.getPath());
                 URL url = classLoader.getResource("datafiles");
                 System.out.println(url.getPath());
@@ -45,7 +45,7 @@ public class DocumentGeneration
                         builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
                         builder.addBinaryBody("data", files[i]);
                         builder.addBinaryBody("template", xdpTemplate);
-                        builder.addTextBody("options", GetOptions.getPDFOptions(), ContentType.APPLICATION_JSON);
+                        builder.addBinaryBody("options",GetOptions.getPDFOptions().getBytes(),ContentType.APPLICATION_JSON,"options"
                         try {
                                 HttpEntity entity = builder.build();
                                 httpPost.setEntity(entity);
