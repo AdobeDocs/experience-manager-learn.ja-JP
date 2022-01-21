@@ -1,5 +1,5 @@
 ---
-title: AEMワークフローの作成
+title: AEM Workflow の作成
 description: ビジネスプロセスを模倣できるワークフローモデルを作成します。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
@@ -11,15 +11,15 @@ topic: Development
 kt: 7424
 thumbnail: 332434.pg
 exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
-# AEMワークフローの作成
+# AEM Workflow の作成
 
-AEM Formsワークフローコンポーネントを使用して、ワークフローモデルを作成します。 Or分割コンポーネントを使用して、totalincome変数の値に基づいてワークフローを分岐します。
+AEM Formsのワークフローコンポーネントを使用して、ワークフローモデルを作成します。 state 変数の値に基づいてワークフローを分岐するには、OR 分割コンポーネントを使用します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)

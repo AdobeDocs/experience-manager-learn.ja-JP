@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '656'
 ht-degree: 32%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 32%
    + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
    + [AEMのユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
-+ 高度なネットワーク{#networking}
++ 高度なネットワーク機能{#networking}
    + [概要](./networking/advanced-networking.md)
    + [柔軟なポート出力](./networking/flexible-port-egress.md)
    + [出力専用 IP アドレス](./networking/dedicated-egress-ip-address.md)
@@ -145,6 +145,7 @@ ht-degree: 32%
       + [Cloud Servicesと FDM を含める](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [開発環境にデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [Maven アーキタイプの更新](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + アダプティブフォームを作成{#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
       + [テーマを作成](./forms/create-first-af/create-theme.md)
@@ -172,6 +173,7 @@ ht-degree: 32%
       + [事前入力フォーム](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [クエリの送信](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + レビューワークフローを作成{#create-aem-workflow}
+      + [ワークフローストレージの外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [ワークフローモデルを作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
    + Adobe SignとAEM Forms{#forms-and-sign}
