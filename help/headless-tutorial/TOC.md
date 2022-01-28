@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 922248133a12e05ea9068a0646324f2370e743e9
+source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 24%
+source-wordcount: '221'
+ht-degree: 22%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 24%
       + [5 - GraphQL エンドポイント](./graphql/video-series/graphql-endpoints.md)
       + [6 — オーサーとパブリッシュのアーキテクチャ](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL 永続クエリ](./graphql/video-series/graphql-persisted-queries.md)
-   + 複数手順のチュートリアル{#multi-step}
+   + 基本チュートリアル{#multi-step}
       + [概要](./graphql/multi-step/overview.md)
       + [1 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
       + [2 — コンテンツフラグメントのオーサリング](./graphql/multi-step/author-content-fragments.md)
@@ -39,6 +39,13 @@ ht-degree: 24%
       + [4 — 外部アプリからのクエリ](./graphql/multi-step/graphql-and-external-app.md)
       + [5 — フラグメントリファレンスを使用した高度なデータモデリング](./graphql/multi-step/fragment-references.md)
       + [6 — 実稼動のデプロイメント](./graphql/multi-step/production-deployment.md)
+   + 高度なチュートリアル{#advanced-tutorial}
+      + [概要](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
+      + [1 — コンテンツフラグメントモデルの作成](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
+      + [2 — コンテンツフラグメントのオーサリング](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
+      + [3 - AEM GraphQL API の参照](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [4 — 永続的な GraphQL クエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [5 — クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
