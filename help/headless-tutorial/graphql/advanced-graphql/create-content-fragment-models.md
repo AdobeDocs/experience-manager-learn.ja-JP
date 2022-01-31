@@ -131,18 +131,18 @@ Adobe Experience Managerには、いくつかの組み込みの検証方法が�
 
 10. の下 **指定した画像の幅のみを受け入れる**、「最大の幅」を選択します。 内 **最大（ピクセル）** 表示されるフィールドに、&quot;500&quot;と入力します。 同じオプションを選択 **指定した画像の高さのみを受け入れる**.
 
-   これらの検証機能により、追加された画像が指定された値を超えないようにします。 検証ルールは次のようになります。
-   ![コンテンツ参照の検証ルール](assets/define-content-fragment-models/content-reference-validation.png)
+    これらの検証機能により、追加された画像が指定された値を超えないようにします。 検証ルールは次のようになります。
+    ![コンテンツ参照の検証ルール](assets/define-content-fragment-models/content-reference-validation.png)
 
 11. を追加します。 **複数行テキスト** フィールドに入力し、 **フィールドラベル** 「伝記」の を **デフォルトのタイプ** ドロップダウンをデフォルトの「リッチテキスト」オプションとして使用します。
 
-   ![伝記オプション](assets/define-content-fragment-models/biography.png)
+    ![伝記オプション](assets/define-content-fragment-models/biography.png)
 
 12. 次に移動： **データタイプ** 「 」タブをクリックし、 **列挙** 「Profile Picture」の下のフィールド デフォルトの **レンダリング形式** オプション、選択 **ドロップダウン**. エキスパート、アドバンス、中級など、講師の経験レベルのオプションを入力します。
 
 13. 次に、別の **列挙** 「Instructor Experience Level」の下のフィールドを選択し、 **レンダリング形式** オプション。 ロッククライミング、サーフィン、サイクリング、スキー、バックパッキンなど、さまざまなスキルを入力します。 オプションのラベルとオプションの値は、次のように一致する必要があります。
 
-   ![スキル列挙](assets/define-content-fragment-models/skills-enum.png)
+    ![スキル列挙](assets/define-content-fragment-models/skills-enum.png)
 
 14. 最後に、 **複数行テキスト** フィールドに入力します。
 
