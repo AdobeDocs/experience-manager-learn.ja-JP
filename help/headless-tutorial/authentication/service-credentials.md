@@ -1,6 +1,6 @@
 ---
 title: サービス資格情報
-description: AEMサービス資格情報は、HTTPを介してAEMオーサーサービスまたはパブリッシュサービスとプログラム的にやり取りする外部のアプリケーション、システム、サービスを容易にするために使用されます。
+description: AEM Service Credentials を使用すると、HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするための、外部のアプリケーション、システムおよびサービスを容易にすることができます。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,115 +13,116 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: ef4579a44c1c940a3b7441e336db3790a0c7afd7
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
 
 # サービス資格情報
 
-AEM as a AEMとの統合では、Cloud Serviceに対して安全に認証できる必要があります。 AEM Developer Consoleは、外部のアプリケーション、システムおよびサービスがHTTP経由でAEMオーサーまたはパブリッシュサービスとプログラム的にやり取りするのを容易にするために使用されるサービス資格情報へのアクセスを許可します。
+AEM as a Cloud Serviceとの統合では、AEMに対して安全に認証できる必要があります。 AEM Developer Console は、外部のアプリケーション、システムおよびサービスが HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするのを容易にするために使用する、サービス資格情報へのアクセス権を付与します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
-サービス資格情報は、[ローカル開発アクセストークン](./local-development-access-token.md)と似ている場合がありますが、いくつかの主な方法で異なります。
+サービス資格情報が似たように表示される場合があります [ローカル開発アクセストークン](./local-development-access-token.md) しかし、いくつかの主な方法で異なります。
 
-+ サービス資格情報は、_アクセストークンではなく_、__&#x200B;アクセストークンの取得に使用される資格情報です。
-+ サービス資格情報はより永続的で（365日ごとに期限切れになります）、ローカル開発アクセストークンは毎日期限切れになるのに対して、失効しない限り変更されません。
-+ AEM as a AEMCloud Service環境のサービス資格情報は、単一のテクニカルアカウントユーザーにマッピングされます。一方、ローカル開発アクセストークンは、アクセストークンを生成したAEMユーザーとして認証されます。
++ サービス資格情報： _not_ アクセストークン。 _取得_ アクセストークン。
++ サービス資格情報はより永続的で（365 日ごとに期限切れ）、失効しない限り変更しません。ローカル開発アクセストークンは毎日期限切れになります。
++ AEMas a Cloud Service環境のサービス資格情報は、単一のAEMテクニカルアカウントユーザーにマッピングされます。ローカル開発アクセストークンは、アクセストークンを生成したAEMユーザーとして認証されます。
++ AEMas a Cloud Service環境には、1 人のテクニカルアカウントAEMユーザーにマッピングされる 1 つのサービス資格情報があります。 サービス資格情報を使用して、別のテクニカルアカウントのAEMユーザーと同じAEMas a Cloud Service環境に対する認証を行うことはできません。
 
-3つすべてをCloud Service環境として各AEMへのアクセス権を取得するために使用できるので、サービス資格情報と、生成するアクセストークンの両方を秘密にする必要があります
+3 つすべてを使用して各AEMas a Cloud Service環境へのアクセスを取得できるので、サービス資格情報と、生成するアクセストークン、およびローカル開発アクセストークンの両方を秘密にする必要があります
 
 ## サービス資格情報の生成
 
-サービス資格情報の生成は、次の2つの手順に分かれます。
+サービス資格情報の生成は、次の 2 つの手順に分かれます。
 
-1. Adobe IMS組織管理者による1回限りのサービス資格情報の初期化
-1. サービス資格情報JSONのダウンロードと使用
+1. Adobe IMS組織管理者による 1 回限りのサービス資格情報の初期化
+1. サービス資格情報 JSON のダウンロードと使用
 
 ### サービス資格情報の初期化
 
-ローカル開発アクセストークンとは異なり、サービス資格情報をダウンロードするには、AdobeOrg IMS管理者が&#x200B;_1回限りの初期化_&#x200B;をおこなう必要があります。
+サービス資格情報は、ローカル開発アクセストークンとは異なり、 _1 回限りの初期化_ AdobeOrg IMS 管理者に問い合わせてください。
 
 ![サービス資格情報の初期化](assets/service-credentials/initialize-service-credentials.png)
 
-__これは、AEM as a Cloud Service環境ごとに1回のみ初期化されます。__
+__これは、AEMas a Cloud Service環境ごとに 1 回限りの初期化です__
 
-1. 次の方法でログインしていることを確認します。
+1. 次のようにしてログインしていることを確認します。
    + Adobe IMS組織の管理者
-   + __Cloud Manager - Developer__ IMS製品プロファイルのメンバー
-   + __AEM User__&#x200B;または&#x200B;__AEM Administrators__ IMS製品プロファイル(__AEM Author__)のメンバー
-1. [AdobeCloud Manager](https://my.cloudmanager.adobe.com)にログインします。
-1. AEM as a Cloud Service環境を含むプログラムを開き、のサービス資格情報を設定できるようにします。
-1. 「__環境__」セクションで環境の横にある省略記号をタップし、「__開発者コンソール__」を選択します。
-1. 「__統合__」タブをタップします。
-1. 「__サービス資格情報を取得__」ボタンをタップします。
-1. サービス資格情報が初期化され、JSONとして表示されます
+   + のメンバー __Cloud Manager — 開発者__ IMS 製品プロファイル
+   + のメンバー __AEM User__ または __AEM Administrators__ IMS 製品プロファイル ( ) __AEM オーサー__
+1. にログインします。 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. AEMas a Cloud Service環境を含むプログラムを開き、のサービス資格情報を設定できるようにします。
+1. 内の環境の横にある省略記号をタップします。 __環境__ セクションを選択し、 __開発者コンソール__
+1. 次の __統合__ タブ
+1. タップ __サービス資格情報の取得__ ボタン
+1. サービス資格情報が初期化され、JSON として表示されます
 
 ![AEM開発者コンソール — 統合 — サービス資格情報の取得](./assets/service-credentials/developer-console.png)
 
-AEM as a AEMCloud Service環境のサービス資格情報が初期化されると、Adobe IMS組織の他の開発者がそれらをダウンロードできます。
+AEM as aCloud Service環境のサービス資格情報が初期化されると、Adobe IMS組織内の他のAEM開発者がそれらをダウンロードできます。
 
 ### サービス資格情報のダウンロード
 
 ![サービス資格情報のダウンロード](assets/service-credentials/download-service-credentials.png)
 
-サービス資格情報のダウンロードは、初期化と同じ手順に従います。 初期化がまだおこなわれていない場合は、「__サービス資格情報を取得__」ボタンをタップすると、エラーが表示されます。
+サービス資格情報のダウンロードは、初期化と同じ手順に従います。 初期化がまだおこなわれていない場合は、 __サービス資格情報の取得__ 」ボタンをクリックします。
 
 1. 次の形式でログインしていることを確認します。
-   + __Cloud Manager — 開発者__ IMS製品プロファイルのメンバー(AEM Developer Consoleへのアクセスを許可)
-      + Cloud Service環境としてのSandbox AEMには、この&#x200B;__Cloud Manager - Developer__&#x200B;メンバーシップは必要ありません
-   + __AEM User__&#x200B;または&#x200B;__AEM Administrators__ IMS製品プロファイル(__AEM Author__)のメンバー
-1. [AdobeCloud Manager](https://my.cloudmanager.adobe.com)にログインします。
-1. と統合するAEM環境としてのCloud Serviceを含むプログラムを開きます。
-1. 「__環境__」セクションで環境の横にある省略記号をタップし、「__開発者コンソール__」を選択します。
-1. 「__統合__」タブをタップします。
-1. 「__サービス資格情報を取得__」ボタンをタップします。
-1. 左上隅のダウンロードボタンをタップして、サービス資格情報の値が含まれているJSONファイルをダウンロードし、安全な場所に保存します。
-   + _サービス資格情報に問題が発生した場合は、すぐにAdobeサポートに連絡して、失効させてもらってください_
+   + のメンバー __Cloud Manager — 開発者__ IMS 製品プロファイル (AEM Developer Console へのアクセス権を付与 )
+      + サンドボックスAEMas a Cloud Service環境では、これは必要ありません  __Cloud Manager — 開発者__ メンバーシップ
+   + のメンバー __AEM User__ または __AEM Administrators__ IMS 製品プロファイル ( ) __AEM オーサー__
+1. にログインします。 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 統合するAEMas a Cloud Service環境を含むプログラムを開きます。
+1. 内の環境の横にある省略記号をタップします。 __環境__ セクションを選択し、 __開発者コンソール__
+1. 次の __統合__ タブ
+1. タップ __サービス資格情報の取得__ ボタン
+1. 左上隅のダウンロードボタンをタップして、「サービス資格情報」の値が含まれている JSON ファイルをダウンロードし、安全な場所に保存します。
+   + _サービス資格情報に問題が発生した場合は、ただちにAdobeサポートに連絡し、失効させてもらってください_
 
 ## サービス資格情報のインストール
 
-サービス資格情報は、JWTの生成に必要な詳細を提供します。JWTは、AEM as a Cloud Serviceでの認証に使用されるアクセストークンと交換されます。 サービス資格情報は、AEMにアクセスするために使用する外部アプリケーション、システム、またはサービスがアクセスできる安全な場所に保存する必要があります。 サービス資格情報の管理方法と管理場所は、お客様ごとに一意です。
+JWT の生成に必要な詳細はサービス資格情報で指定されます。JWT は、AEM as a Cloud Serviceでの認証に使用されるアクセストークンと交換されます。 サービス資格情報は、AEMへのアクセスに使用する外部アプリケーション、システム、またはサービスがアクセスできる安全な場所に保存する必要があります。 サービス資格情報の管理方法と管理場所は、お客様ごとに一意です。
 
-簡単にするために、このチュートリアルでは、にサービス資格情報をコマンドラインで渡しますが、ITセキュリティチームと協力して、組織のセキュリティガイドラインに従ってこれらの資格情報を保存し、アクセスする方法を理解します。
+簡単にするため、このチュートリアルでは、のコマンドラインからサービス資格情報を渡しますが、IT セキュリティチームと協力して、組織のセキュリティガイドラインに従ってこれらの資格情報を保存し、アクセスする方法を理解します。
 
-1. ダウンロードした[サービス資格情報JSON](#download-service-credentials)を、プロジェクトのルートにある`service_token.json`という名前のファイルにコピーします。
-   + しかし、Gitに資格情報をコミットしないでください。
+1. を [「サービス資格情報」JSON をダウンロードしました。](#download-service-credentials) 次の名前のファイルに `service_token.json` プロジェクトのルートにある
+   + ただし、Git に認証情報をコミットしないでください。
 
 ## サービス資格情報を使用
 
-完全形式のJSONオブジェクトであるサービス資格情報は、JWTやアクセストークンとは異なります。 代わりに、（秘密鍵を含む）サービス資格情報を使用してJWTを生成し、このJWTをアクセストークンのAdobe IMSAPIと交換します。
+サービス資格情報（完全形式の JSON オブジェクト）は、JWT やアクセストークンとは異なります。 代わりに、（秘密鍵を含む）サービス資格情報を使用して JWT を生成し、この JWT をアクセストークン用のAdobe IMSAPI と交換します。
 
 ![サービス資格情報 — 外部アプリケーション](assets/service-credentials/service-credentials-external-application.png)
 
-1. サービス資格情報をAEM Developer Consoleから安全な場所にダウンロードします。
-1. 外部アプリケーションは、プログラム環境としてAEMとやり取りする必要があります。Cloud Service
-1. 外部アプリケーションは、安全な場所からサービス資格情報を読み込みます
-1. 外部アプリケーションは、サービス資格情報の情報を使用してJWTトークンを構築します
-1. JWTトークンがAdobe IMSに送信され、アクセストークンと交換されます。
-1. Adobe IMSは、AEMへのアクセスに使用できるアクセストークンをCloud Serviceとして返します
+1. 安全な場所に、AEM Developer Console からサービス資格情報をダウンロードします。
+1. 外部アプリケーションは、AEMのas a Cloud Service環境とプログラム的にやり取りする必要があります
+1. 外部アプリケーションは、安全な場所からサービス資格情報を読み取ります
+1. 外部アプリケーションは、サービス資格情報からの情報を使用して JWT トークンを構築します
+1. JWT トークンは、アクセストークンと交換するためにAdobe IMSに送信されます。
+1. Adobe IMSは、AEM as a Cloud Serviceへのアクセスに使用できるアクセストークンを返します
    + アクセストークンには、有効期限をリクエストできます。 アクセストークンの有効期間を短くし、必要に応じて更新することをお勧めします。
-1. 外部アプリケーションは、HTTPリクエストをCloud ServiceとしてAEMに対しておこない、アクセストークンをBearerトークンとしてHTTPリクエストのAuthorizationヘッダーに追加します
-1. AEM as aCloud ServiceはHTTPリクエストを受信し、リクエストを認証し、HTTPリクエストによってリクエストされた作業を実行し、HTTPレスポンスを外部アプリケーションに返します
+1. 外部アプリケーションは、AEMに HTTP リクエストをas a Cloud Serviceし、アクセストークンを Bearer トークンとして HTTP リクエストの Authorization ヘッダーに追加します
+1. AEM as a Cloud Serviceは、HTTP リクエストを受信し、リクエストを認証し、HTTP リクエストによってリクエストされた作業を実行し、HTTP レスポンスを外部アプリケーションに返します
 
 ### 外部アプリケーションの更新
 
-サービス資格情報を使用してAEM as aCloud Serviceにアクセスするには、外部アプリケーションを次の3つの方法で更新する必要があります。
+サービス資格情報を使用してas a Cloud ServiceのAEMにアクセスするには、外部アプリケーションを次の 3 つの方法で更新する必要があります。
 
 1. サービス資格情報を読み取る
-   + 簡単にするために、ダウンロードしたJSONファイルからこれらを読み取りますが、実際に使用するシナリオでは、サービス資格情報は組織のセキュリティガイドラインに従って安全に保存する必要があります
-1. サービス資格情報からJWTを生成
-1. JWTをアクセストークンと交換する
-   + サービス資格情報が存在する場合、外部アプリケーションは、AEMにCloud Serviceとしてアクセスする際に、ローカル開発アクセストークンの代わりにこのアクセストークンを使用します
+   + 簡単にするために、これらをダウンロードした JSON ファイルから読み取りますが、実際のシナリオでは、サービス資格情報は組織のセキュリティガイドラインに従って安全に保存する必要があります
+1. サービス資格情報から JWT を生成
+1. JWT をアクセストークンと交換する
+   + サービス資格情報が存在する場合、外部アプリケーションは、AEM as a Cloud Serviceにアクセスする際に、ローカル開発アクセストークンではなく、このアクセストークンを使用します
 
-このチュートリアルでは、Adobeの`@adobe/jwt-auth` npmモジュールを使用して、(1)サービス資格情報からJWTを生成し、(2)1回の関数呼び出しでアクセストークンと交換します。 アプリケーションがJavaScriptベースでない場合は、他の言語の[サンプルコード](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)で、サービス資格情報からJWTを作成し、Adobe IMSを使用してアクセストークンと交換する方法を確認してください。
+このチュートリアルでは、Adobeの `@adobe/jwt-auth` npm モジュールは、両方に使用されます (1)。(1) サービス資格情報から JWT を生成し、(2)1 回の関数呼び出しでアクセストークンと交換します。 アプリケーションが JavaScript ベースではない場合は、 [他の言語のサンプルコード](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) を参照してください。
 
 ## サービス資格情報の読み取り
 
-`getCommandLineParams()`を確認し、ローカル開発アクセストークンJSONで読み取るのと同じコードを使用して、サービス資格情報JSONファイルを読み取れることを確認します。
+以下を確認します。 `getCommandLineParams()` 「サービスアクセストークン JSON 」で読み取るのと同じコードを使用して、サービス資格情報 JSON ファイルを読み取れることを確認します。
 
 ```javascript
 function getCommandLineParams() {
@@ -138,15 +139,15 @@ function getCommandLineParams() {
 }
 ```
 
-## JWTの作成とアクセストークンの交換
+## JWT の作成とアクセストークンの交換
 
-サービス資格情報が読み取られると、JWTが生成され、そのJWTがアクセストークン用のAdobe IMSAPIと交換されます。JWTはCloud ServiceとしてAEMにアクセスするために使用できます。
+サービス資格情報が読み取られると、JWT が生成され、その JWT がアクセストークン用のAdobe IMSAPI と交換されます。この API を使用して、AEM as a Cloud Serviceにアクセスできます。
 
-このサンプルのAdobe IMSはNode.jsベースなので、 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npmモジュールを使用して、(1)JWTの生成と(20のアプリケーションとのやり取りを容易にすることをお勧めします。 アプリケーションが別の言語を使用して開発されている場合は、他のプログラミング言語を使用してAdobe IMSにHTTPリクエストを作成する方法に関する[適切なコードサンプル](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)を確認してください。
+このサンプルアプリケーションは Node.js ベースなので、 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュール： (1) JWT の生成と (20 のAdobe IMS交換を容易にする )。 アプリケーションが別の言語で開発されている場合は、 [適切なコードサンプル](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) 他のプログラミング言語を使用してAdobe IMSに対する HTTP リクエストを作成する方法に関する
 
-1. `getAccessToken(..)`を更新して、JSONファイルの内容を調べ、それがローカル開発のアクセストークンかサービス資格情報かを判断します。 これは、ローカル開発アクセストークンJSON用にのみ存在する`.accessToken`プロパティが存在するかどうかを確認することで、簡単に実現できます。
+1. を更新します。 `getAccessToken(..)` をクリックして JSON ファイルの内容を調べ、それがローカル開発のアクセストークンかサービス資格情報かを判断します。 これは、 `.accessToken` プロパティに含まれます。このプロパティはローカル開発のアクセストークン JSON に対してのみ存在します。
 
-   サービス資格情報が指定されている場合、アプリケーションはJWTを生成し、アクセストークンのAdobe IMSと交換します。 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)の`auth(...)`関数を使用します。この関数は、両方ともJWTを生成し、1回の関数呼び出しでアクセストークンと交換します。  `auth(..)`のパラメーターは、コードで説明するように、サービス資格情報JSONから取得できる特定の情報で構成される[JSONオブジェクトです。](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)
+   サービス資格情報が指定されている場合、アプリケーションは JWT を生成し、アクセストークンのAdobe IMSと交換します。 使用する [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 関数を使用します。この関数は、JWT を生成し、1 回の関数呼び出しでアクセストークンと交換します。  パラメーター `auth(..)` は [特定の情報で構成される JSON オブジェクト](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) は、以下のコードで説明されているように、サービス資格情報 JSON から使用できます。
 
    ```javascript
     async function getAccessToken(developerConsoleCredentials) {
@@ -175,11 +176,11 @@ function getCommandLineParams() {
     }
    ```
 
-   現在は、ローカル開発のアクセストークンJSONまたはサービス資格情報JSONのいずれかのJSONファイルが`file`コマンドラインパラメーターを介して渡されるかどうかに応じて、アプリケーションはアクセストークンを取得します。
+   現在は、ローカル開発アクセストークン JSON またはサービス資格情報 JSON のどちらの JSON ファイルかに応じて、を使用して渡されます。 `file` コマンドラインパラメーターを使用する場合、アプリケーションはアクセストークンを取得します。
 
-   サービス資格情報は365日ごとに期限切れになりますが、JWTと対応するアクセストークンは頻繁に期限切れになり、期限が切れる前に更新する必要があります。 これは、Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)が提供する`refresh_token` [を使用して実行できます。
+   サービス資格情報は 365 日ごとに期限切れになりますが、JWT と対応するアクセストークンは頻繁に期限切れになり、期限切れになる前に更新する必要があります。 これは、 `refresh_token` [Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
 
-1. これらの変更を適用し、AEM Developer Consoleからダウンロードしたサービス資格情報JSONを（簡単に、`service_token.json`と同じ`index.js`として保存するために）、コマンドラインパラメーター&lt;a2/を`service_token.json`に置き換えてアプリケーションを実行し、`propertyValue`を新しい値に更新して、効果をAEMで確認します。`file`
+1. これらの変更が反映され、AEM Developer Console からダウンロードしたサービス資格情報 JSON が（簡単にするために） `service_token.json` これと同じフォルダー `index.js`)、コマンドラインパラメーターを置き換えてアプリケーションを実行します。 `file` と `service_token.json`、および `propertyValue` を新しい値に変更すると、効果がAEMに表示されます。
 
    ```shell
    $ node index.js \
@@ -200,24 +201,24 @@ function getCommandLineParams() {
    403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
-   __403 - Forbidden__&#x200B;行は、AEMをCloud Serviceとして呼び出すHTTP API呼び出しでエラーを示します。 これらの403 Forbiddenエラーは、アセットのメタデータを更新しようとしたときに発生します。
+   この __403 — 禁止__ 行には、AEM as a Cloud Serviceへの HTTP API 呼び出しでエラーが示されます。 これらの 403 Forbidden エラーは、アセットのメタデータを更新しようとしたときに発生します。
 
-   この理由は、サービス資格情報に基づくアクセストークンが、自動作成されたテクニカルアカウントAEMユーザーを使用してAEMに対する要求を認証するためです。デフォルトでは、読み取りアクセス権のみを持ちます。 AEMへのアプリケーション書き込みアクセス権を付与するには、アクセストークンに関連付けられたテクニカルアカウントAEMユーザーにAEMでの権限を付与する必要があります。
+   これは、サービス資格情報派生アクセストークンが、自動作成されたテクニカルアカウントAEMユーザーを使用して、AEMへのリクエストを認証するためです。デフォルトでは、読み取りアクセスのみが許可されています。 AEMへのアプリケーション書き込みアクセス権を付与するには、アクセストークンに関連付けられているテクニカルアカウントAEMユーザーにAEMでの権限が付与されている必要があります。
 
 ## AEMでのアクセスの設定
 
-サービス資格情報から派生したアクセストークンは、 Contributors AEMユーザーグループのメンバーシップを持つテクニカルアカウントAEM Userを使用します。
+サービス資格情報派生アクセストークンは、Contributors AEMユーザーグループのメンバーシップを持つテクニカルアカウントAEM User を使用します。
 
-![サービス資格情報 — テクニカルアカウントAEM](./assets/service-credentials/technical-account-user.png)
+![サービス資格情報 — テクニカルアカウントAEMユーザー](./assets/service-credentials/technical-account-user.png)
 
-テクニカルアカウントAEMユーザーがAEMに存在したら（最初のアクセストークンによるHTTPリクエストの後）、このAEMユーザーの権限は他のAEMユーザーと同じように管理できます。
+テクニカルアカウントAEMユーザーがAEMに（アクセストークンを使用した最初の HTTP リクエストの後に）存在したら、このAEMユーザーの権限は他のAEMユーザーと同じように管理できます。
 
-1. まず、AEM開発者コンソールからダウンロードしたサービス資格情報JSONを開いて、テクニカルアカウントのAEMログイン名を探し、次のような`integration.email`値を探します。`12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`.
+1. まず、AEM Developer Console からダウンロードしたサービス資格情報 JSON を開き、テクニカルアカウントのAEMログイン名を探し、 `integration.email` の値は次のようになります。 `12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`.
 1. 対応するAEM環境のオーサーサービスにAEM管理者としてログインします。
-1. __ツール__ > __セキュリティ__ > __ユーザー__&#x200B;に移動します。
-1. 手順1で識別した&#x200B;__Login Name__&#x200B;を持つAEMユーザーを探し、__Properties__&#x200B;を開きます。
-1. 「__グループ__」タブに移動し、__DAMユーザー__&#x200B;グループ（アセットへの書き込みアクセス権）を追加します。
-1. __「保存して閉じる」__&#x200B;をタップします。
+1. に移動します。 __ツール__ > __セキュリティ__ > __ユーザー__
+1. AEMユーザーを見つけ、 __ログイン名__ 手順 1 で特定し、 __プロパティ__
+1. 次に移動： __グループ__ タブをクリックし、 __DAM ユーザー__ グループ（アセットへの書き込みアクセス権としてのグループ）
+1. タップ __保存して閉じる__
 
 AEMでアセットに対する書き込み権限を持つ権限を持つテクニカルアカウントで、アプリケーションを再実行します。
 
@@ -240,17 +241,17 @@ $ node index.js \
 200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
 ```
 
-## 変更の確認
+## 変更の検証
 
-1. （`aem`コマンドラインパラメーターで指定したのと同じホスト名を使用して）更新されたAEM as aCloud Service環境にログインします。
-1. __アセット__ / __ファイル__&#x200B;に移動します。
-1. `folder`コマンドラインパラメーターで指定されたアセットフォルダーに移動します（例：__WKND__ > __English__ > __Adventures__ > __Napa Wine Tasting__）。
-1. フォルダー内の任意のアセットの&#x200B;__プロパティ__&#x200B;を開きます
-1. 「__詳細__」タブに移動します。
-1. 更新されたプロパティの値を確認します。例えば、__Copyright__&#x200B;は、更新された`metadata/dc:rights` JCRプロパティにマッピングされ、`propertyValue`パラメーターで指定された値を反映します（例：__WKND Restricted Use__）。
+1. 更新されたAEMas a Cloud Service環境にログインします ( `aem` コマンドラインパラメータ )
+1. 次に移動： __Assets__ > __ファイル__
+1. これにより、 `folder` コマンドラインパラメータ（例： ） __WKND__ > __英語__ > __冒険__ > __ナパワインの試飲会__
+1. を開きます。 __プロパティ__ （フォルダー内の任意のアセット）
+1. 次に移動： __詳細__ タブ
+1. 更新されたプロパティの値を確認します（例： ）。 __著作権__ 更新された `metadata/dc:rights` JCR プロパティ。 `propertyValue` パラメーター、例： __WKND 制限使用__
 
-![WKNDでのメタデータの使用の制限の更新](./assets/service-credentials/asset-metadata.png)
+![WKND 制限付きメタデータ更新の使用](./assets/service-credentials/asset-metadata.png)
 
 ## おめでとうございます。
 
-これで、ローカル開発のアクセストークンと、実稼動に対応したサービス間アクセストークンを使用して、プログラムによってAEMにCloud Serviceとしてアクセスできるようになりました。
+これで、ローカル開発のアクセストークンと、実稼動に対応したサービス間アクセストークンを使用して、AEMas a Cloud Serviceにプログラムでアクセスできるようになりました。
