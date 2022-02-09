@@ -1,30 +1,30 @@
 ---
-title: AEM FormsでのOutputおよびForms Servicesを使用した開発
-description: AEM FormsでのOutputおよびForms Service APIの使用
-feature: Output サービス
+title: AEM Formsでの Output およびForms Services を使用した開発
+description: AEM Formsでの Output およびForms Service API の使用
+feature: Output Service
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 2%
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
+# AEM Formsでの Output およびForms Services を使用した開発{#developing-with-output-and-forms-services-in-aem-forms}
 
-# AEM FormsでのOutputおよびForms Servicesを使用した開発{#developing-with-output-and-forms-services-in-aem-forms}
+AEM Formsでの Output およびForms Service API の使用
 
-AEM FormsでのOutputおよびForms Service APIの使用
+この記事では、以下を見ていきます
 
-この記事では、以下を見てみます。
-
-* Output Service — 通常、このサービスは、xmlデータをxdpテンプレートまたはpdfと結合して統合されたpdfを生成するために使用されます。 詳しくは、Outputサービスの[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)を参照してください。
-* FormsService - PDFファイルとの間でデータの書き出し/読み込みを行う、非常に汎用性の高いサービスです。 詳しくは、 Formsサービスの[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html)を参照してください。
+* Output Service — 通常、このサービスは、xdp テンプレートまたは pdf と xml データを結合して統合された pdf を生成するために使用されます。 詳しくは、[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) Output サービスの
+* FormsService — これは、データの書き出しとPDFファイルへの読み込みを可能にする、非常に汎用性の高いサービスです。 詳しくは、 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) Formsサービスの
 
 
-次のコードスニペットは、PDFファイルからデータを書き出します
+次のコードスニペットは、データをPDFファイルから書き出します
 
 ```java
 javax.servlet.http.Part pdfPart = request.getPart("pdffile");
@@ -35,70 +35,66 @@ com.adobe.fd.forms.api.FormsService formsservice = sling.getService(com.adobe.fd
 com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDocument,com.adobe.fd.forms.api.DataFormat.Auto);
 ```
 
-1行目は、リクエストからpdffileを抽出します
+行 1 は、リクエストから pdffile を抽出します
 
-行2は、リクエストからsaveLocationを抽出します
+Line2 は、リクエストから saveLocation を抽出します
 
-5行目はFormsServiceを保持します
+5 行目は FormsService を保持します
 
-6行目はPDFファイルからxmlDataを書き出します
+6 行目は xmlData をPDF・ファイルからエクスポート
 
-**システム上でサンプルパッケージをテストするには**
+**システム上のサンプルパッケージをテストするには**
 
 [AEMパッケージマネージャーを使用して、パッケージをダウンロードしてインストールします](assets/outputandformsservice.zip)
 
 
 
 
-**パッケージをインストールした後、Granite CSRFフ許可リストィルターのAdobeに次のURLをする必要があります。**
+**パッケージをインストールした後、Granite CSRF FilterAdobeに次の URL をする必要がありま許可リストす。**
 
-1. 上記のパスをするには、次の手許可リスト順に従ってください。
-1. [configMgrにログインします。](http://localhost:4502/system/console/configMgr)
-1. AdobeGranite CSRF Filterを検索します。
-1. 除外されたセクションに次の3つのパスを追加し、保存します。
+1. 上記のパスをするには、以下の手許可リスト順に従ってください。
+1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
+1. AdobeGranite CSRF Filter を検索します。
+1. 除外されたセクションに次の 3 つのパスを追加し、保存します。
 1. /content/AemFormsSamples/mergedata
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 「Sling Referrer filter」を検索します。
-1. 「Allow Empty」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用します）。
-サンプルコードをテストする方法はいくつかあります。 Postmanアプリを使用するのが最も簡単です。 Postmanを使用すると、サーバーにPOSTリクエストを送信できます。 システムにPostmanアプリをインストールします。
-デスクトップアプリケーションを起動し、次のURLを入力して書き出しデータAPIをテストします。
+1. 「Allow Empty」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用する必要があります）サンプルコードをテストする方法は多数あります。 Postman アプリを使用するのが最も簡単で簡単です。 Postman を使用すると、サーバーにPOSTリクエストを実行できます。 システムに Postman アプリをインストールします。
+アプリを起動し、次の URL を入力して、書き出しデータ API をテストします。
 
-ドロップダウンリストから「POST」を選択していることを確認します。
-http://localhost:4502/content/AemFormsSamples/exportdata.html
-「認証」を「基本認証」として指定してください。 AEM Serverのユーザー名とパスワードの指定
-「Body」タブに移動し、次の図に示すリクエストパラメーターを指定します
-![export](assets/postexport.png)
+ドロップダウンリストhttp://localhost:4502/content/AemFormsSamples/exportdata.htmlから「POST」を選択していることを確認します。「認証」に「基本認証」と指定してください。 AEM Server のユーザー名とパスワードの指定「本文」タブに移動し、次の画像に示すリクエストパラメーターを指定します
+![書き出し](assets/postexport.png)
 次に、「送信」ボタンをクリックします。
 
-このパッケージには3つのサンプルが含まれています。 次の段落では、OutputサービスまたはFormsサービスを使用するタイミング、サービスのURL、各サービスが想定する入力パラメーターについて説明します
+このパッケージには 3 つのサンプルが含まれています。 次の段落では、Output サービスまたはForms Service を使用するタイミング、サービスの URL、各サービスが想定する入力パラメーターについて説明します
 
-**データの結合と出力の統合：**
+## データの結合と出力の統合
 
-* Outputサービスを使用して、データをxdpまたはpdfドキュメントと結合し、統合されたpdfを生成する
+* Output Service を使用して xdp または pdf ドキュメントとデータを結合し、統合された pdf を生成します
 * **POSTURL**:http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **要求パラメーター -**
 
-   * xdp_or_pdf_file :データを結合するxdpまたはpdfファイル
-   * xmlfile:xdp_or_pdf_fileとマージされるxmlデータファイル
-   * saveLocation:レンダリングされたドキュメントをファイルシステム上に保存する場所
+   * **xdp_or_pdf_file** :データの結合先となる xdp または pdf ファイル
+   * **xmlfile**:xdp_or_pdf_file とマージされる xml データファイル
+   * **saveLocation**:レンダリングしたドキュメントをファイルシステム上に保存する場所。 例： c:\\documents\\sample.pdf
 
-**データをPDFファイルに読み込む：**
-* FormsServiceを使用したPDFファイルへのデータの読み込み
-* **POSTURL**  - http://localhost:4502/content/AemFormsSamples/mergedata.html
+### データをPDFファイルにインポート
+
+* FormsService を使用したデータのPDFファイルへの読み込み
+* **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 * **要求パラメーター:**
 
-   * pdffile :データをマージするPDFファイル
-   * xmlfile:PDFファイルとマージされるXMLデータファイル
-   * saveLocation:レンダリングされたドキュメントをファイルシステム上に保存する場所。 例えば、c:\\\outputsample.pdfのように指定します。
+   * **pdffile** :データの結合先の pdf ファイル
+   * **xmlfile**:PDF ファイルと結合される XML データファイル
+   * **saveLocation**:レンダリングしたドキュメントをファイルシステム上に保存する場所。 例： c:\\outputsample.pdf
 
-**PDFファイルからのデータの書き出し**
-* FormsServiceを使用したPDFファイルからのデータの書き出し
-* **POST** URL - http://localhost:4502/content/AemFormsSamples/exportdata.html
+**データをPDFファイルから書き出し**
+* FormsService を使用してデータをPDFファイルから書き出す
+* **POSTUR** L - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **要求パラメーター:**
 
-   * pdffile :データの書き出し元のpdfファイル
-   * saveLocation:ファイルシステム上で書き出したデータを保存する場所
+   * **pdffile** :データの書き出し元の pdf ファイル
+   * **saveLocation**:エクスポートしたデータをファイルシステムに保存する場所。 例： c:\\documents\\exported_data.xml
 
-[このPostmanコレクションを読み込んで、APIをテストできます。](assets/document-services-postman-collection.json)
-
+[この Postman コレクションを読み込んで、API をテストできます](assets/document-services-postman-collection.json)

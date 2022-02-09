@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 32%
+source-wordcount: '674'
+ht-degree: 31%
 
 ---
 
@@ -166,6 +166,12 @@ ht-degree: 32%
       + [データをテンプレートと結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [ソリューションをテストする](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
+   + バッチ API を使用したドキュメント生成{#formscs-batch-api}
+      + [はじめに](./forms/formscs-batch-api/introduction.md)
+      + [Azure ストレージの構成](./forms/formscs-batch-api/configure-azure-storage.md)
+      + [USC バッチ構成の作成](./forms/formscs-batch-api/configure-usc-batch.md)
+      + [バッチ設定を作成](./forms/formscs-batch-api/create-batch-config.md)
+      + [バッチを実行](./forms/formscs-batch-api/execute-batch-generate-documents.md)
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
