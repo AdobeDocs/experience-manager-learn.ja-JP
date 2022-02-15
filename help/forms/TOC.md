@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
+source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1641'
 ht-degree: 3%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 3%
 + 便利な統合{#some-useful-integrations}
    + [2 要素認証](some-useful-integrations/two-factor-authentication.md)
    + [OCR データ抽出](some-useful-integrations/ocr-data-extraction.md)
+   + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [環境の設定](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -50,6 +51,7 @@ ht-degree: 3%
    + [アダプティブFormsでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [アダプティブFormsでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブFormsでの Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [ルールエディターのカスタム関数](adaptive-forms/custom-functions-aem-forms.md)
    + [Web ページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
    + [文字列の配列を作成しています](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [OSGI ワークフローでの XML での Set Value](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
