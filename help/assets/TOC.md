@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets のビデオとチュー
 breadcrumb-title: AEM Assets チュートリアル
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
+source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 33%
+source-wordcount: '378'
+ht-degree: 32%
 
 ---
 
@@ -94,7 +94,7 @@ ht-degree: 33%
    + [配置のみ (FPO)](./adobe-asset-link/for-placement-only.md)
    + [アセット検索](./adobe-asset-link/asset-search.md)
 
-+ コンテンツの自動化{#content-automation}
++ コンテンツ自動処理{#content-automation}
    + [概要](./content-automation/overview.md)
    + [クリエイティブの操作](./content-automation/creative-operations.md)
    + [Photoshop Actions](./content-automation/photoshop-actions.md)
@@ -137,6 +137,12 @@ ht-degree: 33%
    + 拡張コネクタ{#enhanced-connector}
       + [コネクタの基本機能の強化](./workfront/enhanced-connector/basics.md)
       + [プロジェクトフォルダー](./workfront/enhanced-connector/project-folders.md)
+      + AEM Experts Series{#aem-experts-series}
+         + [概要](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [セットアップ](./workfront/enhanced-connector/aem-experts-series/setup.md)
+         + [Workfront forms とAEMメタデータ](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [タグ、プロジェクトにリンクされたフォルダー、フォルダーメタデータ](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
+         + [詳細設定とワークフロー](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + 翻訳 {#translation}
    + [ソースファイルの翻訳](translation/source-file-translation-feature-video-use.md)
