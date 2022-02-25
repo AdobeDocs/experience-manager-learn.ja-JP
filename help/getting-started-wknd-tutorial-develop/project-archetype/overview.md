@@ -2,7 +2,7 @@
 title: AEM Sitesの概要 — プロジェクトアーキタイプ
 description: AEM Sitesの概要 — プロジェクトアーキタイプ。 WKND チュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAEMサイトの実装に関する手順を説明します。 このチュートリアルでは、プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '475'
 ht-degree: 41%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計�
 
 このチュートリアルでは、最初に [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) をクリックして、新しいプロジェクトを生成します。
 
-このチュートリアルは、 **AEMas a Cloud Service** との後方互換性がある **AEM 6.5.5.0 以降** および **AEM 6.4.8.1 以降**. サイトは次を使用して実装されます。
+このチュートリアルは、 **AEMas a Cloud Service** との後方互換性がある **AEM 6.5.10 以降**. サイトは次を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
@@ -44,7 +44,7 @@ Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計�
 
 以下をローカルにインストールしておく必要があります。
 
-* [ローカルAEM **作成者** インスタンス](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK、6.5.5 以降または 6.4.8.1 以降 )
+* [ローカルAEM **作成者** インスタンス](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK, 6.5.10 以降 )
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
 * [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）

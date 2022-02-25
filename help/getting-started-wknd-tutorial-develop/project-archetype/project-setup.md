@@ -3,7 +3,7 @@ title: AEM Sitesの概要 — プロジェクトの設定
 seo-title: Getting Started with AEM Sites - Project Setup
 description: AEM Sites のコードおよび設定を管理するための、Maven のマルチモジュールプロジェクトの作成について説明します。
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
@@ -13,10 +13,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 12%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
@@ -46,11 +46,11 @@ ht-degree: 12%
 
 ## プロジェクトを作成する {#create}
 
-AEM用の Maven マルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、 [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager も [UI ウィザードを提供します。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) :AEMアプリケーションプロジェクトの作成を開始します。 Cloud Manager UI で生成される基になるプロジェクトの結果は、アーキタイプを直接使用する場合と同じ構造になります。
+AEM用の Maven マルチモジュールプロジェクトを作成する方法はいくつかあります。 このチュートリアルでは、 [Maven AEM Project Archetype **35**](https://github.com/adobe/aem-project-archetype). Cloud Manager も [UI ウィザードを提供します。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) :AEMアプリケーションプロジェクトの作成を開始します。 Cloud Manager UI で生成される基になるプロジェクトの結果は、アーキタイプを直接使用する場合と同じ構造になります。
 
 >[!NOTE]
 >
->このチュートリアルではバージョンを使用します **26** を使用します。 常に、 **latest** 新しいプロジェクトを生成するためのアーキタイプのバージョン。
+>このチュートリアルではバージョンを使用します **35** を使用します。 常に、 **latest** 新しいプロジェクトを生成するためのアーキタイプのバージョン。
 
 次の一連の手順は、UNIX ベースのコマンドラインターミナルを使用して実行されますが、Windows ターミナルを使用する場合は同様の手順を実行する必要があります。
 
@@ -63,27 +63,6 @@ AEM用の Maven マルチモジュールプロジェクトを作成する方法�
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. を確認します。 **adobe-public** 次のコマンドを実行すると、プロファイルがアクティブになります。
-
-   ```shell
-   $ mvn help:effective-settings
-       ...
-   <activeProfiles>
-       <activeProfile>adobe-public</activeProfile>
-   </activeProfiles>
-   <pluginGroups>
-       <pluginGroup>org.apache.maven.plugins</pluginGroup>
-       <pluginGroup>org.codehaus.mojo</pluginGroup>
-   </pluginGroups>
-   </settings>
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
-   [INFO] Total time:  0.856 s
-   ```
-
-   もし **not** 参照 **adobe-public** Adobeリポジトリが `~/.m2/settings.xml` ファイル。 で Apache Maven をインストールおよび設定する手順を再度お読みください。 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
-
 1. AEMプロジェクトを生成するディレクトリに移動します。 これには、プロジェクトのソースコードを管理する任意のディレクトリを指定できます。 例えば、 `code` ユーザーのホームディレクトリの下に、次の設定を行います。
 
    ```shell
@@ -93,21 +72,22 @@ AEM用の Maven マルチモジュールプロジェクトを作成する方法�
 1. 次の内容をコマンドラインに貼り付けます。 [プロジェクトをバッチモードで生成](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=26 \
+       -D archetypeVersion=35 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
-       -D groupId="com.adobe.aem.guides.wknd" \
+       -D groupId="com.adobe.aem.guides" \
        -D artifactId="aem-guides-wknd" \
+       -D package="com.adobe.aem.guides.wknd" \
        -D version="0.0.1-SNAPSHOT" \
        -D aemVersion="cloud"
    ```
 
    >[!NOTE]
    >
-   > AEM 6.5.5 以降をターゲットにする場合は、 `aemVersion="cloud"` と `aemVersion="6.5.5"`. 6.4.8 以降をターゲットにする場合は、 `aemVersion="6.4.8"`.
+   > AEM 6.5.10 以降をターゲットにする場合は、 `aemVersion="cloud"` と `aemVersion="6.5.10"`.
 
    プロジェクトを設定するために使用できるプロパティの完全なリスト [ここにあります](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -275,7 +255,7 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 
 ### Ui.apps および Ui.content モジュール {#apps-content-module}
 
-この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、の下のサイトで必要となるすべてのレンダリングコードが含まれます。 `/apps`. これには CSS／JS が含まれ、それらは [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) と呼ばれる AEM の形式で保存されます。また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
+この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、の下のサイトで必要となるすべてのレンダリングコードが含まれます。 `/apps`. これには CSS／JS が含まれ、それらは [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja) と呼ばれる AEM の形式で保存されます。また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
 
 このモジュールのみを構築するには：
 
@@ -349,3 +329,7 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 この **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** モジュールは、 **ui.apps** モジュール。 唯一の違いは **ui.content** モジュールには、 **可変** コンテンツ。 **可変** コンテンツとは、基本的に、ソース管理下に保存されている、テンプレート、ポリシー、フォルダー構造などの非コード設定を指します。 **しかし** をAEMインスタンス上で直接変更できます。 これについては、ページとテンプレートの章で詳しく説明します。
 
 をビルドするために使用するのと同じ Maven コマンド **ui.apps** モジュールは、 **ui.content** モジュール。 上記の手順を、 **ui.content** フォルダー。
+
+## トラブルシューティング
+
+AEMプロジェクトアーキタイプを使用したプロジェクトの生成で問題が発生した場合は、 [既知の問題](https://github.com/adobe/aem-project-archetype#known-issues) およびオープンのリスト [問題](https://github.com/adobe/aem-project-archetype/issues).
