@@ -11,9 +11,9 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2882'
 ht-degree: 11%
 
 ---
@@ -145,7 +145,7 @@ client-side-libraries/main-scss
 
    各ファイルは、 [アコーディオンコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components). 各コアコンポーネントは、 [ブロック要素修飾子](https://getbem.com/) または BEM 表記を使用して、スタイルルールを使用して特定の CSS クラスを容易にターゲット設定できるようにします。 の下のファイル `/components` は、コンポーネントごとに異なる BEM ルールを使用してAEMプロジェクトアーキタイプによってスタブ化されています。
 
-1. WKND ベーススタイルのダウンロード **[wknd-base-styles-src-v3.zip]/(help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** および **unzip** ファイル。
+1. WKND ベーススタイルのダウンロード **[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** および **unzip** ファイル。
 
    ![WKND ベーススタイル](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
