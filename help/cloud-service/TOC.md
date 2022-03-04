@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
+source-git-commit: 5da75b172a7dda29452954990f6ab2374e7698d9
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '697'
 ht-degree: 31%
 
 ---
@@ -188,6 +188,11 @@ ht-degree: 31%
       + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームを作成](./forms/forms-and-sign/create-adaptive-form.md)
       + [入力および署名用に設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Microsoft Dynamics との統合{#formscs-dynamics-crm}
+      + [Dynamics アプリケーションを作成](./forms/formscs-dynamics-crm/create-dynamics-account.md)
+      + [データソースの設定](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [フォームデータモデルの作成](./forms/formscs-dynamics-crm/create-form-data-model.md)
+      + [アダプティブフォームを作成](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + Salesforce との統合{#integrate-with-salesforce}
       + [はじめに](./forms/integrate-with-salesforce/introduction.md)
       + [接続されたアプリを作成](./forms/integrate-with-salesforce/create-connected-app.md)
@@ -219,7 +224,8 @@ ht-degree: 31%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 + クラウド 5{#cloud-5}
    + [はじめに](./cloud-5/cloud5-introduction.md)
-   + [CDN ディープダイブ](./cloud-5/cloud5-aem-cdn-part1.md)
+   + [シーズン 1](./cloud-5/cloud5-season-1.md)
+   + [AEM CDN Part 1](./cloud-5/cloud5-aem-cdn-part1.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
