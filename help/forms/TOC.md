@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1654'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,9 @@ ht-degree: 3%
    + [初期フォームを作成](sign-multiple-documents/create-initial-form.md)
    + [署名用にFormsを作成](sign-multiple-documents/create-forms-for-signing.md)
    + [ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
++ カスタムワークフローステップ{#custom-workflow-steps}
+   + [xml ドキュメントからノードを抽出](custom-workflow-steps/extract-xml-node.md)
+   + [ドキュメントをファイルシステムに保存](custom-workflow-steps/write-payload-document.md)
 + AEM Workflow の変数{#variables-aem-workflow}
    + [概要 — ワークフローの変数](variables-aem-workflow/introduction.md)
    + [XML 変数](variables-aem-workflow/part1.md)
