@@ -1,6 +1,6 @@
 ---
-title: SPAの統合 | AEM SPA EditorとAngularの概要
-description: angularで記述されたシングルページアプリケーション(SPA)のソースコードをAdobe Experience Manager(AEM)プロジェクトと統合する方法を説明します。 angularのCLIツールなどの最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対してSPAを迅速に開発する方法を説明します。
+title: SPAの統合 | AEM SPA Editor とAngularの概要
+description: angularで記述されたシングルページアプリケーション (SPA) のソースコードを、Adobe Experience Manager(AEM) プロジェクトと統合する方法を説明します。 angularの CLI ツールなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対するSPAを迅速に開発する方法を説明します。
 sub-product: sites
 feature: SPA Editor
 topics: development
@@ -14,7 +14,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
 source-wordcount: '2191'
 ht-degree: 3%
@@ -23,29 +23,29 @@ ht-degree: 3%
 
 # SPAの統合 {#integrate-spa}
 
-angularで記述されたシングルページアプリケーション(SPA)のソースコードをAdobe Experience Manager(AEM)プロジェクトと統合する方法を説明します。 webpack開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSONモデルAPIに対するSPAを迅速に開発する方法を説明します。
+angularで記述されたシングルページアプリケーション (SPA) のソースコードを、Adobe Experience Manager(AEM) プロジェクトと統合する方法を説明します。 webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対するSPAを迅速に開発する方法を説明します。
 
 ## 目的
 
-1. SPAプロジェクトとAEMをクライアント側ライブラリと統合する方法について説明します。
-2. 専用のフロントエンド開発にローカル開発・サーバを使用する方法を説明します。
-3. AEM JSONモデルAPIに対する開発に、**proxy**&#x200B;と静的&#x200B;**mock**&#x200B;ファイルの使用を調べます
+1. SPAプロジェクトがAEMとクライアント側ライブラリを統合する方法を説明します。
+2. 専用のフロントエンド開発にローカル開発サーバーを使用する方法を説明します。
+3. の使用に関する詳細 **プロキシ** および静的 **mock** AEM JSON モデル API に対する開発用ファイル
 
 ## 作成する内容
 
-この章では、単純な`Header`コンポーネントをSPAに追加します。 この静的な`Header`コンポーネントを構築する過程で、AEM SPA開発に対していくつかのアプローチが使用されます。
+この章では、 `Header` コンポーネントをSPAに追加します。 この静的を構築中 `Header` コンポーネントAEM SPA開発に対するいくつかの方法が使用されます。
 
 ![AEMの新しいヘッダー](./assets/integrate-spa/final-header-component.png)
 
-*SPAが拡張され、静的コンポーネントが追加さ `Header` れます*
+*SPAを拡張して静的を追加します。 `Header` コンポーネント*
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
+設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment).
 
 ### コードの取得
 
-1. このチュートリアルの開始点をGitからダウンロードします。
+1. このチュートリアルの開始点を Git からダウンロードします。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -53,43 +53,43 @@ angularで記述されたシングルページアプリケーション(SPA)の�
    $ git checkout Angular/integrate-spa-start
    ```
 
-2. Mavenを使用して、コードベースをローカルのAEMインスタンスにデプロイします。
+2. Maven を使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   [AEM 6.x](overview.md#compatibility)を使用する場合は、`classic`プロファイルを追加します。
+   を使用する場合 [AEM 6.x](overview.md#compatibility) 追加 `classic` プロファイル：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/integrate-spa-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
+完成したコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) または、ブランチに切り替えて、コードをローカルでチェックアウトします。 `Angular/integrate-spa-solution`.
 
 ## 統合アプローチ {#integration-approach}
 
-AEMプロジェクトの一部として、2つのモジュールが作成されました。`ui.apps`と`ui.frontend`が表示されます。
+AEMプロジェクトの一部として、次の 2 つのモジュールが作成されました。 `ui.apps` および `ui.frontend`.
 
-`ui.frontend`モジュールは、すべてのSPAソースコードを含む[webpack](https://webpack.js.org/)プロジェクトです。 SPAの開発およびテストの大部分は、webpackプロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAはwebpackを使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSSおよびJavaScript）が`ui.apps`モジュールにコピーされ、AEMランタイムにデプロイされます。
+この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発およびテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
 
-![ui.frontendハイレベルアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
+![ui.frontend の高レベルアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
 
 *SPA統合の概要です。*
 
-フロントエンドビルドに関する追加情報は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
+フロントエンドビルドに関する追加情報は、次のとおりです。 [ここにある](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-## InspectとSPAの統合 {#inspect-spa-integration}
+## Inspect SPA統合 {#inspect-spa-integration}
 
-次に、 `ui.frontend`モジュールを調べて、[AEMプロジェクトのアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)によって自動生成されたSPAを理解します。
+次に、 `ui.frontend` モジュールを使用して、 [AEMプロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-1. 任意のIDEで、WKND SPA用のAEMプロジェクトを開きます。 このチュートリアルでは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)を使用します。
+1. 任意の IDE で、WKND SPA用のAEMプロジェクトを開きます。 このチュートリアルでは、 [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
-2. `ui.frontend`フォルダーを展開し、検査します。 ファイル`ui.frontend/package.json`を開きます。
+2. を展開して検査します。 `ui.frontend` フォルダー。 ファイルを開きます。 `ui.frontend/package.json`
 
-3. `dependencies`の下に、`@angular`に関連する次の要素が表示されます。
+3. 以下 `dependencies` 関連する `@angular`:
 
    ```json
    "@angular/animations": "~9.1.11",
@@ -102,9 +102,9 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    "@angular/router": "~9.1.10",
    ```
 
-   `ui.frontend`モジュールは、ルーティングを含む[AngularCLIツール](https://angular.io/cli)を使用して生成された[Angularアプリケーション](https://angular.io)です。
+   この `ui.frontend` モジュールは [Angular適用](https://angular.io) を使用して生成 [AngularCLI ツール](https://angular.io/cli) ルーティングを含む
 
-4. また、`@adobe`というプレフィックスが付いた依存関係は3つあります。
+4. また、 `@adobe`:
 
    ```json
    "@adobe/cq-angular-editable-components": "^2.0.2",
@@ -112,9 +112,9 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上記のモジュールは、[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)を構成し、SPAコンポーネントをAEMコンポーネントにマッピングできるようにする機能を提供します。
+   上記のモジュールは、 [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) とは、SPAコンポーネントをAEMコンポーネントにマッピングできる機能を提供します。
 
-5. `package.json`ファイルでは、複数の`scripts`が定義されます。
+5. 内 `package.json` 複数の `scripts` が定義されている：
 
    ```json
    "scripts": {
@@ -126,19 +126,19 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    }
    ```
 
-   これらのスクリプトは、一般的な[AngularCLIコマンド](https://angular.io/cli/build)に基づいていますが、大きなAEMプロジェクトで動作するように若干変更されています。
+   これらのスクリプトは、共通の [AngularCLI コマンド](https://angular.io/cli/build) 大きなAEMプロジェクトで使用できるように、少し変更を加えてあります。
 
-   `start` ：ローカルWebAngularを使用して、サーバーアプリをローカルで実行します。ローカルのAEMインスタンスのコンテンツをプロキシするように更新されました。
+   `start`  — ローカル WebAngularを使用して、サーバーアプリをローカルで実行します。 ローカルのAEMインスタンスのコンテンツをプロキシするように更新されました。
 
-   `build` ：実稼動用にAngularアプリをコンパイルします。ビルド中に、コンパイル済みのSPAをクライアント側ライブラリとして`ui.apps`モジュールにコピーする役割を`&& clientlib`を追加しました。 npmモジュール[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)を使用して、これを容易にします。
+   `build`  — 実稼動用にAngularアプリをコンパイルします。 この `&& clientlib` は、コンパイル済みのSPAを `ui.apps` ビルド時にクライアントサイドライブラリとしてモジュールを作成する。 npm モジュール [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) を使用すると、この処理が容易になります。
 
-   使用可能なスクリプトの詳細は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)を参照してください。
+   使用可能なスクリプトの詳細については、を参照してください。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-6. `ui.frontend/clientlib.config.js` ファイルを検査します。この設定ファイルは、[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)でクライアントライブラリの生成方法を決定するために使用されます。
+6. `ui.frontend/clientlib.config.js` ファイルを検査します。この設定ファイルは、 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) を参照して、クライアントライブラリの生成方法を確認してください。
 
-7. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、`ui.frontend`フォルダーを[Mavenモジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。 `pom.xml`ファイルが更新され、Mavenのビルド中に[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)を&#x200B;**test**&#x200B;および&#x200B;**build**&#x200B;にSPAを使用するようになりました。
+7. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、 `ui.frontend` フォルダーを [Maven モジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html). この `pom.xml` ファイルを更新して [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) から **テスト** および **ビルド** Maven のビルド時にSPAが生成されます。
 
-8. `ui.frontend/src/app/app.component.ts`にあるファイル`app.component.ts`をInspectにします。
+8. Inspectファイル `app.component.ts` 時刻 `ui.frontend/src/app/app.component.ts`:
 
    ```js
    import { Constants } from '@adobe/cq-angular-editable-components';
@@ -165,11 +165,11 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    }
    ```
 
-   `app.component.js` は、SPAのエントリポイントです。`ModelManager` は、AEM SPA Editor JS SDKで提供されます。これは、を呼び出し、アプリケーションに`pageModel` （JSONコンテンツ）を挿入する役割を果たします。
+   `app.component.js` は、SPAのエントリポイントです。 `ModelManager` は、AEM SPA Editor JS SDK で提供されます。 これは、 `pageModel` （JSON コンテンツ）をアプリケーションにコピーします。
 
 ## ヘッダーコンポーネントの追加 {#header-component}
 
-次に、SPAに新しいコンポーネントを追加し、変更をローカルのAEMインスタンスにデプロイして統合を確認します。
+次に、SPAに新しいコンポーネントを追加し、変更をローカルAEMインスタンスにデプロイして、統合を確認します。
 
 1. 新しいターミナルウィンドウを開き、`ui.frontend` フォルダーに移動します。
 
@@ -177,7 +177,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    $ cd aem-guides-wknd-spa/ui.frontend
    ```
 
-2. [AngularCLI](https://angular.io/cli#installing-angular-cli)をグローバルにインストールします。これは、Angularコンポーネントを生成し、**ng**&#x200B;コマンドを使用してAngularアプリケーションを構築して提供するために使用されます。
+2. インストール [AngularCLI](https://angular.io/cli#installing-angular-cli) グローバルに使用して、Angularコンポーネントを生成し、を介してAngularアプリケーションを構築して提供します。 **ng** コマンドを使用します。
 
    ```shell
    $ npm install -g @angular/cli
@@ -185,9 +185,9 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    >[!CAUTION]
    >
-   > このプロジェクトで使用される&#x200B;**@angular/cli**&#x200B;のバージョンは&#x200B;**9.1.7**&#x200B;です。 angularCLIのバージョンを同期させることをお勧めします。
+   > のバージョン。 **@angular/cli** このプロジェクトで使用 **9.1.7**. angularCLI のバージョンを同期しておくことをお勧めします。
 
-3. `ui.frontend`フォルダー内からAngularCLI `ng generate component`コマンドを実行して、新しい`Header`コンポーネントを作成します。
+3. 新しい `Header` コンポーネントをAngularCLI を実行 `ng generate component` 内から命令 `ui.frontend` フォルダー。
 
    ```shell
    $ ng generate component components/header
@@ -199,13 +199,13 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    UPDATE src/app/app.module.ts (1809 bytes)
    ```
 
-   これにより、`ui.frontend/src/app/components/header`に新しいAngularヘッダーコンポーネントのスケルトンが作成されます。
+   これにより、に新しいAngularヘッダーコンポーネントのスケルトンが作成されます。 `ui.frontend/src/app/components/header`.
 
-4. 任意のIDEで`aem-guides-wknd-spa`プロジェクトを開きます。 `ui.frontend/src/app/components/header` フォルダーに移動し、
+4. を開きます。 `aem-guides-wknd-spa` 選択した IDE 内のプロジェクト。 `ui.frontend/src/app/components/header` フォルダーに移動し、
 
-   ![IDEでのヘッダーコンポーネントのパス](assets/integrate-spa/header-component-path.png)
+   ![IDE でのヘッダーコンポーネントのパス](assets/integrate-spa/header-component-path.png)
 
-5. ファイル`header.component.html`を開き、内容を次のように置き換えます。
+5. ファイルを開きます。 `header.component.html` コンテンツを以下に置き換えます。
 
    ```html
    <!--/* header.component.html */-->
@@ -216,18 +216,18 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    </header>
    ```
 
-   これにより静的コンテンツが表示されるので、このAngularコンポーネントでは、デフォルトで生成された`header.component.ts`を調整する必要はありません。
+   これにより静的コンテンツが表示されるので、このAngularコンポーネントでは、デフォルトで生成される `header.component.ts`.
 
-6. `ui.frontend/src/app/app.component.html`にある&#x200B;**app.component.html**&#x200B;ファイルを開きます。 `app-header`を追加します。
+6. ファイルを開きます。 **app.component.html** 時刻  `ui.frontend/src/app/app.component.html`. を `app-header`:
 
    ```html
    <app-header></app-header>
    <router-outlet></router-outlet>
    ```
 
-   これにより、すべてのページコンテンツの上に`header`コンポーネントが含まれます。
+   これには、 `header` コンポーネントを、すべてのページコンテンツの上に配置します。
 
-7. 新しいターミナルを開き、`ui.frontend`フォルダーに移動して`npm run build`コマンドを実行します。
+7. 新しいターミナルを開き、 `ui.frontend` フォルダーを作成し、 `npm run build` コマンド：
 
    ```shell
    $ cd ui.frontend
@@ -239,11 +239,11 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    ES5 bundle generation complete.
    ```
 
-8. `ui.apps` フォルダーに移動し、`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular`の下に、コンパイル済みのSPAファイルが`ui.frontend/build`フォルダーからコピーされているのがわかります。
+8. `ui.apps` フォルダーに移動し、の下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` コンパイル済みのSPAファイルが`ui.frontend/build` フォルダー。
 
-   ![ui.appsで生成されたクライアントライブラリ](assets/integrate-spa/compiled-spa-uiapps.png)
+   ![ui.apps で生成されたクライアントライブラリ](assets/integrate-spa/compiled-spa-uiapps.png)
 
-9. ターミナルに戻り、 `ui.apps`フォルダーに移動します。 次のMavenコマンドを実行します。
+9. ターミナルに戻り、 `ui.apps` フォルダー。 次の Maven コマンドを実行します。
 
    ```shell
    $ cd ../ui.apps
@@ -257,21 +257,21 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   これにより、AEMのローカル実行インスタンスに`ui.apps`パッケージがデプロイされます。
+   これにより、 `ui.apps` AEMのローカル実行インスタンスにパッケージ化します。
 
-10. ブラウザータブを開き、[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)に移動します。 これで、`Header`コンポーネントの内容がSPAに表示されます。
+10. ブラウザータブを開き、に移動します。 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). これで、 `Header` コンポーネントがSPAに表示されている状態。
 
    ![初期ヘッダー実装](assets/integrate-spa/initial-header-implementation.png)
 
-   手順&#x200B;**7～9**&#x200B;は、プロジェクトのルートからMavenビルドをトリガーすると(`mvn clean install -PautoInstallSinglePackage`)自動的に実行されます。 これで、SPAとAEMのクライアント側ライブラリ間の統合の基本を理解する必要があります。 AEMでは引き続き`Text`コンポーネントを編集および追加できますが、`Header`コンポーネントは編集できません。
+   手順 **7-9** は、プロジェクトのルートから Maven ビルドをトリガーすると、自動的に実行されます ( `mvn clean install -PautoInstallSinglePackage`) をクリックします。 これで、SPAとAEMのクライアント側ライブラリ間の統合の基本を理解する必要があります。 編集や追加は可能です。 `Text` AEMのコンポーネント `Header` コンポーネントは編集できません。
 
-## Webpack Dev Server - JSON APIのプロキシ {#proxy-json}
+## Webpack Dev Server - JSON API のプロキシ {#proxy-json}
 
-前の演習で見たように、クライアントライブラリをビルドしてAEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストでは許容されますが、SPA開発の大部分には理想的ではありません。
+前の演習で見たように、クライアントライブラリをビルドして、AEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストで使用できますが、SPAの開発の大部分には理想的ではありません。
 
-[webpack開発サーバー](https://webpack.js.org/configuration/dev-server/)を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成されたJSONモデルによって駆動されます。 この演習では、AEMの実行中のインスタンスのJSONコンテンツを、**Angularプロジェクト](https://angular.io/guide/build)によって設定された開発サーバーに**&#x200B;プロキシします。[
+A [webpack dev server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスからの JSON コンテンツを次のようにします。 **プロキシ化** を、 [Angular計画](https://angular.io/guide/build).
 
-1. IDEに戻り、`ui.frontend/proxy.conf.json`にある&#x200B;**proxy.conf.json**&#x200B;ファイルを開きます。
+1. IDE に戻り、ファイルを開きます。 **proxy.conf.json** 時刻 `ui.frontend/proxy.conf.json`.
 
    ```json
    [
@@ -287,17 +287,17 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    ]
    ```
 
-   [Angularアプリ](https://angular.io/guide/build#proxying-to-a-backend-server)は、APIリクエストを簡単にプロキシするメカニズムを提供します。 `context`で指定されたパターンは、ローカルのAEM quickstartである`localhost:4502`を介してプロキシ化されます。
+   この [Angularアプリ](https://angular.io/guide/build#proxying-to-a-backend-server) は、API リクエストをプロキシするための簡単なメカニズムを提供します。 指定したパターン `context` はを通じてプロキシされます `localhost:4502`ローカルのAEM Quickstart
 
-2. `ui.frontend/src/index.html`にある&#x200B;**index.html**&#x200B;ファイルを開きます。 これは、開発サーバーで使用されるルートHTMLファイルです。
+2. ファイルを開きます。 **index.html** 時刻 `ui.frontend/src/index.html`. これは、開発HTMLが使用するルートサーバーファイルです。
 
-   `base href="/"`のエントリがあることに注意してください。 [baseタグ](https://angular.io/guide/deployment#the-base-tag)は、アプリが相対URLを解決するのに重要です。
+   次の項目があることに注意してください： `base href="/"`. この [ベースタグ](https://angular.io/guide/deployment#the-base-tag) は、相対 URL を解決するためにアプリが重要です。
 
    ```html
    <base href="/">
    ```
 
-3. ターミナルウィンドウを開き、 `ui.frontend`フォルダーに移動します。 `npm start` コマンドを実行します。
+3. ターミナルウィンドウを開き、 `ui.frontend` フォルダー。 `npm start` コマンドを実行します。
 
    ```shell
    $ cd ui.frontend
@@ -313,18 +313,18 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    ℹ ｢wds｣: 404s will fallback to //index.html
    ```
 
-4. 新しいブラウザータブを開き（まだ開いていない場合）、[http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)に移動します。
+4. 新しいブラウザータブを開き（まだ開いていない場合）、に移動します。 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html).
 
-   ![Webpack開発サーバー — プロキシjson](assets/integrate-spa/webpack-dev-server-1.png)
+   ![Webpack 開発サーバー — プロキシ json](assets/integrate-spa/webpack-dev-server-1.png)
 
-   AEMと同じコンテンツが表示されますが、オーサリング機能が有効になっていないはずです。
+   AEMと同じコンテンツが表示されますが、オーサリング機能は有効になっていません。
 
-5. IDEに戻り、`img`という名前の新しいフォルダーを`ui.frontend/src/assets`に作成します。
-6. 次のWKNDロゴをダウンロードし、`img`フォルダーに追加します。
+5. IDE に戻り、という名前の新しいフォルダーを作成します。 `img` 時刻 `ui.frontend/src/assets`.
+6. 次の WKND ロゴをダウンロードし、 `img` フォルダー：
 
-   ![WKNDロゴ](./assets/integrate-spa/wknd-logo-dk.png)
+   ![WKND ロゴ](./assets/integrate-spa/wknd-logo-dk.png)
 
-7. **header.component.html**&#x200B;を`ui.frontend/src/app/components/header/header.component.html`で開き、次のロゴを含めます。
+7. 開く **header.component.html** 時刻 `ui.frontend/src/app/components/header/header.component.html` ロゴを含めます。
 
    ```html
    <header class="header">
@@ -336,27 +336,27 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    </header>
    ```
 
-   変更を&#x200B;**header.component.html**&#x200B;に保存します。
+   変更をに保存します。 **header.component.html**.
 
-8. ブラウザーに戻ります。 アプリに対する変更がすぐに反映されていることを確認します。
+8. ブラウザーに戻ります。 アプリケーションの変更が直ちに反映されていることを確認します。
 
    ![ヘッダーに追加されたロゴ](assets/integrate-spa/added-logo-localhost.png)
 
-   コンテンツをプロキシしているので、**AEM**&#x200B;でコンテンツを更新し続け、**webpack開発サーバー**&#x200B;に反映されていることを確認できます。 コンテンツの変更は、**webpack開発サーバー**&#x200B;にのみ表示されます。
+   引き続き、でコンテンツを更新できます。 **AEM** そして彼らが反映されているのを見る **webpack dev server**、コンテンツをプロキシしているので。 コンテンツの変更は、 **webpack dev server**.
 
-9. ターミナルで`ctrl+c`を使用してローカルWebサーバーを停止します。
+9. でローカル Web サーバーを停止します。 `ctrl+c` を設定します。
 
-## Webpack Dev Server — モックJSON API {#mock-json}
+## Webpack Dev Server — モック JSON API {#mock-json}
 
-迅速な開発のもう1つのアプローチは、静的JSONファイルをJSONモデルとして機能させることです。 JSONを「モック」することで、ローカルのAEMインスタンスへの依存関係を削除します。 また、フロントエンド開発者は、機能をテストし、JSON APIに対する変更を促進するためにJSONモデルを更新でき、後でバックエンド開発者によって実装されます。
+迅速な開発のもう 1 つの方法は、静的 JSON ファイルを使用して JSON モデルとして機能させることです。 JSON を「モック」することで、ローカルのAEMインスタンスへの依存を削除します。 また、フロントエンド開発者は、機能をテストし、JSON API の変更を促すために JSON モデルを更新できます。この変更は、後でバックエンド開発者によって実装されます。
 
-モックJSONの初期設定には、ローカルのAEMインスタンス&#x200B;**が必要です。**
+モック JSON の初期設定は次のようにおこないます。 **ローカルのAEMインスタンスが必要**.
 
-1. ブラウザーで、[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)に移動します。
+1. ブラウザーで、に移動します。 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json).
 
    これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
 
-2. IDEに戻り、`ui.frontend/src`に移動し、**mocks**&#x200B;および&#x200B;**json**&#x200B;という名前の新しいフォルダーを追加して、次のフォルダー構造に一致させます。
+2. IDE に戻り、に移動します。 `ui.frontend/src` 次の名前の新しいフォルダを追加します。 **モック** および **json** 次のフォルダー構造に一致させるには：
 
    ```plain
    |-- ui.frontend
@@ -365,11 +365,11 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
                |-- json
    ```
 
-3. `ui.frontend/public/mocks/json`の下に&#x200B;**en.model.json**&#x200B;という名前の新しいファイルを作成します。 **手順1**&#x200B;のJSON出力をここに貼り付けます。
+3. という名前の新しいファイルを作成します。 **en.model.json** 下 `ui.frontend/public/mocks/json`. 次の JSON 出力を貼り付けます。 **手順 1** こちら。
 
-   ![モックモデルJsonファイル](assets/integrate-spa/mock-model-json-created.png)
+   ![モックモデル Json ファイル](assets/integrate-spa/mock-model-json-created.png)
 
-4. `ui.frontend`の下に、新しいファイル&#x200B;**proxy.mock.conf.json**&#x200B;を作成します。 ファイルに以下のように入力します。
+4. 新しいファイルを作成 **proxy.mock.conf.json** 下 `ui.frontend`. ファイルに以下のように入力します。
 
    ```json
    [
@@ -384,13 +384,13 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    ]
    ```
 
-   このプロキシ設定は、`/content/wknd-spa-angular/us`で始まる要求を`/mocks/json`で書き換え、対応する静的JSONファイルを提供します。次に例を示します。
+   このプロキシ設定は、 `/content/wknd-spa-angular/us` と `/mocks/json` 対応する静的 JSON ファイルを提供します。次に例を示します。
 
    ```plain
    /content/wknd-spa-angular/us/en.model.json -> /mocks/json/en.model.json
    ```
 
-5. ファイル&#x200B;**angular.json**&#x200B;を開きます。 新しい&#x200B;**dev**&#x200B;設定を追加し、更新された&#x200B;**assets**&#x200B;配列を使用して、作成された&#x200B;**mocks**&#x200B;フォルダーを参照します。
+5. ファイルを開きます。 **angular.json**. 新しい **dev** 更新された **アセット** を参照する配列 **モック** フォルダーが作成されました。
 
    ```json
     "dev": {
@@ -405,11 +405,11 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
        },
    ```
 
-   ![AngularのJSON開発用アセットの更新フォルダー](assets/integrate-spa/dev-assets-update-folder.png)
+   ![AngularJSON 開発用アセットの更新フォルダー](assets/integrate-spa/dev-assets-update-folder.png)
 
-   専用の&#x200B;**dev**&#x200B;設定を作成すると、**mocks**&#x200B;フォルダーは開発時にのみ使用され、実稼動ビルドではAEMにデプロイされなくなります。
+   専用のの作成 **dev** 設定により、 **モック** フォルダーは開発時にのみ使用され、実稼動ビルドではAEMにデプロイされません。
 
-6. **angular.json**&#x200B;ファイルで、次に&#x200B;**browserTarget**&#x200B;設定を更新し、新しい&#x200B;**dev**&#x200B;設定を使用します。
+6. 内 **angular.json** ファイル、次の更新 **browserTarget** 新しい **dev** 設定：
 
    ```diff
      ...
@@ -422,9 +422,9 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
      ...
    ```
 
-   ![AngularJSONビルド開発の更新](assets/integrate-spa/angular-json-build-dev-update.png)
+   ![AngularJSON ビルド開発の更新](assets/integrate-spa/angular-json-build-dev-update.png)
 
-7. ファイル`ui.frontend/package.json`を開き、新しい&#x200B;**start:mock**&#x200B;コマンドを追加して、**proxy.mock.conf.json**&#x200B;ファイルを参照します。
+7. ファイルを開きます。 `ui.frontend/package.json` 新しい **start:mock** コマンドを使用して **proxy.mock.conf.json** ファイル。
 
    ```diff
        "scripts": {
@@ -439,7 +439,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
 
    新しいコマンドを追加すると、プロキシ設定を簡単に切り替えることができます。
 
-8. 現在実行中の場合は、**webpack開発サーバー**&#x200B;を停止します。 **start:mock**&#x200B;スクリプトを使用して、**webpack開発サーバー**&#x200B;を起動します。
+8. 現在実行中の場合は、 **webpack dev server**. を開始します。 **webpack dev server** の使用 **start:mock** スクリプト：
 
    ```shell
    $ npm run start:mock
@@ -448,26 +448,26 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    > ng serve --open --proxy-config ./proxy.mock.conf.json
    ```
 
-   [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)に移動すると、同じSPAが表示されますが、コンテンツは&#x200B;**mock** JSONファイルから取り込まれます。
+   に移動します。 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html) 同じSPAが表示されますが、コンテンツが **mock** JSON ファイル。
 
-9. 先ほど作成した&#x200B;**en.model.json**&#x200B;ファイルに小さな変更を加えます。 更新されたコンテンツは、**webpack開発サーバー**&#x200B;に直ちに反映されます。
+9. を少し変更します。 **en.model.json** ファイルが作成されました。 更新されたコンテンツは、すぐに **webpack dev server**.
 
-   ![モックモデルのjsonの更新](./assets/integrate-spa/webpack-mock-model.gif)
+   ![モモデル json の更新をモックする](./assets/integrate-spa/webpack-mock-model.gif)
 
-   JSONモデルを操作し、実際のSPAへの影響を確認できることは、開発者がJSONモデルAPIを理解するのに役立ちます。 また、フロントエンドとバックエンドの両方の開発を並行しておこなうこともできます。
+   JSON モデルを操作し、実稼働中のSPAに対する影響を確認できることは、開発者が JSON モデル API を理解するのに役立ちます。 また、フロントエンドとバックエンドの両方の開発を並行しておこなうことができます。
 
-## Sassでスタイルを追加
+## Sass でスタイルを追加
 
-次に、更新されたスタイルがプロジェクトに追加されます。 このプロジェクトでは、変数などの便利な機能に[Sass](https://sass-lang.com/)のサポートを追加します。
+次に、更新されたスタイルがプロジェクトに追加されます。 このプロジェクトは [サス](https://sass-lang.com/) 変数などの便利な機能のサポート。
 
-1. ターミナルウィンドウを開き、起動した場合は&#x200B;**webpack開発サーバー**&#x200B;を停止します。 `ui.frontend`フォルダー内から次のコマンドを入力し、Angularアプリを更新して&#x200B;**.scss**&#x200B;ファイルを処理します。
+1. ターミナルウィンドウを開き、 **webpack dev server** （開始した場合） 内部から `ui.frontend` フォルダーを次のコマンドで入力して、処理するAngularアプリを更新します **.scss** ファイル。
 
    ```shell
    $ cd ui.frontend
    $ ng config schematics.@schematics/angular:component.styleext scss
    ```
 
-   これにより、`angular.json`ファイルが更新され、ファイルの下部に新しいエントリが表示されます。
+   これにより、 `angular.json` ファイルの末尾に新しいエントリが追加されます。
 
    ```json
    "schematics": {
@@ -477,14 +477,14 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    }
    ```
 
-2. ブラウザー間でスタイルを正規化するには、`normalize-scss`をインストールします。
+2. インストール `normalize-scss` ブラウザー間でスタイルを標準化するには：
 
    ```shell
    $ npm install normalize-scss --save
    ```
 
-3. IDEに戻り、`ui.frontend/src`の下に`styles`という名前の新しいフォルダーを作成します。
-4. `ui.frontend/src/styles`の下に`_variables.scss`という名前の新しいファイルを作成し、次の変数を設定します。
+3. IDE との下に戻ります。 `ui.frontend/src` 次の名前の新しいフォルダーを作成します。 `styles`.
+4. の下に新しいファイルを作成します。 `ui.frontend/src/styles` 名前付き `_variables.scss` を設定し、次の変数を設定します。
 
    ```scss
    //_variables.scss
@@ -529,7 +529,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    $gutter-padding: 12px;
    ```
 
-5. ファイル&#x200B;**styles.css**&#x200B;の拡張子の名前を`ui.frontend/src/styles.css`から&#x200B;**styles.scss**&#x200B;に変更します。 内容を次のように置き換えます。
+5. ファイルの拡張子の名前を変更する **styles.css** 時刻 `ui.frontend/src/styles.css` から **styles.scss**. コンテンツを次の内容に置き換えます。
 
    ```scss
    /* styles.scss * /
@@ -558,7 +558,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    }
    ```
 
-6. **angular.json**&#x200B;を更新し、**style.css**&#x200B;へのすべての参照を&#x200B;**styles.scss**&#x200B;で名前変更します。 3つの参照が必要です。
+6. 更新 **angular.json** を参照し、 **style.css** と **styles.scss**. 3 つの参照が必要です。
 
    ```diff
      "styles": [
@@ -567,17 +567,17 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
       ],
    ```
 
-## ヘッダースタイルの更新
+## ヘッダースタイルを更新
 
-次に、Sassを使用して、**Header**&#x200B;コンポーネントにブランド固有のスタイルを追加します。
+次に、ブランド固有のスタイルを **ヘッダー** Sass を使用するコンポーネント
 
-1. **webpack開発サーバー**&#x200B;を起動して、スタイルの更新をリアルタイムで確認します。
+1. を開始します。 **webpack dev server** スタイルの更新をリアルタイムで確認するには：
 
    ```shell
    $ npm run start:mock
    ```
 
-2. `ui.frontend/src/app/components/header`の下で、**header.component.css**&#x200B;を&#x200B;**header.component.scss**&#x200B;に名前変更します。 ファイルに以下のように入力します。
+2. の下 `ui.frontend/src/app/components/header` 名前を変更 **header.component.css** から **header.component.scss**. ファイルに以下のように入力します。
 
    ```scss
    @import "~src/styles/variables";
@@ -612,7 +612,7 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    }
    ```
 
-3. **header.component.js**&#x200B;を更新して、**header.component.scss**&#x200B;を参照します。
+3. 更新 **header.component.ts** 参考にする **header.component.scss**:
 
    ```diff
    ...
@@ -625,36 +625,36 @@ AEMプロジェクトの一部として、2つのモジュールが作成され�
    ...
    ```
 
-4. ブラウザーに戻り、**webpack開発サーバー**&#x200B;に戻ります。
+4. ブラウザーに戻り、 **webpack dev server**:
 
-   ![スタイル設定ヘッダー — webpack devサーバー](assets/integrate-spa/styled-header.png)
+   ![スタイル設定ヘッダー — webpack dev server](assets/integrate-spa/styled-header.png)
 
-   更新されたスタイルが&#x200B;**Header**&#x200B;コンポーネントに追加されているのがわかります。
+   これで、更新されたスタイルが **ヘッダー** コンポーネント。
 
 ## AEMへのSPAアップデートのデプロイ
 
-**ヘッダー**&#x200B;に加えられた変更は、現在、**webpack開発サーバー**&#x200B;でのみ表示されます。 更新したSPAをAEMにデプロイして、変更を確認します。
+に加えられた変更 **ヘッダー** は現在、 **webpack dev server**. 更新したSPAをAEMにデプロイして、変更を確認します。
 
-1. **webpack開発サーバー**&#x200B;を停止します。
-2. プロジェクト`/aem-guides-wknd-spa`のルートに移動し、Mavenを使用してAEMにプロジェクトをデプロイします。
+1. を停止します。 **webpack dev server**.
+2. プロジェクトのルートに移動します。 `/aem-guides-wknd-spa` Maven を使用してAEMにプロジェクトをデプロイします。
 
    ```shell
    $ cd ..
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-3. [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)に移動します。 ロゴとスタイルが適用された更新済みの&#x200B;**Header**&#x200B;が表示されます。
+3. に移動します。 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). 更新された **ヘッダー** ロゴとスタイルを適用：
 
-   ![AEMのヘッダーの更新](assets/integrate-spa/final-header-component.png)
+   ![AEMの更新済みヘッダー](assets/integrate-spa/final-header-component.png)
 
    更新されたSPAがAEMになったので、オーサリングを続行できます。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、SPAを更新し、AEMとの統合を確認しました。 **webpack開発サーバー**&#x200B;を使用してAEM JSONモデルAPIに対するSPAを開発する方法が2つあります。
+これで、SPAを更新し、AEMとの統合を確認しました。 これで、 **webpack dev server**.
 
-[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)で完成したコードをいつでも表示したり、ブランチ`Angular/integrate-spa-solution`に切り替えてコードをローカルでチェックアウトしたりできます。
+完成したコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) または、ブランチに切り替えて、コードをローカルでチェックアウトします。 `Angular/integrate-spa-solution`.
 
 ### 次の手順 {#next-steps}
 
-[SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md)  - AEM SPA Editor JS SDKを使用して、AngularコンポーネントをAdobe Experience Manager(AEM)コンポーネントにマッピングする方法を説明します。コンポーネントマッピングを使用すると、作成者は、AEM SPAエディター内で、従来のAEMオーサリングと同様に、SPAコンポーネントを動的に更新できます。
+[SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md) - AEM SPA Editor JS SDK を使用して、AngularコンポーネントをAdobe Experience Manager(AEM) コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、作成者は、従来のSPAオーサリングと同様に、AEM SPAエディター内でAEMコンポーネントを動的に更新できます。

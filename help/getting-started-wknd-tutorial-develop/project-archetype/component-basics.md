@@ -2,7 +2,7 @@
 title: AEM Sites使用の手引き — コンポーネントの基本
 description: シンプルな「HelloWorld」の例を通して、Adobe Experience Manager(AEM)Sites コンポーネントの基盤となるテクノロジーを理解します。 HTL、Sling モデル、クライアント側ライブラリ、オーサーダイアログのトピックを確認しました。
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Developer Tools
 topic: Content Management, Development
@@ -12,7 +12,7 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 4%
@@ -186,7 +186,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
 1. 次の import 文を追加します。
 
    ```java
-   import org.apache.commons.lang.StringUtils;
+   import org.apache.commons.lang3.StringUtils;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 

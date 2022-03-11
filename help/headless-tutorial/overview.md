@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 7%
+source-wordcount: '529'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 
 >[!TIP]
 >
->このチュートリアルは、 **～することで学ぶ**. 詳しくは、次のページを参照してください。 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html?lang=ja). この一連のチュートリアルとジャーニーは互いを補完し合っています。
+>このチュートリアルは、 **～することで学ぶ**. 詳しくは、次のページを参照してください。 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). この一連のチュートリアルとジャーニーは互いを補完し合っています。
 
 ## Tutorials（API 別）
 
@@ -186,7 +186,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>Content Services および REST を使用して、モバイル Android™アプリケーションを強化します。</em>
+    <em>Content Services と REST を使用して、モバイル Android™アプリケーションを強化します。</em>
     </p>
   </td>
   <td>

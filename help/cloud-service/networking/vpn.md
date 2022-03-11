@@ -1,5 +1,5 @@
 ---
-title: 仮想プライベートネットワーク (VPN)
+title: 仮想プライベートネットワーク（VPN）
 description: AEMと VPN をas a Cloud Serviceに接続して、AEMと内部サービスとの間に安全な通信チャネルを作成する方法を説明します。
 version: Cloud Service
 feature: Security
@@ -9,22 +9,26 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 1%
+source-wordcount: '1321'
+ht-degree: 2%
 
 ---
 
-# 仮想プライベートネットワーク (VPN)
+# 仮想プライベートネットワーク（VPN）
 
 AEMと VPN をas a Cloud Serviceに接続して、AEMと内部サービスとの間に安全な通信チャネルを作成する方法を説明します。
 
 ## 仮想プライベートネットワークとは
 
-仮想プライベートネットワーク (VPN) を使用すると、AEMのas a Cloud Serviceのお客様は、Cloud Manager プログラムを既存の [サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 これにより、お客様のネットワーク内のAEMas a Cloud Serviceのサービスとサービス間の安全で制御された接続が可能になります。
+仮想プライベートネットワーク (VPN) を使用すると、AEMas a Cloud Serviceのお客様が接続できます **AEM環境** を既存の [サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 これにより、お客様のネットワーク内のAEMas a Cloud Serviceのサービスとサービス間の安全で制御された接続が可能になります。
 
 Cloud Manager プログラムでは、 __シングル__ ネットワークインフラストラクチャのタイプ。 仮想プライベートネットワークが最も多いことを確認する [適切な種類のネットワークインフラストラクチャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) 次のコマンドを実行する前にAEMas a Cloud Serviceのに対して実行します。
+
+>[!NOTE]
+>
+>ビルド環境を Cloud Manager から VPN に接続することはサポートされていません。 プライベートリポジトリからバイナリアーティファクトにアクセスする必要がある場合は、パブリックインターネット上で使用可能な URL を使用して、セキュリティで保護されたパスワードで保護されたリポジトリを設定する必要があります [ここで説明するように](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
@@ -279,7 +283,7 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
       </p>
     </td>
    <td>
-      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク (VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子メールサービス</a></strong></div>
       <p>
         外部の電子メールサービスに接続するためにAEMを使用する OSGi 設定例です。
