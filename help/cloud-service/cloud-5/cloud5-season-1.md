@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 4fc95c69f3c15122f9e4b87be469f8bc15097042
+source-git-commit: 83757a34cc82159326d3e035b88f018972d5dc27
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-      <img alt="AEM CDN パート 2" src="./imgs/coming-soon.png"/>
+      <a href="./cloud5-aem-cdn-part2.md">
+         <img alt="AEM CDN パート 2" src="./imgs/002-thumb.png"/>
+      </a>
       <div>
-         <strong>AEM CDN の詳細（第 2 部）</strong>
+         <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN の詳細（第 2 部）</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 3 月 11 日
+         第 2 部は、AEMas a Cloud ServiceCDN に関する見解の継続です。 新しい CDN で得られる機能に関して、よくある質問や神話のいくつかに答えます。
       </p>
    </td>     
    </td>   
