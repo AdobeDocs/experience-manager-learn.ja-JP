@@ -10,15 +10,24 @@ hidefromtoc: true
 kt: 9797
 thumbnail: 340760.jpeg
 exl-id: 8b608b05-48ee-434f-8d5a-6c5ff1969dcf
-source-git-commit: ebbd31f7ffe677668bf8d351212b7b2957106595
+source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
 
 # Cloud 5 AEM CDN パート 1
 
-これは、AEMas a Cloud Serviceの一部として提供される CDN に関する深い掘り下げで、独自の CDN を持ち込むことができる内容や、持ち込まないかどうかなどを含みます。 これは 2 のパート 1 です。
+これは、AEMas a Cloud Serviceの一部として提供される CDN に関する深い掘り下げです。これには、独自の CDN を持ち込むかどうかなどが含まれます。 これは 2 のパート 1 です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340760/?quality=12&learn=on)
+
+## このシリーズの第 1 部で説明されているコンテンツ
+
++ AEM CDN [概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
++ Web アプリケーションファイアウォール (WAF) の機能
++ IP 制限
++ DDOS 保護
+
+[パーツ 2 を表示](cloud5-aem-cdn-part2.md)

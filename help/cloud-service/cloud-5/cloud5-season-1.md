@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 83757a34cc82159326d3e035b88f018972d5dc27
+source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -51,8 +51,7 @@ ht-degree: 1%
         <br/>
          第 2 部は、AEMas a Cloud ServiceCDN に関する見解の継続です。 新しい CDN で得られる機能に関して、よくある質問や神話のいくつかに答えます。
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="ログファイルとログ" src="./imgs/coming-soon.png"/>
       <div>
@@ -87,8 +86,7 @@ ht-degree: 1%
         <br/>
          2022 年 4 月 2 日
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="移行（パート 1）" src="./imgs/coming-soon.png"/>
       <div>
@@ -98,6 +96,41 @@ ht-degree: 1%
       <p>
         <br/>
          2022 年 4 月 9 日
+      </p>
+   </td> 
+  </tr>
+<tr>
+   <td>
+      <img alt="移行（パート 2）" src="./imgs/coming-soon.png"/>
+      <div>
+        <strong>移行（パート 2）</strong>        
+         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+      </div>
+      <p>
+        <br/>
+         2022 年 4 月 15 日
+      </p>
+     </td>   
+     <td>
+      <img alt="Dispatcher バリデーター" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Dispatcher バリデーター</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+      </div>
+      <p>
+        <br/>
+         2022 年 4 月 23 日
+      </p>
+   </td>
+     <td>
+      <img alt="インデックス作成と検索に関するヒント" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>インデックス作成と検索に関するヒント</strong>
+         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+      </div>
+      <p>
+        <br/>
+         2022 年 4 月 30 日
       </p>
    </td> 
   </tr>
