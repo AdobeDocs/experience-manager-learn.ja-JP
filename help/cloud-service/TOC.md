@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: ebbd31f7ffe677668bf8d351212b7b2957106595
+source-git-commit: 7994860f6d0ea017aa48e326482bc8e77af6f555
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '703'
 ht-degree: 31%
 
 ---
@@ -227,6 +227,7 @@ ht-degree: 31%
    + [シーズン 1](./cloud-5/cloud5-season-1.md)
    + [AEM CDN Part 1](./cloud-5/cloud5-aem-cdn-part1.md)
    + [AEM CDN パート 2](./cloud-5/cloud5-aem-cdn-part2.md)
+   + [AEM Log Files](./cloud-5/cloud5-aem-log-files.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
