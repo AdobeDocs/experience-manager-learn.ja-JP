@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
+source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -53,14 +53,16 @@ ht-degree: 1%
       </p>
    </td>
      <td>
-      <img alt="ログファイルとログ" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-log-files.md">
+            <img alt="ログファイルとログ" src="./imgs/003-thumb.png"/>
+        </a>
       <div>
-         <strong>ログファイルとログ</strong>
+         <a href="./cloud5-aem-log-files.md"><strong>ログファイルとログ</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 3 月 19 日
+         AEM as a Cloud Serviceでログにアクセスする方法（ユーザーインターフェイス経由でログにアクセスする方法や API からログにアクセスする方法など）の簡単な概要です。
       </p>
    </td> 
   </tr>
