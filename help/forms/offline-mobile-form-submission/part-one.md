@@ -1,36 +1,36 @@
 ---
-title: HTM5フォーム送信時のトリガーAEMワークフロー
-seo-title: HTML5フォーム送信時のトリガーAEMワークフロー
-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
-seo-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
-feature: 'モバイルフォーム '
+title: HTM5 フォーム送信でのトリガーAEMワークフロー — カスタムプロファイルの作成
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
+description: モバイルフォームをオフラインモードで入力し続け、モバイルフォームをトリガーAEMワークフローに送信します
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
+# カスタムプロファイルを作成
 
-# カスタムプロファイルの作成
+ここでは、 [カスタムプロファイル。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDP をHTMLとしてレンダリングします。 デフォルトのプロファイルは、XDP のをHTMLとしてレンダリングするために初期設定で提供されます。 これは、Mobile Forms Rendition サービスのカスタマイズバージョンを表します。 Mobile Form Rendition サービスを使用して、Mobile Formsの外観、動作およびインタラクションをカスタマイズできます。 カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。 次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
 
-ここでは、[カスタムプロファイルを作成します。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDPをHTMLとしてレンダリングします。XDPのをHTMLとしてレンダリングするためのデフォルトのプロファイルが初期設定で提供されます。 これは、Mobile Forms Renditionサービスのカスタマイズバージョンを表します。 Mobile Form Renditionサービスを使用して、Mobile Formsの外観、動作およびインタラクションをカスタマイズできます。 カスタムプロファイルでは、guidebridge APIを使用してモバイルフォームに入力されたデータをキャプチャします。 次に、このデータがカスタムサーブレットに送信され、このサーブレットはインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
-
-`formBridge` JavaScript APIを使用してフォームデータを取得します。 `getDataXML()`メソッドを使用します。
+を使用してフォームデータを取得する `formBridge` JavaScript API。 我々は、 `getDataXML()` メソッド：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
 ```
 
-成功ハンドラーメソッドでは、AEMで実行されているカスタムサーブレットを呼び出します。 このサーブレットは、モバイルフォームのデータを含むインタラクティブpdfをレンダリングして返します
+成功ハンドラーメソッドでは、AEMで実行されているカスタムサーブレットを呼び出します。 このサーブレットは、モバイルフォームのデータを含むインタラクティブ pdf をレンダリングして返します
 
 ```javascript
 var suc = function(obj) {
@@ -61,9 +61,9 @@ var suc = function(obj) {
 }
 ```
 
-## インタラクティブPDFを生成
+## インタラクティブPDF
 
-次に、インタラクティブpdfのレンダリングと呼び出し元のアプリケーションへのpdfの返送を担当するサーブレットコードを示します。 このサーブレットは、カスタムDocumentServices OSGiサービスの`mobileFormToInteractivePdf`メソッドを呼び出します。
+次に、インタラクティブ pdf のレンダリングと呼び出し元のアプリケーションへの pdf の返送を担当するサーブレットコードを示します。 サーブレットがを呼び出します `mobileFormToInteractivePdf` カスタム DocumentServices OSGi サービスのメソッド。
 
 ```java
 import java.io.File;
@@ -123,9 +123,9 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 }
 ```
 
-### インタラクティブPDFをレンダリング
+### インタラクティブのレンダリングPDF
 
-次のコードは、[Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)を使用して、モバイルフォームのデータを使用してインタラクティブPDFをレンダリングします。
+次のコードは、 [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) モバイルフォームのPDFを使用してインタラクティブデータをレンダリングする場合。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-部分的に完成したモバイルフォームからインタラクティブPDFをダウンロードする機能を確認するには、[ここ](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)をクリックしてください。
-PDFがダウンロードされたら、次の手順はPDFをAEMワークフローにトリガーすることです。 このワークフローは、送信されたPDFのデータを結合し、レビュー用に非インタラクティブPDFを生成します。
+部分的に入力されたモバイルフォームからインタラクティブPDFをダウンロードする機能を表示するには、 [ここをクリックしてください](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
+PDFをダウンロードしたら、次の手順では、PDFをAEMワークフローのトリガーに送信します。 このワークフローは、送信されたPDFのデータを結合し、レビュー用の非インタラクティブPDFを生成します。
 
-この使用例用に作成されたカスタムプロファイルは、このチュートリアルアセットの一部として利用できます。
+この使用例で作成したカスタムプロファイルは、このチュートリアルアセットの一部として利用できます。

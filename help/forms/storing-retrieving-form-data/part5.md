@@ -1,23 +1,23 @@
 ---
-title: MySQLデータベースからのフォームデータの格納と取得
+title: MySQL データベースからのフォームデータの保存と取得 — アダプティブフォームテンプレートとページコンポーネントの作成
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
-feature: アダプティブフォーム
+feature: Adaptive Forms
 type: Tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fcef5adc-10fb-42b2-ab46-c7674e94e805
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 3%
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
-# アダプティブフォームのテンプレートとページコンポーネントの作成
+# アダプティブフォームテンプレートとページコンポーネントの作成
 
-次に、この使用例をテストするための新しいアダプティブフォームテンプレートとページコンポーネントを作成します。 この新しいテンプレートを使用して作成されたアダプティブフォームには、フォームデータを保存および取得する機能が備わっています。
-次のビデオでは、新しいアダプティブフォームテンプレートを作成するために必要な手順について説明します
+次に、この使用例をテストするための新しいアダプティブフォームテンプレートとページコンポーネントを作成します。 この新しいテンプレートで作成されたすべてのアダプティブフォームには、フォームデータを保存および取得する機能があります。
+次のビデオでは、新しいアダプティブフォームテンプレートの作成に必要な手順について説明します
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
-

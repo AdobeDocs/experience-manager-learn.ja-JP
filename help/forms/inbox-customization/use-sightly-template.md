@@ -1,6 +1,6 @@
 ---
-title: インボックスのカスタマイズ
-description: sightlyテンプレートを使用して、ワークフローの追加データを表示するカスタム列を追加します
+title: sightly テンプレートを使用したインボックスデータの表示
+description: sightly テンプレートを使用して、ワークフローの追加データを表示するカスタム列を追加します
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -11,23 +11,24 @@ kt: 5830
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '294'
 ht-degree: 8%
 
 ---
 
-# sightlyテンプレートを使用したインボックスデータの表示
+# sightly テンプレートを使用したインボックスデータの表示
 
-sightlyテンプレートを使用して、インボックス列に表示するデータの形式を設定できます。 この例では、「income」列の値に応じてcoral-uiアイコンを表示します。 次のスクリーンショットは、所得列でのアイコンの使用を示しています
+sightly テンプレートを使用すると、インボックス列に表示するデータの形式を設定できます。 この例では、「income」列の値に応じた coral-ui アイコンを表示します。 次のスクリーンショットは、所得列でのアイコンの使用を示しています
 ![income-icons](assets/income-column.PNG)
 
-[カスタムの](assets/sightly-template.zip) coral uiアイコンの表示に使用するsightlyテンプレートは、この記事の一部として提供されています。
+[sightly テンプレート](assets/sightly-template.zip) カスタム coral ui アイコンの表示に使用する方法は、この記事の一部として提供されています。
 
-## Sightlyテンプレート
+## Sightly テンプレート
 
-次に、 sightlyテンプレートを示します。 テンプレート内のコードは、所得に応じてアイコンを表示します。 アイコンは、AEMに付属する[coral uiアイコンライブラリ](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)の一部として使用できます。
+次に、 sightly テンプレートを示します。 テンプレート内のコードには、収入に応じてアイコンが表示されます。 アイコンは、 [coral ui アイコンライブラリ](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) AEMに付属しています。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -44,9 +45,9 @@ sightlyテンプレートを使用して、インボックス列に表示する�
 
 ## サービスの実装
 
-次のコードは、所得列を表示するサービス実装です。
+次のコードは、所得列を表示するためのサービス実装です。
 
-12行目は、列をsightlyテンプレートに関連付けます
+行 12 は、列を sightly テンプレートに関連付けます
 
 ```java
 import java.util.Map;
@@ -81,17 +82,17 @@ return val;
 
 >[!NOTE]
 >
->この記事では、このシリーズの[前の記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)の[サンプルワークフロー](assets/review-workflow.zip)と[サンプルフォーム](assets/snap-form.zip)をインストール済みであることを前提としています。
+>この記事では、 [サンプルワークフロー](assets/review-workflow.zip) および [サンプルフォーム](assets/snap-form.zip) から [前の記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) を参照してください。
 
-* [crxに管理者ユーザーとしてログインします。](http://localhost:4502/crx/de/index.jsp)
-* [sightlyテンプレートのインポート](assets/sightly-template.zip)
-* [AEM Webコンソールにログインします。](http://localhost:4502/system/console/bundles)
-* [インボックスカスタマイズバンドルのデプロイと開始](assets/income-column-customization.jar)
+* [管理者ユーザーとして crx にログインします。](http://localhost:4502/crx/de/index.jsp)
+* [sightly テンプレートのインポート](assets/sightly-template.zip)
+* [AEM Web コンソールにログイン](http://localhost:4502/system/console/bundles)
+* [インボックスカスタマイズバンドルをデプロイして開始します](assets/income-column-customization.jar)
 * [インボックスを開く](http://localhost:4502/aem/inbox)
-* 「作成」ボタンの横にある「リスト表示」をクリックして、管理コントロールを開きます。
-* インボックスに所得列を追加し、変更を保存します
+* 「作成」ボタンの横のリスト表示をクリックして、管理コントロールを開きます。
+* インボックスに収益列を追加し、変更を保存します
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* _婚姻状況_&#x200B;を選択し、フォームを送信します
-* [インボックスの表示](http://localhost:4502/aem/inbox)
+* を選択します。 _配偶者の有無_ フォームを送信します。
+* [インボックスを表示](http://localhost:4502/aem/inbox)
 
-フォームを送信すると、トリガーがワークフローに送信され、タスクが「管理者」ユーザーに割り当てられます。 「所得」列に適切なアイコンが表示されます
+フォームを送信すると、トリガーがワークフローに送信され、タスクが「管理者」ユーザーに割り当てられます。 「所得」列の下に適切なアイコンが表示されます。

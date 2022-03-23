@@ -1,31 +1,31 @@
 ---
-title: AEM Formsでのデータソース設定の作成
-seo-title: AEM Formsでのデータソース設定の作成
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第2部です。 このパートでは、RESTベースのデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
-seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第2部です。 このパートでは、RESTベースのデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
+title: AEM Formsでのデータソース設定の作成パート 2
+seo-title: Creating DataSource Configuration in AEM Forms
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 2 部です。 この部分では、REST ベースのデータソースを作成します。  次のビデオでは、データソースを作成する手順について説明します。
+seo-description: This is part 2 of multistep tutorial for creating your first interactive communications document. In this part, we will create a REST backed data source.  The following video walks thru the steps to create the data source.
 uuid: f20abc8d-3512-4a48-9688-524a0dfe732c
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 0e1760ad-c412-4a55-a51a-d0875c55768e
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 11145e87-7eef-4183-ac6f-efc8d35d0670
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 2%
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
-
 # AEM Formsでのデータソース設定の作成{#creating-datasource-configuration-in-aem-forms}
 
-このパートでは、RESTベースのデータソースを作成します。  次のビデオでは、データソースの作成手順について説明します。
+この部分では、REST ベースのデータソースを作成します。  次のビデオでは、データソースを作成する手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22344/?quality=9&learn=on)
 
-このチュートリアルに関連するアセットの一部として提供されているSwaggerファイルを使用してください。 アセットは、このチュートリアルの[はじめに](introduction.md)で入手できます。
+このチュートリアルに関連するアセットの一部として提供された Swagger ファイルを使用してください。 アセットは、 [はじめに](introduction.md) を参照してください。

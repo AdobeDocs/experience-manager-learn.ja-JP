@@ -1,28 +1,31 @@
 ---
-title: インボックスのカスタマイズ
-description: 'ワークフローデータに基づいて新しい列を追加し、インボックスをカスタマイズする '
-feature: アダプティブフォーム
+title: AEM インボックス
+description: ワークフローデータに基づいて新しい列を追加してインボックスをカスタマイズ
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 25%
+source-wordcount: '201'
+ht-degree: 29%
 
 ---
 
 # AEM インボックス
 
-AEM Inbox :Formsワークフローを含む様々なAEMコンポーネントからの通知とタスクを統合します。 タスクを割り当てステップを含む Forms ワークフローがトリガーされると、関連するアプリケーションが担当者のインボックスにタスクとしてリストされます。インボックスのユーザーインターフェイスでは、リストビューまたはカレンダービューでタスクを表示できます。ビューの設定もできます。様々なパラメーターに基づいてタスクをフィルタリングできます
-Experience Managerのインボックスをカスタマイズして、列のデフォルトのタイトルの変更、列の位置の並べ替え、ワークフローのデータに基づく追加の列の表示を行うことができます
+AEM受信トレイFormsワークフローを含む様々なAEMコンポーネントからの通知とタスクを統合します。 タスクを割り当てステップを含む Forms ワークフローがトリガーされると、関連するアプリケーションが担当者のインボックスにタスクとしてリストされます。
 
+インボックスのユーザーインターフェイスでは、リストビューまたはカレンダービューでタスクを表示できます。ビューの設定もできます。様々なパラメーターに基づいて、タスクをフィルターできます。
+
+Experience Managerインボックスをカスタマイズして、列のデフォルトのタイトルを変更したり、列の位置を並べ替えたり、ワークフローのデータに基づいて追加の列を表示したりできます。
 
 >[!NOTE]
 >
@@ -30,22 +33,22 @@ Experience Managerのインボックスをカスタマイズして、列のデ�
 
 ## 列のカスタマイズ
 
-[AEM ](http://localhost:4502/aem/inbox)
-inboxを起動リスト表示アイコンをクリックし、下のスクリーンショットに表示され _る「_  __ 管理コントロール」を選択して、Admin Controlを開きます。
+[Launch AEM inbox](http://localhost:4502/aem/inbox)
+Admin Control を開くには、 _リスト表示_ アイコンと選択 _管理コントロール_ 下のスクリーンショットに示すように
 
 ![admin-control](assets/open-customization.png)
 
-列のカスタマイズUIでは、次の操作を実行できます
+列のカスタマイズ UI で、次の操作を実行できます
 
-* 列の削除
+* 列を削除
 * 列の並べ替え
-* 列名の変更
+* 列名を変更
 
 ## ブランディングのカスタマイズ
 
 ブランディングのカスタマイズでは、次の操作を実行できます
 
-* 組織のロゴを追加する
+* 組織のロゴを追加
 * ヘッダーテキストをカスタマイズ
 * ヘルプリンクのカスタマイズ
 * ナビゲーションオプションを非表示にする

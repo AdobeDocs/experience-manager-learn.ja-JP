@@ -1,10 +1,10 @@
 ---
-title: Tomcatのインストールと設定
-seo-title: Tomcatのインストールと設定
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第1部です。この部分では、TOMCATをインストールし、TOMCATにsampleRest.warファイルをデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基礎となります。
-seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第1部です。この部分では、TOMCATをインストールし、TOMCATにsampleRest.warファイルをデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基礎となります。
+title: Tomcat のインストールと設定ビデオ
+seo-title: Install and Configure Tomcat
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 1 部です。この部分では、TOMCAT をインストールし、TOMCAT に sampleRest.war ファイルをデプロイします。 この WAR ファイルで公開される REST エンドポイントは、データソースとフォームデータモデルの基礎となります。
+seo-description: This is part 1 of multistep tutorial for creating your first interactive communications document.In this part, we will install TOMCAT and deploy the sampleRest.war file in TOMCAT. The REST endpoint exposed by this WAR file will be the basis for our Data Source and Form Data Model.
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,39 +12,39 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 1%
+source-wordcount: '270'
+ht-degree: 0%
 
 ---
 
+# Tomcat のインストールと設定 {#install-and-configure-tomcat}
 
-# Tomcatのインストールと設定 {#install-and-configure-tomcat}
-
-このパートでは、TOMCATをインストールし、TOMCATにsampleRest.warファイルをデプロイします。 このWARファイルで公開されるRESTエンドポイントは、データソースとフォームデータモデルの基礎となります。
+ここでは、TOMCAT をインストールし、TOMCAT に sampleRest.war ファイルをデプロイします。 この WAR ファイルで公開される REST エンドポイントは、データソースとフォームデータモデルの基礎となります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
 
-Tomcatを設定するには、次の手順に従います。
+Tomcat を設定するには、次の手順に従います。
 
-1. JDK1.8をダウンロードしてインストールします。
-2. JAVA_HOMEをJDK1.8を指すように設定します。
-3. [tomcat](https://tomcat.apache.org/)をダウンロードします。 このwarファイルは、Tomcatバージョン8.5.xおよび9.0.xでテストされています。
-4. 好みのTomcatバージョンをダウンロードします。 64ビットのwindows zipはコアセクションでダウンロードできます。
-5. c:\tomcatフォルダーにコンテンツを解凍します。
-6. Tomcatのバージョンに応じて、cドライブ&#x200B;**c:\tomcat\apache-tomcat-8.5.27**&#x200B;に次のような内容が表示されます。
-7. 「CATALINA_HOME」という環境変数を作成し、その値をtomcatインストールフォルダの例c:\tomcat\apache- tomcat-8.5.27に設定します。
-8. Tomcatインストール環境のwebappsフォルダーにSampleRest.warファイルをコピーします。
+1. JDK1.8 をダウンロードしてインストールします。
+2. JAVA_HOME を JDK1.8 を指すように設定します。
+3. ダウンロード [tomcat](https://tomcat.apache.org/). この war ファイルは、Tomcat バージョン 8.5.x および 9.0.x でテストされています。
+4. 好みの tomcat バージョンをダウンロードします。 64 ビット版の windows zip は、コアセクションでダウンロードできます。
+5. コンテンツをc:\tomcatに解凍します。
+6. c ドライブには次のようなものが表示されます。 **c:\tomcat\apache-tomcat-8.5.27** tomcat のバージョンに応じて
+7. 「CATALINA_HOME」という環境変数を作成し、その値を tomcat のインストールフォルダの例c:\tomcat\apache- tomcat-8.5.27 に設定します。
+8. Tomcat インストールの webapps フォルダーに SampleRest.war ファイルをコピーします。
 9. 新しいコマンドプロンプトウィンドウを起動します。
-10. &lt;tomcat install folder>\binに移動し、 startup.batを実行します。
-11. Tomcatが起動したら、[ここ](http://localhost:8080/SampleRest/webapi/getStatement/9586)をクリックして、WARファイルで公開されたエンドポイントをテストします。
-12. この呼び出しの結果として、サンプルデータが取得されます。
+10. に移動します。 &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin をクリックし、startup.bat を実行します。
+11. Tomcat が起動したら、次の方法で WAR ファイルによって公開されたエンドポイントをテストします。 [ここをクリック](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+12. この呼び出しの結果、サンプルデータが取得されるはずです。
 
-これで完了です !!!. tomcatを設定し、SampleRest.warファイルをデプロイしました。
+おめでとう!!!。 tomcat を設定し、SampleRest.war ファイルをデプロイしました。
 
-次のビデオでは、Tomcatでのサンプルアプリケーションのデプロイメントを説明します
+次のビデオでは、Tomcat でのサンプルアプリケーションのデプロイメントについて説明します
 >[!VIDEO](https://video.tv.adobe.com/v/37815)

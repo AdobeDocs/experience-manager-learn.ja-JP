@@ -1,37 +1,37 @@
 ---
-title: ソリューションのテスト
+title: ソリューションのテスト — 2 つのアプローチのテストに必要な手順
 description: フォームに添付ファイルを追加し、ワークフローをトリガーして電子メールを送信し、ソリューションをテストします。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ce9b9203-b44c-4a52-821c-ae76e93312d2
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 8%
+source-wordcount: '261'
+ht-degree: 7%
 
 ---
 
+# 2 つのアプローチをテストするために必要な手順
 
-# 2つのアプローチをテストするために必要な手順
+* 設定 [Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) AEM Formsサーバーから電子メールを送信するには
+* をデプロイします。 [formattachments](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar) ～を用いたバンドル [felix web コンソール](http://localhost:4502/system/console/bundles)
 
-* AEM Formsサーバーから電子メールを送信するように[Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service)を設定します
-* [felix Webコンソール](http://localhost:4502/system/console/bundles)を使用して[formattachments](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar)バンドルをデプロイします。
-
-## zipファイルを電子メールの添付ファイルとして送信
-
+## Zip ファイルを電子メールの添付ファイルとして送信
 
 
-* [SendFormAttachmentsViaEmailワークフローをデプロイします。](assets/zipped-form-attachments-model.zip) このワークフローでは、電子メールの送信コンポーネントを使用して、カスタムプロセスステップによってpayloadフォルダーに保存されたzipped_attachments.zipファイルを送信します。必要に応じて、送信者と受信者のEメールアドレスを設定します。
-* [サンプルフォーム](assets/zip-form-attachments-form.zip)を[FormsとドキュメントのUI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)から読み込みます。
-* [フォームをプ](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) レビューし、添付ファイルを2つ追加してフォームを送信します。
-* ワークフローがトリガーされ、zipファイルを含む電子メール通知が送信されます。
+
+* をデプロイします。 [SendFormAttachmentsViaEmail ワークフロー。](assets/zipped-form-attachments-model.zip) このワークフローでは、電子メールの送信コンポーネントを使用して、カスタムプロセスステップで payload フォルダーに保存された zipped_attachments.zip ファイルを送信します。 必要に応じて、送信者と受信者の E メールアドレスを設定します。
+* 次をインポート： [サンプルフォーム](assets/zip-form-attachments-form.zip) から [Formsとドキュメント UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) 添付ファイルを 2 つ追加し、フォームを送信します。
+* ワークフローがトリガーされ、zip ファイルを含む電子メール通知が送信されます。
 
 ## フォームの添付ファイルを個々のファイルとして送信する
 
-* [SendFormワークフローをデプロイします。](assets/send-form-attachments-model.zip) このワークフローでは、「電子メールを送信」コンポーネントを使用して、フォームの添付ファイルを個々のファイルとして送信します。必要に応じて、送信者と受信者のEメールアドレスを設定します。
-* [サンプルフォーム](assets/send-list-attachments-form.zip)を[FormsとドキュメントのUI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)から読み込みます。
-* [フォームをプ](http://localhost:4502/content/dam/formsanddocuments/sendlistofattachments/jcr:content?wcmmode=disabled) レビューし、添付ファイルを2つ追加してフォームを送信します。
-* ワークフローがトリガーされ、フォームが添付された電子メール通知が送信されます。
+* をデプロイします。 [SendForm ワークフロー。](assets/send-form-attachments-model.zip) このワークフローでは、「電子メールを送信」コンポーネントを使用して、フォームの添付ファイルを個々のファイルとして送信します。 必要に応じて、送信者と受信者の E メールアドレスを設定します。
+* 次をインポート： [サンプルフォーム](assets/send-list-attachments-form.zip) から [Formsとドキュメント UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/sendlistofattachments/jcr:content?wcmmode=disabled) 添付ファイルを 2 つ追加し、フォームを送信します。
+* ワークフローがトリガーされ、フォームの添付ファイルを含む電子メール通知が送信されます。

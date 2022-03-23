@@ -1,30 +1,30 @@
 ---
-title: AEM FormsでのOutputおよびForms Servicesを使用した開発
-description: AEM FormsでのOutputおよびForms Service APIの使用
-feature: Forms サービス
+title: AEM FormsのForms Services を使用したインタラクティブPDFのレンダリング
+description: AEM FormsでForms Service API を使用してインタラクティブPDFをレンダリングする
+feature: Forms Service
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
+# AEM FormsのForms Services を使用したインタラクティブPDFのレンダリング
 
-# AEM FormsでForms Servicesを使用したインタラクティブPDFのレンダリング
-
-AEM FormsでFormsサービスAPIを使用してインタラクティブPDFをレンダリングする
+AEM FormsでForms Service API を使用してインタラクティブPDFをレンダリングする
 
 この記事では、以下のサービスについて見ていきます。
 
-* FormsService - PDFファイルとの間でデータの書き出し/読み込みを行い、xmlデータをxdpテンプレートに結合してインタラクティブpdfを生成する、非常に汎用性の高いサービスです。
+* FormsService -PDFファイルとの間でデータの書き出し/読み込みを行え、xml データを xdp テンプレートに結合してインタラクティブ pdf を生成できる、非常に汎用性の高いサービスです。
 
-AEM Forms APIの公式Javadocは、[こちら](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)を参照してください。
+AEM Forms API の公式 Javadoc は以下のとおりです。 [ここ](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
-次のコードスニペットは、FormsServiceのrenderPDFForm操作を使用してインタラクティブpdfをレンダリングします。 schengen.xdpは、xmlデータのマージに使用されるテンプレートです。
+次のコードスニペットは、FormsService の renderPDFForm 操作を使用してインタラクティブ pdf をレンダリングします。 schengen.xdp は、xml データのマージに使用されるテンプレートです。
 
 ```java
 String uri = "crx:///content/dam/formsanddocuments";
@@ -40,29 +40,27 @@ interactivePDF = formsService.renderPDFForm("schengen.xdp", xmlData, renderOptio
 return interactivePDF;
 ```
 
-1行目：xdpテンプレートを含むフォルダーの場所
+行 1:xdp テンプレートを含むフォルダーの場所
 
-行2 ～ 4:PDFFormRenderOptionsを作成し、そのプロパティを設定します
+行 2-4:PDFFormRenderOptions を作成し、そのプロパティを設定します
 
-7行目：FormsServiceのrenderPDFFormサービス操作を使用してインタラクティブPDFを生成します
+行 7:FormsService の renderPDFForm サービス操作を使用してインタラクティブPDFを生成する
 
-11行目：生成されたインタラクティブpdfを呼び出し元のアプリケーションに返します
+行 11:生成されたインタラクティブ pdf を呼び出し元のアプリケーションに返します
 
-**システム上でサンプルパッケージをテストするには**
-1. [Felix Webコンソールを使用してDocumentServicesサンプルバンドルをダウンロードし、インストールします。](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+**システム上のサンプルパッケージをテストするには**
+1. [Felix Web コンソールを使用して、DocumentServices サンプルバンドルをダウンロードしてインストールします。](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [AEMパッケージマネージャーを使用して、パッケージをダウンロードしてインストールします](assets/downloadinteractivepdffrommobileform.zip)
 
 
 
-1. [configMgrにログインします。](http://localhost:4502/system/console/configMgr)
-1. AdobeGranite CSRF Filterを検索します。
-1. 除外されたセクションに次のパスを追加し、保存します。
+1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
+1. AdobeGranite CSRF Filter を検索します。
+1. 除外されたセクションに次のパスを追加して、保存します。
 1. /bin/generateinteractivepdf
 1. [モバイルフォームを開く](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 2つのフィールドに入力し、「***ダウンロードして入力…」をクリックします。.*** button
-1. インタラクティブpdfがローカルシステムにダウンロードされます
+1. いくつかのフィールドに入力し、 ***ダウンロードして入力….*** button
+1. インタラクティブ pdf がローカルシステムにダウンロードされます
 
 
-サンプルパッケージには、Mobile Formに関連付けられたカスタムプロファイルが含まれています。 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)ファイルを参照してください。 このjspは、モバイルフォームからデータを抽出し、***/bin/generateinteractivepdf***&#x200B;パスにマウントされたサーブレットに対してPOSTリクエストを実行します。 サーブレットは、呼び出し元のアプリケーションにインタラクティブpdfを返します。 customtoolbar.jspのコードは、ファイルをローカルシステムにダウンロードします
-
-
+このサンプルパッケージには、Mobile Form に関連付けられているカスタムプロファイルが含まれています。 詳しくは、 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) ファイル。 この jsp は、モバイルフォームからデータを抽出し、にマウントされたサーブレットへのPOSTリクエストを行います。 ***/bin/generateinteractivepdf*** パス。 サーブレットは、呼び出し元のアプリケーションにインタラクティブ pdf を返します。 次に、customtoolbar.jsp のコードにより、ファイルがローカルシステムにダウンロードされます

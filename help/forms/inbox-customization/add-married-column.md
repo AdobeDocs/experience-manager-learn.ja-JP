@@ -1,37 +1,37 @@
 ---
-title: インボックスのカスタマイズ
-description: ワークフローの追加データを表示するカスタム列の追加
-feature: アダプティブフォーム
+title: カスタム列の追加
+description: ワークフローの追加データを表示するためのカスタム列の追加
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '307'
 ht-degree: 8%
 
 ---
 
-
 # カスタム列の追加
 
-インボックスにワークフローデータを表示するには、ワークフローで変数を定義して設定する必要があります。 変数の値は、タスクをユーザーに割り当てる前に設定する必要があります。 最初に、AEMサーバーにデプロイする準備が整ったサンプルワークフローを用意しました。
+インボックスにワークフローデータを表示するには、ワークフローで変数を定義し、設定する必要があります。 変数の値は、タスクがユーザーに割り当てられる前に設定する必要があります。 優先的に作業を開始するために、AEMサーバーにデプロイする準備が整ったサンプルワークフローを用意しています。
 
 * [AEMにログイン](http://localhost:4502/crx/de/index.jsp)
 * [レビューワークフローのインポート](assets/review-workflow.zip)
 * [ワークフローの確認](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-このワークフローには、2つの変数（isMarriedとincome）が定義され、その値は変数設定コンポーネントを使用して設定されます。 これらの変数は、AEMインボックスに追加する列として使用可能になります
+このワークフローには 2 つの変数（isMarried と income）が定義され、その値は変数設定コンポーネントを使用して設定されます。 これらの変数は、AEMインボックスに追加する列として使用可能になります
 
-## サービスの作成
+## サービスを作成
 
-インボックスに表示する必要がある列ごとに、サービスを書く必要があります。 次のサービスでは、 isMarried変数の値を表示する列を追加できます
+インボックスに表示する必要のある列ごとに、サービスを記述する必要があります。 次のサービスでは、isMarried 変数の値を表示する列を追加できます
 
 ```java
 import com.adobe.cq.inbox.ui.column.Column;
@@ -75,23 +75,23 @@ return isMarried(inboxItem);
 
 >[!NOTE]
 >
->上記のコードを動作させるには、プロジェクトにAEM 6.5.5 Uber.jarを含める必要があります
+>上記のコードを機能させるには、プロジェクトにAEM 6.5.5 Uber.jar を含める必要があります
 
 ![uber-jar](assets/uber-jar.PNG)
 
 ## サーバーでテストする
 
-* [AEM Webコンソールにログインします。](http://localhost:4502/system/console/bundles)
-* [インボックスカスタマイズバンドルのデプロイと開始](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
+* [AEM Web コンソールにログイン](http://localhost:4502/system/console/bundles)
+* [インボックスカスタマイズバンドルをデプロイして開始します](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [インボックスを開く](http://localhost:4502/aem/inbox)
-* _リスト表示_&#x200B;アイコン（「_作成_」ボタンの横）をクリックして、管理コントロールを開きます。
+* 次をクリックして管理コントロールを開く： _リスト表示_ 隣のアイコン _作成_ ボタン
 * 既婚の列をインボックスに追加し、変更を保存する
-* [「フォームとドキュメント」 UIに移動します。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [「作成」メニューから「ファ](assets/snap-form.zip) イルのアップロード」を選択し _て、サンプルフ_ ォームをイン __ ポートします
+* [FormsAndDocuments UI に移動](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [サンプルフォームをインポートします](assets/snap-form.zip) 選択する _ファイルのアップロード_ から _作成_ メニュー
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* _婚姻状況_を選択し、フォームを送信します
-   [インボックスの表示](http://localhost:4502/aem/inbox)
+* を選択します。 _配偶者の有無_ フォームを送信します。
+   [インボックスを表示](http://localhost:4502/aem/inbox)
 
-フォームを送信すると、トリガーがワークフローに送信され、タスクが「管理者」ユーザーに割り当てられます。 このスクリーンショットに示すように、「既婚」列の下に値が表示されます
+フォームを送信すると、トリガーがワークフローに送信され、タスクが「管理者」ユーザーに割り当てられます。 このスクリーンショットに示すように、「Married」列の下に値が表示されます。
 
 ![既婚欄](assets/married-column.PNG)

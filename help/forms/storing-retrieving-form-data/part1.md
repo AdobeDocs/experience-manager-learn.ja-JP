@@ -1,37 +1,38 @@
 ---
-title: MySQLデータベースからのフォームデータの格納と取得
+title: MySQL データベースからのフォームデータの格納と取得 — データソースの設定
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
 version: 6.3,6.4,6.5
-feature: アダプティブフォーム
-topic: 開発
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
 # データソースの設定
 
-AEMで外部データベースとの統合を有効にする方法は多数あります。 データベース統合の最も一般的で標準的な方法の1つは、[configMgr](http://localhost:4502/system/console/configMgr)を通じてApache Sling Connection Pooled DataSource設定プロパティを使用することです。
-最初の手順は、適切な[MySqlドライバー](https://mvnrepository.com/artifact/mysql/mysql-connector-java)をAEMにダウンロードしてデプロイすることです。
-Apache Sling接続プールに入れられたデータソースを作成し、以下のスクリーンショットで指定されているプロパティを指定します。 データベーススキーマは、このチュートリアルアセットの一部として提供されます。
+AEMで外部データベースとの統合を有効にする方法は多数あります。 データベース統合の最も一般的で標準的な方法の 1 つは、Apache Sling 接続プールに入れられたデータソース設定プロパティを、 [configMgr](http://localhost:4502/system/console/configMgr).
+最初の手順は、適切な [MySql ドライバ](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEMの
+Apache Sling Connection Pooled DataSource を作成し、以下のスクリーンショットで指定されているプロパティを指定します。 データベーススキーマは、このチュートリアルアセットの一部として提供されます。
 
 ![data-source](assets/save-continue.PNG)
 
-以下のスクリーンショットに示すように、データベースにはformdataと呼ばれる1つの列と3つの列があります。
+データベースには、以下のスクリーンショットに示すように、3 列の formdata というテーブルが 1 つあります。
 
-![データベース](assets/data-base-tables.PNG)
+![data-base](assets/data-base-tables.PNG)
 
-スキーマを作成するSQLファイルは、[ここから](assets/form-data-db.sql)ダウンロードできます。 MySql Workbenchを使用してこのファイルをインポートし、スキーマとテーブルを作成する必要があります。
+スキーマを作成する SQL ファイルは、次のことができます。 [ここからダウンロード](assets/form-data-db.sql). MySql Workbench を使用してこのファイルをインポートし、スキーマとテーブルを作成する必要があります。
 
 >[!NOTE]
->データソースに&#x200B;**SaveAndContinue**&#x200B;という名前を付けてください。 サンプルコードでは、という名前を使用してデータベースに接続します。
+>データソースに名前を付けてください **SaveAndContinue**. サンプルコードでは、という名前を使用してデータベースに接続します。
 
 | プロパティ名 | 値 |
 | ------------------------|---------------------------------------|
 | Datasource Name | SaveAndContinue |
-| JDBCドライバクラス | com.mysql.cj.jdbc.Driver |
-| JDBC接続uri | jdbc:mysql://localhost:3306/aemformstutorial |
+| JDBC ドライバークラス | com.mysql.cj.jdbc.Driver |
+| JDBC 接続 URI | jdbc:mysql://localhost:3306/aemformstutorial |

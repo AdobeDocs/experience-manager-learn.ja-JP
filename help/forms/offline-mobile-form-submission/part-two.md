@@ -1,33 +1,33 @@
 ---
-title: HTM5フォーム送信時のトリガーAEMワークフロー
-seo-title: HTML5フォーム送信時のトリガーAEMワークフロー
-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
-seo-description: オフラインモードでモバイルフォームの入力を続け、モバイルフォームをトリガーAEMワークフローに送信する
-feature: 'モバイルフォーム '
+title: HTM5 フォーム送信のトリガーAEMワークフロー —PDF送信を処理
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
+description: モバイルフォームをオフラインモードで入力し続け、モバイルフォームをトリガーAEMワークフローに送信します
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
+# PDF送信を処理
 
-# PDF送信の処理
+ここでは、Acrobat/ReaderからのPDF送信を処理するために、AEM パブリッシュで実行するシンプルなサーブレットを作成します。 次に、このサーブレットは、送信されたデータを `nt:file` AEM オーサーのリポジトリ内のノード。
 
-ここでは、Acrobat/ReaderからのPDF送信を処理するために、AEMパブリッシュで実行するシンプルなサーブレットを作成します。 次に、このサーブレットは、AEMオーサーのリポジトリ内の`nt:file`ノードとして送信されたデータを保存するAEMオーサーインスタンスで実行されるサーブレットに対して、HTTPPOSTリクエストを実行します。
-
-次に、PDF送信を処理するサーブレットのコードを示します。 このサーブレットでは、AEMオーサーインスタンスの&#x200B;**/bin/startworkflow**&#x200B;にマウントされたサーブレットへのPOST呼び出しをおこないます。 このサーブレットは、フォームデータをAEMオーサーのリポジトリに保存します。
+次に、サーブレットのコードを示します。このコードはPDF送信を処理します。 このサーブレットで、にマウントされたPOSTに対してサーブレット呼び出しを実行します。 **/bin/startworkflow** （AEM オーサーインスタンス内） このサーブレットは、フォームデータを AEM オーサーのリポジトリに保存します。
 
 
-## AEM Publishサーブレット
+## AEM Publish サーブレット
 
 ```java
 package com.aemforms.handlepdfsubmission.core.servlets;
@@ -102,9 +102,9 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-## AEMオーサーサーブレット
+## AEM Author サーブレット
 
-次の手順では、送信されたデータをAEMオーサーのリポジトリに保存します。 `/bin/startworkflow`にマウントされたサーブレットは、送信されたデータを保存します。
+次の手順では、送信したデータを AEM オーサーのリポジトリに保存します。 次にマウントされたサーブレット： `/bin/startworkflow` 送信されたデータを保存します。
 
 ```java
 import java.io.BufferedReader;
@@ -202,7 +202,6 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-`nt:file`型の新しいリソースが`/content/pdfsubmissions`ノードの下に作成されるたびに、AEMワークフローランチャーがトリガーするように設定されます。 このワークフローは、送信されたデータとxdpテンプレートを結合して、非インタラクティブPDFまたは静的PDFを作成します。 生成されたPDFは、レビューおよび承認のためにユーザーに割り当てられます。
+AEMワークフローランチャーは、タイプの新しいリソースが追加されるたびにトリガーするように設定されます `nt:file` が `/content/pdfsubmissions` ノード。 このワークフローは、送信されたデータを xdpPDFと結合することで、非インタラクティブまたは静的テンプレートを作成します。 生成された PDF は、レビューおよび承認のためにユーザーに割り当てられます。
 
-`/content/pdfsubmissions`ノードの下に送信データを保存するには、`GetResolver` OSGiサービスを使用して、すべてのAEM Formsインストールで利用可能な`fd-service`システムユーザーを使用して送信データを保存します。
-
+送信データをに保存するには `/content/pdfsubmissions` ノードを使用する `GetResolver` OSGi サービスを使用すると、送信されたデータを `fd-service` すべてのAEM Formsインストールで利用可能なシステムユーザー。
