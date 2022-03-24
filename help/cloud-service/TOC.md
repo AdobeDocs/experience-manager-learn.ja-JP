@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 7994860f6d0ea017aa48e326482bc8e77af6f555
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 31%
+source-wordcount: '725'
+ht-degree: 30%
 
 ---
 
@@ -172,6 +172,14 @@ ht-degree: 31%
       + [USC バッチ構成の作成](./forms/formscs-batch-api/configure-usc-batch.md)
       + [バッチ設定を作成](./forms/formscs-batch-api/create-batch-config.md)
       + [バッチを実行](./forms/formscs-batch-api/execute-batch-generate-documents.md)
+   + Forms CS でのPDF操作{#forms-cs-assembler}
+      + [はじめに](./forms/forms-cs-assembler/introduction.md)
+      + [サービス資格情報の作成](./forms/forms-cs-assembler/service-credentials.md)
+      + [JWT トークンを作成](./forms/forms-cs-assembler/create-jwt.md)
+      + [アクセストークンを作成](./forms/forms-cs-assembler/create-access-token.md)
+      + [アセンブリPDFファイル](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [ソリューションをテストする](./forms/forms-cs-assembler/test.md)
+      + [課題](./forms/forms-cs-assembler/challenge.md)
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)

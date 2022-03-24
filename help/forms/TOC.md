@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1657'
 ht-degree: 3%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 3%
    + [2 要素認証](some-useful-integrations/two-factor-authentication.md)
    + [OCR データ抽出](some-useful-integrations/ocr-data-extraction.md)
    + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
+   + [ServiceNow との統合](some-useful-integrations/service-now.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [環境の設定](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -172,7 +173,7 @@ ht-degree: 3%
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
-+ モバイルフォーム送信からのAEMワークフローのトリガー{#offline-mobile-form-submission}
++ Mobileフォーム送信からのAEM Workflow のトリガー{#offline-mobile-form-submission}
    + [はじめに](offline-mobile-form-submission/introduction.md)
    + [カスタムプロファイル](offline-mobile-form-submission/part-one.md)
    + [PDF送信を処理](offline-mobile-form-submission/part-two.md)
@@ -210,7 +211,7 @@ ht-degree: 3%
    + [AEM Formsでの Output とForms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時にPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [モバイルフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
+   + [MobileフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成する](document-services/generate-interactive-dor.md)
    + [Reader拡張資格情報の設定](document-services/configuring-reader-extension-osgi.md)
    + [XDP レンディションでのPDFへの使用権限の適用](document-services/rendering-and-reader-extending-xdp-templates-article.md)
