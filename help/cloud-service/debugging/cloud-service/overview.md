@@ -1,6 +1,6 @@
 ---
-title: AEMをCloud Serviceとしてデバッグ
-description: をセルフサービスで拡張可能なクラウドインフラストラクチャに基づいて構築し、デプロイから実行中のAEMアプリケーションの詳細の取得に至るまで、AEM開発者は、Cloud ServiceとしてのAEMの様々なファセットを理解し、デバッグする方法を理解する必要があります。
+title: デバッグAEM as a Cloud Service
+description: セルフサービスで拡張性の高いクラウドインフラストラクチャを使用すると、AEMの開発者は、AEMas a Cloud Serviceの様々なファセットを理解し、デバッグする方法を理解し、ビルドとデプロイから、実行中のAEMアプリケーションの詳細の取得に至るまで理解する必要があります。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -12,37 +12,37 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 1%
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
-# AEMをCloud Serviceとしてデバッグ
+# デバッグAEM as a Cloud Service
 
-AEM as a Cloud Serviceは、AEMアプリケーションを利用するクラウドネイティブな方法です。 AEM as aCloud Serviceは、セルフサービスで拡張性の高いクラウドインフラストラクチャ上で動作します。AEM開発者は、ビルドとデプロイから実行中のAEMアプリケーションの詳細の取得に至るまで、Cloud ServiceとしてのAEMの様々なファセットを理解し、デバッグする方法を理解する必要があります。
+AEM as a Cloud Serviceは、AEMアプリケーションのクラウドネイティブな利用方法です。 AEMas a Cloud Serviceは、セルフサービス、拡張性、クラウドインフラストラクチャ上で動作します。AEM開発者は、ビルドとデプロイから、実行中のAEMアプリケーションの詳細の取得に至るまで、AEMas a Cloud Serviceの様々なファセットを理解し、デバッグする方法を理解する必要があります。
 
 ## ログ
 
-ログには、AEM as aCloud Serviceでのアプリケーションの機能に関する詳細と、デプロイメントの問題に関するインサイトが記録されます。
+ログには、AEMでのアプリケーションのas a Cloud Service的な機能の詳細と、デプロイメントの問題に関するインサイトが記録されます。
 
-[ログを使用したCloud ServiceとしてのAEMのデバッグ](./logs.md)
+[ログを使用したAEMのas a Cloud Service的なデバッグ](./logs.md)
 
 ## ビルドとデプロイメント
 
-Cloud Managerのパイプラインは、AEMにCloud Serviceとしてデプロイした場合のコード品質と実行可能性を判断するための一連の手順を通じてAEMアプリケーションをデプロイします。 各手順が失敗する可能性があるので、ビルドのデバッグ方法を理解して、の根本原因を特定し、エラーを解決する方法を理解することが重要です。
+Adobe Cloud Manager のパイプラインは、AEM as a Cloud Serviceにデプロイした場合にコードの品質と実行可能性を判断するための一連の手順を通じてAEMアプリケーションをデプロイします。 各手順が失敗する可能性があるので、ビルドのデバッグ方法を理解して、の根本原因を特定し、エラーを解決する方法を理解することが重要です。
 
-[AEM as aCloud Serviceビルドとデプロイメントのデバッグ](./build-and-deployment.md)
+[AEMのas a Cloud Service的なビルドとデプロイメントのデバッグ](./build-and-deployment.md)
 
 ## デベロッパーコンソール
 
-開発者コンソールは、AEMに対する様々な情報とイントロスペクションをCloud Service環境として提供します。この環境は、AEMでのアプリケーションの認識方法と、内でのCloud Serviceとしての機能を理解するのに役立ちます。
+開発者コンソールは、AEM as a Cloud Serviceでのアプリケーションの認識方法と機能を理解するのに役立つ、様々な情報とAEMas a Cloud Service環境の概要を提供します。
 
-[開発者コンソールを使用したCloud ServiceとしてのAEMのデバッグ](./developer-console.md)
+[開発者コンソールでas a Cloud ServiceしたAEMのデバッグ](./developer-console.md)
 
-## CRXDE Lite
+## リポジトリブラウザ
 
-CRXDE Liteは、AEMをCloud Service開発環境としてデバッグするための、従来の強力なツールです。 CRXDE Liteは、すべてのリソースとプロパティの検査、JCRの可変部分の操作、権限の調査、クエリの評価を行うデバッグを支援する一連の機能を提供します。
+リポジトリブラウザーは、AEMの基になるデータストアを表示し、AEMのas a Cloud Service環境を簡単にデバッグできる強力なツールです。 リポジトリブラウザーは、実稼動、ステージング、開発上のAEMのリソースとプロパティ、および作成者、公開、プレビューの各サービスの読み取り専用表示をサポートします。
 
-[CRXDE Liteを使用したCloud ServiceとしてのAEMのデバッグ](./crxde-lite.md)
+[リポジトリブラウザーでas a Cloud ServiceしたAEMのデバッグ](./repository-browser.md)
