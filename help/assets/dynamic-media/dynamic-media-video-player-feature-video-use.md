@@ -8,10 +8,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 697b2c11f91899c56869a24b06c690a8e278df0c
+source-git-commit: 2f8f76b3f7a340784584f967deeea39684bf630e
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 26%
+source-wordcount: '251'
+ht-degree: 25%
 
 ---
 
@@ -30,7 +30,7 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
 
 >[!NOTE]
 >
-> Dynamic Media Hybrid は、2022 年 3 月 15 日以降、Internet Explorer 11 でのビデオストリーミングをサポートしません。 プログレッシブ再生にフォールバックするには、6.5.12 にアップグレードしてください。
+> Dynamic Media Hybrid は、2022 年 3 月 15 日現在、Internet Explorer 11 でのビデオストリーミングをサポートしていません。 IE 11 でのプログレッシブ再生にフォールバックするには、6.5.12 以降にアップグレードしてください。
 
 <table> 
  <thead> 
