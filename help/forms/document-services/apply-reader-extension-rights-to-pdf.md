@@ -1,25 +1,25 @@
 ---
-title: アップロードした PDF への使用権限の適用
-description: PDF への使用権限の適用
+title: アップロードした pdf に使用権限を適用
+description: PDF に使用権限を適用
 version: 6.4,6.5
 feature: Reader Extensions
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
-source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 12%
+source-wordcount: '356'
+ht-degree: 13%
 
 ---
 
 # Reader拡張の適用
 
-Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。「Reader拡張機能」で制御される機能には、ドキュメントにコメントを追加したり、フォームに入力したり、ドキュメントを保存したりする機能があります。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。この機能をテストするには、この [link](https://forms.enablementadobe.com/content/forms/af/applyreaderextensions.html) を試してみてください。
+Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。「Reader拡張機能」で制御される機能には、ドキュメントにコメントを追加したり、フォームに入力したり、ドキュメントを保存したりする機能が含まれます。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
 この使用例を達成するには、次の手順を実行する必要があります。
-* [ユーザー拡張Reader証](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 明書を追 `fd-service` 加します。
+* [Extensions 証明書のReader](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) から `fd-service` ユーザー。
 
 ## カスタム OSGi サービスの作成
 
@@ -69,11 +69,11 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## Reader の拡張PDFをストリーミングするサーブレットの作成
+## Reader 拡張PDFをストリーミングするサーブレットを作成
 
-次の手順では、POSTメソッドを使用してサーブレットを作成し、読み取り用の拡張PDFをユーザーに返します。 この場合、ユーザーは、ファイル・システムにPDFを保存するように求められます。 これは、PDFが動的PDFとしてレンダリングされ、ブラウザに付属の pdf ビューアでは動的 pdf は処理されないためです。
+次の手順では、POSTメソッドを使用してサーブレットを作成し、読み取り用拡張PDFをユーザーに返します。 この場合、ユーザーは、ファイル・システムにPDFを保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザーに付属の pdf ビューアではダイナミック pdf が処理されないためです。
 
-次に、サーブレットのコードを示します。 このサーブレットは、アダプティブフォームの customsubmit アクションから呼び出されます。
+次に、サーブレットのコードを示します。 サーブレットは、アダプティブフォームの customsubmit アクションから呼び出されます。
 サーブレットは、UsageRights オブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてプロパティを設定します。 次に、サーブレットが、この目的で作成されたサービスの applyUsageRights メソッドを呼び出します。
 
 ```java
@@ -192,12 +192,12 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 }
 ```
 
-ローカルサーバーでこれをテストするには、次の手順に従います。
+ローカルサーバーでこれをテストするには、次の手順に従ってください。
 1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [ares.ares.core-ares バンドルをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これには、使用権限を適用し、PDF をストリーミング戻すためのカスタムサービスとサーブレットが含まれています
-1. [クライアントライブラリとカスタム送信をインポートします](assets/applyaresdemo.zip)
+1. [ares.ares.core-ares バンドルをダウンロードしてインストールします。](assets/ares.ares.core-ares.jar). これには、使用権限を適用し、PDF をストリーミングバックするカスタムサービスとサーブレットが含まれています
+1. [クライアントライブラリとカスタム送信を読み込む](assets/applyaresdemo.zip)
 1. [アダプティブフォームの読み込み](assets/applyaresform.zip)
 1. Reader拡張証明書を「fd-service」ユーザーに追加します。 エイリアスが「ares」であることを確認します。
-1. [アダプティブフォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. 適切な権限を選択し、PDF・ファイルをアップロード
+1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
+1. 適切な権限を選択し、PDFファイルをアップロード
 1. 「送信」をクリックして、Reader拡張PDFを取得

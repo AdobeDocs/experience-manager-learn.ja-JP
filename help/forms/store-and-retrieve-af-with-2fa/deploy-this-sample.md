@@ -9,62 +9,61 @@ thumbnail: 6602.jpg
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: cdfae631-86d7-438f-9baf-afd621802723
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '376'
 ht-degree: 1%
 
 ---
 
-
-
 # サンプルのデプロイ
 
-この使用例をシステムで動作させるには、次の手順に従ってください。
+このユースケースをシステムで動作させるには、次の手順に従ってください。
 
 >[!NOTE]
->ポート4502でAEM Formsを実行していると想定されます。
+>ポート 4502 でAEM Formsを実行していると想定されます。
 
 
-## データベースの作成
+## データベースを作成
 
-このサンプルでは、MySQLデータベースを使用してアダプティブフォームデータを保存します。 スキーマファイル](assets/data-base-schema.sql)をMySQL Workbenchに読み込んで、[データベーススキーマを作成する必要があります。
+このサンプルでは、MySQL データベースを使用してアダプティブフォームのデータを保存します。 次を作成する必要があります： [スキーマファイルのインポートによるデータベーススキーマ](assets/data-base-schema.sql) を MySQL Workbench に追加します。
 
-## データソースの作成
+## データソースを作成
 
-**StoreAndRetrieveAfData**&#x200B;というデータソースを作成する必要があります。 OSGiバンドル内のコードは、このデータソース名を使用します
+という名前のデータソースを作成する必要があります。 **StoreAndRetrieveAfData**. OSGi バンドル内のコードは、このデータソース名を使用します
 
 ## フォームデータモデルの作成
 
-フォームデータモデルは、**StoreAndRetrieveAfData**&#x200B;というこのデータソースに基づいて作成する必要があります。 このフォームデータモデルは、アプリケーションIDに関連付けられた携帯電話番号を取得するために使用されます。 フォームデータモデルは、[ここからダウンロードできます。](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+フォームデータモデルは、このデータソースに基づいて作成される必要があります。 **StoreAndRetrieveAfData**. このフォームデータモデルは、アプリケーション ID に関連付けられた携帯電話番号を取得するために使用されます。 フォームデータモデルは、 [ここからダウンロードしました。](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
-## Nexmoを使用した開発者アカウントの作成
+## Nexmo を使用した開発者アカウントの作成
 
-OTPコードを送信および検証するための[Nexmo](https://dashboard.nexmo.com/)の開発者アカウントを作成します。 APIキーとAPI秘密鍵をメモしておきます。 データソースとフォームのデータモデルは、このサービスに対して既に作成されており、前の手順で説明したアセットに含まれています。
+で開発者アカウントを作成します。 [Nexmo](https://dashboard.nexmo.com/) OTP コードの送信と検証を行う。 API キーと API 秘密鍵をメモしておきます。 データソースとフォームデータモデルは、このサービスに対して既に作成されており、前の手順で説明したアセットに含まれています。
 
-## 次のOSGiバンドルをデプロイします。
+## 次の OSGi バンドルをデプロイします。
 
-データベース](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)からデータを保存および取得する[コードを含むバンドルをデプロイします。
-[developing-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip)をダウンロードして解凍します。
-Felix Webコンソールを使用してDevelopingWithServiceUser.jarファイルをデプロイします。
+を持つバンドルをデプロイします。 [データベースのデータを保存して取得するためのコード](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
+をダウンロードして展開します。 [developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
+Felix Web コンソールを使用して DevelopingWithServiceUser.jar ファイルをデプロイします。
 
 ## クライアントライブラリのデプロイ
 
-このサンプルでは、2つのクライアントライブラリを使用しています。 これらの[クライアントライブラリ](assets/client-libraries.zip)をAEMに読み込みます。
+このサンプルでは、2 つのクライアントライブラリを使用しています。 インポート [クライアントライブラリ](assets/client-libraries.zip) AEMに
 
 ## カスタムアダプティブフォームテンプレートの読み込み
 
-このデモで使用されるサンプルフォームは、カスタムテンプレートに基づいています。 [カスタムテンプレートをAEM](assets/custom-template-with-page-component.zip)に読み込みます。
+このデモで使用されるサンプルフォームは、カスタムテンプレートに基づいています。 次をインポート： [AEMのカスタムテンプレート](assets/custom-template-with-page-component.zip)
 
 ## サンプルのアダプティブフォームを読み込む
 
-このサンプルを構成する2つのフォームをAEMに読み込む必要があります。 サンプルフォームは、[こちら](assets/sample-forms.zip)からダウンロードできます。
+このサンプルを構成する 2 つのフォームをAEMに読み込む必要があります。 サンプルフォームは、 [ここからダウンロード](assets/sample-forms.zip)
 
-[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html)を編集モードで開きます。 アダプティブフォーム内の該当するフィールドに、APIキーとAPI秘密鍵の値を指定します。
+を開きます。 [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) 編集モードで。 アダプティブフォーム内の適切なフィールドに、 API キーと API 秘密鍵の値を指定します。
 
-## ソリューションのテスト
+## ソリューションをテストする
 
-[StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)をプレビューします。
+プレビュー [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
 国コードを含む携帯電話番号を入力し、ユーザーの詳細を入力して添付ファイルを追加します。 「保存して終了」ボタンをクリックして、アダプティブフォームとその添付ファイルを保存します
 
 

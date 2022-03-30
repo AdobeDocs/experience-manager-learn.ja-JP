@@ -8,10 +8,10 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 8%
+source-wordcount: '438'
+ht-degree: 3%
 
 ---
 
@@ -33,22 +33,18 @@ AEM Modernization ツールは、編集可能なテンプレート、AEM Core WC
 + AEM 6.x の実稼動環境を複製してAEM Modernization ツールを実行する
 + をダウンロードしてインストールする [最新のAEM Modernizations ツール](https://github.com/adobe/aem-modernize-tools/releases/latest) パッケージマネージャーを使用したAEM 6.x の実稼動クローン
 
-+ [ページ構造コンバーター](https://opensource.adobe.com/aem-modernize-tools/pages/tools/page-structure.html) レイアウトコンテナを使用して、既存のページコンテンツを静的テンプレートからマッピングされた編集可能テンプレートに更新します
++ [ページ構造コンバーター](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) レイアウトコンテナを使用して、既存のページコンテンツを静的テンプレートからマッピングされた編集可能テンプレートに更新します
    + OSGi 設定を使用してコンバージョンルールを定義する
    + 既存のページに対してページ構造コンバーターを実行する
 
-+ [コンポーネントコンバータ](https://opensource.adobe.com/aem-modernize-tools/pages/tools/component.html) レイアウトコンテナを使用して、既存のページコンテンツを静的テンプレートからマッピングされた編集可能テンプレートに更新します
++ [コンポーネントコンバータ](https://opensource.adobe.com/aem-modernize-tools/pages/component/about.html) レイアウトコンテナを使用して、既存のページコンテンツを静的テンプレートからマッピングされた編集可能テンプレートに更新します
    + JCR ノード定義/XML を使用して変換ルールを定義
    + 既存のページに対してコンポーネントコンバーターツールを実行する
 
-+ [ポリシーインポーター](https://opensource.adobe.com/aem-modernize-tools/pages/tools/policy-importer.html) デザイン設定からポリシーを作成します
++ [ポリシーインポーター](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html) デザイン設定からポリシーを作成します
    + JCR ノード定義/XML を使用して変換ルールを定義する
    + 既存のデザイン定義に対してポリシーインポーターを実行する
    + インポートしたポリシーのAEMコンポーネントおよびコンテナへの適用
-
-+ [ダイアログコンバータ](https://opensource.adobe.com/aem-modernize-tools/pages/tools/dialog.html) Classic(ExtJS) および CoralUI 2 ベースのコンポーネントダイアログを CoralUI 3 TouchUI ベースのダイアログに変換します。
-   + 既存の ExtJS または Coral2 UI ベースのダイアログに対して Dialog Converter ツールを実行します。
-   + 変換されたダイアログを Git リポジトリに同期
 
 ## 実践練習
 
@@ -94,6 +90,5 @@ AEM Modernization ツールは、編集可能なテンプレート、AEM Core WC
 + [AEM Gems - AEM Modernization Suite の概要](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 
-
-1. ローカルCloud ServiceSDK に、新しく最新化された wknd-legacy サイトをデプロイします。 次の場所からダウンロードできます。
-+ [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm).
+1. ローカルAEM SDK に、新しく最新化された wknd-legacy サイトをデプロイします。 AEM ASK は次の場所からダウンロードできます。
++ [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
