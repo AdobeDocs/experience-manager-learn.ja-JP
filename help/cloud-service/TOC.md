@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 29%
+source-wordcount: '726'
+ht-degree: 30%
 
 ---
 
@@ -214,7 +214,7 @@ ht-degree: 29%
    + 設定{#set-up}
       + [アカウントとサービスのプロビジョニング](./asset-compute/set-up/accounts-and-services.md)
       + [ローカル開発環境](./asset-compute/set-up/development-environment.md)
-      + [AdobeProject Firefly](./asset-compute/set-up/firefly.md)
+      + [App Builder](./asset-compute/set-up/app-builder.md)
    + 開発{#develop}
       + [asset computeプロジェクト](./asset-compute/develop/project.md)
       + [環境変数の設定](./asset-compute/develop/environment-variables.md)

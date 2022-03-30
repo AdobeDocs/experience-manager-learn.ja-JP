@@ -8,9 +8,9 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 136049776140746c61d42ad1496df15a2d226e3a
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -29,11 +29,11 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
 
 1. コマンドラインから、プロジェクトを含むフォルダに移動します。
 1. コマンドラインから、を実行します。 `aio app init` をクリックして、インタラクティブなプロジェクトの生成 CLI を開始します。
-   + このコマンドは、Web ブラウザに対して認証を求めるメッセージを表示するAdobe I/Oを生成します。存在する場合は、 [必要なAdobe サービスと製品](../set-up/accounts-and-services.md). ログインできない場合は、次の手順に従ってください。 [プロジェクトの生成方法に関する以下の手順](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   + このコマンドは、Web ブラウザに対して認証を求めるメッセージを表示するAdobe I/Oを生成します。存在する場合は、 [必要なAdobe サービスと製品](../set-up/accounts-and-services.md). ログインできない場合は、次の手順に従ってください。 [プロジェクトの生成方法に関する以下の手順](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __組織を選択__
-   + AEM as a Cloud Serviceを持つAdobe組織を選択します。Project Firefly は次の環境に登録されています。
+   + AEM as a Cloud Serviceが登録されているAdobe組織を選択します。App Builder は
 1. __プロジェクトを選択__
-   + プロジェクトを探して選択します。 これは [プロジェクトタイトル](../set-up/firefly.md) Firefly プロジェクトテンプレートから作成したもの ( この場合は `WKND AEM Asset Compute`
+   + プロジェクトを探して選択します。 これは [プロジェクトタイトル](../set-up/app-builder.md) App Builder プロジェクトテンプレートから作成。この場合は `WKND AEM Asset Compute`
 1. __ワークスペースを選択__
    + を選択します。 `Development` workspace
 1. __このプロジェクトに対して有効にするAdobe I/Oアプリの機能を教えてください。 含めるコンポーネントを選択__
@@ -65,30 +65,6 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
 
 > 注意
 >  ファイルには資格情報が含まれています。プロジェクト内にファイルを保存する場合は、必ず `.gitignore` ファイルを共有しないように設定します。 同じことが `.env` file — これらの資格情報ファイルを共有したり、Git に保存したりしないでください。
-
-## プロジェクトの詳細を確認する
-
-生成されるAsset computeプロジェクトは、専用のAdobeProject Firefly プロジェクトとして使用される Node.js プロジェクトです。 次の構造要素は、プロジェクトに固有のAsset computeです。
-
-+ `/actions` にはサブフォルダが含まれ、各サブフォルダはAsset computeワーカーを定義します。
-   + `/actions/<worker-name>/index.js` は、このワーカーの作業を実行するために使用する JavaScript を定義します。
-      + フォルダー名 `worker` はデフォルトで、に登録されている限り、何でもかまいません `manifest.yml`.
-      + 以下で複数の作業者フォルダを定義できます。 `/actions` 必要に応じて、 `manifest.yml`.
-+ `/test/asset-compute` には、各ワーカーのテストスイートが含まれます。 次に類似 `/actions` フォルダー `/test/asset-compute` には複数のサブフォルダーを含めることができ、それぞれがテストするワーカーに対応します。
-   + `/test/asset-compute/worker`は、特定のワーカーのテストスイートを表し、特定のテストケースを表すサブフォルダーと、テスト入力、パラメーター、および期待される出力が含まれます。
-+ `/build` には、テストケース実行時の出力、ログおよびアーティファクトのAsset computeが含まれます。
-+ `/manifest.yml` プロジェクトが提供するAsset computeワーカーを定義します。 AEM as a Cloud Serviceで使用できるようにするには、各ワーカー実装をこのファイルに列挙する必要があります。
-+ `/console.json` Adobe I/O設定を定義
-   + このファイルは、 `aio app use` コマンドを使用します。
-+ `/.aio` には、aio CLI ツールで使用される設定が含まれています。
-   + このファイルは、 `aio app use` コマンドを使用します。
-+ `/.env` は、 `key=value` 構文およびには、共有すべきでないシークレットが含まれています。 これらのシークレットを保護するために、このファイルは Git にチェックインせず、プロジェクトのデフォルト設定で無視する必要があります `.gitignore` ファイル。
-   + このファイルは、 `aio app use` コマンドを使用します。
-   + このファイルで定義された変数は、 [変数のエクスポート](../deploy/runtime.md) コマンドライン上で
-
-プロジェクト構造のレビューの詳細については、 [AdobeProject Firefly プロジェクトの詳細](https://www.adobe.io/project-firefly/docs/guides/).
-
-開発の大部分は `/actions` ワーカー実装を作成するフォルダー、および `/test/asset-compute` カスタムAsset computeワーカーのテストを作成中
 
 ## GitHub のasset computeプロジェクト
 
