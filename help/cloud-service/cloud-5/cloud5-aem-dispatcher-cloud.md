@@ -8,10 +8,10 @@ kt: 10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
-source-git-commit: 8212bdddb35fe015efbea897b72b00df3787b120
+source-git-commit: cc4b565aeeaa1419138d459c2d144e944ffb0e67
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 10%
+source-wordcount: '102'
+ht-degree: 13%
 
 ---
 
@@ -24,9 +24,7 @@ Darin と James は、AMS/On-Prem とのベストプラクティスや違いな�
 
 ## このビデオで扱うコンテンツ
 
-+ ログファイル [概要](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
-+ UI を使用したログファイルへのアクセス
-+ AdobeCLI の使用
-   + [Adobe I/O拡張 CLI](https://github.com/adobe/aio-cli)
-   + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
-+ ログファイルの追跡
++ クラウドサービス環境への dispatcher ファイルのデプロイ
+   + [移行ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html?lang=ja)
+   + [ブログ](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
++ [移行ツール](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
