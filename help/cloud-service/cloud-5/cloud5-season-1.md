@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
+source-git-commit: cc434164a4474b71f23653f33cb7e3d99c271595
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
@@ -81,14 +81,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-      <img alt="クラウド内の Dispatcher" src="./imgs/coming-soon.png"/>
+      <a href="./cloud5-aem-dispatcher-cloud.md">
+      <img alt="クラウド内の Dispatcher" src="./imgs/005-thumb.png"/>
+       </a>  
       <div>
-         <strong>クラウド内の Dispatcher</strong>
+        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>クラウド内の Dispatcher</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 4 月 2 日
+        Darin と James は、AMS/On-Prem とのベストプラクティスや違いなど、AEM Cloud の Dispatcher について話し合います。 
       </p>
    </td>
      <td>
@@ -138,4 +140,18 @@ ht-degree: 1%
       </p>
    </td> 
   </tr>
+    <tr>
+        <td>
+            <img alt="Adobeアプリビルダー" src="./imgs/coming-soon.png"/>
+            <div>
+                <strong>移行（パート 2）</strong><br/>        
+                <em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;スペシャルゲスト</em>
+            </div>
+            <p><br/>
+                2022 年 5 月 7 日
+            </p>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
