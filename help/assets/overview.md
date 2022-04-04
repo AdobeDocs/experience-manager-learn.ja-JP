@@ -3,10 +3,10 @@ title: AEM Assets のビデオおよびチュートリアル
 description: Adobe Experience Manager Assets のビデオとチュートリアルのコレクションです
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: b7ff3e9abd22bb0c3d791ec3ac7da3562e849912
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 17%
+source-wordcount: '186'
+ht-degree: 20%
 
 ---
 
@@ -14,27 +14,11 @@ ht-degree: 17%
 
 Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できる、AEM Platform のデジタルアセット管理ツールです。 このユーザーガイドには、AEM Assetsの様々な機能に関するビデオとチュートリアルが含まれています。
 
-## 新機能
+## AEM Assetsウォークスルー
 
-* **[関連付けと関連付け解除（ビデオ）](./authoring/relate-unrelate.md)**
+AEM Assetsのこのエンドツーエンドのウォークスルーで、AEM Assetsの概要と、組織のビジネス目標の達成にがどのように使用されるかを説明します。
 
-   *AEMでアセット間の関係を確立および管理する方法について説明します。*
-
-* **[アセットを公開（ビデオ）](./sharing/publish.md)**
-
-   *AEM オーサーから AEM パブリッシュにアセットを公開する際のイン/アウトについて説明します。*
-
-* **[透かし（ビデオ）](./advanced/watermarks.md)**
-
-   *AEM as a Cloud Serviceでのアセットレンディションの透かしの設定方法を説明します。*
-
-* **[基本権限（ビデオ）](./configuring/baseline-permissions.md)**
-
-   *ベースライン権限を使用してAEM Assetsを設定する方法と理由を説明します*
-
-* **[自動開始ワークフロー（ビデオ）](./configuring/auto-start-workflows.md)**
-
-   *アップロードまたは再処理されたアセットでAEMワークフローを自動的に呼び出す方法を確認する*
+>[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
 ## スタッフのおすすめ
 
