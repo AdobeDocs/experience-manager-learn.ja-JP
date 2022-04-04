@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets Essentials用のビデ�
 breadcrumb-title: AEM Assets Essentials ビデオ
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: 00647ec3e2cf0ead5d6f427fd12b9d0f777f6890
+source-git-commit: 225c975dc2eea8afe786f7b7c450f1101bdbe04b
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '71'
 ht-degree: 32%
 
 ---
@@ -25,6 +25,9 @@ ht-degree: 32%
    + [コンテンツの作成](basics/creating.md)
    + [コラボレーション](basics/collaborating.md)
    + [リンク共有](basics/link-sharing.md)
+
++ 設定{#configuring}
+   + [権限管理](configuring/permissions-management.md)
 
 + [Creative Cloud 統合](integrations/creative-cloud.md)
 
