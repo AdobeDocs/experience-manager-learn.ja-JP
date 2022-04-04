@@ -8,15 +8,15 @@ role: User
 level: Beginner
 kt: 9818
 thumbnail: 342113.jpeg
-source-git-commit: 225c975dc2eea8afe786f7b7c450f1101bdbe04b
+source-git-commit: e3ff8c16a62a8e79345c384baf3b24f53eed93b3
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
 
-# 権限管理
+# Assets Essentialsでの権限管理
 
 AEM Assets Essentials の権限管理を使用して、組織がアセットへのアクセスを制御し、ブランドを保護し、コンプライアンスを確保する方法を説明します。
 
