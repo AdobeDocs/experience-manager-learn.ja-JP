@@ -8,17 +8,24 @@ role: Architect, Developer
 level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
+source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 4%
 
 ---
 
-
 # 高度なネットワーク
 
-AEM as a Cloud Serviceには、外部サービスとの接続を管理する 3 つのオプションが用意されています。 Cloud Manager プログラムとそのAEMas a Cloud Service環境では、一度に 1 つのタイプの高度なネットワーク設定のみを使用できるので、最も適切なタイプが選択されていることを確認します。
+AEM as a Cloud Serviceは、AEM as a Cloud Serviceプログラムとの接続を正確に管理できる高度なネットワーク機能を提供します。
+
+|  | [実稼動プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
+|---------------------------------------------------|:-----------------------:|:---------------------|
+| 高度なネットワークをサポート | ✔ | ✘ |
+
+
+AEM Advanced Networking は、外部サービスとの接続を管理する 3 つのオプションで構成されています。 Cloud Manager プログラムとそのAEMas a Cloud Service環境では、一度に 1 つのタイプの高度なネットワーク設定のみを使用できるので、最も適切なタイプが選択されていることを確認します。
 
 |  | 標準ポートの HTTP/HTTPS | 非標準ポートでの HTTP/HTTPS | 非 HTTP/HTTPS 接続 | 出力専用 IP | 「No-proxy hosts」リスト | VPN 保護サービスに接続 | IP で AEM 公開トラフィックを制限 |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
@@ -51,8 +58,8 @@ AEM as a Cloud Serviceには、外部サービスとの接続を管理する 3 �
       </p>
     </td>   
    <td>
-      <a  href="./vpn.md"><img alt="仮想プライベートネットワーク (VPN)" src="./assets/vpn.png"/></a>
-      <div><strong><a href="./vpn.md">仮想プライベートネットワーク (VPN)</a></strong></div>
+      <a  href="./vpn.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/vpn.png"/></a>
+      <div><strong><a href="./vpn.md">仮想プライベートネットワーク（VPN）</a></strong></div>
       <p>
         顧客またはベンダーのインフラストラクチャとAEM as a Cloud Service間のトラフィックを保護します。
       </p>
