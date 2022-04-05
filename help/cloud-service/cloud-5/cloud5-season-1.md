@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: cc434164a4474b71f23653f33cb7e3d99c271595
+source-git-commit: b277fb0f0cfd19a8318cbf5311e2ded973c092ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 1%
 ## はじめに
 
 このたびは、AEM Engineering の Cloud 5 シリーズをご利用いただき、誠にありがとうございます。 製品の実装段階での主な問題の 1 つは、十分なコードサンプルや、これらのサンプル、ツールまたは API の実際のデモンストレーションがあることです。 このシリーズの目的は、AEMに関する有用な情報を 5 分以内に提供することです。
+
+次にアクセス： [修正候補ボックス](https://forms.office.com/r/74P5Xz4UH0) トピックのアイデアを送信する場合。
 
 ## シーズン 1
 
@@ -97,7 +99,7 @@ ht-degree: 1%
       <img alt="移行（パート 1）" src="./imgs/coming-soon.png"/>
       <div>
          <strong>移行（パート 1）</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+         <br/><em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;スペシャルゲスト</em>
       </div>
       <p>
         <br/>
@@ -144,7 +146,7 @@ ht-degree: 1%
         <td>
             <img alt="Adobeアプリビルダー" src="./imgs/coming-soon.png"/>
             <div>
-                <strong>移行（パート 2）</strong><br/>        
+                <strong>Adobeアプリビルダー</strong><br/>        
                 <em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;スペシャルゲスト</em>
             </div>
             <p><br/>
