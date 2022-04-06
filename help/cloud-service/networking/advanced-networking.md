@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
+source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 4%
+source-wordcount: '459'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 AEM as a Cloud Serviceは、AEM as a Cloud Serviceプログラムとの接続を正確に管理できる高度なネットワーク機能を提供します。
 
 |  | [実稼動プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
-|---------------------------------------------------|:-----------------------:|:---------------------|
+|---------------------------------------------------|:-----------------------:|:---------------------:|
 | 高度なネットワークをサポート | ✔ | ✘ |
 
 
@@ -65,4 +65,55 @@ AEM Advanced Networking は、外部サービスとの接続を管理する 3 �
       </p>
     </td>   
   </tr>
+</table>
+
+## コード例
+
+このコレクションでは、特定の使用例で高度なネットワーク機能を利用するために必要な設定例とコードを示します。
+
+<table><tr>
+   <td>
+      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
+      <div><strong><a href="./examples/email-service.md">電子メールサービス</a></strong></div>
+      <p>
+        外部の電子メールサービスに接続するためにAEMを使用する OSGi 設定例です。
+      </p>
+    </td>  
+    <td>
+        <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準ポートでの HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+        <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準ポートでの HTTP/HTTPS</a></strong></div>
+        <p>
+            AEMから非標準の HTTP/HTTPS ポート上の外部サービスに HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
+        </p>
+    </td>
+    <td>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="JDBC DataSourcePool を使用した SQL 接続" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">JDBC DataSourcePool を使用した SQL 接続</a></strong></div>
+      <p>
+            AEM JDBC データソースプールを設定して外部 SQL データベースに接続する Java™コード例。
+      </p>
+    </td>   
+    </tr><tr>
+    <td>
+      <a  href="./examples/sql-java-apis.md"><img alt="Java API を使用した SQL 接続" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">Java™ API を使用した SQL 接続</a></strong></div>
+      <p>
+            Java™の SQL API を使用した外部 SQL データベースへの接続に関する Java™コードの例です。
+      </p>
+    </td>   
+    <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=ja"><img alt="IP許可リストの適用" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">IP の適許可リスト用</a></strong></div>
+      <p>
+            VPN トラフィックのみがAEMにアクセスできるように IP許可リストを設定します。
+      </p>
+    </td>
+   <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM パブリッシュへのパスベースの VPN アクセス制限" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM パブリッシュへのパスベースの VPN アクセス制限</a></strong></div>
+      <p>
+            AEM パブリッシュ上の特定のパスに対して VPN アクセスを要求します。
+      </p>
+    </td>
+</tr>
 </table>
