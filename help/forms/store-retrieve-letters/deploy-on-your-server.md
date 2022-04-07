@@ -11,10 +11,11 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 0%
+source-wordcount: '165'
+ht-degree: 5%
 
 ---
 
@@ -22,13 +23,18 @@ ht-degree: 0%
 
 この機能をAEM Server で動作させるには、以下の手順に従ってください
 
-* c ドライブに icdrafts というフォルダーを作成します。
 * [データベーススキーマの作成](assets/icdrafts.sql)
 * [クライアントライブラリのインポート](assets/icdrafts.zip)
 * [アダプティブフォームの読み込み](assets/SavedDraftsAdaptiveForm.zip)
 * 次の名前のデータソースを作成 _SaveAndContinue_
 
 ![データソースを作成](assets/data-source.png)
+
+| プロパティ名 | プロパティの値 |
+|---|---|
+| Datasource Name | SaveAndContinue |
+| JDBC ドライバークラス | com.mysql.cj.jdbc.Driver |
+| JDBC 接続 URL | jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
 
 * [icdrafts バンドルをデプロイします。](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * 必ず _CCRDocumentInstanceService を使用して保存を有効にする_ （以下に示すように）

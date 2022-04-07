@@ -8,14 +8,15 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 10105
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 4%
+source-wordcount: '102'
+ht-degree: 3%
 
 ---
 
-# POST呼び出し
+# PDF/A ドキュメントの作成と検証
 
 PDF/A は、電子ドキュメントのアーカイブと長期保存に使用するために特化した、ISO 標準化されたポータブルドキュメントフォーマット (PDF) です。 PDF/A はPDFとは異なり、（フォントの埋め込みとは異なり）フォントのリンクや暗号化など、長期アーカイブに適さない機能を禁止しています。
 
@@ -131,4 +132,3 @@ public void validatePDFA(String postURL) {
   }
 }
 ```
-
