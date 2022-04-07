@@ -1,6 +1,6 @@
 ---
 title: クラウドへの移行 — 第 1 部
-description: Darin と James は、AEM Cloud への移行について話し合い、いくつかのテクニックをデモします。
+description: Darin と James は、AEM Cloud への移行について話し合い、いくつかの技術とベストプラクティスをデモします。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,16 +8,17 @@ kt: 10207
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
-source-git-commit: bc14a89433ef603ef981a05efb1eb931dabcb777
+exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
+source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '113'
 ht-degree: 5%
 
 ---
 
 # クラウドへの移行 — 第 1 部
 
-Darin と James は、AEM Cloud の Dispatcher について、 AMS/On-Prem.Theyとのベストプラクティスや違いなどを説明します。また、クラウドへの移行についても触れます。 ゲストおよびクラウドの専門家 [アプレスミト博士](https://twitter.com/DrApplesmith) は外観を作成します。
+Darin と James は、AMS/On-Prem とのベストプラクティスや違いなど、AEM Cloud の Dispatcher について話し合います。 また、クラウドへの移行にも関わります。 ゲストおよびクラウドの専門家 [アプレスミト博士](https://twitter.com/DrApplesmith) は外観を作成します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
 
