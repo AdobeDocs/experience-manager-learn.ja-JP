@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 0%
+source-wordcount: '1055'
+ht-degree: 1%
 
 ---
 
@@ -28,19 +28,23 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 >[!MORELIKETHIS]
 >
-> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#flexible-port-egress) フレキシブルポートエグレスの詳細については、を参照してください。
+> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress) フレキシブルポートエグレスの詳細については、を参照してください。
 
 ## 前提条件
 
 フレキシブルポートエグレスを設定する場合は、次の操作が必要です。
 
-+ Cloud Manager API を有効にしたAdobe I/Oプロジェクトと [Cloud Manager のビジネスオーナー権限](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
-+ アクセス先 [Cloud Manager API の認証資格情報](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ Cloud Manager API を有効にしたAdobe Developer Console プロジェクト [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ アクセス先 [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
    + 組織 ID（別名 IMS Org ID）
    + クライアント ID（別名 API キー）
    + アクセストークン（Bearer トークン）
 + Cloud Manager プログラム ID
 + Cloud Manager 環境 ID
+
+詳しくは、次の Cloud Manager API 資格情報の設定、設定、取得方法、およびそれらを使用した Cloud Manager API 呼び出しの作成方法に関するチュートリアルを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
 
 このチュートリアルでは、 `curl` Cloud Manager API を設定する場合。 指定された `curl` コマンドは、Linux/macOS構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、 `\` 改行文字 `^`.
 
@@ -48,7 +52,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 まず、AEMのフレキシブルポートエグレスを有効にします。
 
-1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getProgramRegions) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうために必要になります。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
 
    __listRegions HTTP リクエスト__
 
@@ -60,7 +64,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json' 
    ```
 
-1. Cloud Manager API を使用して、Cloud Manager プログラムの柔軟なポート出力を有効にします [createNetworkInfrastructure](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
+1. Cloud Manager API を使用して、Cloud Manager プログラムの柔軟なポート出力を有効にします [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
 
    __createNetworkInfrastructure HTTP リクエスト__
 
@@ -91,7 +95,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 ## 環境ごとに柔軟なポート出力プロキシを設定する
 
-1. を有効にして設定します。 __フレキシブルポートエグレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. を有効にして設定します。 __フレキシブルポートエグレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -133,7 +137,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
    AEMデプロイメントの場合 __のみ__ 外部サービスへの HTTP/HTTPS 接続 ( ポート80/443) が必要です。 `portForwards` 配列が空です。これらのルールは非 HTTP/HTTPS リクエストに対してのみ必要となるためです。
 
-1. 各環境で、Cloud Manager API を使用してエグレスルールが有効であることを検証します [getEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. 各環境で、Cloud Manager API を使用してエグレスルールが有効であることを検証します [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -145,7 +149,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json'
    ```
 
-1. 柔軟なポートエグレス設定は、Cloud Manager API を使用して更新できます [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
+1. 柔軟なポートエグレス設定は、Cloud Manager API を使用して更新できます [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
 
 1. これで、カスタムAEMコードと設定で柔軟なポートエグレス設定を使用できます。
 
@@ -174,7 +178,7 @@ AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別�
 
 >[!TIP]
 >
-> 詳しくは、 AEMas a Cloud Serviceの柔軟なポート出力に関するドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
+> 詳しくは、 AEMas a Cloud Serviceの柔軟なポート出力に関するドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
 
 #### コード例
 
@@ -223,7 +227,7 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
       </p>
     </td>   
    <td>
-      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク (VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子メールサービス</a></strong></div>
       <p>
         外部の電子メールサービスに接続するためにAEMを使用する OSGi 設定例です。

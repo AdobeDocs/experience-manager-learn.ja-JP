@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 ## 高度なネットワークサポート
 
 次のコード例は、次のアドバンスドネットワークオプションでサポートされています。
+
+次を確認します。 [適切](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
 
 | 高度なネットワークがありません | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|

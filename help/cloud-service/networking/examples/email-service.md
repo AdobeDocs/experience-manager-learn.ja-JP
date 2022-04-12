@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: 4d3256cee67183803692cccc7f17ca1a0820e05d
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '284'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,8 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 
 次のコード例は、次のアドバンスドネットワークオプションでサポートされています。
 
+次を確認します。 [適切](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
+
 | 高度なネットワークがありません | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
@@ -44,7 +46,7 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 ```json
 ...
 "portForwards": [{
-    "name": "smtp.sendgrid.com",
+    "name": "smtp.mymail.com",
     "portDest": 465,
     "portOrig": 30002
 }]

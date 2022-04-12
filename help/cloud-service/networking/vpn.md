@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 8b95339bc2e037d3a0d9d705a94b37f268545b4f
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1339'
+ht-degree: 1%
 
 ---
 
@@ -22,24 +22,24 @@ AEMと VPN をas a Cloud Serviceに接続して、AEMと内部サービスとの
 
 ## 仮想プライベートネットワークとは
 
-仮想プライベートネットワーク (VPN) を使用すると、AEMas a Cloud Serviceのお客様が接続できます **AEM環境** を既存の [サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 これにより、お客様のネットワーク内のAEMas a Cloud Serviceのサービスとサービス間の安全で制御された接続が可能になります。
+仮想プライベートネットワーク (VPN) を使用すると、AEMas a Cloud Serviceのお客様が接続できます **AEM環境** を既存の [サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 これにより、お客様のネットワーク内のAEMas a Cloud Serviceのサービスとサービス間の安全で制御された接続が可能になります。
 
-Cloud Manager プログラムでは、 __シングル__ ネットワークインフラストラクチャのタイプ。 仮想プライベートネットワークが最も多いことを確認する [適切な種類のネットワークインフラストラクチャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) 次のコマンドを実行する前にAEMas a Cloud Serviceのに対して実行します。
+Cloud Manager プログラムでは、 __シングル__ ネットワークインフラストラクチャのタイプ。 仮想プライベートネットワークが最も多いことを確認する [適切な種類のネットワークインフラストラクチャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) 次のコマンドを実行する前にAEMas a Cloud Serviceのに対して実行します。
 
 >[!NOTE]
 >
->ビルド環境を Cloud Manager から VPN に接続することはサポートされていません。 プライベートリポジトリからバイナリアーティファクトにアクセスする必要がある場合は、パブリックインターネット上で使用可能な URL を使用して、セキュリティで保護されたパスワードで保護されたリポジトリを設定する必要があります [ここで説明するように](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
+>ビルド環境を Cloud Manager から VPN に接続することはサポートされていません。 プライベートリポジトリからバイナリアーティファクトにアクセスする必要がある場合は、パブリックインターネット上で使用できる URL を使用して、セキュリティで保護されたパスワードで保護されたリポジトリを設定する必要があります [ここで説明するように](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
-> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) 仮想プライベートネットワークの詳細については、を参照してください。
+> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) 仮想プライベートネットワークの詳細については、を参照してください。
 
 ## 前提条件
 
 仮想プライベートネットワークを設定する場合は、次の操作が必要です。
 
-+ Adobeアカウント [Cloud Manager のビジネスオーナー権限](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
-+ アクセス先 [Cloud Manager API の認証資格情報](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ Adobeアカウント [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ アクセス先 [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
    + 組織 ID（別名 IMS Org ID）
    + クライアント ID（別名 API キー）
    + アクセストークン（Bearer トークン）
@@ -47,13 +47,17 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 + Cloud Manager 環境 ID
 + 必要なすべての接続パラメーターにアクセスできる仮想プライベートネットワーク。
 
+詳しくは、次の Cloud Manager API 資格情報の設定、設定、取得方法、およびそれらを使用した Cloud Manager API 呼び出しの作成方法に関するチュートリアルを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
+
 このチュートリアルでは、 `curl` Cloud Manager API を設定する場合。 指定された `curl` コマンドは、Linux/macOS構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、 `\` 改行文字 `^`.
 
 ## プログラムごとの仮想プライベートネットワークの有効化
 
 まず、AEMの仮想プライベートネットワークを有効にします。
 
-1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getProgramRegions) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうために必要になります。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうために必要になります。 通常、実稼動環境が存在する地域が使用されます。
 
    __listRegions HTTP リクエスト__
 
@@ -65,7 +69,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json'
    ```
 
-1. Cloud Manager API を使用した Cloud Manager プログラムの仮想プライベートネットワークの有効化 [createNetworkInfrastructure](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
+1. Cloud Manager API を使用した Cloud Manager プログラムの仮想プライベートネットワークの有効化 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
 
    __createNetworkInfrastructure HTTP リクエスト__
 
@@ -147,7 +151,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 ## 環境ごとの仮想プライベートネットワークプロキシの構成
 
-1. を有効にして設定します。 __仮想プライベートネットワーク__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. を有効にして設定します。 __仮想プライベートネットワーク__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -185,7 +189,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
    }
    ```
 
-   `nonProxyHosts` ポート 80 または 443 を専用のエグレス IP ではなく、デフォルトの共有 IP アドレス範囲を通じてルーティングする必要があるホストのセットを宣言します。 これは、共有 IP を介したトラフィックエグレスが、Adobeによって自動的に最適化される場合に便利です。
+   `nonProxyHosts` ポート 80 または 443 を専用のエグレス IP ではなく、デフォルトの共有 IP アドレス範囲を通じてルーティングする必要があるホストのセットを宣言します。 `nonProxyHosts` は、共有 IP を介したトラフィックエグレスが、Adobeによって自動的に最適化される場合に役立ちます。
 
    各 `portForwards` マッピングでは、アドバンスドネットワークは次の転送ルールを定義します。
 
@@ -196,7 +200,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
    AEMデプロイメントの場合 __のみ__ 外部サービスへの HTTP/HTTPS 接続が必要です。 `portForwards` 配列が空です。これらのルールは非 HTTP/HTTPS リクエストに対してのみ必要となるためです。
 
 
-1. 各環境で、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. 各環境で、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -208,7 +212,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json'
    ```
 
-1. 仮想プライベートネットワークプロキシの設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
+1. 仮想プライベートネットワークプロキシの設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
 
 1. これで、カスタムAEMコードと設定で Virtual Private Network エグレス設定を使用できます。
 
@@ -237,7 +241,7 @@ HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシ hosts/po
 
 >[!TIP]
 >
-> 詳しくは、 AEMas a Cloud Serviceの Virtual Private Network のドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn-traffic-routing).
+> 詳しくは、 AEMas a Cloud Serviceの Virtual Private Network のドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
 
 #### コード例
 
@@ -297,21 +301,21 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
 
 ### VPN 経由でas a Cloud ServiceのAEMへのアクセスを制限
 
-Virtual Private Network 設定を使用すると、AEMas a Cloud Service環境へのアクセスを VPN アクセスに制限できます。
+Virtual Private Network の設定は、AEMas a Cloud Service環境へのアクセスを VPN に制限します。
 
 #### 設定例
 
 <table><tr>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=ja"><img alt="IP許可リストの適用" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=en">IP の適許可リスト用</a></strong></div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="IP許可リストの適用" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">IP の適許可リスト用</a></strong></div>
       <p>
             VPN トラフィックのみがAEMにアクセスできるように IP許可リストを設定します。
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM パブリッシュへのパスベースの VPN アクセス制限" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM パブリッシュへのパスベースの VPN アクセス制限</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM パブリッシュへのパスベースの VPN アクセス制限" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM パブリッシュへのパスベースの VPN アクセス制限</a></strong></div>
       <p>
             AEM パブリッシュ上の特定のパスに対して VPN アクセスを要求します。
       </p>

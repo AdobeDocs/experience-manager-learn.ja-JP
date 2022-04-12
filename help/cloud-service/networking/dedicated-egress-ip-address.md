@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 0%
+source-wordcount: '1204'
+ht-degree: 1%
 
 ---
-
 
 # 出力専用 IP アドレス
 
@@ -28,19 +28,23 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 >[!MORELIKETHIS]
 >
-> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#dedicated-egress-IP-address) を参照してください。
+> AEMを読む [高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) を参照してください。
 
 ## 前提条件
 
 専用の出力 IP アドレスを設定する場合は、次が必要です。
 
-+ を使用した Cloud Manager API [Cloud Manager のビジネスオーナー権限](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
-+ アクセス先 [Cloud Manager API 認証資格情報](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ を使用した Cloud Manager API [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ アクセス先 [Cloud Manager API 認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
    + 組織 ID（別名 IMS Org ID）
    + クライアント ID（別名 API キー）
    + アクセストークン（Bearer トークン）
 + Cloud Manager プログラム ID
 + Cloud Manager 環境 ID
+
+詳しくは、次の Cloud Manager API 資格情報の設定、設定、取得方法、およびそれらを使用した Cloud Manager API 呼び出しの作成方法に関するチュートリアルを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
 
 このチュートリアルでは、 `curl` Cloud Manager API を設定する場合。 指定された `curl` コマンドは、Linux/macOS構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、 `\` 改行文字 `^`.
 
@@ -48,7 +52,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 まず、AEM as a Cloud Serviceで専用の出力 IP アドレスを有効にして設定します。
 
-1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getProgramRegions) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうために必要になります。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API を使用して、アドバンスドネットワークが設定される地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
 
    __listRegions HTTP リクエスト__
 
@@ -60,7 +64,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json' 
    ```
 
-1. Cloud Manager API を使用して、Cloud Manager プログラム用の専用エグレス IP アドレスを有効にします [createNetworkInfrastructure](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
+1. Cloud Manager API を使用して、Cloud Manager プログラム用の専用エグレス IP アドレスを有効にします [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 適切な `region` Cloud Manager API から取得したコード `listRegions` 操作。
 
    __createNetworkInfrastructure HTTP リクエスト__
 
@@ -91,7 +95,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 ## 環境ごとの専用の出力 IP アドレスプロキシの設定
 
-1. を有効にして設定します。 __出力専用 IP アドレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. を有効にして設定します。 __出力専用 IP アドレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -131,7 +135,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
    専用の出力 IP アドレス設定の HTTP 署名のみが、 [フレキシブルエグレスポート](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) オプションの `nonProxyHosts` 設定。
 
-   `nonProxyHosts` ポート 80 または 443 を専用のエグレス IP ではなく、デフォルトの共有 IP アドレス範囲を通じてルーティングする必要があるホストのセットを宣言します。 これは、共有 IP を介したトラフィックエグレスが、Adobeによって自動的に最適化される場合に便利です。
+   `nonProxyHosts` ポート 80 または 443 を専用のエグレス IP ではなく、デフォルトの共有 IP アドレス範囲を通じてルーティングする必要があるホストのセットを宣言します。 `nonProxyHosts` は、共有 IP を介したトラフィックエグレスが、Adobeによって自動的に最適化される場合に役立ちます。
 
    各 `portForwards` マッピングでは、アドバンスドネットワークは次の転送ルールを定義します。
 
@@ -139,7 +143,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-1. 各環境で、Cloud Manager API を使用してエグレスルールが有効であることを検証します [getEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/getEnvironmentAdvancedNetworkingConfiguration) 操作。
+1. 各環境で、Cloud Manager API を使用してエグレスルールが有効であることを検証します [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -151,7 +155,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
        -H 'Content-Type: application/json'
    ```
 
-1. 専用の出力 IP アドレス設定は、Cloud Manager API を使用して更新できます [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
+1. 専用の出力 IP アドレス設定は、Cloud Manager API を使用して更新できます [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 記憶する `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作の場合は、この操作を呼び出すたびに、すべてのルールを指定する必要があります。
 
 1. の取得 __出力専用 IP アドレス__ DNS リゾルバー ( [DNSChecker.org](https://dnschecker.org/)) をホスト上で以下の手順に従ってください。 `p{programId}.external.adobeaemcloud.com`または実行 `dig` コマンドラインから。
 
@@ -176,7 +180,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 >[!TIP]
 >
-> 詳しくは、 AEMas a Cloud Serviceの出力 IP アドレスに関する専用ドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing).
+> 詳しくは、 AEMas a Cloud Serviceの出力 IP アドレスに関する専用ドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
 ### 非標準ポートでの HTTP/HTTPS
@@ -238,7 +242,7 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
       </p>
     </td>   
    <td>
-      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク (VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子メールサービス</a></strong></div>
       <p>
         外部の電子メールサービスに接続するためにAEMを使用する OSGi 設定例です。
