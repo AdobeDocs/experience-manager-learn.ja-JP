@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8da6d5470c702620ee1121fd2688eb8756f0cebd
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '351'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,10 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 （ほとんどの）メールサービスは HTTP/HTTPS 経由で実行されないので、AEM as a Cloud Serviceからのメールサービスへの接続をプロキシ化する必要があります。
 
 + `smtp.host` が OSGi 環境変数に設定されている `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` したがって、出力を通過します。
+   + `$[env:AEM_PROXY_HOST]` は、AEMが内部にマッピングする予約変数です。 `proxy.tunnel` ホスト。
+   + この `AEM_PROXY_HOST` Cloud Manager を使用する。
 + `smtp.port` が `portForward.portOrig` 宛先の電子メールサービスのホストおよびポートにマッピングするポート。 この例では、マッピングを使用します。 `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
+   + この `smpt.port` が `portForward.portOrig` ポートです。SMTP サーバーの実際のポートではありません。 この `smtp.port` そして `portForward.portOrig` ポートは Cloud Manager によって確立されます。 `portForwards` ルール（以下に示すように）を使用します。
 
 秘密鍵はコードに格納できないので、電子メールサービスのユーザー名とパスワードは、 [シークレットの OSGi 設定変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、AIO CLI または Cloud Manager API を使用して設定します。
 
@@ -61,7 +64,7 @@ AEMを設定 [DefaultMailService](https://experienceleague.adobe.com/docs/experi
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
-    "smtp.user": "$[env:EMAIL_USERNAME;default=emailapikey]",
+    "smtp.user": "$[env:EMAIL_USERNAME;default=myApiKey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
     "smtp.ssl": true,
@@ -72,8 +75,11 @@ AEMを設定 [DefaultMailService](https://experienceleague.adobe.com/docs/experi
 }
 ```
 
-以下 `aio CLI` コマンドを使用して、環境ごとに OSGi シークレットを設定できます。
+この `EMAIL_USERNAME` および `EMAIL_PASSWORD` OSGi 変数とシークレットは、次のいずれかを使用して、環境ごとに設定できます。
 
-```shell
-$ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "apikey" --secret EMAIL_PASSWORD "password123"
-```
++ [Cloud Manager 環境の設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ または `aio CLI` command
+
+   ```shell
+   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
+   ```
