@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 09dbe82eeebd598d4a5949d61a7ae14937c18b72
+source-git-commit: e9b88505ae47b32de8b198fa6fcd81e033e5d5ff
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
@@ -105,20 +105,22 @@ ht-degree: 1%
       </div>
       <p>
         <br/>
-         クラウドへの移行に関するヒントとテクニックのうち、2 つのうちの 1 つ ( )。 第 1 部における主な焦点は、移行に備えたベストプラクティスと準備作業です。
+         クラウドへの移行に関するヒントとテクニックの 1 つ（2 つのうち）になります。 第 1 部における主な焦点は、移行に備えたベストプラクティスと準備作業です。
       </p>
    </td> 
   </tr>
 <tr>
    <td>
-      <img alt="移行（パート 2）" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-content-migration-part-2.md">
+            <img alt="移行（パート 2）" src="./imgs/007-thumb.png"/>
+        </a>
       <div>
-        <strong>移行（パート 2）</strong>        
+        <a href="./cloud5-aem-content-migration-part-2.md"><strong>移行（パート 2）</strong></a>     
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 4 月 15 日
+         クラウドへの移行に関するヒントとテクニックの第 2 部（2 つ）です。 第 2 部は、主に移行に使用可能なツールを使用することです。
       </p>
      </td>   
      <td>
