@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: e9b88505ae47b32de8b198fa6fcd81e033e5d5ff
+source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 29%
+source-wordcount: '741'
+ht-degree: 30%
 
 ---
 
@@ -94,7 +94,7 @@ ht-degree: 29%
    + [柔軟なポート出力](./networking/flexible-port-egress.md)
    + [出力専用 IP アドレス](./networking/dedicated-egress-ip-address.md)
    + [仮想プライベートネットワーク](./networking/vpn.md)
-   + コード例{#examples}
+   + コードの例{#examples}
       + [非標準ポートでの HTTP/HTTPS（柔軟なポート出力用）](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
       + [専用の出力 IP アドレス/VPN 用の非標準ポート上の HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
       + [DataSourcePool を使用した SQL 接続](./networking/examples/sql-datasourcepool.md)
@@ -227,7 +227,7 @@ ht-degree: 29%
       + [ワーカーのデバッグ](./asset-compute/test-debug/debug.md)
    + {#deploy} のデプロイ
       + [Adobe I/O Runtimeにデプロイ](./asset-compute/deploy/runtime.md)
-      + [AEMとの統合](./asset-compute/deploy/processing-profiles.md)
+      + [ の AEM  との統合](./asset-compute/deploy/processing-profiles.md)
    + 詳細{#advanced}
       + [メタデータワーカー](./asset-compute/advanced/metadata.md)
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
@@ -241,6 +241,9 @@ ht-degree: 29%
    + [Cloud Dispatcher](./cloud-5/cloud5-aem-dispatcher-cloud.md)
    + [移行 1](./cloud-5/cloud5-aem-content-migration-part-1.md)
    + [移行 2](./cloud-5/cloud5-aem-content-migration-part-2.md)
+   + [Dispatcher バリデーター](./cloud-5/cloud5-aem-dispatcher-validator.md)
+   + [検索およびインデックス作成](./cloud-5/cloud5-aem-search-and-indexing.md)
+   + [Adobeアプリビルダー](./cloud-5/cloud5-adobe-app-builder.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
