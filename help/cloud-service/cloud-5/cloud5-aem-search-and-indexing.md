@@ -1,6 +1,6 @@
 ---
-title: Cloud 5Adobeアプリビルダー
-description: このエピソードは、App Builder を使用する外部統合パターンをAdobeします
+title: Cloud 5 AEMの検索とインデックス作成
+description: 探索とインデックス付けを行う海に足の指を突っ込みます
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,23 +8,22 @@ kt: 10275
 thumbnail: 342374.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
+exl-id: b2571a84-101f-4330-8a5f-9ef5e4344591
+source-git-commit: 3854deb12c2d5a5c91c3416939f3e4534cb0094f
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 0%
+source-wordcount: '78'
+ht-degree: 8%
 
 ---
 
-# Cloud 5Adobeアプリビルダー
+# Cloud 5 AEMの検索とインデックス作成
 
-Amol Anand は、Adobeの App Builder との統合の概要と、その使用場所と使用時期を示します。
+検索とインデックス作成の深い領域をすばやく掘り下げます。 より効果的に成果を上げるための教育を支援したいと考えている挑戦的なトピック。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342374)
 
 ## このビデオで扱うコンテンツ
 
-+ の概要 [App Builder](https://developer.adobe.com/app-builder/docs/overview/)
-+ [Tutorialsとコードラボ](https://developer.adobe.com/app-builder/docs/resources/)
-+ [ログと監視](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
-+ 設定 [システムの制限](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
-+ [ローカル開発](https://developer.adobe.com/app-builder/docs/resources/debugging/) ヒント
++ 検索とインデックス [概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=ja)
++ AEM [インデックスコンバータ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
++ エキスパートシリーズ [ディープダイブ](../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
