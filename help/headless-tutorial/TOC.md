@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 22%
+source-wordcount: '231'
+ht-degree: 23%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 22%
       + [4 — 永続的な GraphQL クエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + 使い方 {#how-to}
-      + [リッチテキストの使用](./graphql/how-to/rich-text.md)
+      + [リッチテキスト](./graphql/how-to/rich-text.md)
+      + [画像](./graphql/how-to/images.md)
+      + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
+      + [AEMヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
@@ -89,4 +92,4 @@ ht-degree: 22%
    + [4 — コンテンツサービステンプレートの定義](./content-services/chapter-4.md)
    + [5 — コンテンツサービスページのオーサリング](./content-services/chapter-5.md)
    + [6 — 配信用に AEM パブリッシュでのコンテンツの公開](./content-services/chapter-6.md)
-   + [7 - MobileアプリからのAEM Content Services の使用](./content-services/chapter-7.md)
+   + [7 — モバイルアプリからのAEM Content Services の使用](./content-services/chapter-7.md)

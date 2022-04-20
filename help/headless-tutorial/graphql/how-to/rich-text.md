@@ -1,5 +1,5 @@
 ---
-title: リッチテキストの操作 | AEMヘッドレス
+title: AEMヘッドレスでのリッチテキストの使用
 description: Adobe Experience Managerコンテンツフラグメントを使用した複数行のリッチテキストエディターを使用して、コンテンツの作成と参照コンテンツの埋め込みを行う方法、およびヘッドレスアプリケーションで使用する JSON としてAEM GraphQL API がリッチテキストを配信する方法を説明します。
 version: Cloud Service
 doc-type: article
@@ -7,22 +7,21 @@ kt: 9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
 
-
-# Adobe Experience Manager Headless でのリッチテキストの使用
+# AEMヘッドレスを含むリッチテキスト
 
 「複数行テキスト」フィールドは、作成者がリッチテキストコンテンツを作成できるようにするコンテンツフラグメントのデータ型です。 画像や他のコンテンツフラグメントなど、他のコンテンツへの参照を、テキストのフロー内にインラインで動的に挿入できます。 AEM GraphQL API は、リッチテキストをHTML、プレーンテキスト、純粋な JSON として返す堅牢な機能を備えています。 JSON 表現は、コンテンツのレンダリング方法をクライアントアプリケーションで完全に制御できるので、強力です。
 
 ## 複数行エディター
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
-
 
 コンテンツフラグメントエディターでは、複数行テキストフィールドのメニューバーを使用して、作成者に標準のリッチテキスト書式設定機能 ( **太字**, *斜体*、および下線 フルスクリーンモードで複数行フィールドを開くと、 [段落の種類、検索と置換、スペルチェックなどの追加の書式設定ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
