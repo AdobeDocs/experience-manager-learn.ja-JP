@@ -1,62 +1,61 @@
 ---
-title: AEM Sitesを使用したパーソナライゼーションのためのContextHubの設定
-description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。 このページでは、AEMサイトページにContext Hubを追加する方法について説明します。
+title: Setup ContextHub for Personalization with AEM Sites
+description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。 This page describes how to add context hub to your AEM site pages.
 feature: Context Hub
 topics: personalization
 audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: パーソナライズ機能
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
+source-git-commit: 9e4b01173f5d89075ad64adfb8b982b2297e2c39
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 33%
+source-wordcount: '424'
+ht-degree: 35%
 
 ---
 
+# Setup ContextHub for Personalization {#set-up-contexthub}
 
-# パーソナライゼーション用のContextHubの設定 {#set-up-contexthub}
-
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。 このページでは、AEMサイトページにContext Hubを追加する方法について説明します。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。 This page describes how to add context hub to your AEM site pages.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23765/?quality=9&learn=on)
 
 >[!NOTE]
 >
->このビデオではWKNDリファレンスサイトを使用していますが、AEMリリースには含まれていません。 [最新バージョンは](https://github.com/adobe/aem-guides-wknd/releases)からダウンロードできます。
+>We use the WKND reference site for this video and it is not part of AEM release. [](https://github.com/adobe/aem-guides-wknd/releases)
 
-ContextHub機能を有効にし、ContextHub JavaScriptライブラリにリンクするには、ContextHubをページに追加します。 ContextHub JavaScript APIを使用すると、ContextHubが管理するコンテキストデータにアクセスできます。
+Add ContextHub to your pages to enable the ContextHub features and to link to the ContextHub JavaScript libraries. The ContextHub JavaScript API provides access to the context data that ContextHub manages.
 
 ## ページコンポーネントへの ContextHub の追加 {#adding-contexthub-to-a-page-component}
 
-ContextHub機能を有効にし、ContextHub JavaScriptライブラリにリンクするには、Webページの`<head>`セクションに`contexthub`コンポーネントを含めます。 ページコンポーネントのHTLコードは、次の例のようになります。
+`contexthub``<head>`The HTL code for your page component resembles the following example:
 
 ```java
 <!--/* Include Context Hub */-->
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
-*/-->
 ```
 
-## サイト設定とContextHubセグメント {#site-configuration-and-contexthub-segments}
+## Site Configuration and ContextHub Segments {#site-configuration-and-contexthub-segments}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)で、サイトのContextHubセグメントを有効にします。
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)できます。[](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=ja)
 
-## セグメントの作成 {#create-segments}
+## Create Segments {#create-segments}
 
-ティーザーのルールとして機能するAEMセグメントを作成します。 つまり、ティーザー内のコンテンツがWebページに表示されるタイミングを定義します。 一致するセグメントに基づいて、訪問者のニーズと関心に特化したコンテンツを表示できます。
+Create AEM segments that act as rules for the teasers. That is, they define when content within a teaser appears on a web page. 一致するセグメントに基づいて、訪問者のニーズと関心に特化したコンテンツを表示できます。
 
-## サイトへのクラウド設定、セグメントパス、ContextHubパスの割り当て {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## Assigning Cloud Configuration, Segment path and ContextHub path to your site {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
-クラウド設定のパス、セグメント化のパス、ContextHubのパスをサイトのルートノードに割り当てて、オーディエンスに合わせてパーソナライズされたエクスペリエンスを作成できます。 ContextHubを使用すると、コンテキストデータを操作し、解決されたセグメントをテストできます。
+Assigning the Cloud configuration path, segmentation path and ContextHub path to your site root node so you can create a personalized experience for your audience. Using the ContextHub, you can manipulate the context data and test your resolved segments.
 
 ![CRXDE Lite](assets/crx-de-properties.png)
 
-ContextHubとセグメント化について詳しくは、以下を参照してください。
+You can read more about ContextHub and segmentation below:
 
 * [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [ページへのContext Hubの追加とストアへのアクセス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
 * [セグメント化について](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
 * [ContextHub でのセグメント化の設定](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)
