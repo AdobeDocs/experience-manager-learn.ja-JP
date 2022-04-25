@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1671'
 ht-degree: 3%
 
 ---
@@ -204,13 +204,14 @@ ht-degree: 3%
 + ドキュメントサービス {#document-services}
    + [PDF formsのタイプ](document-services/pdf-forms-and-documents.md)
    + [アダプティブフォームに pdf を埋め込む](document-services/embed-pdf-inline.md)
+   + [PDFのカルーセルコンポーネント内](document-services/display-pdf-in-carousel.md)
    + [AEM Formsでの Assembler サービスの使用](document-services/using-assembler-service-in-aem-forms.md)
    + [AEM Formsでの監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Formsでの Barcode Service の使用](document-services/barcode-service-adaptive-forms-article.md)
    + [AEM Formsでの PDFG サービスの使用](document-services/using-pdfg-in-aem-forms.md)
    + [AEM Formsでの Output とForms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
-   + [Mobileフォーム送信でPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [モバイルフォーム送信時にPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [MobileフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成する](document-services/generate-interactive-dor.md)
    + [Reader拡張資格情報の設定](document-services/configuring-reader-extension-osgi.md)
