@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: bd60205f5561cfc8d758a15e69bc26fa1d64bd4d
+source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -137,14 +137,16 @@ ht-degree: 0%
       </p>
    </td>
      <td>
-      <img alt="インデックス作成と検索に関するヒント" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-search-and-indexing.md">
+            <img alt="インデックス作成と検索に関するヒント" src="./imgs/009-thumb.png"/>
+        </a>
       <div>
-         <strong>インデックス作成と検索に関するヒント</strong>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>インデックス作成と検索に関するヒント</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 4 月 30 日
+         インデックス作成や検索と同じくらい複雑なものに対して、チームは、問題が発生する前に開発時間を最適化し、問題を解決するための簡単な成果を示します。
       </p>
    </td> 
   </tr>
