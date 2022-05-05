@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
+source-git-commit: c6844750c2ef7c3471ce6a337002dde508d611f2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -152,13 +152,15 @@ ht-degree: 0%
   </tr>
     <tr>
         <td>
-            <img alt="Adobeアプリビルダー" src="./imgs/coming-soon.png"/>
+            <a href="./cloud5-adobe-app-builder.md">
+                <img alt="Adobeアプリビルダー" src="./imgs/010-thumb.png"/>
+            </a>
             <div>
-                <strong>Adobeアプリビルダー</strong><br/>        
-                <em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;スペシャルゲスト</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>Adobeアプリビルダー</strong></a><br/>        
+                <em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;アモル・アナンド</em>
             </div>
             <p><br/>
-                2022 年 5 月 7 日
+                Adobeの App Builder でできる素晴らしいことを確認し、クラウド内のカスタマイズの将来に関する新しい情報を学んでください。
             </p>
         </td>
         <td></td>
