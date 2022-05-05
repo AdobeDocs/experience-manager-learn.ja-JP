@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
+source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 4%
 
 ---
-
 
 # 画像 (AEMヘッドレス )
 
@@ -90,7 +90,7 @@ GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを
 
 参照元の画像をアプリケーションに読み込むには、適切なフィールドを使用します。 `_path`, `_authorUrl`または `_publishUrl` の `adventurePrimaryImage` を画像のソース URL として設定します。
 
-のドメイン `_authorUrl` および `_publishUrl` は、AEM as a Cloud Serviceで [外部化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.htmli).
+のドメイン `_authorUrl` および `_publishUrl` は、AEM as a Cloud Serviceで [Externalizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
 
 React では、AEM Publish からの画像の表示は次のようになります。
 
