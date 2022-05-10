@@ -1,82 +1,113 @@
 ---
-title: OCRデータ抽出
+title: OCR データ抽出
 description: 政府発行ドキュメントからデータを抽出し、フォームに入力します。
 feature: Barcoded Forms
 version: 6.4,6.5
 kt: 6679
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1532a865-4664-40d9-964a-e64463b49587
+source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 3%
+source-wordcount: '709'
+ht-degree: 2%
 
 ---
 
+# OCR データ抽出
 
+政府発行の様々なドキュメントからデータを自動的に抽出して、アダプティブフォームに入力します。
 
-# OCRデータ抽出
+このサービスを提供する組織は多数あり、REST API が詳細に文書化されている限り、データ統合機能を使用してAEM Formsと簡単に統合できます。 このチュートリアルでは、 [ID アナライザ](https://www.idanalyzer.com/) を使用して、アップロードされたドキュメントの OCR データ抽出を示す。
 
-政府発行の様々なドキュメントから自動的にデータを抽出し、アダプティブフォームに入力します。
+ID Analyzer サービスを使用してAEM Formsで OCR データ抽出を実装するには、次の手順に従いました。
 
-このサービスを提供する組織は多数あり、REST APIについて詳しく文書化されている限り、データ統合機能を使用してAEM Formsと簡単に統合できます。 このチュートリアルの目的で、[IDアナライザ](https://www.idanalyzer.com/)を使用して、アップロードしたドキュメントのOCRデータ抽出のデモを行いました。
+## 開発者アカウントを作成
 
-IDアナライザーサービスを使用してAEM FormsでOCRデータ抽出を実装するには、次の手順に従いました。
+で開発者アカウントを作成します。 [ID アナライザ](https://portal.idanalyzer.com/signin.html). API キーをメモします。 このキーは、ID Analyzer のサービスの REST API を呼び出すために必要です。
 
-## 開発者アカウントの作成
+## Swagger/OpenAPI ファイルの作成
 
-[ID Analyzer](https://portal.idanalyzer.com/signin.html)で開発者アカウントを作成します。 APIキーをメモしておきます。 このキーは、IDアナライザーのサービスのREST APIを呼び出すために必要です。
+OpenAPI Specification（旧称 Swagger Specification）は、REST API の API 記述形式です。 OpenAPI ファイルを使用すると、次のような API 全体を記述できます。
 
-## Swagger/OpenAPIファイルの作成
-
-OpenAPI仕様（旧称Swagger仕様）は、REST APIのAPI説明形式です。 OpenAPIファイルを使用すると、次のようなAPI全体を記述できます。
-
-* 使用可能なエンドポイント(/users)と各エンドポイントでの操作(GET/users、POST/users)
-* 操作パラメータ各操作の入出力
-認証方法
+* 使用可能なエンドポイント (/users) および各エンドポイントでの操作 (GET/users、POST/users)
+* 操作パラメータ各操作の入力と出力認証方法
 * 連絡先情報、ライセンス、利用条件、その他の情報。
-* APIの仕様はYAMLまたはJSONで記述できます。 フォーマットは、学習が容易で、人間と機械の両方にとって読み取りが容易です。
+* API の仕様は、YAML または JSON で記述できます。 フォーマットは、学習が容易で、人間と機械の両方に対して読み取り可能です。
 
-最初のSwagger/OpenAPIファイルを作成するには、[OpenAPIのドキュメント](https://swagger.io/docs/specification/2-0/basic-structure/)に従ってください。
+最初の Swagger/OpenAPI ファイルを作成するには、 [OpenAPI ドキュメント](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
-> AEM Formsは、OpenAPI仕様バージョン2.0(fka Swagger)をサポートしています。
+> AEM Formsは、OpenAPI Specification version 2.0(fka Swagger) をサポートしています。
 
-[swaggerエディター](https://editor.swagger.io/)を使用して、SMSを使用して送信し、OTPコードを検証する操作を記述するswaggerファイルを作成します。 Swaggerファイルは、JSON形式またはYAML形式で作成できます。 完成したSwaggerファイルは、[こちら](assets/drivers-license-swagger.zip)からダウンロードできます。
+以下を使用： [swagger editor](https://editor.swagger.io/) :SMS を使用して送信し、OTP コードを検証する操作を記述する swagger ファイルを作成します。 Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 完成した Swagger ファイルは、 [ここ](assets/drivers-license-swagger.zip)
 
-## データソースの作成
+## Swager ファイルを定義する際の考慮事項
 
-AEM/AEM Formsをサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソース](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)を作成する必要があります。 [swaggerファイル](assets/drivers-license-swagger.zip)を使用して、データソースを作成してください。
+* 定義が必要です
+* $ref はメソッドの定義に使用する必要があります
+* セクションを定義して消費し、生成することをお勧めします。
+* インラインリクエスト本文パラメーターや応答パラメーターを定義しないでください。 可能な限りモジュール化を試みます。 例えば、次の定義はサポートされていません
+
+```json
+ "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Rollnum": {
+                  "type": "string",
+                  "description": "Rollnum"
+                }
+              }
+            }
+```
+
+次は、requestBody 定義への参照でサポートされています
+
+```json
+ "name": "requestBody",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/requestBody"
+            }
+```
+
+* [参照用のサンプル Swagger ファイル](assets/sample-swagger.json)
+
+## データソースを作成
+
+AEM/AEM Formsをサードパーティのアプリケーションと統合するには、 [データソースを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) クラウドサービス設定の「 」。 以下を使用してください： [swagger ファイル](assets/drivers-license-swagger.zip) をクリックしてデータソースを作成します。
 
 ## フォームデータモデルの作成
 
-AEM Formsのデータ統合機能は、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)を作成して操作するための直感的なユーザーインターフェイスを提供します。 前の手順で作成したデータソースを基にフォームデータモデルを作成します。
+AEM Formsのデータ統合は、を作成して操作するための直感的なユーザーインターフェイスを提供します [フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 前の手順で作成したデータソースに基づいてフォームデータモデルを作成します。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
-## クライアントライブラリの作成
+## クライアントライブラリを作成
 
-アップロードしたドキュメントのbase64エンコードされた文字列を取得する必要があります。 次に、このbase64エンコードされた文字列が、REST呼び出しのパラメーターの1つとして渡されます。
-クライアントライブラリは、[こちらからダウンロードできます。](assets/drivers-license-client-lib.zip)
+アップロードしたドキュメントの base64 エンコードされた文字列を取得する必要があります。 この base64 エンコードされた文字列は、REST 呼び出しのパラメーターの 1 つとして渡されます。
+クライアントライブラリをダウンロードできます [ここから。](assets/drivers-license-client-lib.zip)
 
-## アダプティブフォームの作成
+## アダプティブフォームを作成
 
-フォームデータモデルのPOSTの呼び出しをアダプティブフォームに統合して、フォーム内のユーザーがアップロードしたドキュメントからデータを抽出する。 独自のアダプティブフォームを自由に作成し、フォームデータモデルのPOST呼び出しを使用して、アップロードされたドキュメントのbase64エンコードされた文字列を送信できます。
+フォームデータモデルのPOST呼び出しをアダプティブフォームに統合して、フォーム内のユーザーがアップロードしたドキュメントからデータを抽出します。 自分でアダプティブフォームを作成し、フォームデータモデルのPOSTの呼び出しを使用して、アップロードされたドキュメントの base64 エンコードされた文字列を自由に送信できます。
 
-## サーバーにデプロイする
+## サーバーにデプロイ
 
-サンプルアセットをAPIキーと共に使用する場合は、次の手順に従います。
+API キーでサンプルアセットを使用する場合は、次の手順に従ってください。
 
-* [データソースをダウンロ](assets/drivers-license-source.zip) ードし、パッケージマネージャーを使用してAEMに [読み込みます](http://localhost:4502/crx/packmgr/index.jsp)
-* [フォームデータモデルをダウンロ](assets/drivers-license-fdm.zip) ードし、パッケージマネージャーを使用してAEMに [読み込みます。](http://localhost:4502/crx/packmgr/index.jsp)
+* [データソースのダウンロード](assets/drivers-license-source.zip) を使用してAEMにインポートします。 [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
+* [フォームデータモデルをダウンロードする](assets/drivers-license-fdm.zip) を使用してAEMにインポートします。 [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
 * [クライアントライブラリのダウンロード](assets/drivers-license-client-lib.zip)
-* サンプルのアダプティブフォームは、[こちら](assets/adaptive-form-dl.zip)からダウンロードできます。 このサンプルフォームは、この記事の一部として提供されるフォームデータモデルのサービス呼び出しを使用しています。
-* [FormsとDocument UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)からAEMにフォームを読み込みます。
-* [編集モードでフォームを開きます。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
-* APIキーをapikeyフィールドのデフォルト値として指定し、変更を保存します。
-* 「 Base 64 String 」フィールドのルールエディターを開きます。 このフィールドの値が変更された場合にサービスが呼び出されることに注意してください。
-* フォームの保存
-* [フォームをプレビューし](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)、ドライバーライセンスのフロントピクチャをアップロードします。
-
-
+* サンプルのアダプティブフォームをダウンロードすると、 [ここからダウンロード](assets/adaptive-form-dl.zip). このサンプルフォームは、この記事の一部として提供されているフォームデータモデルのサービス呼び出しを使用しています。
+* フォームをからAEMに読み込む [Formsとドキュメント UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* でフォームを開きます。 [編集モード。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
+* API キーをデフォルト値として「 apikey 」フィールドに指定し、変更を保存します。
+* 「 Base 64 String 」フィールドのルールエディターを開きます。 このフィールドの値が変更された場合、サービスの呼び出しに注意してください。
+* フォームを保存する
+* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled)，ドライバライセンスのフロントピクチャをアップロードします
