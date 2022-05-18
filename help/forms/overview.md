@@ -1,13 +1,13 @@
 ---
 title: AEM FormsTutorialsとビデオ
-description: 初心者および経験者向けのAEM FormsリソースのコレクションAEM Forms開発者向け
+description: リソースとドキュメントを使用して、AEM Formsのビデオとチュートリアルを参照し、質問に答えてください。
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '306'
 ht-degree: 19%
 
 ---

@@ -1,13 +1,13 @@
 ---
 title: AEM Sites のビデオおよびチュートリアル
-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
+description: Adobe Experience Manager Sitesのビデオとチュートリアルで、AEMの詳細をご覧ください。
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 28%
+source-wordcount: '348'
+ht-degree: 25%
 
 ---
 
@@ -56,11 +56,11 @@ Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja">
-    <img alt="AEM ヘッドレス使用の手引き" src="./assets/aem-headless-tutorial.png" />
+    <img alt="AEM ヘッドレスの概要" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
-    <strong>AEM ヘッドレス使用の手引き</strong>
+    <strong>AEM ヘッドレスの概要</strong>
     </a>
     </div>
     <p>
