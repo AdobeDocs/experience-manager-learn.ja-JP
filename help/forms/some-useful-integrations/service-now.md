@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
-source-git-commit: 81a15fb0182760aaac8cb58cccbfe28de7323492
+source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '289'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 3%
 ## サンプルアセット
 
 この記事で提供されるサンプルアセットには、次のものが含まれます
+
 * クラウドサービスの設定
 * Swagger ファイルを使用してインシデントを作成し、すべてのインシデントを取得します
 * Swagger ファイルに基づくフォームデータモデル
@@ -37,8 +38,18 @@ ht-degree: 3%
 
 * をダウンロードします。 [サンプルアセット](assets/service-now.zip)
 * を使用してアセットをAEMに読み込む [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
+* この統合に使用される Swagger ファイルは、 ```/conf/9957/settings/cloudconfigs/fdm``` crx リポジトリ内のフォルダー
 * を編集します。 [CreateIncident クラウドサービス設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)を ServiceNow インスタンスに一致させます。
-* を編集します。 [GetAllIncidents クラウドサービス設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) ServiceNow インスタンスに一致させる
+* を編集します。 [GetAllIncidents クラウドサービス設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) を ServiceNow インスタンスに一致させます。 ServiceNow インスタンスの資格情報に合わせて、ホスト、ユーザー名、パスワードを変更する必要があります。
+
+## ServiceNow インスタンスの資格情報にアクセス
+
+* ユーザープロファイルをクリック
+   ![ユーザープロファイルをクリック](assets/snow-1.png)
+
+* 「インスタンスのパスワードを管理」をクリックします。
+* インスタンスの詳細が次のように表示されます
+   ![インスタンスの詳細](assets/snow-3.png)
 
 ## 統合のテスト
 
