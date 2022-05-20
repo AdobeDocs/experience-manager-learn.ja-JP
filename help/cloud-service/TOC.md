@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 30%
+source-wordcount: '749'
+ht-degree: 31%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 30%
       + [ログ](./debugging/cloud-service/logs.md)
       + [ビルドとデプロイ](./debugging/cloud-service/build-and-deployment.md)
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
-      + [リポジトリブラウザ](./debugging/cloud-service/repository-browser.md)
+      + [リポジトリブラウザー](./debugging/cloud-service/repository-browser.md)
 + AEMへのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMSユーザー](./accessing/adobe-ims-users.md)
@@ -89,6 +89,9 @@ ht-degree: 30%
    + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
    + [AEMのユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
    + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
++ 認証{#authentication}
+   + [概要](./authentication/authentication.md)
+   + [SAML 2.0](./authentication/saml-2-0.md)
 + 高度なネットワーク機能{#networking}
    + [概要](./networking/advanced-networking.md)
    + [柔軟なポート出力](./networking/flexible-port-egress.md)
