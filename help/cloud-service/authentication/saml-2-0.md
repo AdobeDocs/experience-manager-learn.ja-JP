@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
+source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2775'
 ht-degree: 2%
 
 ---
-
 
 # SAML 2.0 認証{#saml-2-0-authentication}
 
@@ -398,6 +398,10 @@ IDP への認証が正常に完了すると、IDP は HTTPPOSTを調整してAEM
 ```
 
 Apache Web サーバーで URL の書き換えが設定されている場合 (`dispatcher/src/conf.d/rewrites/rewrite.rules`) に設定され、 `.../saml_login` エンドポイントが誤ってマングされることはありません。
+
+## データ同期の有効化
+
+SAML 認証フローで AEM パブリッシュにユーザーが作成されたら、ユーザーレコードを AEM パブリッシュ層全体で同期する必要があります。 宛先 [データ同期の有効化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)、( [AdminConsole](https://adminconsole.adobe.com) /サポート ) を使用して、有効にする必要があります。
 
 ## SAML 設定のデプロイ
 
