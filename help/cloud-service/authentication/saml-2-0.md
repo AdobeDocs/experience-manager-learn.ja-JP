@@ -9,16 +9,16 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
+source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2774'
 ht-degree: 2%
 
 ---
 
 # SAML 2.0 認証{#saml-2-0-authentication}
 
-エンドユーザー (AEMの作成者ではなく ) を SAML 2.0 互換の任意の IDP に設定し、認証する方法について説明します。
+任意の SAML 2.0 互換 IDP に対して (AEM作成者ではなく ) エンドユーザーを設定し、認証する方法について説明します。
 
 ## SAML for AEMas a Cloud Service
 
