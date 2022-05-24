@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 31%
+source-wordcount: '756'
+ht-degree: 30%
 
 ---
 
@@ -147,6 +147,7 @@ ht-degree: 31%
       + [フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [フォームポータルコンポーネントを有効にする](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [Cloud Servicesと FDM を含める](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [コンテキスト対応クラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [開発環境にデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [Maven アーキタイプの更新](./forms/developing-for-cloud-service/updating-project-archetype.md)

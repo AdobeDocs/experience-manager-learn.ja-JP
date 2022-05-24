@@ -8,17 +8,17 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: 8484897297940ab28619c4b1af5362a5937eadfa
+exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-
 # プロジェクトにクラウドサービス設定を含める
 
-クラウドサービス設定を保持する「FormsTutorial」という設定コンテナを作成します。「FormsTutorial」コンテナ内に、「Store Form Submissions in Azure」という Azure ストレージ用のクラウドサービス設定を作成します。 Azure ストレージアカウントの詳細とアカウントキーを入力します
+クラウドサービス設定を保持する「FormTutorial」という設定コンテナを作成する Azure ストレージのクラウドサービス設定を作成し、Azure ストレージアカウントの詳細と Azure アクセスキーを指定して、「FormsTutorial」コンテナ内に「FormsCSAndAzureBlob」という名前を付けます。
 
 IntelliJ でAEMプロジェクトを開きます。 ui.content プロジェクトで、以下に示すように、FormTutorial フォルダーを必ず追加してください。
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -45,4 +45,4 @@ ui.content プロジェクトの filter.xml に適切なエントリを含めま
 
 >[!NOTE]
 >
->プロジェクトを構築してデプロイすると、クラウドインスタンスで使用可能なクラウドサービス設定に基づいたフォームデータモデルがプロジェクトに作成されます
+>Cloud Manager を使用してプロジェクトをビルドおよびデプロイする際に、クラウドサービス設定で Azure アクセスキーを再入力する必要があります。 アクセスキーを再入力しないように、環境変数を使用してコンテキスト対応設定を作成することをお勧めします。詳しくは、 [次の記事](./context-aware-fdm.md)

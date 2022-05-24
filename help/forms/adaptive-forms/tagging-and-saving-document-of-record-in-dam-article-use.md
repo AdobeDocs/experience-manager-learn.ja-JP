@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '611'
 ht-degree: 1%
 
 ---
@@ -160,14 +160,14 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * [setvalue バンドルをダウンロードしてデプロイします。](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 送信されたフォームデータからタグを設定するカスタム OSGi バンドルです。
 
-* [サンプルのアダプティブフォームのダウンロード](assets/tag-and-store-in-dam-assets.zip)
+* [サンプルのアダプティブフォームをダウンロードします。](assets/tag-and-store-in-dam-adaptive-form.zip)
 
 * [Formsとドキュメントに移動](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 「作成」をクリックします。 |ファイルサンプルの adaptiveform.zip をアップロードおよびアップロードします
+* 「作成」をクリックします。 |ファイルタグ&amp;ストア —in-dam-adaptive-form.zip をアップロードしてアップロードします。
 
 * [記事アセットを読み込む](assets/tag-and-store-in-dam-assets.zip) AEM package manager の使用
-* を開きます。 [プレビューモードでのサンプルフォーム](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). 「人」セクションに入力し、フォームを送信します。
+* を開きます。 [プレビューモードでのサンプルフォーム](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **すべてのフィールドに入力** フォームを送信します。
 * [DAM の Peak フォルダーに移動します。](http://localhost:4502/assets.html/content/dam/Peak). Peak フォルダーに DoR が表示されます。 ドキュメントのプロパティを確認します。 適切にタグ付けする必要があります。
 おめでとう!! サンプルがシステムに正常にインストールされました
 
