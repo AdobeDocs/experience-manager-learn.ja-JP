@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
    JSON パラメーターを `vpn-create.json` を介してカールするために提供されます。 `... -d @./vpn-create.json`.
 
-[vpn-create.json の例をダウンロードします。](./assets/vpn-create.json)
+   [vpn-create.json の例をダウンロードします。](./assets/vpn-create.json).  このファイルは例に過ぎません。 次のドキュメントに記載されているオプション/必須フィールドに基づいて、必要に応じてファイルを設定します。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -243,7 +243,7 @@ HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシ hosts/po
 >
 > 詳しくは、 AEMas a Cloud Serviceの Virtual Private Network のドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
 
-#### コード例
+#### コードの例
 
 <table>
 <tr>
@@ -273,7 +273,7 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
 
-#### コード例
+#### コードの例
 
 <table><tr>
    <td>

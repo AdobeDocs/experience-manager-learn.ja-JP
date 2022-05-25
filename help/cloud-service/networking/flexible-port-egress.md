@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8c75e062d2de70c294f95e5c25040d8bb9badcce
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1080'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
    JSON パラメーターを `flexible-port-egress.json` を介してカールするために提供されます。 `... -d @./flexible-port-egress.json`.
 
-[サンプルの flexible-port-egress.json をダウンロードします。](./assets/flexible-port-egress.json)
+   [サンプルの flexible-port-egress.json をダウンロードします。](./assets/flexible-port-egress.json). このファイルは例に過ぎません。 次のドキュメントに記載されているオプション/必須フィールドに基づいて、必要に応じてファイルを設定します。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -180,7 +180,7 @@ AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別�
 >
 > 詳しくは、 AEMas a Cloud Serviceの柔軟なポート出力に関するドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
 
-#### コード例
+#### コードの例
 
 <table>
 <tr>
@@ -209,7 +209,7 @@ HTTP/HTTPS 以外の接続を作成する場合 ( 例： AEMからの SQL、SMTP
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-#### コード例
+#### コードの例
 
 <table><tr>
    <td>
