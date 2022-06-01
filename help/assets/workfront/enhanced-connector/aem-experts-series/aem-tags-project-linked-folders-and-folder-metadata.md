@@ -8,13 +8,13 @@ level: Beginner
 kt: 9720
 thumbnail: 340333.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
+source-git-commit: 485f968e6f8c508b5e81c54e03ca17996e4c1b63
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
-
 
 # AEMタグ、プロジェクトにリンクされたフォルダー、フォルダーメタデータ
 
@@ -25,3 +25,7 @@ Workfrontデータを介してアセットでのAEMタグの使用を促進し�
 >[!VIDEO](https://video.tv.adobe.com/v/340333/?quality=12&learn=on)
 
 _パート 3 of a [Workfront for Enhanced connector に関する 4 部構成のエキスパートシリーズ](./overview.md)_
+
+## 修正
+
++ __@ 4:34__ AEMタグの構文が正しくありません。 ビデオディスプレイ `we-retail:apparel/footwear`. 正しい構文は次のとおりです。 `["we-retail:apparel/footwear"]` 一般的に `["namespace:tag/childtag"]`.
