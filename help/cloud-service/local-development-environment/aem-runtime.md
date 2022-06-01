@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 1aba21ea777a58fe8efc8a6af455b0a8ba965b66
+source-git-commit: 3a9615177acb5475d9b2b4ef22907c11e7da2bf7
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 3%
+source-wordcount: '1801'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Experience Managerは Java アプリケーションなので、開発ツール�
 
 1. [最新の Java SDK 11 をダウンロードしてインストールする](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. 次のコマンドを実行して、Java 11 SDK がインストールされていることを確認します。
-   + Windows：`java -version`
+   + Windows:`java -version`
    + macOS/Linux: `java --version`
 
 ![Java](./assets/aem-runtime/java.png)
@@ -59,7 +59,7 @@ AEMas a Cloud ServiceSDK(AEM SDK) には、AEM オーサーとパブリッシュ
 
 ローカルの AEM オーサーサービスは、デベロッパーに、ローカルエクスペリエンスのデジタルマーケターやコンテンツ作成者が共有してコンテンツを作成および管理できるようにします。  AEM オーサーサービスは、オーサリングとプレビューの両方の環境として設計されており、それに対してほとんどの機能開発の検証を実行でき、ローカル開発プロセスの重要な要素となります。
 
-1. フォルダーの作成 `~/aem-sdk/author`
+1. フォルダーを作成 `~/aem-sdk/author`
 1. を __クイックスタート JAR__ ～に提出する  `~/aem-sdk/author` に変更し、 `aem-author-p4502.jar`
 1. コマンドラインから次のコマンドを実行して、ローカルの AEM オーサーサービスを開始します。
    + `java -jar aem-author-p4502.jar`
@@ -90,7 +90,7 @@ $ java -jar aem-author-p4502.jar
 
 ローカルの AEM パブリッシュサービスは、AEM上にホストされている Web サイトの参照など、AEMのエンドユーザーが持つローカルエクスペリエンスを開発者に提供します。 ローカルの AEM パブリッシュサービスは、AEM SDK の [Dispatcher ツール](./dispatcher-tools.md) また、開発者は、エンドユーザーに対する最終的なエクスペリエンスをスモークテストと微調整できます。
 
-1. フォルダーの作成 `~/aem-sdk/publish`
+1. フォルダーを作成 `~/aem-sdk/publish`
 1. を __クイックスタート JAR__ ～に提出する  `~/aem-sdk/publish` に変更し、 `aem-publish-p4503.jar`
 1. コマンドラインから次のコマンドを実行して、ローカルの AEM パブリッシュサービスを開始します。
    + `java -jar aem-publish-p4503.jar`
@@ -115,6 +115,18 @@ $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
+```
+
+## プレリリースモードでローカルAEMサービスを設定する
+
+ローカルのAEMランタイムは、 [プレリリースモード](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=ja) AEM as a Cloud Serviceの次期リリースの機能に基づいて開発者がを構築できるようになりました。 プレリリースは、 `-r prerelease` ローカルAEMランタイムの最初の開始時の引数。 これは、ローカルの AEM オーサーサービスと AEM パブリッシュサービスの両方で使用できます。
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
 ## コンテンツ配布をシミュレート {#content-distribution}
@@ -148,7 +160,7 @@ $ java -jar aem-publish-p4503.jar
 1. クリック **Ok** 設定を保存し、 **デフォルト** レプリケーションエージェント。
 1. これで、Author サービスのコンテンツに変更を加えて、それらを Publish サービスに公開できます。
 
-![ページを発行](assets/aem-runtime/publish-page-changes.png)
+![ページを公開](assets/aem-runtime/publish-page-changes.png)
 
 ## クイックスタート JAR の起動モード
 
