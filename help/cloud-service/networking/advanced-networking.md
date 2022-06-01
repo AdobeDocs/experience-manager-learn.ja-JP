@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 6%
+source-wordcount: '468'
+ht-degree: 8%
 
 ---
 
@@ -67,7 +67,7 @@ AEM Advanced Networking は、外部サービスとの接続を管理する 3 �
   </tr>
 </table>
 
-## コード例
+## コードの例
 
 このコレクションでは、特定の使用例で高度なネットワーク機能を利用するために必要な設定例とコードを示します。
 
@@ -82,10 +82,10 @@ AEM Advanced Networking は、外部サービスとの接続を管理する 3 �
       </p>
     </td>  
     <td>
-        <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準ポートでの HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-        <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準ポートでの HTTP/HTTPS</a></strong></div>
+        <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+        <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
         <p>
-            AEMから非標準の HTTP/HTTPS ポート上の外部サービスに HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
+            AEMから HTTP/HTTPS プロトコルを使用した外部サービスへの HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
         </p>
     </td>
     <td>

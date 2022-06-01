@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 1%
+source-wordcount: '1370'
+ht-degree: 2%
 
 ---
 
@@ -220,16 +220,16 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 Virtual Private Network が有効になっている場合、AEMのコードと設定を使用して、VPN 経由で外部サービスに対する呼び出しを行うことができます。 外部呼び出しには、AEMでの処理方法が 2 種類あります。
 
-1. 非標準ポート上の外部サービスへの HTTP/HTTPS 呼び出し
+1. 外部サービスへの HTTP/HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対しておこなわれる HTTP/HTTPS 呼び出しが含まれます。
 1. 外部サービスへの非 HTTP/HTTPS 呼び出し
    + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP/HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。
 
-標準ポート(80/443)上のAEMからの HTTP/HTTPS リクエストは、デフォルトで許可されており、追加の設定や考慮事項は不要です。
+標準ポート(80/443)上のAEMからの HTTP/HTTPS 要求は、デフォルトで許可されますが、以下に説明するように適切に設定されていない場合は、VPN 接続を使用しません。
 
-### 非標準ポートでの HTTP/HTTPS
+### HTTP/HTTPS
 
-AEMから非標準ポート (-80/443ではなく ) への HTTP/HTTPS 接続を作成する場合は、プレースホルダーを介して提供される特別なホストとポートを介して接続を行う必要があります。
+AEMから HTTP/HTTPS 接続を作成する場合、専用のエグレス IP アドレスを取得したり、VPN 経由でルーティングしたりするには、プレースホルダーを介して提供される特別なホストとポート経由で接続を行う必要があります。
 
 AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別な Java™システム変数を提供します。
 
@@ -237,7 +237,7 @@ AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別�
 
 HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシ hosts/ports の値を使用して Java™ HTTP クライアントのプロキシ設定を設定することでおこなう必要があります。
 
-非標準ポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `__enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
+任意のポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `__enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
 
 >[!TIP]
 >
@@ -248,10 +248,10 @@ HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシ hosts/po
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準ポートでの HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準ポートでの HTTP/HTTPS</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        AEMから非標準の HTTP/HTTPS ポート上の外部サービスに HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
+        AEMから HTTP/HTTPS プロトコルを使用した外部サービスへの HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
     </p>
 </td>
 <td></td>

@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: 4f8222d3185ad4e87eda662c33c9ad05ce3b0427
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1238'
+ht-degree: 1%
 
 ---
 
@@ -167,43 +167,43 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 1. これで、カスタムAEMコードおよび設定で、専用の出力 IP アドレスを使用できます。 多くの場合、専用の出力 IP アドレスを使用する場合、外部サービスのAEMas a Cloud Service接続先は、この専用 IP アドレスからのトラフィックのみを許可するように設定されます。
 
-## 専用ポートエグレスを介した外部サービスへの接続
+## 専用の出力 IP アドレスを使用した外部サービスへの接続
 
 専用の出力 IP アドレスを有効にすると、AEMのコードと設定で、専用の出力 IP を使用して外部サービスを呼び出すことができます。 外部呼び出しには、AEMでの処理方法が 2 種類あります。
 
-1. 非標準ポート上の外部サービスへの HTTP/HTTPS 呼び出し
+1. 外部サービスへの HTTP/HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対しておこなわれる HTTP/HTTPS 呼び出しが含まれます。
 1. 外部サービスへの非 HTTP/HTTPS 呼び出し
    + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP/HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。
 
-標準ポート(80/443)上のAEMからの HTTP/HTTPS リクエストは、デフォルトで許可されており、追加の設定や考慮事項は不要です。
+標準ポート(80/443)上のAEMからの HTTP/HTTPS リクエストは、デフォルトで許可されていますが、以下に説明するように適切に設定されていない場合は、専用の出力 IP アドレスを使用しません。
 
 >[!TIP]
 >
 > 詳しくは、 AEMas a Cloud Serviceの出力 IP アドレスに関する専用ドキュメントを参照してください。 [ルーティングルールの完全なセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
-### 非標準ポートでの HTTP/HTTPS
+### HTTP/HTTPS
 
-AEMから非標準ポート (-80/443ではなく ) への HTTP/HTTPS 接続を作成する場合、特別なホストとポートを介して接続する必要があります（プレースホルダーを介して提供）。
+AEMから HTTP/HTTPS 接続を作成する場合、専用のエグレス IP アドレスを取得するには、プレースホルダーを介して提供される特別なホストおよびポートを介して接続を行う必要があります。
 
 AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別な Java™システム変数を提供します。
 
-|変数名 |使用 | Java™ code | OSGi 設定 | | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP 接続のプロキシホスト | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | | `AEM_HTTP_PROXY_PORT` | HTTP 接続のプロキシポート | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` | | `AEM_HTTPS_PROXY_HOST` | HTTPS 接続のプロキシホスト | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | | `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` |
+|変数名 |使用 | Java™ code | OSGi 設定 | Apache Web サーバー mod_proxy 設定 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP 接続のプロキシホスト | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP 接続のプロキシポート | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | HTTPS 接続のプロキシホスト | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
 
 HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシの hosts/ports 値を使用して Java™ HTTP クライアントのプロキシ設定を設定することでおこなう必要があります。
 
-非標準ポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
+任意のポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
 
 #### コードの例
 
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準ポートでの HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準ポートでの HTTP/HTTPS</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        AEMから非標準の HTTP/HTTPS ポート上の外部サービスに HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
+        AEMから HTTP/HTTPS プロトコルを使用した外部サービスへの HTTP/HTTPS 接続をas a Cloud Service的にする Java™コードの例です。
     </p>
 </td>   
 <td></td>   
