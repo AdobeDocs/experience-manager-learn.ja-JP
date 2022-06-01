@@ -1,6 +1,6 @@
 ---
 title: AEM Assetsでの一括読み込みの使用
-description: AEM as aCloud Serviceの一括読み込みツールを使用すると、管理者は、安全かつ効率的にクラウドストレージ(Azure Blob StorageまたはAmazon S3)からアセットを一括で読み込むことができます。
+description: AEM as a Cloud Serviceの一括読み込みツールを使用すると、管理者は、安全で効率的な方法でクラウドストレージ (Azure Blob ストレージまたはAmazon S3) からアセットを一括で読み込むことができます。
 version: Cloud Service
 doc-type: technical-video
 topics: Migration
@@ -13,15 +13,24 @@ topic: Migration
 role: Architect, Developer
 level: Beginner
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 27a8cc66a8c6a9b30e3b39fe64a33c9de07d5c5b
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-# 一括インポートの使用
+# 一括読み込みの使用
 
-AEM as aCloud Serviceの一括読み込みツールを使用すると、管理者は、安全かつ効率的にクラウドストレージ(Azure Blob StorageまたはAmazon S3)からアセットを一括で読み込むことができます。
+AEM as a Cloud Serviceの一括読み込みツールを使用すると、管理者は、安全で効率的な方法でクラウドストレージ (Azure Blob ストレージまたはAmazon S3) からアセットを一括で読み込むことができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
+
+## 一括インポートのスケジュール設定
+
+一括読み込みでは、次のような設定のスケジュールされた実行をサポートします。
+
++ 定義された日時に 1 回の実行
++ 1 時間、1 日または 1 週間ごとの期間実行
+
+![一括インポートスケジュール](./assets/bulk-import/schedule.png)
