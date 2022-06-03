@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '340'
 ht-degree: 2%
 
 ---
@@ -30,18 +30,20 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
 各シーズンの長さは異なり、一定のスケジュールでリリースされます。 シーズン 2 のトピックは、主に、お客様やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。 毎週の更新情報についてはこのページを参照するか、選択したソーシャルネットワークでフォローしてください。
 
 <table>
-  <tr>
-   <td>
-      <img alt="フラグメント" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>フラグメント</strong>        
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
-      </div>
-      <p>
-        <br/>
-         2022 年 6 月 4 日
-      </p>
-     </td>   
+    <tr>
+        <td>
+            <a href="season-2/cloud5-experience-v-content-fragments.md">
+                <img alt="フラグメント" src="./imgs/s2/000-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>フラグメント</strong></a>        
+                <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+            </div>
+            <p>
+                <br/>
+                エクスペリエンスとコンテンツフラグメントの違いに対するカラフルな取り組み。 スポイラー：みんな勝つ。
+            </p>
+        </td>   
      <td>
          <img alt="Repository Modernizer" src="./imgs/coming-soon.png"/>
       <div>
