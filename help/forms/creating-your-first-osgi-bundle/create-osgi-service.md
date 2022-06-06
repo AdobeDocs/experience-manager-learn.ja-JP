@@ -1,45 +1,47 @@
 ---
-title: AEM Formsでの最初のOSGiサービスの作成
-description: 'AEM Formsでの最初のOSGiサービスの構築 '
-feature: アダプティブフォーム
+title: AEM Formsでの最初の OSGi サービスの作成
+description: AEM Formsでの最初の OSGi サービスの構築
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 5%
+source-wordcount: '349'
+ht-degree: 4%
 
 ---
 
+# OSGi サービス
 
-# OSGiサービス
+OSGi サービスは Java クラスまたはサービスインターフェイスで、多数のサービスプロパティを名前/値のペアとして使用します。 サービスプロパティは、同じサービスインターフェイスでサービスを提供する異なるサービスプロバイダ間で異なります。
 
-OSGiサービスは、Javaクラスまたはサービスインターフェイスで、名前と値のペアとして多数のサービスプロパティを含みます。 サービスプロパティは、同じサービスインターフェイスでサービスを提供する異なるサービスプロバイダ間を区別します。
-
-OSGiサービスは、サービスインターフェイスによって意味的に定義され、サービスオブジェクトとして実装されます。 サービスの機能は、実装するインターフェイスによって定義されます。 したがって、異なるアプリケーションが同じサービスを実装できます。 サービスインターフェイスを使用すると、実装ではなく、インターフェイスをバインディングしてバンドルを操作できます。 サービスインターフェイスは、できるだけ少ない実装の詳細で指定する必要があります。
+OSGi サービスは、サービスインターフェイスによって意味的に定義され、サービスオブジェクトとして実装されます。 サービスの機能は、実装するインターフェイスによって定義されます。 したがって、異なるアプリケーションが同じサービスを実装できます。 サービスインターフェイスを使用すると、バンドルは実装ではなく、インターフェイスをバインドしてやり取りできます。 サービスインターフェイスは、できるだけ少ない実装の詳細で指定する必要があります。
 
 ## インターフェイスの定義
 
-<span class="x x-first x-last">XDP</span>テンプレートとデータを結合する1つのメソッドを備えたシンプルなインターフェイスです。
+データを <span class="x x-first x-last">XDP</span> テンプレート。
 
 ```java
-package com.learningaemforms.adobe.core;
+package com.mysite.samples;
 
 import com.adobe.aemfd.docmanager.Document;
 
-public interface MyfirstInterface {
-  public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
-} 
+public interface MyfirstInterface
+{
+	public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
+}
+ 
 ```
 
 ## インターフェイスの実装
 
-インターフェイスの実装を保持する`com.learningaemforms.adobe.core.impl`という新しいパッケージを作成します。
+という名前の新しいパッケージを作成します。 `com.mysite.samples.impl` インターフェイスの実装を保持する
 
 ```java
-package com.learningaemforms.adobe.core.impl;
+package com.mysite.samples.impl;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -47,7 +49,7 @@ import org.slf4j.LoggerFactory;
 import com.adobe.aemfd.docmanager.Document;
 import com.adobe.fd.output.api.OutputService;
 import com.adobe.fd.output.api.OutputServiceException;
-import com.learningaemforms.adobe.core.MyfirstInterface;
+import com.mysite.samples.MyfirstInterface;
 @Component(service = MyfirstInterface.class)
 public class MyfirstInterfaceImpl implements MyfirstInterface {
   @Reference
@@ -74,34 +76,36 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-10行目の注釈`@Component(...)`は、このJavaクラスをOSGiコンポーネントとしてマークし、OSGiサービスとして登録します。
+注釈 `@Component(...)` 行 10 では、この Java クラスを OSGi コンポーネントとしてマークし、OSGi サービスとして登録します。
 
-`@Reference`注釈はOSGi宣言サービスの一部で、[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)の参照を変数`outputService`に挿入するために使用されます。
+この `@Reference` 注釈は、OSGi 宣言サービスの一部で、 [Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 変数に `outputService`.
 
 
 ## バンドルのビルドとデプロイ
 
-* **コマンドプロンプトウィンドウ**&#x200B;を開きます。
-* `c:\aemformsbundles\learningaemforms\core` に移動します。
-* コマンド`mvn clean install -PautoInstallBundle`を実行します。
-* 上記のコマンドは、localhost:4502で実行されているAEMインスタンスにバンドルを自動的にビルドしてデプロイします。
+* 開く **コマンドプロンプトウィンドウ**
+* `c:\aemformsbundles\mysite\core` に移動します。
+* コマンドを実行します。 `mvn clean install -PautoInstallBundle`
+* 上記のコマンドは、localhost:4502 で実行されているAEMインスタンスにバンドルを自動的にビルドしてデプロイします。
 
-バンドルは、次の場所`C:\AEMFormsBundles\learningaemforms\core\target`でも使用できます。 バンドルは、[Felix Webコンソールを使用してAEMにデプロイすることもできます。](http://localhost:4502/system/console/bundles)
+バンドルは、次の場所でも使用できます `C:\AEMFormsBundles\mysite\core\target`. バンドルは、 [Felix Web コンソール。](http://localhost:4502/system/console/bundles)
 
 ## サービスの使用
 
-これで、JSPページでサービスを使用できます。 次のコードスニペットは、サービスへのアクセス権を取得し、サービスによって実装されたメソッドを使用する方法を示しています
+これで、JSP ページでサービスを使用できます。 次のコードスニペットは、サービスにアクセスし、サービスで実装されたメソッドを使用する方法を示しています
 
 ```java
-MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.learningaemforms.adobe.core.MyFirstAEMFormsService.class);
+MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samples.MyFirstAEMFormsService.class);
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-JSPページを含むサンプルパッケージは、![こちらからダウンロードできます。](assets/learning-aem-forms.zip)
+JSP ページを含むサンプルパッケージは、次のようになります。 [ここからダウンロード](assets/learning_aem_forms.zip)
 
-## パッケージのテスト
+[完全なバンドルをダウンロードできます](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
-[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、パッケージをAEMに読み込んでインストールします。
+## パッケージをテストする
 
-postmanを使用してPOST呼び出しを行い、下のスクリーンショットに示すように入力パラメーターを指定します。
-![postman](assets/test-service-postman.JPG)
+を使用してパッケージをAEMにインポートおよびインストールします。 [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
+
+Postman を使用してPOST呼び出しをおこない、以下のスクリーンショットに示すように入力パラメーターを指定します。
+![郵便配達人](assets/test-service-postman.JPG)

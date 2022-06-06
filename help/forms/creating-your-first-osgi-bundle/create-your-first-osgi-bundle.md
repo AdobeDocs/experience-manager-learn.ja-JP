@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '674'
 ht-degree: 2%
 
 ---
@@ -49,12 +49,6 @@ Maven は、主に Java プロジェクトで使用されるビルド自動化�
 
 ![data-source](assets/mvn-version.JPG)
 
-## Settings.xml
-
-Maven `settings.xml` ファイルは、様々な方法で Maven の実行を設定する値を定義します。 最も一般的に、ローカルリポジトリの場所、代替のリモートリポジトリサーバー、およびプライベートリポジトリの認証情報を定義するために使用されます。
-
-に移動します。 `C:\Users\<username>\.m2 folder`
-コンテンツを抽出 [settings.zip](assets/settings.zip) ファイルを作成し、 `.m2` フォルダー。
 
 ## Eclipse のインストール
 
@@ -68,24 +62,17 @@ Maven `settings.xml` ファイルは、様々な方法で Maven の実行を設�
 * という名前の新しいフォルダーを作成します。 `aemformsbundles` C ドライブ内
 * コマンドプロンプトを開き、に移動します。 `c:\aemformsbundles`
 * コマンドプロンプトで次のコマンドを実行します。
-* `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven プロジェクトはインタラクティブに生成され、次のような多数のプロパティに値を指定するよう求められます。
+```java
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
+```
 
-| プロパティ名 | 有意性 | 値 |
-------------------------|---------------------------------------|---------------------
-| groupId | groupId は、すべてのプロジェクトをまたいでプロジェクトを一意に識別します | com.learningaemforms.adobe |
-| appsFolderName | プロジェクト構造を保持するフォルダーの名前 | learningforms |
-| artifactId | artifactId は、バージョンのない jar の名前です。 作成した場合は、任意の名前を小文字で選択し、変な記号は使用できません。 | learningforms |
-| version | 配布する場合は、数字とドット付きの一般的なバージョン（1.0、1.1、1.0.1 など）を選択できます。 | 1.0 |
-
-Enter キーを押して、他のプロパティのデフォルト値をそのまま使用します。
-すべてが正常に動作する場合は、コマンドウィンドウにビルド成功メッセージが表示されます
+正常に完了すると、コマンドウィンドウにビルド成功メッセージが表示されます
 
 ## Maven プロジェクトから Eclipse プロジェクトを作成する
 
-作業ディレクトリをに変更します。 `learningaemforms`.
-実行 `mvn eclipse:eclipse` 上記のコマンドは、pom ファイルを読み取り、正しいメタデータを使用して Eclipse プロジェクトを作成し、Eclipse がプロジェクトのタイプ、関係、クラスパスなどを認識できるようにします。
+* 作業ディレクトリをに変更します。 `mysite`
+* 実行 `mvn eclipse:eclipse` コマンドラインから。 このコマンドは、POM ファイルを読み取り、正しいメタデータを使用して Eclipse プロジェクトを作成し、Eclipse がプロジェクトのタイプ、関係、クラスパスなどを認識できるようにします。
 
 ## プロジェクトを Eclipse に読み込む
 
@@ -97,33 +84,24 @@ Enter キーを押して、他のプロパティのデフォルト値をその�
 
 次へをクリック
 
-を選択します。 `c:\aemformsbundles\learningaemform`をクリックし、 **参照** ボタン
+c:\aemformsbundles\mysite by clicking the **参照** ボタン
 
-![data-source](assets/select-mvn-project.JPG)
+![data-source](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
 >必要に応じて、適切なモジュールをインポートするように選択できます。 プロジェクトで Java コードを作成するだけの場合は、コアモジュールのみを選択して読み込みます。
 
 クリック **完了** インポート処理を開始するには
 
-プロジェクトが Eclipse に読み込まれると、 `learningaemforms.xxxx` フォルダー
+プロジェクトが Eclipse に読み込まれると、 `mysite.xxxx` フォルダー
 
-を展開します。 `src/main/java` の下に `learningaemforms.core` フォルダー。 これは、ほとんどのコードを書き込むフォルダーです。
+を展開します。 `src/main/java` の下に `mysite.core` フォルダー。 これは、ほとんどのコードを書き込むフォルダーです。
 
-![data-source](assets/learning-core.JPG)
+![data-source](assets/mysite-core-project.png)
 
-## プロジェクトを構築する
+## AEMFD Client SDK を含める
 
-
-
-
-OSGi サービスまたはサーブレットを作成したら、Felix Web コンソールを使用してデプロイできる OSGi バンドルを生成するために、プロジェクトを構築する必要があります。 詳しくは、 [AEMFD Client SDK](https://search.maven.org/artifact/com.adobe.aemfd/aemfd-client-sdk) を追加して、Maven プロジェクトに適切なクライアント SDK を含めます。 AEM FD Client SDK をの dependencies セクションに含める必要があります。 `pom.xml` を参照してください。
-
-
-
-
-
-
+AEM Formsに付属する様々なサービスを利用するには、AEMFD client sdk をプロジェクトに含める必要があります。 詳しくは、 [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) を追加して、Maven プロジェクトに適切なクライアント SDK を含めます。 AEM FD Client SDK をの dependencies セクションに含める必要があります。 `pom.xml` を参照してください。
 
 ```xml
 <dependency>
@@ -136,7 +114,7 @@ OSGi サービスまたはサーブレットを作成したら、Felix Web コ�
 プロジェクトを構築するには、次の手順に従います。
 
 * 開く **コマンドプロンプトウィンドウ**
-* `c:\aemformsbundles\learningaemforms\core` に移動します。
+* `c:\aemformsbundles\mysite\core` に移動します。
 * コマンドを実行します。 `mvn clean install -PautoInstallBundle`
 上記のコマンドは、で実行されているAEMサーバーにバンドルをビルドおよびインストールします。 `http://localhost:4502`. バンドルは、ファイルシステムの
-   `C:\AEMFormsBundles\learningaemforms\core\target` を使用してデプロイできます。 [Felix Web コンソール](http://localhost:4502/system/console/bundles)
+   `C:\AEMFormsBundles\mysite\core\target` を使用してデプロイできます。 [Felix Web コンソール](http://localhost:4502/system/console/bundles)

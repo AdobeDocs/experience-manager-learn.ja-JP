@@ -1,32 +1,32 @@
 ---
 title: AEM Formsでの最初のサーブレットの作成
-description: 最初のSlingサーブレットを構築し、データをフォームテンプレートとマージします。
-feature: アダプティブフォーム
+description: 最初の Sling サーブレットを構築し、データをフォームテンプレートと結合します。
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '207'
+ht-degree: 3%
 
 ---
 
-
 # Sling Servlet
 
-サーブレットは、要求応答プログラミングモデルを介してアクセスするアプリケーションをホストするサーバーの機能を拡張するために使用されるクラスです。 このようなアプリケーションの場合、サーブレットテクノロジーはHTTP固有のサーブレットクラスを定義します。
+サーブレットは、要求応答プログラミングモデルを介してアクセスするアプリケーションをホストするサーバーの機能を拡張するために使用されるクラスです。 このようなアプリケーションの場合、サーブレットテクノロジーは HTTP 固有のサーブレットクラスを定義します。
 すべてのサーブレットは、ライフサイクルメソッドを定義するサーブレットインターフェイスを実装する必要があります。
 
 
-AEM内のサーブレットは、OSGiサービスとして登録できます。読み取り専用実装またはSlingAllMethodsServlet用にSlingSafeMethodsServletを拡張して、すべてのRESTful操作を実装できます。
+AEMのサーブレットは、OSGi サービスとして登録できます。読み取り専用実装または SlingAllMethodsServlet 用に SlingSafeMethodsServlet を拡張して、すべての RESTful 操作を実装できます。
 
 ## サーブレットコード
 
 ```java
+package com.mysite.core.servlets;
 import javax.servlet.Servlet;
-
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
@@ -71,19 +71,19 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 ## ビルドとデプロイ
 
-プロジェクトをビルドするには、次の手順に従います。
+プロジェクトを構築するには、次の手順に従います。
 
-* **コマンドプロンプトウィンドウ**&#x200B;を開きます。
-* `c:\aemformsbundles\learningaemforms\core` に移動します。
-* コマンド`mvn clean install -PautoInstallBundle`を実行します。
-* 上記のコマンドは、localhost:4502で実行されているAEMインスタンスにバンドルを自動的にビルドしてデプロイします。
+* 開く **コマンドプロンプトウィンドウ**
+* `c:\aemformsbundles\mysite\core` に移動します。
+* コマンドを実行します。 `mvn clean install -PautoInstallBundle`
+* 上記のコマンドは、localhost:4502 で実行されているAEMインスタンスにバンドルを自動的にビルドしてデプロイします。
 
-バンドルは、次の場所`C:\AEMFormsBundles\learningaemforms\core\target`でも使用できます。 バンドルは、[Felix Webコンソールを使用してAEMにデプロイすることもできます。](http://localhost:4502/system/console/bundles)
+バンドルは、次の場所でも使用できます `C:\AEMFormsBundles\mysite\core\target`. バンドルは、 [Felix Web コンソール。](http://localhost:4502/system/console/bundles)
 
 
 ## サーブレットリゾルバーのテスト
 
-ブラウザーで[サーブレットリゾルバーURL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST)を参照します。 これにより、以下のスクリーンショットに示すように、特定のパスに対して呼び出されるサーブレットが示されます
+ブラウザーで [サーブレットリゾルバー URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). これにより、以下のスクリーンショットに示すように、特定のパスに対して呼び出されるサーブレットが示されます
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Postmanを使用したサーブレットのテスト

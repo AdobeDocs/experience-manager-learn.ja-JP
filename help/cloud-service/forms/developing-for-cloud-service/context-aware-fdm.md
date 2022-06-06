@@ -8,10 +8,11 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 10423
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 11%
+source-wordcount: '386'
+ht-degree: 10%
 
 ---
 
@@ -24,9 +25,9 @@ ht-degree: 11%
 
 ## 環境変数の作成
 
-標準環境変数は、Cloud Manager を介して設定および管理できます。これらは実行時環境に提供され、OSGi 設定で使用できます。環境変数には、環境固有の値または環境シークレットを変更内容に応じて指定できます。
+標準環境変数は、Cloud Manager を介して設定および管理できます。これらは実行時環境に提供され、OSGi 設定で使用できます。[環境変数には、環境固有の値または環境シークレットを変更内容に応じて指定できます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
-[環境変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+
 
 次のスクリーンショットは、定義された azure_key と azure_connection_string の環境変数を示しています
 ![environment_variables](assets/environment-variables.png)

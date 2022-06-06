@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1676'
 ht-degree: 3%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 3%
    + [フォームデータモデルサービス呼び出しの結果をテーブルに入力する](adaptive-forms/populatetable.md)
    + [ワークフローコメントのキャプチャ](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [送信されたフォームデータの DB への格納](adaptive-forms/storing-adaptive-form-data-in-db.md)
+   + [DB へのフォーム添付の挿入](adaptive-forms/inserting-form-attachment-in-db.md)
    + [AEM 6.4 ワークフローのフォームデータモデルサービス](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [フォームデータモデルサービスステップでのエラーメッセージの処理](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [AEM 6.5.1 Workflow のフォームデータモデルサービス](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
@@ -173,7 +174,7 @@ ht-degree: 3%
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
-+ Mobileフォーム送信からのAEM Workflow のトリガー{#offline-mobile-form-submission}
++ モバイルフォーム送信からのAEMワークフローのトリガー{#offline-mobile-form-submission}
    + [はじめに](offline-mobile-form-submission/introduction.md)
    + [カスタムプロファイル](offline-mobile-form-submission/part-one.md)
    + [PDF送信を処理](offline-mobile-form-submission/part-two.md)
@@ -212,7 +213,7 @@ ht-degree: 3%
    + [AEM Formsでの Output とForms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時にPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [MobileフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
+   + [モバイルフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成する](document-services/generate-interactive-dor.md)
    + [Reader拡張資格情報の設定](document-services/configuring-reader-extension-osgi.md)
    + [XDP レンディションでのPDFへの使用権限の適用](document-services/rendering-and-reader-extending-xdp-templates-article.md)
