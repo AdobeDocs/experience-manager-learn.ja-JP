@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '760'
 ht-degree: 31%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 31%
 
    + AEM as a Cloud Service への移行 {#moving-to-aem-as-a-cloud-service}
       + [はじめに](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
-      + [オンボーディング ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [オンボーディング](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [BPA および CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM Modernization tools](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
@@ -253,6 +253,9 @@ ht-degree: 31%
    + シーズン 2{#season-2}
       + [フラグメント](./cloud-5/season-2/cloud5-experience-v-content-fragments.md)
       + [Repo Modernizer](./cloud-5/season-2/cloud5-repo-modernizer.md)
+      + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
+      + [REPOINIT](./cloud-5/season-2/cloud5-repoinit.md)
+      + [Sling Job Scheduler](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
