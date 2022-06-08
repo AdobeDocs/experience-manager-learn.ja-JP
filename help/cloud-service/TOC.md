@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '763'
 ht-degree: 31%
 
 ---
@@ -82,6 +82,8 @@ ht-degree: 31%
       + [ビルドとデプロイ](./debugging/cloud-service/build-and-deployment.md)
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
       + [リポジトリブラウザー](./debugging/cloud-service/repository-browser.md)
+      + リスク{#risks}
+         + [横断の警告](./debugging/cloud-service/risks/traversals.md)
 + AEMへのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMSユーザー](./accessing/adobe-ims-users.md)
