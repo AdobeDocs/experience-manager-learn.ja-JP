@@ -10,15 +10,18 @@ hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
+source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '834'
 ht-degree: 10%
 
 ---
 
-
 # トラバーサルの警告
+
+>[!TIP]
+>このページを後で参照できるようにブックマークします。
 
 _トラバーサル警告とは_
 
@@ -271,5 +274,3 @@ AEMのインデックス、検索、トラバーサルの警告について理�
 </div>
 
 </div>
-
-
