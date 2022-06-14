@@ -10,7 +10,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 4%
@@ -128,7 +128,7 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
 
    `index.js` は、SPAのエントリポイントです。 `ModelManager` は、AEM SPA Editor JS SDK で提供されます。 これは、 `pageModel` （JSON コンテンツ）をアプリケーションにコピーします。
 
-1. Inspectファイル `import-component.js` 時刻 `ui.frontend/src/import-components.js`. このファイルは、標準のをインポートします **React コアコンポーネント** を使用して、プロジェクトで使用できるようにします。 次の章では、AEMコンテンツとSPAコンポーネントのマッピングを調べます。
+1. Inspectファイル `import-components.js` 時刻 `ui.frontend/src/components/import-components.js`. このファイルは、標準のをインポートします **React コアコンポーネント** を使用して、プロジェクトで使用できるようにします。 次の章では、AEMコンテンツとSPAコンポーネントのマッピングを調べます。
 
 ## 静的なSPAコンポーネントの追加 {#static-spa-component}
 
@@ -303,7 +303,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
    + require('./Header.css');
    ```
 
-   変更内容を保存します。
+   変更を保存します。
 
 1. に移動します。 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) スタイルの変更が自動的に反映されていることを確認するには、次の手順を実行します。
 

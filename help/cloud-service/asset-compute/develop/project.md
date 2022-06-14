@@ -8,7 +8,7 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
@@ -37,10 +37,10 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
 1. __ワークスペースを選択__
    + を選択します。 `Development` workspace
 1. __このプロジェクトに対して有効にするAdobe I/Oアプリの機能を教えてください。 含めるコンポーネントを選択__
-   +  `Actions: Deploy runtime actions`
+   + 選択 `Actions: Deploy runtime actions`
    + 矢印キーを使用して、選択を解除または選択を行い、選択を確定するには Enter キーを使用します。
 1. __生成するアクションのタイプを選択__
-   +  `DX Asset Compute Worker v1`
+   + 選択 `DX Asset Compute Worker v1`
    + 矢印キーを使用して選択し、選択を解除または選択するスペース、選択を確定するには Enter キーを使用します
 1. __このアクションの名前を指定してください。__
    + デフォルト名を使用 `worker`.
@@ -55,7 +55,7 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
 1. Adobe I/Oプロジェクトのルートに移動し、をタップします。 __すべてダウンロード__ をクリックします。
 1. ファイルが `.json` 次のように、プロジェクトとワークスペースのプレフィックスが付いたファイルが表示されます。 `wkndAemAssetCompute-81368-Development.json`
 1. 次のいずれかの操作を実行できます。
-   + ファイル名をに変更します。 `config.json` をクリックし、Asset computeワーカープロジェクトのルートに移動します。 これは、このチュートリアルのアプローチです。
+   + ファイル名をに変更します。 `console.json` をクリックし、Asset computeワーカープロジェクトのルートに移動します。 これは、このチュートリアルのアプローチです。
    + 任意のフォルダーに移動し、 `.env` 設定エントリを持つファイル `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. ファイルパスは、絶対パスまたはプロジェクトのルートを基準とした相対パスにすることができます。 次に例を示します。
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 

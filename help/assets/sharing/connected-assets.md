@@ -1,28 +1,28 @@
 ---
-title: AEM SitesでのConnected Assetsの使用
-description: Connected Assetsの機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされたデジタルアセットをシームレスに共有できます。
+title: AEM Sitesでの Connected Assets の使用
+description: Connected Assets の機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされているデジタルアセットをシームレスに共有できます。
 feature: Connected Assets
 version: 6.5
-topic: コンテンツ管理
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2eceb65f-362a-48e1-a8c6-e9f6954dc2a0
+source-git-commit: cdbfe994009437962385c7fe45698df9eead5ce4
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 3%
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
+# AEM Assetsでの Connected Assets の使用{#using-connected-assets-with-aem-assets}
 
-# AEM Assets{#using-connected-assets-with-aem-assets}での接続アセットの使用
-
-Connected Assetsの機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされたデジタルアセットをシームレスに共有できます。
+Connected Assets の機能を使用すると、AEM Sitesの作成者はAEMの別のインスタンスでホストされているデジタルアセットをシームレスに共有できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26060?quality=12&learn=on)
 
-* 00:00 — 高レベルのアーキテクチャ
-* 02:52 — Connected Assetsの認証
-* 03:30 — Connected Assetsの画像を使用
-* 04:42 — Connected Assets機能を有効にする管理者設定
+* 00:00 — アーキテクチャの概要
+* 02:52 — Connected Assets への認証
+* 03:30 — Connected Assets からの画像の使用
+* 04:42 — Connected Assets 機能を有効にするための管理者設定
 
-AEMデプロイメントでConnected Assetsをサポートできるかどうかについては、Connected Assetsの[サポートされているデプロイメント](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites)を確認してください。
+次を確認してください： [Connected Assets のサポートされるデプロイメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) を参照して、AEMのデプロイメントで Connected Assets をサポートできるかどうかを確認します。
