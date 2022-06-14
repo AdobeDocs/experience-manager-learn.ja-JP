@@ -1,6 +1,6 @@
 ---
 title: iOS SwiftUI アプリ — AEMヘッドレスの例
-description: サンプルアプリケーションは、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 AEMの GraphQL API を使用してコンテンツをクエリする方法を示すiOSアプリケーションが提供されます。 Apollo Client iOSは、GraphQL クエリを生成し、データを Swift オブジェクトにマッピングしてアプリを強化するために使用されます。 SwiftUI は、コンテンツの単純なリスト表示と詳細表示をレンダリングするために使用されます。
+description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 9166
@@ -9,211 +9,320 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
+exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
+source-git-commit: bcedb190fba7b6bc044da06bd36d097d553172a1
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 4%
+source-wordcount: '983'
+ht-degree: 5%
 
 ---
 
-
 # iOS SwiftUI アプリ
 
-サンプルアプリケーションは、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションは、AEMの GraphQL API を使用してコンテンツをクエリする方法を示します。 Apollo Client iOSは、GraphQL クエリを生成し、データを Swift オブジェクトにマッピングしてアプリを強化するために使用されます。 SwiftUI は、コンテンツの単純なリスト表示と詳細表示をレンダリングするために使用されます。
+アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
 
-表示 [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
+![AEMヘッドレスを備えたiOS SwiftUI アプリ](./assets/ios-swiftui-app/ios-app.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/338042/?quality=12&learn=on)
+次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
 
 ## 前提条件 {#prerequisites}
 
-次のツールは、ローカルにインストールする必要があります。
+以下のツールをローカルにインストールする必要があります。
 
-* [Xcode 9.3 以降](https://developer.apple.com/xcode/)
-* [Git](https://git-scm.com/)
++ [Xcode 9.3 以降](https://developer.apple.com/xcode/) (macOSが必要 )
++ [Git](https://git-scm.com/)
 
 ## AEM要件
 
-アプリケーションは、AEMに接続するように設計されています **公開** 最新リリースの [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest) インストール済み
+iOSアプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントには、 [WKND サイト v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をインストールします。
 
-* [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/introduction.html)
-* [AEM 6.5.10+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/new-features-latest-service-pack.html?lang=ja)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
++ を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
++ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=en#install-local-aem-instances)
 
-推奨 [WKND リファレンスサイトのCloud Service環境へのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version). を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) または [AEM 6.5 QuickStart jar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=en#install-local-aem-instances) また、を使用することもできます。
+iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、iOSアプリケーションの設定で認証が指定されている場合は、AEM オーサーからコンテンツをソース化できます。
 
 ## 使用方法
 
-1. を `aem-guides-wknd-graphql` リポジトリ：
+1. のクローン `adobe/aem-guides-wknd-graphql` リポジトリ：
 
    ```shell
    git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Xcode](https://developer.apple.com/xcode/) フォルダを開きます。 `ios-swiftui-app`
-1. ファイルの変更 `Config.xcconfig` ファイルと更新 `AEM_HOST` ターゲットの AEM パブリッシュ環境に合わせる
+1. 起動 [Xcode](https://developer.apple.com/xcode/) フォルダーを開きます。 `ios-swiftui-app`
+1. ファイルを変更します `Config.xcconfig` ファイルと更新 `AEM_SCHEME` および `AEM_HOST` を追加して、ターゲットの AEM パブリッシュサービスに合わせます。
 
    ```plain
+   // The http/https protocol scheme used to access the AEM_HOST
+   AEM_SCHEME = http
    // Target hostname for AEM environment, do not include http:// or https://
    AEM_HOST = localhost:4503
-   // GraphQL Endpoint
-   AEM_GRAPHQL_ENDPOINT = /content/cq:graphql/wknd/endpoint.json
    ```
 
-1. Xcode を使用してアプリケーションを構築し、iOSシミュレーターにアプリをデプロイします。
-1. WKND リファレンスサイトからのアドベンチャーのリストがアプリケーションに表示されます。
+   AEM オーサーに接続する場合は、 `AEM_AUTH_TYPE` 認証プロパティを `Config.xcconfig`.
+
+   __基本認証__
+
+   この `AEM_USERNAME` および `AEM_PASSWORD` は、WKND GraphQL コンテンツへのアクセス権を持つローカルAEMユーザーを認証します。
+
+   ```plain
+   AEM_AUTH_TYPE = basic
+   AEM_USERNAME = admin
+   AEM_PASSWORD = admin
+   ```
+
+   __トークン認証__
+
+   この `AEM_TOKEN` は [アクセストークン](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) WKND GraphQL コンテンツへのアクセス権を持つAEMユーザーに対して認証をおこなう
+
+   ```plain
+   AEM_AUTH_TYPE = token
+   AEM_TOKEN = abcd...0123
+   ```
+
+1. Xcode を使用してアプリケーションをビルドし、アプリケーションをiOSシミュレーターにデプロイします。
+1. WKND サイトからの冒険のリストがアプリケーションに表示されるはずです。 アドベンチャーを選択すると、アドベンチャーの詳細が開きます。 Adventures リストビューで、プルしてAEMからデータを更新します。
 
 ## コード
 
-以下に、アプリケーションの強化に使用する重要なファイルとコードの概要を示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app).
+iOSアプリケーションの構築方法、GraphQL での永続クエリを使用してコンテンツを取得するためAEMヘッドレスに接続する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app).
 
-### アポロiOS
+### 永続クエリ
 
-10. [アポロiOS](https://www.apollographql.com/docs/ios/) クライアントは、アプリでAEMに対して GraphQL クエリを実行するために使用されます。 役人は [Apollo Tutorial](https://www.apollographql.com/docs/ios/tutorial/tutorial-introduction/) のインストールおよび使用方法の詳細がはるかに多くあります。
+AEMヘッドレスのベストプラクティスに従い、iOSアプリケーションはAEM GraphQL に永続化されたクエリを使用して、アドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
 
-`schema.json` は、WKND リファレンスサイトがインストールされているAEM環境の GraphQL スキーマを表すファイルです。 `schema.json` がAEMからダウンロードされ、プロジェクトに追加された場合。 Apollo クライアントは、拡張子がのファイルを調べます `.graphql` をカスタムビルドフェーズの一部として追加します。 Apollo クライアントは、次に `schema.json` ファイルおよび `.graphql` ファイルを自動的に生成するクエリ `API.swift`.
-
-これにより、クエリを実行するための厳密に型指定されたモデルと、結果を表すモデルがアプリケーションに提供されます。
-
-![Xcode カスタムビルドフェーズ](assets/ios-swiftui-app/xcode-build-phase-apollo.png)
-
-`AdventureList.graphql` は、アドベンチャーのクエリに使用するクエリを含みます。
++ `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
 
 ```
-query AdventureList
+# Retrieves a list of all adventures
 {
-  adventureList {
+    adventureList {
+        items {
+            _path
+            slug
+            title
+            price
+            tripLength
+            primaryImage {
+                ... on ImageRef {
+                _path
+                mimeType
+                width
+                height
+                }
+            }
+        }
+    }
+}
+```
+
++ `wknd/adventure-by-slug` 次の条件を満たす 1 つのアドベンチャーを返す永続クエリ `slug` 一連のプロパティを持つ（アドベンチャーを一意に識別するカスタムプロパティ）。 この永続的なクエリは、アドベンチャーの詳細表示を強化します。
+
+```
+# Retrieves an adventure Content Fragment based on it's slug
+# Example query variables: 
+# {"slug": "bali-surf-camp"} 
+# Technically returns an adventure list but since the the slug 
+# property is set to be unique in the CF Model, only a single CF is expected
+
+query($slug: String!) {
+  adventureList(filter: {
+        slug: {
+          _expressions: [ { value: $slug } ]
+        }
+  	}) {
     items {
       _path
-      adventureTitle
-      adventurePrice
-      adventureActivity
-      adventureDescription {
-        plaintext
-        markdown
-      }
-      adventureDifficulty
-      adventureTripLength
-      adventurePrimaryImage {
-        ...on ImageRef {
-          _authorUrl
-          _publishUrl
+      title
+      slug
+      activity
+      adventureType
+      price
+      tripLength
+      groupSize
+      difficulty
+      price
+      primaryImage {
+        ... on ImageRef {
+          _path
+          mimeType
+          width
+          height
         }
+      }
+      description {
+        json
+        plaintext
+      }
+      itinerary {
+        json
+        plaintext
+      }
+    }
+    _references {
+      ...on AdventureModel {
+        _path
+        slug
+        title
+        price
+        __typename
       }
     }
   }
 }
 ```
 
-`Network.swift` を構成します。 `ApolloClient`. 10. `endpointURL` 使用は、 `Config.xcconfig` ファイル。 AEM **作成者** インスタンスを作成し、認証用のヘッダーを追加する必要がある場合は、 `ApolloClient` はい。
+## GraphQL 永続クエリを実行
+
+AEMの永続化クエリは HTTPGET上で実行されるので、Apollo などの HTTPPOSTを使用する一般的な GraphQL ライブラリは使用できません。 代わりに、AEMに対する永続化されたクエリ HTTPGETリクエストを実行するカスタムクラスを作成します。
+
+`AEM/Aem.swift` をインスタンス化します。 `Aem` AEMヘッドレスとのすべてのやり取りに使用されるクラス。 パターンは次のようになります。
+
+1. 永続化された各クエリには、対応するパブリック関数 ( 例： `getAdventures(..)` または `getAdventureBySlug(..)`) iOSアプリケーションのビューが呼び出されて、アドベンチャーデータを取得します。
+1. public func は private func を呼び出します。 `makeRequest(..)` を呼び出すと、AEMヘッドレスに対する非同期 HTTPGETリクエストが呼び出され、JSON データが返されます。
+1. 次に、各 public func は JSON データをデコードし、必要なチェックや変換を行ってから、アドベンチャーデータをビューに返します。
+
++ AEM GraphQL JSON データは、 `AEM/Models.swift`:JSON オブジェクトにマッピングされ、AEMヘッドレスが返されました。
 
 ```swift
-// Network.swift
-private(set) lazy var apollo: ApolloClient = {
-        // The cache is necessary to set up the store, which we're going to hand to the provider
-        let cache = InMemoryNormalizedCache()
-        let store = ApolloStore(cache: cache)
-  
-        let client = URLSessionClient()
-        let provider = DefaultInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store)
-        let url = Connection.baseURL // from Configx.xcconfig 
-
-        // no additional headers, public instances by default require no additional authentication
-        let requestChainTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: url)
-
-        return ApolloClient(networkTransport: requestChainTransport,store: store)
-    }()
-}
-```
-
-### アドベンチャーデータ
-
-このアプリケーションは、Adventures のリストと各アドベンチャーの詳細ビューを表示するように設計されています。
-
-`AdventuresDataModel.swift` は、関数を含むクラスです `fetchAdventures()`. この関数は、 `ApolloClient` をクリックしてクエリを実行します。 クエリが成功した場合、結果の配列の型は `AdventureListQuery.Data.AdventureList.Item`、 `API.swift` ファイル。
-
-```swift
-func fetchAdventures() {
-        Network.shared.apollo
-            //AdventureListQuery() generated based on AdventureList.graphql file
-           .fetch(query: AdventureListQuery()) { [weak self] result in
-           
-             guard let self = self else {
-               return
-             }
-                   
-             switch result {
-             case .success(let graphQLResult):
-                print("Success AdventureListQuery() from: \(graphQLResult.source)")
-
-                if let adventureDataItems =  graphQLResult.data?.adventureList.items {
-                    // map graphQL items to an array of Adventure objects
-                    self.adventures = adventureDataItems.compactMap { Adventure(adventureData: $0!) }
+    /// # getAdventures(..)
+    /// Returns all WKND adventures using the `wknd-shared/adventures-all` persisted query.
+    /// For this func call to work, the `wknd-shared/adventures-all` query must be deployed to the AEM environment/service specified by the host.
+    /// 
+    /// Since HTTP requests are async, the completion syntax is used.
+    func getAdventures(completion: @escaping ([Adventure]) ->  ()) {
+               
+        // Create the HTTP request object representing the persisted query to get all adventures
+        let request = makeRequest(persistedQueryName: "wknd-shared/adventures-all")
+        
+        // Wait fo the HTTP request to return
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            // Error check as needed
+            if ((error) != nil) {
+                print("Unable to connect to AEM GraphQL endpoint")
+                completion([])
+            }
+                                    
+            if (!data!.isEmpty) {
+                // Decode the JSON data into Swift objects
+                let adventures = try! JSONDecoder().decode(Adventures.self, from: data!)
+                
+                DispatchQueue.main.async {
+                    // Return the array of Adventure objects
+                    completion(adventures.data.adventureList.items)
                 }
-                ...
-             }
-           }
-}
-```
+            }
+        }.resume();
+    }
 
-以下を使用できます。 `AdventureListQuery.Data.AdventureList.Item` を直接呼び出して、アプリケーションの電源を入れます。 ただし、一部のデータが不完全なため、一部のプロパティが null になる可能性は非常に高くなります。
+    ...
 
-`Adventure.swift` は、Apollo で生成されたモデルのラッパーとして導入されたカスタムモデルです。 `Adventure` は `AdventureListQuery.Data.AdventureList.Item`. A `typealias` は、を短縮してコードを読みやすくするために使用します。
+    /// #makeRequest(..)
+    /// Generic method for constructing and executing AEM GraphQL persisted queries
+    private func makeRequest(persistedQueryName: String, params: [String: String] = [:]) -> URLRequest {
+        // Encode optional parameters as required by AEM
+        let persistedQueryParams = params.map { (param) -> String in
+            encode(string: ";\(param.key)=\(param.value)")
+        }.joined(separator: "")
+        
+        // Construct the AEM GraphQL persisted query URL, including optional query params
+        let url: String = "\(self.scheme)://\(self.host)/graphql/execute.json/" + persistedQueryName + persistedQueryParams;
 
-```
-// use typealias
-typealias AdventureData = AdventureListQuery.Data.AdventureList.Item
-```
+        var request = URLRequest(url: URL(string: url)!);
 
-10. `Adventure` 構造体は `AdventureData` オブジェクト：
-
-```swift
-struct Adventure: Identifiable {
-    let id: String
-    let adventureTitle: String
-    let adventurePrice: String
-    let adventureDescription: String
-    let adventureActivity: String
-    let adventurePrimaryImageUrl: String
+        // Add authentication to the AEM GraphQL persisted query requests as defined by the iOS application's configuration
+        request = addAuthHeaders(request: request)
+        
+        return request
+    }
     
-    // initialize with AdventureData object aka AdventureListQuery.Data.AdventureList.Item
-    init(adventureData: AdventureData) {
-        // use path as unique idenitifer, otherwise
-        self.id = adventureData._path ?? UUID().uuidString
-        self.adventureTitle = adventureData.adventureTitle ?? "Untitled"
-        self.adventurePrice = adventureData.adventurePrice ?? "Free"
-        self.adventureActivity = adventureData.adventureActivity ?? ""
-        ...
+    ...
 ```
 
-これにより、デフォルト値を指定し、不完全なデータに対して追加のチェックを実行できます。 その後、 `Adventure` 様々な UI 要素を安全に使用できるようにモデルを作成し、null 値を常に確認する必要はありません。
+### GraphQL 応答データモデル
 
-AEMでは、コンテンツの一部は `_path`. In `Adventure.swift` 我々は `id` プロパティの値が `_path`. これにより、 `Adventure` 実行する `Identifiable` インターフェイスを使用して、配列やリストを繰り返し処理しやすくします。
+iOSでは、JSON オブジェクトを型指定されたデータモデルにマッピングすることをお勧めします。
+
+この `src/AEM/Models.swift` は、 [脱落可能な](https://developer.apple.com/documentation/swift/decodable) AEM JSON 応答で返されるAEM JSON 応答にマッピングする Swift の構造およびクラス。
 
 ### 表示
 
-SwiftUI は、アプリケーションの様々なビューに使用されます。 向けの優れたチュートリアル [構築リストとナビゲーション](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation) は、Appleの開発者サイトで確認できます。 このアプリケーションのコードは、大まかにそこから導き出されています。
+SwiftUI は、アプリケーションの様々なビューに使用されます。 Appleは、 [SwiftUI を使用したリストの作成とナビゲーション](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation).
 
-`WKNDAdventuresApp.swift` は、アプリケーションのエントリです。 これには以下が含まれます。 `AdventureListView` そして `.onAppear` イベントは、アドベンチャーデータを取得するために使用されます。
++ `WKNDAdventuresApp.swift`
 
-`AdventureListView.swift`  — を作成します。 `NavigationView` そして人が生み出した冒険のリスト `AdventureRowView`. ナビゲーション `AdventureDetailView` はここで設定します。
+   アプリケーションのエントリで、を含む `AdventureListView` その `.onAppear` イベントハンドラーは、を介してすべての冒険データを取得するために使用されます。 `aem.getAdventures()`. 共有 `aem` オブジェクトはここで初期化され、他のビューには [EnvironmentObject](https://developer.apple.com/documentation/swiftui/environmentobject).
 
-`AdventureRowView`  — アドベンチャーのプライマリ画像とアドベンチャータイトルを一列に表示します。
++ `Views/AdventureListView.swift`
 
-`AdventureDetailView`  — タイトル、説明、価格、アクティビティタイプ、プライマリ画像など、個々のアドベンチャーの完全な詳細を表示します。
+   （からのデータに基づいて）冒険のリストを表示します。 `aem.getAdventures()`) をクリックし、 `AdventureListItemView`.
 
-Apollo CLI が実行され、再生されると `API.swift` プレビューを停止します。 自動プレビュー機能を使用するには、 **アポロ CLI** ビルドフェーズを実行し、スクリプトを実行するかどうかを確認します。 **ビルドのインストールのみ**.
++ `Views/AdventureListItemView.swift`
 
-![インストールビルドのみを確認](assets/ios-swiftui-app/update-build-phases.png)
+   冒険リストの各項目を表示します (`Views/AdventureListView.swift`) をクリックします。
 
-### リモートイメージ
++ `Views/AdventureDetailView.swift`
 
-[SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) および [SDWEbImage](https://github.com/SDWebImage/SDWebImage) は、行ビューと詳細ビューのアドベンチャープライマリイメージを生成するAEMからリモートイメージを読み込むために使用されます。
+   タイトル、説明、価格、アクティビティタイプ、プライマリ画像など、アドベンチャーの詳細を表示します。 このビューは、AEMに対して、 `aem.getAdventureBySlug(slug: slug)`( `slug` パラメーターは、選択リスト行に基づいて渡されます。
 
-10. [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage) は、SwiftUI のネイティブなビューであり、このビューも使用できます。 `AsyncImage` は、iOS 15.0 以降でのみサポートされます。
+### リモート画像
+
+アドベンチャーコンテンツフラグメントで参照される画像は、AEMが提供します。 このiOSアプリはパスを使用します `_path` GraphQL 応答のフィールドに入力し、 `AEM_SCHEME` および `AEM_HOST` をクリックして完全修飾 URL を作成します。
+
+認証が必要なAEM上の保護されたリソースに接続する場合は、イメージリクエストに資格情報も追加する必要があります。
+
+[SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) および [SDWebImage](https://github.com/SDWebImage/SDWebImage) を使用して、アドベンチャー画像をAEMから読み込み、 `AdventureListItemView` および `AdventureDetailView` ビュー。
+
+この `aem` クラス ( `AEM/Aem.swift`) は、次の 2 つの方法でAEM画像の使用を容易にします。
+
+1. `aem.imageUrl(path: String)` を使用すると、AEMスキームを画像のパスの前に追加し、画像のパスをホストして、完全修飾 URL を作成できます。
+
+   ```swift
+   // adventure.image() => /content/dam/path/to/an/image.png
+   let imageUrl = aem.imageUrl(path: adventure.image()) 
+   // imageUrl => http://localhost:4503/content/dam/path/to/an/image.png
+   ```
+
+2. この `convenience init(..)` in `Aem` iOSアプリケーションの設定に基づいて、イメージ HTTP リクエストに HTTP Authorization ヘッダーを設定します。
+
+   + If __基本認証__ が設定されている場合、すべてのイメージリクエストに基本認証が添付されます。
+
+   ```swift
+   /// AEM/Aem.swift
+   ///
+   /// # Basic authentication init
+   /// Used when authenticating to AEM using local accounts (basic auth)
+   convenience init(scheme: String, host: String, username: String, password: String) {
+       ...
+   
+       // Add basic auth headers to all Image requests, as they are (likely) protected as well
+       SDWebImageDownloader.shared.setValue("Basic \(encodeBasicAuth(username: username, password: password))", forHTTPHeaderField: "Authorization")
+   }
+   ```
+
+   + If __トークン認証__ が設定されている場合、トークン認証がすべてのイメージリクエストに添付されます。
+
+   ```swift
+   /// AEM/Aem.swift
+   ///
+   /// # Token authentication init
+   ///  Used when authenticating to AEM using token authentication (Dev Token or access token generated from Service Credentials)
+   convenience init(scheme: String, host: String, token: String) {
+       ...
+   
+       // Add token auth headers to all Image requests, as they are (likely) protected as well
+       SDWebImageDownloader.shared.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+   }
+   ```
+
+   + If __認証なし__ が設定されている場合、イメージリクエストに認証は添付されません。
+
+
+
+SwiftUI ネイティブの [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage). `AsyncImage` はiOS 15.0 以降でサポートされています。
 
 ## その他のリソース
 
-* [AEMヘッドレスの概要 — GraphQL チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja)
-* [SwiftUI のリストとナビゲーションのチュートリアル](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
-* [Apollo iOS Client チュートリアル](https://www.apollographql.com/docs/ios/tutorial/tutorial-introduction/)
-
++ [AEMヘッドレスの概要 — GraphQL チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [SwiftUI リストとナビゲーションチュートリアル](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
