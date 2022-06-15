@@ -8,27 +8,24 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9270
-source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 9%
+source-wordcount: '167'
+ht-degree: 10%
 
 ---
 
-# パスワードフィールドの表示/非表示を切り替える
+# パスワードフィールドの表示を切り替え
 
 一般的な使用例としては、フォーム入力者が、パスワードフィールドに入力されたテキストの表示/非表示を切り替えることができます。
-この使用例を達成するために、 [Font Awesome ライブラリ](https://fontawesome.com/). このデモ用に作成したクライアントライブラリには、必要な CSS と eye.svg が含まれています。
+この使用例を達成するために、 [Font Awesome ライブラリ](https://fontawesome.com/). このデモ用に作成されたクライアントライブラリには、必要な CSS と eye.svg が含まれています。
 
-## ライブサンプル
-
-[この機能は、こちらでテストできます。](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 ## サンプルコード
 
-アダプティブフォームには、 **ssnField**.
+アダプティブフォームには、という名前のタイプの PasswordBox フィールドがあります。 **ssnField**.
 
-フォームの読み込み時に、次のコードが実行されます
+フォームが読み込まれると、次のコードが実行されます
 
 ```javascript
 $(document).ready(function() {
@@ -50,7 +47,7 @@ $(document).ready(function() {
 });
 ```
 
-次の CSS を使用して、 **眼** パスワードフィールド内のアイコン
+次の CSS を使用して **目** パスワードフィールド内のアイコン
 
 ```javascript
 .svg-inline--fa {
@@ -65,12 +62,12 @@ $(document).ready(function() {
 }
 ```
 
-## 切り替えパスワードのサンプルのデプロイ
+## 切り替えパスワードのサンプルをデプロイします。
 
 * をダウンロードします。 [クライアントライブラリ](assets/simple-ui-tips.zip)
 * をダウンロードします。 [サンプルフォーム](assets/simple-ui-tricks-form.zip)
-* を使用したクライアントライブラリの読み込み [パッケージマネージャー UI](http://localhost:4502/crx/packmgr/index.jsp)
-* サンプルフォームを読み込むには、 [Formsとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* を使用してクライアントライブラリを読み込む [パッケージマネージャー UI](http://localhost:4502/crx/packmgr/index.jsp)
+* 次を使用してサンプルフォームを読み込みます： [Formsとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 

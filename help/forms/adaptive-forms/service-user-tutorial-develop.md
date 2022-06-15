@@ -1,12 +1,12 @@
 ---
 title: AEM Formsでのサービスユーザーを使用した開発
-description: この記事では、AEM Formsでのサービスユーザーの作成プロセスについて説明します
+description: この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します
 feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
-source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
@@ -15,22 +15,22 @@ ht-degree: 2%
 
 # AEM Formsでのサービスユーザーを使用した開発
 
-この記事では、AEM Formsでのサービスユーザーの作成プロセスについて説明します
+この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します
 
-以前のバージョンのAdobe Experience Manager(AEM) では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。 管理リソースリゾルバーの使用は、AEM 6.3 では非推奨（廃止予定）となっています。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
+以前のバージョンのAdobe Experience Manager(AEM) では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。 AEM 6.3 では、管理リソースリゾルバーの使用は廃止されました。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
 
-AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html) での [ サービスユーザーの作成と使用の詳細について説明します。
+詳細情報 [AEMでのサービスユーザーの作成と使用](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
 この記事では、システムユーザーの作成と、ユーザーマッパーのプロパティの設定に関する手順を説明します。
 
-1. [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp) に移動します。
-1. 「管理者」としてログインします。
+1. に移動します。 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
+1. 「管理者」としてログイン
 1. 「ユーザー管理」をクリックします。
-1. 「システムユーザーの作成」をクリックします。
-1. userid タイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します。
+1. 「システムユーザーを作成」をクリックします。
+1. ユーザー ID タイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します
 1. [configMgr を開きます。](http://localhost:4502/system/console/configMgr)
-1. 「 Apache Sling Service User Mapper Service 」を検索し、クリックしてプロパティを開きます。
-1. *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
+1. を検索 _Apache Sling Service User Mapper Service_ をクリックして、プロパティを開きます。
+1. 次をクリック： *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -41,18 +41,18 @@ AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-serv
 
 また、fd-service ユーザーの代わりにリソースリゾルバーを取得することもできます。 このサービスユーザーは、ドキュメントサービスに使用されます。 例えば、使用権限などを認証/適用する場合、fd-service ユーザーのリソースリゾルバーを使用して操作を実行します
 
-1. [この記事に関連付けられている zip ファイルをダウンロードして解凍します。](assets/developingwithserviceuser.zip)
-1. [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
-1. OSGi バンドルをアップロードして起動します。
+1. [この記事に関連付けられている zip ファイルをダウンロードして展開します。](assets/developingwithserviceuser.zip)
+1. に移動します。 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. OSGi バンドルをアップロードして開始します。
 1. バンドルがアクティブ状態であることを確認します。
-1. これで、*システムユーザー* が正常に作成され、*サービスユーザーバンドル* もデプロイされました。
+1. これで、 *システムユーザー* また、 *サービスユーザーバンドル*.
 
-   /content へのアクセスを提供するには、システムユーザー (「 data 」) にコンテンツノードに対する読み取り権限を付与します。
+   /content へのアクセスを提供するには、システムユーザー（「データ」）にコンテンツノードに対する読み取り権限を付与します。
 
-   1. [http://localhost:4502/useradmin](http://localhost:4502/useradmin) に移動します。
-   1. ユーザー「 data 」を検索します。 これは、前の手順で作成したシステムユーザーと同じです。
+   1. に移動します。 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
+   1. ユーザー「 data 」を検索します。 これは、前の手順で作成したのと同じシステムユーザーです。
    1. ユーザーをダブルクリックし、「権限」タブをクリックします。
-   1. 「コンテンツ」フォルダーへの「読み取り」アクセス権を付与します。
+   1. 「読み取り」アクセス権を「コンテンツ」フォルダーに付与します。
    1. サービスユーザーを使用して/content フォルダーにアクセスするには、次のコードを使用します
 
 
@@ -67,7 +67,7 @@ resourceResolver = aemDemoListings.getServiceResolver();
 Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
 ```
 
-バンドル内の/content/dam/data.jsonファイルにアクセスする場合は、次のコードを使用します。 このコードは、/content/dam/ノードの「data」ユーザーに対して読み取り権限が付与されていることを前提としています
+バンドル内の/content/dam/data.jsonファイルにアクセスする場合は、次のコードを使用します。 このコードは、/content/dam/ノードの「data」ユーザーに対して読み取り権限が付与されていることを前提としています。
 
 ```java
 @Reference
@@ -92,7 +92,7 @@ try {
 }
 ```
 
-実装の完全なコードを以下に示します
+実装の完全なコードを以下に示します。
 
 ```java
 package com.mergeandfuse.getserviceuserresolver.impl;

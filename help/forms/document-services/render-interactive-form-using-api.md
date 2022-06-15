@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '364'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ AEM FormsでForms Service API を使用してインタラクティブPDFをレ�
 
 * FormsService -PDFファイルとの間でデータの書き出し/読み込みを行え、xml データを xdp テンプレートに結合してインタラクティブ pdf を生成できる、非常に汎用性の高いサービスです。
 
-AEM Forms API の公式 Javadoc は以下のとおりです。 [ここ](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+役人は [AEM Forms API の javadoc は、こちらを参照してください。](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 次のコードスニペットは、FormsService の renderPDFForm 操作を使用してインタラクティブ pdf をレンダリングします。 schengen.xdp は、xml データのマージに使用されるテンプレートです。
 
@@ -49,18 +49,21 @@ return interactivePDF;
 行 11:生成されたインタラクティブ pdf を呼び出し元のアプリケーションに返します
 
 **システム上のサンプルパッケージをテストするには**
+1. [DevelopingWithServiceUserBundle をダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Felix Web コンソールを使用して、DocumentServices サンプルバンドルをダウンロードしてインストールします。](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [AEMパッケージマネージャーを使用して、パッケージをダウンロードしてインストールします](assets/downloadinteractivepdffrommobileform.zip)
-
-
 
 1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
 1. AdobeGranite CSRF Filter を検索します。
 1. 除外されたセクションに次のパスを追加して、保存します。
 1. /bin/generateinteractivepdf
+1. を検索 _Apache Sling Service User Mapper Service_ をクリックして、プロパティを開きます。
+   1. 次をクリック： *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
+      * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+   1. 「保存」をクリックします。
 1. [モバイルフォームを開く](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 1. いくつかのフィールドに入力し、 ***ダウンロードして入力….*** button
 1. インタラクティブ pdf がローカルシステムにダウンロードされます
 
 
-このサンプルパッケージには、Mobile Form に関連付けられているカスタムプロファイルが含まれています。 詳しくは、 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) ファイル。 この jsp は、モバイルフォームからデータを抽出し、にマウントされたサーブレットへのPOSTリクエストを行います。 ***/bin/generateinteractivepdf*** パス。 サーブレットは、呼び出し元のアプリケーションにインタラクティブ pdf を返します。 次に、customtoolbar.jsp のコードにより、ファイルがローカルシステムにダウンロードされます
+サンプルパッケージには、Mobile Form に関連付けられたカスタムプロファイルが含まれています。 詳しくは、 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) ファイル。 この jsp は、モバイルフォームからデータを抽出し、にマウントされたサーブレットへのPOSTリクエストを行います。 ***/bin/generateinteractivepdf*** パス。 サーブレットは、呼び出し元のアプリケーションにインタラクティブ pdf を返します。 次に、customtoolbar.jsp のコードにより、ファイルがローカルシステムにダウンロードされます
