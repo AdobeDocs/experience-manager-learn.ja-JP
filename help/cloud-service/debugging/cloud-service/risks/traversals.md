@@ -11,9 +11,9 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
+source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '838'
 ht-degree: 10%
 
 ---
@@ -199,7 +199,7 @@ AEMのインデックス、検索、トラバーサルの警告について理�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 検索とインデックス作成">Cloud 5 — 検索とインデックス作成</a></p>
                <p class="is-size-6">Cloud 5 チームでは、AEM as a Cloud Serviceの検索とインデックス作成の詳細について説明します。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">表示</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                </a>
            </div>
        </div>
@@ -222,7 +222,7 @@ AEMのインデックス、検索、トラバーサルの警告について理�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="コンテンツの検索とインデックス作成">コンテンツの検索とインデックス作成に関するドキュメント</a></p>
                <p class="is-size-6">AEM as a Cloud Serviceでインデックスを作成および管理する方法について説明します。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">表示</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ AEMのインデックス、検索、トラバーサルの警告について理�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Oak インデックスの最新化">Oak インデックスの最新化</a></p>
                <p class="is-size-6">AEM 6 Oak インデックス定義をAEMas a Cloud Service互換に変換し、今後インデックスを維持する方法を説明します。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">表示</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ AEMのインデックス、検索、トラバーサルの警告について理�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="インデックス定義ドキュメント">Lucene Index ドキュメント</a></p>
                <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene インデックスリファレンスでは、サポートされる Lucene インデックス設定をすべて説明しています。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">表示</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                </a>
            </div>
        </div>
