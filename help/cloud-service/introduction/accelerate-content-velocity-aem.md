@@ -3,9 +3,9 @@ title: AEMスタイルシステムを使用してコンテンツの速度を向�
 description: AEMスタイルシステムを使用して、組織のデザイナー、コンテンツ作成者、開発者が、顧客が期待する速度と規模でエクスペリエンスを作成し提供できるようにする方法を説明します。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -91,3 +91,5 @@ AEM Style Systems には、次の 4 つの主なメリットがあります。
 最後に、スタイルシステムの使用は科学よりも芸術的です。 ここで説明したように、多くのベストプラクティスがありますが、組織の設定を柔軟にカスタマイズする方法が用意されています。
 
 詳細は、 [顧客成功ウェビナー](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) ウィル・ブリスベンとジョセフ・ヴァン・ブスカークと
+
+戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。

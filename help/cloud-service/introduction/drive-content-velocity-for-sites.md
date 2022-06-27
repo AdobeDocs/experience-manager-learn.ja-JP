@@ -3,9 +3,9 @@ title: Adobe Experience Managerでのコンテンツベロシティの推進方�
 description: 企業組織におけるコンテンツベロシティとその価値について学びます。 効果的な実装と、その方法に沿って探すための落とし穴の 4 つの原則に進みます。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -176,3 +176,5 @@ AEM Sites:基本的な実行と運用
 * ソリューションをサイロ化して表示する。 例えば、AEM実装の技術面で Solelyon に焦点を当てても、ビジネス上のメリットを完全には実現できません。 代わりに、ビジネスの使用例とシナリオを見てから、アーキテクチャとデザインに移行することをお勧めします。これにより、AEM機能のより広いビューが得られます。 Adobe株： _「私がお勧めするのは、実装しているプラットフォームに対して、お客様の価値目標を事前に検討することです。」_
 
 コンテンツベロシティの詳細な説明については、この 1 時間をご覧ください [パネルディスカッション](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) モニク・ミスラヒ (T-Mobile)、エイミー・バーグストロム (Deloitte)、Adobeのアンラダ・ペンタレディを搭載。
+
+戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。
