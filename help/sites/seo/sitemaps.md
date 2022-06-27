@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 71f1d32c12742cdb644dec50050d147395c3f3b6
+source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 1%
+source-wordcount: '224'
+ht-degree: 6%
 
 ---
 
@@ -45,6 +45,23 @@ AEM Sitesのサイトマップを作成して、SEO を強化する方法を説�
   "searchPath": "/content/wknd"
 }
 ```
+
+### 絶対サイトマップ URL
+
+AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). これは、サイトマップを生成するAEMサービスでマッピングノードを作成することでおこなわれます。
+
+の Sling マッピングノード定義の例 `https://wknd.com` は以下で定義できます。 `/etc/map/https` 次のように指定します。
+
+| パス | プロパティ名 | プロパティタイプ | プロパティ値 |
+|------|----------|---------------|-------|
+| `/etc/map/https/wknd-site` | `jcr:primaryType` | String | `nt:unstructured` |
+| `/etc/map/https/wknd-site` | `sling:internalRedirect` | 文字列 | `/content/wknd/(.*)` |
+| `/etc/map/https/wknd-site` | `sling:match` | 文字列 | `wknd.com/$1` |
+
+以下のスクリーンショットは、 `http://wknd.local` （で実行中のローカルホスト名マッピング） `http`) をクリックします。
+
+![サイトマップの絶対 URL 設定](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+
 
 ### Dispatcher のフィルタールールを許可
 

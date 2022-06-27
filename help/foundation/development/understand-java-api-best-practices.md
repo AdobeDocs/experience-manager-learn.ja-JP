@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
-source-git-commit: 967bcf3c4046a17303eb2fe70d7156267a7cbed7
+source-git-commit: 9ca80b743c2ca0d3e63cce99fa905be49d1fbcdd
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 6%
+source-wordcount: '2071'
+ht-degree: 9%
 
 ---
 
@@ -26,15 +26,15 @@ AEMは、4 つのプライマリ Java API セットを基に構築されてい�
 
 * **Apache Sling Web Framework**
 
-   * リソース、値マップ、HTTP 要求など、REST およびリソースベースの抽象概念。
+   * REST およびリソースベースの抽象概念（リソース、値マップ、HTTP リクエストなど）。
 
 * **JCR(Apache Jackrabbit Oak)**
 
-   * ノード、プロパティ、セッションなどのデータおよびコンテンツの抽象概念。
+   * データとコンテンツの抽象概念（ノード、プロパティ、セッションなど）。
 
 * **OSGi(Apache Felix)**
 
-   * OSGi アプリケーションコンテナの抽象概念 ( サービスや (OSGi) コンポーネントなど )。
+   * OSGi アプリケーションコンテナの抽象概念（サービスや（OSGi）コンポーネントなど）。
 
 ## Java API 環境設定「経験則」
 
@@ -61,11 +61,11 @@ AEMで API が提供されている場合は、より優先します。 [!DNL Sl
 
 AEM API は、製品化された使用例に固有の抽象概念と機能を提供します。
 
-例： AEM [PageManager](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) および [ページ](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API は以下の抽象概念を提供します。 `cq:Page` web ページを表すAEMのノード。
+例： AEM [PageManager](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) および [ページ](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API は以下の抽象概念を提供します。 `cq:Page` web ページを表すAEMのノード。
 
 これらのノードはで使用できますが、 [!DNL Sling] AEM API は、リソースとして API を、ノードとして JCR API を提供し、一般的な使用例の抽象概念を提供します。 AEM API を使用すると、AEMと製品の間で、カスタマイズとAEMの拡張の間で一貫した動作がおこなわれます。
 
-### com.adobe.*と com.day の比較。* API
+### com.adobe.&#42; と com.day の比較。&#42; API
 
 AEM API は、パッケージ内の環境設定を持ち、次の Java パッケージで識別されます（好みの順）。
 
@@ -95,7 +95,7 @@ AEMは複数のクエリ言語をサポートしています。 3 つの主要�
 * [AEM述語](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 共通のクエリ要件のサポート
 
 * 拡張可能な API （カスタムの開発に使用） [クエリ述語](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2 および XPath は、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) および [JCR API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)、結果を返す [[!DNL Sling] リソース](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) または [JCR ノード](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)、それぞれ。
+* JCR-SQL2 および XPath は、 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) および [JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)、結果を返す [[!DNL Sling] リソース](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) または [JCR ノード](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)、それぞれ。
 
 >[!CAUTION]
 >
@@ -131,9 +131,9 @@ AEMは複数のクエリ言語をサポートしています。 3 つの主要�
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-この [JCR(Java Content Repository)2.0 API](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) は、JCR 実装の仕様の一部です (AEMの場合、 [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)) をクリックします。 すべての JCR 実装は、これらの API に準拠し実装する必要があります。したがって、AEMコンテンツを操作するための最も低レベルの API です。
+この [JCR(Java Content Repository)2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) は、JCR 実装の仕様の一部です (AEMの場合、 [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)) をクリックします。 すべての JCR 実装は、これらの API に準拠し実装する必要があります。したがって、AEMコンテンツを操作するための最も低レベルの API です。
 
 JCR 自体は、階層/ツリーベースの NoSQL データストアAEMで、がコンテンツリポジトリとして使用します。 JCR には、コンテンツ CRUD からコンテンツのクエリまで、様々なサポートされている API が多数あります。 この堅牢な API にもかかわらず、上位レベルのAEMや [!DNL Sling] 抽象概念
 
@@ -149,7 +149,7 @@ JCR はAEMコンテンツリポジトリですが、API はコンテンツを操
 
 ### JCR API の一般的な使用例
 
-* [アクセス制御管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [アクセス制御管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=ja)
 * [許可可能な管理（ユーザー/グループ）](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR の監視（JCR イベントのリッスン）
 * ディープノード構造の作成
