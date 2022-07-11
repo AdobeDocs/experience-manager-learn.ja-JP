@@ -2,7 +2,7 @@
 title: Android アプリ — AEMヘッドレスの例
 description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Android アプリケーションは、AEMの GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 0204d9aaf7b79b0745adbe749f44245716203b88
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 5%
@@ -136,7 +136,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -178,7 +178,7 @@ query($slug: String!) {
 }
 ```
 
-## GraphQL 永続クエリを実行
+### GraphQL 永続クエリを実行
 
 AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [Java 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-java) は、AEMに対して永続化された GraphQL クエリを実行し、アドベンチャーコンテンツをアプリに読み込むために使用されます。
 

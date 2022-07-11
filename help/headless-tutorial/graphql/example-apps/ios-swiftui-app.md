@@ -1,8 +1,8 @@
 ---
-title: iOS SwiftUI アプリ — AEMヘッドレスの例
+title: iOS App - AEMヘッドレスの例
 description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: bcedb190fba7b6bc044da06bd36d097d553172a1
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '981'
 ht-degree: 5%
 
 ---
 
-# iOS SwiftUI アプリ
+# iOSアプリ
 
 アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
 
@@ -131,7 +131,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -173,7 +173,7 @@ query($slug: String!) {
 }
 ```
 
-## GraphQL 永続クエリを実行
+### GraphQL 永続クエリを実行
 
 AEMの永続化クエリは HTTPGET上で実行されるので、Apollo などの HTTPPOSTを使用する一般的な GraphQL ライブラリは使用できません。 代わりに、AEMに対する永続化されたクエリ HTTPGETリクエストを実行するカスタムクラスを作成します。
 
