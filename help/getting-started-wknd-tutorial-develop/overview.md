@@ -1,6 +1,6 @@
 ---
-title: AEM Sites の概要 - WKND チュートリアル
-description: AEM Sites の概要 - WKND チュートリアル. WKND チュートリアルは、Adobe Experience Managerを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAEMサイトの実装に関する手順を説明します。 このチュートリアルでは、プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックについて説明します。
+title: AEM Sitesの基本を学ぶ — WKND チュートリアル
+description: WKND と呼ばれる架空のライフスタイルブランド向けにAEMサイトを実装する方法を説明します。 プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発など、基本的なExperience Managerに関するトピックの手順を説明します。
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -16,20 +16,20 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 10%
+source-wordcount: '599'
+ht-degree: 8%
 
 ---
 
-# AEM Sites の概要 - WKND チュートリアル {#introduction}
+# AEM Sitesの基本を学ぶ — WKND チュートリアル {#introduction}
 
-Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランド WKND 向けのAEMサイトの実装について説明します。 このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能テンプレート、クライアント側ライブラリ、Adobe Experience Manager Sitesでのコンポーネント開発など、基本的なトピックについて説明します。
+Adobe Experience Manager(AEM) を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAEMサイトの実装について説明します。 このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能テンプレート、クライアント側ライブラリ、Adobe Experience Manager Sitesでのコンポーネント開発など、基本的なトピックについて説明します。
 
 ## 概要 {#wknd-tutorial-overview}
 
-この複数パートから成るチュートリアルは、Adobe Experience Manager（AEM）の最新の標準やテクノロジーを使用して Web サイトを実装するための手順を開発者に教えることを目的としています。このチュートリアルを完了した後、開発者は、プラットフォームの基本を理解し、AEMの一般的なデザインパターンに関する知識を持つ必要があります。
+この複数パートから成るチュートリアルは、Adobe Experience Manager（AEM）の最新の標準やテクノロジーを使用して Web サイトを実装するための手順を開発者に教えることを目的としています。このチュートリアルを完了したら、開発者は、プラットフォームの基本的な基盤とAEMの一般的なデザインパターンを理解する必要があります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -64,7 +64,7 @@ WKND サイトの最終バージョンも参照できます。 [https://wknd.sit
 
 ### Powered by Adobe Stock
 
-WKND リファレンス Web サイトの画像の多くは、 [Adobe Stock](https://stock.adobe.com/) とは、 [https://www.adobe.com/legal/terms.html](https://www.adobe.com/jp/legal/terms.html). Adobe Stockの画像を、Web サイトやマーケティング資料など、このデモ Web サイトを閲覧した後に、他の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
+WKND リファレンス Web サイトの画像の多くは、 [Adobe Stock](https://stock.adobe.com/jp/) とは、 [https://www.adobe.com/legal/terms.html](https://www.adobe.com/jp/legal/terms.html). Adobe Stockの画像を、Web サイトやマーケティング資料など、このデモ Web サイトを閲覧した後に、他の目的で使用する場合は、Adobe Stockでライセンスを購入できます。
 
 Adobe Stockでは、写真、グラフィック、ビデオ、テンプレートなど、1 億 4000 万を超える高品質のロイヤリティフリー画像を利用して、クリエイティブなプロジェクトをすぐに開始できます。
 
