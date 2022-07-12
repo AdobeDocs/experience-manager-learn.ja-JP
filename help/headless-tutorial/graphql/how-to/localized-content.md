@@ -8,17 +8,17 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 0%
+source-wordcount: '513'
+ht-degree: 2%
 
 ---
 
 
 # AEMヘッドレスを使用したコンテンツのローカライズ
 
-AEMが [翻訳統合フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) ヘッドレスコンテンツの場合、コンテンツフラグメントやサポートアセットをロケール間で容易に翻訳して使用できます。 これは、ページ、エクスペリエンスフラグメント、アセット、Formsなど、他のAEMコンテンツを翻訳する場合と同じフレームワークです。 1 回 [ヘッドレスコンテンツが翻訳されました](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)、および公開された場合、ヘッドレスアプリケーションで使用する準備が整います。
+AEMが [翻訳統合フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) ヘッドレスコンテンツの場合、コンテンツフラグメントやサポートアセットをロケール間で容易に翻訳して使用できます。 これは、ページ、エクスペリエンスフラグメント、アセット、Formsなど、他のAEMコンテンツを翻訳する場合と同じフレームワークです。 1 回 [ヘッドレスコンテンツが翻訳されました](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=ja)、および公開された場合、ヘッドレスアプリケーションで使用する準備が整います。
 
 ## アセットフォルダー構造{#assets-folder-structure}
 
@@ -36,22 +36,22 @@ AEMでローカライズされたコンテンツフラグメントが [推奨位
 | en | /content/dam/.../**en**/... | 英語コンテンツ |
 | es | /content/dam/.../**es**/... | スペイン語コンテンツ |
 
-## GraphQL クエリ
+## GraphQL 永続クエリ
 
-AEMが `_locale` ロケールコードでコンテンツを自動的にフィルタリングする GraphQL フィルター。 例えば、 [WKND 参照デモプロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 次のようになります。
+AEMが `_locale` ロケールコードでコンテンツを自動的にフィルタリングする GraphQL フィルター。 例えば、 [WKND 参照デモプロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
 
 ```graphql
-{
-  adventureList(_locale: "en") {
+query($locale: String!) {
+  adventureList(_locale: $locale) {
     items {      
       _path
-      adventureTitle
+      title
     }
   }
 }
 ```
 
-この `_locale` フィルターには [AEMアセットフォルダーベースのローカリゼーション規則](#assets-folder-structure).
+この `$locale` 変数 `_locale` フィルタにはロケールコードが必要です ( 例： `en`, `en_us`または `de`) を [AEMアセットフォルダーベースのローカリゼーション規則](#assets-folder-structure).
 
 ## React の例
 
@@ -112,31 +112,26 @@ Adventures コンポーネントは、ロケール別にすべての冒険をAEM
 
 この方法は、アプリケーション内の他のクエリに拡張でき、すべてのクエリにユーザーのロケール選択で指定された内容のみが含まれるようにします。
 
-AEMに対するクエリは、カスタム React フックで実行されます。 [useGraphQL(AEM GraphQL のクエリに関するドキュメントで詳しく説明 )](./aem-headless-sdk.md).
+AEMに対するクエリは、カスタム React フックで実行されます。 [getAdventuresByLocale(AEM GraphQL のクエリに関するドキュメントの詳細で説明 )](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js
 
 import { useContext } from "react"
-import { useGraphQL } from './useGraphQL'
+import { useAdventuresByLocale } from './api/persistedQueries'
 import LocaleContext from './LocaleContext'
 
 export default function Adventures() {
     const { locale } = useContext(LocaleContext);
 
-    let {data} = useGraphQL(`{
-            adventureList(_locale: "${locale}") {
-                items {      
-                _path
-                adventureTitle
-             }
-        }
-    }`);
+    // Get data from AEM using GraphQL persisted query as defined above 
+    // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+    let { data, error } = useAdventuresByLocale(locale);
 
     return (
         <ul>
             {data?.adventureList?.items?.map((adventure, index) => { 
-                return <li key={index}>{adventure.adventureTitle}</li>
+                return <li key={index}>{adventure.title}</li>
             })}
         </ul>
     )

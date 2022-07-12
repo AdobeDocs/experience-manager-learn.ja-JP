@@ -9,10 +9,10 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 4%
+source-wordcount: '1155'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 | ImageRef フィールド | AEMから提供されるクライアント Web アプリ | クライアントアプリが AEM オーサーに対してクエリを実行 | クライアントアプリが AEM Publish をクエリ |
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✘ | ✘ |
+| `_path` | ✔ | ✔ （アプリは URL でホストを指定する必要があります） | ✔ （アプリは URL でホストを指定する必要があります） |
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
@@ -48,25 +48,28 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 ![画像へのコンテンツ参照を含むコンテンツフラグメントモデル](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL クエリ
+## GraphQL 永続クエリ
 
-GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを入力し、リクエストします。 `_path`, `_authorUrl`または `_publishUrl` アプリケーションで必要です。
+GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを入力し、リクエストします。 `_path`, `_authorUrl`または `_publishUrl` アプリケーションで必要です。 例えば、 [WKND 参照デモプロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
 
-```javascript
-{
-  adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
+```graphql
+query ($path: String!) {
+  adventureByPath(_path: $path) {
     item {
-      adventurePrimaryImage {
+      title,
+      primaryImage {
         ... on ImageRef {
-          _path,
-          _authorUrl,
+          _path
+          _authorUrl
           _publishUrl
         }
       }
     }
-  }  
+  }
 }
 ```
+
+この `$path` 変数 `_path` フィルターにはコンテンツフラグメントへの完全パスが必要です ( 例： `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`) をクリックします。
 
 ## GraphQL の応答
 
@@ -78,9 +81,9 @@ GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを
     "adventureByPath": {
       "item": {
         "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg"
+          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
         }
       }
     }
@@ -95,7 +98,7 @@ GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを
 React では、AEM Publish からの画像の表示は次のようになります。
 
 ```html
-<img src={ data.adventureByPath.item.adventurePrimaryImage._publishUrl } />
+<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
 ```
 
 ## 画像レンディション
@@ -132,7 +135,7 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 #### アセット再処理ワークフロー（その ）{#reprocess-assets}
 
-処理プロファイルを作成（または更新）した状態で、アセットを再処理して、処理プロファイルで定義された新しいレンディションを生成します。 アセットが処理されない場合、新しいレンディションは存在しません。
+処理プロファイルを作成（または更新）した状態で、アセットを再処理して、処理プロファイルで定義された新しいレンディションを生成します。 アセットが処理プロファイルで処理されるまで、新しいレンディションは存在しません。
 
 + 好ましくは、 [フォルダーに処理プロファイルを割り当てました](../../../assets/configuring//processing-profiles.md) したがって、そのフォルダーに新しいアセットがアップロードされると、レンディションが自動的に生成されます。 既存のアセットは、以下のアドホックアプローチを使用して再処理する必要があります。
 
@@ -142,7 +145,7 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 #### レンディションのレビュー
 
-レンディションは、 [アセットのレンディション表示を開く](../../../assets/authoring/renditions.md)をクリックし、レンディションパネルでプレビューする新しいレンディションを選択します。 レンディションが見つからない場合、 [アセットが処理プロファイルを使用して処理されていることを確認します。](#reprocess-assets).
+レンディションは、 [アセットのレンディション表示を開く](../../../assets/authoring/renditions.md)をクリックし、レンディションパネルでプレビューする新しいレンディションを選択します。 レンディションが見つからない場合、 [アセットが処理プロファイルを使用して処理されていることを確認する](#reprocess-assets).
 
 ![レンディションの確認](./assets/images/review-renditions.jpg)
 
@@ -156,9 +159,9 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 | アセット URL | レンディションサブパス | レンディション名 | レンディション拡張 |  | レンディション URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | MEDIUM | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | MEDIUM | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -210,7 +213,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 このシンプルな `App.js` アドベンチャー画像をAEMに問い合わせて、その画像の 3 つのレンディションを表示します。小、中、大
 
-AEMに対するクエリは、カスタム React フックで実行されます。 [AEMヘッドレス SDK を使用する useGraphQL](./aem-headless-sdk.md#graphql-queries).
+AEMに対するクエリは、カスタム React フックで実行されます。 [AEMヘッドレス SDK を使用する useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
 
 クエリの結果と特定のレンディションパラメーターが [画像 React コンポーネント](#react-example-image-component).
 
@@ -218,29 +221,14 @@ AEMに対するクエリは、カスタム React フックで実行されます�
 // src/App.js
 
 import "./App.css";
-import { useGraphQL } from "./useGraphQL";
+import { useAdventureByPath } from './api/persistedQueries'
 import Image from "./Image";
 
 function App() {
 
-  // The GraphQL that returns an image
-  const adventureQuery = `{
-        adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
-          item {
-            adventureTitle,
-            adventurePrimaryImage {
-              ... on ImageRef {
-                _path,
-                _authorUrl,
-                _publishUrl
-              }
-            }
-          }
-        }  
-    }`;
-
-  // Get data from AEM using GraphQL
-  let { data } = useGraphQL(adventureQuery);
+  // Get data from AEM using GraphQL persisted query as defined above 
+  // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
 
   // Wait for GraphQL to provide data
   if (!data) { return <></> }
@@ -251,10 +239,10 @@ function App() {
       <h2>Small rendition</h2>
       {/* Render the small rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="small"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -262,10 +250,10 @@ function App() {
       <h2>Medium rendition</h2>
       {/* Render the medium rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="medium"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -273,10 +261,10 @@ function App() {
       <h2>Large rendition</h2>
       {/* Render the large rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="large"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
     </div>
   );
