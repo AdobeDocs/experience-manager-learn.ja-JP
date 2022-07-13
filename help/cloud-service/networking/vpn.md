@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1264'
 ht-degree: 2%
 
 ---
@@ -229,15 +229,7 @@ Virtual Private Network が有効になっている場合、AEMのコードと�
 
 ### HTTP/HTTPS
 
-AEMから HTTP/HTTPS 接続を作成する場合、専用のエグレス IP アドレスを取得したり、VPN 経由でルーティングしたりするには、プレースホルダーを介して提供される特別なホストとポート経由で接続を行う必要があります。
-
-AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別な Java™システム変数を提供します。
-
-|変数名 |使用 | Java™ code | OSGi 設定 | Apache Web サーバー mod_proxy 設定 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP 接続のプロキシホスト | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP 接続のプロキシポート | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | HTTPS 接続のプロキシホスト | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシ hosts/ports の値を使用して Java™ HTTP クライアントのプロキシ設定を設定することでおこなう必要があります。
-
-任意のポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `__enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
+AEMから HTTP/HTTPS 接続を作成する場合、VPN を使用すると、AEMから HTTP/HTTPS 接続が自動的にプロキシされます。 HTTP/HTTPS 接続をサポートするために、追加のコードや設定は必要ありません。
 
 >[!TIP]
 >
