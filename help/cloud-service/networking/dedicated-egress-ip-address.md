@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: e9aeb54f0e2b52ad2d1cc914820bd6e232e509a0
 workflow-type: tm+mt
-source-wordcount: '1238'
-ht-degree: 1%
+source-wordcount: '1146'
+ht-degree: 2%
 
 ---
 
@@ -185,15 +185,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 ### HTTP/HTTPS
 
-AEMから HTTP/HTTPS 接続を作成する場合、専用のエグレス IP アドレスを取得するには、プレースホルダーを介して提供される特別なホストおよびポートを介して接続を行う必要があります。
-
-AEMは、AEM HTTP/HTTPS プロキシにマッピングされる 2 組の特別な Java™システム変数を提供します。
-
-|変数名 |使用 | Java™ code | OSGi 設定 | Apache Web サーバー mod_proxy 設定 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP 接続のプロキシホスト | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP 接続のプロキシポート | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | HTTPS 接続のプロキシホスト | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-HTTP/HTTPS 外部サービスへのリクエストは、AEMプロキシの hosts/ports 値を使用して Java™ HTTP クライアントのプロキシ設定を設定することでおこなう必要があります。
-
-任意のポートで外部サービスに対して HTTP/HTTPS 呼び出しをおこなう場合、対応するポートがない `portForwards` は、Cloud Manager API を使用して定義する必要があります `enableEnvironmentAdvancedNetworkingConfiguration` ポート転送の「ルール」が「コード内」で定義されているので、操作を実行します。
+AEMから HTTP/HTTPS 接続を作成する場合、専用のエグレス IP アドレスを使用すると、HTTP/HTTPS 接続は専用のエグレス IP アドレスを使用してAEMから自動的にプロキシされます。 HTTP/HTTPS 接続をサポートするために、追加のコードや設定は必要ありません。
 
 #### コードの例
 
