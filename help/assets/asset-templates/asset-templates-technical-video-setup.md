@@ -1,31 +1,31 @@
 ---
 title: AEM AssetsとInDesign Serverを使用したアセットテンプレートの設定
-description: アセットテンプレートを使用すると、マーケターは、デジタルおよび印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用してマーケティングカタログ、名刺、チラシ、広告、およびはがきを簡単に作成できます。 AEMを使用したInDesignサーバーの設定については、この節で説明します。
+description: アセットテンプレートを使用すると、マーケターは、デジタルアセットや印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用すると、マーケティングパンフレット、名刺、チラシ、広告、ポストカードを簡単に作成できます。 AEMでのInDesignサーバーの設定については、この節で説明します。
 version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
+source-git-commit: 6dd7164f5ec045b4cffd7732fd83ad9a91fdd511
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '154'
+ht-degree: 1%
 
 ---
 
-
 # AEM AssetsとInDesign Serverを使用したアセットテンプレートの設定{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
-アセットテンプレートを使用すると、マーケターは、デジタルおよび印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用してマーケティングカタログ、名刺、チラシ、広告、およびはがきを簡単に作成できます。 AEMを使用したInDesignサーバーの設定については、この節で説明します。
+アセットテンプレートを使用すると、マーケターは、デジタルアセットや印刷用のデジタルアセットを作成、管理および配信できます。 InDesignサーバーと統合すると、アセットテンプレートを使用すると、マーケティングパンフレット、名刺、チラシ、広告、ポストカードを簡単に作成できます。 AEMでのInDesignサーバーの設定については、この節で説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17069/?quality=9&learn=on)
 
 >[!NOTE]
 >
->AEM **は、INDDテンプレートをアップロードする際に、実行中のInDesignサーバーに接続する必要があります。** INDDファイルでの初期処理の一部には、InDesignサーバーが必要です。
+>AEM **必須** INDD テンプレートがアップロードされる際に、実行中のInDesignサーバーに接続する必要があります。 INDD ファイルでの初期処理の一部として、InDesignサーバーが必要です。
 
-## 体験版InDesign Serverのダウンロード {#download-indesign-server-trial}
+## InDesign Server体験版のダウンロード {#download-indesign-server-trial}
 
-[InDesign Server体験版ダウンロードWebサイト](https://www.adobe.com/devnet/premiere/sdk/cs5/indesign-server-trial-downloads.html)をダウンロード
+ダウンロード [InDesign Server体験版ダウンロード Web サイト](https://www.adobeprerelease.com/)
 
 ## 開始InDesign Server {#starting-indesign-server}
 
