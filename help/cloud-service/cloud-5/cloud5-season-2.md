@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: c3d3eae47c17a7efed15f14e98e2f3ded719cef0
+source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '423'
 ht-degree: 1%
 
 ---
@@ -99,14 +99,16 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
             </p>
          </td>   
      <td>
-            <img alt="修正…キャッシュ" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-fix-your-cache.md">
+               <img alt="キャッシュの修正" src="./imgs/s2/005-thumb.png"/>
+            </a>
       <div>
-         <strong>修正…キャッシュ</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+         <a href="season-2/cloud5-fix-your-cache.md"><strong>修正…キャッシュ</strong></a>
+         <br/><em>Damian Langsweirdt &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
-        <br/>
-         2022 年 7 月 15 日
+         <br/>
+             AEM as a Cloud Service上で実行するサイトのキャッシュを最適化し、スピードアップする領域を検討します。
       </p>
    </td> 
   </tr>
