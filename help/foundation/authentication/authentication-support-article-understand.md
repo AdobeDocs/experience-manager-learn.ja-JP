@@ -1,29 +1,29 @@
 ---
 title: AEMでの認証サポートについて
-description: 'AEMでサポートされている認証（および時々）メカニズムの統合ビュー。 '
+description: AEMでサポートされる認証（および時々の認証）メカニズムに対する統合ビュー。
 version: 6.3, 6.4, 6.5
-feature: ユーザーとグループ
+feature: User and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: アーキテクチャ
+topic: Architecture
 role: Architect
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
+source-git-commit: 84d7230071544e7cdc63ecc0faa32c03ab337cd6
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 15%
+source-wordcount: '130'
+ht-degree: 10%
 
 ---
 
+# AEM 6.x での認証サポートについて
 
-# AEM 6.xでの認証サポートについて
+AEMでサポートされる認証（および時々の認証）メカニズムに対する統合ビュー。
 
-AEMでサポートされている認証（および時々）メカニズムの統合ビュー。
-
-*次の表に、AEMでのユーザー認証方法を示します。*
+*次の表に、AEMでのユーザーの認証方法を示します。*
 
 <table>
     <tbody>
@@ -46,19 +46,19 @@ AEMでサポートされている認証（および時々）メカニズムの�
             <td>✔</td>
         </tr>
         <tr>
-            <td>Formsベースの</td>
+            <td>Formsベース</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>トークンベース（<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化されたトークン</a>を含む）</td>
+            <td>トークンベース ( <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化トークン</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>正規のIDプロバイダーとしての非AEMシステム</strong></td>
+            <td><strong>正規の ID プロバイダーとしての非AEMシステム</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -81,7 +81,7 @@ AEMでサポートされている認証（および時々）メカニズムの�
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html" target="_blank">OAuth 1.0aおよび2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a および 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -95,4 +95,4 @@ AEMでサポートされている認証（および時々）メカニズムの�
     </tbody>
 </table>
 
-&lt;⁕a0/>コミュニティプロジェクト経由で提供されますが、Adobeで直接サポートされるわけではありません。**
+⁕ *コミュニティプロジェクトを介して提供されますが、Adobeで直接サポートされるわけではありません。*
