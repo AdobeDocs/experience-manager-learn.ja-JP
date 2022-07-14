@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
 source-wordcount: '1768'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
@@ -74,11 +74,11 @@ WKND リファレンスサイトには、 [GraphQL エンドポイント](https:
    >
    > AEM as a Cloud Serviceおよび **not** の `classic` バージョン。
 
-1. 次の **AEM Start** メニュー移動先 **ツール** > **導入** > **パッケージ**.
+1. **AEM 開始**&#x200B;メニューで&#x200B;**ツール**／**デプロイメント**／**パッケージ**&#x200B;に移動します。
 
    ![パッケージに移動します。](assets/setup/navigate-to-packages.png)
 
-1. クリック **パッケージをアップロード** 前の手順でダウンロードした WKND パッケージを選択します。 クリック **インストール** をクリックしてパッケージをインストールします。
+1. クリック **パッケージをアップロード** 前の手順でダウンロードした WKND パッケージを選択します。 「**インストール**」をクリックして、パッケージをインストールします。
 
 1. 次の **AEM Start** メニュー移動先 **Assets** > **ファイル**.
 1. フォルダーをクリックして移動先 **WKND サイト** > **英語** > **冒険**.
@@ -128,7 +128,7 @@ WKND リファレンスサイトには、 [GraphQL エンドポイント](https:
 
    >[!NOTE]
    >
-   > 実稼動シナリオでは、アプリはAEMに接続します **公開** 環境。 詳しくは、 [実稼動のデプロイメント](../multi-step/production-deployment.md) チャプター。
+   > 実稼動シナリオでは、アプリはAEMに接続します **公開** 環境。 詳しくは、 _実稼動のデプロイメント_ 」セクションに入力します。
 
 1. 次に移動： `aem-guides-wknd-graphql/react-app` フォルダー。 デスクトップアプリケーションをインストールして起動します。
 
@@ -175,18 +175,18 @@ WKND リファレンスサイトには、 [GraphQL エンドポイント](https:
 
 ## 5. GraphiQL ツールをインストールします。 {#install-graphiql}
 
-[GraphiQL](https://github.com/graphql/graphiql) は開発ツールであり、開発インスタンスやローカルインスタンスなどの下位レベルの環境でのみ必要です。 GraphiQL IDE を使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、GraphiQL はドキュメントに簡単にアクセスでき、使用可能なメソッドを簡単に学習し、理解できます。
+[GraphiQL](https://github.com/graphql/graphiql) は開発ツールであり、開発インスタンスやローカルインスタンスなどの下位レベルの環境でのみ必要です。 GraphiQL IDE を使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、GraphiQL はドキュメントへのアクセスも容易にし、どのようなメソッドがあるのか、簡単に学習して理解できます。
 
-1. 次に移動： **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 「GraphiQL」を検索します ( 必ず **i** in **GraphiQL**.
-1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x**
+1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**／**AEM as a Cloud Service** に移動します。
+1. 「GraphiQL」を検索します（**GraphiQL** の **i** は必ず入れてください）。
+1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x** をダウンロードします。
 
    ![GraphiQL パッケージをダウンロード](../multi-step/assets/explore-graphql-api/software-distribution.png)
 
    zip ファイルは、直接インストールできるAEMパッケージです。
 
-1. 次の **AEM Start** メニュー移動先 **ツール** > **導入** > **パッケージ**.
-1. クリック **パッケージをアップロード** 前の手順でダウンロードしたパッケージを選択します。 クリック **インストール** をクリックしてパッケージをインストールします。
+1. **AEM 開始**&#x200B;メニューで&#x200B;**ツール**／**デプロイメント**／**パッケージ**&#x200B;に移動します。
+1. 「**パッケージをアップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。「**インストール**」をクリックして、パッケージをインストールします。
 
    ![GraphiQL パッケージのインストール](../multi-step/assets/explore-graphql-api/install-graphiql-package.png)
 1. GraphiQL IDE( ) に移動します。 [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html) GraphQL API の詳細をご覧ください。
@@ -217,7 +217,7 @@ AEMは、デフォルトでセキュリティで保護されているので、�
 
    >[!NOTE]
    >
-   > Web コンソールは、SDK でのみ使用できます。 AEMas a Cloud Service環境では、この情報は [開発者コンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html).
+   > Web コンソールは、SDK でのみ使用できます。 AEMas a Cloud Service環境では、この情報は [開発者コンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja).
 
 1. 上部のメニューで、 **OSGI** > **設定** 全てを上げる [OSGi 設定](http://localhost:4502/system/console/configMgr).
 1. ページを下にスクロールします。 **AdobeGranite クロスオリジンリソース共有**.

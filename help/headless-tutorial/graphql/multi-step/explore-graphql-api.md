@@ -1,6 +1,6 @@
 ---
-title: GraphQL APIの参照 — AEMヘッドレスの概要 — GraphQL
-description: Adobe Experience Manager(AEM)とGraphQLの概要。 組み込みのGraphQL IDEを使用してAEM GraphQL APIを調べます。 コンテンツフラグメントモデルに基づいてAEMがGraphQLスキーマを自動的に生成する方法を説明します。 GraphQL構文を使用して、基本的なクエリを作成してみてください。
+title: GraphQL API の参照 — AEMヘッドレスの概要 — GraphQL
+description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 組み込みの GraphQL IDE を使用してAEM GraphQL API を調べます。 コンテンツフラグメントモデルに基づいて、AEMが GraphQL スキーマを自動的に生成する方法を説明します。 GraphQL 構文を使用して、基本的なクエリを作成してみてください。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6714
@@ -10,293 +10,402 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 2%
+source-wordcount: '1527'
+ht-degree: 7%
 
 ---
 
-# GraphQL APIの参照 {#explore-graphql-apis}
+# GraphQL API の参照 {#explore-graphql-apis}
 
-AEMのGraphQL APIは、コンテンツフラグメントのデータをダウンストリームアプリケーションに公開する強力なクエリ言語を提供します。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルが作成または更新されるたびに、スキーマが翻訳され、GraphQL APIを構成する「グラフ」に追加されます。
+AEMの GraphQL API は、コンテンツフラグメントのデータをダウンストリームアプリケーションに公開する強力なクエリ言語です。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルが作成または更新されるたびに、スキーマが翻訳され、GraphQL API を構成する「グラフ」に追加されます。
 
-この章では、[GraphiQL](https://github.com/graphql/graphiql)と呼ばれるIDEを使用してコンテンツを収集するための、一般的なGraphQLクエリをいくつか調べます。 GraphiQL IDEを使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、GraphiQLはドキュメントに簡単にアクセスでき、使用可能な方法を簡単に学習し、理解できます。
+この章では、IDE を使用してコンテンツを収集する、一般的な GraphQL クエリをいくつか調べます。 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE を使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、GraphiQL はドキュメントへのアクセスも容易にし、どのようなメソッドがあるのか、簡単に学習して理解できます。
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、[コンテンツフラグメントのオーサリング](./author-content-fragments.md)で説明されている手順が完了していることを前提としています。
+これは複数のパートから成るチュートリアルで、 [コンテンツフラグメントのオーサリング](./author-content-fragments.md) が完了しました。
 
 ## 目的 {#objectives}
 
-* GraphQLツールを使用して、GraphQL構文を使用してクエリを作成する方法を説明します。
-* コンテンツフラグメントのリストと単一のコンテンツフラグメントを照会する方法を説明します。
-* 特定のデータ属性をフィルターしてリクエストする方法を説明します。
-* コンテンツフラグメントのバリエーションをクエリする方法を説明します。
+* GraphiQL ツールを使用して、GraphQL 構文を使用してクエリを作成する方法を説明します。
+* コンテンツフラグメントのリストと単一のコンテンツフラグメントに対してクエリを実行する方法を説明します。
+* 特定のデータ属性をフィルタリングしてリクエストする方法を説明します。
 * 複数のコンテンツフラグメントモデルのクエリを結合する方法を説明します
+* GraphQL クエリを保持する方法を説明します。
 
-## GraphiQLツールのインストール {#install-graphiql}
+## GraphQL エンドポイントの有効化 {#enable-graphql-endpoint}
 
-GraphiQL IDEは開発ツールで、開発インスタンスやローカルインスタンスなど、下位レベルの環境でのみ必要です。 したがって、AEMプロジェクトには含まれませんが、アドホックベースでインストールできる個別のパッケージとして提供されます。
+GraphQL エンドポイントは、コンテンツフラグメントに対する GraphQL API クエリを有効にするように設定する必要があります。
 
-1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as aCloud Service**&#x200B;に移動します。
-1. 「GraphiQL」を検索します（**GraphiQL**&#x200B;に&#x200B;**i**&#x200B;を必ず含めてください）。
-1. 最新の&#x200B;**GraphiQLコンテンツパッケージv.x.x.x**&#x200B;をダウンロードします。
+1. AEM Start 画面からに移動します。 **ツール** > **一般** > **GraphQL**.
 
-   ![GraphiQLパッケージのダウンロード](assets/explore-graphql-api/software-distribution.png)
+   ![GraphQL エンドポイントに移動します。](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
-   zipファイルは、直接インストールできるAEMパッケージです。
+1. タップ **作成** をクリックします。 ダイアログで、次の値を入力します。
 
-1. **AEM Start**&#x200B;メニューから、**ツール** / **デプロイ** / **パッケージ**&#x200B;に移動します。
-1. 「**パッケージをアップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。 「**インストール**」をクリックして、パッケージをインストールします。
+   * 名前*: **マイプロジェクトエンドポイント**.
+   * 次によって提供される GraphQL スキーマを使用… *: **マイプロジェクト**
 
-   ![GraphiQLパッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)
+   ![GraphQL エンドポイントを作成](assets/explore-graphql-api/create-graphql-endpoint.png)
 
-## コンテンツフラグメントのリストのクエリ {#query-list-cf}
+   タップ **作成** をクリックしてエンドポイントを保存します。
 
-共通の要件は、複数のコンテンツフラグメントをクエリすることです。
+   プロジェクト設定に基づいて作成された GraphQL エンドポイントでは、そのプロジェクトに属するモデルに対するクエリのみが有効になります。 この場合、 **人物** および **チーム** モデルを使用できます。
 
-1. [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)にあるGraphiQL IDEに移動します。
-1. 次のクエリを、左側のパネル（コメントのリストの下）に貼り付けます。
+   >[!NOTE]
+   >
+   > また、プロジェクトをまたいだモデルに対するクエリを有効にするグローバルエンドポイントを作成することもできます。 例えば、 **WKND 共有** プロジェクトと **マイプロジェクト**. これは、環境がさらにセキュリティの脆弱性を引き起こす可能性があるので、慎重に使用し、必要な場合にのみ使用してください。
+
+1. これで、2 つの GraphQL エンドポイントが環境で有効になっているはずです（WKND 共有コンテンツをインストールしたと仮定）。
+
+   ![Graphql エンドポイントが有効](assets/explore-graphql-api/enabled-graphql-endpoints.png)
+
+## GraphiQL IDE の使用
+
+この [GraphiQL ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を使用すると、開発者は、現在のAEM環境上のコンテンツに対するクエリを作成およびテストできます。 GraphiQL ツールを使用すると、次のことが可能になります。 **保持** 実稼働設定でクライアントアプリケーションが使用するクエリを保存します。
+
+次に、組み込みの GraphiQL IDE を使用してAEM GraphQL API の機能を調べます。
+
+1. AEM Start 画面からに移動します。 **ツール** > **一般** > **GraphQL クエリエディター**.
+
+   ![GraphiQL IDE に移動します。](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+
+   >[!NOTE]
+   >
+   > 古いバージョンのAEMの場合、GraphiQL IDE は組み込まれない可能性があります。 次の手順に従って手動でインストールできます [説明](#install-graphiql).
+
+1. 右上隅で、 **エンドポイント** から **マイプロジェクトエンドポイント**.
+
+   ![GraphQL エンドポイントを設定](assets/explore-graphql-api/set-my-project-endpoint.png)
+
+   これにより、 **マイプロジェクト** プロジェクト。 次の場合もエンドポイントが存在することに注意してください： **WKND 共有**.
+
+### コンテンツフラグメントのリストのクエリ {#query-list-cf}
+
+共通の要件は、複数のコンテンツフラグメントに対するクエリです。
+
+1. 次のクエリをメインパネルに貼り付けます（コメントのリストの置き換え）。
 
    ```graphql
-   {
-     contributorList {
-       items {
-           _path
-         }
-     }
-   }
-   ```
-
-1. 上部のメニューの「**再生**」ボタンを押して、クエリを実行します。 前の章の寄稿者コンテンツフラグメントの結果が表示されます。
-
-   ![投稿者リストの結果](assets/explore-graphql-api/contributorlist-results.png)
-
-1. カーソルを`_path`テキストの下に置き、**Ctrl +スペース**&#x200B;を入力して、コードのヒントをトリガーします。 `fullName`と`occupation`をクエリに追加します。
-
-   ![コードヒットを使用したクエリの更新](assets/explore-graphql-api/update-query-codehinting.png)
-
-1. **Play**&#x200B;ボタンを押してクエリを再実行すると、`fullName`と`occupation`の追加のプロパティが結果に含まれていることがわかります。
-
-   ![姓と職業の結果](assets/explore-graphql-api/updated-query-fullname-occupation.png)
-
-   `fullName` とは単 `occupation` 純なプロパティです。[コンテンツフラグメントモデルの定義](./content-fragment-models.md)の章から、`fullName`と`occupation`は、各フィールドの&#x200B;**プロパティ名**&#x200B;を定義する際に使用する値です。
-
-1. `pictureReference` とは、よ `biographyText` り複雑なフィールドを表します。`pictureReference`フィールドと`biographyText`フィールドに関するデータを返すには、次のようにクエリを更新します。
-
-   ```graphql
-   {
-   contributorList {
+   query allTeams {
+     teamList {
        items {
          _path
-         fullName
-         occupation
-         biographyText {
-           html
-         }
-         pictureReference {
-           ... on ImageRef {
+         title
+       }
+     }
+   } 
+   ```
+
+1. を押します。 **再生** ボタンを使用してクエリを実行します。 前の章のコンテンツフラグメントの結果が表示されます。
+
+   ![担当者リストの結果](assets/explore-graphql-api/all-teams-list.png)
+
+1. カーソルを `title` テキストと入力 **Ctrl +スペース** トリガーコードのヒント 追加 `shortname` および `description` をクエリに追加します。
+
+   ![コード編集でクエリを更新](assets/explore-graphql-api/update-query-codehinting.png)
+
+1. クエリを再度実行するには、 **再生** ボタンをクリックすると、 `shortname` および `description`.
+
+   ![短い名前と説明の結果](assets/explore-graphql-api/updated-query-shortname-description.png)
+
+   この `shortname` は単純なプロパティで、 `description` は複数行テキストフィールドで、GraphQL API を使用すると、次のような結果に対して様々な形式を選択できます。 `html`, `markdown`, `json` または `plaintext`.
+
+### ネストされたフラグメントのクエリ
+
+次に、クエリを試してみます。ネストされたフラグメントを取得する際には、 **チーム** モデルが参照する **人物** モデル。
+
+1. クエリを更新して `teamMembers` プロパティ。 これは **フラグメント参照** フィールドから担当者モデルへ。 人物モデルのプロパティを返すことができます。
+
+   ```graphql
+   query allTeams {
+       teamList {
+           items {
                _path
-               width
-               height
+               title
+               shortName
+               description {
+                   plaintext
+               }
+               teamMembers {
+                   fullName
+                   occupation
                }
            }
        }
-     }
    }
    ```
 
-   `biographyText` は複数行テキストフィールドで、GraphQL APIを使用すると、、、などの結果に対して様々な形式を選 `html`択で `markdown`き `json` ま `plaintext`す。
+   JSON 応答：
 
-   `pictureReference` はコンテンツ参照で、画像である必要があるので、組み込みオブジェクトが使 `ImageRef` 用されます。これにより、`width`や`height`など、参照中の画像に関する追加データを要求できます。
-
-1. 次に、**冒険**&#x200B;のリストをクエリしてみましょう。 次のクエリを実行します。
-
-   ```graphql
+   ```json
    {
-     adventureList {
-       items {
-         adventureTitle
-         adventureType
-         adventurePrimaryImage {
-           ...on ImageRef {
-             _path
-             mimeType
+       "data": {
+           "teamList": {
+           "items": [
+               {
+               "_path": "/content/dam/my-project/en/team-alpha",
+               "title": "Team Alpha",
+               "shortName": "team-alpha",
+               "description": {
+                   "plaintext": "This is a description of Team Alpha!"
+               },
+               "teamMembers": [
+                   {
+                   "fullName": "John Doe",
+                   "occupation": [
+                       "Artist",
+                       "Influencer"
+                   ]
+                   },
+                   {
+                   "fullName": "Alison Smith",
+                   "occupation": [
+                       "Photographer"
+                   ]
+                   }
+                 ]
            }
-         }
+           ]
+           }
        }
-     }
    }
    ```
 
-   **Adventures**&#x200B;のリストが返されます。 クエリにフィールドを追加して、自由に試してみてください。
+   ネストされたフラグメントに対してクエリを実行する機能は、AEM GraphQL API の強力な機能です。 この簡単な例では、ネストの深さは 2 レベルです。 ただし、フラグメントをさらにネストすることは可能です。 例えば、 **住所** ～に関連するモデル **人物** 3 つのモデルすべてから 1 つのクエリでデータを返すことができます。
 
-## コンテンツフラグメントのリストのフィルタリング {#filter-list-cf}
+### コンテンツフラグメントのリストのフィルタリング {#filter-list-cf}
 
 次に、プロパティ値に基づいて結果をコンテンツフラグメントのサブセットにフィルタリングする方法を見てみましょう。
 
-1. GraphiQL UIで次のクエリを入力します。
+1. GraphiQL UI で次のクエリを入力します。
 
    ```graphql
-   {
-   contributorList(filter: {
-     occupation: {
-       _expressions: {
-         value: "Photographer"
+   query personByName($name:String!){
+     personList(
+       filter:{
+         fullName:{
+           _expressions:[{
+             value:$name
+             _operator:EQUALS
+           }]
          }
        }
-     }) {
-       items {
+     ){
+       items{
          _path
          fullName
          occupation
        }
      }
-   }
+   }  
    ```
 
-   上記のクエリは、システム内のすべてのコントリビューターに対して検索を実行します。 クエリの先頭に追加されたフィルターは、`occupation`フィールドと文字列「**Photographer**」で比較を実行します。
+   上記のクエリは、システム内のすべてのユーザーフラグメントに対して検索を実行します。 クエリの先頭に追加されたフィルターにより、 `name` フィールドと変数文字列 `$name`.
 
-1. クエリを実行すると、1つの&#x200B;**Contributor**&#x200B;のみが返されます。
-1. 次のクエリを入力して、**Adventures**&#x200B;のリストをクエリします。`adventureActivity`は&#x200B;**で**&quot;Surfing&quot;**と等しくない**&#x200B;です。
+1. 内 **クエリ変数** パネルに次を入力します。
+
+   ```json
+   {"name": "John Doe"}
+   ```
+
+1. クエリを実行する場合、必ず **人物** の値は「John Doe」になります。
+
+   ![クエリ変数を使用したフィルタリング](assets/explore-graphql-api/using-query-variables-filter.png)
+
+   複雑なクエリをフィルタリングして作成する方法は他にも多数あります。詳しくは、 [AEMでの GraphQL の使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=ja).
+
+1. 上のクエリを強化してプロファイル画像を取得
 
    ```graphql
-   {
-     adventureList(filter: {
-       adventureActivity: {
-           _expressions: {
-               _operator: EQUALS_NOT
-               value: "Surfing"
+   query personByName($name:String!){
+     personList(
+       filter:{
+         fullName:{
+           _expressions:[{
+             value:$name
+             _operator:EQUALS
+           }]
+         }
+       }
+     ){
+       items{  
+         _path
+         fullName
+         occupation
+         profilePicture{
+           ... on ImageRef{
+             _path
+             _authorUrl
+             _publishUrl
+             height
+             width
+   
+           }
+         }
+       }
+     }
+   } 
+   ```
+
+   この `profilePicture` はコンテンツ参照であり、画像であると想定されるので、組み込みの `ImageRef` オブジェクトが使用されます。 これにより、参照されている画像に関する追加データ ( `width` および `height`.
+
+### 単一のコンテンツフラグメントのクエリ {#query-single-cf}
+
+単一のコンテンツフラグメントに対して直接クエリを実行することもできます。 AEMのコンテンツは階層的に保存され、フラグメントの一意の識別子はフラグメントのパスに基づきます。
+
+1. GraphiQL エディターに次のクエリを入力します。
+
+   ```graphql
+   query personByPath($path: String!) {
+       personByPath(_path: $path) {
+           item {
+           fullName
+           occupation
            }
        }
-   }) {
-       items {
-       _path
-       adventureTitle
-       adventureActivity
-       }
-     }
    }
    ```
 
-1. クエリを実行し、結果を検査します。 結果に`adventureType`が&#x200B;**&quot;Surfing&quot;**&#x200B;に等しくないことを確認します。
+1. に次を入力します。 **クエリ変数**:
 
-複雑なクエリをフィルタリングして作成するためのその他のオプションは多数ありますが、上記の例はほんの一部です。
+   ```json
+   {"path": "/content/dam/my-project/en/alison-smith"}
+   ```
 
-## 単一のコンテンツフラグメントのクエリ {#query-single-cf}
+1. クエリを実行し、単一の結果が返されることを確認します。
 
-単一のコンテンツフラグメントに対して直接クエリを実行することもできます。 AEMのコンテンツは階層的に保存され、フラグメントの一意の識別子はフラグメントのパスに基づきます。 単一のフラグメントに関するデータを返す場合は、パスを使用し、モデルに直接クエリを実行することをお勧めします。 この構文を使用すると、クエリの複雑さが非常に低くなり、より高速な結果が得られます。
+## クエリを保持 {#persist-queries}
 
-1. GraphiQLエディターで次のクエリを入力します。
+開発者がクエリとデータが返されたら、次の手順はクエリをAEMに保存または保持することです。 [永続クエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) は、GraphQL API をクライアントアプリケーションに公開するための推奨されるメカニズムです。 クエリが保持されると、GETリクエストを使用してリクエストでき、Dispatcher および CDN レイヤーでキャッシュできます。 永続化されたクエリのパフォーマンスがはるかに向上しました。 パフォーマンスのメリットに加えて、永続化されたクエリにより、余分なデータが誤ってクライアントアプリケーションに公開されるのを防ぐことができます。 詳細： [永続化されたクエリは、ここで確認できます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+
+次に、2 つのシンプルなクエリを保持します。これらは次の章で使用します。
+
+1. GraphiQL IDE で、次のクエリを入力します。
 
    ```graphql
-   {
-    contributorByPath(_path: "/content/dam/wknd/en/contributors/stacey-roswells") {
-       item {
+   query allTeams {
+       teamList {
+           items {
+               _path
+               title
+               shortName
+               description {
+                   plaintext
+               }
+               teamMembers {
+                   fullName
+                   occupation
+               }
+           }
+       }
+   }
+   ```
+
+   クエリが機能することを確認します。
+
+1. 次のタップ **名前を付けて保存** と入力します。 `all-teams` を **クエリ名**.
+
+   これで、クエリがの下に表示されます。 **永続クエリ** をクリックします。
+
+   ![すべてのチームが持続するクエリ](assets/explore-graphql-api/all-teams-persisted-query.png)
+1. 次に、省略記号をタップします。 **...** 永続クエリの横にあるをタップし、 **URL をコピー** をクリックして、パスをクリップボードにコピーします。
+
+   ![永続的なクエリ URL をコピー](assets/explore-graphql-api/copy-persistent-query-url.png)
+
+1. 新しいタブを開き、コピーしたパスをブラウザーに貼り付けます。
+
+   ```plain
+   https://$YOUR-AEMasCS-INSTANCEID$.adobeaemcloud.com/graphql/execute.json/my-project/all-teams
+   ```
+
+   上記のパスのようになります。 返されたクエリの JSON 結果が表示されます。
+
+   URL の分類：
+
+   | 名前 | 説明 |
+   | ---------|---------- |
+   | `/graphql/execute.json` | 永続的なクエリエンドポイント |
+   | `/my-project` | のプロジェクト設定 `/conf/my-project` |
+   | `/all-teams` | 永続的なクエリの名前 |
+
+1. GraphiQL IDE に戻り、プラスボタンを使用します。 **+** をクリックして、NEW クエリを終了します。
+
+   ```graphql
+   query personByName($name: String!) {
+     personList(
+       filter: {
+         fullName:{
+           _expressions: [{
+             value: $name
+             _operator:EQUALS
+           }]
+         }
+       }){
+       items {
          _path
          fullName
+         occupation
          biographyText {
-           html
+           json
+         }
+         profilePicture {
+           ... on ImageRef {
+             _path
+             _authorUrl
+             _publishUrl
+             width
+             height
+           }
          }
        }
      }
    }
    ```
 
-1. クエリを実行し、**Stacey Roswells**&#x200B;フラグメントに対する単一の結果が返されることを確認します。
+1. クエリに次の名前を付けて保存します。 **人名別**.
+1. 次の 2 つの永続クエリを保存する必要があります。
 
-   前の練習では、フィルタを使用して結果のリストを絞り込みました。 同様の構文を使用してパスでフィルタリングすることもできますが、パフォーマンス上の理由から、上記の構文をお勧めします。
+   ![最終的に保持されたクエリ](assets/explore-graphql-api/final-persisted-queries.png)
 
-1. [コンテンツフラグメントのオーサリング](./author-content-fragments.md)の章で、**概要**&#x200B;のバリエーションが&#x200B;**Stacey Roswells**&#x200B;に対して作成されたことを思い出してください。 クエリを更新して、**概要**&#x200B;のバリエーションを返します。
+## ソリューションファイル {#solution-files}
 
-   ```graphql
-   {
-   contributorByPath
-   (
-       _path: "/content/dam/wknd/en/contributors/stacey-roswells"
-       variation: "summary"
-   ) {
-       item {
-         _path
-         fullName
-         biographyText {
-           html
-         }
-       }
-     }
-   }
-   ```
+最後の 3 つの章で作成したコンテンツ、モデル、永続クエリをダウンロードします。 [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
 
-   バリエーションの名前が&#x200B;**Summary**&#x200B;であったとしても、バリエーションは小文字で保持されるので、`summary`が使用されます。
+## WKND 永続クエリの調査（オプション） {#explore-wknd-content-fragments}
 
-1. クエリを実行し、`biography`フィールドの結果がはるかに短いことを確認します。`html`
+次の場合、 [が WKND Shared サンプルコンテンツをインストールしていること](./overview.md#install-sample-content) adventures-all、adventure-by-activity、adventure-by-path など、永続化されたクエリを確認して実行できます。
 
-## 複数のコンテンツフラグメントモデルのクエリ {#query-multiple-models}
+![WKND 永続クエリ](assets/explore-graphql-api/wknd-persisted-queries.png)
 
-別々のクエリを1つのクエリに組み合わせることもできます。 これは、アプリケーションの電源を入れるために必要なHTTP要求の数を最小限に抑えるのに役立ちます。 例えば、アプリケーションの&#x200B;*ホーム*&#x200B;ビューには、異なる&#x200B;**2つの**&#x200B;コンテンツフラグメントモデルに基づいてコンテンツが表示されます。 **2つの**&#x200B;個別のクエリを実行する代わりに、1つのリクエストにクエリを組み合わせることができます。
-
-1. GraphiQLエディターで次のクエリを入力します。
-
-   ```graphql
-   {
-     adventureList {
-       items {
-         _path
-         adventureTitle
-       }
-     }
-     contributorList {
-       items {
-         _path
-         fullName
-       }
-     }
-   }
-   ```
-
-1. クエリを実行し、結果セットに&#x200B;**Adventures**&#x200B;および&#x200B;**Contributors**&#x200B;のデータが含まれていることを確認します。
-
-```json
-{
-  "data": {
-    "adventureList": {
-      "items": [
-        {
-          "_path": "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp",
-          "adventureTitle": "Bali Surf Camp"
-        },
-        {
-          "_path": "/content/dam/wknd/en/adventures/beervana-portland/beervana-in-portland",
-          "adventureTitle": "Beervana in Portland"
-        },
-        ...
-      ]
-    },
-    "contributorList": {
-      "items": [
-        {
-          "_path": "/content/dam/wknd/en/contributors/jacob-wester",
-          "fullName": "Jacob Wester"
-        },
-        {
-          "_path": "/content/dam/wknd/en/contributors/stacey-roswells",
-          "fullName": "Stacey Roswells"
-        }
-      ]
-    }
-  }
-}
-```
 
 ## その他のリソース
 
-GraphQLクエリのその他の例の多くは、次を参照してください。[AEMでのGraphQLの使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=ja)。
+GraphQL クエリのその他の例の多くは、次を参照してください。 [AEMでの GraphQL の使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html).
 
 ## おめでとうございます。 {#congratulations}
 
-これで、複数のGraphQLクエリを作成し、実行しました。
+おめでとうございます。複数の GraphQL クエリを作成して実行しました。
 
 ## 次の手順 {#next-steps}
 
-次の章「[ReactアプリからのAEMのクエリ](./graphql-and-external-app.md)」では、外部アプリケーションがAEM GraphQLエンドポイントをクエリする方法を調べます。 サンプルWKND GraphQL Reactアプリを変更してフィルタリングGraphQLクエリを追加した外部アプリを使用すると、アプリのユーザーは、アクティビティでアドベンチャーをフィルタリングできます。 また、基本的なエラー処理についても説明します。
+次の章では、 [React アプリの作成](./graphql-and-react-app.md)を使用して、外部アプリケーションがAEM GraphQL エンドポイントに対してクエリを実行し、これら 2 つの永続的なクエリを活用する方法を調べます。 また、基本的なエラー処理についても説明します。
+
+## GraphiQL ツールのインストール（オプション） {#install-graphiql}
+
+AEMの一部のバージョンでは、GraphiQL IDE ツールを手動でインストールする必要があります。 手動でインストールするには、次の手順に従います。
+
+1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**／**AEM as a Cloud Service** に移動します。
+1. 「GraphiQL」を検索します（**GraphiQL** の **i** は必ず入れてください）。
+1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x** をダウンロードします。
+
+   ![GraphiQL パッケージをダウンロード](assets/explore-graphql-api/software-distribution.png)
+
+   zip ファイルは、直接インストールできるAEMパッケージです。
+
+1. **AEM 開始**&#x200B;メニューで&#x200B;**ツール**／**デプロイメント**／**パッケージ**&#x200B;に移動します。
+1. 「**パッケージをアップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。「**インストール**」をクリックして、パッケージをインストールします。
+
+   ![GraphiQL パッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)

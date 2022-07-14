@@ -1,6 +1,6 @@
 ---
-title: コンテンツフラグメントのオーサリング — AEMヘッドレスの概要 — GraphQL
-description: Adobe Experience Manager(AEM)とGraphQLの概要。 コンテンツフラグメントモデルに基づいて、新しいコンテンツフラグメントを作成し、編集します。 コンテンツフラグメントのバリエーションを作成する方法を説明します。
+title: コンテンツフラグメントのオーサリング — AEMヘッドレス使用の手引き — GraphQL
+description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 コンテンツフラグメントモデルに基づいて、新しいコンテンツフラグメントを作成し、編集します。 コンテンツフラグメントのバリエーションを作成する方法を説明します。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6713
@@ -10,117 +10,162 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 2%
+source-wordcount: '897'
+ht-degree: 3%
 
 ---
 
 # コンテンツフラグメントのオーサリング {#authoring-content-fragments}
 
-この章では、新しく定義したコントリビューターコンテンツフラグメントモデル](./content-fragment-models.md)に基づいて、新しいコンテンツフラグメントを作成および編集します。 [また、コンテンツフラグメントのバリエーションを作成する方法についても説明します。
+この章では、 [新しく定義されたコンテンツフラグメントモデル](./content-fragment-models.md). また、コンテンツフラグメントのバリエーションを作成する方法についても説明します。
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、[コンテンツフラグメントモデルの定義](./content-fragment-models.md)で説明されている手順が完了していることを前提としています。
+これは複数のパートから成るチュートリアルで、 [コンテンツフラグメントモデルの定義](./content-fragment-models.md) が完了しました。
 
 ## 目的 {#objectives}
 
-* コンテンツフラグメントモデルに基づくコンテンツフラグメントの作成
-* コンテンツフラグメントバリエーションの作成
+* コンテンツフラグメントモデルに基づいてコンテンツフラグメントを作成する
+* コンテンツフラグメントのバリエーションの作成
 
-## コンテンツフラグメントオーサリングの概要 {#overview}
+## アセットフォルダーの作成
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+コンテンツフラグメントは、AEM Assetsのフォルダーに保存されます。 前の章で作成したモデルからコンテンツフラグメントを作成するには、コンテンツフラグメントを保存するためのフォルダーを作成する必要があります。 特定のモデルからフラグメントを作成できるようにするには、フォルダーで設定が必要です。
 
-上記のビデオでは、コンテンツフラグメントのオーサリングの概要を説明します。
+1. AEM Start 画面からに移動します。 **Assets** > **ファイル**.
 
-## コンテンツフラグメントの作成 {#create-content-fragment}
+   ![アセットファイルへの移動](assets/author-content-fragments/navigate-assets-files.png)
 
-前の章[コンテンツフラグメントモデルの定義](./content-fragment-models.md)では、**コントリビューター**&#x200B;モデルが作成されました。 このモデルを使用して、新しいコンテンツフラグメントを作成します。
+1. タップ **作成** 隅にある **フォルダー**. 表示されるダイアログで、次のように入力します。
 
-1. **AEM Start**&#x200B;メニューから、**Assets**/**Files**&#x200B;に移動します。
-1. フォルダーをクリックして、**WKND Site** > **English** > **Contributors**&#x200B;に移動します。 このフォルダーには、WKNDブランドのコントリビューター向けのヘッドショットのリストが含まれています。
+   * タイトル*: **マイプロジェクト**
+   * 名前： **my-project**
 
-1. 右上の「**作成**」をクリックし、「**コンテンツフラグメント**」を選択します。
+   ![フォルダー作成ダイアログ](assets/author-content-fragments/create-folder-dialog.png)
 
-   ![「新しいフラグメントを作成」をクリックします。](assets/author-content-fragments/create-content-fragment-menu.png)
+1. を選択します。 **マイフォルダ** フォルダーとタップ **プロパティ**.
 
-1. **コントリビューター**&#x200B;モデルを選択し、「**次へ**」をクリックします。
+   ![フォルダーのプロパティを開く](assets/author-content-fragments/open-folder-properties.png)
 
-   ![貢献者モデルの選択](assets/author-content-fragments/select-contributor-model.png)
+1. 次をタップします。 **Cloud Services** タブをクリックします。 の下 **クラウド設定** パスファインダーを使用して **マイプロジェクト** 設定。 値は、 `/conf/my-project`.
 
-   これは、前の章で作成した&#x200B;**Contributor**&#x200B;モデルと同じです。
+   ![クラウド設定を設定](assets/author-content-fragments/set-cloud-config-my-project.png)
 
-1. タイトルに&#x200B;**Stacey Roswells**&#x200B;と入力し、**「作成**」をクリックします。
-1. **成功**&#x200B;ダイアログで「**開く**」をクリックして、新しく作成したフラグメントを開きます。
+   このプロパティを設定すると、前の章で作成したモデルを使用してコンテンツフラグメントを作成できます。
 
-   ![新しいコンテンツフラグメントが作成されました](assets/author-content-fragments/new-content-fragment.png)
+1. 次をタップします。 **ポリシー** タブをクリックします。 の下 **許可されているコンテンツフラグメントモデル** パスファインダーを使用して **人物** および **チーム** 以前に作成されたモデル。
 
-   モデルで定義されたフィールドが、コンテンツフラグメントのこのインスタンスを作成するために使用可能になったことを確認します。
+   ![許可されているコンテンツフラグメントモデル](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-1. **姓**&#x200B;に次を入力します。**Stacey Roswells**。
-1. **伝記**&#x200B;には、簡単な伝記を入力します。 インスピレーションが必要？ この[テキストファイル](assets/author-content-fragments/stacey-roswells-bio.txt)を自由に再利用してください。
-1. **画像参照**&#x200B;の場合、**フォルダー**&#x200B;アイコンをクリックし、**WKNDサイト** **英語** **寄稿者** > **stacey-roswells.jpg&lt;a11/を参照します。>.**&#x200B;これはパスに評価されます。`/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
-1. **占有**&#x200B;には&#x200B;**フォトグラファー**&#x200B;を選択します。
+   これらのポリシーは、任意のサブフォルダーに自動的に継承され、上書きできます。 タグ別のモデルを許可したり、他のプロジェクト設定（WKND 共有など）のモデルを有効にしたりすることもできます。 このメカニズムにより、コンテンツ階層を強力に管理できます。
 
-   ![作成したフラグメント](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
+1. タップ **保存して閉じる** をクリックして、フォルダーのプロパティに対する変更を保存します。
 
-1. 「**保存**」をクリックして、変更を保存します。
+1. 次の **マイプロジェクト** フォルダー。
 
-## コンテンツフラグメントバリエーションの作成
+1. 次の値で別のフォルダーを作成します。
 
-すべてのコンテンツフラグメントは、マスター&#x200B;**のバリエーションで始まります。****マスター**&#x200B;のバリエーションは、フラグメントの&#x200B;*デフォルト*&#x200B;コンテンツと見なすことができ、GraphQL APIを使用してコンテンツが公開される際に自動的に使用されます。 コンテンツフラグメントのバリエーションを作成することもできます。 この機能は、実装を柔軟に設計できるようにします。
+   * タイトル*: **英語**
+   * 名前：**en**
 
-バリエーションは、特定のチャネルをターゲットにするために使用できます。 例えば、少ない量のテキストを含んだり、チャネル固有の画像を参照したりするモバイル&#x200B;**バリエーションを作成できます。**&#x200B;バリエーションの使用方法は、実際には実装によって異なります。 どの機能と同様に、使用の前に慎重に計画する必要があります。
+   ベストプラクティスは、多言語サポート用のプロジェクトを設定することです。 詳しくは、 [詳しくは、次のドキュメントページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
 
-次に、新しいバリエーションを作成して、使用可能な機能を把握します。
 
-1. **Stacey Roswells**&#x200B;コンテンツフラグメントを再度開きます。
-1. 左側のサイドレールで、「**バリエーションを作成**」をクリックします。
-1. 「**新しいバリエーション**」モーダルに、「タイトル」に「**概要**」と入力します。
+## コンテンツフラグメントを作成 {#create-content-fragment}
 
-   ![新しいバリエーション — 概要](assets/author-content-fragments/new-variation-summary.png)
+次に、 **チーム** および **人物** モデル。
 
-1. 「**伝記**」複数行フィールドをクリックし、「**展開**」ボタンをクリックして、複数行フィールドのフルスクリーン表示を入力します。
+1. 「AEM Start」画面で、をタップします。 **コンテンツフラグメント** をクリックして、コンテンツフラグメント UI を開きます。
 
-   ![全画面表示に入る](assets/author-content-fragments/enter-full-screen-view.png)
+   ![コンテンツフラグメント UI](assets/author-content-fragments/cf-fragment-ui.png)
 
-1. 右上のメニューで&#x200B;**テキストを要約**&#x200B;をクリックします。
+1. 左側のレールで、を展開します。 **マイプロジェクト** とタップします。 **英語**.
+1. タップ **作成** 育てる **新しいコンテンツフラグメント** ダイアログを開き、次の値を入力します。
 
-1. **50**&#x200B;語の&#x200B;**Target**&#x200B;を入力し、「**開始**」をクリックします。
+   * 場所: `/content/dam/my-project/en`
+   * コンテンツフラグメントモデル： **人物**
+   * タイトル： **John Doe**
+   * 名前：`john-doe`
 
-   ![要約プレビュー](assets/author-content-fragments/summarize-text-preview.png)
+   ![新しいコンテンツフラグメント](assets/author-content-fragments/new-content-fragment-john-doe.png)
+1. 「**作成**」をタップします。
+1. 上記の手順を繰り返して、 **Alison Smith**:
 
-   これにより、要約プレビューが開きます。 AEMの機械言語プロセッサは、ターゲットの単語数に基づいてテキストの要約を試みます。 別の文を選択して削除することもできます。
+   * 場所: `/content/dam/my-project/en`
+   * コンテンツフラグメントモデル： **人物**
+   * タイトル： **Alison Smith**
+   * 名前：`alison-smith`
 
-1. 要約に問題がなければ、「**要約**」をクリックします。 複数行テキストフィールドをクリックし、「**展開**」ボタンを切り替えてメインビューに戻ります。
+   タップ **作成** をクリックして、新しいユーザーフラグメントを作成します。
 
-1. 「**保存**」をクリックして、変更を保存します。
+1. 次に、手順を繰り返して新しい **チーム** ～を表す断片 **チームアルファ**:
 
-## 追加のコンテンツフラグメントを作成する
+   * 場所: `/content/dam/my-project/en`
+   * コンテンツフラグメントモデル： **チーム**
+   * タイトル： **チームアルファ**
+   * 名前：`team-alpha`
 
-[コンテンツフラグメントの作成](#create-content-fragment)で説明されている手順を繰り返して、追加の&#x200B;**コントリビューター**&#x200B;を作成します。 これは、次の章で、複数のフラグメントに対してクエリを実行する方法の例として使用します。
+   タップ **作成** をクリックして、新しいチームフラグメントを作成します。
 
-1. **寄稿者**&#x200B;フォルダーで、右上の「**作成**」をクリックし、「**コンテンツフラグメント**」を選択します。
-1. **コントリビューター**&#x200B;モデルを選択し、「**次へ**」をクリックします。
-1. タイトルに&#x200B;**Jacob Wester**&#x200B;と入力し、**作成**&#x200B;をクリックします。
-1. **成功**&#x200B;ダイアログで「**開く**」をクリックして、新しく作成したフラグメントを開きます。
-1. **姓**&#x200B;に次を入力します。**ヤコブ・ウェスター**。
-1. **伝記**&#x200B;には、簡単な伝記を入力します。 インスピレーションが必要？ この[テキストファイル](assets/author-content-fragments/jacob-wester.txt)を自由に再利用してください。
-1. **画像参照**&#x200B;の場合、**フォルダー**&#x200B;アイコンをクリックし、**WKNDサイト** **英語** **寄稿者** > **jacob_wester.jpg**&#x200B;を参照します。. これはパスに評価されます。`/content/dam/wknd/en/contributors/jacob_wester.jpg`.
-1. **占有**&#x200B;には&#x200B;**ライター**&#x200B;を選択します。
-1. 「**保存**」をクリックして、変更を保存します。必要な場合を除き、バリエーションを作成する必要はありません。
+1. これで、の下に 3 つのコンテンツフラグメントが存在するようになりました。 **マイプロジェクト** > **英語**:
 
-   ![追加のコンテンツフラグメント](assets/author-content-fragments/additional-content-fragment.png)
+   ![新しいコンテンツフラグメント](assets/author-content-fragments/new-content-fragments.png)
 
-   これで、2つの&#x200B;**寄稿者**&#x200B;フラグメントが作成されます。
+## 担当者コンテンツフラグメントの編集 {#edit-person-content-fragments}
+
+次に、新しく作成されたフラグメントにデータを入力します。
+
+1. の横にあるチェックボックスをタップします。 **John Doe** とタップします。 **開く**.
+
+   ![コンテンツフラグメントを開く](assets/author-content-fragments/open-fragment-for-editing.png)
+
+1. コンテンツフラグメントエディターには、コンテンツフラグメントモデルに基づくフォームが含まれます。 様々なフィールドに入力し、 **John Doe** フラグメント。 プロファイル画像の場合は、 WKND Shared 内の画像の 1 つを自由に選択するか、独自の画像をAEM Assetsにアップロードしてください。
+
+   ![コンテンツフラグメントエディター](assets/author-content-fragments/content-fragment-editor-jd.png)
+
+1. 次に、 **バリエーションを作成** をクリックします。 ダイアログで、 **代替** バリエーション名。
+
+1. の要素の一部を変更する **代替** バリエーション。
+
+   ![代替バージョン](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
+
+   バリエーション機能を使用すると、作成者は同じコンテンツフラグメントの異なるバージョンを作成できます。 これは、長い形式の記事の概要バージョンを提供するために使用できます。 デフォルトでは、 **マスター** バリエーションが作成されます。 バリエーションの複数行テキストフィールド要素は、マスターバリエーションと同期できます。
+
+1. タップ **保存して閉じる** をクリックして、John Doe フラグメントに対する変更を保存します。
+1. コンテンツフラグメント UI に戻り、 **Alison Smith** ファイルを編集します。
+1. 上記の手順を繰り返して、 **Alison Smith** フラグメントとコンテンツ。
+
+## チームコンテンツフラグメントを編集 {#edit-team-content-fragment}
+
+1. を開きます。 **チームアルファ** コンテンツフラグメント UI を使用してコンテンツフラグメントを作成します。
+1. 次のフィールドに入力します。 **タイトル**, **短縮名**、および **説明**.
+1. を選択します。 **John Doe** および **Alison Smith** コンテンツフラグメントを使用して **チームメンバー** フィールド：
+
+   ![チームメンバーの設定](assets/author-content-fragments/select-team-members.png)
+
+   >[!NOTE]
+   >
+   >また、 **新しいコンテンツフラグメント** 」ボタンをクリックします。
+
+1. タップ **保存して閉じる** をクリックして、チームアルファフラグメントの変更を保存します。
+
+## WKND コンテンツフラグメントの調査（オプション） {#explore-wknd-content-fragments}
+
+次の場合、 [が WKND Shared サンプルコンテンツをインストールしている](./overview.md#install-sample-content) コンテンツフラグメントを調べて、Adventures、記事、作成者のモデルを調べ、コンテンツ作成に関するより多くのアイデアを得ることができます。
+
+![WKND コンテンツフラグメント](assets/author-content-fragments/wknd-content-fragments.png)
 
 ## おめでとうございます。 {#congratulations}
 
-これで、複数のコンテンツフラグメントを作成し、バリエーションを作成しました。
+おめでとうございます。複数のコンテンツフラグメントを作成し、バリエーションを作成しました。
 
 ## 次の手順 {#next-steps}
 
-次の章[GraphQL APIの参照](explore-graphql-api.md)では、組み込みのGraphQLツールを使用してAEM GraphQL APIを調べます。 コンテンツフラグメントモデルに基づいてAEMがGraphQLスキーマを自動的に生成する方法を説明します。 GraphQL構文を使用して、基本的なクエリを作成してみます。
+次の章では、 [GraphQL API の参照](explore-graphql-api.md)を参照し、組み込みの GraphQL ツールを使用してAEM GraphQL API を調べます。 コンテンツフラグメントモデルに基づいて、AEMが GraphQL スキーマを自動的に生成する方法を説明します。 GraphQL 構文を使用して、基本的なクエリを作成してみます。
+
+## 関連ドキュメント
+
+* [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
+* [バリエーション - フラグメントコンテンツのオーサリング](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)

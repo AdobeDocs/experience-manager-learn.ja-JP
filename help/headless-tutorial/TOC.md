@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 24%
+source-wordcount: '221'
+ht-degree: 25%
 
 ---
 
@@ -36,9 +36,7 @@ ht-degree: 24%
       + [1 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
       + [2 — コンテンツフラグメントのオーサリング](./graphql/multi-step/author-content-fragments.md)
       + [3 - GraphQL API の参照](./graphql/multi-step/explore-graphql-api.md)
-      + [4 — 外部アプリからのクエリ](./graphql/multi-step/graphql-and-external-app.md)
-      + [5 — フラグメントリファレンスを使用した高度なデータモデリング](./graphql/multi-step/fragment-references.md)
-      + [6 — 実稼動のデプロイメント](./graphql/multi-step/production-deployment.md)
+      + [4 - React アプリの作成](./graphql/multi-step/graphql-and-react-app.md)
    + 高度なチュートリアル{#advanced-tutorial}
       + [概要](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 — コンテンツフラグメントモデルの作成](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
