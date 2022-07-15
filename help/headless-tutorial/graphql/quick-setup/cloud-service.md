@@ -9,9 +9,9 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
+source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,8 @@ _手順のスクリーンキャスト_
 1. WKND サイトプロジェクト用の Git リポジトリを作成する
    1. 選択 __リポジトリ__ 上部ナビゲーション
    1. 選択 __リポジトリを追加__ 上部のアクションバー
-   1. 新しい Git リポジトリに次の名前を付けます。 `aem-headless-quick-setup`
+   1. 新しい Git リポジトリに次の名前を付けます。 `aem-headless-quick-setup-wknd`
+      + Git リポジトリ名は、組織ごとに一意である必要があり、Adobeの組織ごとに一意です。
    1. 選択 __保存__ Git リポジトリが初期化されるのを待ちます。
 
 ## 2.サンプル WKND サイトプロジェクトを Cloud Manager Git リポジトリにプッシュします
@@ -71,13 +72,13 @@ _手順のスクリーンキャスト_
 
       ```shell
       $ cd aem-guides-wknd
-      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
+      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup-wknd/
       ```
 
 1. サンプルプロジェクトのソースコードをローカル Git リポジトリーから Cloud Manager Git リポジトリーにプッシュします。
 
    ```shell
-   $ git push adobe master:main
+   $ git push adobe main:main
    ```
 
    資格情報の入力を求められたら、 __ユーザー名__ および __パスワード__ Cloud Manager の __リポジトリ情報__ モーダルです。
@@ -103,7 +104,7 @@ _手順のスクリーンキャスト_
    1. の __ソースコード__ タブ
       1. 選択 __フルスタックコード__ オプション
       1. を選択します。 __AEMas a Cloud Service開発環境__ から __適格なデプロイメント環境__ 選択ボックス
-      1. 選択 `aem-headless-quick-setup` 内 __リポジトリ__ 選択ボックス
+      1. 選択 `aem-headless-quick-setup-wknd` 内 __リポジトリ__ 選択ボックス
       1. 選択 `main` から __Git ブランチ__ 選択ボックス
       1. 選択 __保存__
 1. を実行します。 __開発デプロイメントパイプライン__
@@ -113,7 +114,7 @@ _手順のスクリーンキャスト_
    1. 選択 __実行__&#x200B;をクリックし、モーダルでを確認します。
    1. を選択します。 __...__ を実行中のパイプラインの右側に移動します。
    1. 選択 __詳細を表示__
-1. パイプラインの実行の詳細から、正常に完了するまで進行状況を監視します。 パイプラインの実行には 45 ～ 60 分かかる必要があります。
+1. パイプラインの実行の詳細から、正常に完了するまで進行状況を監視します。 パイプラインの実行には 30 ～ 40 分かかる必要があります。
 
 ## 4. WKND React アプリをダウンロードして実行します。
 
@@ -126,15 +127,15 @@ _手順のスクリーンキャスト_
 
    ```shell
    $ cd ~/Code
-   $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. フォルダーを開く `~/Code/aem-guides-wknd-graphql` を IDE に追加します。
-1. IDE で、ファイルを開きます。 `react-app/.env.development`.
+1. フォルダーを開く `~/Code/aem-guides-wknd-graphql/react-app` を IDE に追加します。
+1. IDE で、ファイルを開きます。 `.env.development`.
 1. AEMas a Cloud Serviceを指す __公開__ から取得したサービスのホスト URI  `REACT_APP_HOST_URI` プロパティ。
 
    ```plain
-   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com/
+   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
    ...
    ```
 
@@ -164,19 +165,19 @@ _手順のスクリーンキャスト_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. AEM as a Cloud Service Author サービスにログインします。
-1. に移動します。 __アセット/ファイル/WKND/英語/冒険__
+1. に移動します。 __アセット/ファイル/WKND 共有/英語/冒険__
 1. を開きます。 __サイクリングサザンユタ__ フォルダー
 1. を選択します。 __サイクリングサザンユタ__ コンテンツフラグメントを選択し、 __編集__ 上部のアクションバーから
 1. コンテンツフラグメントの一部のフィールドを更新します。例：
    + タイトル: `Cycling Utah's National Parks`
    + 旅行の長さ： `6 Days`
    + 難易度： `Intermediate`
-   + 価格: `$3500`
-   + プライマリ画像： `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
+   + 価格: `3500`
+   + プライマリ画像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. 選択 __保存__ 上部のアクションバー
 1. 選択 __クイック公開__ 上部のアクションバーの __...__
 1. で実行中の React アプリを更新する [http://localhost:3000](http://localhost:3000).
-1. React アプリで、更新されたを選択し、コンテンツフラグメントに加えられたコンテンツの変更を確認します。
+1. React アプリで、更新されたサイクリングのアドベンチャーを選択し、コンテンツフラグメントに加えられたコンテンツの変更を確認します。
 
 1. AEM オーサーサービスでも、同じ方法を使用します。
    1. 既存のアドベンチャーコンテンツフラグメントを非公開にし、React App エクスペリエンスから削除されたことを確認します。
