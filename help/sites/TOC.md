@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -100,7 +100,7 @@ ht-degree: 29%
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [Adobeクライアントデータレイヤーの使用](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Adobeクライアントデータレイヤーのカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + 分析 {#analytics}
+   + Analytics {#analytics}
       + [Adobe Analyticsでのページデータの収集](integrations/analytics/collect-data-analytics.md)
       + [Adobe Analyticsを使用したクリックされたコンポーネントの追跡](integrations/analytics/track-clicked-component.md)
       + [Analysis Workspaceでのデータ分析](integrations/analytics/create-analytics-workspace.md)

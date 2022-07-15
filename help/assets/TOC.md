@@ -7,7 +7,7 @@ team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 32%
+ht-degree: 34%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 32%
    + [クリエイティブの操作](./content-automation/creative-operations.md)
    + [Photoshop Actions](./content-automation/photoshop-actions.md)
 
-+ Dynamic Media{#dynamic-media}
++ Dynamic Media {#dynamic-media}
    + [Dynamic Mediaの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
    + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
@@ -158,4 +158,4 @@ ht-degree: 32%
 + デプロイメント{#deployment}
    + [マルチテナント機能と同時開発](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=ja)
