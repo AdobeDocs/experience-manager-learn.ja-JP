@@ -1,6 +1,6 @@
 ---
 title: AEM Sitesの概要 — ページとテンプレート
-description: ベースページコンポーネントと編集可能なテンプレートとの関係について説明します。 コアコンポーネントがプロジェクト内でどのようにプロキシされるかを理解し、Adobe XDのモックアップに基づいて適切に構造化された記事ページテンプレートを構築するための、編集可能なテンプレートの高度なポリシー設定を学びます。
+description: ベースページコンポーネントと編集可能なテンプレートとの関係について説明します。 コアコンポーネントがプロジェクト内でどのようにプロキシされるかを説明します。 Adobe XDのモックアップに基づいて適切に構造化された記事ページテンプレートを構築するための、編集可能なテンプレートの高度なポリシー設定について説明します。
 feature: Core Components, Editable Templates, Page Editor
 topic: Content Management, Development
 role: Developer
@@ -9,9 +9,9 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3081'
 ht-degree: 3%
 
 ---

@@ -1,6 +1,6 @@
 ---
-title: ローカル AEM 開発環境の設定
-description: Adobe Experience Manager、AEM用のローカル開発の設定に関するガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングに関する重要なトピックについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用した開発について説明します。
+title: ローカルAEM開発環境の設定
+description: 'Experience Manager用の環境を設定するローカル開発環境の設定方法を説明します。 ローカルインストール、Apache Maven、統合開発環境、デバッグおよびトラブルシューティングについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用します。 '
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2579'
 ht-degree: 8%
 
 ---
@@ -170,7 +170,7 @@ IDE を使用する場合は、必ず `classic` を設定します。
 * [**ダウンロード**](https://code.visualstudio.com/Download) **Visual Studio Code**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - JCR コンテンツ用の FTP に似たツール
 * **[aemfed](https://aemfed.io/)** - AEMフロントエンドワークフローのスピードアップ
-* **[AEM同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio Code 用のコミュニティサポート*拡張機能
+* **[AEM同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — サポートされるコミュニティ&#42; Visual Studio Code の拡張
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 

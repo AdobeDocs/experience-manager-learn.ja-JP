@@ -1,6 +1,6 @@
 ---
 title: クライアントサイドライブラリとフロントエンドワークフロー
-description: Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイおよび管理するために、クライアントサイドライブラリ (clientlib) を使用する方法について説明します。 このチュートリアルでは、Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法についても説明します。
+description: クライアント側ライブラリ (clientlib) を使用して、Adobe Experience Manager(AEM)Sites 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法について説明します。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,9 +11,9 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2878'
 ht-degree: 11%
 
 ---
@@ -252,7 +252,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
    $brand-primary:          $pink;
    ```
 
-   変更内容を保存します。
+   変更を保存します。
 
 1. ブラウザーに戻り、AEMページを更新して更新内容を確認します。
 
@@ -371,7 +371,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
    + $text-color:              $pink;
    ```
 
-   変更内容を保存します。
+   変更を保存します。
 
 1. 変更が自動的にブラウザーに反映され、 [http://localhost:8080](http://localhost:8080).
 

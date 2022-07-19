@@ -1,7 +1,6 @@
 ---
-title: AEM Sitesの概要 — プロジェクトの設定
-seo-title: Getting Started with AEM Sites - Project Setup
-description: AEM Sites のコードおよび設定を管理するための、Maven のマルチモジュールプロジェクトの作成について説明します。
+title: AEM Sitesの基本を学ぶ — プロジェクトの設定
+description: Maven マルチモジュールプロジェクトを作成して、Experience Managerサイトのコードと設定を管理します。
 sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
@@ -13,10 +12,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '1818'
-ht-degree: 13%
+source-wordcount: '1816'
+ht-degree: 12%
 
 ---
 
