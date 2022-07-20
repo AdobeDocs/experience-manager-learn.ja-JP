@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 879018d44cc63421d1c7185cce1c30fedbf526c9
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 7%
+source-wordcount: '440'
+ht-degree: 6%
 
 ---
 
@@ -52,8 +52,6 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
    * [AEM as a Cloud Serviceおよび Cloud Manager へのアクセス](/help/cloud-service/accessing/overview.md)
       * **AEM Administrator** AEM as a Cloud Serviceへのアクセス
       * **Cloud Manager — 開発者** Cloud Manager へのアクセス
-* [ローカルAEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md).
-* [AEM 6.5.13 以降](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 
 ### サンプルコンテンツをインストール {#install-sample-content}
 
@@ -65,6 +63,7 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 1. AEMの開始画面から、に移動します。 **ツール** > **導入** > **パッケージ**:
 
    ![パッケージマネージャーの操作](assets/overview/navigate-package-manager.png)
+
 1. タップ **パッケージをアップロード** を選択し、 `aem-guides-wknd-shared.ui.content-x.x.x.zip` ファイルをダウンロードしました。 タップ **Ok** をクリックしてアップロードします。
 1. パッケージのアップロードが完了したら、 **インストール** をクリックして、コンテンツをインストールします。
 
