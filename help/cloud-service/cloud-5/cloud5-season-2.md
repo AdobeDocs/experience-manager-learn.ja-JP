@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -114,14 +114,16 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
   </tr>
 <tr>
    <td>
-            <img alt="修正…書き換え" src="./imgs/coming-soon.png"/>
+           <a href="season-2/cloud5-fix-your-rewrites.md">
+               <img alt="修正…書き換え" src="./imgs/s2/006-thumb.png"/>
+            </a>
       <div>
-            <strong>修正…書き換え</strong>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>修正…書き換え</strong></a>
          <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         2022 年 7 月 23 日
+         AEM as a Cloud Serviceでの書き換えの開発と最適化を迅速におこなうのに役立つ事項に関するクイックインサイトです。
       </p>
      </td>   
      <td>
