@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1532'
 ht-degree: 7%
 
 ---
@@ -56,9 +56,9 @@ GraphQL エンドポイントは、コンテンツフラグメントに対する
 
    >[!NOTE]
    >
-   > また、プロジェクトをまたいだモデルに対するクエリを有効にするグローバルエンドポイントを作成することもできます。 例えば、 **WKND 共有** プロジェクトと **マイプロジェクト**. これは、環境がさらにセキュリティの脆弱性を引き起こす可能性があるので、慎重に使用し、必要な場合にのみ使用してください。
+   > また、グローバルエンドポイントを作成して、複数の設定をまたいでモデルに対するクエリを有効にすることもできます。 これは、環境がセキュリティの脆弱性をさらに増す可能性があり、AEMの管理が全体的に複雑になるので、慎重に使用する必要があります。
 
-1. これで、2 つの GraphQL エンドポイントが環境で有効になっているはずです（WKND 共有コンテンツをインストールしたと仮定）。
+1. これで、お使いの環境で 1 つの GraphQL エンドポイントが有効になっているはずです。
 
    ![Graphql エンドポイントが有効](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -76,11 +76,11 @@ GraphQL エンドポイントは、コンテンツフラグメントに対する
    >
    > 古いバージョンのAEMの場合、GraphiQL IDE は組み込まれない可能性があります。 次の手順に従って手動でインストールできます [説明](#install-graphiql).
 
-1. 右上隅で、 **エンドポイント** から **マイプロジェクトエンドポイント**.
+1. 右上隅に、 **エンドポイント** が **マイプロジェクトエンドポイント**.
 
    ![GraphQL エンドポイントを設定](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-   これにより、 **マイプロジェクト** プロジェクト。 次の場合もエンドポイントが存在することに注意してください： **WKND 共有**.
+これにより、 **マイプロジェクト** プロジェクト。
 
 ### コンテンツフラグメントのリストのクエリ {#query-list-cf}
 
@@ -370,16 +370,28 @@ GraphQL エンドポイントは、コンテンツフラグメントに対する
 
    ![最終的に保持されたクエリ](assets/explore-graphql-api/final-persisted-queries.png)
 
+
+## GraphQL エンドポイントと永続クエリの公開
+
+レビューと検証の際に、 `GraphQL Endpoint` &amp; `Persisted Queries`
+
+1. AEM Start 画面からに移動します。 **ツール** > **一般** > **GraphQL**.
+
+1. の横にあるチェックボックスをタップします。 **マイプロジェクトエンドポイント** とタップします。 **公開**
+
+   ![GraphQL エンドポイントを公開](assets/explore-graphql-api/publish-graphql-endpoint.png)
+
+1. AEM Start 画面からに移動します。 **ツール** > **一般** > **GraphQL クエリエディター**
+
+1. 次をタップします。 *all-teams* 永続クエリパネルからをタップし、 **公開**
+
+   ![永続クエリの公開](assets/explore-graphql-api/publish-persisted-query.png)
+
+1. 上の手順を繰り返します： `person-by-name` クエリ
+
 ## ソリューションファイル {#solution-files}
 
 最後の 3 つの章で作成したコンテンツ、モデル、永続クエリをダウンロードします。 [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
-
-## WKND 永続クエリの調査（オプション） {#explore-wknd-content-fragments}
-
-次の場合、 [が WKND Shared サンプルコンテンツをインストールしていること](./overview.md#install-sample-content) adventures-all、adventure-by-activity、adventure-by-path など、永続化されたクエリを確認して実行できます。
-
-![WKND 永続クエリ](assets/explore-graphql-api/wknd-persisted-queries.png)
-
 
 ## その他のリソース
 

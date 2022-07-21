@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 879018d44cc63421d1c7185cce1c30fedbf526c9
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 6%
+source-wordcount: '291'
+ht-degree: 8%
 
 ---
 
@@ -51,25 +51,6 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 * 次を使用したAEMas a Cloud Service環境：
    * [AEM as a Cloud Serviceおよび Cloud Manager へのアクセス](/help/cloud-service/accessing/overview.md)
       * **AEM Administrator** AEM as a Cloud Serviceへのアクセス
-      * **Cloud Manager — 開発者** Cloud Manager へのアクセス
-
-### サンプルコンテンツをインストール {#install-sample-content}
-
-サンプルコンテンツがAEM環境で既に利用可能で、参照として使用できる場合に役立つ場合があります。
-
-1. 次に移動： [AEM WKND 共有プロジェクト](https://github.com/adobe/aem-guides-wknd-shared/releases).
-1. リリースされた最新のアセットをダウンロードします。 `aem-guides-wknd-shared.ui.content-x.x.x.zip`.
-1. チュートリアルに使用するAEMオーサー環境にログインします。
-1. AEMの開始画面から、に移動します。 **ツール** > **導入** > **パッケージ**:
-
-   ![パッケージマネージャーの操作](assets/overview/navigate-package-manager.png)
-
-1. タップ **パッケージをアップロード** を選択し、 `aem-guides-wknd-shared.ui.content-x.x.x.zip` ファイルをダウンロードしました。 タップ **Ok** をクリックしてアップロードします。
-1. パッケージのアップロードが完了したら、 **インストール** をクリックして、コンテンツをインストールします。
-
-   ![サンプルコンテンツパッケージのインストール](assets/overview/install-sample-content-package.png)
-
-1. 仮想的なには、サンプルコンテンツフラグメント、コンテンツフラグメントモデル、画像などがインストールされます [WKND ブランド](https://wknd.site/). サンプルコンテンツは、チュートリアルの後半で参照します。
 
 ## さあ始めましょう！
 
@@ -80,5 +61,3 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 ソースコードとコンテンツパッケージは、 [AEMガイド — WKND GraphQL GitHub プロジェクト](https://github.com/adobe/aem-guides-wknd-graphql).
 
 チュートリアルまたはコードに問題がある場合は、 [GitHub の問題](https://github.com/adobe/aem-guides-wknd-graphql/issues).
-
-サンプルコンテンツフラグメント、モデル、クエリは、 [AEM WKND 共有プロジェクト](https://github.com/adobe/aem-guides-wknd-shared)

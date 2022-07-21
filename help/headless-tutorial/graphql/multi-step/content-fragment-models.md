@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1134'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、 [AEMオーサー環境を使用できます](./overview.md#prerequisites) オプションで [WKND 共有サンプルコンテンツがインストールされました](./overview.md#install-sample-content).
+これは複数のパートから成るチュートリアルで、 [AEMオーサー環境を使用できます](./overview.md#prerequisites)
 
 ## 目的 {#objectives}
 
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 プロジェクト設定には、特定のプロジェクトに関連付けられたすべてのコンテンツフラグメントモデルが含まれ、モデルを整理する手段が提供されます。 少なくとも 1 つのプロジェクトを作成する必要があります **前** 新しいコンテンツフラグメントモデルを作成しています。
 
-1. AEMにログイン **作成者** 環境。
+1. AEMにログイン **作成者** 環境 ( 例： `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
 1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **設定ブラウザー**.
 
    ![設定ブラウザーに移動します。](assets/content-fragment-models/navigate-config-browser.png)
@@ -65,7 +65,6 @@ ht-degree: 4%
 
    ![コンテンツフラグメントモデルに移動します。](assets/content-fragment-models/navigate-cf-models.png)
 
-   をインストールした場合、 [サンプルコンテンツ](overview.md#install-sample-content) 次に、2 つのフォルダーが表示されます。 **マイプロジェクト** および **WKND 共有**.
 1. 次に移動： **マイプロジェクト** フォルダー。
 1. タップ **作成** 右上隅で **モデルを作成** ウィザード。
 1. の場合 **モデルタイトル** 入力： **人物** とタップします。 **作成**.
@@ -165,23 +164,23 @@ ht-degree: 4%
 
    ![2 つのモデル](assets/content-fragment-models/two-new-models.png)
 
-## Inspect WKND コンテンツフラグメントモデル（オプション）
+## プロジェクト設定およびコンテンツフラグメントモデルを公開
 
-次の場合、 [が WKND Shared サンプルコンテンツをインストールしていること](./overview.md#install-sample-content) アドベンチャー、記事、オーサーの各モデルを調べて、データモデリングテクニックのより多くのアイデアを得ることができます。
+レビューと検証の際に、 `Project Configuration` &amp; `Content Fragment Model`
 
-1. 次の **AEM Start** メニュー移動先 **ツール** > **一般** > **コンテンツフラグメントモデル**.
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **設定ブラウザー**.
 
-1. 次に移動： **WKND 共有** フォルダーに 3 つのモデルが表示されます。記事、アドベンチャー、著者。
+1. の横にあるチェックボックスをタップします。 **マイプロジェクト** とタップします。 **公開**
 
-1. Inspectを表示するには、カードの上にマウスポインターを置いて編集アイコン（鉛筆）をタップします。
+   ![プロジェクト設定を公開](assets/content-fragment-models/publish-project-config.png)
 
-   ![WKND モデル](assets/content-fragment-models/wknd-shared-models.png)
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **コンテンツフラグメントモデル**.
 
-1. これにより、 **コンテンツフラグメントモデルエディター** モデルに関しては、使用する様々なデータタイプを調べることができます。
+1. 次に移動： **マイプロジェクト** フォルダー。
 
-   >[!CAUTION]
-   >
-   > モデルの変更 **後** コンテンツフラグメントが作成され、ダウンストリーム効果があります。 既存のフラグメントのフィールド値は参照されなくなり、GraphQL によって公開されるデータスキーマが変更され、既存のアプリケーションに影響を与えます。
+1. タップ **人物** および **チーム** モデルとタップ **公開**
+
+   ![コンテンツフラグメントモデルを公開](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## おめでとうございます。 {#congratulations}
 

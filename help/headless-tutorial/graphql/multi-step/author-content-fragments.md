@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '819'
 ht-degree: 3%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 3%
 
    ![許可されているコンテンツフラグメントモデル](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   これらのポリシーは、任意のサブフォルダーに自動的に継承され、上書きできます。 タグ別のモデルを許可したり、他のプロジェクト設定（WKND 共有など）のモデルを有効にしたりすることもできます。 このメカニズムにより、コンテンツ階層を強力に管理できます。
+   これらのポリシーは、任意のサブフォルダーに自動的に継承され、上書きできます。 また、タグ別のモデルを許可したり、他のプロジェクト設定からのモデルを有効にしたりすることもできます。 このメカニズムにより、コンテンツ階層を強力に管理できます。
 
 1. タップ **保存して閉じる** をクリックして、フォルダーのプロパティに対する変更を保存します。
 
@@ -121,17 +121,9 @@ ht-degree: 3%
 
    ![コンテンツフラグメントを開く](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. コンテンツフラグメントエディターには、コンテンツフラグメントモデルに基づくフォームが含まれます。 様々なフィールドに入力し、 **John Doe** フラグメント。 プロファイル画像の場合は、 WKND Shared 内の画像の 1 つを自由に選択するか、独自の画像をAEM Assetsにアップロードしてください。
+1. コンテンツフラグメントエディターには、コンテンツフラグメントモデルに基づくフォームが含まれます。 様々なフィールドに入力し、 **John Doe** フラグメント。 プロファイル画像の場合は、独自の画像をAEM Assetsにアップロードします。
 
    ![コンテンツフラグメントエディター](assets/author-content-fragments/content-fragment-editor-jd.png)
-
-1. 次に、 **バリエーションを作成** をクリックします。 ダイアログで、 **代替** バリエーション名。
-
-1. の要素の一部を変更する **代替** バリエーション。
-
-   ![代替バージョン](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
-
-   バリエーション機能を使用すると、作成者は同じコンテンツフラグメントの異なるバージョンを作成できます。 これは、長い形式の記事の概要バージョンを提供するために使用できます。 デフォルトでは、 **マスター** バリエーションが作成されます。 バリエーションの複数行テキストフィールド要素は、マスターバリエーションと同期できます。
 
 1. タップ **保存して閉じる** をクリックして、John Doe フラグメントに対する変更を保存します。
 1. コンテンツフラグメント UI に戻り、 **Alison Smith** ファイルを編集します。
@@ -151,11 +143,17 @@ ht-degree: 3%
 
 1. タップ **保存して閉じる** をクリックして、チームアルファフラグメントの変更を保存します。
 
-## WKND コンテンツフラグメントの調査（オプション） {#explore-wknd-content-fragments}
+## コンテンツフラグメントを公開
 
-次の場合、 [が WKND Shared サンプルコンテンツをインストールしている](./overview.md#install-sample-content) コンテンツフラグメントを調べて、Adventures、記事、作成者のモデルを調べ、コンテンツ作成に関するより多くのアイデアを得ることができます。
+レビューと検証が完了したら、作成した `Content Fragments`
 
-![WKND コンテンツフラグメント](assets/author-content-fragments/wknd-content-fragments.png)
+1. 「AEM Start」画面で、をタップします。 **コンテンツフラグメント** をクリックして、コンテンツフラグメント UI を開きます。
+
+1. 左側のレールで、を展開します。 **マイプロジェクト** とタップします。 **英語**.
+
+1. コンテンツフラグメントの横にあるチェックボックスをタップし、をタップします。 **公開**
+
+   ![コンテンツフラグメントを公開](assets/author-content-fragments/publish-content-fragment.png)
 
 ## おめでとうございます。 {#congratulations}
 
