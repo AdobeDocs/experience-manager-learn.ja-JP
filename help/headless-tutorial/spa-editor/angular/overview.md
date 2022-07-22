@@ -1,6 +1,6 @@
 ---
 title: AEM SPA Editor と Angular の使用の手引き
-description: WKND SPA を使用して、Adobe Experience Manager（AEM）で編集可能な最初の Angular シングルページアプリケーション（SPA）を作成します。AEM の SPA Editor で Angular JS フレームワークを使用して SPA を作成する方法について学習します。このマルチパートチュートリアルでは、架空のライフスタイルブランドである WKND 向けの Angular アプリケーションの実装について説明します。このチュートリアルでは、SPA のエンドツーエンドの作成と AEM との統合について説明します。
+description: WKND SPA を使用して、Adobe Experience Manager（AEM）で編集可能な最初の Angular シングルページアプリケーション（SPA）を作成します。
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -14,10 +14,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 825124bc6c3be10e6822fb5fb8bd9645d242da76
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 28%
+source-wordcount: '649'
+ht-degree: 23%
 
 ---
 
