@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 8e8991d128ff40f7873dd8666460e761356c2dd9
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 非標準ポートでの HTTP/HTTPS 接続（柔軟なポート出力用）
 
-非標準ポート (80/443ではなく ) での HTTP/HTTPS 接続は、AEM as a Cloud Serviceからプロキシ化する必要がありますが、特別な設定は必要ありません `portForwards` ルールを作成し、AEM Advanced Networking の `AEM_PROXY_HOST` および予約済みのプロキシポート `AEM_HTTP_PROXY_HOST` または `AEM_HTTPS_PROXY_HOST` の宛先は HTTP/HTTPS です。
+非標準ポート (80/443ではなく ) での HTTP/HTTPS 接続は、AEM as a Cloud Serviceからプロキシ化する必要がありますが、特別な設定は必要ありません `portForwards` ルールを作成し、AEM Advanced Networking の `AEM_PROXY_HOST` および予約済みのプロキシポート `AEM_HTTP_PROXY_PORT` または `AEM_HTTPS_PROXY_PORT` の宛先は HTTP/HTTPS です。
 
 ## 高度なネットワークサポート
 
@@ -68,8 +68,8 @@ public class HttpExternalServiceImpl implements ExternalService {
     public boolean isAccessible() {
         HttpClient client;
 
-        // Use System.getenv("AEM_PROXY_HOST") and proxy port System.getenv("AEM_HTTP_PROXY_HOST") 
-        // or System.getenv("AEM_HTTPS_PROXY_HOST"), depending on if the destination requires HTTP/HTTPS
+        // Use System.getenv("AEM_PROXY_HOST") and proxy port System.getenv("AEM_HTTP_PROXY_PORT") 
+        // or System.getenv("AEM_HTTPS_PROXY_PORT"), depending on if the destination requires HTTP/HTTPS
 
         if (System.getenv("AEM_PROXY_HOST") != null) {
             // Create a ProxySelector that uses to AEM's provided AEM_PROXY_HOST, with a fallback of proxy.tunnel, and proxy port using the AEM_HTTP_PROXY_PORT variable. 
