@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service へのアクセスの設定
-description: AEM as a AEMCloud Serviceは、アプリケーションを利用するクラウドネイティブな方法です。そのため、Adobe IMS(Identity Management System)を活用して、管理者と通常のユーザーの両方をAEM Authorサービスにログインしやすくします。 Adobe IMSユーザー、ユーザーグループ、製品プロファイルを、AEMグループと共に使用し、AEMオーサーへの特定のアクセス権を付与する方法について説明します。
+description: AEM as a Cloud ServiceはAEMアプリケーションを利用するクラウドネイティブな方法です。そのため、Adobe IMS(Identity Management System) を利用して、管理者と通常のユーザーの両方のユーザーを AEM Author サービスにログインしやすくします。 Adobe IMSユーザー、ユーザーグループ、製品プロファイルを、AEMグループおよび権限と組み合わせて使用し、AEM オーサーへの特定のアクセスを提供する方法について説明します。
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -9,63 +9,63 @@ level: Beginner
 kt: 5882
 thumbnail: KT-5882.jpg
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
-# AEM as a Cloud Service へのアクセスの設定
+# AEM as a Cloud Service へのアクセスの設定 {#configuring-access-to-aem-as-a-cloud-service}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
 >title="Adobe IMSの概要"
->abstract="AEM as aCloud Serviceでは、Adobe IMS(Identity Management System)を利用して、管理者と通常のユーザーの両方をAEMオーサーサービスにログインしやすくします。 AEMオーサーサービスへの詳細なアクセスを提供するために、Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用する方法について説明します。"
+>abstract="AEM as a Cloud Serviceでは、Adobe IMS(Identity Management System) を利用して、管理者と通常のユーザーの両方を AEM オーサーサービスにログインしやすくします。 Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用し、AEM オーサーサービスへの詳細なアクセスを提供する方法について説明します。"
 
-AEM as a AEMCloud Serviceは、アプリケーションを利用するクラウドネイティブな方法です。そのため、Adobe IMS(Identity Management System)を活用して、管理者と通常のユーザーの両方をAEM Authorサービスにログインしやすくします。
+AEM as a Cloud ServiceはAEMアプリケーションを利用するクラウドネイティブな方法です。そのため、Adobe IMS(Identity Management System) を利用して、管理者と通常のユーザーの両方を AEM Author サービスにログインしやすくします。
 
 ![Adobe Admin Console](./assets/hero.png)
 
-AEMオーサーサービスへの詳細なアクセスを提供するために、Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用する方法について説明します。
+Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用し、AEM オーサーサービスへの詳細なアクセスを提供する方法について説明します。
 
 ## Adobe IMSユーザー
 
-AEMオーサーサービスへのアクセスを必要とするAdobe IMSは、[AdobeのAdminConsole](https://adminconsole.adobe.com)で[ユーザーユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)として管理されます。 Adobe IMSユーザーとは何か、およびユーザーがAdmin Consoleでアクセスし、管理する方法について説明します。
+AEM オーサーサービスへのアクセスを必要とするユーザーは、次のように管理されます。 [Adobe IMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) in [Adobeの AdminConsole](https://adminconsole.adobe.com). ユーザーのAdobe IMS、およびユーザーがAdmin Consoleでアクセスおよび管理される方法について説明します。
 
-[Adobe IMSユーザー](./adobe-ims-users.md)
+[Adobe IMSユーザーの詳細](./adobe-ims-users.md)
 
-## Adobe IMSユーザーグループ
+## Adobe IMSのユーザーグループ
 
-AEMオーサーサービスにアクセスするユーザーは、[AdobeのAdminConsole](https://adminconsole.adobe.com)の[Adobe IMSユーザーグループ](https://helpx.adobe.com/enterprise/using/user-groups.html)を使用して論理グループに編成する必要があります。 Adobe IMSユーザーグループは、AEMへの直接の権限やアクセス権を提供しません([Adobe IMS製品プロファイル](#adobe-ims-product-profiles)のジョブです)が、AEMグループと権限を使用して、AEMオーサーサービスの特定のレベルのアクセス権に変換できます。
+AEM オーサーサービスにアクセスするユーザーは、 [Adobe IMSのユーザーグループ](https://helpx.adobe.com/jp/enterprise/using/user-groups.html) in [Adobeの AdminConsole](https://adminconsole.adobe.com). Adobe IMSのユーザーグループは、AEMへの直接の権限やアクセス権を提供しません ( これは、 [Adobe IMS製品プロファイル](#adobe-ims-product-profiles)ただし、AEMグループと権限を使用して、AEM オーサーサービス内の特定のレベルのアクセスに変換できる、ユーザーの論理グループを定義する優れた方法です。
 
-[ユーザーユーザーグループのAdobe IMS](./adobe-ims-user-groups.md)
+[ユーザーグループのAdobe IMSの詳細](./adobe-ims-user-groups.md)
 
 ## Adobe IMS製品プロファイル
 
-[Adobe IMS製品プロファイル](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)は、 [AdobeのAdminConsoleで管理され](https://adminconsole.adobe.com)、基本レベルのアクセス権を持つAEMオーサーサービスにログインするためのAdobe IMSユーザーアクセスを提供するメカニズムで [](#adobe-ims-users) す。
+[Adobe IMS製品プロファイル](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)、で管理 [Adobeの AdminConsole](https://adminconsole.adobe.com)は、が提供するメカニズムです。 [Adobe IMSユーザー](#adobe-ims-users) 基本レベルのアクセス権を持つ AEM オーサーサービスにログインするためのアクセス権。
 
-+ __AEM Users__&#x200B;製品プロファイルを使用すると、AEM寄稿者グループのメンバーシップを介してAEMに対する読み取り専用アクセス権をユーザーに付与できます。
-+ __AEM Administrators__&#x200B;製品プロファイルを使用すると、AEMに対する管理者アクセス権をユーザーに付与できます。
++ この __AEM Users__ 製品プロファイルを使用すると、AEM寄稿者グループのメンバーシップを介してAEMに対して読み取り専用アクセス権をユーザーに付与できます。
++ この __AEM Administrators__ 製品プロファイルを使用すると、ユーザーはAEMに対して完全な管理者アクセス権を持ちます。
 
 [製品プロファイルのAdobe IMS](./adobe-ims-product-profiles.md)
 
-## AEMユーザーのグループと権限
+## AEMユーザーグループと権限
 
-Adobe Experience Managerは、Adobe IMSユーザー、ユーザーグループ、製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を構築する方法、およびAdobe IMSの抽象概念と連携してAEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
+Adobe Experience Managerは、Adobe IMSユーザー、ユーザーグループおよび製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を構築する方法、およびAdobe IMSの抽象概念と連携して、AEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
 
-[AEMのユーザー、グループ、および権限について説明します](./aem-users-groups-and-permissions.md)
+[AEMのユーザー、グループ、権限について説明します](./aem-users-groups-and-permissions.md)
 
-## アクセスおよび権限の手順
+## アクセスおよび権限のウォークスルー
 
-AdobeAdminConsoleでAdobe IMSユーザー、ユーザーグループ、Adobe IMSプロファイルを構成する簡潔なチュートリアル、およびAEM Authorでこれらの製品の抽象概念を活用して特定のグループベースの権限を定義および管理する方法。
+Adobeの AdminConsole でのAdobe IMSユーザー、ユーザーグループ、Adobe IMSプロファイルの設定に関する簡潔な説明と、AEM Author でこれらの製品の抽象概念を活用して特定のグループベースの権限を定義および管理する方法。
 
-[AEMのアクセスと権限のウォークスルー](./walk-through.md)
+[AEMアクセスと権限のウォークスルー](./walk-through.md)
 
 ## その他のAdobe Admin Consoleリソース
 
-次のドキュメントでは、Adobe Admin Console](https://adminconsole.adobe.com)に関する詳細と懸念事項を説明します。Adobe Admin Consoleをより深く理解し、を使用してExperience Cloud製品間のユーザー管理やアクセスを行う際に役立ちます。[
+以下のドキュメントカバー [Adobe Admin Console](https://adminconsole.adobe.com)Adobe Admin Consoleをより深く理解し、それを使用してユーザーやExperience Cloud製品間のアクセスを管理するのに役立つ、具体的な詳細や懸念事項。
 
-+ [Adobe Admin Console IDの概要](https://helpx.adobe.com/enterprise/using/identity.html)
++ [Adobe Admin Console ID の概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
-+ [Adobe Admin Console開発者ロール](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)
++ [Adobe Admin Console Developer Roles](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)

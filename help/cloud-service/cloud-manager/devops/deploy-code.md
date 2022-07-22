@@ -1,30 +1,30 @@
 ---
-title: AEMコードプロジェクトのAEMへのCloud Serviceとしてのデプロイ
-description: Cloud Managerを使用して、AEMコードプロジェクトをAEM as aCloud Serviceとしてデプロイする方法を確認します。
+title: AEMコードプロジェクトのAEM as a Cloud Serviceへのデプロイ
+description: Cloud Manager を使用して、AEMコードプロジェクトのAEM as a Cloud Serviceへのデプロイを調べます。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 開発者ツール
+topic: Development
+feature: Developer Tools
 kt: 6912
 thumbnail: 330534.jpg
-source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
+exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 7%
+source-wordcount: '99'
+ht-degree: 5%
 
 ---
 
-
-# コードのデプロイ
+# コードのデプロイ {#deploying-code}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_deploycode"
 >title="コードのデプロイ"
->abstract="Cloud ManagerのGitリポジトリを外部Gitリポジトリと統合し、プロジェクトをAEM as a Repositoryにデプロイします。Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="プロジェクトの結合"
+>abstract="Cloud Manager の Git リポジトリを外部 Git リポジトリと統合し、AEM as a Cloud Serviceにプロジェクトをデプロイします"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="プロジェクトを結合"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#how-to-use" text="Cloud Manager でのコードのデプロイ"
 
-Cloud ManagerのGitリポジトリを外部Gitリポジトリと統合し、プロジェクトをAEM as a Repositoryにデプロイします。Cloud Service
+Cloud Manager の Git リポジトリを外部 Git リポジトリと統合し、AEM as a Cloud Serviceにプロジェクトをデプロイします
 
 >[!VIDEO](https://video.tv.adobe.com/v/330534/?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: DispatcherツールをCloud Service開発として設定するAEM
-description: AEM SDKのDispatcherツールは、Dispatcherをローカルで簡単にインストール、実行、トラブルシューティングできるようにすることで、Adobe Experience Manager(AEM)プロジェクトのローカル開発を容易にします。
+title: AEMas a Cloud Service開発用の Dispatcher ツールの設定
+description: AEM SDK の Dispatcher ツールは、Dispatcher をローカルで簡単にインストール、実行、トラブルシューティングできるようにすることで、Adobe Experience Manager(AEM) プロジェクトのローカル開発を容易にします。
 version: Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
@@ -8,115 +8,115 @@ role: Developer
 level: Beginner
 kt: 4679
 thumbnail: 30603.jpg
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '1380'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-
-# ローカルDispatcherツールの設定
+# ローカル Dispatcher ツールの設定 {#set-up-local-dispatcher-tools}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
->title="ローカルDispatcherツール"
->abstract="Dispatcherは、Experience Managerアーキテクチャ全体の不可欠な要素で、ローカル開発設定の一部にする必要があります。 AEM as a Dispatcher SDKには、Dispatcherをローカルで設定、検証、シミュレーションする、推奨されるDispatcherツールバージョンが含まれています。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="クラウド内の Dispatcher"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMをCloud ServiceSDKとしてダウンロード"
+>title="ローカル Dispatcher ツール"
+>abstract="Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。 AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMas a Cloud ServiceSDK のダウンロード"
 
-Adobe Experience Manager(AEM)のDispatcherは、CDNとAEMパブリッシュ層の間にセキュリティとパフォーマンスの層を提供するApache HTTP Webサーバーモジュールです。 Dispatcherは、Experience Managerアーキテクチャ全体の不可欠な要素で、ローカル開発設定の一部にする必要があります。
+Adobe Experience Manager(AEM) の Dispatcher は、CDN と AEM パブリッシュ層の間にセキュリティとパフォーマンスの層を提供する Apache HTTP Web サーバーモジュールです。 Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。
 
-AEM as a Dispatcher SDKには、Dispatcherをローカルで設定、検証、シミュレーションする、推奨されるDispatcherツールバージョンが含まれています。 Dispatcherツールは、次の要素で構成されます。
+AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。 Dispatcher ツールは、次の要素で構成されます。
 
-+ `.../dispatcher-sdk-x.x.x/src`にある、Apache HTTP WebサーバーとDispatcher設定ファイルのベースラインセット
-+ 設定バリデーターCLIツール（`.../dispatcher-sdk-x.x.x/bin/validate`にあります）
-+ `.../dispatcher-sdk-x.x.x/bin/validator`にある構成生成CLIツール
-+ `.../dispatcher-sdk-x.x.x/bin/docker_run`にある構成導入CLIツール
-+ Dispatcherモジュールを使用してApache HTTP Webサーバーを実行するDockerイメージ
++ Apache HTTP Web サーバーと Dispatcher 設定ファイルのベースラインセット。以下の場所にあります。 `.../dispatcher-sdk-x.x.x/src`
++ 次の場所にある設定バリデーター CLI ツール `.../dispatcher-sdk-x.x.x/bin/validate`
++ 次の場所にある設定生成 CLI ツール `.../dispatcher-sdk-x.x.x/bin/validator`
++ 次の場所にある構成導入 CLI ツール `.../dispatcher-sdk-x.x.x/bin/docker_run`
++ Dispatcher モジュールで Apache HTTP Web サーバーを実行する Docker イメージ
 
-`~`は、ユーザーのディレクトリの略記法として使用されます。 Windowsの場合、`%HOMEPATH%`と同じです。
+注意： `~` は、ユーザーのディレクトリの略記法として使用されます。 Windows の場合、これは `%HOMEPATH%`.
 
 >[!NOTE]
 >
-> このページのビデオはmacOSで録画されました。 Windowsユーザーは従うことはできますが、各ビデオに付属する、同等のDispatcherツールのWindowsコマンドを使用します。
+> このページのビデオはmacOSで録画されました。 Windows ユーザーは従うことができますが、各ビデオに付属する、同等の Dispatcher ツール Windows コマンドを使用します。
 
 ## 前提条件
 
-1. Windowsユーザーは、Windows 10 Professional（またはDockerをサポートするバージョン）を使用する必要があります。
-1. ローカルの開発マシンに[Experience Manager公開クイックスタートJAR](./aem-runtime.md)をインストールします。
-   + 必要に応じて、最新の[AEM参照Webサイト](https://github.com/adobe/aem-guides-wknd/releases)をローカルのAEMパブリッシュサービスにインストールします。 このWebサイトは、作業中のDispatcherを視覚化するためにこのチュートリアルで使用されます。
-1. ローカル開発マシンに[Docker](https://www.docker.com/)(Docker Desktop 2.2.0.5以降/Docker Engine v19.03.9+)の最新バージョンをインストールして起動します。
+1. Windows ユーザーは、Windows 10 Professional （または Docker をサポートするバージョン）を使用する必要があります
+1. インストール [Experience Manager公開クイックスタート JAR](./aem-runtime.md) ローカルの開発マシン上で
+   + （オプション）最新のをインストールする [AEMリファレンス Web サイト](https://github.com/adobe/aem-guides-wknd/releases) ローカルの AEM パブリッシュサービスで、 この Web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
+1. 最新バージョンのをインストールして起動する [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5 以降/Docker Engine v19.03.9以降 ) をローカル開発マシンに搭載している。
 
-## Dispatcherツールのダウンロード(AEM SDKの一部として)
+## Dispatcher ツールのダウンロード (AEM SDK の一部として )
 
-AEM as aCloud ServiceSDK(AEM SDK)には、開発用にApache HTTP WebサーバーをDispatcherモジュールと共にローカルで実行するためのDispatcherツールと、互換性のあるQuickStart Jarが含まれています。
+AEMas a Cloud ServiceSDK(AEM SDK) には、開発用に Dispatcher モジュールで Apache HTTP Web サーバーをローカルで実行するための Dispatcher ツールと、互換性のある QuickStart Jar が含まれています。
 
-AEM as aCloud ServiceSDKが既に[ローカルAEMランタイム](./aem-runtime.md)を設定するためにダウンロードされている場合は、再度ダウンロードする必要はありません。
+AEMas a Cloud ServiceSDK が既に [ローカルAEMランタイムの設定](./aem-runtime.md)を再度ダウンロードする必要はありません。
 
-1. Adobe IDで[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3Alast&amp;orderby.sort=&amp;layout=list&amp;p.offset=0&amp;p.limit=1)にログインします。
-   + Adobe組織&#x200B;__は、AEMをCloud ServiceSDKとしてダウンロードするCloud ServiceとしてAEM用にプロビジョニングされている必要があります。__
-1. 最新の&#x200B;__AEM SDK__&#x200B;結果行をクリックして、ダウンロードします。
+1. にログインします。 [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3AlastOrderby.sort&amp;layout=list&amp;p.offset=0&amp;p.limit=1) Adobe ID
+   + Adobe組織 __必須__ AEM as a Cloud Service SDK をダウンロードするためにAEM as a Cloud Service用にプロビジョニングされている
+1. 最新の __AEM SDK__ ダウンロードする結果行
 
-## AEM SDK zipからDispatcherツールを抽出します。
+## AEM SDK zip から Dispatcher ツールを抽出します。
 
 >[!TIP]
 >
-> Windowsユーザーは、ローカルDispatcherツールを含むフォルダーへのパスにスペースや特殊文字を含めることはできません。 パスにスペースが存在する場合、`docker_run.cmd`は失敗します。
+> Windows ユーザーは、ローカル Dispatcher ツールを含むフォルダーへのパスにスペースや特殊文字を含めることはできません。 パスにスペースが存在する場合、 `docker_run.cmd` 失敗します。
 
-Dispatcherツールのバージョンは、AEM SDKのバージョンとは異なります。 AEM SDKバージョンを使用して、AEM as a Dispatcherツールのバージョンが提供されていることを確認します。
+Dispatcher ツールのバージョンは、AEM SDK のバージョンとは異なります。 AEM as a Cloud Serviceのバージョンと一致するAEM SDK バージョンを介して、Dispatcher ツールのバージョンが提供されていることを確認します。
 
-1. ダウンロードした`aem-sdk-xxx.zip`ファイルを解凍します。
-1. Dispatcherツールを`~/aem-sdk/dispatcher`に解凍します。
-   + Windowsの場合：`aem-sdk-dispatcher-tools-x.x.x-windows.zip`を`C:\Users\<My User>\aem-sdk\dispatcher`に解凍します（必要に応じて、見つからないフォルダーを作成します）。
-   + macOS/Linux:付属のシェルスクリプト`aem-sdk-dispatcher-tools-x.x.x-unix.sh`を実行して、Dispatcherツールを解凍します。
+1. ダウンロードしたを解凍します。 `aem-sdk-xxx.zip` ファイル
+1. Dispatcher ツールを解凍します。 `~/aem-sdk/dispatcher`
+   + Windows の場合：解凍 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` into `C:\Users\<My User>\aem-sdk\dispatcher` （必要に応じて、見つからないフォルダを作成します）
+   + macOS/Linux:付属のシェルスクリプトを実行します `aem-sdk-dispatcher-tools-x.x.x-unix.sh` Dispatcher ツールを解凍します。
       + `chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
 
-以下に発行されるすべてのコマンドは、現在の作業ディレクトリに拡張Dispatcherツールの内容が含まれていることを前提としています。
+以下で発行されるすべてのコマンドは、現在の作業ディレクトリに拡張されている Dispatcher ツールの内容が含まれていることを前提としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
-*このビデオでは、例としてmacOSを使用しています。同等のWindows/Linuxコマンドを使用して、同じ結果を得ることができます。*
+*このビデオでは、macOSを参考にしています。 同様の結果を得るために、Windows/Linux の同等のコマンドを使用できます*
 
-## Dispatcher設定ファイルについて
+## Dispatcher 設定ファイルについて
 
 >[!TIP]
-> [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype)から作成されたExperience Managerプロジェクトは、この一連のDispatcher設定ファイルが事前に設定されているので、Dispatcherツールのsrcフォルダーからコピーする必要はありません。
+> Experience Managerプロジェクトを [AEM Project Maven アーキタイプ](https://github.com/adobe/aem-project-archetype) は、この一連の Dispatcher 設定ファイルに事前に設定されているので、Dispatcher ツールの src フォルダーからコピーする必要はありません。
 
-Dispatcherツールは、ローカル開発を含むすべての環境の動作を定義する、Apache HTTP WebサーバーとDispatcher設定ファイルのセットを提供します。
+Dispatcher ツールは、ローカル開発を含むすべての環境の動作を定義する、Apache HTTP Web サーバーと Dispatcher 設定ファイルのセットを提供します。
 
-これらのファイルは、Experience ManagerのMavenプロジェクト内にまだ存在しない場合、Experience ManagerのMavenプロジェクト内の`dispatcher/src`フォルダーにコピーされることを意図しています。
+これらのファイルは、Experience ManagerMaven プロジェクトの `dispatcher/src` フォルダーに保存します (Experience ManagerMaven プロジェクトにまだ存在しない場合 )。
 
-設定ファイルの完全な説明は、展開されたDispatcherツールで`dispatcher-sdk-x.x.x/docs/Config.html`として入手できます。
+設定ファイルに関する完全な説明は、展開された Dispatcher ツールでは以下のように表示されます。 `dispatcher-sdk-x.x.x/docs/Config.html`.
 
-## 設定の検証
+## 設定を検証
 
-必要に応じて、`httpd -t`を介したDispatcherおよびApache Webサーバーの設定の検証は、`validate`スクリプトを使用しておこなえます（`validator`実行可能ファイルと混同しないようにする必要があります）。 `validate`スクリプトは、`validator`の[3段階](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/validation-debug.html?lang=en#local-validation-flexible-mode)を実行する便利な方法を提供します。
+オプションで、Dispatcher および Apache Web サーバー設定 ( `httpd -t`) は、 `validate` スクリプト ( `validator` 実行可能 )。 この `validate` スクリプトを使用すると、 [3 フェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/validation-debug.html?lang=en#local-validation-flexible-mode) の `validator`.
 
 + 使用方法:
    + Windows：`bin\validate src`
-   + macOS/Linux:`./bin/validate.sh ./src`
+   + macOS/Linux: `./bin/validate.sh ./src`
 
-## Dispatcherをローカルで実行する
+## Dispatcher をローカルで実行する
 
-AEM Dispatcherは、Dockerを使用して、`src` DispatcherおよびApache Webサーバーの設定ファイルに対してローカルで実行されます。
+AEM Dispatcher は、Docker を使用して、 `src` Dispatcher および Apache Web サーバーの設定ファイル。
 
 + 使用方法:
    + Windows：`bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-   + macOS/Linux:`./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
+   + macOS/Linux: `./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
 
-`<aem-publish-host>`は`host.docker.internal`に設定できます。この値は、ホストマシンのIPに解決されるコンテナ内にDockerが提供する特別なDNS名です。 `host.docker.internal`が解決しない場合は、以下の[トラブルシューティング](#troubleshooting-host-docker-internal)の節を参照してください。
+この `<aem-publish-host>` に設定できます。 `host.docker.internal`:Docker がコンテナで提供する、ホストマシンの IP に解決される特別な DNS 名。 もし彼が `host.docker.internal` が解決されない場合は、 [トラブルシューティング](#troubleshooting-host-docker-internal) 」の節を参照してください。
 
-例えば、Dispatcherツールが提供するデフォルトの設定ファイルを使用してDispatcher Dockerコンテナを起動するには、次のようにします。
+例えば、Dispatcher ツールが提供するデフォルトの設定ファイルを使用して Dispatcher Docker コンテナを起動するには、次のようにします。
 
-Dispatcher設定srcフォルダーへのパスを指定するDispatcher Dockerコンテナを起動します。
+Dispatcher 設定の src フォルダーへのパスを指定する、Dispatcher Docker コンテナを起動します。
 
 + Windows：`bin\docker_run src host.docker.internal:4503 8080`
-+ macOS/Linux:`./bin/docker_run.sh ./src host.docker.internal:4503 8080`
++ macOS/Linux: `./bin/docker_run.sh ./src host.docker.internal:4503 8080`
 
-ポート4503でローカルに動作するAEM as a Publish SDKのパブリッシュサービスは、Dispatcherを通じて`http://localhost:8080`で使用できます。
+ポート 4503 でローカルに実行されているAEMas a Cloud ServiceSDK のパブリッシュサービスは、Dispatcher を通じて次の場所で使用できます。 `http://localhost:8080`.
 
-Experience ManagerプロジェクトのDispatcher設定に対してDispatcherツールを実行するには、プロジェクトの`dispatcher/src`フォルダーをポイントします。
+Experience Managerプロジェクトの Dispatcher 設定に対して Dispatcher ツールを実行するには、プロジェクトの `dispatcher/src` フォルダー。
 
 + Windows：
 
@@ -130,23 +130,23 @@ Experience ManagerプロジェクトのDispatcher設定に対してDispatcherツ
    $ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
-## Dispatcherツールログ
+## Dispatcher ツールログ
 
-Dispatcherログは、ローカル開発中にHTTP要求がブロックされるかどうかを把握するのに役立ちます。 ログレベルは、`docker_run`の実行前に環境パラメーターを付けて設定できます。
+Dispatcher ログは、ローカル開発中に HTTP 要求がブロックされるかどうかとその理由を理解するのに役立ちます。 ログレベルは、 `docker_run` 環境パラメーターを使用します。
 
-Dispatcherツールのログは、`docker_run`の実行時に標準に出力されます。
+Dispatcher ツールのログは、 `docker_run` が実行されます。
 
-Dispatcherのデバッグに役立つパラメーターは次のとおりです。
+Dispatcher のデバッグに役立つパラメーターは次のとおりです。
 
-+ `DISP_LOG_LEVEL=Debug` Dispatcherモジュールのログをデバッグレベルに設定
-   + デフォルト値は次のとおりです。`Warn`
-+ `REWRITE_LOG_LEVEL=Debug` Apache HTTP Webサーバー書き換えモジュールのログをデバッグレベルに設定します
-   + デフォルト値は次のとおりです。`Warn`
-+ `DISP_RUN_MODE` Dispatcher環境の「実行モード」を設定し、対応する実行モードのDispatcher設定ファイルを読み込みます。
++ `DISP_LOG_LEVEL=Debug` Dispatcher モジュールのログをデバッグレベルに設定します
+   + デフォルト値： `Warn`
++ `REWRITE_LOG_LEVEL=Debug` Apache HTTP Web サーバー書き換えモジュールのログをデバッグレベルに設定します
+   + デフォルト値： `Warn`
++ `DISP_RUN_MODE` は、Dispatcher 環境の「実行モード」を設定し、対応する実行モードの Dispatcher 設定ファイルを読み込みます。
    + デフォルトは `dev`
-+ 有効な値：`dev`、`stage`、または`prod`
++ 有効な値： `dev`, `stage`または `prod`
 
-`docker_run`には1つ以上のパラメーターを渡すことができます
+1 つ以上のパラメーターをに渡すことができます `docker_run`
 
 + Windows：
 
@@ -160,47 +160,47 @@ Dispatcherのデバッグに役立つパラメーターは次のとおりです�
    $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
-### ログファイルのアクセス
+### ログファイルへのアクセス
 
-Apache WebサーバーとAEM Dispatcherのログは、Dockerコンテナで直接アクセスできます。
+Apache Web サーバーとAEM Dispatcher のログは、Docker コンテナで直接アクセスできます。
 
-+ [Dockerコンテナでのログへのアクセス](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
-+ [Dockerログのローカルファイルシステムへのコピー](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
++ [Docker コンテナ内のログへのアクセス](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
++ [Docker ログのローカルファイルシステムへのコピー](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
-## Dispatcherツールを更新するタイミング{#dispatcher-tools-version}
+## Dispatcher ツールを更新するタイミング{#dispatcher-tools-version}
 
-Dispatcherツールのバージョンは、Experience Managerよりも頻繁に増分されないので、ローカル開発環境では、Dispatcherツールを使用する際に必要な更新の数が少なくなります。
+Dispatcher ツールのバージョンは、Experience Managerよりも増分の頻度が少ないので、ローカル開発環境では、Dispatcher ツールの更新の必要が少なくなります。
 
-推奨されるDispatcherツールのバージョンは、AEM as aCloud ServiceSDKにバンドルされ、Cloud ServiceのバージョンとしてのExperience Managerに一致します。 AEM as aCloud Serviceのバージョンは、[Cloud Manager](https://my.cloudmanager.adobe.com/)で確認できます。
+推奨される Dispatcher ツールのバージョンは、Experience Managerのas a Cloud Serviceバージョンと一致するAEMas a Cloud ServiceSDK にバンドルされているバージョンです。 AEMas a Cloud Serviceのバージョンは、 [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
-+ __AEMリリースラベルで指定された環境ごとに、 Cloud Manager /環__&#x200B;境 ____ 
++ __Cloud Manager /環境__( __AEMリリース__ ラベル
 
-![Experience Managerのバージョン](./assets/dispatcher-tools/aem-version.png)
+![Experience Managerバージョン](./assets/dispatcher-tools/aem-version.png)
 
-_Dispatcherツールのバージョン自体は、バージョンのバージョンと一致しないことに注意してください。Experience Manager_
+_Dispatcher ツールのバージョン自体は、バージョンのバージョンと一致しないことに注意してください。Experience Managerのバージョンは、_
 
 ## トラブルシューティング
 
-### docker_runを実行すると、「host.docker.internalが使用可能になるまで待機中」というメッセージが表示されます。{#troubleshooting-host-docker-internal}
+### docker_run を実行すると、「host.docker.internal が使用可能になるまで待機中」というメッセージが表示されます。{#troubleshooting-host-docker-internal}
 
-`host.docker.internal` は、ホストに解決されるを含むDockerに指定されたホスト名です。docs.docker.com([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host)、[Windows](https://docs.docker.com/docker-for-windows/networking/))ごとに、次の手順を実行します。
+`host.docker.internal` は、ホストに解決されるを含む、Docker に提供されるホスト名です。 docs.docker.com ごと ([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host), [Windows](https://docs.docker.com/docker-for-windows/networking/)):
 
-> Docker 18.03以降では、ホストが使用する内部IPアドレスに解決される特別なDNS名host.docker.internalに接続することをお勧めします。
+> Docker 18.03 以降では、ホストが使用する内部 IP アドレスに解決される特別な DNS 名 host.docker.internal に接続することをお勧めします。
 
-`bin/docker_run src host.docker.internal:4503 8080`の結果が「__host.docker.internalが使用可能になるまで待機する__」というメッセージになった場合は、次のようになります。
+場合、 `bin/docker_run src host.docker.internal:4503 8080` 結果はメッセージに含まれます __host.docker.internal が使用可能になるまで待機します__、次に、
 
-1. インストールされているDockerのバージョンが18.03以降であることを確認します。
-2. `host.docker.internal`名の登録/解決を妨げるローカルマシンがセットアップされている可能性があります。 代わりに、ローカルIPを使用します。
+1. インストールされている Docker のバージョンが 18.03 以降であることを確認します。
+2. ローカルマシンが設定されていて、 `host.docker.internal` 名前。 代わりに、ローカル IP を使用します。
    + Windows：
-      + コマンドプロンプトで`ipconfig`を実行し、ホストマシンの&#x200B;__IPv4アドレス__&#x200B;を記録します。
-      + 次に、次のIPアドレスを使用して`docker_run`を実行します。
+      + コマンドプロンプトで、を実行します。 `ipconfig`を作成し、ホストの __IPv4 アドレス__ ホストマシンの
+      + 次に、次を実行します。 `docker_run` この IP アドレスを使用する場合：
          `bin\docker_run src <HOST IP>:4503 8080`
    + macOS/Linux:
-      + ターミナルから、`ifconfig`を実行し、ホスト&#x200B;__inet__&#x200B;のIPアドレス（通常は&#x200B;__en0__&#x200B;デバイス）を記録します。
-      + 次に、ホストのIPアドレスを使用して`docker_run`を実行します。
+      + ターミナルから、次を実行します。 `ifconfig` そしてホストを記録する __inet__ IP アドレス ( 通常は __en0__ デバイス。
+      + その後、次を実行 `docker_run` ホスト IP アドレスを使用：
          `bin/docker_run.sh src <HOST IP>:4503 8080`
 
-#### エラーの例
+#### エラー例
 
 ```shell
 $ docker_run src host.docker.internal:4503 8080
@@ -211,11 +211,11 @@ Running script /docker_entrypoint.d/30-wait-for-backend.sh
 Waiting until host.docker.internal is available
 ```
 
-### docker_runがWindowsで起動に失敗する{#troubleshooting-windows-compatible}
+### Windows で docker_run を起動できない{#troubleshooting-windows-compatible}
 
-Windowsで`docker_run`を実行すると、次のエラーが発生し、Dispatcherが起動できなくなる可能性があります。 これは、Windows上のDispatcherに関して報告された問題で、今後のリリースで修正される予定です。
+実行中 `docker_run` Windows では、次のエラーが発生し、Dispatcher を起動できない場合があります。 これは、Windows 上の Dispatcher に関して報告された問題で、将来のリリースで修正される予定です。
 
-#### エラーの例
+#### エラー例
 
 ```shell
 $ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run src host.docker.internal:4503 8080
@@ -238,8 +238,8 @@ AH00016: Configuration Failed
 
 ## その他のリソース
 
-+ [AEM SDKのダウンロード](https://experience.adobe.com/#/downloads)
++ [AEM SDK をダウンロード](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
-+ [Dockerのダウンロード](https://www.docker.com/)
-+ [AEM Reference Webサイト(WKND)のダウンロード](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcherのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
++ [Docker のダウンロード](https://www.docker.com/)
++ [AEM Reference Web サイト (WKND) のダウンロード](https://github.com/adobe/aem-guides-wknd/releases)
++ [Experience ManagerDispatcher のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
