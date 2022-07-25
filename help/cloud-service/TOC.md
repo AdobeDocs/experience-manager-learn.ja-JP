@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
+source-git-commit: 1c4ebdf78dd7107c7587b50e7476ea4b7ca3e812
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 29%
+source-wordcount: '802'
+ht-degree: 30%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 29%
       + [Experience Manager — ガバナンスとスタッフのモデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Adobe Experience Managerでのコンテンツベロシティの推進方法](./introduction/drive-content-velocity-for-sites.md)
       + [AEMスタイルシステムを使用してコンテンツの速度を向上](./introduction/accelerate-content-velocity-aem.md)
++ [Experience Cloud との統合](./experience-cloud/integrations.md)
 + 基盤となる技術 {#underlying-technology}
    + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
