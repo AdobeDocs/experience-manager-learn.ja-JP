@@ -2,7 +2,7 @@
 cloud: Experience Cloud
 solution-title: Experience Manager
 mini-toc-levels: 2
-git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-learn.ja-JP
+git-repo: https://github.com/AdobeDocs/experience-manager-learn.ja-JP
 product: experience manager
 index: y
 type: Tutorial
@@ -10,7 +10,7 @@ solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
 source-git-commit: 34c31db8d48f4e3ba3a213c4c52dc08b73020526
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '130'
 ht-degree: 96%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 96%
 
 # 内部使用メタデータ
 
-metadata.md ファイルには、リポジトリー内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリーレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
+metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
 
 | メタデータ | 機能 |
 |--- |--- |
