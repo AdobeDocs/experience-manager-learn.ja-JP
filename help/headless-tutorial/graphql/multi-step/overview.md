@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '298'
 ht-degree: 8%
 
 ---
@@ -46,15 +46,11 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 
 ### AEM 環境
 
-このチュートリアルを完了するには、Adobe Experience Manager環境が必要です。 次のいずれかを使用できます ( スクリーンショットはAEMas a Cloud Service環境から記録されます )。
-
-* 次を使用したAEMas a Cloud Service環境：
-   * [AEM as a Cloud Serviceおよび Cloud Manager へのアクセス](/help/cloud-service/accessing/overview.md)
-      * **AEM Administrator** AEM as a Cloud Serviceへのアクセス
+このチュートリアルを完了するには、 AEM as a Cloud Service環境へのAEM管理者アクセス権をお勧めします。  AEMas a Cloud Service環境にアクセスできない場合は、 [ローカルAEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). ただし、コンテンツフラグメントナビゲーションなど、一部の製品 UI 画面は異なることに注意する必要があります。
 
 ## さあ始めましょう！
 
-1. チュートリアルを開始する前に [コンテンツフラグメントモデルの定義](content-fragment-models.md).
+チュートリアルを開始する前に [コンテンツフラグメントモデルの定義](content-fragment-models.md).
 
 ## GitHub プロジェクト
 
