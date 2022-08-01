@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 80dfe87f372425014c22ccf4f2d1190b4c202b8a
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 30%
+source-wordcount: '814'
+ht-degree: 29%
 
 ---
 
@@ -210,6 +210,8 @@ ht-degree: 30%
       + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームを作成](./forms/forms-and-sign/create-adaptive-form.md)
       + [入力および署名用に設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Microsoft Power Automate との統合{#forms-cs-and-power-automate}
+      + [統合の設定](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
    + Microsoft Dynamics との統合{#formscs-dynamics-crm}
       + [Dynamics アプリケーションを作成](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [データソースの設定](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
