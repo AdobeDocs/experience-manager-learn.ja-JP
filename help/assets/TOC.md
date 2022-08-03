@@ -6,8 +6,8 @@ feature-set: Experience Manager Assets, Experience Manager Sites, Experience Man
 team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 34%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 34%
 + Dynamic Media {#dynamic-media}
    + [Dynamic Mediaの概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
-   + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+   + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
    + [ビデオプレーヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + [360 ビデオ](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
