@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 25%
 
 ---
 
@@ -44,15 +44,27 @@ ht-degree: 0%
       + [3 - AEM GraphQL API の参照](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 永続的な GraphQL クエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + 使い方 {#how-to}
-      + [リッチテキスト](./graphql/how-to/rich-text.md)
-      + [画像](./graphql/how-to/images.md)
-      + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
-      + [AEMヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
++ デプロイメント{#deployments}
+   + [概要](./graphql/deployment/overview.md)
+   + [単一ページアプリ](./graphql/deployment/spa.md)
+   + [Web コンポーネント](./graphql/deployment/web-component.md)
+   + [モバイル](./graphql/deployment/mobile.md)
+   + [サーバー間](./graphql/deployment/server-to-server.md)
+   + 設定{#configurations}
+      + [AEMホスト](./graphql/deployment/configurations/aem-hosts.md)
+      + [CORS](./graphql/deployment/configurations/cors.md)
+      + [Dispatcher フィルター](./graphql/deployment/configurations/dispatcher-filters.md)
++ 使い方 {#how-to}
+   + [リッチテキスト](./graphql/how-to/rich-text.md)
+   + [画像](./graphql/how-to/images.md)
+   + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
+   + [AEMヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
+      + [Web コンポーネント](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
+      + [サーバー間](./graphql/example-apps/server-to-server-app.md)
 + SPA Editor{#spa-editor}
    + React{#react}
       + [概要](./spa-editor/react/overview.md)
