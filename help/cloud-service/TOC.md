@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 043842912132336a4ec52b54776fab1525b09d16
+source-git-commit: 2cfa5039e69ef23e58428e17b45877170930820e
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '826'
 ht-degree: 29%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 29%
       + [ログ](./debugging/cloud-service/logs.md)
       + [ビルドとデプロイ](./debugging/cloud-service/build-and-deployment.md)
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
-      + [リポジトリブラウザー](./debugging/cloud-service/repository-browser.md)
+      + [リポジトリーブラウザー](./debugging/cloud-service/repository-browser.md)
       + リスク{#risks}
          + [横断の警告](./debugging/cloud-service/risks/traversals.md)
 + AEMへのアクセス{#accessing}
@@ -271,6 +271,7 @@ ht-degree: 29%
       + [書き換えの修正](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
       + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
       + [Cloud Manager — 単体テスト](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
+      + [Cloud Manager — 機能テスト](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
