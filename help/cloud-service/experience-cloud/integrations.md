@@ -10,10 +10,10 @@ kt: 10718
 thumbnail: KT-10718.jpeg
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: fda7b74e7659daf61a9f5478d6bfabe439b923ae
+source-git-commit: 663075723da207242309c08feed42657b9e5188b
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 17%
+source-wordcount: '958'
+ht-degree: 18%
 
 ---
 
@@ -25,6 +25,7 @@ AEMas a Cloud Serviceの他のAdobe Experience Cloud製品との統合に関す�
 |  | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
 | [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
+| 広告 |  |  |  |
 | [Analytics](#adobe-analytics) | ✔ | ✔ | ✔ |
 | Audience Manager |  |  |  |
 | [Campaign Classic](#adobe-campaign-classic) | ✔ |  |  |
@@ -33,7 +34,7 @@ AEMas a Cloud Serviceの他のAdobe Experience Cloud製品との統合に関す�
 | Customer Journey Analytics |  |  |  |
 | [Experience Platformタグ](#adobe-experience-platform-tags) | ✔ |  | ✔ |
 | [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| ラーニングマネージャー |  |  |  |
+| [ラーニングマネージャー](#adobe-learning-manager) | ✔ |  |  |
 | Marketo Engage |  |  |  |
 | リアルタイム CDP |  |  |  |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
@@ -108,19 +109,21 @@ Adobe Experience Platformタグ ( 旧Adobeの Launch、DTM) はAEMとシーム�
 + [Experience Platformタグユーザーガイド](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platformタグのチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
+## Adobe Journey Optimizer
 
-## Adobe Workfront
-
-Adobe WorkfrontとAEM sCloud Serviceとの統合により、デジタルアセットの作成、コラボレーション、ライフサイクル管理のプロセスが合理化されます。
+Adobe Journey Optimizerは、単一のアプリケーションから数百万人の顧客を対象に、オムニチャネルキャンペーンと 1 対 1 のスケジュールを設定し、インテリジェントな判定とインサイトを活用してジャーニー全体を最適化します。
 
 ### AEM Assets
 
-+ [Workfront拡張コネクタの設定](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=ja)
-+ [Workfront enhanced connector ビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
-+ AEM Assets Essentials
++ [AEM Assets Essentials とAdobe Journey Optimizerの統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja)
 
-   + [Adobe Workfront for Assets Essentialsユーザーガイド](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Adobe WorkfrontとAssets Essentialsのビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+## Adobeラーニングマネージャー
+
+Adobeラーニングマネージャー ( 旧称Adobe Captivate Prime) は、顧客や従業員に対してパーソナライズされたラーニングを提供します。
+
+### AEM Sites
+
++ [AEM SitesとAdobeラーニングマネージャーの統合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
 
 ## Adobe Sensei
 
@@ -140,7 +143,7 @@ Adobe Senseiは、スマートタグ、スマート切り抜き、ビジュア�
 
 ### AEM Forms
 
-+ [automated forms conversionサービス](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
++ [自動フォーム変換サービス](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 
 ## Adobe Target
@@ -157,3 +160,16 @@ Adobe TargetはAEM as a Cloud Serviceと統合され、AEMのコンテンツを�
 
 + [Target でのAEM Context Hub の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
 + [AEM Sitesと Target のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
+
+## Adobe Workfront
+
+Adobe WorkfrontとAEM sCloud Serviceとの統合により、デジタルアセットの作成、コラボレーション、ライフサイクル管理のプロセスが合理化されます。
+
+### AEM Assets
+
++ [Workfront拡張コネクタの設定](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=ja)
++ [Workfront enhanced connector ビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
++ AEM Assets Essentials
+
+   + [Adobe Workfront for Assets Essentialsユーザーガイド](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Adobe WorkfrontとAssets Essentialsのビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
