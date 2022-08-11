@@ -12,10 +12,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
 workflow-type: tm+mt
-source-wordcount: '1816'
-ht-degree: 12%
+source-wordcount: '1848'
+ht-degree: 13%
 
 ---
 
@@ -332,3 +332,11 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 ## トラブルシューティング
 
 AEMプロジェクトアーキタイプを使用したプロジェクトの生成で問題が発生した場合は、 [既知の問題](https://github.com/adobe/aem-project-archetype#known-issues) およびオープンのリスト [問題](https://github.com/adobe/aem-project-archetype/issues).
+
+## おめでとうございます。 {#congratulations-bonus}
+
+おめでとう、ボーナス資料を通過。
+
+### 次の手順 {#next-steps-bonus}
+
+シンプルなを使用して、Adobe Experience Manager(AEM)Sites コンポーネントの基盤となるテクノロジーを理解します `HelloWorld` 例 [コンポーネントの基本](component-basics.md) チュートリアル
