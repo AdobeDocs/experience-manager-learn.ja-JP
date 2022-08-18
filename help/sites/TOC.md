@@ -3,10 +3,10 @@ user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 30%
+source-wordcount: '404'
+ht-degree: 32%
 
 ---
 
@@ -51,7 +51,6 @@ ht-degree: 30%
    + [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
    + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
    + [AEM SPA Editor と React の概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [AEM SPA Editor の概要とAngular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [スタイルシステムを使用した開発](developing/style-system-technical-video-understand.md)
    + [スタイルシステムのベストプラクティス](developing/style-organization-style-system-understand-article.md)
@@ -68,9 +67,7 @@ ht-degree: 30%
    + [サイトマップ](./seo/sitemaps.md)
 + 単一ページアプリケーション {#spa-editor}
    + [ SPA Editor の使用](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Hello World チュートリアル](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA Editor と React の概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [AEM SPA Editor の概要とAngular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + マルチサイト管理 {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとブループリント](./multi-site-management/live-copy-and-blueprint.md)

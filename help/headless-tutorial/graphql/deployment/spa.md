@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 # AEMヘッドレスSPAデプロイメント
 
 
-AEMヘッドレスシングルページアプリ (SPA) のデプロイメントには、React、Vue、Angularなどのフレームワークを使用して構築された JavaScript ベースのアプリケーションが含まれ、AEMのコンテンツをヘッドレスで消費し、操作します。
+AEMヘッドレスシングルページアプリ (SPA) のデプロイメントには、AEMのコンテンツをヘッドレスで消費し、操作する、React や Vue などのフレームワークを使用して構築された JavaScript ベースのアプリケーションが含まれます。
 
 ヘッドレスな方法でAEMを操作するSPAをデプロイするには、SPAのホストと、Web ブラウザーを使用してアクセスできるようにする必要があります。
 
