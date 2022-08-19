@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '2878'
 ht-degree: 11%
@@ -206,7 +206,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
    http://admin:admin@localhost:4502 > OK
    ```
 
-1. コマンド `npm run watch` 最終的にはが入力されます **clientlib-site** および **clientlib-dependencies** 内 **ui.apps** モジュールはAEMと自動的に同期されます。
+1. コマンド `npm run watch` 最終的にはが入力されます **clientlib-site** および **clientlib-dependencies** 内 **ui.apps** AEMと自動的に同期されるモジュール。
 
    >[!NOTE]
    >

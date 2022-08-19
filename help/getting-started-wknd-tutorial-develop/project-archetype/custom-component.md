@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
 workflow-type: tm+mt
 source-wordcount: '4138'
 ht-degree: 19%
@@ -447,7 +447,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
        import org.osgi.annotation.versioning.Version;
        &quot;&#39;
    
-   このパッケージ内のファイルに変更が加えられると、 [パッケージのバージョンは、意味的に調整する必要があります](https://semver.org/). そうでない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。 幸運なことに、Maven プラグインが失敗すると、無効な Java パッケージのバージョンと、そのバージョンが表示されるはずです。 更新されたばかりの `@Version("...")` Java パッケージの宣言 `package-info.java` を、プラグインで推奨される修正用のバージョンに追加する。
+このパッケージ内のファイルに変更が加えられると、 [パッケージのバージョンは、意味的に調整する必要があります](https://semver.org/). そうでない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。 幸運なことに、Maven プラグインが失敗すると、無効な Java パッケージのバージョンと、そのバージョンが表示されるはずです。 次を更新するだけ： `@Version("...")` Java パッケージの宣言 `package-info.java` を、プラグインで推奨される修正用のバージョンに追加する。
 
 ### 署名実装 {#byline-implementation}
 
@@ -458,7 +458,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
 
    ![署名 Impl ファイル](assets/custom-component/byline-impl-file.png)
 
-1. 次を開きます： `BylineImpl.java`. これによって `Byline` インターフェイス。 IDE のオートコンプリート機能を使用するか、手動でファイルを更新して、 `Byline` インターフェイス：
+1. `BylineImpl.java`を開きます。これによって `Byline` インターフェイス。 IDE のオートコンプリート機能を使用するか、手動でファイルを更新して、 `Byline` インターフェイス：
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;

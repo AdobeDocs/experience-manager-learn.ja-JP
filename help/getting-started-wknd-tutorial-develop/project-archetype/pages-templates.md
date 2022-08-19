@@ -9,7 +9,7 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '3081'
 ht-degree: 3%
@@ -93,7 +93,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-以下のビデオの概要手順：
+上記のビデオの高レベルの手順：
 
 ### 構造の設定
 
@@ -161,7 +161,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-以下のビデオの概要手順：
+上記のビデオの高レベルの手順：
 
 1. サンプルコンテンツパッケージをダウンロードします。 **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**.
 1. パッケージマネージャー ( ) を使用して、コンテンツパッケージをアップロードしインストールします。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
@@ -207,7 +207,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-以下のビデオの概要手順：
+上記のビデオの高レベルの手順：
 
 1. サイトコンソール ( ) に移動します。 [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
 1. の下に新しいページを作成します。 **WKND** > **US** > **EN** > **雑誌**.
@@ -257,7 +257,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    HTL スクリプトは 2 つだけです。 `customfooterlibs.html` および `customheaderlibs.html` をページコンポーネントの下に追加します。 *では、このコンポーネントはページをどのようにレンダリングしますか？*
 
-   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能の説明です。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。。
+   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能の説明です。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。
 
 1. Inspect WKND コンポーネント内の別のコンポーネントである `Breadcrumb` 次の場所にあるコンポーネント： `/apps/wknd/components/breadcrumb`. 同じことに注意してください。 `sling:resourceSuperType` プロパティが見つかりますが、今回は `core/wcm/components/breadcrumb/v2/breadcrumb`. これは、プロキシコンポーネントパターンを使用してコアコンポーネントを組み込む別の例です。 実際、WKND コードベース内のすべてのコンポーネントは、AEMコアコンポーネントのプロキシです（当社の有名な HelloWorld コンポーネントを除く）。 できるだけ多くのコアコンポーネントの機能を試して再利用することをお勧めします *前* カスタムコードを記述しています。
 
