@@ -2,7 +2,7 @@
 title: AEMでの SSL ウィザードの使用
 description: Adobe Experience Manager SSL セットアップウィザードを使用して、AEM経由で実行するインスタンスを簡単に設定できるようにします。
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
-version: 6.3, 6,4, 6.5
+version: 6.4, 6.5
 topics: security, operations
 activity: use
 audience: administrator
@@ -13,7 +13,7 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 2d5446197b9b81a4dbe4eaa5a7cb4fcdd5d63f67
+source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
