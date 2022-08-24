@@ -2,12 +2,12 @@
 title: data 属性を使用したHTML5 Formsの事前入力
 description: バックエンドソースからHTMLを取得して、データを取得することによってデータ 5 フォームを生成します。
 feature: Adaptive Forms
-version: 6.3,6.4,6.5.
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 2%

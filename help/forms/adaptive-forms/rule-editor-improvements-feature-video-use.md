@@ -1,40 +1,40 @@
 ---
-title: AEM Formsのルールエディターの改善点
-seo-title: AEM Formsのルールエディターの改善点
-description: 'ルールエディターを使用すると、AEM Adaptive Formsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術ユーザーと非技術ユーザーの両方で、インテリジェンスを追加するのが簡単で高速になります。 '
-seo-description: 'ルールエディターを使用すると、AEM Adaptive Formsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術ユーザーと非技術ユーザーの両方で、インテリジェンスを追加するのが簡単で高速になります。 '
+title: AEM Formsのルールエディターの改善
+seo-title: Rule Editor Improvements in AEM Forms
+description: ルールエディターを使用すると、ユーザーはAEM Adaptive Formsにロジックを追加できます。 AEM 6.3 では、いくつかの方法でルールエディターが強化され、技術系ユーザーと非技術系ユーザーの両方が、インテリジェンスを追加しやすく、迅速に実行できます。
+seo-description: The rule editor enables users to add logic to AEM Adaptive Forms. AEM 6.3 improves the rule editor in several ways making it easier and faster for both technical and non-technical users alike to add intelligence.
 uuid: 35e8cc7c-04cf-43b4-bbc7-41bfd909cfba
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: authoring
 audience: author
 doc-type: technical video
 activity: use
-version: 6.3,6.4,6.5.
+version: 6.4,6.5
 discoiquuid: 51750b3f-1fda-43ae-b3ed-1eede83b19d5
-topic: 管理
+topic: Administration
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 98a35bd9-a659-41f9-a772-267730c1f579
+source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '145'
 ht-degree: 5%
 
 ---
 
+# AEM Formsのルールエディターの改善 {#rule-editor-improvements-in-aem-forms}
 
-# AEM Forms {#rule-editor-improvements-in-aem-forms}のルールエディターの改善
-
-ルールエディターを使用すると、AEM Adaptive Formsにロジックを追加できます。 AEM 6.3では、ルールエディターがいくつかの点で強化され、技術ユーザーと非技術ユーザーの両方で、インテリジェンスを追加するのが簡単で高速になります。
+ルールエディターを使用すると、ユーザーはAEM Adaptive Formsにロジックを追加できます。 AEM 6.3 では、いくつかの方法でルールエディターが強化され、技術系ユーザーと非技術系ユーザーの両方が、インテリジェンスを追加しやすく、迅速に実行できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/19653?quality=9&learn=on)
 
-**ルールエディターの改善点には、次のものがあります。**
+**ルールエディターには、次のような改善点があります。**
 
 * 複数値のフォームコンポーネントにコンポーネントオプションを自動的に表示する
-* ビジュアルエディターでWSDL Webサービスを指定する機能
+* Visual Editor で WSDL Web サービスを指定する機能
 * ルールを無効にする機能
 * 次のようなコードエディターの機能強化。
-* 構文のハイライト
+* 構文の強調表示
    * 自動インデント
-   * フォームオブジェクト、関数、プロパティのヒントと推奨事項
-   * コンポーネント名と一般的なJavaScript関数の自動補完
+   * フォームオブジェクト、関数、プロパティに関するヒントと推奨事項
+   * コンポーネント名と一般的な JavaScript 関数の自動補完
