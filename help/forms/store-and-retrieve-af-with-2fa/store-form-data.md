@@ -1,24 +1,25 @@
 ---
-title: フォームデータの保存
-description: 新しい添付ファイルマップと共にフォームデータをデータベースに格納する
-feature: アダプティブフォーム
+title: フォームデータを保存
+description: 新しい添付ファイルマップと共にフォームデータをデータベースに格納します
+feature: Adaptive Forms
 type: Tutorial
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 4%
+source-wordcount: '69'
+ht-degree: 0%
 
 ---
 
-# フォームデータの保存
+# フォームデータを保存
 
-次に、アダプティブフォームのデータと関連するattachmentsinfoを格納する新しい行をデータベースに挿入するサービスを作成します。
+次に、アダプティブフォームのデータと関連する attachmentsinfo を格納する新しい行をデータベースに挿入するサービスを作成します。
 次のスクリーンショットは、データベース内の行を示しています。
 
 

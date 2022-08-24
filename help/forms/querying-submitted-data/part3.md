@@ -1,31 +1,31 @@
 ---
-title: JSONスキーマとデータを使用したAEM Forms[Part3]
-seo-title: JSONスキーマとデータを使用したAEM Forms[Part3]
-description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
-seo-description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
-feature: アダプティブフォーム
+title: JSON スキーマとデータを使用したAEM Forms[Part3]
+seo-title: AEM Forms with JSON Schema and Data[Part3]
+description: マルチパートチュートリアルで、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 開発
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
+# データベースへの JSON スキーマの格納 {#storing-json-schema-in-database}
 
-# データベースへのJSONスキーマの格納 {#storing-json-schema-in-database}
 
+送信されたデータに対してクエリを実行するには、送信されたフォームに関連付けられた JSON スキーマを保存する必要があります。 JSON スキーマは、クエリビルダーでクエリを作成するために使用されます。
 
-送信済みデータに対してクエリを実行するには、送信済みフォームに関連付けられたJSONスキーマを保存する必要があります。 JSONスキーマは、クエリビルダーでクエリを作成するために使用されます。
-
-アダプティブフォームが送信されると、関連するJSONスキーマがデータベース内にあるかどうかを確認します。 JSONスキーマが存在しない場合は、JSONスキーマを取得し、適切なテーブルにスキーマを保存します。 また、フォーム名をJSONスキーマに関連付けます。 次のスクリーンショットは、JSONスキーマが格納される表を示しています。
+アダプティブフォームが送信されると、関連する JSON スキーマがデータベース内にあるかどうかを確認します。 JSON スキーマが存在しない場合は、JSON スキーマを取得し、適切なテーブルにスキーマを保存します。 また、フォーム名を JSON スキーマに関連付けます。 次のスクリーンショットは、JSON スキーマが格納されている表を示しています。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -107,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->アダプティブフォームの作成時に、リポジトリ内のJSONスキーマを使用するか、JSONスキーマをアップロードできます。 上記のコードは、両方の場合に使用できます。
+>アダプティブフォームの作成時に、リポジトリ内の JSON スキーマを使用するか、JSON スキーマをアップロードできます。 上記のコードは、両方のケースで機能します。
 
-取得されたスキーマは、標準のJDBC操作を使用してデータベースに保存されます。 次のコードは、スキーマをデータベースに挿入します
+取得したスキーマは、標準の JDBC 操作を使用してデータベースに保存されます。 次のコードは、データベースにスキーマを挿入します
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -145,12 +145,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-要約すると、我々は、これまで以下を行った
+要約すると、我々は、これまでに以下を行った。
 
-* JSONスキーマに基づくアダプティブフォームの作成
-* フォームが初めて送信される場合は、フォームに関連付けられたJSONスキーマをデータベースに格納します。
-* アダプティブフォームの連結データをデータベースに格納します。
+* JSON スキーマに基づくアダプティブフォームの作成
+* フォームが初めて送信される場合は、フォームに関連付けられた JSON スキーマをデータベースに保存します。
+* アダプティブフォームの連結データをデータベースに保存します。
 
-次の手順では、 QueryBuilderを使用して、JSONスキーマに基づいて検索するフィールドを表示します
-
-
+次の手順では、 QueryBuilder を使用して、JSON スキーマに基づいて検索するフィールドを表示します

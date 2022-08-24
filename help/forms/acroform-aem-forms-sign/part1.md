@@ -1,49 +1,49 @@
 ---
-title: AEM Formsを使用したAcroforms
-seo-title: アダプティブフォームデータとAcroformの結合
-description: 第1部は、AcroformsとAEM Formsの統合です。 Acroformを使用したアダプティブフォームの作成とデータの結合によるPDFの取得
+title: AEM Formsを使用した Acroforms
+seo-title: Merge Adaptive Form data with Acroform
+description: 第 1 部は、Acroforms とAEM Formsの統合です。 Acroform を使用してアダプティブフォームを作成し、データを結合してPDFを取得する
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 3%
 
 ---
 
 
-# Acroformの作成
+# Acroform の作成
 
-Acroformsは、Acrobatを使用して作成されたフォームです。 Acrobatを使用して新しいフォームを最初から作成するか、Microsoft Wordで作成した既存のフォームを使用し、Acrobatを使用してAcroformに変換することができます。 Microsoft Wordで作成したフォームをAcroformに変換するには、次の手順を実行する必要があります。
+Acroforms は、Acrobatを使用して作成されたフォームです。 Acrobatを使用して最初から新しいフォームを作成したり、Microsoft Word で作成した既存のフォームを使用して、Acrobatを使用して Acroform に変換したりできます。 Microsoft Word で作成したフォームを Acroform に変換するには、次の手順に従う必要があります。
 
-* Acrobatを使用してWord文書を開く
-* Acrobatのフォーム準備ツールを使用して、フォーム上のフォームフィールドを特定します。
-* PDFを保存します。 ファイル名にスペースが含まれていないことを確認します。
+* Acrobatを使用して Word ドキュメントを開く
+* Acrobatのフォーム準備ツールを使用して、フォーム上のフォームフィールドを識別します。
+* PDF を保存します。 ファイル名にスペースが含まれていないことを確認してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22575?quality=9&learn=on)
 
 >[!NOTE]
 >
->Adobe Signを使用した署名用に入力可能なacroformを送信する場合は、フィールドに適宜名前を付けてください。 例えば、フィールドに&#x200B;**Sig_es_:signer1:signature**&#x200B;と名前を付けることができます。 これは、Adobe Signが理解できる構文です。
+>Adobe Signを使用した署名用に入力可能な acroform を送信する場合は、フィールドに適宜名前を付けてください。 例えば、フィールドに **Sig_es_:signer1:署名**. これは、Adobe Signが理解できる構文です。
 
 >[!NOTE]
 >
->XFAベースのドキュメントを送信する場合は、ドキュメントを統合する必要があります。Adobe Signの署名タグは、ドキュメント内に静的テキストとして存在する必要があります。
+>XFA ベースのドキュメントを送信する場合は、統合したドキュメントを送信し、ドキュメント内に静的テキストとしてAdobe Signの署名タグを配置する必要があります。
 
 [Adobe Sign Text Tags Document](https://helpx.adobe.com/jp/sign/using/text-tag.html)
 
 >[!NOTE]
 >
->acroformファイル名にスペースが含まれていないことを確認します。 現在のサンプルコードでは、スペースは処理されません。
+>acroform ファイル名にスペースが含まれていないことを確認します。 現在のサンプルコードではスペースを処理しません。
 >
 >フォームフィールド名には、次の項目のみを含めることができます。
 >
->* 単一スペース
->* 単一アンダースコア
+>* 1 つのスペース
+>* 1 つのアンダースコア
 >* 英数字
 

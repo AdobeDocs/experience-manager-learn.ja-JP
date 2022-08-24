@@ -5,20 +5,20 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 topic: Development
 kt: 8852
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
 
-# サーブレットを作成して送信データを処理
+# サーブレットを作成して送信されたデータを処理
 
-IntelliJ で aem-banking プロジェクトを開始します。
-簡単なサーブレットを作成して、送信されたデータをログファイルに出力します。次のスクリーンショットに示すように、コードがコアプロジェクトに含まれていることを確認します
+IntelliJ で aem-banking プロジェクトを起動します。
+簡単なサーブレットを作成して、送信されたデータをログファイルに出力します。次のスクリーンショットに示すように、コードがコアプロジェクト内にあることを確認します。
 ![create-servlet](assets/create-servlet.png)
 
 ```java
@@ -42,8 +42,8 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## カスタム送信の作成
 
-カスタム送信を、 [AEM Formsの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
-post.formst.jsp の次のコードは、/bin/formstutional にマウントされたPOSTに要求を転送するだけです。 これは、前の手順で作成したサーブレットと同じです
+app/bankingapplication フォルダーに、 [AEM Formsの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
+post.formstution.jsp の次のコードは、/bin/formstutorial にマウントされたPOSTに要求を転送するだけです。 これは、前の手順で作成したサーブレットと同じです
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
@@ -51,7 +51,7 @@ com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/f
 
 ## アダプティブフォームの設定
 
-これで、アダプティブフォームを設定して、 **Submit To AEM Servlet**
+これで、アダプティブフォームを設定して、次の名前のカスタム送信ハンドラーに送信できます。 **AEM Servlet に送信**
 
 
 

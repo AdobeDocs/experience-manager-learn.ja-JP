@@ -1,44 +1,44 @@
 ---
-title: AEM Formsを使用したAcroforms
-description: Acroformを使用したアダプティブフォームの作成と、データの結合によるPDFの取得に関する手順を示すチュートリアルです。 その後、データがマージされたPDFを、Adobe Signを使用した署名用に送信できます。
+title: AEM Formsを使用した Acroforms
+description: Acroform を使用したアダプティブフォームの作成と、データの結合を使用したPDF。 結合されたデータを含むPDFは、Adobe Signを使用した署名用に送信できます。
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 4%
 
 ---
 
 
-# AcroformsからのアダプティブFormsの作成
+# Acroforms からのアダプティブFormsの作成
 
-組織は様々なフォームを持っています。 これらのフォームの一部はMicrosoft Wordで作成され、PDFに変換されます。 デフォルトでは、これらのフォームはAdobe ReaderまたはAcrobatを使用して入力できません。 AcrobatまたはReaderを使用してこれらのフォームを入力できるようにするには、これらのフォームをAcroformに変換する必要があります。 Acroformsは、Acrobatを使用して作成されたフォームです。 この記事では、Acroformからアダプティブフォームを作成し、データをAcroformにマージしてPDFを取得する手順について説明します。 データがマージされたPDFも、Adobe Signを使用した署名用に送信できます。
+組織は様々な形式を持っています。 これらのフォームの一部はMicrosoft Word で作成され、PDFに変換されます。 デフォルトでは、これらのフォームはAdobe ReaderまたはAcrobatを使用して入力できません。 AcrobatまたはReaderを使用してこれらのフォームを入力できるようにするには、これらのフォームを Acroform に変換する必要があります。 Acroforms は、Acrobatを使用して作成されたフォームです。 この記事では、Acroform からアダプティブフォームを作成し、データを Acroform に結合してPDFを取得する方法について説明します。 結合されたデータを含むPDFは、Adobe Signを使用した署名用に送信することもできます。
 
 >[!NOTE]
 >
->AEM Forms 6.5を使用している場合は、Automated forms conversion機能を使用してください。
+>AEM Forms 6.5 を使用している場合は、Automated forms conversion機能を使用してください。
 
 ## 前提条件
 
-* AEM Forms 6.3または6.4がインストールおよび設定済み
+* AEM Forms 6.3 または 6.4 がインストールおよび設定済み
 * Adobe Acrobatへのアクセス
-* AEM/AEM Formsに精通している。
+* AEM/AEM Formsに精通。
 
-### この機能をシステムで動作させるには、次の操作が必要です
+### この機能をシステムで動作させるには、次が必要です
 
-* [Felix Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをダウンロードし、デプロイします。
+* を使用してバンドルをダウンロードおよびデプロイします [Felix Web コンソール](http://localhost:4502/system/console/bundles)
 * [DocumentServicesBundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * [DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [AcroFormsToAEM FormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
-* [このパッケージをダウンロードして、AEM ](assets/acro-form-aem-form.zip)にインポートします。このパッケージには、acroformからXSDを作成するサンプルワークフローとHTMLページが含まれています
-* [configMgr](http://localhost:4502/system/console/configMgr)を開きます。
+* [AcroFormsToAEMFormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
+* [このパッケージをダウンロードしてAEMにインポート](assets/acro-form-aem-form.zip). このパッケージには、acroform から XSD を作成するサンプルワークフローと HTML ページが含まれています。
+* を開きます。 [configMgr](http://localhost:4502/system/console/configMgr)
    * 「Apache Sling Service User Mapper Service」を検索し、クリックしてプロパティを開きます。
-   * `+`アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
+   * 次をクリック： `+` アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
       * `DevelopingWithServiceUser.core:getresourceresolver=data`
       * `DevelopingWithServiceUser.core:getformsresourceresolver=fd-service`
    * 「保存」をクリックします。

@@ -1,37 +1,35 @@
 ---
-title: AEM FormsとJSONスキーマおよびデータ
-seo-title: AEM FormsとJSONスキーマおよびデータ
-description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
-seo-description: マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
-feature: アダプティブフォーム
+title: AEM Formsと JSON スキーマおよびデータ
+seo-title: AEM Forms with JSON Schema and Data
+description: マルチパートチュートリアルで、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 開発
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 014506e5-a7c9-4220-a429-71c961af36ba
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 2%
+source-wordcount: '109'
+ht-degree: 0%
 
 ---
 
+# AEM Formsと JSON スキーマおよびデータ
 
-# AEM FormsとJSONスキーマおよびデータ
-
-マルチパートチュートリアルでは、JSONスキーマを使用したアダプティブフォームの作成と送信済みデータのクエリに関する手順について説明します。
+マルチパートチュートリアルで、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
 
 このチュートリアルに従うには、次のをインストールすることをお勧めします。
 
-* AEM 6.3以降（適切なフォームアドオンパッケージを使用）
+* AEM 6.3 以降（適切なフォームアドオンパッケージを使用）
 
-* MySQL 8データベース
+* MySQL 8 データベース
 
 * MySQL 8 workbench
 
-また、AEMとAEM Formsに関するある程度の経験を持つことをお勧めします。 また、MySQL DBとMySQL Workbenchのインストールについても詳しく知っている必要があります
-
-
+また、AEMとAEM Formsに関するある程度の経験を積むことをお勧めします。 また、MySQL DB と MySQL Workbench のインストールに関する知識も必要です

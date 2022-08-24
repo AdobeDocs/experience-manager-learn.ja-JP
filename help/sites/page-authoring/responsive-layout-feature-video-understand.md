@@ -1,33 +1,33 @@
 ---
-title: AEM Sitesでのレスポンシブレイアウトの理解
-seo-title: AEM Sitesでのレスポンシブレイアウトの理解
-description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者は、様々なデバイス向けにレスポンシブコンテンツを作成し、AEM内でエンドユーザーエクスペリエンスをプレビューできます。
-seo-description: 様々なデバイス向けのレスポンシブレイアウトを作成する手順について説明します。
-feature: ページエディター、編集可能なテンプレート
+title: AEM Sitesでのレスポンシブレイアウトについて
+seo-title: Understanding Responsive Layout with AEM Sites
+description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者は、様々なデバイス向けのレスポンシブコンテンツを作成し、AEM内でエンドユーザーエクスペリエンスをプレビューできます。
+seo-description: Covers the steps to author responsive layout for different devices
+feature: Page Editor, Editable Templates
 topics: authoring, responsive
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 15%
+source-wordcount: '110'
+ht-degree: 17%
 
 ---
 
-
 # レスポンシブレイアウトについて {#understanding-responsive-layout-with-aem-sites}
 
-Adobe Experience Manager Sitesでは、レスポンシブサイトデザインを容易にするために、作成者がデバイスの幅に基づいてコンポーネントの幅を管理できます。 レイアウトモードとレイアウトコンテナを使用すると、AEM UIを離れることなく、様々なデバイス用のレスポンシブコンテンツを作成し、エンドユーザーエクスペリエンスをプレビューできます。
+Adobe Experience Manager Sitesでは、レスポンシブサイトデザインを容易にするために、作成者がデバイスの幅に基づいてコンポーネントの幅を管理できます。 レイアウトモードとレイアウトコンテナを使用すると、AEM UI を離れることなく、様々なデバイス向けのレスポンシブコンテンツを作成し、エンドユーザーエクスペリエンスをプレビューできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
 
 ## その他のリソース {#additional-resources}
 
-* [レスポンシブレイアウトのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)
+* [レスポンシブレイアウトドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)

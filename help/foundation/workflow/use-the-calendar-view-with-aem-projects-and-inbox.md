@@ -1,30 +1,30 @@
 ---
-title: AEM Projectsとインボックスでのカレンダービューの使用
-seo-title: AEMプロジェクトとインボックスでのカレンダービューの使用
-description: 'AEMカレンダー表示では、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスクを全体的に確認できます。 '
-seo-description: AEMカレンダー表示では、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスクを全体的に確認できます。
-version: 6.3, 6.4, 6.5
-feature: ワークフロー、プロジェクト
+title: AEM Projects とインボックスでのカレンダービューの使用
+seo-title: Use Calendar View with AEM Projects and Inbox
+description: 'AEMのカレンダー表示では、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスクを全体的に確認できます。 '
+seo-description: AEM's Calendar View tracks projects and tasks in a calendar view for easier project management and scheduling. With Calendar view, user would have an overall visibility over projects and tasks that are currently in progress, planned, due soon and past due.
+version: 6.4, 6.5
+feature: Workflow, Projects
 topics: governance, collaboration
 activity: use
 audience: author, analyst
 doc-type: feature video
 uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
 discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
-topic: コラボレーション
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
 
-# AEM Projectsとインボックスでのカレンダービューの使用
+# AEM Projects とインボックスでのカレンダービューの使用
 
-AEMカレンダー表示では、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスクを全体的に確認できます。
+AEMのカレンダー表示では、プロジェクトとタスクをカレンダー表示で追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスクを全体的に確認できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804/?quality=12&learn=on)
 
@@ -32,6 +32,6 @@ AEMカレンダー表示では、プロジェクトとタスクをカレンダ�
 
 * ユーザーは、自分に割り当てられたプロジェクトのリストを表示し、カレンダー表示からプロジェクトに移動できます。 管理者は、すべてのプロジェクトを表示できます。
 * カスタマイズ可能な日付範囲機能を使用して、特定の期間内のプロジェクトの進行状況を監視できます。
-* ユーザーは、完了、遅延、または期限通りにプロジェクトまたはタスクにフラグを設定できます。
+* ユーザーは、プロジェクトまたはタスクに完了、遅延、または期限にフラグを設定できます。
 * ユーザーは、カレンダー表示でプロジェクトに説明を追加できます。
 * ユーザーは、プロジェクトとタスクに優先度レベルを追加できます。

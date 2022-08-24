@@ -1,28 +1,28 @@
 ---
 title: AEM Formsのフォームエディターの改善点
-description: AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを操作できるようになります
-feature: アダプティブフォーム
-version: 6.3,6.4,6.5
-topic: 開発
+description: AEM 6.3 では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 18%
+source-wordcount: '187'
+ht-degree: 24%
 
 ---
 
-
 # AEM Formsのフォームエディターの改善点 {#form-editor-improvements-in-aem-forms}
 
-AEM 6.3では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを操作できるようになります
+AEM 6.3 では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
 
 >[!VIDEO](https://video.tv.adobe.com/v/19500/)
 
-**アダプティブフォームエディターの主な改善点には、次のものがあります。**
+**アダプティブフォームエディターの主な改善点を次に示します。**
 
-* [エンドユーザーエクスペリエンスの向上](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
+* [エンドユーザーエクスペリエンスの向上](https://helpx.adobe.com/jp/aem-forms/6-3/introduction-forms-authoring.html)
 
 * 自動入力フォームフィールド
 * テキストボックスコンポーネントのリッチテキスト

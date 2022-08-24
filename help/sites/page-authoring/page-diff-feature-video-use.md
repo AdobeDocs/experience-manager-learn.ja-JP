@@ -1,30 +1,30 @@
 ---
-title: AEM Sitesでのページ差の使用
-seo-title: AEM Sitesでのページ差の使用
-description: AEM Sitesのページ差異機能の表示では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく確認できます。
-seo-description: AEM Sitesのページ差異機能の表示では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく確認できます。
+title: AEM Sitesでのページの違いの使用
+seo-title: Using Page Difference with AEM Sites
+description: AEM Sites のページ差異機能で示されるのは、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できるようにする機能です。
+seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '118'
+ht-degree: 1%
 
 ---
 
+# ページの差異機能の使用 {#using-page-difference-with-aem-sites}
 
-# ページの違い機能の使用 {#using-page-difference-with-aem-sites}
-
-AEM Sitesのページ差異機能の表示では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく確認できます。
+AEM Sites のページ差異機能で示されるのは、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できるようにする機能です。
 
 ## ページのバージョンの比較 {#comparing-page-versions}
 
@@ -45,8 +45,8 @@ AEM Sitesのページ差異機能の表示では、ページ内で変更され�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
-ページの違い機能は、ブループリントとライブコピー、ブループリントと言語コピーの違いを識別するためにも使用できます。
+ページの差異機能を使用して、ブループリントとライブコピー、ブループリントと言語コピーの違いを識別することもできます。
 
 ## その他のリソース {#additional-resources}
 
-* [ページ差分ドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [ページの差分ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)

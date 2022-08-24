@@ -1,24 +1,24 @@
 ---
 title: AEM Sitesでのオーサリングの概要
 seo-title: Overview of Authoring in AEM Sites
-description: 次のビデオでは、AEMオーサー環境でのオーサリングの基本概念の概要を説明します。 これはサイトコンソールを基礎として使用します。
+description: 次のビデオでは、AEMオーサー環境でのオーサリングに関する基本的な概念の概要を説明します。 Sites コンソールを基礎として使用します。
 seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
 feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 4242
 thumbnail: 33594.jpg
 topic: Content Management
 role: User
 level: Beginner
 exl-id: e71b106d-a44b-44af-ba85-7fb5806cdb83
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '79'
-ht-degree: 20%
+ht-degree: 30%
 
 ---
 
@@ -30,5 +30,5 @@ ht-degree: 20%
 
 ## その他のリソース {#additional-resources}
 
-* [ページコンテンツの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [ページコンテンツドキュメントの編集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=ja)
 * [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

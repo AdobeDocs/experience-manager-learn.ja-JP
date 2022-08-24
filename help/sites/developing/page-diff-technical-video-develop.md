@@ -1,44 +1,44 @@
 ---
 title: AEM Sitesでのページの違いに対する開発
-description: このビデオでは、AEM Sitesのページの違い機能にカスタムスタイルを提供する方法を説明します。
-feature: オーサリング
+description: このビデオでは、AEM Sites のページの違いの機能にカスタムスタイルを提供する方法を説明します。
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
-topic: 開発
+version: 6.4, 6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '293'
 ht-degree: 6%
 
 ---
 
+# ページ差のための開発 {#developing-for-page-difference}
 
-# ページの違いに対する開発 {#developing-for-page-difference}
+このビデオでは、AEM Sites のページの違いの機能にカスタムスタイルを提供する方法を説明します。
 
-このビデオでは、AEM Sitesのページの違い機能にカスタムスタイルを提供する方法を説明します。
-
-## ページ差異スタイルのカスタマイズ {#customizing-page-difference-styles}
+## ページの差異スタイルのカスタマイズ {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->このビデオでは、カスタムCSSをwe.Retailクライアントライブラリに追加します。このライブラリでは、これらの変更をカスタマイザーのAEM Sitesプロジェクトに加える必要があります。以下のコード例：`my-project`.
+>このビデオでは、カスタム CSS を we.Retail クライアントライブラリに追加します。このライブラリでは、これらの変更をカスタマイズ者のAEM Sitesプロジェクトに加える必要があります。以下のコード例： `my-project`.
 
-AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`の直接の読み込みを介してOOTB CSSを取得します。
+AEMのページの違いは、 `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
 
-クライアントライブラリカテゴリを使用するのではなく、CSSのこの直接読み込みのため、カスタムスタイルに別の挿入ポイントを見つける必要があります。このカスタム挿入ポイントは、プロジェクトのオーサリングクライアントライブラリです。
+クライアントライブラリカテゴリを使用するのではなく、CSS のこの直接読み込みのため、カスタムスタイルの別の挿入ポイントを見つける必要があります。このカスタム挿入ポイントは、プロジェクトのオーサリング clientlib です。
 
-これには、これらのカスタムスタイルの上書きをテナント固有にできるという利点があります。
+これにより、これらのカスタムスタイルの上書きをテナント固有にすることができます。
 
 ### オーサリングクライアントライブラリの準備 {#prepare-the-authoring-clientlib}
 
-`/apps/my-project/clientlib/authoring.`にプロジェクト用の`authoring`クライアントライブラリが存在することを確認します。
+の存在を確認する `authoring` プロジェクトの clientlib( ) `/apps/my-project/clientlib/authoring.`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,9 +47,9 @@ AEMのページ差は、`/libs/cq/gui/components/common/admin/diffservice/client
         categories="[my-project.authoring]"/>
 ```
 
-### カスタムCSSの提供 {#provide-the-custom-css}
+### カスタム CSS の提供 {#provide-the-custom-css}
 
-上書きスタイルを提供するLESSファイルを指すプロジェクトの`authoring`クライアントライブラリ`css.txt`にを追加します。 [](https://lesscss.org/) この例で利用されるクラスラッピングを含む、便利な機能の多くは、より少ない方が望ましいです。
+プロジェクトの `authoring` clientlib a `css.txt` これは、上書きスタイルを提供する less ファイルを指しています。 [低](https://lesscss.org/) は、この例で利用されるクラスラッピングを含む多くの便利な機能により推奨されます。
 
 ```shell
 base=./css
@@ -57,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-`/apps/my-project/clientlibs/authoring/css/htmldiff.less`にスタイルの上書きを含む`less`ファイルを作成し、必要に応じてオーバーリングスタイルを指定します。
+を作成します。 `less` 次の場所にあるスタイルオーバーライドを含むファイル `/apps/my-project/clientlibs/authoring/css/htmldiff.less`を使用し、必要に応じてオーバーリングスタイルを指定します。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,11 +103,11 @@ body {
 }
 ```
 
-### ページコンポーネントを介してオーサリングクライアントライブラリCSSを含める {#include-the-authoring-clientlib-css-via-the-page-component}
+### ページコンポーネントを介してオーサリング clientlib CSS を含める {#include-the-authoring-clientlib-css-via-the-page-component}
 
-オーサリングclientlibsカテゴリをプロジェクトの基本ページの`/apps/my-project/components/structure/page/customheaderlibs.html`の`</head>`タグの直前に含めて、スタイルが読み込まれるようにします。
+オーサリング clientlibs カテゴリをプロジェクトのベースページの `/apps/my-project/components/structure/page/customheaderlibs.html` 直前 `</head>` タグを使用して、スタイルが読み込まれるようにします。
 
-これらのスタイルは、[!UICONTROL 編集]と[!UICONTROL プレビュー]のWCMモードに制限する必要があります。
+これらのスタイルは、次に限定する必要があります。 [!UICONTROL 編集] および [!UICONTROL プレビュー] WCM モード。
 
 ```xml
 <head>
@@ -117,12 +117,12 @@ body {
 </head>
 ```
 
-上記のスタイルが適用された差分ページの最終結果は、次のようになります（HTMLが追加され、コンポーネントが変更されました）。
+上記のスタイルが適用された差分ページの最終結果は、次のようになります (HTMLが追加され、コンポーネントが変更されました )。
 
-![ページの差](assets/page-diff.png)
+![ページの差異](assets/page-diff.png)
 
 ## その他のリソース {#additional-resources}
 
-* [we.Retailサンプルサイトのダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [we.Retail サンプルサイトのダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [AEMクライアントライブラリの使用](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [CSSのドキュメントを減らす](https://lesscss.org/)
+* [CSS ドキュメントの削減](https://lesscss.org/)

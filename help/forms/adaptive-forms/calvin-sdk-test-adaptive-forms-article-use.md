@@ -1,44 +1,44 @@
 ---
-title: 'AEM Adaptive Formsでの自動テストの使用 '
-description: Calvin SDKを使用したアダプティブFormsの自動テスト
-feature: アダプティブフォーム
+title: AEM Adaptive Formsでの自動テストの使用
+description: Calvin SDK を使用したアダプティブFormsの自動テスト
+feature: Adaptive Forms
 doc-type: article
 activity: develop
-version: 6.3,6.4,6.5
-topic: 開発
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 4%
+source-wordcount: '443'
+ht-degree: 8%
 
 ---
 
-
 # AEM Adaptive Formsでの自動テストの使用 {#using-automated-tests-with-aem-adaptive-forms}
 
-Calvin SDKを使用したアダプティブFormsの自動テスト
+Calvin SDK を使用したアダプティブFormsの自動テスト
 
-Calvin SDK は、アダプティブフォームをテストするためのアダプティブフォーム開発者用のユーティリティ API です。Calvin SDKは、[Hobbes.jsテストフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)上に構築されています。 Calvin SDKは、AEM Forms 6.3以降で使用できます。
+Calvin SDK は、アダプティブフォームをテストするためのアダプティブフォーム開発者用のユーティリティ API です。Calvin SDK は [Hobbes.js テストフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)上に構築されます。Calvin SDK は、AEM Forms 6.3 以降で使用できます。
 
-このチュートリアルでは、次の内容を作成します。
+このチュートリアルでは、次のものを作成します。
 
 * テストスイート
-* テストスイートには、1つ以上のテストケースが含まれます
-* テストケースには、1つ以上のアクションが含まれます
+* テストスイートには 1 つ以上のテストケースが含まれます
+* テストケースには 1 つ以上のアクションが含まれます
 
 ## 概要 {#getting-started}
 
-[パッケージマネージャーを使用したアセットのダウンロードとインストー](assets/testingadaptiveformsusingcalvinsdk1.zip)ルこのパッケージには、サンプルスクリプトといくつかのアダプティブFormsが含まれています。これらのアダプティブFormsは、AEM Forms 6.3バージョンを使用して構築されています。AEM Forms 6.4以降でテストする場合は、お使いのバージョンのAEM Formsに固有の新しいフォームを作成することをお勧めします。 サンプルスクリプトは、Adaptive Formsのテストに使用できる様々なCalvin SDK APIを示します。 AEM Adaptive Formsをテストする一般的な手順は次のとおりです。
+[パッケージマネージャーを使用したアセットのダウンロードとインストール](assets/testingadaptiveformsusingcalvinsdk1.zip)パッケージには、サンプルスクリプトといくつかのアダプティブFormsが含まれています。これらのアダプティブFormsは、AEM Forms 6.3 バージョンを使用して構築されています。 AEM Forms 6.4 以降でテストする場合は、お使いのバージョンのAEM Formsに固有の新しいフォームを作成することをお勧めします。 このサンプルスクリプトは、Adaptive Formsのテストに使用できる様々な Calvin SDK API を示しています。 AEM Adaptive Formsをテストする一般的な手順は次のとおりです。
 
 * テストする必要があるフォームに移動します
-* フィールドの値の設定
-* アダプティブフォームの送信
-* エラーメッセージの確認
+* フィールドの値を設定
+* アダプティブフォームを送信する
+* エラーメッセージを確認
 
 パッケージ内のサンプルスクリプトは、上記のすべてのアクションを示しています。
-`mortgageForm.js`のコードを調べましょう。
+のコードを見てみましょう `mortgageForm.js`
 
 ```javascript
 var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
@@ -49,9 +49,9 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 上記のコードは、新しいテストスイートを作成します。
 
-* この場合のTestSuiteの名前は「 `Mortgage Form Test` 」です。
-* テストスイートを含むjsファイルへのAEMの絶対パスを指定します。
-* 「 `true` 」に設定した場合、registerパラメーターは、テストスイートをテストUIで使用できるようにします。
+* この場合の TestSuite の名前は「 」です。 `Mortgage Form Test` &#39;.
+* テストスイートを含む js ファイルへのAEMの絶対パスが指定されます。
+* &#39;に設定された場合のレジスターパラメーター `true` 」と入力すると、テストスイートがテスト UI で使用できるようになります。
 
 ```javascript
 .addTestCase(new hobs.TestCase("Calculate amount to borrow")
@@ -64,26 +64,26 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 >[!NOTE]
 >
->この機能をAEM Forms 6.4以降でテストしている場合は、新しいアダプティブフォームを作成し、それを使用してテストをおこなってください。パッケージに付属するアダプティブフォームの使用はお勧めしません。
+>この機能をAEM Forms 6.4 以降でテストする場合は、新しいアダプティブフォームを作成し、それを使用してテストを行ってください。パッケージに付属するアダプティブフォームの使用はお勧めしません。
 
-テストケースをテストスイートに追加して、アダプティブフォームに対して実行することができます。
+アダプティブフォームに対して実行するテストスイートにテストケースを追加できます。
 
-* テストスイートにテストケースを追加するには、TestSuiteオブジェクトの`addTestCase`メソッドを使用します。
-* `addTestCase`メソッドは、TestCaseオブジェクトをパラメーターとして取ります。
-* TestCaseを作成するには、`hobs.TestCase(..)`メソッドを使用します。
-* 注意：最初のパラメーターは、UIに表示されるテストケースの名前です。
+* テストスイートにテストケースを追加するには、 `addTestCase` TestSuite オブジェクトのメソッド。
+* この `addTestCase` メソッドは、 TestCase オブジェクトをパラメーターとして受け取ります。
+* TestCase を作成するには、 `hobs.TestCase(..)` メソッド。
+* 注意：最初のパラメーターは、UI に表示されるテストケースの名前です。
 * テストケースを作成したら、テストケースにアクションを追加できます。
-* `navigateTo`、`asserts.isTrue`などのアクションをアクションとしてテストケースに追加できます。
+* 次を含むアクション `navigateTo`, `asserts.isTrue` は、アクションとしてテストケースに追加できます。
 
 ## 自動化されたテストの実行 {#running-the-automated-tests}
 
-[](http://localhost:4502/libs/granite/testing/hobbes.html)testsuiteを開き、テストスイートを展開してテストを実行します。すべてが正常に実行された場合は、次の出力が表示されます。
+[Openthetestsuite](http://localhost:4502/libs/granite/testing/hobbes.html)「 Test Suite 」を展開し、テストを実行します。 すべてが正常に実行された場合は、次の出力が表示されます。
 
 ![calvinsdk](assets/calvinimage.png)
 
 ## サンプルテストスイートを試す {#try-out-the-sample-test-suites}
 
-サンプルパッケージの一部として、追加のテストスイートが3つあります。 次に示すように、クライアントライブラリのjs.txtファイルに適切なファイルを含めることで、ファイルを試すことができます。
+サンプルパッケージの一部として、追加のテストスイートが 3 つあります。 次に示すように、クライアントライブラリの js.txt ファイルに適切なファイルを含めることで、ファイルを試すことができます。
 
 ```javascript
 #base=.

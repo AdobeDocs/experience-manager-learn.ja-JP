@@ -1,36 +1,36 @@
 ---
-title: 'JSON Webトークンとアクセストークンの生成 '
-description: この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
-feature: アダプティブForms、フォームデータモデル
-version: 6.3,6.4,6.5
-topic: 開発
+title: JSON Web トークンとアクセストークンの生成
+description: この記事では、Adobe Campaign Standardに対して REST 呼び出しをおこなうために必要な JWT およびアクセストークンの生成に必要なコードについて説明します
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
+# JSON Web トークンとアクセストークンの生成 {#generating-json-web-token-and-access-token}
 
-# JSON Webトークンとアクセストークンの生成 {#generating-json-web-token-and-access-token}
+この記事では、Adobe Campaign Standardに対して REST 呼び出しをおこなうために必要な JWT およびアクセストークンの生成に必要なコードについて説明します
 
-この記事では、Adobe Campaign Standardに対してREST呼び出しをおこなうために必要なJWTおよびアクセストークンの生成に必要なコードについて説明します
+## JSON Web トークンを生成 {#generate-json-web-token}
 
-## JSON Webトークンを生成 {#generate-json-web-token}
+Adobe Campaign API を使用する最初の手順は、JWT を生成することです。 ACS 用の JWT の生成方法に関するコードサンプルは多数あります。 これに従ってください [java コードのサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) JWT を生成する
 
-Adobe Campaign APIを使用する最初の手順は、JWTを生成することです。 ACS用のJWTの生成方法に関するコードサンプルは多数あります。 この[javaコードのサンプル](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)に従ってJWTを生成できます。
-
-AEM FormsでACS APIを使用するには、OSGiバンドル内にJWTを作成する必要があります。 このサンプルOSGIバンドルでJWTを生成するには、次のコードスニペットを使用します。 ACSインスタンスに関する詳細は、上に示すように設定されたOSGI設定プロパティから取得されます。
+ACS API をAEM Formsで使用するには、OSGi バンドル内に JWT を作成する必要があります。 このサンプル OSGI バンドルで JWT を生成するには、次のコードスニペットを使用しました。 ACS インスタンスに関する詳細は、上記のように設定された OSGi 設定プロパティから取得されます。
 
 ![設定](assets/campaignconfiguration.gif)
 
 **A.** ここに示す値はダミー値です
 
-次のコードは、OSGi設定からAdobe Campaignサーバーに関する詳細を取得します。 80～104行目の秘密鍵を作成します。
+次のコードは、OSGi 設定からAdobe Campaign Server に関する詳細を取得します。 80～104 行目の秘密鍵を作成します。
 
-秘密鍵を取得したら、JSON Webトークンを作成します。
+秘密鍵が手に入ったら、JSON Web トークンを作成します。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -241,4 +241,4 @@ public class CampaignServiceImpl implements CampaignService {
 
 ## アクセストークンの生成 {#generate-access-token}
 
-次に、生成されたJWTをアクセストークンと交換するために、POST呼び出しをおこないます。 その後、このアクセストークンは、後続のREST呼び出しのHTTPヘッダーで認証キーとして送信されます
+次に、生成された JWT をアクセストークンと交換します。それには、POST呼び出しを実行します。 その後、このアクセストークンは、後続の REST 呼び出し用に HTTP ヘッダーで認証キーとして送信されます。

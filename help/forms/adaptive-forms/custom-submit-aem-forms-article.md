@@ -1,35 +1,35 @@
 ---
 title: AEM Formsでのカスタム送信の作成
-description: アダプティブフォーム向けに独自のカスタム送信アクションを簡単かつ迅速に作成する方法
-feature: アダプティブフォーム
-version: 6.3,6.4,6.5
-topic: 開発
+description: アダプティブフォーム用に独自のカスタム送信アクションを簡単かつ迅速に作成する方法
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
-
 # AEM Formsでのカスタム送信の作成 {#writing-a-custom-submit-in-aem-forms}
 
-アダプティブフォーム向けに独自のカスタム送信アクションを簡単かつ迅速に作成する方法
+アダプティブフォーム用に独自のカスタム送信アクションを簡単かつ迅速に作成する方法
 
 この記事では、アダプティブFormsの送信を処理するためのカスタム送信アクションを作成するために必要な手順について説明します。
 
-* crxにログインします。
-* appsの下に、タイプ「sling :folder」のノードを作成します。 このノードをCustomSubmitHelpxと呼びます。
+* crx にログイン
+* apps の下に、タイプ「sling :folder」のノードを作成します。 このノードを CustomSubmitHelpx と呼びます。
 * 新しく作成したノードを保存します。
-* 新しく作成したノードに次の2つのプロパティを追加します
-* プロパティ名       |プロパティ値
+* 新しく作成したノードに次の 2 つのプロパティを追加します。
+* プロパティ名 |プロパティ値
 * guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel     | xfa,xsd,basic
-* jcr :description   | CustomSubmitHelpx
+* guideDataModel | xfa,xsd,basic
+* jcr :description | CustomSubmitHelpx
 * 変更を保存します。
-* CustomSubmitHelpxPOSTの下に、post.node.jspという名前の新しいファイルを作成します。アダプティブフォームが送信されると、このJSPが呼び出されます。 必要に応じて、このファイルにJSPコードを書き込むことができます。 次のコードは、要求をサーブレットに転送します。
+* CustomSubmitHelpxPOSTの下に post.node.jsp という新しいファイルを作成します。アダプティブフォームが送信されると、この JSP が呼び出されます。 必要に応じて、このファイルに JSP コードを書き込むことができます。 次のコードは、要求をサーブレットに転送します。
 
 ```java
 <%
@@ -46,8 +46,8 @@ ht-degree: 1%
 %>
 ```
 
-* CustomSubmitHelpxノードの下にaddfields .jspというファイルを作成します。 このファイルを使用すると、署名済みドキュメントにアクセスできます。
-* このファイルに次のコードを追加します
+* CustomSubmitHelpx ノードの下に addfields.jsp という名前のファイルを作成します。 このファイルを使用すると、署名済みドキュメントにアクセスできます。
+* このファイルに次のコードを追加します。
 
 ```java
     <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -61,7 +61,6 @@ ht-degree: 1%
 
 * 変更を保存します
 
-次の図に示すように、アダプティブフォームの送信アクションに「CustomSubmitHelpx」が表示され始めます。
+次の画像のように、アダプティブフォームの送信アクションに「CustomSubmitHelpx」が表示され始めます。
 
 ![カスタム送信を含むアダプティブフォーム](assets/capture-2.gif)
-

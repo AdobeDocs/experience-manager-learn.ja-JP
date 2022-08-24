@@ -1,18 +1,18 @@
 ---
 title: フォームデータモデルを使用したキャンペーンプロファイルの作成
 description: AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプロファイルの作成に関する手順
-feature: アダプティブフォーム
-version: 6.3,6.4,6.5
-topic: 開発
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 4%
+source-wordcount: '426'
+ht-degree: 3%
 
 ---
-
 
 # フォームデータモデルを使用したキャンペーンプロファイルの作成 {#create-campaign-profile-using-form-data-model}
 
@@ -20,7 +20,7 @@ AEM Formsフォームデータモデルを使用したAdobe Campaign Standardプ
 
 ## カスタム認証の作成 {#create-custom-authentication}
 
-Swaggerファイルを使用してデータソースを作成する場合、AEM Formsは次の種類の認証をサポートします
+Swagger ファイルを使用してデータソースを作成する場合、AEM Formsは次の種類の認証をサポートします
 
 * なし
 * OAuth 2.0
@@ -30,13 +30,13 @@ Swaggerファイルを使用してデータソースを作成する場合、AEM 
 
 ![campaignfdm](assets/campaignfdm.gif)
 
-Adobe Campaign StandardへのREST呼び出しをおこなうには、カスタム認証を使用する必要があります。
+Adobe Campaign Standardへの REST 呼び出しをおこなうには、カスタム認証を使用する必要があります。
 
-カスタム認証を使用するには、IAuthenticationインターフェイスを実装するOSGiコンポーネントを開発する必要があります
+カスタム認証を使用するには、IAuthentication インターフェイスを実装する OSGi コンポーネントを開発する必要があります
 
-getAuthDetailsメソッドを実装する必要があります。 このメソッドは、 AuthenticationDetailsオブジェクトを返します。 このAuthenticationDetailsオブジェクトには、Adobe CampaignへのREST API呼び出しをおこなうために必要なHTTPヘッダーが設定されます。
+メソッド getAuthDetails を実装する必要があります。 このメソッドは AuthenticationDetails オブジェクトを返します。 この AuthenticationDetails オブジェクトには、Adobe Campaignへの REST API 呼び出しを行うために必要な必須 HTTP ヘッダーが設定されます。
 
-次に、カスタム認証の作成に使用したコードを示します。 getAuthDetailsメソッドは、すべての処理を実行します。 AuthenticationDetailsオブジェクトを作成します。 次に、適切なHttpHeadersをこのオブジェクトに追加し、このオブジェクトを返します。
+次に、カスタム認証の作成で使用したコードを示します。 getAuthDetails メソッドはすべての動作を行います。 AuthenticationDetails オブジェクトを作成します。 次に、このオブジェクトに適切な HttpHeaders を追加し、このオブジェクトを返します。
 
 ```java
 package aemfd.campaign.core;
@@ -99,30 +99,29 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## データソースの作成 {#create-data-source}
+## データソースを作成 {#create-data-source}
 
-最初の手順は、Swaggerファイルを作成することです。 Swaggerファイルは、Adobe Campaign Standardでのプロファイルの作成に使用されるREST APIを定義します。 Swaggerファイルは、REST APIの入力パラメーターと出力パラメーターを定義します。
+最初の手順は、Swagger ファイルを作成することです。 Swagger ファイルは、Adobe Campaign Standardでのプロファイルの作成に使用される REST API を定義します。 Swagger ファイルは、REST API の入力パラメーターと出力パラメーターを定義します。
 
-データソースはSwaggerファイルを使用して作成されます。 データソースの作成時に、認証タイプを指定できます。 この場合、Adobe Campaignに対する認証にカスタム認証を使用します。上記のコードは、Adobe Campaignに対する認証に使用されました。
+データソースは Swagger ファイルを使用して作成されます。 データソースを作成する際に、認証タイプを指定できます。 この場合、Adobe Campaignに対する認証にカスタム認証を使用します。上記のコードは、Adobe Campaignに対する認証に使用されていました。
 
-この記事に関連するアセットの一部として、サンプルのSwaggerファイルが提供されます。**ACSインスタンスに合わせて、SwaggerファイルのhostとbasePathを必ず変更してください。**
+サンプルの Swagger ファイルは、この記事に関連するアセットの一部として提供されています。**Swagger ファイルの host と basePath を、ACS インスタンスに合わせて必ず変更してください。**
 
-## ソリューションのテスト {#test-the-solution}
+## ソリューションをテストする {#test-the-solution}
 
 ソリューションをテストするには、次の手順に従います。
 * [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [このファイルをダウンロードして解凍し、Swaggerファイルを取得します](assets/create-acs-profile-swagger-file.zip)
-* Swaggerファイルを使用したデータソースの作成
-フォームデータモデルを作成し、前の手順で作成したデータソースをベースにします。
+* [このファイルをダウンロードして展開し、Swagger ファイルを取得します](assets/create-acs-profile-swagger-file.zip)
+* Swagger ファイルを使用してデータソースを作成するフォームデータモデルを作成し、前の手順で作成したデータソースをベースにします。
 * 前の手順で作成したフォームデータモデルに基づいてアダプティブフォームを作成します。
 * 次の要素を「データソース」タブからアダプティブフォームにドラッグ&amp;ドロップします
 
    * 電子メール
-   * firstName
-   * 姓
+   * 名前（名）
+   * 名前（姓）
    * 携帯電話
 
 * 送信アクションを「フォームデータモデルを使用して送信」に設定します。
 * 適切に送信するようにデータモデルを設定します。
-* フォームをプレビューする. フィールドに入力し、を送信します。
+* フォームをプレビューする. フィールドに入力して送信します。
 * プロファイルがAdobe Campaign Standardで作成されたことを確認します。

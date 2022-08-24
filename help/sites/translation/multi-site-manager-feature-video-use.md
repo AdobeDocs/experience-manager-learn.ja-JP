@@ -1,42 +1,42 @@
 ---
-title: AEM Sitesでのマルチサイトマネージャーの使用
-seo-title: Adobe Experience ManagerでのMulti Site Manager Touch UIインターフェイスの使用
-description: ライブコピーの概要とブループリント設定マネージャーは、マルチサイトマネージャーで作業するためのタッチUI対応インターフェイスです。
-seo-description: ライブコピーの概要とブループリント設定マネージャーは、Adobe Experience Managerでマルチサイトマネージャーを操作するためのタッチUI対応インターフェイスです。
-feature: マルチサイトマネージャー
+title: AEM Sitesでのマルチサイトマネージャの使用
+seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
+description: ライブコピーの概要とブループリント設定マネージャーは、マルチサイトマネージャーで作業するためのタッチ UI 対応インターフェイスです。
+seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: ローカリゼーション
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 13%
+source-wordcount: '138'
+ht-degree: 14%
 
 ---
 
+# マルチサイトマネージャの使用 {#using-multi-site-manager-with-aem-sites}
 
-# マルチサイトマネージャーの使用 {#using-multi-site-manager-with-aem-sites}
-
-[!UICONTROL ライブコピーの] 概要とブ [!UICONTROL ループリント設] 定マネージャーは、Adobe Experience Manager Sitesのマルチサイトマネージャー機能を操作するためのAEMオーサーインターフェイスです。
+[!UICONTROL ライブコピーの概要] および [!UICONTROL ブループリント設定マネージャー] は、Adobe Experience Manager Sitesの Multi Site Manager 機能を操作するための AEM オーサーインターフェイスです。
 
 ## ライブコピーの概要 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
 
-*ライブコピーの概要は、ライブコピーとそのブループリントを管理するために使用されるタッチUIインターフェイスです。この機能は、AEM 6.3で導入され、クラシックUIブループリントコントロールセンターに代わるものです。*
+*ライブコピーの概要は、ライブコピーとそれぞれのブループリントを管理するために使用されるタッチ UI インターフェイスです。 この機能は、AEM 6.3 で導入され、クラシック UI ブループリントコントロールセンターに代わるものです。*
 
-## ブループリント設定マネージャー — タッチUI {#blueprint-config-mgr}
+## ブループリント設定マネージャー — タッチ UI {#blueprint-config-mgr}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17056/?quality=9&learn=on)
 
-*AEM 6.3では、マルチサイトマネージャーで使用するブループリント設定を管理するためのタッチUIインターフェイスが導入されています。*
+*AEM 6.3 では、マルチサイトマネージャーで使用するブループリント設定を管理するタッチ UI インターフェイスが導入されています。*
 
 ## その他のリソース {#additional-resources}
 

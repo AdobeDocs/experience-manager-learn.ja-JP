@@ -1,26 +1,26 @@
 ---
 title: AEM Assetsでの注釈のカスタマイズ
-description: AEM Assetsの形式とPDFへの出力時のスタイルは、AEM Developersで設定できます。
-feature: コラボレーション
-version: 6.3, 6.4, 6.5
-topic: コラボレーション
+description: AEM Assets Developers は、PDFに出力する際のの形式とスタイルをAEM Developers で設定できます。
+feature: Collaboration
+version: 6.4, 6.5
+topic: Collaboration
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 3%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
-
 # AEM Assetsでの注釈のカスタマイズ{#using-annotations-in-aem-assets}
 
-AEMでは、注釈のPDF出力のカスタマイズがサポートされています。
+AEMは、注釈の出力先PDFのカスタマイズをサポートしています。
 
-## PDF注釈sling:OsgiConfig definition
+## PDF注釈 sling:OsgiConfig の定義
 
-PDF注釈をカスタマイズするには、AEMプロジェクトの&#x200B;**sling:OsgiConfig**&#x200B;ノードを
+PDF注釈をカスタマイズするには、 **sling:OsgiConfig** の下のAEMプロジェクトのノード
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 必要に応じて値を調整します。
 

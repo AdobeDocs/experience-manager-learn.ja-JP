@@ -1,42 +1,42 @@
 ---
-title: AEM Formsでのカスタムアセットタイプの表示
-seo-title: AEM Formsでのカスタムアセットタイプの表示
-description: 第2部(AEM Formsのカスタムアセットタイプのリスト)
-seo-description: 第2部(AEM Formsのカスタムアセットタイプのリスト)
+title: AEM Formsでのカスタムアセットタイプのリスト
+seo-title: Listing Custom Asset Types in AEM Forms
+description: 第 2 部AEM Formsでのカスタムアセットタイプのリスト
+seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 1%
+source-wordcount: '595'
+ht-degree: 0%
 
 ---
 
+# AEM Formsでのカスタムアセットタイプのリスト {#listing-custom-asset-types-in-aem-forms}
 
-# AEM Forms {#listing-custom-asset-types-in-aem-forms}でのカスタムアセットタイプのリスト
-
-## カスタムテンプレート{#creating-custom-template}を作成しています
+## カスタムテンプレートの作成 {#creating-custom-template}
 
 
-この記事の目的で、カスタムアセットタイプとOOTBアセットタイプを同じページに表示するカスタムテンプレートを作成します。 カスタムテンプレートを作成するには、次の手順に従います
+この記事の目的で、カスタムアセットタイプと OOTB アセットタイプを同じページに表示するカスタムテンプレートを作成します。 カスタムテンプレートを作成するには、次の手順に従ってください
 
-1. Slingの作成：/appsの下のフォルダー。 名前を「 myportalcomponent 」にします。
-1. &quot;fpContentType&quot; プロパティを追加この値を&quot;**/libs/fd/ fp/formTemplate&quot;.**&#x200B;に設定します。
-1. 「title」プロパティを追加し、その値を「カスタムテンプレート」に設定します。 これは、Search &amp; Listerコンポーネントのドロップダウンリストに表示される名前です
+1. Sling を作成します。/apps の下のフォルダー。 名前を「 myportalcomponent 」にします。
+1. &quot;fpContentType&quot; プロパティを追加値を「**/libs/fd/ fp/formTemplate」と入力します。**
+1. 「title」プロパティを追加し、その値を「custom template」に設定します。 これは、Search &amp; Lister コンポーネントのドロップダウンリストに表示される名前です
 1. このフォルダーの下に「template.html」を作成します。 このファイルには、様々なアセットタイプのスタイルを設定および表示するコードが格納されます。
 
 ![appsfolder](assets/appsfolder_.png)
 
-次のコードは、 search &amp; listerコンポーネントを使用する様々なタイプのアセットをリストします。 アセットのタイプごとに個別のhtml要素を作成します（ data-type = &quot;videos&quot;タグで示します）。 アセットタイプが「ビデオ」の場合は、 &lt;video>要素を使用してビデオをインラインで再生します。 「worddocuments」のアセットタイプでは、異なるHTMLマークアップを使用します。
+次のコードは、 search &amp; lister コンポーネントを使用する様々なタイプのアセットをリストします。 アセットのタイプごとに別々の html 要素を作成します（ data-type = &quot;videos&quot;タグで示すように）。 「ビデオ」のアセットタイプの場合、 &lt;video> 要素を使用してビデオをインラインで再生します。 「worddocuments」のアセットタイプでは、異なる HTML マークアップを使用します。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -74,47 +74,47 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->11行目 — 画像srcを変更して、DAMで選択した画像を指すようにしてください。
+>11 行目 — 画像の src を、DAM で選択した画像を指すように変更してください。
 >
->このテンプレート内のアダプティブFormsをリストするには、新しいdivを作成し、そのdata-type属性を「guide」に設定します。 data-type=&quot;printFormのdivをコピーして貼り付け、新しくコピーしたdivのdata-typeを&quot;guide&quot;に設定できます。
+>このテンプレート内のアダプティブFormsをリストするには、新しい div を作成し、その data-type 属性を&quot;guide&quot;に設定します。 data-type=&quot;printForm の div をコピーして貼り付け、新しくコピーした div の data-type を&quot;guide&quot;に設定できます。
 
-## Search &amp; Listerコンポーネントの設定{#configure-search-and-lister-component}
+## Search And Lister コンポーネントの設定 {#configure-search-and-lister-component}
 
-カスタムテンプレートを定義したら、このカスタムテンプレートを「Search &amp; Lister」コンポーネントに関連付ける必要があります。 ブラウザー[でこのURL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)を参照します。
+カスタムテンプレートを定義したら、このカスタムテンプレートを「Search &amp; Lister」コンポーネントに関連付ける必要があります。 ブラウザーを指定 [この url に ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
-デザインモードに切り替え、許可されたコンポーネントグループにSearch &amp; Listerコンポーネントを含めるように段落システムを設定します。 Search &amp; Listerコンポーネントは、Document Servicesグループの一部です。
+デザインモードに切り替え、許可されたコンポーネントグループに Search And Lister コンポーネントを含めるように段落システムを設定します。 「Search &amp; Lister」コンポーネントは、「Document Services」グループの一部です。
 
-編集モードに切り替え、Search &amp; ListerコンポーネントをParSysに追加します。
+編集モードに切り替え、Search &amp; Lister コンポーネントを ParSys に追加します。
 
-「Search &amp; Lister」コンポーネントの設定プロパティを開きます。 「アセットフォルダー」タブが選択されていることを確認します。 Search &amp; Listerコンポーネント内のアセットのリストを作成するフォルダーを選択します。 この記事のために、私は選んだ
+「Search &amp; Lister」コンポーネントの設定プロパティを開きます。 「アセットフォルダー」タブが選択されていることを確認します。 Search &amp; Lister コンポーネント内のアセットのリストを作成するフォルダを選択します。 この記事の目的で、私は
 
 * /content/dam/VideosAndWordDocuments
 * /content/dam/formsanddocuments/assettypes
 
 ![assetfolder](assets/selectingassetfolders.png)
 
-「表示」タブにタブを移動します。 ここでは、Search &amp; Listerコンポーネントにアセットを表示するテンプレートを選択します。
+「表示」タブにタブを移動します。 ここでは、Search &amp; Lister コンポーネントにアセットを表示するテンプレートを選択します。
 
 次に示すように、ドロップダウンから「カスタムテンプレート」を選択します。
 
 ![searchandlister](assets/searchandlistercomponent.gif)
 
-ポータルに表示するアセットのタイプを設定します。 アセットのタブのタイプを「アセットリスト」に設定し、アセットのタイプを設定するには この例では、次のタイプのアセットを設定します
+ポータルに一覧表示するアセットのタイプを設定します。 アセットのタブのタイプを「アセット一覧」に設定し、アセットのタイプを設定するには この例では、次のタイプのアセットを設定します
 
-1. MP4ファイル
-1. Word文書
-1. ドキュメント（これはOOTBアセットタイプ）
-1. フォームテンプレート（OOTBアセットタイプ）
+1. MP4 ファイル
+1. Word ドキュメント
+1. ドキュメント（これは OOTB アセットタイプです）
+1. フォームテンプレート（これは OOTB アセットタイプ）
 
 次のスクリーンショットは、リストに設定されているアセットタイプを示しています
 
 ![assettypes](assets/assettypes.png)
 
-これで、Search &amp; Lister Portalコンポーネントを設定したので、次はリスターを実際に表示します。 ブラウザー[でこのURL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)を参照します。 結果は、次の画像のようになります。
+これで、Search &amp; Lister ポータルコンポーネントを設定したので、次に、操作中のリスターを表示します。 ブラウザーを指定 [この url に ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 結果は、次の画像のようになります。
 
 >[!NOTE]
 >
->ポータルでパブリッシュサーバー上のカスタムアセットタイプのリストを作成する場合は、ノード&#x200B;**/apps/fd/fp/extensions/querybuilder**&#x200B;に「fd-service」ユーザーに「読み取り」権限を付与してください
+>ポータルでパブリッシュサーバー上のカスタムアセットタイプがリストされている場合は、ノードに対して「fd-service」ユーザーに対する「読み取り」権限を必ず付与してください **/apps/fd/fp/extensions/querybuilder**
 
-![](assets/assettypeslistings.png)
-[assettypesパッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、Search &amp; Listerコンポーネントを使用してリストを表示するアセットタイプとして使用される、サンプルのmp4とWordドキュメントおよびxdpファイルが含まれます
+![assettypes](assets/assettypeslistings.png)
+[パッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、search &amp; lister コンポーネントを使用してリスト表示するアセットタイプとして使用される、サンプル mp4 と word ドキュメントおよび xdp ファイルが含まれます

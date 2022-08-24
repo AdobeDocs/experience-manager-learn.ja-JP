@@ -1,15 +1,15 @@
 ---
-title: AEM Assetsを使用した画像用のスマートタグ
-description: 画像用のスマートタグは、画像のコンテンツに基づいて、メタデータタグを画像アセットに自動的かつインテリジェントに追加することで、AEMの検索機能を強化します。
+title: AEM Assetsを使用した画像のスマートタグ
+description: 画像のスマートタグは、画像のコンテンツに基づいて、メタデータタグを画像アセットに自動的かつインテリジェントに追加することで、AEMの検索機能を強化します。
 topic: Content Management
 feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 645
 thumbnail: 17019.jpg
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 33%
@@ -18,11 +18,11 @@ ht-degree: 33%
 
 # 画像のスマートタグ
 
-AEM Assetsの画像用スマートタグは、派生メタデータタグを画像アセットに自動的に追加することでAEM Assetsの検索を強化し、適切な画像を見つけやすく高速になり、オーサリングエクスペリエンスを向上します。
+画像用の AEM Assets のスマートタグは、画像アセットに派生メタデータタグを自動的に追加することで AEM Assets の検索を強化し、適切な画像を見つけやすく、迅速にオーサリングできるようにし、オーサリングエクスペリエンスを向上させます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
 
-## AEM 6.xのセットアップ{#set-up}
+## AEM 6.x のセットアップ{#set-up}
 
 >[!NOTE]
 > 画像用のスマートタグは、AEM as a Cloud Service用に自動的にプロビジョニングされます。
@@ -32,7 +32,7 @@ AEM Assetsの画像用スマートタグは、派生メタデータタグを画�
 Adobe I/O で統合を作成してスマートコンテンツサービスを使用する前に、以下の事項を確認します。
 
 * 組織の管理者権限を持つAdobe IDアカウント
-* お客様の組織でスマートコンテンツサービスが有効になっている
+* 組織でスマートコンテンツサービスが有効になっている
 
 このビデオでは、スマートタグ画像に使用するAdobe I/Oスマートコンテンツサービスを設定するために必要な次のタスクについて詳しく説明します。
 

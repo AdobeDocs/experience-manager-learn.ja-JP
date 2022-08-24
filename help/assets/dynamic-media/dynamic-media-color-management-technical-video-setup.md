@@ -1,35 +1,35 @@
 ---
 title: AEM Dynamic Media でのカラーマネジメントについて
-description: このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのカラー補正プレビュー機能を提供するために使用する方法について説明します。
+description: このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのでカラー補正プレビュー機能を提供するために使用する方法について説明します。
 sub-product: dynamic-media
-feature: イメージプロファイル、ビデオプロファイル
-version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+feature: Image Profiles, Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 24%
+source-wordcount: '319'
+ht-degree: 58%
 
 ---
 
-
 # AEM Dynamic Media でのカラーマネジメントについて{#understanding-color-management-with-aem-dynamic-media}
 
-このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのカラー補正プレビュー機能を提供するために使用する方法について説明します。
+このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのでカラー補正プレビュー機能を提供するために使用する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
 >[!NOTE]
 >
->[この機能を使](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 用するには、 Dynamic Media AEMを有効にします。
+>[Dynamic Mediaを有効にする](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) AEMでこの機能を使用する場合。
 
-この機能は、AEM 6.1および6.2バージョンの機能パックとして使用できます。
+この機能は、AEM 6.1 および 6.2 バージョンの機能パックとして使用できます。
 
-## カラーマネジメント設定ノードのXMLテンプレート {#xml-template-for-the-color-management-configuration-node}
+## カラーマネジメント設定ノード用の XML テンプレート {#xml-template-for-the-color-management-configuration-node}
 
-次に、カラーマネジメント設定ノードのXMLテンプレートを示します。 このXMLテンプレートは、AEM開発プロジェクトにコピーし、プロジェクトに適した設定で設定できます。
+次に、カラーマネジメント設定ノードの XML テンプレートを示します。 この XML テンプレートは、AEM開発プロジェクトにコピーし、プロジェクトに適した設定で設定できます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -89,38 +89,38 @@ ht-degree: 24%
 
 | 名前 | カラースペース | 説明 |
 | ------------------- | ---------- | ------------------------------------- |
-| AdobeRGB | RGB | Adobe RGB(1998) |
+| AdobeRGB | RGB | Adobe RGB (1998) |
 | AppleRGB | RGB | Apple RGB |
 | CIERGB | RGB | CIE RGB |
-| CoatedFogra27 | CMYK | Coated FOGRA27 (ISO 12647-2:2004) |
-| CoatedFogra39 | CMYK | Coated FOGRA39 (ISO 12647-2:2004) |
-| CoatedGraCol | CMYK | Coated GRACoL 2006(ISO 12647-2:2004) |
+| CoatedFogra27 | CMYK | Coated FOGRA27（ISO 12647-2:2004） |
+| CoatedFogra39 | CMYK | Coated FOGRA39（ISO 12647-2:2004） |
+| CoatedGraCol | CMYK | Coated GRACoL 2006（ISO 12647-2:2004） |
 | ColorMatchRGB | RGB | ColorMatch RGB |
 | EuropeISOCoated | CMYK | Europe ISO Coated FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
 | JapanColorCoated | CMYK | Japan Color 2001 Coated |
-| JapanColorNewspar | CMYK | 日本カラー2002年新聞 |
+| JapanColorNewspaper | CMYK | Japan Color 2002 Newspaper |
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
-| JapanWebCoated | CMYK | Japan Web Coated (Ad) |
-| NewsprintSNAP2007 | CMYK | 米国新聞印刷(SNAP 2007) |
-| NTSC | RGB | NTSC (1953) |
-| PAL | RGB | PAL/SECAM |
+| JapanWebCoated | CMYK | Japan Web Coated（Ad） |
+| NewsprintSNAP2007 | CMYK | US Newsprint（SNAP 2007） |
+| NTSC | RGB | NTSC（1953） |
+| PAL | RGB | PAL／SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
-| PS4Default | CMYK | Photoshop 4デフォルトCMYK |
-| PS5Default | CMYK | Photoshop 5デフォルトCMYK |
+| PS4Default | CMYK | Photoshop 4 Default CMYK |
+| PS5Default | CMYK | Photoshop 5 Default CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC61966-2.1 |
-| UncoatedFogra29 | CMYK | 非コーティングFOGRA29(ISO 12647-2:2004) |
+| UncoatedFogra29 | CMYK | Uncoated FOGRA29 (ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
-| WebCoatedFogra28 | CMYK | Web Coated FOGRA28(ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3用紙 |
-| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5用紙 |
+| WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
+| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
+| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5 Paper |
 | WebUncoated | CMYK | U.S. Web Uncoated v2 |
-| WideGamutRGB | RGB | 広色域RGB |
+| WideGamutRGB | RGB | Wide Gamut RGB |
 
 ## その他のリソース{#additional-resources}
 

@@ -1,18 +1,18 @@
 ---
 title: AEM Formsでのユーザープロファイルデータ統合の使用
-description: AEMユーザープロファイル情報とAdaptive Formsの統合
-feature: アダプティブフォーム
-version: 6.3,6.4,6.5
-topic: 開発
+description: AEMユーザープロファイル情報と Adaptive Formsの統合
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 4f2b6669-d61e-400d-8657-dddb28ae35f4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 56%
+source-wordcount: '97'
+ht-degree: 54%
 
 ---
-
 
 # AEM Formsでのユーザープロファイルデータ統合の使用{#using-user-profile-data-integration-with-aem-forms}
 
@@ -24,11 +24,10 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 1. RESTful Web サービス
 1. SOAP ベース Web サービス
 1. OData サービス
-この記事では、AEMユーザープロファイル情報とAdaptive Formsの統合について説明します。
+この記事では、AEMユーザープロファイル情報と Adaptive Formsの統合について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432/?quality=9&learn=on)
 
 >[!NOTE]
 >
->この機能は、AEM 6.3以降でのみ使用できます。
-
+>この機能は、AEM 6.3 以降でのみ使用できます。

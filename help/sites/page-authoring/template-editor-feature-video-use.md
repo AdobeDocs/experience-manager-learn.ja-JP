@@ -1,46 +1,46 @@
 ---
 title: AEM Sitesでの編集可能なページテンプレートの使用
-seo-title: Adobe Experience Manager Sitesでの編集可能なページテンプレートの使用
-description: 編集可能テンプレートを使用すると、専門的な作成者がAEM Sitesでページテンプレートを作成および更新し、高度なポリシー設定を管理できます。
-seo-description: 編集可能テンプレートを使用すると、専門的な作成者がAdobe Experience Manager Sitesでページテンプレートを作成および更新し、高度なポリシー設定を管理できます。
-feature: 編集可能なテンプレート
+seo-title: Using Editable Page Templates with Adobe Experience Manager Sites
+description: 編集可能テンプレートを使用すると、専門の作成者がAEM Sitesでページテンプレートを作成および更新したり、高度なポリシー設定を管理したりできます。
+seo-description: Editable templates allow specialized authors to create and update page templates and manage advanced policy configurations with Adobe Experience Manager Sites.
+feature: Editable Templates
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 kt: 193
-topic: コンテンツ管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 13%
+source-wordcount: '218'
+ht-degree: 8%
 
 ---
 
-
 # 編集可能なページテンプレートの使用{#using-template-editor-with-aem-sites}
 
-編集可能なテンプレートを使用すると、専門的な作成者がAdobe Experience Manager(AEM)Sitesでページテンプレートを作成および更新し、高度なポリシー設定を管理できます。
+編集可能なテンプレートを使用すると、専門的な作成者がAdobe Experience Manager(AEM)Sites でページテンプレートを作成および更新したり、高度なポリシー設定を管理したりできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
 
-編集可能なテンプレートは、新しいAEM Sitesの構築をお勧めします。
+編集可能なテンプレートは、新しいAEM Sitesを構築することをお勧めします。
 
-**一貫したオーサーエクスペリエンス**  - AEM Sitesオーサリングの機能強化は、インラインレイアウトモードやコンテンツツリーパネルなど、テンプレート編集に引き継がれます。
+**一貫したオーサーエクスペリエンス** - AEM Sitesオーサリングの機能強化は、インラインレイアウトモードやコンテンツツリーパネルなど、テンプレート編集に引き継がれます。
 
-**高度なポリシー設定**  — 編集可能なテンプレートで使用可能になった高度なポリシー設定の一部を次に示します。
+**ポリシーの詳細設定**  — 次に、編集可能テンプレートで使用可能になった高度なポリシー設定の一部を示します。
 
-* **レイアウトコンテナ**  — 許可されたコンポーネントの設定、アセットのドラッグ&amp;ドロップマッピングおよびレスポンシブグリッド列の管理をおこなう機能。
-* **テキストコンポーネント**  — 新しいUIでリッチテキストエディタープラグインを設定し、テンプレート間でRTEポリシーを再利用する機能。
-* **画像コンポーネント**  — 切り抜き、新しいUIによるデスクトップファイルのアップロード、テンプレート間での画像ポリシーの再利用などの機能を有効/無効にする機能。
+* **レイアウトコンテナ**  — 許可されるコンポーネントの設定、アセットのドラッグ&amp;ドロップマッピングおよびレスポンシブグリッド列の管理をおこなう機能。
+* **テキストコンポーネント**  — 新しい UI でリッチテキストエディタープラグインを設定し、テンプレートをまたいで RTE ポリシーを再利用する機能。
+* **画像コンポーネント**  — 新しい UI での切り抜き、デスクトップファイルのアップロード、テンプレート間での画像ポリシーの再利用などの機能のオン/オフを切り替える機能。
 
-編集可能なテンプレートは、**ツール** `>` **一般** `>` **テンプレート**&#x200B;の下にあります。\
-編集可能なテンプレートのURL(ローカルAEMインスタンス):[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+編集可能なテンプレートは、以下にあります。 **ツール** `>` **一般** `>` **テンプレート**.\
+編集可能テンプレート URL ( ローカルAEMインスタンス ): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## その他のリソース {#additional-resources}
 
-* [編集可能なページテンプレート — ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [ページテンプレートの作成 — ドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/templates.html)
+* [編集可能なページテンプレート — ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=ja)
+* [ページテンプレートの作成 — ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)

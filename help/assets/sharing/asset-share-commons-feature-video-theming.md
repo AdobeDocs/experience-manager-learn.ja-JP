@@ -1,25 +1,25 @@
 ---
-title: Asset Share Commonsのテーマの概要
-description: Assets Share Commonsの機能と技術の両方に関する資料
-version: 6.3, 6.4, 6.5
-topic: コンテンツ管理
+title: Asset Share Commons でのテーマ設定の概要
+description: Assets Share Commons の機能と技術の両方を理解するための資料
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 3%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
 
+# Asset Share Commons でのテーマ設定の概要 {#asset-share-commons-theme}
 
-# Asset Share Commonsのテーマの概要 {#asset-share-commons-theme}
-
-Asset Share Commonsでのテーマの概要です。 このビデオでは、カスタムカラースキームを使用して新しいテーマを作成するプロセスを順を追って説明します。
+Asset Share Commons でのテーマ設定に関する簡単な概要です。 このビデオでは、カスタムカラースキームを使用して新しいテーマを作成するプロセスを順を追って説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572/?quality=9&learn=on)
 
-このビデオでは、 Asset Share Commons Darkテーマに基づいて新しいテーマが作成されます。 カラースキームは、カスタムロゴと一致し、サイトのルックアンドフィールを統一します。
+このビデオでは、Asset Share Commons Dark テーマに基づいて新しいテーマが作成されます。 カラースキームは、カスタムロゴと一致し、サイトの外観と操作性を一貫させます。
 
 ## テーマ変数
 
@@ -72,9 +72,9 @@ Asset Share Commonsでのテーマの概要です。 このビデオでは、カ
 @msgWarningBackgroundColor: @yellow;
 ```
 
-[カスタムクライアントライブラリテーマ](assets/asc-theme-demo.zip)のダウンロード
+ダウンロード [カスタムクライアントライブラリテーマ](assets/asc-theme-demo.zip)
 
 ## その他のリソース{#additional-resources}
 
-* [Asset Share Commonsリリースのダウンロード](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [Asset Share Commons リリースのダウンロード](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
 * [ACS AEM Commons 3.11.0+リリースのダウンロード](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

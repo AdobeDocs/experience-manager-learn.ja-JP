@@ -1,13 +1,13 @@
 ---
-title: AEM FormsとMarketo（パート 2）
-description: AEM Formsフォームデータモデルを使用したAEM FormsとMarketoの統合に関するチュートリアルです。
+title: AEM FormsとMarketo（第 2 部）
+description: AEM Formsフォームデータモデルを使用したAEM FormsとMarketoの統合に関するチュートリアル
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Marketo Authentication Service
 
-Marketoの REST API は、2 本足の OAuth 2.0 で認証されます。Marketoに対して認証をおこなうには、カスタム認証を作成する必要があります。 このカスタム認証は、通常、OSGI バンドル内に書き込まれます。 次のコードは、このチュートリアルの一部として使用されたカスタム認証子を示しています。
+Marketoの REST API は、2 本脚の OAuth 2.0 で認証されます。Marketoに対して認証するには、カスタム認証を作成する必要があります。 このカスタム認証は、通常、OSGi バンドル内に書き込まれます。 次のコードは、このチュートリアルの一部として使用されたカスタム認証子を示しています。
 
 ## カスタム認証サービス
 
@@ -52,13 +52,13 @@ MarketoService marketoService;
 }
 ```
 
-MarketoAuthenticationService は、IAuthentication インターフェイスを実装します。 このインターフェイスは、AEM Forms Client SDK に含まれています。 サービスはアクセストークンを取得し、トークンを AuthenticationDetails の HttpHeader に挿入します。 AuthenticationDetails オブジェクトの HttpHeaders が設定されると、AuthenticationDetails オブジェクトがフォームデータモデルの Dermis レイヤーに返されます。
+MarketoAuthenticationService は IAuthentication インターフェイスを実装します。 このインターフェイスは、AEM Forms Client SDK に含まれています。 サービスはアクセストークンを取得し、トークンを AuthenticationDetails の HttpHeader に挿入します。 AuthenticationDetails オブジェクトの HttpHeaders が設定されると、AuthenticationDetails オブジェクトがフォームデータモデルの Dermis レイヤーに返されます。
 
 getAuthenticationType メソッドで返される文字列に注意してください。 この文字列は、データソースを設定する際に使用されます。
 
-### アクセストークンの取得
+### アクセストークンを取得
 
-単純なインターフェイスは、access_token を返す 1 つのメソッドで定義されます。 このインターフェイスを実装するクラスのコードは、ページの下部に表示されます。
+access_token を返す 1 つのメソッドで、シンプルなインターフェイスが定義されます。 このインターフェイスを実装するクラスのコードは、ページの下部に表示されています。
 
 ```java
 package com.marketoandforms.core;
@@ -67,7 +67,7 @@ public interface MarketoService {
 }
 ```
 
-次のコードは、REST API 呼び出しの実行に使用される access_token を返すサービスのコードです。 このサービスのコードは、GET呼び出しの実行に必要な設定パラメーターにアクセスします。 ご覧のように、GETURL に client_id,client_secret を渡して、access_token を生成します。 次に、この access_token が呼び出し元のアプリケーションに返されます。
+次のコードは、REST API 呼び出しの実行に使用される access_token を返すサービスのコードです。 このサービスのコードは、GET呼び出しの実行に必要な設定パラメーターにアクセスします。 このように、GETURL に client_id,client_secret を渡して、access_token を生成します。 その後、この access_token が呼び出し元のアプリケーションに返されます。
 
 ```java
 package com.marketoandforms.core.impl;
@@ -126,13 +126,13 @@ MarketoConfigurationService config;
 }
 ```
 
-次のスクリーンショットは、設定する必要がある設定プロパティを示しています。 これらの設定プロパティは、上記のコードで読み取られ、 access_token
+以下のスクリーンショットに、設定する必要がある設定プロパティを示します。 これらの設定プロパティは、上記のコードで読み取られ、 access_token
 
 ![config](assets/configuration-settings.png)
 
 ### 設定
 
-次のコードは、設定プロパティの作成に使用されました。 これらのプロパティは、Marketoインスタンスに固有です
+次のコードは、設定プロパティの作成に使用されました。 これらのプロパティはMarketoインスタンスに固有です
 
 ```java
 package com.marketoandforms.core;
@@ -198,6 +198,6 @@ public class MarketoConfigurationService {
 }
 ```
 
-1. バンドルを構築し、AEMサーバーにデプロイします。
-1. [ブラウザーで configMgrand を参照し](http://localhost:4502/system/console/configMgr) て、「Marketo Credentials Service Configuration」を検索します。
+1. バンドルをビルドし、AEMサーバーにデプロイします。
+1. [ブラウザーで configMgr を参照してください](http://localhost:4502/system/console/configMgr) 「Marketo Credentials Service Configuration」を検索します。
 1. Marketoインスタンスに固有の適切なプロパティを指定します

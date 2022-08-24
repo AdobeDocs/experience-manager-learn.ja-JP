@@ -1,58 +1,58 @@
 ---
-title: AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定
-description: フォームデータモデルを使用したAEM FormsとSalesforceの統合
+title: AEM Forms 6.3 および 6.4 での Salesforce とのデータソースの設定
+description: フォームデータモデルを使用したAEM Formsと Salesforce の統合
 feature: Adaptive Forms, Form Data Model
 topics: integrations
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
 
 ---
 
-
-# AEM Forms 6.3および6.4でのSalesforceを使用したデータソースの設定{#configuring-datasource-with-salesforce-in-aem-forms-and}
+# AEM Forms 6.3 および 6.4 での Salesforce とのデータソースの設定{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
 ## 前提条件 {#prerequisites}
 
-この記事では、Salesforceを使用したデータソースの作成プロセスを順を追って説明します
+この記事では、Salesforce を使用してデータソースを作成するプロセスを順を追って説明します
 
 このチュートリアルの前提条件：
 
-* このページの下部までスクロールし、Swaggerファイルをダウンロードして、ハードドライブに保存します。
-* SSLが有効なAEM Forms
+* このページの下部までスクロールし、Swagger ファイルをダウンロードして、ハードドライブに保存します。
+* SSL が有効なAEM Forms
 
-   * [AEM 6.3でのSSLの有効化に関する公式ドキュメント](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
-   * [AEM 6.4でのSSLの有効化に関する公式ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
+   * [AEM 6.3 での SSL の有効化に関する公式ドキュメント](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [AEM 6.4 での SSL の有効化に関する公式ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
-* Salesforceアカウントが必要です。
-* 接続済みアプリを作成する必要があります。 アプリを作成するための公式ドキュメントフォームSalesforceは、[ここ](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)に記載されています。
-* アプリに適したOAuth範囲を指定します（テストのために使用可能なすべてのOAuth範囲を選択しました）。
-* コールバックURLを指定します。 この場合のコールバックURLは
+* Salesforce アカウントが必要です
+* 接続アプリを作成する必要があります。 アプリ作成用の Salesforce 公式ドキュメントが一覧表示されます [ここ](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
+* アプリに適した OAuth 範囲を指定します（テストの目的で使用可能なすべての OAuth 範囲を選択しました）。
+* コールバック URL を指定します。 この場合のコールバック URL は
 
-   * **AEM Forms 6.3**&#x200B;を使用している場合、コールバックURLはhttps://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.htmlになります。 このURLでは、createleadはフォームデータモデルの名前になります。
+   * 次を使用する場合： **AEM Forms 6.3**&#x200B;の場合、コールバック URL はhttps://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.htmlになります。 この URL createlead は、フォームデータモデルの名前です。
 
-   * ** AEM Forms 6.4**を使用している場合、コールバックURLはhttps://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.htmlになります。
+   * ** AEM Forms 6.4**を使用している場合、コールバック URL はhttps://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.htmlです。
 
-この例では、 gbedekar -w7-1:6443は、AEMが実行されているサーバーとポートの名前です。
+この例では、gbedekar -w7-1:6443 は、AEMが実行されているサーバーとポートの名前です。
 
-Connected Appを作成したら、**Consumer KeyとSecret Key**&#x200B;をメモします。 AEM Formsでデータソースを作成する場合は、これらが必要になります。
+Connected App を作成した後、 **消費者キーと秘密鍵**. AEM Formsでデータソースを作成する場合は、これらが必要になります。
 
-接続されたアプリを作成したら、Salesforceで実行する必要がある操作用のSwaggerファイルを作成する必要があります。 サンプルのSwaggerファイルが、ダウンロード可能なアセットの一部として含まれています。 このSwaggerファイルを使用すると、アダプティブフォーム送信時に「リード」オブジェクトを作成できます。 このSwaggerファイルを参照してください。
+接続されたアプリを作成したら、Salesforce で実行する必要のある操作用の Swagger ファイルを作成する必要があります。 ダウンロード可能なアセットの一部として、サンプルの Swagger ファイルが含まれています。 この Swagger ファイルを使用すると、アダプティブフォーム送信時に「リード」オブジェクトを作成できます。 この Swagger ファイルを参照してください。
 
-次の手順は、AEM Formsでデータソースを作成することです。 ご使用のAEM Formsのバージョンに従って、次の手順に従ってください
+次の手順では、AEM Formsでデータソースを作成します。 ご使用のAEM Formsのバージョンに従って、次の手順に従ってください
 
 ## AEM Forms 6.3 {#aem-forms}
 
-* httpsプロトコルを使用してAEM Formsにログインします。
-* https://&lt;servername>:&lt;serverport> /etc/cloudservices.htmlと入力して、クラウドサービスに移動します。例：https://gbedekar-w7-1:6443/etc/cloudservices.html
-* 下の「フォームデータモデル」までスクロールします。
+* https プロトコルを使用してAEM Formsにログインします。
+* https://と入力してクラウドサービスに移動します。&lt;servername>:&lt;serverport> /etc/cloudservices.html、例： https://gbedekar-w7-1:6443/etc/cloudservices.html
+* 下にスクロールして「フォームデータモデル」を表示します。
 * 「設定を表示」をクリックします。
-* 「+」をクリックして新しい設定を追加します。
+* 「+」をクリックして新しい設定を追加
 * 「Rest Full Service」を選択します。 設定に意味のあるタイトルと名前を指定します。 次に例を示します。
 
    * 名前：CreateLeadInSalesForce
@@ -62,60 +62,60 @@ Connected Appを作成したら、**Consumer KeyとSecret Key**&#x200B;をメモ
 
 **次の画面で**
 
-* Swaggerソースファイルのオプションとして「File」を選択します。 前にダウンロードしたファイルを参照します。
+* Swagger ソースファイルのオプションとして「ファイル」を選択します。 前にダウンロードしたファイルを参照します。
 * 「認証タイプ」として「 OAuth2.0 」を選択します。
-* ClientIDとClient Secretの値を指定します。
-* OAuth Urlは — **https://login.salesforce.com/services/oauth2/authorize**&#x200B;です
-* 更新トークンUrl - **https://na5.salesforce.com/services/oauth2/token**
-* **トークURLへのアクセス — https://na5.salesforce.com/services/oauth2/token**
-* 承認範囲：** api   chatter_api完全ID   openid   refresh_token visualforce web**
-* 認証ハンドラー：承認ベアラ
-* 「OAUTHに接続」をクリックします。問題が解決した場合、エラーは表示されません
+* ClientID と Client Secret の値を指定します。
+* OAuth Url は — です **https://login.salesforce.com/services/oauth2/authorize**
+* 更新トークン URL - **https://na5.salesforce.com/services/oauth2/token**
+* **トーク URL にアクセス — https://na5.salesforce.com/services/oauth2/token**
+* 認証範囲：** api chatter_api 完全 id openid refresh_token visualforce web**
+* 認証ハンドラ：認証ベアラ
+* 「OAuth に接続」をクリックします。問題が解決した場合、エラーは表示されません
 
-Salesforceを使用してフォームデータモデルを作成したら、作成したデータソースを使用してフォームデータ統合を作成できます。 フォームデータ統合の作成に関する公式ドキュメントは、[こちら](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)にあります。
+Salesforce を使用してフォームデータモデルを作成したら、作成したデータソースを使用してフォームデータ統合を作成できます。 フォームデータ統合の作成に関する公式ドキュメントは次のとおりです。 [ここ](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
-SFDCでリードオブジェクトを作成するPOSTサービスを含めるように、フォームデータモデルを設定してください。
+SFDC でリードオブジェクトを作成するPOSTサービスを含めるようにフォームデータモデルを設定してください。
 
 また、リードオブジェクトの読み取りサービスと書き込みサービスも設定する必要があります。 このページの下部にあるスクリーンショットを参照してください。
 
-フォームデータモデルの作成後、このモデルに基づいてアダプティブFormsを作成し、フォームデータモデルの送信方法を使用してSFDCでリードを作成することができます。
+フォームデータモデルを作成したら、このモデルに基づいてアダプティブFormsを作成し、フォームデータモデルの送信方法を使用して SFDC でリードを作成できます。
 
 ## AEM Forms 6.4 {#aem-forms-1}
 
-* データソースの作成
+* データソースを作成
 
-   * [データソースへの移動](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/global)
+   * [データソースに移動](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/global)
 
    * 「作成」ボタンをクリックします。
-   * 意味のある値の提供
+   * 意味のある値をいくつか指定します。
 
       * 名前：CreateLeadInSalesForce
       * タイトル：CreateLeadInSalesForce
-      * サービスの種類：RESTfulサービス
+      * サービスタイプ：RESTful サービス
    * 「次へ」をクリックします。
-   * Swaggerソース：ファイル
-   * 前の手順でダウンロードしたSwaggerファイルを参照して選択します。
-   * 認証の種類：OAuth 2.0。次の値を指定します。
-   * ClientIDとClient Secretの値を指定します。
-   * OAuth Urlは — **https://login.salesforce.com/services/oauth2/authorize**&#x200B;です
-   * 更新トークンUrl - **https://na5.salesforce.com/services/oauth2/token**
-   * アクセストークンUr **l - https://na5.salesforce.com/services/oauth2/token**
-   * 承認範囲：** api chatter_api完全id openid refresh_token visualforce web**
-   * 認証ハンドラー：承認ベアラ
-   * 「OAuthに接続」ボタンをクリックします。 エラーが発生した場合は、上記の手順を確認して、すべての情報が正しく入力されていることを確認してください。
+   * Swagger ソース：ファイル
+   * 前の手順でダウンロードした Swagger ファイルを参照して選択します。
+   * 認証タイプ：OAuth 2.0。次の値を指定します。
+   * ClientID と Client Secret の値を指定します。
+   * OAuth Url は — です **https://login.salesforce.com/services/oauth2/authorize**
+   * 更新トークン URL - **https://na5.salesforce.com/services/oauth2/token**
+   * アクセストークン URL **l - https://na5.salesforce.com/services/oauth2/token**
+   * 認証範囲：** api chatter_api 完全 id openid refresh_token visualforce web**
+   * 認証ハンドラ：認証ベアラ
+   * 「OAuth に接続」ボタンをクリックします。 エラーが発生した場合は、上記の手順を確認し、すべての情報が正しく入力されていることを確認してください。
 
 
-SalesForceを使用してデータソースを作成したら、作成したデータソースを使用してフォームデータ統合を作成できます。 のドキュメントリンクは[here](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)です。
+SalesForce を使用してデータソースを作成したら、作成したデータソースを使用してフォームデータ統合を作成できます。 のドキュメントリンク。 [ここ](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
-SFDCでリードオブジェクトを作成するPOSTサービスを含めるように、フォームデータモデルを設定してください。
+SFDC でリードオブジェクトを作成するPOSTサービスを含めるようにフォームデータモデルを設定してください。
 
 また、リードオブジェクトの読み取りサービスと書き込みサービスも設定する必要があります。 このページの下部にあるスクリーンショットを参照してください。
 
-フォームデータモデルの作成後、このモデルに基づいてアダプティブFormsを作成し、フォームデータモデルの送信方法を使用してSFDCでリードを作成することができます。
+フォームデータモデルを作成したら、このモデルに基づいてアダプティブFormsを作成し、フォームデータモデルの送信方法を使用して SFDC でリードを作成できます。
 
 >[!NOTE]
 >
->Swaggerファイル内のURLが地域に対応していることを確認します。 例えば、サンプルのswaggerファイルのURLは、北米でアカウントが作成されたので、「na46.salesforce.com」です。 最も簡単な方法は、SalesforceアカウントにログインしてURLを確認することです。
+>Swagger ファイル内の url が自分の地域に対応していることを確認します。 例えば、サンプルの swagger ファイルの URL は、北米でアカウントが作成されたので、「na46.salesforce.com」です。 最も簡単な方法は、Salesforce アカウントにログインして URL を確認することです。
 
 ![sfdc1](assets/sfdc1.gif)
 

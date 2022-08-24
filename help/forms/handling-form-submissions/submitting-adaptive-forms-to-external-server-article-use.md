@@ -1,42 +1,42 @@
 ---
 title: 外部サーバーへのアダプティブフォームの送信
-seo-title: 外部サーバーへのアダプティブフォームの送信
-description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
-seo-description: 外部サーバーで実行されているRESTエンドポイントへのアダプティブフォームの送信
+seo-title: Submitting Adaptive Form to External Server
+description: 外部サーバーで実行中の REST エンドポイントにアダプティブフォームを送信する
+seo-description: Submitting Adaptive Form to REST endpoint running on external server
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 5363c3f7-9006-4430-b647-f3283a366a64
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '346'
 ht-degree: 12%
 
 ---
 
+# 外部サーバーへのアダプティブフォームの送信 {#submitting-adaptive-form-to-external-server}
 
-# 外部サーバーへのアダプティブフォームの送信{#submitting-adaptive-form-to-external-server}
+REST エンドポイントへの送信アクションを使用して、送信されたデータを REST URL に投稿します。 URL は、内部（フォームがレンダリングされるサーバー）または外部サーバーのどちらのものでも使用できます。
 
-RESTエンドポイントへの送信アクションを使用して、送信されたデータをREST URLに送信します。 URL は、内部（フォームがレンダリングされるサーバー）または外部サーバーのどちらのものでも使用できます。
+通常、顧客はフォームデータを外部サーバーに送信して、さらに処理を行う必要があります。
 
-通常、顧客は、追加の処理を行うために外部サーバーにフォームデータを送信する必要があります。
+内部サーバーにデータを POST 送信するには、リソースのパスを指定します。 データは、リソースのパスに POST されます。例： &lt;/content restendpoint=&quot;&quot;> . このような POST リクエストでは、送信リクエストの認証情報が使用されます。
 
-内部サーバーにデータをPOST送信するには、リソースのパスを指定します。 データは、リソースのパスに POST されます。例えば、 &lt;/content/restEndPoint> 。 このようなPOSTリクエストでは、送信リクエストの認証情報が使用されます。
+外部サーバーにデータを POST 送信するには、URL を指定します。URL の形式は、<http://host:port/path_to_rest_end_point> です。匿名で要求を処理するパスが設定されていることを確認し、POST要求を処理します。
 
-外部サーバーにデータを POST 送信するには、URL を指定します。URL の形式は、<http://host:port/path_to_rest_end_point> です。匿名で要求を処理するパスが設定されていることを確認してPOSTリクエストを処理します。
-
-この記事の目的のために、Tomcatインスタンスにデプロイできる単純なwarファイルを作成しました。 Tomcatがポート8080で実行されている場合、POSTURLは
+この記事の目的のために、Tomcat インスタンスにデプロイできる単純な war ファイルを作成しました。 Tomcat がポート 8080 で実行されている場合、POSTURL は次のようになります。
 
 <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>
 
-アダプティブフォームをこのエンドポイントに送信するように設定する場合、次のコードによってフォームデータと添付ファイル（存在する場合）がサーブレットで抽出されます
+このエンドポイントにアダプティブフォームを送信するよう設定する場合、次のコードによって、フォームデータと添付ファイル（存在する場合）がサーブレットで抽出される可能性がある場合は、
 
 ```java
 System.out.println("form was submitted");
@@ -54,14 +54,13 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 }
 ```
 
-![](assets/formsubmission.gif)
-formsubmissionお使いのサーバーでテストするには、次の手順を実行してください
+![formsubmission](assets/formsubmission.gif)
+これをサーバーでテストするには、次の手順を実行してください
 
-1. Tomcatをまだインストールしていない場合は、インストールします。 [Tomcatのインストール手順は、こちらから参照できます。](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
-1. この記事に関連付けられた[zipファイル](assets/aemformsenablement.zip)をダウンロードします。 ファイルを解凍し、warファイルを取得します。
-1. Tomcatサーバーにwarファイルをデプロイします。
-1. 添付ファイルを含むシンプルなアダプティブフォームを作成し、上のスクリーンショットに示すように、その送信アクションを設定します。 POSTURLは<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>です。 AEMとtomcatがlocalhostで実行されていない場合は、URLを適宜変更してください。
-1. Tomcatへのマルチパートフォームデータ送信を有効にするには、 &lt;tomcatInstallDir>\conf\context.xmlのコンテキスト要素に次の属性を追加し、Tomcatサーバーを再起動します。
-1. **&lt;context allowCasualMultipartParsing=&quot;true&quot;>**
-1. アダプティブフォームをプレビューし、添付ファイルを追加して送信します。 Tomcatコンソールウィンドウでメッセージを確認します。
-
+1. Tomcat をインストールします（まだインストールしていない場合）。 [Tomcat のインストール手順は、こちらを参照してください。](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
+1. をダウンロードします。 [zip ファイル](assets/aemformsenablement.zip) この記事に関連付けられています。 ファイルを解凍し、war ファイルを取得します。
+1. war ファイルを tomcat サーバーにデプロイします。
+1. 添付ファイルコンポーネントを含むシンプルなアダプティブフォームを作成し、上のスクリーンショットに示すように、送信アクションを設定します。 POSTURL は <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>. AEMと tomcat が localhost で実行されていない場合は、URL を適宜変更してください。
+1. Tomcat へのマルチパートフォームデータ送信を有効にするには、次の属性を &lt;tomcatinstalldir>\conf\context.xml を起動し、Tomcat サーバーを再起動します。
+1. **&lt;Context allowCasualMultipartParsing=&quot;true&quot;>**
+1. アダプティブフォームをプレビューし、添付ファイルを追加して送信します。 Tomcat コンソールウィンドウでメッセージを確認します。

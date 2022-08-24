@@ -1,26 +1,26 @@
 ---
-title: AEM AssetsとAsset Launchを使用したアセットインサイトのAdobe
-description: この5部構成のビデオシリーズでは、Launch by Adobeを通じてデプロイされたExperience Manager用のアセットインサイトの設定と設定について説明します。
-feature: アセットインサイト
-version: 6.3, 6.4, 6.5
-topic: 統合
+title: AEM Assetsと Asset Launch を使用した Asset Insights のAdobe
+description: この 5 部構成のビデオシリーズでは、Launch by Adobeを通じてデプロイされたExperience Manager用の Asset Insights の設定と設定について説明します。
+feature: Asset Insights
+version: 6.4, 6.5
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 2%
+source-wordcount: '821'
+ht-degree: 1%
 
 ---
 
+# AEM AssetsとAdobe Experience Platform Launchでの Asset Insights の設定
 
-# AEM AssetsとAdobe Experience Platform Launchを使用したアセットインサイトの設定
+この 5 部構成のビデオシリーズでは、Asset Launch を通じてデプロイされたExperience Manager用の Asset Insights の設定と設定について説明します。
 
-この5部構成のビデオシリーズでは、AdobeLaunchを介してデプロイされたExperience Manager用のアセットインサイトの設定手順を説明します。
+## パート 1:アセットインサイトの概要 {#overview}
 
-## パート1:アセットインサイトの概要 {#overview}
-
-アセットインサイトの概要 環境の準備を行うには、コアコンポーネント、サンプル画像コンポーネントおよびその他のコンテンツパッケージをインストールします。
+アセットインサイトの概要。 環境の準備を整えるには、コアコンポーネント、サンプル画像コンポーネントおよびその他のコンテンツパッケージをインストールします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
 
@@ -30,61 +30,61 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->実装に合わせて、[最新バージョンのコアコンポーネント](https://github.com/adobe/aem-core-wcm-components)を必ずダウンロードしてください。
+>必ず [コアコンポーネントの最新バージョン](https://github.com/adobe/aem-core-wcm-components) を参照してください。
 
-このビデオでは、最新バージョンではなくなったコアコンポーネントv2.2.2を使用しています。次の節に進む前に、必ず最新バージョンを使用してください。
+このビデオでは、最新バージョンではなくなったコアコンポーネント v2.2.2 を使用しています。次の節に進む前に、必ず最新バージョンを使用してください。
 
-* [アセットインサイトサンプル画像コンテンツ](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)のダウンロード
-* [最新のAEM WCMコアコンポーネント](https://github.com/adobe/aem-core-wcm-components/releases)をダウンロードします。
+* ダウンロード [アセットインサイトサンプル画像コンテンツ](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
+* ダウンロード [最新のAEM WCM コアコンポーネント](https://github.com/adobe/aem-core-wcm-components/releases)
 
-## パート2 :サンプル画像コンポーネントのアセットインサイトトラッキングの有効化{#sample-image-component-asset-insights}
+## パート 2 :サンプル画像コンポーネントのアセットインサイトトラッキングの有効化 {#sample-image-component-asset-insights}
 
-コアコンポーネントの機能強化と、アセットインサイト用のプロキシコンポーネント（サンプル画像コンポーネント）の使用。 コンテンツページテンプレートポリシーを編集して、リファレンスサイトのサンプル画像コンポーネントを有効にする。
+コアコンポーネントの機能強化と、アセットインサイトでのプロキシコンポーネント（サンプル画像コンポーネント）の使用。 コンテンツページテンプレートポリシーを編集して、リファレンスサイトのサンプル画像コンポーネントを有効にします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
 
 >[!NOTE]
 >
->画像コアコンポーネントには、アセットのUUID（JCR内で作成されたノードの一意の識別子値）の追跡を無効にしてUUIDの追跡を無効にする機能が含まれています
+>画像コアコンポーネントには、アセットの UUID（JCR 内で作成されたノードの一意の識別子値）の追跡を無効にして、UUID の追跡を無効にする機能が含まれています
 
-コア画像コンポーネントは、この機能を有効または無効にするために、画像タグの親&lt;div>内で&#x200B;***data-asset-id***&#x200B;属性を使用します。 プロキシコンポーネントは、次の変更を加えてコアコンポーネントを上書きします。
+コア画像コンポーネントはを使用します ***data-asset-id*** 親内の属性 &lt;div> をクリックして、この機能を有効/無効にします。 プロキシコンポーネントは、次の変更を加えて、コアコンポーネントを上書きします。
 
-* image.html内の&lt;img>要素の親divから&#x200B;***data-asset-id***&#x200B;を削除します。
-* ***data-aem-asset-id***&#x200B;をimage.html内の&lt;img>要素に直接追加します。
-* image.html内の&lt;img>要素に&#x200B;***data-trackable=&#39;true&#39;***&#x200B;値を追加します。
-* ***data-aem-asset-*** idand  ***data-trackable=&#39;true&#39;*** は、同じノードレベルに保持されます。
+* を削除します。 ***data-asset-id*** image.html 内の要素 &lt;img> の親 div から
+* 追加 ***data-aem-asset-id*** image.html 内の要 &lt;img> 素に直接アクセスできます。
+* 追加 ***data-trackable=&#39;true&#39;*** 値を image.html 内 &lt;img> の要素に設定します。
+* ***data-aem-asset-id*** および ***data-trackable=&#39;true&#39;*** 同じノードレベルに保持される
 
 >[!NOTE]
 >
->*data-aem-asset-id=&#39;image.UUID&#39;* と *data-trackable=&#39;true&#39;* は、アセットインプレッションに対して存在する必要がある主要な属性です。アセットクリックインサイトの場合、&lt;img>タグに存在する上記のデータ属性に加えて、親&lt;a>タグに有効なhref値が含まれている必要があります。
+>*data-aem-asset-id=&#39;image.UUID&#39;* および *data-trackable=&#39;true&#39;* は、アセットインプレッションに存在する必要がある主要な属性です。 アセットクリックインサイトの場合、タグに存在する上記のデータ属性に加えて、親タグに &lt;img> 有効な href 値が含まれている必要があります。
 
-## パート3:Adobe Analytics — レポートスイートの作成。リアルタイムデータ収集とAEM Assetsレポートを有効にします。{#adobe-analytics-asset-insights}
+## パート 3:Adobe Analytics — レポートスイートの作成。リアルタイムデータ収集とAEM Assetsレポートを有効にします。 {#adobe-analytics-asset-insights}
 
-リアルタイムデータ収集を含むレポートスイートが、アセット追跡用に作成されます。 AEM Assets Insights設定は、Adobe Analyticsの資格情報を使用して設定されます。
+リアルタイムのデータ収集を含むレポートスイートが、アセット追跡用に作成されます。 AEM Assets Insights 設定は、Adobe Analytics資格情報を使用して設定されます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
 
 >[!NOTE]
-Adobe Analyticsレポートスイートでリアルタイムデータ収集とAEM Asset Reportingを有効にする必要があります。 AEM Asset Reportingを有効にすると、アセットインサイトを追跡するための分析変数が予約されます。
+Adobe Analyticsレポートスイートでリアルタイムのデータ収集とAEM Asset Reporting を有効にする必要があります。 AEM Asset Reporting を有効にすると、アセットのインサイトを追跡するための Analytics 変数が予約されます。
 
-AEM Assets Insights設定の場合は、次の資格情報が必要です
+AEM Assets Insights 設定の場合は、次の資格情報が必要です
 
 * データセンター
-* Analytics会社名
-* Analyticsユーザー名
-* 共有暗号鍵(*Adobe Analytics/管理者/カンパニー設定/ Webサービス*&#x200B;から取得できます)。
+* Analytics 会社名
+* Analytics ユーザー名
+* 共有暗号鍵 ( *Adobe Analytics /管理者/カンパニー設定/ Web サービス*) をクリックします。
 * レポートスイート（アセットレポートに使用する適切なレポートスイートを必ず選択してください）
 
-## パート4:Adobe Experience Platform Launchを使用したAdobe Analytics拡張機能の追加{#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## パート 4:Adobe Experience Platform Launchを使用したAdobe Analytics拡張機能の追加 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-Adobe Analytics拡張機能の追加、ページ読み込みルールの作成、AEMとLaunchの統合(AdobeIMSテクニカルアカウントを使用)。
+Adobe Analytics拡張機能の追加、ページ読み込みルールの作成、AEMと Launch の統合（統合テクニカルアカウント）。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
 
 >[!NOTE]
-すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
+オーサーインスタンスからパブリッシュインスタンスに、すべての変更をレプリケートしてください。
 
-### ルール1 :ページトラッカー(pagetracker.js) {#rule-page-tracker-pagetracker-js}
+### ルール 1 :ページトラッカー (pagetracker.js) {#rule-page-tracker-pagetracker-js}
 
 ```javascript
 //For AEM 6.3
@@ -96,17 +96,17 @@ Adobe Analytics拡張機能の追加、ページ読み込みルールの作成�
 <script type="text/javascript" src="http://localhost:4503/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"></script>
 ```
 
-ページトラッカーが2つのコールバックを実装する（asset-embed-codeに登録）
+ページトラッカーが 2 つのコールバックを実装している（asset-embed-code に登録されている）
 
-* **\&lt;code>assetAnalytics.core.assetLoaded\&lt;/code>** &lt;code>&lt;code>:asset-DOM-elementに対して「load」イベントがディスパッチされた場合に呼び出されます。&lt;/code>&lt;/code>
-* **\&lt;code>assetAnalytics.core.assetClicked\&lt;/code>** &lt;code>&lt;code>:asset-DOM-elementに対して「click」イベントがディスパッチされた場合に呼び出されます。これは、asset-DOM-elementに、有効な外部の「href」属性を持つアンカータグが親として含まれている場合にのみ関係します。&lt;/code>&lt;/code>
+* **\&lt;code>assetAnalytics.core.assetLoaded\&lt;code>** :asset-DOM-element に対して「load」イベントがディスパッチされた場合に呼び出されます。
+* **\&lt;code>assetAnalytics.core.assetClicked\&lt;code>** :asset-DOM-element に対して「click」イベントがディスパッチされたときに呼び出されます。これは、asset-DOM-element が、有効な外部の「href」属性を持つアンカータグを親として持つ場合にのみ関連します
 
-最後に、Pagetrackerは初期化関数をとして実装します。
+最後に、ページトラッカーは初期化関数をとして実装します。
 
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>:このメソッドは、Pagetrackerコンポーネントを初期化するために呼び出されます。&lt;/code>&lt;/code> この呼び出しは、Webページからasset-insights-events（インプレッション数やクリック数）が生成される前におこなう必要があります。
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>:オプションで、AppMeasurementオブジェクトを受け入れます。指定された場合、AppMeasurementオブジェクトの新しいインスタンスの作成は試行されません。&lt;/code>&lt;/code>
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** :このメソッドを呼び出して、Pagetracker コンポーネントを初期化します。 この呼び出しは、asset-insights-events（インプレッション数やクリック数）が Web ページから生成される前におこなう必要があります。
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** :オプションで AppMeasurement オブジェクトを受け入れます。指定された場合、AppMeasurement オブジェクトの新しいインスタンスの作成は試みません。
 
-### ルール2:画像トラッカー — アクション1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
+### ルール 2:画像トラッカー — アクション 1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 
 ```javascript
 /*
@@ -141,7 +141,7 @@ _satellite.notify('in assetAnalytics customInit');
 })();
 ```
 
-### ルール2:画像トラッカー — アクション2 (image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
+### ルール 2:画像トラッカー — アクション 2 (image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
 
 ```javascript
 /*
@@ -159,13 +159,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 });
 ```
 
-* assetAnalytics.core.assetLoaded() :は、ページ読み込みの完了時に呼び出され、すべてのトラッキング可能な画像に対するトリガーアセットインプレッション数を示します。
-* 読み込まれたアセットリストを運ぶAnalytics変数：**contextData[&#39;c.a.assets.idList&#39;]**
-* assetAnalytics.core.assetClicked() :アセットのDOM要素に有効なhref値を持つアンカータグがある場合に呼び出されます。 アセットをクリックすると、クリックされたアセットIDを値として使用するCookieが作成されます。**(cookie名：a.assets.clickedid)**
-* 読み込まれたアセットリストを運ぶAnalytics変数：**contextData[&#39;c.a.assets.clickedid&#39;]**
-* 接触チャネル：**contextData[&#39;c.a.assets.source&#39;]**
+* assetAnalytics.core.assetLoaded() :がページ読み込み完了時に呼び出され、はすべての追跡可能画像のトリガーアセットインプレッション数
+* 読み込まれたアセットリストを運ぶ Analytics 変数： **contextData[&#39;c.a.assets.idList&#39;]**
+* assetAnalytics.core.assetClicked() :アセットの DOM 要素に有効な href 値を持つアンカータグがある場合に呼び出されます。 アセットをクリックすると、クリックされたアセット ID を値として持つ Cookie が作成されます。**(cookie 名：a.assets.clickedid)**
+* 読み込まれたアセットリストを運ぶ Analytics 変数： **contextData[&#39;c.a.assets.clickedid&#39;]**
+* 起源： **contextData[&#39;c.a.assets.source&#39;]**
 
-### コンソールデバッグステートメント{#console-debug-statements}
+### コンソールデバッグステートメント {#console-debug-statements}
 
 ```javascript
 //Launch Build Info
@@ -181,15 +181,15 @@ assetAnalytics
 document.querySelectorAll(".cmp-image__image");
 ```
 
-Analyticsをデバッグする方法として、2つのGoogle Chromeブラウザー拡張機能がビデオで参照されます。 他のブラウザーでも同様の拡張機能を使用できます。
+Analytics のデバッグ方法として、2 つのGoogle Chrome ブラウザー拡張機能がビデオで参照されます。 他のブラウザーでも同様の拡張機能を使用できます。
 
-* [Launch Switch Chrome拡張機能](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
+* [Launch Switch Chrome 拡張機能](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
 * [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?hl=en)
 
-次のChrome拡張機能を使用して、DTMをデバッグモードに切り替えることもできます。[LaunchとDTM Switch](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)。 これにより、DTMのデプロイメントに関連するエラーが発生したかどうかを簡単に確認できます。 さらに、次のスニペットを追加することで、任意のブラウザー&#x200B;*開発者ツール/JSコンソール*&#x200B;を使用して、DTMを手動でデバッグモードに切り替えることができます。
+次の Chrome 拡張機能を使用して、DTM をデバッグモードに切り替えることもできます。 [Launch と DTM の切り替え](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). これにより、DTM のデプロイメントに関連するエラーが発生したかどうかを簡単に確認できます。 さらに、任意のブラウザーを使用して、DTM を手動でデバッグモードに切り替えることができます *開発者ツール/JS コンソール* 次のスニペットを追加する。
 
-## パート5 :Analyticsの追跡とInsightデータの同期のテスト{#analytics-tracking-asset-insights}
+## パート 5 :Analytics の追跡と Insight データの同期のテスト{#analytics-tracking-asset-insights}
 
-AEM Assetレポートの同期ジョブスケジューラーとアセットインサイトレポートの設定
+AEM Asset Reporting 同期ジョブスケジューラーとアセットインサイトレポートの設定
 
 >[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)

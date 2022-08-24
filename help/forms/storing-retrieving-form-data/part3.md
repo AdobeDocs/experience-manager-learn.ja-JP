@@ -1,23 +1,23 @@
 ---
-title: MySQLデータベースからのフォームデータの格納と取得
+title: MySQL データベースからのフォームデータの保存と取得
 description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
-feature: アダプティブフォーム
+feature: Adaptive Forms
 type: Tutorial
-version: 6.3,6.4,6.5
-topic: 開発
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 4%
+source-wordcount: '93'
+ht-degree: 1%
 
 ---
 
+# OSGi サービスを作成してデータを取得する
 
-# OSGiサービスを作成してデータを取得する
-
-次のコードは、保存されたアダプティブフォームのデータを保存して取得するために記述されています。 簡単なクエリを使用して、特定のGUIDに関連付けられたアダプティブフォームデータを取得します。 取得したデータは、呼び出し元のアプリケーションに返されます。 前の手順で作成したのと同じデータソースがこのコードで参照されます
+次のコードは、保存されたアダプティブフォームデータを保存および取得するために記述されています。 単純なクエリを使用して、特定の GUID に関連付けられたアダプティブフォームデータを取得します。 取得したデータは、呼び出し元のアプリケーションに返されます。 前の手順で作成したのと同じデータソースがこのコードで参照されています
 
 
 ```java
@@ -154,7 +154,7 @@ public class FetchFormData implements com.aemforms.saveandcontinue.core.FetchSto
 
 ## インターフェイス
 
-次に、使用されたインターフェイス宣言を示します
+次に、使用されたインターフェイス宣言を示します。
 
 ```java
 package com.aemforms.saveandcontinue.core;

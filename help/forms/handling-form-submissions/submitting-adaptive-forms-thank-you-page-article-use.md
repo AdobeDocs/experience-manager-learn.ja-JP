@@ -1,48 +1,47 @@
 ---
 title: 「ありがとうございます」ページへの送信
-seo-title: 「ありがとうございます」ページへの送信
-description: アダプティブフォーム送信時に「ありがとうございます」ページを表示する
-seo-description: アダプティブフォーム送信時に「ありがとうございます」ページを表示する
+seo-title: Submitting To Thank You Page
+description: アダプティブフォームの送信時に「ありがとうございます」ページを表示する
+seo-description: Display a thank you page on submitting Adaptive Form
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: アダプティブフォーム
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '261'
 ht-degree: 6%
 
 ---
 
-
 # 「ありがとうございます」ページへの送信 {#submitting-to-thank-you-page}
 
-「 RESTエンドポイントへの送信」オプションでは、フォームに入力されたGETを、HTTPデータリクエストの一環として設定済みの確認ページに渡します。 リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
+「 REST エンドポイントに送信」オプションでは、HTTPGETリクエストの一環として、フォームに入力されたデータを設定済みの確認ページに渡します。 リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
 
-\{fieldName\} = \{parameterName\}。 例えば、 submitterNameはアダプティブフォームフィールドの名前で、 submitterはパラメーターの名前です。 ありがとうページで、 request.getParameter(&quot;submitter&quot;)を使用してsubmitterパラメーターにアクセスし、submitter名フィールドの値を取得できます。
+\{fieldName\} = \{parameterName\}。 例えば、 submitterName はアダプティブフォームフィールドの名前で、 submitter はパラメーターの名前です。 「ありがとうございます」ページでは、 request.getParameter(&quot;submitter&quot;) を使用して submitter パラメーターにアクセスし、submitter 名フィールドの値を取得できます。
 
 submitterName=submitter
 
-以下のスクリーンショットでは、/content/thankyouにある「ありがとうございます」ページにアダプティブフォームを送信します。 このありがとうページに、フォームフィールドの値を保持する3つの要求属性を渡しています。
+以下のスクリーンショットでは、/content/thankyou にある「ありがとうございます」ページにアダプティブフォームを送信しています。 このありがとうページには、フォームフィールドの値を保持する 3 つの要求属性を渡しています。
 
-![thank](assets/thankyoupage.gif)
+![ありがとう](assets/thankyoupage.gif)
 
-また、「 」を介して外部エンドポイントに送信することもできます。POST これを実現するには、「postリクエストを有効にする」チェックボックスを選択して、外部エンドポイントのURLを指定するだけです。 フォームを送信すると、「ありがとうございます」ページが表示され、POSTエンドポイントが同時に呼び出されます。
+また、「 」を使用して外部エンドポイントに送信することもできます。POST これを達成するには、「post リクエストを有効にする」チェックボックスを選択して、外部エンドポイントの URL を指定するだけです。 フォームを送信すると、「ありがとうございます」ページが表示され、POSTエンドポイントが同時に呼び出されます。
 
 ![キャプチャ](assets/capture.gif)
 
 
-ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
+お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* パッケージマネージャー](assets/submittingtorestendpoint.zip)を使用して、この記事に関連付けられた[アセットファイルをAEMに読み込みます。
-* ブラウザーで[リクエストフォームのタイムオフ](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を参照します。
+* 次をインポート： [パッケージマネージャーを使用して、この記事に関連付けられたアセットファイルをAEMに取り込みます。](assets/submittingtorestendpoint.zip)
+* ブラウザーで [タイムオフリクエストフォーム](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 必須フィールドに入力し、フォームを送信します
 * ページに情報が入力された「ありがとうございます」ページが表示されます
-

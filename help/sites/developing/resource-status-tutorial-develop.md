@@ -1,12 +1,12 @@
 ---
 title: AEM Sitesでのリソースステータスの作成
-description: 'Adobe Experience ManagerのリソースステータスAPIは、AEMの様々なエディターのWeb UIでステータスメッセージを公開するためのプラグ可能なフレームワークです。 '
+description: 'Adobe Experience Managerのリソースステータス API は、AEMの様々なエディター Web UI でステータスメッセージを公開するためのプラグ可能なフレームワークです。 '
 topics: development
 audience: developer
 doc-type: tutorial
 activity: develop
-version: 6.3, 6.4, 6.5
-source-git-commit: 03db12de4d95ced8fabf36b8dc328581ec7a2749
+version: 6.4, 6.5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 2%
@@ -14,48 +14,48 @@ ht-degree: 2%
 ---
 
 
-# リソースのステータスの作成 {#developing-resource-statuses-in-aem-sites}
+# リソースステータスの作成 {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience ManagerのリソースステータスAPIは、AEMの様々なエディターのWeb UIでステータスメッセージを公開するためのプラグ可能なフレームワークです。
+Adobe Experience Managerのリソースステータス API は、AEMの様々なエディター Web UI でステータスメッセージを公開するためのプラグ可能なフレームワークです。
 
 ## 概要 {#overview}
 
-エディターのリソースステータスフレームワークは、エディターのステータスを標準的かつ均一な方法で表示および操作するための、サーバー側およびクライアント側のAPIを提供します。
+エディターのリソースステータスフレームワークは、エディターのステータスを標準的かつ均一な方法で表示および操作するための、サーバー側およびクライアント側の API を提供します。
 
-エディターのステータスバーは、AEMのページ、エクスペリエンスフラグメントおよびテンプレートエディターでネイティブに使用できます。
+エディターのステータスバーは、AEMのページ、エクスペリエンスフラグメントおよびテンプレートエディターでネイティブで使用できます。
 
 カスタムのリソースステータスプロバイダーの使用例を次に示します。
 
-* ページがスケジュールされたアクティベーションから2時間以内に作成者に通知する
-* 過去15分以内にページがアクティブ化されたことを作成者に通知する
-* 過去5分以内にページが編集されたユーザーに対して作成者に通知
+* ページが予定されているアクティベーションから 2 時間以内になった場合に作成者に通知します
+* 過去 15 分以内にページがアクティブ化されたことを作成者に通知します。
+* 過去 5 分以内にページが編集されたこと、および編集者に通知
 
 ![AEMエディターのリソースステータスの概要](assets/sample-editor-resource-status-screenshot.png)
 
-## リソース状態プロバイダーフレームワーク {#resource-status-provider-framework}
+## リソースステータスプロバイダーフレームワーク {#resource-status-provider-framework}
 
-カスタムリソースステータスを作成する場合、開発作業は次の要素で構成されます。
+カスタムのリソースステータスを作成する場合、開発作業は次の要素で構成されます。
 
-1. ResourceStatusProvider実装。ステータスが必要かどうかを判断する役割を果たし、ステータスに関する基本情報を示します。タイトル、メッセージ、優先度、バリアント、アイコン、使用可能なアクションを示します。
-2. オプションで、使用可能なアクションの機能を実装するGraniteUI JavaScriptを使用できます。
+1. ResourceStatusProvider 実装。ステータスが必須かどうかを判断する役割を果たし、ステータスに関する基本情報を示します。タイトル、メッセージ、優先度、バリアント、アイコン、使用可能なアクションを示します。
+2. オプションで、使用可能なアクションの機能を実装する GraniteUI JavaScript。
 
    ![リソースステータスアーキテクチャ](assets/sample-editor-resource-status-application-architecture.png)
 
-3. ページ、エクスペリエンスフラグメント、テンプレートエディターの一部として提供されるステータスリソースには、リソースの「[!DNL statusType]」プロパティを使用して型が指定されます。
+3. ページ、エクスペリエンスフラグメント、テンプレートエディターの一部として提供されるステータスリソースには、リソース「 」を使用してタイプが付与されます[!DNL statusType]&quot;プロパティ。
 
-   * ページエディター：`editor`
-   * エクスペリエンスフラグメントエディター：`editor`
+   * ページエディター： `editor`
+   * エクスペリエンスフラグメントエディター： `editor`
    * テンプレートエディター: `template-editor`
 
-4. ステータスリソースの`statusType`は、登録された`CompositeStatusType` OSGi設定の`name`プロパティに一致します。
+4. ステータスリソースの `statusType` は登録済みと一致します `CompositeStatusType` OSGi が設定されました `name` プロパティ。
 
-   すべての一致に対して、`CompositeStatusType's`型が収集され、`ResourceStatusProvider.getType()`を介して、この型を持つ`ResourceStatusProvider`実装を収集するために使用されます。
+   すべての一致について、 `CompositeStatusType's` タイプが収集され、収集に使用されます `ResourceStatusProvider` を介してこのタイプを持つ実装 `ResourceStatusProvider.getType()`.
 
-5. 一致する`ResourceStatusProvider`がエディターで`resource`に渡され、`resource`が表示されるステータスかどうかが判断されます。 ステータスが必要な場合、この実装は0または多数の`ResourceStatuses`を作成し、それぞれが表示するステータスを表します。
+5. 一致 `ResourceStatusProvider` が渡された `resource` を編集し、 `resource` には、表示するステータスがあります。 ステータスが必要な場合、この実装は 0 または多数の `ResourceStatuses` を返す場合は、それぞれ、表示するステータスを表します。
 
-   通常、`ResourceStatusProvider`は`resource`ごとに0または1 `ResourceStatus`を返します。
+   通常、 `ResourceStatusProvider` 0 または 1 を返します `ResourceStatus` 単位 `resource`.
 
-6. ResourceStatusは、顧客が実装できるインターフェイスです。また、役立つ`com.day.cq.wcm.commons.status.EditorResourceStatus.Builder`を使用してステータスを作成できます。 ステータスは、次の要素で構成されます。
+6. ResourceStatus は、お客様が実装できるインターフェイス、または役に立つインターフェイスです `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` を使用して、ステータスを作成できます。 ステータスは、次の要素で構成されます。
 
    * タイトル
    * メッセージ
@@ -65,7 +65,7 @@ Adobe Experience ManagerのリソースステータスAPIは、AEMの様々な�
    * アクション
    * データ
 
-7. 必要に応じて、`Actions`が`ResourceStatus`オブジェクトに指定されている場合、機能をステータスバーのアクションリンクにバインドするには、サポートするclientlibsが必要です。
+7. （オプション） `Actions` が `ResourceStatus` オブジェクトの場合、機能をステータスバーのアクションリンクにバインドするには、サポートする clientlib が必要です。
 
    ```js
    (function(jQuery, document) {
@@ -78,15 +78,15 @@ Adobe Experience ManagerのリソースステータスAPIは、AEMの様々な�
    })(jQuery, document);
    ```
 
-8. アクションをサポートするJavaScriptまたはCSSをサポートする場合、フロントエンドコードがエディターで使用できるように、各エディターの各クライアントライブラリを通じてプロキシ化する必要があります。
+8. アクションをサポートするサポートする JavaScript または CSS は、フロントエンドコードがエディターで使用できるように、各エディターの各クライアントライブラリを通じてプロキシ化する必要があります。
 
-   * ページエディターカテゴリ：`cq.authoring.editor.sites.page`
-   * エクスペリエンスフラグメントエディターカテゴリ：`cq.authoring.editor.sites.page`
-   * テンプレートエディターカテゴリ：`cq.authoring.editor.sites.template`
+   * ページエディターカテゴリ： `cq.authoring.editor.sites.page`
+   * エクスペリエンスフラグメントエディターカテゴリ： `cq.authoring.editor.sites.page`
+   * テンプレートエディターカテゴリ： `cq.authoring.editor.sites.template`
 
 ## コードを表示する {#view-the-code}
 
-[GitHubのコードを参照してください。](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
+[GitHub のコードを参照してください。](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
 ## その他のリソース {#additional-resources}
 

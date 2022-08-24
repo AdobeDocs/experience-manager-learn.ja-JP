@@ -1,13 +1,13 @@
 ---
 title: AEMでの Java API のベストプラクティス
 description: AEMは、開発時に使用する多くの Java API を公開する、豊富なオープンソースソフトウェアスタックに基づいて構築されています。 この記事では、主な API、およびそれらを使用するタイミングと理由について説明します。
-version: 6.2, 6.3, 6.4, 6.5
+version: 6.4, 6.5
 feature: APIs
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
-source-git-commit: 9ca80b743c2ca0d3e63cce99fa905be49d1fbcdd
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '2071'
 ht-degree: 9%

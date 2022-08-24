@@ -1,41 +1,42 @@
 ---
-title: ACSプロファイルを使用したアダプティブフォームの事前入力
-description: ACSプロファイルを使用したアダプティブFormsの事前入力
-feature: アダプティブForms、フォームデータモデル
-version: 6.3,6.4,6.5
-topic: 開発
+title: ACS プロファイルを使用したアダプティブフォームの事前入力
+description: ACS プロファイルを使用したアダプティブFormsの事前入力
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
 
-# ACSプロファイルを使用したアダプティブフォームの事前入力 {#prefilling-adaptive-form-using-acs-profile}
+# ACS プロファイルを使用したアダプティブフォームの事前入力 {#prefilling-adaptive-form-using-acs-profile}
 
-ここでは、ACSから取得したプロファイル情報を使用して、アダプティブフォームに事前入力します。 AEM Formsには、アダプティブフォームの事前入力に使用できる強力な機能があります。
+ここでは、ACS から取得したプロファイル情報を使用してアダプティブフォームに事前入力します。 AEM Formsには、アダプティブフォームに事前入力する機能が備わっています。
 
-アダプティブフォームの事前入力の詳細については、この[チュートリアル](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)を参照してください。
+アダプティブフォームの事前入力の詳細については、こちらを参照してください [チュートリアル](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
-ACSからデータを取得してアダプティブフォームを事前入力するには、ACSにログインしたAEMユーザーと同じ電子メールを持つプロファイルがあると仮定します。 例えば、AEMにログインしたユーザーの電子メールIDがcsimms@adobe.comの場合、ACSで電子メールがcsimms@adobe.comのプロファイルを検索することを想定します。
+ACS からデータを取得してアダプティブフォームを事前入力するには、ACS に、ログインしたAEMユーザーと同じ電子メールを持つプロファイルがあると想定します。 例えば、AEMにログインしたユーザーの電子メール ID がcsimms@adobe.comの場合、ACS で、電子メールがcsimms@adobe.comのプロファイルを検索することを想定しています。
 
-REST APIを使用してACSからプロファイル情報を取得するには、次の手順が必要です
+REST API を使用して ACS からプロファイル情報を取得するには、次の手順が必要です
 
-* JWTを生成
-* アクセストークン用のExchange JWT
-* ACSに対するREST呼び出しと電子メールによるプロファイル取得
-* プロファイル情報を使用してXMLドキュメントを作成する
-* AEM Formsが使用するXMLドキュメントのInputStreamを返す
+* JWT の生成
+* アクセストークン用の Exchange JWT
+* ACS に対する REST 呼び出しをおこない、プロファイルを電子メールで取得する
+* プロファイル情報を使用して XML ドキュメントを作成
+* AEM Formsで使用される XML ドキュメントの InputStream を返す
 
 ![prefillservice](assets/prefillserviceaf.gif)
 
 事前入力サービスとアダプティブフォームの関連付け
 
-以下は、ACSからプロファイル情報を取得して返すコードです。
+以下は、ACS からプロファイル情報を取得して返すためのコードです。
 
-68行目で、AEMユーザーのEメールIDを取得します。 Adobe Campaign Standardに対してREST呼び出しをおこなうことで、プロファイルの詳細が取得されます。 取得されたプロファイルの詳細から、XMLドキュメントはAEM Formsが理解できる方法で構築されます。 このドキュメントの入力ストリームは、AEM Formsでの使用のために返されます。
+68 行目で、AEMユーザーの E メール ID を取得します。 プロファイルの詳細は、Adobe Campaign Standardに対して REST 呼び出しをおこなうことで取得されます。 取得したプロファイルの詳細から、XML ドキュメントはAEM Formsが理解できる方法で構築されます。 このドキュメントの入力ストリームは、AEM Formsが使用するために返されます。
 
 ```java
 package aemforms.campaign.core;
@@ -230,7 +231,6 @@ return "Pre Fill Forms Using Campaign Profile";
 これをシステムで動作させるには、次の手順に従ってください。
 
 * [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [パッケージマネージャーを使用したサンプルのアダプティブフォームのAEMへの読み込み](assets/pre-fill-af-from-campaign.zip)
-* 電子メールIDがAdobe Campaignのプロファイルによって共有されているユーザーを使用してAEMにログインしてください。 例えば、AEMユーザーの電子メールIDがjohndoe@adobe.comの場合、ACSに電子メールがjohndoe@adobe.comのプロファイルが必要です。
+* [パッケージマネージャーを使用してサンプルのアダプティブフォームをAEMに読み込む](assets/pre-fill-af-from-campaign.zip)
+* 電子メール ID がAdobe Campaignのプロファイルで共有されているユーザーを使用してAEMにログインしてください。 例えば、AEMユーザーの電子メール ID がjohndoe@adobe.comの場合、ACS に電子メールがjohndoe@adobe.comのプロファイルが必要です。
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
-
