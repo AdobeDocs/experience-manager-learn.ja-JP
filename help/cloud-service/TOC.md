@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b04e247c091634030e5377fdb8a159f8c7cce904
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '823'
 ht-degree: 28%
 
 ---
@@ -213,6 +213,7 @@ ht-degree: 28%
    + Microsoft Power Automate との統合{#forms-cs-and-power-automate}
       + [統合の設定](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [送信されたフォームデータを解析](./forms/forms-cs-and-power-automate/send-email-notification.md)
+      + [DoR を電子メールの添付ファイルとして送信](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
    + Microsoft Dynamics との統合{#formscs-dynamics-crm}
       + [Dynamics アプリケーションを作成](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [データソースの設定](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
