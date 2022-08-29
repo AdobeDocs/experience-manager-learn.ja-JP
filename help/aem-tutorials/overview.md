@@ -2,26 +2,27 @@
 title: AEM チュートリアル
 description: Adobe Experience Managerのビデオとチュートリアルのコレクションです。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: ebe252116f677ff7486346077736d0ee450896c1
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 44%
+source-wordcount: '170'
+ht-degree: 41%
 
 ---
 
-# AEM チュートリアル {#overview}
+# Experience Managerチュートリアル {#overview}
 
 Adobe Experience Manager(AEM) は、主要なエクスペリエンス管理プラットフォームです。 このユーザガイドには、AEMからの価値を最大限に高めるのに役立つビデオとチュートリアルが含まれています。
 
-## AEM のビデオおよびチュートリアル
+## AEM チュートリアル
 
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 + [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 + [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
 + [AEM as aCloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=ja)
 + [AEM の基盤](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
++ [AEM Guides のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html)
 
-## AEMのマルチステップTutorials
+## AEMマルチステップチュートリアル
 
 + [AEM Sites の概要 - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
