@@ -3,9 +3,9 @@ title: AEM Assets のビデオおよびチュートリアル
 description: ビデオを見て、AEM Asset のサポートとサポートを受けてください。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '205'
 ht-degree: 21%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 21%
 # AEM Assets のビデオおよびチュートリアル {#overview}
 
 Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できる、AEM Platform のデジタルアセット管理ツールです。 このユーザーガイドには、AEM Assetsの様々な機能に関するビデオとチュートリアルが含まれています。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_assets_overview"
+>title="AEM Assets"
+>abstract="必要なアセットをすばやく見つけて編集する方法を説明します。"
+>additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assetsウォークスルー"
 
 ## AEM Assetsウォークスルー
 
