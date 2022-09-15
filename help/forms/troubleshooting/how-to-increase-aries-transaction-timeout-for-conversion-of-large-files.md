@@ -1,23 +1,23 @@
 ---
-title: サイズの大きいファイルの変換に関連する問題に対処するために、「aries.transaction.timeout」を増やす方法
-description: 大きなファイルの変換で「aries.transaction.timeout」を増やす手順
+title: 大きなファイルの変換に関連する問題に対処するために「aries.transaction.timeout」を増やす方法
+description: 大きなファイルを変換する際の「aries.transaction.timeout」の値を増やす手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: Outputサービス，Formsサービス
-topic: '管理 '
+feature: Output Service, Forms Service
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: acb3a3b4-e596-48d8-9737-63fc5b765beb
+source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 1%
+source-wordcount: '56'
+ht-degree: 0%
 
 ---
 
+# 大きなファイルの変換に関連する問題に対処するために「aries.transaction.timeout」を増やす方法
 
-# サイズの大きいファイルの変換に関連する問題に対処するために、「aries.transaction.timeout」を増やす方法
-
-*このビデオでは、「aries.transaction.timeout」を増やし、大きなファイルの変換に関連する問題に対処するプロセスについて説明します。*
+*このビデオでは、大きなファイルの変換に関連する問題に対処するために、「aries.transaction.timeout」を増やすプロセスについて説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335502?quality=9&learn=on)

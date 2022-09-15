@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 614db8b03a823b60846ab8ccfa8fbc29a41f7791
+source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1695'
 ht-degree: 3%
 
 ---
@@ -279,6 +279,7 @@ ht-degree: 3%
    + [ドキュメントサービス：XMLFormService part1 の bmc プールサイズを調整する手順](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
    + [ドキュメントサービス：XMLFormService part2 の bmc プールサイズを調整する手順](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
    + [ドキュメントサービス：JMX コンソールでパラメーターを調整する手順](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
+   + [大きな xml データファイルとテンプレートの結合を有効にする](troubleshooting/fix-timeout-errors-when-merging-large-xml-wth-template.md)
    + [PDFG:PDFG でのトランザクションタイムアウトの変更方法](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
    + [PDFG:PDFG での CORBA タイムアウトの更新方法](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
    + [PDFG:PDFG でのタイムアウトの更新方法](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
