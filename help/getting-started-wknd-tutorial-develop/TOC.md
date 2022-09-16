@@ -5,13 +5,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 user-guide-title: AEM Sites の概要 - WKND チュートリアル
-user-guide-description: AEM を初めて使う開発者向けに作られた、複数のパートから成るチュートリアルです。架空のライフスタイルブランドである WKND 向けに AEM Sites を実装します。
+user-guide-description: AEM を初めて使う開発者向けに作られた、複数のパートから成るチュートリアルです。架空のライフスタイルブランドである WKND 向けに AEM Sites を実装します。フロントエンドパイプラインを有効にして、開発をデプロイメントサイクルに進めます。
 breadcrumb-title: AEM Sites WKND チュートリアル
 index: y
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '93'
+ht-degree: 43%
 
 ---
 
@@ -33,5 +33,9 @@ ht-degree: 0%
    + [1 — サイトの作成](./site-template/create-site.md)
    + [2 — オーサリングと公開の概要](./site-template/author-content-publish.md)
    + [3 - Adobe XDでの UI 計画](./site-template/ui-planning-adobe-xd.md)
-   + [3 — ページテンプレート](./site-template/page-templates.md)
-   + [4 — テーマ設定](./site-template/theming.md)
+   + [4 — ページテンプレート](./site-template/page-templates.md)
+   + [5 — テーマ設定](./site-template/theming.md)
++ フロントエンドパイプラインの有効化 — DevOps{#enable-frontend-pipeline-devops}
+   + [概要](./enable-frontend-pipeline/overview.md)
+
+
