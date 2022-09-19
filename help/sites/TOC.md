@@ -3,10 +3,10 @@ user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 552e5fbeb5dafc6d82763d5c3b31cc6d17131739
+source-git-commit: 798b366a5add2831bf60a8d89968bad16e48802c
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 32%
+source-wordcount: '434'
+ht-degree: 30%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 32%
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
    + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + エキスパートアドバイス {#expert-advice}
+      + [コンテンツフラグメントのヒント](content-fragments/expert-advice/content-fragments.md)
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
    + [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
@@ -113,3 +115,8 @@ ht-degree: 32%
       + [エクスペリエンスフラグメントオファーを使用して Target アクティビティを作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composer を使用したパーソナライゼーション](integrations/adobe-target/personalization-using-vec.md)
       + [完全な Web ページエクスペリエンスのパーソナライズ](integrations/adobe-target/personalization-web-page.md)
++ エキスパートリソース {#expert-resources}
+   + [AEM Sites成熟度評価](expert-resources/maturity-assessment.md)
+   + [サイトメンテナンス](expert-resources/site-maintenance.md)
+   + [AEMチャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
+   + [AEMチャンピオンのヒントとテクニック：セッション 2](expert-resources/champion-tips-2.md)
