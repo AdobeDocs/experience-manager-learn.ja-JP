@@ -8,10 +8,10 @@ user-guide-title: AEM Sites の概要 - WKND チュートリアル
 user-guide-description: AEM を初めて使う開発者向けに作られた、複数のパートから成るチュートリアルです。架空のライフスタイルブランドである WKND 向けに AEM Sites を実装します。フロントエンドパイプラインを有効にして、開発をデプロイメントサイクルに進めます。
 breadcrumb-title: AEM Sites WKND チュートリアル
 index: y
-source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
+source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 43%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
@@ -37,5 +37,8 @@ ht-degree: 43%
    + [5 — テーマ設定](./site-template/theming.md)
 + フロントエンドパイプラインの有効化 — DevOps{#enable-frontend-pipeline-devops}
    + [概要](./enable-frontend-pipeline/overview.md)
-
+   + [1 — フルスタックプロジェクトをレビュー](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 — フロントエンドパイプラインを使用するためのプロジェクトの更新](./enable-frontend-pipeline/update-project.md)
+   + [3 — フロントエンドパイプラインを使用したデプロイ](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 — 考慮事項](./enable-frontend-pipeline/considerations.md)
 
