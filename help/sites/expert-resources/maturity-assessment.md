@@ -3,7 +3,7 @@ title: サイト階層、分類、タグ付けに関するヒント
 description: サイト階層、分類、タグ付けに関するヒントのベストプラクティス
 hide: true
 hidefromtoc: true
-source-git-commit: 6f4d811e796b34985fa9d5af335239948e59c1ef
+source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 2%
@@ -34,3 +34,4 @@ AEM成熟度評価は、主にオンプレミスとマネージドサービス�
 推奨されるAEM成熟度評価分野：設計とアーキテクチャ、製品管理と戦略、デジタルアセット管理と配信、分析、テスト、セキュリティ。
 
 複数のExperience League記事と独自のベストプラクティスからこの情報を集めたAEMチャンピオン Greg Dimeris への大きなショートアウト！
+
