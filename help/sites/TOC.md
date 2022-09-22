@@ -3,9 +3,9 @@ user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '432'
 ht-degree: 30%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 30%
    + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
    + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + コンテンツフラグメント {#content-fragments}
+   + [コンテンツフラグメントコンソール](content-fragments/content-fragments-console.md)
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
    + [コンテンツフラグメントの配信](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [コンテンツフラグメントの翻訳](content-fragments/content-fragments-translation-feature-video-use.md)
