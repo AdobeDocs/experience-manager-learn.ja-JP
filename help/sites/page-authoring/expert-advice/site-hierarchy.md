@@ -1,11 +1,24 @@
 ---
 title: サイト階層、分類、タグ付けに関するヒント
-description: サイト階層、分類、タグ付けに関するヒントのベストプラクティス
+seo-title: Overview of Authoring in AEM Sites
+description: 次のビデオでは、AEMオーサー環境でのオーサリングに関する基本的な概念の概要を説明します。 Sites コンソールを基礎として使用します。
+seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
+topics: authoring, publishing
+audience: author, marketer
+doc-type: feature video
+activity: use
+version: 6.4, 6.5, Cloud Service
+kt: 4242
+thumbnail: 33594.jpg
+topic: Content Management
+role: User
+level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -16,8 +29,6 @@ ht-degree: 0%
 メタデータとタグは、AEMの効率を高めるための鍵となります。 ユーザー、リーダー、管理は総合的な戦略の必要性を認識していますが、それを前進させるのは難しいと感じています。 多くの場合、ユーザー間で知識が分散され、全体的な戦略が困難になり、調整がさらに問題になります。
 
 メタデータとタグの違いは何ですか。 戦略を推進する際に考慮すべきビジネス面は何ですか？
-
-より集中的な概要が見つかります [ここ](https://adobe.sharepoint.com/:w:/r/sites/ACSSuccessServices/_layouts/15/Doc.aspx?sourcedoc=%7BFE5E873A-A3B6-4F40-BF22-A2C9F1269802%7D&amp;file=AEM_TagTaxonomyAndMetadata_BestPractice_en%20(2).docx&amp;action=default&amp;mobileredirect=true).
 
 ## メタデータの目的とは
 
