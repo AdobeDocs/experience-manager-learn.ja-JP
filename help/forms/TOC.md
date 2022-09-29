@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
+source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1701'
 ht-degree: 3%
 
 ---
@@ -150,16 +150,17 @@ ht-degree: 3%
    + [データソースの設定](sign-multiple-documents/configure-data-source.md)
    + [OSGi サービスの作成](sign-multiple-documents/create-osgi-service.md)
    + [メインワークフローを作成](sign-multiple-documents/create-main-workflow.md)
-   + [署名ステータス更新ワークフロー](sign-multiple-documents/update-signature-status.md)
+   + [署名ステータスの更新ワークフロー](sign-multiple-documents/update-signature-status.md)
    + [概要コンポーネントをカスタマイズ](sign-multiple-documents/customize-summary-component.md)
    + [クライアントライブラリを作成](sign-multiple-documents/create-client-lib.md)
    + [フォームテンプレートを作成](sign-multiple-documents/create-af-template.md)
    + [初期フォームを作成](sign-multiple-documents/create-initial-form.md)
-   + [署名用にFormsを作成](sign-multiple-documents/create-forms-for-signing.md)
+   + [署名用のフォームを作成](sign-multiple-documents/create-forms-for-signing.md)
    + [ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
 + カスタムワークフローステップ{#custom-workflow-steps}
    + [xml ドキュメントからノードを抽出](custom-workflow-steps/extract-xml-node.md)
    + [ドキュメントをファイルシステムに保存](custom-workflow-steps/write-payload-document.md)
+   + [送信されたデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + AEM Workflow の変数{#variables-aem-workflow}
    + [概要 — ワークフローの変数](variables-aem-workflow/introduction.md)
    + [XML 変数](variables-aem-workflow/part1.md)
