@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '830'
+ht-degree: 28%
 
 ---
 
@@ -128,6 +128,7 @@ ht-degree: 0%
       + コンテンツの移行 {#content-migration}
          + [一括読み込みサービス](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [コンテンツ転送ツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [FAQ](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [トラブルシューティング](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [はじめに](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
