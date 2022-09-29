@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1835'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ React で記述されたシングルページアプリケーション (SPA) の�
 ## 作成する内容
 
 この章では、SPAとの統合方法を理解するために、AEMにいくつかの小さな変更を加えます。
-この章では、 `Header` コンポーネントをSPAに追加します。 これを構築中 **静的** `Header` コンポーネントAEM SPA開発に対するいくつかの方法が使用されます。
+この章では、 `Header` コンポーネントをSPAに追加します。 これを構築中 **静的** `Header` コンポーネントは、AEM SPA開発に対するいくつかのアプローチを使用します。
 
 ![AEMの新しいヘッダー](./assets/integrate-spa/final-header-component.png)
 
@@ -44,7 +44,7 @@ React で記述されたシングルページアプリケーション (SPA) の�
 
 AEMプロジェクトの一部として、次の 2 つのモジュールが作成されました。 `ui.apps` および `ui.frontend`.
 
-この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発およびテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
+この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発とテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
 
 ![ui.frontend の高レベルアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -227,7 +227,7 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
 
 前の演習で見たように、クライアントライブラリをビルドして、AEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストで使用できますが、SPAの開発の大部分には理想的ではありません。
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスからの JSON コンテンツを次のようにします。 **プロキシ化** を開発サーバーに送信します。
+A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスの JSON コンテンツを次のようにします。 **プロキシ化** を開発サーバーに送信します。
 
 1. IDE に戻り、ファイルを開きます。 `ui.frontend/package.json`.
 

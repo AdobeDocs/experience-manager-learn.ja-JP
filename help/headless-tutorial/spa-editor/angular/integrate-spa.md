@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2187'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ angularで記述されたシングルページアプリケーション (SPA) の
 
 ## 作成する内容
 
-この章では、 `Header` コンポーネントをSPAに追加します。 この静的を構築中 `Header` コンポーネントAEM SPA開発に対するいくつかの方法が使用されます。
+この章では、 `Header` コンポーネントをSPAに追加します。 この静的を構築中 `Header` コンポーネントは、AEM SPA開発に対するいくつかのアプローチを使用します。
 
 ![AEMの新しいヘッダー](./assets/integrate-spa/final-header-component.png)
 
@@ -71,7 +71,7 @@ angularで記述されたシングルページアプリケーション (SPA) の
 
 AEMプロジェクトの一部として、次の 2 つのモジュールが作成されました。 `ui.apps` および `ui.frontend`.
 
-この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発およびテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
+この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発とテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
 
 ![ui.frontend の高レベルアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -269,7 +269,7 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
 
 前の演習で見たように、クライアントライブラリをビルドして、AEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストで使用できますが、SPAの開発の大部分には理想的ではありません。
 
-A [webpack dev server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスからの JSON コンテンツを次のようにします。 **プロキシ化** を、 [Angular計画](https://angular.io/guide/build).
+A [webpack dev server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスの JSON コンテンツを次のようにします。 **プロキシ化** を、 [Angular計画](https://angular.io/guide/build).
 
 1. IDE に戻り、ファイルを開きます。 **proxy.conf.json** 時刻 `ui.frontend/proxy.conf.json`.
 
@@ -458,7 +458,7 @@ A [webpack dev server](https://webpack.js.org/configuration/dev-server/) を使�
 
 ## Sass でスタイルを追加
 
-次に、更新されたスタイルがプロジェクトに追加されます。 このプロジェクトは [サス](https://sass-lang.com/) 変数などの便利な機能のサポート。
+次に、更新された一部のスタイルがプロジェクトに追加されます。 このプロジェクトは [サス](https://sass-lang.com/) 変数などの便利な機能のサポート。
 
 1. ターミナルウィンドウを開き、 **webpack dev server** （開始した場合） 内部から `ui.frontend` フォルダーを次のコマンドで入力して、処理するAngularアプリを更新します **.scss** ファイル。
 

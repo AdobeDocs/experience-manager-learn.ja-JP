@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: e9aeb54f0e2b52ad2d1cc914820bd6e232e509a0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 2%
+source-wordcount: '1144'
+ht-degree: 5%
 
 ---
 
@@ -52,7 +52,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 まず、AEM as a Cloud Serviceで専用の出力 IP アドレスを有効にして設定します。
 
-1. まず、Cloud Manager API を使用して、アドバンスドネットワークが設定される地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API を使用して、アドバンスネットワークが必要な地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
 
    __listRegions HTTP リクエスト__
 

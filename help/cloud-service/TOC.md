@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager as a Cloud Service のチュー
 breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: cloud-service
 team: TM
-source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 28%
@@ -214,7 +214,7 @@ ht-degree: 28%
    + Microsoft Power Automate との統合{#forms-cs-and-power-automate}
       + [統合の設定](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [送信されたフォームデータを解析](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [DoR を電子メールの添付ファイルとして送信](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
+      + [DoR を電子メールの添付ファイルとして送信](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [送信されたデータからフォームの添付ファイルを抽出する](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + Microsoft Dynamics との統合{#formscs-dynamics-crm}
       + [Dynamics アプリケーションを作成](./forms/formscs-dynamics-crm/create-dynamics-account.md)
@@ -272,9 +272,9 @@ ht-degree: 28%
       + [Sling Job Scheduler](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
       + [キャッシュの修正](./cloud-5/season-2/cloud5-fix-your-cache.md)
       + [書き換えの修正](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
-      + [Cloud Manager — 単体テスト](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
-      + [Cloud Manager — 機能テスト](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
+      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
+      + [Cloud Manager — 単体テスト](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
+      + [Cloud Manager — 機能テスト](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + 複数手順のTutorials{#multi-step-tutorials}
    + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)

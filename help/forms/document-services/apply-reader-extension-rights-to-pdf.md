@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '354'
 ht-degree: 13%
 
 ---
@@ -73,7 +73,7 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 
 次の手順では、POSTメソッドを使用してサーブレットを作成し、読み取り用拡張PDFをユーザーに返します。 この場合、ユーザーは、ファイル・システムにPDFを保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザーに付属の pdf ビューアではダイナミック pdf が処理されないためです。
 
-次に、サーブレットのコードを示します。 サーブレットは、アダプティブフォームの customsubmit アクションから呼び出されます。
+次に、サーブレットのコードを示します。 このサーブレットは、アダプティブフォームの customsubmit アクションから呼び出されます。
 サーブレットは、UsageRights オブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてプロパティを設定します。 次に、サーブレットが、この目的で作成されたサービスの applyUsageRights メソッドを呼び出します。
 
 ```java

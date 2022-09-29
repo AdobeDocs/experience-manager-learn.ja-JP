@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
@@ -29,7 +29,7 @@ ht-degree: 2%
 * また、 [設定，Reader拡張資格情報](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
-* 使用権限をレンダリングおよび適用するカスタム OSGi サービスを作成します。 これをおこなうコードを次に示します
+* 使用権限をレンダリングして適用するカスタム OSGi サービスを作成します。 これをおこなうコードを次に示します
 
 ## Render XDP と Apply usage rights {#render-xdp-and-apply-usage-rights}
 
@@ -83,7 +83,7 @@ ht-degree: 2%
 
 次のスクリーンショットは、公開された設定プロパティを示しています。 一般的な使用権限のほとんどは、この設定を通じて公開されます。
 
-![](assets/configurationproperties.gif)
+![設定プロパティ](assets/configurationproperties.gif)
 
 次のコードは、OSGi 設定の構築に使用するコードを示しています
 

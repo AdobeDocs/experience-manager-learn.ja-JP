@@ -1,6 +1,6 @@
 ---
-title: asset computeワーカーのデバッグ
-description: asset computeワーカーは、単純なデバッグログステートメント、リモートデバッガーとして添付されたVS Code、AEM as a Adobe I/O Runtimeで開始されたCloud Serviceのログのプルなど、複数の方法でデバッグできます。
+title: デバッグワーカーAsset compute
+description: asset computeワーカーは、単純なデバッグログステートメント、リモートデバッガーとして添付された VS Code、AEM as a Cloud Serviceから開始されたAdobe I/O Runtimeでのアクティベーションログのプルなど、様々な方法でデバッグできます。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,58 +13,58 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
-# asset computeワーカーのデバッグ
+# デバッグワーカーAsset compute
 
-asset computeワーカーは、単純なデバッグログステートメント、リモートデバッガーとして添付されたVS Code、AEM as a Adobe I/O Runtimeで開始されたCloud Serviceのログのプルなど、複数の方法でデバッグできます。
+asset computeワーカーは、単純なデバッグログステートメント、リモートデバッガーとして添付された VS Code、AEM as a Cloud Serviceから開始されたAdobe I/O Runtimeでのアクティベーションログのプルなど、様々な方法でデバッグできます。
 
 ## ログ
 
-デバッグAsset computeワーカーの最も基本的な形式は、ワーカーコード内で従来の`console.log(..)`文を使用します。 `console` JavaScriptオブジェクトは暗黙的なグローバルオブジェクトなので、すべてのコンテキストで常に存在するので、読み込む必要もなく、必要もありません。
+デバッグAsset computeワーカーの最も基本的な形式は、従来の `console.log(..)` ステートメントを使用して、作業者コード内で設定します。 この `console` JavaScript オブジェクトは暗黙的なグローバルオブジェクトなので、すべてのコンテキストに常に存在するので、読み込む必要も不要です。
 
-これらのログステートメントは、レビューワーカーの実行方法に応じて、次のように異なるAsset computeで確認できます。
+次のログ文は、レビューワーカーの実行方法に応じて、レビューでAsset computeを使用できます。
 
-+ `aio app run`から、ログは標準出力と[開発ツールの](../develop/development-tool.md)アクティベーションログに出力されます。
-   ![aioアプリ実行console.log(...)](./assets/debug/console-log__aio-app-run.png)
-+ `aio app test`から、ログは`/build/test-results/test-worker/test.log`に出力されます。
-   ![aioアプリテストconsole.log(...)](./assets/debug/console-log__aio-app-test.png)
-+ `wskdebug`を使用すると、ログ文はVS Code Debug Console（表示/デバッグコンソール）に標準出力されます。
++ 送信者 `aio app run`ログは標準出力に出力され、 [開発ツールの](../develop/development-tool.md) アクティベーションログ
+   ![aio アプリ run console.log(...)](./assets/debug/console-log__aio-app-run.png)
++ 送信者 `aio app test`，ログを印刷 `/build/test-results/test-worker/test.log`
+   ![aio アプリのテスト console.log(...)](./assets/debug/console-log__aio-app-test.png)
++ 使用 `wskdebug`、ログステートメントは、VS Code Debug コンソール（表示/デバッグコンソール）に、標準出力で出力されます。
    ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
-+ `aio app logs`を使用すると、ログ文はアクティベーションログ出力に出力されます
++ 使用 `aio app logs`, log 文はアクティベーションログの出力に出力されます
 
 ## アタッチされたデバッガーを介したリモートデバッグ
 
 >[!WARNING]
 >
->wskdebugとの互換性を確保するためにMicrosoft Visual Studio Code 1.48.0以降を使用する
+>wskdebug との互換性を確保するには、Microsoft Visual Studio Code 1.48.0以降を使用します
 
-[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールは、Asset computeワーカーへのデバッガーの接続をサポートしています。これには、VS Codeでブレークポイントを設定し、コードをステップスルーする機能が含まれます。
+この [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm モジュールでは、Asset computeワーカーへのデバッガーのアタッチをサポートしています。これには、VS Code でブレークポイントを設定し、コードを順を追って設定する機能が含まれます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
 
-_wskdebugを使用したAsset computeワーカーのデバッグのクリックスルー（オーディオなし）_
+_wskdebug を使用したAsset computeワーカーのデバッグのクリックスルー（オーディオなし）_
 
-1. [wskdebug](../set-up/development-environment.md#wskdebug)と[ngrok](../set-up/development-environment.md#ngork) npmモジュールがインストールされていることを確認します。
-1. [Docker Desktopと、サポートするDockerイメージ](../set-up/development-environment.md#docker)がインストールされ、実行されていることを確認します。
+1. 確認 [wskdebug](../set-up/development-environment.md#wskdebug) および [ngrok](../set-up/development-environment.md#ngork) npm モジュールがインストールされている
+1. 確認 [Docker Desktop とサポートする Docker イメージ](../set-up/development-environment.md#docker) インストールされ、実行されている
 1. 開発ツールのアクティブな実行中のインスタンスをすべて閉じます。
-1. `aio app deploy`を使用して最新のコードをデプロイし、デプロイ済みのアクション名（`[...]`間の名前）を記録します。 これは、手順8で`launch.json`を更新するために使用されます。
+1. を使用して最新のコードをデプロイします。 `aio app deploy`  をクリックし、デプロイ済みのアクション名 ( `[...]`) をクリックします。 これは、 `launch.json` 手順 8.
 
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
 
 
-1. コマンド`npx adobe-asset-compute devtool`を使用して、Asset compute開発ツールの新しいインスタンスを起動します。
-1. VS Codeで、左側のナビゲーションのデバッグアイコンをタップします。
-   + プロンプトが表示されたら、「__launch.jsonファイルを作成/Node.js__」をタップして、新しい`launch.json`ファイルを作成します。
-   + それ以外の場合は、「__プログラムを起動__」ドロップダウンの右側にある&#x200B;__ギア__&#x200B;アイコンをタップして、既存の`launch.json`をエディターで開きます。
-1. `configurations`配列に次のJSONオブジェクト設定を追加します。
+1. コマンドを使用して、Asset compute開発ツールの新しいインスタンスを開始します。 `npx adobe-asset-compute devtool`
+1. 「VS Code」で、左側のナビゲーションのデバッグアイコンをタップします。
+   + プロンプトが表示されたら、をタップします。 __launch.json ファイルを作成し、 Node.js を選択します。__ 新しい `launch.json` ファイル。
+   + それ以外の場合は、 __ギア__ アイコン __起動プログラム__ 既存のを開くためのドロップダウン `launch.json` をクリックします。
+1. 次の JSON オブジェクト設定を `configurations` 配列：
 
    ```json
    {
@@ -86,30 +86,30 @@ _wskdebugを使用したAsset computeワーカーのデバッグのクリック�
    }
    ```
 
-1. ドロップダウンから新しい&#x200B;__wskdebug__&#x200B;を選択します。
-1. __wskdebug__&#x200B;ドロップダウンの左側にある緑の&#x200B;__Run__&#x200B;ボタンをタップします
-1. `/actions/worker/index.js`を開き、行番号の左側をタップして、ブレークポイント1を追加します。 手順6で開いたAsset compute開発ツールWebブラウザーウィンドウに移動します。
-1. 「__実行__」ボタンをタップして、ワーカーを実行します
-1. VS Codeに戻り、`/actions/worker/index.js`に移動して、コードを順に進みます。
-1. デバッグ可能な開発ツールを終了するには、手順6で`npx adobe-asset-compute devtool`コマンドを実行したターミナルで`Ctrl-C`をタップします。
+1. 新しい __wskdebug__ ドロップダウンから
+1. 緑をタップ __実行__ の左にあるボタン __wskdebug__ ドロップダウン
+1. 開く `/actions/worker/index.js` 次に、行番号の左側をタップして、ブレークポイント 1 を追加します。 手順 6 で開いたAsset compute開発ツール Web ブラウザーウィンドウに移動します。
+1. 次をタップします。 __実行__ ワーカーを実行するボタン
+1. VS Code に戻り、に移動します。 `/actions/worker/index.js` コードを順に説明します。
+1. デバッグ可能な開発ツールを終了するには、 `Ctrl-C` を実行したターミナルで `npx adobe-asset-compute devtool` 手順 6 のコマンド
 
 ## Adobe I/O Runtimeからのログへのアクセス{#aio-app-logs}
 
-[AEM as a Cloud Serviceは、Adobe I/O Runtimeで直接呼び出すことで、処理プロファイルを介し](../deploy/processing-profiles.md) てAsset computeワーカーを活用します。これらの呼び出しにはローカル開発が含まれないので、Asset compute開発ツールやwskdebugなどのローカルツールを使用して実行をデバッグすることはできません。 代わりに、Adobe I/OCLIを使用して、Adobe I/O Runtimeの特定のワークスペースで実行されたワーカーからログを取得できます。
+[AEM as a Cloud Serviceは、処理プロファイルを介したAsset computeワーカーを活用します](../deploy/processing-profiles.md) を直接Adobe I/O Runtimeで呼び出す。 これらの呼び出しはローカル開発を伴わないので、Asset compute開発ツールや wskdebug などのローカルツールを使用して実行をデバッグすることはできません。 代わりに、Adobe I/OCLI を使用して、Adobe I/O Runtimeの特定のワークスペースで実行されたワーカーからログを取得できます。
 
-1. デバッグが必要なワークスペースに応じて、[ワークスペース固有の環境変数](../deploy/runtime.md)が`AIO_runtime_namespace`と`AIO_runtime_auth`を介して設定されていることを確認します。
-1. コマンドラインから、`aio app logs`を実行します。
-   + ワークスペースでトラフィックが多い場合は、`--limit`フラグを使用してアクティベーションログの数を増やします。
+1. 次を確認します。 [ワークスペース固有の環境変数](../deploy/runtime.md) を介して設定されます。 `AIO_runtime_namespace` および `AIO_runtime_auth`（デバッグが必要なワークスペースに基づく）
+1. コマンドラインから、を実行します。 `aio app logs`
+   + ワークスペースで大量のトラフィックが発生する場合は、 `--limit` フラグ：
       `$ aio app logs --limit=25`
-1. 最新（指定された`--limit`まで）のアクティベーションログが、確認用のコマンドの出力として返されます。
+1. 最新 ( 指定された `--limit`) アクティベーションログは、レビュー用のコマンドの出力として返されます。
 
-   ![aioアプリログ](./assets/debug/aio-app-logs.png)
+   ![aio アプリログ](./assets/debug/aio-app-logs.png)
 
 ## トラブルシューティング
 
-+ [Debuggerがアタッチしない](../troubleshooting.md#debugger-does-not-attach)
-+ [ブレークポイントが一時停止しない](../troubleshooting.md#breakpoints-no-pausing)
-+ [VS Codeデバッガがアタッチされていません](../troubleshooting.md#vs-code-debugger-not-attached)
-+ [ワーカーの実行開始後に添付されるVS Codeデバッガ](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
-+ [デバッグ中にワーカーがタイムアウトする](../troubleshooting.md#worker-times-out-while-debugging)
-+ [デバッガプロセスを終了できません](../troubleshooting.md#cannot-terminate-debugger-process)
++ [Debugger がアタッチしません](../troubleshooting.md#debugger-does-not-attach)
++ [ブレークポイントが一時停止していません](../troubleshooting.md#breakpoints-no-pausing)
++ [VS Code デバッガーが添付されていません](../troubleshooting.md#vs-code-debugger-not-attached)
++ [ワーカーの実行が開始した後に添付される VS コードデバッガ](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [デバッグ中に作業者がタイムアウトしました](../troubleshooting.md#worker-times-out-while-debugging)
++ [デバッガープロセスを終了できません](../troubleshooting.md#cannot-terminate-debugger-process)

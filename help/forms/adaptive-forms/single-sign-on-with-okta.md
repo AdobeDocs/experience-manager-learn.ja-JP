@@ -1,95 +1,95 @@
 ---
-title: AEMを使用したOKTAの設定
-description: oktaを使用したシングルサインオンの様々な設定について
+title: AEMでの OKTA の設定
+description: okta を使用したシングルサインオンの様々な設定を理解します。
 feature: Adaptive Forms
 version: 6.5
 topic: Administration
 role: Admin
 level: Experienced
-source-git-commit: 3109d406ed4788ab492a148d4eac94f7e5ad9f2d
+exl-id: 85c9b51e-92bb-4376-8684-57c9c3204b2f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
 
+# OKTA を使用して AEM オーサーに対して認証します。
 
-# OKTAを使用したAEMオーサーへの認証
+最初の手順は、OKTA ポータルでアプリを設定することです。 OKTA 管理者がアプリを承認すると、IdP 証明書とシングルサインオン URL にアクセスできるようになります。 以下は、新しいアプリケーションの登録で一般的に使用される設定です。
 
-最初の手順は、OKTAポータルでアプリを設定することです。 OKTA管理者がアプリを承認すると、IdP証明書とシングルサインオンURLにアクセスできるようになります。 以下は、新しいアプリケーションの登録で一般的に使用される設定です。
-
-* **アプリ名：** アプリ名です。アプリケーションに一意の名前を付けてください。
-* **SAML Recipient:** OKTAからの認証後、SAML応答でAEMインスタンスにヒットされるURLです。通常、SAML認証ハンドラーは、/saml_loginを使用してすべてのURLを傍受しますが、アプリケーションのルートの後に追加する方が良いでしょう。
-* **SAMLオーディエンス**:これは、アプリケーションのドメインURLです。ドメインURLにプロトコル（httpまたはhttps）を使用しないでください。
-* **SAML Name ID:** ドロップダウンリストから「Email」を選択します。
+* **アプリ名：** これはお使いのアプリケーション名です。 アプリケーションに一意の名前を付けてください。
+* **SAML 受信者：** OKTA からの認証後、これは SAML 応答でAEMインスタンスにヒットされる URL です。 SAML 認証ハンドラーは通常、/ saml_login を使用してすべての URL を傍受しますが、アプリケーションのルートの後に追加する方がよいでしょう。
+* **SAML オーディエンス**:これは、アプリケーションのドメイン URL です。 ドメイン URL にはプロトコル（http または https）を使用しないでください。
+* **SAML 名 ID:** ドロップダウンリストから「電子メール」を選択します。
 * **環境**:適切な環境を選択します。
-* **属性**:SAML応答でユーザーに関して取得する属性です。必要に応じて指定します。
+* **属性**:SAML 応答でユーザーに関して取得する属性です。 必要に応じて指定します。
 
 
-![oktaアプリケーション](assets/okta-app-settings-blurred.PNG)
+![okta アプリケーション](assets/okta-app-settings-blurred.PNG)
 
 
-## OKTA(IdP)証明書をAEM Trust Storeに追加します
+## OKTA(IdP) 証明書をAEM Trust Store に追加します。
 
-SAMLアサーションは暗号化されるので、OKTAとAEM間の安全な通信を可能にするために、AEM Trust StoreにIdP(OKTA)証明書を追加する必要があります。
-[Trust Storeを初期化します](http://localhost:4502/libs/granite/security/content/truststore.html)（まだ初期化されていない場合）。Trust Storeのパスワードを記憶します。 このパスワードは後で使用する必要があります。
+SAML アサーションは暗号化されるので、AEMとAEM間の安全な通信を可能にするために、IdP(OKTA) 証明書を OKTA Trust Store に追加する必要があります。
+[Trust Store を初期化](http://localhost:4502/libs/granite/security/content/truststore.html)（まだ初期化されていない場合）
+トラストストアのパスワードを記憶します。 このプロセスの後半で、このパスワードを使用する必要があります。
 
-* [グローバルTrust Store](http://localhost:4502/libs/granite/security/content/truststore.html)に移動します。
-* 「CERファイルから証明書を追加」をクリックします。 OKTAから提供されたIdP証明書を追加し、「送信」をクリックします。
+* に移動します。 [グローバルトラストストア](http://localhost:4502/libs/granite/security/content/truststore.html).
+* 「CER ファイルから証明書を追加」をクリックします。 OKTA から提供された IdP 証明書を追加し、「送信」をクリックします。
 
    >[!NOTE]
    >
    >証明書をどのユーザーにもマップしないでください
 
-Trust Storeに証明書を追加すると、以下のスクリーンショットに示すように証明書エイリアスが取得されます。 別のエイリアス名を使用する場合もあります。
+Trust Store に証明書を追加すると、以下のスクリーンショットに示すように証明書エイリアスが取得されます。 別名の名前は、別の名前にする必要があります。
 
 ![証明書エイリアス](assets/cert-alias.PNG)
 
-**証明書エイリアスをメモします。後の手順でこれを行う必要があります。**
+**証明書エイリアスをメモします。 これは、後の手順で必要になります。**
 
-### SAML認証ハンドラーの設定
+### SAML 認証ハンドラーの設定
 
-[configMgr](http://localhost:4502/system/console/configMgr)に移動します。
-「AdobeGranite SAML 2.0 Authentication Handler」を検索して開きます。
-以下に指定するプロパティを指定します
-次に、指定する必要がある主要なプロパティを示します。
+に移動します。 [configMgr](http://localhost:4502/system/console/configMgr).
+「AdobeGranite SAML 2.0 認証ハンドラー」を検索して開きます。
+以下に指定したように、次のプロパティを指定します。次に、指定する必要がある主要なプロパティを示します。
 
-* **path**  — 認証ハンドラーがトリガーされるパスです
-* **IdP Url**:OKTAから提供されるIdP URLです。
-* **IDP Certificate Alias**:IdP証明書をAEM Trust Storeに追加したときに取得したエイリアス
-* **Service Provider Entity Id**：これは、AEM Serverの名前です。
-* **キーストアのパスワード**：使用したTrust Storeのパスワードです。
-* **デフォルトのリダイレクト**：認証が成功した場合にリダイレクト先のURL
-* **UserID属性**:uid
-* **Use Encryption**:false
-* **CRXユーザーの自動作成**:true
-* **Add to Groups**:true
-* **Default Groups**:oktausers(これは、ユーザーが追加されるグループです。AEM内に任意の既存のグループを指定できます)。
-* **NamedIDPolicy**:要求された件名を表す名前識別子に対する制約を指定します。次のハイライト表示された文字列&#x200B;**urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress**&#x200B;をコピーして貼り付けます。
-* **同期済み属性**  - AEMプロファイルのSAMLアサーションから保存される属性です
+* **パス**  — 認証ハンドラーがトリガーされるパス
+* **IdP Url**:OKTA から提供される IdP URL です
+* **IDP 証明書エイリアス**:IdP 証明書をAEM Trust Store に追加した際に取得したエイリアス
+* **サービスプロバイダーエンティティ ID**:AEM Server の名前
+* **キーストアのパスワード**：使用した Trust Store のパスワードです
+* **デフォルトのリダイレクト**：認証に成功した場合にリダイレクト先の URL
+* **ユーザー ID 属性**:uid
+* **暗号化を使用**:false
+* **CRX ユーザーを自動作成**:true
+* **グループに追加**:true
+* **デフォルトのグループ**:oktausers( これは、ユーザーが追加されるグループです。 AEM内の任意の既存のグループを指定できます )
+* **NamedIDPolicy**:要求された件名を表すために使用する名前識別子に対する制約を指定します。 次のハイライト表示された文字列をコピーして貼り付けます。 **骨:oasis:名前:tc:SAML:2.0:nameidformat:emailAddress**
+* **同期済み属性**  — これらは、AEMプロファイルの SAML アサーションから保存される属性です
 
 ![saml-authentication-handler](assets/saml-authentication-settings-blurred.PNG)
 
-### Apache Sling Referrer Filterの設定
+### Apache Sling Referrer Filter の設定
 
-[configMgr](http://localhost:4502/system/console/configMgr)に移動します。
-「Apache Sling Referrer Filter」を検索して開きます。以下に指定するプロパティを設定します。
+に移動します。 [configMgr](http://localhost:4502/system/console/configMgr).
+「Apache Sling Referrer Filter」を検索して開きます。次のプロパティを以下に指定します。
 
 * **空を許可**:false
-* **ホストを許可**:IdPのホスト名（この場合は異なります）
-* **正規表現ホストを許可**:IdPのホスト名（この場合は異なります） Sling Referrer Filterリファラープロパティのスクリーンショット
+* **ホストを許可**:IdP のホスト名（これは、ケースで異なります）
+* **正規表現ホストを許可**:IdP のホスト名（実際のケースでは異なります） Sling Referrer Filter リファラープロパティのスクリーンショット
 
 ![referrer-filter](assets/okta-referrer.png)
 
-#### OKTA統合用のDEBUGログの設定
+#### OKTA 統合用の DEBUG Logging の設定
 
-AEMでOKTA統合を設定する場合、AEM SAML認証ハンドラーのデバッグログを確認すると役立つ場合があります。 ログレベルをDEBUGに設定するには、AEM OSGi Webコンソールを使用して新しいSling Logger設定を作成します。
+AEMで OKTA 統合を設定する場合、AEM SAML 認証ハンドラーのデバッグログを確認すると役立つ場合があります。 ログレベルを DEBUG に設定するには、AEM OSGi Web コンソールで新しい Sling Logger 設定を作成します。
 
-ログノイズを減らすには、必ずステージングと実稼動環境でこのロガーを削除または無効にしてください。
+ログノイズを減らすには、必ずステージング環境と実稼動環境でこのロガーを削除または無効にしてください。
 
-AEMでOKTA統合を設定する場合、AEM SAML認証ハンドラーのデバッグログを確認すると役立つ場合があります。 ログレベルをDEBUGに設定するには、AEM OSGi Webコンソールを使用して新しいSling Logger設定を作成します。
-**ログノイズを減らすには、必ずステージングと実稼動環境でこのロガーを削除または無効にしてください。**
-* [configMgr](http://localhost:4502/system/console/configMgr)に移動します。
+AEMで OKTA 統合を設定する場合、AEM SAML 認証ハンドラーのデバッグログを確認すると役に立つことがあります。 ログレベルを DEBUG に設定するには、AEM OSGi Web コンソールで新しい Sling Logger 設定を作成します。
+**ログノイズを減らすには、必ずステージング環境と実稼動環境でこのロガーを削除または無効にしてください。**
+* に移動します。 [configMgr](http://localhost:4502/system/console/configMgr)
 
 * 「Apache Sling Logging Logger Configuration」を検索して開きます。
 * 次の設定でロガーを作成します。
@@ -98,8 +98,6 @@ AEMでOKTA統合を設定する場合、AEM SAML認証ハンドラーのデバ�
    * **ロガー**:com.adobe.granite.auth.saml
 * 「保存」をクリックして設定を保存します。
 
+#### OKTA 設定をテストする
 
-
-#### OKTA設定のテスト
-
-AEMインスタンスからログアウトします。 リンクにアクセスしてみてください。 OKTA SSOが動作していることを確認します。
+AEMインスタンスからログアウトします。 リンクにアクセスしてみてください。 OKTA SSO が動作しているのがわかります。

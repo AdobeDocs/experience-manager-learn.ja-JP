@@ -7,7 +7,8 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: 165e2884-4399-4970-81ff-1f2f8b041a10
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 24%
@@ -26,8 +27,4 @@ AEM Forms CS バッチ操作 API を使用するには、次の設定が必要�
 1. バッチデータストア設定を作成
 1. バッチ API の実行
 
-詳しくは、 [API ドキュメント](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) このチュートリアルを使用する前に、を参照してください。
-
-
-
-
+詳しくは、 [API ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) このチュートリアルを使用する前に、を参照してください。

@@ -1,6 +1,6 @@
 ---
 title: ローカル開発アクセストークン
-description: AEMローカル開発アクセストークンは、HTTPを介してプログラムによってAEMオーサーまたはパブリッシュサービスとやり取りするCloud ServiceとしてAEMとの統合の開発を高速化するために使用されます。
+description: AEMローカル開発アクセストークンは、HTTP を介して AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするAEM as a Cloud Serviceとの統合の開発を高速化するために使用されます。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
 
 # ローカル開発アクセストークン
 
-AEM as a Cloud Serviceへのプログラム的なアクセスを必要とするローカル開発を構築する開発者は、統合アクティビティを容易にするために、AEMの一時的なアクセストークンを簡単かつ迅速に取得する必要があります。 このニーズを満たすために、AEM開発者コンソールを使用して、AEMにプログラム的にアクセスするために使用できる一時的なアクセストークンを自己生成できます。
+AEM as a Cloud Serviceにプログラム的にアクセスする必要がある統合を構築する開発者は、ローカル開発アクティビティを容易にするために、AEMの一時的なアクセストークンを簡単かつ迅速に取得する必要があります。 このニーズを満たすために、AEM開発者コンソールを使用して、AEMにプログラム的にアクセスするために使用できる一時的なアクセストークンを自己生成できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
 
@@ -30,56 +30,56 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
 
 ![ローカル開発アクセストークンの取得](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-ローカル開発アクセストークンは、トークンを生成したユーザーとしてのAEMオーサーサービスとパブリッシュサービスへのアクセス権と、その権限を提供します。 これは開発トークンですが、このトークンを共有しないでください。また、ソース管理下に保存してください。
+ローカル開発アクセストークンを使用すると、トークンを生成したユーザーとしての AEM オーサーサービスおよびパブリッシュサービスへのアクセス権と、その権限を提供できます。 これは開発トークンですが、このトークンを共有しないでください。または、ソース管理下に保存してください。
 
-1. [AdobeのAdminConsole](https://adminconsole.adobe.com/)で、開発者が以下のメンバーであることを確認します。
-   + __Cloud Manager - DeveloperIMS製__ 品プロファイル(AEM Developer Consoleへのアクセス権を付与)
-   + アクセストークンが統合されるAEM環境のサービス用の&#x200B;__AEM Administrators__&#x200B;または&#x200B;__AEM Users__ IMS製品プロファイル
-   + Cloud Service環境としてのSandbox AEMは、__AEM Administrators__&#x200B;または&#x200B;__AEM Users__&#x200B;製品プロファイルのメンバーシップのみ必要です
-1. [AdobeCloud Manager](https://my.cloudmanager.adobe.com)にログインします。
-1. と統合するAEM環境としてのCloud Serviceを含むプログラムを開きます。
-1. 「__環境__」セクションで環境の横にある&#x200B;__省略記号__&#x200B;をタップし、「__開発者コンソール__」を選択します。
-1. 「__統合__」タブをタップします。
-1. 「__ローカル開発トークンを取得__」ボタンをタップします
-1. 左上隅の&#x200B;__ダウンロードボタン__&#x200B;をタップして、`accessToken`値を含むJSONファイルをダウンロードし、開発マシン上の安全な場所にJSONファイルを保存します。
-   + これは、AEM as a Cloud Service環境への24時間の開発者アクセストークンです。
+1. In [AdobeAdminConsole](https://adminconsole.adobe.com/) 開発者は、次のメンバーであることを確認します。
+   + __Cloud Manager — 開発者__ IMS 製品プロファイル (AEM Developer Console へのアクセス権を付与 )
+   + 次のいずれか __AEM Administrators__ または __AEM Users__ アクセストークンが統合されるAEM環境のサービス用の IMS 製品プロファイル
+   + サンドボックスAEMas a Cloud Service環境は、どちらかのメンバーシップのみが必要です __AEM Administrators__ または __AEM Users__ 製品プロファイル
+1. にログインします。 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 統合するAEMas a Cloud Service環境を含むプログラムを開きます。
+1. 次をタップします。 __省略記号__ の環境の隣に __環境__ セクションを選択し、 __開発者コンソール__
+1. 次の __統合__ タブ
+1. タップ __ローカル開発トークンを取得__ ボタン
+1. をタップします。 __ダウンロードボタン__ 左上隅に、 `accessToken` の値を指定して、JSON ファイルを開発マシン上の安全な場所に保存します。
+   + これは、AEMas a Cloud Service環境への 24 時間の開発者アクセストークンです。
 
-![AEM開発者コンソール — 統合 —ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
+![AEM Developer Console — 統合 —ローカル開発トークンの取得](./assets/local-development-access-token/developer-console.png)
 
 ## ローカル開発アクセストークンを使用{#use-local-development-access-token}
 
 ![ローカル開発アクセストークン — 外部アプリケーション](assets/local-development-access-token/local-development-access-token-external-application.png)
 
-1. AEM開発者コンソールから一時的なローカル開発アクセストークンをダウンロードします。
-   + ローカル開発のアクセストークンは24時間ごとに期限が切れるので、開発者は新しいアクセストークンを毎日ダウンロードする必要があります
-1. プログラムによってAEM as a Cloud Serviceとやり取りする外部アプリケーションが開発されている
-1. 外部アプリケーションがローカル開発アクセストークンを読み取る
-1. 外部アプリケーションは、AEMにCloud ServiceとしてHTTPリクエストを構築し、ローカル開発アクセストークンをBearerトークンとしてHTTPリクエストのAuthorizationヘッダーに追加します
-1. AEM as aCloud ServiceはHTTPリクエストを受信し、リクエストを認証し、HTTPリクエストによってリクエストされた作業を実行し、HTTPレスポンスを外部アプリケーションに返します
+1. AEM Developer Console から一時的なローカル開発アクセストークンをダウンロードします。
+   + ローカル開発のアクセストークンは 24 時間ごとに期限が切れるので、開発者は新しいアクセストークンを毎日ダウンロードする必要があります
+1. AEM as a Cloud Serviceとプログラム的にやり取りする外部アプリケーションが開発中です
+1. 外部アプリケーションがアクセストークンをローカル開発で読み取る
+1. 外部アプリケーションは、AEMas a Cloud Serviceに対する HTTP リクエストを作成し、ローカル開発アクセストークンを Bearer トークンとして HTTP リクエストの Authorization ヘッダーに追加します。
+1. AEM as a Cloud Serviceは、HTTP リクエストを受信し、リクエストを認証し、HTTP リクエストによってリクエストされた作業を実行し、HTTP レスポンスを外部アプリケーションに返します
 
 ### サンプル外部アプリケーション
 
-簡単な外部JavaScriptアプリケーションを作成し、ローカル開発者アクセストークンを使用して、HTTPS経由でCloud ServiceとしてAEMにプログラム的にアクセスする方法を説明します。 この例は、フレームワークや言語に関係なく、AEMの外部で動作する&#x200B;_あらゆる_&#x200B;アプリケーションやシステムが、AEMをプログラムによる認証やCloud Serviceとしてアクセスする際に、どのように使用できるかを示しています。 [次の節](./service-credentials.md)では、本番用のトークンを生成する方法をサポートするために、このアプリケーションコードを更新します。
+簡単な外部 JavaScript アプリケーションを作成し、ローカル開発者アクセストークンを使用して、HTTPS 経由でas a Cloud Serviceにプログラム的にアクセスする方法を説明します。 これは、次の方法を示します。 _任意_ AEM以外で実行されるアプリケーションまたはシステムは、フレームワークや言語に関係なく、アクセストークンを使用して、AEM as a Cloud Serviceに対するプログラム認証とアクセスを行うことができます。 内 [次のセクション](./service-credentials.md) 実稼動用のトークンを生成する方法をサポートするために、このアプリケーションコードを更新します。
 
-このサンプルアプリケーションはコマンドラインから実行され、次のフローを使用してAEM Assets HTTP APIを使用してAEMアセットメタデータを更新します。
+このサンプルアプリケーションはコマンドラインから実行され、次のフローを使用して、AEM Assets HTTP API を使用してAEMのアセットメタデータを更新します。
 
-1. コマンドライン(`getCommandLineParams()`)からパラメータを読み込む
-1. AEMに対する認証に使用するアクセストークンをCloud Service(`getAccessToken(...)`)として取得します
-1. コマンドラインパラメーター(`listAssetsByFolder(...)`)で指定されたAEMアセットフォルダー内のすべてのアセットを一覧表示します。
-1. リストされているアセットのメタデータを、コマンドラインパラメーター(`updateMetadata(...)`)で指定された値に更新する
+1. コマンドラインからパラメータを読み込みます (`getCommandLineParams()`)
+1. AEMas a Cloud Service(`getAccessToken(...)`)
+1. コマンドラインパラメーター (`listAssetsByFolder(...)`)
+1. リストされているアセットのメタデータを、コマンドラインパラメーター (`updateMetadata(...)`)
 
-アクセストークンを使用してAEMをプログラムで認証する際の重要な要素は、次の形式で、AEMに対しておこなわれたすべてのHTTP要求にAuthorization HTTP要求ヘッダーを追加することです。
+アクセストークンを使用してAEMをプログラムで認証する際のキー要素は、次の形式で、AEMに対しておこなわれたすべての HTTP リクエストに Authorization HTTP リクエストヘッダーを追加します。
 
 + `Authorization: Bearer ACCESS_TOKEN`
 
 ## 外部アプリケーションの実行
 
-1. [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)がローカル開発マシンにインストールされ、外部アプリケーションの実行に使用されていることを確認します。
-1. [サンプル外部アプリケーション](./assets/aem-guides_token-authentication-external-application.zip)をダウンロードして解凍します。
-1. コマンドラインから、このプロジェクトのフォルダーで`npm install`を実行します。
-1. ダウンロードした[ローカル開発アクセストークン](#download-local-development-access-token)を、プロジェクトのルートにある`local_development_token.json`という名前のファイルにコピーします。
-   + しかし、Gitに資格情報をコミットしないでください。
-1. `index.js`を開き、外部アプリケーションのコードとコメントを確認します。
+1. 以下を確認します。 [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js) は、外部ローカル開発の実行に使用される、アプリケーションマシンにインストールされています
+1. をダウンロードして展開します。 [サンプル外部アプリケーション](./assets/aem-guides_token-authentication-external-application.zip)
+1. コマンドラインから、このプロジェクトのフォルダでを実行します。 `npm install`
+1. を [ダウンロードしたローカル開発アクセストークン](#download-local-development-access-token) 次の名前のファイルに `local_development_token.json` プロジェクトのルートにある
+   + ただし、Git に認証情報をコミットしないでください。
+1. 開く `index.js` 外部アプリケーションのコードとコメントを確認します。
 
    ```javascript
    const fetch = require('node-fetch');
@@ -210,7 +210,7 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
    }
    ```
 
-   `listAssetsByFolder(...)`と`updateMetadata(...)`の`fetch(..)`の呼び出しを確認し、`headers`は`Bearer ACCESS_TOKEN`という値で`Authorization` HTTPリクエストヘッダーを定義します。 外部アプリケーションからのHTTPリクエストは、Cloud ServiceとしてAEMに認証されます。
+   以下を確認します。 `fetch(..)` の呼び出し `listAssetsByFolder(...)` および `updateMetadata(...)`、および `headers` を定義します。 `Authorization` 値がの HTTP リクエストヘッダー `Bearer ACCESS_TOKEN`. 外部アプリケーションからの HTTP リクエストは、AEM as a Cloud Serviceに対してどのように認証されます。
 
    ```javascript
    ...
@@ -223,7 +223,7 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
    })...
    ```
 
-   AEMにCloud ServiceとしてHTTPリクエストを送信する場合、はAuthorizationヘッダーにBearerアクセストークンを設定する必要があります。 各AEM as a Cloud Service環境には、独自のアクセストークンが必要です。 開発のアクセストークンはステージまたは実稼動では機能せず、ステージのアクセストークンは開発または実稼動では機能せず、実稼動は開発またはステージでは機能しません。
+   AEM as a Cloud Serviceへの HTTP リクエストは、Authorization ヘッダーに Bearer アクセストークンを設定する必要があります。 各AEMas a Cloud Service環境には、独自のアクセストークンが必要です。 開発のアクセストークンはステージまたは実稼動では機能せず、ステージのアクセストークンは開発または実稼動では機能せず、実稼動は開発またはステージでは機能しません。
 
 1. コマンドラインを使用して、プロジェクトのルートからアプリケーションを実行し、次のパラメーターを渡します。
 
@@ -238,13 +238,13 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
 
    次のパラメーターが渡されます。
 
-   + `aem`:アプリケーションがやり取りするCloud Service環境としてのAEMのスキームとホスト名(例： `https://author-p1234-e5678.adobeaemcloud.com`)をクリックします。
-   + `folder`:アセットがで更新されるアセットフォルダーのパ `propertyValue`ス。プレフィッ `/content/dam` クスを追加しない(例： `/wknd/en/adventures/napa-wine-tasting`)
-   + `propertyName`:更新するアセットプロパティの `[dam:Asset]/jcr:content` 名前(例： `metadata/dc:rights`)をクリックします。
-   + `propertyValue`:に設定する `propertyName` 値。スペースを含む値は、（例えば）でカプセル化す `"` る必要があります。 `"WKND Limited Use"`)
-   + `file`:AEM開発者コンソールからダウンロードしたJSONファイルの相対ファイルパス。
+   + `aem`:アプリケーションがやり取りするAEMas a Cloud Service環境のスキームとホスト名 ( 例： `https://author-p1234-e5678.adobeaemcloud.com`) をクリックします。
+   + `folder`:アセットが `propertyValue`;追加しない `/content/dam` プレフィックス ( 例： `/wknd/en/adventures/napa-wine-tasting`)
+   + `propertyName`:更新するアセットプロパティの名前（相対的な名前） `[dam:Asset]/jcr:content` ( 例： `metadata/dc:rights`) をクリックします。
+   + `propertyValue`:設定する値 `propertyName` からスペースを含む値は、 `"` ( 例： `"WKND Limited Use"`)
+   + `file`:AEM Developer Console からダウンロードした JSON ファイルの相対ファイルパス。
 
-   更新された各アセットのアプリケーション結果出力の正常な実行：
+   更新された各アセットのアプリケーション結果出力が正常に実行された場合：
 
    ```shell
    200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
@@ -256,19 +256,19 @@ AEM as a Cloud Serviceへのプログラム的なアクセスを必要とする�
 
 ### AEMでのメタデータの更新の検証
 
-AEM as aCloud Service環境にログインして、メタデータが更新されていることを確認します（`aem`コマンドラインパラメーターに渡された同じホストにアクセスする必要があります）。
+AEM as a Cloud Service環境にログインして、メタデータが更新されていることを確認します ( 同じホストが `aem` コマンドラインパラメータにアクセスします )。
 
-1. 外部アプリケーションが操作するCloud Service環境としてAEMにログインします（`aem`コマンドラインパラメーターで指定したのと同じホストを使用）。
-1. __アセット__ / __ファイル__&#x200B;に移動します。
-1. `folder`コマンドラインパラメーターで指定されたアセットフォルダーに移動します（例：__WKND__ > __English__ > __Adventures__ > __Napa Wine Tasting__）。
-1. フォルダー内の任意の（コンテンツフラグメント以外の）アセットの&#x200B;__プロパティ__&#x200B;を開きます
-1. 「__詳細__」タブをタップします。
-1. 更新されたプロパティの値を確認します。例えば、__WKND Limited Use__&#x200B;のように、更新された`metadata/dc:rights` JCRプロパティにマッピングされた&#x200B;__Copyright__&#x200B;の値を確認します。`propertyValue`パラメーターで指定された値を反映します。
+1. 外部アプリケーションがやり取りするAEMas a Cloud Service環境にログインします ( `aem` コマンドラインパラメータ )
+1. 次に移動： __Assets__ > __ファイル__
+1. これにより、 `folder` コマンドラインパラメータ（例： ） __WKND__ > __英語__ > __冒険__ > __ナパワインの試飲会__
+1. を開きます。 __プロパティ__ フォルダー内の（コンテンツフラグメント以外の）アセット
+1. をタップして、 __詳細__ タブ
+1. 更新されたプロパティの値を確認します（例： ）。 __著作権__ 更新された `metadata/dc:rights` JCR プロパティ。 `propertyValue` パラメーター、例： __WKND 制限付き使用__
 
-![WKND Limited Use Metadata Update](./assets/local-development-access-token/asset-metadata.png)
+![WKND 制限付きメタデータ更新を使用](./assets/local-development-access-token/asset-metadata.png)
 
 ## 次の手順
 
-ローカル開発トークンを使用してプログラムでAEMにCloud Serviceとしてアクセスしたので、サービス資格情報を使用して処理するようにアプリケーションを更新する必要があります。そのため、このアプリケーションを実稼動コンテキストで使用できます。
+ローカル開発トークンを使用してAEMas a Cloud Serviceにプログラム的にアクセスしたので、サービス資格情報を使用して処理するようにアプリケーションを更新し、実稼働コンテキストで使用できるようにする必要があります。
 
 + [サービス資格情報の使用方法](./service-credentials.md)

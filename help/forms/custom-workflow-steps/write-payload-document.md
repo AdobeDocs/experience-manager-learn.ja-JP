@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-9859
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+exl-id: bab7c403-ba42-4a91-8c86-90b43ca6026c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-最初の引数は、ファイルシステムに保存するドキュメントの名前です。 2 つ目の引数は、ドキュメントを保存するフォルダの場所です。 例えば、上記の使用例では、ドキュメントはc:\confirmation\ChangeBeneficiary.pdfに書き込まれます
+最初の引数は、ファイルシステムに保存するドキュメントの名前です。 2 つ目の引数は、ドキュメントを保存するフォルダの場所です。 例えば、上記の使用例では、ドキュメントの書き込み先は次のとおりです。 `c:\confirmation\ChangeBeneficiary.pdf`
 
 次のスクリーンショットに、カスタムプロセスステップに渡す必要のある引数を示します
 ![write-payload-file-system](assets/write-payload-file-system.png)

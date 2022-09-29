@@ -11,9 +11,9 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1330'
 ht-degree: 4%
 
 ---

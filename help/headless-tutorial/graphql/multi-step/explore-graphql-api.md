@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1529'
 ht-degree: 7%
 
 ---
@@ -211,7 +211,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対する
    {"name": "John Doe"}
    ```
 
-1. クエリを実行する場合、必ず **人物** の値は「John Doe」になります。
+1. クエリを実行する場合、必ず **人物** の値は「John Doe」で返されます。
 
    ![クエリ変数を使用したフィルタリング](assets/explore-graphql-api/using-query-variables-filter.png)
 

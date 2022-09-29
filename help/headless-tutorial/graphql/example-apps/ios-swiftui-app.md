@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 5%
@@ -183,7 +183,7 @@ AEMの永続化クエリは HTTPGET上で実行されるので、Apollo など�
 1. public func は private func を呼び出します。 `makeRequest(..)` を呼び出すと、AEMヘッドレスに対する非同期 HTTPGETリクエストが呼び出され、JSON データが返されます。
 1. 次に、各 public func は JSON データをデコードし、必要なチェックや変換を行ってから、アドベンチャーデータをビューに返します。
 
-+ AEM GraphQL JSON データは、 `AEM/Models.swift`:JSON オブジェクトにマッピングされ、AEMヘッドレスが返されました。
+   + AEM GraphQL JSON データは、 `AEM/Models.swift`:JSON オブジェクトにマッピングされ、AEMヘッドレスが返されました。
 
 ```swift
     /// # getAdventures(..)

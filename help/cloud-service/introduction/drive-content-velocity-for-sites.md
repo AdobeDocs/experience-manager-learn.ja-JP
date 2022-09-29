@@ -3,9 +3,9 @@ title: Adobe Experience Managerでのコンテンツベロシティの推進方�
 description: 企業組織におけるコンテンツベロシティとその価値について学びます。 効果的な実装と、その方法に沿って探すための落とし穴の 4 つの原則に進みます。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
@@ -100,13 +100,13 @@ AEMは、CMS ツールとしての企業やブランドの多くの部分とそ�
 
 1. **組織のグローバル分類の基礎を定義します。**
 
-   分類について話す際には、フォルダー構造を参照するだけでなく、誰がいつ何を作成するかを理解することにします。 さらに、 [異なる権限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) 作成者のタイプごとにアーキテクチャを作成する必要がある構造。
+   分類について話す際には、フォルダー構造を参照するだけでなく、誰がいつ何を作成しているかを理解することにします。 さらに、 [異なる権限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) 作成者のタイプごとにアーキテクチャを作成する必要がある構造。
 
    集中管理モデルと分散管理モデルのどちらが望ましいかを検討します。一方で、集中管理モデルは統合分類戦略を作成し、より厳密な品質管理とプロセスの洞察を提供します。
 
    一方、一元化されたモデルは、特に、現在は柔軟性に富むオーサリングエクスペリエンスからの場合は、チームにとって大きな障害となる可能性があります。 この構造は、共通の言語と地域の差別化要因と、品質管理に関する慣行を可能にする必要があります。 また、オーサリングエクスペリエンスの各ファセットに対する自立性が低下する場合があります。つまり、特定の作成者のみがページの特定のグループで作業でき、限られた作成者のみが編集可能な権限を持ちます。
 
-   最初は、集中管理モードのガバナンスは遅く見えるかもしれませんが、最終的には、プロセスの洞察が収集され、推進されるビジネスユーザー間の透明な説明責任は、全体的な軌道が早くなります。
+   最初は集中管理モードのガバナンスは遅く見えるかもしれませんが、最終的には、プロセスの洞察が収集され、推進されるビジネスユーザー間の透明性の高い説明責任が得られ、全体的な軌道はより速くなります。
 
    最終的にどの方向に進むかの決定は、組織の全体的な戦略目標に依存します。 ビジネスユーザーの柔軟性の向上と、ブランド全体での統一されたエクスペリエンスのどちらを選択するかが、その理由となる場合があります。 適切なモデルに合わせて調整することは、サウンドの実行にとって重要です。
 
@@ -116,7 +116,7 @@ AEMは、CMS ツールとしての企業やブランドの多くの部分とそ�
 
    インタラクティブコンテンツ（多くの場合、ホームページに配置されています）には非常にインタラクティブなエクスペリエンスが必要な場合があるので、フロントエンド CSS デザイナーがビジネス作成者と連携して更新をおこなう必要があります。 ホームページのメンテナンスには、参照ページのようなものとは異なる権限構造や承認プロセスが必要になりますが、これは更新が容易です。 サウンド・ガバナンス、効率性、品質は、明確なコンテンツの所有から始まります。 次の質問に回答するコンテンツ監査の実行を検討します。
 
-   * 誰が何を作るのか？ いつ？
+   * 誰が何を作っているのか？ いつ？
    * コンテンツの種類ごとに適用する必要がある様々な権限構造は何ですか？
    * 変更されるサイト上のエクスペリエンスは何ですか？また、どのエクスペリエンスが比較的静的なままになりますか？
    * 誰がどのコンテンツを所有するのか？
@@ -134,7 +134,7 @@ AEMは、CMS ツールとしての企業やブランドの多くの部分とそ�
 
 1. **設計システムの確立**
 
-   「エッジ」のデザインとは異なり、明確な使用ガイドラインを持つチームを作成します。 美しいシンプルさがコンテンツの速度の中心にあります。 また、設計および開発されたすべての項目にアクセシビリティチームを組み込むことを忘れないでください。 設計システムは、特定のエクスペリエンスを満たすと共に、企業の CMS 内で体系的に動作する柔軟性とのバランスを見つけ出す必要があります。 コアコンポーネントとスタイルシステムは、無数のエクスペリエンスに非常に適応可能で、クリエイターの美的な野心に応えるのに十分な自由を提供します。 しかし、エクスペリエンスの実行を決定する際に常識的なアプローチが適用されるのは、速度とスケールにとって重要です。 優先順位のいくつかのジャグリングが必要です。 システムを設計する際は、再利用性と速度の基本に目を向けます。サイト上のエクスペリエンスの大部分は、OOTB のコンポーネントとスタイルシステムを使用して実行する必要があります。
+   「エッジ」のデザインとは異なり、明確な使用ガイドラインを持つチームを作成します。 美しいシンプルさがコンテンツの速度の中心にあります。 また、設計および開発されたすべての項目にアクセシビリティチームを組み込むことを忘れないでください。 設計システムは、特定のエクスペリエンスを満たすと共に、企業の CMS 内で体系的に作業する柔軟性とのバランスを見つけ出す必要があります。 コアコンポーネントとスタイルシステムは、無数のエクスペリエンスに非常に適応可能で、クリエイターの美的な野心に応えるのに十分な自由を提供します。 しかし、エクスペリエンスの実行を決定する際に常識的なアプローチが適用されるのは、速度とスケールにとって重要です。 優先順位のいくつかのジャグリングが必要です。 システムを設計する際は、再利用性と速度の基本に目を向けます。サイト上のエクスペリエンスの大部分は、OOTB のコンポーネントとスタイルシステムを使用して実行する必要があります。
 
    _「コンテンツに関しては、マインドセットの移行が必要です。 多くのコンテンツ実践者は、キャリアのために、チャネル固有、ブランド固有、ページ固有のコンテンツのレンズを通じて作業を行ってきました。 今こそ総合的に考え、その探査に時間を割く時だ」と述べた。_ - T-Mobile(Monique Misrahi)
 
@@ -145,7 +145,7 @@ AEMは、CMS ツールとしての企業やブランドの多くの部分とそ�
 一般に、次の経験則に従うのが最善です。
 
 * エクスペリエンスの 80%以上を推進 [標準搭載のコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) および [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). お客様の証言を通じて、製品ロードマップを活用できるより拡張性の高い基盤が構築されるだけでなく、速度が最大 50%向上します。
-* [設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[編集可能なテンプレート](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 静的テンプレートから離れる 編集可能なテンプレート（スタイルシステムの使用に必要）を設定する場合は、Web サイトのページやセクションで使用できる様々なスタイルを制御するテンプレート作成者を割り当てる必要があります。 テンプレート自体に対するこれらの更新は、日常の作業に関しては、少ししかありません。
+* [設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[編集可能なテンプレート](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 静的テンプレートから離れる 編集可能なテンプレート（スタイルシステムの使用に必要）を設定する場合は、Web サイトのページやセクションで使用できる様々なスタイル設定を制御するテンプレート作成者を割り当てる必要があります。 テンプレート自体に対するこれらの更新は、日常の作業に関しては、少ししかありません。
 * 用途 [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) 可能な限り エクスペリエンスフラグメントの一般的な使用例はマルチチャネル配布ですが、複数の領域でコンテンツを手動で更新する代わりに、サイト全体で一度に 1 つの領域にコンテンツを入力する場合にも効果的です。 これにより、過度の時間と労力を節約でき、オーサリングチームがより具体的で豊富なエクスペリエンスに取り組むのを解放できます。
 * 豊かなエクスペリエンスを作成します。 上記の80/20ルールを利用すると、組織は、一般的なメンテナンスアップデートの代わりに、特定の CSS とバックエンド開発を選択したエクスペリエンスに利用できます。
 * 拡張性の高い基盤を選択し、迅速なリブランディングをおこないます。 最新の実装に基づいて実行されるスタイルシステムを使用すると、プラットフォーム全体で効率的なリブランディングを実現できます。 CSS スキンを変更して幅広いコンテンツセクターを更新すると、迅速なテストと検証が可能になり、ROI に直接影響を与えることで、サイトの経験的な品質を向上させることができます。
@@ -177,4 +177,4 @@ AEM Sites:基本的な実行と運用
 
 コンテンツベロシティの詳細な説明については、この 1 時間をご覧ください [パネルディスカッション](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) モニク・ミスラヒ (T-Mobile)、エイミー・バーグストロム (Deloitte)、Adobeのアンラダ・ペンタレディを搭載。
 
-戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。
+戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。

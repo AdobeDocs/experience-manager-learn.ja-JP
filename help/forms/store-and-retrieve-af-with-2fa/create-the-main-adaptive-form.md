@@ -1,37 +1,34 @@
 ---
 title: メインのアダプティブフォームを作成する
-description: 申込者の情報とアダプティブフォームを取り込むためのアダプティブフォームを作成し、保存されたアダプティブフォームを取得する
-feature: アダプティブフォーム
+description: アダプティブフォームを作成して申込者の情報を取得し、保存されたアダプティブフォームを取得する
+feature: Adaptive Forms
 type: Tutorial
 activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
-topic: 開発
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 1%
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
-
 # メインのアダプティブフォームを作成する
 
-フォーム&#x200B;**StoreAFWithAttachments**&#x200B;は、メインのアダプティブフォームです。 このアダプティブフォームは、ユースケースのエントリポイントです。 このフォームでは、モバイル番号を含むユーザーの詳細が取り込まれます。 このフォームには、添付ファイルを追加する機能もあります。 「保存して終了」ボタンがクリックされると、サーバー側コードが実行され、フォームデータがデータベースに保存され、一意のアプリケーションIDが生成され、ユーザーに表示されて安全に保持されます。 このアプリケーションIDは、アプリケーションに関連付けられたモバイル番号を取得するために使用されます。
+フォーム **StoreAFWithAttachments** はメインのアダプティブフォームです。 このアダプティブフォームは、ユースケースのエントリポイントです。 このフォームでは、モバイル番号を含むユーザーの詳細が取り込まれます。 このフォームには、添付ファイルを追加する機能もあります。 「保存して終了」ボタンがクリックされると、サーバー側コードが実行され、フォームデータがデータベースに保存され、一意のアプリケーション ID が生成され、ユーザーに表示されて安全に保持されます。 このアプリケーション ID は、アプリケーションに関連付けられているモバイル番号を取得するために使用されます。
 
-![主申請書](assets/6552.JPG)
+![メインの申し込みフォーム](assets/6552.JPG)
 
-このフォームは、コースで前に作成した&#x200B;**bootboxjs540,storeAFWithAttachments**&#x200B;クライアントライブラリと、フォーム送信時にトリガーされるAEMワークフローに関連付けられています。
-
-
-* サンプルフォームは、サンプルフォームが正しくレンダリングされるためにAEMに読み込む必要がある、[カスタムのアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip)に基づいています。
-
-* 完成した[StoreAfWithAttachments Form](assets/store-af-with-attachments-form.zip)をダウンロードして、AEMインスタンスに読み込むことができます。
-
-* フォームを機能させるには、このフォームに関連付けられたAEMワークフロー[をAEMインスタンスに読み込む必要があります。](assets/workflow-model-store-af-with-attachments.zip)
+このフォームは **bootboxjs540,storeAFWithAttachments** コースで先ほど作成したクライアントライブラリと、フォームの送信時にトリガーされるAEMワークフロー。
 
 
+* サンプルフォームは、 [カスタムアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip) サンプルフォームを正しくレンダリングするには、AEMに読み込む必要があります。
 
+* 完了 [StoreAfWithAttachments フォーム](assets/store-af-with-attachments-form.zip) をダウンロードして、AEMインスタンスに読み込むことができます。
+
+* この [このフォームに関連付けられたAEMワークフロー](assets/workflow-model-store-af-with-attachments.zip) フォームを機能させるには、AEMインスタンスに読み込む必要があります。

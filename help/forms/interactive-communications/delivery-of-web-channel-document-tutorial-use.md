@@ -1,36 +1,32 @@
 ---
-title: インタラクティブ通信ドキュメントの配信 — WebチャネルAEM Forms
-seo-title: インタラクティブ通信ドキュメントの配信 — WebチャネルAEM Forms
-description: Eメール内のリンクを介したWebチャネルドキュメントの配信
-seo-description: Eメール内のリンクを介したWebチャネルドキュメントの配信
-feature: インタラクティブコミュニケーション
-topics: development
+title: インタラクティブ通信ドキュメントの配信 — Web チャネルAEM Forms
+description: E メール内のリンク経由での Web チャネルドキュメントの配信
+feature: Interactive Communication
 audience: developer
-doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 1%
+source-wordcount: '277'
+ht-degree: 0%
 
 ---
 
+# Web チャネルドキュメントのメール配信
 
-# Webチャネルドキュメントの電子メール配信
+Web チャネルのインタラクティブ通信ドキュメントを定義してテストしたら、Web チャネルドキュメントを受信者に配信するための配信メカニズムが必要です。
 
-Webチャネルのインタラクティブ通信ドキュメントを定義し、テストしたら、受信者にWebチャネルドキュメントを配信する配信メカニズムが必要です。
+この記事では、Web チャネルドキュメントの配信メカニズムとしての E メールを見てみます。 受信者は、電子メールで Web チャネルドキュメントへのリンクを取得します。リンクをクリックすると、ユーザーは認証を求められ、Web チャネルドキュメントには、ログインしたユーザーに固有のデータが入力されます。
 
-この記事では、Webチャネルドキュメントの配信メカニズムとしてのEメールを見てみます。 受信者は、電子メールでWebチャネルドキュメントへのリンクを取得します。リンクをクリックすると、ユーザーは認証を求められ、Webチャネルドキュメントには、ログインしたユーザーに固有のデータが入力されます。
+次のコードスニペットを見てみましょう。 このコードは、ユーザーがメール内のリンク上のをクリックして Web チャネルドキュメントを表示する際にトリガーされる data.jsp の一部です。 Jackrabbit UserManager を使用してログインユーザーが取得されます。 ログインユーザーを取得したら、ユーザーのプロファイルに関連付けられている accountNumber プロパティの値を取得します。
 
-次のコードスニペットを見てみましょう。 このコードは、ユーザーがWebチャネルドキュメントを表示する電子メール内のリンクのをクリックするとトリガーされるGET.jspの一部です。 jackrabbit UserManagerを使用してログインユーザーを取得します。 ログインユーザーを取得したら、ユーザーのプロファイルに関連付けられているaccountNumberプロパティの値を取得します。
+次に、accountNumber 値をマップ内の accountnumber というキーに関連付けます。 キー **accountnumber** は、フォームデータモーダル内で要求属性として定義されます。 この属性の値は、入力パラメーターとしてフォームデータモーダル読み取りサービスメソッドに渡されます。
 
-次に、 accountNumber値をマップ内のaccountnumberというキーに関連付けます。 キー&#x200B;**accountnumber**&#x200B;は、フォームデータモーダルにリクエスト属性として定義されます。 この属性の値は、入力パラメーターとしてForm Data Modal読み取りサービスメソッドに渡されます。
-
-7行目：インタラクティブ通信ドキュメントのURLで識別されるリソースタイプに基づいて、受信した要求を別のサーブレットに送信します。 この2番目のサーブレットによって返された応答は、1番目のサーブレットの応答に含まれます。
+行 7:インタラクティブ通信ドキュメントの URL で識別されるリソースタイプに基づいて、受信したリクエストを別のサーブレットに送信します。 この 2 番目のサーブレットによって返された応答は、最初のサーブレットの応答に含まれます。
 
 ```java
 org.apache.jackrabbit.api.security.user.UserManager um = ((org.apache.jackrabbit.api.JackrabbitSession) session).getUserManager();
@@ -42,13 +38,12 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatement/channels/web.html").include(wrapperRequest, response);
 ```
 
-![includemethod](assets/includemethod.jpg)
+![メソッドアプローチを含める](assets/includemethod.jpg)
 
-7行目のコードの視覚表現
+7 行目のコードの視覚的表現
 
-![requestparameter](assets/requestparameter.png)
+![リクエストパラメーターの設定](assets/requestparameter.png)
 
 フォームデータモーダルの読み取りサービス用に定義された要求属性
 
-
-[サンプルのAEMパッケージ](assets/webchanneldelivery.zip)を参照してください。
+[サンプルのAEMパッケージ](assets/webchanneldelivery.zip).

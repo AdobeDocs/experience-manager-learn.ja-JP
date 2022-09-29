@@ -1,38 +1,38 @@
 ---
 title: フォームデータモデルを使用したバイナリデータの投稿
-description: フォームデータモデルを使用したAEM DAMへのバイナリデータの投稿
-feature: ワークフロー
+description: フォームデータモデルを使用したAEM DAM へのバイナリデータの投稿
+feature: Workflow
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 1%
+source-wordcount: '489'
+ht-degree: 0%
 
 ---
 
-
 # フォームデータモデルを使用したバイナリデータの投稿{#using-form-data-model-to-post-binary-data}
 
-AEM Forms 6.4以降では、フォームデータモデルサービスをAEMワークフローのステップとして呼び出す機能が追加されました。 この記事では、フォームデータモデルサービスを使用してレコードのドキュメントを投稿する場合の使用例について説明します。
+AEM Forms 6.4 以降では、AEM Workflow のステップとしてフォームデータモデルサービスを呼び出す機能が追加されました。 この記事では、フォームデータモデルサービスを使用してレコードのドキュメントを投稿する場合のサンプルの使用例について説明します。
 
 使用例を次に示します。
 
 1. ユーザーがアダプティブフォームに入力して送信します。
 1. アダプティブフォームは、レコードのドキュメントを生成するように設定されます。
-1. このアダプティブフォームの送信時に、AEM Workflowがトリガーされ、「フォームデータモデルを呼び出し」サービスを使用して、レコードのドキュメントをAEM DAMにPOSTします。
+1. このアダプティブフォームの送信時に、AEM Workflow がトリガーされ、「フォームデータモデルサービスを起動」を使用してレコードのドキュメントをAEM DAM にPOSTします。
 
 ![posttodam](assets/posttodamshot1.png)
 
 「フォームデータモデル」タブのプロパティ
 
-「サービス入力」タブで、次のマッピングを行います
+「サービス入力」タブで、以下をマッピングします
 
-* ペイロードに対するDOR.pdfプロパティを含むファイル（保存する必要があるバイナリオブジェクト）。 つまり、アダプティブフォームが送信されると、生成されたレコードのドキュメントは、ワークフローペイロードに対するDOR.pdfというファイルに保存されます。**このDOR.pdfが、アダプティブフォームの送信プロパティを設定する際に指定したDOR.pdfと同じであることを確認します。**
+* ペイロードを基準とした DOR.pdf プロパティを持つファイル（保存する必要があるバイナリオブジェクト）。 つまり、アダプティブフォームが送信されると、生成されたレコードのドキュメントは、ワークフローのペイロードを基準とした DOR.pdf と呼ばれるファイルに保存されます。**この DOR.pdf が、アダプティブフォームの送信プロパティを設定する際に指定した DOR.pdf と同じであることを確認します。**
 
-* fileName - DAMにバイナリオブジェクトを保存する際の名前です。 したがって、このプロパティを動的に生成し、各fileNameが送信ごとに一意になるようにします。 この目的で、ワークフローのプロセスステップを使用して、filenameというメタデータプロパティを作成し、その値をフォームを送信する人のメンバー名とアカウント番号の組み合わせに設定しました。 例えば、ユーザーのメンバー名がJohn Jacobsで、アカウント番号が9846の場合、ファイル名はJohn Jacobs_9846.pdfになります。
+* fileName - DAM にバイナリオブジェクトを保存する際の名前です。 したがって、このプロパティを動的に生成し、各 fileName が送信ごとに一意になるようにします。 この目的で、ワークフローのプロセスステップを使用して、filename というメタデータプロパティを作成し、その値をフォーム送信者のメンバー名とアカウント番号の組み合わせに設定しました。 例えば、ユーザーのメンバー名が John Jacobs で、そのアカウント番号が 9846 の場合、ファイル名は John Jacobs_9846.pdf になります。
 
 ![fdmserviceinput](assets/fdminputservice.png)
 
@@ -40,24 +40,24 @@ Service Input
 
 >[!NOTE]
 >
->トラブルシューティングのヒント — 何らかの理由でDOR.pdfがDAMに作成されていない場合は、[ここ](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)をクリックして、データソース認証設定をリセットします。 これらはAEM認証設定で、デフォルトはadmin/adminです。
+>トラブルシューティングのヒント — 何らかの理由で DOR.pdf が DAM に作成されていない場合は、「 [ここ](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). これらはAEM認証設定で、デフォルトは admin/admin です。
 
-ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
+お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-1.[Developingwithserviceuserバンドルをデプロイします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1.[Developingwithserviceuser バンドルをデプロイします。](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [setvalueバンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。このカスタムOSGIバンドルは、メタデータプロパティを作成し、送信されたフォームデータから値を設定するために使用されます。
+1. [setvalue バンドルをダウンロードしてデプロイします。](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).このカスタム OSGi バンドルは、メタデータプロパティの作成と、送信されたフォームデータからの値の設定に使用されます。
 
-1. [この記事に関](assets/postdortodam.zip) 連するアセットを、パッケージマネージャーを使用してAEMにインポートします。次の情報が得られます
+1. [アセットの読み込み](assets/postdortodam.zip) パッケージマネージャーを使用してこの記事に関連付けられてAEMになります。次の情報が得られます
 
    1. ワークフローモデル
-   1. AEM Workflowに送信するように設定されたアダプティブフォーム
-   1. PostToDam.JSONファイルを使用するように設定されたデータソース
+   1. AEM Workflow に送信するように設定されたアダプティブフォーム
+   1. PostToDam.JSON ファイルを使用するように設定されたデータソース
    1. データソースを使用するフォームデータモデル
 
-1. [ブラウザーでアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を開きます。
+1. ポイント： [アダプティブフォームを開くブラウザー](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. フォームに入力して送信します。
-1. レコードのドキュメントが作成され、格納されている場合は、Assetsアプリケーションを確認します。
+1. レコードのドキュメントが作成され、保存されている場合は、Assets アプリケーションを確認します。
 
 
-[データソ](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) ースの作成に使用するSwaggerファイルを参照できます
+[Swagger ファイル](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) データソースの作成に使用されている場合は、参照用に使用できます

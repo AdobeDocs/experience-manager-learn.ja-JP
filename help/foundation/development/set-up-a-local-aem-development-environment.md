@@ -1,6 +1,6 @@
 ---
 title: ローカルAEM開発環境の設定
-description: 'Experience Manager用の環境を設定するローカル開発環境の設定方法を説明します。 ローカルインストール、Apache Maven、統合開発環境、デバッグおよびトラブルシューティングについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用します。 '
+description: Experience Manager用の環境を設定するローカル開発環境の設定方法を説明します。 ローカルインストール、Apache Maven、統合開発環境、デバッグおよびトラブルシューティングについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用します。
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2576'
 ht-degree: 8%
 
 ---
@@ -127,12 +127,12 @@ IDE を使用する場合は、必ず `classic` を設定します。
 
 ### [!DNL Eclipse] IDE
 
-この **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は Java 開発用のより一般的な IDE の 1 つで、大部分はオープンソースで、 ***無料***! Adobeは、 **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**&#x200B;の場合は [!DNL Eclipse] 優れた GUI での開発を容易にし、コードをローカルのAEMインスタンスと同期させる。 この [!DNL Eclipse] IDE は、が GUI をサポートしているので、AEMを初めて使用する開発者には大きく推奨されます。 [!DNL AEM Developer Tools].
+この **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は Java 開発用のより一般的な IDE の 1 つで、大部分はオープンソースで、 ***無料***! Adobeは、 **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=ja)**&#x200B;の場合は [!DNL Eclipse] 優れた GUI での開発を容易にし、コードをローカルのAEMインスタンスと同期させる。 この [!DNL Eclipse] IDE は、が GUI をサポートしているので、AEMを初めて使用する開発者には大きく推奨されます。 [!DNL AEM Developer Tools].
 
 #### インストールとセットアップ
 
 1. をダウンロードしてインストールする [!DNL Eclipse] の IDE [!DNL Java EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
-1. 指示に従って、 [!DNL AEM Developer Tools] プラグイン： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
+1. 指示に従って、 [!DNL AEM Developer Tools] プラグイン： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 

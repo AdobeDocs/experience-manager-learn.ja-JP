@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,8 @@ ht-degree: 0%
 
 * インボックスからタスクを開き、フォームを送信します。 プロンプトが表示されたら、コメントを入力してください。
 
-コメントは、crx の managerComments というメタデータプロパティに保存されます。 コメントが crx に管理者としてログインしていないかを確認するには、次の手順に従います。 ワークフローインスタンスは次のパスに保存されます
+コメントは、という名前のメタデータプロパティに保存されます。 `managerComments` AEMリポジトリ内。 コメントが crx に管理者としてログインしていないかを確認するには、次の手順に従います。 ワークフローインスタンスは、次のパスに保存されます。
 
-/var/workflow/instances/server0
+`/var/workflow/instances/server0`
 
 適切なワークフローインスタンスを選択し、metadata ノードで managerComments プロパティを確認します。

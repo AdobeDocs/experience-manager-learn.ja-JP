@@ -13,10 +13,10 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 2%
+source-wordcount: '621'
+ht-degree: 3%
 
 ---
 
@@ -55,7 +55,7 @@ App Builder にアクセスするには、新規登録してプレビューし�
 
 1. [App Builder 体験版にサインアップ](https://developer.adobe.com/app-builder/trial/).
 1. プロビジョニングが完了したことを電子メールで通知されるまで約 2 ～ 10 日待ってから、チュートリアルを続行します。
-   + プロビジョニングされているかどうかがわからない場合は、次の手順に進み、 __App Builder__ プロジェクト [Adobe開発者コンソール](https://developer.adobe.com/console/) まだプロビジョニングされていません。
+   + プロビジョニングされているかどうかがわからない場合は、次の手順に進み、 __App Builder__ プロジェクト [Adobe Developer Console](https://developer.adobe.com/console/) まだプロビジョニングされていません。
 
 ## クラウドストレージ
 
@@ -78,7 +78,7 @@ _Azure Blob ストレージのプロビジョニングのクリックスルー�
 1. タップ __+追加__ 新しい BLOB ストレージアカウントを作成するには、以下を実行します。
 1. 新しい __リソースグループ__ 必要に応じて、次に例を示します。 `aem-as-a-cloud-service`
 1. 次を提供： __ストレージアカウント名__&#x200B;例： `aemguideswkndassetcomput`
-   + この __ストレージアカウント名__ は次の用途に使用されます： [クラウドストレージの設定](../develop/environment-variables.md) ローカルAsset compute開発ツール
+   + この __ストレージアカウント名__  使用対象 [クラウドストレージの設定](../develop/environment-variables.md) ローカルAsset compute開発ツール
    + この __アクセスキー__ ストレージアカウントに関連付ける必要があるのは、 [クラウドストレージの設定](../develop/environment-variables.md).
 1. それ以外の値はデフォルトのままにし、 __確認して作成__ ボタン
    + 必要に応じて、 __場所__ 近くにいる。

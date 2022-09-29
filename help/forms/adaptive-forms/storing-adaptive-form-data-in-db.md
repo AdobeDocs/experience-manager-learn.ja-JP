@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 
    * 「JDBC Connection Pool」を検索します。 新しい Day Commons JDBC 接続プールを作成します。 データベースに固有の設定を指定します。
 
-   * ![jdbc 接続プール](assets/aemformstutorial-jdbc.png)
+   * ![JDBC 接続プールの OSGi 設定](assets/aemformstutorial-jdbc.png)
 
 ## データベースの詳細を指定
 
@@ -38,7 +38,7 @@ ht-degree: 3%
    * FormName — フォームの名前を格納する列の名前
    * ColumnName - AF データを格納する列名
 
-![insertdata](assets/specify-database-details.png)
+   ![データベースの詳細 OSGi 設定を指定します。](assets/specify-database-details.png)
 
 
 

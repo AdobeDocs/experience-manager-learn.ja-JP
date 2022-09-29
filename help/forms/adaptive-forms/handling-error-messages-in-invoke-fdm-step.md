@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 8cae155c-c393-4ac3-a412-bf14fc411aac
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -26,22 +26,15 @@ AEM Forms 6.5.1 以降では、エラーメッセージを取得して検証オ�
 * 検証の例外に起因して発生したエラーの重要な情報を保存します。 ErrorCode(String)、ErrorMessage(String) および ErrorDetails(JSON) を格納する関連する変数を選択するための、3 つのオートコンプリート型変数セレクターが組み込まれました。 ただし、例外が DermisValidationException でない場合は、ErrorDetails は null に設定されます。
    ![エラーメッセージの取得](assets/fdm-error-details.PNG)
 
-これらの変更を受けて、「フォームデータモデルサービスを起動」ステップで、入力値が Swagger ファイルで指定されたデータ制約に従っていることを確認します。 例えば、次のエラーメッセージがスローされるのは、accountId と balance の値が swagger ファイルで指定されたデータ制約に準拠していない場合です。
+これらの変更を受け、「フォームデータモデルサービスを起動」ステップでは、入力値が Swagger ファイルで指定されたデータ制約に従っていることを確認します。 例えば、次のエラーメッセージがスローされるのは、accountId と balance の値が Swagger ファイルで指定されたデータ制約に準拠していない場合です。
 
 ```json
 {
-
-"errorCode": "AEM-FDM-001-049"
-
-"errorMessage": "Input validations failed during operation execution"
-
-"violations": {
-
-"/accountId": ["numeric instance is greater than the required maximum (maximum: 20, found: 97)"],
-
-"/newAccount/balance": ["instance type (string) does not match any allowed primitive type (allowed: [\"integer\",\"number\"])"]
-
-}
-
+    "errorCode": "AEM-FDM-001-049"
+    "errorMessage": "Input validations failed during operation execution"
+    "violations": {
+        "/accountId": ["numeric instance is greater than the required maximum (maximum: 20, found: 97)"],
+        "/newAccount/balance": ["instance type (string) does not match any allowed primitive type (allowed: [\"integer\",\"number\"])"]
+    }   
 }
 ```

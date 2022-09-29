@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2712'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 従来の [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest). が提供する画像 [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest) が WKND SPAで再利用されます。 パッケージは、 [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+3. 従来の [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest). が提供する画像 [WKND リファレンスサイト](https://github.com/adobe/aem-guides-wknd/releases/latest) は、WKND SPAで再利用されます。 パッケージは、 [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![パッケージマネージャーによる wknd.all のインストール](./assets/map-components/package-manager-wknd-all.png)
 
@@ -138,7 +138,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
 
    の下 **[!UICONTROL 許可されたコンポーネント]** > **[!UICONTROL WKND SPAANGULAR — コンテンツ]** /を選択します。 **[!UICONTROL 画像]** および **[!UICONTROL テキスト]** コンポーネント。 合計 4 つのコンポーネントを選択する必要があります。
 
-   クリック **[!UICONTROL 完了]** 変更を保存します。
+   「**[!UICONTROL 完了]**」をクリックして、変更を保存します。
 
 5. **ページを更新します。**&#x200B;を **[!UICONTROL ヘッダー]** ロック解除されたコンポーネントの上の **[!UICONTROL レイアウトコンテナ]**:
 
@@ -213,7 +213,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
    }
    ```
 
-   の下 `:children` 作成した各ページのエントリが表示されます。 すべてのページのコンテンツは、この最初の JSON リクエストに含まれます。 ナビゲーションルーティングが実装されると、コンテンツは既にクライアント側で使用可能なので、SPAの後続のビューは迅速に読み込まれます。
+   の下 `:children` 作成した各ページのエントリが表示されます。 すべてのページのコンテンツは、この最初の JSON リクエストに含まれます。 ナビゲーションルーティングが実装されると、コンテンツは既にクライアント側で使用可能になるので、SPAの後続のビューは迅速に読み込まれます。
 
    読み込むのは賢明ではない **すべて** SPAのコンテンツを最初の JSON リクエストで取得すると、最初のページの読み込みが遅くなります。 次に、ページの階層の深さが収集される方法を見てみましょう。
 
@@ -313,7 +313,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEMページの階層性は、ナビゲーションメニューの入力に使用できる JSON 形式でモデル化されます。 以下を思い出してください。 `Header` コンポーネントは、 [Navigation コアコンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) と、JSON を通じて公開されるコンテンツは、Angularに自動的にマッピングされます `@Input` 注釈。
+   AEMページの階層性は、ナビゲーションメニューの入力に使用できる JSON 形式でモデル化されます。 以下を思い出してください。 `Header` コンポーネントは、 [Navigation コアコンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) と、JSON を通じて公開されるコンテンツは、自動的にAngular `@Input` 注釈。
 
 2. 新しいターミナルウィンドウを開き、 `ui.frontend` SPAプロジェクトのフォルダー。 新しい `NavigationComponent` angularCLI ツールを使用：
 
@@ -637,7 +637,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
 
    `AemPageMatcher` は、カスタムAngularルータです [UrlMatcher](https://angular.io/api/router/UrlMatcher)を検索し、AEM内でこのAngularアプリケーションの一部である「類似」ページに一致します。
 
-   `PageComponent` は、AEMのAngularを表すページコンポーネントで、一致したルートが呼び出されます。 この `PageComponent` さらに検査されます。
+   `PageComponent` は、AEMのAngularを表すページコンポーネントで、一致したルートをレンダリングするために使用されます。 この `PageComponent` は、チュートリアルの後半で確認します。
 
    `AemPageDataResolver`は、AEM SPA Editor JS SDK が提供する、カスタム [Angularルーターリゾルバー](https://angular.io/api/router/Resolve) これは、拡張子を含むAEMのパスであるルート URL を、拡張子よりも小さいページパスであるAEMのリソースパスに変換するために使用されます。
 
@@ -702,7 +702,7 @@ AEMページとSPA Editor SDK を使用して、SPAの複数のビューがサ�
 
    >[!CAUTION]
    >
-   > angularプロジェクトで、非常に厳密なリンクルールが有効になっています。 Maven ビルドに失敗した場合は、エラーを確認し、 **リストされたファイルに Lint エラーが見つかりました。**&#x200B;リンターで見つかった問題を修正し、Maven コマンドを再実行します。
+   > angularプロジェクトで、非常に厳密なリンクルールが有効になっています。 Maven ビルドに失敗した場合は、エラーを確認し、 **リストされたファイルに Lint エラーが見つかりました。** を使用して作成します。リンターで見つかった問題を修正し、Maven コマンドを再実行します。
 
 2. AEMのSPAホームページに移動します。 [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) ブラウザーの開発者ツールを開きます。 以下のスクリーンショットは、Google Chrome ブラウザーからキャプチャしたものです。
 

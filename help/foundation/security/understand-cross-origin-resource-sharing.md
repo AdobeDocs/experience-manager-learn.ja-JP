@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ CORS 設定は、AEMで OSGi 設定ファクトリとして管理され、各ポ
 * `Allowed Origin` と `Origin` リクエストヘッダー
 * および `Allowed Paths` をリクエストパスに置き換えます。
 
-これらの値に一致する最初のポリシーが使用されます。 何も見つからない場合、 [!DNL CORS] リクエストが拒否されます。
+これらの値に一致する最初のポリシーが使用されます。 何も見つからない場合、 [!DNL CORS] リクエストが拒否されました。
 
 ポリシーが設定されていない場合、 [!DNL CORS] 要求に対して応答するサーバーの他のモジュールがない限り、ハンドラーが無効になり、結果的に拒否されるので、要求に対して応答しません。 [!DNL CORS].
 

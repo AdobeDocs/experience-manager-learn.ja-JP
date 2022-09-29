@@ -7,9 +7,10 @@ kt: 9724
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ OpenAPI Specification（旧称 Swagger Specification）は、REST API の API �
 > AEM Formsは、OpenAPI Specification バージョン 2.0(FKA Swagger) をサポートしています。
 
 以下を使用： [swagger editor](https://editor.swagger.io/) を使用して、国または州のすべての国と子要素を取得する操作を記述する swagger ファイルを作成します。 Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 完成した Swagger ファイルは、 [ここ](assets/swagger-files.zip)
-Swagger ファイルは、次の REST API を記述しています
+Swagger ファイルは、次の REST API を記述します
 * [すべての国を取得](http://api.geonames.org/countryInfoJSON?username=yourusername)
 * [Geoname オブジェクトの子を取得](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
@@ -82,8 +83,3 @@ AEM Formsのデータ統合は、を作成して操作するための直感的�
 
 選択した国と都道府県に基づいて郡と市区町村をリストするには、フォームに郡と市区町村と呼ばれる 2 つのドロップダウンリストを追加します。
 ![運動](assets/cascading-drop-down-exercise.png)
-
-
-
-
-

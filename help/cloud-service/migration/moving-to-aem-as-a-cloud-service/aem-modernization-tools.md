@@ -8,15 +8,15 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
 
-# AEM Modernization Tools
+# AEM モダナイゼーションツール
 
 AEM Modernization Tools を使用して、既存のAEM Sitesコンテンツをアップグレードし、AEMとas a Cloud Serviceした互換性を保ち、ベストプラクティスに合わせる方法を説明します。
 
@@ -91,4 +91,4 @@ AEM Modernization ツールは、編集可能なテンプレート、AEM Core WC
 
 
 1. ローカルAEM SDK に、新しく最新化された wknd-legacy サイトをデプロイします。 AEM ASK は次の場所からダウンロードできます。
-+ [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
+   + [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

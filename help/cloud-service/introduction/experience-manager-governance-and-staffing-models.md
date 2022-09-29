@@ -3,7 +3,7 @@ title: ガバナンスとスタッフのモデルとアーキタイプ
 description: Adobe Experience Manager(AEM) プラットフォームを運用し、努力を最大限に活用する方法を学びます。
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -133,4 +133,4 @@ AEMを実行および操作できるように、次の要素を考慮します�
 
 ガバナンスとスタッフモデルおよびアーキタイプに関する詳細な説明については、次の 1 時間のパネルで説明します。 [の役割のアーキタイプと運用フレームワークの作成 [!DNL AEM Assets] および [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
 
-戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。
+戦略と思考のリーダーシップに関する詳細は、 [顧客の成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) ハブ。

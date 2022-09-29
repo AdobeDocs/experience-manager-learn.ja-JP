@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # 送信されたデータに対するクエリ
 
 
-次の手順では、送信されたデータを照会し、結果を表形式で表示します。 これを達成するには、次のソフトウェアを使用します
+次の手順では、送信されたデータを照会し、結果を表形式で表示します。 これを実現するには、次のソフトウェアを使用します。
 
 [QueryBuilder](https://querybuilder.js.org/)  — クエリを作成する UI コンポーネント
 
@@ -64,7 +64,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-GetResult ボタンがクリックされると、 **&quot;/bin/querydata&quot;**. QueryBuilder UI で作成したクエリを、クエリパラメーターを使用してサーブレットに渡します。 次に、サーブレットは、このクエリを SQL クエリにマッセージし、データベースのクエリに使用できます。 例えば、「Mouse」という名前のすべての製品を取得する場合、Query Builder のクエリー文字列は$.productname = &#39;Mouse&#39;になります。 このクエリは、次のように変換されます
+GetResult ボタンがクリックされると、 **&quot;/bin/querydata&quot;**. QueryBuilder UI で作成したクエリを、クエリパラメーターを使用してサーブレットに渡します。 次に、サーブレットは、このクエリを SQL クエリにマッセージし、データベースのクエリに使用できます。 例えば、「Mouse」という名前のすべての製品を取得する検索を行う場合、Query Builder のクエリ文字列は次のようになります。 `$.productname = 'Mouse'`. このクエリは、次のように変換されます
 
 選択 &#42; を aemformswithjson からダウンロードします。  JSON_EXTRACT( formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;の場合の formsubmissions
 

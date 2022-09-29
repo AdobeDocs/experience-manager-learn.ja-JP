@@ -4,9 +4,10 @@ description: ページのバリアントのキャッシュをサポートする�
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
-source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
+exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ ht-degree: 1%
 
 + AEMコードは Cookie を設定する必要があります __&quot;x-aem-variant&quot;__ を訪問者の優先状態 ( 例： `Set-Cookie: x-aem-variant=NY`) を返します。
 
-+ 訪問者からの以降のリクエストでは、その Cookie を送信します ( 例： `“Cookie: x-aem-variant=NY”`) と Cookie が事前に定義されたヘッダー ( `x-aem-variant:NY`) が Dispatcher に渡されます。
++ 訪問者からの以降のリクエストでは、その Cookie を送信します ( 例： `"Cookie: x-aem-variant=NY"`) で始まり、Cookie が CDN レベルで事前定義済みのヘッダー ( `x-aem-variant:NY`) が Dispatcher に渡されます。
 
 + Apache の書き換えルールによって要求パスが変更され、ページ URL のヘッダー値が Apache Sling セレクター ( 例： `/page.variant=NY.html`) をクリックします。 これにより、AEM パブリッシュは、セレクターと Dispatcher に基づいて異なるコンテンツを提供し、バリアントごとに 1 ページをキャッシュできます。
 

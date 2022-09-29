@@ -1,5 +1,5 @@
 ---
-title: サービス資格情報
+title: AEM Developer Console サービスの資格情報
 description: AEM Service Credentials を使用すると、HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするための、外部のアプリケーション、システムおよびサービスを容易にすることができます。
 version: Cloud Service
 doc-type: tutorial
@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef4579a44c1c940a3b7441e336db3790a0c7afd7
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%

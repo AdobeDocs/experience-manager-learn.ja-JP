@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
-source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 3%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 3%
    ![ユーザープロファイルをクリック](assets/snow-1.png)
 
 * 「インスタンスのパスワードを管理」をクリックします。
-* インスタンスの詳細が次のように表示されます
+* インスタンスの詳細は次のように表示されます
    ![インスタンスの詳細](assets/snow-3.png)
 
 ## 統合のテスト

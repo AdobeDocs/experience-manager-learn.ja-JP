@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ AEM Sitesのサイトマップを作成して、SEO を強化する方法を説�
 
 ### サイトマップスケジューラーの OSGi 設定
 
-を定義します。 [OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻度 ( [cron 式](http://www.cronmaker.com)) サイトマップは再生成され、AEMにキャッシュされます。
+を定義します。 [OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻度 ( [cron 式](http://www.cronmaker.com)) サイトマップは、AEMで再生成およびキャッシュされます。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -52,7 +52,7 @@ AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentatio
 
 の Sling マッピングノード定義の例 `https://wknd.com` は以下で定義できます。 `/etc/map/https` 次のように指定します。
 
-| パス | プロパティ名 | プロパティタイプ | プロパティ値 |
+| パス  | プロパティ名 | プロパティタイプ | プロパティ値 |
 |------|----------|---------------|-------|
 | `/etc/map/https/wknd-site` | `jcr:primaryType` | String | `nt:unstructured` |
 | `/etc/map/https/wknd-site` | `sling:internalRedirect` | 文字列 | `/content/wknd/(.*)` |

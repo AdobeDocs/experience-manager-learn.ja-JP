@@ -12,9 +12,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4131'
 ht-degree: 19%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 19%
 
 ## 作成する内容 {#byline-component}
 
-WKND チュートリアルのこの部分では、署名コンポーネントが作成され、記事の投稿者に関する作成済み情報を表示するのに使用されます。
+WKND チュートリアルのこの部分では、記事の投稿者に関する作成済み情報を表示するために使用する署名コンポーネントが作成されます。
 
 ![署名コンポーネントの例](assets/custom-component/byline-design.png)
 
@@ -372,7 +372,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
    ...
    ```
 
-   この `uber-jar` が含まれるのは、 `classic` プロファイルが呼び出されました。 `mvn clean install -PautoInstallSinglePackage -Pclassic`. これもこのプロジェクトに固有のものです。 AEMプロジェクトアーキタイプから生成される、実際のプロジェクトでは、 `uber-jar` 指定したAEMのバージョンが 6.5 または 6.4 の場合、がデフォルトになります。
+   この `uber-jar` が含まれるのは、 `classic` プロファイルが呼び出されました。 `mvn clean install -PautoInstallSinglePackage -Pclassic`. これもこのプロジェクトに固有のものです。 AEMプロジェクトアーキタイプから生成される、実際のプロジェクトでは、 `uber-jar` がデフォルトです ( 指定したAEMのバージョンが 6.5 または 6.4 の場合 )。
 
    この [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) には、AEM 6.x で公開されているすべてのパブリック Java API が含まれています。バージョンは、プロジェクトのルートにある親リアクター POM に保持されます `aem-guides-wknd/pom.xml`.
 
@@ -616,7 +616,7 @@ public class BylineImpl implements Byline {
 
 をチェックします。 `fileReference` JCR プロパティがアセットに解決されます。 *または* このリソースをコアコンポーネントの画像 Sling モデルに変換し、 `getSrc()` メソッドが空ではありません。
 
-次を選択します。 **秒** アプローチ。 第 1 のアプローチで十分である可能性が高いですが、このチュートリアルでは、Sling モデルの他の機能を調べるために後者を使用します。
+アドビでは、 **秒** アプローチ。 第 1 のアプローチで十分である可能性が高いですが、このチュートリアルでは、Sling モデルの他の機能を調べるために後者を使用します。
 
 1. 画像を取得するプライベートメソッドを作成します。 このメソッドをプライベートにしておくのは、HTL 自体の画像オブジェクトを公開する必要がなく、`isEmpty().` () を実行するためにのみ使用するからです。
 
@@ -705,7 +705,7 @@ public class BylineImpl implements Byline {
 
    Sling Model は OSGi サービス&#x200B;**ではない**&#x200B;ので、クラスの状態を安全に管理できます。頻繁 `@PostConstruct` プレーンコンストラクターと同様に、後で使用するために Sling Model クラスの状態を派生および設定します。
 
-   なお、 `@PostConstruct` メソッドで例外がスローされ、Sling モデルはインスタンス化されません（null になります）。
+   なお、 `@PostConstruct` メソッドで例外がスローされ、Sling モデルはインスタンス化されません (null)。
 
 1. **getImage()** を更新して、画像オブジェクトを返すだけで済むようになりました。
 
@@ -790,7 +790,7 @@ public class BylineImpl implements Byline {
        /**
        * @PostConstruct is immediately called after the class has been initialized
        * but BEFORE any of the other public methods. 
-       * It is a good method to initialize variables that will be used by methods in the rest of the model
+       * It is a good method to initialize variables that is used by methods in the rest of the model
        *
        */
        @PostConstruct

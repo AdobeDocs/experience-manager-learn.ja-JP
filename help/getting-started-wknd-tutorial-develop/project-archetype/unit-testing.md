@@ -12,10 +12,10 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3020'
-ht-degree: 28%
+source-wordcount: '3014'
+ht-degree: 27%
 
 ---
 
@@ -70,7 +70,7 @@ _Java 8 と Java 11 の両方がシステムにインストールされている
 
 このチュートリアルでは、 [単体テスト](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88) 署名コンポーネントの [Sling モデル](https://sling.apache.org/documentation/bundles/models.html) ( [カスタムAEMコンポーネントの作成](custom-component.md)) をクリックします。 単体テストは、Java コードの期待される動作を検証するために Java で記述されるビルド時間テストです。各単体テストは通常小さく、期待される結果に対してメソッド（または作業単位）の出力を検証します。
 
-ここでは、AEM ベストプラクティスおよび以下を使用します。
+アドビはAEMのベストプラクティスを使用し、以下を採用しています。
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito テストフレームワーク](https://site.mockito.org/)
@@ -238,7 +238,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
    この変数 `ctx`を使用すると、AEMおよび Sling の多数の抽象概念を提供するモックAEMコンテキストが公開されます。
 
-   * BylineImpl Sling Model はこのコンテキストに登録されます。
+   * BylineImpl Sling Model は、このコンテキストに登録されます
    * モック JCR コンテンツ構造はこのコンテキストで作成されます。
    * カスタム OSGi サービスはこのコンテキスト内で登録できます。
    * 一般的に必要となる様々なモックオブジェクトおよびヘルパー（SlingHttpServletRequest オブジェクトなど）、様々なモック Sling および AEM OSGi サービス（ModelFactory、PageManager、ページ、テンプレート、ComponentManager、コンポーネント、TagManager、タグなど）を提供します。
@@ -382,7 +382,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** は、テストケースクラスを [Mockito JUnit Jupiter 拡張機能](https://www.javadoc.io/page/org.mockito/mockito-junit-jupiter/latest/org/mockito/junit/jupiter/MockitoExtension.html) これにより、 @Mock注釈を使用して、クラスレベルでモックオブジェクトを定義できます。
    * **`@Mock private Image`** は、型のモックオブジェクトを作成します `com.adobe.cq.wcm.core.components.models.Image`. 必要に応じて、クラスレベルで定義されます。 `@Test` メソッドでは、必要に応じて動作を変更できます。
    * **`@Mock private ModelFactory`** は、型が ModelFactory のモックオブジェクトを作成します。 これは純粋な Mockito モックであり、メソッドは実装されません。必要に応じて、クラスレベルで定義されます。 `@Test`メソッドでは、必要に応じて動作を変更できます。
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 次の場合にモック動作を登録 `getModelFromWrappedRequest(..)` が、モック ModelFactory オブジェクトで呼び出されます。 で定義された結果 `thenReturn (..)` は、モック Image オブジェクトを返します。 この動作は、次の場合にのみ呼び出されます。第 1 のパラメータは `ctx`のリクエストオブジェクト、2 番目のパラメーターは任意の Resource オブジェクトで、3 番目のパラメーターはコアコンポーネントの Image クラスである必要があります。 すべてのリソースを受け入れます。テスト全体を通じて、 `ctx.currentResource(...)` を **BylineImplTest.json**. なお、 **lenient()** 厳密性。後で ModelFactory のこの動作を上書きする必要があるためです。
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 次の場合にモック動作を登録 `getModelFromWrappedRequest(..)` が、モック ModelFactory オブジェクトで呼び出されます。 で定義された結果 `thenReturn (..)` は、モック Image オブジェクトを返します。 この動作は、次の場合にのみ呼び出されます。第 1 のパラメータは `ctx`のリクエストオブジェクト、2 番目のパラメーターは任意の Resource オブジェクトで、3 番目のパラメーターはコアコンポーネントの Image クラスである必要があります。 すべてのリソースを受け入れます。これは、テスト全体を通じて、 `ctx.currentResource(...)` を **BylineImplTest.json**. なお、 **lenient()** 厳密性。後で ModelFactory のこの動作を上書きする必要があるためです。
    * **`ctx.registerService(..)`** は、最も高いサービスランキングを持つモック ModelFactory オブジェクトを AemContext に登録します。 BylineImpl で使用される ModelFactory のため、これは必須です `init()` が `@OSGiService ModelFactory model` フィールドに入力します。 AemContext が挿入するために **ur** への呼び出しを処理するモックオブジェクト `getModelFromWrappedRequest(..)`を使用する場合は、そのタイプの最上位の Service(ModelFactory) として登録する必要があります。
 
 1. テストを再実行すると再び失敗しますが、今回は失敗の理由が明白です。
@@ -412,7 +412,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 ## getOccupations() のテスト {#testing-get-occupations}
 
-成功です。最初のテストはうまくいきました。次に、テストに進みましょう `getOccupations()`. モックコンテキストの初期化は `@Before setUp()`メソッドの場合は、すべての `@Test` このテストケースのメソッド。次を含みます。 `getOccupations()`.
+成功です。最初のテストはうまくいきました。次に、テストに進みましょう `getOccupations()`. モックコンテキストの初期化は `@Before setUp()`メソッド、すべての `@Test` このテストケースのメソッド。次を含みます。 `getOccupations()`.
 
 このメソッドは、職業プロパティに保存されている職業のリストをアルファベット順（降順）に並べ替えて返します。
 
@@ -447,7 +447,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 1. 次のように覚えておいてください。 **`getName()`** 上に **BylineImplTest.json** 職業を定義していないので、実行するとこのテストは失敗します。 `byline.getOccupations()` 空のリストを返します。
 
-   更新 **BylineImplTest.json** 職業のリストを含め、それらをアルファベット以外の順序で設定し、テストで、職業がアルファベット順に並べ替えられていることを確認します。 **`getOccupations()`**.
+   更新 **BylineImplTest.json** 職業のリストを含め、それらをアルファベット以外の順序で設定し、テストで、職業がアルファベット順に並べ替えられていることを検証する **`getOccupations()`**.
 
    ```json
    {

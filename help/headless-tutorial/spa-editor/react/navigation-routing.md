@@ -1,6 +1,6 @@
 ---
-title: ナビゲーションとルーティングの追加 | AEM SPA EditorとReactの概要
-description: SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的なナビゲーションは、React RouterとReactコアコンポーネントを使用して実装されます。
+title: ナビゲーションとルーティングを追加 | AEM SPA Editor と React の使用の手引き
+description: SPA Editor SDK を使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的ナビゲーションは、React Router と React Core Components を使用して実装されています。
 sub-product: sites
 feature: SPA Editor
 topics: development
@@ -13,99 +13,99 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 0%
+source-wordcount: '1617'
+ht-degree: 1%
 
 ---
 
-# ナビゲーションとルーティングの追加 {#navigation-routing}
+# ナビゲーションとルーティングを追加 {#navigation-routing}
 
-SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的なナビゲーションは、React RouterとReactコアコンポーネントを使用して実装されます。
+SPA Editor SDK を使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法について説明します。 動的ナビゲーションは、React Router と React Core Components を使用して実装されています。
 
 ## 目的
 
-1. SPA Editorを使用する場合に使用できるSPAモデルのルーティングオプションを理解します。
-1. [React Router](https://reacttraining.com/react-router/)を使用して、SPAの異なるビュー間を移動する方法を説明します。
-1. AEM Reactコアコンポーネントを使用して、AEMページ階層に基づく動的なナビゲーションを実装します。
+1. SPA Editor を使用する場合に使用できるSPAモデルのルーティングオプションについて説明します。
+1. 使用方法を学ぶ [React Router](https://reacttraining.com/react-router/) をクリックして、SPAの様々なビュー間を移動します。
+1. AEM React コアコンポーネントを使用して、AEMページ階層に基づく動的ナビゲーションを実装します。
 
 ## 作成する内容
 
-この章では、AEMのSPAにナビゲーションを追加します。 ナビゲーションメニューはAEMページ階層によって駆動され、[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)が提供するJSONモデルを利用します。
+この章では、AEMのSPAにナビゲーションを追加します。 ナビゲーションメニューはAEMのページ階層によって駆動され、 [Navigation コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
 
-![ナビゲーションの追加](assets/navigation-routing/navigation-added.png)
+![ナビゲーションが追加されました](assets/navigation-routing/navigation-added.png)
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。 この章は、「[コンポーネントのマップ](map-components.md)」の章の続きですが、必要な操作に従うのは、ローカルのAEMインスタンスにデプロイされるSPA対応のAEMプロジェクトです。
+設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment). この章は、 [コンポーネントをマッピング](map-components.md) ただし、必要な操作をすべて実行するには、SPA対応AEMプロジェクトをローカルAEMインスタンスにデプロイする必要があります。
 
-## テンプレートへのナビゲーションの追加 {#add-navigation-template}
+## テンプレートにナビゲーションを追加する {#add-navigation-template}
 
-1. ブラウザーを開き、 AEM [http://localhost:4502/](http://localhost:4502/)にログインします。 開始コードベースは、既にデプロイされている必要があります。
-1. **SPA Page Template**&#x200B;に移動します。[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. 最も外側にある&#x200B;**ルートレイアウトコンテナ**&#x200B;を選択し、**ポリシー**&#x200B;アイコンをクリックします。 オーサリング用に&#x200B;**レイアウトコンテナ**&#x200B;をロック解除して選択する場合は、**非**&#x200B;に注意してください。
+1. ブラウザーを開き、AEMにログインします。 [http://localhost:4502/](http://localhost:4502/). 開始コードベースは、既にデプロイされている必要があります。
+1. 次に移動： **SPA Page Template**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
+1. 最外側を選択 **ルートレイアウトコンテナ** をクリックします。 **ポリシー** アイコン 注意 **not** をクリックし、 **レイアウトコンテナ** オーサリング用にロック解除されました。
 
-   ![ルートレイアウトコンテナポリシーアイコンを選択します](assets/navigation-routing/root-layout-container-policy.png)
+   ![ルートレイアウトコンテナポリシーアイコンを選択](assets/navigation-routing/root-layout-container-policy.png)
 
-1. **SPA Structure**&#x200B;という名前の新しいポリシーを作成します。
+1. という名前の新しいポリシーを作成します。 **SPA構造**:
 
    ![SPA構造ポリシー](assets/navigation-routing/spa-policy-update.png)
 
-   「**許可されているコンポーネント** > **一般** 」で、**レイアウトコンテナ**&#x200B;コンポーネントを選択します。
+   の下 **許可されたコンポーネント** > **一般** /を選択します。 **レイアウトコンテナ** コンポーネント。
 
-   **許可されているコンポーネント** > **WKND SPA REACT - STRUCTURE**&#x200B;の下で、**ナビゲーション**&#x200B;コンポーネントを選択します。
+   の下 **許可されたコンポーネント** > **WKND SPA REACT — 構造** /を選択します。 **ナビゲーション** コンポーネント：
 
-   ![ナビゲーションコンポーネントの選択](assets/navigation-routing/select-navigation-component.png)
+   ![ナビゲーションコンポーネントを選択](assets/navigation-routing/select-navigation-component.png)
 
-   **許可されているコンポーネント** > **WKND SPA REACT - Content**&#x200B;の下で、**画像**&#x200B;と&#x200B;**テキスト**&#x200B;コンポーネントを選択します。 合計4つのコンポーネントを選択する必要があります。
+   の下 **許可されたコンポーネント** > **WKND SPA REACT — コンテンツ** /を選択します。 **画像** および **テキスト** コンポーネント。 合計 4 つのコンポーネントを選択する必要があります。
 
    「**完了**」をクリックして、変更を保存します。
 
-1. ページを更新し、ロックされていない&#x200B;**レイアウトコンテナ**&#x200B;の上に&#x200B;**ナビゲーション**&#x200B;コンポーネントを追加します。
+1. ページを更新し、 **ナビゲーション** ロック解除されたコンポーネントの上の **レイアウトコンテナ**:
 
-   ![テンプレートにナビゲーションコンポーネントを追加](assets/navigation-routing/add-navigation-component.png)
+   ![ナビゲーションコンポーネントをテンプレートに追加](assets/navigation-routing/add-navigation-component.png)
 
-1. **ナビゲーション**&#x200B;コンポーネントを選択し、**ポリシー**&#x200B;アイコンをクリックして、ポリシーを編集します。
-1. **ポリシーのタイトル**&#x200B;を&#x200B;**SPA Navigation**&#x200B;にして、新しいポリシーを作成します。
+1. を選択します。 **ナビゲーション** コンポーネントとその **ポリシー** アイコンをクリックして、ポリシーを編集します。
+1. を使用して新しいポリシーを作成 **ポリシーのタイトル** / **SPA Navigation**.
 
-   **プロパティ**&#x200B;の下：
+   以下 **プロパティ**:
 
-   * **ナビゲーションルート**&#x200B;を`/content/wknd-spa-react/us/en`に設定します。
-   * **Exclude Root Levels**&#x200B;を&#x200B;**1**&#x200B;に設定します。
-   * 「**すべての子ページを収集**」のチェックを外します。
-   * **ナビゲーション構造の深さ**&#x200B;を&#x200B;**3**&#x200B;に設定します。
+   * を **ナビゲーションルート** から `/content/wknd-spa-react/us/en`.
+   * を **ルートレベルを除外** から **1**.
+   * オフ **すべての子ページを収集**.
+   * を **ナビゲーション構造の深さ** から **3**.
 
    ![ナビゲーションポリシーの構成](assets/navigation-routing/navigation-policy.png)
 
-   これにより、`/content/wknd-spa-react/us/en`の下の2レベルのナビゲーションが収集されます。
+   これにより、の 2 レベル下のナビゲーションが収集されます。 `/content/wknd-spa-react/us/en`.
 
-1. 変更を保存すると、テンプレートの一部として入力された`Navigation`が表示されます。
+1. 変更を保存すると、 `Navigation` テンプレートの一部として：
 
-   ![入力済みナビゲーションコンポーネント](assets/navigation-routing/populated-navigation.png)
+   ![入力済みのナビゲーションコンポーネント](assets/navigation-routing/populated-navigation.png)
 
-## 子ページの作成
+## 子ページを作成
 
-次に、AEMで別のビューとして機能する追加のページを作成します。 また、AEMが提供するJSONモデルの階層構造も調べます。
+次に、AEMで別のビューとして機能する追加のページを作成します。 また、AEMが提供する JSON モデルの階層構造も調べます。
 
-1. **サイト**&#x200B;コンソールに移動します。[http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). **WKND SPA Reactホームページ**&#x200B;を選択し、**作成** / **ページ**&#x200B;をクリックします。
+1. 次に移動： **サイト** コンソール： [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). を選択します。 **WKND SPA React ホームページ** をクリックし、 **作成** > **ページ**:
 
    ![ページを新規作成](assets/navigation-routing/create-new-page.png)
 
-1. 「**テンプレート**」で、「**SPAページ**」を選択します。 「**プロパティ**」に、**タイトル**&#x200B;に&#x200B;**ページ1**&#x200B;を、名前に&#x200B;**ページ1**&#x200B;を入力します。
+1. の下 **テンプレート** 選択 **SPA Page**. の下 **プロパティ** 入力 **1 ページ目** の **タイトル** および **page-1** 名前として。
 
-   ![最初のページのプロパティを入力します](assets/navigation-routing/initial-page-properties.png)
+   ![最初のページのプロパティを入力](assets/navigation-routing/initial-page-properties.png)
 
-   「**作成**」をクリックし、ダイアログポップアップで「**開く**」をクリックしてAEM SPAエディターでページを開きます。
+   クリック **作成** ダイアログのポップアップで、 **開く** をクリックして、AEM SPA Editor でページを開きます。
 
-1. 新しい&#x200B;**テキスト**&#x200B;コンポーネントをメインの&#x200B;**レイアウトコンテナ**&#x200B;に追加します。 コンポーネントを編集し、次のテキストを入力します。**RTEと** H2 **要素を使用して、ページ1**&#x200B;を作成します。
+1. 新しい **テキスト** コンポーネントをメインに **レイアウトコンテナ**. コンポーネントを編集し、次のテキストを入力します。 **1 ページ目** RTE と **H2** 要素。
 
-   ![サンプルコンテンツページ1](assets/navigation-routing/page-1-sample-content.png)
+   ![サンプルコンテンツページ 1](assets/navigation-routing/page-1-sample-content.png)
 
    画像などのコンテンツを自由に追加できます。
 
-1. AEM Sitesコンソールに戻り、上記の手順を繰り返し、**ページ1**&#x200B;の兄弟として&#x200B;**ページ2**&#x200B;という2番目のページを作成します。
-1. 最後に、3番目のページ&#x200B;**ページ3**&#x200B;を、**ページ2**&#x200B;の&#x200B;**子**&#x200B;として作成します。 完了すると、サイト階層は次のようになります。
+1. AEM Sitesコンソールに戻り、上記の手順を繰り返して、という名前の 2 番目のページを作成します。 **2 ページ目** 兄弟として **1 ページ目**.
+1. 最後に、3 番目のページを作成します。 **3 ページ目** しかし **子** / **2 ページ目**. 完了すると、サイト階層は次のようになります。
 
    ![サイト階層のサンプル](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
@@ -113,21 +113,21 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
 
    ![ナビゲーションとルーティング](assets/navigation-routing/navigation-working.gif)
 
-1. AEM Editorの外部でページを開きます。[http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). **ナビゲーション**&#x200B;コンポーネントを使用して、アプリの様々なビューに移動します。
+1. AEM Editor の外部でページを開きます。 [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). 以下を使用： **ナビゲーション** コンポーネントを使用して、アプリの様々なビューに移動できます。
 
-1. ブラウザーの開発者ツールを使用して、移動中にネットワークリクエストを調べます。 以下のスクリーンショットは、Google Chromeブラウザーからキャプチャされたものです。
+1. ブラウザーの開発者ツールを使用して、移動中にネットワークリクエストを調べます。 以下のスクリーンショットは、Google Chrome ブラウザーからキャプチャしたものです。
 
    ![ネットワーク要求の監視](assets/navigation-routing/inspect-network-requests.png)
 
-   最初のページ読み込みの後、以降のナビゲーションでは完全なページ更新がおこなわれず、以前に訪問したページに戻る際にネットワークトラフィックが最小限に抑えられることを確認します。
+   最初のページ読み込みの後、後続のナビゲーションでは完全なページ更新がおこなわれず、以前に訪問したページに戻る際にネットワークトラフィックが最小化されることを確認します。
 
-## 階層ページのJSONモデル {#hierarchy-page-json-model}
+## 階層ページの JSON モデル {#hierarchy-page-json-model}
 
-次に、SPAのマルチビューエクスペリエンスを推進するJSONモデルを調べます。
+次に、SPAのマルチビューエクスペリエンスを推進する JSON モデルを調べます。
 
-1. 新しいタブで、AEMが提供するJSONモデルAPIを開きます。[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). ブラウザー拡張機能を使用してJSON](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)を[形式設定すると便利です。
+1. 新しいタブで、AEMが提供する JSON モデル API を開きます。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). ブラウザー拡張機能を使用すると、 [JSON の形式を設定する](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
 
-   このJSONコンテンツは、SPAが最初に読み込まれたときにリクエストされます。 外側の構造は次のようになります。
+   この JSON コンテンツは、SPAが最初に読み込まれる際にリクエストされます。 外側の構造は次のようになります。
 
    ```json
    {
@@ -150,25 +150,25 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
    }
    ```
 
-   `:children`の下に、作成された各ページのエントリが表示されます。 すべてのページのコンテンツは、この最初のJSONリクエストに含まれます。 コンテンツは既にクライアント側で使用可能なので、ナビゲーションルーティングを使用すると、SPAの以降のビューがすばやく読み込まれます。
+   の下 `:children` 作成した各ページのエントリが表示されます。 すべてのページのコンテンツは、この最初の JSON リクエストに含まれます。 ナビゲーションルーティングを使用すると、コンテンツは既にクライアント側で使用可能なので、SPAの後続のビューが迅速に読み込まれます。
 
-   最初のJSONリクエストでSPAのコンテンツの&#x200B;**ALL**&#x200B;を読み込むと、最初のページ読み込みが遅くなるので、賢明ではありません。 次に、ページの階層の深さを収集する方法を見てみましょう。
+   読み込むのは賢明ではない **すべて** SPAのコンテンツを最初の JSON リクエストで取得すると、最初のページの読み込みが遅くなります。 次に、ページの階層の深さを収集する方法を見てみましょう。
 
-1. 次の場所にある&#x200B;**SPA Root**&#x200B;テンプレートに移動します。[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
+1. 次に移動： **SPA Root** テンプレートの場所： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
 
-   **ページプロパティメニュー** / **ページポリシー**&#x200B;をクリックします。
+   次をクリック： **ページプロパティメニュー** > **ページポリシー**:
 
-   ![SPA Rootのページポリシーを開きます。](assets/navigation-routing/open-page-policy.png)
+   ![SPA Root のページポリシーを開きます。](assets/navigation-routing/open-page-policy.png)
 
-1. **SPA Root**&#x200B;テンプレートには、収集されるJSONコンテンツを制御するための追加の「**階層構造**」タブがあります。 **構造の深さ**&#x200B;は、サイト階層の深さを決定し、**ルート**&#x200B;の下の子ページを収集します。 「**構造パターン**」フィールドを使用して、正規表現に基づいて追加のページを除外することもできます。
+1. この **SPA Root** テンプレートに追加の **階層構造** タブをクリックして、収集される JSON コンテンツを制御します。 この **構造の深さ** は、サイト階層内での子ページの収集レベルを **root**. また、 **構造パターン** フィールドを使用して、正規表現に基づいて追加のページを除外します。
 
-   **構造の深さ**&#x200B;を&#x200B;**2**&#x200B;に更新します。
+   を更新します。 **構造の深さ** から **2**:
 
-   ![構造の深さの更新](assets/navigation-routing/update-structure-depth.png)
+   ![構造の深さを更新](assets/navigation-routing/update-structure-depth.png)
 
-   「**完了**」をクリックして、ポリシーに対する変更を保存します。
+   クリック **完了** をクリックして、ポリシーに対する変更を保存します。
 
-1. JSONモデル[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)を再度開きます。
+1. JSON モデルを再度開く [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
 
    ```json
    {
@@ -190,31 +190,31 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
    }
    ```
 
-   **ページ3**&#x200B;のパスが削除されていることに注意してください。`/content/wknd-spa-react/us/en/home/page-2/page-3`を最初のJSONモデルから取得します。 これは、**ページ3**&#x200B;が階層のレベル3にあり、レベル2の最大深さのコンテンツのみを含むようにポリシーを更新したからです。
+   この **3 ページ目** パスが削除されました： `/content/wknd-spa-react/us/en/home/page-2/page-3` を最初の JSON モデルから取得します。 これは、 **3 ページ目** は階層のレベル 3 にあり、レベル 2 の最大深さのコンテンツのみを含めるようにポリシーを更新しました。
 
-1. SPAホームページを再度開きます。[http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html)を開き、ブラウザーの開発者ツールを開きます。
+1. SPAホームページを再度開きます。 [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) ブラウザーの開発者ツールを開きます。
 
-   ページを更新すると、SPAルートである`/content/wknd-spa-react/us/en.model.json`へのXHRリクエストが表示されます。 このチュートリアルで既に作成したSPAルートテンプレートの階層の深さ設定に基づいて、3つの子ページのみが含まれています。 **ページ3**&#x200B;は含まれません。
+   ページを更新すると、次の XHR リクエストが表示されます。 `/content/wknd-spa-react/us/en.model.json`:SPAのルート。 このチュートリアルで前述したSPAルートテンプレートの階層の深さ設定に基づいて、3 つの子ページのみが含まれます。 これには、 **3 ページ目**.
 
-   ![最初のJSONリクエスト — SPA Root](assets/navigation-routing/initial-json-request.png)
+   ![最初の JSON リクエスト — SPA Root](assets/navigation-routing/initial-json-request.png)
 
-1. 開発者ツールを開いた状態で、`Navigation`コンポーネントを使用して&#x200B;**ページ3**&#x200B;に直接移動します。
+1. 開発者ツールを開いた状態で、 `Navigation` 直接移動先のコンポーネント **3 ページ目**:
 
-   新しいXHRリクエストが次の処理に対しておこなわれることを確認します。`/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
+   次に対する新しい XHR リクエストがおこなわれることを確認します。 `/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
 
-   ![3ページ目のXHR要求](assets/navigation-routing/page-3-xhr-request.png)
+   ![3 ページ目の XHR リクエスト](assets/navigation-routing/page-3-xhr-request.png)
 
-   AEM Model Managerは、**ページ3**&#x200B;のJSONコンテンツが使用できないことを認識し、追加のXHRリクエストを自動的にトリガーします。
+   AEM Model Manager は、 **3 ページ目** JSON コンテンツは使用できず、追加の XHR リクエストを自動的にトリガー化します。
 
-1. 次の場所に直接移動して、ディープリンクを試してみます。[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). また、ブラウザーの「戻る」ボタンが引き続き機能することを確認します。
+1. 次の場所に直接移動して、ディープリンクを試してみます。 [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). また、ブラウザーの「戻る」ボタンが引き続き機能することを確認します。
 
 ## Inspect React Routing  {#react-routing}
 
-ナビゲーションとルーティングは、[React Router](https://reactrouter.com/)で実装されます。 React Routerは、Reactアプリケーション用のナビゲーションコンポーネントの集まりです。 [AEM Reactコアコンポー](https://github.com/adobe/aem-react-core-wcm-components-base) ネントは、React Routerの機能を使用して、前の手順で使用し **** たナビゲーションコンポーネントを実装します。
+ナビゲーションとルーティングは、 [React Router](https://reactrouter.com/). React Router は、React アプリケーション用のナビゲーションコンポーネントの集まりです。 [AEM React コアコンポーネント](https://github.com/adobe/aem-react-core-wcm-components-base) は、React Router の機能を使用して **ナビゲーション** 前の手順で使用したコンポーネント。
 
-次に、React RouterがSPAと統合されている方法を調べ、React Routerの[Link](https://reactrouter.com/web/api/Link)コンポーネントを使用して実験します。
+次に、React Router がSPAとどのように統合されているかを調べ、React Router の [リンク](https://reactrouter.com/web/api/Link) コンポーネント。
 
-1. IDEで、`ui.frontend/src/index.js`にある`index.js`ファイルを開きます。
+1. IDE でファイルを開きます。 `index.js` 時刻 `ui.frontend/src/index.js`.
 
    ```js
    /* index.js */
@@ -239,9 +239,9 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
    });
    ```
 
-   `App`は、[React Router](https://reacttraining.com/react-router/)の`Router`コンポーネントでラップされます。 AEM SPA Editor JS SDKが提供する`ModelManager`は、JSONモデルAPIに基づいて、動的ルートをAEMページに追加します。
+   この `App` が `Router` コンポーネント [React Router](https://reacttraining.com/react-router/). この `ModelManager`はAEM SPA Editor JS SDK で提供され、JSON モデル API に基づいて動的ルートをAEMページに追加します。
 
-1. `ui.frontend/src/components/Page/Page.js`にある`Page.js`ファイルを開きます。
+1. ファイルを開きます。 `Page.js` 時刻 `ui.frontend/src/components/Page/Page.js`
 
    ```js
    class AppPage extends Page {
@@ -258,10 +258,10 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
    );
    ```
 
-   `Page` SPAコンポーネントは、`MapTo`関数を使用して、AEMの&#x200B;**Pages**&#x200B;を対応するSPAコンポーネントにマッピングします。 `withRoute`ユーティリティは、`cqPath`プロパティに基づいて、SPAを適切なAEMの子ページに動的にルーティングするのに役立ちます。
+   この `Page` SPAコンポーネントは `MapTo` マップする関数 **ページ** をAEMから対応するSPAコンポーネントに追加します。 この `withRoute` ユーティリティは、 `cqPath` プロパティ。
 
-1. `ui.frontend/src/components/Header/Header.js`の`Header.js`コンポーネントを開きます。
-1. `Header`を更新して、[Link](https://reactrouter.com/web/api/Link)の`<h1>`タグをホームページにラップします。
+1. を開きます。 `Header.js` コンポーネント `ui.frontend/src/components/Header/Header.js`.
+1. を更新します。 `Header` 包む `<h1>` タグを [リンク](https://reactrouter.com/web/api/Link) ホームページに移動します。
 
    ```diff
      //Header.js
@@ -284,9 +284,9 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
        }
    ```
 
-   デフォルトの`<a>`アンカータグを使用する代わりに、React Routerが提供する`<Link>`を使用します。 `to=`が有効なルートを指す限り、SPAはそのルートに切り替わり、**ではなく**、完全なページ更新を実行します。 ここでは、単にホームページへのリンクをハードコード化して、`Link`の使用方法を説明します。
+   デフォルトの `<a>` 使用するアンカータグ `<Link>` React Router が提供します。 ( `to=` が有効なルートを指す場合、SPAはそのルートに切り替わり、 **not** ページ全体の更新を実行します。 ここでは、単にホームページへのリンクをハードコードして、 `Link`.
 
-1. `App.test.js`(`ui.frontend/src/App.test.js`)のテストを更新します。
+1. 次の場所でテストを更新します。 `App.test.js` 時刻 `ui.frontend/src/App.test.js`.
 
    ```diff
    + import { BrowserRouter as Router } from 'react-router-dom';
@@ -299,24 +299,24 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
      });
    ```
 
-   `App.js`で参照される静的コンポーネント内でReact Routerの機能を使用しているので、単体テストを更新して対応する必要があります。
+   React Router の機能は、 `App.js` 単体テストを更新して、それを考慮する必要があります。
 
-1. ターミナルを開き、プロジェクトのルートに移動し、Mavenのスキルを使用してAEMにプロジェクトをデプロイします。
+1. ターミナルを開き、プロジェクトのルートに移動し、Maven スキルを使用してAEMにプロジェクトをデプロイします。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. AEMのSPAのいずれかのページに移動します。[http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
+1. AEMのSPAのいずれかのページに移動します。 [http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
 
-   `Navigation`コンポーネントを使用して移動する代わりに、`Header`内のリンクを使用します。
+   を使用する代わりに、 `Navigation` 移動するコンポーネント、 `Header`.
 
    ![ヘッダーリンク](assets/navigation-routing/header-link.png)
 
-   ページ全体の更新が&#x200B;**トリガーされない**&#x200B;で、SPAルーティングが機能していることを確認します。
+   完全なページ更新が **not** トリガーされ、SPAルーティングが機能している。
 
-1. 必要に応じて、標準の`<a>`アンカータグを使用して`Header.js`ファイルを試します。
+1. 必要に応じて、 `Header.js` 標準を使用したファイル `<a>` アンカータグ：
 
    ```js
    <a href="/content/wknd-spa-react/us/en/home.html">
@@ -324,8 +324,8 @@ SPA Editor SDKを使用してAEMページにマッピングすることで、SPA
    </a>
    ```
 
-   これは、SPAルーティングと通常のWebページリンクの違いを説明するのに役立ちます。
+   これは、SPAルーティングと通常の Web ページリンクの違いを説明するのに役立ちます。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、SPA Editor SDKを使用してAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を学びました。 React Routerを使用してダイナミックナビゲーションが実装され、`Header`コンポーネントに追加されました。
+これで、SPA Editor SDK でAEMページにマッピングすることで、SPAの複数のビューをサポートする方法を学びました。 React Router を使用して動的ナビゲーションが実装され、 `Header` コンポーネント。

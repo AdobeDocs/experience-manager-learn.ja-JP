@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 2%
+source-wordcount: '667'
+ht-degree: 3%
 
 ---
 
@@ -82,7 +82,7 @@ mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archety
 
 ![data-source](assets/import-mvn-project.JPG)
 
-次へをクリック
+「次へ」をクリックします。
 
 c:\aemformsbundles\mysite by clicking the **参照** ボタン
 
@@ -95,13 +95,13 @@ c:\aemformsbundles\mysite by clicking the **参照** ボタン
 
 プロジェクトが Eclipse に読み込まれると、 `mysite.xxxx` フォルダー
 
-を展開します。 `src/main/java` の下に `mysite.core` フォルダー。 これは、ほとんどのコードを書き込むフォルダーです。
+を展開します。 `src/main/java` の下に `mysite.core` フォルダー。 これは、コードのほとんどを書き込むフォルダーです。
 
 ![data-source](assets/mysite-core-project.png)
 
 ## AEMFD Client SDK を含める
 
-AEM Formsに付属する様々なサービスを利用するには、AEMFD client sdk をプロジェクトに含める必要があります。 詳しくは、 [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) を追加して、Maven プロジェクトに適切なクライアント SDK を含めます。 AEM FD Client SDK をの dependencies セクションに含める必要があります。 `pom.xml` を参照してください。
+AEM Formsに付属する様々なサービスを活用するには、AEMFD client sdk をプロジェクトに含める必要があります。 詳しくは、 [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) を追加して、Maven プロジェクトに適切なクライアント SDK を含めます。 AEM FD Client SDK をの dependencies セクションに含める必要があります。 `pom.xml` を参照してください。
 
 ```xml
 <dependency>

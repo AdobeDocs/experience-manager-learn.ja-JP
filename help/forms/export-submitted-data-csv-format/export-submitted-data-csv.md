@@ -1,53 +1,56 @@
 ---
-title: 送信されたフォームデータをCSV形式で書き出す
-description: 送信後のアダプティブフォームデータをCSV形式で書き出す
-feature: アダプティブフォーム
+title: 送信したフォームデータを CSV 形式で書き出す
+description: 送信後のアダプティブフォームデータを CSV 形式で書き出す
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 6cd892e4-82c5-4201-8b6a-40c2ae71afa9
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '386'
 ht-degree: 1%
 
 ---
 
 # はじめに
 
-お客様は通常、送信されたフォームデータをCSV形式で書き出す必要があります。 この記事では、フォームデータをCSV形式で書き出すために必要な手順を強調します。 この記事では、フォーム送信がRDBMSテーブルに格納されることを前提としています。 次のスクリーンショットは、フォーム送信の保存に最低限必要なテーブル構造の詳細を示しています。
+お客様は通常、送信されたフォームデータを CSV 形式で書き出す必要があります。 この記事では、フォームデータを CSV 形式で書き出すために必要な手順を強調します。 この記事では、フォーム送信が RDBMS テーブルに格納されていることを前提としています。 次のスクリーンショットは、フォーム送信の保存に必要な最小テーブル構造の詳細を示しています。
 
 >[!NOTE]
 >
 >このサンプルは、スキーマまたはフォームデータモデルに基づいていないアダプティブFormsでのみ機能します
 
-![表の](assets/tablestructure.PNG)
-構造スキーマの名前がaemformstutorialであることがわかります。このスキーマ内には、次の列が定義された表のformsubmissionsがあります
+![テーブル構造](assets/tablestructure.PNG)
+このスキーマの中には、次の列が定義されたフォーム送信テーブルがあります。
 
-* formdata:この列には、送信されたフォームデータが格納されます
+* formdata:この列には送信されたフォームデータが格納されます
 * formname:この列には、送信されたフォームの名前が格納されます
-* id:これはプライマリキーで、自動増分に設定されます
+* id:これはプライマリキーで、自動インクリメントに設定されます。
 
-以下のスクリーンショットに示すように、テーブル名と2列の名前は、OSGi設定プロパティとして公開されます。
+テーブル名と 2 列の名前は、次のスクリーンショットに示すように、OSGi 設定プロパティとして公開されます。
 ![osgi-configuration](assets/configuration.PNG)
-コードは、これらの値を読み取り、実行する適切なSQLクエリを構築します。 例えば、上記の値に基づいて次のクエリが実行されます
-**SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform**
-上記のクエリでは、フォームの名前(timeoffrequestform)がリクエストパラメーターとしてサーブレットに渡されます。
+コードは、これらの値を読み取り、実行する適切な SQL クエリを構築します。 例えば、上記の値に基づいて、次のクエリが実行されます
 
-## **OSGiサービスの作成**
+`SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
 
-次のOSGiサービスが作成され、送信されたデータをCSV形式で書き出します。
+上記のクエリでは、フォームの名前 (timeoffrequestform) がリクエストパラメーターとしてサーブレットに渡されます。
 
-* 37行目：Apache Sling接続プールに入れられたデータソースにアクセスします。
+## **OSGi サービスの作成**
 
-* 89行目：これはサービスのエントリポイントです。メソッド`getCSVFile(..)`は、formNameを入力パラメーターとして取り込み、指定されたフォーム名に関連する送信済みデータを取得します。
+次の OSGi サービスが作成され、送信されたデータを CSV 形式で書き出します。
+
+* 37 行目：Apache Sling 接続プールに入れられたデータソースにアクセスしています。
+
+* 89 行目：これはサービスのエントリポイントです。メソッド `getCSVFile(..)` は formName を入力パラメーターとして取り込み、指定されたフォーム名に関連する送信済みデータを取得します。
 
 >[!NOTE]
 >
->このコードは、Felix Webコンソールで「aemformstutorial」という接続プールが設定されていることを前提としています。また、このコードは、データベース内にaemformstutorialというスキーマがあることを前提としています
+>このコードは、Felix Web コンソールで、接続プールに入れられた「aemformstutorial」というデータソースを定義済みであることを前提としています。また、このコードでは、データベース内に aemformstutorial というスキーマがあると仮定します
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -240,7 +243,7 @@ public class StoreAndExportImpl implements StoreAndExport {
 
 ## 設定サービス
 
-次の3つのプロパティをOSGI設定プロパティとして公開しました。 SQLクエリは、実行時にこれらの値を読み取って作成されます。
+次の 3 つのプロパティを OSGI 設定プロパティとして公開しました。 SQL クエリは、実行時にこれらの値を読み取ることで構築されます。
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -261,9 +264,9 @@ public @interface StoreAndExportConfiguration {
 }
 ```
 
-## Servlet
+## サーブレット
 
-次に、サービスの`getCSVFile(..)`メソッドを呼び出すサーブレットコードを示します。 サービスはStringBufferオブジェクトを返し、呼び出し元のアプリケーションにストリーミングバックされます
+次に、を呼び出すサーブレットコードを示します。 `getCSVFile(..)` サービスのメソッド。 サービスは StringBuffer オブジェクトを返し、その後、呼び出し元のアプリケーションにストリーミングバックされます
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -303,8 +306,8 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 }
 ```
 
-### サーバーにデプロイする
+### サーバーにデプロイ
 
-* MySQL Workbenchを使用して、[SQLファイル](assets/formsubmissions.sql)をMySQLサーバーにインポートします。 これにより、**aemformstutorial**&#x200B;というスキーマと、**formsubmissions**&#x200B;というテーブルがサンプルデータと共に作成されます。
-* Felix Webコンソールを使用して[OSGi Bundle](assets/store-export.jar)をデプロイします。
-* [TimeOffRequest送信を取得する](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)」を参照してください。CSVファイルが返されます。
+* 次をインポート： [SQL ファイル](assets/formsubmissions.sql) MySQL Workbench を使用して MySQL サーバーに接続します。 これにより、 **aemformstudation** と呼ばれる **formsubmissions** サンプルデータを含んでいます。
+* デプロイ [OSGi バンドル](assets/store-export.jar) Felix Web コンソールの使用
+* [TimeOffRequest 送信を取得するには](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). CSV ファイルが返されます。

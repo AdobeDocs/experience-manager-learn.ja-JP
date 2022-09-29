@@ -11,9 +11,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4582'
+source-wordcount: '4571'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ AEMプロジェクトには複数の機能が付属しています [OOTB プロ�
 
 ### プロジェクトテンプレートルート
 
-プロジェクトテンプレートのルートノードのタイプはです **cq:Template**. このノードでは、プロパティを設定できます **jcr:title** および **jcr:description** プロジェクトの作成ウィザードに表示されます。 また、 **ウィザード** これは、プロジェクトのプロパティを入力するフォームを指しています。 デフォルト値： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** ほとんどの場合は正常に機能します。ユーザーは基本的なプロジェクトプロパティに入力し、グループメンバーを追加できます。
+プロジェクトテンプレートのルートノードのタイプはです **cq:Template**. このノードでは、プロパティを設定できます **jcr:title** および **jcr:description** [ プロジェクトを作成 ] ウィザードに表示されます。 また、 **ウィザード** これは、プロジェクトのプロパティを入力するフォームを指しています。 デフォルト値： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** ほとんどの場合は正常に機能します。ユーザーは基本的なプロジェクトプロパティに入力し、グループメンバーを追加できます。
 
 *&#42;プロジェクトの作成ウィザードでは、SlingPOSTサーブレットは使用されません。 代わりに、値はカスタムサーブレットに投稿されます。**com.adobe.cq.projects.impl.servlet.ProjectServlet**. これは、カスタムフィールドを追加する際に考慮する必要があります。*
 
@@ -288,7 +288,7 @@ AEMプロジェクトには複数の機能が付属しています [OOTB プロ�
 
 上の図は、サンプルの承認ワークフローの要件の概要を示しています。
 
-最初の手順は、コンテンツの一部の編集を完了するためのタスクを作成することです。 ワークフロー開始者がこの最初のタスクの担当者を選択できるようにします。
+最初の手順は、コンテンツの一部の編集を終了するタスクを作成することです。 ワークフロー開始者がこの最初のタスクの担当者を選択できるようにします。
 
 最初のタスクが完了すると、担当者はワークフローをルーティングする次の 3 つのオプションを使用できます。
 
@@ -635,7 +635,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    ![コンテンツ承認ワークフローウィザード](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
-1. ウィザードにフィールドを追加します。このフィールドを使用して、ワークフローの最初のタスクの担当者を設定します ( [ワークフローモデルの作成](#create-workflow-model):手順 5)。
+1. ワークフローの最初のタスクの担当者を設定するために使用するフィールドをウィザードに追加します ( [ワークフローモデルの作成](#create-workflow-model):手順 5)。
 
    の下 `../content-approval-start/jcr:content/items/column2/items` タイプの新しいノードを作成 `nt:unstructured` 名前付き **&quot;assign&quot;**. プロジェクトのユーザーピッカーコンポーネント ( [Granite ユーザーピッカーコンポーネント](https://experienceleague.adobe.com/docs/)) をクリックします。 このフォームフィールドを使用すると、ユーザーやグループの選択を、現在のプロジェクトに属するもののみに簡単に制限できます。
 

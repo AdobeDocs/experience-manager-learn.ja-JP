@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: 2685f2553349d6f0b48e03f2ed24dcea7ad9ac70
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '998'
 ht-degree: 3%
 
 ---
@@ -144,7 +144,7 @@ $ aio cloudmanager:download-logs <ENVIRONMENT> <SERVICE> <NAME> <DAYS>
 
 ## ログについて
 
-AEM as a Cloud Serviceのログには、ログステートメントを書き込む複数のポッドがあります。 複数のAEMインスタンスが同じログファイルに書き込むので、デバッグ中に分析方法を理解し、ノイズを減らすことが重要です。 説明するには、次のようにします。 `aemerror` ログスニペットが使用されます。
+AEM as a Cloud Serviceのログには、ログステートメントを書き込む複数のポッドがあります。 複数のAEMインスタンスが同じログファイルに書き込むので、デバッグ中に分析方法を理解し、ノイズを減らすことが重要です。 説明するには、次のようにします。 `aemerror` ログスニペットを使用します。
 
 ```
 01.01.2020 12:00:00.000 [cm-p12345-e56789-aem-author-abcdefg-1111] *DEBUG* [qtp2078364989-269] com.example.components.impl.ExampleModelImpl Preparing to collect resources

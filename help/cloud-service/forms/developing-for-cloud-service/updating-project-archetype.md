@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->この新しいプロジェクトをそのままデプロイする場合、クラウドサービスインスタンスには HandleFormSubmission と SubmitToAEMServlet がありません。 これは、Cloud Manager を使用してプロジェクトをデプロイするたびに、apps フォルダーの下にあるものが削除され、上書きされるからです。
+>この新しいプロジェクトをそのままデプロイする場合、クラウドサービスインスタンスには HandleFormSubmission と SubmitToAEMServlet がありません。 これは、Cloud Manager を使用してプロジェクトをデプロイするたびに、 `/apps` フォルダーが削除され、上書きされます。
 
 ## Java コードをコピーする
 

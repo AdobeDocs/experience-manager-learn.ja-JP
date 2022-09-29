@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 13%
+source-wordcount: '378'
+ht-degree: 14%
 
 ---
 
@@ -24,7 +24,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 1. SOAP ベース Web サービス
 1. OData サービス
 
-AEM FormsとMarketoの統合には、RESTful Web サービスを使用します。 統合の最初の手順は、 [データソース。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) このチュートリアルの一部として提供されている Swagger ファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
+AEM FormsとMarketoの統合には、RESTful Web サービスを使用しています。 統合の最初の手順は、 [データソース。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) このチュートリアルの一部として提供されている Swagger ファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
 ![datasource](assets/datasource.jfif)
 
 「marketo.json」は Swagger ファイルで、このチュートリアルのアセットの一部として提供されます。

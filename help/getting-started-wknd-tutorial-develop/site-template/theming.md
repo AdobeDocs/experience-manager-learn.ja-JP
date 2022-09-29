@@ -11,9 +11,9 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 この章では、Adobe Experience Manager Site のテーマソースを更新して、ブランド固有のスタイルを適用します。 プロキシサーバーを使用して、ライブサイトに対してコードを作成する際に、CSS と JavaScript の更新のプレビューを表示する方法を学びます。 このチュートリアルでは、Cloud Manager のフロントエンドパイプラインを使用して、Adobeの更新をAEMサイトにデプロイする方法についても説明します。
 
-最後に、WKND ブランドに合ったスタイルを含むようサイトを更新します。
+最後に、WKND ブランドに合致するスタイルを含むようにサイトを更新します。
 
 ## 前提条件 {#prerequisites}
 

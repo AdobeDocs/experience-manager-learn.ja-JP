@@ -1,27 +1,26 @@
 ---
 title: データの結合による印刷チャネルドキュメントの生成
-seo-title: データの結合による印刷チャネルドキュメントの生成
 description: 入力ストリームに含まれるデータを結合して印刷チャネルドキュメントを生成する方法を説明します
-seo-description: 入力ストリームに含まれるデータを結合して印刷チャネルドキュメントを生成する方法を説明します
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
 
 # 送信されたデータを使用して印刷チャネルドキュメントを生成する
 
-印刷チャネルのドキュメントは、通常、フォームデータモデルのgetサービスを通じてバックエンドデータソースからデータを取得することで生成されます。 場合によっては、提供されたデータを含む印刷チャネルドキュメントを生成する必要があります。 例えば、顧客が受益者フォームの変更に記入し、送信されたフォームのデータを使用して印刷チャネルドキュメントを生成するとします。 この使用例を実現するには、次の手順に従う必要があります
+印刷チャネルのドキュメントは、通常、フォームデータモデルの get サービスを使用してバックエンドのデータソースからデータを取得することで生成されます。 場合によっては、指定したデータを含む印刷チャネルドキュメントを生成する必要があります。 例えば、顧客が受取人フォームの変更に記入し、送信されたフォームのデータを使用して印刷チャネルドキュメントを生成するとします。 この使用例を達成するには、次の手順に従う必要があります
 
 ## 事前入力サービスの作成
 
@@ -65,17 +64,17 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 }
 ```
 
-### WorkflowProcess実装の作成
+### WorkflowProcess 実装の作成
 
-以下に、workflowProcess実装コードスニペットを示します。このコードは、AEM Workflowのプロセスステップがこの実装に関連付けられている場合に実行されます。 この実装では、以下に示す3つのプロセス引数が必要です。
+以下に、workflowProcess 実装コードスニペットを示します。このコードは、AEM Workflow のプロセスステップがこの実装に関連付けられている場合に実行されます。 この実装では、以下に示す 3 つのプロセス引数が必要です。
 
-* アダプティブフォームの設定時に指定したデータファイルパスの名前
+* アダプティブフォームの設定時に指定したデータファイルのパス名
 * 印刷チャネルテンプレートの名前
 * 生成された印刷チャネルドキュメントの名前
 
-98行目 — アダプティブフォームはフォームデータモデルに基づいているので、 afBoundDataのデータノードに存在するデータが抽出されます。
-128行目 — Data Optionsサービス名が設定されている。 サービス名をメモしておきます。 これは、前のコードリストの45行目で返された名前と一致する必要があります。
-135行目 — PrintChannelオブジェクトのrenderメソッドを使用してドキュメントが生成されます
+98 行目 — アダプティブフォームはフォームデータモデルに基づいているので、 afBoundData のデータノードに存在するデータが抽出されます。
+128 行目 — Data Options サービス名が設定されている。 サービス名をメモしておきます。 前のコードリストの 45 行目で返された名前と一致する必要があります。
+135 行目 — PrintChannel オブジェクトの render メソッドを使用してドキュメントが生成されます
 
 
 ```java
@@ -162,24 +161,24 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
             }
 ```
 
-お使いのサーバーでこれをテストするには、次の手順に従います。
+ご使用のサーバーでこれをテストするには、次の手順に従ってください。
 
-* [Day CQ Mail Serviceを設定します。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) これは、生成されたドキュメントを添付ファイルとして電子メールを送信するために必要です。
-* [サービスユーザーバンドルを使用した開発のデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Apache Sling Service User Mapper Service Configurationに次のエントリが追加されていることを確認します。
+* [Day CQ Mail Service を設定します。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) これは、生成されたドキュメントを添付ファイルとして含む E メールを送信するために必要です。
+* [サービスユーザーバンドルでの開発のデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Apache Sling Service User Mapper Service Configuration に次のエントリが追加されていることを確認します。
 * **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [この記事に関連するアセットをファイルシステムにダウンロードして解凍します。](assets/prefillservice.zip)
-* [AEMパッケージマネージャーを使用して、次のパッケージを読み込みます。](http://localhost:4502/crx/packmgr/index.jsp)
+* [この記事に関連するアセットをファイルシステムにダウンロードして解凍します](assets/prefillservice.zip)
+* [AEMパッケージマネージャーを使用して、次のパッケージをインポートします。](http://localhost:4502/crx/packmgr/index.jsp)
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
    3. generatebeneficiaryworkflow.zip
-* [AEM Felix Webコンソールを使用して次をデプロイします。](http://localhost:4502/system/console/bundles)
+* [AEM Felix Web コンソールを使用して以下をデプロイします。](http://localhost:4502/system/console/bundles)
 
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar このバンドルには、この記事で説明するコードが含まれています。
 
-* [ChangeOfWenisterFormを開く](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
-* 次に示すように、アダプティブフォームがAEM Workflowに送信するように設定されていることを確認します
+* [ChangeOfWentierForm を開く](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
+* 次に示すように、アダプティブフォームがAEM Workflow に送信するように設定されていることを確認します。
    ![画像](assets/generateic.PNG)
-* [ワークフローモデルを設定します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)プロセスステップと電子メール送信コンポーネントが、お使いの環境に合わせて設定されていることを確認します。
-* [ChangeOfWebFormをプレビューします。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 詳細を入力し、
-* ワークフローが呼び出され、IC印刷チャネルドキュメントが添付ファイルとして送信Eメールコンポーネントで指定された受信者に送信される必要があります
+* [ワークフローモデルを設定します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)プロセスステップと電子メールの送信コンポーネントが、お使いの環境に応じて設定されていることを確認します。
+* [ChangeOfWentierForm をプレビューします。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 詳細を入力して送信
+* ワークフローが起動し、IC 印刷チャネルドキュメントが、送信メールコンポーネントで添付ファイルとして指定された受信者に送信される必要があります

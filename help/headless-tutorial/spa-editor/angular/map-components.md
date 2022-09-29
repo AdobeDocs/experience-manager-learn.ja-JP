@@ -14,10 +14,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2380'
-ht-degree: 1%
+source-wordcount: '2372'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ AEM SPA Editor JS SDK を使用して、AngularコンポーネントをAdobe Exp
 
 ## 作成する内容
 
-この章では、指定された `Text` SPAコンポーネントがAEMにマッピングされている `Text`コンポーネント。 新しい `Image` SPAで使用でき、AEMで作成できるSPAコンポーネントが作成されます。 の標準機能 **レイアウトコンテナ** および **テンプレートエディター** ポリシーを使用して、外観が少し多様なビューを作成することもできます。
+この章では、指定された `Text` SPAコンポーネントがAEMにマッピングされている `Text`コンポーネント。 新しい `Image` SPAコンポーネントが作成され、SPAで使用してAEMで作成できます。 の標準機能 **レイアウトコンテナ** および **テンプレートエディター** ポリシーを使用して、外観が少し多様なビューを作成することもできます。
 
 ![チャプターサンプルの最終オーサリング](./assets/map-components/final-page.png)
 
@@ -146,7 +146,7 @@ AEM SPA Editor JS SDK を使用して、AngularコンポーネントをAdobe Exp
    };
    ```
 
-   上記のコードは、AEMオーサー環境でプレースホルダーをレンダリングするタイミングを決定する役割を果たします。 この `isEmpty` メソッドの戻り値 **true** その後、プレースホルダーがレンダリングされます。
+   上記のコードは、AEMオーサー環境でプレースホルダーをレンダリングするタイミングを決定する役割を果たします。 この `isEmpty` メソッドの戻り値 **true** 次に、プレースホルダーがレンダリングされます。
 
 6. 最後に、 `MapTo` ～line 53 でを呼び出します。
 
@@ -211,11 +211,11 @@ SPAコードを調べる前に、AEMから提供された JSON モデルを調�
 
    ![画像コアコンポーネントの JSON](./assets/map-components/image-json.png)
 
-   のプロパティ `src`, `alt`、および `title` がSPA `Image` コンポーネント。
+   のプロパティ `src`, `alt`、および `title` を使用して、SPA `Image` コンポーネント。
 
    >[!NOTE]
    >
-   > 他の画像プロパティが公開されています (`lazyEnabled`, `widths`) を使用して、開発者がアダプティブな遅延読み込みコンポーネントを作成できるようにします。 このチュートリアルで作成されるコンポーネントはシンプルで、以下をおこないます。 **not** これらの詳細プロパティを使用します。
+   > 他の画像プロパティが公開されています (`lazyEnabled`, `widths`) を使用して、開発者がアダプティブな遅延読み込みコンポーネントを作成できるようにします。 このチュートリアルで作成されるコンポーネントは簡単で、実行も簡単です **not** これらの詳細プロパティを使用します。
 
 2. IDE に戻り、 `en.model.json` 時刻 `ui.frontend/src/mocks/json/en.model.json`. これはプロジェクトの新しいコンポーネントなので、画像 JSON のモックを作成する必要があります。
 
@@ -244,7 +244,7 @@ SPAコードを調べる前に、AEMから提供された JSON モデルを調�
            ],
    ```
 
-   このプロジェクトには、以下の場所にサンプル画像が含まれています。 `/mock-content/adobestock-140634652.jpeg` それは **webpack dev server**.
+   このプロジェクトには、以下の場所にサンプル画像が含まれています。 `/mock-content/adobestock-140634652.jpeg` は、 **webpack dev server**.
 
    完全な [en.model.json はここに](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json).
 

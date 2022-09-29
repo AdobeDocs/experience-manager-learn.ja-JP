@@ -1,8 +1,7 @@
 ---
 title: Tomcat のインストールと設定ビデオ
 seo-title: Install and Configure Tomcat
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 1 部です。この部分では、TOMCAT をインストールし、TOMCAT に sampleRest.war ファイルをデプロイします。 この WAR ファイルで公開される REST エンドポイントは、データソースとフォームデータモデルの基礎となります。
-seo-description: This is part 1 of multistep tutorial for creating your first interactive communications document.In this part, we will install TOMCAT and deploy the sampleRest.war file in TOMCAT. The REST endpoint exposed by this WAR file will be the basis for our Data Source and Form Data Model.
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 1 部です。
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
 topics: development
@@ -16,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---

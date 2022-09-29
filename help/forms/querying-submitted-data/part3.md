@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # データベースへの JSON スキーマの格納 {#storing-json-schema-in-database}
 
 
-送信されたデータに対してクエリを実行するには、送信されたフォームに関連付けられた JSON スキーマを保存する必要があります。 JSON スキーマは、クエリビルダーでクエリを作成するために使用されます。
+送信されたデータに対してクエリを実行するには、送信されたフォームに関連付けられた JSON スキーマを保存する必要があります。 クエリビルダーでは、この JSON スキーマを使用してクエリを作成します。
 
 アダプティブフォームが送信されると、関連する JSON スキーマがデータベース内にあるかどうかを確認します。 JSON スキーマが存在しない場合は、JSON スキーマを取得し、適切なテーブルにスキーマを保存します。 また、フォーム名を JSON スキーマに関連付けます。 次のスクリーンショットは、JSON スキーマが格納されている表を示しています。
 

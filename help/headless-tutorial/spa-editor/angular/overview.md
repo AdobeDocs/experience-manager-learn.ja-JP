@@ -14,16 +14,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: 825124bc6c3be10e6822fb5fb8bd9645d242da76
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 23%
 
 ---
 
 # AEM での Angular SPA の作成（チュートリアル） {#introduction}
 
-このたびは、 **SPA Editor** Adobe Experience Manager(AEM) の機能を使用できます。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAngularアプリケーションの実装について説明します。 angularアプリは、AEM SPA Editor を使用してデプロイされるように開発および設計されます。このエディターは、AngularコンポーネントをAEMコンポーネントにマッピングします。 AEMにデプロイされた完成したSPAは、AEMの従来のインライン編集ツールを使用して動的にオーサリングできます。
+このたびは、 **SPA Editor** Adobe Experience Manager(AEM) の機能を使用できます。 このチュートリアルでは、架空のライフスタイルブランドである WKND 向けのAngularアプリケーションの実装について説明します。 angularアプリは、AEM SPA Editor を使用してデプロイされるように開発および設計されています。このエディターは、AngularコンポーネントをAEMコンポーネントにマッピングします。 AEMにデプロイされた完成したSPAは、AEMの従来のインライン編集ツールを使用して動的にオーサリングできます。
 
 ![最終的なSPAの実装](assets/wknd-spa-implementation.png)
 
@@ -31,12 +31,12 @@ ht-degree: 0%
 
 ## について
 
-この複数パートから成るチュートリアルの目的は、AEMのSPAエディター機能と連携するAngularアプリケーションを実装する方法を開発者に教えることです。 実際のシナリオでは、開発アクティビティは、多くの場合、 **フロントエンド開発者** および **バックエンド開発者**. AEM SPA Editor プロジェクトに参加するすべての開発者が、このチュートリアルを完了できると便利です。
+この複数パートから成るチュートリアルの目的は、AEMのSPAエディター機能と連携するAngularアプリケーションを実装する方法を開発者に教えることです。 実際のシナリオでは、開発アクティビティは、多くの場合、 **フロントエンド開発者** および **バックエンド開発者**. AEM SPA Editor プロジェクトに関わる開発者がこのチュートリアルを完了すると便利です。
 
 このチュートリアルは、 **AEMas a Cloud Service** との後方互換性がある **AEM 6.5.4 以降** および **AEM 6.4.8 以降**. SPAは、次を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)
-* [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [AEM SPA エディター](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [Angular](https://angular.io/)
 

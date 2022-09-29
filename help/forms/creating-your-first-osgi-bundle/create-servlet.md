@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 3%
@@ -39,33 +39,33 @@ import com.adobe.fd.forms.api.FormsService;
 @Component(service={Servlet.class}, property={"sling.servlet.methods=post", "sling.servlet.paths=/bin/mergedataWithAcroform"})
 public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 {
-	
-	private static final long serialVersionUID = 1L;
-	@Reference
-	FormsService formsService;
-	 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
-	  { 
-		 String file_path = request.getParameter("save_location");
-		 
-		 java.io.InputStream pdf_document_is = null;
-		 java.io.InputStream xml_is = null;
-		 javax.servlet.http.Part pdf_document_part = null;
-		 javax.servlet.http.Part xml_data_part = null;
-		 	 try
-		 	 {
-		 		pdf_document_part = request.getPart("pdf_file");
-				 xml_data_part = request.getPart("xml_data_file");
-				 pdf_document_is = pdf_document_part.getInputStream();
-				 xml_is = xml_data_part.getInputStream();
-				 Document data_merged_document = formsService.importData(new Document(pdf_document_is), new Document(xml_is));
-				 data_merged_document.copyToFile(new File(file_path));
-				 
-		 	 }
-		 	 catch(Exception e)
-		 	 {
-		 		 response.sendError(400,e.getMessage());
-		 	 }
-	  }
+    
+    private static final long serialVersionUID = 1L;
+    @Reference
+    FormsService formsService;
+     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
+      { 
+         String file_path = request.getParameter("save_location");
+         
+         java.io.InputStream pdf_document_is = null;
+         java.io.InputStream xml_is = null;
+         javax.servlet.http.Part pdf_document_part = null;
+         javax.servlet.http.Part xml_data_part = null;
+              try
+              {
+                 pdf_document_part = request.getPart("pdf_file");
+                 xml_data_part = request.getPart("xml_data_file");
+                 pdf_document_is = pdf_document_part.getInputStream();
+                 xml_is = xml_data_part.getInputStream();
+                 Document data_merged_document = formsService.importData(new Document(pdf_document_is), new Document(xml_is));
+                 data_merged_document.copyToFile(new File(file_path));
+                 
+              }
+              catch(Exception e)
+              {
+                  response.sendError(400,e.getMessage());
+              }
+      }
 }
 ```
 
@@ -76,16 +76,16 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 * 開く **コマンドプロンプトウィンドウ**
 * `c:\aemformsbundles\mysite\core` に移動します。
 * コマンドを実行します。 `mvn clean install -PautoInstallBundle`
-* 上記のコマンドは、localhost:4502 で実行されているAEMインスタンスにバンドルを自動的にビルドしてデプロイします。
+* 上記のコマンドは、localhost:4502 上で実行されているAEMインスタンスにバンドルを自動的にビルドおよびデプロイします。
 
-バンドルは、次の場所でも使用できます `C:\AEMFormsBundles\mysite\core\target`. バンドルは、 [Felix Web コンソール。](http://localhost:4502/system/console/bundles)
+バンドルは次の場所でも利用できます。 `C:\AEMFormsBundles\mysite\core\target`. バンドルは、 [Felix Web コンソール。](http://localhost:4502/system/console/bundles)
 
 
 ## サーブレットリゾルバーのテスト
 
-ブラウザーで [サーブレットリゾルバー URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). これにより、以下のスクリーンショットに示すように、特定のパスに対して呼び出されるサーブレットが示されます
+ブラウザーで [サーブレットリゾルバー URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). これにより、以下のスクリーンショットに示すように、特定のパスに対して呼び出されたサーブレットが表示されます
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Postmanを使用したサーブレットのテスト
 
-![test-servlet-postman](assets/test-servlet-postman.JPG)
+![Postmanを使用したサーブレットのテスト](assets/test-servlet-postman.JPG)

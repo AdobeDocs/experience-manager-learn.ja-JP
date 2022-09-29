@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 6%
 
 ---
@@ -28,16 +28,15 @@ ht-degree: 6%
 
 \{fieldName\} = \{parameterName\}。 例えば、 submitterName はアダプティブフォームフィールドの名前で、 submitter はパラメーターの名前です。 「ありがとうございます」ページでは、 request.getParameter(&quot;submitter&quot;) を使用して submitter パラメーターにアクセスし、submitter 名フィールドの値を取得できます。
 
-submitterName=submitter
+`submitterName=submitter`
 
-以下のスクリーンショットでは、/content/thankyou にある「ありがとうございます」ページにアダプティブフォームを送信しています。 このありがとうページには、フォームフィールドの値を保持する 3 つの要求属性を渡しています。
+以下のスクリーンショットでは、/content/thankyou にある「ありがとうございます」ページにアダプティブフォームを送信しています。 この「ありがとうございます」ページには、フォームフィールドの値を保持する 3 つの要求属性を渡しています。
 
-![ありがとう](assets/thankyoupage.gif)
+![「ありがとうございます」ページ](assets/thankyoupage.gif)
 
 また、「 」を使用して外部エンドポイントに送信することもできます。POST これを達成するには、「post リクエストを有効にする」チェックボックスを選択して、外部エンドポイントの URL を指定するだけです。 フォームを送信すると、「ありがとうございます」ページが表示され、POSTエンドポイントが同時に呼び出されます。
 
-![キャプチャ](assets/capture.gif)
-
+![設定をキャプチャ](assets/capture.gif)
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 

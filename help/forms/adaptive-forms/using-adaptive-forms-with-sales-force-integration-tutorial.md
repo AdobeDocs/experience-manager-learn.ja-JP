@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisites}
 
-この記事では、Salesforce を使用してデータソースを作成するプロセスを順を追って説明します
+この記事では、Salesforce を使用したデータソースの作成プロセスを順を追って説明します
 
 このチュートリアルの前提条件：
 
@@ -34,13 +34,13 @@ ht-degree: 0%
 * アプリに適した OAuth 範囲を指定します（テストの目的で使用可能なすべての OAuth 範囲を選択しました）。
 * コールバック URL を指定します。 この場合のコールバック URL は
 
-   * 次を使用する場合： **AEM Forms 6.3**&#x200B;の場合、コールバック URL はhttps://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.htmlになります。 この URL createlead は、フォームデータモデルの名前です。
+   * 次を使用する場合： **AEM Forms 6.3**&#x200B;の場合、コールバック URL はhttps://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.htmlです。 この URL createlead は、フォームデータモデルの名前です。
 
    * ** AEM Forms 6.4**を使用している場合、コールバック URL はhttps://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.htmlです。
 
 この例では、gbedekar -w7-1:6443 は、AEMが実行されているサーバーとポートの名前です。
 
-Connected App を作成した後、 **消費者キーと秘密鍵**. AEM Formsでデータソースを作成する場合は、これらが必要になります。
+Connected App を作成した後、 **消費者キーと秘密鍵**. AEM Formsでデータソースを作成する場合は、これらが必要です。
 
 接続されたアプリを作成したら、Salesforce で実行する必要のある操作用の Swagger ファイルを作成する必要があります。 ダウンロード可能なアセットの一部として、サンプルの Swagger ファイルが含まれています。 この Swagger ファイルを使用すると、アダプティブフォーム送信時に「リード」オブジェクトを作成できます。 この Swagger ファイルを参照してください。
 

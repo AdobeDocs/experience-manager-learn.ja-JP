@@ -10,10 +10,11 @@ role: Developer
 level: Beginner
 kt: 9371
 thumbnail: 338680.jpg
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 2%
+source-wordcount: '405'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 2%
 
 ## 作成する内容 {#what-you-will-build}
 
-この章では、2 つのAdobe XDファイルが検査され、1 つは [標準サイトテンプレート](https://github.com/adobe/aem-site-template-standard) そして別の WKND サイトの  
+この章では、2 つのAdobe XDファイルを検査し、1 つは [標準サイトテンプレート](https://github.com/adobe/aem-site-template-standard) そして別の WKND サイトの  
 
 ## 標準サイトテンプレート UI キット {#standard-site-template-uikit}
 

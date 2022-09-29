@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
-source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ PDFG は、PDF生成を表します。 つまり、様々なファイル形式�
 1. [post.jsp に移動します。](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) CRX 内
 1. 保存場所を好みに応じて変更します（9 行目）。
 1. 変更を保存します。
-1. を開きます。 [  html ページ](http://localhost:4502/content/DocumentServices/CreatePDFG.html) をクリックして、変換するファイルをドラッグ&amp;ドロップします。
+1. を開きます。 [html ページ](http://localhost:4502/content/DocumentServices/CreatePDFG.html) をクリックして、変換するファイルをドラッグ&amp;ドロップします。
 1. Word ファイルまたは jpg をドロップゾーンにドロップします。
 1. 入力ドキュメントはPDFに変換され、ポイント 4 で指定した場所に保存されます。
 

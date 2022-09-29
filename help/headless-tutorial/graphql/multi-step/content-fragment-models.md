@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 4%
 
    ![フルネームプロパティフィールド](assets/content-fragment-models/full-name-property-field.png)
 
-   この **プロパティ名** は、AEMに永続化されるプロパティの名前を定義します。 この **プロパティ名** は、 **key** このプロパティの名前をデータスキーマの一部として指定します。 この **key** は、コンテンツフラグメントデータが GraphQL API を介して公開される際に使用されます。
+   この **プロパティ名** は、AEMに永続化されるプロパティの名前を定義します。 この **プロパティ名** は、 **key** このプロパティの名前をデータスキーマの一部として指定します。 この **key** は、コンテンツフラグメントデータが GraphQL API を介して公開される場合に使用されます。
 
 1. 次をタップします。 **データタイプ** タブを押しながらドラッグ&amp;ドロップ **複数行テキスト** の下の野原 **氏名** フィールドに入力します。 次のプロパティを入力します。
 

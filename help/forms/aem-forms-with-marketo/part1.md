@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '369'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ MarketoとAEM Formsを統合する最初の手順は、API を使用して REST 
 1. client_id
 1. client_secret
 1. identity_endpoint
-1. 認証 URL。
+1. 認証 URL
 
 [上記のプロパティを取得するには、公式のMarketoドキュメントに従ってください。](https://developers.marketo.com/rest-api/) または、Marketoインスタンスの管理者に問い合わせることもできます。
 

@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: 7a4585146b52d14f32645c6889c9c015e9991809
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2523'
 ht-degree: 1%
 
 ---
@@ -92,8 +92,8 @@ AdobeCloud Manager は、AEM as a Cloud Serviceへのコード構築とデプロ
 
 ```
 [ERROR] Unable to convert content-package [/tmp/packages/enduser.all-1.0-SNAPSHOT.zip]: 
-Configuration ‘com.example.ExampleComponent’ already defined in Feature Model ‘com.example.groupId:example.all:slingosgifeature:xxxxx:X.X’, 
-set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multiple configurations with same PID
+Configuration 'com.example.ExampleComponent' already defined in Feature Model 'com.example.groupId:example.all:slingosgifeature:xxxxx:X.X', 
+set the 'mergeConfigurations' flag to 'true' if you want to merge multiple configurations with same PID
 ```
 
 #### 原因 1
@@ -110,7 +110,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 
 repoinit スクリプトは、ベースラインコンテンツ、ユーザー、ACL などを定義します。 AEMas a Cloud Serviceでは、repoinit スクリプトはビルド画像の間に適用されますが、AEM SDK のローカルクイックスタートでは、OSGi repoinit ファクトリ設定がアクティブ化されると適用されます。 このため、AEM SDK のローカルクイックスタートで Repoinit スクリプトが（ログと共に）静かに失敗し、「画像のビルド」手順が失敗して、デプロイメントが停止する場合があります。
 
-+ __原因：__ repoinit スクリプトの形式が正しくありません。 失敗したスクリプトがリポジトリに対して実行された後に、repoinit スクリプトが実行されるので、リポジトリは不完全な状態のままになる場合があります。
++ __原因：__ repoinit スクリプトの形式が正しくありません。 これにより、失敗したスクリプトがリポジトリに対して実行されない後に、repoinit スクリプトが実行された後、リポジトリが不完全な状態のままになる場合があります。
 + __解像度：__ repoinit スクリプト OSGi 設定がデプロイされた場合にAEM SDK のローカルクイックスタートを確認し、エラーの有無と内容を判断します。
 
 ### 未満の repoinit コンテンツの依存関係

@@ -1,6 +1,6 @@
 ---
 title: Analysis Workspaceでのデータ分析
-description: Adobe Experience Managerサイトからキャプチャされたデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
+description: Adobe Experience Manager Site から取り込んだデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -9,146 +9,146 @@ level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2179'
-ht-degree: 0%
+source-wordcount: '2177'
+ht-degree: 1%
 
 ---
 
 # Analysis Workspaceでのデータ分析
 
-Adobe Experience Managerサイトからキャプチャされたデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
+Adobe Experience Manager Site から取り込んだデータを、Adobe Analyticsレポートスイートの指標およびディメンションにマッピングする方法について説明します。 Adobe AnalyticsのAnalysis Workspace機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
 
 ## 作成する内容
 
-WKNDマーケティングチームは、ホームページで最も効果が高いコールトゥアクション(CTA)ボタンを把握したいと考えています。 このチュートリアルでは、Analysis Workspaceで新しいプロジェクトを作成し、様々なCTAボタンのパフォーマンスを視覚化し、サイトでのユーザーの行動を理解します。 次の情報は、ユーザーがWKNDホームページのコールトゥアクション(CTA)ボタンをクリックすると、Adobe Analyticsを使用して取得されます。
+WKND マーケティングチームは、どのコールトゥアクション (CTA) ボタンがホームページで最も効果が高いかを把握したいと考えています。 このチュートリアルでは、Analysis Workspaceで新しいプロジェクトを作成して、様々な CTA ボタンのパフォーマンスを視覚化し、サイトでのユーザーの行動を理解します。 次の情報は、ユーザーが WKND ホームページ上のコールトゥアクション (CTA) ボタンをクリックすると、Adobe Analyticsを使用して取得されます。
 
-**Analytics変数**
+**Analytics 変数**
 
-現在追跡中のAnalytics変数を以下に示します。
+現在追跡中の Analytics 変数を以下に示します。
 
-* `eVar5` -   `Page template`
-* `eVar6` -  `Page Id`
-* `eVar7` -  `Page last modified date`
-* `eVar8` -  `CTA Button Id`
-* `eVar9` -  `Page Name`
-* `event8` -  `CTA Button Click event`
-* `prop8` -  `CTA Button Id`
+* `eVar5` -  `Page template`
+* `eVar6` - `Page Id`
+* `eVar7` - `Page last modified date`
+* `eVar8` - `CTA Button Id`
+* `eVar9` - `Page Name`
+* `event8` - `CTA Button Click event`
+* `prop8` - `CTA Button Id`
 
 ![CTA Click Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
 ### 目的 {#objective}
 
 1. 新しいレポートスイートを作成するか、既存のレポートスイートを使用します。
-1. レポートスイートで、 [コンバージョン変数(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)と[成功イベント（イベント）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html)を設定します。
-1. [Analysis Workspaceプロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)を作成して、インサイトをすばやく作成、分析、共有できるツールを使用してデータを分析します。
+1. 設定 [コンバージョン変数 (eVar)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) および [成功イベント（イベント）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) 」と入力します。
+1. の作成 [Analysis Workspaceプロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) インサイトを迅速に作成、分析、共有できるツールを使用してデータを分析する。
 1. Analysis Workspaceプロジェクトを他のチームメンバーと共有します。
 
 ## 前提条件
 
-このチュートリアルは、Adobe Analytics](./track-clicked-component.md)を使用した[クリックされたコンポーネントの追跡の継続で、以下の点を前提としています。
+このチュートリアルは、 [Adobe Analyticsを使用したクリックされたコンポーネントの追跡](./track-clicked-component.md) およびは、以下があることを前提としています。
 
-* [Adobe Analytics拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)が有効な&#x200B;**Launchプロパティ**
-* **Adobe** Analyticstest/devレポートスイートIDとトラッキングサーバー。[新しいレポートスイート](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)の作成については、次のドキュメントを参照してください。
-* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) データレイヤーが有効なAEMサイトに読み込まれたLaunchプロパ [ティを使用して設定されたAdobeデバッガーブラウザー拡張機能。https://wknd.site/us/en](https://wknd.site/us/en.html) 
+* A **Launch プロパティ** と [Adobe Analytics拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=ja) 有効
+* **Adobe Analytics** テスト/開発レポートスイート ID とトラッキングサーバー。 詳しくは、次のドキュメントを参照してください。 [新しいレポートスイートの作成](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Experience Platformデバッガー](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Launch プロパティがに読み込まれた状態で設定されたブラウザー拡張機能 [https://wknd.site/us/en.html](https://wknd.site/us/en.html) またはAEMサイトで、Adobeデータレイヤーが有効になっている。
 
-## コンバージョン変数(eVar)と成功イベント(event)
+## コンバージョン変数 (eVar) と成功イベント（イベント）
 
-Custom Insightコンバージョン変数(またはeVar)は、サイトで選択したWebページのAdobeコードに配置されます。 その主な目的は、カスタムマーケティングレポートでコンバージョン成功指標をセグメント化することです。 eVarは訪問ベースで、cookieと同様に機能します。 eVar変数に渡された値は、所定の期間ユーザーに従います。
+Custom Insightコンバージョン変数 ( またはeVar) は、サイトで選択した Web ページのAdobeコードに配置されます。 その主な目的は、カスタムマーケティングレポートでコンバージョン成功指標をセグメント化することです。 eVarは、訪問ベースにすることができ、cookie と同様に機能します。 eVar変数に渡された値は、所定の期間、ユーザーに従います。
 
-eVarを訪問者の値に設定すると、Adobeではその値が期限切れになるまで自動的に記憶されます。 eVar値がアクティブな間に訪問者が発生した成功イベントは、eVar値にカウントされます。
+eVarを 1 人の訪問者の値に設定すると、Adobeではその値が期限切れになるまで自動的に記憶されます。 eVar値がアクティブなときに訪問者が発生した成功イベントは、eVar値にカウントされます。
 
-eVarは、次のような原因と効果の測定に最適です。
+eVar は、次のような原因と効果の測定に最適です。
 
 * 売上高に影響を与えた内部キャンペーン
-* 最終的に登録につながったバナー広告
+* 最終的に登録に至ったバナー広告
 * 注文前に内部検索が使用された回数
 
-成功イベントは、追跡可能なアクションです。 成功イベントを決定します。 例えば、訪問者がCTAボタンをクリックした場合、クリックイベントは成功イベントと見なすことができます。
+成功イベントは、追跡可能なアクションです。 成功イベントを決定します。 例えば、訪問者が CTA ボタンをクリックした場合、クリックイベントは成功イベントと見なすことができます。
 
-### eVarの設定
+### eVar の設定
 
 1. Adobe Experience Cloudホームページから、組織を選択し、Adobe Analyticsを起動します。
 
    ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
 
-1. Analyticsツールバーで、**管理者** / **レポートスイート**&#x200B;をクリックし、レポートスイートを見つけます。
+1. Analytics ツールバーで、 **管理者** > **レポートスイート** をクリックし、レポートスイートを見つけます。
 
-   ![Analyticsレポートスイート](assets/create-analytics-workspace/select-report-suite.png)
+   ![Analytics レポートスイート](assets/create-analytics-workspace/select-report-suite.png)
 
-1. レポートスイート/ **設定を編集** / **コンバージョン** / **コンバージョン変数**&#x200B;を選択します。
+1. 「レポートスイート」を選択します。 **設定を編集** > **コンバージョン** > **コンバージョン変数**
 
-   ![Analyticsコンバージョン変数](assets/create-analytics-workspace/conversion-variables.png)
+   ![Analytics コンバージョン変数](assets/create-analytics-workspace/conversion-variables.png)
 
-1. 「**新しい**&#x200B;を追加」オプションを使用して、次のようにスキーマをマッピングするコンバージョン変数を作成します。
+1. の使用 **新規追加** 」オプションで、コンバージョン変数を作成して、次のようにスキーマをマッピングします。
 
-   * `eVar5` -   `Page Template`
-   * `eVar6` -  `Page ID`
-   * `eVar7` -  `Last Modified Date`
-   * `eVar8` -  `Button Id`
-   * `eVar9` -  `Page Name`
+   * `eVar5` -  `Page Template`
+   * `eVar6` - `Page ID`
+   * `eVar7` - `Last Modified Date`
+   * `eVar8` - `Button Id`
+   * `eVar9` - `Page Name`
 
-   ![新しいeVarの追加](assets/create-analytics-workspace/add-new-evars.png)
+   ![新しい eVar の追加](assets/create-analytics-workspace/add-new-evars.png)
 
-1. 各eVarに適切な名前と説明を入力し、変更を保存&#x200B;**します。**&#x200B;次の節では、これらのeVarを使用してAnalysis Workspaceプロジェクトを作成します。 したがって、わかりやすい名前を付けると、変数を見つけやすくなります。
+1. 各 eVar に適切な名前と説明を入力し、 **保存** 変更内容。 次の節では、これらの eVar を使用してAnalysis Workspaceプロジェクトを作成します。 したがって、わかりやすい名前を指定すると、変数を見つけやすくなります。
 
    ![eVar](assets/create-analytics-workspace/evars.png)
 
 ### 成功イベントの設定
 
-次に、CTAボタンのクリックを追跡する偶数を作成します。
+次に、CTA ボタンのクリックを追跡するイベントを作成します。
 
-1. **Report Suite Manager**&#x200B;ウィンドウで「**レポートスイートID**」を選択し、「**設定を編集**」をクリックします。
-1. **コンバージョン** / **成功イベント**&#x200B;をクリックします。
-1. 「**新規追加**」オプションを使用して、新しいカスタム成功イベントを作成し、CTAボタンのクリックを追跡してから、変更を保存&#x200B;**します。**
+1. 次の **Report Suite Manager** ウィンドウで、 **レポートスイート ID** をクリックし、 **設定を編集**.
+1. クリック **コンバージョン** > **成功イベント**
+1. の使用 **新規追加** オプションを選択し、新しいカスタム成功イベントを作成して CTA ボタンのクリックを追跡し、 **保存** 変更内容。
    * `Event`：`event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## Analysis Workspaceでの新しいプロジェクトの作成 {#workspace-project}
+## Analysis Workspaceで新しいプロジェクトを作成する {#workspace-project}
 
-Analysis Workspaceは、分析を構築し、インサイトをすばやく共有できる、柔軟なブラウザーツールです。 ドラッグ&amp;ドロップインターフェイスを使用すると、分析を作成し、ビジュアライゼーションを追加して、データを有効にし、データセットをキュレーションし、組織内の任意のユーザーとプロジェクトを共有、スケジュールできます。
+Analysis Workspaceは、分析を構築してインサイトをすばやく共有できる、柔軟なブラウザーツールです。 ドラッグ&amp;ドロップインターフェイスを使用して、分析を作成し、ビジュアライゼーションを追加して、データを有効にし、データセットをキュレーションし、組織内の任意のユーザーとプロジェクトを共有し、スケジュールできます。
 
-次に、新しい[プロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)を作成し、ダッシュボードを作成してサイト全体でのCTAボタンのパフォーマンスを分析します。
+次に、新しい [プロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) を使用して、サイト全体での CTA ボタンのパフォーマンスを分析するダッシュボードを作成します。
 
-1. Analyticsツールバーで「**Workspace**」を選択し、「**新しいプロジェクトを作成**」をクリックします。
+1. Analytics ツールバーで、 **Workspace** をクリックし、 **新しいプロジェクトを作成**.
 
    ![ワークスペース](assets/create-analytics-workspace/create-workspace.png)
 
-1. **空白のプロジェクト**&#x200B;から開始するか、Adobeが提供する事前ビルドテンプレートか、組織が作成したカスタムテンプレートのいずれかを選択します。 想定している分析や使用事例に応じて、いくつかのテンプレートを使用できます。 [使用可能な](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 様々なテンプレートオプションについて詳しく説明します。
+1. 次の中から開始を選択 **空のプロジェクト** または、組織が提供する事前定義済みテンプレートか、組織が作成したカスタムAdobeのいずれかを選択します。 想定している分析や使用事例に応じて、いくつかのテンプレートを使用できます。 [詳細情報](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 使用可能な様々なテンプレートオプションについて。
 
-   Workspaceプロジェクトでは、左側のパネルからパネル、テーブル、ビジュアライゼーションおよびコンポーネントにアクセスします。 これらはプロジェクトの構成要素です。
+   Workspace プロジェクトでは、左パネルからパネル、テーブル、ビジュアライゼーションおよびコンポーネントにアクセスします。 これらはプロジェクトの構成要素です。
 
-   * **[コンポーネント](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — コンポーネントは、ディメンション、指標、セグメントまたは日付範囲で、すべてフリーフォームテーブルに組み合わせて、ビジネスの質問への回答を開始できます。分析を開始する前に、各コンポーネントのタイプについて理解しておく必要があります。 コンポーネントの用語を習得したら、フリーフォームテーブルでドラッグ&amp;ドロップを開始し、分析を構築します。
-   * **[ビジュアライゼーション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  — 棒グラフや折れ線グラフなどのビジュアライゼーションをデータに追加して、データに命を吹き込みます。左端のパネルで、中央のビジュアライゼーションアイコンを選択し、使用可能なビジュアライゼーションの完全なリストを表示します。
-   * **[パネル](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)**  — パネルは、テーブルとビジュアライゼーションのコレクションです。パネルには、Workspaceの左上のアイコンからアクセスできます。 パネルは、期間、レポートスイート、分析の使用例に従ってプロジェクトを整理する場合に役立ちます。 Analysis Workspaceでは、次のパネルタイプを使用できます。
+   * **[コンポーネント](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)**  — コンポーネントは、ディメンション、指標、セグメントまたは日付範囲です。これらすべてをフリーフォームテーブルに組み合わせて、ビジネスに関する質問への回答を開始できます。 分析を開始する前に、各コンポーネントのタイプについて理解しておく必要があります。 コンポーネントの用語を習得したら、フリーフォームテーブルでドラッグ&amp;ドロップを開始し、分析を構築します。
+   * **[ビジュアライゼーション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** ：棒グラフや折れ線グラフなどのビジュアライゼーションをデータに追加して、データに命を吹き込みます。 左端のパネルで、中央のビジュアライゼーションアイコンを選択し、使用可能なビジュアライゼーションの完全なリストを表示します。
+   * **[パネル](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)**  — パネルは、テーブルとビジュアライゼーションのコレクションです。 パネルには、Workspace の左上のアイコンからアクセスできます。 パネルは、期間、レポートスイート、分析の使用例に従ってプロジェクトを整理する場合に役立ちます。 Analysis Workspaceでは、次のパネルタイプを使用できます。
 
    ![テンプレートの選択](assets/create-analytics-workspace/workspace-tools.png)
 
 ### Analysis Workspaceでのデータのビジュアライゼーションの追加
 
-次に、WKNDサイトのホームページでユーザーがコールトゥアクション(CTA)ボタンとどのようにやり取りするかを視覚的に表現した表を作成します。 このような表現を作成するには、「[クリックされたコンポーネントを追跡](./track-clicked-component.md)」で収集したデータをAdobe Analyticsと共に使用します。 以下に、WKNDサイトの「コールトゥアクション」ボタンを使用したユーザーインタラクションで追跡されるデータの概要を示します。
+次に、WKND サイトのホームページでユーザーがコールトゥアクション (CTA) ボタンとどのようにやり取りするかを視覚的に表現するテーブルを作成します。 このような表現を作成するには、 [Adobe Analyticsを使用したクリックされたコンポーネントの追跡](./track-clicked-component.md). 以下に、WKND サイトのコールトゥアクションボタンを使用したユーザーインタラクションで追跡されたデータの概要を示します。
 
-* `eVar5` -   `Page template`
-* `eVar6` -  `Page Id`
-* `eVar7` -  `Page last modified date`
-* `eVar8` -  `CTA Button Id`
-* `eVar9` -  `Page Name`
-* `event8` -  `CTA Button Click event`
-* `prop8` -  `CTA Button Id`
+* `eVar5` -  `Page template`
+* `eVar6` - `Page Id`
+* `eVar7` - `Page last modified date`
+* `eVar8` - `CTA Button Id`
+* `eVar9` - `Page Name`
+* `event8` - `CTA Button Click event`
+* `prop8` - `CTA Button Id`
 
-1. **ページ**&#x200B;ディメンションコンポーネントをフリーフォームテーブルにドラッグ&amp;ドロップします。 これで、ページ名(eVar9)と対応するページビュー（回数）をテーブル内に表示するビジュアライゼーションを表示できます。
+1. ドラッグ&amp;ドロップ **ページ** ディメンションコンポーネントをフリーフォームテーブルに追加します。 これで、ページ名 (eVar9) と、対応するページビュー（回数）をテーブル内に表示するビジュアライゼーションを表示できるようになります。
 
    ![ページDimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. **CTA Click**(event8)指標を回数指標にドラッグ&amp;ドロップし、置き換えます。 これで、ページ名(eVar9)と、対応するページ上のCTAクリックイベント数を表示するビジュアライゼーションを表示できます。
+1. ドラッグ&amp;ドロップ **CTA クリック** (event8) 指標を使用して、回数指標を置き換えます。 これで、ページ名 (eVar9) と、ページ上の CTA クリックイベントの対応する数を表示するビジュアライゼーションを表示できます。
 
-   ![ページ指標 — CTAクリック](assets/create-analytics-workspace/evar8-cta-click.png)
+   ![ページ指標 — CTA クリック](assets/create-analytics-workspace/evar8-cta-click.png)
 
-1. では、テンプレートタイプ別にページを分類します。 コンポーネントからページテンプレート指標を選択し、ページテンプレート指標を「ページ名」ディメンションにドラッグ&amp;ドロップします。 これで、テンプレートタイプ別に分類されたページ名を表示できます。
+1. では、テンプレートタイプ別にページを分類します。 コンポーネントからページテンプレート指標を選択し、ページテンプレート指標を「ページ名」ディメンションにドラッグ&amp;ドロップします。 これで、ページ名がテンプレートタイプ別に分類されて表示されるようになりました。
 
    * **前**
 
@@ -156,17 +156,17 @@ Analysis Workspaceは、分析を構築し、インサイトをすばやく共�
 
    * **後**
 
-      ![eVar5指標](assets/create-analytics-workspace/evar5-metrics.png)
+      ![eVar5 指標](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. WKNDサイトページでユーザーがCTAボタンとどのようにやり取りするかを理解するには、ボタンID(eVar8)指標を追加して、ページテンプレート指標をさらに分類する必要があります。
+1. WKND サイトページ上でユーザーが CTA ボタンをどのように操作するかを理解するには、ボタン ID(eVar8) 指標を追加して、ページテンプレート指標をさらに分類する必要があります。
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
-1. 以下に、WKNDサイトをページテンプレート別に分類し、さらにWKNDサイトのクリックしてアクション(CTA)ボタンとのユーザーインタラクション別に分類した視覚的な表現を示します。
+1. 以下に、WKND サイトをページテンプレート別に分類し、さらに WKND サイトのクリックトゥアクション (CTA) ボタンとのユーザーインタラクション別に分類した視覚的表現を示します。
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. Adobe Analytics Classificationsを使用して、ボタンIDの値を、よりわかりやすい名前に置き換えることができます。 特定の指標の分類を作成する方法について詳しくは、[こちら](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)を参照してください。 この場合、ボタンIDをユーザーにわかりやすい名前にマッピングする`Button Section (Button ID)`分類指標を`eVar8`用に設定します。
+1. Adobe Analytics Classifications を使用して、ボタン ID の値を、よりわかりやすい名前に置き換えることができます。 特定の指標の分類を作成する方法について詳しくは、 [ここ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). この例では、分類指標があります `Button Section (Button ID)` 設定 `eVar8` これは、ボタン id をユーザーにわかりやすい名前にマッピングします。
 
    ![ボタンセクション](assets/create-analytics-workspace/button-section.png)
 
@@ -174,21 +174,21 @@ Analysis Workspaceは、分析を構築し、インサイトをすばやく共�
 
 ### コンバージョンの分類
 
-Analytics分類は、Analytics変数データを分類し、レポートを生成する際に様々な方法でデータを表示する方法です。 Analytics WorkspaceレポートでボタンIDがどのように表示されるかを改善するために、ボタンID(eVar8)の分類変数を作成します。 分類する際に、変数とその変数に関連するメタデータとの間に関係を確立します。
+Analytics 分類を使用すると、Analytics 変数データを分類し、レポートを生成する際に様々な方法でデータを表示することができます。 Analytics Workspace レポートでボタン ID がどのように表示されるかを改善するには、ボタン ID(eVar8) の分類変数を作成します。 分類する際には、変数とその変数に関連するメタデータとの間に関係を確立します。
 
-次に、Analytics変数の分類を作成します。
+次に、Analytics 変数の分類を作成します。
 
-1. **管理者**&#x200B;ツールバーメニューから&#x200B;**レポートスイート**&#x200B;を選択します。
-1. **Report Suite Manager**&#x200B;ウィンドウで&#x200B;**レポートスイートID**&#x200B;を選択し、**設定を編集** / **コンバージョン** / **コンバージョンの分類**&#x200B;をクリックします。
+1. 次の **管理者** ツールバーメニュー、選択 **レポートスイート**
+1. を選択します。 **レポートスイート ID** から **Report Suite Manager** ウィンドウとクリック **設定を編集** > **コンバージョン** > **コンバージョンの分類**
 
    ![コンバージョンの分類](assets/create-analytics-workspace/conversion-classification.png)
 
-1. **分類タイプ**&#x200B;の選択ドロップダウンリストから、変数(eVar8ボタンID)を選択して分類を追加します。
-1. 「分類」セクションの下に表示される分類変数の右横にある矢印をクリックして、新しい分類を追加します。
+1. 次の **分類タイプを選択** ドロップダウンリストから、変数 (eVar8 ボタン ID) を選択して分類を追加します。
+1. 「分類」セクションの下に表示される分類変数の横にある矢印をクリックして、新しい分類を追加します。
 
    ![コンバージョンの分類タイプ](assets/create-analytics-workspace/select-classification-variable.png)
 
-1. **分類の編集**&#x200B;ダイアログボックスで、テキスト分類に適した名前を指定します。 テキスト分類名を持つディメンションコンポーネントが作成されます。
+1. 内 **分類の編集** ダイアログボックスで、テキスト分類に適した名前を指定します。 テキスト分類名を持つディメンションコンポーネントが作成されます。
 
    ![コンバージョンの分類タイプ](assets/create-analytics-workspace/new-classification.png)
 
@@ -196,72 +196,72 @@ Analytics分類は、Analytics変数データを分類し、レポートを生�
 
 ### 分類インポーター
 
-インポーターを使用して、分類をAdobe Analyticsにアップロードします。 インポートの前に、更新用にデータをエクスポートすることもできます。 インポートツールを使用してインポートするデータは、特定の形式にする必要があります。 Adobeには、適切なヘッダーの詳細をすべて含んだデータテンプレートをタブ区切りデータファイルにダウンロードするオプションが用意されています。 このテンプレートに新しいデータを追加し、FTPを使用してブラウザーにデータファイルをインポートできます。
+インポーターを使用して、分類をAdobe Analyticsにアップロードします。 インポートの前に、更新用にデータをエクスポートすることもできます。 インポートツールを使用してインポートするデータは、特定の形式にする必要があります。 Adobeには、適切なヘッダーの詳細をすべて含んだデータテンプレートをタブ区切りのデータファイルにダウンロードするオプションが用意されています。 新しいデータをこのテンプレートに追加し、FTP を使用してブラウザーにデータファイルをインポートできます。
 
 #### 分類テンプレート
 
-分類をマーケティングレポートにインポートする前に、分類データファイルの作成に役立つテンプレートをダウンロードできます。 データファイルでは、目的の分類を列見出しとして使用し、レポートデータセットを適切な分類見出しの下に整理します。
+分類をマーケティングレポートにインポートする前に、分類データファイルの作成に役立つテンプレートをダウンロードできます。 データファイルでは、必要な分類を列見出しとして使用し、レポートデータセットを適切な分類見出しの下に整理します。
 
-次に、ボタンID(eVar8)変数の分類テンプレートをダウンロードします。
+次に、ボタン ID(eVar8) 変数の分類テンプレートをダウンロードします。
 
-1. **管理者** / **分類インポーター**&#x200B;に移動します。
-1. コンバージョン変数の分類テンプレートを&#x200B;**「テンプレートをダウンロード** 」タブからダウンロードします。
+1. に移動します。 **管理者** > **分類インポーター**
+1. コンバージョン変数の分類テンプレートを **テンプレートをダウンロード** タブ。
    ![コンバージョンの分類タイプ](assets/create-analytics-workspace/classification-importer.png)
 
 1. 「テンプレートのダウンロード」タブで、データテンプレートの設定を指定します。
-   * **レポートスイートの選択** :テンプレートで使用するレポートスイートを選択します。レポートスイートとデータセットが一致する必要があります。
-   * **分類するデータセット** :データファイルのデータのタイプを選択します。このメニューには、分類用に設定されているレポートスイート内のすべてのレポートが含まれます。
-   * **エンコーディング** :データファイルの文字エンコーディングを選択します。デフォルトのエンコーディング形式はUTF-8です。
+   * **レポートスイートの選択** :テンプレートで使用するレポートスイートを選択します。 レポートスイートとデータセットが一致している必要があります。
+   * **分類するデータセット** :データファイルのデータのタイプを選択します。 このメニューには、分類用に設定されたレポートスイート内のすべてのレポートが含まれます。
+   * **エンコード** :データファイルの文字エンコーディングを選択します。 デフォルトのエンコーディング形式は UTF-8 です。
 
-1. 「**ダウンロード**」をクリックし、テンプレートファイルをローカルシステムに保存します。 このテンプレートファイルは、タブ区切りのデータファイル（ファイル名の拡張子は.tab）で、ほとんどのスプレッドシートアプリケーションでサポートされています。
+1. クリック **ダウンロード** テンプレートファイルをローカルシステムに保存します。 このテンプレートファイルは、タブ区切りのデータファイル（.tab ファイル名の拡張子）で、ほとんどのスプレッドシートアプリケーションでサポートされています。
 1. 任意のエディターを使用して、タブ区切りのデータファイルを開きます。
-1. 「 」セクションの手順9の各eVar9値について、ボタンID(eVar9)と対応するボタン名をタブ区切りファイルに追加します。
+1. セクションの手順 9 の各eVar9 値に対して、ボタン ID(eVar9) と対応するボタン名をタブ区切りファイルに追加します。
 
    ![キー値](assets/create-analytics-workspace/key-value.png)
 
-1. **** タブ区切りファイルを保存します。
-1. 「**ファイルのインポート**」タブに移動します。
+1. **保存** タブ区切りファイル。
+1. 次に移動： **ファイルのインポート** タブをクリックします。
 1. ファイルのインポート先を設定します。
-   * **レポートスイートの選択** :WKNDサイトAEM（レポートスイート）
-   * **分類するデータセット** :ボタンId(コンバージョン変数eVar8)
-1. 「**ファイル**&#x200B;を選択」オプションをクリックして、タブ区切りのファイルをシステムからアップロードし、「**ファイルを読み込み**」をクリックします。
+   * **レポートスイートの選択** :WKND サイトAEM （レポートスイート）
+   * **分類するデータセット** :ボタン ID ( コンバージョン変数eVar8)
+1. をクリックします。 **ファイルを選択** タブ区切りファイルをシステムからアップロードし、 **ファイルのインポート**
 
    ![ファイルインポーター](assets/create-analytics-workspace/file-importer.png)
 
    >[!NOTE]
    >
-   > インポートが正常に完了すると、エクスポートに適切な変更が即座に表示されます。 ただし、ブラウザーでのインポートの場合は最大4時間、FTPでのインポートの場合は最大24時間かかります。
+   > インポートが正常に完了すると、エクスポートに適切な変更が直ちに表示されます。 ただし、ブラウザーインポートを使用する場合はレポートのデータ変更に最大 4 時間かかり、FTP インポートを使用する場合は最大 24 時間かかります。
 
-#### コンバージョン変数の分類変数への置き換え
+#### コンバージョン変数を分類変数に置き換える
 
-1. Analyticsツールバーから&#x200B;**Workspace**&#x200B;を選択し、このチュートリアルの「Analysis Workspace](#workspace-project)での新しいプロジェクトの作成」で作成したワークスペースを開きます。[
+1. Analytics ツールバーで、 **Workspace** で、 [Analysis Workspaceで新しいプロジェクトを作成する](#workspace-project) の節を参照してください。
 
-   ![ワークスペースボタンID](assets/create-analytics-workspace/workspace-report-button-id.png)
+   ![ワークスペースボタン ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. 次に、ワークスペースの&#x200B;**ボタンID**&#x200B;指標を置き換えます。この指標には、コールトゥアクション(CTA)ボタンのIDが表示され、前の手順で作成した分類名が表示されます。
+1. 次に、 **ボタン ID** 指標を使用して、前の手順で作成した分類名を持つコールトゥアクション (CTA) ボタンの ID を表示できます。
 
-1. コンポーネントファインダーから&#x200B;**WKND CTA Buttons**&#x200B;を検索し、**WKND CTA Buttons (Button Id)**&#x200B;ディメンションをButton Id指標にドラッグ&amp;ドロップして置き換えます。
+1. コンポーネントファインダーから、を検索します。 **WKND CTA ボタン** をクリックし、 **WKND CTA ボタン（ボタン ID）** ディメンションをボタン ID 指標に置き換え、
 
    * **前**
 
       ![前のワークスペースボタン](assets/create-analytics-workspace/wknd-button-before.png)
    * **後**
 
-      ![後ろのワークスペースボタン](assets/create-analytics-workspace/wknd-button-after.png)
+      ![後のワークスペースボタン](assets/create-analytics-workspace/wknd-button-after.png)
 
-1. コールトゥアクション(CTA)ボタンのボタンIDを含むボタンID指標が、分類テンプレートで指定された対応する名前に置き換えられました。
-1. ここでは、Analytics WorkspaceテーブルとWKNDホームページを比較し、CTAボタンのクリック数とその分析について説明します。 ワークスペースのフリーフォームテーブルのデータに基づいて、22回のユーザーが「**SKI NOW**」ボタンをクリックし、4回のWKNDホームページキャンピングが西オーストラリア&#x200B;**詳細を表示**」ボタンをクリックしたことが明らかです。
+1. コールトゥアクション (CTA) ボタンのボタン ID を含むボタン ID 指標が、分類テンプレートで提供された対応する名前に置き換えられました。
+1. Analytics Workspace テーブルと WKND ホームページを比較し、CTA ボタンのクリック数とその分析について説明します。 ワークスペースのフリーフォームテーブルデータに基づいて、22 回のユーザーが **今すぐスキー** WKND ホームページキャンピング（西オーストラリア）のボタンと 4 回 **詳細を表示** 」ボタンをクリックします。
 
-   ![CTAレポート](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
+   ![CTA レポート](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
-1. Adobe Analytics Workspaceプロジェクトを保存し、適切な名前と説明を指定してください。 オプションで、ワークスペースプロジェクトにタグを追加できます。
+1. Adobe Analytics Workspace プロジェクトを保存し、適切な名前と説明を指定してください。 必要に応じて、ワークスペースプロジェクトにタグを追加できます。
 
    ![プロジェクトを保存](assets/create-analytics-workspace/save-project.png)
 
-1. プロジェクトを正常に保存したら、「共有」オプションを使用して、ワークスペースプロジェクトを他の同僚やチームメイトと共有できます。
+1. プロジェクトが正常に保存されたら、「共有」オプションを使用して、ワークスペースプロジェクトを他の同僚やチームメイトと共有できます。
 
    ![プロジェクトを共有](assets/create-analytics-workspace/share.png)
 
 ## おめでとうございます。
 
-Adobe Experience Manager Siteから取り込んだデータをAdobe Analyticsのレポートスイートの指標やディメンションにマッピングする方法、指標の分類を実行する方法、Adobe AnalyticsのAnalysis Workspace機能を使用して詳細なレポートダッシュボードを作成する方法を学びました。
+Adobe Experience Manager Site から取り込んだデータをAdobe Analyticsレポートスイートの指標およびディメンションにマッピングし、指標の分類を実行し、Adobe AnalyticsのAnalysis Workspace機能を使用して詳細なレポートダッシュボードを作成する方法を学びました。

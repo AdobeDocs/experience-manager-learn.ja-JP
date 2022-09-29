@@ -1,51 +1,51 @@
 ---
-title: 第 7 章 — MobileアプリからのAEM Content Services の使用 — Content Services
-description: このチュートリアルの第 7 章は、AEM Content Services で作成したコンテンツを使用するための Android Mobileアプリを実行するためのものです。
+title: 第 7 章 — モバイルアプリからのAEM Content Services の使用 — Content Services
+description: チュートリアルの第 7 章では、AEM Content Services から作成したコンテンツを使用するために Android モバイルアプリを実行します。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1391'
 ht-degree: 1%
 
 ---
 
-# 第 7 章 — MobileアプリからのAEM Content Services の使用
+# 第 7 章 — モバイルアプリからのAEM Content Services の使用
 
-チュートリアルの第 7 章では、ネイティブの Android Mobileアプリを使用して、AEM Content Services のコンテンツを使用します。
+チュートリアルの第 7 章では、ネイティブの Android モバイルアプリを使用して、AEM Content Services のコンテンツを使用します。
 
-## Android Mobileアプリ
+## Android モバイルアプリ
 
-このチュートリアルでは、 **シンプルなネイティブ Android Mobileアプリ** を使用して、AEM Content Services によって公開されたイベントコンテンツを使用および表示します。
+このチュートリアルでは、 **シンプルなネイティブ Android モバイルアプリ** を使用して、AEM Content Services によって公開されたイベントコンテンツを使用および表示します。
 
 の使用 [Android](https://developer.android.com/) はほとんど重要ではありません。消費量の多いモバイルアプリは、iOSなど、あらゆるモバイルプラットフォーム向けのあらゆるフレームワークで記述できます。
 
 Android は、Windows、macOS、Linux で Android エミュレーターを実行する機能とその人気、AEM開発者がよく理解できる言語である Java として記述できることから、チュートリアルに使用されます。
 
-*チュートリアルの Android Mobileアプリは、**not**は、Android Mobileアプリケーションの構築方法を説明したり、Android の開発のベストプラクティスを伝えたりする方法を示したもので、AEM Content Services をMobileアプリケーションから使用する方法を説明したものです。*
+*チュートリアルの Android モバイルアプリは、**not**は、Android Mobile アプリの作成方法を説明したり、Android 開発のベストプラクティスを伝えたりする方法を示したもので、AEM Content Services をモバイルアプリケーションで使用する方法を説明したものです。*
 
-### AEM Content Services がMobile App のエクスペリエンスを促進する仕組み
+### AEM Content Services がモバイルアプリのエクスペリエンスを促進する仕組み
 
-![Mobileアプリとコンテンツサービスのマッピング](assets/chapter-7/content-services-mapping.png)
+![モバイルアプリとコンテンツサービスとの対応付け](assets/chapter-7/content-services-mapping.png)
 
 1. この **ロゴ** で定義されたとおり [!DNL Events API] ページの **画像コンポーネント**.
 1. この **タグ行** 次の項で定義されたとおり： [!DNL Events API] ページの **テキストコンポーネント**.
 1. この **イベントリスト** は、設定済みの **コンテンツフラグメントリストコンポーネント**.
 
-## Mobile App デモ
+## モバイルアプリのデモ
 
 >[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
 
-### ローカルホスト以外で使用するためのMobileアプリの設定
+### ローカルホスト以外で使用するためのモバイルアプリの設定
 
-AEM パブリッシュがで実行されていない場合 **http://localhost:4503** ホストとポートは、Mobileアプリの [!DNL Settings] をクリックして、AEM パブリッシュのホスト/ポートプロパティを指します。
+AEM パブリッシュがで実行されていない場合 **http://localhost:4503** ホストとポートは、モバイルアプリの [!DNL Settings] をクリックして、AEM パブリッシュのホスト/ポートプロパティを指します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
 
-## Mobile App のローカルでの実行
+## モバイルアプリのローカルでの実行
 
 1. をダウンロードしてインストールする [Android Studio](https://developer.android.com/studio/install) :Android エミュレーターをインストールします。
 1. **ダウンロード** Android [!DNL APK] ファイル [GitHub / Assets / wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
@@ -63,7 +63,7 @@ AEM パブリッシュがで実行されていない場合 **http://localhost:45
    1. を選択します。 **ピクセル 2**.
    1. 次をクリック： **次へ** 」ボタンをクリックします。
    1. 選択 **Q** と **API レベル 29**.
-      * AVD Manager の初回起動時に、バージョン管理された API をダウンロードするよう求められます。 「Q」リリースの横にある「ダウンロード」リンクをクリックし、ダウンロードとインストールを完了します。
+      * AVD Manager の初回起動時に、「バージョン管理された API をダウンロードする」よう求められます。 「Q」リリースの横にある「ダウンロード」リンクをクリックし、ダウンロードとインストールを完了します。
    1. 次をクリック： **次へ** 」ボタンをクリックします。
    1. 次をクリック： **完了** 」ボタンをクリックします。
 1. を閉じる **AVD マネージャ** ウィンドウ
@@ -77,27 +77,27 @@ AEM パブリッシュがで実行されていない場合 **http://localhost:45
 
 >[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
 
-## Mobile App Code
+## モバイルアプリコード
 
-この節では、最もやり取りが多く、AEM Content Services に依存する Android Mobileアプリコードと、その JSON 出力について説明します。
+この節では、最もやり取りし、AEM Content Services とその JSON 出力に依存する Android モバイルアプリコードについて説明します。
 
-読み込み時に、Mobile App が `HTTP GET` から `/content/wknd-mobile/en/api/events.model.json` (Mobileアプリを駆動するコンテンツを提供するように設定されたAEM Content Services エンドポイント )
+読み込み時に、モバイルアプリが `HTTP GET` から `/content/wknd-mobile/en/api/events.model.json` ( モバイルアプリを駆動するコンテンツを提供するように設定されたAEM Content Services エンドポイント )
 
-イベント API の編集可能なテンプレート (`/content/wknd-mobile/en/api/events.model.json`) がロックされている場合は、Mobile App をコード化して、JSON 応答内の特定の場所にある特定の情報を探すことができます。
+イベント API の編集可能なテンプレート (`/content/wknd-mobile/en/api/events.model.json`) がロックされている場合、モバイルアプリをコードして、JSON 応答内の特定の場所にある特定の情報を探すことができます。
 
 ### 高レベルのコードフロー
 
-1. を開く [!DNL WKND Mobile] アプリが `HTTP GET` 次の場所で AEM パブリッシュにリクエスト： `/content/wknd-mobile/en/api/events.model.json` をクリックして、Mobileアプリの UI に入力するコンテンツを収集します。
-2. AEMからコンテンツを受け取ると、Mobileアプリの 3 つのビュー要素のそれぞれが、 **ロゴ、タグライン、イベントリスト**&#x200B;がAEMからのコンテンツで初期化されます。
-   * AEMコンテンツをMobileアプリのビュー要素にバインドするために、各AEMコンポーネントを表す JSON は、Java POJO にオブジェクトがマッピングされ、その後、Android ビュー要素にバインドされます。
+1. を開く [!DNL WKND Mobile] アプリが `HTTP GET` 次の場所で AEM パブリッシュにリクエスト： `/content/wknd-mobile/en/api/events.model.json` をクリックして、モバイルアプリの UI に入力するコンテンツを収集します。
+2. AEMからコンテンツを受け取ると、モバイルアプリの 3 つのビュー要素のそれぞれが、 **ロゴ、タグライン、イベントリスト**&#x200B;がAEMからのコンテンツで初期化されます。
+   * AEMコンテンツをモバイルアプリのビュー要素にバインドする場合、各AEMコンポーネントを表す JSON は、Java POJO にオブジェクトがマッピングされ、その後、Android ビュー要素にバインドされます。
       * 画像コンポーネント JSON →ロゴ POJO →ロゴ ImageView
       * テキストコンポーネント JSON → TagLine POJO →テキスト ImageView
       * コンテンツフラグメントリスト JSON →イベント POJO →イベントリサイクラービュー
-   * *Mobile App コードは、より大きな JSON 応答内の既知の場所が原因で、JSON を POJO にマッピングできます。 「image」、「text」、「contentfragmentlist」の JSON キーは、バッキングAEMコンポーネントのノード名によって決まることに注意してください。 これらのノード名が変更されると、JSON データから必要なコンテンツをソースする方法がわからなくなるので、Mobileアプリは機能しなくなります。*
+   * *モバイルアプリコードは、より大きな JSON 応答内の既知の場所が原因で、JSON を POJO にマッピングできます。 「image」、「text」、「contentfragmentlist」の JSON キーは、バッキングAEMコンポーネントのノード名によって決まることに注意してください。 これらのノード名が変更されると、JSON データから必要なコンテンツをソースする方法がわからないので、モバイルアプリは機能しなくなります。*
 
 #### AEM Content Services エンドポイントの呼び出し
 
-以下は、Mobile App の `MainActivity` は、AEM Content Services を呼び出して、Mobile App エクスペリエンスを駆動するコンテンツを収集します。
+以下は、モバイルアプリの `MainActivity` は、AEM Content Services を呼び出して、モバイルアプリエクスペリエンスを駆動するコンテンツを収集します。
 
 ```
 protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +128,7 @@ private void initApp(final List<ViewBinder> viewBinders) {
 }
 ```
 
-`onCreate(..)` はMobileアプリの初期化フックで、3 つのカスタムを登録します。 `ViewBinders` JSON を解析し、値を `View` 要素。
+`onCreate(..)` はモバイルアプリの初期化フックで、3 つのカスタム `ViewBinders` JSON を解析し、値を `View` 要素。
 
 `initApp(...)` が呼び出され、AEM パブリッシュ上のAEM Content Services エンドポイントに対して、コンテンツを収集するための HTTPGETリクエストがおこなわれます。 有効な JSON 応答を受け取ると、JSON 応答が各 `ViewBinder` JSON を解析し、モバイルにバインドする役割を持つ `View` 要素。
 
@@ -183,11 +183,11 @@ public class Image {
 
 JSON オブジェクトから多くのデータポイントを選択する必要があるイベント POJO は、単純な画像よりもこの方法のメリットが大きいです。この方法は、次のようなものです。 `src`.
 
-## Mobile App Experience の参照
+## モバイルアプリのエクスペリエンスを見る
 
-これで、AEM Content Services がMobileのネイティブエクスペリエンスを促進する方法を理解できたので、以下の手順を実行して、変更内容をMobileアプリに反映させる方法を学習しました。
+これで、AEM Content Services がネイティブの Mobile エクスペリエンスを促進する方法を理解できたので、以下の手順を実行して、変更をモバイルアプリに反映させる方法を学習しました。
 
-各手順の後、Mobileアプリをプルして更新し、モバイルエクスペリエンスの更新を確認します。
+各手順の後、モバイルアプリをプルして更新し、モバイルエクスペリエンスの更新を確認します。
 
 1. 作成して公開 **新規 [!DNL Event] コンテンツフラグメント**
 1. 非公開 **既存 [!DNL Event] コンテンツフラグメント**

@@ -1,39 +1,39 @@
 ---
-title: AEMスタイルシステムのコード作成方法について
-description: このビデオでは、スタイルシステムを使用してAdobe Experience Managerのコアタイトルコンポーネントのスタイル設定に使用するCSS（またはLESS）とJavaScriptの構造と、これらのスタイルがHTMLおよびDOMにどのように適用されるかについて説明します。
+title: AEM Style System のコード作成方法について
+description: このビデオでは、スタイルシステムを使用して Adobe Experience Manager のコアタイトルコンポーネントのスタイル設定に使用する CSS（または LESS）と JavaScript の構造、およびこれらのスタイルがHTMLと DOM にどのように適用されるかについて説明します。
 feature: Style System
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
 
+# スタイルシステムのコードを作成する方法について{#understanding-how-to-code-for-the-aem-style-system}
 
-# スタイルシステムのコーディング方法について{#understanding-how-to-code-for-the-aem-style-system}
-
-このビデオでは、Experience Managerのコアタイトルコンポーネントのスタイル設定に使用されるCSS（または[!DNL LESS]）とJavaScriptの構造と、これらのスタイルがHTMLおよびDOMにどのように適用されるかについて説明します。
+このビデオでは、CSS( または [!DNL LESS]) や JavaScript を使用して、スタイルシステムを使用して Experience Manager のコアタイトルコンポーネントのスタイル設定や、これらのスタイルがHTMLと DOM にどのように適用されるかを設定できます。
 
 
-## スタイルシステムのコーディング方法について {#understanding-how-to-code-for-the-style-system}
+## スタイルシステムのコードを作成する方法について {#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
 
-提供されているAEMパッケージ(**technical-review.sites.style-system-1.0.0.zip**)では、サンプルのタイトルスタイル、We.Retailレイアウトコンテナおよびタイトルコンポーネントのサンプルポリシー、およびサンプルページがインストールされます。
+提供されたAEMパッケージ (**technical-review.sites.style-system-1.0.0.zip**) は、サンプルのタイトルスタイル、We.Retail レイアウトコンテナおよびタイトルコンポーネントのサンプルポリシー、サンプルページをインストールします。
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
 ### CSS {#the-css}
 
-次に、にあるサンプルスタイルの[!DNL LESS]定義を示します。
+次に、 [!DNL LESS] 次の場所にあるサンプルスタイルの定義：
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-CSSを好むユーザーの場合、このコードスニペットの下に、この[!DNL LESS]によってコンパイルされるCSSが表示されます。
+CSS を好むユーザーの場合、このコードスニペットの下に CSS が表示されます。 [!DNL LESS] をにコンパイルします。
 
 ```css
 /* LESS */
@@ -61,7 +61,7 @@ CSSを好むユーザーの場合、このコードスニペットの下に、�
 }
 ```
 
-上記の[!DNL LESS]は、次のCSSにExperience Managerでネイティブにコンパイルされます。
+上記 [!DNL LESS] は、次の CSS にExperience Managerでネイティブにコンパイルされます。
 
 ```css
 /* CSS */
@@ -88,11 +88,11 @@ CSSを好むユーザーの場合、このコードスニペットの下に、�
 
 ### JavaScript {#example-javascript}
 
-次のJavaScriptは、サンプルスタイルがタイトルコンポーネントに適用されている場合に、現在のページの最終変更日時をタイトルテキストの下に収集し、挿入します。
+次の JavaScript は、タイトルコンポーネントにサンプルスタイルが適用されている場合に、タイトルテキストの下に現在のページの最終変更日時を収集し、挿入します。
 
-jQueryの使用はオプションで、使用する命名規則も同様です。
+jQuery の使用はオプションで、使用する命名規則も同様です。
 
-次に、にあるサンプルスタイルの[!DNL LESS]定義を示します。
+次に、 [!DNL LESS] 次の場所にあるサンプルスタイルの定義：
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/js/title.js`
 
@@ -146,10 +146,10 @@ jQuery(function ($) {
 
 ### HTMLのベストプラクティス {#html-best-practices}
 
-* HTML（HTLを使用して生成）は、できるだけ構造的に意味のあるものにする必要があります。要素の不要なグループ化やネストを回避する。
-* HTML要素は、BEMスタイルのCSSクラスを使用してアドレス可能にする必要があります。
+* HTML（HTL を介して生成）は、できるだけ構造的に意味的である必要があります。要素の不要なグループ化やネストを回避する。
+* HTML要素は、BEM スタイルの CSS クラスを介してアドレス可能にする必要があります。
 
-**良い**  — コンポーネント内のすべての要素は、BEM表記でアドレス可能です。
+**良い**  — コンポーネント内のすべての要素は、BEM 表記を使用してアドレス可能です。
 
 ```html
 <!-- Good practice -->
@@ -160,7 +160,7 @@ jQuery(function ($) {
 </div>
 ```
 
-**不良**  — リスト要素とリスト要素は要素名でのみアドレス可能です。
+**悪い**  — リスト要素とリスト要素は、要素名でのみアドレス可能です。
 
 ```html
 <!-- Bad practice -->
@@ -171,52 +171,52 @@ jQuery(function ($) {
 </div>
 ```
 
-* 公開するバックエンド開発を必要とするデータを少なくして公開するよりも、公開するデータを増やして非表示にする方が効果的です。
+* 公開するバックエンド開発を必要とするデータをあまりに少なく公開するよりも、より多くのデータを公開して非表示にする方が効果的です。
 
-   * 作成者がHTMLをリーンな状態に保つのに役立つオーサー可能なコンテンツトグルの実装。オーサー可能なコンテンツトグルを使用すると、作成者は、HTMLに書き込むコンテンツ要素を選択できます。 は、特に、すべてのスタイルで使用されるとは限らない、HTMLに画像を書き込む場合に重要になります。
-   * このルールの例外は、CSSで非表示のイベント画像は必要なく取得されるので、高価なリソース（画像など）がデフォルトで公開される場合です。
+   * 作成者可能なコンテンツの切り替えの実装は、このHTMLを減らすのに役立ちます。作成者は、HTMLに書き込むコンテンツ要素を選択できます。 は、特に、すべてのスタイルに使用されない可能性のあるHTMLに画像を書き込む際に重要です。
+   * このルールの例外は、CSS で非表示のイベント画像が不必要に取得されるので、高価なリソース（画像など）がデフォルトで公開される場合です。
 
-      * 最新の画像コンポーネントでは、多くの場合、JavaScriptを使用して、ユースケース（ビューポート）に最適な画像を選択して読み込みます。
+      * 最新の画像コンポーネントでは、多くの場合、JavaScript を使用して、ユースケース（ビューポート）に最も適した画像を選択して読み込みます。
 
-### CSSのベストプラクティス {#css-best-practices}
+### CSS のベストプラクティス {#css-best-practices}
 
 >[!NOTE]
 >
->[BEM](https://en.bem.info/)で指定されたように`BLOCK`と`BLOCK--MODIFIER`が同じ要素に適用されない点で、スタイルシステムは[BEM](https://en.bem.info/)とは技術的に多少異なります。
+>スタイルシステムは、少し技術的な相違を生じます [BEM](https://en.bem.info/)、 `BLOCK` および `BLOCK--MODIFIER` は、 [BEM](https://en.bem.info/).
 >
->代わりに、製品の制約により、`BLOCK--MODIFIER`が`BLOCK`要素の親に適用されます。
+>代わりに、製品の制約により、 `BLOCK--MODIFIER` が `BLOCK` 要素。
 >
->[BEM](https://en.bem.info/)のその他すべてのテナントは、と整合する必要があります。
+>その他すべてのテナント [BEM](https://en.bem.info/) は、と整列する必要があります。
 
-* CSSの定義を明確にし、再利用性を高めるために、 [LESS](https://lesscss.org/) (AEMでネイティブにサポート)や[SCSS](https://sass-lang.com/) （カスタムビルドシステムが必要）などのプリプロセッサーを使用します。
+* 次のようなプリプロセッサーを使用： [LESS](https://lesscss.org/) (AEMネイティブでサポート ) または [SCSS](https://sass-lang.com/) （カスタムビルドシステムが必要）を使用して、CSS の明確な定義と再利用性を実現する。
 
-* セレクターの重み/特異性を均一にする。これにより、識別が困難なCSSカスケードの競合を回避し、解決できます。
-* 各スタイルを個別のファイルに編成します。
-   * LESS/SCSS `@imports`を使用して、または生のCSSが必要な場合は、HTMLクライアントライブラリファイルを含めるか、カスタムフロントエンドアセットビルドシステムを使用して、これらのファイルを組み合わせることができます。
+* セレクターの重み/特異性を一定に保つ。これにより、CSS のカスケード競合を回避し、識別しにくい問題を解決できます。
+* 各スタイルを個別のファイルに整理します。
+   * LESS/SCSS を使用してこれらのファイルを組み合わせることができます `@imports` 生の CSS が必要な場合は、HTMLクライアントライブラリファイルを含めるか、カスタムフロントエンドアセットビルドシステムを使用します。
 * 多くの複雑なスタイルを混在させないでください。
-   * 1つのコンポーネントに一度に適用できるスタイルが多いほど、順列の種類が多くなります。 これは、ブランドの整合性の維持/QA/確保が難しくなる可能性があります。
-* 常にCSSクラス（BEM表記に従う）を使用して、CSSルールを定義します。
-   * CSSクラスを持たない要素（つまり、ベア要素）を選択する必要が絶対にある場合は、CSS定義でそれらの要素を上に移動して、選択可能なCSSクラスを持つそのタイプの要素との競合よりも特異性が低いことを明確にします。
-* `BLOCK--MODIFIER`はレスポンシブグリッドに添付されるので、直接スタイルを設定しないでください。 この要素の表示を変更すると、レスポンシブグリッドのレンダリングと機能に影響を与える可能性があるので、レスポンシブグリッドの動作を変更する目的がある場合にのみ、このレベルのスタイルを設定できます。
-* `BLOCK--MODIFIER`を使用してスタイル範囲を適用します。 `BLOCK__ELEMENT--MODIFIERS`はコンポーネントで使用できますが、`BLOCK`はコンポーネントを表し、コンポーネントはスタイル設定されるので、スタイルは`BLOCK--MODIFIER`を介して「定義」され、スコープされます。
+   * 1 つのコンポーネントに一度に適用できるスタイルが多いほど、順列の種類が多くなります。 これは、ブランドの整合性の維持、QA、確保が難しくなる可能性があります。
+* 常に CSS クラス（BEM 表記に従う）を使用して、CSS ルールを定義します。
+   * CSS クラスを持たない要素（ベア要素）を選択する必要が絶対にある場合は、CSS 定義の要素を高くして、選択可能な CSS クラスを持つそのタイプの要素との競合よりも特異性が低いことを明確に示します。
+* のスタイル設定を避ける `BLOCK--MODIFIER` レスポンシブグリッドにアタッチされるときに、直接。 この要素の表示を変更すると、レスポンシブグリッドのレンダリングと機能に影響を与える可能性があるので、レスポンシブグリッドの動作を変更する目的がある場合のみ、このレベルのスタイルを設定できます。
+* 次を使用してスタイル範囲を適用 `BLOCK--MODIFIER`. この `BLOCK__ELEMENT--MODIFIERS` はコンポーネントで使用できますが、 `BLOCK` はコンポーネントを表し、コンポーネントはスタイル設定されたもので、スタイルは「定義済み」で、スコープはを使用して設定されます `BLOCK--MODIFIER`.
 
-CSSセレクターの構造の例を次に示します。
+CSS セレクターの構造の例を次に示します。
 
 <table> 
  <tbody> 
   <tr> 
-   <td valign="bottom"><p>第1レベルセレクタ</p> <p>BLOCK:MODIFIER</p> </td> 
-   <td valign="bottom"><p>第2レベルセレクター</p> <p>ブロック</p> </td> 
-   <td valign="bottom"><p>第3レベルセレクター</p> <p>BLOCK__ELEMENT</p> </td> 
+   <td valign="bottom"><p>第 1 レベルのセレクター</p> <p>ブロック — 修飾子</p> </td> 
+   <td valign="bottom"><p>第 2 レベルセレクター</p> <p>ブロック</p> </td> 
+   <td valign="bottom"><p>第 3 レベルのセレクター</p> <p>BLOCK__ELEMENT</p> </td> 
    <td> </td> 
-   <td valign="middle">有効なCSSセレクター</td> 
+   <td valign="middle">有効な CSS セレクター</td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-list—dark</span></td> 
    <td valign="middle"><span class="code">.cmp-list</span></td> 
    <td valign="middle"><span class="code">.cmp-list__item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list__item {  </span></strong></p> <p><strong> 色：青。</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list__item { </span></strong></p> <p><strong> 色：青い。</strong></p> <p><strong> }</strong></p> </td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-image—hero</span></td> 
@@ -228,34 +228,34 @@ CSSセレクターの構造の例を次に示します。
  </tbody> 
 </table>
 
-コンポーネントがネストされている場合、これらのネストされたコンポーネント要素のCSSセレクターの深さは、第3レベルのセレクターを超えます。 ネストされたコンポーネントに対して同じパターンを繰り返しますが、親コンポーネントの`BLOCK`で範囲が指定されます。 つまり、ネストされたコンポーネントの`BLOCK`を3番目のレベルで開始し、ネストされたコンポーネントの`ELEMENT`を4番目のセレクターレベルで開始します。
+コンポーネントがネストされている場合、これらのネストされたコンポーネント要素の CSS セレクターの深さは、第 3 レベルのセレクターを超えます。 親コンポーネントの `BLOCK`. つまり、ネストされたコンポーネントの `BLOCK` 3 番目のレベル、およびネストされたコンポーネントの `ELEMENT` が 4 番目のセレクターレベルにある。
 
-### JavaScriptのベストプラクティス {#javascript-best-practices}
+### JavaScript のベストプラクティス {#javascript-best-practices}
 
-この節で定義するベストプラクティスは、「スタイルJavaScript」、つまり、機能的な目的ではなく、スタイル用にコンポーネントを操作することを目的としたJavaScriptに関係します。
+この節で定義するベストプラクティスは、特に、機能的な目的ではなく、スタイル用にコンポーネントを操作することを目的とした「style-JavaScript」または JavaScript に関係します。
 
-* Style-JavaScriptは慎重に使用する必要があり、少数派の使用例です。
-* Style-JavaScriptは、主に、CSSによるスタイル設定をサポートするためにコンポーネントのDOMを操作するために使用する必要があります。
-* コンポーネントがページ上に何度も表示される場合にJavaScriptの使用を再評価し、計算/再描画のコストを把握します。
-* コンポーネントがページに複数回表示される場合に、新しいデータ/コンテンツを(AJAXを介して)非同期で取り込む場合にJavaScriptの使用を再評価します。
+* Style-JavaScript は慎重に使用する必要があり、少数派の使用例です。
+* Style-JavaScript は主に、CSS によるスタイル設定をサポートするためにコンポーネントの DOM を操作するために使用する必要があります。
+* コンポーネントがページ上に複数回表示される場合の JavaScript の使用を再評価し、計算/描画のコストを把握します。
+* コンポーネントがページに複数回表示される場合に、新しいデータ/コンテンツを (AJAXを介して ) 非同期で取り込む場合、JavaScript の使用を再評価します。
 * 公開エクスペリエンスとオーサリングエクスペリエンスの両方を処理します。
-* 可能な場合は、style-JavaScriptを再使用します。
-   * 例えば、1つのコンポーネントの複数のスタイルで画像を背景画像に移動する必要がある場合、style-JavaScriptを1回実装して複数の`BLOCK--MODIFIERs`に添付できます。
-* 可能な場合は、style-JavaScriptと機能JavaScriptを区切ります。
-* HTLを介してHTMLでこれらのDOM変更をJavaScriptのコストとマニフェストの両方を直接評価します。
-   * スタイルJavaScriptを使用するコンポーネントでサーバー側の変更が必要な場合は、JavaScript操作がその時点で取り込めるかどうか、およびコンポーネントのパフォーマンスとサポートに与える影響と影響を評価します。
+* 可能な場合は、style-JavaScript を再利用します。
+   * 例えば、1 つのコンポーネントの複数のスタイルで画像を背景画像に移動する必要がある場合、style-JavaScript は 1 回実装して複数のスタイルに添付できます `BLOCK--MODIFIERs`.
+* 可能な場合は、style-JavaScript と機能 JavaScript を区別します。
+* HTL を介して直接HTMLでこれらの DOM 変更を示すのと比較して、JavaScript のコストを評価します。
+   * style-JavaScript を使用するコンポーネントでサーバー側の変更が必要な場合は、JavaScript 操作がその時点で取り込めるかどうか、およびコンポーネントのパフォーマンスとサポート性に与える影響と影響を評価します。
 
 #### パフォーマンスに関する考慮事項 {#performance-considerations}
 
-* Style-JavaScriptは明るく、傾いた状態に保つ必要があります。
-* ちらつきや不要な再描画を避けるために、最初に`BLOCK--MODIFIER BLOCK`を介してコンポーネントを非表示にし、JavaScriptでのすべてのDOM操作が完了したら表示します。
-* スタイルとJavaScriptの操作のパフォーマンスは、DOMReady上の要素にアタッチして変更する基本的なjQueryプラグインと似ています。
-* リクエストがgzip圧縮され、CSSとJavaScriptが縮小されていることを確認します。
+* Style-JavaScript は明るく、傾いている状態に保つ必要があります。
+* ちらつきや不要な再描画を避けるために、最初はを介してコンポーネントを非表示にします。 `BLOCK--MODIFIER BLOCK`JavaScript 内のすべての DOM 操作が完了したら表示します。
+* style-JavaScript 操作のパフォーマンスは、DOMReady 上の要素に関連付けて変更する基本的な jQuery プラグインと同じです。
+* リクエストが gzip 圧縮され、CSS と JavaScript が縮小されていることを確認します。
 
 ## その他のリソース {#additional-resources}
 
 * [スタイルシステムドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/style-system.html)
 * [AEMクライアントライブラリの作成](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [BEM（ブロック要素修飾子）ドキュメントWebサイト](https://getbem.com/)
-* [LESSドキュメントWebサイト](https://lesscss.org/)
-* [jQuery Webサイト](https://jquery.com/)
+* [BEM（ブロック要素修飾子）ドキュメント Web サイト](https://getbem.com/)
+* [LESS ドキュメント Web サイト](https://lesscss.org/)
+* [jQuery Web サイト](https://jquery.com/)

@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1264'
-ht-degree: 2%
+source-wordcount: '1261'
+ht-degree: 5%
 
 ---
 
@@ -57,7 +57,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 まず、AEMの仮想プライベートネットワークを有効にします。
 
-1. まず、Cloud Manager API を使用してアドバンスドネットワークが設定される地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうために必要になります。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API を使用して、アドバンスドネットワークが必要な地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
 
    __listRegions HTTP リクエスト__
 

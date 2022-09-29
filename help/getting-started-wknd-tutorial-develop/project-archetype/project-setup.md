@@ -12,10 +12,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 13%
+source-wordcount: '1838'
+ht-degree: 12%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 13%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). AEMプロジェクトには、Sites 実装で使用されるすべてのコード、コンテンツ、設定が含まれています。 この章で生成されるプロジェクトは、WKND サイトの実装の基礎となり、今後の章で構築される予定です。
+この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). AEMプロジェクトには、Sites 実装で使用されるすべてのコード、コンテンツ、設定が含まれています。 この章で生成されるプロジェクトは、WKND サイトの実装の基礎となり、今後の章で構築されます。
 
 **Maven プロジェクトとは** - [Apache Maven](https://maven.apache.org/) は、プロジェクトを構築するためのソフトウェア管理ツールです。 *すべてのAdobe Experience Manager* 実装では、Maven プロジェクトを使用して、AEM上にカスタムコードを作成、管理およびデプロイします。
 
@@ -159,7 +159,7 @@ AEM用の Maven マルチモジュールプロジェクトを作成する方法�
 
 1. ローカルのAEMインスタンスでパッケージマネージャーに移動します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). のパッケージが表示されます。 `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`、および `aem-guides-wknd.all`.
 
-1. サイトコンソールに移動します。 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). サイトの 1 つに WKND サイトがあります。US と言語の階層を持つサイト構造が含まれますマスター。 このサイト階層は、 `language_country` および `isSingleCountryWebsite` アーキタイプを使用してプロジェクトを生成する際に使用します。
+1. サイトコンソールに移動します。 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND サイトはその 1 つです。 US と言語の階層を持つサイト構造が含まれますマスター。 このサイト階層は、 `language_country` および `isSingleCountryWebsite` アーキタイプを使用してプロジェクトを生成する際に使用します。
 
 1. を開きます。 **US** `>` **英語** ページを表示するには、ページを選択して **編集** ボタンをクリックします。
 
@@ -254,7 +254,7 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 
 ### Ui.apps および Ui.content モジュール {#apps-content-module}
 
-この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、の下のサイトで必要となるすべてのレンダリングコードが含まれます。 `/apps`. これには CSS／JS が含まれ、それらは [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja) と呼ばれる AEM の形式で保存されます。また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
+この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、の下のサイトで必要となるすべてのレンダリングコードが含まれます。 `/apps`. これには CSS/JS が含まれ、CSS/JS はAEMの [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja). また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
 
 このモジュールのみを構築するには：
 
@@ -325,7 +325,7 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 
    この場合も、ポートでAEMインスタンスが実行されていない場合、ビルドエラーが発生することが予想されます **4504** が使用可能です。 パラメーター `aem.port` は、次の場所にある POM ファイルで定義されます。 `aem-guides-wknd/pom.xml`.
 
-この **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** モジュールは、 **ui.apps** モジュール。 唯一の違いは **ui.content** モジュールには、 **可変** コンテンツ。 **可変** コンテンツとは、基本的に、ソース管理下に保存されている、テンプレート、ポリシー、フォルダー構造などの非コード設定を指します。 **しかし** をAEMインスタンス上で直接変更できます。 これについては、ページとテンプレートの章で詳しく説明します。
+この **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** モジュールは、 **ui.apps** モジュール。 唯一の違いは **ui.content** モジュールには、 **可変** コンテンツ。 **可変** コンテンツとは、基本的に、ソース管理下に保存されている、テンプレート、ポリシー、フォルダー構造などの非コード設定を指します。 **しかし** をAEMインスタンス上で直接変更できます。 これについて詳しくは、ページとテンプレートの章で説明しています。
 
 をビルドするために使用するのと同じ Maven コマンド **ui.apps** モジュールは、 **ui.content** モジュール。 上記の手順を、 **ui.content** フォルダー。
 

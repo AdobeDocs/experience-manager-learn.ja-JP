@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '597'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ Line2 は、リクエストから saveLocation を抽出します
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 「Sling Referrer filter」を検索します。
-1. 「Allow Empty」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用する必要があります）サンプルコードをテストする方法は多数あります。 Postman アプリを使用するのが最も簡単で簡単です。 Postman を使用すると、サーバーにPOSTリクエストを実行できます。 システムに Postman アプリをインストールします。
+1. 「Allow Empty」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用する必要があります）サンプルコードをテストする方法は多数あります。 Postmanアプリを最もすばやく最も簡単に使用できます。 Postmanを使用すると、サーバーにPOSTリクエストを送信できます。 システムにPostmanアプリをインストールします。
 アプリを起動し、次の URL を入力して、書き出しデータ API をテストします。
 
 ドロップダウンリストhttp://localhost:4502/content/AemFormsSamples/exportdata.htmlから「POST」を選択していることを確認します。「認証」に「基本認証」と指定してください。 AEM Server のユーザー名とパスワードの指定「本文」タブに移動し、次の画像に示すリクエストパラメーターを指定します
@@ -86,8 +86,8 @@ Line2 は、リクエストから saveLocation を抽出します
 * **要求パラメーター:**
 
    * **pdffile** :データの結合先の pdf ファイル
-   * **xmlfile**:PDF ファイルと結合される XML データファイル
-   * **saveLocation**:レンダリングしたドキュメントをファイルシステム上に保存する場所。 例： c:\\outputsample.pdf
+   * **xmlfile**:PDF ファイルとマージされる xml データファイル
+   * **saveLocation**:レンダリングしたドキュメントをファイルシステム上に保存する場所。 例えば、`c:\\outputsample.pdf` です。
 
 **データをPDFファイルから書き出し**
 * FormsService を使用してデータをPDFファイルから書き出す

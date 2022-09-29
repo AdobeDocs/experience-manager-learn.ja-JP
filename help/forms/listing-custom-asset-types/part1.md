@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ Search &amp; Lister コンポーネントに新しいタブ（アセットリス
 1. 次のオーバーレイノードを作成 **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. オーバーレイの場所を「/apps」に設定します。
-1. **/apps/fd/fp/extensions/querybuilder/assettypes に作成された新しい構造に移動します**
+1. 次の場所で作成された新しい構造に移動します。 `/apps/fd/fp/extensions/querybuilder/assettypes`
 
 1. この場所の下に、登録するタイプの「nt:unstructured」ノードを作成し、そのノードに名前を付けます **mp4files. この mp4files ノードに次の 2 つのプロパティを追加します。**
 

@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -89,15 +89,13 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
    // TODO Auto-generated catch block
    e1.printStackTrace();
   }
-
  }
-
 }
 ```
 
 次のコードは、アダプティブフォームが参照するクライアントライブラリの一部です。 ユーザーがアダプティブフォームに添付ファイルを追加すると、このコードがトリガーされます。 コードは、要求パラメーターで渡された添付ファイルのパスを使用して、GETをサーブレットに呼び出します。 サーブレット呼び出しから受け取ったデータは、アダプティブフォームへの入力に使用されます。
 
-```
+```javascript
 $(document).ready(function()
    {
        guideBridge.on("elementValueChanged",function(event,data){
@@ -138,7 +136,7 @@ $(document).ready(function()
 
 23 行目 — DocumentServices extractBarCode メソッドを呼び出して、デコードされたデータを含む JSON オブジェクトを取得します
 
-これをシステムで実行するには、次の手順に従ってください
+これをシステムで実行するには、次の手順に従ってください。
 
 1. [BarcodeService.zip のダウンロード](assets/barcodeservice.zip) パッケージマネージャーを使用してAEMにインポートします。
 1. [カスタムドキュメントサービスバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)

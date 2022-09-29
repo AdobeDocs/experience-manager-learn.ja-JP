@@ -1,5 +1,5 @@
 ---
-title: ソリューションをテストする
+title: Forms Assembler ソリューションのテスト
 description: ExecuteAssemblerService.java を実行してソリューションをテストします。
 type: Documentation
 role: Developer
@@ -8,10 +8,10 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 0%
+source-wordcount: '270'
+ht-degree: 3%
 
 ---
 
@@ -45,6 +45,6 @@ ht-degree: 0%
 
 
 >[!NOTE]
-> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを通過するには、必ず [AEMのテクニカルアカウントユーザーに対する適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを通過するには、必ず [AEMのテクニカルアカウントユーザーに対する適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=ja#aemでのアクセスの設定).
 
 **AEM Forms Users** 私がこのコースで使った役割です。

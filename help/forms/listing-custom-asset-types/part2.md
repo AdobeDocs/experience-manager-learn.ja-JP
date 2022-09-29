@@ -1,8 +1,6 @@
 ---
 title: AEM Formsでのカスタムアセットタイプのリスト
-seo-title: Listing Custom Asset Types in AEM Forms
 description: 第 2 部AEM Formsでのカスタムアセットタイプのリスト
-seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
@@ -15,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -25,7 +23,6 @@ ht-degree: 0%
 # AEM Formsでのカスタムアセットタイプのリスト {#listing-custom-asset-types-in-aem-forms}
 
 ## カスタムテンプレートの作成 {#creating-custom-template}
-
 
 この記事の目的で、カスタムアセットタイプと OOTB アセットタイプを同じページに表示するカスタムテンプレートを作成します。 カスタムテンプレートを作成するには、次の手順に従ってください
 
@@ -117,4 +114,4 @@ ht-degree: 0%
 >ポータルでパブリッシュサーバー上のカスタムアセットタイプがリストされている場合は、ノードに対して「fd-service」ユーザーに対する「読み取り」権限を必ず付与してください **/apps/fd/fp/extensions/querybuilder**
 
 ![assettypes](assets/assettypeslistings.png)
-[パッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、search &amp; lister コンポーネントを使用してリスト表示するアセットタイプとして使用される、サンプル mp4 と word ドキュメントおよび xdp ファイルが含まれます
+[パッケージマネージャーを使用して、このパッケージをダウンロードしてインストールしてください。](assets/customassettypekt1.zip) これには、Search &amp; Lister コンポーネントを使用してリスト表示するアセットタイプとして使用される、サンプル mp4 と Word ドキュメントおよび xdp ファイルが含まれます
