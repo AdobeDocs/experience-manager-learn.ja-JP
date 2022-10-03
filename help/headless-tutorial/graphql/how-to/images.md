@@ -9,14 +9,14 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
-# 画像 (AEMヘッドレス )
+# 画像 (AEMヘッドレス ) {#images-with-aem-headless}
 
 画像は、 [豊富で魅力的なAEMヘッドレスエクスペリエンスの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja). AEMヘッドレスは、画像アセットの管理と、その最適化された配信をサポートします。
 
@@ -39,6 +39,11 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
 の使用 `_authorUrl` および `_publishUrl` は、GraphQL 応答のソースに使用されるAEM GraphQL エンドポイントと一致する必要があります。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_images"
+>title="画像の使用"
+>abstract="AEMヘッドレスが画像アセットの管理と、その最適化された配信をどのようにサポートするかを説明します。"
 
 ## コンテンツフラグメントモデル
 

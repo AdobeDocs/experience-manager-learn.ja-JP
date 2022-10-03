@@ -6,14 +6,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 4%
 
 ---
 
-# AEM ヘッドレスの概要 - GraphQL
+# AEM ヘッドレスの概要 - GraphQL {#getting-started-with-aem-headless}
 
 AEM GraphQL APIs for Content Fragments は、外部クライアントアプリケーションがAEMで管理されるコンテンツを使用してエクスペリエンスをレンダリングするヘッドレス CMS シナリオをサポートします。
 
@@ -27,6 +27,12 @@ GraphQL は、これらの課題を解決するために、クエリベースの
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
 このビデオでは、AEMで実装された GraphQL API の概要を説明します。 AEMの GraphQL API は主に、ヘッドレスデプロイメントの一環として、AEMコンテンツフラグメントをダウンストリームアプリケーションに配信するように設計されています。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_overview"
+>title="AEMヘッドレスの概要"
+>abstract="GraphQL を使用してコンテンツフラグメントを配信する方法を説明します。"
+>additional-url="https://video.tv.adobe.com/v/328618" text="AEMでの GraphQL の概要"
 
 ## AEMヘッドレス GraphQL ビデオシリーズ
 
