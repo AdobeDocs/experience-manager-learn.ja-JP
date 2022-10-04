@@ -4,7 +4,7 @@ description: Experience Manager Sitesについては、ビデオやチュート�
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b6c92ca49eaa68f9a0374a5ad79fe69047ffa27c
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 23%
@@ -14,6 +14,9 @@ ht-degree: 23%
 # AEM Sites のビデオおよびチュートリアル {#overview}
 
 Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理プラットフォームです。 このユーザーガイドには、AEM Sitesの様々な機能に関するビデオとチュートリアルが含まれています。
+
+
+<div id="whats-new-section">
 
 ## 新機能
 
@@ -36,6 +39,8 @@ Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理
 * **[SPA Editor の使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
    *シングルページアプリケーション (SPA) のAEM編集機能について説明します。*
+
+</div>
 
 ## スタッフのおすすめ
 
