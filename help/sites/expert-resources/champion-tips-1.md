@@ -1,11 +1,12 @@
 ---
-title: AEMチャンピオンのヒントとテクニックセッション 1
-description: サイト階層、分類、タグ付けに関するヒントのベストプラクティス
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: AEMチャンピオンのヒントとテクニック — 編集可能なテンプレート 1
+seo-title: AEM Champion Tips and Tricks - Editable Templates 1
+description: AEM Champion およびエキスパートである Greg Dimeris による、AEM Sitesの編集可能なテンプレートに関するこれらのクイックヒントをご覧ください。 今すぐインスタンスで試してみてください。
+seo-description: Check out these quick tips for Editable Templates in AEM Sites by AEM Champion and expert, Greg Dimeris. Try them out in your instance today.
+audience: author, marketer
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '21'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---

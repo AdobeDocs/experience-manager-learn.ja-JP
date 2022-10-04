@@ -1,11 +1,12 @@
 ---
-title: サイトメンテナンスに関するヒントとテクニック
-description: サイトメンテナンスに関するヒントとテクニック
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: 日常のサイトメンテナンスガイド
+seo-title: Your Routine Site Maintenance Guide
+description: 管理者、作成者、開発者のどちらのユーザーでも、AEM Sitesインスタンスのあらゆる側面にアクセスします。 このガイドを使用して、戦略を確実に成功に導くことができます。
+seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+audience: author, marketer, developer
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1094'
 ht-degree: 9%
 
 ---
