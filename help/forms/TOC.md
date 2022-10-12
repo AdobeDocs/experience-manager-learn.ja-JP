@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 747d1823ce1bc6670d1e80abcf6483ac921c0a01
+source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -215,6 +215,7 @@ ht-degree: 3%
    + [AEM Formsでの PDFG サービスの使用](document-services/using-pdfg-in-aem-forms.md)
    + [AEM Formsでの Output とForms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [出力サービスでの xdp フラグメントの使用](document-services/using-fragments-in-output-service.md)
+   + [フラグメントを使用して PDF を生成する ECMA スクリプト](document-services/using-fragments-in-output-service-watched-folder.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時にPDFを生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [モバイルフォームからインタラクティブPDFを生成](document-services/render-interactive-form-using-api.md)
