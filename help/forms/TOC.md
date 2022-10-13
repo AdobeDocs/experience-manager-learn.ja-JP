@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
+source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1718'
 ht-degree: 3%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 3%
    + [環境の設定](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [Sling サーブレットを作成](creating-your-first-osgi-bundle/create-servlet.md)
+   + [サードパーティ製バンドルを含める](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + アダプティブフォーム {#adaptive-forms}
    + [Windows へのAEM Formsのインストール](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Linux への 32 ビットパッケージのインストール](adaptive-forms/installing-aem-form-on-linux.md)
