@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '292'
 ht-degree: 8%
 
 ---
@@ -25,9 +25,9 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 
 このチュートリアルでは、次のトピックについて説明します。
 
-* 新しいプロジェクト設定を作成
-* 新しいコンテンツフラグメントモデルを作成してデータをモデル化
-* 以前に作成したモデルに基づいて、新しいコンテンツフラグメントを作成します。
+* プロジェクト設定を作成する
+* コンテンツフラグメントモデルを作成してデータをモデル化する
+* 以前に作成したモデルに基づいてコンテンツフラグメントを作成します。
 * 統合 GraphiQL 開発ツールを使用して、AEMのコンテンツフラグメントを照会する方法を確認します。
 * GraphQL クエリをAEMに保存または保持するには
 * サンプル React アプリからの永続的な GraphQL クエリを使用
@@ -39,14 +39,14 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 
 * 基本的なHTMLと JavaScript のスキル
 * 以下のツールをローカルにインストールする必要があります。
-   * [Node.js v10 以降](https://nodejs.org/ja/)
+   * [Node.js v14 以降](https://nodejs.org/ja/)
    * [npm 6 以降](https://www.npmjs.com/)
    * [Git](https://git-scm.com/)
    * IDE( 例： [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ### AEM 環境
 
-このチュートリアルを完了するには、 AEM as a Cloud Service環境へのAEM管理者アクセス権をお勧めします。  AEMas a Cloud Service環境にアクセスできない場合は、 [ローカルAEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). ただし、コンテンツフラグメントのナビゲーションなど、一部の製品 UI 画面は異なることに注意する必要があります。
+このチュートリアルを完了するには、 AEM as a Cloud Service環境へのAEM管理者アクセス権をお勧めします。 AEMas a Cloud Service環境にアクセスできない場合は、 [ローカルAEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). ただし、コンテンツフラグメントのナビゲーションなど、一部の製品 UI 画面は異なることに注意する必要があります。
 
 ## さあ始めましょう！
 
