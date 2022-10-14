@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-11245
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '268'
 ht-degree: 2%
 
 ---
@@ -59,6 +59,6 @@ mvn clean install -pAutoInstallSinglePackage
 
 問題が解決しない場合、パッケージはサードパーティバンドルと共にAEMインスタンスにインストールされます。 次を使用して、バンドルを確認できます。 [felix web コンソール](http://localhost:4502/system/console/bundles). サードパーティバンドルは、 `crx` 次に示すリポジトリ
 ![サードパーティ](assets/custom-bundle1.png)
-![サードパーティ](assets/custom-bundle1.png)
+
 
 
