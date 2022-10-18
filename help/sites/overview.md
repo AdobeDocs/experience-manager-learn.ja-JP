@@ -4,7 +4,7 @@ description: Experience Manager Sitesについては、ビデオやチュート�
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: b6c92ca49eaa68f9a0374a5ad79fe69047ffa27c
+source-git-commit: 5dbad9101ce73c2e0370592336d37338e45825ef
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 23%
@@ -41,6 +41,15 @@ Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理
    *シングルページアプリケーション (SPA) のAEM編集機能について説明します。*
 
 </div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## スタッフのおすすめ
 
@@ -87,6 +96,8 @@ Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理
   </td>
 </tr>
 </table>
+
+</div>
 
 ## その他のリソース
 
