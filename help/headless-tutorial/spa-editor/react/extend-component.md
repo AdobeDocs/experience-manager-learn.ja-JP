@@ -11,7 +11,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 4%
@@ -253,7 +253,6 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    import {MapTo} from '@adobe/aem-react-editable-components';
    
    export const BannerEditConfig = {
-   
        emptyLabel: 'Banner',
    
        isEmpty: function(props) {
@@ -281,7 +280,7 @@ SPAエディターでバナーコンポーネントを使用するには、次�
        }
    
        render() {
-           if(BannerEditConfig.isEmpty(this.props)) {
+           if (BannerEditConfig.isEmpty(this.props)) {
                return null;
            }
    
@@ -376,7 +375,7 @@ SPAエディターでバナーコンポーネントを使用するには、次�
        adapters = { BannerModel.class,ComponentExporter.class}, 
        resourceType = BannerModelImpl.RESOURCE_TYPE, 
        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-       )
+   )
    @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
    public class BannerModelImpl implements BannerModel {
    
@@ -420,7 +419,6 @@ SPAエディターでバナーコンポーネントを使用するには、次�
            return null != image ? image.getTitle() : null;
        }
    
-   
        // method required by `ComponentExporter` interface
        // exposes a JSON property named `:type` with a value of `wknd-spa-react/components/banner`
        // required to map the JSON export to the SPA component props via the `MapTo`
@@ -428,7 +426,6 @@ SPAエディターでバナーコンポーネントを使用するには、次�
        public String getExportedType() {
            return BannerModelImpl.RESOURCE_TYPE;
        }
-   
    }
    ```
 
@@ -477,7 +474,7 @@ SPAエディターでバナーコンポーネントを使用するには、次�
 
 1. これで、のレンダリング値が表示されます。 **バナーテキスト**:
 
-   ![バナーテキストが表示されました](assets/extend-component/banner-text-displayed.png)
+![バナーテキストが表示されました](assets/extend-component/banner-text-displayed.png)
 
 1. JSON モデルの応答を次の場所に表示します。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) を検索し、 `wknd-spa-react/components/card`:
 

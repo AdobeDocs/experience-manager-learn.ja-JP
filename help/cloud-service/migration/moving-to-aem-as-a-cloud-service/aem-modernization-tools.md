@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,21 @@ ht-degree: 6%
 
 AEM Modernization Tools を使用して、既存のAEM Sitesコンテンツをアップグレードし、AEMとas a Cloud Serviceした互換性を保ち、ベストプラクティスに合わせる方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336965/?quality=12&learn=on)
+## オールインワンコンバータ
+
+>[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+
+## ページコンバージョン
+
+>[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+
+## コンポーネントの変換
+
+>[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+
+## ポリシーのインポート
+
+>[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
 
 ## AEM Modernization Tools の使用
 
@@ -88,7 +102,6 @@ AEM Modernization ツールは、編集可能なテンプレート、AEM Core WC
 + [AEM Modernizations ツールのダウンロード](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM Modernization Tools ドキュメント](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems - AEM Modernization Suite の概要](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
-
 
 1. ローカルAEM SDK に、新しく最新化された wknd-legacy サイトをデプロイします。 AEM ASK は次の場所からダウンロードできます。
    + [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

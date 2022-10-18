@@ -13,9 +13,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2257'
 ht-degree: 2%
 
 ---
@@ -112,7 +112,7 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントをAdobe Expe
 
    潜在的な XSS 攻撃を避けるために、リッチテキストは `DOMPurify` 使用する前に [dangerlySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) コンテンツをレンダリングします。 を呼び出す `richText` および `text` のプロパティは、この演習の前の JSON モデルから取得したものです。
 
-1. 次に、 `TextEditConfig` ～行 29:
+1. 次に、を開きます。 `ui.frontend/src/components/import-components.js` を見る `TextEditConfig` ～行 86:
 
    ```js
    const TextEditConfig = {
@@ -126,10 +126,10 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントをAdobe Expe
 
    上記のコードは、AEMオーサー環境でプレースホルダーをレンダリングするタイミングを決定する役割を果たします。 この `isEmpty` メソッドの戻り値 **true** 次に、プレースホルダーがレンダリングされます。
 
-1. 最後に、 `MapTo` ～line 62 でを呼び出します。
+1. 最後に、 `MapTo` ～line 94 でを呼び出します。
 
    ```js
-   export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
+   export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
    `MapTo` は、AEM SPA Editor JS SDK(`@adobe/aem-react-editable-components`) をクリックします。 パス `wknd-spa-react/components/text` は、 `sling:resourceType` AEMコンポーネントの このパスは `:type` 以前に確認された JSON モデルによって公開される。 `MapTo` は、JSON モデルの応答を解析し、正しい値を `props` をSPAコンポーネントに追加します。

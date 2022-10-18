@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 3%
@@ -36,7 +36,7 @@ AEM 6.x のカスタムAEM Workflow プロセスは、アセットレンディ�
 
 1. asset compute・ワーカーの構築とデプロイに必要なアカウントとサービスのプロビジョニングと設定
 1. asset computeプロジェクトの作成と設定
-1. カスタムレンディションを生成する amAsset computeワーカーの開発
+1. カスタムレンディションを生成するAsset computeワーカーの開発
 1. テストの書き込みと、カスタムAsset computeワーカーのデバッグ方法の学習
 1. asset computeワーカーをデプロイし、処理プロファイルを介してAEM as a Cloud Serviceオーサーサービスを統合します
 
@@ -58,7 +58,7 @@ Asset computeプロジェクトのローカル開発には、以下を含む従�
 
 ### App Builder
 
-asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe開発者コンソールで App Builder にアクセスして設定およびデプロイする必要があります。
+asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe Developerコンソールで App Builder にアクセスして設定およびデプロイする必要があります。
 
 + [App Builder のセットアップ](./set-up/app-builder.md)
 
@@ -146,7 +146,7 @@ Adobe I/O Runtimeにデプロイすると、Asset computeワーカーは、を�
 
 以下に、その他の情報と、Adobeワーカーを開発するために役立つ API および SDK を提供する様々なAsset computeリソースを示します。
 
-### ドキュメント
+### ドキュメント化
 
 + [asset computeサービスドキュメント](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=ja)
 + [asset compute開発ツールの readme](https://github.com/adobe/asset-compute-devtool)

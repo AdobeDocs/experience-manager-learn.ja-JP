@@ -8,9 +8,9 @@ topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
-source-git-commit: 5c53919dd038c0992e1fe5dd85053f26c03c5111
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '578'
 ht-degree: 8%
 
 ---
@@ -53,7 +53,8 @@ ht-degree: 8%
 * AEM QuickStart.Jar を探し、AEM Forms フォルダーに移動します。
 * この AEM Forms フォルダーに license.properties ファイルをコピーします。
 * 「StartAemForms.bat」という名前のバッチファイルを次の内容で作成します。
-   * java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui ここで、AEM_6.5_Quickstart.jar はAEMのクイックスタート jar の名前です。
+   * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
+      * ここで、AEM_6.5_Quickstart.jar はAEMのクイックスタート jar の名前です。
    * jar の名前は任意の名前に変更できますが、名前がバッチファイルに反映されていることを確認してください。 AEM Forms フォルダーにバッチファイルを保存します。
 
 * 新しいコマンドプロンプトを開き、に移動します。 _c:\aemforms_.

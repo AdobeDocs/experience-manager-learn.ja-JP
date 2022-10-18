@@ -1,6 +1,6 @@
 ---
-title: クライアントサイドライブラリとフロントエンドワークフロー
-description: クライアント側ライブラリまたは clientlib を使用して、Adobe Experience Manager(AEM)Sites 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法について説明します。
+title: クライアントライブラリとフロントエンドワークフロー
+description: クライアントライブラリまたは clientlib を使用して、Adobe Experience Manager(AEM)Sites 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法について説明します。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,14 +11,14 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '2825'
 ht-degree: 8%
 
 ---
 
-# クライアントサイドライブラリとフロントエンドワークフロー {#client-side-libraries}
+# クライアントライブラリとフロントエンドワークフロー {#client-side-libraries}
 
 Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイおよび管理するために、クライアントサイドライブラリ (clientlib) を使用する方法について説明します。 このチュートリアルでは、 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) モジュール、非結合 [webpack](https://webpack.js.org/) プロジェクトを、エンドツーエンドのビルドプロセスに統合することができます。
 
