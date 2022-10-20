@@ -4,14 +4,14 @@ description: Experience Manager Sitesについては、ビデオやチュート�
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 5dbad9101ce73c2e0370592336d37338e45825ef
+source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 23%
+ht-degree: 21%
 
 ---
 
-# AEM Sites のビデオおよびチュートリアル {#overview}
+# AEM Sitesのビデオとチュートリアル {#overview}
 
 Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理プラットフォームです。 このユーザーガイドには、AEM Sitesの様々な機能に関するビデオとチュートリアルが含まれています。
 
