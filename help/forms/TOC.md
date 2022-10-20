@@ -5,9 +5,9 @@ user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
 index: y
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1722'
 ht-degree: 3%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 3%
    + [AEM Forms Workflow での電子メールコンポーネントの送信](adaptive-forms/email-step-aem-workflow-video-use.md)
    + [API を使用した DocumentOfRecord の生成](adaptive-forms/document-of-record-api-tutorial-use.md)
    + [インライン画像の表示](adaptive-forms/inline-images-adaptive-forms.md)
+   + [DAM 画像をインラインで表示中](adaptive-forms/inline-images-from-dam.md)
    + [GeoLocation API の使用](adaptive-forms/using-geolocation-api-in-aem-forms-article.md)
    + [取引レポートの使用](adaptive-forms/transaction-reporting-aem-forms-article-use.md)
    + [AEM Formsでのユーザープロファイルデータの統合](adaptive-forms/user-profile-data-integration-feature-video-use.md)
