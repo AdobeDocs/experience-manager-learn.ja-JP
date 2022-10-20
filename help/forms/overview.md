@@ -1,20 +1,22 @@
 ---
-title: AEM FormsTutorialsとビデオ
+title: AEM Formsのチュートリアルとビデオ
 description: リソースとドキュメントを使用して、AEM Formsのビデオとチュートリアルを参照し、質問に答えてください。
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 19%
+ht-degree: 14%
 
 ---
 
-# AEM FormsTutorialsとビデオ {#overview}
+# AEM Formsのチュートリアルとビデオ {#overview}
 
 Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作成、管理、公開、および更新に特化した、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。このユーザーガイドには、AEM Formsの様々な機能に関するビデオとチュートリアルが含まれています
+
+<div id="whats-new-section">
 
 ## 新機能
 
@@ -29,6 +31,17 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
    *特定のフォームに関連付けられていないワークフローモデルの作成*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## スタッフのおすすめ
 
@@ -76,6 +89,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 </tr>
 </table>
 
+</div>
 
 
 
@@ -84,10 +98,10 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 * [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM Sites Authoring ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites Deploying Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
-* [AEM Assets チュートリアル](/help/assets/overview.md)
-* [AEM Forms チュートリアル](/help/forms/overview.md)
+* [AEM Sites Deploying documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
+* [AEM Assetsチュートリアル](/help/assets/overview.md)
+* [AEM Formsチュートリアル](/help/forms/overview.md)
 * [AEM Foundation チュートリアル](/help/foundation/overview.md)
