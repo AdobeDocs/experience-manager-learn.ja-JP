@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Manager as aCloud Serviceのビデオとチュートリアル
+title: Adobe Experience Manager as a Cloud Serviceのビデオとチュートリアル
 description: Adobe Experience Manager(AEM)as a Cloud Serviceのチュートリアルのコレクションです
 sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 14%
+source-wordcount: '267'
+ht-degree: 13%
 
 ---
 
-# AEM as aCloud Serviceのビデオとチュートリアル {#overview}
+# AEMas a Cloud Serviceのビデオおよびチュートリアル {#overview}
 
 Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEMas a Cloud Serviceは、過去の投資とイノベーションに基づいて構築された、次世代のExperience Manager製品ラインを導入し、すべての使用例と機能を保存および拡張します。
 
@@ -100,5 +100,4 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
 ## その他のリソース
 
-* [Experience League- Adobe Experience Managerを探索](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [Adobe Experience Manager as a Cloud Serviceドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=ja)

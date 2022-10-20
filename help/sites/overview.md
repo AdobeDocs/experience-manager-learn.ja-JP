@@ -4,10 +4,10 @@ description: Experience Manager Sitesについては、ビデオやチュート�
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 21%
+source-wordcount: '345'
+ht-degree: 16%
 
 ---
 
@@ -101,12 +101,11 @@ Adobe Experience Manager(AEM)Sites は、主要なエクスペリエンス管理
 
 ## その他のリソース
 
-* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM Sites Authoring ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites Deploying Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service チュートリアル](/help/cloud-service/overview.md)
-* [AEM Assets チュートリアル](/help/assets/overview.md)
-* [AEM Forms チュートリアル](/help/forms/overview.md)
+* [AEM Sites Deploying documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
+* [AEM Assetsチュートリアル](/help/assets/overview.md)
+* [AEM Formsチュートリアル](/help/forms/overview.md)
 * [AEM Foundation チュートリアル](/help/foundation/overview.md)

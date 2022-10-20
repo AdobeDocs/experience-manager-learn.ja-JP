@@ -3,10 +3,10 @@ title: AEM Assetsのビデオとチュートリアル
 description: ビデオを見て、AEM Asset のサポートとサポートを受けてください。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 10%
+source-wordcount: '185'
+ht-degree: 9%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデ�
 
 ## AEM Assetsウォークスルー
 
-AEM Assetsのこのエンドツーエンドのウォークスルーで、AEM Assetsの概要と、組織のビジネス目標の達成にがどのように使用されるかを説明します。
+AEM Assetsとは何か、および組織のビジネス目標の達成にがどのように使用されるかについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
@@ -83,7 +83,6 @@ AEM Assetsのこのエンドツーエンドのウォークスルーで、AEM Ass
 
 ## その他のリソース
 
-* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM Assets ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
 * [AEM Sitesチュートリアル](/help/sites/overview.md)

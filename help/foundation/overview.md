@@ -4,10 +4,10 @@ description: Adobe Experience Manager Foundation のヘルプを参照するに�
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 3%
+source-wordcount: '244'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +93,6 @@ Adobe Experience Managerは、AEM Sites、Assets およびFormsのユーザー�
 
 ## その他のリソース
 
-* [Experience League- AEMを参照](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
 * [AEM Sitesのビデオとチュートリアル](/help/sites/overview.md)
 * [AEM Assetsのビデオとチュートリアル](/help/assets/overview.md)
