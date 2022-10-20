@@ -10,9 +10,9 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-11-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: f4d4bcc836123ba4320710c3024e03a82a36cfb9
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '228'
 ht-degree: 6%
 
 ---
@@ -49,7 +49,7 @@ AEM Sitesのサイトマップを作成して、SEO を強化する方法を説�
 
 ### 絶対サイトマップ URL
 
-AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). これは、サイトマップを生成するAEMサービスでマッピングノードを作成することでおこなわれます。
+AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). これは、サイトマップを生成するAEMサービス（通常は AEM パブリッシュサービス）にマッピングノードを作成することでおこなわれます。
 
 の Sling マッピングノード定義の例 `https://wknd.com` は以下で定義できます。 `/etc/map/https` 次のように指定します。
 
