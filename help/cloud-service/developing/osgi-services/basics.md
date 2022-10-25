@@ -1,26 +1,27 @@
 ---
-title: OSGiサービス開発の基本
-description: 'OSGiサービスの開発の基本について説明します '
+title: OSGi サービス開発の基本
+description: OSGi サービスの開発の基本について説明します
 role: Developer
 level: Beginner
-topic: 開発
-feature: OSGi
+topic: Development
+feature: OSGI
 kt: 8227
 thumbnail: 335476.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+last-substantial-update: 2022-09-16T00:00:00Z
+exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 4%
+source-wordcount: '88'
+ht-degree: 2%
 
 ---
 
+# OSGi サービス
 
-# OSGiサービス
+OSGi サービス開発の基本について説明します。以下が含まれます。
 
-以下を含む、OSGiサービス開発の基本について説明します。
-
-+ Java POJOをOSGiサービスに変換する方法
-+ OSGiサービスをJavaインターフェイスにバインドする方法
++ Java POJO を OSGi サービスに変換する方法
++ OSGi サービスを Java インターフェイスにバインドする方法
 
 >[!VIDEO](https://video.tv.adobe.com/v/335476/?quality=12&learn=on)
 

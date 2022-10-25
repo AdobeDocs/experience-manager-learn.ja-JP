@@ -8,8 +8,9 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
+last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '2815'
 ht-degree: 2%
@@ -213,7 +214,7 @@ AEM SAML 設定は、 __AdobeGranite SAML 2.0 認証ハンドラー__ OSGi 設�
 | パス | `path` | ✔ | 文字列配列 | `/` | AEMは、この認証ハンドラーが使用するパスを指定します。 |
 | IDP URL | `idpUrl` | ✔ | String |  | SAML 認証リクエストが送信される IDP URL。 |
 | IDP 証明書エイリアス | `idpCertAlias` | ✔ | 文字列 |  | AEM Global Trust Store で見つかった IDP 証明書のエイリアス |
-| IDP HTTP redirect | `idpHttpRedirect` | ✘ | Boolean | `false` | AuthnRequest を送信する代わりに IDP URL に HTTP リダイレクトするかどうかを示します。 に設定 `true` （IDP が開始した認証用） |
+| IDP HTTP redirect | `idpHttpRedirect` | ✘ | ブール値 | `false` | AuthnRequest を送信する代わりに IDP URL に HTTP リダイレクトするかどうかを示します。 に設定 `true` （IDP が開始した認証用） |
 | IDP 識別子 | `idpIdentifier` | ✘ | 文字列 |  | AEMのユーザーとグループの一意性を確保する一意の IDP ID。 空の場合、 `serviceProviderEntityId` が代わりに使用されます。 |
 | アサーションコンシューマーサービスの URL | `assertionConsumerServiceURL` | ✘ | 文字列 |  | この `AssertionConsumerServiceURL` AuthnRequest の URL 属性で、 `<Response>` メッセージをAEMに送信する必要があります。 |
 | SP エンティティ ID | `serviceProviderEntityId` | ✔ | 文字列 |  | IDP に対してAEMを一意に識別する。通常はAEMホスト名です。 |

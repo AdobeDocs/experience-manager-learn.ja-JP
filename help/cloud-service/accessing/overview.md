@@ -8,8 +8,9 @@ role: Admin
 level: Beginner
 kt: 5882
 thumbnail: KT-5882.jpg
+last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 8%
@@ -66,6 +67,6 @@ Adobeの AdminConsole でのAdobe IMSユーザー、ユーザーグループ、A
 
 以下のドキュメントカバー [Adobe Admin Console](https://adminconsole.adobe.com)Adobe Admin Consoleをより深く理解し、それを使用してユーザーやExperience Cloud製品間のアクセスを管理するのに役立つ、具体的な詳細や懸念事項。
 
-+ [Adobe Admin Console ID の概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
++ [Adobe Admin Console ID の概要](https://helpx.adobe.com/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
 + [Adobe Admin Console Developer Roles](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)
