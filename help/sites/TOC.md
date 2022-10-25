@@ -3,9 +3,9 @@ user-guide-title: AEM Sites のビデオおよびチュートリアル
 user-guide-description: Adobe Experience Manager Sites のビデオとチュートリアルのコレクションです。
 breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
+source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '436'
 ht-degree: 30%
 
 ---
@@ -93,6 +93,8 @@ ht-degree: 30%
    + [翻訳ルールを設定](translation/translation-rules-editor-technical-video-setup.md)
    + [翻訳の機能強化](translation/translation-enhancements-feature-video-use.md)
 + 統合 {#integrations}
+   + Experience Platform {#experience-platform}
+      + [FPID を生成](integrations/platform/fpid.md)
    + Experience Platform Launch {#experience-platform-launch}
       + [概要](integrations/experience-platform-launch/overview.md)
       + [Launch プロパティの作成](integrations/experience-platform-launch/create-launch-property.md)
