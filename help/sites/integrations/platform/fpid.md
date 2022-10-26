@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
+source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -42,7 +42,7 @@ FPID の一意性要件を組み合わせると、これらのリソースがキ
 1. Web ページを CDN またはAEM Dispatcher キャッシュから提供できない場合、要求は AEM パブリッシュサービスに到達し、要求された Web ページが生成されます。
 1. 次に、Web ページが Web ブラウザーに返され、要求に対応できなかったキャッシュが生成されます。 AEMの場合、CDN とAEM Dispatcher のキャッシュヒット率が 90%を超えることを想定します。
 1. Web ページには、AEM パブリッシュサービス内のカスタム FPID サーブレットに対してキャッシュ不能な非同期 XHR(AJAX) リクエストを実行する JavaScript が含まれています。 これは（ランダムなクエリパラメーターと Cache-Control ヘッダーにより）キャッシュできないリクエストなので、CDN やAEM Dispatcher によってキャッシュされず、常に AEM パブリッシュサービスに到達して応答を生成します。
-1. AEM パブリッシュサービスのカスタム FPID サーブレットがリクエストを処理し、既存の FPID Cookie が見つからない場合は新しい FPID を生成します。または、既存の FPID Cookie の有効期間を延長します。 また、このサーブレットは、クライアント側 JavaScript で使用する FPID を応答本文に返します。 幸いにも、カスタム FPID サーブレットロジックは軽量なので、このリクエストによって AEM パブリッシュサービスのパフォーマンスに影響を与えることはありません。
+1. AEM パブリッシュサービスのカスタム FPID サーブレットがリクエストを処理し、既存の FPID Cookie が見つからない場合は新しい FPID を生成し、既存の FPID Cookie の有効期間を延長します。 また、このサーブレットは、クライアント側 JavaScript で使用する FPID を応答本文に返します。 幸いにも、カスタム FPID サーブレットロジックは軽量なので、このリクエストによって AEM パブリッシュサービスのパフォーマンスに影響を与えることはありません。
 1. XHR リクエストの応答は、Platform Web SDK で使用するために、応答本文に FPID Cookie と FPID JSON を含むブラウザーに返されます。
 
 ## コードサンプル
@@ -62,7 +62,9 @@ HTTP リクエストがサーブレットに到達すると、サーブレット
 + FPID Cookie が存在しない場合は、新しい FPID Cookie を生成し、値を保存して応答に書き込みます。
 
 次に、サーブレットが FPID をフォーム内の JSON オブジェクトとして応答に書き込みます。 `{ fpid: "<FPID VALUE>" }`.
+
 FPID Cookie がマークされているので、本文でクライアントに FPID を提供することが重要です `HttpOnly`では、サーバーのみがその値を読み取れ、クライアント側の JavaScript ではその値を読み取れません。
+
 応答本文の FPID 値は、Platform Web SDK を使用して呼び出しをパラメーター化するために使用されます。
 
 以下に、AEMサーブレットエンドポイントのコード例を示します ( `HTTP GET /bin/aep/fpid`) を使用して FPID Cookie を生成または更新し、FPID を JSON として返します。
