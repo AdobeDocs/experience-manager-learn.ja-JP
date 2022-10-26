@@ -1,41 +1,43 @@
 ---
 seo: Set up public and private keys for use with AEM and Adobe I/O
-description: 'AEMは、公開鍵と秘密鍵のペアを使用して、Adobe I/Oや他のWebサービスと安全に通信します。 この短いチュートリアルでは、AEMとAdobe I/Oの両方で動作するopensslコマンドラインツールを使用して、互換性のあるキーとキーストアを生成する方法を説明します。 '
+description: AEMは、公開/秘密鍵のペアを使用して、Adobe I/Oや他の Web サービスと安全に通信します。 この短いチュートリアルでは、AEMとAdobe I/Oの両方で動作する openssl コマンドラインツールを使用して、互換性のあるキーとキーストアを生成する方法を説明します。
 version: 6.4, 6.5
-feature: ユーザーとグループ
+feature: User and Groups
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 62ed9dcc-6b8a-48ff-8efe-57dabdf4aa66
+last-substantial-update: 2022-07-17T00:00:00Z
+thumbnail: KT-2450.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
+# Adobe I/Oで使用する公開鍵と秘密鍵を設定
 
-# Adobe I/Oで使用する公開鍵と秘密鍵の設定
-
-AEMは、公開鍵と秘密鍵のペアを使用して、Adobe I/Oや他のWebサービスと安全に通信します。 この短いチュートリアルでは、AEMとAdobe I/Oの両方で動作する[!DNL openssl]コマンドラインツールを使用して、互換性のあるキーとキーストアを生成する方法を説明します。
+AEMは、公開/秘密鍵のペアを使用して、Adobe I/Oや他の Web サービスと安全に通信します。 この短いチュートリアルでは、 [!DNL openssl] AEMとAdobe I/Oの両方で機能するコマンドラインツール。
 
 >[!CAUTION]
 >
->このガイドでは、開発や低レベルの環境での使用に役立つ自己署名付きキーを作成します。 通常、実稼動シナリオでは、キーは組織のITセキュリティチームによって生成および管理されます。
+>このガイドでは、開発や低レベルの環境での使用に役立つ自己署名付きキーを作成します。 通常、本番シナリオでは、キーは組織の IT セキュリティチームが生成し、管理します。
 
-## 公開鍵と秘密鍵のペアを生成する {#generate-the-public-private-key-pair}
+## 公開鍵と秘密鍵のペアを生成します {#generate-the-public-private-key-pair}
 
-[[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html)コマンドラインツールの[[!DNL req] コマンド](https://www.openssl.org/docs/man1.0.2/man1/req.html)を使用して、Adobe I/OとAdobe Experience Managerに対応したキーペアを生成できます。
+この [[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html) コマンドラインツール [[!DNL req] command](https://www.openssl.org/docs/man1.0.2/man1/req.html) を使用して、Adobe I/OおよびAdobe Experience Managerと互換性のあるキーペアを生成できます。
 
 ```shell
 $ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate.crt
 ```
 
-[!DNL openssl generate]コマンドを完了するには、要求されたときに証明書情報を指定します。 Adobe I/OとAEMは、これらの値が何であるかは気にしませんが、キーに合わせてキーを記述する必要があります。
+次の手順で [!DNL openssl generate] コマンドを使用します。要求された場合は、証明書情報を入力します。 Adobe I/OとAEMは、これらの値が何であるかに関係ありませんが、値を一致させ、鍵を説明する必要があります。
 
 ```
 Generating a 2048 bit RSA private key
@@ -59,9 +61,9 @@ Common Name (eg, fully qualified host name) []:com.example
 Email Address []:me@example.com
 ```
 
-## 新しいキーストアにキーペアを追加する {#add-key-pair-to-a-new-keystore}
+## 新しいキーストアにキーペアを追加 {#add-key-pair-to-a-new-keystore}
 
-キーペアを新しい[!DNL PKCS12]キーストアに追加できます。 [[!DNL openssl]'s [!DNL pcks12] コマンドの一部として、](https://www.openssl.org/docs/man1.0.2/man1/pkcs12.html)はキーストアの名前（`-  caname`経由）、キーの名前（`-name`経由）、キーストアのパスワード（`-  passout`経由）を定義します。
+新しい [!DNL PKCS12] キーストア。 の一部として [[!DNL openssl]'s [!DNL pcks12] コマンド](https://www.openssl.org/docs/man1.0.2/man1/pkcs12.html) キーストアの名前 ( `-  caname`)、キーの名前 ( `-name`) とキーストアのパスワード ( `-  passout`) が定義されている場合にのみ使用できます。
 
 これらの値は、キーストアとキーをAEMに読み込むために必要です。
 
@@ -69,15 +71,15 @@ Email Address []:me@example.com
 $ openssl pkcs12 -export -caname my-keystore -in certificate.crt -name my-key -inkey private.key -out keystore.p12 -passout pass:my-password
 ```
 
-このコマンドの出力は`keystore.p12`ファイルです。
+このコマンドの出力は、 `keystore.p12` ファイル。
 
 >[!NOTE]
 >
->**[!DNL my-keystore]**、**[!DNL my-key]**&#x200B;および&#x200B;**[!DNL my-password]**&#x200B;のパラメーター値は、独自の値に置き換えられます。
+>のパラメーター値 **[!DNL my-keystore]**, **[!DNL my-key]** および **[!DNL my-password]** を独自の値に置き換えます。
 
-## キーストアの内容の確認 {#verify-the-keystore-contents}
+## キーストアの内容を確認します {#verify-the-keystore-contents}
 
-Javaの[[!DNL keytool] コマンドラインツール](https://docs.oracle.com/middleware/1213/wls/SECMG/keytool-summary-appx.htm#SECMG818)は、キーストアを表示し、キーストアファイル([!DNL keystore.p12])にキーが正常に読み込まれたことを確認します。
+Java™ [[!DNL keytool] コマンドラインツール](https://docs.oracle.com/middleware/1213/wls/SECMG/keytool-summary-appx.htm#SECMG818) キーストアを表示して、キーストアファイル ([!DNL keystore.p12]) をクリックします。
 
 ```shell
 $ keytool -keystore keystore.p12 -list
@@ -93,61 +95,61 @@ my-key, Feb 5, 2019, PrivateKeyEntry,
 Certificate fingerprint (SHA1): 7C:6C:25:BD:52:D3:3B:29:83:FD:A2:93:A8:53:91:6A:25:1F:2D:52
 ```
 
-![Adobe I/Oでのキーストアの検証](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
+![キーストアをAdobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
 ## AEMへのキーストアの追加 {#adding-the-keystore-to-aem}
 
-AEMは、生成された&#x200B;**秘密鍵**&#x200B;を使用して、Adobe I/Oや他のWebサービスと安全に通信します。 秘密鍵をAEMにアクセスできるようにするには、AEMユーザーのキーストアに秘密鍵をインストールする必要があります。
+AEMは生成された **秘密鍵** Adobe I/Oや他のウェブサービスと安全に通信する。 秘密鍵をAEMからアクセスできるようにするには、AEMユーザーのキーストアに秘密鍵をインストールする必要があります。
 
-**AEM > [!UICONTROL ツール] > [!UICONTROL セキュリティ] > [!UICONTROL ユーザー]**&#x200B;と&#x200B;**ユーザーを編集**&#x200B;に移動します。
+に移動します。 **AEM > [!UICONTROL ツール] > [!UICONTROL セキュリティ] > [!UICONTROL ユーザー]** および **ユーザーの編集** 秘密鍵は、に関連付けられます。
 
 ### AEMキーストアの作成 {#create-an-aem-keystore}
 
-![AEMでキーストアを](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--create-keystore.png)
-*作成/ツ [!UICONTROL ール] / [!UICONTROL セキュリティ] / [!UICONTROL ユーザー] /ユーザーを編集*
+![AEMでキーストアを作成](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--create-keystore.png)
+*AEM > [!UICONTROL ツール] > [!UICONTROL セキュリティ] > [!UICONTROL ユーザー] /ユーザーを編集*
 
-キーストアの作成を求めるプロンプトが表示されたら、作成します。 このキーストアはAEMにのみ存在し、opensslで作成されたキーストアではありません。 パスワードは任意のものにすることができ、[!DNL openssl]コマンドで使用するパスワードと同じである必要はありません。
+キーストアを作成するように求められたら、作成します。 このキーストアはAEMにのみ存在し、openssl で作成されたキーストアではありません。 パスワードは任意のものにすることができ、 [!DNL openssl] コマンドを使用します。
 
 ### キーストアを使用した秘密鍵のインストール {#install-the-private-key-via-the-keystore}
 
-![AEM Userで秘密鍵を追](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--add-private-key.png)
-*[!UICONTROL 加] / [!UICONTROL キーストア] /キースト [!UICONTROL アから秘密鍵を追加]*
+![AEMに秘密鍵を追加](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--add-private-key.png)
+*[!UICONTROL ユーザー] > [!UICONTROL キーストア] > [!UICONTROL キーストアから秘密鍵を追加]*
 
-ユーザーのキーストアコンソールで、「 **[!UICONTROL 秘密鍵をキーストアファイル]**&#x200B;から追加 」をクリックし、次の情報を追加します。
+ユーザーのキーストアコンソールで、 **[!UICONTROL 秘密鍵をキーストアファイルから追加]** 次の情報を追加します。
 
-* **[!UICONTROL 新しいエイリアス]**:AEMでのキーのエイリアス。これは何でもかまいません。opensslコマンドで作成したキーストアの名前と対応している必要はありません。
-* **[!UICONTROL キーストアファイル]**:openssl pkcs12コマンドの出力(keystore.p12)
-* **[!UICONTROL キーストアファイルのパスワード]**:引数を介してopenssl pkcs12コマンドに設定されるパスワ `-passout` ード。
-* **[!UICONTROL 秘密鍵のエイリアス]**:上記のopenssl pkcs12コ `-name` マンドで引数に指定した値( `my-key`)をクリックします。
-* **[!UICONTROL 秘密鍵のパスワード]**:引数を介してopenssl pkcs12コマンドに設定されるパスワ `-passout` ード。
+* **[!UICONTROL 新規エイリアス]**:AEMでのキーのエイリアス。 これは何でもかまいません。また、openssl コマンドで作成したキーストアの名前に対応している必要はありません。
+* **[!UICONTROL キーストアファイル]**:openssl pkcs12 コマンドの出力 (keystore.p12)
+* **[!UICONTROL キーストアファイルのパスワード]**:を介して openssl pkcs12 コマンドに設定されたパスワード `-passout` 引数。
+* **[!UICONTROL 秘密鍵のエイリアス]**:に指定された値 `-name` 上記の openssl pkcs12 コマンドの引数 ( `my-key`) をクリックします。
+* **[!UICONTROL 秘密鍵のパスワード]**:を介して openssl pkcs12 コマンドに設定されたパスワード `-passout` 引数。
 
 >[!CAUTION]
 >
 >キーストアファイルのパスワードと秘密鍵のパスワードは、両方の入力で同じです。 パスワードが一致しない場合は、キーがインポートされません。
 
-### 秘密鍵がAEMキーストアに読み込まれていることを確認します {#verify-the-private-key-is-loaded-into-the-aem-keystore}
+### 秘密鍵がAEMキーストアに読み込まれていることを確認します。 {#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
-![AEM Userでの秘密鍵の](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
-*[!UICONTROL 確認] /キース [!UICONTROL トア]*
+![AEMで秘密鍵を検証](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
+*[!UICONTROL ユーザー] > [!UICONTROL キーストア]*
 
 秘密鍵が指定されたキーストアからAEMキーストアに正常に読み込まれると、その秘密鍵のメタデータがユーザーのキーストアコンソールに表示されます。
 
 ## 公開鍵のAdobe I/Oへの追加 {#adding-the-public-key-to-adobe-i-o}
 
-対応する公開鍵を持つAEMサービスユーザーが安全に通信できるように、一致する公開鍵をAdobe I/Oにアップロードする必要があります。
+AEMサービスユーザーが、対応する秘密鍵を持ち、安全に通信できるように、一致する公開鍵をAdobe I/Oにアップロードする必要があります。
 
-### 新しい統合のAdobe I/Oの作成 {#create-a-adobe-i-o-new-integration}
+### 新しい統合のAdobe I/O作成 {#create-a-adobe-i-o-new-integration}
 
-![新しい統合のAdobe I/Oの作成](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
+![新しい統合のAdobe I/O作成](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
 
-*[[!UICONTROL Adobe I/O統合の作成]](https://console.adobe.io/) /新 [!UICONTROL しい統合]*
+*[[!UICONTROL Adobe I/O統合を作成]](https://developer.adobe.com/console/) > [!UICONTROL 新しい統合]*
 
-新しい統合をAdobe I/Oで作成するには、公開証明書をアップロードする必要があります。 `openssl req`コマンドで生成された&#x200B;**certificate.crt**&#x200B;をアップロードします。
+統合で統合を作成するには、Adobe I/Oの公開証明書をアップロードする必要があります。 をアップロードします。 **certificate.crt** 生成元 `openssl req` コマンドを使用します。
 
 ### 公開鍵がAdobe I/Oで読み込まれていることを確認する {#verify-the-public-keys-are-loaded-in-adobe-i-o}
 
-![Adobe I/O内の公開鍵の検証](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
+![「Verify Public Keys in」Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
-インストールされた公開鍵とその有効期限は、Adobe I/Oの[!UICONTROL 統合]コンソールに表示されます。「**[!UICONTROL 公開鍵を追加]**」ボタンを使用して、複数の公開鍵を追加できます。
+インストールされた公開鍵とその有効期限は、 [!UICONTROL 統合] Adobe I/Oのコンソール複数の公開鍵を **[!UICONTROL 公開鍵を追加]** 」ボタンをクリックします。
 
 AEMは秘密鍵を保持し、Adobe I/O統合は対応する公開鍵を保持するようになり、AEMはAdobe I/Oと安全に通信できます。

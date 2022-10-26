@@ -1,59 +1,61 @@
 ---
-title: Cloud ManagerでのCI/CDパイプラインの使用Adobe
-description: AdobeCloud Managerは、AEMプロジェクトチームが、AMSでホストされるすべてのAEM環境に、迅速、安全かつ一貫してコードをデプロイできる、シンプルで柔軟なセルフサービスCI/CDパイプラインを提供します。 このビデオシリーズでは、Cloud ManagerのCI/CDパイプラインの設定と実行を、失敗シナリオと成功シナリオの両方で詳しく説明します。
-sub-product: cloud-manager、foundation
+title: Cloud Manager での CI/CD パイプラインのAdobe
+description: AdobeCloud Manager は、AEMプロジェクトチームが AMS でホストされるすべてのAEM環境に、迅速、安全かつ一貫してコードをデプロイできる、シンプルで柔軟なセルフサービス CI/CD パイプラインを提供します。 このビデオシリーズでは、Cloud Manager の CI/CD パイプラインの設定と実行を、失敗シナリオと成功シナリオの両方で説明します。
+sub-product: cloud-manager, foundation
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
-topic: アーキテクチャ
+topic: Architecture
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
+last-substantial-update: 2022-08-15T00:00:00Z
+thumbnail: cm-pipeline.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
 
+# Cloud Manager での CI/CD パイプラインのAdobe
 
-# Cloud ManagerでのCI/CDパイプラインの使用Adobe
-
-AdobeCloud Managerは、AEMプロジェクトチームが、AMSでホストされるすべてのAEM環境に、迅速、安全かつ一貫してコードをデプロイできる、シンプルで柔軟なセルフサービスCI/CDパイプラインを提供します。 このビデオシリーズでは、Cloud ManagerのCI/CDパイプラインの設定と実行を、失敗シナリオと成功シナリオの両方で詳しく説明します。
+AdobeCloud Manager は、AEMプロジェクトチームが AMS でホストされるすべてのAEM環境に、迅速、安全かつ一貫してコードをデプロイできる、シンプルで柔軟なセルフサービス CI/CD パイプラインを提供します。 このビデオシリーズでは、Cloud Manager の CI/CD パイプラインの設定と実行を、失敗シナリオと成功シナリオの両方で説明します。
 
 ## はじめに
 
-Cloud ManagerおよびCloud Managerプログラムの概要を説明します。
+Cloud Manager および Cloud Manager プログラムの概要です。
 
 >[!NOTE]
 >
->これらのビデオ全体で、ビルド、テスト、デプロイメントに要する時間が長くなり、ビデオの時間が短縮されました。 パイプラインの完全な実行には、通常、プロジェクトのサイズ、AEMインスタンスの数、UATプロセスに応じて、45分以上かかります（必須の30分のパフォーマンステストを含む）。
+>これらのビデオ全体で、ビルド、テストおよびデプロイメントに要する時間が長くなり、ビデオの時間が短縮されました。 完全なパイプライン実行には通常 45 分以上かかります（必須の 30 分のパフォーマンステストを含む）。プロジェクトのサイズ、AEMインスタンスの数、UAT プロセスの数に応じて異なります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23082/?quality=12&learn=on)
 
-## CI/CDパイプラインの設定
+## CI/CD パイプラインの設定
 
-このビデオでは、Cloud Managerでのプログラムのパイプラインの設定について説明します。
+このビデオでは、Cloud Manager でのプログラムのパイプラインの設定について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23083/?quality=12&learn=on)
 
-## 失敗したパイプラインの実行
+## 失敗したパイプライン実行
 
-このビデオでは、**[!DNL yellow]**&#x200B;リポジトリブランチを使用して、Cloud Managerで必要な品質チェックに失敗するコードを使用して、CI/CDパイプラインの実行を調べます。
+このビデオでは、Cloud Manager で必要とされる品質チェックに失敗するコードを、 **[!DNL yellow]** リポジトリブランチ。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
 
-## パイプライン実行の成功
+## 成功したパイプライン実行
 
-このビデオでは、**[!DNL master]**&#x200B;リポジトリブランチを使用して、Cloud Managerに必要な品質チェックに合格するコードを使用して、CI/CDパイプラインの正常な実行を調べます。
+このビデオでは、Cloud Manager で必要な品質チェックに合格したコードを、 **[!DNL master]** リポジトリブランチ。
 
-このビデオでは、Cloud Managerの[!UICONTROL アクティビティ]コンソールにも触れます。このコンソールを使用して、アクティブな実行に再び参加したり、完了または失敗した実行を確認したりできます。
+このビデオでは、 [!UICONTROL アクティビティ] Cloud Manager のコンソール。アクティブな実行に再度入ることや、完了した実行または失敗した実行を確認することができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
 
 ## サポート資料
 
-* [Cloud Managerユーザーガイド](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html)
-* [コードスキャンルールのダ [!DNL SonarQube] ウンロード](https://helpx.adobe.com/experience-manager/cloud-manager/using/understand-your-test-results.html#CodeQualityTesting)
-   * *リンクされたセクションの下部にあるXLSX*
-* [[!DNL SonarQube] Javaルールインデックス](https://rules.sonarsource.com/java/)
+* [Cloud Manager ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [コードスキャンをダウンロード [!DNL SonarQube] ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+   * *リンクされたセクションの下部にある XLSX*
+* [[!DNL SonarQube] Java™ルールのインデックス](https://rules.sonarsource.com/java/)
