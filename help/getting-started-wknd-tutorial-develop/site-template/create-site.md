@@ -1,7 +1,6 @@
 ---
 title: サイトの作成 | AEMクイックサイト作成
 description: サイト作成ウィザードを使用して新しい Web サイトを生成する方法を説明します。 Adobeが提供する標準サイトテンプレートは、新しいサイトの出発点となります。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 5%

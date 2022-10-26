@@ -1,7 +1,6 @@
 ---
 title: ビデオの概要
 description: Dynamic Media Classicには、アップロード時のビデオの自動変換、デスクトップおよびモバイルデバイスへのビデオストリーミング、デバイスと帯域幅に基づいて再生用に最適化されたアダプティブビデオセットが付属しています。 Dynamic Media Classicのビデオについて詳しくは、ビデオの概念と用語の基礎知識を参照してください。 次に、ビデオのアップロードとエンコード、ビデオプリセットの選択、ビデオプリセットのアップロード用、ビデオビューアでのビデオの追加または編集、Web およびモバイルサイトへのビデオのデプロイ、ビデオへのキャプションとチャプターマーカーの追加、ビデオビューアのデスクトップおよびモバイルユーザーへの公開について詳しく説明します。
-sub-product: dynamic-media
 feature: Dynamic Media Classic, Video Profiles, Viewer Presets
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: dfbf316f-3922-4bc7-b3f3-2a5bbdeb7063
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6118'
 ht-degree: 1%

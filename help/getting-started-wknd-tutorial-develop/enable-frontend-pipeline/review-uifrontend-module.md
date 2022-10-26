@@ -1,7 +1,6 @@
 ---
 title: フルスタックプロジェクトの ui.frontend モジュールを確認する
 description: Maven ベースのフルスタックAEM Sitesプロジェクトのフロントエンド開発、デプロイメント、配信のライフサイクルを確認します。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 2%

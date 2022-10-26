@@ -2,7 +2,6 @@
 title: スタイルシステムを使用した開発
 seo-title: Developing with the Style System
 description: Experience Managerのスタイルシステムを使用して、個々のスタイルを実装し、コアコンポーネントを再利用する方法について説明します。 このチュートリアルでは、スタイルシステムを使用して、ブランド固有の CSS とテンプレートエディターの高度なポリシー設定を使用してコアコンポーネントを拡張するための開発について説明します。
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Style System
@@ -13,10 +12,10 @@ kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -77,7 +76,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 背景 {#background}
 
-開発者およびテンプレート編集者は、[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)を使用して、コンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、どのスタイルを使用するかを決めることができます。以降のすべてのチュートリアルでは、ローコードの手法でコアコンポーネントを使用しながら、スタイルシステムを使用して、いくつかの独自のスタイルを創出していきます。
+開発者およびテンプレート編集者は、[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)を使用して、コンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、どのスタイルを使用するかを決めることができます。以降のすべてのチュートリアルでは、ローコードの手法でコアコンポーネントを使用しながら、スタイルシステムを使用して、いくつかの独自のスタイルを創出していきます。
 
 スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
 
@@ -103,7 +102,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 1. 次の値を持つタイトルコンポーネントの新しいポリシーを作成します。
 
-   *ポリシーのタイトル**: **WKND タイトル**
+   *ポリシーのタイトル&#42;*: **WKND タイトル**
 
    *プロパティ* > *「スタイル」タブ* > *新しいスタイルを追加*
 
@@ -195,7 +194,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 ## 引用ブロックのスタイル — テキスト {#text-component}
 
-次に、同様の手順を繰り返して、 [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja). テキストコンポーネントは、の下のプロジェクト内でプロキシ化されています。 `/apps/wknd/components/text` の一部として **ui.apps** モジュール。 段落要素のデフォルトスタイルは、既に **ui.frontend**.
+次に、同様の手順を繰り返して、 [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). テキストコンポーネントは、の下のプロジェクト内でプロキシ化されています。 `/apps/wknd/components/text` の一部として **ui.apps** モジュール。 段落要素のデフォルトスタイルは、既に **ui.frontend**.
 
 この [WKND 記事デザイン](assets/pages-templates/wknd-article-design.xd) 引用符ブロック付きのテキストコンポーネントに固有のスタイルが含まれています。
 
@@ -213,7 +212,7 @@ Experience Managerのスタイルシステムを使用して、個々のスタ�
 
 1. テキストコンポーネントポリシーを次の値に更新します。
 
-   *ポリシーのタイトル**: **コンテンツテキスト**
+   *ポリシーのタイトル&#42;*: **コンテンツテキスト**
 
    *プラグイン* > *段落スタイル* > *段落スタイルを有効にする*
 

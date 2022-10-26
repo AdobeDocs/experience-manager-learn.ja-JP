@@ -1,7 +1,6 @@
 ---
 title: AEM Sitesの基本を学ぶ — WKND チュートリアル
 description: WKND と呼ばれる架空のライフスタイルブランド向けにAEMサイトを実装する方法を説明します。 プロジェクトの設定、Maven アーキタイプ、コアコンポーネント、編集可能テンプレート、クライアントライブラリ、コンポーネント開発など、基本的なExperience Managerに関するトピックの手順を説明します。
-sub-product: sites
 topics: development
 version: Cloud Service
 activity: develop
@@ -16,7 +15,7 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 8%

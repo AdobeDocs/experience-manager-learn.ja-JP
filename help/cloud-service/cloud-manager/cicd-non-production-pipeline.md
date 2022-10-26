@@ -1,7 +1,6 @@
 ---
 title: AdobeCloud Manager の使用 — CI/CD 非実稼動パイプライン
 description: CI／CD 実稼動以外のパイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。デプロイメントパイプラインは、Git リポジトリから非実稼動環境へのコードの自動デプロイメントをサポートしています。つまり、ステージング環境や実稼動環境以外のプロビジョニング済みAEM環境がサポートされます。
-sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 47%

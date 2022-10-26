@@ -4,8 +4,10 @@ role: Developer
 user-guide-title: AEM Forms のビデオとチュートリアル
 user-guide-description: AEM Forms 開発の初心者および経験者向け AEM Forms リソースのコレクションです。
 breadcrumb-title: AEM Forms チュートリアル
+sub-product: Experience Manager Forms
+version: 6.4, 6.5
 index: y
-source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 3%

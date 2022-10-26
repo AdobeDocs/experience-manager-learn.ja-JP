@@ -1,14 +1,13 @@
 ---
 title: AEM AssetsでのDynamic Media 360 ビデオとカスタムビデオサムネールの使用
 description: AEM 6.5 のDynamic Mediaビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
-sub-product: dynamic-media
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 6%
