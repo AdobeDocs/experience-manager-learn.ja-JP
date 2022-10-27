@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
+source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1182'
 ht-degree: 3%
 
 ---
@@ -116,24 +116,24 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 #### 処理プロファイル
 
-アセットレンディションの仕様は、 [処理プロファイル](../../../assets/configuring//processing-profiles.md) AEM Assets管理者による
+アセットレンディションの仕様は、 [処理プロファイル](../../../assets/configuring/processing-profiles.md) AEM Assets管理者による
 
 処理プロファイルを作成または更新し、ヘッドレスアプリケーションで必要な画像サイズのレンディション定義を追加します。 レンディションには任意の名前を付けることができますが、意味的に名前を付ける必要があります。
 
-![ヘッドレスに最適化されたレンディションのAEM](./assets/images/processing-profiles.jpg)
+![ヘッドレスに最適化されたレンディションのAEM](./assets/images/processing-profiles.png)
 
 この例では、3 つのレンディションが作成されます。
 
 | レンディション名 | 拡張子 | 最大幅 |
-|----------------|:---------:|----------:|
-| 大 | jpeg | 1200 px |
-| MEDIUM | jpeg | 900 px |
-| 小 | jpeg | 600 px |
+|-----------------------|:---------:|----------:|
+| web-optimized-large | webp | 1200 px |
+| web-optimized-medium | webp | 900 px |
+| web-optimized-small | webp | 600 px |
 
 上記の表で呼び出される属性は重要です。
 
 + __レンディション名__ を使用してレンディションを要求します。
-+ __拡張__ は、 __レンディション名__.
++ __拡張__ は、 __レンディション名__. 優先 `webp` レンディションは Web 配信用に最適化されているので、
 + __最大幅__ は、ヘッドレスアプリケーションでの使用に基づいて使用するレンディションを開発者に知らせるために使用されます。
 
 レンディションの定義はヘッドレスアプリケーションのニーズに応じて異なるので、使用例に合わせて最適なレンディションセットを定義し、その使用方法に関する意味的な名前を付けてください。
@@ -152,7 +152,7 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 レンディションは、 [アセットのレンディション表示を開く](../../../assets/authoring/renditions.md)をクリックし、レンディションパネルでプレビューする新しいレンディションを選択します。 レンディションが見つからない場合、 [アセットが処理プロファイルを使用して処理されていることを確認する](#reprocess-assets).
 
-![レンディションの確認](./assets/images/review-renditions.jpg)
+![レンディションの確認](./assets/images/review-renditions.png)
 
 #### アセットを公開します。
 
@@ -164,9 +164,9 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 | アセット URL | レンディションサブパス | レンディション名 | レンディション拡張 |  | レンディション URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | MEDIUM | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-large | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-medium | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-small | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ AEM GraphQL では、画像レンディションを要求するための追加�
 
 ### React の例
 
-1 つの画像アセットの 3 つのレンディション（小、中、大）を表示するシンプルな React アプリケーションを作成します。
+1 つの画像アセットの 3 つのレンディション (Web-optimized-small、Web-optimized-medium、Web-optimized-large) を表示する単純な React アプリケーションを作成します。
 
 ![画像アセットレンディション React の例](./assets/images/react-example-renditions.jpg)
 
@@ -216,7 +216,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 #### 次を定義： `App.js`{#app-js}
 
-このシンプルな `App.js` アドベンチャー画像をAEMに問い合わせて、その画像の 3 つのレンディションを表示します。小、中、大
+このシンプルな `App.js` アドベンチャー画像をAEMに問い合わせて、その画像の 3 つのレンディションを表示します。web-optimized-small、web-optimized-medium および web-optimized-large。
 
 AEMに対するクエリは、カスタム React フックで実行されます。 [AEMヘッドレス SDK を使用する useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
 
@@ -242,33 +242,33 @@ function App() {
     <div className="app">
       
       <h2>Small rendition</h2>
-      {/* Render the small rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="small"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-small"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Medium rendition</h2>
-      {/* Render the medium rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="medium"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-medium"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Large rendition</h2>
-      {/* Render the large rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="large"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-large"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
     </div>
