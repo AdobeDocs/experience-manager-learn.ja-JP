@@ -2,14 +2,15 @@
 user-guide-title: AEM ヘッドレスの概要
 user-guide-description: AEM ヘッドレスを使用してコンテンツを構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 breadcrumb-title: AEM ヘッドレスチュートリアル
-version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+sub-product: Experience Manager Sites
+version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 680ed62141b853daf104a827067ca6d5a209796d
+source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 24%
+source-wordcount: '268'
+ht-degree: 23%
 
 ---
 
@@ -107,7 +108,9 @@ ht-degree: 24%
    + [6 — 配信用に AEM パブリッシュでのコンテンツの公開](./content-services/chapter-6.md)
    + [7 — モバイルアプリからのAEM Content Services の使用](./content-services/chapter-7.md)
 + コードサンプル {#code-samples}
-   + [React アプリ](./graphql/code-samples/react-app.md)
-   + [Angularアプリ](./graphql/code-samples/angular-app.md)
-   + [React コンポーネント](./graphql/code-samples/react-component.md)
-   + [JavaScript フィルター](./graphql/code-samples/javascript-filter.md)
+   + [React アプリのフィルタリング](./graphql/code-samples/filtering-react-app.md)
+   + [フィルターAngularアプリ](./graphql/code-samples/filtering-angular-app.md)
+   + [値アプリのフィルタリング](./graphql/code-samples/filtering-vue-app.md)
+   + [jQuery と Handlebars を使用したフィルタリング](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [基本的な React アプリ](./graphql/code-samples/basic-react-app.md)
+   + [基本的な Next.js アプリ](./graphql/code-samples/basic-nextjs-app.md)
