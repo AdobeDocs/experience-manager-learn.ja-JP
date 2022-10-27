@@ -1,29 +1,29 @@
 ---
 title: データソースを使用しないフォームデータモデルの作成
-description: AEM Forms 6.4以降では、フォームデータモデル(FDM)をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずにFDMを作成する手順を説明します。
-feature: ワークフロー
+description: AEM Forms 6.4 以降では、フォームデータモデル (FDM) をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずに FDM を作成する手順を説明します。
+feature: Workflow
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
+last-substantial-update: 2020-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
-
 # データソースを使用しないフォームデータモデルの作成 {#creating-form-data-model-without-data-source}
 
-AEM Forms 6.4以降では、フォームデータモデル(FDM)をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずにFDMを作成する手順を説明します。
+AEM Forms 6.4 以降では、フォームデータモデル (FDM) をデータソースに関連付けずに定義できるようになりました。 次のビデオでは、データソースを使用せずに FDM を作成する手順を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21414/?quality=9&learn=on)
 
 これには次の利点があります。
 
-* Speedは、Interactive Communication Documents/Formsの開発です。
+* Speed&#39;s development of Interactive Communication Documents/Forms.
 * インタラクティブ通信ドキュメント/Formsの開発は、データソースの開発と並行して行うことができます。
-* データソースが開発されたら、Visual Editorを使用して連結を実行できます。
+* データソースが開発されたら、Visual Editor を使用してバインディングを実行できます。
 * 自動バインディング機能は、類似の要素をマッピングします。
-

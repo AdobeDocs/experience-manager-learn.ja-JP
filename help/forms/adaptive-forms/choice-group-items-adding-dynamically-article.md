@@ -7,7 +7,8 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+last-substantial-update: 2021-09-10T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 3%
@@ -81,7 +82,7 @@ else
 * [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
 * 「応募者名」を入力し、「配偶者の有無」を「既婚」に選択します。
 * 配偶者の名前を入力
-* 次へをクリック
+* 「次へ」をクリックします。
 * 配偶者の有無に関わらず、申込者名と配偶者の有無がチェックボックスに表示されます。
 
 **Visual Editor を使用した項目の追加**

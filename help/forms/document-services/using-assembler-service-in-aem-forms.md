@@ -1,22 +1,23 @@
 ---
-title: AEM FormsでのAssemblerサービスの使用
-description: AEM FormsでのAssemblerサービスを使用した複数のpdfファイルのアセンブリ
+title: AEM Formsでの Assembler サービスの使用
+description: AEM Formsでの Assembler サービスを使用した複数の pdf ファイルのアセンブリ
 feature: Assembler
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 5%
+source-wordcount: '207'
+ht-degree: 4%
 
 ---
 
+# AEM Formsでの Assembler サービスの使用{#using-assembler-service-in-aem-forms}
 
-# AEM FormsでのAssemblerサービスの使用{#using-assembler-service-in-aem-forms}
-
-この記事では、複数のPDFファイルをブラウザーにドラッグ&amp;ドロップし、アセンブリされたPDFファイルをファイルシステムに保存する機能を示すアセットを提供します。 次に、ブラウザーを使用してアップロードされたpdfファイルをアセンブルするサーブレットのコードを示します。
+この記事では、複数のPDFファイルをブラウザーにドラッグ&amp;ドロップし、組み立てられた pdf ファイルをファイルシステムに保存する機能を示すアセットを提供します。 次に、ブラウザーを使用してアップロードされた pdf ファイルをアセンブルするサーブレットのコードを示します。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -99,34 +100,27 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-この機能をAEM Serverで動作させるには
+この機能をAEM Server で動作させるには
 
-* [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)をローカルシステムにダウンロードします。
-* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してパッケージをアップロードし、インストールします。
-* [カスタムドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)をダウンロードします。
-* [サービスユーザーバンドルでの開発](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)をダウンロードします。
-* [felix Webコンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをデプロイし、起動します。
-* ブラウザーで[AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)を参照します。
-* PDFファイルの2つのファイルのドラッグ&amp;ドロップ
+* をダウンロードします。 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) をローカルシステムに送信します。
+* を使用してパッケージをアップロードしインストールする [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
+* ダウンロード[カスタムドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* ダウンロード [サービスユーザーバンドルを使用した開発](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* バンドルをデプロイし、 [felix web コンソール](http://localhost:4502/system/console/bundles)
+* ブラウザーで次の場所を指定します。 [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* PDFファイルのファイルを 2、3 個ドラッグ&amp;ドロップします
 
 >[!NOTE]
 >
->AEM Formsのインストールが完了していることを確認します。 すべてのバンドルはアクティブ状態である必要があります。
+>AEM Formsのインストールが完了していることを確認します。 すべてのバンドルがアクティブ状態である必要があります。
 >
->この[AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)のインストールで説明したように、- Boot delegate RSAライブラリとBouncyCastleライブラリが追加されていることを確認します。
+>Boot delegate RSA ライブラリと BouncyCastle ライブラリが追加されていることを確認します（この節を参照）。 [AEM Formsのインストール](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
->**このデモに関する注意事項**
+>**このデモの注意事項**
 >
-> * このコードはXFAベースのPDFドキュメントを処理しません
-   >
-   > 
-* PDFファイルのみをドラッグ&amp;ドロップしてください
+> * このコードは XFA ベースのPDFドキュメントを処理しません
+>
+> * 必ずPDFファイルのみをドラッグ&amp;ドロップしてください
 >
 >
-
-
-
-
-
-
 

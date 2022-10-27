@@ -7,7 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 10292
-source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
+exl-id: c1d248c3-8208-476e-b0ae-cab25575cd6a
+last-substantial-update: 2021-10-12T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 6%
@@ -37,7 +39,7 @@ Adobe PDF Embed API を使用してPDFを表示するクライアントライブ
 一部のタブを使用してアダプティブフォームを作成します（このサンプルには 3 つのタブがあります）最初の 2 つのタブにアダプティブフォームのコンポーネントを追加します 3 番目のタブに pdf カルーセルコンポーネントを追加します pdf-carousel コンポーネントを設定します（下のスクリーンショットを参照）
 ![pdf-carousel](assets/pdf-carousel-af-component.png)
 
-**埋め込みPDFAPI キー** - PDF の埋め込みに使用できるキーです。 This key will only work with localhost. 次の項目を作成できます。 [自分の鍵](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) を追加し、それを他のドメインに関連付けます。
+**埋め込みPDFAPI キー** - PDF の埋め込みに使用できるキーです。 このキーは localhost でのみ機能します。 次の項目を作成できます。 [自分の鍵](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) を追加し、それを他のドメインに関連付けます。
 
 **PDF文書の指定**  — ここで、カルーセルに表示する pdf ドキュメントを指定できます。
 
@@ -46,9 +48,9 @@ Adobe PDF Embed API を使用してPDFを表示するクライアントライブ
 
 ローカルサーバーでこれをテストするには、次の手順に従います。
 
-1. [Import the client library](assets/pdf-carousel-client-lib.zip) into your local AEM instance [using the package manager](http://localhost:4502/crx/packmgr/index.jsp)
+1. [クライアントライブラリのインポート](assets/pdf-carousel-client-lib.zip) をローカルのAEMインスタンスに追加します。 [パッケージマネージャーの使用](http://localhost:4502/crx/packmgr/index.jsp)
 1. [PDF カルーセルコンポーネントの読み込み](assets/pdf-carousel-component.zip) をローカルのAEMインスタンスに追加します。 [パッケージマネージャーの使用](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Import the Adaptive Form ](assets/adaptive-form-pdf-carousel.zip) into your local AEM instance [using the package manager](http://localhost:4502/crx/packmgr/index.jsp)
+1. [アダプティブフォームの読み込み ](assets/adaptive-form-pdf-carousel.zip) をローカルのAEMインスタンスに追加します。 [パッケージマネージャーの使用](http://localhost:4502/crx/packmgr/index.jsp)
 1. [サンプル PDF を読み込んで表示します](assets/pdf-carousel-sample-documents.zip) をローカルのAEMインスタンスに追加します。 [assets ファイルのアップロードリンクの使用](http://localhost:4502/assets.html/content/dam)
-1. [Preview Adaptive Form](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
-1. Tab to the Documents to Review tab. カルーセルコンポーネントに 3 つのPDFドキュメントが表示されます。
+1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
+1. 「レビューするドキュメント」タブにタブを移動します。 カルーセルコンポーネントに 3 つのPDFドキュメントが表示されます。

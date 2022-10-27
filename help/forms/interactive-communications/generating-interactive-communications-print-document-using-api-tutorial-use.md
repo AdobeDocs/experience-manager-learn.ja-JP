@@ -1,34 +1,35 @@
 ---
-title: 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
-seo-title: 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
-description: 印刷チャネルドキュメントの生成に監視フォルダーを使用する
-seo-description: 印刷チャネルドキュメントの生成に監視フォルダーを使用する
-feature: インタラクティブコミュニケーション
+title: 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
+seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
+description: 監視フォルダーを使用して印刷チャネルドキュメントを生成する
+seo-description: Use watched folder to generate print channel documents
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '463'
 ht-degree: 2%
 
 ---
 
+# 監視フォルダーメカニズムを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成
 
-# 監視フォルダーメカニズムを使用して印刷チャネル用のインタラクティブ通信ドキュメントを生成する
+印刷チャネルドキュメントの設計とテストが完了したら、通常は REST 呼び出しを行ってドキュメントを生成するか、監視フォルダーメカニズムを使用して印刷ドキュメントを生成する必要があります。
 
-印刷チャネルドキュメントの設計とテストが完了したら、通常はREST呼び出しを行ってドキュメントを生成するか、監視フォルダーメカニズムを使用して印刷ドキュメントを生成する必要があります。
+この記事では、監視フォルダーのメカニズムを使用して印刷チャネルドキュメントを生成する使用例を説明します。
 
-この記事では、監視フォルダーメカニズムを使用して印刷チャネルドキュメントを生成する使用例を説明します。
+ファイルを監視フォルダーにドロップすると、監視フォルダーに関連付けられたスクリプトが実行されます。 このスクリプトは、以下の記事で説明します。
 
-ファイルを監視フォルダーにドロップすると、監視フォルダーに関連付けられたスクリプトが実行されます。 このスクリプトについては、以下の記事で説明します。
-
-監視フォルダーにドロップされるファイルの構造は次のとおりです。 このコードは、XMLドキュメントにリストされているすべてのアカウント番号に関するステートメントを生成します。
+監視フォルダーにドロップされたファイルの構造は次のとおりです。 このコードは、XML ドキュメントにリストされているすべてのアカウント番号に関するステートメントを生成します。
 
 &lt;accountnumbers>
 
@@ -42,23 +43,23 @@ ht-degree: 2%
 
 &lt;/accountnumbers>
 
-以下のコードは次の処理を行います。
+以下のコードをリストすると、次の処理がおこなわれます。
 
-1行目 — InteractiveCommunicationsDocumentのパス
+行 1 - InteractiveCommunicationsDocument へのパス
 
-15～20行目：監視フォルダーにドロップされたXMLドキュメントのアカウント番号のリストを取得する
+行 15～20:監視フォルダーにドロップされた XML ドキュメントからアカウント番号のリストを取得します
 
-24～25行目：ドキュメントに関連付けられたPrintChannelServiceと印刷チャネルを取得します。
+24～25 行目：ドキュメントに関連付けられた PrintChannelService と Print Channel を取得します。
 
-30行目：accountnumberをキー要素としてフォームデータモデルに渡します。
+30 行目：accountnumber をキー要素としてフォームデータモデルに渡します。
 
-32～36行目：生成するドキュメントのデータオプションを設定します。
+32～36 行目：生成するドキュメントのデータオプションを設定します。
 
-38行目：ドキュメントをレンダリングします。
+行 38:ドキュメントをレンダリングします。
 
-39～40行目 — 生成されたドキュメントをファイルシステムに保存します。
+39～40 行目 — 生成したドキュメントをファイルシステムに保存します。
 
-フォームデータモデルのRESTエンドポイントには、IDが入力パラメーターとして必要です。 このidは、以下のスクリーンショットに示すように、「 accountnumber 」と呼ばれる要求属性にマッピングされます。
+フォームデータモデルの REST エンドポイントには、ID が入力パラメーターとして必要です。 この id は、以下のスクリーンショットに示すように、「accountnumber」と呼ばれる要求属性にマッピングされます。
 
 ![requestattribute](assets/requestattributeprintchannel.gif)
 
@@ -110,26 +111,26 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**ローカルシステムでこれをテストするには、次の手順に従います。**
+**ローカルシステムでこれをテストするには、次の手順に従ってください。**
 
-* この[記事の説明に従って、Tomcatを設定します。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcatには、サンプルデータを生成するwarファイルがあります。
-* この[記事](/help/forms/adaptive-forms/service-user-tutorial-develop.md)で説明するように、サービスユーザー（システムユーザー）を設定します。
-このシステムユーザーが次のノードに対する読み取り権限を持っていることを確認します。 [ユーザーadmin](https://localhost:4502/useradmin)にログイン権限を付与し、システムユーザー「data」を検索し、次のノードでTabキーを押して読み取り権限を付与するには、「権限」タブに移動します。
+* Tomcat を設定します。 [記事。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat には、サンプルデータを生成する war ファイルがあります。
+* この説明に従って、サービスユーザー（システムユーザー）を設定します。 [記事](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+このシステムユーザーが次のノードに対する読み取り権限を持っていることを確認します。 権限をにログインさせるには、以下を実行します。 [ユーザー管理者](https://localhost:4502/useradmin) を検索し、Tab キーで「権限」タブに移動して、次のノードで読み取り権限を付与します。
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
-* パッケージマネージャーを使用して、次のパッケージをAEMに読み込みます。 このパッケージには、次の内容が含まれます。
+* パッケージマネージャーを使用して、次のパッケージをAEMにインポートします。 このパッケージには、次の内容が含まれます。
 
 
-* [インタラクティブ通信ドキュメントのサンプル](assets/retirementstatementprint.zip)
+* [Interactive Communications ドキュメントの例](assets/retirementstatementprint.zip)
 * [監視フォルダースクリプト](assets/printchanneldocumentusingwatchedfolder.zip)
 * [データソース設定](assets/datasource.zip)
 
-* /etc/fd/watchfolder/scripts/PrintPDF.ecmaファイルを開きます。 1行目のinteractiveCommunicationsDocumentへのパスが、印刷する正しいドキュメントを指していることを確認します
+* /etc/fd/watchfolder/scripts/PrintPDF.ecmaファイルを開きます。 1 行目の interactiveCommunicationsDocument へのパスが、印刷する正しいドキュメントを指していることを確認します
 
-* 2行目の設定に従ってsaveLocationを変更します。
+* 行 2 の設定に従って saveLocation を変更します。
 
-* 次の内容のaccountnumbers.xmlファイルを作成します。
+* 次の内容の accountnumbers.xml ファイルを作成します
 
 ```xml
 <accountnumbers>
@@ -143,13 +144,12 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-* accountnumbers.xmlをC:\RenderPrintChannel\input folderフォルダーにドロップします。
+* accountnumbers.xml をC:\RenderPrintChannel\input folderディレクトリにドロップします。
 
-* 生成されたPDFファイルは、ecmaスクリプトで指定されたsaveLocationに書き込まれます。
+* 生成されたPDFファイルは、ecma スクリプトで指定された saveLocation に書き込まれます。
 
 >[!NOTE]
 >
->Windows以外のオペレーティングシステムで使用する場合は、に移動してください。
+>Windows 以外のオペレーティングシステムで使用する場合は、次の URL に移動してください：
 >
->/etc/fd/watchfolder /config/PrintChannelDocumentを開き、設定に従ってfolderPathを変更します。
-
+>/etc/fd/watchfolder /config/PrintChannelDocument を編集し、設定に従って folderPath を変更します。

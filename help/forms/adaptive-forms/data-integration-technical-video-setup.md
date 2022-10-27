@@ -1,32 +1,32 @@
 ---
 title: AEM Formsとのデータ統合の設定
-description: JDBCデータソースへのデータ接続の設定
-feature: アダプティブForms，ワークフロー
+description: JDBC データソースへのデータ接続の設定
+feature: Adaptive Forms,Workflow
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ba5a250d-b2ee-4d1b-807c-e144b805c61a
+last-substantial-update: 2021-02-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 14%
+source-wordcount: '74'
+ht-degree: 13%
 
 ---
 
-
 # AEM Formsとのデータ統合の設定 {#set-up-data-integration-with-aem-forms}
 
-JDBCデータソースへのデータ接続の設定
+JDBC データソースへのデータ接続の設定
 
 >[!VIDEO](https://video.tv.adobe.com/v/17724/?quality=9&learn=on)
 
 >[!NOTE]
 >
->MySQL JDBCドライバーは、AEMインスタンス上のOSGiバンドルを介してインストールする必要があります。
+>MySQL JDBC ドライバーは、OSGi バンドルを介してAEMインスタンスにインストールする必要があります。
 
 ## サポート資料 {#supporting-materials}
 
-* [MySQL JDBC OSGiバンドルのダウンロード](https://dev.mysql.com/downloads/connector/j/)
+* [MySQL JDBC OSGi バンドルのダウンロード](https://dev.mysql.com/downloads/connector/j/)
 
-   * [AEM Webコンソール](http://localhost:4502/system/console/bundles)からJARファイルをダウンロードし、展開してインストールします。
-
+   * を使用して JAR ファイルをダウンロード、展開し、インストールします。 [AEM Web コンソール](http://localhost:4502/system/console/bundles)
