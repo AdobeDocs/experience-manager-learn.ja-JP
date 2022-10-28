@@ -11,9 +11,9 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # フルスタックAEMプロジェクトを更新して、フロントエンドパイプラインを使用する {#update-project-enable-frontend-pipeline}
 
-この章では、 __WKND Sites プロジェクト__ を使用すると、完全なフルスタックパイプライン実行が必要なく、フロントエンドパイプラインを使用して JavaScript と CSS をデプロイできます。 これにより、フロントエンドアーティファクトとバックエンドアーティファクトの開発とデプロイメントのライフサイクルを切り離し、より迅速で反復的な開発プロセスを全体的に実現できます。
+この章では、 __WKND Sites プロジェクト__ を使用すると、完全なフルスタックパイプライン実行が必要なく、フロントエンドパイプラインを使用して JavaScript と CSS をデプロイできます。 これにより、フロントエンドアーティファクトとバックエンドアーティファクトの開発とデプロイメントのライフサイクルが切り離され、より迅速で反復的な開発プロセス全体を実現します。
 
 ## 目的 {#objectives}
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 1. を準備する `ui.frontend` 2 つの新しい webpack 設定ファイルを追加することで、フロントエンドパイプライン契約のモジュール。
 
-   * 既存の `webpack.common.js` as `webpack.theme.common.js`，変更 `output` プロパティと `MiniCssExtractPlugin`, `CopyWebpackPlugin` プラグイン設定パラメーターを次に示します。
+   * 既存の `webpack.common.js` as `webpack.theme.common.js`、および変更 `output` プロパティと `MiniCssExtractPlugin`, `CopyWebpackPlugin` プラグイン設定パラメーターを次に示します。
 
    ```javascript
    ...
@@ -89,7 +89,7 @@ ht-degree: 0%
    
    ...
        new MiniCssExtractPlugin({
-               filename: 'clientlib-[name]/[name].css'
+               filename: 'theme/[name].css'
            }),
        new CopyWebpackPlugin({
            patterns: [
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 1. を準備する `ui.content` 2 つの Sling 設定を追加することで、フロントエンドパイプラインのモジュール。
 
-   * に新しいファイルを作成します。 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — これには、 `ui.frontend` モジュールは、 `dist` webpack のビルドプロセスを使用するフォルダ。
+   * にファイルを作成します。 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — これには、 `ui.frontend` モジュールは、 `dist` webpack のビルドプロセスを使用するフォルダ。
 
    ```xml
    ...
@@ -191,6 +191,14 @@ ht-degree: 0%
 >
 > これらの変更は、GitHub の [__フロントエンドパイプライン__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) 分岐 __AEM WKND Sites プロジェクト__.
 
+
+## 注意 — _フロントエンドパイプラインの有効化_ ボタン
+
+この [パネルセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) &#39;s [サイト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) オプションには **フロントエンドパイプラインの有効化** ボタンをクリックして、サイトのルートまたはサイトページを選択します。 クリック **フロントエンドパイプラインの有効化** ボタンは上記の **Sling 設定**、必ず **クリックしない** このボタンをクリックします。
+
+![「フロントエンドパイプラインを有効にする」ボタン](assets/enable-front-end-Pipeline-button.png)
+
+誤ってクリックされた場合は、パイプラインを再実行して、フロントエンドパイプラインが契約し、変更が復元されていることを確認する必要があります。
 
 ## おめでとうございます。 {#congratulations}
 
