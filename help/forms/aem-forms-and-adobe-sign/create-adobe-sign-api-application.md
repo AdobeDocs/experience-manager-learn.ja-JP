@@ -1,23 +1,24 @@
 ---
-title: Adobe Sign APIアプリケーションの作成
-description: Adobe Sign APIアプリケーションを使用すると、AEM FormsをAdobe Signと統合できます
-feature: アダプティブForms,Adobe Sign
+title: Acrobat Sign API アプリケーションの作成
+description: Acrobat Sign API アプリケーションを使用すると、AEM FormsをAcrobat Signと統合できます
+feature: Adaptive Forms,Acrobat Sign
 kt: 6032
 thumbnail: 38178.jpg
-topic: 開発
+topic: Development
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0fea826c-b481-4c8f-872f-e429430ed3a6
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
-# Adobe Sign APIアプリケーションの作成
+# Acrobat Sign API アプリケーションの作成
 
-Adobe Signプラットフォームと統合するには、Adobe SignでAPIアプリケーションを作成する必要があります。 APIアプリケーションは、クライアントアプリケーションを表す役割を果たし、Adobe Signプラットフォームとやり取りします。 APIアプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
+Acrobat Signプラットフォームと統合するには、Acrobat Signで API アプリケーションを作成する必要があります。 API アプリケーションは、Acrobat Sign Platform とやり取りするクライアントアプリケーションを表す役割を果たします。 API アプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
 
-次のビデオでは、Adobe Sign APIアプリケーションを作成する際に必要な手順を説明します
+次のビデオでは、Acrobat Sign API アプリケーションの作成で必要となる手順を説明します
 
 >[!VIDEO](https://video.tv.adobe.com/v/38178/?quality=9&learn=on)

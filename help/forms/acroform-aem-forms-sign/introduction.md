@@ -1,13 +1,13 @@
 ---
 title: AEM Formsを使用した Acroforms
-description: Acroform を使用したアダプティブフォームの作成と、データの結合を使用したPDF。 結合されたデータを含むPDFは、Adobe Signを使用した署名用に送信できます。
+description: Acroform を使用したアダプティブフォームの作成と、データの結合を使用したPDF。 結合されたデータを含むPDFは、Acrobat Signを使用した署名用に送信できます。
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 # Acroforms からのアダプティブFormsの作成
 
-組織は様々な形式を持っています。 これらのフォームの一部はMicrosoft Word で作成され、PDFに変換されます。 デフォルトでは、これらのフォームはAdobe ReaderまたはAcrobatを使用して入力できません。 AcrobatまたはReaderを使用してこれらのフォームを入力できるようにするには、これらのフォームを Acroform に変換する必要があります。 Acroforms は、Acrobatを使用して作成されたフォームです。 この記事では、Acroform からアダプティブフォームを作成し、データを Acroform に結合してPDFを取得する方法について説明します。 結合されたデータを含むPDFは、Adobe Signを使用した署名用に送信することもできます。
+組織は様々な形式を持っています。 これらのフォームの一部はMicrosoft Word で作成され、PDFに変換されます。 デフォルトでは、これらのフォームはAdobe ReaderまたはAcrobatを使用して入力できません。 AcrobatまたはReaderを使用してこれらのフォームを入力できるようにするには、これらのフォームを Acroform に変換する必要があります。 Acroforms は、Acrobatを使用して作成されたフォームです。 この記事では、Acroform からアダプティブフォームを作成し、データを Acroform に結合してPDFを取得する方法について説明します。 結合されたデータを含むPDFは、Acrobat Signを使用した署名用に送信することもできます。
 
 >[!NOTE]
 >

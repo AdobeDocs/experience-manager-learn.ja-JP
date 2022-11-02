@@ -1,6 +1,6 @@
 ---
-title: Adobe Sign Applicationの作成
-description: Adobe Sign Applicationは、AEM FormsとAdobe Signの統合を作成する最初の手順です。
+title: Acrobat Sign Application を作成
+description: Acrobat Sign Application は、AEM FormsとAcrobat Signの統合を作成する最初の手順です。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,15 +11,15 @@ topic: Development
 kt: 7427
 thumbnail: 332436.jpg
 exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
-# Adobe Sign APIアプリケーションの作成
+# Acrobat Sign API アプリケーションの作成
 
-Adobe Signプラットフォームと統合するには、Adobe SignでAPIアプリケーションを作成する必要があります。 APIアプリケーションは、クライアントアプリケーションを表す役割を果たし、Adobe Signプラットフォームとやり取りします。 APIアプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
+Acrobat Signプラットフォームと統合するには、Acrobat Signで API アプリケーションを作成する必要があります。 API アプリケーションは、Acrobat Sign Platform とやり取りするクライアントアプリケーションを表す役割を果たします。 API アプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)

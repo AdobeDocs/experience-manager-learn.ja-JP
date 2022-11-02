@@ -1,24 +1,24 @@
 ---
-title: AEM用のSSLの有効化
-description: Adobe Experience ManagerのSSL設定ウィザードを使用して、HTTPS経由で実行するAEMインスタンスを設定します。
-feature: アダプティブフォーム
+title: AEM用の SSL の有効化
+description: Adobe Experience Managerの SSL 設定ウィザードを使用して、AEM経由で実行する HTTPS インスタンスを設定します。
+feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
-topic: 開発
+topic: Development
 role: Admin
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e94cde31-e589-4b71-b5de-bcd898393b8a
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 3%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
+# AEM用の SSL の有効化
 
-# AEM用のSSLの有効化
-
-AEM FormsとAdobe Signを統合するための前提条件の1つは、SSLを使用するようにAEMインスタンスを設定することです。 Adobe Experience ManagerのSSL設定ウィザードを使用して、AEMで実行するHTTPSインスタンスを簡単に設定できるようにします。
-次のビデオでは、ウィザードを使用してSSLを設定するために必要な手順を説明します
+AEM FormsとAcrobat Signの統合の前提条件の 1 つは、SSL を使用するようにAEMインスタンスを設定することです。 Adobe Experience Manager SSL セットアップウィザードを使用して、AEM経由で実行するインスタンスを簡単に設定できるようにします。
+次のビデオでは、ウィザードを使用して SSL を設定するために必要な手順を説明します
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=9&learn=on)

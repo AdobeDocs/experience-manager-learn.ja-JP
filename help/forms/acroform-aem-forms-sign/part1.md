@@ -8,7 +8,7 @@ audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -29,13 +29,13 @@ Acroforms は、Acrobatを使用して作成されたフォームです。 Acrob
 
 >[!NOTE]
 >
->Adobe Signを使用した署名用に入力可能な acroform を送信する場合は、フィールドに適宜名前を付けてください。 例えば、フィールドに **Sig_es_:signer1:署名**. これは、Adobe Signが理解できる構文です。
+>Acrobat Signを使用した署名用に入力可能な acroform を送信する場合は、フィールドに適宜名前を付けてください。 例えば、フィールドに **Sig_es_:signer1:署名**. これは、Acrobat Signが理解できる構文です。
 
 >[!NOTE]
 >
->XFA ベースのドキュメントを送信する場合は、統合したドキュメントを送信し、ドキュメント内に静的テキストとしてAdobe Signの署名タグを配置する必要があります。
+>XFA ベースのドキュメントを送信する場合は、統合したドキュメントを送信し、ドキュメント内に静的テキストとしてAcrobat Signの署名タグを配置する必要があります。
 
-[Adobe Sign Text Tags Document](https://helpx.adobe.com/jp/sign/using/text-tag.html)
+[Acrobat Sign Text Tags Document](https://helpx.adobe.com/jp/sign/using/text-tag.html)
 
 >[!NOTE]
 >

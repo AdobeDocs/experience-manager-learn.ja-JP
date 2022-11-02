@@ -9,7 +9,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * フォームが **SignMultipleForms** テンプレート。 これにより、データベースから取得されたデータがフォームに事前に入力されます。
 
-* Adobe Signを使用するようにフォームを設定する必要があり、signer1 フィールドを顧客の電子メールフィールドに関連付ける必要があります
+* Acrobat Signを使用するようにフォームを設定する必要があり、signer1 フィールドを顧客の電子メールフィールドに関連付ける必要があります
 * また、フォームは、 **getnextform**
 * フォームでは、署名ステップコンポーネントを使用する必要があります。
 * フォームは、カスタム **複数のフォームに署名** コンポーネント。 このコンポーネントを使用すると、次のフォームに移動してパッケージにサインインできます。

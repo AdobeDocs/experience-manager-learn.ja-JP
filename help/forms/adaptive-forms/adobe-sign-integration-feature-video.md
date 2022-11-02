@@ -1,7 +1,7 @@
 ---
-title: AEM FormsでのAdobe Signの使用
-description: AEM FormsでのAdobe Signの使用
-feature: Adobe Sign
+title: AEM FormsでのAcrobat Signの使用
+description: AEM FormsでのAcrobat Signの使用
+feature: Acrobat Sign
 role: Admin
 level: Beginner
 uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
@@ -14,7 +14,7 @@ index: y
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 ---
 
 
-# AEM FormsでのAdobe Signの使用{#using-adobe-sign-with-aem-forms}
+# AEM FormsでのAcrobat Signの使用{#using-adobe-sign-with-aem-forms}
 
-AEM FormsでのAdobe Signの使用
+AEM FormsでのAcrobat Signの使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=9&learn=on)
 
-*このビデオでは、Adobe Sign Cloud Service を設定し、AEMアダプティブフォームに複数の署名フィールドを追加する手順について説明します。*
+*このビデオでは、Acrobat Sign Cloud Service を設定し、AEMアダプティブフォームに複数の署名フィールドを追加する手順について説明します。*
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager
 version: Cloud Service
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 28%
@@ -206,10 +206,10 @@ ht-degree: 28%
       + [ワークフローストレージの外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [ワークフローモデルを作成](./forms/create-aem-workflow/create-workflow.md)
       + [トリガーワークフロー](./forms/create-aem-workflow/configure-af.md)
-   + Adobe SignとAEM Forms{#forms-and-sign}
+   + Acrobat SignとAEM Forms{#forms-and-sign}
       + [はじめに](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API アプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Acrobat Sign API アプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Acrobat Sign Cloud Configuration](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [アダプティブフォームを作成](./forms/forms-and-sign/create-adaptive-form.md)
       + [入力および署名用に設定](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + Microsoft Power Automate との統合{#forms-cs-and-power-automate}

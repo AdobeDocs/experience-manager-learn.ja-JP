@@ -7,7 +7,7 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 3%
@@ -136,11 +136,11 @@ ht-degree: 3%
 + HTML5 のフォーム{#html5-forms}
    + [HTML5 フォームを作成](html5-forms/create-html5-form.md)
    + [HTML5 フォーム送信を処理](html5-forms/handle-html5-form-submission.md)
-+ AEM FormsとAdobe Sign{#forms-and-sign}
++ AEM FormsとAcrobat Sign{#forms-and-sign}
    + [はじめに](aem-forms-and-adobe-sign/introduction.md)
    + [SSL の設定](aem-forms-and-adobe-sign/set-up-ssl.md)
-   + [Adobe Sign API アプリケーションの作成](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
-   + [Adobe Signクラウド設定を作成](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
+   + [Acrobat Sign API アプリケーションの作成](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
+   + [Acrobat Signクラウド設定を作成](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
    + [署名用のドキュメントを送信するワークフローを作成](aem-forms-and-adobe-sign/create-workflow-to-send-document-for-signing.md)
    + [アダプティブフォームの作成と設定](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [単一の署名者に対するアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
@@ -148,7 +148,7 @@ ht-degree: 3%
    + [automated forms conversionサービスの設定](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [PDFフォームをアダプティブフォームに変換する](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [変換後のアダプティブフォームを設定する](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
-   + [Adobe Signでの XDP テンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [Acrobat Signでの XDP テンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 複数のFormsに署名{#sign-multiple-documents}
    + [はじめに](sign-multiple-documents/introduction.md)
    + [データソースの設定](sign-multiple-documents/configure-data-source.md)

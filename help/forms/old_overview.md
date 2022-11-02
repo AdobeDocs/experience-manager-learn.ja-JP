@@ -4,7 +4,7 @@ description: 初心者および経験者向けのAEM Formsリソースのコレ�
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 12%
@@ -140,7 +140,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     </div>
     <p>
-    <em>AEM FormsとAdobe Signを使用して満たされ、署名されたテナントと大家の間の賃貸契約</em>
+    <em>AEM FormsとAcrobat Signを使用して満たされ、署名されたテナントと大家の間の賃貸契約</em>
     <p>
   </td>
   <td>
@@ -153,7 +153,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     </div>
     <p>
-    <em>NDA を動的に作成し、Adobe Signを使用して署名用に送信します</em>
+    <em>NDA を動的に作成し、Acrobat Signを使用して署名用に送信します</em>
     </p>
   </td>
   <td>
@@ -166,7 +166,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
       </a>
     </div>
     <p>
-    <em>FormsとAdobe Signを使用して複数のドキュメントにシームレスに署名</em>
+    <em>FormsとAcrobat Signを使用して複数のドキュメントにシームレスに署名</em>
     <p>
   </td>
 </tr>
