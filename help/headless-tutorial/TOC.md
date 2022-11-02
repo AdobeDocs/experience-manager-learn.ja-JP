@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 23%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 23%
    + [7 — モバイルアプリからのAEM Content Services の使用](./content-services/chapter-7.md)
 + コードサンプル {#code-samples}
    + [React アプリのフィルタリング](./graphql/code-samples/filtering-react-app.md)
+   + [Preact アプリのフィルタリング](./graphql/code-samples/filtering-preact-app.md)
    + [フィルターAngularアプリ](./graphql/code-samples/filtering-angular-app.md)
    + [値アプリのフィルタリング](./graphql/code-samples/filtering-vue-app.md)
    + [jQuery と Handlebars を使用したフィルタリング](./graphql/code-samples/filtering-jquery-handlebars.md)
