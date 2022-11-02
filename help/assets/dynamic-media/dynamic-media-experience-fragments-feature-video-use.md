@@ -1,14 +1,14 @@
 ---
 title: AEM Assets Dynamic Mediaでのエクスペリエンスフラグメントの使用
 description: AEM Assets Dynamic Mediaは、インタラクティブメディアビューアを介して、アセットのホットスポットをエクスペリエンスフラグメントと統合します。 マーケターは、エクスペリエンスフラグメントをテキスト、画像およびリンクで作成して、カスタムポップアップに入力し、そのポップアップをバナー、カルーセルまたはビデオのホットスポットに関連付けることができます。
-sub-product: dynamic-media, content-services
+sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Experience Fragments
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: c4c1ffe2-d4ea-4b31-b5d5-132fba9d2633
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 2%

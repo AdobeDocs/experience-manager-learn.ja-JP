@@ -1,11 +1,11 @@
 ---
 title: Cloud 5 - Season 2
 description: シーズン 2 では、Adobe Experience Manager(AEM) を構築するAdobeのエキスパートエンジニアや、それを提供するエキスパートサービスから、() のas a Cloud Serviceについて学ぶことができます。
-sub-product: sites, cloud-manager, assets
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%

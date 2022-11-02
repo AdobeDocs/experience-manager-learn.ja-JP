@@ -1,14 +1,13 @@
 ---
-sub-product: sites
-topics: development
-version: Cloud Service
-activity: develop
-audience: developer
 user-guide-title: AEM Sites の概要 - WKND チュートリアル
 user-guide-description: AEM を初めて使う開発者向けに作られた、複数のパートから成るチュートリアルです。架空のライフスタイルブランドである WKND 向けに AEM Sites を実装します。フロントエンドパイプラインを有効にして、開発をデプロイメントサイクルに進めます。
 breadcrumb-title: AEM Sites WKND チュートリアル
+sub-product: Experience Manager Sites
+version: Cloud Service
+activity: develop
+audience: developer
 index: y
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 46%

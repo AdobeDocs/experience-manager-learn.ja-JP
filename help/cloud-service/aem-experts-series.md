@@ -1,27 +1,27 @@
 ---
 title: Adobe Experience Manager as a Cloud Service Experts Series
-description: Adobe Experience Manager(AEM) を構築するAdobe独自のエキスパートエンジニア、およびそれを提供するプロフェッショナルサービスからas a Cloud Service的に取得する方法について説明します。
-sub-product: sites, cloud-manager, assets
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+description: Adobe Experience Manager(AEM) を構築するAdobeの専門エンジニアや、それを提供するプロフェッショナルサービスからas a Cloud Serviceした情報を紹介します。
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
+exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '705'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
-
 # Adobe Experience Manager as a Cloud Service Experts Series
 
-![AEM Experts シリーズ](./assets/experts-series/masthead.png)
+![AEM Experts Series](./assets/experts-series/masthead.png)
 
-Adobe Experience Manager(AEM) を構築するAdobeのエキスパートエンジニアや、それを提供するプロフェッショナルサービスチームからas a Cloud Service的に取り組む方法について説明します。 Adobeの専門家に参加して、AEMのas a Cloud Service、AEM 6 との同じ機能と違い、AEM 6 からAEM as a Cloud Serviceへの移行方法を調べます。
+Adobe Experience Manager(AEM) を構築するAdobeのエキスパートエンジニア、およびそれを提供するプロフェッショナルサービスチームからas a Cloud Serviceした情報を紹介します。 Adobeの専門家に参加して、AEMのas a Cloud Serviceとは何か、AEM 6 との同じ機能と違い、AEM 6 からAEM as a Cloud Serviceへの移行方法を調べてください。
 
 <br/> 
 <br/>
 
-## AEM as a Cloud Service - はじめに
+## AEMas a Cloud Serviceの概要
 
-AEM as a Cloud Servicesの基本と、AEM 6 との違い、Adobeエンジニアリングの上級クラウドアーキテクトとの違いについて説明します。
+AEM as aCloud Servicesの基本と、AEM 6 との違いについて、Adobeエンジニアリングのシニアクラウドアーキテクトから学びます。
 
 <table>
   <tr>
@@ -31,11 +31,11 @@ AEM as a Cloud Servicesの基本と、AEM 6 との違い、Adobeエンジニア�
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/introduction.md"><strong>違う考え方</strong></a>         
-         <br/><em>Darin Kuntze 氏（上級クラウドアーキテクト）</em>
+         <br/><em>シニアクラウドアーキテクトの Darin Kuntze 氏と共に</em>
       </div>
       <p>
         <br/>
-         AEM as a Cloud Serviceのアーキテクチャと、AEM as a Cloud Service実装に関する考え方を説明します。
+         AEM as a Cloud Serviceのアーキテクチャと、AEM as a Cloud Serviceの実装について異なる考え方を見てみましょう。
       </p>
      </td>   
      <td>
@@ -44,25 +44,25 @@ AEM as a Cloud Servicesの基本と、AEM 6 との違い、Adobeエンジニア�
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>AEM as a Cloud Serviceのオンボーディング</strong></a>
-         <br/><em>Damian Langsweirdt 氏（シニアクラウドアーキテクト）</em>
+         <br/><em>シニアクラウドアーキテクトの Damian Langsweirdt 氏と</em>
       </div>
       <p>
         <br/>
-         AEM as a Cloud Serviceのオンボーディングについて説明します。まず、Cloud Manager を使用してセルフサービス環境を設定する契約段階から始まります。
+         Cloud Manager を使用してセルフサービス環境を設定する契約段階から、AEMas a Cloud Serviceのオンボーディングについて説明します。
       </p>
    </td>     
    </td>   
      <td>
       <a href="./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md">
-      <img alt="Cloud Manager " src="./assets/experts-series/cloud-manager.png"/>
+      <img alt="Cloud Manager" src="./assets/experts-series/cloud-manager.png"/>
       </a>
       <div>
-         <a href="./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>AEM as a Cloud Service版 Cloud Manager</strong></a>
+         <a href="./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>Cloud Manager for AEM as a Cloud Service</strong></a>
          <br/><em>Bryan Stopp 氏（上級クラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         AEM as a Cloud Service向け Cloud Manager と、AEM版 Cloud Manager for Adobe on Cloud Manager Services(AMS) との違いについて説明します。
+         AEMas a Cloud Service版 Cloud Manager と、Cloud Manager for AEM on Cloud Manager Services(AMS) との違いについて説明します。
       </p>
    </td> 
   </tr>
@@ -70,21 +70,21 @@ AEM as a Cloud Servicesの基本と、AEM 6 との違い、Adobeエンジニア�
 
 ## AEM as a Cloud Service への移行?
 
-AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a Cloud Serviceに移行するための方法論と、これをスムーズな移行にする様々なツールおよび機能について説明します。
+AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeのAEM as a Cloud Serviceへの移行方法と、これをスムーズな移行にする様々なツールと機能について説明します。
 
 <table>
   <tr>
    <td>
       <a href="./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video">
-      <img alt="移行手法" src="./assets/experts-series/bpa-and-cam.png"/>
+      <img alt="移行方法" src="./assets/experts-series/bpa-and-cam.png"/>
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video"><strong>移行手法</strong></a>
-         <br/><em>ロジャー・ブラントンとAdobe・コンサルティング・サービス・テクニカル・アーキテクト</em>
+         <br/><em>Adobeコンサルティングサービステクニカルアーキテクトの Roger Blanton と</em>
       </div>
       <p>
         <br/>
-        AEM Best Practice Analyzer(BPA) と Cloud Acceleration Manager(CAM) を使用して、AEM 6 からAEM as a Cloud Serviceに移行する際のベストプラクティス移行方法を確認します。
+        AEM Best Practice Analyzer(BPA) と Cloud Acceleration Manager(CAM) を使用してAEM 6 からAEM as a Cloud Serviceに移行する際のベストプラクティス移行方法を説明します。
       </p>
    </td>   
      <td>
@@ -97,7 +97,7 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
       </div>
       <p>
         <br/>
-         最新のAEMas a Cloud Service機能を利用するために、AEMコンテンツを自動的に最新化する方法を説明します。
+         AEMコンテンツを自動的に最新化して、最新のAEMas a Cloud Service機能を利用する方法を説明します。
       </p>
    </td>     
    </td>   
@@ -107,7 +107,7 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>AEM Maven プロジェクトの最新化</strong></a>
-         <br/><em>クラウドアーキテクト、Varun Mitra との連携</em>
+         <br/><em>クラウドアーキテクトの Varun Mitra 氏と共に</em>
       </div>
       <p>
         <br/>
@@ -122,11 +122,11 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md" target="_aem-experts-series-video"><strong>Oak インデックスの最新化</strong></a>
-         <br/><em>Darin Kuntze 氏（上級クラウドアーキテクト）</em>
+         <br/><em>シニアクラウドアーキテクトの Darin Kuntze 氏と共に</em>
       </div>
       <p>
         <br/>
-        AEM 6 Oak インデックス定義をAEMas a Cloud Service互換に自動変換する方法と、今後AEMas a Cloud Service用の Oak インデックスを維持する方法について説明します。
+        AEM 6 Oak インデックス定義をAEMas a Cloud Service互換に自動的に変換する方法と、今後AEMのas a Cloud Service用に Oak インデックスを維持する方法について説明します。
       </p>
    </td>   
      <td>
@@ -139,7 +139,7 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
       </div>
       <p>
         <br/>
-         AEM 6 向け Dispatcher の主な変更点、Dispatcher 変換ツール、および Dispatcher ツール SDK の使用方法に重点を置いた、AEMas a Cloud Service版のAEM Dispatcher について説明します。
+         AEM 6 向けAEM Dispatcher の主な変更点、Dispatcher 変換ツール、および Dispatcher ツール SDK の使用方法に重点を置いた、AEMas a Cloud Service向け Dispatcher について説明します。
       </p>
    </td>     
    </td>   
@@ -149,7 +149,7 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>AEM as a Cloud Serviceへのコンテンツの転送</strong></a>
-         <br/><em>シニアクラウドアーキテクトの Kiran Murugulla 氏と</em>
+         <br/><em>シニアクラウドアーキテクトの Kiran Murugulla 氏と共に</em>
       </div>
       <p>
         <br/>
@@ -160,9 +160,9 @@ AEM 6 からAEM as a Cloud Serviceに移行する予定は？ AdobeがAEM as a C
 </table>
 
 
-## AEM as a Cloud Services機能
+## AEM as aCloud Services機能
 
-AEMas a Cloud Serviceの独自の機能について、Adobeの専門家にお問い合わせください。
+AEMas a Cloud Serviceの専門家が提供する、Adobe独自の機能について学びます。
 
 <table>
   <tr>
@@ -172,11 +172,11 @@ AEMas a Cloud Serviceの独自の機能について、Adobeの専門家にお問
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>asset computeマイクロサービス</strong></a>
-         <br/><em>Amol Anand 氏と共に、主要クラウドアーキテクト</em>
+         <br/><em>Amol Anand 氏（主要クラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-        AEM Assets のAsset computeマイクロサービス、AEM 6 のアセット処理を置き換える方法、およびカスタムアセットレンディションを生成するために拡張する方法について説明します。
+        AEM Assets のAsset computeマイクロサービス、AEM 6 のアセット処理を置き換える方法、カスタムアセットレンディションを生成するために拡張する方法について説明します。
       </p>
    </td>   
    <td>
@@ -185,35 +185,35 @@ AEMas a Cloud Serviceの独自の機能について、Adobeの専門家にお問
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>コンテンツの一括読み込み</strong></a>
-         <br/><em>シニアクラウドアーキテクトの Kiran Murugulla 氏と</em>
+         <br/><em>シニアクラウドアーキテクトの Kiran Murugulla 氏と共に</em>
       </div>
       <p>
         <br/>
-        一括インポートサービスとAEMパッケージマネージャーを使用して、コンテンツをAEM as a Cloud Serviceに安全かつ効率的に一括インポートする方法を説明します。
+        一括読み込みサービスとAEMパッケージマネージャーを使用して、AEMas a Cloud Serviceにコンテンツを一括で安全かつ効率的に読み込む方法を説明します。
       </p>
    </td> 
     <td></td>
   </tr>
 </table>
 
-## AEM as a Cloud Servicesのヘルプが必要な場合
+## AEM as aCloud Servicesのヘルプが必要な場合
 
-エキスパートによるAEM as a Cloud ServiceおよびAEM SDK のデバッグとトラブルシューティングの方法について説明します。
+エキスパートによるAEM as a Cloud Service SDK とAEM SDK のデバッグとトラブルシューティングの方法について説明します。
 
 <table>
   <tr>
    <td>
       <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
-      <img alt="トラブルシューティングAEM as a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
+      <img alt="トラブルシューティングAEMas a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
-         target="_aem-experts-series-video"><strong>トラブルシューティングAEM as a Cloud Service</strong></a>
-         <br/><em>クラウドアーキテクト、Kunwar Saluja との連携</em>
+         target="_aem-experts-series-video"><strong>トラブルシューティングAEMas a Cloud Service</strong></a>
+         <br/><em>Kunwar Saluja とクラウドアーキテクト</em>
       </div>
       <p>
         <br/>
-        AEM SDK とAEMのデバッグから、Cloud Manager のビルドおよびデプロイメントの失敗に至るまで、AEM as a Cloud Serviceの様々な側面をトラブルシューティングする方法について説明します。
+        AEM SDK とAEMのデバッグから、Cloud Manager のビルドおよびデプロイメントのas a Cloud Serviceに至るまで、AEMas a Cloud Serviceの様々な側面をトラブルシューティングする方法について説明します。
       </p>
    </td>   
     <td></td>
