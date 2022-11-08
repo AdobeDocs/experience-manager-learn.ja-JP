@@ -9,7 +9,7 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 2%
@@ -56,7 +56,7 @@ OSGi バンドルがファイルシステム上にある場合は、という名
 * コマンドプロンプトを開きます。私の場合は、プロジェクトのフォルダー (c:\aemformsbundles\AEMFormsProcessStep) に移動します。 次のコマンドを実行します。
 
 ```java
-mvn clean install -pAutoInstallSinglePackage
+mvn clean install -PautoInstallSinglePackage
 ```
 
 問題が解決しない場合、パッケージはサードパーティバンドルと共にAEMインスタンスにインストールされます。 次を使用して、バンドルを確認できます。 [felix web コンソール](http://localhost:4502/system/console/bundles). サードパーティバンドルは、 `crx` 次に示すリポジトリ

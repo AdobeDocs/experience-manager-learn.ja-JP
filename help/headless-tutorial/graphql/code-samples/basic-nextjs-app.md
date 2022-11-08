@@ -12,9 +12,9 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ ht-degree: 0%
 + WKND の永続クエリを使用します。 `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug`
 
 この Next.js アプリの構築方法の詳細については、 [Next.js アプリのドキュメントの例](../example-apps/next-js.md).
+
+>[!IMPORTANT]
+>
+> Codesandbox.io は、埋め込み IDE での Next.js アプリケーションの編集をサポートしていません。 このコードサンプルを編集するには、 [codesandbox.io で Next.js アプリを直接開きます。](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
