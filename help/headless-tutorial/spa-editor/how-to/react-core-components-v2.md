@@ -2,13 +2,13 @@
 title: AEM React 編集可能コンポーネント v2 の使用方法
 description: AEM React 編集可能コンポーネント v2 を使用して React アプリを強化する方法を説明します。
 version: Cloud Service
-feature: SPA Editor
 topic: Headless
+feature: SPA Editor
 role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f02d5e01388ee61228254951b05c37c336423348
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 5%
