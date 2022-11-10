@@ -6,22 +6,23 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: bd7916be-8caa-4321-add0-4c9031306d60
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # AEM GraphQL API の参照
 
-AEMの GraphQL API を使用すると、コンテンツフラグメントデータをダウンストリームアプリケーションに公開できます。 前の [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)を参照し、一般的な GraphQL クエリをテストおよび絞り込んだ GraphiQL 統合開発環境 (IDE) を確認しました。 この章では、GraphiQL IDE を使用して、より高度なクエリを調べ、前の章で作成したコンテンツフラグメントのデータを収集します。
+AEMの GraphQL API を使用すると、コンテンツフラグメントデータをダウンストリームアプリケーションに公開できます。 基本チュートリアル内 [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)GraphiQL Explorer を使用して、GraphQL クエリをテストし、調整しました。
+
+この章では、GraphiQL エクスプローラーを使用して、で作成したコンテンツフラグメントのデータを収集するためのより高度なクエリを定義します。 [前の章](../advanced-graphql/author-content-fragments.md).
 
 ## 前提条件 {#prerequisites}
 
 このドキュメントは、マルチパートチュートリアルの一部です。 この章を進める前に、前の章が完了していることを確認してください。
-
-この章を完了する前に、GraphiQL IDE をインストールする必要があります。 前の [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md) を参照してください。
 
 ## 目的 {#objectives}
 
@@ -33,11 +34,33 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
 * ディレクティブを使用したクエリ
 * JSON オブジェクトコンテンツタイプのクエリ
 
+## GraphiQL エクスプローラーの使用
+
+
+この [GraphiQL エクスプローラ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) ツールを使用すると、開発者は、現在のAEM環境のコンテンツに対するクエリを作成およびテストできます。 GraphiQL ツールを使用すると、次のことが可能になります。 **保持するか保存する** 実稼働設定でクライアントアプリケーションで使用されるクエリ。
+
+次に、組み込みの GraphiQL エクスプローラーを使用してAEM GraphQL API の機能を調べます。
+
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL クエリエディター**.
+
+   ![GraphiQL IDE に移動します。](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+
+>[!IMPORTANT]
+>
+>AEM (6.X.X) の一部のバージョンでは、GraphiQL Explorer (GraphiQL IDE) ツールを手動でインストールする必要があります。 [ここからの指示](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+
+1. 右上隅で、「エンドポイント」が「 **WKND 共有エンドポイント**. 変更 _エンドポイント_ ここに既存の値を表示するドロップダウン値 _永続クエリ_ をクリックします。
+
+   ![GraphQL エンドポイントを設定](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
+
+これにより、 **WKND 共有** プロジェクト。
+
+
 ## クエリ変数を使用したコンテンツフラグメントのリストのフィルタリング
 
-前の [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)では、コンテンツフラグメントのリストをフィルタリングする方法を学びました。 ここでは、この知識を拡張し、変数を使用してフィルタリングします。
+前の [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)を定義し、基本的な永続化クエリでコンテンツフラグメントデータを取得して使用しました。 ここでは、この知識を拡張し、永続的なクエリに変数を渡してコンテンツフラグメントデータをフィルタリングします。
 
-クライアントアプリケーションを開発する場合、ほとんどの場合、動的な引数に基づいてコンテンツフラグメントをフィルタリングする必要があります。 AEM GraphQL API を使用すると、実行時にクライアント側で文字列が構築されるのを避けるために、これらの引数を変数としてクエリに渡すことができます。 GraphQL 変数について詳しくは、 [GraphQL ドキュメント](https://graphql.org/learn/queries/#variables).
+クライアントアプリケーションを開発する場合は、通常、動的な引数に基づいてコンテンツフラグメントをフィルタリングする必要があります。 AEM GraphQL API を使用すると、実行時にクライアント側で文字列が構築されるのを避けるために、これらの引数を変数としてクエリに渡すことができます。 GraphQL 変数について詳しくは、 [GraphQL ドキュメント](https://graphql.org/learn/queries/#variables).
 
 この例では、特定のスキルを持つすべての講師に問い合わせます。
 
@@ -72,7 +95,7 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
 
    この `listPersonBySkill` 上のクエリは 1 つの変数 (`skillFilter`) が必須 `String`. このクエリは、すべてのユーザーコンテンツフラグメントに対して検索を実行し、 `skills` フィールドと、 `skillFilter`.
 
-   注意： `listPersonBySkill` 次を含む `contactInfo` プロパティ。これは、前の章で定義した連絡先情報モデルへのフラグメント参照です。 連絡先情報モデルには次が含まれます： `phone` および `email` フィールド。 クエリが正しく実行されるには、これらのフィールドの少なくとも 1 つをクエリに含める必要があります。
+   この `listPersonBySkill` 次を含む `contactInfo` プロパティ。これは、前の章で定義した連絡先情報モデルへのフラグメント参照です。 連絡先情報モデルには次が含まれます： `phone` および `email` フィールド。 クエリが正しく実行するには、クエリ内のこれらのフィールドの少なくとも 1 つが存在する必要があります。
 
    ```graphql
    contactInfo {
@@ -85,7 +108,7 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
 
    ```json
    {
-   	    "skillFilter": "Skiing"
+       "skillFilter": "Skiing"
    }
    ```
 
@@ -103,10 +126,10 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
                "email": "sroswells@wknd.com"
              },
              "profilePicture": {
-               "_path": "/content/dam/wknd/en/contributors/stacey-roswells.jpg"
+               "_path": "/content/dam/wknd-shared/en/contributors/stacey-roswells.jpg"
              },
              "biography": {
-               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer.\nBorn in Baltimore, Maryland, Stacey is the youngest of six children. Her father was a lieutenant colonel in the US Navy and her mother was a modern dance instructor. Her family moved frequently with her father’s duty assignments, and she took her first pictures when he was stationed in Thailand. This is also where Stacey learned to rock climb."
+               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer. Born in Baltimore, Maryland, Stacey is the youngest of six children. Stacey's father was a lieutenant colonel in the US Navy and mother was a modern dance instructor. Stacey's family moved frequently with father's duty assignments and took the first pictures when father was stationed in Thailand. This is also where Stacey learned to rock climb."
              },
              "instructorExperienceLevel": "Advanced",
              "skills": [
@@ -120,6 +143,10 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
      }
    }
    ```
+
+を押します。 **再生** ボタンを使用してクエリを実行します。 前の章のコンテンツフラグメントの結果が表示されます。
+
+![技能実績別人](assets/explore-graphql-api/person-by-skill.png)
 
 ## フラグメント参照内のコンテンツのフィルター
 
@@ -138,7 +165,7 @@ AEM GraphQL API を使用すると、ネストされたコンテンツフラグ�
        filter: {administrator: {fullName: {_expressions: [{value: $name}]}}}
      ) {
        items {
-         adventureTitle
+         title
          administrator {
            fullName
            contactInfo {
@@ -158,7 +185,7 @@ AEM GraphQL API を使用すると、ネストされたコンテンツフラグ�
 
    ```json
    {
-   	    "name": "Jacob Wester"
+       "name": "Jacob Wester"
    }
    ```
 
@@ -172,7 +199,7 @@ AEM GraphQL API を使用すると、ネストされたコンテンツフラグ�
        "adventureList": {
          "items": [
            {
-             "adventureTitle": "Yosemite Backpacking",
+             "title": "Yosemite Backpacking",
              "administrator": {
                "fullName": "Jacob Wester",
                "contactInfo": {
@@ -186,7 +213,7 @@ AEM GraphQL API を使用すると、ネストされたコンテンツフラグ�
                      "content": [
                        {
                          "nodeType": "text",
-                         "value": "Jacob Wester has been coordinating backpacking adventures for 3 years."
+                         "value": "Jacob Wester has been coordinating backpacking adventures for three years."
                        }
                      ]
                    }
@@ -254,13 +281,13 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
 
    この `getTeamByAdventurePath` クエリは複数の参照を取得します。 まず、組み込みの `ImageRef` 取得するオブジェクト `_path` および `__typename` 複数行テキストフィールドへのコンテンツ参照として挿入された画像の数。 次に、 `LocationModel` を使用して、同じフィールドに挿入された場所コンテンツフラグメントのデータを取得します。
 
-   なお、クエリには `_metadata` フィールドに入力します。 これにより、チームコンテンツフラグメントの名前を取得し、後で WKND アプリに表示することができます。
+   クエリには、 `_metadata` フィールドに入力します。 これにより、チームコンテンツフラグメントの名前を取得し、後で WKND アプリに表示することができます。
 
 1. 次に、クエリ変数パネルに次の JSON 文字列を貼り付けて、Yosemite Backpacking Adventure を取得します。
 
    ```json
    {
-   	    "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+       "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking"
    }
    ```
 
@@ -293,7 +320,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -308,7 +335,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -316,7 +343,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
    }
    ```
 
-   なお、 `_references` フィールドには、ロゴイメージと、 **説明** フィールドに入力します。
+   この `_references` フィールドには、ロゴイメージと、 **説明** フィールドに入力します。
 
 
 ## ディレクティブを使用したクエリ
@@ -376,7 +403,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking",
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking",
      "includeJson": false
    }
    ```
@@ -413,7 +440,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
                      {
                        "nodeType": "reference",
                        "data": {
-                         "path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
+                         "path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
                          "mimetype": "image/png"
                        }
                      }
@@ -434,7 +461,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
                      {
                        "nodeType": "reference",
                        "data": {
-                         "href": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+                         "href": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
                          "type": "fragment"
                        },
                        "value": "Yosemite Valley Lodge"
@@ -448,7 +475,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -463,7 +490,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -511,7 +538,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park"
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park"
    }
    ```
 
@@ -530,7 +557,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
                  "content": [
                    {
                      "nodeType": "text",
-                     "value": "Yosemite National Park is in California’s Sierra Nevada mountains. It’s famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
+                     "value": "Yosemite National Park is in California's Sierra Nevada mountains. It's famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
                    }
                  ]
                },
@@ -550,7 +577,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
              "email": "yosemite@wknd.com"
            },
            "locationImage": {
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
            },
            "weatherBySeason": {
              "summer": "81 / 89°F",
@@ -571,38 +598,39 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
    }
    ```
 
-   なお、 `weatherBySeason` フィールドには、前の章で追加した JSON オブジェクトが含まれます。
+   この `weatherBySeason` フィールドには、前の章で追加した JSON オブジェクトが含まれます。
 
 ## すべてのコンテンツを一度にクエリ
 
-これまでに、AEM GraphQL API の機能を説明するために複数のクエリが実行されてきました。 同じデータは、1 つのクエリでのみ取得できます。
+これまでに、AEM GraphQL API の機能を説明するために複数のクエリが実行されてきました。
+
+同じデータを 1 つのクエリでのみ取得でき、このクエリは後でクライアントアプリケーションで使用され、場所、チーム名、アドベンチャーのチームメンバーなどの追加情報を取得します。
 
 ```graphql
-query getAllAdventureDetails($fragmentPath: String!) {
-  adventureByPath(_path: $fragmentPath){
-    item {
+query getAdventureDetailsBySlug($slug: String!) {
+  adventureList(filter: {slug: {_expressions: [{value: $slug}]}}) {
+    items {
       _path
-      adventureTitle
-      adventureActivity
+      title
+      activity
       adventureType
-      adventurePrice
-      adventureTripLength
-      adventureGroupSize
-      adventureDifficulty
-      adventurePrice
-      adventurePrimaryImage{
-        ...on ImageRef{
+      price
+      tripLength
+      groupSize
+      difficulty
+      primaryImage {
+        ... on ImageRef {
           _path
           mimeType
           width
           height
         }
       }
-      adventureDescription {
+      description {
         html
         json
       }
-      adventureItinerary {
+      itinerary {
         html
         json
       }
@@ -613,171 +641,83 @@ query getAllAdventureDetails($fragmentPath: String!) {
           html
           json
         }
-        contactInfo{
+        contactInfo {
           phone
           email
         }
-        locationImage{
-          ...on ImageRef{
+        locationImage {
+          ... on ImageRef {
             _path
           }
         }
         weatherBySeason
-        address{
-            streetAddress
-            city
-            state
-            zipCode
-            country
+        address {
+          streetAddress
+          city
+          state
+          zipCode
+          country
         }
       }
       instructorTeam {
-        _metadata{
-            stringMetadata{
-                name
-                value
-            }
-        }        
+        _metadata {
+          stringMetadata {
+            name
+            value
+          }
+        }
         teamFoundingDate
         description {
-            json
+          json
         }
         teamMembers {
-            fullName
-            contactInfo {
-                phone
-                email
+          fullName
+          contactInfo {
+            phone
+            email
+          }
+          profilePicture {
+            ... on ImageRef {
+              _path
             }
-            profilePicture{
-                ...on ImageRef {
-                    _path
-                }
-            }
-            instructorExperienceLevel
-            skills
-            biography {
-                html
-            }
-        }       
-     }
-      administrator {
-            fullName
-            contactInfo {
-                phone
-                email
-            }
-            biography {
-                html
-            }
+          }
+          instructorExperienceLevel
+          skills
+          biography {
+            html
+          }
         }
+      }
+      administrator {
+        fullName
+        contactInfo {
+          phone
+          email
+        }
+        biography {
+          html
+        }
+      }
     }
     _references {
-        ...on ImageRef {
-            _path
+      ... on ImageRef {
+        _path
         mimeType
-        }
-        ...on LocationModel {
-            _path
-                __typename
-        }
+      }
+      ... on LocationModel {
+        _path
+        __typename
+      }
     }
   }
 }
 
+
 # in Query Variables
 {
-  "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+  "slug": "yosemite-backpacking"
 }
 ```
-
-## WKND アプリの追加クエリ
-
-WKND アプリで必要なすべてのデータを取得するための次のクエリを示します。 これらのクエリは、新しい概念を示すものではなく、実装の構築に役立つ参照としてのみ提供されます。
-
-1. **特定のアドベンチャーのチームメンバーを得る**:
-
-   ```graphql
-   query getTeamMembersByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath ) {
-       item {
-         instructorTeam {
-           teamMembers{
-             fullName
-             contactInfo{
-               phone
-               email
-             }
-           profilePicture {
-               ... on ImageRef {
-                 _path
-               }
-           }
-             instructorExperienceLevel
-             skills
-             biography{
-               plaintext
-             }
-           }
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **特定のアドベンチャーのロケーションパスを取得**
-
-   ```graphql
-   query getLocationPathByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath){
-       item {
-         location{
-           _path  
-         } 
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **チームの場所をパスで取得**
-
-   ```graphql
-   query getTeamLocationByLocationPath ($fragmentPath: String!){
-     locationByPath (_path: $fragmentPath) {
-       item {
-         name
-         description{
-           json
-         }
-         contactInfo{
-           phone
-           email
-         }
-           address{
-           streetAddress
-           city
-           state
-           zipCode
-           country
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge"
-   }
-   ```
 
 ## おめでとうございます。
 
