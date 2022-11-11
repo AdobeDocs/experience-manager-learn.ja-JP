@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -21,7 +23,7 @@ ht-degree: 1%
 
 ![動的ルートと編集可能コンポーネント](./assets/spa-dynamic-routes/intro.png)
 
-アドベンチャー詳細SPAルートは、次のように定義されます。 `/adventure:path` 場所 `path` は、詳細を表示する WKND アドベンチャー（コンテンツフラグメント）へのパスです。
+アドベンチャー詳細SPAルートは、次のように定義されます。 `/adventure/:slug` 場所 `slug` は、アドベンチャーコンテンツフラグメント上の一意の識別子プロパティです。
 
 ## SPA URL のAEM Pages へのマッピング
 
@@ -34,8 +36,8 @@ SPA動的ルートの編集可能なコンポーネントのマッピングの�
 | リモートSPAルート | AEMページパス |
 |------------------------------------|--------------------------------------------|
 | ／ | /content/wknd-app/us/en/home |
-| /adventure:/content/dam/wknd/en/adventures/bali-surf-camp/__バリサーフキャンプ__ | /content/wknd-app/us/en/home/adventure/__バリサーフキャンプ__ |
-| /adventure:/content/dam/wknd/en/adventures/beervana-portland/__beervana-portland__ | /content/wknd-app/us/en/home/adventure/__beervana-in-portland__ |
+| /adventure/__バリサーフキャンプ__ | /content/wknd-app/us/en/home/adventure/__バリサーフキャンプ__ |
+| /adventure/__beervana-portland__ | /content/wknd-app/us/en/home/adventure/__beervana-in-portland__ |
 
 したがって、このマッピングに基づいて、次の場所に 2 つの新しいAEMページを作成する必要があります。
 
@@ -84,52 +86,51 @@ SPAがAEM SPA Editor で開かれたときのSPA要求のマッピングは、�
 
 ## WKND アプリの更新
 
-次に `<AEMResponsiveGrid...>` で作成されたコンポーネント [最後の章](./spa-container-component.md)を `AdventureDetail` SPAコンポーネント、編集可能なコンテナの作成
+次に `<ResponsiveGrid...>` で作成されたコンポーネント [最後の章](./spa-container-component.md)を `AdventureDetail` SPAコンポーネント、編集可能なコンテナの作成
 
-### AEMResponsiveGrid SPAコンポーネントの配置
+### ResponsiveGrid SPAコンポーネントを配置する
 
-を `<AEMResponsiveGrid...>` 内 `AdventureDetail` コンポーネントは、そのルートに編集可能なコンテナを作成します。 これは、複数のルートが `AdventureDetail` レンダリングするコンポーネントは、動的に調整する必要があります  `<AEMResponsiveGrid...>'s pagePath` 属性。 この `pagePath` は、ルートのインスタンスに表示されるアドベンチャーに基づいて、対応するAEMページを指すように派生する必要があります。
+を `<ResponsiveGrid...>` 内 `AdventureDetail` コンポーネントは、そのルートに編集可能なコンテナを作成します。 これは、複数のルートが `AdventureDetail` レンダリングするコンポーネントは、動的に調整する必要があります  `<ResponsiveGrid...>'s pagePath` 属性。 この `pagePath` は、ルートのインスタンスに表示されるアドベンチャーに基づいて、対応するAEMページを指すように派生する必要があります。
 
-1. 開いて編集 `react-app/src/components/AdventureDetail.js`
-1. の前に次の行を追加します。 `AdventureDetail(..)'s` 秒 `return(..)` コンテンツフラグメントのパスからアドベンチャー名を派生するステートメント。
-
-   ```
-   ...
-   // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-   const adventureName = _path.split('/').pop();
-   ...
-   ```
-
-1. 次をインポート： `AEMResponsiveGrid` コンポーネントを選択し、その上に配置します。 `<h2>Itinerary</h2>` コンポーネント。
-1. 次の属性を `<AEMResponsiveGrid...>` コンポーネント
-   + `pagePath = '/content/wknd-app/us/en/home/adventure/${adventureName}'`
+1. 開いて編集 `react-app-/src/components/AdventureDetail.js`
+1. 次をインポート： `ResponsiveGrid` コンポーネントを選択し、その上に配置します。 `<h2>Itinerary</h2>` コンポーネント。
+1. 次の属性を `<ResponsiveGrid...>` コンポーネント。 次の点に注意してください。 `pagePath` 現在の `slug` これは、上で定義したマッピングごとにアドベンチャーページにマッピングされます。
+   + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    + `itemPath = 'root/responsivegrid'`
 
-   これは、 `AEMResponsiveGrid` AEMリソースからコンテンツを取得するコンポーネント：
+   これは、 `ResponsiveGrid` AEMリソースからコンテンツを取得するコンポーネント：
 
-   + `/content/wknd-app/us/en/home/adventure/${adventureName}/jcr:content/root/responsivegrid`
+   + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 
 
 更新 `AdventureDetail.js` を次の行に置き換えます。
 
-```
+```javascript
 ...
-import AEMResponsiveGrid from '../components/aem/AEMResponsiveGrid';
+import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
 ...
 
-function AdventureDetail(props) {
+function AdventureDetailRender(props) {
     ...
-    // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-    const adventureName = _path.split('/').pop();
+    // Get the slug from the React route parameter, this will be used to specify the AEM Page to store/read editable content from
+    const { slug } = useParams();
 
     return(
         ...
-        <AEMResponsiveGrid 
-            pagePath={`/content/wknd-app/us/en/home/adventure/${adventureName}`}
-            itemPath="root/responsivegrid"/>
-            
-        <h2>Itinerary</h2>
-        ...
+        // Pass the slug in
+        function AdventureDetailRender({ title, primaryImage, activity, adventureType, tripLength, 
+                groupSize, difficulty, price, description, itinerary, references, slug }) {
+            ...
+            return (
+                ...
+                <ResponsiveGrid 
+                    pagePath={`/content/wknd-app/us/en/home/adventure/${slug}`}
+                    itemPath="root/responsivegrid"/>
+                    
+                <h2>Itinerary</h2>
+                ...
+            )
+        }
     )
 }
 ```
@@ -140,7 +141,7 @@ function AdventureDetail(props) {
 
 ## AEMでのコンテナの作成
 
-を使用 `<AEMResponsiveGrid...>` その場で `pagePath` レンダリングされるアドベンチャーに基づいて動的に設定されるコンテンツのオーサリングを試みます。
+を使用 `<ResponsiveGrid...>` その場で `pagePath` レンダリングされるアドベンチャーに基づいて動的に設定されるコンテンツのオーサリングを試みます。
 
 1. AEM オーサーにログインします。
 1. に移動します。 __サイト/ WKND アプリ/米国/en__

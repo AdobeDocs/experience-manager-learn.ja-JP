@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 1%
@@ -125,7 +125,7 @@ AEMで独自のプロジェクトを作成する際のベストプラクティ�
 * [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) には、新しいコンテンツフラグメントモデル、コンテンツフラグメント、永続化された GraphQL クエリを含む、第 1～4 章の完成したソリューションが含まれています。 右にスキップして [クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) チャプター。
 
 
-この **React アプリ — 高度なチュートリアル — WKND アドベンチャ**(https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) プロジェクトを使用して、サンプルアプリケーションを確認し、調査できます。 このサンプルアプリケーションは、永続化された GraphQL クエリを呼び出してAEMからコンテンツを取得し、没入型エクスペリエンスでレンダリングします。
+この [React アプリ — 高度なチュートリアル — WKND アドベンチャ](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) プロジェクトを使用して、サンプルアプリケーションを確認および調査できます。 このサンプルアプリケーションは、永続化された GraphQL クエリを呼び出してAEMからコンテンツを取得し、没入型エクスペリエンスでレンダリングします。
 
 ## 概要
 

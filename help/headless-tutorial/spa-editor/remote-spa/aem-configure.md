@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7631
 thumbnail: kt-7631.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1246'
 ht-degree: 2%
 
 ---
@@ -26,26 +28,34 @@ SPAコードベースはAEM外で管理されますが、サポートする設�
 + SPAからAEM URL へのマッピングを定義するサブプロジェクト
 + OSGi 設定フォルダー
 
+## GitHub から基本プロジェクトをダウンロードします。
+
+をダウンロードします。 `aem-guides-wknd-graphql` プロジェクトを Github.com から このプロジェクトで使用されるベースラインファイルが含まれます。
+
+```
+$ mkdir -p ~/Code
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd remote-spa-tutorial
+```
+
 ## AEMプロジェクトの作成
 
-設定とベースラインコンテンツを管理するAEMプロジェクトを作成します。
+設定とベースラインコンテンツを管理するAEMプロジェクトを作成します。 このプロジェクトは、複製された `aem-guides-wknd-graphql` プロジェクトの `remote-spa-tutorial` フォルダー。
 
 _常に最新バージョンの [AEM Archetype](https://github.com/adobe/aem-project-archetype)._
 
-
 ```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
 $ mvn -B archetype:generate \
  -D archetypeGroupId=com.adobe.aem \
  -D archetypeArtifactId=aem-project-archetype \
- -D archetypeVersion=27 \
+ -D archetypeVersion=39 \
  -D aemVersion=cloud \
  -D appTitle="WKND App" \
  -D appId="wknd-app" \
  -D groupId="com.adobe.aem.guides.wkndapp" \
  -D frontendModule="react"
-$ mv ~/Code/wknd-app/wknd-app ~/Code/wknd-app/com.adobe.aem.guides.wknd-app
+$ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
 _最後のコマンドは、AEMプロジェクトフォルダーの名前を変更するだけで、AEMプロジェクトであることが明確になり、Remote SPAと混同しないようにします__
@@ -67,7 +77,7 @@ AEMプロジェクトアーキタイプは、AEMをSPAと統合するように�
 
 SPAは Remote SPAなので、AEMプロジェクトの外部で開発および管理されていると仮定します。 競合を避けるには、 `ui.frontend` プロジェクトをデプロイできませんでした。 この `ui.frontend` プロジェクトが削除されず、2 つのSPA( `ui.frontend` プロジェクトと Remote SPAは、AEM SPA Editor に同時に読み込まれます。
 
-1. AEMプロジェクト (`~/Code/wknd-app/com.adobe.aem.guides.wknd-app`) を IDE に追加します。
+1. AEMプロジェクト (`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`) を IDE に追加します。
 1. ルートを開く `pom.xml`
 1. コメントを `<module>ui.frontend</module` 外から `<modules>` リスト
 
@@ -349,6 +359,6 @@ AEMプロジェクトがデプロイされた状態で、SPA Editor を準備し
 + ローカルのAEM SDK Author サービスにAEMプロジェクトをデプロイする
 + SPA Host URL ページプロパティを使用して、AEMページを Remote SPAルートとしてマークします
 
-## 次の手順
+## 次のステップ
 
 AEMが設定されている場合は、 [リモートSPAのブートストラップ](./spa-bootstrap.md) AEM SPA Editor を使用した編集可能領域のサポート

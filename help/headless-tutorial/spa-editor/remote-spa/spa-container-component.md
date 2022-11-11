@@ -1,5 +1,5 @@
 ---
-title: 編集可能なコンテナコンポーネントをリモートSPAに追加
+title: 編集可能な React コンテナコンポーネントをリモートSPAに追加
 description: AEM作成者がコンポーネントをリモートSPAにドラッグ&ドロップできるように、編集可能なコンテナコンポーネントをリモート作成者に追加する方法を説明します。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7635
 thumbnail: kt-7635.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -21,97 +23,49 @@ ht-degree: 1%
 
 ![編集可能なコンテナコンポーネント](./assets/spa-container-component/intro.png)
 
-この章では、編集可能なコンテナをホームビューに追加し、作成者がSPAで直接AEM React コアコンポーネントを使用して、リッチなコンテンツエクスペリエンスを作成およびレイアウトできるようにします。
+この章では、編集可能なコンテナをホームビューに追加し、作成者が、SPA内で直接編集可能な React コンポーネントを使用して、リッチなコンテンツエクスペリエンスを作成およびレイアウトできるようにします。
 
 ## WKND アプリの更新
 
 コンテナコンポーネントをホームビューに追加するには：
 
-+ AEM React 編集可能コンポーネントの ResponsiveGrid コンポーネントの読み込み
-+ コンテナコンポーネントで使用するAEM React コアコンポーネント（テキストおよび画像）を読み込んで登録します
++ AEM React 編集可能コンポーネントの `ResponsiveGrid` コンポーネント
++ ResponsiveGrid コンポーネントで使用するカスタム編集可能 React コンポーネント（テキストおよび画像）を読み込んで登録します
 
-### ResponsiveGrid コンテナコンポーネントでの読み込み
+### ResponsiveGrid コンポーネントの使用
 
-編集可能な領域をホームビューに配置するには、次の操作を行う必要があります。
+編集可能な領域をホームビューに追加するには：
 
-1. 次の場所に ResponsiveGrid コンポーネントを読み込みます。 `@adobe/aem-react-editable-components`
-1. 次を使用して登録 `withMappable` 開発者がSPAに配置できるように
-1. また、に登録します。 `MapTo` そのため、他のコンテナコンポーネントで再利用でき、コンテナを効果的にネストできます。
-
-次の手順を実行します。
-
-1. IDE でSPAプロジェクトを開きます。
-1. React コンポーネントの作成先 `src/components/aem/AEMResponsiveGrid.js`
-1. 次のコードをに追加します。 `AEMResponsiveGrid.js`
-
-   ```
-   // Import the withMappable API provided bu the AEM SPA Editor JS SDK
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   
-   // Import the base ResponsiveGrid component
-   import { ResponsiveGrid } from "@adobe/aem-react-editable-components";
-   
-   // The sling:resourceType for which this Core Component is registered with in AEM
-   const RESOURCE_TYPE = "wcm/foundation/components/responsivegrid";
-   
-   // Create an EditConfig to allow the AEM SPA Editor to properly render the component in the Editor's context
-   const EditConfig = {
-       emptyLabel: "Layout Container",  // The component placeholder in AEM SPA Editor
-       isEmpty: function(props) { 
-           return props.cqItemsOrder == null || props.cqItemsOrder.length === 0;
-       },                              // The function to determine if this component has been authored
-       resourceType: RESOURCE_TYPE     // The sling:resourceType this SPA component is mapped to
-   };
-   
-   // MapTo allows the AEM SPA Editor JS SDK to dynamically render components added to SPA Editor Containers
-   MapTo(RESOURCE_TYPE)(ResponsiveGrid, EditConfig);
-   
-   // withMappable allows the component to be hardcoded into the SPA; <AEMResponsiveGrid .../>
-   const AEMResponsiveGrid = withMappable(ResponsiveGrid, EditConfig);
-   
-   export default AEMResponsiveGrid;
-   ```
-
-コードは似ています `AEMTitle.js` その [AEM Reach コアコンポーネントのタイトルコンポーネントが読み込まれました。](./spa-fixed-component.md).
-
-
-この `AEMResponsiveGrid.js` ファイルは次のようになります。
-
-![AEMResponsiveGrid.js](./assets/spa-container-component/aem-responsive-grid-js.png)
-
-### AEMResponsiveGrid SPAコンポーネントの使用
-
-これで、AEM ResponsiveGrid コンポーネントがに登録され、SPA内で使用できるようになったので、ホームビューに配置できます。
-
-1. 開いて編集 `react-app/src/Home.js`
-1. 次をインポート： `AEMResponsiveGrid` コンポーネントを選択し、その上に配置します。 `<AEMTitle ...>` コンポーネント。
-1. 次の属性を `<AEMResponsiveGrid...>` コンポーネント
+1. 開いて編集 `react-app/src/components/Home.js`
+1. 次をインポート： `ResponsiveGrid` コンポーネント `@adobe/aem-react-editable-components` をクリックし、 `Home` コンポーネント。
+1. 次の属性を `<ResponsiveGrid...>` コンポーネント
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   これは、 `AEMResponsiveGrid` AEMリソースからコンテンツを取得するコンポーネント：
+   これは、 `ResponsiveGrid` AEMリソースからコンテンツを取得するコンポーネント：
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    この `itemPath` は `responsivegrid` ノードが `Remote SPA Page` AEMテンプレートが作成され、 `Remote SPA Page` AEM Template.
 
-   更新 `Home.js` を追加します。 `<AEMResponsiveGrid...>` コンポーネント。
+   更新 `Home.js` を追加します。 `<ResponsiveGrid...>` コンポーネント。
 
-   ```
+   ```javascript
    ...
-   import AEMResponsiveGrid from './aem/AEMResponsiveGrid';
+   import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
    ...
    
    function Home() {
        return (
            <div className="Home">
-               <AEMResponsiveGrid
+               <ResponsiveGrid
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='root/responsivegrid'/>
    
-               <AEMTitle
+               <EditableTitle
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='title'/>
+   
                <Adventures />
            </div>
        );
@@ -124,66 +78,164 @@ ht-degree: 1%
 
 ## 編集可能なコンポーネントの作成
 
-柔軟なオーサリングエクスペリエンスコンテナの効果を最大限に引き出すには、SPA Editor に用意されています。 編集可能なタイトルコンポーネントは既に作成されていますが、作成者が新しく追加したコンテナコンポーネントでテキストと画像AEM WCM コアコンポーネントを使用できるように、さらにいくつか作成します。
+柔軟なオーサリングエクスペリエンスコンテナの効果を最大限に引き出すには、SPA Editor に用意されています。 編集可能なタイトルコンポーネントは既に作成されていますが、新しく追加された ResponsiveGrid コンポーネントで編集可能なテキストコンポーネントと画像コンポーネントを作成者が使用できるように、さらにいくつか作成します。
 
-### テキストコンポーネント
+新しい編集可能なテキストおよび画像 React コンポーネントは、で書き出した編集可能なコンポーネント定義パターンを使用して作成されます。 [編集可能な固定コンポーネント](./spa-fixed-component.md).
+
+### 編集可能なテキストコンポーネント
 
 1. IDE でSPAプロジェクトを開きます。
-1. React コンポーネントの作成先 `src/components/aem/AEMText.js`
-1. 次のコードをに追加します。 `AEMText.js`
+1. React コンポーネントの作成先 `src/components/editable/core/Text.js`
+1. 次のコードをに追加します。 `Text.js`
 
+   ```javascript
+   import React from 'react'
+   
+   const TextPlain = (props) => <div className={props.baseCssClass}><p className="cmp-text__paragraph">{props.text}</p></div>;
+   const TextRich = (props) => {
+   const text = props.text;
+   const id = (props.id) ? props.id : (props.cqPath ? props.cqPath.substr(props.cqPath.lastIndexOf('/') + 1) : "");
+       return <div className={props.baseCssClass} id={id} data-rte-editelement dangerouslySetInnerHTML={{ __html: text }} />
+   };
+   
+   export const Text = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-text'
+       }
+   
+       const { richText = false } = props
+   
+       return richText ? <TextRich {...props} /> : <TextPlain {...props} />
+       }
+   
+       export function textIsEmpty(props) {
+       return props.text == null || props.text.length === 0;
+   }
    ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { TextV2, TextV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+
+1. 編集可能な React コンポーネントの作成先 `src/components/editable/EditableText.js`
+1. 次のコードをに追加します。 `EditableText.js`
+
+   ```javascript
+   import React from 'react'
+   import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+   import { Text, textIsEmpty } from "./core/Text";
+   import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+   import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
    
    const RESOURCE_TYPE = "wknd-app/components/text";
    
-   const EditConfig = {    
+   const EditConfig = {
        emptyLabel: "Text",
-       isEmpty: TextV2IsEmptyFn,
+       isEmpty: textIsEmpty,
        resourceType: RESOURCE_TYPE
    };
    
-   MapTo(RESOURCE_TYPE)(TextV2, EditConfig);
+   export const WrappedText = (props) => {
+       const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Text, "cmp-text"), textIsEmpty, "Text V2")
+       return <Wrapped {...props} />
+   };
    
-   const AEMText = withMappable(TextV2, EditConfig);
+   const EditableText = (props) => <EditableComponent config={EditConfig} {...props}><WrappedText /></EditableComponent>
    
-   export default AEMText;
+   MapTo(RESOURCE_TYPE)(EditableText);
+   
+   export default EditableText;
    ```
 
-この `AEMText.js` ファイルは次のようになります。
+編集可能なテキストコンポーネントの実装は、次のようになります。
 
-![AEMText.js](./assets/spa-container-component/aem-text-js.png)
+![編集可能なテキストコンポーネント](./assets/spa-container-component/text-js.png)
 
 ### 画像コンポーネント
 
 1. IDE でSPAプロジェクトを開きます。
-1. React コンポーネントの作成先 `src/components/aem/AEMImage.js`
-1. 次のコードをに追加します。 `AEMImage.js`
+1. React コンポーネントの作成先 `src/components/editable/core/Image.js`
+1. 次のコードをに追加します。 `Image.js`
 
-   ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { ImageV2, ImageV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+   ```javascript
+   import React from 'react'
+   import { RoutedLink } from "./RoutedLink";
    
-   const RESOURCE_TYPE = "wknd-app/components/image";
+   export const imageIsEmpty = (props) => (!props.src) || props.src.trim().length === 0
    
-   const EditConfig = {    
-       emptyLabel: "Image",
-       isEmpty: ImageV2IsEmptyFn,
-       resourceType: RESOURCE_TYPE
+   const ImageInnerContents = (props) => {
+   return (<>
+       <img src={props.src}
+           className={props.baseCssClass + '__image'}
+           alt={props.alt} />
+       {
+           !!(props.title) && <span className={props.baseCssClass + '__title'} itemProp="caption">{props.title}</span>
+       }
+       {
+           props.displayPopupTitle && (!!props.title) && <meta itemProp="caption" content={props.title} />
+       }
+       </>);
    };
    
-   MapTo(RESOURCE_TYPE)(ImageV2, EditConfig);
+   const ImageContents = (props) => {
+       if (props.link && props.link.trim().length > 0) {
+           return (
+           <RoutedLink className={props.baseCssClass + '__link'} isRouted={props.routed} to={props.link}>
+               <ImageInnerContents {...props} />
+           </RoutedLink>
+           )
+       }
+       return <ImageInnerContents {...props} />
+   };
    
-   const AEMImage = withMappable(ImageV2, EditConfig);
+   export const Image = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-image'
+       }
    
-   export default AEMImage;
+       const { isInEditor = false } = props;
+       const cssClassName = (isInEditor) ? props.baseCssClass + ' cq-dd-image' : props.baseCssClass;
+   
+       return (
+           <div className={cssClassName}>
+               <ImageContents {...props} />
+           </div>
+       )
+   };
    ```
 
-1. SCSS ファイルの作成 `src/components/aem/AEMImage.scss` には、 `AEMImage.scss`. これらのスタイルは、AEM React コアコンポーネントの BEM 表記の CSS クラスをターゲットにしています。
-1. 次の SCSS をに追加します。 `AEMImage.scss`
+1. 編集可能な React コンポーネントの作成先 `src/components/editable/EditableImage.js`
+1. 次のコードをに追加します。 `EditableImage.js`
 
-   ```
+```javascript
+import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+import { Image, imageIsEmpty } from "./core/Image";
+import React from 'react'
+
+import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
+
+const RESOURCE_TYPE = "wknd-app/components/image";
+
+const EditConfig = {
+    emptyLabel: "Image",
+    isEmpty: imageIsEmpty,
+    resourceType: RESOURCE_TYPE
+};
+
+const WrappedImage = (props) => {
+    const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Image, "cmp-image"), imageIsEmpty, "Image V2");
+    return <Wrapped {...props}/>
+}
+
+const EditableImage = (props) => <EditableComponent config={EditConfig} {...props}><WrappedImage /></EditableComponent>
+
+MapTo(RESOURCE_TYPE)(EditableImage);
+
+export default EditableImage;
+```
+
+
+1. SCSS ファイルの作成 `src/components/editable/EditableImage.scss` には、 `EditableImage.scss`. これらのスタイルは、編集可能な React コンポーネントの CSS クラスをターゲットにしています。
+1. 次の SCSS をに追加します。 `EditableImage.scss`
+
+   ```css
    .cmp-image__image {
        margin: 1rem 0;
        width: 100%;
@@ -191,47 +243,48 @@ ht-degree: 1%
     }
    ```
 
-1. インポート `AEMImage.scss` in `AEMImage.js`
+1. インポート `EditableImage.scss` in `EditableImage.js`
 
-   ```
+   ```javascript
    ...
-   import './AEMImage.scss';
+   import './EditableImage.scss';
    ...
    ```
 
-この `AEMImage.js` および `AEMImage.scss` は次のようになります。
+編集可能な画像コンポーネントの実装は、次のようになります。
 
-![AEMImage.js と AEMImage.scss](./assets/spa-container-component/aem-image-js-scss.png)
+![編集可能な画像コンポーネント](./assets/spa-container-component/image-js.png)
+
 
 ### 編集可能なコンポーネントの読み込み
 
-新しく作成された `AEMText` および `AEMImage` SPAコンポーネントはSPAで参照され、AEMから返される JSON に基づいて動的にインスタンス化されます。 これらのコンポーネントをSPAで確実に使用できるようにするには、次の場所にそれらのインポート文を作成します。 `Home.js`
+新しく作成された `EditableText` および `EditableImage` React コンポーネントはSPAで参照され、AEMから返される JSON に基づいて動的にインスタンス化されます。 これらのコンポーネントをSPAで確実に使用できるようにするには、次の場所にそれらのインポート文を作成します。 `Home.js`
 
 1. IDE でSPAプロジェクトを開きます。
 1. ファイルを開きます。 `src/Home.js`
 1. 次のインポート文を追加： `AEMText` および `AEMImage`
 
-   ```
+   ```javascript
    ...
-   import AEMText from './components/aem/AEMText';
-   import AEMImage from './components/aem/AEMImage';
+   // The following need to be imported, so that MapTo is run for the components
+   import EditableText from './editable/EditableText';
+   import EditableImage from './editable/EditableImage';
    ...
    ```
-
 
 結果は次のようになります。
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-これらのインポートが _not_ こう付け加えた。 `AEMText` および `AEMImage` コードはSPAによって呼び出されないので、指定されたリソースタイプに対してコンポーネントが登録されません。
+これらのインポートが _not_ こう付け加えた。 `EditableText` および `EditableImage` コードはSPAによって呼び出されないので、コンポーネントは指定されたリソースタイプにマッピングされません。
 
 ## AEMでのコンテナの設定
 
-AEMコンテナコンポーネントは、ポリシーを使用して、許可されるコンポーネントを指定します。 SPAエディターを使用する場合は、SPAコンポーネントが対応するマッピングを持つAEM WCM コアコンポーネントのみがSPAでレンダリング可能なので、これは重要な設定です。 に対してSPA実装を提供したコンポーネントのみが許可されていることを確認します。
+AEMコンテナコンポーネントは、ポリシーを使用して、許可されるコンポーネントを指定します。 SPAエディターを使用する場合、SPAコンポーネントが対応する対応コンポーネントをマッピングしているAEMコンポーネントのみがSPAでレンダリング可能なので、これは重要な設定です。 に対してSPA実装を提供したコンポーネントのみが許可されていることを確認します。
 
-+ `AEMTitle` マッピング先 `wknd-app/components/title`
-+ `AEMText` マッピング先 `wknd-app/components/text`
-+ `AEMImage` マッピング先 `wknd-app/components/image`
++ `EditableTitle` マッピング先 `wknd-app/components/title`
++ `EditableText` マッピング先 `wknd-app/components/text`
++ `EditableImage` マッピング先 `wknd-app/components/image`
 
 リモートSPAページテンプレートの reponsivegrid コンテナを構成するには、次の手順を実行します。
 
@@ -259,7 +312,7 @@ AEMコンテナコンポーネントは、ポリシーを使用して、許可�
 
 ## AEMでのコンテナのオーサリング
 
-SPAを更新して `<AEMResponsiveGrid...>`、3 つのAEM React Core コンポーネント (`AEMTitle`, `AEMText`、および `AEMImage`) が適用され、AEMが対応するテンプレートポリシーで更新されました。コンテナコンポーネントでコンテンツのオーサリングを開始できます。
+SPAを更新して `<ResponsiveGrid...>`、編集可能な React コンポーネント (`EditableTitle`, `EditableText`、および `EditableImage`) が適用され、AEMが対応するテンプレートポリシーで更新されました。コンテナコンポーネントでコンテンツのオーサリングを開始できます。
 
 1. AEM オーサーにログインします。
 1. に移動します。 __サイト/WKND アプリ__
@@ -296,7 +349,7 @@ SPAを更新して `<AEMResponsiveGrid...>`、3 つのAEM React Core コンポ�
 
    ![作成済みコンポーネント](./assets/spa-container-component/authored-components.png)
 
-   AEMレイアウトモードを使用して、コンポーネントのサイズとレイアウトを調整できます。
+AEMレイアウトモードを使用して、コンポーネントのサイズとレイアウトを調整できます。
 
 1. 切り替え先 __レイアウトモード__ 右上の mode-selector の使用
 1. __サイズ変更__ 画像コンポーネントとテキストコンポーネント（並べて表示されるように）
@@ -315,12 +368,12 @@ SPAを更新して `<AEMResponsiveGrid...>`、3 つのAEM React Core コンポ�
 
 作成者が WKND アプリに編集可能なコンポーネントを追加できるコンテナコンポーネントが追加されました。 次の方法を理解できました。
 
-+ SPAでAEM React 編集可能コンポーネントの ResponsiveGrid コンポーネントを使用します。
-+ コンテナコンポーネントを使用して、SPAで使用するAEM React コアコンポーネント（テキストおよび画像）を登録します。
-+ SPAが有効なコアコンポーネントを許可するようにリモートSPAページテンプレートを設定します
++ AEM React 編集可能コンポーネントの `ResponsiveGrid` SPAのコンポーネント
++ コンテナコンポーネントを使用して、SPAで使用する編集可能な React コンポーネント（テキストおよび画像）を作成および登録します
++ SPAが有効なコンポーネントを許可するようにリモートSPAページテンプレートを設定します
 + コンテナコンポーネントへの編集可能なコンポーネントの追加
 + SPA Editor でのオーサリングおよびレイアウトコンポーネント
 
-## 次の手順
+## 次のステップ
 
 次の手順では、同じ方法を使用して、 [Adventure Details ルートに編集可能なコンポーネントを追加する](./spa-dynamic-routes.md) をSPAに追加します。

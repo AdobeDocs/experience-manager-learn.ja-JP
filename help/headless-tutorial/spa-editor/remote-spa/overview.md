@@ -7,11 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7630
 thumbnail: 333272.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 8%
+source-wordcount: '618'
+ht-degree: 9%
 
 ---
 
@@ -36,7 +37,7 @@ AEMのコンテキスト外で実行されるSPAやリモートSPAを更新し�
 
 ## 最新のコード
 
-+ このチュートリアルのコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) の `feature/spa-editor` 分岐。
++ このチュートリアルのコードの開始点は、次の場所にあります。 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa) 内 `remote-spa-tutorial` フォルダー。
 
 ## 前提条件
 
@@ -49,12 +50,12 @@ AEMのコンテキスト外で実行されるSPAやリモートSPAを更新し�
 + [Maven 3.6 以降](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
 + [aem-guides-wknd.all-2.1.0.zip 以降](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql ソースコード ( ブランチ：feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [aem-guides-wknd-graphql ソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 このチュートリアルでは、次を前提としています。
 
 + [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) IDE として
-+ の作業ディレクトリ `~/Code/wknd-app`
++ の作業ディレクトリ `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
 + AEM SDK as a Author サービスを `http://localhost:4502`
 + ローカルでのAEM SDK の実行 `admin` パスワードを持つアカウント `admin`
 + でのSPAの実行 `http://localhost:3000`
@@ -62,13 +63,6 @@ AEMのコンテキスト外で実行されるSPAやリモートSPAを更新し�
 >[!NOTE]
 >
 > **ローカル開発環境の設定に関するヘルプが必要ですか？** 以下を確認します。 [AEM as a Cloud Service SDK を使用したローカル開発環境の設定に関する以下のガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja).
-
-
-## クイックセットアップ
-
-クイックセットアップを使用すると、WKND App SPAおよびAEM SPA Editor を 15 分で使い始めることができます。 この高速設定により、チュートリアルの最後の状態に直接移動し、AEM SPA Editor でのSPAのオーサリングを確認できます。
-
-+ [クイックセットアップの詳細](./quick-setup.md)
 
 ## 1. AEM for SPA Editor を設定する
 
@@ -102,6 +96,4 @@ AEM SPA Editor をSPAのオーサリングコンテキストに統合するに�
 
 ## その他のリソース
 
-+ [AEM Docs 内での外部SPAの編集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/editing-external-spa.html)
-+ [AEM WCM コンポーネント — React Core 実装](https://www.npmjs.com/package/@adobe/aem-core-components-react-base)
-+ [AEM WCM コンポーネント — Spa エディター — React Core 実装](https://www.npmjs.com/package/@adobe/aem-core-components-react-spa)
++ [AEM SPA React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
