@@ -9,10 +9,11 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '948'
 ht-degree: 6%
 
 ---
@@ -25,7 +26,7 @@ ht-degree: 6%
 
 次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
-A [ステップごとの完全なチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) この React アプリのビルドを使用する方法を説明します。
+A [詳細な手順のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) この React アプリのビルドを使用する方法を説明します。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app"
@@ -43,7 +44,7 @@ A [ステップごとの完全なチュートリアル](https://experienceleague
 
 ## AEM要件
 
-React アプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントには、 [WKND サイト v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をインストールします。
+React アプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントには、 [WKND サイト v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0) をインストールします。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
@@ -141,7 +142,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -187,46 +188,67 @@ query($slug: String!) {
 
 AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js) は [永続化された GraphQL クエリの実行](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEMに対して貼り付け、アドベンチャーコンテンツをアプリに読み込みます。
 
-永続化された各クエリは、 `src/api/persistedQueries.js`を呼び出し、AEM HTTPGETエンドポイントを非同期的に呼び出して、アドベンチャーデータを返します。
+永続化された各クエリには、対応する React が含まれます [useEffect](https://reactjs.org/docs/hooks-effect.html) 引っ掛かる `src/api/usePersistedQueries.js`を呼び出し、AEM HTTPGET持続クエリエンドポイントを非同期的に呼び出して、アドベンチャーデータを返します。
 
 次に、各関数が `aemHeadlessClient.runPersistedQuery(...)`に設定され、永続化された GraphQL クエリを実行します。
 
 ```js
-// src/api/persistedQueries.js
+// src/api/usePersistedQueries.js
 
 /**
- * Queries a list of all Adventures using the persisted path "wknd-shared/adventures-all"
- * @returns {data, errors}
+ * React custom hook that returns a list of adevntures by activity. If no activity is provided, all adventures are returned.
+ * 
+ * Custom hook that calls the 'wknd-shared/adventures-all' or 'wknd-shared/adventures-by-activity' persisted query.
+ *
+ * @returns an array of Adventure JSON objects, and array of errors
  */
-export const getAllAdventures = async function() {
-    return executePersistedQuery('wknd-shared/adventures-all');
+export function useAdventuresByActivity(adventureActivity) {
+  ...
+  // If an activity is provided (i.e "Camping", "Hiking"...) call wknd-shared/adventures-by-activity query
+  if (adventureActivity) {
+    // The key is 'activity' as defined in the persisted query
+    const queryParameters = { activity: adventureActivity };
+
+    // Call the AEM GraphQL persisted query named "wknd-shared/adventures-by-activity" with parameters
+    response = await fetchPersistedQuery("wknd-shared/adventures-by-activity", queryParameters);
+  } else {
+    // Else call the AEM GraphQL persisted query named "wknd-shared/adventures-all" to get all adventures
+    response = await fetchPersistedQuery("wknd-shared/adventures-all");
+  }
+  
+  ... 
 }
 
 ...
-
 /**
- * Uses the AEM Headless SDK to execute a query besed on a persistedQueryPath and optional query variables
- * @param {*} persistedQueryPath 
- * @param {*} queryVariables 
- * @returns 
+ * Private function that invokes the AEM Headless client.
+ * 
+ * @param {String} persistedQueryName the fully qualified name of the persisted query
+ * @param {*} queryParameters an optional JavaScript object containing query parameters
+ * @returns the GraphQL data or an error message 
  */
- const executePersistedQuery = async function(persistedQueryPath, queryVariables) {
+async function fetchPersistedQuery(persistedQueryName, queryParameters) {
+  let data;
+  let err;
 
-    let data;
-    let errors;
+  try {
+    // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
+    const response = await aemHeadlessClient.runPersistedQuery(
+      persistedQueryName,
+      queryParameters
+    );
+    // The GraphQL data is stored on the response's data field
+    data = response?.data;
+  } catch (e) {
+    // An error occurred, return the error messages
+    err = e
+      .toJSON()
+      ?.map((error) => error.message)
+      ?.join(", ");
+    console.error(e.toJSON());
+  }
 
-    try {
-        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
-        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryPath, queryVariables);
-        // The GraphQL data is stored on the response's data field
-        data = response.data;
-        errors = response.errors ? mapErrors(response.errors) : undefined;
-    } catch (e) {
-        console.error(e.toJSON());
-        errors = e;
-    }
-
-    return {data, errors}; 
+  return { data, err };
 }
 ```
 
@@ -236,16 +258,15 @@ React アプリケーションは、2 つのビューを使用して、Web エ�
 
 + `src/components/Adventures.js`
 
-   呼び出し `getAllAdventures()` から `src/api/persistedQueries.js`  返された冒険をリストに表示します。
+   呼び出し `getAdventuresByActivity(..)` から `src/api/usePersistedQueries.js` 返された冒険をリストに表示します。
 
 + `src/components/AdventureDetail.js`
 
    を呼び出します。 `getAdventureBySlug(..)` の使用 `slug` アドベンチャー選択経由で渡されるパラメーター `Adventures` コンポーネントを選択し、単一のアドベンチャーの詳細を表示します。
 
-
 ### 環境変数
 
-複数 [環境変数](https://create-react-app.dev/docs/adding-custom-environment-variables) を使用してAEM環境に接続します。 デフォルトでは、次の場所で実行されている AEM パブリッシュに接続します： `http://localhost:4503`. AEM接続を変更するには、 `.env.development` ファイル：
+複数 [環境変数](https://create-react-app.dev/docs/adding-custom-environment-variables) を使用してAEM環境に接続します。 デフォルトでは、次の場所で実行されている AEM パブリッシュに接続します： `http://localhost:4503`. を更新します。 `.env.development` ファイルを編集し、AEM接続を変更します。
 
 + `REACT_APP_HOST_URI=http://localhost:4502`:AEM target host に設定
 + `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`:GraphQL エンドポイントパスを設定します。 このアプリは永続化されたクエリのみを使用するので、この React アプリでは使用されません。
@@ -255,7 +276,7 @@ React アプリケーションは、2 つのビューを使用して、Web エ�
    + `basic`:ローカル AEM オーサーとのローカル開発にユーザー/パスを使用
    + 認証なしでAEMに接続する場合は空白のままにします
 + `REACT_APP_AUTHORIZATION=admin:admin`:AEM オーサー環境に接続する場合に使用する基本認証資格情報を設定します（開発用のみ）。 パブリッシュ環境に接続する場合、この設定は不要です。
-+ `REACT_APP_DEV_TOKEN`:開発トークン文字列。 リモートインスタンスに接続するには、Basic auth (user:pass) の横で、Cloud Console の DEV トークンと共に Bearer auth を使用できます
++ `REACT_APP_DEV_TOKEN`:開発トークン文字列。 リモートインスタンスに接続するには、基本認証 (user:pass) の横で、Cloud Console の DEV トークンで Bearer 認証を使用できます
 + `REACT_APP_SERVICE_TOKEN`:サービス資格情報ファイルのパス。 リモートインスタンスに接続する場合は、サービストークン（開発者コンソールからファイルをダウンロード）を使用して認証もおこなえます。
 
 ### プロキシAEMリクエスト
@@ -266,6 +287,6 @@ AEMオーサー環境に接続する場合、 [認証方法を設定する必要
 
 ### クロスオリジンリソース共有 (CORS)
 
-この React アプリケーションは、ターゲットAEM環境で実行されるAEMベースの CORS 設定に依存し、React アプリがで実行されると想定します。 `http://localhost:3000` 開発モードで。 この [CORS 設定](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) は、 [WKND サイト](https://github.com/adobe/aem-guides-wknd).
+この React アプリケーションは、ターゲットAEM環境で実行されるAEMベースの CORS 設定に依存し、React アプリがで実行されると想定します。 `http://localhost:3000` 開発モードで。 この [CORS 設定](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) は、 [WKND サイト](https://github.com/adobe/aem-guides-wknd).
 
 ![CORS 設定](assets/react-app/cross-origin-resource-sharing-configuration.png)
