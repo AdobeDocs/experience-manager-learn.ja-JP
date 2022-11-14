@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
+source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1414'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ AEM as a Cloud Serviceには、デバッグに役立つ、実行中のAEMサー�
 開発者コンソールにアクセスして使用するには、 [AdobeAdmin Console](https://adminconsole.adobe.com).
 
 1. Cloud Manager およびAEMas a Cloud Service製品に影響を与えたAdobe組織が、Adobe組織切り替えボタンでアクティブになっていることを確認します。
-1. デベロッパーは、Cloud Manager 製品のメンバーである必要があります __開発者 —Cloud Service__ 製品プロファイル。
+1. 開発者は、 [Cloud Manager 製品の __開発者 —Cloud Service__ 製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
    + このメンバーシップが存在しない場合、開発者は開発者コンソールにログインできません。
-1. 開発者は、 __AEM Users__ または __AEM Administrators__ AEM オーサーまたはパブリッシュの製品プロファイル。
+1. 開発者は、 [__AEM Users__ または __AEM Administrators__ AEM オーサーまたはパブリッシュの製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + このメンバーシップが存在しない場合、 [ステータス](#status) ダンプが 401 Unauthorized エラーでタイムアウトします。
 
 ### 開発者コンソールへのアクセスのトラブルシューティング
