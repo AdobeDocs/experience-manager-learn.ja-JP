@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b74dc2693071313a80ccaaea839b8e2087c9edaa
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1161'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
    Cloud Manager プログラムがネットワークインフラストラクチャをプロビジョニングするまで 15 分待ちます。
 
-1. 環境が完了したことを確認します。 __出力専用 IP アドレス__ Cloud Manager API を使用した設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 前の手順で createNetworkInfrastructure HTTP リクエストから返されました。
+1. プログラムが完了したことを確認します __出力専用 IP アドレス__ Cloud Manager API を使用した設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 前の手順で createNetworkInfrastructure HTTP リクエストから返されました。
 
    __getNetworkInfrastructure HTTP リクエスト__
 
@@ -95,7 +95,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 ## 環境ごとの専用の出力 IP アドレスプロキシの設定
 
-1. を有効にして設定します。 __出力専用 IP アドレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+1. の設定 __出力専用 IP アドレス__ Cloud Manager API を使用した各AEMas a Cloud Service環境での設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -164,6 +164,8 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
    ```
 
    ホスト名を `pinged`出口で _not_ そして入り口
+
+   次の点に注意してください。 __出力専用 IP アドレス__ は、プログラム内のすべてのAEMas a Cloud Service環境で共有されます。
 
 1. これで、カスタムAEMコードおよび設定で、専用の出力 IP アドレスを使用できます。 多くの場合、専用の出力 IP アドレスを使用する場合、外部サービスのAEMas a Cloud Service接続先は、この専用 IP アドレスからのトラフィックのみを許可するように設定されます。
 
