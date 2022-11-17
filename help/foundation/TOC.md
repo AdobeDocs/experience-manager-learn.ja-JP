@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation チュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '222'
 ht-degree: 16%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 16%
    + [oak-run.jar を使用したインデックスの管理](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [オンラインでのリビジョンクリーンアップを使用](./administration/use-online-revision-clean-up.md)
    + [システム概要ダッシュボードの使用](./administration/use-the-system-overview-dashboard.md)
+   + [URL リダイレクト](./administration/url-redirection.md)
 + 認証 {#authentication}
    + [OAuth 認証](authentication/oauth-code-sample-develop.md)
    + [Adobe I/Oで使用する公開鍵/秘密鍵の設定](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)

@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c381c166f55178e219ebd27c6641298491aa8f6
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 28%
+source-wordcount: '841'
+ht-degree: 27%
 
 ---
 
@@ -91,6 +91,8 @@ ht-degree: 28%
       + [リポジトリーブラウザー](./debugging/cloud-service/repository-browser.md)
       + リスク{#risks}
          + [横断の警告](./debugging/cloud-service/risks/traversals.md)
++ コンテンツ配信{#content-delivery}
+   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + AEMへのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMSユーザー](./accessing/adobe-ims-users.md)
