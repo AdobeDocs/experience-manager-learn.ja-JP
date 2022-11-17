@@ -9,9 +9,9 @@ level: Intermediate
 kt: 11466
 last-substantial-update: 2022-10-14T00:00:00Z
 index: y
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: 00ea3a8e6b69cd99cf293093d38b59df51f6a26d
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '876'
 ht-degree: 3%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 3%
 
 URL のリダイレクトは、Web サイトの操作の一環として一般的な側面です。 アーキテクトや管理者は、柔軟性と迅速なリダイレクトデプロイメント時間を提供する、URL リダイレクトの管理方法と管理場所に関する最適なソリューションを見つける必要があります。
 
-詳しくは、 [AEM 6.x)](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-2.html#the-%E2%80%9Clegacy%E2%80%9D-setup) および [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html#runtime-architecture) インフラストラクチャ 主な違いは次のとおりです。
+詳しくは、 [AEM (6.x)、AEM Classic](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-2.html#the-%E2%80%9Clegacy%E2%80%9D-setup) および [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html#runtime-architecture) インフラストラクチャ 主な違いは次のとおりです。
 
-1.  AEMas a Cloud Service [組み込み CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=ja)ただし、お客様はAEMが管理する CDN の前に CDN(BYOCDN) を提供できます。
-1.  AEM 6.x( オンプレミスと Adobe Managed Services(AMS) のどちらでもAEMが管理する CDN が含まれていない場合 )。お客様は独自の CDN を持ち込む必要があります。
+1. AEMas a Cloud Service [組み込み CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=ja)ただし、お客様はAEMが管理する CDN の前に CDN(BYOCDN) を提供できます。
+1. AEM 6.x( オンプレミスと Adobe Managed Services(AMS) のどちらでもAEMが管理する CDN が含まれていない場合 )。お客様は独自の CDN を持ち込む必要があります。
 
 他のAEMサービス（AEM オーサー/パブリッシュ、および Dispatcher）は、AEM 6.x とAEM as a Cloud Serviceの間では概念的に似ています。
 
@@ -32,10 +32,11 @@ AEM URL のリダイレクトソリューションは次のとおりです。
 
 |  | AEMプロジェクトコードとして管理および導入 | マーケティング/コンテンツチームによる変更機能 | AEM as aCloud Service互換 | リダイレクトの実行場所 |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
-| [経由でエッジで独自の CDN を持ち込む](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN |
+| [At Edge via bring your own CDN](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN |
 | [Apache `mod_rewrite` Dispatcher 設定としてのルール ](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons — リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
 | [ACS Commons — リダイレクトマネージャー](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
+| [この `Redirect` ページプロパティ](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
 ## ソリューションオプション
@@ -51,7 +52,7 @@ Edge レベルまたは CDN レベルでのリダイレクトの管理には、�
 
 ### Apache `mod_rewrite` モジュール
 
-一般的なソリューションは [Apache モジュール mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). この [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) は、両方に対して dispatcher プロジェクト構造を提供します [AEM 6.x](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.ams#file-structure) および [AEMas a Cloud Service](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud#file-structure) プロジェクト。 デフォルト（不変）およびカスタムの書き換えルールは、 `conf.d/rewrites` フォルダーと書き換えエンジンが `virtualhosts` ポートでリッスンする `80` 経由 `conf.d/dispatcher_vhost.conf` ファイル。 実装例は、 [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd/tree/main/dispatcher/src/conf.d/rewrites).
+一般的なソリューションは [Apache モジュール mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). この [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) は、両方に対して Dispatcher プロジェクト構造を提供します [AEM 6.x](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.ams#file-structure) および [AEMas a Cloud Service](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud#file-structure) プロジェクト。 デフォルト（不変）およびカスタムの書き換えルールは、 `conf.d/rewrites` フォルダーと書き換えエンジンが `virtualhosts` ポートでリッスンする `80` 経由 `conf.d/dispatcher_vhost.conf` ファイル。 実装例は、 [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd/tree/main/dispatcher/src/conf.d/rewrites).
 
 AEM as a Cloud Serviceでは、これらのリダイレクトルールはAEMコードの一部として管理され、Cloud Manager を介してデプロイされます [Web 層設定パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#web-tier-config-pipelines) または [フルスタックパイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html#full-stack-pipeline). したがって、AEMプロジェクト固有のプロセスは、リダイレクトルールの管理、デプロイ、トレースをおこなうために実行されています。
 
@@ -68,14 +69,17 @@ AEM as a Cloud Serviceでは、これらのリダイレクトルールはAEMコ�
 
 #### リダイレクトマネージャー
 
-[リダイレクトマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) を使用すると、AEMのユーザーは、AEMからのリダイレクトを簡単に管理および公開できます。 この実装は Java™サーブレットフィルターに基づいているので、一般的な JVM リソースの使用になります。 また、この機能により、AEM開発チームやAEMのデプロイメントに依存する必要がなくなります。 リダイレクトマネージャーは両方とも **AEMas a Cloud Service** および **AEM 6.x** 互換性あり 最初のリダイレクトリクエストでは AEM パブリッシュサービスで301/302（ほとんど）の CDN キャッシュを生成する必要がありますが、デフォルトでは301/302、以降のリクエストをエッジ/CDN でリダイレクトできます。
+[リダイレクトマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) を使用すると、AEMのユーザーは、AEMからのリダイレクトを簡単に管理および公開できます。 この実装は Java™サーブレットフィルターに基づいているので、一般的な JVM リソースの使用になります。 また、この機能により、AEM開発チームやAEMのデプロイメントに依存する必要がなくなります。 リダイレクトマネージャーは両方とも **AEMas a Cloud Service** および **AEM 6.x** 互換性あり 最初のリダイレクトされたリクエストは AEM パブリッシュサービスにヒットして、デフォルトで301/302（ほとんど）の CDN のキャッシュを生成301/302る必要がありますが、それ以降のリクエストは edge/CDN でリダイレクトできます。
 
+### この `Redirect` ページプロパティ
+
+標準 (OOTB) `Redirect` ページプロパティを [「詳細」タブ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/page-properties.html#advanced) コンテンツ作成者が現在のページのリダイレクト先を定義できます。 このソリューションは、ページごとのリダイレクトシナリオに最適で、ページのリダイレクトを一元的に表示および管理する場所はありません。
 
 ## 実装に最適なソリューション
 
 次に、適切なソリューションを決定するためのいくつかの条件を示します。 また、組織の IT およびマーケティングプロセスが、適切なソリューションの選択に役立ちます。
 
-1. マーケティングチームまたはスーパーユーザーが、AEM開発チームやAEMのリリース、デプロイメントサイクルなしにリダイレクトルールを管理できるようにする。
-1. 変更またはリスク軽減を検証、追跡、および元に戻すプロセス。
+1. マーケティングチームまたはスーパーユーザーが、AEM開発チームおよびAEMデプロイメントを使用せずにリダイレクトルールを管理できるようにする。
+1. 変更またはリスク軽減を管理、検証、追跡、および元に戻すプロセス。
 1. の可用性 _主題に関する専門知識_ 対象 **CDN サービスを介したエッジでの配信** 解決策
 
