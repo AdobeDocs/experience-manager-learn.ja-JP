@@ -9,9 +9,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c489a033f34aecaa0af10e3868c258feba6aaae6
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1063'
 ht-degree: 3%
 
 ---
@@ -41,15 +41,15 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
 
 >[!NOTE]
 >
->このチュートリアルではバージョンを使用します **39** を使用します。 常に、 **latest** 新しいプロジェクトを生成するためのアーキタイプのバージョン。
+>このチュートリアルではバージョンを使用します **35** を使用します。
 
 1. コマンドラインターミナルを開き、次の Maven コマンドを入力します。
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
     -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=39 \
+    -D archetypeVersion=35 \
     -D appTitle="WKND SPA React" \
     -D appId="wknd-spa-react" \
     -D artifactId="aem-guides-wknd-spa.react" \
@@ -228,6 +228,6 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
 
 このSPAは非常に簡単です。 次の数章では、さらに機能が追加されます。
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
 [SPAの統合](integrate-spa.md) - SPAソースコードがAEMプロジェクトと統合される仕組みと、SPAを迅速に開発するために使用できるツールについて説明します。
