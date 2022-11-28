@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 3%
@@ -65,7 +65,7 @@ Maven は、主に Java プロジェクトで使用されるビルド自動化�
 * コマンドプロンプトで次のコマンドを実行します。
 
 ```java
-mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.14
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
 ```
 
 正常に完了すると、コマンドウィンドウにビルド成功メッセージが表示されます
