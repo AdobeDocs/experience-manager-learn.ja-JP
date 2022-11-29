@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
+source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1741'
 ht-degree: 3%
 
 ---
@@ -167,6 +167,10 @@ ht-degree: 3%
    + [xml ドキュメントからノードを抽出](custom-workflow-steps/extract-xml-node.md)
    + [ドキュメントをファイルシステムに保存](custom-workflow-steps/write-payload-document.md)
    + [送信されたデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
++ カスタムワークフローコンポーネント{#custom-workflow-component}
+   + [はじめに](custom-workflow-component/introduction.md)
+   + [Java コードの記述](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [ワークフローコンポーネントを作成](custom-workflow-component/custom-workflow-component.md)
 + AEM Workflow の変数{#variables-aem-workflow}
    + [概要 — ワークフローの変数](variables-aem-workflow/introduction.md)
    + [XML 変数](variables-aem-workflow/part1.md)
