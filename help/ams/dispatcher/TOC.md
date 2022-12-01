@@ -5,9 +5,9 @@ breadcrumb-title: AEM Managed ServicesTutorials
 sub-product: Experience Manager
 version: 6.5
 team: TM
-source-git-commit: 4a46754557bcf26fc4ac11ae9e106d2250a06f07
+source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '60'
 ht-degree: 6%
 
 ---
@@ -28,3 +28,4 @@ ht-degree: 6%
    + [共通ログ](./dispatcher/common-logs.md)
    + [読み取り専用ファイル](./dispatcher/immutable-files.md)
    + [Dispatcher ヘルスチェック](./dispatcher/health-check.md)
+   + [GIT シンボリックリンク](./dispatcher/git-symlinks.md)
