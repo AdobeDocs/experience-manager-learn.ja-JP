@@ -1,20 +1,20 @@
 ---
-title: AEMヘッドレスTutorials
-description: Adobe Experience Managerをヘッドレス CMS として使用する方法に関するチュートリアルのコレクションです。
+title: AEMのヘッドレスのTutorials
+description: Adobe Experience Managerのヘッドレス CMS チュートリアルのコレクションです。 API、フレームワーク、サンプルアプリケーション別にチュートリアルを参照します。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '524'
 ht-degree: 7%
 
 ---
 
-# AEMヘッドレスTutorials{#aem-headless-tutorials}
+# AEMのヘッドレスのTutorials{#aem-headless-tutorials}
 
 Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションが用意されています。 実践チュートリアルを使用して、様々なオプションの使用方法を検討し、適切なオプションを選択します。
 
@@ -41,7 +41,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>アプリケーションでAEM GraphQL API を使用してコンテンツをクエリする方法を説明します。</em>
+    <em>アプリケーションでAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を説明します。</em>
     <p>
   </td>
   <td>
@@ -137,7 +137,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     </div>
     <p>
-    <em>純粋なヘッドレスシナリオで GraphQL を使用して React JS アプリを構築します。</em>
+    <em>純粋なヘッドレスシナリオで、GraphQLを使用して React JS アプリを構築します。</em>
     <p>
   </td>
   <td>
