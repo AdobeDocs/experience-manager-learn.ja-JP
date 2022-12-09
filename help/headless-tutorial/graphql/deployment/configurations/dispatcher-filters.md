@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQL の Dispatcher フィルター
-description: AEM GraphQL で使用する AEM パブリッシュ Dispatcher フィルターを設定する方法について説明します。
+title: AEM GraphQL用の Dispatcher フィルター
+description: AEM GraphQLで使用する AEM パブリッシュ Dispatcher フィルターを設定する方法について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -39,11 +39,16 @@ AEM パブリッシュ Dispatcher フィルターの設定は、AEMに到達す�
 を追加します。 `allow` ルールと URL パターン `/graphql/execute.json/*`をクリックし、ファイル ID( 例： `/0600`は、サンプルのファームファイルで一意です )。
 これにより、永続化されたクエリエンドポイント（例： ）に対する HTTPGETリクエストが可能になります。 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` AEM パブリッシュに切り替えます。
 
+AEMヘッドレスエクスペリエンスでエクスペリエンスフラグメントを使用する場合は、これらのパスで同じ操作を行います。
+
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
 ```
 ...
-/0600 { /type "allow" /url "/graphql/execute.json/*" }
+# Allow headless requests for Persisted Query endpoints
+/0600 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
+# Allow headless requests for Experience Fragments
+/0601 { /type "allow" /method '(GET|OPTIONS)' /url "/content/experience-fragments/*" }
 ...
 ```
 
