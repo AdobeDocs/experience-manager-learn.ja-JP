@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQL の CORS 設定
-description: AEM GraphQL で使用するためのクロスオリジンリソース共有 (CORS) の設定方法を説明します。
+title: AEM GraphQLの CORS 設定
+description: AEM GraphQLで使用するためのクロスオリジンリソース共有 (CORS) の設定方法について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '572'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # クロスオリジンリソース共有 (CORS)
 
-Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース共有 (CORS) は、AEM以外の Web プロパティを容易にして、AEM GraphQL API に対するブラウザーベースのクライアント側呼び出しをおこないます。
+Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース共有 (CORS) は、AEM GraphQL API に対してブラウザーベースのクライアント側呼び出しをおこなうAEM以外の Web プロパティを容易にします。
 
 >[!TIP]
 >
@@ -26,7 +26,7 @@ Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース�
 
 ## CORS 要件
 
-AEMに接続するクライアントがAEMと同じ接触チャネル（ホストまたはドメインとも呼ばれます）から提供されない場合、AEM GraphQL API へのブラウザーベースの接続には CORS が必要です。
+AEMに接続するクライアントがAEMと同じオリジン（ホストまたはドメインとも呼ばれます）から提供されない場合、AEM GraphQL API へのブラウザーベースの接続には、CORS が必要です。
 
 | クライアントタイプ | [シングルページアプリ (SPA)](../spa.md) | [Web コンポーネント/JS](../web-component.md) | [モバイル](../mobile.md) | [サーバー間](../server-to-server.md) |
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
@@ -46,13 +46,14 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 主な設定プロパティは次のとおりです。
 
 + `alloworigin` および/または `alloworiginregexp` AEM Web に接続するクライアントの実行元を指定します。
-+ `allowedpaths` 指定したオリジンから許可される URL パスパターンを指定します。 AEM GraphQL の永続クエリをサポートするには、次のパターンを使用します。 `"/graphql/execute.json.*"`
-+ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 追加 `GET`、 AEM GraphQL 永続クエリをサポートするために使用します。
++ `allowedpaths` 指定したオリジンから許可される URL パスパターンを指定します。
+   + AEM GraphQLで永続化されたクエリをサポートするには、次のパターンを追加します。 `/graphql/execute.json.*`
+   + エクスペリエンスフラグメントをサポートするには、次のパターンを追加します。 `/content/experience-fragments/.*`
++ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 追加 `GET`を使用して、AEM GraphQLで保持されたクエリ（およびエクスペリエンスフラグメント）をサポートします。
 
 [CORS OSGi の設定について詳しくは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
 
-
-この設定例では、AEM GraphQL の永続クエリの使用がサポートされています。 クライアント定義の GraphQL クエリを使用するには、に GraphQL エンドポイント URL を追加します。 `allowedpaths` および `POST` から `supportedmethods`.
+この設定例では、AEM GraphQLでの永続クエリの使用がサポートされています。 クライアント定義のGraphQLクエリを使用するには、 `allowedpaths` および `POST` から `supportedmethods`.
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -65,7 +66,8 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
     "http://localhost:.*"
   ],
   "allowedpaths": [
-    "/graphql/execute.json.*"
+    "/graphql/execute.json.*",
+    "/content/experience-fragments/.*"
   ],
   "supportedheaders": [
     "Origin",
@@ -77,7 +79,8 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
   ],
   "supportedmethods":[
     "GET",
-    "HEAD"
+    "HEAD",
+    "OPTIONS"
   ],
   "maxage:Integer": 1800,
   "supportscredentials": false,
@@ -87,7 +90,7 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 
 ### 承認済みのAEM GraphQL API リクエスト
 
-認証が必要なAEM GraphQL API（通常は AEM オーサーまたは AEM パブリッシュ上の保護されたコンテンツ）にアクセスする場合は、CORS OSGi 設定に次の追加値が含まれていることを確認します。
+認証が必要なAEM GraphQL API にアクセスする場合（通常は AEM オーサーまたは AEM パブリッシュ上の保護されたコンテンツ）、CORS OSGi 設定に次の追加の値が含まれていることを確認します。
 
 + `supportedheaders` リスト `"Authorization"`
 + `supportscredentials` が `true`
@@ -152,7 +155,7 @@ $include "./default_clientheaders.any"
 
 ### CORS HTTP 応答ヘッダーの配信
 
-キャッシュする Dispatcher ファームの設定 **CORS HTTP 応答ヘッダー** AEM GraphQL の永続クエリが Dispatcher キャッシュから提供される際に、それらを確実に含めるには、 `Access-Control-...` ヘッダーをキャッシュヘッダーリストに追加します。
+キャッシュする Dispatcher ファームの設定 **CORS HTTP 応答ヘッダー** AEM GraphQLで保持されたクエリが Dispatcher のキャッシュから提供される際に、それらが確実に含まれるようにするには、 `Access-Control-...` ヘッダーをキャッシュヘッダーリストに追加します。
 
 + `dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm`
 
