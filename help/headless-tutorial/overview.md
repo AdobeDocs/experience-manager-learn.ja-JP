@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '503'
 ht-degree: 7%
 
 ---
@@ -21,11 +21,6 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 >[!TIP]
 >
 >このチュートリアルは、 **～することで学ぶ**. 詳しくは、次のページを参照してください。 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). この一連のチュートリアルとジャーニーは互いを補完し合っています。
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_edit_inline_content"
->title="インラインコンテンツを編集"
->abstract="ヘッドレス機能セットを使用して、参照元のページでコンテンツを直接編集する方法を説明します。"
 
 ## Tutorials（API 別）
 

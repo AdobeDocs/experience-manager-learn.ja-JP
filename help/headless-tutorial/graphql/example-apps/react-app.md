@@ -1,6 +1,6 @@
 ---
 title: React アプリ — AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この React アプリケーションは、永続化されたクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
+description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この React アプリケーションは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 10715
@@ -11,27 +11,22 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '919'
 ht-degree: 6%
 
 ---
 
 # React アプリ{#react-app}
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この React アプリケーションは、永続化されたクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。 JavaScript 版AEMヘッドレスクライアントは、アプリを強化する GraphQL の永続クエリを実行するために使用されます。
+アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この React アプリケーションは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。 AEM Headless Client for JavaScript は、アプリを強化するGraphQLの永続クエリを実行するために使用されます。
 
 ![AEMヘッドレスを使用した React アプリ](./assets/react-app/react-app.png)
 
 次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [詳細な手順のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) この React アプリのビルドを使用する方法を説明します。
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_react_app"
->title="サンプル React アプリのコンテンツのカスタマイズ"
->abstract="ヘッドレス機能セットを使用してコンテンツをカスタマイズする方法を学ぶために使用できる最新の React アプリを設定しました。"
 
 ## 前提条件 {#prerequisites}
 
@@ -96,12 +91,12 @@ React アプリケーションは、 __AEM パブリッシュ__ 環境で使用�
 
 ## コード
 
-React アプリケーションの構築方法、GraphQL の永続クエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+GraphQLでの永続化されたクエリを使用してコンテンツを取得するために React アプリケーションが構築される方法、AEMヘッドレスに接続する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 
 ### 永続クエリ
 
-AEMヘッドレスのベストプラクティスに従い、React アプリケーションはAEM GraphQL に永続化されたクエリを使用して、アドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
+AEMヘッドレスのベストプラクティスに従い、React アプリケーションはAEM GraphQLで永続的なクエリを使用してアドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
 
 + `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
 
@@ -184,13 +179,13 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL 永続クエリを実行
+### GraphQL永続クエリの実行
 
-AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js) は [永続化された GraphQL クエリの実行](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEMに対して貼り付け、アドベンチャーコンテンツをアプリに読み込みます。
+AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js) は [永続的なGraphQLクエリの実行](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEMに対して貼り付け、アドベンチャーコンテンツをアプリに読み込みます。
 
 永続化された各クエリには、対応する React が含まれます [useEffect](https://reactjs.org/docs/hooks-effect.html) 引っ掛かる `src/api/usePersistedQueries.js`を呼び出し、AEM HTTPGET持続クエリエンドポイントを非同期的に呼び出して、アドベンチャーデータを返します。
 
-次に、各関数が `aemHeadlessClient.runPersistedQuery(...)`に設定され、永続化された GraphQL クエリを実行します。
+次に、各関数が `aemHeadlessClient.runPersistedQuery(...)`に設定し、永続化されたGraphQLクエリを実行します。
 
 ```js
 // src/api/usePersistedQueries.js
@@ -269,7 +264,7 @@ React アプリケーションは、2 つのビューを使用して、Web エ�
 複数 [環境変数](https://create-react-app.dev/docs/adding-custom-environment-variables) を使用してAEM環境に接続します。 デフォルトでは、次の場所で実行されている AEM パブリッシュに接続します： `http://localhost:4503`. を更新します。 `.env.development` ファイルを編集し、AEM接続を変更します。
 
 + `REACT_APP_HOST_URI=http://localhost:4502`:AEM target host に設定
-+ `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`:GraphQL エンドポイントパスを設定します。 このアプリは永続化されたクエリのみを使用するので、この React アプリでは使用されません。
++ `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`:GraphQLエンドポイントのパスを設定します。 このアプリは永続化されたクエリのみを使用するので、この React アプリでは使用されません。
 + `REACT_APP_AUTH_METHOD=`:推奨される認証方法。 オプション。デフォルトでは認証は使用されません。
    + `service-token`:サービス資格情報を使用してAEM as a Cloud Serviceのアクセストークンを取得する
    + `dev-token`:AEM as a Cloud Serviceのローカル開発に開発トークンを使用
