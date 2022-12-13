@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '866'
 ht-degree: 27%
 
 ---
@@ -53,6 +53,18 @@ ht-degree: 27%
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
    + [ローカル Dispatcher ツール](./local-development-environment/dispatcher-tools.md)
 + 開発{#developing}
+   + 拡張性{#extensibility}
+      + コンテンツフラグメントコンソール{#content-fragments}
+         + [概要](./developing/extensibility/content-fragments/overview.md)
+         + [拡張機能の登録](./developing/extensibility/content-fragments/extension-registration.md)
+         + [ヘッダーメニュー](./developing/extensibility/content-fragments/header-menu.md)
+         + [アクションバー](./developing/extensibility/content-fragments/action-bar.md)
+         + [モーダル](./developing/extensibility/content-fragments/modal.md)
+         + [Adobe I/O Runtime action](./developing/extensibility/content-fragments/runtime-action.md)
+         + [テスト](./developing/extensibility/content-fragments/test.md)
+         + [デプロイ](./developing/extensibility/content-fragments/deploy.md)
+         + 拡張の例{#example-extensions}
+            + [プロパティ一括更新拡張機能](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
    + 開発の基本{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)
