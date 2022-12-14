@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -55,15 +55,15 @@ function App(props) {
 `ExtensionRegistration.js` は、拡張機能のインデックスルートを介して直ちに読み込まれ、次を定義して、拡張機能の登録ポイントを操作します。
 
 1. 拡張機能のタイプ。a [ヘッダーメニュー](./header-menu.md) または [アクションバー](./action-bar.md) 」ボタンをクリックします。
-   + [ヘッダーメニュー](./header-menu.md) 拡張子は、 `headerMenu` プロパティ： `methods`.
-   + [アクションバー](./action-bar.md) 拡張子は、 `actionBar` プロパティ： `methods`.
+   + [ヘッダーメニュー](./header-menu.md#extension-registration) 拡張子は、 `headerMenu` プロパティ： `methods`.
+   + [アクションバー](./action-bar.md#extension-registration) 拡張子は、 `actionBar` プロパティ： `methods`.
 1. 拡張ボタンの定義 ( `getButton()` 関数に置き換えます。 この関数は、次のフィールドを持つオブジェクトを返します。
    + `id` は、ボタンの一意の ID です
    + `label` は、AEMコンテンツフラグメントコンソールの拡張機能ボタンのラベルです。
    + `icon` は、AEMコンテンツフラグメントコンソールの拡張機能ボタンのアイコンです。 アイコンは、 [React スペクトル](https://spectrum.adobe.com/page/icons/) アイコン名（スペースを削除）。
 1. ボタンのクリックハンドラー ( 内で `onClick()` 関数に置き換えます。
-   + [ヘッダーメニュー](./header-menu.md) 拡張機能は、クリックハンドラーにパラメーターを渡しません。
-   + [アクションバー](./action-bar.md) 拡張機能を使用すると、選択したコンテンツフラグメントのパスのリストが `selections` パラメーター。
+   + [ヘッダーメニュー](./header-menu.md#extension-registration) 拡張機能は、クリックハンドラーにパラメーターを渡しません。
+   + [アクションバー](./action-bar.md#extension-registration) 拡張機能を使用すると、選択したコンテンツフラグメントのパスのリストが `selections` パラメーター。
 
 ### ヘッダーメニュー拡張機能
 

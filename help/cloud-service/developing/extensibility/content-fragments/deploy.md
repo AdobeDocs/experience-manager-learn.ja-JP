@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Adobe Developerコンソールのワークスペースには、AEM as a Cloud Se
 1. 選択 __承認用に送信__
 1. 必要に応じてフィールドを更新し、フォームに入力して送信します。
 
-+ アイコンが必要です。 アイコンがない場合、 [このアイコン](./assets/deploy/icon.png).
+アイコンが必要なことに注意してください。 アイコンがない場合、 [このアイコン](./assets/deploy/icon.png).
 
 ### デプロイメントリクエストの承認
 

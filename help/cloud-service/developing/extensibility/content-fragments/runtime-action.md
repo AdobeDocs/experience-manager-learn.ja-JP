@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 3%
@@ -49,7 +49,7 @@ Adobe I/O Runtimeのアクションは、主にAEM Content Fragment 拡張機能
 
 ### 拡張機能の登録から
 
-Adobe I/O Runtimeのアクションは、拡張機能の登録コードから直接呼び出すことができます。 最も一般的な使用例=は、アクションを [ヘッダーメニュー](./header-menu.md#no-modal)を使用しないのボタン [モデル](./modal.md).
+Adobe I/O Runtimeのアクションは、拡張機能の登録コードから直接呼び出すことができます。 最も一般的な使用例は、アクションを [ヘッダーメニュー](./header-menu.md#no-modal)を使用しないのボタン [モデル](./modal.md).
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
