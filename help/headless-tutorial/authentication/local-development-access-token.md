@@ -13,9 +13,9 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -32,10 +32,10 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
 
 ローカル開発アクセストークンを使用すると、トークンを生成したユーザーとしての AEM オーサーサービスおよびパブリッシュサービスへのアクセス権と、その権限を提供できます。 これは開発トークンですが、このトークンを共有しないでください。または、ソース管理下に保存してください。
 
-1. In [AdobeAdminConsole](https://adminconsole.adobe.com/) 開発者は、次のメンバーであることを確認します。
+1. In [Adobe Admin Console](https://adminconsole.adobe.com/) 開発者は、次のメンバーであることを確認します。
    + __Cloud Manager — 開発者__ IMS 製品プロファイル (AEM Developer Console へのアクセス権を付与 )
    + 次のいずれか __AEM Administrators__ または __AEM Users__ アクセストークンが統合されるAEM環境のサービス用の IMS 製品プロファイル
-   + サンドボックスAEMas a Cloud Service環境は、どちらかのメンバーシップのみが必要です __AEM Administrators__ または __AEM Users__ 製品プロファイル
+   + Sandbox AEMas a Cloud Serviceの環境では、 __AEM Administrators__ または __AEM Users__ 製品プロファイル
 1. にログインします。 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 統合するAEMas a Cloud Service環境を含むプログラムを開きます。
 1. 次をタップします。 __省略記号__ の環境の隣に __環境__ セクションを選択し、 __開発者コンソール__
@@ -59,7 +59,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
 
 ### サンプル外部アプリケーション
 
-簡単な外部 JavaScript アプリケーションを作成し、ローカル開発者アクセストークンを使用して、HTTPS 経由でas a Cloud Serviceにプログラム的にアクセスする方法を説明します。 これは、次の方法を示します。 _任意_ AEM以外で実行されるアプリケーションまたはシステムは、フレームワークや言語に関係なく、アクセストークンを使用して、AEM as a Cloud Serviceに対するプログラム認証とアクセスを行うことができます。 内 [次のセクション](./service-credentials.md) 実稼動用のトークンを生成する方法をサポートするために、このアプリケーションコードを更新します。
+簡単な外部 JavaScript アプリケーションを作成し、ローカル開発者アクセストークンを使用して、HTTPS 経由でas a Cloud Serviceにプログラム的にアクセスする方法を説明します。 これは、次の方法を示します。 _任意_ AEM以外で実行されるアプリケーションまたはシステムは、フレームワークや言語に関係なく、アクセストークンを使用して、AEM as a Cloud Serviceに対するプログラム認証とアクセスを行うことができます。 内 [次のセクション](./service-credentials.md)を使用する場合は、実稼動用のトークンを生成する方法をサポートするように、このアプリケーションコードを更新します。
 
 このサンプルアプリケーションはコマンドラインから実行され、次のフローを使用して、AEM Assets HTTP API を使用してAEMのアセットメタデータを更新します。
 
@@ -96,7 +96,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
    * Application entry point function
    */
    (async () => {
-       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd/en/adventures/napa-wine-tasting file=credentials-file.json' );
+       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd-shared/en/adventures/napa-wine-tasting file=credentials-file.json' );
    
        // Parse the command line parameters
        params = getCommandLineParams();
@@ -173,7 +173,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
    * - aem = The AEM as a Cloud Service hostname to connect to.
    *              Example: https://author-p12345-e67890.adobeaemcloud.com
    * - folder = The asset folder to update assets in. Note that the Assets HTTP API do NOT use the JCR `/content/dam` path prefix.
-   *              Example: '/wknd/en/adventures/napa-wine-tasting'
+   *              Example: '/wknd-shared/en/adventures/napa-wine-tasting'
    * - propertyName = The asset property name to update. Note this is relative to the [dam:Asset]/jcr:content node of the asset.
    *              Example: metadata/dc:rights
    * - propertyValue = The value to update the asset property (specified by propertyName) with.
@@ -230,7 +230,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Limited Use" \
        file=local_development_token.json
@@ -239,7 +239,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
    次のパラメーターが渡されます。
 
    + `aem`:アプリケーションがやり取りするAEMas a Cloud Service環境のスキームとホスト名 ( 例： `https://author-p1234-e5678.adobeaemcloud.com`) をクリックします。
-   + `folder`:アセットが `propertyValue`;追加しない `/content/dam` プレフィックス ( 例： `/wknd/en/adventures/napa-wine-tasting`)
+   + `folder`:アセットが `propertyValue`;追加しない `/content/dam` プレフィックス ( 例： `/wknd-shared/en/adventures/napa-wine-tasting`)
    + `propertyName`:更新するアセットプロパティの名前（相対的な名前） `[dam:Asset]/jcr:content` ( 例： `metadata/dc:rights`) をクリックします。
    + `propertyValue`:設定する値 `propertyName` からスペースを含む値は、 `"` ( 例： `"WKND Limited Use"`)
    + `file`:AEM Developer Console からダウンロードした JSON ファイルの相対ファイルパス。
@@ -247,16 +247,16 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
    更新された各アセットのアプリケーション結果出力が正常に実行された場合：
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
 ### AEMでのメタデータの更新の検証
 
-AEM as a Cloud Service環境にログインして、メタデータが更新されていることを確認します ( 同じホストが `aem` コマンドラインパラメータにアクセスします )。
+AEM as a Cloud Service環境にログインして、メタデータが更新されたことを確認します ( 同じホストが `aem` コマンドラインパラメータにアクセスします )。
 
 1. 外部アプリケーションがやり取りするAEMas a Cloud Service環境にログインします ( `aem` コマンドラインパラメータ )
 1. 次に移動： __Assets__ > __ファイル__
@@ -269,6 +269,6 @@ AEM as a Cloud Service環境にログインして、メタデータが更新さ�
 
 ## 次の手順
 
-ローカル開発トークンを使用してAEMas a Cloud Serviceにプログラム的にアクセスしたので、サービス資格情報を使用して処理するようにアプリケーションを更新し、実稼働コンテキストで使用できるようにする必要があります。
+これで、ローカル開発トークンを使用してプログラムからAEM as a Cloud Serviceにアクセスできました。 次に、サービス資格情報を使用して処理するようにアプリケーションを更新する必要があります。これにより、このアプリケーションを実稼動コンテキストで使用できます。
 
 + [サービス資格情報の使用方法](./service-credentials.md)
