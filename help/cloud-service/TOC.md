@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 79804ac1ec18f8ac4815bd5ee6f309ef85110cb9
+source-git-commit: 9fd2240cace83c27083f8209e9cec21640718989
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 27%
@@ -85,7 +85,7 @@ ht-degree: 27%
       + [OCD を使用した OSGi 設定](./developing/osgi-services/configurations-ocd.md)
    + 詳細{#advanced}
       + [サービスユーザー](./developing/advanced/service-users.md)
-      + [顧客名前空間](./developing/advanced/custom-namespaces.md)
+      + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + デバッグAEM{#debugging}
@@ -162,7 +162,6 @@ ht-degree: 27%
       + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
-
    + Formsas a Cloud Service向けの開発{#developing-for-cloud-service}
       + [概要](./forms/developing-for-cloud-service/getting-started.md)
       + [IntelliJ のインストール](./forms/developing-for-cloud-service/intellij-set-up.md)
