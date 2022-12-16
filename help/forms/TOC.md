@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1754'
 ht-degree: 3%
 
 ---
@@ -214,6 +214,13 @@ ht-degree: 3%
    + [第 2 部 — フォーム送信時の ACS プロファイルの作成](aem-forms-with-adobe-campaign/parttwo.md)
    + [第 3 部 — ACS プロファイル情報を使用したフォームの事前入力](aem-forms-with-adobe-campaign/partthree.md)
    + [第 4 部 — フォームデータモデルを使用した ACS プロファイルの作成](aem-forms-with-adobe-campaign/partfour.md)
+
++ ウェルカムキット {#welcome-kit}
+   + [はじめに](welcome-kit/introduction.md)
+   + [ウェルカムキットコンポーネントを作成する](welcome-kit/create-welcomekit-component.md)
+   + [ワークフローコンポーネントを作成](welcome-kit/create-workflow-component.md)
+   + [ソリューションをテストする](welcome-kit/testing-the-solution.md)
+
 
 + ドキュメントサービス {#document-services}
    + [PDF formsのタイプ](document-services/pdf-forms-and-documents.md)
