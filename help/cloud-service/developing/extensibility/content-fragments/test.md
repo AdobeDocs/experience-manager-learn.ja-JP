@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,12 @@ AEMコンテンツフラグメントコンソール拡張は、拡張機能が�
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`通常は `&ext=https://localhost:9080`.
 
+   上記の 2 つのクエリパラメーター (`devMode` および `ext`) を __first__ コンテンツフラグメントコンソールはハッシュルート (`#/@wknd/aem/...`) の代わりに、 `#` は機能しません。
+
    テスト URL は次のようになります。
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://localhost:9080
+   https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. テスト URL をコピーして、ブラウザーに貼り付けます。
@@ -112,10 +114,12 @@ AEMコンテンツフラグメントコンソール拡張は、拡張機能が�
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
+   上記の 2 つのクエリパラメーター (`devMode` および `ext`) を __first__ コンテンツフラグメントコンソールはハッシュルート (`#/@wknd/aem/...`) の代わりに、 `#` は機能しません。
+
    テスト URL は次のようになります。
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html
+   https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. テスト URL をコピーして、ブラウザーに貼り付けます。
