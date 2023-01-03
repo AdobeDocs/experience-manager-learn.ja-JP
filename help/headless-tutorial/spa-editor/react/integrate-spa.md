@@ -9,7 +9,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 4%
@@ -344,9 +344,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
 
 ## おめでとうございます。 {#congratulations}
 
-これで、SPAを更新し、AEMとの統合を確認しました。 を使用してAEM JSON モデル API に対してSPAを開発する方法を知っています。 **webpack-dev-server**.
+これで、SPAを更新し、AEMとの統合を確認しました。 これで、を使用してAEM JSON モデル API に対してSPAを開発する方法を理解できました。 **webpack-dev-server**.
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
 [SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md) - AEM SPA Editor JS SDK を使用して、React コンポーネントをAdobe Experience Manager(AEM) コンポーネントにマッピングする方法を説明します。 コンポーネントマッピングを使用すると、AEM SPAエディター内で、従来のAEMオーサリングと同様に、SPAコンポーネントを動的に更新できます。
 

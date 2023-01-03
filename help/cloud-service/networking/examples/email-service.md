@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d6eddceb3f414e67b5b6e3fba071cd95597dc41c
+source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 5%
@@ -60,7 +60,7 @@ AEMを設定してAEM as a Cloud Serviceから電子メールを送信 `DefaultM
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-AEMを設定 [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) 電子メールプロバイダーの要求に応じて ( 例： `smtp.ssl`など )
+AEMを設定 [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=ja#sending-email) 電子メールプロバイダーの要求に応じて ( 例： `smtp.ssl`など )
 
 ```json
 {
