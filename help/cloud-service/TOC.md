@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9fd2240cace83c27083f8209e9cec21640718989
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '874'
 ht-degree: 27%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 27%
          + [デプロイ](./developing/extensibility/content-fragments/deploy.md)
          + 拡張の例{#example-extensions}
             + [プロパティ一括更新拡張機能](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
+            + [画像の生成とAEMへのアップロード](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
    + 開発の基本{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)

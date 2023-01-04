@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '774'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # AEM Content Fragments Console 拡張機能
 
-[AEMコンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja) 拡張機能は、次の 2 つの拡張ポイントを使用して追加できます。ボタン [コンテンツフラグメントコンソールの](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) ヘッダーメニューまたはアクションバー。 拡張機能は、App Builder アプリとして実行される JavaScript で記述され、カスタム Web UI とサーバーレスのAdobe I/O Runtimeアクションを実装して、より集中的で長時間実行される作業を実行できます。
+[AEMコンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja) 拡張機能は、次の 2 つの拡張ポイントを使用して追加できます。ボタン [コンテンツフラグメントコンソールの](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja) ヘッダーメニューまたはアクションバー。 拡張機能は、App Builder アプリとして実行される JavaScript で記述され、カスタム Web UI とサーバーレスのAdobe I/O Runtimeアクションを実装して、より集中的で長時間実行される作業を実行できます。
 
 ![AEM Content Fragments Console 拡張機能](./assets/overview/example.png){align="center"}
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 AEMコンテンツフラグメントコンソール拡張機能には、 [Adobe Developer Console プロジェクト](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) および [App Builder アプリ](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) の使用 `@adobe/aem-cf-admin-ui-ext-tpl` テンプレート。Adobe Developer Console プロジェクトに関連付けられています。
 
-拡張機能で何がおこなわれるかに基づいて、App Builder アプリを生成する際に次の機能から選択します。 オプションの組み合わせは、拡張機能で使用できます。
+拡張機能の動作に基づいて、App Builder アプリを生成する際に次の機能から選択します。 オプションの組み合わせは、拡張機能で使用できます。
 
 |  | 次にボタンを追加 [ヘッダーメニュー](./header-menu.md) | 次にボタンを追加 [アクションバー](./action-bar.md) | 表示 [モーダル](./modal.md) | 追加 [サーバーサイドハンドラー](./runtime-action.md) |
 | ------------------------------------------ | :-----------------------: | :----------------------: | :--------: | :--------------------:  |
@@ -193,7 +193,7 @@ AEM as a Cloud Service用のAEMコンテンツフラグメントコンソール�
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">6.Adobe I/O Runtimeの行動</p>
-                    <p class="is-size-6">拡張機能が呼び出して、コンテンツフラグメントとAEMとやり取りし、カスタムのビジネス操作を実行するための、サーバーレスのAdobe I/O Runtimeアクションを追加します。</p>
+                    <p class="is-size-6">拡張機能が呼び出してコンテンツフラグメントとAEMとやり取りし、カスタムビジネス操作を実行するためのサーバーレスAdobe I/O Runtimeアクションを追加します。</p>
                     <a href="./runtime-action.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Adobe I/O Runtimeアクションの追加</span>
                     </a>
@@ -271,4 +271,28 @@ AEMコンテンツフラグメントコンソール拡張の例。
             </div>
         </div>
     </div>
+    <!-- Bulk property update extension -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Image generation and upload to AEM extension">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-16by9">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="画像の生成とAEM拡張機能へのアップロード" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="画像の生成とAEM拡張機能へのアップロード">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small">
+                <div class="content">
+                    <p class="headline is-size-5 has-text-weight-bold">画像の生成とAEM拡張機能へのアップロード</p>
+                    <p class="is-size-6">OpenAI を使用して画像を生成し、AEMにアップロードして、選択したコンテンツフラグメントの画像プロパティを更新するアクションバー拡張機能の例を見てみましょう。</p>
+                    <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">拡張例を見る</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>

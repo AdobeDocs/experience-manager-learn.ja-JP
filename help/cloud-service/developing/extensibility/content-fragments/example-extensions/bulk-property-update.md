@@ -9,10 +9,10 @@ level: Beginner
 kt: 11604
 thumbnail: KT-11604.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 1. フォームを送信すると、選択したコンテンツフラグメントのリストとAEMホストが [カスタムAdobe I/O Runtimeアクション](#adobe-io-runtime-action).
 1. この [Adobe I/O Runtime action](#adobe-io-runtime-action) は入力を検証し、AEMに対して HTTPPUTリクエストを実行して、選択したコンテンツフラグメントを更新します。
 1. 指定したプロパティを更新するための、コンテンツフラグメントごとの一連の HTTPPUT。
-1. AEM as a Cloud Serviceは、コンテンツフラグメントに対するプロパティの更新を保持し、失敗した応答の成功をAdobe I/O Runtimeアクションに返します。
+1. AEM as a Cloud Serviceは、コンテンツフラグメントに対するプロパティの更新を保持し、Adobe I/O Runtimeのアクションに成功または失敗の応答を返します。
 1. モーダルは、Adobe I/O Runtimeアクションからの応答を受け取り、成功した一括更新のリストを表示します。
 
 このビデオでは、サンプルの一括プロパティ更新拡張機能、その仕組み、開発方法について説明します。
@@ -147,7 +147,7 @@ function ExtensionRegistration() {
 重要な点は、拡張機能からAEMとのインタラクションはすべて、 [AppBuilder Adobe I/O Runtimeアクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)：で実行される個別のサーバーレスプロセスです。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 AEMとの通信にAdobe I/O Runtimeアクションを使用することは、クロスオリジンリソース共有 (CORS) 接続の問題を回避することです。
 
-一括プロパティ更新フォームが送信されると、 `onSubmitHandler()` 現在のAEMホスト（ドメイン）とユーザーのAEMアクセストークンを渡して、Adobe I/O Runtimeアクションを呼び出します。その後、が [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/content-fragments-api.html) をクリックして、コンテンツフラグメントを更新します。
+一括プロパティ更新フォームが送信されると、 `onSubmitHandler()` 現在のAEMホスト（ドメイン）とユーザーのAEMアクセストークンを渡して、Adobe I/O Runtimeアクションを呼び出します。その後、が [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) をクリックして、コンテンツフラグメントを更新します。
 
 Adobe I/O Runtimeアクションからの応答を受け取ると、モーダルが更新され、一括プロパティ更新操作の結果が表示されます。
 
@@ -408,7 +408,7 @@ export default function BulkPropertyUpdateModal() {
 
 ## Adobe I/O Runtime action
 
-AEM拡張機能の App Builder アプリは、0 個または複数のAdobe I/O Runtimeアクションを定義またはユーザーに設定できます。
+AEM拡張機能の App Builder アプリは、0 個または複数のAdobe I/O Runtimeアクションを定義または使用できます。
 Adobeランタイムアクションは、AEMまたはその他のAdobeWeb サービスとの対話を必要とする作業を担当する必要があります。
 
 このサンプルアプリでは、Adobe I/O Runtimeアクションは、デフォルトの名前を使用します。 `generic`  — は次を担当します。
