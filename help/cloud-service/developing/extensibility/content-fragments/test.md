@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 AEMコンテンツフラグメントコンソール拡張は、拡張機能が属するAdobe組織内の任意のAEMas a Cloud Service環境に対してテストできます。
 
 拡張機能のテストは、AEMコンテンツフラグメントコンソールに拡張機能の読み込みを指示する、特別に作成された URL を使用しておこなわれます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3412877/?quality=12&learn=on)
 
 ## AEMコンテンツフラグメントコンソールの URL
 
