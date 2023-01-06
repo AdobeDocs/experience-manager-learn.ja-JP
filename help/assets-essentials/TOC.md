@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: d020ad061ab39a4871a2bc851f883d880e7df6ee
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 34%
+source-wordcount: '72'
+ht-degree: 33%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 34%
 
 + [概要](overview.md)
 
-+ [プロビジョニング](./provisioning.md)
 + [概要](./getting-started.md)
 
 + 基本{#basics}
