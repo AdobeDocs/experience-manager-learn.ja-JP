@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
+source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1776'
 ht-degree: 3%
 
 ---
@@ -100,6 +100,11 @@ ht-degree: 3%
    + [事前入力HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Salesforce を使用したフォームデータモデル](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [選択コンポーネントへの項目の動的な追加](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ DAM フォルダーコンテンツを選択してアセンブリ{#select-dam-folder-content}
+   + [はじめに](display-and-assemble-dam-folder-contents/introduction.md)
+   + [選択グループを入力](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [選択したアセットのアセンブリ](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [アセットをローカルにデプロイ](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + フォームデータモデルを使用したアダプティブフォームの事前入力{#prefill-fdm-db}
    + [はじめに](prefill-fdm-db/introduction.md)
    + [データベーステーブルを作成](prefill-fdm-db/create-database-tables.md)
