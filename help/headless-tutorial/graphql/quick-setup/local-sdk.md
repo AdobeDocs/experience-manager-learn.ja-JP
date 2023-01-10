@@ -1,6 +1,6 @@
 ---
 title: ローカル SDK を使用したAEMヘッドレスクイックセットアップ
-description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 AEM SDK をインストールし、サンプルコンテンツを追加し、AEMの GraphQL API を使用して、コンテンツを使用するアプリケーションをデプロイします。 AEMがオムニチャネルエクスペリエンスを強化する方法を参照してください。
+description: Adobe Experience Manager(AEM) とGraphQLの概要。 AEM SDK をインストールし、サンプルコンテンツを追加し、GraphQL API を使用してAEMのコンテンツを使用するアプリケーションをデプロイします。 AEMがオムニチャネルエクスペリエンスを強化する方法を参照してください。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 64086f3f7b340b143bd281e2f6f802af07554ecf
+source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 3%
+source-wordcount: '1256'
+ht-degree: 2%
 
 ---
 
@@ -26,13 +26,12 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
 以下のツールをローカルにインストールする必要があります。
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v10 以降](https://nodejs.org/ja/)
-* [npm 6 以降](https://www.npmjs.com/)
+* [Node.js v14.x](https://nodejs.org/ja/)
 * [Git](https://git-scm.com/)
 
 ## 1. AEM SDK をインストールします。 {#aem-sdk}
 
-この設定では、 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) AEM GraphQL API を調べる この節では、AEM SDK をインストールしてオーサーモードで実行する方法のクイックガイドを示します。 ローカル開発環境の設定に関する詳細なガイド [ここにあります](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
+この設定では、 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) AEM GraphQL API を参照してください。 この節では、AEM SDK をインストールしてオーサーモードで実行する方法のクイックガイドを示します。 ローカル開発環境の設定に関する詳細なガイド [ここにあります](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
 
 >[!NOTE]
 >
@@ -62,7 +61,7 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
 
 のサンプルコンテンツ **WKND リファレンスサイト** を使用して、チュートリアルを高速化します。 WKND は架空のライフスタイルブランドで、AEMトレーニングでよく使用されます。
 
-WKND サイトには、 [GraphQL エンドポイント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). 実際の実装では、ドキュメントに記載されている手順に従って、 [GraphQL エンドポイントを含める](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) を選択します。 A [CORS](#cors-config) は、WKND サイトの一部としてもパッケージ化されています。 外部アプリケーションへのアクセスを許可するには、CORS 設定が必要です。詳しくは、 [CORS](#cors-config) は以下にあります。
+WKND サイトには、 [GraphQLエンドポイント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). 実際の実装では、ドキュメントに記載されている手順に従って、 [GraphQLエンドポイントを含める](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) を選択します。 A [CORS](#cors-config) は、WKND サイトの一部としてもパッケージ化されています。 外部アプリケーションへのアクセスを許可するには、CORS 設定が必要です。詳しくは、 [CORS](#cors-config) は以下にあります。
 
 1. WKND サイト用に最新のコンパイル済みAEMパッケージをダウンロードします。 [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
@@ -102,7 +101,7 @@ WKND サイトには、 [GraphQL エンドポイント](https://experienceleague
 
 ## 3. WKND React アプリをダウンロードして実行します。 {#sample-app}
 
-このチュートリアルの目的の 1 つは、GraphQL API を使用して外部アプリケーションからAEMコンテンツを使用する方法を示すことです。 このチュートリアルでは、React App のサンプルを使用します。 React アプリは、AEM GraphQL API との統合に焦点を当てるために意図的にシンプルです。
+このチュートリアルの目的の 1 つは、GraphQL API を使用して外部アプリケーションからAEMコンテンツを使用する方法を示すことです。 このチュートリアルでは、React App のサンプルを使用します。 React アプリは、AEM GraphQL API との統合に焦点を当てるために、意図的にシンプルです。
 
 1. 新しいコマンドプロンプトを開き、GitHub からサンプル React アプリをクローンします。
 
@@ -148,7 +147,7 @@ WKND サイトには、 [GraphQL エンドポイント](https://experienceleague
 
 1. ブラウザーの開発者ツールを使用して、 **ネットワーク** リクエスト。 次を表示： **XHR** に対する複数のGET要求を監視します。 `/graphql/execute.json/...`. このパスプレフィックスは、名前と、プレフィックスに続くエンコードされたパラメーターを使用して、実行する永続化されたクエリを選択し、AEMの永続化されたクエリエンドポイントを呼び出します。
 
-   ![GraphQL エンドポイント XHR リクエスト](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
+   ![GraphQL Endpoint XHR リクエスト](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
 ## 4. AEMでコンテンツを編集する
 
@@ -171,17 +170,17 @@ React アプリを実行している状態で、AEMのコンテンツを更新�
 
 ## 5. GraphiQL の参照 {#graphiql}
 
-1. 開く [GraphiQL](http://localhost:4502/aem/graphiql.html) 移動して **ツール** > **一般** > **GraphQL クエリエディター**
+1. 開く [GraphiQL](http://localhost:4502/aem/graphiql.html) 移動して **ツール** > **一般** > **GraphQL Query editor**
 1. 左側で既存の永続化されたクエリを選択し、クエリを実行して結果を確認します。
 
    >[!NOTE]
    >
-   > GraphiQL ツールと GraphQL API は、 [チュートリアルの後半で詳しく説明します。](../multi-step/explore-graphql-api.md).
+   > GraphiQL ツールとGraphQL API は、 [チュートリアルの後半で詳しく説明します。](../multi-step/explore-graphql-api.md).
 
 ## おめでとうございます。{#congratulations}
 
-これで、GraphQL でAEMコンテンツを使用する外部アプリケーションが作成されました。 React アプリのコードを調べ、既存のコンテンツフラグメントの変更を引き続き試してみてください。
+これで、GraphQLと共にAEMコンテンツを使用する外部アプリケーションが作成されました。 React アプリのコードを調べ、既存のコンテンツフラグメントの変更を引き続き試してみてください。
 
-### 次の手順
+### 次のステップ
 
 * [AEMヘッドレスチュートリアルの開始](../multi-step/overview.md)
