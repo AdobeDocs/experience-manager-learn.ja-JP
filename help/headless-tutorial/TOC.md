@@ -27,11 +27,11 @@ ht-degree: 23%
    + ビデオシリーズ{#video-series}
       + [1 — モデリングの基本](./graphql/video-series/modeling-basics.md)
       + [2 — 高度なモデリング](./graphql/video-series/advanced-modeling.md)
-      + [3 - GraphQL クエリの作成](./graphql/video-series/creating-graphql-queries.md)
+      + [3 - GraphQLクエリの作成](./graphql/video-series/creating-graphql-queries.md)
       + [4 — コンテンツフラグメントのバリエーション](./graphql/video-series/content-fragment-variations.md)
-      + [5 - GraphQL エンドポイント](./graphql/video-series/graphql-endpoints.md)
+      + [5 - GraphQLエンドポイント](./graphql/video-series/graphql-endpoints.md)
       + [6 — オーサーとパブリッシュのアーキテクチャ](./graphql/video-series/author-publish-architecture.md)
-      + [7 - GraphQL 永続クエリ](./graphql/video-series/graphql-persisted-queries.md)
+      + [7 - GraphQL永続クエリ](./graphql/video-series/graphql-persisted-queries.md)
    + 基本チュートリアル{#multi-step}
       + [概要](./graphql/multi-step/overview.md)
       + [1 — コンテンツフラグメントモデルの定義](./graphql/multi-step/content-fragment-models.md)
@@ -43,7 +43,7 @@ ht-degree: 23%
       + [1 — コンテンツフラグメントモデルの作成](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 — コンテンツフラグメントのオーサリング](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
       + [3 - AEM GraphQL API の参照](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
-      + [4 — 永続的な GraphQL クエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [4 — 永続的なGraphQLクエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
 + デプロイメント{#deployments}
    + [概要](./graphql/deployment/overview.md)

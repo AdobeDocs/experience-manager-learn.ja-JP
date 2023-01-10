@@ -65,6 +65,6 @@ ht-degree: 35%
 >
 > **AEM 6.5 を初めて使用する場合** 以下を確認します。 [次のガイドでは、ローカル開発環境を設定します](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja).
 
-## 次の手順 {#next-steps}
+## 次のステップ {#next-steps}
 
 何を待ってる?!チュートリアルを開始するには、 [プロジェクトを作成](create-project.md) この章では、AEMプロジェクトアーキタイプを使用してSPA Editor が有効なプロジェクトを生成する方法について説明します。
