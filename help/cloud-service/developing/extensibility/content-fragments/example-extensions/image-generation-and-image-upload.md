@@ -1,5 +1,5 @@
 ---
-title: コンテンツフラグメントコンソール拡張機能を使用した OpenAI ベースの画像生成
+title: カスタムコンテンツフラグメントコンソール拡張機能を使用した OpenAI 画像生成
 description: OpenAI または DALL-E 2 を使用して自然言語記述からデジタル画像を生成し、生成した画像をAEMにアップロードして、コンテンツフラグメントに関連付ける、AEM Content Fragment Console Extension の例です。
 feature: Developer Tools
 version: Cloud Service
@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
+source-git-commit: 06c09affd427a4818f5a916a84490f9ed09d372c
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
 
 
-# OpenAI ベースのデジタル画像生成 (AEM Example 拡張機能にアップロード )
+# OpenAI を使用したAEM画像アセットの生成
 
 ![デジタル画像の生成](./assets/digital-image-generation/screenshot.png){align="center"}
 
