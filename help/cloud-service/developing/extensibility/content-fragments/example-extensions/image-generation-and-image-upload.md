@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
 
 
-# デジタル画像の生成、AEM Example 拡張機能にアップロード中
+# OpenAI ベースのデジタル画像生成 (AEM Example 拡張機能にアップロード )
 
 ![デジタル画像の生成](./assets/digital-image-generation/screenshot.png){align="center"}
 
@@ -43,6 +43,10 @@ ht-degree: 1%
 1. 次に、事前に定義されたパスの下で、App Builder ランタイムからAEM DAM への画像のアップロードを開始します。
 1. AEMas a Cloud Serviceは画像を DAM に保存し、Adobe I/O Runtimeアクションに対して成功応答または失敗応答を返します。 アップロード応答が成功すると、Adobe I/O RuntimeアクションからAEMへの別の HTTP リクエストを使用して、選択されたコンテンツフラグメントの画像プロパティ値が更新されます。
 1. モーダルは、Adobe I/O Runtimeアクションからの応答を受け取り、新しく生成され、アップロードされた画像のAEMアセットの詳細リンクを提供します。
+
+このビデオでは、OpenAI または DALL.E 2 拡張機能を使用した画像生成の例、その仕組み、開発方法を説明します。 ビデオには、 __機能のデモ、セットアップ、テクニカルコード__ 関連する作品を素早く見る。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
 
 
 ## App Builder 拡張機能アプリ
