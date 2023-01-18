@@ -12,10 +12,11 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -40,6 +41,7 @@ AEM as a Cloud Serviceにプログラム的にアクセスする必要がある�
 1. 統合するAEMas a Cloud Service環境を含むプログラムを開きます。
 1. 次をタップします。 __省略記号__ の環境の隣に __環境__ セクションを選択し、 __開発者コンソール__
 1. 次の __統合__ タブ
+1. 次をタップします。 __ローカルトークン__ タブ
 1. タップ __ローカル開発トークンを取得__ ボタン
 1. をタップします。 __ダウンロードボタン__ 左上隅に、 `accessToken` の値を指定して、JSON ファイルを開発マシン上の安全な場所に保存します。
    + これは、AEMas a Cloud Service環境への 24 時間の開発者アクセストークンです。
