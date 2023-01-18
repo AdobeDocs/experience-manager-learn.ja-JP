@@ -7,10 +7,10 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 2%
+source-wordcount: '1161'
+ht-degree: 1%
 
 ---
 
@@ -146,7 +146,7 @@ Dispatcher ファームファイル設定のサブセクションである追加
 
 #### クライアントヘッダーディレクトリ
 
-このディレクトリには、 `_clientheaders.any` 作成するファイルには、リクエストが送信されたときにAEMに渡すクライアントヘッダーのリストが含まれます。  この節の詳細は、こちらを参照してください。 [ここ](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+このディレクトリには、 `_clientheaders.any` 作成するファイルには、リクエストが送信されたときにAEMに渡すクライアントヘッダーのリストが含まれます。  この節の詳細は次のとおりです。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
@@ -284,7 +284,7 @@ IncludeOptional conf.d/.conf
 
 Apache では、新しいファイルを `/etc/httpd/conf.d/` および `/etc/httpd/conf.modules.d/` のファイル拡張子を持つディレクトリ `.conf`
 
-Dispatcher モジュールを Apache に追加する場合の最適な例として、モジュールを作成します。 `.so` ～に入る ` /etc/httpd/modules/` 次に、 `/etc/httpd/conf.modules.d/02-dispatcher.conf` と、モジュールを読み込むためのコンテンツ `.so` ファイル
+Dispatcher モジュールを Apache に追加する際の最適な例として、モジュールを作成します。 `.so` ～に入る ` /etc/httpd/modules/` 次に、 `/etc/httpd/conf.modules.d/02-dispatcher.conf` と、モジュールを読み込むためのコンテンツ `.so` ファイル
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
