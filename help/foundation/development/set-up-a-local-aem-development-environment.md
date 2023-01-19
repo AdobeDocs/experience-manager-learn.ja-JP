@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 2b188cbe0ba968b553a20629b89edf5ed377f300
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2603'
 ht-degree: 6%
 
 ---
@@ -45,37 +45,46 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
 1. Java™がインストールされていることを確認します。
    * 優先 [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3AlastOrderby.sort&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (AEM 6.5 以降 )
    * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) (AEM 6.5 より前のAEMバージョンの場合 )
-2. のコピーを取得 [AEM QuickStart Jar と [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja).
-3. 次のようなフォルダー構造をコンピューター上に作成します。
+1. のコピーを取得 [AEM QuickStart Jar と [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja).
+1. 次のようなフォルダー構造をコンピューター上に作成します。
 
-   ```plain
-   ~/aem-sdk
-       /author
-       /publish
-   ```
+```plain
+~/aem-sdk
+    /author
+    /publish
+```
 
-4. 名前を変更 [!DNL QuickStart] JAR の宛先 ***aem-author-p4502.jar*** そしてそれをの下に置く `/author` ディレクトリ。 を ***[!DNL license.properties]*** の下のファイル `/author` ディレクトリ。
-5. コピーを作成 [!DNL QuickStart] JAR、名前をに変更します。 ***aem-publish-p4503.jar*** そしてそれをの下に置く `/publish` ディレクトリ。 のコピーを追加 ***[!DNL license.properties]*** の下のファイル `/publish` ディレクトリ。
+1. 名前を変更 [!DNL QuickStart] JAR の宛先 ***aem-author-p4502.jar*** そしてそれをの下に置く `/author` ディレクトリ。 を ***[!DNL license.properties]*** の下のファイル `/author` ディレクトリ。
 
-   ```plain
-   ~/aem-sdk
-       /author
-           + aem-author-p4502.jar
-           + license.properties
-       /publish
-           + aem-publish-p4503.jar
-           + license.properties
-   ```
+1. コピーを作成 [!DNL QuickStart] JAR、名前をに変更します。 ***aem-publish-p4503.jar*** そしてそれをの下に置く `/publish` ディレクトリ。 のコピーを追加 ***[!DNL license.properties]*** の下のファイル `/publish` ディレクトリ。
 
-6. 次をダブルクリックします。 ***aem-author-p4502.jar*** インストールするファイル **作成者** インスタンス。 これにより、ポートで実行されるオーサーインスタンスが起動します **4502** ローカルコンピューター上。
+```plain
+~/aem-sdk
+    /author
+        + aem-author-p4502.jar
+        + license.properties
+    /publish
+        + aem-publish-p4503.jar
+        + license.properties
+```
 
-   次をダブルクリックします。 ***aem-publish-p4503.jar*** インストールするファイル **公開** インスタンス。 これにより、ポートで実行されているパブリッシュインスタンスが起動します **4503** ローカルコンピューター上。
+1. 次をダブルクリックします。 ***aem-author-p4502.jar*** インストールするファイル **作成者** インスタンス。 これにより、ポートで実行されるオーサーインスタンスが起動します **4502** ローカルコンピューター上。
 
-   >[!NOTE]
-   >
-   >開発マシンのハードウェアによっては、 **オーサーとパブリッシュ** インスタンスが同時に実行されている。 ローカルセットアップで同時に両方を実行する必要が生じることはほとんどありません。
+次をダブルクリックします。 ***aem-publish-p4503.jar*** インストールするファイル **公開** インスタンス。 これにより、ポートで実行されているパブリッシュインスタンスが起動します **4503** ローカルコンピューター上。
 
-   詳しくは、 [AEMインスタンスのデプロイと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+>[!NOTE]
+>
+>開発マシンのハードウェアによっては、 **オーサーとパブリッシュ** インスタンスが同時に実行されている。 ローカルセットアップで同時に両方を実行する必要が生じることはほとんどありません。
+
+### コマンドラインの使用
+
+JAR ファイルをダブルクリックする代わりに、コマンドラインからAEMを起動するか、スクリプトを作成します (`.bat` または `.sh`) を使用します。 次に、サンプルコマンドの例を示します。
+
+```shell
+$ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
+```
+
+ここで、 `-X` は JVM オプションで、 `-D` は、追加のフレームワークプロパティです。詳しくは、 [AEMインスタンスのデプロイと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja) および [クイックスタートファイルから使用できるその他のオプション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
 
 ## Apache Maven のインストール
 
@@ -94,18 +103,18 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
    * [!DNL macOS] ユーザーは、 [Homebrew](https://brew.sh/)
 3. 確認する **[!DNL Maven]** は、新しいコマンドラインターミナルを開き、次のコマンドを実行することによってインストールされます。
 
-   ```shell
-   $ mvn --version
-   Apache Maven 3.3.9
-   Maven home: /Library/apache-maven-3.3.9
-   Java version: 1.8.0_111, vendor: Oracle Corporation
-   Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
-   Default locale: en_US, platform encoding: UTF-8
-   ```
+```shell
+$ mvn --version
+Apache Maven 3.3.9
+Maven home: /Library/apache-maven-3.3.9
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+```
 
-   >[!NOTE]
-   >
-   > 以前の `adobe-public` Maven プロファイルは、 `nexus.adobe.com` をクリックしてAEMアーティファクトをダウンロードします。 すべてのAEMアーティファクトは、Maven Central および `adobe-public` プロファイルは不要です。
+>[!NOTE]
+>
+> 以前の `adobe-public` Maven プロファイルは、 `nexus.adobe.com` をクリックしてAEMアーティファクトをダウンロードします。 すべてのAEMアーティファクトは、Maven Central および `adobe-public` プロファイルは不要です。
 
 ## 統合開発環境の設定
 
@@ -133,7 +142,7 @@ IDE を使用する場合は、必ず `classic` を設定します。
 
 #### インストールとセットアップ
 
-1. をダウンロードしてインストールする [!DNL Eclipse] の IDE [!DNL Java™™™™™™™™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
+1. をダウンロードしてインストールする [!DNL Eclipse] の IDE [!DNL Java™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
 1. 指示に従って、 [!DNL AEM Developer Tools] プラグイン： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
