@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
+source-git-commit: 643a9844f19aa1bd153661540ec7f7398a35118e
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 2%
+source-wordcount: '469'
+ht-degree: 1%
 
 ---
 
@@ -69,22 +69,25 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 >[!TAB macOS]
 
 1. `Terminal` を開きます。
-1. `$ base64 -i /path/to/private.key | pbcopy`
+1. コマンドを実行 `base64 -i /path/to/private.key | pbcopy`
 1. base64 出力は、クリップボードに自動的にコピーされます
+1. 貼り付け先 `.env` 対応するキーの値
 
 >[!TAB Windows]
 
 
 1. `Command Prompt` を開きます。
-1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. コマンドを実行 `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
+1. コマンドを実行 `findstr /v CERTIFICATE C:\path\to\encoded-private.key`
 1. base64 出力をクリップボードにコピーします。
+1. 貼り付け先 `.env` 対応するキーの値
 
 >[!TAB Linux®]
 
 1. ターミナルを開く
-1. `$ base64 private.key`
+1. コマンドを実行 `base64 private.key`
 1. base64 出力をクリップボードにコピーします。
+1. 貼り付け先 `.env` 対応するキーの値
 
 >[!ENDTABS]
 
