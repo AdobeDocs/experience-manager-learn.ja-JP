@@ -1,13 +1,13 @@
 ---
 title: AEM GraphQL API - AEMヘッドレスの高度な概念 — GraphQL
-description: GraphiQL IDE を使用して GraphQL クエリを送信します。 フィルター、変数およびディレクティブを使用した詳細クエリについて説明します。 複数行テキストフィールドからの参照を含む、フラグメントおよびコンテンツ参照のクエリ。
+description: GraphiQL IDE を使用してGraphQLクエリを送信します。 フィルター、変数およびディレクティブを使用した詳細クエリについて説明します。 複数行テキストフィールドからの参照を含む、フラグメントおよびコンテンツ参照のクエリ。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # AEM GraphQL API の参照
 
-AEMの GraphQL API を使用すると、コンテンツフラグメントデータをダウンストリームアプリケーションに公開できます。 基本チュートリアル内 [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)GraphiQL Explorer を使用して、GraphQL クエリをテストし、調整しました。
+AEMのGraphQL API を使用すると、コンテンツフラグメントデータをダウンストリームアプリケーションに公開できます。 基本チュートリアル内 [複数手順のGraphQLチュートリアル](../multi-step/explore-graphql-api.md)GraphiQL Explorer を使用して、GraphQLクエリをテストし、調整しました。
 
 この章では、GraphiQL エクスプローラーを使用して、で作成したコンテンツフラグメントのデータを収集するためのより高度なクエリを定義します。 [前の章](../advanced-graphql/author-content-fragments.md).
 
@@ -41,26 +41,26 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
 
 次に、組み込みの GraphiQL エクスプローラーを使用してAEM GraphQL API の機能を調べます。
 
-1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL クエリエディター**.
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL Query Editor**.
 
    ![GraphiQL IDE に移動します。](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
 >[!IMPORTANT]
 >
->AEM (6.X.X) の一部のバージョンでは、GraphiQL Explorer (GraphiQL IDE) ツールを手動でインストールする必要があります。 [ここからの指示](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+>AEM (6.X.X) の一部のバージョンでは、GraphiQL Explorer (GraphiQL IDE) ツールを手動でインストールする必要があります。 [ここからの指示](../how-to/install-graphiql-aem-6-5.md).
 
 1. 右上隅で、「エンドポイント」が「 **WKND 共有エンドポイント**. 変更 _エンドポイント_ ここに既存の値を表示するドロップダウン値 _永続クエリ_ をクリックします。
 
-   ![GraphQL エンドポイントを設定](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
+   ![GraphQL Endpoint を設定](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
 
 これにより、 **WKND 共有** プロジェクト。
 
 
 ## クエリ変数を使用したコンテンツフラグメントのリストのフィルタリング
 
-前の [複数手順の GraphQL チュートリアル](../multi-step/explore-graphql-api.md)を定義し、基本的な永続化クエリでコンテンツフラグメントデータを取得して使用しました。 ここでは、この知識を拡張し、永続的なクエリに変数を渡してコンテンツフラグメントデータをフィルタリングします。
+前の [複数手順のGraphQLチュートリアル](../multi-step/explore-graphql-api.md)を定義し、基本的な永続化クエリでコンテンツフラグメントデータを取得して使用しました。 ここでは、この知識を拡張し、永続的なクエリに変数を渡してコンテンツフラグメントデータをフィルタリングします。
 
-クライアントアプリケーションを開発する場合は、通常、動的な引数に基づいてコンテンツフラグメントをフィルタリングする必要があります。 AEM GraphQL API を使用すると、実行時にクライアント側で文字列が構築されるのを避けるために、これらの引数を変数としてクエリに渡すことができます。 GraphQL 変数について詳しくは、 [GraphQL ドキュメント](https://graphql.org/learn/queries/#variables).
+クライアントアプリケーションを開発する場合は、通常、動的な引数に基づいてコンテンツフラグメントをフィルタリングする必要があります。 AEM GraphQL API を使用すると、実行時にクライアント側で文字列が構築されるのを避けるために、これらの引数を変数としてクエリに渡すことができます。 GraphQL変数について詳しくは、 [GraphQLドキュメント](https://graphql.org/learn/queries/#variables).
 
 この例では、特定のスキルを持つすべての講師に問い合わせます。
 
@@ -150,7 +150,7 @@ AEMの GraphQL API を使用すると、コンテンツフラグメントデー�
 
 ## フラグメント参照内のコンテンツのフィルター
 
-AEM GraphQL API を使用すると、ネストされたコンテンツフラグメントをクエリできます。 前の章では、アドベンチャーコンテンツフラグメントに 3 つの新しいフラグメント参照を追加しました。 `location`, `instructorTeam`、および `administrator`. 次に、特定の名前を持つ管理者のすべての Adventures をフィルタリングします。
+AEM GraphQL API を使用すると、ネストされたコンテンツフラグメントに対してクエリを実行できます。 前の章では、アドベンチャーコンテンツフラグメントに 3 つの新しいフラグメント参照を追加しました。 `location`, `instructorTeam`、および `administrator`. 次に、特定の名前を持つ管理者のすべての Adventures をフィルタリングします。
 
 >[!CAUTION]
 >
@@ -229,7 +229,7 @@ AEM GraphQL API を使用すると、ネストされたコンテンツフラグ�
 
 ## 複数行テキストフィールドからのインライン参照のクエリ {#query-rte-reference}
 
-AEM GraphQL API を使用すると、複数行テキストフィールド内のコンテンツおよびフラグメント参照をクエリできます。 前の章では、両方の参照タイプを **説明** Yosemite チームコンテンツフラグメントのフィールド。 次に、これらの参照を取得します。
+AEM GraphQL API を使用すると、複数行テキストフィールド内でコンテンツとフラグメントの参照をクエリできます。 前の章では、両方の参照タイプを **説明** Yosemite チームコンテンツフラグメントのフィールド。 次に、これらの参照を取得します。
 
 1. GraphiQL IDE で、左のパネルに次のクエリを貼り付けます。
 
@@ -348,7 +348,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
 
 ## ディレクティブを使用したクエリ
 
-クライアントアプリケーションを開発する際に、クエリの構造を条件付きで変更する必要が生じる場合があります。 この場合、AEM GraphQL API を使用すると、GraphQL ディレクティブを使用して、提供された条件に基づいてクエリの動作を変更できます。 GraphQL ディレクティブについて詳しくは、 [GraphQL ドキュメント](https://graphql.org/learn/queries/#directives).
+クライアントアプリケーションを開発する際に、クエリの構造を条件付きで変更する必要が生じる場合があります。 この場合、AEM GraphQL API では、GraphQLディレクティブを使用して、指定された条件に基づいてクエリの動作を変更できます。 GraphQLディレクティブについて詳しくは、 [GraphQLドキュメント](https://graphql.org/learn/queries/#directives).
 
 内 [前のセクション](#query-rte-reference)では、複数行テキストフィールド内でインライン参照をクエリする方法を学習しました。 コンテンツは `description` ～に提出される `plaintext` 形式 次に、そのクエリを展開し、ディレクティブを使用して条件付きで取得します `description` 内 `json` 形式も同様です。
 
@@ -602,7 +602,7 @@ AEM GraphQL API を使用すると、複数行テキストフィールド内の�
 
 ## すべてのコンテンツを一度にクエリ
 
-これまでに、AEM GraphQL API の機能を説明するために複数のクエリが実行されてきました。
+これまでに、AEM GraphQL API の機能を説明するために複数のクエリが実行されています。
 
 同じデータを 1 つのクエリでのみ取得でき、このクエリは後でクライアントアプリケーションで使用され、場所、チーム名、アドベンチャーのチームメンバーなどの追加情報を取得します。
 
@@ -725,4 +725,4 @@ query getAdventureDetailsBySlug($slug: String!) {
 
 ## 次の手順
 
-内 [次の章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)では、GraphQL クエリを永続化する方法と、永続化されたクエリをアプリケーションで使用することがベストプラクティスである理由を学びます。
+内 [次の章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)では、GraphQLクエリを永続化する方法と、永続化されたクエリをアプリケーションで使用することがベストプラクティスである理由を学習します。

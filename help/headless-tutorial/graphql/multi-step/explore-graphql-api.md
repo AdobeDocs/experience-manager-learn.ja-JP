@@ -1,6 +1,6 @@
 ---
 title: GraphQL API の参照 — AEMヘッドレスの概要 — GraphQL
-description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 組み込みの GraphQL IDE を使用してAEM GraphQL API を調べます。 コンテンツフラグメントモデルに基づいて、AEMが GraphQL スキーマを自動的に生成する方法を説明します。 GraphQL 構文を使用して、基本的なクエリを作成してみてください。
+description: Adobe Experience Manager(AEM) とGraphQLの概要。 組み込みの GraphQL IDE を使用してAEM GraphQL API を調べます。 コンテンツフラグメントモデルに基づいて、AEMがGraphQLスキーマを自動的に生成する方法を説明します。 GraphQL構文を使用して、基本的なクエリを作成してみてください。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6714
@@ -10,18 +10,18 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 4%
+source-wordcount: '1454'
+ht-degree: 1%
 
 ---
 
 # GraphQL API の参照 {#explore-graphql-apis}
 
-AEMの GraphQL API は、コンテンツフラグメントのデータをダウンストリームアプリケーションに公開する強力なクエリ言語です。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルが作成または更新されるたびに、スキーマが翻訳され、GraphQL API を構成する「グラフ」に追加されます。
+AEMのGraphQL API は、コンテンツフラグメントのデータをダウンストリームアプリケーションに公開する強力なクエリ言語です。 コンテンツフラグメントモデルは、コンテンツフラグメントで使用されるデータスキーマを定義します。 コンテンツフラグメントモデルが作成または更新されるたびに、スキーマが翻訳され、GraphQL API を構成する「グラフ」に追加されます。
 
-この章では、IDE を使用してコンテンツを収集する、一般的な GraphQL クエリをいくつか調べます ( [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE を使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、ドキュメントに簡単にアクセスし、使用可能な方法を簡単に学習し、理解できます。
+この章では、IDE を使用してコンテンツを収集する、一般的なGraphQLクエリをいくつか調べます。 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE を使用すると、返されるクエリとデータをすばやくテストし、調整できます。 また、ドキュメントに簡単にアクセスし、使用可能な方法を簡単に学習し、理解できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -29,36 +29,36 @@ AEMの GraphQL API は、コンテンツフラグメントのデータをダウ�
 
 ## 目的 {#objectives}
 
-* GraphiQL ツールを使用して、GraphQL 構文を使用してクエリを作成する方法を説明します。
+* GraphiQL ツールを使用して、GraphQL構文を使用してクエリを作成する方法を説明します。
 * コンテンツフラグメントのリストと単一のコンテンツフラグメントに対してクエリを実行する方法を説明します。
 * 特定のデータ属性をフィルタリングしてリクエストする方法を説明します。
 * 複数のコンテンツフラグメントモデルのクエリを結合する方法を説明します
-* GraphQL クエリを保持する方法を説明します。
+* GraphQLクエリを保持する方法を説明します。
 
 ## GraphQL エンドポイントの有効化 {#enable-graphql-endpoint}
 
-GraphQL エンドポイントは、コンテンツフラグメントに対して GraphQL API クエリを有効にするように設定する必要があります。
+GraphQLエンドポイントは、コンテンツフラグメントに対してGraphQL API クエリを有効にするように設定する必要があります。
 
 1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL**.
 
-   ![GraphQL エンドポイントに移動します。](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
+   ![GraphQLエンドポイントに移動](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
 1. タップ **作成** 右上隅に、表示されたダイアログで、次の値を入力します。
 
    * 名前*: **マイプロジェクトエンドポイント**.
-   * 次によって提供される GraphQL スキーマを使用… *: **マイプロジェクト**
+   * 次によって提供されるGraphQLスキーマを使用します。 *: **マイプロジェクト**
 
-   ![GraphQL エンドポイントを作成](assets/explore-graphql-api/create-graphql-endpoint.png)
+   ![GraphQLエンドポイントを作成](assets/explore-graphql-api/create-graphql-endpoint.png)
 
    タップ **作成** をクリックしてエンドポイントを保存します。
 
-   プロジェクト設定に基づいて作成された GraphQL エンドポイントでは、そのプロジェクトに属するモデルに対するクエリのみを有効にします。 この場合、 **人物** および **チーム** モデルを使用できます。
+   プロジェクト設定に基づいて作成されたGraphQLエンドポイントでは、そのプロジェクトに属するモデルに対するクエリのみを有効にします。 この場合、 **人物** および **チーム** モデルを使用できます。
 
    >[!NOTE]
    >
    > また、グローバルエンドポイントを作成して、複数の設定をまたいでモデルに対するクエリを有効にすることもできます。 これは、環境がセキュリティの脆弱性をさらに増す可能性があり、AEMの管理が全体的に複雑になるので、慎重に使用する必要があります。
 
-1. これで、環境で 1 つの GraphQL エンドポイントが有効になっているはずです。
+1. これで、お使いの環境で 1 つのGraphQLエンドポイントが有効になっています。
 
    ![Graphql エンドポイントが有効](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -68,7 +68,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
 次に、組み込みの GraphiQL IDE を使用してAEM GraphQL API の機能を調べます。
 
-1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL クエリエディター**.
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL Query Editor**.
 
    ![GraphiQL IDE に移動します。](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
@@ -78,7 +78,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
 1. 右上隅で、「エンドポイント」が「 **マイプロジェクトエンドポイント**.
 
-   ![GraphQL エンドポイントを設定](assets/explore-graphql-api/set-my-project-endpoint.png)
+   ![GraphQL Endpoint を設定](assets/explore-graphql-api/set-my-project-endpoint.png)
 
 これにより、 **マイプロジェクト** プロジェクト。
 
@@ -111,7 +111,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
    ![短い名前と説明の結果](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   この `shortname` は単純なプロパティで、 `description` は複数行テキストフィールドで、GraphQL API を使用すると、のような様々な形式の結果を選択できます。 `html`, `markdown`, `json`または `plaintext`.
+   この `shortname` は単純なプロパティで、 `description` は複数行テキストフィールドで、GraphQL API を使用すると、 `html`, `markdown`, `json`または `plaintext`.
 
 ### ネストされたフラグメントのクエリ
 
@@ -215,7 +215,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
    ![クエリ変数を使用したフィルタリング](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   複雑なクエリをフィルタリングして作成する方法は他にも多数あります。詳しくは、 [AEMでの GraphQL の使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+   複雑なクエリをフィルタリングして作成する方法は他にも多数あります。詳しくは、 [AEMでのGraphQLの使用方法 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 1. 上のクエリを強化してプロファイル画像を取得
 
@@ -371,7 +371,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
    ![最終的に保持されたクエリ](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## GraphQL エンドポイントと永続クエリの公開
+## GraphQLエンドポイントと永続化されたクエリの公開
 
 レビューと検証の際に、 `GraphQL Endpoint` &amp; `Persisted Queries`
 
@@ -379,9 +379,9 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
 1. の横にあるチェックボックスをタップします。 **マイプロジェクトエンドポイント** とタップします。 **公開**
 
-   ![GraphQL エンドポイントを公開](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![GraphQL Endpoint を公開](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
-1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL クエリエディター**
+1. AEM Start 画面で、に移動します。 **ツール** > **一般** > **GraphQL Query Editor**
 
 1. 次をタップします。 **all-teams** 永続クエリパネルからクエリを実行し、をタップします。 **公開**
 
@@ -395,29 +395,17 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
 ## その他のリソース
 
-GraphQL クエリの詳細については、 [AEMでの GraphQL の使用方法の学習 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+GraphQLクエリの詳細については、 [AEMでのGraphQLの使用方法 — サンプルコンテンツとクエリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## おめでとうございます。 {#congratulations}
 
-おめでとうございます。複数の GraphQL クエリを作成し、実行しました。
+おめでとうございます。GraphQLクエリを複数作成して実行しました。
 
-## 次の手順 {#next-steps}
+## 次のステップ {#next-steps}
 
-次の章では、 [React アプリの作成](./graphql-and-react-app.md)では、外部アプリケーションがAEM GraphQL エンドポイントに対してクエリを実行する方法を調べ、これら 2 つの永続的なクエリを使用する方法を確認できます。 また、GraphQL クエリの実行中の基本的なエラー処理も紹介されています。
+次の章では、 [React アプリの作成](./graphql-and-react-app.md)では、外部アプリケーションがAEM GraphQLエンドポイントに対してクエリを実行する方法を調べ、これら 2 つの永続化されたクエリを使用する方法を確認できます。 また、GraphQLクエリの実行中に発生する基本的なエラー処理についても説明します。
 
 ## GraphiQL ツールのインストール（オプション） {#install-graphiql}
 
-AEM (6.X.X) の一部のバージョンでは、GraphiQL IDE ツールを手動でインストールする必要があります。次の手順に従います。
+AEM (6.X.X) の一部のバージョンでは、GraphiQL IDE ツールを手動でインストールする必要があります。その場合は、 [こちらからの指示](../how-to/install-graphiql-aem-6-5.md).
 
-1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**／**AEM as a Cloud Service** に移動します。
-1. 「GraphiQL」を検索します（**GraphiQL** の **i** は必ず入れてください）。
-1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x** をダウンロードします。
-
-   ![GraphiQL パッケージをダウンロード](assets/explore-graphql-api/software-distribution.png)
-
-   zip ファイルは、直接インストールできるAEMパッケージです。
-
-1. 「AEM Start」メニューから、に移動します。 **ツール** > **導入** > **パッケージ**.
-1. 「**パッケージをアップロード**」をクリックし、前の手順でダウンロードしたパッケージを選択します。「**インストール**」をクリックして、パッケージをインストールします。
-
-   ![GraphiQL パッケージのインストール](assets/explore-graphql-api/install-graphiql-package.png)
