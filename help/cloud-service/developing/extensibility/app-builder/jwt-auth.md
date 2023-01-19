@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
@@ -70,15 +70,15 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 1. `Terminal` を開きます。
 1. `$ base64 -i /path/to/private.key | pbcopy`
-
-base64 出力は、クリップボードに自動的にコピーされます
+1. base64 出力は、クリップボードに自動的にコピーされます
 
 >[!TAB Windows]
 
 
 1. `Command Prompt` を開きます。
 1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. の内容をコピー `encoded-private.key` をクリップボードに追加
+1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. base64 出力をクリップボードにコピーします。
 
 >[!TAB Linux®]
 
@@ -88,14 +88,14 @@ base64 出力は、クリップボードに自動的にコピーされます
 
 >[!ENDTABS]
 
-例えば、次の値が `JWT_PRIVATE_KEY` キー `.env`:
+例えば、次の base64 でエンコードされた秘密鍵が `JWT_PRIVATE_KEY` キー `.env`:
 
 ```
 ...
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-## 拡張機能の設定
+## 入力マッピング
 
 JWT 秘密鍵証明書の値を `.env` ファイルにマッピングする場合は、AppBuilder のアクション入力にマッピングし、アクション自体で読み取れるようにする必要があります。 これをおこなうには、 `ext.config.yaml` アクション `inputs` を次の形式で指定します。 `INPUT_NAME=$ENV_KEY`.
 
@@ -131,7 +131,7 @@ runtimeManifest:
 以下で定義されたキー `inputs` は `params` オブジェクトが App Builder アクションに提供されたとき。
 
 
-## JWT 資格情報をアクセストークンに変換中
+## トークンにアクセスするための JWT 資格情報
 
 「App Builder」アクションでは、JWT 資格情報が `params` オブジェクトで、 [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) を使用してアクセストークンを生成し、他のAdobeAPI やサービスにアクセスできる
 
