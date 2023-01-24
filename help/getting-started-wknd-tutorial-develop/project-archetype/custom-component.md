@@ -1,6 +1,6 @@
 ---
 title: カスタムコンポーネント
-description: 作成したコンテンツを表示するカスタム署名コンポーネントのエンドツーエンドの作成について扱います。ビジネスロジックをカプセル化して署名コンポーネントおよび対応する HTL を入力し、コンポーネントをレンダリングする Sling Model の開発を含みます。
+description: 作成したコンテンツを表示するカスタム署名コンポーネントのエンドツーエンドの作成について説明します。 ビジネスロジックをカプセル化して署名コンポーネントおよび対応する HTL を入力し、コンポーネントをレンダリングする Sling Model の開発を含みます。
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, APIs
@@ -11,16 +11,16 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '4131'
-ht-degree: 19%
+source-wordcount: '4065'
+ht-degree: 13%
 
 ---
 
 # カスタムコンポーネント {#custom-component}
 
-このチュートリアルでは、ダイアログで作成されたコンテンツを表示するカスタムAEM署名コンポーネントのエンドツーエンドの作成について説明し、Sling モデルの開発で、コンポーネントの HTL に入力するビジネスロジックをカプセル化します。
+このチュートリアルでは、カスタムのエンドツーエンドの作成について説明します `Byline` ダイアログで作成されたコンテンツを表示し、Sling モデルの開発を検討して、コンポーネントの HTL を入力するビジネスロジックをカプセル化するAEMコンポーネント。
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
-> 前の章を正常に完了した場合は、プロジェクトを再利用し、スタータープロジェクトをチェックアウトする手順をスキップできます。
+> 前の章を正常に完了した場合は、プロジェクトを再利用して、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
 チュートリアルの構築元となるベースラインコードを確認します。
 
@@ -63,7 +63,7 @@ ht-degree: 19%
 1. Sling モデルを使用してビジネスロジックをカプセル化する方法を説明します
 1. HTL スクリプト内から Sling モデルを使用する方法を説明します。
 
-## 作成する内容 {#byline-component}
+## 作成する内容 {#what-build}
 
 WKND チュートリアルのこの部分では、記事の投稿者に関する作成済み情報を表示するために使用する署名コンポーネントが作成されます。
 
@@ -71,7 +71,7 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
 
 *署名コンポーネント*
 
-署名コンポーネントの実装には、署名コンテンツを収集するダイアログと、署名のを取得するカスタム Sling Model が含まれています。
+署名コンポーネントの実装には、署名コンテンツを収集するダイアログと、次のような詳細を取得するカスタム Sling Model が含まれています。
 
 * 名前
 * 画像
@@ -81,12 +81,12 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
 
 最初に、署名コンポーネントノード構造を作成し、ダイアログを定義します。 これは、AEM のコンポーネントを表し、JCR 内のその場所によってコンポーネントのリソースタイプを暗黙的に定義します。
 
-ダイアログは、コンテンツ作成者が提供できるインターフェイスを表示します。この実装の場合、AEM WCM コアコンポーネントの **画像** コンポーネントは、署名画像のオーサリングとレンダリングを処理するために利用されるので、コンポーネントの `sling:resourceSuperType`.
+ダイアログは、コンテンツ作成者が提供できるインターフェイスを表示します。この実装の場合、AEM WCM コアコンポーネントの **画像** コンポーネントは、署名画像のオーサリングとレンダリングを処理するために使用されるので、このコンポーネントの `sling:resourceSuperType`.
 
 ### コンポーネント定義を作成 {#create-component-definition}
 
-1. 内 **ui.apps** モジュール、に移動します。 `/apps/wknd/components` をクリックし、 `byline`.
-1. の `byline` フォルダを追加する新しいファイルの名前： `.content.xml`
+1. 内 **ui.apps** モジュール、に移動します。 `/apps/wknd/components` 次の名前のフォルダーを作成します。 `byline`.
+1. 内部 `byline` フォルダを追加し、 `.content.xml`
 
    ![ノードを作成するためのダイアログ](assets/custom-component/byline-node-creation.png)
 
@@ -102,11 +102,11 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   上記の XML ファイルは、タイトル、説明、グループなど、コンポーネントの定義を提供します。 この `sling:resourceSuperType` ポイント `core/wcm/components/image/v2/image`( これは [コア画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja).
+   上記の XML ファイルは、タイトル、説明、グループなど、コンポーネントの定義を提供します。 この `sling:resourceSuperType` ポイント `core/wcm/components/image/v2/image`( これは [コア画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html).
 
 ### HTL スクリプトの作成 {#create-the-htl-script}
 
-1. の `byline` フォルダー、新しいファイルを追加 `byline.html`：コンポーネントのHTML表示を担当します。 ファイルにフォルダーと同じ名前を付けることは重要です。これは、Sling がこのリソースタイプをレンダリングする際に使用するデフォルトのスクリプトになるからです。
+1. 内部 `byline` フォルダー、ファイルを追加 `byline.html`：コンポーネントのHTML表示を担当します。 ファイルにフォルダーと同じ名前を付けることは重要です。Sling がこのリソースタイプをレンダリングする際に使用するデフォルトのスクリプトになるからです。
 
 1. 以下のコードを `byline.html` に追加します。
 
@@ -117,7 +117,7 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
    ```
 
-`byline.html` が [後で再び行う](#byline-htl)Sling モデルが作成されたら、 HTL ファイルの現在の状態を使用すると、コンポーネントをページにドラッグ&amp;ドロップしたときに、AEM Sites のページエディターで空の状態で表示できます。
+この `byline.html` が [後で再び行う](#byline-htl)Sling モデルが作成されたら、 HTL ファイルの現在の状態を使用すると、コンポーネントをページにドラッグ&amp;ドロップしたときに、AEM Sites のページエディターで空の状態で表示できます。
 
 ### ダイアログ定義の作成 {#create-the-dialog-definition}
 
@@ -127,8 +127,8 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
 * **画像**：寄稿者の自己紹介写真への参照。
 * **職業**：寄稿者に起因する職業のリスト。職業は、アルファベットの昇順（a～z）で並べ替えられる必要があります。
 
-1. の `byline` フォルダー、新しいフォルダーを作成します。 `_cq_dialog`.
-1. の下 `byline/_cq_dialog` という名前の新しいファイルを追加します。 `.content.xml`. これは、ダイアログの XML 定義です。 次の XML を追加します。
+1. 内部 `byline` フォルダー、名前を付けたフォルダーを作成します。 `_cq_dialog`.
+1. 内部 `byline/_cq_dialog`、という名前のファイルを追加します。 `.content.xml`. これは、ダイアログの XML 定義です。 次の XML を追加します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -207,8 +207,8 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
 
 ダイアログ作成と同じ方法でポリシーダイアログ（以前のデザインダイアログ）を作成して、コアコンポーネントの画像コンポーネントから継承されたポリシー設定の不要なフィールドを非表示にします。
 
-1. の `byline` フォルダー、新しいフォルダーを作成します。 `_cq_design_dialog`.
-1. の下 `byline/_cq_design_dialog` という名前の新しいファイルを作成します。 `.content.xml`. ファイルを次のように更新します。を次の XML に置き換えます。 を開くのが最も簡単です。 `.content.xml` をクリックし、その中に以下の XML をコピー&amp;ペーストします。
+1. 内部 `byline` フォルダー、名前を付けたフォルダーを作成します。 `_cq_design_dialog`.
+1. 内部 `byline/_cq_design_dialog`、という名前のファイルを作成します。 `.content.xml`. ファイルを次のように更新します。を次の XML に置き換えます。 を開くのが最も簡単です。 `.content.xml` をクリックし、その中に以下の XML をコピー&amp;ペーストします。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -275,7 +275,7 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
    </jcr:root>
    ```
 
-   前の基準 **ポリシーダイアログ** XML は [コアコンポーネントの画像コンポーネント](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_design_dialog/.content.xml).
+   前の基準 **ポリシーダイアログ** XML は [コアコンポーネントの画像コンポーネント](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_design_dialog/.content.xml).
 
    ダイアログ設定のと同様に、 [Sling Resource Merger](https://sling.apache.org/documentation/bundles/resource-merger.html) を使用して、無関係なフィールドを非表示にします。これ以外の場合は、 `sling:resourceSuperType`を使用して、 `sling:hideResource="{Boolean}true"` プロパティ。
 
@@ -287,7 +287,7 @@ WKND チュートリアルのこの部分では、記事の投稿者に関する
 
 ## ページへのコンポーネントの追加 {#add-the-component-to-a-page}
 
-AEMコンポーネントの開発に重点を置いたシンプルな作業を維持するために、署名コンポーネントを現在の状態で記事ページに追加し、 `cq:Component` ノード定義がデプロイされ、正しく設定されている場合、AEMは新しいコンポーネント定義を認識し、コンポーネントのダイアログがオーサリングに機能します。
+AEMコンポーネントの開発に重点を置いたシンプルな作業を維持するために、署名コンポーネントを現在の状態で記事ページに追加して、 `cq:Component` ノード定義が正しい。 また、AEMが新しいコンポーネント定義を認識し、コンポーネントのダイアログがオーサリングに使用できることを確認する場合にも使用します。
 
 ### AEM Assetsへの画像の追加
 
@@ -301,7 +301,7 @@ AEMコンポーネントの開発に重点を置いたシンプルな作業を�
 
 ### コンポーネントの作成 {#author-the-component}
 
-次に、署名コンポーネントをAEMのページに追加します。 署名コンポーネントを **WKND Sites プロジェクト — コンテンツ** コンポーネントグループ（経由） `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml` 定義を使用する場合、任意のユーザーが自動的に使用できます **コンテナ** その **ポリシー** 許可 **WKND Sites プロジェクト — コンテンツ** コンポーネントグループに割り当てられます。このグループには、記事ページのレイアウトコンテナが含まれます。
+次に、署名コンポーネントをAEMのページに追加します。 署名コンポーネントは **WKND Sites プロジェクト — コンテンツ** コンポーネントグループ（経由） `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml` 定義を使用する場合、任意のユーザーが自動的に使用できます **コンテナ** その **ポリシー** 許可 **WKND Sites プロジェクト — コンテンツ** コンポーネントグループ したがって、記事ページのレイアウトコンテナで使用できます。
 
 1. LA Skatepark の記事 ( ) に移動します。 [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 
@@ -309,7 +309,7 @@ AEMコンポーネントの開発に重点を置いたシンプルな作業を�
 
    ![署名コンポーネントをページに追加](assets/custom-component/add-to-page.png)
 
-1. **左側のサイドバーが開いて**&#x200B;表示されたことと、**アセットファインダー**&#x200B;が選択されていることを確認します。
+1. 左側のサイドバーが開いていることを確認します。**そして見え、**&#x200B;アセットファインダー**が選択されている。
 
 1. を選択します。 **署名コンポーネントのプレースホルダー**&#x200B;をクリックし、次にアクションバーを表示して、 **レンチ** アイコンをクリックしてダイアログを開きます。
 
@@ -319,13 +319,13 @@ AEMコンポーネントの開発に重点を置いたシンプルな作業を�
 
 1. 画像を追加したら、「**プロパティ**」タブをクリックして「**名前**」および「**職業**」に入力します。
 
-   職業を入力する場合は、次の場所に入力します。 **逆アルファベット** Sling Model で実装する英文化化ビジネスロジックが見やすいように、順序を指定します。
+   職業を入力する場合は、次の場所に入力します。 **逆アルファベット** Sling Model に実装されている英文化化ビジネスロジックが検証されるように、順序を変更します。
 
    次をタップします。 **完了** ボタンをクリックして変更を保存します。
 
    ![署名コンポーネントのプロパティの設定](assets/custom-component/add-properties.png)
 
-   AEM作成者は、ダイアログを使用してコンポーネントを設定および作成します。 署名コンポーネントの開発のこの時点では、データの収集用のダイアログが含まれますが、作成したコンテンツをレンダリングするロジックはまだ追加されていません。 したがって、プレースホルダーのみが表示されます。
+   AEM作成者は、ダイアログを使用してコンポーネントを設定および作成します。 この時点で、署名コンポーネントの開発時に、データを収集するためのダイアログが含まれますが、作成したコンテンツをレンダリングするロジックはまだ追加されていません。 したがって、プレースホルダーのみが表示されます。
 
 1. ダイアログを保存したら、に移動します。 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline) およびは、コンポーネントのコンテンツがAEMページの署名コンポーネントコンテンツノードに格納される方法を確認します。
 
@@ -339,13 +339,13 @@ AEMコンポーネントの開発に重点を置いたシンプルな作業を�
 
 ## 署名 Sling モデルを作成 {#create-sling-model}
 
-次に、データモデルとして機能し、署名コンポーネントのビジネスロジックを格納する Sling Model を作成します。
+次に、データモデルとして機能し、署名コンポーネントのビジネスロジックを格納する Sling モデルを作成します。
 
-Sling モデルは、JCR から Java 変数へのデータのマッピングを容易にし、AEMのコンテキストで開発する際に他の多くの点を提供する注釈駆動型の Java「POJO」(Plain Old Java Objects) です。
+Sling モデルは、JCR から Java™変数へのデータのマッピングを容易にし、AEMコンテキストでの開発時に効率を高める注釈駆動の Java™ POJO(Plain Old Java™ Objects) です。
 
 ### Maven の依存関係の確認 {#maven-dependency}
 
-署名 Sling モデルは、AEMが提供する複数の Java API に依存します。 これらの API は、 `dependencies` 次に示す `core` モジュールの POM ファイル。 このチュートリアルに使用するプロジェクトは、AEM as a Cloud Service用に構築されています。 ただし、AEM 6.5/6.4 との下位互換性がある点は一意です。そのため、Cloud ServiceとAEM 6.x の両方の依存関係が含まれます。
+署名 Sling モデルは、AEMが提供する複数の Java™ API に依存しています。 これらの API は、 `dependencies` 次に示す `core` モジュールの POM ファイル。 このチュートリアルに使用するプロジェクトは、AEM as a Cloud Service用に構築されています。 ただし、AEM 6.5/6.4 との下位互換性があるので一意です。そのため、Cloud ServiceとAEM 6.x の両方の依存関係が含まれます。
 
 1. を開きます。 `pom.xml` の下のファイル `<src>/aem-guides-wknd/core/pom.xml`.
 1. 依存関係を検索 `aem-sdk-api` - **AEMas a Cloud Serviceのみ**
@@ -357,7 +357,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
    </dependency>
    ```
 
-   この [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja#building-for-the-sdk) には、AEMで公開されるすべてのパブリック Java API が含まれています。 この `aem-sdk-api` は、このプロジェクトを構築する際にデフォルトで使用されます。 バージョンは、次の場所にあるプロジェクトのルートにある親リアクター POM に保持されます。 `aem-guides-wknd/pom.xml`.
+   この [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja) には、AEMで公開されるすべてのパブリック Java™ API が含まれています。 この `aem-sdk-api` は、このプロジェクトを構築する際にデフォルトで使用されます。 バージョンは、次の場所にあるプロジェクトのルートからの親リアクター POM に保持されます。 `aem-guides-wknd/pom.xml`.
 
 1. の依存関係を検索 `uber-jar` - **AEM 6.5/6.4 のみ**
 
@@ -373,7 +373,7 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
 
    この `uber-jar` が含まれるのは、 `classic` プロファイルが呼び出されました。 `mvn clean install -PautoInstallSinglePackage -Pclassic`. これもこのプロジェクトに固有のものです。 AEMプロジェクトアーキタイプから生成される、実際のプロジェクトでは、 `uber-jar` がデフォルトです ( 指定したAEMのバージョンが 6.5 または 6.4 の場合 )。
 
-   この [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) には、AEM 6.x で公開されているすべてのパブリック Java API が含まれています。バージョンは、プロジェクトのルートにある親リアクター POM に保持されます `aem-guides-wknd/pom.xml`.
+   この [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) には、AEM 6.x で公開されているすべてのパブリック Java™ API が含まれています。バージョンは、プロジェクトのルートから親リアクター POM に保持されます `aem-guides-wknd/pom.xml`.
 
 1. 依存関係を検索 `core.wcm.components.core`:
 
@@ -385,17 +385,17 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
        </dependency>
    ```
 
-   これは、AEMコアコンポーネントによって公開されるすべてのパブリック Java API です。 AEMコアコンポーネントは、AEMの外部で管理されるプロジェクトなので、別のリリースサイクルがあります。 このため、依存関係は別々に含める必要があり、 **not** 次に含まれる `uber-jar` または `aem-sdk-api`.
+   これは、AEMコアコンポーネントによって公開される完全なパブリック Java™ API です。 AEMコアコンポーネントは、AEMの外部で管理されるプロジェクトなので、別のリリースサイクルがあります。 このため、依存関係は別々に含める必要があり、 **not** 次に含まれる `uber-jar` または `aem-sdk-api`.
 
-   uber-jar と同様に、この依存関係のバージョンは、次の場所にある親リアクター pom ファイルに保持されます。 `aem-guides-wknd/pom.xml`.
+   uber-jar と同様に、この依存関係のバージョンは、次の親リアクター POM ファイルで保持されます。 `aem-guides-wknd/pom.xml`.
 
    このチュートリアルの後半では、コアコンポーネントの画像クラスを使用して、署名コンポーネントに画像を表示します。 Sling モデルを構築してコンパイルするには、コアコンポーネントの依存関係が必要です。
 
 ### Byline インターフェイス {#byline-interface}
 
-署名用のパブリック Java インターフェイスを作成します。 `Byline.java` は、 `byline.html` HTL スクリプト。
+署名用のパブリック Java™インターフェイスを作成します。 この `Byline.java` は、 `byline.html` HTL スクリプト。
 
-1. 内 `aem-guides-wknd.core` 下のモジュール `core/src/main/java/com/adobe/aem/guides/wknd/core/models` という名前の新しいファイルを作成します。 `Byline.java`
+1. 内部、 `core` 内のモジュール `core/src/main/java/com/adobe/aem/guides/wknd/core/models` フォルダ作成ファイル名： `Byline.java`
 
    ![署名インターフェイスを作成](assets/custom-component/create-byline-interface.png)
 
@@ -433,11 +433,11 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
 
    この `isEmpty()` メソッドは、コンポーネントにレンダリングするコンテンツがあるかどうか、または設定を待っているかどうかを判断するために使用されます。
 
-   画像に対するメソッドがないことに注意してください。 [その理由を後で見てみましょう](#tackling-the-image-problem).
+   画像に対するメソッドがないことに注意してください。 [これは後でレビューされます](#tackling-the-image-problem).
 
-1. パブリック Java クラス（この場合は Sling モデル）を含む Java パッケージは、パッケージの  `package-info.java` ファイル。
+1. パブリック Java™クラスを含む Java™パッケージ（この場合は Sling モデル）は、パッケージの  `package-info.java` ファイル。
 
-   WKND ソースの Java パッケージ以降 `com.adobe.aem.guides.wknd.core.models` を宣言すると、のバージョンが `1.0.0`を追加し、新しい公開インターフェイスおよびメソッドを追加する場合は、バージョンを `1.1.0`. 次の場所にあるファイルを開きます。 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` および更新 `@Version("1.0.0")` から `@Version("1.1.0")`.
+   WKND ソースの Java™パッケージ以降 `com.adobe.aem.guides.wknd.core.models` バージョンを宣言する `1.0.0`を追加し、新しい公開インターフェイスおよびメソッドを追加する場合は、バージョンを `1.1.0`. 次の場所にあるファイルを開きます。 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` および更新 `@Version("1.0.0")` から `@Version("2.1.0")`.
 
        &quot;&#39;
        @Version(&quot;2.1.0&quot;)
@@ -446,14 +446,14 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
        import org.osgi.annotation.versioning.Version;
        &quot;&#39;
    
-このパッケージ内のファイルに変更が加えられると、 [パッケージのバージョンは、意味的に調整する必要があります](https://semver.org/). そうでない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。 幸運なことに、Maven プラグインが失敗すると、無効な Java パッケージのバージョンと、そのバージョンが表示されるはずです。 次を更新するだけ： `@Version("...")` Java パッケージの宣言 `package-info.java` を、プラグインで推奨される修正用のバージョンに追加する。
+このパッケージ内のファイルに変更が加えられると、 [パッケージのバージョンは、意味的に調整する必要があります](https://semver.org/). そうでない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。 幸いにも、失敗した場合、Maven プラグインは無効な Java™パッケージのバージョンと、そのバージョンを報告します。 を更新します。 `@Version("...")` Java™パッケージの宣言 `package-info.java` を、プラグインで推奨される修正用のバージョンに追加する。
 
 ### 署名実装 {#byline-implementation}
 
-`BylineImpl.java` は、 `Byline.java` 以前に定義されたインターフェイス。 `BylineImpl.java` の完全なコードは、この節の最後に記載しています。
+この `BylineImpl.java` は、 `Byline.java` 以前に定義されたインターフェイス。 `BylineImpl.java` の完全なコードは、この節の最後に記載しています。
 
-1. という名前の新しいフォルダーを作成します。 `impl` 下 `core/src/main/java/com/adobe/aem/guides/core/models`.
-1. 内 `impl` フォルダー新規ファイルを作成 `BylineImpl.java`.
+1. という名前のフォルダーを作成します。 `impl` 下 `core/src/main/java/com/adobe/aem/guides/core/models`.
+1. 内 `impl` フォルダ、ファイルの作成 `BylineImpl.java`.
 
    ![署名 Impl ファイル](assets/custom-component/byline-impl-file.png)
 
@@ -509,16 +509,16 @@ Sling モデルは、JCR から Java 変数へのデータのマッピングを�
 
    * この `@Model` annotation は、BylineImpl をAEMにデプロイする際に Sling Model として登録します。
    * この `adaptables` パラメーターは、このモデルがリクエストで適応できることを指定します。
-   * この `adapters` パラメーターを使用すると、実装クラスを Byline インターフェイスに登録できます。 これにより、HTL スクリプトは（impl ではなく）インターフェイスを介して Sling Model を呼び出すことができます。 adapters について詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)を参照してください。
+   * この `adapters` パラメーターを使用すると、実装クラスを Byline インターフェイスに登録できます。 これにより、HTL スクリプトは（実装が直接ではなく）インターフェイスを介して Sling モデルを呼び出すことができます。 adapters について詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)を参照してください。
    * この `resourceType` は署名コンポーネントのリソースタイプ（以前に作成した）を指し、複数の実装がある場合に正しいモデルの解決に役立ちます。 モデルクラスのリソースタイプとの関連付けについて詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)を参照してください。
 
 ### Sling Model メソッドの実装 {#implementing-the-sling-model-methods}
 
 #### getName() {#implementing-get-name}
 
-最初に取り組む方法は `getName()` これは、プロパティの下の署名の JCR コンテンツノードに保存された値を返します。 `name`.
+最初に実装されるメソッドは次のとおりです。 `getName()`という名前の場合は、単にプロパティの下の署名の JCR コンテンツノードに保存されている値を返します。 `name`.
 
-この場合、 `@ValueMapValue` Sling Model 注釈は、リクエストのリソースの ValueMap を使用して Java フィールドに値を挿入するために使用されます。
+この場合、 `@ValueMapValue` Sling Model 注釈は、リクエストのリソースの ValueMap を使用して Java™フィールドに値を挿入するために使用されます。
 
 
 ```java
@@ -538,15 +538,15 @@ public class BylineImpl implements Byline {
 }
 ```
 
-JCR プロパティは Java フィールドと同じ名前（両方とも「name」）を持つので、 `@ValueMapValue` はこの関連付けを自動的に解決し、プロパティの値を Java フィールドに挿入します。
+JCR プロパティは Java™フィールドとして名前を共有するので（両方とも「name」）、 `@ValueMapValue` はこの関連付けを自動的に解決し、プロパティの値を「Java™」フィールドに挿入します。
 
 #### getOccupations() {#implementing-get-occupations}
 
-次に実装する方法は次のとおりです。 `getOccupations()`. このメソッドは、JCR プロパティに保存されているすべての職業を収集します `occupations` 並べ替えられた（アルファベット順の）コレクションを返します。
+次に実装する方法は次のとおりです。 `getOccupations()`. このメソッドは、JCR プロパティに保存されている職業を読み込みます `occupations` 並べ替えられた（アルファベット順の）コレクションを返します。
 
 に示したのと同じ方法の使用 `getName()` プロパティ値は、Sling モデルのフィールドに挿入できます。
 
-挿入された Java フィールドを介して JCR プロパティ値を Sling モデルで使用できるようになったら、 `occupations`を指定しない場合、並べ替えビジネスロジックは `getOccupations()` メソッド。
+挿入された Java™フィールドを介して JCR プロパティの値を Sling Model で使用できるようになったら、 `occupations`を指定しない場合、並べ替えビジネスロジックは `getOccupations()` メソッド。
 
 
 ```java
@@ -578,7 +578,7 @@ public class BylineImpl implements Byline {
 
 最後のパブリックメソッドは、 `isEmpty()` これにより、コンポーネントがレンダリングに十分な作成を行ったと見なすタイミングが決まります。
 
-このコンポーネントには、名前、画像および職業の 3 つのフィールドをすべて入力する必要があるというビジネス要件があります *前* コンポーネントはレンダリングできます。
+このコンポーネントの場合、ビジネス要件は 3 つのフィールドすべてになります。 `name, image and occupations` 入力する必要があります *前* コンポーネントはレンダリングできます。
 
 
 ```java
@@ -609,15 +609,15 @@ public class BylineImpl implements Byline {
 
 #### 「画像の問題」への対処 {#tackling-the-image-problem}
 
-名前と職業の条件を確認することは簡単です ( そして Apache Commons Lang3 は常に便利です [StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html) （クラス）が、 **画像の存在** は、コアコンポーネントの画像コンポーネントを画像の表示に使用するので、検証できます。
+名前と職業の条件をチェックすることは簡単で、Apache Commons Lang3 が便利です [StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html) クラス。 しかし、 **画像の存在** は、コアコンポーネントの画像コンポーネントを画像の表示に使用するので、検証できます。
 
 これに対処するには、2 つの方法があります。
 
 をチェックします。 `fileReference` JCR プロパティがアセットに解決されます。 *または* このリソースをコアコンポーネントの画像 Sling モデルに変換し、 `getSrc()` メソッドが空ではありません。
 
-アドビでは、 **秒** アプローチ。 第 1 のアプローチで十分である可能性が高いですが、このチュートリアルでは、Sling モデルの他の機能を調べるために後者を使用します。
+次を使用します。 **秒** アプローチ。 第 1 のアプローチで十分である可能性が高いですが、このチュートリアルでは、Sling モデルの他の機能を調べるために後者を使用します。
 
-1. 画像を取得するプライベートメソッドを作成します。 このメソッドをプライベートにしておくのは、HTL 自体の画像オブジェクトを公開する必要がなく、`isEmpty().` () を実行するためにのみ使用するからです。
+1. 画像を取得するプライベートメソッドを作成します。 このメソッドは、HTL 自体で Image オブジェクトを公開する必要がなく、駆動にのみ使用されるので、非公開のままにします `isEmpty().`
 
    次のプライベートメソッドを `getImage()`:
 
@@ -635,15 +635,15 @@ public class BylineImpl implements Byline {
 
    1 つ目は、 `@Self` 注釈 ( 現在のリクエストをコアコンポーネントの `Image.class`
 
-   2 つ目は、 [Apache Sling ModelFactory](https://sling.apache.org/apidocs/sling10/org/apache/sling/models/factory/ModelFactory.html) OSGi サービスは非常に便利なサービスで、Java コードで他のタイプの Sling モデルを作成するのに役立ちます。
+   2 つ目は、 [Apache Sling ModelFactory](https://sling.apache.org/apidocs/sling10/org/apache/sling/models/factory/ModelFactory.html) 便利なサービスである OSGi サービス。Java™コード内の他のタイプの Sling モデルを作成するのに役立ちます。
 
-   第 2 のアプローチを選択します。
+   2 つ目の方法を使用します。
 
    >[!NOTE]
    >
-   >実際の実装では、次を使用して「1」にアプローチします。 `@Self` よりシンプルでエレガントなソリューションなので、をお勧めします。 このチュートリアルでは、2 つ目の方法を使用します。非常に役立つ Sling モデルのより多くのファセットを調査する必要があるので、2 つ目の方法を使用します。より複雑なコンポーネントです。
+   >実際の実装では、次を使用して「1」にアプローチします。 `@Self` よりシンプルでエレガントなソリューションなので、をお勧めします。 このチュートリアルでは、2 つ目の方法を使用します。役立つ Sling モデルのより多くのファセットを探索する必要があるので、より複雑なコンポーネントになります。
 
-   Sling モデルは OSGi サービスではなく Java POJO なので、通常の OSGi 挿入注釈です `@Reference` **できません** を使用する代わりに、Sling Model は特別な **[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 類似の機能を提供する注釈。
+   Sling モデルは OSGi サービスではなく Java™ POJO なので、通常の OSGi 挿入注釈です `@Reference` **できません** を使用する代わりに、Sling Model は特別な **[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 類似の機能を提供する注釈。
 
 1. 更新 `BylineImpl.java` を含めるには `OSGiService` 挿入する注釈 `ModelFactory`:
 
@@ -666,7 +666,7 @@ public class BylineImpl implements Byline {
 
    ただし、このメソッドにはリクエストとリソースの両方が必要で、Sling モデルではまだ使用できません。 これらを取得するには、より多くの Sling Model 注釈が使用されます。
 
-   現在のリクエストを取得するには、 **[@Self](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 注釈を使用して、 `adaptable` ( `@Model(..)` as `SlingHttpServletRequest.class`を Java クラスフィールドに追加します。
+   現在のリクエストを取得するには、 **[@Self](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 注釈を使用して、 `adaptable` ( `@Model(..)` as `SlingHttpServletRequest.class`を Java™クラスフィールドに追加します。
 
 1. を **@Self** 注釈を使用して **SlingHttpServletRequest リクエスト**:
 
@@ -677,11 +677,11 @@ public class BylineImpl implements Byline {
    private SlingHttpServletRequest request;
    ```
 
-   注意：を使用 `@Self Image image` コアコンポーネントの画像 Sling モデルを挿入することは、上記のオプションでした。 `@Self` annotation は、適応可能なオブジェクト（この例では SlingHttpServletRequest）の挿入を試み、注釈フィールドタイプに合わせます。 コアコンポーネントの画像 Sling Model は SlingHttpServletRequest オブジェクトから適応可能なので、これなら機能したはずです。また、説明的な 2 番目の方法よりも少ないコードで済みます。
+   注意：を使用 `@Self Image image` コアコンポーネントの画像 Sling モデルを挿入することは、上記のオプションでした。 `@Self` annotation は、適応可能なオブジェクト（この場合は SlingHttpServletRequest）の挿入を試み、注釈フィールドタイプに合わせます。 コアコンポーネントの画像 Sling モデルは SlingHttpServletRequest オブジェクトから適応可能なので、これは動作し、より探索的なコードよりも少ないコードです `modelFactory` アプローチ。
 
-   これで、ModelFactory API で画像モデルをインスタンス化するために必要な変数を挿入できました。次に、Sling Model の **[@PostConstruct](https://sling.apache.org/documentation/bundles/models.html#postconstruct-methods) 注釈を使用して、Sling Model をインスタンス化した後、このオブジェクトを取得します。**
+   これで、ModelFactory API を使用して画像モデルをインスタンス化するために必要な変数が挿入されます。 Sling Model のを使用します **[@PostConstruct](https://sling.apache.org/documentation/bundles/models.html#postconstruct-methods)** 注釈を追加し、Sling Model のインスタンス化後にこのオブジェクトを取得します。
 
-   `@PostConstruct` は非常に役に立ち、コンストラクターと同様の能力で動作しますが、クラスがインスタンス化され、注釈が付けられたすべての Java フィールドが挿入された後に呼び出されます。 他の Sling モデルの注釈は Java クラスフィールド（変数）に注釈を付けます。 `@PostConstruct` は、通常、 `init()` （ただし、任意の名前を付けることができます）。
+   `@PostConstruct` は非常に役に立ち、コンストラクターと同様の能力で動作しますが、クラスがインスタンス化され、注釈が付けられたすべての Java™フィールドが挿入された後に呼び出されます。 他の Sling Model 注釈は Java™クラスフィールド（変数）に注釈を付けます。 `@PostConstruct` は、通常、 `init()` （ただし、任意の名前を付けることができます）。
 
 1. 追加 **@PostConstruct** メソッド：
 
@@ -704,7 +704,7 @@ public class BylineImpl implements Byline {
 
    Sling Model は OSGi サービス&#x200B;**ではない**&#x200B;ので、クラスの状態を安全に管理できます。頻繁 `@PostConstruct` プレーンコンストラクターと同様に、後で使用するために Sling Model クラスの状態を派生および設定します。
 
-   なお、 `@PostConstruct` メソッドで例外がスローされ、Sling モデルはインスタンス化されません (null)。
+   この `@PostConstruct` メソッドで例外がスローされ、Sling モデルがインスタンス化されず、null になる。
 
 1. **getImage()** を更新して、画像オブジェクトを返すだけで済むようになりました。
 
@@ -844,7 +844,7 @@ public class BylineImpl implements Byline {
 
 ## 署名 HTL {#byline-htl}
 
-内 `ui.apps` モジュール、開く `/apps/wknd/components/byline/byline.html` 以前のAEMコンポーネントの設定で作成しました。
+内 `ui.apps` モジュール、開く `/apps/wknd/components/byline/byline.html` これは、AEMコンポーネントの以前の設定で作成されたものです。
 
 ```html
 <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
@@ -880,7 +880,7 @@ public class BylineImpl implements Byline {
 
 この [ブロックステートメントを使用](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use) は、Sling モデルオブジェクトを HTL スクリプトでインスタンス化し、HTL 変数に割り当てるために使用されます。
 
-`data-sly-use.byline="com.adobe.aem.guides.wknd.models.Byline"` は、BylineImpl で実装された署名インターフェイス (com.adobe.aem.guides.wknd.models.Byline) を使用して、現在の SlingHttpServletRequest をそのインターフェイスに適応し、結果を HTL 変数名のバイライン ( `data-sly-use.<variable-name>`) をクリックします。
+この `data-sly-use.byline="com.adobe.aem.guides.wknd.models.Byline"` は、BylineImpl で実装された署名インターフェイス (com.adobe.aem.guides.wknd.models.Byline) を使用して、現在の SlingHttpServletRequest をそのインターフェイスに適応し、結果を HTL 変数名のバイライン ( `data-sly-use.<variable-name>`) をクリックします。
 
 1. 外部を更新 `div` を参照する **署名** Sling Model by its public interface:
 
@@ -894,11 +894,11 @@ public class BylineImpl implements Byline {
 
 ### Sling Model メソッドへのアクセス {#accessing-sling-model-methods}
 
-HTL は、 JSTL およびは、Java ゲッターメソッド名と同じ短縮形を使用します。
+HTL は、 JSTL およびは、Java™ゲッターメソッド名の同じ短縮形を使用します。
 
 例えば、署名 Sling モデルのの呼び出し `getName()` 方法はに短縮できます `byline.name`同様に、 `byline.isEmpty`の場合は、 `byline.empty`. 完全なメソッド名の使用 `byline.getName` または `byline.isEmpty`でも動作します。 次の点に注意してください。 `()` は、HTL でメソッドを呼び出すためには使用されません（JSTL と同様）。
 
-パラメーターが必要な Java メソッド **できません** を HTL で使用する。 これは、HTL のロジックをシンプルにするための設計によるものです。
+パラメーターが必要な Java™メソッド **できません** を HTL で使用する。 これは、HTL のロジックをシンプルにするための設計によるものです。
 
 1. 署名名は、 `getName()` メソッドを使用します。 `${byline.name}`.
 
@@ -910,7 +910,7 @@ HTL は、 JSTL およびは、Java ゲッターメソッド名と同じ短縮�
 
 ### HTL 式のオプションの使用 {#using-htl-expression-options}
 
-[HTL 式のオプション](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) HTL 内のコンテンツの修飾子として機能し、日付の書式設定から i18n 翻訳まで幅広く機能します。 また、式は、リストの結合や値の配列に使用でき、職業をコンマ区切り形式で表示するのに必要です。
+[HTL 式のオプション](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) HTL 内のコンテンツの修飾子として機能し、日付の書式設定から i18n 翻訳まで幅広く機能します。 式は、リストまたは値の配列を結合する場合にも使用できます。これは、職業をコンマ区切り形式で表示するために必要なものです。
 
 式は `@` 演算子を使用して、HTL 式に含めることができます。
 
@@ -922,9 +922,9 @@ HTL は、 JSTL およびは、Java ゲッターメソッド名と同じ短縮�
 
 ### プレースホルダーの条件付き表示 {#conditionally-displaying-the-placeholder}
 
-AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレースホルダーパラダイム** 作成者に視覚的な手がかりを提供する **コンポーネントが誤って作成され、AEM パブリッシュに表示されないことを示す**. この判断を推進するには、コンポーネントの背後の Sling Model のメソッド（この場合 `Byline.isEmpty()`()）を実装する必要があります。
+AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレースホルダーパラダイム** 作成者に視覚的な手がかりを提供する **コンポーネントが正しく作成されず、AEM パブリッシュに表示されないことを示す**. この決定を推進する規則は、コンポーネントのバッキング Sling Model にメソッドを実装することです。この場合、次のようになります。 `Byline.isEmpty()`.
 
-`isEmpty()` 署名 Sling Model でが呼び出され、結果（またはその負の値）が `!` 演算子 ) が `hasContent`:
+この `isEmpty()` メソッドが署名 Sling モデルで呼び出され、結果（または負の値）が `!` 演算子 ) が `hasContent`:
 
 1. 外部を更新 `div` という名前の HTL 変数を保存するには、次のようにします。 `hasContent`:
 
@@ -937,7 +937,7 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
    </div>
    ```
 
-   の使用に注意してください。 `data-sly-test`、HTL `test` ブロックは、HTL 変数を設定し、HTL 式の結果が真かどうかに基づいて、その変数が基にするHTML要素をレンダリング/レンダリングしないので、興味深いものです。 「真」の場合、HTML要素はレンダリングされ、そうでない場合、レンダリングされません。
+   の使用に注意してください。 `data-sly-test`、HTL `test` block がキーの場合は、HTL 変数を設定し、元の要素をレンダリング/レンダリングしません。 HTL 式評価の結果に基づきます。 「true」の場合、HTML要素はレンダリングされ、それ以外の場合はレンダリングされません。
 
    この HTL 変数 `hasContent` を再利用して、プレースホルダーを条件付きで表示/非表示にできるようになりました。
 
@@ -951,9 +951,9 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
 
 の HTL スクリプト `byline.html` がほぼ完了し、画像しか欠落していなくなりました。
 
-コアコンポーネントの画像コンポーネント `sling:resourceSuperType` を使用して画像のオーサリングを提供しているので、コアコンポーネントの画像コンポーネントを使用して画像をレンダリングすることもできます。
+を `sling:resourceSuperType` は、コアコンポーネントの画像コンポーネントを指し、画像のオーサリングには、コアコンポーネントの画像コンポーネントを使用して画像をレンダリングできます。
 
-この場合、現在の署名リソースを含める必要がありますが、リソースタイプ `core/wcm/components/image/v2/image`. これは、コンポーネントを再利用する際の強力なパターンです。 これに対して、HTL の `data-sly-resource` ブロックが使用されます。
+この場合、現在の署名リソースを含めますが、リソースタイプを使用して、コアコンポーネントの画像コンポーネントのリソースタイプを強制的に指定します `core/wcm/components/image/v2/image`. これは、コンポーネントの再利用のための強力なパターンです。 これに対して、HTL の `data-sly-resource` ブロックが使用されます。
 
 1. を `div` クラスを持つ `cmp-byline__image` を次のように設定します。
 
@@ -962,9 +962,9 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
        data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }"></div>
    ```
 
-   この `data-sly-resource`（相対パスを使用して現在のリソースを含む） `'.'`現在のリソース（または署名コンテンツリソース）を、 `core/wcm/components/image/v2/image`.
+   この `data-sly-resource`には、相対パスを介して現在のリソースが含まれます `'.'`現在のリソース（または署名コンテンツリソース）を、 `core/wcm/components/image/v2/image`.
 
-   コアコンポーネントのリソースタイプは、スクリプト内で使用され、コンテンツに対して保持されないので、プロキシ経由ではなく直接使用されます。
+   コアコンポーネントのリソースタイプは、プロキシ経由ではなく直接使用されます。これはスクリプト内で使用され、コンテンツに保持されないためです。
 
 2. 完了 `byline.html` 以下：
 
@@ -995,7 +995,7 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
    $ mvn clean install -PautoInstallBundle
    ```
 
-   AEM 6.5/6.4 にデプロイする場合は、 `classic` プロファイル：
+   AEM 6.5/6.4 にデプロイするには、 `classic` プロファイル：
 
    ```shell
    $ cd ../core
@@ -1004,13 +1004,13 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
 
    >[!CAUTION]
    >
-   > また、Maven プロファイルを使用して、ルートからプロジェクト全体を構築することもできます `autoInstallSinglePackage` ただし、これにより、ページ上のコンテンツの変更が上書きされる場合があります。 これは、 `ui.content/src/main/content/META-INF/vault/filter.xml` は、既存のAEMコンテンツをきれいに上書きするように、チュートリアルのスターターコードを変更しました。 実際のシナリオでは、これは問題にはなりません。
+   > また、Maven プロファイルを使用して、ルートからプロジェクト全体を構築することもできます `autoInstallSinglePackage` ただし、これにより、ページ上のコンテンツの変更が上書きされる場合があります。 これは、 `ui.content/src/main/content/META-INF/vault/filter.xml` は、既存のAEMコンテンツをきれいに上書きするように、チュートリアルのスターターコードを変更しました。 実際のシナリオでは、これは問題ではありません。
 
-### スタイル設定されていない署名コンポーネントのレビュー {#reviewing-the-unstyled-byline-component}
+### スタイルが設定されていない署名コンポーネントの確認 {#reviewing-the-unstyled-byline-component}
 
 1. アップデートをデプロイした後、 [LA スケートパークスの究極ガイド ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) ページ、またはこの章で既に署名コンポーネントを追加した場所。
 
-1. この **画像**, **名前**、および **職業** が表示され、スタイルが設定されていないが、Byline コンポーネントが動作している。
+1. この **画像**, **名前**、および **職業** 現在は表示され、スタイルが設定されていないが、作業中の署名コンポーネントが存在する。
 
    ![スタイル設定されていない署名コンポーネント](assets/custom-component/unstyled.png)
 
@@ -1018,22 +1018,22 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
 
 [AEM Web コンソールの Sling Models Status 表示](http://localhost:4502/system/console/status-slingmodels)には、AEM に登録されたすべての Sling Model が表示されます。署名 Sling Model は、このリストを確認することで、インストールされ、認識されていることを検証できます。
 
-この **BylineImpl** がこのリストに表示されない場合は、Sling モデルの注釈に問題があるか、Sling モデルが登録済みの Sling モデルパッケージ (`com.adobe.aem.guides.wknd.core.models`) をコアプロジェクトに追加しました。
+この **BylineImpl** がこのリストに表示されない場合、Sling モデルの注釈に関する問題か、モデルが正しいパッケージに追加されなかった (`com.adobe.aem.guides.wknd.core.models`) をコアプロジェクトに追加しました。
 
 ![署名 Sling Model が登録されました](assets/custom-component/osgi-sling-models.png)
 
-*http://localhost:4502/system/console/status-slingmodels*
+*<http://localhost:4502/system/console/status-slingmodels>*
 
 ## 署名のスタイル {#byline-styles}
 
-署名コンポーネントは、署名コンポーネントのクリエイティブデザインに沿ってスタイルを設定する必要があります。これは、AEMが **ui.frontend** Maven サブプロジェクト。
+署名コンポーネントを提供されているクリエイティブデザインに合わせるには、スタイルを設定します。 これは、SCSS ファイルを使用し、 **ui.frontend** モジュール。
 
 ### デフォルトのスタイルを追加
 
 署名コンポーネントのデフォルトスタイルを追加します。
 
 1. IDE とに戻ります。 **ui.frontend** ～の下に投影する `/src/main/webpack/components`:
-1. という名前の新しいファイルを作成します。 `_byline.scss`.
+1. `_byline.scss` という名前のファイルを作成します。
 
    ![署名プロジェクトエクスプローラー](assets/custom-component/byline-style-project-explorer.png)
 
@@ -1072,6 +1072,7 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
        }
    }
    ```
+
 1. ターミナルを開き、 `ui.frontend` モジュール。
 1. を開始します。 `watch` 次の npm コマンドを使用してプロセスを実行します。
 
@@ -1090,15 +1091,15 @@ AEMコンポーネントのほとんどの HTL スクリプトでは、 **プレ
 
 ## おめでとうございます。 {#congratulations}
 
-Adobe Experience Managerを使用してカスタムコンポーネントを最初から作成しました。
+これで、Adobe Experience Managerを使用してカスタムコンポーネントを最初から作成しました。
 
 ### 次の手順 {#next-steps}
 
-引き続き、署名 Java コードの JUnit テストを記述して、すべてが正しく開発され、実装されたビジネスロジックが正しく完了していることを確認し、AEMコンポーネントの開発について学びます。
+引き続き、署名 Java™コードの JUnit テストを記述して、すべてが正しく開発され、実装されたビジネスロジックが正しく完了していることを確認し、AEMコンポーネントの開発について学びます。
 
 * [単体テストまたはAEMコンポーネントの作成](unit-testing.md)
 
-で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブラッチ上のローカルのにコードを確認してデプロイします。 `tutorial/custom-component-solution`.
+で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブランチのローカルのにコードを確認してデプロイします。 `tutorial/custom-component-solution`.
 
 1. のクローン [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) リポジトリ。
 1. 以下を確認します。 `tutorial/custom-component-solution` 分岐

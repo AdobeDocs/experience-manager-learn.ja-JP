@@ -1,6 +1,6 @@
 ---
 title: クライアントライブラリとフロントエンドワークフロー
-description: クライアントライブラリまたは clientlib を使用して、Adobe Experience Manager(AEM)Sites 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法について説明します。
+description: クライアントライブラリを使用して、Adobe Experience Manager(AEM)Sites 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 Webpack プロジェクトである ui.frontend モジュールをエンドツーエンドのビルドプロセスに統合する方法について説明します。
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, AEM Project Archetype
@@ -11,9 +11,9 @@ kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '2825'
+source-wordcount: '2798'
 ht-degree: 8%
 
 ---
@@ -62,10 +62,10 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 ## 目的
 
 1. 編集可能なテンプレートを使用してクライアント側ライブラリをページに組み込む方法を理解します。
-1. 専用のフロントエンド開発に UI.Frontend Module と Webpack 開発サーバーを使用する方法を説明します。
+1. 使用方法 `ui.frontend` 専用のフロントエンド開発用モジュールおよび webpack 開発サーバー。
 1. コンパイル済みの CSS と JavaScript を Sites 実装に配信するエンドツーエンドのワークフローを理解します。
 
-## 作成する内容 {#what-you-will-build}
+## 作成する内容 {#what-build}
 
 この章では、WKND サイトと記事ページテンプレートのベースラインスタイルを追加して、実装を [UI デザインモックアップ](assets/pages-templates/wknd-article-design.xd). 高度なフロントエンドワークフローを使用して、Webpack プロジェクトをAEMクライアントライブラリに統合します。
 
@@ -78,7 +78,7 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 クライアントサイドライブラリは、AEM Sitesの実装に必要な CSS および JavaScript ファイルを整理および管理するメカニズムを提供します。 クライアント側ライブラリまたは clientlib の基本的な目標は次のとおりです。
 
 1. CSS／JS を、開発および管理が簡単な個別の小さなファイルに保存する
-1. 組織化された方法でサードパーティのフレームワークへの依存関係を管理
+1. サードパーティのフレームワークへの依存関係を整理された方法で管理
 1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする.
 
 クライアント側ライブラリの使用の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja)を参照してください。
@@ -89,7 +89,7 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 
 ## クライアント側ライブラリ組織 {#organization}
 
-次に、 [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja).
+次に、 [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ![高レベルのクライアントライブラリ組織](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -104,7 +104,7 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 
    ![ui.apps の clientlibs](assets/client-side-libraries/four-clientlib-folders.png)
 
-   これらの clientlib を、以下で詳しく調べます。
+   以下の節では、これらの clientlib の詳細について説明します。
 
 1. 次の表に、クライアントライブラリの概要を示します。 詳細： [クライアントライブラリを含めるには、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing).
 
@@ -119,7 +119,7 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 
 ## 基本スタイルを更新 {#base-styles}
 
-次に、 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)** モジュール。 のファイル `ui.frontend` モジュールは `clientlib-site` および `clientlib-dependecies` Site テーマとサードパーティの依存関係を含むライブラリ。
+次に、 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja)** モジュール。 のファイル `ui.frontend` モジュールは `clientlib-site` および `clientlib-dependecies` Site テーマとサードパーティの依存関係を含むライブラリ。
 
 クライアント側ライブラリは、 [サス](https://sass-lang.com/) または [TypeScript](https://www.typescriptlang.org/). 次のようなオープンソースツールがいくつかあります。 [NPM](https://www.npmjs.com/) および [webpack](https://webpack.js.org/) フロントエンド開発を高速化および最適化するためのツールです。 の目標 **ui.frontend** モジュールは、これらのツールを使用して、ほとんどのフロントエンドソースファイルを管理できます。
 
@@ -127,7 +127,6 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 1. ファイルを開きます。 `main.scss`
 
    ![main.scss - entrypoint](assets/client-side-libraries/main-scss.png)
-client-side-libraries/main-scss
 
    `main.scss` は、 `ui.frontend` モジュール。 これには、 `_variables.scss` ファイル。プロジェクト内の様々な Sass ファイル全体で使用される一連のブランド変数を含みます。 この `_base.scss` ファイルも含まれ、HTML要素の基本スタイルを定義します。 正規表現には、以下の個々のコンポーネントスタイルのスタイルが含まれます。 `src/main/webpack/components`. 別の正規表現には、 `src/main/webpack/site/styles`.
 
@@ -143,13 +142,13 @@ client-side-libraries/main-scss
 
    ![Component Sass ファイル](assets/client-side-libraries/component-sass-files.png)
 
-   各ファイルは、 [アコーディオンコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components). 各コアコンポーネントは、 [ブロック要素修飾子](https://getbem.com/) または BEM 表記を使用して、スタイルルールを使用して特定の CSS クラスを容易にターゲット設定できるようにします。 の下のファイル `/components` は、コンポーネントごとに異なる BEM ルールを使用してAEMプロジェクトアーキタイプによってスタブ化されています。
+   各ファイルは、 [アコーディオンコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=en). 各コアコンポーネントは、 [ブロック要素修飾子](https://getbem.com/) または BEM 表記を使用して、スタイルルールを使用して特定の CSS クラスを容易にターゲット設定できるようにします。 の下のファイル `/components` は、コンポーネントごとに異なる BEM ルールを使用してAEMプロジェクトアーキタイプによってスタブ化されています。
 
 1. WKND ベーススタイルのダウンロード **[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** および **unzip** ファイル。
 
    ![WKND ベーススタイル](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
-   チュートリアルを高速化するために、コアコンポーネントと記事ページテンプレートの構造に基づいて WKND ブランドを実装するいくつかの Sass ファイルを提供しました。
+   チュートリアルを高速化するために、コアコンポーネントと記事ページテンプレートの構造に基づく WKND ブランドを実装する Sass ファイルがいくつか用意されています。
 
 1. 次の内容を上書き `ui.frontend/src` 前の手順のファイルを含む zip の内容によって次のフォルダーが上書きされます。
 
@@ -183,7 +182,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!NOTE]
    >
-   >`npm install` プロジェクトの新しいクローンまたは生成後に実行する必要があるのは 1 回だけです。
+   >`npm install` 新しいクローンやプロジェクトの生成の後と同様に、の実行は 1 回だけ必要です。
 
 1. で webpack 開発サーバーを起動します。 **監視** モードにするには、次のコマンドを実行します。
 
@@ -191,7 +190,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
    $ npm run watch
    ```
 
-1. これにより、 `src` ファイルを `ui.frontend` 変更をAEM ( ) にモジュール化して同期します。 [http://localhost:4502](http://localhost:4502)
+1. これにより、 `ui.frontend` モジュールを作成し、AEM at [http://localhost:4502](http://localhost:4502)
 
    ```shell
    + jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js
@@ -210,7 +209,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!NOTE]
    >
-   >また、 `npm run prod` JS と CSS を縮小するプロファイル。 Maven 経由で Webpack ビルドがトリガーされる場合、これは常に標準コンパイルです。 詳細： [ui.frontend モジュールは、こちらをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
+   >また、 `npm run prod` JS と CSS を縮小するプロファイル。 Maven 経由で Webpack ビルドがトリガーされる場合、これは常に標準コンパイルです。 詳細： [ui.frontend モジュールは、こちらをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja).
 
 1. Inspectファイル `site.css` 下 `ui.frontend/dist/clientlib-site/site.css`. これは、Sass ソースファイルに基づくコンパイル済み CSS です。
 
@@ -242,7 +241,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
 次に、 `ui.frontend` モジュールを参照してください `npm run watch` ローカルのAEMインスタンスにスタイルを自動的にデプロイします。
 
-1. 内 `ui.frontend` モジュールは次のファイルを開きます。 `ui.frontend/src/main/webpack/site/_variables.scss`.
+1. から、 `ui.frontend` モジュールは次のファイルを開きます。 `ui.frontend/src/main/webpack/site/_variables.scss`.
 1. を更新します。 `$brand-primary` 色変数：
 
    ```scsss
@@ -276,13 +275,13 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    *ページ情報/ページポリシー*
 
-1. 次のカテゴリに注意してください。 `wknd.dependencies` および `wknd.site` を参照してください。 デフォルトでは、ページポリシーを使用して設定した clientlib は、ページの先頭に CSS を、本文の末尾に JavaScript を含むように分割されます。 必要に応じて、clientlib JavaScript がページの先頭に読み込まれることを明示的に示すことができます。 これは `wknd.dependencies`.
+1. 次のカテゴリに注意してください。 `wknd.dependencies` および `wknd.site` を参照してください。 デフォルトでは、ページポリシーを使用して設定した clientlib は、ページの先頭に CSS を、本文の末尾に JavaScript を含むように分割されます。 ページの先頭に読み込まれる clientlib JavaScript を明示的にリストすることができます。 これは `wknd.dependencies`.
 
    ![記事ページテンプレートメニューページポリシー](assets/client-side-libraries/template-page-policy-clientlibs.png)
 
    >[!NOTE]
    >
-   > また、 `wknd.site` または `wknd.dependencies` を使用して、ページコンポーネントから直接 `customheaderlibs.html` または `customfooterlibs.html` 前に見たように、台本を `wknd.base` clientlib. テンプレートを使用すると、テンプレートごとに使用する clientlib を柔軟に選択できます。 例えば、選択したテンプレートでのみ使用される重い JavaScript ライブラリがある場合、
+   > また、 `wknd.site` または `wknd.dependencies` を使用して、ページコンポーネントから直接 `customheaderlibs.html` または `customfooterlibs.html` スクリプト テンプレートを使用すると、テンプレートごとに使用する clientlib を柔軟に選択できます。 例えば、選択したテンプレートでのみ使用される重い JavaScript ライブラリがある場合、
 
 1. 次に移動： **LA スケートパークス** を使用して作成されたページ **記事ページテンプレート**: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
@@ -314,13 +313,13 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!NOTE]
    >
-   > 6.5/6.4 に続く場合、クライアント側ライブラリは自動的に縮小されません。 詳しくは、 [HTMLライブラリマネージャーで縮小を有効にする（推奨）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja#using-preprocessors).
+   > AEM 6.5/6.4 の場合、クライアント側ライブラリは自動的に縮小されません。 詳しくは、 [HTMLライブラリマネージャーで縮小を有効にする（推奨）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja#using-preprocessors).
 
    >[!WARNING]
    >
    >セキュリティ上の理由から、/apps パスは&#x200B;**** Dispatcher の filter セクション&#x200B;**にのみ使用すべきであるので、パブリッシュ側では、クライアントライブラリを /apps から提供**&#x200B;しない[](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)ことが重要となります。この [allowProxy プロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) クライアントライブラリのを使用すると、CSS と JS が **/etc.clientlibs**.
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
 個々のスタイルを実装し、Experience Managerのスタイルシステムを使用してコアコンポーネントを再利用する方法について説明します。 [スタイルシステムを使用した開発](style-system.md) スタイルシステムを使用して、ブランド固有の CSS やテンプレートエディターの高度なポリシー設定でコアコンポーネントを拡張する方法について説明します。
 
@@ -333,9 +332,9 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
 ### Webpack DevServer — 静的マークアップ {#webpack-dev-static}
 
-前の 2 つの演習では、 **ui.frontend** モジュールを使用し、ビルドプロセスを通じて、最終的に、これらの変更がAEMに反映されていることを確認します。 次に、 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 対するフロントエンドスタイルを迅速に開発する **静的** HTML。
+前の 2 つの演習では、 **ui.frontend** モジュールが更新され、ビルドプロセスを通じて、最終的に、これらの変更がAEMに反映されていることを確認しました。 次に、 [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 対するフロントエンドスタイルを迅速に開発する **静的** HTML。
 
-この手法は、ほとんどのスタイルとフロントエンドコードが、AEM環境に容易にアクセスできない専用のフロントエンド開発者によって実行されている場合に便利です。 また、この手法を使用すると、FED はHTMLに直接変更を加え、それをAEM開発者に渡して、コンポーネントとして実装できます。
+この手法は、ほとんどのスタイルとフロントエンドコードが、AEM環境への容易なアクセス権を持たない専用のフロントエンド開発者が実行する場合に便利です。 また、この手法を使用すると、FED はHTMLに直接変更を加え、それをAEM開発者に渡して、コンポーネントとして実装できます。
 
 1. 次の LA スケートパーク記事ページのページソースをコピーします。 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled).
 1. IDE を再度開きます。 AEMからコピーしたマークアップを `index.html` 内 **ui.frontend** 下のモジュール `src/main/webpack/static`.
@@ -350,7 +349,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
    <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-site.js"></script>
    ```
 
-   webpack 開発サーバーがこれらのアーティファクトを自動的に生成するので、これらの参照を削除できます。
+   webpack 開発サーバーがこれらのアーティファクトを自動的に生成するので、これらの参照を削除します。
 
 1. 新しいターミナルから webpack 開発サーバーを起動するには、次のコマンドを **ui.frontend** モジュール：
 
@@ -389,7 +388,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
 **[aemfed](https://aemfed.io/)** は、フロントエンド開発の高速化に使用できるオープンソースのコマンドラインツールです。 これは次の方法で動作します。 [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://browsersync.io/)、および [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
 
-高レベルで **aemfed** は、 **ui.apps** モジュールを使用して、実行中のAEMインスタンスに直接同期します。 変更に基づき、ローカルブラウザーが自動更新されるので、フロントエンド開発がスピードアップします。また、Sling Log tracer と連携して、サーバー側のエラーを端末に直接自動的に表示するように設計されています。
+高いレベルでは、 `aemfed`は、 **ui.apps** モジュールを使用して、実行中のAEMインスタンスに直接同期します。 変更に基づいて、ローカルブラウザーが自動的に更新されるので、フロントエンド開発が高速化されます。 また、Sling Log tracer と連携して、サーバー側のエラーを端末に直接自動的に表示するように設計されています。
 
 もし、 **ui.apps** モジュール、HTL スクリプトの変更、カスタムコンポーネントの作成 **aemfed** は、使用する強力なツールです。 [完全なドキュメントは、こちらを参照してください。](https://github.com/abmaonline/aemfed).
 

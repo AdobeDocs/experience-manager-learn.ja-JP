@@ -10,16 +10,16 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '3066'
+source-wordcount: '3039'
 ht-degree: 2%
 
 ---
 
 # ページとテンプレート {#pages-and-template}
 
-この章では、ベースページコンポーネントと編集可能なテンプレートとの関係について説明します。 以下のモックアップに基づいて、スタイル設定されていない記事テンプレートを作成します。 [AdobeXD](https://www.adobe.com/products/xd.html). テンプレートの構築プロセスでは、コアコンポーネントと、編集可能テンプレートの高度なポリシー設定について説明します。
+この章では、基本ページコンポーネントと編集可能なテンプレートとの関係を見てみましょう。 次のモックアップに基づいて、スタイル設定されていない記事テンプレートを構築する方法を説明します。 [Adobe XD](https://helpx.adobe.com/support/xd.html). テンプレートの構築プロセスでは、コアコンポーネントと、編集可能テンプレートの高度なポリシー設定について説明します。
 
 ## 前提条件 {#prerequisites}
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> 前の章を正常に完了した場合は、プロジェクトを再利用し、スタータープロジェクトをチェックアウトする手順をスキップできます。
+> 前の章を正常に完了した場合は、プロジェクトを再利用して、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
 チュートリアルの構築元となるベースラインコードを確認します。
 
@@ -62,15 +62,15 @@ ht-degree: 2%
 1. 編集可能テンプレートの詳細と、ポリシーを使用してページコンテンツを詳細に制御する方法について説明します。
 1. テンプレートとページのリンク方法を説明します
 
-## 作成する内容 {#what-you-will-build}
+## 作成する内容 {#what-build}
 
-このチュートリアルのこの部分では、新しい記事ページの作成に使用でき、共通の構造に合わせて揃える、新しい記事ページテンプレートを作成します。 記事ページテンプレートは、AdobeXD で作成されたデザインと UI キットに基づいています。 この章では、テンプレートの構造またはスケルトンの構築にのみ焦点を当てます。 スタイルは実装されていませんが、テンプレートとページは機能しています。
+チュートリアルのこの部分では、記事ページの作成に使用でき、共通の構造に合わせて揃える、新しい記事ページテンプレートを作成します。 記事ページテンプレートは、Adobe XDで作成されたデザインと UI キットに基づいています。 この章では、テンプレートの構造またはスケルトンの構築にのみ焦点を当てます。 スタイルは実装されていませんが、テンプレートとページは機能しています。
 
 ![記事ページデザインとスタイル設定されていないバージョン](assets/pages-templates/what-you-will-build.png)
 
 ## Adobe XDでの UI 計画 {#adobexd}
 
-ほとんどの場合、新しい Web サイトの計画は、モックアップと静的デザインで始まります。 [Adobe XD](https://www.adobe.com/products/xd.html) は、ユーザーエクスペリエンスを構築するデザインツールです。 次に、UI キットとモックアップを検査し、記事ページテンプレートの構造を計画するのに役立ちます。
+通常、新しい Web サイトの計画は、モックアップと静的デザインから始まります。 [Adobe XD](https://helpx.adobe.com/support/xd.html) は、ユーザーエクスペリエンスを構築するデザインツールです。 次に、UI キットとモックアップを調べて、記事ページテンプレートの構造を計画します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
@@ -82,23 +82,23 @@ ht-degree: 2%
 
 ## 記事ページテンプレートの作成
 
-ページを作成する際は、新しいページを作成する際の基礎として使用するテンプレートを選択する必要があります。 テンプレートは、作成されるページの構造、初期コンテンツ、許可されるコンポーネントを定義します。
+ページを作成する際は、ページを作成する際の基礎となるテンプレートを選択する必要があります。 テンプレートは、作成されるページの構造、初期コンテンツ、許可されるコンポーネントを定義します。
 
 主に次の 3 つの領域があります。 [編集可能なテンプレート](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=ja):
 
 1. **構造**  — テンプレートの一部であるコンポーネントを定義します。 これらは、コンテンツ作成者が編集することはできません。
 1. **初期コンテンツ**  — テンプレートが開始するコンポーネントを定義します。コンテンツ作成者はこれらを編集または削除できます
-1. **ポリシー**  — コンポーネントの動作方法と作成者が使用できるオプションに関する設定を定義します。
+1. **ポリシー**  — コンポーネントの動作方法と作成者が持つオプションに関する設定を定義します。
 
-次に、モックアップの構造に合った新しいテンプレートをAEMで作成します。 これは、AEMのローカルインスタンスで発生します。 次のビデオの手順に従います。
+次に、モックアップの構造に合ったAEMでテンプレートを作成します。 これは、AEMのローカルインスタンスで発生します。 次のビデオの手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-上記のビデオの高レベルの手順：
+上記のビデオの大まかな手順：
 
 ### 構造の設定
 
-1. 新しいテンプレートを作成するには、 **ページテンプレートタイプ**，名前 **記事ページ**.
+1. を使用したテンプレートの作成 **ページテンプレートタイプ**，名前 **記事ページ**.
 1. 切り替え先 **構造** モード。
 1. を追加します。 **エクスペリエンスフラグメント** ～として機能するコンポーネント **ヘッダー** をクリックします。
    * コンポーネントがを指すように設定します `/content/experience-fragments/wknd/us/en/site/header/master`.
@@ -111,19 +111,19 @@ ht-degree: 2%
 1. を追加します。 **画像** コンポーネント **メイン** コンテナ。
    * をロック解除 **画像** コンポーネント。
 1. を追加します。 **パンくず** の下のコンポーネント **画像** コンポーネントをメインコンテナに追加します。
-   * 新しいポリシーを作成します **パンくず** 名前を付けたコンポーネント **記事ページ — パンくず**. を **ナビゲーション開始レベル** から **4**.
+   * のポリシーを作成します **パンくず** 名前を付けたコンポーネント **記事ページ — パンくず**. を **ナビゲーション開始レベル** から **4**.
 1. を追加します。 **コンテナ** の下のコンポーネント **パンくず** コンポーネントと内部 **メイン** コンテナ。 これは、 **コンテンツコンテナ** 」と入力します。
    * をロック解除 **コンテンツ** コンテナ。
    * ポリシーをに設定します。 **ページコンテンツ**.
 1. 別の **コンテナ** の下のコンポーネント **コンテンツコンテナ**. これは、 **サイドレール** テンプレートのコンテナ。
    * をロック解除 **サイドレール** コンテナ。
-   * という名前の新しいポリシーを作成します。 **記事ページ — サイドレール**.
+   * 次の名前のポリシーを作成します。 **記事ページ — サイドレール**.
    * の設定 **許可されたコンポーネント** under **WKND Sites プロジェクト — コンテンツ** 次を含めます。 **ボタン**, **ダウンロード**, **画像**, **リスト**, **区切り文字**, **ソーシャルメディア共有**, **テキスト**、および **タイトル**.
 1. ページルートコンテナのポリシーを更新します。 これは、テンプレートの最も外側にあるコンテナです。 ポリシーをに設定します。 **ページルート**.
    * の下 **コンテナ設定**、 **レイアウト** から **レスポンシブグリッド**.
 1. のレイアウトモードを使用 **コンテンツコンテナ**. ハンドルを右から左にドラッグし、コンテナを 8 列の幅に縮小します。
-1. のレイアウトモードを使用 **サイドレールコンテナ**. ハンドルを右から左にドラッグし、コンテナを 4 列の幅に縮小します。 次に、左側のハンドルを左から右の 1 列にドラッグして、コンテナ 3 の列を幅にし、間に 1 列の間隔を残します。 **コンテンツコンテナ**.
-1. モバイルエミュレーターを開き、モバイルブレークポイントに切り替えます。 レイアウトモードを再度有効にし、 **コンテンツコンテナ** そして **サイドレールコンテナ** ページの全幅。 これにより、モバイルのブレークポイントにコンテナが垂直に積み重ねられます。
+1. のレイアウトモードを使用 **サイドレールコンテナ**. ハンドルを右から左にドラッグし、コンテナを 4 列の幅に縮小します。 次に、左側のハンドルを左から右へ 1 列にドラッグして、コンテナ 3 の列を幅にし、間に 1 列の間隔を残します。 **コンテンツコンテナ**.
+1. モバイルエミュレーターを開き、モバイルブレークポイントに切り替えます。 レイアウトモードを再度有効にし、 **コンテンツコンテナ** そして **サイドレールコンテナ** ページの全幅。 これにより、モバイルのブレークポイントにコンテナを垂直に積み重ねます。
 1. のポリシーを更新 **テキスト** コンポーネント **コンテンツコンテナ**.
    * ポリシーをに設定します。 **コンテンツテキスト**.
    * の下 **プラグイン** > **段落スタイル**, check **段落スタイルを有効にする** そして **見積ブロック** が有効になっている。
@@ -156,20 +156,20 @@ ht-degree: 2%
 
 ## エクスペリエンスフラグメントを使用したヘッダーとフッターの更新 {#experience-fragments}
 
-ヘッダーやフッターなどのグローバルコンテンツを作成する場合の一般的な方法は、 [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、1 つの参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、複数サイトの管理と [局在](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
+ヘッダーやフッターなどのグローバルコンテンツを作成する場合の一般的な方法は、 [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、1 つの参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、複数サイトの管理と [局在](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=en).
 
 AEMプロジェクトアーキタイプで、ヘッダーとフッターが生成されました。 次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。 次のビデオの手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-上記のビデオの高レベルの手順：
+上記のビデオの大まかな手順：
 
 1. サンプルコンテンツパッケージをダウンロードします。 **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**.
 1. パッケージマネージャー ( ) を使用して、コンテンツパッケージをアップロードしインストールします。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
 1. Web バリエーションテンプレートを更新します。これは、 [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)
    * ポリシーを更新します。 **コンテナ** コンポーネントを作成します。
    * ポリシーをに設定します。 **XF ルート**.
-   * の下 **許可されたコンポーネント** コンポーネントグループを選択 **WKND Sites プロジェクト — 構造** 含める **言語ナビゲーション**, **ナビゲーション**、および **クイック検索** コンポーネント。
+   * の下で、 **許可されたコンポーネント** コンポーネントグループを選択 **WKND Sites プロジェクト — 構造** 含める **言語ナビゲーション**, **ナビゲーション**、および **クイック検索** コンポーネント。
 
 ### ヘッダーエクスペリエンスフラグメントを更新
 
@@ -204,21 +204,21 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
 ## 記事ページの作成
 
-次に、記事ページテンプレートを使用して新しいページを作成します。 サイトのモックアップと一致するようにページのコンテンツを作成します。 次のビデオの手順に従います。
+次に、記事ページテンプレートを使用してページを作成します。 サイトのモックアップと一致するようにページのコンテンツを作成します。 次のビデオの手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-上記のビデオの高レベルの手順：
+上記のビデオの大まかな手順：
 
 1. サイトコンソール ( ) に移動します。 [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
-1. の下に新しいページを作成します。 **WKND** > **US** > **EN** > **雑誌**.
+1. の下にページを作成します。 **WKND** > **US** > **EN** > **雑誌**.
    * を選択します。 **記事ページ** テンプレート。
    * の下 **プロパティ** 設定 **タイトル** 「LA スケートパークスの究極ガイド」へ
    * を **名前** ガイド・ラ・スケートパークスへ
 1. 置換 **作成者別** 「By Stacey Roswells」というテキストを含むタイトル。
 1. を更新します。 **テキスト** 記事に入力する段落を含めるコンポーネントです。 次のテキストファイルをコピーとして使用できます。 [la-skate-parks-copy.txt](assets/pages-templates/la-skateparks-copy.txt).
 1. 別の **テキスト** コンポーネント。
-   * コンポーネントを更新して、引用符を含めます。「ロサンゼルスにシェアする場所がない」
+   * コンポーネントを更新して、引用符を含めます。「ロサンゼルスほど、シェアする場所はない。」
    * フルスクリーンモードでリッチテキストエディターを編集し、上記の引用を変更して **見積ブロック** 要素。
 1. 続けて記事の本文を入力し、モックアップに一致させます。
 1. の設定 **ダウンロード** 記事のPDF版を使用するコンポーネント。
@@ -228,11 +228,11 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 1. の設定 **リスト** コンポーネント。
    * の下 **リスト設定** > **次を使用してリストを作成**&#x200B;を選択します。 **子ページ**.
    * を **親ページ** から `/content/wknd/us/en/magazine`.
-   * の下 **項目設定** check **項目をリンク** およびチェック **日付を表示**.
+   * の下で、 **項目設定** check **項目をリンク** およびチェック **日付を表示**.
 
 ## Inspectノード構造 {#node-structure}
 
-この時点で、記事ページのスタイルがはっきりと解除されます。 ただし、基本的な構造が設定されています。 次に、記事ページのノード構造を調べて、テンプレート、ページ、コンポーネントの役割をより深く理解します。
+この時点で、記事ページのスタイルが明確に解除されます。 ただし、基本的な構造が設定されています。 次に、記事ページのノード構造を調べて、テンプレート、ページ、コンポーネントの役割をより深く理解します。
 
 ローカルAEMインスタンスで CRXDE-Lite ツールを使用して、基になるノード構造を表示します。
 
@@ -242,7 +242,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    ![JCR コンテンツのプロパティ](assets/pages-templates/jcr-content-properties-CRXDELite.png)
 
-   値は `cq:template`を示す `/conf/wknd/settings/wcm/templates/article-page`、前の手順で作成した記事ページテンプレート。
+   値は `cq:template`を示す `/conf/wknd/settings/wcm/templates/article-page`：前に作成した記事ページテンプレートです。
 
    また、 `sling:resourceType`を示す `wknd/components/page`. これはAEMプロジェクトのアーキタイプによって作成されるページコンポーネントで、テンプレートに基づいてページのレンダリングを担当します。
 
@@ -258,9 +258,9 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    HTL スクリプトは 2 つだけです。 `customfooterlibs.html` および `customheaderlibs.html` をページコンポーネントの下に追加します。 *では、このコンポーネントはページをどのようにレンダリングしますか？*
 
-   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能の説明です。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。
+   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能です。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。
 
-1. Inspect WKND コンポーネント内の別のコンポーネントである `Breadcrumb` 次の場所にあるコンポーネント： `/apps/wknd/components/breadcrumb`. 同じことに注意してください。 `sling:resourceSuperType` プロパティが見つかりますが、今回は `core/wcm/components/breadcrumb/v2/breadcrumb`. これは、プロキシコンポーネントパターンを使用してコアコンポーネントを組み込む別の例です。 実際、WKND コードベース内のすべてのコンポーネントは、AEMコアコンポーネントのプロキシです（当社の有名な HelloWorld コンポーネントを除く）。 できるだけ多くのコアコンポーネントの機能を試して再利用することをお勧めします *前* カスタムコードを記述しています。
+1. Inspect WKND コンポーネント内の別のコンポーネントである `Breadcrumb` コンポーネントの元： `/apps/wknd/components/breadcrumb`. 同じことに注意してください。 `sling:resourceSuperType` プロパティが見つかりますが、今回は `core/wcm/components/breadcrumb/v2/breadcrumb`. これは、プロキシコンポーネントパターンを使用してコアコンポーネントを組み込む別の例です。 実際、WKND コードベース内のすべてのコンポーネントは、AEMコアコンポーネントのプロキシです（カスタムデモ HelloWorld コンポーネントを除く）。 コアコンポーネントの機能をできるだけ多く再利用することをお勧めします *前* カスタムコードを記述しています。
 
 1. 次に、次のページでコアコンポーネントページを調べます。 `/libs/core/wcm/components/page/v2/page` CRXDE Lite:
 
@@ -270,7 +270,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    ![コアコンポーネントページ](assets/pages-templates/core-page-component-properties.png)
 
-   このページの下には、さらに多くのスクリプトが含まれています。 コアコンポーネントページには、多くの機能が含まれています。 この機能は、メンテナンスや読みやすさを向上させるために、複数のスクリプトに分割されています。 HTL スクリプトを含める場合は、 `page.html` そして `data-sly-include`:
+   このページの下には、多くのスクリプトファイルが含まれています。 コアコンポーネントのページには、多数の機能が含まれています。 この機能は、メンテナンスや読みやすさを向上させるために、複数のスクリプトに分割されています。 HTL スクリプトを含める場合は、 `page.html` そして `data-sly-include`:
 
    ```html
    <!--/* /libs/core/wcm/components/page/v2/page/page.html */-->
@@ -306,21 +306,23 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
    </html>
    ```
 
-   HTL を複数のスクリプトに分割するもう 1 つの理由は、プロキシコンポーネントが個々のスクリプトを上書きしてカスタムビジネスロジックを実装できるようにすることです。 HTL スクリプト `customfooterlibs.html` および `customheaderlibs.html`は、プロジェクトの実装で上書きされる明示的な目的で作成されます。
+   HTL を複数のスクリプトに分割するもう 1 つの理由は、プロキシコンポーネントが個々のスクリプトを上書きしてカスタムビジネスロジックを実装できるようにすることです。 HTL スクリプト `customfooterlibs.html`、および `customheaderlibs.html`は、プロジェクトの実装で上書きされる明示的な目的で作成されます。
 
-   編集可能テンプレートが [この記事を読んでコンテンツページを作成](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html).
+   編集可能テンプレートが [この記事を読んでコンテンツページを作成](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=ja).
 
 1. Inspect別のコアコンポーネント ( `/libs/core/wcm/components/breadcrumb/v2/breadcrumb`. 次を表示： `breadcrumb.html` スクリプトを使用して、パンくずコンポーネントのマークアップが最終的にどのように生成されるかを理解できます。
 
 ## ソース管理への設定の保存 {#configuration-persistence}
 
-多くの場合、特にAEMプロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソース管理に保持すると便利です。 これにより、すべての開発者が同じコンテンツと設定のセットに対して作業を行い、環境間の一貫性をさらに高めることができます。 プロジェクトが一定の成熟度に達すると、テンプレート管理の手法を特別なパワーユーザーグループに引き継ぐことができます。
+多くの場合、特にAEMプロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソース管理に保持すると役に立ちます。 これにより、すべての開発者が同じコンテンツと設定のセットに対して作業を行い、環境間の一貫性をさらに高めることができます。 プロジェクトが一定の成熟度に達すると、テンプレート管理の手法を特別なパワーユーザーグループに引き継ぐことができます。
 
-ここでは、テンプレートを他のコードと同様に扱い、 **記事ページテンプレート** プロジェクトの一部として下に 今まで **プッシュ** AEMプロジェクトからAEMのローカルインスタンスにコードを追加します。 この **記事ページテンプレート** がAEMのローカルインスタンス上に直接作成されたので、 **インポート** テンプレートをAEMプロジェクトに追加します。 この **ui.content** モジュールは、この特定の目的のためにAEMプロジェクトに含まれます。
 
-次の手順は、 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview) プラグインを使用している可能性がありますが、 **インポート** AEMのローカルインスタンスからコンテンツを読み込むか、
+現時点では、テンプレートは他のコードと同様に扱われ、 **記事ページテンプレート** プロジェクトの一部として下に
+これまでは、コードはAEMプロジェクトからAEMのローカルインスタンスにプッシュされました。 この **記事ページテンプレート** がAEMのローカルインスタンス上に直接作成されたので、 **インポート** テンプレートをAEMプロジェクトに追加します。 この **ui.content** モジュールは、この特定の目的のためにAEMプロジェクトに含まれます。
 
-1. VSCode で、 `aem-guides-wknd` プロジェクト。
+次の手順は、VSCode IDE で、 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview) プラグイン。 ただし、設定した任意の IDE を使用して実行する可能性があります。 **インポート** AEMのローカルインスタンスからコンテンツを読み込むか、
+
+1. で、VSCode は `aem-guides-wknd` プロジェクト。
 
 1. を展開します。 **ui.content** モジュールを作成します。 を展開します。 `src` フォルダーに移動して、に移動します。 `/conf/wknd/settings/wcm/templates`.
 
@@ -332,11 +334,11 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    ![更新されたテンプレート](assets/pages-templates/updated-templates.png)
 
-1. コンテンツを読み込む手順を繰り返しますが、「 **ポリシー** 次の場所にあるフォルダー： `/conf/wknd/settings/wcm/policies`.
+1. コンテンツを読み込む手順を繰り返しますが、「 **ポリシー** フォルダーから `/conf/wknd/settings/wcm/policies`.
 
    ![VSCode インポートポリシー](assets/pages-templates/policies-article-page-template.png)
 
-1. Inspect `filter.xml` 次の場所にあるファイル： `ui.content/src/main/content/META-INF/vault/filter.xml`.
+1. Inspect `filter.xml` ファイルから `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -349,23 +351,23 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
    </workspaceFilter>
    ```
 
-   この `filter.xml` ファイルは、パッケージと共にインストールされるノードのパスを識別します。 注意： `mode="merge"` 既存のコンテンツが変更されないことを示す各フィルターで、新しいコンテンツのみが追加されます。 コンテンツ作成者はこれらのパスを更新する可能性があるので、コードのデプロイメントでは **not** コンテンツを上書きします。 詳しくは、 [FileVault ドキュメント](https://jackrabbit.apache.org/filevault/filter.html) を参照してください。
+   この `filter.xml` ファイルは、パッケージと共にインストールされるノードのパスを識別します。 注意： `mode="merge"` 変更しない既存のコンテンツを示す各フィルターに、新しいコンテンツのみが追加されます。 コンテンツ作成者はこれらのパスを更新する可能性があるので、コードのデプロイメントでは **not** コンテンツを上書きします。 詳しくは、 [FileVault ドキュメント](https://jackrabbit.apache.org/filevault/filter.html) を参照してください。
 
    比較 `ui.content/src/main/content/META-INF/vault/filter.xml` および `ui.apps/src/main/content/META-INF/vault/filter.xml` を参照してください。
 
    >[!WARNING]
    >
-   > WKND リファレンスサイトの一貫したデプロイメントを確実におこなうために、プロジェクトの一部のブランチは、次のように設定されます。 `ui.content` は、JCR 内の変更をすべて上書きします。 コード/スタイルは特定のポリシーに対して記述されるので、これは設計によって（ソリューションブランチに対して）おこなわれます。
+   > WKND リファレンスサイトの一貫したデプロイメントを確実におこなうために、プロジェクトの一部のブランチは次のように設定されています。 `ui.content` は、JCR 内の変更をすべて上書きします。 コード/スタイルは特定のポリシーに対して記述されるので、これは設計によって（ソリューションブランチに対して）おこなわれます。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、Adobe Experience Manager Sitesで新しいテンプレートとページが作成されました。
+これで、Adobe Experience Manager Sitesでテンプレートとページが作成されました。
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
-この時点で、記事ページのスタイルがはっきりと解除されます。 フォロー： [クライアントサイドライブラリとフロントエンドワークフロー](client-side-libraries.md) CSS と JavaScript を含めてサイトにグローバルスタイルを適用し、専用のフロントエンドビルドを統合するためのベストプラクティスについて説明するチュートリアルです。
+この時点で、記事ページのスタイルが明確に解除されます。 フォロー： [クライアントサイドライブラリとフロントエンドワークフロー](client-side-libraries.md) CSS と JavaScript を含めてサイトにグローバルスタイルを適用し、専用のフロントエンドビルドを統合するためのベストプラクティスについて説明するチュートリアルです。
 
-で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブラッチ上のローカルのにコードを確認してデプロイします。 `tutorial/pages-templates-solution`.
+で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブランチのローカルのにコードを確認してデプロイします。 `tutorial/pages-templates-solution`.
 
 1. のクローン [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) リポジトリ。
 1. 以下を確認します。 `tutorial/pages-templates-solution` 分岐。
