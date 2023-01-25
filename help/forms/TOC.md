@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1784'
 ht-degree: 3%
 
 ---
@@ -184,6 +184,10 @@ ht-degree: 3%
    + [ArrayList 変数](variables-aem-workflow/part4.md)
    + [フォームデータモデル変数](variables-aem-workflow/form-data-model.md)
    + [AEM Workflow のルールエディター](variables-aem-workflow/part5.md)
++ フォームデータを確認{#review-form-data}
+   + [はじめに](review-form-data/introduction.md)
+   + [コンポーネントを作成](review-form-data/create-component.md)
+   + [アセットのデプロイ](review-form-data/deploy-on-your-system.md)
 + MySQL DB でのフォームデータの格納と取得{#storing-and-retrieving-form-data}
    + [はじめに](storing-retrieving-form-data/introduction.md)
    + [データソースの設定](storing-retrieving-form-data/part1.md)
