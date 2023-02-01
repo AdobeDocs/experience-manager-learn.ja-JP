@@ -7,10 +7,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 23%
+source-wordcount: '281'
+ht-degree: 24%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 23%
 
 + [AEMヘッドレスの概要](./overview.md)
 + GraphQL {#graphql}
-   + [AEMヘッドレス開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+   + [AEMヘッドレス開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
    + [概要](./graphql/overview.md)
    + クイックセットアップ {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
@@ -113,5 +113,8 @@ ht-degree: 23%
    + [フィルターAngularアプリ](./graphql/code-samples/filtering-angular-app.md)
    + [値アプリのフィルタリング](./graphql/code-samples/filtering-vue-app.md)
    + [jQuery と Handlebars を使用したフィルタリング](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [SvelteKit アプリのフィルタリング](./graphql/code-samples/filtering-sveltekit-app.md)
+   + [ExpressJS および Pug アプリのフィルタリング](./graphql/code-samples/filtering-express-pug-app.md)
    + [基本的な React アプリ](./graphql/code-samples/basic-react-app.md)
    + [基本的な Next.js アプリ](./graphql/code-samples/basic-nextjs-app.md)
+
