@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '158'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 2%
 
 以下に示す手順に従って、ローカルのAEMインスタンスでこのユースケースを機能させてください。
 
-* [この記事に記載されている手順に従って、fd-service ユーザーを使用するようにを設定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en). DevelopingWithServiceUser バンドルがデプロイされていることを確認します。
+* [DevelopingWithServiceUser バンドルのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) zip ファイルに含まれています。
+
+* Apache Sling Service User Mapper Service に次のエントリを追加します。 **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** の使用 [configMgr](http://localhost:4502/system/console/configMgr).
 
 * [ニュースレターバンドルをデプロイします](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). このバンドルには、フォルダーのコンテンツをリストし、選択したニュースレターをアセンブルするためのコードが含まれています。
 
