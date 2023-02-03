@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1318'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,8 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 まず、AEMの仮想プライベートネットワークを有効にします。
 
 1. まず、Cloud Manager API を使用して、アドバンスドネットワークが必要な地域を決定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 この `region name` 後続の Cloud Manager API 呼び出しをおこなうには、が必要です。 通常、実稼動環境が存在する地域が使用されます。
+
+   でAEMas a Cloud Service環境の地域を見つけます。 [Cloud Manager](https://my.cloudmanager.adobe.com) の下に [環境の詳細](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager に表示される地域名は、次のとおりです。 [地域コードにマッピング済み](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) Cloud Manager API で使用されます。
 
    __listRegions HTTP リクエスト__
 
