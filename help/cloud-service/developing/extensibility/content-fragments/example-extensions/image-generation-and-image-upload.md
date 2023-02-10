@@ -1,6 +1,6 @@
 ---
 title: カスタムコンテンツフラグメントコンソール拡張機能を使用した OpenAI 画像生成
-description: OpenAI または DALL-E 2 を使用して自然言語記述からデジタル画像を生成し、生成した画像をAEMにアップロードして、コンテンツフラグメントに関連付ける、AEM Content Fragment Console Extension の例です。
+description: OpenAI または DALL-E 2 を使用して自然言語の説明からデジタル画像を生成し、生成した画像をカスタムコンテンツフラグメントコンソール拡張機能を使用してAEMにアップロードする方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,17 +10,19 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
 workflow-type: tm+mt
-source-wordcount: '1313'
-ht-degree: 1%
+source-wordcount: '1399'
+ht-degree: 2%
 
 ---
 
 
 # OpenAI を使用したAEM画像アセットの生成
 
-![デジタル画像の生成](./assets/digital-image-generation/screenshot.png){align="center"}
+OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベロシティ用にAEM DAM にアップロードする方法を説明します。
+
+![デジタル画像の生成](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
 
 この例のAEMコンテンツフラグメントコンソール拡張機能は、 [アクションバー](../action-bar.md) を使用して自然言語入力からデジタル画像を生成する拡張 [OpenAI API](https://openai.com/api/) または [DALL.E 2](https://openai.com/dall-e-2/). 生成された画像がAEM DAM にアップロードされ、選択されたコンテンツフラグメントの画像プロパティが更新されて、DAM から新しく生成され、アップロードされたこの画像が参照されます。
 
@@ -108,6 +110,12 @@ ht-degree: 1%
 1. Node.js ライブラリの下にインストール
    1. [OpenAI Node.js ライブラリ](https://github.com/openai/openai-node#installation) - OpenAI API を簡単に呼び出す
    1. [AEM Upload](https://github.com/adobe/aem-upload#install) ：画像をAEM-CS インスタンスにアップロードします。
+
+
+>[!TIP]
+>
+>以降の節では、主な React およびAdobe I/O Runtime Action JavaScript ファイルについて学びます。 参照用に、 `web-src` および  `actions` AppBuilder プロジェクトのフォルダーが提供されます。詳しくは、 [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+
 
 ## アプリルート{#app-routes}
 
@@ -198,7 +206,7 @@ function ExtensionRegistration() {
 1. 新しく生成され、アップロードされた画像のAEMアセットの詳細リンクを提供する、画像生成操作の応答。
 
 重要な点は、拡張機能からAEMとのインタラクションはすべて、 [AppBuilder Adobe I/O Runtimeアクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)：で実行される個別のサーバーレスプロセスです。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-AEMとの通信にAdobe I/O Runtimeアクションを使用することは、クロスオリジンリソース共有 (CORS) 接続の問題を回避することです。
+AEMとの通信にAdobe I/O Runtimeアクションを使用することで、クロスオリジンリソース共有 (CORS) 接続の問題を回避します。
 
 次の場合に _画像を生成_ フォームが送信され、カスタム `onSubmitHandler()` 画像の説明、現在のAEMホスト（ドメイン）およびユーザーのAEMアクセストークンを渡して、Adobe I/O Runtimeアクションを呼び出します。 次に、このアクションが OpenAI の [画像の生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 送信された画像の説明を使用して画像を生成する API。 次の使用 [AEM Upload](https://github.com/adobe/aem-upload) ノードモジュール `DirectBinaryUpload` クラス生成された画像をAEMにアップロードし、最終的にを使用します。 [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) をクリックして、コンテンツフラグメントを更新します。
 
@@ -458,6 +466,11 @@ export default function GenerateImageModal() {
   }
 }
 ```
+
+>[!NOTE]
+>
+>内 `buildAssetDetailsURL()` 関数 `aemAssetdetailsURL` 変数値は、 [統合シェル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) が有効になっている。 統合シェルを無効にした場合は、 `/ui#/aem` を変数値から取得します。
+
 
 ## Adobe I/O Runtime action
 
