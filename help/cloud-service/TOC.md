@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '897'
 ht-degree: 27%
 
 ---
@@ -92,6 +92,11 @@ ht-degree: 27%
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
+   + 迅速な開発環境{#rde}
+      + [概要](./developing/rde/overview.md)
+      + [設定方法](./developing/rde/how-to-setup.md)
+      + [使用方法](./developing/rde/how-to-use.md)
+      + [開発ライフサイクル](./developing/rde/development-life-cycle.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + デバッグAEM{#debugging}
    + AEM SDK のデバッグ{#debugging-aem-sdk}
