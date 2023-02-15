@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 14%
@@ -28,15 +28,14 @@ AEM as a Cloud Serviceの Rapid Development Environment(RDE) について説明�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3414128/?quality=12&learn=on)
 
-## その他のリソース
+## 次のステップ
 
+学ぶ [設定方法](./how-to-setup.md) AEM as a Cloud Serviceの RDE
+
+## その他のリソース
 
 [RDE ドキュメントの概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
 [Cloud Manager CI／CD パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 
 [開発 IDE の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja)
-
-## 次のステップ
-
-学ぶ [設定方法](./how-to-setup.md) AEM as a Cloud Serviceの RDE

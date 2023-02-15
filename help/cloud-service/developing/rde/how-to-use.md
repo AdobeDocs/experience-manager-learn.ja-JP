@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 5%
@@ -31,6 +31,11 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491/?quality=12&learn=on)
 
+## 次のステップ
+
+詳しくは、 [RDE を使用した開発/デプロイメントのライフサイクル](./development-life-cycle.md) 機能を高速で提供する。
+
+
 ## その他のリソース
 
 [RDE コマンドドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
@@ -38,7 +43,3 @@ ht-degree: 5%
 [Adobe I/O Runtime CLI プラグイン (AEM Rapid Development Environments とのやり取り用 )](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM Project setup](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja)
-
-## 次のステップ
-
-詳しくは、 [RDE を使用した開発/デプロイメントのライフサイクル](./development-life-cycle.md) 機能を高速で提供する。
