@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 674407637c475ea9b70ecbc81f9e9bfece0fe9df
+source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '202'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 3%
 
 ## その他のリソース
 
-
 [プログラムドキュメントでの RDE の有効化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
 
 の設定 [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 別名 `aio CLI`
@@ -42,3 +41,7 @@ ht-degree: 3%
 [Adobe I/O Runtime CLI プラグイン (AEM Rapid Development Environments とのやり取り用 )](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [Cloud Manager AIO CLI プラグイン](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+
+## 次のステップ
+
+学ぶ [使用方法](./how-to-use.md) お気に入りの統合開発環境 (IDE) からコードとコンテンツをデプロイして、開発サイクルを高速化する RDE です。
