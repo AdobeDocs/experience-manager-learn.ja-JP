@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -35,16 +35,16 @@ ht-degree: 1%
 
 のクローン [WKND サイト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) プロジェクトを開き、お気に入りの IDE で開いて、AEMアーティファクトを RDE にデプロイします。
 
-    &quot;&#39;シェル
-    $ git clone git@github.com:adobe/aem-guides-wknd.git
-    &quot;&#39;
+```shell
+$ git clone git@github.com:adobe/aem-guides-wknd.git
+```
 
 次に、次の maven コマンドを実行して、ビルドし、ローカルのAEM-SDK にデプロイします。
 
-    &quot;&#39;
-    $ cd aem-guides-wknd/
-    $ mvn clean install -PautoInstallSinglePackage
-    &quot;&#39;
+```
+$ cd aem-guides-wknd/
+$ mvn clean install -PautoInstallSinglePackage
+```
 
 ## AEM-RDE プラグインを使用したAEMアーティファクトのデプロイ
 
@@ -54,13 +54,13 @@ ht-degree: 1%
 
 一般的な出発点は、最初に `all` および `dispatcher` 次のコマンドを実行してパッケージを作成します。
 
-    &quot;&#39;シェル
-    # &#39;all&#39;パッケージをインストール
-    $ aem:rde:all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip をインストールします。
-    
-    # &#39;dispatcher&#39; zip をインストールします
-    $ aem:rde:dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip をインストールします。
-    &quot;&#39;
+```shell
+# Install the 'all' package
+$ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
+
+# Install the 'dispatcher' zip
+$ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
+```
 
 デプロイメントが成功したら、オーサーサービスとパブリッシュサービスの両方で WKND サイトを検証します。 WKND サイトページ上のコンテンツを追加、編集して公開できるはずです。
 
@@ -118,9 +118,9 @@ ht-degree: 1%
 
 上記の個々のファイルデプロイメントコマンドの例では、 `-t` および `-p` フラグは、それぞれ JCR パスのタイプと宛先を示すために使用されます。 利用可能な `install` コマンドオプションを使用するには、次のコマンドを実行します。
 
-    &quot;&#39;シェル
-    $ aem:rde:install —help
-    &quot;&#39;
+```shell
+$ aio aem:rde:install --help
+```
 
 フラグは自明で、 `-s` フラグは、オーサーサービスまたはパブリッシュサービスだけにデプロイメントのターゲットを設定する場合に役立ちます。 以下を使用： `-t` デプロイ時のフラグ **content-file または content-xml** ファイルを `-p` フラグを設定して、AEM RDE 環境での宛先 JCR パスを指定します。
 
@@ -155,15 +155,15 @@ OSGi バンドルのデプロイ方法について詳しくは、 `HelloWorldMod
 
 個々の設定ファイルをデプロイするか、設定パッケージ全体をデプロイできます。次に例を示します。
 
-    &quot;&#39;シェル
-    #個々の設定ファイルをデプロイ
-    $ aem:rde:ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.commons.log.LogManager.factory.config～wknd.cfg.json をインストールします。
-    
-    #または設定パッケージ全体をデプロイします
-    $ cd ui.config
-    $ mvn クリーンパッケージ
-    $ aem:rde:target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip をインストールします。
-    &quot;&#39;
+```shell
+# Deploy individual config file
+$ aio aem:rde:install ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.commons.log.LogManager.factory.config~wknd.cfg.json
+
+# Or deploy the complete config package
+$ cd ui.config
+$ mvn clean package
+$ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
+```
 
 >[!TIP]
 >
@@ -202,21 +202,21 @@ Apache または Dispatcher の設定ファイル **個別にデプロイする�
 
 ローカルマシンから RDE を管理および操作する、追加のAEM RDE プラグインコマンドを確認します。
 
-    &quot;&#39;シェル
-    $ aio aem:rde —help
-    RapidDev 環境とやり取りする。
-    
-    使用方法
-    $ aio aem rde コマンド
-    
-    コマンド
-    aem rde 現在の rde からバンドルと設定を削除します。
-    aem rde history 現在の rde に対しておこなわれた更新のリストを取得します。
-    aem rde インストール/アップデートバンドル、設定および content-packages をインストールします。
-    aem rde reset RDE をリセット
-    aem rde restart RDE のオーサーとパブリッシュを再起動します。
-    aem rde ステータス現在の rde にデプロイされたバンドルと設定のリストを取得します。
-    &quot;&#39;
+```shell
+$ aio aem:rde --help
+Interact with RapidDev Environments.
+
+USAGE
+$ aio aem rde COMMAND
+
+COMMANDS
+aem rde delete   Delete bundles and configs from the current rde.
+aem rde history  Get a list of the updates done to the current rde.
+aem rde install  Install/update bundles, configs, and content-packages.
+aem rde reset    Reset the RDE
+aem rde restart  Restart the author and publish of an RDE
+aem rde status   Get a list of the bundles and configs deployed to the current rde.
+```
 
 上記のコマンドを使用すると、お気に入りの IDE から RDE を管理して、開発/デプロイメントのライフサイクルを迅速に実行できます。
 

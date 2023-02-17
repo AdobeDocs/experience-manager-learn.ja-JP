@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '492'
 ht-degree: 4%
 
 ---
@@ -45,19 +45,19 @@ ht-degree: 4%
 
 Adobe I/O Runtime Extensible CLI( `aio CLI` 次のコマンドをコマンドラインから実行します。
 
-    &quot;&#39;シェル
-    $ npm install -g @adobe/aio-cli
-    &quot;&#39;
+```shell
+$ npm install -g @adobe/aio-cli
+```
 
 ### AEM plugins
 
 を使用して、Cloud Manager およびAEM RDE プラグインをインストールします。 `aio cli`&#39;s `plugins:install` コマンドを使用します。
 
-    &quot;&#39;シェル
-    $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
-    
-    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
-    &quot;&#39;
+```shell
+$ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+$ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+```
 
 Cloud Manager プラグインを使用すると、開発者はコマンドラインから Cloud Manager を操作できます。
 
@@ -91,23 +91,23 @@ AEMプラグインは、RDE とやり取りするように設定する必要が�
 
 次のコマンドを実行して、現在の設定値を確認できます。
 
-    &quot;&#39;シェル
-    $ aio config:list
-    &quot;&#39;
+```shell
+$ aio config:list
+```
 
 また、現在ログインしている組織を切り替えたり、把握したりするには、次のコマンドを使用します。
 
-    &quot;&#39;シェル
-    $ aio は、
-    &quot;&#39;
+```shell
+$ aio where
+```
 
 ## RDE アクセスの検証
 
 次のコマンドを実行して、AEM RDE プラグインのインストールと設定を確認します。
 
-    &quot;&#39;シェル
-    $ aem:rde:ステータス
-    &quot;&#39;
+```shell
+$ aio aem:rde:status
+```
 
 RDE のステータス情報は、環境ステータスや _AEMプロジェクト_ オーサーサービスとパブリッシュサービスのバンドルと設定。
 
