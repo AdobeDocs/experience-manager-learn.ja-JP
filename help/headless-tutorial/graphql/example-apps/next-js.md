@@ -1,6 +1,6 @@
 ---
 title: Next.js - AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Next.js アプリケーションは、永続化されたクエリを使用し、AEM GraphQL API を使用してコンテンツをクエリする方法を示します。
+description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Next.js アプリケーションは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示しています。
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -10,16 +10,16 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '806'
 ht-degree: 2%
 
 ---
 
 # Next.js アプリ
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Next.js アプリケーションは、永続化されたクエリを使用し、AEM GraphQL API を使用してコンテンツをクエリする方法を示します。 JavaScript 版AEMヘッドレスクライアントは、アプリを強化する GraphQL の永続クエリを実行するために使用されます。
+アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Next.js アプリケーションは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示しています。 AEM Headless Client for JavaScript は、アプリを強化するGraphQLの永続クエリを実行するために使用されます。
 
 ![AEMヘッドレスを備えた Next.js アプリ](./assets/next-js/next-js.png)
 
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ## AEM要件
 
-Next.js アプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントに必要 [WKND Shared v2.1.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest), [WKND サイト v2.1.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)、または [参照デモアドオン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html) をAEMas a Cloud Service環境にインストールする。
+Next.js アプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントに必要 [WKND Shared v2.1.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) または [WKND サイト v2.1.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をAEMas a Cloud Service環境にインストールする。
 
 この例の Next.js アプリは、 __AEM パブリッシュ__ サービス。
 
@@ -80,21 +80,13 @@ Next.js は、 __AEM パブリッシュ__ 保護されていないコンテン�
    AEM_AUTH_DEV_TOKEN=my-dev-token
    ```
 
-1. を編集します。 `aem-guides-wknd-graphql/next-js/.env.local` ファイルと検証  `NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT` が適切なAEM GraphQL エンドポイントに設定されている。
+1. を編集します。 `aem-guides-wknd-graphql/next-js/.env.local` ファイルと検証  `NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT` が適切なAEM GraphQLエンドポイントに設定されている。
 
    を使用する場合 [WKND 共有](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) または [WKND サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)、 `wknd-shared` GraphQL API エンドポイント。
 
    ```plain
    ...
    NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT=wknd-shared
-   ...
-   ```
-
-   を使用する場合 [参照デモアドオン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html)、 `aem-demo-assets` GraphQL API エンドポイント。
-
-   ```plain
-   ...
-   NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT=aem-demo-assets
    ...
    ```
 
@@ -111,11 +103,11 @@ Next.js は、 __AEM パブリッシュ__ 保護されていないコンテン�
 
 ## コード
 
-Next.js アプリの構築方法、AEMヘッドレスに接続して GraphQL の永続クエリを使用してコンテンツを取得する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
+Next.js アプリの構築方法、GraphQLで保持されたクエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
 
 ### 永続クエリ
 
-AEMヘッドレスベストプラクティスに従い、Next.js アプリはAEM GraphQL に永続化されたクエリを使用してアドベンチャーデータをクエリします。 アプリでは、次の 2 つの永続クエリを使用します。
+AEMヘッドレスのベストプラクティスに従い、Next.js アプリはAEM GraphQLで永続的なクエリを使用してアドベンチャーデータをクエリします。 アプリでは、次の 2 つの永続クエリを使用します。
 
 + `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
 
@@ -198,13 +190,13 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL 永続クエリを実行
+### GraphQL永続クエリの実行
 
-AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js) は [永続化された GraphQL クエリの実行](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEMに対して貼り付け、アドベンチャーコンテンツをアプリに読み込みます。
+AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js) は [永続的なGraphQLクエリの実行](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEMに対して貼り付け、アドベンチャーコンテンツをアプリに読み込みます。
 
-永続化された各クエリは、 `src/lib//aem-headless-client.js`を呼び出してAEM GraphQL エンドポイントを返します。
+永続化された各クエリは、 `src/lib//aem-headless-client.js`を呼び出してAEM GraphQLエンドポイントを返します。
 
-次に、各関数が `aemHeadlessClient.runPersistedQuery(...)`に設定され、永続化された GraphQL クエリを実行します。
+次に、各関数が `aemHeadlessClient.runPersistedQuery(...)`に設定し、永続化されたGraphQLクエリを実行します。
 
 ```js
 // src/lib/aem-headless-client.js
@@ -247,7 +239,7 @@ Next.js アプリは、アドベンチャーデータを提示するために 2 
 
    A [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes) 1 つの冒険の詳細を示す この動的ルートは、 [Next.js の getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) ～への呼び出しを通じて `getAdventureBySlug(..)` の使用 `slug` アドベンチャー選択経由で渡されるパラメーター `adventures/index.js` ページ。
 
-   動的ルートは、 [Next.js の getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) とは、GraphQL クエリが返す冒険の完全なリストに基づいて、可能なすべてのルート順列を生成します。  `getAdventurePaths()`
+   動的ルートは、 [Next.js の getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) GraphQLクエリが返す冒険の完全なリストに基づいて、可能なすべてのルート順列を生成する  `getAdventurePaths()`
 
    の使用 `getStaticPaths()` および `getStaticProps(..)` では、これらの Next.js ページの静的サイト生成が許可されていました。
 

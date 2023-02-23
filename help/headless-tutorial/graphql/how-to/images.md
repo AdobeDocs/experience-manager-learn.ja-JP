@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1177'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 画像は、 [豊富で魅力的なAEMヘッドレスエクスペリエンスの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja). AEMヘッドレスは、画像アセットの管理と、その最適化された配信をサポートします。
 
-AEMヘッドレスコンテンツモデリングで使用されるコンテンツフラグメントは、多くの場合、ヘッドレスエクスペリエンスでの表示を目的とした画像アセットを参照します。 AEM GraphQL クエリを記述して、画像の参照元に基づいて画像に URL を提供できます。
+AEMヘッドレスコンテンツモデリングで使用されるコンテンツフラグメントは、多くの場合、ヘッドレスエクスペリエンスでの表示を目的とした画像アセットを参照します。 AEM GraphQLクエリを記述して、画像の参照元に基づいて画像に URL を提供できます。
 
 この `ImageRef` タイプにはコンテンツ参照用の 3 つの URL オプションがあります。
 
@@ -38,7 +38,7 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
-の使用 `_authorUrl` および `_publishUrl` は、GraphQL 応答のソースに使用されるAEM GraphQL エンドポイントと一致する必要があります。
+の使用 `_authorUrl` および `_publishUrl` は、GraphQL応答のソースに使用されているAEM GraphQLエンドポイントと一致する必要があります。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -53,9 +53,9 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 ![画像へのコンテンツ参照を含むコンテンツフラグメントモデル](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL 永続クエリ
+## GraphQL永続クエリ
 
-GraphQL クエリで、フィールドを `ImageRef` 適切なフィールドを入力し、リクエストします。 `_path`, `_authorUrl`または `_publishUrl` アプリケーションで必要です。 例えば、 [WKND 参照デモプロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
+GraphQLクエリで、フィールドを `ImageRef` 適切なフィールドを入力し、リクエストします。 `_path`, `_authorUrl`または `_publishUrl` アプリケーションで必要です。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
 
 ```graphql
 query ($path: String!) {
@@ -76,7 +76,7 @@ query ($path: String!) {
 
 この `$path` 変数 `_path` フィルターにはコンテンツフラグメントへの完全パスが必要です ( 例： `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`) をクリックします。
 
-## GraphQL の応答
+## GraphQL応答
 
 結果の JSON 応答には、画像アセットへの URL を含むリクエストされたフィールドが含まれます。
 
@@ -170,9 +170,9 @@ AEM Assets管理者は、処理プロファイルを使用してカスタムレ�
 
 {style=&quot;table-layout:auto&quot;}
 
-### GraphQL クエリ{#renditions-graphl-query}
+### GraphQLクエリ{#renditions-graphl-query}
 
-AEM GraphQL では、画像レンディションを要求するための追加の構文が必要です。 代わりに [画像に対する問い合わせ](#images-graphql-query) 通常の方法で、目的のレンディションをコード内で指定します。 ～することが重要である。 [ヘッドレスアプリケーションで使用される画像アセットに同じ名前のレンディションがあることを確認する](#reprocess-assets).
+AEM GraphQLでは、画像レンディションを要求するために追加の構文が必要です。 代わりに [画像に対する問い合わせ](#images-graphql-query) 通常の方法で、目的のレンディションをコード内で指定します。 ～することが重要である。 [ヘッドレスアプリケーションで使用される画像アセットに同じ名前のレンディションがあることを確認する](#reprocess-assets).
 
 ### React の例
 
@@ -184,7 +184,7 @@ AEM GraphQL では、画像レンディションを要求するための追加�
 
 画像をレンダリングする React コンポーネントを作成します。 このコンポーネントは、次の 4 つのプロパティを受け入れます。
 
-+ `assetUrl`:GraphQL クエリの応答で提供される画像アセットの URL。
++ `assetUrl`:GraphQLクエリの応答で指定された画像アセットの URL。
 + `renditionName`:読み込むレンディションの名前。
 + `renditionExtension`:読み込むレンディションの拡張。
 + `alt`:画像の代替テキスト。アクセシビリティが重要です。

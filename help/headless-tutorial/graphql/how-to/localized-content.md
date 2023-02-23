@@ -1,6 +1,6 @@
 ---
 title: AEMヘッドレスでのローカライズされたコンテンツの使用
-description: GraphQL を使用して、ローカライズされたコンテンツをAEMに問い合わせる方法を説明します。
+description: GraphQLを使用して、ローカライズされたコンテンツをAEMに問い合わせる方法を説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 2%
+source-wordcount: '508'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ AEMでローカライズされたコンテンツフラグメントが [推奨位
 
 ロケールフォルダーは兄弟である必要があり、フォルダー名は title ではなく、有効な名前である必要があります [ISO 639-1 コード](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) フォルダーに含まれるコンテンツのロケールを表します。
 
-ロケールコードは、GraphQL クエリによって返されるコンテンツフラグメントのフィルタリングにも使用される値です。
+ロケールコードは、GraphQLクエリによって返されるコンテンツフラグメントのフィルタリングにも使用される値です。
 
 | ロケールコード | AEM path | コンテンツのロケール |
 |--------------------------------|----------|----------|
@@ -36,9 +36,9 @@ AEMでローカライズされたコンテンツフラグメントが [推奨位
 | en | /content/dam/.../**en**/... | 英語コンテンツ |
 | es | /content/dam/.../**es**/... | スペイン語コンテンツ |
 
-## GraphQL 永続クエリ
+## GraphQL永続クエリ
 
-AEMが `_locale` ロケールコードでコンテンツを自動的にフィルタリングする GraphQL フィルター。 例えば、 [WKND 参照デモプロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
+AEMが `_locale` ロケールコードでコンテンツを自動的にフィルタリングするGraphQLフィルター。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
 
 ```graphql
 query($locale: String!) {
@@ -84,7 +84,7 @@ export default LocaleContext;
 
 次に、 [LocaleContext の](#locale-context) の値をユーザーの選択範囲に追加します。
 
-このロケール値は、GraphQL クエリを実行し、選択したロケールに一致するコンテンツのみを返すようにするために使用されます。
+このロケール値は、GraphQLクエリを実行し、選択したロケールに一致するコンテンツのみを返すようにするために使用されます。
 
 ```javascript
 // src/LocaleSwitcher.js
@@ -112,7 +112,7 @@ Adventures コンポーネントは、ロケール別にすべての冒険をAEM
 
 この方法は、アプリケーション内の他のクエリに拡張でき、すべてのクエリにユーザーのロケール選択で指定された内容のみが含まれるようにします。
 
-AEMに対するクエリは、カスタム React フックで実行されます。 [getAdventuresByLocale(AEM GraphQL のクエリに関するドキュメントの詳細で説明 )](./aem-headless-sdk.md).
+AEMに対するクエリは、カスタム React フックで実行されます。 [getAdventuresByLocale(AEM GraphQLのクエリに関するドキュメントで詳しく説明 )](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js
