@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 643a9844f19aa1bd153661540ec7f7398a35118e
+source-git-commit: 40679e80fd9270dd9fad8174a986fd1fdd5e3d29
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 1%
@@ -100,7 +100,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## 入力マッピング
 
-JWT 秘密鍵証明書の値を `.env` ファイルにマッピングする場合は、AppBuilder のアクション入力にマッピングし、アクション自体で読み取れるようにする必要があります。 これをおこなうには、 `ext.config.yaml` アクション `inputs` を次の形式で指定します。 `INPUT_NAME=$ENV_KEY`.
+JWT 秘密鍵証明書の値を `.env` ファイルにマッピングする場合は、AppBuilder のアクション入力にマッピングし、アクション自体で読み取れるようにする必要があります。 これをおこなうには、 `ext.config.yaml` アクション `inputs` を次の形式で指定します。 `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 次に例を示します。
 
