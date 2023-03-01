@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation チュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: de9377236016066cc62819f1c307aac82331a0b6
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '225'
 ht-degree: 16%
 
 ---
@@ -22,7 +22,8 @@ ht-degree: 16%
    + [システム概要ダッシュボードの使用](./administration/use-the-system-overview-dashboard.md)
    + [URL リダイレクト](./administration/url-redirection.md)
 + 認証 {#authentication}
-   + [OAuth 認証](authentication/oauth-code-sample-develop.md)
+   + [OKTA とAEM](authentication/okta-saml-integration.md)
+   + [OAuth スコープ](authentication/oauth-code-sample-develop.md)
    + [Adobe I/Oで使用する公開鍵/秘密鍵の設定](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [認証について](authentication/authentication-support-article-understand.md)
    + [AMS での IMS 認証について](authentication/adobe-ims-authentication-technical-video-understand.md)
