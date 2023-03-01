@@ -12,7 +12,7 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
+source-git-commit: 772acab316ba2ff463fa5cacff02013bea920579
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 基本的な Next.js アプリ
 
-この [Next.js](https://nextjs.org/) アプリでは、持続クエリを使用してAEM GraphQL API を使用してコンテンツをクエリする方法を示します。 このアプリケーションは、WKND Adventures のフィルタリング可能なをレンダリングし、アドベンチャーを選択すると、アドベンチャーの詳細を表示します。
+この [Next.js](https://nextjs.org/) アプリでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。 このアプリケーションは、WKND Adventures のフィルタリング可能なをレンダリングし、アドベンチャーを選択すると、アドベンチャーの詳細を表示します。
 
 このコード：
 
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Codesandbox.io は、埋め込み IDE での Next.js アプリケーションの編集をサポートしていません。 このコードサンプルを編集するには、 [codesandbox.io で Next.js アプリを直接開きます。](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
+> Codesandbox.io は、埋め込み IDE での Next.js アプリケーションの編集をサポートしていません。 このコードサンプルを編集するには、 [codesandbox.io で Next.js アプリを直接開きます。](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
