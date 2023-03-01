@@ -35,7 +35,7 @@ ht-degree: 3%
    + [アダプティブフォームのトリガーワークフロー](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [「ありがとうございます」ページの表示](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [外部エンドポイントに送信中](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
-   + [電子メールの送信](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+   + [メールの送信](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [有料オフリクエストワークフロー](handling-form-submissions/paid-time-off-request-workflow.md)
    + [AEM Workflow へのアダプティブフォームのトリガー — ビデオ](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [タスクの割り当て通知のカスタマイズ](handling-form-submissions/customize-assign-task-notification.md)
