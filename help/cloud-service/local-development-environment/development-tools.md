@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1502'
 ht-degree: 4%
 
 ---
@@ -121,6 +121,7 @@ Apache Maven は、AEM Project Maven アーキタイプから生成されたAEM�
 
 + AEM as a Cloud Servicesサービスからのテールログ
 + CLI からの Cloud Manager パイプラインの管理
++ デプロイ先 [AEMの迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
 ### Adobe I/OCLI のインストール
 
@@ -134,13 +135,7 @@ Adobe I/OCloud Manager プラグインを使用すると、aio CLI は、 `aio c
 
 1. 実行 `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` をインストールするには、 [aio Cloud Manager プラグイン](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-### Adobe I/OCLIAsset computeプラグインの設定{#aio-asset-compute}
-
-Adobe I/OCloud Manager プラグインを使用すると、aio CLI で、 `aio asset-compute` コマンドを使用します。
-
-1. 実行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` をインストールするには、 [aioAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute).
-
-### Adobe I/OCLI 認証の設定
+#### Adobe I/OCLI 認証の設定
 
 Adobe I/OCLI が Cloud Manager と通信するために、 [Cloud Manager 統合は、Adobe I/Oコンソールで作成する必要があります](https://github.com/adobe/aio-cli-plugin-cloudmanager)認証を正常におこなうには、および資格情報を取得する必要があります。
 
@@ -158,6 +153,19 @@ Adobe I/OCLI が Cloud Manager と通信するために、 [Cloud Manager 統合
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 開始 [コマンドの実行](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) Adobe I/OCLI を介して Cloud Manager の
+
+### AEM Rapid Development Environment プラグインの設定{#rde}
+
+AEM Rapid Development Environment プラグインを使用すると、aio CLI とAEM as a Cloud Serviceの間のやり取りが可能になります [迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) 経由 `aio aem:rde` コマンドを使用します。
+
+1. 実行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` をインストールするには、 [AEM Rapid Development Environments プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde).
+
+### Adobe I/OCLIAsset computeプラグインの設定{#aio-asset-compute}
+
+Adobe I/OCloud Manager プラグインを使用すると、aio CLI で、 `aio asset-compute` コマンドを使用します。
+
+1. 実行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` をインストールするには、 [aioAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute).
+
 
 ## 開発 IDE の設定
 
