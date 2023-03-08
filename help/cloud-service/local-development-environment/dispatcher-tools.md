@@ -10,9 +10,9 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2022-09-01T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 370e15fdd96f1c33bc50ee72066381bec40d82c3
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1593'
 ht-degree: 3%
 
 ---
@@ -23,17 +23,18 @@ ht-degree: 3%
 >id="aemcloud_localdev_dispatcher"
 >title="ローカル Dispatcher ツール"
 >abstract="Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。 AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMas a Cloud ServiceSDK のダウンロード"
 
 Adobe Experience Manager(AEM) の Dispatcher は、CDN と AEM パブリッシュ層の間にセキュリティとパフォーマンスの層を提供する Apache HTTP Web サーバーモジュールです。 Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。
 
 AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。 Dispatcher ツールは、次の要素で構成されます。
 
-+ Apache HTTP Web サーバーと Dispatcher 設定ファイルのベースラインセット。以下の場所にあります。 `.../dispatcher-sdk-x.x.x/src`
++ Apache HTTP Web サーバーと Dispatcher 設定ファイルのベースラインセット（以下の場所にあります） `.../dispatcher-sdk-x.x.x/src`
 + 次の場所にある設定バリデーター CLI ツール `.../dispatcher-sdk-x.x.x/bin/validate`
 + 次の場所にある設定生成 CLI ツール `.../dispatcher-sdk-x.x.x/bin/validator`
 + 次の場所にある構成導入 CLI ツール `.../dispatcher-sdk-x.x.x/bin/docker_run`
++ 不変構成ファイル上書き CLI ツール ( `.../dispatcher-sdk-x.x.x/bin/update_maven`
 + Dispatcher モジュールで Apache HTTP Web サーバーを実行する Docker イメージ
 
 注意： `~` は、ユーザーのディレクトリの略記法として使用されます。 Windows の場合、これは `%HOMEPATH%`.
@@ -46,12 +47,14 @@ AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージ�
 
 1. Windows ユーザーは、Windows 10 Professional （または Docker をサポートするバージョン）を使用する必要があります
 1. インストール [Experience Manager公開クイックスタート JAR](./aem-runtime.md) ローカルの開発マシン上で
-   + （オプション）最新のをインストールする [AEMリファレンス Web サイト](https://github.com/adobe/aem-guides-wknd/releases) ローカルの AEM パブリッシュサービスで、 この Web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
+
++ （オプション）最新のをインストールする [AEMリファレンス Web サイト](https://github.com/adobe/aem-guides-wknd/releases) ローカルの AEM パブリッシュサービスで、 この Web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
+
 1. 最新バージョンのをインストールして起動する [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5 以降/Docker Engine v19.03.9以降 ) をローカル開発マシンに搭載している。
 
 ## Dispatcher ツールのダウンロード (AEM SDK の一部として )
 
-AEMas a Cloud ServiceSDK(AEM SDK) には、開発用に Dispatcher モジュールで Apache HTTP Web サーバーをローカルで実行するための Dispatcher ツールと、互換性のある QuickStart Jar が含まれています。
+AEMas a Cloud ServiceSDK(AEM SDK) には、開発用に Dispatcher モジュールを使用して Apache HTTP Web サーバーをローカルで実行するための Dispatcher ツールと、互換性のある QuickStart Jar が含まれています。
 
 AEMas a Cloud ServiceSDK が既に [ローカルAEMランタイムの設定](./aem-runtime.md)を再度ダウンロードする必要はありません。
 
@@ -63,17 +66,18 @@ AEMas a Cloud ServiceSDK が既に [ローカルAEMランタイムの設定](./a
 
 >[!TIP]
 >
-> Windows ユーザーは、ローカル Dispatcher ツールを含むフォルダーへのパスにスペースや特殊文字を含めることはできません。 パスにスペースが存在する場合、 `docker_run.cmd` 失敗します。
+> Windows ユーザーは、ローカル Dispatcher ツールを含むフォルダーへのパスにスペースや特殊文字を含めることはできません。 パスにスペースが存在する場合、 `docker_run.cmd` 失敗しました。
 
-Dispatcher ツールのバージョンは、AEM SDK のバージョンとは異なります。 AEM as a Cloud Serviceのバージョンと一致するAEM SDK バージョンを介して、Dispatcher ツールのバージョンが提供されていることを確認します。
+Dispatcher ツールのバージョンは、AEM SDK のバージョンとは異なります。 AEM as a Cloud Serviceのバージョンと一致するAEM SDK のバージョンを介して、Dispatcher ツールのバージョンが提供されていることを確認します。
 
 1. ダウンロードしたを解凍します。 `aem-sdk-xxx.zip` ファイル
 1. Dispatcher ツールを解凍します。 `~/aem-sdk/dispatcher`
-   + Windows の場合：解凍 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` into `C:\Users\<My User>\aem-sdk\dispatcher` （必要に応じて、見つからないフォルダを作成します）
-   + macOS/Linux:付属のシェルスクリプトを実行します `aem-sdk-dispatcher-tools-x.x.x-unix.sh` Dispatcher ツールを解凍します。
-      + `chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
 
-以下で発行されるすべてのコマンドは、現在の作業ディレクトリに拡張されている Dispatcher ツールの内容が含まれていることを前提としています。
++ Windows の場合：解凍 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` into `C:\Users\<My User>\aem-sdk\dispatcher` （必要に応じて、見つからないフォルダを作成します）
++ macOS Linux®:付属のシェルスクリプトを実行します `aem-sdk-dispatcher-tools-x.x.x-unix.sh` Dispatcher ツールを解凍します。
+   + `chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
+
+以下に示すすべてのコマンドは、現在の作業ディレクトリに拡張する Dispatcher ツールの内容が含まれていることを前提としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
@@ -92,11 +96,11 @@ Dispatcher ツールは、ローカル開発を含むすべての環境の動作
 
 ## 設定を検証
 
-オプションで、Dispatcher および Apache Web サーバー設定 ( `httpd -t`) は、 `validate` スクリプト ( `validator` 実行可能 )。 この `validate` スクリプトを使用すると、 [3 フェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/validation-debug.html?lang=en#local-validation-flexible-mode) の `validator`.
+オプションで、Dispatcher および Apache Web サーバー設定 ( `httpd -t`) は、 `validate` スクリプト ( `validator` 実行可能 )。 この `validate` スクリプトを使用すると、 [三相](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) の `validator`.
 
 + 使用方法:
    + Windows：`bin\validate src`
-   + macOS/Linux: `./bin/validate.sh ./src`
+   + macOS Linux®: `./bin/validate.sh ./src`
 
 ## Dispatcher をローカルで実行する
 
@@ -104,16 +108,16 @@ AEM Dispatcher は、Docker を使用して、 `src` Dispatcher および Apache
 
 + 使用方法:
    + Windows：`bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-   + macOS/Linux: `./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
+   + macOS Linux®: `./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
 
-この `<aem-publish-host>` に設定できます。 `host.docker.internal`:Docker がコンテナで提供する、ホストマシンの IP に解決される特別な DNS 名。 もし彼が `host.docker.internal` が解決されない場合は、 [トラブルシューティング](#troubleshooting-host-docker-internal) 」の節を参照してください。
+この `<aem-publish-host>` に設定できます。 `host.docker.internal`:Docker がコンテナで提供する、ホストマシンの IP に解決される特別な DNS 名。 この `host.docker.internal` が解決されない場合は、 [トラブルシューティング](#troubleshooting-host-docker-internal) 」の節を参照してください。
 
 例えば、Dispatcher ツールが提供するデフォルトの設定ファイルを使用して Dispatcher Docker コンテナを起動するには、次のようにします。
 
 Dispatcher 設定の src フォルダーへのパスを指定する、Dispatcher Docker コンテナを起動します。
 
 + Windows：`bin\docker_run src host.docker.internal:4503 8080`
-+ macOS/Linux: `./bin/docker_run.sh ./src host.docker.internal:4503 8080`
++ macOS Linux®: `./bin/docker_run.sh ./src host.docker.internal:4503 8080`
 
 ポート 4503 でローカルに実行されるAEMas a Cloud ServiceSDK のパブリッシュサービスは、Dispatcher を通じて次の場所で使用できます。 `http://localhost:8080`.
 
@@ -125,7 +129,7 @@ Experience Managerプロジェクトの Dispatcher 設定に対して Dispatcher
    $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
    ```
 
-+ macOS/Linux:
++ macOS Linux®:
 
    ```shell
    $ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
@@ -151,15 +155,15 @@ Dispatcher のデバッグに役立つパラメーターは次のとおりです
 
 + Windows：
 
-   ```shell
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
-   ```
+```shell
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
 
-+ macOS/Linux:
++ macOS Linux®:
 
-   ```shell
-   $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
-   ```
+```shell
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
 
 ### ログファイルへのアクセス
 
@@ -178,28 +182,85 @@ Dispatcher ツールのバージョンは、Experience Managerよりも増分の
 
 ![Experience Managerバージョン](./assets/dispatcher-tools/aem-version.png)
 
-_Dispatcher ツールのバージョン自体は、バージョンのバージョンと一致しないことに注意してください。Experience Managerのバージョンは、_
+*Dispatcher ツールのバージョンは、バージョンのバージョンとは一致しないことに注意してください。Experience Managerのバージョンは一致しません。*
+
+## Apache および Dispatcher 設定のベースラインセットを更新する方法
+
+Apache および Dispatcher 設定のベースラインセットは、AEMas a Cloud ServiceSDK バージョンで定期的に拡張され、リリースされています。 ベストプラクティスは、ベースライン設定の機能強化をAEMプロジェクトに組み込み、 [ローカル検証](#validate-configurations) と Cloud Manager のパイプラインエラー。 を使用して更新します。 `update_maven.sh` スクリプト `.../dispatcher-sdk-x.x.x/bin` フォルダー。
+
+過去に、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)を使用する場合、基本となる Apache および Dispatcher の設定が最新です。 これらのベースライン設定を使用すると、のようなファイルを再利用およびコピーすることで、プロジェクト固有の設定が作成されます。 `*.vhost`, `*.conf`, `*.farm` および `*.any` から `dispatcher/src/conf.d` および `dispatcher/src/conf.dispatcher.d` フォルダー。 ローカルの Dispatcher 検証と Cloud Manager のパイプラインは正常に動作していました。
+
+一方、新機能、セキュリティ修正、最適化など、様々な理由で、ベースラインの Apache および Dispatcher 設定が強化されました。 AEM as a Cloud Serviceリリースの一環として、新しいバージョンの Dispatcher ツールを使用してリリースされます。
+
+これで、プロジェクト固有の Dispatcher 設定を最新の Dispatcher ツールバージョンに対して検証する際に、失敗が開始します。 これを解決するには、次の手順に従ってベースライン設定を更新する必要があります。
+
++ 最新の Dispatcher ツールバージョンに対する検証が失敗することを確認する
+
+   ```shell
+   $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
+   
+   ...
+   Phase 3: Immutability check
+   empty mode param, assuming mode = 'check'
+   ...
+   ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
+   ```
+
++ を使用した不変ファイルの更新 `update_maven.sh` スクリプト
+
+   ```shell
+   $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
+   
+   ...
+   Updating dispatcher configuration at folder 
+   running in 'extract' mode
+   running in 'extract' mode
+   reading immutable file list from /etc/httpd/immutable.files.txt
+   preparing 'conf.d/available_vhosts/default.vhost' immutable file extraction
+   ...
+   immutable files extraction COMPLETE
+   fd72f4521fa838daaaf006bb8c9c96ed33a142a2d63cc963ba4cc3dd228948fe
+   Cloud manager validator 2.0.53
+   ```
+
++ 更新された不変ファイルの検証： `dispatcher_vhost.conf`, `default.vhost`、および `default.farm` 必要に応じて、カスタムファイルから派生した関連する変更をカスタムファイルに加えます。
+
++ 設定を再検証します。
+
+```shell
+$ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
+
+...
+checking 'conf.dispatcher.d/renders/default_renders.any' immutability (if present)
+checking existing 'conf.dispatcher.d/renders/default_renders.any' for changes
+checking 'conf.dispatcher.d/virtualhosts/default_virtualhosts.any' immutability (if present)
+checking existing 'conf.dispatcher.d/virtualhosts/default_virtualhosts.any' for changes
+no immutable file has been changed - check is SUCCESSFUL
+Phase 3 finished
+```
+
++ 変更のローカル検証が完了したら、更新された設定ファイルをコミットします
 
 ## トラブルシューティング
 
 ### docker_run を実行すると、「host.docker.internal が使用可能になるまで待機中」というメッセージが表示されます。{#troubleshooting-host-docker-internal}
 
-`host.docker.internal` は、ホストに解決されるを含む、Docker に提供されるホスト名です。 docs.docker.com ごと ([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host), [Windows](https://docs.docker.com/docker-for-windows/networking/)):
+この `host.docker.internal` は、ホストに解決されるを含む、Docker に提供されるホスト名です。 docs.docker.com ごと ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
 
-> Docker 18.03 以降では、ホストが使用する内部 IP アドレスに解決される特別な DNS 名 host.docker.internal に接続することをお勧めします。
+> Docker 18.03 以降では、ホストが使用する内部 IP アドレスに解決される特別な DNS 名 host.docker.internal に接続することをお勧めします
 
-場合、 `bin/docker_run src host.docker.internal:4503 8080` 結果はメッセージに含まれます __host.docker.internal が使用可能になるまで待機します__、次に、
+条件 `bin/docker_run src host.docker.internal:4503 8080` 結果はメッセージに含まれます __host.docker.internal が使用可能になるまで待機します__、次に、
 
 1. インストールされている Docker のバージョンが 18.03 以降であることを確認します。
 2. ローカルマシンが設定されていて、 `host.docker.internal` 名前。 代わりに、ローカル IP を使用します。
    + Windows：
-      + コマンドプロンプトで、を実行します。 `ipconfig`を作成し、ホストの __IPv4 アドレス__ ホストマシンの
-      + 次に、次を実行します。 `docker_run` この IP アドレスを使用する場合：
-         `bin\docker_run src <HOST IP>:4503 8080`
-   + macOS/Linux:
-      + ターミナルから、次を実行します。 `ifconfig` そしてホストを記録する __inet__ IP アドレス ( 通常は __en0__ デバイス。
-      + その後、次を実行 `docker_run` ホスト IP アドレスを使用：
-         `bin/docker_run.sh src <HOST IP>:4503 8080`
+   + コマンドプロンプトで、を実行します。 `ipconfig`を作成し、ホストの __IPv4 アドレス__ ホストマシンの
+   + 次に、次を実行します。 `docker_run` この IP アドレスを使用する場合：
+      `bin\docker_run src <HOST IP>:4503 8080`
+   + macOS Linux®:
+   + ターミナルから、次を実行します。 `ifconfig` そしてホストを記録する __inet__ IP アドレス ( 通常は __en0__ デバイス。
+   + その後、次を実行 `docker_run` ホスト IP アドレスを使用：
+      `bin/docker_run.sh src <HOST IP>:4503 8080`
 
 #### エラー例
 
