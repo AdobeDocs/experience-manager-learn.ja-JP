@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: 1c8f8d8aeee60c06c9d0d496fd86717ab8fe8295
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/clientheaders 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) を、AEM パブリッシュをサポートするすべての `dispatcher.any` ファイル。
 
 ```
-/cache { 
+/myfarm { 
   ...
   /clientheaders {
       "Access-Control-Allow-Origin"
