@@ -11,7 +11,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 7c2115945e2d62f52c777bba4d736ecd3262eecc
+source-git-commit: 2bd1b66dc28a6e591afda746e9d276cae7a29948
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 1%
@@ -184,7 +184,7 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 CORS ヘッダーのキャッシュを許可するには、次の設定を、サポートするすべての AEM パブリッシュ dispatcher.any ファイルに追加します。
 
 ```
-/cache { 
+/myfarm { 
   ...
   /headers {
       "Origin"
