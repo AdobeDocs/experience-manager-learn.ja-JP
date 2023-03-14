@@ -1,5 +1,5 @@
 ---
-title: Analytics を使用した送信済みフォームデータフィールドのAdobe
+title: Adobe Analytics
 description: AEM Forms CS とAdobe Analyticsを統合して、フォームデータフィールドに関するレポートを作成する
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
