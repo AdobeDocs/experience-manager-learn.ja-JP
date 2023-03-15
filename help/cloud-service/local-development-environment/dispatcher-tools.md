@@ -8,11 +8,11 @@ role: Developer
 level: Beginner
 kt: 4679
 thumbnail: 30603.jpg
-last-substantial-update: 2022-09-01T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 370e15fdd96f1c33bc50ee72066381bec40d82c3
+source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1612'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,7 @@ Dispatcher ツールのバージョンは、AEM SDK のバージョンとは異�
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
-*このビデオでは、macOSを参考にしています。 同様の結果を得るために、Windows/Linux の同等のコマンドを使用できます*
+*このビデオでは、macOSを参考にしています。 同様の結果を得るには、同等の Windows/Linux コマンドを使用できます。*
 
 ## Dispatcher 設定ファイルについて
 
@@ -187,6 +187,11 @@ Dispatcher ツールのバージョンは、Experience Managerよりも増分の
 ## Apache および Dispatcher 設定のベースラインセットを更新する方法
 
 Apache および Dispatcher 設定のベースラインセットは、AEMas a Cloud ServiceSDK バージョンで定期的に拡張され、リリースされています。 ベストプラクティスは、ベースライン設定の機能強化をAEMプロジェクトに組み込み、 [ローカル検証](#validate-configurations) と Cloud Manager のパイプラインエラー。 を使用して更新します。 `update_maven.sh` スクリプト `.../dispatcher-sdk-x.x.x/bin` フォルダー。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+
+*このビデオでは、macOSを参考にしています。 同様の結果を得るには、同等の Windows/Linux コマンドを使用できます。*
+
 
 過去に、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)を使用する場合、基本となる Apache および Dispatcher の設定が最新です。 これらのベースライン設定を使用すると、のようなファイルを再利用およびコピーすることで、プロジェクト固有の設定が作成されます。 `*.vhost`, `*.conf`, `*.farm` および `*.any` から `dispatcher/src/conf.d` および `dispatcher/src/conf.dispatcher.d` フォルダー。 ローカルの Dispatcher 検証と Cloud Manager のパイプラインは正常に動作していました。
 
