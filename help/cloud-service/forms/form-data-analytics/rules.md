@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -18,14 +18,18 @@ ht-degree: 0%
 
 # ルールを定義
 
-Tags プロパティで、2 つの新しい [ルール](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html)(**フィールド検証エラーとフォーム送信**) をクリックします。
+Tags プロパティで、2 つの新しい [ルール](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**フィールド検証エラーとフォーム送信**) をクリックします。
+
 ![adaptive-form](assets/rules.png)
 
 
 ## フィールド検証エラー
 
 この **フィールド検証エラー** ルールは、アダプティブフォームフィールドに検証エラーが発生するたびにトリガーされます。 例えば、電話番号や E メールが想定される形式ではない場合、検証エラーメッセージが表示されます。
+
 フィールド認証エラールールは、イベントを _**Adobe Experience Manager Forms-Error**_ スクリーンショットに示すように
+
+
 
 ![出願人の住居](assets/field_validation_error_rule.png)
 
@@ -36,6 +40,7 @@ Tags プロパティで、2 つの新しい [ルール](https://experienceleague
 ## フォーム送信ルール
 
 フォーム送信ルールは、アダプティブフォームが正常に送信されるたびにトリガーされます。
+
 フォーム送信ルールは、 _**Adobe Experience Manager Forms — 送信**_ イベント
 
 ![form-submit-rule](assets/form-submit-rule.png)

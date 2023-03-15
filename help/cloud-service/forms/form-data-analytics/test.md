@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -22,7 +22,9 @@ ht-degree: 1%
 
 ## レポートスイート
 
-Adobe Analyticsで取り込まれるフォームデータは、州別送信ドーナツ形式で表示されます
+Adobe Analyticsで取り込まれるフォームデータはドーナツ形式で表示されます
+
+**州別の送信**
 
 ![applicantbystate](assets/donut.png)
 
