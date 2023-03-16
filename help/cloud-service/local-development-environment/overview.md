@@ -14,7 +14,7 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 >title="概要"
 >abstract="AEM as a Cloud Serviceのローカル開発環境の設定には、AEM Projects の開発、ビルド、コンパイルに必要な開発ツールや、Cloud Manager を使用して新しい機能をAEMにデプロイする前に、開発者が新しい機能をローカルですばやく検証できるローカルの実行時間が含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開発の基本"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=ja" text="開発の基本"
 
 このチュートリアルでは、AEMas a Cloud ServiceSDK を使用したAdobe Experience Manager(AEM) のローカル開発環境のセットアップに関する手順を説明します。 AEM Projects の開発、ビルド、コンパイルに必要な開発ツールや、ローカルの実行時間が含まれているので、開発者は、Cloud Manager を使用してAEM as a Cloud Serviceに新しい機能をデプロイする前に、新しい機能をローカルですばやく検証できます。
 

@@ -13,7 +13,7 @@ exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="開発ツールの設定"
->abstract="Adobe Experience Manager(AEM) 開発では、開発者マシンに最小限の開発ツールのセットをインストールして設定する必要があります。 これらのツールには、Java、Maven、Adobe I/OCLI、Development IDE などが含まれます。"
+>abstract="Adobe Experience Manager（AEM）開発では、最小限の開発ツールセットを開発者のマシンにインストールして設定する必要があります。これらのツールには、Java、Maven、Adobe I/O CLI、開発 IDE などが含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開発の基本"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=ja" text="開発の基本"
 
-Adobe Experience Manager(AEM) 開発では、開発者マシンに最小限の開発ツールのセットをインストールして設定する必要があります。 これらのツールは、AEM Projects の開発と構築をサポートします。
+Adobe Experience Manager（AEM）開発では、最小限の開発ツールセットを開発者のマシンにインストールして設定する必要があります。これらのツールは、AEM Projects の開発と構築をサポートします。
 
 注意： `~` は、ユーザーのディレクトリの略記法として使用されます。 Windows の場合、これは `%HOMEPATH%`.
 

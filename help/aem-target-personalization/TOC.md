@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM と Adobe Target の使用の手引き
-user-guide-description: Adobe Experience Manager と Target を使用してパーソナライズされたエクスペリエンスを配信する方法を説明する、エンドツーエンドのチュートリアルです。
+user-guide-description: Experience Manager と Target を使用してパーソナライズされたエクスペリエンスを配信する方法を説明する、エンドツーエンドのチュートリアルです。
 product: experience manager
 sub-product: Experience Manager Sites
 version: 6.5

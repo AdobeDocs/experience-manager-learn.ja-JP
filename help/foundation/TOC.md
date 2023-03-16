@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM Foundation のビデオおよびチュートリアル
-breadcrumb-title: AEM Foundation チュートリアル
+breadcrumb-title: AEM 基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
