@@ -7,10 +7,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
+source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 24%
+source-wordcount: '282'
+ht-degree: 23%
 
 ---
 
@@ -55,10 +55,11 @@ ht-degree: 24%
       + [AEMホスト](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher フィルター](./graphql/deployment/configurations/dispatcher-filters.md)
-+ 使い方 {#how-to}
++ 方法 {#how-to}
    + [リッチテキスト](./graphql/how-to/rich-text.md)
    + [画像](./graphql/how-to/images.md)
    + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
+   + [プレビュー](./graphql/how-to/preview.md)
    + [AEMヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
    + [AEM 6.5 への GraphiQL のインストール](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 例 {#example-apps}
