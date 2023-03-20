@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ JWT の生成に必要な詳細はサービス資格情報で指定されます�
 
 + サービス資格情報が存在する場合、外部アプリケーションは、AEM as a Cloud Serviceにアクセスする際に、ローカル開発アクセストークンではなく、このアクセストークンを使用します
 
-このチュートリアルでは、Adobeの `@adobe/jwt-auth` npm モジュールは、両方に使用されます (1)。(1) サービス資格情報から JWT を生成し、(2)1 回の関数呼び出しでアクセストークンと交換します。 アプリケーションが JavaScript ベースではない場合は、 [他の言語のサンプルコード](https://developer.adobe.com/developer-console/docs/guides/) を参照してください。
+このチュートリアルでは、Adobeの `@adobe/jwt-auth` npm モジュールは、両方に使用されます (1)。(1) サービス資格情報から JWT を生成し、(2)1 回の関数呼び出しでアクセストークンと交換します。 アプリケーションが JavaScript ベースではない場合は、 [他の言語のサンプルコード](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) を参照してください。
 
 ## サービス資格情報の読み取り
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 サービス資格情報が読み取られると、それらを使用して JWT が生成され、その JWT がアクセストークン用のAdobe IMSAPI と交換されます。 その後、このアクセストークンを使用して、AEM as a Cloud Serviceにアクセスできます。
 
-このサンプルアプリケーションは Node.js ベースなので、 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュール： (1) JWT の生成と (20 のAdobe IMS交換を容易にする )。 アプリケーションが別の言語で開発されている場合は、 [適切なコードサンプル](https://developer.adobe.com/developer-console/docs/guides/) 他のプログラミング言語を使用してAdobe IMSに対する HTTP リクエストを作成する方法に関する
+このサンプルアプリケーションは Node.js ベースなので、 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュール： (1) JWT の生成と (20 のAdobe IMS交換を容易にする )。 アプリケーションが別の言語で開発されている場合は、 [適切なコードサンプル](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) 他のプログラミング言語を使用してAdobe IMSに対する HTTP リクエストを作成する方法に関する
 
 1. を更新します。 `getAccessToken(..)` をクリックして JSON ファイルの内容を調べ、それがローカル開発のアクセストークンかサービス資格情報かを判断します。 これは、 `.accessToken` プロパティに含まれます。このプロパティはローカル開発のアクセストークン JSON に対してのみ存在します。
 
