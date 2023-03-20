@@ -13,9 +13,9 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '641'
 ht-degree: 2%
 
 ---
@@ -75,5 +75,5 @@ Node.js アプリケーションの実行フローは次のとおりです。
 
 + [サンプルアプリケーションをダウンロード](./assets/aem-guides_token-authentication-external-application.zip)
 + JWT の作成および交換のその他のコードサンプル
-   + [Node.js、Java、Python、C#.NET および PHP のコード例](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)
+   + [Node.js、Java、Python、C#.NET および PHP のコード例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
    + [JavaScript/Axios ベースのコードサンプル](https://github.com/adobe/aemcs-api-client-lib)
