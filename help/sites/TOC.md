@@ -5,10 +5,10 @@ breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 31%
+source-wordcount: '441'
+ht-degree: 29%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 31%
    + [ソーシャルメディア共有](developing/social-media-sharing-technical-video-use.md)
    + [コンポーネントアイコンのカスタマイズ](developing/component-icons-technical-video-develop.md)
 + パーソナライズ機能 {#personalization}
-   + [Adobe Target との統合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
+   + [Adobe Targetとの統合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [エクスペリエンスフラグメントとAdobe Targetの設定](personalization/experience-fragment-target-technical-video-setup.md)
    + [Adobe Targetでのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [ContextHub のセットアップ](personalization/context-hub-technical-video-setup.md)
@@ -98,12 +98,12 @@ ht-degree: 31%
 + 統合 {#integrations}
    + Experience Platform {#experience-platform}
       + [FPID を生成](integrations/platform/fpid.md)
-   + Experience Platform Launch {#experience-platform-launch}
-      + [概要](integrations/experience-platform-launch/overview.md)
-      + [Launch プロパティの作成](integrations/experience-platform-launch/create-launch-property.md)
-      + [Adobe I/Oを使用してAEMを Launch に接続](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
-      + [LaunchCloud Serviceの作成](integrations/experience-platform-launch/create-launch-cloud-service.md)
-      + [Launch 実装のデバッグ](integrations/experience-platform-launch/debug-launch-implementation.md)
+   + Experience Platformデータ収集タグ (Launch) {#experience-platform-data-collection-tags}
+      + [概要](integrations/experience-platform/data-collection/tags/overview.md)
+      + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
+      + [開発者コンソールを使用した、AEMとタグの接続](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [AEM Launch 作成Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [タグ (Launch) 実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [Adobeクライアントデータレイヤーの使用](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Adobeクライアントデータレイヤーのカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)

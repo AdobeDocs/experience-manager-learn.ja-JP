@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 4%
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> Launch とAEMサイトの統合について不明な点がある場合は、 [このビデオシリーズを見る](../experience-platform-launch/overview.md).
+> Launch とAEMサイトの統合について不明な点がある場合は、 [このビデオシリーズを見る](../experience-platform/data-collection/tags/overview.md).
 
 ## WKND サイトの Launch 環境の切り替え
 
@@ -52,7 +52,7 @@ ht-degree: 4%
 AEM環境を設定して WKND コードベースをインストールする代わりに、Experience Platformデバッガーを使用して **スイッチ** 生者 [https://wknd.site/](https://wknd.site/) から *あなたの* Launch プロパティ。 もちろん、既にAEM [Adobeクライアントデータレイヤーが有効です](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Experience Platform Launchにログインし、 [Launch プロパティの作成](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) （まだの場合）。
-1. 最初の起動を確認する [ライブラリが作成されました](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) ローンチに昇格しました。 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
+1. 最初の起動を確認する [ライブラリが作成されました](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) ローンチに昇格しました。 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja).
 1. ライブラリの公開先の環境から Launch 埋め込みコードをコピーします。
 
    ![Launch 埋め込みコードをコピー](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Adobeクライアントデータレイヤーは **イベント** 駆動型デー
 
    この `event` オブジェクトが `trigger()` メソッドがカスタムイベントで呼び出されました。 `component` は、データレイヤーから派生した現在のページです `getState` カスタムイベント内で使用されます。 以前の [ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) データレイヤーによって公開され、標準で公開されている様々なキーを確認できます。
 
-1. 変更を保存し、 [ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) （Launch で）をクリックして、 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) をAEM Site で使用している場合にのみ使用できます。
+1. 変更を保存し、 [ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) （Launch で）をクリックして、 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja) をAEM Site で使用している場合にのみ使用できます。
 
    >[!NOTE]
    >
@@ -373,6 +373,6 @@ Adobeクライアントデータレイヤーは **イベント** 駆動型デー
 
 イベントドリブン型AdobeクライアントデータレイヤーとExperience Platform Launchを使用して、AEM Site からデータページデータを収集し、Adobe Analyticsに送信しただけです。
 
-### 次の手順
+### 次のステップ
 
 イベントドリブン型Adobeクライアントデータレイヤーを使用して [Adobe Experience Managerサイト上の特定のコンポーネントのクリックの追跡](track-clicked-component.md).
