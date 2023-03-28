@@ -1,5 +1,5 @@
 ---
-title: コンテンツフラグメントとエクスペリエンスフラグメントについて
+title: コンテンツフラグメントとエクスペリエンスフラグメント
 description: コンテンツフラグメントとエクスペリエンスフラグメントの類似点と相違点、および各タイプの使用方法とタイミングについて説明します。
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
@@ -12,18 +12,18 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 84fdbaa173a929ae7467aecd031cacc4ce73538a
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 3%
+source-wordcount: '1044'
+ht-degree: 5%
 
 ---
 
-# コンテンツフラグメントとエクスペリエンスフラグメントについて
+# コンテンツフラグメントとエクスペリエンスフラグメント
 
 Adobe Experience Managerのコンテンツフラグメントとエクスペリエンスフラグメントは、表面的には似ているように見えますが、それぞれが異なる使用例で主な役割を果たします。 コンテンツフラグメントとエクスペリエンスフラグメントが似ている点、異なる点、およびそれぞれの使用方法について説明します。
 
-## コンテンツフラグメントとエクスペリエンスフラグメントの比較
+## 比較
 
 <table>
 <tbody><tr><td><strong> </strong></td>
@@ -96,13 +96,17 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 <li>注釈</li>
 <li>レスポンシブレイアウトとプレビュー</li>
 <li>翻訳/ローカライゼーション</li>
+<li>コンテンツフラグメント参照を介した複雑なデータモデル</li>
+<li>アプリ内プレビュー</li>
 </ul>
 </td>
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEMコアコンポーネントコンテンツフラグメントコンポーネント</a> AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用します。</li>
+<li>を介した JSON エクスポート <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja">AEMヘッドレスGraphQL API</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja" target="_blank">AEMコアコンポーネントコンテンツフラグメントコンポーネント</a> AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用します。</li>
 <li>を介した JSON エクスポート <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM Content Services</a> （サードパーティでの使用）</li>
-<li>AEM HTTP Assets API を介したサードパーティでの使用のための JSON。</li>
+<li>ターゲットオファー用のAdobe Targetへの JSON 書き出し</li>
+<li>AEM HTTP Assets API を介したサードパーティ消費用 JSON</li>
 </ul>
 </td>
 <td><ul>
@@ -114,7 +118,8 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>一般的な使用例</strong></td>
 <td><ul>
-<li>高度に構造化されたデータ入力/フォームベースのコンテンツ</li>
+<li>GraphQLを介したヘッドレスユースケースの強化</li>
+<li>構造化データ入力/フォームベースのコンテンツ</li>
 <li>長形式の編集コンテンツ（複数行要素）</li>
 <li>コンテンツを配信するチャネルのライフサイクル外で管理されるコンテンツ</li>
 </ul>
@@ -142,20 +147,20 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
 
 次の図は、AEMコンテンツフラグメントの全体的なアーキテクチャを示しています
 
-! ![コンテンツフラグメントのアーキテクチャ](./assets/content-fragments-architecture.png)
+![コンテンツフラグメントのアーキテクチャ](./assets/content-fragments-architecture.png)
 
 + **コンテンツフラグメントモデル** コンテンツフラグメントが取得して公開するコンテンツを定義する要素（またはフィールド）を定義します。
 + この **コンテンツフラグメント** は、論理コンテンツエンティティを表すコンテンツフラグメントモデルのインスタンスです。
 + コンテンツフラグメント **バリエーション** ただし、コンテンツフラグメントモデルにはコンテンツのバリエーションがあります。
 + コンテンツフラグメントは、次の方法で公開/使用できます。
    + でのコンテンツフラグメントの使用 **AEM Sites** ( またはAEM Screens) をAEM WCM コアコンポーネントのコンテンツフラグメントコンポーネントから使用する。
-   + コンテンツフラグメントの埋め込み **エクスペリエンスフラグメント** AEM WCM コアコンポーネントのコンテンツフラグメントコンポーネントを使用（エクスペリエンスフラグメントの使用例に使用）。
+   + 消費 **コンテンツフラグメント** AEMヘッドレスGraphQL API を使用するヘッドレスアプリから。
    + コンテンツフラグメントバリエーションコンテンツを JSON 形式で公開（経由） **AEM Content Services** および API ページ（読み取り専用の使用例）
    + 直接、 **AEM Assets HTTP API** を参照してください。
 
 ## エクスペリエンスフラグメントのアーキテクチャ
 
-! ![エクスペリエンスフラグメントのアーキテクチャ](./assets/experience-fragments-architecture.png)
+![エクスペリエンスフラグメントのアーキテクチャ](./assets/experience-fragments-architecture.png)
 
 + **編集可能なテンプレート**&#x200B;を呼び出し、それらを次のように定義します。 **編集可能なテンプレートタイプ** および **AEMページコンポーネントの実装**&#x200B;では、エクスペリエンスフラグメントの作成に使用できる許可されたAEMコンポーネントを定義します。
 + この **エクスペリエンスフラグメント** は、論理的なエクスペリエンスを表す編集可能なテンプレートのインスタンスです。
@@ -167,15 +172,16 @@ Adobe Experience Managerのコンテンツフラグメントとエクスペリ�
    + エクスペリエンスフラグメントのへの書き出し **Adobe Target** をHTMLまたは JSON オファーとして使用する。
    + AEM SitesはHTMLオファーをネイティブでサポートしていますが、JSON オファーにはカスタム開発が必要です。
 
-## コンテンツフラグメントのサポート資料
+## コンテンツフラグメントのサポートリソース
 
 + [コンテンツフラグメントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [Adobe Experience Manager as a Headless CMS の概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=ja)
 + [AEMでのコンテンツフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
 + [AEM WCM コアコンポーネントのコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
 + [コンテンツフラグメントとAEMヘッドレスの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
 + [AEM Content Services の概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
 
-## エクスペリエンスフラグメントのサポート資料
+## エクスペリエンスフラグメントのサポートリソース
 
 + [エクスペリエンスフラグメントに関するAdobeドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en)
 + [AEMエクスペリエンスフラグメントについて](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
