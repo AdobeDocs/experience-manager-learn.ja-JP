@@ -13,10 +13,10 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '336'
+ht-degree: 2%
 
 ---
 
@@ -31,21 +31,28 @@ Experience Platform _データ収集タグ_ （以前の Launch）をAdobe Exper
 
 タグは、Adobe Experience Platformが提供する次世代のタグ管理テクノロジーです。 タグは、Adobe Analytics、Target、Audience Manager、その他多くのソリューションをデプロイする最も簡単な方法を提供します。 タグの概要と、Adobe Experience Managerとの推奨される統合について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
 
 ## 前提条件
 
-Experience Platformデータ収集タグを統合する場合は、次の操作が必要です
+データ収集タグを統合する場合は、次のExperience Platformが必要です。
 
-+ AEM AEM as a Cloud Service環境への管理者アクセス
-+ のようなリファレンスサイト [WKND](https://github.com/adobe/aem-guides-wknd) それにデプロイされる
++ AEM as a Cloud Service環境へのAEM管理者アクセス
++ のようなリファレンスサイト [WKND](https://github.com/adobe/aem-guides-wknd) にデプロイされました。
++ Adobe Experience Platform Data Collection Solution へのアクセス
 + へのシステム管理者のアクセス権 [Adobe Developer Console](https://developer.adobe.com/developer-console/)
 
 
+## 概要レベルの手順
+
++ Adobe Experience Platform Data Collection で、タグプロパティを作成し、次のように編集します。 _ルールを追加_. 次に、 _ライブラリを追加_、新しく追加されたルールを選択し、承認して公開します。
++ 既存（または新規）の IMS 設定を使用したAEMとタグの接続
++ AEMで、Launch クラウドサービス設定を作成し、既存のサイトに適用して、最後にタグプロパティとそのライブラリが公開済みサイトまたは作成者サイトに読み込まれていることを確認します。
+
 ## 次のステップ
 
-[タグ (Launch) プロパティの作成](create-tag-property.md)
+[タグプロパティの作成](create-tag-property.md)
 
 ## その他のリソース {#additional-resources}
 

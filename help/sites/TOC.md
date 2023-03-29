@@ -5,7 +5,7 @@ breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 29%
@@ -101,7 +101,7 @@ ht-degree: 29%
    + Experience Platformデータ収集タグ (Launch) {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [開発者コンソールを使用した、AEMとタグの接続](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [IMS を使用したAEMとタグプロパティの接続](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [AEM Launch 作成Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [タグ (Launch) 実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
