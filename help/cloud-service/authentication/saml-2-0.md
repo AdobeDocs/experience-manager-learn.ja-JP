@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2961'
 ht-degree: 2%
 
 ---
@@ -110,13 +110,13 @@ IDP の公開証明書がAEM Global Trust Store に追加され、IDP から送�
 1. __送信__&#x200B;を選択します。
 1. 新しく追加された証明書は、 __CRT ファイルから証明書を追加__ 」セクションに入力します。
 1. をメモして __エイリアス__&#x200B;の場合は、この値が [SAML 2.0 認証ハンドラー OSGi 設定](#saml-2-0-authentication-handler-osgi-configuration).
-1. 「__保存して閉じる__」を選択します。
+1. 選択 __保存して閉じる__.
 
 グローバルトラストストアは、AEM オーサー上で IDP の公開証明書を使用して設定されますが、SAML は AEM パブリッシュでのみ使用されるので、IDP 公開証明書を AEM パブリッシュにアクセスするには、グローバルトラストストアを AEM パブリッシュにレプリケートする必要があります。
 
 ![AEM パブリッシュにグローバルトラストストアをレプリケート](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. に移動します。 __ツール/導入/パッケージ__.
+1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
 1. パッケージの作成
    + パッケージ名： `Global Trust Store`
    + バージョン: `1.0.0`
@@ -126,6 +126,21 @@ IDP の公開証明書がAEM Global Trust Store に追加され、IDP から送�
 1. 選択 __完了__ その後 __保存__.
 1. を選択します。 __ビルド__ ボタン __グローバルトラストストア__ パッケージ。
 1. ビルドが完了したら、「 」を選択します。 __詳細__ > __複製__ グローバルトラストストアノードをアクティベートするには、次の手順に従います (`/etc/truststore`) を AEM パブリッシュに追加します。
+
+## 認証サービスキーストアの作成{#authentication-service-keystore}
+
+_認証サービスのキーストアの作成は、 [SAML 2.0 認証ハンドラーの OSGi 設定プロパティ `handleLogout` が `true`](#saml-20-authenticationsaml-2-0-authentication) または [AuthnRequest 署名/SAML アサーション暗号化](#install-aem-public-private-key-pair) 必須_
+
+1. AEM オーサーにAEM Administrator としてログインし、秘密鍵をアップロードします。
+1. に移動します。 __ツール/セキュリティ/Trust Store__&#x200B;を選択し、 __authentication-service__ ユーザーと選択 __プロパティ__ をクリックします。
+1. に移動します。 __ツール/セキュリティ/ユーザー__&#x200B;を選択し、 __authentication-service__ ユーザーと選択 __プロパティ__ をクリックします。
+1. を選択します。 __キーストア__ タブをクリックします。
+1. キーストアを作成するか、開きます。 キーストアを作成する場合は、パスワードを安全に保ちます。
+   + A [公開/秘密鍵キーストアがこのキーストアにインストールされている](#install-aem-public-private-key-pair) AuthnRequest の署名/SAML アサーションの暗号化が必要な場合にのみ有効です。
+   + この SAML 統合がログアウトをサポートし、AuthnRequest 署名/SAML アサーションをサポートしない場合は、空のキーストアで十分です。
+1. 選択 __保存して閉じる__.
+1. 選択 __authentication-service__ ユーザーと選択 __有効化__ をクリックします。
+
 
 ## AEMの公開鍵と秘密鍵のペアのインストール{#install-aem-public-private-key-pair}
 
@@ -197,7 +212,7 @@ AuthnRequest 署名と SAML アサーション暗号化はオプションです�
    + 選択 __送信__
 1. 新しく追加された証明書は、 __CRT ファイルから証明書を追加__ 」セクションに入力します。
    + をメモして __エイリアス__ これは [SAML 2.0 認証ハンドラー OSGi 設定](#saml-20-authentication-handler-osgi-configuration)
-1. 「__保存して閉じる__」を選択します。
+1. 選択 __保存して閉じる__.
 1. 選択 __authentication-service__ ユーザーと選択 __有効化__ をクリックします。
 
 ## SAML 2.0 認証ハンドラーの設定{#configure-saml-2-0-authentication-handler}
@@ -209,35 +224,35 @@ AEM SAML 設定は、 __AdobeGranite SAML 2.0 認証ハンドラー__ OSGi 設�
 
 ### AdobeGranite SAML 2.0 認証ハンドラー OSGi 設定{#configure-saml-2-0-authentication-handler-osgi-configuration}
 
-|  | OSGi のプロパティ | 必須 | 値の形式 | デフォルト値 | 説明 |
+|  | OSGi プロパティ | 必須 | 値の形式 | デフォルト値 | 説明 |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
 | パス | `path` | ✔ | 文字列配列 | `/` | AEMは、この認証ハンドラーが使用するパスを指定します。 |
 | IDP URL | `idpUrl` | ✔ | String |  | SAML 認証リクエストが送信される IDP URL。 |
-| IDP 証明書エイリアス | `idpCertAlias` | ✔ | 文字列 |  | AEM Global Trust Store で見つかった IDP 証明書のエイリアス |
+| IDP 証明書エイリアス | `idpCertAlias` | ✔ | String |  | AEM Global Trust Store で見つかった IDP 証明書のエイリアス |
 | IDP HTTP redirect | `idpHttpRedirect` | ✘ | ブール値 | `false` | AuthnRequest を送信する代わりに IDP URL に HTTP リダイレクトするかどうかを示します。 に設定 `true` （IDP が開始した認証用） |
-| IDP 識別子 | `idpIdentifier` | ✘ | 文字列 |  | AEMのユーザーとグループの一意性を確保する一意の IDP ID。 空の場合、 `serviceProviderEntityId` が代わりに使用されます。 |
-| アサーションコンシューマーサービスの URL | `assertionConsumerServiceURL` | ✘ | 文字列 |  | この `AssertionConsumerServiceURL` AuthnRequest の URL 属性で、 `<Response>` メッセージをAEMに送信する必要があります。 |
-| SP エンティティ ID | `serviceProviderEntityId` | ✔ | 文字列 |  | IDP に対してAEMを一意に識別する。通常はAEMホスト名です。 |
+| IDP 識別子 | `idpIdentifier` | ✘ | String |  | AEMのユーザーとグループの一意性を確保する一意の IDP ID。 空の場合、 `serviceProviderEntityId` が代わりに使用されます。 |
+| アサーションコンシューマーサービスの URL | `assertionConsumerServiceURL` | ✘ | String |  | この `AssertionConsumerServiceURL` AuthnRequest の URL 属性で、 `<Response>` メッセージをAEMに送信する必要があります。 |
+| SP エンティティ ID | `serviceProviderEntityId` | ✔ | String |  | IDP に対してAEMを一意に識別する。通常はAEMホスト名です。 |
 | SP の暗号化 | `useEncryption` | ✘ | ブール値 | `true` | IDP が SAML アサーションを暗号化するかどうかを示します。 必要 `spPrivateKeyAlias` および `keyStorePassword` を設定します。 |
-| SP 秘密鍵のエイリアス | `spPrivateKeyAlias` | ✘ | 文字列 |  | の秘密鍵のエイリアス `authentication-service` ユーザーのキーストア。 必須 `useEncryption` が `true`. |
-| SP キーストアのパスワード | `keyStorePassword` | ✘ | 文字列 |  | 「authentication-service」ユーザーのキーのパスワードが保存されます。 必須 `useEncryption` が `true`. |
-| デフォルトのリダイレクト | `defaultRedirectUrl` | ✘ | 文字列 | `/` | 認証成功後のデフォルトのリダイレクト URL。 AEMホストに対する相対パスを指定できます ( 例： `/content/wknd/us/en/html`) をクリックします。 |
-| ユーザー ID 属性 | `userIDAttribute` | ✘ | 文字列 | `uid` | AEMユーザーのユーザー ID を含む SAML アサーション属性の名前。 空のままにして `Subject:NameId`. |
+| SP 秘密鍵のエイリアス | `spPrivateKeyAlias` | ✘ | String |  | の秘密鍵のエイリアス `authentication-service` ユーザーのキーストア。 必須 `useEncryption` が `true`. |
+| SP キーストアのパスワード | `keyStorePassword` | ✘ | String |  | 「authentication-service」ユーザーのキーのパスワードが保存されます。 必須 `useEncryption` が `true`. |
+| デフォルトのリダイレクト | `defaultRedirectUrl` | ✘ | String | `/` | 認証成功後のデフォルトのリダイレクト URL。 AEMホストに対する相対パスを指定できます ( 例： `/content/wknd/us/en/html`) をクリックします。 |
+| ユーザー ID 属性 | `userIDAttribute` | ✘ | String | `uid` | AEMユーザーのユーザー ID を含む SAML アサーション属性の名前。 空のままにして `Subject:NameId`. |
 | AEMユーザーの自動作成 | `createUser` | ✘ | ブール値 | `true` | 正常な認証でAEMユーザーが作成されるかどうかを示します。 |
-| AEM user 中間パス | `userIntermediatePath` | ✘ | 文字列 |  | AEMユーザーを作成する場合、この値が中間パスとして使用されます ( 例： `/home/users/<userIntermediatePath>/jane@wknd.com`) をクリックします。 必要 `createUser` 設定 `true`. |
+| AEM user 中間パス | `userIntermediatePath` | ✘ | String |  | AEMユーザーを作成する場合、この値が中間パスとして使用されます ( 例： `/home/users/<userIntermediatePath>/jane@wknd.com`) をクリックします。 必要 `createUser` 設定 `true`. |
 | AEMユーザー属性 | `synchronizeAttributes` | ✘ | 文字列配列 |  | AEMユーザーに保存する SAML 属性マッピングのリスト（形式） `[ "saml-attribute-name=path/relative/to/user/node" ]` ( 例： `[ "firstName=profile/givenName" ]`) をクリックします。 詳しくは、 [ネイティブAEM属性の完全なリスト](#aem-user-attributes). |
 | ユーザーをAEMグループに追加 | `addGroupMemberships` | ✘ | ブール値 | `true` | 認証に成功した後、AEMユーザーがAEMユーザーグループに自動的に追加されるかどうかを示します。 |
-| AEM group メンバーシップ属性 | `groupMembershipAttribute` | ✘ | 文字列 | `groupMembership` | ユーザーの追加先となるAEMユーザーグループのリストを含む SAML アサーション属性の名前。 必要 `addGroupMemberships` 設定 `true`. |
+| AEM group メンバーシップ属性 | `groupMembershipAttribute` | ✘ | String | `groupMembership` | ユーザーの追加先となるAEMユーザーグループのリストを含む SAML アサーション属性の名前。 必要 `addGroupMemberships` 設定 `true`. |
 | デフォルトのAEMグループ | `defaultGroups` | ✘ | 文字列配列 |  | 認証済みユーザーのAEMユーザーグループのリストが常に追加されます ( 例： `[ "wknd-user" ]`) をクリックします。 必要 `addGroupMemberships` 設定 `true`. |
-| NameIDPolicy 形式 | `nameIdFormat` | ✘ | 文字列 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | AuthnRequest メッセージで送信する NameIDPolicy 形式パラメーターの値。 |
+| NameIDPolicy 形式 | `nameIdFormat` | ✘ | String | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | AuthnRequest メッセージで送信する NameIDPolicy 形式パラメーターの値。 |
 | SAML 応答を保存 | `storeSAMLResponse` | ✘ | ブール値 | `false` | が `samlResponse` の値がAEMに保存される `cq:User` ノード。 |
 | ログアウトを処理 | `handleLogout` | ✘ | ブール値 | `false` | ログアウトリクエストがこの SAML 認証ハンドラーによって処理されるかどうかを示します。 必要 `logoutUrl` を設定します。 |
-| ログアウト URL | `logoutUrl` | ✘ | 文字列 |  | SAML ログアウトリクエストの送信先となる IDP の URL。 必須 `handleLogout` が `true`. |
-| クロック許容値 | `clockTolerance` | ✘ | 整数値（Integer） | `60` | SAML アサーションを検証する際の IDP およびAEM (SP) クロックの歪み許容値。 |
-| Digest メソッド | `digestMethod` | ✘ | 文字列 | `http://www.w3.org/2001/04/xmlenc#sha256` | SAML メッセージへの署名時に IDP が使用するダイジェストアルゴリズムです。 |
-| 署名メソッド | `signatureMethod` | ✘ | 文字列 | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | SAML メッセージの署名時に IDP が使用する署名アルゴリズムです。 |
+| ログアウト URL | `logoutUrl` | ✘ | String |  | SAML ログアウトリクエストの送信先となる IDP の URL。 必須 `handleLogout` が `true`. |
+| クロック許容値 | `clockTolerance` | ✘ | 整数 | `60` | SAML アサーションを検証する際の IDP およびAEM (SP) クロックの歪み許容値。 |
+| Digest メソッド | `digestMethod` | ✘ | String | `http://www.w3.org/2001/04/xmlenc#sha256` | SAML メッセージへの署名時に IDP が使用するダイジェストアルゴリズムです。 |
+| 署名メソッド | `signatureMethod` | ✘ | String | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | SAML メッセージの署名時に IDP が使用する署名アルゴリズムです。 |
 | ID 同期タイプ | `identitySyncType` | ✘ | `default` か `idp` のどちらかにする必要があります。 | `default` | 変更しない `from` AEM as a Cloud Serviceのデフォルトです。 |
-| サービスのランキング | `service.ranking` | ✘ | 整数値（Integer） | `5002` | 同じに対しては、上位のランク設定をお勧めします `path`. |
+| サービスのランキング | `service.ranking` | ✘ | 整数 | `5002` | 同じに対しては、上位のランク設定をお勧めします `path`. |
 
 ### AEMユーザー属性{#aem-user-attributes}
 
