@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 27%
+source-wordcount: '913'
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 27%
       + [AEMスタイルシステムを使用してコンテンツの速度を向上](./introduction/accelerate-content-velocity-aem.md)
 + [Experience Cloud との統合](./experience-cloud/integrations.md)
 + 基盤となる技術 {#underlying-technology}
-   + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
+   + [AEM Architecture](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java コンテンツリポジトリー](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
@@ -53,7 +53,7 @@ ht-degree: 27%
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
    + [ローカル Dispatcher ツール](./local-development-environment/dispatcher-tools.md)
 + 開発{#developing}
-   + 拡張性{#extensibility}
+   + 拡張機能{#extensibility}
       + App Builder{#app-builder}
          + [アクセストークンを生成](./developing/extensibility/app-builder/jwt-auth.md)
       + コンテンツフラグメントコンソール{#content-fragments}
@@ -89,6 +89,7 @@ ht-degree: 27%
       + [OSGi 設定の基本](./developing/osgi-services/configurations.md)
       + [OCD を使用した OSGi 設定](./developing/osgi-services/configurations-ocd.md)
    + 詳細{#advanced}
+      + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
