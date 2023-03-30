@@ -1,6 +1,6 @@
 ---
 title: AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用
-description: Adobeクライアントデータレイヤーでは、Web ページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
+description: Adobeクライアントデータレイヤーでは、Web ページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -9,16 +9,16 @@ kt: 6261
 thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '783'
 ht-degree: 8%
 
 ---
 
 # AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用 {#overview}
 
-Adobeクライアントデータレイヤーでは、Web ページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
+Adobeクライアントデータレイヤーでは、Web ページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
@@ -28,20 +28,20 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
 
 ## データレイヤーの調査
 
-ブラウザーとライブ環境の開発者ツールを使用するだけで、Adobeクライアントデータレイヤーの組み込み機能を把握できます [WKND リファレンスサイト](https://wknd.site/).
+ブラウザーとライブ環境の開発者ツールを使用するだけで、Adobeクライアントデータレイヤーの組み込み機能を把握できます [WKND リファレンスサイト](https://wknd.site/us/en.html).
 
 >[!NOTE]
 >
 > 以下のスクリーンショットは、Chrome ブラウザーから取得したものです。
 
-1. に移動します。 [https://wknd.site](https://wknd.site)
+1. に移動します。 [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. 開発者ツールを開き、 **コンソール**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   Inspectは、AEMサイト上のデータレイヤーの現在の状態を確認する応答を返します。 ページと個々のコンポーネントに関する情報が表示されます。
+   AEMサイト上のデータレイヤーの現在の状態を確認するには、応答を調べます。 ページと個々のコンポーネントに関する情報が表示されます。
 
    ![Adobeデータレイヤーの応答](assets/data-layer-state-response.png)
 
@@ -90,7 +90,7 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    }
    ```
 
-   上記のコードは、 `event` オブジェクトを選択し、 `adobeDataLayer.getState` メソッドを使用して、イベントをトリガーしたオブジェクトの現在の状態を取得します。 次に、ヘルパーメソッドは、 `filter` 現在の `dataObject` が満たす場合、フィルターが返されます。
+   上記のコードは、 `event` オブジェクトと `adobeDataLayer.getState` メソッドを使用して、イベントをトリガーしたオブジェクトの現在の状態を取得します。 次に、ヘルパーメソッドは、 `filter` 現在の `dataObject` が返されるフィルター条件を満たす。
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    }
    ```
 
-   この `teaserShownHandler` が `getDataObjectHelper` フィルターを通す方法 `wknd/components/teaser` を `@type` を使用して、他のコンポーネントによってトリガーされたイベントを除外します。
+   この `teaserShownHandler` 関数が `getDataObjectHelper` 関数を参照し、 `wknd/components/teaser` を `@type` を使用して、他のコンポーネントによってトリガーされたイベントを除外します。
 
 1. 次に、イベントリスナーをデータレイヤーにプッシュして、 `cmp:show` イベント。
 
@@ -118,13 +118,13 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    });
    ```
 
-   この `cmp:show` イベントは、 **カルーセル** または **タブ** コンポーネント。
+   この `cmp:show` イベントは、 **カルーセル**&#x200B;または **タブ** コンポーネント。
 
-1. ページでカルーセルスライドを切り替え、コンソールステートメントを確認します。
+1. ページで、カルーセルスライドを切り替えて、コンソールステートメントを確認します。
 
    ![カルーセルを切り替えてイベントリスナーを表示する](assets/teaser-console-slides.png)
 
-1. のリスンを停止するには、データレイヤーからイベントリスナーを削除します。 `cmp:show` イベント：
+1. リスニングを停止するには `cmp:show` イベント、データレイヤーからイベントリスナーを削除します。
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -164,19 +164,17 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
 
    この `cmp:show` イベントを呼び出すことができます。 ページが明確に読み込まれているのに、イベントハンドラーがトリガーされたのはなぜですか？という質問が表示される場合があります。
 
-   これは、Adobe・クライアント・データ・レイヤーの独自の機能の 1 つで、イベント・リスナーを登録できます。 **前** または **後** データレイヤーが初期化されました。 これは、競合状態を避けるための重要な機能です。
+   Adobeクライアントデータレイヤーの独自の機能の 1 つは、イベントリスナーを登録できることです **前** または **後** データレイヤーが初期化されたので、競合状態を回避するのに役立ちます。
 
-   データレイヤーは、順番に発生したすべてのイベントのキュー配列を保持します。 データレイヤーは、デフォルトで、 **過去** また、 **将来**. イベントを過去または未来のみにフィルタリングできます。 [詳しくは、ドキュメントを参照してください。](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   データレイヤーは、順に発生したすべてのイベントのキュー配列を保持します。 デフォルトでは、データレイヤーは、 **過去** および **将来**. イベントを過去または将来からフィルタリングできます。 [詳しくは、ドキュメントを参照してください。](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
-## 次の手順
+## 次のステップ
 
-イベントドリブン型Adobeクライアントデータレイヤーを使用して [ページデータを収集してAdobe Analyticsに送信](../analytics/collect-data-analytics.md).
-
-また、 [AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ](./data-layer-customize.md)
+学習を続ける方法は 2 つあります。まず、 [ページデータを収集し、Adobe Analyticsに送信します。](../analytics/collect-data-analytics.md) Adobeクライアントデータレイヤーの使用方法を示すチュートリアルです。 2 つ目の選択肢は、次の方法を学ぶことです [AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ](./data-layer-customize.md)
 
 
 ## その他のリソース {#additional-resources}
 
 * [Adobeクライアントデータレイヤードキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)
