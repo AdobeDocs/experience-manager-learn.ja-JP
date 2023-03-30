@@ -3,6 +3,7 @@ title: IMS を使用してAEMをタグプロパティに接続
 description: AEMで IMS 設定を使用して、AEMをタグプロパティに接続する方法を説明します。 この設定は、AEM API で Launch を認証し、AEMが Launch API を介して通信してタグプロパティにアクセスできるようにします。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

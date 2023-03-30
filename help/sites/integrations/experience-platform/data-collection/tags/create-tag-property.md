@@ -3,6 +3,7 @@ title: タグプロパティの作成
 description: AEMと統合するための最小限の設定でタグプロパティを作成する方法を説明します。 タグ UI を紹介し、拡張機能、ルール、公開ワークフローについて学習します。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%

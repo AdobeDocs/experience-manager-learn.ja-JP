@@ -3,6 +3,7 @@ title: タグ実装のデバッグ
 description: タグ実装をデバッグするための一般的なツールと技術の紹介です。 ブラウザーのデベロッパーコンソールとExperience Platformデバッガー拡張機能を使用して、タグ実装の主要な側面を特定し、トラブルシューティングする方法について説明します。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
