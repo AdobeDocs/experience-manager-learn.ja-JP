@@ -11,10 +11,10 @@ kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '2798'
-ht-degree: 8%
+source-wordcount: '2799'
+ht-degree: 4%
 
 ---
 
@@ -77,9 +77,9 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 
 クライアントサイドライブラリは、AEM Sitesの実装に必要な CSS および JavaScript ファイルを整理および管理するメカニズムを提供します。 クライアント側ライブラリまたは clientlib の基本的な目標は次のとおりです。
 
-1. CSS／JS を、開発および管理が簡単な個別の小さなファイルに保存する
+1. CSS/JS を小さな個別のファイルに保存し、開発とメンテナンスを容易にします。
 1. サードパーティのフレームワークへの依存関係を整理された方法で管理
-1. CSS／JS を 1～2 個の要求に連結することで、クライアント側の要求数を最小限にする.
+1. CSS/JS を 1 つまたは 2 つのリクエストに連結して、クライアント側のリクエストの数を最小限に抑えます。
 
 クライアント側ライブラリの使用の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja)を参照してください。
 
@@ -89,7 +89,7 @@ Adobe Experience Manager(AEM)Sites 実装で CSS と JavaScript をデプロイ�
 
 ## クライアント側ライブラリ組織 {#organization}
 
-次に、 [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+次に、 [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja).
 
 ![高レベルのクライアントライブラリ組織](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -317,7 +317,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
    >[!WARNING]
    >
-   >セキュリティ上の理由から、/apps パスは&#x200B;**** Dispatcher の filter セクション&#x200B;**にのみ使用すべきであるので、パブリッシュ側では、クライアントライブラリを /apps から提供**&#x200B;しない[](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)ことが重要となります。この [allowProxy プロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) クライアントライブラリのを使用すると、CSS と JS が **/etc.clientlibs**.
+   >クライアントライブラリが **not** ～から供給される **/apps** このパスは、 [Dispatcher のフィルターセクション](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section). この [allowProxy プロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) クライアントライブラリのを使用すると、CSS と JS が **/etc.clientlibs**.
 
 ### 次のステップ {#next-steps}
 
@@ -394,7 +394,7 @@ AEMプロジェクトアーキタイプは、この統合を自動的に設定�
 
 ### クライアント側ライブラリのデバッグ {#debugging-clientlibs}
 
-様々な方法で **カテゴリ** および **埋め込み** 複数のクライアントライブラリを含める場合、トラブルシューティングが面倒になる可能性があります。 AEM はそのためにいくつかのツールを公開しています。最も重要なツールの 1 つは、 **クライアントライブラリの再構築** これにより、AEMはすべての LESS ファイルを再コンパイルし、CSS を生成します。
+様々な方法で **カテゴリ** および **埋め込み** 複数のクライアントライブラリを含める場合、トラブルシューティングが面倒になる可能性があります。 AEMでは、これを支援するツールがいくつか用意されています。 最も重要なツールの 1 つは、 **クライアントライブラリの再構築** これにより、AEMはすべての LESS ファイルを再コンパイルし、CSS を生成します。
 
 * [**ライブラリのダンプ**](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - AEMインスタンスに登録されているクライアントライブラリをリストします。 `<host>/libs/granite/ui/content/dumplibs.html`
 

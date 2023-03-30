@@ -13,10 +13,10 @@ mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '1677'
-ht-degree: 12%
+source-wordcount: '1678'
+ht-degree: 3%
 
 ---
 
@@ -77,9 +77,9 @@ ht-degree: 12%
 
 ## 背景 {#background}
 
-開発者およびテンプレート編集者は、[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)を使用して、コンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、どのスタイルを使用するかを決めることができます。スタイルシステムは、低コードのアプローチでコアコンポーネントを使用しながら、複数の独自のスタイルを実現するために、チュートリアルの残りの部分で使用されます。
+この [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja) 開発者およびテンプレートエディターは、コンポーネントの複数の視覚的バリエーションを作成できます。 作成者は、次に、ページの構成時に使用するスタイルを決定できます。 スタイルシステムは、低コードのアプローチでコアコンポーネントを使用しながら、複数の独自のスタイルを実現するために、チュートリアルの残りの部分で使用されます。
 
-スタイルシステムの基本的な考え方は、コンポーネントがどのように表示されるかについて、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に取り込まれた追加の CSS クラスに基づき実現されます。これらのスタイルクラスに基づき、CSS ルールがクライアントライブラリに追加され、コンポーネントの表示が変更されます。
+スタイルシステムの一般的な概念は、作成者がコンポーネントの外観の様々なスタイルを選択できるということです。 「スタイル」は、コンポーネントの外側の div に挿入される追加の CSS クラスに基づいています。 クライアントライブラリでは、コンポーネントの外観が変わるように、これらのスタイルクラスに基づいて CSS ルールが追加されます。
 
 以下を見つけることができます。 [スタイルシステムに関する詳細なドキュメントはこちら](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=ja). 素晴らしいものもあります [スタイルシステムについての技術ビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
 
@@ -183,9 +183,9 @@ ht-degree: 12%
 
    >[!NOTE]
    >
-   >ベストプラクティスとしては、スタイルをターゲットコンポーネントで使用する範囲に収めることが推奨されます。これにより、ページの他の領域が余分なスタイルの影響を受けることを回避できます。
+   >スタイルを常にターゲットコンポーネントに厳密にスコープ設定することをお勧めします。 これにより、余分なスタイルがページの他の領域に影響を与えることを防ぐことができます。
    >
-   >すべてのコアコンポーネントが準拠 **[BEM 表記](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. ベストプラクティスとしては、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定することが推奨されます。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
+   >すべてのコアコンポーネントが準拠 **[BEM 表記](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. コンポーネントのデフォルトのスタイルを作成する際に、外部の CSS クラスをターゲットにすることをお勧めします。 もう 1 つのベストプラクティスは、コアコンポーネントの BEM 表記で指定されたクラス名を、HTML要素ではなくターゲットにすることです。
 
 1. ブラウザーとAEMページに戻ります。 下線のスタイルが追加されます。
 

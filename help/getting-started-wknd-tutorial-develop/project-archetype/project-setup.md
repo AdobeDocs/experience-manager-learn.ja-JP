@@ -12,10 +12,10 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 11%
+source-wordcount: '1821'
+ht-degree: 6%
 
 ---
 
@@ -163,7 +163,7 @@ AEM用の Maven マルチモジュールプロジェクトを作成する方法�
 
    ![サイトコンソール](assets/project-setup/aem-sites-console.png)
 
-1. スターターコンテンツは既に作成されており、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを使用してみることで、機能について大まかに把握できます。次の章では、コンポーネントの基本について学びます。
+1. スターターコンテンツは既に作成されており、ページに追加できる複数のコンポーネントが用意されています。 これらのコンポーネントを試して、機能を確認します。 次の章では、コンポーネントの基本について学びます。
 
    ![ホームスターターコンテンツ](assets/project-setup/start-home-page.png)
 
@@ -184,7 +184,7 @@ AEM用の Maven マルチモジュールプロジェクトを作成する方法�
 
 詳しくは、 [AEM Project Archetype ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) 詳細を学ぶ **すべて** Maven モジュール。
 
-### コアコンポーネントを組み込む {#core-components}
+### コアコンポーネントを同梱しました。 {#core-components}
 
 [AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) は、AEM用の標準化された Web コンテンツ管理 (WCM) コンポーネントのセットです。 これらのコンポーネントは、機能のベースラインセットを提供し、個々のプロジェクトに対してスタイル設定、カスタマイズ、拡張を行います。
 
@@ -192,13 +192,13 @@ AEMas a Cloud Service環境には、 [AEMコアコンポーネント](https://ex
 
 AEM 6.5/6.4 で生成されたプロジェクトの場合、アーキタイプは自動的に埋め込みます [AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) プロジェクト内で使用されます。 AEM 6.5/6.4 では、AEMコアコンポーネントを埋め込んで、最新バージョンがプロジェクトに確実にデプロイされるようにすることがベストプラクティスです。 コアコンポーネントの機能について詳しくは、 [プロジェクトに含まれるは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
 
-## ソース管理システムによる管理 {#source-control}
+## ソース管理 {#source-control}
 
-アプリケーションのコードを管理するために、何らかのソース管理システムを使用することが常に推奨されます。このチュートリアルでは git および GitHub を使用します。Maven などの任意の IDE では、SCM で無視すべきいくつかのファイルが生成されます。
+アプリケーション内のコードを管理する際は、何らかの形のソース管理を使用することをお勧めします。 このチュートリアルでは Git と GitHub を使用します。 Maven や IDE で生成されるファイルは、SCM で無視する必要があります。
 
 コードパッケージをビルドしてインストールするたびに、Maven はターゲットフォルダーを作成します。 ターゲットフォルダーとコンテンツは、SCM から除外する必要があります。
 
-の下で、 `ui.apps` モジュールは、 `.content.xml` ファイルが作成されます。 これらの XML ファイルは、JCR にインストールされているコンテンツのノードタイプおよびプロパティをマッピングします。これらのファイルは重要で、 **できません** 無視されます。
+の下で、 `ui.apps` モジュールは、 `.content.xml` ファイルが作成されます。 これらの XML ファイルは、JCR にインストールされているコンテンツのノードタイプとプロパティをマッピングします。 これらのファイルは重要で、 **できません** 無視されます。
 
 AEMプロジェクトアーキタイプでは、サンプルが生成されます `.gitignore` ファイルを安全に無視できる出発点として使用できるファイル。 ファイルは次の場所に生成されます。 `<src>/aem-guides-wknd/.gitignore`.
 
@@ -252,7 +252,7 @@ AEMプロジェクトアーキタイプでは、サンプルが生成されま�
 
 ### Ui.apps および Ui.content モジュール {#apps-content-module}
 
-この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、 `/apps`. これには CSS/JS が含まれ、CSS/JS はAEMの [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja). また、これには動的 HTML をレンダリングするための [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) スクリプトも含まれます。以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
+この **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven モジュールには、 `/apps`. これには CSS/JS が含まれ、CSS/JS はAEMの [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja). これには、 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) 動的HTMLをレンダリングするスクリプト 以下の点について考えてみてください。 **ui.apps** モジュールは、JCR 内の構造に対するマップとして、ファイルシステムに保存でき、ソース管理にコミットできる形式です。 この **ui.apps** モジュールにはコードのみが含まれています。
 
 このモジュールのみを構築するには：
 

@@ -10,10 +10,10 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '3039'
-ht-degree: 2%
+source-wordcount: '3040'
+ht-degree: 1%
 
 ---
 
@@ -258,7 +258,7 @@ AEMプロジェクトアーキタイプで、ヘッダーとフッターが生�
 
    HTL スクリプトは 2 つだけです。 `customfooterlibs.html` および `customheaderlibs.html` をページコンポーネントの下に追加します。 *では、このコンポーネントはページをどのようにレンダリングしますか？*
 
-   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能です。 これは、[プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)と呼ばれるものの最初の例です。詳しくは、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)を参照してください。
+   この `sling:resourceSuperType` プロパティがを指す `core/wcm/components/page/v2/page`. このプロパティを使用すると、WKND のページコンポーネントは **すべて** コアコンポーネントのページコンポーネントの機能です。 これは、 [プロキシコンポーネントパターン](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). 詳細はこちらをご覧ください [ここ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
 
 1. Inspect WKND コンポーネント内の別のコンポーネントである `Breadcrumb` コンポーネントの元： `/apps/wknd/components/breadcrumb`. 同じことに注意してください。 `sling:resourceSuperType` プロパティが見つかりますが、今回は `core/wcm/components/breadcrumb/v2/breadcrumb`. これは、プロキシコンポーネントパターンを使用してコアコンポーネントを組み込む別の例です。 実際、WKND コードベース内のすべてのコンポーネントは、AEMコアコンポーネントのプロキシです（カスタムデモ HelloWorld コンポーネントを除く）。 コアコンポーネントの機能をできるだけ多く再利用することをお勧めします *前* カスタムコードを記述しています。
 
