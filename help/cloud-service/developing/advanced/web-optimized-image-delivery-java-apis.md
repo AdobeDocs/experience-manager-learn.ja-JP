@@ -1,5 +1,5 @@
 ---
-title: Web に最適化された配信 Java&trade;API
+title: Web に最適化された画像配信 Java&trade;API
 description: AEM as a Cloud Serviceの Web に最適化された画像配信 Java&trade の使用方法を説明します。高パフォーマンスの Web エクスペリエンスを開発する API。
 version: Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
@@ -10,15 +10,15 @@ doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 14d89d1a3c424de044df4f6d74546788256fa383
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
 
 
-# Web に最適化された配信 Java™ API
+# Web に最適化された画像配信 Java™ API
 
 AEM as a Cloud Serviceの Web に最適化された画像配信 Java™ API を使用して、高パフォーマンスの Web エクスペリエンスを開発する方法を説明します。
 
@@ -30,34 +30,38 @@ AEMas a Cloud Serviceサポート [web に最適化された画像配信](https:
 
 この記事では、AEM as a Cloud ServiceとAEM SDK の両方でコードベースが機能するように、カスタムコンポーネントで Web 最適化画像 Java™ API の使用について説明します。
 
-## API
+## Java™ API
 
 この [アセット配信 API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) は、画像アセット用に Web 最適化された配信 URL を生成する OSGi サービスです。 `AssetDelivery.getDeliveryURL(...)` 使用できるオプションは次のとおりです。 [ここに記載されています](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 
 この `AssetDelivery` OSGi サービスは、AEM as a Cloud Serviceで実行している場合にのみ満たされます。 AEM SDK では、 `AssetDelivery` OSGi サービスの戻り値 `null`. AEM as a Cloud Serviceで実行する場合は Web に最適化された URL を条件付きで使用し、AEM SDK ではフォールバック画像 URL を使用することをお勧めします。 通常、アセットの Web レンディションは十分なフォールバックです。
 
 
-### OSGi サービス
+### OSGi サービスでの API の使用
 
 を`AssetDelivery` カスタム OSGi サービスをAEM SDK で引き続き使用できるように、カスタム OSGi サービスではをオプションとして参照します。
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @Reference(cardinality = ReferenceCardinality.OPTIONAL)
 private volatile AssetDelivery assetDelivery;
 ```
 
-### Sling モデル
+### Sling モデルで使用する API
 
 を`AssetDelivery` カスタム Sling モデルではをオプションとして参照するので、カスタム Sling モデルはAEM SDK で引き続き使用できます。
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @OSGiService(injectionStrategy = InjectionStrategy.OPTIONAL)
 private AssetDelivery assetDelivery;
 ```
 
-### AssetDelivery を条件付きで使用する
+### API の条件付き使用
 
-Web に最適化された画像 URL またはフォールバック URL を、 `AssetDelivery` サービスが利用可能です。 条件付き使用では、AEM SDK でコードを実行する際に、壊れていないエクスペリエンスを使用できます。
+Web に最適化された画像 URL または `AssetDelivery` OSGi サービスの可用性。 条件付き使用では、AEM SDK でコードを実行する際にコードが機能します。
 
 ```java
 if (assetDelivery != null ) {
@@ -78,15 +82,19 @@ if (assetDelivery != null ) {
 
 ![AEM as a Cloud Service上の Web に最適化された画像](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)
 
+_AEM as a Cloud Serviceは AssetDelivery API をサポートしているので、Web に最適化された WebP レンディションが使用されます_
+
 コードをAEM SDK で実行する場合は、最適でない静的 Web レンディションが使用され、ローカル開発中にコンポーネントを機能させます。
 
-![AEM as a Cloud Service上の Web に最適化されたフォールバック画像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+![AEM SDK の Web に最適化されたフォールバック画像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+
+_AEM SDK は AssetDelivery API をサポートしていないので、フォールバックの静的 Web レンディション (PNG またはJPEG) が使用されます_
 
 実装は、次の 3 つの論理的な部分に分類されます。
 
 1. この `WebOptimizedImage` OSGi サービスは、AEMが提供するの「スマートプロキシ」として機能します `AssetDelivery` AEM as a Cloud Service SDK とAEM SDK の両方で実行を処理できる OSGi サービス。
 2. この `ExampleWebOptimizedImages` Sling モデルは、表示する画像アセットとその Web に最適化された URL のリストを収集するビジネスロジックを提供します。
-3. この `example-web-optimized-images` Web に最適化された画像のリストを表示する HTL を実装するAEMコンポーネント。
+3. この `example-web-optimized-images` AEMコンポーネントは、HTL を実装して Web に最適化された画像のリストを表示します。
 
 以下のコード例は、コードベースにコピーし、必要に応じて更新できます。
 
