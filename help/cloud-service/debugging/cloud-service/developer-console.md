@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
+source-git-commit: 8ca9535866cc1a673a59ac3743847e68dfedd156
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 2%
+source-wordcount: '1471'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,18 @@ ht-degree: 2%
 AEM as a Cloud Serviceには、デバッグに役立つ、実行中のAEMサービスの様々な詳細を表示する各環境用の開発者コンソールが用意されています。
 
 各AEMas a Cloud Service環境には、独自の開発者コンソールがあります。
+
+## 開発者コンソールに移動します。
+
+開発者コンソールには、AEMas a Cloud Serviceの環境ごとに、Cloud Manager を介してアクセスします。
+
+![開発者コンソールに移動します。](./assets/developer-console/navigate.png)
+
+1. に移動します。 __[Cloud Manager](https://my.cloudmanager.adobe.com/)__
+2. を開きます。 __プログラム__ 開発者コンソールを開くAEMas a Cloud Service環境を含む
+3. を __環境__&#x200B;をクリックし、 `...`.
+4. 選択 __開発者コンソール__ をドロップダウンリストから選択します。
+
 
 ## 開発者コンソールへのアクセス
 
