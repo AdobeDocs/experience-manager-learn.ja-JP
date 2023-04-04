@@ -15,16 +15,16 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 14%
+source-wordcount: '148'
+ht-degree: 17%
 
 ---
 
 # マルチサイトマネージャの使用 {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL ライブコピーの概要] および [!UICONTROL ブループリント設定マネージャー] は、Adobe Experience Manager Sitesの Multi Site Manager 機能を操作するための AEM オーサーインターフェイスです。
+ライブコピーの概要とブループリント設定マネージャーは、を操作するための AEM オーサーインターフェイスです。 [マルチサイトマネージャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html?lang=ja) Adobe Experience Manager Sites
 
 ## ライブコピーの概要 {#live-copy-overview}
 

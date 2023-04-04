@@ -4,9 +4,9 @@ description: Adobe Experience Manager Foundation のヘルプを参照するに�
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,6 @@ Adobe Experience Managerは、AEM Sites、Assets およびFormsのユーザー�
 
 * **[Cloud Manager for AEMについて（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *AEM版 Cloud Manager を使用すると、AEM環境の管理、検査、セルフサービスを容易におこなえます。*
-
-* **[Adobe I/Oで使用する公開鍵と秘密鍵の設定（チュートリアル）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *を使用してキーとキーストアを生成する方法を説明します。 [!DNL openssl] AEMとAdobe I/Oに対応*
 
 * **[Cloud Manager CI/CD Pipeline の使用（ビデオ）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Cloud Manager の CI/CD パイプラインを使用して、安全で一貫性のあるデプロイメントを確実におこなう方法を説明します。*

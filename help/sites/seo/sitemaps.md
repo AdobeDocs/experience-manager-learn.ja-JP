@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 6%
+source-wordcount: '263'
+ht-degree: 5%
 
 ---
 
@@ -21,33 +21,15 @@ ht-degree: 6%
 
 AEM Sitesのサイトマップを作成して、SEO を強化する方法を説明します。
 
+>[!WARNING]
+>
+>このビデオでは、サイトマップでの相対 URL の使用方法を示します。 サイトマップ [は絶対 URL を使用する必要があります](https://sitemaps.org/protocol.html). 詳しくは、 [設定](#absolute-sitemap-urls) 絶対 URL を有効にする方法については、以下のビデオでは説明しません。
+
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
-
-## リソース
-
-+ [AEM Sitemap ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap ドキュメント](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org サイトマップのドキュメント](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org サイトマップインデックスファイルのドキュメント](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
 
 ## 設定
 
-### サイトマップスケジューラーの OSGi 設定
-
-を定義します。 [OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻度 ( [cron 式](http://www.cronmaker.com)) サイトマップは、AEMで再生成およびキャッシュされます。
-
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
-
-```json
-{
-  "scheduler.name": "WKND Sitemaps",
-  "scheduler.expression": "0 0 2 1/1 * ? *",
-  "searchPath": "/content/wknd"
-}
-```
-
-### 絶対サイトマップ URL
+### 絶対サイトマップ URL{#absolute-sitemap-urls}
 
 AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). これは、サイトマップを生成するAEMサービス（通常は AEM パブリッシュサービス）にマッピングノードを作成することでおこなわれます。
 
@@ -63,6 +45,20 @@ AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentatio
 
 ![サイトマップの絶対 URL 設定](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
+
+### サイトマップスケジューラーの OSGi 設定
+
+を定義します。 [OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻度 ( [cron 式](http://www.cronmaker.com)) サイトマップは、AEMで再生成およびキャッシュされます。
+
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+
+```json
+{
+  "scheduler.name": "WKND Sitemaps",
+  "scheduler.expression": "0 0 2 1/1 * ? *",
+  "searchPath": "/content/wknd"
+}
+```
 
 ### Dispatcher のフィルタールールを許可
 
@@ -88,3 +84,11 @@ AEM sitemap は、 [Sling マッピング](https://sling.apache.org/documentatio
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.xml)$
 RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 ```
+
+## リソース
+
++ [AEM Sitemap ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap ドキュメント](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org サイトマップのドキュメント](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org サイトマップインデックスファイルのドキュメント](https://www.sitemaps.org/protocol.html#index)
++ [Cronmaker](http://www.cronmaker.com/)

@@ -10,10 +10,10 @@ kt: 5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 8%
+source-wordcount: '626'
+ht-degree: 7%
 
 ---
 
@@ -33,6 +33,11 @@ Adobe IMSのユーザー、グループ、製品プロファイルをAEMグル�
 ## Adobe IMSユーザー
 
 AEM オーサーサービスへのアクセスを必要とするユーザーは、次のように管理されます。 [Adobe IMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) in [Adobeの AdminConsole](https://adminconsole.adobe.com). ユーザーのAdobe IMS、およびユーザーがAdmin Consoleでアクセスおよび管理される方法について説明します。
+
+>[!NOTE]
+>
+>IMS ユーザーを AdminConsole から削除しても、AEMからは自動的に削除されませんが、AEMセッション（トークン）の有効期限が切れると、AEMにログインできなくなります。
+
 
 [Adobe IMSユーザーの詳細](./adobe-ims-users.md)
 
@@ -67,6 +72,6 @@ Adobeの AdminConsole でのAdobe IMSユーザー、ユーザーグループ、A
 
 以下のドキュメントカバー [Adobe Admin Console](https://adminconsole.adobe.com)Adobe Admin Consoleをより深く理解し、それを使用してユーザーやExperience Cloud製品間のアクセスを管理するのに役立つ、具体的な詳細や懸念事項。
 
-+ [Adobe Admin Console ID の概要](https://helpx.adobe.com/enterprise/using/identity.html)
++ [Adobe Admin Console ID の概要](https://helpx.adobe.com/jp/enterprise/using/identity.html)
 + [Adobe Admin Console管理者ロール](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)
 + [Adobe Admin Console Developer Roles](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)

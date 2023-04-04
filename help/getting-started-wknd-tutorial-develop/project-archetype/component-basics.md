@@ -12,10 +12,10 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 3%
+source-wordcount: '1226'
+ht-degree: 2%
 
 ---
 
@@ -255,11 +255,17 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    >
    > AEM 6.4/6.5 の場合は、 `mvn clean install -PautoInstallBundle -Pclassic`
 
-1. ファイルを更新 `helloworld.html` 時刻 `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 新しく作成したメソッドを使用するには、 `HelloWorld` モデル：
+1. ファイルを更新 `helloworld.html` 時刻 `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 新しく作成したメソッドを使用するには、 `HelloWorld` モデル。
+
+   この `HelloWorld` モデルは、このコンポーネントインスタンスに対して HTL ディレクティブを介してインスタンス化されます。 `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"`、インスタンスを変数に保存する `model`.
+
+   この `HelloWorld` モデルインスタンスが、HTL で `model` 変数を `HelloWord`. これらのメソッドの呼び出しでは、次のように短縮メソッドの構文を使用できます。 `${model.getTitle()}` ～に短縮できる `${model.title}`.
+
+   同様に、すべての HTL スクリプトが [グローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) Sling Model オブジェクトと同じ構文を使用してアクセスできる
 
    ```html
-   <div class="cmp-helloworld" data-cmp-is="helloworld"
-   data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
+   <div class="cmp-helloworld" data-cmp-is="helloworld" 
+       data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
        <h1 class="cmp-helloworld__title">${model.title}</h1>
        <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
            <p class="cmp-helloworld__item-label">Text property:</p>
@@ -268,10 +274,6 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
        <div class="cmp-helloworld__item" data-sly-test="${model.text}">
            <p class="cmp-helloworld__item-label">Sling Model getText() property:</p>
            <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${model.text}</pre>
-       </div>
-       <div class="cmp-helloworld__item"  data-sly-test="${model.message}">
-           <p class="cmp-helloworld__item-label">Model message:</p>
-           <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
        </div>
    </div>
    ```
