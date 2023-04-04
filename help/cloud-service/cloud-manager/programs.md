@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 46%
@@ -23,4 +23,4 @@ ht-degree: 46%
 
 Cloud Manager **プログラム** は、通常、購入したサービス契約 (SLA) に対応する、ビジネスイニシアチブの論理的なセットをサポートするAEM環境のセットを表します。 例えば、あるプログラムが、グローバルなパブリック Web サイトをサポートする AEM リソースを表す一方で、別のプログラムは社内の中核的 DAM を表します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)

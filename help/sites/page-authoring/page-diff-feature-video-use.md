@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -28,7 +28,7 @@ AEM Sites のページ差異機能で示されるのは、ページ内で変更�
 
 ## ページのバージョンの比較 {#comparing-page-versions}
 
->[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
 **HTMLの変更**
 
@@ -43,7 +43,7 @@ AEM Sites のページ差異機能で示されるのは、ページ内で変更�
 
 ## ローンチページの比較 {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
 
 ページの差異機能を使用して、ブループリントとライブコピー、ブループリントと言語コピーの違いを識別することもできます。
 

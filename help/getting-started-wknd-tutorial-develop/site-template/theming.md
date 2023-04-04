@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 次に、WKND ブランドの外観と操作性に合わせて、テーマのソースを変更します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332918/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
 
 ビデオの大まかな手順：
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 Cloud Manager のフロントエンドパイプラインを使用して、テーマの更新をAEM環境にデプロイします。
 
->[!VIDEO](https://video.tv.adobe.com/v/338722/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338722?quality=12&learn=on)
 
 ビデオの大まかな手順：
 
@@ -84,6 +84,6 @@ GitHub リポジトリの例をいくつか参照として使用できます。
 
 おめでとうございます。テーマを更新し、AEMにデプロイしました。
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
 AEM開発に深く掘り下げ、 [AEM Project Archetype](../project-archetype/overview.md).

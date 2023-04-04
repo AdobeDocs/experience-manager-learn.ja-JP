@@ -1,22 +1,22 @@
 ---
-title: JBoss Admin Console用の管理ユーザーの追加方法
-description: JBOSS Admin Consoleの管理ユーザーの設定
+title: JBoss Admin Console 用の管理ユーザーの追加方法
+description: JBOSS Admin Console の管理ユーザーの設定
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 787ee0b4-8260-47d2-bcf9-da705e94859a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 2%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
 
+# JBoss Admin Console 用の管理ユーザーの追加方法
 
-# JBoss Admin Console用の管理ユーザーの追加方法
+*このビデオでは、JBoss Admin Console の管理ユーザーを追加する手順を説明します。*
 
-*このビデオでは、JBoss Admin Console用の管理ユーザーを追加する手順を説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335484?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)

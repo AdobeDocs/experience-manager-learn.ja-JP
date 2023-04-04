@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 使用例のデモ
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
 このチュートリアルでは、 [Geonames REST API](http://api.geonames.org/) を使用して、この機能を試すことができます。
 この種のサービスを提供する組織は多数あり、REST API が詳細に文書化されている限り、データ統合機能を使用してAEM Formsと簡単に統合できます
@@ -48,7 +48,7 @@ OpenAPI Specification（旧称 Swagger Specification）は、REST API の API �
 > AEM Formsは、OpenAPI Specification バージョン 2.0(FKA Swagger) をサポートしています。
 
 以下を使用： [swagger editor](https://editor.swagger.io/) を使用して、国または州のすべての国と子要素を取得する操作を記述する swagger ファイルを作成します。 Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 完成した Swagger ファイルは、 [ここ](assets/swagger-files.zip)
-Swagger ファイルは、次の REST API を記述します
+Swagger ファイルは、次の REST API を記述しています
 * [すべての国を取得](http://api.geonames.org/countryInfoJSON?username=yourusername)
 * [Geoname オブジェクトの子を取得](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 

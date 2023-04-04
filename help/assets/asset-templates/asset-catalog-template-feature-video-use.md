@@ -6,7 +6,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 AEM 6.4 のカタログ機能強化は、AEM Asset Templates とInDesign Serverを使用してカタログページを作成する機能を提供します。  ユーザーは、InDesignテンプレートを使用してカタログページを作成し、製品プロパティを編集可能フィールドにマッピングできます。後で、これを使用して、様々な製品に類似したページを作成できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22540/)
+>[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
 
 >[!NOTE]
 >

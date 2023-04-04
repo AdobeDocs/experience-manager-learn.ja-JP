@@ -10,7 +10,7 @@ level: Beginner
 kt: 7985
 thumbnail: 333477.jpg
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ローコードのアプローチを使用して、クイックサイト作成と事前定義済みのサイトテンプレートを使用してAdobe Experience Managerで最初のサイトを作成する方法を説明します。 標準搭載のコンポーネントとテンプレートを使用して、サイトをすぐに起動および実行できます。 Adobe XD主導のテーマ設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/333477/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI キット](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM Site Template](https://github.com/adobe/aem-site-template-basic)
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 このチュートリアルの手順は、Adobe Experience Manager as a Cloud Service環境で実行します。 AEM環境への管理者アクセス権があることを確認します。 次を使用することをお勧めします。 [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) および [開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja) このチュートリアルを完了する際
 
-## 次の手順 {#next-steps}
+## 次のステップ {#next-steps}
 
 クイックサイト作成機能を使用して、架空のライフスタイルブランド WKND 向けのAEMサイトを実装する手順を順を追って説明します。
 

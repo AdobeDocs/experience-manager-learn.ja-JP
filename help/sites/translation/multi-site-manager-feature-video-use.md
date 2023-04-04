@@ -15,7 +15,7 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 14%
@@ -28,13 +28,13 @@ ht-degree: 14%
 
 ## ライブコピーの概要 {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
 *ライブコピーの概要は、ライブコピーとそれぞれのブループリントを管理するために使用されるタッチ UI インターフェイスです。 この機能は、AEM 6.3 で導入され、クラシック UI ブループリントコントロールセンターに代わるものです。*
 
 ## ブループリント設定マネージャー — タッチ UI {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
 *AEM 6.3 では、マルチサイトマネージャーで使用するブループリント設定を管理するタッチ UI インターフェイスが導入されています。*
 

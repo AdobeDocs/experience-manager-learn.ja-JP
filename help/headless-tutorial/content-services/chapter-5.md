@@ -1,92 +1,92 @@
 ---
-title: 第5章 — コンテンツサービスのオーサリングページ — コンテンツサービス
-description: AEMヘッドレスチュートリアルの第5章では、第4章で定義したテンプレートからのページの作成について説明します。 これらのページは、JSON HTTPエンドポイントとして機能します。
-feature: コンテンツフラグメント、API
-topic: ヘッドレス、コンテンツ管理
+title: 第 5 章 — コンテンツサービスのオーサリングページ — コンテンツサービス
+description: AEMヘッドレスチュートリアルの第 5 章では、第 4 章で定義したテンプレートからのページの作成について説明します。 これらのページは、JSON HTTP エンドポイントとして機能します。
+feature: Content Fragments, APIs
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 873d8e69-5a05-44ac-8dae-bba21f82b823
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
 
+# 第 5 章 — コンテンツサービスページのオーサリング
 
-# 第5章 — コンテンツサービスページのオーサリング
-
-AEMヘッドレスチュートリアルの第5章では、第4章で定義したテンプレートからページを作成する方法について説明します。 この章で作成するページは、モバイルアプリのJSON HTTPエンドポイントとして機能します。
-
->[!NOTE]
->
-> `/content/wknd-mobile/en/api`のページコンテンツアーキテクチャは事前に構築されています。 `en`と`api`のベースページは、アーキテクチャと組織の目的を果たしますが、厳密に必要とは限りません。 APIコンテンツをローカライズできる場合は、通常の言語コピーおよびマルチサイトマネージャーページの組織のベストプラクティスに従うことをお勧めします。APIページは、AEM Sitesのページのようにローカライズできるからです。
-
-## イベントAPIページの作成
-
-1. **[!UICONTROL AEM] > [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**&#x200B;に移動します。
-1. **APIページのラベルをタップし**、上部のアクションバーの「作 **** 成」ボタンをタップして、APIページの下に新しいイベントAPIページを作成します。
-   1. 上部のアクションバーの「**作成**」をタップします。
-   1. **イベントAPI**&#x200B;テンプレートを選択します。
-   1. 「**名前**」フィールドに、**events**&#x200B;と入力します。
-   1. 「**タイトル**」フィールドに、「**イベントAPI**」と入力します。
-   1. 上部のアクションバーの「**作成**」をタップして、ページを作成します
-   1. 「**完了**」をタップして、AEM Sites管理者に戻ります。
-
->[!VIDEO](https://video.tv.adobe.com/v/28340/?quality=12&learn=on)
-
-## イベントAPIページのオーサリング
+AEMヘッドレスチュートリアルの第 5 章では、第 4 章で定義したテンプレートからページを作成する方法について説明します。 この章で作成するページは、モバイルアプリの JSON HTTP エンドポイントとして機能します。
 
 >[!NOTE]
 >
-> このプロジェクトでは、オーサーエクスペリエンスに基本的なスタイルを提供するためにCSSを提供しています。
+> のページコンテンツアーキテクチャ `/content/wknd-mobile/en/api` は事前にビルドされています。 のベースページ `en` および `api` 建築や組織の目的を果たしますが、厳密に必要とされるわけではありません。 API コンテンツをローカライズする場合は、通常の言語コピーおよび Multi-site Manager ページ組織のベストプラクティスに従うことをお勧めします。API ページは、AEM Sitesページのようにローカライズできるからです。
 
-1. **イベントAPI**&#x200B;ページを編集します。そのためには、**AEM/Sites/WKND Mobile/English/API**&#x200B;に移動し、**イベントAPI**&#x200B;ページを選択して、上部のアクションバーの&#x200B;**Edit**&#x200B;をタップします。
-1. アセットファインダーから画像コンポーネントプレースホルダーに&#x200B;**ロゴ画像**&#x200B;をドラッグ&amp;ドロップして、アプリに表示する画像を追加します。
-   * `/content/dam/wknd-mobile/images/wknd-logo.png`にあるロゴを使用します。
+## イベント API ページの作成
 
-1. **タグ行**&#x200B;を追加して、イベントの上に表示します。
-   1. **テキスト**&#x200B;コンポーネントを編集します
+1. に移動します。 **[!UICONTROL AEM] > [!UICONTROL サイト] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**.
+1. **API ページのラベルをタップします**&#x200B;次に、 **作成** ボタンをクリックし、API ページの下に新しいイベント API ページを作成します。
+   1. タップ **作成** 上部のアクションバー
+   1. 選択 **イベント API** テンプレート
+   1. 内 **名前** フィールド入力 **イベント**
+   1. 内 **タイトル** フィールド入力 **イベント API**
+   1. タップ **作成** をクリックしてページを作成します。
+   1. タップ **完了** AEM Sites管理者に戻るには
+
+>[!VIDEO](https://video.tv.adobe.com/v/28340?quality=12&learn=on)
+
+## イベント API ページのオーサリング
+
+>[!NOTE]
+>
+> プロジェクトには、作成者エクスペリエンスに基本的なスタイルを提供するための CSS が用意されています。
+
+1. を編集します。 **イベント API** 次に移動してページに移動： **AEM /サイト/ WKND Mobile /英語/ API**、選択 **イベント API** ページとタップ **編集** 」をクリックします。
+1. を追加します。 **ロゴ画像** をクリックし、アセットファインダーから画像コンポーネントプレースホルダーにアプリをドラッグ&amp;ドロップして表示します。
+   * 次の場所にある指定されたロゴを使用します。 `/content/dam/wknd-mobile/images/wknd-logo.png`.
+
+1. 追加 **タグ行** イベントの上に表示されます。
+   1. を編集します。 **テキスト** コンポーネント
    1. テキストを入力します。
       * `The WKND is here.`
 
-1. 表示する&#x200B;**イベント**&#x200B;を選択します。
-   1. 「**プロパティ**」タブで次の設定を行います。
-      * モデル：**イベント**
-      * 親パス：**/content/dam/wknd-mobile/en/events**
-      * タグ：**&lt;空白のまま>**
-   1. 「**要素**」タブで次の設定を行います。
+1. を選択します。 **イベント** 表示する
+   1. で次の設定をおこないます。 **プロパティ** タブ：
+      * モデル： **イベント**
+      * 親パス： **/content/dam/wknd-mobile/en/events**
+      * タグ： **&lt;leave blank=&quot;&quot;>**
+   1. で次の設定をおこないます。 **要素** タブ：
       * リストに表示されている要素を削除して、イベントコンテンツフラグメントのすべての要素が公開されるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/28339/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28339?quality=12&learn=on)
 
-## APIページのJSON出力の確認
+## API ページの JSON 出力を確認する
 
-`.model.json`セレクターを使用してページを要求することで、JSON出力とその形式を確認できます。
+JSON 出力とその形式は、 `.model.json` セレクター。
 
-このJSON構造（またはスキーマ）は、このAPIの利用者によってよく理解されている必要があります。 APIの消費者は、構造のどの側面が固定されているかを把握することが重要です(つまり、 イベントAPIのロゴ（画像）とタグライブ（テキスト）。 コンテンツフラグメントリストコンポーネントの下に表示されるイベント)。
+この JSON 構造（またはスキーマ）は、この API の利用者によってよく理解されている必要があります。 API をご利用のお客様は、構造のどの側面が固定されているかを把握することが非常に重要です ( すなわち、 イベント API のロゴ（画像）とタグ（ライブ）（テキスト）は流動的 ( コンテンツフラグメントリストコンポーネントの下に表示されるイベント )。
 
-公開済みAPIでこの契約を解除すると、利用中のアプリで誤った動作が発生する可能性があります。
+公開した API でこの契約を解除すると、使用中のアプリで誤った動作が発生する可能性があります。
 
-1. 新しいブラウザータブで、`.model.json`セレクターを使用してイベントAPIページを要求します。このセレクターは、AEM Content ServicesのJSONエクスポーターを呼び出し、ページとコンポーネントを正規化された適切に定義されたJSON構造にシリアル化します。
+1. 新しいブラウザータブで、 `.model.json` セレクター。AEM Content Services の JSON Exporter を呼び出し、ページとコンポーネントを、正規化された適切に定義された JSON 構造にシリアル化します。
 
-   これらのページで生成されるJSON構造は、アプリを使用する構造に合わせる必要があります。
+   これらのページで生成される JSON 構造は、アプリを使用する際に適合する必要のある構造です。
 
-1. **イベントAPI**&#x200B;ページを&#x200B;**JSON**&#x200B;としてリクエストします。
+1. をリクエストします。 **イベント API** ページ **JSON**.
 
    * [http://localhost:4502/content/wknd-mobile/en/api/events.model.json](http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json)
 
    結果は次のようになります。
 
-![AEM Content Services JSON出力](assets/chapter-5/json-output.png)
+![AEM Content Services JSON 出力](assets/chapter-5/json-output.png)
 
 >[!NOTE]
 >
-> このJSONは、 `.tidy`セレクターを使用して、人間が読みやすいように&#x200B;**整然と** （形式）出力できます。
+> この JSON は **整頓する** （フォーマット済み）人間が読みやすいように、 `.tidy` セレクター：
 > * [http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json](http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json)
 
 
 ## 次の手順
 
-必要に応じて、[AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)を使用して、[com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)コンテンツパッケージをAEMオーサーにインストールします。 このパッケージには、チュートリアルのこの章および前の章で概要を説明した設定とコンテンツが含まれています。
+オプションで、 [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) を介して AEM オーサー上のコンテンツパッケージ [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp). このパッケージには、チュートリアルのこの章および前の章で概要を説明する設定とコンテンツが含まれています。
 
-* [第6章 — JSONとしてAEMパブリッシュにコンテンツを公開する](./chapter-6.md)
+* [第 6 章 — JSON として AEM パブリッシュにコンテンツを公開](./chapter-6.md)

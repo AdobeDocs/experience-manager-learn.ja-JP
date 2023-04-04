@@ -7,7 +7,7 @@ level: Intermediate
 thumbnail: 343620.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 3 部構成のシリーズの第 1 部では、 Cloud Manager の基本を学び、エクスペリエンス監査機能につま先を絞り込みます。
 
->[!VIDEO](https://video.tv.adobe.com/v/343620)
+>[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 

@@ -1,23 +1,23 @@
 ---
-title: Workbenchのデバッグ出力を有効にする方法
-description: Workbenchのデバッグログを取り込む手順
+title: Workbench のデバッグ出力を有効にする方法
+description: Workbench のデバッグログを取得する手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
 feature: Workbench
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7715bf31-9f7c-4ff9-828f-a1b16e35fda7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 5%
+source-wordcount: '34'
+ht-degree: 0%
 
 ---
 
+# Workbench のデバッグ出力を有効にする方法
 
-# Workbenchのデバッグ出力を有効にする方法
+*このビデオでは、 Workbench のデバッグ出力を有効にするプロセスについて説明します。*
 
-*このビデオでは、 Workbenchのデバッグ出力を有効にするプロセスについて説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335497?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)

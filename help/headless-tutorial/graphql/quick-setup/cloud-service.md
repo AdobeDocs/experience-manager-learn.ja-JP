@@ -1,6 +1,6 @@
 ---
 title: AEM AEM as a Cloud Serviceのヘッドレスクイックセットアップ
-description: AEMヘッドレスのクイックセットアップでは、WKND Site サンプルプロジェクトのコンテンツを使用してAEMヘッドレスを操作し、AEMヘッドレス GraphQL API を介してコンテンツを使用する React App を使用できます。
+description: AEMヘッドレスのクイックセットアップでは、WKND Site サンプルプロジェクトのコンテンツを使用してAEMヘッドレスを操作し、AEMヘッドレスGraphQL API を介してコンテンツを使用する React App を使用できます。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -9,7 +9,7 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 2%
@@ -36,10 +36,10 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
 
 ## 1. Cloud Manager Git リポジトリを作成する
 
-まず、WKND サイトのデプロイに使用する Cloud Manager Git リポジトリを作成します。 WKND サイトは、コンテンツ（コンテンツフラグメント）と、クイックセットアップの React App で使用される GraphQL AEMエンドポイントを含む、サンプルのAEM Web サイトプロジェクトです。
+まず、WKND サイトのデプロイに使用する Cloud Manager Git リポジトリを作成します。 WKND サイトは、コンテンツ（コンテンツフラグメント）と、クイックセットアップの React App で使用されるGraphQL AEMエンドポイントを含む、サンプルのAEM Web サイトプロジェクトです。
 
 _手順のスクリーンキャスト_
->[!VIDEO](https://video.tv.adobe.com/v/339073/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
 
 1. に移動します。 [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
 1. Cloud Manager を選択します。 __プログラム__ このクイックセットアップに使用するAEMas a Cloud Service環境を含む
@@ -55,7 +55,7 @@ _手順のスクリーンキャスト_
 Cloud Manager Git リポジトリを作成したら、WKND Site プロジェクトのソースコードを GitHub からコピーし、Cloud Manager Git リポジトリにプッシュします。 Cloud Manager で、WKND サイトプロジェクトにアクセスし、AEMas a Cloud Service環境にデプロイできます。
 
 _手順のスクリーンキャスト_
->[!VIDEO](https://video.tv.adobe.com/v/339074/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339074?quality=12&learn=on)
 
 1. コマンドラインから、サンプルの WKND Site プロジェクトのソースコードを GitHub からコピーします
 
@@ -87,10 +87,10 @@ _手順のスクリーンキャスト_
 
 WKND サイトプロジェクトを Cloud Manager Git リポジトリにプッシュすると、Cloud Manager パイプラインを使用してAEM as a Cloud Serviceにデプロイすることはできません。
 
-WKND サイトプロジェクトには、React アプリがAEMヘッドレス GraphQL API に対して消費するサンプルコンテンツが用意されています。
+WKND Site プロジェクトには、React アプリがAEMヘッドレスGraphQL API を介して消費するサンプルコンテンツが用意されています。
 
 _手順のスクリーンキャスト_
->[!VIDEO](https://video.tv.adobe.com/v/339075/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
 1. の添付 __実稼動以外のデプロイメントパイプライン__ を新しい Git リポジトリに追加します。
    1. 選択 __パイプライン__ 上部ナビゲーション
@@ -118,10 +118,10 @@ _手順のスクリーンキャスト_
 
 ## 4. WKND React アプリをダウンロードして実行します。
 
-WKND Site プロジェクトのコンテンツでAEMas a Cloud Service的にブートストラップ処理を行い、AEM Headless GraphQL API を介して WKND Site のコンテンツを使用するサンプルの WKND React App をダウンロードして起動します。
+WKND Site プロジェクトのコンテンツでAEMas a Cloud Service的にブートストラップ処理したら、AEMヘッドレスGraphQL API を介して WKND Site のコンテンツを使用するサンプルの WKND React App をダウンロードして、起動します。
 
 _手順のスクリーンキャスト_
->[!VIDEO](https://video.tv.adobe.com/v/339076/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339076?quality=12&learn=on)
 
 1. コマンドラインから、React App のソースコードを GitHub からクローンします。
 
@@ -155,14 +155,14 @@ _手順のスクリーンキャスト_
    $ npm start
    ```
 
-1. ローカルで実行される React アプリは、次の時点で開始します。 [http://localhost:3000](http://localhost:3000) とは、AEMヘッドレスの GraphQL API を使用してAEM as a Cloud Serviceから提供されるアドベンチャの一覧を表示します。
+1. ローカルで実行される React アプリは、次の時点で開始します。 [http://localhost:3000](http://localhost:3000) およびは、AEMヘッドレスのGraphQL API を使用してAEM as a Cloud Serviceから提供されるアドベンチャの一覧を表示します。
 
 ## 5. AEMでコンテンツを編集する
 
-AEMヘッドレス GraphQL API のコンテンツに接続し、利用するサンプル WKND React アプリを使用して、AEM オーサーサービスのコンテンツを作成し、React アプリのエクスペリエンスがどのように更新されるかを確認します。
+AEMヘッドレスGraphQL API のコンテンツに接続し、利用するサンプル WKND React アプリを使用して、AEM オーサーサービスのコンテンツを作成し、React アプリのエクスペリエンスがどのように更新されるかを確認します。
 
 _手順のスクリーンキャスト_
->[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
 
 1. AEM as a Cloud Service Author サービスにログインします。
 1. に移動します。 __アセット/ファイル/WKND 共有/英語/冒険__
@@ -193,6 +193,6 @@ _手順のスクリーンキャスト_
 
 React App がAEM as a Cloud Serviceからコンテンツをどのように消費するかを詳しく理解するには、 [AEMヘッドレスチュートリアル](../multi-step/overview.md). このチュートリアルでは、AEMでのコンテンツフラグメントの作成方法と、この React App が JSON としてコンテンツを使用する方法について説明します。
 
-### 次の手順
+### 次のステップ
 
 + [AEMヘッドレスチュートリアルの開始](../multi-step/overview.md)

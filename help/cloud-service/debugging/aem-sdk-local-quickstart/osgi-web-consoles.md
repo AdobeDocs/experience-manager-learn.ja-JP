@@ -1,6 +1,6 @@
 ---
-title: OSGi Webコンソールを使用したAEM SDKのデバッグ
-description: AEM SDKのローカルクイックスタートには、OSGi Webコンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と、内の機能を理解するのに役立ちます。
+title: OSGi Web コンソールを使用したAEM SDK のデバッグ
+description: AEM SDK のローカルクイックスタートには、OSGi Web コンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と関数を理解するのに役立ちます。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -12,66 +12,66 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 4%
 
 ---
 
-# OSGi Webコンソールを使用したAEM SDKのデバッグ
+# OSGi Web コンソールを使用したAEM SDK のデバッグ
 
-AEM SDKのローカルクイックスタートには、OSGi Webコンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と、内の機能を理解するのに役立ちます。
+AEM SDK のローカルクイックスタートには、OSGi Web コンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と関数を理解するのに役立ちます。
 
-AEMは多くのOSGiコンソールを提供し、それぞれがAEMの様々な側面に関する重要なインサイトを提供します。ただし、通常、アプリケーションのデバッグで最も役立つのは次のとおりです。
+AEMは多くの OSGi コンソールを提供し、それぞれがAEMの様々な側面に関する重要なインサイトを提供します。ただし、通常、アプリケーションのデバッグに最も役立つのは次のとおりです。
 
 ## バンドル
 
->[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
-バンドルコンソールは、OSGiバンドルとその詳細をAEMにデプロイしたカタログです。また、バンドルを開始および停止するアドホック機能も備えています。
+バンドルコンソールは、AEMにデプロイされた OSGi バンドルとその詳細のカタログです。また、バンドルを開始および停止するアドホック機能も備えています。
 
-バンドルコンソールは、次の場所にあります。
+バンドルコンソールは次の場所にあります。
 
-+ ツール/操作/ Webコンソール/OSGi/バンドル
-+ または、次の場所に直接アクセスします。[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ ツール/操作/ Web コンソール/ OSGi /バンドル
++ または直接アクセス： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 各バンドルをクリックすると、アプリケーションのデバッグに役立つ詳細が表示されます。
 
-+ OSGiバンドルが存在することを確認しています
-+ OSGiバンドルがアクティブかどうかの検証
-+ OSGiバンドルが未満の読み込みを行ったかどうかを判断し、読み込みを開始できない
++ OSGi バンドルが存在することを検証しています
++ OSGi バンドルがアクティブかどうかを検証しています
++ OSGi バンドルが満たされていないインポートを開始できないかどうかの判断
 
 ## コンポーネント
 
->[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
-コンポーネントコンソールは、AEMにデプロイされたすべてのOSGiコンポーネントのカタログで、定義済みのOSGiコンポーネントのライフサイクルから参照可能なOSGiサービスに至るまで、それらに関するすべての情報を提供します
+コンポーネントコンソールは、AEMにデプロイされたすべての OSGi コンポーネントのカタログで、定義された OSGi コンポーネントのライフサイクルから参照可能な OSGi サービスに至るまで、それらに関するすべての情報を提供します
 
-コンポーネントコンソールは、次の場所にあります。
+コンポーネントコンソールは次の場所にあります。
 
-+ ツール/操作/ Webコンソール/OSGi/コンポーネント
-+ または、次の場所に直接アクセスします。[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ ツール/操作/ Web コンソール/ OSGi /コンポーネント
++ または直接アクセス： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
-デバッグアクティビティに役立つ主な側面：
+デバッグアクティビティに役立つ主な要素：
 
-+ OSGiバンドルが存在することを確認しています
-+ OSGiバンドルがアクティブかどうかの検証
-+ OSGiバンドルが未満の読み込みを行ったかどうかを判断し、読み込みを開始できない
-+ コンポーネントのPIDを取得し、GitでOSGi設定を作成する
-+ アクティブなOSGi設定にバインドされたOSGiプロパティ値の識別
++ OSGi バンドルが存在することを検証しています
++ OSGi バンドルがアクティブかどうかを検証しています
++ OSGi バンドルが満たされていないインポートを開始できないかどうかの判断
++ コンポーネントの PID を取得して、Git でコンポーネントの OSGi 設定を作成します。
++ アクティブな OSGi 設定にバインドされた OSGi プロパティ値の識別
 
 ## Sling Model
 
->[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
 
-Sling Modelsコンソールは次の場所にあります。
+Sling Models コンソールは次の場所にあります。
 
-+ ツール/操作/ Webコンソール/ステータス/ Slingモデル
-+ または、次の場所に直接アクセスします。[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ ツール/操作/ Web コンソール/ステータス/ Sling モデル
++ または直接アクセス： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
-デバッグアクティビティに役立つ主な側面：
+デバッグアクティビティに役立つ主な要素：
 
-+ Slingモデルが適切なリソースタイプに登録されていることを確認する
-+ Slingモデルの検証は、正しいオブジェクト（ResourceまたはSlingHttpRequestServlet）から適応可能です。
-+ Sling Model Exporterが正しく登録されていることを確認します
++ Sling モデルが適切なリソースタイプに登録されていることを確認します
++ Sling モデルの検証は、正しいオブジェクト（Resource または SlingHttpRequestServlet）から適応可能です
++ Sling Model Exporter が正しく登録されていることを検証しています

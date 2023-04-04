@@ -9,10 +9,10 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 9%
 
 このたびは、AEM SPA Editor を使用して、既存の React ベース（または Next.js）のリモートSPAに編集可能なAEMコンテンツを拡張する開発者向けの、マルチパートチュートリアルをご利用いただき、誠にありがとうございます。
 
-このチュートリアルでは、 [WKND GraphQL アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja):AEM GraphQL API を介してAEMコンテンツフラグメントコンテンツを使用する React アプリですが、SPAコンテンツのコンテキスト内オーサリングは提供されていません。
+このチュートリアルでは、 [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)、AEM GraphQL API を介してAEMコンテンツフラグメントコンテンツを使用する React アプリですが、SPAコンテンツのコンテキスト内オーサリングは提供されません。
 
->[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
-## このチュートリアルについて
+## チュートリアルについて
 
 AEMのコンテキスト外で実行されるSPAやリモートSPAを更新して、AEMで作成したコンテンツを使用および配信する方法を説明するためのチュートリアルです。
 

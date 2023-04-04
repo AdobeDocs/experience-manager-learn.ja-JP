@@ -8,7 +8,7 @@ level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 6%
@@ -26,7 +26,7 @@ AEM GraphQL APIs for Content Fragments は、ヘッドレスな CMS シナリオ
 
 これらの課題を解決するために、GraphQLはクエリベースの API を提供し、クライアントは必要なコンテンツについてのみAEMに問い合わせ、1 回の API 呼び出しで受信できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
 このビデオでは、AEMで実装されたGraphQL API の概要を説明します。 AEMのGraphQL API は主に、ヘッドレスデプロイメントの一環としてAEMコンテンツフラグメントをダウンストリームアプリケーションに配信するように設計されています。
 

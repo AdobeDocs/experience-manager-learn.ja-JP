@@ -1,5 +1,5 @@
 ---
-title: コースの理解度をテストするための簡単な演習
+title: コースの理解をテストするための簡単な演習
 description: テーブルに列を追加し、検索条件に属性を追加する
 feature: Adaptive Forms
 type: Documentation
@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Integrationa
 thumbnail: 335800.jpg
 kt: 8481
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 理解をテストする
 
-このビデオで示すように、使用例を拡張する
+このビデオで示すように、使用例を強化する
 
->[!VIDEO](https://video.tv.adobe.com/v/335800/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
 

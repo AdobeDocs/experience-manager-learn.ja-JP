@@ -1,23 +1,23 @@
 ---
-title: OOTB FormsIVSおよびOutputIVSサンプルを使用してUIから読み込みテストを実行する方法
-description: FormsIVSとOutputIVSを使用した読み込みテストの設定
+title: OOTB FormsIVS および OutputIVS サンプルを使用して UI からロードテストを実行する方法
+description: FormsIVS と OutputIVS を使用して読み込みテストを設定する
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: Outputサービス、Formsサービス
-topic: '開発  '
+feature: Output Service, Forms Service
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: caf413ee-a124-4629-ae02-177f4deff4e6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 1%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
 
+# FormsIVS および OutputIVS を使用して読み込みテストを実行する方法
 
-# FormsIVSおよびOutputIVSを使用した読み込みテストの実行方法
+*このビデオでは、FormsIVS および OutputIVS サンプルを使用して UI から読み込みテストを実行する手順を説明します。*
 
-*このビデオでは、FormsIVSサンプルとOutputIVSサンプルを使用してUIから読み込みテストを実行する手順を説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335507?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)

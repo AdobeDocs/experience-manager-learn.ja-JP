@@ -7,7 +7,7 @@ role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%
@@ -20,13 +20,13 @@ Asset Share Commons のユーザーおよびオーサリングエクスペリエ
 
 ## ユーザーエクスペリエンス
 
->[!VIDEO](https://video.tv.adobe.com/v/20497/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20497?quality=12&learn=on)
 
 このビデオでは、Asset Share Commons のユーザーエクスペリエンスの簡潔なウォークスルーを提供します。 このレビューでは、検索ページ、アセットの詳細ページ、およびダウンロード、共有、買い物かごに追加などのいくつかのアクションの機能に触れます。
 
 ## オーサリングエクスペリエンス
 
->[!VIDEO](https://video.tv.adobe.com/v/20498/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20498?quality=12&learn=on)
 
 このビデオでは、Asset Share Commons の基本的なコンポーネントオーサリング機能の概要を簡潔に説明し、作成者の能力のレベルを把握します。
 

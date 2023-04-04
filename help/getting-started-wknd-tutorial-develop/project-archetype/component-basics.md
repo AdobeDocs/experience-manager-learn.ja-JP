@@ -12,7 +12,7 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 3%
@@ -47,7 +47,7 @@ ht-degree: 3%
 >
 > 前の章を正常に完了した場合は、プロジェクトを再利用して、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
 
 新しいコマンドラインターミナルを開き、次の操作を実行します。
 
@@ -87,7 +87,7 @@ ht-degree: 3%
 
 コンポーネントは、Web ページの小さなモジュラー構成要素と考えることができます。 コンポーネントを再利用するには、コンポーネントを設定可能にする必要があります。 これは、オーサーダイアログを通じて実行します。 次に、単純なコンポーネントを作成し、ダイアログの値がAEMでどのように保持されるかを調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
 上記のビデオで実行した大まかな手順を以下に示します。
 
@@ -105,7 +105,7 @@ HTMLテンプレートの言語または **[HTL](https://experienceleague.adobe.
 
 次に、 `HelloWorld` テキストメッセージの前に追加の挨拶文を表示する HTL スクリプト。
 
->[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
 上記のビデオで実行した大まかな手順を以下に示します。
 
@@ -175,7 +175,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
 
 次に、 `HelloWorldModel` Sling Model を使用して、JCR に格納された値にビジネスロジックを適用してから、ページに出力します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
 
 1. ファイルを開きます。 `HelloWorldModel.java`:( `HelloWorld` コンポーネント。
 
@@ -286,7 +286,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
 
 次に、 `HelloWorld` コンポーネント。
 
->[!VIDEO](https://video.tv.adobe.com/v/340750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
 
 上記のビデオで実行した大まかな手順を以下に示します。
 

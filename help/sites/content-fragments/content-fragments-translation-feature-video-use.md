@@ -9,7 +9,7 @@ version: 6.4, 6.5, Cloud Service
 kt: 201
 thumbnail: 18131.jpg
 exl-id: cc4ffbd0-207a-42e4-bfcb-d6c83fb97237
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 コンテンツフラグメントをAdobe Experience Managerでローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられている混在メディアアセットも、抽出および翻訳の対象となります。
 
->[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18131?quality=12&learn=on)
 
 ## コンテンツフラグメント翻訳の使用例 {#content-fragment-translation-use-cases}
 

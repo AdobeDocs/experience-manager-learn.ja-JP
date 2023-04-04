@@ -1,25 +1,25 @@
 ---
-title: OSGi設定のプロパティ
-description: OSGi設定プロパティの基本と、OSGiサービスでのOSGi設定プロパティの使用方法について説明します。
+title: OSGi 設定のプロパティ
+description: OSGi 設定プロパティの基本と、OSGi サービスでの OSGi 設定プロパティの使用方法について説明します。
 role: Developer
 level: Beginner
-topic: 開発
-feature: OSGi
+topic: Development
+feature: OSGI
 kt: 8268
 thumbnail: 335729.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 5%
+source-wordcount: '75'
+ht-degree: 1%
 
 ---
 
+# OSGi 設定のプロパティ
 
-# OSGi設定のプロパティ
+OSGi 設定のキーと値のペアを使用して、OSGi 設定データを定義し OSGi サービスに公開する、低レベルのアプローチについて説明します。
 
-OSGi設定のキーと値のペアを使用してOSGi設定データを定義し、OSGiサービスに公開する、低レベルのアプローチについて説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/335729/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
 ## リソース
 

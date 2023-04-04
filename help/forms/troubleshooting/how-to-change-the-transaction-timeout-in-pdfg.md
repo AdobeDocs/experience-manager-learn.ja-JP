@@ -1,23 +1,23 @@
 ---
-title: PDFGサービスでのアプリケーションサーバーのトランザクションタイムアウトの変更方法
-description: PDF Generatorのアプリケーションサーバーのトランザクションタイムアウトを増減する手順
+title: PDFG サービスでアプリケーションサーバーのトランザクションタイムアウトを変更する方法
+description: Application Generator のアプリケーションサーバーのトランザクションタイムアウトを増減するPDF
 type: Troubleshooting
 role: Admin
 level: Beginner
 version: 6.5
 feature: PDF Generator
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ec190f18-1ab8-4fac-adec-3b64caee290a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 4%
+source-wordcount: '59'
+ht-degree: 0%
 
 ---
 
+# PDFG サービスでアプリケーションサーバーのトランザクションタイムアウトを変更する方法
 
-# PDFGサービスでのアプリケーションサーバーのトランザクションタイムアウトの変更方法
+*このビデオでは、Forms PDFG サービスでアプリケーションサーバーのトランザクションタイムアウトを変更するプロセスを説明します。*
 
-*このビデオでは、Forms PDFGサービスでアプリケーションサーバーのトランザクションタイムアウトを変更するプロセスを説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335555?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335555?quality=12&learn=on)

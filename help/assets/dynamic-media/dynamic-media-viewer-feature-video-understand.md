@@ -8,7 +8,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 13%
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 AEM Dynamic Mediaビューアの機能強化により、AEM作成者は、Web サイトのユーザーに対するアセットの表示方法を定義およびカスタマイズできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
 
 主な機能強化を次に示します。
 

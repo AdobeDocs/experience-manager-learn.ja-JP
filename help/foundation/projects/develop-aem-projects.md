@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 これは、の開発方法を示す開発チュートリアルです。 [!DNL AEM Projects].  このチュートリアルでは、AEM内で新しいプロジェクトを作成して、コンテンツオーサリングワークフローとタスクを管理するために使用できるカスタムプロジェクトテンプレートを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/16904/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
 *このビデオでは、以下のチュートリアルで作成した完了したワークフローの簡単なデモを提供します。*
 
@@ -351,7 +351,7 @@ AEMプロジェクトには複数の機能が付属しています [OOTB プロ�
 
    最初に、デフォルトで作成される参加者ステップを削除します。 コンポーネントメニューのサイドキックから、 **&quot;プロジェクト&quot;** サブ見出しとドラッグ&amp;ドロップ **&quot;プロジェクトタスクを作成&quot;** をモデルに貼り付けます。
 
-   「プロジェクトタスクを作成」ステップをダブルクリックして、ワークフローダイアログを開きます。 以下のプロパティを設定します。
+   「プロジェクトタスクを作成」ステップをダブルクリックして、ワークフローダイアログを開きます。 次のプロパティを設定します。
 
    このタブは、すべてのワークフロープロセスステップで共通で、「タイトル」と「説明」を設定します（これらはエンドユーザーには表示されません）。 設定する重要なプロパティは、ワークフローステージです。 **&quot;コンテンツを編集&quot;** をクリックします。
 
@@ -637,7 +637,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. ワークフローの最初のタスクの担当者を設定するために使用するフィールドをウィザードに追加します ( [ワークフローモデルの作成](#create-workflow-model):手順 5)。
 
-   の下 `../content-approval-start/jcr:content/items/column2/items` タイプの新しいノードを作成 `nt:unstructured` 名前付き **&quot;assign&quot;**. プロジェクトのユーザーピッカーコンポーネント ( [Granite ユーザーピッカーコンポーネント](https://experienceleague.adobe.com/docs/)) をクリックします。 このフォームフィールドを使用すると、ユーザーやグループの選択を、現在のプロジェクトに属するもののみに簡単に制限できます。
+   の下 `../content-approval-start/jcr:content/items/column2/items` タイプの新しいノードを作成 `nt:unstructured` 名前付き **&quot;assign&quot;**. プロジェクトのユーザーピッカーコンポーネント ( [Granite ユーザーピッカーコンポーネント](https://experienceleague.adobe.com/docs/?lang=ja)) をクリックします。 このフォームフィールドを使用すると、ユーザーやグループの選択を、現在のプロジェクトに属するもののみに簡単に制限できます。
 
    以下は、 **割り当て** ノード：
 
@@ -693,7 +693,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. ワークフロー開始者が最初のタスクの期限を設定できるようにします。 以下を使用します。 [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) この入力を取り込むためのフォームフィールド。 また、 [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 入力が Date タイプのプロパティとして JCR に保存されるようにします。
+1. ワークフロー開始者が最初のタスクの期限を設定できるようにします。 以下を使用します。 [Granite UI DatePicker](https://experienceleague.adobe.com/docs/?lang=ja) この入力を取り込むためのフォームフィールド。 また、 [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 入力が Date タイプのプロパティとして JCR に保存されるようにします。
 
    2 つ追加 **nt:unstructured** 以下に示す XML プロパティを持つノード
 

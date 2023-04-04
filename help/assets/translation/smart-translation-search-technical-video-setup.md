@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Beginner
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 スマート翻訳検索を使用すると、英語以外の検索用語を使用して英語のコンテンツに解決できます。 スマート翻訳検索用にAEMを設定するには、Apache Oak Search Machine Translation OSGi バンドルと、翻訳ルールを含む関連するフリーソースでオープンソースの Apache Joshua 言語パックをインストールし、設定する必要があります。
 
->[!VIDEO](https://video.tv.adobe.com/v/21291/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21291?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 1%
       ```
 
 3. ヒープメモリ割り当てを更新してAEMを再起動
-   * AEM を停止します。
+   * AEMを停止
    * AEMの新しく必要なヒープサイズの決定
 
       * AEM pre-lack heap size +モデルディレクトリのサイズを最も近い 2GB に丸めた値

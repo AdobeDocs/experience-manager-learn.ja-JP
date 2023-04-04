@@ -9,7 +9,7 @@ level: Beginner
 kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -24,17 +24,17 @@ ht-degree: 0%
 
 AEM as a Cloud Service用のAdobeアセットリンクの設定、ユーザーの使用権限とAEMのas a Cloud Serviceの設定、AdobeAsset Link のインストールと使用の方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338824/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
 ## Managed Servicesおよびオンプレミス用の Asset Link の設定
 
 Adobe Managed Services またはオンプレミスで実行するAEM 6 用のAdobeアセットリンクを設定する方法、Adobeの使用権限とAEMのas a Cloud Serviceを設定する方法、ユーザーアセットリンクをインストールして使用する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338823/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
 
 ## ドメイン信頼用のアセットリンクの設定
 
 ドメインの信頼とは何か、Experience Manager AssetsでAdobeの Asset Link を使用する場合の意味、およびドメインの信頼を設定する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338825/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)

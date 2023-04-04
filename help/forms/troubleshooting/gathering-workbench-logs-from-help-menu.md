@@ -1,23 +1,23 @@
 ---
-title: ヘルプメニューからWorkbenchログを収集する方法
-description: ヘルプメニューからWorkbenchログを収集する手順
+title: ヘルプメニューから Workbench ログを収集する方法
+description: ヘルプメニューから Workbench ログを収集する手順
 type: Troubleshooting
 role: Developer
 level: Beginner
 version: 6.5
 feature: Workbench
-topic: '開発 '
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c0078e02-34b0-496c-9c06-b7b5fc0304f7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 4%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
 
+# ヘルプメニューからの Workbench ログの収集
 
-# ヘルプメニューからのWorkbenchログの収集
+*このビデオでは、ヘルプメニューから Workbench ログを収集するプロセスを順を追って説明します。*
 
-*このビデオでは、ヘルプメニューからWorkbenchログを収集するプロセスについて説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335501?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

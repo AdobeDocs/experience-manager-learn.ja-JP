@@ -15,7 +15,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ここでは、TOMCAT をインストールし、TOMCAT に sampleRest.war ファイルをデプロイします。 この WAR ファイルで公開される REST エンドポイントは、データソースとフォームデータモデルの基礎となります。
 
->[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 Tomcat を設定するには、次の手順に従います。
 
@@ -46,4 +46,4 @@ Tomcat を設定するには、次の手順に従います。
 おめでとう!!!。 tomcat を設定し、SampleRest.war ファイルをデプロイしました。
 
 次のビデオでは、Tomcat でのサンプルアプリケーションのデプロイメントについて説明します
->[!VIDEO](https://video.tv.adobe.com/v/37815)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)

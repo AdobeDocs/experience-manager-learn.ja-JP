@@ -1,22 +1,22 @@
 ---
-title: UNIXサーバーでJVMのスレッドダンプを取得する方法
-description: UNIXサーバ上のJavaプロセスのスレッドダンプをキャプチャする手順
+title: UNIX サーバーで JVM のスレッドダンプをキャプチャする方法
+description: UNIX サーバ上の Java プロセスのスレッドダンプをキャプチャする手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: 管理
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: cfd42f2c-71d0-4e1d-adc9-2c45ea6954d4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 1%
+source-wordcount: '54'
+ht-degree: 0%
 
 ---
 
+# UNIX サーバーで JVM のスレッドダンプをキャプチャする方法
 
-# UNIXサーバーでJVMのスレッドダンプを取得する方法
+*このビデオでは、UNIX サーバー上の JVM のヒープダンプをキャプチャする手順を説明します。*
 
-*このビデオでは、UNIXサーバー上のJVMのヒープダンプをキャプチャする手順を説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335492?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335492?quality=12&learn=on)

@@ -4,7 +4,7 @@ description: Adobe Experience Manager(AEM)as a Cloud Serviceのチュートリ�
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 757749305a017d682322b2c2e024c2fbb3604fc2
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 13%
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEMas a Cloud Serviceは、過去の投資とイノベーションに基づいて構築された、次世代のExperience Manager製品ラインを導入し、すべての使用例と機能を保存および拡張します。
 
->[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
 <div id="whats-new-section">
 
@@ -25,7 +25,7 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 
    *トークンベースの認証を使用して HTTP 経由でAEMas a Cloud Serviceとやり取りする方法を説明します*
 
-* **[ヘッドレス GraphQL （チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
+* **[ヘッドレスGraphQL（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
 
    *AEM GraphQL API を使用して、外部アプリケーションでエクスペリエンスを強化する方法を説明します。*
 

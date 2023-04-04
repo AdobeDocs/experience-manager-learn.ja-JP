@@ -1,22 +1,22 @@
 ---
-title: AEM as aCloud Serviceのトラブルシューティング
-description: AEM SDK、AEM as aCloud Service、ビルドおよびデプロイプロセスのトラブルシューティングとデバッグの方法について説明します。
+title: トラブルシューティングAEMas a Cloud Service
+description: AEM SDK、AEM as a Cloud Service、ビルドおよびデプロイプロセスのトラブルシューティングとデバッグの方法について説明します。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
 kt: 8636
 thumbnail: 336964.jpeg
-source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
+exl-id: 905d8be5-ae79-4a25-aaf9-ed7ddb168acb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# トラブルシューティングAEMas a Cloud Service
 
-# AEM as aCloud Serviceのトラブルシューティング
+AEM SDK、AEM as a Cloud Service、ビルドおよびデプロイプロセスのトラブルシューティングとデバッグの方法について説明します。
 
-AEM SDK、AEM as aCloud Service、ビルドおよびデプロイプロセスのトラブルシューティングとデバッグの方法について説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/336964/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336964?quality=12&learn=on)

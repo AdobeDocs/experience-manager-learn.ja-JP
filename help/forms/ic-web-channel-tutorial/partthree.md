@@ -7,7 +7,7 @@ version: 6.4,6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 **AEM Forms 6.4 でのフォームデータモデルの作成**
 
->[!VIDEO](https://video.tv.adobe.com/v/27763/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27763?quality=12&learn=on)
 
 **AEM Forms 6.5 以降でのフォームデータモデルの作成**
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
 
 フォームデータモデルは、正しく設定されたデータソースに依存します。 前の手順で設定したデータソースを、このフォームデータモデルの基礎として使用します。
 

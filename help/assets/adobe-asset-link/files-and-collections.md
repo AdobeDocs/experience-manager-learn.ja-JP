@@ -8,7 +8,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: eaf9e9fc-2058-442a-bf78-27e82c33386d
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 Asset Link パネルからAEM Assetsファイルやコレクションにすばやく簡単にアクセスする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33884/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)

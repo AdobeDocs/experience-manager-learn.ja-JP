@@ -8,7 +8,7 @@ level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 コンテンツ転送ツールを使用して、AEM 6.3 以降からas a Cloud Serviceにコンテンツを移行する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336970/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
 ## コンテンツ転送ツールの使用
 
@@ -45,8 +45,8 @@ ht-degree: 2%
 
 実践練習を行う前に、上記のビデオを視聴し、理解し、次の資料を確認してください。
 
-+ [AEM Modernization Tools](../aem-modernization-tools.md)
-+ [オンボーディング ](../onboarding.md)
++ [AEM モダナイゼーションツール](../aem-modernization-tools.md)
++ [オンボーディング](../onboarding.md)
 + [Cloud Manager](../cloud-manager.md)
 
 また、前の実践演習を完了していることを確認します。

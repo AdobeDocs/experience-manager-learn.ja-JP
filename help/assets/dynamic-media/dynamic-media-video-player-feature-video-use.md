@@ -7,10 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 25%
+ht-degree: 14%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 25%
 
 AEM Dynamic Media video player は、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していましたが、flash ベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS(Appleの HTTP ライブストリーミングビデオ配信プロトコル ) の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
 ## 非Flashビデオプレーヤーのクイック参照 {#quick-look-into-non-flash-video-player}
 
->[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
 HLS ブラウザーのサポートは次のとおりです。サポートされていないブラウザーの場合、アドビはプログレッシブビデオ配信にフォールバックします。
 
@@ -54,7 +54,7 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr>
    <td> <p>デスクトップ</p> </td>
-   <td> <p>Firefox 23～44</p> </td>
+   <td> <p>Firefox 23-44</p> </td>
    <td> <p>プログレッシブダウンロード</p> </td>
   </tr>
   <tr> 
@@ -69,7 +69,7 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr> 
    <td> <p>デスクトップ</p> </td>
-   <td> <p>Safari（Mac）</p> </td>
+   <td> <p>Safari (Mac)</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
@@ -89,12 +89,12 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Safari（iOS）</p> </td>
+   <td> <p>Safari (iOS)</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Chrome（iOS）</p> </td>
+   <td> <p>Chrome(iOS)</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 

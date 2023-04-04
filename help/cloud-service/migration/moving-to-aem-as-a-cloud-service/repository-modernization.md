@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 9%
@@ -20,7 +20,7 @@ ht-degree: 9%
 
 リポジトリの最新化、可変コンテンツと不変コンテンツ、パッケージ構造、および repository modernizer CLI ツールについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336958/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
 
 ## Repository Modernizer ツール
 

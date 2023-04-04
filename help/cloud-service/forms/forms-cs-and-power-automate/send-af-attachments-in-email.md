@@ -9,9 +9,9 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11077
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 フォームの添付ファイルを抽出し、power automate ワークフローで添付ファイルを電子メールで送信します。
 次のビデオでは、送信されたデータから添付ファイルを作成するために必要な手順を説明します。
->[!VIDEO](https://video.tv.adobe.com/v/3409017/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
 次に、「 Parse JSON schema 」手順で使用する必要がある添付ファイルオブジェクトスキーマを示します
 

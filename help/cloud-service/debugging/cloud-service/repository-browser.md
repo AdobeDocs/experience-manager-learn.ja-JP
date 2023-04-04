@@ -12,19 +12,19 @@ thumbnail: 341464.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+exl-id: 88af40fc-deff-4b92-84b1-88df2dbdd90b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
 # リポジトリブラウザーでas a Cloud ServiceしたAEMのデバッグ
 
 リポジトリブラウザーは、AEMの基になるデータストアを表示し、AEMのas a Cloud Service環境を簡単にデバッグできる強力なツールです。 リポジトリブラウザーは、実稼動、ステージング、開発上のAEMのリソースとプロパティ、および作成者、公開、プレビューの各サービスの読み取り専用表示をサポートします。
 
->[!VIDEO](https://video.tv.adobe.com/v/341464/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
 リポジトリブラウザー： __のみ__ AEMas a Cloud Service環境で使用可能 ( [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) ローカルAEM SDK のデバッグ ) を参照してください。
 
@@ -48,4 +48,3 @@ AEM as a Cloud Serviceのリポジトリブラウザにアクセスするには�
 ## アクセスの公開とプレビュー
 
 デフォルトでは、「公開」または「プレビュー」へのアクセスは制限され、リポジトリブラウザーで使用可能なリソースが減少します。 [「公開」（または「プレビュー」）ですべてのリソースを表示するには、ユーザーを「公開」（または「プレビュー」）管理者の役割に追加します。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
-

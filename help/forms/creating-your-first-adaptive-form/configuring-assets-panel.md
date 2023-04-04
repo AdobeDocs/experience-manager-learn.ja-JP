@@ -1,31 +1,28 @@
 ---
-title: 「アセット」セクションへのコンポーネントの追加
-description: アセットパネル用にアコーディオンレイアウトを設定します。アコーディオンレイアウトを使用すると、繰り返し可能なセクションを追加する際の、エンドユーザーの操作性が向上します。
-feature: アダプティブフォーム
+title: 「アセットへのコンポーネントの追加」セクション
+description: アセットパネルのアコーディオンレイアウトを設定します。アコーディオンレイアウトは、繰り返し可能なセクションを追加する際の、エンドユーザーエクスペリエンスを向上させます。
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4212
 thumbnail: 22200.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: cd8e5fad-d17a-4f80-b4f6-0d43be4dfb80
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 5%
+source-wordcount: '54'
+ht-degree: 0%
 
 ---
 
+# 「アセットへのコンポーネントの追加」セクション {#adding-components-to-assets-section}
 
-# 「アセット」セクションへのコンポーネントの追加 {#adding-components-to-assets-section}
+アセットパネルのアコーディオンレイアウトを設定します。アコーディオンレイアウトは、繰り返し可能なセクションを追加する際の、エンドユーザーエクスペリエンスを向上させます。
 
-アセットパネル用にアコーディオンレイアウトを設定します。アコーディオンレイアウトを使用すると、繰り返し可能なセクションを追加する際の、エンドユーザーの操作性が向上します。
+**Assets パネルの設定**
 
-**アセットパネルの設定**
+>[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
 
->[!VIDEO](https://video.tv.adobe.com/v/22200?quality=9&learn=on)
-
-**概要のタイトルを設定**
->[!VIDEO](https://video.tv.adobe.com/v/28387)
-
-
-
+**概要タイトルの設定**
+>[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)

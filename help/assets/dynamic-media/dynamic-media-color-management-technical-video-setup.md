@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 58%
@@ -18,7 +18,7 @@ ht-degree: 58%
 
 このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのでカラー補正プレビュー機能を提供するために使用する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >

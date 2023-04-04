@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 5%
@@ -49,7 +49,7 @@ Cloud Manager プログラムでは、 __シングル__ ネットワークイン
 
 詳しくは、次の Cloud Manager API 資格情報の設定、設定、取得方法、およびそれらを使用した Cloud Manager API 呼び出しの作成方法に関するチュートリアルを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
 このチュートリアルでは、 `curl` Cloud Manager API を設定する場合。 指定された `curl` コマンドは、Linux/macOS構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、 `\` 改行文字 `^`.
 

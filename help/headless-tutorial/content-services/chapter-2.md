@@ -8,10 +8,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '962'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -40,7 +40,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 >
 >次の場合に `global` 設定を使用し、設定をすべてのコンテンツに適用し、 `cq:conf` を設定する必要はありません。
 >
->詳しくは、[[!UICONTROL 設定ブラウザー]のドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)
+>詳しくは、[[!UICONTROL 設定ブラウザー]のドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=ja)
 
 1. 適切な権限を持つユーザーとして AEM オーサーにログインし、関連する設定を変更します。
    * このチュートリアルでは、 **admin** ユーザーを使用できます。
@@ -70,7 +70,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
    1. を確認します。 **[!UICONTROL クラウド設定]** フィールドが **/conf/wknd-mobile**
    1. タップ **[!UICONTROL 保存して閉じる]** 右上で変更を保持する
 
->[!VIDEO](https://video.tv.adobe.com/v/28336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
@@ -93,7 +93,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 1. タップ **[!UICONTROL 作成]** をクリックして、コンテンツフラグメントモデル作成ウィザードを開きます。
 1. 入力 **[!DNL Event]** を **[!UICONTROL モデルタイトル]** *（説明はオプション）* とタップします。 **[!UICONTROL 作成]** 保存します。
 
->[!VIDEO](https://video.tv.adobe.com/v/28337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## コンテンツフラグメントモデルの構造の定義
 
@@ -141,7 +141,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 * [!UICONTROL レンダリング時の名前] : `numberfield`
 * [!UICONTROL フィールドラベル] : `Ticket Price`
 * [!UICONTROL プロパティ名] : `eventPrice`
-* [!UICONTROL 型] : `Integer`
+* [!UICONTROL タイプ] : `Integer`
 * [!UICONTROL 必須] : `Yes`
 
 ### イベント画像
@@ -169,7 +169,7 @@ AEMコンテンツフラグメントモデルは、AEM作成者が生コンテ�
 * [!UICONTROL プロパティ名] : `venueCity`
 * [!UICONTROL オプション] : `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
->[!VIDEO](https://video.tv.adobe.com/v/28335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)
 
 >[!NOTE]
 >

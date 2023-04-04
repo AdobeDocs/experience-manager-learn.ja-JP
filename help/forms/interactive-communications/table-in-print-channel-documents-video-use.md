@@ -13,7 +13,7 @@ role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 次のビデオでは、印刷チャネルドキュメントに対してインタラクティブ通信でテーブルコンポーネントを使用するために必要な手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/27769?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
 テーブルは、データを表形式で表示するために使用されます。 テーブルの行は、データソースから返されるデータに応じて拡大または縮小する必要があります。 印刷チャネルドキュメントでテーブルを使用するには、AEM Forms Designer を使用してレイアウトファイル（xdp ファイル）を作成する必要があります。 このレイアウトファイルで、必要な列数のテーブルを追加します。 必要に応じて、列フィールドオブジェクトのタイプが「テキストフィールド」または「数値フィールド」であることを確認します。 各列のフィールドで、データ連結が「名前による」に設定されていることを確認します。
 

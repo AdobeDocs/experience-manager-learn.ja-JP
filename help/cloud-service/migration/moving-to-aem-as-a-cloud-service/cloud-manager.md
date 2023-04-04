@@ -9,7 +9,7 @@ level: Intermediate, Experienced
 kt: 8632
 thumbnail: 336961.jpeg
 exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 AEMas a Cloud Service版 Cloud Manager と、Cloud Manager for AEM on Cloud Manager Services(AMS) との違いについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336961/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
 ## 実践練習
 
@@ -29,7 +29,7 @@ AEMas a Cloud Service版 Cloud Manager と、Cloud Manager for AEM on Cloud Mana
 実践練習を行う前に、上記のビデオを視聴し、理解し、次の資料を確認してください。
 
 + [AEM as a Cloud Serviceについての考え方](./introduction.md)
-+ [オンボーディング ](./onboarding.md)
++ [オンボーディング](./onboarding.md)
 
 また、前の実践演習を完了していることを確認します。
 

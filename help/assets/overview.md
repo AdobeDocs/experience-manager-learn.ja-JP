@@ -4,10 +4,10 @@ description: ビデオを見て、AEM Asset のサポートとサポートを受
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 9%
+ht-degree: 7%
 
 ---
 
@@ -19,13 +19,13 @@ Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデ�
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
 >abstract="必要なアセットをすばやく見つけて編集する方法を説明します。"
->additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assetsウォークスルー"
+>additional-url="https://video.tv.adobe.com/v/336196/?captions=jpn" text="AEM Assetsウォークスルー"
 
 ## AEM Assetsウォークスルー
 
 AEM Assetsとは何か、および組織のビジネス目標の達成にがどのように使用されるかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

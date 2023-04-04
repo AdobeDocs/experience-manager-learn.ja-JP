@@ -1,24 +1,23 @@
 ---
-title: Workbenchのパフォーマンスパラメーターの調整方法
-description: Workbenchのパフォーマンスパラメーターの調整手順
+title: Workbench パフォーマンスパラメーターの調整方法
+description: Workbench パフォーマンスパラメーターの調整手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: 'Workbench '
-topic: 管理
+feature: Workbench
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6cb41242-18d3-420a-9e33-87091a648703
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '32'
-ht-degree: 6%
+source-wordcount: '30'
+ht-degree: 0%
 
 ---
 
+# Workbench パフォーマンスパラメーターの調整方法
 
-# Workbenchのパフォーマンスパラメーターの調整方法
+*このビデオでは、 Workbench のパフォーマンスパラメーターを調整するプロセスについて説明します。*
 
-*このビデオでは、 Workbenchのパフォーマンスパラメーターを調整するプロセスについて説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335511?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

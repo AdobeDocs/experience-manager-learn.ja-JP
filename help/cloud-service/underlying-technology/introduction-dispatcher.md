@@ -1,6 +1,6 @@
 ---
 title: Dispatcher の概要
-description: AEMアーキテクチャの一部としてのDispatcherの機能の紹介です。
+description: AEMアーキテクチャの一部としての Dispatcher の機能の紹介です。
 feature: Dispatcher
 topics: architecture
 audience: administrator, developer
@@ -13,7 +13,7 @@ topic: Architecture, Performance
 role: Architect, Developer
 level: Beginner
 exl-id: 06954993-c8bb-47f3-8ab6-76d6b1b8e8b0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 31%
@@ -22,9 +22,9 @@ ht-degree: 31%
 
 # [!DNL Dispatcher] の概要 {#introduction-dispatcher}
 
-AEMアーキテクチャの一部としての[!DNL dispatcher]の機能の紹介です。
+の機能と機能の紹介 [!DNL dispatcher] AEMアーキテクチャの一部として。
 
->[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32029?quality=12&learn=on)
 
 ## その他のリソース {#additional-resources}
 

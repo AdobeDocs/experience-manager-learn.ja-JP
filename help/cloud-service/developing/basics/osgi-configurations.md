@@ -1,23 +1,23 @@
 ---
-title: AEM as aCloud ServiceでOSGi設定を使用する方法は？
-description: AEM as a ConfigurationでOSGi設定を定義してデプロイする方法を参照してください。Cloud Service
+title: AEM as a Cloud Serviceでの OSGi 設定の使用方法は？
+description: AEM as a Cloud Serviceで OSGi 設定を定義してデプロイする方法を確認します。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: API
+topic: Development
+feature: APIs
 kt: 6934
 thumbnail: 330559.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+exl-id: 06793e03-72c1-4566-80d7-c126fc8e3879
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 9%
+source-wordcount: '41'
+ht-degree: 4%
 
 ---
 
-
 # OSGi 設定
 
-AEM as a ConfigurationでOSGi設定を定義してデプロイする方法を参照してください。Cloud Service
+AEM as a Cloud Serviceで OSGi 設定を定義してデプロイする方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330559/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330559?quality=12&learn=on)

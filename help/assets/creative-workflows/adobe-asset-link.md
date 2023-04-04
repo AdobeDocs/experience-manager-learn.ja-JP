@@ -9,7 +9,7 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Adobe Creative Cloud for enterpriseのAdobeAsset Link 拡張機能は、Creative
 
 次のビデオでは、Adobe Creative Cloudアプリケーションで作業し、AEM Asset Link を使用してAdobeと直接統合する、クリエイティブで使用される一般的なワークフローを示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335927?quality=12&learn=on)
 
 ## Adobeアセットリンク機能
 
@@ -61,7 +61,7 @@ Adobe Creative Cloud for enterpriseのAdobeAsset Link 拡張機能は、Creative
 
 Adobeアセットリンクは、InDesignの Asset Link とAEM間のAdobeの直接リンクをサポートします。 InDesignのダイレクトリンクをサポートしているので、__リンク場所__ または __コピーを配置__) をクリックするか、AdobeAsset Link パネルを使用して、デジタルアセットをAEMからInDesignにドラッグ&amp;ドロップします。 また、 *For Placement Only+(FPO) レンディションも導入されています。
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >

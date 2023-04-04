@@ -1,25 +1,25 @@
 ---
-title: ObjectClassDefinitionオブジェクトとしてのOSGi設定
-description: OSGiサービスでObjectClassDefinitionsをOSGi設定表現として作成および指定する方法を説明します
+title: ObjectClassDefinition オブジェクトとしての OSGi 設定
+description: OSGi サービスで ObjectClassDefinitions を OSGi 設定表現として作成および指定する方法を説明します。
 role: Developer
 level: Beginner
-topic: 開発
-feature: OSGi
+topic: Development
+feature: OSGI
 kt: 8269
 thumbnail: 335730.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 72918da0-d5c4-4451-8082-0a0435c28890
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
+# ObjectClassDefinition オブジェクトとしての OSGi 設定
 
-# ObjectClassDefinitionオブジェクトとしてのOSGi設定
+OSGi サービスで ObjectClassDefinitions を OSGi 設定表現として作成および指定する方法について説明します。
 
-OSGiサービスでObjectClassDefinitionsをOSGi設定表現として作成および指定する方法について説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/335730/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335730?quality=12&learn=on)
 
 ## リソース
 

@@ -1,6 +1,6 @@
 ---
-title: AdobeI/Oプロジェクトの作成
-description: 開発者コンソールでの新しいAdobeの作成
+title: AdobeI/O プロジェクトを作成
+description: Adobe Developer Console での新しいプロジェクトの作成
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -10,7 +10,7 @@ topic: Development
 thumbnail: 7820.jpg
 kt: 7820
 exl-id: 49ecde63-e53c-41fa-ab9b-d6a4435657b5
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Adobe I/Oプロジェクト
 
-1. 統合を作成する最初の手順は、[Adobe ID](https://account.adobe.com/)を作成することです
-1. [Adobe開発者コンソール](https://console.adobe.io/home)に移動します。
-1. 手順1で作成したAdobe IDを使用してログインします。
-1. 新しいプロジェクトの作成
+1. 統合を作成する最初の手順は、 [Adobe ID](https://account.adobe.com/)
+1. 次に移動： [Adobe Developer Console](https://console.adobe.io/home)
+1. 手順 1 で作成したAdobe IDを使用してログインします。
+1. 新しいプロジェクトを作成
 
-ビデオに従って、Adobe I/Oプロジェクトを作成します。
+ビデオに従ってAdobe I/Oプロジェクトを作成してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/333220/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333220?quality=12&learn=on)

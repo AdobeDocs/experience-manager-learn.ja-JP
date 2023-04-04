@@ -1,23 +1,23 @@
 ---
-title: 既存のAMS Dispatcher設定をCloud ServiceとしてAEMに移行する方法
-description: AEM Dispatcher設定をAdobe Managed Services(AMS)からAEM as a Dispatcherに移行するためのヒントとテクニックを紹介します。
+title: 既存の AMS Dispatcher 設定をAEM as a Cloud Serviceに移行する方法
+description: AEM Dispatcher 設定を Adobe Managed Services(AMS) からAEM as a Cloud Serviceに移行するためのヒントとテクニック。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: 開発、移行
+topic: Development, Migration
 feature: Dispatcher
 kt: 6931
 thumbnail: 330556.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f0d74326-f8ba-431f-8b66-494e20b9e710
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 1%
+source-wordcount: '69'
+ht-degree: 0%
 
 ---
 
+# AMS からの Dispatcher 設定の移行
 
-# AMSからのDispatcher設定の移行
+Dispatcher 設定の違いの概要と、Adobe Managed Services(AMS) からAEM as a Cloud Serviceへの Dispatcher の移行に関するヒントとテクニックです。
 
-Dispatcher設定の違いの概要と、Adobe Managed Services(AMS)からAEM as aCloud ServiceにDispatcherを移行するためのヒントとテクニック。
-
->[!VIDEO](https://video.tv.adobe.com/v/330556/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330556?quality=12&learn=on)

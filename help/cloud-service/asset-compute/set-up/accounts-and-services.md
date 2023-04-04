@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 3%
@@ -39,7 +39,7 @@ ht-degree: 3%
 > 
 > 必要なサービスの設定およびプロビジョニング方法について、以下のセクションを確認してください。
 
-## AEMas a Cloud Service{#aem-as-a-cloud-service}
+## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
 カスタムAsset computeワーカーを呼び出すようにAEM Assets処理プロファイルを設定するには、AEMas a Cloud Service環境へのアクセスが必要です。
 
@@ -69,7 +69,7 @@ Microsoft Azure BLOB ストレージへのアクセス権をまだ持ってい�
 
 このチュートリアルでは Azure Blob Storage を使用しますが、 [Amazon S3](#amazon-s3) は、チュートリアルに対する小さな変更のみと同様に使用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/40377/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40377?quality=12&learn=on)
 
 _Azure Blob ストレージのプロビジョニングのクリックスルー（オーディオなし）_
 

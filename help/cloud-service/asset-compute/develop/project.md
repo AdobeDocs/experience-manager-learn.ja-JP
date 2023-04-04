@@ -8,10 +8,10 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '589'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ asset computeプロジェクトは、Adobe I/OCLI を使用して生成される
 
 ## プロジェクトを生成
 
->[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40197?quality=12&learn=on)
 
 _asset computeプロジェクト生成のクリックスルー（音声なし）_
 
@@ -54,7 +54,7 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
 1. プロジェクトワークスペースを選択して、 `console.json` の資格情報を選択します。この場合は、を選択します。 `Development`
 1. Adobe I/Oプロジェクトのルートに移動し、をタップします。 __すべてダウンロード__ をクリックします。
 1. ファイルが `.json` 次のように、プロジェクトとワークスペースのプレフィックスが付いたファイルが表示されます。 `wkndAemAssetCompute-81368-Development.json`
-1. 次のいずれかの操作を実行できます。
+1. 次のいずれかを実行できます。
    + ファイル名をに変更します。 `console.json` をクリックし、Asset computeワーカープロジェクトのルートに移動します。 これは、このチュートリアルのアプローチです。
    + 任意のフォルダーに移動し、 `.env` 設定エントリを持つファイル `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. ファイルパスは、絶対パスまたはプロジェクトのルートを基準とした相対パスにすることができます。 次に例を示します。
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
@@ -63,7 +63,7 @@ _asset computeプロジェクト生成のクリックスルー（音声なし）
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=../../secrets/wkndAemAssetCompute-81368-Development.json.json`
 
 
-> 注意
+> メモ
 >  ファイルには資格情報が含まれています。プロジェクト内にファイルを保存する場合は、必ず `.gitignore` ファイルを共有しないように設定します。 同じことが `.env` file — これらの資格情報ファイルを共有したり、Git に保存したりしないでください。
 
 ## GitHub のasset computeプロジェクト

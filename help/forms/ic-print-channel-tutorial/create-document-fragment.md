@@ -1,9 +1,9 @@
 ---
-title: ドキュメントフラグメントの作成
-description: 'これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 ここでは、受信者の名前と住所を格納するドキュメントフラグメントを作成します。 '
-seo-description: 'これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの5部です。 ここでは、受信者の名前と住所を格納するドキュメントフラグメントを作成します。 '
+title: ドキュメントフラグメントを作成中
+description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの 5 部です。 ここでは、受信者の名前とアドレスを格納するドキュメントフラグメントを作成します。
+seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,30 +12,29 @@ version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 kt: 5958
 thumbnail: 22350.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 1%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
+# ドキュメントフラグメントを作成中
 
-# ドキュメントフラグメントの作成
+ここでは、受信者の名前とアドレスを格納するドキュメントフラグメントを作成します。
 
-ここでは、受信者の名前と住所を格納するドキュメントフラグメントを作成します。
+>[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
->[!VIDEO](https://video.tv.adobe.com/v/22350/?quality=9&learn=on)
-
-ドキュメントフラグメントには、インタラクティブ通信ドキュメントのテキストコンテンツが格納されます。 このテキストコンテンツは、静的テキストにすることも、基になるデータモデル要素の値から挿入することもできます。 例えば、**親&#x200B;_{name}_**のように指定します。Dearは静的テキストで、 nameはフォームデータモデル要素名です。 実行時に、これはname要素の値に応じて&#x200B;**Dear Gloria Rios**または&#x200B;**Dear John Jacobs**に解決されます。
+ドキュメントフラグメントには、インタラクティブ通信ドキュメントのテキストコンテンツが格納されます。 このテキストコンテンツは、静的テキストにすることも、基になるデータモデル要素の値から挿入することもできます。 例： **親愛なる _{name}_**（ここで、Dear は静的テキスト、name はフォームデータモデル要素名です）。 実行時に、これはに解決されます。**Gloria Rios 様**または&#x200B;**John Jacobs 様**name 要素の値に応じて。
 
 リッチテキストエディターは、ビジネスユーザーがテキストを作成し、フォームデータ要素を挿入するのに十分な直感的な機能です。 ドキュメントフラグメントエディターでは、テキストの書式設定、フォントの種類とスタイルの指定、特殊文字の挿入、ハイパーリンクの作成を行うことができます。
 
-また、ドキュメントフラグメントエディターでは、この[ビデオ](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)で示すように、テキストにインライン条件を挿入する機能も備えています。
+ドキュメントフラグメントエディターでは、テキストにインライン条件を挿入することもできます。 [ビデオ](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
->ドキュメントフラグメントに挿入するフォームデータモデル要素が、ルート要素の子孫であることを確認します。 例えば、この使用例では、選択したUserオブジェクトの要素がbalancesオブジェクトの子であることを確認します
-
+>ドキュメントフラグメントに挿入するフォームデータモデル要素が、ルート要素の下位要素であることを確認します。 たとえば、この使用例では、選択した User オブジェクトの要素が balances オブジェクトの子であることを確認します

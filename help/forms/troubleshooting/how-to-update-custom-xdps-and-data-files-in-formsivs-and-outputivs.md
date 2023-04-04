@@ -1,23 +1,23 @@
 ---
-title: テスト用にFormsIVSとOutputIVSのカスタムXDPおよびデータファイルを更新する方法
-description: FormsIVSおよびOutputIVSのカスタムXDPおよびデータファイルの追加または削除
+title: テスト用に FormsIVS と OutputIVS のカスタム XDP およびデータファイルを更新する方法
+description: FormsIVS および OutputIVS のカスタム XDP およびデータファイルの追加または削除
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Outputサービス、Formsサービス '
-topic: '開発 '
+feature: Output Service, Forms Service
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: acfa77ec-eb30-4b8a-83d1-5f62a9b17586
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 1%
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
+# FormsIVS および OutputIVS でカスタム XDP およびデータファイルを更新する方法
 
-# FormsIVSおよびOutputIVSのカスタムXDPおよびデータファイルを更新する方法
+*このビデオでは、テスト用に FormsIVS と OutputIVS のカスタム XDP およびデータファイルを更新する手順について説明します。*
 
-*このビデオでは、テスト用にFormsIVSとOutputIVSのカスタムXDPおよびデータファイルを更新する手順について説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335513?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)

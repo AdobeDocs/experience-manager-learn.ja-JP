@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 2%
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 次に、モックアップの構造に合った新しいテンプレートをAEMで作成します。 これは、AEMのローカルインスタンスで発生します。 次のビデオの手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332915/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
 次のサムネールを使用して、テンプレートを特定できます（または独自のをアップロードできます）。
 
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 Site テンプレートにより、ヘッダーとフッターが生成されました。 次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。 次のビデオの手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332916/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
 以下のビデオの概要手順：
 
@@ -77,7 +77,7 @@ Site テンプレートにより、ヘッダーとフッターが生成されま
 
 次に、「雑誌記事ページ」テンプレートを使用して新しいページを作成します。 サイトのモックアップと一致するようにページのコンテンツを作成します。 次のビデオの手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332917/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
 以下を使用： [提供されたテキスト](./assets/page-templates/la-skateparks-copy.txt) を使用して、記事の本文を入力します。
 
@@ -85,7 +85,7 @@ Site テンプレートにより、ヘッダーとフッターが生成されま
 
 これで、Adobe Experience Manager Sitesで新しいテンプレートとページが作成されました。
 
-### 次の手順 {#next-steps}
+### 次のステップ {#next-steps}
 
 この時点で、雑誌記事ページとサイトが WKND のブランドスタイルと一致しません。 フォロー： [テーマ設定](theming.md) グローバルスタイルをサイトに適用する際に使用する CSS および JavaScript フロントエンドコードの更新のベストプラクティスについて説明するチュートリアルです。
 

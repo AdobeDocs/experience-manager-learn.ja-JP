@@ -1,22 +1,22 @@
 ---
-title: JBoss Application Serverの任意のクラスのデバッグログを有効にする手順
-description: JBoss Application Serverに関する問題のトラブルシューティング用のデバッグログの設定
+title: JBoss Application Server の任意のクラスのデバッグログを有効にする手順
+description: JBoss Application Server に関する問題のトラブルシューティング用のデバッグログの設定
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: '管理   '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e66f17f0-de65-4249-9133-8f65a9eafb49
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 1%
+source-wordcount: '52'
+ht-degree: 0%
 
 ---
 
+# JBoss Application Server の任意のクラスのデバッグログを有効にする手順
 
-# JBoss Application Serverの任意のクラスのデバッグログを有効にする手順
+*このビデオでは、JBoss Application Server の任意のクラスのデバッグログを有効にする手順を説明します。*
 
-*このビデオでは、JBoss Application Serverの任意のクラスのデバッグログを有効にする手順を説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335522?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)

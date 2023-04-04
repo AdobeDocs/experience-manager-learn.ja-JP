@@ -9,7 +9,7 @@ level: Intermediate
 kt: 11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 6%
@@ -33,7 +33,7 @@ ht-degree: 6%
 
 カスタム名前空間は、で管理されます。 [Sling リポジトリの初期化 (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) スクリプトが作成され、OSGi 設定としてAEMにデプロイされます。また、OSGi 設定としてas a Cloud Serviceに追加されます。 [AEMプロジェクトの](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) `ui.config` プロジェクト。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## リソース
 

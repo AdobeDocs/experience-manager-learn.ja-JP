@@ -9,7 +9,7 @@ level: Beginner
 kt: 4997
 thumbnail: 39149.jpg
 exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 15%
@@ -27,7 +27,7 @@ ht-degree: 15%
 
 AEM オーサーサービスへのアクセスを必要とするユーザーは、次のように管理されます。 [Adobe IMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) in [AdobeAdmin Console](https://adminconsole.adobe.com). ユーザーのAdobe IMS、およびユーザーがAdmin Consoleでアクセスおよび管理される方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
 
 ## その他のリソース
 

@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 8%
@@ -175,7 +175,7 @@ AEMの開発は、主に Java とフロントエンド（JavaScript、CSS など
 
 __[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ は、Java 開発用の強力な IDE です。 IntelliJ IDEA は、無料のコミュニティ版と商用（有料）の Ultimate 版の 2 種類のフレーバーで提供されます。 AEM開発には無料のコミュニティバージョンで十分ですが、Ultimate [機能セットを展開します。](https://www.jetbrains.com/idea/download).
 
->[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 + [IntelliJ IDEA のダウンロード](https://www.jetbrains.com/idea/download)
 + [リポジトリツールのダウンロード](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)

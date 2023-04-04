@@ -12,7 +12,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 ページのバージョン管理を使用すると、コンテンツ作成者はページのバージョンを作成することでページに関連付けられた変更を追跡でき、バージョンのプレビュー、バージョンの復元、ページの現在のバージョンとの比較を行うことができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32151?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32151?quality=12&learn=on)
 
-バージョン管理では、特定の時点でのページのスナップショットが作成されます。バージョン管理を使用して、次の操作を実行できます。
+バージョン管理では、特定の時点でのページのスナップショットが作成されます。 バージョン管理を使用して、次の操作を実行できます。
 * ページの新しいバージョンを作成します
 * ページに対して行った変更を取り消すには、ページを以前のバージョンに戻します。例：
 * ページの現在のバージョンと以前のバージョンを比較し、強調表示されたテキストと画像の違いを確認します

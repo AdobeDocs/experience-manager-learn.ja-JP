@@ -1,23 +1,23 @@
 ---
-title: FormsとOutputサービスの変換に関するフォント関連の問題のデバッグ方法
-description: FormsおよびOutputサービスでフォント関連の問題をデバッグする手順
+title: Formsと Output サービスの変換に関するフォントの問題をデバッグする方法
+description: Formsと Output サービスでのフォント関連の問題をデバッグする手順
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: Formsサービス、Outputサービス
-topic: '開発  '
+feature: Forms Service, Output Service
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 982ad9d4-845a-4542-91ac-6645c7d6bdc3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 1%
+source-wordcount: '58'
+ht-degree: 0%
 
 ---
 
+# Formsと Output サービスの変換に関するフォント関連の問題をデバッグするための関連資料を取得する方法
 
-# FormsとOutputサービスの変換に関するフォント関連の問題をデバッグするための保証情報を取り込む方法
+*このビデオでは、Formsと Output サービスの変換に関する問題をデバッグするために、関連資料を取り込むプロセスについて説明します。*
 
-*このビデオでは、FormsとOutputサービスの変換に関するフォント関連の問題をデバッグするための、担当情報を取り込むプロセスについて説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)

@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 AEM 6.4 のDynamic Mediaビューアの機能強化には、パノラマ画像ビューア、パノラマ仮想現実画像ビューア、縦長画像ビューアが追加されています。 パノラマビューアを使用すると、カスタム開発をおこなわずに、部屋、物件、場所、風景の魅力的で没入感のあるエクスペリエンスを簡単に提供できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >

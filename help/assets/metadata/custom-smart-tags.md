@@ -9,7 +9,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: 06f2ae4d-c18e-45ed-96d7-ddc6f9c8d829
-source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 画像のカスタムスマートタグを使用すると、顧客固有の用語でスマートタグをトレーニングできます。
 その後、カスタムスマートタグ（拡張スマートタグ）を利用して、ユーザー検索の操作性を向上させ、適切なタイミングでアセットを見つけるのに役立てることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22254?quality=12&learn=on)
 
 ## AEM 6.x 用の画像用のカスタムスマートタグの設定{#set-up}
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 スマートコンテンツサービスとAdobe I/Oを使用して、AEM Assetsでスマートタグのトレーニングを設定する方法について説明します。画像のカスタムスマートタグ
 
->[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
 
 ## その他のリソース
 

@@ -8,10 +8,10 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '977'
-ht-degree: 12%
+ht-degree: 4%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 12%
 
 AEM 6.4.2 では、ユーザーは、AEMから直接Adobe Stockアセットの検索、プレビュー、保存およびライセンスを取得できます。 Adobe Stock Enterprise プランとAEM Assetsを統合して、AEMの強力なアセット管理機能を使用して、ライセンスが必要なアセットをクリエイティブプロジェクトやマーケティングプロジェクトに幅広く活用できるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
 >[!NOTE]
 >
->この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。
+>統合には、 [エンタープライズAdobe Stockプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) とAEM 6.4（少なくとも Service Pack 2 がデプロイされている） AEM 6.4 サービスパックの詳細については、次を参照してください [リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html).
 
 Adobe StockとAEM Assetsの統合により、コンテンツ作成者とマーケターは、クリエイティブやマーケティングを目的として、Stock アセットのライセンスを簡単に取得し、使用することができます。 オムニサーチを使用し、場所フィルターをAdobe Stockとして追加するか、AEM Assetsのメインナビゲーションを移動してAdobe Stock Coral UI を検索アイコンをクリックすることで、Stock アセット検索を実行できます。
 
@@ -65,7 +65,7 @@ Adobe StockとAEM Assetsの統合により、コンテンツ作成者とマー�
 
 AEM 6.4.2 では、ユーザーは、AEMから直接Adobe Stockアセットの検索、プレビュー、保存およびライセンスを取得できます。 このビデオでは、Adobe I/Oコンソールを使用してAEM AssetsでAdobe在庫を設定する方法の簡単な説明を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ AEM 6.4.2 では、ユーザーは、AEMから直接Adobe Stockアセットの�
 
 >[!NOTE]
 >
->この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新の Service Pack 2 を展開した AEM 6.4 が必要です。[](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property=.property=%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atitleorderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24)AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。また、次の操作を行うためには管理者権限も必要です。 [Adobe I/Oコンソール](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) とAdobe Experience Managerを使用して統合を設定します。
+>統合には、 [エンタープライズAdobe Stockプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) およびAEM 6.4 以降 [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aem%2F6-4&amp;3_group.propertyvalues.property=.property=%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atitleorderby.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) デプロイ済み AEM 6.4 サービスパックの詳細については、次を参照してください [リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html). また、次の操作を行うためには管理者権限も必要です。 [Adobe I/Oコンソール](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) とAdobe Experience Managerを使用して統合を設定します。
 
 ### インストール {#installations}
 

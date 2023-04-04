@@ -9,7 +9,7 @@ thumbnail: 342374.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: b2571a84-101f-4330-8a5f-9ef5e4344591
-source-git-commit: 3854deb12c2d5a5c91c3416939f3e4534cb0094f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 検索とインデックス作成の深い領域をすばやく掘り下げます。 より効果的に成果を上げるための教育を支援したいと考えている挑戦的なトピック。
 
->[!VIDEO](https://video.tv.adobe.com/v/342374)
+>[!VIDEO](https://video.tv.adobe.com/v/342374?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 

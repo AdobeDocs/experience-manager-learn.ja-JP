@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # AEMヘッドレスの高度な概念
 
-このエンドツーエンドのチュートリアルは、 [基本チュートリアル](../multi-step/overview.md) Adobe Experience Manager(AEM) ヘッドレスと GraphQL の基本をカバーしています。 高度なチュートリアルでは、クライアントアプリケーションでの GraphQL 永続クエリの使用を含め、コンテンツフラグメントモデル、コンテンツフラグメント、AEM GraphQL 永続クエリの操作に関する詳細な側面を説明します。
+このエンドツーエンドのチュートリアルは、 [基本チュートリアル](../multi-step/overview.md) Adobe Experience Manager(AEM) ヘッドレスとGraphQLの基本をカバーしています。 高度なチュートリアルでは、GraphQLでの永続化クエリの使用など、コンテンツフラグメントモデル、コンテンツフラグメント、AEM GraphQLでのクエリの操作に関する詳細な側面を説明します。
 
 ## 前提条件
 
@@ -36,19 +36,19 @@ ht-degree: 1%
 
 * 検証ルールや、タブプレースホルダー、ネストされたフラグメント参照、JSON オブジェクト、日付と時刻データ型などの高度なデータ型を使用して、コンテンツフラグメントモデルを作成します。
 * ネストされたコンテンツおよびフラグメント参照の操作中にコンテンツフラグメントを作成し、コンテンツフラグメントオーサリングガバナンス用のフォルダーポリシーを設定します。
-* 変数とディレクティブを含む GraphQL クエリを使用してAEM GraphQL API 機能を調べます。
-* AEMのパラメーターを使用して GraphQL クエリを保持し、永続クエリで cache-control パラメーターを使用する方法を学びます。
+* 変数およびディレクティブを含むGraphQLクエリを使用してAEM GraphQL API 機能を調べます。
+* AEMのパラメーターを使用してGraphQLクエリを保持し、永続化されたクエリで cache-control パラメーターを使用する方法を学びます。
 * AEMヘッドレス JavaScript SDK を使用して、永続化されたクエリのリクエストをサンプル WKND GraphQL React アプリに統合します。
 
 ## AEMヘッドレスの高度な概念の概要
 
-次のビデオでは、このチュートリアルで扱う概念の概要を説明します。 このチュートリアルでは、より高度なデータ型を使用したコンテンツフラグメントモデルの定義、コンテンツフラグメントのネスト、AEMでの GraphQL クエリの保持について説明します。
+次のビデオでは、このチュートリアルで扱う概念の概要を説明します。 このチュートリアルでは、より高度なデータ型を使用したコンテンツフラグメントモデルの定義、コンテンツフラグメントのネスト、AEMでのGraphQLクエリの保持について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
 
 >[!CAUTION]
 >
->このビデオ (2:25) では、GraphQL クエリを調査するために、パッケージマネージャーを使用して GraphiQL クエリエディターをインストールする方法について説明します。 ただし、新しいバージョンのAEM as Cloud Serviceには組み込み **GraphiQL エクスプローラ** が指定されているので、パッケージのインストールは不要です。 詳しくは、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を参照してください。
+>このビデオ (2:25) では、パッケージマネージャーを使用して GraphiQL クエリエディターをインストールし、GraphQLクエリを調査する方法について説明します。 ただし、新しいバージョンのAEM as Cloud Serviceには組み込み **GraphiQL エクスプローラ** が指定されているので、パッケージのインストールは不要です。 詳しくは、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を参照してください。
 
 
 ## プロジェクト設定
@@ -58,7 +58,7 @@ WKND サイトプロジェクトには必要な設定がすべて含まれてい
 
 ### 既存の設定を確認
 
-AEMで新しいプロジェクトを開始する最初の手順は、ワークスペースとして設定を作成し、GraphQL API エンドポイントを作成することです。 設定を確認または作成するには、次の場所に移動します。 **ツール** > **一般** > **設定ブラウザー**.
+AEMで新しいプロジェクトを開始する最初の手順は、ワークスペースとしての設定を作成し、GraphQL API エンドポイントを作成することです。 設定を確認または作成するには、次の場所に移動します。 **ツール** > **一般** > **設定ブラウザー**.
 
 ![設定ブラウザーに移動します。](assets/overview/create-configuration.png)
 
@@ -68,7 +68,7 @@ AEMで新しいプロジェクトを開始する最初の手順は、ワーク�
 
 ### GraphQL API エンドポイントの確認
 
-次に、GraphQL クエリを送信する API エンドポイントを設定する必要があります。 既存のエンドポイントを確認するか、作成するには、次の場所に移動します。 **ツール** > **一般** > **GraphQL**.
+次に、GraphQLクエリを送信する API エンドポイントを設定する必要があります。 既存のエンドポイントを確認するか、作成するには、次の場所に移動します。 **ツール** > **一般** > **GraphQL**.
 
 ![エンドポイントの設定](assets/overview/endpoints.png)
 
@@ -115,17 +115,17 @@ AEMで新しいプロジェクトを開始する最初の手順は、ワーク�
 AEMで独自のプロジェクトを作成する際のベストプラクティスは次のとおりです。
 
 * フォルダー階層は、ローカライゼーションと翻訳を念頭に置いてモデル化する必要があります。 つまり、言語フォルダーは設定フォルダー内にネストする必要があります。これにより、設定フォルダー内のコンテンツを簡単に翻訳できます。
-* フォルダー階層は、常に平らで簡潔なものにする必要があります。 フォルダーとフラグメントの移動や名前の変更は、後で（特に実稼動用に公開した後に）おこなわないでください。公開すると、フラグメント参照や GraphQL クエリに影響を与える可能性のあるパスが変更されるからです。
+* フォルダー階層は、常に平らで簡潔なものにする必要があります。 フォルダーとフラグメントの移動や名前の変更は後でおこなわないでください。特に、実稼働環境での公開後に、フラグメント参照やGraphQLクエリに影響を及ぼす可能性のあるパスが変更されるので、名前を変更しません。
 
 ## スターターおよびソリューションパッケージ
 
 2 つのAEM **パッケージ** が使用可能で、 [パッケージマネージャー](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)
 
 * [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) は、チュートリアルの後半で使用し、サンプル画像とフォルダを含みます。
-* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) には、新しいコンテンツフラグメントモデル、コンテンツフラグメント、永続化された GraphQL クエリを含む、第 1～4 章の完成したソリューションが含まれています。 右にスキップして [クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) チャプター。
+* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) には、新しいコンテンツフラグメントモデル、コンテンツフラグメント、永続化されたGraphQLクエリを含む、第 1 ～ 4 章の完成したソリューションが含まれています。 右にスキップして [クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) チャプター。
 
 
-この [React アプリ — 高度なチュートリアル — WKND アドベンチャ](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) プロジェクトを使用して、サンプルアプリケーションを確認および調査できます。 このサンプルアプリケーションは、永続化された GraphQL クエリを呼び出してAEMからコンテンツを取得し、没入型エクスペリエンスでレンダリングします。
+この [React アプリ — 高度なチュートリアル — WKND アドベンチャ](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) プロジェクトを使用して、サンプルアプリケーションを確認および調査できます。 このサンプルアプリケーションは、永続化されたGraphQLクエリを呼び出してAEMからコンテンツを取得し、没入感のあるエクスペリエンスでレンダリングします。
 
 ## 概要
 

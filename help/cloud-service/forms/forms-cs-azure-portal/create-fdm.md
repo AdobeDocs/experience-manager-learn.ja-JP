@@ -1,6 +1,6 @@
 ---
-title: Azureストレージベースのフォームデータモデルの作成
-description: フォームデータモデルを使用したAEM Forms CSとAzureストレージの統合
+title: Azure ストレージに基づいたフォームデータモデルの作成
+description: フォームデータモデルを使用して、AEM Forms CS と Azure ストレージを統合する
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -10,15 +10,15 @@ topic: Integrations
 thumbnail: 335385.jpg
 kt: 8229
 exl-id: 3bb4edb9-1b3c-4d9d-a133-16fb2b72f8a5
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
 
 ---
 
-# Azureストレージベースのフォームデータモデルの作成
+# Azure ストレージに基づいたフォームデータモデルの作成
 
-Azureストレージベースのフォームデータモデルの作成
+Azure ストレージに基づいたフォームデータモデルの作成
 
->[!VIDEO](https://video.tv.adobe.com/v/335385/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)

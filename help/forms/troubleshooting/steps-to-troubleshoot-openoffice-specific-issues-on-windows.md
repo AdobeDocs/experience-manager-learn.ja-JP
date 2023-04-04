@@ -1,23 +1,23 @@
 ---
-title: WindowsセットアップでOpenOffice固有のエラーをトラブルシューティングする手順
-description: WindowsセットアップでのPDF Generatorの問題に関するOpenOfficeの問題のトラブルシューティング。
+title: Windows セットアップで OpenOffice 固有のエラーをトラブルシューティングする手順
+description: Windows セットアップで OpenOffice の問題が発生した場合のPDFジェネレーターの問題のトラブルシューティング。
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'PDF Generator '
-topic: '開発   '
+feature: PDF Generator
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5c4f9c93-1328-4d06-beb5-500787d987d7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 5%
+source-wordcount: '50'
+ht-degree: 0%
 
 ---
 
+# AEM Forms PDFG 変換用の Windows セットアップで OpenOffice 固有のエラーが発生した場合のトラブルシューティング手順
 
-# AEM Forms PDFG変換用のWindowsセットアップでOpenOffice固有のエラーが発生した場合のトラブルシューティング手順
+*このビデオでは、Windows セットアップで OpenOffice 固有のエラーが発生した場合のトラブルシューティングの手順を説明します。*
 
-*このビデオでは、WindowsセットアップでOpenOffice固有のエラーが発生した場合のトラブルシューティング手順を説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335481?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)

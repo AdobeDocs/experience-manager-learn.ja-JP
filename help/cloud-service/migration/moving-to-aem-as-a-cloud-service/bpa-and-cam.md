@@ -9,7 +9,7 @@ level: Experienced
 kt: 8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 ベストプラクティスアナライザー (BPA) と Cloud Acceleration Manager(CAM) が、AEM as a Cloud Serviceへの移行に関するカスタマイズされたガイドを提供する方法について説明します。 
 
->[!VIDEO](https://video.tv.adobe.com/v/336957/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336957?quality=12&learn=on)
 
 ## BPA と CAM の使用
 

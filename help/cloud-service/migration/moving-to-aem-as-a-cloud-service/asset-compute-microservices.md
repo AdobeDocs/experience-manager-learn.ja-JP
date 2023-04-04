@@ -9,7 +9,7 @@ level: Experienced
 kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来のAEMワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336990/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
 ## ワークフロー移行ツール
 
@@ -42,7 +42,7 @@ AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来
 実践練習を行う前に、上記のビデオを視聴し、理解し、次の資料を確認してください。
 
 + [AEM as a Cloud Serviceについての考え方](./introduction.md)
-+ [オンボーディング ](./onboarding.md)
++ [オンボーディング](./onboarding.md)
 
 また、前の実践演習を完了していることを確認します。
 

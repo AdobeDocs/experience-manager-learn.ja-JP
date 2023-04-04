@@ -1,6 +1,6 @@
 ---
 title: asset computeの拡張機能のための App Builder の設定
-description: asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe開発者コンソールで App Builder にアクセスして設定およびデプロイする必要があります。
+description: asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe Developerコンソールで App Builder にアクセスして設定およびデプロイする必要があります。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 # App Builder のセットアップ
 
-asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe開発者コンソールで App Builder にアクセスして設定およびデプロイする必要があります。
+asset computeプロジェクトは、特別に定義された App Builder プロジェクトなので、Adobe Developerコンソールで App Builder にアクセスして設定およびデプロイする必要があります。
 
-## 開発者コンソールでの App Builder の作成とAdobe{#set-up}
+## Adobe Developer Console での App Builder の作成と設定{#set-up}
 
->[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40183?quality=12&learn=on)
 
 _アプリビルダー設定のクリックスルー（オーディオなし）_
 
-1. にログインします。 [Adobe開発者コンソール](https://console.adobe.io) プロビジョニング済みのAdobe IDを使用 [アカウントとサービス](./accounts-and-services.md). 以下を実行する前に、 __システム管理者__ または __開発者ロール__ 正しいAdobeOrg
+1. にログインします。 [Adobe Developer Console](https://console.adobe.io) プロビジョニング済みのAdobe IDを使用 [アカウントとサービス](./accounts-and-services.md). 以下を実行する前に、 __システム管理者__ または __開発者ロール__ 正しいAdobeOrg
 1. 次をタップして App Builder プロジェクトを作成 __新規プロジェクトを作成/テンプレートからプロジェクト/ App Builder__
 
    _次のいずれかの場合__&#x200B;新規プロジェクトを作成&#x200B;__ボタンまたは__ App Builder __タイプが使用できません。これは、AdobeOrg が使用できないことを意味します [App Builder でプロビジョニングされる](#request-adobe-project-app-builder)._
@@ -63,7 +63,7 @@ _アプリビルダー設定のクリックスルー（オーディオなし）_
 
 このAdobe I/Oプロジェクトの資格情報は、ローカルで使用されます [asset compute開発ツール](../develop/development-tool.md) Adobe I/O Runtimeとやり取りする場合、およびをAsset computeプロジェクトに組み込む必要があります。 サービスアカウント (JWT) 資格情報を確認します。
 
-![Adobe開発者サービスアカウント資格情報](./assets/app-builder/service-account.png)
+![Adobe Developer Service アカウント資格情報](./assets/app-builder/service-account.png)
 
 1. Adobe I/Oプロジェクトの App Builder プロジェクトで、 `Development` ワークスペースが選択されています
 1. タップ __サービスアカウント (JWT)__ under __資格情報__

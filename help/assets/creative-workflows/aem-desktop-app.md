@@ -10,10 +10,10 @@ kt: 2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 AEM Desktop App を使用すると、デスクトップ上で管理されるあらゆるアセットに対し、あらゆるアプリケーションおよびファイル形式で簡単にアクセスできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 
 + 参照と検索を使用したAEMでのアセットの検出専用デスクトップアプリケーション
 + 最適化された帯域幅管理により、多数の大きなアセットをアップロードおよびダウンロードできます。

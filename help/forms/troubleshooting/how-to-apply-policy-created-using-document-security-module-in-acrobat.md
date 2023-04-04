@@ -1,23 +1,23 @@
 ---
-title: AcrobatのDocument Securityモジュールを使用して作成されたポリシーを適用する方法
-description: 'Acrobatを設定し、Document Securityを使用してドキュメントにポリシーを適用する '
+title: Acrobatで Document Security モジュールを使用して作成したポリシーを適用する方法
+description: Document Security を使用してドキュメントにポリシーを適用するようにAcrobatを設定
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Document Security '
-topic: '開発 '
+feature: Document Security
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 086afdf4-c9a4-4bb9-b242-e6337281ef9b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 5%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
 
+# Acrobatで Document Security モジュールを使用して作成したポリシーを適用する方法
 
-# AcrobatのDocument Securityモジュールを使用して作成されたポリシーを適用する方法
+*このビデオでは、Acrobatの Document Security モジュールを使用して作成したポリシーを適用するプロセスについて説明します。*
 
-*このビデオでは、AcrobatのDocument Securityモジュールを使用して作成したポリシーの適用プロセスについて説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335486?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

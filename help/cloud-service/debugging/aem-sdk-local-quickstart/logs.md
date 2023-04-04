@@ -1,5 +1,5 @@
 ---
-title: ログを使用したAEM SDKのデバッグ
+title: ログを使用したAEM SDK のデバッグ
 description: ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされるAEMアプリケーションでの適切なログの記録に依存します。
 feature: Developer Tools
 topics: development
@@ -12,50 +12,50 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%
 
 ---
 
-# ログを使用したAEM SDKのデバッグ
+# ログを使用したAEM SDK のデバッグ
 
-AEM SDKのログにアクセスすると、AEM SDKのローカルクイックスタートJARまたはDispatcherツールのいずれかで、AEMアプリケーションのデバッグに関する重要なインサイトを得ることができます。
+AEM SDK のログへのアクセスでは、AEM SDK ローカルクイックスタート JAR または Dispatcher ツールのいずれかで、AEMアプリケーションのデバッグに関する重要なインサイトを提供できます。
 
 ## AEMログ
 
->[!VIDEO](https://video.tv.adobe.com/v/34334/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
-ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされるAEMアプリケーションでの適切なログの記録に依存します。 Adobeでは、AEM SDKのローカルクイックスタートとAEM as a Cloud ServiceCloud Serviceの開発環境でのログの表示性が正常化され、設定の煩雑さや再デプロイメントが軽減されるので、ローカル開発とAEMの開発ログ設定を可能な限り同じにすることをお勧めします。
+ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされるAEMアプリケーションでの適切なログの記録に依存します。 Adobeでは、ローカル開発 SDK のローカルクイックスタートとAEM as a Cloud Serviceの開発環境でのログの表示を正常化し、設定の煩雑さや再デプロイを減らすので、AEMとAEMのas a Cloud Service開発ログの設定を可能な限り似たものにすることをお勧めします。
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)は、にあるSling Logger OSGi設定を使用して、ローカル開発用のAEMアプリケーションのJavaパッケージのデバッグレベルでログを設定します。
+この [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) 次の場所にある Sling Logger OSGi 設定を使用して、ローカル開発用のAEMアプリケーションの Java パッケージのデバッグレベルでログを設定します。
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
-ログは`error.log`に記録されます。
+ログは `error.log`.
 
-デフォルトのログがローカル開発に不十分な場合、アドホックログは、AEM SDKのローカルクイックスタートのログサポートWebコンソール([/system/console/slinglog](http://localhost:4502/system/console/slinglog))で設定できますが、Cloud Service開発環境と同じログ設定がAEMで必要な場合を除き、Gitに対するアドホックな変更は推奨されません。 ログサポートコンソールを使用した変更は、AEM SDKのローカルクイックスタートのリポジトリに直接保持されます。
+デフォルトのログがローカル開発に不十分な場合、アドホックログは、AEM SDK のローカルクイックスタートのログサポート Web コンソール ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)) ですが、AEMas a Cloud Serviceの開発環境でも同じログ設定が必要な場合を除き、アドホックな変更を Git に保持することは推奨されません。 ログサポートコンソールを使用した変更は、AEM SDK のローカルクイックスタートのリポジトリに直接保持されます。
 
-Javaログステートメントは、`error.log`ファイルで表示できます。
+Java ログステートメントは、 `error.log` ファイル：
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-多くの場合、`error.log`を&quot;tail&quot;にして、端末に出力をストリーミングすると便利です。
+多くの場合、 `error.log` これは出力を端末に送る
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windowsには、[サードパーティのテールアプリケーション](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command)または[PowershellのGet-Contentコマンド](https://stackoverflow.com/a/46444596/133936)を使用する必要があります。
++ Windows にはが必要です [サードパーティのテールアプリケーション](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) または [Powershell の Get-Content コマンド](https://stackoverflow.com/a/46444596/133936).
 
 ## Dispatcher ログ
 
-`bin/docker_run`が呼び出されると、Dispatcherログがstdoutに出力されますが、Dockerに格納されているを使用してログに直接アクセスできます。
+Dispatcher ログは、 `bin/docker_run` が呼び出されますが、Docker に含まれるでログに直接アクセスできます。
 
-### Dockerコンテナでのログへのアクセス{#dispatcher-tools-access-logs}
+### Docker コンテナ内のログへのアクセス{#dispatcher-tools-access-logs}
 
-Dispatcherログは、`/etc/httpd/logs`にあるDockerコンテナから直接アクセスできます。
+Dispatcher ログは、Docker コンテナ ( ) 内のに直接アクセスできます。 `/etc/httpd/logs`.
 
 ```shell
 $ docker ps
@@ -75,12 +75,12 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-_のを、コ `<CONTAINER ID>` マ `docker exec -it <CONTAINER ID> /bin/sh` ンドにリストされたターゲットDocker CONTAINER IDに置き換える必要があ `docker ps` ります。_
+_この `<CONTAINER ID>` in `docker exec -it <CONTAINER ID> /bin/sh` は、 `docker ps` コマンドを使用します。_
 
 
-### Dockerログのローカルファイルシステムへのコピー{#dispatcher-tools-copy-logs}
+### Docker ログのローカルファイルシステムへのコピー{#dispatcher-tools-copy-logs}
 
-Dispatcherログは、 `/etc/httpd/logs`にあるDockerコンテナからローカルファイルシステムにコピーし、お気に入りのログ分析ツールを使用して検査できます。 これはポイントインタイムコピーで、ログにリアルタイムで更新されるわけではありません。
+Dispatcher ログは、Docker コンテナ ( ) からコピーできます。 `/etc/httpd/logs` お気に入りのログ分析ツールを使用して、ローカルファイルシステムを検査用に追加します。 これはポイントインタイムコピーで、ログにリアルタイムで更新されるわけではありません。
 
 ```shell
 $ docker ps
@@ -95,4 +95,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
-_のを、コ `<CONTAINER_ID>` マ `docker cp <CONTAINER_ID>:/var/log/apache2 ./` ンドにリストされたターゲットDocker CONTAINER IDに置き換える必要があ `docker ps` ります。_
+_この `<CONTAINER_ID>` in `docker cp <CONTAINER_ID>:/var/log/apache2 ./` は、 `docker ps` コマンドを使用します。_

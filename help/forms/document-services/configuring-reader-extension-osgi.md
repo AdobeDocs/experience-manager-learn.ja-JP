@@ -10,16 +10,16 @@ role: Admin
 level: Beginner
 exl-id: 1f16acfd-e8fd-4b0d-85c4-ed860def6d02
 last-substantial-update: 2020-08-01T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 18%
+ht-degree: 13%
 
 ---
 
 # Reader拡張資格情報の追加{#configuring-reader-extension-osgi}
 
-DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDF ドキュメントに使用権限を適用するには、証明書を設定します。
+DocAssurance サービスは、使用権限をPDFドキュメントに適用できます。 PDF ドキュメントに使用権限を適用するには、証明書を設定します。
 
 ## fd-service ユーザーのキーストアを作成する
 
@@ -37,7 +37,7 @@ Reader Extensions 証明書は fd-service ユーザーに関連付けられま�
 
 ビデオに従って、fd-service ユーザーに認証情報を追加してください
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
 
 
 pfx ファイルの詳細をリストするコマンドはです。 次のコマンドは、 pfx ファイルと同じディレクトリにあることを前提としています。

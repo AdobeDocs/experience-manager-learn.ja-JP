@@ -1,23 +1,23 @@
 ---
-title: AEM as a Cloud Serviceでのコンテンツ公開の仕組み
-description: コンテンツ配布やCloud Serviceパイプラインの概念など、AEM as a Contentでのコンテンツ公開の仕組みを調べます。
+title: AEMでのコンテンツ公開の仕組みはas a Cloud Service的ですか？
+description: コンテンツ配布の概念やAdobeパイプラインなど、AEMas a Cloud Serviceのコンテンツ公開の仕組みを調べます。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: 開発
-feature: 公開
+topic: Development
+feature: Publishing
 kt: 6911
 thumbnail: 330554.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+exl-id: 53327d54-152b-4b89-8540-181e433f312b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 3%
+source-wordcount: '53'
+ht-degree: 0%
 
 ---
 
-
 # コンテンツ公開
 
-コンテンツ配布やCloud Serviceパイプラインの概念など、AEM as a Contentでのコンテンツ公開の仕組みを調べます。
+コンテンツ配布の概念やAdobeパイプラインなど、AEMas a Cloud Serviceのコンテンツ公開の仕組みを調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330554/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330554?quality=12&learn=on)

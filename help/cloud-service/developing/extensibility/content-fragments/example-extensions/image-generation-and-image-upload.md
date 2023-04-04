@@ -10,7 +10,7 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 2%
@@ -49,7 +49,7 @@ OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベ
 
 このビデオでは、OpenAI または DALL.E 2 拡張機能を使用した画像生成の例、その仕組み、開発方法を説明します。 ビデオには、 __機能のデモ、セットアップ、テクニカルコード__ 関連する作品を素早く見る。
 
->[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
 
 ## App Builder 拡張機能アプリ

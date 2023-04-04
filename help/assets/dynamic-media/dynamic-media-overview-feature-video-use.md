@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Dynamic Mediaの概要
 
->[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## Dynamic MediaとAEM Sitesおよびその他の CMS
 
->[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## Dynamic Mediaを使用して混在メディアコレクションとカスタムビューアを作成する
 
->[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 ## Dynamic Media画像プリセット
 
->[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 このビデオでは、画像プリセットの作成方法と画像プリセットとは何かを説明します。画像プリセットは、URL で画像が要求されたときにその画像に対して操作する一連の Image Server 引数の URL 短縮サービスです。 画像プリセットを拡張および編集するための貴重なテクニックを学びます。
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 ## Dynamic Media Advanced URL 修飾子
 
->[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 このビデオでは、画像のサイズ変更を超えて、ソースファイル自体の機能（クリッピングパスと切り抜き、テキストに組み込まれる背景の透明度）を活用する方法について説明します。これは、Dynamic Media の URL 修飾子を使用した変数です。
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ## Dynamic MediaJPEGファイルサイズの制御（キロバイト）
 
->[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -99,7 +99,7 @@ jpeg 画像の画質と結果のファイルサイズ（キロバイト単位）
 
 ## CC クローズドキャプションをDynamic Mediaビデオに追加
 
->[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 クローズドキャプションをDynamic Mediaビデオに簡単に追加するには、コピー URL を追加して、追加のクローズドキャプションファイルドキュメント（任意のビデオの CC 情報を含む web.VTT サイドカーファイル）を指定します。
 

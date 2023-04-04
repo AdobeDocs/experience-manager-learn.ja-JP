@@ -1,23 +1,23 @@
 ---
-title: 詳細ORBトレースを有効にする手順
-description: 'PDF Generatorの問題のトラブルシューティングのための詳細なORBログの設定 '
+title: 詳細 ORB トレースを有効にする手順
+description: トラブルシューティング用の詳細 ORB ログを設定します。PDFジェネレーターの問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
 feature: PDF Generator
-topic: '管理   '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2ac84ee3-48ca-4c01-9dfe-add77c666ba9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
 
+# 詳細 ORB トレースを有効にする手順
 
-# 詳細ORBトレースを有効にする手順
+*このビデオでは、詳細 ORB トレースを有効にする手順を説明します。*
 
-*このビデオでは、詳細なORBトレースを有効にする手順について説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335526?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 この章では、5 つのコンテンツフラグメントモデルを作成する手順について説明します。
 
-* **Contact Info**
+* **連絡先情報**
 * **アドレス**
 * **Person**
 * **場所**
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 次のビデオでは、コンテンツフラグメントモデルと、このチュートリアルでの使用方法について簡単に説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
 
 ## コンテンツフラグメントモデルを作成する {#create-models}
 
@@ -236,4 +236,4 @@ Adobe Experience Managerには、いくつかの組み込みの検証方法が�
 このシリーズの次の章では、 [コンテンツフラグメントのオーサリング](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) この章で作成したモデルから。 この章で紹介するデータタイプを使用し、フォルダーポリシーを作成して、アセットフォルダーで作成できるコンテンツフラグメントモデルを制限する方法について説明します。
 
 このチュートリアルではオプションですが、実際の実稼動環境ではすべてのコンテンツを必ず公開してください。 AEMのオーサー環境とパブリッシュ環境について詳しくは、
-[AEMヘッドレスおよび GraphQL ビデオシリーズ](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEMヘッドレスとGraphQLビデオシリーズ](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

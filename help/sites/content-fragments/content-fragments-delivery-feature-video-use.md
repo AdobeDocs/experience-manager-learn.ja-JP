@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 6%
@@ -36,7 +36,7 @@ Adobe Experience Manager(AEM) コンテンツフラグメントは、テキス�
 
 ## Web ページでのコンテンツフラグメントの使用 {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
 コンテンツフラグメントは、AEM Sitesページ上で、またはAEM WCM コアコンポーネントの [コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja).
 
@@ -44,18 +44,18 @@ Adobe Experience Manager(AEM) コンテンツフラグメントは、テキス�
 
 ## コンテンツフラグメントを JSON として公開 {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
 AEM Content Services は、コンテンツを正規化された JSON 形式にレンディションするAEMページベースの HTTP エンドポイントの作成を容易にします。
 
-上記のビデオでは、 [コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 個々のコンテンツフラグメントを公開します。 この [コンテンツフラグメントリストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) は、作成者が、コンテンツフラグメントのリストを使用してページに動的に入力するクエリを定義できる新しいコンポーネントです。 複数のコンテンツフラグメントを公開する必要がある場合は、コンテンツフラグメントリストコンポーネントをお勧めします。
+上記のビデオでは、 [コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) 個々のコンテンツフラグメントを公開します。 この [コンテンツフラグメントリストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) は、作成者が、コンテンツフラグメントのリストを使用してページに動的に入力するクエリを定義できる新しいコンポーネントです。 複数のコンテンツフラグメントを公開する必要がある場合は、コンテンツフラグメントリストコンポーネントをお勧めします。
 
 *Content Services エンドポイント JSON ペイロードの例：*\
 **[astreets.json](assets/athletes.json)**
 
 ## Assets HTTP API の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/26390/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
 AEM 6.5 で初めて導入されたは、Assets HTTP API を使用してコンテンツフラグメントのサポートを強化しました。 これにより、開発者はコンテンツフラグメントに対して作成、読み取り、更新、削除 (CRUD) 操作を簡単に実行できます。
 
@@ -80,7 +80,7 @@ Web チャネルを介してコンテンツフラグメントを配信する方�
 
 * [コンテンツフラグメントのオーサリング](content-fragments-feature-video-use.md)
 * [AEM WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
-* [AEM WCM コアコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM コアコンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
 
 ビデオシリーズから最終状態のAEM 6.4 以降のインスタンスに以下のパッケージをダウンロードしてインストールするには、次の手順を実行します。\
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

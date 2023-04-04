@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9673
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 12%
@@ -23,7 +24,7 @@ ht-degree: 12%
 >AEMユーザーがに属していることを確認してください ```forms-users``` グループを使用して API 呼び出しをおこないます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/340241/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
 
 ## バッチ設定を作成
 
@@ -57,4 +58,3 @@ ht-degree: 12%
 ```
 
 必要なのは、HTTP リクエストの本文で空の JSON オブジェクトを渡すだけです
-

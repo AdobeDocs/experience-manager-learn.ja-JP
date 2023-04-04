@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 2%
@@ -26,7 +26,7 @@ AEMは、GraphQL、AEM Content Services から Assets HTTP API に至るまで�
 
 このチュートリアルでは、外部アプリケーションが、アクセストークンを使用して、HTTP 経由でas a Cloud Serviceを介してプログラムによる認証およびやり取りをおこなう方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 前提条件
 

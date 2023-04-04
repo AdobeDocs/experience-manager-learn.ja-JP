@@ -13,7 +13,7 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Adobe Experience Manager SSL セットアップウィザードを使用して、AEM経由で実行するインスタンスを簡単に設定できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
 を開きます。 __SSL 設定ウィザード__ は、次の場所に移動して直接開くことができます。 __AEM オーサー/ツール/セキュリティ/SSL 設定__.
 

@@ -9,7 +9,7 @@ feature: Developer Tools
 topic: Administration
 index: y
 exl-id: 6cb60f32-d366-4677-8745-9da7176b782f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # AEMでのパフォーマンスに関する問題のトラブルシューティング方法
 
-*このビデオでは、AEMのパフォーマンスに関する問題のトラブルシューティング手順について説明します。*
+*このビデオでは、AEMでのパフォーマンスに関する問題のトラブルシューティング手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335472?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335472?quality=12&learn=on)

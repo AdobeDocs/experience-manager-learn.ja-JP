@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1937'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Adobe Experience Manager(AEM)as a Cloud Serviceとの統合では、AEMサービスに対する安全な認証をおこなう必要があります。 AEM Developer Console は、外部のアプリケーション、システムおよびサービスが HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするのを容易にするために使用する、サービス資格情報へのアクセス権を付与します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 サービス資格情報が似たように表示される場合があります [ローカル開発アクセストークン](./local-development-access-token.md) しかし、いくつかの主な方法で異なります。
 

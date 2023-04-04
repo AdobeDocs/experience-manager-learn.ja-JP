@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 6%
@@ -23,7 +23,7 @@ RDE を使用した開発/デプロイメントのライフサイクルと、そ
 
 次のビデオでは、RDE ベースの開発スルーデプロイメントのライフサイクルを紹介します。 このビデオでは、RDE を効率的に使用するための主なサブタスクと開発フローの概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415492/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
 
 ## RDE のメリット
@@ -36,7 +36,7 @@ RDE を使用した開発/デプロイメントのライフサイクルと、そ
 - コラボレーションの向上
 - 生産性の向上
 
->[!VIDEO](https://video.tv.adobe.com/v/3415493/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## その他のリソース
 

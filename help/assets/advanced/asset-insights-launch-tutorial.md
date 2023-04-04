@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 アセットインサイトの概要。 環境の準備を整えるには、コアコンポーネント、サンプル画像コンポーネントおよびその他のコンテンツパッケージをインストールします。
 
->[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
 ### アーキテクチャ図 {#architecture-diagram}
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 コアコンポーネントの機能強化と、アセットインサイトでのプロキシコンポーネント（サンプル画像コンポーネント）の使用。 コンテンツページテンプレートポリシーを編集して、リファレンスサイトのサンプル画像コンポーネントを有効にします。
 
->[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 リアルタイムのデータ収集を含むレポートスイートが、アセット追跡用に作成されます。 AEM Assets Insights 設定は、Adobe Analytics資格情報を使用して設定されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
 Adobe Analyticsレポートスイートでリアルタイムのデータ収集とAEM Asset Reporting を有効にする必要があります。 AEM Asset Reporting を有効にすると、アセットのインサイトを追跡するための Analytics 変数が予約されます。
@@ -80,7 +80,7 @@ AEM Assets Insights 設定の場合は、次の資格情報が必要です
 
 Adobe Analytics拡張機能の追加、ページ読み込みルールの作成、AEMと Launch の統合（統合テクニカルアカウント）。
 
->[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 オーサーインスタンスからパブリッシュインスタンスに、すべての変更をレプリケートしてください。
@@ -193,4 +193,4 @@ Analytics のデバッグ方法として、2 つのGoogle Chrome ブラウザー
 
 AEM Asset Reporting 同期ジョブスケジューラーとアセットインサイトレポートの設定
 
->[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

@@ -1,31 +1,31 @@
 ---
-title: OSGiコンポーネントのライフサイクル
-description: OSGiコンポーネントのライフサイクルについて説明します。OSGiサービスを、ライフサイクルイベントのアクティベート、変更およびアクティベート解除にバインドする方法を含みます。
+title: OSGi コンポーネントのライフサイクル
+description: OSGi コンポーネントのライフサイクルについて説明します。このライフサイクルには、OSGi サービスを、ライフサイクルイベントのアクティベート、変更、アクティベート解除の各イベントにバインドする方法などが含まれます。
 role: Developer
 level: Beginner
-topic: 開発
-feature: OSGi
+topic: Development
+feature: OSGI
 kt: 8228
 thumbnail: 335475.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 5a65dbcd-649b-464c-9c78-d31c2b6c49c3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 6%
+source-wordcount: '94'
+ht-degree: 3%
 
 ---
 
+# OSGi コンポーネントのライフサイクル
 
-# OSGiコンポーネントのライフサイクル
-
-OSGiサービスをにバインドする方法を含む、OSGiコンポーネントのライフサイクルについて説明します。
+OSGi サービスをにバインドする方法など、OSGi コンポーネントのライフサイクルについて説明します。
 
 + アクティベート
 + 変更
-+ と非アクティブ化
++ および非アクティブ化
 
 ...ライフサイクルイベント。
 
->[!VIDEO](https://video.tv.adobe.com/v/335475/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
 
 ## リソース
 

@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 1%
@@ -37,13 +37,13 @@ Android は、Windows、macOS、Linux で Android エミュレーターを実行
 
 ## モバイルアプリのデモ
 
->[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28345?quality=12&learn=on)
 
 ### ローカルホスト以外で使用するためのモバイルアプリの設定
 
 AEM パブリッシュがで実行されていない場合 **http://localhost:4503** ホストとポートは、モバイルアプリの [!DNL Settings] をクリックして、AEM パブリッシュのホスト/ポートプロパティを指します。
 
->[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## モバイルアプリのローカルでの実行
 
@@ -75,7 +75,7 @@ AEM パブリッシュがで実行されていない場合 **http://localhost:45
    * 仮想デバイス内をスクロールするには、クリック&amp;ホールドしてドラッグします。
    * AEMからコンテンツを更新するには、更新アイコンが表示されるまで上部からプルダウンし、リリースします。
 
->[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28341?quality=12&learn=on)
 
 ## モバイルアプリコード
 
@@ -197,7 +197,7 @@ JSON オブジェクトから多くのデータポイントを選択する必要
 
 **AEMヘッドレスチュートリアルを完了しました。**
 
-AEMコンテンツサービスとAEM as a Headless CMS の詳細については、Adobeのその他のドキュメントおよび実施可能資料を参照してください。
+AEMコンテンツサービスとAEM as a Headless CMS の詳細については、Adobeの他のドキュメントおよび実施可能資料を参照してください。
 
 * [コンテンツフラグメントの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 * [AEM WCM コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)

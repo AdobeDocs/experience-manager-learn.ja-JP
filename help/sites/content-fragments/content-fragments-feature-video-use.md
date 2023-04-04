@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 12%
@@ -38,13 +38,13 @@ AEMコンテンツフラグメントは、テキストベースの編集コン�
 
 ## コンテンツフラグメントモデルの定義 {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
 AEMコンテンツフラグメントモデル（コンテンツフラグメントのデータスキーマ）は、AEMを介して有効にする必要があります [[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=ja)：コンテンツフラグメントモデルを設定ごとに定義できます。
 
 ## コンテンツフラグメントの作成 {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
 AEMの設定はAEM Assetsのフォルダー階層に適用され、コンテンツフラグメントモデルをコンテンツフラグメントとして作成できます。 コンテンツフラグメントは、豊富なフォームベースのオーサリングエクスペリエンスをサポートし、コンテンツを要素の集まりとしてモデル化できます。
 
@@ -55,7 +55,7 @@ AEMの設定はAEM Assetsのフォルダー階層に適用され、コンテン�
 
 ## コンテンツフラグメントのダウンロード {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
 AEMコンテンツフラグメントは、バリアント、要素、メタデータを含む Zip ファイルとして AEM オーサーからダウンロードできます。
 
@@ -64,13 +64,13 @@ AEMコンテンツフラグメントは、バリアント、要素、メタデ�
 
 ## コンテンツフラグメントの編集機能 {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
 >[!NOTE]
 >
 > コンテンツフラグメントの注釈とバージョン比較については、 [AEM 6.4 Service Pack 2](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html) および [AEM 6.3 Service Pack 3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
-## 次の手順
+## 次のステップ
 
 詳細 [コンテンツフラグメントの配信](content-fragments-delivery-feature-video-use.md).
 

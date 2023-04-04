@@ -1,23 +1,23 @@
 ---
-title: DesignerでC++ライブラリの依存関係の問題をトラブルシューティングする方法
-description: Designerに必要なC++ライブラリのインストール
+title: Designer で C++ライブラリの依存関係の問題をトラブルシューティングする方法
+description: Designer に必要な C++ライブラリのインストール
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: デザイナー
-topic: '開発  '
+feature: Designer
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9cffce45-c853-440f-9ddf-2e179dff6745
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 4%
+source-wordcount: '42'
+ht-degree: 0%
 
 ---
 
+# Designer で C++ライブラリの依存関係の問題をトラブルシューティングする方法
 
-# DesignerでC++ライブラリの依存関係の問題をトラブルシューティングする方法
+*このビデオでは、Designer の C++ライブラリでの依存関係の問題をトラブルシューティングする手順を説明します。*
 
-*このビデオでは、DesignerのC++ライブラリの依存関係の問題をトラブルシューティングする手順について説明します。*
-
->[!VIDEO](https://video.tv.adobe.com/v/335576?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335576?quality=12&learn=on)
