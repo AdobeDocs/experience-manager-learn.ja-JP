@@ -8,9 +8,9 @@ role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,13 @@ AEM SDK のローカルクイックスタートを使用すると、IDE から�
 リモートデバッガーをAEMに接続するには、AEM SDK のローカルクイックスタートを特定のパラメーター (`-agentlib:...`) を使用して、IDE が接続できるようになります。
 
 ```
-$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar aem-author-p4502.jar   
+$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
++ AEM SDK は Java 11 のみをサポートします
 + `address` ポートAEMがリモートデバッグ接続をリッスンするように指定します。このポートは、ローカル開発マシン上の使用可能なポートに変更できます。
 + 最後のパラメータ ( 例： `aem-author-p4502.jar`) はAEM SKD Quickstart Jar です。 AEM オーサーサービス (`aem-author-p4502.jar`) または AEM パブリッシュサービス (`aem-publish-p4503.jar`) をクリックします。
+
 
 ## IDE の設定手順
 
