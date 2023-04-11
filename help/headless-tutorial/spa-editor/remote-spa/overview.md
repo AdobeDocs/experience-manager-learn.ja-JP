@@ -9,9 +9,9 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '614'
 ht-degree: 8%
 
 ---
@@ -37,15 +37,14 @@ AEMのコンテキスト外で実行されるSPAやリモートSPAを更新し�
 
 ## 最新のコード
 
-+ このチュートリアルのコードの開始点は、次の場所にあります。 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa) 内 `remote-spa-tutorial` フォルダー。
++ このチュートリアルのコードの開始点は、次の場所にあります。 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) 内 `remote-spa-tutorial` フォルダー。
 
 ## 前提条件
 
 このチュートリアルでは、次の項目が必要です。
 
 + [AEM as a Cloud Service の SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=ja)
-+ [Node.js v16 以降](https://nodejs.org/ja/)
-+ [npm v8+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/ja/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6 以降](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
