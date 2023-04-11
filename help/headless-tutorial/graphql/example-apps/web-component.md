@@ -1,6 +1,6 @@
 ---
 title: Web コンポーネント/JS - AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネント/JS アプリケーションは、永続化されたクエリを使用してAEM GraphQL API を使用してコンテンツをクエリする方法を示します。
+description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネント/JS アプリケーションでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツをクエリする方法を示します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,17 +8,17 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 7%
+source-wordcount: '566'
+ht-degree: 6%
 
 ---
 
 
 # Web コンポーネント
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネントアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツをクエリし、純粋な JavaScript コードを使用して UI の一部をレンダリングする方法を示します。
+アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネントアプリケーションでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツをクエリし、純粋な JavaScript コードを使用して UI の一部をレンダリングする方法を示します。
 
 ![AEMヘッドレスを備えた Web コンポーネント](./assets/web-component/web-component.png)
 
@@ -29,8 +29,7 @@ ht-degree: 7%
 以下のツールをローカルにインストールする必要があります。
 
 + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) ( ローカルのAEM 6.5 またはAEM SDK に接続する場合 )
-+ [Node.js v10 以降](https://nodejs.org/ja/)
-+ [npm 6 以降](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
 ## AEM要件
@@ -97,7 +96,7 @@ Web コンポーネントは、次のAEMデプロイメントオプションと�
 
 ## コード
 
-Web コンポーネントの構築方法、GraphQL の永続クエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、そのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+Web コンポーネントの構築方法、GraphQLで保持されたクエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
 ### Web コンポーネントHTMLタグ
 
@@ -116,7 +115,7 @@ Web コンポーネントの構築方法、GraphQL の永続クエリを使用�
 
 #### PersonInfo 要素の実装
 
-この `<person-info>` カスタム要素のクラスオブジェクトは、 `connectedCallback()` ライフサイクルメソッド、シャドウルートの添付、GraphQL の永続クエリの取得、カスタム要素の内部シャドウ DOM 構造を作成する DOM 操作。
+この `<person-info>` カスタム要素のクラスオブジェクトは、 `connectedCallback()` ライフサイクルメソッド、シャドウルートの添付、GraphQLの永続クエリの取得、DOM 操作を使用した、カスタム要素の内部シャドウ DOM 構造の作成。
 
 ```javascript
 // Create a Class for our Custom Element (person-info)

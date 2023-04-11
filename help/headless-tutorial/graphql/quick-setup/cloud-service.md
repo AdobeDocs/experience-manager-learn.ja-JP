@@ -9,10 +9,10 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 2%
+source-wordcount: '1081'
+ht-degree: 1%
 
 ---
 
@@ -29,8 +29,7 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
    + __AEM Administrator__ AEM as a Cloud Serviceへのアクセス
    + __Cloud Manager — デプロイメントマネージャー__ Cloud Manager へのアクセス
 + 以下のツールをローカルにインストールする必要があります。
-   + [Node.js v10 以降](https://nodejs.org/ja/)
-   + [npm 6 以降](https://www.npmjs.com/)
+   + [Node.js v18](https://nodejs.org/ja/)
    + [Git](https://git-scm.com/)
    + IDE( 例： [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 

@@ -1,6 +1,6 @@
 ---
 title: GraphQL API を使用してAEMに問い合わせる React アプリの構築 — AEMヘッドレスの概要 — GraphQL
-description: Adobe Experience Manager(AEM) と GraphQL の基本を学びます。 AEM GraphQL API からコンテンツ/データを取得する React アプリを作成し、AEMヘッドレス JS SDK の使用方法も確認してください。
+description: Adobe Experience Manager(AEM) とGraphQLの概要。 AEM GraphQL API からコンテンツ/データを取得する React アプリを作成し、AEMヘッドレス JS SDK の使用方法も確認します。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6716
@@ -10,15 +10,15 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 3%
+source-wordcount: '1182'
+ht-degree: 2%
 
 ---
 
 
-# AEM GraphQL API を使用する React アプリの構築
+# AEM GraphQL API を使用した React アプリの構築
 
 この章では、AEM GraphQL API が外部アプリケーションでエクスペリエンスを促進する方法について説明します。
 
@@ -32,8 +32,7 @@ _この章の IDE スクリーンショットは、次のものから取得し�
 
 次のソフトウェアをインストールする必要があります。
 
-- [Node.js v14 以降](https://nodejs.org/ja/)
-- [npm 6.4 以降](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Node.js v18](https://nodejs.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目的
@@ -41,19 +40,19 @@ _この章の IDE スクリーンショットは、次のものから取得し�
 以下の方法を学ぶ：
 
 - サンプル React アプリをダウンロードして起動します。
-- AEM GraphQL エンドポイントに対して、 [AEMヘッドレス JS SDK](https://github.com/adobe/aem-headless-client-js)
+- を使用したAEM GraphQLエンドポイントのクエリ [AEMヘッドレス JS SDK](https://github.com/adobe/aem-headless-client-js)
 - AEMにチームのリストと参照メンバーを照会します
 - AEMでチームメンバーの詳細をクエリ
 
 ## サンプル React アプリの取得
 
-この章では、AEM GraphQL API とのやり取りに必要なコードを使用してスタブアウトサンプル React アプリを実装し、それらから取得したチームと人物のデータを表示します。
+この章では、AEM GraphQL API とのやり取りに必要なコードを使用して、スタブ化されたサンプル React アプリを実装し、それらから取得したチームと人物のデータを表示します。
 
 サンプルの React アプリのソースコードは、Github.com( <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
 
 React アプリを取得するには：
 
-1. 次のサンプル WKND GraphQL React アプリをコピーします。 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql).
+1. 次のサンプル WKND GraphQL React アプリのクローンを作成する： [Github.com](https://github.com/adobe/aem-guides-wknd-graphql).
 
    ```shell
    $ cd ~/Code
@@ -74,7 +73,7 @@ React アプリを取得するには：
    - 設定 `REACT_APP_HOST_URI`AEMas a Cloud Serviceの公開 URL にするの値 ( 例： `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) および `REACT_APP_AUTH_METHOD`の値 `none`
    >[!NOTE]
    >
-   > プロジェクト設定、コンテンツフラグメントモデル、コンテンツフラグメント、GraphQL エンドポイント、以前の手順で作成した永続的なクエリを公開していることを確認します。
+   > 前の手順で作成したプロジェクト設定、コンテンツフラグメントモデル、コンテンツフラグメント、GraphQLエンドポイント、永続化されたクエリを公開していることを確認します。
    >
    > ローカルの AEM オーサー SDK で上記の手順を実行した場合は、 `http://localhost:4502` および `REACT_APP_AUTH_METHOD`の値 `basic`.
 
@@ -95,7 +94,7 @@ React アプリを取得するには：
 
 >[!IMPORTANT]
 >
->   これは部分的に実装された React アプリで、次の手順で完了します。 実装が必要な JavaScript ファイルには次のコメントが含まれています。これらのファイルのコードを、必ずこのチュートリアルで指定したコードで追加または更新してください。
+>   この React アプリは部分的に実装されています。 このチュートリアルの手順に従って、実装を完了します。 実装が必要な JavaScript ファイルには次のコメントが含まれています。これらのファイルのコードを、必ずこのチュートリアルで指定したコードで追加または更新してください。
 >
 >
 > //*********************************
@@ -104,15 +103,13 @@ React アプリを取得するには：
 >
 >  //*********************************
 
-
-
 ## React アプリの詳細な構造
 
 サンプル React アプリには、次の 3 つの主要な部分があります。
 
-1. この `src/api` フォルダーには、AEMに対する GraphQL クエリを作成するために使用されるファイルが含まれます。
+1. この `src/api` フォルダーには、AEMに対するGraphQLクエリを実行するために使用されるファイルが含まれます。
    - `src/api/aemHeadlessClient.js` AEMとの通信に使用するAEMヘッドレスクライアントを初期化およびエクスポートします
-   - `src/api/usePersistedQueries.js` 実装 [カスタム React フック](https://reactjs.org/docs/hooks-custom.html) AEM GraphQL からにデータを返す `Teams.js` および `Person.js` コンポーネントを表示します。
+   - `src/api/usePersistedQueries.js` 実装 [カスタム React フック](https://react.dev/docs/hooks-custom.html) AEM GraphQLからにデータを返す `Teams.js` および `Person.js` コンポーネントを表示します。
 
 1. この `src/components/Teams.js` ファイルは、リストクエリを使用して、チームとそのメンバーのリストを表示します。
 1. この `src/components/Person.js` file は、パラメータ化された単一結果クエリを使用して、1 人の人物の詳細を表示します。
@@ -144,9 +141,9 @@ const aemHeadlessClient = new AEMHeadless({
 export default aemHeadlessClient;
 ```
 
-## AEM GraphQL 永続クエリを実行するための実装
+## AEM GraphQL永続クエリの実行の実装
 
-を開きます。 `usePersistedQueries.js` 汎用を実装するファイル `fetchPersistedQuery(..)` 関数を使用してAEM GraphQL の永続クエリを実行します。 この `fetchPersistedQuery(..)` 関数は `aemHeadlessClient` オブジェクトの `runPersistedQuery()` 関数を使用して、promise ベースのクエリを非同期で実行します。
+汎用を実装するには `fetchPersistedQuery(..)` 関数を使用してAEM GraphQLで永続化されたクエリを実行すると、 `usePersistedQueries.js` ファイル。 この `fetchPersistedQuery(..)` 関数は `aemHeadlessClient` オブジェクトの `runPersistedQuery()` 関数を使用して、promise ベースのクエリを非同期で実行します。
 
 後で、カスタム React を実行する `useEffect` フックは、この関数を呼び出して、AEMから特定のデータを取得します。
 
@@ -190,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 次に、React アプリのメインビューにチームとそのメンバーを表示する機能を構築します。 この機能には、以下が必要です。
 
-- 新しい [カスタム React useEffect フック](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` が `my-project/all-teams` クエリを保持し、AEMでチームコンテンツフラグメントのリストを返しました。
+- 新しい [カスタム React useEffect フック](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` が `my-project/all-teams` クエリを保持し、AEMでチームコンテンツフラグメントのリストを返しました。
 - React コンポーネント ( ) `src/components/Teams.js` 新しいカスタム React を呼び出す `useEffect` チームデータをフックし、レンダリングします。
 
 完了すると、アプリのメインビューにAEMのチームデータが入力されます。
@@ -203,7 +200,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 1. 関数の場所 `useAllTeams()`
 
-1. を作成するには、以下を実行します。 `useEffect` 持続クエリを呼び出すフック `my-project/all-teams` 経由 `fetchPersistedQuery(..)`に設定し、次のコードを追加します。 また、関連するデータは、AEM GraphQL 応答から、 `data?.teamList?.items`を使用すると、React ビューのコンポーネントを親 JSON 構造に依存しなくて済みます。
+1. を作成するには、以下を実行します。 `useEffect` 持続クエリを呼び出すフック `my-project/all-teams` 経由 `fetchPersistedQuery(..)`に設定し、次のコードを追加します。 また、関連するデータは、AEM GraphQL応答から次の場所にのみ返されます。 `data?.teamList?.items`を使用すると、React ビューのコンポーネントを親 JSON 構造に依存しなくて済みます。
 
    ```javascript
    /**
@@ -270,7 +267,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
    }
    ```
 
-1. 最後に、チームデータをレンダリングします。 GraphQL クエリから返された各チームは、指定された `Team` React のサブコンポーネント。
+1. 最後に、チームデータをレンダリングします。 GraphQLクエリから返された各チームは、指定された `Team` React のサブコンポーネント。
 
    ```javascript
    import React from "react";
@@ -340,7 +337,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 この機能には、以下が必要です。
 
-- 新しい [カスタム React useEffect フック](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` パラメータ化を呼び出す `my-project/person-by-name` 永続的なクエリを返し、単一の個人レコードを返します。
+- 新しい [カスタム React useEffect フック](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` パラメータ化を呼び出す `my-project/person-by-name` 永続的なクエリを返し、単一の個人レコードを返します。
 
 - React コンポーネント ( ) `src/components/Person.js` は、人物のフルネームをクエリパラメーターとして使用し、新しいカスタム React を呼び出します。 `useEffect` 個人データをフックし、レンダリングします。
 
@@ -352,7 +349,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 1. 関数の場所 `usePersonByName(fullName)`
 
-1. を作成するには、以下を実行します。 `useEffect` 持続クエリを呼び出すフック `my-project/all-teams` 経由 `fetchPersistedQuery(..)`に設定し、次のコードを追加します。 また、関連するデータは、AEM GraphQL 応答から、 `data?.teamList?.items`を使用すると、React ビューのコンポーネントを親 JSON 構造に依存しなくて済みます。
+1. を作成するには、以下を実行します。 `useEffect` 持続クエリを呼び出すフック `my-project/all-teams` 経由 `fetchPersistedQuery(..)`に設定し、次のコードを追加します。 また、関連するデータは、AEM GraphQL応答から次の場所にのみ返されます。 `data?.teamList?.items`を使用すると、React ビューのコンポーネントを親 JSON 構造に依存しなくて済みます。
 
    ```javascript
    /**
@@ -493,10 +490,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## フードの下で
 
-ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象 `all-teams` リクエストを受け取る際に、GraphQL API リクエストが表示されます `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI`( 例： <https://publish-p123-e456.adobeaemcloud.com>) は、 [プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) using `http-proxy-middleware` モジュール。
+ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象 `all-teams` リクエスト。 GraphQL API リクエストに注意してください。 `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI` ( 例： <https://publish-p123-e456.adobeaemcloud.com>) をクリックします。 リクエストは、React アプリのドメインに対しておこなわれます。 [プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) は次を使用して有効になっています： `http-proxy-middleware` モジュール。
 
 
-![プロキシを介した GraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
+![プロキシを介したGraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
 
 
 メイン `../setupProxy.js` ファイルと内部 `../proxy/setupProxy.auth.**.js` ファイルは、 `/content` および `/graphql` パスはプロキシ化され、静的アセットではないことを示します。
@@ -508,8 +505,8 @@ module.exports = function(app) {
   ...
 ```
 
-ただし、これは実稼動のデプロイメントに適したオプションではありません。詳しくは、 _実稼動のデプロイメント_ 」セクションに入力します。
+ローカルプロキシの使用は、実稼動のデプロイメントに適したオプションではありません。詳しくは、 _実稼動のデプロイメント_ 」セクションに入力します。
 
 ## おめでとうございます。{#congratulations}
 
-おめでとうございます。AEM GraphQL API のデータを使用および表示する React アプリを基本的なチュートリアルの一部として正常に作成できました。
+おめでとうございます。AEM GraphQL API のデータを使用して表示する React アプリを基本的なチュートリアルの一部として正常に作成できました。

@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '916'
 ht-degree: 6%
 
 ---
@@ -33,8 +33,7 @@ A [詳細な手順のチュートリアル](https://experienceleague.adobe.com/d
 以下のツールをローカルにインストールする必要があります。
 
 + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-+ [Node.js v10 以降](https://nodejs.org/ja/)
-+ [npm 6 以降](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
 ## AEM要件

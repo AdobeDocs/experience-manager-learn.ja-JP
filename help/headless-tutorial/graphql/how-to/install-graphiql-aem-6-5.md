@@ -1,6 +1,6 @@
 ---
-title: AEM 6.5.X への GraphiQL IDE のインストール
-description: AEM 6.5.X バージョンに GraphiQL IDE をインストールして設定する方法を説明します。
+title: AEM 6.5 への GraphiQL IDE のインストール
+description: AEM 6.5 に GraphiQL IDE をインストールして設定する方法を説明します。
 version: 6.5
 topic: Headless
 feature: GraphQL API
@@ -8,21 +8,21 @@ role: Developer
 level: Intermediate
 kt: 11614
 thumbnail: KT-10253.jpeg
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 24%
+source-wordcount: '210'
+ht-degree: 17%
 
 ---
 
 
-# AEM 6.5.X への GraphiQL IDE のインストール
+# AEM 6.5 への GraphiQL IDE のインストール
 
-AEM 6.5 では、GraphiQL IDE ツールを手動でインストールする必要があります。インストールと設定の手順は次のとおりです。
+AEM 6.5 では、GraphiQL IDE ツールを手動でインストールする必要があります。
 
 1. **[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)**／**AEM as a Cloud Service** に移動します。
-1. 「GraphiQL」を検索します（**GraphiQL** の **i** は必ず入れてください）。
-1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x** をダウンロードします。
+1. 「GraphiQL」を検索します ( 必ず **i** in **GraphiQL**) をクリックします。
+1. 最新の **GraphiQL コンテンツパッケージ v.x.x.x**.
 
    ![GraphiQL パッケージをダウンロード](assets/graphiql/software-distribution.png)
 
@@ -39,7 +39,8 @@ AEM 6.5 では、GraphiQL IDE ツールを手動でインストールする必�
 
 1. 次に移動： **Web コンソール設定** UI /を検索 **CSRF フィルタ** 設定 ( 例：<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
 1. 内 `Excluded Paths` プロパティ名フィールドが更新されました。WKND GraphQLエンドポイントのパスは次のとおりです。 `/content/cq:graphql/wknd-shared/endpoint`.
-   ![Exclude Paths プロパティ値の変更](assets/graphiql/exclude-paths-value-change.png)
+
+![Exclude Paths プロパティ値の変更](assets/graphiql/exclude-paths-value-change.png)
 
 1. 次を使用して GraphiQL エディターにアクセスします。 `//HOST:PORT/content/graphiql.html`をクリックし、新しいクエリを作成できるか、既存のクエリを実行できるかを確認します。 ( 例： <http://localhost:4502/content/graphiql.html>)
 

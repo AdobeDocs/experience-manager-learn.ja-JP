@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 5%
@@ -29,7 +29,7 @@ ht-degree: 5%
 
 以下のツールをローカルにインストールする必要があります。
 
-+ [Xcode 9.3 以降](https://developer.apple.com/xcode/) (macOSが必要 )
++ [Xcode](https://developer.apple.com/xcode/) (macOSが必要 )
 + [Git](https://git-scm.com/)
 
 ## AEM要件
@@ -64,7 +64,7 @@ iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、i
 
    __基本認証__
 
-   この `AEM_USERNAME` および `AEM_PASSWORD` は、WKND GraphQL コンテンツへのアクセス権を持つローカルAEMユーザーを認証します。
+   この `AEM_USERNAME` および `AEM_PASSWORD` WKND GraphQLコンテンツへのアクセス権を持つローカルAEMユーザーを認証します。
 
    ```plain
    AEM_AUTH_TYPE = basic
@@ -74,7 +74,7 @@ iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、i
 
    __トークン認証__
 
-   この `AEM_TOKEN` は [アクセストークン](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) WKND GraphQL コンテンツへのアクセス権を持つAEMユーザーに対して認証をおこなう
+   この `AEM_TOKEN` は [アクセストークン](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) WKND GraphQLコンテンツへのアクセス権を持つAEMユーザーに対して認証をおこなうサイトです。
 
    ```plain
    AEM_AUTH_TYPE = token
@@ -86,11 +86,11 @@ iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、i
 
 ## コード
 
-iOSアプリケーションの構築方法、GraphQL での永続クエリを使用してコンテンツを取得するためAEMヘッドレスに接続する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+iOSアプリケーションの構築方法、GraphQLでの永続化されたクエリを使用してAEMヘッドレスに接続してコンテンツを取得する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### 永続クエリ
 
-AEMヘッドレスのベストプラクティスに従い、iOSアプリケーションはAEM GraphQL に永続化されたクエリを使用して、アドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
+AEMヘッドレスのベストプラクティスに従い、iOSアプリケーションはAEM GraphQL永続的なクエリを使用してアドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
 
 + `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
 
@@ -173,9 +173,9 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL 永続クエリを実行
+### GraphQL永続クエリの実行
 
-AEMの永続化クエリは HTTPGET上で実行されるので、Apollo などの HTTPPOSTを使用する一般的な GraphQL ライブラリは使用できません。 代わりに、AEMに対する永続化されたクエリ HTTPGETリクエストを実行するカスタムクラスを作成します。
+AEMの永続化されたクエリは HTTPGET上で実行されるので、Apollo などの HTTPPOSTを使用する一般的なGraphQLライブラリは使用できません。 代わりに、AEMに対する永続化されたクエリ HTTPGETリクエストを実行するカスタムクラスを作成します。
 
 `AEM/Aem.swift` をインスタンス化します。 `Aem` AEMヘッドレスとのすべてのやり取りに使用されるクラス。 パターンは次のようになります。
 
@@ -240,7 +240,7 @@ AEMの永続化クエリは HTTPGET上で実行されるので、Apollo など�
     ...
 ```
 
-### GraphQL 応答データモデル
+### GraphQL応答データモデル
 
 iOSでは、JSON オブジェクトを型指定されたデータモデルにマッピングすることをお勧めします。
 
@@ -268,7 +268,7 @@ SwiftUI は、アプリケーションの様々なビューに使用されます
 
 ### リモート画像
 
-アドベンチャーコンテンツフラグメントで参照される画像は、AEMが提供します。 このiOSアプリはパスを使用します `_path` GraphQL 応答のフィールドに入力し、 `AEM_SCHEME` および `AEM_HOST` をクリックして完全修飾 URL を作成します。
+アドベンチャーコンテンツフラグメントで参照される画像は、AEMが提供します。 このiOSアプリはパスを使用します `_path` フィールドに入力し、先頭に `AEM_SCHEME` および `AEM_HOST` をクリックして完全修飾 URL を作成します。
 
 認証が必要なAEM上の保護されたリソースに接続する場合は、イメージリクエストに資格情報も追加する必要があります。
 
@@ -324,5 +324,5 @@ SwiftUI ネイティブの [AsyncImage](https://developer.apple.com/documentatio
 
 ## その他のリソース
 
-+ [AEMヘッドレスの概要 — GraphQL チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEMヘッドレスの概要 — GraphQLチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja)
 + [SwiftUI リストとナビゲーションチュートリアル](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

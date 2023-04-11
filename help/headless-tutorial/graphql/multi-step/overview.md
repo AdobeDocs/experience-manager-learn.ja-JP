@@ -11,18 +11,18 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 8%
+source-wordcount: '287'
+ht-degree: 6%
 
 ---
 
 # AEM ヘッドレスの概要 - GraphQL
 
-AEM GraphQL API を使用し、外部アプリで使用するコンテンツをヘッドレス CMS シナリオで構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
+AEM GraphQL API を使用し、外部アプリで使用したコンテンツをヘッドレス CMS シナリオで構築および公開する方法を示す、エンドツーエンドのチュートリアルです。
 
-このチュートリアルでは、AEM GraphQL API とヘッドレス機能を使用して、外部アプリで表示されるエクスペリエンスを強化する方法を説明します。
+このチュートリアルでは、AEM GraphQL API とヘッドレス機能を使用して、外部アプリで表示されるエクスペリエンスを強化する方法について説明します。
 
 このチュートリアルでは、次のトピックについて説明します。
 
@@ -30,9 +30,8 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 * コンテンツフラグメントモデルを作成してデータをモデル化する
 * 以前に作成したモデルに基づいてコンテンツフラグメントを作成します。
 * 統合 GraphiQL 開発ツールを使用して、AEMのコンテンツフラグメントを照会する方法を確認します。
-* GraphQL クエリをAEMに保存または保持するには
-* サンプル React アプリからの永続的な GraphQL クエリを使用
-
+* GraphQLクエリをAEMに保存または永続化するには
+* サンプル React アプリからの永続的なGraphQLクエリの使用
 
 ## 前提条件 {#prerequisites}
 
@@ -40,8 +39,7 @@ AEM GraphQL API を使用し、外部アプリで使用するコンテンツを�
 
 * 基本的なHTMLと JavaScript のスキル
 * 以下のツールをローカルにインストールする必要があります。
-   * [Node.js v14 以降](https://nodejs.org/ja/)
-   * [npm 6 以降](https://www.npmjs.com/)
+   * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
    * IDE( 例： [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 

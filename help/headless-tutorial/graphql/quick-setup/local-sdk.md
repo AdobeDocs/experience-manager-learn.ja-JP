@@ -1,5 +1,5 @@
 ---
-title: ローカル SDK を使用したAEMヘッドレスクイックセットアップ
+title: ローカルAEM SDK を使用したAEMヘッドレスクイックセットアップ
 description: Adobe Experience Manager(AEM) とGraphQLの概要。 AEM SDK をインストールし、サンプルコンテンツを追加し、GraphQL API を使用してAEMのコンテンツを使用するアプリケーションをデプロイします。 AEMがオムニチャネルエクスペリエンスを強化する方法を参照してください。
 version: Cloud Service
 mini-toc-levels: 1
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 2%
 
 ---
 
-# ローカル SDK を使用したAEMヘッドレスクイックセットアップ {#setup}
+# ローカルAEM SDK を使用したAEMヘッドレスクイックセットアップ {#setup}
 
 AEMヘッドレスのクイックセットアップでは、WKND Site サンプルプロジェクトのコンテンツと、AEM Headless GraphQL API を介してコンテンツを使用するサンプルの React App(SPA) を使用して、AEMヘッドレスを操作できます。 このガイドでは、 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
@@ -26,7 +26,7 @@ AEMヘッドレスのクイックセットアップでは、WKND Site サンプ�
 以下のツールをローカルにインストールする必要があります。
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v14.x](https://nodejs.org/ja/)
+* [Node.js v18](https://nodejs.org/ja/)
 * [Git](https://git-scm.com/)
 
 ## 1. AEM SDK をインストールします。 {#aem-sdk}
