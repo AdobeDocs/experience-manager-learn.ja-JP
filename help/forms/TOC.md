@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
+source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
 workflow-type: tm+mt
-source-wordcount: '1784'
-ht-degree: 3%
+source-wordcount: '1806'
+ht-degree: 4%
 
 ---
 
@@ -152,7 +152,7 @@ ht-degree: 3%
    + [アダプティブフォームの作成と設定](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [単一の署名者に対するアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [2 名の署名者に対するアダプティブフォームの設定](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [automated forms conversionサービスの設定](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [フォームの自動変換サービスの設定](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [PDFフォームをアダプティブフォームに変換する](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [変換後のアダプティブフォームを設定する](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Acrobat Signでの XDP テンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -230,7 +230,12 @@ ht-degree: 3%
    + [ワークフローコンポーネントを作成](welcome-kit/create-workflow-component.md)
    + [ソリューションをテストする](welcome-kit/testing-the-solution.md)
 
-
++ FormsおよびAcrobat Signを使用した React アプリ {#react-ic-sign}
+   + [はじめに](react-ic-sign/introduction.md)
+   + [IC ドキュメントを生成](react-ic-sign/create-ic-document.md)
+   + [Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
+   + [署名ウィジェットを生成](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [サンプルアセットのデプロイ](react-ic-sign/deploy-assets-on-your-server.md)
 + ドキュメントサービス {#document-services}
    + [PDF formsのタイプ](document-services/pdf-forms-and-documents.md)
    + [アダプティブフォームに pdf を埋め込む](document-services/embed-pdf-inline.md)
