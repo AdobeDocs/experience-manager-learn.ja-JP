@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -26,7 +26,8 @@ Web フォームを作成してエンドユーザーに返すためのカスタ�
 ## Acrobat Sign OSGi 設定の作成
 
 Acrobat Sign REST API では、統合キーと統合キーに関連付けられた電子メールが必要です。 これら 2 つの値は、次に示すように、OSGi 設定プロパティとして提供されます
-![sign-configuration](assets/sign-configuration.jpg)
+
+![sign-configuration](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;

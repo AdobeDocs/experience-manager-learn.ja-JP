@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service チュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 26%
+source-wordcount: '932'
+ht-degree: 28%
 
 ---
 
@@ -37,11 +37,11 @@ ht-degree: 26%
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
-   + [CI/CD 非実稼動パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
+   + [実稼動以外の CI/CD パイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
    + 開発業務{#devops}
       + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
-      + [プロジェクトを結合](./cloud-manager/devops/merge-projects.md)
+      + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
       + [パイプラインの設定](./cloud-manager/devops/configure-pipelines.md)
       + [継続的統合](./cloud-manager/devops/continuous-integration.md)
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
@@ -50,7 +50,7 @@ ht-degree: 26%
 + ローカル開発環境の設定 {#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
-   + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
+   + [ローカル AEM ランタイム](./local-development-environment/aem-runtime.md)
    + [ローカル Dispatcher ツール](./local-development-environment/dispatcher-tools.md)
 + 開発{#developing}
    + 拡張機能{#extensibility}
@@ -114,7 +114,7 @@ ht-degree: 26%
       + [デベロッパーコンソール](./debugging/cloud-service/developer-console.md)
       + [リポジトリーブラウザー](./debugging/cloud-service/repository-browser.md)
       + リスク{#risks}
-         + [横断の警告](./debugging/cloud-service/risks/traversals.md)
+         + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
    + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + AEMへのアクセス{#accessing}
@@ -123,7 +123,7 @@ ht-degree: 26%
    + [Adobe IMSのユーザーグループ](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS製品プロファイル](./accessing/adobe-ims-product-profiles.md)
    + [AEMのユーザー、グループ、権限](./accessing/aem-users-groups-and-permissions.md)
-   + [AEMウォークスルーへのアクセスの設定](./accessing/walk-through.md)
+   + [AEM へのアクセスを設定する方法の説明](./accessing/walk-through.md)
 + 認証{#authentication}
    + [概要](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
@@ -259,6 +259,9 @@ ht-degree: 26%
       + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [テストフォームの送信](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [クリックイベントをテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + 1 つのドライブと SharePoint にフォーム送信を保存{#one-drive}
+      + [フォームデータを 1 つのドライブに保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
+      + [SharePoint にフォームデータを保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + asset compute拡張機能{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
