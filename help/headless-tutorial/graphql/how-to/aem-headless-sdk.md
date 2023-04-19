@@ -1,6 +1,6 @@
 ---
 title: AEMヘッドレス SDK の使用
-description: AEMヘッドレス SDK を使用して GraphQL クエリを作成する方法を説明します。
+description: AEMヘッドレス SDK を使用してGraphQLクエリを実行する方法について説明します。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -9,10 +9,10 @@ level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 595d990b7d8ed3c801a085892fef38d780082a15
+source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 1%
+source-wordcount: '454'
+ht-degree: 10%
 
 ---
 
@@ -22,19 +22,19 @@ AEMヘッドレス SDK は、クライアントが HTTP 経由でAEMヘッドレ
 
 AEMヘッドレス SDK は、次の様々なプラットフォームで使用できます。
 
-+ [クライアント側ブラウザー用のAEMヘッドレス SDK(JavaScript)](https://github.com/adobe/aem-headless-client-js)
-+ [AEMヘッドレス SDK for server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
-+ [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
++ [クライアントサイドブラウザー用 AEM ヘッドレス SDK（JavaScript）](https://github.com/adobe/aem-headless-client-js)
++ [サーバーサイド／Node.js（JavaScript）用 AEM ヘッドレス SDK](https://github.com/adobe/aem-headless-client-nodejs)
++ [Java™ 用 AEM ヘッドレス SDK](https://github.com/adobe/aem-headless-client-java)
 
 ## 永続的な GraphQL クエリ
 
-持続的なクエリを使用した GraphQL を使用したAEMのクエリ（とは対照的） [クライアント定義の GraphQL クエリ](#graphl-queries)) を使用すると、開発者はAEMでクエリを（結果ではなく）保持し、クエリの名前による実行をリクエストできます。 永続クエリは、SQL データベースのストアドプロシージャの概念と似ています。
+永続化されたクエリを使用してGraphQLを使用してAEMに対するクエリを実行する（とは異なります） [クライアント定義GraphQLクエリ](#graphl-queries)) を使用すると、開発者はAEMでクエリを（結果ではなく）保持し、クエリの名前による実行をリクエストできます。 永続クエリは、SQL データベースのストアドプロシージャの概念と似ています。
 
-永続化されたクエリは HTTPGETを使用して実行されます。HTTP データは CDN およびAEM Dispatcher 層でキャッシュ可能です。HTTP データを使用すると、永続化されたクエリは、クライアント定義の GraphQL クエリよりも高いパフォーマンスを発揮します。 また、永続化されたクエリが有効になり、API が定義され、開発者が各コンテンツフラグメントモデルの詳細を理解する必要性を切り離します。
+永続化されたクエリは HTTPGETを使用して実行されます。HTTP データは CDN およびAEM Dispatcher 層でキャッシュ可能です。このデータは、クライアントが定義したGraphQLクエリよりも永続化されたクエリの方がパフォーマンスが高くなります。 また、永続化されたクエリが有効になり、API が定義され、開発者が各コンテンツフラグメントモデルの詳細を理解する必要性を切り離します。
 
 ### コードの例{#persisted-graphql-queries-code-examples}
 
-AEMに対して GraphQL の永続クエリを実行する方法のコード例を次に示します。
+AEMに対してGraphQLの永続クエリを実行する方法のコード例を次に示します。
 
 +++ JavaScript の例
 
@@ -87,7 +87,7 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ React useEffect(...) example
++++ React useEffect(...) 例
 
 のインストール [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) を実行することで `npm install` コマンドを使用して、React プロジェクトのルートからアクセスできます。
 
@@ -95,9 +95,9 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 $ npm i @adobe/aem-headless-client-js
 ```
 
-次のコード例は、 [React useEffect(...) フック](https://reactjs.org/docs/hooks-effect.html) を使用してAEM GraphQL の非同期呼び出しを実行します。
+次のコード例は、 [React useEffect(...) フック](https://reactjs.org/docs/hooks-effect.html) をクリックして、AEM GraphQLへの非同期呼び出しを実行します。
 
-使用 `useEffect` を使用して React で非同期の GraphQL 呼び出しをおこなうと、次の理由で役立ちます。
+使用 `useEffect` React で非同期のGraphQL呼び出しをおこなうのは、次の理由で役立ちます。
 
 1. AEMへの非同期呼び出し用の同期ラッパーを提供します。
 1. AEMの不要な要求を減らします。
@@ -199,7 +199,41 @@ let { data, errors } = useAdventureBySlug('bali-surf-camp');
 
 <p> </p>
 
-## GraphQL クエリ
+## GraphQLクエリ
 
-AEMはクライアント定義の GraphQL クエリをサポートしますが、AEMのベストプラクティスは [永続的な GraphQL クエリ](#persisted-graphql-queries).
+AEMはクライアント定義のGraphQLクエリをサポートしますが、AEMのベストプラクティスは [永続的なGraphQLクエリ](#persisted-graphql-queries).
 
+## Webpack 5+
+
+AEMヘッドレス JS SDK は、 `util` デフォルトでは Webpack 5+に含まれていません。 Webpack 5 以降を使用している場合、次のエラーが表示されます。
+
+```
+Compiled with problems:
+× ERROR in ./node_modules/@adobe/aio-lib-core-errors/src/AioCoreSDKErrorWrapper.js 12:13-28
+Module not found: Error: Can't resolve 'util' in '/Users/me/Code/wknd-headless-examples/node_modules/@adobe/aio-lib-core-errors/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+    - add a fallback 'resolve.fallback: { "util": require.resolve("util/") }'
+    - install 'util'
+If you don't want to include a polyfill, you can use an empty module like this:
+    resolve.fallback: { "util": false }
+```
+
+以下を追加します。 `devDependencies` を `package.json` ファイル：
+
+```json
+  "devDependencies": {
+    "buffer": "npm:buffer@^6.0.3",
+    "crypto": "npm:crypto-browserify@^3.12.0",
+    "http": "npm:stream-http@^3.2.0",
+    "https": "npm:https-browserify@^1.0.0",
+    "stream": "npm:stream-browserify@^3.0.0",
+    "util": "npm:util@^0.12.5",
+    "zlib": "npm:browserify-zlib@^0.2.0"
+  },
+```
+
+次に、を実行します。 `npm install` 依存関係をインストールする。
