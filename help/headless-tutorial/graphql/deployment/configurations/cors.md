@@ -8,10 +8,10 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
+source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 3%
 # クロスオリジンリソース共有 (CORS)
 
 Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース共有 (CORS) は、AEM GraphQL API に対してブラウザーベースのクライアント側呼び出しをおこなうAEM以外の Web プロパティを容易にします。
+
+次の記事では、 _単一起源の_ CORS を介して特定のセットのAEMヘッドレスエンドポイントにアクセスする。 単一オリジンとは、AEMにアクセスするのはAEM以外の 1 つのドメインのみで、例えば、https://app.example.comはhttps://www.example.comに接続することを意味します。 キャッシュに関する懸念があるので、複数オリジンアクセスは、この方法を使用して動作しない可能性があります。
 
 >[!TIP]
 >
@@ -63,7 +65,6 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
     "https://spa.external.com/"
   ],
   "alloworiginregexp":[
-    "http://localhost:.*"
   ],
   "allowedpaths": [
     "/graphql/execute.json.*",
