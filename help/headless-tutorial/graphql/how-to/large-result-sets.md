@@ -10,9 +10,9 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,11 @@ AEMヘッドレスは、 [オフセット/制限](#list-query) および [カー
 
 大きなデータセットを扱う場合、オフセットと制限の両方と、カーソルベースのページネーションを使用して、データの特定のサブセットを取得できます。 ただし、特定の状況で 1 つの方法を他の方法よりも適切にする場合がある 2 つの方法には、いくつかの違いがあります。
 
-### リストクエリ
+### オフセット/制限
 
 クエリのリスト、使用 `limit` および `offset` 開始点 (`offset`) および取得するレコード数 (`limit`) をクリックします。 この方法では、結果の特定のページに移動するなど、結果セット全体の任意の場所から結果のサブセットを選択できます。 実装は簡単ですが、大きな結果を処理する場合は、時間がかかり非効率になる可能性があります。これは、多くのレコードを取得するには、以前のすべてのレコードをスキャンする必要があるからです。 また、この方法では、多くの結果を取得して破棄する必要が生じる場合があるので、オフセット値が高い場合にパフォーマンスの問題が発生する可能性があります。
+
+#### GraphQLクエリ
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -51,7 +53,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
   }
 ```
 
-#### クエリ変数
+##### クエリ変数
 
 ```json
 {
@@ -60,7 +62,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### 応答をリスト
+#### GraphQL応答
 
 結果の JSON 応答には、2 番目、3 番目、4 番目、5 番目に高価なアドベンチャーが含まれます。 結果の最初の 2 つの冒険は同じ価格 (`4500` ですから、 [リストクエリ](#list-queries) 同じ価格の冒険を昇順で並べ替えます。
 
@@ -99,10 +101,11 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 カーソルベースのページネーション（ページ分割されたクエリで使用可能）では、カーソル（特定のレコードへの参照）を使用して次の結果セットを取得する必要があります。 この方法は、以前のすべてのレコードをスキャンして、必要なデータのサブセットを取得する必要がないので、より効率的です。 ページ分割されたクエリは、最初から途中まで、または最後まで、大きな結果セットを繰り返し処理するのに最適です。 クエリのリスト、使用 `limit` および `offset` 開始点 (`offset`) および取得するレコード数 (`limit`) をクリックします。 この方法では、結果の特定のページに移動するなど、結果セット全体の任意の場所から結果のサブセットを選択できます。 実装は簡単ですが、大きな結果を処理する場合は、時間がかかり非効率になる可能性があります。これは、多くのレコードを取得するには、以前のすべてのレコードをスキャンする必要があるからです。 また、この方法では、多くの結果を取得して破棄する必要が生じる場合があるので、オフセット値が高い場合にパフォーマンスの問題が発生する可能性があります。
 
+#### GraphQLクエリ
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
-query adventuresByPaginated($first:Int!, $after:String) {
+query adventuresByPaginated($first:Int, $after:String) {
  adventurePaginated(first: $first, after: $after, sort: "price DESC, title ASC") {
        edges {
           cursor
@@ -120,7 +123,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
   }
 ```
 
-#### クエリ変数
+##### クエリ変数
 
 ```json
 {
@@ -128,7 +131,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### ページ分割された応答
+#### GraphQL応答
 
 結果の JSON 応答には、2 番目、3 番目、4 番目、5 番目に高価なアドベンチャーが含まれます。 結果の最初の 2 つの冒険は同じ価格 (`4500` ですから、 [リストクエリ](#list-queries) 同じ価格の冒険を昇順で並べ替えます。
 
@@ -171,11 +174,11 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### ページ分割された次の結果セット
+#### ページ分割された次の結果セット
 
 次の結果セットは、 `after` パラメーターと `endCursor` の値を指定します。 取得する結果がない場合は、 `hasNextPage` が `false`.
 
-#### クエリ変数
+##### クエリ変数
 
 ```json
 {
