@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms チュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1809'
 ht-degree: 4%
 
 ---
@@ -284,6 +284,7 @@ ht-degree: 4%
    + [印刷チャネルドキュメントの 2 列レイアウト](interactive-communications/two-column-layout-aem-forms-article-use.md)
    + [AEM Forms印刷チャネルドキュメントでのテーブルコンポーネントの使用](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [監視フォルダを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+   + [テキストエディターのカスタマイズ](interactive-communications/customize-text-editor.md)
 
 + Web チャネル用のインタラクティブ通信 {#ic-web-channel-tutorial}
    + [はじめに](ic-web-channel-tutorial/introduction.md)
