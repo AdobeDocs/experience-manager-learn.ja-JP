@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスでの画像の使用
-description: 画像コンテンツ参照 URL を要求し、AEMヘッドレスでカスタムレンディションを使用する方法について説明します。
+title: AEMヘッドレスでの最適化された画像の使用
+description: AEMヘッドレスを使用して最適化された画像 URL をリクエストする方法について説明します。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -8,42 +8,37 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
+last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
-# 画像 (AEMヘッドレス ) {#images-with-aem-headless}
+# AEMヘッドレスで画像を最適化 {#images-with-aem-headless}
 
 画像は、 [豊富で魅力的なAEMヘッドレスエクスペリエンスの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja). AEMヘッドレスは、画像アセットの管理と、その最適化された配信をサポートします。
 
 AEMヘッドレスコンテンツモデリングで使用されるコンテンツフラグメントは、多くの場合、ヘッドレスエクスペリエンスでの表示を目的とした画像アセットを参照します。 AEM GraphQLクエリを記述して、画像の参照元に基づいて画像に URL を提供できます。
 
-この `ImageRef` タイプにはコンテンツ参照用の 3 つの URL オプションがあります。
+この `ImageRef` タイプには、コンテンツ参照用の 4 つの URL オプションがあります。
 
 + `_path` はAEMで参照されているパスで、AEM origin（ホスト名）は含まれていません
++ `_dynamicUrl` は、Web に最適化された優先画像アセットの完全な URL です。
+   + この `_dynamicUrl` にはAEM接触チャネルが含まれていないので、ドメイン（AEM オーサーまたは AEM パブリッシュサービス）はクライアントアプリケーションによって提供される必要があります。
 + `_authorUrl` は、AEM オーサー上の画像アセットの完全な URL です
    + [AEM オーサー](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) は、ヘッドレスアプリケーションのプレビューエクスペリエンスを提供するために使用できます。
 + `_publishUrl` は、AEM パブリッシュ上の画像アセットの完全な URL です。
    + [AEM パブリッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) は、通常、ヘッドレスアプリケーションの実稼動デプロイメントで画像が表示される場所です。
 
-これらのフィールドは、次の条件に基づいて使用するのが最適です。
-
-| ImageRef フィールド | AEMから提供されるクライアント Web アプリ | クライアントアプリが AEM オーサーに対してクエリを実行 | クライアントアプリが AEM Publish をクエリ |
-|--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✔ （アプリは URL でホストを指定する必要があります） | ✔ （アプリは URL でホストを指定する必要があります） |
-| `_authorUrl` | ✘ | ✔ | ✘ |
-| `_publishUrl` | ✘ | ✘ | ✔ |
-
-の使用 `_authorUrl` および `_publishUrl` は、GraphQL応答のソースに使用されているAEM GraphQLエンドポイントと一致する必要があります。
+この `_dynamicUrl` は、画像アセットに使用する推奨 URL で、 `_path`, `_authorUrl`、および `_publishUrl` 可能な限り
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
->title="画像 (AEMヘッドレス )"
->abstract="AEMヘッドレスが画像アセットの管理と、その最適化された配信をどのようにサポートするかを説明します。"
+>title="AEM ヘッドレスによる画像"
+>abstract="AEM ヘッドレスが画像アセットの管理とその最適化された配信をどのようにサポートするかについて説明します。"
 
 ## コンテンツフラグメントモデル
 
@@ -55,18 +50,20 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 ## GraphQL永続クエリ
 
-GraphQLクエリで、フィールドを `ImageRef` 適切なフィールドを入力し、リクエストします。 `_path`, `_authorUrl`または `_publishUrl` アプリケーションで必要です。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
+GraphQLクエリで、フィールドを `ImageRef` を入力し、リクエストします。 `_dynamicUrl` フィールドに入力します。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
 
 ```graphql
-query ($path: String!) {
-  adventureByPath(_path: $path) {
+query($path: String!, $assetTransform: AssetTransform!) {
+  adventureByPath(
+    _path: $path
+    _assetTransform: $assetTransform
+  ) {
     item {
-      title,
+      _path
+      title
       primaryImage {
         ... on ImageRef {
-          _path
-          _authorUrl
-          _publishUrl
+          _dynamicUrl
         }
       }
     }
@@ -74,21 +71,44 @@ query ($path: String!) {
 }
 ```
 
+### クエリ変数
+
+```json
+{ 
+  "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+}
+```
+
 この `$path` 変数 `_path` フィルターにはコンテンツフラグメントへの完全パスが必要です ( 例： `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`) をクリックします。
+
+この `_assetTransform` は、 `_dynamicUrl` は、提供される画像レンディションを最適化するように構築されます。 Web に最適化された画像の URL は、URL のクエリパラメーターを変更することで、クライアント上で調整することもできます。
+
+| GraphQLパラメーター | URL パラメーター | 説明 | 必須 | GraphQL変数値 | URL パラメーターの値 | GraphQL変数の例 | URL パラメーターの例 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
+| `format` | `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | `{ format: JPG }` | 該当なし |
+| `seoName` | 該当なし | URL のファイルセグメントの名前。 指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、 `-`または `_` | 該当なし | `{ seoName: "bali-surf-camp" }` | 該当なし |
+| `crop` | `crop` | 画像から取り出した切り抜きフレームは、画像のサイズ内にある必要があります | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
+| `size` | `size` | 出力画像のサイズ（高さと幅の両方）をピクセル単位で指定します。 | ✘ | 正の整数 | カンマ区切りの正の整数（順） `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
+| `rotation` | `rotate` | イメージの回転（度単位）。 | ✘ | `R90`、`R180`、`R270` | `90`、`180`、`270` | `{ rotation: R90 }` | `?rotate=90` |
+| `flip` | `flip` | 画像を反転します。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` | `h`、`v`、`hv` | `{ flip: horizontal }` | `?flip=h` |
+| `quality` | `quality` | 画質（元の画質のパーセント）。 | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
+| `width` | `width` | 出力画像の幅（ピクセル単位）。 条件 `size` が指定されている `width` は無視されます。 | ✘ | 正の整数 | 正の整数 | `{ width: 1600 }` | `?width=1600` |
+| `preferWebP` | `preferwebp` | If `true` ブラウザーが WebP をサポートしている場合、AEMは WebP を提供します。 `format`. | ✘ | `true`、`false` | `true`、`false` | `{ preferWebp: true }` | `?preferwebp=true` |
 
 ## GraphQL応答
 
-結果の JSON 応答には、画像アセットへの URL を含むリクエストされたフィールドが含まれます。
+結果の JSON 応答には、画像アセットへの Web 最適化 URL を含む要求されたフィールドが含まれます。
 
 ```json
 {
   "data": {
     "adventureByPath": {
       "item": {
-        "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
+        "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+        "title": "Bali Surf Camp",
+        "primaryImage": {
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
         }
       }
     }
@@ -96,181 +116,139 @@ query ($path: String!) {
 }
 ```
 
-参照元の画像をアプリケーションに読み込むには、適切なフィールドを使用します。 `_path`, `_authorUrl`または `_publishUrl` の `adventurePrimaryImage` を画像のソース URL として設定します。
+アプリケーションで参照画像の Web 最適化画像を読み込むには、 `_dynamicUrl` の `primaryImage` を画像のソース URL として設定します。
 
-のドメイン `_authorUrl` および `_publishUrl` は、AEM as a Cloud Serviceで [Externalizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
+React では、AEM Publish から Web に最適化された画像を表示すると、次のようになります。
 
-React では、AEM Publish からの画像の表示は次のようになります。
-
-```html
-<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
+```jsx
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+...
+<img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-## 画像レンディション
+忘れないで下さい `_dynamicUrl` ではAEMドメインが含まれていないので、解決する画像 URL の目的の接触チャネルを指定する必要があります。
 
-画像アセットはカスタマイズ可能をサポートします [レンディション](../../../assets/authoring/renditions.md)：元のアセットの代替表現です。 カスタムレンディションは、ヘッドレスエクスペリエンスの最適化に役立ちます。 大きな高解像度ファイルである場合が多い元の画像アセットを要求する代わりに、ヘッドレスアプリケーションから最適化されたレンディションを要求することができます。
+### レスポンシブ URL
 
-### レンディションの作成
+上記の例は、単一サイズの画像を使用することを示していますが、Web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。 レスポンシブ画像は、 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 次のコードスニペットに、 `_dynamicUrl` をベースにし、異なる幅のパラメーターを追加して、異なるレスポンシブビューを強化します。 また、 `width` クエリパラメーターを使用できますが、クライアントは他のクエリパラメーターを追加して、必要に応じて画像アセットをさらに最適化できます。
 
-AEM Assets管理者は、処理プロファイルを使用してカスタムレンディションを定義します。 その後、処理プロファイルを特定のフォルダーツリーまたはアセットに直接適用して、それらのアセットのレンディションを生成できます。
-
-#### 処理プロファイル
-
-アセットレンディションの仕様は、 [処理プロファイル](../../../assets/configuring/processing-profiles.md) AEM Assets管理者による
-
-処理プロファイルを作成または更新し、ヘッドレスアプリケーションで必要な画像サイズのレンディション定義を追加します。 レンディションには任意の名前を付けることができますが、意味的に名前を付ける必要があります。
-
-![ヘッドレスに最適化されたレンディションのAEM](./assets/images/processing-profiles.png)
-
-この例では、3 つのレンディションが作成されます。
-
-| レンディション名 | 拡張子 | 最大幅 |
-|-----------------------|:---------:|----------:|
-| web-optimized-large | webp | 1200 px |
-| web-optimized-medium | webp | 900 px |
-| web-optimized-small | webp | 600 px |
-
-上記の表で呼び出される属性は重要です。
-
-+ __レンディション名__ を使用してレンディションを要求します。
-+ __拡張__ は、 __レンディション名__. 優先 `webp` レンディションは Web 配信用に最適化されているので、
-+ __最大幅__ は、ヘッドレスアプリケーションでの使用に基づいて使用するレンディションを開発者に知らせるために使用されます。
-
-レンディションの定義はヘッドレスアプリケーションのニーズに応じて異なるので、使用例に合わせて最適なレンディションセットを定義し、その使用方法に関する意味的な名前を付けてください。
-
-#### アセット再処理ワークフロー（その ）{#reprocess-assets}
-
-処理プロファイルを作成（または更新）した状態で、アセットを再処理して、処理プロファイルで定義された新しいレンディションを生成します。 アセットが処理プロファイルで処理されるまで、新しいレンディションは存在しません。
-
-+ 好ましくは、 [フォルダーに処理プロファイルを割り当てました](../../../assets/configuring//processing-profiles.md) したがって、そのフォルダーに新しいアセットがアップロードされると、レンディションが自動的に生成されます。 既存のアセットは、以下のアドホックアプローチを使用して再処理する必要があります。
-
-+ または、フォルダーまたはアセットを選択し、「 __アセットを再処理__&#x200B;をクリックし、新しい処理プロファイル名を選択します。
-
-   ![アセットのアドホック再処理](./assets/images/ad-hoc-reprocess-assets.jpg)
-
-#### レンディションのレビュー
-
-レンディションは、 [アセットのレンディション表示を開く](../../../assets/authoring/renditions.md)をクリックし、レンディションパネルでプレビューする新しいレンディションを選択します。 レンディションが見つからない場合、 [アセットが処理プロファイルを使用して処理されていることを確認する](#reprocess-assets).
-
-![レンディションの確認](./assets/images/review-renditions.png)
-
-#### アセットを公開します。
-
-新しいレンディションを持つアセットが [（再公開済み）](../../../assets/sharing/publish.md) したがって、AEM パブリッシュ上で新しいレンディションにアクセスできます。
-
-### レンディションへのアクセス
-
-レンディションには、 __レンディション名__ および __レンディション拡張__ アセットの URL に対する処理プロファイルで定義されます。
-
-| アセット URL | レンディションサブパス | レンディション名 | レンディション拡張 |  | レンディション URL |
-|-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-large | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-medium | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-small | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
-
-{style="table-layout:auto"}
-
-### GraphQLクエリ{#renditions-graphl-query}
-
-AEM GraphQLでは、画像レンディションを要求するために追加の構文が必要です。 代わりに [画像に対する問い合わせ](#images-graphql-query) 通常の方法で、目的のレンディションをコード内で指定します。 ～することが重要である。 [ヘッドレスアプリケーションで使用される画像アセットに同じ名前のレンディションがあることを確認する](#reprocess-assets).
+```javascript
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+// Read the data from GraphQL response
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+let alt = data.adventureByPath.item.title;
+...
+{/*-- Example img srcset --*/}
+document.body.innerHTML=`<img>
+    alt="${alt}"
+    src="${${dynamicUrl}&width=1000}"
+    srcset="`
+      ${dynamicUrl}&width=1000 1000w,
+      ${dynamicUrl}&width=1600 1600w,
+      ${dynamicUrl}&width=2000 2000w,
+      `"
+    sizes="calc(100vw - 10rem)"/>`;
+...
+{/*-- Example picture --*/}
+document.body.innerHTML=`<picture>
+      <source srcset="${dynamicUrl}&width=2600" media="(min-width: 2001px)"/>
+      <source srcset="${dynamicUrl}&width=2000" media="(min-width: 1000px)"/>
+      <img src="${dynamicUrl}&width=400" alt="${alt}"/>
+    </picture>`;
+```
 
 ### React の例
 
-1 つの画像アセットの 3 つのレンディション (Web-optimized-small、Web-optimized-medium、Web-optimized-large) を表示する単純な React アプリケーションを作成します。
+次の手順に従って、Web に最適化された画像を表示するシンプルな React アプリケーションを作成します。 [レスポンシブ画像パターン](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). レスポンシブ画像には、主に次の 2 つのパターンがあります。
 
-![画像アセットレンディション React の例](./assets/images/react-example-renditions.jpg)
++ [srcset を含む Img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) パフォーマンスの向上
++ [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計管理のため
 
-#### 画像コンポーネントを作成{#react-example-image-component}
+#### srcset を含む Img 要素
 
-画像をレンダリングする React コンポーネントを作成します。 このコンポーネントは、次の 4 つのプロパティを受け入れます。
+>[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-+ `assetUrl`:GraphQLクエリの応答で指定された画像アセットの URL。
-+ `renditionName`:読み込むレンディションの名前。
-+ `renditionExtension`:読み込むレンディションの拡張。
-+ `alt`:画像の代替テキスト。アクセシビリティが重要です。
+[srcset を含む img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) を `sizes` 属性を使用して、画面サイズごとに異なる画像アセットを指定します。 Img srcsets は、画面サイズごとに異なる画像アセットを提供する場合に役立ちます。
 
-このコンポーネントは、 [レンディション URL ( __レンディションへのアクセス__](#access-renditions). An `onError` ハンドラーは、レンディションが見つからない場合に元のアセットを表示するように設定されます。
+#### 画像要素
 
-この例では、元のアセット URL を `onError` ハンドラー、イベント内にレンディションが見つかりません。
+[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 複数の `source` 要素を使用して、画面サイズごとに異なる画像アセットを提供します。 Picture 要素は、画面サイズごとに異なる画像レンディションを提供する場合に役立ちます。
 
-```javascript
-// src/Image.js
+>[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-export default function Image({ assetUrl, renditionName, renditionExtension, alt }) {
-  // Construct the rendition Url in the format:
-  //   <ASSET URL>/_jcr_content/renditions<RENDITION NAME>.<RENDITION EXTENSION>
-  const renditionUrl = `${assetUrl}/_jcr_content/renditions/${renditionName}.${renditionExtension}`;
+#### サンプルコード
 
-  // Load the original image asset in the event the named rendition is missing
-  const handleOnError = (e) => { e.target.src = assetUrl; }
-
-  return (
-    <>
-      <img src={renditionUrl} 
-            alt={alt} 
-            onError={handleOnError}/>
-    </>
-  );
-}
-```
-
-#### 次を定義： `App.js`{#app-js}
-
-このシンプルな `App.js` アドベンチャー画像をAEMに問い合わせて、その画像の 3 つのレンディションを表示します。web-optimized-small、web-optimized-medium および web-optimized-large。
+この簡単な React アプリでは、 [AEMヘッドレス SDK](./aem-headless-sdk.md) アドベンチャーコンテンツにAEMヘッドレス API を照会し、 [srcset を含む img 要素](#img-element-with-srcset) および [画像要素](#picture-element). この `srcset` および `sources` カスタムを使用 `setParams` 関数を使用して、web 最適化された配信クエリパラメーターを `_dynamicUrl` 画像のレンディションを変更する必要があるので、web クライアントのニーズに基づいて配信される画像レンディションを変更します。
 
 AEMに対するクエリは、カスタム React フックで実行されます。 [AEMヘッドレス SDK を使用する useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
-
-クエリの結果と特定のレンディションパラメーターが [画像 React コンポーネント](#react-example-image-component).
 
 ```javascript
 // src/App.js
 
 import "./App.css";
 import { useAdventureByPath } from './api/persistedQueries'
-import Image from "./Image";
+
+const AEM_HOST = process.env.AEM_HOST;
 
 function App() {
 
+  /**
+   * Update the dynamic URL with client-specific query parameters
+   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} params the AEM web-optimized image query parameters
+   * @returns the dynamic URL with the query parameters
+   */
+  function setParams(dynamicUrl, params) {
+    let url = new URL(dynamicUrl);
+    Object.keys(params).forEach(key => {
+      url.searchParams.set(key, params[key]);
+    });
+    return url.toString();
+  }
+
   // Get data from AEM using GraphQL persisted query as defined above 
   // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
-  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
+  // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
+  let { data, error } = useAdventureByPath(
+        "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
+        { assetTransform: { format: "JPG", preferWebp: true } }
+      );
 
-  // Wait for GraphQL to provide data
+  // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
   return (
     <div className="app">
       
-      <h2>Small rendition</h2>
-      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-small"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <h1>Web-optimized images</h1>
 
-      <hr />
+      {/* Render the web-optimized image img with srcset for the Adventure Primary Image */}
+      <h2>Img srcset</h2>
 
-      <h2>Medium rendition</h2>
-      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-medium"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <img
+        alt={alt}
+        src={setParams(dynamicUrl, { width: 1000 })}
+        srcSet={
+            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
+             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
+             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+        }
+        sizes="calc(100vw - 10rem)"/>
 
-      <hr />
+       {/* Render the web-optimized picture for the Adventure Primary Image */}
+        <h2>Picture element</h2>
 
-      <h2>Large rendition</h2>
-      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-large"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+        <picture>
+          {/* When viewport width is greater than 2001px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          {/* When viewport width is between 1000px and 2000px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          {/* When viewport width is less than 799px */}
+          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+        </picture>
     </div>
   );
 }
