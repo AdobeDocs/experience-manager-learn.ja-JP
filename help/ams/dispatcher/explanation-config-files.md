@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Apache Web サーバーは、実際には、 `Include` または `IncludeOptiona
 | ファイル名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` ファイルストア `mod_rewrite` 明示的に含まれ、使用されるルール `vhost` ファイル |
 | ファイル名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` ファイルは、 `*.vhost` ファイル。 IP の正規表現または IP のホワイトリスト登録を許可する拒否ルールが含まれます。 IP アドレスに基づいて仮想ホストの表示を制限しようとする場合は、これらのファイルの 1 つを生成し、 `*.vhost` ファイル |
 
-## conf.modules.d/に含まれるファイル
+## conf.dispatcher.d/に含まれるファイル
 
 | ファイル | ファイルの保存先 | 説明 |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ RewriteRule ^/robots.txt$ /content/dam/exampleco/robots.txt [PT,L]
 
 の拡張子を持つ vhost ファイルが `.conf` が `/etc/httpd/conf.d/` フォルダーは、通常は問題なく、Apache 上のメモリに読み込もうとしますが、書き換えルールファイルの拡張子が `.conf` は、 `/etc/httpd/conf.d/` フォルダーに自動インクルードされ、グローバルに適用され、混乱を招く、望ましくない結果が生じます。
 
-## 解像度
+## 解決方法
 
 実行内容に基づいてファイルに名前を付け、自動インクルードルールの名前空間から安全にファイルに名前を付けます。
 
