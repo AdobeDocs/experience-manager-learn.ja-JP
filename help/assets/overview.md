@@ -7,7 +7,7 @@ exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 7%
+ht-degree: 16%
 
 ---
 
@@ -18,10 +18,10 @@ Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデ�
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
->abstract="必要なアセットをすばやく見つけて編集する方法を説明します。"
->additional-url="https://video.tv.adobe.com/v/336196/?captions=jpn" text="AEM Assetsウォークスルー"
+>abstract="必要なアセットをすばやく検索して編集する方法を説明します。"
+>additional-url="https://video.tv.adobe.com/v/336196/?captions=jpn" text="AEM アセットの説明"
 
-## AEM Assetsウォークスルー
+## AEM アセットの説明
 
 AEM Assetsとは何か、および組織のビジネス目標の達成にがどのように使用されるかについて説明します。
 

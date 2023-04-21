@@ -13,7 +13,7 @@ exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1612'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
 >title="ローカル Dispatcher ツール"
->abstract="Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。 AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。"
+>abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発設定の一部です。AEM as a Cloud Service SDK には、推奨 Dispatcher ツールのバージョンが含まれており、これにより、Dispatcher をローカルで容易に設定、検証、シミュレーションできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMas a Cloud ServiceSDK のダウンロード"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEM as a Cloud Service SDK のダウンロード"
 
-Adobe Experience Manager(AEM) の Dispatcher は、CDN と AEM パブリッシュ層の間にセキュリティとパフォーマンスの層を提供する Apache HTTP Web サーバーモジュールです。 Dispatcher は、Experience Managerアーキテクチャ全体の不可欠な要素であり、ローカル開発設定の一部にする必要があります。
+Adobe Experience Manager(AEM) の Dispatcher は、CDN と AEM パブリッシュ層の間にセキュリティとパフォーマンスの層を提供する Apache HTTP Web サーバーモジュールです。 Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発設定の一部です。
 
-AEMas a Cloud ServiceSDK には、推奨される Dispatcher ツールバージョンが含まれており、Dispatcher をローカルで設定、検証、シミュレーションできます。 Dispatcher ツールは、次の要素で構成されます。
+AEM as a Cloud Service SDK には、推奨 Dispatcher ツールのバージョンが含まれており、これにより、Dispatcher をローカルで容易に設定、検証、シミュレーションできます。Dispatcher ツールは、次の要素で構成されます。
 
 + Apache HTTP Web サーバーと Dispatcher 設定ファイルのベースラインセット（以下の場所にあります） `.../dispatcher-sdk-x.x.x/src`
 + 次の場所にある設定バリデーター CLI ツール `.../dispatcher-sdk-x.x.x/bin/validate`

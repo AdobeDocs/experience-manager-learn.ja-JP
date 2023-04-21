@@ -13,7 +13,7 @@ exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 7%
+ht-degree: 28%
 
 ---
 
@@ -21,18 +21,18 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
->title="Adobe IMSの概要"
->abstract="AEM as a Cloud Serviceでは、Adobe IMS(Identity Management System) を利用して、管理者と通常のユーザーの両方を AEM オーサーサービスにログインしやすくします。 Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用し、AEM オーサーサービスへの詳細なアクセスを提供する方法について説明します。"
+>title="Adobe IMS の概要"
+>abstract="AEM as a Cloud Service は、AEM オーサーサービスへのユーザー (管理者と通常のユーザーの両方) のログインを容易にするために、Adobe IMS (Identity Management System) を活用します。Adobe IMS のユーザー、グループおよび製品プロファイルを AEM のグループおよび権限と連動して使用し、AEM オーサーサービスへのきめ細かなアクセス制御を提供する方法を説明します。"
 
 AEM as a Cloud ServiceはAEMアプリケーションを利用するクラウドネイティブな方法です。そのため、Adobe IMS(Identity Management System) を利用して、管理者と通常のユーザーの両方を AEM Author サービスにログインしやすくします。
 
 ![Adobe Admin Console](./assets/hero.png)
 
-Adobe IMSのユーザー、グループ、製品プロファイルをAEMグループおよび権限と連携させて使用し、AEM オーサーサービスへの詳細なアクセスを提供する方法について説明します。
+Adobe IMS のユーザー、グループおよび製品プロファイルを AEM のグループおよび権限と連動して使用し、AEM オーサーサービスへのきめ細かなアクセス制御を提供する方法を説明します。
 
 ## Adobe IMSユーザー
 
-AEM オーサーサービスへのアクセスを必要とするユーザーは、次のように管理されます。 [Adobe IMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) in [Adobeの AdminConsole](https://adminconsole.adobe.com). ユーザーのAdobe IMS、およびユーザーがAdmin Consoleでアクセスおよび管理される方法について説明します。
+AEM オーサーサービスへのアクセスを必要とするユーザーは、次のように管理されます。 [Adobe IMSユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) in [Adobeの AdminConsole](https://adminconsole.adobe.com). Adobe IMS ユーザーとは何か、および Admin Console にアクセスして管理する方法について説明します。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ AEM オーサーサービスにアクセスするユーザーは、 [Adobe IMS�
 
 ## AEMユーザーグループと権限
 
-Adobe Experience Managerは、Adobe IMSユーザー、ユーザーグループおよび製品プロファイルに基づいて構築され、AEMへのカスタマイズ可能なアクセスをユーザーに提供します。 AEMのグループと権限を構築する方法、およびAdobe IMSの抽象概念と連携して、AEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
+Adobe Experience Manager は、Adobe IMS ユーザー、ユーザーグループ、製品プロファイルに基づいて、AEM へのカスタマイズ可能なアクセスを提供します。AEMのグループと権限を構築する方法、およびAdobe IMSの抽象概念と連携して、AEMへのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
 
 [AEMのユーザー、グループ、権限について説明します](./aem-users-groups-and-permissions.md)
 

@@ -13,7 +13,7 @@ exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="開発ツールの設定"
->abstract="Adobe Experience Manager（AEM）開発では、最小限の開発ツールセットを開発者のマシンにインストールして設定する必要があります。これらのツールには、Java、Maven、Adobe I/O CLI、開発 IDE などが含まれます。"
+>abstract="Adobe Experience Manager (AEM) を開発する際には、開発用マシンに最低限の開発ツールのセットをインストールして設定する必要があります。これらのツールには、Java、Maven、Adobe I/O CLI、開発 IDE などが含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=ja" text="開発の基本"
 
-Adobe Experience Manager（AEM）開発では、最小限の開発ツールセットを開発者のマシンにインストールして設定する必要があります。これらのツールは、AEM Projects の開発と構築をサポートします。
+Adobe Experience Manager (AEM) を開発する際には、開発用マシンに最低限の開発ツールのセットをインストールして設定する必要があります。これらのツールは、AEM Projects の開発と構築をサポートします。
 
 注意： `~` は、ユーザーのディレクトリの略記法として使用されます。 Windows の場合、これは `%HOMEPATH%`.
 
@@ -121,7 +121,7 @@ Apache Maven は、AEM Project Maven アーキタイプから生成されたAEM�
 
 + AEM as a Cloud Servicesサービスからのテールログ
 + CLI からの Cloud Manager パイプラインの管理
-+ デプロイ先 [AEMの迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ デプロイ先 [AEMの迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)
 
 ### Adobe I/OCLI のインストール
 
@@ -156,7 +156,7 @@ Adobe I/OCLI が Cloud Manager と通信するために、 [Cloud Manager 統合
 
 ### AEM Rapid Development Environment プラグインの設定{#rde}
 
-AEM Rapid Development Environment プラグインを使用すると、aio CLI とAEM as a Cloud Serviceの間のやり取りが可能になります [迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) 経由 `aio aem:rde` コマンドを使用します。
+AEM Rapid Development Environment プラグインを使用すると、aio CLI とAEM as a Cloud Serviceの間のやり取りが可能になります [迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja) 経由 `aio aem:rde` コマンドを使用します。
 
 1. 実行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` をインストールするには、 [AEM Rapid Development Environments プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde).
 

@@ -16,7 +16,7 @@ exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 11%
+ht-degree: 42%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 11%
 
 >[!CONTEXTUALHELP]
 >id="intro_core_components"
->title="AEM as a Cloud Serviceでのコアコンポーネントの概要"
->abstract="このタブでは、AEM as a Cloud Serviceと互換性のある最新のサイトを構築するのに役立つコンテンツを表示できます。 その鍵は、コアコンポーネントを使用することです"
+>title="AEM as a Cloud Service のコアコンポーネントの概要"
+>abstract="このタブでは、AEM as a Cloud Service と互換性がある最新のサイトを構築するのに役立つコンテンツを確認できます。重要なのはコアコンポーネントの活用です。"
 >additional-url="https://video.tv.adobe.com/v/18926/?captions=jpn" text="コアコンポーネントの概要"
 
 AEMコアコンポーネントは、Adobe Experience Managerで使用する標準セットコンポーネントです。 コアコンポーネントは、Adobeのベストプラクティスと標準に基づいて構築され、あらゆる Sites 実装の機能のベースラインセットを提供します。

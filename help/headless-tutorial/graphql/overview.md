@@ -11,7 +11,7 @@ last-substantial-update: 2022-07-20T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -33,8 +33,8 @@ AEM GraphQL APIs for Content Fragments は、ヘッドレスな CMS シナリオ
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
 >title="AEM ヘッドレスの概要 - GraphQL"
->abstract="GraphQLを使用してコンテンツフラグメントを配信する方法を説明します。"
->additional-url="https://video.tv.adobe.com/v/328618/?captions=jpn" text="AEMのGraphQLの概要"
+>abstract="GraphQL を使用してコンテンツフラグメントを配信する方法を説明します。"
+>additional-url="https://video.tv.adobe.com/v/328618/?captions=jpn" text="AEM の GraphQL の概要"
 
 ## AEMヘッドレスGraphQLビデオシリーズ
 

@@ -14,7 +14,7 @@ exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 
@@ -33,8 +33,8 @@ AEMコンテンツフラグメントは、テキストベースの編集コン�
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_admin_content_fragments"
->title="フラグメントを管理"
->abstract="コンテンツフラグメントを使用して、ページに依存しないコンテンツの設計、作成、キュレーション、使用を行う方法を説明します。"
+>title="フラグメントの管理"
+>abstract="コンテンツフラグメントを使用して、ページに依存しないコンテンツの設計、作成、キュレーションおよび使用を実現する方法を説明します。"
 
 ## コンテンツフラグメントモデルの定義 {#defining-content-fragment-models}
 

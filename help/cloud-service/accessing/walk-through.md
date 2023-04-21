@@ -1,5 +1,5 @@
 ---
-title: AEMウォークスルーへのアクセスの設定
+title: AEM へのアクセスを設定する方法の説明
 description: AdobeAdminConsole でのAdobe IMSユーザー、ユーザーグループ、Adobe IMSプロファイルの構成の簡潔なウォークスルーと、AEM Author でこれらの製品の抽象概念を活用して特定のグループベースの権限を定義および管理する方法。
 version: Cloud Service
 topic: Administration, Security
@@ -12,16 +12,16 @@ exl-id: 0ca50fa4-0b2a-4e6d-becb-7a91fc6b4166
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '115'
-ht-degree: 0%
+ht-degree: 42%
 
 ---
 
-# AEMウォークスルーへのアクセスの設定 {#configuring-access-to-aem-walkthrough}
+# AEM へのアクセスを設定する方法の説明 {#configuring-access-to-aem-walkthrough}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_aem_walkthrough"
->title="AEMウォークスルーへのアクセスの設定"
->abstract="Adobe Admin ConsoleでのAdobe IMSユーザー、ユーザーグループ、Adobe IMSプロファイルの設定の簡潔なウォークスルーと、AEM Author でこれらの製品の抽象概念を活用して、特定のグループベースの権限を定義および管理する方法。"
+>title="AEM へのアクセスを設定する方法の説明"
+>abstract="Adobe Admin Console で Adobe IMS のユーザー、ユーザーグループおよび製品プロファイルを設定する手順と、AEM オーサーでこれらの Adobe IMS の抽象化を活用して特定のグループベースの権限を定義および管理する方法について説明します。"
 
 AdobeAdminConsole でのAdobe IMSユーザー、ユーザーグループ、Adobe IMSプロファイルの構成の簡潔なウォークスルーと、AEM Author でこれらの製品の抽象概念を活用して特定のグループベースの権限を定義および管理する方法。
 

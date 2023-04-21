@@ -14,7 +14,7 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
 >title="概要"
->abstract="AEM as a Cloud Serviceのローカル開発環境の設定には、AEM Projects の開発、ビルド、コンパイルに必要な開発ツールや、Cloud Manager を使用して新しい機能をAEMにデプロイする前に、開発者が新しい機能をローカルですばやく検証できるローカルの実行時間が含まれます。"
+>abstract="AEM as a Cloud Service のローカル開発環境には、AEM プロジェクトの開発、ビルド、コンパイルに必要な開発ツールや、Adobe Cloud Manager を介して AEM as a Cloud Service に新機能をデプロイする前に、ローカルで迅速に検証できるローカルランタイムが含まれています。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=ja" text="開発ガイドライン"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=ja" text="開発の基本"
 
@@ -66,7 +66,7 @@ AEMプロジェクトは、Cloud Manager を介してAEM as a Cloud Serviceに�
 
 [AEM Projects 用開発ツールの設定](./development-tools.md)
 
-## Local AEM Runtime
+## ローカル AEM ランタイム
 
 AEMas a Cloud ServiceSDK は、 [!DNL QuickStart Jar] AEMのローカルバージョンを実行する この [!DNL QuickStart Jar] を使用して、AEM オーサーサービスまたは AEM パブリッシュサービスをローカルで実行できます。 なお、 [!DNL QuickStart Jar] はローカル開発エクスペリエンスを提供しますが、AEM as a Cloud Serviceで使用できるすべての機能が [!DNL QuickStart Jar].
 

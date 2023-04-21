@@ -13,7 +13,7 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '1800'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
->title="Local AEM Runtime"
->abstract="Adobe Experience Manager(AEM) は、AEM as a Cloud Service SDK の Quickstart Jar を使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストし、AEMas a Cloud Service環境にデプロイできます。"
+>title="ローカル AEM ランタイム"
+>abstract="Adobe Experience Manager (AEM) は、AEM as a Cloud Service SDK の Quickstart Jar を使用することでローカルで実行できます。これにより、開発者は、ソース管理を行い、AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja" text="AEM as a Cloud Service の SDK"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEMas a Cloud ServiceSDK のダウンロード"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEM as a Cloud Service SDK のダウンロード"
 
-Adobe Experience Manager(AEM) は、AEM as a Cloud Service SDK の Quickstart Jar を使用して、ローカルで実行できます。 これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストし、AEMas a Cloud Service環境にデプロイできます。
+Adobe Experience Manager (AEM) は、AEM as a Cloud Service SDK の Quickstart Jar を使用することでローカルで実行できます。これにより、開発者は、ソース管理を行い、AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイおよびテストできます。
 
 注意： `~` は、ユーザーのディレクトリの略記法として使用されます。 Windows の場合、これは `%HOMEPATH%`.
 
