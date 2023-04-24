@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
+source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '935'
 ht-degree: 5%
 
 ---
@@ -35,6 +35,11 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 この `_dynamicUrl` は、画像アセットに使用する推奨 URL で、 `_path`, `_authorUrl`、および `_publishUrl` 可能な限り
 
+|  | AEM as a Cloud Service | AEMas a Cloud ServiceRDE | AEM SDK | AEM 6.5 |
+| ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
+| Web に最適化された画像をサポートしますか？ | ✔ | ✔ | ✘ | ✘ |
+
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
 >title="AEM ヘッドレスによる画像"
@@ -52,7 +57,7 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 GraphQLクエリで、フィールドを `ImageRef` を入力し、リクエストします。 `_dynamicUrl` フィールドに入力します。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
 
-```graphql
+```graphql {highlight="11"}
 query($path: String!, $assetTransform: AssetTransform!) {
   adventureByPath(
     _path: $path
@@ -100,7 +105,7 @@ query($path: String!, $assetTransform: AssetTransform!) {
 
 結果の JSON 応答には、画像アセットへの Web 最適化 URL を含む要求されたフィールドが含まれます。
 
-```json
+```json {highlight="8"}
 {
   "data": {
     "adventureByPath": {
@@ -197,12 +202,12 @@ function App() {
 
   /**
    * Update the dynamic URL with client-specific query parameters
-   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} imageUrl the image URL
    * @param {*} params the AEM web-optimized image query parameters
    * @returns the dynamic URL with the query parameters
    */
-  function setParams(dynamicUrl, params) {
-    let url = new URL(dynamicUrl);
+  function setOptimizedImageUrlParams(imageUrl, params) {
+    let url = new URL(imageUrl);
     Object.keys(params).forEach(key => {
       url.searchParams.set(key, params[key]);
     });
@@ -220,6 +225,9 @@ function App() {
   // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
+  const alt = data.adventureByPath.item.title;
+  const imageUrl =  AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+
   return (
     <div className="app">
       
@@ -230,11 +238,11 @@ function App() {
 
       <img
         alt={alt}
-        src={setParams(dynamicUrl, { width: 1000 })}
+        src={setOptimizedImageUrlParams(imageUrl, { width: 1000 })}
         srcSet={
-            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
-             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
-             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+            `${setOptimizedImageUrlParams(imageUrl, { width: 1000 })} 1000w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 1600 })} 1600w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 2000 })} 2000w`
         }
         sizes="calc(100vw - 10rem)"/>
 
@@ -243,11 +251,11 @@ function App() {
 
         <picture>
           {/* When viewport width is greater than 2001px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
           {/* When viewport width is between 1000px and 2000px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2000})} media="(min-width: 1000px)"/>
           {/* When viewport width is less than 799px */}
-          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+          <img src={setOptimizedImageUrlParams(imageUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
         </picture>
     </div>
   );
