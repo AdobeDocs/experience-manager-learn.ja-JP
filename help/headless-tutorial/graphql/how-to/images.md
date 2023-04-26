@@ -10,10 +10,10 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
+source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 5%
+source-wordcount: '934'
+ht-degree: 6%
 
 ---
 
@@ -97,7 +97,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 | GraphQLパラメーター | URL パラメーター | 説明 | 必須 | GraphQL変数値 | URL パラメーターの値 | URL パラメーターの例 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | 該当なし |
+| `format` | 該当なし | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | 該当なし |
 | `seoName` | 該当なし | URL のファイルセグメントの名前。 指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、 `-`または `_` | 該当なし | 該当なし |
 | `crop` | `crop` | 画像から取り出した切り抜きフレームは、画像のサイズ内にある必要があります | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | 出力画像のサイズ（高さと幅の両方）をピクセル単位で指定します。 | ✘ | 正の整数 | カンマ区切りの正の整数（順） `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
