@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -367,7 +367,7 @@ GraphQL API を使用すると、開発者は、複数行フィールドに挿�
 
 ```graphql
 query ($path: String!) {
-  articleByPath(_path: $path)
+  articleByPath(_path: $path, _assetTransform: { format: JPG, preferWebp: true })
   {
     item {
       _path
@@ -377,17 +377,14 @@ query ($path: String!) {
     }
     _references {
       ...on ImageRef {
-        _path
-        _publishUrl
-        width
+        _dynamicUrl
         __typename
       }
       ...on ArticleModel {
         _path
         author
         __typename
-      }
-      
+      }  
     }
   }
 }
@@ -461,9 +458,7 @@ query ($path: String!) {
       },
       "_references": [
         {
-          "_path": "/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "_publishUrl": "http://publish-p123-e456.adobeaemcloud.com/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "width": 1920,
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--dd42d814-88ec-4c4d-b5ef-e3dc4bc0cb42/sport-climbing.jpg?preferwebp=true",
           "__typename": "ImageRef"
         },
         {
@@ -477,7 +472,7 @@ query ($path: String!) {
 }
 ```
 
-JSON 応答には、参照がリッチテキスト内の `"nodeType": "reference"`. この `_references` オブジェクトには、各参照と、リクエストされた追加のプロパティが含まれます。 例えば、 `ImageRef` は、 `width` 」という名前に変更されます。
+JSON 応答には、参照がリッチテキスト内の `"nodeType": "reference"`. この `_references` オブジェクトには、各参照が含まれます。
 
 ## リッチテキストでのインライン参照のレンダリング
 
@@ -493,12 +488,12 @@ const nodeMap = {
             let reference;
             
             // asset reference
-            if(node.data.path) {
+            if (node.data.path) {
                 // find reference based on path
                 reference = references.find( ref => ref._path === node.data.path);
             }
             // Fragment Reference
-            if(node.data.href) {
+            if (node.data.href) {
                 // find in-line reference within _references array based on href and _path properties
                 reference = references.find( ref => ref._path === node.data.href);
             }
@@ -518,7 +513,7 @@ const renderReference = {
     // node contains merged properties of the in-line reference and _references object
     'ImageRef': (node) => {
         // when __typename === ImageRef
-        return <img src={node._publishUrl} alt={'in-line reference'} /> 
+        return <img src={node._dynamicUrl} alt={'in-line reference'} /> 
     },
     'ArticleModel': (node) => {
         // when __typename === ArticleModel
@@ -538,9 +533,14 @@ const renderReference = {
 
 >[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
+>[!NOTE]
+>
+> 上記のビデオでは、 `_publishUrl` をクリックして、イメージリファレンスをレンダリングします。 代わりに、 `_dynamicUrl` 詳しくは、 [web に最適化された画像のハウツー](./images.md);
+
+
 前述のビデオでは、エンドツーエンドの例を示します。
 
 1. コンテンツフラグメントモデルの複数行テキストフィールドを更新して、フラグメント参照を許可する
-1. コンテンツフラグメントエディターを使用して、複数行テキストフィールドに画像と別のフラグメントへの参照を含めます。
-1. 複数行テキストの応答を JSON として含むGraphQLクエリの作成 `_references` 使用済み
-1. リッチテキスト応答のインライン参照をレンダリングする React SPAを記述する。
+2. コンテンツフラグメントエディターを使用して、複数行テキストフィールドに画像と別のフラグメントへの参照を含めます。
+3. 複数行テキストの応答を JSON として含むGraphQLクエリの作成 `_references` 使用済み
+4. リッチテキスト応答のインライン参照をレンダリングする React SPAを記述する。
