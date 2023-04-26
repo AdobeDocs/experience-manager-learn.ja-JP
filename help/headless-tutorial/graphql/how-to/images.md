@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
+source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -58,10 +58,15 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 GraphQLクエリで、フィールドを `ImageRef` を入力し、リクエストします。 `_dynamicUrl` フィールドに入力します。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
 
 ```graphql {highlight="11"}
-query($path: String!, $assetTransform: AssetTransform!) {
+query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
   adventureByPath(
     _path: $path
-    _assetTransform: $assetTransform
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+    }
   ) {
     item {
       _path
@@ -81,7 +86,8 @@ query($path: String!, $assetTransform: AssetTransform!) {
 ```json
 { 
   "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
-  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+  "imageFormat": "JPG",
+  "imageWidth": 1000,
 }
 ```
 
@@ -89,17 +95,17 @@ query($path: String!, $assetTransform: AssetTransform!) {
 
 この `_assetTransform` は、 `_dynamicUrl` は、提供される画像レンディションを最適化するように構築されます。 Web に最適化された画像の URL は、URL のクエリパラメーターを変更することで、クライアント上で調整することもできます。
 
-| GraphQLパラメーター | URL パラメーター | 説明 | 必須 | GraphQL変数値 | URL パラメーターの値 | GraphQL変数の例 | URL パラメーターの例 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
-| `format` | `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | `{ format: JPG }` | 該当なし |
-| `seoName` | 該当なし | URL のファイルセグメントの名前。 指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、 `-`または `_` | 該当なし | `{ seoName: "bali-surf-camp" }` | 該当なし |
-| `crop` | `crop` | 画像から取り出した切り抜きフレームは、画像のサイズ内にある必要があります | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
-| `size` | `size` | 出力画像のサイズ（高さと幅の両方）をピクセル単位で指定します。 | ✘ | 正の整数 | カンマ区切りの正の整数（順） `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
-| `rotation` | `rotate` | イメージの回転（度単位）。 | ✘ | `R90`、`R180`、`R270` | `90`、`180`、`270` | `{ rotation: R90 }` | `?rotate=90` |
-| `flip` | `flip` | 画像を反転します。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` | `h`、`v`、`hv` | `{ flip: horizontal }` | `?flip=h` |
-| `quality` | `quality` | 画質（元の画質のパーセント）。 | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
-| `width` | `width` | 出力画像の幅（ピクセル単位）。 条件 `size` が指定されている `width` は無視されます。 | ✘ | 正の整数 | 正の整数 | `{ width: 1600 }` | `?width=1600` |
-| `preferWebP` | `preferwebp` | If `true` ブラウザーが WebP をサポートしている場合、AEMは WebP を提供します。 `format`. | ✘ | `true`、`false` | `true`、`false` | `{ preferWebp: true }` | `?preferwebp=true` |
+| GraphQLパラメーター | URL パラメーター | 説明 | 必須 | GraphQL変数値 | URL パラメーターの値 | URL パラメーターの例 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
+| `format` | `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | 該当なし |
+| `seoName` | 該当なし | URL のファイルセグメントの名前。 指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、 `-`または `_` | 該当なし | 該当なし |
+| `crop` | `crop` | 画像から取り出した切り抜きフレームは、画像のサイズ内にある必要があります | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
+| `size` | `size` | 出力画像のサイズ（高さと幅の両方）をピクセル単位で指定します。 | ✘ | 正の整数 | カンマ区切りの正の整数（順） `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
+| `rotation` | `rotate` | イメージの回転（度単位）。 | ✘ | `R90`、`R180`、`R270` | `90`、`180`、`270` | `?rotate=90` |
+| `flip` | `flip` | 画像を反転します。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` | `h`、`v`、`hv` | `?flip=h` |
+| `quality` | `quality` | 画質（元の画質のパーセント）。 | ✘ | 1-100 | 1-100 | `?quality=80` |
+| `width` | `width` | 出力画像の幅（ピクセル単位）。 条件 `size` が指定されている `width` は無視されます。 | ✘ | 正の整数 | 正の整数 | `?width=1600` |
+| `preferWebP` | `preferwebp` | If `true` ブラウザーが WebP をサポートしている場合、AEMは WebP を提供します。 `format`. | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
 
 ## GraphQL応答
 
@@ -113,7 +119,7 @@ query($path: String!, $assetTransform: AssetTransform!) {
         "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
         "title": "Bali Surf Camp",
         "primaryImage": {
-          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&width=1000&quality=80"
         }
       }
     }
@@ -219,7 +225,7 @@ function App() {
   // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
   let { data, error } = useAdventureByPath(
         "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
-        { assetTransform: { format: "JPG", preferWebp: true } }
+        { imageFormat: "JPG" }
       );
 
   // Wait for AEM Headless APIs to provide data
