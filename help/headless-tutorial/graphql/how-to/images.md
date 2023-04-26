@@ -10,7 +10,7 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
+source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 6%
@@ -141,7 +141,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 忘れないで下さい `_dynamicUrl` ではAEMドメインが含まれていないので、解決する画像 URL の目的の接触チャネルを指定する必要があります。
 
-### レスポンシブ URL
+## レスポンシブ URL
 
 上記の例は、単一サイズの画像を使用することを示していますが、Web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。 レスポンシブ画像は、 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 次のコードスニペットに、 `_dynamicUrl` をベースにし、異なる幅のパラメーターを追加して、異なるレスポンシブビューを強化します。 また、 `width` クエリパラメーターを使用できますが、クライアントは他のクエリパラメーターを追加して、必要に応じて画像アセットをさらに最適化できます。
 
@@ -155,7 +155,7 @@ let alt = data.adventureByPath.item.title;
 {/*-- Example img srcset --*/}
 document.body.innerHTML=`<img>
     alt="${alt}"
-    src="${${dynamicUrl}&width=1000}"
+    src="${dynamicUrl}&width=1000}"
     srcset="`
       ${dynamicUrl}&width=1000 1000w,
       ${dynamicUrl}&width=1600 1600w,
@@ -171,26 +171,26 @@ document.body.innerHTML=`<picture>
     </picture>`;
 ```
 
-### React の例
+## React の例
 
 次の手順に従って、Web に最適化された画像を表示するシンプルな React アプリケーションを作成します。 [レスポンシブ画像パターン](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). レスポンシブ画像には、主に次の 2 つのパターンがあります。
 
 + [srcset を含む Img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) パフォーマンスの向上
 + [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計管理のため
 
-#### srcset を含む Img 要素
+### srcset を含む Img 要素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
 [srcset を含む img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) を `sizes` 属性を使用して、画面サイズごとに異なる画像アセットを指定します。 Img srcsets は、画面サイズごとに異なる画像アセットを提供する場合に役立ちます。
 
-#### 画像要素
+### 画像要素
 
 [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 複数の `source` 要素を使用して、画面サイズごとに異なる画像アセットを提供します。 Picture 要素は、画面サイズごとに異なる画像レンディションを提供する場合に役立ちます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-#### サンプルコード
+### サンプルコード
 
 この簡単な React アプリでは、 [AEMヘッドレス SDK](./aem-headless-sdk.md) アドベンチャーコンテンツにAEMヘッドレス API を照会し、 [srcset を含む img 要素](#img-element-with-srcset) および [画像要素](#picture-element). この `srcset` および `sources` カスタムを使用 `setParams` 関数を使用して、web 最適化された配信クエリパラメーターを `_dynamicUrl` 画像のレンディションを変更する必要があるので、web クライアントのニーズに基づいて配信される画像レンディションを変更します。
 
