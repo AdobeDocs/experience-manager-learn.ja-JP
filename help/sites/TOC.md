@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 593ef5767a5f2321c689e391f9c9019de7c94672
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '443'
 ht-degree: 29%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 29%
 + 統合 {#integrations}
    + Experience Platform {#experience-platform}
       + [FPID を生成](integrations/platform/fpid.md)
+      + [Web SDK](integrations/platform/web-sdk.md)
    + Experience Platformデータ収集タグ (Launch) {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
