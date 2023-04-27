@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 593ef5767a5f2321c689e391f9c9019de7c94672
+source-git-commit: 3f129fb4fc53e55d118802d3a0e566a9a9bcb9a2
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 3%
+source-wordcount: '1153'
+ht-degree: 5%
 
 ---
 
@@ -79,6 +79,84 @@ Experience Platformでタグ（旧称 Launch）プロパティを作成し、Web
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
 
+
++++ データ要素とルールイベントコード
+
++ この `Page Name` データ要素コード。
+
+   ```javascript
+   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+       // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
+       return event.component['dc:title'];
+   }
+   ```
+
++ この `Site Section` データ要素コード。
+
+   ```javascript
+   if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+   let pagePath = event.component['repo:path'];
+   
+   let siteSection = '';
+   
+   //Check of html String in URL.
+   if (pagePath.indexOf('.html') > -1) { 
+    siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
+   
+    //replace slash with colon
+    siteSection = siteSection.replaceAll('/', ':');
+   
+    //remove `:content`
+    siteSection = siteSection.replaceAll(':content:','');
+   }
+   
+       return siteSection 
+   }
+   ```
+
++ この `Host Name` データ要素コード。
+
+   ```javascript
+   if(window && window.location && window.location.hostname) {
+       return window.location.hostname;
+   }
+   ```
+
++ この `all pages - on load` Rule-Event コード
+
+   ```javascript
+   var pageShownEventHandler = function(evt) {
+   // defensive coding to avoid a null pointer exception
+   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+       //trigger Launch Rule and pass event
+       console.debug("cmp:show event: " + evt.eventInfo.path);
+       var event = {
+           //include the path of the component that triggered the event
+           path: evt.eventInfo.path,
+           //get the state of the component that triggered the event
+           component: window.adobeDataLayer.getState(evt.eventInfo.path)
+       };
+   
+       //Trigger the Launch Rule, passing in the new 'event' object
+       // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+       // i.e 'event.component['someKey']'
+       trigger(event);
+       }
+   }
+   
+   //set the namespace to avoid a potential race condition
+   window.adobeDataLayer = window.adobeDataLayer || [];
+   
+   //push the event listener for cmp:show into the data layer
+   window.adobeDataLayer.push(function (dl) {
+       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
+       dl.addEventListener("cmp:show", pageShownEventHandler);
+   });
+   ```
+
++++
+
+
 この [タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) では、データ要素、ルール、拡張機能などの重要な概念に関する詳細な知識を提供します。
 
 AEMコアコンポーネントとAdobeクライアントデータレイヤーの統合について詳しくは、 [AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja).
@@ -121,3 +199,12 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 お疲れ様でした。Web サイトからデータを収集および取り込むための、Adobe Experience Platform(Experience Platform)Web SDK を使用したAEMの設定が完了している。 この基盤を使用すると、Analytics、Target、Customer Journey Analytics(CJA) などの製品を強化および統合して、顧客に合わせてパーソナライズされた豊富なエクスペリエンスを作成できるようになります。 学び続け、Adobe Experience Cloudの可能性を最大限に引き出すために探索し続けます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+## その他のリソース
+
++ [コアコンポーネントでの Adobe Client Data Layer の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
++ [Experience Platformデータ収集タグとAEMの統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [データ収集チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
+
