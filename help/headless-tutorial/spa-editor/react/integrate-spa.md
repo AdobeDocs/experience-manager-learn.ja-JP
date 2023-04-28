@@ -1,6 +1,6 @@
 ---
-title: SPAの統合 | AEM SPA Editor と React の使用の手引き
-description: React で記述されたシングルページアプリケーション (SPA) のソースコードをAdobe Experience Manager(AEM) プロジェクトと統合する方法を説明します。 webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対するSPAを迅速に開発する方法を説明します。
+title: SPA の統合 | AEM SPA エディターと React の使用の手引き
+description: React で記述された単一ページアプリケーション（SPA）のソースコードを Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 feature: SPA Editor
 version: Cloud Service
 kt: 4853
@@ -10,62 +10,62 @@ role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
 source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1835'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# SPAの統合 {#developer-workflow}
+# SPA を統合 {#developer-workflow}
 
-React で記述されたシングルページアプリケーション (SPA) のソースコードをAdobe Experience Manager(AEM) プロジェクトと統合する方法を説明します。 webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対するSPAを迅速に開発する方法を説明します。
+React で記述された単一ページアプリケーション（SPA）のソースコードを Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 
 ## 目的
 
-1. SPAプロジェクトがAEMとクライアント側ライブラリを統合する方法を説明します。
+1. SPA プロジェクトが AEM とクライアントサイドライブラリを統合する仕組みを説明します。
 2. 専用のフロントエンド開発に Webpack 開発サーバーを使用する方法を説明します。
-3. の使用に関する詳細 **プロキシ** および静的 **mock** AEM JSON モデル API に対する開発用のファイル。
+3. AEM JSON モデル API に対して開発するための&#x200B;**プロキシ**&#x200B;および静的&#x200B;**モック**&#x200B;ファイルの使用を調べます。
 
 ## 作成する内容
 
-この章では、SPAとの統合方法を理解するために、AEMにいくつかの小さな変更を加えます。
-この章では、 `Header` コンポーネントをSPAに追加します。 これを構築中 **静的** `Header` コンポーネントは、AEM SPA開発に対するいくつかのアプローチを使用します。
+この章では、SPA が AEM とどのように統合されているかを理解するために、SPA にいくつかの小さな変更を加えます。
+この章では、簡単な `Header` コンポーネントを SPA に追加します。この **静的** `Header` コンポーネントを構築するプロセスでは、AEM SPA 開発に対していくつかのアプローチを使用します。
 
-![AEMの新しいヘッダー](./assets/integrate-spa/final-header-component.png)
+![AEM の新しいヘッダー](./assets/integrate-spa/final-header-component.png)
 
-*SPAを拡張して静的を追加します。 `Header` コンポーネント*
+*静的 `Header`コンポーネントを追加するよう SPA が拡張されています* 
 
 ## 前提条件
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment). この章は、 [プロジェクトを作成](create-project.md) ただし、必要な操作は、SPA対応AEMプロジェクトのみです。
+[ローカル開発環境](overview.md#local-dev-environment)を設定するために必要なツールや説明を確認してください。この章は[プロジェクトを作成](create-project.md)の章の続きですが、SPA 対応の、動作している AEM プロジェクトさえあれば内容についていくことができます。
 
-## 統合アプローチ {#integration-approach}
+## アプローチの統合 {#integration-approach}
 
-AEMプロジェクトの一部として、次の 2 つのモジュールが作成されました。 `ui.apps` および `ui.frontend`.
+AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` と `ui.frontend`）が作成されました。
 
-この `ui.frontend` モジュールは [webpack](https://webpack.js.org/) すべてのSPAソースコードを含むプロジェクト。 SPAの開発とテストの大部分は、webpack プロジェクトでおこなわれます。 実稼動ビルドがトリガーされると、SPAは webpack を使用して構築およびコンパイルされます。 コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールをAEMランタイムにデプロイします。
+`ui.frontend` モジュールは、すべての SPA ソース コードを含む [webpack](https://webpack.js.org/) プロジェクトです。SPA の開発とテストの大部分は、webpack プロジェクトで行われます。 実稼動ビルドがトリガーされると、SPA は webpack を使用して構築およびコンパイルされます。コンパイル済みのアーティファクト（CSS および Javascript）は `ui.apps` モジュールにコピーされ、その後 AEM ランタイムにデプロイされます。
 
-![ui.frontend の高レベルアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
+![ui.frontend の全体的なアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
 
-*SPA統合の概要です。*
+*SPA 統合の全体的な概要です。*
 
-フロントエンドビルドに関する追加情報は、次のとおりです。 [ここにある](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+フロントエンドビルドに関する追加情報は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=ja)を参照してください。
 
-## Inspect SPA統合 {#inspect-spa-integration}
+## SPA 統合を検査する {#inspect-spa-integration}
 
-次に、 `ui.frontend` モジュールを使用して、 [AEMプロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+次に、`ui.frontend` モジュールを調べて、[AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=ja)によって自動生成された SPA を理解します。
 
-1. 任意の IDE で、AEMプロジェクトを開きます。 このチュートリアルでは、 [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code).
+1. 任意の IDE で、AEM プロジェクトを開きます。このチュートリアルでは、 [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) を使用します。
 
-   ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VSCode - AEM WKND SPA プロジェクト](./assets/integrate-spa/vscode-ide-openproject.png)
 
-1. を展開して検査します。 `ui.frontend` フォルダー。 ファイルを開きます。 `ui.frontend/package.json`
+1. `ui.frontend` フォルダーを展開して検査します。`ui.frontend/package.json` をファイルを開きます。
 
-1. 以下 `dependencies` 関連する `react` 含む `react-scripts`
+1. `dependencies` の下に、`react-scripts` を含む `react` に関連するいくつかの項目が表示されます。
 
-   この `ui.frontend` は、 [React アプリを作成](https://create-react-app.dev/) または CRA（短く）。 この `react-scripts` version は、使用される CRA のバージョンを示します。
+   `ui.frontend` は [Create React App](https://create-react-app.dev/)（略して CRA）に基づく React アプリケーションです。`react-scripts` バージョンは、使用される CRA のバージョンを示します。
 
-1. また、次のプレフィックスが付いた複数の依存関係もあります。 `@adobe`:
+1. また、`@adobe` プレフィックスが付いた複数の依存関係もあります。
 
    ```json
    "@adobe/aem-react-editable-components": "~1.1.2",
@@ -75,11 +75,11 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   上記のモジュールは、 [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) とは、SPAコンポーネントをAEMコンポーネントにマッピングできる機能を提供します。
+   上記のモジュールは、[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-blueprint.html?lang=ja) を構成し、SPA コンポーネントを AEM コンポーネントにマッピングできる機能を提供します。
 
-   また、次のものも含まれます。 [AEM WCM コンポーネント — React Core 実装](https://github.com/adobe/aem-react-core-wcm-components-base) および [AEM WCM コンポーネント — Spa エディター — React Core 実装](https://github.com/adobe/aem-react-core-wcm-components-spa). これらは、すぐに使用できるAEMコンポーネントのセットにマッピングされる、再利用可能な UI コンポーネントです。 これらは、そのまま使用するように設計され、プロジェクトのニーズに合わせてスタイルが設定されます。
+   また、[AEM WCM コンポーネント - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-base)および [AEM WCM コンポーネント - Spa エディター - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-spa)も含まれます。これらは、すぐに使用できる AEM コンポーネントのセットにマッピングされる、再利用可能な UI コンポーネントです。 これらは、そのまま使用するように設計され、プロジェクトのニーズに合わせてスタイルが設定されます。
 
-1. 内 `package.json` ファイルには複数の `scripts` 定義済み：
+1. `package.json` ファイルには複数の `scripts` が定義されています。
 
    ```json
    "scripts": {
@@ -90,17 +90,17 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    }
    ```
 
-   これらは、作成される標準のビルドスクリプトです [利用可能](https://create-react-app.dev/docs/available-scripts) React アプリの作成を参照してください。
+   これらは、Create React アプリによって[利用可能](https://create-react-app.dev/docs/available-scripts)になった標準ビルドスクリプトです。
 
-   唯一の違いは `&& clientlib` から `build` スクリプト この追加の命令は、コンパイル済みのSPAを `ui.apps` ビルド時にクライアントサイドライブラリとしてモジュールを作成する。
+   唯一の違いは `build` スクリプトに `&& clientlib` が追加されたことです。この追加の命令は、ビルド時にコンパイル済みの SPA をクライアントサイドライブラリとして `ui.apps` モジュールを作成する役割を担います。
 
    npm モジュール [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) を使用すると、この処理が容易になります。
 
-1. `ui.frontend/clientlib.config.js` ファイルを検査します。この設定ファイルは、 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) を参照して、クライアントライブラリの生成方法を確認してください。
+1. `ui.frontend/clientlib.config.js` ファイルを調べます。この設定ファイルは、クライアントライブラリの生成方法を確認するために [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) に使用されます。
 
-1. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、 `ui.frontend` フォルダーを [Maven モジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html). この `pom.xml` ファイルを更新して [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) から **テスト** および **ビルド** Maven のビルド時にSPAが生成されます。
+1. `ui.frontend/pom.xml` ファイルを調べます。このファイルは、`ui.frontend` フォルダーを [Maven モジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。`pom.xml` ファイルは、Maven のビルド時に SPA を&#x200B;**テスト**&#x200B;および&#x200B;**ビルド**&#x200B;するために [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) を使用するように更新されています。
 
-1. Inspectファイル `index.js` 時刻 `ui.frontend/src/index.js`:
+1. `ui.frontend/src/index.js` でファイル `index.js` を開きます。
 
    ```js
    //ui.frontend/src/index.js
@@ -125,16 +125,16 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    });
    ```
 
-   `index.js` は、SPAのエントリポイントです。 `ModelManager` は、AEM SPA Editor JS SDK で提供されます。 これは、 `pageModel` （JSON コンテンツ）をアプリケーションにコピーします。
+   `index.js` は SPA のエントリポイントです。`ModelManager` は、AEM SPA Editor JS SDK で提供されます。 これは、`pageModel`（JSON コンテンツ）を呼び出してアプリケーションにコピーする役割を担います。
 
-1. Inspectファイル `import-components.js` 時刻 `ui.frontend/src/components/import-components.js`. このファイルは、標準のをインポートします **React コアコンポーネント** を使用して、プロジェクトで使用できるようにします。 次の章では、AEMコンテンツとSPAコンポーネントのマッピングを調べます。
+1. `ui.frontend/src/components/import-components.js` でファイル `import-components.js` を検査します。このファイルは、標準の **React コアコンポーネント**&#x200B;を読み込んで、プロジェクトで使用できるようにします。次の章では、AEM コンテンツと SPA コンポーネントのマッピングを調べます。
 
-## 静的なSPAコンポーネントの追加 {#static-spa-component}
+## 静的な SPA コンポーネントの追加 {#static-spa-component}
 
-次に、SPAに新しいコンポーネントを追加し、変更をローカルのAEMインスタンスにデプロイします。 これは、SPAの更新方法を示すための簡単な変更です。
+次に、SPA に新しいコンポーネントを追加し、変更をローカルの AEM インスタンスにデプロイします。 これは、SPA の更新方法を示すための簡単な変更です。
 
-1. 内 `ui.frontend` モジュール、下 `ui.frontend/src/components` 次の名前の新しいフォルダーを作成します。 `Header`.
-1. という名前のファイルを作成します。 `Header.js` の下 `Header` フォルダー。
+1. `ui.frontend` モジュールで、`ui.frontend/src/components` の下で `Header` という名前の新しいフォルダーを作成します。
+1. `Header` フォルダーの下に、`Header.js` という名前のファイルを追加します。
 
    ![ヘッダーフォルダーとファイル](assets/create-project/header-folder-js.png)
 
@@ -161,7 +161,7 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    上記は、静的テキスト文字列を出力する標準の React コンポーネントです。
 
 1. `ui.frontend/src/App.js` ファイルを開きます。これは、アプリケーションのエントリポイントです。
-1. 次の更新を行う： `App.js` 静的を含めるには `Header`:
+1. 静的な `Header` を含めるには、`App.js` で次の更新を行います。
 
    ```diff
      import { Page, withModel } from '@adobe/aem-react-editable-components';
@@ -179,7 +179,7 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
         </div>
    ```
 
-1. 新しいターミナルを開き、 `ui.frontend` フォルダーを作成し、 `npm run build` コマンド：
+1. 新しいターミナルを開いて `ui.frontend` フォルダーに移動し、`npm run build` コマンドを実行します。
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -196,11 +196,11 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. `ui.apps` フォルダーに移動し、の下 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` コンパイル済みのSPAファイルが`ui.frontend/build` フォルダー。
+1. `ui.apps` フォルダーに移動し、`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` の下で、コンパイル済みの SPA ファイルが `ui.frontend/build` フォルダーからコピーされていることが分かります。
 
    ![ui.apps で生成されたクライアントライブラリ](./assets/integrate-spa/compiled-spa-uiapps.png)
 
-1. ターミナルに戻り、 `ui.apps` フォルダー。 次の Maven コマンドを実行します。
+1. ターミナルに戻り、`ui.apps` フォルダーに移動します。次の Maven コマンドを実行します。
 
    ```shell
    $ cd ../ui.apps
@@ -214,21 +214,21 @@ AEMプロジェクトの一部として、次の 2 つのモジュールが作�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   これにより、 `ui.apps` AEMのローカル実行インスタンスにパッケージ化します。
+   これにより、AEM のローカル実行インスタンスに `ui.apps` パッケージがデプロイされます。
 
-1. ブラウザータブを開き、に移動します。 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). これで、 `Header` コンポーネントがSPAに表示されている状態。
+1. ブラウザータブを開き、[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) に移動します。`Header` コンポーネントのコンテンツが SPA に表示されているのがわかるはずです。
 
    ![初期ヘッダー実装](./assets/integrate-spa/initial-header-implementation.png)
 
-   上記の手順は、プロジェクトのルートから Maven ビルドをトリガーするとき ( つまり、 `mvn clean install -PautoInstallSinglePackage`) をクリックします。 これで、SPAとAEMのクライアント側ライブラリ間の統合の基本を理解する必要があります。 編集や追加は可能です。 `Text` 静的の下のAEM内のコンポーネント `Header` コンポーネント。
+   上記の手順は、プロジェクトのルート（つまり `mvn clean install -PautoInstallSinglePackage`）から Maven ビルドをトリガーするときに実行されます。これで、SPA と AEM クライアントサイドライブラリ間の統合の基本を理解しました。`Text` コンポーネントを AEM 内で静的 `Header` コンポーネントの下に追加できます。
 
-## Webpack Dev Server - JSON API のプロキシ {#proxy-json}
+## webpack 開発サーバー - JSON API のプロキシ化 {#proxy-json}
 
-前の演習で見たように、クライアントライブラリをビルドして、AEMのローカルインスタンスに同期するには、数分かかります。 これは最終テストで使用できますが、SPAの開発の大部分には理想的ではありません。
+前の演習でお分かりのように、ビルドを実行してクライアントライブラリを AEM のローカルインスタンスに同期するには、数分かかります。これは、最終テストでは許容できますが、SPA 開発の大部分には理想的ではありません。
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使用して、SPAを迅速に開発できます。 SPAは、AEMで生成された JSON モデルによって駆動されます。 この演習では、AEMの実行中のインスタンスの JSON コンテンツを次のようにします。 **プロキシ化** を開発サーバーに送信します。
+[webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使用して、SPA を迅速に開発できます。 SPA は、AEM で生成された JSON モデルによって駆動されます。この演習では、AEM の実行中のインスタンスの JSON コンテンツが開発サーバーに&#x200B;**プロキシ化**&#x200B;されます。
 
-1. IDE に戻り、ファイルを開きます。 `ui.frontend/package.json`.
+1. IDE に戻り、ファイル `ui.frontend/package.json` を開きます。
 
    次のような行を探します。
 
@@ -236,9 +236,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
    "proxy": "http://localhost:4502",
    ```
 
-   この [React アプリを作成](https://create-react-app.dev/docs/proxying-api-requests-in-development) は、API リクエストをプロキシするための簡単なメカニズムを提供します。 すべての不明なリクエストは、を通じてプロキシされます `localhost:4502`ローカルのAEM Quickstart
+   この [React アプリを作成](https://create-react-app.dev/docs/proxying-api-requests-in-development)は、API リクエストをプロキシするための容易なメカニズムを提供します。すべての未知のリクエストは、ローカルの AEM クイックスタートの `localhost:4502` を通じてプロキシされます。
 
-1. ターミナルウィンドウを開き、 `ui.frontend` フォルダー。 `npm start` コマンドを実行します。
+1. 新しいターミナルウィンドウを開き、`ui.frontend` フォルダーに移動します。`npm start` コマンドを実行します。
 
    ```shell
    $ cd ui.frontend
@@ -255,18 +255,18 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
    To create a production build, use npm run build.
    ```
 
-1. 新しいブラウザータブを開き（まだ開いていない場合）、に移動します。 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html).
+1. 新しいブラウザーのタブを開き（まだ開いていない場合）、[http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) に移動します。
 
-   ![Webpack 開発サーバー — プロキシ json](./assets/integrate-spa/webpack-dev-server-1.png)
+   ![Webpack 開発サーバー - プロキシ json](./assets/integrate-spa/webpack-dev-server-1.png)
 
-   AEMと同じコンテンツが表示されますが、オーサリング機能は有効になっていません。
+   AEM と同じコンテンツが表示されますが、オーサリング機能は有効になっていません。
 
    >[!NOTE]
    >
-   > AEMのセキュリティ要件により、同じブラウザーで、別のタブでローカルのAEMインスタンス (http://localhost:4502) にログインする必要があります。
+   > AEM のセキュリティ要件により、同じブラウザーで、別のタブでローカルの AEM インスタンス（http://localhost:4502）にログインする必要があります。
 
-1. IDE に戻り、という名前のファイルを作成します。 `Header.css` 内 `src/components/Header` フォルダー。
-1. 次の項目に `Header.css` を次のように設定します。
+1. IDE に戻り、`src/components/Header` フォルダーに `Header.css` という名前のファイルを作成します。
+1. `Header.css` に次のように入力します。
 
    ```css
    .Header {
@@ -294,7 +294,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
 
    ![VSCode IDE](assets/integrate-spa/header-css-update.png)
 
-1. 再度開く `Header.js` 次の行を参照に追加します。 `Header.css`:
+1. `Header.js` を再度開き、`Header.css` を参照するために次の行を追加します。
 
    ```diff
      //Header.js
@@ -304,9 +304,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
 
    変更を保存します。
 
-1. に移動します。 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) スタイルの変更が自動的に反映されていることを確認するには、次の手順を実行します。
+1. [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) に移動し、スタイルの変更が自動的に反映されていることを確認します。
 
-1. `Page.css`（`ui.frontend/src/components/Page`）ファイルを開きます。パディングを修正するには、次の変更を行います。
+1. `ui.frontend/src/components/Page` の `Page.css` ファイルを開きます。次の変更を行い、パディングを修正します。
 
    ```css
    .page {
@@ -317,56 +317,56 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
    }
    ```
 
-1. ブラウザーに戻る ( ) [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html). アプリケーションの変更が直ちに反映されていることを確認します。
+1. [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) のブラウザーに戻ります。アプリケーションに対する変更がすぐに反映されていることを確認します。
 
-   ![ヘッダーにスタイルが追加されました](assets/integrate-spa/added-logo-localhost.png)
+   ![ヘッダーに追加されたスタイル](assets/integrate-spa/added-logo-localhost.png)
 
-   AEMで引き続きコンテンツを更新し、それらを **webpack-dev-server**、コンテンツをプロキシしているので。
+   コンテンツをプロキシしているため、AEM でコンテンツを更新して、**webpack-dev-server** に反映されるのを確認できます。
 
-1. 次を使用して webpack 開発サーバーを停止します。 `ctrl+c` を設定します。
+1. ターミナルで `ctrl+c` と入力して、webpack 開発サーバーを停止します。
 
-## AEMへのSPAアップデートのデプロイ
+## AEM への SPA アップデートのデプロイ
 
-に加えられた変更 `Header` は現在、 **webpack-dev-server**. 更新したSPAをAEMにデプロイして、変更を確認します。
+`Header` に加えられた変更は、現在 **webpack-dev-server** でのみ表示できます。更新された SPA を AEM にデプロイして、変更を確認します。
 
-1. プロジェクトのルート (`aem-guides-wknd-spa`) をクリックし、Maven を使用してAEMにプロジェクトをデプロイします。
+1. プロジェクトのルート（`aem-guides-wknd-spa`）をクリックし、Maven を使用して AEM にプロジェクトをデプロイします。
 
    ```shell
    $ cd ..
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. に移動します。 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). 更新された `Header` スタイルを適用しました。
+2. [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) に移動します。更新された `Header` とスタイルが適用されているのが確認できます。
 
-   ![AEMの更新済みヘッダー](assets/integrate-spa/final-header-component.png)
+   ![AEM の更新済みヘッダー](assets/integrate-spa/final-header-component.png)
 
-   更新されたSPAがAEMになったので、オーサリングを続行できます。
+   更新された SPA が AEM にあるので、オーサリングを続行できます。
 
-## おめでとうございます。 {#congratulations}
+## これで完了です。 {#congratulations}
 
-これで、SPAを更新し、AEMとの統合を確認しました。 これで、を使用してAEM JSON モデル API に対してSPAを開発する方法を理解できました。 **webpack-dev-server**.
+これで完了です。SPA を更新し、AEM との統合を確認しました。これで、**webpack-dev-server** を使用して AEM JSON モデル API に対して SPA を開発する方法を理解できました。
 
-### 次のステップ {#next-steps}
+### 次の手順 {#next-steps}
 
-[SPAコンポーネントのAEMコンポーネントへのマッピング](map-components.md) - AEM SPA Editor JS SDK を使用して、React コンポーネントをAdobe Experience Manager(AEM) コンポーネントにマッピングする方法を説明します。 コンポーネントマッピングを使用すると、AEM SPAエディター内で、従来のAEMオーサリングと同様に、SPAコンポーネントを動的に更新できます。
+[SPA コンポーネントの AEM コンポーネントへのマッピング](map-components.md) - AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。
 
-## （ボーナス）Webpack Dev Server — モック JSON API {#mock-json}
+## （ボーナス）Webpack 開発サーバー - JSON API のモック {#mock-json}
 
-迅速な開発のもう 1 つの方法は、静的 JSON ファイルを使用して JSON モデルとして機能させることです。 JSON を「モック」することで、ローカルのAEMインスタンスへの依存を削除します。 また、フロントエンド開発者は、機能をテストし、JSON API の変更を促すために JSON モデルを更新できます。この変更は、後でバックエンド開発者によって実装されます。
+迅速な開発へのもう 1 つのアプローチは、JSON モデルとして機能する静的 JSON ファイルを使用することです。JSON を「モック」することで、ローカルの AEM インスタンスへの依存関係を解消できます。また、フロントエンド開発者は JSON モデルを更新して、機能をテストしたり、後でバックエンド開発者が実装する JSON API に変更を加えたりすることができます。
 
-モック JSON の初期設定は次のようにおこないます。 **ローカルのAEMインスタンスが必要**.
+モック用 JSON の初期設定には、**ローカルの AEM インスタンス**&#x200B;が必要です。
 
-1. IDE に戻り、に移動します。 `ui.frontend/public` をクリックし、 `mock-content`.
-1. という名前の新しいファイルを作成します。 `mock.model.json` 下 `ui.frontend/public/mock-content`.
-1. ブラウザーで、に移動します。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
+1. IDE に戻り、`ui.frontend/public` に移動して `mock-content` という名前の新しいフォルダーを追加します。
+1. `ui.frontend/public/mock-content` の下に `mock.model.json` という名前のファイルを新規作成します。
+1. ブラウザーで、[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に移動します。
 
    これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
 
-1. 前の手順の JSON 出力をファイルに貼り付けます。 `mock.model.json`.
+1. 前の手順で出力された JSON をファイル `mock.model.json` に貼り付けます。
 
-   ![モックモデル Json ファイル](./assets/integrate-spa/mock-model-json-created.png)
+   ![モックモデル JSON ファイル](./assets/integrate-spa/mock-model-json-created.png)
 
-1. `index.html`（`ui.frontend/public/index.html`）ファイルを開きます。変数を指すようにAEMページモデルのメタデータプロパティを更新します。 `%REACT_APP_PAGE_MODEL_PATH%`:
+1. `ui.frontend/public/index.html` の `index.html` ファイルを開きます。AEM ページモデルのメタデータプロパティを更新して、変数 `%REACT_APP_PAGE_MODEL_PATH%` を指すようにします。
 
    ```html
        <!-- AEM page model -->
@@ -376,9 +376,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
        />
    ```
 
-   変数を `cq:pagemodel_root_url` を使用すると、プロキシとモック json モデルを簡単に切り替えることができます。
+   `cq:pagemodel_root_url` の値に変数を使うことで、プロキシとモック json モデルを容易に切り替えることができます。
 
-1. ファイルを開きます。 `ui.frontend/.env.development` 次の更新を行い、次の値をコメントアウトします。 `REACT_APP_PAGE_MODEL_PATH` および `REACT_APP_API_HOST`:
+1. ファイル `ui.frontend/.env.development` を開き、次のように更新して `REACT_APP_PAGE_MODEL_PATH` および `REACT_APP_API_HOST` の以前の値をコメントアウトします。
 
    ```diff
    + PUBLIC_URL=/
@@ -393,22 +393,22 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) を使�
    REACT_APP_ROOT=/content/wknd-spa-react/us/en/home.html
    ```
 
-1. 現在実行中の場合は、 **webpack-dev-server**. を開始します。 **webpack-dev-server** ターミナルから：
+1. 現在実行中の場合は、**webpack-dev-server** を停止します。ターミナルから **webpack-dev-server** を起動します。
 
    ```shell
    $ cd ui.frontend
    $ npm start
    ```
 
-   に移動します。 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) SPAと同じコンテンツが **プロキシ** json.
+   [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) に移動すると、**プロキシ** json で使用されているのと同じコンテンツの SPA が表示されます。
 
-1. を少し変更します。 `mock.model.json` ファイルが作成されました。 更新されたコンテンツがすぐに **webpack-dev-server**.
+1. 先ほど作成した `mock.model.json` ファイルを少し変更します。更新された内容は、すぐに **webpack-dev-server** に反映されます。
 
-   ![モモデル json の更新をモックする](./assets/integrate-spa/webpack-mock-model.gif)
+   ![モックモデル json の更新](./assets/integrate-spa/webpack-mock-model.gif)
 
-JSON モデルを操作し、実稼働中のSPAに対する影響を確認できることは、開発者が JSON モデル API を理解するのに役立ちます。 また、フロントエンドとバックエンドの両方の開発を並行しておこなうことができます。
+JSON モデルを操作し、実稼働中の SPA に対する影響を確認できることで、開発者が JSON モデル API を理解しやすくなります。また、フロントエンドとバックエンドの両方の開発を並行して行うことができます。
 
-JSON コンテンツを使用する場所を切り替えることができるようになりました。 `env.development` ファイル：
+`env.development` ファイルのエントリを切り替えることで、JSON コンテンツを使用する場所を切り替えることができるようになりました。
 
 ```plain
 # JSON API via proxy to AEM
