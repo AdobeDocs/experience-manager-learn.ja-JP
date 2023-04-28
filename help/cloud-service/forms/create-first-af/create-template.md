@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームテンプレートの作成
-description: アダプティブフォームテンプレートは、アダプティブフォームの構造と初期コンテンツを定義します。
+description: アダプティブフォームのテンプレートによって、アダプティブフォームの構造と初期コンテンツが定義されます。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,9 +12,9 @@ kt: 7382
 thumbnail: 332223.jpg
 exl-id: 3e6dc8c4-d080-4a95-9fb2-52747fda69d7
 source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
