@@ -1,6 +1,6 @@
 ---
 title: AEM FormsおよびAcrobat Signを使用した React アプリ
-description: Acrobat SignとAEM Formsでは、複雑なトランザクションを自動化し、シームレスなデジタルエクスペリエンスの一環として法的な電子サインを含めることができます。
+description: Acrobat Signと AEM Forms では、複雑なトランザクションを自動化し、シームレスなデジタルエクスペリエンスの一環として法的な電子サインを含めることができます。
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: 2ff7be5b-884c-420d-9a06-f0e2a99d3ef3
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '174'
+ht-degree: 13%
 
 ---
 
@@ -34,3 +35,6 @@ ht-degree: 0%
 * Formsアドオンパッケージを含むAEMサーバー
 * An [Acrobat Signアプリケーションの統合キー](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
 
+## 次の手順
+
+を書く [インタラクティブ通信ドキュメントを生成するためのカスタム OSGi サービス](./create-ic-document.md) ドキュメント化された API の使用

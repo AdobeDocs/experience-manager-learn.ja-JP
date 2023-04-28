@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 99%
+source-wordcount: '1808'
+ht-degree: 98%
 
 ---
 
@@ -231,11 +231,11 @@ ht-degree: 99%
    + [ソリューションのテスト](welcome-kit/testing-the-solution.md)
 
 + FormsおよびAcrobat Signを使用した React アプリ {#react-ic-sign}
-   + [はじめに](react-ic-sign/introduction.md)
-   + [IC ドキュメントを生成](react-ic-sign/create-ic-document.md)
-   + [Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
-   + [署名ウィジェットを生成](react-ic-sign/create-servlet-to-expose-endpoint.md)
-   + [サンプルアセットのデプロイ](react-ic-sign/deploy-assets-on-your-server.md)
+   + [1 — はじめに](react-ic-sign/introduction.md)
+   + [2 — ドキュメントを生成](react-ic-sign/create-ic-document.md)
+   + [3-Acrobat Sign API ラッパー](react-ic-sign/wrapper-sign-api.md)
+   + [4 — 署名ウィジェットを生成](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [5 — サンプルアセットのデプロイ](react-ic-sign/deploy-assets-on-your-server.md)
 + ドキュメントサービス {#document-services}
    + [PDF forms のタイプ](document-services/pdf-forms-and-documents.md)
    + [アダプティブフォームに PDF を埋め込む](document-services/embed-pdf-inline.md)

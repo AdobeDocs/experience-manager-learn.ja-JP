@@ -8,14 +8,15 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 0%
+source-wordcount: '70'
+ht-degree: 2%
 
 ---
 
-# サーブレットを作成
+# Acrobat Sign Web フォーム URL を作成
 
 次のコードは、POSTエンドポイントを公開するために記述されました。 このエンドポイントは、送信されたデータから icTemplateName を抽出し、エンドユーザーが署名するためのAcrobat Sign Web フォーム URL を返します。
 
@@ -85,3 +86,8 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 
 }
 ```
+
+## 次の手順
+
+[ローカルシステムにチュートリアルアセットをデプロイする](./deploy-assets-on-your-server.md)
+
