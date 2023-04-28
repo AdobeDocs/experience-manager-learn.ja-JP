@@ -1,6 +1,6 @@
 ---
 title: JDBC DataSourcePool を使用した SQL 接続
-description: AEM JDBC DataSourcePool と出力ポートを使用して、AEM as a Cloud Serviceから SQL データベースに接続する方法を説明します。
+description: AEM JDBC DataSourcePool とエグレスポートを使用して AEM as a Cloud Serviceから SQL データベースに接続する方法を説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,23 +10,23 @@ kt: 9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # JDBC DataSourcePool を使用した SQL 接続
 
-SQL データベース（およびその他の非 HTTP/HTTPS サービス）への接続は、AEMからプロキシ化する必要があります。これには、AEM DataSourcePool OSGi サービスを使用して接続を管理する接続も含まれます。
+SQL データベース（およびその他の非 HTTP／HTTPS サービス）への接続は、AEM からプロキシ化する必要があります。これには、AEM DataSourcePool OSGi サービスを使用して接続を管理する接続も含まれます。
 
-## 高度なネットワークサポート
+## 高度なネットワーク機能のサポート
 
-次のコード例は、次のアドバンスドネットワークオプションでサポートされています。
+次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-次を確認します。 [適切](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
+このチュートリアルに従う前に、[適切](../advanced-networking.md#advanced-networking)なネットワークの詳細設定が設定されていることを確認してください。
 
-| 高度なネットワークがありません | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
+| 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
@@ -34,8 +34,8 @@ SQL データベース（およびその他の非 HTTP/HTTPS サービス）へ�
 
 OSGi 設定の接続文字列には、次の値が使用されます。
 
-+ `AEM_PROXY_HOST` 値を [OSGi 設定環境変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 接続のホストとして
-+ `30001` これは `portOrig` Cloud Manager のポートフォワードマッピングの値 `30001` → `mysql.example.com:3306`
++ [OSGi 設定環境変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#environment-specific-configuration-values) を介した `AEM_PROXY_HOST` 値（`$[env:AEM_PROXY_HOST;default=proxy.tunnel]` を接続のホストとして使用）
++ `30001`（Cloud Manager のポートフォワードマッピング `30001` → `mysql.example.com:3306` の `portOrig` 値）
 
 シークレットはコードに保存できないので、SQL 接続のユーザー名とパスワードは、OSGi 設定変数、AIO CLI または Cloud Manager API を使用して設定することで最適に提供されます。
 
@@ -51,16 +51,16 @@ OSGi 設定の接続文字列には、次の値が使用されます。
 }
 ```
 
-以下 `aio CLI` コマンドを使用して、環境ごとに OSGi シークレットを設定できます。
+以下の `aio CLI` コマンドを使用して、環境ごとに OSGi シークレットを設定できます。
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
 ```
 
-## コード例
+## コードサンプル
 
 この Java™コードの例は、AEM DataSourcePool OSGi サービスを介して外部の MySQL データベースに接続する OSGi サービスです。
-次に、DataSourcePool OSGi ファクトリ設定でポート (`30001`) を使用して `portForwards` ルール [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 外部のホストとポートに対する操作 `mysql.example.com:3306`.
+次に、DataSourcePool OSGi ファクトリ構成は、[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration?lang=ja) 操作の `portForwards` ルールによって外部ホストとポート `mysql.example.com:3306` にマッピングされるポート（`30001`）を指定します。
 
 ```json
 ...
@@ -131,13 +131,13 @@ public class JdbcExternalServiceImpl implements ExternalService {
 }
 ```
 
-## MySQL ドライバの依存関係
+## MySQL ドライバーの依存関係
 
-AEM as a Cloud Serviceでは、多くの場合、接続をサポートするために Java™データベースドライバを提供する必要があります。 ドライバーの提供は、通常、これらのドライバーを含む OSGi バンドルアーティファクトをAEMプロジェクトに埋め込むことで、最善の方法です。その場合は、 `all` パッケージ。
+AEM as a Cloud Service では、多くの場合、接続をサポートするために Java™ データベースドライバーを提供する必要があります。 ドライバーの提供は、通常、これらのドライバーを含む OSGi バンドルアーティファクトを `all` パッケージを介して AEM プロジェクトに埋め込むことによって最適に実現されます。
 
-### Reactor pom.xml
+### pom.xml のリファクタリング
 
-データベースドライバの依存関係をリアクタに含める `pom.xml` その後、 `all` サブプロジェクト。
+データベースドライバーの依存関係をリアクター `pom.xml` に含めた後、`all` サブプロジェクトで参照します。
 
 + `pom.xml`
 
@@ -159,7 +159,7 @@ AEM as a Cloud Serviceでは、多くの場合、接続をサポートするた�
 
 ## すべての pom.xml
 
-データベースドライバーの依存関係アーティファクトを `all` パッケージをAEM as a Cloud Service上にデプロイして使用できるようにします。 これらのアーティファクト __必須__ データベースドライバー Java™クラスを書き出す OSGi バンドルにする。
+データベースドライバーの依存アーティファクトを `all` パッケージに埋め込み、AEM as a Cloud Service にデプロイして利用できるようにします。これらのアーティファクトは、データベースドライバーの Java™ クラスを書き出す OSGi バンドルである&#x200B;__必要があります__。
 
 + `all/pom.xml`
 
