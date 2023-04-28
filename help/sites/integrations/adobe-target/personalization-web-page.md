@@ -1,6 +1,6 @@
 ---
-title: 完全なWebページエクスペリエンスのパーソナライズ
-description: Adobe Targetを使用してAEM Webサイトのページを新しいページにリダイレクトするTargetアクティビティの作成方法を説明します。
+title: 完全な web ページエクスペリエンスのパーソナライゼーション
+description: Adobe Target を使用して AEM web サイトのページを新しいページにリダイレクトする Target アクティビティの作成方法を説明します。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -13,70 +13,70 @@ role: Developer
 level: Intermediate
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# 完全なWebページエクスペリエンスのパーソナライズ {#personalization-fpe}
+# 完全な web ページエクスペリエンスのパーソナライゼーション {#personalization-fpe}
 
-Adobe Targetを使用して、AEM上でホストされているサイトページを新しいページにリダイレクトするアクティビティの作成方法を説明します。
+Adobe Target を使用して、AEMでホストされているサイトのページを新しいページにリダイレクトするアクティビティの作成方法を説明します。
 
 ## 前提条件
 
-AEM Webサイトのすべてのページをパーソナライズするには、次の設定を行う必要があります。
+AEM web サイトのすべてのページをパーソナライズするには、次の設定を行う必要があります。
 
-1. [AEM WebサイトへのAdobe Targetの追加](./add-target-launch-extension.md)
-1. [LaunchからのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
+1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
 
 ## シナリオの概要
 
-WKNDサイトのデザインが変更され、現在のホームページの訪問者を新しいホームページにリダイレクトしたいと考えています。 同時に、再設計されたホームページがユーザーエンゲージメントと売上高を向上させる方法も理解します。 マーケターには、訪問者を新しいホームページにリダイレクトするアクティビティを作成するタスクが割り当てられています。 WKNDサイトのホームページを参照し、Adobe Targetを使用してアクティビティを作成する方法を学びます。
+WKND サイトはホームページのデザインを一新し、現在のホームページの訪問者を新しいホームページにリダイレクトしたいと考えています。 同時に、再設計されたホームページがユーザーエンゲージメントと収益の改善にどのように役立つかも把握する必要があります。 マーケターは、訪問者を新しいホームページにリダイレクトするアクティビティを作成するタスクを割り当てられています。 WKND サイトのホームページを参照し、Adobe Target を使用してアクティビティを作成する方法を確認していきましょう。
 
-## Visual Experience Composer(VEC)を使用したA/Bテストの作成手順
+## Visual Experience Composer（VEC）を使用した A/B テストの作成手順
 
-1. Adobe Targetにログインし、「アクティビティ」タブに移動します。
-1. 「**アクティビティを作成**」ボタンをクリックし、「**A/Bテスト**」アクティビティを選択します
+1. Adobe Target にログインし、「アクティビティ」タブに移動します。
+1. 「**アクティビティを作成**」ボタンをクリックし、「**A/B テスト**」アクティビティを選択します
 
-   ![A/Bアクティビティ](assets/ab-target-activity.png)
+   ![A/B アクティビティ](assets/ab-target-activity.png)
 
-1. 「**Visual Experience Composer**」オプションを選択し、アクティビティURLを指定して、「**次へ**」をクリックします
+1. **Visual Experience Composer** オプションを選択し、アクティビティ URL を指定して「**次へ**」をクリックします。
 
-   ![アクティビティURL](assets/ab-test-url.png)
+   ![アクティビティ URL](assets/ab-test-url.png)
 
-1. Visual Experience Composerでは、新しいアクティビティを作成した後、左側に2つのタブが表示されます。*エクスペリエンスA*&#x200B;と&#x200B;*エクスペリエンスB*。 リストからエクスペリエンスを選択します。 「**エクスペリエンスを追加**」ボタンを使用して、新しいエクスペリエンスをリストに追加できます。
+1. Visual Experience Composer では、新しいアクティビティを作成した後、左側に「*エクスペリエンス A*」および 「*エクスペリエンス B*」の 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
 
    ![エクスペリエンスオプション](assets/experience-options.png)
 
-1. エクスペリエンスAで使用可能なオプションを表示し、「URLにリダイレクト&#x200B;**」オプションを選択して、新しいWKNDサイトのホームページのURLを指定します。**
+1. エクスペリエンス A で使用可能なオプションを表示して「**URL にリダイレクト**」オプションを選択し、新しい WKND サイトホームページの URL を指定します。
 
-   ![リダイレクトURL](assets/redirect-url.png)
+   ![リダイレクト URL](assets/redirect-url.png)
 
-1. *エクスペリエンスA*&#x200B;を&#x200B;*新しいWKNDホームページ*&#x200B;および&#x200B;*エクスペリエンスB*&#x200B;を&#x200B;*WKNDホームページ*&#x200B;に変更します。
+1. 名前を変更 *エクスペリエンス A* から *新しい WKND ホームページ* および *エクスペリエンス B* から *WKND ホームページ*
 
-   ![冒険](assets/new-experiences.png)
+   ![Adventures](assets/new-experiences.png)
 
-1. 「**次へ**」をクリックして「ターゲティング」に移動し、2つのエクスペリエンス間の手動のトラフィック配分は50 ～ 50に保ちます。
+1. 「**次へ**」をクリックしてターゲティングに移動し、両方のエクスペリエンスで手動のトラフィック配分を 50 に設定します。
 
-   ![ターゲット設定](assets/targeting.png)
+   ![ターゲティング](assets/targeting.png)
 
-1. 目標と設定については、「レポートソース」として「 Adobe Target 」を選択し、「目標指標」として「ページビューアクションによるコンバージョン」を選択します。
+1. 「目標と設定」では、「レポートソース」として「Adobe Target」を選択し、「目標指標」として「ページビューアクションによるコンバージョン」を選択します。
 
    ![ゴール](assets/goals.png)
 
-1. アクティビティの名前を指定し、保存します。
+1. アクティビティの名前を指定して保存します。
 1. 保存したアクティビティをアクティブ化して、変更をライブにプッシュします。
 
    ![ゴール](assets/activate.png)
 
-1. 新しいタブでサイトページ（手順3のアクティビティURL）を開き、A/Bテストアクティビティからエクスペリエンス（WKNDホームページまたは新しいWKNDホームページ）を表示できるようにします。 `us/en.html` にリダイレクトしま `us/home.html`す。
+1. 新しいタブでサイトページ（手順 3 のアクティビティ URL）を開くと、A/B テストアクティビティからいずれかのエクスペリエンス（WKND ホームページまたは新しい WKND ホームページ）を表示できるはずです。 `us/en.html` は `us/home.html` にリダイレクトされます。
 
    ![ゴール](assets/redirect-test.png)
 
 ## 概要
 
-マーケターは、Adobe Targetを使用して、AEM上でホストされるサイトページを新しいページにリダイレクトするアクティビティを作成できました。
+マーケターが Adobe Target を使用して、AEM でホストされるサイトページを新しいページにリダイレクトするアクティビティを作成することができました。
 
 ## サポートリンク
 
