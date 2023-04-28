@@ -1,6 +1,6 @@
 ---
-title: MySQL データベースからのフォームデータの格納と取得 — クライアントライブラリの作成
-description: フォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
+title: フォームデータの MySQL データベースへの保存と MySQL データベースからの取得 - クライアントライブラリの作成
+description: フォームデータの保存と取得に関わる手順について説明する、複数のパートで構成されているチュートリアル
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -9,15 +9,15 @@ role: Developer
 level: Experienced
 exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '147'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# クライアントライブラリを作成
+# クライアントライブラリの作成
 
-AEMクライアントライブラリは、すべてのクライアント側 JavaScript コードを管理します。 この記事では、Guide Bridge API を使用してアダプティブフォームのデータを取得するための簡単な JavaScript を作成しました。 アダプティブフォームのデータが取得されると、POSTの呼び出しがサーブレットに対しておこなわれ、データベース内のアダプティブフォームのデータが挿入または更新されます。 getALLUrlParams 関数は、URL 内のパラメーターを返します。 URL 内に guid パラメータが存在する場合、更新操作を実行する必要があります。それ以外の機能は、.savebutton クラスの click イベントに関連付けられたコードで処理されます。
+AEM クライアントライブラリは、すべてのクライアントサイド JavaScript コードを管理します。 この記事では、Guide Bridge API を使用してアダプティブフォームデータを取得するための簡単な JavaScript を作成しました。アダプティブフォームデータが取得されると、サーブレットに対して POST 呼び出しが実行されて、データベース内でアダプティブフォームデータが挿入または更新されます。getALLUrlParams 関数は、URL 内のパラメーターを返します。 URL 内に guid パラメータが存在する場合は、更新操作を実行する必要があり、それ以外の場合は、挿入操作になります。残りの機能は、.savebutton クラスのクリックイベントに関連付けられているコードで処理されます。
 
 >[!NOTE]
 >
