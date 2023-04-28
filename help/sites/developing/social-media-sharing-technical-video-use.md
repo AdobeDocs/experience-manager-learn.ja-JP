@@ -1,5 +1,5 @@
 ---
-title: AEM Sitesでのソーシャルメディア共有の使用
+title: AEM Sites でのソーシャルメディア共有の使用
 description: ソーシャルメディア共有コンポーネントの設定と使用について説明します。
 feature: Core Components
 topics: integrations
@@ -12,9 +12,9 @@ role: Developer
 level: Intermediate
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 10%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-このビデオでは、ソーシャルメディア共有コンポーネント ( [AEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)) を [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) サンプル Web サイト。
+この動画では、[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) サンプル web サイトを使用して、ソーシャルメディア共有コンポーネント（[AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)の一部）の次の機能について説明します。
 
-* 0:00 — ソーシャルメディア共有コンポーネントの追加と設定
-* 1:00 - Facebookとの共有
-* 3:10 - Pinterestとの共有
-* 6:25 — 製品ページでのソーシャルメディア共有コンポーネントの使用
+* 0:00 - ソーシャルメディア共有コンポーネントの追加と設定
+* 1:00 - Facebook への共有
+* 3:10 - Pinterest への共有
+* 6:25 - 製品ページでのソーシャルメディア共有コンポーネントの使用
 
 ## Externalizer の設定 {#externalizer-setup}
 
@@ -37,12 +37,12 @@ ht-degree: 10%
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) は、AEM オーサーと AEM パブリッシュの両方で設定する必要があります。これにより、パブリッシュ実行モードを、AEM パブリッシュへのアクセスに使用される公開アクセス可能なドメインにマッピングします。
+[AEM externalizer](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/externalizer.html) は、AEM オーサーと AEM パブリッシュの両方で設定する必要があります。これにより、パブリッシュ実行モードを、AEM パブリッシュへのアクセスに使用される公開アクセス可能なドメインにマッピングします。
 
-このビデオでは、 `/etc/hosts` 偽物 *www.example.com* localhost に解決し、 [基本的なAEM Dispatcher 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) www.example.comを使用して AEM パブリッシュを前面に表示することを許可します。
+この動画では、`/etc/hosts` を使用して *www.example.com* を localhost に解決するように偽装し、[基本的な AEM Dispatcher 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)を使用して www.example.com が AEM Publish の前に置かれるようにします。
 
 ## サポート資料 {#supporting-materials}
 
-* [AEMコアコンポーネントのダウンロード](https://github.com/adobe/aem-core-wcm-components/releases)
+* [AEM コアコンポーネントのダウンロード](https://github.com/adobe/aem-core-wcm-components/releases)
 * [We.Retail をダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
+* [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)
