@@ -1,6 +1,6 @@
 ---
-title: AMS Dispatcher 読み取り専用または不変ファイル
-description: 一部のファイルが読み取り専用または編集不可の理由と、必要な機能の変更方法の理解
+title: AMS Dispatcher 読み取り専用ファイルまたは不変ファイル
+description: 一部のファイルが読み取り専用または編集不可の理由と、希望どおりに機能変更を行う方法について
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
@@ -8,9 +8,9 @@ role: Admin
 level: Beginner
 thumbnail: xx.jpg
 source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '826'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -19,27 +19,27 @@ ht-degree: 1%
 
 [目次](./overview.md)
 
-[&lt; — 前：共通ログ](./common-logs.md)
+[&lt;- 前：共通ログ](./common-logs.md)
 
 ## 説明
 
 このドキュメントでは、ロックされているファイルと変更されないファイル、および適切な構成設定を行う方法について説明します。
 
-AMS がシステムをプロビジョニングする際に、すべてが機能し、安全になるベースライン設定を展開します。  これらは、AMS が確実に機能とセキュリティの基準として保証したいと考えているものです。  これを実現するために、一部のファイルは読み取り専用としてマークされ、変更を避けるために不変です。
+AMS がシステムをプロビジョニングする際に、すべてが機能し、安全になるベースライン設定を展開します。これらは、AMS が確実に機能とセキュリティのベースラインとして保証したいと考えているものです。これを実現するために、一部のファイルは読み取り専用かつ不変としてマークされ、変更が回避されます。
 
-レイアウトを使用しても、動作を変更したり、必要な変更を上書きしたりすることはできません。  これらのファイルを変更する代わりに、元のファイルを置き換える独自のファイルをオーバーレイします。
+レイアウトを使用しても、動作を変更したり、必要な変更を上書きしたりすることはできません。これらのファイルを変更する代わりに、元のファイルを置き換える独自のファイルをオーバーレイします。
 
-これにより、AMS が最新の修正とセキュリティの強化で Dispatcher にパッチを適用しても、ファイルが変更されないことを確認できます。  その後も、改善点のメリットを活用し、必要な変更のみを採用できます。
-![ボールがレーンを下りていくボーリングレーンを表示します。  ボールには、「 」という単語が付いた矢印が表示されます。  樋のバンパーは上に上がり、その上に不変ファイルという単語があります。](assets/immutable-files/bowling-file-immutability.png "ボウリングファイル不変性")
-上の図で示すように、不変ファイルは、ゲームを再生するのを止めていません。  彼らは、あなたのパフォーマンスを傷つけるのを止め、あなたを車線に留める。  この方法では、次の主要な機能をいくつか利用できます。
+これにより、AMS が最新の修正とセキュリティの強化で Dispatcher にパッチを適用しても、ファイルは変更されないことが保証されます。その後も、改善点のメリットを活用し、必要な変更のみを採用できます。
+![ボールが転がっていくボーリングレーン。  ボールには矢印と「あなた」の文字が表示されている。ガターのバンパーが持ち上がっていて、そこに「不変ファイル」と書かれている。](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
+上の画像に示されるように、不変ファイルはゲームの邪魔をしていません。これらのファイルは、パフォーマンスが損なわれるのを阻止し、ボールをレーンの上に維持しています。この方法では、次の重要な機能を活用できます。
 
-- カスタマイズは、独自の安全なスペースで処理されます
-- カスタム変更のオーバーレイ (AEMのオーバーレイメソッドのもの )
-- AMS 設定のパッチ適用は、カスタマイズを変更せずに実行できます
-- 基本インストールとカスタマイズされた設定のテストは、同時に行うことができ、問題がカスタマイズやその他の原因で発生しているかどうかを判別できます。どのファイルが原因か
+- カスタマイズを独自の安全なスペースで処理する
+- AEMのオーバーレイメソッドと同様のカスタム変更のオーバーレイ 
+- AMS 設定のパッチ適用は、カスタマイズを変更せずに実行できる
+- 基本インストールとカスタマイズされた設定のテストを同時に行って、カスタマイズやその他の原因（どのファイルか？）で問題が発生しているかどうかを判別する
 
 
-Dispatcher と共にデプロイされるファイルの一般的なリストを次に示します。
+以下は、Dispatcher と共にデプロイされるファイルの一般的なリストです。
 
 ```
 /etc/httpd/
@@ -124,7 +124,7 @@ Dispatcher と共にデプロイされるファイルの一般的なリストを
     └── mod_dispatcher.so
 ```
 
-不変ファイルを判断するには、Dispatcher で次のコマンドを実行して、
+どれが不変ファイルかを判断するには、Dispatcher で次のコマンドを実行します。
 
 ```
 $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
@@ -184,7 +184,7 @@ $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
 
 ### 変数
 
-変数を使用すると、設定ファイル自体を変更せずに、機能を変更できます。  設定の特定の要素は、変数の値を調整して調整できます。  ファイルからハイライトできる例を 1 つ示します。 `/etc/httpd/conf.d/dispatcher_vhost.conf` は次のように表示されます。
+変数を使用すると、設定ファイル自体を変更せずに、機能を変更できます。変数の値を調整することで、設定の特定の要素を調整できます。ファイル `/etc/httpd/conf.d/dispatcher_vhost.conf` からハイライトできる例は以下のとおりです。
 
 ```
 Include /etc/httpd/conf.d/variables/ams_default.vars
@@ -197,7 +197,7 @@ IfModule disp_apache2.c
 /IfModule
 ```
 
-DispatcherLogLevel ディレクティブに次の変数がある方法を確認する `DISP_LOG_LEVEL` 通常の値ではなく、通常の値が表示されます。  コードのこのセクションの上には、変数ファイルに対する include ステートメントも表示されます。  変数ファイル `/etc/httpd/conf.d/variables/ams_default.vars` は、次に見たい場所です。  変数ファイルの内容を次に示します。
+表示される標準の値ではなく、DispatcherLogLevel ディレクティブに `DISP_LOG_LEVEL` の変数があるのがわかります。コードのこのセクションの上には、変数ファイルに対する Include ステートメントも表示されます。次に、変数ファイル `/etc/httpd/conf.d/variables/ams_default.vars` を確認します。このファイルの内容は以下のとおりです。
 
 ```
 Define DISP_LOG_LEVEL info
@@ -209,17 +209,17 @@ Define PUBLISH_FORCE_SSL 0
 Define LIVECYCLE_FORCE_SSL 1
 ```
 
-上記のように、 `DISP_LOG_LEVEL` 変数 `info`.  これを調整して、トレースやデバッグを行ったり、数値やレベルを選択したりできます。  現在は、ログレベルを制御するすべての場所が自動的に調整されます。
+上記のように、変数 `DISP_LOG_LEVEL` の現在の値は `info` です。これを調整してトレースやデバッグを行ったり、数値やレベルを選択したりできます。現在は、ログレベルを制御するすべての場所が自動的に調整されます。
 
-### Overlay メソッド
+### オーバーレイメソッド
 
-トップレベルのインクルードファイルを理解してください。これらのファイルはカスタマイズを開始する際に使用します。  簡単な例から始めるために、この Dispatcher を指す新しいドメイン名を追加するシナリオがあります。  使用するドメインの例は、we-retail.adobe.com です。  まず、既存の設定ファイルを新しい設定ファイルにコピーし、そこで変更を追加します。
+上位の Include ファイルはカスタマイズの出発点となるため、理解しておく必要があります。 簡単な例から始めるために、この Dispatcher をポイントする新しいドメイン名を追加するシナリオが使います。使用するドメインの例は、we-retail.adobe.com です。まず、既存の設定ファイルを新しい設定ファイルにコピーし、そこで変更を追加します。
 
 ```
 $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/available_vhosts/weretail_publish.vhost
 ```
 
-既存の aem_publish.vhost ファイルをコピーしました。これは、既存の aem_publish.vhost ファイルに必要なものが既に存在し、既に強力なスタートを作り直したくないからです。  次に、新しい weretail.vhost ファイルを編集し、必要な変更を行います。
+既存の aem_publish.vhost ファイルをコピーしました。これは、既存の aem_publish.vhost ファイルに必要なものが既に存在し、強力な開始ファイルを作り直したくないからです。次に、新しい weretail.vhost ファイルを編集し、必要な変更を行います。
 
 前：
 
@@ -257,13 +257,13 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-これで、 `ServerName` および `ServerAlias` 新しいドメイン名を照合し、他のパンくずヘッダーを更新する場合。  次に、新しいファイルを有効にして、Apache が新しいファイルを使用することを知らせるようにします。
+これで、新しいドメイン名と一致するように `ServerName` および `ServerAlias` を更新し、他のパンくずヘッダーも更新しました。次に、新しいファイルを有効にして、Apache に新しいファイルを使用することを知らせます。
 
 ```
 $ cd /etc/httpd/conf.d/enabled_vhosts/; ln -s ../available_vhosts/weretail_publish.vhost .
 ```
 
-Apache Web サーバーは、ドメインがトラフィックを生成する必要があることを認識していますが、Dispatcher モジュールに対して、受け入れる新しいドメイン名を持つように通知する必要があります。  まず、新しい `*_vhost.any` ファイル `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` そのファイル内に、受け入れたいドメイン名を入れます。
+Apache web サーバーは、ドメインがトラフィックを生成する必要があることを認識していますが、Dispatcher モジュールに対して、新しいドメイン名を保持するように通知する必要があります。まず、新しい `*_vhost.any` ファイル `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` を作成し、保持するドメイン名をそのファイル内に追加します。
 
 ```
 "we-retail.adobe.com"
@@ -275,7 +275,7 @@ Apache Web サーバーは、ドメインがトラフィックを生成する必
 $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/httpd/conf.dispatcher.d/available_farms/400_weretail_publish_farm.any
 ```
 
-このファームファイルに加える必要のある変更を表示します
+このファームファイルに加える必要のある変更を以下に示します。
 
 前：
 
@@ -299,17 +299,17 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 }
 ```
 
-これで、ファーム名を更新し、で使用するをインクルードしました。 `/virtualhosts` ファーム設定のセクション。  この新しいファームファイルを有効にして、実行中の設定で使用できるようにする必要があります。
+これで、ファーム名と、ファーム設定の `/virtualhosts` セクションで使用するインクルードが更新されました。この新しいファームファイルを有効にして、実行中の設定で使用できるようにする必要があります。
 
 ```
 $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_weretail_publish_farm.any .
 ```
 
-Web サーバーサービスを再読み込みし、新しいドメインを使用します。
+では、ｗeb サーバーサービスを再読み込みし、新しいドメインを使用します。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
 
-変更したのは、ベースライン設定ファイルに付属の既存のインクルードとコードを変更して活用するために必要な部分だけです。  必要な要素を説明するだけです。  より簡単になり、より少ないコードを維持できます
+変更したのは、ベースライン設定ファイルに付属の既存のインクルードとコードを変更して活用するうえで必要な部分だけです。詳しく記述する必要があるのは、変更が必要な要素だけです。作業がより容易になり、メンテナンス対象のコードを減らすことができるようになりました。
 </div>
 
-[次へ —> Dispatcher ヘルスチェック](./health-check.md)
+[次は -> Dispatcher ヘルスチェック](./health-check.md)
