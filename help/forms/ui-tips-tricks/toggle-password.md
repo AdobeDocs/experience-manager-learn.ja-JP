@@ -1,5 +1,5 @@
 ---
-title: 役に立つ UI のヒントとテクニックをいくつか紹介します。
+title: 役に立つ UI のヒントとテクニック
 description: 便利なユーザーインターフェイスのヒントを示すドキュメント
 feature: Adaptive Forms
 type: Tutorial
@@ -11,22 +11,22 @@ kt: 9270
 exl-id: 13b9cd28-2797-4da9-a300-218e208cd21b
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '167'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # パスワードフィールドの表示を切り替え
 
-一般的な使用例としては、フォーム入力者が、パスワードフィールドに入力されたテキストの表示/非表示を切り替えることができます。
-この使用例を達成するために、 [Font Awesome ライブラリ](https://fontawesome.com/). このデモ用に作成されたクライアントライブラリには、必要な CSS と eye.svg が含まれています。
+一般的なユースケースとしては、フォーム入力者が、「パスワード」フィールドに入力されたテキストの表示／非表示を切り替えることができます。
+このユースケースを実現するために、[Font Awesome ライブラリ](https://fontawesome.com/)の目のアイコンを使用しました。このデモ用に作成されたクライアントライブラリには、必要な CSS と eye.svg が含まれています。
 
 
 
 ## サンプルコード
 
-アダプティブフォームには、という名前のタイプの PasswordBox フィールドがあります。 **ssnField**.
+アダプティブフォームには、**ssnField** と呼ばれる PasswordBox タイプのフィールドがあります。
 
 フォームが読み込まれると、次のコードが実行されます
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
 });
 ```
 
-次の CSS を使用して **目** パスワードフィールド内のアイコン
+次の CSS を使用してパスワードフィールド内に&#x200B;**目**&#x200B;のアイコンを配置します
 
 ```javascript
 .svg-inline--fa {
@@ -65,10 +65,10 @@ $(document).ready(function() {
 }
 ```
 
-## 切り替えパスワードのサンプルをデプロイします。
+## パスワードサンプルの切り替えをデプロイします
 
-* をダウンロードします。 [クライアントライブラリ](assets/simple-ui-tips.zip)
-* をダウンロードします。 [サンプルフォーム](assets/simple-ui-tricks-form.zip)
-* を使用してクライアントライブラリを読み込む [パッケージマネージャー UI](http://localhost:4502/crx/packmgr/index.jsp)
-* 次を使用してサンプルフォームを読み込みます： [Formsとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
+* [クライアントライブラリ](assets/simple-ui-tips.zip)をダウンロードします
+* [サンプルフォーム](assets/simple-ui-tricks-form.zip)をダウンロードします
+* [パッケージマネージャー UI](http://localhost:4502/crx/packmgr/index.jsp) を使用してクライアントライブラリを読み込みます
+* [フォームとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を使用してサンプルフォームを読み込みます
+* [フォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
