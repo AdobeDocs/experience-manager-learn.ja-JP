@@ -1,6 +1,6 @@
 ---
-title: AEM Dynamic Mediaでの画像プリセットの作成
-description: Dynamic Mediaでの画像プリセットの設定
+title: AEM Dynamic Media での画像プリセットの作成
+description: Dynamic Media で画像プリセットを設定する
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -9,13 +9,13 @@ topic: Development
 index: y
 exl-id: e76c50da-e7a8-4560-bc53-02cdb13619bb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '33'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Dynamic Mediaでの画像プリセットの作成
+# AEM Dynamic Media での画像プリセットの作成
 
 このビデオでは、Dynamic Mediaで画像プリセットを作成する手順を説明します。
 
