@@ -1,6 +1,6 @@
 ---
 title: lc_turnkey.xml で使用するキーストアパスワードを暗号化する手順
-description: lc_turnkey.xml ファイルで設定するキーストアパスワードを暗号化
+description: lc_turnkey.xml ファイルで設定するキーストアパスワードを暗号化する
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,9 +9,9 @@ topic: Administration
 index: y
 exl-id: e5b1b526-022e-4a82-9f4b-5f60210bb9ff
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
