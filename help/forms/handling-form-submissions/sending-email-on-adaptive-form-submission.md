@@ -1,7 +1,7 @@
 ---
-title: アダプティブフォーム送信時の電子メールの送信
+title: アダプティブフォーム送信時のメール送信
 seo-title: Sending Email on Adaptive Form Submission
-description: 電子メールを送信コンポーネントを使用して、アダプティブフォーム送信時に確認電子メールを送信する
+description: メール送信コンポーネントを使用して、アダプティブフォーム送信時に確認メールを送信します。
 seo-description: Send confirmation email on adaptive form submission using the send email component
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
 feature: Adaptive Forms
@@ -16,38 +16,38 @@ level: Beginner
 exl-id: 19c5aeec-2893-4ada-b6df-b80c4be2468a
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォーム送信時の電子メールの送信 {#sending-email-on-adaptive-form-submission}
+# アダプティブフォーム送信時のメール送信 {#sending-email-on-adaptive-form-submission}
 
-一般的なアクションの 1 つは、アダプティブフォームの送信が成功したことを知らせる電子メールを送信者に送信することです。 これを達成するには、送信アクションとして「メールを送信」を選択します。
+アダプティブフォームが正常に送信されたことを送信者にメールで知らせることは、一般的によく行われます。これを実現するには、送信アクションとして「メールを送信」を選択します。
 
-電子メールテンプレートを使用するか、電子メールの本文を入力します（下のスクリーンショットを参照）。
+メールテンプレートを使用するか、メールの本文を以下のスクリーンショットのように入力します。
 
-電子メールにフォームフィールドの値を挿入する構文に注意してください。また、設定プロパティで「添付ファイルを含める」チェックボックスをオンにすると、電子メールにフォーム添付ファイルを含めるオプションもあります。
+メールにフォームフィールドの値を挿入する構文に注意してください。また、設定プロパティで「添付ファイルを含める」チェックボックスをオンにすると、メールにフォームの添付ファイルを含めることもできます。
 
-アダプティブフォームが送信されると、受信者に電子メールが送信されます。
+アダプティブフォームが送信されると、受信者にメールが届きます。
 
 ![SendEmail](assets/sendemailaction.gif)
 
 ## 必要な設定 {#configurations-needed}
 
-Day CQ Mail サービスを設定する必要があります。 これは、次を指すようにブラウザーを設定できます。 [Felix Configuration Manager](http://localhost:4502/system/console/configMgr)
+Day CQ Mail サービスを設定する必要があります。この設定は、ブラウザーで [Felix Configuration Manager](http://localhost:4502/system/console/configMgr) にアクセスすることで行うことができます。
 
-スクリーンショットには、アドビのメールサーバーの設定プロパティが表示されます。
+スクリーンショットには、アドビのメールサーバーの設定プロパティが表示されています。
 
 ![mailservice](assets/mailservice.png)
 
-サーバーでこれを試すには、次の手順に従います。
+お使いのサーバーでこれを試すには、次の手順に従います。
 
-* [アセットの読み込み](assets/timeoffrequest.zip) パッケージマネージャーを使用してAEMでこの記事に関連付けられています。
+* パッケージ マネージャーを使用して、この記事に関連付けられている[アセットを AEM に読み込み](assets/timeoffrequest.zip)ます。
 
-* を開きます。 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled) を開きます。
 
-* 詳細を入力します。電子メールフィールドに有効な電子メールアドレスを入力してください。
+* 詳細を入力します。メールフィールドに有効なメールアドレスを入力してください。
 
-* フォームを送信.
+* フォームを送信します。
