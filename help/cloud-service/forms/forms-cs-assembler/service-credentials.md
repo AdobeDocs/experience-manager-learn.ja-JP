@@ -1,5 +1,5 @@
 ---
-title: AEM Service Credentials
+title: AEM サービス資格情報
 description: AEM Developer Console からサービス資格情報をダウンロードします。
 type: Documentation
 role: Developer
@@ -10,15 +10,15 @@ topic: Development
 kt: 9980
 exl-id: 4c5173f1-d57d-43ac-83e6-399ce4ead203
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '109'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # サービス資格情報
 
-AEM as a Cloud Serviceとの統合では、AEMに対して安全に認証できる必要があります。 AEM開発者コンソールは、サービス資格情報を生成します。これは、外部のアプリケーション、システムおよびサービスによって、HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするために使用されます。
+AEM as a Cloud Service との統合では、AEM に対して安全に認証できる必要があります。 AEM の Developer Consoleは、サービス資格情報を生成します。これは、外部のアプリケーション、システムおよびサービスによって、HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするために使用されます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
