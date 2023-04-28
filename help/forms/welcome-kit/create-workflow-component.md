@@ -1,6 +1,6 @@
 ---
 title: ウェルカムキットのワークフロープロセスを作成
-description: 送信されたフォームデータに基づいてアセットをダウンロードするためのリンクを含むAEMサイトページを作成します。
+description: 送信されたフォームデータに基づいてアセットをダウンロードするためのリンクを含む、AEM Sites のページを作成します。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## ワークフロープロセスの実装
 
-次の Java コードは、ワークフローコンポーネントに関連付けられています。 このコードはウェルカムキットページを作成し、ワークフロー変数（submitterName と documentsSelected）から値を抽出します。 これらの値は、次に、ページで使用されるコンポーネントのプロパティとして設定されます。 また、このコードは、ワークフロープロセス変数の値も設定します **welcomekiturl**.
+次の Java コードは、ワークフローコンポーネントに関連付けられています。このコードはウェルカムキットページを作成し、ワークフロー変数（submitterName と documentsSelected）から値を抽出します。これらの値は、その後、ページで使用されるコンポーネントのプロパティとして設定されます。このコードは、ワークフロープロセス変数 **welcomekiturl** の値も設定します。
 
 ```java
 package com.welcomekit.core.workflowprocess;
