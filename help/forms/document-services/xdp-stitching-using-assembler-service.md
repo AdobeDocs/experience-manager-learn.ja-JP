@@ -1,6 +1,6 @@
 ---
 title: Assembler サービスを使用した XDP ステッチ
-description: AEM Formsで Assembler サービスを使用した xdp のステッチ
+description: AEM Forms の Assembler サービスを使用した XDP のステッチ
 feature: Assembler
 version: 6.4,6.5
 topic: Development
@@ -8,18 +8,18 @@ role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
 source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '357'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Assembler サービスを使用した XDP のステッチ
+# Assembler サービスを使用した XDP ステッチ
 
-この記事では、Assembler サービスを使用して xdp ドキュメントをステッチする機能を示すアセットを提供します。
-次の JSP コードは、という名前のサブフォームを挿入するために記述されました。 **住所** address.xdp という xdp ドキュメントから **住所** master.xdp ドキュメント内 結果の xdp は、AEMインストール環境のルートフォルダーに保存されました。
+この記事では、Assembler サービスを使用して XDP ドキュメントをステッチする機能を示すアセットを提供します。
+address.xdp という XDP ドキュメントから **address** というサブフォームを master.xdp ドキュメントの **address** という挿入ポイントに挿入するために、以下の JSP コードを作成しました。結果の XDP は、AEM インストール環境のルートフォルダーに保存されました。
 
-Assembler サービスは、有効な DDX ドキュメントに基づいて、PDFドキュメントの操作を記述します。 以下を参照してください。 [DDX リファレンスドキュメントはこちら](assets/ddxRef.pdf).Page 40 は xdp ステッチに関する情報を持ちます。
+Assembler サービスは、PDF ドキュメントの操作を記述する有効な DDX ドキュメントに準拠しています。こちらの [DDX のリファレンスドキュメント](assets/ddxRef.pdf)を参照してください。40 ページに XDP ステッチに関する情報があります。
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -51,7 +51,7 @@ Assembler サービスは、有効な DDX ドキュメントに基づいて、PD
     finalXDP.copyToFile(new java.io.File("stitched.xdp"));
 ```
 
-フラグメントを別の xdp に挿入する DDX ファイルを以下に示します。 DDX がサブフォームを挿入します  **住所** address.xdp から **住所** master.xdp 内 次の名前の結果ドキュメント： **stitched.xdp** はファイルシステムに保存されます。
+フラグメントを別の XDP に挿入する DDX ファイルを以下に示します。DDX は address.xdp のサブフォーム **address** を master.xdp の **address** という挿入ポイントに挿入します。**stitched.xdp** という名前のドキュメントが結果として生成され、ファイルシステムに保存されます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -64,25 +64,27 @@ Assembler サービスは、有効な DDX ドキュメントに基づいて、PD
 </DDX>
 ```
 
-この機能をAEM Server で動作させるには
+この機能を AEM Server で動作させるには
 
-* ダウンロード [XDP Stitching パッケージ](assets/xdp-stitching.zip) をローカルシステムに送信します。
-* を使用してパッケージをアップロードしインストールする [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
-* [この zip ファイルの内容を抽出します。](assets/xdp-and-ddx.zip) サンプル xdp および DDX ファイルを取得するには
+* [XDP Stitching パッケージ](assets/xdp-stitching.zip)をローカルシステムにダウンロードします。
+* [パッケージマネージャ](http://localhost:4502/crx/packmgr/index.jsp)を使用して、このパッケージをアップロードしインストールします。
+* [この zip ファイルの内容を展開](assets/xdp-and-ddx.zip)すると、サンプル XDP ファイルと DDX ファイルが得られます。
 
-**パッケージをインストールした後、Granite CSRF FilterAdobeに次の URL をする必要がありま許可リストす。**
+**パッケージのインストール後、Adobe Granite CSRF Filter で次の URL を許可リストに加える必要があります**。
 
-1. 上記のパスをするには、以下の手許可リスト順に従ってください。
-1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
-1. AdobeGranite CSRF Filter を検索します。
-1. 除外されたセクションに次のパスを追加して、保存します。 `/content/AemFormsSamples/assemblerservice`
-1. 「Sling Referrer filter」を検索します。
-1. 「Allow Empty」チェックボックスをオンにします。 （この設定はテスト目的でのみ使用する必要があります）サンプルコードをテストする方法は多数あります。 Postmanアプリを最もすばやく最も簡単に使用できます。 Postmanを使用すると、サーバーにPOSTリクエストを送信できます。 システムにPostmanアプリをインストールします。
-デスクトップアプリケーションを起動し、次の URL を入力して、書き出しデータ API をテストしますhttp://localhost:4502/content/AemFormsSamples/assemblerservice.html
+1. 上記のパスを許可リストに加えるには、下記の手順に従ってください。
+1. [configMgr にログインします](http://localhost:4502/system/console/configMgr)。
+1. Adobe Granite CSRF フィルターを検索します。
+1. 「除外済み」セクションに次のパスを追加し、`/content/AemFormsSamples/assemblerservice` を保存します。
+1. 「Sling Referrer Filter」を検索します。
+1. 「Allow Empty」チェックボックスをオンにします（この設定はテスト目的でのみ使用してください）。
+サンプルコードをテストする方法は多数あります。 Postman アプリを使用するのが最もすばやく簡単です。Postman を使用すると、サーバーに POST リクエストを送信できます。 システムに Postman アプリをインストールします。
+アプリを起動し次の URL を入力して、データ書き出し API をテストします。
+http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 
-スクリーンショットで指定した次の入力パラメーターを指定します。 前にダウンロードしたサンプルドキュメントを使用できます。
+スクリーンショットに示したとおりに、入力パラメーターを指定します。前にダウンロードしたサンプルドキュメントを使用できます。
 ![xdp-stitch-postman](assets/xdp-stitching-postman.png)
 
 >[!NOTE]
 >
->AEM Formsのインストールが完了していることを確認します。 すべてのバンドルがアクティブ状態である必要があります。
+>AEM Forms のインストールが完了していることを確認します。すべてのバンドルがアクティブ状態である必要があります。
