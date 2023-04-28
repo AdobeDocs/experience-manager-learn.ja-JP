@@ -1,6 +1,6 @@
 ---
-title: Dynamic MediaとAEM Sitesコアコンポーネントの使用
-description: Adobe Experience Manager SitesでDynamic Mediaを使用する方法を説明します。 画像コンポーネントは、Experience Managerコアコンポーネントの一部で、Dynamic Mediaの組み込みサポートを備えています。 画像コンポーネントを使用すれば、コンテンツ作成者は、AEM Sitesページ上で、画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Mediaの機能を使用できます。
+title: Dynamic Media と AEM Sites コアコンポーネントの使用
+description: Adobe Experience Manager Sites で Dynamic Media を使用する方法を説明します。画像コンポーネントは、Experience Manager コアコンポーネントの一部で、Dynamic Media の組み込みサポートを備えています。画像コンポーネントを使用すれば、コンテンツ作成者は、AEM Sites ページ上で、画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Media の機能を使用できます。
 feature: Core Components, Smart Crop, Image Profiles, Image Presets
 version: Cloud Service
 topic: Content Management
@@ -9,19 +9,19 @@ level: Beginner
 kt: 6630
 exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '141'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Dynamic MediaとAEM Sitesコアコンポーネントの使用 {#dynamic-media-sites-core-components}
+# Dynamic Media と AEM Sites コアコンポーネントの使用 {#dynamic-media-sites-core-components}
 
-画像コンポーネントは、Experience Managerコアコンポーネントの一部で、Dynamic Mediaの組み込みサポートを備えています。 画像コンポーネントを使用すれば、コンテンツ作成者は、AEM Sitesページ上で、画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Mediaの機能を使用できます。
+画像コンポーネントは、Experience Manager コアコンポーネントの一部で、Dynamic Media の組み込みサポートを備えています。画像コンポーネントを使用すれば、コンテンツ作成者は、AEM Sites ページ上で、画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Media の機能を使用できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
 
 ## その他のリソース
 
-* [画像コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
-* [Dynamic Mediaコマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)
+* [画像コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja#dynamic-media)
+* [Dynamic Media コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=ja)
