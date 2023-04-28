@@ -1,6 +1,6 @@
 ---
 title: 項目読み込みパスを使用したドロップダウンリストへの入力
-description: crx ノードから値を読み取るためのドロップダウンリストの設定と設定
+description: crx ノードから値を読み取るためのドロップダウンリストの設定と入力
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 10961
@@ -10,24 +10,24 @@ level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
 source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '180'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Formsの項目読み込みプロパティ
+# AEM Forms の項目読み込みプロパティ
 
-項目読み込みパスのプロパティを使用して、ドロップダウンリストを設定および設定します。
+項目読み込みパスのプロパティを使用して、ドロップダウンリストの設定と入力を行います。
 「項目読み込みパス」フィールドを使用すると、作成者はドロップダウンリストで使用可能なオプションを読み込む URL を指定できます。
 crx でこのようなノードを作成するには、次の手順に従います。
-* crx にログイン
-* assets というノードを作成し（必要に応じてこのノードに名前を付けることができます）、「content」に sling:folder と入力します。
+* crx にログインします
+* 「アセット」というノードを作成し（要件に応じてこのノードに名前を付けることができます）、「コンテンツ」に sling:folder と入力します。
 * 保存
-* 新しく作成されたアセットノードをクリックし、次に示すようにプロパティを設定します。
-* assettypes という型の String 型のプロパティを作成する必要があります（必要に応じて名前を付けることができます）。プロパティが複数値であることを確認します。 必要な値を指定して保存します。
+* 新しく作成したアセットノードをクリックし、次に示すようにプロパティを設定します。
+* assettypes という文字列型のプロパティを作成します（必要に応じて名前を付けることができます）。プロパティが複数値であることを確認します。必要な値を指定して保存します。
    ![item-load-path](assets/item-load-path-crx.png)
 
-これらの値をドロップダウンリストに読み込むには、項目読み込みパスのプロパティに次のパスを指定します  **/content/assets/assettypes**
+これらの値をドロップダウンリストに読み込むには、項目読み込みパスのプロパティに **/content/assets/assettypes** というパスを指定します。
 
-サンプルパッケージは、 [ここからダウンロード](assets/item-load-path-package.zip)
+サンプルパッケージは、[こちらからダウンロード](assets/item-load-path-package.zip)できます。
