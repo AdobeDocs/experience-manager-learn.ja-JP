@@ -13,9 +13,9 @@ role: Architect, Developer
 level: Beginner
 exl-id: bb13fc39-fcb7-4241-8504-8ff999a6caa2
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '42'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
