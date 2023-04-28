@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Sling Job Scheduler
-description: クラウドでのAEMジョブスケジュール
+title: Cloud 5 - Sling ジョブスケジューラー
+description: クラウド内の AEM ジョブスケジュール
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -9,15 +9,15 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 8784d77f-1c70-4694-bd08-79b71adbda48
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '57'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Sling Job Scheduler
+# Cloud 5 - Sling ジョブスケジューラー
 
-ジョブのスケジュールと消費は、非クラスター化AEMデプロイメントとは異なります。 このビデオでは、これらのタスクを実行する際に考慮すべき問題と事項を示します。
+ジョブのスケジュールと消費は、非クラスター AEM デプロイメントとは異なります。このビデオでは、これらのタスクを実行する際に考慮すべき点と注意事項について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343473?quality=12&learn=on)
 
