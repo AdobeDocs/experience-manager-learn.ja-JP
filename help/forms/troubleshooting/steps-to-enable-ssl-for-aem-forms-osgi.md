@@ -1,6 +1,6 @@
 ---
 title: AEM Forms OSGi インスタンスで SSL を有効にする手順
-description: HTTPS 経由でAEMにアクセスするように、AEM Forms OSGI で SSL を設定します。
+description: HTTPS 経由で AEM にアクセスするように、AEM Forms OSGI で SSL を設定します。
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,9 +9,9 @@ topic: Administration
 index: y
 exl-id: 2ae5e14f-29c6-49c1-89ee-59de8a596aa6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '43'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
