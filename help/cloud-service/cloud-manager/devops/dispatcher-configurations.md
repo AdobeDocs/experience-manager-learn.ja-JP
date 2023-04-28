@@ -1,5 +1,5 @@
 ---
-title: AEM Cloud Manager での Dispatcher の管理
+title: AEM Cloud Manager で Dispatcher を管理
 description: AEM Cloud Manager で Dispatcher 設定を管理します。
 role: Developer
 level: Beginner
@@ -10,14 +10,14 @@ kt: 6915
 thumbnail: 330538.jpg
 exl-id: 7d0812b7-2346-42a9-bcd4-ceb394905bea
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Cloud Manager での Dispatcher 設定の管理
+# AEM Cloud Manager で Dispatcher 設定を管理
 
-Dispatcher がAEM as a Cloud Manager および Cloud Manager でどのように動作するかを調べるには、ベストプラクティスと例を使用します。
+Dispatcher が AEM as Cloud Service および Cloud Manager でどのように動作するかを調べるには、ベストプラクティスと例を使用します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330538?quality=12&learn=on)
