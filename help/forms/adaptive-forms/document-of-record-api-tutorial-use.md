@@ -1,6 +1,6 @@
 ---
-title: API を使用してAEM Formsでレコードのドキュメントを生成する
-description: レコードのドキュメント (DOR) をプログラムで生成する
+title: API を使用して AEM Formsでレコードのドキュメントを生成する
+description: レコードのドキュメント（DOR）をプログラムで生成する
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,21 +9,21 @@ level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
 source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# API を使用してAEM Formsでレコードのドキュメントを生成する {#using-api-to-generate-document-of-record-with-aem-forms}
+# API を使用して AEM Forms でレコードのドキュメントを生成する {#using-api-to-generate-document-of-record-with-aem-forms}
 
-レコードのドキュメント (DOR) をプログラムで生成する
+レコードのドキュメント（DOR）をプログラムで生成する
 
-この記事では、 `com.adobe.aemds.guide.addon.dor.DoRService API` 生成する **レコードのドキュメント** プログラムで [レコードのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) は、アダプティブフォームで取り込まれるPDFバージョンのデータです。
+この記事では、`com.adobe.aemds.guide.addon.dor.DoRService API` を使用して **レコードのドキュメント**&#x200B;をプログラムで生成する方法を説明します。[レコードのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=ja)は、アダプティブフォームで取り込まれる PDF バージョンのデータです。
 
 1. コードスニペットを次に示します。 最初の行は DOR サービスを取得します。
 1. DoROptions を設定します。
-1. DoRService の render メソッドを呼び出し、 DoROptions オブジェクトを render メソッドに渡します。
+1. DoRService の render メソッドを呼び出し、DoROptions オブジェクトを render メソッドに渡します。
 
 ```java
 String dataXml = request.getParameter("data");
@@ -64,21 +64,21 @@ session.save();
 
 ローカルシステムでこれを試すには、次の手順に従ってください
 
-1. [パッケージマネージャーを使用して記事アセットをダウンロードしてインストールする](assets/dor-with-api.zip)
-1. の一部として提供された DevelopingWithServiceUser バンドルをインストールし、開始したことを確認します。 [サービスユーザーの作成記事](service-user-tutorial-develop.md)
-1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
-1. Apache Sling Service User Mapper Service   を探します。
-1. 次のエントリを必ず入力してください _DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_ （「 Service Mappings 」セクション）
-1. [フォームを開く](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
-1. フォームに入力し、「表示PDF」をクリックします
+1. [パッケージマネージャーを使用して記事アセットをダウンロードしてインストールします](assets/dor-with-api.zip)
+1. 「[サービスユーザーを作成する](service-user-tutorial-develop.md)」記事の一部として提供されている DevelopingWithServiceUser バンドルをインストールして開始していることを確認してください。
+1. [configMgr にログインします](http://localhost:4502/system/console/configMgr)
+1. Apache Sling Service User Mapper Service を探します。
+1. サービスマッピングセクションで、エントリ _DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_ を必ず入力してください。
+1. [フォームを開きます](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
+1. フォームに入力し、「PDF を表示」をクリックします
 1. ブラウザーの新しいタブに DOR が表示されます
 
 
 **トラブルシューティングのヒント**
 
-PDFは、新しいブラウザータブに表示されません：
+PDF は、新しいブラウザータブに表示されません。
 
 1. ブラウザーでポップアップをブロックしていないことを確認します
-1. 管理者としてAEMサーバーを起動していることを確認してください（少なくとも Windows の場合）
-1. 「DevelopingWithServiceUser」バンドルがにあることを確認します。 *活動状態*
-1. [システムユーザーを確認します。](http://localhost:4502/useradmin) &#39;fd-service&#39;には、次のノードに対する読み取り、変更、作成の権限があります `/content/usergenerated/content/aemformsenablement`
+1. 管理者として AEM サーバーを起動していることを確認してください（少なくとも Windows の場合）
+1. 「DevelopingWithServiceUser」バンドルが&#x200B;*アクティブ状態*&#x200B;にあることを確認します
+1. [システムユーザー](http://localhost:4502/useradmin)「fd-service」が次のノードに対する読み取り、変更、作成の権限を持っていることを確認してください`/content/usergenerated/content/aemformsenablement`
