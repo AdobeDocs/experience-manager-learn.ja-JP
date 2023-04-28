@@ -1,6 +1,6 @@
 ---
-title: AEMでのAdobe Experience Platform FPID の生成
-description: AEMを使用してAdobe Experience Platform FPID Cookie を生成または更新する方法について説明します。
+title: AEM を使用した Adobe Experience Platform FPID の生成
+description: AEM を使用して Adobe Experience Platform FPID cookie を生成または更新する方法について説明します。
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -10,64 +10,64 @@ last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
 source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1027'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEMでのExperience PlatformFPID の生成
+# AEM を使用した Experience Platform FPID の生成
 
-Adobe Experience Manager(AEM) とAdobe Experience Platform(AEP) の統合では、ユーザーアクティビティを一意に追跡するために、一意のファーストパーティデバイス ID(FPID)cookie を生成し、維持する必要があります。
+Adobe Experience Manager（AEM）と Adobe Experience Platform（AEP）の統合では、ユーザーアクティビティを一意に追跡するために、一意のファーストパーティデバイス ID（FPID）cookie を生成し、維持する必要があります。
 
-サポートドキュメントを読む [ファーストパートのデバイス ID とExperience CloudID の連携の詳細を説明します](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
+サポートドキュメントを読んで、[ファーストパーティデバイス ID と Experience Cloud ID の連携方法の詳細をご確認ください](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=ja)。
 
-AEMを Web ホストとして使用する場合の FPID の仕組みの概要を以下に示します。
+AEM を web ホストとして使用する場合の FPID の仕組みの概要を以下に示します。
 
-![AEMを使用した FPID と ECID](./assets/aem-platform-fpid-architecture.png)
+![AEM を使用した FPID と ECID](./assets/aem-platform-fpid-architecture.png)
 
-## FPID を生成し、AEMで保持します。
+##  AEM を使用した FPID の生成と保持
 
-AEM パブリッシュサービスは、CDN とAEM Dispatcher の両方のキャッシュで、要求をできるだけキャッシュすることで、パフォーマンスを最適化します。
+AEM パブリッシュサービスは、CDN とAEM Dispatcher の両方のキャッシュで、リクエストをできるだけキャッシュすることで、パフォーマンスを最適化します。
 
-一意性を保証するロジックを実装できる AEM Publish から直接提供されるのは、ユーザーごとの一意の FPID Cookie を生成し、FPID 値を返す HTTP 要求です。
+ユーザーごとに一意の FPID cookie を生成し、FPID 値を返す必須の HTTP リクエストは絶対にキャッシュされてはいけません。これらはAEM パブリッシュから直接提供されて、一意性を保証するロジックを実装できます。
 
-FPID の一意性要件を組み合わせると、これらのリソースがキャッシュ不可能になるので、Web ページやその他のキャッシュ可能なリソースのリクエストで FPID Cookie を生成しないでください。
+FPID の一意性要件を組み合わせると、これらのリソースがキャッシュ不可能になるので、web ページやその他のキャッシュ可能なリソースのリクエストで FPID cookie を生成しないでください。
 
 次の図に、AEM パブリッシュサービスによる FPID の管理方法を示します。
 
-![FPID とAEMのフロー図](./assets/aem-fpid-flow.png)
+![FPID と AEM のフロー図](./assets/aem-fpid-flow.png)
 
-1. Web ブラウザーは、AEMがホストする Web ページに対してリクエストをおこないます。 要求は、CDN またはAEM Dispatcher キャッシュからの Web ページのキャッシュされたコピーを使用して提供できます。
-1. Web ページを CDN またはAEM Dispatcher キャッシュから提供できない場合、要求は AEM パブリッシュサービスに到達し、要求された Web ページが生成されます。
-1. 次に、Web ページが Web ブラウザーに返され、要求に対応できなかったキャッシュが生成されます。 AEMの場合、CDN とAEM Dispatcher のキャッシュヒット率が 90%を超えることを想定します。
-1. Web ページには、AEM パブリッシュサービス内のカスタム FPID サーブレットに対してキャッシュ不能な非同期 XHR(AJAX) リクエストを実行する JavaScript が含まれています。 これは（ランダムなクエリパラメーターと Cache-Control ヘッダーにより）キャッシュできないリクエストなので、CDN やAEM Dispatcher によってキャッシュされず、常に AEM パブリッシュサービスに到達して応答を生成します。
-1. AEM パブリッシュサービスのカスタム FPID サーブレットがリクエストを処理し、既存の FPID Cookie が見つからない場合は新しい FPID を生成し、既存の FPID Cookie の有効期間を延長します。 また、このサーブレットは、クライアント側 JavaScript で使用する FPID を応答本文に返します。 幸いにも、カスタム FPID サーブレットロジックは軽量なので、このリクエストによって AEM パブリッシュサービスのパフォーマンスに影響を与えることはありません。
-1. XHR リクエストの応答は、Platform Web SDK で使用するために、応答本文に FPID Cookie と FPID JSON を含むブラウザーに返されます。
+1. Web ブラウザーは、AEM がホストする web ページに対してリクエストを行います。 リクエストは、CDN または AEM Dispatcher キャッシュからの web ページのキャッシュされたコピーを使用して応答されます。
+1. Web ページを CDN またはAEM Dispatcher キャッシュから提供できない場合、リクエストは AEM パブリッシュサービスに到達し、リクエストされた web ページが生成されます。
+1. 次に、web ページが web ブラウザーに返され、リクエストに対応できなかったキャッシュが生成されます。 AEM の場合、CDN とAEM Dispatcher のキャッシュヒット率が 90%を超えることを想定します。
+1. Web ページには、AEM パブリッシュサービス内のカスタム FPID サーブレットに対してキャッシュ不能な非同期 XHR（AJAX）リクエストを実行する JavaScript が含まれています。 これは（ランダムなクエリパラメーターと Cache-Control ヘッダーにより）キャッシュ不可のリクエストなので、CDN や AEM Dispatcher によってキャッシュされず、常に AEM パブリッシュサービスに到達して応答を生成します。
+1. AEM パブリッシュサービスのカスタム FPID サーブレットがリクエストを処理し、既存の FPID cookie が見つからない場合は新しい FPID を生成し、既存の FPID cookie の有効期間を延長します。 また、このサーブレットは、クライアントサイド JavaScript で使用する FPID を応答本文に返します。 幸いにも、カスタム FPID サーブレットロジックは軽量なので、このリクエストによって AEM パブリッシュサービスのパフォーマンスが影響を受けることはありません。
+1. XHR リクエストに対する応答は、FPID cookie と FPID を応答本文の JSON としてブラウザーに返し、Platform Web SDK で使用されます。
 
 ## コードサンプル
 
-次のコードと設定を AEM パブリッシュサービスにデプロイして、既存の FPID Cookie を生成または延長して FPID を JSON として返すエンドポイントを作成できます。
+次のコードと設定を AEM パブリッシュサービスにデプロイすると、既存の FPID cookie を生成または延長して FPID を JSON として返すエンドポイントを作成できます。
 
-### AEM FPID Cookie サーブレット
+### AEM FPID cookie サーブレット
 
-FPID cookie を生成または拡張するには、 AEM HTTP エンドポイントを作成する必要があります ( [Sling サーブレット](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1).
+FPID cookie を生成または拡張するには、[Sling サーブレット](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1)を使用して AEM HTTP エンドポイントを作成する必要があります。
 
-+ このサーブレットは、 `/bin/aem/fpid` アクセスに認証は必要ないので、 認証が必要な場合は、Sling リソースタイプにバインドします。
-+ このサーブレットは、HTTPGET要求を受け入れます。 応答が `Cache-Control: no-store` キャッシュを防ぐためにですが、一意のキャッシュバスティングクエリパラメーターを使用して、このエンドポイントをリクエストする必要があります。
++ アクセスに認証が必要ないため、サーブレットは `/bin/aem/fpid` にバインドされています。認証が必要な場合は、Sling リソースタイプにバインドします。
++ このサーブレットは、HTTP GET リクエストを受け入れます。 応答はキャッシュを防ぐために `Cache-Control: no-store` でマークされていますが、このエンドポイントは一意のキャッシュ無効化クエリパラメーターも使用してリクエストする必要があります。
 
-HTTP リクエストがサーブレットに到達すると、サーブレットは、リクエストに FPID Cookie が存在するかどうかを確認します。
+HTTP リクエストがサーブレットに到達すると、サーブレットは、リクエストに FPID cookie が存在するかどうかを確認します。
 
 + FPID cookie が存在する場合は、cookie の有効期間を延長し、その値を収集して応答に書き込みます。
-+ FPID Cookie が存在しない場合は、新しい FPID Cookie を生成し、値を保存して応答に書き込みます。
++ FPID cookie が存在しない場合は、新しい FPID cookie を生成し、値を保存して応答に書き込みます。
 
-次に、サーブレットが FPID をフォーム内の JSON オブジェクトとして応答に書き込みます。 `{ fpid: "<FPID VALUE>" }`.
+次に、サーブレットは FPID を `{ fpid: "<FPID VALUE>" }` フォームの JSON オブジェクトとして応答に書き込みます。
 
-FPID Cookie がマークされているので、本文でクライアントに FPID を提供することが重要です `HttpOnly`では、サーバーのみがその値を読み取れ、クライアント側の JavaScript ではその値を読み取れません。
+FPID cookie は `HttpOnly` とマークされているため、FPID を本文でクライアントに提供することが重要です。これは、サーバーのみがその値を読み取ることができ、クライアントサイドの JavaScript は読み取れないことを意味します。
 
 応答本文の FPID 値は、Platform Web SDK を使用して呼び出しをパラメーター化するために使用されます。
 
-以下に、AEMサーブレットエンドポイントのコード例を示します ( `HTTP GET /bin/aep/fpid`) を使用して FPID Cookie を生成または更新し、FPID を JSON として返します。
+以下は、FPID cookie を生成または更新し、FPID を JSON として返す AEM サーブレットエンドポイント（`HTTP GET /bin/aep/fpid` 経由で利用可能）のコード例です。
 
 + `core/src/main/java/com/adobe/aem/guides/wkndexamples/core/aep/impl/FpidServlet.java`
 
@@ -144,24 +144,24 @@ public class FpidServlet extends SlingAllMethodsServlet {
 }
 ```
 
-### HTMLスクリプト
+### HTML スクリプト
 
-カスタムのクライアント側 JavaScript をページに追加して、サーブレットを非同期的に呼び出し、FPID Cookie を生成または更新して、応答で FPID を返す必要があります。
+カスタムのクライアントサイド JavaScript をページに追加して、サーブレットを非同期的に呼び出し、FPID cookie を生成または更新して、応答で FPID を返す必要があります。
 
-この JavaScript スクリプトは、次のいずれかのメソッドを使用して、通常、ページに追加されます。
+この JavaScript スクリプトは、通常、次のいずれかのメソッドを使用して、ページに追加されます。
 
-+ [Adobe Experience Platformのタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [AEM Client Library](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
++ [Adobe Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)
++ [AEM クライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=ja)
 
-カスタムAEM FPID サーブレットへの XHR 呼び出しは、非同期ですが高速なので、AEMが提供する Web ページにユーザーがアクセスし、リクエストが完了する前に移動することができます。
-この場合、AEMから Web ページが次に読み込まれたときに、同じプロセスが再試行されます。
+カスタム AEM FPID サーブレットへの XHR 呼び出しは高速ですが、非同期であるため、ユーザーが AEM によって提供される web ページにアクセスして、リクエストが完了する前に移動する可能性があります。
+この場合、AEM から web ページが次に読み込まれたときに、同じプロセスが再試行されます。
 
-AEM FPID サーブレットへの HTTPGET(`/bin/aep/fpid`) は、ブラウザーと AEM パブリッシュサービスの間のインフラストラクチャが要求の応答をキャッシュしないように、ランダムクエリパラメーターでパラメーター化されます。
-同様に、 `Cache-Control: no-store` キャッシュを避けるために、リクエストヘッダーが追加されました。
+AEM FPID サーブレットへの HTTP GET（`/bin/aep/fpid`）は、ブラウザーと AEM パブリッシュサービスの間のインフラストラクチャがリクエストの応答をキャッシュしないように、ランダムクエリパラメーターでパラメーター化されます。
+同様に、キャッシュを避けるために、`Cache-Control: no-store` リクエストヘッダーが追加されます。
 
-AEM FPID サーブレットの呼び出し時に、FPID が JSON 応答から取得され、 [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en) を追加して、Experience PlatformAPI に送信します。
+AEM FPID サーブレットが呼び出されると、FPID が JSON 応答から取得され、[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=ja) によって使用されて Experience Platform API に送信されます。
 
-詳しくは、Experience Platformのドキュメントを参照してください。 [identityMap での FPID の使用](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)
+詳しくは、Experience Platform の [identityMap での FPID の使用](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap?lang=ja)ドキュメントを参照してください。 
 
 ```javascript
 ...
@@ -186,9 +186,9 @@ AEM FPID サーブレットの呼び出し時に、FPID が JSON 応答から取
 
 ### Dispatcher 許可フィルター
 
-最後に、カスタム FPID サーブレットへの HTTPGETリクエストは、AEM Dispatcher の `filter.any` 設定。
+最後に、AEM Dispatcher の `filter.any` 設定を介して、カスタム FPID サーブレットへの HTTP GET リクエストを許可する必要があります。
 
-この Dispatcher 設定が正しく実装されていない場合、HTTPGETは `/bin/aep/fpid` 結果は 404 になります。
+この Dispatcher 設定が正しく実装されていない場合、`/bin/aep/fpid` への HTTP GET リクエストは 404 を返します。
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -196,12 +196,12 @@ AEM FPID サーブレットの呼び出し時に、FPID が JSON 応答から取
 /1099 { /type "allow" /method "GET" /url "/bin/aep/fpid" }
 ```
 
-## Experience Platformリソース
+## Experience Platform リソース
 
-ファーストパーティExperience PlatformID(FPID) と Platform Web SDK を使用した ID データの管理について、次のデバイスドキュメントを確認します。
+ファーストパーティデバイス ID（FPID）と Platform Web SDK を使用した ID データの管理については、次の Experience Platform ドキュメントを確認してください。
 
-+ [ファーストパーティデバイス ID の生成](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
-+ [Platform Web SDK のファーストパーティデバイス ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
-+ [Platform Web SDK の ID データ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
++ [ファーストパーティデバイス ID の生成](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=ja)
++ [Platform Web SDK のファーストパーティデバイス ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=ja)
++ [Platform Web SDK の ID データ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=ja)
 
 
