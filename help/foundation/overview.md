@@ -1,33 +1,33 @@
 ---
 title: AEM Foundation のビデオとチュートリアル
-description: Adobe Experience Manager Foundation のヘルプを参照するには、ビデオとチュートリアルをご覧ください。
+description: Adobe Experience Manager Foundation のヘルプについては、ビデオとチュートリアルをご覧ください。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '215'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # AEM Foundation のビデオとチュートリアル {#overview}
 
-Adobe Experience Managerは、AEM Sites、Assets およびFormsのユーザーが使用できる共通の機能セットを提供します。
+Adobe Experience Manager は、AEM Sites、Assets、Forms のユーザーが使用できる共通の機能セットを提供します。
 
 <div id="whats-new-section">
 
 ## 新機能
 
-* **[Workflow AEM （ビデオ）を使用](./workflow/use-workflow.md)**
+* **[AEM におけるワークフローの使用（ビデオ）](./workflow/use-workflow.md)**
 
-   *AEM Workflow は、AEMでコンテンツを共同作業、管理および処理する手段を提供します。*
+   *AEM ワークフローは、AEM でコンテンツの共同作業、管理、処理を行う方法を提供します。*
 
-* **[Cloud Manager for AEMについて（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *AEM版 Cloud Manager を使用すると、AEM環境の管理、検査、セルフサービスを容易におこなえます。*
+* **[Cloud Manager for AEM について（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
+   *Cloud Manager for AEM を使用すると、AEM 環境の管理、検査、セルフサービスを簡単に行うことができます。*
 
 * **[Cloud Manager CI/CD Pipeline の使用（ビデオ）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *Cloud Manager の CI/CD パイプラインを使用して、安全で一貫性のあるデプロイメントを確実におこなう方法を説明します。*
+   *Cloud Manager の CI/CD パイプラインを使用して、安全で一貫性のあるデプロイメントを確実に実行する方法について説明します。*
 
 </div>
 
@@ -46,41 +46,41 @@ Adobe Experience Managerは、AEM Sites、Assets およびFormsのユーザー�
 <tr>
   <td>
     <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <img alt="Cloud Manager for AEMについて" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
+    <img alt="Cloud Manager for AEM について" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
     </a>
     <div>
      <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <strong>Cloud Manager for AEMについて</strong>
-    </a>
+ <strong>Cloud Manager for AEM について</strong>
+ </a>
     </div>
     <p>
-    <em>AEM版 Cloud Manager は、AEM環境の管理、検査、セルフサービスを容易におこなえる、シンプルで堅牢なソリューションです。</em>
+    <em>Cloud Manager for AEM は、AEM 環境の管理、検査、セルフサービスを容易にする、シンプルで堅牢なソリューションを提供します。</em>
     <p>
   </td>
    <td>
     <a href="./development/set-up-sling-dynamic-include.md">
-    <img alt="Sling Dynamic Include(SDI) の設定" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
+    <img alt="Sling Dynamic Include（SDI）の設定" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>Sling Dynamic Include(SDI) の設定</strong>
-    </a>
+ <strong>Sling Dynamic Include（SDI）の設定</strong>
+ </a>
     </div>
     <p>
-    <em>Sling Dynamic Include(SDI) を設定し、動的なAEMコンポーネントが常に新しいコンテンツを提供できるようにする方法を説明します。</em>
+    <em>Sling Dynamic Include（SDI）を設定し、動的な AEM コンポーネントが常に新規コンテンツを提供できるようにする方法について説明します。</em>
     <p>
   </td>
   <td>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <img alt="AEMをアップグレードする理由について" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
+    <img alt="AEM をアップグレードする理由について" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <strong>AEMをアップグレードする理由を理解する</strong>
-    </a>
+ <strong>AEM をアップグレードする理由について</strong>
+ </a>
     </div>
     <p>
-    <em>AEMの最新バージョンへのアップグレードを検討する際に理解すべき主な機能の大まかな分類。</em>
+    <em>最新バージョンの AEM へのアップグレードを検討する際に理解しておくべき主な機能の大まかな分類について説明します。</em>
     </p>
   </td>
 </tr>
@@ -90,7 +90,7 @@ Adobe Experience Managerは、AEM Sites、Assets およびFormsのユーザー�
 
 ## その他のリソース
 
-* [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
-* [AEM Sitesのビデオとチュートリアル](/help/sites/overview.md)
-* [AEM Assetsのビデオとチュートリアル](/help/assets/overview.md)
-* [AEM Formsのビデオとチュートリアル](/help/forms/overview.md)
+* [AEM as a Cloud Service のチュートリアル](/help/cloud-service/overview.md)
+* [AEM Sites のビデオおよびチュートリアル](/help/sites/overview.md)
+* [AEM Assets のビデオとチュートリアル](/help/assets/overview.md)
+* [AEM Forms のビデオとチュートリアル](/help/forms/overview.md)
