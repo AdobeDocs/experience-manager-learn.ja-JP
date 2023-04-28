@@ -1,7 +1,7 @@
 ---
-title: JSON スキーマとデータを使用したAEM Forms[Part4]
+title: JSON スキーマとデータを使用した AEM Forms（パート 4）
 seo-title: AEM Forms with JSON Schema and Data[Part4]
-description: マルチパートチュートリアルで、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
+description: 複数のパートで構成されているチュートリアルでは、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -14,24 +14,24 @@ role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '442'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 送信されたデータに対するクエリ
 
 
-次の手順では、送信されたデータを照会し、結果を表形式で表示します。 これを実現するには、次のソフトウェアを使用します。
+次の手順では、送信されたデータを照会し、結果を表形式で表示します。これには、次のソフトウェアを使用します。
 
-[QueryBuilder](https://querybuilder.js.org/)  — クエリを作成する UI コンポーネント
+[QueryBuilder](https://querybuilder.js.org/) - クエリを作成する UI コンポーネント
 
-[データテーブル](https://datatables.net/) — クエリ結果を表形式で表示します。
+[データテーブル](https://datatables.net/) - クエリ結果を表形式で表示します。
 
-送信済みデータのクエリを有効にする次の UI が構築されました。 JSON スキーマで必要とマークされた要素のみをクエリできます。 以下のスクリーンショットでは、deliverypref が SMS の送信をすべて照会しています。
+送信済みデータのクエリを有効化するために、次の UI が構築されました。JSON スキーマで必要とマークされた要素のみをクエリできます。以下のスクリーンショットでは、deliverypref が SMS のすべての送信を照会しています。
 
-送信されたデータに対してクエリを実行するサンプル UI は、QueryBuilder で使用できる高度な機能をすべて使用しているわけではありません。 自分で試すのがおすすめです。
+送信されたデータに対してクエリを実行するサンプル UI は、QueryBuilder で使用できる高度な機能をすべて使用しているわけではありません。お客様自身でお試しください。
 
 ![querybuilder](assets/querybuilderui.gif)
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 >
 >このチュートリアルの現在のバージョンでは、複数の列のクエリはサポートされていません。
 
-クエリを実行するフォームを選択すると、に対してGET呼び出しが実行されます。 **/bin/getdatakeysfromschema**. このGET呼び出しは、フォームのスキーマに関連付けられた必須フィールドを返します。 次に、必須フィールドが QueryBuilder のドロップダウンリストに入力され、クエリを作成できます。
+クエリを実行するフォームを選択すると、**/bin/getdatakeysfromschema** に対して GET 呼び出しが実行されます。この GET 呼び出しでは、フォームのスキーマに関連付けられた必須フィールドが返されます。次に、クエリを作成するための必須フィールドが QueryBuilder のドロップダウンリストに入力されます。
 
-次のコードスニペットは、JSONSchemaOperations サービスの getRequiredColumnsFromSchema メソッドを呼び出します。 このメソッド呼び出しにスキーマのプロパティと必要な要素を渡します。 この関数呼び出しで返される配列は、クエリビルダードロップダウンリストの
+次のコードスニペットは、JSONSchemaOperations サービスの getRequiredColumnsFromSchema メソッドを呼び出します。このメソッド呼び出しに、プロパティとスキーマの必須要素を渡します。この関数呼び出しで返される配列は、クエリビルダーのドロップダウンリストへの入力に使用されます
 
 ```java
 public JSONArray getData(String formName) throws SQLException, IOException {
@@ -64,18 +64,18 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-GetResult ボタンがクリックされると、 **&quot;/bin/querydata&quot;**. QueryBuilder UI で作成したクエリを、クエリパラメーターを使用してサーブレットに渡します。 次に、サーブレットは、このクエリを SQL クエリにマッセージし、データベースのクエリに使用できます。 例えば、「Mouse」という名前のすべての製品を取得する検索を行う場合、Query Builder のクエリ文字列は次のようになります。 `$.productname = 'Mouse'`. このクエリは、次のように変換されます
+「GetResult」ボタンをクリックすると、Get 呼び出しが&#x200B;**「/bin/querydata」**&#x200B;に対して行われます。QueryBuilder UI で作成したクエリを、クエリパラメーターを使用してサーブレットに渡します。次に、サーブレットがこのクエリを SQL クエリに変換し、データベースのクエリに使用できる状態になります。例えば、「Mouse」という名前のすべての製品を検索する場合、クエリビルダーのクエリ文字列は `$.productname = 'Mouse'` になります。このクエリは、次のように変換されます
 
-選択 &#42; を aemformswithjson からダウンロードします。  JSON_EXTRACT( formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;の場合の formsubmissions
+aemformswithjson から &#42; を選択します。formsubmissions  where JSON_EXTRACT(  formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 
-次に、このクエリの結果が返され、UI にテーブルが入力されます。
+次に、このクエリの結果が返され、UI のテーブルに入力されます。
 
-このサンプルをローカルシステムで実行するには、次の手順を実行してください
+このサンプルをローカルシステムで実行するには、次の手順を実行します
 
-1. [ここで説明するすべての手順に従っていることを確認します。](part2.md)
-1. [AEM Package Manager を使用して Dashboardv2.zip を読み込みます。](assets/dashboardv2.zip) このパッケージには、データを照会するために必要なすべてのバンドル、設定、カスタム送信、サンプルページが含まれています。
-1. サンプルの json スキーマを使用してアダプティブフォームを作成する
-1. 「customsubmithelpx」カスタム送信アクションを送信するアダプティブフォームを設定する
-1. フォームに入力して送信
-1. ブラウザーで次の場所を指定します。 [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
-1. フォームを選択し、単純なクエリを実行します
+1. [ここで説明するすべての手順に従っていることを確認します](part2.md)
+1. [AEM パッケージマネージャーを使用して Dashboardv2.zip を読み込みます。](assets/dashboardv2.zip) このパッケージには、データを照会するために必要なすべてのバンドル、設定、カスタム送信、サンプルページが含まれています。
+1. サンプルの json スキーマを使用してアダプティブフォームを作成します
+1. 「customsubmithelpx」カスタム送信アクションに送信するように、アダプティブフォームを設定します
+1. フォームに入力して送信します
+1. ブラウザーで [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html) にアクセスします
+1. フォームを選択し、シンプルなクエリを実行します
