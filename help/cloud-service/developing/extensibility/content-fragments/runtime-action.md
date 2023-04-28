@@ -1,6 +1,6 @@
 ---
-title: AEM Content Fragment Console 拡張機能Adobe I/O Runtimeアクション
-description: AEMコンテンツフラグメントコンソール拡張モーダルを作成する方法について説明します。
+title: AEM コンテンツフラグメントコンソール拡張機能の Adobe I/O Runtime アクション
+description: AEM コンテンツフラグメントコンソール拡張機能モーダルを作成する方法について説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,46 +10,46 @@ recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
 source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '560'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# Adobe I/O Runtime action
+# Adobe I/O Runtime アクション
 
-![AEM Content Fragment Extension ランタイムアクション](./assets/runtime-action/action-runtime-flow.png){align="center"}
+![AEM コンテンツフラグメント拡張機能のランタイムアクション](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
-AEMコンテンツフラグメント拡張機能には、オプションで任意の数の [Adobe I/O Runtime actions](https://developer.adobe.com/runtime/docs/).
+AEM コンテンツフラグメント拡張機能には、オプションで任意の数の [Adobe I/O Runtime アクション](https://developer.adobe.com/runtime/docs/)を追加できます。
 
-Adobe I/O Runtimeのアクションは、拡張機能によって呼び出すことができるサーバーレス関数です。 アクションは、AEMやその他のAdobeWeb サービスとの対話を必要とする作業を実行する場合に役立ちます。
-アクションは、通常、長時間（数秒以上）のタスクを実行したり、AEMや他の Web サービスに HTTP リクエストを送信したりする場合に最も役に立ちます。
+Adobe I/O Runtime のアクションは、拡張機能によって呼び出すことができるサーバーレス関数です。 アクションは、AEM やその他の Adobe web サービスとのやり取りを必要とする作業を実行する場合に役立ちます。
+アクションは通常、長時間（数秒以上）のタスクを実行したり、AEM や他の web サービスに HTTP リクエストを送信したりする場合に最も役に立ちます。
 
-Adobe I/O Runtimeのアクションを使用して作業を実行する利点は、次のとおりです。
+Adobe I/O Runtime アクションを使用して作業を実行する利点は、次のとおりです。
 
 + アクションは、ブラウザーのコンテキスト外で実行されるサーバーレス関数で、CORS について心配する必要がなくなります
 + ユーザーがアクションを中断することはできません（例えば、ブラウザーを更新するなど）。
 + アクションは非同期なので、ユーザーをブロックすることなく、必要に応じて実行できます
 
-AEMコンテンツフラグメント拡張のコンテキストでは、アクションは、AEM as a Cloud Serviceとの直接通信に最もよく使用されますが、多くの場合、次のように使用されます。
+AEM コンテンツフラグメント拡張機能のコンテキストでは、アクションは AEM as a Cloud Service との直接通信に最もよく使用されますが、多くの場合は次のように使用されます。
 
-+ コンテンツフラグメントに関するAEMからの関連データの収集
++ コンテンツフラグメントに関する AEM からの関連データの収集
 + コンテンツフラグメントに対するカスタム操作の実行
 + コンテンツフラグメントのカスタム作成
 
-AEMコンテンツフラグメント拡張機能がコンテンツフラグメントコンソール、拡張機能およびそのサポートアクションに表示されますが、は、カスタムAEM API エンドポイントを含む、使用可能なAEM HTTP API を呼び出すことができます。
+AEM コンテンツフラグメント拡張機能は、コンテンツフラグメントコンソール、拡張機能およびそのサポートアクションに表示されますが、カスタム AEM API エンドポイントなど、使用可能な AEM HTTP API を呼び出すことができます。
 
-## アクションを呼び出す
+## アクションの呼び出し
 
-Adobe I/O Runtimeのアクションは、主にAEM Content Fragment 拡張機能の 2 つの場所から呼び出されます。
+Adobe I/O Runtime のアクションは、主に AEM コンテンツフラグメント拡張機能の 2 つの場所から呼び出されます。
 
-1. この [延長登録](./extension-registration.md) `onClick(..)` ハンドラー
-1. 内 [モーダル](./modal.md)
+1. [拡張機能登録の](./extension-registration.md) `onClick(..)` ハンドラー
+1.  [モーダル](./modal.md)内
 
 ### 拡張機能の登録から
 
-Adobe I/O Runtimeのアクションは、拡張機能の登録コードから直接呼び出すことができます。 最も一般的な使用例は、アクションを [ヘッダーメニュー](./header-menu.md#no-modal)を使用しないのボタン [モデル](./modal.md).
+Adobe I/O Runtimeのアクションは、拡張機能の登録コードから直接呼び出すことができます。 最も一般的なユースケースは、 [モデル](./modal.md)を使用しない[ヘッダーメニュー](./header-menu.md#no-modal)のボタンにアクションをバインドすることです。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -105,11 +105,11 @@ function ExtensionRegistration() {
 }
 ```
 
-### 開始モーダル
+### モーダルから
 
-Adobe I/O Runtimeのアクションは、モデルから直接呼び出して、より複雑な作業を実行できます。特に、AEMas a Cloud Serviceの Web サービス、またはサードパーティのサービスとの通信に依存する作業を実行する場合に便利です。
+Adobe I/O Runtime のアクションは、モデルから直接呼び出してより複雑な作業を実行できます。特に、AEM as a Cloud Service、Adobe web サービス、またはサードパーティのサービスとの通信に依存する作業を実行する場合に便利です。
 
-Adobe I/O Runtimeのアクションは、サーバーレスAdobe I/O Runtime環境で実行される、Node.js ベースの JavaScript アプリケーションです。 これらのアクションは、拡張機能SPAで HTTP を介してアドレス可能です。
+Adobe I/O Runtime のアクションは、サーバーレスの Adobe I/O Runtime 環境で実行される、Node.js ベースの JavaScript アプリケーションです。 これらのアクションは、拡張機能 SPAで HTTP を介してアドレス可能です。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -225,7 +225,7 @@ export default function MyModal() {
 }
 ```
 
-## Adobe I/O Runtime action
+## Adobe I/O Runtime アクション
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 
@@ -301,28 +301,28 @@ async function main (params) {
 
 ## AEM HTTP API
 
-次のAEM HTTP API は、拡張機能とのやり取りで一般的に使用されます。
+次の AEM HTTP API は、 AEM の拡張機能とのやり取りで一般的に使用されます。
 
-+ [AEM GraphQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-+ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
-   + [AEM Assets HTTP API でのコンテンツフラグメントのサポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
-+ [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [完全なAEMas a Cloud ServiceAPI リファレンス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [AEM GraphQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
++ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=ja)
+   + [AEM Assets HTTP API でのコンテンツフラグメントのサポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html?lang=ja)
++ [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)
++ [完全な AEM as a Cloud Service API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html?lang=ja)
 
 
-## Adobenpm モジュール
+## Adobe npm モジュール
 
-次に、Adobe I/O Runtimeのアクションを開発する際に役立つ npm モジュールを示します。
+以下は、Adobe I/O Runtime のアクションを開発する際に役立つ npm モジュールです。
 
 + [@adobe/aio-sdk](https://www.npmjs.com/package/@adobe/aio-sdk)
    + [コア SDK](https://github.com/adobe/aio-sdk-core)
    + [ステートライブラリ](https://github.com/adobe/aio-lib-state)
    + [ファイルライブラリ](https://github.com/adobe/aio-lib-files)
-   + [Adobe Target Library](https://github.com/adobe/aio-lib-target)
-   + [Adobe Analytics Library](https://github.com/adobe/aio-lib-analytics)
-   + [Adobe Campaign Standard Library](https://github.com/adobe/aio-lib-campaign-standard)
-   + [Adobe顧客プロファイルライブラリ](https://github.com/adobe/aio-lib-customer-profile)
-   + [Adobe Audience Manager Customer Data Library](https://github.com/adobe/aio-lib-audience-manager-cd)
+   + [Adobe Target ライブラリ](https://github.com/adobe/aio-lib-target)
+   + [Adobe Analytics ライブラリ](https://github.com/adobe/aio-lib-analytics)
+   + [Adobe Campaign Standard ライブラリ](https://github.com/adobe/aio-lib-campaign-standard)
+   + [Adobe 顧客プロファイルライブラリ](https://github.com/adobe/aio-lib-customer-profile)
+   + [Adobe Audience Manager 顧客データライブラリ](https://github.com/adobe/aio-lib-audience-manager-cd)
    + [Adobe I/O イベント](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-networking](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)
