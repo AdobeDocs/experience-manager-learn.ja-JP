@@ -1,6 +1,6 @@
 ---
 title: モバイルフォームのデバッグログを取り込む手順
-description: Mobile Forms に関する問題のデバッグ用のデバッグログの設定
+description: モバイルフォームに関連する問題をデバッグするためのデバッグログの設定
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -10,9 +10,9 @@ topic: Administration
 index: y
 exl-id: 0fdfa72d-0e96-4389-86b4-826c37d64982
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
