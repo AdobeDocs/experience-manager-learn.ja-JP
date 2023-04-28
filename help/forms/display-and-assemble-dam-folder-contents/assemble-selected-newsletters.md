@@ -1,6 +1,6 @@
 ---
 title: 選択したニュースレターを 1 つのファイルに結合する
-description: アセンブラーサービスを使用して、選択したニュースレターを結合する
+description: Assembler サービスを使用して、選択したニュースレターを結合する
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,20 +8,20 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 選択したニュースレターを 1 つの PDF に結合
+# 選択したニュースレターを 1 つの PDF に結合する
 
-ユーザーの選択内容は、非表示のフィールドに保存されます。 この非表示フィールドの値は、を使用して選択を 1 つの PDF に組み合わせるサーブレットに渡されます。 [Forms Assembler サービス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+ユーザーの選択内容は、非表示のフィールドに保存されます。この非表示フィールドの値は、[Forms Assembler サービス](https://developer.adobe.com/jp/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html)を使用して選択内容を 1 つの PDF に結合するサーブレットに渡されます。
 
 
-## PDF ファイルをアセンブリするサーブレット
+## PDF ファイルを組み合わせるサーブレット
 
-次のコードは、選択したニュースレターの組み立てを行います。 このコードは、ユーザーの選択内容からドキュメントのマップを作成します。 このマップから DDX が作成され、ドキュメントのマップと共にこの DDX が Assembler サービスの invoke メソッドに渡され、結合されたドキュメントが取得されます。 アセンブリされた pdf がリポジトリに保存され、そのパスが呼び出し元のアプリケーションに返されます。
+選択したニュースレターを次のコードでアセンブリします。このコードで、ユーザーの選択内容からドキュメントのマップを作成します。このマップから DDX が作成され、ドキュメントのマップと共に Assembler サービスの呼び出しメソッドに渡されることで、結合されたドキュメントが取得されます。組み合わせた PDF がリポジトリに保存され、そのパスが呼び出し元のアプリケーションに返されます。
 
 ```java
 protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse response)
@@ -79,7 +79,7 @@ protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse r
 
 ## ユーティリティ関数
 
-ニュースレターの組み立てに次のユーティリティ関数が使用されました。 これらのユーティリティ関数は、ドキュメントのマップから DDX を作成し、 org.w3c.dom.Document を AEMFD ドキュメントオブジェクトに変換します。
+ニュースレターのアセンブリには、次のユーティリティ関数が使用されました。これらのユーティリティ関数は、ドキュメントのマップから DDX を作成し、org.w3c.dom.Document を AEMFD ドキュメントオブジェクトに変換します。
 
 
 ```java
