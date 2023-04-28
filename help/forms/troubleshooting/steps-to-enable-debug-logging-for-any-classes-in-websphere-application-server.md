@@ -1,6 +1,6 @@
 ---
-title: WebSphere Application Server の任意のクラスのデバッグログを有効にする手順
-description: WebSphere Application Server に関する問題のトラブルシューティング用にデバッグログを設定します
+title: WebSphere アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順
+description: WebSphere アプリケーションサーバーに関する問題のトラブルシューティング用にデバッグログを設定する
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,14 +9,14 @@ topic: Administration
 index: y
 exl-id: fd7ad4df-4c27-42f2-889f-03e170bac319
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Websphere Application Server の任意のクラスのデバッグログを有効にする手順
+# WebSphere アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順
 
-*このビデオでは、Websphere Application Server の任意のクラスのデバッグログを有効にする手順を説明します。*
+*このビデオでは、WebSphere アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順を説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)
