@@ -1,6 +1,6 @@
 ---
-title: 値アプリのフィルタリング
-description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャをフィルタリングする簡単な Vue アプリです。
+title: Vue アプリケーションのフィルタリング
+description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャをフィルタリングする、シンプルな Vue アプリケーションです。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,20 +12,20 @@ index: false
 hide: true
 hidefromtoc: true
 source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '137'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# 値アプリのフィルタリング
+# Vue アプリケーションのフィルタリング
 
-を使用してデータをフィルタリングするAEMヘッドレス GraphQL API の機能を調べる [値](https://vuejs.org/) アプリを使用します。 この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャのリストを作成します。
+AEM ヘッドレス GraphQL API の機能を探索し、[Vue](https://vuejs.org/) アプリケーションを使用してデータをフィルタリングします。この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
 
-このコードは、Adobeの [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) を使用して、Vue から永続化された GraphQL クエリを呼び出します。 このアプリは、 `wknd-shared/adventures-all` すべてのアドベンチャを収集し、使用可能なアクティビティタイプのリストを派生する永続的なクエリ。 ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリを実行し、指定したアクティビティタイプのアドベンチャーのみのアドベンチャーの詳細を取得します。
+このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、Vue から GraphQL 永続クエリを呼び出す方法を示しています。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
 
-このコード：
+このコードは次を実行します。
 
-+ AEM パブリッシュサービスに接続し、認証は不要
-+ WKND の永続クエリを使用します。 `wknd-shared/adventures-all` および `wknd-shared/adventures-by-activity`
++ AEM パブリッシュサービスに接続し、認証を必要としない
++ WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-activity` を使用する
