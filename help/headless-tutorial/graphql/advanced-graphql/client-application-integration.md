@@ -1,6 +1,6 @@
 ---
-title: クライアントアプリケーションの統合 — AEMヘッドレスの高度な概念 — GraphQL
-description: 永続的なクエリを実装し、WKND アプリに統合します。
+title: クライアントアプリケーション統合 - AEM ヘッドレスの高度な概念 - GraphQL
+description: 永続クエリを実装して、WKND アプリに統合します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,21 +8,21 @@ role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '962'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# クライアントアプリケーションの統合
+# クライアントアプリケーション統合
 
-前の章では、GraphiQL エクスプローラーを使用して永続クエリを作成し、更新しました。
+前の章では、GraphiQL エクスプローラーを使用して永続クエリを作成しおよび更新しました。
 
-この章では、既存の内部で HTTPGETリクエストを使用して、永続化されたクエリを WKND クライアントアプリケーション（WKND アプリ）に統合する手順について説明します **React コンポーネント**. また、AEMヘッドレスラーニングを適用し、WKND クライアントアプリケーションを強化するための専門知識をコーディングするためのオプションの課題も提供します。
+この章では、既存の **React コンポーネント**&#x200B;内部で HTTP GET リクエストを使用して、永続クエリを WKND クライアントアプリケーション（WKND アプリ）に統合する手順について説明します。また、AEM ヘッドレスの習得事項つまりコーディング専門知識を適用して、WKND クライアントアプリケーションを強化するオプション課題も提供します。
 
 ## 前提条件 {#prerequisites}
 
-このドキュメントは、マルチパートチュートリアルの一部です。 この章を進める前に、前の章が完了していることを確認してください。 WKND クライアントアプリケーションはAEMパブリッシュサービスに接続するので、次の操作をおこなうことが重要です。 **次の内容をAEMパブリッシュサービスに公開しました**.
+このドキュメントは、複数のパートで構成されているチュートリアルの一部です。 この章を進める前に、前の章が完了していることを確認してください。 WKND クライアントアプリケーションは AEM パブリッシュサービスに接続するので、**次のものを AEM パブリッシュサービスに公開してある**&#x200B;ことが重要です。
 
 * プロジェクト設定
 * GraphQL エンドポイント
@@ -30,32 +30,32 @@ ht-degree: 2%
 * 作成済みコンテンツフラグメント
 * GraphQL 永続クエリ
 
-この _この章の IDE スクリーンショットは、次のものから取得します。 [Visual Studio Code](https://code.visualstudio.com/)_
+_この章の IDE スクリーンショットは、[Visual Studio Code](https://code.visualstudio.com/) から取得したもの_&#x200B;です。
 
-### 第 1 章～第 4 章ソリューションパッケージ（任意） {#solution-package}
+### 第 1～4 章：ソリューションパッケージ（オプション） {#solution-package}
 
-1 ～ 4 章のAEM UI の手順を完了するソリューションパッケージがインストール可能です。 このパッケージは **不要** 前の章が完了している場合
+第 1～4 章の AEM UI の手順を完了するソリューションパッケージをインストールできます。 前の章が完了している場合、このパッケージは **不要**&#x200B;です。
 
-1. ダウンロード [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
-1. AEMで、に移動します。 **ツール** > **導入** > **パッケージ** アクセスする **パッケージマネージャー**.
-1. 前の手順でダウンロードしたパッケージ（zip ファイル）をアップロードしてインストールします。
-1. AEM パブリッシュサービスにパッケージをレプリケートします
+1. [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) をダウンロード します。
+1. AEM で、**ツール**／**デプロイメント**／**パッケージ**&#x200B;に移動して、 **パッケージマネージャー**&#x200B;にアクセスします。
+1. 前の手順でダウンロードしたパッケージ（zip ファイル）をアップロードしインストールします。
+1. パッケージを AEM パブリッシュサービスにレプリケートします。
 
 ## 目的 {#objectives}
 
-このチュートリアルでは、を使用して、永続的なクエリのリクエストをサンプル WKND GraphQL React アプリに統合する方法を学びます。 [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js).
+このチュートリアルでは、[AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js) を使用して永続クエリのリクエストをサンプルの WKND GraphQL React アプリに統合する方法を説明します。
 
-## サンプルクライアントアプリケーションの複製と実行 {#clone-client-app}
+## サンプルクライアントアプリケーションのクローン作成と実行 {#clone-client-app}
 
-チュートリアルを高速化するために、スターター React JS アプリが提供されます。
+チュートリアルの進行を促進するために、スターター React JS アプリが提供されます。
 
-1. のクローン [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) リポジトリ：
+1. [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. を編集します。 `aem-guides-wknd-graphql/advanced-tutorial/.env.development` ファイルとセット `REACT_APP_HOST_URI` をクリックして、target AEMパブリッシュサービスを指すように設定します。
+1. `aem-guides-wknd-graphql/advanced-tutorial/.env.development` ファイルを編集し、`REACT_APP_HOST_URI` がターゲット AEM パブリッシュサービスを指すように設定します。
 
    オーサーインスタンスに接続する場合は、認証方法を更新します。
 
@@ -83,9 +83,9 @@ ht-degree: 2%
 
    >[!NOTE]
    > 
-   > 上記の手順は、React アプリを **AEM パブリッシュサービス**&#x200B;ただし、 **AEM オーサーサービス** target AEM as a Cloud Service環境のローカル開発トークンを取得します。
+   > 上記の手順は、React アプリを **AEM パブリッシュサービス**&#x200B;に接続します。ただし、**AEM オーサーサービス**&#x200B;に接続するには、ターゲット AEM as a Cloud Service 環境のローカル開発トークンを取得します。
    >
-   > アプリを [AEMaaCS SDK を使用したローカルオーサーインスタンス](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) 基本認証を使用します。
+   > 基本認証を使用して、アプリを [AEMaaCS SDK を使用したローカルオーサーインスタンス](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)に接続することもできます。
 
 
 1. ターミナルを開き、次のコマンドを実行します。
@@ -96,66 +96,66 @@ ht-degree: 2%
    $ npm start
    ```
 
-1. 新しいブラウザーウィンドウが読み込まれます。 [http://localhost:3000](http://localhost:3000)
+1. 新しいブラウザーウィンドウで [http://localhost:3000](http://localhost:3000) が読み込まれます。
 
 
-1. タップ **Camping** > **ヨセミテバックパッキン** ヨセミテバックパッキングの冒険の詳細を見る
+1. **Camping**／**Yosemite Backpacking** をタップ して、Yosemite Backpacking アドベンチャーの詳細を確認します。
 
-   ![Yosemite バックパッキング画面](assets/client-application-integration/yosemite-backpacking-adventure.png)
+   ![Yosemite Backpacking の画面](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
-1. ブラウザーの開発者ツールを開き、 `XHR` リクエスト
+1. ブラウザーの開発者ツールを開き、`XHR` リクエストを調べます
 
-   ![POSTGraphQL](assets/client-application-integration/graphql-persisted-query.png)
+   ![POST GraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
-   次のようになります。 `GET` プロジェクト設定名 (`wknd-shared`)、永続化されたクエリ名 (`adventure-by-slug`)，変数名 (`slug`)，値 (`yosemite-backpacking`)、および特殊文字エンコーディングで使用できます。
+   GraphQL エンドポイントへの `GET` リクエスト（プロジェクト設定名：`wknd-shared`、永続クエリ名：`adventure-by-slug`、変数名：`slug`、値：`yosemite-backpacking` および特殊文字エンコーディング）が表示されます。
 
 >[!IMPORTANT]
 >
->    GraphQL API リクエストが `http://localhost:3000` AEM パブリッシュサービスドメインに対してではなく、 [フードの下で](../multi-step/graphql-and-react-app.md#under-the-hood) 基本チュートリアルから。
+>    GraphQL API リクエストが AEM パブリッシュサービスドメインに対してではなく `http://localhost:3000` に対して行われた理由については、基本チュートリアルで[内部の処理](../multi-step/graphql-and-react-app.md#under-the-hood)を確認してください。
 
 
-## コードの確認
+## コードのレビュー
 
-内 [基本チュートリアル — AEM GraphQL API を使用した React アプリの構築](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) 実践的な専門知識を得るために、主要なファイルをいくつか確認し、拡張した手順です。 WKND アプリを強化する前に、主要なファイルを確認します。
+[基本チュートリアル - AEM GraphQL API を使用した React アプリの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object?lang=ja)ステップでは、主要なファイルをいくつか確認し拡張して実践的な専門知識を獲得しました。WKND アプリを強化する前に、主要なファイルを確認します。
 
-* [AEMHeadless オブジェクトを確認する](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
+* [AEMHeadless オブジェクトを確認する](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object?lang=ja)
 
-* [AEM GraphQL 永続クエリを実行するための実装](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
+* [AEM GraphQL 永続クエリを実装して実行する](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries?lang=ja)
 
-### レビュー `Adventures` React コンポーネント
+### `Adventures` React コンポーネントのレビュー
 
-WKND React アプリのメインビューは、すべてのアドベンチャのリストです。これらのアドベンチャは、次のようなアクティビティタイプに基づいてフィルタリングできます。 _キャンピング、サイクリング_. このビューは、 `Adventures` コンポーネント。 主な実装の詳細を次に示します。
+WKND React アプリのメインビューは、すべての Adventure のリストです。これらの Adventure は、_Camping や Cycling_ のようなアクティビティタイプに基づいてフィルタリングできます。このビューは、`Adventures` コンポーネントによってレンダリングされます。主な実装の詳細を以下に示します。
 
-* この `src/components/Adventures.js` 呼び出し `useAllAdventures(adventureActivity)` ここに逃げ込む `adventureActivity` 引数はアクティビティタイプです。
+* `src/components/Adventures.js` は `useAllAdventures(adventureActivity)` フックを呼び出します。ここでは `adventureActivity` 引数がアクティビティタイプです。
 
-* この `useAllAdventures(adventureActivity)` フックが `src/api/usePersistedQueries.js` ファイル。 基準 `adventureActivity` の値を指定する場合、呼び出す永続クエリを決定します。 null 値でない場合は、を呼び出します。 `wknd-shared/adventures-by-activity`を指定しない場合は、利用可能なすべてのアドベンチャーを取得します `wknd-shared/adventures-all`.
+* `useAllAdventures(adventureActivity)` フックは、`src/api/usePersistedQueries.js` ファイルで定義されます。`adventureActivity` 値に基づいて、呼び出す永続クエリを決定します。null 値でない場合は `wknd-shared/adventures-by-activity` を呼び出し、それ以外の場合は使用可能なすべてのadventure `wknd-shared/adventures-all` を取得します。
 
-* フックはメイン `fetchPersistedQuery(..)` クエリ実行をに委任する関数 `AEMHeadless` 経由 `aemHeadlessClient.js`.
+* フックは、クエリの実行を `aemHeadlessClient.js` 経由で `AEMHeadless` にデリゲートするメインの `fetchPersistedQuery(..)` 関数を使用します。
 
-* また、関連するデータは、AEM GraphQL 応答から、 `response.data?.adventureList?.items`、 `Adventures` 親 JSON 構造に依存しない React ビューコンポーネント。
+* また、フックは AEM GraphQL レスポンスから `response.data?.adventureList?.items` にある関連データのみを返すので、`Adventures` React の表示コンポーネントを親の JSON 構造に依存せずに済みます。
 
-* クエリが正常に実行されると、 `AdventureListItem(..)` 関数を `Adventures.js` を表示するHTML要素を追加します。 _画像、旅行の長さ、価格、タイトル_ 情報。
+* クエリが正常に実行されると、`Adventures.js` の `AdventureListItem(..)` レンダリング関数が HTML 要素を追加して、_画像、トリップの長さ、価格およびタイトル_&#x200B;情報を表示します。
 
-### レビュー `AdventureDetail` React コンポーネント
+### `AdventureDetail` React コンポーネントのレビュー
 
-この `AdventureDetail` React コンポーネントは、アドベンチャーの詳細をレンダリングします。 主な実装の詳細を次に示します。
+`AdventureDetail` React コンポーネントは、adventure の詳細をレンダリングします。主な実装の詳細を以下に示します。
 
-* この `src/components/AdventureDetail.js` 呼び出し `useAdventureBySlug(slug)` ここに逃げ込む `slug` 引数はクエリパラメータです。
+* `src/components/AdventureDetail.js` は `useAdventureBySlug(slug)` フックを呼び出します。ここでは `slug` 引数がクエリパラメーターです。
 
-* 上記のように、 `useAdventureBySlug(slug)` フックが `src/api/usePersistedQueries.js` ファイル。 呼び出し `wknd-shared/adventure-by-slug` に委任することで、永続化されたクエリを `AEMHeadless` 経由 `aemHeadlessClient.js`.
+* 上記のように、`useAdventureBySlug(slug)` フックは、`src/api/usePersistedQueries.js` ファイルで定義されます。`aemHeadlessClient.js` 経由で `AEMHeadless` にデリゲートして、`wknd-shared/adventure-by-slug` 永続クエリを呼び出します。
 
-* クエリが正常に実行されると、 `AdventureDetailRender(..)` 関数を `AdventureDetail.js` アドベンチャーの詳細を表示するHTML要素を追加します。
+* クエリが正常に実行されると、`AdventureDetail.js` の `AdventureDetailRender(..)` レンダリング関数が HTML 要素を追加して、adventure の詳細を表示します。
 
 
-## コードの拡張
+## コードの機能強化
 
-### 用途 `adventure-details-by-slug` 持続クエリ
+### `adventure-details-by-slug` 永続クエリの使用
 
-前の章では、 `adventure-details-by-slug` 持続的なクエリ。次のような追加のアドベンチャー情報を提供します。 _場所、講師チーム、管理者_. 次を置き換えます。 `adventure-by-slug` と `adventure-details-by-slug` 永続化されたクエリを使用して、この追加情報をレンダリングできます。
+前の章では、`adventure-details-by-slug` 永続クエリを作成しました。これは、_場所、instructorTeam および管理者_&#x200B;などの追加のアドベンチャー情報を提供します。`adventure-by-slug` を `adventure-details-by-slug` 永続クエリに置換して、この追加情報をレンダリングしましょう。
 
-1. `src/api/usePersistedQueries.js`を開きます。
+1. `src/api/usePersistedQueries.js` を開きます。
 
-1. 関数の場所 `useAdventureBySlug()` クエリを更新
+1. 関数 `useAdventureBySlug()` を見つけて、クエリを次のように更新します
 
 ```javascript
  ...
@@ -169,11 +169,11 @@ WKND React アプリのメインビューは、すべてのアドベンチャの
  ...
 ```
 
-### 追加情報を表示
+### 追加情報の表示
 
-1. 追加のアドベンチャー情報を表示するには、 `src/components/AdventureDetail.js`
+1. 追加のアドベンチャー情報を表示するには、`src/components/AdventureDetail.js` を開きます
 
-1. 関数の場所 `AdventureDetailRender(..)` として戻り関数を更新
+1. 関数 `AdventureDetailRender(..)` を見つけて、戻り関数を次のように更新します
 
    ```javascript
    ...
@@ -282,9 +282,9 @@ WKND React アプリのメインビューは、すべてのアドベンチャの
    }
    ```
 
-### 新しいスタイルを定義
+### 新しいスタイルの定義
 
-1. 開く `src/components/AdventureDetail.scss` 次のクラス定義を追加します。
+1. `src/components/AdventureDetail.scss` を開き、次のクラス定義を追加します
 
    ```CSS
    .adventure-detail-administrator,
@@ -303,22 +303,22 @@ WKND React アプリのメインビューは、すべてのアドベンチャの
 
 >[!TIP]
 >
->更新されたファイルは、以下で入手できます。 **AEMガイド WKND - GraphQL** プロジェクト、詳しくは、 [高度なチュートリアル](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) 」セクションに入力します。
+>更新されたファイルは、**AEM Guides WKND - GraphQL** プロジェクトで入手できます。[詳細なチュートリアル](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial)の節を参照してください。
 
 
-上記の機能強化が完了すると、WKND アプリは以下のようになり、ブラウザーの開発者ツールが表示します `adventure-details-by-slug` 永続的なクエリ呼び出し。
+上記の機能強化を完了すると、WKND アプリは以下のようになり、ブラウザーのデベロッパーツールは `adventure-details-by-slug` 永続クエリ呼び出しを示します。
 
-![拡張 WKND アプリ](assets/client-application-integration/Enhanced-WKND-APP.gif)
+![機能強化された WKND アプリ](assets/client-application-integration/Enhanced-WKND-APP.gif)
 
 ## 機能強化の課題（オプション）
 
-WKND React アプリのメインビューでは、次のようなアクティビティタイプに基づいてこれらの Adventures をフィルタリングできます。 _キャンピング、サイクリング_. しかし、WKND ビジネスチームは追加の _場所_ ベースのフィルタリング機能 使用するための要件は以下のとおりです。
+WKND React アプリのメインビューでは、_Camping や Cycling_ などのアクティビティタイプに基づいて、これらの Adventure をフィルタリングできます。ただし、WKND ビジネスチームは、_場所_&#x200B;ベースのフィルタリング機能を追加したいと考えています。使用するための要件は以下のとおりです。
 
-* WKND アプリのメイン表示で、左上隅または右隅に _場所_ フィルターアイコン。
-* クリック _場所_ フィルターアイコンには、場所のリストが表示されます。
-* リストから目的のロケーションオプションをクリックすると、一致する Adventures のみが表示されます。
-* 一致するアドベンチャーが 1 つだけの場合、アドベンチャーの詳細ビューが表示されます。
+* WKND アプリのメインビューで、左上隅または右上隅に「_場所_」フィルタリングアイコンを追加します。
+* 「_場所_」フィルタリングアイコンをクリックすると、場所のリストが表示されます。
+* リストから目的の場所のオプションをクリックすると、一致する Adventure のみが表示されます。
+* 一致するアドベンチャーが 1 つしかない場合は、Adventure Detail ビューが表示されます。
 
 ## これで完了です
 
-おめでとうございます。これで、統合が完了し、永続化されたクエリをサンプル WKND アプリに実装することが完了しました。
+おめでとうございます。これで、永続クエリのサンプル WKND アプリへの統合と実装が完了しました。
