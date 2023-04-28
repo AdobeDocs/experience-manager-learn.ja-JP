@@ -1,6 +1,6 @@
 ---
-title: Creative CloudとAssets Essentials
-description: Assets EssentialsとAdobe Creative Cloudの統合方法を説明します。
+title: Creative Cloud と Assets Essentials
+description: Assets Essentials と Adobe Creative Cloud の統合方法について説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -11,17 +11,17 @@ thumbnail: 336069.jpeg
 last-substantial-update: 2022-10-12T00:00:00Z
 exl-id: 74eb8b3c-b521-4fd1-9859-43c06f754005
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '55'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Creative CloudとAssets Essentials
+# Creative Cloud と Assets Essentials
 
-Assets EssentialsをAdobe Creative Cloudライブラリと統合し、次のことを可能にする方法を説明します。
+Assets Essentials を Adobe Creative Cloud ライブラリと統合して、以下を可能にする方法について説明します。
 
-+ Assets EssentialsのファイルがCreative Cloudライブラリからシームレスにアクセス
-+ Creative CloudライブラリのファイルをAssets Essentialsに共有
++ Assets Essentials のファイルに Creative Cloud ライブラリ経由でシームレスにアクセス
++ Creative Cloud ライブラリのファイルを Assets Essentials で共有
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)
