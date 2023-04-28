@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 6cb41242-18d3-420a-9e33-87091a648703
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '30'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Workbench パフォーマンスパラメーターの調整方法
 
-*このビデオでは、 Workbench のパフォーマンスパラメーターを調整するプロセスについて説明します。*
+*このビデオでは、Workbench のパフォーマンスパラメーターを調整するプロセスについて順を追って説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)
