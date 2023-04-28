@@ -1,6 +1,6 @@
 ---
-title: Unix 設定でのマルチユーザー PDFG 変換の問題のトラブルシューティング手順
-description: UNIX セットアップでの複数のユーザーPDFジェネレータの問題のトラブルシューティング。
+title: UNIX セットアップでのマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
+description: UNIX セットアップでのマルチユーザーPDFジェネレーターに関する問題のトラブルシューティング。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,15 +10,15 @@ topic: Development
 index: y
 exl-id: 35732b0f-a492-4d7f-b152-4a43d2c9b58b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Unix 設定でのマルチユーザー PDFG 変換の問題のトラブルシューティング手順
+# UNIX セットアップでのマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
 
-*このビデオでは、Unix 設定でのマルチユーザー PDFG 変換の問題のトラブルシューティングプロセスを説明します。*
+*このビデオでは、UNIX セットアップでのマルチユーザー PDFG 変換に関する問題のトラブルシューティングについて説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335549?quality=12&learn=on)
