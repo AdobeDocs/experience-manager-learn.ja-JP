@@ -1,20 +1,20 @@
 ---
-title: ページのバリアントのキャッシュ (AEMas a Cloud Service)
-description: ページのバリアントのキャッシュをサポートするためにAEM as a cloud service を設定および使用する方法について説明します。
+title: AEM as a Cloud Service でのページのバリアントのキャッシュ
+description: ページのバリアントのキャッシュをサポートするために AEM as a Cloud Service を設定および使用する方法について説明します。
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '559'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # ページバリアントのキャッシュ
 
-ページのバリアントのキャッシュをサポートするためにAEM as a cloud service を設定および使用する方法について説明します。
+ページのバリアントのキャッシュをサポートするために AEM as a Cloud Service を設定および使用する方法について説明します。
 
 ## 使用例
 
@@ -24,23 +24,23 @@ ht-degree: 1%
 
 ## ソリューションの概要
 
-+ バリアントキーと、そのキーの値の数を指定します。 この例では、米国の状態によって異なるので、最大数は 50 です。 これは、CDN でバリアント制限に関する問題を引き起こさないほど小さいです。 [バリアント制限の節を確認する](#variant-limitations).
++ バリアントキーと、そのキーの値の数を指定します。 この例では、米国の州ごとに異なるので、最大数は 50 です。これは、CDN でバリアント制限に関する問題を引き起こさないほど小さい数です。 [バリアント制限](#variant-limitations)の節を確認してください。
 
-+ AEMコードは Cookie を設定する必要があります __&quot;x-aem-variant&quot;__ を訪問者の優先状態 ( 例： `Set-Cookie: x-aem-variant=NY`) を返します。
++ AEM コードは、最初の HTTP リクエストに対応する HTTP 応答で、Cookie __「x-aem-variant」__ を訪問者の州（例：`Set-Cookie: x-aem-variant=NY`）に設定する必要があります。
 
-+ 訪問者からの以降のリクエストでは、その Cookie を送信します ( 例： `"Cookie: x-aem-variant=NY"`) で始まり、Cookie が CDN レベルで事前定義済みのヘッダー ( `x-aem-variant:NY`) が Dispatcher に渡されます。
++ 訪問者からの以降のリクエストでは、その Cookie を送信し（例： `"Cookie: x-aem-variant=NY"`）、Cookie は CDN レベルで定義済みのヘッダー（つまり、`x-aem-variant:NY`）に変換され、Dispatcher に渡されます。
 
-+ Apache の書き換えルールによって要求パスが変更され、ページ URL のヘッダー値が Apache Sling セレクター ( 例： `/page.variant=NY.html`) をクリックします。 これにより、AEM パブリッシュは、セレクターと Dispatcher に基づいて異なるコンテンツを提供し、バリアントごとに 1 ページをキャッシュできます。
++ Apache 書き換えルールは、リクエストパスを変更して、ヘッダー値をページ URL に Apache Sling として含めます（例：`/page.variant=NY.html`）。これにより、AEM パブリッシュは、セレクターと Dispatcher に基づいて異なるコンテンツを提供し、バリアントごとに 1 ページをキャッシュできます。
 
-+ AEM Dispatcher から送信される応答には、HTTP 応答ヘッダーが含まれている必要があります `Vary: x-aem-variant`. これは、CDN に対し、ヘッダー値ごとに異なるキャッシュコピーを保存するように指示します。
++ AEM Dispatcher から送信される応答には、HTTP 応答ヘッダー `Vary: x-aem-variant` が含まれている必要があります。これは、CDN に対し、ヘッダー値ごとに異なるキャッシュコピーを保存するように指示します。
 
 >[!TIP]
 >
->Cookie が設定された場合 ( 例： Set-Cookie:x-aem-variant=NY) 応答をキャッシュ可能にしない（Cache-Control を持つ）。private または Cache-Control:no-cache)
+>Cookie が設定された場合（例：Set-Cookie:x-aem-variant=NY）、応答はキャッシュ不可にする必要があります（Cache-Control: private または Cache-Control: no-cache）
 
 ## HTTP リクエストフロー
 
-![バリアントキャッシュ要求フロー](./assets/variant-cache-request-flow.png)
+![バリアントキャッシュリクエストフロー](./assets/variant-cache-request-flow.png)
 
 >[!NOTE]
 >
@@ -48,13 +48,13 @@ ht-degree: 1%
 
 ## 使用方法
 
-1. この機能を実演するには、次を使用します。 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)の実装を例として示します。
+1. この機能を実演するには、[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja) の実装を例として示します。
 
-1. の実装 [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) AEMで `x-aem-variant` HTTP 応答の cookie に変数値を格納します。
+1.  AEM で [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) を実装して、バリアント値を使用して HTTP 応答に `x-aem-variant` Cookie を設定します。
 
-1. AEM CDN による自動変換 `x-aem-variant` Cookie を同じ名前の HTTP ヘッダーに貼り付けます。
+1. AEM の CDN は、`x-aem-variant` Cookie を同じ名前の HTTP ヘッダーに自動的に変換します。
 
-1. Apache Web サーバー mod_rewrite ルールを `dispatcher` プロジェクト内で、バリアントセレクターを含めるように要求パスを変更します。
+1. `dispatcher` プロジェクトに Apache web サーバー mod_rewrite ルールを追加して、バリアントセレクターを含めるようにリクエストパスを変更します。
 
 1. Cloud Manager を使用してフィルターおよび書き換えルールをデプロイします。
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ## コードサンプル
 
-+ 設定する SlingServletFilter のサンプル `x-aem-variant` cookie の値がAEMに設定されていることを確認します。
++ `x-aem-variant` Cookie に AEM の値を設定する SlingServletFilter のサンプル
 
    ```
    package com.adobe.aem.guides.wknd.core.servlets.filters;
@@ -119,7 +119,7 @@ ht-degree: 1%
    }
    ```
 
-+ のサンプルの書き換えルール __dispatcher/src/conf.d/rewrite.rules__ Git でソースコードとして管理され、Cloud Manager を使用してデプロイされるファイル。
++ Git でソースコードとして管理され、Cloud Manager を使用してデプロイされる __dispatcher/src/conf.d/rewrite.rules__ ファイルでのサンプル書き換えルール
 
    ```
    ...
@@ -133,10 +133,10 @@ ht-degree: 1%
 
 ## バリアントの制限
 
-+ AEM CDN では、最大 200 個のバリエーションを管理できます。 これは、 `x-aem-variant` ヘッダーには、最大 200 個の一意の値を設定できます。 詳しくは、 [CDN 設定の制限](https://docs.fastly.com/en/guides/resource-limits).
++ AEM CDN では、最大 200 個のバリエーションを管理できます。 これは、`x-aem-variant` ヘッダーには、最大 200 個の一意の値を設定できます。 詳しくは、[CDN 設定の制限](https://docs.fastly.com/en/guides/resource-limits)を確認してください。
 
-+ 選択したバリアントキーがこの数を超えないように注意する必要があります。  例えば、ユーザー ID は、ほとんどの Web サイトで 200 個を超える可能性が高いので、適切なキーではありません。一方、国内の州/地域は、その国に 200 個未満の州がある場合に適しています。
++ 選択したバリアントキーがこの数を超えないように注意する必要があります。  例えば、ユーザー ID は、ほとんどの web サイトで 200 個を超える可能性が高いので、適切なキーではありません。一方、国内の州／地域は、その国に 200 個未満の州がある場合に適しています。
 
 >[!NOTE]
 >
->バリエーションが 200 を超える場合、CDN は、ページコンテンツではなく「バリエーションが多すぎます」という応答を返します。
+>バリアントが 200 を超える場合、CDN は、ページコンテンツではなく「バリアントが多すぎます」という応答を返します。
