@@ -1,6 +1,6 @@
 ---
-title: DAM でのAEM Forms DoR のタグ付けと保存
-description: この記事では、AEM DAM でAEM Formsによって生成された DoR の保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいておこなわれます。
+title: DAM での AEM Forms DoR のタグ付けと保存
+description: この記事では、AEM DAM で AEM Forms によって生成された DoR の保存とタグ付けのユースケースについて説明します。ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,27 +9,27 @@ level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '611'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# DAM でのAEM Forms DoR のタグ付けと保存 {#tagging-and-storing-aem-forms-dor-in-dam}
+# DAM での AEM Forms DoR のタグ付けと保存 {#tagging-and-storing-aem-forms-dor-in-dam}
 
-この記事では、AEM DAM でAEM Formsによって生成された DoR の保存とタグ付けの使用例について説明します。 ドキュメントのタグ付けは、送信されたフォームデータに基づいておこなわれます。
+この記事では、AEM DAM で AEM Forms によって生成された DoR の保存とタグ付けのユースケースについて説明します。ドキュメントのタグ付けは、送信されたフォームデータに基づいて行われます。
 
-よくあるお客様からの質問は、AEM DAM でAEM Formsによって生成されたレコードのドキュメント (DoR) を保存し、タグ付けすることです。 ドキュメントのタグ付けは、アダプティブFormsの送信済みデータに基づいておこなう必要があります。 例えば、送信されたデータの雇用状況が「退職」の場合、ドキュメントに「退職」タグを付け、ドキュメントを DAM に保存します。
+よくあるお客様からの質問は、AEM DAM で AEM Forms によって生成されたレコードのドキュメント（DoR）を保存し、タグ付けすることです。ドキュメントのタグ付けは、アダプティブフォームの送信されたデータに基づいて行われる必要があります。例えば、送信されたデータの雇用状況が「退職済み」の場合、ドキュメントに「退職済み」タグを付けて、ドキュメントを DAM に保存します。
 
-使用例を次に示します。
+ユースケースを次に示します。
 
-* ユーザーがアダプティブフォームに入力します。 アダプティブフォームでは、ユーザーの配偶者の有無（例：独身）と雇用ステータス（例：退職）が取り込まれます。
-* フォームの送信時に、AEM Workflow がトリガーされます。 婚姻区分（独身）と雇用区分（退職）をドキュメントにタグ付けし、ドキュメントを DAM に保存します。
-* ドキュメントが DAM に保存されると、管理者はこれらのタグでドキュメントを検索できるようになります。 例えば、「Single」または「Retired」の検索では、適切な DoR が取得されます。
+* ユーザーがアダプティブフォームに入力します。アダプティブフォームでは、ユーザーの婚姻状況（例：未婚）と雇用状況（例：退職済み）が取り込まれます。
+* フォームの送信時に、AEM ワークフローがトリガーされます。このワークフローで、婚姻状況（未婚）と雇用状況（退職済み）をドキュメントにタグ付けし、ドキュメントを DAM に保存します。
+* ドキュメントが DAM に保存されると、管理者はこれらのタグでドキュメントを検索できるようになります。例えば、「未婚」または「退職済み」を検索すると、適切な DoR が取得されます。
 
-この使用例を満たすために、カスタムプロセスステップが記述されました。 この手順では、送信されたデータから適切なデータ要素の値を取得します。 次に、この値を使用してタグタイルを作成します。 例えば、婚姻区分要素の値が「Single」の場合、タグのタイトルは**Peak:EmploymentStatus/Single になります。 ** TagManager API を使用して、タグを見つけ、DoR にタグを適用します。
+このユースケースを満たすために、カスタムプロセス手順を作成しました。この手順では、送信されたデータから適切なデータ要素の値を取得します。次に、この値を使用してタグタイルを作成します。例えば、婚姻状況要素の値が「未婚」の場合、タグのタイトルは **Peak:EmploymentStatus/Single** になります。TagManager API を使用して、タグを検索し、DoR にタグを適用します。
 
-以下は、タグ付けしてレコードのドキュメントをAEM DAM に保存するための完全なコードです。
+以下は、レコードのドキュメントにタグ付けし、AEM DAM に保存するための完全なコードです。
 
 ```java
 package com.aemforms.setvalue.core;
@@ -159,24 +159,24 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 このサンプルをシステムで動作させるには、次の手順に従ってください。
 * [Developingwithserviceuser バンドルをデプロイします。](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [setvalue バンドルをダウンロードしてデプロイします。](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 送信されたフォームデータからタグを設定するカスタム OSGi バンドルです。
+* [setvalue バンドルをダウンロードしてデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、送信されたフォームデータからタグを設定するカスタム OSGI バンドルです。
 
-* [サンプルのアダプティブフォームをダウンロードします。](assets/tag-and-store-in-dam-adaptive-form.zip)
+* [サンプルのアダプティブフォームをダウンロードします](assets/tag-and-store-in-dam-adaptive-form.zip)
 
-* [Formsとドキュメントに移動](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [フォームとドキュメントに移動します](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 「作成」をクリックします。 |ファイルタグ&amp;ストア —in-dam-adaptive-form.zip をアップロードしてアップロードします。
+* 作成／ファイルをアップロードをクリックして、tag-and-store-in-dam-adaptive-form.zip をアップロードします。
 
-* [記事アセットを読み込む](assets/tag-and-store-in-dam-assets.zip) AEM package manager の使用
-* を開きます。 [プレビューモードでのサンプルフォーム](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **すべてのフィールドに入力** フォームを送信します。
-* [DAM の Peak フォルダーに移動します。](http://localhost:4502/assets.html/content/dam/Peak). Peak フォルダーに DoR が表示されます。 ドキュメントのプロパティを確認します。 適切にタグ付けする必要があります。
-おめでとう!! サンプルがシステムに正常にインストールされました
+* AEM パッケージマネージャーを使用して[記事アセットを読み込みます](assets/tag-and-store-in-dam-assets.zip)
+* [サンプルフォームをプレビューモードで](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)開きます。**すべてのフィールド**&#x200B;に入力し、フォームを送信します。
+* [DAM の Peak フォルダーに移動します](http://localhost:4502/assets.html/content/dam/Peak)。Peak フォルダーに DoR が表示されます。ドキュメントのプロパティを確認します。適切にタグ付けされています。
+おめでとうございます。サンプルがシステムに正常にインストールされました
 
-* 次に、 [ワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) フォームの送信時にトリガーされる
-* ワークフローの最初の手順では、申請者名と居住国を連結して一意のファイル名を作成します。
-* ワークフローの 2 番目の手順では、タグ階層と、タグ付けが必要なフォームフィールド要素を渡します。 プロセスステップは、送信されたデータから値を抽出し、ドキュメントにタグ付けする必要のあるタグタイトルを作成します。
+* 次に、フォームの送信時にトリガーされる[ワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)を確認してみましょう。
+* ワークフローの最初の手順では、申請者の名前と居住国を連結して一意のファイル名を作成します。
+* ワークフローの 2 番目の手順では、タグ階層と、タグ付けが必要なフォームフィールド要素を渡します。プロセスステップでは、送信されたデータから値を抽出し、ドキュメントにタグ付けするために必要なタグタイトルを作成します。
 * DoR を DAM の別のフォルダーに保存する場合は、以下のスクリーンショットで指定されている設定プロパティを使用して、フォルダーの場所を指定します。
 
-その他の 2 つのパラメーターは、アダプティブフォーム送信オプションで指定された DoR とデータファイルパスに固有です。 ここで指定した値が、アダプティブフォームの送信オプションで指定した値と一致していることを確認してください。
+その他の 2 つのパラメーターは、アダプティブフォーム送信オプションで指定された DoR とデータファイルパスに固有です。ここで指定した値が、アダプティブフォーム送信オプションで指定した値と一致していることを確認します。
 
-![タグ Dor](assets/tag_dor_service_configuration.gif)
+![タグ DoR](assets/tag_dor_service_configuration.gif)
