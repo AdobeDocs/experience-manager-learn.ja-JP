@@ -1,6 +1,6 @@
 ---
 title: タスクの割り当て通知のカスタマイズ
-description: タスクの割り当て通知電子メールにフォームデータを含める
+description: タスクの割り当て通知メールにフォームデータを含める
 feature: Workflow
 topics: integrations
 audience: developer
@@ -15,25 +15,25 @@ level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '489'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # タスクの割り当て通知のカスタマイズ
 
-タスクの割り当てコンポーネントは、タスクをワークフロー参加者に割り当てるために使用します。 タスクがユーザーまたはグループに割り当てられると、定義されたユーザーまたはグループメンバーに電子メール通知が送信されます。
-この電子メール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、生成されたシステムを使用して取得されます [メタデータプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
-送信されたフォームデータの値を電子メール通知に含めるには、カスタムメタデータプロパティを作成し、電子メールテンプレートでこれらのカスタムメタデータプロパティを使用する必要があります
+タスクを割り当てコンポーネントは、タスクをワークフロー参加者に割り当てるために使用します。 タスクがユーザーまたはグループに割り当てられると、定義されたユーザーまたはグループメンバーにメール通知が送信されます。
+このメール通知には、通常、タスクに関連する動的データが含まれます。 この動的データは、システム生成された[メタデータプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html?lang=ja#using-system-generated-metadata-in-an-email-notification)を使用して取得されます 。
+送信されたフォームデータの値をメール通知に含めるには、カスタムメタデータプロパティを作成し、メールテンプレートでこれらのカスタムメタデータプロパティを使用する必要があります
 
 
 
 ## カスタムメタデータプロパティの作成
 
-推奨されるアプローチは、 [WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
+推奨されるアプローチは、[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html?lang=ja#getUserMetadataMap--) の getUserMetadata メソッドを実装する OSGI コンポーネントを作成することです。
 
-次のコードは、4 つのメタデータプロパティ (_firstName_,_lastName_,_理由_ および _amountRequested_) をクリックし、送信されたデータから値を設定します。 例えば、メタデータプロパティの場合、 _firstName_&#x200B;の値は、送信されたデータから firstName と呼ばれる要素の値に設定されます。 次のコードは、アダプティブフォームの送信済みデータが xml 形式であることを前提としています。 JSON スキーマまたはフォームデータモデルに基づくアダプティブFormsは、JSON 形式のデータを生成します。
+次のコードは、4 つのメタデータプロパティ（_firstName_、_lastName_、_reason_、 _amountRequested_) を作成し、送信されたデータから値を設定します。 例えば、メタデータプロパティ _firstName_ の値は、送信されたデータから firstName と呼ばれる要素の値に設定されます。 次のコードは、アダプティブフォームの送信済みデータが xml 形式であることを前提としています。 JSON スキーマまたはフォームデータモデルに基づくアダプティブフォームは、JSON 形式のデータを生成します。
 
 
 ```java
@@ -113,42 +113,42 @@ return customMetadataMap;
 }
 ```
 
-## タスク通知電子メールテンプレートのカスタムメタデータプロパティを使用
+## タスク通知メールテンプレートのカスタムメタデータプロパティを使用する
 
-電子メールテンプレートでは、次の構文を使用して metadata プロパティを含めることができます。 amountRequested は metadata プロパティです。 `${amountRequested}`
+メールテンプレートでは、次の構文を使用してメタデータプロパティを含めることができます。 ここで amountRequested はメタデータプロパティ `${amountRequested}` です
 
-## カスタムメタデータプロパティを使用するように Assign Task を設定
+## カスタムメタデータプロパティを使用するように、タスクを割り当てを設定する
 
-OSGi コンポーネントを構築してAEMサーバーにデプロイした後、次に示すように、タスクを割り当てコンポーネントを設定して、カスタムメタデータプロパティを使用します。
+OSGi コンポーネントをビルドして AEM サーバーにデプロイした後、次に示すように、カスタムメタデータプロパティを使用するように、タスクを割り当てコンポーネントを設定します。
 
 
 ![タスク通知](assets/task-notification.PNG)
 
-## カスタムメタデータプロパティの使用の有効化
+## カスタムメタデータプロパティの使用を有効にする
 
-![Custom Meta Data プロパティ](assets/custom-meta-data-properties.PNG)
+![カスタムメタデータプロパティ](assets/custom-meta-data-properties.PNG)
 
 ## サーバーで試すには
 
 * [Day CQ メールサービスの設定](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=ja#configuring-the-mail-service)
-* 有効な電子メール ID をに関連付ける [管理者ユーザー](http://localhost:4502/security/users.html)
-* をダウンロードしてインストールする [ワークフローと通知テンプレート](assets/workflow-and-task-notification-template.zip) using [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
-* ダウンロード [アダプティブフォーム](assets/request-travel-authorization.zip) からAEMにインポートします。 [フォームとドキュメントの ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-* をデプロイして起動します。 [カスタムバンドル](assets/work-items-user-service-bundle.jar) の使用 [web コンソール](http://localhost:4502/system/console/bundles)
-* [フォームをプレビューして送信する](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
+* 有効なメール ID を[管理者ユーザー](http://localhost:4502/security/users.html)に関連付けます
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) をダウンロードしてインストールします
+* [アダプティブフォーム](assets/request-travel-authorization.zip)をダウンロードして[フォームとドキュメントの UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) から AEM に読み込みます。
+* [Web コンソール](http://localhost:4502/system/console/bundles)を使用して、[カスタムバンドル](assets/work-items-user-service-bundle.jar)をデプロイして起動します
+* [フォームをプレビューして送信します](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
-フォーム送信タスクの割り当て通知が、管理者ユーザーに関連付けられた電子メール ID に送信されます。 次のスクリーンショットは、タスク割り当て通知の例を示しています
+フォーム送信タスクの割り当て通知が、管理者ユーザーに関連付けられたメール ID に送信されます。 次のスクリーンショットは、タスク割り当て通知の例を示しています
 
 ![通知](assets/task-nitification-email.png)
 
 >[!NOTE]
->タスクの割り当て通知用の電子メールテンプレートは、次の形式にする必要があります。
+>タスクを割り当て通知用のメールテンプレートは、次の形式にする必要があります。
 >
-> subject=割り当てられたタスク — `${workitem_title}`
+> 件名 = タスクが割り当てられました - `${workitem_title}`
 >
-> message=改行文字を含まない電子メールテンプレートを表す文字列。
+> メッセージ = 改行文字を含まないメールテンプレートを表す文字列
 
-## タスクの割り当て電子メール通知のタスクコメント
+## タスクを割り当てメール通知のタスクコメント
 
 場合によっては、前のタスク所有者のコメントを後続のタスク通知に含める必要があります。 タスクの最後のコメントを取り込むためのコードを以下に示します。
 
@@ -202,4 +202,4 @@ public class CaptureTaskComments implements WorkitemUserMetadataService {
 }
 ```
 
-上記のコードを含むバンドルは、 [ここからダウンロード](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)
+上記のコードを含むバンドルは、[こちら](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)からダウンロードできます
