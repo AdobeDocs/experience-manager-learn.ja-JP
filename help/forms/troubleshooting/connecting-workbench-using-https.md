@@ -1,6 +1,6 @@
 ---
-title: HTTPS を使用して Workbench をAEM Formsサーバーに接続する手順
-description: この記事では、SSL を使用して Workbench をAEM Formsサーバーに接続する（HTTPS を使用する）手順について説明します
+title: HTTPS を使用して Workbench を AEM Forms サーバーに接続する手順
+description: この記事では、SSL を使用して Workbench を AEM Forms サーバーに接続する（HTTPS を使用する）手順について説明します
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 89f485c3-cd6f-4814-8538-de9c07b33ba4
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# HTTPS を使用して Workbench をAEM Formsサーバーに接続する手順
+# HTTPS を使用して Workbench を AEM Forms サーバーに接続する手順
 
-*このビデオでは、HTTPS を使用して Workbench をAEM Formsサーバーに接続する手順について説明します。*
+*このビデオでは、HTTPS を使用して Workbench を AEM Forms サーバーに接続する手順について説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335482?quality=12&learn=on)
