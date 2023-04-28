@@ -1,40 +1,40 @@
 ---
-title: Dispatcherツールのデバッグ
-description: Dispatcherツールは、コンテナ化されたApache Webサーバー環境を提供します。この環境を使用して、AEM as a  as a Cloud ServicesのAEMパブリッシュサービスのDispatcherをローカルでシミュレートできます。 エンドツーエンドのAEMアプリケーションと、サポートするキャッシュとセキュリティの設定が正しいことを確認するには、Dispatcherツールのログとキャッシュのコンテンツのデバッグが不可欠です。
+title: Dispatcher ツールのデバッグ
+description: Dispatcher ツールは、コンテナ化された Apache web サーバー環境を提供します。この環境を使用して、AEM as a Cloud Services の AEM パブリッシュサービスの Dispatcher をローカルでシミュレートできます。Dispatcher ツールのログとキャッシュコンテンツのデバッグは、エンドツーエンドの AEM アプリケーションと、サポートするキャッシュおよびセキュリティ設定が正しいことを確認するために不可欠です。
 feature: Dispatcher
 kt: 5918
 topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
-workflow-type: tm+mt
+exl-id: f0adf7a6-c7c2-449a-9fa5-402c54b812e5
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
 source-wordcount: '230'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Dispatcher ツールのデバッグ
 
-# Dispatcherツールのデバッグ
+Dispatcher ツールは、コンテナ化された Apache web サーバー環境を提供します。この環境を使用して、AEM as a Cloud Services の AEM パブリッシュサービスの Dispatcher をローカルでシミュレートできます。
 
-Dispatcherツールは、コンテナ化されたApache Webサーバー環境を提供します。この環境を使用して、AEM as a  as a Cloud ServicesのAEMパブリッシュサービスのDispatcherをローカルでシミュレートできます。
-
-エンドツーエンドのAEMアプリケーションと、サポートするキャッシュとセキュリティの設定が正しいことを確認するには、Dispatcherツールのログとキャッシュのコンテンツのデバッグが不可欠です。
+Dispatcher ツールのログとキャッシュコンテンツのデバッグは、エンドツーエンドの AEM アプリケーションと、サポートするキャッシュおよびセキュリティ設定が正しいことを確認するために不可欠です。
 
 >[!NOTE]
 >
->Dispatcherツールはコンテナベースなので、再起動するたびに、以前のログとキャッシュの内容が破棄されます。
+>Dispatcher ツールはコンテナベースなので、再起動するたびに、以前のログとキャッシュの内容が破棄されます。
 
-## Dispatcherツールログ
+## Dispatcher ツールのログ
 
-Dispatcherツールのログは、 `stdout`または`bin/docker_run`コマンドを使用して、または`/etc/https/logs`のDockerコンテナで詳しく確認できます。
+Dispatcher ツールのログは、`stdout` または `bin/docker_run` コマンドを介して利用できます。詳細については、`/etc/https/logs` の Docker コンテナで利用できます。
 
-DispatcherツールのDockerコンテナのログに直接アクセスする方法については、[Dispatcherのログ](./logs.md#dispatcher-logs)を参照してください。
+Dispatcher ツールの Docker コンテナのログに直接アクセスする方法については、[Dispatcher のログ](./logs.md#dispatcher-logs)を参照してください。
 
-## Dispatcherツールのキャッシュ
+## Dispatcher ツールのキャッシュ
 
-### Dockerコンテナでのログへのアクセス
+### Docker コンテナ内のログへのアクセス
 
-Dispatcherキャッシュは、` /mnt/var/www/html`にあるDockerコンテナ内で直接アクセスできます。
+Dispatcher のキャッシュは、` /mnt/var/www/html` の Docker コンテナ内で直接アクセスできます。
 
 ```shell
 $ docker ps
@@ -52,9 +52,9 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### Dockerログのローカルファイルシステムへのコピー
+### Docker ログのローカルファイルシステムへのコピー
 
-Dispatcherログは、 `/mnt/var/www/html`にあるDockerコンテナからローカルファイルシステムにコピーし、お気に入りのツールを使用して検査できます。 これはポイントインタイムコピーで、キャッシュに対してリアルタイム更新を提供しません。
+Dispatcher のログは、お気に入りのツールを使用して検査するために、`/mnt/var/www/html` の Docker コンテナからローカルファイルシステムにコピーできます。これはその時点でのコピーであり、キャッシュに対するリアルタイムのアップデートは提供されません。
 
 ```shell
 $ docker ps
@@ -66,4 +66,3 @@ CONTAINER ID        IMAGE                                       COMMAND         
 $ docker cp -L <CONTAINER ID>:/mnt/var/www/html cache 
 $ cd cache
 ```
-
