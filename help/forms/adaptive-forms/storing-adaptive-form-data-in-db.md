@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームデータの保存
-description: AEMワークフローの一部としてアダプティブフォームデータをデータベースに保存する
+description: AEM ワークフローの一部としてアダプティブフォームデータをデータベースに保存する
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -9,37 +9,37 @@ level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '414'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォーム送信のデータベースへの格納
+# アダプティブフォーム送信のデータベースへの保存
 
-送信されたフォームデータを任意のデータベースに保存する方法は多数あります。 JDBC データソースを使用して、データをデータベースに直接格納できます。 カスタム OSGi バンドルを書き込んで、データをデータベースに保存できます。 この記事では、AEMワークフローのカスタムプロセスステップを使用してデータを保存します。
-このユースケースでは、アダプティブフォームの送信時にAEMワークフローをトリガーし、ワークフローの手順で送信したデータをデータベースに保存します。
+送信されたフォームデータを選択したデータベースに保存するには、いくつかの方法があります。JDBC データソースを使用すると、データをデータベースに直接保存できます。カスタム OSGi バンドルを書き込むと、データをデータベースに保存できます。この記事では、AEM ワークフローのカスタムプロセス手順を使用してデータを保存します。
+ユースケースは、アダプティブフォームの送信時に行う AEM ワークフローのトリガーであり、このワークフローの手順では、送信したデータをデータベースに保存します。
 
 
 
 ## JDBC 接続プール
 
-* に移動します。 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* [ConfigMgr](http://localhost:4502/system/console/configMgr) に移動します
 
-   * 「JDBC Connection Pool」を検索します。 新しい Day Commons JDBC 接続プールを作成します。 データベースに固有の設定を指定します。
+   * 「JDBC 接続プール」を検索します。新しい Day Commons JDBC 接続プールを作成します。データベースに固有の設定を指定します。
 
    * ![JDBC 接続プールの OSGi 設定](assets/aemformstutorial-jdbc.png)
 
 ## データベースの詳細を指定
 
-* 「**データベースの詳細を指定**&quot;
+* 「**データベースの詳細を指定**」を検索します
 * データベースに固有のプロパティを指定します。
    * DataSourceName：以前に設定したデータソースの名前。
    * TableName - AF データを保存するテーブルの名前
-   * FormName — フォームの名前を格納する列の名前
-   * ColumnName - AF データを格納する列名
+   * FormName - フォームの名前を保存する列名
+   * ColumnName - AF データを保存する列名
 
-   ![データベースの詳細 OSGi 設定を指定します。](assets/specify-database-details.png)
+   ![データベースの詳細に OSGi 設定を指定](assets/specify-database-details.png)
 
 
 
@@ -109,7 +109,7 @@ public class InsertFormDataConfigurationService {
 }
 ```
 
-## プロセスステップを実装するコード
+## プロセス手順を実装するコード
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -208,13 +208,13 @@ public class InsertAfData implements WorkflowProcess {
 
 ## サンプルアセットのデプロイ
 
-* JDBC 接続プールを設定していることを確認します。
+* JDBC 接続プールが設定されていることを確認します
 * configMgr を使用してデータベースの詳細を指定します
-* [Zip ファイルをダウンロードし、その内容をハードドライブに抽出します。](assets/article-assets.zip)
+* [zip ファイルをダウンロードし、その内容をハードドライブに抽出します](assets/article-assets.zip)
 
-   * を使用して jar ファイルをデプロイします。 [AEM web コンソール](http://localhost:4502/system/console/bundles). この jar ファイルには、データベースにフォームデータを保存するためのコードが含まれています。
+   * [AEM web コンソール](http://localhost:4502/system/console/bundles)を使用して jar ファイルをデプロイします。この jar ファイルには、データベースにフォームデータを保存するためのコードが含まれています。
 
-   * 2 つの zip ファイルをにインポートします。 [パッケージマネージャーを使用したAEM](http://localhost:4502/crx/packmgr/index.jsp). これで、 [サンプルワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) そして [サンプルアダプティブフォーム](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) フォームの送信時にトリガーするワークフローを作成します。 ワークフローステップのプロセス引数に注意してください。 これらの引数は、アダプティブフォームデータを格納するデータファイルのフォーム名と名前を示します。 データファイルは、crx リポジトリの payload フォルダーに保存されます。 この [アダプティブフォーム](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 送信時のAEMワークフローとデータファイルの設定 (data.xml) をトリガーするように設定されている
+   * [パッケージマネージャーを使用して、AEM に](http://localhost:4502/crx/packmgr/index.jsp) 2 つの zip ファイルを読み込みます。これで、フォーム送信時にワークフローをトリガーする[サンプルワークフロー](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html)と[サンプルアダプティブフォーム](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)を作成しました。ワークフロー手順のプロセス引数に注意します。これらの引数は、フォーム名と、アダプティブフォームデータを格納するデータファイルの名前を示します。データファイルは、crx リポジトリのペイロードフォルダーに保存されます。送信時に AEM ワークフローをトリガーするための[アダプティブフォーム](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)の設定方法と、データファイルの設定（data.xml）を確認します。
 
-   * プレビューしてフォームに入力し、送信します。 データベースに新しい行が作成されます
+   * プレビューしてフォームに入力し、送信します。データベースに作成された新しい行が表示されます
 
