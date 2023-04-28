@@ -9,14 +9,14 @@ topic: Administration
 index: y
 exl-id: e36ecbaf-78fc-4acf-bacb-f19d933fb0fb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # エントロピーの値を変更する方法
 
-*このビデオでは、エントロピーの値を変える手順を説明します。*
+*このビデオでは、エントロピーの値を変更する手順について説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)
