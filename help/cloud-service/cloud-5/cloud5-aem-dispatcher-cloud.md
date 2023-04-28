@@ -1,6 +1,6 @@
 ---
 title: クラウドでの Dispatcher の使用
-description: Darin と James は、AMS/On-Prem とのベストプラクティスや違いなど、AEM Cloud の Dispatcher について話し合います。 また、クラウドへの移行にも関わります。
+description: Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -10,16 +10,16 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
 
 # クラウドでの Dispatcher の使用
 
-Darin と James は、AMS/On-Prem とのベストプラクティスや違いなど、AEM Cloud の Dispatcher について話し合います。 また、クラウドへの移行にも関わります。
+Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
 
