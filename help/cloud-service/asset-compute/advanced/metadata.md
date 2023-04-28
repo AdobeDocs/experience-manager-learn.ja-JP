@@ -1,6 +1,6 @@
 ---
-title: asset computeメタデータワーカーの開発
-description: asset computeアセット内で最もよく使用される色を派生し、色の名前をAEMのアセットのメタデータに書き戻す、画像メタデータワーカーの作成方法を説明します。
+title: Asset Compute メタデータワーカーの開発
+description: 画像アセットで最も一般的に使用されている色を取得し、その色の名前を AEM のアセットのメタデータに書き戻す Asset Compute メタデータワーカーの作成方法について説明します。
 feature: Asset Compute Microservices
 topics: metadata, development
 version: Cloud Service
@@ -14,51 +14,51 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1433'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# asset computeメタデータワーカーの開発
+# Asset Compute メタデータワーカーの開発
 
-カスタムAsset computeワーカーは、XMP(XML) データを生成し、AEMに送り返して、アセットにメタデータとして保存することができます。
+カスタム Asset Compute ワーカーは、AEM に送り返され、アセットにメタデータとして保存される XMP（XML）データを生成できます。
 
-一般的な使用例を次に示します。
+一般的なユースケースを次に示します。
 
-+ 追加のメタデータを取得してアセットに保存する必要がある PIM(Product Information Management System) などのサードパーティシステムとの統合
-+ Content や Commerce AI などのAdobe サービスとの統合により、追加の機械学習属性でアセットメタデータを拡張
-+ アセットに関するメタデータをバイナリから取得し、AEM as a Cloud Serviceにアセットメタデータとして保存する
++ 追加のメタデータを取得してアセットに保存する必要がある PIM（製品情報管理システム）などのサードパーティシステムと統合します。
++ Content and Commerce AI などのアドビサービスと統合して、アセットのメタデータを追加の機械学習属性で拡張します。
++ アセットに関するメタデータをバイナリから取得して、AEM as a Cloud Service にアセットメタデータとして保存します。
 
-## 今後の予定
+## 作業の内容
 
 >[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
 
-このチュートリアルでは、Asset computeアセット内で最もよく使用される色を派生させ、色の名前をAEMのアセットのメタデータに書き戻す画像メタデータワーカーを作成します。 ワーカー自体は基本的ですが、このチュートリアルでは、ワーカーを使用して、AEM as a Cloud ServiceでAsset computeにメタデータを書き戻すために、アセットワーカーがどのように使用できるかを調べます。
+このチュートリアルでは、画像アセットで最も一般的に使用されている色を取得し、その色の名前を AEM のアセットのメタデータに書き戻す Asset Compute メタデータワーカーを作成します。このワーカー自体は基本的なものですが、このチュートリアルでは、このワーカーを通して、Asset Compute ワーカーを使用して AEM as a Cloud Service のアセットにメタデータを書き戻す方法について説明します。
 
-## asset computeメタデータワーカー呼び出しの論理フロー
+## Asset Compute メタデータワーカー呼び出しの論理フロー
 
-asset computeメタデータワーカーの呼び出しは、 [ワーカーを生成するバイナリレンディション](../develop/worker.md)に値を書き込む場合、戻り値のタイプはXMP(XML) レンディションになります。このレンディションの値はアセットのメタデータにも書き込まれます。
+Asset Compute メタデータワーカーの呼び出しは、[バイナリレンディション生成ワーカー](../develop/worker.md)の呼び出しとほぼ同じですが、主な違いは、戻り値のタイプが XMP（XML）レンディションであり、その値もアセットのメタデータに書き込まれる点です。
 
-asset computeワーカーは、 `renditionCallback(...)` 関数の呼び出しは、概念的には次のようになります。
+Asset Compute ワーカーは、Asset Compute SDK ワーカー API コントラクトを `renditionCallback(...)` 関数で実装します。この関数は、概念的には次のようなものになります。
 
-+ __入力：__ AEMアセットの元のバイナリパラメーターと処理プロファイルパラメーター
-+ __出力：__ XMP(XML) レンディションは、AEMアセットをレンディションとして、アセットのメタデータに保持されます。
++ __入力：__ AEM アセットのオリジナルバイナリパラメーターと処理プロファイルパラメーター
++ __出力：__ AEM アセットにレンディションとして保存され、アセットのメタデータにも保存される XMP（XML）レンディション
 
-![asset computeメタデータワーカーの論理フロー](./assets/metadata/logical-flow.png)
+![Asset Compute メタデータワーカーの論理フロー](./assets/metadata/logical-flow.png)
 
-1. AEM オーサーサービスは、Asset computeのメタデータワーカーを呼び出し、アセットの __(1a)__ 元のバイナリ、および __(1b)__ 処理プロファイルで定義されたパラメーター。
-1. asset computeSDK は、カスタムAsset computeメタデータワーカーの実行を調整します。 `renditionCallback(...)` 関数、アセットのバイナリに基づくXMP(XML) レンディションの派生 __(1a)__ および任意の処理プロファイルパラメーター __(1b)__.
-1. asset computeワーカーは、XMP (XML) 表現をに保存します。 `rendition.path`.
-1. に書き込まれるXMP(XML) データ `rendition.path` は、Asset computeSDK を介して AEM オーサーサービスに転送され、 __(4a)__ テキストレンディションと __(4b)__ アセットのメタデータノードに保持されます。
+1. AEM オーサーサービスが Asset Compute メタデータワーカーを呼び出し、アセットの __(1a)__ オリジナルバイナリと、__(1b)__ 処理プロファイルで定義されているパラメーターを渡します。
+1. Asset Compute SDK がカスタム Asset Compute メタデータワーカーの `renditionCallback(...)` 関数の実行を調整し、アセットのバイナリ __(1a)__ と処理プロファイルパラメーター __(1b)__ に基づいて、XMP（XML）レンディションを取得します。
+1. Asset Compute ワーカーが XMP（XML）表現を `rendition.path` に保存します。
+1. `rendition.path` に書き込まれた XMP（XML）データが、Asset Compute SDK を通じて AEM オーサーサービスに転送され、そこで __(4a)__ テキストレンディションとして公開され、__(4b)__ アセットのメタデータノードに保存されます。
 
 ## manifest.yml の設定{#manifest}
 
-すべてのAsset computeワーカーは、 [manifest.yml](../develop/manifest.md).
+すべての Asset Compute ワーカーは、[manifest.yml](../develop/manifest.md) に登録する必要があります。
 
-プロジェクトの `manifest.yml` 次に、新しいワーカーを構成するワーカーエントリを追加します。この場合は、 `metadata-colors`.
+プロジェクトの `manifest.yml` を開き、新規ワーカー（この場合は `metadata-colors`）を設定するワーカーエントリを追加します。
 
-_記憶する `.yml` は空白を区別します。_
+_`.yml` では空白が区別されることに注意してください。_
 
 ```
 packages:
@@ -83,17 +83,17 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` は、 [次の手順](#metadata-worker). 意味的に workers に名前を付ける ( 例： `actions/worker/index.js` 名前の方が良かったかもしれない `actions/rendition-circle/index.js`) で、 [ワーカーの URL](#deploy) また、 [ワーカーのテストスイートのフォルダ名](#test).
+`function` は、[次の手順](#metadata-worker)で作成するワーカー実装を指します。ワーカーの名前は[ワーカーの URL](#deploy) に表示され、[ワーカーのテストスイートフォルダー名](#test)の決定にも使用されるので、ワーカーには、具体的な意味を持つ名前を付けます（例えば、`actions/worker/index.js` は `actions/rendition-circle/index.js` と名付けた方が適切でしょう）。
 
-この `limits` および `require-adobe-auth` は、ワーカーごとに個別に設定されます。 この労働者は `512 MB` のメモリは、コードが（潜在的に）大きなバイナリイメージデータを調べる際に割り当てられます。 もう 1 つは `limits` が削除され、デフォルトが使用されます。
+`limits` と `require-adobe-auth` は、ワーカーごとに個別に設定されます。このワーカーでは、コードで（潜在的に）大きなバイナリ画像データを調べるので、`512 MB` のメモリが割り当てられます。もう 1 つの `limits` は削除され、デフォルトが使用されます。
 
 ## メタデータワーカーの開発{#metadata-worker}
 
-新しいメタデータワーカー JavaScript ファイルを、Asset computeプロジェクトのパスに作成します。 [新しいワーカー用に定義された manifest.yml](#manifest)、 `/actions/metadata-colors/index.js`
+[新しいワーカーの manifest.yml で定義されている](#manifest)パス（`/actions/metadata-colors/index.js`）に Asset Compute プロジェクトの新しいメタデータワーカーの JavaScript ファイルを作成します。
 
 ### npm モジュールのインストール
 
-追加の npm モジュール ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-colors](https://www.npmjs.com/package/get-image-colors)、および [色名](https://www.npmjs.com/package/color-namer)) をクリックします。
+この Asset Compute ワーカーで使用されている追加の npm モジュール（[@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)、[get-image-colors](https://www.npmjs.com/package/get-image-colors) および [color-namer](https://www.npmjs.com/package/color-namer)）をインストールします。
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -103,7 +103,7 @@ $ npm install color-namer
 
 ### メタデータワーカーコード
 
-この作業者は、 [レンディション生成作業者](../develop/worker.md)の場合、主な違いは、XMP(XML) データを `rendition.path` をクリックしてAEMに保存し直します。
+このワーカーは、[レンディション生成ワーカー](../develop/worker.md)に非常に似ていますが、主な違いは、XMP（XML）データを `rendition.path` に書き込んで AEM に保存し戻す点です。
 
 
 ```javascript
@@ -180,18 +180,18 @@ function getColorName(colorsFamily, color) {
 }
 ```
 
-## メタデータワーカーをローカルで実行する{#development-tool}
+## メタデータワーカーのローカル実行{#development-tool}
 
-ワーカーコードが完了したら、ローカルの開発ツールを使用してAsset computeを実行できます。
+ワーカーコードが完成したら、ローカルの Asset Compute 開発ツールを使用して実行できます。
 
-これは、Asset computeプロジェクトに 2 人のワーカー ( [円レンディション](../develop/worker.md) そして `metadata-colors` 作業者 )、 [asset compute開発ツールの](../develop/development-tool.md) プロファイル定義は、両方のワーカーの実行プロファイルをリストします。 2 つ目のプロファイル定義は、新しい `metadata-colors` 作業者
+Asset Compute プロジェクトには 2 つのワーカー（前回の[円のレンディション](../develop/worker.md)と今回の `metadata-colors` ワーカー）が含まれているので、[Asset Compute 開発ツール](../develop/development-tool.md)のプロファイル定義には、両方のワーカーの実行プロファイルがリストされています。2 つ目のプロファイル定義は、新しい `metadata-colors` ワーカーを指しています。
 
-![XML メタデータのレンディション](./assets/metadata/metadata-rendition.png)
+![XML メタデータレンディション](./assets/metadata/metadata-rendition.png)
 
-1. asset computeプロジェクトのルートから
-1. 実行 `aio app run` asset compute開発ツールを開始する
-1. 内 __ファイルを選択…__ ドロップダウン、 [サンプル画像](../assets/samples/sample-file.jpg) 処理する
-1. 2 つ目のプロファイル定義設定では、 `metadata-colors` ワーカー、更新 `"name": "rendition.xml"` XMP (XML) レンディションが生成されるので、 オプションで、 `colorsFamily` パラメーター（サポートされている値） `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`) をクリックします。
+1. Asset Compute プロジェクトのルートから
+1. `aio app run` を実行して、Asset Compute 開発ツールを起動します。
+1. 「__ファイルを選択...__」ドロップダウンで、処理する[サンプル画像](../assets/samples/sample-file.jpg)を選択します。
+1. 2 つ目のプロファイル定義設定は `metadata-colors` ワーカーを指していますが、このワーカーが XMP（XML）レンディションを生成するので、`"name": "rendition.xml"` を更新します。オプションで、`colorsFamily` パラメーター（サポートされている値は `basic`、`hex`、`html`、`ntc`、`pantone` および `roygbiv`）を追加します。
 
    ```json
    {
@@ -205,15 +205,15 @@ function getColorName(colorsFamily, color) {
    }
    ```
 
-1. タップ __実行__ XML レンディションが生成されるのを待ちます。
-   + 両方のワーカーはプロファイル定義にリストされているので、両方のレンディションが生成されます。 オプションで、 [円レンディションワーカー](../develop/worker.md) を削除して、開発ツールから実行しないようにすることができます。
-1. この __レンディション__ セクションでは、生成されたレンディションのプレビューが表示されます。 次をタップします。 `rendition.xml` をダウンロードし、VS Code（またはお気に入りの XML/テキストエディター）で開いて確認します。
+1. 「__実行__」をタップして、XML レンディションが生成されるのを待ちます。
+   + 両方のワーカーがプロファイル定義にリストされているので、両方のレンディションが生成されます。オプションで、[円形のレンディションワーカー](../develop/worker.md)を示す上部のプロファイル定義を削除して、開発ツールから実行しないようにすることができます。
+1. この「__レンディション__」セクションでは、生成されたレンディションのプレビューが表示されます。「`rendition.xml`」をタップしてダウンロードし、VS Code（またはお好みの XML／テキストエディター）で開いて確認してください。
 
-## ワーカーをテスト{#test}
+## ワーカーのテスト{#test}
 
-メタデータワーカーは、 [バイナリレンディションと同じAsset computeテストフレームワーク](../test-debug/test.md). 唯一の違いは `rendition.xxx` テストケースのファイルは、想定されるXMP (XML) レンディションである必要があります。
+メタデータワーカーは、[バイナリ レンディションと同じ Asset Compute テストフレームワーク](../test-debug/test.md)を使用してテストすることができます。唯一の違いは、テストケースの `rendition.xxx` ファイルは、期待される XMP（XML）レンディションの必要があることです。
 
-1. asset computeプロジェクトで次の構造を作成します。
+1. Asset Compute プロジェクトで次の構造を作成します。
 
    ```
    /test/asset-compute/metadata-colors/success-pantone/
@@ -223,8 +223,8 @@ function getColorName(colorsFamily, color) {
        rendition.xml
    ```
 
-2. 以下を使用： [サンプルファイル](../assets/samples/sample-file.jpg) テストケースの `file.jpg`.
-3. 次の JSON を `params.json`.
+2. テストケースの `file.jpg` として[サンプルファイル](../assets/samples/sample-file.jpg)を使用します。
+3. `params.json` に次の JSON を追加します。
 
    ```
    {
@@ -233,96 +233,96 @@ function getColorName(colorsFamily, color) {
    }
    ```
 
-   次の点に注意してください。 `"fmt": "xml"` を生成するようにテストスイートに指示するには、が必要です。 `.xml` テキストベースのレンディション。
+   `"fmt": "xml"` は、テストスイートが `.xml` テキストベースの表示を生成するよう指示するために必要であることに注意してください。
 
-4. に適切な XML を指定 `rendition.xml` ファイル。 これは、次の方法で取得できます。
+4. `rendition.xml` ファイルに適切な XML を提供します。これは、次の方法で取得できます。
    + 開発ツールを使用してテスト入力ファイルを実行し、（検証済みの）XML レンディションを保存します。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. 実行 `aio app test` をAsset computeプロジェクトのルートから選択し、すべてのテストスイートを実行します。
+5. Asset Compute プロジェクトのルートから `aio app test` を実行すると、すべてのテストスイートが実行されます。
 
-### ワーカーをAdobe I/O Runtimeにデプロイ{#deploy}
+### ワーカーを Adobe I/O Runtime にデプロイ{#deploy}
 
-この新しいメタデータワーカーをAEM Assetsから呼び出すには、次のコマンドを使用して、Adobe I/O Runtimeにデプロイする必要があります。
+この新しいメタデータワーカーを AEM Assets から呼び出すには、次のコマンドを使用して、Adobe I/O Runtime にデプロイする必要があります。
 
 ```
 $ aio app deploy
 ```
 
-![aio アプリデプロイ](./assets/metadata/aio-app-deploy.png)
+![aio アプリのデプロイ](./assets/metadata/aio-app-deploy.png)
 
-これは、プロジェクト内のすべてのワーカーをデプロイします。 以下を確認します。 [完全展開命令](../deploy/runtime.md) を参照してください。
+これは、プロジェクト内のすべてのワーカーをデプロイします。ステージおよび実稼働ワークスペースへのデプロイ方法については、[包括的なデプロイの手順](../deploy/runtime.md)を確認してください。
 
-### AEM処理プロファイルとの統合{#processing-profile}
+### AEM 処理プロファイルとの統合{#processing-profile}
 
-新しいを作成するか、このデプロイ済みのワーカーを呼び出す既存のカスタム処理プロファイルサービスを変更して、AEMからワーカーを呼び出します。
+デプロイされたワーカーを呼び出すカスタム処理 プロファイルサービスを新規作成するか、既存のものを修正して、AEM からワーカーを呼び出します。
 
 ![処理プロファイル](./assets/metadata/processing-profile.png)
 
-1. AEM as a Cloud Service Author サービスに as a としてログイン __AEM Administrator__
-1. に移動します。 __ツール/ Assets /処理プロファイル__
-1. __作成__ 新しい、または __編集__ および既存、処理プロファイル
-1. 次をタップします。 __カスタム__ タブで、 __新規追加__
-1. 新しいサービスを定義
-   + __メタデータレンディションを作成__:アクティブに切り替え
+1. AEM as a Cloud Service オーサーサービスに __AEM 管理者__&#x200B;としてログイン
+1. __ツール／アセット／処理プロファイル__&#x200B;に移動します。
+1. ____&#x200B;新規作成または既存の処理プロファイルを&#x200B;__編集__
+1. 「__カスタム__」タブをタップし、「__新規追加__」をタップします
+1. 新しいサービスを定義します
+   + __メタデータレンディションを作成__：アクティブに切り替えます
    + __エンドポイント：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + これは、 [デプロイ](#deploy) またはコマンドを使用 `aio app get-url`. URL が、AEM as a Cloud Service環境に基づいて正しいワークスペースを指していることを確認します。
+      + これは、[デプロイ](#deploy)またはコマンド `aio app get-url` で取得したワーカーへの URL です。URL が、AEM as a Cloud Service 環境に基づいて正しいワークスペースを指していることを確認します。
    + __サービスパラメーター__
-      + タップ __パラメータを追加__
-         + キー: `colorFamily`
+      + 「__パラメーターを追加__」をタップします
+         + キー：`colorFamily`
          + 値：`pantone`
-            + サポートされている値： `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`
+            + サポートされている値：`basic`、`hex`、`html`、`ntc`、`pantone`、`roygbiv`
    + __MIME タイプ__
-      + __次を含む：__ `image/jpeg`, `image/png`, `image/gif`, `image/svg`
+      + __次を含む：__ `image/jpeg`、`image/png`、`image/gif`、`image/svg`
          + これらは、色の派生に使用されるサードパーティの npm モジュールでサポートされる唯一の MIME タイプです。
       + __除外：__ `Leave blank`
-1. タップ __保存__ 右上に
-1. AEM Assetsフォルダーに処理プロファイルを適用する（まだ適用していない場合）
+1. 右上の「__保存__」をタップ
+1. AEM Assets フォルダーに処理プロファイルを適用する（まだ適用していない場合）
 
 ### メタデータスキーマの更新{#metadata-schema}
 
-色のメタデータを確認するには、画像のメタデータスキーマ上の 2 つの新しいフィールドを、ワーカーが入力する新しいメタデータデータプロパティにマッピングします。
+カラーのメタデータを確認するには、画像のメタデータスキーマ上の 2 つの新しいフィールドを、ワーカーが入力する新しいメタデータデータプロパティにマッピングします。
 
 ![メタデータスキーマ](./assets/metadata/metadata-schema.png)
 
-1. AEM オーサーサービスで、に移動します。 __ツール/アセット/メタデータスキーマ__
-1. に移動します。 __デフォルト__ を選択し、編集します。 __画像__ 生成されたカラーメタデータを公開するための読み取り専用フォームフィールドを追加します。
-1. を追加します。 __1 行のテキスト__
-   + __フィールドラベル__: `Colors Family`
-   + __プロパティにマッピング__: `./jcr:content/metadata/wknd:colorsFamily`
-   + __ルール/フィールド/編集を無効にする__:確認済み
-1. を追加します。 __複数値テキスト__
-   + __フィールドラベル__: `Colors`
-   + __プロパティにマッピング__: `./jcr:content/metadata/wknd:colors`
-1. タップ __保存__ 右上に
+1. AEM オーサーサービスで、__ツール／アセット／Metadata Schemas__&#x200B;に移動します。
+1. __デフォルト__&#x200B;に移動し、「__画像__」を選択および編集して、生成されたカラーメタデータを公開するための読み取り専用フォームフィールドを追加する
+1. __1 行のテキストプロパティを追加する__
+   + __フィールドラベル__：`Colors Family`
+   + __プロパティにマッピング__：`./jcr:content/metadata/wknd:colorsFamily`
+   + __ルール／フィールド／編集を無効にする__：確認済み
+1. __複数値テキスト__&#x200B;を追加します
+   + __フィールドラベル__：`Colors`
+   + __プロパティにマッピング__：`./jcr:content/metadata/wknd:colors`
+1. 右上の「__保存__」をタップします
 
-## アセットを処理中
+## アセットの処理
 
 ![アセットの詳細](./assets/metadata/asset-details.png)
 
-1. AEM オーサーサービスで、に移動します。 __アセット/ファイル__
-1. そのフォルダー（サブフォルダー）に移動すると、処理プロファイルが適用されます。
-1. 新しい画像 (JPEG、PNG、GIFまたはSVG) をフォルダーにアップロードするか、更新された [処理プロファイル](#processing-profile)
-1. 処理が完了したら、アセットを選択し、 __プロパティ__ 上部のアクションバーにメタデータを表示
-1. 以下を確認します。 `Colors Family` および `Colors` [メタデータフィールド](#metadata-schema) カスタムAsset computeメタデータワーカーから書き戻されたメタデータ用。
+1. AEM オーサーサービスで、__アセット／ファイル__&#x200B;に移動します。
+1. 処理プロファイルが適用されるフォルダーまたはサブフォルダーに移動します
+1. 新しい画像（JPEG、PNG、GIF または SVG）をフォルダーにアップロードするか、更新された[処理プロファイル](#processing-profile)を使用して、既存の画像を再処理します
+1. 処理が完了したら、アセットを選択し、上部のアクションバーの&#x200B;__プロパティ__&#x200B;をタップしてメタデータを表示します
+1. カスタム Asset Compute メタデータワーカーから書き戻されたメタデータの `Colors Family` および `Colors` [メタデータフィールド](#metadata-schema)を確認します。
 
-アセットのメタデータに書き込まれたカラーメタデータが `[dam:Asset]/jcr:content/metadata` リソース、このメタデータは、検索を通じてこれらの用語を使用して、より高いアセット発見性を示すインデックスが作成されます。インデックスが作成された場合、アセットのバイナリに書き戻すこともできます。 __DAM メタデータの書き戻し__ ワークフローが呼び出されます。
+`[dam:Asset]/jcr:content/metadata` リソース上のアセットのメタデータに書き込まれたカラーメタデータは、検索を通じてこれらの用語を使用して、アセットの発見性より高めるためにインデックス化され、__DAM メタデータの書き戻し__&#x200B;ワークフローが実行された場合はアセットのバイナリに書き戻すこともできます。
 
-### AEM Assetsでのメタデータのレンディション
+### AEM Assets でのメタデータのレンディション
 
-![AEM Assetsメタデータレンディションファイル](./assets/metadata/cqdam-metadata-rendition.png)
+![AEM Assets メタデータレンディションファイル](./assets/metadata/cqdam-metadata-rendition.png)
 
-asset computeメタデータワーカーによって生成された実際のXMPファイルも、アセット上の個別のレンディションとして保存されます。 通常、このファイルは使用されず、アセットのメタデータノードに適用された値が使用されますが、ワーカーからの生の XML 出力はAEMで使用できます。
+Asset Compute メタデータワーカーによって生成された実際の XMP ファイルも、アセット上の個別のレンディションとして保存されます。通常、このファイルは使用されず、アセットのメタデータノードに適用された値が使用されますが、ワーカーからの生の XML 出力は AEM で使用できます。
 
-## GitHub でのメタデータ色のワーカーコード
+## GitHub でのメタデータカラーのワーカーコード
 
-最終 `metadata-colors/index.js` は、GitHub で以下の場所から入手できます。
+最終的な `metadata-colors/index.js` は、GitHub で次の場所から入手できます。
 
 + [aem-guides-wknd-asset-compute/actions/metadata-colors/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/metadata-colors/index.js)
 
-最終 `test/asset-compute/metadata-colors` テストスイートは GitHub で次の場所から入手できます。
+最終的な `test/asset-compute/metadata-colors` テストスイートは GitHub で次の場所から入手できます。
 
 + [aem-guides-wknd-asset-compute/test/asset-compute/metadata-colors](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
