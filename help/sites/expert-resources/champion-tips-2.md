@@ -5,7 +5,7 @@ description: AEM チャンピオンの Greg Dimeris が AEM Sites で編集可�
 seo-description: Learn how AEM Champion Greg Dimeris leveraged editable templates in AEM Sites. Review these quick tips and then give them a try in your instance today.
 exl-id: a118dde6-0b25-4cc6-92bf-54b15620bbf4
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
 ht-degree: 100%
 
