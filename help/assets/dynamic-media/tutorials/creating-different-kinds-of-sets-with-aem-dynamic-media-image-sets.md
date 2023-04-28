@@ -1,6 +1,6 @@
 ---
-title: AEM Dynamic Mediaでの画像セットの作成
-description: Dynamic Mediaでの画像セットの設定
+title: AEM Dynamic Media での画像セットの作成
+description: Dynamic Media での画像セットの設定
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -9,14 +9,14 @@ topic: Development
 index: y
 exl-id: 2defc3ca-0cdc-4e12-9c73-4fa1a6347b1b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '34'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Dynamic Mediaでの画像セットの作成
+# AEM Dynamic Media での画像セットの作成
 
-このビデオでは、AEM Dynamic Mediaを使用して画像セットを作成するプロセスについて説明します。
+このビデオでは、AEM Dynamic Media を使用して画像セットを作成するプロセスについて順を追って説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335581?quality=12&learn=on)
