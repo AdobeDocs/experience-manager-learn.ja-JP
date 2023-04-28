@@ -1,32 +1,32 @@
 ---
-title: リスト変数を入力するカスタムプロセス手順
-description: ドキュメント型と文字列型のリスト変数を入力するカスタムプロセス手順
-feature: ワークフロー
-topic: 開発
+title: リスト変数に値を入力するカスタムプロセスステップ
+description: ドキュメントタイプと文字列タイプのリスト変数に値を入力するカスタムプロセスステップ
+feature: Workflow
+topic: Development
 version: 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
-workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 1%
+exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '139'
+ht-degree: 100%
 
 ---
-
 
 # カスタムプロセスステップ
 
 
-配列リストワークフロー変数を設定するためのカスタムプロセス手順が実装されました。 OSGiバンドルの作成に慣れていない場合は、[次の手順に従ってください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+配列リストワークフロー変数に値を入力するためのカスタムプロセスステップを実装しました。 OSGi バンドルの作成に詳しくない場合は、[次の手順に従ってください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
 
-カスタムプロセスステップのコードは、次の処理を行います
+カスタムプロセスステップのコードでは、以下を行います。
 
-* ペイロードフォルダーの下にあるすべてのアダプティブフォームの添付ファイルに対してクエリを実行します。 フォルダー名はプロセス引数としてプロセスステップに渡されます。
+* ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルをクエリします。 フォルダー名がプロセス引数としてプロセスステップに渡されます。
 
-* `listOfDocuments`ワークフロー変数を設定する
-* `attachmentNames`ワークフロー変数を設定する
-* ワークフロー変数の値を設定する(`no_of_attachments`)
+* `listOfDocuments` ワークフロー変数に値を入力します。
+* `attachmentNames` ワークフロー変数に値を入力します。
+* ワークフロー変数（`no_of_attachments`）の値を設定します。
 
 ```java
  package com.aemforms.formattachments.core;
@@ -111,7 +111,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> コードが機能するために、ワークフローで定義されている次の変数があることを確認してください
-> *listOfDocuments* - ArrayList of Documents型の変数
-> *attachmentNames* - StringのArrayList型の変数
-> *no_of_attachments* - Double型の変数
+> コードが機能するために、次の変数がワークフローで必ず定義されるようにしてください。
+> *listOfDocuments* - ドキュメントの ArrayList タイプの変数
+> *attachmentNames* - 文字列の ArrayList タイプの変数
+> *no_of_attachments* - Double タイプの変数
