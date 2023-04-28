@@ -1,5 +1,5 @@
 ---
-title: アダプティブFormsを使用したバーコードサービス
+title: アダプティブフォームを使用したバーコードサービス
 description: バーコードサービスを使用してバーコードをデコードし、抽出したデータからフォームフィールドを設定します。
 feature: Barcoded Forms
 version: 6.4,6.5
@@ -9,17 +9,17 @@ level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '358'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# アダプティブFormsを使用したバーコードサービス{#barcode-service-with-adaptive-forms}
+# アダプティブフォームを使用したバーコードサービス{#barcode-service-with-adaptive-forms}
 
-この記事では、アダプティブフォームに入力するためのバーコードサービスの使用方法を紹介します。 使用例を次に示します。
+この記事では、アダプティブフォームに入力するためのバーコードサービスの使用方法を紹介します。 ユースケースを次に示します。
 
-1. ユーザーが、PDFをアダプティブフォームの添付ファイルとして追加する
+1. ユーザーが、PDF をアダプティブフォームの添付ファイルとして追加します
 1. 添付ファイルのパスがサーブレットに送信されます
 1. サーブレットがバーコードをデコードし、データを JSON 形式で返します
 1. 次に、デコードされたデータを使用してアダプティブフォームに値が入力されます
@@ -54,7 +54,7 @@ public JSONObject extractBarCode(Document pdfDocument) {
  }
 ```
 
-次に、サーブレットコードを示します。 このサーブレットは、ユーザーがアダプティブフォームに添付ファイルを追加すると呼び出されます。 このサーブレットは、JSON オブジェクトを呼び出し元のアプリケーションに戻します。 次に、呼び出し元のアプリケーションが、JSON オブジェクトから抽出された値をアダプティブフォームに入力します。
+次に、サーブレットコードを示します。 このサーブレットは、ユーザーがアダプティブフォームに添付ファイルを追加すると呼び出されます。 サーブレットは、JSON オブジェクトを呼び出し元のアプリケーションに戻します。 次に、呼び出し元のアプリケーションが、JSON オブジェクトから抽出された値をアダプティブフォームに入力します。
 
 ```java
 @Component(service = Servlet.class, property = {
@@ -94,7 +94,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-次のコードは、アダプティブフォームが参照するクライアントライブラリの一部です。 ユーザーがアダプティブフォームに添付ファイルを追加すると、このコードがトリガーされます。 コードは、要求パラメーターで渡された添付ファイルのパスを使用して、GETをサーブレットに呼び出します。 サーブレット呼び出しから受け取ったデータは、アダプティブフォームへの入力に使用されます。
+次のコードは、アダプティブフォームが参照するクライアントライブラリの一部です。 ユーザーがアダプティブフォームに添付ファイルを追加すると、このコードがトリガーされます。 コードは、リクエストパラメーターで渡された添付ファイルのパスを使用して、サーブレットに対して GET 呼び出しを行います。サーブレット呼び出しから受け取ったデータは、アダプティブフォームへの入力に使用されます。
 
 ```javascript
 $(document).ready(function()
@@ -131,18 +131,18 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->このパッケージに含まれるアダプティブフォームは、AEM Forms 6.4 を使用して構築されています。このパッケージをAEM Forms 6.3 環境で使用する場合は、AEMフォーム 6.3 でアダプティブフォームを作成してください。
+>このパッケージに含まれるアダプティブフォームは、AEM Forms 6.4 を使用して作成されています。このパッケージを AEM Forms 6.3 環境で使用する場合は、AEM Forms 6.3 でアダプティブフォームを作成してください。
 
 12 行目：サービスリゾルバーを取得するカスタムコード。 このバンドルは、この記事のアセットの一部として含まれています。
 
-23 行目 — DocumentServices extractBarCode メソッドを呼び出して、デコードされたデータを含む JSON オブジェクトを取得します
+23 行目 - DocumentServices extractBarCode メソッドを呼び出して、デコードされたデータを含む JSON オブジェクトを取得します
 
 これをシステムで実行するには、次の手順に従ってください。
 
-1. [BarcodeService.zip のダウンロード](assets/barcodeservice.zip) パッケージマネージャーを使用してAEMにインポートします。
-1. [カスタムドキュメントサービスバンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [サンプルのPDFフォームをダウンロード](assets/barcode.pdf)
-1. ブラウザーで [サンプルアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. 提供されたサンプルPDFをアップロード
-1. フォームにデータが入力されているのが確認できます
+1. [BarcodeService.zip をダウンロード](assets/barcodeservice.zip)して、パッケージマネージャーを使用して AEM に読み込みます
+1. [カスタムドキュメントサービスバンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [サンプル PDF フォームをダウンロードします](assets/barcode.pdf)
+1. ブラウザーで[サンプルアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)を開きます
+1. 提供されたサンプル PDF をアップロードします
+1. フォームにデータが入力されていることを確認できます
