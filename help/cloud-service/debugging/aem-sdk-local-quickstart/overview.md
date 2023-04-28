@@ -1,6 +1,6 @@
 ---
-title: AEM SDKのデバッグ
-description: AEM SDKは、開発者が使用する主要な開発環境で、AEMやデプロイ済みアプリケーションのデバッグに関する様々な方法をサポートしています。
+title: AEM SDK のデバッグ
+description: AEM SDK は、開発者が使用する主要な開発環境で、AEM アプリケーションやデプロイ済みアプリケーションをデバッグする様々な方法をサポートしています。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -13,36 +13,36 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM SDKのデバッグ
+# AEM SDK のデバッグ
 
-AEM SDKのローカルクイックスタートは、開発者が使用する主要な開発環境で、AEMとデプロイ済みアプリケーションのデバッグには様々な方法がサポートされています。 このユーザーガイドでは、AEM SDKのローカルクイックスタートでアプリケーションをデバッグするための、より一般的なデバッグツールおよびコンソールをいくつか紹介します。
+AEM SDK のローカルクイックスタートは、開発者が使用する主要な開発環境で、AEM アプリケーションやデプロイ済みアプリケーションをデバッグする様々な方法をサポートしています。このユーザーガイドでは、AEM SDK のローカルクイックスタートでアプリケーションをデバッグするための、より一般的なデバッグツールとコンソールのいくつかについて順を追って説明します。
 
 ## ログ
 
-ログはAEMアプリケーションのデバッグの最前線として機能しますが、デプロイされるAEMアプリケーションでの適切なログの記録に依存します。
+ログは AEM アプリケーションのデバッグの最前線として機能しますが、デプロイされた AEM アプリケーションでの適切なログの記録に依存します。
 
-[ログを使用したAEM SDKのデバッグ](./logs.md)
+[ログを使用したAEM SDK のデバッグ](./logs.md)
 
 ## リモートデバッグ
 
-AEM SDKのローカルクイックスタートで実行されるJavaコードのリモートデバッグを使用すると、IDEからAEMでライブコード実行のステップスルーを実行できます。
+AEM SDK のローカルクイックスタートで動作する Java コードのリモートデバッグを使用すると、IDE から AEM でのライブコード実行を 1 ステップずつ進めることができます。
 
-[AEM SDKのリモートデバッグ](./remote-debugging.md)
+[AEM SDK のリモートデバッグ](./remote-debugging.md)
 
-## OSGi Webコンソール
+## OSGi web コンソール
 
-AEM SDKのローカルクイックスタートには、OSGi Webコンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と、内の機能を理解するのに役立ちます。
+AEM SDK のローカルクイックスタートには OSGi web コンソールがあり、AEM でアプリケーションがどう認識され AEM 内でどう機能するかを理解するのに役立つ様々な情報やイントロスペクションをローカルの AEM ランタイムに提供します。
 
-[OSGi Webコンソールを使用したAEM SDKのデバッグ](./osgi-web-consoles.md)
+[OSGi web コンソールを使用した AEM SDK のデバッグ](./osgi-web-consoles.md)
 
 ## その他のツール
 
-その他の様々なツールが、AEM SDKのローカルクイックスタートでのアプリケーションのデバッグに役立ちます。
+AEM SDK のローカルクイックスタートでアプリケーションをデバッグするには、その他の様々なツールが役立ちます。
 
-[AEM SDKをデバッグするその他のツール](./other-tools.md)
+[AEM SDK をデバッグするその他のツール](./other-tools.md)
