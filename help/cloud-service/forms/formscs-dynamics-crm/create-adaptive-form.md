@@ -1,6 +1,6 @@
 ---
-title: アダプティブフォームを使用してリードオブジェクトを作成および表示します
-description: dynamics 統合を使用して、アダプティブフォーム内のリードオブジェクトを作成し、リストします。
+title: アダプティブフォームを使用してリードオブジェクトを作成および表示する
+description: Dynamics 統合を使用して、アダプティブフォーム内のリードオブジェクトを作成し、リストします。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,17 +8,17 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
-workflow-type: tm+mt
+exl-id: 804b2fad-34a3-4bcb-913c-9070393a6c9c
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # アダプティブフォームの作成と設定
 
 
-次のビデオでは、リードオブジェクトを作成および表示するためのアダプティブフォームの作成および設定の手順について説明します。
+次のビデオでは、リードオブジェクトを作成および表示するためにアダプティブフォームを作成および設定する手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
-
