@@ -1,6 +1,6 @@
 ---
-title: GIT への Symlinks の適切な追加
-description: Dispatcher 設定で作業する際のシンボリックリンクの追加方法と追加場所に関する説明です。
+title: Git へのシンボリックリンクの適切な追加
+description: Dispatcher 設定で作業する際にシンボリックリンクを追加する方法と場所について説明します。
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -8,28 +8,28 @@ role: Admin
 level: Beginner
 thumbnail: xx.jpg
 source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1252'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# GIT への Symlinks の追加
+# Git へのシンボリックリンクの追加
 
 [目次](./overview.md)
 
-[&lt; — 前：Dispatcher ヘルスチェック](./health-check.md)
+[&lt;- 前：Dispatcher ヘルスチェック](./health-check.md)
 
-AMS には、Dispatcher のソースコードが格納された、事前に設定された GIT リポジトリが用意され、開発とカスタマイズを開始する準備が整います。
+AMS では、Dispatcher のソースコードが格納され、開発とカスタマイズを開始する準備が整っている、事前に入力された Git リポジトリを取得します。
 
-最初の `.vhost` ファイルまたは最上位レベル `farm.any` ファイルを作成する場合は、 `available_*` ディレクトリの `enabled_*` ディレクトリ。 Cloud Manager パイプラインを通じて適切なリンクタイプを使用することが、デプロイメントを成功させるうえで重要になります。 このページでは、この方法を説明します。
+最初の `.vhost` ファイル、または最上位の `farm.any` ファイルを作成したら、`available_*` ディレクトリから `enabled_*` ディレクトリへのシンボリックリンクを作成する必要があります。適切なリンクタイプを使用することが、Cloud Manager パイプラインを介したデプロイメントを成功させるうえで重要になります。このページは、その方法を知るのに役立ちます。
 
 ## Dispatcher アーキタイプ
 
-AEM開発者は、通常、プロジェクトを [AEM archetype](https://github.com/adobe/aem-project-archetype)
+AEM 開発者は通常、[AEM アーキタイプ](https://github.com/adobe/aem-project-archetype)からプロジェクトを開始します
 
-使用されているシンボリックリンクが表示されるソースコードの領域の例を以下に示します。
+使用されているシンボリックリンクを確認できるソースコードの領域のサンプルを以下に示します。
 
 ```
 $ tree dispatcher
@@ -65,30 +65,30 @@ dispatcher
 17 directories, 60 files
 ```
 
-例えば、 `/etc/httpd/conf.d/available_vhosts/` ディレクトリにステージ済みの潜在的な情報が含まれています `.vhost` 実行設定で使用できるファイル。
+例えば、`/etc/httpd/conf.d/available_vhosts/` ディレクトリには、実行中の設定で使用できるステージングされた潜在的な `.vhost` ファイルが含まれています。
 
-有効 `.vhost` ファイルは相対パスとして表示されます `symlinks` 内側 `/etc/httpd/conf.d/enabled_vhosts/` ディレクトリ。
+有効な `.vhost` ファイルは、`/etc/httpd/conf.d/enabled_vhosts/` ディレクトリ内の相対パス `symlinks` として表示されます。
 
-## symlink の作成
+## シンボリックリンクの作成
 
-Apache Web サーバーが宛先ファイルを同じファイルとして扱えるように、ファイルへのシンボリックリンクを使用します。  両方のディレクトリでファイルを複製しないようにします。  一方のディレクトリ（シンボリックリンク）からもう一方のディレクトリへのショートカットの代わりに、
+ファイルへのシンボリックリンクを使用して、Apache web サーバーが宛先ファイルを同じファイルとして扱うようにします。両方のディレクトリにファイルを複製しないようにします。代わりに、一方のディレクトリからもう一方のディレクトリへのショートカット（シンボリックリンク）を使用します。
 
-デプロイした設定が Linux ホストをターゲットにすることを認識します。  ターゲット・システムと互換性のない symlink を作成すると、障害が発生し、望ましくない結果が生じます。
+デプロイした設定が Linux ホストをターゲットにしていることを認識します。ターゲットシステムと互換性のないシンボリックリンクを作成すると、エラーや望ましくない結果が発生します。
 
-ワークステーションが Linux マシンでない場合は、リンクを正しく作成して GIT にコミットできるように、どのコマンドを使用すればよいのか疑問に思うかもしれません。
+ワークステーションが Linux マシン以外の場合、これらのリンクを適切に作成して Git にコミットできるようにするには、どのコマンドを使用すればよいのか疑問に思うかもしれません。
 
-> `TIP:` Apache Web サーバーのローカルコピーをインストールし、異なるインストールベースを持っていた場合でも、リンクは引き続き機能するので、相対リンクを使用することが重要です。  絶対パスを使用する場合、ワークステーションや他のシステムは、同じディレクトリ構造と一致する必要があります。
+> `TIP:` Apache web サーバーのローカルコピーをインストールし、インストールベースが異なる場合でもリンクは引き続き機能するので、相対リンクを使用することが重要です。絶対パスを使用する場合は、ワークステーションや他のシステムが完全に同じディレクトリ構造に一致する必要があります。
 
-### OSX/Linux
+### OSX／Linux
 
-symlinks はこれらのオペレーティングシステムに固有のものであり、これらのリンクの作成方法の例を以下に示します。  お気に入りのターミナルアプリケーションを開き、次のサンプルコマンドを使用してリンクを作成します。
+シンボリックリンクはこれらのオペレーティングシステムにネイティブです。リンクの作成方法の例を以下に示します。お気に入りのターミナルアプリケーションを開き、次のコマンド例を使用してリンクを作成します。
 
 ```
 $ cd <LOCATION OF CLONED GIT REPO>\src\conf.d\enabled_vhosts
 $ ln -s ../available_vhosts/<Destination File Name> <Target File Name>
 ```
 
-次に、参照用の入力済みコマンドの例を示します。
+参照用に入力したコマンドの例を以下に示します。
 
 ```
 $ git clone https://github.com/adobe/aem-project-archetype.git
@@ -96,7 +96,7 @@ $ cd aem-project-archetype/src/main/archetype/dispatcher.ams/src/conf.d/enabled_
 $ ln -s ../available_vhosts/aem_flush.vhost aem_flush.vhost
 ```
 
-次に、 `ls` コマンド：
+`ls` コマンドを使用してファイルをリストした場合のリンクの例を以下に示します。
 
 ```
 ls -l
@@ -106,24 +106,24 @@ lrwxrwxrwx. 1 root root 35 Oct 13 21:38 aem_flush.vhost -> ../available_vhosts/a
 
 ### Windows
 
-> `Note:` MS Windows （より良い、NTFS）はシンボリックリンクをサポートしています。Windows Vista!
+> `Note:` MS Windows（NTFS）は、Windows Vista からシンボリックリンクをサポートしています。
 
 ![mklink コマンドのヘルプ出力を示す Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-terminal-mklink.png)
 
-> `Warning:` mklink コマンドを使用して symlink を作成するには、管理者権限が必要です。 管理者アカウントの場合でも、開発者モードが有効になっていない限り、コマンドプロンプト「管理者として」を実行する必要があります
+> `Warning:` シンボリックリンクを作成する mklink コマンドを正しく実行するには、管理者権限が必要です。管理者アカウントでも、開発者モードが有効になっていない場合は、コマンドプロンプトを「管理者として」実行する必要があります。
 > <br/>不適切な権限：
-> ![アクセス許可が原因でコマンドが失敗したことを示す Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-mklink-underpriv.png)
+> ![権限が原因でコマンドが失敗したことを示す Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-mklink-underpriv.png)
 > <br/>適切な権限：
 > ![管理者として実行された Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-mklink-properpriv.png)
 
-次に、リンクを作成するコマンドを示します。
+リンクを作成するコマンドを以下に示します。
 
 ```
 C:\<PATH TO SRC>\enabled_vhosts> mklink <Target File Name> ..\available_vhosts\<Destination File Name>
 ```
 
 
-次に、参照用の入力済みコマンドの例を示します。
+参照用に入力したコマンドの例を以下に示します。
 
 ```
 C:\> git clone https://github.com/adobe/aem-project-archetype.git
@@ -132,60 +132,60 @@ C:\aem-project-archetype\src\main\archetype\dispatcher.ams\src\conf.d\enabled_vh
 symbolic link created for aem_flush.vhost <<===>> ..\available_vhosts\aem_flush.vhost
 ```
 
-#### 開発者モード ( Windows 10 )
+#### 開発者モード（Windows 10）
 
-を [開発者モード](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)Windows 10 を使用すると、開発中のアプリをより簡単にテストし、Ubuntu Bash シェル環境を使用し、開発者に焦点を当てた様々な設定を変更し、その他の操作を行うことができます。
+Windows 10 を[開発者モード](https://docs.microsoft.com/ja-jp/windows/apps/get-started/enable-your-device-for-development)にすると、開発中のアプリをより簡単にテストしたり、Ubuntu Bash シェル環境を使用したり、開発者向けの様々な設定を変更したり、その他の操作を行うことができます。
 
-Microsoftは、開発者モードに機能を追加し続けているようです。また、より広範に採用され、安定したと見なされた場合、デフォルトでこれらの機能の一部を有効にしています（例えば、Creators Update では、Ubuntu Bash Shell 環境は、開発者モードを必要としません）。
+Microsoft は、開発者モードに継続して機能を追加し、機能がより広く採用されて安定していると見なした場合、デフォルトで機能の一部を有効にしているようです（例えば、Creators Update により、Ubuntu Bash シェル環境は開発者モードを必要としなくなりました）。
 
-symlinks はどうですか？ 開発者モードを有効にすると、管理者権限でコマンドプロンプトを実行してシンボリックリンクを作成する必要がなくなります。 したがって、開発者モードを有効にすると、誰でもシンボリックリンクを作成できます。
+シンボリックリンクはどうですか？開発者モードを有効にすると、昇格された特権でコマンドプロンプトを実行してシンボリックリンクを作成する必要がなくなります。したがって、開発者モードを有効にすると、すべてのユーザーがシンボリックリンクを作成できます。
 
-> デベロッパーモードを有効にした後、ユーザーは、変更を有効にするにはログオフ/ログオンする必要があります。
+> 開発者モードを有効にした後、ユーザーはログオフ／ログオンして変更を有効にする必要があります。
 
-これで、管理者としてを実行せずに、コマンドが機能するようになりました
+これで、管理者として実行しなくてもコマンドが機能することがわかります。
 
-![開発者モードを有効にして、通常のユーザーとして実行する Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-mklink-devmode.png)
+![開発者モードが有効になっている状態で通常のユーザーとして実行された Windows コマンドプロンプトの画像](./assets/git-symlinks/windows-mklink-devmode.png)
 
-#### 代替/プログラム的アプローチ
+#### 代替アプローチ／プログラムによるアプローチ
 
-特定のユーザーがシンボリックリンクを作成できるようにする特定のポリシーがあります→ [シンボリックリンクの作成 (Windows 10) - Windows セキュリティ | Microsoftドキュメント](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
+特定のユーザーにシンボリックリンクの作成を許可する特定のポリシーがあります → [シンボリックリンクの作成（Windows 10）- Windows セキュリティ | Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
 
-PRO:
-- これは、各デバイスで手動で開発者モードを有効にする必要なく、組織内のすべての開発者 (Active Directory) に対するシンボリックリンクの作成をプログラムで許可する場合に利用できます。
-- さらに、このポリシーは、デベロッパーモードを提供しない以前のバージョンの MS Windows で利用できるはずです。
+メリット：
+- これを利用すれば、顧客は各デバイスで開発者モードを手動で有効にしなくても、組織（すなわち、Active Directory）内のすべての開発者にシンボリックリンクの作成をプログラムで許可することができます。
+- さらには、デベロッパーモードを提供しない MS Windows の以前のバージョンで、このポリシーを利用できます。
 
-CON:
-- このポリシーは、Administrators グループに属するユーザーには影響を与えないようです。 管理者は、管理者権限を持つコマンドプロンプトを実行する必要があります。 変だ。
+デメリット：
+- このポリシーは、管理者グループに属するユーザーには影響を与えないように思われます。 それでも、管理者は、昇格された特権でコマンドプロンプトを実行する必要があります。 これは奇妙なことです。
 
-> ローカル/グループポリシーの変更を有効にするには、ユーザーのログオフ/ログオンが必要です。
+> ローカル／グループポリシーの変更を有効にするには、ユーザーのログオフ／ログオンが必要です。
 
-実行 `gpedit.msc`、必要に応じてユーザーを追加または変更します。 管理者はデフォルトで存在します
+`gpedit.msc` を実行し、必要に応じてユーザーを追加または変更します。 管理者はデフォルトで存在します
 
-![調整する権限を示す [ グループポリシーエディタ ] ウィンドウ](./assets/git-symlinks/windows-localpolicies-symlinks.png)
+![調整する権限を示すグループポリシーエディターウィンドウ](./assets/git-symlinks/windows-localpolicies-symlinks.png)
 
-#### GIT での Symlinks の有効化
+#### GIT でのシンボリックリンクの有効化
 
-Git は、 core.symlinks オプションに従ってシンボリックリンクを処理します
+Git では、core.symlinks オプションに従ってシンボリックリンクを処理します
 
-ソース： [Git - git-config ドキュメント](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
+出典：[Git - git-config ドキュメント](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
 
-*core.symlinks が false の場合、シンボリックリンクは、リンクテキストを含む小さなプレーンファイルとしてチェックアウトされます。 `git-update-index[1]` および `git-add[1]` は、記録されたタイプを通常のファイルに変更しません。 シンボリックリンクをサポートしない FAT などのファイルシステムで役立ちます。
-デフォルトは true です（例外は）。 `git-clone[1]` または `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.` ほとんどの場合、Git では Windows が symlinks に対して適切でないと見なされ、これが false に設定されます。*
+*core.symlinks が false の場合、シンボリックリンクは、リンクテキストを含んだ小さなプレーンファイルとしてチェックアウトされます。 `git-update-index[1]` と `git-add[1]` は、記録されたタイプを通常のファイルには変更しません。 シンボリックリンクをサポートしていない FAT などのファイルシステムで役立ちます。
+デフォルトは true です。ただし、`git-clone[1]` や `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.`ほとんどの場合、Git では、Windows がシンボリックリンクに対しては適切でないと見なし、これを false に設定します。*
 
-Windows での Git の動作については、次の節で詳しく説明します。シンボリックリンク・ git-for-windows/git Wiki ・ GitHub
+Windows での Git の動作について詳しくは、シンボリックリンク・git-for-windows／git Wiki・GitHub を参照してください。
 
-> `Info`:上記のドキュメントに記載されている前提は、Windows 上でのAEM Developer の設定が可能で、特に NTFS に関するもので、また、symlinks と Directory symlinks のみを使用しているという点では、問題ないと思われます。
+> `Info`：Windows 特に NTFS 上で考えられる AEM 開発者の設定と、ここではファイルのシンボリックリンクとディレクトリのシンボリックリンクの比較のみを念頭に置いているという事実から、上記のリンク先のドキュメントで仮定されている事項は問題ないように思われます。
 
-これが良い知らせだ [Windows 版 Git バージョン2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) インストーラーに [シンボリックリンクのサポートを有効にする明示的なオプション。](https://github.com/git-for-windows/git/issues/921)
+ありがたいことに、[Git for Windows バージョン2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) 以降、インストーラーには [シンボリックリンクのサポートを有効にするための明示的なオプション](https://github.com/git-for-windows/git/issues/921)があります。
 
-> `Warning`:core.symlink オプションは、リポジトリのクローン作成時に実行時に提供できます。それ以外の場合は、グローバル設定として保存できます。
+> `Warning`：core.symlink オプションは、実行時、リポジトリのクローン作成時に指定することができます。または、グローバル設定として保存することもできます。
 
-![GIT インストーラーが symlinks のサポートを表示しています](./assets/git-symlinks/windows-git-install-symlink.png)
+![GIT インストーラーでシンボリックリンクのサポートを示している様子](./assets/git-symlinks/windows-git-install-symlink.png)
 
-Git for Windows は、グローバル環境設定を `"C:\Program Files\Git\etc\gitconfig"` . これらの設定は、他の Git デスクトップクライアントアプリでは考慮されない場合があります。
-以下は、すべての開発者が Git ネイティブクライアント (Git Cmd、Git Bash) を使用するわけではなく、一部の Git デスクトップアプリ（GitHub Desktop、Atlassian Sourcetree など）では、異なる設定/デフォルトで System または組み込み Git を使用する場合の問題です
+Git for Window では、グローバル環境設定を `"C:\Program Files\Git\etc\gitconfig"` に保存します。これらの設定は、他の Git デスクトップクライアントアプリでは考慮されない可能性があります。
+ここからが問題です。すべての開発者が Git ネイティブクライアント (Git Cmd、Git Bash) を使用するとは限らず、一部の Git デスクトップアプリ（GitHub Desktop、Atlassian Sourcetree など）では、システムまたは組み込み Git を使用するための設定やデフォルトが異なっている場合があります。
 
-以下は、の内部にあるものの例です。 `gitconfig` ファイル
+以下は `gitconfig` ファイルの内容の例です。
 
 ```
 [diff "astextplain"]
@@ -214,11 +214,11 @@ Git for Windows は、グローバル環境設定を `"C:\Program Files\Git\etc\
 
 #### Git コマンドラインに関するヒント
 
-新しいシンボリックリンクを作成する必要がある場合があります（例：新しいホストや新しいファームの追加）。
+新しい vhost や新しいファームの追加など、新しいシンボリックリンクの作成が必要な場合があります。
 
-上記のドキュメントでは、Windows がシンボリックリンクを作成するための「mklink」コマンドを提供しています。
+Windows にはシンボリックリンクを作成する「mklink」コマンドが用意されていることを、上記のドキュメントで確認しました。
 
-Git Bash 環境で作業する場合は、代わりに標準の Bash コマンドを使用できます `ln -s` ただし、次の例のような特別な命令が先頭に付く必要があります。
+Git Bash 環境で作業する場合は、代わりに標準の Bash コマンド `ln -s` を使用できますが、次の例のように特別な命令を前に付ける必要があります。
 
 ```
 MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/available_vhosts/default.vhost
@@ -226,14 +226,14 @@ MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/
 
 #### 概要
 
-Microsoft Windows OS で ( 少なくとも現在のAEM Dispatcher 設定ベースラインの範囲に対して )Git でシンボリックリンクを正しく処理するには、次が必要です。
+Microsoft Windows OS で（少なくとも現在の AEM Dispatcher 設定ベースラインの範囲について）Git でシンボリックリンクを正しく処理するには、以下のものが必要になります。
 
-| 項目 | 最小バージョン/設定 | 推奨バージョン/設定 |
+| 項目 | 最小バージョン／設定 | 推奨バージョン／設定 |
 |------|---------------------------------|-------------------------------------|
-| オペレーティングシステム | Windows Vista 以降 | Windows 10 Creator Update 以降 |
+| オペレーティングシステム | Windows Vista 以降 | Windows 10 Creators Update 以降 |
 | ファイルシステム | NTFS | NTFS |
-| Windows ユーザーのシンボリックリンクを処理する機能 | `"Create symbolic links"` グループ/ローカルポリシー `under "Group Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment"` | Windows 10 開発者モードが有効になっています |
-| GIT | ネイティブクライアントバージョン 1.5.3 | ネイティブクライアントバージョン2.10.2以降 |
-| Git 設定 | `--core.symlinks=true` オプションを使用して、コマンドラインから git クローンを作成する | Git のグローバル設定<br/>`[core]`<br/>    symlinks = true <br/> ネイティブ Git クライアント設定パス： `C:\Program Files\Git\etc\gitconfig` <br/>Git デスクトップクライアントの標準的な場所： `%HOMEPATH%\.gitconfig` |
+| Windows ユーザーのシンボリックリンクを処理する機能 | `"Create symbolic links"` グループ／ローカルポリシー `under "Group Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment"` | Windows 10 開発者モードが有効になっている |
+| Git | ネイティブクライアントバージョン 1.5.3 | ネイティブクライアントバージョン 2.10.2 以降 |
+| Git 設定 | コマンドラインから Git クローンを実行する場合の「`--core.symlinks=true`」オプション | Git グローバル設定 <br/>`[core]`<br/> symlinks = true <br/> ネイティブ Git クライアント設定パス：`C:\Program Files\Git\etc\gitconfig` <br/> Git デスクトップクライアントの標準的な場所：`%HOMEPATH%\.gitconfig` |
 
-> `Note:` 既にローカルリポジトリがある場合は、元の場所から新しくクローンを作成する必要があります。 新しい場所にクローンを作成し、コミットされていないローカル変更やステージされていないローカル変更を新しくクローンされたリポジトリに手動でマージできます。
+> `Note:` 既にローカルリポジトリがある場合は、元の場所から新しくクローンを作成する必要があります。新しい場所にクローンを作成し、コミットされていないローカル変更やステージングされていないローカル変更を、新しくクローンされたリポジトリに手動で結合できます。
