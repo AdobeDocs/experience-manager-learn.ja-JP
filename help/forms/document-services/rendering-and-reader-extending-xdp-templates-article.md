@@ -1,6 +1,6 @@
 ---
-title: 使用権限を持つPDFへの XDP のレンダリング
-description: PDF に使用権限を適用
+title: 使用権限を持つ PDF への XDP のレンダリング
+description: PDF への使用権限の適用
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -9,38 +9,38 @@ level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '425'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# 使用権限を持つPDFへの XDP のレンダリング{#rendering-xdp-into-pdf-with-usage-rights}
+# 使用権限を持つ PDF への XDP のレンダリング{#rendering-xdp-into-pdf-with-usage-rights}
 
-一般的な使用例は、xdp をPDFにレンダリングし、レンダリングPDFにReader拡張を適用することです。
+一般的なユースケースは、XDP を PDF にレンダリングし、レンダリングされた PDF に Reader Extensions を適用することです。
 
-例えば、AEM Formsのフォームポータルで、ユーザーが XDP をクリックすると、XDP をPDFとしてレンダリングし、Reader がPDFを拡張できます。
-
-
-この使用例を達成するには、次の手順を実行する必要があります。
-
-* Reader拡張証明書を「fd-service」ユーザーに追加します。 Extensions Extensions 証明書を追加する手順がReaderされます。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja)
+例えば、AEM Forms のフォームポータルで、ユーザーが XDP をクリックすると、XDP を PDF としてレンダリングし、Reader が PDF を拡張できます。
 
 
-* また、 [設定，Reader拡張資格情報](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+このユースケースを実現するには、次の手順を実行する必要があります。
+
+* Reader Extensions 証明書を「fd-service」ユーザーに追加します。Reader Extensions 証明書を追加する手順については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja)を参照してください
 
 
-* 使用権限をレンダリングして適用するカスタム OSGi サービスを作成します。 これをおこなうコードを次に示します
+* また、[Reader Extensions 資格情報の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja)については、ビデオを参照してください。
 
-## Render XDP と Apply usage rights {#render-xdp-and-apply-usage-rights}
 
-* 行 7:FormsService の renderPDFForm を使用して、XDP からPDFを生成します。
+* レンダリングして使用権限を適用するカスタム OSGi サービスを作成します。これを行うコードを以下に示します。
 
-* 8～14 行目：適切な使用権限が設定されます。 これらの使用権限は OSGi 設定から取得されます。
+## XDP のレンダリングおよび使用権限の適用 {#render-xdp-and-apply-usage-rights}
 
-* 行 20 :サービスユーザー fd-service に関連付けられた resourceresolver を使用します。
+* 行 7：FormsService の renderPDFForm を使用して、XDP から PDF を生成します。
 
-* 行 24:使用権限の適用には、DocumentAssuranceService の secureDocument メソッドが使用されます
+* 8～14 行：適切な使用権限が設定されます。これらの使用権限は OSGi 設定から取得されます。
+
+* 行 20：サービスユーザー fd-service に関連付けられた resourceresolver を使用します
+
+* 行 24：使用権限の適用には、DocumentAssuranceService の SecureDocument メソッドが使用されます
 
 ```java
  public Document renderAndExtendXdp(String xdpPath) {
@@ -82,11 +82,11 @@ ht-degree: 2%
  }
 ```
 
-次のスクリーンショットは、公開された設定プロパティを示しています。 一般的な使用権限のほとんどは、この設定を通じて公開されます。
+次のスクリーンショットは、公開された設定プロパティを示しています。一般的な使用権限のほとんどは、この設定を通じて公開されます。
 
 ![設定プロパティ](assets/configurationproperties.gif)
 
-次のコードは、OSGi 設定の構築に使用するコードを示しています
+次のコードは、OSGi 設定の作成に使用するコードを示しています
 
 ```java
 package com.aemformssamples.configuration;
@@ -121,15 +121,15 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## サーブレットを作成してPDFをストリーミング {#create-servlet-to-stream-the-pdf}
+## サーブレットを作成して PDF をストリーミングします {#create-servlet-to-stream-the-pdf}
 
-次の手順では、GETメソッドを使用してサーブレットを作成し、読み取り用拡張PDFをユーザーに返します。 この場合、ユーザーは、ファイル・システムにPDFを保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザーに付属の pdf ビューアではダイナミック pdf が処理されないためです。
+次の手順では、GET メソッドを使用してサーブレットを作成し、Reader 用の拡張 PDF をユーザーに返します。この場合、ユーザーはファイルシステムに PDF を保存するように求められます。 これは PDF が動的 PDF としてレンダリングされ、ブラウザーに付属している PDF ビューアが動的 PDF を処理しないためです。
 
-次に、サーブレットのコードを示します。 CRX リポジトリ内の XDP のパスをこのサーブレットに渡します。
+次にサーブレットのコードを示します。CRX リポジトリ内の XDP のパスをこのサーブレットに渡します。
 
 次に、com.aemformssamples.documentservices.core.DocumentServices の renderAndExtendXdp メソッドを呼び出します。
 
-その後、リーダ拡張PDFは、呼び出し元のアプリケーションにストリーミングされます
+その後、Reader 用の拡張 PDF は、呼び出し元のアプリケーションにストリーミングされます
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -196,12 +196,12 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 ```
 
 ローカルサーバーでこれをテストするには、次の手順に従ってください
-1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [AEM FormsDocumentServices バンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [AEMFormsDocumentServices バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
-1. [カスタムポータルテンプレートの html をダウンロード](assets/render-and-extend-template.zip)
-1. [パッケージマネージャーを使用して、この記事に関連するアセットをダウンロードし、AEMに読み込みます](assets/renderandextendxdp.zip)
-   * このパッケージには、サンプルポータルと xdp ファイルが含まれています
-1. Reader拡張証明書を&quot;fd-service&quot;ユーザーに追加
-1. ブラウザーで次の場所を指定します。 [ポータル Web ページ](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
-1. 使用権限が適用された pdf ファイルとして xdp をレンダリングするには、pdf アイコンをクリックします。
+1. [カスタムポータルテンプレートの html をダウンロードします](assets/render-and-extend-template.zip)
+1. [パッケージマネージャーを使用して、この記事に関連するアセットをダウンロードし、AEM に読み込みます](assets/renderandextendxdp.zip)
+   * このパッケージには、サンプルポータルと XDP ファイルが含まれています
+1. Reader Extensions 証明書を「fd-service」ユーザーに追加します
+1. ブラウザーで[ポータル web ページ](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)を表示します
+1. PDF アイコンをクリックして、使用権限が適用された PDF ファイルとして XDP をレンダリングします。
