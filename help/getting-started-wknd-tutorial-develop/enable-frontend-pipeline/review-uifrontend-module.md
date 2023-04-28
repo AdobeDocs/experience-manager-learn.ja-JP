@@ -1,6 +1,6 @@
 ---
 title: フルスタックプロジェクトの ui.frontend モジュールを確認する
-description: Maven ベースのフルスタックAEM Sitesプロジェクトのフロントエンド開発、デプロイメント、配信のライフサイクルを確認します。
+description: Maven ベースのフルスタック AEM Sites プロジェクトのフロントエンド開発、デプロイメント、配信のライフサイクルを確認します。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -11,64 +11,64 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '614'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
+# フルスタック AEM プロジェクトの「ui.frontend」モジュールを確認する {#aem-full-stack-ui-frontent}
 
-# フルスタックAEMプロジェクトの「ui.frontend」モジュールを確認する {#aem-full-stack-ui-frontent}
-
-この章では、フルスタックAEMプロジェクトのフロントエンドアーティファクトの開発、デプロイメント、および配信について、 __WKND Sites プロジェクト__.
+この章では、__WKND サイトプロジェクト__&#x200B;の「ui.frontend」モジュールに焦点を当てて、フルスタック AEM プロジェクトのフロントエンドアーティファクトの開発、デプロイおよび配信について確認します。
 
 
 ## 目的 {#objective}
 
-* AEMフルスタックプロジェクトでのフロントエンドアーティファクトのビルドおよびデプロイメントフローの理解
-* AEMフルスタックプロジェクトの `ui.frontend` モジュール [webpack](https://webpack.js.org/) configs
-* AEMクライアントライブラリ（clientlibs とも呼ばれます）の生成プロセス
+* AEM フルスタックプロジェクトでのフロントエンドアーティファクトのビルドおよびデプロイメントフローについて
+* AEM フルスタックプロジェクトの `ui.frontend` モジュールの [webpack](https://webpack.js.org/) 設定
+* AEM クライアントライブラリ（clientlibs とも呼ばれる）の生成プロセス
 
-## AEMフルスタックおよびクイックサイト作成プロジェクトのフロントエンドデプロイメントフロー
+## AEM フルスタックおよびクイックサイト作成プロジェクトのフロントエンドデプロイメントフロー
 
 >[!IMPORTANT]
 >
->このビデオでは、両方のフロントエンドフローについて説明し、説明します **フルスタックとクイックサイト作成** プロジェクトを使用して、フロントエンドリソースの構築、デプロイ、配信モデルにおける微妙な違いについて説明します。
+>このビデオでは、**フルスタックプロジェクトとクイックサイト作成**&#x200B;プロジェクトの両方のフロントエンドフローを説明および実演し、フロントエンドリソースのビルド、デプロイ、配信モデルの微妙な違いを概説します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
 
-* のクローン [AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd)
-* クローンされたAEM WKND Sites プロジェクトを作成し、AEM as a Cloud Serviceにデプロイしました。
+* [AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd)のクローン
+* AEM WKND Sites プロジェクトのクローンを AEM as a Cloud Service にビルドしてデプロイしてあること。
 
-AEM WKND Site プロジェクトを参照する [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) を参照してください。
+詳しくは、AEM WKND Site プロジェクトの [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) を参照してください。
 
-## AEMフルスタックプロジェクトのフロントエンドアーティファクトフロー {#flow-of-frontend-artifacts}
+## AEM フルスタックプロジェクトのフロントエンドアーティファクトフロー {#flow-of-frontend-artifacts}
 
-以下に、 __開発、デプロイメント、配信__ フルスタックAEMプロジェクトでのフロントエンドアーティファクトのフロー。
+以下は、フルスタック AEM プロジェクトにおけるフロントエンドアーティファクトの&#x200B;__開発、デプロイ、配信__&#x200B;フローの概要です。
 
 ![フロントエンドアーティファクトの開発、デプロイメント、配信](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
 
-開発フェーズでは、スタイル設定やリブランディングなどのフロントエンドの変更は、CSS、JS ファイルを `ui.frontend/src/main/webpack` フォルダー。 次に、ビルド時に、 [webpack](https://webpack.js.org/) module-bundler と maven プラグインは、これらのファイルを、以下で最適化されたAEM clientlib に変換します。 `ui.apps` モジュール。
+開発段階では、`ui.frontend/src/main/webpack` フォルダーの CSS ファイルと JS ファイルを更新することで、スタイリングやブランド変更などのフロントエンドの変更が行われます。次に、ビルド時に、[webpack](https://webpack.js.org/) module-bundler と maven プラグインは、これらのファイルを `ui.apps` モジュールの下で最適化された AEM clientlibs に変換します。
 
-フロントエンドの変更は、 [__フルスタック__ Cloud Manager のパイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
+Cloud Manager で&#x200B;[__フルスタック__&#x200B;パイプラインを実行すると、フロントエンドの変更が AEM as a Cloud Service 環境にデプロイされます](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=ja)。
 
-フロントエンドリソースは、 `/etc.clientlibs/`にキャッシュされ、通常はAEM Dispatcher および CDN でキャッシュされます。
+フロントエンドのリソースは、`/etc.clientlibs/` で始まる URI パスを介して web ブラウザーに配信され、通常は AEM Dispatcher および CDN にキャッシュされます。
 
 
 >[!NOTE]
 >
-> 同様に、 __AEMクイックサイト作成ジャーニー__、 [フロントエンドの変更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) を実行することで、AEMas a Cloud Service環境にデプロイする __フロントエンド__ パイプラインについては、 [パイプラインの設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
+> 同様に、__AEM クイックサイト作成ジャーニー__&#x200B;では、[フロントエンドの変更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html?lang=ja)は&#x200B;__フロントエンド__&#x200B;パイプラインを実行することで、AEM as a Cloud Service 環境にデプロイされます。[パイプラインの設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html?lang=ja)を参照してください
 
 ### WKND Sites プロジェクトでの WebPack 設定の確認 {#development-frontend-webpack-clientlib}
 
-* 三つある __webpack__ WKND サイトのフロントエンドリソースのバンドルに使用される設定ファイル。
+* WKND Sites のフロントエンドリソースをバンドルするために使用される __webpack__ 設定ファイルは 3 つあります。
 
-   1. `webpack.common`  — これには、 __共通__ WKND リソースのバンドル化と最適化を指示する設定 この __出力__ プロパティは、統合ファイル (JavaScript バンドルとも呼ばれますが、AEM OSGi バンドルと混同しないように ) を生成する場所を指定します。 デフォルトの名前はに設定されています。 `clientlib-site/js/[name].bundle.js`.
+   1. `webpack.common` - これには、WKND リソースのバンドルと最適化を指示する&#x200B;__共通__&#x200B;設定が含まれます。__output__ プロパティは、作成する統合ファイル（JavaScript バンドルとも呼ばれますが、AEM OSGi バンドルと混同しないように）を出力する場所を指定します。デフォルトの名前は `clientlib-site/js/[name].bundle.js` に設定されています。
 
    ```javascript
        ...
@@ -79,7 +79,7 @@ AEM WKND Site プロジェクトを参照する [README.md](https://github.com/a
        ...    
    ```
 
-   1. `webpack.dev.js` に __開発__ webpack-dev-serve の設定と、使用するHTMLテンプレートの指定。 また、で実行されているAEMインスタンスへのプロキシ設定も含まれます。 `localhost:4502`.
+   1. `webpack.dev.js` には、webpack-dev-serve の&#x200B;__開発__&#x200B;設定が含まれており、使用する HTML テンプレートを指しています。また、`localhost:4502` で実行されている AEM インスタンスへのプロキシ設定も含まれます。
 
    ```javascript
        ...
@@ -91,7 +91,7 @@ AEM WKND Site プロジェクトを参照する [README.md](https://github.com/a
        ...    
    ```
 
-   1. `webpack.prod.js` に __実稼動__ 設定およびプラグインを使用して、開発ファイルを最適化されたバンドルに変換します。
+   1. `webpack.prod.js` には&#x200B;__実稼働__&#x200B;設定が含まれており、プラグインを使用して開発ファイルを最適化されたバンドルに変換します。
 
    ```javascript
        ...
@@ -107,7 +107,7 @@ AEM WKND Site プロジェクトを参照する [README.md](https://github.com/a
    ```
 
 
-* バンドルされたリソースは、 `ui.apps` 使用するモジュール [aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) プラグイン、で管理される設定を使用 `clientlib.config.js` ファイル。
+* バンドルされたリソースは、[aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) プラグインを使用して、`clientlib.config.js` ファイルで管理されている設定を使用して `ui.apps` モジュールに移動されます。
 
 ```javascript
     ...
@@ -127,18 +127,18 @@ AEM WKND Site プロジェクトを参照する [README.md](https://github.com/a
     ...
 ```
 
-* この __frontend-maven-plugin__ から `ui.frontend/pom.xml` AEMプロジェクトのビルド中に webpack のバンドルと clientlib の生成を調整します。
+* `ui.frontend/pom.xml` の __frontend-maven-plugin__ は、AEM プロジェクトのビルド中に webpack のバンドルと clientlib の生成を調整します。
 
 `$ mvn clean install -PautoInstallSinglePackage`
 
-### AEMへのデプロイメントas a Cloud Service {#deployment-frontend-aemaacs}
+### AEM as a Cloud Service へのデプロイメント {#deployment-frontend-aemaacs}
 
-この [__フルスタック__ パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) ：これらの変更をAEM as a Cloud Service環境にデプロイします。
+[__フルスタック__&#x200B;パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=ja#full-stack-pipeline)は、これらの変更を AEM as a Cloud Service 環境にデプロイします
 
 
-### AEMからの配信as a Cloud Service {#delivery-frontend-aemaacs}
+### AEM as a Cloud Service からの配信 {#delivery-frontend-aemaacs}
 
-フルスタックパイプラインを介してデプロイされたフロントエンドリソースは、AEM Site から Web ブラウザーに、 `/etc.clientlibs` ファイル。 これを確認するには、 [公開 WKND サイト](https://wknd.site/content/wknd/us/en.html) および Web ページのソースを表示する
+フルスタックパイプラインを介してデプロイされたフロントエンドリソースは、AEM サイトから web ブラウザーに `/etc.clientlibs` ファイルとして配信されます。これは、[公開されている WKND サイト](https://wknd.site/content/wknd/us/en.html)にアクセスして、web ページのソースを表示することで確認できます。
 
 ```html
     ....
@@ -156,4 +156,4 @@ AEM WKND Site プロジェクトを参照する [README.md](https://github.com/a
 
 ## 次の手順 {#next-steps}
 
-次の章では、 [フロントエンドパイプラインを使用するようにプロジェクトを更新](update-project.md)を更新して、AEM WKND Sites Project をフロントエンドパイプライン契約に対して有効にします。
+次の章では、[フロントエンドパイプラインを使用するようにプロジェクトを更新](update-project.md)して、AEM WKND サイトプロジェクトをフロントエンドパイプライン契約に対して有効にします。
