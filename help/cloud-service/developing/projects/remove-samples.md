@@ -1,6 +1,6 @@
 ---
 title: AEM Maven プロジェクトからのサンプルの削除
-description: AEMプロジェクトアーキタイプで生成されたAEMプロジェクトからサンプルコードをクリーンアップし、削除する方法を説明します。
+description: AEM プロジェクトアーキタイプで生成された AEM プロジェクトからサンプルコードをクリーンアップし削除する方法を説明します。
 version: Cloud Service
 topic: Development
 feature: AEM Project Archetype
@@ -10,15 +10,15 @@ kt: 9092
 thumbnail: 337263.jpeg
 exl-id: 4e10c2b7-41b6-41a0-b8d4-9207a9d3f9c8
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '88'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # AEM Maven プロジェクトからのサンプルの削除
 
-AEMプロジェクトアーキタイプで生成されたAEMプロジェクトから、生成されたサンプルコードをクリーンアップし、削除する方法を説明します。
+AEM プロジェクトアーキタイプで生成された AEM プロジェクトから、生成されたサンプルコードをクリーンアップし削除する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337263?quality=12&learn=on)
 
@@ -29,7 +29,7 @@ AEMプロジェクトアーキタイプで生成されたAEMプロジェクト�
 
 ## コマンド
 
-次のコマンドを実行して、生成されたサンプルファイルをAEM Maven プロジェクトから削除できます。
+次のコマンドを実行すると、生成されたサンプルファイルを AEM Maven プロジェクトから削除できます。
 
 ```
 rm -rf core/src/main/java/com/adobe/aem/wknd/examples/core/filters \
@@ -45,13 +45,13 @@ rm -rf ui.frontend/src/main/webpack/components/_helloworld.css
 
 ## 編集
 
-を削除します。 `<div class="helloworld" ...></div>` 送信元：
+`<div class="helloworld" ...></div>` を次から削除します。
 
 ```
 ui.frontend/src/main/webpack/static/index.html
 ```
 
-を削除します。 `<helloworld>` コンポーネントインスタンス定義元：
+`<helloworld>` コンポーネントインスタンス定義を次から削除します。
 
 ```
 ui.content/src/main/content/jcr_root/content/wknd-examples/us/en/.content.xml
