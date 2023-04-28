@@ -1,6 +1,6 @@
 ---
 title: AEM Forms JEE で管理者のデフォルトのパスワードをリセットする手順
-description: デフォルトのパスワードから管理者ユーザーのパスワードをリセット
+description: デフォルトパスワードからの管理者ユーザーのパスワードのリセット
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,14 +9,14 @@ topic: Administration
 index: y
 exl-id: e0fe53a3-6881-4a46-8040-3d8815809897
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # AEM Forms JEE で管理者のデフォルトのパスワードをリセットする手順
 
-*このビデオでは、AEM Forms JEE の管理者のデフォルトのパスワードをリセットする手順について説明します。*
+*このビデオでは、AEM Forms JEE で管理者のデフォルトパスワードをリセットする手順について説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335541?quality=12&learn=on)
