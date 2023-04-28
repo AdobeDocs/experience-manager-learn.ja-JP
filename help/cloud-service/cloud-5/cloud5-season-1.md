@@ -1,57 +1,57 @@
 ---
-title: Cloud 5 - Season 1
-description: Adobe Experience Manager(AEM) を構築するAdobeのエキスパートエンジニア、およびそれを提供するエキスパートサービスからas a Cloud Serviceした情報を紹介します。
+title: Cloud 5 - シーズン 1
+description: Adobe Experience Manager（AEM）as a Cloud Service を作成するアドビのエキスパートエンジニアを紹介し、提供するエキスパートサービスについて説明します。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '550'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# クラウド 5
+# Cloud 5
 
-![AEM Experts Series](./imgs/masthead.png)
+![AEM エキスパートシリーズ](./imgs/masthead.png)
 
 ## はじめに
 
-このたびは、AEM Engineering の Cloud 5 シリーズをご利用いただき、誠にありがとうございます。 製品の実装段階での主な問題の 1 つは、十分なコードサンプルや、これらのサンプル、ツールまたは API の実際のデモンストレーションがあることです。 このシリーズの目的は、AEMに関する有用な情報を 5 分以内に提供することです。
+AEM Engineering の Cloud 5 シリーズへようこそ。製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。このシリーズの目標は、AEM as a Cloud Service に関する有用な情報を 5 分以内で提供することです。
 
-次にアクセス： [修正候補ボックス](https://forms.office.com/r/74P5Xz4UH0) トピックのアイデアを送信する場合。
+トピックのアイデアを送信するには、[提案ボックス](https://forms.office.com/r/74P5Xz4UH0)にアクセスしてください。
 
 ## シーズン 1
 
-各シーズンの長さは異なり、一定のスケジュールでリリースされます。 シーズン 1 のトピックは、主に、顧客やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。 毎週の更新情報についてはこのページを参照するか、選択したソーシャルネットワークでフォローしてください。
+シーズンごとに長さが異なり、一定のスケジュールでリリースされます。シーズン 1 のトピックは、主に、顧客やパートナーとの日々のエンゲージメントで発生した過去のリクエストに基づいています。このページにアクセスして毎週のアップデートを確認するか、選択したソーシャルネットワークでフォローしてください。
 
 <table>
   <tr>
    <td>
       <a href="./cloud5-aem-cdn-part1.md">
-      <img alt="AEM CDN Part 1" src="./imgs/001-thumb.png"/>
+      <img alt="AEM CDN 第 1 部" src="./imgs/001-thumb.png"/>
       </a>
       <div>
-         <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN の詳細（第 1 部）</strong></a>         
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+         <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN ディープダイブ（パート 1）</strong></a>         
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         パート 1 は、AEMas a Cloud Serviceの CDN と、実装での使用方法を紹介します。
+ パート 1 では、AEM as a Cloud Service の CDN と、実装で使用する方法について説明します。
       </p>
      </td>   
      <td>
       <a href="./cloud5-aem-cdn-part2.md">
-         <img alt="AEM CDN パート 2" src="./imgs/002-thumb.png"/>
+         <img alt="AEM CDN 第 2 部" src="./imgs/002-thumb.png"/>
       </a>
       <div>
-         <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN の詳細（第 2 部）</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+         <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN ディープダイブ（パート 2）</strong></a>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         第 2 部は、AEMas a Cloud ServiceCDN に関する見解の継続です。 新しい CDN で得られる機能に関して、よくある質問や神話のいくつかに答えます。
+ パート 2 は、AEM as a Cloud Service CDN の説明の続きです。新しい CDN でどのような機能を利用できるかについて、よくある質問や誤解に回答します。
       </p>
    </td>
      <td>
@@ -60,11 +60,11 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-log-files.md"><strong>ログファイルとログ</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         AEM as a Cloud Serviceでログにアクセスする方法（ユーザーインターフェイス経由でログにアクセスする方法や API からログにアクセスする方法など）の簡単な概要です。
+ これは、AEM as a Cloud Service でログにアクセスする方法の概要で、ユーザーインターフェイスや API からアクセスする方法も含まれています。
       </p>
    </td> 
   </tr>
@@ -75,11 +75,11 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-getting-login-token-integrations.md"><strong>アクセストークンとの統合</strong></a>        
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         クラウドサービス環境内での統合作業をおこなうための、ログイントークンとの対話の概要とデモです。
+ Cloud Service 環境内で統合作業を行うためのログイントークンによる操作の簡単な概要とデモ。
       </p>
      </td>   
      <td>
@@ -88,11 +88,11 @@ ht-degree: 0%
        </a>  
       <div>
         <a href="./cloud5-aem-dispatcher-cloud.md"><strong>クラウド内の Dispatcher</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-        Darin と James は、AMS/On-Prem とのベストプラクティスや違いなど、AEM Cloud の Dispatcher について話し合います。 
+ Darin と James が AEM Cloud の Dispatcher について、いくつかのベストプラクティスと AMS／オンプレミスとの相違点を含めて説明します。 
       </p>
    </td>
      <td>
@@ -101,11 +101,11 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-content-migration-part-1.md"><strong>移行（パート 1）</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏、シニアクラウドアーキテクト&amp; Dr. Applesmith 氏と共に</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）、Dr. Applesmith</em>
       </div>
       <p>
         <br/>
-         クラウドへの移行に関するヒントとテクニックの 1 つ（2 つのうち）になります。 第 1 部における主な焦点は、移行に備えたベストプラクティスと準備作業です。
+ クラウドへの移行に関するヒントとテクニックのパート 1（全 2 回）。パート 1 の主な焦点は、移行の準備を整えるためのベストプラクティスと準備作業です。
       </p>
    </td> 
   </tr>
@@ -116,11 +116,11 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-aem-content-migration-part-2.md"><strong>移行（パート 2）</strong></a>     
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         クラウドへの移行に関するヒントとテクニックの第 2 部（2 つ）です。 第 2 部は、主に移行に使用可能なツールを使用することです。
+ クラウドへの移行に関するヒントとテクニックのパート 2（全 2 回）。パート 2 では主に、移行に使用できるツールの使用について説明します。
       </p>
      </td>   
      <td>
@@ -129,11 +129,11 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher バリデーター</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         以前の移行に関するディスカッションの成果として、Dispatcher バリデーターと、実行できるタスクの一部を紹介します。
+  以前の移行に関するディスカッションの成果として、Dispatcher バリデーターと、実行できるタスクの一部について説明します。
       </p>
    </td>
      <td>
@@ -142,25 +142,25 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-search-and-indexing.md"><strong>インデックス作成と検索に関するヒント</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+ <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         インデックス作成や検索と同じくらい複雑なものに対して、チームは、問題が発生する前に開発時間を最適化し、問題を解決するための簡単な成果を示します。
+ インデックス作成や検索のような複雑なものについて、問題が発生する前に、チームが開発時間を最適化し、問題を解決するための簡単な方法について説明します。
       </p>
    </td> 
   </tr>
     <tr>
         <td>
             <a href="./cloud5-adobe-app-builder.md">
-                <img alt="Adobeアプリビルダー" src="./imgs/010-thumb.png"/>
+                <img alt="Adobe App Builder" src="./imgs/010-thumb.png"/>
             </a>
             <div>
-                <a href="./cloud5-adobe-app-builder.md"><strong>Adobeアプリビルダー</strong></a><br/>        
-                <em>Darin Kuntze &amp; James Talbot、シニアクラウドアーキテクト&amp;アモル・アナンド</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>Adobe App Builder</strong></a><br/>        
+ <em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）、Amol Anand</em>
             </div>
             <p><br/>
-                Adobeの App Builder でできる素晴らしいことを確認し、クラウド内のカスタマイズの将来に関する新しい情報を学んでください。
+                Adobe App Builder でできる素晴らしいことを確認し、クラウド内でのカスタマイズの将来に関する新しい情報について説明します。
             </p>
         </td>
         <td></td>
