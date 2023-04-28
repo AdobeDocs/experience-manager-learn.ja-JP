@@ -1,6 +1,6 @@
 ---
-title: アクセストークン用の Exchange JWT
-description: AEMアクセストークンのAdobe IMSAPI と JSON Web トークン (JWT) を交換します。
+title: アクセストークン用の交換 JWT
+description: AEM アクセストークンの Adobe IMS API と JSON web トークン（JWT）を交換します。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,18 +11,18 @@ kt: 8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# アクセストークン用の Exchange JWT
+# アクセストークン用の交換 JWT
 
 
-前の手順で作成した JWT は、アクセストークンのAdobe IMSAPI と交換され、AEM as a Cloud Serviceにアクセスするために使用できます。 アクセストークンをリクエストするには、JWT、client_id、client_secret を含むPOSTリクエストを IMS 認証サービスに送信します。
+前のステップで作成した JWT は、アクセストークンの Adobe IMS API と交換され、AEM as a Cloud Service にアクセスするために使用できます。アクセストークンをリクエストするには、JWT、client_id、client_secret を含む POST リクエストを IMS 認証サービスに送信します。
 
-アクセストークンとの交換 JWT の生成には、次のコードを使用しました。
+アクセストークン用の交換 JWT の生成には、次のコードを使用しました。
 
 ```java
 public String getAccessToken() {
