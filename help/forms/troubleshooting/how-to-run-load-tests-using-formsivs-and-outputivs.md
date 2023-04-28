@@ -1,5 +1,5 @@
 ---
-title: OOTB FormsIVS および OutputIVS サンプルを使用して UI からロードテストを実行する方法
+title: OOTB FormsIVS および OutputIVS サンプルを使用して UI から読み込みテストを実行する方法
 description: FormsIVS と OutputIVS を使用して読み込みテストを設定する
 type: Troubleshooting
 role: Developer
@@ -12,7 +12,7 @@ exl-id: caf413ee-a124-4629-ae02-177f4deff4e6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 

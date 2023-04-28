@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service のアーキテクチャ
-description: 基盤となるアーキテクチャとAEMの重要な部分をas a Cloud Serviceします。 Cloud Manager と API について詳しく説明します。
+description: AEM as a Cloud Service の基盤となるアーキテクチャと重要な部分を探索します。Cloud Manager と API について詳しく説明します。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -12,12 +12,12 @@ exl-id: c7ccfee6-c252-4ba4-831a-1c37b36ac964
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
 # AEM as a Cloud Service のアーキテクチャ
 
-基盤となるアーキテクチャとAEMの重要な部分をas a Cloud Serviceします。 Cloud Manager と API について詳しく説明します。
+AEM as a Cloud Service の基盤となるアーキテクチャと重要な部分を探索します。Cloud Manager と API について詳しく説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)

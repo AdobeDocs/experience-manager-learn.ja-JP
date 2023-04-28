@@ -1,6 +1,6 @@
 ---
-title: AEM Formsでのユーザープロファイルデータ統合の使用
-description: AEMユーザープロファイル情報と Adaptive Formsの統合
+title: AEM Forms とのユーザープロファイルデータ統合の使用
+description: AEM ユーザープロファイル情報とアダプティブフォームの統合
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -11,11 +11,11 @@ last-substantial-update: 2019-03-20T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 44%
+ht-degree: 77%
 
 ---
 
-# AEM Formsでのユーザープロファイルデータ統合の使用{#using-user-profile-data-integration-with-aem-forms}
+# AEM Forms とのユーザープロファイルデータ統合の使用{#using-user-profile-data-integration-with-aem-forms}
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。次のものが標準でサポートされています。 ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 

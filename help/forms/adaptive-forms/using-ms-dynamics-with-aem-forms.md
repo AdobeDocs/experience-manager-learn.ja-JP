@@ -1,6 +1,6 @@
 ---
-title: AEM FormsでのMicrosoft Dynamics の使用
-description: このビデオでは、AEM FormsがMicrosoft Dynamics をバックエンドのデータソースとして操作して、インタラクティブでパーソナライズされた通信を提供する方法を示すワークフローについて説明します。
+title: AEM Forms での Microsoft Dynamics の使用
+description: このビデオでは、AEM Forms で Microsoft Dynamics をバックエンドデータソースとして使用して、パーソナライズされたインタラクティブなコミュニケーションを配信する方法を示すワークフローについて順を追って説明します。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -11,11 +11,11 @@ last-substantial-update: 2021-03-20T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 31%
+ht-degree: 92%
 
 ---
 
-# AEM FormsでのMicrosoft Dynamics の使用{#using-microsoft-dynamics-with-aem-forms}
+# AEM Forms での Microsoft Dynamics の使用{#using-microsoft-dynamics-with-aem-forms}
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。次のものが標準でサポートされています。 ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
@@ -25,10 +25,10 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 1. SOAP ベースの Web サービス
 1. OData サービス
 
-このビデオでは、AEM FormsがMicrosoft Dynamics をバックエンドのデータソースとして操作して、インタラクティブでパーソナライズされた通信を提供する方法を示すワークフローについて説明します。
+このビデオでは、AEM Forms で Microsoft Dynamics をバックエンドデータソースとして使用して、パーソナライズされたインタラクティブなコミュニケーションを配信する方法を示すワークフローについて順を追って説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
 
 >[!NOTE]
 >
->この機能は、AEM 6.3 FP1 以降でのみ使用できます。 設定する前に、必ずAEM Formsアドオンをインストールしてください。
+>この機能は、AEM 6.3 FP1 以降でのみ使用できます。設定する前に、必ず AEM Forms アドオンをインストールしてください。

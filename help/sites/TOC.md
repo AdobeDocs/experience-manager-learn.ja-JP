@@ -8,7 +8,7 @@ version: 6.4, 6.5, Cloud Service
 source-git-commit: 593ef5767a5f2321c689e391f9c9019de7c94672
 workflow-type: tm+mt
 source-wordcount: '443'
-ht-degree: 29%
+ht-degree: 93%
 
 ---
 
@@ -20,24 +20,24 @@ ht-degree: 29%
    + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
    + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)
    + [サイト構造](page-authoring/content-hierarchy-feature-video-use.md)
-   + [ページの作成](page-authoring/creating-page-feature-video-use.md)
+   + [ページ作成](page-authoring/creating-page-feature-video-use.md)
    + [ページオーサリング](page-authoring/page-authoring-overview-feature-video-use.md)
    + [ページエディター](page-authoring/page-editor-feature-video-use.md)
-   + [ページのタグ付け](page-authoring/page-tagging-feature-video-use.md)
-   + [ページのバージョン管理](page-authoring/page-versioning-feature-video-use.md)
-   + [ページバージョンの比較](page-authoring/page-diff-feature-video-use.md)
+   + [ページタグ付け](page-authoring/page-tagging-feature-video-use.md)
+   + [ページバージョン管理](page-authoring/page-versioning-feature-video-use.md)
+   + [ページバージョン比較](page-authoring/page-diff-feature-video-use.md)
    + [ページプロパティ](page-authoring/page-properties-feature-video-understand.md)
    + [ページ操作](page-authoring/page-operations-feature-video-use.md)
    + [レイアウトモード](page-authoring/responsive-layout-feature-video-understand.md)
    + [公開](page-authoring/publication-management-feature-video-use.md)
-   + [編集可能なテンプレート](page-authoring/template-editor-feature-video-use.md)
+   + [編集可能テンプレート](page-authoring/template-editor-feature-video-use.md)
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
    + [ローンチ](page-authoring/launches.md)
    + エキスパートアドバイス {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + コンポーネント {#components}
-   + [コンポーネントの開発](components/component-development.md)
+   + [コンポーネント開発](components/component-development.md)
    + [コアコンポーネント](components/core-components-feature-video-understand.md)
    + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
    + [コンポーネントコンソール](components/components-console-feature-video-use.md)
@@ -50,54 +50,54 @@ ht-degree: 29%
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
-   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja)
 
 + 開発 {#developing}
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
-   + [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
-   + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
-   + [AEM SPA Editor と React の概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
+   + [AEM ヘッドレスの基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
+   + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja)
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [レスポンシブブレークポイント](developing/responsive-breakpoints.md)
    + [スタイルシステムを使用した開発](developing/style-system-technical-video-understand.md)
    + [スタイルシステムのベストプラクティス](developing/style-organization-style-system-understand-article.md)
-   + [ページ差のための開発](developing/page-diff-technical-video-develop.md)
+   + [ページの差異に対応した開発](developing/page-diff-technical-video-develop.md)
    + [簡易検索の実装](developing/search-tutorial-develop.md)
    + [ソーシャルメディア共有](developing/social-media-sharing-technical-video-use.md)
    + [コンポーネントアイコンのカスタマイズ](developing/component-icons-technical-video-develop.md)
-+ パーソナライズ機能 {#personalization}
-   + [Adobe Targetとの統合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
-   + [エクスペリエンスフラグメントとAdobe Targetの設定](personalization/experience-fragment-target-technical-video-setup.md)
-   + [Adobe Targetでのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
++ パーソナライゼーション {#personalization}
+   + [Adobe Target との統合](https://helpx.adobe.com/jp/marketing-cloud/how-to/aem-target.html)
+   + [エクスペリエンスフラグメントと Adobe Target のセットアップ](personalization/experience-fragment-target-technical-video-setup.md)
+   + [Adobe Target でのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [ContextHub のセットアップ](personalization/context-hub-technical-video-setup.md)
 + SEO {#seo}
    + [サイトマップ](./seo/sitemaps.md)
 + 単一ページアプリケーション {#spa-editor}
-   + [ SPA Editor の使用](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA Editor と React の概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [SPA エディターの使用](spa-editor/spa-editor-framework-feature-video-use.md)
+   + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja)
 + マルチサイト管理 {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとブループリント](./multi-site-management/live-copy-and-blueprint.md)
    + [ライブコピーの作成](./multi-site-management/create-live-copy.md)
-   + [コンポーネントでライブコピーの継承を管理](./multi-site-management/manage-component-inheritance-live-copy.md)
-   + [ページでライブコピーの継承を管理](./multi-site-management/manage-page-inheritance-live-copy.md)
+   + [コンポーネントでのライブコピー継承の管理](./multi-site-management/manage-component-inheritance-live-copy.md)
+   + [ページでライブコピーの継承を管理する](./multi-site-management/manage-page-inheritance-live-copy.md)
    + [ライブコピーの概要コンソール](./multi-site-management/live-copy-overview-console.md)
    + [言語コピーの作成](./multi-site-management/create-language-copy.md)
    + [翻訳プロジェクト](./multi-site-management/manage-translation-projects.md)
    + [多言語翻訳プロジェクトの作成](./multi-site-management/create-multinational-translational-project.md)
    + [翻訳ジョブ](./multi-site-management/create-translation-job.md)
-   + [言語コピーを起動時に更新する](./multi-site-management/updating-language-copy.md)
-   + [言語コピーの作成ページ](./multi-site-management/create-new-page-language-copy.md)
-   + [翻訳ジョブのステータス](./multi-site-management/translation-job-status.md)
-   + [言語コピーから国のサイトを作成する](./multi-site-management/create-new-site.md)
+   + [Experience Platform Launch を使用した言語コピーのアップデート](./multi-site-management/updating-language-copy.md)
+   + [言語コピーページの作成](./multi-site-management/create-new-page-language-copy.md)
+   + [翻訳ジョブステータス](./multi-site-management/translation-job-status.md)
+   + [言語コピーからの国別サイトの作成](./multi-site-management/create-new-site.md)
 + 翻訳 {#translation}
-   + [マルチサイトマネージャの使用](translation/multi-site-manager-feature-video-use.md)
+   + [マルチサイトマネージャーの使用](translation/multi-site-manager-feature-video-use.md)
    + [言語コピーの使用](translation/language-copy-feature-video-use.md)
-   + [翻訳ルールを設定](translation/translation-rules-editor-technical-video-setup.md)
-   + [翻訳の機能強化](translation/translation-enhancements-feature-video-use.md)
+   + [翻訳ルールのセットアップ](translation/translation-rules-editor-technical-video-setup.md)
+   + [翻訳機能の強化](translation/translation-enhancements-feature-video-use.md)
 + 統合 {#integrations}
    + Experience Platform {#experience-platform}
-      + [FPID を生成](integrations/platform/fpid.md)
+      + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
    + Experience Platformデータ収集タグ (Launch) {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
@@ -106,23 +106,23 @@ ht-degree: 29%
       + [AEM Launch 作成Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [タグ (Launch) 実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
-      + [Adobeクライアントデータレイヤーの使用](integrations/adobe-client-data-layer/data-layer-overview.md)
-      + [Adobeクライアントデータレイヤーのカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
+      + [Adobe Client Data Layer の使用](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [Adobe Client Data Layer のカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analytics {#analytics}
-      + [Adobe Analyticsでのページデータの収集](integrations/analytics/collect-data-analytics.md)
-      + [Adobe Analyticsを使用したクリックされたコンポーネントの追跡](integrations/analytics/track-clicked-component.md)
-      + [Analysis Workspaceでのデータ分析](integrations/analytics/create-analytics-workspace.md)
+      + [Adobe Analytics でページデータを収集](integrations/analytics/collect-data-analytics.md)
+      + [クリックされたコンポーネントの Adobe Analytics での追跡](integrations/analytics/track-clicked-component.md)
+      + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概要](integrations/adobe-target/overview.md)
-      + [Launch プロパティに Target 拡張機能を追加する](integrations/adobe-target/add-target-launch-extension.md)
+      + [Launch プロパティへのターゲット式の追加](integrations/adobe-target/add-target-launch-extension.md)
       + [Target 呼び出しの読み込みと実行](integrations/adobe-target/load-and-fire-target.md)
-      + [Adobe TargetCloud Serviceアカウントを作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [エクスペリエンスフラグメントをAdobe Targetに書き出す](integrations/adobe-target/export-experience-fragment-target.md)
-      + [エクスペリエンスフラグメントオファーを使用して Target アクティビティを作成](integrations/adobe-target/create-target-activity.md)
-      + [Visual Experience Composer を使用したパーソナライゼーション](integrations/adobe-target/personalization-using-vec.md)
-      + [完全な Web ページエクスペリエンスのパーソナライズ](integrations/adobe-target/personalization-web-page.md)
+      + [Adobe Target Cloud Service アカウントの作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [Adobe Target へのエクスペリエンスフラグメントの書き出し](integrations/adobe-target/export-experience-fragment-target.md)
+      + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
+      + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
+      + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
 + エキスパートリソース {#expert-resources}
-   + [AEM Sites成熟度評価](expert-resources/maturity-assessment.md)
+   + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
-   + [AEMチャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
-   + [AEMチャンピオンのヒントとテクニック：セッション 2](expert-resources/champion-tips-2.md)
+   + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
+   + [AEM チャンピオンのヒントとテクニック：セッション 2](expert-resources/champion-tips-2.md)

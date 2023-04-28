@@ -1,6 +1,6 @@
 ---
 title: レンディション
-description: AEM Assetsのレンディションと、そのプレビュー方法について説明します。
+description: AEM Assets のレンディションと、そのプレビュー方法について説明します。
 feature: Renditions
 role: User
 level: Beginner
@@ -13,12 +13,12 @@ exl-id: 1df0ffd7-fe22-4eef-9428-b228ed0dcf31
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '26'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # レンディション
 
-AEM Assetsのレンディションと、そのプレビュー方法について説明します。
+AEM Assets のレンディションと、そのプレビュー方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)

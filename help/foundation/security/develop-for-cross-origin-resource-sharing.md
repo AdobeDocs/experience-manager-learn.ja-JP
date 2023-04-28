@@ -1,6 +1,6 @@
 ---
-title: AEMを使用したクロスオリジンリソース共有 (CORS) の開発
-description: CORS を活用して、クライアント側 JavaScript を使用して外部 Web アプリケーションからAEMコンテンツにアクセスする短い例です。
+title: AEM を使用したクロスオリジンリソース共有（CORS）の開発
+description: CORS を活用して、クライアントサイド JavaScript を使用して外部 web アプリケーションから AEM コンテンツにアクセスする簡単な例です。
 version: 6.4, 6.5
 topic: Security, Development
 role: Developer
@@ -10,34 +10,34 @@ exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
-# クロスオリジンリソース共有 (CORS) 用の開発
+# クロスオリジンリソース共有（CORS）に対応する開発
 
-活用の短い例 [!DNL CORS] クライアント側 JavaScript を使用して、外部 Web アプリケーションからAEMコンテンツにアクセスする。
+[!DNL CORS] を活用して、クライアントサイド JavaScript で外部 web アプリケーションから AEM コンテンツにアクセスする簡単な例です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
-このビデオでは、
+このビデオの内容は次のとおりです。
 
-* **www.example.com** はを介して localhost にマッピングされます。 `/etc/hosts`
-* **aem-publish.local** はを介して localhost にマッピングされます。 `/etc/hosts`
-* SimpleHTTPServer ( [[!DNL Python]&#39;s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) は、ポート 8000 を介してHTMLページを提供します。
-   * _Mac App Storeでは使用できなくなりました。 次のような類似のを使用します。 [ジーブス](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
-* [!DNL AEM Dispatcher] 実行中 [!DNL Apache HTTP Web Server] 2.4.に対するリバースプロキシ要求 `aem-publish.local` から `localhost:4503`.
+* **www.example.com** が `/etc/hosts` を介してローカルホストにマッピングされます。
+* **aem-publish.local** が `/etc/hosts` を介してローカルホストにマッピングされます。
+* SimpleHTTPServer（[[!DNL Python] の SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) のラッパー）がポート 8000 で HTML ページを提供しています。
+   * _Mac App Store では入手できなくなりました。[Jeeves](https://apps.apple.com/jp/app/jeeves-local-http-server/id980824182?mt=12) など、類似のものを使用します。_
+* [!DNL AEM Dispatcher] が [!DNL Apache HTTP Web Server] 2.4 で動作しており、`aem-publish.local` へのリクエストを `localhost:4503` にリバースプロキシしています。
 
-詳しくは、 [AEMでのクロスオリジンリソース共有 (CORS) について](./understand-cross-origin-resource-sharing.md).
+詳しくは、[AEM でのクロスオリジンリソース共有（CORS）について](./understand-cross-origin-resource-sharing.md)を参照してください。
 
-## www.example.comHTMLと JavaScript
+## www.example.com の HTML と JavaScript
 
-この Web ページには
+この web ページには、次のようなロジックがあります。
 
-1. 「 」ボタンをクリックしたとき
-1. を [!DNL AJAX GET] ～を要求する `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. を取得します。 `jcr:title` JSON 応答を形成する
-1. を挿入します。 `jcr:title` DOM に
+1. ボタンのクリック時に、
+1. `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json` に対して [!DNL AJAX GET] リクエストを実行します。
+1. JSON 応答から `jcr:title` フォームを取得します。
+1. DOM に `jcr:title` を挿入します。
 
 ```xml
 <html>
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 ## OSGi ファクトリ設定
 
-の OSGi 設定ファクトリ [!DNL Cross-Origin Resource Sharing] は、次の場所から使用できます。
+[!DNL Cross-Origin Resource Sharing] の OSGi 設定ファクトリは、次の方法で入手できます。
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -94,7 +94,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher 設定 {#dispatcher-configuration}
 
-キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/clientheaders 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) を、AEM パブリッシュをサポートするすべての `dispatcher.any` ファイル。
+キャッシュされたコンテンツの CORS ヘッダーをキャッシュし提供できるようにするには、AEM パブリッシュのすべての `dispatcher.any` サポートファイルに次の [/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders) を追加します。
 
 ```
 /myfarm { 
@@ -111,15 +111,15 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**Web サーバーアプリケーションを再起動します** 変更後 `dispatcher.any` ファイル。
+`dispatcher.any` ファイルを変更した後、**web サーバーアプリケーションを再起動**&#x200B;します。
 
-キャッシュを完全にクリアする必要が生じる可能性があります。これは、 `/clientheaders` 設定を更新しました。
+`/clientheaders` 設定更新後の次のリクエストでヘッダーが適切にキャッシュされるようにするには、キャッシュを完全にクリアすることが必要です。
 
 ## サポート資料 {#supporting-materials}
 
-* [macOSのジーブ](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html) (Windows/macOS/Linux 互換 )
+* [macOS 版 Jeeves](https://apps.apple.com/jp/app/jeeves-local-http-server/id980824182?mt=12)
+* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html)（Windows／macOS／Linux 対応）
 
-* [AEMでのクロスオリジンリソース共有 (CORS) について](./understand-cross-origin-resource-sharing.md)
-* [クロスオリジンリソース共有 (W3C)](https://www.w3.org/TR/cors/)
-* [HTTP アクセス制御 (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [AEM でのクロスオリジンリソース共有（CORS）について](./understand-cross-origin-resource-sharing.md)
+* [クロスオリジンリソース共有（W3C）](https://www.w3.org/TR/cors/)
+* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)

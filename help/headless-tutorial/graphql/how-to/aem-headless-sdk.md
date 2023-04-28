@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレス SDK の使用
-description: AEMヘッドレス SDK を使用してGraphQLクエリを実行する方法について説明します。
+title: AEM ヘッドレス SDK の使用
+description: AEM ヘッドレス SDK を使用して GraphQL クエリを作成する方法について説明します。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -12,15 +12,15 @@ exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
 workflow-type: tm+mt
 source-wordcount: '454'
-ht-degree: 10%
+ht-degree: 91%
 
 ---
 
-# AEMヘッドレス SDK
+# AEM ヘッドレス SDK
 
-AEMヘッドレス SDK は、クライアントが HTTP 経由でAEMヘッドレス API をすばやく簡単に操作するために使用できるライブラリのセットです。
+AEM ヘッドレス SDK は、クライアントが HTTP 経由で AEM ヘッドレス API を素早く簡単に操作するために使用できるライブラリのセットです。
 
-AEMヘッドレス SDK は、次の様々なプラットフォームで使用できます。
+AEM ヘッドレス SDK は、次の様々なプラットフォームで使用できます。
 
 + [クライアントサイドブラウザー用 AEM ヘッドレス SDK（JavaScript）](https://github.com/adobe/aem-headless-client-js)
 + [サーバーサイド／Node.js（JavaScript）用 AEM ヘッドレス SDK](https://github.com/adobe/aem-headless-client-nodejs)
@@ -28,25 +28,25 @@ AEMヘッドレス SDK は、次の様々なプラットフォームで使用で
 
 ## 永続的な GraphQL クエリ
 
-永続化されたクエリを使用してGraphQLを使用してAEMに対するクエリを実行する（とは異なります） [クライアント定義GraphQLクエリ](#graphl-queries)) を使用すると、開発者はAEMでクエリを（結果ではなく）保持し、クエリの名前による実行をリクエストできます。 永続クエリは、SQL データベースのストアドプロシージャの概念と似ています。
+（[クライアント定義の GraphQL クエリ](#graphl-queries)ではなく）永続クエリを介した GraphQL を使用して AEM にクエリを実行すると、開発者は AEM でクエリ（ただし、その結果ではない）を永続化してから、クエリを名前で実行するようにリクエストできます。永続クエリは、SQL データベースのストアドプロシージャの概念と似ています。
 
-永続化されたクエリは HTTPGETを使用して実行されます。HTTP データは CDN およびAEM Dispatcher 層でキャッシュ可能です。このデータは、クライアントが定義したGraphQLクエリよりも永続化されたクエリの方がパフォーマンスが高くなります。 また、永続化されたクエリが有効になり、API が定義され、開発者が各コンテンツフラグメントモデルの詳細を理解する必要性を切り離します。
+永続クエリは、CDN および AEM Dispatcher 層でキャッシュ可能な HTTP GET を使用して実行されるので、クライアント定義の GraphQL クエリよりもパフォーマンスが高くなります。また、永続クエリが有効になると、API が定義され、開発者が各コンテンツフラグメントモデルの詳細を理解する必要性が切り離されます。
 
 ### コードの例{#persisted-graphql-queries-code-examples}
 
-AEMに対してGraphQLの永続クエリを実行する方法のコード例を次に示します。
+AEM に対して GraphQL 永続クエリを実行する方法のコード例を以下に示します。
 
 +++ JavaScript の例
 
-のインストール [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) を実行することで `npm install` コマンドを Node.js プロジェクトのルートから削除します。
+Node.js プロジェクトのルートから `npm install` コマンドを実行して、[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) をインストールします。
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-次のコード例は、 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) を使用した npm モジュール `async/await` 構文と同じです。 JavaScript 版AEMヘッドレス SDK では、 [Promise 構文](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
+このコード例は、`async/await` 構文を介して [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm モジュールを使用して AEM にクエリを実行する方法を示しています。JavaScript 用 AEM ヘッドレス SDK は、[Promise 構文](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client)もサポートしています。
 
-このコードでは、という名前の永続的なクエリが存在すると想定しています。 `wknd/adventureNames` は AEM オーサーで作成され、AEM パブリッシュに公開されています。
+このコードでは、`wknd/adventureNames` という名前の永続クエリが AEM オーサーで作成され、AEM パブリッシュに公開されていることを前提としています。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -89,20 +89,20 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++ React useEffect(...) 例
 
-のインストール [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) を実行することで `npm install` コマンドを使用して、React プロジェクトのルートからアクセスできます。
+React プロジェクトのルートから `npm install` コマンドを実行して、[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) をインストールします。
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-次のコード例は、 [React useEffect(...) フック](https://reactjs.org/docs/hooks-effect.html) をクリックして、AEM GraphQLへの非同期呼び出しを実行します。
+このコード例は、[React useEffect(..) フック](https://reactjs.org/docs/hooks-effect.html) を使用して AEM GraphQL への非同期呼び出しを実行する方法を示しています。
 
-使用 `useEffect` React で非同期のGraphQL呼び出しをおこなうのは、次の理由で役立ちます。
+React で `useEffect` を使用して非同期の GraphQL 呼び出しを行うのは、次の理由で役立ちます。
 
-1. AEMへの非同期呼び出し用の同期ラッパーを提供します。
-1. AEMの不要な要求を減らします。
+1. AEM への非同期呼び出しの同期ラッパーを提供します。
+1. 不必要な AEM のクエリの再実行を減らします。
 
-このコードでは、という名前の永続的なクエリが存在すると想定しています。 `wknd-shared/adventure-by-slug` は AEM オーサーで作成され、GraphiQL を使用して AEM パブリッシュに公開されています。
+このコードでは、`wknd-shared/adventure-by-slug` という名前の永続クエリが AEM オーサーで作成され、GraphiQL を使用して AEM パブリッシュに公開されていることを前提としています。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -185,7 +185,7 @@ export function useAdventureBySlug(slug) {
 }
 ```
 
-カスタム React を呼び出す `useEffect` フックを React コンポーネント内の他の場所から
+React コンポーネントの別の場所からカスタム React `useEffect` フックを呼び出します。
 
 ```javascript
 import useAdventureBySlug from '...';
@@ -193,15 +193,15 @@ import useAdventureBySlug from '...';
 let { data, errors } = useAdventureBySlug('bali-surf-camp');
 ```
 
-新規 `useEffect` フックは、React アプリが使用する永続化されたクエリごとに作成できます。
+React アプリが使用する永続クエリごとに新しい `useEffect` フックを作成できます。
 
 +++
 
-<p> </p>
+<p> </p>
 
-## GraphQLクエリ
+## GraphQL クエリ
 
-AEMはクライアント定義のGraphQLクエリをサポートしますが、AEMのベストプラクティスは [永続的なGraphQLクエリ](#persisted-graphql-queries).
+AEM はクライアント定義の GraphQL クエリをサポートしていますが、[GraphQL 永続クエリ](#persisted-graphql-queries)を使用することが AEM のベストプラクティスです。
 
 ## Webpack 5+
 

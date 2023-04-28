@@ -6,7 +6,7 @@ seo-description: Check out these quick tips for Editable Templates in AEM Sites 
 audience: author, marketer
 exl-id: d5967fb5-c151-478e-a554-41e235de3f83
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 100%
 

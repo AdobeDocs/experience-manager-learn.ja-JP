@@ -11,7 +11,7 @@ thumbnail: 7820.jpg
 kt: 7820
 exl-id: 49ecde63-e53c-41fa-ab9b-d6a4435657b5
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 100%
 

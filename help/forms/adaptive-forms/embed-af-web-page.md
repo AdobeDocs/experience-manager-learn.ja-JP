@@ -1,6 +1,6 @@
 ---
-title: Web ページへのアダプティブForms/HTML5 フォームの埋め込み
-description: アダプティブFormsまたはHTML5 フォームをAEM以外の Web ページに埋め込むために必要な設定手順。
+title: Web ページへのアダプティブフォームまたは HTML5 フォームの埋め込み
+description: アダプティブフォームまたは HTML5 フォームを AEM 以外の web ページに埋め込むために必要な設定手順です。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -13,21 +13,21 @@ last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 13%
+ht-degree: 85%
 
 ---
 
-# Web ページへのアダプティブフォームまたはHTML5 フォームの埋め込み
+# Web ページへのアダプティブフォームまたは HTML5 フォームの埋め込み
 
-埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページ上の他の要素のコンテキストにとどまり、同時にフォームを操作できます。
+埋め込まれたアダプティブフォームではすべての機能を使用できるので、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページ上の他の要素のコンテキストにとどまり、同時にフォームを操作できます。
 
-次のビデオでは、Web ページにアダプティブフォームまたはHTML5 フォームを埋め込むために必要な手順を説明します。
-詳しくは、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-64/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=en) ベストプラクティス、ベストプラクティスなど
+次のビデオでは、web ページにアダプティブフォームまたはHTML5 フォームを埋め込むために必要な手順を説明しています。
+最適な前提条件やベストプラクティスなどについては、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-64/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=ja)を参照してください。
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
-このビデオで使用するサンプルファイルをダウンロードできます [ここから](assets/embedding-af-web-page.zip)
+ビデオで使用されているサンプルファイルは、[こちらから](assets/embedding-af-web-page.zip)ダウンロードできます。
 
-次に、アダプティブフォームを取得し、クラス名で識別されるコンテナにフォームを埋め込むためのコードを示します **右**
+アダプティブフォームを取得し、クラス名 **right** で識別されるコンテナにフォームを埋め込むためのコードを以下に示します。
 
 ```javascript
 $(document).ready(function(){

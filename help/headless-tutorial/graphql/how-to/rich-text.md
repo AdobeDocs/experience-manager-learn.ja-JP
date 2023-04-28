@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスでのリッチテキストの使用
-description: Adobe Experience Managerコンテンツフラグメントを使用した複数行のリッチテキストエディターを使用して、コンテンツを作成し参照コンテンツを埋め込む方法、およびヘッドレスアプリケーションで使用される JSON としてAEM GraphQL API がリッチテキストを配信する方法について説明します。
+title: AEM ヘッドレスとリッチテキストの併用
+description: Adobe Experience Manager コンテンツフラグメントと複数行リッチテキストエディターを併用してコンテンツの作成方法と参照コンテンツを埋め込む方法、そして AEM の GraphQL API がリッチテキストを JSON として配信し、ヘッドレスアプリケーションが配信内容を使用する方法を学びます。
 version: Cloud Service
 doc-type: article
 kt: 9985
@@ -11,21 +11,21 @@ exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
-# AEMヘッドレスを含むリッチテキスト
+# AEM ヘッドレスを含むリッチテキスト
 
-複数行テキストフィールドは、作成者がリッチテキストコンテンツを作成できるコンテンツフラグメントのデータ型です。 画像や他のコンテンツフラグメントなど、他のコンテンツへの参照を、テキストのフロー内にインラインで動的に挿入できます。 「 1 行テキスト」フィールドは、単純なテキスト要素に使用するコンテンツフラグメントの別のデータ型です。
+複数行テキストフィールドは、コンテンツフラグメントのデータタイプであり、これによってオーサーはリッチテキストコンテンツを作成することができます。画像や他のコンテンツフラグメントなどの他のコンテンツへの参照を、テキストのフロー内にインラインで動的に挿入することができます。 1 行テキストフィールドは、単純なテキスト要素に使用するコンテンツフラグメントの別のデータタイプです。
 
-AEM GraphQL API は、リッチテキストをHTML、プレーンテキストまたは純粋な JSON として返す堅牢な機能を備えています。 JSON 表現は、コンテンツのレンダリング方法をクライアントアプリケーションで完全に制御できるので、強力です。
+AEM の GraphQL API は、リッチテキストを HTML、プレーンテキストや純粋な JSON として返す強力な機能を備えています。 JSON 表現は、クライアントアプリケーションがコンテンツのレンダリング方法を完全に制御できるため、強力です。
 
 ## 複数行エディター
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-コンテンツフラグメントエディターでは、複数行テキストフィールドのメニューバーを使用して、標準のリッチテキスト書式設定機能 ( **太字**, *斜体*、および下線 複数行フィールドをフルスクリーンモードで開くと、 [段落の種類、検索と置換、スペルチェックなどの追加の書式設定ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=ja).
+コンテンツフラグメントエディターで、複数行テキストフィールドのメニューバーを使用すると、オーサーは **太字**、*斜体*、下線などの標準的なリッチ テキスト書式設定機能を利用することができます。複数行フィールドをフルスクリーンモードで開くと、[段落タイプ、検索と置換、スペル チェックなどの追加の書式設定ツールが有効になります](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=ja)。
 
 >[!NOTE]
 >
@@ -33,41 +33,41 @@ AEM GraphQL API は、リッチテキストをHTML、プレーンテキストま
 
 ## 複数行テキストのデータタイプ {#multi-line-data-type}
 
-以下を使用： **複数行テキスト** リッチテキストのオーサリングを有効にするためのデータタイプをコンテンツフラグメントモデルの定義時に追加します。
+コンテンツフラグメントモデルを定義してリッチテキストオーサリングを有効にする場合は、**複数行テキスト**&#x200B;データタイプを使用します。
 
-![複数行のリッチテキストデータタイプ](assets/rich-text/multi-line-rich-text.png)
+![複数行リッチテキストのデータタイプ](assets/rich-text/multi-line-rich-text.png)
 
-複数行フィールドの複数のプロパティを設定できます。
+複数行フィールドの複数のプロパティを設定することができます。
 
-この **レンダリング形式** プロパティは次の値に設定できます。
+この&#x200B;**レンダリング内容**&#x200B;プロパティは次のように設定することができます。
 
-* テキスト領域 — 1 つの複数行フィールドをレンダリングします。
-* 複数のフィールド — 複数の複数行フィールドをレンダリングします
+* テキスト領域 - 1 つの複数行フィールドをレンダリングします。
+* 複数フィールド - 複数の「複数行」フィールドをレンダリングします。
 
 
-この **デフォルトのタイプ** は次のように設定できます。
+この&#x200B;**デフォルトタイプ**&#x200B;は次のように設定することができます。
 
 * リッチテキスト
 * Markdown
 * プレーンテキスト
 
-この **デフォルトのタイプ** オプションは編集エクスペリエンスに直接影響し、リッチテキストツールが存在するかどうかを指定します。
+この「**デフォルトタイプ**」オプションは編集エクスペリエンスに直接影響し、リッチテキストツールが存在するかどうかを決定します。
 
-また、 [インライン参照の有効化](#insert-fragment-references) を他のコンテンツフラグメントに追加する場合は、 **フラグメント参照を許可** と、 **許可されているコンテンツフラグメントモデル**.
+**フラグメント参照を許可する** をチェックし、**許可されたコンテンツフラグメントモデル** を設定するこにより、他のコンテンツフラグメントへの[インライン参照を有効にする](#insert-fragment-references)こともできます。
 
-次を確認します。 **翻訳可能** 」ボックスに表示されます。 ローカライズできるのは、「リッチテキスト」と「プレーンテキスト」のみです。 詳しくは、 [ローカライズされたコンテンツの使用を参照](./localized-content.md).
+コンテンツをローカライズする場合は、「**翻訳対象**」ボックスをチェックします。「リッチテキスト」と「プレーンテキスト」のみがローカライズすることができます。 [詳細については、ローカライズされたコンテンツの操作](./localized-content.md)を参照してください。
 
 ## GraphQL API を使用したリッチテキスト応答
 
-GraphQLクエリを作成する場合、開発者は次の中から異なる応答タイプを選択できます。 `html`, `plaintext`, `markdown`、および `json` 複数行フィールドから。
+GraphQL クエリを作成する場合、開発者は、複数行のフィールドから `html`、`plaintext`、`markdown`、`json` のうちの様々な応答タイプを選択することができます。
 
-開発者は、 [JSON プレビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) コンテンツフラグメントエディターに表示され、現在のコンテンツフラグメントのすべての値 (GraphQL API を使用して返すことができる値 ) を確認できます。
+開発者は、コンテンツフラグメントエディタで [JSON プレビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=ja)を使用して、GraphQL API を使用して返すことができる現在のコンテンツフラグメントのすべての値を表示することができます。
 
-## GraphQL永続クエリ
+## GraphQL 永続クエリ
 
-の選択 `json` 複数行フィールドの応答形式は、リッチテキストコンテンツを操作する際の最も柔軟性の高い形式です。 リッチテキストコンテンツは、クライアントプラットフォームに基づいて一意に処理できる JSON ノードタイプの配列として提供されます。
+複数行フィールドに `json` 応答形式を選択すると、リッチテキストコンテンツを扱う際に最高の柔軟性を発揮します。リッチテキストコンテンツは、クライアントプラットフォームに基づいて一意に処理することができる JSON ノードタイプの配列として提供されます。
 
-以下は、という名前の複数行フィールドの JSON 応答タイプです。 `main` 段落を含む&quot;*これは、**重要**コンテンツ。*&quot;ここで、&quot;重要&quot;は **太字**.
+以下は、`main` という名前の複数行フィールドの JSON 応答タイプです。これには「*これは、**重要**なコンテンツを含む段落を含む段落です。*」という段落が含まれます（ここでは「重要」が&#x200B;**太字**&#x200B;表記になっています）。
 
 ```graphql
 query ($path: String!) {
@@ -83,9 +83,9 @@ query ($path: String!) {
 }
 ```
 
-この `$path` 変数 `_path` フィルターにはコンテンツフラグメントへの完全パスが必要です ( 例： `/content/dam/wknd/en/magazine/sample-article`) をクリックします。
+`_path` フィルターで使用される `$path` 変数には、`/content/dam/wknd/en/magazine/sample-article` などの、コンテンツフラグメントへのフルパスが必要です。
 
-**GraphQLの応答：**
+**GraphQL 応答：**
 
 ```json
 {
@@ -127,11 +127,11 @@ query ($path: String!) {
 
 ### その他の例
 
-次に、という複数行フィールドの応答タイプの例をいくつか示します。 `main` 段落を含む「これは **重要** 内容」 ここで、「重要」は **太字**.
+ `main` という名前の複数行フィールドの応答タイプの数例を以下に示します。この例では、「これは、**重要な**&#x200B;コンテンツを含む段落です。」という段落が含まれます。ここでは「重要」が&#x200B;**太字**&#x200B;表記になっています。
 
-+++HTML例
++++HTML の例
 
-**GraphQLで保持されたクエリ：**
+**GraphQL 永続クエリ：**
 
 ```graphql
 query ($path: String!) {
@@ -147,7 +147,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQLの応答：**
+**GraphQL 応答：**
 
 ```json
 {
@@ -168,7 +168,7 @@ query ($path: String!) {
 
 +++Markdown の例
 
-**GraphQLで保持されたクエリ：**
+**GraphQL 永続クエリ：**
 
 ```graphql
 query ($path: String!) {
@@ -184,7 +184,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQLの応答：**
+**GraphQL 応答：**
 
 ```json
 {
@@ -203,9 +203,9 @@ query ($path: String!) {
 
 +++
 
-+++平文の例
++++Plaintext の例
 
-**GraphQLで保持されたクエリ：**
+**GraphQL 永続クエリ：**
 
 ```graphql
 query ($path: String!) {
@@ -221,7 +221,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQLの応答：**
+**GraphQL 応答：**
 
 ```json
 {
@@ -238,16 +238,16 @@ query ($path: String!) {
 }
 ```
 
-この `plaintext` 「レンダリング」オプションを選択すると、すべての書式設定が削除されます。
+`plaintext` レンダリングオプションを選択すると、すべての書式設定が削除されます。
 
 +++
 
 
 ## リッチテキスト JSON 応答のレンダリング {#render-multiline-json-richtext}
 
-複数行フィールドのリッチテキスト JSON 応答は、階層ツリーとして構造化されます。 各オブジェクトまたはノードは、リッチテキストの異なるHTMLブロックを表します。
+複数行フィールドのリッチテキスト JSON 応答は、階層ツリーとして構造化されます。各オブジェクトまたはノードは、リッチテキストの異なる HTML ブロックを表します。
 
-次に、複数行テキストフィールドの JSON 応答の例を示します。 各オブジェクト（ノード）に `nodeType` これは、次のようなリッチテキストのHTMLブロックを表します。 `paragraph`, `link`、および `text`. 各ノードには、オプションで `content` 現在のノードの子を含むサブ配列。
+複数行テキストフィールドの JSON 応答の例を示します。各オブジェクトまたはノードに、`paragraph`、`link`、`text` などのリッチテキストからの HTML ブロックを表す `nodeType` が含まれていることを確認します。各ノードにはオプションで、現在のノードの子を含むサブ配列である `content` が含まれます。
 
 ```json
 "json": [// root "content" or child nodes
@@ -279,9 +279,9 @@ query ($path: String!) {
 ]
 ```
 
-複数行をレンダリングする最も簡単な方法 `json` 応答は、応答内の各オブジェクトまたはノードを処理し、現在のノードの子を処理します。 再帰関数を使用して、JSON ツリーをトラバースできます。
+複数行の `json` 応答をレンダリングする最も簡単な方法は、応答内の各オブジェクトまたはノードを処理してから、現在のノードの子を処理することです。再帰関数を使用して、JSON ツリーをトラバースできます。
 
-次に、再帰的なトラバーサルアプローチを示すサンプルコードを示します。 サンプルは JavaScript ベースで、React の [JSX](https://reactjs.org/docs/introducing-jsx.html)ただし、プログラミングの概念はどの言語にも適用できます。
+再帰的なトラバーサルアプローチを示すサンプルコードを示します。これらの例は JavaScript ベースであり、React の [JSX](https://reactjs.org/docs/introducing-jsx.html) を使用していますが、プログラミングの考え方はどの言語にも適用できます。
 
 ```javascript
 // renderNodeList - renders a list of nodes
@@ -298,7 +298,7 @@ function renderNodeList(childNodes) {
 }
 ```
 
-`renderNodeList` は、 `childNodes`. 次に、配列内の各ノードが関数に渡されます `renderNode`を呼び出します。 `renderNodeList` （ノードに子がある場合）
+`renderNodeList` は、`childNodes` の配列を取る再帰関数です。次に、配列内の各ノードが関数 `renderNode` に渡され、ノードに子がある場合、関数は `renderNodeList` を呼び出します。
 
 ```javascript
 // renderNode - renders an individual node
@@ -312,7 +312,7 @@ function renderNode(node) {
 }
 ```
 
-この `renderNode` 関数は、 `node`. ノードには、 `renderNodeList` 関数に関する情報が含まれます。 最後に、 `nodeMap` を使用して、ノードのコンテンツを、 `nodeType`.
+`renderNode` 関数は、`node` という名前の単一のオブジェクトを想定しています。ノードは、上記の `renderNodeList` 関数を使用して再帰的に処理される子を持つ場合があります。最後に、`nodeMap` を使用して、その `nodeType` に基づいてノードのコンテンツをレンダリングします。
 
 ```javascript
 // nodeMap - object literal that maps a JSX response based on a given key (nodeType)
@@ -327,43 +327,43 @@ const nodeMap = {
 }
 ```
 
-この `nodeMap` は、マップとして使用される JavaScript オブジェクトリテラルです。 各「キー」は、異なる `nodeType`. のパラメーター `node` および `children` は、ノードをレンダリングする結果の関数に渡すことができます。 この例で使用される戻り値のタイプは JSX ですが、HTMLの内容を表す文字列リテラルを構築するように適応させることもできます。
+`nodeMap` は、マップとして使用される JavaScript オブジェクトのリテラルです。それぞれの「キー」は異なる `nodeType` を表します。`node` および `children` のパラメーターは、ノードをレンダリングする結果の関数に渡すことができます。この例で使用されている戻り値の型は JSX ですが、HTML コンテンツを表す文字列リテラルを構築するためにこのアプローチを適用することもできます。
 
 ### フルコードの例
 
-再利用可能なリッチテキストレンダリングユーティリティは、 [WKND GraphQL React の例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+再利用可能なリッチテキストのレンダリングユーティリティは、[WKND GraphQL React の例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)にあります。
 
-* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js)  — 関数を公開する再利用可能なユーティリティ `mapJsonRichText`. このユーティリティは、リッチテキスト JSON 応答を React JSX としてレンダリングするコンポーネントで使用できます。
-* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js)  — リッチテキストを含むGraphQLリクエストを作成するサンプルコンポーネント。 このコンポーネントは、 `mapJsonRichText` リッチテキストおよび参照をレンダリングするユーティリティ。
+* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js) - 関数 `mapJsonRichText` を公開する再利用可能なユーティリティ。このユーティリティは、リッチテキスト JSON 応答を React JSX としてレンダリングするコンポーネントで使用できます。
+* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - リッチテキストを含む GraphQL リクエストを作成するサンプルコンポーネント。このコンポーネントは、`mapJsonRichText` ユーティリティを使用してリッチテキストと参照を表示します。
 
 
 ## リッチテキストへのインライン参照の追加 {#insert-fragment-references}
 
-「複数行」フィールドを使用すると、作成者は、リッチテキストのフロー内にAEM Assetsから画像やその他のデジタルアセットを挿入できます。
+複数行フィールドを使用すると、作成者は、AEM Assets から画像やその他のデジタルアセットをリッチテキストのフローに挿入できます。
 
 ![画像を挿入](assets/rich-text/insert-image.png)
 
-上のスクリーンショットは、複数行フィールドに、 **アセットを挿入** 」ボタンをクリックします。
+上のスクリーンショットは、「**アセットの挿入**」ボタンを使用して複数行フィールドに挿入された画像を示しています。
 
-他のコンテンツフラグメントへの参照は、 **コンテンツフラグメントを挿入** 」ボタンをクリックします。
+「**コンテンツフラグメントを挿入**」ボタンを使用して、他のコンテンツフラグメントへの参照を複数行のフィールドにリンクまたは挿入することもできます。
 
-![コンテンツフラグメント参照を挿入](assets/rich-text/insert-contentfragment.png)
+![コンテンツフラグメントの参照を挿入](assets/rich-text/insert-contentfragment.png)
 
-上のスクリーンショットは、別のコンテンツフラグメント、「 Ultimate Guide to LA Skate Parks（LA スケートパークの究極のガイド）」を、複数行フィールドに挿入したものです。 フィールドに挿入できるコンテンツフラグメントのタイプは、 **許可されているコンテンツフラグメントモデル** 設定 [複数行データタイプ](#multi-line-data-type) 」と入力します。
+上のスクリーンショットは、複数行のフィールドに挿入されている別のコンテンツフラグメント「Ultimate Guide to LA Skate Parks」を示しています。フィールドに挿入できるコンテンツフラグメントのタイプは、コンテンツフラグメントモデルの[複数行データタイプ](#multi-line-data-type)の&#x200B;**許可されたコンテンツフラグメントモデル**&#x200B;の設定によって制御されます。
 
-## GraphQLでのインライン参照のクエリ
+## GraphQL でのインライン参照のクエリ
 
-GraphQL API を使用すると、開発者は、複数行フィールドに挿入された参照に関する追加のプロパティを含むクエリを作成できます。 JSON 応答には、別の `_references` これらの追加のプロパティをリストするオブジェクト。 JSON 応答を使用すると、開発者は、固有のHTMLに対処する必要がなく、参照やリンクのレンダリング方法を完全に制御できます。
+GraphQL API を使用すると、開発者は、複数行フィールドに挿入された参照に関する追加のプロパティを含むクエリを作成できます。 JSON 応答には、これらの追加のプロパティを一覧表示する別個の `_references` オブジェクトが含まれています。JSON 応答を使用すると、開発者は、特有の HTML に対処する必要がなく、参照やリンクのレンダリング方法を完全に制御できます。
 
 例えば、次のような場合に役立ちます。
 
-* React Router や Next.js の使用など、シングルページアプリケーションを実装する際に他のコンテンツフラグメントへのリンクを管理するカスタムルーティングロジックを含めます
-* AEM パブリッシュ環境への絶対パスを `src` の値です。
-* 別のコンテンツフラグメントへの埋め込み参照を、追加のカスタムプロパティと共にレンダリングする方法を決定します。
+* React Router や Next.js の使用など、シングルページアプリケーションを実装する際に他のコンテンツフラグメントへのリンクを管理するカスタムルーティングロジックを含める場合
+* AEM パブリッシュ環境への絶対パスを `src` 値として使用して、インライン画像をレンダリングする場合
+* 追加のカスタムプロパティを使用して、別のコンテンツフラグメントへの埋め込み参照をレンダリングする方法を決定する場合
 
-以下を使用： `json` 戻り値の型と `_references` オブジェクトは、GraphQLクエリを構築する際に次のようになります。
+`json` 戻り型を使用し、GraphQL クエリを作成するときに `_references` オブジェクトを含めます。
 
-**GraphQLで保持されたクエリ：**
+**GraphQL 永続クエリ**
 
 ```graphql
 query ($path: String!) {
@@ -390,7 +390,7 @@ query ($path: String!) {
 }
 ```
 
-上記のクエリでは、 `main` フィールドが JSON として返されます。 この `_references` オブジェクトには、型の参照を処理するフラグメントが含まれます `ImageRef` またはタイプ `ArticleModel`.
+上記のクエリでは、`main` フィールドが JSON として返されます。`_references` オブジェクトには、タイプ `ImageRef` またはタイプ `ArticleModel` の参照を処理するフラグメントが含まれます。
 
 **JSON 応答：**
 
@@ -472,13 +472,13 @@ query ($path: String!) {
 }
 ```
 
-JSON 応答には、参照がリッチテキスト内の `"nodeType": "reference"`. この `_references` オブジェクトには、各参照が含まれます。
+JSON 応答には、`"nodeType": "reference"` で、リッチテキスト内のどこに参照が含まれているかが含まれます。 この `_references` オブジェクトには、各参照が含まれます。
 
 ## リッチテキストでのインライン参照のレンダリング
 
-インライン参照をレンダリングするには、 [複数行の JSON 応答のレンダリング](#render-multiline-json-richtext) を展開できます。
+インライン参照をレンダリングするには、[複数行の JSON 応答のレンダリング](#render-multiline-json-richtext)で説明されている再帰的なアプローチを拡張できます。
 
-ここで、 `nodeMap` は、JSON ノードをレンダリングするマップです。
+`nodeMap` は、JSON ノードをレンダリングするマップです。
 
 ```javascript
 const nodeMap = {
@@ -504,9 +504,9 @@ const nodeMap = {
     }
 ```
 
-高レベルのアプローチは、 `nodeType` 次と等しい `reference` （複数行の JSON 応答）を参照してください。 次に、カスタムレンダリング関数を呼び出し、 `_references` オブジェクトがGraphQL応答で返されました。
+高レベルのアプローチは、複数行の JSON 応答で `nodeType` が `reference` と等しい場合を調べるためのものです。 次に、GraphQL 応答で返された `_references` オブジェクトを含むカスタムレンダリング関数を呼び出すことができます。
 
-次に、インライン参照パスを `_references` オブジェクトと別のカスタムマップ `renderReference` を呼び出すことができます。
+次に、インライン参照パスを `_references` オブジェクトと別のカスタムマップ `renderReference` の対応するエントリと比較することができます。
 
 ```javascript
 const renderReference = {
@@ -523,11 +523,11 @@ const renderReference = {
 }
 ```
 
-この `__typename` の `_references` オブジェクトを使用して、異なる参照タイプを異なるレンダリング関数にマッピングできます。
+`_references` オブジェクトの `__typename` を使用して、異なる参照タイプを異なるレンダリング関数にマッピングできます。
 
 ### フルコードの例
 
-カスタム参照レンダラーの記述の完全な例については、 [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) の一部として [WKND GraphQL React の例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+カスタム参照レンダラーの記述の完全な例については、[WKND GraphQL React の例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)に含まれる [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) をご覧ください。
 
 ## エンドツーエンドの例
 
@@ -542,5 +542,5 @@ const renderReference = {
 
 1. コンテンツフラグメントモデルの複数行テキストフィールドを更新して、フラグメント参照を許可する
 2. コンテンツフラグメントエディターを使用して、複数行テキストフィールドに画像と別のフラグメントへの参照を含めます。
-3. 複数行テキストの応答を JSON として含むGraphQLクエリの作成 `_references` 使用済み
-4. リッチテキスト応答のインライン参照をレンダリングする React SPAを記述する。
+3. 複数行テキストの応答を JSON および使用される `_references` として含む GraphQLクエリを作成する。
+4. リッチテキスト応答のインライン参照をレンダリングする React SPA を記述する。

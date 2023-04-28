@@ -1,7 +1,7 @@
 ---
-title: 印刷チャネル用のインタラクティブ通信の作成
+title: 印刷チャネル向けのインタラクティブなコミュニケーションを作成
 seo-title: Create Interactive Communication For Print Channel
-description: これは、印刷チャネル用の最初のインタラクティブ通信ドキュメントを作成するためのマルチパートチュートリアルの第 6 部です。 ここでは、印刷チャネル用のインタラクティブ通信ドキュメントを作成します。
+description: これは、印刷チャネル用の最初のインタラクティブなコミュニケーションドキュメントを作成するためのマルチパートチュートリアルの第 6 部です。 ここでは、印刷チャネル用のインタラクティブなコミュニケーションドキュメントを作成します。
 seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
 feature: Interactive Communication
@@ -20,14 +20,14 @@ exl-id: d4355f72-aefa-4ab3-ba7e-ebd7f7b536f0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 印刷チャネル用のインタラクティブ通信の作成 {#create-interactive-communication-for-print-channel}
+# 印刷チャネル向けのインタラクティブなコミュニケーションを作成 {#create-interactive-communication-for-print-channel}
 
-ここでは、印刷チャネル用のインタラクティブ通信ドキュメントを作成します。
+ここでは、印刷チャネル用のインタラクティブなコミュニケーションドキュメントを作成します。
 
-データソースとフォームデータモデルを定義して設定した後、印刷チャネル用のインタラクティブ通信を作成します
+データソースとフォームデータモデルを定義して設定した後、印刷チャネル用のインタラクティブなコミュニケーションを作成します
 
 >[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)

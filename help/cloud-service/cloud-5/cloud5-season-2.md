@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Season 2
-description: シーズン 2 では、Adobe Experience Manager(AEM) を構築するAdobeのエキスパートエンジニアや、それを提供するエキスパートサービスから、() のas a Cloud Serviceについて学ぶことができます。
+title: Cloud 5 - シーズン 2
+description: シーズン 2 では、Adobe Experience Manager（AEM）as a Cloud Service を構築するアドビのエキスパートエンジニアや、それを提供するエキスパートサービスから、Adobe Experience Manager（AEM）as a Cloud Service について学ぶことができます。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -8,26 +8,26 @@ exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# クラウド 5
+# Cloud 5
 
-![AEM Experts Series](./imgs/masthead-s2.png)
+![AEM エキスパートシリーズ](./imgs/masthead-s2.png)
 >[!VIDEO](https://video.tv.adobe.com/v/346567?quality=12&learn=on)
 
 ## はじめに
 
-AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製品の実装段階での主な問題の 1 つは、十分なコードサンプルや、これらのサンプル、ツールまたは API の実際のデモンストレーションがあることです。 このシリーズの目的は、AEMに関する有用な情報を 5 分以内に提供することです。
+AEM エンジニアリングによる Cloud 5 シリーズのシーズン 2 へようこそ。 製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。このシリーズの目標は、AEM as a Cloud Service に関する有用な情報を 5 分以内で提供することです。
 
-## 修正候補ボックス
+## 提案ボックス
 
-次にアクセス： [修正候補ボックス](https://forms.office.com/r/74P5Xz4UH0) トピックのアイデアを送信する場合。
+トピックのアイデアを送信するには、[提案ボックス](https://forms.office.com/r/74P5Xz4UH0)にアクセスしてください。
 
 ## シーズン 2
 
-各シーズンの長さは異なり、一定のスケジュールでリリースされます。 シーズン 2 のトピックは、主に、お客様やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。 毎週の更新情報についてはこのページを参照するか、選択したソーシャルネットワークでフォローしてください。
+シーズンごとに長さが異なり、一定のスケジュールでリリースされます。シーズン 2 のトピックは、主に、顧客やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。 このページにアクセスして毎週のアップデートを確認するか、選択したソーシャルネットワークでフォローしてください。
 
 <table>
     <tr>
@@ -41,20 +41,20 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
             </div>
             <p>
                 <br/>
-                エクスペリエンスとコンテンツフラグメントの違いに対するカラフルな取り組み。 スポイラー：みんな勝つ。
+エクスペリエンスとコンテンツフラグメントの違いに対する様々な取り組み。 ネタバレ：全員が勝利します。
             </p>
         </td>   
          <td>
             <a href="season-2/cloud5-repo-modernizer.md">
-                 <img alt="Repository Modernizer" src="./imgs/s2/001-thumb.png"/>
+                 <img alt="リポジトリモダナイザー" src="./imgs/s2/001-thumb.png"/>
             </a>
             <div>
-                <a href="season-2/cloud5-repo-modernizer.md"><strong>Repository Modernizer</strong></a> 
-               <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>リポジトリモダナイザー</strong></a> 
+ <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>
-                repository modenizer を使用して、既存のプロジェクトパッケージをAEM as a cloud service と互換性のある個別のパッケージに再構築する方法を簡単に説明します。
+リポジトリモダナイザーを使用して、既存のプロジェクトパッケージを AEM as a Cloud Service と互換性のある個別のパッケージに再構築する方法を簡単に説明します。
             </p>
          </td>
          <td>
@@ -63,11 +63,11 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
             </a>
             <div>
                   <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
-               <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+  <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
             </div>
             <p>
             <br/>
-               Darin と James は、管理コンソール、プロビジョニング、アクセスについて知っておくべき一般的なことについて話し合っています。
+Darin と James は、Admin Console、プロビジョニング、アクセスについて知っておくべき一般的な内容について話します。
             </p>
          </td> 
   </tr>
@@ -78,24 +78,24 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
             </a>
             <div>
                   <a href="season-2/cloud5-sling-job-scheduler.md"><strong>Sling ジョブ</strong></a>
-               <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+<br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
             </div>
             <p>
             <br/>
-               Darin と James は、AEM as a Cloud Service でのジョブスケジューリングと消費に注意すべき潜在的な問題と事項について話し合います。
+Darin と James は、AEM as a Cloud Service でのジョブスケジューリングと消費に注意すべき潜在的な問題と事項について話します。
             </p>
          </td> 
          <td>
             <a href="season-2/cloud5-repoinit.md">
-                 <img alt="Repo 初期化 (repoinit)" src="./imgs/s2/004-thumb.png"/>
+                 <img alt="リポジトリ初期化ツール（repoinit）" src="./imgs/s2/004-thumb.png"/>
             </a>
             <div>
-                  <a href="season-2/cloud5-repoinit.md"><strong>Sling Repository Initializer</strong></a>
-               <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+                  <a href="season-2/cloud5-repoinit.md"><strong>Sling リポジトリ初期化ツール</strong></a>
+<br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
             </div>
             <p>
             <br/>
-              Sling Repository Initializer（別名 repoinit）を使用することのできる方法をいくつか説明します。
+Sling リポジトリ初期化ツール（別名 repoinit）を使用方法をいくつか説明します。
             </p>
          </td>   
      <td>
@@ -103,67 +103,67 @@ AEM Engineering の Cloud 5 シリーズ第 2 シーズンへようこそ。 製
                <img alt="キャッシュの修正" src="./imgs/s2/005-thumb.png"/>
             </a>
       <div>
-         <a href="season-2/cloud5-fix-your-cache.md"><strong>修正…キャッシュ</strong></a>
-         <br/><em>Damian Langsweirdt &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+         <a href="season-2/cloud5-fix-your-cache.md"><strong>キャッシュ修正</strong></a>
+<br/><em>Damian Langsweirdt &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
          <br/>
-             AEM as a Cloud Service上で実行するサイトのキャッシュを最適化し、スピードアップする領域を検討します。
+ AEM as a Cloud Service 上で実行するサイトのキャッシュを最適化し、スピードアップする領域を検討します。
       </p>
    </td> 
   </tr>
 <tr>
    <td>
            <a href="season-2/cloud5-fix-your-rewrites.md">
-               <img alt="修正…書き換え" src="./imgs/s2/006-thumb.png"/>
+               <img alt="書き換えの修正" src="./imgs/s2/006-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>修正…書き換え</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>書き換えの修正</strong></a>
+ <br/><em>Darin Kuntze &amp; James Talbot 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-         AEM as a Cloud Serviceでの書き換えの開発と最適化を迅速におこなうのに役立つ事項に関するクイックインサイトです。
+ AEM as a Cloud Service での書き換えの開発と最適化を迅速に行うのに役立つ事項に関するクイックインサイトです。
       </p>
      </td>   
      <td>
             <a href="season-2/cloud5-mocm-experience-audit.md">
-               <img alt="Cloud Manager の謎（英語）...エクスペリエンス監査" src="./imgs/s2/007-thumb.png"/>
+               <img alt="Cloud Manager のミステリー：エクスペリエンス監査" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Cloud Manager の謎（英語）...エクスペリエンス監査</strong></a>
-         <br/><em>シニアクラウドアーキテクトの Darin Kuntze 氏と共に</em>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Cloud Manager のミステリー：エクスペリエンス監査</strong></a>
+ <br/><em>Darin Kuntze 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-        Cloud Manager の基本とそのエクスペリエンス監査機能について説明します。
+Cloud Manager の基本とそのエクスペリエンス監査機能について説明します。
       </p>
    </td>
      <td>
             <a href="season-2/cloud5-mocm-unit-tests.md">
-               <img alt="Cloud Manager の謎（英語）...単体テスト" src="./imgs/s2/008-thumb.png"/>
+               <img alt="Cloud Manager のミステリー：単体テスト" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Cloud Manager の謎（英語）...単体テスト</strong></a>
-         <br/><em>Darin Kuntze &amp; Bryan Stopp 氏（シニアクラウドアーキテクト）</em>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Cloud Manager のミステリー：単体テスト</strong></a>
+<br/><em>Darin Kuntze &amp; Bryan Stopp 氏（シニアクラウドアーキテクト）</em>
       </div>
       <p>
         <br/>
-        Darin と Bryan は、Cloud Manager がユニットテストの実行とコードカバレッジのレポートを CI/CD パイプラインに統合し、AEMコードのユニットテストのベストプラクティスを促進し、促進する方法について説明します。
+ Darin と Bryan は、Cloud Manager が単体テストの実行とコードカバレッジレポートを CI／CD パイプラインに統合して、AEM コードの単体テストのベストプラクティスを奨励および促進する方法について説明します。
       </p>
    </td> 
   </tr>
     <tr>
         <td>
                <a href="season-2/cloud5-mocm-functional-tests.md">
-                   <img alt="Cloud Manager の謎（英語）...機能テスト" src="./imgs/s2/009-thumb.png"/>
+                   <img alt="Cloud Manager のミステリー：機能テスト" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Cloud Manager の謎（英語）...機能テスト</strong><br/></a>        
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Cloud Manager のミステリー：機能テスト</strong><br/></a>        
                 <em>Darin Kuntze &amp; Bryan Stopp 氏（シニアクラウドアーキテクト）</em>
             </div>
             <p><br/>
-                Darin と Bryan は、コードの品質と信頼性を確保するために、AEMのas a Cloud Service的なデプロイメントプロセスに組み込まれている様々なタイプの機能テストについて話し合います。
+                コードの品質と信頼性を確保するために、AEM as a Cloud Service デプロイメントプロセスに組み込まれている 3 種類の機能テストについて説明します。
             </p>
         </td>
         <td></td>

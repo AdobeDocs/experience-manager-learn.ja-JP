@@ -10,7 +10,7 @@ kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 100%
 

@@ -1,5 +1,5 @@
 ---
-title: AEM Forms印刷チャネルドキュメントでのテーブルコンポーネントの使用
+title: AEM Forms 印刷チャネルドキュメントでのテーブルコンポーネントの使用
 seo-title: Using Table Component in AEM Forms Print Channel Document
 description: 次のビデオでは、印刷チャネルドキュメントに対してインタラクティブ通信でテーブルコンポーネントを使用するために必要な手順を説明します。
 feature: Interactive Communication
@@ -16,11 +16,11 @@ last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Forms印刷チャネルドキュメントでのテーブルコンポーネントの使用 {#using-table-component-in-aem-forms-print-channel-document}
+# AEM Forms 印刷チャネルドキュメントでのテーブルコンポーネントの使用 {#using-table-component-in-aem-forms-print-channel-document}
 
 次のビデオでは、印刷チャネルドキュメントに対してインタラクティブ通信でテーブルコンポーネントを使用するために必要な手順を説明します。
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 **独自のサーバーで試す**
 
-* [アセットファイルをダウンロードし、ハードドライブに解凍します。](assets/usingtablesinprintchannel.zip)
+* [アセットファイルをダウンロードし、ハードドライブに解凍します](assets/usingtablesinprintchannel.zip)
 
-* パッケージマネージャーを使用して 2 つの zip ファイルをAEMにインポートします
+* パッケージマネージャーを使用して 2 つの zip ファイルを AEM に読み込みます
 
 * この記事に関連付けられたアセットには、次のものが含まれます。
 
@@ -47,9 +47,9 @@ ht-degree: 0%
    * インタラクティブ通信ドキュメント
    * sampleretirementaccountdata.json
 
-* でインタラクティブ通信ドキュメントを開く [編集モード](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
+* [編集モード](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)でインタラクティブ通信ドキュメントを開きます。
 
 * 投稿セクションに TableDemo レイアウトフラグメントを追加します。
-* ビデオに示すように、表のセルを適切なフォームデータモデル要素に連結します
+* ビデオに示すように、テーブルのセルを適切なフォームデータモデル要素に連結します
 
 * サンプルの JSON データファイルを使用して、インタラクティブ通信ドキュメントをプレビューします

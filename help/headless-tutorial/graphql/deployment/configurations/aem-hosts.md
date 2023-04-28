@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQL用AEMホストの管理
-description: AEMヘッドレスアプリでAEMホストを設定する方法について説明します。
+title: AEM GraphQL 用 AEM ホストの管理
+description: AEM ヘッドレスアプリで AEM ホストを設定する方法について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -12,54 +12,54 @@ exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
 workflow-type: tm+mt
 source-wordcount: '1669'
-ht-degree: 1%
+ht-degree: 95%
 
 ---
 
-# AEMホストの管理
+# AEM ホストの管理
 
-AEMヘッドレスアプリケーションのデプロイでは、AEM URL の構築方法に注意して、正しいAEMホスト/ドメインが使用されるようにする必要があります。 認識する必要のあるプライマリ URL/リクエストタイプは次のとおりです。
+AEM ヘッドレスアプリケーションのデプロイでは、AEM の URL の作成方法に注意して、AEM の正しいホストやドメインを使用する必要があります。認識する必要のあるプライマリ URL やリクエストタイプは次のとおりです。
 
-+ への HTTP リクエスト __[AEM GraphQL API](#aem-graphql-api-requests)__
-+ __[画像 URL](#aem-image-urls)__ コンテンツフラグメントで参照され、AEMによって配信されるアセットを画像化する
++ __[AEM GraphQL API](#aem-graphql-api-requests)__ への HTTP リクエスト
++ コンテンツフラグメントで参照され、AEM によって配信されるアセットを画像化する&#x200B;__[画像 URL](#aem-image-urls)__
 
-通常、AEMヘッドレスアプリは、GraphQL API とイメージリクエストの両方で単一のAEMサービスとやり取りします。 AEMサービスは、AEMヘッドレスアプリのデプロイメントに応じて変更されます。
+通常、AEM ヘッドレスアプリは、GraphQL API と画像リクエストの両方で単一の AEM サービスとやり取りします。AEM サービスは、AEM ヘッドレスアプリのデプロイメントに応じて変更されます。
 
-| AEMヘッドレスデプロイメントタイプ | AEM環境 | AEM service |
+| AEM ヘッドレスデプロイメントのタイプ | AEM 環境 | AEM サービス |
 |-------------------------------|:---------------------:|:----------------:|
 | 実稼動 | 実稼動 | パブリッシュ |
 | オーサリングプレビュー | 実稼動 | プレビュー |
 | 開発 | 開発 | パブリッシュ |
 
-デプロイメントタイプの順列を処理するために、各アプリケーションのデプロイメントは、接続先のAEMサービスを指定する設定を使用して構築されます。 次に、設定済みのAEMサービスのホスト/ドメインを使用して、AEM GraphQL API の URL と画像 URL を構築します。 ビルドに依存する設定を管理するための正しい方法を判断するには、AEMヘッドレスアプリのフレームワーク (React、iOS、Android™など ) ドキュメントを参照してください。この方法はフレームワークによって異なります。
+デプロイメントタイプの順列を処理するために、各アプリのデプロイメントは、接続先の AEM サービスを指定する設定を使用して作成されます。次に、設定済みの AEM サービスのホストやドメインを使用して、AEM GraphQL API の URL と画像 URL を作成します。ビルドに依存する設定を管理するための正しい方法を判断するには、AEM ヘッドレスアプリのフレームワーク（React、iOS、Android™ など）のドキュメントを参照してください。その方法はフレームワークによって異なります。
 
-| クライアントタイプ | [シングルページアプリ (SPA)](../spa.md) | [Web コンポーネント/JS](../web-component.md) | [モバイル](../mobile.md) | [サーバー間](../server-to-server.md) |
+| クライアントタイプ | [シングルページアプリ（SPA）](../spa.md) | [Web コンポーネント／JS](../web-component.md) | [モバイル](../mobile.md) | [サーバー間](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| AEMホスト設定 | ✔ | ✔ | ✔ | ✔ |
+| AEM ホスト設定 | ✔ | ✔ | ✔ | ✔ |
 
-以下は、 [AEM GraphQL API](#aem-graphql-api-requests) および [イメージリクエスト](#aem-image-requests)（一般的なヘッドレスフレームワークおよびプラットフォーム向け）
+以下は、一般的なヘッドレスフレームワークとプラットフォーム用に [AEM GraphQL API](#aem-graphql-api-requests) と[画像リクエスト](#aem-image-requests)の URL を作成するアプローチの例です。
 
 ## AEM GraphQL API リクエスト
 
-ヘッドレスアプリからAEM GraphQL API への HTTPGETリクエストは、正しいAEMサービスとやり取りするように設定する必要があります。詳しくは、 [上の表](#managing-aem-hosts).
+ヘッドレスアプリから AEM GraphQL API への HTTP GET リクエストは、正しい AEM サービスとやり取りするように設定する必要があります。詳しくは、[上の表](#managing-aem-hosts)を参照してください。
 
-を使用する場合 [AEMヘッドレス SDK](../../how-to/aem-headless-sdk.md) ( ブラウザーベースの JavaScript、サーバーベースの JavaScript および Java™で使用可能 )AEMホストは、接続するAEMサービスを使用してAEMヘッドレスクライアントオブジェクトを初期化できます。
+[AEM ヘッドレス SDK](../../how-to/aem-headless-sdk.md)（ブラウザーベースの JavaScript、サーバーベースの JavaScript、および Java™ で利用可能）を使用する場合、AEM ホストは接続する AEM サービスで AEM ヘッドレスクライアントオブジェクトを初期化できます。
 
-カスタムAEMヘッドレスクライアントを開発する場合は、AEMサービスのホストが、ビルドパラメーターに基づいてパラメーター化可能であることを確認します。
+カスタム AEM ヘッドレスクライアントを開発する場合は、AEM サービスのホストが、ビルドパラメーターに基づいてパラメーター化可能であることを確認します。
 
 ### 例
 
-次に、AEM GraphQL API リクエストで、様々なヘッドレスアプリフレームワーク用にAEMホスト値を設定可能にする方法の例を示します。
+次に、AEM GraphQL API リクエストで、様々なヘッドレスアプリフレームワーク用に AEM ホスト値を設定可能にする方法の例を示します。
 
 +++ React の例
 
-この例では、大まかに [AEMヘッドレス React アプリ](../../example-apps/react-app.md)では、環境変数に基づいて、様々なAEM Services に接続するようにAEM GraphQL API リクエストを設定する方法を示します。
+この例は、[AEM ヘッドレス React アプリ](../../example-apps/react-app.md)に大まかに基づいており、環境変数に基づいて様々な AEM サービスに接続するように AEM GraphQL API リクエストを作成する方法を示しています。
 
-React アプリでは、 [JavaScript 用AEMヘッドレスクライアント](../../how-to/aem-headless-sdk.md) AEM GraphQL API を操作するには： AEM Headless Client for JavaScript が提供するAEMヘッドレスクライアントは、接続先のAEMサービスホストで初期化する必要があります。
+React アプリは [JavaScript 用 AEM ヘッドレスクライアント](../../how-to/aem-headless-sdk.md)を使用して、AEM GraphQL API とやり取りする必要があります。JavaScript 用 AEM ヘッドレスクライアントが提供する AEM ヘッドレスクライアントは、接続先の AEM サービスホストで初期化する必要があります。
 
 #### React 環境ファイル
 
-React はを使用 [カスタム環境ファイル](https://create-react-app.dev/docs/adding-custom-environment-variables/)または `.env` ビルド固有の値を定義するために、プロジェクトのルートに保存されるファイル。 例えば、 `.env.development` ファイルには開発時に使用される値が含まれますが、 `.env.production` には、実稼動ビルドに使用される値が含まれます。
+React では、プロジェクトのルートに保存されている[カスタム環境ファイル](https://create-react-app.dev/docs/adding-custom-environment-variables/)または `.env` ファイルを使用して、ビルド固有の値を定義します。例えば、`.env.development` ファイルには、開発時に使用される値が含まれているのに対して、`.env.production` には、実稼動ビルドに使用される値が含まれています。
 
 + `.env.development`
 
@@ -69,9 +69,9 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 ...
 ```
 
-`.env` 他の用途のファイル [指定可能](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used) ポストフィックスで `.env` とセマンティック記述子 ( `.env.stage` または `.env.production`. 異なる `.env` ファイルは、 `REACT_APP_ENV` 実行する前に `npm` コマンドを使用します。
+他の用途の `.env` ファイルは、`.env.stage` や `.env.production` のように、`.env` とセマンティック記述子を末尾に付加して[指定できます](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)。`npm` コマンドを実行する前に `REACT_APP_ENV` を設定することで、React アプリの実行またはビルド時に異なる `.env` ファイルを使用できます。
 
-例えば、React アプリの `package.json` 次のものを含むことができます。 `scripts` config:
+例えば、React アプリの `package.json` には、次の `scripts` 設定が含まれている場合があります。
 
 + `package.json`
 
@@ -85,9 +85,9 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 ...
 ```
 
-#### AEMヘッドレスクライアント
+#### AEM ヘッドレスクライアント
 
-この [JavaScript 用AEMヘッドレスクライアント](../../how-to/aem-headless-sdk.md) には、AEM GraphQL API に対して HTTP リクエストをおこなうAEMヘッドレスクライアントが含まれています。 AEMヘッドレスクライアントは、操作するAEMホストで、アクティブなの値を使用して初期化する必要があります `.env` ファイル。
+[JavaScript 用 AEM ヘッドレスクライアント](../../how-to/aem-headless-sdk.md)には、AEM GraphQL API に対して HTTP リクエストを行う AEM ヘッドレスクライアントが含まれています。AEM ヘッドレスクライアントは、アクティブな `.env` ファイルの値を使用して、クライアントがやり取りする AEM ホストで初期化する必要があります。
 
 + `src/api/headlessClient.js`
 
@@ -111,7 +111,7 @@ export const aemHeadlessClient = new AEMHeadless({
 
 #### React useEffect(...) フック
 
-カスタム React useEffect フックは、ビューをレンダリングする React コンポーネントの代わりに、AEMホストで初期化されたAEMヘッドレスクライアントを呼び出します。
+カスタム React useEffect フックは、ビューをレンダリングする React コンポーネントの代わりに、AEM ホストで初期化された AEM ヘッドレスクライアントを呼び出します。
 
 + `src/api/persistedQueries.js`
 
@@ -146,7 +146,7 @@ const executePersistedQuery = async function(persistedQueryPath, queryVariables)
 
 #### React コンポーネント
 
-カスタムの useEffect フック `useAdventureByPath` が読み込まれ、AEMヘッドレスクライアントを使用してデータを取得し、最終的にコンテンツをエンドユーザーにレンダリングするために使用されます。
+カスタム useEffect フック `useAdventureByPath` が読み込まれ、AEM ッドレスクライアントを使用してデータを取得し、最終的にコンテンツをエンドユーザーにレンダリングするために使用されます。
 
 + &#39;src/components/AdventureDetail.js&#39;
 
@@ -161,15 +161,15 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 +++
 
-+++ iOS™の例
++++ iOS™ の例
 
-この例では、 [AEMヘッドレスiOS™アプリの例](../../example-apps/ios-swiftui-app.md)に示すように、に基づいてAEM GraphQL API リクエストを様々なAEMホストに接続するように設定する方法について説明します。 [ビルド固有の設定変数](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
+この例は、[AEM ヘッドレス iOS™ アプリの例](../../example-apps/ios-swiftui-app.md)に基づいており、[ビルド固有の設定変数](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)に基づいて様々な AEM ホストに接続するように AEM GraphQL API リクエストを設定する方法を示しています。 
 
-iOS™アプリでAEM GraphQL API とやり取りするには、カスタムAEMヘッドレスクライアントが必要です。 AEMヘッドレスクライアントは、AEMサービスホストを設定できるように記述する必要があります。
+iOS™ アプリでは、カスタム AEM ヘッドレスクライアントが AEM の GraphQL API とやり取りする必要があります。 AEM ヘッドレスクライアントは、AEM サービスホストが設定可能なように記述する必要があります。
 
-#### 構築設定
+#### ビルド設定
 
-XCode 設定ファイルには、デフォルトの設定の詳細が含まれています。
+XCode 設定ファイルには、デフォルトの設定詳細が含まれています。
 
 + `Config.xcconfig`
 
@@ -182,9 +182,9 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 ...
 ```
 
-#### カスタムAEMヘッドレスクライアントを初期化
+#### カスタム AEM ヘッドレスクライアントの初期化
 
-この [AEMヘッドレスiOSアプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app) は、次の設定値で初期化されたカスタムAEMヘッドレスクライアントを使用します。 `AEM_SCHEME` および `AEM_HOST`.
+[AEM ヘッドレス iOS アプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)では、`AEM_SCHEME` および `AEM_HOST` の設定値で初期化されたカスタム AEM ヘッドレスクライアントを使用しています。 
 
 ```swift
 ...
@@ -194,7 +194,7 @@ let aemHost: String = try Configuration.value(for: "AEM_HOST")      // publish-p
 let aemHeadlessClient = Aem(scheme: aemScheme, host: aemHost);
 ```
 
-カスタムAEMヘッドレスクライアント (`api/Aem.swift`) にメソッドが含まれる場合にのみ考慮されます `makeRequest(..)` これは、AEM GraphQL API リクエストの前に設定済みのAEMを付加します。 `scheme` および `host`.
+カスタム AEM ヘッドレスクライアント（`api/Aem.swift`）には、AEM GraphQL API リクエストの前に設定済みの AEM `scheme` および `host` を付けるメソッド `makeRequest(..)` が含まれています。
 
 + `api/Aem.swift`
 
@@ -216,24 +216,24 @@ private func makeRequest(persistedQueryName: String, params: [String: String] = 
 }
 ```
 
-[新しいビルド設定ファイルを作成できます](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) 別のAEMサービスに接続する場合。 のビルド固有の値 `AEM_SCHEME` および `AEM_HOST` は、XCode で選択されたビルドに基づいて使用され、その結果、カスタムAEMヘッドレスクライアントが正しいAEMサービスに接続するようになります。
+別の AEM サービスに接続する[新しいビルド設定ファイルを作成できます](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)。`AEM_SCHEME` および `AEM_HOST` のビルド固有の値は、選択したビルドに基づいて XCode で使用され、その結果、カスタム AEM ヘッドレスクライアントが正しい AEM サービスに接続するようになります。
 
 +++
 
-+++ Android™の例
++++ Android™ の例
 
-この例では、 [AEMヘッドレス Android™アプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)では、ビルド固有の（または各種の）設定変数に基づいて、様々なAEM Services に接続するようにAEM GraphQL API リクエストを設定する方法を説明します。
+この例は、[AEM ヘッドレス Android™ アプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)に基づいており、ビルド固有の（または各種の）設定変数に基づく様々な AEM サービスに接続するように AEM GraphQL API リクエストを設定する方法を示しています。
 
-Android™アプリ (Java™で記述される場合 ) は、 [AEM Headless Client for Java™](https://github.com/adobe/aem-headless-client-java) AEM GraphQL API を操作するには： AEM Headless Client for Java™が提供するAEMヘッドレスクライアントは、接続先のAEMサービスホストで初期化する必要があります。
+Android™ アプリ（Java™ で記述する場合）は、[Java™ 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-java)を使用して、AEM の GraphQL API とやり取りする必要があります。Java™ 用 AEM ヘッドレスクライアントから提供される AEM ヘッドレスクライアントは、接続先の AEM サービスホストで初期化する必要があります。
 
-#### 設定ファイルを作成
+#### ビルド設定ファイル
 
-Android™アプリでは、様々な用途のアーティファクトを構築するために使用される「productFlavors」を定義します。
-この例では、2 つの Android™製品のフレーバーを定義し、異なるAEMサービスホスト (`AEM_HOST`) 開発用の値 (`dev`) および実稼動 (`prod`) はを使用します。
+Android™ アプリでは、様々な用途のアーティファクトを作成するために使用される「productFlavors」を定義します。
+この例では、2 つの Android™ 製品フレーバーを定義して、開発用（`dev`）と実稼動用（`prod`）とで異なる AEM サービスホスト（`AEM_HOST`）の値を指定する方法を示しています。
 
-アプリの `build.gradle` ファイル、新規 `flavorDimension` 名前付き `env` が作成されました。
+アプリの `build.gradle` ファイルに、`env` という名前の新しい `flavorDimension` が作成されます。
 
-内 `env` 寸法、2 `productFlavors` が定義されている： `dev` および `prod`. 各 `productFlavor` uses `buildConfigField` 接続先のAEMサービスを定義するビルド固有の変数を設定する場合。
+`env` ディメンションでは、`dev` と `prod` という 2 つの `productFlavors` が定義されています。それぞれの `productFlavor` は、`buildConfigField` を使用して、接続先の AEM サービスを定義するビルド固有の変数を設定します。
 
 + `app/build.gradle`
 
@@ -258,9 +258,9 @@ android {
 }
 ```
 
-#### Android™ loader
+#### Android™ ローダー
 
-を初期化します。 `AEMHeadlessClient` ビルダー。AEM Headless Client for Java™によって提供され、 `AEM_HOST` 値 `buildConfigField` フィールドに入力します。
+Java™ 用 AEM ヘッドレスクライアントから提供される `AEMHeadlessClient` ビルダーを、`buildConfigField` フィールドの `AEM_HOST` 値で初期化します。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/AdventuresLoader.java`
 
@@ -281,13 +281,13 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 }
 ```
 
-様々な用途で Android™アプリを作成する場合は、 `env` フレーバーと、対応するAEMホスト値が使用されます。
+様々な用途で Android™ アプリを作成する場合は、`env` フレーバーを指定すると、対応する AEM ホスト値が使用されます。
 
 +++
 
-## AEM画像 URL
+## AEM 画像 URL
 
-ヘッドレスアプリからAEMに対するイメージリクエストは、正しいAEMサービスとやり取りするように設定する必要があります。詳しくは、 [上の表](#managing-aem-hosts).
+ヘッドレスアプリから AEM に対する画像リクエストは、[前述の表](#managing-aem-hosts)で説明したように、正しい AEM サービスとやり取りするように設定する必要があります。
 
 Adobeは、 [最適化された画像](../../how-to/images.md) ～を通じて利用可能になる `_dynamicUrl` フィールドに値を入力する必要があります。 この `_dynamicUrl` フィールドは、AEM GraphQL API に対するクエリに使用するAEMサービスホストのプレフィックスが付くホストレス URL を返します。 の `_dynamicUrl` GraphQL応答のフィールドは次のようになります。
 
@@ -301,13 +301,13 @@ Adobeは、 [最適化された画像](../../how-to/images.md) ～を通じて�
 
 ### 例
 
-様々なヘッドレスアプリフレームワーク用に設定されたAEMホスト値に、画像 URL でプレフィックスを付ける方法の例を以下に示します。 この例では、画像参照を返すGraphQLクエリを `_dynamicUrl` フィールドに入力します。
+様々なヘッドレスアプリフレームワークに設定可能になっている AEM ホスト値に、画像 URL でプレフィックスを付ける方法の例を以下に示します。この例では、`_dynamicUrl` フィールドを使用して画像参照を返す GraphQL クエリを使用することを想定しています。
 
-例：
+次に例を示します。
 
-#### GraphQL永続クエリ
+#### GraphQL 永続クエリ
 
-このGraphQLクエリは、画像参照の `_dynamicUrl`. 例えば、 [GraphQL応答](#examples-react-graphql-response) ホストを除外する
+この GraphQL クエリは、画像参照の `_dynamicUrl` を返します。[GraphQL 応答](#examples-react-graphql-response)の節で示したとおり、ホストが除かれています。
 
 ```graphql
 query ($path: String!) {
@@ -324,9 +324,9 @@ query ($path: String!) {
 }
 ```
 
-#### GraphQL応答
+#### GraphQL 応答
 
-このGraphQL応答は、画像参照の `_dynamicUrl` ホストを除外する
+この GraphQL 応答は画像参照の `_dynamicUrl` を返しますが、そこではホストが除かれています 。
 
 ```json
 {
@@ -344,13 +344,13 @@ query ($path: String!) {
 
 +++ React の例
 
-この例では、 [AEMヘッドレス React アプリの例](../../example-apps/react-app.md)では、環境変数に基づいて、適切なAEM Services に接続するように画像 URL を設定する方法を説明します。
+この例では、[AEM ヘッドレス React アプリの例](../../example-apps/react-app.md)に基づいて、環境変数に基づく適切な AEM サービスに接続するように画像 URL を設定する方法を説明します。
 
-この例では、画像参照のプレフィックスを示します `_dynamicUrl` フィールド（設定可能） `REACT_APP_AEM_HOST` React 環境変数。
+この例では、画像参照の `_dynamicUrl` フィールドのプレフィックスを設定可能な `REACT_APP_AEM_HOST` React 環境変数に設定する方法を示しています。
 
 #### React 環境ファイル
 
-React はを使用 [カスタム環境ファイル](https://create-react-app.dev/docs/adding-custom-environment-variables/)または `.env` ビルド固有の値を定義するために、プロジェクトのルートに保存されるファイル。 例えば、 `.env.development` ファイルには開発時に使用される値が含まれますが、 `.env.production` には、実稼動ビルドに使用される値が含まれます。
+React では、プロジェクトのルートに保存されている[カスタム環境ファイル](https://create-react-app.dev/docs/adding-custom-environment-variables/)または `.env` ファイルを使用して、ビルド固有の値を定義します。例えば、`.env.development` ファイルには、開発時に使用される値が含まれているのに対して、`.env.production` には、実稼動ビルドに使用される値が含まれています。
 
 + `.env.development`
 
@@ -360,9 +360,9 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 ...
 ```
 
-`.env` 他の用途のファイル [指定可能](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used) ポストフィックスで `.env` とセマンティック記述子 ( `.env.stage` または `.env.production`. 異なる `.env` ファイルは、 `REACT_APP_ENV` 実行する前に `npm` コマンドを使用します。
+他の用途の `.env` ファイルは、`.env.stage` または `.env.production` のように、`.env` とセマンティック記述子をポストフィックスにして[指定することができます](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)。`npm` コマンドを実行する前に `REACT_APP_ENV` を設定することで、React アプリの実行時やビルド時に異なる `.env`フ ァイルを利用できます。
 
-例えば、React アプリの `package.json` 次のものを含むことができます。 `scripts` config:
+例えば、React アプリの `package.json` は次の `scripts` 設定を含むことができます。
 
 + `package.json`
 
@@ -378,9 +378,9 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### React コンポーネント
 
-React コンポーネントは、 `REACT_APP_AEM_HOST` 環境変数に追加し、イメージのプレフィックスを付けます。 `_dynamicUrl` の値を指定して、完全に解決可能な画像 URL を指定します。
+React コンポーネントは、`REACT_APP_AEM_HOST` 環境変数を読み込みし、画像 `_dynamicUrl` の値をプレフィックスして、完全に解決可能な画像 URL を提供します。
 
-同じ `REACT_APP_AEM_HOST` 環境変数は、 `useAdventureByPath(..)` AEMからGraphQLデータを取得するために使用するカスタム useEffect フック。 同じ変数を使用してGraphQL API リクエストを画像 URL として作成し、React アプリが両方の使用例で同じAEMサービスとやり取りするようにします。
+この同じ `REACT_APP_AEM_HOST` 環境変数は、AEM から GraphQL データを取得するために使用する `useAdventureByPath(..)` カスタム useEffect フックで使用される、AEM ヘッドレスのクライアントを初期化するのに使用されます。同じ変数を使用して GraphQL API リクエストを画像 URL として作成し、React アプリが両方のユースケースで同じ AEM サービスとやり取りできるようにします。
 
 + &#39;src/components/AdventureDetail.js&#39;
 
@@ -400,13 +400,13 @@ return (
 
 +++
 
-+++ iOS™の例
++++ iOS™ の例
 
-この例では、 [AEMヘッドレスiOS™アプリの例](../../example-apps/ios-swiftui-app.md)では、に基づいてAEMの画像 URL を様々なAEMホストに接続するように設定する方法を説明します。 [ビルド固有の設定変数](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
+ここでは、[ AEM ヘッドレス iOS™ アプリ ](../../example-apps/ios-swiftui-app.md) の例に基づいて、AEM の画像 URL を[ビルド固有の設定変数](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)に基づき様々な AEM ホストに接続するように設定する方法の例を示します。
 
-#### 構築設定
+#### ビルド設定
 
-XCode 設定ファイルには、デフォルトの設定の詳細が含まれています。
+XCode 設定ファイルには、デフォルトの設定詳細が含まれています。
 
 + `Config.xcconfig`
 
@@ -421,7 +421,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### 画像 URL ジェネレーター
 
-In `Aem.swift`、カスタムAEMヘッドレスクライアント実装、カスタム関数 `imageUrl(..)` は、 `_dynamicUrl` フィールドに値を追加し、その後にAEMホストを追加します。 その後、この関数は、イメージがレンダリングされるたびにiOSビューで呼び出されます。
+In `Aem.swift`、カスタムAEMヘッドレスクライアント実装、カスタム関数 `imageUrl(..)` は、 `_dynamicUrl` フィールドに値を追加し、その後にAEMホストを追加します。 その後、この関数は、画像がレンダリングされるたびに iOS ビューで呼び出されます。
 
 + `WKNDAdventures/AEM/Aem.swift`
 
@@ -443,9 +443,9 @@ class Aem: ObservableObject {
 }
 ```
 
-#### iOSビュー
+#### iOS ビュー
 
-iOSビューでは、画像のプレフィックスが付きます。 `_dynamicUrl` の値を指定して、完全に解決可能な画像 URL を指定します。
+iOS ビューは、完全に解決可能な画像 URL を提供するために、画像 `_dynamicUrl` の値をプレフィックスします。
 
 + `WKNDAdventures/Views/AdventureListItemView.swift`
 
@@ -469,22 +469,22 @@ struct AdventureListItemView: View {
 ...
 ```
 
-[新しいビルド設定ファイルを作成できます](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) 別のAEMサービスに接続する場合。 のビルド固有の値 `AEM_SCHEME` および `AEM_HOST` は、XCode で選択されたビルドに基づいて使用され、その結果、カスタムAEMヘッドレスクライアントが正しいAEMサービスとやり取りすることになります。
+[新しいビルド設定ファイルを作成](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)して、様々な AEM サービスに接続できます。`AEM_SCHEME` および `AEM_HOST` のビルド固有の値は、XCode で選択されたビルドに基づいて使用されるため、カスタム AEM ヘッドレスクライアントは正しい AEM サービスと対話します。
 
 +++
 
-+++ Android™の例
++++ Android™ の例
 
-この例では、 [AEMヘッドレス Android™アプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)では、ビルド固有の（または各種の）設定変数に基づいて、様々なAEM Services に接続するようにAEM画像 URL を設定する方法を示します。
+この例は、[AEM ヘッドレス Android™ アプリの例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)に基づいており、ビルド固有の（またはフレーバーの）設定変数に基づいて、様々な AEM サービスに接続するように AEM イメージ URL を設定する方法を示しています。
 
-#### 設定ファイルを作成
+#### ビルド設定ファイル
 
-Android™アプリでは、様々な用途のアーティファクトを構築するために使用される「productFlavors」を定義します。
-この例では、2 つの Android™製品のフレーバーを定義し、異なるAEMサービスホスト (`AEM_HOST`) 開発用の値 (`dev`) および実稼動 (`prod`) はを使用します。
+Android™ アプリでは、様々な用途のアーティファクトを構築するために使用される「productFlavors」を定義します。
+この例では、2 つの Android™ 製品フレーバーを定義して、開発（`dev`）と実稼働（`prod`）で使用するために異なる AEM サービス ホスト（`AEM_HOST`）値を提供する方法を示しています。
 
-アプリの `build.gradle` ファイル、新規 `flavorDimension` 名前付き `env` が作成されました。
+アプリの `build.gradle` ファイルに、`env` という名前の新しい `flavorDimension` が作成されます。
 
-内 `env` 寸法、2 `productFlavors` が定義されている： `dev` および `prod`. 各 `productFlavor` uses `buildConfigField` 接続先のAEMサービスを定義するビルド固有の変数を設定する場合。
+`env` ディメンションでは、`dev` と `prod` の 2 つの `productFlavors` が定義されています。各 `productFlavor` は `buildConfigField` を使用して、接続先の AEM サービスを定義するビルド固有の変数を設定します。
 
 + `app/build.gradle`
 
@@ -509,9 +509,9 @@ android {
 }
 ```
 
-#### AEM画像の読み込み
+#### AEM 画像の読み込み
 
-Android™では、 `ImageGetter` を使用して、AEMから画像データを取得し、ローカルにキャッシュします。 In `prepareDrawableFor(..)` アクティブなビルド設定で定義されたAEMサービスホストは、解決可能な URL を作成する画像パスのプレフィックスとしてAEMに使用されます。
+Android™ では、`ImageGetter` を使用して、AEM から画像データを取得し、ローカルにキャッシュします。 `prepareDrawableFor(..)` では、アクティブなビルド設定で定義された AEM サービスホストを使用して、画像パスのプレフィックスとして AEM への解決可能な URL を作成します。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/RemoteImagesCache.java`
 
@@ -545,9 +545,9 @@ public class RemoteImagesCache implements Html.ImageGetter {
 }
 ```
 
-#### Android™ view
+#### Android™ ビュー
 
-Android™ビューは、 `RemoteImagesCache` の使用 `_dynamicUrl` の値をGraphQL応答から取得します。
+Android™ビューは、GraphQL レスポンスの `_dynamicUrl` 値を使用して `RemoteImagesCache` 経由で画像データを取得します。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/AdventureDetailFragment.java`
 
@@ -567,6 +567,6 @@ public class AdventureDetailFragment extends Fragment implements LoaderManager.L
 }
 ```
 
-様々な用途で Android™アプリを作成する場合は、 `env` フレーバーと、対応するAEMホスト値が使用されます。
+様々な用途で Android™ アプリをビルドする場合は、`env` フレーバーを指定すると、対応する AEM ホスト値が使用されます。
 
 +++

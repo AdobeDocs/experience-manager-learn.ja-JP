@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQLの CORS 設定
-description: AEM GraphQLで使用するためのクロスオリジンリソース共有 (CORS) の設定方法について説明します。
+title: AEM GraphQL の CORS 設定
+description: AEM GraphQLで使用するためのクロスオリジンリソース共有（CORS）の設定方法について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,29 +8,29 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
+exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 92%
 
 ---
 
+# クロスオリジンリソース共有（CORS）
 
-# クロスオリジンリソース共有 (CORS)
-
-Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース共有 (CORS) は、AEM GraphQL API に対してブラウザーベースのクライアント側呼び出しをおこなうAEM以外の Web プロパティを容易にします。
+Adobe Experience Manager as a Cloud Service のクロスオリジンリソース共有（CORS）は、AEM 以外の web プロパティが、AEM の GraphQL API に対してブラウザーベースのクライアントサイド呼び出しを行うのを容易にします。
 
 次の記事では、 _単一起源の_ CORS を介して特定のセットのAEMヘッドレスエンドポイントにアクセスする。 単一オリジンとは、AEMにアクセスするのはAEM以外の 1 つのドメインのみで、例えば、https://app.example.comはhttps://www.example.comに接続することを意味します。 キャッシュに関する懸念があるので、複数オリジンアクセスは、この方法を使用して動作しない可能性があります。
 
 >[!TIP]
 >
-> 次の設定は例です。 プロジェクトの要件に合わせて調整してください。
+> 設定例は次のようになります。プロジェクトの要件に合わせて調整してください。
 
 ## CORS 要件
 
-AEMに接続するクライアントがAEMと同じオリジン（ホストまたはドメインとも呼ばれます）から提供されない場合、AEM GraphQL API へのブラウザーベースの接続には、CORS が必要です。
+AEM に接続するクライアントが AEM と同じオリジン（ホストまたはドメインとも呼ばれる）から提供されない場合、AEM GraphQL API へのブラウザーベースの接続には、CORS が必要です。
 
-| クライアントタイプ | [シングルページアプリ (SPA)](../spa.md) | [Web コンポーネント/JS](../web-component.md) | [モバイル](../mobile.md) | [サーバー間](../server-to-server.md) |
+| クライアントタイプ | [シングルページアプリ（SPA）](../spa.md) | [Web コンポーネント／JS](../web-component.md) | [モバイル](../mobile.md) | [サーバー間](../server-to-server.md) |
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
 | CORS 設定が必要 | ✔ | ✔ | ✘ | ✘ |
 
@@ -38,24 +38,24 @@ AEMに接続するクライアントがAEMと同じオリジン（ホストま�
 
 AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入れるための許可条件を定義します。
 
-| クライアントの接続先 | コンテンツ作成者 | AEM パブリッシュ | AEMプレビュー |
+| クライアントの接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | CORS OSGi 設定が必要 | ✔ | ✔ | ✔ |
 
 
-次の例は、AEM パブリッシュ (`../config.publish/..`) ですが、 [サポートされている実行モードフォルダー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#runmode-resolution).
+次の例は AEM パブリッシュ（`../config.publish/..`）ですが、 [任意のサポートされている実行モードフォルダー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#runmode-resolution?lang=ja)に追加できます。
 
 主な設定プロパティは次のとおりです。
 
-+ `alloworigin` および/または `alloworiginregexp` AEM Web に接続するクライアントの実行元を指定します。
-+ `allowedpaths` 指定したオリジンから許可される URL パスパターンを指定します。
-   + AEM GraphQLで永続化されたクエリをサポートするには、次のパターンを追加します。 `/graphql/execute.json.*`
-   + エクスペリエンスフラグメントをサポートするには、次のパターンを追加します。 `/content/experience-fragments/.*`
-+ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 追加 `GET`を使用して、AEM GraphQLで保持されたクエリ（およびエクスペリエンスフラグメント）をサポートします。
++ `alloworigin` や `alloworiginregexp` は AEM web に接続するクライアントの実行元を指定します。
++ `allowedpaths` は指定したオリジンから許可される URL パスパターンを指定します。
+   + AEM GraphQLで永続化クエリをサポートするには、パターン「`/graphql/execute.json.*`」を追加します。
+   + エクスペリエンスフラグメントをサポートするには、パターン「`/content/experience-fragments/.*`」を追加します。
++ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 `GET` を追加 して、AEM GraphQLで保持されたクエリ（およびエクスペリエンスフラグメント）をサポートします。
 
-[CORS OSGi の設定について詳しくは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
+[ CORS OSGi の設定について詳しくは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
 
-この設定例では、AEM GraphQLでの永続クエリの使用がサポートされています。 クライアント定義のGraphQLクエリを使用するには、 `allowedpaths` および `POST` から `supportedmethods`.
+この設定例では、AEM GraphQL での永続クエリの使用がサポートされています。 クライアント定義の GraphQL クエリを使用するには、`allowedpaths` および `POST` からの GraphQL エンドポイント URL を `supportedmethods` に追加します。
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -89,16 +89,16 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 }
 ```
 
-### 承認済みのAEM GraphQL API リクエスト
+### 承認済みの AEM GraphQL API リクエスト
 
-認証が必要なAEM GraphQL API にアクセスする場合（通常は AEM オーサーまたは AEM パブリッシュ上の保護されたコンテンツ）、CORS OSGi 設定に次の追加の値が含まれていることを確認します。
+認証が必要な AEM GraphQL API にアクセスする場合（通常は AEM オーサーまたは AEM パブリッシュ上の保護されたコンテンツ）、CORS OSGi 設定に次の追加の値が含まれていることを確認します。
 
-+ `supportedheaders` リスト `"Authorization"`
-+ `supportscredentials` が `true`
++ `supportedheaders` には `"Authorization"` もリストされています
++ `supportscredentials` は `true` に設定されています。
 
-CORS 設定を必要とするAEM GraphQL API に対して許可されたリクエストは、通常、 [サーバー間アプリ](../server-to-server.md) したがって、CORS を設定する必要はありません。 CORS 設定が必要なブラウザーベースのアプリ（例： ） [シングルページアプリ](../spa.md) または [Web コンポーネント](../web-component.md)では通常、認証を使用します。資格情報を保護するのは困難です。
+CORS 設定を必要とするAEM GraphQL API に対して許可されたリクエストは、通常、[サーバー間アプリ](../server-to-server.md) のコンテキストで発生するため、CORS 設定を必要としないため、異常です。CORS 設定が必要なブラウザーベースのアプリ（例：[シングルページアプリ](../spa.md) または [web コンポーネント](../web-component.md)）では通常、資格情報を保護するのが困難なため認証を使用します。
 
-例えば、次の 2 つの設定は、 `CORSPolicyImpl` OSGi ファクトリ設定：
+たとえば、これらの 2 つの設定は、`CORSPolicyImpl` OSGi ファクトリ設定では次のように設定されます。
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -122,19 +122,19 @@ CORS 設定を必要とするAEM GraphQL API に対して許可されたリク�
 
 #### OSGi 設定の例
 
-+ [OSGi 設定の例は、 WKND プロジェクトにあります。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
++ [OSGi 設定の例は、WKND プロジェクトで確認できます。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
 
 ## Dispatcher 設定
 
 AEM パブリッシュ（およびプレビュー）サービスの Dispatcher は、CORS をサポートするように設定する必要があります。
 
-| クライアントの接続先 | コンテンツ作成者 | AEM パブリッシュ | AEMプレビュー |
+| クライアントの接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | Dispatcher の CORS 設定が必要 | ✘ | ✔ | ✔ |
 
 ### HTTP リクエストでの CORS ヘッダーの許可
 
-を更新します。 `clientheaders.any` HTTP リクエストヘッダーを許可するファイル `Origin`,  `Access-Control-Request-Method`、および `Access-Control-Request-Headers` をAEMに渡し、HTTP リクエストを [AEM CORS 設定](#osgi-configuration).
+`clientheaders.any` ファイルを更新して、HTTP リクエストヘッダー `Origin`、`Access-Control-Request-Method`、`Access-Control-Request-Headers` が AEM に渡され、HTTP リクエストが[ AEM CORS 構成](#osgi-configuration)によって処理されるようにします。
 
 `dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any`
 
@@ -151,7 +151,7 @@ $include "./default_clientheaders.any"
 
 #### Dispatcher 設定の例
 
-+ [Dispatcher の例 _クライアントヘッダー_ の設定は、WKND プロジェクトにあります。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any#L10-L12)
++ [Dispatcher の例 _クライアントヘッダー_&#x200B;の設定は、WKND プロジェクトで確認できます。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any#L10-L12)
 
 
 ### CORS HTTP 応答ヘッダーの配信
@@ -184,4 +184,4 @@ $include "./default_clientheaders.any"
 
 #### Dispatcher 設定の例
 
-+ [Dispatcher の例 _CORS HTTP 応答ヘッダー_ の設定は、WKND プロジェクトにあります。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm#L109-L114)
++ [Dispatcher の例 _CORS HTTP 応答ヘッダー_&#x200B;の設定は、WKND プロジェクトで確認できます。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm#L109-L114)

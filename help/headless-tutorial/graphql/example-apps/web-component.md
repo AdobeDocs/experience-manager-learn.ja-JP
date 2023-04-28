@@ -1,6 +1,6 @@
 ---
-title: Web コンポーネント/JS - AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネント/JS アプリケーションでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツをクエリする方法を示します。
+title: Web コンポーネント／JS - AEM ヘッドレスの例
+description: サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 この Web コンポーネント／JS アプリケーションでは、永続クエリを使用して AEM の GraphQL API でコンテンツをクエリする方法を示します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,62 +8,62 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '566'
-ht-degree: 6%
+ht-degree: 99%
 
 ---
 
-
 # Web コンポーネント
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 この Web コンポーネントアプリケーションでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツをクエリし、純粋な JavaScript コードを使用して UI の一部をレンダリングする方法を示します。
+サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 この web コンポーネントアプリケーションでは、永続クエリを使用して AEM の GraphQL API でコンテンツをクエリし、純粋な JavaScript コードを使用して UI の一部をレンダリングする方法を示します。
 
-![AEMヘッドレスを備えた Web コンポーネント](./assets/web-component/web-component.png)
+![AEM ヘッドレスを使用した web コンポーネント](./assets/web-component/web-component.png)
 
-次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)
+[GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)を表示
 
 ## 前提条件 {#prerequisites}
 
-以下のツールをローカルにインストールする必要があります。
+次のツールをローカルにインストールする必要があります。
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;fulltext=Oracle%7E+JDK%7E+11%E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) ( ローカルのAEM 6.5 またはAEM SDK に接続する場合 )
++ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)（ローカルの AEM 6.5 または AEM SDK に接続する場合）
 + [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
-## AEM要件
+## AEM の要件
 
-Web コンポーネントは、次のAEMデプロイメントオプションと連携します。
+Web コンポーネントは、次の AEM デプロイメントオプションと連携します。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
-+ を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=en#install-local-aem-instances)
++ [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
++ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=ja#install-local-aem-instances)
 
-すべてのデプロイメントには `tutorial-solution-content.zip` から [ソリューションファイル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) 設置し、必要とする [デプロイメント設定](../deployment/web-component.md) が実行されます。
+すべてのデプロイメントでは、[ソリューションファイル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html?lang=ja#solution-files)内の `tutorial-solution-content.zip` がインストールされる必要があり、必要な[デプロイメント設定](../deployment/web-component.md)が実行されます。
 
 
 >[!IMPORTANT]
 >
->Web コンポーネントは、 __AEM パブリッシュ__ 環境で使用できますが、Web コンポーネントの [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) ファイル。
+>Web コンポーネントは __AEM パブリッシュ__&#x200B;環境に接続するように作られていますが、web コンポーネントの [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) ファイルで認証情報が提供されている場合は、AEM オーサーからコンテンツを取得できます。
 
 ## 使用方法
 
-1. のクローン `adobe/aem-guides-wknd-graphql` リポジトリ：
+1.  `adobe/aem-guides-wknd-graphql` リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. に移動します。 `web-component` サブディレクトリ。
+1. `web-component` サブディレクトリに移動します。
 
    ```shell
    $ cd aem-guides-wknd-graphql/web-component
    ```
 
-1. を編集します。 `.../src/person.js` AEM接続の詳細を含めるファイル：
+1. `.../src/person.js` ファイルを編集して、AEM 接続の詳細を次のように指定します。
 
-   内 `aemHeadlessService` オブジェクト、 `aemHost` をクリックして、AEM パブリッシュサービスを指すように設定します。
+   `aemHeadlessService` オブジェクトで、`aemHost` を更新して、AEM パブリッシュサービスを指すように設定します。
 
    ```plain
    # AEM Server namespace
@@ -76,7 +76,7 @@ Web コンポーネントは、次のAEMデプロイメントオプションと�
    queryParamName=name
    ```
 
-   AEM オーサーサービスに接続している場合は、 `aemCredentials` オブジェクトです。ローカルのAEMユーザー資格情報を入力します。
+   AEM オーサーサービスに接続する場合は、 `aemCredentials` オブジェクトで、ローカルの AEM ユーザー資格情報を入力します。
 
    ```plain
    # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
@@ -84,23 +84,23 @@ Web コンポーネントは、次のAEMデプロイメントオプションと�
    password=admin
    ```
 
-1. ターミナルを開き、次のコマンドを実行します。 `aem-guides-wknd-graphql/web-component`:
+1. ターミナルを開き、 `aem-guides-wknd-graphql/web-component` から次のコマンドを実行します。
 
    ```shell
    $ npm install
    $ npm start
    ```
 
-1. 新しいブラウザーウィンドウが開き、Web コンポーネントを埋め込んだ静的HTMLページが次の場所に埋め込まれます。 [http://localhost:8080](http://localhost:8080).
-1. この _担当者情報_ Web コンポーネントが Web ページに表示されます。
+1. web コンポーネントを埋め込んだ静的 HTML ページ（[http://localhost:8080](http://localhost:8080)）が新しいブラウザーウィンドウで開かれます。
+1. _ユーザー情報_ web コンポーネントが web ページに表示されます。
 
 ## コード
 
-Web コンポーネントの構築方法、GraphQLで保持されたクエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+Web コンポーネントを作成する方法、web コンポーネントから AEM ヘッドレスに接続して GraphQL 永続クエリを使用してコンテンツを取得する方法およびそのデータを表示する方法の概要を以下に示します。 完全なコードは、[GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component) に掲載されています。
 
-### Web コンポーネントHTMLタグ
+### Web コンポーネント HTML タグ
 
-再利用可能な Web コンポーネント（カスタム要素） `<person-info>` が `../src/assets/aem-headless.html` HTMLページ。 対応 `host` および `query-param-value` 属性を使用して、コンポーネントの動作を制御します。 この `host` 属性の値のオーバーライド `aemHost` 値 `aemHeadlessService` オブジェクト `person.js`、および `query-param-value` を使用して、レンダリングするユーザーを選択します。
+再利用可能な web コンポーネント（カスタム要素）`<person-info>` が `../src/assets/aem-headless.html` HTML ページに追加されています。コンポーネントの動作を制御する `host` および `query-param-value` 属性をサポートしています。  `host` 属性の値は `person.js` の `aemHeadlessService` オブジェクトにある `aemHost` 値をオーバーライドし、 `query-param-value` を使用してレンダリングするユーザーを選択します。
 
 ```html
     <person-info 
@@ -111,11 +111,11 @@ Web コンポーネントの構築方法、GraphQLで保持されたクエリを
 
 ### Web コンポーネントの実装
 
-この `person.js` は Web コンポーネント機能を定義しています。主な特徴は次のとおりです。
+`person.js` は Web コンポーネント機能を定義しています。要点は次のとおりです。
 
 #### PersonInfo 要素の実装
 
-この `<person-info>` カスタム要素のクラスオブジェクトは、 `connectedCallback()` ライフサイクルメソッド、シャドウルートの添付、GraphQLの永続クエリの取得、DOM 操作を使用した、カスタム要素の内部シャドウ DOM 構造の作成。
+`<person-info>` カスタム要素のクラスオブジェクトでは機能の定義にあたって、`connectedCallback()` ライフサイクルメソッドを使用し、シャドウルートを関連付け、GraphQL 永続クエリを取得し、DOM 操作でカスタム要素の内部シャドウ DOM 構造を作成します。
 
 ```javascript
 // Create a Class for our Custom Element (person-info)
@@ -174,17 +174,17 @@ class PersonInfo extends HTMLElement {
 }
 ```
 
-#### を登録します。 `<person-info>` 要素
+#### `<person-info>` 要素の登録
 
 ```javascript
     // Define the person-info element
     customElements.define("person-info", PersonInfo);
 ```
 
-### クロスオリジンリソース共有 (CORS)
+### クロスオリジンリソース共有（CORS）
 
-この Web コンポーネントは、ターゲットAEM環境で実行されるAEMベースの CORS 設定に依存し、ホストページがで実行されることを前提としています `http://localhost:8080` 開発モードでは、以下に、ローカル AEM オーサーサービスのサンプル CORS OSGi 設定を示します。
+この web コンポーネントは、ターゲット AEM 環境で動作する AEM ベースの CORS 設定に基づいており、ホスト ページが `http://localhost:8080` 上で開発モードで実行されていることを前提としています。以下は、ローカル AEM オーサーサービスのサンプル CORS OSGi 設定です。
 
-確認してください [デプロイメント設定](../deployment/web-component.md) 各AEMサービスの
+各 AEM サービスの [デプロイメント設定](../deployment/web-component.md)を確認してください。
 
 ![CORS 設定](assets/react-app/cross-origin-resource-sharing-configuration.png)

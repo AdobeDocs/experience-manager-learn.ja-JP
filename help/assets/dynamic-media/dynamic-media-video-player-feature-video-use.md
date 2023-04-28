@@ -1,6 +1,6 @@
 ---
 title: AEM Dynamic Media でのビデオプレーヤーの使用
-description: AEM Dynamic Media video player は、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していましたが、flash ベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS(Appleの HTTP ライブストリーミングビデオ配信プロトコル ) の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
+description: AEM Dynamic Media ビデオプレーヤーは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするために Flash ランタイムに依存していましたが、Flash ベースのコンテンツストリーミングを積極的に導入するようになりました。HLS（Apple の HTTP ライブストリーミングビデオ配信プロトコル）の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -10,26 +10,26 @@ exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 14%
+ht-degree: 96%
 
 ---
 
 
 # AEM Dynamic Media でのビデオプレーヤーの使用{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media video player は、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするためにFlashランタイムに依存していましたが、flash ベースのコンテンツストリーミングに対して積極的に取り組むようになりました。 HLS(Appleの HTTP ライブストリーミングビデオ配信プロトコル ) の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
+AEM Dynamic Media ビデオプレーヤーは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするために Flash ランタイムに依存していましたが、Flash ベースのコンテンツストリーミングを積極的に導入するようになりました。HLS（Apple の HTTP ライブストリーミングビデオ配信プロトコル）の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
-## 非Flashビデオプレーヤーのクイック参照 {#quick-look-into-non-flash-video-player}
+## Flash に依存しないビデオプレーヤーの概要 {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
-HLS ブラウザーのサポートは次のとおりです。サポートされていないブラウザーの場合、アドビはプログレッシブビデオ配信にフォールバックします。
+HLS ブラウザーのサポートは次のとおりです。サポートされていないブラウザーについては、プログレッシブビデオ配信にフォールバックします。
 
 >[!NOTE]
 >
-> Dynamic Media Hybrid は、2022 年 3 月 15 日現在、Internet Explorer 11 でのビデオストリーミングをサポートしていません。 IE 11 でのプログレッシブ再生にフォールバックするには、6.5.12 以降にアップグレードしてください。
+> Dynamic Media Hybrid では、2022年3月15日（PT）現在、Internet Explorer 11 でのビデオストリーミングをサポートしていません。IE 11 でプログレッシブ再生にフォールバックするには、6.5.12 以上にアップグレードしてください。
 
 <table> 
  <thead> 
@@ -49,12 +49,12 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
    <td> <p>デスクトップ</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
    <td> <p>Dynamic Media - Scene7 モード：HLS ビデオストリーミング</p> 
-        <p>Dynamic Media — ハイブリッドモード：プログレッシブダウンロード</p>
+        <p>Dynamic Media - ハイブリッドモード：プログレッシブダウンロード</p>
    </td>
   </tr>
   <tr>
    <td> <p>デスクトップ</p> </td>
-   <td> <p>Firefox 23-44</p> </td>
+   <td> <p>Firefox 23～44</p> </td>
    <td> <p>プログレッシブダウンロード</p> </td>
   </tr>
   <tr> 
@@ -69,7 +69,7 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr> 
    <td> <p>デスクトップ</p> </td>
-   <td> <p>Safari (Mac)</p> </td>
+   <td> <p>Safari（Mac）</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
@@ -84,17 +84,17 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Android（デフォルトのブラウザー）</p> </td>
+   <td> <p>Android（デフォルトブラウザー）</p> </td>
    <td> <p>プログレッシブダウンロード</p> </td>
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Safari (iOS)</p> </td>
+   <td> <p>Safari（iOS）</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Chrome(iOS)</p> </td>
+   <td> <p>Chrome（iOS）</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 

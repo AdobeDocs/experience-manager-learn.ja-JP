@@ -1,5 +1,5 @@
 ---
-title: カスタムコンテンツフラグメントコンソール拡張機能を使用した OpenAI 画像生成
+title: カスタムコンテンツフラグメントコンソール拡張機能を使用した OpenAI 画像の生成
 description: OpenAI または DALL-E 2 を使用して自然言語の説明からデジタル画像を生成し、生成した画像をカスタムコンテンツフラグメントコンソール拡張機能を使用してAEMにアップロードする方法を説明します。
 feature: Developer Tools
 version: Cloud Service
@@ -10,70 +10,70 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1399'
-ht-degree: 2%
+ht-degree: 88%
 
 ---
 
-
-# OpenAI を使用したAEM画像アセットの生成
+# OpenAI を使用した AEM 画像アセットの生成
 
 OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベロシティ用にAEM DAM にアップロードする方法を説明します。
 
 ![デジタル画像の生成](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
 
-この例のAEMコンテンツフラグメントコンソール拡張機能は、 [アクションバー](../action-bar.md) を使用して自然言語入力からデジタル画像を生成する拡張 [OpenAI API](https://openai.com/api/) または [DALL.E 2](https://openai.com/dall-e-2/). 生成された画像がAEM DAM にアップロードされ、選択されたコンテンツフラグメントの画像プロパティが更新されて、DAM から新しく生成され、アップロードされたこの画像が参照されます。
+この例のAEMコンテンツフラグメントコンソール拡張機能は、 [アクションバー](../action-bar.md) を使用して自然言語入力からデジタル画像を生成する拡張 [OpenAI API](https://openai.com/api/) または [DALL.E 2](https://openai.com/dall-e-2/). 生成された画像が AEM DAM にアップロードされ、選択されたコンテンツフラグメントの画像プロパティが更新されて、DAM から新しく生成され、アップロードされたこの画像が参照されます。
 
-この例では、次のことを学習します。
+この例では、次のことを学びます。
 
-1. を使用した画像生成 [OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta) または [DALL.E 2](https://openai.com/dall-e-2/)
-1. 画像をAEMにアップロード中
+1. [OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta) または [DALL.E 2](https://openai.com/dall-e-2/) を使用した画像の生成 
+1. AEM への画像のアップロード
 1. コンテンツフラグメントプロパティの更新
 
 この例の拡張機能の機能フローは次のとおりです。
 
-![デジタル画像生成用のAdobe I/O Runtimeアクションフロー](./assets/digital-image-generation/flow.png){align="center"}
+![デジタル画像生成時の Adobe I/O Runtime のアクションフロー](./assets/digital-image-generation/flow.png){align="center"}
 
-1. 「コンテンツフラグメント」を選択し、拡張機能の `Generate Image` ボタン [アクションバー](#extension-registration) が開きます。 [モーダル](#modal).
-1. この [モーダル](#modal) は、 [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/).
-1. フォームを送信すると、指定したユーザーが送信されます `Image Description` テキスト、選択したコンテンツフラグメント、AEMホストを [カスタムAdobe I/O Runtimeアクション](#adobe-io-runtime-action).
-1. この [Adobe I/O Runtime action](#adobe-io-runtime-action) 入力を検証します。
-1. 次に、OpenAI を呼び出します。 [画像の生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API とを使用しています。 `Image Description` 生成する画像を指定するテキスト。
-1. この [画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) endpoint はサイズの元の画像を作成します _1024x1024_ prompt request パラメータ値を使用するピクセル。生成された画像 URL を応答として返します。
-1. この [Adobe I/O Runtime action](#adobe-io-runtime-action) は、生成された画像を App Builder ランタイムにダウンロードします。
-1. 次に、事前に定義されたパスの下で、App Builder ランタイムからAEM DAM への画像のアップロードを開始します。
-1. AEMas a Cloud Serviceは画像を DAM に保存し、Adobe I/O Runtimeアクションに対して成功応答または失敗応答を返します。 アップロード応答が成功すると、Adobe I/O RuntimeアクションからAEMへの別の HTTP リクエストを使用して、選択されたコンテンツフラグメントの画像プロパティ値が更新されます。
-1. モーダルは、Adobe I/O Runtimeアクションからの応答を受け取り、新しく生成され、アップロードされた画像のAEMアセットの詳細リンクを提供します。
+1. 「コンテンツフラグメント」を選択し、[アクションバー](#extension-registration)の拡張機能の「`Generate Image`」ボタンをクリックして[モーダル](#modal)を開きます。
+1. [モーダル](#modal)には、[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) で作成されたカスタムの入力が表示されます。
+1. フォームを送信すると、ユーザーが指定した `Image Description` テキスト、選択されているコンテンツフラグメント、AEM ホストが [Adobe I/O Runtime のカスタムアクション](#adobe-io-runtime-action)に送信されます。
+1. [Adobe I/O Runtime アクション](#adobe-io-runtime-action)が入力を検証します。
+1. 次に、OpenAI の[画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API を呼び出し、`Image Description` テキストを使って、生成する画像を指定します。
+1. [画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)エンドポイントはプロンプトリクエストパラメータ値を使用して、_1024 x 1024_ ピクセルの元画像を作成し、生成された画像 URL を応答として返します。
+1. [Adobe I/O Runtime アクション](#adobe-io-runtime-action) が、生成された画像を App Builder ランタイムにダウンロードします。
+1. 次に、事前に定義されたパスの下で、App Builder ランタイムから AEM DAM への画像のアップロードを開始します。
+1. AEM as a Cloud Service は画像を DAM に保存し、Adobe I/O Runtime アクションに対して成功または失敗の応答を返します。 アップロード応答が成功すると、Adobe I/O Runtime アクションから AEM への別の HTTP リクエストを使用して、選択されたコンテンツフラグメントの画像プロパティ値が更新されます。
+1. モーダルは、Adobe I/O Runtime アクションから応答を受け取り、新しく生成されてアップロードされた画像の AEM アセットの詳細リンクを提供します。
 
-このビデオでは、OpenAI または DALL.E 2 拡張機能を使用した画像生成の例、その仕組み、開発方法を説明します。 ビデオには、 __機能のデモ、セットアップ、テクニカルコード__ 関連する作品を素早く見る。
+このビデオでは、OpenAI または DALL.E 2 拡張機能を使用した画像生成の例、その仕組み、開発方法を説明します。 ビデオには、該当する内容を素早く確認できるように、__機能のデモ、セットアップ、テクニカルコード__&#x200B;などの章が設定されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
 
 ## App Builder 拡張機能アプリ
 
-この例では、既存のAdobe Developer Console プロジェクトと、を介して App Builder アプリを初期化する際の次のオプションを使用しています `aio app init`.
+この例では、既存の Adobe Developer Console プロジェクトと、`aio app init` を介して App Builder アプリを初期化する際の次のオプションを使用しています。
 
-+ どのテンプレートを検索しますか？: `All Extension Points`
-+ インストールするテンプレートを選択してください：` @adobe/aem-cf-admin-ui-ext-tpl`
-+ 拡張機能に名前を付けますか？: `Image generation`
-+ 拡張機能の短い説明を入力してください。 `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
-+ どのバージョンから始めますか？: `0.0.1`
-+ 次に何をしますか？
++ 検索するテンプレート：`All Extension Points`
++ インストールするテンプレートを選択：` @adobe/aem-cf-admin-ui-ext-tpl`
++ 拡張機能の名前は？：`Image generation`
++ 拡張機能の短い説明を入力：`An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
++ 開始するバージョン：`0.0.1`
++ 次は何を行いますか？
    + `Add a custom button to Action Bar`
-      + ボタンのラベル名を指定してください： `Generate Image`
-      + ボタンのモーダルを表示する必要がある場合は、 `y`
+      + ボタンのラベル名を指定：`Generate Image`
+      + ボタンのモーダルを表示する必要がありますか？`y`
    + `Add server-side handler`
-      + Adobe I/O Runtimeでは、サーバーレスのコードをオンデマンドで呼び出すことができます。 このアクションの名前を指定してください： `generate-image`
+      + Adobe I/O Runtime では、サーバーレスのコードをオンデマンドで呼び出すことができます。 このアクションの名前を指定：`generate-image`
 
-生成された App Builder 拡張機能アプリが、以下のように更新されます。
+生成された App Builder 拡張機能アプリが、以下に示すようにアップデートされます。
 
 ## 追加の設定
 
-1. 無料でサインアップ [OpenAI API](https://openai.com/api/) アカウントを作成し、 [API キー](https://beta.openai.com/account/api-keys)
-1. このキーを App Builder プロジェクトの `.env` ファイル
+1. 無料の [OpenAI API](https://openai.com/api/) アカウントに新規登録して、[API キー](https://beta.openai.com/account/api-keys)を作成します
+1. このキーを App Builder プロジェクトの `.env` ファイルに追加します
 
    ```
        # Specify your secrets here
@@ -87,7 +87,7 @@ OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベ
        ...
    ```
 
-1. パス `OPENAI_API_KEY` 「 Adobe I/O Runtime 」アクションのパラメーターとして、 `src/aem-cf-console-admin-1/ext.config.yaml`
+1. `OPENAI_API_KEY` をパラメーターとして Adobe I/O Runtime アクションに渡し、`src/aem-cf-console-admin-1/ext.config.yaml` を更新します
 
    ```yaml
        ...
@@ -107,9 +107,9 @@ OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベ
        ...
    ```
 
-1. Node.js ライブラリの下にインストール
-   1. [OpenAI Node.js ライブラリ](https://github.com/openai/openai-node#installation) - OpenAI API を簡単に呼び出す
-   1. [AEM Upload](https://github.com/adobe/aem-upload#install) ：画像をAEM-CS インスタンスにアップロードします。
+1. Node.js ライブラリの下にインストールします
+   1. [OpenAI Node.js ライブラリ](https://github.com/openai/openai-node#installation)：OpenAI API を簡単に呼び出す
+   1. [AEM Upload](https://github.com/adobe/aem-upload#install) ：画像を AEM-CS インスタンスにアップロードする
 
 
 >[!TIP]
@@ -119,19 +119,19 @@ OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベ
 
 ## アプリルート{#app-routes}
 
-この `src/aem-cf-console-admin-1/web-src/src/components/App.js` に [React ルーター](https://reactrouter.com/en/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js` には [React ルーター](https://reactrouter.com/ja/main)が含まれています。
 
 次の 2 つの論理セットのルートがあります。
 
-1. 最初のルートは、リクエストを `index.html`: [拡張登録](#extension-registration).
+1. 最初のルートはリクエストを `index.html` にマップし、[拡張機能登録](#extension-registration)を担当する React コンポーネントを呼び出します。
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 2 つ目のルートセットは、拡張機能のモーダルのコンテンツをレンダリングする React コンポーネントに URL をマッピングします。 この `:selection` param は、区切られたリストコンテンツフラグメントのパスを表します。
+1. 2 つ目のルートセットは、拡張機能のモーダルのコンテンツをレンダリングする React コンポーネントに URL をマップします。 この `:selection` param は、区切られたリストコンテンツフラグメントのパスを表します。
 
-   拡張機能に、個別のアクションを呼び出すための複数のボタンがある場合、各ボタン [拡張登録](#extension-registration) は、ここで定義されたルートにマッピングされます。
+   個別のアクションを呼び出すための複数のボタンが拡張機能にある場合、それぞれの[拡張機能の登録](#extension-registration)は、ここで定義されたルートにマップされます。
 
    ```javascript
    <Route
@@ -142,11 +142,11 @@ OpenAI または DALL.E 2 を使用して画像を生成し、コンテンツベ
 
 ## 拡張機能の登録
 
-`ExtensionRegistration.js`、にマッピングされます。 `index.html` ルート。AEM拡張機能のエントリポイントで、次の項目を定義します。
+`index.html` ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、以下を定義します。
 
-1. AEMオーサリングエクスペリエンス (`actionBar` または `headerMenu`)
-1. 内の拡張機能ボタンの定義 `getButton()` 関数
-1. ボタンのクリックハンドラー ( `onClick()` 関数
+1. AEM オーサリングエクスペリエンスに表示される「拡張機能」ボタンの場所（`actionBar` または `headerMenu`）
+1. `getButton()` 関数内の拡張機能ボタンの定義 
+1. `onClick()` 関数内のボタンのクリックハンドラー
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -196,21 +196,21 @@ function ExtensionRegistration() {
 
 ## モーダル
 
-拡張機能の各ルート ( [`App.js`](#app-routes)は、拡張機能のモーダルでレンダリングする React コンポーネントにマッピングされます。
+[`App.js`](#app-routes) で定義されている拡張機能の各ルートは、拡張機能のモーダルでレンダリングされる React コンポーネントにマップされます。
 
-このサンプルアプリでは、モーダル React コンポーネント (`GenerateImageModal.js`) には 4 つの状態があります。
+このサンプルアプリでは、モーダル React コンポーネント（`GenerateImageModal.js`）には 4 つの状態があります。
 
-1. 読み込み中。ユーザーが待機する必要があることを示します
-1. ユーザーが一度に 1 つのコンテンツフラグメントのみを選択することを示す警告メッセージ
-1. 画像の説明を自然言語で入力できる画像を生成フォーム。
-1. 新しく生成され、アップロードされた画像のAEMアセットの詳細リンクを提供する、画像生成操作の応答。
+1. 読み込み中。ユーザーが待機する必要があることを示しています。
+1. ユーザーが一度に 1 つのコンテンツフラグメントのみを選択することを推奨する警告メッセージ
+1. 画像の説明を自然言語で入力できる、画像を生成フォーム。
+1. 新しく生成され、アップロードされた画像の AEM アセットの詳細リンクを提供する、画像生成操作の応答。
 
-重要な点は、拡張機能からAEMとのインタラクションはすべて、 [AppBuilder Adobe I/O Runtimeアクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)：で実行される個別のサーバーレスプロセスです。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+重要なのは、拡張機能からの AEM とのやり取りは、[AppBuilder Adobe I/O Runtime アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)にデリゲートする必要があることです。これは、[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) で実行される別のサーバーレス プロセスです。
 AEMとの通信にAdobe I/O Runtimeアクションを使用することで、クロスオリジンリソース共有 (CORS) 接続の問題を回避します。
 
-次の場合に _画像を生成_ フォームが送信され、カスタム `onSubmitHandler()` 画像の説明、現在のAEMホスト（ドメイン）およびユーザーのAEMアクセストークンを渡して、Adobe I/O Runtimeアクションを呼び出します。 次に、このアクションが OpenAI の [画像の生成](https://beta.openai.com/docs/guides/images/image-generation-beta) 送信された画像の説明を使用して画像を生成する API。 次の使用 [AEM Upload](https://github.com/adobe/aem-upload) ノードモジュール `DirectBinaryUpload` クラス生成された画像をAEMにアップロードし、最終的にを使用します。 [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) をクリックして、コンテンツフラグメントを更新します。
+_画像を生成_&#x200B;フォームが送信されると、カスタム `onSubmitHandler()` が Adobe I/O Runtime アクションを呼び出し、画像の説明、現在の AEM ホスト（ドメイン）、ユーザーの AEM アクセストークンを渡します。次に、アクションは OpenAI の[画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) API を呼び出して、送信された画像の説明を使用して画像を生成します。次に、[AEM アップロード](https://github.com/adobe/aem-upload)ノードモジュールの `DirectBinaryUpload` クラスを使用して、生成された画像を AEM にアップロードし、最後に [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) を使用してコンテンツフラグメントを更新します。
 
-Adobe I/O Runtimeアクションからの応答を受け取ると、モーダルが更新され、画像生成操作の結果が表示されます。
+Adobe I/O Runtime アクションからの応答を受け取ると、モーダルが更新され、画像生成操作の結果が表示されます。
 
 + `src/aem-cf-console-admin-1/web-src/src/components/GenerateImageModal.js`
 
@@ -472,22 +472,22 @@ export default function GenerateImageModal() {
 >内 `buildAssetDetailsURL()` 関数 `aemAssetdetailsURL` 変数値は、 [統合シェル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) が有効になっている。 統合シェルを無効にした場合は、 `/ui#/aem` を変数値から取得します。
 
 
-## Adobe I/O Runtime action
+## Adobe I/O Runtime アクション
 
-AEM拡張機能の App Builder アプリは、0 個または複数のAdobe I/O Runtimeアクションを定義または使用できます。
-Adobeランタイムアクションは、AEM、Adobe、またはサードパーティの Web サービスとの対話を必要とする作業を担当します。
+AEM 拡張機能の App Builder アプリは、0 個または複数の Adobe I/O Runtime アクションを定義または使用できます。
+Adobe Runtime アクションは、AEM、Adobe、サードパーティの web サービスとの対話を必要とする作業を担当します。
 
-このサンプルアプリでは、 `generate-image` Adobe I/O Runtimeのアクションは、以下を担当します。
+このサンプルアプリでは、`generate-image` Adobe I/O Runtime のアクションは、次を担当します。
 
-1. を使用した画像の生成 [OpenAI API 画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) サービス
-1. を使用して、生成された画像をAEM-CS インスタンスにアップロードする [AEM Upload](https://github.com/adobe/aem-upload) ライブラリ
-1. AEM Content Fragment API に HTTP リクエストを送信して、コンテンツフラグメントの画像プロパティを更新します。
-1. モーダル (`GenerateImageModal.js`)
+1. [OpenAI API 画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)サービスを使用して画像を生成する
+1. [AEM Upload](https://github.com/adobe/aem-upload) ライブラリを使用して、生成された画像を AEM-CS インスタンスにアップロードする 
+1. AEM Content Fragment API に HTTP リクエストを送信して、コンテンツフラグメントの画像プロパティを更新する
+1. モーダルで表示する成功と失敗のキー情報を返す（`GenerateImageModal.js`）
 
 
-### オーケストレーター — `index.js`
+### オーケストレーター - `index.js`
 
-この `index.js` それぞれの JavaScript モジュール ( `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. これらのモジュールと関連コードについては、次のセクションで説明します。 [サブセクション](#image-generation-module---generate-image-using-openaijs).
+`index.js` は、上記の 1～3 のタスクを調整するために、それぞれの JavaScript モジュール（`generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`）を使用します。これらのモジュールと関連コードについては、次の[サブセクション](#image-generation-module---generate-image-using-openaijs)で説明します。 
 
 + `src/aem-cf-console-admin-1/actions/generate-image/index.js`
 
@@ -581,9 +581,9 @@ exports.main = main;
 ```
 
 
-### 画像生成モジュール — `generate-image-using-openai.js`
+### 画像生成モジュール - `generate-image-using-openai.js`
 
-このモジュールは、OpenAI の [画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta) エンドポイントを使用 [openai](https://github.com/openai/openai-node) ライブラリ。 で定義された OpenAI API 秘密鍵を取得するには、以下を実行します。 `.env` ファイル、 `params.OPENAI_API_KEY`.
+このモジュールは、[openai](https://github.com/openai/openai-node) ライブラリを使用して OpenAI の[画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)エンドポイントを呼び出す役割を果たします。`.env` ファイルで定義されている OpenAI API 秘密鍵を取得するには、`params.OPENAI_API_KEY` を使用します。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 
@@ -639,11 +639,11 @@ module.exports = {
 };
 ```
 
-### 画像をAEMモジュールにアップロード — `upload-generated-image-to-aem.js`
+### AEM モジュールへの画像のアップロード - `upload-generated-image-to-aem.js`
 
-このモジュールは、OpenAI で生成された画像をAEMにアップロードする際に、 [AEM Upload](https://github.com/adobe/aem-upload) ライブラリ。 生成された画像は、まず Node.js を使用して App Builder ランタイムにダウンロードされます [ファイルシステム](https://nodejs.org/api/fs.html) ライブラリを作成し、AEMへのアップロードが完了すると、そのライブラリは削除されます。
+このモジュールでは、[AEM アップロード](https://github.com/adobe/aem-upload)ライブラリを使って、OpenAI で生成された画像を AEM にアップロードします。生成された画像は、まず Node.js [ファイルシステム](https://nodejs.org/api/fs.html)ライブラリ を使用して App Builder ランタイムにダウンロードされ、AEM へのアップロードが完了すると削除されます。
 
-以下のコード `uploadGeneratedImageToAEM` 関数は、生成された画像のダウンロードをランタイムに編成し、AEMにアップロードして、ランタイムから削除します。 画像が `/content/dam/wknd-shared/en/generated` パス（DAM にすべてのフォルダーが存在すること、および使用の前提条件を確認） [AEM Upload](https://github.com/adobe/aem-upload) ライブラリ。
+以下のコード `uploadGeneratedImageToAEM` 関数は、生成された画像のダウンロードをランタイムに編成し、それを AEM にアップロードしてランタイムから削除します。 画像は `/content/dam/wknd-shared/en/generated` パスにアップロードされます。DAM にすべてのフォルダーが存在することと、[AEM アップロード](https://github.com/adobe/aem-upload)ライブラリを使用する際の前提条件を確認します。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/upload-generated-image-to-aem.js`
 
@@ -833,9 +833,9 @@ module.exports = {
 };
 ```
 
-### コンテンツフラグメントモジュールを更新 — `update-content-fragement.js`
+### コンテンツフラグメントモジュールの更新 - `update-content-fragement.js`
 
-このモジュールは、AEMコンテンツフラグメント API を使用して、指定されたコンテンツフラグメントの画像プロパティを、新しくアップロードされた画像の DAM パスで更新する役割を果たします。
+このモジュールでは、AEM コンテンツフラグメント API を使用して、指定されたコンテンツフラグメントの画像プロパティを、新しくアップロードされた画像の DAM パスで更新します。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/update-content-fragement.js`
 
@@ -904,4 +904,3 @@ module.exports = {
   updateContentFragmentToUseGeneratedImg,
 };
 ```
-

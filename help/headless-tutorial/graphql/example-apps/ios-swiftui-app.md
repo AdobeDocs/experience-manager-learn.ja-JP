@@ -1,6 +1,6 @@
 ---
-title: iOS App - AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
+title: iOS App - AEM ヘッドレスの例
+description: サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 この iOS アプリケーションでは、永続クエリを使用して AEM の GraphQL API でコンテンツに対してクエリを実行する方法を示します。
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10587
@@ -13,45 +13,45 @@ exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 5%
+ht-degree: 99%
 
 ---
 
-# iOSアプリ
+# iOS アプリ
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このiOSアプリケーションでは、永続的なクエリを使用してAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を示します。
+サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 この iOS アプリケーションでは、永続クエリを使用して AEM の GraphQL API でコンテンツに対してクエリを実行する方法を示します。
 
-![AEMヘッドレスを備えたiOS SwiftUI アプリ](./assets/ios-swiftui-app/ios-app.png)
+![AEM ヘッドレスを備えた iOS SwiftUI アプリ](./assets/ios-swiftui-app/ios-app.png)
 
-次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
+[GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)を表示
 
 ## 前提条件 {#prerequisites}
 
-以下のツールをローカルにインストールする必要があります。
+次のツールをローカルにインストールする必要があります。
 
 + [Xcode](https://developer.apple.com/xcode/) (macOSが必要 )
 + [Git](https://git-scm.com/)
 
-## AEM要件
+## AEM の要件
 
-iOSアプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントには、 [WKND サイト v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をインストールします。
+iOS アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
-+ を使用したローカル設定 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=en#install-local-aem-instances)
++ [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
++ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=ja#install-local-aem-instances)
 
-iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、iOSアプリケーションの設定で認証が指定されている場合は、AEM オーサーからコンテンツをソース化できます。
+iOS アプリケーションは __AEM パブリッシュ__&#x200B;環境に接続するように設計されていますが、iOS アプリケーションの設定で認証が提供されている場合、AEM オーサーからコンテンツを取得できます。
 
 ## 使用方法
 
-1. のクローン `adobe/aem-guides-wknd-graphql` リポジトリ：
+1. `adobe/aem-guides-wknd-graphql` リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 起動 [Xcode](https://developer.apple.com/xcode/) フォルダーを開きます。 `ios-app`
-1. ファイルを変更します `Config.xcconfig` ファイルと更新 `AEM_SCHEME` および `AEM_HOST` を追加して、ターゲットの AEM パブリッシュサービスに合わせます。
+1. [Xcode](https://developer.apple.com/xcode/) を起動し、フォルダー `ios-app` を開きます。
+1. `Config.xcconfig` ファイルを変更し、ターゲットの AEM パブリッシュサービスに一致するように `AEM_SCHEME` と `AEM_HOST` を更新します。
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST
@@ -60,11 +60,11 @@ iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、i
    AEM_HOST = localhost:4503
    ```
 
-   AEM オーサーに接続する場合は、 `AEM_AUTH_TYPE` 認証プロパティを `Config.xcconfig`.
+   AEM オーサーに接続する場合は、`AEM_AUTH_TYPE` およびサポートする認証プロパティを `Config.xcconfig` に追加します。
 
    __基本認証__
 
-   この `AEM_USERNAME` および `AEM_PASSWORD` WKND GraphQLコンテンツへのアクセス権を持つローカルAEMユーザーを認証します。
+   `AEM_USERNAME` と `AEM_PASSWORD` は、WKND GraphQL コンテンツにアクセスできるローカル AEM ユーザーを認証します。
 
    ```plain
    AEM_AUTH_TYPE = basic
@@ -74,25 +74,25 @@ iOSアプリケーションは、 __AEM パブリッシュ__ 環境ですが、i
 
    __トークン認証__
 
-   この `AEM_TOKEN` は [アクセストークン](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) WKND GraphQLコンテンツへのアクセス権を持つAEMユーザーに対して認証をおこなうサイトです。
+   `AEM_TOKEN` は[アクセストークン](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja)であり、WKND GraphQL コンテンツへのアクセス権を持つ AEM ユーザーを認証します。
 
    ```plain
    AEM_AUTH_TYPE = token
    AEM_TOKEN = abcd...0123
    ```
 
-1. Xcode を使用してアプリケーションをビルドし、アプリケーションをiOSシミュレーターにデプロイします。
-1. WKND サイトからの冒険のリストがアプリケーションに表示されるはずです。 アドベンチャーを選択すると、アドベンチャーの詳細が開きます。 Adventures リストビューで、プルしてAEMからデータを更新します。
+1. Xcode を使用してアプリケーションを作成し、アプリケーションを iOS シミュレーターにデプロイします。
+1. WKND サイトからのアドベンチャーのリストがアプリケーションに表示されます。アドベンチャーを選択すると、アドベンチャーの詳細が開きます。アドベンチャーリストビューで、AEM からのデータを取り込んで更新します。
 
 ## コード
 
-iOSアプリケーションの構築方法、GraphQLでの永続化されたクエリを使用してAEMヘッドレスに接続してコンテンツを取得する方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+以下は、iOS アプリケーションの構築方法、AEM ヘッドレスに接続して GraphQL 永続クエリを使用してコンテンツを取得する方法、およびそのデータを表示する方法の概要です。完全なコードは [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app) にあります。
 
 ### 永続クエリ
 
-AEMヘッドレスのベストプラクティスに従い、iOSアプリケーションはAEM GraphQL永続的なクエリを使用してアドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
+AEM ヘッドレスのベストプラクティスに従って、iOS アプリケーションは AEM GraphQL 永続クエリを使用してアドベンチャーデータをクエリします。アプリケーションでは、次の 2 つの永続クエリを使用します。
 
-+ `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
++ `wknd/adventures-all` 永続クエリ。AEM のすべてのアドベンチャーを要約されたプロパティセットとともに返します。この永続クエリは、初期ビューのアドベンチャーリストを制御します。
 
 ```
 # Retrieves a list of all adventures
@@ -117,7 +117,7 @@ AEMヘッドレスのベストプラクティスに従い、iOSアプリケー�
 }
 ```
 
-+ `wknd/adventure-by-slug` 次の条件を満たす 1 つのアドベンチャーを返す永続クエリ `slug` 一連のプロパティを持つ（アドベンチャーを一意に識別するカスタムプロパティ）。 この永続的なクエリは、アドベンチャーの詳細表示を強化します。
++ `wknd/adventure-by-slug` 永続クエリ。`slug`（アドベンチャーを一意に識別するカスタムプロパティ）によって、完全なプロパティセットを含む単一のアドベンチャーを返します。この永続クエリで、アドベンチャーの詳細ビューが強化されます。
 
 ```
 # Retrieves an adventure Content Fragment based on it's slug
@@ -173,17 +173,17 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL永続クエリの実行
+### GraphQL 永続クエリの実行
 
-AEMの永続化されたクエリは HTTPGET上で実行されるので、Apollo などの HTTPPOSTを使用する一般的なGraphQLライブラリは使用できません。 代わりに、AEMに対する永続化されたクエリ HTTPGETリクエストを実行するカスタムクラスを作成します。
+AEM の永続クエリは HTTP GET で実行されるので、Apollo などの HTTP POST を使用する一般的な GraphQL ライブラリは使用できません。代わりに、AEM に対する永続クエリ HTTP GET リクエストを実行するカスタムクラスを作成します。
 
-`AEM/Aem.swift` をインスタンス化します。 `Aem` AEMヘッドレスとのすべてのやり取りに使用されるクラス。 パターンは次のようになります。
+`AEM/Aem.swift` は AEMヘッドレスとのすべてのやり取りに使用される `Aem` クラスをインスタンス化します。パターンは次のとおりです。
 
-1. 永続化された各クエリには、対応するパブリック関数 ( 例： `getAdventures(..)` または `getAdventureBySlug(..)`) iOSアプリケーションのビューが呼び出されて、アドベンチャーデータを取得します。
-1. public func は private func を呼び出します。 `makeRequest(..)` を呼び出すと、AEMヘッドレスに対する非同期 HTTPGETリクエストが呼び出され、JSON データが返されます。
-1. 次に、各 public func は JSON データをデコードし、必要なチェックや変換を行ってから、アドベンチャーデータをビューに返します。
+1. 各永続クエリには、対応するパブリック関数（例：`getAdventures(..)` または `getAdventureBySlug(..)`）があり、iOS アプリケーションのビューが呼び出されて、アドベンチャーデータを取得します。
+1. パブリック関数は、AEM ヘッドレスへの非同期 HTTP GET リクエストを呼び出すプライベート関数 `makeRequest(..)` を呼び出し、JSON データを返します。
+1. 次に、各パブリック関数は JSON データをデコードし、必要なチェックや変換を行ってから、アドベンチャーデータをビューに返します。
 
-   + AEM GraphQL JSON データは、 `AEM/Models.swift`:JSON オブジェクトにマッピングされ、AEMヘッドレスが返されました。
+   + AEM の GraphQL JSON データは、`AEM/Models.swift` で定義された構造体／クラスを使用してデコードされます。これは、AEM ヘッドレスから返された JSON オブジェクトにマップされます。
 
 ```swift
     /// # getAdventures(..)
@@ -240,43 +240,43 @@ AEMの永続化されたクエリは HTTPGET上で実行されるので、Apollo
     ...
 ```
 
-### GraphQL応答データモデル
+### GraphQL 応答データモデル
 
-iOSでは、JSON オブジェクトを型指定されたデータモデルにマッピングすることをお勧めします。
+iOS では、JSON オブジェクトを型指定されたデータモデルにマッピングすることが好まれています。
 
-この `src/AEM/Models.swift` は、 [脱落可能な](https://developer.apple.com/documentation/swift/decodable) AEM JSON 応答で返されるAEM JSON 応答にマッピングする Swift の構造およびクラス。
+`src/AEM/Models.swift` は、AEM の JSON 応答によって返される AEM JSON 応答にマップされる [decodable](https://developer.apple.com/documentation/swift/decodable) Swift 構造体とクラスを定義します。
 
-### 表示
+### ビュー
 
-SwiftUI は、アプリケーションの様々なビューに使用されます。 Appleは、 [SwiftUI を使用したリストの作成とナビゲーション](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation).
+SwiftUI は、アプリケーションの様々な表示で使用されます。 Apple は、[SwiftUI を使用してリストとナビゲーションを構築する](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)ための入門チュートリアルを提供しています。
 
 + `WKNDAdventuresApp.swift`
 
-   アプリケーションのエントリで、を含む `AdventureListView` その `.onAppear` イベントハンドラーは、を介してすべての冒険データを取得するために使用されます。 `aem.getAdventures()`. 共有 `aem` オブジェクトはここで初期化され、他のビューには [EnvironmentObject](https://developer.apple.com/documentation/swiftui/environmentobject).
+   アプリケーションのエントリには `AdventureListView` が含まれ、その `.onAppear` イベントハンドラーは `aem.getAdventures()` を介してすべてのアドベンチャーデータを取得するために使用されます。共有 `aem` オブジェクトはここで初期化され、他のビューには [EnvironmentObject](https://developer.apple.com/documentation/swiftui/environmentobject) として公開されます。
 
 + `Views/AdventureListView.swift`
 
-   （からのデータに基づいて）冒険のリストを表示します。 `aem.getAdventures()`) をクリックし、 `AdventureListItemView`.
+   （`aem.getAdventures()` からのデータに基づく）アドベンチャーのリストを表示し、`AdventureListItemView` を使用している各アドベンチャーのリスト項目を表示します。
 
 + `Views/AdventureListItemView.swift`
 
-   冒険リストの各項目を表示します (`Views/AdventureListView.swift`) をクリックします。
+   アドベンチャーリストの各項目を表示します（`Views/AdventureListView.swift`）。
 
 + `Views/AdventureDetailView.swift`
 
-   タイトル、説明、価格、アクティビティタイプ、プライマリ画像など、アドベンチャーの詳細を表示します。 このビューは、AEMに対して、 `aem.getAdventureBySlug(slug: slug)`( `slug` パラメーターは、選択リスト行に基づいて渡されます。
+   タイトル、説明、価格、アクティビティタイプ、プライマリ画像など、アドベンチャーの詳細を表示します。 このビューは、`aem.getAdventureBySlug(slug: slug)` を使用して完全なアドベンチャーの詳細のクエリを AEM に対して実行します。ここで、`slug` パラメーターは選択リストの行に基づいて渡されます。
 
 ### リモート画像
 
-アドベンチャーコンテンツフラグメントで参照される画像は、AEMが提供します。 このiOSアプリはパスを使用します `_path` フィールドに入力し、先頭に `AEM_SCHEME` および `AEM_HOST` をクリックして完全修飾 URL を作成します。
+アドベンチャーコンテンツフラグメントで参照される画像は、AEM が提供します。 この iOS アプリは、GraphQL 応答のパス `_path` フィールドを使用し、プレフィックス `AEM_SCHEME` と `AEM_HOST` を付けて完全修飾 URL を作成します。
 
-認証が必要なAEM上の保護されたリソースに接続する場合は、イメージリクエストに資格情報も追加する必要があります。
+認証が必要な AEM 上の保護されたリソースに接続する場合は、資格情報も画像リクエストに追加する必要があります。
 
-[SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) および [SDWebImage](https://github.com/SDWebImage/SDWebImage) を使用して、アドベンチャー画像をAEMから読み込み、 `AdventureListItemView` および `AdventureDetailView` ビュー。
+[SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI) および [SDWebImage](https://github.com/SDWebImage/SDWebImage) は、`AdventureListItemView` 表示と `AdventureDetailView` 表示に アドベンチャー画像を取り込む AEM からリモート画像を読み込むために使用されます。
 
-この `aem` クラス ( `AEM/Aem.swift`) は、次の 2 つの方法でAEM画像の使用を容易にします。
+`aem`クラス（`AEM/Aem.swift`）は、次の 2 つの方法で AEM 画像の使用を容易にします。
 
-1. `aem.imageUrl(path: String)` を使用すると、AEMスキームを画像のパスの前に追加し、画像のパスをホストして、完全修飾 URL を作成できます。
+1. `aem.imageUrl(path: String)` はビューで使用され、AEM のスキームとホストを画像のパスに追加して、完全修飾 URL を作成します。
 
    ```swift
    // adventure.image() => /content/dam/path/to/an/image.png
@@ -284,9 +284,9 @@ SwiftUI は、アプリケーションの様々なビューに使用されます
    // imageUrl => http://localhost:4503/content/dam/path/to/an/image.png
    ```
 
-2. この `convenience init(..)` in `Aem` iOSアプリケーションの設定に基づいて、イメージ HTTP リクエストに HTTP Authorization ヘッダーを設定します。
+2. `Aem` の `convenience init(..)` は、iOS アプリケーションの設定に基づいて、画像 HTTP リクエストに HTTP 認証ヘッダーを設定します。
 
-   + If __基本認証__ が設定されている場合、すべてのイメージリクエストに基本認証が添付されます。
+   + __基本認証__&#x200B;が設定されている場合、すべての画像リクエストで基本認証が行われます。
 
    ```swift
    /// AEM/Aem.swift
@@ -301,7 +301,7 @@ SwiftUI は、アプリケーションの様々なビューに使用されます
    }
    ```
 
-   + If __トークン認証__ が設定されている場合、トークン認証がすべてのイメージリクエストに添付されます。
+   + __トークン認証__&#x200B;が設定されている場合、すべての画像リクエストでトークン認証が行われます。
 
    ```swift
    /// AEM/Aem.swift
@@ -316,13 +316,13 @@ SwiftUI は、アプリケーションの様々なビューに使用されます
    }
    ```
 
-   + If __認証なし__ が設定されている場合、イメージリクエストに認証は添付されません。
+   + __認証なし__&#x200B;が設定されている場合、画像リクエストで認証は行われません。
 
 
 
-SwiftUI ネイティブの [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage). `AsyncImage` はiOS 15.0 以降でサポートされています。
+SwiftUI ネイティブの [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage) でも同様のアプローチを使用できます。`AsyncImage` は iOS 15.0 以降でサポートされています。
 
 ## その他のリソース
 
-+ [AEMヘッドレスの概要 — GraphQLチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja)
++ [AEM ヘッドレス入門 - GraphQL チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja)
 + [SwiftUI リストとナビゲーションチュートリアル](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

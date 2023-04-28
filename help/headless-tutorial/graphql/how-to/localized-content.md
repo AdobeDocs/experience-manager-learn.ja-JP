@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスでのローカライズされたコンテンツの使用
-description: GraphQLを使用して、ローカライズされたコンテンツをAEMに問い合わせる方法を説明します。
+title: AEM ヘッドレスとローカライズされたコンテンツの使用
+description: GraphQL を使用して、ローカライズされたコンテンツを AEM にクエリする方法について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -8,37 +8,37 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 3%
+ht-degree: 95%
 
 ---
 
+# AEM ヘッドレスとローカライズされたコンテンツ
 
-# AEMヘッドレスを使用したコンテンツのローカライズ
-
-AEMが [翻訳統合フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) ヘッドレスコンテンツの場合、コンテンツフラグメントやサポートアセットをロケール間で容易に翻訳して使用できます。 これは、ページ、エクスペリエンスフラグメント、アセット、Formsなど、他のAEMコンテンツを翻訳する場合と同じフレームワークです。 1 回 [ヘッドレスコンテンツが翻訳されました](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=ja)、および公開された場合、ヘッドレスアプリケーションで使用する準備が整います。
+AEM は、ヘッドレスコンテンツに[翻訳統合フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html?lang=ja)を提供しており、コンテンツのフラグメントとサポートアセットを、ロケール間で容易に翻訳して使用できます。このフレームワークは、ページ、エクスペリエンスフラグメント、アセット、フォームなどの、その他の AEM コンテンツの翻訳に使用するフレームワークと同じです。[ヘッドレスコンテンツを翻訳して](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=ja)、公開すると、ヘッドレスアプリケーションで使用する準備が整います。
 
 ## アセットフォルダー構造{#assets-folder-structure}
 
-AEMでローカライズされたコンテンツフラグメントが [推奨位置構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
+AEM のローカライズされたコンテンツフラグメントが、[推奨のローカライゼーション構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure)になっていることを確認します。
 
-![AEM assets フォルダーのローカライズ](./assets/localized-content/asset-folders.jpg)
+![ローカライズされた AEM アセットフォルダー](./assets/localized-content/asset-folders.jpg)
 
-ロケールフォルダーは兄弟である必要があり、フォルダー名は title ではなく、有効な名前である必要があります [ISO 639-1 コード](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) フォルダーに含まれるコンテンツのロケールを表します。
+ロケールフォルダーは兄弟である必要があり、フォルダー名はタイトルではなく、フォルダーに含まれるコンテンツのロケールを表す有効な [ISO 639-1 コード](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)でなければなりません。
 
-ロケールコードは、GraphQLクエリによって返されるコンテンツフラグメントのフィルタリングにも使用される値です。
+ロケールコードは、GraphQL クエリによって返されるコンテンツフラグメントのフィルタリングにも使用される値です。
 
-| ロケールコード | AEM path | コンテンツのロケール |
+| ロケールコード | AEM パス | コンテンツのロケール |
 |--------------------------------|----------|----------|
 | de | /content/dam/.../**de**/... | ドイツ語コンテンツ |
 | en | /content/dam/.../**en**/... | 英語コンテンツ |
 | es | /content/dam/.../**es**/... | スペイン語コンテンツ |
 
-## GraphQL永続クエリ
+## GraphQL 永続クエリ
 
-AEMが `_locale` ロケールコードでコンテンツを自動的にフィルタリングするGraphQLフィルター。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
+AEM は、ロケールコードごとにコンテンツを自動的にフィルタリングする `_locale` GraphQL フィルターを提供します。例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
 
 ```graphql
 query($locale: String!) {
@@ -51,19 +51,19 @@ query($locale: String!) {
 }
 ```
 
-この `$locale` 変数 `_locale` フィルタにはロケールコードが必要です ( 例： `en`, `en_us`または `de`) を [AEMアセットフォルダーベースのローカリゼーション規則](#assets-folder-structure).
+`_locale` フィルターで使用される `$locale` 変数には、[AEM のアセットフォルダーベースのローカライゼーション規則](#assets-folder-structure)で指定されているロケールコード（`en`、`en_us`、`de`など）が必要です。
 
 ## React の例
 
-ロケールセレクターを使用し、ロケールセレクターに基づいてAEMからクエリする Adventure コンテンツを制御する、シンプルな React アプリケーションを作成します。 `_locale` フィルター。
+`_locale` フィルターを使用して、ロケールセレクターに基づき、AEM からクエリするアドベンチャーコンテンツを制御できるシンプルな React アプリケーションを作成します。
 
-条件 __英語__ ロケールセレクターでが選択され、次に英語のアドベンチャーコンテンツフラグメントが `/content/dam/wknd/en` が返される場合、 __スペイン語__ が選択され、次に下にスペイン語コンテンツフラグメントが選択されます。 `/content/dam/wknd/es`など。
+例えば、ロケールセレクターで&#x200B;__英語__&#x200B;を選択すると `/content/dam/wknd/en` の下にある英語のアドベンチャーのコンテンツフラグメントが返され、__スペイン語__&#x200B;を選択すると `/content/dam/wknd/es` の下にあるスペイン語のコンテンツフラグメントが返されます。
 
-![ローカライズされた React サンプルアプリ](./assets/localized-content/react-example.png)
+![ローカライズされた React アプリの例](./assets/localized-content/react-example.png)
 
-### の作成 `LocaleContext`{#locale-context}
+### `LocaleContext` の作成{#locale-context}
 
-まず、 [React コンテキスト](https://reactjs.org/docs/context.html) を使用して、React アプリケーションのコンポーネント全体でロケールを使用できるようにします。
+まず、[React コンテキスト](https://reactjs.org/docs/context.html)を作成して、React アプリケーションのコンポーネント全体でロケールを使用できるようにします。
 
 ```javascript
 // src/LocaleContext.js
@@ -80,11 +80,11 @@ const LocaleContext = React.createContext({
 export default LocaleContext;
 ```
 
-### の作成 `LocaleSwitcher` React コンポーネント{#locale-switcher}
+### `LocaleSwitcher` React コンポーネントの作成{#locale-switcher}
 
-次に、 [LocaleContext の](#locale-context) の値をユーザーの選択範囲に追加します。
+次に、ユーザーの選択範囲に [LocaleContext の ](#locale-context) 値を設定するロケールスイッチャー React コンポーネントを作成します。
 
-このロケール値は、GraphQLクエリを実行し、選択したロケールに一致するコンテンツのみを返すようにするために使用されます。
+このロケール値を使用すると、GraphQL クエリを実行し、選択したロケールに一致するコンテンツのみを返すことができます。
 
 ```javascript
 // src/LocaleSwitcher.js
@@ -106,13 +106,13 @@ export default function LocaleSwitcher() {
 }
 ```
 
-### を使用してコンテンツをクエリする `_locale` フィルター{#adventures}
+### `_locale` フィルターを使用したコンテンツのクエリ{#adventures}
 
-Adventures コンポーネントは、ロケール別にすべての冒険をAEMに問い合わせ、そのタイトルを表示します。 これを実現するには、React コンテキストに格納されたロケール値を `_locale` フィルター。
+Adventures コンポーネントは、ロケール別のすべてのアドベンチャーに関して AEM にクエリを実行し、タイトルを一覧表示します。これを実現するには、`_locale` フィルターを使用して React コンテキストに保存されているロケール値をクエリに渡します。
 
-この方法は、アプリケーション内の他のクエリに拡張でき、すべてのクエリにユーザーのロケール選択で指定された内容のみが含まれるようにします。
+この方法はアプリケーション内の他のクエリに拡張でき、すべてのクエリにユーザーのロケール選択で指定されたコンテンツのみを含むようにすることができます。
 
-AEMに対するクエリは、カスタム React フックで実行されます。 [getAdventuresByLocale(AEM GraphQLのクエリに関するドキュメントで詳しく説明 )](./aem-headless-sdk.md).
+AEM に対するクエリは、[「AEM GraphQL のクエリ」ドキュメントで詳細に説明されているカスタム React フック getAdventuresbyLocale](./aem-headless-sdk.md) で実行されます。
 
 ```javascript
 // src/Adventures.js
@@ -138,9 +138,9 @@ export default function Adventures() {
 }
 ```
 
-### 次を定義： `App.js`{#app-js}
+### `App.js` の定義{#app-js}
 
-最後に、React アプリケーションを `LanguageContext.Provider` ロケール値の設定 これにより、他の React コンポーネント [LocaleSwitcher](#locale-switcher)、および [冒険](#adventures) ロケール選択の状態を共有する。
+最後に、React アプリケーションを `LanguageContext.Provider` にラップして、ロケール値を設定し、すべてを結合します。これにより、他の React コンポーネント、[ロケールスイッチャー](#locale-switcher)、[アドベンチャー](#adventures)でロケール選択状態を共有できます。
 
 ```javascript
 // src/App.js

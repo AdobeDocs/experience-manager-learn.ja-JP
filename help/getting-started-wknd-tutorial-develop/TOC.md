@@ -10,7 +10,7 @@ index: y
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 46%
+ht-degree: 100%
 
 ---
 
@@ -20,24 +20,24 @@ ht-degree: 46%
 + [WKND チュートリアルの概要](overview.md)
 + プロジェクトアーキタイプ {#project-archetype}
    + [概要](./project-archetype/overview.md)
-   + [1 — プロジェクトの設定](./project-archetype/project-setup.md)
-   + [2 — コンポーネントの基本](./project-archetype/component-basics.md)
-   + [3 — ページとテンプレート](./project-archetype/pages-templates.md)
-   + [4 — クライアント側ライブラリ](./project-archetype/client-side-libraries.md)
-   + [5 — スタイルシステム](./project-archetype/style-system.md)
-   + [6 — カスタムコンポーネント](./project-archetype/custom-component.md)
-   + [7 — 単体テスト](./project-archetype/unit-testing.md)
+   + [1 - プロジェクトの設定](./project-archetype/project-setup.md)
+   + [2 - コンポーネントの基本](./project-archetype/component-basics.md)
+   + [3 - ページとテンプレート](./project-archetype/pages-templates.md)
+   + [4 - クライアントサイドライブラリ](./project-archetype/client-side-libraries.md)
+   + [5 - スタイルシステム](./project-archetype/style-system.md)
+   + [6 - カスタムコンポーネント](./project-archetype/custom-component.md)
+   + [7 - 単体テスト](./project-archetype/unit-testing.md)
 + クイックサイト作成 {#site-template}
    + [概要](./site-template/overview.md)
-   + [1 — サイトの作成](./site-template/create-site.md)
-   + [2 — オーサリングと公開の概要](./site-template/author-content-publish.md)
+   + [1 - サイトの作成](./site-template/create-site.md)
+   + [2 - オーサリングとパブリッシングの概要](./site-template/author-content-publish.md)
    + [3 - Adobe XDでの UI 計画](./site-template/ui-planning-adobe-xd.md)
-   + [4 — ページテンプレート](./site-template/page-templates.md)
-   + [5 — テーマ設定](./site-template/theming.md)
-+ フロントエンドパイプラインの有効化 — DevOps{#enable-frontend-pipeline-devops}
+   + [4 - ページテンプレート](./site-template/page-templates.md)
+   + [5 - テーマ設定](./site-template/theming.md)
++ フロントエンドパイプラインの有効化 - DevOps{#enable-frontend-pipeline-devops}
    + [概要](./enable-frontend-pipeline/overview.md)
-   + [1 — フルスタックプロジェクトをレビュー](./enable-frontend-pipeline/review-uifrontend-module.md)
-   + [2 — フロントエンドパイプラインを使用するためのプロジェクトの更新](./enable-frontend-pipeline/update-project.md)
-   + [3 — フロントエンドパイプラインを使用したデプロイ](./enable-frontend-pipeline/create-frontend-pipeline.md)
-   + [4 — 考慮事項](./enable-frontend-pipeline/considerations.md)
+   + [1 - フルスタックプロジェクトのレビュー](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 - フロントエンドパイプラインを使用するためのプロジェクトの更新](./enable-frontend-pipeline/update-project.md)
+   + [3 - フロントエンドパイプラインを使用したデプロイ](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 - 検討事項](./enable-frontend-pipeline/considerations.md)
 

@@ -13,13 +13,13 @@ exl-id: feab7e1d-3998-41ba-8326-bbff14564494
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 入力および署名のシナリオに合わせてアダプティブフォームを設定する
+# 入力と署名のシナリオに対応するアダプティブフォームの設定
 
 
-このビデオでは、フォームの入力者と署名者が同じ人物であるフォームを設定します
+このビデオでは、フォームの入力者と署名者が同じ人物である場合のフォームを設定します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332439?quality=12&learn=on)

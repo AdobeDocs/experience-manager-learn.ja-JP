@@ -1,6 +1,6 @@
 ---
-title: サーバー間 Node.js アプリ — AEMヘッドレスの例
-description: アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このサーバー側 Node.js アプリケーションは、永続化されたクエリを使用してAEM GraphQL API でコンテンツをクエリする方法を示しています。
+title: サーバー間 Node.js アプリ - AEM ヘッドレスの例
+description: サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 このサーバー側 Node.js アプリケーションは、永続クエリを使用して AEM GraphQL API でコンテンツを照会する方法を示しています。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,40 +8,41 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 5%
+ht-degree: 99%
 
 ---
 
 # サーバー間 Node.js アプリ
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 このサーバー間アプリケーションでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行し、そのクエリをターミナルに印刷する方法を示します。
+サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 このサーバー間アプリケーションでは、永続クエリを使用して AEM GraphQL API でコンテンツに対してクエリを実行し、そのクエリをターミナルに印刷する方法を示します。
 
-![AEMヘッドレスを備えたサーバー間 Node.js アプリ](./assets/server-to-server-app/server-to-server-app.png)
+![AEM ヘッドレスを備えたサーバー間 Node.js アプリ](./assets/server-to-server-app/server-to-server-app.png)
 
-次を表示： [GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)
+[GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)を表示
 
 ## 前提条件 {#prerequisites}
 
-以下のツールをローカルにインストールする必要があります。
+次のツールをローカルにインストールする必要があります。
 
 + [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
-## AEM要件
+## AEM の要件
 
-Node.js アプリケーションは、次のAEMデプロイメントオプションと連携します。 すべてのデプロイメントには、 [WKND サイト v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をインストールします。
+Node.js アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
-+ オプションで、 [サービス資格情報](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) リクエストを承認する場合（例えば、AEM オーサーサービスへの接続）。
++ オプションで、[サービス資格情報](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=ja)リクエストを承認することもできます（例えば、AEM オーサーサービスへの接続）。
 
 この Node.js アプリケーションは、コマンドラインパラメーターに基づいて、AEM オーサーまたは AEM パブリッシュに接続できます。
 
 ## 使用方法
 
-1. のクローン `adobe/aem-guides-wknd-graphql` リポジトリ：
+1. `adobe/aem-guides-wknd-graphql` リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
@@ -66,25 +67,25 @@ Node.js アプリケーションは、次のAEMデプロイメントオプショ
    $ node index.js https://publish-p123-e789.adobeaemcloud.com
    ```
 
-   認証を持つ AEM オーサーに対してアプリを実行するには：
+   認証を持つ AEM オーサーに対してアプリを実行します。
 
    ```shell
    $ node index.js https://author-p123-e456.adobeaemcloud.com ./service-config.json
    ```
 
-1. WKND リファレンスサイトのアドベンチャーの JSON リストをターミナルに印刷する必要があります。
+1. WKND リファレンスサイトから、アドベンチャーの JSON リストを端末に出力する必要があります。
 
 ## コード
 
-サーバー間 Node.js アプリケーションの構築方法、GraphQLで保持されたクエリを使用してコンテンツを取得するAEMヘッドレスへの接続方法、およびそのデータの表示方法の概要を次に示します。 完全なコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+サーバー間 Node.js アプリケーションの構築方法、GraphQL で保持されたクエリを使用してコンテンツを取得する AEM ヘッドレスへの接続方法およびそのデータの表示方法の概要を次に示します。完全なコードは [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app) にあります。
 
-サーバー間AEMヘッドレスアプリの一般的な使用例は、AEMのコンテンツフラグメントデータを他のシステムに同期することですが、このアプリケーションは意図的に単純で、永続化されたクエリから JSON 結果を出力します。
+サーバー間 AEM ヘッドレスアプリの一般的なユースケースは、AEM のコンテンツフラグメントデータを他のシステムに同期することですが、このアプリケーションは意図的に単純で、永続クエリから JSON 結果を出力します。
 
 ### 永続クエリ
 
-AEMヘッドレスのベストプラクティスに従い、アプリケーションはAEM GraphQLで永続的なクエリを使用してアドベンチャーデータをクエリします。 アプリケーションでは、次の 2 つの永続クエリを使用します。
+AEM ヘッドレスのベストプラクティスに従い、アプリケーションは AEM GraphQL で永続クエリを使用してアドベンチャーのデータを照会します。アプリケーションでは、次の 2 つの永続クエリを使用します。
 
-+ `wknd/adventures-all` 持続的なクエリで、AEM内のすべてのアドベンチャを簡潔なプロパティセットで返します。 この永続的なクエリは、初期ビューのアドベンチャーリストを駆動します。
++ `wknd/adventures-all` 永続クエリ。AEM のすべてのアドベンチャーを要約されたプロパティセットとともに返します。この永続クエリは、初期ビューのアドベンチャーリストを制御します。
 
 ```
 # Retrieves a list of all adventures
@@ -109,7 +110,7 @@ AEMヘッドレスのベストプラクティスに従い、アプリケーシ�
 }
 ```
 
-### AEM Headless クライアントを作成
+### AEM ヘッドレスクライアントを作成
 
 ```javascript
 const { AEMHeadless, getToken } = require('@adobe/aem-headless-client-nodejs');
@@ -140,11 +141,11 @@ async function run() {
 ```
 
 
-### GraphQL永続クエリの実行
+### GraphQL 永続クエリの実行
 
-AEMで永続化されたクエリは HTTPGETを介して実行されるので、 [AEM Node.js 用ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-nodejs) は [永続的なGraphQLクエリの実行](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) AEMに対してを設定し、アドベンチャーコンテンツを取得します。
+AEM の永続クエリは HTTP GET で実行されるので、[AEM Node.js 用ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-nodejs)を使用して AEM に対して[永続 GraphQL クエリを実行](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait)してアドベンチャーコンテンツを取得します。
 
-永続化されたクエリは、 `aemHeadlessClient.runPersistedQuery(...)`、永続化されたGraphQLクエリ名を渡す GraphQLがデータを返したら、それを簡略化されたに渡します `doSomethingWithDataFromAEM(..)` 関数を使用して、結果を出力します。ただし、通常は別のシステムにデータを送信するか、取得したデータに基づいて出力を生成します。
+`aemHeadlessClient.runPersistedQuery(...)` を呼び出し、永続 GraphQL クエリ名を渡すことで、永続クエリを呼び出すことができます。GraphQL がデータを返したら、それを簡略化した `doSomethingWithDataFromAEM(..)` 関数に渡します。この関数は結果を表示しますが、通常はデータを別のシステムに送信したり、取得したデータに基づいて何らかの出力を生成したりします。
 
 ```js
 // index.js

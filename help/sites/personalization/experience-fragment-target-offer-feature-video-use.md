@@ -1,6 +1,6 @@
 ---
-title: Adobe Target内でのAEM Experience Fragment オファーの使用
-description: Adobe Experience Manager 6.4 では、AEMと Target の間のパーソナライゼーションワークフローが再設計されました。 AEM内で作成されたエクスペリエンスを、HTMLオファーとしてAdobe Targetに直接配信できるようになりました。 これにより、マーケターは様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
+title: Adobe Target 内での AEM Experience Fragment オファーの使用
+description: Adobe Experience Manager 6.4 は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 feature: Experience Fragments
 version: 6.4, 6.5
 topic: Personalization
@@ -10,28 +10,28 @@ exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Adobe Target内でのエクスペリエンスフラグメントオファーの使用{#using-experience-fragment-offers-within-adobe-target}
+# Adobe Target 内でのエクスペリエンスフラグメントオファーの使用{#using-experience-fragment-offers-within-adobe-target}
 
-Adobe Experience Managerは、AEMと Target の間のパーソナライゼーションワークフローを再設計します。 AEM内で作成されたエクスペリエンスを、HTMLオファーとしてAdobe Targetに直接配信できるようになりました。 これにより、マーケターは様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
+Adobe Experience Manager は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。 AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
 
 >[!NOTE]
 >
->使用を推奨 `at.js` クライアントライブラリとベストプラクティスは、Launch by Adobe、AdobeDTM、またはサードパーティのタグ管理ソリューションなどのタグ管理ソリューションを使用して、サイトのページに target ライブラリを追加することです
+>`at.js` クライアント ライブラリを使用することをお勧めします。ベストプラクティスは、Experience Platform Launch、Adobe DTM やサードパーティのタグ管理ソリューションなどのタグ管理ソリューションを使用して、ターゲットライブラリをサイトページに追加することです。
 
 
-* Adobe Experience Managerの使いやすく強力なコンテンツ作成メカニズムと、Adobe Targetの人工知能 (AI) および機械学習を使用すると、コンテンツ作成者はすべてのチャネルのコンテンツを一元的に作成および管理できます。 エクスペリエンスフラグメントをHTMLオファーとしてAdobe Targetに書き出す機能により、マーケターは、これらのオファーを使用して、よりパーソナライズされたエクスペリエンスを柔軟に作成し、作成する各エクスペリエンスのテストと拡張をおこなうことができます。
-* HTMLオファーとエクスペリエンスフラグメントオファーの主な違いは、後での編集はAEMでのみおこなえ、その後Adobe Targetと同期できることです
-* エクスペリエンスフラグメントフォルダーに適用された Target Cloud サービス設定は、親フォルダーの直下に作成されたすべてのエクスペリエンスフラグメントを継承します。 子フォルダーは親クラウドサービス設定を継承しません。
-* パーソナライズされたオファーを作成するために、AEM内に保存されたコンテンツを簡単に活用できるようになりました。
-* 自動配分、自動ターゲット、Automated Personalizationなど、Senseiを利用したアクティビティを含む、Target アクティビティのタイプを作成できます
+* Adobe Experience Manager の使いやすく強力なコンテンツ作成メカニズムと、Adobe Target の人工知能（AI）および機械学習を組み合わせて使用すると、コンテンツ作成者はすべてのチャネルのコンテンツを一元的に作成および管理することができます。 エクスペリエンスフラグメントを HTML オファーとして Adobe Target に書き出す機能により、マーケターはこれらのオファーを使用して、高度にパーソナライズされたエクスペリエンスをより柔軟に作成できるようになり、作成した各エクスペリエンスをテストおよびスケールできるようになりました。
+* HTML オファーとエクスペリエンスフラグメントオファーの主な違いは、後者の編集は AEM でのみ行なえ、その後 Adobe Target と同期できることです
+* エクスペリエンスフラグメントフォルダーに適用される Target のクラウドサービス設定は、親フォルダーの直下に作成されたすべてのエクスペリエンスフラグメントに継承されます。子フォルダーは親クラウドサービス設定を継承しません。
+* パーソナライズされたオファーを作成するために、AEM 内に保存されたコンテンツを簡単に活用できるようになりました。
+* 自動割り当て、自動ターゲット、Automated Personalization などの Adobe Sensei を利用したアクティビティを含む、様々な種類の Target アクティビティを作成できます
 
 ## その他のリソース {#additional-resources}
 
-* [エクスペリエンスフラグメントドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
+* [エクスペリエンスフラグメントドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=ja)
 * [エクスペリエンスフラグメントの使用](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

@@ -1,6 +1,6 @@
 ---
-title: AEM Sites使用の手引き — コンポーネントの基本
-description: シンプルな「HelloWorld」の例を通して、Adobe Experience Manager(AEM)Sites コンポーネントの基盤となるテクノロジーを理解します。 HTL、Sling モデル、クライアント側ライブラリ、オーサーダイアログのトピックを確認しました。
+title: AEM Sites の基本を学ぶ - コンポーネントの基本
+description: 簡単な「HelloWorld」の例を通して、Adobe Experience Manager（AEM）Sites コンポーネントの基盤となるテクノロジーを説明します。HTL、Sling モデル、クライアントサイドライブラリおよびオーサーダイアログのトピックを調べます。
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Developer Tools
@@ -15,33 +15,33 @@ recommendations: noDisplay, noCatalog
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '1226'
-ht-degree: 2%
+ht-degree: 92%
 
 ---
 
 # コンポーネントの基本 {#component-basics}
 
-この章では、Adobe Experience Manager(AEM)Sites コンポーネントの基盤となるテクノロジーを、シンプルなを使用して調べてみましょう `HelloWorld` 例： オーサリング、HTL、Sling モデル、クライアント側ライブラリのトピックを含め、既存のコンポーネントに小さな変更が加えられます。
+この章では、簡単な `HelloWorld` の例を通して、Adobe Experience Manager（AEM）Sites コンポーネントの基盤となるテクノロジーを調べます。オーサリング、HTL、Sling モデル、クライアントサイドライブラリなどのトピックに対応する小さな変更が、既存のコンポーネントに加えられます。
 
 ## 前提条件 {#prerequisites}
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](./overview.md#local-dev-environment).
+[ローカル開発環境](./overview.md#local-dev-environment)の設定に必要なツールや手順を確認します。
 
-ビデオで使用される IDE は次のとおりです。 [Visual Studio Code](https://code.visualstudio.com/) そして [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) プラグイン。
+ビデオで使用されている IDE は、[Visual Studio Code](https://code.visualstudio.com/) と [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) プラグインです。
 
 ## 目的 {#objective}
 
-1. HTL テンプレートと Sling モデルの役割を学習し、動的にテンプレートをレンダリングするHTMLを学びます。
-1. コンテンツのオーサリングを容易にするためにダイアログがどのように使用されているかを理解します。
-1. コンポーネントをサポートする CSS と JavaScript を含めるクライアント側ライブラリの基本について説明します。
+1. HTML を動的にレンダリングするための HTL テンプレートと Sling モデルの役割を学びます。
+1. ダイアログを使用してコンテンツのオーサリングを促進する方法を理解します。
+1. コンポーネントをサポートする CSS と JavaScript を組み込むためのクライアントサイドライブラリの基本中の基本を学びます。
 
 ## 作成する内容 {#what-build}
 
-この章では、単純な `HelloWorld` コンポーネント。 を更新する際に、 `HelloWorld` コンポーネントについて、AEMコンポーネント開発の主な領域について学びます。
+この章では、簡単な `HelloWorld` コンポーネントにいくつかの変更を加えます。`HelloWorld` コンポーネントを更新しながら、AEM コンポーネント開発の主要な領域について学びます。
 
 ## チャプタースタータープロジェクト {#starter-project}
 
-この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). 以下のビデオを見て、 [前提条件](#prerequisites) をクリックしてください。
+この章は、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)で生成された汎用プロジェクトに基づいています。以下のビデオを視聴し、[前提条件](#prerequisites)を確認してから始めましょう。
 
 >[!NOTE]
 >
@@ -49,9 +49,9 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
 
-新しいコマンドラインターミナルを開き、次の操作を実行します。
+新しいコマンドラインターミナルを開き、以下のアクションを実行します。
 
-1. 空のディレクトリで、 [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) リポジトリ：
+1. 空のディレクトリで、[aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git --branch tutorial/component-basics-start --single-branch
@@ -59,15 +59,15 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 必要に応じて、前の章で生成したプロジェクトを引き続き使用できます。 [プロジェクト設定](./project-setup.md).
+   > オプションで、前の章[プロジェクトの設定](./project-setup.md)で生成されたプロジェクトを引き続き使用することもできます。
 
-1. 次に移動：  `aem-guides-wknd` フォルダー。
+1. `aem-guides-wknd` フォルダー内に移動します。
 
    ```shell
    $ cd aem-guides-wknd
    ```
 
-1. 次のコマンドを使用して、プロジェクトをビルドし、AEMのローカルインスタンスにデプロイします。
+1. 次のコマンドを使用して、プロジェクトをビルドし、AEM のローカルインスタンスにデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -75,51 +75,51 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > AEM 6.5 または 6.4 を使用している場合、 `classic` 任意の Maven コマンドに対するプロファイル。
+   > AEM 6.5 または 6.4 を使用している場合は、`classic` プロファイルをすべての Maven コマンドに追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. 次の手順に従って、プロジェクトを優先 IDE に読み込みます。 [ローカル開発環境](overview.md#local-dev-environment).
+1. [ローカル開発環境](overview.md#local-dev-environment)を設定する手順に従って、プロジェクトを好みの IDE に読み込みます。
 
 ## コンポーネントのオーサリング {#component-authoring}
 
-コンポーネントは、Web ページの小さなモジュラー構成要素と考えることができます。 コンポーネントを再利用するには、コンポーネントを設定可能にする必要があります。 これは、オーサーダイアログを通じて実行します。 次に、単純なコンポーネントを作成し、ダイアログの値がAEMでどのように保持されるかを調べます。
+コンポーネントは、web ページの小さなモジュール型構築ブロックと考えることができます。 コンポーネントを再利用するには、コンポーネントを設定可能にする必要があります。 これは、オーサーダイアログを通じて実行します。次に、簡単なコンポーネントを作成して、ダイアログ内の値が AEM にどのように保持されるかを調べます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
-上記のビデオで実行した大まかな手順を以下に示します。
+上記のビデオで実行している大まかな手順を以下に示します。
 
-1. という名前のページを作成します。 **コンポーネントの基本** 下 **WKND サイト** `>` **US** `>` **en**.
-1. を **Hello World コンポーネント** を新しく作成されたページに追加します。
+1. **WKND Site** `>` **US** `>` **en** の下に **Component Basics** という名前のページを作成します。
+1. 新しく作成したページに **Hello World コンポーネント**&#x200B;を追加します。
 1. コンポーネントのダイアログを開き、テキストを入力します。 変更を保存して、ページに表示されるメッセージを確認します。
 1. 開発者モードに切り替え、CRXDE-Lite でコンテンツパスを表示し、コンポーネントインスタンスのプロパティを調べます。
-1. CRXDE-Lite を使用して、 `cq:dialog` および `helloworld.html` スクリプトから `/apps/wknd/components/content/helloworld`.
+1. CRXDE-Lite を使用して、`/apps/wknd/components/content/helloworld` から `cq:dialog` および `helloworld.html` スクリプトを表示します。
 
-## HTL(HTMLテンプレート言語 ) とダイアログ {#htl-dialogs}
+## HTL（HTML テンプレート言語）とダイアログ {#htl-dialogs}
 
-HTMLテンプレートの言語または **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** は、コンテンツのレンダリングにAEMコンポーネントで使用される、軽量のサーバーサイドテンプレート言語です。
+HTML テンプレート言語（**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=ja)**）は、AEM コンポーネントでコンテンツをレンダリングするために使用する軽量のサーバーサイドテンプレート言語です。
 
-**ダイアログ** コンポーネントに対して作成可能な設定を定義します。
+**ダイアログ**&#x200B;では、コンポーネントに対して可能な設定を定義します。
 
-次に、 `HelloWorld` テキストメッセージの前に追加の挨拶文を表示する HTL スクリプト。
+次に、テキストメッセージの前に追加の挨拶を表示するように `HelloWorld` HTL スクリプトを更新します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
-上記のビデオで実行した大まかな手順を以下に示します。
+上記のビデオで実行している大まかな手順を以下に示します。
 
-1. IDE に切り替え、次の場所に移動するプロジェクトを開きます。 `ui.apps` モジュール。
-1. を開きます。 `helloworld.html` ファイルを編集し、[ マークアップHTML] を更新します。
-1. 次のような IDE ツールを使用します。 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) ファイルの変更をローカルのAEMインスタンスと同期します。
+1. IDE に切り替え、`ui.apps` モジュールにプロジェクトを開きます。
+1. `helloworld.html` ファイルを開き、HTML マークアップを更新します。
+1. [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) などの IDE ツールを使用して、ファイルの変更内容をローカルの AEM インスタンスと同期します。
 1. ブラウザーに戻り、コンポーネントのレンダリングが変更されたことを確認します。
-1. を開きます。 `.content.xml` のダイアログを定義するファイル `HelloWorld` コンポーネント：
+1. `HelloWorld` コンポーネントのダイアログを定義する `.content.xml` ファイル（以下に示す場所にある）を開きます。
 
    ```plain
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. ダイアログを更新して、という名前のテキストフィールドを追加します。 **タイトル** ～という名前で `./title`:
+1. ダイアログを更新して、**Title** という名前のテキストフィールドを `./title` という名前で追加します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,13 +152,13 @@ HTMLテンプレートの言語または **[HTL](https://experienceleague.adobe.
    </jcr:root>
    ```
 
-1. ファイルを再度開く `helloworld.html`: `HelloWorld` 下のパスのコンポーネント：
+1. 下記パスの `HelloWorld` コンポーネントをレンダリングするメイン HTL スクリプトを表すファイル `helloworld.html` を再度開きます。
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
    ```
 
-1. 更新 `helloworld.html` を **挨拶** の一部としてのテキストフィールド `H1` タグ：
+1. 「**Greeting**」テキストフィールドの値を `H1` タグの一部としてレンダリングするように、`helloworld.html` を更新します。
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld">
@@ -167,17 +167,17 @@ HTMLテンプレートの言語または **[HTL](https://experienceleague.adobe.
    </div>
    ```
 
-1. 開発者プラグインを使用するか、Maven スキルを使用して、AEMのローカルインスタンスに変更をデプロイします。
+1. 開発者向けプラグインを使用するか Maven スキルを使用して、AEM のローカルインスタンスに変更内容をデプロイします。
 
-## Sling Model {#sling-models}
+## Sling モデル {#sling-models}
 
-Sling モデルは、JCR から Java™変数へのデータのマッピングを容易にする注釈駆動の Java™ &quot;POJO&quot;(Plain Old Java™ Objects) です。 また、AEMのコンテキストで開発する際には、他のいくつかの点も提供されます。
+Sling モデルは、JCR から Java™ 変数へのデータのマッピングを容易にする注釈主導の Java™「POJO」（Plain Old Java™ Objects）です。また、AEM のコンテキストで開発する際には、他の詳細情報もいくつか提供します。
 
-次に、 `HelloWorldModel` Sling Model を使用して、JCR に格納された値にビジネスロジックを適用してから、ページに出力します。
+次に、JCR に格納された値にビジネスロジックを適用してから値をページに出力するため、`HelloWorldModel` Sling モデルを少し更新します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
 
-1. ファイルを開きます。 `HelloWorldModel.java`:( `HelloWorld` コンポーネント。
+1. ファイル `HelloWorldModel.java`（`HelloWorld` コンポーネントで使用される Sling モデル）を開きます。
 
    ```plain
    <code>/aem-guides-wknd.core/src/main/java/com/adobe/aem/guides/wknd/core/models/HelloWorldModel.java
@@ -190,7 +190,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 
-1. を更新します。 `@Model` 使用する注釈 `DefaultInjectionStrategy`:
+1. `DefaultInjectionStrategy` を使用するように `@Model` 注釈を更新します。
 
    ```java
    @Model(adaptables = Resource.class,
@@ -199,7 +199,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
       ...
    ```
 
-1. 次の行を `HelloWorldModel` コンポーネントの JCR プロパティの値をマッピングするクラス `title` および `text` を Java™変数に追加します。
+1. 以下の行を `HelloWorldModel` クラスに追加して、コンポーネントの JCR プロパティ `title` および `text` の値を Java™ 変数にマッピングします。
 
    ```java
    ...
@@ -220,7 +220,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
            ...
    ```
 
-1. 次のメソッドを追加します。 `getTitle()` から `HelloWorldModel` クラス。 `title`. このメソッドは、「Default Value here!」の String 値を返すロジックを追加します。 プロパティが `title` が null または空白の場合：
+1. 以下のメソッド `getTitle()` を `HelloWorldModel` クラスに追加します。このメソッドは `title` という名前のプロパティの値を返します。このメソッドは、「Default Value here!」という String 値を返すロジックを追加します。 プロパティが `title` が null または空白の場合：
 
    ```java
    /***
@@ -232,7 +232,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    }
    ```
 
-1. 次のメソッドを追加します。 `getText()` から `HelloWorldModel` クラス。 `text`. このメソッドは、文字列をすべて大文字に変換します。
+1. 以下のメソッド `getText()` を `HelloWorldModel` クラスに追加します。このメソッドは `text` という名前のプロパティの値を返します。このメソッドは、文字列をすべて大文字に変換します。
 
    ```java
        /***
@@ -244,7 +244,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    }
    ```
 
-1. からバンドルをビルドしてデプロイします。 `core` モジュール：
+1. `core` モジュールからバンドルをビルドしてデプロイします。
 
    ```shell
    $ cd core
@@ -253,7 +253,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
 
    >[!NOTE]
    >
-   > AEM 6.4/6.5 の場合は、 `mvn clean install -PautoInstallBundle -Pclassic`
+   > AEM 6.4／6.5 の場合は、`mvn clean install -PautoInstallBundle -Pclassic` を使用します。
 
 1. ファイルを更新 `helloworld.html` 時刻 `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 新しく作成したメソッドを使用するには、 `HelloWorld` モデル。
 
@@ -261,7 +261,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
 
    この `HelloWorld` モデルインスタンスが、HTL で `model` 変数を `HelloWord`. これらのメソッドの呼び出しでは、次のように短縮メソッドの構文を使用できます。 `${model.getTitle()}` ～に短縮できる `${model.title}`.
 
-   同様に、すべての HTL スクリプトが [グローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) Sling Model オブジェクトと同じ構文を使用してアクセスできる
+   同様に、すべての HTL スクリプトが [グローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=ja) Sling Model オブジェクトと同じ構文を使用してアクセスできる
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -278,33 +278,33 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    </div>
    ```
 
-1. Eclipse Developer プラグインを使用するか、Maven スキルを使用して、AEMのローカルインスタンスに変更をデプロイします。
+1. Eclipse Developer プラグインまたは Maven スキルを使用して、AEM のローカル インスタンスに変更内容をデプロイします。
 
 ## クライアントサイドライブラリ {#client-side-libraries}
 
-クライアントサイドライブラリ `clientlibs` つまり、は、AEM Sitesの実装に必要な CSS および JavaScript ファイルを整理および管理するメカニズムを提供します。 クライアント側ライブラリは、AEMのページに CSS と JavaScript を含める標準的な方法です。
+クライアントサイドライブラリ（略して `clientlibs`）は、 AEM Sites 実装に必要な CSS および JavaScript ファイルを編成および管理するメカニズムを提供します。クライアントサイドライブラリは、AEM のページに CSS と JavaScript を組み込む標準的な方法です。
 
-この [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) モジュールは非結合です [webpack](https://webpack.js.org/) ビルドプロセスに統合されるプロジェクト。 これにより、Sass、LESS、TypeScript などの一般的なフロントエンドライブラリを使用できます。 この `ui.frontend` モジュールについては、 [クライアントサイドライブラリの章](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) モジュールは、ビルドプロセスに統合されている独立した [webpack](https://webpack.js.org/) プロジェクトです。これにより、Sass、LESS、TypeScript などの一般的なフロントエンドライブラリを使用できます。 `ui.frontend` モジュールについては、[クライアントサイドライブラリの章](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)で詳しく説明しています。
 
-次に、 `HelloWorld` コンポーネント。
+次に、 `HelloWorld` コンポーネントの CSS スタイルを更新します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
 
-上記のビデオで実行した大まかな手順を以下に示します。
+上記のビデオで実行している大まかな手順を以下に示します。
 
-1. ターミナルウィンドウを開き、 `ui.frontend` directory
+1. 新しいターミナルウィンドウを開き、`ui.frontend` ディレクトリに移動します。
 
-1. にいる `ui.frontend` ディレクトリを実行 `npm install npm-run-all --save-dev` インストールするコマンド [npm-run-all](https://www.npmjs.com/package/npm-run-all) ノードモジュール。 この手順は、 **アーキタイプ 39 で生成されたAEMプロジェクトで必要**&#x200B;の場合、今後のアーキタイプバージョンでは必須ではありません。
+1. `ui.frontend` ディレクトリで、`npm install npm-run-all --save-dev` コマンドを実行して [npm-run-all](https://www.npmjs.com/package/npm-run-all) ノードモジュールをインストールします。この手順は、**アーキタイプ 39 で生成された AEM プロジェクト**&#x200B;では必要ですが、今後のアーキタイプバージョンでは必要ありません。
 
-1. 次に、 `npm run watch` コマンド：
+1. 次に、 `npm run watch` コマンドを実行します。
 
    ```shell
    $ npm run watch
    ```
 
-1. IDE に切り替え、次の場所に移動するプロジェクトを開きます。 `ui.frontend` モジュール。
+1. IDE に切り替え、`ui.frontend` モジュールにプロジェクトを開きます。
 1. `ui.frontend/src/main/webpack/components/_helloworld.scss` ファイルを開きます。
-1. ファイルを更新して赤いタイトルを表示します。
+1. 赤いタイトルを表示するように、ファイルを更新します。
 
    ```scss
    .cmp-helloworld {}
@@ -313,7 +313,7 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
    }
    ```
 
-1. ターミナルに、 `ui.frontend` モジュールは、変更をAEMのローカルインスタンスとコンパイルおよび同期しています。
+1. `ui.frontend` モジュールがコンパイルされて変更内容を AEM のローカルインスタンスと同期中であることを示すアクティビティがターミナルに表示されます。
 
    ```shell
    Entrypoint site 214 KiB = clientlib-site/site.css 8.45 KiB clientlib-site/site.js 206 KiB
@@ -331,14 +331,14 @@ Sling モデルは、JCR から Java™変数へのデータのマッピング�
 
 1. ブラウザーに戻り、タイトルの色が変更されたことを確認します。
 
-   ![コンポーネントの基本の更新](assets/component-basics/color-update.png)
+   ![更新後の Component Basics](assets/component-basics/color-update.png)
 
 ## おめでとうございます。 {#congratulations}
 
-おめでとうございます。Adobe Experience Managerでのコンポーネント開発の基本を学びました。
+おめでとうございます。これで、Adobe Experience Managerでのコンポーネント開発の基本を学びました。
 
-### 次のステップ {#next-steps}
+### 次の手順 {#next-steps}
 
-次の章で、Adobe Experience Managerのページとテンプレートについて説明します。 [ページとテンプレート](pages-templates.md). コアコンポーネントがプロジェクト内でどのようにプロキシされるかを理解し、適切に構造化された記事ページテンプレートを構築するための、編集可能なテンプレートの高度なポリシー設定について学びます。
+次の章[ページとテンプレート](pages-templates.md)で、Adobe Experience Manager のページとテンプレートについて理解します。コアコンポーネントがプロジェクト内にどのようにプロキシ化されるかを理解し、適切に構造化された Article Page テンプレートを構築するための編集可能なテンプレートの高度なポリシー設定について学びます。
 
-で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブランチのローカルのにコードを確認してデプロイします。 `tutorial/component-basics-solution`.
+完成したコードを [GitHub](https://github.com/adobe/aem-guides-wknd) で確認するか、コードをレビューして Git ブランチ `tutorial/component-basics-solution` でローカルにデプロイします。

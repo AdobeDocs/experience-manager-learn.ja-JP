@@ -6,7 +6,7 @@ version: Cloud Service
 kt: 4677
 thumbnail: 32551.jpg
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 100%
 
