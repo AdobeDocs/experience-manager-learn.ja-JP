@@ -1,6 +1,6 @@
 ---
-title: プロジェクトを作成 | AEM SPA Editor と React の使用の手引き
-description: AEM SPA Editor と統合された React アプリケーションの出発点として、Adobe Experience Manager(AEM)Maven プロジェクトを生成する方法を説明します。
+title: プロジェクトの作成｜AEM SPA エディターと React の使用の手引き
+description: AEM SPA エディターと統合された React アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを生成する方法を説明します。
 feature: SPA Editor, AEM Project Archetype
 version: Cloud Service
 kt: 413
@@ -10,38 +10,38 @@ role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 source-git-commit: c489a033f34aecaa0af10e3868c258feba6aaae6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1063'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # プロジェクトを作成 {#spa-editor-project}
 
-AEM SPA Editor と統合された React アプリケーションの出発点として、Adobe Experience Manager(AEM)Maven プロジェクトを生成する方法を説明します。
+AEM SPA エディターと統合された React アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを生成する方法を説明します。
 
 ## 目的
 
-1. AEMプロジェクトアーキタイプを使用して、SPA Editor が有効なプロジェクトを生成します。
-2. スタータープロジェクトをAEMのローカルインスタンスにデプロイします。
+1. AEM プロジェクトアーキタイプを使用して、SPA エディターで有効なプロジェクトを生成します。
+2. スタータープロジェクトを AEM のローカルインスタンスにデプロイします。
 
 ## 作成する内容 {#what-build}
 
-この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). AEMプロジェクトは、React SPAの非常にシンプルな出発点でブートストラップ処理されます。
+この章では、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)に基づいて、AEM プロジェクトを新規生成します。AEM プロジェクトは、React SPA の非常にシンプルな開始点でブートストラップ処理されます。
 
-**Maven プロジェクトとは** - [Apache Maven](https://maven.apache.org/) は、プロジェクトを構築するためのソフトウェア管理ツールです。 *すべてのAdobe Experience Manager* 実装では、Maven プロジェクトを使用して、AEM上にカスタムコードを作成、管理およびデプロイします。
+**Maven プロジェクトについて** - [Apache Maven](https://maven.apache.org/) は、プロジェクトを構築するためのソフトウェア管理ツールです。*すべての Adobe Experience Manager* の実装で、Maven プロジェクトを使用して、AEM上にカスタムコードを作成、管理およびデプロイします。
 
-**Maven アーキタイプとは** - A [Maven アーキタイプ](https://maven.apache.org/archetype/index.html) は、新しいプロジェクトを生成するためのテンプレートまたはパターンです。 AEMプロジェクトのアーキタイプを使用すると、カスタム名前空間を持つ新しいプロジェクトを生成し、ベストプラクティスに従ったプロジェクト構造を含めて、プロジェクトを大幅に高速化できます。
+**Maven アーキタイプについて** - [Maven アーキタイプ](https://maven.apache.org/archetype/index.html)は、プロジェクトを新規生成するためのテンプレートまたはパターンです。AEM プロジェクトアーキタイプを使用すると、カスタム名前空間を持つ新しいプロジェクトを生成し、ベストプラクティスに従ったプロジェクト構造を含めて、プロジェクトを大幅に高速化できます。
 
 ## 前提条件
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment). Adobe Experience Managerの新しいインスタンスが、で始まることを確認します。 **作成者** モード、はローカルで実行されています。
+必要なツールと[ローカル開発環境](overview.md#local-dev-environment)の設定方法を確認します。**オーサー**&#x200B;モードで起動した Adobe Experience Manager の新しいインスタンスが、ローカルで実行されていることを確認します。
 
-## プロジェクトを作成する {#create}
+## プロジェクトの作成 {#create}
 
 >[!NOTE]
 >
->このチュートリアルではバージョンを使用します **35** を使用します。
+>このチュートリアルでは、バージョン **35** のアーキタイプを使用します。
 
 1. コマンドラインターミナルを開き、次の Maven コマンドを入力します。
 
@@ -60,13 +60,13 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
 
    >[!NOTE]
    >
-   > AEM 6.5.5 以降をターゲットにする場合は、 `aemVersion="cloud"` と `aemVersion="6.5.5"`. 6.4.8 以降をターゲットにする場合は、 `aemVersion="6.4.8"`.
+   > AEM 6.5.5 以降を対象にする場合は、`aemVersion="cloud"` を `aemVersion="6.5.5"` に置き換えます。6.4.8 以降を対象にする場合は、`aemVersion="6.4.8"` を使用します。
 
-   注意： `frontendModule=react` プロパティ。 これにより、AEMプロジェクトアーキタイプがスターターを使用してプロジェクトをブートストラップするようになります [React コードベース](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) をAEM SPA Editor で使用する場合。 次のようなプロパティ `appTitle`, `appId`, `artifactId`、および `groupId` を使用して、プロジェクトと目的を特定します。
+   `frontendModule=react` プロパティに注目します。これにより、AEM SPA エディターで使用するスターター [React コードベース](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=ja)でプロジェクトをブートストラップするように、AEM プロジェクトアーキタイプに指示します。次のようなプロパティ `appTitle`、`appId`、`artifactId` および `groupId` を使用して、プロジェクトと目的を特定します。
 
-   プロジェクトを設定するために使用できるプロパティの完全なリスト [ここにあります](https://github.com/adobe/aem-project-archetype#available-properties).
+   プロジェクトの設定で使用できるプロパティの完全なリストは、[こちら](https://github.com/adobe/aem-project-archetype#avilable-properties)にあります。
 
-1. 次のフォルダーおよびファイル構造は、ローカルファイルシステム上の Maven アーキタイプによって生成されます。
+1. 次のフォルダーおよびファイル構造が、ローカルファイルシステム上の Maven アーキタイプによって生成されます。
 
    ```plain
    |--- aem-guides-wknd-spa.react/
@@ -87,20 +87,20 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
        |--- .gitignore
    ```
 
-   各フォルダーは個々の Maven モジュールを表します。 このチュートリアルでは、主に `ui.frontend` モジュールとは、React アプリのことです。 個々のモジュールの詳細については、 [AEM Project Archetype ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+   各フォルダーはそれぞれの Maven モジュールを表します。このチュートリアルでは、主に、React アプリである `ui.frontend` モジュールを扱います。それぞれのモジュールの詳細については、[AEM プロジェクトアーキタイプドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)に記載されています。
 
-## プロジェクトのデプロイとビルド
+## プロジェクトをデプロイしてビルドします。
 
-次に、Maven を使用して、プロジェクトコードをコンパイル、ビルドし、AEMのローカルインスタンスにデプロイします。
+次に、Maven を使用して、プロジェクトコードをコンパイル、ビルドし、AEM のローカルインスタンスにデプロイします。
 
-1. AEMのインスタンスがポート上でローカルで実行されていることを確認します **4502**.
-1. コマンドラインから、 `aem-guides-wknd-spa.react` プロジェクトディレクトリ。
+1. AEM のインスタンスが、ポート **4502** 上でローカルで実行されていることを確認します。
+1. コマンドラインから、`aem-guides-wknd-spa.react` プロジェクトディレクトリに移動します。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
    ```
 
-1. 次のコマンドを実行して、プロジェクト全体を構築し、AEMにデプロイします。
+1. 以下のコマンドを実行してプロジェクト全体をビルドし、AEM にデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -130,49 +130,49 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven プロファイル `autoInstallSinglePackage` プロジェクトの個々のモジュールをコンパイルし、1 つのパッケージをAEMインスタンスにデプロイします。 デフォルトでは、このパッケージは、ポートでローカルに実行されているAEMインスタンスにデプロイされます **4502** そして `admin:admin`.
+   Maven プロファイル `autoInstallSinglePackage` は、プロジェクトの各モジュールをコンパイルし、AEM インスタンスに単一のパッケージをデプロイします。デフォルトでは、このパッケージは、ポート **4502** 上で `admin:admin` の認証情報を使用してローカルで稼働する AEM インスタンスにデプロイされます。
 
-1. に移動します。 **パッケージマネージャー** ローカルAEMインスタンスで以下の手順を実行します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+1. ローカルの AEM インスタンス（[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)）で&#x200B;**パッケージマネージャー**&#x200B;に移動します。
 
-1. 複数のパッケージの前に `aem-guides-wknd-spa.react`.
+1. `aem-guides-wknd-spa.react` というプレフィックスがついた複数のパッケージが表示されます。
 
-   ![WKND SPA Packages](assets/create-project/package-manager.png)
+   ![WKND SPA パッケージ](assets/create-project/package-manager.png)
 
-   *AEM Package Manager*
+   *AEM パッケージマネージャー*
 
-   プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEM環境にインストールされます。
+   プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEM 環境にインストールされます。
 
-## コンテンツを作成
+## 作成者コンテンツ
 
-次に、アーキタイプで生成されたスターターSPAを開き、コンテンツの一部を更新します。
+次に、アーキタイプで生成されたスターター SPA を開き、コンテンツの一部を更新します。
 
-1. 次に移動： **サイト** コンソール： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. **Sites** コンソール（[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）に移動します。
 
-   WKND SPAは、国、言語、ホームページを含む基本的なサイト構造を含んでいます。 この階層は、アーキタイプの `language_country` および `isSingleCountryWebsite`. これらの値は、 [使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#available-properties) プロジェクトを生成する際に使用します。
+   WKND SPA は、国、言語、ホームページを含む基本的なサイト構造を含んでいます。この階層は、アーキタイプのデフォルトの `language_country` および `isSingleCountryWebsite` の値に基づいています。これらの値は、プロジェクトを生成する際に[使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#avilable-properties)で上書きされる場合があります。
 
-2. を開きます。 **us** > **en** > **WKND SPA React ホームページ** ページを表示するには、ページを選択して **編集** ボタンをクリックします。
+2.  **us**／**en**／**WKND SPA React ホームページ**&#x200B;ページを選択し、メニューバーの「**編集**」ボタンをクリックしてページを開きます。
 
    ![サイトコンソール](./assets/create-project/open-home-page.png)
 
-3. A **テキスト** コンポーネントは既にページに追加されています。 このコンポーネントは、AEMの他のコンポーネントと同様に編集できます。
+3. **テキスト**&#x200B;コンポーネントは既にページに追加されています。このコンポーネントは、AEM の他のコンポーネントと同様に編集できます。
 
-   ![テキストコンポーネントの更新](./assets/create-project/update-text-component.gif)
+   ![テキストコンポーネントを更新](./assets/create-project/update-text-component.gif)
 
-4. 追加 **テキスト** コンポーネントをページに追加します。
+4. 追加の&#x200B;**テキスト**&#x200B;コンポーネントをページに追加します。
 
-   オーサリングエクスペリエンスは、従来のAEM Sitesページと似ています。 現在、使用できるコンポーネントの数は限られています。 チュートリアルの過程で、さらに追加されます。
+   オーサリングエクスペリエンスは、従来の AEM Sites ページと似ています。 現在、使用できるコンポーネントの数は限られています。チュートリアルの過程で、さらに追加されます。
 
-## Inspect Single Page Application
+## 単一ページアプリケーションの検査
 
-次に、ブラウザーの開発者ツールを使用して、これがシングルページアプリケーションであることを確認します。
+次に、ブラウザーのデベロッパーツールを使用して、これが単一ページアプリケーションであることを確認します。
 
-1. 内 **ページエディター**、 **ページ情報** ボタン > **公開済みとして表示**:
+1. **ページエディター**&#x200B;で、「**ページ情報**」ボタン／「**公開済みとして表示**」ボタンを順にクリックします。
 
    ![「公開済みとして表示」ボタン](./assets/create-project/view-as-published.png)
 
-   クエリパラメーターを含む新しいタブが開きます `?wcmmode=disabled` AEMエディターを効果的にオフにします。 [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+   これにより、AEM エディター（[http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)）を実質的にオフにするクエリパラメーター `?wcmmode=disabled` を含む新しいタブが開きます。
 
-2. ページのソースを表示し、テキストコンテンツに注目してください **[!DNL Hello World]** または他のコンテンツが見つかりません。 代わりに、次のようなHTMLが表示されます。
+2. ページのソースを表示し、テキストコンテンツ **[!DNL Hello World]** や他のコンテンツが見あたらないことに注目してください 。代わりに、次のような HTML が表示されます。
 
    ```html
    ...
@@ -184,20 +184,20 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
    ...
    ```
 
-   `clientlib-react.min.js` は、ページに読み込まれ、コンテンツのレンダリングを担当する React SPAです。
+   `clientlib-react.min.js` は、ページに読み込まれ、コンテンツのレンダリングを担当する React SPA です。
 
-   しかし、 *コンテンツの取得元*
+   しかし、*このコンテンツはどこから取得されるのでしょうか。*
 
-3. 「 」タブに戻ります。 [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
-4. ブラウザーの開発者ツールを開き、更新中にページのネットワークトラフィックを調べます。 次を表示： **XHR** リクエスト：
+3. タブに戻ります。[http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+4. ブラウザーのデベロッパーツールを開き、更新中にページのネットワークトラフィックを調べます。 **XHR** リクエストを表示します。
 
    ![XHR リクエスト](./assets/create-project/xhr-requests.png)
 
-   ～するように要求すべきである。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). SPAを駆動する JSON 形式のすべてのコンテンツが含まれます。
+   [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) へのリクエストがあるはずです。これには、SPA を駆動するすべてのコンテンツが JSON 形式で含まれます。
 
-5. 新しいタブで、を開きます。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
+5. 新しいタブで [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) を開きます。
 
-   リクエスト `en.model.json` は、アプリケーションを駆動するコンテンツモデルを表します。 Inspect JSON 出力を参照し、 **[!UICONTROL テキスト]** コンポーネント。
+   リクエスト `en.model.json` は、アプリケーションを駆動するコンテンツモデルを表します。 JSON 出力を調査すると、**[!UICONTROL テキスト]**&#x200B;コンポーネントを表すスニペットが見つかるはずです。
 
    ```json
    ...
@@ -216,18 +216,18 @@ AEM SPA Editor と統合された React アプリケーションの出発点と�
    ...
    ```
 
-   次の章では、この JSON コンテンツがAEMコンポーネントからSPAコンポーネントにどのようにマッピングされ、AEM SPAエディターのエクスペリエンスの基盤が形成されるかを調べます。
+   次の章では、この JSON コンテンツが AEM コンポーネントから SPA コンポーネントにどのようにマッピングされ、AEM SPA エディターのエクスペリエンスの基盤が形成されるかを調べます。
 
    >[!NOTE]
    >
-   > JSON 出力を自動的にフォーマットするには、ブラウザー拡張機能をインストールすると役に立つ場合があります。
+   > JSON 出力を自動的にフォーマットするブラウザー拡張機能をインストールすると役立つ場合があります。
 
-## おめでとうございます。 {#congratulations}
+## これで完了です。 {#congratulations}
 
-これで、最初のAEM SPA Editor プロジェクトが作成されました。
+最初の AEM SPA エディタープロジェクトを作成できました。
 
-このSPAは非常に簡単です。 次の数章では、さらに機能が追加されます。
+SPA は非常に簡単です。この後の複数の章では、さらに機能を追加していきます。
 
-### 次のステップ {#next-steps}
+### 次の手順 {#next-steps}
 
-[SPAの統合](integrate-spa.md) - SPAソースコードがAEMプロジェクトと統合される仕組みと、SPAを迅速に開発するために使用できるツールについて説明します。
+[SPA の統合](integrate-spa.md) - SPA ソースコードが AEM プロジェクトと統合される仕組みと、SPA を迅速に開発するために使用できるツールについて説明します。
