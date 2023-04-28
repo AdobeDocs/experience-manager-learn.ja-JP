@@ -7,14 +7,14 @@ role: Developer
 level: Beginner
 thumbnail: 30476.jpeg
 source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '300'
-ht-degree: 47%
+ht-degree: 100%
 
 ---
 
 
-# AEM Sites の開発の手引き - WKND チュートリアル{#getting-started-developing-aem-sites-wknd-tutorial}
+# AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
 
 ## 概要 {#overview}
 
@@ -26,20 +26,20 @@ Adobe Experience Manager as a Cloud Service を使用した開発が初めての
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-このチュートリアルは、**AEMをCloud Service**&#x200B;として使用するように設計されており、**AEM 6.5+**&#x200B;および&#x200B;**AEM 6.4.2+**&#x200B;と後方互換性があります。
+このチュートリアルは **AEM as a Cloud Service** で動作するように設計されており、**AEM 6.5 以降**&#x200B;および **AEM 6.4.2 以降**&#x200B;と下位互換性があります。
 
-**[こちらでチュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[こちらのチュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)**
 
-## WKNDのAEM as aCloud Serviceへのデプロイ{#deploying-wknd-to-aem-as-a-cloud-service}
+## AEM as a Cloud Service への WKND のデプロイ{#deploying-wknd-to-aem-as-a-cloud-service}
 
-WKNDチュートリアルを完了したら、以下のビデオを視聴して、WKNDプロジェクトをAEMにCloud Serviceとしてデプロイする方法の概要を確認してください。
+WKND チュートリアルを完了したら、次のビデオで、WKND プロジェクトを AEM as a Cloud Service にデプロイする方法の概要をご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
-このビデオでは、WKNDサイトプロジェクトが次のように機能する方法を示します。
+このビデオでは、WKND サイトプロジェクトに関する以下の方法を示します。
 
-1. サードパーティのGitリポジトリ（この場合はGithub.com）をソースとしていますが、任意のGitリポジトリを使用できます。
-2. AEM as a Cloud Service as a Registerプログラムに登録されたアップストリームAdobeのCloud Manager Gitリポジトリにプッシュされる
-3. Cloud Managerのパイプラインを介してAEM as a Cloud Service環境にデプロイ
+1. サードパーティ Git リポジトリをソースとする（ここでは Github.com をソースとしていますが、どのような Git リポジトリでも構いません）
+2. AEM as a Cloud Service プログラムに登録されたアップストリームの Adobe Cloud Manager Git リポジトリにプッシュする
+3. Cloud Manager パイプラインを通じて AEM as a Cloud Service 環境にデプロイする
 
-AEMプロジェクトをAEM as a Cloud Serviceにデプロイする方法の完全な概要については、GitをAdobeCloud Managerと統合する方法に関するビデオシリーズ[をご覧ください。](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)
+AEM プロジェクトを AEM as a Cloud サービスにデプロイする方法の概要については、[Git と Adobe Cloud Manager を統合する方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html?lang=ja)に関するビデオシリーズをご覧ください。
