@@ -1,6 +1,6 @@
 ---
 title: インターフェイスのメソッドの実装
-description: Document CloudREST APIを使用してPDFを作成するためのインターフェイスメソッドを実装します。
+description: Document Cloud REST API を使用して PDF を作成するためのインターフェイスメソッドを実装します。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,17 +11,17 @@ thumbnail: 7826.jpg
 kt: 7826
 exl-id: c1fd02aa-577b-453f-8948-ca50e3e8f89b
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '43'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # インターフェイスの実装
 
-インターフェイスを実装するクラスの完全なコードを次に示します。
+次に示すのは、インターフェイスを実装するクラスの完全なコードです。
 
-このクラスは、`getAccessToken`、`getJWTToken`、`GetContentAnalyser`クラスの静的メソッド`getContentAnalyserRequest`の2つを使用します。
+このクラスは、2 つのユーティリティメソッド `getAccessToken`、`getJWTToken` と `GetContentAnalyser` クラスの静的メソッド `getContentAnalyserRequest` を利用します。
 
 
 ```java
