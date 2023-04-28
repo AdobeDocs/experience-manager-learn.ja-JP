@@ -1,6 +1,6 @@
 ---
-title: AEMとAdobe Targetの概要
-description: Adobe Experience Manager as a ExperienceとAdobe Targetを使用して、パーソナライズされたエクスペリエンスを作成し、提供する方法を説明します。
+title: AEM と Adobe Target の概要
+description: Adobe Experience Manager as a Cloud Service と Adobe Target を使用して、パーソナライズされたエクスペリエンスを作成し、配信する方法を説明します。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
 topics: integrations, personalization, administration, development
 audience: all
@@ -14,36 +14,36 @@ role: User
 level: Beginner
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '215'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEMとAdobe Target
+# AEM と Adobe Target
 
-Adobe Experience Manager(AEM)とAdobe Targetは、競合と誤解される可能性がある優れた機能を備えた強力なソリューションです。 お客様は、パーソナライズされたエクスペリエンスを提供するために、これらの製品をどのように、いつどのように組み合わせて使用するかを理解するのに苦労することがあります。 各エンドユーザーに最適化されたエクスペリエンスを提供するには、組織内の異なるチームが緊密に連携し、誰が何をおこなうかを定義する必要があります。
+Adobe Experience Manager（AEM）と Adobe Target は、競合すると誤解されることもありますが、補完的な機能を持つ強力なソリューションです。パーソナライズされたエクスペリエンスを提供するために、これらの製品をどのように、いつ組み合わせて使用すればよいかを理解するのに苦労する場合があります。 各エンドユーザーに最適化されたエクスペリエンスを提供するには、組織内の異なるチームが緊密に連携し、誰が何を行うかを定義する必要があります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41241?quality=12&learn=on)
 
-このビデオでは、AEMとTargetを使用する3つの方法について説明し、組織にとって最も効果的な方法を理解するのに役立ちます。
+このビデオでは、AEM と Target を使用する 3 つの方法について説明しているので、組織にとって最適なものを理解できるようになります。
 
-* __シナリオ1:__ AEMエクスペリエンスフラグメントオファーを使用したパーソナライゼーション
+* __シナリオ 1：__ AEM エクスペリエンスフラグメントオファーを使用したパーソナライズ機能
 
-   1. [AEM WebサイトへのAdobe Targetの追加](./add-target-launch-extension.md)
-   1. [LaunchからのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
-   1. [AEMオーサーサービスとAdobe Targetの統合](./setup-aem-target-cloud-service.md)
-   1. [AEMエクスペリエンスフラグメントのAdobe Targetへの書き出し](./export-experience-fragment-target.md)
-   1. [エクスペリエンスフラグメントオファーを使用してWebページの一部をパーソナライズする](./create-target-activity.md)
+   1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+   1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
+   1. [AEM オーサーサービスと Adobe Target の統合](./setup-aem-target-cloud-service.md)
+   1. [AEM エクスペリエンスフラグメントを Adobe Target に書き出す](./export-experience-fragment-target.md)
+   1. [エクスペリエンスフラグメントオファーを使用して web ページの一部をパーソナライズする](./create-target-activity.md)
 
-* __シナリオ2:__ Visual Experience Composer(VEC)を使用したパーソナライゼーション
+* __シナリオ 2：__ Visual Experience Composer（VEC）を使用したパーソナライズ機能
 
-   1. [AEM WebサイトへのAdobe Targetの追加](./add-target-launch-extension.md)
-   1. [LaunchからのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
-   1. [Visual Experience Composerを使用したWebページの一部のパーソナライズ](./personalization-using-vec.md)
+   1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+   1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
+   1. [Visual Experience Composer で web ページの一部をパーソナライズ](./personalization-using-vec.md)
 
-* __シナリオ3：完全なWebペー__ ジエクスペリエンスのパーソナライズ
+* __シナリオ 3：__&#x200B;完全な web ページエクスペリエンスのパーソナライズ機能
 
-   1. [AEM WebサイトへのAdobe Targetの追加](./add-target-launch-extension.md)
-   1. [LaunchからのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
-   1. [完全なWebページエクスペリエンスのパーソナライズ](./personalization-web-page.md)
+   1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+   1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
+   1. [完全な web ページエクスペリエンスをパーソナライズ](./personalization-web-page.md)
