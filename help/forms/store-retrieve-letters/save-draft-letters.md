@@ -1,6 +1,6 @@
 ---
 title: ドラフトレターの保存と取得
-description: ドラフトレターを保存して取得する方法を説明します
+description: ドラフトレターを保存して取得する方法を説明します。
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -13,15 +13,15 @@ level: Intermediate
 kt: 10208
 exl-id: dc6f64a0-7059-4392-9c29-e66bdef4fd4d
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '227'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # ドラフトレターの保存と取得
 
-次のコードは、レターインスタンスの保存に使用されます。 レターインスタンスのメタデータは、 _icdrafts_ 表。 一意の string(draftID) が生成され、返されます。 この一意の文字列は、保存されたレターインスタンスを取得するために使用されます。
+次のコードは、レターインスタンスの保存に使用されます。レターインスタンスのメタデータは _icdrafts_ テーブルに格納されます。一意の文字列（draftID）が生成されて、返されます。この一意の文字列は、保存されたレターインスタンスを取得するために使用されます。
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -67,10 +67,10 @@ public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException
 }
 ```
 
-## レターを取得
+## レターの取得
 
-保存されたドラフトレターを取得するために、次のコードが書き込まれました。
-保存したレターインスタンスを読み込むには、draftID を指定する必要があります。 この draftID に基づいて、データベースに対してクエリを実行し、レターに関する追加のメタデータを取得します。 同じ draftID を使用して、ファイルシステムから適切な xml を読み取って、レターのデータを作成します。 次に、 CCRDocumentInstance オブジェクトが構築され、返されます。
+保存されたドラフトレターを取得するために、次のコードが作成されました。
+保存したレターインスタンスを読み込むには、draftID を指定する必要があります。この draftID に基づいて、データベースに対してクエリを実行し、レターに関する追加のメタデータを取得します。同じ draftID を使用して、ファイルシステムから適切な xml を読み取って、レターのデータを作成します。次に、CCRDocumentInstance オブジェクトが作成されて、返されます。
 
 
 ```java
@@ -99,9 +99,9 @@ public CCRDocumentInstance get(String draftID) throws CCRDocumentException {
 }
 ```
 
-### レターを更新
+### レターの更新
 
-次のコードは、保存されたレターインスタンスを更新するために使用されました。 更新されたレターのデータは、レター ID を使用してファイルシステムに書き込まれます。
+保存されたレターインスタンスを更新するために、次のコードを使用しました。更新されたレターのデータは、レター ID を使用してファイルシステムに書き込まれます。
 
 ```java
 public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumentException {
@@ -120,10 +120,10 @@ public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumen
     }
 ```
 
-### 保存されているすべてのレターを取得
+### 保存されているすべてのレターの取得
 
-AEM Formsでは、保存されたレターの一覧を表示する標準のユーザーインターフェイスは提供されていません。 この記事では、アダプティブフォームを使用して、保存したレターインスタンスを表形式でリストします。
-クエリをカスタマイズして、保存されたレターインスタンスを取得できます。 この例では、「admin」によって保存されたレターインスタンスを問い合わせています。
+AEM Forms には、保存されたレターの一覧を表示する標準のユーザーインターフェイスはありません。この記事では、アダプティブフォームを使用して、保存したレターインスタンスを表形式で一覧表示します。
+保存されたレターインスタンスを取得するように、クエリをカスタマイズできます。この例では、保存済みのレターインスタンスを「admin」でクエリしています。
 
 ```java
     public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
@@ -170,4 +170,4 @@ AEM Formsでは、保存されたレターの一覧を表示する標準のユ�
 
 ### Eclipse プロジェクト
 
-サンプル実装を使用した Eclipse プロジェクトは、次のようになります。 [ここからダウンロード](assets/icdrafts-eclipse-project.zip)
+サンプルを実装した Eclipse プロジェクトは、[こちらからダウンロード](assets/icdrafts-eclipse-project.zip)できます。
