@@ -1,6 +1,6 @@
 ---
-title: AEMプロジェクトのリポジトリ構造パッケージとは
-description: AEMアプリケーションのリポジトリ構造パッケージ、その重要性と適切に定義する方法を確認します。
+title: AEM プロジェクトのリポジトリ構造パッケージとは
+description: AEM アプリケーションのリポジトリ構造パッケージ、その重要性、適切に定義する方法を確認します。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -10,14 +10,14 @@ kt: 6928
 thumbnail: 330550.jpg
 exl-id: af0da906-87ea-4b52-9c9c-343fb29d3fcc
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 # リポジトリ構造パッケージ
 
-AEMアプリケーションの参照 [リポジトリ構造パッケージ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=ja)、その重要性と最適な定義方法を示します。
+AEM アプリケーションの[リポジトリ構造パッケージ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=ja)、その重要性、最適な定義方法を見ていきます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)
