@@ -1,6 +1,6 @@
 ---
-title: エクスペリエンスフラグメントオファーを使用したTargetアクティビティの作成
-description: AEMエクスペリエンスフラグメントオファーを使用して、Adobe Targetアクティビティを作成およびテストする方法について説明します。
+title: エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成
+description: AEM エクスペリエンスフラグメントオファーを使用して、 Adobe Target Activity を作成およびテストする方法について説明します。
 feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -14,26 +14,26 @@ role: User
 level: Intermediate
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# エクスペリエンスフラグメントオファーを使用したAdobe Targetアクティビティの作成 {#target-activity-experience-fragment}
+# エクスペリエンスフラグメントオファーを使用して  Adobe Target Activity を作成する {#target-activity-experience-fragment}
 
-AEMエクスペリエンスフラグメントオファーを使用して、Adobe Targetアクティビティを作成およびテストする方法について説明します。
+AEM エクスペリエンスフラグメントオファーを使用して、 Adobe Target Activity を作成およびテストする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
 
 ## 前提条件
 
-エクスペリエンスフラグメントオファーを使用してAdobe Targetアクティビティを作成するには、次の設定を完了する必要があります。
+エクスペリエンスフラグメントオファーを使用して Adobe Target アクティビティを作成するには、次の設定を行う必要があります。
 
-1. [AEM WebサイトへのAdobe Targetの追加](./add-target-launch-extension.md)
-1. [LaunchからのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
-1. [AEMオーサーサービスとAdobe Targetの統合](./setup-aem-target-cloud-service.md)
-1. [AEMエクスペリエンスフラグメントのAdobe Targetへの書き出し](./export-experience-fragment-target.md)
+1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
+1. [AEM オーサーサービスと Adobe Target の統合](./setup-aem-target-cloud-service.md)
+1. [AEM エクスペリエンスフラグメントを Adobe Target に書き出す](./export-experience-fragment-target.md)
 
 ## サポートリンク
 
