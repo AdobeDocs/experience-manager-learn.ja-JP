@@ -1,6 +1,6 @@
 ---
-title: サードパーティ JAR を含む
-description: AEMプロジェクトでサードパーティの JAR ファイルを使用する方法を学ぶ
+title: サードパーティ JAR の組み込み
+description: AEM プロジェクトでサードパーティの JAR ファイルを使用する方法を説明します。
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -10,18 +10,18 @@ kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
 source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '282'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# AEMプロジェクトへのサードパーティバンドルの追加
+# AEM プロジェクトへのサードパーティバンドルの組み込み
 
-この記事では、AEMプロジェクトにサードパーティの OSGi バンドルを含める手順について説明します。この記事の目的で、 [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) をAEMプロジェクトに追加します。  OSGi が maven リポジトリで使用可能な場合は、プロジェクトの POM.xml ファイルにバンドルの依存関係が含まれます。
+この記事では、AEM プロジェクトにサードパーティの OSGi バンドルを組み込む手順について説明します。ここでは、 [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) を AEM プロジェクトに追加します。OSGi が Maven リポジトリで使用可能な場合は、プロジェクトの POM.xml ファイルにバンドルの依存関係を含めます。
 
 >[!NOTE]
-> サードパーティの jar が OSGi バンドルであると想定されます。
+> サードパーティの JAR が OSGi バンドルであることを想定します。
 
 ```java
 <!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
@@ -32,7 +32,7 @@ ht-degree: 2%
 </dependency>
 ```
 
-OSGi バンドルがファイルシステム上にある場合は、という名前のフォルダーを作成します。 **localjar** プロジェクトのベースディレクトリ (C:\aemformsbundles\AEMFormsProcessStep\localjar) の下で、依存関係は次のようになります
+OSGi バンドルがファイルシステム上にある場合は、プロジェクトのベースディレクトリ（C:\aemformsbundles\AEMFormsProcessStep\localjar）の下で **localjar** という名前のフォルダーを作成します。依存関係は次のようになります。
 
 ```java
 <dependency>
@@ -46,20 +46,20 @@ OSGi バンドルがファイルシステム上にある場合は、という名
 
 ## フォルダー構造の作成
 
-このバンドルをAEMプロジェクトに追加しています **AEMFormsProcessStep** これは **c:\aemformsbundles** フォルダー
+このバンドルを AEM プロジェクト **AEMFormsProcessStep** に追加します。これは **c:\aemformsbundles** フォルダーに格納されます。
 
-* を開きます。 **filter.xml** C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault folder of your project Make a note of the root attribute of the filter elementから。
+* プロジェクトの C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault フォルダーから **filter.xml** を開きます。
 
-* 次のフォルダー構造を作成しますC:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
-* この **apps/AEMFormsProcessStep-vendor-packages** は filter.xml のルート属性値です
+* フォルダー構造（C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install）を作成します。
+* **apps/AEMFormsProcessStep-vendor-packages** は filter.xml のルート属性値です。
 * プロジェクトの POM.xml の依存関係セクションを更新します。
-* コマンドプロンプトを開きます。私の場合は、プロジェクトのフォルダー (c:\aemformsbundles\AEMFormsProcessStep) に移動します。 次のコマンドを実行します。
+* コマンドプロンプトを開きます。ここでは、プロジェクトのフォルダー（c:\aemformsbundles\AEMFormsProcessStep）に移動します。 以下のコマンドを実行します。
 
 ```java
 mvn clean install -PautoInstallSinglePackage
 ```
 
-問題が解決しない場合、パッケージはサードパーティバンドルと共にAEMインスタンスにインストールされます。 次を使用して、バンドルを確認できます。 [felix web コンソール](http://localhost:4502/system/console/bundles). サードパーティバンドルは、 `crx` 次に示すリポジトリ
+問題がなければ、パッケージがサードパーティバンドルと共に AEM インスタンスにインストールされます。 バンドルは [Felix web コンソール](http://localhost:4502/system/console/bundles)を使用して確認できます。サードパーティバンドルは、次に示す `crx` リポジトリの /apps フォルダーにあります。
 ![サードパーティ](assets/custom-bundle1.png)
 
 
