@@ -1,6 +1,6 @@
 ---
-title: アダプティブフォーム送信時のキャンペーンプロファイルの作成
-description: この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタムの送信メカニズムを利用して、アダプティブフォームの送信を処理します。
+title: アダプティブフォーム送信時の Campaign プロファイルの作成
+description: この記事では、アダプティブフォームの送信時に Adobe Campaign Standard でプロファイルを作成するために必要な手順について説明します。このプロセスでは、カスタムの送信メカニズムを利用して、アダプティブフォームの送信を処理します。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -8,25 +8,25 @@ role: Developer
 level: Experienced
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '358'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォーム送信時のキャンペーンプロファイルの作成 {#creating-campaign-profile-on-adaptive-form-submission}
+# アダプティブフォーム送信時の Campaign プロファイルの作成 {#creating-campaign-profile-on-adaptive-form-submission}
 
-この記事では、アダプティブフォームの送信時にAdobe Campaign Standardでプロファイルを作成するために必要な手順について説明します。 このプロセスでは、カスタムの送信メカニズムを利用して、アダプティブフォームの送信を処理します。
+この記事では、アダプティブフォームの送信時に Adobe Campaign Standard でプロファイルを作成するために必要な手順について説明します。このプロセスでは、カスタムの送信メカニズムを利用して、アダプティブフォームの送信を処理します。
 
-このチュートリアルでは、アダプティブフォーム送信時に Campaign プロファイルを作成する手順を説明します。 この使用例を達成するには、次の手順を実行する必要があります
+このチュートリアルでは、アダプティブフォーム送信時に Campaign プロファイルを作成する手順を説明します。 このユースケースを達成するには、次の手順を実行する必要があります
 
-* AEM API を使用してAdobe Campaign Standardプロファイルを作成するための REST サービス (CampaignService) の作成
-* アダプティブフォームの送信を処理するためのカスタム送信アクションを作成する
-* CampaignService の createProfile メソッドを呼び出す
+* REST API を使用した、Adobe Campaign Standard プロファイルを作成するための AEM サービス（CampaignService）の作成
+* アダプティブフォームの送信を処理するためのカスタム送信アクションの作成
+* CampaignService の createProfile メソッドの呼び出し
 
-## AEM Service の作成 {#create-aem-service}
+## AEM サービスの作成 {#create-aem-service}
 
-AEM Service を作成してAdobe Campaignプロファイルを作成します。 このAEMサービスは、OSGi 設定からAdobe Campaign資格情報を取得します。 キャンペーン資格情報が取得されたアクセストークンが生成され、アクセストークン HTTP Post 呼び出しを使用して、Adobe Campaignでプロファイルが作成されます。 次に、プロファイルを作成するためのコードを示します。
+Adobe Campaign プロファイルを作成するための AEM サービスを作成します。この AEM サービスは、OSGi 設定から Adobe Campaign 資格情報を取得します。キャンペーン資格情報が取得されたら、アクセストークンが生成され、アクセストークン HTTP Post 呼び出しを使用して、Adobe Campaign でプロファイルが作成されます。次に、プロファイルを作成するためのコードを示します。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -241,9 +241,9 @@ return null;
 
 ## カスタム送信 {#custom-submit}
 
-アダプティブフォームの送信を処理するカスタム送信ハンドラーを作成します。 このカスタム送信ハンドラーでは、CampaignService の createProfile メソッドを呼び出します。 createProfile メソッドは、作成する必要があるプロファイルを表す JSONbject を受け取ります。
+アダプティブフォームの送信を処理するカスタム送信ハンドラーを作成します。このカスタム送信ハンドラーで、CampaignService の createProfile メソッドを呼び出します。createProfile メソッドは、作成する必要があるプロファイルを表す JSONObject を受け取ります。
 
-AEM Formsのカスタム送信ハンドラーの詳細については、次の手順に従ってください [リンク](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+AEM Forms のカスタム送信ハンドラーの詳細については、こちらの[リンク](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)の手順に従ってください。
 
 次に、カスタム送信のコードを示します
 
@@ -258,13 +258,13 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## ソリューションをテストする {#test-the-solution}
+## ソリューションのテスト {#test-the-solution}
 
-サービスとカスタム送信アクションを定義したら、ソリューションをテストする準備が整いました。 ソリューションをテストするには、次の手順を実行してください
+サービスとカスタム送信アクションを定義したら、ソリューションをテストする準備が整いました。ソリューションをテストするには、次の手順を実行してください
 
 
-* [ここで説明する手順に従っていることを確認します。](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [パッケージマネージャーを使用してアダプティブフォームとカスタム送信ハンドラーを読み込む](assets/create-acs-profile-on-af-submission.zip)このパッケージには、カスタム送信アクションに送信するように設定されたアダプティブフォームが含まれています。
-* プレビュー [フォーム](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
-* すべてのフィールドに入力し、
+* [こちらで説明されている手順に従っていることを確認します](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [パッケージマネージャーを使用してアダプティブフォームとカスタム送信ハンドラーを読み込みます](assets/create-acs-profile-on-af-submission.zip)。このパッケージには、カスタム送信アクションに送信するように設定されたアダプティブフォームが含まれています。
+* [フォーム](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)をプレビューします
+* すべてのフィールドに入力し、送信します
 * ACS インスタンスに新しいプロファイルが作成されます
