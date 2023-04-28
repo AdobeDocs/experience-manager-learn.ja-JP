@@ -1,6 +1,6 @@
 ---
 title: フォーム添付ファイルのアセンブリ
-description: 指定された順序でフォーム添付ファイルをアセンブリ
+description: 指定された順序でフォームの添付ファイルを組み合わせます
 feature: Assembler
 version: 6.4,6.5
 kt: 6406
@@ -11,28 +11,28 @@ level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '633'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # フォーム添付ファイルのアセンブリ
 
-この記事では、アダプティブフォームの添付ファイルを指定された順序で組み立てるためのアセットを提供します。 このサンプルコードを機能させるには、フォームの添付ファイルを pdf 形式にする必要があります。 次に使用例を示します。
-アダプティブフォームに入力するユーザーは、1 つ以上の pdf ドキュメントをフォームに添付します。
-フォーム送信時に、フォームの添付ファイルを組み立てて 1 つの PDF を生成します。 最終的な PDF を生成するために添付ファイルを組み立てる順序を指定できます。
+この記事では、指定された順序でアダプティブフォームの添付ファイルを組み合わせるためのアセットを提供します。このサンプルコードを機能させるには、フォームの添付ファイルを PDF 形式にします。次にユースケースを示します。
+ユーザーがアダプティブフォームに入力すると、フォームに 1 つ以上の PDF ドキュメントが添付されます。
+フォーム送信時に、フォームの添付ファイルを組み合わせて 1 つの PDF を生成します。最終的な PDF を生成するために組み合わせる添付ファイルの順序を指定できます。
 
 ## WorkflowProcess インターフェイスを実装する OSGi コンポーネントの作成
 
-を実装する OSGi コンポーネントを作成する [com.adobe.granite.workflow.exec.WorkflowProcess インターフェイス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). このコンポーネント内のコードは、AEMワークフローのプロセスステップコンポーネントに関連付けることができます。 このコンポーネントには、インターフェイス com.adobe.granite.workflow.exec.WorkflowProcess の execute メソッドが実装されています。
+[com.adobe.granite.workflow.exec.WorkflowProcess インターフェイス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html?lang=ja)を実装する OSGi コンポーネントを作成します。このコンポーネントのコードは、AEM ワークフローのプロセスステップコンポーネントに関連付けることができます。このコンポーネントには、com.adobe.granite.workflow.exec.WorkflowProcess インターフェイスの実行メソッドが実装されています。
 
-アダプティブフォームがAEMワークフローのトリガーに送信されると、送信されたデータは、ペイロードフォルダーの下の指定されたファイルに保存されます。 例えば、これは送信されたデータファイルです。 idcard および bankstatements タグで指定された添付ファイルを組み立てる必要があります。
-![submitted-data](assets/submitted-data.JPG).
+AEM ワークフローをトリガーするためにアダプティブフォームが送信されると、送信されたデータはペイロードフォルダーの下にある指定されたファイルに保存されます。例えば、次のようなデータファイルが送信されます。idcard タグと bankstatements タグで指定された添付ファイルを組み合わせる必要があります。
+![submitted-data](assets/submitted-data.JPG)
 
-### タグ名を取得する
+### タグ名の取得
 
-添付ファイルの順序は、以下のスクリーンショットに示すように、ワークフローでプロセスステップ引数として指定されます。 ここでは、フィールド id カードに追加された添付ファイルを組み立て、次に bankstatements を組み立てます。
+以下のスクリーン ショットに示すように、添付ファイルの順序は、ワークフローのプロセスステップ引数として指定されます。ここでは、idcard フィールドに追加された添付ファイル、bankstatements フィールドに追加された添付ファイルの順にアセンブリします。
 
 ![process-step](assets/process-step.JPG)
 
@@ -44,13 +44,13 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 添付ファイル名から DDX を作成
 
-次に、 [Document Description XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) ドキュメントのアセンブリに Assembler サービスで使用されるドキュメント。 以下は、プロセス引数から作成された DDX です。 NoForms 要素を使用すると、XFA ベースのドキュメントをアセンブリする前に統合できます。 PDFソース要素は、プロセス引数で指定された順番で正しく配置されています。
+次に、ドキュメントを組み合わせるために Assembler サービスで使用される [Document Description XML（DDX）](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)ドキュメントを作成します。以下は、プロセス引数から作成された DDX です。NoForms 要素を使用すると、XFA ベースのドキュメントを作成する前に統合できます。PDF ソース要素は、プロセス引数で指定された順番で正しく配置されます。
 
 ![ddx-xml](assets/ddx.PNG)
 
 ### ドキュメントのマップを作成
 
-次に、添付ファイル名をキーにし、値に添付ファイルを含むドキュメントのマップを作成します。 Query Builder サービスは、ペイロードパスの下の添付ファイルに対してクエリを実行し、ドキュメントのマップを作成するために使用されました。 このドキュメントのマップと DDX は、Assembler サービスが最終的な PDF をアセンブリするために必要です。
+次に、添付ファイル名をキー、添付ファイルを値としてドキュメントのマップを作成します。Query Builder サービスを使用して、ペイロードパスの下にある添付ファイルに対してクエリを実行し、ドキュメントのマップを作成しました。このドキュメントのマップと DDX は、Assembler サービスで最終的な PDF を作成するために必要です。
 
 ```java
 public Map<String, Object> createMapOfDocuments(String payloadPath,WorkflowSession workflowSession )
@@ -85,10 +85,10 @@ return mapOfDocuments;
 }
 ```
 
-### AssemblerService を使用したドキュメントのアセンブリ
+### Assembler サービスを使用したドキュメントのアセンブリ
 
-DDX とドキュメントマップが作成された後、次の手順では、 AssemblerService を使用してドキュメントをアセンブリします。
-次のコードは、アセンブルされた pdf をアセンブルして返します。
+DDX とドキュメントマップが作成されたら、次の手順では Assembler サービスを使用してドキュメントを作成します。
+次のコードは、`DF を組み合わせ、組み合わせられた PDF を返します。
 
 ```java
 private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object> mapOfDocuments, com.adobe.aemfd.docmanager.Document ddxDocument)
@@ -110,9 +110,9 @@ private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object
 }
 ```
 
-### ペイロードフォルダーの下にアセンブリされた PDF を保存します。
+### ペイロードフォルダーの下に作成した PDF を保存します。
 
-最後の手順は、ペイロードフォルダーの下にアセンブリされた pdf を保存することです。 その後、ワークフローの後続の手順でこの PDF にアクセスして、さらに処理をおこなうことができます。
+最後の手順では、組み合わせた PDF をペイロードフォルダーに保存します。ワークフローの後続の手順でこの PDF にアクセスして、さらに処理することができます。
 次のコードスニペットを使用して、ペイロードフォルダーの下にファイルを保存しました
 
 ```java
@@ -127,21 +127,21 @@ log.debug("Saved !!!!!!");
 session.save();
 ```
 
-次に、フォーム添付ファイルが組み立てられて保存された後のペイロードフォルダー構造を示します。
+以下に、フォーム添付ファイルを組み合わせて保存した後のペイロードフォルダー構造を示します。
 
 ![payload-structure](assets/payload-structure.JPG)
 
-### この機能をAEM Server で動作させるには
+### この機能を AEM Server で動作させるには
 
-* をダウンロードします。 [フォーム添付ファイルフォームのアセンブリ](assets/assemble-form-attachments-af.zip) をローカルシステムに送信します。
-* フォームを[Forms And Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) ページ。
-* ダウンロード [ワークフロー](assets/assemble-form-attachments.zip) パッケージマネージャーを使用してAEMに読み込みます。
-* をダウンロードします。 [カスタムバンドル](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
-* を使用してバンドルをデプロイおよび開始します。 [web コンソール](http://localhost:4502/system/console/bundles)
-* ブラウザーで次の場所を指定します。 [AssembleAttachments フォーム](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* [フォーム添付ファイルのアセンブリフォーム](assets/assemble-form-attachments-af.zip)をローカルシステムにダウンロードします。
+* [フォームとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)ページからフォームを読み込みます。
+* [ワークフロー](assets/assemble-form-attachments.zip)をダウンロードし、パッケージマネージャーを使用して AEM に読み込みます。
+* [カスタムバンドル](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)をダウンロードします
+* [Web コンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをデプロイして開始します
+* ブラウザーで[添付ファイルのアセンブリフォーム](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)にアクセスします
 * ID ドキュメントに添付ファイルを追加し、いくつかの PDF ドキュメントを銀行取引明細書セクションに追加します
-* フォームを送信してワークフローをトリガー
-* ワークフローの [crx のペイロードフォルダー](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) アセンブリ済み pdf の場合
+* フォームを送信してワークフローをトリガーします
+* 組み合わせた PDF の](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) crx にあるワークフローのペイロードフォルダー[を確認します
 
 >[!NOTE]
-> カスタムバンドルのロガーを有効にしている場合、DDX とアセンブリ済みのファイルはAEMインストール環境のフォルダーに書き込まれます。
+> カスタムバンドルのロガーを有効にしている場合、DDX 、および組み合わせたファイルは AEM インストールのフォルダーに書き込まれます。
