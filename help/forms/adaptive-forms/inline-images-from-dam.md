@@ -1,6 +1,6 @@
 ---
-title: アダプティブFormsでの DAM 画像のインライン表示
-description: アダプティブFormsで DAM 画像をインラインで表示する
+title: アダプティブフォームでの DAM 画像のインライン表示
+description: アダプティブフォームでの DAM 画像のインライン表示
 feature: Adaptive Forms
 topics: development
 version: 6.4,6.5
@@ -11,19 +11,19 @@ last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
 source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# アダプティブFormsでの DAM 画像の表示
+# アダプティブフォームでの DAM 画像の表示
 
-一般的な使用例は、crx リポジトリ内の画像をアダプティブフォーム内でインラインで表示する場合です。
+一般的なユースケースは、crx リポジトリにある画像をアダプティブフォーム内でインライン表示することです。
 
-## プレースホルダー画像を追加
+## プレースホルダー画像の追加
 
-最初の手順では、プレースホルダー div をパネルコンポーネントの前に追加します。 パネルコンポーネントの下のコードでは、photo-upload の CSS クラス名で識別されます。 JavaScript 関数は、アダプティブフォームに関連付けられているクライアントライブラリの一部です。 この関数は、添付ファイルコンポーネントの initialize イベントで呼び出されます。
+最初の手順では、プレースホルダー div をパネルコンポーネントの前に追加します。以下のコードでは、パネルコンポーネントは CSS クラス名 photo-upload で識別されます。JavaScript 関数は、アダプティブフォームに関連付けられているクライアントライブラリの一部です。この関数は、添付ファイルコンポーネントの initialize イベントで呼び出されます。
 
 ```javascript
 /**
@@ -35,9 +35,9 @@ function addPlaceholderDiv(){
 }
 ```
 
-### インライン画像を表示
+### インライン画像の表示
 
-ユーザーが画像を選択すると、非表示フィールドの ImageName に、選択した画像名が入力されます。 次に、この画像名が damURLToFile 関数に渡され、createFile 関数を呼び出して FileReader.readAsDataURL() の URL を Blob に変換します。
+ユーザーが画像を選択すると、選択した画像名が非表示フィールド ImageName に入力されます。次に、この画像名が damURLToFile 関数に渡され、その関数が createFile 関数を呼び出して URL を Blob に変換し、FileReader.readAsDataURL() に渡します。
 
 ```javascript
 /**
@@ -80,10 +80,10 @@ async function createFile(imageName){
   }
 ```
 
-### サーバーにデプロイ
+### サーバーへのデプロイ
 
-* をダウンロードしてインストールする [クライアントライブラリとサンプル画像](assets/InlineDAMImage.zip) AEM Package Manager を使用してAEMインスタンス上で
-* をダウンロードしてインストールする [サンプルフォーム](assets/FieldInspectionForm.zip) AEMパッケージマネージャーを使用してAEMインスタンス上で
-* ブラウザーで次の場所を指定します。 [FielInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
-* 器具の 1 つを選択
-* 画像がフォームに表示されます
+* AEM パッケージマネージャーを使用して、[クライアントライブラリとサンプル画像](assets/InlineDAMImage.zip)をダウンロードして AEM インスタンスにインストールします。
+* AEM パッケージマネージャーを使用して、[サンプルフォーム](assets/FieldInspectionForm.zip)をダウンロードし、AEM インスタンスにインストールします。
+* ブラウザーで [FielInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled) にアクセスします。
+* フィクスチャーの 1 つを選択します。
+* 画像がフォームに表示されます。
