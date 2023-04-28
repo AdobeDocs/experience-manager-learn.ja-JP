@@ -1,7 +1,7 @@
 ---
-title: JSON スキーマとデータを使用したAEM Forms[Part3]
+title: JSON スキーマとデータを使用した AEM Forms [第 3 部]
 seo-title: AEM Forms with JSON Schema and Data[Part3]
-description: マルチパートチュートリアルで、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
+description: 複数のパートで構成されているチュートリアルでは、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -14,18 +14,18 @@ role: Developer
 level: Experienced
 exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '252'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # データベースへの JSON スキーマの格納 {#storing-json-schema-in-database}
 
 
-送信されたデータに対してクエリを実行するには、送信されたフォームに関連付けられた JSON スキーマを保存する必要があります。 クエリビルダーでは、この JSON スキーマを使用してクエリを作成します。
+送信されたデータに対してクエリを実行するには、送信されたフォームに関連付けられた JSON スキーマを保存する必要があります。 QueryBuilder では、この JSON スキーマを使用してクエリを作成します。
 
-アダプティブフォームが送信されると、関連する JSON スキーマがデータベース内にあるかどうかを確認します。 JSON スキーマが存在しない場合は、JSON スキーマを取得し、適切なテーブルにスキーマを保存します。 また、フォーム名を JSON スキーマに関連付けます。 次のスクリーンショットは、JSON スキーマが格納されている表を示しています。
+アダプティブフォームが送信されると、関連する JSON スキーマがデータベース内にあるかどうかを確認します。 JSON スキーマが存在しない場合は、JSON スキーマを取得し、適切なテーブルにスキーマを保存します。 また、フォーム名を JSON スキーマに関連付けます。 次のスクリーンショットは、JSON スキーマが格納されているテーブルを示しています。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -145,10 +145,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-要約すると、我々は、これまでに以下を行った。
+要約すると、これまでに次のことを行いました。
 
-* JSON スキーマに基づくアダプティブフォームの作成
-* フォームが初めて送信される場合は、フォームに関連付けられた JSON スキーマをデータベースに保存します。
-* アダプティブフォームの連結データをデータベースに保存します。
+* JSON スキーマに基づいてアダプティブフォームを作成する
+* フォームが初めて送信されている場合は、フォームに関連付けられた JSON スキーマをデータベースに保存する
+* アダプティブフォームの連結データをデータベースに保存する
 
 次の手順では、 QueryBuilder を使用して、JSON スキーマに基づいて検索するフィールドを表示します
