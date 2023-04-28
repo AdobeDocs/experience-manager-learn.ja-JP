@@ -1,6 +1,6 @@
 ---
-title: Unix セットアップで OpenOffice 固有の問題をトラブルシューティングする手順
-description: UNIX セットアップでの OpenOffice の問題のPDFGenerator の問題のトラブルシューティング。
+title: UNIX セットアップで OpenOffice 固有の問題をトラブルシューティングする手順
+description: UNIX セットアップで PDF ジェネレーターに関する OpenOffice の問題をトラブルシューティングします。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: bc86dda1-18a4-474b-a8ec-d4e7f15ddd10
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Unix セットアップで OpenOffice 固有のエラーをトラブルシューティングする手順
+# UNIX セットアップで OpenOffice 固有のエラーをトラブルシューティングする手順
 
-*このビデオでは、AEM Forms PDFG 用の Unix 設定で OpenOffice 固有のエラーが発生した場合のトラブルシューティング手順を説明します。*
+*このビデオでは、AEM Forms PDFG 用の UNIX セットアップで OpenOffice 固有のエラーが発生した場合のトラブルシューティング手順を説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)
