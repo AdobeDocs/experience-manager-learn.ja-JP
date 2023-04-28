@@ -1,6 +1,6 @@
 ---
-title: Unix 設定 (PhantomJS) での HtmltoPDF 固有の問題のトラブルシューティング手順
-description: UNIX セットアップで PhantomJS を使用した HtmltoPDF の問題のトラブルシューティング。
+title: UNIX 設定（PhantomJS）での HtmltoPDF 固有の問題のトラブルシューティング手順
+description: UNIX 設定で PhantomJS を使用して HtmltoPDF の問題をトラブルシューティングします。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: a739462e-3d7a-49a2-a740-5c5c9400ea08
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Unix 設定 (PhantomJS) での HtmltoPDF 固有の問題のトラブルシューティング手順
+# UNIX 設定（PhantomJS）での HtmltoPDF 固有の問題のトラブルシューティング手順
 
-*このビデオでは、Unix 設定 (PhantomJS) で HtmltoPDF 固有の問題をトラブルシューティングする手順を説明します。*
+*このビデオでは、UNIX 設定（PhantomJS）での HtmltoPDF 固有の問題をトラブルシューティングする手順について説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335546?quality=12&learn=on)
