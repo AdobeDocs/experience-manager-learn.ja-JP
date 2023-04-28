@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '136'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ここでは、カスタム関数とコードエディターを使用して、ビジネスルールを作成します。
 
-既に [カスタム関数を使用した ClientLib](assets/client-libs-and-logo.zip) このチュートリアルの前の部分です。
+このチュートリアルで既に、[カスタム関数](assets/client-libs-and-logo.zip)を使用して ClientLib をインストールしています。
 
 通常、クライアントライブラリは CSS と JavaScript ファイルで構成されます。 このクライアントライブラリには、コンボボックス値を入力する関数を公開する javascript ファイルが含まれています。
 
@@ -29,11 +29,11 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
-### パネルの概要タイトルを設定 {#set-the-summary-title-of-panels}
+### パネルの概要タイトルを設定する {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
-#### パネルを検証 {#validate-panels-using-rule-editor}
+#### パネルを検証する {#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
@@ -60,12 +60,12 @@ else
   }
 ```
 
-1 行目のコメントを解除して、ブラウザーウィンドウでコードをデバッグできます。
+1 行目のコメントアウトを解除すると、ブラウザーウィンドウでコードをデバッグできます。
 
-4 行目 — 現在のパネルを取得します
+4 行目 - 現在のパネルを取得します
 
-5 行目 — 現在のパネルを検証します。
+5 行目 - 現在のパネルを検証します。
 
-行 9 — エラーがない場合は、次のパネルに移動する
+9 行目 - エラーがない場合は、次のパネルに移動します
 
 フォームをプレビューし、新しく有効にした機能をテストします。
