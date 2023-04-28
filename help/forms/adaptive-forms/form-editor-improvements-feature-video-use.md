@@ -1,6 +1,6 @@
 ---
-title: AEM Formsのフォームエディターの改善点
-description: AEM 6.3 では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
+title: AEM Forms におけるフォームエディターの改善点
+description: AEM 6.3 のこのリリースでは、アダプティブフォームとアダプティブドキュメントのオーサリングを簡素化するための新機能と機能強化がいくつか導入されています。これらの機能強化により、市場投入までの時間が短縮されます。また、ビジネスユーザーは、フォームとドキュメントを業務に使用できるようになります。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,30 +9,30 @@ level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '187'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# AEM Formsのフォームエディターの改善点 {#form-editor-improvements-in-aem-forms}
+# AEM Forms におけるフォームエディターの改善点 {#form-editor-improvements-in-aem-forms}
 
-AEM 6.3 では、アダプティブフォームとアダプティブドキュメントのオーサリングエクスペリエンスをシンプルにする、このリリースの新機能および機能強化がいくつか導入されています。 この機能強化により、市場投入までの時間を短縮し、ビジネスユーザーがフォームやドキュメントを使用できるようになります
+AEM 6.3 のこのリリースでは、アダプティブフォームとアダプティブドキュメントのオーサリングを簡素化するための新機能と機能強化がいくつか導入されています。これらの機能強化により、市場投入までの時間が短縮されます。また、ビジネスユーザーは、フォームとドキュメントを業務に使用できるようになります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
 
-**アダプティブフォームエディターの主な改善点を次に示します。**
+**アダプティブフォームエディターの主な改善点は次のとおりです。**
 
 * [エンドユーザーエクスペリエンスの向上](https://helpx.adobe.com/jp/aem-forms/6-3/introduction-forms-authoring.html)
 
-* フォームフィールドの自動入力
+* 自動入力フォームフィールド
 * テキストボックスコンポーネントのリッチテキスト
-* フォームフィールドの専用の入力タイプ
+* フォームフィールドの特殊な入力タイプ
 
 * [コンポーネントタイトルのインライン編集](https://helpx.adobe.com/jp/aem-forms/6-3/introduction-forms-authoring.html)
-* [コンポーネントのデフォルトの検証](https://helpx.adobe.com/jp/aem-forms/6-3/introduction-forms-authoring.html)
-* [コンテンツオーサリングエクスペリエンスを高速化するためのキーボードショートカット](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
-* [アダプティブフォーム作成用の JSON スキーマのサポート](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
-* [アダプティブフォームの CAPTCHA](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
-* [Acrobat Sign統合の強化](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
-* [フォームの非同期送信](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)
+* [コンポーネントにおけるデフォルト検証](https://helpx.adobe.com/jp/aem-forms/6-3/introduction-forms-authoring.html)
+* [コンテンツのオーサリングエクスペリエンスを迅速化するためのキーボードショートカット](https://helpx.adobe.com/jp/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
+* [アダプティブフォームを作成するための JSON スキーマのサポート](https://helpx.adobe.com/jp/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
+* [アダプティブフォームの CAPTCHA](https://helpx.adobe.com/jp/aem-forms/6-3/captcha-adaptive-forms.html)
+* [Acrobat Sign 統合の強化](https://helpx.adobe.com/jp/aem-forms/6-3/working-with-adobe-sign.html)
+* [フォームの非同期送信](https://helpx.adobe.com/jp/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)
