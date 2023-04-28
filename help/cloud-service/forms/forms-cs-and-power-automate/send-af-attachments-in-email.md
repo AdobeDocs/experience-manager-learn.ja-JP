@@ -1,6 +1,6 @@
 ---
-title: フォームの添付ファイルを電子メールで送信する
-description: Power Automate Workflow を使用して、送信されたフォームの添付ファイルを E メールで抽出して送信
+title: フォームの添付ファイルをメールで送信します。
+description: Power Automate ワークフローを使用して、送信されたフォームの添付ファイルを抽出してメールで送信します。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,20 +9,21 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11077
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 1be90d9b-3669-44a0-84fb-cbdec44074d8
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '72'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 送信されたフォームデータからフォームの添付ファイルを抽出する
+# 送信されたフォームデータからフォームの添付ファイルを抽出します。
 
-フォームの添付ファイルを抽出し、power automate ワークフローで添付ファイルを電子メールで送信します。
-次のビデオでは、送信されたデータから添付ファイルを作成するために必要な手順を説明します。
+Power Automate ワークフローを使用して、フォームの添付ファイルを抽出し、メールで送信します。
+次の動画では、送信されたデータからフォームの添付ファイルを抽出するために必要な手順を説明しています。
 >[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
-次に、「 Parse JSON schema 」手順で使用する必要がある添付ファイルオブジェクトスキーマを示します
+Parse JSON スキーマのステップで使用する必要がある添付ファイルオブジェクトのスキーマは次のとおりです。
 
 ```json
 {
