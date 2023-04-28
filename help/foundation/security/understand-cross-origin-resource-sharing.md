@@ -1,6 +1,6 @@
 ---
-title: AEMを使用したクロスオリジンリソース共有 (CORS) について
-description: Adobe Experience Managerのクロスオリジンリソース共有 (CORS) は、AEM以外の Web プロパティを容易にして、認証済みと未認証の両方で、AEMに対するクライアント側呼び出しをおこない、コンテンツを取得したり、AEMと直接やり取りします。
+title: AEM でのクロスオリジンリソース共有（CORS）について
+description: Adobe Experience Manager のクロスオリジンリソース共有（CORS）を使用すると、AEM 以外の Web プロパティで、認証済みおよび未認証の両方の AEM に対してクライアントサイドの呼び出しを行い、コンテンツをフェッチしたり、AEM と直接やり取りしたりできます。
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 topics: security, development, content-delivery
@@ -12,82 +12,82 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 source-git-commit: 2bd1b66dc28a6e591afda746e9d276cae7a29948
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '913'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# クロスオリジンリソース共有 ([!DNL CORS])
+# クロスオリジンリソース共有（[!DNL CORS]）について
 
-Adobe Experience Managerのクロスオリジンリソース共有 ([!DNL CORS]) は、AEM以外の web プロパティを容易にして、AEMに対するクライアント側の呼び出し（認証済みと未認証の両方）でコンテンツを取得したり、AEMと直接やり取りしたりできます。
+Adobe Experience Manager のクロスオリジンリソース共有（[!DNL CORS]）を使用すると、AEM 以外の web プロパティを使用して、認証済みおよび未認証の両方で AEM へのクライアントサイド呼び出しを行い、コンテンツを取得したり、AEM と直接やり取りしたりできます。
 
-## AdobeGranite クロスオリジンリソース共有ポリシー OSGi 設定
+## Adobe Granite クロスオリジンリソース共有ポリシー OSGi 設定
 
-CORS 設定は、AEMで OSGi 設定ファクトリとして管理され、各ポリシーはファクトリの 1 つのインスタンスとして表されます。
+CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各ポリシーはファクトリの 1 つのインスタンスとして表されます。
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![AdobeGranite クロスオリジンリソース共有ポリシー OSGi 設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![Adobe Granite クロスオリジンリソース共有ポリシー OSGi 設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
-[!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
+[!DNL Adobe Granite Cross-Origin Resource Sharing Policy]（`com.adobe.granite.cors.impl.CORSPolicyImpl`）
 
 ### ポリシーの選択
 
 ポリシーは、
 
 * `Allowed Origin` と `Origin` リクエストヘッダー
-* および `Allowed Paths` をリクエストパスに置き換えます。
+* および `Allowed Paths` とリクエストパスに比較することで選択されます。
 
-これらの値に一致する最初のポリシーが使用されます。 何も見つからない場合、 [!DNL CORS] リクエストが拒否されました。
+これらの値に一致する最初のポリシーが使用されます。 何も見つからない場合、[!DNL CORS] リクエストが却下されます。
 
-ポリシーが設定されていない場合、 [!DNL CORS] 要求に対して応答するサーバーの他のモジュールがない限り、ハンドラーが無効になり、結果的に拒否されるので、要求に対して応答しません。 [!DNL CORS].
+ポリシーがまったく設定されていない場合、サーバーの他のモジュールが [!DNL CORS] に応答しない限り、ハンドラーが無効になり、事実上拒否されるため、[!DNL CORS] リクエストも応答されません。
 
 ### Policy プロパティ
 
-#### [!UICONTROL 許可されたオリジン]
+#### [!UICONTROL 許可された接触チャネル]
 
 * `"alloworigin" <origin> | *`
-* リスト `origin` リソースにアクセスできる URI を指定するパラメーター。 認証情報を持たない要求の場合、サーバーは &#42; をワイルドカードとして使用することで、任意の接触チャネルがリソースにアクセスできるようになります。 *次を使用することは絶対にお勧めしません。 `Allow-Origin: *` 実稼動環境では、CORS を使用しないすべての外部（攻撃者）web サイトに対し、ブラウザーで厳密に禁止される要求を実行できるので、*
+* リソースにアクセスできる URI を指定する `origin` パラメーターのリスト。リクエストに資格情報がない場合、サーバーは &#42; をワイルドカードとして使用することで、任意の接触チャネルがリソースにアクセスできるようになります。 *実稼動環境で `Allow-Origin: *` を使用することは絶対にお勧めできません。これを使用すると、すべての外国（つまり、攻撃者）の web サイトに対して、CORS のないリクエストを実行を許可してしまいます。*
 
-#### [!UICONTROL 許可された起源（正規表現）]
+#### [!UICONTROL 許可されたオリジン（正規表現）]
 
 * `"alloworiginregexp" <regexp>`
-* リスト `regexp` リソースにアクセスできる URI を指定する正規表現。 *正規表現は、慎重に構築されない場合、意図しない一致を引き起こす可能性があり、攻撃者は、ポリシーにも一致するカスタムドメイン名を使用できます。* 通常は、特定のオリジンホスト名ごとに個別のポリシーを設定し、 `alloworigin`（他のポリシープロパティの設定を繰り返し行う場合でも） 起源が異なると、ライフサイクルや要件が異なるので、明確に分離することに役立ちます。
+* リソースにアクセスできる URI を指定する `regexp` 正規表現のリスト。*正規表現は、慎重に構築されない場合、意図しない一致を引き起こす可能性があり、攻撃者は、ポリシーにも一致するカスタムドメイン名を使用できます。* `alloworigin` を使用して、特定の接触チャネルホスト名ごとに個別のポリシーを設定することをお勧めします。これが他のポリシー プロパティの設定を繰り返すことを意味する場合でも同様です。接触チャネルが異なると、ライフサイクルや要件が異なるので、明確に分離することに役立ちます。
 
 #### [!UICONTROL 許可されているパス]
 
 * `"allowedpaths" <regexp>`
-* リスト `regexp` ポリシーを適用するリソースパスを指定する正規表現。
+* ポリシーが適用されるリソース パスを指定する `regexp` 正規表現のリスト。
 
 #### [!UICONTROL 公開済みのヘッダー]
 
 * `"exposedheaders" <header>`
 * ブラウザーがアクセスできるリクエストヘッダーを示すヘッダーパラメーターのリストです。
 
-#### [!UICONTROL 最大年齢]
+#### [!UICONTROL 最大経過年数]
 
 * `"maxage" <seconds>`
-* A `seconds` プリフライトリクエストの結果をキャッシュできる期間を示すパラメーター。
+* プリフライトリクエストの結果をキャッシュできる期間を示す `seconds` パラメーター。
 
 #### [!UICONTROL サポートされるヘッダー]
 
 * `"supportedheaders" <header>`
-* リスト `header` 実際のリクエストをおこなう際に使用できる HTTP ヘッダーを示すパラメーター。
+* 実際のリクエストを行うときに使用できる HTTP ヘッダーを示す `header` パラメーターのリスト。
 
 #### [!UICONTROL 許可されるメソッド]
 
 * `"supportedmethods"`
-* 実際のリクエストをおこなう際に使用できる HTTP メソッドを示すメソッドパラメーターのリストです。
+* 実際のリクエストを行う際に使用できる HTTP メソッドを示すメソッドパラメーターのリストです。
 
-#### [!UICONTROL 認証情報をサポート]
+#### [!UICONTROL 資格情報をサポート]
 
 * `"supportscredentials" <boolean>`
-* A `boolean` リクエストに対する応答がブラウザーに公開できるかどうかを示します。 プリフライトリクエストへの応答として使用する場合、これは、資格情報を使用して実際のリクエストを実行できるかどうかを示します。
+* リクエストに対する応答がブラウザーに公開できるかどうかを示す `boolean`。プリフライトリクエストへの応答として使用する場合、これは、資格情報を使用して実際のリクエストを実行できるかどうかを示します。
 
 ### 設定例
 
-サイト 1 は、コンテンツが [!DNL GET] リクエスト：
+サイト 1 は、コンテンツが [!DNL GET] を介して消費される、匿名でアクセス可能な読み取り専用の基本的なシナリオです。
 
 ```json
 {
@@ -126,7 +126,7 @@ CORS 設定は、AEMで OSGi 設定ファクトリとして管理され、各ポ
 }
 ```
 
-サイト 2 はより複雑で、承認および変更 (POST、PUT、DELETE) リクエストが必要です。
+サイト 2 はより複雑で、承認および変更（POST、PUT、DELETE）リクエストが必要です。
 
 ```json
 {
@@ -171,17 +171,17 @@ CORS 設定は、AEMで OSGi 設定ファクトリとして管理され、各ポ
 
 ## Dispatcher のキャッシュに関する懸念と設定 {#dispatcher-caching-concerns-and-configuration}
 
-Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 これにより、キャッシュが可能になります [!DNL CORS] w に沿ったヘッダー [!DNL CORS]リクエストが匿名の場合は、リクエストされたリソースを返します。
+Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 これにより、リクエストが匿名である限り、[!DNL CORS] でリクエストされたリソースとともに [!DNL CORS] ヘッダーをキャッシュできます。
 
-一般に、Dispatcher でのコンテンツのキャッシュに関する考慮事項と同じ点を、Dispatcher での CORS 応答ヘッダーのキャッシュに適用できます。 次の表は、 [!DNL CORS] ヘッダー ( [!DNL CORS] リクエスト ) はキャッシュできます。
+一般に、Dispatcher でのコンテンツのキャッシュに関する考慮事項と同じ点を、Dispatcher での CORS 応答ヘッダーのキャッシュに適用できます。 次の表は、[!DNL CORS] ヘッダー（[!DNL CORS] リクエスト）をキャッシュできるタイミングを定義します。
 
-| Cacheable | 環境 | 認証ステータス | 説明 |
+| キャッシュ可能 | 環境 | 認証ステータス | 説明 |
 |-----------|-------------|-----------------------|-------------|
-| いいえ | AEM パブリッシュ | 認証済み | AEM オーサー上の Dispatcher キャッシュは、静的で、作成されていないアセットに制限されます。 このため、HTTP 応答ヘッダーを含む AEM オーサー上のほとんどのリソースをキャッシュするのは困難で実用的ではありません。 |
-| いいえ | AEM パブリッシュ | 認証済み | 認証済みリクエストでは CORS ヘッダーをキャッシュしないでください。 これは、要求元ユーザーの認証/承認ステータスが配信されたリソースに与える影響を判断するのは困難なので、認証済み要求のキャッシュに関しない一般的なガイダンスに従います。 |
-| はい | AEM パブリッシュ | 匿名 | Dispatcher でキャッシュ可能な匿名リクエストの応答ヘッダーもキャッシュできるので、今後の CORS リクエストでキャッシュされたコンテンツにアクセスできるようになります。 AEM パブリッシュ時に CORS 設定が変更された場合 **必須** その後、影響を受けるキャッシュされたリソースが無効化されます。 どのキャッシュコンテンツに影響が及ぶかを判断するのは困難なので、コードまたは設定のデプロイメントでは、Dispatcher キャッシュがパージされることが推奨されます。 |
+| いいえ | AEM パブリッシュ | 認証済み | AEM オーサー上の Dispatcher キャッシュは、オーサリングされていない静的アセットに限定されます。このため、HTTP 応答ヘッダーを含む AEM オーサー上のほとんどのリソースをキャッシュするのは困難であり、実用的ではありません。 |
+| いいえ | AEM パブリッシュ | 認証済み | 認証済みリクエストでは CORS ヘッダーをキャッシュしないでください。リクエスト元ユーザーの認証／承認ステータスが配信済みリソースにどのような影響を与えるかを判断するのは困難なので、これは、認証済みリクエストをキャッシュしないという一般的なガイダンスに従っています。 |
+| はい | AEM パブリッシュ | 匿名 | Dispatcher でキャッシュ可能な匿名リクエストは、応答ヘッダーもキャッシュできるので、今後の CORS リクエストで、キャッシュされたコンテンツにアクセスできるようになります。AEM パブリッシュで CORS 設定を変更した場合は、影響を受けるキャッシュ済みリソースを無効化する&#x200B;**必要があります** 。影響を受ける可能性のあるキャッシュ済みコンテンツを判断するのは難しいので、ベストプラクティスとしては、コードまたは設定のデプロイメントについては Dispatcher キャッシュをパージするように推奨されています。 |
 
-CORS ヘッダーのキャッシュを許可するには、次の設定を、サポートするすべての AEM パブリッシュ dispatcher.any ファイルに追加します。
+CORS ヘッダーのキャッシュを許可するには、すべてのサポート AEM パブリッシュの dispatcher.any ファイルに以下の設定を追加します。
 
 ```
 /myfarm { 
@@ -199,29 +199,29 @@ CORS ヘッダーのキャッシュを許可するには、次の設定を、サ
 }
 ```
 
-忘れないでください **web サーバーアプリケーションの再起動** 変更後 `dispatcher.any` ファイル。
+`dispatcher.any` ファイルを変更をしたら、**web サーバーアプリケーションを必ず再起動します**。
 
-キャッシュを完全にクリアする必要が生じる可能性があります。これは、 `/cache/headers` 設定を更新しました。
+`/cache/headers` 設定の更新後、次のリクエストでヘッダーが適切にキャッシュされるように、キャッシュの完全なクリアが必要になる可能性があります。
 
 ## CORS のトラブルシューティング
 
-ログは以下で使用できます。 `com.adobe.granite.cors`:
+ログは `com.adobe.granite.cors` で利用できます。
 
-* 有効 `DEBUG` 理由の詳細を見る [!DNL CORS] リクエストが拒否されました
-* 有効 `TRACE` CORS ハンドラーを介して実行されるすべてのリクエストの詳細を確認するには
+* `DEBUG` を有効にすると、[!DNL CORS] リクエストが拒否された理由の詳細が表示されます。
+* `TRACE` を有効にすると、CORS ハンドラーを通じて実行されるすべてのリクエストの詳細が表示されます。
 
 ### ヒント：
 
-* curl を使用して XHR リクエストを手動で再作成しますが、それぞれが違いを生じる可能性があるので、すべてのヘッダーと詳細を必ずコピーします。一部のブラウザーコンソールでは、curl コマンドをコピーできます。
-* 要求が、認証、CSRF トークンフィルター、Dispatcher フィルター、その他のセキュリティレイヤーではなく、CORS ハンドラーによって拒否されたかどうかを確認します。
-   * CORS ハンドラーが 200 で応答する場合、 `Access-Control-Allow-Origin` 応答にヘッダーがありません。次の場所にある拒否のログを確認してください： [!DNL DEBUG] in `com.adobe.granite.cors`
-* Dispatcher が [!DNL CORS] リクエストが有効になっています
-   * 次を確認します。 `/cache/headers` 設定が適用される対象： `dispatcher.any` Web サーバーが正常に再起動されました
-   * OSGi または dispatcher.any の設定が変更された後に、キャッシュが正しくクリアされたことを確認します。
+* curl を使用して XHR リクエストを手動で再作成しますが、それぞれで違いが生じる可能性があるので、すべてのヘッダーと詳細を必ずコピーします。一部のブラウザーコンソールでは、curl コマンドをコピーできます。
+* リクエストが、認証、CSRF トークンフィルター、Dispatcher フィルターまたはその他のセキュリティレイヤーではなく、CORS ハンドラーによって拒否されたかどうかを確認します。
+   * CORS ハンドラーが 200 で応答したものの、応答に `Access-Control-Allow-Origin` ヘッダーがない場合、`com.adobe.granite.cors` の [!DNL DEBUG] で拒否のログを確認します。
+* [!DNL CORS] リクエストの Dispatcher キャッシングが有効になっている場合
+   * `/cache/headers` 設定が `dispatcher.any` に適用されており、web サーバーが正常に再起動されることを確認します。
+   * OSGi または dispatcher.any の設定が変更された後で、キャッシュが正しくクリアされたことを確認します。
 * 必要に応じて、リクエストに認証資格情報が存在することを確認します。
 
 ## サポート資料
 
-* [クロスオリジンリソース共有ポリシー用のAEM OSGi 設定ファクトリ](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
-* [クロスオリジンリソース共有 (W3C)](https://www.w3.org/TR/cors/)
-* [HTTP アクセス制御 (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [クロスオリジンリソース共有ポリシーの AEM OSGi 設定ファクトリ](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [クロスオリジンリソース共有（W3C）](https://www.w3.org/TR/cors/)
+* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
