@@ -1,39 +1,39 @@
 ---
 title: 概要コンポーネントのカスタマイズ
 description: 概要ステップコンポーネントを拡張して、パッケージ内の次のフォームに移動する機能を含めます。
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 2%
+exl-id: fb68579d-241c-414d-92f4-13194f4d1923
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '177'
+ht-degree: 100%
 
 ---
 
-
 # 概要ステップのカスタマイズ
 
-概要ステップコンポーネントは、署名済みフォームをダウンロードするためのリンクと共にフォーム送信の概要を表示するために使用します。 概要手順は、通常、フォームの最後のパネルに配置されます。
-この使用例では、標準の概要コンポーネントに基づいて新しいコンポーネントを作成し、カスタムclientlibを含める機能を拡張しました。
+概要ステップコンポーネントは、署名済みフォームをダウンロードするためのリンクと共に、フォーム送信の概要を表示するために使用します。通常、概要ステップはフォームの最後のパネルに配置されます。
+このユースケースでは、標準の概要コンポーネントに基づいて新しいコンポーネントを作成し、カスタム clientlib を含める機能を拡張しました。
 
-このコンポーネントは、「複数のフォームに署名」というラベルで識別されます
+このコンポーネントは、複数のフォームに署名するラベルで識別されます
 
-次のスクリーンショットは、署名式の完了時にメッセージを表示するために作成された新しいコンポーネントを示しています
+次のスクリーンショットは、署名行為の完了時にメッセージを表示するために作成された新しいコンポーネントを示しています
 
 ![概要コンポーネント](assets/summary.PNG)
 
 新しいコンポーネントは、標準の概要コンポーネントに基づいています。
 ![component-prop](assets/componentprop.PNG)
 
-署名用に次のフォームに移動するボタンが追加されました
+署名用に次のフォームに移動するためのボタンが追加されました
 ![template-code](assets/template-code.PNG)
 
-summary.jspには次のコードが含まれます。 カテゴリID **getnextform**&#x200B;で識別されるクライアントライブラリへの参照を持ちます。
+summary.jsp には次のコードが含まれます。 カテゴリ ID で識別されるクライアントライブラリへの参照を持っています&#x200B;**getnextform**
 
 ```java
 <%--
@@ -46,6 +46,4 @@ summary.jspには次のコードが含まれます。 カテゴリID **getnextfo
 
 ## Assets
 
-カスタム概要コンポーネントは、[ここから](assets/custom-summary-step.zip)ダウンロードできます。
-
-
+カスタム概要コンポーネントは、[ここからダウンロード](assets/custom-summary-step.zip)できます
