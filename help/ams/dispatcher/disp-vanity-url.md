@@ -1,6 +1,6 @@
 ---
-title: AEM Dispatcher のバニティー URL 機能
-description: AEMでバニティー URL を処理する方法や、書き換えルールを使用して、コンテンツを配信の端に近づける方法を説明します。
+title: AEM Dispatcher のバニティ URL 機能
+description: AEMでバニティ URL を処理する方法と、書き換えルールを使用して、コンテンツを配信のエッジに近づける方法を説明します。
 version: 6.5
 topic: Administration, Performance
 feature: Dispatcher
@@ -8,9 +8,9 @@ role: Admin
 level: Beginner
 thumbnail: xx.jpg
 source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '994'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -19,71 +19,71 @@ ht-degree: 1%
 
 [目次](./overview.md)
 
-[&lt; — 前：Dispatcher のフラッシュ](./disp-flushing.md)
+[&lt;- 前：Dispatcher のフラッシュ](./disp-flushing.md)
 
 ## 概要
 
-このドキュメントでは、AEMでバニティー URL を扱う方法や、書き換えルールを使用してコンテンツを配信の端に近づける方法を説明します
+このドキュメントでは、AEM でバニティ URL を扱う方法と、書き換えルールを使用してコンテンツを配信のエッジに近づける方法について説明します
 
-## バニティー URL とは
+## バニティ URL とは
 
-意味のあるフォルダー構造に存在するコンテンツがある場合、必ずしも参照しやすい URL に存在するとは限りません。  バニティー URL はショートカットのようなものです。  実際のコンテンツが存在する場所を参照する短い、または一意の URL。
+意味のあるフォルダー構造に存在するコンテンツがある場合、必ずしも参照しやすい URL に存在するとは限りません。バニティ URL はショートカットのようなもので、実際のコンテンツが存在する場所を参照する短い、または一意の URL です。
 
-例： `/aboutus` ～を指さす `/content/we-retail/us/en/about-us.html`
+例：`/content/we-retail/us/en/about-us.html` をポイントする `/aboutus`
 
-AEM 作成者には、AEM内のコンテンツの一部にバニティ URL プロパティを設定して公開するオプションがあります。
+AEM オーサーには、AEM 内のコンテンツの 1 つにバニティ URL プロパティを設定して公開するオプションが用意されています。
 
-この機能を使用するには、バニティを許可するように Dispatcher フィルターを調整する必要があります。  これは、作成者がこれらのバニティーページエントリを設定する必要がある割合で Dispatcher 設定ファイルを調整する場合に不合理になります。
+この機能を使用するには、バニティを許可するように Dispatcher フィルターを調整する必要があります。作成者がこれらのバニティページエントリの設定に必要となる割合で Dispatcher 設定ファイルを調整する際には、これによって無理が生じます。
 
 このため、Dispatcher モジュールには、コンテンツツリーにバニティとしてリストされるすべての項目を自動許可する機能があります。
 
 
 ## 仕組み
 
-### バニティー URL のオーサリング
+### バニティ URL の作成
 
-作成者がAEMのページを訪問し、ページのプロパティを訪問して、「バニティ URL」セクションにのエントリを追加します。
+作成者が AEM のページにアクセスしてページのプロパティを閲覧し、「バニティ URL」セクションにエントリを追加します。
 
-ユーザーが変更を保存し、ページをアクティベートすると、バニティーがこのページに割り当てられます。
+変更を保存してページをアクティベートすると、バニティがこのページに割り当てられます。
 
-#### タッチ UI:
+#### タッチ UI：
 
-![サイトエディター画面でAEMオーサリング UI 用のドロップダウンダイアログメニュー](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-dropdown")
+![サイトエディター画面の AEM 作成 UI 用のドロップダウンダイアログメニュー](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 
 ![aem ページのプロパティダイアログページ](assets/disp-vanity-url/aem-page-properties.png "aem-page-properties")
 
 #### クラシックコンテンツファインダー：
 
-![AEM siteadmin classic ui サイドキックのページプロパティ](assets/disp-vanity-url/aem-page-properties-sidekick.png "aem-page-properties-sidekick")
+![AEM siteadmin classic ui サイドキックページプロパティ](assets/disp-vanity-url/aem-page-properties-sidekick.png "aem-page-properties-sidekick")
 
 ![クラシック UI のページプロパティダイアログボックス](assets/disp-vanity-url/aem-page-properties-classic.png "aem-page-properties-classic")
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-名前空間の問題が発生しやすいことを理解してください。
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
+名前空間の問題が発生しやすいことを理解しておいてください。
 
-バニティエントリはすべてのページに対してグローバルです。これは、後で説明する回避策について計画する必要がある短いコメントの 1 つに過ぎません。
+バニティエントリはすべてのページに対してグローバルです。これは、回避策について計画する必要がある欠点の 1 つですが、これについては後で説明します。
 </div>
 
-## リソースの解決/マッピング
+## リソースの解決とマッピング
 
 各バニティエントリは、内部リダイレクトの Sling マップエントリです。
 
-これらのマップは、AEMインスタンスの Felix コンソール ( `/system/console/jcrresolver` )
+これらのマップは、AEM インスタンスの Felix コンソール（`/system/console/jcrresolver`）に表示されます。
 
 バニティエントリによって作成されたマップエントリのスクリーンショットを次に示します。
-![リソース解決ルール内のバニティーエントリのコンソールスクリーンショット](assets/disp-vanity-url/vanity-resource-resolver-entry.png "vanity-resource-resolver-entry")
+![リソース解決ルール内のバニティエントリのコンソールのスクリーンショット](assets/disp-vanity-url/vanity-resource-resolver-entry.png "vanity-resource-resolver-entry")
 
-上記の例では、AEMインスタンスに `/aboutus` それは解決する `/content/we-retail/us/en/about-us.html`
+上記の例では、AEM インスタンスに `/aboutus` へのアクセスを指示すると、`/content/we-retail/us/en/about-us.html` に解決されます。
 
 ## Dispatcher の自動許可フィルター
 
-安全な状態の Dispatcher は、パスでの要求を除外します `/` Dispatcher 経由で送信する必要があるのは、JCR ツリーのルートだからです。
+安全な状態の Dispatcher は、JCR ツリーのルートであることが理由で、Dispatcher 経由でパス `/` での要求を除外します。
 
-パブリッシャーが、 `/content` その他の安全な道等  次のようなパスではありません。 `/system` など
+パブリッシャーが、`/content` およびその他の安全なパスなどからのコンテンツを許可していることを確認するのが重要です（`/system` などのパスではないもの）。
 
-以下は、の基本フォルダーに格納されている、これがバニティ URL です。 `/` では、安全を維持しながら、どのようにして出版社にリーチできるのでしょうか。
+以下は、`/` のベースフォルダーに格納されているバニティ URL です。安全を確保しながらパブリッシャーにどう到達できるでしょうか。
 
-シンプルな Dispatcher には自動フィルターの許可メカニズムがあり、AEMパッケージをインストールしてから、そのパッケージページを指すように Dispatcher を設定する必要があります。
+シンプルな Dispatcher には自動フィルターの許可メカニズムが備わっており、AEM パッケージをインストールしてから、そのパッケージページを指すように Dispatcher を設定する必要があります。
 
 [https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components)
 
@@ -97,38 +97,38 @@ Dispatcher には、そのファームファイルに設定セクションがあ
 }
 ```
 
-この設定は、300 秒ごとにフロントするAEMインスタンスからこの URL を取得し、許可する項目のリストを取得するよう Dispatcher に指示します。
+この設定では、300 秒ごとに AEM インスタンスからこの URL を取得し、許可する項目のリストを取得するよう Dispatcher に指示されます。
 
-応答のキャッシュを `/file` この例の引数 `/tmp/vanity_urls`
+応答のキャッシュを `/file` 引数（この例では `/tmp/vanity_urls`）に保存します。
 
-そのため、URI でAEMインスタンスにアクセスすると、そのインスタンスが取得する内容が表示されます。
-![/libs/granite/dispatcher/content/vanityUrls.htmlからレンダリングされたコンテンツのスクリーンショット](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
+そのため、URI で AEM インスタンスにアクセスすると、そのインスタンスが取得する内容が表示されます。
+![/libs/granite/dispatcher/content/vanityUrls.html からレンダリングされたコンテンツのスクリーンショット](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
 文字通り、非常にシンプルなリストです
 
-## ルールをバニティルールとして書き換える
+## バニティルールとしてのルールの書き換え
 
-上述のように、AEMに組み込まれているデフォルトのメカニズムの代わりに、書き換えルールを使用することが挙げられるのはなぜですか。
+上述のように、AEM に組み込まれているデフォルトのメカニズムの代わりに、書き換えルールを使用することが挙げられるのはなぜでしょうか。
 
-簡単に、名前空間の問題、パフォーマンス、より適切に処理できる高レベルのロジックについて説明します。
+名前空間の問題、パフォーマンス、より適切に処理できる高レベルのロジックについて簡単に説明されています。
 
-バニティエントリの例を見てみましょう `/aboutus` 内容は `/content/we-retail/us/en/about-us.html` Apache の `mod_rewrite` モジュールを使用して、これを実行します。
+これを実行するために Apache の `mod_rewrite` モジュールを使用して、`/aboutus` バニティエントリからコンテンツ `/content/we-retail/us/en/about-us.html` の例を見てみましょう。
 
 ```
 RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 ```
 
-この規則は虚栄心を探す `/aboutus` PT フラグ (Pass Through) を使用してレンダラーからフルパスを取得します。
+このルールはバニティ `/aboutus` を探し、PT（Pass Through）フラグを使用してレンダラーからフルパスを取得します。
 
-また、他のすべてのルール L フラグ (Last) の処理が停止します。つまり、JCR Resolving などの大量のルールリストをトラバースする必要がなくなります。
+また、他のすべてのルール L（Last）フラグの処理が停止します。つまり、JCR Resolving などの大量のルールリストをトラバースする必要がなくなります。
 
-リクエストをプロキシせずに、AEMパブリッシャーがこのメソッドのこれらの 2 つの要素に応答するのを待つことで、パフォーマンスが大幅に向上します。
+リクエストをプロキシする必要なく、AEM 発行者がこのメソッドのこれらの 2 つの要素に応答するのを待つことで、パフォーマンスが大幅に向上します。
 
-次に、ここでのケーキのアイシングは NC フラグ（大文字と小文字を区別しない）です。これは、顧客が `/AboutUs` の代わりに `/aboutus` 引き続き機能し、適切なページを取得できます。
+さらに良いのは、NC フラグ（大文字と小文字を区別しない）です。つまり、顧客が `/aboutus` の代わりに `/AboutUs` でURL を入力しても、引き続き適切なページを取得できます。
 
-書き換えルールを作成するには、Dispatcher に設定ファイルを作成します ( 例： `/etc/httpd/conf.d/rewrites/examplevanity_rewrite.rules`) をクリックし、 `.vhost` これらのバニティー url を適用する必要があるドメインを処理するファイル。
+これを実行するために書き換えルールを作成するには、Dispatcher に設定ファイル（例： `/etc/httpd/conf.d/rewrites/examplevanity_rewrite.rules`）を作成し、これらのバニティ URL を適用する必要があるドメインを処理する `.vhost` ファイルに含めます。
 
-以下に、内部のインクルードのコードスニペットの例を示します。 `/etc/httpd/conf.d/enabled_vhosts/we-retail.vhost`
+以下に、`/etc/httpd/conf.d/enabled_vhosts/we-retail.vhost` 内部の Include のコードスニペットの例を示します。
 
 ```
 <VirtualHost *:80> 
@@ -146,24 +146,24 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 
 ## メソッドと場所
 
-バニティエントリの制御にAEMを使用すると、次の利点があります
-- 作成者はその場で作成できます
-- コンテンツと共に存在し、コンテンツと共にパッケージ化できます
+バニティエントリの制御に AEM を使用すると、次のメリットがあります
+- 作成者はその場で作成できる
+- コンテンツと共に存在し、コンテンツと共にパッケージ化できる
 
-使用 `mod_rewrite` バニティーエントリを制御するには、次の利点があります
+バニティエントリの制御に `mod_rewrite` を使用すると、次のメリットがあります
 - コンテンツの解決を迅速に行う
 - エンドユーザーコンテンツリクエストのエッジに近い
-- 他の条件でのコンテンツのマッピング方法を制御するための拡張機能とオプションの追加
-- 大文字と小文字を区別しない可能性があります
+- 他の条件でのコンテンツのマッピング方法を制御するための拡張性とオプションの増加
+- 大文字と小文字を区別しない場合がある
 
-両方の方法を使用しますが、次の場合にどの方法を使用するかに関するアドバイスと条件を示します。
-- バニティが一時的で、予定されているトラフィックレベルが低い場合は、組み込み機能AEMを使用します
-- バニティーが頻繁に変更されず、頻繁に使用されるステープルエンドポイントの場合は、 `mod_rewrite` ルール。
-- バニティー名前空間の場合 ( 例： `/aboutus`) は、同じAEMインスタンス上の多数のブランドで再利用し、書き換えルールを使用する必要があります。
+両方の方法を使用しますが、どちらをいつ使用するかについてのアドバイスと条件は以下のとおりです。
+- バニティが一時的なもので、予定されているトラフィックレベルが低い場合は、AEM の組み込み機能を使用します
+- バニティが頻繁に変更されず、頻繁に使用されるステープルエンドポイントの場合は、 `mod_rewrite` ルールを使用します。
+- バニティ名前空間（例：`/aboutus`）を同じ AEM インスタンス上の多数のブランドで再利用する必要がある場合は、書き換えルールを使用します。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
 
-AEMバニティ機能を使用し、名前空間を避けたい場合は、命名規則を作成できます。  次のようにネストされたバニティー URL の使用 `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
+AEM バニティ機能を使用して名前空間を避ける場合は、命名規則を作成できます。  `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus` のようにネストされたバニティ URL の使用 
 </div>
 
-[次へ —> 共通ログ](./common-logs.md)
+[次へ -> 一般的なログ](./common-logs.md)
