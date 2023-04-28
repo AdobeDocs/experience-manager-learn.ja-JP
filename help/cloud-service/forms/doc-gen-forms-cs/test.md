@@ -1,42 +1,42 @@
 ---
-title: ソリューションをテストする
-description: Main.java を実行してソリューションをテストします。
+title: ソリューションのテスト
+description: Main.java を実行してソリューションをテスト
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
-workflow-type: tm+mt
+exl-id: f6536af2-e4b8-46ca-9b44-a0eb8f4fdca9
+source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Eclipse プロジェクトの読み込み
 
-# Eclipse プロジェクトを読み込む
+[zip ファイル](./assets/aem-forms-cs-doc-gen.zip)をダウンロードして展開します。
 
-をダウンロードして展開します。 [zip ファイル](./assets/aem-forms-cs-doc-gen.zip)
+Eclipse を起動し、プロジェクトを Eclipse に読み込みます。
+プロジェクトのリソースフォルダーには以下のファイルが含まれます。
 
-Eclipse を起動し、プロジェクトを Eclipse に読み込みます。プロジェクトには、以下のファイルが resources フォルダーに含まれます。
-
-* DataFile1、DataFile2、および DataFile3 — テンプレートと結合して最終的なPDFファイルを生成するサンプルの xml データファイル
+* DataFile1、DataFile2、DataFile3 - テンプレートと結合して最終的な PDF ファイルを生成するサンプルの xml データファイル
 * custom_fonts.xdp - XDP テンプレート。
-* service_token.json — このファイルの内容を、アカウント固有の資格情報に置き換える必要があります
-* options.json — このファイルで指定するオプションは、API で生成されたPDFファイルのプロパティを設定するために使用されます
+* service_token.json - このファイルの内容は、アカウントに固有の資格情報に置き換える必要があります
+* options.json - このファイルで指定するオプションは、API で生成された PDF ファイルのプロパティを設定するために使用されます
 
 ![resources-file](./assets/resource-files.png)
 
-## ソリューションをテストする
+## ソリューションのテスト
 
-* サービスの資格情報を、プロジェクトの service_token.json リソースファイルにコピーして貼り付けます。
-* DocumentGeneration.java ファイルを開き、生成されたフォルダーファイルを保存するPDFーを指定します
-* Main.java を開きます。 変数 postURL の値を、インスタンスを指すように設定します。
+* サービスの資格情報をコピーして、プロジェクトの service_token.json リソースファイルに貼り付けます。
+* DocumentGeneration.java ファイルを開き、生成された PDF ファイルを保存するフォルダーを指定します。
+* Main.java を開きます。 変数 postURL の値を、インスタンスをポイントするように設定します。
 * Main.java を Java アプリケーションとして実行します。
 
 >[!NOTE]
-> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを通過するには、必ず [AEMのテクニカルアカウントユーザーに対する適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを解決するには、必ず [AEM のテクニカルアカウントユーザーに適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=ja#configure-access-in-aem)を付与する必要があります。
 
-**AEM Forms Users** 私がこのコースで使った役割です。
-
+このコースでは、**AEM Forms ユーザー**&#x200B;の役割を使用しました。
