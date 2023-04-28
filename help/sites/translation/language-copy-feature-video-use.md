@@ -1,6 +1,6 @@
 ---
-title: AEM Sitesでの言語コピーの使用
-description: AEM言語コピー作成ウィザードのサイト翻訳機能を強化すると、ユーザーはルートページを作成しなくても、マスター言語から言語コピーを作成できます。
+title: AEM Sites での言語コピーの使用
+description: AEM 言語コピー作成ウィザードのサイト翻訳機能が強化され、ユーザーはルートページを作成せずにマスター言語から言語コピーを作成できます。
 feature: Language Copy
 topics: localization, authoring, content-architecture
 audience: all
@@ -12,9 +12,9 @@ role: User
 level: Beginner
 exl-id: 49613808-6369-4e43-bc26-fd3041265339
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '86'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -26,5 +26,5 @@ AEM 6.3 言語コピー作成ウィザードのサイト翻訳機能の強化に
 
 ## その他のリソース {#additional-resources}
 
-* [言語コピーウィザードのドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
-* [MSM のベストプラクティス](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [言語コピーウィザードのドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html?lang=ja)
+* [MSM のベストプラクティス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
