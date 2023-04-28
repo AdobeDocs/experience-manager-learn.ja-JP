@@ -1,6 +1,6 @@
 ---
-title: Adobe WorkfrontとAssets Essentialsでのバージョン履歴の管理
-description: Adobe WorkfrontとExperience Manager Assets Essentials を使用して、WorkfrontドキュメントとAssets Essentialsアセットのバージョンを管理する方法について説明します。
+title: Adobe Workfront と Assets Essentials でのバージョン履歴の管理
+description: Adobe Workfront と Experience Manager Assets Essentials を使用して、Workfront ドキュメントと Assets Essentials アセットのバージョンを管理する方法について説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -11,14 +11,14 @@ thumbnail: 336314.jpeg
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 42c0e51d-abb2-4445-98bd-65d813f580ca
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # バージョン履歴の管理
 
-Adobe WorkfrontとExperience Manager Assets Essentials を使用して、WorkfrontドキュメントとAssets Essentialsアセットのバージョンを管理する方法について説明します。
+Adobe Workfront と Experience Manager Assets Essentials を使用して、Workfront ドキュメントと Assets Essentials アセットのバージョンを管理する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336314?quality=12&learn=on)
