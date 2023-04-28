@@ -1,41 +1,36 @@
 ---
 title: プロセスをトリガーする初期フォームの作成
-description: 電子メール通知をトリガーする初期フォームを作成し、署名プロセスを開始します。
-feature: アダプティブフォーム
+description: メール通知をトリガーして署名プロセスを開始するための初期フォームを作成します。
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開発
+topic: Development
 role: User
 level: Intermediate
 kt: 6892
 thumbnail: 6892.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
-workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 13%
+exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '168'
+ht-degree: 100%
 
 ---
 
-
 # 初期フォームの作成
 
-最初のフォーム（絞り込みフォーム）は、**複数のFormsに署名** AEMワークフローを呼び出して、複数のフォームに署名するために使用されます。 選択した値を入力できますが、次のフィールドがフォームに追加されていることを確認します。
+最初のフォーム（借り換えフォーム）は、**複数のフォームに署名する** AEM ワークフローをトリガーして複数のフォームに署名するために使用されます。任意の値を入力できますが、以下のフィールドをフォームに必ず追加します。
 
 | フィールドタイプ | 名前 | 目的 | 非表示 | デフォルト値 |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
-| TextField | signed | 署名ステータスを示すには | ○ | × |
-| TextField | 素晴らしい | フォームを一意に識別するには | ○ | 3889 |
-| TextField | customerName | 顧客名を取り込むには | × |
-| TextField | customerEmail | 通知を送信する顧客の電子メール | × |
-| CheckBox | formsToSign | 項目は、パッケージ内のフォームを識別します | × |
+| TextField | signed | 署名ステータスを示す | ○ | × |
+| TextField | guid | フォームを一意に識別する | ○ | 3889 |
+| TextField | customerName | 顧客名を取得する | × |
+| TextField | customerEmail | 通知を送信する顧客のメール | × |
+| CheckBox | formsToSign | 項目でパッケージ内のフォームを識別する | × |
 
-**signmultipleforms**と呼ばれるAEMワークフローをトリガーするには、最初のフォームを設定する必要があります
-「データファイルのパス」が**Data.xml**&#x200B;に設定されていることを確認します。 これは、サンプルコードがフォーム送信処理のペイロード内でData.xmlというファイルを探すので、非常に重要です。
+初期フォームは、**signmultipleforms** と呼ばれる AEM ワークフローをトリガーするように設定する必要があります 。
+データファイルのパスが **Data.xml** に設定されていることを確認します。サンプルコードではフォーム送信の処理時にペイロード内で Data.xml というファイルを探すので、これは非常に重要です。
 
 ## Assets
 
-最初のフォーム（絞り込みフォーム）は、[こちらからダウンロードできます。](assets/refinance-form.zip)
-
-
-
-
-
+初期フォーム（借り換えフォーム）は、 [こちら](assets/refinance-form.zip)からダウンロードできます。
