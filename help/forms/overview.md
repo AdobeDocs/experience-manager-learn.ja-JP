@@ -1,32 +1,32 @@
 ---
-title: AEM Formsのチュートリアルとビデオ
-description: リソースとドキュメントを使用して、AEM Formsのビデオとチュートリアルを参照し、質問に答えてください。
+title: AEM Forms のチュートリアルとビデオ
+description: AEM Forms のビデオとチュートリアルを参照し、リソースとドキュメントを参照して質問の答えを見つけてください。
 topic: Development
 role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 96ff44c4b9806205682ab305d391614f92bb2536
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '297'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# AEM Formsのチュートリアルとビデオ {#overview}
+# AEM Forms のチュートリアルとビデオ {#overview}
 
-Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作成、管理、公開、および更新に特化した、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。このユーザーガイドには、AEM Formsの様々な機能に関するビデオとチュートリアルが含まれています
+Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作成、管理、公開、更新するための、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。このユーザガイドには、AEM Forms の多くの機能と性能に関するビデオとチュートリアルが含まれています。
 
 <div id="whats-new-section">
 
 ## 新機能
 
-* **[「フォームデータモデルサービスを起動」ステップでのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
+* **[フォームデータモデルサービスを起動する手順でのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   *ワークフローモデル内の変数は、そのデータ型に基づいて値を保存する方法です*
+   *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
 
 * **[インタラクティブ通信ドキュメント内の複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
 
-   *同じグラフに複数の系列をプロットします。 複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
+   *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
 
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
@@ -53,11 +53,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>最初のアダプティブフォームを作成する</strong>
-    </a>
+ <strong>最初のアダプティブフォームを作成する</strong>
+ </a>
     </div>
     <p>
-    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用して、パーソナライズされたエクスペリエンスを提供することができます</em>
+    <em>アダプティブフォームは、動的でレスポンシブな次世代型のフォームです。アダプティブフォームを使用して、エクスペリエンスをカスタマイズできます</em>
     <p>
   </td>
    <td>
@@ -66,11 +66,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
-    <strong>最初の印刷チャネルドキュメントを作成する</strong>
-    </a>
+ <strong>最初の印刷チャネルドキュメントを作成する</strong>
+ </a>
     </div>
     <p>
-    <em>Interactive Communications は、ビジネス通信、ドキュメント、声明書、福利厚生通知、マーケティングメール、請求、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。 </em>
+    <em>インタラクティブ通信を使用すると、業務上の書簡、ドキュメント、取引明細書、給付金通知、マーケティング用メール、請求書、ウェルカムキットなど、安全でカスタマイズされたインタラクティブな通信文書の作成、集計、配信を一元的に管理できます。</em>
     <p>
   </td>
   <td>
@@ -79,11 +79,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>AEM Workflow でのフォームデータモデルの使用</strong>
-    </a>
+ <strong>AEM Workflow でのフォームデータモデルの使用</strong>
+ </a>
     </div>
     <p>
-    <em>フォームデータモデルのサービスをAEM Workflow のステップとして呼び出す</em>
+    <em>フォームデータモデルのサービスを AEM Workflow のステップとして呼び出す</em>
     <p>
   </td>
 </tr>
@@ -96,11 +96,11 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作�
 
 ## その他のリソース
 
-* [AEM Sites Authoring ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites Deploying documentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
-* [AEM Assetsチュートリアル](/help/assets/overview.md)
-* [AEM Formsチュートリアル](/help/forms/overview.md)
-* [AEM Foundation チュートリアル](/help/foundation/overview.md)
+* [AEM Sites 作成ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
+* [AEM Sites 開発ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=ja)
+* [AEM Sites 管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=ja)
+* [AEM Sites デプロイドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=ja)
+* [AEM as a Cloud Service のチュートリアル](/help/cloud-service/overview.md)
+* [AEM Assets のチュートリアル](/help/assets/overview.md)
+* [AEM Forms のチュートリアル](/help/forms/overview.md)
+* [AEM の基盤のチュートリアル](/help/foundation/overview.md)
