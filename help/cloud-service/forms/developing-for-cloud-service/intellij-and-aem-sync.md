@@ -1,6 +1,6 @@
 ---
-title: Repo ツールを使用した IntelliJ の設定
-description: AEM Cloud Ready インスタンスと同期する IntelliJ の準備
+title: リポジトリツールを使用した IntelliJ の設定
+description: AEM クラウド対応インスタンスと同期するための IntelliJ の準備
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -10,9 +10,9 @@ topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -20,68 +20,74 @@ ht-degree: 2%
 
 
 Cygwin は、Microsoft Windows 上でネイティブに動作する POSIX 互換のプログラミングおよびランタイム環境です。
-インストール [シグウィン](https://www.cygwin.com/). C:\cygwin64 folderでをインストールしました。
+[Cygwin](https://www.cygwin.com/) をインストールします。C:\cygwin64 フォルダーにインストールしました。
 >[!NOTE]
-> zip、unzip、curl、rsync パッケージを cygwin のインストールと一緒にインストールしてください。
+> cygwin のインストール時に zip、unzip、curl、rsync パッケージするようにしてください。
 
-c:\cloudmanagerフォルダーの下に adoberepo というフォルダーを作成します。
+c:\cloudmanager の下に adoberepo というフォルダーを作成します。
 
-[リポジトリツールのインストール].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing repo ツールは、repo ファイルをコピーしてc:\cloudmanger\adoberepo folderに配置するだけです。
+[リポジトリツールをインストール]（https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo）リポジトリツールのインストールでは、リポジトリファイルをコピーして c:\cloudmanger\adoberepo フォルダーに配置するだけです。
 
-Path 環境変数C:\cygwin64\bin;C:\CloudManager\adoberepo；に以下を追加します。
+パス環境変数 C:\cygwin64\bin、C:\CloudManager\adoberepo に以下を追加します。
 
-## 外部ツールを設定
+## 外部ツールの設定
 
 * IntelliJ の起動
 * Ctrl + Alt + S キーを押して、設定ウィンドウを起動します。
-* ツール/外部ツールを選択し、スクリーンショットに示すように、「+」記号をクリックして、次のように入力します。
+* ツール/外部ツールを選択して「+」記号をクリックし、スクリーンショットのように入力します。
    ![rep](assets/repo.png)
-* 必ず、「グループ」ドロップダウンフィールドに「repo」と入力して、repo という名前のグループを作成し、作成するすべてのコマンドを **repo** グループ
+* 必ず、「グループ」ドロップダウンフィールドに「repo」と入力して、repo という名前のグループを作成し、作成するすべてのコマンドが **repo** グループに属するようにします。
 
 
 **Put コマンド**
-**プログラム**:C:\cygwin64\bin\bash
-**引数**:-l C:\CloudManager\adoberepo\repo put -f \$FilePath\$
-**作業ディレクトリ**:\$ProjectFileDir\$
+**プログラム**：C:\cygwin64\bin\bash
+**引数**：- C:\CloudManager\adoberepo\repo put -f \$FilePath\$
+**作業ディレクトリ**：\$ProjectFileDir\$
 ![put-command](assets/put-command.png)
 
 **Get コマンド**
-**プログラム**:C:\cygwin64\bin\bash
-**引数**:-l C:\CloudManager\adoberepo\repo get -f \$FilePath\$
-**作業ディレクトリ**:\$ProjectFileDir\$
+**プログラム**：C:\cygwin64\bin\bash
+**引数**：-l C:\CloudManager\adoberepo\repo get -f \$FilePath\$
+**作業ディレクトリ**：\$ProjectFileDir\$
 ![get-command](assets/get-command.png)
 
 **ステータスコマンド**
-**プログラム**:C:\cygwin64\bin\bash
-**引数**:-l C:\CloudManager\adoberepo\repo st -f \$FilePath\$
-**作業ディレクトリ**:\$ProjectFileDir\$
+**プログラム**：C:\cygwin64\bin\bash
+**引数**：-l C:\CloudManager\adoberepo\repo st -f \$FilePath\$
+**作業ディレクトリ**：\$ProjectFileDir\$
 ![status-command](assets/status-command.png)
 
 **差分コマンド**
-**プログラム**:C:\cygwin64\bin\bash
-**引数**:-l C:\CloudManager\adoberepo\repo diff -f $FilePath$
-**作業ディレクトリ**:\$ProjectFileDir\$
+**プログラム**：C:\cygwin64\bin\bash
+**引数**：-l C:\CloudManager\adoberepo\repo diff -f $FilePath$
+**作業ディレクトリ**：\$ProjectFileDir\$
 ![diff-command](assets/diff-command.png)
 
-.repo ファイルを次の場所から抽出します。 [repo.zip](assets/repo.zip) AEMプロジェクトのルートフォルダーに配置します。 (C:\CloudManager\aem-banking-application)。 .repo ファイルを開き、サーバーと資格情報の設定が環境と一致していることを確認します。
-.gitignore ファイルを開き、ファイルの下部に次の内容を追加して、変更を保存します\# repo .repo
+.repo ファイルを [repo.zip](assets/repo.zip) から抽出し、AEM プロジェクトのルートフォルダーに配置します （C:\CloudManager\aem-banking-application）。.repo ファイルを開き、サーバーと資格情報の設定が環境と一致していることを確認します。
+.gitignore ファイルを開き、ファイルの下部に次の内容を追加して、変更を保存します
+\# repo 
+.repo
 
-ui.content など、aem-banking-application プロジェクト内の任意のプロジェクトを選択し、右クリックすると repo オプションが表示され、repo オプションの下には、前に追加した 4 つのコマンドが表示されます。
+ui.content など、aem-banking-application プロジェクト内の任意のプロジェクトを選択して右クリックすると repo オプションが表示され、repo オプションの下に以前追加した 4 つのコマンドが表示されます。
 
-## AEM オーサーインスタンスを設定
+## AEM オーサーインスタンスをセットアップします。
 
 次の手順に従って、ローカルシステム上にクラウド対応インスタンスをすばやくセットアップできます。
-* [最新のAEM SDK をダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [最新の AEM SDK をダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)
 
-* [最新のAEM Formsアドオンをダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [最新の AEM Forms アドオンをダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)
 
-* 次のフォルダー構造を作成しますc:\aemformscs\aem-sdk\author
+* 次のフォルダー構造を作成します
 
-* AEM SDK zip ファイルから aem-sdk-quickstart-xxxxxx.jar ファイルを展開し、 c:\aemformscs\aem-sdk\author folder.Renameに配置して、 jar ファイルを aem-author-p4502.jar に配置します。
+c:\aemformscs\aem-sdk\author
 
-* コマンドプロンプトを開き、 c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui に移動します。 これにより、AEMのインストールが開始されます。
-* 管理者/管理者資格情報を使用してログイン
-* AEMインスタンスを停止
-* 次のフォルダー構造を作成します。C:\aemformscs\aem-sdk\author\crx-quickstart\install
-* aem-forms-addon-xxxxx.far を install フォルダーにコピーします。
-* コマンドプロンプトを開き、 c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui に移動します。 これにより、AEMインスタンスに forms アドオンパッケージがデプロイされます。
+* AEM SDK zip ファイルから aem-sdk-quickstart-xxxxxx.jar ファイルを抽出し、 c:\aemformscs\aem-sdk\author folder に配置して、JAR ファイルの名前を aem-author-p4502.jar に変更します。
+
+* コマンドプロンプトを開き、 c:\aemformscs\aem-sdk\author に移動してコマンド java -jar aem-author-p4502.jar -gui を入力します。 
+これにより、AEM のインストールが開始されます。
+* 管理者／管理者資格情報を使用してログイン
+* AEM インスタンスを停止
+* フォルダー構造 C:\aemformscs\aem-sdk\author\crx-quickstart\install を作成します。
+* aem-forms-addon-xxxxx.far をインストールフォルダーにコピーします。
+* コマンドプロンプトを開き、 c:\aemformscs\aem-sdk\author に移動してコマンド java -jar aem-author-p4502.jar -gui を入力します。 
+これにより、AEM インスタンスに forms アドオンパッケージがデプロイされます。
