@@ -1,6 +1,6 @@
 ---
-title: asset compute開発ツール
-description: asset compute開発ツールは、Adobe I/O RuntimeのAsset computeリソースに対するAEM SDK のコンテキスト外で、開発者が Asset Computer ワーカーをローカルで設定および実行できる、ローカル Web ハーネスです。
+title: Asset Compute 開発ツール
+description: Asset Compute 開発ツールは、Adobe I/O Runtime の Asset Compute リソースに対して AEM SDK のコンテキスト外で開発者が Asset Computer ワーカーをローカルに設定および実行できるようにするローカル web ハーネスです。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -14,55 +14,55 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: cbe08570-e353-4daf-94d1-a91a8d63406d
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '535'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# asset compute開発ツール
+# Asset Compute 開発ツール
 
-asset compute開発ツールは、Adobe I/O RuntimeのAsset computeリソースに対するAEM SDK のコンテキスト外で、開発者が Asset Computer ワーカーをローカルで設定および実行できる、ローカル Web ハーネスです。
+Asset Compute 開発ツールは、Adobe I/O Runtime の Asset Compute リソースに対して AEM SDK のコンテキスト外で開発者が Asset Computer ワーカーをローカルに設定および実行できるようにするローカル web ハーネスです。
 
-## asset compute開発ツールの実行
+## Asset Compute 開発ツールの実行
 
-asset compute開発ツールは、ターミナルコマンドを使用して、Asset computeプロジェクトのルートから実行できます。
+Asset Compute 開発ツールは、ターミナルコマンドを使用して、Asset Compute プロジェクトのルートから実行できます。
 
 ```
 $ aio app run
 ```
 
-これにより、次の場所で開発ツールが起動します： __http://localhost:9000__&#x200B;ブラウザーウィンドウで自動的に開きます。 開発ツールを実行するには、次の手順に従います。 [有効な自動生成 devToolToken をクエリパラメーターで指定する必要があります](#troubleshooting__devtooltoken).
+これにより、開発ツールが __http://localhost:9000__ で起動され、自動的にブラウザーウィンドウで開きます。開発ツールを実行するには、[有効な自動生成 devToolToken をクエリパラメーターで指定する必要があります](#troubleshooting__devtooltoken)。
 
-## asset compute開発ツールインターフェイスについて{#interface}
+## Asset Compute 開発ツールインターフェイスについて{#interface}
 
-![asset compute開発ツール](./assets/development-tool/asset-compute-dev-tool.png)
+![Asset Compute 開発ツール](./assets/development-tool/asset-compute-dev-tool.png)
 
-1. __ソースファイル：__ ソースファイルの選択は、次の目的で使用されます。
-   + として機能するアセットバイナリを選択しました `source` バイナリがAsset computeワーカーに渡されました
+1. __ソースファイル__：ソースファイルは次の目的で選択します。
+   + Asset Compute ワーカーに渡される `source` バイナリとして機能するアセットバイナリの選択
    + ソースファイルのアップロード
-1. __asset computeプロファイルの定義：__ 実行するAsset computeワーカーを定義します。パラメーターは次のとおりです。ワーカーの URL エンドポイント、結果のレンディション名、および任意のパラメーターを含めます。
-1. __実行：__ 「実行」ボタンは、設定プロファイルエディターで定義したAsset computeプロファイルをAsset computeします
-1. __中止：__ 「中止」ボタンをクリックすると、「実行」ボタンをタップして開始された実行がキャンセルされます
-1. __リクエスト/レスポンス：__ Adobe I/O Runtimeで動作しているAsset computeワーカーに対する HTTP リクエストと応答を提供します。 これはデバッグに役立つ場合があります
-1. __アクティベーションログ：__ エラーと共にAsset computeワーカーの実行を説明するログ。 この情報は、 `aio app run` 標準的に
-1. __レンディション：__ asset compute・ワーカーの実行によって生成されたすべてのレンディションを表示
-1. __devToolToken クエリパラメーター：__ asset compute開発ツールトークンには有効な `devToolToken` クエリーパラメーターが存在する必要があります。 このトークンは、新しい開発ツールが生成されるたびに自動的に生成されます
+1. __Asset Compute プロファイル定義__：パラメーター（ワーカーの URL エンドポイント、結果のレンディション名、任意のパラメーターなど）を含め、実行する Asset Compute ワーカーを定義します。
+1. __実行__：「実行」ボタンは、Asset Compute 設定プロファイルエディターで定義された Asset Compute プロファイルを実行します。
+1. __中止__：「中止」ボタンは、「実行」ボタンをタップして開始された実行をキャンセルします。
+1. __リクエスト／応答__：Adobe I/O Runtime で動作している Asset Compute ワーカーへの HTTP リクエストとその応答を提供します。これはデバッグに役立ちます。
+1. __起動ログ__：Asset Compute ワーカーの実行を記述したログです。発生したエラーも含まれます。この情報は、`aio app run` の標準出力でも入手できます。
+1. __レンディション__：Asset Compute ワーカーの実行で生成されたすべてのレンディションを表示します。
+1. __devToolToken クエリパラメーター__：Asset Compute 開発ツールトークンには、有効な `devToolToken` クエリパラメーターが存在する必要があります。このトークンは、新しい開発ツールが起動されるたびに自動的に生成されます。
 
 ### カスタムワーカーの実行
 
 >[!VIDEO](https://video.tv.adobe.com/v/40241?quality=12&learn=on)
 
-_開発ツールでのAsset computeの実行のクリックスルー（音声なし）_
+_開発ツールで Asset Compute ワークを実行したときのクリックスルー（音声なし）_
 
-1. asset compute開発ツールが、 `aio app run` コマンドを使用します。
-1. asset compute開発ツールで、 [サンプル画像ファイル](../assets/samples/sample-file.jpg)
-   + ファイルが __ソースファイル__ ドロップダウン
-1. 以下を確認します。 __asset computeプロファイル定義__ テキスト領域
-   + この `worker` キーは、デプロイ済みのAsset computeワーカーへの URL を定義します
-   + この `name` キー：生成するレンディションの名前を定義します。
-   + その他のキー/値は、この JSON オブジェクトに指定でき、 `rendition.instructions` object
-      + オプションで次の値を追加します。 `size`, `contrast` および `brightness`:
+1. `aio app run` コマンドを使用して Asset Compute 開発ツールがプロジェクトルートから起動されていることを確認します。
+1. Asset Compute 開発ツールで、[サンプル画像ファイル](../assets/samples/sample-file.jpg)をアップロードまたは選択します。
+   + そのファイルは、必ず&#x200B;__ソースファイル__&#x200B;ドロップダウンで選択してください。
+1. 「__Asset Compute プロファイル定義__」テキストエリアを確認します。
+   + `worker` キーは、デプロイされた Asset Compute ワーカーへの URL を定義します。
+   + `name` キーは、生成するレンディションの名前を定義します。
+   + その他のキーと値もこの JSON オブジェクトで指定でき、`rendition.instructions` オブジェクトのワーカーで利用できます。
+      + オプションで `size`、`contrast` および `brightness` の値を追加できます。
 
          ```json
          {
@@ -78,18 +78,18 @@ _開発ツールでのAsset computeの実行のクリックスルー（音声な
          }
          ```
 
-1. 次をタップします。 __実行__ ボタン
-1. この __レンディションセクション__ レンディションプレースホルダーで入力されます
-1. ワーカーが完了すると、レンディションプレースホルダーに生成されたレンディションが表示されます
+1. 「__実行__」ボタンをタップします。
+1. __「レンディション」セクション__&#x200B;でレンディションのプレースホルダーに入力します
+1. ワーカーが完了すると、生成されたレンディションがレンディションのプレースホルダーに表示されます
 
-開発ツールの実行中にワーカーコードにコードを変更すると、変更が「ホットデプロイ」されます。 「ホットデプロイ」には数秒かかるので、開発ツールからワーカーを再実行する前に、デプロイを完了させます。
+開発ツールの実行中にワーカーコードにコードを変更すると、変更が「ホットデプロイ」されます。「ホットデプロイ」には数秒かかるので、開発ツールからワーカーを再実行する前に、デプロイを完了させます。
 
 ## トラブルシューティング
 
-+ [YAML インデントが正しくありません](../troubleshooting.md#incorrect-yaml-indentation)
-+ [memorySize の上限が低すぎます](../troubleshooting.md#memorysize-limit-is-set-too-low)
-+ [private.key が見つからないため、開発ツールを開始できません](../troubleshooting.md#missing-private-key)
-+ [ソースファイルのドロップダウンが正しくありません](../troubleshooting.md#source-files-dropdown-incorrect)
-+ [devToolToken クエリパラメーターがないか、無効です](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
-+ [ソースファイルを削除できません](../troubleshooting.md#unable-to-remove-source-files)
-+ [レンディションが部分的に描画されたか破損しています](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
++ [YAML インデントが正しくない](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize の上限の設定値が低すぎる](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [private.key が見つからず、開発ツールを開始できない場合](../troubleshooting.md#missing-private-key)
++ [ソースファイルのドロップダウンが正しくない](../troubleshooting.md#source-files-dropdown-incorrect)
++ [devToolToken クエリパラメーターがないか無効](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [ソースファイルを削除できない](../troubleshooting.md#unable-to-remove-source-files)
++ [返されたレンディションが部分的に描画されたか破損している](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
