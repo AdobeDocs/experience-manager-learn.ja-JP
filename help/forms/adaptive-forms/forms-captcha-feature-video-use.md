@@ -1,6 +1,6 @@
 ---
-title: AEM Adaptive Formsでの CAPTCHA の使用
-description: AEMアダプティブFormsでの CAPTCHA の追加と使用
+title: AEM Adaptive Forms での CAPTCHA の使用
+description: AEM Adaptive Forms での CAPTCHA の追加と使用
 feature: Adaptive Forms,Workflow
 version: 6.4,6.5
 topic: Development
@@ -9,19 +9,19 @@ level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '204'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# AEM Adaptive Formsでの CAPTCHA の使用{#using-captchas-with-aem-adaptive-forms}
+# AEM Adaptive Forms での CAPTCHA の使用{#using-captchas-with-aem-adaptive-forms}
 
-AEMアダプティブFormsでの CAPTCHA の追加と使用
+AEM Adaptive Forms での CAPTCHA の追加と使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*このビデオでは、組み込みのAEM CAPTCHA サービスとGoogleの reCAPTCHA サービスの両方を使用して、AEMアダプティブフォームに CAPTCHA を追加するプロセスを順を追って説明します。*
+*このビデオでは、組み込みの AEM CAPTCHA サービスと Google の reCAPTCHA サービスの両方を使用して、AEM Adaptive Forms に CAPTCHA を追加するプロセスを順を追って説明します。*
 
 >[!NOTE]
 >
@@ -29,11 +29,11 @@ AEMアダプティブFormsでの CAPTCHA の追加と使用
 
 >[!NOTE]
 >
->**パブリッシュインスタンスで reCaptcha を設定するには、次の手順に従います**
+>**公開インスタンスで reCAPTCHA を設定するには、次の手順に従います**
 >
->オーサーインスタンスでの reCaptach の設定
+>オーサーインスタンスでの reCAPTCHA の設定
 >
->フェリックスを開く [web コンソール](http://localhost:4502/system/console/bundles) オーサーインスタンス上
+>オーサーインスタンスで Felix [web コンソール](http://localhost:4502/system/console/bundles)を開きます。
 >
 >com.adobe.granite.crypto.file バンドルを検索します。
 >
@@ -42,15 +42,15 @@ AEMアダプティブFormsでの CAPTCHA の追加と使用
 >オーサーインスタンス上のファイルシステムのバンドル ID に移動します。
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* HMAC ファイルとマスターファイルをコピーする
+* HMAC ファイルおよびマスターファイルをコピーします。
 >
-を開きます。 [felix web コンソール](http://localhost:4502/system/console/bundles) をパブリッシュインスタンス上に置きます。 com.adobe.granite.crypto.file bundle を検索します。 バンドル ID をメモします。
+パブリッシュインスタンスで [Felix web コンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file バンドルを検索します。 バンドル ID をメモします。
 パブリッシュインスタンスのファイルシステム上のバンドル ID に移動します。
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 既存の HMAC ファイルとマスターファイルを削除します。
 * オーサーインスタンスからコピーした HMAC ファイルとマスターファイルを貼り付けます。
 >
-AEM Publish Server を再起動します。
+AEM Publish サーバーを再起動します。
 
 ## サポート資料 {#supporting-materials}
 
