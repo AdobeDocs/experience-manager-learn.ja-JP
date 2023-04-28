@@ -1,6 +1,6 @@
 ---
 title: ダウンロードとアップロード
-description: Asset Link パネルを使用して、AEM Assetsとの間でアセットファイルをダウンロードおよびアップロードする方法について説明します。
+description: アセットリンクパネルを使用して、AEM Assets との間でアセットファイルをダウンロードおよびアップロードする方法について説明します。
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 kt: 4908
@@ -10,14 +10,14 @@ role: User
 level: Beginner
 exl-id: dc69a95c-ab0b-4a2c-80a3-43a6a052c545
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # ダウンロードとアップロード {#download-and-upload}
 
-Asset Link パネルを使用して、AEM Assetsとの間でアセットファイルをダウンロードおよびアップロードする方法について説明します。
+アセットリンクパネルを使用して、AEM Assets との間でアセットファイルをダウンロードおよびアップロードする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)
