@@ -1,6 +1,6 @@
 ---
-title: Assets Essentialsの使用
-description: Assets Essentialsでアセットをダウンロードする方法を説明します。
+title: Assets Essentials の使用
+description: Assets Essentials でアセットを見つけてダウンロードする方法について説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -11,14 +11,14 @@ thumbnai: 335861.jpeg
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 83bf8d76-2e36-45d4-bfff-03758e5f7bdc
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Assets Essentialsの使用
+# Assets Essentials の使用
 
-Assets Essentialsでアセットをフィルタリング、検索、ダウンロードする方法について説明します。
+Assets Essentials でアセットをフィルタリング、検索、ダウンロードする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)
