@@ -1,7 +1,7 @@
 ---
-title: AEM Sitesでのレスポンシブレイアウトについて
+title: AEM Sites でのレスポンシブレイアウトについて
 seo-title: Understanding Responsive Layout with AEM Sites
-description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者は、様々なデバイス向けのレスポンシブコンテンツを作成し、AEM内でエンドユーザーエクスペリエンスをプレビューできます。
+description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者は、各種デバイス向けのレスポンシブコンテンツを作成し、AEM 内でエンドユーザーエクスペリエンスをプレビューできます。
 seo-description: Covers the steps to author responsive layout for different devices
 feature: Page Editor, Editable Templates
 topics: authoring, responsive
@@ -16,18 +16,18 @@ role: User
 level: Intermediate
 exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '110'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
 # レスポンシブレイアウトについて {#understanding-responsive-layout-with-aem-sites}
 
-Adobe Experience Manager Sitesでは、レスポンシブサイトデザインを容易にするために、作成者がデバイスの幅に基づいてコンポーネントの幅を管理できます。 レイアウトモードとレイアウトコンテナを使用すると、AEM UI を離れることなく、様々なデバイス向けのレスポンシブコンテンツを作成し、エンドユーザーエクスペリエンスをプレビューできます。
+Adobe Experience Manager Sites では、レスポンシブなサイトデザインを促進するために、デバイスの幅に基づいて作成者がコンポーネントの幅を管理できます。レイアウトモードとレイアウトコンテナを使用すると、AEM UI を離れずに、各種デバイス向けのレスポンシブコンテンツを作成し、エンドユーザーエクスペリエンスをプレビューできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
 
 ## その他のリソース {#additional-resources}
 
-* [レスポンシブレイアウトドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)
+* [レスポンシブレイアウトのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=ja)
