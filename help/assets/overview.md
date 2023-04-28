@@ -1,29 +1,29 @@
 ---
-title: AEM Assetsのビデオとチュートリアル
-description: ビデオを見て、AEM Asset のサポートとサポートを受けてください。
+title: AEM Assets のビデオとチュートリアル
+description: ビデオを見て、AEM Asset のサポートと支援を得ましょう。
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# AEM Assetsのビデオとチュートリアル {#overview}
+# AEM Assets のビデオとチュートリアル {#overview}
 
-Adobe Experience Manager(AEM)Assets は、Web ベースのリポジトリでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できる、AEM Platform のデジタルアセット管理ツールです。 このユーザーガイドには、AEM Assetsの様々な機能に関するビデオとチュートリアルが含まれています。
+Adobe Experience Manager（AEM）Assets は、web ベースのリポジトリでデジタルアセット（画像、ビデオ、ドキュメント、オーディオクリップ）を作成、管理および共有できる、AEM プラットフォーム上のデジタルアセット管理ツールです。このユーザーガイドには、AEM Assets の多くの特長と機能に関するビデオとチュートリアルが含まれています。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
->abstract="必要なアセットをすばやく検索して編集する方法を説明します。"
->additional-url="https://video.tv.adobe.com/v/336196/?captions=jpn" text="AEM アセットの説明"
+>abstract="必要なアセットを素早く見つけて編集する方法を学びます。"
+>additional-url="https://video.tv.adobe.com/v/336196/?captions=jpn" text="AEM Assets のウォークスルー"
 
-## AEM アセットの説明
+## AEM Assets のウォークスルー
 
-AEM Assetsとは何か、および組織のビジネス目標の達成にがどのように使用されるかについて説明します。
+AEM Assets とは何か、そして組織のビジネス目標を達成するための AEM Assets の使用方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
@@ -45,37 +45,37 @@ AEM Assetsとは何か、および組織のビジネス目標の達成にがど�
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>AEM Desktop App の使用</strong>
+      <strong>AEM デスクトップアプリの使用</strong>
       </a>
    </div>
    <p>
-      <em>デスクトップからAEM内のアセットに直接アクセス</em>
+      <em>デスクトップから AEM 内のアセットに直接アクセス</em>
    </p>
 </td>
 <td>
    <a href="./advanced/asset-insights-launch-tutorial.md">
-   <img alt="AEM Assets Insights" src="./assets/overview/asset-insights.png"/>
+   <img alt="AEM アセットインサイト" src="./assets/overview/asset-insights.png"/>
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>Launch でのAEM Asset Insights の使用</strong>
+      <strong>Experience Platform Launch でのAEM アセットインサイトの使用</strong>
       </a>
    </div>
    <p>
-      <em>アセットの使用方法に関するインサイトを得る</em>
+      <em>アセットの使用方法に関するインサイトを取得</em>
    <p>
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamic Mediaの概要" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media の概要" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamic Mediaの概要</strong>
+      <strong>Dynamic Media の概要</strong>
       </a>
    </div>
    <p>
-      <em>Dynamic Mediaを使用したメディアコンテンツの管理とアクセス</em>
+      <em>Dynamic Media を使用したメディアコンテンツの管理とアクセス</em>
    <p>
 </td>
 </table>
@@ -84,8 +84,8 @@ AEM Assetsとは何か、および組織のビジネス目標の達成にがど�
 
 ## その他のリソース
 
-* [AEM Assets ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service tutorials](/help/cloud-service/overview.md)
-* [AEM Sitesチュートリアル](/help/sites/overview.md)
-* [AEM Formsチュートリアル](/help/forms/overview.md)
-* [AEM Foundation チュートリアル](/help/foundation/overview.md)
+* [AEM Assets ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=ja)
+* [AEM as a Cloud Service のチュートリアル](/help/cloud-service/overview.md)
+* [AEM Sites チュートリアル](/help/sites/overview.md)
+* [AEM Forms のチュートリアル](/help/forms/overview.md)
+* [AEM の基盤のチュートリアル](/help/foundation/overview.md)
