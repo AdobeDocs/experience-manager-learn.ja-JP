@@ -1,6 +1,6 @@
 ---
-title: Visual Experience Composer を使用したパーソナライゼーション
-description: Visual Experience Composer を使用してAdobe Targetアクティビティを作成する方法を説明します。
+title: Visual Experience Composer を使用したパーソナライズ機能
+description: Visual Experience Composer を使用して  Adobe Target Activity を作成する方法を説明します。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -13,78 +13,78 @@ role: Developer
 level: Intermediate
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '517'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Visual Experience Composer を使用したパーソナライゼーション {#personalization-vec}
+# Visual Experience Composer を使用したパーソナライズ機能 {#personalization-vec}
 
-Visual Experience Composer(VEC) を使用して A/B テスト Target アクティビティを作成する方法を説明します。
+Visual Experience Composer（VEC）を使用して Target アクティビティの A/B テスト を作成する方法を説明します。
 
 ## 前提条件
 
-AEM Web サイトで VEC を使用するには、次の設定を行う必要があります。
+AEM web サイトで VEC を使用するには、次の設定を行う必要があります。
 
-1. [AEM Web サイトにAdobe Targetを追加する](./add-target-launch-extension.md)
-1. [Launch からのAdobe Target呼び出しのトリガー](./load-and-fire-target.md)
+1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
+1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
 
 ## シナリオの概要
 
-WKND サイトのホームページには、ローカルのアクティビティや、情報カードの形式で都市の周りを取り巻く最適な操作が表示されます。 マーケターは、アドベンチャーセクションのティーザーにテキストを変更し、コンバージョンをどのように改善するかを理解することで、ホームページを変更するタスクを割り当てられました。
+WKND サイトのホームページには、情報カードの形式で、ある都市のローカルのアクティビティや付近の人気スポットが表示されます。 あなたはマーケターとして、「Adventure」セクションのティーザーのテキストを変更し、コンバージョンがどのように向上したかを理解することで、ホームページを変更するタスクを割り当てられました。
 
-## Visual Experience Composer(VEC) を使用した A/B テストの作成手順
+## Visual Experience Composer（VEC）を使用した A/B テストの作成手順
 
-1. ログイン先 [Adobe Experience Cloud](https://experience.adobe.com/)、をタップします。 __ターゲット__&#x200B;をクリックし、 __アクティビティ__ タブ
+1.  [Adobe Experience Cloud](https://experience.adobe.com/) にログインして「__ターゲット__」をタップし、「__アクティビティ__」タブに移動します。
 
-   + 表示されない __ターゲット__ Experience Cloudダッシュボードで、右上の組織切り替えボタンで正しいAdobe組織が選択され、ユーザーに Target へのアクセス権が付与されていることを確認します ( [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Experience Cloud ダッシュボードで「__ターゲット__」が表示されない場合は、右上の組織切り替えボタンで正しい Adobe 組織が選択され、[Adobe Admin Console](https://adminconsole.adobe.com/) でユーザーにターゲットへのアクセス権が付与されていることを確認します。
 
-1. クリック **アクティビティを作成** ボタンをクリックし、 **A/B テスト** アクティビティ
+1. 「**アクティビティを作成**」ボタンをクリックし、「**A/B テスト**」アクティビティを選択します。
 
    ![A/B アクティビティ](assets/ab-target-activity.png)
 
-1. を選択します。 **Visual Experience Composer** 」オプションを選択し、アクティビティ URL を指定して、 **次へ**
+1. 「**Visual Experience Composer**」オプションを選択し、アクティビティ URL を指定して「**次へ**」をクリックします。
 
    ![アクティビティ URL](assets/ab-test-url.png)
 
-1. Visual Experience Composer では、新しいアクティビティを作成した後、左側に 2 つのタブが表示されます。 *エクスペリエンス A* および *エクスペリエンス B*. リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、 **エクスペリエンスを追加** 」ボタンをクリックします。
+1. 新しいアクティビティを作成した後、Visual Experience Composer の左側に「*エクスペリエンス A*」と「*エクスペリエンス B*」という 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
 
    ![エクスペリエンス A](assets/experience.png)
 
-1. 変更を開始するには、ページ上の画像またはテキストを選択するか、コードエディターを使用して要素を選択し、HTMLできます。
+1. 変更を開始するには、ページ上の画像またはテキストを選択するか、コードエディターを使用して HTML 要素を選択できます。
 
    ![要素](assets/select-element.png)
 
-1. 次のテキストを変更： *西オーストラリアのキャンピング* から *オーストラリアの冒険*. エクスペリエンスに追加された変更のリストは、「変更」の下に表示されます。 変更した項目をクリックして編集し、CSS セレクターと、その項目に追加された新しいコンテンツを表示することができます。
+1. テキストを「*Camping in Western Australia*」から「*Adventures of Australia*」に変更します。エクスペリエンスに追加された変更のリストは、「変更」の下に表示されます。 変更した項目をクリックして編集し、CSS セレクターと、その項目に追加された新しいコンテンツを表示することができます。
 
-   ![冒険](assets/adventures.png)
+   ![Adventures](assets/adventures.png)
 
-1. 名前を変更 *エクスペリエンス A* から *冒険*
-1. 同様に、 *エクスペリエンス B* から *西オーストラリアのキャンピング* から *オーストラリアの荒野を探検する*.
+1. 「*Experience A*」から「*Adventure*」に名前を変更します。
+1. 同様に、「*エクスペリエンス B*」のテキストを「*西オーストラリアでのキャンプ*」から「*オーストラリアの荒野を探検する*」に変更します。
 
-   ![参照](assets/explore.png)
+   ![探索](assets/explore.png)
 
-1. クリック **次へ** 「ターゲティング」に移行する際に、2 つのエクスペリエンスの間の手動のトラフィック配分を 50 ～ 50 の範囲に保ちます。
+1. 「**次へ**」をクリック して「ターゲティング」に移動し、2 つのエクスペリエンスの間の手動のトラフィック配分を 50/50 の範囲に保ちます。
 
-   ![ターゲット設定](assets/targeting.png)
+   ![ターゲティング](assets/targeting.png)
 
-1. 「目標と設定」では、「レポートソース」として「 Adobe Target 」を選択し、「目標指標」として「ページビューアクションによるコンバージョン」を選択します。
+1. 「目標と設定」では、「レポートソース」として「Adobe Target」を選択し、「目標指標」として「ページビューアクションによるコンバージョン」を選択します。
 
-   ![ゴール](assets/goals.png)
+   ![目標](assets/goals.png)
 
-1. アクティビティの名前を指定し、保存します。
+1. アクティビティの名前を指定して保存します。
 1. 保存したアクティビティをアクティブ化して、変更をライブにプッシュします。
 
-   ![ゴール](assets/activate.png)
+   ![目標](assets/activate.png)
 
-1. サイトページ（手順 3 のアクティビティ URL）を新しいタブで開き、A/B テストアクティビティからエクスペリエンス（アドベンチャーまたは探索）を表示できるようにします。
+1. サイトページ（手順 3 のアクティビティ URL）を新しいタブで開くと、A/B テストアクティビティからエクスペリエンス（探検または探索）を表示できるようになります。
 
-   ![ゴール](assets/publish.png)
+   ![目標](assets/publish.png)
 
 ## 概要
 
-この章では、Web ページのレイアウトとコンテンツを、テストを実行するコードを変更することなくドラッグ&amp;ドロップ、入れ替え、変更することで、Visual Experience Composer を使用してエクスペリエンスを作成できました。
+この章では、テストを実行するコードを変更することなく、web ページのレイアウトとコンテンツをドラッグ＆ドロップ、入れ替え、変更することで、Visual Experience Composer を使用してエクスペリエンスを作成できました。
 
 ## サポートリンク
 
