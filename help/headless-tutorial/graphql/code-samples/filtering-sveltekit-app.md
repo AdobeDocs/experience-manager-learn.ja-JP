@@ -1,6 +1,6 @@
 ---
 title: シンプルな SvelteKit アプリ
-description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャを表示する単純な SvelteKit アプリです。
+description: コンテンツフラグメントを使用してモデル化された WKND のアドベンチャーを表示する、シンプルな SvelteKit アプリです。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -13,20 +13,20 @@ hide: true
 recommendations: noCatalog, noDisplay
 hidefromtoc: true
 source-git-commit: a0a1c7e5d3dd74454b9b8ab787ce7447e73ee098
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '120'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # SvelteKit アプリのフィルタリング
 
-を使用してデータをリストするAEMヘッドレスGraphQL API 機能を調べる [SvelteKit](https://kit.svelte.dev/) アプリを使用します。 この SvelteKit アプリは、WKND アドベンチャのリストを作成し、アドベンチャの詳細を表示するために選択できます。
+[SvelteKit](https://kit.svelte.dev/) アプリを使用してデータを一覧表示する、AEM ヘッドレス GraphQL API の機能を調べます。この SvelteKit アプリは、アドベンチャーの詳細を表示するために選択できる、WKND アドベンチャーのリストを作成します。
 
-このコードは、Adobeの [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) をクリックして、SvelteKit から永続化されたGraphQLクエリを呼び出します。 このアプリは、 `wknd-shared/adventures-all` すべてのアドベンチャを収集し、使用可能なアクティビティタイプのリストを派生する永続的なクエリ。 アドベンチャーの詳細は、 `wknd-shared/adventures-by-slug` 永続化されたクエリ。
+このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、SvelteKit から永続化された GraphQL クエリを呼び出す方法を示しています。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。アドベンチャーの詳細は、`wknd-shared/adventures-by-slug` 永続クエリを介して要求されます。
 
-このコード：
+このコードは次を実行します。
 
-+ AEM パブリッシュサービスに接続し、認証は不要
-+ WKND の永続クエリを使用します。 `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug`
++ AEM パブリッシュサービスに接続し、認証を必要としない
++ WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug` を使用する
