@@ -1,6 +1,6 @@
 ---
-title: AEMでの SSL ウィザードの使用
-description: Adobe Experience Manager SSL セットアップウィザードを使用して、AEM経由で実行するインスタンスを簡単に設定できるようにします。
+title: AEM での SSL ウィザードの使用
+description: Adobe Experience Manager SSL セットアップウィザードを使用すると、AEM インスタンスを HTTPS 経由で実行するように簡単に設定できます。
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
 version: 6.4, 6.5
 topics: security, operations
@@ -14,19 +14,19 @@ role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '211'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEMでの SSL ウィザードの使用
+# AEM での SSL ウィザードの使用
 
-Adobe Experience Manager SSL セットアップウィザードを使用して、AEM経由で実行するインスタンスを簡単に設定できるようにします。
+Adobe Experience Manager SSL セットアップウィザードを使用すると、AEM インスタンスを HTTPS 経由で実行するように簡単に設定できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
-を開きます。 __SSL 設定ウィザード__ は、次の場所に移動して直接開くことができます。 __AEM オーサー/ツール/セキュリティ/SSL 設定__.
+「__SSL 設定ウィザード__&#x200B;を開く」は、__AEM オーサー／ツール／セキュリティ／SSL 設定__&#x200B;に移動して直接開くことができます。
 
 >[!NOTE]
 >
@@ -36,19 +36,19 @@ Adobe Experience Manager SSL セットアップウィザードを使用して、
 
 ## 秘密鍵と自己署名証明書のダウンロード
 
-次の zip ファイルにはが含まれます。 [!DNL DER] および [!DNL CRT] ローカルホストでAEM SSL を設定するために必要なファイルで、ローカル開発目的でのみ使用されます。
+次の ZIP には、ローカルホストで AEM SSL を設定するために必要な [!DNL DER] および [!DNL CRT] のファイルが含まれており、ローカルでの開発のみを目的としています。
 
-この [!DNL DER] および [!DNL CERT] ファイルは、便宜上提供され、以下の「秘密鍵と自己署名証明書を生成する」の節で説明されている手順を使用して生成されます。
+この [!DNL DER] および [!DNL CERT] ファイルは、便宜上提供され、次の「秘密鍵と自己署名証明書を生成する」のセッションで説明されている手順を使用して生成されます。
 
-必要に応じて、証明書のパスフレーズはになります。 **admin**.
+必要な場合、証明書のパスフレーズは **admin** です。
 
-localhost — 秘密鍵と自己署名証明書.zip （有効期限：2028 年 7 月）
+localhost - 秘密鍵および自己署名入りの certificate.zip（有効期限 2028年7月）
 
-[証明書ファイルをダウンロードします](assets/use-the-ssl-wizard/certificate.zip)
+[証明書ファイルをダウンロードする](assets/use-the-ssl-wizard/certificate.zip)
 
 ## 秘密鍵と自己署名証明書の生成
 
-上記のビデオでは、自己署名付き証明書を使用したAEMオーサーインスタンス上の SSL の設定と設定を示しています。 以下のコマンドは、 [[!DNL OpenSSL]](https://www.openssl.org/) では、ウィザードの手順 2 で使用する秘密鍵と証明書を生成できます。
+上記のビデオでは、自己署名付き証明書を使用した AEM オーサーインスタンス上の SSL の設定と構成を示しています。[[!DNL OpenSSL] ](https://www.openssl.org/) を使用して次のコマンドを実行すると、ウィザードの手順 2 で使用する秘密鍵と証明書を生成することができます。
 
 ```shell
 ### Create Private Key
