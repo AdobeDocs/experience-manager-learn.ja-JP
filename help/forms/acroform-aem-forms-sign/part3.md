@@ -1,7 +1,7 @@
 ---
-title: AEM Formsを使用した Acroforms
+title: Acroforms と AEM Forms の連携
 seo-title: Merge Adaptive Form data with Acroform
-description: Acroforms とAEM Formsの統合に関するチュートリアルの第 3 部。 システム上でワークフローとアダプティブフォームをテストします。
+description: Acroforms と AEM Forms の統合に関するチュートリアルのパート 3 です。お使いのシステムでワークフローとアダプティブフォームをテストします。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -9,35 +9,35 @@ doc-type: tutorial
 activity: implement
 version: 6.4
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '230'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# お使いのシステムでこの機能をテストします。
+# システム上でのこの機能のテスト
 
-[このパッケージをダウンロードしてAEMにインポート](assets/acro-form-aem-form.zip)
-このパッケージには、サンプルワークフローと、アップロードされた Acroform からスキーマを作成できる html ページが含まれています。
+[AEM へのこのパッケージのダウンロードと読み込み](assets/acro-form-aem-form.zip)
+このパッケージには、サンプルワークフローのほか、アップロードされた Acroform からスキーマを作成できる html ページが含まれています。
 
-## ワークフローを設定
+## ワークフローの設定
 
-1. [ワークフローモデルを編集モードで開く](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html).
-2. MergeAcroformData 手順の設定プロパティを開きます。
+1. [ワークフローモデルを編集モードで開きます](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html)。
+2. MergeAcroformData ステップの設定プロパティを開きます。
 3. 「プロセス」タブをクリックします。
 4. 渡す引数がサーバー上の有効なフォルダーであることを確認します。
 5. 変更を保存します。
 
-## アダプティブフォームを作成
+## アダプティブフォームの作成
 
 1. 前の手順で作成したスキーマを使用して、アダプティブフォームを作成します。
-2. いくつかのスキーマ要素をアダプティブフォームにドラッグ&amp;ドロップします。
-3. アダプティブフォームの送信アクションを、AEMワークフロー (MergeAcroformData) に送信するように設定します。
-4. **データファイルのパスとして「Data.xml」を指定していることを確認します。 これは、サンプルコードがワークフローペイロード内で Data.xml と呼ばれるファイルを探すので、非常に重要です。**
+2. いくつかのスキーマ要素をアダプティブフォームにドラッグ＆ドロップします。
+3. AEM ワークフロー（MergeAcroformData）に送信するように、アダプティブフォームの送信アクションを設定します。
+4. **データファイルパスを「Data.xml」として指定していることを確認します。サンプルコードはワークフローペイロードで Data.xml というファイルを検索するので、これは非常に重要です。**
 5. アダプティブフォームをプレビューし、フォームに入力して送信します。
-6. ワークフローの設定PDFの手順 4 で指定したフォルダーに保存された、データが結合されたフォルダーが表示されます。
+6. 設定ワークフローのステップ 4 で指定したフォルダーに結合データが保存された PDF が表示されます。
 
 >[!NOTE]
 >
->データを acroform と結合して生成された PDF は、ワークフローの payload フォルダーの下に pdfdocument.pdf として保存されます。 その後、このドキュメントをワークフローの一部として追加の処理に使用できます
+>データを Acroform と結合して生成された PDF は、ワークフローのペイロードフォルダーに pdfdocument.pdf として保存されます。このドキュメントは次に、ワークフローの一部としてさらに処理するために使用できます
