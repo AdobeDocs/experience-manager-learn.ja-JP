@@ -1,6 +1,6 @@
 ---
-title: アダプティブFormsでの事前入力サービス
-description: バックエンドのデータソースからデータを取得して、アダプティブフォームに事前入力する。
+title: アダプティブフォームでの事前入力サービス
+description: バックエンドのデータソースからデータを取得して、アダプティブフォームに事前入力します。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,23 +9,23 @@ level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
 source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '443'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# アダプティブFormsでの事前入力サービスの使用
+# アダプティブフォームで事前入力サービスを使用する
 
-既存データを使用して、アダプティブフォームのフィールドを事前入力することができます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。 この記事では、AEM Forms事前入力サービスを使用したアダプティブフォームの事前入力について説明します。
+既存データを使用して、アダプティブフォームのフィールドを事前入力することができます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。この記事では、AEM Forms の事前入力サービスを使用したアダプティブフォームの事前入力について説明します。
 
-アダプティブフォームの事前入力方法の詳細については、以下を参照してください。 [このドキュメントに従う](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+アダプティブフォームの事前入力に関する様々な方法の詳細は、[こちらのドキュメントをご覧ください](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html?lang=ja#AEMFormsprefillservice)。
 
-事前入力サービスを使用してアダプティブフォームに事前入力するには、 `com.adobe.forms.common.service.DataXMLProvider` インターフェイス。 メソッド `getDataXMLForDataRef` は、アダプティブフォームがフィールドの事前入力に使用するデータを作成して返すためのロジックを持ちます。 このメソッドでは、任意のソースからデータを取得し、データドキュメントの入力ストリームを返すことができます。 以下のサンプルコードは、ログインしているユーザーのユーザープロファイル情報を取得し、XML ドキュメントを作成します。この XML ドキュメントの入力ストリームは、アダプティブフォームで使用されます。
+事前入力サービスを使用してアダプティブフォームに事前入力するには、`com.adobe.forms.common.service.DataXMLProvider` インターフェイスを実装するクラスを作成する必要があります。メソッド `getDataXMLForDataRef` には、アダプティブフォームがフィールドの事前入力に使用するデータを作成して返すロジックがあります。このメソッドでは、任意のソースからデータを取得し、データドキュメントの入力ストリームを返すことができます。以下のサンプルコードで、ログインしているユーザーのユーザープロファイル情報を取得し、XML ドキュメントを作成します。この XML ドキュメントの入力ストリームは、アダプティブフォームで使用されます。
 
-以下のコードスニペットには、DataXMLProvider インターフェイスを実装するクラスがあります。 ログインしたユーザーにアクセスし、ログインしたユーザーのプロファイル情報を取得します。 次に、「data」というルートノード要素を持つ XML ドキュメントを作成し、このデータノードに適切な要素を追加します。 XML ドキュメントが構築されると、XML ドキュメントの入力ストリームが返されます。
+以下のコードスニペットには、DataXMLProvider インターフェイスを実装するクラスがあります。ログインしたユーザーにアクセスし、ログインしたユーザーのプロファイル情報を取得します。次に、「data」というルートノード要素を持つ XML ドキュメントを作成し、このデータノードに適切な要素を追加します。XML ドキュメントが構築されると、XML ドキュメントの入力ストリームが返されます。
 
-次に、このクラスは OSGi バンドルになり、AEMにデプロイされます。 バンドルがデプロイされると、この事前入力サービスをアダプティブフォームの事前入力サービスとして使用できるようになります。
+次に、このクラスが OSGi バンドルになり、AEM にデプロイされます。バンドルがデプロイされると、この事前入力サービスをアダプティブフォームの事前入力サービスとして使用できるようになります。
 
 ```java
 package com.aem.prefill.core;
@@ -132,16 +132,16 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 }
 ```
 
-ご使用のサーバーでこの機能をテストするには、次の手順を実行してください
+ご使用のサーバーでこの機能をテストするには、次の手順を実行します
 
-* ログインした [ユーザーのプロフィール](http://localhost:4502/security/users.html) 情報が入力されます。 この例では、ログインしたユーザーの FirstName、LastName、Email の各プロパティを探します。
-* [zip ファイルの内容をダウンロードし、コンピューターに展開します。](assets/prefillservice.zip)
-* prefill.core-1.0.0-SNAPSHOT バンドルをデプロイするには、 [AEM web コンソール](http://localhost:4502/system/console/bundles)
-* 「作成」タブを使用してアダプティブフォームを読み込む |からのファイルのアップロード [FormsAndDocuments セクション](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 次を確認します。 [フォーム](http://localhost:4502/editor.html/content/forms/af/prefill.html) が次を使用している **&quot;カスタムAEM Forms事前入力サービス&quot;** を事前入力サービスとして使用します。 これは、 **フォームコンテナ** 」セクションに入力します。
+* ログインした[ユーザーのプロファイル](http://localhost:4502/security/users.html)情報が入力されていることを確認します。この例では、ログインしたユーザーの FirstName、LastName、Email の各プロパティを探します。
+* [zip ファイルの内容をダウンロードし、コンピューターに展開します](assets/prefillservice.zip)
+* [AEM web コンソール](http://localhost:4502/system/console/bundles)を使用して、prefill.core-1.0.0-SNAPSHOT バンドルをデプロイします
+* [FormsAndDocuments セクション](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)から「作成 | ファイルのアップロード」を使用してアダプティブフォームを読み込みます
+* [フォーム](http://localhost:4502/editor.html/content/forms/af/prefill.html)で「**Custom AEM Forms PreFill Service**」が事前入力サービスとして使用されていることを確認します。これは、**フォームコンテナ**&#x200B;セクションの設定プロパティから確認できます。
 * [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). フォームに正しい値が入力されているのが確認できます。
 
 >[!NOTE]
 >
->com.aem.prefill.core.PrefillAdaptiveForm のデバッグを有効にしている場合、AEMサーバーのインストールフォルダーに書き込まれた、生成された xml データファイル。
+>com.aem.prefill.core.PrefillAdaptiveForm のデバッグを有効にしている場合、生成された xml データ ファイルは AEM サーバーのインストールフォルダーに書き込まれます。
 
