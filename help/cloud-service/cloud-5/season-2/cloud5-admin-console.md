@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 -Admin Console
-description: Adobe Admin Consoleと、AEMとの適合方法
+description: Adobe Admin Console と AEM との適合
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -9,19 +9,19 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '73'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # Cloud 5 -Admin Console
 
-Admin Console内のAEMのコンテキストで各項目が何をするのか不思議に思ったことはありますか？ チームは、プロビジョニングとアクセスに関して知っておくべき一般的な事項を説明しようとします。
+Admin Console 内で AEM のコンテキストでの各項目の機能について考えたことはありませんか？ プロビジョニングとアクセスに関して知っておくべき一般的な事項を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 
-+ [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console について](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
 + [Admin Console の概要](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)
