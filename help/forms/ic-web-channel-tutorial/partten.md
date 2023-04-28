@@ -1,7 +1,7 @@
 ---
-title: リタイアメントの[Outlook]パネルの構成
+title: 退職後収入見通しパネルの設定
 seo-title: Configuring Retirement Outlook Panel
-description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 ここでは、テキストとグラフのコンポーネントを追加して、リタイアメントの[Outlookパネル]を構成します。
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 10 部です。ここでは、テキストおよびグラフコンポーネントを追加して、定年後の収入見通しのパネルを設定します。
 seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
 feature: Interactive Communication
@@ -14,66 +14,62 @@ discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
-workflow-type: tm+mt
+exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
 source-wordcount: '344'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# 退職後収入見通しパネルの設定{#configuring-retirement-outlook-panel}
 
-# リタイアメントの[Outlook]パネルの構成{#configuring-retirement-outlook-panel}
+* これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 10 部です。ここでは、テキストおよびグラフコンポーネントを追加して、定年後の収入見通しのパネルを設定します。
 
-* これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの10部です。 ここでは、テキストとグラフのコンポーネントを追加して、リタイアメントの[Outlookパネル]を構成します。
+* AEM Forms にログインし、Adobe Experience Manager／Forms／フォームとドキュメントに移動します。
 
-* AEM Formsにログインし、 Adobe Experience Manager / Forms / Forms &amp; Documentsに移動します。
+* 401KStatement フォルダーを開きます。
 
-* 401KStatementフォルダーを開きます。
+* 401KStatement ドキュメントを編集モードで開きます。
 
-* 401KStatementドキュメントを編集モードで開きます。
+**LeftPanel のターゲット領域の設定**
 
-**LeftPanelのターゲット領域の設定**
+* 右側の LeftPanel のターゲット領域をタップし、「+」アイコンをクリックして、コンポーネントを挿入ダイアログボックスを表示します。
 
-* 右側のLeftPanelのターゲット領域をタップし、「+」アイコンをクリックしてコンポーネントの挿入ダイアログボックスを表示します。
+* テキストコンポーネントを挿入します。
 
-* テキストを挿入コンポーネント。
+* 新しく追加されたテキストコンポーネントを軽くタップして、コンポーネントツールバーを表示します
+
+* 「鉛筆」アイコンを選択して、デフォルトのテキストを編集します。
+
+* デフォルトのテキストを「**退職所得見通し**」に置き換えます。
+
+**RightPanel のターゲット領域の設定**
+
+* 右側の RightPanel のターゲット領域をタップし、「+」アイコンをクリックして、コンポーネントを挿入ダイアログボックスを表示します。
+
+* テキストコンポーネントを挿入します。
 
 * 新しく追加されたテキストコンポーネントを軽くタップして、コンポーネントツールバーを表示します。
 
 * 「鉛筆」アイコンを選択して、デフォルトのテキストを編集します。
 
-* デフォルトのテキストを「**Your Retiarment Income Outlook」に置き換えます。**
+* デフォルトのテキストを「**推定月次退職所得**」に置き換えます。
 
-**RightPanelのターゲット領域の設定**
+## 退職所得見通しドキュメントフラグメントの追加 {#add-retirement-income-outlook-document-fragment}
 
-* 右側のRightPanelのターゲット領域をタップし、「+」アイコンをクリックしてコンポーネントの挿入ダイアログボックスを表示します。
+* アセットアイコンをクリックし、フィルターを適用して「ドキュメントフラグメント」タイプのアセットを表示します。RetieramentIncomeOutlook ドキュメントフラグメントを左パネルのターゲット領域にドラッグ＆ドロップします。
 
-* テキストを挿入コンポーネント。
+* コンテンツエリアにドキュメントフラグメントを追加する方法については、[こちらのページ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html?lang=ja)を参照してください。
 
-* 新しく追加されたテキストコンポーネントを軽くタップして、コンポーネントツールバーを表示します。
+## 推定月次所得グラフの追加 {#adding-estimated-monthly-income-chart}
 
-* 「鉛筆」アイコンを選択して、デフォルトのテキストを編集します。
+* 右側の RightPanel ターゲット領域をクリックします。「+」アイコンをクリックして、グラフコンポーネントを挿入します。列グラフを使用して、推定月次所得を表示します。新しく挿入したグラフコンポーネントを軽くタップします。「レンチ」アイコンを選択して、設定プロパティシートを開きます。次のプロパティを使用してグラフを設定します（以下のスクリーンショットを参照）。
 
-* デフォルトのテキストを「**Estimated Monthly Retieration Income」**&#x200B;に置き換えます。
-
-## 除・売却所得のOutlookドキュメント・フラグメントの追加 {#add-retirement-income-outlook-document-fragment}
-
-* アセットアイコンをクリックし、「ドキュメントフラグメント」タイプのアセットを表示するフィルターを適用します。 RetiermentIncomeOutlookドキュメントフラグメントを[左パネル]のターゲット領域にドラッグ&amp;ドロップします。
-
-* コンテンツ領域にドキュメントフラグメントを追加する場合は、このページ[を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)
-
-## 月次予測収入チャートの追加 {#adding-estimated-monthly-income-chart}
-
-* 右側のRightPanelターゲット領域をクリックします。 「+」アイコンをクリックして、グラフコンポーネントを挿入します。 列グラフを使用して、推定月収を表示します。 新しく挿入したグラフコンポーネントをそっとタップします。 「レンチ」アイコンを選択して、設定プロパティシートを開きます。下のスクリーンショットに示すように、次のプロパティを使用してグラフを設定します。
-
-**AEM Forms 6.4 — 推定月間所得列グラフの設定**
+**AEM Forms 6.4 - 推定月次所得列グラフの設定**
 
 ![form64](assets/estimatedmonthlyincomechart.png)
 
-**AEM Forms 6.5 — 推定月間所得列グラフの設定**
+**AEM Forms 6.5 - 推定月次所得列グラフの設定**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
-
-
-
-
