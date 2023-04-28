@@ -1,6 +1,6 @@
 ---
-title: AEM Content Fragment Console 拡張機能モーダル
-description: AEMコンテンツフラグメントコンソール拡張モーダルを作成する方法について説明します。
+title: AEM コンテンツフラグメントコンソール拡張機能モーダル
+description: AEM コンテンツフラグメントコンソール拡張機能モーダルを作成する方法について説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,33 +10,33 @@ recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
 source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '344'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# 拡張モーダル
+# 拡張機能モーダル
 
-![AEM Content Fragment 拡張機能モーダル](./assets/modal/modal.png){align="center"}
+![AEM コンテンツフラグメント拡張機能モーダル](./assets/modal/modal.png){align="center"}
 
-AEMコンテンツフラグメント拡張モーダルは、カスタム UI をAEMコンテンツフラグメント拡張機能にアタッチする方法を提供します。 [アクションバー](./action-bar.md) または [ヘッダーメニュー](./header-menu.md) ボタン
+AEM コンテンツフラグメント拡張機能モーダルは、[アクションバー](./action-bar.md)や「[ヘッダーメニュー](./header-menu.md)」ボタンなどの、カスタム UI を AEM コンテンツフラグメント拡張機能にアタッチする方法を提供します。
 
-モデルは、 [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/)を使用すれば、拡張機能に必要な任意のカスタム UI を作成できます。これには以下が含まれますが、これらに限定されません。
+モーダルは [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/)に基づく React アプリケーションであり、拡張機能に必要な任意のカスタム UI を作成できます。
 
 + 確認ダイアログ
 + [入力フォーム](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [進行状況指標](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [進行状況インジケーター](https://react-spectrum.adobe.com/react-spectrum/#status)
 + [結果の概要](https://react-spectrum.adobe.com/react-spectrum/#collections)
 + エラーメッセージ
-+ ...またはフルブローのマルチビュー React アプリケーションも。
++ ...または、本格的なマルチビューの React アプリケーションも。
 
 ## モーダルルート
 
-モーダルエクスペリエンスは、 `web-src` フォルダー。 他の React アプリと同様に、フルエクスペリエンスは [React ルート](https://reactrouter.com/en/main/components/routes) レンダリング [React コンポーネント](https://reactjs.org/docs/components-and-props.html).
+モーダルエクスペリエンスは、`web-src` フォルダーの下に定義された拡張機能アプリケーションビルダー React アプリケーションによって定義されます。他の React アプリケーションと同様に、完全なエクスペリエンスは、[React コンポーネント](https://reactjs.org/docs/components-and-props.html)をレンダリングする [React ルート](https://reactrouter.com/en/main/components/routes)を使用して調整されます。
 
-最初のモーダルビューを生成するには、少なくとも 1 つのルートが必要です。 この初期ルートは、 [拡張登録](#extension-registration)&#39;s `onClick(..)` 関数に含めることができます。
+モーダルの初期表示を生成するには、少なくとも 1 つのルートが必要です。この初期ルートは、以下に示すように、[拡張機能の登録](#extension-registration)の `onClick(..)` 関数で呼び出されます。
 
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/App.js`
@@ -78,14 +78,14 @@ function App(props) {
 
 ## 拡張機能の登録
 
-モーダルを開くには、を呼び出します。 `guestConnection.host.modal.showUrl(..)` は、拡張機能の `onClick(..)` 関数に置き換えます。 `showUrl(..)` は、キーと値を持つ JavaScript オブジェクトを渡します。
+モーダルを開くには、拡張機能の `onClick(..)` 関数から `guestConnection.host.modal.showUrl(..)` を呼び出します。`showUrl(..)` は、キーと値を持つ JavaScript オブジェクトを渡します。
 
-+ `title` ユーザーに表示されるモーダルのタイトルの名前を指定します
-+ `url` は、 [React ルート](#modal-routes) は、モーダルの初期表示に対して使用されます。
++ `title` は、ユーザーに表示されるモーダルのタイトルの名前を提供します
++ `url` は、モーダルの初期表示に使用される [React ルート](#modal-routes)を呼び出す URL です。
 
-これは必ず `url` に渡される `guestConnection.host.modal.showUrl(..)` は拡張機能でルーティングするように解決され、それ以外の場合は、モーダルには何も表示されません。
+`guestConnection.host.modal.showUrl(..)` に渡された `url` が拡張機能でルーティングされるように解決する必要があり、それ以外の場合は、モーダルには何も表示されません。
 
-以下を確認します。 [ヘッダーメニュー](./header-menu.md#modal) および [アクションバー](./action-bar.md#modal) モーダル URL の作成方法に関するドキュメントです。
+モーダル URL の作成方法については、[ヘッダーメニュー](./header-menu.md#modal)と[アクションバー](./action-bar.md#modal)のドキュメントを参照してください。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -108,11 +108,11 @@ function ExtensionRegistration() {
 
 ## モーダルコンポーネント
 
-拡張機能の各ルート [それは `index` ルート](./extension-registration.md#app-routes)は、拡張機能のモーダルでレンダリングできる React コンポーネントにマッピングされます。
+[`index` ルートではない](./extension-registration.md#app-routes)拡張機能の各ルートは、拡張機能のモーダルでレンダリングできる React コンポーネントにマッピングされます。
 
-モーダルは、単純な 1 ルートモーダルから複雑なマルチルートモーダルまで、任意の数の React ルートで構成することができます。
+モーダルは、シンプルな 1 ルートモーダルから複雑なマルチルートモーダルまで、任意の数の React ルートで構成することができます。
 
-次に、単純な 1 ルートモーダルを示します。ただし、このモーダルビューには、他のルートや動作を呼び出す React リンクを含めることができます。
+次に、シンプルな 1 ルートモーダルを示します。ただし、このモーダルビューには、他のルートや動作を呼び出す React リンクを含めることができます。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -184,9 +184,9 @@ export default function MyModal() {
 
 ## モーダルを閉じる
 
-![AEMコンテンツフラグメント拡張モーダル閉じるボタン](./assets/modal/close.png){align="center"}
+![AEM コンテンツフラグメントの拡張機能モーダルの「閉じる」ボタン](./assets/modal/close.png){align="center"}
 
-モデルは、独自のクローズコントロールを提供する必要があります。 これは、を呼び出すことでおこなわれます。 `guestConnection.host.modal.close()`.
+モーダルでは、独自のクローズコントロールを提供する必要があります。これは `guestConnection.host.modal.close()` を呼び出すことによって行われます。
 
 ```javascript
 <ButtonGroup align="end">
