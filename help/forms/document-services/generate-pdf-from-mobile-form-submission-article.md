@@ -1,6 +1,6 @@
 ---
-title: HTM5 フォーム送信からPDFを生成
-description: モバイルフォームの送信からPDFを生成
+title: HTM5 フォーム送信から PDF を生成
+description: モバイルフォームの送信から PDF を生成
 feature: Mobile Forms
 version: 6.4,6.5
 topic: Development
@@ -9,26 +9,26 @@ level: Experienced
 exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
 last-substantial-update: 2020-01-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '544'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# HTM5 フォーム送信からPDFを生成 {#generate-pdf-from-htm-form-submission}
+# HTM5 フォーム送信から PDF を生成 {#generate-pdf-from-htm-form-submission}
 
-この記事では、HTML5(Mobile Forms) フォームの送信から pdf を生成する手順について説明します。 このデモでは、画像をHTML5 フォームに追加し、画像を最終的な pdf に結合するために必要な手順も説明します。
+この記事では、HTML5（Mobile Forms）フォームの送信から PDF を生成する手順について説明します。このデモでは、画像を HTML5 フォームに追加し、画像を最終的な PDF に結合するために必要な手順も説明します。
 
 
-送信されたデータを xdp テンプレートに結合するには、次の手順を実行します
+送信されたデータを XDP テンプレートに結合するには、次の手順を実行します。
 
-Servlet5 フォーム送信を処理するHTMLを書き込む
+HTML5 のフォーム送信を処理するサーブレットを作成する
 
-* このサーブレット内で、送信されたデータを取得します
-* このデータを xdp テンプレートと結合して pdf を生成します
-* PDF を呼び出し元のアプリケーションにストリーミングします。
+* このサーブレット内で、送信されたデータを取得する
+* このデータを XDP テンプレートと結合して PDF を生成する
+* PDF を呼び出し元のアプリケーションにストリーミングする
 
-次に、リクエストから送信されたデータを抽出するサーブレットコードを示します。 次に、カスタム documentServices .mobileFormToPDF メソッドを呼び出して PDF を取得します。
+次に、リクエストから送信されたデータを抽出するサーブレットコードを示します。次に、カスタム documentServices .mobileFormToPDF メソッドを呼び出して PDF を取得します。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -66,9 +66,9 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
  }
 ```
 
-モバイルフォームに画像を追加し、その画像を PDF に表示するには、以下を使用します
+モバイルフォームに画像を追加し、その画像を PDF に表示するには、次を使用します。
 
-XDP テンプレート — xdp テンプレートに btnAddImage という画像フィールドとボタンを追加しました。 次のコードは、カスタムプロファイル内の btnAddImage の click イベントを処理します。 このスライドに示すように、file1 click イベントのトリガーは次のとおりです。 この使用例を実現するために xdp でコーディングは必要ありません
+XDP テンプレート - XDP テンプレートに btnAddImage という画像フィールドとボタンを追加しました。次のコードは、カスタムプロファイル内の btnAddImage のクリックイベントを処理します。このスライドに示すように、「ファイル 1 クリック」イベントのトリガーは次のとおりです。このユースケースを実現するために XDP でコーディングは必要ありません。
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -78,7 +78,7 @@ $("#file1").click();
 });
 ```
 
-[カスタムプロファイル](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). カスタムプロファイルを使用すると、モバイルフォームのHTMLDOM オブジェクトの操作が容易になります。 非表示のファイル要素がHTML.jsp に追加されます。 ユーザーが「写真を追加」をクリックすると、ファイル要素の click イベントがトリガーされます。 これにより、ユーザは添付する写真を参照して選択できます。 次に、JavaScript の FileReader オブジェクトを使用して、画像の base64 エンコードされた文字列を取得します。 base64 画像文字列は、フォームのテキストフィールドに格納されます。 フォームが送信されると、この値を抽出し、XML の img 要素に挿入します。 その後、この XML を使用して xdp とマージし、最終的な PDF を生成します。
+[カスタムプロファイル](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。カスタムプロファイルを使用すると、モバイルフォームの HTML DOM オブジェクトの操作が容易になります。非表示のファイル要素が HTML.jsp に追加されます。ユーザーが「写真を追加」をクリックすると、ファイル要素のクリックイベントがトリガーされます。これにより、ユーザーは添付する写真を参照して選択できます。次に、JavaScript の FileReader オブジェクトを使用して、画像の base64 エンコードされた文字列を取得します。base64 画像文字列は、フォームのテキストフィールドに格納されます。フォームが送信されると、この値を抽出し、XML の img 要素に挿入します。その後、この XML を使用して XDP とマージし、最終的な PDF を生成します。
 
 この記事で使用するカスタムプロファイルは、この記事のアセットの一部として使用できるようになっています。
 
@@ -100,23 +100,23 @@ function readURL(input) {
         }
 ```
 
-上記のコードは、ファイル要素の click イベントをトリガーすると実行されます。 5 行目では、アップロードされたファイルの内容を base64 文字列として抽出し、テキストフィールドに格納します。 この値は、フォームがサーブレットに送信される際に抽出されます。
+上記のコードは、file 要素のクリックイベントをトリガーすると実行されます。5 行目では、アップロードされたファイルの内容を base64 文字列として抽出し、テキストフィールドに格納します。この値は、フォームがサーブレットに送信される際に抽出されます。
 
-次に、AEMでモバイルフォームの次のプロパティ（詳細）を設定します
+次に、AEM でモバイルフォームの次のプロパティ（詳細）を設定します。
 
-* URL を送信 — http://localhost:4502/bin/handlemobileformsubmission. これは、送信されたデータを xdp テンプレートと結合するサーブレットです
-* HTMLレンダリングプロファイル — 「AddImageToMobileForm」を選択していることを確認します。 これにより、トリガーを使用して画像をフォームに追加します。
+* URL を送信 - http://localhost:4502/bin/handlemobileformsubmissionこれは、送信されたデータを XDP テンプレートと結合するサーブレットです。
+* HTML レンダリングプロファイル - 「AddImageToMobileForm」を選択していることを確認します。これにより、トリガーを使用して画像をフォームに追加します。
 
 ご使用のサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* [AemFormsDocumentServices バンドルをデプロイします。](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* [AemFormsDocumentServices バンドルをデプロイ](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
-* [Developing with Service User バンドルのデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [サービスユーザーバンドルを使用した開発のデプロイ](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 * [この記事に関連するパッケージをダウンロードしてインストールします。](assets/pdf-from-mobile-form-submission.zip)
 
-* 送信 URL とHTMLレンダリングプロファイルが正しく設定されていることを確認するには、  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* [XDP](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp) のプロパティページを表示して、送信 URL と HTML レンダリングプロファイルが正しく設定されていることを確認します。
 
-* [XDP を html としてプレビュー](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
+* [XDP を HTML としてプレビュー](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* 画像をフォームに追加して送信します。 画像を含むPDFが返されます。
+* 画像をフォームに追加して送信します。画像を含む PDF が返されます。
