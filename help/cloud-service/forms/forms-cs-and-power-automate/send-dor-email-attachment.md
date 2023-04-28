@@ -1,6 +1,6 @@
 ---
-title: DoR を電子メールの添付ファイルとして送信
-description: DoR を電子メールの添付ファイルとして使用して電子メール通知を送信者に送信する
+title: メール添付ファイルとしての DoR の送信
+description: DoR をメールの添付ファイルとして使用して、メール通知を送信者に送信する
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,15 +9,16 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11019
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 9ded508c-9408-4d41-b8c6-cd85d1e4cf17
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# DoR を電子メールの添付ファイルとして送信
+# メール添付ファイルとしての DoR の送信
 
-DoR を抽出し、Power Automate のワークフローで電子メール添付ファイルとして送信します。
-次のビデオでは、送信されたデータから DoR を抽出するために必要な手順を説明します
+DoR を抽出し、Power Automate のワークフローでメール添付ファイルとして送信します。
+次のビデオでは、送信されたデータから DoR を抽出するために必要な手順を説明しています。
 >[!VIDEO](https://video.tv.adobe.com/v/346731?quality=12&learn=on)
