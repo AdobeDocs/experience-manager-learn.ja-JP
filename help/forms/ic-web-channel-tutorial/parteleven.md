@@ -1,60 +1,59 @@
 ---
-title: 投資ミックスパネルの構成
-seo-title: 投資ミックスパネルの構成
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの11部です。この部分では、現在とモデルの投資ミックスを表示する円グラフを追加します。
-seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの11部です。この部分では、現在とモデルの投資ミックスを表示する円グラフを追加します。
+title: 投資ミックスパネルの設定
+seo-title: Configuring Investment Mix Panel
+description: これは、初めてのインタラクティブなコミュニケーションドキュメントを作成するための、複数の手順からなるチュートリアルの第 11 部です。この部分では、現在の投資ミックスとモデルの投資ミックスを表示する円グラフを追加します。
+seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document.In this part, we will add pie charts to display the current and model investment mix.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
-workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 0%
+exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '326'
+ht-degree: 100%
 
 ---
 
+# 投資ミックスパネルの設定
 
-# 投資ミックスパネルの構成
+ここでは、現在およびモデルのアセットミックスを表示する円グラフを追加します。
 
-ここでは、現在とモデルの投資ミックスを表示する円グラフを追加します。
+* AEM Forms にログインし、Adobe Experience Manager／Forms／フォームとドキュメントに移動します。
 
-* AEM Formsにログインし、 Adobe Experience Manager / Forms / Forms &amp; Documentsに移動します。
+* 401KStatement フォルダーを開きます。
 
-* 401KStatementフォルダーを開きます。
+* 401KStatement を編集モードで開きます。
 
-* 401KStatementを編集モードで開きます。
-
-* 2つの円グラフを追加して、アカウント保有者の現在とモデルの投資ミックスを表します。
+* 2 つの円グラフを追加して、口座保有者の現在およびモデルのアセットミックスを表します。
 
 ## 現在のアセットミックス {#current-asset-mix}
 
-* 右側の「CurrentAssetMix」パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「Current Asset Mix」に変更します。
+* 右側の CurrentAssetMix パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「現在のアセットミックス」に変更します。
 
-* 「CurrentAssetMix」パネルをタップし、「+」アイコンを選択してグラフコンポーネントを挿入します。 新しく挿入されたグラフコンポーネントをタップし、「レンチ」アイコンをクリックして、グラフの設定プロパティシートを開きます。
+* CurrentAssetMix パネルをタップし、「+」アイコンを選択してグラフコンポーネントを挿入します。新しく挿入されたグラフコンポーネントをタップし、レンチアイコンをクリックして、グラフの設定プロパティシートを開きます。
 
-* 次の画像に示すように、プロパティを設定します。 グラフの種類が円グラフであることを確認します。
+* 次の画像に示すようにプロパティを設定します。グラフの種類が円グラフであることを確認します。
 
-* X軸とY軸に連結されたデータモデルオブジェクトに注意してください。 フォームデータモデルのルート要素を選択し、ドリルダウンして適切な要素を選択する必要があります。
+* X 軸と Y 軸に連結されたデータモデルオブジェクトに注意してください。 フォームデータモデルのルート要素を選択し、ドリルダウンして適切な要素を選択する必要があります。
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
 ## モデルアセットミックス {#model-asset-mix}
 
-* 右側の「RecommendedAssetMix」パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「Model Asset Mix」に変更します。
+* 右側の RecommendedAssetMix パネルをタップし、「+」アイコンを選択してテキストコンポーネントを挿入します。 デフォルトのテキストを「モデルアセットミックス」に変更します。
 
-* 「RecommendedAssetMix」パネルをタップし、「+」アイコンを選択してグラフコンポーネントを挿入します。 新しく挿入されたグラフコンポーネントをタップし、「レンチ」アイコンをクリックして、グラフの設定プロパティシートを開きます。
+* RecommendedAssetMix パネルをタップし、「+」アイコンを選択してグラフコンポーネントを挿入します。 新しく挿入されたグラフコンポーネントをタップし、レンチアイコンをクリックして、グラフの設定プロパティシートを開きます。
 
-* 次の画像に示すように、プロパティを設定します。 グラフの種類が円グラフであることを確認します。
+* 次の画像に示すようにプロパティを設定します。グラフの種類が円グラフであることを確認します。
 
-* X軸とY軸に連結されたデータモデルオブジェクトに注意してください。 フォームデータモデルのルート要素を選択し、ドリルダウンして適切な要素を選択する必要があります。
+* X 軸と Y 軸に連結されたデータモデルオブジェクトに注意してください。 フォームデータモデルのルート要素を選択し、ドリルダウンして適切な要素を選択する必要があります。
 
 * ![assettype](assets/modelassettypechart.png)
-
