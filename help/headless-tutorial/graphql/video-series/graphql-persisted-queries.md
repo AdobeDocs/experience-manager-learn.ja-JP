@@ -1,6 +1,6 @@
 ---
 title: GraphQL 永続クエリ
-description: AEMで永続化クエリを有効に、作成、更新、実行する方法を説明します。
+description: AEM で永続クエリを有効にし、作成、更新、実行する方法について説明します。
 version: Cloud Service
 topic: Headless, Content Management
 feature: GraphQL API
@@ -10,27 +10,27 @@ kt: 7872
 thumbnail: 333429.jpeg
 exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '122'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # GraphQL 永続クエリ
 
-AEMで永続化クエリを有効に、作成、更新、実行する方法を説明します。
+AEM で永続クエリを有効にし、作成、更新、実行する方法について説明します。
 
-このビデオでは、次の操作を実行します。
+このビデオでは、以下の内容を学びます。
 
-+ GraphQL永続クエリを有効にする方法を説明します
-+ GraphQLクエリの作成、更新、実行方法について説明します
-+ サーバー側クエリとクライアント側クエリの長所と短所について
++ GraphQL 永続クエリを有効にする方法を学ぶ
++ GraphQL クエリを作成、更新、実行する方法を学ぶ
++ サーバーサイドクエリとクライアントサイドクエリの長所と短所を理解する
 
 >[!CAUTION]
 >
->この **永続クエリの作成、更新、実行** 2:05 から始まる章の使用 [Postman](https://www.postman.com/) タスクを実行します。 ただし、AEM as Cloud Serviceの新しいバージョンでは、 **GraphiQL エクスプローラ** が提供されている場合は、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を参照してください。
+>2:05 から始まる&#x200B;**永続クエリの作成、更新、実行**&#x200B;の章では、[Postman](https://www.postman.com/) を使用してタスクを実行します。ただし、AEM as Cloud Service の新しいバージョンでは、組み込みの **GraphiQL エクスプローラー**&#x200B;が提供されています。詳しくは、[GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=ja)を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
 
-_をダウンロードします。 [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) AEMヘッドレスビデオシリーズ全体で使用されます。_
+_AEM ヘッドレスビデオシリーズ全体で使用されている [Postman コレクション](./assets/aem-headless-video-series.postman_collection.json)をダウンロードします。_
