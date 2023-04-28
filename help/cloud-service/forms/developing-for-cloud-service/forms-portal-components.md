@@ -1,44 +1,45 @@
 ---
-title: AEM Forms Portal コンポーネントの有効化
-description: コアコンポーネントを使用したAEM Forms Portal の構築
+title: AEM Forms ポータルコンポーネントの有効化
+description: コアコンポーネントを使用して AEM Forms ポータルを作成します。
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 10373
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
-workflow-type: tm+mt
+exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
+source-git-commit: 69cd5022d136e9fa84f33d2fc5ca249ac0fb6490
+workflow-type: ht
 source-wordcount: '343'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
-# Forms Portal コンポーネント
+# フォームポータルコンポーネント
 
 AEM Forms は、次のポータルコンポーネントを標準搭載しています。
 
-**Search &amp; Lister**:このコンポーネントを使用すると、フォームリポジトリのフォームをポータルページに一覧表示でき、指定した条件に基づいてフォームを一覧表示する設定オプションを提供します。
+**検索とリスター**：このコンポーネントを使用すると、フォームリポジトリ内のフォームをポータルページに一覧表示できます。また、指定した基準に基づいてフォームを一覧表示するための設定オプションが提供されます。
 
-**ドラフトと送信**:Search &amp; Lister コンポーネントには、Formsの作成者が公開したフォームが表示され、Drafts &amp; Submissions コンポーネントには、後で完了するためにドラフトとして保存されたフォームと送信済みのフォームが表示されます。 このコンポーネントはログインユーザーに対してパーソナライズされたエクスペリエンスを提供します。
+**ドラフトと送信**：「検索とリスター」コンポーネントがフォーム作成者が公開したフォームを表示するのに対し、「ドラフトと送信」コンポーネントは、後で完成させるためにドラフトとして保存されたフォームと送信されたフォームを表示します。このコンポーネントは、ログインしたユーザーに対してパーソナライズされたエクスペリエンスを提供します。
 
-**リンク**:このコンポーネントを使用すると、ページの任意の場所にフォームへのリンクを作成できます。
+**リンク**：このコンポーネントを使用すると、ページの任意の場所にフォームへのリンクを作成できます。
 
-## フォームポータルコンポーネントを有効にする
+## フォームポータルコンポーネントの有効化
 
-IntelliJ を起動し、 [以前の手順です。](./getting-started.md) ui.apps->src->main->content->jcr_root->apps.bankingapplication->components を展開します。
+IntelliJ を起動し、[以前の手順](./getting-started.md)で作成した BankingApplication プロジェクトを開きます。ui.appssrc／main／content／jcr_root／apps.bankingapplication／components を展開します。
 
 Adobe Experience Manager（AEM）サイトで任意のコアコンポーネント（標準のポータルコンポーネントを含む）を使用するには、プロキシコンポーネントを作成して、サイトに対してそれを有効にする必要があります。新しく作成したプロキシコンポーネントは、すべてをそのコンポーネントから継承するように、標準のフォームコンポーネントを指す必要があります。 これは、プロキシコンポーネントの content.xml 内の resourceSuperType を変更することで行われます。 content.xml では、タイトルとコンポーネントグループも指定します。
 >[!NOTE]
 >
-> 各 [ここからこれらのコンポーネント](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
+> [ここで公開されている各コンポーネント](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)のリソーススーパータイプを作成できます。
 
 
 ### ドラフトと送信
 
-既存のコンポーネントのコピーを作成する ( 例： `button`) を _draftsandssubmits_.
+既存のコンポーネント（例：`button`）のコピーを作成して、名前を _draftsandssubmits_ とします。
 ![draftsandssubmits](assets/forms-portal-components2.png)
-次の `.content.xml` を次の XML に置き換えます。
+`.content.xml` の内容を次の XML に置き換えます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -49,10 +50,10 @@ Adobe Experience Manager（AEM）サイトで任意のコアコンポーネン�
           componentGroup="BankingApplication - Content"/>
 ```
 
-### Search &amp; Lister
+### 検索とリスター
 
-ボタンコンポーネントのコピーを作成し、名前をに変更します。 _searchandlister_.
-次の `.content.xml` を次の XML に置き換えます。
+ボタンコンポーネントのコピーを作成し、名前を _searchandlister_ に変更します。
+`.content.xml` の内容を次の XML に置き換えます。
 
 
 ```xml
@@ -66,8 +67,8 @@ Adobe Experience Manager（AEM）サイトで任意のコアコンポーネン�
 
 ### リンクコンポーネント
 
-ボタンコンポーネントのコピーを作成し、名前をに変更します。 _リンク_.
-次の `.content.xml` を次の XML に置き換えます。
+ボタンコンポーネントのコピーを作成し、名前を _link_ に変更します。 
+`.content.xml` の内容を次の XML に置き換えます。
 
 
 ```xml
@@ -79,4 +80,4 @@ Adobe Experience Manager（AEM）サイトで任意のコアコンポーネン�
           componentGroup="BankingApplication - Content"/>
 ```
 
-プロジェクトがデプロイされると、AEMページでこれらのコンポーネントを使用してFormsポータルを作成できるようになります。
+プロジェクトがデプロイされると、AEM ページでこれらのコンポーネントを使用してフォームポータルを作成できるようになります。
