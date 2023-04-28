@@ -1,7 +1,7 @@
 ---
-title: AEM Sitesコンテンツ階層の概要
+title: AEM Sites コンテンツ階層の概要
 seo-title: Introduction to AEM Sites Content Hierarchy
-description: 次のビデオでは、組織のAEM内でのサイトページの保存方法を重点的に説明します。
+description: 次の動画では、組織の AEM でサイトページを保存する方法について重点的に説明します。
 seo-description: The following video highlights how site pages are stored within AEM for your organization.
 feature: Page Editor
 topics: authoring, publishing
@@ -16,13 +16,13 @@ role: User
 level: Beginner
 exl-id: 51347f65-bed1-44da-ade3-69209fa443c4
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '37'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# コンテンツ構造と階層 {#content-hierarchy}
+# コンテンツの構造と階層 {#content-hierarchy}
 
 AEM Sitesで組織のサイトページを作成および整理する方法について説明します。
 
