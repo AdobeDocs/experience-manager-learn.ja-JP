@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 AEM Dispatcher バリデーター
+title: クラウド 5 AEM Dispatcher バリデーター
 description: このエピソードでは、Dispatcher バリデーターとそのニュアンスについて詳しく説明します。
 version: Cloud Service
 role: Admin, Developer
@@ -10,21 +10,21 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: e95e7530-100d-4495-abae-4c568e7978b3
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '69'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 AEM Dispatcher バリデーター
+# クラウド 5 AEM Dispatcher バリデーター
 
-AEM開発ワークフローでの Dispatcher バリデーターの使用方法の簡単な例です。
+AEM 開発ワークフローでの Dispatcher バリデーターの使用方法の簡単な例です。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 
 + Dispatcher と SDK の概要
-+ [Dispatcher ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
++ [Dispatcher ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=ja)
 + エラーのトラブルシューティング
 + デバッグへの Dispatcher ログと実行モードの使用
