@@ -1,30 +1,30 @@
 ---
-user-guide-title: AEM Assets Essentials ビデオ
-user-guide-description: Adobe Experience Manager Assets Essentials用のビデオのコレクションです。
-breadcrumb-title: AEM Assets Essentials ビデオ
+user-guide-title: AEM Assets Essentials のビデオ
+user-guide-description: Adobe Experience Manager Assets Essentials のビデオのコレクションです。
+breadcrumb-title: AEM Assets Essentials のビデオ
 sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
 source-git-commit: 1ff03f5031389db1a779d28beab9d592857a2ba6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '74'
-ht-degree: 32%
+ht-degree: 100%
 
 ---
 
 
-# AEM Assets Essentials ビデオ {#assets-essentials}
+# AEM Assets Essentials のビデオ {#assets-essentials}
 
 + [概要](overview.md)
 
-+ [概要](./getting-started.md)
++ [はじめに](./getting-started.md)
 
 + 基本{#basics}
    + [管理](basics/managing.md)
    + [使用](basics/using.md)
    + [コンテンツの作成](basics/creating.md)
-   + [コラボレーション](basics/collaborating.md)
+   + [共同作業](basics/collaborating.md)
    + [リンク共有](basics/link-sharing.md)
 
 + 設定{#configuring}
@@ -34,12 +34,12 @@ ht-degree: 32%
 
 + [Creative Cloud 統合](integrations/creative-cloud.md)
 
-+ Adobe Workfront統合{#workfront}
++ Adobe Workfront 統合{#workfront}
    + [設定](./integrations/workfront/configure.md)
    + [メタデータのマッピング](./integrations/workfront/map-metadata.md)
    + [ドキュメントの送信とアセットのリンク](./integrations/workfront/link-send.md)
    + [バージョン履歴](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja)
++ [Adobe Journey Optimizer の統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja)
 
-+ [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)。
++ [ドキュメント化](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja)。
