@@ -10,21 +10,21 @@ kt: 9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '543'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# インタラクティブ DoR をダウンロード
+# インタラクティブ DoR をダウンロードする
 
-一般的な使用例としては、アダプティブフォームデータを含むインタラクティブ DoR をダウンロードできる場合が考えられます。 ダウンロードした DoR は、Adobe AcrobatまたはAdobe Readerを使用して完了します。
+一般的な使用例としては、アダプティブフォームデータを含むインタラクティブ DoR をダウンロードできる場合が考えられます。 ダウンロードした DoR は、Adobe Acrobat または Adobe Reader を使用して完了します。
 
 ## アダプティブフォームが XSD スキーマに基づいていない
 
 XDP とアダプティブフォームがどのスキーマにも基づいていない場合は、次の手順に従ってインタラクティブなレコードのドキュメントを生成してください。
 
-### アダプティブフォームを作成
+### アダプティブフォームの作成
 
 アダプティブフォームを作成し、アダプティブフォームのフィールド名が xdp テンプレートのフィールド名と同じ名前になっていることを確認します。
 xdp テンプレートのルート要素名をメモしておきます。
@@ -32,7 +32,7 @@ xdp テンプレートのルート要素名をメモしておきます。
 
 ### クライアントライブラリ
 
-次のコードは、「ダウンロードPDF」ボタンがトリガーされるとトリガーされます
+次のコードは、「PDF をダウンロード」ボタンがトリガーされるとトリガーされます
 
 ```javascript
 $(document).ready(function() {
@@ -65,23 +65,24 @@ $(document).ready(function() {
 
 ## XSD スキーマに基づくアダプティブフォーム
 
-xdp が XSD に基づいていない場合は、次の手順に従ってアダプティブフォームのベースとなる XSD(schema) を作成します
+xdp が XSD に基づいていない場合は、次の手順に従ってアダプティブフォームのベースとなる XSD（スキーマ）を作成します
 
 ### XDP のサンプルデータを生成
 
-* XDP をAEM Forms Designer で開きます。
-* ファイルをクリック |フォームのプロパティ |プレビュー
-* 「プレビューデータを生成」をクリックします。
-* 「生成」をクリックします。
-* 「form-data.xml」など、意味のあるファイル名を指定する
+* XDP を AEM Forms Designer で開きます。
+* ファイル／フォームのプロパティ／プレビューを選択します。
+* 「プレビューデータを生成」をクリックします
+* 「生成」をクリックします
+* 「form-data.xml」などの意味のあるファイル名を指定します
 
 ### xml データから XSD を生成
 
-無料のオンラインツールを使用して、 [XSD を生成](https://www.freeformatter.com/xsd-generator.html) 前の手順で生成した xml データから。
+無料のオンラインツールを使用して、前の手順で生成した xml データから [XSD を生成](https://www.freeformatter.com/xsd-generator.html?lang=ja)できます。
 
-### アダプティブフォームを作成
+### アダプティブフォームの作成
 
-前の手順の XSD に基づいてアダプティブフォームを作成します。 クライアントライブラリ「irs」を使用するようにフォームを関連付けます。 このクライアントライブラリには、呼び出し元のアプリケーションにPDFを返すサーブレットに対してPOST呼び出しを行うコードが含まれています次のコードは、 _ダウンロードPDF_ クリック済み
+前の手順の XSD に基づいてアダプティブフォームを作成します。 クライアントライブラリ「irs」を使用するようにフォームを関連付けます。 このクライアントライブラリには、呼び出し元のアプリケーションに PDF を返すサーブレットに対して POST 呼び出しを行うコードが含まれています
+次のコードは、「_PDF をダウンロード_」がクリックされるとトリガーされます
 
 ```javascript
 $(document).ready(function() {
@@ -116,7 +117,7 @@ $(document).ready(function() {
 
 ## カスタムサーブレットを作成
 
-データを XDP テンプレートと結合し、PDF を返すカスタムサーブレットを作成します。 これをおこなうコードを次に示します。 カスタムサーブレットは、 [AEMFormsDocumentServices.core-1.0-SNAPSHOT バンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)) をクリックします。
+データを XDP テンプレートと結合し、PDF を返すカスタムサーブレットを作成します。 これを行うコードを以下に示します。カスタムサーブレットは、[AEMFormsDocumentServices.core-1.0-SNAPSHOT バンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)の一部です）。
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -209,21 +210,22 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-このサンプルコードでは、要求オブジェクトから xdp 名と他のパラメーターを抽出します。 フォームが XSD ベースでない場合は、xdp とマージする xml ドキュメントが作成されます。フォームが XSD ベースの場合は、アダプティブフォームの送信済みデータから適切なノードを抽出し、xdp テンプレートとマージする xml ドキュメントを生成します。
+このサンプルコードでは、リクエストオブジェクトから xdp 名と他のパラメーターを抽出します。 フォームが XSD ベース以外の場合は、xdp と結合する xml ドキュメントが作成されます。フォームが XSD ベースの場合は、アダプティブフォームの送信済みデータから適切なノードを抽出し、xdp テンプレートと結合する xml ドキュメントを生成します。
 
-## サーバーにサンプルをデプロイします。
+## サンプルのサーバーへのデプロイ
 
-ローカルサーバーでこれをテストするには、次の手順に従ってください。
+ローカルサーバーでこれをテストするには、次の手順に従います。
 
-1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service に次のエントリを追加します。
-1. [カスタム DocumentServices バンドルをダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). これには、データと XDP テンプレートを結合し、PDF をストリーミングして戻すサーブレットがあります
-1. [クライアントライブラリのインポート](assets/generate-interactive-dor-client-lib.zip)
+1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. Apache Sling Service User Mapper Service に次のエントリを追加します。
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+1. [カスタム DocumentServices バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。これには、データと XDP テンプレートを結合し、PDF をストリーミングして戻すサーブレットがあります
+1. [クライアントライブラリを読み込みます。](assets/generate-interactive-dor-client-lib.zip)
 1. [記事アセット（アダプティブフォーム、XDP テンプレートおよび XSD）の読み込み](assets/generate-interactive-dor-sample-assets.zip)
-1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
+1. [アダプティブフォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. いくつかのフォームフィールドに入力します。
-1. 「ダウンロードPDF」をクリックして、PDFを取得します。 PDFのダウンロードが完了するまで、数秒待つ必要がある場合があります。
+1. 「PDF をダウンロード」をクリックして PDF を取得します。PDF のダウンロードが完了するまで、数秒待つ必要がある場合があります。
 
 >[!NOTE]
 >
->同じ使用例を [非 xsd ベースのアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 適切なパラメーターを、それぞれの clientlib にある streampdf.js の POST エンドポイントに必ず渡してください。
+>[非 xsd ベースのアダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled)でも同じ使用例を試すことができます。irs クライアントライブラリにある streampdf.js の POST エンドポイントに必ず適切なパラメーターを渡してください。
