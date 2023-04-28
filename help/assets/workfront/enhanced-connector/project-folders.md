@@ -1,6 +1,6 @@
 ---
-title: Workfront Enhanced Connector プロジェクトフォルダー
-description: Adobe WorkfrontおよびExperience Manager Assets拡張コネクタを使用する場合のプロジェクトフォルダーについて説明します。
+title: Workfront 拡張コネクタプロジェクトフォルダー
+description: Adobe Workfront および Experience Manager Assets 拡張コネクタを使用する場合のプロジェクトフォルダーについて説明します。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, User
@@ -10,15 +10,15 @@ thumbnail: 337586.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 0e9d056a-4eec-450c-a941-b9563634fe8a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Workfront enhanced connector プロジェクトフォルダー
+# Workfront 拡張コネクタプロジェクトフォルダー
 
-次のようなAdobe WorkfrontおよびExperience Manager Assets拡張コネクタを使用する場合のプロジェクトフォルダーについて説明します。
+次のような Adobe Workfront および Experience Manager Assets 拡張コネクタを使用する場合のプロジェクトフォルダーについて説明します。
 
 + プロジェクトにリンクされたフォルダー
 + フォルダーメタデータのマッピング
