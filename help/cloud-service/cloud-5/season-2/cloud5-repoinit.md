@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 - REPOINIT
-description: REPOINIT を使用したAEMリポジトリの初期化
+description: REPOINIT を使用した AEM リポジトリの初期化
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -9,15 +9,15 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 6428d1c2-8453-449c-9d57-bb860e2e9c1a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '53'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Cloud 5 - REPOINIT
 
-REPOINIT を使い始める — または Sling Repository Initializer。 このツールとその使用例を使用して、の力を解き放つためのテクニックをいくつか説明します。
+REPOINIT 使用の手引き -- または Sling Repository Initializer。このツールとその使用例のいくつかを使って、このツールの能力を発揮させるためのいくつかの秘訣を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343474?quality=12&learn=on)
 
