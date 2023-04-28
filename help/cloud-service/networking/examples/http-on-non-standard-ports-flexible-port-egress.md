@@ -1,6 +1,6 @@
 ---
-title: 非標準ポートでの HTTP/HTTPS 接続（柔軟なポート出力用）
-description: 柔軟なポートエグレス用の非標準ポートで動作するAEMから外部 Web サービスに、HTTP/HTTPS リクエストをas a Cloud Service的にする方法を説明します。
+title: フレキシブルポートエグレス用の非標準ポートでの HTTP／HTTPS 接続
+description: AEM as a Cloud Service から、フレキシブルポートエグレス用の非標準ポートで動作する外部 web サービスに対して、HTTP／HTTPS リクエストを行う方法を説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,36 +10,36 @@ kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '239'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 非標準ポートでの HTTP/HTTPS 接続（柔軟なポート出力用）
+# フレキシブルポートエグレス用の非標準ポートでの HTTP／HTTPS 接続
 
-非標準ポート (80/443ではなく ) での HTTP/HTTPS 接続は、AEM as a Cloud Serviceからプロキシ化する必要がありますが、特別な設定は必要ありません `portForwards` ルールを作成し、AEM Advanced Networking の `AEM_PROXY_HOST` および予約済みのプロキシポート `AEM_HTTP_PROXY_PORT` または `AEM_HTTPS_PROXY_PORT` の宛先は HTTP/HTTPS です。
+非標準ポート（80／443ではない）での HTTP／HTTPS 接続は、AEM as a Cloud Service からプロキシ化する必要がありますが、特別な `portForwards` ルールは必要なく、AEM の高度なネットワーク機能の `AEM_PROXY_HOST` と予約済みのプロキシポート `AEM_HTTP_PROXY_PORT` または `AEM_HTTPS_PROXY_PORT`（宛先が HTTP／HTTPS のどちらであるかに応じて選択）を使用することができます。
 
-## 高度なネットワークサポート
+## 高度なネットワーク機能のサポート
 
-次のコード例は、次のアドバンスドネットワークオプションでサポートされています。
+次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-次を確認します。 [適切](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
+このチュートリアルを開始する前に、高度なネットワーク機能の設定が[適切](../advanced-networking.md#advanced-networking)にセットアップされていることを確認してください。
 
-| 高度なネットワークがありません | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
+| 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✘ | ✘ |
 
 >[!CAUTION]
 >
-> このコード例は、 [フレキシブルポートエグレス](../flexible-port-egress.md). 類似していますが、異なるコード例が [専用エグレス IP アドレスと VPN 用の非標準ポートでの HTTP/HTTPS 接続](./http-dedicated-egress-ip-vpn.md).
+> このコードサンプルは、 [フレキシブルポートエグレス](../flexible-port-egress.md)のみを対象としています。異なるものの類似しているコードサンプルが、[専用エグレス IP アドレスと VPN 用の非標準ポートでの HTTP／HTTPS 接続](./http-dedicated-egress-ip-vpn.md)で利用可能です。
 
-## コード例
+## コードサンプル
 
-この Java™コードの例は、AEM as a Cloud Serviceで実行できる OSGi サービスで、8080 上の外部 Web サーバーへの HTTP 接続をおこないます。 HTTPS Web サーバーへの接続では、環境変数を使用します `AEM_PROXY_HOST` および `AEM_HTTPS_PROXY_PORT` ( デフォルトは `proxy.tunnel:3128` (AEMリリース 6094 未満 )。
+この Java™ コードサンプルは、AEM as a Cloud Service で動作する OSGi サービスで、8080 上の外部 web サーバーへの HTTP 接続を行います。HTTPS web サーバーへの接続では、環境変数 `AEM_PROXY_HOST` および `AEM_HTTPS_PROXY_PORT`（リリース 6094 より前の AEM では `proxy.tunnel:3128` がデフォルト）が使用されます。
 
 >[!NOTE]
-> 次をお勧めします。 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) は、AEMからの HTTP/HTTPS 呼び出しに使用されます。
+> AEM からの HTTP／HTTPS 呼び出しには [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) を使用することをお勧めします。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 
