@@ -1,6 +1,6 @@
 ---
-title: 言語コピーを起動時に更新する
-description: 言語コピーの変更を更新、確認、承認する方法について説明します。変更は Launches の支援を得て行います。
+title: Experience Platform Launch を使用した言語コピーのアップデート
+description: Experience Platform Launch を使用して言語コピーの変更をアップデート、確認、承認する方法について学びます。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -14,14 +14,14 @@ role: User
 level: Beginner
 exl-id: c29f64a3-56cd-4594-9265-692974f4c01a
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 言語コピーを起動時に更新する {#update-language-copy-launch}
+# Experience Platform Launch を使用した言語コピーのアップデート {#update-language-copy-launch}
 
-言語コピーの変更を更新、確認、承認する方法について説明します。変更は Launches の支援を得て行います。
+Experience Platform Launch を使用して言語コピーの変更をアップデート、確認、承認する方法について学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)
