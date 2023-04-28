@@ -1,32 +1,32 @@
 ---
-title: 署名プロセスをトリガーするメインワークフローの作成
-description: 署名用のフォームをデータベースに保存するワークフローの作成
-feature: アダプティブフォーム
+title: 署名プロセスをトリガーするメインワークフローを作成する
+description: 署名用のフォームをデータベースに保存するためのワークフローを作成する
+feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 2%
+exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '162'
+ht-degree: 100%
 
 ---
 
-
 # メインワークフローの作成
 
-ユーザーが最初のフォーム(**RefinanceForm**)を送信すると、メインワークフローがトリガーされます。 次に、ワークフローのフローを示します
+メインワークフローは、ユーザーが最初のフォーム（**RefinanceForm**）を送信するとトリガーされます。 以下は、ワークフローの流れです
 
-![メインワークフロー](assets/main-workflow.PNG)
+![main-workflow](assets/main-workflow.PNG)
 
-**Forms To Signis** は、カスタムプロセスステップです。
+**署名するフォームを保存** は、カスタムプロセス手順です。
 
-カスタムプロセスステップを実装する動機は、AEM Workflowを拡張することです。 次のコードは、カスタムプロセス手順を実装します。 このコードは、署名するフォームの名前を抽出し、送信されたフォームデータをSignMultipleFormsサービスの`insertData`メソッドに渡します。 次に、`insertData`メソッドは、データソース&#x200B;**aemformstutorial**&#x200B;で識別されるデータベースに行を挿入します。
+カスタムプロセス手順を実装する動機は、AEM ワークフローを拡張することです。 次のコードは、カスタムプロセス手順を実装します。 コードは、署名するフォームの名前を抽出し、送信されたフォームデータを SignMultipleForms サービスの `insertData` メソッドに渡します。`insertData` メソッドは、次に、データソース **aemformstudation** で識別されるデータベースに行を挿入します。
 
-このカスタムプロセスステップのコードは、`SignMultipleForms`サービスを参照します。
+このカスタムプロセス手順のコードは、`SignMultipleForms` サービスを参照します。
 
 
 
@@ -117,7 +117,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-この記事で使用する「複数のFormsに署名」ワークフローは、[こちらからダウンロードできます。](assets/sign-multiple-forms-workflows.zip)
+この記事で使用される、複数のフォームに署名ワークフローは、[こちら](assets/sign-multiple-forms-workflows.zip)からダウンロードできます
 
 >[!NOTE]
-> 電子メール通知を送信するには、必ずDay CQ Mail Serviceを設定してください。 上記のパッケージには、電子メールテンプレートも含まれています。
+> メール通知を送信するには、Day CQ メールサービスを設定してください。 上記のパッケージには、メールテンプレートも含まれています。
