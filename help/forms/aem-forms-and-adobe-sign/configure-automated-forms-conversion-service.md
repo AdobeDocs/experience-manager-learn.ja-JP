@@ -1,6 +1,6 @@
 ---
 title: 自動フォーム変換サービス
-description: 自動フォーム変換サービス. この記事では、AEM管理者がAutomated forms conversionサービスを設定して、アダプティブフォームへのPDF formsの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。
+description: 自動フォーム変換サービス. この記事では、AEM の管理者が自動フォーム変換サービスを設定して、PDF フォームを自動的にアダプティブフォームに変換する方法について説明します。このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。
 feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
@@ -9,15 +9,15 @@ role: Admin
 level: Beginner
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '253'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
 # 自動フォーム変換サービス
 
-この記事では、AEM管理者がAutomated forms conversionサービスを設定して、アダプティブフォームへのPDF formsの変換を自動化する方法について説明します。 このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
+この記事では、AEM の管理者が自動フォーム変換サービスを設定して、PDF フォームを自動的にアダプティブフォームに変換する方法について説明します。このヘルプ記事は、組織内の IT 管理者と AEM 管理者を対象としています。具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
 * Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
 * Linux オペレーティングシステムと Microsoft Windows オペレーティングシステムの使用
@@ -33,8 +33,8 @@ ht-degree: 59%
 * AEM インスタンス上の AEM ユーザーが forms-user グループのメンバーになっていること
 
 >[!NOTE]
->次のビデオは、Adobeが組織のアクセスを有効にし、必要な権限をAdmin Consoleに付与した後、管理者が管理者にログインし、プロファイルを作成して、開発者をプロファイルに追加した後に実行できます。 開発者は、ローカルの AEM Forms インスタンスを、Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。
+>アドビによる組織と管理者に対する権限の設定が完了したら、管理者は次のビデオで説明されている手順に従って、Admin Console にログインしてプロファイルを作成し、プロファイルに開発者を追加することができます。開発者は、ローカルの AEM Forms インスタンスを、Adobe Cloud 上の自動フォーム変換サービスに接続する必要があります。
 
-* このビデオでは、ローカルのAEM Formsインスタンスを Cloud 上のAutomated forms conversionサービスに接続するために必要な手順を説明します。
+* このビデオでは、ローカルの AEM Forms インスタンスを Adobe Cloud 上で自動フォーム変換サービスに接続するために必要な手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
