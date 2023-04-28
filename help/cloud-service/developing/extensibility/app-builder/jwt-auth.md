@@ -8,32 +8,32 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 40679e80fd9270dd9fad8174a986fd1fdd5e3d29
-workflow-type: tm+mt
+exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '469'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-
 # App Builder アクションでのアクセストークンの生成
 
-App Builder アクションは、App Builder アプリがデプロイされるAdobe Developerコンソールプロジェクトに関連付けられたAdobeAPI とやり取りする必要が生じる場合があります。
+App Builder アクションは、App Builder アプリがデプロイされる Adobe Developer Console プロジェクトに関連付けられた Adobe API とやり取りする必要が生じる場合があります。
 
-この場合、目的のAdobe Developer Console プロジェクトに関連付けられた独自のアクセストークンを生成するために、App Builder アクションが必要になることがあります。
+このため、App Builderアクションで、目的の Adobe Developer Console プロジェクトに関連する独自のアクセストークンを生成する必要がある場合があります。
 
 >[!IMPORTANT]
 >
-> レビュー [App Builder のセキュリティドキュメント](https://developer.adobe.com/app-builder/docs/guides/security/) を参照して、提供されたアクセストークンを使用するのに対して、アクセストークンを生成する必要があるタイミングを把握します。
+> [App Builder セキュリティドキュメント](https://developer.adobe.com/app-builder/docs/guides/security/)を参照して、アクセストークンを生成するのが適切な場合と、提供されたアクセストークンを使用するのが適切な場合を確認してください。
 >
-> カスタムアクションでは、許可されたコンシューマーのみが App Builder アクションとその背後にあるAdobe サービスにアクセスできるように、独自のセキュリティチェックを提供する必要が生じる場合があります。
+> カスタムアクションでは、許可されたコンシューマーのみが App Builder アクションとその背後にあるアドビのサービスにアクセスできるように、独自のセキュリティチェックを提供する必要が生じる場合があります。
 
 
 ## .env ファイル
 
-App Builder プロジェクトの `.env` ファイルに、Adobe Developer Console プロジェクトの JWT 資格情報ごとにカスタムキーを追加します。 JWT 秘密鍵証明書の値は、Adobe Developer Console プロジェクトの __資格情報__ > __サービスアカウント (JWT)__ 特定のワークスペースの
+App Builder プロジェクトの `.env` ファイルに、Adobe Developer Console プロジェクトの各 JWT 資格情報のカスタムキーを追加します。JWT 資格情報の値は、Adobe Developer Console プロジェクトの&#x200B;__資格情報__／__サービスアカウント（JWT）__ から指定のワークスペースに対して取得できます。
 
-![Adobe Developer Console JWT サービス資格情報](./assets/jwt-auth/jwt-credentials.png)
+![Adobe Developer Console JWT サービスの資格情報](./assets/jwt-auth/jwt-credentials.png)
 
 ```
 ...
@@ -45,14 +45,14 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-次の値： `JWT_CLIENT_ID`, `JWT_CLIENT_SECRET`, `JWT_TECHNICAL_ACCOUNT_ID`, `JWT_IMS_ORG` は、Adobe Developer Console プロジェクトの JWT 資格情報画面から直接コピーできます。
+`JWT_CLIENT_ID`、`JWT_CLIENT_SECRET`、`JWT_TECHNICAL_ACCOUNT_ID`、`JWT_IMS_ORG` の値は、Adobe Developer Console プロジェクトの JWT 資格情報画面から直接コピーできます。
 
 ### メタスコープ
 
-App Builder のAdobeAPI とそのメタコピーを特定し、App Builder のアクションがやり取りする。 コンマ区切り文字を使用したメタコードのリスト `JWT_METASCOPES` キー。 有効なメタコードは、 [Adobeの JWT メタスコープドキュメント](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+App Builder アクションがやりとりする Adobe API とそのメタスコープを決定します。`JWT_METASCOPES` キーにコンマ区切り記号を使用してメタスコープを一覧表示します。有効なメタコードは、[アドビの JWT メタスコープドキュメント](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/)にリストアップされています。
 
 
-例えば、次の値が `JWT_METASCOPES` キー `.env`:
+例えば、次の値が `.env` の `JWT_METASCOPES` キーに追加される場合があります。
 
 ```
 ...
@@ -62,36 +62,35 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 ### 秘密鍵
 
-この `JWT_PRIVATE_KEY` は、ネイティブで複数行の値（ではサポートされていない）なので、特別な形式にする必要があります。 `.env` ファイル。 最も簡単な方法は、秘密鍵を base64 でエンコードすることです。 秘密鍵の Base64 エンコード (`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`) は、オペレーティングシステムで提供されるネイティブツールを使用しておこなうことができます。
+`JWT_PRIVATE_KEY` はもともと複数行の値であり、`.env` ファイルではサポートされていないため、特別にフォーマットする必要があります。最も簡単な方法は、プライベートキーを base64 でエンコードすることです。秘密鍵（`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`）の Base64 エンコードは、オペレーティングシステムが提供するネイティブツールを使用して実行できます。
 
 >[!BEGINTABS]
 
 >[!TAB macOS]
 
-1. `Terminal` を開きます。
-1. コマンドを実行 `base64 -i /path/to/private.key | pbcopy`
+1. `Terminal` を開きます
+1. コマンド `base64 -i /path/to/private.key | pbcopy` を実行します
 1. base64 出力は、クリップボードに自動的にコピーされます
-1. 貼り付け先 `.env` 対応するキーの値
+1. 対応するキーの値として `.env` に貼り付けます
 
 >[!TAB Windows]
 
-
-1. `Command Prompt` を開きます。
-1. コマンドを実行 `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. コマンドを実行 `findstr /v CERTIFICATE C:\path\to\encoded-private.key`
-1. base64 出力をクリップボードにコピーします。
-1. 貼り付け先 `.env` 対応するキーの値
+1. `Command Prompt` を開きます
+1. コマンド `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key` を実行します
+1. コマンド `findstr /v CERTIFICATE C:\path\to\encoded-private.key` を実行します
+1. base64 出力をクリップボードにコピーします
+1. 対応するキーの値として `.env` に貼り付けます
 
 >[!TAB Linux®]
 
-1. ターミナルを開く
-1. コマンドを実行 `base64 private.key`
-1. base64 出力をクリップボードにコピーします。
-1. 貼り付け先 `.env` 対応するキーの値
+1. ターミナルを開きます
+1. コマンド `base64 private.key` を実行します
+1. base64 出力をクリップボードにコピーします
+1. 対応するキーの値として `.env` に貼り付けます
 
 >[!ENDTABS]
 
-例えば、次の base64 でエンコードされた秘密鍵が `JWT_PRIVATE_KEY` キー `.env`:
+例えば、次の base64 でエンコードされた秘密鍵が `.env` の `JWT_PRIVATE_KEY` キーに追加される場合があります。
 
 ```
 ...
@@ -100,7 +99,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## 入力マッピング
 
-JWT 秘密鍵証明書の値を `.env` ファイルにマッピングする場合は、AppBuilder のアクション入力にマッピングし、アクション自体で読み取れるようにする必要があります。 これをおこなうには、 `ext.config.yaml` アクション `inputs` を次の形式で指定します。 `PARAMS_INPUT_NAME: $ENV_KEY`.
+`.env` ファイルにある JWT 資格情報の値セットを使用して、アクション自体で読み取ることができるように、それらを AppBuilder アクションの入力にマッピングする必要があります。これを行うには、`ext.config.yaml` アクション `inputs` の各変数のエントリを `PARAMS_INPUT_NAME: $ENV_KEY` の形式で追加します。
 
 次に例を示します。
 
@@ -131,12 +130,12 @@ runtimeManifest:
             final: true
 ```
 
-以下で定義されたキー `inputs` は `params` オブジェクトが App Builder アクションに提供されたとき。
+`inputs` で定義されたキーは、App Builder アクションに提供される `params` オブジェクトで使用できます。
 
 
 ## トークンにアクセスするための JWT 資格情報
 
-「App Builder」アクションでは、JWT 資格情報が `params` オブジェクトで、 [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) を使用してアクセストークンを生成し、他のAdobeAPI やサービスにアクセスできる
+App Builder アクションでは、JWT 資格情報は `params` オブジェクトで使用でき、[`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) でアクセストークンを生成するために使用できます。これにより、他の Adobe API およびサービスにアクセスできます。
 
 ```javascript
 const fetch = require("node-fetch");
