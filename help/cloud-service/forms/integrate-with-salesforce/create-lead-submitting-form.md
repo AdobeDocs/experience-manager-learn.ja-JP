@@ -1,6 +1,6 @@
 ---
-title: フォームデータモデルの送信アクションを使用してフォームを送信する
-description: アダプティブフォームを作成し、フォーム送信時にリードオブジェクトを作成してSalesforce統合をテストする
+title: フォームデータモデルの送信アクションを使用してフォームを送信します。
+description: アダプティブフォームを作成し、フォーム送信時にリードオブジェクトを作成して Salesforce 統合をテストします。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,14 +12,14 @@ kt: 7151
 thumbnail: 331758.jpg
 exl-id: fa00822f-075a-47df-941f-c7370bd1d4f4
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '57'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# フォーム送信からのリード生成のテスト
+# フォーム送信からのリードジェネレーションをテストします。
 
-Sales Forceフォームデータモデルに基づくアダプティブフォームの作成と、フォームの送信によるSalesforceでのリードの作成のテスト
+Sales Force フォームデータモデルに基づいてアダプティブフォームを作成し、フォームを送信して Salesforce でのリードの生成をテストします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331758?quality=12&learn=on)
