@@ -1,5 +1,5 @@
 ---
-title: AMS Dispatcher の基本ファイルレイアウト
+title: AMS Dispatcher の基本的なファイルレイアウト
 description: 基本的な Apache および Dispatcher ファイルレイアウトについて
 version: 6.5
 topic: Administration, Development
@@ -8,24 +8,24 @@ role: Admin
 level: Beginner
 thumbnail: xx.jpg
 source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1161'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# 基本ファイルレイアウト
+# 基本的なファイルレイアウト
 
 [目次](./overview.md)
 
-[&lt; — 前：「Dispatcher」とは](./what-is-the-dispatcher.md)
+[&lt;- 前：「Dispatcher」とは](./what-is-the-dispatcher.md)
 
 このドキュメントでは、AMS 標準設定ファイルセットと、この設定標準の背後にある考え方を説明します
 
-## デフォルトの Enterprise Linux フォルダ構造
+## デフォルトの Enterprise Linux フォルダー構造
 
-AMS では、基本インストールは、基本オペレーティングシステムとして Enterprise Linux を使用します。 Apache Web サーバーをインストールすると、デフォルトのインストールファイルが設定されます。 yum リポジトリが提供する基本 RPM をインストールしてインストールするデフォルトのファイルを次に示します
+AMS では、基本インストールは、基本オペレーティングシステムとして Enterprise Linux を使用します。Apache web サーバーをインストールすると、デフォルトのインストールファイルが設定されます。yum リポジトリが提供する基本 RPM をインストールするとインストールされるデフォルトのファイルを次に示します
 
 ```
 /etc/httpd/ 
@@ -50,127 +50,128 @@ AMS では、基本インストールは、基本オペレーティングシス�
 └── run -> /run/httpd
 ```
 
-インストールの設計/構造に従って作業を行うと、次の利点が得られます。
+インストールの設計／構造に従って作業を行うと、次の利点が得られます。
 
-- 予測可能なレイアウトを容易にサポート
-- 過去に Enterprise Linux HTTPD のインストールを行った人にとって、自動的に身近なもの
-- 競合や手動の調整を行わずに、オペレーティングシステムで完全にサポートされるパッチ適用サイクルを許可
-- SELinux のラベル付けされていないファイルコンテキストの違反を回避
+- 予測可能なレイアウトのサポートが容易になります
+- 過去に Enterprise Linux HTTPD のインストールを行った人は誰でも自動的に理解できます
+- 競合や手動の調整なしに、オペレーティングシステムで完全にサポートされるパッチ適用サイクルを許可します
+- 誤ってラベル付けされたファイルコンテキストの SELinux の違反を回避します
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-Adobe Managed Services サーバーのイメージには、通常、小さなオペレーティングシステムのルートドライブが付いています。  データを別のボリュームに置き、通常は'/mnt'にマウントされます。その後、以下のデフォルトのディレクトリのデフォルトの代わりに、そのボリュームを使用します。
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
+Adobe Managed Services サーバーの画像には、通常、小さなオペレーティングシステムのルートドライブが付いています。通常「/mnt」にマウントされた別のボリュームにデータを置きます。
+その後、次のデフォルトディレクトリのデフォルトの代わりに、そのボリュームを使用します。
 
 `DocumentRoot`
-- デフォルト:`/var/www/html`
-- AMS:`/mnt/var/www/html`
+- デフォルト：`/var/www/html`
+- AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- デフォルト: `/var/log/httpd`
-- AMS: `/mnt/var/log/httpd`
+- デフォルト：`/var/log/httpd`
+- AMS：`/mnt/var/log/httpd`
 
 古いディレクトリと新しいディレクトリは、混乱を避けるために元のマウントポイントに再びマッピングされることに注意してください。
-別のボリュームを使用することは重要ではありませんが、注意が必要です
+別のボリュームを使用することは必須ではありませんが、特筆すべきことです
 </div>
 
 ## AMS アドオン
 
-AMS は、Apache Web サーバーのベースインストールに追加されます。
+AMS は、Apache web サーバーのベースインストールに追加されます。
 
 ### ドキュメントルート
 
 AMS デフォルトのドキュメントルート：
-- オーサー:
+- オーサー：
    - `/mnt/var/www/author/`
-- パブリッシュ:
+- パブリッシュ：
    - `/mnt/var/www/html/`
-- 包括的およびヘルスチェックのメンテナンス
+- キャッチオールおよびヘルスチェックのメンテナンス
    - `/mnt/var/www/default/`
 
-### VirtualHost ディレクトリのステージングと有効化
+### ステージングおよび有効な VirtualHost ディレクトリ
 
-次のディレクトリを使用すると、ファイルで作業できるステージング領域を持つ設定ファイルを構築し、準備が整ったときにのみ有効にすることができます。
+次のディレクトリを使用すると、ファイルで作業できるステージング領域を持つ設定ファイルを構築し、準備が整ったときにのみ有効にできます。
 - `/etc/httpd/conf.d/available_vhosts/`
-   - このフォルダーは、VirtualHost /と呼ばれるすべてのファイルをホストします。 `.vhost`
+   - このフォルダーは、`.vhost` と呼ばれるすべての VirtualHost / ファイルをホストします
 - `/etc/httpd/conf.d/enabled_vhosts/`
-   - を使用する準備が整ったら、 `.vhost` ファイルの `available_vhosts` フォルダーは、 `enabled_vhosts` directory
+   - `available_vhosts` フォルダー内の `.vhost` ファイルを使用する準備が整ったら、`enabled_vhosts` ディレクトリに相対パスでシンボリックリンクを設定します
 
-### 追加 `conf.d` ディレクトリ
+### 追加の `conf.d` ディレクトリ
 
-Apache の設定で共通の部分が追加され、サブディレクトリを作成して、それらのファイルを明確に分離し、すべてのファイルを 1 つのディレクトリに含めないようにしました
+Apache の設定で共通する追加的な部分があり、ファイルをきれいに分離し、すべてのファイルを 1 つのディレクトリに格納しないようにするために、サブディレクトリを作成しました。
 
-#### ディレクトリを書き換え
+#### ディレクトリの書き換え
 
-このディレクトリには、 `_rewrite.rules` Apache Web サーバーに関与する典型的な RewriteRules 構文を含む作成済みのファイル [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) モジュール
+このディレクトリには、Apache web サーバーの [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) モジュールに関わる典型的な RewriteRulesyntax を含むすべての `_rewrite.rules` ファイルを格納できます
 
 - `/etc/httpd/conf.d/rewrites/`
 
-#### ホワイトリストディレクトリ
+#### 許可リストディレクトリ
 
-このディレクトリには、 `_whitelist.rules` 作成するファイルに、 `IP Allow` または `Require IP`Apache Web サーバーを関与させる構文 [アクセス制御](https://httpd.apache.org/docs/2.4/howto/access.html)
+このディレクトリは、Apache web サーバーの[アクセス制御](https://httpd.apache.org/docs/2.4/howto/access.html)に関与する典型的な `IP Allow` または `Require IP`syntax を含め、作成されるすべての `_whitelist.rules` ファイルを格納できます
 
 - `/etc/httpd/conf.d/whitelists/`
 
 #### 変数ディレクトリ
 
-このディレクトリには、 `.vars` 設定ファイルで使用できる変数を含む、作成するファイル
+このディレクトリは、設定ファイルで使用する変数を含む、作成したすべての `.vars` ファイルを格納できます
 
 - `/etc/httpd/conf.d/variables/`
 
 ### Dispatcher モジュール固有の設定ディレクトリ
 
-Apache Web サーバーは非常に拡張可能で、モジュールに多数の設定ファイルが含まれている場合は、デフォルトの設定ディレクトリをクラスター化する代わりに、インストールベースディレクトリの下に独自の設定ディレクトリを作成することをお勧めします。
+Apache web サーバーは非常に拡張可能で、モジュールに多数の設定ファイルが含まれている場合は、デフォルトの設定ディレクトリを使用する代わりに、インストールの基本ディレクトリの下に独自の設定ディレクトリを作成することがベストプラクティスです。
 
-ベストプラクティスに従って独自のを作成しました
+ベストプラクティスに従って独自の設定ディレクトリを作成しました
 
 #### モジュール設定ファイルディレクトリ
 
 - `/etc/httpd/conf.dispatcher.d/`
 
-#### ステージングおよび有効なファーム
+#### ステージングおよび有効化されたファーム
 
-次のディレクトリを使用すると、ファイルで作業できるステージング領域を持つ設定ファイルを構築し、準備が整ったときにのみ有効にすることができます。
+次のディレクトリを使用すると、ファイルで作業できるステージング領域を持つ設定ファイルを構築し、準備が整ったときにのみ有効にできます。
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
-   - このフォルダーは、 `/myfarm {` ファイル名 `_farm.any`
+   - このフォルダーには、`_farm.any` と呼ばれる `/myfarm {` ファイルがすべてホストされます
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
-   - ファームファイルを使用する準備が整ったら、 available_farms フォルダ内で、 enabled_farms ディレクトリへの相対パスを使用してシンボリックリンクを作成します。
+   - available_farms フォルダー内にあるファームファイルを使用する準備が整ったら、enabled_farms ディレクトリへの相対パスを使用して、そのファイルのシンボリックリンクを作成します
 
-### 追加 `conf.dispatcher.d` ディレクトリ
+### 追加の `conf.dispatcher.d` ディレクトリ
 
-Dispatcher ファームファイル設定のサブセクションである追加の要素があり、サブディレクトリを作成して、それらのファイルを明確に分離し、すべてのファイルを 1 つのディレクトリに含めないようにしました
+Dispatcher ファームファイル設定のサブセクションである追加の要素があります。サブディレクトリを作成して、それらのファイルをきれいに分離し、すべてのファイルを 1 つのディレクトリに格納しないようにしました。
 
 #### キャッシュディレクトリ
 
-このディレクトリには、 `_cache.any`, `_invalidate.any` 作成するファイルには、AEMから得られるキャッシュ要素の処理方法と無効化ルール構文に関するルールが含まれます。  この節の詳細は、こちらを参照してください。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+このディレクトリには、作成したすべての `_cache.any` および `_invalidate.any` ファイルが含まれています。このファイルには、AEM から取得したキャッシュ要素をモジュールで処理する方法に関するルールと、無効化ルールの構文が含まれています。この節の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache)を参照してください。
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
 #### クライアントヘッダーディレクトリ
 
-このディレクトリには、 `_clientheaders.any` 作成するファイルには、リクエストが送信されたときにAEMに渡すクライアントヘッダーのリストが含まれます。  この節の詳細は次のとおりです。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)
+このディレクトリには、作成したすべての `_clientheaders.any` ファイルを含めることができます。これらのファイルは、リクエストが着信したときに AEM に渡すクライアントヘッダーのリストを含んでいます。この節の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
-#### Filters ディレクトリ
+#### フィルターディレクトリ
 
-このディレクトリには、 `_filters.any` 作成するファイルに、Dispatcher を介したトラフィックがAEMに到達するのをブロックまたは許可するすべてのフィルタールールが含まれている
+このディレクトリには、作成したすべての `_filters.any` ファイルを含めることができます。これらのファイルは、Dispatcher を通過するトラフィックが AEM に到達するのをブロックまたは許可するすべてのフィルタールールを含んでいます。
 
 - `/etc/httpd/conf.dispatcher.d/filters/`
 
-#### レンダリングディレクトリ
+#### レンダーディレクトリ
 
-このディレクトリには、 `_renders.any` 作成するファイルに、dispatcher が使用する各バックエンドサーバーへの接続の詳細が含まれています。
+このディレクトリには、作成したすべての `_renders.any` ファイルを含めることができます。これらのファイルには、Dispatcher で使用するコンテンツを提供する各バックエンドサーバーへの接続の詳細が含まれています。
 
 - `/etc/httpd/conf.dispatcher.d/renders/`
 
-#### Vhosts ディレクトリ
+#### vhosts ディレクトリ
 
-このディレクトリには、 `_vhosts.any` 特定のファームに対して特定のバックエンドサーバーに一致するドメイン名とパスのリストを含む、作成するファイル
+このディレクトリには、作成したすべての `_vhosts.any` ファイルを含めることができます。これらのファイルは、特定のファームから特定のバックエンドサーバーまでに一致するドメイン名とパスのリストを含んでいます。
 
 - `/etc/httpd/conf.dispatcher.d/vhosts/`
 
-## フォルダー構造全体
+## 完全なフォルダー構造
 
-AMS では、名前空間の問題や競合、混乱を避けるために、カスタムファイル拡張子を持つ各ファイルを構造化しています。
+AMS では、名前空間の問題、競合や混乱を避けるために、カスタムファイル拡張子を使用して各ファイルを構造化しています。
 
 AMS のデフォルトデプロイメントの標準ファイルセットの例を次に示します。
 
@@ -265,36 +266,36 @@ AMS のデフォルトデプロイメントの標準ファイルセットの例�
 └── run -> /run/httpd
 ```
 
-## 理想的な状態を維持
+## 理想的な状態の維持
 
-Enterprise Linux には、Apache Webserver Package(httpd) のパッチ適用サイクルがあります。
+Enterprise Linux には、Apache Webserver Package（httpd）のパッチ適用サイクルがあります。
 
-RPM / Yum コマンドを使用して、パッチが適用されたセキュリティ修正や構成の改善が適用された場合、変更されたファイルの上に修正が適用されないため、インストールされたデフォルトファイルの数が少ないほど、変更が適用されます。
+インストール済みのデフォルトファイルが少なければ少ないほど、変更する方がよくなります。この理由は、パッチが適用されたセキュリティ修正または設定改善が RPM または Yum コマンドを介して適用された場合、変更されたファイルの上に修正が適用されないからです。
 
-代わりに、 `.rpmnew` ファイルがオリジナルの横に表示されます。  これは、必要な変更が一部失われ、設定フォルダーにガベージが作成される可能性があることを意味します。
+代わりに、`.rpmnew` ファイルがオリジナルの横に作成されます。つまり、必要な変更が一部失われ、設定フォルダーにガベージが作成されている可能性があるということです。
 
-つまり、アップデートインストール時の RPM は次のようになります。 `httpd.conf` ( `unaltered` ～を述べる *置換* ファイルと、重要な更新情報が入手されます。  この `httpd.conf` が `altered` その後 *置き換えない* ファイルを作成し、代わりに、 `httpd.conf.rpmnew` そして、必要な修正の多くは、サービスの起動時には適用されない、そのファイルに含まれます。
+すなわち、アップデートのインストール時の RPM は、`unaltered` 状態にある場合は `httpd.conf` を参照し、ファイルを&#x200B;*置換*&#x200B;し、重要なアップデートを取得します。  `httpd.conf` が `altered` だった場合、ファイルは&#x200B;*置き換えられず*、代わりに `httpd.conf.rpmnew` という参照ファイルが作成され、必要な修正の多くが、サービスの起動時には適用されないその参照ファイルに含まれます。
 
-Enterprise Linux は、この使用例をより適切に処理するために適切に設定されていました。  設定した既定値を拡張または上書きできる領域が提供されます。  httpd のベースインストール内では、ファイルが見つかります `/etc/httpd/conf/httpd.conf`に含まれ、その構文は次のようになります。
+Enterprise Linux は、このユースケースをより適切に処理するために適切に設定されていました。設定されたデフォルトを拡張または上書きできる領域が提供されます。httpd のベースインストール内には、ファイル `/etc/httpd/conf/httpd.conf` があります。これには、次のような構文が含まれます。
 
 ```
 Include conf.modules.d/.conf
 IncludeOptional conf.d/.conf
 ```
 
-Apache では、新しいファイルを `/etc/httpd/conf.d/` および `/etc/httpd/conf.modules.d/` のファイル拡張子を持つディレクトリ `.conf`
+考え方としては、`.conf` というファイル拡張子を持つ新しいファイルを `/etc/httpd/conf.d/` および `/etc/httpd/conf.modules.d/` ディレクトリに追加する際にはモジュールと設定を拡張することを Apache が求めているということです。
 
-Dispatcher モジュールを Apache に追加する際の最適な例として、モジュールを作成します。 `.so` ～に入る ` /etc/httpd/modules/` 次に、 `/etc/httpd/conf.modules.d/02-dispatcher.conf` と、モジュールを読み込むためのコンテンツ `.so` ファイル
+Dispatcher モジュールを Apache に追加する際の最適な例として、モジュール `.so` ファイルを ` /etc/httpd/modules/` に作成したあと、内容を含んだファイルを `/etc/httpd/conf.modules.d/02-dispatcher.conf` に追加してモジュール `.so` ファイルを読み込むことで、そのモジュールファイルを組み込みます。
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-Apache が提供した既存のファイルは変更されませんでした。  代わりに、彼らが行くべきディレクトリに私たちを追加した。
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意事項：</b>
+Apache が提供した既存のファイルは変更されませんでした。代わりに、Apache が提供した既存のファイルが移動すべきだったディレクトリに、独自のファイルを追加しました。
 </div><br/>
 
-現在は、ファイル内のモジュールを使用しています。 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> モジュールを初期化し、初期モジュール固有の設定ファイルを読み込む
+これで、独自のファイル <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 内で独自のモジュールを使用するようになりました。このファイルにより独自のファイルモジュールが初期化され、初期モジュール固有の設定ファイルが読み込まれます。
 
 ```
 <IfModule disp_apache2.c> 
@@ -303,6 +304,6 @@ Apache が提供した既存のファイルは変更されませんでした。�
 </IfModule>
 ```
 
-ファイルとモジュールが追加されましたが、元のファイルは変更されていません。  これにより、必要な機能が提供され、必要なパッチ修正が見つからなくなるのを防ぐと共に、パッケージの各アップグレードに対する最高レベルの互換性を維持できます。
+ここでも、ファイルとモジュールが追加されましたが、元のファイルは変更されていません。これにより必要な機能が提供され、必要なパッチ修正の欠落から保護されるだけでなく、パッケージのアップグレードごとに最高レベルの互換性が維持されます。
 
-[次へ —> 構成ファイルの説明](./explanation-config-files.md)
+[次へ／設定ファイルの説明](./explanation-config-files.md)
