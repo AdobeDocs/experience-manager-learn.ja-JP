@@ -1,6 +1,6 @@
 ---
 title: 最初のアダプティブフォームを作成する
-description: 最初のアダプティブフォームの作成に関するコースの紹介ビデオ
+description: 初めてのアダプティブフォームの作成に関するコースの入門ビデオ
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,13 +12,13 @@ kt: 7464
 thumbnail: 332571.jpg
 exl-id: 61c83104-7253-4636-b4d6-d8eec8db1cde
 source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '18'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# はじめにビデオ
+# 入門ビデオ
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332571?quality=12&learn=on)
