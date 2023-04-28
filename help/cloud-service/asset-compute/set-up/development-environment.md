@@ -1,6 +1,6 @@
 ---
-title: asset compute拡張用のローカル開発環境の設定
-description: asset computeワーカー（Node.js JavaScriptアプリケーション）の開発には、Node.jsや様々なnpmモジュール、Docker DesktopやMicrosoft Visual Studio Codeなど、従来のAEM開発とは異なる、特定の開発ツールが必要です。
+title: Asset Compute の拡張性に対応するローカル開発環境のセットアップ
+description: Asset Compute ワーカー（Node.js JavaScript アプリケーション）の開発には、Node.js や様々な npm モジュールから Docker Desktop や Microsoft Visual Studio Code に至るまで、従来の AEM 開発とは異なる特有の開発ツールが必要になります。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -14,97 +14,97 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '500'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# ローカル開発環境の設定
+# ローカル開発環境のセットアップ
 
-AdobeAsset computeプロジェクトは、AEM SDKが提供するローカルAEMランタイムと統合できず、AEM Mavenプロジェクトアーキタイプに基づくAEMアプリケーションが必要とするものとは別に、独自のツールチェーンを使用して開発されます。
+Adobe Asset Compute プロジェクトは、AEM SDK から提供されるローカル AEM ランタイムと統合することができないので、AEM Maven プロジェクトアーキタイプに基づく AEM アプリケーションで必要になるものとは別に、独自のツールチェーンを使用して開発されます。
 
-asset computeマイクロサービスを拡張するには、ローカルの開発者マシンに次のツールをインストールする必要があります。
+Asset Compute マイクロサービスを拡張するには、ローカルの開発者マシンに次のツールをインストールする必要があります。
 
-## 指示の要約
+## 簡易セットアップ手順
 
-以下は、設定手順の要約です。 これらの開発ツールの詳細については、以下の個別の節で説明します。
+以下は、簡素化されたセットアップ手順です。これらの開発ツールの詳細については、以下の個別の節で説明します。
 
-1. [Docker Desktopをインスト](https://www.docker.com/products/docker-desktop) ールし、必要なDocker画像を取り込みます。
+1. [Docker Desktop をインストール](https://www.docker.com/products/docker-desktop)し、必要な Docker イメージを取り込みます。
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
    $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
    ```
 
-1. [Visual Studio Codeのインストール](https://code.visualstudio.com/download)
-1. [Node.js 10以降のインストール](../../local-development-environment/development-tools.md#node-js)
-1. 必要なnpmモジュールとAdobe I/OCLIプラグインをコマンドラインからインストールします。
+1. [Visual Studio Code をインストール](https://code.visualstudio.com/download)します。
+1. [Node.js 10 以降をインストールします。](../../local-development-environment/development-tools.md#node-js)
+1. 必要な npm モジュールと Adobe I/O CLI プラグインをコマンドラインからインストールします。
 
    ```
    $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
-インストール手順の要約については、以下の節を参照してください。
+簡易インストール手順について詳しくは、以下の節を参照してください。
 
-## Visual Studio Codeのインストール{#vscode}
+## Visual Studio Code のインストール{#vscode}
 
-[Microsoft Visual Studio Codeは、](https://code.visualstudio.com/download) Asset compute・ワーカーの開発とデバッグに使用されます。他の[JavaScript互換のIDE](../../local-development-environment/development-tools.md#set-up-the-development-ide)を使用してワーカーを開発できますが、Visual Studioコードのみを[debug](../test-debug/debug.md)Asset computeワーカーに統合できます。
+[Microsoft Visual Studio Code](https://code.visualstudio.com/download) は、Asset Compute ワーカーの開発とデバッグに使用されます。ワーカーの開発には他の [JavaScript 互換 IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) も使用できますが、Asset Compute ワーカーの[デバッグ](../test-debug/debug.md)に統合できるのは Visual Studio Code のみです。
 
-このチュートリアルでは、Visual Studio Codeを使用することを前提としています。Visual Studio Codeは、Asset computeを拡張するための最適な開発者エクスペリエンスを提供します。
+このチュートリアルでは、Visual Studio Code を使用することを前提としています。Visual Studio Code が、Asset Compute を拡張する際の最適な開発者エクスペリエンスを提供するからです。
 
-## Docker Desktopのインストール{#docker}
+## Docker Desktop のインストール{#docker}
 
-[test](../test-debug/test.md)と[debug](../test-debug/debug.md)Asset computeプロジェクトをローカルで実行する場合は、最新の安定した[Docker Desktop](https://www.docker.com/products/docker-desktop)をダウンロードしてインストールします。
+最新の安定した [Docker Desktop](https://www.docker.com/products/docker-desktop) をダウンロードしインストールします。これが、Asset Compute プロジェクトをローカルで[テスト](../test-debug/test.md)および[デバッグ](../test-debug/debug.md)するために必要なものだからです。
 
-Docker Desktopをインストールしたら、起動し、コマンドラインから次のDockerイメージをインストールします。
+Docker Desktop をインストールしたら、Docker Desktop を起動し、コマンドラインから次の Docker イメージをインストールします。
 
 ```
 $ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
-Windowsマシンの開発者は、上記のイメージにLinuxコンテナを使用していることを確認する必要があります。 Linuxコンテナに切り替える手順は、[Docker for Windowsのドキュメント](https://docs.docker.com/docker-for-windows/)に記載されています。
+Windows マシンを使用する開発者は、上記のイメージに Linux コンテナを使用していることを確認してください。Linux コンテナに切り替える手順については、[Docker for Windows のドキュメント](https://docs.docker.com/docker-for-windows/)を参照してください。
 
-## Node.js（およびnpm）のインストール{#node-js}
+## Node.js （および npm）のインストール{#node-js}
 
-asset computeワーカーは[Node.js](https://nodejs.org/)ベースなので、開発と構築にはNode.js 10以降（およびnpm）が必要です。
+Asset Compute ワーカーは [Node.js](https://nodejs.org/) をベースにしているので、開発およびビルドには Node.js 10 以降（および npm）が必要です。
 
-+ [従来のAEM開発と同じ方法で、Node.js（およびnpm）](../../local-development-environment/development-tools.md#node-js) をインストールします。
++ 従来の AEM 開発と同様に [Node.js（および npm）をインストール](../../local-development-environment/development-tools.md#node-js)します。
 
-## インストールAdobe I/OCLI{#aio}
+## Adobe I/O CLI のインストール{#aio}
 
-[Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)、または ____ aioisは、Adobe I/Oテクノロジーの使用と操作を容易にするコマンドライン(CLI) npmモジュールをインストールし、カスタムAsset computeワーカーの生成とローカル開発の両方に使用します。
+[Adobe I/O CLI をインストール](../../local-development-environment/development-tools.md#aio-cli)します。Adobe I/O CLI（__aio__）は、Adobe I/O テクノロジーの使用および同テクノロジーとのやり取りを容易にするコマンドライン（CLI）npm モジュールで、カスタム Asset Compute ワーカーの生成にもローカル開発にも使用されます。
 
 ```
 $ npm install -g @adobe/aio-cli@7.1.0
 ```
 
-_Adobe I/OCLIバージョン7.1.0が必要です。現時点では、Adobe I/OCLIの新しいバージョンはサポートされていません。_
+_Adobe I/O CLI バージョン 7.1.0 が必要です。現時点では、Adobe I/O CLI のこれ以降のバージョンはサポートされていません。_
 
 
-## Adobe I/OCLIAsset computeプラグインのインストール{#aio-asset-compute}
+## Adobe I/O CLI Asset Compute プラグインのインストール{#aio-asset-compute}
 
-[Adobe I/OCLIAsset computeプラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)
+[Adobe I/O CLI Asset Compute プラグイン](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
 ```
 $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 ```
 
-## wskdebugのインストール{#wskdebug}
+## wskdebug のインストール{#wskdebug}
 
-[Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npmモジュールをダウンロードしてインストールし、Asset computeワーカーのローカルデバッグを容易にします。
+Asset Compute ワーカーのローカルデバッグを容易にする [Apache OpenWhisk デバッグ](https://www.npmjs.com/package/@openwhisk/wskdebug) npm モジュールをダウンロードしインストールします。
 
-_wskdebugを機能させるには、Visual Studio Code 1.48.x以降が [](#wskdebug) 必要です。_
+_[wskdebug](#wskdebug) が機能するには、Visual Studio Code 1.48.x 以降が必要です。_
 
 ```
 $ npm install -g @openwhisk/wskdebug
 ```
 
-## ngrokのインストール{#ngrok}
+## ngrok のインストール{#ngrok}
 
-[ngrok](https://www.npmjs.com/package/ngrok) npmモジュールをダウンロードしてインストールします。このモジュールは、ローカル開発マシンに対して公開アクセスを提供し、Asset computeワーカーのローカルデバッグを容易にします。
+ローカル開発マシンへのパブリックアクセスを提供する [ngrok](https://www.npmjs.com/package/ngrok) npm モジュールをダウンロードしインストールして、Asset Compute ワーカーのローカルデバッグを容易に行えるようにします。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
