@@ -1,6 +1,6 @@
 ---
 title: 開発に関する考慮事項
-description: フロントエンドパイプラインを有効にした後は、フロントエンドおよびバックエンドの開発プロセスへの影響を考慮します。
+description: フロントエンドパイプラインを有効にすると、フロントエンドおよびバックエンドの開発プロセスに与える影響を考慮します。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -11,37 +11,34 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: a3b27d5b-b167-4c60-af49-8f2e8d814c86
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '201'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # 開発に関する考慮事項
 
-フロントエンドパイプラインでAEMas a Cloud Serviceの環境にフロントエンドリソースのみをデプロイできるようにした後は、ローカルのAEMの開発に多少の影響があり、git ブランチモデルを調整する必要があります。
+フロントエンドパイプラインで AEM as a Cloud Service 環境にフロントエンドリソースのみをデプロイできるようにすると、ローカルの AEM 開発に多少の影響があり、Git ブランチモデルを微調整する必要があります。
 
 ## 目的
 
-* フロントエンドとバックエンドの開発フローが摩擦のない状態になる方法
-* フルスタックとフロントエンドパイプラインの依存関係を確認する
+* 摩擦のないフロントエンドとバックエンドの開発フローを実現する方法
+* フルスタックとフロントエンドパイプライン間の依存関係の確認
 
 
-## ローカル開発の考慮事項
+## ローカル開発に関する考慮事項
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409421?quality=12&learn=on)
 
 
-## 調整済みの開発アプローチ
+## 調整済みの開発方法
 
-* AEM SDK を使用するローカル開発では、バックエンド開発チームは、を介して clientlib を生成する必要があります `ui.frontend` モジュールですが、AEM as a Cloud Service環境に Cloud Manager をデプロイする際は、スキップする必要があります。 ここでは、 [プロジェクトを更新](update-project.md) チャプター。
+* AEM SDK を使用したローカル開発の場合、バックエンド開発チームは `ui.frontend` モジュールを介して clientlib を生成する必要がありますが、Cloud Manager を AEM as a Cloud Service 環境にデプロイする間はスキップする必要があります。これにより、[プロジェクトのアップデート](update-project.md)の章で説明しているプロジェクト設定の変更をどのように分離するかという課題が表面化します。
 
-A __ソリューション__ は、git ブランチモデルを調整し、AEMプロジェクト設定の変更が __ローカル開発__ AEMバックエンド開発者が使用するをブランチします。
-
-
-* AEMプロジェクトの継続的な強化の一環として、新しいコンポーネントを導入するか、両方に変更がある既存のコンポーネントを更新する場合。 `ui.app` および `ui.frontend` モジュールの場合は、フルスタックとフロントエンドの両方のパイプラインを実行する必要があります。
+__解決策__&#x200B;は、Git ブランチモデルを調整し、AEM プロジェクト設定の変更が AEM バックエンド開発者が使用する&#x200B;__ローカル開発__&#x200B;ブランチに戻らないようにすることです。
 
 
-
+* AEM プロジェクトの継続的な強化の一環として、新しいコンポーネントを導入するか、`ui.app` と `ui.frontend` モジュールの両方に変更がある既存のコンポーネントを更新する場合、フルスタックとフロントエンドパイプラインの両方を実行する必要があります。
