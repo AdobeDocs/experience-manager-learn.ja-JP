@@ -9,28 +9,28 @@ level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
 last-substantial-update: 2021-09-10T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '489'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# 項目を選択グループコンポーネントに動的に追加する
+# 項目を選択グループコンポーネントに動的に追加
 
-AEM Forms 6.5 では、チェックボックス、ラジオボタン、画像リストなどのアダプティブForms選択グループコンポーネントに項目を動的に追加する機能が導入されました。
+AEM Forms 6.5 では、アダプティブフォーム選択グループコンポーネント（チェックボックス、ラジオボタン、画像リストなど）に項目を動的に追加する機能が導入されました。
 
 
-ユースケースに応じて、Visual Editor やコードエディターを使用して項目を追加できます。
+ユースケースに応じて、ビジュアルエディターやコードエディターを使用して項目を追加できます。
 
-**Visual Editor を使用する場合：** 関数呼び出しまたはサービス呼び出しの結果から、選択グループの項目を入力できます。 例えば、REST API 呼び出しの応答を使用して、選択グループの項目を設定できます。
+**ビジュアルエディターの使用：**&#x200B;関数呼び出しまたはサービス呼び出しの結果から、選択グループの項目を入力できます。 例えば、REST API 呼び出しの応答を使用して、選択グループの項目を設定できます。
 
 以下のスクリーンショットでは、 Loan Period(years) のオプションを、getLoanPeriods というサービス呼び出しの結果に設定しています。
 
 ![ルールエディター](assets/ruleeditor.png)
 
-**コードエディターの使用**:選択グループの項目を、フォームに入力された値に基づいて動的に設定する場合。 例えば、次のコードスニペットでは、チェックボックスの項目を、アダプティブフォームの applicant name フィールドと spouse フィールドに入力された値に設定します。
+**コードエディターの使用**：フォームに入力された値に基づいて、選択グループの項目を動的に設定する場合。 例えば、次のコードスニペットでは、チェックボックスの項目を、アダプティブフォームの申込者の名前と配偶者のフィールドに入力された値に設定します。
 
-コードスニペットでは、チェックボックスコンポーネントである WorkingMembers の項目を設定します。 アイテムの配列は、アダプティブフォームの applicantName および spouse テキストフィールドの値を取得することで、動的に作成されています。
+コードスニペットでは、チェックボックスコンポーネントである WorkingMembers の項目を設定します。 項目の配列は、アダプティブフォームの applicantName および spouse テキストフィールドの値を取得することで、動的に作成されています。
 
 ```javascript
  
@@ -72,31 +72,31 @@ else
 
 >[!VIDEO](https://video.tv.adobe.com/v/26848?quality=12&learn=on)
 
-お使いのシステムでこれを試すには：
+お使いのシステムでこれを試す方法は次のとおりです。
 
 **コードエディターを使用した項目の追加**
 
-* [アセットのダウンロード](assets/usingthecodeeditor.zip)
-* [Forms And Documents を開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 「作成」 「|ファイルのアップロード」と、前の手順でダウンロードしたファイルをアップロードします。
-* [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
-* 「応募者名」を入力し、「配偶者の有無」を「既婚」に選択します。
+* [アセットをダウンロード](assets/usingthecodeeditor.zip)
+* [Forms とドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 「作成／ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします
+* [Forms をプレビュー](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
+* 「申込者名」を入力し、「配偶者の有無」を「既婚」に選択します
 * 配偶者の名前を入力
 * 「次へ」をクリックします。
-* 配偶者の有無に関わらず、申込者名と配偶者の有無がチェックボックスに表示されます。
+* 配偶者の有無が既婚の場合は、申込者の名前と配偶者の名前が入力されたチェックボックスが表示されます
 
-**Visual Editor を使用した項目の追加**
+**ビジュアルエディターを使用した項目の追加**
 
-* [アセットのダウンロード](assets/usingthevisualeditor.zip)
-* Tomcat をインストールします（まだインストールしていない場合）。 [Tomcat のインストール手順は、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* [アセットをダウンロード](assets/usingthevisualeditor.zip)
+* Tomcat をインストールします（まだインストールしていない場合）。 [Tomcat のインストール手順は、こちらを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=ja)
 * [この zip ファイルに含まれる SampleRest.war ファイルを Tomcat にデプロイします。](assets/sample-rest.zip)
-* [Forms And Documents を開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 「作成」 「|ファイルのアップロード」と、前の手順でダウンロードしたファイルをアップロードします。
-* [フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
-* 「 Loan amount 」を入力し、「 」フィールドの外側に「 」タブを入力します。 これにより、トリガーフィールドを表示するルールが設定されます。
+* [Forms とドキュメントを開く](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 「作成／ファイルのアップロード」をクリックし、前の手順でダウンロードしたファイルをアップロードします
+* [Forms をプレビュー](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
+* 「ローン金額」を入力し、フィールドの外にタブアウトします。これにより、ローン期間フィールドを表示するルールがトリガーされます。
 * 適切なローン期間を選択します（ローン期間の項目は残りの呼び出しから入力されます）
-* 利率を選択し、「償却スケジュールの取得」をクリックします。
-* 償却テーブルには値が入力されます。 償却スケジュールは、REST 呼び出しを使用して取得されます。
+* 利率を選択し、「償還スケジュールを取得」をクリックします。
+* 償還テーブルに値が入力されます。 償還スケジュールは、REST 呼び出しを使用して取得されます。
 
 >[!NOTE]
-> Tomcat はポート 8080 で、AEMはポート 4502 で動作していると想定されます
+> Tomcat はポート 8080 で、AEM はポート 4502 で実行されていると想定されています
