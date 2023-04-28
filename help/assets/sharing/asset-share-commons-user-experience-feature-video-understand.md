@@ -8,9 +8,9 @@ level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '128'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -33,4 +33,4 @@ Asset Share Commons のユーザーおよびオーサリングエクスペリエ
 ## その他のリソース{#additional-resources}
 
 * [Asset Share Commons リリースのダウンロード](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+リリースのダウンロード](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [ACS AEM Commons 3.11.0+ リリースのダウンロード](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
