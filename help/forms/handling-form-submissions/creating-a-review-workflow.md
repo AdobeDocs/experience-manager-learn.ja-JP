@@ -1,6 +1,6 @@
 ---
 title: 送信されたデータを確認するワークフローの作成
-description: AEM Formsワークフローコンポーネントを使用したAEM Workflow モデルの作成で、送信されたデータを確認します。
+description: AEM Forms ワークフローコンポーネントを使用して AEM ワークフローモデルを作成し、送信されたデータを確認します。
 feature: Workflow
 topics: integrations
 audience: developer
@@ -15,22 +15,22 @@ level: Beginner
 exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # 送信されたデータを確認するワークフローの作成
 
-通常、ワークフローは、レビューと承認のために送信されたデータをルーティングするために使用されます。 ワークフローは、AEMのワークフローエディターを使用して作成されます。 このワークフローは、アダプティブフォームの送信時にトリガーできます。
+ワークフローは通常、送信されたデータをレビューと承認のためにルーティングする際に使用されます。ワークフローは、AEM のワークフローエディターを使用して作成されます。このワークフローは、アダプティブフォームの送信時にトリガーできます。
 
 ## 前提条件
 
-AEM Formsのインスタンスが正常に動作していることを確認してください。 詳しくは、 [インストールガイド](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) AEM Formsをインストールして設定する
+AEM Forms のインスタンスが機能していることを確認してください。[インストールガイド](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=ja)に従って、AEM Forms をインストールおよび設定してください。
 
-次のビデオでは、 AEM Formsコンポーネントを使用したレビューと承認ワークフローの作成について説明します
+次のビデオでは、AEM Forms コンポーネントを使用したレビューと承認のワークフローの作成について説明しています。
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)
 
 
-何らかの理由でワークフローを構築できない場合は、完了したワークフローを [ここ](assets/review-submitted-data-workflow.zip) を使用して同じものを読み込みます。 [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp) をAEMインスタンスに追加します。
+何らかの理由でワークフローを作成できない場合は、完成したワークフローを[こちら](assets/review-submitted-data-workflow.zip)からダウンロードし、[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して AEM インスタンスに読み込むことができます。
