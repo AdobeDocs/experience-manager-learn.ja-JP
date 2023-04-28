@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームデータの保存と取得
-description: アダプティブフォームのデータを保存し、データベースから取得する。 この機能を使用すると、フォーム入力者はフォームを保存し、後日フォームの入力を続行できます。
+description: アダプティブフォームデータのデータベースへの保存とデータベースからの取得。この機能を使用すると、フォーム入力者はフォームを保存し、後日フォームの入力を続行できます。
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -8,40 +8,40 @@ type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '612'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # アダプティブフォームデータの保存と取得
 
-この記事では、アダプティブフォームデータを保存し、データベースから取得する手順について説明します。 MySQL データベースは、アダプティブフォームのデータを保存するために使用されました。 大まかに言えば、次の手順でこのユースケースを実現します。
+この記事では、アダプティブフォームデータをデータベースに保存する手順とデータベースから取得する手順について説明します。 ここでは、アダプティブフォームデータを保存するために MySQL データベースを使用しました。 大まかには、次の手順でこのユースケースを実現します。
 
 * [データソースの設定](#Configure-Data-Source)
-* [データベースにデータを書き込むサーブレットを作成](#create-servlet)
-* [OSGi サービスを作成して保存されたデータを取得する](#create-osgi-service)
-* [クライアントライブラリを作成](#create-client-library)
+* [データベースにデータを書き込むサーブレットを作成します。](#create-servlet)
+* [保存されたデータを取得する OSGi サービスを作成します。](#create-osgi-service)
+* [クライアントライブラリの作成](#create-client-library)
 * [アダプティブフォームテンプレートとページコンポーネントの作成](#form-template-and-page-component)
 * [機能のデモ](#capability-demo)
-* [サーバーにデプロイ](#deploy-on-your-server)
+* [サーバーへのデプロイ](#deploy-on-your-server)
 
 ## データソースの設定 {#Configure-Data-Source}
 
-Apache Sling 接続プールに入れられたデータソースは、アダプティブフォームのデータの保存に使用されるデータベースを指すように設定されています。 次のスクリーンショットは、インスタンスの設定を示しています。 次のプロパティをコピーして貼り付けることができます
+Apache Sling Connection Pooled DataSource は、アダプティブフォームデータの保存に使用されるデータベースを指すように設定されています。 次のスクリーンショットは、インスタンスの設定を示しています。 次のプロパティをコピー＆ペーストすることができます。
 
-* Datasource Name:aemformstutorial — これは、私のコードで使用されている名前です。
+* データソース名：aemformstutorial - このコードで使用されている名前です。
 
-* JDBC Driver Class:com.mysql.jdbc.Driver
+* JDBC ドライバークラス：com.mysql.jdbc.Driver
 
 * JDBC 接続 URL:jdbc:mysql://localhost:3306/aemformstutorial
 
 ![connectionpool](assets/storingdata.PNG)
 
-### サーブレットを作成 {#create-servlet}
+### サーブレットの作成 {#create-servlet}
 
-以下は、アダプティブフォームデータをデータベースに挿入または更新するサーブレットのコードです。 Apache Sling 接続プールに入れられたデータソースはAEM ConfigMgr を使用して設定され、同じデータソースが 26 行目で参照されます。 残りのコードは、かなり簡単です。 コードは、データベースに新しい行を挿入するか、既存の行を更新します。 保存されたアダプティブフォームデータは、GUID に関連付けられます。 同じ GUID を使用して、フォームデータが更新されます。
+以下は、アダプティブフォームデータをデータベースに挿入／更新するサーブレットのコードです。 Apache Sling Connection Pooled DataSource が AEM ConfigMgr を使用して設定され、同じデータソースが 26 行目で参照されています。 残りのコードはかなり簡単です。 コードでは、データベースに新しい行を挿入するか、既存の行を更新します。 保存されたアダプティブフォームデータは、GUID に関連付けられます。 同じ GUID を使用して、フォームデータが更新されます。
 
 ```java
 package com.techmarketing.core.servlets;
@@ -209,9 +209,9 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## データを取得する OSGi サービスを作成する {#create-osgi-service}
+## OSGi サービスを作成してデータを取得する {#create-osgi-service}
 
-次のコードは、保存されたアダプティブフォームデータを取得するために記述されています。 単純なクエリを使用して、特定の GUID に関連付けられたアダプティブフォームデータを取得します。 取得したデータは、呼び出し元のアプリケーションに返されます。 このコードで参照される最初の手順で作成されたのと同じデータソース。
+次のコードは、保存されたアダプティブフォームデータを取得するためのものです。 単純なクエリを使用して、特定の GUID に関連付けられたアダプティブフォームデータを取得します。取得したデータは、呼び出し元のアプリケーションに返されます。最初の手順で作成されたのと同じデータソースが、このコードで参照されています。
 
 ```java
 package com.techmarketing.core.impl;
@@ -274,9 +274,9 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## クライアントライブラリを作成 {#create-client-library}
+## クライアントライブラリの作成 {#create-client-library}
 
-AEMクライアントライブラリは、すべてのクライアント側 JavaScript コードを管理します。 この記事では、Guide Bridge API を使用してアダプティブフォームのデータを取得するための簡単な JavaScript を作成しました。 アダプティブフォームのデータが取得されると、POSTの呼び出しがサーブレットに対しておこなわれ、データベース内のアダプティブフォームのデータが挿入または更新されます。 getALLUrlParams 関数は、URL 内のパラメーターを返します。 これは、データを更新する場合に使用します。 残りの機能は、 .savebutton クラスの click イベントに関連付けられたコードで処理されます。 URL に guid パラメーターが存在する場合、挿入操作ではない場合は、更新操作を実行する必要があります。
+AEM クライアントライブラリは、すべてのクライアントサイド JavaScript コードを管理します。 この記事では、Guide Bridge API を使用してアダプティブフォームデータを取得するための簡単な JavaScript を作成しました。 アダプティブフォームデータが取得されると、サーブレットに対して POST 呼び出しが実行されて、データベース内でアダプティブフォームデータが挿入または更新されます。getALLUrlParams 関数は、URL 内のパラメーターを返します。 これは、データを更新する際に使用します。 残りの機能は、.savebutton クラスのクリックイベントに関連付けられたコードで処理されます。 URL に guid パラメーターが存在する場合、挿入操作でなければ、更新操作を実行する必要があります。
 
 ```javascript
 function getAllUrlParams(url) {
@@ -411,17 +411,17 @@ $(document).ready(function()
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=12&learn=on)
 
-#### サーバーにデプロイ {#deploy-on-your-server}
+#### サーバーへのデプロイ {#deploy-on-your-server}
 
-AEM Formsインスタンスでこの機能をテストするには、次の手順に従ってください
+お使いの AEM Forms インスタンスでこの機能をテストするには、次の手順に従ってください。
 
 * [ローカルシステムに DemoAssets.zip をダウンロードして展開します。](assets/demoassets.zip)
-* Felix Web コンソールを使用して、techmarketingdemos.jar バンドルと mysqldriver.jar バンドルをデプロイして起動します。
-*** MYSQL Workbench を使用して aemformstutorial.sql を読み込みます。 これにより、必要なスキーマとテーブルがデータベースに作成されます
-* AEMパッケージマネージャーを使用して StoreAndRetrieve.zip を読み込みます。 このパッケージには、アダプティブフォームテンプレート、ページコンポーネントのクライアントライブラリ、サンプルのアダプティブフォームおよびデータソース設定が含まれています。
-* configMgr にログインします。 「Apache Sling Connection Pooled DataSource」を検索します。 aemformstutorial に関連付けられたデータソースエントリを開き、データベースインスタンスに固有のユーザー名とパスワードを入力します。
-* アダプティブフォームを開く
+* Felix web コンソールを使用して、techmarketingdemos.jar バンドルと mysqldriver.jar バンドルをデプロイし起動します。
+*** MYSQL Workbench を使用して aemformstutorial.sql を読み込みます。 これにより、必要なスキーマとテーブルがデータベースに作成されます。
+* AEM パッケージマネージャーを使用して StoreAndRetrieve.zip を読み込みます。 このパッケージには、アダプティブフォームテンプレート、ページコンポーネントクライアントライブラリ、サンプルのアダプティブフォームおよびデータソース設定が含まれています。
+* configMgr にログインします。 「Apache Sling Connection Pooled DataSource」を検索します。 aemformstutorial に関連付けられているデータソースエントリを開き、データベースインスタンスに固有のユーザー名とパスワードを入力します。
+* アダプティブフォームを開きます。
 * 詳細を入力し、「保存して後で続行」ボタンをクリックします
-* GUID が含まれる URL を返す必要があります。
-* URL をコピーして、新しいブラウザータブに貼り付けます
-* アダプティブフォームには、前の手順で作成したデータが入力されます**
+* GUID を含んだ URL が返されます。
+* URL をコピーして、新しいブラウザータブに貼り付けます。
+* アダプティブフォームには、前の手順で作成したデータが入力されています。**
