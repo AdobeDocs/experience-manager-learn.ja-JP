@@ -1,6 +1,6 @@
 ---
-title: AEMでの Cloud Manager の重要性の調査
-description: Cloud Manager の目的と、AEM as a Cloud Serviceとの連携方法を確認します。
+title: AEM における Cloud Manager の重要性の調査
+description: Cloud Manager の目的と AEM as a Cloud Service との連携方法を確認します。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -10,14 +10,14 @@ thumbnail: 330545.jpg
 last-substantial-update: 2022-01-01T00:00:00Z
 exl-id: 072f8b81-54b8-4980-9758-b8cd7ceebd6b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud Manager とAEMas a Cloud Service
+# Cloud Manager と AEM as a Cloud Service
 
-Cloud Manager の目的と、AEM as a Cloud Serviceとの連携方法を確認します。
+Cloud Manager の目的と AEM as a Cloud Service との連携方法を確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330545?quality=12&learn=on)
