@@ -1,6 +1,6 @@
 ---
-title: 「invoke DDX」操作を使用したPDFファイルのアセンブリ
-description: 必要なPOSTーを指定して、DDX エンドポイントを呼び出すパラメーターリクエストを作成します
+title: invoke DDX 操作を使用した PDF ファイルのアセンブリ
+description: 必要なパラメーターを使用して DDX エンドポイントを呼び出す POST リクエストを作成する
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,18 +8,19 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9980
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
-workflow-type: tm+mt
+exl-id: 693dac88-84f3-4051-8e46-3105093711a3
+source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# POST呼び出し
+# POST 呼び出しを行う
 
 
-次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTPPOST呼び出しをおこないます。 DDX ファイルと pdf ファイルは、リソースファイルとして提供されます。 エンドポイントにはトークンベースの認証があり、リクエストヘッダーでアクセストークンを渡します。
-Assembler サービスを利用するときは、必要な出力を記述するために Document Description XML（DDX）と呼ばれる XML ベースの言語を使用します。DDX は、PDFがドキュメントの構築ブロックを表す宣言的なマークアップ言語です。次の DDX が、要素ソース要素で識別された 2 つの pdf ドキュメントのマージに使用されました。
+次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 DDX ファイルと PDF ファイルは、リソースファイルとして提供されます。 エンドポイントにはトークンベースの認証があり、リクエストヘッダーでアクセストークンを渡します。
+Assembler サービスを利用するときは、必要な出力を記述するために Document Description XML（DDX）と呼ばれる XML ベースの言語を使用します。DDX は、PDF がドキュメントの構築ブロックを表す宣言的なマークアップ言語です。次の DDX が、要素ソース要素で識別された 2 つの PDF ドキュメントの結合に使用されました。
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">
@@ -30,7 +31,7 @@ Assembler サービスを利用するときは、必要な出力を記述する�
 </DDX>
 ```
 
-次のコードは、pdf ファイルの組み合わせに使用されました
+次のコードは、PDF ファイルの組み合わせに使用されました
 
 ```java
 package com.aemformscs.documentservices;
