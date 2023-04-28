@@ -1,6 +1,6 @@
 ---
-title: アップロードした pdf に使用権限を適用
-description: PDF に使用権限を適用
+title: アップロードされた PDF への使用権限の適用
+description: PDF への使用権限の適用
 version: 6.4,6.5
 feature: Reader Extensions
 topic: Development
@@ -9,22 +9,22 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '354'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# Reader拡張の適用
+# Reader Extensions の適用
 
-Reader拡張機能を使用すると、PDFドキュメントの使用権限を操作できます。 使用権限は、Acrobat で使用できる機能に適用されますが、Acrobat Reader の機能には適用されません。「Reader拡張機能」で制御される機能には、ドキュメントにコメントを追加したり、フォームに入力したり、ドキュメントを保存したりする機能が含まれます。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
+Reader Extensions を使用すると、PDF ドキュメントの使用権限を操作できます。使用権限は、Acrobat で使用できる機能に適用されますが、Adobe Reader の機能には適用されません。Reader Extensions によって制御される機能には、ドキュメントにコメントを追加する機能、フォームに情報を入力する機能、ドキュメントを保存する機能などがあります。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-この使用例を達成するには、次の手順を実行する必要があります。
-* [Extensions 証明書のReader](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) から `fd-service` ユーザー。
+このユースケースを達成するには、以下の内容を実行する必要があります。
+* [Reader Extensions 証明書](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja)を `fd-service` ユーザーに追加します。
 
 ## カスタム OSGi サービスの作成
 
-ドキュメントに使用権限を適用するカスタム OSGi サービスを作成します。 これをおこなうコードを次に示します
+ドキュメントに使用権限を適用するカスタム OSGi サービスを作成します。 これを行うコードを以下に示します。
 
 ```java
 import com.adobe.aemfd.docmanager.Document;
@@ -70,12 +70,12 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## Reader 拡張PDFをストリーミングするサーブレットを作成
+## Reader Extensions が追加された PDF をストリーミングするサーブレットを作成する
 
-次の手順では、POSTメソッドを使用してサーブレットを作成し、読み取り用拡張PDFをユーザーに返します。 この場合、ユーザーは、ファイル・システムにPDFを保存するように求められます。 これは、PDFがダイナミックPDFとしてレンダリングされ、ブラウザーに付属の pdf ビューアではダイナミック pdf が処理されないためです。
+次のステップでは、POST メソッドを使用して Reader Extensions が追加された PDF をユーザーに返すサーブレットを作成します。この場合、ユーザーはファイルシステムに PDF を保存するように求められます。 これは PDF が動的 PDF としてレンダリングされ、ブラウザーに付属している PDF ビューアが動的 PDF を処理しないためです。
 
 次に、サーブレットのコードを示します。 このサーブレットは、アダプティブフォームの customsubmit アクションから呼び出されます。
-サーブレットは、UsageRights オブジェクトを作成し、アダプティブフォームでユーザーが入力した値に基づいてプロパティを設定します。 次に、サーブレットが、この目的で作成されたサービスの applyUsageRights メソッドを呼び出します。
+サーブレットは、UsageRights オブジェクトを作成し、ユーザーがアダプティブフォームに入力した値に基づいてプロパティを設定します。 次にサーブレットは、この目的で作成されたサービスの applyUsageRights メソッドを呼び出します。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -193,12 +193,12 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 }
 ```
 
-ローカルサーバーでこれをテストするには、次の手順に従ってください。
-1. [DevelopingWithServiceUser バンドルのダウンロードとインストール](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [ares.ares.core-ares バンドルをダウンロードしてインストールします。](assets/ares.ares.core-ares.jar). これには、使用権限を適用し、PDF をストリーミングバックするカスタムサービスとサーブレットが含まれています
-1. [クライアントライブラリとカスタム送信を読み込む](assets/applyaresdemo.zip)
-1. [アダプティブフォームの読み込み](assets/applyaresform.zip)
-1. Reader拡張証明書を「fd-service」ユーザーに追加します。 エイリアスが「ares」であることを確認します。
-1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. 適切な権限を選択し、PDFファイルをアップロード
-1. 「送信」をクリックして、Reader拡張PDFを取得
+ローカルサーバーでこれをテストするには、次の手順に従います。
+1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [ares.ares.core-ares バンドルをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これにはカスタムサービスと、使用権限を適用して PDF をストリーミングバックするサーブレットがあります。
+1. [クライアントライブラリとカスタム送信を読み込みます。](assets/applyaresdemo.zip)
+1. [アダプティブフォームを読み込みます。](assets/applyaresform.zip)
+1. Reader Extensions 証明書を「fd-service」ユーザーに追加します。エイリアスが「ares」であることを確認します。
+1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)します。
+1. 適切な権限を選択し、PDF ファイルをアップロードします。
+1. 「送信」をクリックして、Reader Extension が追加された PDF を取得します。
