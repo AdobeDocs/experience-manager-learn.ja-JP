@@ -1,6 +1,6 @@
 ---
-title: プロパティの一括更新の例としてAEM Content Fragment Console 拡張機能を使用する
-description: コンテンツフラグメントのプロパティを一括更新するAEM Content Fragments Console 拡張機能のサンプルです。
+title: プロパティの一括更新の例 AEM コンテンツフラグメントコンソールの拡張機能
+description: コンテンツフラグメントのプロパティを一括更新する AEM コンテンツフラグメントコンソール拡張機能の例。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,69 +10,69 @@ kt: 11604
 thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '782'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
+# プロパティの一括アップデートの例の拡張
 
-# プロパティの一括更新の例の拡張
+![プロパティの一括アップデート](./assets/bulk-property-update/screenshot.png){align="center"}
 
-![プロパティの一括更新](./assets/bulk-property-update/screenshot.png){align="center"}
-
-この例のAEMコンテンツフラグメントコンソール拡張機能は、 [アクションバー](../action-bar.md) コンテンツフラグメントプロパティを一括で共通の値に更新する拡張機能。
+この例の AEM コンテンツフラグメントコンソール拡張機能は、コンテンツフラグメントプロパティを共通の値に一括アップデートする [アクションバー](../action-bar.md) の拡張機能です。
 
 この例の拡張機能の機能フローは次のとおりです。
 
 ![Adobe I/O Runtimeアクションフロー](./assets/bulk-property-update/flow.png){align="center"}
 
-1. 「コンテンツフラグメント」を選択し、 [アクションバー](#extension-registration) が開きます。 [モーダル](#modal).
-1. この [モーダル](#modal) は、 [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/).
-1. フォームを送信すると、選択したコンテンツフラグメントのリストとAEMホストが [カスタムAdobe I/O Runtimeアクション](#adobe-io-runtime-action).
-1. この [Adobe I/O Runtime action](#adobe-io-runtime-action) は入力を検証し、AEMに対して HTTPPUTリクエストを実行して、選択したコンテンツフラグメントを更新します。
-1. 指定したプロパティを更新するための、コンテンツフラグメントごとの一連の HTTPPUT。
-1. AEM as a Cloud Serviceは、コンテンツフラグメントに対するプロパティの更新を保持し、Adobe I/O Runtimeのアクションに成功または失敗の応答を返します。
-1. モーダルは、Adobe I/O Runtimeアクションからの応答を受け取り、成功した一括更新のリストを表示します。
+1. コンテンツフラグメントを選択し、[アクションバー](#extension-registration)で「拡張機能」ボタンをクリックすると、[モーダル](#modal)が開きます。
+1. この[モーダル](#modal)は、[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) で構築されたカスタム入力フォームを表示します。
+1. フォームを送信すると、選択したコンテンツフラグメントのリストと AEM ホストが[カスタム Adobe I/O Runtime アクション](#adobe-io-runtime-action)に送信されます。
+1. この [Adobe I/O Runtime アクション](#adobe-io-runtime-action)は入力を検証し、AEM に HTTP PUT リクエストを行い、選択したコンテンツフラグメントを更新します。
+1. 指定したプロパティをアップデートするための、コンテンツフラグメントごとの一連の HTTP PUT。
+1. AEM as a Cloud Service は、プロパティのアップデートをコンテンツフラグメントに保持し、成功または失敗の応答を Adobe I/O Runtime アクションに返します。
+1. モーダルは Adobe I/O Runtime アクションから応答を受け取り、成功した一括アップデートのリストを表示します。
 
-このビデオでは、サンプルの一括プロパティ更新拡張機能、その仕組み、開発方法について説明します。
+このビデオでは、一括プロパティ更新拡張機能の例、その仕組み、開発方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 ## App Builder 拡張機能アプリ
 
-この例では、既存のAdobe Developer Console プロジェクトを使用し、を介して App Builder アプリを初期化する際に、次のオプションを使用します `aio app init`.
+この例では、既存の Adobe Developer Console プロジェクトを使用し、`aio app init` を介して App Builder アプリを初期化する際に、次のオプションを使用します。
 
-+ どのテンプレートを検索しますか？: `All Extension Points`
-+ インストールするテンプレートを選択してください：` @adobe/aem-cf-admin-ui-ext-tpl`
-+ 拡張機能に名前を付けますか？: `Bulk property update`
-+ 拡張機能の短い説明を入力してください。 `An example action bar extension that bulk updates a single property one or more content fragments.`
-+ どのバージョンから始めますか？: `0.0.1`
-+ 次に何をしますか？
++ 検索するテンプレートは？：`All Extension Points`
++ インストールするテンプレートを選択：` @adobe/aem-cf-admin-ui-ext-tpl`
++ 拡張機能の名前は？：`Bulk property update`
++ 拡張機能の短い説明を入力：`An example action bar extension that bulk updates a single property one or more content fragments.`
++ 開始するバージョン：`0.0.1`
++ 次は何を行いますか？
    + `Add a custom button to Action Bar`
-      + ボタンのラベル名を指定してください： `Bulk property update`
-      + ボタンのモーダルを表示する必要がある場合は、 `y`
+      + ボタンのラベル名を指定：`Bulk property update`
+      + ボタンのモーダルを表示する必要がありますか？`y`
    + `Add server-side handler`
-      + Adobe I/O Runtimeでは、サーバーレスのコードをオンデマンドで呼び出すことができます。 このアクションの名前を指定してください： `generic`
+      + Adobe I/O Runtime では、サーバーレスのコードをオンデマンドで呼び出すことができます。 このアクションの名前を指定：`generic`
 
-生成された App Builder 拡張機能アプリが、以下のように更新されます。
+生成された App Builder 拡張機能アプリが、以下に示すようにアップデートされます。
 
 ## アプリルート{#app-routes}
 
-この `src/aem-cf-console-admin-1/web-src/src/components/App.js` に [React ルーター](https://reactrouter.com/en/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js` には [React ルーター](https://reactrouter.com/ja/main)が含まれています。
 
 次の 2 つの論理セットのルートがあります。
 
-1. 最初のルートは、リクエストを `index.html`: [拡張登録](#extension-registration).
+1. 最初のルートはリクエストを `index.html` にマップし、[拡張機能登録](#extension-registration)を担当する React コンポーネントを呼び出します。
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 2 つ目のルートセットは、拡張機能のモーダルのコンテンツをレンダリングする React コンポーネントに URL をマッピングします。 この `:selection` param は、区切られたリストコンテンツフラグメントのパスを表します。
+1. 2 つ目のルートセットは、拡張機能のモーダルのコンテンツをレンダリングする React コンポーネントに URL をマップします。 この `:selection` param は、区切られたリストコンテンツフラグメントのパスを表します。
 
-   拡張機能に、個別のアクションを呼び出すための複数のボタンがある場合、各ボタン [拡張登録](#extension-registration) は、ここで定義されたルートにマッピングされます。
+   個別のアクションを呼び出すための複数のボタンが拡張機能にある場合、それぞれの[拡張機能の登録](#extension-registration)は、ここで定義されたルートにマップされます。
 
    ```javascript
    <Route
@@ -83,11 +83,11 @@ ht-degree: 1%
 
 ## 拡張機能の登録
 
-`ExtensionRegistration.js`、にマッピングされます。 `index.html` ルート。AEM拡張機能のエントリポイントで、次の項目を定義します。
+`index.html` ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、以下を定義します。
 
-1. AEMオーサリングエクスペリエンス (`actionBar` または `headerMenu`)
-1. 内の拡張機能ボタンの定義 `getButton()` 関数
-1. ボタンのクリックハンドラー ( `onClick()` 関数
+1. AEM オーサリングエクスペリエンスに表示される「拡張機能」ボタンの場所（`actionBar` または `headerMenu`）
+1. `getButton()` 関数内の拡張機能ボタンの定義 
+1. `onClick()` 関数内のボタンのクリックハンドラー
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -137,20 +137,20 @@ function ExtensionRegistration() {
 
 ## モーダル
 
-拡張機能の各ルート ( [`App.js`](#app-routes)は、拡張機能のモーダルでレンダリングする React コンポーネントにマッピングされます。
+[`App.js`](#app-routes) で定義されている拡張機能の各ルートは、拡張機能のモーダルでレンダリングされる React コンポーネントにマップされます。
 
-このサンプルアプリでは、モーダル React コンポーネント (`BulkPropertyUpdateModal.js`) には 3 つの状態があります。
+このサンプルアプリには、3 つの状態を持つモーダル React コンポーネント（`BulkPropertyUpdateModal.js`）があります。
 
-1. 読み込み中。ユーザーが待機する必要があることを示します
-1. プロパティの一括更新フォーム。更新するプロパティ名と値をユーザーが指定できます。
-1. 一括プロパティ更新操作の応答。更新されたコンテンツフラグメントと更新できなかったコンテンツフラグメントが一覧表示されます。
+1. 読み込み中。ユーザーが待機する必要があることを示しています。
+1. ユーザーが更新するプロパティ名と値を指定できる一括プロパティ更新フォーム
+1. 一括プロパティアップデート操作の応答。アップデートされたコンテンツフラグメントとアップデートできなかったコンテンツフラグメントのリスト
 
-重要な点は、拡張機能からAEMとのインタラクションはすべて、 [AppBuilder Adobe I/O Runtimeアクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)：で実行される個別のサーバーレスプロセスです。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-AEMとの通信にAdobe I/O Runtimeアクションを使用することは、クロスオリジンリソース共有 (CORS) 接続の問題を回避することです。
+重要な点は、拡張機能からの AEM とのインタラクションは、[AppBuilder Adobe I/O Runtime アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)に委任する必要があります。これは、[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) で実行される別のサーバーレスプロセスです。
+Adobe I/O Runtime アクションを使用して AEM と通信するのは、クロスオリジンリソース共有（CORS）接続の問題を回避するためです。
 
-一括プロパティ更新フォームが送信されると、 `onSubmitHandler()` 現在のAEMホスト（ドメイン）とユーザーのAEMアクセストークンを渡して、Adobe I/O Runtimeアクションを呼び出します。その後、が [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) をクリックして、コンテンツフラグメントを更新します。
+プロパティ一括更新フォームが送信されると、カスタムの `onSubmitHandler()` が Adobe I/O Runtime アクションを呼び出し、現在の AEM ホスト（ドメイン）とユーザーの AEM アクセストークンを渡します。これが [AEM コンテンツフラグメント API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) を呼び出して、コンテンツフラグメントを更新します。
 
-Adobe I/O Runtimeアクションからの応答を受け取ると、モーダルが更新され、一括プロパティ更新操作の結果が表示されます。
+Adobe I/O Runtime アクションからの応答を受け取ると、モーダルが更新され、一括プロパティ更新操作の結果が表示されます。
 
 + `src/aem-cf-console-admin-1/web-src/src/components/BulkPropertyUpdateModal.js`
 
@@ -407,16 +407,16 @@ export default function BulkPropertyUpdateModal() {
 ```
 
 
-## Adobe I/O Runtime action
+## Adobe I/O Runtime アクション
 
-AEM拡張機能の App Builder アプリは、0 個または複数のAdobe I/O Runtimeアクションを定義または使用できます。
-Adobeランタイムアクションは、AEMまたはその他のAdobeWeb サービスとの対話を必要とする作業を担当する必要があります。
+AEM 拡張機能の App Builder アプリは、0 個または複数の Adobe I/O Runtime アクションを定義または使用できます。
+Adobe Runtime アクションは、AEM またはその他のアドビの web サービスとの対話を必要とする作業を担当する必要があります。
 
-このサンプルアプリでは、Adobe I/O Runtimeアクションは、デフォルトの名前を使用します。 `generic`  — は次を担当します。
+このサンプルアプリでは、Adobe I/O Runtime アクションは、デフォルトの名前 `generic` を使用し、次を担当します。
 
-1. AEMコンテンツフラグメント API に対して一連の HTTP リクエストを実行して、コンテンツフラグメントを更新する。
-1. これらの HTTP 要求の応答を収集し、成功と失敗に照合する
-1. モーダル (`BulkPropertyUpdateModal.js`)
+1. AEM コンテンツフラグメント API に対して一連の HTTP リクエストを実行して、コンテンツフラグメントを更新する。
+1. これらの HTTP 要求の応答を収集し、成功と失敗に並べ替える
+1. モーダル（`BulkPropertyUpdateModal.js`）で表示する成功と失敗のリストを返す
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 
