@@ -1,7 +1,7 @@
 ---
-title: AEM Formsでのデータソース設定の作成
+title: AEM Forms での DataSource 設定の作成
 seo-title: Creating DataSource Configuration in AEM Forms
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 2 部です。 この部分では、REST ベースのデータソースを作成します。  次のビデオでは、データソースを作成する手順について説明します。
+description: このチュートリアルは、初めてインタラクティブなコミュニケーションドキュメントを作成するための多段階チュートリアルのパート 2 です。このパートでは、REST ベースのデータソースを作成します。次のビデオでは、データソースの作成手順について説明します。
 seo-description: This is part 2 of multistep tutorial for creating your first interactive communications document. In this part, we will create a REST backed data source.  The following video walks thru the steps to create the data source.
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
 feature: Interactive Communication
@@ -18,16 +18,16 @@ role: Developer
 level: Beginner
 exl-id: 1f4d88ad-ace1-4f78-be40-da80b3b4d40c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Formsでのデータソース設定の作成{#creating-datasource-configuration-in-aem-forms}
+# AEM Forms での DataSource 設定の作成{#creating-datasource-configuration-in-aem-forms}
 
-この部分では、REST ベースのデータソースを作成します。  次のビデオでは、データソースを作成する手順について説明します。
+このパートでは、REST ベースのデータソースを作成します。次のビデオでは、データソースの作成手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
 
-このチュートリアルに関連するアセットの一部として提供された Swagger ファイルを使用してください。 アセットは、 [はじめに](introduction.md) を参照してください。
+このチュートリアルに関連するアセットの一部として提供された Swagger ファイルを使用してください。アセットは、このチュートリアルの[はじめに](introduction.md)で利用できます。
