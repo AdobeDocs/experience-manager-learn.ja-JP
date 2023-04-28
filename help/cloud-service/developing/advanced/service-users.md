@@ -1,6 +1,6 @@
 ---
 title: サービスユーザー
-description: AEMコードでサービスユーザーを作成および使用して、制御された、プログラムによってAEMリポジトリにアクセスする方法について説明します。
+description: AEM コードでサービスユーザーを作成および使用して、制御されたプログラムによる AEM リポジトリへのアクセスを提供する方法について説明します。
 version: Cloud Service
 topic: Development
 feature: OSGI, Security
@@ -11,22 +11,22 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 21%
+ht-degree: 100%
 
 ---
 
 # サービスユーザー
 
-AEMコードでサービスユーザーを作成および使用して、制御された、プログラムによってAEMリポジトリにアクセスする方法について説明します。
+AEM コードでサービスユーザーを作成および使用して、制御されたプログラムによる AEM リポジトリへのアクセスを提供する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 
 ## リソース
 
-+ [Sling リポジトリの初期化 (repoinit) ドキュメント](https://sling.apache.org/documentation/bundles/repository-initialization.html)
-+ [Sling Service Authentication ドキュメント](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
++ [Sling リポジトリの初期化（repoinit）に関するドキュメント](https://sling.apache.org/documentation/bundles/repository-initialization.html)
++ [Sling サービス認証ドキュメント](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
 ## コード
 
