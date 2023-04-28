@@ -1,38 +1,39 @@
 ---
 title: リクエストパラメーターの取得
-description: フォームデータモデルの事前入力サービスから要求パラメーターにアクセスする
-feature: アダプティブフォーム
+description: フォームデータモデルの事前入力サービスからリクエストパラメーターにアクセスする
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5815
 thumbnail: kt-5815.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 4%
+exl-id: a640539d-c67f-4224-ad81-dd0b62e18c79
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '179'
+ht-degree: 100%
 
 ---
 
 # リクエストパラメーターの取得
 
-## empIDパラメータの取得
+## empID パラメーターの取得
 
-次の手順では、URLからempIDパラメータにアクセスします。 次に、empID要求パラメーターの値が、フォームデータモデルの&#x200B;**_get_**サービス操作に渡されます。
-このコースの目的に合わせて、以下を作成し、提供しました
+次の手順では、URL から empID パラメーターにアクセスします。empID リクエストパラメーターの値は、フォームデータモデルの **_GET_** サービス操作に渡されます。
+このコースの目的に合わせて、以下を作成して提供しています。
 
-* **_FDMDemo_**&#x200B;というアダプティブフォームテンプレート
-* **_fdmemo_**&#x200B;という名前のページコンポーネント
-* ページコンポーネントにカスタムjspを含めました。
-* アダプティブフォームテンプレートとページコンポーネントを関連付ける
+* **_FDMDemo_** という名前のアダプティブフォームテンプレート
+* **_fdmdemo_** という名前のページコンポーネント
+* カスタム jsp を含むページコンポーネント
+* アダプティブフォームテンプレートとページコンポーネントの関連付け
 
-これにより、カスタムjsp内のコードは、このカスタムテンプレートに基づくアダプティブフォームがレンダリングされた場合にのみ実行されます
+これにより、カスタム jsp 内のコードは、このカスタムテンプレートに基づくアダプティブフォームがレンダリングされたときにのみ実行されます
 
-* [パッケージマネージャー](assets/template-page-component.zip) を使用したパ [ッケージの読み込み](http://localhost:4502/crx/packmgr/index.jsp)
-* [fdmrequest.jspを開きます。](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
-* コメント行のコメントを解除します。
-* 変更を保存します
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[パッケージを読み込みます](assets/template-page-component.zip)
+* [fdmrequest.jsp を開きます](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
+* コメントされた行のコメントを解除します。
+* 変更を保存します。
 
 ```java
 if(request.getParameter("empID")!=null)
@@ -44,8 +45,8 @@ if(request.getParameter("empID")!=null)
     }
 ```
 
-empIDの値は、paraMapでempIDと呼ばれるキーに関連付けられます。 次に、このマップがslingRequestに渡されます
+empID の値は、paraMap の empID というキーに関連付けられています。次に、このマップは slingRequest に渡されます
 
 >[!NOTE]
 >
->キーempIDは、newhireエンティティがサービスを受け取るバインディング値と一致する必要があります
+>キー empID は、新しいエンティティがサービスを取得する際の連結値と一致する必要があります
