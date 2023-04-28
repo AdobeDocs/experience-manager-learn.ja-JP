@@ -1,51 +1,50 @@
 ---
-title: MyAccountFormの作成
-description: 申し込みIDと電話番号の検証に成功した場合に、部分的に記入されたフォームを取得するためのmyaccountフォームを作成します。
-feature: アダプティブフォーム
+title: MyAccountForm の作成
+description: アプリケーション ID と電話番号の検証に成功した際に、部分的に入力されたフォームを取得する myaccount フォームを作成します。
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6599
 thumbnail: 6599.jpg
-topic: 開発
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '255'
+ht-degree: 100%
 
 ---
 
+# MyAccountForm の作成
 
-
-# MyAccountFormの作成
-
-フォーム&#x200B;**MyAccountForm**&#x200B;は、ユーザーがアプリケーションIDと、アプリケーションIDに関連付けられているモバイル番号を確認した後に、部分的に完了したアダプティブフォームを取得するために使用されます。
+**MyAccountForm** は、ユーザーがアプリケーション ID とアプリケーション ID に関連付けられた携帯電話番号を確認した後、部分的に完成したアダプティブフォームを取得するために使用されます。
 
 ![マイアカウントフォーム](assets/6599.JPG)
 
-ユーザーがアプリケーションIDを入力して「**FetchApplication**」ボタンをクリックすると、フォームデータモデルのGet操作を使用して、アプリケーションIDに関連付けられたモバイル番号がデータベースから取得されます。
+ユーザーがアプリケーション ID を入力し、**FetchApplication** ボタンをクリックすると、フォームデータモデルの「Get」操作を使用して、アプリケーション id に関連付けられたモバイル番号がデータベースから取得されます。
 
-このフォームは、フォームデータモデルのPOST呼び出しを利用して、OTPを使用してモバイル番号を検証します。 フォームの送信アクションは、次のコードを使用して、携帯電話番号の検証が正常に完了するとトリガーされます。 送信ボタン&#x200B;**submitForm**&#x200B;のclickイベントを発生させます。
+このフォームは、フォームデータモデルの POST 呼び出しを利用して、OTP を使用して携帯電話番号を検証します。フォームの送信アクションは、次のコードを使用して、携帯電話番号の検証が成功したときにトリガーされます。**submitForm** という名前の送信ボタンのクリックイベントをトリガーしています。
 
 >[!NOTE]
-> MyAccountFormの適切なフィールドに、[Nexmo](https://dashboard.nexmo.com/)アカウントに固有のAPIキーとAPI秘密鍵の値を指定する必要があります
+> MyAccountForm の該当フィールドに、[Nexmo](https://dashboard.nexmo.com/) アカウントに固有の API Key と API Secret の値を入力する必要があります。
 
 ![トリガー送信](assets/trigger-submit.JPG)
 
 
 
-このフォームは、**/bin/renderaf**&#x200B;にマウントされたサーブレットにフォーム送信を転送するカスタム送信アクションに関連付けられています
+このフォームは、**/bin/renderaf** にマウントされたサーブレットにフォーム送信を転送するカスタム送信アクションと関連付けられています。
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-**/bin/renderaf**&#x200B;にマウントされたサーブレット内のコードは、保存されたデータが事前に入力されたstoreafwithattachmentsアダプティブフォームをレンダリングする要求を転送します。
+**/bin/renderaf** にマウントされたサーブレット内のコードは、保存されたデータを事前に入力した storeafwithattachments のアダプティブフォームを表示するためにリクエストを転送します。
 
 
-* MyAccountFormは、[ここからダウンロードできます。](assets/my-account-form.zip)
+* MyAccountForm は、[ここからダウンロード](assets/my-account-form.zip)できます
 
-* サンプルフォームは、サンプルフォームが正しくレンダリングされるためにAEMに読み込む必要がある、[カスタムアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip)に基づいています。
+* サンプルフォームは[カスタムアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip)サンプルフォームを正しくレンダリングするには、AEM に読み込む必要があります。
 
-* [MyAccountForm送信に関](assets/custom-submit-my-account-form.zip) 連付けられたカスタム送信ハンドラーは、AEMに読み込む必要があります。
+* MyAccountForm の送信に関連する[カスタム送信ハンドラー](assets/custom-submit-my-account-form.zip)を AEM に読み込む必要があります。
