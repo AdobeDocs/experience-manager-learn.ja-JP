@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスデプロイメント
-description: AEMヘッドレスアプリの様々なデプロイメントに関する考慮事項について説明します。
+title: AEM ヘッドレスデプロイメント
+description: AEM ヘッドレスアプリの様々なデプロイメントに関する考慮事項について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -10,34 +10,34 @@ kt: 10794
 thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
 source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '315'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# AEMヘッドレスデプロイメント
+# AEM ヘッドレスデプロイメント
 
-AEMヘッドレスクライアントのデプロイメントには、多くの形式が必要です。AEMがホストするSPA、外部SPA、Web サイト、モバイルアプリ、さらにはサーバー間プロセス。
+AEM ヘッドレスクライアントのデプロイメントには、AEM がホストする SPA、外部 SPA、web サイト、モバイルアプリ、さらにはサーバー間プロセスという多くの種類があります。
 
-クライアントとそのデプロイ方法に応じて、AEMヘッドレスデプロイメントには様々な考慮事項があります。
+クライアントとそのデプロイ方法に応じて、AEM ヘッドレスデプロイメントには様々な考慮事項があります。
 
-## AEMサービスのアーキテクチャ
+## AEM サービスのアーキテクチャ
 
-デプロイメントに関する考慮事項を調べる前に、AEMの論理アーキテクチャ、AEMas a Cloud Serviceのサービス層の分離と役割について理解することが不可欠です。 AEM as a Cloud Serviceは、次の 2 つの論理サービスで構成されます。
+デプロイメントに関する考慮事項を確認する前に、AEM の論理アーキテクチャ、AEM as a Cloud Service のサービス層の分離と役割について理解することが不可欠です。 AEM as a Cloud Service は、次の 2 つの論理サービスで構成されます。
 
-+ __AEM オーサー__ は、チームがコンテンツフラグメント（および他のアセット）を作成、共同作業および公開するサービスです。
-+ __AEM パブリッシュ__ は、公開されたコンテンツフラグメント（および他のアセット）が、一般的に使用するためにレプリケートされるサービスです。
-+ __AEMプレビュー__ は、AEM パブリッシュの動作を模倣するサービスですが、プレビューやレビューの目的でコンテンツが公開されているサービスです。 AEMプレビューは、内部オーディエンス向けであり、コンテンツの一般配信向けではありません。 目的のワークフローに応じて、AEMプレビューの使用はオプションです。
++ __AEM オーサー__&#x200B;は、チームがコンテンツフラグメント（および他のアセット）を作成、共同作業および公開するサービスです。
++ __AEM パブリッシュ__&#x200B;は、公開されたコンテンツフラグメント（および他のアセット）が、一般的な使用のためにレプリケートされるサービスです。
++ __AEM プレビュー__&#x200B;は、AEM パブリッシュの動作を模倣するサービスですが、プレビューやレビューの目的でコンテンツが公開されるサービスです。 AEM プレビューは、内部オーディエンス向けであり、コンテンツの一般配信向けではありません。 目的のワークフローに応じて、AEM プレビューの使用は任意です。
 
-![AEMサービスのアーキテクチャ](./assets/overview/aem-service-architecture.png)
+![AEM サービスのアーキテクチャ](./assets/overview/aem-service-architecture.png)
 
-典型的なAEMas a Cloud Serviceヘッドレスデプロイメントアーキテクチャ_
+AEM as a Cloud Service ヘッドレスの典型的なデプロイメントアーキテクチャ_
 
-実稼動環境で動作するAEMヘッドレスクライアントは通常、AEM パブリッシュとやり取りします。AEM パブリッシュには、承認済みの公開済みコンテンツが含まれます。 AEM オーサーインスタンスはデフォルトで安全で、すべてのリクエストに対する認証が必要で、進行中の作業中や未承認のコンテンツが含まれる場合があるので、AEM オーサーインスタンスとやり取りするクライアントは特に注意する必要があります。
+通常、実稼動の処理能力で動作する AEM ヘッドレスクライアントは、承認された公開済みコンテンツが含まれる AEM パブリッシュとやり取りします。AEM オーサーインスタンスはデフォルトで安全であり、すべてのリクエストに対する認証が必要で、進行中の作業中や未承認のコンテンツが含まれる場合があるため、AEM オーサーインスタンスとやり取りするクライアントは特に注意する必要があります。
 
-## ヘッドレスクライアントの導入
+## ヘッドレスクライアントのデプロイメント
 
 <div class="columns is-multiline">
     <!-- Single-page App (SPA) -->
@@ -45,18 +45,18 @@ AEMヘッドレスクライアントのデプロイメントには、多くの�
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="./spa.md" title="シングルページアプリ (SPA)" tabindex="-1">
-                       <img class="is-bordered-r-small" src="./assets/spa/spa-card.png" alt="シングルページアプリ (SPA)">
+                   <a href="./spa.md" title="単一ページアプリ（SPA）" tabindex="-1">
+                       <img class="is-bordered-r-small" src="./assets/spa/spa-card.png" alt="単一ページアプリ（SPA）">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="シングルページアプリ (SPA)">シングルページアプリ (SPA)</a></p>
-                   <p class="is-size-6">シングルページアプリ (SPA) のデプロイメントに関する考慮事項について説明します。</p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="単一ページアプリ（SPA）">単一ページアプリ（SPA）</a></p>
+                   <p class="is-size-6">単一ページアプリ（SPA）のデプロイメントに関する考慮事項について学びます。</p>
                    <a href="./spa.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
-                   </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
+ </a>
                </div>
            </div>
        </div>
@@ -66,18 +66,18 @@ AEMヘッドレスクライアントのデプロイメントには、多くの�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="./web-component.md" title="Web コンポーネント/JS" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/web-component/web-component-card.png" alt="Web コンポーネント/JS">
+               <a href="./web-component.md" title="Web コンポーネント／JS" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/web-component/web-component-card.png" alt="Web コンポーネント／JS">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Web コンポーネント/JS">Web コンポーネント/JS</a></p>
-               <p class="is-size-6">Web コンポーネントとブラウザーベースの JavaScript ヘッドレスコンシューマー向けのデプロイメントに関する考慮事項について説明します。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Web コンポーネント／JS">Web コンポーネント／JS</a></p>
+               <p class="is-size-6">Web コンポーネントとブラウザーベースの JavaScript ヘッドレスコンシューマー向けのデプロイメントに関する考慮事項について学びます。</p>
                <a href="./web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
-               </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
+ </a>
            </div>
        </div>
    </div>
@@ -95,10 +95,10 @@ AEMヘッドレスクライアントのデプロイメントには、多くの�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="モバイルアプリ">モバイルアプリ</a></p>
-               <p class="is-size-6">モバイルアプリのデプロイに関する考慮事項について説明します。</p>
+               <p class="is-size-6">モバイルアプリのデプロイメントに関する考慮事項について学びます。</p>
                <a href="./mobile.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
-               </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
+ </a>
            </div>
        </div>
    </div>
@@ -116,10 +116,10 @@ AEMヘッドレスクライアントのデプロイメントには、多くの�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="./server-to-server.md" title="サーバー間アプリ">サーバー間アプリ</a></p>
-               <p class="is-size-6">サーバー間アプリの展開に関する考慮事項について説明します</p>
+               <p class="is-size-6">サーバー間アプリのデプロイメントに関する考慮事項について学びます。</p>
                <a href="./server-to-server.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
-               </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">学ぶ</span>
+ </a>
            </div>
        </div>
    </div>
