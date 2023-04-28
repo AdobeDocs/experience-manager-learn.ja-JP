@@ -1,6 +1,6 @@
 ---
 title: AEM Dynamic Media でのカラーマネジメントについて
-description: このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのでカラー補正プレビュー機能を提供するために使用する方法について説明します。
+description: このビデオでは、Dynamic Media のカラーマネジメントと、この機能を使用して AEM Assets でカラー補正プレビュー機能を使用できるようにする方法について説明します。
 feature: Image Profiles, Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -8,27 +8,27 @@ role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '319'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
 # AEM Dynamic Media でのカラーマネジメントについて{#understanding-color-management-with-aem-dynamic-media}
 
-このビデオでは、Dynamic Mediaのカラーマネジメントと、AEM Assetsのでカラー補正プレビュー機能を提供するために使用する方法について説明します。
+このビデオでは、Dynamic Media のカラーマネジメントと、この機能を使用して AEM Assets でカラー補正プレビュー機能を使用できるようにする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >
->[Dynamic Mediaを有効にする](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) AEMでこの機能を使用する場合。
+>この機能を使用するには、AEM で [Dynamic Mediaを有効にします](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)。
 
 この機能は、AEM 6.1 および 6.2 バージョンの機能パックとして使用できます。
 
 ## カラーマネジメント設定ノード用の XML テンプレート {#xml-template-for-the-color-management-configuration-node}
 
-次に、カラーマネジメント設定ノードの XML テンプレートを示します。 この XML テンプレートは、AEM開発プロジェクトにコピーし、プロジェクトに適した設定で設定できます。
+次に、カラーマネジメント設定ノードの XML テンプレートを示します。 この XML テンプレートは、AEM 開発プロジェクトにコピーし、プロジェクトに適した内容で設定できます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,7 +84,7 @@ ht-degree: 58%
 />
 ```
 
-### デフォルトのAdobeカラープロファイルのリストを次に示します {#list-of-default-adobe-color-profiles-are-listed-below}
+### デフォルトの Adobe カラープロファイルのリストを次に示します。 {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | 名前 | カラースペース | 説明 |
 | ------------------- | ---------- | ------------------------------------- |
@@ -123,4 +123,4 @@ ht-degree: 58%
 
 ## その他のリソース{#additional-resources}
 
-* [Dynamic Media カラーマネジメントの設定](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Dynamic Media カラーマネジメントの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
