@@ -1,6 +1,6 @@
 ---
-title: カスタムプロセスの実装手順
-description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
+title: カスタムプロセスステップの実装
+description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む方法
 feature: Workflow
 version: 6.5
 topic: Development
@@ -9,43 +9,45 @@ level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '813'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # カスタムプロセスステップ
 
-このチュートリアルは、AEM Formsのお客様がカスタムプロセス手順を実装する必要がある場合を対象としています。 プロセスステップでは、ECMA スクリプトを実行したり、カスタム Java コードを呼び出して操作を実行したりできます。 このチュートリアルでは、プロセスステップで実行される WorkflowProcess の実装に必要な手順を説明します。
+このチュートリアルは、AEM Forms のお客様がカスタムプロセスステップを実装する必要がある場合を対象としています。 プロセスステップでは、ECMA スクリプトを実行したり、カスタム Java コードを呼び出して操作を実行したりできます。 このチュートリアルでは、プロセスステップで実行される WorkflowProcess の実装に必要な手順を説明します。
 
-カスタムプロセスの手順を実装する主な理由は、AEM Workflow を拡張することです。 例えば、ワークフローモデルでAEM Formsコンポーネントを使用している場合、次の操作を実行することができます
+カスタムプロセスステップを実装する主な理由は、AEM ワークフローを拡張することです。 例えば、ワークフローモデルで AEM Forms コンポーネントを使用している場合は、次の操作の実行が必要なことがあります。
 
 * アダプティブフォームの添付ファイルをファイルシステムに保存する
-* 送信されたデータの操作
+* 送信されたデータを操作する
 
-上記の使用例を達成するには、通常、プロセスステップで実行される OSGi サービスを記述します。
+上記のユースケースを実現するには、通常、プロセスステップで実行される OSGi サービスを記述します。
 
-## Maven プロジェクトを作成
+## Maven プロジェクトの作成
 
-最初の手順は、適切なAdobeMaven アーキタイプを使用して Maven プロジェクトを作成することです。 詳細な手順を次に示します [記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). Maven プロジェクトを Eclipse に読み込んだら、プロセスステップで使用できる最初の OSGi コンポーネントの記述を開始する準備が整います。
+最初に行うことは、適切な Adobe Maven アーキタイプを使用して Maven プロジェクトを作成することです。 詳細な手順は、この[記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)に記載されています。Maven プロジェクトを Eclipse に読み込んだら、プロセスステップで使用できる最初の OSGi コンポーネントの記述を開始する準備が整います。
 
 
-### WorkflowProcess を実装するクラスを作成します
+### WorkflowProcess を実装するクラスの作成
 
-Eclipse IDE で Maven プロジェクトを開きます。 展開 **projectname** > **コア** フォルダー。 src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージで、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドを上書きする必要があります。 execute メソッドのシグネチャは、次の 3 つの変数にアクセスできるようになります。
+Eclipse IDE で Maven プロジェクトを開きます。 **[projectname]**／**core** フォルダーを展開します。src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージに、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドをオーバーライドする必要があります。 execute メソッドのシグネチャは、次の とおりです。
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
+execute メソッドは次の 3 つの変数にアクセスします。
 
-**WorkItem**:workItem 変数は、ワークフローに関連するデータにアクセスできるようにします。 公開 API ドキュメントを参照できます。 [こちら。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**：workItem 変数は、ワークフローに関連するデータにアクセスできるようにします。 公開 API のドキュメントは[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)で参照できます。 
 
-**WorkflowSession**:この workflowSession 変数を使用すると、ワークフローを制御できます。 公開 API ドキュメントを参照できます。 [ここ](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**：workflowSession 変数を使用すると、ワークフローを制御できます。公開 API のドキュメントは[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)で参照できます。 
 
-**MetaDataMap**:ワークフローに関連付けられているすべてのメタデータ。 プロセスステップに渡されるプロセス引数は、 MetaDataMap オブジェクトを使用して使用できます。[API に関するドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**：ワークフローに関連付けられているすべてのメタデータです。 プロセスステップに渡されるプロセス引数は、 MetaDataMap オブジェクトを使用して参照できます。[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
-このチュートリアルでは、アダプティブフォームに追加された添付ファイルをAEM Workflow の一部としてファイルシステムに書き込みます。
+このチュートリアルでは、アダプティブフォームに追加された添付ファイルを AEM ワークフローの一環としてファイルシステムに書き込みます。
 
-この使用例を達成するために、次の Java クラスが記述されました
+このユースケースを実現するために、次の Java クラスを記述しました。
 
-このコードを見てみましょう
+このコードを見てみましょう。
 
 ```java
 package com.learningaemforms.adobe.core;
@@ -126,36 +128,36 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-行 1 — コンポーネントのプロパティを定義します。 process.label プロパティは、次のスクリーンショットの 1 つに示すように、OSGi コンポーネントをプロセスステップに関連付けるときに表示される内容です。
+1 行目 - コンポーネントのプロパティを定義します。 process.label プロパティは、OSGi コンポーネントをプロセスステップに関連付ける際に表示されるものです（次のスクリーンショットの 1 つを参照）。
 
-13～15 行目 — この OSGi コンポーネントに渡されるプロセス引数は、「,」区切り文字を使用して分割されます。 次に、 attachmentPath と saveToLocation の値が文字列配列から抽出されます。
+13～15 行目 - この OSGi コンポーネントに渡されるプロセス引数は、区切り記号「,」を使用して分割されます。 次に、 attachmentPath と saveToLocation の値が文字列配列から抽出されます。
 
-* attachmentPath — これは、AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。 これは、ワークフローのペイロードを基準に、AEMで添付ファイルを保存するフォルダーの名前です。
+* attachmentPath - AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。 これは、添付ファイルを保存する AEM 内のフォルダーの名前（ワークフローのペイロードを基準とする相対パス）です。
 
-* saveToLocation - AEMサーバーのファイルシステム上で添付ファイルを保存する場所です。
+* saveToLocation - AEM サーバーのファイルシステム上で添付ファイルを保存する場所です。
 
-これらの 2 つの値は、以下のスクリーンショットに示すように、プロセス引数として渡されます。
+これら 2 つの値がプロセス引数として渡されます（以下のスクリーンショットを参照）。
 
 ![ProcessStep](assets/implement-process-step.gif)
 
-QueryBuilder サービスは、attachmentsPath フォルダーの下の nt:file 型のノードに対してクエリを実行するために使用します。 残りのコードは、検索結果を繰り返し処理して Document オブジェクトを作成し、ファイルシステムに保存します
+QueryBuilder サービスは、attachmentsPath フォルダー下の nt:file タイプのノードに対してクエリを実行するために使用します。 残りのコードでは、検索結果を反復処理して Document オブジェクトを作成し、それをファイルシステムに保存します。
 
 
 >[!NOTE]
 >
->AEM Formsに固有の Document オブジェクトを使用するので、aemfd-client-sdk 依存関係を Maven プロジェクトに含める必要があります。 グループ ID は com.adobe.aemfd で、アーティファクト ID は aemfd-client-sdk です。
+>AEM Forms に固有の Document オブジェクトを使用しているので、aemfd-client-sdk の依存関係を Maven プロジェクトに含める必要があります。 グループ ID は com.adobe.aemfd で、アーティファクト ID は aemfd-client-sdk です。
 
 #### ビルドとデプロイ
 
-[ここで説明されているように、バンドルをビルドします。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[ここで説明しているとおりに、バンドルをビルドします。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 [バンドルがデプロイされ、アクティブな状態になっていることを確認します。](http://localhost:4502/system/console/bundles)
 
-ワークフローモデルの作成. プロセスステップをワークフローモデルにドラッグ&amp;ドロップします。 プロセスステップを「アダプティブフォームの添付ファイルをファイルシステムに保存」に関連付けます。
+ワークフローモデルを作成します。プロセスステップをワークフローモデルにドラッグ＆ドロップします。 プロセスステップを「アダプティブフォームの添付ファイルをファイルシステムに保存」に関連付けます。
 
-必要なプロセス引数をコンマで区切って指定します。 例えば、添付ファイル、c:\\scrappp\\などです。 最初の引数は、アダプティブフォームの添付ファイルがワークフローのペイロードを基準に保存される際のフォルダーです。 これは、アダプティブフォームの送信アクションを設定する際に指定した値と同じである必要があります。 2 番目の引数は、添付ファイルを保存する場所です。
+必要なプロセス引数をコンマで区切って指定します。 例えば、「Attachments,c:\\scrappp\\」などです。 最初の引数は、アダプティブフォームの添付ファイルが保存される際のフォルダー（ワークフローのペイロードを基準とする相対パス）です。 これは、アダプティブフォームの送信アクションを設定する際に指定した値と同じにする必要があります。 2 番目の引数は、添付ファイルを保存する場所です。
 
-アダプティブフォームの作成. 添付ファイルコンポーネントをフォームにドラッグ&amp;ドロップします。 前の手順で作成したワークフローを呼び出すように、フォームの送信アクションを設定します。 適切な添付ファイルのパスを指定します。
+アダプティブフォームを作成します。添付ファイルコンポーネントをフォームにドラッグ＆ドロップします。 前の手順で作成したワークフローを呼び出すように、フォームの送信アクションを設定します。 適切な添付ファイルパスを指定します。
 
 設定を保存します。
 
-フォームをプレビューする. いくつかの添付ファイルを追加し、フォームを送信します。 添付ファイルは、ワークフロー内で指定された場所のファイルシステムに保存される必要があります。
+フォームをプレビューします。いくつかの添付ファイルを追加し、フォームを送信します。 添付ファイルは、ファイルシステムの、ワークフローで指定した場所に保存される必要があります。
