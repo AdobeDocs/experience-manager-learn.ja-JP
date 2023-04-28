@@ -1,6 +1,6 @@
 ---
-title: AEMコンテンツフラグメントコンソールのアクションバーの拡張
-description: AEMコンテンツフラグメントコンソールのアクションバー拡張機能を作成する方法について説明します。
+title: AEM コンテンツフラグメントコンソールのアクションバーの拡張
+description: AEM コンテンツフラグメントコンソールのアクションバー拡張機能を作成する方法について説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,29 +10,29 @@ recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
 source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '333'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
 # アクションバー拡張機能
 
-![アクションバー拡張機能](./assets/action-bar/action-bar.png){align="center"}
+![アクションバーの拡張機能](./assets/action-bar/action-bar.png){align="center"}
 
-アクションバーを含む拡張機能で、AEMコンテンツフラグメントコンソールのアクションにボタンを追加します。このアクションは、 __1 個以上__ コンテンツフラグメントが選択されている。 アクションバーの拡張ボタンは、少なくとも 1 つのコンテンツフラグメントが選択されている場合にのみ表示されるので、通常は、選択したコンテンツフラグメントに基づいて動作します。 以下に例を示します。
+アクションバーを含む拡張機能では、AEM コンテンツフラグメントコンソールのアクションに、__1 つ以上__&#x200B;のコンテンツフラグメントが選択されたときに表示されるボタンを導入します。アクションバーの拡張ボタンは、少なくとも 1 つのコンテンツフラグメントが選択されたときにのみ表示されるため、通常は選択されたコンテンツフラグメントに対して動作します。以下に例を示します。
 
 + 選択したコンテンツフラグメントでのビジネスプロセスまたはワークフローの呼び出し。
-+ 選択したコンテンツフラグメントのデータを更新または変更する。
++ 選択したコンテンツフラグメントのデータを更新または変更します。
 
 ## 拡張機能の登録
 
-`ExtensionRegistration.js` はAEM拡張機能のエントリポイントで、次の項目を定義します。
+`ExtensionRegistration.js` は AEM 拡張機能のエントリポイントで、次の項目を定義します。
 
-1. 拡張機能のタイプ。アクションバーボタンの場合。
-1. 拡張ボタンの定義 ( `getButton()` 関数に置き換えます。
-1. ボタンのクリックハンドラー ( `onClick()` 関数に置き換えます。
+1. 拡張機能の種類。この場合はアクションバーボタン。
+1. `getButton()` 関数内の、拡張機能ボタンの定義。
+1. `onClick()` 関数内のボタンのクリックハンドラー。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -72,12 +72,12 @@ function ExtensionRegistration() {
 
 ![モーダル](./assets/modal/modal.png)
 
-AEMコンテンツフラグメントコンソールのアクションバー拡張には、次が必要な場合があります。
+AEM コンテンツフラグメントコンソールのアクションバーの拡張機能には、次が必要な場合があります。
 
 + 目的のアクションを実行するためのユーザーからの追加入力。
 + アクションの結果に関するユーザーの詳細情報を提供する機能。
 
-これらの要件をサポートするために、 AEMコンテンツフラグメントコンソール拡張機能を使用すると、React アプリケーションとしてレンダリングするカスタムモーダルを使用できます。
+これらの要件をサポートするために、AEM コンテンツフラグメントコンソールの拡張機能を使用すると、React アプリケーションとしてレンダリングするカスタムモーダルを使用できます。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -114,7 +114,7 @@ function ExtensionRegistration() {
   <div class="is-flex is-padded-small is-padded-big-mobile">
     <div>
       <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">モーダルの作成にスキップ</p>
-      <p class="has-text-blackest">アクションバーの拡張機能ボタンをクリックすると表示されるモーダルを作成する方法を説明します。</p>
+      <p class="has-text-blackest">アクションバーの拡張機能ボタンをクリックしたときに表示されるモーダルの作成方法を説明します。</p>
       <div class="has-align-start is-margin-top-big">
         <a href="./modal.md" target="_blank" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
           <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="モーダルの構築について学ぶ">モーダルの構築について学ぶ</span>
@@ -126,13 +126,13 @@ function ExtensionRegistration() {
 
 ## モーダルなし
 
-AEMコンテンツフラグメントコンソールのアクションバー拡張機能では、次のように、ユーザーとのさらなるやり取りが必要ない場合があります。
+AEM コンテンツフラグメントコンソールのアクションバー拡張機能では、次のように、ユーザーとのさらなるやり取りが必要ない場合があります。
 
 + 読み込みや書き出しなど、ユーザー入力を必要としないバックエンドプロセスを呼び出す。
 
-これらの場合、AEM Content Fragment Console 拡張機能には [モーダル](#modal)をクリックし、アクションバーボタンの `onClick` ハンドラ
+このような場合、AEM コンテンツフラグメントコンソールの拡張機能は[モーダル](#modal)を必要とせず、アクションバーボタンの `onClick` ハンドラーで直接作業を実行します。
 
-AEMコンテンツフラグメントコンソール拡張機能を使用すると、作業の実行中に、進行状況インジケーターでAEMコンテンツフラグメントコンソールをオーバーレイし、ユーザーがそれ以上のアクションを実行できないようにできます。 進行状況インジケータの使用は任意ですが、同期作業の進行状況をユーザに伝えるのに便利です。
+AEM コンテンツフラグメントコンソール拡張機能を使用すると、作業中に進行状況インジケーターで AEM コンテンツフラグメントコンソールをオーバーレイし、ユーザーがそれ以上のアクションを実行するのを防ぐことができます。進行状況インジケーターの使用は任意ですが、同期作業の進行状況をユーザーに伝えるのに便利です。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
