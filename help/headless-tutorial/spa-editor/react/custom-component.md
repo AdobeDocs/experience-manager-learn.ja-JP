@@ -1,6 +1,6 @@
 ---
-title: カスタム天気コンポーネントを作成する | AEM SPA Editor と React の使用の手引き
-description: AEM SPA Editor で使用するカスタム天気コンポーネントを作成する方法を説明します。 JSON モデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログと Sling モデルの開発方法について説明します。 Open Weather API および React Open Weather コンポーネントが使用されます。
+title: カスタム天気予報コンポーネントの作成 | AEM SPA Editor と React の使用の手引き
+description: AEM SPA Editor で使用するカスタム天気予報コンポーネントを作成する方法について説明します。オーサーダイアログと Sling モデルを開発して JSON モデルを拡張し、カスタムコンポーネントを設定する方法について説明します。Open Weather API と React Open Weather コンポーネントを使用します。
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -12,47 +12,47 @@ role: Developer
 level: Beginner
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1216'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# カスタム WeatherComponent を作成する {#custom-component}
+# カスタム天気予報コンポーネントの作成 {#custom-component}
 
-AEM SPA Editor で使用するカスタム天気コンポーネントを作成する方法を説明します。 JSON モデルを拡張してカスタムコンポーネントを設定するためのオーサーダイアログと Sling モデルの開発方法について説明します。 この [オープンウェザー API](https://openweathermap.org) および [React オープンウェザーコンポーネント](https://www.npmjs.com/package/react-open-weather) が使用されます。
+AEM SPA Editor で使用するカスタム天気予報コンポーネントを作成する方法について説明します。オーサーダイアログと Sling モデルを開発して JSON モデルを拡張し、カスタムコンポーネントを設定する方法について説明します。[Open Weather API](https://openweathermap.org) と [React Open Weather コンポーネント](https://www.npmjs.com/package/react-open-weather)を使用します。
 
 ## 目的
 
-1. AEMが提供する JSON モデル API を操作する際の Sling モデルの役割を理解します。
-2. 新しいAEMコンポーネントダイアログの作成方法を説明します。
-3. 作成方法 **カスタム** SPAエディターフレームワークと互換性のあるAEMコンポーネント。
+1. AEM に用意されている JSON モデル API を操作する際の Sling モデルの役割を理解します。
+2. 新しい AEM コンポーネントダイアログの作成方法について説明します。
+3. SPA エディターフレームワークと互換性のある&#x200B;**カスタム** AEM コンポーネントの作成方法について説明します。
 
 ## 作成する内容
 
-簡単な気象コンポーネントが構築されます。 このコンポーネントは、コンテンツ作成者がSPAに追加できます。 作成者は、AEMダイアログを使用して、表示する天気の位置を設定できます。  このコンポーネントの実装は、AEM SPA Editor フレームワークと互換性のある新しいAEMコンポーネントを作成するために必要な手順を示します。
+シンプルな天気予報コンポーネントを構築します。このコンポーネントは、コンテンツ作成者が SPA に追加できます。作成者は、AEM ダイアログを使用して、表示する天気の地域を設定できます。このコンポーネントの実装では、AEM SPA Editor フレームワークと互換性のある AEM コンポーネントを新規作成するために必要な手順を示しています。
 
-![開いている天気コンポーネントを設定する](assets/custom-component/enter-dialog.png)
+![Open Weather コンポーネントの設定](assets/custom-component/enter-dialog.png)
 
 ## 前提条件
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment). この章は、 [ナビゲーションとルーティング](navigation-routing.md) ただし、必要な操作をすべて実行するには、SPA対応AEMプロジェクトをローカルAEMインスタンスにデプロイする必要があります。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。この章は、「[ナビゲーションとルーティング](navigation-routing.md)」の章の続きですが、必要な操作をすべて実行するには、SPA 対応 AEM プロジェクトをローカル AEM インスタンスにデプロイする必要があります。
 
 ### Open Weather API キー
 
-からの API キー [進行中の天気](https://openweathermap.org/) は、チュートリアルに従う必要があります。 [新規登録は無料です](https://home.openweathermap.org/users/sign_up) の呼び出し回数が制限されています。
+チュートリアルを進めるには、[Open Weather](https://openweathermap.org/) API キーが必要です。[登録は無料です](https://home.openweathermap.org/users/sign_up)が、API 呼び出し回数は制限されています。
 
-## AEMコンポーネントの定義
+## AEM コンポーネントの定義
 
-AEMコンポーネントは、ノードおよびプロパティとして定義されます。 プロジェクトでは、これらのノードおよびプロパティは、 `ui.apps` モジュール。 次に、 `ui.apps` モジュール。
+AEM コンポーネントは、ノードおよびプロパティとして定義されます。 プロジェクトでは、これらのノードとプロパティは `ui.apps` モジュールで XML ファイルとして表されます。次に、`ui.apps` モジュールに AEM コンポーネントを作成します。
 
 >[!NOTE]
 >
-> に関する簡単なリフレッシャー [AEMコンポーネントの基本が役立つ場合があります](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
+> [AEM コンポーネントの基本に関する簡単な復習が役立つ場合があります](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=ja)。
 
-1. 任意の IDE で、 `ui.apps` フォルダー。
-2. に移動します。 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components` をクリックし、 `open-weather`.
-3. という名前の新しいファイルを作成します。 `.content.xml` の下 `open-weather` フォルダー。 次の項目に `open-weather/.content.xml` を次のように設定します。
+1. 選択した IDE で `ui.apps` フォルダーを開きます。
+2. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components` に移動して、`open-weather` という名前の新規フォルダーを作成します。
+3. `open-weather` フォルダーの下に `.content.xml` という名前の新規ファイルを作成します。`open-weather/.content.xml` に以下を入力します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -64,12 +64,12 @@ AEMコンポーネントは、ノードおよびプロパティとして定義�
 
    ![カスタムコンポーネント定義の作成](assets/custom-component/aem-custom-component-definition.png)
 
-   `jcr:primaryType="cq:Component"`  — このノードがAEMコンポーネントであることを示します。
+   `jcr:primaryType="cq:Component"` - このノードが AEM コンポーネントであることを示します。
 
-   `jcr:title` は、コンテンツ作成者に表示される値で、 `componentGroup` オーサリング UI でのコンポーネントのグループ化を決定します。
+   `jcr:title` は、コンテンツ作成者に表示される値で、`componentGroup` はオーサリング UI でのコンポーネントのグループ化を決定します。
 
-4. の `custom-component` フォルダー、名前を付けた別のフォルダーを作成 `_cq_dialog`.
-5. の `_cq_dialog` フォルダ作成新しいファイル名： `.content.xml` を設定し、次のように設定します。
+4. `custom-component` フォルダーの下に、`_cq_dialog` という名前の別のフォルダーを作成します。
+5. `_cq_dialog` フォルダーの下に `.content.xml` という名前の新規ファイルを作成し、次のように入力します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -136,24 +136,24 @@ AEMコンポーネントは、ノードおよびプロパティとして定義�
 
    ![カスタムコンポーネントの定義](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上記の XML ファイルは、 `Weather Component`. ファイルの重要な部分は、内部 `<label>`, `<lat>` および `<lon>` ノード。 このダイアログには、次の 2 つが含まれます `numberfield`s および a `textfield` これにより、ユーザーは表示する天気を設定できます。
+   上記の XML ファイルでは、`Weather Component` の非常にシンプルなダイアログが生成されます。ファイルの重要な部分は、内部の `<label>`、`<lat>`、`<lon>` ノードです。このダイアログには、2 つの `numberfield` と `textfield` が含まれており、ユーザーは表示する天気を設定できます。
 
-   次に Sling モデルが作成され、の値が公開されます。 `label`,`lat` および `long` JSON モデルを使用したプロパティ。
+   次に、Sling モデルを作成し、JSON モデルを使用して `label`、`lat`、`long` プロパティの値を公開します。
 
    >[!NOTE]
    >
-   > もっと多くを見ることができます [コアコンポーネントの定義を表示したダイアログの例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). また、 `select`, `textarea`, `pathfield`の `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
+   > [コアコンポーネントの定義を確認すると、さらに多くのダイアログの例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を見ることができます。[CRXDE-Lite ](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) の `/libs/granite/ui/components/coral/foundation/form` の下にある`select`、`textarea`、`pathfield` などの追加のフォームフィールドを表示することもできます。
 
-   従来のAEMコンポーネントでは、 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトは通常必要です。 SPAはコンポーネントをレンダリングするので、HTL スクリプトは不要です。
+   従来の AEM コンポーネントでは、[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja) スクリプトは通常必要です。 SPA はコンポーネントをレンダリングするので、HTL スクリプトは不要です。
 
 ## Sling モデルの作成
 
-Sling モデルは、JCR から Java 変数へのデータのマッピングを容易にする注釈駆動の Java「POJO」(Plain Old Java Objects) です。 [Sling モデル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) 通常は、AEMコンポーネント用の複雑なサーバー側のビジネスロジックをカプセル化するために関数を使用します。
+Sling モデルは、JCR から Java 変数へのデータのマッピングを容易にする注釈駆動の Java「POJO」（Plain Old Java Objects）です。 [Sling モデル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=ja#sling-models)は通常、AEM コンポーネントの複雑なサーバーサイドビジネスロジックをカプセル化する機能を果たします。
 
-SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja).
+SPA エディターのコンテキストでは、Sling モデルは、[Sling モデルエクスポーター](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)を使用する機能を通じて、JSON モデルを介してコンポーネントのコンテンツを表示します。
 
-1. 任意の IDE で、 `core` モジュール `aem-guides-wknd-spa.react/core`.
-1. 次の場所にという名前のファイルを作成します。 `OpenWeatherModel.java` 時刻 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
+1. 選択した IDE で、`aem-guides-wknd-spa.react/core` にある `core` モジュールを開きます。
+1. `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models` に `OpenWeatherModel.java` という名前のファイルを作成します。
 1. `OpenWeatherModel.java` に以下を入力します。
 
    ```java
@@ -169,10 +169,10 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
    }
    ```
 
-   これは、コンポーネントの Java インターフェイスです。 Sling Model とSPA Editor フレームワークとの互換性を保つには、を拡張する必要があります。 `ComponentExporter` クラス。
+   これは、コンポーネントの Java インターフェイスです。 Sling モデルと SPA エディターフレームワークとの互換性を保つには、`ComponentExporter` クラスを拡張する必要があります。
 
-1. という名前のフォルダーを作成します。 `impl` 下 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
-1. という名前のファイルを作成します。 `OpenWeatherModelImpl.java` 下 `impl` に以下を入力します。
+1. `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models` の下に `impl` という名前のフォルダーを作成します。
+1. `impl` の下に `OpenWeatherModelImpl.java` という名前のファイルを作成し、次の情報を入力します。
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models.impl;
@@ -239,21 +239,21 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
    } 
    ```
 
-   静的変数 `RESOURCE_TYPE` は、 `ui.apps` コンポーネントの。 この `getExportedType()` は、を介して JSON プロパティをSPAコンポーネントにマッピングするために使用されます。 `MapTo`. `@ValueMapValue` は、ダイアログで保存された jcr プロパティを読み取る注釈です。
+   静的変数 `RESOURCE_TYPE` は、コンポーネントの `ui.apps` 内のパスを指している必要があります。`getExportedType()` は、`MapTo` を介して JSON プロパティを SPA コンポーネントにマップするために使用されます。`@ValueMapValue` は、ダイアログで保存された jcr プロパティを読み取る注釈です。
 
-## SPAの更新
+## SPA を更新
 
-次に、React コードを更新して、 [React オープンウェザーコンポーネント](https://www.npmjs.com/package/react-open-weather) 前の手順で作成したAEMコンポーネントにマッピングします。
+次に、React コードを更新して [React Open Weather コンポーネント](https://www.npmjs.com/package/react-open-weather) を含め、前の手順で作成した AEM コンポーネントにマッピングします。
 
-1. React Open Weather コンポーネントを **npm** 依存関係：
+1. React Open Weather コンポーネントを **npm** 依存関係としてインストールします。
 
    ```shell
    $ cd aem-guides-wknd-spa.react/ui.frontend
    $ npm i react-open-weather
    ```
 
-1. という名前の新しいフォルダーを作成します。 `OpenWeather` 時刻 `ui.frontend/src/components/OpenWeather`.
-1. という名前のファイルを追加します。 `OpenWeather.js` を設定し、次のように設定します。
+1. `ui.frontend/src/components/OpenWeather` に `OpenWeather` という名前の新しいフォルダーを作成します。
+1. `OpenWeather.js` という名前のファイルを追加し、次の情報を入力します。
 
    ```js
    import React from 'react';
@@ -315,7 +315,7 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
    MapTo('wknd-spa-react/components/open-weather')(OpenWeather, OpenWeatherEditConfig);
    ```
 
-1. 更新 `import-components.js` 時刻 `ui.frontend/src/components/import-components.js` を含めるには `OpenWeather` コンポーネント：
+1. `ui.frontend/src/components/import-components.js` で `import-components.js` を更新して `OpenWeather` コンポーネントを含めます。
 
    ```diff
      // import-component.js
@@ -324,7 +324,7 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
    + import './OpenWeather/OpenWeather';
    ```
 
-1. Maven のスキルを使用して、すべてのアップデートをプロジェクトディレクトリのルートからローカルAEM環境にデプロイします。
+1. Maven のスキルを使用して、すべてのアップデートをプロジェクトディレクトリのルートからローカル AEM 環境にデプロイします。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -333,9 +333,9 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
 
 ## テンプレートポリシーの更新
 
-次に、AEMに移動して更新を確認し、 `OpenWeather` SPAに追加するコンポーネント。
+次に、AEM に移動して更新を確認し、`OpenWeather` コンポーネントを SPA に追加できるようにします。
 
-1. 次の場所に移動して、新しい Sling Model の登録を検証します。 [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels).
+1. 次の場所に移動して、新しい Sling モデルの登録を検証します。[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)。
 
    ```plain
    com.adobe.aem.guides.wkndspa.react.core.models.impl.OpenWeatherModelImpl - wknd-spa-react/components/open-weather
@@ -343,37 +343,37 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
    com.adobe.aem.guides.wkndspa.react.core.models.impl.OpenWeatherModelImpl exports 'wknd-spa-react/components/open-weather' with selector 'model' and extension '[Ljava.lang.String;@2fd80fc5' with exporter 'jackson'
    ```
 
-   上記の 2 行が、 `OpenWeatherModelImpl` が `wknd-spa-react/components/open-weather` コンポーネントに書き込まれ、Sling Model Exporter を介して登録されていること。
+   `OpenWeatherModelImpl` が `wknd-spa-react/components/open-weather` コンポーネントに関連付けられており、Sling モデルエクスポーターを介して登録されていることを示す上記の 2 行が表示されます。
 
-1. SPA Page Template( ) に移動します。 [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. レイアウトコンテナのポリシーを更新して、新しい `Open Weather` 許可されたコンポーネントとして：
+1. 次の場所にある SPA ページ テンプレートに移動します。[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
+1. レイアウトコンテナのポリシーを更新して、新しい `Open Weather` を許可されたコンポーネントとして追加します。
 
-   ![レイアウトコンテナポリシーの更新](assets/custom-component/custom-component-allowed.png)
+   ![レイアウトコンテナポリシーを更新](assets/custom-component/custom-component-allowed.png)
 
-   変更をポリシーに保存し、 `Open Weather` 許可されたコンポーネントとして：
+   ポリシーへの変更を保存し、許可されたコンポーネントとして `Open Weather` を確認します。
 
    ![許可されたコンポーネントとしてのカスタムコンポーネント](assets/custom-component/custom-component-allowed-layout-container.png)
 
-## オープンウェザーコンポーネントのオーサリング
+## Open Weather コンポーネントを作成
 
-次に、 `Open Weather` コンポーネントを使用して、AEM SPA Editor を使用します。
+次に、AEM SPA エディターを使用して `Open Weather` コンポーネントを作成します。
 
-1. に移動します。 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
-1. In `Edit` モード、 `Open Weather` から `Layout Container`:
+1. [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) に移動します。
+1. `Edit` モードで、`Open Weather` を `Layout Container` に追加します。
 
    ![新規コンポーネントを挿入](assets/custom-component/insert-custom-component.png)
 
-1. コンポーネントのダイアログを開き、 **ラベル**, **緯度**、および **経度**. 例： **サンディエゴ**, **32.7157**、および **-117.1611**. 西半球と南半球の数は、Open Weather API で負の数として表されます
+1. コンポーネントのダイアログを開き、**ラベル**、**緯度**、および&#x200B;**経度**&#x200B;を入力します。例えば、**サンディエゴ**、**32.7157**、および **-117.1611** などです。西半球と南半球の数は、Open Weather API で負の数として表されます
 
-   ![開いている天気コンポーネントを設定する](assets/custom-component/enter-dialog.png)
+   ![Open Weather コンポーネントを設定](assets/custom-component/enter-dialog.png)
 
-   これは、の章で前述した XML ファイルに基づいて作成されたダイアログです。
+   これは、この章で前述した XML ファイルに基づいて作成されたダイアログです。
 
-1. 変更内容を保存します。～の天気を観察しなさい **サンディエゴ** が表示されました。
+1. 変更を保存します。**サンディエゴ**&#x200B;の天気が表示されていることを確認します。
 
    ![気象コンポーネントが更新されました](assets/custom-component/weather-updated.png)
 
-1. に移動して、JSON モデルを表示します。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). を検索 `wknd-spa-react/components/open-weather`:
+1. [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に移動して、JSON モデルを表示します。`wknd-spa-react/components/open-weather` を検索します。
 
    ```json
    "open_weather": {
@@ -388,8 +388,8 @@ SPA Editor のコンテキストでは、 Sling Models は、 [Sling Model Expor
 
 ## おめでとうございます。 {#congratulations}
 
-これで、SPA Editor で使用するカスタムAEMコンポーネントの作成方法を学びました。 また、ダイアログ、JCR プロパティ、Sling モデルが相互にやり取りして JSON モデルを出力する方法についても学びました。
+これで、SPA Editor で使用するカスタム AEM コンポーネントの作成方法を学びました。 また、ダイアログ、JCR プロパティ、Sling モデルが相互にやり取りして JSON モデルを出力する方法についても学びました。
 
 ### 次の手順 {#next-steps}
 
-[コアコンポーネントの拡張](extend-component.md)  — 既存のAEMコアコンポーネントを拡張して、AEM SPA Editor で使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解することは、AEM SPA Editor の実装の機能を拡張するための強力な手法です。
+[コアコンポーネントの拡張](extend-component.md) - 既存の AEM コアコンポーネントを拡張して、AEM SPA Editor で使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解すると、AEM SPA エディター実装の機能を拡張するための強力な手法になります。
