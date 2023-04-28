@@ -1,6 +1,6 @@
 ---
-title: GraphQLクエリの作成
-description: Adobe Experience Manager(AEM) からコンテンツを返すGraphQLクエリを作成する方法、および GraphiQL ツールを使用してクエリを迅速にテスト、調整、デバッグする方法について説明します。
+title: GraphQL クエリの作成
+description: Adobe Experience Manager（AEM）のコンテンツを返す GraphQL クエリを作成する方法と、GraphiQL ツールを使用してクエリを迅速にテスト、調整およびデバッグする方法について説明します。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -10,28 +10,28 @@ kt: 7621
 thumbnail: 332860.jpg
 exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '157'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# GraphQLクエリの作成
+# GraphQL クエリの作成
 
-Adobe Experience Manager(AEM) からコンテンツを返すGraphQLクエリを作成する方法、および GraphiQL ツールを使用してクエリを迅速にテスト、調整、デバッグする方法について説明します。
+Adobe Experience Manager（AEM）のコンテンツを返す GraphQL クエリを作成する方法と、GraphiQL ツールを使用してクエリを迅速にテスト、調整およびデバッグする方法について説明します。
 
-このビデオでは、次の操作を実行します。
+このビデオでは、以下の内容を学びます。
 
-+ GraphQL言語の力を理解する
-+ コンテンツフラグメントのリストと単一のコンテンツフラグメントを照会する方法を説明します。
-+ 特定のデータ属性をフィルタリングしてリクエストする方法を説明します
-+ GraphiQL ツールのインストールと使用の方法を説明します
++ GraphQL 言語の威力を理解します。
++ コンテンツフラグメントのリストや単一のコンテンツフラグメントをクエリする方法を学びます。
++ 特定のデータ属性をフィルタリングしてリクエストする方法を学びます。
++ GraphiQL ツールのインストール方法と使用方法を学びます。
 
 >[!CAUTION]
 >
->この **GraphiQL のインストール** AEM as Cloud Serviceの新しいバージョンでは、1:06 以降の章は必要ありません。 組み込み **GraphiQL エクスプローラ** が提供されている場合は、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を参照してください。
+>1:06 以降の **GraphiQL のインストール**&#x200B;のチャプターは、AEM as Cloud Service の新しいバージョンでは必要ありません。ビルトインの **GraphiQL エクスプローラー**&#x200B;が用意されいます。詳しくは、[GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=ja)を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
 
-_をダウンロードします。 [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) AEMヘッドレスビデオシリーズ全体で使用されます。_
+_AEM ヘッドレスビデオシリーズ全体で使用される [Postman コレクション](./assets/aem-headless-video-series.postman_collection.json)をダウンロードします。_
