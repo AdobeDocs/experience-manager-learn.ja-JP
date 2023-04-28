@@ -1,5 +1,5 @@
 ---
-title: OSGi サービス開発の基本
+title: OSGi サービスの開発の基本
 description: OSGi サービスの開発の基本について説明します
 role: Developer
 level: Beginner
@@ -10,24 +10,24 @@ thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '88'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # OSGi サービス
 
-OSGi サービス開発の基本について説明します。以下が含まれます。
+次のような OSGi サービスの開発の基本について説明します。
 
 + Java POJO を OSGi サービスに変換する方法
-+ OSGi サービスを Java インターフェイスにバインドする方法
++ OSGi サービスを Java インターフェイスに連結する方法
 
 >[!VIDEO](https://video.tv.adobe.com/v/335476?quality=12&learn=on)
 
 ## リソース
 
-+ [@Component JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.html)
++ [@Component JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.htmll?lang=ja)
 + [@ProviderType JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/ProviderType.html)
 + [@Version JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/Version.html)
 
