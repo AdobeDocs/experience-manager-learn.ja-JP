@@ -1,6 +1,6 @@
 ---
-title: SPA for AEM GraphQL のデプロイ
-description: シングルページアプリ (SPA)AEMヘッドレスデプロイメントのデプロイメントに関する考慮事項について説明します。
+title: AEM GraphQL 用の SPA のデプロイ
+description: シングルページアプリ（SPA）の AEM ヘッドレスデプロイメントのデプロイメントに関する考慮事項について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -10,88 +10,88 @@ kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '637'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# AEMヘッドレスSPAデプロイメント
+# AEM ヘッドレス SPA デプロイメント
 
-AEMヘッドレスシングルページアプリ (SPA) のデプロイメントには、AEMのコンテンツをヘッドレスで消費し、操作する、React や Vue などのフレームワークを使用して構築された JavaScript ベースのアプリケーションが含まれます。
+AEM ヘッドレスシングルページアプリ（SPA）のデプロイメントには、React や Vue などのフレームワークを使用して作成された JavaScript ベースのアプリケーションが含まれます。これらのアプリケーションは、AEM のコンテンツをヘッドレスで使用および操作します。
 
-ヘッドレスな方法でAEMを操作するSPAをデプロイするには、SPAのホストと、Web ブラウザーを使用してアクセスできるようにする必要があります。
+AEM をヘッドレスで操作する SPA をデプロイするには、SPA をホストし、web ブラウザー経由でアクセスできるようにする必要があります。
 
-## SPAをホスト
+## SPA のホスト
 
-SPAは、次のネイティブ Web リソースの集まりで構成されます。 **HTML、CSS および JavaScript**. これらのリソースは、 _ビルド_ プロセス ( 例： `npm run build`) をクリックし、エンドユーザーが使用するためにホストにデプロイします。
+SPA は、**HTML、CSS、JavaScript** のネイティブ web リソースのコレクションで構成されます。これらのリソースは、_ビルド_&#x200B;プロセス（`npm run build` など）中に生成され、エンドユーザーが使用できるようにホストにデプロイされます。
 
-種々ある **ホスト** オプションは、組織の要件に応じて以下に示します。
+組織の要件に応じて、様々な&#x200B;**ホスティング**&#x200B;オプションがあります。
 
-1. **クラウドプロバイダー** 例： **Azure** または **AWS**.
+1. **Azure** や **AWS** などの&#x200B;**クラウドプロバイダー**。
 
-2. **オンプレミス** 企業でのホスティング **データセンター**
+2. 企業&#x200B;**データセンター**&#x200B;での&#x200B;**オンプレミス**&#x200B;ホスティング
 
-3. **フロントエンドホスティングプラットフォーム** 例： **AWS Amplify**, **Azure App Service**, **Netlify**, **辺六**, **ベルセル**&#x200B;など
+3. **AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel** などの&#x200B;**フロントエンドホスティングプラットフォーム**。
 
 ## デプロイメント設定
 
-AEMヘッドレスとやり取りするSPAをホストする際の主な考慮事項は、SPAがAEMドメイン（またはホスト）経由でアクセスされるか、別のドメインでアクセスされるかです。  理由は、SPAが Web ブラウザーで実行される Web アプリケーションなので、Web ブラウザーのセキュリティポリシーに従うからです。
+AEM ヘッドレスを操作する SPA をホストする場合の主な考慮事項は、SPA には AEM のドメイン（またはホスト）経由でアクセスするか、様々なドメインでアクセスするかです。その理由は、SPA は web ブラウザーで実行される web アプリケーションであり、web ブラウザーのセキュリティポリシーの対象となるからです。
 
 ### 共有ドメイン
 
-SPAとAEMは、両方のドメインが同じドメインのエンドユーザーによってアクセスされる場合、ドメインを共有します。 次に例を示します。
+SPA と AEM は、両方が同じドメインからエンドユーザーによってアクセスされる場合、ドメインを共有します。次に例を示します。
 
-+ AEMには次の経由でアクセスします。 `https://wknd.site/`
-+ SPAへのアクセスには `https://wknd.site/spa`
++ AEM には `https://wknd.site/` 経由でアクセスできます
++ SPA には `https://wknd.site/spa` 経由でアクセスできます
 
-AEMとSPAの両方に同じドメインからアクセスされるので、Web ブラウザーでは、SPAは CORS を必要とせずに XHR をAEMヘッドレスエンドポイントに送信し、HTTP Cookie(AEMなど ) の共有を許可します `login-token` cookie) です。
+AEM と SPA の両方に同じドメインからアクセスできるので、web ブラウザーは、SPA が CORS を必要とせずに XHR を AEM ヘッドレスエンドポイントに作成し、HTTP Cookie（AEM の `login-token` Cookie など）を共有できるようにします。
 
-SPAとAEMのトラフィックが共有ドメイン上でどのようにルーティングされるかは、ユーザー次第です。複数のオリジンを持つ CDN、リバースプロキシを持つ HTTP サーバー、SPAをAEMで直接ホストするなど。
+SPA と AEM のトラフィックが共有ドメインでどのようにルーティングされるかは、ユーザー次第です。つまり、複数のオリジンを持つ CDN、リバースプロキシを持つ HTTP サーバー、AEM で直接 SPA をホストするなどです。
 
-AEMと同じドメインでホストされる場合、SPA実稼動デプロイメントに必要なデプロイメント設定を次に示します。
+AEM と同じドメインでホストされている場合に、SPA 実稼動デプロイメントに必要なデプロイメント設定を以下に示します。
 
-| SPAの接続先 | コンテンツ作成者 | AEM パブリッシュ | AEMプレビュー |
+| SPA の接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| クロスオリジンリソース共有 (CORS) | ✘ | ✘ | ✘ |
-| AEMホスト | ✘ | ✘ | ✘ |
+| クロスオリジンリソース共有（CORS） | ✘ | ✘ | ✘ |
+| AEM ホスト | ✘ | ✘ | ✘ |
 
 ### 異なるドメイン
 
-SPAとAEMは、異なるドメインのエンドユーザーからアクセスされる場合、異なるドメインを持ちます。 次に例を示します。
+異なるドメインからエンドユーザーがアクセスする場合、SPA と AEM には異なるドメインがあります。次に例を示します。
 
-+ AEMには次の経由でアクセスします。 `https://wknd.site/`
-+ SPAへのアクセスには `https://wknd-app.site/`
++ AEM には `https://wknd.site/` 経由でアクセスできます
++ SPA には `https://wknd-app.site/` 経由でアクセスできます
 
-AEMとSPAは異なるドメインからアクセスされるので、Web ブラウザーは、次のようなセキュリティポリシーを適用します。 [クロスオリジンリソース共有 (CORS)](./configurations/cors.md)HTTP Cookie(AEMなど ) の共有を禁止する `login-token` cookie) です。
+AEM と SPA には異なるドメインからアクセスできるので、web ブラウザーは[クロスオリジンリソース共有（CORS）](./configurations/cors.md)などのセキュリティポリシーを適用し、HTTP Cookie（AEM の `login-token` Cookie など）の共有を防ぎます。
 
-AEMとは異なるドメインでホストされる場合に、SPA実稼動デプロイメントに必要なデプロイメント設定を次に示します。
+AEM と異なるドメインでホストされている場合に、SPA 実稼動デプロイメントに必要なデプロイメント設定を以下に示します。
 
-| SPAの接続先 | コンテンツ作成者 | AEM パブリッシュ | AEMプレビュー |
+| SPA の接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| [クロスオリジンリソース共有 (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEMホスト](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [クロスオリジンリソース共有（CORS）](./configurations/cors.md) | ✔ | ✔ | ✔ |
+| [AEM ホスト](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-#### 異なるドメインでのSPAデプロイメントの例
+#### 異なるドメインでの SPA デプロイメントの例
 
-この例では、SPAは Netlify ドメイン (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) を使用しSPAは、AEM パブリッシュドメインからAEM GraphQL API を使用します (`https://publish-p65804-e666805.adobeaemcloud.com`) をクリックします。 以下のスクリーンショットは、CORS の要件を示しています。
+この例では、SPA は Netlify ドメイン（`https://main--sparkly-marzipan-b20bf8.netlify.app/`）にデプロイされ、SPA は AEM パブリッシュドメイン（`https://publish-p65804-e666805.adobeaemcloud.com`）から AEM GraphQL API を使用します。以下のスクリーンショットは、CORS 要件をハイライト表示しています。
 
-1. SPAは Netlify ドメインから提供されますが、別のドメインでAEM GraphQL API への XHR 呼び出しをおこないます。 このクロスサイトリクエストには [CORS](./configurations/cors.md) をAEMに設定して、Netlify ドメインからのコンテンツへのアクセス要求を許可します。
+1. SPA は Netlify ドメインから提供されますが、異なるドメインで AEM GraphQL API への XHR 呼び出しを行います。このクロスサイトリクエストでは、AEM で [CORS](./configurations/cors.md) を設定して、Netlify ドメインからのリクエストがそのコンテンツにアクセスできるようにする必要があります。
 
-   ![SPAおよびAEMホストからのSPAリクエスト ](assets/spa/cors-requirement.png)
+   ![SPA および AEM ホストから提供される SPA リクエスト](assets/spa/cors-requirement.png)
 
-2. AEM GraphQL API への XHR リクエストの調査、 `Access-Control-Allow-Origin` が存在し、この Netlify ドメインからのコンテンツへのアクセス要求をAEMが許可していることを Web ブラウザーに示します。
+2. AEM GraphQL API への XHR リクエストを検査すると、`Access-Control-Allow-Origin` が存在し、この Netlify ドメインからのリクエストがそのコンテンツにアクセスすることを AEM が許可することを web ブラウザーに示します。
 
-   AEM [CORS](./configurations/cors.md) が見つからなかったか、Netlify ドメインが含まれていなかった場合、Web ブラウザーは XHR リクエストに失敗し、CORS エラーを報告します。
+   AEM [CORS](./configurations/cors.md) が見つからなかったか、Netlify ドメインが含まれていなかった場合、web ブラウザーは XHR リクエストに失敗し、CORS エラーを報告します。
 
-   ![CORS 応答ヘッダーAEM GraphQL API](assets/spa/cors-response-headers.png)
+   ![CORS 応答ヘッダー AEM GraphQL API](assets/spa/cors-response-headers.png)
 
-## 単一ページアプリの例
+## シングルページアプリの例
 
-Adobeは、React でコード化された単一ページアプリの例を提供しています。
+アドビは、React でコード化された単一ページアプリの例を提供しています。
 
 <div class="columns is-multiline">
 <!-- React app -->
@@ -107,10 +107,10 @@ Adobeは、React でコード化された単一ページアプリの例を提供
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React アプリ">React アプリ</a></p>
-               <p class="is-size-6">AEM Headless GraphQL API のコンテンツを使用する、React で記述された単一ページアプリの例です。</p>
+               <p class="is-size-6">AEM ヘッドレス GraphQL API のコンテンツを使用する、React で記述された単一ページアプリの例です。</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-               </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
            </div>
        </div>
    </div>
@@ -120,18 +120,18 @@ Adobeは、React でコード化された単一ページアプリの例を提供
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="../example-apps/next-js.md" title="Next.js アプリ" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js アプリ">
+               <a href="../example-apps/next-js.md" title="Next.js アプリケーション" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js アプリケーション">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js アプリ">Next.js アプリ</a></p>
-               <p class="is-size-6">AEMヘッドレス GraphQL API のコンテンツを使用する Next.js で記述された単一ページアプリの例です。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js アプリケーション">Next.js アプリケーション</a></p>
+               <p class="is-size-6">AEM ヘッドレス GraphQL API のコンテンツを使用する Next.js で記述された単一ページアプリの例です。</p>
                <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-               </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
            </div>
        </div>
    </div>
