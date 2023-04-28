@@ -1,6 +1,6 @@
 ---
-title: クエリパラメーターを使用してアダプティブFormsを設定します。
-description: クエリパラメーターからのデータをアダプティブFormsに入力します。
+title: クエリパラメーターを使用してアダプティブフォームを設定します。
+description: クエリパラメーターからのデータでアダプティブフォームを設定します。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,25 +9,25 @@ level: Experienced
 kt: 11470
 last-substantial-update: 2020-11-12T00:00:00Z
 source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# クエリパラメーターを使用したアダプティブFormsの事前入力
+# クエリパラメーターを使用したアダプティブフォームの事前設定
 
-1 人のお客様は、クエリパラメーターを使用してアダプティブフォームに入力する必要がありました。 例えば、次の URL では、アダプティブフォームの「FirstName」フィールドと「LastName」フィールドはそれぞれ「John」と「Doe」に設定されています
+お客様の 1 人は、クエリパラメーターを使用してアダプティブフォームに入力する必要がありました。例えば、次の URL では、アダプティブフォームの FirstName フィールドと LastName フィールドがそれぞれ John と Doe に設定されています。
 
 ```html
 https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=John&LastName=Doe
 ```
 
-この使用例を実現するために、新しいアダプティブフォームテンプレートが作成され、ページコンポーネントに関連付けられました。 このページコンポーネントには、クエリーパラメーターを取得し、アダプティブフォームの入力に使用できる xml 構造を作成するための jsp があります。
+このユースケースを実現するために、新しいアダプティブフォームテンプレートが作成され、ページコンポーネントに関連付けられました。このページコンポーネントには、クエリパラメーターを取得し、アダプティブフォームへの入力に使用できる xml 構造を作成するための jsp があります。
 
-新しいアダプティブフォームテンプレートとページコンポーネントの作成について詳しくは、次のとおりです。 [このビデオで説明します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+新しいアダプティブフォームテンプレートとページコンポーネントの作成について詳しくは、[このビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=ja)をご覧ください。
 
-次に、jsp ページで使用されたコードを示します
+次に、jsp ページで使用されたコードを示します。
 
 ```java
 java.util.Enumeration enumeration = request.getParameterNames();
@@ -46,13 +46,13 @@ slingRequest.setAttribute("data", dataXml);
 
 >[!NOTE]
 >
->フォームでスキーマを使用している場合、xml の構造は異なり、それに応じて xml を構築する必要があります。
+>フォームでスキーマを使用している場合、xml の構造は異なり、それに応じて xml を作成する必要があります。
 
 
-## システムにアセットをデプロイする
+## システムへのアセットのデプロイ
 
 * [パッケージマネージャーを使用してアダプティブフォームテンプレートをダウンロードし、インストールする](assets/populate-with-xml.zip)
 * [サンプルのアダプティブフォームをダウンロードしてインストールする](assets/populate-af-with-query-paramters-form.zip)
 
-* [アダプティブフォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
-アダプティブフォームが John と Doe の値で入力されているのが確認できます。
+* [アダプティブフォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
+アダプティブフォームに John と Doe の値が入力されているのが確認できます。
