@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsでのDynamic Media 360 ビデオとカスタムビデオサムネールの使用
-description: AEM 6.5 のDynamic Mediaビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
+title: AEM Assets での Dynamic Media 360 ビデオとカスタムビデオサムネールの使用
+description: AEM 6.5 の Dynamic Media ビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -8,67 +8,67 @@ role: User
 level: Beginner
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '394'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsでのDynamic Media 360 ビデオとカスタムビデオサムネールの使用
+# AEM Assets での Dynamic Media 360 ビデオとカスタムビデオサムネールの使用
 
-AEM 6.5 のDynamic Mediaビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
+AEM 6.5 の Dynamic Media ビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->ビデオは、AEMインスタンスがDynamic Media S7 モードで動作していることを前提としています。  [Dynamic MediaでのAEMの設定手順については、こちらを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). ビデオをアップロードすると、デフォルトでは、Dynamic Mediaはフッテージの縦横比が 2:1 の場合、360 ビデオとして処理します。 つまり、幅と高さの比率は 2:1 です。
+>ビデオでは、AEM インスタンスが Dynamic Media S7 モードで動作していることを前提としています。  [AEM と Dynamic Media の連携のセットアップ手順については、こちらを参照してください](https://helpx.adobe.com/jp/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。ビデオをアップロードすると、デフォルトでは、Dynamic Media はフッテージの縦横比が 2:1 の場合、360 ビデオとして処理します。 つまり、幅と高さの比率は 2:1 です。
 
 >[!NOTE]
 >
->Dynamic Media 360 メディアコンポーネントは、360 ビデオのみをサポートしています。
+>Dynamic Media 360 メディアコンポーネントでは、360 ビデオのみをサポートしています。
 
 ## Dynamic Media 360 ビデオ
 
-360 度ビデオ（球形ビデオとも呼ばれる）は、全方向のビューが同時に記録されるビデオ録画で、全方向のカメラやカメラのコレクションを使用して撮影します。 フラットディスプレイでの再生時には、ユーザーは表示方向を制御でき、モバイルデバイスでの再生では通常、組み込みのジャイロスコープ制御を利用します。  1 枚の写真の限界を超えて広がることができます。 マーケターは、360 ビデオを利用して、ユーザーを魅力的なエクスペリエンスに導くことができます。  始めましょう。 パノラマ画像の縦横比の基準は、会社の DMS7 設定で、 /conf/global/settings/cloudconfigs/dmscene7/jcr:content にある double プロパティ s7PanoramicAR を指定することで変更できます。
+360 ビデオ（球形ビデオとも呼ばれる）は、全方向のビューが同時に記録されるビデオ録画で、全方向のカメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を活用します。1 枚の写真の限界を超えて広げることができます。 マーケターは、360 ビデオを利用して、ユーザーを魅力的なエクスペリエンスに導くことができます。それでは、始めましょう。パノラマ画像の縦横比の基準は、会社の DMS7 設定で、 /conf/global/settings/cloudconfigs/dmscene7/jcr:content にある double プロパティ s7PanoramicAR を指定することで変更できます。
 
 ## Dynamic Media 360 ビデオ
 
-Dynamic Mediaビデオで、ビデオのカスタムサムネールを選択する機能がサポートされるようになりました。 ユーザーは、AEM Assetsから既存のアセットを選択するか、サムネールとしてビデオフレームを選択できます。
+Dynamic Media ビデオで、ビデオのカスタムサムネールを選択する機能がサポートされるようになりました。 ユーザーは、AEM Assets から既存のアセットを選択するか、サムネールとしてビデオフレームを選択できます。
 
 ## Dynamic 360 メディアビューア
 
 <table> 
  <tbody>
    <tr>
-      <td> </td>
+      <td>  </td>
       <td>**Video360Social ビューア**</td>
       <td>**Video360VR ビューア**</td>
    </tr>
    <tr>
-      <td>Dynamic Media実行モード</td>
-      <td>Dynamic Media Scene7モードのみ</td>
-      <td>Dynamic Media Scene7モードのみ<br>
-         <br>
+      <td>Dynamic Media 実行モード</td>
+      <td>Dynamic Media Scene7 モードのみ</td>
+      <td>Dynamic Media Scene7 モードのみ<br>
+ <br>
       </td>
    </tr>
    <tr>
       <td>ユースケース</td>
       <td>
-         <p>ジャイロスコープをサポートしない Web サイトやデバイスの場合</p>
-         <p> </p>
+         <p>ジャイロスコープをサポートしていない web サイトやデバイスの場合</p>
+         <p> </p>
       </td>
       <td>
-         <p>ジャイロスコープをサポートするデバイスに仮想現実エクスペリエンスを提供 </p>
+         <p>ジャイロスコープをサポートしているデバイスに仮想現実エクスペリエンスを提供 </p>
       </td>
    </tr>
    <tr>
-      <td>オーディオ — ステレオモード</td>
+      <td>オーディオ - ステレオモード</td>
       <td>いいえ</td>
       <td>はい</td>
    </tr>
    <tr>
-      <td>ビデオ再生</td>
+      <td>ビデオの再生</td>
       <td>はい</td>
       <td>はい</td>
    </tr>
@@ -102,4 +102,4 @@ Dynamic Mediaビデオで、ビデオのカスタムサムネールを選択す�
 
 ## その他のリソース{#additional-resources}
 
-[Scene7モードでのDynamic Mediaの設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
+[Scene7 モードでの Dynamic Media の設定](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/config-dms7.html)
