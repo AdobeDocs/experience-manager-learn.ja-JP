@@ -1,42 +1,42 @@
 ---
-title: AEMデータソースの設定
-description: フォームデータを保存および取得するためのMySQLベースのデータソースの設定
-feature: アダプティブフォーム
-topic: 開発
+title: AEM データソースの設定
+description: フォームデータを保存および取得するように MySQL ベースのデータソースを設定します
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
 version: 6.4,6.5
 kt: 6899
 thumbnail: 6899.jpg
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
-workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 7%
+exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '190'
+ht-degree: 100%
 
 ---
 
 # データソースの設定
 
-AEMを使用して、外部データベースとの統合を可能にする方法は多数あります。 データベースを統合する最も一般的な方法の1つは、[configMgr](http://localhost:4502/system/console/configMgr)を使用して、Apache Sling Connection Pooled DataSource設定プロパティを使用することです。
-最初の手順は、適切な[MySqlドライバー](https://mvnrepository.com/artifact/mysql/mysql-connector-java)をAEMにダウンロードしてデプロイすることです。
-Apache Sling接続プールに入れられたデータソースを作成し、以下のスクリーンショットで指定されているプロパティを指定します。 データベーススキーマは、このチュートリアルアセットの一部として提供されます。
+AEM が外部データベースとの統合を可能にする方法は、多数あります。データベースを統合する最も一般的な方法の 1 つは、[configMgr](http://localhost:4502/system/console/configMgr) を介して Apache Sling Connection Pooled DataSource 設定プロパティを使用することです。最初のステップは、適切な [MySql ドライバー](https://mvnrepository.com/artifact/mysql/mysql-connector-java) を AEM にダウンロードしてデプロイすることです。
+Apache Sling Connection Pooled DataSource を作成し、以下のスクリーンショットで指定されているプロパティを指定します。 データベーススキーマは、このチュートリアルアセットの一部として提供されます。
 
 ![data-source](assets/data-source.PNG)
 
-以下のスクリーンショットに示すように、データベースにはformdataと呼ばれる1つの列と3つの列があります。
+データベースには、次のスクリーンショットに示すように、3 つの列を持つ formdata という 1 つのテーブルがあります。
 
-![データベース](assets/data-base.PNG)
+![data-base](assets/data-base.PNG)
 
 
 >[!NOTE]
->データソースに&#x200B;**aemformstutorial**&#x200B;という名前を付けてください。 サンプルコードでは、という名前を使用してデータベースに接続します。
+>お使いのデータソースに **aemformstudation** という名前を付けるようにしてください。サンプルコードでは、この名前を使用してデータベースに接続します。
 
 | プロパティ名 | 値 |
 | ------------------------|--------------------------------------- |
-| Datasource Name | SaveAndContinue |
-| JDBCドライバクラス | com.mysql.cj.jdbc.Driver |
-| JDBC接続uri | jdbc:mysql://localhost:3306/aemformstutorial |
+| データソース名 | SaveAndContinue |
+| JDBC Driver Class | com.mysql.cj.jdbc.Driver |
+| JDBC connection uri | jdbc:mysql://localhost:3306/aemformstutorial |
 
 ## Assets
 
-スキーマを作成するSQLファイルは、[ここから](assets/sign-multiple-forms.sql)ダウンロードできます。 MySql Workbenchを使用してこのファイルをインポートし、スキーマとテーブルを作成する必要があります。
+スキーマを作成する SQL ファイルは、[こちらからダウンロード](assets/sign-multiple-forms.sql)できます。MySql Workbench を使用してこのファイルを読み込んで、スキーマとテーブルを作成する必要があります。
