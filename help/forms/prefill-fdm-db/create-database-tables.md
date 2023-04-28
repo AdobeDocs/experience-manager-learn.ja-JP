@@ -1,32 +1,32 @@
 ---
 title: データベーステーブルの作成
 description: フォームデータモデルで使用するデータベースを作成する
-feature: アダプティブフォーム
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5811
 thumbnail: kt-5811.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 2%
+exl-id: 1136244a-c3e6-45f6-8af8-eb3c100f838e
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '99'
+ht-degree: 100%
 
 ---
 
-
 # データベーステーブルの作成
 
-フォームデータモデルは、RDBMS、RESTfull、SOAP、ODataの各ソースに基づいています。 このコースでは、RDBMSデータソースに基づくフォームデータモデルを使用したアダプティブフォームの事前入力に焦点を当てます。 このチュートリアルでは、MYSQLデータベースを使用しました。 以下の2つの表を作成し、使用例を示します
+フォームデータモデルは、RDBMS、RESTfull、SOAP、OData のいずれかのソースに基づいて作成できます。 このコースでは、RDBMS データソースに基づくフォームデータモデルを使用したアダプティブフォームの事前入力に焦点を当てます。 このチュートリアルの目的では、MYSQL データベースが使用されました。 以下の 2 つの表を作成して、使用例を示しました
 
-* **** newhiretable — このテーブルには、新しい情報が格納されます
+* **新規採用者**&#x200B;テーブル - このテーブルには、新規採用者の情報が格納されます。
 
-   ![根性](assets/newhire-table.png)
+   ![新規採用者](assets/newhire-table.png)
 
 
-* **** 受益者安定 — 受益者がいない店舗
+* **受取人**&#x200B;テーブル - 新規採用者の受取人を格納します
 
-   ![受益者](assets/beneficiaries-table.png)
+   ![受取人](assets/beneficiaries-table.png)
 
-[sqlファイル](assets/db-schema.sql)は、MySQL Workbenchを使用してインポートし、サンプルデータを含むテーブルに作成できます。
+MySQL ワークベンチを使用して [sql ファイル](assets/db-schema.sql)を読み込み、いくつかのサンプルデータを含むテーブルを作成できます。
