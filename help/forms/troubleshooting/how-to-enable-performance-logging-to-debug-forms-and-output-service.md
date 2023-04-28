@@ -1,6 +1,6 @@
 ---
-title: AEM Formsのパフォーマンスログを有効にして、Formsと出力サービスに関する問題をデバッグする方法
-description: Formsまたは Output サービスに関する問題をデバッグするためのパフォーマンスログを有効にする手順
+title: AEM Forms のパフォーマンスログを有効にして、Forms と Output サービスに関する問題をデバッグする方法
+description: Forms または Output サービスに関する問題をデバッグするためのパフォーマンスログを有効にする手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 6ccb3053-c28e-4c23-8fc0-e188b3873c36
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '68'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Formsのパフォーマンスログを有効にして、Formsと Output サービスに関する問題をデバッグする方法
+# AEM Forms のパフォーマンスログを有効にして、Forms と Output サービスに関する問題をデバッグする方法
 
-*このビデオでは、AEM Formsでパフォーマンスのログを有効にして、Formsと出力サービスに関する問題をデバッグするプロセスについて説明します。*
+*このビデオでは、AEM Forms でパフォーマンスのログを有効にして、Forms と Output サービスに関する問題をデバッグするプロセスについて説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
