@@ -1,26 +1,27 @@
 ---
-title: Cloud 5 - Cloud Manager の謎 — 単体テスト
-description: AEMと Cloud Manager を使用した単体テスト
+title: Cloud 5 - Cloud Manager のミステリー - 単体テスト
+description: AEM と Cloud Manager を使用した単体テスト
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343623.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 09a4b4fd-b4b5-413b-bd27-d0c1c41b1c8d
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '82'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Cloud Manager の謎 — 単体テスト
+# Cloud 5 - Cloud Manager のミステリー - 単体テスト
 
-ソフトウェアの開発において、見落とされがちな点は、単体テストは、すべての開発者が完了すべき重要なアクティビティです。 AEMは、多くのデフォルトの品質チェックをネイティブで提供しますが、カスタマイズまたは変更した内容をすべてテストすることはできません。
+ソフトウェア開発において見過ごされがちなステップである単体テストは、すべてのデベロッパーが完了すべき非常に重要な作業です。AEM は、多くのデフォルトの品質チェックをネイティブで提供しますが、カスタマイズまたは変更した内容をすべてテストできるわけではありません。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 
 + 自動チェックの概要
-+ [カスタムコード品質ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)
++ [カスタムコード品質ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=ja)
