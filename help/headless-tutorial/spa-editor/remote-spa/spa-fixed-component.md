@@ -1,6 +1,6 @@
 ---
-title: 編集可能な固定コンポーネントをリモートSPAに追加
-description: 編集可能な固定コンポーネントをリモートSPAに追加する方法を説明します。
+title: 編集可能な固定コンポーネントをリモート SPA に追加
+description: 編集可能な固定コンポーネントをリモート SPA に追加する方法を説明します。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -11,40 +11,40 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '536'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # 編集可能な固定コンポーネント
 
-編集可能な React コンポーネントは、「固定」することも、SPAビューにハードコードすることもできます。 これにより、開発者はSPAエディター互換のコンポーネントをSPAビューに配置し、ユーザーはAEM SPAエディターでコンポーネントのコンテンツを作成できます。
+編集可能な React コンポーネントは、「固定」することも、SPA の表示にハードコードすることもできます。 これにより、デベロッパーは SPA エディター互換のコンポーネントを SPA 表示に配置し、ユーザーは AEM SPA エディターでコンポーネントのコンテンツを作成できるようになります。
 
 ![固定コンポーネント](./assets/spa-fixed-component/intro.png)
 
-この章では、ホームビューのタイトル「Current Adventures」を置き換えます。これは、 `Home.js` 固定で編集可能なタイトルコンポーネントを使用 固定コンポーネントはタイトルの配置を保証しますが、タイトルのテキストをオーサリングし、開発サイクル外で変更することもできます。
+この章では、ホームビューのタイトル「Current Adventures」を置き換えます。これは、編集可能な固定タイトルコンポーネントを使用して `Home.js` でハードコード化されたテキストです。固定コンポーネントはタイトルの配置を保証しますが、タイトルのテキストの作成と開発サイクル外での変更は可能です。
 
 ## WKND アプリの更新
 
-を追加するには、以下を実行します。 __固定__ コンポーネントをホームビューに追加します。
+次のように、__固定__&#x200B;コンポーネントをホームビューに追加します。
 
 + カスタムの編集可能なタイトルコンポーネントを作成し、プロジェクトのタイトルのリソースタイプに登録します。
-+ 編集可能なタイトルコンポーネントをSPAホームビューに配置する
++ 編集可能なタイトルコンポーネントを SPA ホームビューに配置する
 
 ### 編集可能な React タイトルコンポーネントの作成
 
-SPAホームビューで、ハードコードされたテキストを置き換えます `<h2>Current Adventures</h2>` カスタムの編集可能なタイトルコンポーネントを使用 タイトルコンポーネントを使用する前に、次の作業をおこなう必要があります。
+SPA ホームビューで、ハードコードされたテキスト `<h2>Current Adventures</h2>` をカスタムの編集可能なタイトルコンポーネントに置き換えます。タイトルコンポーネントを使用する前に、次の作業を行う必要があります。
 
 1. カスタムタイトル React コンポーネントの作成
-1. 次のメソッドを使用して、カスタムタイトルコンポーネントを修飾します `@adobe/aem-react-editable-components` 編集可能にする
-1. 編集可能なタイトルコンポーネントの登録先 `MapTo` そのため、 [コンテナコンポーネントを後で](./spa-container-component.md).
+1. 編集可能にする `@adobe/aem-react-editable-components` のメソッドを使用し、カスタムタイトルコンポーネントをデコレートします。
+1. `MapTo` で編集可能なタイトルコンポーネントを登録して、 [後からコンテナコンポーネント](./spa-container-component.md)で使用できるようにします。
 
 次の手順を実行します。
 
-1. 次の場所にあるリモートSPAプロジェクトを開く `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` IDE 内
-1. React コンポーネントの作成先 `react-app/src/components/editable/core/Title.js`
-1. 次のコードをに追加します。 `Title.js`.
+1. IDE の `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` でリモート SPA プロジェクトを開く
+1. `react-app/src/components/editable/core/Title.js` で React コンポーネントを作成
+1. `Title.js` に次のコードを追加します。
 
    ```javascript
    import React from 'react'
@@ -89,12 +89,12 @@ SPAホームビューで、ハードコードされたテキストを置き換�
    export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
 
-   この React コンポーネントは、AEM SPA Editor を使用してまだ編集できないことに注意してください。 この基本コンポーネントは、次の手順で編集可能になります。
+   この React コンポーネントは、まだ AEM SPA エディターを使用して編集できないことに注意してください。 この基本コンポーネントは、次の手順で編集可能になります。
 
    実装の詳細については、コードのコメントを参照してください。
 
-1. React コンポーネントの作成先 `react-app/src/components/editable/EditableTitle.js`
-1. 次のコードをに追加します。 `EditableTitle.js`.
+1. `react-app/src/components/editable/EditableTitle.js` で React コンポーネントを作成します 
+1. `EditableTitle.js` に次のコードを追加します。
 
    ```javascript
    // Import the withMappable API provided bu the AEM SPA Editor JS SDK
@@ -130,14 +130,14 @@ SPAホームビューで、ハードコードされたテキストを置き換�
    export default EditableTitle;
    ```
 
-   この `EditableTitle` React コンポーネントは、 `Title` React コンポーネント。AEM SPA Editor で編集できるようにラッピングおよび修飾します。
+   この `EditableTitle` React コンポーネントは、 `Title` React コンポーネントをラップし、AEM SPA エディターで編集できるようにラップおよびデコレートします。
 
-### React EditableTitle コンポーネントの使用
+### React 編集可能タイルコンポーネントの使用
 
-EditableTitle React コンポーネントがに登録され、React アプリ内で使用できるようになったので、ホームビューのハードコードされたタイトルテキストを置き換えます。
+編集可能タイル React コンポーネントがReact アプリに登録され、React アプリ内で使用できるようになったので、ホームビューのハードコードされたタイトルテキストを置き換えます。
 
-1. 編集 `react-app/src/components/Home.js`
-1. 内 `Home()` 下部に、 `EditableTitle` ハードコードされたタイトルを新しい `AEMTitle` コンポーネント：
+1. `react-app/src/components/Home.js` の編集
+1. 下部の `Home()` で `EditableTitle` を読み込み、ハードコードされたタイトルを新しい `AEMTitle` コンポーネント：
 
    ```javascript
    ...
@@ -157,41 +157,41 @@ EditableTitle React コンポーネントがに登録され、React アプリ内
    }
    ```
 
-この `Home.js` ファイルは次のようになります。
+`Home.js` ファイルは次のようになります。
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
-## AEMでのタイトルコンポーネントのオーサリング
+## AEM でのタイトルコンポーネントのオーサリング
 
 1. AEM オーサーにログインします。
-1. に移動します。 __サイト/WKND アプリ__
-1. タップ __ホーム__ を選択し、 __編集__ 上部のアクションバーから
-1. 選択 __編集__ ページエディターの右上にある編集モードセレクターから、
-1. WKND ロゴの下、およびアドベンチャーリストの上にあるデフォルトのタイトルテキストの上にマウスポインターを置き、青い編集のアウトラインが表示されるまでマウスを移動します。
-1. をタップしてコンポーネントのアクションバーを表示し、 __レンチ__  編集
+1. __サイト／WKND アプリ__&#x200B;に移動します。 
+1. 「__ホーム__」をタップし、上部のアクションバーの「__編集__」を選択します。
+1.  ページエディターの右上にある編集モードセレクターから「__編集__」を選択します。
+1. 青い編集のアウトラインが表示されるまで、WKND ロゴの下、アドベンチャーリストの上にあるデフォルトのタイトルテキストの上にマウスポインターを置きます。
+1. コンポーネントのアクションバーをタップして表示し、__レンチ__&#x200B;をタップして 編集します。
 
    ![タイトルコンポーネントのアクションバー](./assets/spa-fixed-component/title-action-bar.png)
 
-1. タイトルコンポーネントをオーサリングします。
-   + タイトル： __WKND アドベンチャ__
-   + 種類/サイズ： __H2__
+1. タイトルコンポーネントを作成します。
+   + タイトル： __WKND アドベンチャー__
+   + 種類／サイズ：__H2__
 
       ![タイトルコンポーネントダイアログ](./assets/spa-fixed-component/title-dialog.png)
 
-1. タップ __完了__ 保存する
-1. AEM SPA Editor で変更をプレビューします。
-1. ローカルで実行している WKND アプリを更新 [http://localhost:3000](http://localhost:3000) 作成したタイトルの変更が直ちに反映されることを確認します。
+1. 「__完了__」をタップして保存します。
+1. AEM SPA エディターで変更をプレビューします。
+1. [http://localhost:3000](http://localhost:3000) でローカルに実行している WKND アプリを更新し、作成したタイトルの変更が直ちに反映されることを確認します。
 
-   ![SPAのタイトルコンポーネント](./assets/spa-fixed-component/title-final.png)
+   ![SPA のタイトルコンポーネント](./assets/spa-fixed-component/title-final.png)
 
 ## おめでとうございます。
 
-WKND アプリに編集可能な固定コンポーネントが追加されました。 次の方法を理解できました。
+WKND アプリに編集可能な固定コンポーネントが追加されました。 次の方法を学習しました。
 
-+ SPAに対して固定（ただし編集可能）のコンポーネントを作成しました
-+ AEMでの固定コンポーネントのオーサリング
-+ 作成したコンテンツをリモートSPAで確認する
++ SPA への固定（ただし編集可能）コンポーネントの作成
++ AEM での固定コンポーネントの作成
++ 作成したコンテンツのリモート SPA での確認
 
 ## 次の手順
 
-次の手順は、次のとおりです。 [AEM ResponsiveGrid コンテナコンポーネントの追加](./spa-container-component.md) 作成者がSPAにコンポーネントを追加して編集できるSPAに
+次は、SPA に作成者が編集可能なコンポーネントを追加できるようにする [AEM ResponsiveGrid コンテナコンポーネントを SPA に追加](./spa-container-component.md)します。
