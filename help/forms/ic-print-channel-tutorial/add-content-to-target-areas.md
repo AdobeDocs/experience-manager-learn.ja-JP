@@ -1,7 +1,7 @@
 ---
 title: 印刷チャネルドキュメントへのテキストおよび画像コンテンツの追加
 seo-title: Adding text and image content to print channel document
-description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数手順のチュートリアルの第 7 部です。 この部分では、レイアウト (xdp) で定義されたターゲット領域に画像とテキストコンテンツを追加します。
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 7 部です。 ここでは、レイアウト（xdp）で定義されたターゲット領域に画像およびテキストコンテンツを追加します。
 seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the target areas defined in the layout(xdp).
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
 feature: Interactive Communication
@@ -18,22 +18,22 @@ role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '154'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 印刷チャネルドキュメントへのテキストおよび画像コンテンツの追加
 
-この部分では、レイアウト (xdp) で定義されたターゲット領域に画像とテキストコンテンツを追加します。
+ここでは、レイアウト（xdp）で定義されたターゲット領域に画像およびテキストコンテンツを追加します。
 
-受信者名とアドレスを格納する最初のドキュメントフラグメントを作成したら、印刷チャネルドキュメントにドキュメントフラグメントを追加する必要があります。
+受信者名とアドレスを格納する最初のドキュメントフラグメントを作成したので、次は、印刷チャネルドキュメントにドキュメントフラグメントを追加する必要があります。
 
-ドキュメントフラグメント、画像、レイアウトフラグメントなど、様々な種類のコンテンツを印刷チャネルドキュメントに追加できます。
+ドキュメントフラグメント、画像、レイアウトフラグメントなど、様々なタイプのコンテンツを印刷チャネルドキュメントに追加できます。
 
 印刷チャネルドキュメントにコンテンツを追加するには、以下のビデオに従ってください。
 
-このビデオでは、印刷チャネルドキュメント内の適切なターゲット領域にコンテンツを追加する手順を説明します。
+このビデオでは、印刷チャネルドキュメント内の適切なターゲット領域にコンテンツを追加する手順を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22379?quality=12&learn=on)
