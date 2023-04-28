@@ -1,6 +1,6 @@
 ---
-title: チュートリアルアセットのデプロイ
-description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアルです。
+title: チュートリアルアセットをデプロイする
+description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアル。
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -12,19 +12,19 @@ role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '76'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# システムへのアセットのデプロイ
+# システムでアセットをデプロイする
 
-をデプロイします。 [summarize-component](assets/summarize-component.zip).
+[summarize-component](assets/summarize-component.zip) をデプロイします。 
 
-[サンプルのアダプティブフォームをデプロイします。](assets/sample-adaptive-form.zip).
+[サンプルのアダプティブフォームをデプロイします](assets/sample-adaptive-form.zip)。
 
-[サンプルフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
+[サンプルフォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
 
-フォームフィールドに入力し、 **次へ** ボタンをクリックして、フォームデータを確認します。 鉛筆アイコンをクリックしてフォームデータを編集することもできます。
+フォームフィールドに入力し、「**次へ**」ボタンをクリックして概要画面に移動し、フォームデータを確認します。 鉛筆アイコンをクリックしてフォームデータを編集することもできます。
 
