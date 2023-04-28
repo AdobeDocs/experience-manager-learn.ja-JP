@@ -1,6 +1,6 @@
 ---
-title: SPA Editor Project | AEM SPA Editor とAngularの概要
-description: AEM SPA Editor と統合されたAngularアプリケーションの出発点として、Adobe Experience Manager(AEM)Maven プロジェクトを使用する方法を説明します。
+title: SPA エディタープロジェクト | AEM SPA エディター と Angular の基本を学ぶ
+description: AEM SPA エディターと統合された Angular アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを使用する方法を説明します。
 feature: SPA Editor, AEM Project Archetype
 topics: development
 version: Cloud Service
@@ -14,42 +14,42 @@ role: Developer
 level: Beginner
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1097'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# SPA Editor Project {#create-project}
+# SPA エディタープロジェクト {#create-project}
 
-AEM SPA Editor と統合されたAngularアプリケーションの出発点として、Adobe Experience Manager(AEM)Maven プロジェクトを使用する方法を説明します。
+AEM SPA エディターと統合された Angular アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを使用する方法を説明します。
 
 ## 目的
 
-1. Maven アーキタイプから構築された新しいAEM SPA Editor プロジェクトの構造を理解します。
-2. スタータープロジェクトをAEMのローカルインスタンスにデプロイします。
+1. Maven アーキタイプから作成された新しい AEM SPA エディタープロジェクトの構造を理解します。
+2. スタータープロジェクトを AEM のローカルインスタンスにデプロイします。
 
 ## 作成する内容
 
-この章では、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). AEMプロジェクトは、AngularSPAの非常にシンプルな出発点でブートストラップ処理されます。 この章で使用されるプロジェクトは、WKND SPAの実装の基礎となり、将来の章に基づいて構築されます。
+この章では、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)に基づいて、新しい AEM プロジェクトをデプロイします。AEM プロジェクトは、Angular SPA の非常にシンプルな出発点でブートストラップされます。この章で使用しているプロジェクトは、WKND SPA の実装の基礎となり、今後の章では、これを前提に説明します。
 
-![WKND SPAAngularスタータープロジェクト](./assets/create-project/what-you-will-build.png)
+![WKND SPA Angular スタータープロジェクト](./assets/create-project/what-you-will-build.png)
 
-*クラシックな Hello World メッセージです。*
+*従来の Hello World メッセージ*
 
 ## 前提条件
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment). Adobe Experience Managerの新しいインスタンスが、で始まることを確認します。 **作成者** モード、はローカルで実行されています。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールや手順を確認します。**オーサー**&#x200B;モードで起動された Adobe Experience Manager の新しいインスタンスがローカルで実行されていることを確認します。
 
-## プロジェクトを取得
+## プロジェクトの取得
 
-AEM用の Maven マルチモジュールプロジェクトを作成するには、いくつかのオプションがあります。 このチュートリアルでは、最新の [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) を参照してください。 複数のバージョンのAEMをサポートするために、プロジェクトコードが変更されました。 確認してください [後方互換性に関する注意事項](overview.md#compatibility).
+AEM 用の Maven マルチモジュールプロジェクトを作成するには、いくつかの選択肢があります。このチュートリアルでは、最新の [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)をチュートリアルコードのベースとして使用しました。複数のバージョンの AEM をサポートするために、プロジェクトコードが変更されました。[下位互換性に関するメモ](overview.md#compatibility)を確認してください。
 
 >[!CAUTION]
 >
->これは、 **latest** のバージョン [アーキタイプ](https://github.com/adobe/aem-project-archetype) 実際の実装に新しいプロジェクトを生成する。 AEMプロジェクトでは、 `aemVersion` プロパティに含まれます。
+>[アーキタイプ](https://github.com/adobe/aem-project-archetype)の&#x200B;**最新**&#x200B;バージョンを使用して、実際の実装用の新しいプロジェクトを生成することをお勧めします。AEM プロジェクトでは、アーキタイプの `aemVersion` プロパティを使用して、単一バージョンの AEM をターゲットにしてください。
 
-1. このチュートリアルの開始点を Git からダウンロードします。
+1. このチュートリアルの出発点となるものを Git からダウンロードします。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -57,7 +57,7 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
    $ git checkout Angular/create-project-start
    ```
 
-2. 次のフォルダーとファイル構造は、ローカルファイルシステム上の Maven アーキタイプによって生成されたAEMプロジェクトを表しています。
+2. 次のフォルダーとファイル構造は、ローカルファイルシステム上の Maven アーキタイプで生成された AEM プロジェクトを表しています。
 
    ```plain
    |--- aem-guides-wknd-spa
@@ -75,12 +75,12 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
        |--- archetype.properties
    ```
 
-3. 次のプロパティが、 [AEMプロジェクトアーキタイプ](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14):
+3. [AEM プロジェクトアーキタイプ](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14)から AEM プロジェクトを生成する際には、次のプロパティが使用されました。
 
    | プロパティ | 値 |
    |-----------------|---------------------------------------|
-   | aemVersion | クラウド |
-   | appTitle | WKNDSPAAngular |
+   | aemVersion | cloud |
+   | appTitle | WKND SPA Angular |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
    | frontendModule | angular |
@@ -89,13 +89,13 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
 
    >[!NOTE]
    >
-   > 注意： `frontendModule=angular` プロパティ。 これにより、AEMプロジェクトアーキタイプがスターターを使用してプロジェクトをブートストラップするようになります [Angularコードベース](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) をAEM SPA Editor で使用する場合。
+   > `frontendModule=angular` プロパティに注目します。これは、AEM SPA エディターで使用されるスターター [Angular コードベース](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=ja)でプロジェクトをブートストラップするように AEM プロジェクトアーキタイプに指示しています。
 
-## プロジェクトの構築
+## プロジェクトのビルド
 
-次に、Maven を使用して、プロジェクトコードをコンパイル、ビルドし、AEMのローカルインスタンスにデプロイします。
+次に、Maven を使用して、プロジェクトコードをコンパイル、ビルドし、AEM のローカルインスタンスにデプロイします。
 
-1. AEMのインスタンスがポート上でローカルで実行されていることを確認します **4502**.
+1. AEM のインスタンスがポート **4502** でローカルに実行されていることを確認します。
 2. コマンドラインターミナルから、Maven がインストールされていることを確認します。
 
    ```shell
@@ -105,19 +105,19 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-3. 次の Maven コマンドを `aem-guides-wknd-spa` プロジェクトを構築してAEMにデプロイするディレクトリ：
+3. `aem-guides-wknd-spa` ディレクトリから以下の Maven コマンドを実行して、プロジェクトをビルドし、AEM にデプロイします。
 
    ```shell
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-   を使用する場合 [AEM 6.x](overview.md#compatibility):
+   [AEM 6.x](overview.md#compatibility) を使用している場合：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-   プロジェクトの複数のモジュールをコンパイルし、AEMにデプロイする必要があります。
+   プロジェクトの複数のモジュールをコンパイルし、AEM にデプロイしてください。
 
    ```plain
    [INFO] ------------------------------------------------------------------------
@@ -138,49 +138,49 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven プロファイル ***autoInstallSinglePackage*** プロジェクトの個々のモジュールをコンパイルし、1 つのパッケージをAEMインスタンスにデプロイします。 デフォルトでは、このパッケージは、ポートでローカルに実行されているAEMインスタンスにデプロイされます **4502** そして **admin:admin**.
+   Maven プロファイル ***autoInstallSinglePackage*** では、プロジェクトの個々のモジュールをコンパイルし、単一のパッケージを AEM インスタンスにデプロイします。デフォルトでは、このパッケージは、**admin:admin** の資格情報でポート **4502** でローカルに実行されている AEM インスタンスにデプロイされます。
 
-4. に移動します。 **[!UICONTROL パッケージマネージャー]** ローカルAEMインスタンスで以下の手順を実行します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+4. ローカル AEM インスタンスで&#x200B;**[!UICONTROL パッケージマネージャー]**（[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)）に移動します。
 
-5. 次の 3 つのパッケージが表示されます。 `wknd-spa-angular.all`, `wknd-spa-angular.ui.apps` および `wknd-spa-angular.ui.content`.
+5. `wknd-spa-angular.all`、`wknd-spa-angular.ui.apps` および `wknd-spa-angular.ui.content` の 3 つのパッケージが表示されます。
 
-   ![WKND SPA Packages](./assets/create-project/package-manager.png)
+   ![WKND SPA パッケージ](./assets/create-project/package-manager.png)
 
-   プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEMランタイムにインストールされます。
+   プロジェクトに必要なすべてのカスタムコードは、これらのパッケージにバンドルされ、AEM ランタイムにインストールされます。
 
-6. また、 `spa.project.core` および `core.wcm.components`. これらは、アーキタイプによって自動的に含まれる依存関係です。 詳細情報： [AEMコアコンポーネントは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja).
+6. また、`spa.project.core` と `core.wcm.components` のパッケージもいくつか表示されます。これらは、アーキタイプによって自動的に含まれる依存関係です。AEM コア コンポーネントについて詳しくは、[こちらを参照してください](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)。
 
-## コンテンツを作成
+## 作成者コンテンツ
 
-次に、アーキタイプで生成されたスターターSPAを開き、コンテンツの一部を更新します。
+次に、アーキタイプで生成されたスターター SPA を開き、コンテンツの一部を更新します。
 
-1. 次に移動： **[!UICONTROL サイト]** コンソール： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. **[!UICONTROL Sites]** コンソール（[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）に移動します。
 
-   WKND SPAは、国、言語、ホームページを含む基本的なサイト構造を含んでいます。 この階層は、アーキタイプの `language_country` および `isSingleCountryWebsite`. これらの値は、 [使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#available-properties) プロジェクトを生成する際に使用します。
+   WKND SPA は、国、言語、ホームページを含む基本的なサイト構造を含んでいます。この階層は、アーキタイプの `language_country` と `isSingleCountryWebsite` のデフォルト値に基づいています。これらの値は、[使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#avilable-properties)をプロジェクトの生成時に更新することで上書きできます。
 
-2. を開きます。 **[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]** ページを表示するには、ページを選択して **[!UICONTROL 編集]** ボタンをクリックします。
+2. **[!DNL us]**／**[!DNL en]**／**[!DNL WKND SPA Angular Home Page]** ページを開き、ページを選択してメニューバーの「**[!UICONTROL 編集]**」ボタンをクリックします。
 
    ![サイトコンソール](./assets/create-project/open-home-page.png)
 
-3. A **[!UICONTROL テキスト]** コンポーネントは既にページに追加されています。 このコンポーネントは、AEMの他のコンポーネントと同様に編集できます。
+3. **[!UICONTROL テキスト]**&#x200B;コンポーネントは既にページに追加されています。このコンポーネントは、AEM の他のコンポーネントと同様に編集できます。
 
    ![テキストコンポーネントの更新](./assets/create-project/update-text-component.gif)
 
-4. 追加 **[!UICONTROL テキスト]** コンポーネントをページに追加します。
+4. さらに&#x200B;**[!UICONTROL テキスト]**&#x200B;コンポーネントをページに追加します。
 
-   オーサリングエクスペリエンスは、従来のAEM Sitesページと似ています。 現在、使用できるコンポーネントの数は限られています。 チュートリアルの過程で、さらに追加されます。
+   オーサリングエクスペリエンスは、従来の AEM Sites ページと似ています。 現在、使用できるコンポーネントの数は限られています。チュートリアルの過程で、さらに追加されます。
 
-## Inspect Single Page Application
+## 単一ページアプリケーションの検査
 
-次に、ブラウザーの開発者ツールを使用して、これがシングルページアプリケーションであることを確認します。
+次に、ブラウザーのデベロッパーツールを使用して、これが単一ページアプリケーションであることを確認します。
 
-1. 内 **[!UICONTROL ページエディター]**、 **[!UICONTROL ページ情報]** メニュー/ **[!UICONTROL 公開済みとして表示]**:
+1. **[!UICONTROL ページエディター]**&#x200B;で、**[!UICONTROL ページ情報]**&#x200B;メニュー／**[!UICONTROL 公開済みとして表示]**&#x200B;をクリックします。
 
    ![「公開済みとして表示」ボタン](./assets/create-project/view-as-published.png)
 
-   クエリパラメーターを含む新しいタブが開きます `?wcmmode=disabled` AEMエディターを効果的にオフにします。 [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
+   これにより、クエリパラメーター `?wcmmode=disabled` を含んだ新しいタブが開き、AEM エディターが効果的にオフになります（[http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)）。
 
-2. ページのソースを表示し、テキストコンテンツに注目してください **[!DNL Hello World]** または他のコンテンツが見つかりません。 代わりに、次のようなHTMLが表示されます。
+2. ページのソースを表示し、テキストコンテンツ **[!DNL Hello World]** またはその他のコンテンツが見つからないことに注意してください。代わりに、次のような HTML が表示されます。
 
    ```html
    ...
@@ -193,20 +193,20 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
    ...
    ```
 
-   `clientlib-angular.min.js` は、ページに読み込まれ、コンテンツのレンダリングを担当するAngularSPAです。
+   `clientlib-angular.min.js` は、ページに読み込まれてコンテンツのレンダリングを担当する Angular SPA です。
 
-   *コンテンツの取得元*
+   *コンテンツのソース*
 
-3. 「 」タブに戻ります。 [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
-4. ブラウザーの開発者ツールを開き、更新中にページのネットワークトラフィックを調べます。 次を表示： **XHR** リクエスト：
+3. タブに戻ります（[http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)）。
+4. ブラウザーのデベロッパーツールを開き、更新中にページのネットワークトラフィックを調べます。 **XHR** リクエストを確認します。
 
    ![XHR リクエスト](./assets/create-project/xhr-requests.png)
 
-   ～するように要求すべきである。 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). SPAを駆動する JSON 形式のすべてのコンテンツが含まれます。
+   [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) へのリクエストが表示されています。これには、SPA を駆動するすべてのコンテンツが JSON 形式で含まれます。
 
-5. 新しいタブで、を開きます。 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
+5. 新しいタブで、[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) を開きます。
 
-   リクエスト `en.model.json` は、アプリケーションを駆動するコンテンツモデルを表します。 Inspect JSON 出力を参照し、 **[!UICONTROL テキスト]** コンポーネント。
+   リクエスト `en.model.json` は、アプリケーションを駆動するコンテンツモデルを表しています。JSON 出力を調べると、**[!UICONTROL テキスト]**&#x200B;コンポーネントを表すスニペットが見つかります。
 
    ```json
    ...
@@ -224,18 +224,18 @@ AEM用の Maven マルチモジュールプロジェクトを作成するには�
    ...
    ```
 
-   次の章では、JSON コンテンツがAEMコンポーネントからSPAコンポーネントにマッピングされ、AEM SPAエディターのエクスペリエンスの基盤が形成される方法を調べます。
+   次の章では、JSON コンテンツを AEM コンポーネントから SPA コンポーネントにマッピングして、AEM SPA エディターエクスペリエンスの基礎として使用する方法を調べます。
 
    >[!NOTE]
    >
-   > JSON 出力を自動的にフォーマットするには、ブラウザー拡張機能をインストールすると役に立つ場合があります。
+   > JSON 出力を自動的にフォーマットするブラウザー拡張機能をインストールすると役立つ場合があります。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、最初のAEM SPA Editor プロジェクトが作成されました。
+最初の AEM SPA エディタープロジェクトを作成できました。
 
-現在は非常にシンプルですが、今後の数章では、さらに機能が追加されます。
+現在は非常にシンプルですが、今後の数章でさらに機能が追加されます。
 
 ### 次の手順 {#next-steps}
 
-[SPAの統合](integrate-spa.md) - SPAソースコードがAEMプロジェクトと統合される仕組みと、SPAを迅速に開発するために使用できるツールについて説明します。
+[SPA の統合](integrate-spa.md) - SPAソースコードが AEM プロジェクトと統合される仕組みと、SPA を迅速に開発するために使用できるツールについて説明します。
