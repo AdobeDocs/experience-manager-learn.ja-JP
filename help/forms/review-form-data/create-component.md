@@ -1,6 +1,6 @@
 ---
 title: フォームデータを一覧表示するコンポーネントを作成する
-description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアルです。
+description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアル。
 feature: Adaptive Forms
 topics: development
 doc-type: tutorial
@@ -10,17 +10,17 @@ role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# フォームデータを要約するコンポーネントを作成する
+# フォームデータを要約するコンポーネントの作成
 
-レビュー用のフォームデータをリストするための単純なコンポーネントが作成されました。 この [guidebridge API の訪問関数](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html?q=visit) を使用して、フォームフィールドを繰り返し処理します。 このコンポーネントに関連付けられたクライアントライブラリ内のコードは、フォーム上のパネル/テーブルコンポーネントを取得します。 このパネル/テーブルコンポーネントの子要素から、フィールドのタイトル、値、SOM 式は、GuidBridge API メソッドを使用して抽出されます。 次に、単純なHTMLテーブルは、フォームを送信する前にエンドユーザーがフォームデータを確認または編集するためのタイトル、値、SOM 式で構成されます。
+レビュー用のフォームデータをリストするためのシンプルなコンポーネントが作成されました。 この [guidebridge API の訪問関数](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html?q=visit)は、フォーム フィールドを反復処理するために使用されました。 このコンポーネントに関連付けられた clientlibrary のコードは、フォーム上のパネルコンポーネントやテーブルコンポーネントを取得します。このパネルコンポーネントやテーブルコンポーネントの子要素から、フォームフィールドのタイトル、値、SOM 式が、GuidBridge API メソッドを使用して抽出されます。 続いて、フォームを送信する前にエンドユーザーがフォームデータの確認と編集ができるように、タイトル、値および SOM 式を使用して、シンプルな HTML テーブルが作成されます。
 
-例えば、以下のスクリーンショットには、フィールドとその値をリストするために作成したテーブルが表示されます。 **詳細**. TR の最後の TD は、フィールド SOM 式を使用してフィールドの値を編集するために使用されます。
+例えば、以下のスクリーンショットには、**YourDetails** のフィールドと値をリストするために作成したテーブルが表示されます。TR の最後の TD は、フィールド SOM 式を使用してフィールドの値を編集するために使用されます。
 
 ![visit-func](assets/visit-function.png)
 
