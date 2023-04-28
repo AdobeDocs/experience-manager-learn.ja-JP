@@ -1,25 +1,26 @@
 ---
-title: 保存済みアダプティブフォームの取得
-description: 保存されたデータでアダプティブフォームをレンダリングするサーブレット
-feature: アダプティブフォーム
+title: 保存されたアダプティブフォームの取得
+description: 保存されたデータを含んだアダプティブフォームをレンダリングするサーブレット
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 2%
+exl-id: d722cb9c-6c8a-44de-aaea-fc07a555b864
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '103'
+ht-degree: 100%
 
 ---
 
 # 保存されたフォームの取得
 
-次の手順では、保存されたデータとその添付ファイルを使用してアダプティブフォームをレンダリングするサーブレットを作成します。
-次のサーブレットコードは、OTPコードの検証後に実行されます。 一意のアプリケーションIDに関連付けられたアダプティブフォームデータとその添付ファイルマップがデータベースから取得されます。 リクエストオブジェクトには、保存されたアダプティブフォームデータと添付ファイルマップが入力されます。 その後、要求が転送され、元のデータとその添付ファイルが事前に入力された「storeafwithattachments」フォームがレンダリングされます。
+次に、保存されたデータとその添付ファイルを含んだアダプティブフォームをレンダリングするサーブレットを作成します。
+次のサーブレットコードは、OTP コードの検証後に実行されます。一意のアプリケーション ID に関連付けられているアダプティブフォームデータとその添付ファイルマップが、データベースから取得されます。リクエストオブジェクトには、保存したアダプティブフォームデータと添付ファイルマップが入力されます。その後、リクエストが転送され、元のデータとその添付ファイルが事前に入力された「storeafwithattachments」フォームがレンダリングされます。
 
 ```java
 package store.and.fetch.core.servlets;
