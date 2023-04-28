@@ -1,6 +1,6 @@
 ---
 title: Express アプリのフィルタリング
-description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャをフィルタリングする簡単な Express アプリです。
+description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャーをフィルタリングする簡単な Express アプリ。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -13,20 +13,20 @@ hide: true
 hidefromtoc: true
 recommendations: noCatalog, noDisplay
 source-git-commit: ac2b3a766caea1013165aedd3478bf859212cc89
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '150'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Express アプリのフィルタリング
 
-を使用してデータをフィルタリングするAEMヘッドレスGraphQL API 機能について詳しく見る [速達](https://expressjs.com/) および [プグ](https://pugjs.org/) アプリを使用します。 この Express アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャのリストを作成します。
+[Express](https://expressjs.com/) および [Pug](https://pugjs.org/) アプリを使用して、データをフィルタリングする AEM ヘッドレス GraphQL API 機能について見ていきましょう。この Express アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
 
-このコードは、Adobeの [NodeJS 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) Node.js ベースの JavaScript を使用して永続化されたGraphQLクエリを呼び出す。 このアプリは、 `wknd-shared/adventures-all` すべてのアドベンチャを収集し、使用可能なアクティビティタイプのリストを派生する永続的なクエリ。 ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリを実行し、指定したアクティビティタイプのアドベンチャーのみのアドベンチャーの詳細を取得します。 アドベンチャーの詳細は、 `wknd-shared/adventures-by-slug` 永続化されたクエリ。
+このコードは、Node.js ベースの JavaScript を使用して永続化された GraphQL クエリの呼び出すための、アドビの [NodeJS 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs)の使用を実証します。このアプリは、すべてのアドベンチャーを収集し、使用可能なアクティビティタイプのリストを生成するために、 `wknd-shared/adventures-all` 永続クエリを使用します。 ユーザーがアクティビティタイプを選択すると、そのタイプは `wknd-shared/adventures-by-activity` 持続クエリに渡され、指定したアクティビティタイプのアドベンチャーのみの詳細が取得されます。 アドベンチャーの詳細は、`wknd-shared/adventures-by-slug` 永続クエリを介して AEM から取得されます。
 
-このコード：
+このコードは次を実行します。
 
-+ AEM パブリッシュサービスに接続し、認証は不要
-+ WKND の永続クエリを使用します。 `wknd-shared/adventures-all`, `wknd-shared/adventures-by-activity`、および `wknd-shared/adventures-by-slug`
++ AEM パブリッシュサービスに接続し、認証を必要としない
++ WKND の永続クエリ `wknd-shared/adventures-all`、`wknd-shared/adventures-by-activity`、`wknd-shared/adventures-by-slug` を使用する
