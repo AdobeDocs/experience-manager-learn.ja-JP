@@ -1,6 +1,6 @@
 ---
-title: 2 名の署名者との賃貸契約
-description: 2 名の署名者との賃貸契約。 このビデオでは、2 名の署名者を含むアダプティブフォームを設定するために必要な様々な手順を説明します。
+title: 2 名の署名者との賃貸契約。
+description: 2 名の署名者との賃貸契約。このビデオでは、2 名の署名者とアダプティブフォームを設定するために必要な様々な手順について説明します。
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 39294.jpg
 kt: 6071
@@ -9,19 +9,19 @@ role: Admin
 level: Beginner
 exl-id: 5d450605-31bb-4c2e-a500-e9219f55b7c7
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '58'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# 2 名の署名者との賃貸契約
+# 2 名の署名者との賃貸契約。
 
-このビデオでは、2 名の署名者を含むアダプティブフォームを設定するために必要な様々な手順を説明します。
+このビデオでは、2 名の署名者とアダプティブフォームを設定するために必要な様々な手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
 
-このビデオに関連するアセットは、次のリンクからダウンロードできます
+このビデオに関連するアセットは、次のリンクからダウンロードできます。
 
 * [アダプティブフォームテンプレート](assets/tenancy-agreement-template.zip)
-* [テナント機能契約フォーム](assets/rental-agreement-form.zip)
+* [テナント契約フォーム](assets/rental-agreement-form.zip)
