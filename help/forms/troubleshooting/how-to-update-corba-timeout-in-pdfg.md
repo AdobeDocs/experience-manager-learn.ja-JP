@@ -1,6 +1,6 @@
 ---
 title: トランザクションのロールバックの問題を軽減するために PDFG で CORBA タイムアウトを更新する方法を教えてください。
-description: トランザクションのロールバックに関連する問題を解決するには、AEM FormsPDFジェネレーターで CORBA タイムアウトを設定します
+description: トランザクションのロールバックに関連する問題を解決するには、AEM Forms PDF Generator で CORBA タイムアウトを設定します
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 397f5580-d982-46f3-b63a-7fc6def07ec5
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '56'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # トランザクションのロールバックの問題を軽減するために PDFG で CORBA タイムアウトを更新する方法
 
-*このビデオでは、トランザクションのロールバックの問題を軽減するために、Forms PDFG で CORBA タイムアウトを更新するプロセスを説明します。*
+*このビデオでは、トランザクションのロールバックの問題を軽減するために PDFG で CORBA タイムアウトを更新する方法をについて説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335512?quality=12&learn=on)
