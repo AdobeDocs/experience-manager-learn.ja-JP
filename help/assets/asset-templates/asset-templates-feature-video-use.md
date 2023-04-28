@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsとInDesign Serverでのアセットテンプレートの使用
-description: AEM Assetsテンプレートを使用すると、マーケターは、デジタルアセットや印刷用のデジタルアセットを作成、管理および配信できます。 Assets テンプレートを Assets サーバーに統合すると、マーキングパンフレット、名刺、チラシ、広告、ポストカードを簡単に作成できます。
+title: AEM Assets と InDesign Server でのアセットテンプレートの使用
+description: マーケターは、AEM Assets テンプレートを使用して、デジタルアセットや印刷用デジタルアセットの作成、管理および配信を行うことができます。Assets テンプレートを InDesign Server に統合すると、マーケティングパンフレット、名刺、チラシ、広告、ポストカードなどをより簡単に作成できます。
 version: 6.4, 6.5
 topic: Content Management
 role: User
@@ -9,28 +9,28 @@ last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '165'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsとInDesign Serverでのアセットテンプレートの使用{#using-asset-templates-with-aem-assets-and-indesign-server}
+# AEM Assets と InDesign Server でのアセットテンプレートの使用{#using-asset-templates-with-aem-assets-and-indesign-server}
 
-AEM Assetsテンプレートを使用すると、マーケターは、デジタルアセットや印刷用のデジタルアセットを作成、管理および配信できます。 Assets テンプレートを Assets サーバーに統合すると、マーキングパンフレット、名刺、チラシ、広告、ポストカードを簡単に作成できます。
+マーケターは、AEM Assets テンプレートを使用して、デジタルアセットや印刷用デジタルアセットの作成、管理および配信を行うことができます。Assets テンプレートを InDesign Server に統合すると、マーケティングパンフレット、名刺、チラシ、広告、ポストカードなどをより簡単に作成できます。
 
 >[!NOTE]
 >
->InDesign Serverの設定手順は、 [アセットテンプレートとInDesign Server](asset-templates-technical-video-setup.md).
+>InDesign Server の設定手順については、[InDesign Server での Assets テンプレートのセットアップ](asset-templates-technical-video-setup.md)を参照してください。
 
-## 概要 {#overview}
+## はじめに {#overview}
 
-このビデオでは、Adobe InDesign、Adobe InDesign Server、AEM Assetsを使用してAEMで印刷可能なアセットを生成するための概念と手順について説明します。
+このビデオでは、Adobe InDesign、Adobe InDesign Server および AEM Assets を使用して、AEM で印刷可能なアセットを生成するための概念と手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## 技術概要 {#technical-overview}
+## 技術的概要 {#technical-overview}
 
-このビデオでは、AEM Assets Assert Template 機能の技術的な概要と、AEMがAEM Assetsとコンテンツの構成をInDesignを通じて容易にし、豊かで魅力的な印刷エクスペリエンスを作成する方法を示します。
+このビデオでは、AEM Assets アセットテンプレート機能の技術的概要と、AEM が InDesign を通じて AEM Assets とコンテンツの構成を容易にし、機能豊かで魅力的な印刷エクスペリエンスを実現する方法を示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)
