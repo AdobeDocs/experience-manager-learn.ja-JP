@@ -1,6 +1,6 @@
 ---
-title: AEM Formsを使用した自動Formsテストについて
-description: AEM 6.3 Formsでは、hobbes.js フレームワーク上に構築された Calvin SDK を使用して、AEM for Adaptive Forms内でテストケースを作成できる機能が導入されています
+title: AEM Forms を使用した自動 Forms テストについて
+description: AEM 6.3 Forms では、hobbes.js フレームワーク上に構築された Calvin SDK を使用して、アダプティブフォーム用 AEM 内でテストケースを作成できる機能が導入されています
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,21 +9,21 @@ level: Beginner
 exl-id: 6122859a-35eb-49d9-a146-3b304fa40413
 last-substantial-update: 2020-09-10T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '95'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# AEM Formsを使用した自動Formsテストについて{#understanding-automated-forms-testing-with-aem-forms}
+# AEM Forms を使用した自動 Forms テストについて{#understanding-automated-forms-testing-with-aem-forms}
 
-AEM 6.3 Formsでは、hobbes.js フレームワーク上に構築された Calvin SDK を使用して、AEM for Adaptive Forms内でテストケースを作成できる機能が導入されています。
+AEM 6.3 Forms では、hobbes.js フレームワーク上に構築された Calvin SDK を使用して、アダプティブフォーム用 AEM 内でテストケースを作成できる機能が導入されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
 
 >[!NOTE]
 >
->アダプティブFormsの自動テスト機能は、AEM 6.3 以降で使用できます
+>アダプティブフォームの自動テスト機能は、AEM 6.3 以降で使用できます
 
 >[!NOTE]
 >
