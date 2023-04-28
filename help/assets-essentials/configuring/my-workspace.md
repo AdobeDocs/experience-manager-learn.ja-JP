@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials My Workspace
-description: My Workspace のユーザーが設定可能なウィジェットを使用して、より効率的に作業する方法を説明します。
+title: Assets Essentials マイワークスペース
+description: マイワークスペースのユーザー設定可能なウィジェットを使用して、作業効率を高める方法を説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -10,16 +10,16 @@ doc-type: Feature Video
 last-substantial-update: 2023-01-31T00:00:00Z
 kt: 11800
 thumbnail: 3413809.jpeg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: da9363f3-43a9-4396-b8e8-15267fd7a689
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '31'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Assets Essentials のマイワークスペース
 
-# Assets Essentialsのマイワークスペース
-
-My Workspace のユーザーが設定可能なウィジェットを使用して、より効率的に作業する方法を説明します。
+マイワークスペースのユーザー設定可能なウィジェットを使用して、作業効率を高める方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)
