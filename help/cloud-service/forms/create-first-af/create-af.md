@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームの作成
-description: アダプティブフォームを作成し、作成したテンプレートをベースにします。
+description: 作成したテンプレートをベースにして、アダプティブフォームを作成します。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,9 +12,9 @@ kt: 7376
 thumbnail: 332237.jpg
 exl-id: 26d26ea5-7781-42fa-97ad-713543a8d132
 source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '29'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
