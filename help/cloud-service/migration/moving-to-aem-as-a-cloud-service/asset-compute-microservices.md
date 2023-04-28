@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Microservices とAEM as a Cloud Serviceへの移行
-description: AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来のAEMワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
+title: AEM Assets マイクロサービスと AEM as a Cloud Service への移行
+description: AEM Assets as a Cloud Service の Asset Compute マイクロサービスで、従来の AEM ワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
 version: Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
@@ -10,15 +10,15 @@ kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '323'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# AEM Assets Microservices - AEM as a Cloud Serviceへの移行
+# AEM Assets マイクロサービス - AEM as a Cloud Service への移行
 
-AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来のAEMワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
+AEM Assets as a Cloud Service の Asset Compute マイクロサービスで、従来の AEM ワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
@@ -26,14 +26,14 @@ AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来
 
 ![アセットワークフロー移行ツール](./assets/asset-workflow-migration.png)
 
-コードベースのリファクタリングの一環として、 [アセットワークフロー移行ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=ja) 既存のワークフローを移行して、AEM as a Cloud ServiceのAsset computeマイクロサービスを使用する場合。
+コードベースのリファクタリングの一環として、[Asset ワークフロー移行ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=ja)を使用して既存のワークフローを移行し、AEM as a Cloud Service で Asset Compute マイクロサービスを使用するようにします。
 
-## 主要なアクティビティ
+## 重要なアクティビティ
 
-+ 以下を使用： [Adobe I/OWorkflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) ツールを使用してアセット処理ワークフローを移行し、Asset computeマイクロサービスを使用する
-+ の設定 [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) 更新されたワークフローをデプロイします。 複雑なワークフローでは、手動の調整が必要になる場合があります。
++ [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) ツールを使用してアセット処理ワークフローを移行し、Asset Compute マイクロサービスを使用します。
++ [ローカル開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を設定して更新されたワークフローをデプロイします。 複雑なワークフローでは、手動の調整が必要になる場合があります。
 + 更新されたローカル開発が機能パリティと一致するまで、AEM SDK を使用したワークフロー環境で繰り返し処理を行います。
-+ 更新されたコードベースをAEMas a Cloud Serviceの開発環境にデプロイし、検証を続行します。
++ 更新されたコードベースを AEM as a Cloud Service の開発環境にデプロイし、検証を続行します。
 
 ## 実践練習
 
@@ -41,7 +41,7 @@ AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来
 
 実践練習を行う前に、上記のビデオを視聴し、理解し、次の資料を確認してください。
 
-+ [AEM as a Cloud Serviceについての考え方](./introduction.md)
++ [AEM as a Cloud Service についての考え方](./introduction.md)
 + [オンボーディング](./onboarding.md)
 
 また、前の実践演習を完了していることを確認します。
@@ -53,13 +53,13 @@ AEM Assetsas a Cloud Serviceのasset computeマイクロサービスで、従来
         <td style="width:150px">
             <a  rel="noreferrer"
                 target="_blank"
-                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices"><img alt="実践エクササイズ GitHub リポジトリ" src="./assets/github.png"/>
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices"><img alt="実践演習 GitHub リポジトリ" src="./assets/github.png"/>
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">アセットのアップロードに関する実践</div>
             <p style="margin:1rem 0">
-                「aem-upload」 npm CLI モジュールを使用して、AEM Assets処理プロファイルを定義し、フォルダーに割り当て、アセットをAEMにアップロードする方法を確認します。
+                AEM Assets 処理プロファイルを定義してフォルダーに割り当て、「aem-upload」npm CLI モジュールを使用してアセットを AEM にアップロードする方法を調べます。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
