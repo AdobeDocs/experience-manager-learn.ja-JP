@@ -1,6 +1,6 @@
 ---
-title: AEMでの認証サポートについて
-description: AEMでサポートされる認証（および時々の認証）メカニズムに対する統合ビュー。
+title: AEM での認証サポートについて
+description: AEM でサポートされている認証（場合によっては承認）メカニズムに関する統合的なビューです。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -15,17 +15,17 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # AEM 6.x での認証サポートについて
 
-AEMでサポートされる認証（および時々の認証）メカニズムに対する統合ビュー。
+AEM でサポートされている認証（場合によっては承認）メカニズムに関する統合的なビューです。
 
-*次の表に、AEMでのユーザーの認証方法を示します。*
+*次の表に、AEM でのユーザーの認証方法を示します。*
 
 <table>
     <tbody>
@@ -36,7 +36,7 @@ AEMでサポートされる認証（および時々の認証）メカニズム�
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM as a canonical identity provider</strong></td>
+            <td><strong>正規 ID プロバイダーとしての AEM</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -48,24 +48,24 @@ AEMでサポートされる認証（および時々の認証）メカニズム�
             <td>✔</td>
         </tr>
         <tr>
-            <td>Formsベース</td>
+            <td>フォームベース</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>トークンベース ( <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">カプセル化トークン</a>)</td>
+            <td>トークンベース（<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html?lang=ja" target="_blank">カプセル化トークン</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>正規の ID プロバイダーとしての非AEMシステム</strong></td>
+            <td><strong>正規 ID プロバイダーとしての非 AEM システム</strong></td>
             <td></td>
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html?lang=ja" target="_blank">LDAP</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -77,7 +77,7 @@ AEMでサポートされる認証（および時々の認証）メカニズム�
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html?lang=ja" target="_blank">SAML 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -97,4 +97,4 @@ AEMでサポートされる認証（および時々の認証）メカニズム�
     </tbody>
 </table>
 
-⁕ *コミュニティプロジェクトを介して提供されますが、Adobeで直接サポートされるわけではありません。*
+⁕ *コミュニティプロジェクトを介して提供されますが、Adobe による直接的なサポートはありません。*
