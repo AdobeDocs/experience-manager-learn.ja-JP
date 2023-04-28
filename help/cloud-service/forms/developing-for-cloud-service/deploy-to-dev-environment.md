@@ -1,6 +1,6 @@
 ---
-title: 開発環境へのデプロイ
-description: Cloud Manager リポジトリブランチからコードをデプロイします。
+title: ローカル開発環境へのデプロイ
+description: Cloud Manager リポジトリブランチからのコードのデプロイ
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -8,35 +8,35 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
-workflow-type: tm+mt
+exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
+source-git-commit: f0beb8b32aa25d6c26243879c9c0e42095488e23
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# ローカル開発環境へのデプロイ
 
-# 開発環境へのデプロイ
-
-前の手順では、ローカル Git リポジトリーから Cloud Manager リポジトリーの MyFirstAF ブランチに master ブランチをプッシュしました。
+前の手順では、ローカル Git リポジトリから Cloud Manager リポジトリの MyFirstAF ブランチにメインブランチをプッシュしました。
 
 次の手順では、コードを開発環境にデプロイします。
 Cloud Manager にログインし、プログラムを選択します。
 
-次に示すように、「開発環境にデプロイ」を選択します。
+「開発環境にデプロイ」を選択します（下図を参照）。
 
 
-![最初の段階](assets/deploy-first-step1.png)
+![最初の手順](assets/deploy-first-step1.png)
 
 
-図のように、デプロイメントパイプラインを選択します
-![最初の段階](assets/deploy1.png)
+「デプロイメントパイプライン」を選択します（下図を参照）。
+![最初の手順](assets/deploy1.png)
 
 ソースコードと適切な Git ブランチを選択します。
-![最初の段階](assets/deploy2.png)
-必ず変更を更新してください
+![最初の手順](assets/deploy2.png)
+必ず変更内容を更新してください。
 
-パイプラインの実行
-![実行パイプライン](assets/run-pipeline.png)
+パイプラインを実行します。
+![パイプラインの実行](assets/run-pipeline.png)
 
-コードをデプロイすると、AEM Formsのクラウドサービスインスタンスに変更が表示されます。
+コードをデプロイすると、AEM Forms の Cloud Service インスタンスに変更内容が表示されます。
