@@ -1,6 +1,6 @@
 ---
-title: AEM FormsとAdobe Campaign Standardの概要
-description: AEM Formsフォームデータモデルを使用してAEM FormsとAdobe Campaign Standardを統合し、ACS キャンペーンプロファイル情報などを取得します。
+title: AEM Forms と Adobe Campaign Standard の概要
+description: AEM Forms フォームデータモデルを使用して AEM Forms と Adobe Campaign Standard を統合し、ACS キャンペーンプロファイル情報などを取得します。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -9,32 +9,32 @@ level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# AEM FormsとAdobe Campaign Standardの概要 {#getting-started-with-aem-forms-and-adobe-campaign-standard}
+# AEM Forms と Adobe Campaign Standard の概要 {#getting-started-with-aem-forms-and-adobe-campaign-standard}
 
 ![formsandcampaign](assets/helpx-cards-forms.png)
 
-このチュートリアルでは、AEM FormsとAdobe Campaign Standard(ACS) の統合に関する様々な使用例を示します。
+このチュートリアルでは、AEM Forms と Adobe Campaign Standard（ACS）の統合に関する様々な使用例を示します。
 
-ACS は、API の豊富なセットが公開され、ACS を選択したテクノロジーと連携させることができます。 このチュートリアルでは、AEM Formsと ACS とのインターフェースに専念します。
+ACS には豊富な API のセットが公開されており、ACS を好みの技術とインターフェイスさせることができます。このチュートリアルでは、AEM Forms と ACS とのインターフェイスに専念します。
 
-AEM Formsを ACS と統合するには、次の手順に従う必要があります。
+AEM Forms を ACS と統合するには、次の手順に従う必要があります。
 
-* [ACS インスタンスで API アクセスを設定します。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=en)
-* JSON Web トークンを作成します。
-* アクセストークンの JSON Web トークンをAdobeIdentity Management Service と交換します。
+* [ACS インスタンスで API アクセスを設定します。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=ja)
+* JSON web トークンを作成します。
+* アクセストークンの JSON web トークンを Adobe Identity Management サービスと交換します。
 * このアクセストークンを認証 HTTP ヘッダーに含め、ACS インスタンスへのすべてのリクエストで X-API-Key と共に含めます。
 
 利用を開始するには、次の手順に従ってください
 
 * [このチュートリアルに関連するアセットをダウンロードして展開します。](assets/aem-forms-and-acs-bundles.zip)
-* 次を使用してバンドルをデプロイ [Felix Web コンソール](http://localhost:4502/system/console/bundles)
-* Felix OSGi 設定で、Adobe Campaignに適切な設定を指定します。
-* [この記事で説明されているサービスユーザーの作成](/help/forms/adaptive-forms/service-user-tutorial-develop.md). 記事に関連付けられた OSGi バンドルをデプロイします。
-* ACS 秘密鍵をetc/key/campaign/private.keyに保存します。 etc/key の下に campaign というフォルダーを作成する必要があります。
+* [Felix web コンソール](http://localhost:4502/system/console/bundles)を使用してバンドルをデプロイします
+* Felix OSGi 設定で、Adobe Campaign に適切な設定を指定します。
+* [この記事で説明されているサービスユーザーを作成します](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。記事に関連付けられた OSGi バンドルをデプロイします。
+* ACS 秘密鍵を etc/key/campaign/private.key に保存します。 etc/key の下に campaign というフォルダーを作成する必要があります。
 * [サービスユーザー「data」にキャンペーンフォルダーへの読み取りアクセス権を付与します。](http://localhost:4502/useradmin)
