@@ -1,11 +1,10 @@
 ---
 source-git-commit: 750f688ed020f889e044e2ebd673c0f494b32229
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '10'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
-# experience-manager-learn.en
+# experience-manager-learn.ja
 
-Adobe Experience Manager向けの共同チュートリアルと有効化資料。
+Adobe Experience Manager 用の共同チュートリアルとイネーブルメント資料。
