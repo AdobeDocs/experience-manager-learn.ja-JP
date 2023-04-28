@@ -1,76 +1,76 @@
 ---
-title: Webチャネルドキュメントの配信の設定
-seo-title: Webチャネルドキュメントの配信の設定
-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの最後の部分です。 ここでは、Eメールを使用したWebチャネルドキュメントの配信について見ていきます。
-seo-description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの最後の部分です。 ここでは、Eメールを使用したWebチャネルドキュメントの配信について見ていきます。
+title: Web チャネルドキュメントの配信のセットアップ
+seo-title: Setting up the delivery of web channel document
+description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの最後のパートです。ここでは、メールを使用した web チャネルドキュメントの配信について見てみます。
+seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
-workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 2%
+exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '351'
+ht-degree: 100%
 
 ---
 
+# Web チャネルドキュメントの配信のセットアップ {#setting-up-the-delivery-of-web-channel-document}
 
-# Webチャネルドキュメントの配信の設定 {#setting-up-the-delivery-of-web-channel-document}
 
+ここでは、メールを使用した web チャネルドキュメントの配信について見てみます。
 
-ここでは、Eメールを使用したWebチャネルドキュメントの配信について見ていきます。
+Web チャネルのインタラクティブ通信ドキュメントを定義しテストしたら、web チャネルドキュメントを受信者に配信するための配信メカニズムが必要になります。
 
-Webチャネルのインタラクティブ通信ドキュメントを定義し、テストしたら、受信者にWebチャネルドキュメントを配信する配信メカニズムが必要です。
+メールを web チャネルドキュメントの配信メカニズムとして使用できるようにするには、フォームデータモデルに小さな変更を加える必要があります。
 
-Webチャネルドキュメントの配信メカニズムとして電子メールを使用するには、フォームデータモデルに小さな変更を加える必要があります。
+[メールを使用した web チャネル配信の詳細を確認するには：](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
-[Eメールを使用したWebチャネルの配信の詳細を確認するには](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+AEM Forms にログインします。
 
-AEM Formsにログインします。
+* Forms／データ統合に移動します。
 
-* Forms/データ統合に移動します。
+* RetiarementAccountStatement データモデルを編集モードで開きます。
 
-* RetiermentAccountStatementデータモデルを編集モードで開きます。
+* balances オブジェクトを選択し、「編集」ボタンをクリックします。
 
-* balancesオブジェクトを選択し、「編集」ボタンをクリックします。
+* 「鉛筆」アイコンを選択して、id 引数を編集モードで開きます。
 
-* 「鉛筆」アイコンを選択して、id引数を編集モードで開きます。
+* バインディングを「RequestAttribute」に変更します。
 
-* バインドを「RequestAttribute」に変更します。
+* バインディング値に accountnumber を設定します（下図を参照）。
 
-* 次に示すように、連結値にaccountnumberを設定します。
+* このようにして、request 属性を通じてフォームデータモデルに accountnumber を渡します。
 
-* この方法では、request属性を通じてaccountnumberをフォームデータモデルに渡します
-
-* 必ず変更を保存してください。
+* 必ず変更内容を保存してください。
    ![fdm](assets/requestattribute.gif)
 
-## WebチャネルドキュメントのEメール配信のテスト {#test-email-delivery-of-web-channel-document}
+## Web チャンネルドキュメントのメール配信のテスト {#test-email-delivery-of-web-channel-document}
 
-* [パッケージマネージャーを使用したサンプルアセットのインストール](assets/webchanneldelivery.zip)
-* [crxにログインします。](http://localhost:4502/crx/de/index.jsp#)
+* [パッケージマネージャーを使用してサンプルアセットをインストールします。](assets/webchanneldelivery.zip)
+* [crx にログインします](http://localhost:4502/crx/de/index.jsp#)。
 
-* /home/usersに移動します。
+* /home/users に移動します。
 
-* ユーザーのノードの下でadminユーザーを検索します。
+* ユーザーのノード下で管理者ユーザーを検索します。
 
-* adminユーザーのprofileノードを選択します。
+* 管理者ユーザーのプロファイルノードを選択します。
 
 * 「accountnumber」という名前のプロパティを作成します。 プロパティタイプが文字列であることを確認します。
 
-* このaccountnumberプロパティの値を「3059827」に設定します。 この値は任意の乱数に設定できます。
+* この accountnumber プロパティの値を「3059827」に設定します。この値は任意の乱数に設定できます。
 
-* [getad.htmlを開きます。](http://localhost:4502/content/getad.html)
+* [getad.html を開きます](http://localhost:4502/content/getad.html)。
 
-* このURLに関連付けられたコードは、ログインしたユーザーのアカウント番号を取得します。 次に、このアカウント番号がrequestattributeとしてFDMに渡されます。 次に、FDMは、このアカウント番号に関連付けられたデータを取得し、Webチャネルドキュメントに入力します。
+* この URL に関連付けられているコードは、ログインしたユーザーの accountnumber を取得します。 次に、この accountnumber が requestattribute として FDM に渡されます。 次に、FDM は、この accountnumber に関連付けられているデータを取得し、web チャンネルドキュメントに入力します。
 
 >[!NOTE]
 >
->crxの&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;ファイルを見てください。 String変数webChannelDocumentが有効な通信ドキュメントパスを指していることを確認してください。
+>詳しくは、crx で **/apps/AEMForms/fetchad/GET.jsp** ファイルを確認してください。String 変数 webChannelDocument が有効なコミュニケーションドキュメントパスを指していることを確認してください。
