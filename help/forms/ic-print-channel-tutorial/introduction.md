@@ -1,7 +1,7 @@
 ---
 title: 印刷チャネル用の最初のインタラクティブ通信の作成
 seo-title: Creating your first interactive communication for the print channel
-description: インタラクティブ通信はAEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
+description: インタラクティブ通信は AEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
 seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the print channel.
 feature: Interactive Communication
 topics: development
@@ -15,26 +15,26 @@ level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '167'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # 印刷チャネル用の最初のインタラクティブ通信の作成
 
-インタラクティブ通信はAEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
+インタラクティブ通信は AEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
 
 ## 前提条件 {#prerequistes}
 
-[パッケージマネージャーを使用して、このチュートリアルに関連するアセットをAEMにダウンロードおよび読み込みます。](assets/gettingstartedassets.zip)この zip ファイルには、アセットパッケージの一部として、画像、ドキュメントフラグメント、監視フォルダー設定およびレイアウトファイル (xdp) が含まれています
+[パッケージマネージャーを使用して、このチュートリアルに関連するアセットを AEM にダウンロードして読み込みます。](assets/gettingstartedassets.zip)この zip ファイルには、アセットパッケージの一部として、画像、ドキュメントフラグメント、監視フォルダー設定およびレイアウトファイル（xdp）が含まれています
 
-[このファイルをダウンロードして展開します。](assets/warfileandswaggerfile.zip) このファイルには、Tomcat およびデータソースの設定に使用する必要のある Swagger ファイルにデプロイする必要がある SampleRest.war ファイルが含まれています。
+[このファイルをダウンロードして展開します。](assets/warfileandswaggerfile.zip) このファイルには、Tomcat およびデータソースの設定に使用される Swagger ファイルにデプロイする必要がある SampleRest.war ファイルが含まれています。
 
-このチュートリアルでは、次の内容について学習しました。
+このチュートリアルでは、次の内容について学習します。
 
-* データソースを作成
+* データソースの作成
 * フォームデータモデルの作成
-* ドキュメントフラグメントを作成
-* テーブルとグラフの設定
+* ドキュメントフラグメントを作成する
+* テーブルとグラフを設定する
 * 監視フォルダーを使用してバッチモードでドキュメントを生成する
