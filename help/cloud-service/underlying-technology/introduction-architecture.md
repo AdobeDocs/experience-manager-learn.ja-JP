@@ -1,6 +1,6 @@
 ---
-title: AEM Architecture Stack の概要
-description: OSGi、JCR、Oak、Sling のテクノロジーをAdobe Experience Managerのテクノロジースタックの一部として紹介します。
+title: AEM アーキテクチャスタックの概要
+description: Adobe Experience Manager のテクノロジースタックの一部として、OSGi、JCR、Oak および Sling のテクノロジーを紹介します。
 topics: architecture
 audience: administrator, developer
 doc-type: technical video
@@ -13,14 +13,14 @@ role: Architect, Developer
 level: Beginner
 exl-id: bb13fc39-fcb7-4241-8504-8ff999a6caa2
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Architecture Stack の概要 {#introduction-architecture}
+# AEM アーキテクチャスタックの概要 {#introduction-architecture}
 
-のテクノロジーを紹介する [!DNL OSGi], [!DNL JCR], [!DNL Oak]、および [!DNL Sling] Adobe Experience Managerのテクノロジースタックの一部として
+Adobe Experience Manager のテクノロジースタックの一部として、[!DNL OSGi]、[!DNL JCR]、[!DNL Oak] および [!DNL Sling] のテクノロジーを紹介します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)
