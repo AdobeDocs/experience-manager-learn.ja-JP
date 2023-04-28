@@ -1,6 +1,6 @@
 ---
-title: Salesforce接続アプリを作成します。
-description: Connected Appを使用すると、Salesforceを、AEM FormsやSalesforceなどのサードパーティアプリケーションと統合できます。
+title: Salesforce 接続アプリケーションを作成します。
+description: 接続アプリケーションを使用すると、Salesforce を、AEM Forms with Salesforce などのサードパーティアプリケーションと統合できます。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,17 +12,17 @@ kt: 7152
 thumbnail: 331757.jpg
 exl-id: 6e130397-9747-4d60-9975-4c45c5aab87b
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 接続アプリの作成
+# 接続アプリケーションを作成
 
-接続されたアプリは、APIと、SAML、OAuth、OpenID Connectなどの標準プロトコルを使用して、外部アプリケーションをSalesforceと統合できるフレームワークです。 接続されたアプリは、これらのプロトコルを使用して、外部アプリの認証、承認、およびシングルサインオン(SSO)の提供をおこないます。
+接続アプリケーションは、API や、SAML、OAuth、OpenID Connect などの標準プロトコルを使用して、外部アプリケーションと Salesforce との統合を可能にするフレームワークです。 接続アプリケーションは、これらのプロトコルを使用して、外部アプリの認証、承認、およびシングルサインオン（SSO）の提供を行います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 
 >[!NOTE]
->開発者版ではREST APIがデフォルトで有効になっているので、[Salesforce Developer Edition](https://developer.salesforce.com/signup)にアカウントを作成してください。
+>デベロッパー版では REST API がデフォルトで有効になっているため、[Salesforce デベロッパー版](https://developer.salesforce.com/signup) でアカウントを作成してください。
