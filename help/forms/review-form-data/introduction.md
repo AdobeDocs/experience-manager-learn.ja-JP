@@ -1,6 +1,6 @@
 ---
 title: 送信前にフォームデータを確認する
-description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアルです。
+description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアル。
 feature: Adaptive Forms
 topics: development
 doc-type: tutorial
@@ -11,15 +11,15 @@ role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '84'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 送信前にフォームデータを確認する
 
-フォームを送信する前にフォームデータを確認および編集するための概要コンポーネントを作成する手順について説明するマルチパートチュートリアルです。
+フォームを送信する前にフォームデータを確認および編集するための概要コンポーネントを作成する手順について説明する、マルチパートチュートリアルです。
 
 ![review-form-data](assets/review-form-data.png)
 
@@ -27,4 +27,4 @@ ht-degree: 0%
 
 * AEM 6.5 以降（適切なフォームアドオンパッケージを使用）
 
-また、AEMとAEM Formsの開発者向けのエクスペリエンスもある程度用意することをお勧めします。
+また、AEM および AEM Forms である程度の開発経験があることもお勧めします。
