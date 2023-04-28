@@ -1,6 +1,6 @@
 ---
-title: JSON Web トークンの作成
-description: AEMアクセストークン用のAdobe IMSAPI と交換できる JSON Web トークン (JWT) を作成します。
+title: JSON web トークンの作成
+description: AEM アクセストークン用の Adobe IMS API と交換できる JSON web トークン（JWT）を作成します。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,18 +11,18 @@ kt: 8184
 thumbnail: 8184.jpg
 exl-id: 394ed621-1106-4b2a-a6b7-2efa5867f5b1
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# JSON Web トークンの作成
+# JSON web トークンの作成
 
-JSON Web トークンは、2 つの当事者間の要求を安全に表すための、オープンで業界標準の RFC 7519 メソッドです。 このサンプルでは、JWT を生成するために JWT.io ライブラリを使用しています。
-前の手順でダウンロードしたサービス資格情報には、PKCS#1 形式の秘密鍵が含まれます。この文字列から秘密鍵を抽出するには、使用した文字列を使用します [BouncyCastle](https://www.bouncycastle.org/) ライブラリ。 Java の一部である暗号ライブラリは、PKCS#1 形式をサポートしていません。
+JSON web トークンは、2 つの当事者間の要求を安全に表すための、オープンで業界標準の RFC 7519 メソッドです。このサンプルでは、JWT を生成するために JWT.io ライブラリを使用しています。
+前の手順でダウンロードしたサービス資格情報には、PKCS#1 形式の秘密鍵が含まれます。この文字列から秘密鍵を抽出するために、[BouncyCastle](https://www.bouncycastle.org/) ライブラリを使用しました。Java の一部である暗号ライブラリは、PKCS#1 形式をサポートしていません。
 
-JWT の生成には、次のコードを使用します。
+JWT の生成には、次のコードを使用しました。
 
 ```java
 public String getJWTToken()
