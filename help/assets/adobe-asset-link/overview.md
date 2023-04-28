@@ -1,6 +1,6 @@
 ---
-title: AdobeAsset Link とAEM
-description: Adobe Experience Manager Assets は、デザイナーやクリエイティブユーザーが好みのAdobe Creative Cloudデスクトップアプリケーション内で使用できます。 Adobe Creative Cloud for enterpriseのAdobeAsset Link 拡張機能は、Adobe XD、Photoshop、InDesign、IllustratorなどのCreative Cloudツール内でAEM Assets のメタデータを検索および参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張します。
+title: Adobe Asset Link と AEM
+description: Adobe Experience Manager Assets は、デザイナーやクリエイティブユーザーがお気に入りの Adobe Creative Cloud デスクトップアプリケーション内で使用することができます。Adobe Creative Cloud for enterprise の Adobe Asset Link 拡張機能は、Adobe XD、Photoshop、InDesign、Illustrator などの Creative Cloud ツール内で AEM アセットのメタデータを検索、参照、並べ替え、プレビュー、アセットのアップロード、チェックアウト、変更、チェックインおよび表示する機能を拡張します。
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 topic: Content Management
@@ -8,65 +8,65 @@ role: User
 level: Beginner
 thumbnail: 28988.jpg
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '990'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# AdobeAsset Link 3.0
+# Adobe Asset Link 3.0
 
-Adobe Experience Manager Assets は、デザイナーやクリエイティブユーザーが好みのAdobe Creative Cloudデスクトップアプリケーション内で使用できます。
+Adobe Experience Manager Assets は、デザイナーやクリエイティブユーザーがお気に入りの Adobe Creative Cloud デスクトップアプリケーション内で使用することができます。
 
-Adobe Creative Cloud for enterpriseのAdobeAsset Link 拡張機能は、Creative Cloudアプリケーション内でAEM Assets のメタデータを検索および参照、並べ替え、プレビュー、アップロード、チェックアウト、変更、チェックイン、表示する機能を拡張します。
+Adobe Creative Cloud for enterprise の Adobe Asset Link 拡張機能は、Creative Cloud アプリケーション内で AEM アセットのメタデータを検索、参照、並べ替え、プレビュー、アセットのアップロード、チェックアウト、変更、チェックインおよび表示する機能を拡張します。
 
-## Adobeアセットリンク機能
+## Adobe Asset Link の機能
 
-+ AdobeAsset Link は、AEM AssetsおよびAssets Essentialsと統合できます。
-+ AdobeAsset Link は、クラウドベースのAEM環境 (AEM Assets as a Cloud ServiceおよびAssets Essentials) への接続を自動設定します
-+ Adobeアセットリンクは、Adobe Creative Cloudアプリケーション内で機能する拡張機能です。
++ Adobe Asset Link は、AEM Assets および Assets Essentials と統合されています。
++ Adobe Asset Link は、クラウドベースの AEM 環境（AEM Assets as a Cloud Service および Assets Essentials）への接続を自動設定します
++ Adobe Asset Link は、Adobe Creative Cloud アプリケーション内で機能する拡張機能です。
 
    + Adobe XD
    + Adobe Photoshop
    + Adobe Illustrator
    + Adobe InDesign
 
-+ AEMのAdobeEnterprise IDまたはFederated IDを使用したへの自動認証
-+ AEMでのデジタルアセットの参照と検索
-+ パネルを使用して、AEM内のアセットに関するファイルの詳細にアクセスします。
++ Adobe Enterprise ID または Federated ID を使用した AEM への自動認証
++ AEM 内のデジタルアセットの参照と検索
++ パネルを使用して、AEM に存在するアセットのファイル詳細にアクセスします。
    + サムネール
    + 基本メタデータ
    + バージョン
-+ アセットをレイアウトに配置、ダウンロード、ドラッグ&amp;ドロップ
-+ アセットをAEMからチェックアウトし、Creative CloudAssets アカウント内でアセットを操作 (WIP) して変更
-+ アセットの変更が完了し、新しいバージョンがAEMに反映されたら、アセットをAEMに再度チェックインする
-+ アプリ内パネルの Asset LinkAdobeからAEM内のアセットを検索します。
-+ Asset Link パネルからAEM Assetsのコレクションとスマートコレクションを直接参照する
-+ 新しく作成したアセットをパネルから直接AEMに追加
-+ アセットをInDesignフレームに直接ドラッグ&amp;ドロップ
++ レイアウトへのアセットの配置、ダウンロードまたはドラッグ＆ドロップ
++ アセットを AEM からチェックアウトし Creative Cloud Assets アカウント内で操作（WIP）して、アセットを変更
++ アセットの変更が完了したらアセットを再び AEM にチェックインして、新しいバージョンを AEM に反映
++ Adobe Asset Link のアプリ内パネルから AEM 内のアセットを検索
++ Asset Link パネルから AEM Assets コレクションおよびスマートコレクションを直接参照
++ 新規作成したアセットをパネルから直接 AEM に追加
++ アセットを InDesign フレームに直接ドラッグ＆ドロップ
 
-## アセットのInDesign
+## InDesign へのアセットの配置
 
-Adobeアセットリンクは、InDesignの Asset Link とAEM間のAdobeの直接リンクをサポートします。 InDesignのダイレクトリンクをサポートしているので、__リンク場所__ または __コピーを配置__) をクリックするか、AdobeAsset Link パネルを使用して、デジタルアセットをAEMからInDesignにドラッグ&amp;ドロップします。 また、 *For Placement Only+(FPO) レンディションも導入されています。
+Adobe Asset Link は、Adobe Asset Link と AEM の間の InDesign の直接リンクをサポートしています。InDesign の直接リンクのサポートにより、Adobe Asset Link パネルを使用して、AEM から InDesign にデジタルアセットを配置（__リンクを配置__&#x200B;または&#x200B;__コピーを配置__）またはドラッグ＆ドロップすることができます。また、*For Placement Only+（FPO）レンディションも導入します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >
->Adobe Creative CloudのEnterprise IDまたはFederated IDのみを使用してください。 必ず [AEM for Asset Link のAdobe](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>Adobe Creative Cloud の Enterprise ID または Federated ID のみを使用します。 必ず [AEM for Asset Link を設定してください](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)。
 
-次のいずれかのオプションを使用して、InDesignレイアウトにアセットを配置できます。
+次のいずれかのオプションを使用して、InDesign レイアウトにアセットを配置することができます。
 
-+ **コピーを配置**  — アセットを（「コピーを配置」オプションを使用して）埋め込むと、バイナリをローカルシステムにダウンロードした後で、元のInDesignのコピーがアセットレイアウトに配置されます。 Adobeアセットリンクでは、埋め込まれたコピーと元のアセットの間のリンクは保持されません。 元のアセットがAEMで変更されている場合は、埋め込まれたアセットをInDesignファイルから削除し、AEMからアセットを再埋め込みする必要があります。
++ **コピーを配置** -（「コピーを配置」オプションを使用して）アセットを埋め込むと、バイナリをローカルシステムにダウンロードした後で、オリジナルアセットのコピーが InDesign レイアウトに配置されます。Adobe Asset Link では、埋め込まれたコピーとオリジナルのアセットの間のリンクは保持されません。 オリジナルアセットが AEM で変更された場合は、埋め込まれたアセットを InDesign ファイルから削除し、アセットを AEM から再度埋め込む必要があります。
 
-+ **リンク場所** -InDesignドキュメントを操作する場合、アセットを直接埋め込むだけでなく、AEMからアセットを参照することもできます（コンテキストメニューの「コピーを配置」オプションを使用）。 アセットの参照を使用すると、他のユーザーと共同作業したり、元のアセットに対しておこなわれた更新をAEMに組み込んだりできます。 AEMからアセットを参照するには、コンテキストメニューの「リンクを配置」オプションを使用します。
++ **リンクを配置** - InDesign ドキュメントを操作する場合は、（コンテキストメニューの「コピーを配置」オプションを使用して）アセットを直接埋め込むだけでなく、AEM 内のアセットを参照することもできます。アセットを参照すると、他のユーザーと共同作業したり、AEM 内のオリジナルアセットに加えられた更新を取り込んだりすることができます。AEM 内のアセットを参照するには、コンテキストメニューの「リンクを配置」オプションを使用します。
 
-### 配置専用の画像
+### 配置専用の画像の場合
 
-Adobeの Asset Link を使用して、AEMからInDesignドキュメントに大きなアセットファイルを配置する場合、クリエイティブユーザーは、配置操作を開始してから数秒待つ必要があります。 これは、ユーザーエクスペリエンス全体に影響します。 Adobeアセットリンクを使用すると、AEMから元のアセットの低解像度の画像を一時的に配置できるので、画像の配置にかかる時間を短縮できます。 同時に、ユーザーエクスペリエンス全体と生産性が向上します。 低い解像度の画像は一時的に配置され、印刷や公開に最終出力が必要な場合は、FPO レンディションを元の画像に置き換える必要があります。 複数の FPO 画像をそれぞれの元の画像で置き換える場合は、に移動します。 **_Windows /リンク_** パネルを開き、元のアセットをダウンロードします。 元の画像をダウンロードしたら、「すべての FPO をオリジナルに置き換える」を選択します。
+Adobe Asset Link を使用して大容量のアセットファイルを AEM から InDesign ドキュメントに配置する場合、クリエイティブユーザーは配置操作を開始してから数秒待つ必要があります。これは、ユーザーエクスペリエンス全体に影響します。Adobe Asset Link を使用すると、AEM 内のオリジナルアセットの低解像度画像を一時的に配置できるので、画像の配置にかかる時間を短縮することができます。と同時に、ユーザーエクスペリエンス全体と生産性が向上します。 この低解像度画像は一時的に配置され、印刷や公開に最終的な出力が必要な場合は、FPO レンディションをオリジナル画像に置き換える必要があります。 複数の FPO 画像をそれぞれのオリジナル画像で置き換える場合は、**_Windows／リンク_**&#x200B;パネルに移動し、オリジナルアセットをダウンロードします。 オリジナル画像をダウンロードしたら、「すべての FPO をオリジナルに置き換える」を選択します。
 
-FPO レンディションは、元のアセットの軽量な代替物です。 縦横比は同じですが、元の画像に比べてサイズが小さくなります。 現在、InDesignは、次の画像タイプに対する FPO レンディションの読み込みのみをサポートしています。
+FPO レンディションは、オリジナルアセットの代わりとなる軽量のアセットです。 アスペクト比は同じですが、オリジナル画像に比べてサイズが小さくなります。 現在 InDesign では、次の画像タイプの FPO レンディションのみ、読み込みをサポートしています。
 
 + JPEG
 + GIF
@@ -75,24 +75,24 @@ FPO レンディションは、元のアセットの軽量な代替物です。 
 + PSD
 + BMP
 
-FPO レンディションがAEMの特定のアセットで使用できない場合は、元の高解像度アセットが代わりに参照されます。 FPO 画像の場合、ステータス FPO が [InDesignリンク ] パネルに表示されます。
+AEM 内の特定のアセットに対応する FPO レンディションが入手できない場合は、オリジナルの高解像度アセットが代わりに参照されます。 FPO 画像の場合、ステータス FPO が InDesign リンクパネルに表示されます。
 
-## AEM AssetsとのAdobeアセットリンク認証
+## AEM Assets を使用した Adobe Asset Link の認証
 
-AdobeIdentity Managementサービス (IMS) およびAdobe Experience ManagerオーサーのコンテキストでのAdobeAsset Link 認証の仕組み。
+Adobe Identity Management Services（IMS）および Adobe Experience Manager オーサーのコンテキストで Adobe Asset Link の認証が機能する仕組み。
 
-![AdobeAsset Link のアーキテクチャ](assets/adobe-asset-link-article-understand.png)
+![Adobe Asset Link のアーキテクチャ](assets/adobe-asset-link-article-understand.png)
 
-1. Adobeアセットリンク拡張は、Adobe Creative Cloud Desktop App を介してAdobeID 管理サービス (IMS) への認証リクエストをおこない、成功すると Bearer トークンを受け取ります。
-1. Adobeアセットリンク拡張機能は、HTTP(S) を介して AEM オーサーに接続します。この中には、 **手順 1**&#x200B;を使用し、拡張機能の設定 JSON で提供されるスキーム (HTTP/HTTPS)、ホストおよびポートを使用します。
-1. AEM Bearer Authentication Handler は、リクエストから Bearer トークンを抽出し、Adobe IMSで検証します。
-1. Adobe IMSが Bearer トークンを検証すると、AEMにユーザーが作成され（存在しない場合）、Adobe IMSからプロファイルとグループ/メンバーシップのデータを同期します。 AEMユーザーは、標準AEMログイントークンが発行され、HTTP(S) 応答の Cookie としてAdobeAsset Link 拡張機能に返されます。
-1. 後続のインタラクション ( アセットの参照、検索、チェックイン/チェックアウトなど ) AdobeAsset Link 拡張機能を使用すると、AEM オーサーに対する HTTP(S) リクエストが生成され、標準のAEMトークン認証ハンドラーを使用してAEMログイントークンを使用して検証されます。
+1. Adobe Asset Link 拡張機能は、Adobe Creative Cloud デスクトップアプリを介して Adobe Identity Management System（IMS）への認証リクエストを行い、成功するとベアラートークンを受け取ります。
+1. Adobe Asset Link 拡張機能は、設定 JSON で指定されているスキーム（HTTP／HTTPS）、ホストおよびポートを使用して、**手順 1** で取得されたベアラートークンを含めて、HTTP／HTTPS で AEM オーサーに接続します。
+1. AEM のベアラー認証ハンドラーは、リクエストからベアラートークンを抽出して、Adobe IMS で検証します。
+1. Adobe IMS でベアラートークンが検証されると、AEM にユーザーが作成され（まだ存在しない場合）、プロファイルと Adobe IMS 内のグループ／メンバーシップのデータが同期されます。 AEM ユーザーに標準の AEM ログイントークンが発行されます。このトークンは、HTTP／HTTPS 応答の Cookie として Adobe Asset Link 拡張機能に送り返されます。
+1. Adobe Asset Link との後続のインタラクション（アセットの参照、検索、チェックイン／チェックアウトなど）の結果、HTTP(S) リクエストが AEM オーサーに送られ、標準の AEM トークン認証ハンドラーで AEM ログイントークンを使用して検証されます。
 
 >[!NOTE]
 >
->ログイントークンの有効期限が切れた場合、 **手順 1 ～ 5** が自動的にを呼び出し、Bearer トークンを使用してAdobeAsset Link 拡張の認証をおこない、新しい有効なログイントークンを再発行します。
+>ログイントークンの有効期限が切れると、**手順 1～5** が自動的に起動され、ベアラートークンを使用して Adobe Asset Link 拡張機能の認証を行い、新しい有効なログイントークンを再発行します。
 
 ## その他のリソース
 
-+ [Adobeアセットリンク Web サイト](https://www.adobe.com/jp/creativecloud/business/enterprise/adobe-asset-link.html)
++ [Adobe Asset Link の web サイト](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
