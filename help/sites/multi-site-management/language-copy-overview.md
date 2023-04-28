@@ -1,7 +1,7 @@
 ---
 title: 言語コピーの概要
 seo-title: Introduction to Language Copy
-description: AEM Sitesの言語コピーを使用して、多言語サイトを作成する方法の概要を説明します
+description: AEM Sites の言語コピーを使用して、多言語サイトを作成する方法の概要を説明します
 seo-description: Get an overview of how to create a multilingual site using Language Copy in AEM Sites
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -16,14 +16,14 @@ role: User
 level: Beginner
 exl-id: 9085d60e-0e88-46ab-8f1f-4999063e48d2
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 言語コピーの概要 {#introduction-language-copy}
 
-AEM Sitesの言語コピーを使用して、多言語サイトを作成する方法の概要を説明します。
+AEM Sites の言語コピーを使用して、多言語サイトを作成する方法の概要を説明します
 
 >[!VIDEO](https://video.tv.adobe.com/v/36487?quality=12&learn=on)
