@@ -1,6 +1,6 @@
 ---
-title: Windows セットアップでのマルチユーザー PDFG 変換の問題のトラブルシューティング手順
-description: Windows セットアップで複数のユーザーPDFジェネレータの問題をトラブルシューティングします。
+title: Windows セットアップ時のマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
+description: Windows セットアップ時の複数ユーザー PDF ジェネレーターに関する問題をトラブルシューティングします。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: 2fddb3a9-570c-4b50-a685-4287a1ddafe1
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Windows セットアップでのマルチユーザー PDFG 変換の問題のトラブルシューティング手順
+# Windows セットアップ時のマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
 
-*このビデオでは、Windows セットアップでのマルチユーザー PDFG 変換の問題のトラブルシューティングのプロセスを説明します。*
+*このビデオでは、Windows セットアップ時のマルチユーザー PDFG 変換に関する問題のトラブルシューティングのプロセスを説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)
