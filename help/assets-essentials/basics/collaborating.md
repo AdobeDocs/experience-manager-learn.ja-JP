@@ -1,5 +1,5 @@
 ---
-title: Assets Essentialsでのコラボレーション
+title: Assets Essentials での共同作業
 description: コメント、注釈、タスクを使用して、アセット管理内で共同作業する方法を説明します。
 version: Cloud Service
 feature: Assets Essentials
@@ -11,13 +11,13 @@ thumbnail: 335856.jpeg
 last-substantial-update: 2022-10-07T00:00:00Z
 exl-id: 0de60565-1a73-4642-a3b9-1625e25ea2dc
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '32'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Assets Essentialsでのコラボレーション
+# Assets Essentials での共同作業
 
 コメント、注釈、タスクを使用してアセット管理で共同作業する方法を説明します。
 
