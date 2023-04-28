@@ -1,76 +1,76 @@
 ---
-title: AEM AssetsのInDesignファイルとアセットテンプレートについて
-description: このビデオチュートリアルでは、AEM Assets のInDesignテンプレート機能で使用するアセットファイルの定義と、それに伴うすべての考慮事項について説明します。
+title: AEM Assets の InDesign ファイルとアセットテンプレートについて
+description: このビデオチュートリアルでは、AEM Assets のアセットテンプレート機能で使用する InDesign ファイルの定義と、それに伴うすべての考慮事項について順を追って説明します。
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '507'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsのInDesignファイルとアセットテンプレートについて {#understanding-indesign-files-and-asset-templates-in-aem-assets}
+# AEM Assets の InDesign ファイルとアセットテンプレートについて {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
-このビデオチュートリアルでは、AEM Assets のInDesignテンプレート機能で使用するアセットファイルの定義と、それに伴うすべての考慮事項について説明します。
+このビデオチュートリアルでは、AEM Assets のアセットテンプレート機能で使用する InDesign ファイルの定義と、それに伴うすべての考慮事項について順を追って説明します。
 
-## テンプレートテンプレートファイルのInDesign {#constructing-the-indesign-template-file}
+## InDesign テンプレートファイルの作成 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
-1. をダウンロードして開きます。 [**InDesignファイルテンプレート**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **タグパネルを開き、** タグの命名規則を確認し、タグファイル内の作成可能なInDesignは既にタグ付けされていることに注意してください。 AEMでは、タグ付き要素のみが編集可能です。
+1. [**InDesign ファイルテンプレート**](assets/asset-templates-tutorial-video--supporting-files.zip)&#x200B;をダウンロードして開きます。
+2. **タグパネルを開き**、タグの命名規則を確認します。InDesign ファイル内のオーサリング可能な要素には既にタグが付けられています。AEM では、タグ付きの要素のみを編集できます。
 
-   * **ウィンドウ/ユーティリティ/タグ**
+   * **ウィンドウ／ユーティリティ／タグ**
 
-3. 「ページ」で、新しいテキスト要素を追加し、「ヘッダー」というテキストを指定して、 **見出し** 段落スタイル。
+3. ページで新規テキスト要素を追加し、「Header」というテキストを指定して、「**見出し**」段落スタイルを適用します。
 
-   * **ウィンドウ/スタイル/段落スタイル**
+   * **ウィンドウ／スタイル／段落スタイル**
 
-   次に、 **Page2Heading.**
+   次に、**Page2Heading.** という名前の新規タグを作成して適用します。
 
-4. FPO ロゴ画像 ([郵便番号で指定](assets/asset-templates-tutorial-video--supporting-files.zip)) を「マスター」ページのロゴ要素に追加します。
+4. FPO ロゴ画像（[zip で提供](assets/asset-templates-tutorial-video--supporting-files.zip)）をマスターページのロゴ要素に追加します。
 
-   * **右クリック**&#x200B;を選択し、**継ぎ手/フレーム継ぎ手オプション… /コンテンツ継ぎ手/フレームを均等に埋め込み**
-   [フレーム継ぎ手オプションの詳細](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)（お客様の使用例に適したもの）
+   * **右クリックし**、**調整／フレーム調整オプション...／コンテンツ調整／フレームに均等に流し込む**&#x200B;を選択します。
+   フレーム調整オプションと現在のユースケースに適したオプションについて詳しくは、[こちら](https://helpx.adobe.com/jp/indesign/using/frames-objects.html#fitting_objects_to_frames)を参照してください。
 
-5. 「ページ」のマスターテンプレートからヘッダー（ロゴと会社名）をコピーし、「ページを同じ場所に貼り付け」を使用してページをコピーします。
+5. ページ内のマスターテンプレートからヘッダー（ロゴと会社名）をコピーし、「同じ位置にペースト」を使用してページにペーストします。
 
-   * 1 ページ目で、Shift キーを押しながらmacOSをクリックするか、Shift キーを押しながら Alt キーを押しながら Windows をクリックし、マスターページから公開されたヘッダーを選択して削除します。
-   * マスターページで、「 Paste in Place 」を使用してヘッダーをページ 1 にコピーします。
-   * 2 ページ目の手順を繰り返します。
+   * 1 ページ目で、macOS の場合は Shift キーと Command キーを押しながらクリック、Windows の場合は Shift キーと Alt キーを押しながらクリックして、マスターページから公開されたヘッダーを選択して削除します。
+   * マスターページから、「同じ位置にペースト」を使用してヘッダーを 1 ページ目にコピーします。
+   * 2 ページ目に同じ手順を繰り返します。
 
-6. [ 構造 ] パネルを開き、各要素をダブルクリックして、すべての構造要素がInDesignファイル内の実際の要素に対応していることを確認します。 使用されていない要素や不要な要素を削除します。 すべてのタグ付けがセマンティックであり、要素が適切にタグ付けされていることを確認します。
+6. 各要素をダブルクリックして構造パネルを開き、すべての構造要素が InDesign ファイル内の実際の要素に対応していることを確認します。使用されていない要素や不要な要素を削除します。すべてのタグ付けがセマンティックで、要素が適切にタグ付けされていることを確認します。
 
    >[!NOTE]
    >
-   >AEM Asset Templates の問題の最も一般的な原因は、InDesignファイルの構造が不適切に構築されていることです。したがって、タグ付けと構造が明確で正しいことを確認してください。
+   >AEM アセットテンプレートで問題が発生する最も一般的な原因は、InDesign ファイルの不適切な構造です。したがって、タグ付けと構造が明確で正しいことを確認します。
 
-## AEM Assetsでのアセットテンプレートの作成とオーサリング {#creating-and-authoring-an-asset-template-in-aem-assets}
+## AEM Assets でのアセットテンプレートの作成とオーサリング {#creating-and-authoring-an-asset-template-in-aem-assets}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
-1. **開始InDesign Server** （ポート 8080）。
-2. 次を確認します。 **AEM オーサーインスタンスがInDesign Serverとやり取りするように設定されている**（またその逆）
+1. ポート 8080 で **InDesign Server を起動**&#x200B;します。
+2. **InDesign Server とやり取りするように AEM オーサーインスタンスが設定されている**&#x200B;ことを確認します（逆も同様）。
 
-   * [IDS ワーカーCloud Service設定](http://localhost:4502/etc/cloudservices/proxy/ids.html)
-   * [クラウドプロキシCloud Serviceの設定](http://localhost:4502/etc/cloudservices/proxy.html)
-   * [AEM Externalizer OSGi の設定](http://localhost:4502/system/console/configMgr)
+   * [IDS ワーカークラウドサービス設定](http://localhost:4502/etc/cloudservices/proxy/ids.html)
+   * [クラウドプロキシクラウドサービス設定](http://localhost:4502/etc/cloudservices/proxy.html)
+   * [AEM Externalizer OSGi 設定](http://localhost:4502/system/console/configMgr)
 
-3. **AEM AssetsにInDesignファイルをアップロード** を使用して、AEM Workflow とInDesign Serverがアセットを完全に処理できるようにします。
-4. **新しいテンプレートを作成** under **アセット/テンプレート** をクリックし、手順#4でAEMにアップロードしたInDesignファイルを選択します。
-5. **アセットテンプレートの編集** 手順#5で作成し、編集可能フィールドを作成します。
-6. クリック **完了** を使用して、アセットテンプレートの最終的な高品質レンディションを生成します。
-7. アセットテンプレートカードをクリックして開き、アセットレンディションを確認して高品質なレンディションをダウンロードします。
+3. **InDesign ファイルを AEM Assets にアップロードし**、AEM ワークフローと InDesign Server がアセットを完全に処理できるようにします。
+4. **アセット／テンプレート**&#x200B;で&#x200B;**新規テンプレートを作成**&#x200B;し、手順 4 で AEM にアップロードした InDesign ファイルを選択します。
+5. 手順 5 で作成した&#x200B;**アセットテンプレートを編集**&#x200B;し、編集可能フィールドをオーサリングします。
+6. 「**完了**」をクリックして、アセットテンプレートの忠実度の高い最終的なレンディションを生成します。
+7. アセットテンプレートカードをクリックして開き、アセットレンディションを確認して、忠実度の高いレンディションをダウンロードします。
 
 ## その他のリソース {#additional-resources}
 
-InDesignテンプレートファイルとサポートする画像
+InDesign のテンプレートファイルとサポート画像
 
-ダウンロード [InDesignテンプレートファイルとサポートする画像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+[InDesign のテンプレートファイルとサポート画像](assets/asset-templates-tutorial-video--supporting-files-1.zip)をダウンロードします。
 
-* [InDesignCC の体験版ダウンロード](https://creative.adobe.com/products/download/indesign)
-* InDesign Serverの体験版は、 [Adobeプレリリースサイト](https://www.adobeprerelease.com/) または [CC Enterprise のお客様は、アカウント担当者に連絡して、amInDesign Server体験版ライセンスをリクエストできます](https://www.adobe.com/jp/products/indesignserver/faq.html)
+* [InDesign CC 体験版のダウンロード](https://creative.adobe.com/products/download/indesign)
+* InDesign Server 体験版は、[アドビプレリリースサイト](https://www.adobeprerelease.com/)からダウンロードできます。または、[CC エンタープライズ版のお客様は、アカウント担当者に連絡して、InDesign Server 体験版ライセンスをリクエストできます](https://www.adobe.com/jp/products/indesignserver/faq.html)。
