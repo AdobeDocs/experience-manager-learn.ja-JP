@@ -1,27 +1,27 @@
 ---
-title: AEM Workflowの変数[Part4]
-description: AEMワークフローでのXML、JSON、ArrayList、Document型の変数の使用
+title: AEM ワークフローの変数 [第 4 部]
+description: AEM ワークフローでの XML、JSON、ArrayList、Document タイプの変数の使用
 version: 6.5
-topic: 開発
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 0%
+exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '456'
+ht-degree: 100%
 
 ---
 
+# AEM ワークフローの ArrayList 変数
 
-# AEMワークフローのArrayList変数
+AEM Forms 6.5 では、ArrayList 型の変数が導入されました。ArrayList 変数の一般的な使用例は、AssignTask で使用するカスタムルートを定義することです。
 
-AEM Forms 6.5では、ArrayList型の変数が導入されました。ArrayList変数の一般的な使用例は、AssignTaskで使用するカスタムルートを定義する場合です。
+AEM ワークフローで ArrayList 変数を使用するには、送信されたデータに繰り返し要素を生成するアダプティブフォームを作成する必要があります。 一般的な方法は、配列要素を含むスキーマを定義することです。 この記事の目的で、配列要素を含む単純な JSON スキーマを作成しました。 使用例は、従業員が経費報告書を入力する場合です。 経費報告書では、提出者のマネージャー名と、マネージャーのマネージャー名を取り込みます。 マネージャー名は managerchain と呼ばれる配列に格納されます。 次のスクリーンショットは、経費報告フォームと、アダプティブフォーム送信からのデータを示しています。
 
-AEMワークフローでArrayList変数を使用するには、送信されたデータに繰り返し要素を生成するアダプティブフォームを作成する必要があります。 一般的な方法は、配列要素を含むスキーマを定義することです。 この記事の目的で、配列要素を含む単純なJSONスキーマを作成しました。 使用例は、経費報告書に記入した従業員です。 経費報告書では、送信者の管理者名と管理者の管理者名を取り込みます。 マネージャの名前は、managerchainと呼ばれる配列に格納されます。 次のスクリーンショットは、経費報告書フォームと、アダプティブForms送信からのデータを示しています。
+![expensereport](assets/expensereport.jpg)
 
-![支出報告](assets/expensereport.jpg)
-
-次に、アダプティブフォームの送信データを示します。 アダプティブフォームはJSONスキーマに基づいており、スキーマに連結されたデータはafBoundData要素のdata要素の下に保存されます。 managerchainは配列で、managerchain配列内のオブジェクトのname要素をArrayListに設定する必要があります。
+アダプティブフォームの送信データを次に示します。 アダプティブフォームは JSON スキーマに基づいており、スキーマにバインドされたデータは、afBoundData 要素の data 要素の下に保存されます。managerchain は配列であり、ArrayList に managerchain 配列内のオブジェクトの名前要素を設定する必要があります。
 
 ```json
 {
@@ -62,21 +62,21 @@ AEMワークフローでArrayList変数を使用するには、送信された�
 }
 ```
 
-サブタイプ文字列のArrayList変数を初期化するには、 JSONドット表記またはXPathマッピングモードを使用します。 次のスクリーンショットは、JSONドット表記を使用してCustomRoutesと呼ばれるArrayList変数を設定する方法を示しています。 次のスクリーンショットに示すように、配列オブジェクト内の要素を指していることを確認します。 CustomRoutes ArrayListにmanagerchain配列オブジェクトの名前を入力します。
-次に、CustomRoutes ArrayListを使用して、AssignTaskコンポーネントでルートを設定します
+サブタイプ文字列の ArrayList 変数を初期化するには、JSON ドット表記または XPath マッピングモードを使用します。次のスクリーンショットは、JSON ドット表記を使用して CustomRoutes と呼ばれる ArrayList 変数を生成する方法を示しています。次のスクリーンショットに示すように、配列オブジェクト内の要素を指していることを確認します。 CustomRoutes ArrayList に managerchain 配列オブジェクトの名前を入力します。
+次に、CustomRoutes ArrayList を使用して、AssignTask コンポーネント内の Routes にデータを設定します
 ![customroutes](assets/arraylist.jpg)
-CustomRoutes ArrayList変数が送信されたデータの値で初期化されると、AssignTaskコンポーネントのRoutesがCustomRoutes変数を使用して設定されます。 以下のスクリーンショットは、AssignTaskでのカスタムルートを示しています
+CustomRoutes ArrayList 変数が送信データからの値で初期化されると、AssignTask コンポーネントの Routes が CustomRoutes 変数を使用して設定されます。 以下のスクリーンショットは、AssignTask のカスタムルートを示しています
 ![asingtask](assets/customactions.jpg)
 
-お使いのシステムでこのワークフローをテストするには、次の手順に従います
+お使いのシステム上でこのワークフローをテストするには、次の手順に従ってください
 
-* ArrayListVariable.zipファイルをダウンロードしてファイルシステムに保存します。
-* [AEM Package Managerを使用し](assets/arraylistvariable.zip) てzipファイルを読み込みます。
-* [TravelExpenseReportフォームを開きます。](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
-* 2人の経費と2人の管理者の名前を入力します
-* 送信ボタンを押す
-* [インボックスを開く](http://localhost:4502/aem/inbox)
-* 「経費管理者に割り当て」という新しいタスクが表示されます。
-* タスクに関連付けられたフォームを開く
-* マネージャー名を持つ2つのカスタムルートが表示されます
-   [ReviewExpenseReportWorkflowを調べます。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) このワークフローでは、ArrayList変数、JSONタイプの変数、Or分割コンポーネントのルールエディターを使用します
+* ArrayListVariable.zip ファイルをダウンロードしてファイルシステムに保存します
+* AEM パッケージマネージャーを使用して [zip ファイルを読み込みます](assets/arraylistvariable.zip) 
+* [TravelExpenseReport フォームを開きます](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
+* 費用を 2 つ入力し、2 人のマネージャーの名前を入力します
+* 「送信」ボタンを押します
+* [インボックスを開きます](http://localhost:4502/aem/inbox)
+* 「経費管理者に割り当て」というタイトルの新しいタスクが表示されます
+* タスクに関連付けられたフォームを開きます
+* マネージャー名を持つ 2 つのカスタムルートが表示されます
+   [ReviewExpenseReportWorkflow を探索します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) このワークフローでは、ArrayList 変数、JSON 型変数、Or-Sokut コンポーネントのルールエディターを使用します
