@@ -1,27 +1,28 @@
 ---
-title: Cloud 5 - Cloud Manager の謎 — 機能テスト
-description: カスタム機能テストの作成方法と作成理由
+title: Cloud 5 - Cloud Manager の謎 - 機能テスト
+description: カスタム機能テストを作成する方法と理由
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343624.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 5d9d70ab-3aaa-4e88-b0f8-e8cfe73cc617
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '90'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Cloud Manager の謎 — 機能テスト
+# Cloud 5 - Cloud Manager の謎 - 機能テスト
 
-AEM as a Cloud Serviceは、デフォルトで、アプリケーションが上に構築されている状態で、多くの機能テストを完了します。 ただし、これらのテストでは、必要なすべてのテストを対象としていない場合があります。 カスタム機能テストは救助に来る。
+AEM as a Cloud Service では、作成されたアプリケーションに対して、デフォルトで多くの機能テストを実施します。ただし、これらのテストは、必要なすべての必須テストをカバーしていない場合があります。そのため、カスタム機能テストが役に立ちます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343624?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 
-+ [機能テスト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html)
-+ [AEM Smoke Tests](https://github.com/adobe/aem-test-samples/)
-+ [AEM Testing Client](https://github.com/adobe/aem-testing-clients/)
++ [機能テスト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html?lang=ja)
++ [AEM スモークテスト](https://github.com/adobe/aem-test-samples/)
++ [AEM テストクライアント](https://github.com/adobe/aem-testing-clients/)
