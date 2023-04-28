@@ -1,26 +1,27 @@
 ---
 title: クライアントライブラリの作成
-description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成する
-feature: アダプティブフォーム
+description: 「保存して終了」ボタンのクリックイベントを処理するクライアントライブラリを作成します
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: 開発
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 2%
+exl-id: c90eea73-bd44-40af-aa98-d766aa572415
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '139'
+ht-degree: 100%
 
 ---
 
 # クライアントライブラリの作成
 
-[クライアントlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)を作成します。このコードには、CSSクラス&#x200B;**savebutton**&#x200B;で識別されるボタンのclickイベントで`guideBridge` APIのメソッド`doAjaxSubmitWithFileAttachment`を呼び出すコードが含まれます。  アダプティブフォームのデータ`fileMap`と`mobileNumber`を、`**/bin/storeafdatawithattachments`をリッスンするエンドポイントに渡します。
+CSS クラス **savebutton** によって識別されるボタンのクリックイベントで、`guideBridge` API のメソッド `doAjaxSubmitWithFileAttachment` を呼び出すコードを含む[クライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja)を作成します。`**/bin/storeafdatawithattachments` でリッスンしているエンドポイントに、アダプティブフォームデータ、`fileMap` および `mobileNumber` を渡します。
 
-フォームデータを保存すると、一意のアプリケーションIDが生成され、ダイアログボックスに表示されます。 ダイアログボックスを閉じると、ユーザーは、一意のアプリケーションIDを使用して保存済みのアダプティブフォームを取得できるフォームに移動します。
+フォームデータを保存すると、一意のアプリケーション ID が生成され、ダイアログボックスでユーザーに表示されます。ダイアログボックスを閉じると、ユーザーはフォームに移動し、一意のアプリケーション ID を使用して、保存済みのアダプティブフォームを取得できます。
 
 ```java
 $(document).ready(function () {
@@ -66,6 +67,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> [bootbox javascript library](http://bootboxjs.com/examples.html)を使用してダイアログボックスを表示しています
+> ダイアログボックスを表示するために、[bootbox javascript ライブラリ](http://bootboxjs.com/examples.html)を使用しました
 
-このサンプルで使用されるクライアントライブラリは、[こちら](assets/client-libraries.zip)からダウンロードできます。
+このサンプルで使用しているクライアントライブラリは、[こちらからダウンロード](assets/client-libraries.zip)できます
