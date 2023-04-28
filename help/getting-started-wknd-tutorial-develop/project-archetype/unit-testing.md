@@ -1,6 +1,6 @@
 ---
 title: 単体テスト
-description: カスタムコンポーネントのチュートリアルで作成した署名コンポーネントの Sling Model の動作を検証する単体テストを実装します。
+description: カスタムコンポーネントのチュートリアルで作成した署名コンポーネントの Sling モデルの動作を検証する単体テストを実装します。
 version: 6.5, Cloud Service
 type: Tutorial
 feature: APIs, AEM Project Archetype
@@ -13,19 +13,19 @@ thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
 source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2980'
-ht-degree: 19%
+ht-degree: 100%
 
 ---
 
 # 単体テスト {#unit-testing}
 
-このチュートリアルでは、単体テストの実装について説明します。このテストは、 [カスタムコンポーネント](./custom-component.md) チュートリアル
+このチュートリアルでは、[カスタムコンポーネント](./custom-component.md)のチュートリアルで作成した署名コンポーネントの Sling モデルの動作を検証する単体テストの実装について説明します。
 
 ## 前提条件 {#prerequisites}
 
-設定に必要なツールと手順を確認します。 [ローカル開発環境](overview.md#local-dev-environment).
+[ローカル開発環境](overview.md#local-dev-environment)を設定するために必要なツールや説明を確認します。
 
 _Java™ 8 と Java™ 11 の両方がシステムにインストールされている場合、VS Code テストランナーはテストの実行時に低い Java™ランタイムを選択し、テストが失敗する可能性があります。 これが発生した場合は、Java™ 8 をアンインストールします。_
 
@@ -35,16 +35,16 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 >
 > 前の章を正常に完了した場合は、プロジェクトを再利用して、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
-チュートリアルの構築元となるベースラインコードを確認します。
+チュートリアルの作成元となるベースラインコードをチェックアウトします。
 
-1. 以下を確認します。 `tutorial/unit-testing-start` ～から分岐する [GitHub](https://github.com/adobe/aem-guides-wknd)
+1. [GitHub](https://github.com/adobe/aem-guides-wknd)の `tutorial/unit-testing-start` ブランチをチェックアウトします。
 
    ```shell
    $ cd aem-guides-wknd
    $ git checkout tutorial/unit-testing-start
    ```
 
-1. Maven のスキルを使用して、ローカルのAEMインスタンスにコードベースをデプロイします。
+1. Maven スキルを使用して、ローカル AEM インスタンスにコードベースをデプロイします。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -52,49 +52,49 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
    >[!NOTE]
    >
-   > AEM 6.5 または 6.4 を使用している場合、 `classic` 任意の Maven コマンドに対するプロファイル。
+   > AEM 6.5 または 6.4 を使用している場合は、任意の Maven コマンドに `classic` プロファイルを追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-完成したコードは、 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) または、ブランチに切り替えて、コードをローカルでチェックアウトします。 `tutorial/unit-testing-start`.
+いつでも、完成したコードを [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) で確認したり、ブランチ `tutorial/unit-testing-start` に切り替えてローカルにチェックアウトしたりできます。
 
 ## 目的
 
 1. 単体テストの基本を理解します。
-1. AEMコードのテストに一般的に使用されるフレームワークとツールについて説明します。
-1. 単体テストを記述する際のAEMリソースのモッキングまたはシミュレーションのオプションについて説明します。
+1. AEM コードのテストに一般的に使用されるフレームワークとツールについて学びます。
+1. 単体テストを記述する際に AEM リソースのモック作成やシミュレーションを行うオプションについて理解します。
 
 ## 背景 {#unit-testing-background}
 
-このチュートリアルでは、 [単体テスト](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88) 署名コンポーネントの [Sling モデル](https://sling.apache.org/documentation/bundles/models.html) ( [カスタムAEMコンポーネントの作成](custom-component.md)) をクリックします。 単体テストは、Java™コードの期待される動作を検証する、Java™で記述されたビルド時のテストです。 各単体テストは通常小さく、期待される結果に対してメソッド（または作業単位）の出力を検証します。
+このチュートリアルでは、署名コンポーネントの [Sling モデル](https://sling.apache.org/documentation/bundles/models.html)（[カスタム AEM コンポーネントの作成](custom-component.md)で作成したもの）の[単体テスト](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88)を記述する方法を見ていきます。単体テストとは、Java™ コードの想定される動作を検証するために Java™ で記述されるビルド時テストです。通常、各単体テストは小規模で、想定される結果に対してメソッド（または作業単位）の出力を検証します。
 
-アドビはAEMのベストプラクティスを使用し、以下を採用しています。
+アドビでは、AEM のベストプラクティスを適用し、以下を使用します。
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito テストフレームワーク](https://site.mockito.org/)
-* [wcm.io テストフレームワーク](https://wcm.io/testing/) ( に基づく [Apache Sling Mocks](https://sling.apache.org/documentation/development/sling-mock.html))
+* [wcm.io テストフレームワーク](https://wcm.io/testing/)（[Apache Sling Mocks](https://sling.apache.org/documentation/development/sling-mock.html) を基に構築）
 
-## 単体テストとAdobeCloud Manager {#unit-testing-and-adobe-cloud-manager}
+## 単体テストと Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[AdobeCloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja) 単体テストの実行と [コードカバレッジレポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) を CI/CD パイプラインに統合して、AEMコードの単体テストのベストプラクティスを促進し、促進します。
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja) では、AEM コードの単体テストのベストプラクティスを推奨および促進するために、単体テストの実施と[コードカバレッジレポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)が CI／CD パイプラインに統合されています。
 
-コードの単体テストはあらゆるコードベースで有益ですが、Cloud Manager を使用している場合は、Cloud Manager で実行できる単体テストを提供して、コード品質のテストや報告機能を活用することが重要です。
+コードの単体テストはあらゆるコードベースで有益ですが、Cloud Manager を使用している場合は、Cloud Manager で実行できる単体テストを提供して、コード品質テストおよびレポートを活用することが重要です。
 
-## テスト Maven の依存関係を更新する {#inspect-the-test-maven-dependencies}
+## テスト Maven 依存関係の更新 {#inspect-the-test-maven-dependencies}
 
-最初の手順は、Maven の依存関係を調べて、テストの作成と実行をサポートすることです。 次の 4 つの依存関係が必要です。
+まず最初に、テストの記述と実行をサポートする Maven 依存関係を調べます。必要な依存関係は次の 4 つです。
 
 1. JUnit5
 1. Mockito テストフレームワーク
 1. Apache Sling Mocks
-1. AEM Mocks テストフレームワーク (io.wcm)
+1. AEM Mocks テストフレームワーク（io.wcm から提供）
 
-この **JUnit5**, **Mockito，および **AEM Mocks** テスト依存関係は、 [AEM Maven アーキタイプ](project-setup.md).
+**JUnit5**、**Mockito および **AEM Mocks** のテスト用依存関係は、[AEM Maven アーキタイプ](project-setup.md)を使用してセットアップする際に、プロジェクトに自動的に追加されます。
 
-1. これらの依存関係を表示するには、次の場所にある親リアクター POM を開きます。 **aem-guides-wknd/pom.xml**&#x200B;をクリックし、 `<dependencies>..</dependencies>` JUnit、Mockito、Apache Sling Mocks、AEM Mock Tests の依存関係を io.wcm で `<!-- Testing -->`.
-1. 以下を確認します。 `io.wcm.testing.aem-mock.junit5` が **4.1.0**:
+1. これらの依存関係を表示するには、親リアクター POM（**aem-guides-wknd/pom.xml**）を開いて `<dependencies>..</dependencies>` に移動すると、`<!-- Testing -->` の下で JUnit、Mockito、Apache Sling Mocks、AEM Mock Tests（io.wcm から提供）の依存関係を確認できます。
+1. `io.wcm.testing.aem-mock.junit5` が **4.1.0** に設定されていることを確認します。
 
    ```xml
    <dependency>
@@ -107,33 +107,33 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
    >[!CAUTION]
    >
-   > アーキタイプ **35** プロジェクトを次の形式で生成します。 `io.wcm.testing.aem-mock.junit5` version **4.1.8**. にダウングレードしてください **4.1.0** この章の残りの部分を追う
+   > アーキタイプ **35** では、`io.wcm.testing.aem-mock.junit5`バージョン **4.1.8** のプロジェクトが生成されます。**4.1.0** にダウングレードして、この章の残りの部分に従ってください。
 
-1. 開く **aem-guides-wknd/core/pom.xml** 対応するテストの依存関係が使用可能であることを表示します。
+1. **aem-guides-wknd/core/pom.xml** を開き、対応するテストの依存関係が使用可能であることを確認します。
 
-   内の並列ソースフォルダー **コア** プロジェクトには、単体テストとサポートするテストファイルが含まれます。 この **test** フォルダーはテストクラスをソースコードから分離しますが、ソースコードと同じパッケージ内にあるようにテストを動作させることができます。
+   **コア**&#x200B;プロジェクトの並列ソースフォルダーには、単体テストと、サポートするテストファイルが含まれます。この **test** フォルダーはテストクラスをソースコードから分離しますが、ソースコードと同じパッケージ内にあるようにテストを動作させることができます。
 
 ## JUnit テストの作成 {#creating-the-junit-test}
 
-単体テストでは、通常、1 対 1 を Java™クラスにマッピングします。 この章では、署名コンポーネントを支える Sling Model である **BylineImpl.java** 用に JUnit テストを記述します。
+単体テストは一般的に、Java™ クラスとの 1 対 1 のマッピングを行います。この章では、署名コンポーネントを支える Sling モデルである **BylineImpl.java** 用に JUnit テストを記述します。
 
 ![単体テスト用の src フォルダー](assets/unit-testing/core-src-test-folder.png)
 
-*単体テストが保存される場所。*
+*単体テストの保存場所。*
 
-1. 単体テストの作成 `BylineImpl.java` 新しい Java™クラスを `src/test/java` は、テストする Java™クラスの場所を反映する Java™パッケージフォルダー構造体です。
+1. テストする Java™クラスの場所を反映する Java™パッケージフォルダー構造内の `src/test/java` で新しい Java™クラスを作り、`BylineImpl.java` 向けの単体テストを作成します。
 
-   ![新しい BylineImplTest.java ファイルを作成します](assets/unit-testing/new-bylineimpltest.png)
+   ![新しいBylineImplTest.java ファイルの作成](assets/unit-testing/new-bylineimpltest.png)
 
-   テスト中なので
+   テスト中のため
 
    * `src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`
 
-   対応する単体テスト Java™クラスを次の場所に作成します。
+   対応する単体テスト Java™クラスを次の場所に作成します：
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-   この `Test` 単体テストファイルのサフィックス `BylineImplTest.java` 我々に許す慣例だ
+   この単体テストファイル `BylineImplTest.java` のサフィックス `Test` は命名規則によるもので、以下が可能になります
 
    1. テストファイルとして容易に識別できます _対象_ `BylineImpl.java`
    1. ただし、テストファイルを区別します _から_ 試験を受けているクラス `BylineImpl.java`
@@ -142,7 +142,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 ## BylineImplTest.java のレビュー {#reviewing-bylineimpltest-java}
 
-この時点で、JUnit テストファイルは空の Java™クラスです。
+この時点で、JUnit テストファイルは空の Java™ クラスです。
 
 1. ファイルを次のコードで更新します。
 
@@ -178,51 +178,51 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
    }
    ```
 
-1. 最初のメソッド `public void setUp() { .. }` JUnit の `@BeforeEach`：このクラスの各テストメソッドを実行する前に、JUnit テストランナーにこのメソッドを実行するように指示します。 これは、すべてのテストで必要な一般的なテスト状態を初期化する便利な場所です。
+1. 最初のメソッド `public void setUp() { .. }` には、JUnit の `@BeforeEach` で注釈がつけられます。これは、このクラスの各テストメソッドを実行する前に、JUnit テストランナーにこのメソッドを実行するように指示するものです。 これは、すべてのテストで必要となる一般的なテスト状態を初期化するのに便利な場所です。
 
-1. 以降のメソッドは、名前の前にが付いたテストメソッドです。 `test` 慣例によって、および `@Test` 注釈。 デフォルトでは、まだ実装されていないので、すべてのテストが失敗するように設定されています。
+1. 以降のメソッドは、命名規則によってプレフィックス `test` が付けられ、 `@Test` の注釈でマークされた名前のテストメソッドです。 まだ実装されていないため、デフォルトですべてのテストが失敗するように設定されています。
 
    まず、テストするクラスのパブリックメソッドごとに 1 つのテストメソッドから始めます。そのため、次のようにします。
 
    | BylineImpl.java |  | BylineImplTest.java |
    | ------------------|--------------|---------------------|
-   | getName() | がテスト対象 | testGetName() |
-   | getOccupations() | がテスト対象 | testGetOccupations() |
-   | isEmpty() | がテスト対象 | testIsEmpty() |
+   | getName() | 右記でテスト | testGetName() |
+   | getOccupations() | 右記でテスト | testGetOccupations() |
+   | isEmpty() | 右記でテスト | testIsEmpty() |
 
-   これらのメソッドは、必要に応じて拡張できます。詳しくは、この章で後述します。
+   これらのメソッドは必要に応じて拡張できます。詳しくはこの章で後述します。
 
-   この JUnit テストクラス（JUnit テストケースとも呼ばれます）を実行すると、各メソッドは `@Test` は、合格または不合格のどちらかを示すテストとして実行されます。
+   この JUnit テストクラス（別称：JUniit テストケース）が実行されている場合、`@Test` とマークされた各メソッドは、成功または失敗する可能性があるテストとして実行されます。
 
 ![生成された BylineImplTest](assets/unit-testing/bylineimpltest-stub-methods.png)
 
 *`core/src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`*
 
-1. JUnit テストケースを実行するには、 `BylineImplTest.java` ファイルとタップ **実行**.
-まだ実装されていないので、予想どおり、すべてのテストが失敗します。
+1. JUnit テストケースを実行するには、 `BylineImplTest.java` ファイルを右クリックして「**実行**」をタップ します。
+まだ実装されていないので、予想どおりすべてのテストが失敗します。
 
    ![junit テストとして実行](assets/unit-testing/run-junit-tests.png)
 
-   *BylineImplTests.java を右クリックし、「実行」を選択します。*
+   *BylineImplTests.java／実行を右クリックします。*
 
 ## BylineImpl.java のレビュー {#reviewing-bylineimpl-java}
 
-単体テストを記述する場合、次の 2 つの主なアプローチがあります。
+単体テストを作成する際の主なアプローチは次の 2 つです。
 
 * [TDD またはテスト駆動開発](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA)。実装を開発する直前に単体テストの増分を記述、テストを記述、実装を記述してテストを合格します。
 * 最初に実装をおこなう開発。動作するコードを最初に開発してから、そのコードを検証するテストを記述します。
 
-このチュートリアルでは、後者のアプローチを使用します（前の章で動作する **BylineImpl.java** を作成済みのため）。このため、パブリックメソッドの動作だけでなく、いくつかの実装の詳細についても確認および理解しておく必要があります。これは正しいテストでは入力と出力のみを考慮する必要があるので、正しいテストとは異なる場合がありますが、AEMで作業する場合、作業テストを構築するためには、様々な実装上の考慮事項を理解する必要があります。
+このチュートリアルでは、後者のアプローチを使用します（前の章で動作する **BylineImpl.java** を作成済みのため）。このため、パブリックメソッドの動作だけでなく、いくつかの実装の詳細についても確認および理解しておく必要があります。優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
 
 AEM における TDD には高度な専門知識が必要です。AEM 開発や AEM コードの単体テストを熟知した AEM 開発者が使用することで最大限の効果を発揮できます。
 
 ## AEM テストコンテキストの設定  {#setting-up-aem-test-context}
 
-AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM API に依存しているので、正しく実行するには、実行中のAEMのコンテキストが必要です。
+AEM で記述されるコードの大部分は JCR、Sling または AEM API に依存しているので、正常に実行するためには実行中の AEM のコンテキストが必要となります。
 
-単体テストは、実行中のAEMインスタンスのコンテキスト以外で、ビルド時に実行されるので、そのようなコンテキストはありません。 これを容易にするには、 [wcm.io のAEM Mocks](https://wcm.io/testing/aem-mock/usage.html) これらの API がを可能にするモックコンテキストを作成します。 _mostly_ AEMで実行しているかのように動作します。
+単体テストは実行中の AEM インスタンスのコンテキスト外にあるビルドで実施されるので、そのようなコンテキストがありません。これを促すために、[wcm.io の AEMContext](https://wcm.io/testing/aem-mock/usage.html) は、これらの API が、ほぼ AEM 内で実行しているかのように動作できるモックコンテキストを作成します。__
 
-1. を使用したAEMコンテキストの作成 **wcm.io** `AemContext` in **BylineImplTest.java** を使用して装飾された JUnit 拡張機能として追加する `@ExtendWith` から **BylineImplTest.java** ファイル。 拡張機能は、必要な初期化タスクとクリーンアップタスクをすべて処理します。 のクラス変数の作成 `AemContext` すべてのテストメソッドで使用できます。
+1. **BylineImplTest.java** で **wcm.io の** `AemContext`を使用して、`@ExtendWith` でデコレートされた JUnit 拡張機能として **BylineImplTest.java** ファイルに追加することで、AEM コンテキストを作成します。 拡張機能では、必要な初期化タスクとクリーンアップのタスクがすべて処理されます。 すべてのテストメソッドで使用できる `AemContext` のクラス変数を作成します。
 
    ```java
    import org.junit.jupiter.api.extension.ExtendWith;
@@ -236,18 +236,18 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
        private final AemContext ctx = new AemContext();
    ```
 
-   この変数 `ctx`は、一部のAEMおよび Sling の抽象概念を提供するモックAEMコンテキストを公開します。
+   この変数 `ctx` は、一部の AEM および Sling の抽象化するモック AEM コンテキストを公開します。
 
-   * BylineImpl Sling Model は、このコンテキストに登録されます
+   * BylineImpl Sling モデルはこのコンテキストに登録されます。
    * モック JCR コンテンツ構造はこのコンテキストで作成されます。
    * カスタム OSGi サービスはこのコンテキスト内で登録できます。
-   * SlingHttpServletRequest オブジェクト、様々なモック Sling およびAEM OSGi サービス（ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag など）など、様々な一般的に必要なモックオブジェクトとヘルパーを提供します。
-      * *これらのオブジェクトのすべてのメソッドが実装されているわけではありません。*
+   * 一般的に必要となる様々なモックオブジェクトおよびヘルパー（SlingHttpServletRequest オブジェクトなど）、様々なモック Sling および AEM OSGi サービス（ModelFactory、PageManager、ページ、テンプレート、ComponentManager、コンポーネント、TagManager、タグなど）を提供します。
+      * *これらのオブジェクトのすべてのメソッドが実装されるわけではありません。*
    * [その他](https://wcm.io/testing/aem-mock/usage.html)
 
-   この **`ctx`** オブジェクトは、モックコンテキストのほとんどのエントリポイントとして機能します。
+   **`ctx`** オブジェクトは、ほとんどのモックコンテキストのエントリポイントとして機能します。
 
-1. 内 `setUp(..)` メソッド。各 `@Test` メソッドで、一般的なモックテスト状態を定義します。
+1. 各 `@Test` メソッドの前に実行される `setUp(..)` メソッドで、モックテストの一般的な状態を定義します。
 
    ```java
    @BeforeEach
@@ -257,13 +257,13 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   * **`addModelsForClasses`** テストする Sling モデルをモックAEM Context に登録し、でインスタンス化できるようにします。 `@Test` メソッド。
-   * **`load().json`** は、リソース構造をモックコンテキストに読み込み、コードは、実際のリポジトリで提供された場合と同様に、これらのリソースを操作できます。 ファイル **`BylineImplTest.json`** のリソース定義は、**/content** の下でモック JCR コンテキストに読み込まれます。
-   * **`BylineImplTest.json`** がまだないので、作成してテストに必要な JCR リソース構造を定義しましょう。
+   * **`addModelsForClasses`** は、テスト対象の Sling モデルをモック AEM コンテキストに登録して、`@Test` メソッドでインスタンス化できるようにします。
+   * **`load().json`** は、リソース構造をモックコンテキストに読み込み、コードがこれらのリソースを、実際のリポジトリで提供されたかのように操作できるようになります。ファイル **`BylineImplTest.json`** のリソース定義は、**/content** 下のモック JCR コンテキストに読み込まれます。
+   * **`BylineImplTest.json`** がまだ存在しないので、作成して、テストに必要な JCR リソース構造を定義します。
 
-1. モックリソース構造を表す JSON ファイルは、の下に保存されます。 **core/src/test/resources** JUnit Java™テストファイルと同じパッケージパスに従う
+1. モックリソース構造を表す JSON ファイルは、JUnit Java™ テストファイルと同じパッケージパスに従って、**core/src/test/resources** に保存されます。
 
-   に JSON ファイルを作成します。 `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` 名前付き **BylineImplTest.json** 次の内容を含む
+   次の内容を含んだ **BylineImplTest.json** という名前の JSON ファイルを `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` に作成します。
 
    ```json
    {
@@ -276,17 +276,17 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
 
    ![BylineImplTest.json](assets/unit-testing/bylineimpltest-json.png)
 
-   この JSON は、署名コンポーネントの単体テスト用のモックリソース（JCR ノード）を定義します。 この時点で、JSON には、署名コンポーネントコンテンツリソースを表すのに必要な最小限のプロパティのセット、つまり `jcr:primaryType` および `sling:resourceType`.
+   この JSON は、署名コンポーネントの単体テストのモックリソース（JCR ノード）を定義します。この時点で、JSON には署名コンポーネントのコンテンツリソースを表すのに必要なプロパティの最小セットである `jcr:primaryType` と `sling:resourceType` が含まれています。
 
-   単体テストを扱う際の一般的なルールは、各テストを満たすのに必要な最小限のモックコンテンツ、コンテキスト、コードのセットを作成することです。 テストを記述する前に完全なモックコンテキストを構築したいと思わないでください。不要なアーティファクトが生じることがよくあります。
+   単体テストで作業する際の一般的なルールは、各テストに必要なモックコンテキスト、コンテンツおよびコードの最小限のセットを作成することです。テストを記述する前に完全なモックコンテキストを作成したくなりますが、結果的に不要なアーティファクトが生成されることが多いので、避けてください。
 
-   今、 **BylineImplTest.json**、 `ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` が実行されると、モックリソース定義がコンテキストのパスに読み込まれます。 **/content.**
+   これで **BylineImplTest.json** が存在するので、`ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")` が実行されると、モックリソース定義がパス **/content.** のコンテキストに読み込まれます。
 
 ## getName() のテスト {#testing-get-name}
 
-基本的なモックコンテキストの設定が完了したところで、**BylineImpl&#39;s getName()** の最初のテストを作成しましょう。このテストでは、メソッドが **getName()** リソースの「 」に保存されている、正しく作成された名前を返します。**name&quot;** プロパティ。
+基本的なモックコンテキストの設定が完了したところで、**BylineImpl&#39;s getName()** の最初のテストを作成しましょう。このテストでは、リソースの「**name**」プロパティに保存されている作成済みの正しい名前をメソッド **getName()** が返すことを確認する必要があります。
 
-1. 次のように、**BylineImplTest.java** で **testGetName**() メソッドを更新します。
+1. **BylineImplTest.java** の **testGetName**() メソッドを次のように更新します。
 
    ```java
    import com.adobe.aem.guides.wknd.core.models.Byline;
@@ -304,17 +304,17 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   * **`String expected`** 期待値を設定します。 これを「**ジェーン完了**&quot;.
-   * **`ctx.currentResource`** コードを評価するモックリソースのコンテキストを設定します。そのため、これはに設定されます。 **/content/byline** モック署名コンテンツリソースが読み込まれる場所と同じです。
-   * **`Byline byline`** モック Request オブジェクトから適応させて署名 Sling モデルをインスタンス化します。
-   * **`String actual`** は、テスト中のメソッドを呼び出します。 `getName()`署名 Sling Model オブジェクトに対して、
-   * **`assertEquals`** は、期待される値を、署名 Sling Model オブジェクトが返す値と一致させます。 これらの値が等しくない場合、テストは失敗します。
+   * **`String expected`** は、想定される値を設定します。ここでは、これを「**Jane Done**」に設定します。
+   * **`ctx.currentResource`** は、コードを評価する際に対照とするモックリソースのコンテキストを設定します。そのため、これはモック署名コンテンツリソースの読み込み先となる **/content/byline** に設定されます。
+   * **`Byline byline`** は、モックリクエストオブジェクトから適応させて、署名 Sling モデルをインスタンス化します。
+   * **`String actual`** は、署名 Sling モデルオブジェクト上で、テスト対象であるメソッド `getName()` を呼び出します。
+   * **`assertEquals`** は、想定される値が、署名 Sling モデルオブジェクトから返される値と一致するとアサートします。これらの値が等しくない場合、テストは失敗します。
 
-1. テストを実行すると、 `NullPointerException`.
+1. テストを実行しますが、`NullPointerException` で失敗します。
 
-   このテストは、 `name` プロパティを設定します。これはテストが失敗する原因となりますが、テストの実行がその時点に達していない場合に失敗します。 このテストは、 `NullPointerException` 署名オブジェクト自体に対して
+   モック JSON で `name` プロパティを定義していないからといって、このテストが失敗するわけではありません。モック JSON はテスト失敗の原因になりますが、このテストはまだそこまで実行されていません。このテストは、署名オブジェクト自体での `NullPointerException` が原因で失敗します。
 
-1. 内 `BylineImpl.java`、 `@PostConstruct init()` 例外をスローして Sling Model のインスタンス化を防ぎ、Sling Model オブジェクトが null になるようにします。
+1. `BylineImpl.java` では、`@PostConstruct init()` が例外をスローすると、Sling モデルをインスタンス化できなくなるので、その Sling モデルオブジェクトが null になります。
 
    ```java
    @PostConstruct
@@ -323,11 +323,11 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   ModelFactory OSGi サービスは `AemContext` （Apache Sling Context を介して）、以下を含むすべてのメソッドが実装されているわけではありません。 `getModelFromWrappedRequest(...)` BylineImpl の `init()` メソッド。 その結果、 [AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html) — 用語の原因 `init()` 失敗し、その結果としての適応が `ctx.request().adaptTo(Byline.class)` は null オブジェクトです。
+   ModelFactory OSGi サービスは `AemContext` 経由（Apache Sling Context 経由）で提供されますが、BylineImpl の `init()` メソッドで呼び出される `getModelFromWrappedRequest(...)` を含め、すべてのメソッドが実装されているわけではないということがわかりました。この結果、[AbstractMethodError](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AbstractMethodError.html) が返されることになり、それが原因で `init()` が失敗し、`ctx.request().adaptTo(Byline.class)` の適応結果が null オブジェクトになります。
 
-   指定したモックはコードを受け入れられないので、モックコンテキストを自分で実装する必要があります。そのために、Mockito を使用して、モック Image オブジェクトを返すモック ModelFactory オブジェクトを作成できます。 `getModelFromWrappedRequest(...)` が呼び出されます。
+   提供されているモックではこの例のコードに対応できないので、自分でモックコンテキストを実装する必要があります。そのために、Mockito を使用して、`getModelFromWrappedRequest(...)` が呼び出されたときにモック Image オブジェクトを返すモック ModelFactory オブジェクトを作成します。
 
-   署名 Sling モデルをインスタンス化する場合でも、このモックコンテキストを配置する必要があるので、これを `@Before setUp()` メソッド。 また、 `MockitoExtension.class` から `@ExtendWith` 上の注釈 **BylineImplTest** クラス。
+   署名 Sling モデルをインスタンス化するためでさえ、このモックコンテキストを適切に用意する必要があるので、`@Before setUp()` メソッドに追加します。また、**BylineImplTest** クラスの上の `@ExtendWith` 注釈に `MockitoExtension.class` を追加する必要もあります。
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -379,21 +379,21 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** は、テストケースクラスを [Mockito JUnit Jupiter 拡張機能](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) これにより、 @Mock注釈を使用して、クラスレベルでモックオブジェクトを定義できます。
-   * **`@Mock private Image`** は、型のモックオブジェクトを作成します `com.adobe.cq.wcm.core.components.models.Image`. 必要に応じて、クラスレベルで定義します。 `@Test` メソッドでは、必要に応じて動作を変更できます。
-   * **`@Mock private ModelFactory`** は、型が ModelFactory のモックオブジェクトを作成します。 これは純粋な Mockito モックであり、メソッドが実装されていません。 必要に応じて、クラスレベルで定義します。 `@Test`メソッドでは、必要に応じて動作を変更できます。
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** 次の場合にモック動作を登録 `getModelFromWrappedRequest(..)` が、モック ModelFactory オブジェクトで呼び出されます。 で定義された結果 `thenReturn (..)` は、モック Image オブジェクトを返します。 この動作は、次の場合にのみ呼び出されます。最初のパラメーターは `ctx`のリクエストオブジェクト、2 番目のパラメーターは任意の Resource オブジェクトで、3 番目のパラメーターはコアコンポーネントの Image クラスである必要があります。 すべてのリソースを受け入れます。これは、テスト全体を通じて、 `ctx.currentResource(...)` を **BylineImplTest.json**. なお、 **lenient()** 厳密性。後で ModelFactory のこの動作を上書きする必要があるためです。
-   * **`ctx.registerService(..)`** は、最も高いサービスランキングを持つモック ModelFactory オブジェクトを AemContext に登録します。 BylineImpl で使用される ModelFactory のため、これは必須です `init()` が `@OSGiService ModelFactory model` フィールドに入力します。 AemContext を挿入するため **ur** への呼び出しを処理するモックオブジェクト `getModelFromWrappedRequest(..)`を使用する場合は、そのタイプの最上位の Service(ModelFactory) として登録する必要があります。
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** は、テストケースクラスを [Mockito JUnit Jupiter 拡張機能](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html)で実行するようにマークし、@Mock 注釈を使用してモックオブジェクトをクラスレベルで定義できるようにします。
+   * **`@Mock private Image`** はタイプ `com.adobe.cq.wcm.core.components.models.Image` のモックオブジェクトを作成します。これはクラスレベルで定義されているので、必要に応じて、`@Test` メソッドで動作を変更できます。
+   * **`@Mock private ModelFactory`** は ModelFactory タイプのモックオブジェクトを作成します。これは純粋な Mockito モックであり、実装されているメソッドはありません。これはクラスレベルで定義されているので、必要に応じて、`@Test` メソッドで動作を変更できます。
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** は、モック ModelFactory オブジェクトで `getModelFromWrappedRequest(..)` が呼び出された場合のモック動作を登録します。`thenReturn (..)` に定義されている結果は、モック Image オブジェクトを返すことです。この動作が呼び出されるのは、最初のパラメータが `ctx` のリクエストオブジェクトと等しく、2 番目のパラメータが任意の Resource オブジェクトであり、3 番目のパラメータがコアコンポーネントの Image クラスである場合のみです。テスト全体を通して、`ctx.currentResource(...)` を **BylineImplTest.json** で定義されている様々なモックリソースに設定しているので、どのような Resource でも使用できます。なお、後で ModelFactory の該当する動作をオーバーライドする必要があるので、**lenient()** の厳密性を追加します。
+   * **`ctx.registerService(..)`。** は、モック ModelFactory オブジェクトを最高のサービスランキングで AemContext に登録します。BylineImpl の `init()` で使用される ModelFactory は `@OSGiService ModelFactory model` フィールドを通じて挿入されるので、これが必要になります。AemContext で `getModelFromWrappedRequest(..)` への呼び出しを処理する&#x200B;**今回の**&#x200B;モックオブジェクトを挿入するには、そのタイプ（ModelFactory）の最もランキングの高いサービスとして登録する必要があります。
 
-1. テストを再実行すると、再び失敗しますが、今回は失敗の理由が明確になります。
+1. テストを再度実行すると再び失敗しますが、今回は失敗の理由は明白です。
 
-   ![テスト名の失敗のアサーション](assets/unit-testing/testgetname-failure-assertion.png)
+   ![testGetName の失敗のアサーション](assets/unit-testing/testgetname-failure-assertion.png)
 
    *アサーションによる testGetName() の失敗*
 
-   **AssertionError** が返されます。これはテストでのアサート条件が失敗し、**期待値は &quot;Jane Doe&quot;** で、**実際の値が null** なことを示します。**BylineImplTest.json** のモック **/content/byline** リソース定義に &quot;**name**&quot; プロパティが追加されていないので、この結果は当然です。そこで、これを追加します。
+   **AssertionError** が返されます。これはテストでのアサート条件が失敗し、**期待値は &quot;Jane Doe&quot;** で、**実際の値が null** であることを示します。**BylineImplTest.json** のモック&#x200B;**/content/byline** リソース定義に「**name**」プロパティが追加されていないので、この結果は当然です。そこで、これを追加します。
 
-1. 更新 **BylineImplTest.json** 定義する `"name": "Jane Doe".`
+1. **BylineImplTest.json** を更新して `"name": "Jane Doe".` を定義します
 
    ```json
    {
@@ -405,18 +405,18 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-1. テストを再実行し、 **`testGetName()`** 今度は通り過ぎだ！
+1. テストを再実行すると、今回は **`testGetName()`** が成功します。
 
    ![テスト名の合格](assets/unit-testing/testgetname-pass.png)
 
 
 ## getOccupations() のテスト {#testing-get-occupations}
 
-成功です。最初のテストに合格しました！ 次に、テストに進みましょう `getOccupations()`. モックコンテキストの初期化は、 `@Before setUp()`メソッド、すべての `@Test` このテストケースのメソッド。次を含みます。 `getOccupations()`.
+成功です。最初のテストは成功しました。先へ進み、`getOccupations()` をテストします。モックコンテキストの初期化が `@Before setUp()` メソッドで行われたため、`getOccupations()` を含むこのテストケースのすべての `@Test` メソッドで利用できるようになります。
 
 このメソッドは、職業プロパティに保存されている職業のリストをアルファベット順（降順）に並べ替えて返します。
 
-1. 更新 **`testGetOccupations()`** 次のように指定します。
+1. **`testGetOccupations()`** を次のように更新します。
 
    ```java
    import java.util.List;
@@ -439,15 +439,15 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   * **`List<String> expected`** 期待される結果を定義します。
-   * **`ctx.currentResource`** /content/byline にあるモックリソース定義に対するコンテキストを評価する現在のリソースを設定します。 これにより、モックリソースのコンテキストで **BylineImpl.java** が実行されるようにします。
-   * **`ctx.request().adaptTo(Byline.class)`** モック Request オブジェクトから適応させて署名 Sling モデルをインスタンス化します。
-   * **`byline.getOccupations()`** は、テスト中のメソッドを呼び出します。 `getOccupations()`署名 Sling Model オブジェクトに対して、
-   * **`assertEquals(expected, actual)`** は、期待されるリストを実際のリストと同じにアサートします。
+   * **`List<String> expected`**&#x200B;は期待される結果を定義します。
+   * **`ctx.currentResource`** は現在のリソースを設定し、/content/byline でモックリソース定義に対してコンテキストを評価します。これにより、モックリソースのコンテキストで **BylineImpl.java** が実行されるようにします。
+   * **`ctx.request().adaptTo(Byline.class)`** は、Byline Sling Model をモックリクエストオブジェクトから適応させてインスタンス化します。
+   * **`byline.getOccupations()`**&#x200B;は署名 Sling Model オブジェクトでテストしているメソッド `getOccupations()` を呼び出します。
+   * **`assertEquals(expected, actual)`** は、期待されているリストが実際のリストと同じであるとアサートします。
 
-1. 次のように覚えておいてください。 **`getName()`** 上に **BylineImplTest.json** 職業を定義していないので、実行するとこのテストは失敗します。 `byline.getOccupations()` 空のリストを返します。
+1. 上記の **`getName()`**&#x200B;と同様に、**BylineImplTest.json** は職業を定義しません。`byline.getOccupations()` は空のリストを返すため、このテストを実行すると失敗します。
 
-   更新 **BylineImplTest.json** 職業のリストを含め、それらをアルファベット以外の順序で設定し、テストで、職業がアルファベット順に並べ替えられていることを検証する **`getOccupations()`**.
+   **BylineImplTest.json** を更新して職業のリストを含めます。すると、**`getOccupations()`** によって職業がアルファベット順に並べ替えられていることをテストで検証できるように、このリストはアルファベット順以外に設定されます。
 
    ```json
    {
@@ -468,18 +468,18 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
 
 ## isEmpty() のテスト {#testing-is-empty}
 
-最後にテストしたメソッド **`isEmpty()`**.
+最後のメソッドは **`isEmpty()`** のテストです。
 
-テスト `isEmpty()` は、様々な条件でのテストが必要なので、興味深いものです。 レビュー中 **BylineImpl.java**&#39;s `isEmpty()` メソッドは、次の条件をテストする必要があります。
+`isEmpty()` のテストは、様々な条件でのテストが必要なので、興味深いものです。 **BylineImpl.java** の `isEmpty()` メソッドをレビューするには、次の条件をテストする必要があります。
 
 * 名前が空のときに true を返す。
 * 職業が null または空のときに true を返す。
 * 画像が空または src URL がない場合 true を返す。
-* 名前、職業、および Image（  src URL) が存在する
+* 名前、職業、および Image（src URL) が存在する
 
-この場合、テストメソッドを作成し、それぞれが特定の条件と新しいモックリソース構造をでテストする必要があります。 `BylineImplTest.json` を使用して、これらのテストを実行します。
+これにより、`BylineImplTest.json` で特定の条件や新しいモックリソース構造をテストする新しいテストメソッドを作成して、これらのテストを実施する必要があります。
 
-このチェックでは、次の場合にテストをスキップできました `getName()`, `getOccupations()` および `getImage()` は空です。この状態の期待される動作は `isEmpty()`.
+`getName()`、`getOccupations()` および `getImage()` が空の場合、そのステートの期待される動作が `isEmpty()` 経由でテストされるので、このチェックによってテストをスキップできます。
 
 1. 最初のテストは、プロパティが設定されていない、まったく新しいコンポーネントの条件をテストします。
 
@@ -500,11 +500,11 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   **`"empty": {...}`** 「empty」という名前で、 `jcr:primaryType` および `sling:resourceType`.
+   **`"empty": {...}`** は、`jcr:primaryType` と `sling:resourceType` のみを持つ「empty」という名前の新しいリソースを定義します。
 
-   読み込みを記憶する `BylineImplTest.json` into `ctx` 各テストメソッドを `@setUp`したがって、この新しいリソース定義は、次の場所のテストですぐに使用できます。 **/content/empty.**
+   `@setUp` での各テストメソッドの実行前に、`BylineImplTest.json` を `ctx` に読み込みます。そのため、新しいリソース定義は、**/content/empty** のテストですぐに利用できるようになります。
 
-1. 更新 `testIsEmpty()` 次のように、現在のリソースを新しい&#x200B;**空**&quot;モックリソース定義。
+1. `testIsEmpty()` を次のように更新し、現在のリソースを新しい「**empty**」というモックリソース定義に設定します。
 
    ```java
    @Test
@@ -518,9 +518,9 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
 
    テストを実行し、成功することを確認します。
 
-1. 次に、必要なデータポイント（名前、職業、または画像）のいずれかが空の場合に、そのデータポイントを確実に使用するメソッドのセットを作成します。 `isEmpty()` は true を返します。
+1. 次に、必要なデータポイント（名前、職業、または画像）が空の場合、`isEmpty()` が true を返すメソッドのセットを作成します。
 
-   各テストで、個別のモックリソース定義が使用され、更新されます。 **BylineImplTest.json** と、 **without-name** および **職業のない**.
+   各テストで、個別のモックリソース定義が使用され、**without-name** および **without-occupations** の追加リソース定義を使用して **BylineImplTest.json** を更新します。
 
    ```json
    {
@@ -547,7 +547,7 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   次のテスト方法を作成して、これらの各状態をテストします。
+   次のテストメソッドを作成し、これらのステートをそれぞれテストします。
 
    ```java
    @Test
@@ -602,17 +602,17 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-   **`testIsEmpty()`** は、空のモックリソース定義に対してテストし、 `isEmpty()` が true の場合は除外されます。
+   **`testIsEmpty()`** は、空のモックリソース定義に対してテストし、`isEmpty()` が true であるとアサートします。
 
-   **`testIsEmpty_WithoutName()`** は、職業を持つが名前を持たないモックリソース定義に対してテストします。
+   **`testIsEmpty_WithoutName()`** は、職業を持つが名前がないモックリソース定義に対してテストします。
 
-   **`testIsEmpty_WithoutOccupations()`** は、名前を持つが職業がないモックリソース定義に対してテストします。
+   **`testIsEmpty_WithoutOccupations()`** は、名前を持つが職業を持たないモックリソース定義に対してテストします。
 
-   **`testIsEmpty_WithoutImage()`** は、名前と職業を持つモックリソース定義に対してテストを行い、モック画像が null に戻るように設定します。 なお、 `modelFactory.getModelFromWrappedRequest(..)`で定義された動作 `setUp()` を指定して、この呼び出しによって返される画像オブジェクトが null であることを確認します。 Mockito stubs 機能は厳密で、コードの重複は避けます。 したがって、モックを **`lenient`** 設定を使用して、 `setUp()` メソッド。
+   **`testIsEmpty_WithoutImage()`** は、名前と職業でモックリソース定義に対してテストし、モック画像が null を返すよう設定します。なお、`setUp()` で定義された動作 `modelFactory.getModelFromWrappedRequest(..)` をオーバーライドして、この呼び出しによって返される画像オブジェクトが null になるようにします。 Mockito のスタブ機能は厳密なため、コードの重複は避けます。 したがって、**`lenient`** 設定を使用してモックを設定し、`setUp()` メソッドでの動作をオーバーライドすることを明示的に示します。
 
-   **`testIsEmpty_WithoutImageSrc()`** は、名前と職業を持つモックリソース定義に対してテストを行いますが、で空白の文字列を返すようにモック画像を設定します。 `getSrc()` が呼び出されます。
+   **`testIsEmpty_WithoutImageSrc()`** は、名前と職業でモックリソース定義をテストし、`getSrc()` を呼び出すと空白の文字列を返すようモック画像を設定します。
 
-1. 最後に、コンポーネントが正しく設定されている場合、**isEmpty()** が false を返すようテストを記述します。この条件では、再利用が可能です **/content/byline** これは、完全に設定された署名コンポーネントを表します。
+1. 最後に、コンポーネントが正しく設定されている場合、**isEmpty()** が false を返すようテストを記述します。この条件の場合は、完全に設定された署名コンポーネントを表す **/content/byline** を再利用できます。
 
    ```java
    @Test
@@ -626,19 +626,19 @@ AEM用に記述されたほとんどのコードは、JCR、Sling、またはAEM
    }
    ```
 
-1. 次に、BylineImplTest.java ファイルのすべての単体テストを実行し、Java™テストレポートの出力を確認します。
+1. 次に、BylineImplTest.java ファイルのすべての単体テストを実行し、Java™ テストレポートの出力を確認します。
 
 ![すべてのテストが合格](./assets/unit-testing/all-tests-pass.png)
 
 ## ビルドの一部として単体テストを実行する {#running-unit-tests-as-part-of-the-build}
 
-単体テストが実行され、Maven ビルドの一部として合格する必要があります。 これにより、アプリケーションがデプロイされる前に、すべてのテストが正常に合格するようになります。 パッケージやインストールなどの Maven 目標を実行すると、が自動的に呼び出され、プロジェクト内のすべての単体テストに合格する必要があります。
+単体テストは、Maven ビルドの一部として実行して成功する必要があります。これにより、アプリケーションをデプロイする前にすべてのテストが成功することを確認します。パッケージやインストールなどの Maven のゴールを実行すると、テストが自動的に呼び出され、プロジェクトのすべての単体テストで成功する必要があります。
 
 ```shell
 $ mvn package
 ```
 
-![mvn パッケージの成功](assets/unit-testing/mvn-package-success.png)
+![mvn パッケージ成功](assets/unit-testing/mvn-package-success.png)
 
 ```shell
 $ mvn package
@@ -648,6 +648,6 @@ $ mvn package
 
 ![mvn パッケージ失敗](assets/unit-testing/mvn-package-fail.png)
 
-## コードの確認 {#review-the-code}
+## コードのレビュー {#review-the-code}
 
-で完成したコードを表示する [GitHub](https://github.com/adobe/aem-guides-wknd) または、Git ブランチのローカルのにコードを確認してデプロイします。 `tutorial/unit-testing-solution`.
+完成したコードを [GitHub](https://github.com/adobe/aem-guides-wknd) で表示するか、Git ブランチ `tutorial/unit-testing-solution` でローカルにコードをデプロイしてレビューします。 
