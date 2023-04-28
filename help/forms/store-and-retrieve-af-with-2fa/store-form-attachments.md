@@ -1,27 +1,28 @@
 ---
-title: フォームの添付ファイルの保存
-description: フォームの添付ファイルを抽出し、CRXリポジトリの新しい場所に保存します。
-feature: アダプティブフォーム
+title: フォーム添付ファイルの保存
+description: フォームの添付ファイルを抽出して、CRX リポジトリ内の新しい場所に保存します。
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6537
 thumbnail: 6537.jpg
-topic: 開発
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
-workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 1%
+exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
+source-wordcount: '186'
+ht-degree: 100%
 
 ---
 
-# フォームの添付ファイルの保存
+# フォーム添付ファイルの保存
 
-アダプティブフォームに添付ファイルを追加すると、CRXリポジトリ内の一時的な場所に添付ファイルが保存されます。 このユースケースが機能するには、フォームの添付ファイルをCRXリポジトリの新しい場所に保存する必要があります。
+アダプティブフォームに添付ファイルを追加すると、添付ファイルは CRX リポジトリ内の一時的な場所に保存されます。 このユースケースが機能するには、CRX リポジトリ内の新しい場所にフォームの添付ファイルを保存する必要があります。
 
-OSGiサービスは、フォームの添付ファイルをCRXリポジトリの新しい場所に保存するために作成されます。 CRX内の添付ファイルの新しい場所を使用して新しいファイルマップが作成され、呼び出し元のアプリケーションに戻ります。
-次に、サーブレットに送信されるFileMapを示します。 キーはアダプティブフォームフィールドで、値は添付ファイルの一時的な場所です。 このサーブレットでは、添付ファイルを抽出し、AEMリポジトリの新しい場所に保存し、新しい場所でFileMapを更新します
+OSGi サービスを作成して、CRX リポジトリ内の新しい場所にフォームの添付ファイルを保存します。 CRX 内の添付ファイルの新しい場所を使用して新しいファイルマップが作成され、呼び出し元のアプリケーションに返されます。
+サーブレットに送信される FileMap を以下に示します。 キーはアダプティブフォームフィールドで、値は添付ファイルの一時的な場所です。 このサーブレットでは、添付ファイルを抽出して AEM リポジトリ内の新しい場所に保存し、その新しい場所を FileMap に反映させます。
 
 ```java
 {
@@ -30,7 +31,7 @@ OSGiサービスは、フォームの添付ファイルをCRXリポジトリの�
 }
 ```
 
-次のコードは、要求から添付ファイルを抽出し、**/content/afattachments**&#x200B;フォルダーに保存するコードです
+リクエストから添付ファイルを抽出して **/content/afattachments** フォルダーに保存するコードを以下に示します。
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
@@ -71,7 +72,7 @@ public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest req
 }
 ```
 
-これは、新しいFileMapで、フォームの添付ファイルの更新後の場所です
+これは、フォームの添付ファイルの場所が更新された新しい FileMap です。
 
 ```java
 {
