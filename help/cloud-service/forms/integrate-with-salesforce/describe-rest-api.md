@@ -1,6 +1,6 @@
 ---
-title: Salesforce REST APIを記述するSwaggerファイルを作成します。
-description: Swaggerファイルは、APIエンドポイントと、入力および出力パラメーターを定義します
+title: Salesforce REST API を記述するための Swagger ファイルの作成
+description: Swagger ファイルは、API エンドポイントと、入力および出力パラメーターを定義します。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,16 +12,16 @@ kt: 7147
 thumbnail: 331754.jpg
 exl-id: e406fe4d-f0b6-4e5d-9e18-c28d30a456c7
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Swaggerファイルの作成
+# Swagger ファイルの作成
 
-[OPEN API 2.0仕様](https://swagger.io/docs/specification/2-0/basic-structure/)を使用したSalesforce REST APIの説明
+[OPEN API 2.0 仕様](https://swagger.io/docs/specification/2-0/basic-structure/)を使用した Salesforce REST API について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331754?quality=12&learn=on)
 
-Swaggerファイルは[こちら](assets/sfdc-rest-swagger.zip)からダウンロードできます。
+Swagger ファイルは[こちら](assets/sfdc-rest-swagger.zip)からダウンロードできます。 
