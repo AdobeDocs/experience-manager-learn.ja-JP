@@ -1,6 +1,6 @@
 ---
-title: Workfront for AEM拡張コネクタの詳細設定とワークフロー
-description: Workfront for AEM enhanced connector の詳細設定と、AEMとWorkfrontの間のデータ同期を管理するためにAEMの高度なワークフローとランチャーを設定する方法について説明します。
+title: Workfront for AEM 拡張コネクタの詳細設定とワークフロー
+description: Workfront for AEM 拡張コネクタの詳細設定と、AEM で高度なワークフローとランチャーを設定して、AEM と Workfront 間のデータの同期を管理する方法について説明します。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -11,18 +11,18 @@ hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 7d44e1b7-7216-431d-b866-6adcc8673d53
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 詳細設定とワークフロー
 
-![AEM Experts Series](./assets/banner.png)
+![AEM エキスパートシリーズ](./assets/banner.png)
 
-Workfront for AEM enhanced connector の詳細設定と、AEMとWorkfrontの間のデータ同期を管理するためにAEMの高度なワークフローとランチャーを設定する方法について説明します。
+Workfront for AEM 拡張コネクタの詳細設定と、AEM で高度なワークフローとランチャーを設定して、AEM と Workfront 間のデータの同期を管理する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340397?quality=12&learn=on)
 
-_パート 4 / a [Workfront for Enhanced connector に関する 4 部構成のエキスパートシリーズ](./overview.md)_
+_[Workfront for Experience Manager 拡張コネクタに関する 4 部構成のエキスパートシリーズ](./overview.md)_&#x200B;の第 4 部
