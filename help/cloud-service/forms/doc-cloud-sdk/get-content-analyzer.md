@@ -1,6 +1,6 @@
 ---
-title: Content Analyzerの作成
-description: REST呼び出しへの入力パラメーターに関する情報を含むJSON部分を作成します。
+title: コンテンツアナライザーの作成
+description: REST 呼び出しへの入力パラメーターに関する情報を含む JSON パーツを作成します。
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -11,23 +11,23 @@ thumbnail: 7836.jpg
 kt: 7836
 exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '58'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Analyzerリクエストの作成
+# アナライザーリクエストの作成
 
-以下を定義するJSONフラグメントを作成します。
+以下を定義する JSON フラグメントを作成します。
 
-+ 入力パラメーターとして使用します。
++ 入力
 + パラメーター
-+ output.
++ 出力
 
-この[フォームパラメータの詳細は、こちらを参照してください。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+この[フォームパラメーターの詳細は、こちらから入手できます](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)。
 
-以下のサンプルコードは、すべてのOffice 365ドキュメントタイプのJSONフラグメントを生成します。
+以下に示すサンプルコードは、すべての Office 365 ドキュメントタイプの JSON フラグメントを生成します。
 
 ```java
 package com.aemforms.doccloud.core.impl;
