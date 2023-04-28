@@ -1,36 +1,36 @@
 ---
-title: ガイドタイトル
-seo-title: seoタイトル
+title: ガイドのタイトル
+seo-title: seo title
 description: ガイドの説明
 seo-description: seo-description
 source-git-commit: f6b1af99eb9eb5602234c89ea25f1a7d03d64cc0
-workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 4%
+workflow-type: ht
+source-wordcount: '105'
+ht-degree: 100%
 
 ---
 
 
 # 概要 {#overview}
 
-このユーザーガイドが中心とする製品の1 ～ 2文の概要。 このユーザーガイドには、*xyz*&#x200B;の様々な機能に関するビデオとチュートリアルが含まれています。
+このユーザーガイドの中心となる製品を 1～2 文で表す概要です。 このユーザーガイドには、*xyz* の多くの機能に関するビデオとチュートリアルが含まれています。
 
 ## 新機能
 
-* **[新機能ビデオ（ビデオ）](README.md)**
+* **[新機能のビデオ（ビデオ）](README.md)**
 
    <br>
-   *このクールな新機能について説明します。*
+   *この優れた新機能について学びます。*
 
-* **[新機能ビデオ（ビデオ）](README.md)**
-
-   <br>
-   *このクールな新機能について説明します。*
-
-* **[新記事（記事）](README.md)**
+* **[新機能のビデオ（ビデオ）](README.md)**
 
    <br>
-   *機能xyzについて詳しくは、ここをクリックしてください。*
+   *この優れた新機能について学びます。*
+
+* **[新しい記事（記事）](README.md)**
+
+   <br>
+   *ここをクリックして、機能 xyz の詳細をご覧ください。*
 
 ## スタッフのおすすめ
 
@@ -38,41 +38,41 @@ ht-degree: 4%
 <tr>
   <td>
     <a href="#">
-      <img alt="400 x 225 px" src="myimage.png" />
+      <img alt="400 X 225px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>イネーブルメントコンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ 1</strong>
     </a>
     </div>
     <p>
-    <em>イネーブルメントコンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明。</em>
     <p>
   </td>
    <td>
     <a href="#">
-      <img alt="400 x 225 px" src="myimage.png" />
+      <img alt="400 X 225px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>イネーブルメントコンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ 1</strong>
     </a>
     </div>
     <p>
-    <em>イネーブルメントコンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明。</em>
     <p>
   </td>
   <td>
     <a href="#">
-      <img alt="400 x 225 px" src="myimage.png" />
+      <img alt="400 X 225px" src="myimage.png" />
     </a>
     <div>
       <a href="#">
-    <strong>イネーブルメントコンテンツ1</strong>
+    <strong>イネーブルメントコンテンツ 1</strong>
     </a>
     </div>
     <p>
-    <em>イネーブルメントコンテンツの簡単な説明です。</em>
+    <em>イネーブルメントコンテンツの簡単な説明。</em>
     <p>
   </td>
 </tr>
@@ -80,6 +80,6 @@ ht-degree: 4%
 
 ## その他のリソース
 
-* [リソース#1](README.md)
-* [リソース#2](README.md)
-* [リソース#3](README.md)
+* [リソース #1](README.md)
+* [リソース #2](README.md)
+* [リソース #3](README.md)
