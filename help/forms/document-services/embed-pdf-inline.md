@@ -1,6 +1,6 @@
 ---
 title: レコードのドキュメントをインラインで表示
-description: アダプティブフォームデータを XDP テンプレートと結合し、Document Cloud 埋め込み pdf API を使用してPDFをインラインで表示します。
+description: アダプティブフォームデータを XDP テンプレートと結合し、Document Cloud の埋め込み PDF API を使用して PDF をインラインで表示します。
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -10,27 +10,27 @@ kt: 9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '548'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# DoR インラインを表示
+# DoR をインラインで表示
 
-一般的な使用例は、フォームの入力者が入力したデータを含む pdf ドキュメントを表示する場合です。
+一般的な使用例は、フォームの入力者が入力したデータを含む PDF ドキュメントを表示する場合です。
 
-この使用例を達成するために、 [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+この使用例を実現するには、[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html?lang=ja) を使用します。
 
-統合を完了するために、次の手順が実行されました。
+統合を完了するには、次の手順を実行します。
 
-## カスタムコンポーネントを作成してPDFをインライン表示
+## PDF をインラインで表示するカスタムコンポーネントを作成
 
-カスタムコンポーネント (embed-pdf) が作成され、POST呼び出しで返された pdf を埋め込みます。
+カスタムコンポーネント（embed-pdf）を作成して、POST 呼び出しで返された PDF を埋め込みます。
 
 ## クライアントライブラリ
 
-次のコードは、 `viewPDF` チェックボックスボタンがクリックされた。 アダプティブフォームのデータ、テンプレート名をエンドポイントに渡して、PDF を生成します。 生成された PDF は、埋め込み PDF JavaScript ライブラリを使用してフォームの入力者に表示されます。
+`viewPDF` チェックボックスボタンをクリックすると、次のコードが実行されます。アダプティブフォームのデータ、テンプレート名をエンドポイントに渡して、PDF を生成します。生成された PDF は、埋め込み PDF JavaScript ライブラリを使用してフォームの入力者に表示されます。
 
 ```javascript
 $(document).ready(function() {
@@ -84,39 +84,40 @@ $(document).ready(function() {
 
 ## XDP のサンプルデータを生成
 
-* XDP をAEM Forms Designer で開きます。
-* ファイルをクリック |フォームのプロパティ |プレビュー
-* 「プレビューデータを生成」をクリックします。
-* 「生成」をクリックします。
-* 「form-data.xml」など、意味のあるファイル名を指定する
+* XDP を AEM Forms Designer で開きます。
+* ファイル／フォームのプロパティ／プレビューを選択します。
+* 「プレビューデータを生成」をクリックします
+* 「生成」をクリックします
+* 「form-data.xml」などの意味のあるファイル名を指定します
 
 ## xml データから XSD を生成
 
-無料のオンラインツールを使用して、 [XSD を生成](https://www.freeformatter.com/xsd-generator.html) 前の手順で生成した xml データから。
+無料のオンラインツールを使用して、前の手順で生成された xml データから [XSD を生成](https://www.freeformatter.com/xsd-generator.html?lang=ja)できます。
 
 ## テンプレートをアップロード
 
-xdp テンプレートを必ず次の場所にアップロードしてください： [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 「作成」ボタンの使用
+「作成」ボタンを使用して、xdp テンプレートを [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) にアップロードします
 
 
-## アダプティブフォームを作成
+## アダプティブフォームの作成
 
 前の手順の XSD に基づいてアダプティブフォームを作成します。
-アダプティブフォームに新しいタブを追加します。 このタブにチェックボックスコンポーネントと embed-pdf コンポーネントを追加します。チェックボックスに「viewPDF」という名前を付けます。
-embed-pdf コンポーネントを次のスクリーンショットに示すように設定します。
+アダプティブフォームに新規タブを追加します。追加したタブに、チェックボックスコンポーネントと embed-pdf コンポーネントを追加します
+チェックボックスには、「viewPDF」という名前を付けます。
+以下のスクリーンショットに示すように、embed-pdf コンポーネントを設定します。
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**埋め込みPDFAPI キー** - PDF の埋め込みに使用できるキーです。 このキーは localhost でのみ機能します。 次の項目を作成できます。 [自分の鍵](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) を追加し、それを他のドメインに関連付けます。
+**埋め込み PDF API キー** - PDF の埋め込みに使用できるキーです。このキーは、localhost でのみ機能します。[独自のキー](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html?lang=ja)を作成して、その他のドメインに関連付けることができます。
 
-**PDF を返すエンドポイント**  — これは、データを xdp テンプレートと結合して pdf を返すカスタムサーブレットです。
+**PDF を返すエンドポイント** - データを xdp テンプレートと結合して PDF を返すカスタムサーブレットです。
 
-**テンプレート名** - xdp へのパスです。 通常は formsanddocuments フォルダーに保存されます。
+**テンプレート名** - xdp へのパスです。通常は、formsanddocuments フォルダーに保存されます。
 
-**PDFファイル名**  — これは、埋め込み pdf コンポーネントに表示される文字列です。
+**PDF ファイル名** - 埋め込み PDF コンポーネントに表示される文字列です。
 
 ## カスタムサーブレットを作成
 
-データを XDP テンプレートと結合し、PDF を返すためのカスタムサーブレットが作成されました。 これをおこなうコードを次に示します。 カスタムサーブレットは、 [embedpdf バンドル](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+データを XDP テンプレートと結合し、PDF を返すカスタムサーブレットを作成しました。これを行うコードを以下に示します。カスタムサーブレットは、[embedpdf バンドル](assets/embedpdf.core-1.0-SNAPSHOT.jar)の一部です
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -222,15 +223,15 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 ```
 
 
-## サーバーにサンプルをデプロイします。
+## サンプルのサーバーへのデプロイ
 
-ローカルサーバーでこれをテストするには、次の手順に従ってください。
+ローカルサーバーでこれをテストするには、次の手順に従います。
 
-1. [embedpdf バンドルをダウンロードしてインストールします。](assets/embedpdf.core-1.0-SNAPSHOT.jar).
-これには、データと XDP テンプレートを結合し、PDF をストリーミングバックするサーブレットがあります。
-1. 次を使用して、AdobeGranite CSRF フィルターの除外パスセクションにパス/bin/getPDFToEmbed を追加します。 [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). 実稼動環境では、 [CSRF 保護フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
-1. [クライアントライブラリとカスタムコンポーネントを読み込む](assets/embed-pdf.zip)
-1. [アダプティブフォームとテンプレートの読み込み](assets/embed-pdf-form-and-xdp.zip)
-1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
-1. いくつかのフォームフィールドに入力します
-1. 「表示PDF」タブにタブを移動します。 「PDF を表示」チェックボックスをオンにします。 フォーム内に、アダプティブフォームのデータが入力された PDF が表示されます
+1. [embedpdf バンドルをダウンロードしてインストールします](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
+このバンドルには、データと XDP テンプレートを結合し、PDF をストリームバックするサーブレットがあります。
+1. [AEM ConfigMgr](http://localhost:4502/system/console/configMgr) を使用して、Adobe Granite CSRF フィルターの除外パスセクションにパス「/bin/getPDFToEmbed」を追加します。実稼動環境では、[CSRF 保護フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=ja)の使用を推奨します
+1. [クライアントライブラリとカスタムコンポーネントを読み込みます](assets/embed-pdf.zip)
+1. [アダプティブフォームとテンプレートを読み込みます](assets/embed-pdf-form-and-xdp.zip)
+1. [アダプティブフォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)。
+1. いくつかのフォームフィールドに入力します。
+1. 「PDF を表示」タブに移動します。「PDF を表示」チェックボックスをオンにします。アダプティブフォームのデータが入力された PDF がフォーム内に表示されます。
