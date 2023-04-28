@@ -1,6 +1,6 @@
 ---
-title: AEM for SPA Editor と Remote SPAの設定
-description: AEM SPA Editor がリモートSPAを作成できるように、設定およびコンテンツ要件をセットアップするには、AEMプロジェクトが必要です。
+title: AEM for SPA エディターと Remote SPA を設定
+description: AEM SPA エディターがリモート SPA を作成できるように、設定およびコンテンツ要件を設定するには、AEM プロジェクトが必要です。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -11,26 +11,26 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
 source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1246'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# AEM for SPA Editor の設定
+# AEM for SPA エディターを設定
 
-SPAコードベースはAEM外で管理されますが、サポートする設定およびコンテンツ要件を設定するには、AEMプロジェクトが必要です。 この章では、必要な設定を含むAEMプロジェクトの作成に関する手順を説明します。
+SPA コードベースは AEM 外で管理されますが、サポートする設定およびコンテンツ要件を設定するには、AEM プロジェクトが必要です。 この章では、必要な設定を含む AEM プロジェクトの作成に関する手順を説明します。
 
 + AEM WCM コアコンポーネントプロキシ
-+ AEM Remote SPA Page proxy
-+ AEM Remote SPA Page Templates
-+ ベースラインリモートSPA AEMページ
-+ SPAからAEM URL へのマッピングを定義するサブプロジェクト
++ AEM リモート SPA ページプロキシ
++ AEM リモート SPA ページテンプレート
++ ベースラインリモート SPA AEM ページ
++ SPA から AEM URL へのマッピングを定義するサブプロジェクト
 + OSGi 設定フォルダー
 
-## GitHub から基本プロジェクトをダウンロードします。
+## GitHub から基本プロジェクトをダウンロードします
 
-をダウンロードします。 `aem-guides-wknd-graphql` プロジェクトを Github.com から このプロジェクトで使用されるベースラインファイルが含まれます。
+`aem-guides-wknd-graphql` プロジェクトを Github.com からダウンロードします。このプロジェクトで使用されるベースラインファイルが含まれます。
 
 ```
 $ mkdir -p ~/Code
@@ -38,11 +38,11 @@ $ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
 $ cd remote-spa-tutorial
 ```
 
-## AEMプロジェクトの作成
+## AEM プロジェクトを作成します。
 
-設定とベースラインコンテンツを管理するAEMプロジェクトを作成します。 このプロジェクトは、複製された `aem-guides-wknd-graphql` プロジェクトの `remote-spa-tutorial` フォルダー。
+設定とベースラインコンテンツを管理する AEM プロジェクトを作成します。 このプロジェクトは、複製された `aem-guides-wknd-graphql` プロジェクトの `remote-spa-tutorial` フォルダー内に生成されます。
 
-_常に最新バージョンの [AEM Archetype](https://github.com/adobe/aem-project-archetype)._
+_[AEM アーキタイプ](https://github.com/adobe/aem-project-archetype) の最新バージョンを常に使用してください。_
 
 ```
 $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
@@ -58,28 +58,28 @@ $ mvn -B archetype:generate \
 $ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
-_最後のコマンドは、AEMプロジェクトフォルダーの名前を変更するだけで、AEMプロジェクトであることが明確になり、Remote SPAと混同しないようにします__
+_最後のコマンドは、AEM プロジェクトフォルダーの名前を変更するだけで、AEM プロジェクトであることが明確になり、リモート SPA と混同しないようにします__
 
-While `frontendModule="react"` が指定されている場合、 `ui.frontend` プロジェクトは、Remote SPAの使用例には使用されません。 SPAは、AEMの外部的な開発と管理を行い、AEMをコンテンツ API としてのみ使用します。 この `frontendModule="react"` フラグが必要なのは、  `spa-project` AEM Java™の依存関係を確認し、リモートSPAページテンプレートを設定します。
+`frontendModule="react"` が指定されている場合、`ui.frontend` プロジェクトは、リモート SPA の使用例には使用されません。SPAは、AEM の外部的な開発と管理を行い、AEM をコンテンツ API としてのみ使用します。 `frontendModule="react"` フラグは、プロジェクトに `spa-project` AEM Java™ 依存関係を組み込み、リモート SPA ページ テンプレートを設定するために必要です。
 
-AEMプロジェクトアーキタイプは、AEMをSPAと統合するように設定するために使用する、次の要素を生成します。
+AEM プロジェクトアーキタイプは、SPA と統合するために AEM を設定するのに使用される次の要素を生成します。
 
-+ __AEM WCM コアコンポーネントプロキシ__ 時刻 `ui.apps/src/.../apps/wknd-app/components`
-+ __AEM SPA Remote Page Proxy__ 時刻 `ui.apps/src/.../apps/wknd-app/components/remotepage`
-+ __AEM Page Templates__ 時刻 `ui.content/src/.../conf/wknd-app/settings/wcm/templates`
-+ __コンテンツマッピングを定義するサブプロジェクト__ 時刻 `ui.content/src/...`
-+ __ベースラインリモートSPA AEMページ__ 時刻 `ui.content/src/.../content/wknd-app`
-+ __OSGi 設定フォルダー__ 時刻 `ui.config/src/.../apps/wknd-app/osgiconfig`
++ `ui.apps/src/.../apps/wknd-app/components` の __AEM WCM コアコンポーネントプロキシ__
++ `ui.apps/src/.../apps/wknd-app/components/remotepage` の __AEM SPA リモートページプロキシ__
++ `ui.content/src/.../conf/wknd-app/settings/wcm/templates` の __AEM ページテンプレート__
++ `ui.content/src/...` の __コンテンツマッピングを定義するサブプロジェクト__
++ `ui.content/src/.../content/wknd-app` の __ベースラインリモート SPA AEM ページ__
++ `ui.config/src/.../apps/wknd-app/osgiconfig` の __OSGi 設定フォルダー__
 
-基本AEMプロジェクトが生成されると、SPA Editor と Remote SPAの互換性を確保するための調整がいくつかおこなわれます。
+基本 AEM プロジェクトが生成されると、SPA エディターとリモート SPA の互換性を確保するための調整がいくつか行われます。
 
 ## ui.frontend プロジェクトを削除
 
-SPAは Remote SPAなので、AEMプロジェクトの外部で開発および管理されていると仮定します。 競合を避けるには、 `ui.frontend` プロジェクトをデプロイできませんでした。 この `ui.frontend` プロジェクトが削除されず、2 つのSPA( `ui.frontend` プロジェクトと Remote SPAは、AEM SPA Editor に同時に読み込まれます。
+SPA はリモート SPA なので、AEM プロジェクトの外部で開発および管理されていると仮定します。 競合を避けるために、`ui.frontend` プロジェクトをデプロイから削除します。`ui.frontend` プロジェクトを削除しないと、`ui.frontend` プロジェクトで提供されるデフォルトの SPA とリモート SPA の 2 つの SPA が AEM SPA エディターに同時に読み込まれます。
 
-1. AEMプロジェクト (`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`) を IDE に追加します。
-1. ルートを開く `pom.xml`
-1. コメントを `<module>ui.frontend</module` 外から `<modules>` リスト
+1. IDE で AEM プロジェクト（`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`）を開きます
+1. ルート `pom.xml` を開きます
+1. `<modules>` リストから `<module>ui.frontend</module` をコメントアウトします
 
    ```
    <modules>
@@ -99,12 +99,12 @@ SPAは Remote SPAなので、AEMプロジェクトの外部で開発および管
    </modules>
    ```
 
-   この `pom.xml` ファイルは次のようになります。
+   `pom.xml` ファイルは次のようになります。
 
    ![reactor pom から ui.frontend モジュールを削除](./assets/aem-project/uifrontend-reactor-pom.png)
 
-1. を開きます。 `ui.apps/pom.xml`
-1. コメントアウト `<dependency>` オン `<artifactId>wknd-app.ui.frontend</artifactId>`
+1. `ui.apps/pom.xml` を開きます
+1. `<artifactId>wknd-app.ui.frontend</artifactId>` の `<dependency>` をコメントアウトします
 
    ```
    <dependencies>
@@ -120,26 +120,26 @@ SPAは Remote SPAなので、AEMプロジェクトの外部で開発および管
    </dependencies>
    ```
 
-   この `ui.apps/pom.xml` ファイルは次のようになります。
+   `ui.apps/pom.xml` ファイルは次のようになります。
 
    ![ui.apps から ui.frontend 依存関係を削除](./assets/aem-project/uifrontend-uiapps-pom.png)
 
-これらの変更の前にAEMプロジェクトが構築されていた場合は、手動で `ui.frontend` 生成されたクライアントライブラリ `ui.apps` ～に投影する `ui.apps/src/main/content/jcr_root/apps/wknd-app/clientlibs/clientlib-react`.
+これらの変更の前に AEM プロジェクトが構築された場合は、`ui.frontend` で生成されたクライアントライブラリを `ui.apps/src/main/content/jcr_root/apps/wknd-app/clientlibs/clientlib-react` の `ui.apps` プロジェクトから手動で削除します。
 
-## AEMコンテンツマッピング
+## AEM コンテンツマッピング
 
-AEMがSPAエディターにリモートSPAを読み込むには、SPAルートと、コンテンツの開封と作成に使用されるAEMページとの間のマッピングを確立する必要があります。
+AEM がリモート SPA を SPA エディターに読み込むには、SPA のルートと、コンテンツを開いて作成するために使用される AEM ページとの間のマッピングを確立する必要があります。
 
 この設定の重要性については、後で説明します。
 
-マッピングは、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) 次で定義： `/etc/map`.
+マッピングは、`/etc/map` で定義された [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) で行うことができます。
 
-1. IDE で、 `ui.content` subproject
-1. `src/main/content/jcr_root` に移動します。
-1. フォルダーの作成 `etc`
-1. In `etc`、フォルダーの作成 `map`
-1. In `map`、フォルダーの作成 `http`
-1. In `http`、ファイルの作成 `.content.xml` 次の内容で、
+1. IDE で `ui.content` サブプロジェクトを開きます
+1. `src/main/content/jcr_root` に移動します
+1. フォルダー `etc` を作成します
+1. `etc` で、フォルダー `map` を作成します
+1. `map` で、フォルダー `http` を作成します
+1. `http` で、次の内容のファイル `.content.xml` を作成します。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -149,8 +149,8 @@ AEMがSPAエディターにリモートSPAを読み込むには、SPAルート�
    </jcr:root>
    ```
 
-1. In `http` 、フォルダーの作成 `localhost_any`
-1. In `localhost_any`、ファイルの作成 `.content.xml` 次の内容で、
+1. `http` で、フォルダー `localhost_any` を作成します
+1. `localhost_any` で、次の内容のファイル `.content.xml` を作成します。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -161,8 +161,8 @@ AEMがSPAエディターにリモートSPAを読み込むには、SPAルート�
    </jcr:root>
    ```
 
-1. In `localhost_any` 、フォルダーの作成 `wknd-app-routes-adventure`
-1. In `wknd-app-routes-adventure`、ファイルの作成 `.content.xml` 次の内容で、
+1. `localhost_any` で、フォルダー `wknd-app-routes-adventure` を作成します。
+1. `wknd-app-routes-adventure` で、次の内容のファイル `.content.xml` を作成します。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -180,7 +180,7 @@ AEMがSPAエディターにリモートSPAを読み込むには、SPAルート�
        sling:internalRedirect="/content/wknd-app/us/en/home/adventure/$1"/>
    ```
 
-1. マッピングノードを次に追加： `ui.content/src/main/content/META-INF/vault/filter.xml` をAEMパッケージに含めます。
+1. マッピングノードを `ui.content/src/main/content/META-INF/vault/filter.xml` に追加して、AEM パッケージに含めます。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -199,21 +199,21 @@ AEMがSPAエディターにリモートSPAを読み込むには、SPAルート�
 
 ![Sling マッピング](./assets/aem-project/sling-mapping.png)
 
-この `filter.xml` ファイルは次のようになります。
+`filter.xml` ファイルは次のようになります。
 
 ![Sling マッピング](./assets/aem-project/sling-mapping-filter.png)
 
-現在は、AEMプロジェクトがデプロイされると、これらの設定が自動的に含まれます。
+これで AEM プロジェクトがデプロイされると、これらの設定が自動的に含まれるようになりました。
 
-Sling マッピングエフェクトAEMが `http` および `localhost`の場合は、ローカル開発のみをサポートします。 AEM as a Cloud Serviceにデプロイする場合は、同様の Sling マッピングをターゲットに追加する必要があります `https` および適切なAEMas a Cloud Serviceドメイン。詳しくは、 [Sling マッピングドキュメント](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
+Sling マッピングは `http` および `localhost` で実行される AEM に影響を与えるため、ローカル開発のみをサポートします。AEM as a Cloud Service にデプロイする場合は、`https` と適切な AEM as a Cloud Service ドメインをターゲットとする同様の Sling マッピングを追加する必要があります。 詳細については、[Sling マッピングのドキュメント](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) を参照してください。
 
 ## クロスオリジンリソース共有セキュリティポリシー
 
-次に、このSPAだけがAEMコンテンツにアクセスできるように、コンテンツを保護するようにAEMを設定します。 設定 [AEMでのクロスオリジンリソース共有](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=ja).
+次に、AEM を設定して、この SPA だけが AEM コンテンツにアクセスできるようにコンテンツを保護します。[クロスオリジンリソース共有を AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=ja) で設定します。
 
-1. IDE で、 `ui.config` Maven サブプロジェクト
-1. 移動する `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`
-1. という名前のファイルを作成します。 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json`
+1. IDE で `ui.config` Maven サブプロジェクトを開きます
+1. `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config` に移動します
+1. `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json` という名前のファイルを作成します。
 1. 次の項目をファイルに追加します。
 
    ```
@@ -250,24 +250,24 @@ Sling マッピングエフェクトAEMが `http` および `localhost`の場合
    }
    ```
 
-この `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json` ファイルは次のようになります。
+`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-app_remote-spa.cfg.json` ファイルは次のようになります。
 
-![SPAエディターの CORS 設定](./assets/aem-project/cors-configuration.png)
+![SPA エディターの CORS 設定](./assets/aem-project/cors-configuration.png)
 
-主な設定要素は次のとおりです。
+重要な設定オプションは次のとおりです。
 
-+ `alloworigin` AEMからコンテンツを取得できるホストを指定します。
-   + `localhost:3000` ローカルで実行されるSPAをサポートするために、が追加されました。
-   + `https://external-hosted-app` は、Remote SPAがホストされているドメインに置き換わるプレースホルダーとして機能します。
-+ `allowedpaths` この CORS 設定でカバーされるAEM内のパスを指定します。 デフォルトでは、AEM内のすべてのコンテンツへのアクセスが許可されますが、次のように、SPAがアクセスできる特定のパスのみに対して範囲を指定することもできます。 `/content/wknd-app`.
++ `alloworigin` は、AEM からコンテンツを取得できるホストを指定します。
+   + `localhost:3000` は、ローカルで実行されている SPA をサポートするために追加されています
+   + `https://external-hosted-app` は、リモート SPA がホストされているドメインに置き換わるプレースホルダーとして機能します。
++ `allowedpaths` は、この CORS 設定でカバーされる AEM 内のパスを指定します。デフォルトでは、AEM のすべてのコンテンツへのアクセスが許可されますが、これは、SPA がアクセスできる特定のパス（`/content/wknd-app` など）のみに限定できます。
 
-## AEMページをリモートSPAページテンプレートとして設定
+## AEM ページをリモート SPA ページテンプレートとして設定します。
 
-AEMプロジェクトアーキタイプは、AEMとリモートSPAの統合のためのプロジェクトを生成しますが、自動生成されるAEMページ構造を調整するには、小規模ではあるが重要な作業が必要です。 自動生成されるAEMページのタイプをに変更する必要があります。 __リモートSPAページ__&#x200B;ではなく __SPAページ__.
+AEM プロジェクトアーキタイプは、AEM とリモート SPA の統合のためのプロジェクトを生成しますが、自動生成される AEM ページ構造を調整するには、小規模ではあるが重要な作業が必要です。 自動生成された AEM ページのタイプは、__SPA ページ__ ではなく、__リモート SPA ページ__ に変更する必要があります。
 
-1. IDE で、 `ui.content` subproject
-1. 開く場所 `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml`
-1. 更新 `.content.xml` 次のファイルを含む：
+1. IDE で `ui.content` サブプロジェクトを開きます。
+1. `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml` に開きます
+1. この `.content.xml` ファイルを次のように更新します。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -297,28 +297,28 @@ AEMプロジェクトアーキタイプは、AEMとリモートSPAの統合の�
    </jcr:root>
    ```
 
-主な変更点は、 `jcr:content` ノードの：
+主な変更点は、`jcr:content` ノードの更新です。
 
 + `cq:template`コピー先：`/conf/wknd-app/settings/wcm/templates/spa-remote-page`
 + `sling:resourceType`コピー先：`wknd-app/components/remotepage`
 
-この `src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml` ファイルは次のようになります。
+`src/main/content/jcr_root/content/wknd-app/us/en/home/.content.xml` ファイルは次のようになります。
 
-![ホームページの.content.xml の更新](./assets/aem-project/home-content-xml.png)
+![ホームページの .content.xml の更新](./assets/aem-project/home-content-xml.png)
 
-これらの変更により、AEMのSPAルートであるこのページが、SPAエディターで Remote SPAを読み込むことができます。
+これらの変更により、AEM の SPA ルートであるこのページが、SPA エディターでリモート SPA を読み込むことができます。
 
 >[!NOTE]
 >
->このプロジェクトが以前にAEMにデプロイされている場合は、AEMページを必ず __サイト/ WKND アプリ/米国/英語/ WKND アプリのホームページ__、 `ui.content`  プロジェクトが __結合__ ノードは、ではなく __更新__.
+>このプロジェクトが以前に AEM にデプロイされている場合は、`ui.content` プロジェクトが、__更新__&#x200B;ではなく、__マージ__&#x200B;ノードに設定されているため、AEM ページを&#x200B;__サイト／WKND アプリ／us／en／WKND アプリホームページ__&#x200B;で削除してください。
 
-このページはAEM自体でリモートSPAページとして削除し、再作成することもできますが、このページは `ui.content` プロジェクトを更新する場合は、コードベースを使用することをお勧めします。
+このページを削除して、AEM 自体のリモート SPA ページとして再作成することもできますが、このページは `ui.content` プロジェクトで自動作成されるため、コードベースで更新することをお勧めします。
 
-## AEM SDK へのAEMプロジェクトのデプロイ
+## AEM SDK に AEM プロジェクトをデプロイします。
 
 1. AEM オーサーサービスがポート 4502 で実行されていることを確認します。
 1. コマンドラインから、AEM Maven プロジェクトのルートに移動します。
-1. Maven を使用して、ローカルのAEM SDK Author サービスにプロジェクトをデプロイします。
+1. Maven を使用して、ローカルの AEM SDK オーサーサービスにプロジェクトをデプロイします。
 
    ```
    $ mvn clean install -PautoInstallSinglePackage
@@ -326,39 +326,39 @@ AEMプロジェクトアーキタイプは、AEMとリモートSPAの統合の�
 
    ![mvn clean install -PautoInstallSinglePackage](./assets/aem-project/mvn-install.png)
 
-## ルートAEMページの設定
+## ルート AEM ページを設定します。
 
-AEMプロジェクトがデプロイされた状態で、SPA Editor を準備してリモートSPAを読み込むための最後の手順が 1 つあります。 AEMで、SPAルートに対応するAEMページをマークします。`/content/wknd-app/us/en/home`( AEMプロジェクトアーキタイプで生成されます )
+AEM プロジェクトがデプロイされたので、最後に、リモート SPA を読み込むように SPA エディターを準備するための手順が残っています。 AEM で、AEM プロジェクト アーキタイプで生成された SPA のルート `/content/wknd-app/us/en/home` に対応する AEM ページをマークします。
 
 1. AEM オーサーにログインします。
-1. に移動します。 __サイト/ WKND アプリ/米国/en__
-1. を選択します。 __WKND アプリのホームページ__&#x200B;をタップし、 __プロパティ__
+1. __Sites／ WKND App／us／en__ に移動します。
+1. __WKND App Home Page__ を選択し、「__プロパティ__」をタップします。
 
-   ![WKND アプリのホームページ — プロパティ](./assets/aem-content/edit-home-properties.png)
+   ![WKND App Home Page - プロパティ](./assets/aem-content/edit-home-properties.png)
 
-1. 次に移動： __SPA__ タブ
-1. 次の項目に入力します。 __リモートSPA設定__
-   + __SPA Host URL__: `http://localhost:3000`
-      + リモートSPAのルートへの URL
+1. 「__SPA__」タブに移動します。
+1. __リモート SPA 設定__&#x200B;の項目に入力します。
+   + __SPA ホスト URL__：`http://localhost:3000`
+      + リモート SPA のルートへの URL です。
 
-   ![WKND アプリホームページ — リモートSPA設定](./assets/aem-content/remote-spa-configuration.png)
+   ![WKND App Home Page - リモート SPA 設定](./assets/aem-content/remote-spa-configuration.png)
 
-1. タップ __保存して閉じる__
+1. 「__保存して閉じる__」をタップします。
 
-このページのタイプをのタイプに変更したことに注意してください __リモートSPAページ__&#x200B;それが我々が見ることを可能にする __SPA__ タブ __ページプロパティ__.
+なお、このページのタイプを&#x200B;__リモート SPA ページ__&#x200B;に変更し、__ページプロパティ__&#x200B;に「__SPA__」タブが表示されるようにしました。
 
-この設定は、SPAのルートに対応するAEMページでのみ設定する必要があります。 このページの下にあるすべてのAEMページが値を継承します。
+この設定は、SPA のルートに対応する AEM ページでのみ設定する必要があります。このページの下にあるすべての AEM ページが値を継承します。
 
 ## これで完了です
 
-これで、AEM設定が準備され、ローカルのAEMオーサーにデプロイされました。 次の方法を理解できました。
+これで、AEM の設定を準備して、ローカルの AEM オーサーにデプロイしました。次の方法を学習しました。
 
-+ AEMプロジェクトアーキタイプで生成されたSPAを削除します。それには、 `ui.frontend`
-+ SPAルートをAEMのリソースにマッピングする Sling マッピングをAEMに追加
-+ リモートSPAがAEMのコンテンツを使用できるように、AEMクロスオリジンリソース共有セキュリティポリシーを設定します
-+ ローカルのAEM SDK Author サービスにAEMプロジェクトをデプロイする
-+ SPA Host URL ページプロパティを使用して、AEMページを Remote SPAルートとしてマークします
++ AEM プロジェクトアーキタイプで生成された SPA を削除するには、`ui.frontend` の依存関係をコメントアウトします。
++ SPA ルートを AEM のリソースにマッピングする Sling マッピングを AEM に追加します。
++ リモート SPA が AEM のコンテンツを使用できるように、AEM のクロスオリジンリソース共有セキュリティポリシーを設定します。
++ AEM プロジェクトをローカルの AEM SDK オーサーサービスにデプロイします。
++ 「SPA ホスト URL」ページプロパティを使用して、AEM ページをリモート SPA のルートとしてマークします。
 
-## 次のステップ
+## 次の手順
 
-AEMが設定されている場合は、 [リモートSPAのブートストラップ](./spa-bootstrap.md) AEM SPA Editor を使用した編集可能領域のサポート
+AEM が設定されたので、AEM SPA エディターを使用して、編集可能な領域をサポートする[リモート SPA のブートストラップ](./spa-bootstrap.md)に専念できます。
