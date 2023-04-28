@@ -1,6 +1,6 @@
 ---
-title: アセンブリPDFファイル
-description: invokeDDX 操作を使用して pdf ファイルを操作します。
+title: PDF ファイルのアセンブリ
+description: invokeDDX 操作を使用して PDF ファイルを操作します。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,18 +10,18 @@ topic: Development
 kt: 9958
 thumbnail: 332439.jpg
 source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '133'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# DDXPDFを呼び出しエンドポイントを使用したエンドポイントファイルの操作
+# DDX エンドポイントの呼び出しを使用して PDF ファイルを操作する
 
 
-次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTPPOST呼び出しをおこないます。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、リクエストのオプションのパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。 後に続いてください [このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) Formsクラウドインスタンスにカスタムフォントをデプロイする場合。 プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
+次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、オプションのリクエストパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。 カスタムフォントを Forms クラウドインスタンスにデプロイするには、[このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=ja)に従ってください。プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
 
-次のコードは、データをテンプレートと結合して pdf を生成する場合に使用しました
+次のコードは、データをテンプレートと結合して PDF を生成する場合に使用しました。
 
 ```java
 public class DocumentGeneration
