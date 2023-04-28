@@ -1,6 +1,6 @@
 ---
-title: AdobeCloud Manager の使用 — 環境
-description: Cloud Manager 環境は、AEM オーサー、AEM パブリッシュ、Dispatcher の各サービスで構成されています。 環境が異なると、役割がサポートされ、異なる CI/CD パイプラインを使用してエンゲージできます。 Cloud Manager 環境には通常、実稼動環境、ステージング環境、開発環境が 1 つあります。
+title: Adobe Cloud Manager の使用 - 環境
+description: Cloud Manager 環境は、AEM オーサー、AEM パブリッシュ、Dispatcher の各サービスで構成されています。 環境が異なれば目的も異なり、環境のエンゲージメントに使用できる CI/CD Pipeline も異なります。Cloud Manager 環境には通常、実稼動環境、ステージング環境、開発環境が 1 つずつあります。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,14 +13,14 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: f4311522-b8fb-4375-9ecc-73e0207a63b2
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '99'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AdobeCloud Manager の使用 — 環境
+# Adobe Cloud Manager の使用 - 環境
 
-[Cloud Manager 環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) は、AEM オーサー、AEM パブリッシュ、Dispatcher の各サービスで構成されます。 環境が異なると、役割がサポートされ、異なる CI/CD パイプラインを使用してエンゲージできます。 Cloud Manager 環境には通常、実稼動環境、ステージング環境、開発環境が 1 つあります。
+[Cloud Manager 環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=ja)は、AEM オーサー、AEM パブリッシュ、Dispatcher の各サービスで構成されます。 環境が異なれば目的も異なり、環境のエンゲージメントに使用できる CI/CD Pipeline も異なります。Cloud Manager 環境には通常、実稼動環境、ステージング環境、開発環境が 1 つずつあります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
