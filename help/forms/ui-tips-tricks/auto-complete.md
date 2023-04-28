@@ -1,6 +1,6 @@
 ---
-title: AEM Formsのオートコンプリート機能
-description: 検索とフィルタリングを活用して、入力時に事前に設定された値のリストからすばやく検索および選択できます。
+title: AEM Forms のオートコンプリート機能
+description: 検索とフィルタリングを活用して、ユーザーが入力時に事前設定された値のリストから素早く検索および選択できるようにします。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -10,22 +10,22 @@ level: Beginner
 kt: 11374
 last-substantial-update: 2022-11-01T00:00:00Z
 source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '177'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # オートコンプリートの実装
 
-jquery のオートコンプリート機能を使用して、AEM forms にオートコンプリート機能を実装します。
-この記事に含まれるサンプルでは、様々なデータソース（静的配列、REST API 応答から生成される動的配列）を使用して、ユーザーがテキストフィールドに入力し始めると、候補を入力します。
+jquery のオートコンプリート機能を使用して、AEM Forms にオートコンプリート機能を実装します。
+この記事に含まれるサンプルでは、様々なデータソース（REST API 応答から生成された静的配列や動的配列）を使用して、ユーザーがテキストフィールドに入力を開始したときに候補を表示します。
 
-自動完了機能を実行するために使用されるコードは、フィールドの initialize イベントに関連付けられています。
+オートコンプリート機能を実行するために使用されるコードは、フィールドの初期化イベントに関連付けられています。
 
-## アドレスに対する提案を提供しています
+## 住所の提案
 
-![国の提案](assets/auto-complete2.png)
+![country-suggestions](assets/auto-complete2.png)
 
 
 
@@ -64,9 +64,9 @@ $(".streetAddress input").autocomplete({
 
 ## 絵文字を使用した提案
 
-![国の提案](assets/auto-complete3.png)
+![country-suggestions](assets/auto-complete3.png)
 
-次のコードは、絵文字の候補リストでの表示に使用されました
+候補リストに絵文字を表示するには、次のコードを使用します
 
 ```javascript
 var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];
@@ -77,8 +77,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-この [サンプルフォームをダウンロードできます](assets/auto-complete-form.zip) ここから。 REST 呼び出しを正常におこなうには、コードエディターを使用して独自のユーザー名/API キーを指定してください。
+[サンプルフォームは、こちらからダウンロードできます](assets/auto-complete-form.zip)。REST 呼び出しを正常に行うには、コードのコードエディターを使用して独自のユーザー名／API キーを指定します。
 
 >[!NOTE]
 >
-> オートコンプリートが機能するために、フォームで次のクライアントライブラリが使用されていることを確認する **cq.jquery.ui**. このクライアントライブラリはAEMに付属しています。
+> オートコンプリートを機能させるには、フォームで次のクライアントライブラリ **cq.jquery.ui** が使用されていることを確認します。このクライアントライブラリは AEM に付属しています。
