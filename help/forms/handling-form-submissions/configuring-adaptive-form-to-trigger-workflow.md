@@ -1,6 +1,6 @@
 ---
-title: アダプティブフォームのトリガーAEMワークフローの概要
-description: フォーム送信時にAEMワークフローをトリガーする際のペイロードオプションの設定
+title: AEM ワークフローをトリガーするアダプティブフォームの設定の概要
+description: フォーム送信時に AEM ワークフローをトリガーする際のペイロードオプションの設定
 feature: Workflow
 topics: integrations
 audience: developer
@@ -15,34 +15,34 @@ level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '165'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームのトリガーAEM Workflow への設定
+# AEM ワークフローをトリガーするアダプティブフォームの設定
 
 ## 前提条件
 
-このワークフローで使用されるサンプルフォームは、AEMサーバーに読み込む必要があるカスタムアダプティブフォームテンプレートに基づいています。 指定されたサンプルフォームは、テンプレートの読み込み後に読み込む必要があります。
+このワークフローで使用されるサンプルフォームは、AEM サーバーに読み込む必要があるカスタムアダプティブフォームのテンプレートに基づいています。指定されたサンプルフォームは、テンプレートの読み込み後に読み込む必要があります。
 
 ### アダプティブフォームテンプレートの取得
 
-* ダウンロード [アダプティブフォームテンプレート](assets/af-form-template.zip)
-* [パッケージマネージャーを使用したテンプレートのインポート](http://localhost:4502/crx/packmgr/index.jsp)
+* [アダプティブフォームテンプレート](assets/af-form-template.zip)のダウンロード
+* [パッケージマネージャーを使用したテンプレートの読み込み](http://localhost:4502/crx/packmgr/index.jsp)
 * アダプティブフォームテンプレートをアップロードしてインストールする
 
 ### サンプルのアダプティブフォームを取得する
 
-* ダウンロード [アダプティブフォーム](assets/peak-application-form.zip)
-* 参照先 [フォームとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 作成/ファイルのアップロードをクリックします。
-* サンプルのアダプティブフォームは、 [アプリケーションForms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* [アダプティブフォーム](assets/peak-application-form.zip)をダウンロードする
+* [フォームとドキュメント](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)を参照する
+* 作成／ファイルのアップロードをクリック
+* サンプルのアダプティブフォームは、[Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms) というフォルダーにあります
 
-次のビデオでは、AEMワークフローをトリガーするアダプティブフォームの設定方法を説明します
+次のビデオでは、AEM ワークフローをトリガーするアダプティブフォームの設定方法を説明します
 >[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
 
-次のビデオでは、ワークフローのペイロードと、crx リポジトリのその他の詳細を示します
+次のビデオでは、ワークフローのペイロードと、crx リポジトリのその他の詳細を説明します
 
 >[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)
