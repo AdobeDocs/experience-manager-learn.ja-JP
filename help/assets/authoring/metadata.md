@@ -1,6 +1,6 @@
 ---
 title: メタデータ
-description: AEM Assetsでメタデータにアクセスし、操作する方法を説明します。
+description: AEM Assets でメタデータにアクセスし、操作する方法を説明します。
 feature: Metadata
 role: User
 level: Beginner
@@ -11,14 +11,14 @@ topic: Content Management
 last-substantial-update: 2021-09-25T00:00:00Z
 exl-id: 67898b75-6307-4933-ad93-e6db2e220fd6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '24'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # メタデータ
 
-AEM Assetsでメタデータにアクセスし、操作する方法を説明します。
+AEM Assets でメタデータにアクセスし、操作する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32045?quality=12&learn=on)
