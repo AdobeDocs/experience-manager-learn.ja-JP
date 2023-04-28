@@ -1,5 +1,5 @@
 ---
-title: ページでライブコピーの継承を管理
+title: ページでライブコピーの継承を管理する
 description: ページレベルでライブコピーとそのブループリント間の継承を管理する方法を説明します
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -14,13 +14,13 @@ role: User
 level: Beginner
 exl-id: 117f4df1-be2c-44e8-b560-1d588e0cd2a6
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ページでライブコピーの継承を管理 {#manage-live-copy-page}
+# ページでライブコピーの継承を管理する {#manage-live-copy-page}
 
 ページレベルでライブコピーとそのブループリント間の継承を管理する方法を説明します。
 >[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)
