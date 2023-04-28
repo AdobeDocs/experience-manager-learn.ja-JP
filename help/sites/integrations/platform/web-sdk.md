@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
+exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
+source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 5%
+source-wordcount: '1315'
+ht-degree: 6%
 
 ---
-
 
 # 統合Experience PlatformWeb SDK
 
@@ -24,7 +24,7 @@ AEM as a Cloud ServiceとExperience Platformを統合する方法を説明しま
 
 また、収集して送信する方法についても学習します [WKND — サンプルAdobe Experience Managerプロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) ページビューデータ [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja).
 
-このセットアップが完了したら、次に、次のようなExperience Platformおよび関連アプリケーションを実装できます。 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) および [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja). ウェブ及び顧客データを標準化し、より良い顧客エンゲージメントを促進する。
+この設定が完了したら、ソリッド基礎を実装しました。 また、次のようなアプリケーションを使用して、Experience Platformの実装を進める準備が整いました。 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)、および [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja). 高度な実装は、Web および顧客データを標準化して、顧客エンゲージメントを促進するのに役立ちます。
 
 ## 前提条件
 
@@ -32,8 +32,8 @@ Experience PlatformWeb SDK を統合する場合は、次の操作が必要で�
 
 In **AEM as aCloud Service**:
 
-+ AEM AEM as a Cloud Service環境への管理者アクセス
-+ Cloud Manager への Deployment Manager アクセス
++ AEM as a Cloud Service 環境への AEM 管理者アクセス
++ デプロイメントマネージャーによる Cloud Manager へのアクセス
 + のクローンとデプロイ [WKND — サンプルAdobe Experience Managerプロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) をAEMas a Cloud Service環境に追加します。
 
 In **Experience Platform**:
@@ -51,6 +51,8 @@ In **Experience Platform**:
 ## XDM スキーマの作成 —Experience Platform
 
 エクスペリエンスデータモデル (XDM) スキーマは、顧客体験データを標準化するのに役立ちます。 を収集するには、以下を実行します。 **WKND ページビュー** データ、XDM スキーマの作成、提供されたフィールドグループのAdobeの使用 `AEP Web SDK ExperienceEvent` web データ収集用。
+
+小売、金融サービス、医療など、一連の参照データモデルに特化した汎用および業界があります。詳しくは、 [業界データモデルの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
@@ -76,8 +78,14 @@ Experience Platformでタグ（旧称 Launch）プロパティを作成し、Web
 + データ要素：WKND サイトのAdobeクライアントデータレイヤーを使用して page-name、site-section、および host-name を抽出するカスタムコードタイプのデータ要素。 また、以前に作成した新しく作成された WKND XDM スキーマビルドインに準拠する XDM Object type データ要素 [XDM スキーマを作成](#create-xdm-schema---experience-platform) 手順
 + ルール：Adobeクライアントデータレイヤーをトリガーして WKND Web ページにアクセスするたびに、Platform Edge Network にデータを送信します `cmp:show` イベント。
 
+を使用してタグライブラリを構築および公開する際に、 **公開フロー**&#x200B;を使用する場合、 **変更されたリソースをすべて追加** 」ボタンをクリックします。 個々のリソースを識別して選択する代わりに、データ要素、ルール、タグ拡張などのすべてのリソースを選択する場合。 また、開発フェーズでは、ライブラリを _開発_ 環境を検証し、 _ステージ_ または _実稼動_ 環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
+
+
+>[!TIP]
+>
+>このビデオに示すデータ要素とルールイベントコードは、参照用に利用できます。 **下のアコーディオン要素を展開する**. ただし、Adobeクライアントデータレイヤーを使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用する概念は引き続き適用されます。
 
 
 +++ データ要素とルールイベントコード
@@ -157,7 +165,7 @@ Experience Platformでタグ（旧称 Launch）プロパティを作成し、Web
 +++
 
 
-この [タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) では、データ要素、ルール、拡張機能などの重要な概念に関する詳細な知識を提供します。
+この [タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) では、データ要素、ルール、拡張機能などの重要な概念に関する詳細な知識を提供します。
 
 AEMコアコンポーネントとAdobeクライアントデータレイヤーの統合について詳しくは、 [AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja).
 
@@ -207,4 +215,3 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 + [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [データ収集チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
-
