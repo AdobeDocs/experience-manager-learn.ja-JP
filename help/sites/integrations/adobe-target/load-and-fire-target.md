@@ -1,6 +1,6 @@
 ---
-title: Target呼び出しの読み込みと実行
-description: Launchルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからTarget呼び出しを実行する方法について説明します。 ページ情報は、Webページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする、Adobeクライアントデータレイヤーを使用して取得および渡されます。
+title: Target 呼び出しの読み込みと実行
+description: Experience Platform Launch ルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。Adobe Client Data Layer を使用してページ情報を取得し、パラメーターとして渡すことで、訪問者の web ページでの体験に関するデータを収集、保存、そのデータに容易にアクセスすることができます。
 feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
@@ -14,33 +14,33 @@ role: Developer
 level: Intermediate
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '608'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Target呼び出しの読み込みと実行 {#load-fire-target}
+# Target 呼び出しの読み込みと実行 {#load-fire-target}
 
-Launchルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページからTarget呼び出しを実行する方法について説明します。 Webページの情報は、Webページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに容易にアクセスできるようにする、Adobeクライアントデータレイヤーを使用して取得および渡されます。
+Experience Platform Launch ルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。web ページの情報を取得し、Adobe Client Data Layer を使用してパラメーターとして渡すことで、web ページでの訪問者の体験に関するデータを収集、保存し、そのデータに容易にアクセスできるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
-## ページ型ルール
+## ページ読み込みルール
 
-Adobeクライアントデータレイヤーは、イベント駆動型データレイヤーです。 AEMページデータレイヤーが読み込まれると、イベント`cmp:show`がトリガーされます。 ビデオでは、`Launch Library Loaded`ルールがカスタムイベントを使用して呼び出されます。 以下に、カスタムイベントおよびデータ要素に関してビデオで使用されるコードスニペットを示します。
+Adobe Client Data Layer は、イベント駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、イベント`cmp:show`が発生します。ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。次に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
 
 ### カスタムページ表示イベント{#page-event}
 
-![ページ表示イベント設定とカスタムコード](assets/load-and-fire-target-call.png)
+![表示されるページのイベント設定とカスタムコード](assets/load-and-fire-target-call.png)
 
-Launchプロパティで、新しい&#x200B;**イベント**&#x200B;を&#x200B;**ルール**&#x200B;に追加します。
+Experience Platform Launch プロパティで、新しい&#x200B;**イベント**&#x200B;を&#x200B;**ルール**&#x200B;に追加します。
 
-+ __拡張機能：__ Core
-+ __イベントタイプ：__ カスタムコード
++ __拡張機能：__&#x200B;コア
++ __イベントタイプ：__&#x200B;カスタムコード
 + __名前：__ Page Show Event Handler（または説明的なもの）
 
-「__エディターを開く__」ボタンをタップし、次のコードスニペットに貼り付けます。 このコード&#x200B;__は、__&#x200B;イベント設定&#x200B;__と、その後の__&#x200B;アクション&#x200B;__に追加する必要があります。__
+「__編集画面を開く__」ボタンをタップして、次のコードを貼り付けます。このコードは&#x200B;__必須__&#x200B;で、__イベント設定__&#x200B;とそれに続く&#x200B;__アクション__&#x200B;に追加する必要があります。
 
 ```javascript
 // Define the event handler function
@@ -80,22 +80,22 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-カスタム関数は`pageShownEventHandler`を定義し、AEMコアコンポーネントから発行されるイベントをリッスンし、コアコンポーネントから関連情報を導出し、イベントオブジェクトにパッケージ化し、ペイロードに派生イベント情報を使用してLaunchイベントをトリガーします。
+カスタム関数は `pageShownEventHandler` を定義し、AEM コアコンポーネントが発するイベントをリスニングし、コアコンポーネントの関連情報を導き出し、イベントオブジェクトにパッケージし、ペイロードに導き出したイベント情報で Experience Platform Launch イベントをトリガーします。
 
-Launchルールは、Launchの`trigger(...)`関数を使用してトリガーされます。この関数は、ルールのイベントのカスタムコードスニペット定義内から使用できる&#x200B;__のみ__&#x200B;です。
+Experience Platform Launch ルールは Experience Platform Launch の`trigger(...)`関数を使用してトリガーされます。この関数は、ルールのイベント のカスタムコードのコードスニペット定義内で&#x200B;__のみ__&#x200B;利用可能です。
 
-`trigger(...)`関数は、イベントオブジェクトをパラメーターとして取り、Launchデータ要素で公開します。このパラメーターは、Launchの`event`という別の予約名です。 Launchのデータ要素は、`event.component['someKey']`のような構文を使用して、`event`オブジェクトからこのイベントオブジェクトのデータを参照できるようになりました。
+`trigger(...)` 関数は、イベントオブジェクトをパラメーターとして受け取ります。このオブジェクトは、Experience Platform Launch データ要素の中で、`event` という別の予約名で公開されています。Experience Platform Launch のデータ要素は、`event.component['someKey']`のような構文を使用して、`event`オブジェクトからこのイベントオブジェクトのデータを参照できるようになりました。
 
-`trigger(...)`がイベントのカスタムコードイベントタイプのコンテキスト外で（例えば、アクションで）使用された場合、Launchプロパティと統合されたWebサイトでJavaScriptエラー`trigger is undefined`が発生します。
+`trigger(...)`がイベントのカスタムコードイベントタイプのコンテキスト外（例えばアクション内）で使用された場合、JavaScript エラー`trigger is undefined`が Experience Platform Launch プロパティと統合された web サイト上で投げられます。
 
 
 ### データ要素
 
 ![データ要素](assets/data-elements.png)
 
-AdobeLaunchデータ要素は、カスタムページ表示イベント](#page-event)でトリガーされたイベントオブジェクト[のデータを、コア拡張機能のカスタムコードデータ要素タイプを介してAdobe Targetで使用可能な変数にマッピングします。
+Adobe Experience Platform Launch データ要素は、カスタムページ表示イベント [でトリガーされたイベントオブジェクト](#page-event) のデータを、コア拡張のカスタムコードデータ要素タイプを通じて、Adobe Target で利用可能な変数にマッピングします。
 
-#### ページIDデータ要素
+#### ページ ID データ要素
 
 ```
 if (event && event.id) {
@@ -103,9 +103,9 @@ if (event && event.id) {
 }
 ```
 
-このコードは、コアコンポーネントの一意のIDを生成して返します。
+このコードは、コアコンポーネントの一意の ID を生成して返します。
 
-![ページID](assets/pageid.png)
+![ページ ID](assets/pageid.png)
 
 ### ページパスデータ要素
 
@@ -115,7 +115,7 @@ if (event && event.component && event.component.hasOwnProperty('repo:path')) {
 }
 ```
 
-このコードは、AEMページのパスを返します。
+このコードは、AEM ページのパスを返します。
 
 ![ページパス](assets/pagepath.png)
 
@@ -127,26 +127,26 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 }
 ```
 
-このコードは、AEMページのタイトルを返します。
+このコードは、AEM ページのタイトルを返します。
 
 ![ページタイトル](assets/pagetitle.png)
 
 ## トラブルシューティング
 
-### Webページでmboxが実行されないのはなぜですか。
+### web ページで mbox が実行されないのはなぜですか。
 
-#### mboxDisable cookieが設定されていない場合のエラーメッセージ
+#### mboxDisable Cookie が設定されていない場合のエラーメッセージ
 
-![Targetのcookieドメインエラー](assets/target-cookie-error.png)
+![Target の Cookie ドメインエラー](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
 ```
 
-#### 解決策
+#### ソリューション
 
-Targetのお客様は、テストや簡単な概念実証にTargetでクラウドベースのインスタンスを使用する場合があります。 これらのドメインやその他多くのドメインは、パブリックサフィックスリストに含まれています。
-これらのドメインを使用する場合、`targetGlobalSettings()`を使用して`cookieDomain`設定をカスタマイズしない限り、最新のブラウザーではCookieが保存されません。
+Target のお客様は、Target でクラウドベースのインスタンスを使用してテストをおこなったり、シンプルな概念実証に利用したりする場合があります。これらのドメインは、その他多くが、パブリックサフィックスリストに含まれています。
+最近のブラウザーでは、これらのドメインを使用している場合、`targetGlobalSettings()` を使用して `cookieDomain` 設定をカスタマイズしない限り、Cookie は保存されません。
 
 ```
 window.targetGlobalSettings = {  
@@ -156,12 +156,12 @@ window.targetGlobalSettings = {
 
 ## 次の手順
 
-+ [エクスペリエンスフラグメントをAdobe Targetに書き出す](./export-experience-fragment-target.md)
++ [Adobe Target へのエクスペリエンスフラグメントの書き出し](./export-experience-fragment-target.md)
 
 ## サポートリンク
 
-+ [Adobeクライアントデータレイヤーのドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Client Data Layer ドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobeクライアントデータレイヤーとコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)
-+ [Adobe Experience Platform Debuggerの概要](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [Adobe Client Data Layer とコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)
++ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=ja)
