@@ -1,6 +1,6 @@
 ---
 title: はじめに
-description: 複数フォームの署名の使用例を示すビデオデモ
+description: 複数フォームへの署名のユースケースを示すビデオデモ
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 330165.jpg
@@ -10,26 +10,26 @@ level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # はじめに
 
-複数のフォームに記入して署名するために必要な住宅ローンの申し込みを行うか、新しい銀行口座を開くかに関わらず。 AEM FormsとAcrobat Signの統合により、複数のフォームに簡単に入力して署名できます。
-次のビデオでは、複数のフォームに署名する場合の使用例について説明します。
+住宅ローンを申請する場合でも、新しい銀行口座を開設する場合でも、複数のフォームに記入し署名する必要があります。AEM Forms と Acrobat Sign の統合により、複数のフォームへの入力と署名が簡単になります。
+次のビデオでは、複数のフォームに署名する場合のユースケースについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
 
 ## 前提条件
 
-このコースでは、次の内容を前提としています。
+このコースでは以下を前提としています。
 
-* Forms Add on パッケージがインストールされ、設定されたAEM 6.4 または 6.5 サーバーにアクセスできる
-* Acrobat Signで設定されたAEM
-* SMTP サーバーへのアクセス
-* AEM/AEM Formsの使い方
+* Forms アドオンパッケージがインストールおよび設定された AEM 6.4 または 6.5 サーバーにアクセスできること
+* AEM と Acrobat Sign の連携が設定されていること 
+* SMTP サーバーにアクセスできること
+* AEM／AEM Forms の使用経験があること
 
-このチュートリアルに従ってアセットをインストールすると、複数のフォームに署名するための作業ソリューションが提供されます。
+このチュートリアルに従い、指定されたアセットをインストールすると、複数のフォームに署名するための実際に使えるソリューションが得られます。
