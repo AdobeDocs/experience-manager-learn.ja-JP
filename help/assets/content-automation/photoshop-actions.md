@@ -1,6 +1,6 @@
 ---
-title: Photoshop Content Automation を使用したAEM Assetsのアクション
-description: コンテンツ作成者が、コンテンツ自動化アドオンを使用して、Creative CloudAPI を使用してAEM Assets内でPhotoshopアクションを実行する方法について説明します。
+title: AEM Assets コンテンツ自動化を使用した Photoshop のアクション
+description: コンテンツ作成者が Creative Cloud API とコンテンツ自動化アドオンを使用して、AEM Assets 内で Photoshop のアクションを実行する方法を学びます。
 version: Cloud Service
 topic: Content Management
 feature: Asset Processing, Renditions
@@ -11,14 +11,14 @@ thumbnail: 336539.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 7af14c0f-5a13-49ab-95ea-53ea8cf472f3
 source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Photoshop Actions
+# Photoshop のアクション
 
-コンテンツ作成者が、コンテンツ自動化アドオンを使用して、Creative CloudAPI を使用してAEM Assets内でPhotoshopアクションを実行する方法について説明します。
+コンテンツ作成者が Creative Cloud API とコンテンツ自動化アドオンを使用して、AEM Assets 内で Photoshop のアクションを実行する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
