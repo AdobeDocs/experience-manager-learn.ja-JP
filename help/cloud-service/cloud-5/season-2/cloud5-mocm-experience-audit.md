@@ -1,26 +1,27 @@
 ---
-title: Cloud 5 - Cloud Manager の謎 — Experience Audit
-description: Cloud Manager の調査と Experience Audit 機能の調査
+title: Cloud 5 - Cloud Manager の謎 - エクスペリエンス監査
+description: Cloud Manager の調査とエクスペリエンス監査機能の理解
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343620.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 895766fe-aedd-4ae5-b3ba-2ebe769f2db3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '57'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Cloud Manager の謎 — Experience Audit
+# Cloud 5 - Cloud Manager の謎 - エクスペリエンス監査
 
-3 部構成のシリーズの第 1 部では、 Cloud Manager の基本を学び、エクスペリエンス監査機能につま先を絞り込みます。
+3 部構成のシリーズの第 1 部では、Cloud Manager の基本を探求し、エクスペリエンス監査機能に足を踏み入れます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 
 ## このビデオで扱うコンテンツ
 
 + Cloud Manager の概要
-+ インターフェイスの習熟
++ インターフェイスの理解
