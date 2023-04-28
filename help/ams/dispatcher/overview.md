@@ -8,16 +8,16 @@ role: Admin
 level: Beginner
 thumbnail: xx.jpg
 source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Managed Services Dispatcher マニュアル
 
-お使いのAEMのインストールがAdobe管理サービスでホストされている場合は、このマニュアルを読む必要があります。
+お使いの AEM のインストールが Adobe Managed Services でホストされている場合は、このマニュアルを読む必要があります。
 以下のドキュメントでは、提供された Dispatcher 設定を適切にカスタマイズし、使用するための AMS プロセスについて説明します。
 
 ## 目次
@@ -25,12 +25,12 @@ ht-degree: 5%
 以下に、Dispatcher マニュアルを構成するサブページとトピックを示します。
 
 - [「Dispatcher」とは](./what-is-the-dispatcher.md)
-- [基本ファイルレイアウト](./basic-file-layout.md)
+- [基本的なファイルレイアウト](./basic-file-layout.md)
 - [設定ファイルの説明](./explanation-config-files.md)
 - [キャッシュについて](./understanding-cache.md)
 - [変数の使用と理解](./variables.md)
 - [Dispatcher のフラッシュ](./disp-flushing.md)
-- [バニティー URL](./disp-vanity-url.md)
-- [共通ログ](./common-logs.md)
+- [バニティ URL](./disp-vanity-url.md)
+- [一般的なログ](./common-logs.md)
 - [読み取り専用ファイル](./immutable-files.md)
 - [Dispatcher ヘルスチェック](./health-check.md)
