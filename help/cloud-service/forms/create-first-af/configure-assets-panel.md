@@ -1,5 +1,5 @@
 ---
-title: アセットパネルの設定
+title: 資産パネルの設定
 description: アコーディオンレイアウトパネルをアセットパネルに追加します。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
@@ -12,13 +12,13 @@ kt: 7380
 thumbnail: 22200.jpg
 exl-id: fac57513-c5e4-4497-bcb6-9ed3094baa5b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '26'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# アセットパネルの設定
+# 資産パネルの設定
 
 アコーディオンレイアウトを使用した繰り返し可能なパネルを使用して、申込者のアセットをキャプチャします。
 
