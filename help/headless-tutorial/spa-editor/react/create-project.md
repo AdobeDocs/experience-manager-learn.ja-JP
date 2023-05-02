@@ -150,7 +150,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
 
    WKND SPA は、国、言語、ホームページを含む基本的なサイト構造を含んでいます。この階層は、アーキタイプのデフォルトの `language_country` および `isSingleCountryWebsite` の値に基づいています。これらの値は、プロジェクトを生成する際に[使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#avilable-properties)で上書きされる場合があります。
 
-2.  **us**／**en**／**WKND SPA React ホームページ**&#x200B;ページを選択し、メニューバーの「**編集**」ボタンをクリックしてページを開きます。
+2. **us**／**en**／**WKND SPA React ホームページ**&#x200B;ページを選択し、メニューバーの「**編集**」ボタンをクリックしてページを開きます。
 
    ![サイトコンソール](./assets/create-project/open-home-page.png)
 
