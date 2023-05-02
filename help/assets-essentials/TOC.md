@@ -42,4 +42,4 @@ ht-degree: 100%
 
 + [Adobe Journey Optimizer の統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja)
 
-+ [ドキュメント化](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja)。
++ [ドキュメント化](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja)
