@@ -66,7 +66,7 @@ ht-degree: 100%
 >[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
-Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
+>Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
 
 AEM アセットインサイトの設定の場合は、以下の資格情報が必要です。
 
@@ -83,7 +83,7 @@ Adobe Analytics 拡張機能の追加、ページ読み込みルールの作成�
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
-必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
+>必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
 
 ### ルール 1：ページトラッカー（pagetracker.js） {#rule-page-tracker-pagetracker-js}
 

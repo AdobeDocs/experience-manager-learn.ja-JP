@@ -26,7 +26,7 @@ AEM を web ホストとして使用する場合の FPID の仕組みの概要�
 
 ![AEM を使用した FPID と ECID](./assets/aem-platform-fpid-architecture.png)
 
-##  AEM を使用した FPID の生成と保持
+## AEM を使用した FPID の生成と保持
 
 AEM パブリッシュサービスは、CDN とAEM Dispatcher の両方のキャッシュで、リクエストをできるだけキャッシュすることで、パフォーマンスを最適化します。
 

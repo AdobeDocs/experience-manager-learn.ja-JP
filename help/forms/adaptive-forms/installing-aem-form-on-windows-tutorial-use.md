@@ -40,7 +40,7 @@ ht-degree: 100%
 
 * 適切な JDK がインストールされていることを確認します。
    * AEM 6.2 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
-* 
+* &#x200B;
    * AEM 6.3 および AEM 6.4 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
 * AEM 6.5 には JDK 8 または JDK 11 が必要です。
 * [公式の JDK 要件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=ja)は、ここに掲載されています。

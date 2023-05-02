@@ -57,7 +57,6 @@ AEM コンテンツフラグメントモデルは、AEM 作成者が Raw コン�
    >    1. [CRXDE Lite](http://localhost:4502/crx/de) を開きます。
    >    1. `/conf/wknd-mobile/settings/dam/cfm` に移動します。
    >    1. `models` ノードを削除します。
-
    >    
    >この設定で作成された既存のコンテンツフラグメントモデルはすべて削除され、その定義は `/conf/wknd-mobile/settings/dam/cfm/models` に保存されます。
 

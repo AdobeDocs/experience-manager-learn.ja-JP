@@ -445,8 +445,8 @@ Sling Model は、JCR から Java™ 変数へのデータのマッピングを�
      
      import org.osgi.annotation.versioning.Version;
      ```
-   
-このパッケージ内のファイルに変更が加えられるたびに、[パッケージバージョンを意味的に調整する必要があります](https://semver.org/)。調整しない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。幸いなことに、失敗すると、Maven プラグインは無効な Java™ パッケージバージョンと、本来あるべきバージョンを報告します。違反する Java™ パッケージの `package-info.java` にある `@Version("...")` 宣言を、プラグインが修正を推奨するバージョンに更新します。
+
+   このパッケージ内のファイルに変更が加えられるたびに、[パッケージバージョンを意味的に調整する必要があります](https://semver.org/)。調整しない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。幸いなことに、失敗すると、Maven プラグインは無効な Java™ パッケージバージョンと、本来あるべきバージョンを報告します。違反する Java™ パッケージの `package-info.java` にある `@Version("...")` 宣言を、プラグインが修正を推奨するバージョンに更新します。
 
 ### 署名の実装 {#byline-implementation}
 

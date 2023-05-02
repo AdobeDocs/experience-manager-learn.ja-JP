@@ -88,7 +88,7 @@ return mapOfDocuments;
 ### Assembler サービスを使用したドキュメントのアセンブリ
 
 DDX とドキュメントマップが作成されたら、次の手順では Assembler サービスを使用してドキュメントを作成します。
-次のコードは、`DF を組み合わせ、組み合わせられた PDF を返します。
+次のコードは、&grave;DF を組み合わせ、組み合わせられた PDF を返します。
 
 ```java
 private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object> mapOfDocuments, com.adobe.aemfd.docmanager.Document ddxDocument)
@@ -141,7 +141,7 @@ session.save();
 * ブラウザーで[添付ファイルのアセンブリフォーム](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)にアクセスします
 * ID ドキュメントに添付ファイルを追加し、いくつかの PDF ドキュメントを銀行取引明細書セクションに追加します
 * フォームを送信してワークフローをトリガーします
-* 組み合わせた PDF の](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) crx にあるワークフローのペイロードフォルダー[を確認します
+* 組み合わせた PDF の[&#128279;](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) crx にあるワークフローのペイロードフォルダーを確認します
 
 >[!NOTE]
 > カスタムバンドルのロガーを有効にしている場合、DDX 、および組み合わせたファイルは AEM インストールのフォルダーに書き込まれます。
