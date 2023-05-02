@@ -439,7 +439,7 @@ Sling Model は、JCR から Java™ 変数へのデータのマッピングを�
 
    WKND ソースの Java™ パッケージ `com.adobe.aem.guides.wknd.core.models` は `1.0.0` のバージョンを宣言しており、非改行のパブリックインターフェイスとメソッドが追加されているため、バージョンを `1.1.0` に上げる必要があります。`core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` に置かれたファイルを開き、`@Version("1.0.0")` を `@Version("2.1.0")` に更新します。
 
-       ```
+     ```
      @Version(&quot;2.1.0&quot;)
      package com.adobe.aem.guides.wknd.core.models;
      
