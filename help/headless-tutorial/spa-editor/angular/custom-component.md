@@ -178,7 +178,7 @@ SPA エディターのコンテキストでは、Sling モデルは [Sling Model
 
    これは、Sling モデルで実装されている Java™ インターフェイスです。
 
-3.  `ComponentExporter` インターフェイスを拡張するように `CustomComponent.java` を更新します。
+3. `ComponentExporter` インターフェイスを拡張するように `CustomComponent.java` を更新します。
 
    ```java
    package com.adobe.aem.guides.wknd.spa.angular.core.models;
