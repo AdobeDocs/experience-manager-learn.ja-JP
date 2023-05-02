@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 00257efe045eb85fb192bbb47f8e178cf909eb86
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 66%
+source-wordcount: '462'
+ht-degree: 65%
 
 ---
 
@@ -143,3 +143,8 @@ QueryBuilder サービスは、attachmentsPath フォルダー下の nt:file タ
 
 [ここで説明しているとおりに、バンドルをビルドします。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 [バンドルがデプロイされ、アクティブな状態になっていることを確認します。](http://localhost:4502/system/console/bundles)
+
+## 次の手順
+
+を [カスタムワークフローコンポーネント](./custom-workflow-component.md)
+

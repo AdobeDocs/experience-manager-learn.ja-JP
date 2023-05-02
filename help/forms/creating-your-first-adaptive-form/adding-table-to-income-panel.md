@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: e7674c46-259f-4dbd-96db-c40369534911
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '183'
-ht-degree: 100%
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 97%
 
 ---
 
@@ -44,3 +44,7 @@ ht-degree: 100%
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)
+
+## 次の手順
+
+[アセットパネルの設定](./configuring-assets-panel.md)

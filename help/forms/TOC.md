@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '1808'
-ht-degree: 98%
+source-wordcount: '1804'
+ht-degree: 95%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 98%
 + [従うべきベストプラクティス](adaptive-forms/best-practices-adaptive-forms.md)
 + [AEM オーサーとの OKTA 認証の設定](adaptive-forms/single-sign-on-with-okta.md)
 + 最初のアダプティブフォームを作成する {#creating-your-first-adaptive-form}
-   + [概要と設定](creating-your-first-adaptive-form/introduction-and-setup.md)
-   + [アダプティブフォームテンプレートの作成](creating-your-first-adaptive-form/create-adaptive-form-template.md)
-   + [フォームフラグメントの作成](creating-your-first-adaptive-form/create-form-fragment.md)
-   + [アダプティブフォームの作成](creating-your-first-adaptive-form/create-adaptive-form.md)
-   + [ルートパネルの設定と子パネルの追加](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
-   + [人物パネルへのコンポーネントの追加](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
-   + [収入パネルへのテーブル追加](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
-   + [アセットパネルの設定](creating-your-first-adaptive-form/configuring-assets-panel.md)
-   + [カスタム関数とコードエディターの使用](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
+   + [1 — 概要とセットアップ](creating-your-first-adaptive-form/introduction-and-setup.md)
+   + [2 — アダプティブフォームテンプレートの作成](creating-your-first-adaptive-form/create-adaptive-form-template.md)
+   + [3 — フォームフラグメントを作成する](creating-your-first-adaptive-form/create-form-fragment.md)
+   + [4 — アダプティブフォームの作成](creating-your-first-adaptive-form/create-adaptive-form.md)
+   + [5 — ルートパネルの設定と子パネルの追加](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
+   + [6 — 人物パネルへのコンポーネントの追加](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
+   + [7 — 所得パネルへの表の追加](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
+   + [8 - Assets パネルの設定](creating-your-first-adaptive-form/configuring-assets-panel.md)
+   + [9 — カスタム関数とコードエディターの使用](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + フォーム送信の処理 {#handling-af-form-submissions}
    + [レビューワークフローの作成](handling-form-submissions/creating-a-review-workflow.md)
    + [ワークフローを起動するためアダプティブフォームの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
@@ -173,9 +173,9 @@ ht-degree: 98%
    + [ファイルシステムへのドキュメントの保存](custom-workflow-steps/write-payload-document.md)
    + [送信したデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + カスタムワークフローコンポーネント{#custom-workflow-component}
-   + [はじめに](custom-workflow-component/introduction.md)
-   + [Java コードの記述](custom-workflow-component/custom-process-step-aem-workflow.md)
-   + [ワークフローコンポーネントの作成](custom-workflow-component/custom-workflow-component.md)
+   + [1 — はじめに](custom-workflow-component/introduction.md)
+   + [2-Java コードの書き込み](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [3 — ワークフローコンポーネントを作成](custom-workflow-component/custom-workflow-component.md)
 + AEM ワークフローの変数{#variables-aem-workflow}
    + [概要 - ワークフローの変数](variables-aem-workflow/introduction.md)
    + [XML 変数](variables-aem-workflow/part1.md)
@@ -218,11 +218,11 @@ ht-degree: 98%
    + [第 4 部 - まとめ](aem-forms-with-marketo/part4.md)
 
 + AEM Forms と Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
-   + [はじめに](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
-   + [第 1 部 -トークンの生成](aem-forms-with-adobe-campaign/partone.md)
-   + [第 2 部 - フォーム送信時の ACS プロファイルの作成](aem-forms-with-adobe-campaign/parttwo.md)
-   + [第 3 部 - ACS プロファイル情報を使用したフォームの事前入力](aem-forms-with-adobe-campaign/partthree.md)
-   + [第 4 部 - フォームデータモデルを使用した ACS プロファイルの作成](aem-forms-with-adobe-campaign/partfour.md)
+   + [1 — はじめに](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
+   + [2 — トークンの生成](aem-forms-with-adobe-campaign/partone.md)
+   + [3 — フォーム送信時の ACS プロファイルの作成](aem-forms-with-adobe-campaign/parttwo.md)
+   + [4 - ACS プロファイル情報を使用したフォームの事前入力](aem-forms-with-adobe-campaign/partthree.md)
+   + [5 — フォームデータモデルを使用して ACS プロファイルを作成する](aem-forms-with-adobe-campaign/partfour.md)
 
 + ウェルカムキット {#welcome-kit}
    + [はじめに](welcome-kit/introduction.md)
@@ -233,7 +233,7 @@ ht-degree: 98%
 + FormsおよびAcrobat Signを使用した React アプリ {#react-ic-sign}
    + [1 — はじめに](react-ic-sign/introduction.md)
    + [2 — ドキュメントを生成](react-ic-sign/create-ic-document.md)
-   + [3-Acrobat Sign API ラッパー](react-ic-sign/wrapper-sign-api.md)
+   + [3 - Acrobat Sign API ラッパー](react-ic-sign/wrapper-sign-api.md)
    + [4 — 署名ウィジェットを生成](react-ic-sign/create-servlet-to-expose-endpoint.md)
    + [5 — サンプルアセットのデプロイ](react-ic-sign/deploy-assets-on-your-server.md)
 + ドキュメントサービス {#document-services}

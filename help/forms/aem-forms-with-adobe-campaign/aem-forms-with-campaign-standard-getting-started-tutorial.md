@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '251'
-ht-degree: 100%
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 98%
 
 ---
 
@@ -38,3 +38,7 @@ AEM Forms を ACS と統合するには、次の手順に従う必要があり�
 * [この記事で説明されているサービスユーザーを作成します](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。記事に関連付けられた OSGi バンドルをデプロイします。
 * ACS 秘密鍵を etc/key/campaign/private.key に保存します。 etc/key の下に campaign というフォルダーを作成する必要があります。
 * [サービスユーザー「data」にキャンペーンフォルダーへの読み取りアクセス権を付与します。](http://localhost:4502/useradmin)
+
+## 次の手順
+
+[JWT とアクセストークンを生成](partone.md)

@@ -7,10 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-11-28T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
-workflow-type: ht
-source-wordcount: '69'
-ht-degree: 100%
+exl-id: 9f00a2f9-d388-4bcc-bdd6-66531dbb3ed2
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 88%
 
 ---
 
@@ -26,5 +27,6 @@ ht-degree: 100%
 
 * [このドキュメントに従って設定された開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 
+## 次の手順
 
-
+次を書き込みます。 [WorkflowProcess インターフェイスの実装によるカスタム Java コード](./custom-process-step-aem-workflow.md)

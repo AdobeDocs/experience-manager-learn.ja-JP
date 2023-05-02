@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '355'
-ht-degree: 100%
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 98%
 
 ---
 
@@ -201,3 +201,8 @@ public class MarketoConfigurationService {
 1. バンドルをビルドし、AEM サーバーにデプロイします。
 1. [ブラウザーで configMgr にアクセスし](http://localhost:4502/system/console/configMgr)、「Marketo Credentials Service Configuration」を検索します。
 1. Marketo インスタンスに固有の適切なプロパティを指定します。
+
+## 次の手順
+
+[RESTful サービスベースのデータソースの作成](./part3.md)
+
