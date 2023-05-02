@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
 workflow-type: tm+mt
-source-wordcount: '4066'
+source-wordcount: '4061'
 ht-degree: 93%
 
 ---
@@ -439,14 +439,14 @@ Sling Model は、JCR から Java™ 変数へのデータのマッピングを�
 
    WKND ソースの Java™ パッケージ `com.adobe.aem.guides.wknd.core.models` は `1.0.0` のバージョンを宣言しており、非改行のパブリックインターフェイスとメソッドが追加されているため、バージョンを `1.1.0` に上げる必要があります。`core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` に置かれたファイルを開き、`@Version("1.0.0")` を `@Version("2.1.0")` に更新します。
 
-     ```
-     @Version(&quot;2.1.0&quot;)
-     package com.adobe.aem.guides.wknd.core.models;
-     
-     import org.osgi.annotation.versioning.Version;
-     ```
+   ```
+   @Version("2.1.0")
+   package com.adobe.aem.guides.wknd.core.models;
+   
+   import org.osgi.annotation.versioning.Version;
+   ```
 
-   このパッケージ内のファイルに変更が加えられるたびに、[パッケージバージョンを意味的に調整する必要があります](https://semver.org/)。調整しない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。幸いなことに、失敗すると、Maven プラグインは無効な Java™ パッケージバージョンと、本来あるべきバージョンを報告します。違反する Java™ パッケージの `package-info.java` にある `@Version("...")` 宣言を、プラグインが修正を推奨するバージョンに更新します。
+このパッケージ内のファイルに変更が加えられるたびに、[パッケージバージョンを意味的に調整する必要があります](https://semver.org/)。調整しない場合、Maven プロジェクトの [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) は無効なパッケージバージョンを検出し、ビルドを中断します。幸いなことに、失敗すると、Maven プラグインは無効な Java™ パッケージバージョンと、本来あるべきバージョンを報告します。違反する Java™ パッケージの `package-info.java` にある `@Version("...")` 宣言を、プラグインが修正を推奨するバージョンに更新します。
 
 ### 署名の実装 {#byline-implementation}
 
