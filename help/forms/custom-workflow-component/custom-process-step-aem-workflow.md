@@ -1,16 +1,17 @@
 ---
 title: ダイアログを含むカスタムプロセスステップの実装
-description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む
+description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む方法
 feature: Workflow
 version: 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
+source-git-commit: 00257efe045eb85fb192bbb47f8e178cf909eb86
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 1%
+ht-degree: 66%
 
 ---
 
@@ -20,20 +21,20 @@ ht-degree: 1%
 
 次の手順は、Java クラスを記述し、クラスを OSGi バンドルとしてデプロイするために必要です
 
-## Maven プロジェクトを作成
+## Maven プロジェクトの作成
 
-最初の手順は、適切なAdobeMaven アーキタイプを使用して Maven プロジェクトを作成することです。 詳細な手順を次に示します [記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). Maven プロジェクトを Eclipse に読み込んだら、プロセスステップで使用できる最初の OSGi コンポーネントの記述を開始する準備が整います。
+最初に行うことは、適切な Adobe Maven アーキタイプを使用して Maven プロジェクトを作成することです。 詳細な手順は、この[記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)に記載されています。Maven プロジェクトを Eclipse に読み込んだら、プロセスステップで使用できる最初の OSGi コンポーネントの記述を開始する準備が整います。
 
 
-### WorkflowProcess を実装するクラスを作成します
+### WorkflowProcess を実装するクラスの作成
 
-Eclipse IDE で Maven プロジェクトを開きます。 展開 **projectname** > **コア** フォルダー。 src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージで、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドを上書きする必要があります。 execute メソッドの署名は、パブリック void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throwsWorkflowException
+Eclipse IDE で Maven プロジェクトを開きます。 **[projectname]**／**core** フォルダーを展開します。src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージに、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドをオーバーライドする必要があります。 execute メソッドの署名は、パブリック void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throwsWorkflowException
 
-このチュートリアルでは、アダプティブフォームに追加された添付ファイルをAEM Workflow の一部としてファイルシステムに書き込みます。
+このチュートリアルでは、アダプティブフォームに追加された添付ファイルを AEM ワークフローの一環としてファイルシステムに書き込みます。
 
-この使用例を達成するために、次の Java クラスが記述されました
+このユースケースを実現するために、次の Java クラスを記述しました。
 
-このコードを見てみましょう
+このコードを見てみましょう。
 
 ```java
 package com.mysite.core;
@@ -75,14 +76,10 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
   throws WorkflowException {
 
     String attachmentsPath = metaDataMap.get("attachmentsPath", String.class);
-<<<<<<< HEAD
-    log.debug("Got Attachments PAth" + attachmentsPath);
-    String saveToLocation = metaDataMap.get("saveToLocation", String.class);
-=======
-    log.debug("Got Attachments Path" + attachmentsPath);
+
+    log.debug("Got attachments path: " + attachmentsPath);
     String saveToLocation = metaDataMap.get("SaveToLocation", String.class);
->>>>>>> 1d85e32dec060b5f5f33607225cd6ceb8d2b21c5
-    log.debug("Got Save Location" + saveToLocation);
+    log.debug("Got save location: " + saveToLocation);
 
     log.debug("The seperator is" + File.separator);
     String payloadPath = workItem.getWorkflowData().getPayload().toString();
@@ -119,20 +116,20 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath - AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。 これは、ワークフローのペイロードを基準に、AEMで添付ファイルを保存するフォルダーの名前です。
+* attachmentsPath - AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。 これは、添付ファイルを保存する AEM 内のフォルダーの名前（ワークフローのペイロードを基準とする相対パス）です。
 
-* saveToLocation - AEMサーバーのファイルシステム上で添付ファイルを保存する場所です。
+* saveToLocation - AEM サーバーのファイルシステム上で添付ファイルを保存する場所です。
 
 これら 2 つの値は、ワークフローコンポーネントのダイアログを使用してプロセス引数として渡されます
 
 ![ProcessStep](assets/custom-workflow-component.png)
 
-QueryBuilder サービスは、attachmentsPath フォルダーの下の nt:file 型のノードに対してクエリを実行するために使用します。 残りのコードは、検索結果を繰り返し処理して Document オブジェクトを作成し、ファイルシステムに保存します
+QueryBuilder サービスは、attachmentsPath フォルダー下の nt:file タイプのノードに対してクエリを実行するために使用します。 残りのコードでは、検索結果を反復処理して Document オブジェクトを作成し、それをファイルシステムに保存します。
 
 
 >[!NOTE]
 >
->AEM Formsに固有の Document オブジェクトを使用するので、aemfd-client-sdk 依存関係を Maven プロジェクトに含める必要があります。
+>AEM Forms に固有の Document オブジェクトを使用しているので、aemfd-client-sdk の依存関係を Maven プロジェクトに含める必要があります。 
 
 ```xml
 <dependency>
@@ -144,6 +141,5 @@ QueryBuilder サービスは、attachmentsPath フォルダーの下の nt:file 
 
 #### ビルドとデプロイ
 
-[ここで説明されているように、バンドルをビルドします。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[ここで説明しているとおりに、バンドルをビルドします。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 [バンドルがデプロイされ、アクティブな状態になっていることを確認します。](http://localhost:4502/system/console/bundles)
-
