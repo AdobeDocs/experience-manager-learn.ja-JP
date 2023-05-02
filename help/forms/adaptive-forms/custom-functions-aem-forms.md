@@ -83,7 +83,7 @@ js.txt を開き、次のコードを貼り付けて、変更を保存します�
 functions.js
 ```
 
-#base=js の行は、JavaScript ファイルを配置するディレクトリを指定します。
+&#x200B;#base=js の行は、JavaScript ファイルを配置するディレクトリを指定します。
 次の行は、JavaScript ファイルの基本位置を基準にした相対位置を示します。
 
 カスタム関数の作成に問題がある場合は、[このパッケージをダウンロードして AEM インスタンスにインストール](assets/custom-functions.zip)してください。
