@@ -1,6 +1,6 @@
 ---
 title: クリックされたコンポーネントの Adobe Analytics での追跡
-description: イベント駆動型の Adobe Client Data Layer を使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックを追跡します。Experience Platform Launch でルールを使用してクリックイベントをリッスンし、リンクの追跡ビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
+description: イベント駆動型の Adobe Client Data Layer を使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックを追跡します。タグルールを使用してこれらのイベントをリッスンし、トラックリンクビーコンを使用してAdobe Analyticsレポートスイートにデータを送信する方法について説明します。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -9,49 +9,53 @@ level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '1806'
-ht-degree: 100%
+source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+workflow-type: tm+mt
+source-wordcount: '1885'
+ht-degree: 43%
 
 ---
 
 # クリックされたコンポーネントの Adobe Analytics での追跡
 
-イベント駆動型の [Adobe Client Data Layer を AEM コアコンポーネントと共に](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックを追跡します。Experience Platform Launch でルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクのトラックビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
+>[!NOTE]
+>
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 次を参照してください。 [文書](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 用語の変更を統合的に参照する場合。
 
-## 作成する内容
+イベント駆動型の [Adobe Client Data Layer を AEM コアコンポーネントと共に](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックを追跡します。タグプロパティでルールを使用して、クリックイベントをリッスンし、コンポーネントでフィルタリングし、トラックリンクビーコンと共にデータをAdobe Analyticsに送信する方法について説明します。
 
-WKND マーケティングチームは、どの「コールトゥアクション（CTA）」ボタンがホームページで最も高いパフォーマンスを発揮しているかを把握したいと考えています。このチュートリアルでは、Experience Platform Launch で、**ティーザー**&#x200B;コンポーネントと&#x200B;**ボタン**&#x200B;コンポーネントから `cmp:click` イベントをリッスンする新しいルールし、リンクの追跡ビーコンと共にコンポーネント ID と新しいイベントを Adobe Analytics に送信します。
+## 作成する内容 {#what-build}
+
+WKND マーケティングチームは、どちらを知ることに関心があるかを知ることに興味を持っています `Call to Action (CTA)` ボタンがホームページで最も高いパフォーマンスを発揮します。 このチュートリアルでは、 `cmp:click` 次のイベント： **ティーザー** および **ボタン** コンポーネント。 次に、コンポーネント ID と新しいイベントをトラックリンクビーコンと共にAdobe Analyticsに送信します。
 
 ![クリックの追跡を作成する方法](assets/track-clicked-component/final-click-tracking-cta-analytics.png)
 
 ### 目的 {#objective}
 
-1. `cmp:click` イベントに基づいて、Launch でイベント駆動型のルールを作成します。
+1. イベントに基づくルールを、 `cmp:click` イベント。
 1. コンポーネントリソースタイプで様々なイベントをフィルタリングします。
-1. クリックされたコンポーネント ID を設定し、リンクの追跡ビーコンとイベントを Adobe Analytics に送信します。
+1. コンポーネント ID を設定し、トラッキングリンクビーコンと共にイベントをAdobe Analyticsに送信します。
 
 ## 前提条件
 
 このチュートリアルは、[Adobe Analytics でページデータを収集](./collect-data-analytics.md)の続きであり、以下があることを前提としています。
 
-* [Adobe Analytics 拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=ja)が有効になっている **Launch プロパティ**
-* **Adobe Analytics** テスト／開発レポートスイート ID とトラッキングサーバー。[新しいレポートスイートの作成](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html?lang=ja)については、次のドキュメントを参照してください。
-* [https://wknd.site/us/en.html](https://wknd.site/us/en.html) またはアドビのデータレイヤーが有効になっている AEM サイトに読み込まれた、Launch プロパティを使用して設定された [Experience Platform デバッガー](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=ja)ブラウザー拡張機能。
+* A **タグのプロパティ** と [Adobe Analytics拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=ja) 有効
+* **Adobe Analytics** テスト／開発レポートスイート ID とトラッキングサーバーがある。詳しくは、次のドキュメントを参照してください。 [レポートスイートの作成](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
+* [Experience Platformデバッガー](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) タグプロパティをに読み込んで設定されたブラウザー拡張 [WKND サイト](https://wknd.site/us/en.html) またはAEMサイトで、Adobeデータレイヤーが有効になっている。
 
-## ボタンとティーザーのスキーマの検査
+## Inspectボタンスキーマとティーザースキーマ
 
-Launch でルールを作成する前に、[ボタンとティーザーのスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#item)を確認して、データレイヤーの実装で検査します。
+タグプロパティにルールを作成する前に、 [ボタンおよびティーザーのスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#item) をクリックし、データレイヤー実装でそれらを調べます。
 
-1. [https://wknd.site/us/en.html](https://wknd.site/us/en.html) に移動します。
+1. に移動します。 [WKND ホームページ](https://wknd.site/us/en.html)
 1. ブラウザーのデベロッパーツールを開き、**コンソール**&#x200B;に移動します。次のコマンドを実行します。
 
    ```js
    adobeDataLayer.getState();
    ```
 
-   これは、Adobe Client Data Layer の現在の状態を返します。
+   上記のコードは、クライアントデータレイヤーAdobeの現在の状態を返します。
 
    ![ブラウザーコンソールを使用したデータレイヤーの状態](assets/track-clicked-component/adobe-data-layer-state-browser.png)
 
@@ -78,17 +82,17 @@ Launch でルールを作成する前に、[ボタンとティーザーのスキ
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   これらは、[コンポーネント／コンテナ項目スキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#item)に基づいています。Launch で作成するルールには、このスキーマを使用します。
+   上記のデータの詳細は、 [コンポーネント/コンテナ項目スキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#item). 新しいタグルールでは、このスキーマが使用されます。
 
 ## CTA クリック済みルールの作成
 
-Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレイヤーです。任意のコアコンポーネントがクリックされると、データレイヤーを介して `cmp:click` イベントがディスパッチされます。次に、`cmp:click` イベントをリッスンするルールを作成します。
+Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレイヤーです。任意のコアコンポーネントがクリックされたときは常に、 `cmp:click` イベントは、データレイヤーを介してディスパッチされます。 をリッスンするには、以下を実行します。 `cmp:click` イベントで、ルールを作成します。
 
-1. Experience Platform Launch に移動し、AEM サイトと統合された web プロパティに移動します。
-1. Launch UI の「**ルール**」セクションに移動し、「**ルールを追加**」をクリックします。
+1. Experience Platformに移動し、AEM Site と統合されたタグプロパティに移動します。
+1. 次に移動： **ルール** 」セクションをクリックし、 **ルールを追加**.
 1. 「**CTA クリック済み**」という名前をルールに付けます。
 1. **イベント**／**追加**&#x200B;をクリックして、**イベント設定**&#x200B;ウィザードを開きます。
-1. **イベントタイプ**&#x200B;で、「**カスタムコード**」を選択します。
+1. の場合 **イベントタイプ** フィールド、選択 **カスタムコード**.
 
    ![「CTA クリック済み」という名前をルールに付け、カスタムコードイベントを追加](assets/track-clicked-component/custom-code-event.png)
 
@@ -98,7 +102,7 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    var componentClickedHandler = function(evt) {
       // defensive coding to avoid a null pointer exception
       if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-         //trigger Launch Rule and pass event
+         //trigger Tag Rule and pass event
          console.debug("cmp:click event: " + evt.eventInfo.path);
          var event = {
             //include the path of the component that triggered the event
@@ -107,8 +111,8 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
             component: window.adobeDataLayer.getState(evt.eventInfo.path)
          };
    
-         //Trigger the Launch Rule, passing in the new `event` object
-         // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+         //Trigger the Tag Rule, passing in the new `event` object
+         // the `event` obj can now be referenced by the reserved name `event` by other Tag Property data elements
          // i.e `event.component['someKey']`
          trigger(event);
       }
@@ -123,17 +127,17 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    });
    ```
 
-   上記のコードスニペットで、データレイヤーに[関数をプッシュ](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)して、イベントリスナーを追加します。`cmp:click` イベントがトリガーされると、`componentClickedHandler` 関数が呼び出されます。この関数では、いくつかの健全性チェックが追加され、新しい `event` オブジェクトが、イベントをトリガーしたコンポーネントの](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)データレイヤーの最新の状態[で構築されます。
+   上記のコードスニペットで、データレイヤーに[関数をプッシュ](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)して、イベントリスナーを追加します。常に `cmp:click` イベントがトリガーされた `componentClickedHandler` 関数が呼び出されます。 この関数では、いくつかのサニティチェックが追加され、新しい `event` オブジェクトは最新の [データレイヤーの状態](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) イベントをトリガーしたコンポーネントの
 
-   その後、`trigger(event)` が呼び出されます。`trigger()` は、Launch の予約名で、Launch ルールを「トリガー」します。Launch で `event` という別の予約名で公開される `event` オブジェクトをパラメーターとして渡します。Launch のデータ要素で、`event.component['someKey']` などの様々なプロパティを参照できるようになりました。
+   最後に `trigger(event)` 関数が呼び出されます。 この `trigger()` 関数は、タグプロパティ内の予約名で、 **トリガー** ルール。 この `event` オブジェクトはパラメーターとして渡され、その後、タグプロパティ内の別の予約名で公開されます。 タグプロパティ内のデータ要素は、 `event.component['someKey']`.
 
 1. 変更を保存します。
-1. 次に&#x200B;**アクション**&#x200B;で「**追加**」をクリックして&#x200B;**アクションの設定**&#x200B;ウィザードを開きます。
-1. **アクションタイプ**&#x200B;で「**カスタムコード**」を選択します。
+1. 次に、**アクション**&#x200B;で「**追加**」をクリックして、**アクションの設定**&#x200B;ウィザードを開きます。
+1. の場合 **アクションタイプ** フィールド、選択 **カスタムコード**.
 
    ![カスタムコードアクションタイプ](assets/track-clicked-component/action-custom-code.png)
 
-1. メインパネルで「**編集画面を開く**」をクリックし、次のコードスニペットを入力します。
+1. メインパネルで「**エディターを開く**」をクリックし、次のコードスニペットを入力します。
 
    ```js
    console.debug("Component Clicked");
@@ -142,15 +146,15 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    console.debug("Component text: " + event.component['dc:title']);
    ```
 
-   `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。`component` は、クリックをトリガーしたデータレイヤー `getState` から派生したコンポーネントの現在の状態です。
+   `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。この `component` オブジェクトは、データレイヤーから派生したコンポーネントの現在の状態です `getState()` メソッドおよびは、クリックをトリガーした要素です。
 
-1. 変更を保存し、Launch で[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
+1. 変更を保存し、 [ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) をタグプロパティに追加して、 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja) をAEM Site で使用している場合にのみ使用できます。
 
    >[!NOTE]
    >
-   > [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=ja) を使用して埋め込みコードを&#x200B;**開発**&#x200B;環境に切り替えると非常に便利です。
+   > これは、 [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) 埋め込みコードを **開発** 環境。
 
-1. [WKND サイト](https://wknd.site/us/en.html)に移動し、デベロッパーツールを開いてコンソールを表示します。「**ログを保持**」を選択します。
+1. [WKND サイト](https://wknd.site/us/en.html)に移動し、デベロッパーツールを開いてコンソールを表示します。また、 **ログを保持** チェックボックス。
 
 1. 「**ティーザー**」または「**ボタン**」のいずれかの CTA ボタンをクリックして、別のページに移動します。
 
@@ -166,14 +170,14 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 
 ### コンポーネント ID
 
-1. Experience Platform Launch に移動し、AEM サイトと統合された web プロパティに移動します。
+1. Experience Platformに移動し、AEM Site と統合されたタグプロパティに移動します。
 1. 「**データ要素**」セクションに移動して、「**新規データ要素を追加**」をクリックします。
-1. 「**名前**」には、**コンポーネント ID** を入力します。
-1. 「**データ要素タイプ**」には、**カスタムコード**&#x200B;を選択します。
+1. の場合 **名前** フィールドに入力 **コンポーネント ID**.
+1. の場合 **データ要素タイプ** フィールド、選択 **カスタムコード**.
 
    ![コンポーネント ID データ要素フォーム](assets/track-clicked-component/component-id-data-element.png)
 
-1. 「**編集画面を開く**」をクリックし、カスタムコードエディターに以下を入力します。
+1. クリック **編集画面を開く** ボタンをクリックし、カスタムコードエディターで次のように入力します。
 
    ```js
    if(event && event.path && event.path.includes('.')) {
@@ -182,18 +186,19 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    }
    ```
 
-   変更を保存します。
+1. 変更を保存します。
 
    >[!NOTE]
    >
-   > `event` オブジェクトは、Launch で&#x200B;**ルール**&#x200B;をトリガーしたイベントに基づいて利用可能になり、スコープされます。データ要素の値は、データ要素がルール内で&#x200B;*参照*&#x200B;されるまで設定されません。したがって、前の演習で作成した **CTA クリック済み**&#x200B;ルールと同様に、このデータ要素はルール内では安全に使用できますが、**&#x200B;他のコンテキストでは安全に使用できません。
+   > 以下を思い出してください。 `event` オブジェクトは、 **ルール** タグプロパティ内。 データ要素の値は、データ要素がルール内で&#x200B;*参照*&#x200B;されるまで設定されません。したがって、このデータ要素は、 **Page Loaded** 前の手順で作成されたルール *しかし* 他のコンテキストでは安全に使用できません。
+
 
 ### コンポーネントのタイトル
 
 1. 「**データ要素**」セクションに移動して、「**新規データ要素を追加**」をクリックします。
-1. 「**名前**」には、**コンポーネントタイトル**&#x200B;と入力します。
-1. 「**データ要素タイプ**」には、**カスタムコード**&#x200B;を選択します。
-1. 「**編集画面を開く**」をクリックし、カスタムコードエディターに以下を入力します。
+1. の場合 **名前** フィールドに入力 **コンポーネントタイトル**.
+1. の場合 **データ要素タイプ** フィールド、選択 **カスタムコード**.
+1. クリック **編集画面を開く** ボタンをクリックし、カスタムコードエディターで次のように入力します。
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -201,15 +206,15 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    }
    ```
 
-   変更を保存します。
+1. 変更を保存します。
 
 ## CTA クリック済みルールに条件を追加する
 
-次に、**CTA クリック済み**&#x200B;ルールを更新して、`cmp:click` イベントが&#x200B;**ティーザー**&#x200B;または&#x200B;**ボタン**&#x200B;に対して発生した場合にのみルールが呼び出されるようにします。ティーザーの CTA はデータレイヤー内で別のオブジェクトと見なされるので、親を調べてティーザーから来たことを確認します。
+次に、 **CTA クリック済み** ルールを使用して、 `cmp:click` イベントが発生した場合、 **ティーザー** または **ボタン**. ティーザーの CTA はデータレイヤー内で個別のオブジェクトと見なされるので、親を調べて、ティーザーから来たことを確認することが重要です。
 
-1. Launch UI で、以前に作成した **CTA クリック済み**&#x200B;ルールに移動します。
-1. **条件**&#x200B;で「**追加**」をクリックして&#x200B;**条件の設定**&#x200B;ウィザードを開きます。
-1. **条件タイプ**&#x200B;で「**カスタムコード**」を選択します。
+1. タグプロパティ UI で、 **CTA クリック済み** ルールが作成されました。
+1. 「**条件**」で「**追加**」をクリックすると、**条件設定**&#x200B;ウィザードが表示されます。
+1. の場合 **条件タイプ** フィールド、選択 **カスタムコード**.
 
    ![CTA クリック済み条件のカスタムコード](assets/track-clicked-component/custom-code-condition.png)
 
@@ -229,19 +234,19 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    return false;
    ```
 
-   上記のコードでは、最初にリソースタイプが&#x200B;**ボタン**&#x200B;から来たことを確認し、次にリソースタイプが&#x200B;**ティーザー**&#x200B;内の CTA から来たことを確認しています。
+   上記のコードでは、最初に、リソースタイプが **ボタン** リソースタイプが **ティーザー**.
 
 1. 変更を保存します。
 
 ## Analytics 変数の設定とリンクの追跡ビーコンのトリガー
 
-現在、**CTA クリック済み**&#x200B;ルールは単にコンソールステートメントを出力します。次に、データ要素と Analytics 拡張機能を使用して、Analytics 変数を&#x200B;**アクション**&#x200B;として設定します。また、**リンクを追跡**&#x200B;をトリガーし、収集したデータを Adobe Analytics に送信する追加のアクションを設定します。
+現在、**CTA クリック済み**&#x200B;ルールは単にコンソールステートメントを出力します。次に、データ要素と Analytics 拡張機能を使用して、Analytics 変数を&#x200B;**アクション**&#x200B;として設定します。また、追加のアクションを設定して、 **リンクを追跡** 収集したデータをAdobe Analyticsに送信します。
 
-1. **CTA クリック済み**&#x200B;ルールで&#x200B;**コア - カスタムコード**&#x200B;アクション（コンソールステートメント）を&#x200B;**削除します**。
+1. 内 **CTA クリック済み** ルール **削除** の **コア — カスタムコード** アクション（コンソールステートメント）:
 
-   ![カスタムコードアクションを削除](assets/track-clicked-component/remove-console-statements.png)
+   ![「カスタムコードを削除」アクション](assets/track-clicked-component/remove-console-statements.png)
 
-1. 「アクション」で、「**追加**」をクリックして新しいアクションを追加します。
+1. 「アクション」で、 **追加** をクリックしてアクションを作成します。
 1. 「**拡張機能**」タイプを **Adobe Analytics** に設定し、「**アクションタイプ**」を&#x200B;**変数を設定**&#x200B;に設定します。
 
 1. 「**eVar**」、「**Prop**」および「**イベント**」に次の値を設定します。
@@ -254,38 +259,38 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 
    >[!NOTE]
    >
-   > ここで `%Component ID%` が使用されているのは、クリックされた CTA の一意の識別子を保証するからです。`%Component ID%` を使用することの潜在的な欠点は、Analytics レポートに `button-2e6d32893a` のような値が含まれることです。`%Component Title%` を使用すると、よりわかりやすい名前を付けることができますが、値が一意でない可能性があります。
+   > ここ `%Component ID%` は、クリックされた CTA の一意の識別子を保証するので、使用されます。 使用の潜在的な欠点 `%Component ID%` は、Analytics レポートに次のような値が含まれることを意味します。 `button-2e6d32893a`. の使用 `%Component Title%` によりわかりやすい名前が付けられますが、値が一意でない可能性があります。
 
-1. 次に、**プラス**&#x200B;アイコンをタップして、**Adobe Analytics - 変数を設定**&#x200B;の右側にアクションを追加します。
+1. 次に、「 **Adobe Analytics — 変数を設定** をタップすることで **プラス** アイコン：
 
-   ![Launch アクションの追加](assets/track-clicked-component/add-additional-launch-action.png)
+   ![タグルールへの追加アクションの追加](assets/track-clicked-component/add-additional-launch-action.png)
 
 1. 「**拡張機能**」タイプを **Adobe Analytics** に設定し、「**アクションタイプ**」を&#x200B;**ビーコンを送信**&#x200B;に設定します。
 1. 「**トラッキング**」で、ラジオボタンを **`s.tl()`** に設定します。
-1. 「**リンクタイプ**」に&#x200B;**カスタムリンク**&#x200B;を選択し、「**リンク名**」の値を **`%Component Title%: CTA Clicked`** に設定します。
+1. の場合 **リンクタイプ** フィールド、選択 **カスタムリンク** および **リンク名** 値を次の値に設定します。 **`%Component Title%: CTA Clicked`**:
 
    ![リンクビーコン送信の設定](assets/track-clicked-component/analytics-send-beacon-link-track.png)
 
-   これで、データ要素&#x200B;**コンポーネントタイトル**&#x200B;の動的変数と静的文字列 **CTA クリック済み**&#x200B;が結合されます。
+   上記の設定は、データ要素からの動的変数を組み合わせたものです **コンポーネントタイトル** と静的文字列 **CTA クリック済み**.
 
 1. 変更を保存します。**CTA クリック済み**&#x200B;ルールの設定は、次のようになります。
 
-   ![最終的な Launch 設定](assets/track-clicked-component/final-page-loaded-config.png)
+   ![最終タグルール設定](assets/track-clicked-component/final-page-loaded-config.png)
 
-   * **1.** `cmp:click` イベントをリッスンします。
+   * **1.**`cmp:click` イベントをリッスンします。
    * **2.** イベントが&#x200B;**ボタン**&#x200B;または&#x200B;**ティーザー**&#x200B;にトリガーされたことを確認します。
-   * **3.** **コンポーネント ID** を **eVar**、**prop** および&#x200B;**イベント** として追跡する Analytics 変数を設定します。
+   * **3.** 追跡する Analytics 変数を設定 **コンポーネント ID** as a **eVar**, **prop**、および **イベント**.
    * **4.** Analytics のリンク追跡ビーコンを送信します（ページビューとして&#x200B;**扱わないようにします**）。
 
-1. すべての変更を保存し、Experience Platform Launch ライブラリを構築して、適切な環境に昇格します。
+1. すべての変更を保存し、タグライブラリを構築して、適切な環境に昇格します。
 
 ## リンク追跡ビーコンと Analytics 呼び出しの検証
 
 **CTA クリック済み**&#x200B;ルールで Analytics ビーコンを送信するようになったので、Experience Platform デバッガーを使用して Analytics トラッキング変数を確認できます。
 
 1. ブラウザーで [WKND サイト](https://wknd.site/us/en.html)を開きます。
-1. デバッガーアイコン ![Experience Platform デバッガーアイコン](assets/track-clicked-component/experience-cloud-debugger.png) をクリックして、Experience Platform デバッガーを開きます。
-1. 前述のように、デバッガーで Launch プロパティが&#x200B;*自分の*&#x200B;開発環境にマッピングされており、「**コンソールログ**」がオンになっていることを確認します。
+1. ![「Experience Platform Debugger」アイコン](assets/track-clicked-component/experience-cloud-debugger.png) の「デバッガー」アイコンをクリックして Experience Platform Debugger を起動します。
+1. Debugger がタグプロパティをにマッピングしていることを確認します。 *あなたの* 前述のように開発環境、および **コンソールログ** がオンになっている。
 1. Analytics メニューを開き、レポートスイートが&#x200B;*自分の*&#x200B;レポートスイートに設定されていることを確認します。
 
    ![デバッガーの「Analytics」タブ](assets/track-clicked-component/analytics-tab-debugger.png)
@@ -304,12 +309,12 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 
 1. *ルール「CTA クリック済み」の「カスタムコード」が満たされませんでした*&#x200B;というメッセージがブラウザーコンソールに表示されます。
 
-   これは、ナビゲーションコンポーネントが `cmp:click` イベントをトリガーします&#x200B;*が*、リソースタイプの確認の結果、アクションが実行されないからです。
+   上記のメッセージは、ナビゲーションコンポーネントがトリガー `cmp:click` イベント *しかし* 理由は [ルールの条件](#add-a-condition-to-the-cta-clicked-rule) がリソースの種類をチェックし、アクションは実行されません。
 
    >[!NOTE]
    >
-   > コンソールログが表示されない場合は、Experience Platform デバッガーの **Launch** で「**コンソールログ**」がオンになっていることを確認します。
+   > コンソールログが表示されない場合は、 **コンソールログ** は以下でチェックされています **Experience Platformタグ** (Experience PlatformDebugger)
 
 ## おめでとうございます。
 
-イベント駆動型の Adobe Client Data Layer と Experience Platform Launch を使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックを追跡しました。
+Experience Platformでイベント駆動型Adobeクライアントデータレイヤーとタグを使用して、AEMサイト上の特定のコンポーネントのクリックを追跡したのです。
