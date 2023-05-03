@@ -7,10 +7,10 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '1076'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 目的
 
-このチュートリアルでは、次のトピックについて説明します。
+このチュートリアルでは、以下のトピックを扱います。
 
 * 検証ルールや、タブプレースホルダー、ネストされたフラグメント参照、JSON オブジェクト、日付と時刻データ型などの高度なデータ型を使用して、コンテンツフラグメントモデルを作成します。
 * ネストされたコンテンツおよびフラグメント参照の操作中にコンテンツフラグメントを作成し、コンテンツフラグメントオーサリングガバナンス用のフォルダーポリシーを設定します。
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->このビデオ (2:25) では、パッケージマネージャーを使用して GraphiQL クエリエディターをインストールし、GraphQLクエリを調査する方法について説明します。 ただし、新しいバージョンのAEM as Cloud Serviceには組み込み **GraphiQL エクスプローラ** が指定されているので、パッケージのインストールは不要です。 詳しくは、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) を参照してください。
+>このビデオ (2:25) では、パッケージマネージャーを使用して GraphiQL クエリエディターをインストールし、GraphQLクエリを調査する方法について説明します。 ただし、新しいバージョンのAEM as Cloud Serviceには組み込み **GraphiQL エクスプローラ** が指定されているので、パッケージのインストールは不要です。 詳しくは、 [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=ja) を参照してください。
 
 
 ## プロジェクト設定
@@ -60,7 +60,7 @@ WKND サイトプロジェクトには必要な設定がすべて含まれてい
 
 AEMで新しいプロジェクトを開始する最初の手順は、ワークスペースとしての設定を作成し、GraphQL API エンドポイントを作成することです。 設定を確認または作成するには、次の場所に移動します。 **ツール** > **一般** > **設定ブラウザー**.
 
-![設定ブラウザーに移動します。](assets/overview/create-configuration.png)
+![設定ブラウザーに移動](assets/overview/create-configuration.png)
 
 次の点に注意してください。 `WKND Shared` このチュートリアルでは、サイト設定が既に作成されています。 独自のプロジェクトの設定を作成するには、「 」を選択します。 **作成** 右上隅に表示される「設定を作成」モーダルのフォームに入力します。
 
@@ -78,7 +78,7 @@ AEMで新しいプロジェクトを開始する最初の手順は、ワーク�
 
 >[!NOTE]
 >
-> エンドポイントを保存すると、セキュリティコンソールへのアクセスに関するモーダルが表示されます。このモーダルを使用すると、エンドポイントへのアクセスを設定する場合にセキュリティ設定を調整できます。 ただし、セキュリティ権限自体は、このチュートリアルの範囲外です。 詳しくは、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html?lang=ja).
+> エンドポイントを保存すると、セキュリティコンソールへのアクセスに関するモーダルが表示されます。このモーダルを使用すると、エンドポイントへのアクセスを設定する場合にセキュリティ設定を調整できます。 ただし、セキュリティ権限自体は、このチュートリアルの範囲外です。 詳しくは、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja).
 
 ### WKND コンテンツ構造と言語ルートフォルダーの確認
 
@@ -127,7 +127,7 @@ AEMで独自のプロジェクトを作成する際のベストプラクティ�
 
 この [React アプリ — 高度なチュートリアル — WKND アドベンチャ](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) プロジェクトを使用して、サンプルアプリケーションを確認および調査できます。 このサンプルアプリケーションは、永続化されたGraphQLクエリを呼び出してAEMからコンテンツを取得し、没入感のあるエクスペリエンスでレンダリングします。
 
-## 概要
+## はじめに
 
 この高度なチュートリアルを開始するには、次の手順に従います。
 

@@ -4,13 +4,13 @@ seo-title: Your Routine Site Maintenance Guide
 description: 管理者、作成者、開発者のどれに該当しようと、サイトメンテナンスでは、AEM Sites インスタンスのあらゆる側面に触れます。このガイドを使用すると、成功に向けた戦略を確実に設定することができます。
 seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
 audience: author, marketer, developer
-source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
-workflow-type: ht
-source-wordcount: '1094'
-ht-degree: 100%
+exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
+source-wordcount: '1084'
+ht-degree: 97%
 
 ---
-
 
 # サイトメンテナンスのヒントとテクニック
 
@@ -44,19 +44,19 @@ AEM インスタンスのインストールとメンテナンスに関しては�
 
 リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。
 
-#### [Lucene バイナリクリーンアップ](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-dashboard.html?lang=ja#automated-maintenance-tasks)
+#### [Lucene バイナリクリーンアップ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
 
 Lucene バイナリをパージし、実行中のデータストアのサイズ要件を減らします。
 
-#### [データストアガベージ](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/data-store-garbage-collection.html?lang=ja)
+#### [データストアガベージ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html?lang=ja)
 
 AEM のアセットが削除されると、基になっているデータストアレコードへの参照がノード階層から削除される場合がありますが、データストアレコード自体は残ります。この参照されないデータストアレコードは、保持する必要のない「ガベージ」になります。参照されていないアセットが多数存在する場合は、それらを削除してスペースを確保し、バックアップを最適化し、ファイルシステムのメンテナンスパフォーマンスを向上させると効果的です。
 
-#### [ワークフローパージ](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/workflows-administering.html?lang=ja)
+#### [ワークフローパージ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
 
 ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。
 
-#### [監査ログメンテナンス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-audit-log.html?lang=ja)
+#### [監査ログメンテナンス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html)
 
 監査ログの対象となる AEM イベントが発生すると、多くのアーカイブデータが生成されます。このデータは、レプリケーション、アセットのアップロード、およびその他のシステムアクティビティによって、短期間で増大する可能性があります。
 
@@ -80,7 +80,7 @@ AEM の最も安全なインスタンスを確保するために、セキュリ�
 
 ローンチを使用すると、現在デプロイされているページに影響を与えることなく、新しいプロモーション、販売または web サイトのロールアウトの作業を完了できます。また、担当者がその場に臨んだり監督したりせずに自動的に運用を開始するようにスケジュールでき、作成者が来週の（または次の四半期の）作業を今日行うことができ、運用開始の前日にページ開発に躍起になる必要はありません。それはまさしく時間のプレゼントです。
 
-### [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html?lang=ja)
+### [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
 
 コンテンツフラグメントは、サイト全体で簡単に再利用できるカスタマイズ可能な「情報のチャンク」です。変更が必要な場合は、元のチャンクを変更するだけで、使用されているすべての場所に更新がすぐに反映されます。
 

@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 6%
@@ -23,7 +23,7 @@ Web サイト、モバイルサイトまたはアプリでの顧客体験の最�
 
 スマートイメージングをAdobeのクラス最高のプレミアムサービスと完全に統合することで、パフォーマンスを大幅にアップさせることもできます。 このサービスが、サーバー、ネットワークおよびピアリングポイント間を結ぶ、最適なインターネットルートを見つけます。最適なインターネットルートとは、待ち時間が最小限であったり、インターネット上のデフォルトルートよりもパケット損失率が低かったりするルートです。
 
-詳細情報： [スマートイメージング](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+詳細情報： [スマートイメージング](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## スマートイメージングの利点
 
@@ -35,7 +35,7 @@ Web サイト、モバイルサイトまたはアプリでの顧客体験の最�
 
 前述したように、スマートイメージングはAdobe Sensei AI 機能を利用し、既存の画像プリセットと連携して、画像を視覚的な忠実性を維持しながら、WebP などの最適な次世代画像形式に自動的に変換します。
 
-詳細情報： [スマートイメージングの仕組み](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)( サポートされる画像形式などの詳細（およびこれらの形式を使用しない場合は何が起こるか）と、使用中の既存の画像プリセットへの影響を含む )
+詳細情報： [スマートイメージングの仕組み](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)( サポートされる画像形式などの詳細（およびこれらの形式を使用しない場合は何が起こるか）と、使用中の既存の画像プリセットへの影響を含む )
 
 ## スマートイメージングの影響
 
@@ -53,7 +53,7 @@ Web サイト、モバイルサイトまたはアプリでの顧客体験の最�
 
 スマートイメージングを有効にしたら、期待どおりに動作していることを確認できます。
 
-スマートイメージングに関して他に質問がある場合があります。 よくある質問 (FAQ) のリストと回答をまとめました。 詳しくは、 [よくある質問](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+スマートイメージングに関して他に質問がある場合があります。 よくある質問 (FAQ) のリストと回答をまとめました。 詳しくは、 [よくある質問](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## その他のリソース
 

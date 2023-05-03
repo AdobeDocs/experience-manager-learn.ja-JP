@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: f02d5e01388ee61228254951b05c37c336423348
-workflow-type: ht
+exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 100%
 
 ---
-
 
 # AEM React 編集可能コンポーネント v2 の使用方法
 
@@ -33,7 +33,7 @@ AEM React 編集可能コンポーネント v2 の詳細とコードサンプル
 
 ## AEM ページ
 
-AEM React 編集可能コンポーネントは、SPA エディターとリモート SPA React アプリの両方で動作します。 React 編集可能コンポーネントに入力するコンテンツは、[SPA ページコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-64/developing/headless/spas/spa-page-component.html?lang=ja)を拡張した AEM ページを通じて公開する必要があります。編集可能な React コンポーネントにマッピングされる AEM コンポーネントは、AEM の [コンポーネントエクスポーターフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=ja)（[AEM WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)など）を実装する必要があります。
+AEM React 編集可能コンポーネントは、SPA エディターとリモート SPA React アプリの両方で動作します。 React 編集可能コンポーネントに入力するコンテンツは、[SPA ページコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=ja)を拡張した AEM ページを通じて公開する必要があります。編集可能な React コンポーネントにマッピングされる AEM コンポーネントは、AEM の [コンポーネントエクスポーターフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=ja)（[AEM WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)など）を実装する必要があります。
 
 
 ## 依存関係
@@ -231,6 +231,3 @@ const EditableEmbedding = (props) => {
 // Export as default the mapped EditableEmbedding
 export default MapTo("wknd-examples/components/embedding")(EditableEmbedding);
 ```
-
-
-

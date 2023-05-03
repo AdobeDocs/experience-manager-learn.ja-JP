@@ -3,16 +3,16 @@ title: Windows に AEM Forms をインストールする手順の簡略化
 description: Windows に AEM Forms を手早く簡単にインストールする手順
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '578'
-ht-degree: 100%
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 98%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 100%
 
 * 適切な JDK がインストールされていることを確認します。
    * AEM 6.2 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
-* &#x200B;
+* 
    * AEM 6.3 および AEM 6.4 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
 * AEM 6.5 には JDK 8 または JDK 11 が必要です。
 * [公式の JDK 要件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=ja)は、ここに掲載されています。
@@ -87,4 +87,4 @@ ht-degree: 100%
 4. 変更を保存します。
 
 おめでとうございます。これで、システムへの AEM Forms のインストールと設定が完了しました。
-必要に応じて、サーバーで [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja) または [PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja) を設定できます
+必要に応じて、サーバーで [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja) または [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) を設定できます

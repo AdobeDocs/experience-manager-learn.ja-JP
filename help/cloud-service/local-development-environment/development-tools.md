@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1498'
 ht-degree: 96%
 
 ---
@@ -195,9 +195,9 @@ Visual Studio Code は、主に JavaScript、CSS、HTML などのフロントエ
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ は、Java 開発用の一般的な IDE で、Adobeが提供する __[AEM 開発者ツール](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=ja)__ プラグインをサポートしており、オーサリング用の IDE 内 GUI を提供し、JCR コンテンツをローカル AEM インスタンスと同期します。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ は、Java 開発用の一般的な IDE で、Adobeが提供する __[AEM 開発者ツール](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)__ プラグインをサポートしており、オーサリング用の IDE 内 GUI を提供し、JCR コンテンツをローカル AEM インスタンスと同期します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Eclipse のダウンロード](https://www.eclipse.org/ide/)
-+ [Eclipse 開発ツールのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=ja)
++ [Eclipse 開発ツールのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)

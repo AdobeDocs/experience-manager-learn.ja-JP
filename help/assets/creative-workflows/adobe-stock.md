@@ -2,15 +2,15 @@
 title: AEM Assets での Adobe Stock アセットの使用
 description: AEM は、Adobe Stock アセットを AEM から直接検索、プレビュー、保存およびライセンス供与する機能をユーザーに提供します。組織は、Adobe Stock エンタープライズプランを AEM Assets と統合して、AEM の強力なアセット管理機能により、ライセンスされたアセットをクリエイティブおよびマーケティングプロジェクトで広く利用できるようになりました。
 feature: Adobe Stock
-version: 6.4, 6.5
+version: 6.5
 topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '975'
 ht-degree: 100%
 
 ---
@@ -107,7 +107,7 @@ AEM 6.4.2 では、Adobe Stock アセットを AEM から直接検索、プレ�
 ### その他のリソース
 
 * [Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 サービスパック 2 リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/sp-release-notes.html?lang=ja)
+* [AEM 6.4 サービスパック 2 リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [AEM と Adobe Stock の統合](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=ja)
 * [Adobe I/O Console Integration API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API ドキュメント](https://www.adobe.io/apis/creativecloud/stock/docs.html)

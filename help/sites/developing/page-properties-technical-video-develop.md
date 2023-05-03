@@ -8,10 +8,10 @@ version: Cloud Service
 kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '250'
+ht-degree: 100%
 
 ---
 
@@ -27,6 +27,6 @@ ht-degree: 0%
 
 「**基本**」タブのカスタマイズと **WKND** を含む、提供された[サンプル WKND ページプロパティパッケージ](./assets/WKND-PageProperties-Example-Dialog-1.0.zip)を使用できます。[WKND ページコンポーネント](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5)が WCM コアコンポーネントの V3 バージョンを使用し、V3 バージョンで [ソーシャル共有が廃止](https://github.com/adobe/aem-core-wcm-components/pull/1930)されたため、「**ソーシャルメディア**」タブのカスタマイズはサポートされていません。
 
-ただし学習目的で、`sling:resourceSuperType` プロパティ値を使用して WKND ページコンポーネントを WCM コアコンポーネントの V2 バージョンにポイントし、「[ソーシャルメディア](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95)」タブをオーバーレイすることができます。詳しくは、[ページプロパティの設定](https://experienceleague.adobe.com/docs/experience-manager-64/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)をご覧ください。
+ただし学習目的で、`sling:resourceSuperType` プロパティ値を使用して WKND ページコンポーネントを WCM コアコンポーネントの V2 バージョンにポイントし、「[ソーシャルメディア](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95)」タブをオーバーレイすることができます。詳しくは、[ページプロパティの設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)をご覧ください。
 
 学習目的で、このサンプルパッケージをローカルの AEM SDK または AEM 6.X.X インスタンスにインストールします。

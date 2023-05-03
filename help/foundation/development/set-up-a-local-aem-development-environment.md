@@ -1,7 +1,7 @@
 ---
 title: ローカルAEM開発環境の設定
 description: Experience Manager用の環境を設定するローカル開発環境の設定方法を説明します。 ローカルインストール、Apache Maven、統合開発環境、デバッグおよびトラブルシューティングについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用します。
-version: 6.4, 6.5
+version: 6.5
 feature: Developer Tools
 topics: development
 activity: develop
@@ -12,10 +12,10 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2603'
-ht-degree: 3%
+ht-degree: 11%
 
 ---
 
@@ -43,7 +43,7 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
 ### 手順
 
 1. Java™がインストールされていることを確認します。
-   * 優先 [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Autoling&amp;orderby=%40jcr%3Fjcr%3AlastOrderby.sort&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (AEM 6.5 以降 )
+   * 優先 [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%14Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2) (AEM 6.5 以降 )
    * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) (AEM 6.5 より前のAEMバージョンの場合 )
 1. のコピーを取得 [AEM QuickStart Jar と [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja).
 1. 次のようなフォルダー構造をコンピューター上に作成します。
@@ -54,9 +54,9 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
     /publish
 ```
 
-1. 名前を変更 [!DNL QuickStart] JAR の宛先 ***aem-author-p4502.jar*** そしてそれをの下に置く `/author` ディレクトリ。 を ***[!DNL license.properties]*** の下のファイル `/author` ディレクトリ。
+1. 名前を変更 [!DNL QuickStart] JAR の宛先 ***aem-author-p4502.jar*** そしてそれをの下に置く `/author` ディレクトリ。 ***[!DNL license.properties]*** ファイルを `/author` ディレクトリの下に追加します。
 
-1. コピーを作成 [!DNL QuickStart] JAR、名前をに変更します。 ***aem-publish-p4503.jar*** そしてそれをの下に置く `/publish` ディレクトリ。 のコピーを追加 ***[!DNL license.properties]*** の下のファイル `/publish` ディレクトリ。
+1. コピーを作成 [!DNL QuickStart] JAR、名前をに変更します。 ***aem-publish-p4503.jar*** そしてそれをの下に置く `/publish` ディレクトリ。 ***[!DNL license.properties]*** ファイルのコピーを `/publish` ディレクトリの下に追加します。
 
 ```plain
 ~/aem-sdk
@@ -124,7 +124,7 @@ Default locale: en_US, platform encoding: UTF-8
 
 >[!NOTE]
 >
-> WKND プロジェクトが、AEM as a Cloud Serviceで動作するようにデフォルトに更新されました。 更新されました [6.5/6.4 との下位互換性](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). AEM 6.5 または 6.4 を使用している場合、 `classic` 任意の Maven コマンドに対するプロファイル。
+> WKND プロジェクトが、AEM as a Cloud Serviceで動作するようにデフォルトに更新されました。 更新されました [6.5/6.4 との下位互換性](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). AEM 6.5 または 6.4 を使用している場合は、`classic` プロファイルをすべての Maven コマンドに追加します。
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -138,7 +138,7 @@ IDE を使用する場合は、必ず `classic` を設定します。
 
 ### [!DNL Eclipse] IDE
 
-この **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は、Java™開発用のより一般的な IDE の 1 つで、大部分はオープンソースで、 ***無料***! Adobeは、 **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=ja)**&#x200B;の場合は [!DNL Eclipse] 優れた GUI での開発を容易にし、コードをローカルのAEMインスタンスと同期させる。 この [!DNL Eclipse] IDE は、が GUI をサポートしているので、AEMを初めて使用する開発者には大きく推奨されます。 [!DNL AEM Developer Tools].
+この **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は、Java™開発用のより一般的な IDE の 1 つで、大部分はオープンソースで、 ***無料***! Adobeは、 **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)**&#x200B;の場合は [!DNL Eclipse] 優れた GUI での開発を容易にし、コードをローカルのAEMインスタンスと同期させる。 この [!DNL Eclipse] IDE は、が GUI をサポートしているので、AEMを初めて使用する開発者には大きく推奨されます。 [!DNL AEM Developer Tools].
 
 #### インストールとセットアップ
 
@@ -178,7 +178,7 @@ IDE を使用する場合は、必ず `classic` を設定します。
 
 #### 重要なリンク
 
-* [**ダウンロード**](https://code.visualstudio.com/Download) **Visual Studio Code**
+* [****](https://code.visualstudio.com/Download)**Visual Studio Code のダウンロード**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - JCR コンテンツ用の FTP に似たツール
 * **[aemfed](https://aemfed.io/)** - AEMフロントエンドワークフローのスピードアップ
 * **[AEM同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — サポートされるコミュニティ&#42; Visual Studio Code の拡張
@@ -194,7 +194,7 @@ IDE を使用する場合は、必ず `classic` を設定します。
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) は、AEMリポジトリのブラウザーベースのビューです。 [!DNL CRXDE Lite] はAEMに埋め込まれており、開発者は、ファイルの編集、コンポーネント、ダイアログ、テンプレートの定義など、標準的な開発タスクを実行できます。 [!DNL CRXDE Lite] が ***not*** は完全な開発環境であることを目的としていますが、デバッグツールとして効果的です。 [!DNL CRXDE Lite] は、を拡張する場合や、コードベース外の製品コードを単に理解する場合に役立ちます。 [!DNL CRXDE Lite] は、リポジトリを強力に表示し、権限を効果的にテストおよび管理する方法を提供します。
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) は、AEMリポジトリのブラウザーベースのビューです。 [!DNL CRXDE Lite] はAEMに埋め込まれており、開発者は、ファイルの編集、コンポーネント、ダイアログ、テンプレートの定義など、標準的な開発タスクを実行できます。 [!DNL CRXDE Lite] が ***not*** は完全な開発環境であることを目的としていますが、デバッグツールとして効果的です。 [!DNL CRXDE Lite] は、を拡張する場合や、コードベース外の製品コードを単に理解する場合に役立ちます。 [!DNL CRXDE Lite] は、リポジトリを強力に表示し、権限を効果的にテストおよび管理する方法を提供します。
 
 [!DNL CRXDE Lite] コードのテストとデバッグを他の IDE と一緒に使用する必要がありますが、主な開発ツールとしては使用しないでください。 構文のサポートに制限があり、オートコンプリート機能はなく、ソース管理システムとの統合も制限されています。
 
@@ -274,12 +274,12 @@ CSS や JavaScript のほとんどの問題に対して、ブラウザーの開�
 
 #### クライアントライブラリのデバッグ
 
-カテゴリや埋め込みの様々な方法で複数のクライアントライブラリを含めると、トラブルシューティングが面倒になる場合があります。 AEMでは、これを支援するツールがいくつか用意されています。 最も重要なツールの 1 つは、 [!UICONTROL クライアントライブラリの再構築] これにより、AEMはすべての LESS ファイルを再コンパイルし、CSS を生成します。
+カテゴリや埋め込みの様々な方法で複数のクライアントライブラリを含めると、トラブルシューティングが面倒になる場合があります。 AEM はそのためにいくつかのツールを公開しています。最も重要なツールの 1 つは、 [!UICONTROL クライアントライブラリの再構築] これにより、AEMはすべての LESS ファイルを再コンパイルし、CSS を生成します。
 
 * [ライブラリのダンプ](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - AEMインスタンスに登録されているすべてのクライアントライブラリをリストします。 &lt;host>/libs/granite/ui/content/dumplibs.html
-* [テスト出力](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html)  — カテゴリに基づいて、clientlib インクルードの期待されるHTML出力をユーザーが確認できるようにします。 &lt;host>/libs/granite/ui/content/dumplibs.test.html
-* [ライブラリ依存関係の検証](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html)  — 見つからない依存関係または埋め込みカテゴリを強調表示します。 &lt;host>/libs/granite/ui/content/dumplibs.validate.html
-* [クライアントライブラリの再構築](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - AEMに対し、すべてのクライアントライブラリを強制的に再構築するか、クライアントライブラリのキャッシュを無効にすることができます。 このツールは LESS を使用して開発する場合に有効です。生成された CSS を強制的に再コンパイルすることができます。 一般に、キャッシュを無効にしてからページの更新を実行する方が、すべてのライブラリを再構築するよりも効果的です。 &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
+* [出力テスト](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - カテゴリ別を含む、clientlib の予想される HTML 出力を確認します。&lt;host>/libs/granite/ui/content/dumplibs.test.html
+* [ライブラリの依存関係の検証](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) - 見つからないすべての依存関係または埋め込みカテゴリを強調表示します。&lt;host>/libs/granite/ui/content/dumplibs.validate.html
+* [クライアントライブラリの再構築](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - AEMに対し、すべてのクライアントライブラリを強制的に再構築するか、クライアントライブラリのキャッシュを無効にすることができます。 このツールでは、AEM が生成された CSS を強制的に再コンパイルするので、LESS を使用した開発において特に効果的です。一般に、キャッシュを無効にしてからページの更新を実行する方が、すべてのライブラリを再構築するよりも効果的です。 &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
 
 ![clientlib のデバッグ](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
 

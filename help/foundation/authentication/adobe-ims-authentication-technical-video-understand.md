@@ -14,8 +14,8 @@ level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
-workflow-type: ht
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 100%
 
@@ -50,4 +50,4 @@ Admin Console では、製品コンテキストレベルでユーザーグルー
 
 ### Adobe Experience Manager での権限の適用
 
-Adobe Experience Manager では、Adobe IMS から同期されたユーザーグループを [AEM 提供のユーザーグループ](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html?lang=ja)に追加する必要があります。このユーザーグループには、AEM で特定のタスクセットを実行するための適切な権限があらかじめ設定されています。Adobe IMS から同期されたユーザーは、[AEM 提供のユーザーグループ](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html?lang=ja)に直接追加しないでください。
+Adobe Experience Manager では、Adobe IMS から同期されたユーザーグループを [AEM 提供のユーザーグループ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja)に追加する必要があります。このユーザーグループには、AEM で特定のタスクセットを実行するための適切な権限があらかじめ設定されています。Adobe IMS から同期されたユーザーは、[AEM 提供のユーザーグループ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja)に直接追加しないでください。

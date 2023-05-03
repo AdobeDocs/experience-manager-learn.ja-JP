@@ -6,7 +6,7 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.4,6.5
+version: 6.5
 kt: 4419
 thumbnail: kt-4419.jpg
 topic: Development
@@ -14,16 +14,16 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # HTML5 フォームの作成
 
-HTML5 フォームは、Adobe Experience Manager の新機能で、XFA フォームテンプレート（xdp）を HTML5 形式でレンダリングできます。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。HTML5 フォームは XFA フォームテンプレートの既存の機能をサポートしているだけでなく、モバイルデバイスのための新しい機能（例えば手書き署名）も追加します。
+HTML5 フォームは、Adobe Experience Manager の新機能で、XFA フォームテンプレート（xdp）を HTML5 形式でレンダリングできます。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。HTML5 フォームは、XFA フォームテンプレートの既存の機能をサポートするだけでなく、モバイルデバイス用に手書き署名などの新しい機能を追加します。
 
 ## 前提条件
 
@@ -59,6 +59,6 @@ xdp テンプレートの詳細プロパティを使用すると、公開日、�
 
 **送信 URL** - これは、HTML5 フォームの送信を処理する URL です。次のレッスンでは、これについて説明します。ここで送信 URL が指定されていない場合、デフォルトの送信ハンドラーが呼び出され、フォームデータがブラウザーに返されます。
 
-**HTML レンダリングプロファイル** - HTML5 フォームには、フォームテンプレートのモバイルレンダリングを可能にするため、REST エンドポイントとして公開されるプロファイルの概念があります。ほとんどの場合、デフォルトのレンダリングプロファイルで十分にフォームをレンダリングできます。デフォルトのレンダリングプロファイルがニーズを満たさない場合は、[カスタムプロファイル](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html?lang=ja)を作成してフォームに関連付けることができます。
+**HTML レンダリングプロファイル** - HTML5 フォームには、フォームテンプレートのモバイルレンダリングを可能にするため、REST エンドポイントとして公開されるプロファイルの概念があります。ほとんどの場合、デフォルトのレンダリングプロファイルで十分にフォームをレンダリングできます。デフォルトのレンダリングプロファイルがニーズを満たさない場合は、[カスタムプロファイル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html?lang=ja)を作成してフォームに関連付けることができます。
 
 **事前入力サービス** - 事前入力サービスは通常、バックエンドデータソースから取得したデータをフォームに入力するために使用されます。
