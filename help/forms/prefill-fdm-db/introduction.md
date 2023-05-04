@@ -10,9 +10,9 @@ role: User
 level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '106'
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '111'
 ht-degree: 100%
 
 ---
@@ -35,3 +35,7 @@ ht-degree: 100%
 * AEM Forms の作業インスタンス
 * MySQL データベースと MySQL Workbench の理解
 * アダプティブフォームの作成経験
+
+## 次の手順
+
+[データベーステーブルの作成](./create-database-tables.md)

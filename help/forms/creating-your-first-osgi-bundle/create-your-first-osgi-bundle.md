@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
-workflow-type: ht
-source-wordcount: '667'
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '672'
 ht-degree: 100%
 
 ---
@@ -119,3 +119,8 @@ AEM Forms に付属する様々なサービスを活用するには、AEMFD Clie
 * `mvn clean install -PautoInstallBundle` コマンドを実行します。 
 上記のコマンドは、バンドルをビルドして `http://localhost:4502` で実行されている AEM サーバーにインストールします。バンドルは、ファイルシステムの
    `C:\AEMFormsBundles\mysite\core\target` からも利用可能で、[Felix web コンソール](http://localhost:4502/system/console/bundles)を使用してデプロイできます
+
+## 次の手順
+
+[OSGi サービスの作成](./create-osgi-service.md)
+

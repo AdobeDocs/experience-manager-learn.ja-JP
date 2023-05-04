@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
-workflow-type: ht
-source-wordcount: '99'
+exl-id: 91fbea23-4886-4892-87ad-1bc4fff5896a
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '104'
 ht-degree: 100%
 
 ---
@@ -28,5 +29,6 @@ ht-degree: 100%
 
 * [このドキュメントに従って設定された開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 
+## 次の手順
 
-
+[選択グループの入力](./populating-choice-group-with-dam-folder-content.md)

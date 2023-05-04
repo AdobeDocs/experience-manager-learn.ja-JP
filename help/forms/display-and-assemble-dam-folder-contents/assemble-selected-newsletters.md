@@ -7,10 +7,11 @@ topic: Development
 role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
-workflow-type: ht
-source-wordcount: '164'
-ht-degree: 100%
+exl-id: 3a64315f-f699-4538-b999-626e7a998c05
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 95%
 
 ---
 
@@ -141,7 +142,6 @@ public Document orgw3cDocumentToAEMFDDocument( org.w3c.dom.Document xmlDocument)
         }
 ```
 
+## 次の手順
 
-
-
-
+[システムにサンプルアセットをデプロイします。](./deploy-on-your-system.md)

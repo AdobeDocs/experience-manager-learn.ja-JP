@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a640539d-c67f-4224-ad81-dd0b62e18c79
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '179'
-ht-degree: 100%
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 95%
 
 ---
 
@@ -50,3 +50,7 @@ empID の値は、paraMap の empID というキーに関連付けられてい�
 >[!NOTE]
 >
 >キー empID は、新しいエンティティがサービスを取得する際の連結値と一致する必要があります
+
+## 次の手順
+
+[フォームデータモデルに基づくアダプティブフォームの作成](./create-adaptive-form.md)

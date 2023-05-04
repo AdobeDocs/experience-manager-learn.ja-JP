@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 1136244a-c3e6-45f6-8af8-eb3c100f838e
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '99'
-ht-degree: 100%
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 96%
 
 ---
 
@@ -30,3 +30,7 @@ ht-degree: 100%
    ![受取人](assets/beneficiaries-table.png)
 
 MySQL ワークベンチを使用して [sql ファイル](assets/db-schema.sql)を読み込み、いくつかのサンプルデータを含むテーブルを作成できます。
+
+## 次の手順
+
+[フォームデータモデルを設定](./configuring-form-data-model.md)

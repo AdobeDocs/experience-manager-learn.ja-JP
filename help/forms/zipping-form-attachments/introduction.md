@@ -9,9 +9,9 @@ level: Beginner
 kt: kt-8049
 exl-id: bd9e1fc1-2fc7-452c-9a4a-2e16f6821760
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '132'
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '137'
 ht-degree: 100%
 
 ---
@@ -34,3 +34,7 @@ ht-degree: 100%
 ユースケースを実現するために、カスタムワークフロープロセスの手順を作成しました。このカスタムプロセスの手順では、ドキュメントの ArrayList タイプと文字列の ArrayList タイプのワークフロー変数を入力します。
 
 ![send-list-of-documents](assets/send-list-of-documents.JPG)
+
+## 次の手順
+
+[Zip フォームの添付ファイル](./custom-process-step.md)

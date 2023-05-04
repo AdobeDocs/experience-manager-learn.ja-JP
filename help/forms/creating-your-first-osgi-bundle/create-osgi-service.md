@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '349'
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '354'
 ht-degree: 100%
 
 ---
@@ -110,3 +110,8 @@ JSP ページを含んだサンプルパッケージは、[こちらからダウ
 
 Postman を使用してPOST 呼び出しを行い、入力パラメーターを指定します（以下のスクリーンショットを参照）。
 ![Postman](assets/test-service-postman.JPG)
+
+## 次の手順
+
+[Sling サーブレットを作成](./create-servlet.md)
+

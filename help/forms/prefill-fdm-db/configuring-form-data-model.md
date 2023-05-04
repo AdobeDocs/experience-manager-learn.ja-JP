@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 2%
+source-wordcount: '498'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +26,7 @@ RDBMS でバックアップされたフォームデータモデルを作成す�
 * を検索 **Apache Sling 接続プールに入れられたデータソース**
 * 新しいエントリを追加し、スクリーンショットに示す値を指定します。
 * ![data-source](assets/data-source.png)
-* 変更を保存します
+* 変更を保存します。
 
 >[!NOTE]
 >JDBC 接続 URI、ユーザー名、パスワードは、MySQL データベース設定に応じて変わります。
@@ -85,3 +85,7 @@ RDBMS でバックアップされたフォームデータモデルを作成す�
 * 有効な empID を入力し、をクリックします。 _テスト_
 * 以下のスクリーンショットに示すように、結果が得られます
 * ![test-fdm](assets/test-form-data-model.png)
+
+## 次の手順
+
+[URL から empID を取得する](./get-request-parameter.md)

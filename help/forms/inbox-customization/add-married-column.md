@@ -12,10 +12,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '306'
-ht-degree: 100%
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 99%
 
 ---
 
@@ -95,3 +95,7 @@ return isMarried(inboxItem);
 フォームを送信するとワークフローがトリガーされ、タスクが「admin」ユーザーに割り当てられます。このスクリーンショットに示すように、「既婚」列の下に値が表示されます。
 
 ![既婚列](assets/married-column.PNG)
+
+## 次の手順
+
+[既婚の列を表示](./use-sightly-template.md)

@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
 source-wordcount: '1804'
-ht-degree: 95%
+ht-degree: 92%
 
 ---
 
@@ -45,10 +45,10 @@ ht-degree: 95%
    + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
    + [ServiceNow との統合](some-useful-integrations/service-now.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
-   + [環境の設定](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
-   + [OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
-   + [Sling サーブレットを作成](creating-your-first-osgi-bundle/create-servlet.md)
-   + [サードパーティ製バンドルを含める](creating-your-first-osgi-bundle/include-third-party-jars.md)
+   + [1 — 環境の設定](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [2 - OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [3 - Sling サーブレットを作成](creating-your-first-osgi-bundle/create-servlet.md)
+   + [4 — サードパーティ製バンドルを含む](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + アダプティブフォーム {#adaptive-forms}
    + [Windows への AEM Forms のインストール](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Linux への 32 ビットパッケージのインストール](adaptive-forms/installing-aem-form-on-linux.md)
@@ -101,16 +101,16 @@ ht-degree: 95%
    + [Salesforce を使用したフォームデータモデル](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [選択コンポーネントへの項目の動的な追加](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + DAM フォルダーコンテンツの選択とアセンブリ{#select-dam-folder-content}
-   + [はじめに](display-and-assemble-dam-folder-contents/introduction.md)
-   + [選択グループの入力](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [選択したアセットのアセンブリ](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
-   + [アセットをローカルにデプロイ](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
+   + [1 — はじめに](display-and-assemble-dam-folder-contents/introduction.md)
+   + [2 — 選択グループの入力](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [3 — 選択したアセットのアセンブル](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [4 — アセットをローカルにデプロイする](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + フォームデータモデルを使用したアダプティブフォームの事前入力{#prefill-fdm-db}
-   + [はじめに](prefill-fdm-db/introduction.md)
-   + [データベーステーブルの作成](prefill-fdm-db/create-database-tables.md)
-   + [フォームデータモデルの設定](prefill-fdm-db/configuring-form-data-model.md)
-   + [リクエストパラメーターの取得](prefill-fdm-db/get-request-parameter.md)
-   + [アダプティブフォームの作成](prefill-fdm-db/create-adaptive-form.md)
+   + [1 — はじめに](prefill-fdm-db/introduction.md)
+   + [2 — データベーステーブルの作成](prefill-fdm-db/create-database-tables.md)
+   + [3 — フォームデータモデルの設定](prefill-fdm-db/configuring-form-data-model.md)
+   + [4 — リクエストパラメーターの取得](prefill-fdm-db/get-request-parameter.md)
+   + [5 — アダプティブフォームの作成](prefill-fdm-db/create-adaptive-form.md)
 + UI のヒントとテクニック{#ui-tips-and-tricks}
    + [パスワードフィールドのテキストの切り替え](ui-tips-tricks/toggle-password.md)
    + [スペースツールバーのボタン](ui-tips-tricks/toolbar-buttons.md)
@@ -118,14 +118,14 @@ ht-degree: 95%
    + [ナビゲーションタブへのアイコンの追加](ui-tips-tricks/active-complete.md)
    + [オートコンプリートフィールド](ui-tips-tricks/auto-complete.md)
 + インボックスのカスタマイズ{#inbox-customization}
-   + [はじめに](inbox-customization/introduction.md)
-   + [カスタム列の追加](inbox-customization/add-married-column.md)
-   + [sightly テンプレートの使用](inbox-customization/use-sightly-template.md)
+   + [1 — はじめに](inbox-customization/introduction.md)
+   + [2 — カスタム列を追加](inbox-customization/add-married-column.md)
+   + [3 - sightly テンプレートの使用](inbox-customization/use-sightly-template.md)
 + メールフォームの添付ファイル{#zipping-form-attachments}
-   + [はじめに](zipping-form-attachments/introduction.md)
-   + [Zip フォームの添付ファイル](zipping-form-attachments/custom-process-step.md)
-   + [メールフォームの添付ファイル](zipping-form-attachments/populating-list-of-documents.md)
-   + [ソリューションのテスト](zipping-form-attachments/test.md)
+   + [1 — はじめに](zipping-form-attachments/introduction.md)
+   + [2 - Zip フォーム添付ファイル](zipping-form-attachments/custom-process-step.md)
+   + [3 — 電子メールフォームの添付ファイル](zipping-form-attachments/populating-list-of-documents.md)
+   + [4 — ソリューションをテストする](zipping-form-attachments/test.md)
 + アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
    + [はじめに](store-and-retrieve-af-with-2fa/introduction.md)
    + [データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
