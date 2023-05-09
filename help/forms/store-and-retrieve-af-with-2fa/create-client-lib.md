@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '139'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 96%
 
 ---
 
@@ -70,3 +70,7 @@ $(document).ready(function () {
 > ダイアログボックスを表示するために、[bootbox javascript ライブラリ](http://bootboxjs.com/examples.html)を使用しました
 
 このサンプルで使用しているクライアントライブラリは、[こちらからダウンロード](assets/client-libraries.zip)できます
+
+## 次の手順
+
+[OTP サービスを使用したユーザーの検証](./verify-users-with-otp.md)

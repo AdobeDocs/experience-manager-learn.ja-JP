@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
 source-wordcount: '1804'
-ht-degree: 92%
+ht-degree: 82%
 
 ---
 
@@ -127,17 +127,17 @@ ht-degree: 92%
    + [3 — 電子メールフォームの添付ファイル](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — ソリューションをテストする](zipping-form-attachments/test.md)
 + アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
-   + [はじめに](store-and-retrieve-af-with-2fa/introduction.md)
-   + [データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
-   + [フォーム添付ファイルの保存](store-and-retrieve-af-with-2fa/store-form-attachments.md)
-   + [フォームデータの保存](store-and-retrieve-af-with-2fa/store-form-data.md)
-   + [サーブレットの作成](store-and-retrieve-af-with-2fa/create-servlet.md)
-   + [保存されたデータでフォームをレンダリング](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
-   + [クライアントライブラリの作成](store-and-retrieve-af-with-2fa/create-client-lib.md)
-   + [OTP サービスとの統合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
-   + [メインフォームの作成](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
-   + [MyAccount フォームの作成](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
-   + [サンプルのデプロイ](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
+   + [1 — はじめに](store-and-retrieve-af-with-2fa/introduction.md)
+   + [2 — データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [3 — フォームの添付ファイルを保存](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [4 — フォームデータを保存](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [5 — サーブレットを作成](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [6 — 保存されたデータでフォームをレンダリング](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [7 — クライアントライブラリの作成](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [8 - OTP サービスとの統合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [9 — メインフォームの作成](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [10 - MyAccount フォームを作成する](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [11 — サンプルをデプロイします。](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 送信したデータの CSV 形式での書き出し{#export-submitted-data-csv-format}
    + [送信したデータの書き出し](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
@@ -157,17 +157,17 @@ ht-degree: 92%
    + [変換後のアダプティブフォームを設定する](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Acrobat Sign での XDP テンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 複数フォームへの署名{#sign-multiple-documents}
-   + [はじめに](sign-multiple-documents/introduction.md)
-   + [データソースの設定](sign-multiple-documents/configure-data-source.md)
-   + [OSGi サービスの作成](sign-multiple-documents/create-osgi-service.md)
-   + [メインワークフローの作成](sign-multiple-documents/create-main-workflow.md)
-   + [署名ステータスワークフローの更新](sign-multiple-documents/update-signature-status.md)
-   + [概要コンポーネントのカスタマイズ](sign-multiple-documents/customize-summary-component.md)
-   + [クライアントライブラリの作成](sign-multiple-documents/create-client-lib.md)
-   + [フォームテンプレートの作成](sign-multiple-documents/create-af-template.md)
-   + [初期フォームの作成](sign-multiple-documents/create-initial-form.md)
-   + [署名用フォームの作成](sign-multiple-documents/create-forms-for-signing.md)
-   + [ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
+   + [1 — はじめに](sign-multiple-documents/introduction.md)
+   + [2 — データソースの設定](sign-multiple-documents/configure-data-source.md)
+   + [3 - OSGi サービスの作成](sign-multiple-documents/create-osgi-service.md)
+   + [4 — メインワークフローを作成](sign-multiple-documents/create-main-workflow.md)
+   + [5 — 署名ステータスの更新ワークフロー](sign-multiple-documents/update-signature-status.md)
+   + [6 — 概要コンポーネントをカスタマイズ](sign-multiple-documents/customize-summary-component.md)
+   + [7 — クライアントライブラリの作成](sign-multiple-documents/create-client-lib.md)
+   + [8 — フォームテンプレートを作成する](sign-multiple-documents/create-af-template.md)
+   + [9 — 初期フォームを作成](sign-multiple-documents/create-initial-form.md)
+   + [10 — 署名用のフォームを作成する](sign-multiple-documents/create-forms-for-signing.md)
+   + [11 — ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
 + カスタムワークフローの手順{#custom-workflow-steps}
    + [xml ドキュメントからのノードの抽出](custom-workflow-steps/extract-xml-node.md)
    + [ファイルシステムへのドキュメントの保存](custom-workflow-steps/write-payload-document.md)
@@ -185,9 +185,9 @@ ht-degree: 92%
    + [フォームデータモデルの変数](variables-aem-workflow/form-data-model.md)
    + [AEM ワークフローのルールエディター](variables-aem-workflow/part5.md)
 + フォームデータを確認{#review-form-data}
-   + [はじめに](review-form-data/introduction.md)
-   + [コンポーネントを作成](review-form-data/create-component.md)
-   + [アセットのデプロイ](review-form-data/deploy-on-your-system.md)
+   + [1 — はじめに](review-form-data/introduction.md)
+   + [2 — コンポーネントを作成](review-form-data/create-component.md)
+   + [3 — アセットのデプロイ](review-form-data/deploy-on-your-system.md)
 + MySQL DB でのフォームデータの格納と取得{#storing-and-retrieving-form-data}
    + [はじめに](storing-retrieving-form-data/introduction.md)
    + [データソースの設定](storing-retrieving-form-data/part1.md)
@@ -260,18 +260,18 @@ ht-degree: 92%
    + [便利なユーティリティサービス](document-services/useful-utility-services.md)
 + 印刷チャネル用のインタラクティブ通信
 {#ic-print-channel-tutorial}
-   + [はじめに](ic-print-channel-tutorial/introduction.md)
-   + [Tomcat の設定](ic-print-channel-tutorial/set-up-tomcat.md)
-   + [データソースの作成](ic-print-channel-tutorial/create-data-source.md)
-   + [フォームデータモデルの作成](ic-print-channel-tutorial/create-form-data-model.md)
-   + [Forms Designer を使用した XDP テンプレートの作成](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
-   + [ドキュメントフラグメントの作成](ic-print-channel-tutorial/create-document-fragment.md)
-   + [印刷チャネルドキュメントの作成](ic-print-channel-tutorial/create-print-channel-document.md)
-   + [ターゲット領域へのコンテンツの追加](ic-print-channel-tutorial/add-content-to-target-areas.md)
-   + [折れ線グラフの設定](ic-print-channel-tutorial/configuring-line-chart.md)
-   + [印刷チャネルへのテーブルの追加](ic-print-channel-tutorial/adding-table-to-print-channel.md)
-   + [監視フォルダーを使用したドキュメントの生成](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
-   + [フォーム送信時にエージェント UI を開く](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
+   + [1 — はじめに](ic-print-channel-tutorial/introduction.md)
+   + [2 - Tomcat の設定](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [3 — データソースの作成](ic-print-channel-tutorial/create-data-source.md)
+   + [4 — フォームデータモデルを作成](ic-print-channel-tutorial/create-form-data-model.md)
+   + [5 - Forms Designer を使用した XDP レイアウトの作成](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [6 — ドキュメントフラグメントを作成](ic-print-channel-tutorial/create-document-fragment.md)
+   + [7 — 印刷チャネルドキュメントを作成](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [8 — ターゲット領域にコンテンツを追加](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [9 — 折れ線グラフの設定](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [10 — 印刷チャネルにテーブルを追加](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [11 — 監視フォルダーを使用したドキュメントの生成](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [12 — フォーム送信時にエージェント UI を開く](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + ドラフトレターの保存と取得 {#store-retrieve-letters}
    + [はじめに](store-retrieve-letters/introduction.md)
    + [実装](store-retrieve-letters/save-draft-letters.md)
@@ -287,19 +287,19 @@ ht-degree: 92%
    + [テキストエディターのカスタマイズ](interactive-communications/customize-text-editor.md)
 
 + Web チャネルのインタラクティブ通信 {#ic-web-channel-tutorial}
-   + [はじめに](ic-web-channel-tutorial/introduction.md)
-   + [Tomcat の設定](ic-web-channel-tutorial/partone.md)
-   + [データソースの作成](ic-web-channel-tutorial/parttwo.md)
-   + [フォームデータモデルの作成](ic-web-channel-tutorial/partthree.md)
-   + [Web チャネルドキュメントのテンプレートの作成](ic-web-channel-tutorial/partfour.md)
-   + [ドキュメントフラグメントの作成](ic-web-channel-tutorial/partfive.md)
-   + [インタラクティブ通信ドキュメントの作成](ic-web-channel-tutorial/partsix.md)
-   + [テキストと画像の追加](ic-web-channel-tutorial/partseven.md)
-   + [折れ線グラフの設定](ic-web-channel-tutorial/parteight.md)
-   + [テーブルの設定](ic-web-channel-tutorial/partnine.md)
-   + [縦棒グラフの設定](ic-web-channel-tutorial/partten.md)
-   + [円グラフの設定](ic-web-channel-tutorial/parteleven.md)
-   + [Web チャネルドキュメントの配信](ic-web-channel-tutorial/parttwelve.md)
+   + [1 — はじめに](ic-web-channel-tutorial/introduction.md)
+   + [2 - Tomcat の設定](ic-web-channel-tutorial/partone.md)
+   + [3 — データソースの作成](ic-web-channel-tutorial/parttwo.md)
+   + [4 — フォームデータモデルを作成](ic-web-channel-tutorial/partthree.md)
+   + [5 - Web チャネルドキュメントテンプレートの作成](ic-web-channel-tutorial/partfour.md)
+   + [6 — ドキュメントフラグメントの作成](ic-web-channel-tutorial/partfive.md)
+   + [7 — インタラクティブ通信ドキュメントの作成](ic-web-channel-tutorial/partsix.md)
+   + [8 — テキストと画像の追加](ic-web-channel-tutorial/partseven.md)
+   + [9 — 折れ線グラフの設定](ic-web-channel-tutorial/parteight.md)
+   + [10 — 表の構成](ic-web-channel-tutorial/partnine.md)
+   + [11 — 縦棒グラフの設定](ic-web-channel-tutorial/partten.md)
+   + [12 — 円グラフの構成](ic-web-channel-tutorial/parteleven.md)
+   + [13 - Web チャネルドキュメントの配信](ic-web-channel-tutorial/parttwelve.md)
    + [Web チャネルドキュメントのメール配信](interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
 + トラブルシューティング {#troubleshooting}

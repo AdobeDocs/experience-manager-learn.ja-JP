@@ -14,10 +14,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: f0f19838-1ade-4eda-b736-a9703a3916c2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '236'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 98%
 
 ---
 
@@ -29,7 +29,7 @@ Tomcat をセットアップするには、次の手順に従います。
 
 1. JDK1.8 をダウンロードしてインストールします。
 2. JDK1.8 を指すように JAVA_HOME を設定します。
-3. [Tomcat](https://tomcat.apache.org/) をダウンロードします。この war ファイルは、Tomcat バージョン 8.5.x および 9.0.x でテストされています。
+3. [tomcat](https://tomcat.apache.org/) をダウンロードします。この war ファイルは、Tomcat バージョン 8.5.x および 9.0.x でテストされています。
 4. 好みの Tomcat バージョンをダウンロードします。コアセクションの 64 ビット Windows 版の zip をダウンロードします。
 5. 内容を C:\tomcat に解凍します。
 6. Tomcat のバージョンに応じて、C ドライブの **C:\tomcat\apache-tomcat-8.5.27** に次のようなものが表示されます。
@@ -40,4 +40,8 @@ Tomcat をセットアップするには、次の手順に従います。
 11. Tomcat が起動したら、[こちらをクリック](http://localhost:8080/SampleRest/webapi/getStatement/9586)して、WAR ファイルによって公開されたエンドポイントをテストします。
 12. この呼び出しの結果、サンプルデータが取得されます。
 
-これで完了です。Tomcat をセットアップし、SampleRest.war ファイルをデプロイしました。
+おめでとうございます。Tomcat をセットアップし、SampleRest.war ファイルをデプロイしました。
+
+## 次の手順
+
+[RESTful データソースの設定](./parttwo.md)

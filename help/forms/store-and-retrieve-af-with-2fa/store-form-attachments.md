@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '186'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 97%
 
 ---
 
@@ -80,3 +80,7 @@ public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest req
 "guide[0].guide1[0].guideRootPanel[0].documentation[0].yourBankStatements[0].table1603552612235[0].Row1[0].tableItem11[0]": "/content/afattachments/81653de9-4967-4736-9ca3-807a11542243/BankStatement-Sept-2020.pdf"
 }
 ```
+
+## 次の手順
+
+[フォームデータを保存する](./store-form-data.md)

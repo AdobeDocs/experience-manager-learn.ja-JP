@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '81'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 91%
 
 ---
 
@@ -75,3 +75,7 @@ $(document).ready(function()
 ## Assets
 
 [clientlib は、こちらからダウンロードできます。](assets/get-next-form-client-lib.zip)
+
+## 次の手順
+
+[このユースケースで使用するカスタムフォームテンプレートの作成](./create-af-template.md)

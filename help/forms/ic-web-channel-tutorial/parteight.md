@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: ba9ce6a2-f6e8-4e84-a23a-f4803879f635
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
-workflow-type: ht
-source-wordcount: '193'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 98%
 
 ---
 
@@ -49,3 +49,7 @@ AEM Forms 6.4 では、様々なタイプのグラフを使用してデータを
 **AEM Forms 6.5 での折れ線グラフ設定**
 
 ![linechart64](assets/linechart65.PNG)
+
+## 次の手順
+
+[テーブルを設定](./partnine.md)

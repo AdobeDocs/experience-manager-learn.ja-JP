@@ -9,10 +9,10 @@ version: 6.4,6.5
 kt: 6899
 thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '190'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 94%
 
 ---
 
@@ -40,3 +40,7 @@ Apache Sling Connection Pooled DataSource を作成し、以下のスクリー�
 ## Assets
 
 スキーマを作成する SQL ファイルは、[こちらからダウンロード](assets/sign-multiple-forms.sql)できます。MySql Workbench を使用してこのファイルを読み込んで、スキーマとテーブルを作成する必要があります。
+
+## 次の手順
+
+[データベースにデータを格納して取得する OSGi サービスを作成する](./create-osgi-service.md)

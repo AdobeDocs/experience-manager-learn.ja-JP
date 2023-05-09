@@ -16,10 +16,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '340'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 98%
 
 ---
 
@@ -77,3 +77,7 @@ AEM で監視フォルダーを設定する場合、監視フォルダーにフ�
 * xml ファイルを C:\RenderPrintChannel\input にドロップします
 
 * ECMA スクリプトで指定したように、保存場所の PDF ファイルを確認します。
+
+## 次の手順
+
+[フォーム送信時にエージェント UI を開く](./opening-agent-ui-on-form-submission.md)

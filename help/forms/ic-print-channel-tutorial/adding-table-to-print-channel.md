@@ -17,10 +17,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b5a6c1c9-2be1-4622-b85b-a1996fb86a2f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 100%
+source-wordcount: '114'
+ht-degree: 92%
 
 ---
 
@@ -37,4 +37,8 @@ AEM Forms にログインし、Adobe Experience Manager／Forms／フォーム�
 
 次のビデオでは、プリントチャネルドキュメントにテーブルを設定する手順について説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/22387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
+
+## 次の手順
+
+[監視フォルダーを使用した印刷チャネルドキュメントの生成](./using-watched-folder-to-generate-document.md)

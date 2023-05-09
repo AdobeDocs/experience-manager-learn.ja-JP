@@ -10,10 +10,11 @@ topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
-workflow-type: ht
-source-wordcount: '84'
-ht-degree: 100%
+exl-id: fa971850-0e89-4f74-a747-ec99051be2f1
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 94%
 
 ---
 
@@ -28,3 +29,7 @@ ht-degree: 100%
 * AEM 6.5 以降（適切なフォームアドオンパッケージを使用）
 
 また、AEM および AEM Forms である程度の開発経験があることもお勧めします。
+
+## 次の手順
+
+[カスタムコンポーネントを使用してデータを要約](./create-component.md)

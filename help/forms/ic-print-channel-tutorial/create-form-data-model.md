@@ -16,10 +16,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 100%
+source-wordcount: '233'
+ht-degree: 98%
 
 ---
 
@@ -36,3 +36,7 @@ ht-degree: 100%
 フォームデータモデルは、すべてのインタラクティブ通信の基礎となります。フォームデータモデルの Get／Read 操作は、バックエンドデータソースからデータを取得し、インタラクティブ通信ドキュメントの入力に使用します。
 
 フォームデータモデルを作成したら、それを基にドキュメントフラグメントとインタラクティブ通信ドキュメントを作成できます。
+
+## 次の手順
+
+[Designer を使用したテンプレートの作成](./create-xdp-layout-using-forms-designer.md)

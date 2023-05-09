@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '344'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 99%
 
 ---
 
@@ -73,3 +73,7 @@ ht-degree: 100%
 **AEM Forms 6.5 - 推定月次所得列グラフの設定**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
+
+## 次の手順
+
+[円グラフの設定](./parteleven.md)

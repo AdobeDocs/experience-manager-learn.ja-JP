@@ -10,10 +10,10 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '255'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 96%
 
 ---
 
@@ -48,3 +48,7 @@ com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/r
 * サンプルフォームは[カスタムアダプティブフォームテンプレート](assets/custom-template-with-page-component.zip)サンプルフォームを正しくレンダリングするには、AEM に読み込む必要があります。
 
 * MyAccountForm の送信に関連する[カスタム送信ハンドラー](assets/custom-submit-my-account-form.zip)を AEM に読み込む必要があります。
+
+## 次の手順
+
+[サンプルアセットをデプロイしてソリューションをテストする](./deploy-this-sample.md)

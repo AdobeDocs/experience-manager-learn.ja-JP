@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '162'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 96%
 
 ---
 
@@ -121,3 +121,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 >[!NOTE]
 > メール通知を送信するには、Day CQ メールサービスを設定してください。 上記のパッケージには、メールテンプレートも含まれています。
+
+## 次の手順
+
+[ドキュメント署名時の署名ステータスの更新](./update-signature-status.md)

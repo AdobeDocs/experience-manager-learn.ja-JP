@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '168'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 96%
 
 ---
 
@@ -46,3 +46,7 @@ ht-degree: 100%
 
 1. 「作成」をタップします。
 1. 「完了」または「編集」をクリックして、ダイアログボックスを閉じることができます。
+
+## 次の手順
+
+[ドキュメントにテキストと画像を追加する](./partseven.md)

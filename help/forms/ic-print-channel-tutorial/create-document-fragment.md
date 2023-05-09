@@ -16,10 +16,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 100%
+source-wordcount: '229'
+ht-degree: 98%
 
 ---
 
@@ -38,3 +38,7 @@ ht-degree: 100%
 >[!NOTE]
 >
 >ドキュメントフラグメントに挿入するフォームデータモデル要素が、ルート要素の下位要素であることを確認します。 例えばこの使用例では、選択した user オブジェクトの要素が balances オブジェクトの子になります。
+
+## 次の手順
+
+[印刷チャネルドキュメントを作成](./create-print-channel-document.md)

@@ -11,10 +11,10 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '201'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 97%
 
 ---
 
@@ -32,3 +32,8 @@ ht-degree: 100%
 * 完成した [StoreAfWithAttachments Form](assets/store-af-with-attachments-form.zip) をダウンロードして、AEM インスタンスに読み込みます。
 
 * [このフォームに関連付けられた AEM ワークフロー](assets/workflow-model-store-af-with-attachments.zip)は、フォームを機能させるために AEM インスタンスに読み込む必要があります。
+
+
+## 次の手順
+
+[保存済みフォームを取得するフォームを作成する](./retrieve-saved-form.md)

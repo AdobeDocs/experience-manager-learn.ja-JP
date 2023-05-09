@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '351'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 98%
 
 ---
 
@@ -74,3 +74,7 @@ AEM Forms にログインします。
 >[!NOTE]
 >
 >詳しくは、crx で **/apps/AEMForms/fetchad/GET.jsp** ファイルを確認してください。String 変数 webChannelDocument が有効なコミュニケーションドキュメントパスを指していることを確認してください。
+
+## 次の手順
+
+[電子メール配信の設定](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)

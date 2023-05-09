@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 100%
+source-wordcount: '120'
+ht-degree: 92%
 
 ---
 
@@ -33,3 +33,7 @@ ht-degree: 100%
 ## Assets
 
 このチュートリアルで使用するテンプレートとページコンポーネントは、[ここからダウンロードできます](assets/sign-multiple-forms-template.zip)。
+
+## 次の手順
+
+[使用された](./create-initial-form.md)

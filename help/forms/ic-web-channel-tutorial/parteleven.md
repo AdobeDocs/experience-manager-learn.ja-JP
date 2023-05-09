@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '326'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 98%
 
 ---
 
@@ -57,3 +57,7 @@ ht-degree: 100%
 * X 軸と Y 軸に連結されたデータモデルオブジェクトに注意してください。 フォームデータモデルのルート要素を選択し、ドリルダウンして適切な要素を選択する必要があります。
 
 * ![assettype](assets/modelassettypechart.png)
+
+## 次の手順
+
+[Web チャネルドキュメントを配信するための準備](./parttwelve.md)

@@ -9,10 +9,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: fb68579d-241c-414d-92f4-13194f4d1923
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '177'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 96%
 
 ---
 
@@ -47,3 +47,7 @@ summary.jsp には次のコードが含まれます。 カテゴリ ID で識別
 ## Assets
 
 カスタム概要コンポーネントは、[ここからダウンロード](assets/custom-summary-step.zip)できます
+
+## 次の手順
+
+[署名用の次のフォームを取得します](./create-client-lib.md)

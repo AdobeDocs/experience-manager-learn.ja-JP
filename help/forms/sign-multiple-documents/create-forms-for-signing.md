@@ -9,10 +9,10 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
-workflow-type: ht
-source-wordcount: '324'
-ht-degree: 100%
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 97%
 
 ---
 
@@ -47,3 +47,7 @@ ht-degree: 100%
 ## Assets
 
 このチュートリアルで使用しているフォームを含め、サンプルフォームは、[こちらからダウンロードできます](assets/forms-for-signing.zip)。
+
+## 次の手順
+
+[ローカルシステム上でソリューションをテストする](./testing-and-trouble-shooting.md)

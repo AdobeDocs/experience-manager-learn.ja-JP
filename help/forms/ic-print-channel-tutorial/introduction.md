@@ -14,9 +14,9 @@ role: Developer
 level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '167'
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+workflow-type: tm+mt
+source-wordcount: '172'
 ht-degree: 100%
 
 ---
@@ -38,3 +38,8 @@ ht-degree: 100%
 * ドキュメントフラグメントを作成する
 * テーブルとグラフを設定する
 * 監視フォルダーを使用してバッチモードでドキュメントを生成する
+
+
+## 次の手順
+
+[Tomcat の設定](./set-up-tomcat.md)
