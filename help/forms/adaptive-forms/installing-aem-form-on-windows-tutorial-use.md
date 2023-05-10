@@ -9,10 +9,10 @@ role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
 workflow-type: tm+mt
 source-wordcount: '574'
-ht-degree: 98%
+ht-degree: 92%
 
 ---
 
@@ -40,10 +40,9 @@ ht-degree: 98%
 
 * 適切な JDK がインストールされていることを確認します。
    * AEM 6.2 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
-* 
    * AEM 6.3 および AEM 6.4 には、Oracle SE 8 JDK 1.8.x（64 ビット）が必要です。
-* AEM 6.5 には JDK 8 または JDK 11 が必要です。
-* [公式の JDK 要件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=ja)は、ここに掲載されています。
+   * AEM 6.5 には JDK 8 または JDK 11 が必要です。
+   * [公式の JDK 要件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=ja)は、ここに掲載されています。
 * JAVA_HOME が、インストールした JDK を指すように設定されていることを確認します。
    * Windows で JAVA_HOME 変数を作成するには、次の手順に従います。
       * 「マイコンピューター」を右クリックし、「プロパティ」を選択します。
@@ -71,20 +70,20 @@ ht-degree: 98%
 * ドキュメントサービスが機能するには、次の 2 つのプロパティが必要です。
 * sling.properties ファイルを保存します。
 * [適切な Forms アドオンパッケージをダウンロードします。](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
-* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp) を使用して、Forms アドオンパッケージをインストールします。
+* 次を使用してフォームアドオンパッケージをインストールする [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp).
 * アドオンパッケージをインストールしたら、次の手順に従う必要があります。
 
-       * **すべてのバンドルがアクティブステートであることを確認します。 （AEMFD Signatures バンドルを除く）。**
-       * **通常、すべてのバンドルがアクティブ状態になるまでに 5 分以上かかります。**
-   
+   * **すべてのバンドルがアクティブ状態であることを確認します。 （AEMFD Signatures バンドルを除く）。**
+   * **通常、すべてのバンドルがアクティブ状態になるまでに 5 分以上かかります。**
+
    * **すべてのバンドルがアクティブになったら（AEMFD Signatures バンドルを除く）、システムを再起動して AEM Forms のインストールを完了します。**
 
 ## sun.util.calendar パッケージから許可リスト
 
 1. [ブラウザーウィンドウ](http://localhost:4502/system/console/configMgr)で Felix Web コンソールを開きます。
-2. デシリアライゼーションファイアウォール設定を検索して開きます。`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-3. `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name` の下に新規エントリとして `sun.util.calendar` を追加します
-4. 変更を保存します。
+1. デシリアライゼーションファイアウォール設定を検索して開きます。`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+1. `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name` の下に新規エントリとして `sun.util.calendar` を追加します
+1. 変更を保存します。
 
 おめでとうございます。これで、システムへの AEM Forms のインストールと設定が完了しました。
 必要に応じて、サーバーで [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja) または [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) を設定できます
