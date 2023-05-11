@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service のチュートリアル
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 31d6b75f481bbc1a716974b2188a0f4f460c1df6
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 94%
@@ -287,32 +287,7 @@ ht-degree: 94%
    + 詳細{#advanced}
       + [メタデータワーカー](./asset-compute/advanced/metadata.md)
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
-+ クラウド 5{#cloud-5}
-   + [はじめに](./cloud-5/cloud5-introduction.md)
-   + [シーズン 1](./cloud-5/cloud5-season-1.md)
-   + [シーズン 2](./cloud-5/cloud5-season-2.md)
-   + [AEM CDN 第 1 部](./cloud-5/cloud5-aem-cdn-part1.md)
-   + [AEM CDN 第 2 部](./cloud-5/cloud5-aem-cdn-part2.md)
-   + [AEM ログファイル](./cloud-5/cloud5-aem-log-files.md)
-   + [ログイントークン](./cloud-5/cloud5-getting-login-token-integrations.md)
-   + [Cloud Dispatcher](./cloud-5/cloud5-aem-dispatcher-cloud.md)
-   + [移行 1](./cloud-5/cloud5-aem-content-migration-part-1.md)
-   + [移行 2](./cloud-5/cloud5-aem-content-migration-part-2.md)
-   + [Dispatcher バリデーター](./cloud-5/cloud5-aem-dispatcher-validator.md)
-   + [検索とインデックス作成](./cloud-5/cloud5-aem-search-and-indexing.md)
-   + [Adobe App Builder](./cloud-5/cloud5-adobe-app-builder.md)
-   + シーズン 2{#season-2}
-      + [フラグメント](./cloud-5/season-2/cloud5-experience-v-content-fragments.md)
-      + [Repository Modernizer](./cloud-5/season-2/cloud5-repo-modernizer.md)
-      + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
-      + [REPOINIT](./cloud-5/season-2/cloud5-repoinit.md)
-      + [Sling ジョブスケジューラー](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
-      + [キャッシュの修正](./cloud-5/season-2/cloud5-fix-your-cache.md)
-      + [書き換えの修正](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager - エクスペリエンス監査](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
-      + [Cloud Manager - 単体テスト](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
-      + [Cloud Manager - 機能テスト](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
-+ [AEM エキスパートシリーズ](./aem-experts-series.md)
+
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
    + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)
@@ -321,6 +296,32 @@ ht-degree: 94%
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja)
 + エキスパートリソース {#expert-resources}
    + AEM Champions {#aem-champions}
-      + [Cloud Manager オンボーディングプレイブック](./expert-resources/onboarding-playbook.md)
-      + [Cloud Manager 環境タイプ](./expert-resources/environment-types.md)
-      + [Cloud Manager UI](./expert-resources/cloud-manager-ui.md)
+      + [Cloud Manager オンボーディングプレイブック](./expert-resources/aem-champions/onboarding-playbook.md)
+      + [Cloud Manager 環境タイプ](./expert-resources/aem-champions/environment-types.md)
+      + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
+   + [AEM エキスパートシリーズ](./expert-resources/expert-series/aem-experts-series.md)
+   + クラウド 5{#cloud-5}
+      + [はじめに](./expert-resources/cloud-5/cloud5-introduction.md)
+      + [シーズン 1](./expert-resources/cloud-5/cloud5-season-1.md)
+      + [シーズン 2](./expert-resources/cloud-5/cloud5-season-2.md)
+      + [AEM CDN 第 1 部](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
+      + [AEM CDN 第 2 部](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
+      + [AEM ログファイル](./expert-resources/cloud-5/cloud5-aem-log-files.md)
+      + [ログイントークン](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
+      + [Cloud Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
+      + [移行 1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
+      + [移行 2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
+      + [Dispatcher バリデーター](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
+      + [検索とインデックス作成](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
+      + [Adobe App Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + シーズン 2{#season-2}
+         + [フラグメント](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
+         + [Repository Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
+         + [Admin Console](./expert-resources/cloud-5/season-2/cloud5-admin-console.md)
+         + [REPOINIT](./expert-resources/cloud-5/season-2/cloud5-repoinit.md)
+         + [Sling ジョブスケジューラー](./expert-resources/cloud-5/season-2/cloud5-sling-job-scheduler.md)
+         + [キャッシュの修正](./expert-resources/cloud-5/season-2/cloud5-fix-your-cache.md)
+         + [書き換えの修正](./expert-resources/cloud-5/season-2/cloud5-fix-your-rewrites.md)
+         + [Cloud Manager - エクスペリエンス監査](./expert-resources/cloud-5/season-2/cloud5-mocm-experience-audit.md)
+         + [Cloud Manager - 単体テスト](./expert-resources/cloud-5/season-2/cloud5-mocm-unit-tests.md)
+         + [Cloud Manager - 機能テスト](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)

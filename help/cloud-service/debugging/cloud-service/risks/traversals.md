@@ -11,8 +11,8 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
-workflow-type: ht
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 100%
 
@@ -191,7 +191,7 @@ AEM のインデックス、検索、トラバーサルの警告について理�
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html?lang=ja" title="Cloud 5 - 検索とインデックス作成" tabindex="-1"><img class="is-bordered-r-small" src="../../../cloud-5/imgs/009-thumb.png" alt="Cloud 5 - 検索とインデックス作成"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html?lang=ja" title="Cloud 5 - 検索とインデックス作成" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - 検索とインデックス作成"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
