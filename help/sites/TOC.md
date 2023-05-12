@@ -5,10 +5,10 @@ breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 593ef5767a5f2321c689e391f9c9019de7c94672
+source-git-commit: cf37733d0fd22d560c8021eb25e6df273c1a16f7
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 93%
+source-wordcount: '449'
+ht-degree: 92%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 93%
    + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
    + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + コンテンツフラグメント {#content-fragments}
-   + [コンテンツフラグメントコンソール](content-fragments/content-fragments-console.md)
+   + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
    + [コンテンツフラグメントの配信](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [コンテンツフラグメントの翻訳](content-fragments/content-fragments-translation-feature-video-use.md)
