@@ -7,10 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 100%
+source-wordcount: '842'
+ht-degree: 97%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 * 画像およびレスポンシブビューアーへのコピー URL
 * URL へのスマート切り抜きバリエーション
 
-## AEM Sites およびその他の CMS と Dynamic Media の連携
+## AEM Sitesで使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -48,7 +48,7 @@ ht-degree: 100%
 * 画像プリセットでのローカルのダウンロード
 * インタラクティブバナーの作成と公開
 
-## Dynamic Media による混在メディアコレクションとカスタムビューアの作成
+## 混在メディアコレクションの作成
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
@@ -63,7 +63,7 @@ ht-degree: 100%
 * スピンセット、ビデオおよび写真からの混在メディアセットの作成
 * カスタム混在メディアビューアの編集と使用
 
-## Dynamic Media 画像プリセット
+## 画像プリセット
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
@@ -74,7 +74,7 @@ ht-degree: 100%
 * 常にシャープを使用
 * URL 修飾子フィールドを使用して、画像プリセットのサイズを変更するコマンドを追加
 
-## Dynamic Media の高度な URL 修飾子
+## 高度な URL 修飾子
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ ht-degree: 100%
 * 画像パスへの切り抜き
 * Photoshop ファイルからのテキストテンプレートの作成
 
-## Dynamic Media による JPEG ファイルサイズ（キロバイト単位）の制御
+## JPEGファイルサイズ管理
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ ht-degree: 100%
 
 2 つのコマンドを使用して jpeg 圧縮設定を調整することで、jpeg 画像の画質と結果のファイルサイズ（キロバイト単位）のバランスを取って、ページの読み込み速度を向上させます。QLT では、jpeg 圧縮品質設定を調整して画質を定義します。JPEG サイズコマンドを使用すると、圧縮を使用して達成する必要のあるファイルサイズを指定できます。
 
-## CC クローズドキャプションを Dynamic Media ビデオに追加
+## クローズドキャプション
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 クローズドキャプションを Dynamic Media ビデオに容易に追加するには、コピー URL を追加して、追加のクローズドキャプションファイルドキュメント（任意のビデオの CC 情報を含む web.VTT サイドカーファイル）を指定します。
 
-## AEM Dynamic Media での画像シャープニングの使用
+## 画像のシャープニング
 
 このビデオでは、画像の忠実性を維持するために画像のシャープニングが重要な理由と、詳細設定を使用して完全な画像を作成する方法を説明します。
 

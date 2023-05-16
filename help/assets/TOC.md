@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 8bb7771effc95c70a9ddeffb1c54a1c2282e06dd
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 98%
+source-wordcount: '395'
+ht-degree: 96%
 
 ---
 
@@ -104,21 +104,26 @@ ht-degree: 98%
 
 + Dynamic Media {#dynamic-media}
    + [Dynamic Media の概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
-   + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-   + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
-   + [ビデオプレイヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + [360 ビデオ](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
-   + [カスタムビデオのサムネール](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
-   + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
-   + [パノラマおよび縦長画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [Adobe Analytics との統合](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [画像修飾子とスマートイメージング](dynamic-media/dynamic-media-snapshot.md)
+   + 画像 {#images}
+      + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
+      + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
+   + AEM Sitesでの使用 {#dm-with-aem-sites}
+      + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
+   + ビデオ {#video}
+      + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
+      + [ビデオプレイヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [360 ビデオ](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
+      + [カスタムビデオのサムネール](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
+      + [Dynamic Media スマート切り抜きのビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
+   + ビューア {#viewers}
+      + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
+      + [パノラマおよび縦長画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
+      + [Adobe Analytics との統合](dynamic-media/dynamic-media-viewer-extension-use.md)
    + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Dynamic Media スマート切り抜きのビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
    + チュートリアル {#tutorials}
       + [カルーセルセットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
