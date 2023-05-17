@@ -8,11 +8,12 @@ role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 83c4d82a3cce44ae9f99389fdfd7d485d42d13e2
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 100%
+source-wordcount: '60'
+ht-degree: 85%
 
 ---
 
@@ -24,13 +25,6 @@ AEM で永続クエリを有効にし、作成、更新、実行する方法に�
 
 + GraphQL 永続クエリを有効にする方法を学ぶ
 + GraphQL クエリを作成、更新、実行する方法を学ぶ
-+ サーバーサイドクエリとクライアントサイドクエリの長所と短所を理解する
-
->[!CAUTION]
->
->2:05 から始まる&#x200B;**永続クエリの作成、更新、実行**&#x200B;の章では、[Postman](https://www.postman.com/) を使用してタスクを実行します。ただし、AEM as Cloud Service の新しいバージョンでは、組み込みの **GraphiQL エクスプローラー**&#x200B;が提供されています。詳しくは、[GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=ja)を参照してください。
-
++ クライアント側クエリと比較した場合の永続的なクエリのメリットの理解
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
-
-_AEM ヘッドレスビデオシリーズ全体で使用されている [Postman コレクション](./assets/aem-headless-video-series.postman_collection.json)をダウンロードします。_
