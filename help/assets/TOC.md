@@ -6,9 +6,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
+source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '394'
 ht-degree: 96%
 
 ---
@@ -104,14 +104,12 @@ ht-degree: 96%
 
 + Dynamic Media {#dynamic-media}
    + [Dynamic Media の概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [画像修飾子とスマートイメージング](dynamic-media/dynamic-media-snapshot.md)
+   + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 画像 {#images}
+      + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
       + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
       + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + AEM Sitesでの使用 {#dm-with-aem-sites}
-      + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-      + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
    + ビデオ {#video}
       + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [ビデオプレイヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
@@ -122,9 +120,11 @@ ht-degree: 96%
       + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [パノラマおよび縦長画像ビューア](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [Adobe Analytics との統合](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-
+   + 3D {#3d}
+      + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + AEM Sitesでの使用 {#dm-with-aem-sites}
+      + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
    + チュートリアル {#tutorials}
       + [カルーセルセットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [画像セットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -140,6 +140,7 @@ ht-degree: 96%
       + [Dynamic Media 設定の削除](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Dynamic Media Classic アプリでのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
 
 + Workfront の統合{#workfront}
    + 拡張コネクタ{#enhanced-connector}
