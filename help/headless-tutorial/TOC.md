@@ -7,10 +7,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 22%
+source-wordcount: '298'
+ht-degree: 32%
 
 ---
 
@@ -45,6 +45,11 @@ ht-degree: 22%
       + [3 - AEM GraphQL API の参照](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 永続的なGraphQLクエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — クライアントアプリケーションの統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
+   + ヘッドレスファーストチュートリアル{#headless-first}
+      + [概要](./graphql/headless-first-tutorial/overview.md)
+      + [1 — コンテンツモデリング](./graphql/headless-first-tutorial/1-content-modeling.md)
+      + [2 - AEMヘッドレス API と React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
+      + [3 — 複雑なコンポーネント](./graphql/headless-first-tutorial/3-complex-components.md)
 + デプロイメント{#deployments}
    + [概要](./graphql/deployment/overview.md)
    + [単一ページアプリ](./graphql/deployment/spa.md)
@@ -52,7 +57,7 @@ ht-degree: 22%
    + [モバイル](./graphql/deployment/mobile.md)
    + [サーバー間](./graphql/deployment/server-to-server.md)
    + 設定{#configurations}
-      + [AEMホスト](./graphql/deployment/configurations/aem-hosts.md)
+      + [AEM ホスト](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher フィルター](./graphql/deployment/configurations/dispatcher-filters.md)
 + 方法 {#how-to}
@@ -61,7 +66,7 @@ ht-degree: 22%
    + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
    + [大きな結果セット](./graphql/how-to/large-result-sets.md)
    + [プレビュー](./graphql/how-to/preview.md)
-   + [AEMヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
+   + [AEM ヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
    + [AEM 6.5 への GraphiQL のインストール](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
@@ -70,7 +75,7 @@ ht-degree: 22%
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
-+ SPA Editor{#spa-editor}
++ SPA エディター{#spa-editor}
    + React{#react}
       + [概要](./spa-editor/react/overview.md)
       + [1 — プロジェクトを作成](./spa-editor/react/create-project.md)
@@ -112,11 +117,11 @@ ht-degree: 22%
 + コードサンプル {#code-samples}
    + [React アプリのフィルタリング](./graphql/code-samples/filtering-react-app.md)
    + [Preact アプリのフィルタリング](./graphql/code-samples/filtering-preact-app.md)
-   + [フィルターAngularアプリ](./graphql/code-samples/filtering-angular-app.md)
-   + [値アプリのフィルタリング](./graphql/code-samples/filtering-vue-app.md)
+   + [Angular アプリのフィルタリング](./graphql/code-samples/filtering-angular-app.md)
+   + [Vue アプリケーションのフィルタリング](./graphql/code-samples/filtering-vue-app.md)
    + [jQuery と Handlebars を使用したフィルタリング](./graphql/code-samples/filtering-jquery-handlebars.md)
    + [SvelteKit アプリのフィルタリング](./graphql/code-samples/filtering-sveltekit-app.md)
    + [ExpressJS および Pug アプリのフィルタリング](./graphql/code-samples/filtering-express-pug-app.md)
-   + [基本的な React アプリ](./graphql/code-samples/basic-react-app.md)
+   + [基本の React アプリ](./graphql/code-samples/basic-react-app.md)
    + [基本的な Next.js アプリ](./graphql/code-samples/basic-nextjs-app.md)
 
