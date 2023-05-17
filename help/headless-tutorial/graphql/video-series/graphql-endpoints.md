@@ -8,11 +8,12 @@ role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 190623cc-8959-46b3-95de-e7d01bf5acdb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 93b85ed46a3d94555e5c805ec2c4f893afc3d50b
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 100%
+source-wordcount: '55'
+ht-degree: 89%
 
 ---
 
@@ -24,8 +25,6 @@ GraphQL エンドポイントを有効にし、エンドポイントに対して
 
 + GraphQL エンドポイントを有効にする方法を学びます。
 + エンドポイントに対して GraphQL クエリを実行する方法を学びます。
-+ GraphQL エンドポイントの公開と保護の方法について
++ GraphQLエンドポイントの公開方法について
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
-
-_AEM ヘッドレスビデオ シリーズ全体で使用される [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) をダウンロードします。_
