@@ -8,11 +8,12 @@ role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '92'
-ht-degree: 100%
+source-git-commit: c7848e180ab7f95b8c97aef1ea50556cb1566533
+workflow-type: tm+mt
+source-wordcount: '79'
+ht-degree: 82%
 
 ---
 
@@ -23,9 +24,7 @@ Adobe Experience Manager（AEM）でコンテンツフラグメントを定義�
 このビデオでは、以下の内容を学びます。
 
 + コンテンツフラグメントモデルを作成および定義する方法について学びます
-+ コンテンツフラグメントモデルの構築に使用される様々なデータタイプと検証について学びます。
++ コンテンツフラグメントモデルの構築に使用される様々なデータタイプについて説明します
 + コンテンツフラグメントモデルが GraphQL API を駆動する仕組みを理解する
 
 >[!VIDEO](https://video.tv.adobe.com/v/332858?quality=12&learn=on)
-
-_AEM ヘッドレスビデオ シリーズ全体で使用される [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) をダウンロードします。_
