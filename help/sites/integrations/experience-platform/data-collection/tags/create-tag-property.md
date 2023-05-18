@@ -6,14 +6,13 @@ audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
-version: Cloud Service
 kt: 5980
 thumbnail: 38553.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
-source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
+source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%
@@ -86,7 +85,7 @@ Tag プロパティ _ルール_ はライブラリを使用してアクティベ
 
 上記の手順では、ページの読み込み時にメッセージをブラウザーコンソールに記録するルールを持つ、単純なタグプロパティの作成が完了します。 また、ルールとコア拡張機能は、ライブラリを作成して公開されます。
 
-## 次のステップ
+## 次の手順
 
 [IMS を使用してAEMをタグプロパティに接続](connect-aem-tag-property-using-ims.md)
 

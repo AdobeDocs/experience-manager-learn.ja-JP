@@ -6,7 +6,6 @@ audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
-version: Cloud Service
 kt: 5979
 thumbnail: 39090.jpg
 topic: Integrations
@@ -14,10 +13,10 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
+source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
 workflow-type: tm+mt
 source-wordcount: '336'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -51,12 +50,12 @@ Experience Platform _データ収集タグ_ （以前の Launch）をAdobe Exper
 + 既存（または新規）の IMS 設定を使用したAEMとタグの接続
 + AEMで、Launch クラウドサービス設定を作成し、既存のサイトに適用して、最後にタグプロパティとそのライブラリが公開済みサイトまたは作成者サイトに読み込まれていることを確認します。
 
-## 次のステップ
+## 次の手順
 
 [タグプロパティの作成](create-tag-property.md)
 
 ## その他のリソース {#additional-resources}
 
-+ [Experience PlatformアプリケーションとのExperience Cloud統合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-+ [タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
++ [Experience Platform アプリケーションと Experience Cloud の統合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html?lang=ja)
++ [タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)
 + [タグ付き Web サイトでのExperience Cloudの実装](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)

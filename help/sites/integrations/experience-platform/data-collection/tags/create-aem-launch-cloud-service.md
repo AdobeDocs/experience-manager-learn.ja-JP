@@ -6,14 +6,13 @@ audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
-version: Cloud Service
 kt: 5982
 thumbnail: 38566.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
+source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -70,6 +69,6 @@ Adobe Experience Managerで Launch 設定を作成するCloud Serviceを説明�
 
 前の [タグプロパティの作成](./create-tag-property.md) シンプルなチャレンジを完了するには、既存のルールを更新して、追加のコンソールステートメントを追加し、 _公開フロー_ AEMサイトにデプロイします。
 
-## 次のステップ
+## 次の手順
 
 [タグ実装のデバッグ](debug-tags-implementation.md)

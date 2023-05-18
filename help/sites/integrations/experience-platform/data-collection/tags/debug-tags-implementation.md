@@ -6,17 +6,16 @@ audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
-version: Cloud Service
 kt: 6047
 thumbnail: 38567.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
+source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -54,6 +53,6 @@ AdobeがAdobe Experience Platform Debugger を提供する [Chrome 拡張機能]
 
 ## その他のリソース {#additional-resources}
 
-+ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Platform デバッガーの概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
 
 + [Satellite オブジェクトのリファレンス](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)
