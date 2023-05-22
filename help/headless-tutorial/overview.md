@@ -7,14 +7,16 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
+source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 7%
+ht-degree: 20%
 
 ---
 
 # AEMのヘッドレスのTutorials{#aem-headless-tutorials}
+
+{{aem-headless-trials-promo}}
 
 Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションが用意されています。 実践チュートリアルを使用して、様々なオプションの使用方法を検討し、適切なオプションを選択します。
 
@@ -31,7 +33,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
       <img alt="GraphQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja">
     <strong>GraphQL API</strong>
     </a>
     </div>
@@ -40,11 +42,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
     <img alt="トークンベースの認証" src="./assets/token-auth-icon.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
     <strong>トークン認証</strong>
     </a>
     </div>
@@ -70,7 +72,7 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 
 ## サンプルアプリケーション
 
-アプリケーション例は、Adobe Experience Manager(AEM) のヘッドレス機能を調べる優れた方法です。 これらの完成した例をダウンロードしてインストールし、すぐに使い始めます。
+サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 これらの完成した例をダウンロードしてインストールし、すぐに使い始めます。
 
 <table>
 <tr>
@@ -123,11 +125,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja">
       <img alt="React — ヘッドレス" src="./assets/react-headless.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja">
     <strong>React — ヘッドレス</strong>
     </a>
     </div>
@@ -149,11 +151,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja">
       <img alt="React - SPA Editor" src="./assets/react-spa-editor.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja">
         <strong>React - SPA Editor</strong>
       </a>
     </div>
@@ -177,11 +179,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
       <img alt="Node.js — 認証" src="./assets/node-js.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
         <strong>Node.js — 認証</strong>
       </a>
     </div>
