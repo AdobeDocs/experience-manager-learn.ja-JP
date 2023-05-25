@@ -1,11 +1,12 @@
 ---
 title: AEM Sites のビデオおよびチュートリアル
 description: Experience Manager Sites についてのビデオやチュートリアルを参照してください。AEM Sites のスタッフのおすすめと新機能をご確認ください。
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
-workflow-type: ht
+source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
+workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 100%
 
