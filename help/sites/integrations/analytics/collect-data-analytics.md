@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
 workflow-type: tm+mt
 source-wordcount: '2447'
 ht-degree: 46%
@@ -134,7 +134,7 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
       // defensive coding to avoid a null pointer exception
       if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
          //trigger the Tag Rule and pass event
-         console.debug("cmp:show event: " + evt.eventInfo.path);
+         console.log("cmp:show event: " + evt.eventInfo.path);
          var event = {
             //include the path of the component that triggered the event
             path: evt.eventInfo.path,
@@ -171,10 +171,10 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 1. メインパネルで「**エディターを開く**」をクリックし、次のコードスニペットを入力します。
 
    ```js
-   console.debug("Page Loaded ");
-   console.debug("Page name: " + event.component['dc:title']);
-   console.debug("Page type: " + event.component['@type']);
-   console.debug("Page template: " + event.component['xdm:template']);
+   console.log("Page Loaded ");
+   console.log("Page name: " + event.component['dc:title']);
+   console.log("Page type: " + event.component['@type']);
+   console.log("Page template: " + event.component['xdm:template']);
    ```
 
    `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。ここで、 `component` は、データレイヤーから派生した現在のページです `getState` カスタムイベント内。
