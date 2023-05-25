@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '149'
+ht-degree: 1%
 
 ---
 
@@ -76,3 +76,7 @@ export default function Contact(){
 ```
 
 上記のコードでは、ネイティブの HTML コンポーネントが使用され、アダプティブフォームで使用されるコンポーネントにマッピングされます。 例えば、アダプティブフォームのテキスト入力コンポーネントを TextField コンポーネントにマッピングするとします。 記事で使用されるネイティブコンポーネント [ここからダウンロードできます](./assets/native-components.zip)
+
+## 次の手順
+
+[ドロップダウンリストからフォームを選択](./select-form-from-drop-down-list.md)

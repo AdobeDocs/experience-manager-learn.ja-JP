@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1822'
 ht-degree: 82%
 
 ---
@@ -230,10 +230,12 @@ ht-degree: 82%
    + [ウェルカムキットコンポーネントを作成する](welcome-kit/create-welcomekit-component.md)
    + [ワークフローコンポーネントの作成](welcome-kit/create-workflow-component.md)
    + [ソリューションのテスト](welcome-kit/testing-the-solution.md)
-+ アダプティブフォームをSPAに埋め込む {#embed-form-spa}
++ ヘッドレスForms API {#embed-form-spa}
    + [1 — はじめに](headless-forms/introduction.md)
    + [2 — 依存関係をインストール](headless-forms/install-af-react-libraries.md)
    + [3 — フォームを取得する](headless-forms/fetch-the-form.md)
+   + [4 — 入力するフォームを選択](headless-forms/select-form-from-drop-down-list.md)
+   + [5 — フォームをカード形式で表示する](headless-forms/display-forms-card-view.md)
 
 + FormsおよびAcrobat Signを使用した React アプリ {#react-ic-sign}
    + [1 — はじめに](react-ic-sign/introduction.md)

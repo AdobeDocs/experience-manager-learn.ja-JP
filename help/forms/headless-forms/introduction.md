@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -17,8 +17,11 @@ ht-degree: 2%
 
 # ヘッドレスアダプティブフォームの埋め込み
 
-この記事では、SPA Web サイトへのヘッドレスアダプティブフォームの埋め込みの基本について説明します。 この記事では、既存の単一ページアプリがあり、コアコンポーネントを使用してAEM Forms 6.5.16 で作成したアダプティブフォームを埋め込むことを前提としています。
-単一ページアプリにフォームを含めると、ページを更新しなくても、ユーザーはデータをシームレスに入力および送信できます。 これにより、アプリケーションのインタラクティビティと効率が向上します。
+この [このチュートリアルでは、様々なヘッドレス API について説明します](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) フォームのリスト表示、送信を行うための
+
+この記事では、アダプティブフォームをヘッドレスで一覧表示、表示、送信するために提供される様々なヘッドレス API について説明します。
+
+この記事では、既存の単一ページアプリを使用し、SPA Web サイトにヘッドレスアダプティブフォームのリストを作成して表示することを前提としています。
 
 次のスクリーンショットは、SPAに埋め込まれた連絡先 US フォームを示しています
 
