@@ -2,6 +2,7 @@
 user-guide-title: AEMコンテンツフラグメントコンソールのビデオ
 user-guide-description: Adobe Experience Managerコンテンツフラグメントコンソールのビデオのコレクションです。
 breadcrumb-title: AEMコンテンツフラグメントコンソールのビデオ
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 feature-set: Experience Manager Sites
@@ -9,7 +10,7 @@ feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: cf37733d0fd22d560c8021eb25e6df273c1a16f7
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 25%

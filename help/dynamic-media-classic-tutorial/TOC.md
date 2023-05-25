@@ -2,10 +2,11 @@
 user-guide-title: Dynamic Media Classic の概要
 user-guide-description: このチュートリアルでは、Dynamic Media Classic を使用して、リッチメディアコンテンツを作成、オーサリングおよび配信する方法について説明します。
 breadcrumb-title: Dynamic Media Classic チュートリアル
+solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
 version: 6.4, 6.5
 index: y
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 100%
