@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 5%
+source-wordcount: '1646'
+ht-degree: 4%
 
 ---
 
@@ -73,7 +73,7 @@ SDR ドキュメントは、実装計画の包括的な概要を提供し、す�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-SDR ドキュメントに含める必要のある概念と様々な要素の詳細については、 [ソリューションデザインリファレンス (SDR) ドキュメントの作成と管理](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). サンプルの Excel テンプレートもダウンロードできますが、WKND 固有のバージョンも利用できます [ここ](./assets/Analytics-SDR-Template.xlsx).
+SDR ドキュメントに含める必要のある概念と様々な要素の詳細については、 [ソリューションデザインリファレンス (SDR) ドキュメントの作成と管理](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). サンプルの Excel テンプレートもダウンロードできますが、WKND 固有のバージョンも利用できます [ここ](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Analytics の設定 — レポートスイート、Analysis Workspace
 
@@ -83,7 +83,7 @@ SDR ドキュメントに含める必要のある概念と様々な要素の詳�
 
 収集したデータを分析、収集し、それらのインサイトを他のユーザーと共有するには、Analysis Workspaceのプロジェクトが作成されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
 Analytics の設定と概念について詳しくは、次のリソースを強くお勧めします。
 
@@ -121,6 +121,10 @@ Experience Data Model(XDM) スキーマは、収集したデータを標準化�
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
+
+>[!TIP]
+>
+>このビデオに示すデータ要素とルールイベントコードは、参照用に利用できます。 **下のアコーディオン要素を展開する**. ただし、Adobeクライアントデータレイヤーを使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用する概念は引き続き適用されます。
 
 +++ データ要素とルールイベントコード
 
@@ -209,6 +213,13 @@ Experience Data Model(XDM) スキーマは、収集したデータを標準化�
 
 AEMコアコンポーネントとAdobeクライアントデータレイヤーの統合について詳しくは、 [AEMコアコンポーネントでのAdobeクライアントデータレイヤーの使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja).
 
+
+>[!INFO]
+>
+>の包括的な理解 **変数マップ** ソリューションデザインリファレンス (SDR) ドキュメントのタブプロパティの詳細に、完成した WKND 固有のバージョンにアクセスしてダウンロードします。 [ここ](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+
+
+
 ## WKND で更新されたタグプロパティを確認
 
 WKND サイトページで、更新されたタグプロパティが構築、公開され、正しく機能していることを確認する。 Google Chrome Web ブラウザーの使用 [Adobe Experience Platform Debugger 拡張機能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
@@ -235,7 +246,7 @@ WKND サイトページで、更新されたタグプロパティが構築、公
 
 Analysis Workspaceは、柔軟でインタラクティブな方法でデータを調査および視覚化できる、Adobe Analytics内の強力なツールです。 カスタムレポートの作成、高度なセグメント化の実行、様々なデータビジュアライゼーションの適用をおこなうためのドラッグ&amp;ドロップインターフェイスが提供されます。
 
-で作成したAnalysis Workspaceプロジェクトを再度開きます。 [Analytics を設定](#setup-analytics---report-suite-analysis-workspace) 手順 内 **トップページ** セクションでは、訪問回数、個別訪問者数、入口数、バウンス率など、様々な指標を調べます。 WKND ページとホームページ CTA のパフォーマンスを評価するには、WKND 固有のディメンション（WKND ページ名、WKND CTA 名）と指標（WKND CTA クリックイベント）をドラッグ&amp;ドロップします。 これらのインサイトは、マーケターが効果的な CTA を把握し、ビジネス目標に沿ったデータ主導型の意思決定をおこなうのに役立ちます。
+で作成したAnalysis Workspaceプロジェクトを再度開きます。 [Analytics を設定](#setup-analytics---report-suite-analysis-workspace) 手順 内 **トップページ** セクションでは、訪問回数、個別訪問者数、入口数、バウンス率など、様々な指標を調べます。 WKND ページとホームページ CTA のパフォーマンスを評価するには、WKND 固有のディメンション（WKND ページ名、WKND CTA 名）と指標（WKND CTA クリックイベント）をドラッグ&amp;ドロップします。 これらのインサイトは、マーケターが効果的な CTA を把握し、ビジネス目標に沿ってデータ主導型の意思決定をおこなうのに役立ちます。
 
 ユーザージャーニーを視覚化するには、以下を使用して、フロービジュアライゼーションを使用します。 **WKND ページ名** 様々な経路に展開する
 
@@ -250,6 +261,12 @@ Adobe Analyticsの実装は、マーケティングチームがユーザーの�
 ソリューションデザインリファレンス (SDR) ドキュメントなどの推奨手順を実装し、提供されるリソースを使用し、Analytics の主要な概念を理解することで、マーケターはデータを効果的に収集および分析できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>必要に応じて **エンドツーエンドビデオ** これは、個々のセットアップ手順のビデオではなく、統合プロセス全体に対応しています。 [ここ](https://video.tv.adobe.com/v/3419889/) にアクセスします。
+
 
 ## その他のリソース
 
