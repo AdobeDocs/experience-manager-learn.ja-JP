@@ -11,9 +11,9 @@ last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
+source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1340'
 ht-degree: 6%
 
 ---
@@ -207,6 +207,11 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 お疲れ様でした。Web サイトからデータを収集および取り込むための、Experience PlatformWeb SDK を使用したAEMの設定が完了している。 この基盤を使用すると、Analytics、Target、Customer Journey Analytics(CJA) などの製品を強化および統合して、顧客に合わせてパーソナライズされた豊富なエクスペリエンスを作成できるようになります。 学び続け、Adobe Experience Cloudの可能性を最大限に引き出すために探索し続けます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>必要に応じて **エンドツーエンドビデオ** これは、個々のセットアップ手順のビデオではなく、統合プロセス全体に対応しています。 [ここ](https://video.tv.adobe.com/v/3418905/) にアクセスします。
 
 ## その他のリソース
 
