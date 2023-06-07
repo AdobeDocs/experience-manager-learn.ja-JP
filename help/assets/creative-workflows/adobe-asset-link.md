@@ -9,9 +9,9 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1047'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ Adobe Creative Cloud for enterprise の Adobe Asset Link 拡張機能は、Creat
 
 >[!TIP]
 >
-> [Adobe XD プレミアムトレーニングプログラム](https://spark.adobe.com/page/wU7OXv8qKGugO/)が、アセットリンクを Adobe Experience Manager ワークフローと統合するのにどのように役立つかをご覧ください。
+> [Adobe XD プレミアムトレーニングプログラム](https://helpx.adobe.com/jp/support/xd.html)が、アセットリンクを Adobe Experience Manager ワークフローと統合するのにどのように役立つかをご覧ください。
 
 ## Adobe Asset Link と AEM クリエイティブワークフロー
 
@@ -65,7 +65,7 @@ Adobe Asset Link は、Adobe Asset Link と AEM の間の InDesign の直接リ�
 
 >[!NOTE]
 >
->Adobe Creative Cloud の Enterprise ID または Federated ID のみを使用します。 必ず [AEM for Asset Link を設定してください](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)。
+>Adobe Creative Cloud の Enterprise ID または Federated ID のみを使用します。 必ず [AEM for Asset Link を設定してください](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)。
 
 次のいずれかのオプションを使用して、InDesign レイアウトにアセットを配置することができます。
 

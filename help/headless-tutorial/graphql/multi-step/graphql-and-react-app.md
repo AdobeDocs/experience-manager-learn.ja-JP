@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1188'
 ht-degree: 90%
 
 ---
@@ -32,7 +32,7 @@ _この章の IDE スクリーンショットは、[Visual Studio Code](https://
 
 次のソフトウェアがインストールされている必要があります。
 
-- [Node.js v18](https://nodejs.org/)
+- [Node.js v18](https://nodejs.org/ja)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目的
@@ -109,7 +109,7 @@ React アプリを取得するには：
 
 1. `src/api` フォルダーには、AEM に対する GraphQL クエリを実行するために使用するファイルが含まれています。
    - `src/api/aemHeadlessClient.js` は、AEM との通信に使用する AEM ヘッドレスクライアントを初期化して書き出します。
-   - `src/api/usePersistedQueries.js` は、[カスタム React フック](https://react.dev/docs/hooks-custom.html)を実装し、AEM GraphQL から `Teams.js` と `Person.js` のビューコンポーネントにデータを返します。
+   - `src/api/usePersistedQueries.js` は、[カスタム React フック](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components)を実装し、AEM GraphQL から `Teams.js` と `Person.js` のビューコンポーネントにデータを返します。
 
 1. `src/components/Teams.js` ファイルは、リストクエリを使用して、チームとそのメンバーのリストを表示します。
 1. `src/components/Person.js` ファイルは、パラメーター化された単一結果クエリを使用して、1 人の人物の詳細を表示します。
@@ -187,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 次に、React アプリのメインビューにチームとそのメンバーを表示する機能を構築します。この機能には、次が必要です。
 
-- `src/api/usePersistedQueries.js` の新しい[カスタム React useEffect フック](https://react.dev/docs/hooks-custom.html)は、`my-project/all-teams` 永続クエリを呼び出して、AEM のチームコンテンツフラグメントリストを返します。
+- `src/api/usePersistedQueries.js` の新しい[カスタム React useEffect フック](https://react.dev/reference/react/useEffect#useeffect)は、`my-project/all-teams` 永続クエリを呼び出して、AEM のチームコンテンツフラグメントリストを返します。
 - `src/components/Teams.js` にある React コンポーネントで、新しいカスタム React `useEffect` フックを呼び出し、チームデータをレンダリングします。
 
 完了すると、アプリのメインビューに AEM のチームデータが入力されます。
@@ -337,7 +337,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 この機能には、次が必要です。
 
-- `src/api/usePersistedQueries.js` の新しい [custom React useEffect フック](https://react.dev/docs/hooks-custom.html)は、パラメータ化された `my-project/person-by-name` 永続クエリを呼び出し、単一の人物レコードを返します。
+- `src/api/usePersistedQueries.js` の新しい [custom React useEffect フック](https://react.dev/reference/react/useEffect#useeffect)は、パラメータ化された `my-project/person-by-name` 永続クエリを呼び出し、単一の人物レコードを返します。
 
 - `src/components/Person.js` にある React コンポーネントは、人物のフルネームをクエリパラメーターとして使用し、新しいカスタム React `useEffect` フックを呼び出して、人物データをレンダリングするものです。
 

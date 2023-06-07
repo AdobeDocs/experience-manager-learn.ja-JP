@@ -9,16 +9,16 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '100'
 ht-degree: 100%
 
 ---
 
 # クラウドへの移行 - 第 1 部
 
-Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。 クラウドの専門家である [Applesmith 博士](https://twitter.com/DrApplesmith)を特別ゲストとしてお招きしています。
+Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 

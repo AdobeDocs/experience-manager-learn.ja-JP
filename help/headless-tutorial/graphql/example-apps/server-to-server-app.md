@@ -9,10 +9,10 @@ level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 99%
+source-wordcount: '471'
+ht-degree: 96%
 
 ---
 
@@ -22,18 +22,18 @@ ht-degree: 99%
 
 ![AEM ヘッドレスを備えたサーバー間 Node.js アプリ](./assets/server-to-server-app/server-to-server-app.png)
 
-[GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)を表示
+[GitHub のソースコード](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)を表示
 
 ## 前提条件 {#prerequisites}
 
 次のツールをローカルにインストールする必要があります。
 
-+ [Node.js v18](https://nodejs.org/ja/)
++ [Node.js v18](https://nodejs.org/ja)
 + [Git](https://git-scm.com/)
 
 ## AEM の要件
 
-Node.js アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
+Node.js アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + オプションで、[サービス資格情報](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=ja)リクエストを承認することもできます（例えば、AEM オーサーサービスへの接続）。
@@ -77,7 +77,7 @@ Node.js アプリケーションは、次の AEM デプロイメントオプシ�
 
 ## コード
 
-サーバー間 Node.js アプリケーションの構築方法、GraphQL で保持されたクエリを使用してコンテンツを取得する AEM ヘッドレスへの接続方法およびそのデータの表示方法の概要を次に示します。完全なコードは [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app) にあります。
+サーバー間 Node.js アプリケーションの構築方法、GraphQL で保持されたクエリを使用してコンテンツを取得する AEM ヘッドレスへの接続方法およびそのデータの表示方法の概要を次に示します。完全なコードは [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server) にあります。
 
 サーバー間 AEM ヘッドレスアプリの一般的なユースケースは、AEM のコンテンツフラグメントデータを他のシステムに同期することですが、このアプリケーションは意図的に単純で、永続クエリから JSON 結果を出力します。
 
