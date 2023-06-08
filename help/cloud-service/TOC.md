@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
 workflow-type: tm+mt
 source-wordcount: '953'
-ht-degree: 94%
+ht-degree: 96%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 # Adobe Experience Manager as a Cloud Service チュートリアル {#cloud-service}
 
 + [概要](./overview.md)
-+ AEM Trials {#aem-trials}
++ AEM 体験版 {#aem-trials}
    + [画像](./aem-trials/images.md)
 + AEM as a Cloud Service の概要{#introduction}
    + [AEM as a Cloud Service とは](./introduction/what-is-aem-as-a-cloud-service.md)
@@ -61,20 +61,22 @@ ht-degree: 94%
    + 拡張性{#extensibility}
       + App Builder{#app-builder}
          + [アクセストークンの生成](./developing/extensibility/app-builder/jwt-auth.md)
-      + コンテンツフラグメントコンソール{#content-fragments}
-         + [概要](./developing/extensibility/content-fragments/overview.md)
-         + [Adobe Developer Console プロジェクト](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
-         + [アプリの初期化](./developing/extensibility/content-fragments/app-initialization.md)
-         + [拡張機能の登録](./developing/extensibility/content-fragments/extension-registration.md)
-         + [ヘッダーメニュー](./developing/extensibility/content-fragments/header-menu.md)
-         + [アクションバー](./developing/extensibility/content-fragments/action-bar.md)
-         + [モーダル](./developing/extensibility/content-fragments/modal.md)
-         + [Adobe I/O Runtime アクション](./developing/extensibility/content-fragments/runtime-action.md)
-         + [テスト](./developing/extensibility/content-fragments/test.md)
-         + [デプロイ](./developing/extensibility/content-fragments/deploy.md)
-         + 拡張機能の例{#example-extensions}
-            + [プロパティの一括更新](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
-            + [OpenAI を使用した AEM 画像アセットの生成](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
+      + UI 拡張機能{#ui}
+         + [概要](./developing/extensibility/ui/overview.md)
+         + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [アプリを初期化](./developing/extensibility/ui/app-initialization.md)
+         + [拡張機能を登録](./developing/extensibility/ui/extension-registration.md)
+         + [モーダル](./developing/extensibility/ui/modal.md)
+         + [Adobe I/O Runtime Action](./developing/extensibility/ui/runtime-action.md)
+         + [確認](./developing/extensibility/ui/verify.md)
+         + [デプロイ](./developing/extensibility/ui/deploy.md)
+         + コンテンツフラグメント{#content-fragments}
+            + [概要](./developing/extensibility/ui/content-fragments/overview.md)
+            + 例{#examples}
+               + [プロパティの一括更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
+               + [AI 画像生成](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
+               + [カスタムグリッド列](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
+               + [XML として書き出し](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
    + 開発の基本{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)
@@ -202,10 +204,10 @@ ht-degree: 94%
       + [資産パネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [開始パネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
-   + AEM Formsと Analytics{#forms-and-analytics}
+   + AEM Forms と Analytics{#forms-and-analytics}
       + [はじめに](./forms/form-data-analytics/introduction.md)
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
-      + [ルールを作成](./forms/form-data-analytics/rules.md)
+      + [ルールの作成](./forms/form-data-analytics/rules.md)
       + [ソリューションのテスト](./forms/form-data-analytics/test.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
       + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
@@ -264,9 +266,9 @@ ht-degree: 94%
       + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + 1 つのドライブと SharePoint にフォーム送信を保存{#one-drive}
-      + [フォームデータを 1 つのドライブに保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
-      + [SharePoint にフォームデータを保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
+   + OneDrive と SharePoint にフォーム送信を保存{#one-drive}
+      + [フォームデータを OneDrive に保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
+      + [フォームデータを SharePoint に保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + Asset Compute の拡張性{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
