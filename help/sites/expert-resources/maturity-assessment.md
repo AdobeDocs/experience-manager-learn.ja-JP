@@ -4,13 +4,14 @@ seo-title: AEM Sites Maturity Assessment
 description: このチェックリストは、AEM Sites インスタンスの成熟度を評価する際に回答する必要がある主な質問の概要を示します。
 seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
 audience: author, marketer, developer
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
-workflow-type: ht
+feature: Learn From Your Peers
+exl-id: 22164a0e-7239-43f4-8356-c12f68133255
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 100%
 
 ---
-
 
 # AEM Sites 成熟度評価チェックリスト
 
@@ -35,4 +36,3 @@ AEM 成熟度評価は、主にオンプレミスおよびマネージドサー�
 推奨される AEM 成熟度評価の重点分野は次のとおりです。設計とアーキテクチャ、製品管理と戦略、デジタルアセット管理と配信、分析、テストとセキュリティです。
 
 Experience League の複数の記事の情報と彼自身のベストプラクティスをまとめていただいた、AEM チャンピオンの Greg Dimeris に心から感謝します。
-

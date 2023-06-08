@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 91%
+source-wordcount: '458'
+ht-degree: 95%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 91%
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
    + [ローンチ](page-authoring/launches.md)
-   + エキスパートアドバイス {#expert-advice}
+   + 仲間から学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + コンポーネント {#components}
    + [コンポーネント開発](components/component-development.md)
@@ -101,12 +101,12 @@ ht-degree: 91%
       + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Platform Web SDK を使用した分析](integrations/platform/analytics-using-web-sdk.md)
-   + Experience Platformデータ収集タグ (Launch) {#experience-platform-data-collection-tags}
+   + Experience Platform データ収集タグ（Experience Platform Launch）{#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [IMS を使用したAEMとタグプロパティの接続](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [AEM Launch 作成Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [タグ (Launch) 実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [IMS を使用した AEM とタグプロパティの接続](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
+      + [AEM Experience Platform Launch クラウドサービスの作成](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [タグ（Experience Platform Launch）実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [Adobe Client Data Layer の使用](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Adobe Client Data Layer のカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -123,7 +123,7 @@ ht-degree: 91%
       + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
-+ エキスパートリソース {#expert-resources}
++ 仲間から学ぶ {#expert-resources}
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
