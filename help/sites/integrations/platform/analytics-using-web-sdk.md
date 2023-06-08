@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
+source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1647'
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ SDR ドキュメントは、実装計画の包括的な概要を提供し、す�
 
 SDR ドキュメントに含める必要のある概念と様々な要素の詳細については、 [ソリューションデザインリファレンス (SDR) ドキュメントの作成と管理](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). サンプルの Excel テンプレートもダウンロードできますが、WKND 固有のバージョンも利用できます [ここ](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
-## Analytics の設定 — レポートスイート、Analysis Workspace
+## Analysis Workspace, Analytics — レポートスイートのセットアップ
 
 最初の手順は、Adobe Analyticsを設定することです。特に、コンバージョン変数 ( またはeVar) と成功イベントを使用してレポートスイートを設定します。 コンバージョン変数は、原因と効果の測定に使用されます。 成功イベントは、アクションの追跡に使用されます。
 
@@ -102,7 +102,7 @@ Datastream は、収集したデータをどこに送信するかを Platform Ed
 
 Experience Data Model(XDM) スキーマは、収集したデータを標準化するのに役立ちます。 内 [前のチュートリアル](./web-sdk.md)（を使用した XDM スキーマ） `AEP Web SDK ExperienceEvent` フィールドグループが作成されます。 また、この XDM スキーマを使用して、収集したデータをデータセットに保存するデータセットをExperience Platformします。
 
-ただし、この XDM スキーマには、eVarやイベントデータを送信するAdobe Analytics固有のフィールドグループはありません。 プラットフォームにeVarやイベントデータが保存されないように、既存のスキーマを更新する代わりに新しい XDM スキーマが作成されます。
+ただし、XDM スキーマには、eVarやイベントデータを送信するAdobe Analytics固有のフィールドグループはありません。 プラットフォームにeVarやイベントデータが保存されないように、既存のスキーマを更新する代わりに新しい XDM スキーマが作成されます。
 
 新しく作成された XDM スキーマには、 `AEP Web SDK ExperienceEvent` および `Adobe Analytics ExperienceEvent Full Extension` フィールドグループを使用します。
 
@@ -130,84 +130,84 @@ Experience Data Model(XDM) スキーマは、収集したデータを標準化�
 
 + この `Component ID` データ要素コード。
 
-   ```javascript
-   if(event && event.path && event.path.includes('.')) {    
-       // split on the `.` to return just the component ID for e.g. button-06bc532b85, tabs-bb27f4f426-item-cc9c2e6718
-       return event.path.split('.')[1];
-   }else {
-       //return dummy ID
-       return "WKND-CTA-ID";
-   }
-   ```
+  ```javascript
+  if(event && event.path && event.path.includes('.')) {    
+      // split on the `.` to return just the component ID for e.g. button-06bc532b85, tabs-bb27f4f426-item-cc9c2e6718
+      return event.path.split('.')[1];
+  }else {
+      //return dummy ID
+      return "WKND-CTA-ID";
+  }
+  ```
 
 + この `Component Name` データ要素コード。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
-       // Return the Button, Link, Image, Tab name, for e.g. View Trips, Full Article, See Trips
-       return event.component['dc:title'];
-   }else {
-       //return dummy ID
-       return "WKND-CTA-Name";    
-   }    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+      // Return the Button, Link, Image, Tab name, for e.g. View Trips, Full Article, See Trips
+      return event.component['dc:title'];
+  }else {
+      //return dummy ID
+      return "WKND-CTA-Name";    
+  }    
+  ```
 
 + この `all pages - on load` **Rule-Condition** コード
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
-       return true;
-   }else{
-       return false;
-   }    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
+      return true;
+  }else{
+      return false;
+  }    
+  ```
 
 + この `home page - cta click` **Rule-Event** コード
 
-   ```javascript
-   var componentClickedHandler = function(evt) {
-   // defensive coding to avoid a null pointer exception
-   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-       //trigger Tag Rule and pass event
-       console.log("cmp:click event: " + evt.eventInfo.path);
-   
-       var event = {
-           //include the path of the component that triggered the event
-           path: evt.eventInfo.path,
-           //get the state of the component that triggered the event
-           component: window.adobeDataLayer.getState(evt.eventInfo.path)
-       };
-   
-       //Trigger the Tag Rule, passing in the new `event` object
-       // the `event` obj can now be referenced by the reserved name `event` by other Tag Property data elements
-       // i.e `event.component['someKey']`
-       trigger(event);
-   }
-   }
-   
-   //set the namespace to avoid a potential race condition
-   window.adobeDataLayer = window.adobeDataLayer || [];
-   //push the event listener for cmp:click into the data layer
-   window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:click` and callback to the `componentClickedHandler` function
-   dl.addEventListener("cmp:click", componentClickedHandler);
-   });    
-   ```
+  ```javascript
+  var componentClickedHandler = function(evt) {
+  // defensive coding to avoid a null pointer exception
+  if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+      //trigger Tag Rule and pass event
+      console.log("cmp:click event: " + evt.eventInfo.path);
+  
+      var event = {
+          //include the path of the component that triggered the event
+          path: evt.eventInfo.path,
+          //get the state of the component that triggered the event
+          component: window.adobeDataLayer.getState(evt.eventInfo.path)
+      };
+  
+      //Trigger the Tag Rule, passing in the new `event` object
+      // the `event` obj can now be referenced by the reserved name `event` by other Tag Property data elements
+      // i.e `event.component['someKey']`
+      trigger(event);
+  }
+  }
+  
+  //set the namespace to avoid a potential race condition
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  //push the event listener for cmp:click into the data layer
+  window.adobeDataLayer.push(function (dl) {
+  //add event listener for `cmp:click` and callback to the `componentClickedHandler` function
+  dl.addEventListener("cmp:click", componentClickedHandler);
+  });    
+  ```
 
 + この `home page - cta click` **Rule-Condition** コード
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('@type')) {
-       //Check for Button Type OR Teaser CTA type
-       if(event.component['@type'] === 'wknd/components/button' ||
-       event.component['@type'] === 'wknd/components/teaser/cta') {
-           return true;
-       }
-   }
-   
-   // none of the conditions are met, return false
-   return false;    
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('@type')) {
+      //Check for Button Type OR Teaser CTA type
+      if(event.component['@type'] === 'wknd/components/button' ||
+      event.component['@type'] === 'wknd/components/teaser/cta') {
+          return true;
+      }
+  }
+  
+  // none of the conditions are met, return false
+  return false;    
+  ```
 
 +++
 
