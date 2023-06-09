@@ -12,9 +12,9 @@ thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2799'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 99%
 1. 専用のフロントエンド開発用の webpack 開発サーバーと `ui.frontend` モジュールの使用方法を確認する 
 1. コンパイル済みの CSS と JavaScript を Sites 実装に配信するエンドツーエンドのワークフローについて理解する
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 この章では、WKND サイトと記事ページテンプレートのベースラインスタイルを追加して、実装を [UI デザインモックアップ](assets/pages-templates/wknd-article-design.xd)に近づけます。高度なフロントエンドワークフローを使用して、webpack プロジェクトを AEM クライアントライブラリに統合します。
 
@@ -128,7 +128,7 @@ ht-degree: 99%
 
    ![main.scss - entrypoint](assets/client-side-libraries/main-scss.png)
 
-   `main.scss` は、 `ui.frontend` モジュールの Sass ファイルへのエントリポイントです。 これには、プロジェクト内の様々な Sass ファイル全体で使用される一連のブランド変数を含む `_variables.scss` ファイルが含まれます。 また、`_base.scss` ファイルも含まれ、HTML 要素の基本スタイルを定義します。 正規表現には、`src/main/webpack/components` にあるの個々のコンポーネントのスタイルが含まれます。 . 別の正規表現には、`src/main/webpack/site/styles` にあるファイルが含まれます。
+   `main.scss` は、 `ui.frontend` モジュールの Sass ファイルへのエントリポイントです。 これには、プロジェクト内の様々な Sass ファイル全体で使用される一連のブランド変数を含む `_variables.scss` ファイルが含まれます。 また、`_base.scss` ファイルも含まれ、HTML 要素の基本スタイルを定義します。 正規表現には、`src/main/webpack/components` にあるの個々のコンポーネントのスタイルが含まれます。別の正規表現には、`src/main/webpack/site/styles` にあるファイルが含まれます。
 
 1. `main.ts` ファイルを調べます。これには `main.scss` のほか、プロジェクトで `.js` または `.ts` ファイルを収集するための正規表現が含まれます。 このエントリポイントは、`ui.frontend` モジュール全体で [webpack 設定ファイル](https://webpack.js.org/configuration/)によって使用されます。
 
