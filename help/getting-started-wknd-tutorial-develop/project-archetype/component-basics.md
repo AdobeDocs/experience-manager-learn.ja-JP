@@ -13,9 +13,9 @@ thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1226'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 92%
 1. ダイアログを使用してコンテンツのオーサリングを促進する方法を理解します。
 1. コンポーネントをサポートする CSS と JavaScript を組み込むためのクライアントサイドライブラリの基本中の基本を学びます。
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 この章では、簡単な `HelloWorld` コンポーネントにいくつかの変更を加えます。`HelloWorld` コンポーネントを更新しながら、AEM コンポーネント開発の主要な領域について学びます。
 
@@ -255,13 +255,13 @@ Sling モデルは、JCR から Java™ 変数へのデータのマッピング�
    >
    > AEM 6.4／6.5 の場合は、`mvn clean install -PautoInstallBundle -Pclassic` を使用します。
 
-1. ファイルを更新 `helloworld.html` 時刻 `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 新しく作成したメソッドを使用するには、 `HelloWorld` モデル。
+1. `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` のファイル `helloworld.html` を更新して、`HelloWorld` モデルの新しく作成したメソッドを使用するようにします。
 
-   この `HelloWorld` モデルは、このコンポーネントインスタンスに対して HTL ディレクティブを介してインスタンス化されます。 `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"`、インスタンスを変数に保存する `model`.
+   `HelloWorld` モデルは、このコンポーネントインスタンスに対して HTL ディレクティブ `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"` を介してインスタンス化され、インスタンスを変数 `model` に保存します。
 
-   この `HelloWorld` モデルインスタンスが、HTL で `model` 変数を `HelloWord`. これらのメソッドの呼び出しでは、次のように短縮メソッドの構文を使用できます。 `${model.getTitle()}` ～に短縮できる `${model.title}`.
+   `HelloWorld` モデルインスタンスは、`HelloWord` を使用して `model` 変数を介して HTL で使用できるようになりました。これらのメソッドの呼び出しでは、短縮メソッドの構文を使用できます。例えば、`${model.getTitle()}` は `${model.title}` に短縮できます。
 
-   同様に、すべての HTL スクリプトが [グローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=ja) Sling Model オブジェクトと同じ構文を使用してアクセスできる
+   同様に、すべての HTL スクリプトには、Sling Model オブジェクトと同じ構文を使用してアクセスできる [グローバルオブジェクト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=ja) が挿入されます。
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
