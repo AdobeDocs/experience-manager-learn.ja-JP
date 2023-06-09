@@ -6,7 +6,7 @@ sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '345'
 ht-degree: 100%
 
@@ -22,24 +22,19 @@ Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス�
 ## 新機能
 
 * **[AEM Sites でのローンチの使用（ビデオ）](./page-authoring/launches.md)**
-
-   *AEM Sites のローンチとその使用方法、将来のリリース向けに web サイトコンテンツを準備する方法について説明します。*
+  *AEM Sites のローンチとその使用方法、将来のリリース向けに web サイトコンテンツを準備する方法について説明します。*
 
 * **[AEM コンポーネントでの Adobe クライアントデータレイヤーのカスタマイズ（チュートリアル）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-
-   *カスタム AEM コンポーネントのコンテンツで Adobe クライアントデータレイヤーを更新する方法について説明します。*
+  *カスタム AEM コンポーネントのコンテンツで Adobe クライアントデータレイヤーを更新する方法について説明します。*
 
 * **[AEM ヘッドレス GraphQL の概要（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
-
-   *AEM GraphQL API を使用して、ネイティブモバイルアプリで使用される AEM のコンテンツを公開する方法です。*
+  *AEM GraphQL API を使用して、ネイティブモバイルアプリで使用される AEM のコンテンツを公開する方法です。*
 
 * **[コンテンツフラグメントの使用（ビデオシリーズ）](./content-fragments/content-fragments-feature-video-use.md)**
-
-   *コンテンツフラグメントは、チャンネルに依存しない、再利用可能なコンテンツです。*
+  *コンテンツフラグメントは、チャンネルに依存しない、再利用可能なコンテンツです。*
 
 * **[SPA エディターの使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
-
-   *単一ページアプリケーション（SPA）の AEM 編集機能について説明します。*
+  *単一ページアプリケーション（SPA）の AEM 編集機能について説明します。*
 
 </div>
 
