@@ -13,9 +13,9 @@ thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1839'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 96%
 1. AEM プロジェクトアーキタイプで生成される様々なモジュールと、それらが連携する仕組みを理解します。
 1. AEM コアコンポーネントが AEM プロジェクトにどのように含まれるかを理解します。
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
 
@@ -88,7 +88,7 @@ AEM 用の Maven マルチモジュールプロジェクトを作成するには
    >
    > AEM 6.5.14+ をターゲットするには、`aemVersion="cloud"` を `aemVersion="6.5.14"` に置き換えます。
    >
-   > また、常に最新の `archetypeVersion` を参照して [AEM Project Archetype / Usage](https://github.com/adobe/aem-project-archetype#usage)
+   > また、[AEM プロジェクトアーキタイプ／使用状況](https://github.com/adobe/aem-project-archetype#usage)を参照して常に最新の `archetypeVersion` を使用します。
 
    プロジェクトの設定に使用できるプロパティの完全なリストは、[こちら](https://github.com/adobe/aem-project-archetype#avilable-properties)にあります。
 
@@ -194,9 +194,9 @@ AEM as a Cloud Service 環境には、最新バージョンの [AEM コアコン
 
 AEM 6.5 または 6.4 で生成されたプロジェクトの場合、アーキタイプは [AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)をプロジェクトに自動的に埋め込みます。AEM 6.5 または 6.4 では、AEM コアコンポーネントを埋め込んで、最新バージョンがプロジェクトに確実にデプロイされるようにすることがベストプラクティスです。コアコンポーネントがプロジェクトにどのように含まれているかについての詳細は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=ja#core-components)を参照してください。
 
-## ソース管理 {#source-control}
+## ソース制御管理 {#source-control}
 
-アプリケーション内のコードを管理する際は、何らかの形のソース管理を使用することをお勧めします。 このチュートリアルでは Git と GitHub を使用します。 Maven や IDE で生成されるファイルは、SCM で無視する必要があります。
+アプリケーション内のコードを管理するには、何らかの形のソース制御を使用することをお勧めします。このチュートリアルでは Git と GitHub を使用します。Maven や選択した IDE で生成されるファイルの中には、SCM で無視されるべきものがいくつかあります。
 
 Maven は、コードパッケージをビルドおよびインストールするたびにターゲットフォルダーを作成します。ターゲットフォルダーおよびコンテンツは SCM から除外する必要があります。
 
