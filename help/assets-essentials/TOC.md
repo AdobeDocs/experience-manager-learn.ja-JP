@@ -8,7 +8,7 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
 source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '74'
 ht-degree: 100%
 
