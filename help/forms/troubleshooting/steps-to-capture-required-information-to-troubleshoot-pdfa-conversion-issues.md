@@ -1,6 +1,6 @@
 ---
-title: PDF/A の問題をトラブルシューティングするために必要な情報を取り込む手順
-description: Assembler の変換と検証に関する問題のトラブルシューティング
+title: PDF/A の問題のトラブルシューティングに必要な情報を取得する手順
+description: Assembler の変換と検証に関連した問題のトラブルシューティング
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: 2753326a-2f8c-49f8-91a4-88cc8d500f66
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# PDFA 変換および検証の問題のトラブルシューティング手順
+# PDFA の変換と検証の問題のトラブルシューティング手順
 
-*このビデオでは、Forms Assembler サービスでのPDF/A 変換と検証の問題のトラブルシューティングに必要な情報を取り込む手順について説明します。*
+*このビデオでは、Forms Assembler サービスで PDF/A 変換と検証の問題をトラブルシューティングするために必要な情報を取得する手順を説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)
