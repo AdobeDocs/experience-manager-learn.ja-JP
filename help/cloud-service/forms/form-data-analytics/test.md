@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics
-description: AEM Forms CS とAdobe Analyticsを統合して、フォームデータフィールドに関するレポートを作成する
+title: Adobe Analytics を使用した送信済みフォームデータフィールドに関するレポート
+description: AEM Forms CS と Adobe Analytics を統合してフォームデータフィールドに関するレポートを作成する方法
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,24 +9,25 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
-workflow-type: tm+mt
+exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '180'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# ソリューションをテスト
+# ソリューションのテスト
 
-複数のフォーム値の組み合わせを使用して、フォームをプレビューし、送信します。 Adobe Analyticsレポートでデータが表示されるまで、数分～ 30 分かかります。 prop に設定されたデータは、eVar に設定されたデータよりも早くレポートに表示されます。
+フォーム値のいくつかの組み合わせを使用して、フォームをプレビューし送信します。Adobe Analytics レポートでデータが表示されるまで、数分～30 分かかります。prop に設定されたデータは、eVar に設定されたデータよりも早くレポートに表示されます。
 
 ## レポートスイート
 
-Adobe Analyticsで取り込まれるフォームデータはドーナツ形式で表示されます
+Adobe Analytics でキャプチャされたフォームデータはドーナツ形式で表示されます。
 
-**州別の送信**
+**状態別の送信**
 
-![applicantbystate](assets/donut.png)
+![applicantsbystate](assets/donut.png)
 
 フィールド検証エラー
 
@@ -34,28 +35,23 @@ Adobe Analyticsで取り込まれるフォームデータはドーナツ形式�
 
 ## デバッグ
 
-アダプティブフォームが、Launch 設定を含む同じ設定コンテナを使用していることを確認してください。Adobe
+アダプティブフォームが、Adobe Launch 設定を含んだ設定コンテナと同じものを使用していることを確認してください。
 
-フォームがAdobe Analyticsにデータを送信していることを確認するには、以下の手順を実行します
+フォームが Adobe Analytics にデータを送信していることを確認するには、以下を行います。
 
 * ブラウザーで開発者ツールを開きます。
-* コンソールパネルで次のテキストに入力します。
+* コンソールパネルで次のテキストを入力します。
 
 ```javascript
 _satellite.setDebug(true)
 ```
 
-コンソールウィンドウを開いたまま、フォームを操作します。 次のように表示されます。
+コンソールウィンドウを開いたまま、フォームを操作します。例えば、次のように表示されます。
 
 ![console-debug](assets/debug.png)
 
 ## Adobe Experience Platform Debugger の使用
 
-を [AEP デバッガー拡張機能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) をブラウザーに追加して（ログインする必要があります）、より詳細なデバッグ情報を取得します。
+[AEP デバッガー拡張機能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja)をブラウザーに追加すると（ログインする必要があります）、より詳細なデバッグ情報を取得できます。
 
 ![platform-debugger](assets/platform-debugger.png)
-
-
-
-
-
