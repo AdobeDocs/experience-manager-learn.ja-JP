@@ -11,14 +11,14 @@ level: Beginner
 last-substantial-update: 2021-09-15T00:00:00Z
 exl-id: b2ac2332-4d98-4866-8688-831f0282a736
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 基本権限
 
-でのユーザーアクセスの管理 [ベースラインアセットフォルダー](./baseline-folders.md) はガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
+[ベースラインアセットフォルダー](./baseline-folders.md)でのユーザーアクセスの管理は、ガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)
