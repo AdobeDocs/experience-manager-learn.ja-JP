@@ -9,9 +9,9 @@ level: Beginner
 thumbnail: xx.jpg
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1705'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Apache web サーバーは、`Include` または `IncludeOptional` ステート�
 | ファイル名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` ファイルには `mod_rewrite` ルール（`vhost` ファイルによって明示的に含まれて使用される）が格納されます |
 | ファイル名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` ファイルは `*.vhost` ファイル内から取り込まれます。IP の正規表現または IP の許可リストへの登録を許可する拒否ルールが含まれます。 IP アドレスに基づいて仮想ホストの表示を制限しようとする場合は、これらのファイルの 1 つを生成し、それを `*.vhost` ファイルからインクルードします。 |
 
-## conf.dispatcher.d/に含まれるファイル
+## conf.modules.d/ に含まれるファイル
 
 | ファイル | ファイルの保存先 | 説明 |
 | --- | --- | --- |
