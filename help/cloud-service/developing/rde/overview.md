@@ -1,6 +1,6 @@
 ---
 title: 迅速な開発環境
-description: AEMの急速な開発環境、その概要、およびデプロイメントサイクルへの迅速な開発に役立つ方法について説明します。
+description: AEM の迅速な開発環境について、その概要と、開発からデプロイまでのサイクルの短縮にどう役立つかを説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,33 +9,33 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '109'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-
 # 迅速な開発環境
 
-AEM as a Cloud Serviceの Rapid Development Environment(RDE) について説明します。
+AEM as a Cloud Service の迅速な開発環境（RDE）について説明します。
 
-このビデオの概要：
+このビデオの概要は次のとおりです。
 
 - RDE とは
-- 開発サイクルからデプロイメントサイクルまでを迅速に進める方法を教えてください。
+- 開発からデプロイまでのサイクルの短縮にどう役立つか
 
 >[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
 
-## 次のステップ
+## 次の手順
 
-学ぶ [設定方法](./how-to-setup.md) AEM as a Cloud Serviceの RDE
+AEM as a Cloud Service に RDE を[セットアップする方法](./how-to-setup.md)について説明します。
 
 ## その他のリソース
 
-[RDE ドキュメントの概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[RDE の概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=ja#introduction)
 
-[Cloud Manager CI／CD パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
+[Cloud Manager CI／CD パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=ja)
 
-[開発 IDE の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja)
+[開発用 IDE のセットアップ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja)
