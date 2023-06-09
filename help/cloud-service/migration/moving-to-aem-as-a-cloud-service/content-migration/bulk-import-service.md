@@ -9,9 +9,9 @@ kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '157'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -35,6 +35,6 @@ AEM as a Cloud Service の一括読み込みサービスを使用して、AEM �
 
 ## その他のリソース
 
-+ [一括読み込みサービス設定オプション](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ [アセット取り込みに関する Adobe Developers Live セッション](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [一括読み込みサービス設定オプション](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=ja#configure-bulk-ingestor-tool)
++ [アセット取り込みに関する Adobe Developers Live セッション](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=ja)
 
