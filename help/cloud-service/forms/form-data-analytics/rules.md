@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics
-description: AEM Forms CS とAdobe Analyticsを統合して、フォームデータフィールドに関するレポートを作成する
+title: Adobe Analytics を使用した送信済みフォームデータフィールドに関するレポート
+description: AEM Forms CS と Adobe Analytics を統合してフォームデータフィールドに関するレポートを作成する方法
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,45 +9,46 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
-workflow-type: tm+mt
+exl-id: 9982e041-fff7-4be6-91c9-e322d2fd3e01
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '220'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ルールを定義
+# ルールの定義
 
-Tags プロパティで、2 つの新しい [ルール](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**フィールド検証エラーとフォーム送信**) をクリックします。
+タグプロパティで、2 つの新しい[ルール](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=ja)（**フィールド検証エラーとフォーム送信**）を作成しました。
 
 ![adaptive-form](assets/rules.png)
 
 
 ## フィールド検証エラー
 
-この **フィールド検証エラー** ルールは、アダプティブフォームフィールドに検証エラーが発生するたびにトリガーされます。 例えば、電話番号や E メールが想定される形式ではない場合、検証エラーメッセージが表示されます。
+**フィールド検証エラー**&#x200B;ルールは、アダプティブフォームフィールドに検証エラーが発生するたびにトリガーされます。ここで扱っているフォームでは、例えば、電話番号やメールが想定される形式ではない場合、検証エラーメッセージが表示されます。
 
-フィールド認証エラールールは、イベントを _**Adobe Experience Manager Forms-Error**_ スクリーンショットに示すように
+フィールド検証エラールールは、スクリーンショットに示すように、イベントを _**Adobe Experience Manager Forms - エラー**_&#x200B;にすることで設定されます。
 
 
 
-![出願人の住居](assets/field_validation_error_rule.png)
+![applicant-state-residence](assets/field_validation_error_rule.png)
 
-「 Adobe Analytics - Set Variables 」は、次のように設定します
+「Adobe Analytics - 変数を設定」は、次のように設定します。
 
-![アクションを設定](assets/field_validation_action_rule.png)
+![アクションの設定](assets/field_validation_action_rule.png)
 
 ## フォーム送信ルール
 
 フォーム送信ルールは、アダプティブフォームが正常に送信されるたびにトリガーされます。
 
-フォーム送信ルールは、 _**Adobe Experience Manager Forms — 送信**_ イベント
+フォーム送信ルールは、_**Adobe Experience Manager Forms - 送信**_&#x200B;イベントを使用して設定されます。
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-フォーム送信ルールで、データ要素の値 _**ApplicatorsStateOfResidence**_ は prop5 にマッピングされ、データ要素 FormTitle の値は prop8 にマッピングされます。
+フォーム送信ルールで、データ要素 _**ApplicatorsStateOfResidence**_ の値は prop5 にマッピングされ、データ要素 FormTitle の値は prop8 にマッピングされます。
 
-Adobe Analytics - Set 変数は、次のように設定します。
+「Adobe Analytics - 変数を設定」は、次のように設定します。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-タグコードをテストする準備が整ったら、[タグに加えた変更を公開する](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) 公開フローを使用します。
+タグコードをテストする準備が整ったら、公開フローを使用して、[タグに加えた変更を公開します](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html?lang=ja)。
