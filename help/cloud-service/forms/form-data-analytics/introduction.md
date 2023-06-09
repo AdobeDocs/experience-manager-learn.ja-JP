@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics
-description: AEM Forms CS とAdobe Analyticsを統合して、フォームデータフィールドに関するレポートを作成する
+title: Adobe Analytics を使用した送信済みフォームデータフィールドに関するレポート
+description: AEM Forms CS と Adobe Analytics を統合してフォームデータフィールドに関するレポートを作成する方法
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,29 +9,28 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
-workflow-type: tm+mt
+exl-id: 369c563e-c847-438a-a783-bc6a9f81b77c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Adobe Analyticsを使用したフォームデータフィールド値とフォームフィールド検証エラーのレポート
+# Adobe Analytics を使用した、フォームデータフィールド値とフォームフィールド検証エラーのレポート
 
-タグとAdobe Analyticsを使用してアダプティブフォームに Analytics を実装する方法を学びます。 この例では、設定および実装の手順をガイドして、訪問者がフォームとどのようにやり取りするかに関する洞察に富んだレポートを作成します。
+タグと Adobe Analytics を使用してアダプティブフォームに分析を実装する方法について説明します。この例では、訪問者によるフォームの操作に関する洞察に満ちたレポートを生成するための設定および実装手順を順を追って説明します。
 
 ## 前提条件
 
 このチュートリアルを最大限に活用するには、次の前提条件を満たすことをお勧めします。
 
-* AEM Forms CS の使用経験
-* Adobeタグへのアクセス
-* Adobe Analyticsへのアクセス
+* AEM Forms CS のある程度の使用経験
+* Adobe Tags へのアクセス権限
+* Adobe Analytics へのアクセス権限
 
 
 
-このチュートリアルでは、AEM Formsに組み込まれているシンプルなアダプティブフォームを使用し、住居の州の値に対するフォーム送信と、検証エラーを生成するフィールドを測定します。
+このチュートリアルでは、AEM Forms に組み込まれているシンプルなアダプティブフォームを使用し、居住州の値のフォーム送信や、検証エラーが発生するフィールドを測定します。
 
 ![adaptive-form](assets/use-case.png)
-
-
