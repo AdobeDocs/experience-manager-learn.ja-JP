@@ -8,9 +8,9 @@ role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -74,12 +74,12 @@ HLS ブラウザーのサポートは次のとおりです。サポートされ�
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Chrome（Android 6 以前）</p> </td>
+   <td> <p>Chrome（Android™ 6 以前）</p> </td>
    <td> <p>プログレッシブダウンロード</p> </td>
   </tr>
   <tr> 
    <td> <p>モバイル</p> </td>
-   <td> <p>Chrome（Android 7 以降）</p> </td>
+   <td> <p>Chrome（Android™ 7 以降）</p> </td>
    <td> <p>HLS ビデオストリーミング</p> </td>
   </tr>
   <tr> 
