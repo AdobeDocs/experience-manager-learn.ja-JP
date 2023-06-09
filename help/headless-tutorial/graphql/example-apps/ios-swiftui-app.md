@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '981'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 99%
 
 次のツールをローカルにインストールする必要があります。
 
-+ [Xcode](https://developer.apple.com/xcode/) (macOSが必要 )
++ [Xcode](https://developer.apple.com/xcode/)（macOS が必要）
 + [Git](https://git-scm.com/)
 
 ## AEM の要件
