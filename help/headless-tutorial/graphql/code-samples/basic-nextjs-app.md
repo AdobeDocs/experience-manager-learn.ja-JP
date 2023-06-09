@@ -1,6 +1,6 @@
 ---
 title: 基本的な Next.js アプリ
-description: WKND アドベンチャとその詳細のリストを表示する基本的な Next.js アプリ
+description: WKND アドベンチャーとその詳細のリストを表示する基本的な Next.js アプリ
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -12,25 +12,25 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 772acab316ba2ff463fa5cacff02013bea920579
-workflow-type: tm+mt
+exl-id: 2d4396dc-2346-4561-b040-eba0ab62a96f
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '122'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # 基本的な Next.js アプリ
 
-この [Next.js](https://nextjs.org/) アプリでは、永続化されたクエリを使用してAEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。 このアプリケーションは、WKND Adventures のフィルタリング可能なをレンダリングし、アドベンチャーを選択すると、アドベンチャーの詳細を表示します。
+この [Next.js](https://nextjs.org/) アプリでは、永続クエリを使用して AEM の GraphQL API でコンテンツをクエリする方法を示します。このアプリケーションは、WKND アドベンチャーのフィルタリング可能なものをレンダリングし、アドベンチャーを選択すると、そのアドベンチャーの詳細を表示します。
 
-このコード：
+このコードは次を実行します。
 
-+ AEM パブリッシュサービスに接続し、認証は不要
-+ WKND の永続クエリを使用します。 `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug`
++ AEM パブリッシュサービスに接続し、認証を必要としない
++ WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug` を使用する
 
-この Next.js アプリの構築方法の詳細については、 [Next.js アプリのドキュメントの例](../example-apps/next-js.md).
+この Next.js アプリの構築方法の詳細については、[サンプル Next.js アプリのドキュメント](../example-apps/next-js.md)を参照してください。
 
 >[!IMPORTANT]
 >
-> Codesandbox.io は、埋め込み IDE での Next.js アプリケーションの編集をサポートしていません。 このコードサンプルを編集するには、 [codesandbox.io で Next.js アプリを直接開きます。](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
+> codesandbox.io では、組み込み IDE での Next.js アプリケーションの編集をサポートしていません。このコードサンプルを編集するには、[codesandbox.io で Next.js アプリを直接開きます](https://codesandbox.io/s/wknd-next-js-app-u8x5f8)。
