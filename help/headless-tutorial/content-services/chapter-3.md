@@ -1,7 +1,7 @@
 ---
-title: 第 3 章 — オーサリングイベントコンテンツフラグメント — コンテンツサービス
+title: 第 3 章 - イベントコンテンツフラグメントのオーサリング - コンテンツサービス
 seo-title: Getting Started with AEM Content Services - Chapter 3 - Authoring Event Content Fragments
-description: AEMヘッドレスチュートリアルの第 3 章では、第 2 章で作成したコンテンツフラグメントモデルから、イベントコンテンツフラグメントを作成およびオーサリングする方法について説明します。
+description: AEM ヘッドレスチュートリアルの第 3 章では、第 2 章で作成したコンテンツフラグメントモデルからイベントコンテンツフラグメントを作成およびオーサリングする方法について説明します。
 seo-description: Chapter 3 of the AEM Headless tutorial covers creating and authoring Event Content Fragments from the Content Fragment Model created in Chapter 2.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -9,63 +9,63 @@ role: Developer
 level: Beginner
 exl-id: 46ef11a2-81bd-4ff7-b9ef-9f8cba52c6a8
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '478'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# 第 3 章 — イベントコンテンツフラグメントのオーサリング
+# 第 3 章 - イベントコンテンツフラグメントのオーサリング
 
-AEMヘッドレスチュートリアルの第 3 章では、で作成したコンテンツフラグメントモデルから、イベントのコンテンツフラグメントを作成およびオーサリングする方法について説明します。 [第 2 章](./chapter-2.md).
+AEM ヘッドレスチュートリアルの第 3 章では、[第 2 章](./chapter-2.md)で作成したコンテンツフラグメントモデルからイベントコンテンツフラグメントを作成およびオーサリングする方法について説明します。
 
 ## イベントコンテンツフラグメントのオーサリング
 
-を使用 [!DNL Event] コンテンツフラグメントモデルが作成され、WKND 用のAEM設定が `/content/dam/wknd-mobile` アセットフォルダー ( `cq:conf` プロパティ )、 [!DNL Event] コンテンツフラグメントを作成できます。
+[!DNL Event] コンテンツフラグメントモデルを作成し、WKND の AEM 設定を `/content/dam/wknd-mobile` アセットフォルダーに（`cq:conf` プロパティ経由で）適用すると、[!DNL Event] コンテンツフラグメントを作成できます。
 
-アセットの一種であるコンテンツフラグメントは、他のアセットと同様に、AEM Assetsで整理および管理する必要があります。
+アセットの一種であるコンテンツフラグメントは、他のアセットと同様に、AEM Assets で整理および管理する必要があります。
 
-* 翻訳が必要な場合は、Assets フォルダー構造でロケールフォルダーを使用します。
-* コンテンツフラグメントを論理的に整理し、見つけやすく管理しやすくします
+* 翻訳が必要な場合（または必要になる可能性がある場合）は、アセットフォルダー構造でロケールフォルダーを使用する。
+* コンテンツフラグメントを論理的に整理して、見つけやすく管理しやすくする。
 
-この手順では、新しい [!DNL Event] 対象 `Punkrock Fest` 内 `/content/dam/wknd-mobile/en/events` assets フォルダー。
+このステップでは、`/content/dam/wknd-mobile/en/events` アセットフォルダーに `Punkrock Fest` 用の新しい [!DNL Event] を作成します。
 
-1. に移動します。 **[!UICONTROL AEM] > [!UICONTROL Assets] > [!UICONTROL ファイル] > [!DNL WKND Mobile] >[!DNL English]** アセットフォルダーの作成 **[!DNL Events]**.
-1. 内 **[!UICONTROL Assets] > [!UICONTROL ファイル] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]** タイプの新しいコンテンツフラグメントを作成します。 **[!DNL Event]** タイトルは **[!DNL Punkrock Fest]**.
-1. 新しく作成した [!DNL Event] コンテンツフラグメント。
+1. **[!UICONTROL AEM]／[!UICONTROL アセット]／[!UICONTROL ファイル]／[!DNL WKND Mobile]／[!DNL English]** に移動し、アセットフォルダー **[!DNL Events]** を作成します。
+1. **[!UICONTROL アセット]／[!UICONTROL ファイル]／[!DNL WKND Mobile]／[!DNL English]／[!DNL Events]** 内に、タイプが **[!DNL Event]** でタイトルが **[!DNL Punkrock Fest]** の新しいコンテンツフラグメントを作成します。
+1. 新しく作成した [!DNL Event] コンテンツフラグメントをオーサリングします。
 
    * [!DNL Event Title]：**[!DNL Punkrock Fest]**
-   * [!DNL Event Description] : **&lt;enter a=&quot;&quot; few=&quot;&quot; lines=&quot;&quot; of=&quot;&quot; description...=&quot;&quot;>**
-   * [!DNL Event Date] : **&lt;select a=&quot;&quot; date=&quot;&quot; in=&quot;&quot; the=&quot;&quot; future=&quot;&quot;>**
-   * [!DNL Event Type] : **音楽**
-   * [!DNL Ticket Price] : **10**
-   * [!DNL Event Image] : **/content/dam/wknd-mobile/images/tom-rogerson-574325-unsplash.jpg**
-   * [!DNL Venue Name] : **ザ爬虫類ハウス**
-   * [!DNL Venue City] : **ニューヨーク**
+   * [!DNL Event Description]：**&lt;Enter a few lines of description...>**
+   * [!DNL Event Date]：**&lt;Select a date in the future>**
+   * [!DNL Event Type]：**Music**
+   * [!DNL Ticket Price]：**10**
+   * [!DNL Event Image]：**/content/dam/wknd-mobile/images/tom-rogerson-574325-unsplash.jpg**
+   * [!DNL Venue Name]：**The Reptile House**
+   * [!DNL Venue City]：**New York**
 
-   タップ **[!UICONTROL 保存]** をクリックして変更を保存します。
+   上部のアクションバーで「**[!UICONTROL 保存]**」をタップして、変更を保存します。
 
-1. 使用 [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)、AEM オーサーに次のパッケージをインストールします。 このパッケージには、多数のイベントコンテンツフラグメントが含まれています。
+1. [AEM のパッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、以下のパッケージを AEM オーサーにインストールします。このパッケージには、多数のイベントコンテンツフラグメントが含まれています。
 
-   [ファイルを取得：GitHub / Assets / com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+   [ファイルを取得：GitHub／Assets／com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28338?quality=12&learn=on)
 
-## コンテンツフラグメントの JCR 構造のレビュー
+## コンテンツフラグメントの JCR 構造の確認
 
-*この節は情報提供のみを目的としており、コンテンツフラグメントモデルから作成されたコンテンツフラグメントの基盤となる JCR 構造をソーシャル化するためのものです。*
+*この節は情報提供のみを目的としており、コンテンツフラグメントモデルから作成されたコンテンツフラグメントの基礎となる JCR 構造をソーシャル化するためのものです。*
 
-1. 開く **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** （AEM オーサー）を参照してください。
-1. CRXDE Liteの左側の階層メニューで、に移動します。 [/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content) これは、 [!DNL Punkrock Fest] [!DNL Event] JCR 内のコンテンツフラグメント。
-1. を展開します。 [データ](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) ノード。
-レビュー： **プロパティペイン** プロパティを持つ `cq:model` それは [!DNL Event] コンテンツフラグメントモデルの定義。
+1. AEM オーサーで **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** を開きます。
+1. CRXDE Lite の左側の階層メニューで、JCR の [!DNL Punkrock Fest] [!DNL Event] コンテンツフラグメントを表すノードである [/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content) に移動します。
+1. [data](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) ノードを展開します。
+[!DNL Event] コンテンツフラグメントモデル定義を指すプロパティ `cq:model` があることを、**プロパティペイン**&#x200B;で確認します。
    * **`cq:model`**=**`/conf/settings/wknd-mobile/dam/cfm/models/event`**
-1. の `data` ノードを選択 [プライマリ](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) ノードに移動して、プロパティを確認します。 このノードには、 [!DNL Event] コンテンツフラグメントモデル。 JCR のプロパティ名はコンテンツフラグメントモデルのプロパティ名に対応し、値は「[!DNL Punkrock Fest]&quot; [!DNL Event] コンテンツフラグメント。
+1. `data` ノードの直下の [master](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) ノードを選択し、プロパティを確認します。このノードには、[!DNL Event] コンテンツフラグメントモデルのオーサリング時に収集されたコンテンツが含まれています。JCR プロパティ名はコンテンツフラグメントモデルのプロパティ名に対応し、値は「[!DNL Punkrock Fest]」[!DNL Event] コンテンツフラグメントのオーサリングされた値に対応します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28356?quality=12&learn=on)
 
 ## 次の手順
 
-この機能を使用する場合は、 [com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) を介して AEM オーサー上のコンテンツパッケージ [AEM [!UICONTROL パッケージマネージャー]](http://localhost:4502/crx/packmgr/index.jsp). このパッケージには、チュートリアルのこの章および前の章で概要を説明する設定とコンテンツが含まれています。
+[AEM の[!UICONTROL パッケージマネージャー]](http://localhost:4502/crx/packmgr/index.jsp)を使用して、[com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) コンテンツパッケージを AEM オーサーにインストールすることをお勧めします。このパッケージには、チュートリアルのこの章および前の章で概要を説明した設定とコンテンツが含まれています。
 
-* [第 4 章 — AEM Content Services テンプレートの定義](./chapter-4.md)
+* [第 4 章 - AEM コンテンツサービステンプレートの定義](./chapter-4.md)
