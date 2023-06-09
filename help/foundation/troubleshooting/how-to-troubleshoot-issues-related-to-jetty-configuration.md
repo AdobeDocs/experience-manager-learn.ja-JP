@@ -1,6 +1,6 @@
 ---
-title: AEMでの Jetty 設定に関する問題のトラブルシューティング方法
-description: jetty 設定に関する問題を調査する手順
+title: AEM での Jetty 設定に関連する問題のトラブルシューティング方法
+description: Jetty 設定に関連する問題を調べる手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 9025f5a7-1602-47d2-8287-42b5cfd18265
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '43'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEMでの Jetty 設定に関する問題のトラブルシューティング方法
+# AEM での Jetty 設定に関連する問題のトラブルシューティング方法
 
-*このビデオでは、AEMでの Jetty 設定に関する問題のトラブルシューティング手順について説明します。*
+*このビデオでは、AEM での Jetty 設定に関連する問題をトラブルシューティングする手順について説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335470?quality=12&learn=on)
