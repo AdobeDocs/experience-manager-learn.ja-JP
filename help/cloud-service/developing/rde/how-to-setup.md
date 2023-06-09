@@ -1,6 +1,6 @@
 ---
 title: 迅速な開発環境の設定方法
-description: AEM as a Cloud Service用の迅速な開発環境を設定する方法を説明します。
+description: AEM as a Cloud Service の迅速な開発環境を設定する方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,24 +9,24 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '492'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-
 # 迅速な開発環境の設定方法
 
-学ぶ **設定方法** AEM as a Cloud Serviceの Rapid Development Environment(RDE)。
+AEM as a Cloud Service で迅速な開発環境（RDE）を&#x200B;**設定する方法**&#x200B;を説明します。
 
 このビデオでは、次の内容を紹介します。
 
-- Cloud Manager を使用したプログラムへの RDE の追加
-- Adobe IMSを使用した RDE ログインフロー ( 他のAEMas a Cloud Service環境とどのように類似しているか )
-- の設定 [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 別名 `aio CLI`
-- AEM RDE および Cloud Manager のセットアップと設定 `aio CLI` プラグイン
+- Cloud Manager を使用した、プログラムへの RDE の追加
+- Adobe IMS を使用した RDE ログインフロー（他の AEM as a Cloud Service 環境との類似）
+- [Adobe I/O Runtime 拡張可能 CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)（別名 `aio CLI`）の設定
+- AEM RDE および Cloud Manager `aio CLI` プラグインのセットアップと設定
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415490?quality=12&learn=on)
 
@@ -34,24 +34,24 @@ ht-degree: 7%
 
 以下をローカルにインストールしておく必要があります。
 
-- [Node.js](https://nodejs.org/ja/) （LTS — 長期サポート）
+- [Node.js](https://nodejs.org/ja/)（LTS - 長期サポート）
 - [npm 8 以降](https://docs.npmjs.com/)
 
 ## ローカル設定
 
-をデプロイするには、以下を実行します。 [WKND Sites プロジェクトの](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) ローカルマシンから RDE 上にコードとコンテンツを取り込むには、次の手順を実行します。
+[WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)のコードとコンテンツをローカルマシンから RDE 上にデプロイするには、次の手順を実行します。
 
-### Adobe I/O Runtime Extensible CLI
+### Adobe I/O Runtime 拡張可能 CLI
 
-Adobe I/O Runtime Extensible CLI( `aio CLI` 次のコマンドをコマンドラインから実行します。
+コマンドラインから次のコマンドを実行して、Adobe I/O Runtime 拡張可能 CLI（別名 `aio CLI`）をインストールします。
 
 ```shell
 $ npm install -g @adobe/aio-cli
 ```
 
-### AEM plugins
+### AEM プラグイン
 
-を使用して、Cloud Manager およびAEM RDE プラグインをインストールします。 `aio cli`&#39;s `plugins:install` コマンドを使用します。
+`aio cli` の `plugins:install` コマンドを使用して、Cloud Manager と AEM RDE のプラグインをインストールします。
 
 ```shell
 $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
@@ -59,27 +59,27 @@ $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
 $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
 ```
 
-Cloud Manager プラグインを使用すると、開発者はコマンドラインから Cloud Manager を操作できます。
+Cloud Manager プラグインは、開発者がコマンドラインから Cloud Manager を操作できるようにします。
 
-AEM RDE プラグインを使用すると、開発者はローカルマシンからコードとコンテンツをデプロイできます。
+AEM RDE プラグインは、開発者がローカルマシンからコードとコンテンツをデプロイできるようにします。
 
-また、プラグインを更新するには、 `aio plugins:update` コマンドを使用します。
+また、プラグインを更新するには、`aio plugins:update` コマンドを使用します。
 
-## AEMプラグインの設定
+## AEM プラグインの設定
 
-AEMプラグインは、RDE とやり取りするように設定する必要があります。 まず、Cloud Manager UI を使用して、組織 ID、プログラム ID、環境 ID の値をコピーします。
+AEM プラグインは、RDE とやり取りできるように設定する必要があります。まず、Cloud Manager UI を使用して、組織、プログラム、環境の ID の値をコピーします。
 
-1. 組織 ID :値のコピー元 **プロファイルの画像/アカウント情報（内部）/モーダルウィンドウ/現在の組織 ID**
+1. 組織 ID：**プロファイル画像／アカウント情報（内部）／モーダルウィンドウ／現在の組織 ID** から値をコピーします
 
    ![組織 ID](./assets/Org-ID.png)
 
-1. プログラム ID:値のコピー元 **プログラムの概要/環境/ {ProgramName}-rde /ブラウザー URI /次の間の数値 `program/` および`/environment`**
+1. プログラム ID：**プログラム概要／環境／{ProgramName}-rde／ブラウザー URI／`program/` と`/environment`** の間の数値から値をコピーします
 
-1. 環境 ID :値のコピー元 **プログラムの概要/環境/ {ProgramName}-rde /ブラウザー URI /次の後の数値`environment/`**
+1. 環境 ID：**プログラム概要／環境／{ProgramName}-rde／ブラウザー URI／`environment/`** の後の数値から値をコピーします
 
-   ![プログラムおよび環境 ID](./assets/Program-Environment-Id.png)
+   ![プログラム ID と環境 ID](./assets/Program-Environment-Id.png)
 
-1. 次に、 `aio cli`&#39;s `config:set` コマンドを実行して、これらの値を設定します。
+1. 次に、`aio cli` の `config:set` コマンドを実行して、これらの値を設定します。
 
    ```shell
    $ aio config:set cloudmanager_orgid <org-id>
@@ -89,7 +89,7 @@ AEMプラグインは、RDE とやり取りするように設定する必要が�
    $ aio config:set cloudmanager_environmentid <env-id>
    ```
 
-次のコマンドを実行して、現在の設定値を確認できます。
+次のコマンドを実行すると、現在の設定値を確認できます。
 
 ```shell
 $ aio config:list
@@ -109,21 +109,21 @@ $ aio where
 $ aio aem:rde:status
 ```
 
-RDE のステータス情報は、環境ステータスや _AEMプロジェクト_ オーサーサービスとパブリッシュサービスのバンドルと設定。
+RDE ステータス情報として、環境ステータス、_AEM プロジェクト_&#x200B;バンドルのリスト、オーサー サービスとパブリッシュサービスの設定が表示されます。
 
-## 次のステップ
+## 次の手順
 
-学ぶ [使用方法](./how-to-use.md) お気に入りの統合開発環境 (IDE) からコードとコンテンツをデプロイして、開発サイクルを高速化する RDE です。
+お気に入りの統合開発環境（IDE）からコードとコンテンツをデプロイして、開発サイクルを高速化する RDE の[使用方法](./how-to-use.md)を説明します。
 
 
 ## その他のリソース
 
-[プログラムドキュメントでの RDE の有効化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
+[プログラムドキュメントでの RDE の有効化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=ja#enabling-rde-in-a-program)
 
-の設定 [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 別名 `aio CLI`
+[Adobe I/O Runtime 拡張可能 CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)（別名 `aio CLI`）の設定
 
 [AIO CLI の使用とコマンド](https://github.com/adobe/aio-cli#usage)
 
-[Adobe I/O Runtime CLI プラグイン (AEM Rapid Development Environments とのやり取り用 )](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[AEM の迅速な開発環境とやり取りするための Adobe I/O Runtime CLI プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [Cloud Manager AIO CLI プラグイン](https://github.com/adobe/aio-cli-plugin-cloudmanager)
