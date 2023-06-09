@@ -7,7 +7,7 @@ role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2602'
 ht-degree: 100%
 
@@ -42,7 +42,7 @@ AEM は、AEM 外でのコンテンツの使用を容易にする新しい改善
 
 + **コンテンツフラグメント**&#x200B;は、バージョン比較／差分と注釈をサポートしています。
 + **AEM の Assets HTTP API** は、**コンテンツフラグメント**&#x200B;を **JSON** として直接 DAM に公開することをサポートしています。
-   **エクスペリエンスフラグメント**&#x200B;は、**ページ**&#x200B;参照のために&#x200B;**全文検索**&#x200B;および **AEM Dispatcher Cache Invalidation** をサポートします。
+  **エクスペリエンスフラグメント**&#x200B;は、**ページ**&#x200B;参照のために&#x200B;**全文検索**&#x200B;および **AEM Dispatcher Cache Invalidation** をサポートします。
 
 ### アセット管理
 
