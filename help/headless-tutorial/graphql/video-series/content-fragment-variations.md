@@ -11,9 +11,9 @@ thumbnail: 333295.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
 source-git-commit: 30f6d3fb736f2db045e812c40f84d09eba96db6a
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '68'
+ht-degree: 100%
 
 ---
 
