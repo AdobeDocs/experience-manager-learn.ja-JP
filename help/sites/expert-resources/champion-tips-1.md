@@ -7,7 +7,7 @@ feature: Learn From Your Peers
 audience: author, marketer
 exl-id: d5967fb5-c151-478e-a554-41e235de3f83
 source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
 ht-degree: 100%
 
