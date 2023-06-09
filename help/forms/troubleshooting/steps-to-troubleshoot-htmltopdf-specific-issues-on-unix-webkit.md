@@ -1,6 +1,6 @@
 ---
-title: Unix セットアップ（WebKit 変換）での HtmltoPDF 固有の問題のトラブルシューティング手順
-description: UNIX セットアップでの Webkit を使用した HtmltoPDF の問題のトラブルシューティング。
+title: UNIX 設定（WebKit 変換）での HtmltoPDF 固有の問題のトラブルシューティング手順
+description: UNIX 設定で Webkit を使用して、HtmltoPDF の問題をトラブルシューティングします。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: 6afe3b69-1422-4832-a189-57cbc0658ac1
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Unix セットアップ（WebKit 変換）での HtmltoPDF 固有の問題のトラブルシューティング手順
+# UNIX 設定（WebKit 変換）での HtmltoPDF 固有の問題のトラブルシューティング手順
 
-*このビデオでは、Unix セットアップ（WebKit 変換）で HtmltoPDF 固有の問題をトラブルシューティングするプロセスについて説明します。*
+*このビデオでは、UNIX 設定（WebKit 変換）での HtmltoPDF 固有の問題をトラブルシューティングするプロセスについて説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)
