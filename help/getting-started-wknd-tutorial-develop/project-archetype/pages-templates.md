@@ -11,9 +11,9 @@ thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3040'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 99%
 1. 編集可能なテンプレートの詳細と、ポリシーを使用してページコンテンツを詳細に制御する方法を理解します。
 1. テンプレートとページのリンク方法を学びます
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 チュートリアルのこの部分では、記事ページの作成に使用でき、共通の構造に合わせて新しい記事ページテンプレートを作成します。記事ページテンプレートは、Adobe XD で作成したデザインと UI キットに基づいています。この章では、テンプレートの構造またはスケルトンの構築にのみ焦点を当てています。スタイルは実装されていませんが、テンプレートとページは機能しています。
 
