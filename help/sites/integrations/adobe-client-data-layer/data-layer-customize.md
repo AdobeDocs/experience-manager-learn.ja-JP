@@ -11,9 +11,9 @@ thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
 source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2008'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 74%
 
 カスタム AEM コンポーネントのコンテンツを使用してアドビクライアントデータレイヤーをカスタマイズする方法について説明します。[AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=ja)から提供される API を使用してデータレイヤーを拡張しカスタマイズする方法について説明します。
 
-## 作成する内容
+## 作ろうとしているもの
 
 ![Byline データレイヤー](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-このチュートリアルでは、WKND を更新してAdobeクライアントデータレイヤーを拡張する様々なオプションを見てみましょう [署名コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). この _署名_ コンポーネントは **カスタムコンポーネント** このチュートリアルで学習した内容は、他のカスタムコンポーネントにも適用できます。
+このチュートリアルでは、WKND [署名コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=ja)を更新して、Adobe Client Data Layer を拡張するための様々なオプションを調べます。_署名_&#x200B;コンポーネントは&#x200B;**カスタムコンポーネント**&#x200B;であり、このチュートリアルで学んだ内容は他のカスタムコンポーネントにも適用できます。
 
 ### 目的 {#objective}
 
@@ -61,7 +61,7 @@ ht-degree: 74%
 
    >[!NOTE]
    >
-   > AEM 6.5 および最新のサービスパックの場合は、 `classic` profile to to Maven コマンド：
+   > AEM 6.5 および最新のサービスパックを使用している場合は、`classic` プロファイルを Maven コマンドに追加します。
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
@@ -76,7 +76,7 @@ ht-degree: 74%
    window.adobeDataLayer.getState();
    ```
 
-   AEMサイト上のデータレイヤーの現在の状態を確認するには、応答を調べます。 ページとそれぞれのコンポーネントに関する情報が表示されます。
+   AEM サイト上のデータレイヤーの現在の状態を確認するには、応答を調べます。ページとそれぞれのコンポーネントに関する情報が表示されます。
 
    ![アドビデータレイヤーの応答](assets/data-layer-state-response.png)
 
@@ -84,7 +84,7 @@ ht-degree: 74%
 
 ## Byline Sling モデルの更新 {#sling-model}
 
-データレイヤーのコンポーネントに関するデータを挿入するには、まずコンポーネントの Sling モデルを更新します。 次に、署名の Java™インターフェイスと Sling Model 実装を更新して、新しいメソッドを使用します `getData()`. このメソッドには、データレイヤーに挿入されるプロパティが含まれます。
+データレイヤーにコンポーネントに関するデータを挿入するには、まずコンポーネントの Sling モデルを更新する必要があります。次に、署名の Java™ インターフェイスと Sling モデルの実装を更新して、新しいメソッド `getData()` を使用します。このメソッドには、データレイヤーに挿入されるプロパティが含まれます。
 
 1. 選択した IDE 内の `aem-guides-wknd` プロジェクトを開きます。`core` モジュールに移動します。
 1. `Byline.java`（`core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`）ファイルを開きます。
@@ -104,7 +104,7 @@ ht-degree: 74%
    }
    ```
 
-1. `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java` の `BylineImpl.java` ファイルを開きます。これは、 `Byline` インターフェイスが作成され、Sling Model として実装されます。
+1. `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java` の `BylineImpl.java` ファイルを開きます。これは `Byline` インターフェイスの実装であり、Sling モデルとして実装されます。
 
 1. ファイルの先頭に次の import 文を追加します。
 
@@ -117,7 +117,7 @@ ht-degree: 74%
    import com.adobe.cq.wcm.core.components.util.ComponentUtils;
    ```
 
-   この `fasterxml.jackson` API を使用して、JSON として公開するデータをシリアル化します。 AEM コアコンポーネントの `ComponentUtils` を使用して、データレイヤーが有効かどうかを確認します。
+   `fasterxml.jackson` API を使用して、JSON として公開するデータをシリアル化します。AEM コアコンポーネントの `ComponentUtils` を使用して、データレイヤーが有効かどうかを確認します。
 
 1. 未実装のメソッド `getData()` を `BylineImple.java` に追加します。
 
@@ -158,7 +158,7 @@ ht-degree: 74%
    }
    ```
 
-   上記の方法では、 `HashMap` は、JSON として公開するプロパティを取り込むために使用されます。 `getName()` や `getOccupations()` のような既存のメソッドを使用しています。この `@type` は、コンポーネントの一意のリソースタイプを表します。これにより、クライアントは、コンポーネントのタイプに基づいてイベントやトリガーを簡単に識別できます。
+   上記の方法では、新しい `HashMap` を使用して、JSON として公開するプロパティを取り込みます。`getName()` や `getOccupations()` のような既存のメソッドを使用しています。`@type` は、コンポーネントの一意のリソースタイプを表します。これにより、クライアントは、コンポーネントのタイプに基づいてイベントやトリガーを簡単に識別できます。
 
    `ObjectMapper` を使用してプロパティをシリアル化し、JSON 文字列を返します。その後、この JSON 文字列をデータレイヤーに挿入できます。
 
@@ -171,11 +171,11 @@ ht-degree: 74%
 
 ## 署名 HTL の更新 {#htl}
 
-次に、`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en) を更新します。HTL（HTML テンプレート言語）は、コンポーネントの HTML をレンダリングするために使用されるテンプレートです。
+次に、`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=ja) を更新します。HTL（HTML テンプレート言語）は、コンポーネントの HTML をレンダリングするために使用されるテンプレートです。
 
-各 AEM コンポーネントの特別なデータ属性 `data-cmp-data-layer` を使用して、そのデータレイヤーを公開します。AEMコアコンポーネントが提供する JavaScript は、このデータ属性を探します。 このデータ属性の値には、署名 Sling モデルの `getData()` メソッドに挿入され、Adobe・クライアント・データ・レイヤーに挿入されます。
+各 AEM コンポーネントの特別なデータ属性 `data-cmp-data-layer` を使用して、そのデータレイヤーを公開します。AEM コアコンポーネントが提供する JavaScript が、このデータ属性を見つけます。このデータ属性の値には、署名 Sling モデルの `getData()` メソッドが返した JSON 文字列が入力され、その値が Adobe Client Data Layer に挿入されます。
 
-1. を開きます。 `aem-guides-wknd` を IDE に投影します。 `ui.apps` モジュールに移動します。
+1. `aem-guides-wknd` プロジェクトを IDE で開きます。`ui.apps` モジュールに移動します。
 1. `byline.html`（`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`）ファイルを開きます。
 
    ![署名 HTML](assets/adobe-client-data-layer/byline-html-template.png)
@@ -191,7 +191,7 @@ ht-degree: 74%
        ...
    ```
 
-   `data-cmp-data-layer` の値は `"${byline.data}"` に設定されています。ここで、`byline` は以前に更新された Sling モデルです。`.data` は、の HTL で Java™ Getter メソッドを呼び出すための標準的な表記です。 `getData()` 前の演習で実装済み。
+   `data-cmp-data-layer` の値は `"${byline.data}"` に設定されています。ここで、`byline` は以前に更新された Sling モデルです。`.data` は、前の演習で実装した `getData()` の HTL で Java™ Getter メソッドを呼び出すための標準的な表記法です。
 
 1. ターミナルウィンドウを開きます。Maven スキルを使用して、`ui.apps` モジュールだけをビルドしてデプロイします。
 
@@ -200,7 +200,7 @@ ht-degree: 74%
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. ブラウザーに戻り、署名コンポーネントでページを再度開きます。 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. ブラウザーに戻り、署名コンポーネント [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html) でページを再度開きます。
 
 1. デベロッパーツールを開き、署名コンポーネントのページの HTML ソースを調べます。
 
@@ -235,7 +235,7 @@ ht-degree: 74%
 
 Adobe Client Data Layer はイベント主導型であり、アクションをトリガーする最も一般的なイベントの 1 つは `cmp:click` イベントです。AEM コアコンポーネントを使用すると、データ要素 `data-cmp-clickable` を利用してコンポーネントを簡単に登録できます。
 
-クリック可能な要素は、通常、CTA ボタンまたはナビゲーションリンクです。署名コンポーネントにはこれらはありませんが、他のカスタムコンポーネントでは一般的なものなので、どのようにしても登録してみましょう。
+クリック可能な要素は、通常、CTA ボタンまたはナビゲーションリンクです。残念ながら署名コンポーネントにはこれらの機能はありませんが、他のカスタムコンポーネントでは一般的である可能性があるため、登録しておきます。
 
 1. IDE で `ui.apps` モジュールを開きます。
 1. `byline.html`（`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`）ファイルを開きます。
@@ -256,9 +256,9 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. ブラウザーに戻り、署名コンポーネントを追加してページを再度開きます。 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. ブラウザーに戻り、追加した署名コンポーネント [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html) でページを再度開きます。
 
-   イベントをテストするには、開発者コンソールを使用して JavaScript を手動で追加します。 この方法に関する動画について詳しくは、[AEM コアコンポーネントでの Adobe Client Data Layer の使用](data-layer-overview.md)を参照してください。
+   イベントをテストするには、developer console を使用して JavaScript を手動で追加します。この方法に関する動画について詳しくは、[AEM コアコンポーネントでの Adobe Client Data Layer の使用](data-layer-overview.md)を参照してください。
 
 1. ブラウザーの開発者ツールを開き、**コンソール**&#x200B;で次のメソッドを入力します。
 
@@ -294,13 +294,13 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
 
    コンソールメッセージ `Byline Clicked!` と署名の名前が表示されます。
 
-   `cmp:click` イベントは、最も接続しやすいイベントです。より複雑なコンポーネントの場合や、他の動作を追跡する場合は、カスタム JavaScript を追加して新しいイベントを追加し、登録することができます。 良い例は、スライドが切り替えられるたびに `cmp:show` イベントをトリガーするカルーセルコンポーネントです。詳しくは、[ソースコード](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js)を参照してください。
+   `cmp:click` イベントは、最も接続しやすいイベントです。より複雑なコンポーネントの場合や、その他の行動をトラッキングする場合は、カスタム JavaScript を追加して新しいイベントを登録できます。良い例は、スライドが切り替えられるたびに `cmp:show` イベントをトリガーするカルーセルコンポーネントです。詳しくは、[ソースコード](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js)を参照してください。
 
 ## DataLayerBuilder ユーティリティの使用 {#data-layer-builder}
 
 この章の前半で Sling モデルを[更新](#sling-model)したとき、`HashMap` を使用して各プロパティを手動で設定することにより、JSON 文字列を作成することを選択しました。この方法は、1 回限りの小さなコンポーネントには有効ですが、AEM コアコンポーネントを拡張するようなコンポーネントでは、多くの余分なコードが生じる可能性があります。
 
-ユーティリティクラス `DataLayerBuilder` を使用すると、ほとんどの重作業を実行することができます。これにより、必要なプロパティだけを拡張して実装できます。Sling モデルを更新し、 `DataLayerBuilder`.
+ユーティリティクラス `DataLayerBuilder` を使用すると、ほとんどの重作業を実行することができます。これにより、必要なプロパティだけを拡張して実装できます。Sling モデルを更新して、`DataLayerBuilder` を使用するようにしましょう。
 
 1. IDE に戻り、`core` モジュールに移動します。
 1. `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java` の `Byline.java` ファイルを開きます。
@@ -349,7 +349,7 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
    }
    ```
 
-   署名コンポーネントは、画像コアコンポーネントの一部を再利用して、作成者を表す画像を表示します。 上記のスニペットでは、[DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) を使用して `Image` コンポーネントのデータレイヤーを拡張しています。これにより、使用する画像に関するすべてのデータが JSON オブジェクトに事前設定されます。また、`@type` やコンポーネントの一意の識別子の設定など、いくつかのルーチン機能も実行します。メソッドが小さいことに注意してください。
+   署名コンポーネントは、画像コアコンポーネントの一部を再利用して、作成者を表す画像を表示します。上記のスニペットでは、[DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) を使用して `Image` コンポーネントのデータレイヤーを拡張しています。これにより、使用する画像に関するすべてのデータが JSON オブジェクトに事前設定されます。また、`@type` やコンポーネントの一意の識別子の設定など、いくつかのルーチン機能も実行します。メソッドが小さいことがわかります。
 
    唯一の拡張プロパティである `withTitle` は、`getName()` の値に置き換えられます。
 
@@ -380,7 +380,7 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. ブラウザーに戻り、署名コンポーネントを追加してページを再度開きます。 [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. ブラウザーに戻り、追加した署名コンポーネント [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html) でページを再度開きます。
 1. ブラウザーのデベロッパーツールを開き、**コンソール**&#x200B;で次のコマンドを入力します。
 
    ```js
@@ -407,7 +407,7 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
        repo:modifyDate: "2019-10-18T20:17:24Z"
    ```
 
-   `byline` コンポーネントのエントリ内に `image` オブジェクトがあることを確認します。DAM 内のアセットに関する詳細情報が多く含まれています。また、 `@type` 一意の ID( この場合は `byline-136073cfcb`) が自動的に入力され、 `repo:modifyDate` コンポーネントがいつ変更されたかを示します。
+   `byline` コンポーネントのエントリ内に `image` オブジェクトがあることを確認します。DAM 内のアセットに関する詳細情報が多く含まれています。`@type` と一意の ID（この場合は `byline-136073cfcb`）が自動的に入力されていることと、コンポーネントがいつ変更されたかを示す `repo:modifyDate` を確認します。
 
 ## その他の例 {#additional-examples}
 
@@ -422,7 +422,7 @@ Adobe Client Data Layer はイベント主導型であり、アクションを�
 
    >[!NOTE]
    >
-   > 実装全体で再利用されるオブジェクトに対して高度なデータレイヤーを構築する場合は、データレイヤー要素を独自のデータレイヤー固有の Java™オブジェクトに抽出することをお勧めします。 たとえば、Commerce コア コンポーネントには `ProductData` と `CategoryData` のインターフェイスが追加されています。これは、Commerce の実装内の多くのコンポーネントで使用できるようにするためです。詳しくは、[aem-cif-core-components リポジトリのコード](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)を確認してください。
+   > 実装全体で再利用されるオブジェクトに対して詳細なデータレイヤーを構築する場合は、データレイヤー要素をデータレイヤー固有の Java™ オブジェクトに抽出することをお勧めします。たとえば、Commerce コア コンポーネントには `ProductData` と `CategoryData` のインターフェイスが追加されています。これは、Commerce の実装内の多くのコンポーネントで使用できるようにするためです。詳しくは、[aem-cif-core-components リポジトリのコード](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)を確認してください。
 
 ## これで完了です。 {#congratulations}
 
