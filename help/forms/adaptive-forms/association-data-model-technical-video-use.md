@@ -1,6 +1,6 @@
 ---
-title: AEM Formsでの関連付けデータモデルの使用
-description: フォームデータモデルのエンティティ間に関連付けを追加する
+title: AEM Forms での関連付けデータモデルの使用
+description: フォームデータモデル内のエンティティ間に関連付けを追加します
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -9,14 +9,14 @@ level: Beginner
 exl-id: 81b1c756-df10-409d-ad09-af3b43b07773
 last-substantial-update: 2020-10-20T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '30'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Formsでの関連付けデータモデルの使用{#using-association-data-models-with-aem-forms}
+# AEM Forms での関連付けデータモデルの使用{#using-association-data-models-with-aem-forms}
 
-フォームデータモデルで 2 つのエンティティ間の関連付けを作成する
+フォームデータモデル内の 2 つのエンティティ間に関連付けを作成します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17737?quality=12&learn=on)
