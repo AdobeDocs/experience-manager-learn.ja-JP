@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '641'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ Node.js アプリケーションの実行フローは次のとおりです。
 
    a. 非ローカル開発用のサービス資格情報が JSON ファイル（`file`）で提供されている場合、アクセストークンは Adobe IMS API から取得します
 1. アプリケーションはアクセストークンを使用して AEM にアクセスし、コマンドラインパラメーター `folder` で指定されたフォルダー内のすべてのアセットをリスト表示します
-1. フォルダー内の各アセットのメタデータは、コマンドラインパラメーター `propertyName` と `propertyValue` で指定されたプロパティ名と値に基づいてアプリケーションで更新されます。
+1. フォルダー内の各アセットのメタデータは、コマンドラインパラメーター `propertyName` と `propertyValue` で指定されたプロパティ名と値に基づいてアプリケーションで更新されます
 
 このサンプルアプリケーションは Node.js ですが、これらのやり取りは様々なプログラミング言語で開発し、その他の外部システムから実行できます。
 
