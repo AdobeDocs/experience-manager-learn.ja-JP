@@ -1,6 +1,6 @@
 ---
-title: サーバーにサンプルアセットをデプロイします。
-description: ローカルサーバーでのユースケースの動作
+title: サーバーへのサンプルアセットのデプロイ
+description: ローカルサーバーで動作するユースケースの取得
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -8,30 +8,31 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
-workflow-type: tm+mt
+exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # アセットのデプロイ
 
-次のアセット/設定が、AEM Formsパブリッシュサーバーにデプロイされました。
+次のアセットまたは設定が、AEM Forms パブリッシュサーバーにデプロイされました。
 
-* [Adobe Sign Wrapper Bundle](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
+* [Adobe Sign ラッパーバンドル](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
-* [インタラクティブ通信テンプレートの例](assets/waiver-interactive-communication.zip)
-* [DevelopingWithServiceUser バンドルをデプロイします。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* [インタラクティブ通信のサンプルテンプレート](assets/waiver-interactive-communication.zip)
+* [DevelopingWithServiceUser バンドルのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * OSGi configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
    **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [サンプルの React アプリコードは、こちらからダウンロードできます。](assets/src.zip)
+* [サンプルの React アプリコードは、こちらからダウンロードできます](assets/src.zip)
 
 
 
-サンプルの React アプリをローカル環境にデプロイする必要があります
+サンプルの React アプリをローカル環境にデプロイする必要があります。
 
-環境に合わせてエンドポイント URL を変更する必要があります。 EmergencyContact.js ファイルを開き、fetch メソッドで URL を変更します。
+環境に合わせてエンドポイント URL を変更する必要があります。EmergencyContact.js ファイルを開き、fetch メソッド内の URL を変更します。
 
 ```javascript
  const getWebForm=async()=>
@@ -48,9 +49,6 @@ ht-degree: 0%
  
 ```
 
-React アプリからAEMエンドポイントに対してPOST呼び出しを有効にするには、AdobeGranite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドに適切なエンティティを指定する必要があります
+React アプリから AEM エンドポイントへの POST 呼び出しを有効にするには、Adobe Granite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドで適切なエントリを指定する必要があります。
 
 ![cors-setting](assets/cors-settings.png)
-
-
-
