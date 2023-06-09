@@ -1,7 +1,7 @@
 ---
-title: AEM Sitesでのページの違いの使用
+title: AEM Sites でのページ差分の使用
 seo-title: Using Page Difference with AEM Sites
-description: AEM Sites のページ差異機能で示されるのは、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できるようにする機能です。
+description: AEM Sites のページ差分機能では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、ローンチ、言語コピー）を色分けしてすばやく表示できます。
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -16,37 +16,37 @@ role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# ページの差異機能の使用 {#using-page-difference-with-aem-sites}
+# ページ差分機能の使用 {#using-page-difference-with-aem-sites}
 
-AEM Sites のページ差異機能で示されるのは、ページ内で変更されたコンテンツ（バージョン、ライブコピー、起動、言語コピー）を色分けしてすばやく表示できるようにする機能です。
+AEM Sites のページ差分機能では、ページ内で変更されたコンテンツ（バージョン、ライブコピー、ローンチ、言語コピー）を色分けしてすばやく表示できます。
 
-## ページのバージョンの比較 {#comparing-page-versions}
+## ページバージョンの比較 {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
-**HTMLの変更**
+**HTML の変更点**
 
-* **緑**:新しいコンテンツ
-* **赤**:削除されたコンテンツ
+* **緑**：新しいコンテンツ
+* **赤**：削除されたコンテンツ
 
-**コンポーネントの変更**
+**コンポーネントの変更点**
 
-* **緑**:新しいコンポーネント
-* **赤**:削除されたコンポーネント
-* **青**:変更されたコンポーネント
+* **緑**：新しいコンポーネント
+* **赤**：削除されたコンポーネント
+* **青**：変更されたコンポーネント
 
 ## ローンチページの比較 {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
 
-ページの差異機能を使用して、ブループリントとライブコピー、ブループリントと言語コピーの違いを識別することもできます。
+ページ差分機能を使用すると、ブループリントとライブコピーの違いやブループリントと言語コピーの違いを特定することもできます。
 
 ## その他のリソース {#additional-resources}
 
-* [ページの差分ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [ページ差分のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html?lang=ja)
