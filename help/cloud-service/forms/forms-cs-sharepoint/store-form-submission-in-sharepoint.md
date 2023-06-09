@@ -1,6 +1,6 @@
 ---
-title: AEM FormsとMicrosoft Sharepoint の統合
-description: Adobe Experience Manager FormsをCloud Service送信データとしてMicrosoft Sharepoint に保存する方法を説明します
+title: AEM Forms と Microsoft Sharepoint の統合
+description: Adobe Experience Manager Forms as a Cloud Service の送信データを Microsoft SharePoint に保存する方法を説明します
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,15 +8,16 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 11895
-source-git-commit: 4504e9b06e97b165149e4161e30a10f2a2da9389
-workflow-type: tm+mt
+exl-id: 7f9ccf2f-fe7c-4a38-b305-ab6937f3d79a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Microsoft SharePoint とのCloud ServiceとしてのAEM Forms
+# AEM Forms as a Cloud Service と Microsoft SharePoint の統合
 
-Microsoft Sharepoint でアダプティブフォームデータを設定して保存する方法を説明します。
+アダプティブフォームデータを設定して Microsoft Sharepoint に保存する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
