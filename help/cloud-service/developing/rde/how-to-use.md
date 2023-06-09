@@ -1,6 +1,6 @@
 ---
 title: 迅速な開発環境の使用方法
-description: ラピッド開発環境を使用して、ローカルマシンからコードとコンテンツをデプロイする方法を説明します。
+description: 迅速な開発環境を使用して、ローカルマシンからコードとコンテンツをデプロイする方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,50 +9,50 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '703'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-
 # 迅速な開発環境の使用方法
 
-学ぶ **使用方法** AEM as a Cloud Serviceの Rapid Development Environment(RDE)。 お気に入りの統合開発環境 (IDE) から、最終的に近いコードの開発サイクルを高速化するために、コードとコンテンツを RDE にデプロイします。
+迅速な開発環境（RDE）を AEM as a Cloud Service で&#x200B;**使用する方法**&#x200B;を説明します。お気に入りの統合開発環境（IDE）から RDE にコードとコンテンツをデプロイして、ほぼ最終的なコードを開発するサイクルを高速化します。
 
-使用 [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) AEM-RDE の `install` コマンドを使用します。
+お気に入りの IDE から AEM-RDE の `install` コマンドを実行して様々な AEM アーティファクトを RDE にデプロイする方法を、[AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) を使用して説明します。
 
-- AEMコードおよびコンテンツパッケージ（すべて、ui.apps）のデプロイメント
-- OSGi バンドルおよび設定ファイルのデプロイメント
-- Apache および Dispatcher 設定の zip ファイルでのデプロイメント
-- 個々のファイル（HTL など） `.content.xml` （ダイアログ XML）のデプロイメント
-- 次のような他の RDE コマンドを確認します。 `status, reset and delete`
+- AEM のコードとコンテンツのパッケージ（すべて、ui.apps）のデプロイメント
+- OSGi バンドルと設定ファイルのデプロイメント
+- zip ファイルでの Apache および Dispatcher 設定のデプロイメント
+- HTL や `.content.xml`（ダイアログ XML）などの個々のファイルのデプロイメント
+- `status, reset and delete` などの他の RDE コマンドの確認
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491?quality=12&learn=on)
 
 ## 前提条件
 
-のクローン [WKND サイト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) プロジェクトを開き、お気に入りの IDE で開いて、AEMアーティファクトを RDE にデプロイします。
+[WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) プロジェクトのクローンを作成してお気に入りの IDE で開き、AEM アーティファクトを RDE にデプロイします。
 
 ```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git
 ```
 
-次に、次の maven コマンドを実行して、ビルドし、ローカルのAEM-SDK にデプロイします。
+次に、以下の maven コマンドを実行してビルドし、ローカルの AEM-SDK にデプロイします。
 
 ```
 $ cd aem-guides-wknd/
 $ mvn clean install -PautoInstallSinglePackage
 ```
 
-## AEM-RDE プラグインを使用したAEMアーティファクトのデプロイ
+## AEM-RDE プラグインを使用した AEM アーティファクトのデプロイ
 
-の使用 `aem:rde:install` 」コマンドを使用して、様々なAEMアーティファクトをデプロイします。
+`aem:rde:install` コマンドを使用して、様々な AEM アーティファクトをデプロイします。
 
-### デプロイ `all` および `dispatcher` パッケージ
+### `all` パッケージと `dispatcher` パッケージのデプロイ
 
-一般的な出発点は、最初に `all` および `dispatcher` 次のコマンドを実行してパッケージを作成します。
+一般には、まず次のコマンドを実行して `all` パッケージと `dispatcher` パッケージをデプロイすることから始まります。
 
 ```shell
 # Install the 'all' package
@@ -62,14 +62,14 @@ $ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
 $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
 ```
 
-デプロイメントが成功したら、オーサーサービスとパブリッシュサービスの両方で WKND サイトを検証します。 WKND サイトページ上のコンテンツを追加、編集して公開できるはずです。
+デプロイに成功したら、オーサーサービスとパブリッシュサービスの両方で WKND サイトを検証します。WKND サイトページのコンテンツを追加および編集し公開できるはずです。
 
-### コンポーネントの拡張とデプロイ
+### コンポーネントの機能強化とデプロイ
 
-次に、 `Hello World Component` RDE にデプロイします。
+`Hello World Component` を機能強化して RDE にデプロイします。
 
-1. ダイアログ XML (`.content.xml`) `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` フォルダー
-1. を `Description` 既存の `Text` ダイアログフィールド
+1. `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` フォルダーからダイアログ XML（`.content.xml`）ファイルを開きます。
+1. 既存の `Text` ダイアログフィールドの後に `Description` テキストフィールドを追加します。
 
    ```xml
    ...
@@ -81,8 +81,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. を開きます。 `helloworld.html` ファイルから `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld` フォルダー
-1. をレンダリング `Description` 既存の `<div>` 要素 `Text` プロパティ。
+1. `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld` フォルダーから `helloworld.html` ファイルを開きます。
+1. `Text` プロパティの既存の `<div>` 要素の後に `Description` プロパティをレンダリングします。
 
    ```html
    ...
@@ -93,9 +93,9 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. Maven のビルドを実行するか、個々のファイルを同期して、ローカルのAEM-SDK で変更を検証します。
+1. Maven ビルドを実行するか個々のファイルを同期して、ローカルの AEM-SDK で変更を検証します。
 
-1. を介して RDE に変更をデプロイします。 `ui.apps` パッケージを作成するか、個々のダイアログおよび HTL ファイルをデプロイします。
+1. `ui.apps` パッケージを介して、または個々のダイアログファイルと HTL ファイルをデプロイして、変更を RDE にデプロイします。
 
    ```shell
    # Using 'ui.apps' package
@@ -112,24 +112,24 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    $ aio aem:rde:install ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml -t content-xml -p /apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. RDE で変更を検証するには、 `Hello World Component` を WKND サイトページに貼り付けます。
+1. WKND サイト ページで `Hello World Component` を追加または編集して、RDE での変更を検証します。
 
-### 以下を確認します。 `install` コマンドオプション
+### `install` コマンドオプションの確認
 
-上記の個々のファイルデプロイメントコマンドの例では、 `-t` および `-p` フラグは、それぞれ JCR パスのタイプと宛先を示すために使用されます。 利用可能な `install` コマンドオプションを使用するには、次のコマンドを実行します。
+上記の個々のファイルデプロイメントコマンドの例では、`-t` フラグと `-p` フラグを使用して、それぞれ JCR パスのタイプと宛先を示しています。次のコマンドを実行して、使用可能な `install` コマンドオプションを確認してみましょう。
 
 ```shell
 $ aio aem:rde:install --help
 ```
 
-フラグは自明で、 `-s` フラグは、オーサーサービスまたはパブリッシュサービスだけにデプロイメントのターゲットを設定する場合に役立ちます。 以下を使用： `-t` デプロイ時のフラグ **content-file または content-xml** ファイルを `-p` フラグを設定して、AEM RDE 環境での宛先 JCR パスを指定します。
+フラグは自明であり、`-s` フラグは、オーサーサービスまたはパブリッシュサービスのみをデプロイメントの対象とする場合に便利です。**content-file または content-xml** ファイルをデプロイするときに `-t` フラグを `-p` フラグとともに使用して、AEM RDE 環境での宛先 JCR パスを指定します。
 
-### OSGi バンドルをデプロイ
+### OSGi バンドルのデプロイ
 
-OSGi バンドルのデプロイ方法について詳しくは、 `HelloWorldModel` Java™クラスを使用して RDE にデプロイします。
+OSGi バンドルのデプロイ方法を説明するために、`HelloWorldModel` Java™ クラスを機能強化して RDE にデプロイします。
 
-1. を開きます。 `HelloWorldModel.java` ファイルから `core/src/main/java/com/adobe/aem/guides/wknd/core/models` フォルダー
-1. を更新します。 `init()` メソッドを次に示します。
+1. `core/src/main/java/com/adobe/aem/guides/wknd/core/models` フォルダー内の `HelloWorldModel.java` ファイルを開きます。
+1. `init()` メソッドを次のように更新します。
 
    ```java
    ...
@@ -140,7 +140,7 @@ OSGi バンドルのデプロイ方法について詳しくは、 `HelloWorldMod
    ...
    ```
 
-1. ローカルのAEM-SDK で変更を検証するには、 `core` maven コマンドを介したバンドル
+1. Maven コマンドを使用して `core` バンドルをデプロイすることで、ローカル AEM-SDK の変更を検証します。
 1. 次のコマンドを実行して、RDE に変更をデプロイします。
 
    ```shell
@@ -149,11 +149,11 @@ OSGi バンドルのデプロイ方法について詳しくは、 `HelloWorldMod
    $ aio aem:rde:install target/aem-guides-wknd.core-2.1.3-SNAPSHOT.jar
    ```
 
-1. RDE で変更を検証するには、 `Hello World Component` を WKND サイトページに貼り付けます。
+1. WKND サイトページで `Hello World Component` を追加または編集して、RDE での変更を検証します。
 
 ### OSGi 設定のデプロイ
 
-個々の設定ファイルをデプロイするか、設定パッケージ全体をデプロイできます。次に例を示します。
+個々の設定ファイルまたは設定パッケージ全体をデプロイできます。次に例を示します。
 
 ```shell
 # Deploy individual config file
@@ -167,14 +167,14 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 >[!TIP]
 >
->OSGi 設定をオーサーインスタンスまたはパブリッシュインスタンスにのみインストールするには、 `-s` フラグ。
+>OSGi 設定をオーサーインスタンスまたはパブリッシュインスタンスにのみインストールするには、`-s` フラグを使用します。
 
 
 ### Apache または Dispatcher 設定のデプロイ
 
-Apache または Dispatcher の設定ファイル **個別にデプロイすることはできません**&#x200B;と呼ばれる場合でも、Dispatcher のフォルダー構造全体を ZIP ファイルの形式でデプロイする必要があります。
+Apache または Dispatcher 設定ファイルを&#x200B;**個別にデプロイできるのではなく**、Dispatcher フォルダー構造全体を ZIP ファイルの形式でデプロイする必要があります。
 
-1. 必要に応じて、 `dispatcher` モジュール ( デモ用に、 `dispatcher/src/conf.d/available_vhosts/wknd.vhost` キャッシュする `html` は 60 秒間のみファイルを保存します。
+1. `dispatcher` モジュールの設定ファイルに必要な変更を加えます。デモのために、`html` ファイルを 60 秒間だけキャッシュするように `dispatcher/src/conf.d/available_vhosts/wknd.vhost` を更新します。
 
    ```
    ...
@@ -187,7 +187,7 @@ Apache または Dispatcher の設定ファイル **個別にデプロイする�
    ...
    ```
 
-1. ローカルで変更を検証する場合は、 [Dispatcher をローカルで実行する](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) を参照してください。
+1. ローカルで変更を検証します。詳しくは、[Dispatcher のローカルでの実行](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=ja#run-dispatcher-locally)を参照してください。
 1. 次のコマンドを実行して、変更を RDE にデプロイします。
 
    ```shell
@@ -198,9 +198,9 @@ Apache または Dispatcher の設定ファイル **個別にデプロイする�
 
 1. RDE での変更の検証
 
-## 追加のAEM RDE プラグインコマンド
+## 追加の AEM RDE プラグインコマンド
 
-ローカルマシンから RDE を管理および操作する、追加のAEM RDE プラグインコマンドを確認します。
+ローカルマシンから RDE を管理および操作するための追加の AEM RDE プラグインコマンドを確認します。
 
 ```shell
 $ aio aem:rde --help
@@ -218,17 +218,17 @@ aem rde restart  Restart the author and publish of an RDE
 aem rde status   Get a list of the bundles and configs deployed to the current rde.
 ```
 
-上記のコマンドを使用すると、お気に入りの IDE から RDE を管理して、開発/デプロイメントのライフサイクルを迅速に実行できます。
+上記のコマンドを使用すると、お気に入りの IDE から RDE を管理して、開発／デプロイメントのライフサイクルを迅速化できます。
 
-## 次のステップ
+## 次の手順
 
-詳しくは、 [RDE を使用した開発/デプロイメントのライフサイクル](./development-life-cycle.md) 機能を高速で提供する。
+機能を迅速に提供できるように、[RDE を使用した開発／デプロイメントライフサイクル](./development-life-cycle.md)について説明します。
 
 
 ## その他のリソース
 
-[RDE コマンドドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
+[RDE コマンドのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=ja#rde-cli-commands)
 
-[Adobe I/O Runtime CLI プラグイン (AEM Rapid Development Environments とのやり取り用 )](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[AEM の迅速な開発環境とやり取りするための Adobe I/O Runtime CLI プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM Project setup](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja)
+[AEM プロジェクトのセットアップ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja)
