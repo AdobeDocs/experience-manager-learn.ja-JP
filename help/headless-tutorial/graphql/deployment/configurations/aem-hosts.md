@@ -10,9 +10,9 @@ kt: 10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1669'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -289,7 +289,7 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ヘッドレスアプリから AEM に対する画像リクエストは、[前述の表](#managing-aem-hosts)で説明したように、正しい AEM サービスとやり取りするように設定する必要があります。
 
-Adobeは、 [最適化された画像](../../how-to/images.md) ～を通じて利用可能になる `_dynamicUrl` フィールドに値を入力する必要があります。 この `_dynamicUrl` フィールドは、AEM GraphQL API に対するクエリに使用するAEMサービスホストのプレフィックスが付くホストレス URL を返します。 の `_dynamicUrl` GraphQL応答のフィールドは次のようになります。
+アドビでは、AEM の GraphQL API の `_dynamicUrl` フィールドを通じて入手できる[最適化された画像](../../how-to/images.md)を使用することをお勧めします。`_dynamicUrl` フィールドは、AEM GraphQL API に対するクエリに使用される AEM サービスホストをプレフィックスにできるホストレス URL を返します。GraphQL 応答の `_dynamicUrl` フィールドは次のようになります。
 
 ```json
 {
@@ -421,7 +421,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### 画像 URL ジェネレーター
 
-In `Aem.swift`、カスタムAEMヘッドレスクライアント実装、カスタム関数 `imageUrl(..)` は、 `_dynamicUrl` フィールドに値を追加し、その後にAEMホストを追加します。 その後、この関数は、画像がレンダリングされるたびに iOS ビューで呼び出されます。
+カスタムの AEM ヘッドレスクライアント実装である `Aem.swift` では、カスタム関数 `imageUrl(..)` は、GraphQL 応答の `_dynamicUrl` フィールドで提供される画像パスを受け取り、その前に AEM のホストを付加します。その後、この関数は、画像がレンダリングされるたびに iOS ビューで呼び出されます。
 
 + `WKNDAdventures/AEM/Aem.swift`
 
