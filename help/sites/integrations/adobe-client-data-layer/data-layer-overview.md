@@ -1,6 +1,6 @@
 ---
 title: AEM コアコンポーネントでの Adobe Client Data Layer の使用
-description: Adobeクライアントデータレイヤーでは、Web ページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
+description: Adobe Client Data Layer は、web ページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに容易にアクセスするための標準的な方法を導入しています。Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -10,15 +10,15 @@ thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
 source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '783'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
 # AEM コアコンポーネントでの Adobe Client Data Layer の使用 {#overview}
 
-Adobeクライアントデータレイヤーでは、Web ページでの訪問者のエクスペリエンスに関するデータを収集して保存し、このデータに簡単にアクセスできるようにする標準的な方法が導入されています。 Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
+Adobe Client Data Layer は、web ページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに容易にアクセスするための標準的な方法を導入しています。Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
@@ -41,7 +41,7 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    window.adobeDataLayer.getState();
    ```
 
-   AEMサイト上のデータレイヤーの現在の状態を確認するには、応答を調べます。 ページとそれぞれのコンポーネントに関する情報が表示されます。
+   AEM サイト上のデータレイヤーの現在の状態を確認するには、応答を調べます。ページとそれぞれのコンポーネントに関する情報が表示されます。
 
    ![Adobe Data Layer のレスポンス](assets/data-layer-state-response.png)
 
@@ -90,7 +90,7 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    }
    ```
 
-   上記のコードは、 `event` オブジェクトと `adobeDataLayer.getState` メソッドを使用して、イベントをトリガーしたオブジェクトの現在の状態を取得します。 次に、ヘルパーメソッドは、 `filter` 現在の `dataObject` が返されるフィルター条件を満たす。
+   上記のコードは、`event` オブジェクトを検査し、`adobeDataLayer.getState` メソッドを使用して、イベントをトリガーしたオブジェクトの現在の状態を取得します。次に、ヘルパーメソッドは `filter` を検査し、現在の `dataObject` がフィルター条件を満たす場合にのみ返されます。
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    }
    ```
 
-   この `teaserShownHandler` 関数が `getDataObjectHelper` 関数を参照し、 `wknd/components/teaser` を `@type` を使用して、他のコンポーネントによってトリガーされたイベントを除外します。
+   `teaserShownHandler` 機能は `getDataObjectHelper` 機能を呼び出して、`wknd/components/teaser` のフィルターを `@type` として渡し、他のコンポーネントによって引き起こされたイベントを除外します。
 
 1. 次に、データレイヤーにイベントリスナーをプッシュして、`cmp:show` イベントをリッスンします。
 
@@ -118,13 +118,13 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
    });
    ```
 
-   この `cmp:show` イベントは、 **カルーセル**&#x200B;または **タブ** コンポーネント。
+   `cmp:show` イベントは、**カルーセル**&#x200B;で新しいスライドが表示されたとき、**タブ**&#x200B;コンポーネントで新しいタブが選択されたときなど、多くの異なるコンポーネントでトリガーされます。
 
-1. ページで、カルーセルスライドを切り替えて、コンソールステートメントを確認します。
+1. ページで、カルーセルスライドを切り替え、コンソールステートメントを確認します。
 
    ![カルーセルを切り替えてイベントリスナーを表示する](assets/teaser-console-slides.png)
 
-1. リスニングを停止するには `cmp:show` イベント、データレイヤーからイベントリスナーを削除します。
+1. `cmp:show` イベントのリッスンを停止するには、データレイヤーからイベントリスナーを削除します。
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -162,16 +162,16 @@ Adobeクライアントデータレイヤーでは、Web ページでの訪問�
 
    ![ページ表示データ](assets/page-show-console-data.png)
 
-   この `cmp:show` イベントを呼び出すことができます。 ページは既に読み込まれているのに、なぜイベントハンドラーが起動したのか、と思うかもしれません。
+   ページの `cmp:show` イベントは、それぞれのページのロード時に、ページの一番上にトリガーされます。ページは既に読み込まれているのに、なぜイベントハンドラーが起動したのか、と思うかもしれません。
 
-   Adobeクライアントデータレイヤーの独自の機能の 1 つは、イベントリスナーを登録できることです **前** または **後** データレイヤーが初期化されたので、競合状態を回避するのに役立ちます。
+   Adobe Client Data Layer のユニークな機能の一つは、データレイヤーが初期化される&#x200B;**前**&#x200B;または&#x200B;**後**&#x200B;にイベントリスナーを登録できる点です。競合状態を回避するのに役立ちます。
 
-   データレイヤーは、順に発生したすべてのイベントのキュー配列を保持します。 デフォルトでは、データレイヤーは、 **過去** および **将来**. イベントを過去または将来からフィルタリングできます。 [詳しくは、ドキュメントを参照してください](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
+   データレイヤーは、発生したすべてのイベントを順番に並べたキュー配列を保持します。データレイヤーは、デフォルトで、**過去**&#x200B;に発生したイベントと&#x200B;**未来**&#x200B;に発生するイベントに対して、イベントコールバックをトリガーします。イベントは、過去または未来でフィルタリングすることもできます。[詳しくは、ドキュメントを参照してください](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
 
 
 ## 次の手順
 
-学習を続ける方法は 2 つあります。まず、 [ページデータを収集し、Adobe Analyticsに送信します。](../analytics/collect-data-analytics.md) Adobeクライアントデータレイヤーの使用方法を示すチュートリアルです。 2 つ目の選択肢は、次の方法を学ぶことです [AEMコンポーネントでのAdobeクライアントデータレイヤーのカスタマイズ](./data-layer-customize.md)
+学習を続ける方法は 2 つあります。1 つ目の選択肢は、Adobe Client Data layer の使い方を説明したチュートリアル「[ページデータを収集して Adobe Analytics に送信する](../analytics/collect-data-analytics.md)」を学習することです。2 つ目の選択肢は、[AEM コンポーネントで Adobe Client Data Layer をカスタマイズする](./data-layer-customize.md)方法を学習することです。
 
 
 ## その他のリソース {#additional-resources}
