@@ -6,7 +6,7 @@ sub-product: Experience Manager
 version: 6.5
 team: TM
 source-git-commit: 9f242d753748354faabf613112246cebe9ed5daa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '59'
 ht-degree: 100%
 
