@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics
-description: AEM Forms CS とAdobe Analyticsを統合して、フォームデータフィールドに関するレポートを作成する
+title: Adobe Analytics を使用した送信済みフォームデータフィールドに関するレポート
+description: AEM Forms CS と Adobe Analytics を統合してフォームデータフィールドに関するレポートを作成する方法
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,25 +9,26 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
-workflow-type: tm+mt
+exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '129'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 適切なデータ要素の作成
 
-Tags プロパティに、2 つの新しいデータ要素（ApplientsStateOfResidence および validationError）を追加しました。
+タグプロパティに、2 つの新しいデータ要素（ApplientsStateOfResidence および validationError）を追加しました。
 
 ![adaptive-form](assets/data_elements.png)
 
 ## ApplicantStateOfResidence
 
-この **ApplicantStateOfResidence** データ要素は、「 **コア** 拡張機能ドロップダウンで、 **カスタムコード** 以下のスクリーンショットに示すように、データ要素タイプの
-![出願人の住居](assets/applicantstateofresidence.png)
+**ApplicantStateOfResidence** データ要素は、以下のスクリーンショットに示すように、拡張子のドロップダウンで「**コア**」を選択し、データ要素タイプとして「**カスタムコード**」を選択することで設定されました。
+![applicant-state-residence](assets/applicantstateofresidence.png)
 
-次のカスタムコードは、 **_state_** アダプティブフォームフィールド
+次のカスタムコードは、**_ステート_**&#x200B;アダプティブフォームフィールドから値を取得するために使用されました。
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -39,7 +40,7 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-この **ValidationError** データ要素は、「 **コア** 拡張機能ドロップダウンで、 **カスタムコード** 以下のスクリーンショットに示すように、データ要素タイプの
+**ValidationError** データ要素は、以下のスクリーンショットに示すように、拡張子のドロップダウンで「**コア**」を選択し、データ要素タイプとして「**カスタムコード**」を選択することで設定されました。
 
 ![validation-error](assets/validation-error.png)
 
