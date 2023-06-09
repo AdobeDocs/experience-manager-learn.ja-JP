@@ -1,6 +1,6 @@
 ---
-title: AEM Sitesの概要 | AEMクイックサイト作成
-description: ローコードのアプローチを使用して、クイックサイト作成と事前定義済みのサイトテンプレートを使用してAdobe Experience Managerで最初のサイトを作成する方法を説明します。 標準搭載のコンポーネントとテンプレートを使用して、サイトをすぐに起動および実行できます。 Adobe XD主導のテーマ設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨。
+title: AEM Sites の基本を学ぶ | AEM クイックサイト作成
+description: ローコードアプローチに従って、クイックサイト作成と事前定義済みサイトテンプレートを使用して Adobe Experience Manager で初めてのサイトを作成する方法を説明します。標準提供のコンポーネントやテンプレートを使用すると、迅速にサイトを立ち上げることができます。Adobe XD ドリブンのテーマワークフローを使用すると、CSS と JavaScript だけでブランド固有のスタイルやカスタマイズを適用できます。新規プロジェクトや新任のデベロッパーにお勧めです。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,27 +11,27 @@ kt: 7985
 thumbnail: 333477.jpg
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# AEM Sites使用の手引き — クイックサイト作成 {#site-template}
+# AEM Sites の基本を学ぶ - クイックサイト作成 {#site-template}
 
-ローコードのアプローチを使用して、クイックサイト作成と事前定義済みのサイトテンプレートを使用してAdobe Experience Managerで最初のサイトを作成する方法を説明します。 標準搭載のコンポーネントとテンプレートを使用して、サイトをすぐに起動および実行できます。 Adobe XD主導のテーマ設定ワークフローを使用して、CSS と JavaScript のみでブランド固有のスタイルとカスタマイズを適用します。 新規プロジェクトおよび開発者に推奨されます。
+ローコードアプローチに従って、クイックサイト作成と事前定義済みサイトテンプレートを使用して Adobe Experience Manager で初めてのサイトを作成する方法を説明します。標準提供のコンポーネントやテンプレートを使用すると、迅速にサイトを立ち上げることができます。Adobe XD ドリブンのテーマワークフローを使用すると、CSS と JavaScript だけでブランド固有のスタイルやカスタマイズを適用できます。新規プロジェクトや新任のデベロッパーにお勧めです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI キット](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
-* [AEM Site Template](https://github.com/adobe/aem-site-template-basic)
+* [AEM サイトテンプレート](https://github.com/adobe/aem-site-template-basic)
 
-## AEMas a Cloud Service環境 {#environment}
+## AEM as a Cloud Service 環境 {#environment}
 
-このチュートリアルの手順は、Adobe Experience Manager as a Cloud Service環境で実行します。 AEM環境への管理者アクセス権があることを確認します。 次を使用することをお勧めします。 [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) および [開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja) このチュートリアルを完了する際
+このチュートリアルの手順は、Adobe Experience Manager as a Cloud Service 環境で行われます。AEM 環境への管理者アクセス権があることを確認します。このチュートリアルを完了するときは、[サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=ja)と[開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja)を使用することをお勧めします。
 
-## 次のステップ {#next-steps}
+## 次の手順 {#next-steps}
 
-クイックサイト作成機能を使用して、架空のライフスタイルブランド WKND 向けのAEMサイトを実装する手順を順を追って説明します。
+クイックサイト作成機能を使用して架空のライフスタイルブランド WKND の AEM サイトを実装する方法について、チュートリアルで順を追って説明します。
 
-何を待ってる?!チュートリアルを開始するには、 [サイトを作成](create-site.md) この章では、サイトテンプレートを使用して新しいAdobe Experience Managerプロジェクトを生成する方法について説明します。
+すぐに取りかかりましょう。[サイトの作成](create-site.md)の章に移動して、チュートリアルを開始してください。サイトテンプレートを使用して新しい Adobe Experience Manager のプロジェクトを生成する方法について説明します。
