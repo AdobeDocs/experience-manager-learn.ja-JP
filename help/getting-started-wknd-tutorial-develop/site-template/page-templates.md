@@ -1,6 +1,6 @@
 ---
 title: ページテンプレート
-description: ページテンプレートを作成および変更する方法について説明します。 ページテンプレートとページとの関係を理解します。 コンテンツの詳細なガバナンスとブランドの一貫性を提供するために、ページテンプレートのポリシーを設定する方法について説明します。  Adobe XDのモックアップに基づいて、適切に構造化された Magazine 記事テンプレートが作成されます。
+description: ページテンプレートを作成および変更する方法について説明します。ページテンプレートとページとの関係を理解します。ページテンプレートのポリシーを設定することにより、コンテンツのきめ細かいガバナンスとブランドの一貫性を実現する方法を説明します。  Adobe XD で作成したモックアップをもとに、適切に構造化された雑誌記事テンプレートを作成しました。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -12,83 +12,83 @@ thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '652'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # ページテンプレート {#page-templates}
 
-この章では、ページテンプレートとページの関係を調べます。 以下のモックアップに基づいて、スタイル設定されていない Magazine 記事テンプレートを作成します。 [AdobeXD](https://www.adobe.com/products/xd.html). テンプレートの構築プロセスでは、コアコンポーネントと高度なポリシー設定について説明します。
+この章では、ページテンプレートとページの関係を探ります。スタイル設定されていない Magazine Article テンプレートを [AdobeXD](https://www.adobe.com/products/xd.html) のモックアップを基に作成します。テンプレートを作成するプロセスでは、コアコンポーネントと詳細ポリシー設定について説明します。
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、 [コンテンツのオーサリングと変更の公開](./author-content-publish.md) チャプターが完了しました。
+これはマルチパートチュートリアルであり、[コンテンツの作成と変更の公開](./author-content-publish.md)の章で大まかに説明されている手順が完了していることを前提としています。
 
 ## 目的
 
-1. ページテンプレートの詳細と、ページコンテンツを詳細に制御するためにポリシーを使用する方法について説明します。
-1. テンプレートとページがリンクされている方法を説明します。
-1. 新しいテンプレートを作成し、ページを作成します。
+1. ページテンプレートの詳細と、ポリシーを使用してページコンテンツのきめ細かい制御を実施する方法を理解します。
+1. テンプレートとページのリンク方法を学びます。
+1. 新しいテンプレートを作成し、ページをオーサリングします。
 
 ## 作成する内容 {#what-you-will-build}
 
-このチュートリアルのこの部分では、新しい雑誌記事の作成に使用でき、共通の構造に合わせて調整できる新しい雑誌記事ページテンプレートを作成します。 このテンプレートは、AdobeXD で作成されたデザインと UI キットに基づいています。 この章では、テンプレートの構造またはスケルトンの構築にのみ焦点を当てます。 スタイルは実装されていませんが、テンプレートとページは機能しています。
+チュートリアルのこのパートでは、新しい雑誌記事の作成に使用でき共通の構造に沿う新しい Magazine Article Page テンプレートを作成します。このテンプレートは、AdobeXD で生成されたデザインと UI キットに基づいています。この章では、テンプレートの構造またはスケルトンの構築にのみ焦点を当てています。スタイルは実装されていませんが、テンプレートとページは機能しています。
 
-## マガジン記事ページテンプレートの作成
+## Magazine Article Page テンプレートの作成
 
-ページを作成する際は、新しいページを作成する際の基礎として使用するテンプレートを選択する必要があります。 テンプレートは、作成されるページの構造、初期コンテンツ、許可されるコンポーネントを定義します。
+ページを作成する際には、新しいページを作成するためのベースとして使用されるテンプレートを選択する必要があります。テンプレートでは、結果として作成されるページの構造、初期コンテンツおよび許可されたコンポーネントを定義します。
 
-主に次の 3 つの領域があります。 [ページテンプレート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=ja):
+[ページテンプレート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=ja)には、主な領域が次の 3 つあります。
 
-1. **構造**  — テンプレートの一部であるコンポーネントを定義します。 これらは、コンテンツ作成者が編集することはできません。
-1. **初期コンテンツ**  — テンプレートが開始するコンポーネントを定義します。コンテンツ作成者は、これらのコンポーネントを編集または削除できます
-1. **ポリシー**  — コンポーネントの動作方法と作成者が使用できるオプションに関する設定を定義します。
+1. **構造** - テンプレートの一部であるコンポーネントを定義します。コンテンツ作成者はこれらを編集できません。
+1. **初期コンテンツ** - テンプレートの出発点となるコンポーネントを定義します。これは、コンテンツ作成者が編集または削除できます。
+1. **ポリシー** - コンポーネントの動作、および作成者が利用可能なオプションに関する設定を定義します。
 
-次に、モックアップの構造に合った新しいテンプレートをAEMで作成します。 これは、AEMのローカルインスタンスで発生します。 次のビデオの手順に従います。
+次に、モックアップの構造に合致する新しいテンプレートを AEM で作成します。これは、AEM のローカルインスタンスで行います。以下のビデオで示す手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
-次のサムネールを使用して、テンプレートを特定できます（または独自のをアップロードできます）。
+次のサムネールを使用して、テンプレートを特定できます（または独自のテンプレートをアップロードできます）。
 
-![記事ページテンプレートのサムネール](./assets/page-templates/article-page-template-thumbnail.png)
+![Article Page テンプレートサムネール](./assets/page-templates/article-page-template-thumbnail.png)
 
 
 ### ソリューションパッケージ
 
-完了 [マガジンテンプレートの解決方法](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip) は、パッケージマネージャーからダウンロードしてインストールできます。
+完成済みの [Magazine テンプレートソリューション](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)をパッケージマネージャーでダウンロードしてインストールできます。
 
 ## エクスペリエンスフラグメントを使用したヘッダーとフッターの更新 {#experience-fragments}
 
-ヘッダーやフッターなどのグローバルコンテンツを作成する場合の一般的な方法は、 [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、1 つの参照可能なコンポーネントを作成できます。 エクスペリエンスフラグメントには、複数サイトの管理と [局在](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
+ヘッダーやフッターなどのグローバルコンテンツを作成する際の一般的な方法は、[エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=ja)を使用することです。エクスペリエンスフラグメントを使用すると、複数のコンポーネントを組み合わせて、1 つの参照可能なコンポーネントを作成できます。エクスペリエンスフラグメントには、マルチサイト管理と[ローカリゼーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=ja#localized-site-structure)をサポートするという利点があります。
 
-Site テンプレートにより、ヘッダーとフッターが生成されました。 次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。 次のビデオの手順に従います。
+Site テンプレートから、ヘッダーとフッターが生成されました。次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。以下のビデオの手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
-以下のビデオの概要手順：
+ビデオの大まかな手順は次のとおりです。
 
-1. サンプルコンテンツパッケージをダウンロードします。 **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)**.
-1. パッケージマネージャーを使用して、コンテンツパッケージをアップロードしインストールします。
-1. WKND ロゴを使用するようにヘッダーおよびフッターエクスペリエンスフラグメントを更新する
+1. サンプルのコンテンツパッケージ **[WKND-Starter-Assets-Skate-Article-1.2.zip](assets/page-templates/WKND-Starter-Assets-Skate-Article-1.2.zip)** をダウンロードします。
+1. パッケージマネージャーを使用して、このコンテンツパッケージをアップロードしインストールします。
+1. WKND ロゴを使用するように、ヘッダーとフッターのエクスペリエンスフラグメントを更新します。
 
 ## 雑誌記事ページの作成
 
-次に、「雑誌記事ページ」テンプレートを使用して新しいページを作成します。 サイトのモックアップと一致するようにページのコンテンツを作成します。 次のビデオの手順に従います。
+次に、Magazine Article Page テンプレートを使用して新しいページを作成します。サイトのモックアップと一致するようにページのコンテンツを作成します。以下のビデオの手順に従います。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
-以下を使用： [提供されたテキスト](./assets/page-templates/la-skateparks-copy.txt) を使用して、記事の本文を入力します。
+[用意されているテキスト](./assets/page-templates/la-skateparks-copy.txt)を記事の本文に入力します。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、Adobe Experience Manager Sitesで新しいテンプレートとページが作成されました。
+これで、Adobe Experience Manager Sites で新しいテンプレートとページを作成しました。
 
-### 次のステップ {#next-steps}
+### 次の手順 {#next-steps}
 
-この時点で、雑誌記事ページとサイトが WKND のブランドスタイルと一致しません。 フォロー： [テーマ設定](theming.md) グローバルスタイルをサイトに適用する際に使用する CSS および JavaScript フロントエンドコードの更新のベストプラクティスについて説明するチュートリアルです。
+現時点では、雑誌記事ページおよびサイトは WKND のブランドスタイルと一致しません。[テーマ設定](theming.md)チュートリアルに従って、サイトにグローバルスタイルを適用するための CSS と Javascript フロントエンドコードの更新に関するベストプラクティスを説明します。
 
 ### ソリューションパッケージ
 
-この章のソリューションパッケージをダウンロードできます。 [WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip).
+この章のダウンロード可能なソリューションパッケージは、[WKND-Magazine-Template-SOLUTION-1.0.zip](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip) です。
