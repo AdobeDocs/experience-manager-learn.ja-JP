@@ -1,6 +1,6 @@
 ---
 title: コンテンツフラグメントとエクスペリエンスフラグメント
-description: コンテンツフラグメントとエクスペリエンスフラグメントの類似点と相違点、そしてそれぞれのタイプの使用方法とタイミングについて学びます。
+description: コンテンツフラグメントとエクスペリエンスフラグメントの類似点と相違点、および各タイプを使用するタイミングと方法について学びます。
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
 topics: headless
@@ -13,9 +13,9 @@ role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 source-git-commit: 84fdbaa173a929ae7467aecd031cacc4ce73538a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1044'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -102,11 +102,11 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
-<li>を介した JSON エクスポート <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja">AEMヘッドレスGraphQL API</a></li>
+<li><a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja">AEM ヘッドレス GraphQL API</a> を介した JSON エクスポート</li>
 <li>AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用できる <a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja" target="_blank">AEM コアコンポーネントコンテンツフラグメントコンポーネント</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja" target="_blank">AEM Content Services</a> を介した JSON の書き出し（サードパーティでの使用）</li>
 <li>ターゲットオファー向けに JSON を Adobe Target に書き出す</li>
-<li>AEM HTTP Assets API を介したサードパーティ消費用 JSON</li>
+<li>AEM HTTP Assets API を介したサードパーティによる JSON の利用</li>
 </ul>
 </td>
 <td><ul>
@@ -118,8 +118,8 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 </td>
 </tr><tr><td><strong>一般的なユースケース</strong></td>
 <td><ul>
-<li>GraphQLを介したヘッドレスユースケースの強化</li>
-<li>構造化データ入力/フォームベースのコンテンツ</li>
+<li>GraphQL を使用したヘッドレスユースケースの強化</li>
+<li>構造化されたデータ入力またはフォームベースのコンテンツ</li>
 <li>ロングフォームの編集コンテンツ（複数行の要素）</li>
 <li>コンテンツを配信するチャネルのライフサイクル外で管理されるコンテンツ</li>
 </ul>
@@ -154,7 +154,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 + コンテンツフラグメントの&#x200B;**バリエーション**&#x200B;はコンテンツフラグメントモデルに従いますが、コンテンツにはバリエーションがあります。
 + コンテンツフラグメントは、次の方法で公開/使用できます。
    + AEM WCM コアコンポーネントのコンテンツフラグメントコンポーネントから **AEM Sites**（または AEM Screens）でコンテンツフラグメントを使用する。
-   + 消費 **コンテンツフラグメント** AEMヘッドレスGraphQL API を使用するヘッドレスアプリから。
+   + AEM ヘッドレス GraphQL API を使用して、ヘッドレスアプリから **コンテンツフラグメント** を使用します。
    + 読み取り専用のユースケース向けに、**AEM Content Services** および API ページから JSON 形式でコンテンツフラグメントバリエーションコンテンツを公開する。
    + CRUD のユースケース向けに、**AEM Assets HTTP API** を経由して AEM Assets への直接呼出しから JSON としてコンテンツフラグメントコンテンツ（すべてのバリエーション）を直接公開する。
 
@@ -172,7 +172,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
    + HTMLまたは JSON オファーのいずれかとして、エクスペリエンスフラグメントをし **Adobe Target** に書き出す。
    + AEM Sites は HTML オファーをネイティブでサポートしていますが、JSON オファーにはカスタム開発が必要です。
 
-## コンテンツフラグメントのサポートリソース
+## コンテンツフラグメントのサポート資料
 
 + [コンテンツフラグメントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=ja&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [Adobe Experience Manager as a Headless CMS の概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=ja)
@@ -181,7 +181,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 + [コンテンツフラグメントと AEM ヘッドレスの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
 + [AEM コンテンツサービスの基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja)
 
-## エクスペリエンスフラグメントのサポートリソース
+## エクスペリエンスフラグメントのサポート資料
 
 + [エクスペリエンスフラグメントに関する Adobe ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=ja)
 + [AEM エクスペリエンスフラグメントについて](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=ja)
