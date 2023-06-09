@@ -12,9 +12,9 @@ role: Developer
 level: Intermediate
 exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '424'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリ�
 
 ## サイト設定と ContextHub セグメント {#site-configuration-and-contexthub-segments}
 
-ContextHub には、セグメントを管理し、現在のコンテキストに対して解決されるセグメントを決定するセグメント化エンジンが含まれています。 複数のセグメントが定義されています。 JavaScript API を使用して、[解決されたセグメントを判断](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-adding.html?lang=ja)できます。[[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=ja) の下で、サイトの ContextHub セグメントを有効にします。
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントを判断するセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-adding.html?lang=ja)できます。[[!UICONTROL 設定ブラウザー]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=ja) の下で、サイトの ContextHub セグメントを有効にします。
 
 ## セグメントの作成 {#create-segments}
 
