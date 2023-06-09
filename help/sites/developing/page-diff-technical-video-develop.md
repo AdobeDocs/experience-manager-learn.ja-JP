@@ -1,6 +1,6 @@
 ---
-title: AEM Sitesでのページの違いに対する開発
-description: このビデオでは、AEM Sites のページの違いの機能にカスタムスタイルを提供する方法を説明します。
+title: AEM Sites でのページ差異に対応した開発
+description: このビデオでは、AEM Sites のページ差異の機能にカスタムスタイルを提供する方法を説明します。
 feature: Authoring
 topics: development
 audience: developer
@@ -12,33 +12,33 @@ role: Developer
 level: Beginner
 exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '293'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# ページ差のための開発 {#developing-for-page-difference}
+# ページの差異に対応した開発 {#developing-for-page-difference}
 
-このビデオでは、AEM Sites のページの違いの機能にカスタムスタイルを提供する方法を説明します。
+このビデオでは、AEM Sites のページ差異の機能にカスタムスタイルを提供する方法を説明します。
 
-## ページの差異スタイルのカスタマイズ {#customizing-page-difference-styles}
+## ページ差異のスタイルのカスタマイズ {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871?quality=12&learn=on)
 
 >[!NOTE]
 >
->このビデオでは、カスタム CSS を we.Retail クライアントライブラリに追加します。このライブラリでは、これらの変更をカスタマイズ者のAEM Sitesプロジェクトに加える必要があります。以下のコード例： `my-project`.
+>このビデオでは、カスタム CSS を we.Retail クライアントライブラリに追加しますが、この変更は、カスタマイズする人の AEM Sites プロジェクトに加える必要があります。以下のコードの例では `my-project` です。
 
-AEMのページの違いは、 `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+AEM のページ差異は、`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css` の直接読み込みを介して OOTB CSS を取得します。
 
-クライアントライブラリカテゴリを使用するのではなく、CSS のこの直接読み込みのため、カスタムスタイルの別の挿入ポイントを見つける必要があります。このカスタム挿入ポイントは、プロジェクトのオーサリング clientlib です。
+クライアントライブラリのカテゴリを使用するのではなく、CSS を直接読み込むため、カスタムスタイルの注入ポイントを別に見つける必要があります。このカスタム注入ポイントは、プロジェクトのオーサリング clientlib です。
 
-これにより、これらのカスタムスタイルの上書きをテナント固有にすることができます。
+これには、カスタムスタイルの上書きをテナントごとに設定にできる利点があります。
 
-### オーサリングクライアントライブラリの準備 {#prepare-the-authoring-clientlib}
+### オーサリング clientlib の準備 {#prepare-the-authoring-clientlib}
 
-の存在を確認する `authoring` プロジェクトの clientlib( ) `/apps/my-project/clientlib/authoring.`
+プロジェクトの `authoring` clientlib が `/apps/my-project/clientlib/authoring.` に存在することを確認します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -49,7 +49,7 @@ AEMのページの違いは、 `/libs/cq/gui/components/common/admin/diffservice
 
 ### カスタム CSS の提供 {#provide-the-custom-css}
 
-プロジェクトの `authoring` clientlib a `css.txt` これは、上書きスタイルを提供する less ファイルを指しています。 [低](https://lesscss.org/) は、この例で利用されるクラスラッピングを含む多くの便利な機能により推奨されます。
+プロジェクトの `authoring` clientlib に、優先スタイルを提供する less ファイルを指す `css.txt` を追加します。[less](https://lesscss.org/) は、この例で利用されているクラスラッピングなど、多くの便利な機能があるので推奨されます。
 
 ```shell
 base=./css
@@ -57,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-を作成します。 `less` 次の場所にあるスタイルオーバーライドを含むファイル `/apps/my-project/clientlibs/authoring/css/htmldiff.less`を使用し、必要に応じてオーバーリングスタイルを指定します。
+スタイルの上書きを含む `less` ファイルを `/apps/my-project/clientlibs/authoring/css/htmldiff.less` で作成し、上書きするスタイルを必要に応じて提供します。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -105,9 +105,9 @@ body {
 
 ### ページコンポーネントを介してオーサリング clientlib CSS を含める {#include-the-authoring-clientlib-css-via-the-page-component}
 
-オーサリング clientlibs カテゴリをプロジェクトのベースページの `/apps/my-project/components/structure/page/customheaderlibs.html` 直前 `</head>` タグを使用して、スタイルが読み込まれるようにします。
+スタイルが確実に読み込まれるように、プロジェクトのベースページの `/apps/my-project/components/structure/page/customheaderlibs.html` で `</head>` タグの直前にオーサリング clientlibs カテゴリを含めます。
 
-これらのスタイルは、次に限定する必要があります。 [!UICONTROL 編集] および [!UICONTROL プレビュー] WCM モード。
+これらのスタイルは、[!UICONTROL 編集]と[!UICONTROL プレビュー]の WCM モードに限定する必要があります。
 
 ```xml
 <head>
@@ -117,12 +117,12 @@ body {
 </head>
 ```
 
-上記のスタイルが適用された差分ページの最終結果は、次のようになります (HTMLが追加され、コンポーネントが変更されました )。
+上記のスタイルを適用した差分ページの最終結果は、次のようになります。HTML が追加され、コンポーネントが変更されています。
 
-![ページの差異](assets/page-diff.png)
+![ページ差異](assets/page-diff.png)
 
 ## その他のリソース {#additional-resources}
 
 * [we.Retail サンプルサイトのダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [AEMクライアントライブラリの使用](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [CSS ドキュメントの削減](https://lesscss.org/)
+* [AEM クライアントライブラリの使用](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Less CSS ドキュメント](https://lesscss.org/)
