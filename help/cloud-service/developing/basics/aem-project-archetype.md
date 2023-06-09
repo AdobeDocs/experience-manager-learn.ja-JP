@@ -1,6 +1,6 @@
 ---
-title: AEM Maven プロジェクトアーキタイプを使用してAEMプロジェクトを作成する方法
-description: AEM Maven プロジェクトアーキタイプを使用して新しいAEMアプリケーションプロジェクトを作成し、ベストプラクティスに合わせてAEM開発の開始を迅速にする方法を確認します。
+title: AEM Maven プロジェクトアーキタイプを使用して AEM プロジェクトを作成する方法
+description: AEM Maven プロジェクトアーキタイプを使用して新しい AEM アプリケーションプロジェクトを作成することで、ベストプラクティスに適合させ、AEM 開発を迅速に開始できるようにする方法を探ります。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -10,14 +10,14 @@ kt: 6929
 thumbnail: 330551.jpg
 exl-id: 28914c67-a1d3-4f85-987e-c84ff348f560
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '74'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEMプロジェクトアーキタイプを使用したAEMプロジェクトの作成
+# AEM プロジェクトアーキタイプを使用した AEM プロジェクトの作成
 
-AEM Maven プロジェクトアーキタイプを使用して新しいAEMアプリケーションプロジェクトを作成し、ベストプラクティスに合わせてAEM開発の開始を迅速にする方法を確認します。
+AEM Maven プロジェクトアーキタイプを使用して新しい AEM アプリケーションプロジェクトを作成することで、ベストプラクティスに適合させ、AEM 開発を迅速に開始できるようにする方法を探ります。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330551?quality=12&learn=on)
