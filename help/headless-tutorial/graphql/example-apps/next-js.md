@@ -12,9 +12,9 @@ thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '802'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 97%
 
 次のツールをローカルにインストールする必要があります。
 
-+ [Node.js v18](https://nodejs.org/)
++ [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
 ## AEM の要件
 
-Next.js アプリは、次の AEM デプロイメントオプションで動作します。すべてのデプロイメントに必要 [WKND Shared v2.1.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) または [WKND サイト v2.1.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest) をAEMas a Cloud Service環境にインストールする。
+Next.js アプリは、次の AEM デプロイメントオプションで動作します。すべてのデプロイメントで、[WKND Shared v2.1.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest)または [WKND Site v2.1.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)を AEM as a Cloud Service 環境にインストールする必要があります。
 
 この例の Next.js アプリケーションは、__AEM パブリッシュ__&#x200B;サービスに接続するように設計されています。
 
