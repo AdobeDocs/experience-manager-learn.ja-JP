@@ -9,9 +9,9 @@ topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1465'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -535,7 +535,7 @@ const renderReference = {
 
 >[!NOTE]
 >
-> 上記のビデオでは、 `_publishUrl` をクリックして、イメージリファレンスをレンダリングします。 代わりに、 `_dynamicUrl` 詳しくは、 [web に最適化された画像のハウツー](./images.md);
+> 上のビデオでは、`_publishUrl` を使用してイメージ参照をレンダリングします。代わりに、[Web に最適化された画像の使い方](./images.md)で説明されている `_dynamicUrl` を使用してください。
 
 
 前述のビデオでは、エンドツーエンドの例を示します。
