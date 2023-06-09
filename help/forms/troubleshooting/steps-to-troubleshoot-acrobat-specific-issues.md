@@ -1,6 +1,6 @@
 ---
-title: Windows セットアップでの Acrobat 固有の問題のトラブルシューティング手順
-description: Windows セットアップでのAcrobat固有の問題のトラブルシューティング
+title: Windows セットアップで Acrobat 固有の問題をトラブルシューティングする手順
+description: Windows セットアップでの Acrobat 固有の問題のトラブルシューティング
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: 7480f507-29b3-4313-8a85-e207a17fb4e4
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Windows セットアップでの Acrobat 固有の問題のトラブルシューティング手順
+# Windows セットアップで Acrobat 固有の問題をトラブルシューティングする手順
 
-*このビデオでは、AEM Forms PDFG 用の Windows 設定に関する Acrobat 固有の問題のトラブルシューティングの手順を説明します。*
+*このビデオでは、AEM Forms PDFG 用の Windows セットアップで Acrobat 固有の問題が発生した場合のトラブルシューティング手順を説明します。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)
