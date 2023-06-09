@@ -11,9 +11,9 @@ thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '218'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 
 このビデオでは、スマートタグ画像に使用する Adobe I/O スマートコンテンツサービスを設定するために必要な次のタスクについて詳しく説明します。
 
-* 公開鍵を生成するスマートコンテンツサービス設定をAEMで作成します。 OAuth 統合用の公開証明書を取得します。
-* 統合を「Adobe I/O」で作成し、生成した公開鍵をアップロードします。
-* API キーやAEMのその他の資格情報を使用して、API インスタンスをAdobe I/Oします。
+* AEM でスマートコンテンツサービス設定を作成して、公開鍵を生成します。OAuth 統合用の公開証明書を取得します。
+* Adobe I/O で統合を作成し、生成した公開鍵をアップロードします。
+* API キーやその他の Adobe I/O の資格情報を使用して AEM インスタンスを設定します。
 * （オプション）アセットアップロード時の自動タグ付けを有効化します。
 
 ## その他のリソース
