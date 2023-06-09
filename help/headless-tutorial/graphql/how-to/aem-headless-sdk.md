@@ -10,9 +10,9 @@ kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '454'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -197,7 +197,7 @@ React アプリが使用する永続クエリごとに新しい `useEffect` フ�
 
 +++
 
-<p> </p>
+<p> </p>
 
 ## GraphQL クエリ
 
@@ -205,7 +205,7 @@ AEM はクライアント定義の GraphQL クエリをサポートしていま�
 
 ## Webpack 5+
 
-AEMヘッドレス JS SDK は、 `util` デフォルトでは Webpack 5+に含まれていません。 Webpack 5 以降を使用している場合、次のエラーが表示されます。
+AEM ヘッドレス JS SDK は `util` に依存していますが、これはデフォルトでは Webpack 5+ に含まれていません。Webpack 5+ を使用している場合、次のエラーが表示されます。
 
 ```
 Compiled with problems:
@@ -222,7 +222,7 @@ If you don't want to include a polyfill, you can use an empty module like this:
     resolve.fallback: { "util": false }
 ```
 
-以下を追加します。 `devDependencies` を `package.json` ファイル：
+次の `devDependencies` を `package.json` ファイルに追加します。
 
 ```json
   "devDependencies": {
@@ -236,4 +236,4 @@ If you don't want to include a polyfill, you can use an empty module like this:
   },
 ```
 
-次に、を実行します。 `npm install` 依存関係をインストールする。
+次に、`npm install` を実行して依存関係をインストールします。
