@@ -10,7 +10,7 @@ team: TM
 source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -72,13 +72,13 @@ ht-degree: 96%
       + [AEM Brand Portal の設定](brand-portal/configure.md)
       + [アセットソーシングの設定](brand-portal/configure-asset-sourcing.md)
       + [レンディションダウンロードの有効化](brand-portal/enable-renditions-download.md)
+
    + アセット共有{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [ローカル AEM でのアセット共有 Commons の設定](./sharing/asset-share-commons-technical-video-setup.md)
       + [アセット共有 Commons のテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons アセットキット](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Connected Assets](./sharing/connected-assets.md)
-
 
 + クリエイティブワークフローとの統合{#creative-workflows}
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
@@ -126,6 +126,7 @@ ht-degree: 96%
    + AEM Sitesでの使用 {#dm-with-aem-sites}
       + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
+
    + チュートリアル {#tutorials}
       + [カルーセルセットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [画像セットの作成](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -141,7 +142,6 @@ ht-degree: 96%
       + [Dynamic Media 設定の削除](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Dynamic Media Classic アプリでのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
-
 
 + Workfront の統合{#workfront}
    + 拡張コネクタ{#enhanced-connector}

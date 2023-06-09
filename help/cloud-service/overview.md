@@ -22,24 +22,19 @@ Adobe Experience Manager（AEM）は as a Cloud Service として利用可能に
 ## 新機能
 
 * **[トークンベースの認証（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja)**
-
-   *トークンベースの認証を使用して HTTP 経由で AEM as a Cloud Service とやり取りする方法について説明します*
+  *トークンベースの認証を使用して HTTP 経由で AEM as a Cloud Service とやり取りする方法について説明します*
 
 * **[ヘッドレス GraphQL（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
-
-   *AEM GraphQL API を使用して、外部アプリケーションでエクスペリエンスを強化する方法を説明します。*
+  *AEM GraphQL API を使用して、外部アプリケーションでエクスペリエンスを強化する方法を説明します。*
 
 * **[一括読み込み（ビデオ）](./migration/bulk-import.md)**
-
-   *Azure Blob Storage または Amazon S3 から AEM にアセットを一括読み込みする方法を説明します。*
+  *Azure Blob Storage または Amazon S3 から AEM にアセットを一括読み込みする方法を説明します。*
 
 * **[Asset Compute メタデータワーカー（チュートリアル）](./asset-compute/advanced/metadata.md)**
-
-   *Asset Compute ワーカーから AEM にアセットメタデータを書き戻す方法を説明します*
+  *Asset Compute ワーカーから AEM にアセットメタデータを書き戻す方法を説明します*
 
 * **[Asset Compute マイクロサービス拡張機能（チュートリアル）](./asset-compute/overview.md)**
-
-   *Asset Compute ワーカーを開発してカスタムアセットレンディションを生成する方法を学びます*
+  *Asset Compute ワーカーを開発してカスタムアセットレンディションを生成する方法を学びます*
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
-title: ローカルAEM開発環境の設定
-description: Experience Manager用の環境を設定するローカル開発環境の設定方法を説明します。 ローカルインストール、Apache Maven、統合開発環境、デバッグおよびトラブルシューティングについて説明します。 Eclipse IDE、CRXDE-Lite、Visual Studio Code、IntelliJ を使用します。
+title: ローカル AEM 開発環境のセットアップ
+description: Experience Manager のローカル開発環境のセットアップ方法を説明します。ローカルインストール、Apache Maven、統合開発環境およびデバッグとトラブルシューティングについて理解します。Eclipse IDE、CRXDE-Lite、Visual Studio Code および IntelliJ を使用します。
 version: 6.5
 feature: Developer Tools
 topics: development
@@ -15,38 +15,38 @@ thumbnail: aem-local-dev-env.jpg
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2603'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# ローカル AEM 開発環境の設定
+# ローカル AEM 開発環境のセットアップ
 
-Adobe Experience Manager、AEM用のローカル開発の設定に関するガイド。 ローカルインストール、Apache Maven、統合開発環境、デバッグ/トラブルシューティングに関する重要なトピックについて説明します。 を使用した開発 **Eclipse IDE、CRXDE Lite、Visual Studio Code、および IntelliJ** を参照してください。
+Adobe Experience Manager（AEM）のローカル開発のセットアップに関するガイドです。ローカルインストール、Apache Maven、統合開発環境およびデバッグ／トラブルシューティングに関する重要なトピックについて説明します。**Eclipse IDE、CRXDE Lite、Visual Studio Code および IntelliJ** を使用した開発について説明します。
 
 ## 概要
 
-Adobe Experience ManagerまたはAEM向けにローカル開発を開発する際は、開発環境の設定が最初のステップです。 生産性を高め、より高速なコードを記述するには、品質の高い開発環境の設定に時間をかけます。 AEMローカル開発環境は、次の 4 つの領域に分割できます。
+Adobe Experience Manager（AEM）向けの開発をするときの最初のステップは、ローカル開発環境のセットアップです。生産性を高め、より良いコードをより迅速に記述するために、時間をかけて質の高い開発環境をセットアップします。AEM のローカル開発環境は、次の 4 つの領域に分けることができます。
 
-* ローカルAEMインスタンス
+* ローカル AEM インスタンス
 * [!DNL Apache Maven] プロジェクト
-* 統合開発環境 (IDE)
+* 統合開発環境（IDE）
 * トラブルシューティング
 
-## ローカルのAEM Instances のインストール
+## ローカル AEM インスタンスのインストール
 
-ローカルのAEMインスタンスを指す場合、開発者のパーソナルマシン上で実行されているAdobe Experience Managerのコピーについて説明します。 ***すべて*** AEMの開発は、まず、ローカルAEMインスタンスに対してコードを記述し、実行することから始める必要があります。
+ローカル AEM インスタンスとは、開発者の個人用マシン上で動作している Adobe Experience Manager のコピーのことです。***すべて***&#x200B;の AEM 開発は、ローカル AEM インスタンスに対してコードを記述し実行するところから始まります。
 
-AEMを初めて使用する場合は、次の 2 つの基本的な実行モードをインストールできます。 ***作成者*** および ***公開***. この ***作成者*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)  は、デジタルマーケターがコンテンツの作成と管理に使用する環境です。 ほとんどの場合、開発時には、オーサーインスタンスにコードをデプロイします。 これにより、ページを作成し、コンポーネントを追加および設定できます。 AEM Sitesは WYSIWYG オーサリング CMS なので、ほとんどの CSS と JavaScript をオーサリングインスタンスに対してテストできます。
+AEM を初めて使用する場合は、***オーサー***&#x200B;と&#x200B;***パブリッシュ***&#x200B;という 2 つの基本的な実行モードをインストールできます。***オーサー*** [実行モード](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=ja)は、デジタルマーケターがコンテンツの作成と管理に使用する環境です。開発時には、ほとんどの場合、オーサーインスタンスにコードをデプロイします。これにより、ページを作成し、コンポーネントを追加および設定できるようになります。AEM Sites は WYSIWYG オーサリング CMS なので、ほとんどの CSS と JavaScript をオーサーインスタンスに対してテストできます。
 
-また、 *重要な* ローカルに対するテストコード ***公開*** インスタンス。 この ***公開*** インスタンスは、web サイトの訪問者がやり取りするAEM環境です。 また、 ***公開*** インスタンスは、 ***作成者*** 例えば、設定と権限には大きな違いがあります。 コードはローカルの ***公開*** インスタンスを上位の環境に昇格する前に使用します。
+これは、ローカルの&#x200B;***パブリッシュ***&#x200B;インスタンスに対する&#x200B;*重要な*&#x200B;テストコードでもあります。***パブリッシュ***&#x200B;インスタンスは、web サイトの訪問者がやり取りを行う AEM 環境です。***パブリッシュ***&#x200B;インスタンスは&#x200B;***オーサー***&#x200B;インスタンスと同じテクノロジースタックですが、設定と権限に関して大きな違いがあります。コードは、上位レベルの環境に昇格させる前に、ローカルの&#x200B;***パブリッシュ***&#x200B;インスタンスに対してテストする必要があります。
 
 ### 手順
 
-1. Java™がインストールされていることを確認します。
-   * 優先 [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%14Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2) (AEM 6.5 以降 )
-   * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) (AEM 6.5 より前のAEMバージョンの場合 )
-1. のコピーを取得 [AEM QuickStart Jar と [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja).
-1. 次のようなフォルダー構造をコンピューター上に作成します。
+1. Java™ がインストールされていることを確認します。
+   * AEM 6.5 以降では [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) を推奨します。
+   * AEM 6.5 より前の AEM バージョンに対応する [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/)
+1. [AEM クイックスタート Jar と [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja) のコピーを取得します。
+1. お使いのコンピューター上に次のようなフォルダー構造を作成します。
 
 ```plain
 ~/aem-sdk
@@ -54,9 +54,9 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
     /publish
 ```
 
-1. 名前を変更 [!DNL QuickStart] JAR の宛先 ***aem-author-p4502.jar*** そしてそれをの下に置く `/author` ディレクトリ。 ***[!DNL license.properties]*** ファイルを `/author` ディレクトリの下に追加します。
+1. [!DNL QuickStart] JAR を ***aem-author-p4502.jar*** に名称変更し、`/author` ディレクトリの下に配置します。***[!DNL license.properties]*** ファイルを `/author` ディレクトリの下に追加します。
 
-1. コピーを作成 [!DNL QuickStart] JAR、名前をに変更します。 ***aem-publish-p4503.jar*** そしてそれをの下に置く `/publish` ディレクトリ。 ***[!DNL license.properties]*** ファイルのコピーを `/publish` ディレクトリの下に追加します。
+1. [!DNL QuickStart] JAR のコピーを作成し、***aem-publish-p4503.jar*** に名称変更して、`/publish` ディレクトリの下に配置します。***[!DNL license.properties]*** ファイルのコピーを `/publish` ディレクトリの下に追加します。
 
 ```plain
 ~/aem-sdk
@@ -68,40 +68,40 @@ AEMを初めて使用する場合は、次の 2 つの基本的な実行モー�
         + license.properties
 ```
 
-1. 次をダブルクリックします。 ***aem-author-p4502.jar*** インストールするファイル **作成者** インスタンス。 これにより、ポートで実行されるオーサーインスタンスが起動します **4502** ローカルコンピューター上。
+1. ***aem-author-p4502.jar*** ファイルをダブルクリックして、**オーサー**&#x200B;インスタンスをインストールします。これにより、ローカルコンピューターのポート **4502** で動作するオーサーインスタンスが起動します。
 
-次をダブルクリックします。 ***aem-publish-p4503.jar*** インストールするファイル **公開** インスタンス。 これにより、ポートで実行されているパブリッシュインスタンスが起動します **4503** ローカルコンピューター上。
+***aem-publish-p4503.jar*** ファイルをダブルクリックして、**パブリッシュ**&#x200B;インスタンスをインストールします。これにより、ローカルコンピューターのポート **4503** で動作するパブリッシュインスタンスが起動します。
 
 >[!NOTE]
 >
->開発マシンのハードウェアによっては、 **オーサーとパブリッシュ** インスタンスが同時に実行されている。 ローカルセットアップで同時に両方を実行する必要が生じることはほとんどありません。
+>開発マシンのハードウェアによっては、**オーサーインスタンスとパブリッシュインスタンス**&#x200B;の両方を同時に実行することが難しい場合があります。ローカルセットアップで両方を同時に実行する必要があることは稀です。
 
 ### コマンドラインの使用
 
-JAR ファイルをダブルクリックする代わりに、コマンドラインからAEMを起動するか、スクリプトを作成します (`.bat` または `.sh`) を使用します。 次に、サンプルコマンドの例を示します。
+JAR ファイルをダブルクリックする代わりに、コマンドラインから AEM を起動するか、ローカルオペレーティングシステムの種類に応じてスクリプト（`.bat` または `.sh`）を作成することもできます。サンプルコマンドの例を以下に示します。
 
 ```shell
 $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
 ```
 
-ここで、 `-X` は JVM オプションで、 `-D` は、追加のフレームワークプロパティです。詳しくは、 [AEMインスタンスのデプロイと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja) および [クイックスタートファイルから使用できるその他のオプション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
+ここで、`-X` は JVM オプションで、`-D` は追加のフレームワークプロパティです。詳しくは、[AEM インスタンスのデプロイと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)および[クイックスタートファイルから使用できるその他のオプション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html?lang=ja#further-options-available-from-the-quickstart-file)を参照してください。
 
 ## Apache Maven のインストール
 
-***[!DNL Apache Maven]*** は、Java ベースのプロジェクトのビルドおよびデプロイ手順を管理するツールです。 AEMは、Java ベースのプラットフォームであり、 [!DNL Maven] は、AEMプロジェクトのコードを管理する標準的な方法です。 我々が ***AEM Maven Project*** または ***AEM Project***&#x200B;を使用する場合、 *カスタム* サイトのコード。
+***[!DNL Apache Maven]*** は、Java ベースのプロジェクトのビルドおよびデプロイ手順を管理するツールです。AEM は Java ベースのプラットフォームであり、[!DNL Maven] は AEM プロジェクトのコードを管理する標準的な方法になります。***AEM Maven プロジェクト***&#x200B;または単に ***AEM プロジェクト*** と言う場合、サイトのすべての&#x200B;*カスタム*&#x200B;コードを含む Maven プロジェクトのことを指しています。
 
-すべてのAEMプロジェクトは、最新バージョンの **[!DNL AEM Project Archetype]**: [https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype). この [!DNL AEM Project Archetype] には、サンプルコードとコンテンツを含んだAEMプロジェクトのブートストラップが用意されています。 この [!DNL AEM Project Archetype] 次を含む **[!DNL AEM WCM Core Components]** プロジェクトで使用するように設定されています。
+すべての AEM プロジェクトは、**[!DNL AEM Project Archetype]** の最新バージョン（[https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype)）に基づいて構築する必要があります。[!DNL AEM Project Archetype] には、サンプルのコードとコンテンツを含んだ AEM プロジェクトのブートストラップが用意されています。[!DNL AEM Project Archetype] には、プロジェクトで使用するように設定された **[!DNL AEM WCM Core Components]** も含まれています。
 
 >[!CAUTION]
 >
->新しいプロジェクトを開始する際には、最新バージョンのアーキタイプを使用することをお勧めします。 アーキタイプには複数のバージョンがあり、すべてのバージョンが以前のバージョンのAEMと互換性があるわけではないことに注意してください。
+>新しいプロジェクトを開始する際には、アーキタイプの最新バージョンを使用するのがベストプラクティスです。アーキタイプには複数のバージョンがあり、すべてのバージョンが以前のバージョンの AEM と互換性があるわけではないことに留意してください。
 
 ### 手順
 
-1. ダウンロード [Apache Maven](https://maven.apache.org/download.cgi)
-2. インストール [Apache Maven](https://maven.apache.org/install.html) をクリックし、インストールがコマンドラインに追加されていることを確認します。 `PATH`.
-   * [!DNL macOS] ユーザーは、 [Homebrew](https://brew.sh/)
-3. 確認する **[!DNL Maven]** は、新しいコマンドラインターミナルを開き、次のコマンドを実行することによってインストールされます。
+1. [Apache Maven](https://maven.apache.org/download.cgi) をダウンロードします。
+2. [Apache Maven](https://maven.apache.org/install.html) をインストールし、インストールがコマンドライン `PATH` に追加されていることを確認します。
+   * [!DNL macOS] ユーザーは、[Homebrew](https://brew.sh/) を使用して Maven をインストールできます。
+3. 新しいコマンドラインターミナルを開き、次のコマンドを実行することによって、**[!DNL Maven]** がインストールされていることを確認します。
 
 ```shell
 $ mvn --version
@@ -114,109 +114,109 @@ Default locale: en_US, platform encoding: UTF-8
 
 >[!NOTE]
 >
-> 以前の `adobe-public` Maven プロファイルは、 `nexus.adobe.com` をクリックしてAEMアーティファクトをダウンロードします。 すべてのAEMアーティファクトは、Maven Central および `adobe-public` プロファイルは不要です。
+> 以前は、`nexus.adobe.com` を指定して AEM アーティファクトをダウンロードするために、`adobe-public` Maven プロファイルを追加する必要がありました。すべての AEM アーティファクトは Maven Central を通じて利用できるようになり、`adobe-public` プロファイルは必要なくなりました。
 
-## 統合開発環境の設定
+## 統合開発環境のセットアップ
 
-統合開発環境または IDE は、テキストエディタ、構文サポート、およびビルドツールを組み合わせたアプリケーションです。 実行している開発の種類によっては、ある IDE が別の IDE よりも優れている場合があります。 IDE に関係なく、定期的に実行できることが重要です ***プッシュ*** ローカルのAEMインスタンスにコードを追加してテストします。 時々～することが重要である ***取り込む*** Git などのソース管理システムに保持するために、ローカルAEMインスタンスからAEMプロジェクトに設定します。
+統合開発環境（IDE）は、テキストエディター、構文サポートおよびビルドツールを組み合わせたアプリケーションです。実施している開発のタイプによっては、ある IDE が別の IDE よりも望ましい場合があります。IDE に関係なく、テストのためにコードをローカル AEM インスタンスに定期的に&#x200B;***プッシュ***&#x200B;できることが重要です。Git などのソース管理システムに保持するために、ローカル AEM インスタンスから AEM プロジェクトに設定を時々&#x200B;***プル***&#x200B;することが重要です。
 
-ローカルAEMインスタンスとの統合を示す、対応するビデオを含むAEM開発で使用される、より一般的な IDE の例を以下に示します。
+以下は、AEM 開発で使用される一般的な IDE のいくつかと、それぞれに対応するビデオです。ビデオでは、ローカル AEM インスタンスとの統合について説明しています。
 
 >[!NOTE]
 >
-> WKND プロジェクトが、AEM as a Cloud Serviceで動作するようにデフォルトに更新されました。 更新されました [6.5/6.4 との下位互換性](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). AEM 6.5 または 6.4 を使用している場合は、`classic` プロファイルをすべての Maven コマンドに追加します。
+> WKND プロジェクトは、デフォルトで AEM as a Cloud Service で動作するように更新されました。[6.5／6.4 との下位互換性を保つ](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx)ように更新されています。AEM 6.5 または 6.4 を使用している場合は、`classic` プロファイルをすべての Maven コマンドに追加します。
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-IDE を使用する場合は、必ず `classic` を設定します。
+IDE を使用する場合は、Maven プロファイルタブで `classic` に必ずチェックを入れてください。
 
-![「Maven プロファイル」タブ](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
+![Maven プロファイルタブ](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
 
 *IntelliJ Maven プロファイル*
 
 ### [!DNL Eclipse] IDE
 
-この **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は、Java™開発用のより一般的な IDE の 1 つで、大部分はオープンソースで、 ***無料***! Adobeは、 **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)**&#x200B;の場合は [!DNL Eclipse] 優れた GUI での開発を容易にし、コードをローカルのAEMインスタンスと同期させる。 この [!DNL Eclipse] IDE は、が GUI をサポートしているので、AEMを初めて使用する開発者には大きく推奨されます。 [!DNL AEM Developer Tools].
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** は、Java™ 開発用の最も人気のある IDE の 1 つです。その主な理由は、オープンソースであり、***無料***&#x200B;であるからです。アドビでは、ローカル AEM インスタンスとコードを同期するための優れた GUI で開発しやすくするために、[!DNL Eclipse] 用のプラグイン **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)** を提供しています。[!DNL AEM Developer Tools] が GUI をサポートいることもあり、AEM を初めて使用する開発者には [!DNL Eclipse] IDE をお勧めします。
 
 #### インストールとセットアップ
 
-1. をダウンロードしてインストールする [!DNL Eclipse] の IDE [!DNL Java™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
-1. 指示に従って、 [!DNL AEM Developer Tools] プラグイン： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja)
+1. [!DNL Java™ EE Developers] の [!DNL Eclipse] IDE を [https://www.eclipse.org](https://www.eclipse.org/) からダウンロードしてインストールします。
+1. 指示に従って、[https:// experienceleague.adobe.com/docs/ experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=ja) から [!DNL AEM Developer Tools] プラグインをインストールします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 * 00:30 - Maven プロジェクトの読み込み
-* 01:24 - Maven を使用してソースコードをビルドしデプロイする
-* 04:33 - AEM Developer Tool を使用したプッシュコードの変更
-* 10:55 - AEM Developer Tool を使用してコード変更をプルします。
+* 01:24 - Maven を使用したソースコードのビルドとデプロイ
+* 04:33 - AEM Developer Tools を使用したコード変更のプッシュ
+* 10:55 - AEM Developer Tools を使用したコード変更のプル
 * 13:12 - Eclipse の統合デバッグツールの使用
 
 ### IntelliJ IDEA
 
-この **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** は、Java™のプロフェッショナル開発用の強力な IDE です。 [!DNL IntelliJ IDEA] 2 種類の味が付く。 ***無料*** [!DNL Community] 版と商業版（有料） [!DNL Ultimate] バージョン。 無料 [!DNL Community] のバージョン [!DNL IntellIJ IDEA] は、より多くのAEM開発に十分ですが、 [!DNL Ultimate] [機能セットを展開します。](https://www.jetbrains.com/idea/download).
+**[IntelliJ IDEA](https://www.jetbrains.com/idea/)** は、プロフェッショナルな Java™ 開発のための強力な IDE です。[!DNL IntelliJ IDEA] には、***無料***&#x200B;の [!DNL Community] 版と商用（有料）の [!DNL Ultimate] 版の 2 種類があります。多くの AEM 開発には [!DNL IntellIJ IDEA] の無料の [!DNL Community] 版でも十分ですが、[!DNL Ultimate] 版では[その機能セットが拡張](https://www.jetbrains.com/idea/download)されています。
 
 #### [!DNL Installation and Setup]
 
-1. をダウンロードしてインストールする [!DNL IntelliJ IDEA]: [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
-1. インストール [!DNL Repo] （コマンドラインツール）: [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
+1. [!DNL IntelliJ IDEA] を [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download) からダウンロードしてインストールします。
+1. [!DNL Repo]（コマンドラインツール）を [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation) からインストールします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 * 00:00 - Maven プロジェクトの読み込み
-* 05:47 - Maven を使用してソースコードをビルドしデプロイする
-* 08:17 — リポジトリで変更をプッシュ
-* 14:39 - Repo を使用して変更をプルする
+* 05:47 - Maven を使用したソースコードのビルドとデプロイ
+* 08:17 - Repo を使用した変更のプッシュ
+* 14:39 - Repo を使用した変更のプル
 * 17:25 - IntelliJ IDEA の統合デバッグツールの使用
 
 ### [!DNL Visual Studio Code]
 
-**[Visual Studio Code](https://code.visualstudio.com/)** はすぐに～の好きな道具になっている ***フロントエンド開発者*** 強化された JavaScript サポートを使用する [!DNL Intellisense]、およびブラウザーのデバッグサポート。 **[!DNL Visual Studio Code]** は、多くの強力な拡張機能を備えた、無料のオープンソースです。 [!DNL Visual Studio Code] は、Adobeツールを使用してAEMと統合するように設定できます。 **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code).** また、AEMと統合するためにインストールできる、コミュニティでサポートされる拡張機能もいくつかあります。
+**[Visual Studio Code](https://code.visualstudio.com/)** は、JavaScript サポートの強化版である [!DNL Intellisense] とブラウザーデバッグのサポートにより、すぐに&#x200B;***フロントエンド開発者***&#x200B;のお気に入りのツールになりました。**[!DNL Visual Studio Code]** は、多くの強力な拡張機能を備えた無料のオープンソースです。[!DNL Visual Studio Code] は、アドビのツール **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code) を使用して、AEM と連携するようにセットアップできます。** コミュニティでサポートしているいくつかの拡張機能をインストールして AEM と統合することもできます。
 
-[!DNL Visual Studio Code] は、主に CSS/LESS やAEMクライアントライブラリを作成する JavaScript コードを記述するフロントエンド開発者に最適です。 ノード定義（ダイアログ、コンポーネント）は raw XML で編集する必要があるので、このツールは新しいAEM開発者にとって最適な選択肢ではない可能性があります。 では、複数の Java™拡張機能を使用できます [!DNL Visual Studio Code]ただし、主に Java™開発を行う場合は [!DNL Eclipse IDE] または [!DNL IntelliJ] の方が望ましい場合もあります。
+[!DNL Visual Studio Code] は、主に CSS／LESS や、AEM クライアントライブラリを作成するための JavaScript コードを記述するフロントエンド開発者に最適です。ただし、このツールは、ノード定義（ダイアログ、コンポーネント）を生の XML で編集する必要があるので、AEM を初めて使用する開発者には最適でない可能性があります。[!DNL Visual Studio Code] で使用できる Java™ 拡張機能はいくつかありますが、主に Java™ 開発を行う場合は、[!DNL Eclipse IDE] または [!DNL IntelliJ] が望ましいでしょう。
 
 #### 重要なリンク
 
-* [****](https://code.visualstudio.com/Download)**Visual Studio Code のダウンロード**
+* **Visual Studio Code** の&#x200B;[**ダウンロード**](https://code.visualstudio.com/Download)
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - JCR コンテンツ用の FTP に似たツール
-* **[aemfed](https://aemfed.io/)** - AEMフロントエンドワークフローのスピードアップ
-* **[AEM同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — サポートされるコミュニティ&#42; Visual Studio Code の拡張
+* **[aemfed](https://aemfed.io/)** - AEM フロントエンドのワークフローを迅速化します
+* **[AEM 同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - コミュニティでサポートされている&#42; Visual Studio Code 用の拡張機能
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
 * 00:30 - Maven プロジェクトの読み込み
-* 00:53 - Maven でソースコードをビルドしてデプロイする
-* 04:03 - Repo コマンドラインツールを使用したプッシュコードの変更
-* 08:29 - Repo コマンドラインツールを使用したプルコードの変更
-* 10:40 - aemfed ツールを使用したプッシュコードの変更
-* 14:24 — トラブルシューティング、クライアントライブラリの再構築
+* 00:53 - Maven を使用したソースコードのビルドとデプロイ
+* 04:03 - Repo コマンドラインツールを使用したコード変更のプッシュ
+* 08:29 - Repo コマンドラインツールを使用したコード変更のプル
+* 10:40 - aemfed ツールを使用したコード変更のプッシュ
+* 14:24 - トラブルシューティング、クライアントライブラリの再ビルド
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) は、AEMリポジトリのブラウザーベースのビューです。 [!DNL CRXDE Lite] はAEMに埋め込まれており、開発者は、ファイルの編集、コンポーネント、ダイアログ、テンプレートの定義など、標準的な開発タスクを実行できます。 [!DNL CRXDE Lite] が ***not*** は完全な開発環境であることを目的としていますが、デバッグツールとして効果的です。 [!DNL CRXDE Lite] は、を拡張する場合や、コードベース外の製品コードを単に理解する場合に役立ちます。 [!DNL CRXDE Lite] は、リポジトリを強力に表示し、権限を効果的にテストおよび管理する方法を提供します。
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html?lang=ja) は、AEM リポジトリのブラウザーベースのビューです。[!DNL CRXDE Lite] は AEM に組み込まれており、開発者はこれを使用して、ファイルの編集や、コンポーネント、ダイアログおよびテンプレートの定義など、標準的な開発タスクを実行できます。[!DNL CRXDE Lite] は完全な開発環境を意図したものでは&#x200B;***ありません***&#x200B;が、デバッグツールとして効果的です。[!DNL CRXDE Lite] は、コードベース外の製品コードを拡張したり、単に理解したりする場合に便利です。[!DNL CRXDE Lite] は、リポジトリの強力なビューを提供し、権限を効果的にテストおよび管理する手段となります。
 
-[!DNL CRXDE Lite] コードのテストとデバッグを他の IDE と一緒に使用する必要がありますが、主な開発ツールとしては使用しないでください。 構文のサポートに制限があり、オートコンプリート機能はなく、ソース管理システムとの統合も制限されています。
+[!DNL CRXDE Lite] は、他の IDE と一緒に使用してコードのテストとデバッグを行うべきものであり、主要な開発ツールとして使用しないでください。構文のサポートに制限があり、オートコンプリート機能はなく、ソース管理システムとの統合も制限されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25917?quality=12&learn=on)
 
 ## トラブルシューティング
 
-***ヘルプ!*** コードが機能しません。 すべての開発と同様に、コードが期待どおりに動作しない場合もあります（おそらく多くの場合）。 AEMは強力なプラットフォームですが、大きな力を持ち、非常に複雑になります。 トラブルシューティングおよびトラッキングの問題を追跡する際の概要を次に示します（ただし、問題が発生する可能性のあるすべての問題のリストからは程遠いものです）。
+***助けて。*** コードが動作しません。どのような開発でも、コードが期待どおりに動作しないことは（おそらくよく）あります。AEM は強力なプラットフォームですが、強力であればあるほど、複雑さも増します。以下は、問題のトラブルシューティングとトラッキングを行う際の概要です（ただし、問題が発生する可能性がある事項を網羅したものではありません）。
 
-### コードのデプロイメントを検証
+### コードのデプロイメントの検証
 
-問題が発生した場合は、まず、コードがAEMに正常にデプロイおよびインストールされていることを確認します。
+問題が発生した場合の最初のステップは、コードが AEM に正常にデプロイされインストールされていることを確認することです。
 
-1. **チェック [!UICONTROL パッケージマネージャー]** コードパッケージがアップロードされ、インストールされていることを確認するには、次の手順を実行します。 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). タイムスタンプを調べて、パッケージが最近インストールされたことを確認します。
-1. 次のようなツールを使用して増分ファイル更新を行う場合 [!DNL Repo] または [!DNL AEM Developer Tools], **check[!DNL CRXDE Lite]** ファイルがローカルのAEMインスタンスにプッシュされ、ファイルの内容が更新されたことを示します。 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. **バンドルがアップロードされたことを確認します。** OSGi バンドル内の Java™コードに関する問題が見つかる場合。 を開きます。 [!UICONTROL Adobe Experience Manager Web コンソール]: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) お使いのバンドルを検索します。 バンドルに **[!UICONTROL アクティブ]** ステータス。 内のバンドルのトラブルシューティングに関する詳細については、以下を参照してください。 **[!UICONTROL インストール済み]** 状態。
+1. コードパッケージがアップロードされインストールされていることを、**[!UICONTROL パッケージマネージャー]**（[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)）で確認します。パッケージが最近インストールされたことを、タイムスタンプで確認します。
+1. [!DNL Repo] や [!DNL AEM Developer Tools] などのツールを使用してファイルの増分更新を行う場合は、ファイルがローカル AEM インスタンスにプッシュされていることと、ファイルの内容が更新されていることを、**[!DNL CRXDE Lite]**（[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)）で確認します。
+1. OSGi バンドル内の Java™ コードに関連する問題が発生した場合は、**バンドルがアップロードされていることを確認**&#x200B;します。[!UICONTROL Adobe Experience Manager web コンソール]（[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)）を開き、バンドルを検索します。バンドルのステータスが&#x200B;**[!UICONTROL アクティブ]**&#x200B;であることを確認します。**[!UICONTROL インストール済み]**&#x200B;状態にあるバンドルのトラブルシューティングについて詳しくは、以下を参照してください。
 
-#### ログを確認する
+#### ログの確認
 
-AEMはチャットプラットフォームで、 **error.log**. この **error.log** は、AEMのインストール先にあります。&lt; `aem-installation-folder>/crx-quickstart/logs/error.log`.
+AEM は情報提供の充実したプラットフォームであり、**error.log** に有用な情報を記録しています。**error.log** は、AEM がインストールされている場所にあります（&lt;`aem-installation-folder>/crx-quickstart/logs/error.log`）。
 
-問題を追跡するための有効な手法は、Java™コードにログステートメントを追加することです。
+問題を追跡するための有効な手法は、Java™ コードにログステートメントを追加することです。
 
 ```java
 import org.slf4j.Logger;
@@ -236,53 +236,53 @@ public class MyClass {
 }
 ```
 
-デフォルトでは、 **error.log** をログに記録するように設定 *[!DNL INFO]* ステートメント。 ログレベルを変更する場合は、次の手順で [!UICONTROL ログのサポート]: [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog). また、 **error.log** おしゃべりすぎる 以下を使用して、 [!UICONTROL ログのサポート] 指定した Java™パッケージのログ文を設定する場合。 これは、カスタムコードの問題を OOTB AEMプラットフォームの問題と簡単に分けるための、プロジェクトのベストプラクティスです。
+デフォルトでは、**error.log** は *[!DNL INFO]* ステートメントをログに記録するように設定されています。ログレベルを変更したい場合は、[!UICONTROL ログサポート]（[http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)）に移動して変更できます。また、**error.log** に含まれている情報が多すぎると感じることもあるかもしれません。その場合は、[!UICONTROL ログサポート]を使用して、指定した Java™ パッケージのみのログステートメントを設定することができます。これはプロジェクトのベストプラクティスの 1 つで、カスタムコードの問題を OOTB AEM プラットフォームの問題と簡単に切り分けるためのものです。
 
-![AEMでの設定のログ](./assets/set-up-a-local-aem-development-environment/logging.png)
+![AEM でのログ設定](./assets/set-up-a-local-aem-development-environment/logging.png)
 
 #### バンドルはインストール済み状態です {#bundle-active}
 
-すべてのバンドル（フラグメントを除く）は、 **[!UICONTROL アクティブ]** 状態。 コードバンドルが [!UICONTROL インストール済み] の場合は、解決する必要がある問題があります。 ほとんどの場合、依存関係の問題です。
+すべてのバンドル（フラグメントを除く）は&#x200B;**[!UICONTROL アクティブ]**&#x200B;状態になっている必要があります。コードバンドルが[!UICONTROL インストール済み]状態の場合は、解決すべき問題があります。ほとんどの場合、それは依存関係の問題です。
 
-![AEMでのバンドルエラー](assets/set-up-a-local-aem-development-environment/bundle-error.png)
+![AEM でのバンドルエラー](assets/set-up-a-local-aem-development-environment/bundle-error.png)
 
-上のスクリーンショットでは、 [!DNL WKND Core bundle] は [!UICONTROL インストール済み] 状態。 これは、バンドルがの別のバージョンを期待しているためです `com.adobe.cq.wcm.core.components.models` がAEMインスタンスで使用可能な場合。
+上記のスクリーンショットでは、[!DNL WKND Core bundle] は[!UICONTROL インストール済み]状態です。これは、AEM インスタンスで使用可能なバージョンとは異なるバージョンの `com.adobe.cq.wcm.core.components.models` をバンドルが想定しているからです。
 
-使用できる便利なツールは、 [!UICONTROL 依存関係ファインダー]: [http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder). AEMインスタンスで使用可能なバージョンを調べるには、Java™パッケージ名を追加します。
+使用できる便利なツールは、[!UICONTROL 依存関係ファインダー]（[http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder)）です。AEM インスタンスで使用可能なバージョンを調べるには、Java™ パッケージ名を追加します。
 
 ![コアコンポーネント](assets/set-up-a-local-aem-development-environment/core-components.png)
 
-上記の例を続けて、AEMインスタンスにインストールされているバージョンが次のようになっていることがわかります。 **12.2** vs **12.6** この包みが予期していた ここから、後方に作業して、 [!DNL Maven] AEMの依存関係が一致する [!DNL Maven] AEMプロジェクト内の依存関係。 では、上記の例 [!DNL Core Components] **v2.2.0** はAEMインスタンスにインストールされていますが、コードバンドルはに依存して構築されています。 **v2.2.2**（依存関係の問題の理由）
+上記の例を続けると、AEM インスタンスにインストールされているバージョンが、バンドルが想定していた **12.6** ではなく、**12.2** であることがわかります。そこからさかのぼって、AEM での [!DNL Maven] 依存関係が AEM プロジェクトの [!DNL Maven] 依存関係と一致するかどうかを確認できます。上記の例では、[!DNL Core Components] **v2.2.0** は AEM インスタンスにインストールされていますが、コードバンドルは **v2.2.2** に基づいてビルドされているので、依存関係の問題が発生します。
 
 #### Sling モデルの登録の検証 {#osgi-component-sling-models}
 
-AEMコンポーネントは、 [!DNL Sling Model] ：あらゆるビジネスロジックをカプセル化し、HTL レンダリングスクリプトをクリーンなままにします。 Sling モデルが見つからない問題が発生した場合は、 [!DNL Sling Models] コンソールから： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). これにより、Sling モデルが登録されているかどうか、および関連付けられているリソースタイプ（コンポーネントパス）がわかります。
+AEM コンポーネントは、ビジネスロジックをカプセル化し、HTL レンダリングスクリプトがクリーンなままであることを保証するために、[!DNL Sling Model] をベースにする必要があります。Sling モデルが見つからないという問題が発生した場合は、コンソール（[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)）で [!DNL Sling Models] を確認すると役に立つ場合があります。これにより、Sling モデルが登録されているかどうかと、モデルが関連付けられているリソースタイプ（コンポーネントパス）がわかります。
 
 ![Sling モデルのステータス](assets/set-up-a-local-aem-development-environment/sling-model-status.png)
 
-登録を表示します [!DNL Sling Model], `BylineImpl` コンポーネントのリソースタイプ ( `wknd/components/content/byline`.
+`wknd/components/content/byline` というコンポーネントリソースタイプに関連付けられている [!DNL Sling Model] である `BylineImpl` の登録を示します。
 
 #### CSS または JavaScript の問題
 
-CSS や JavaScript のほとんどの問題に対して、ブラウザーの開発ツールを使用することが、最も効果的なトラブルシューティング方法です。 AEMオーサーインスタンスに対して開発する際の問題を絞り込むには、「公開済みとして」ページを表示すると便利です。
+CSS や JavaScript のほとんどの問題については、ブラウザーの開発ツールを使用することが、最も効果的なトラブルシューティング方法です。AEM オーサーインスタンスに対して開発する際の問題を絞り込むには、「公開済みとして」ページを表示すると便利です。
 
 ![CSS または JS の問題](assets/set-up-a-local-aem-development-environment/css-and-js-issues.png)
 
-を開きます。 [!UICONTROL ページプロパティ] メニューとクリック [!UICONTROL 公開済みとして表示]. AEM Editor がなく、クエリパラメーターがに設定されたページが開きます。 **wcmmode=disabled**. これにより、AEMオーサリング UI が効果的に無効になり、フロントエンドの問題のトラブルシューティングやデバッグが容易になります。
+[!UICONTROL ページプロパティ]メニューを開き、「[!UICONTROL 公開済みとして表示]」をクリックします。これにより、AEM エディターを含まず、クエリパラメーターが **wcmmode=disabled** に設定されたページが開きます。これにより、AEM オーサリング UI が効果的に無効になり、フロントエンドの問題のトラブルシューティングやデバッグがはるかに容易になります。
 
-フロントエンドコードの開発時に発生する別の一般的な問題として、古い、または古い CSS/JS が読み込まれている場合があります。 最初の手順として、ブラウザー履歴がクリアされていることを確認し、必要に応じて匿名ブラウザーまたは新しいセッションを開始します。
+フロントエンドコードを開発するときによく発生するもう 1 つの問題は、古い CSS や JS が読み込まれることです。最初の手順として、ブラウザー履歴がクリアされていることを確認し、必要に応じて匿名ブラウザーまたは新しいセッションを開始します。
 
 #### クライアントライブラリのデバッグ
 
-カテゴリや埋め込みの様々な方法で複数のクライアントライブラリを含めると、トラブルシューティングが面倒になる場合があります。 AEM はそのためにいくつかのツールを公開しています。最も重要なツールの 1 つは、 [!UICONTROL クライアントライブラリの再構築] これにより、AEMはすべての LESS ファイルを再コンパイルし、CSS を生成します。
+複数のクライアントライブラリを組み込むために、カテゴリや埋め込みの様々な方法を使用すると、トラブルシューティングが面倒になります。AEM では、そのような場合に役立つツールをいくつか公開しています。最も重要なツールの 1 つは、[!UICONTROL クライアントライブラリの再ビルド]です。これにより、AEM はすべての LESS ファイルを強制的に再コンパイルし、CSS を生成します。
 
-* [ライブラリのダンプ](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - AEMインスタンスに登録されているすべてのクライアントライブラリをリストします。 &lt;host>/libs/granite/ui/content/dumplibs.html
-* [出力テスト](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - カテゴリ別を含む、clientlib の予想される HTML 出力を確認します。&lt;host>/libs/granite/ui/content/dumplibs.test.html
+* [ライブラリのダンプ](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - AEM インスタンスに登録されているすべてのクライアントライブラリを一覧表示します。&lt;host>/libs/granite/ui/content/dumplibs.html
+* [出力テスト](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - clientlib のインクルードの予想される HTML 出力をカテゴリ別に確認できます。&lt;host>/libs/granite/ui/content/dumplibs.test.html
 * [ライブラリの依存関係の検証](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) - 見つからないすべての依存関係または埋め込みカテゴリを強調表示します。&lt;host>/libs/granite/ui/content/dumplibs.validate.html
-* [クライアントライブラリの再構築](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - AEMに対し、すべてのクライアントライブラリを強制的に再構築するか、クライアントライブラリのキャッシュを無効にすることができます。 このツールでは、AEM が生成された CSS を強制的に再コンパイルするので、LESS を使用した開発において特に効果的です。一般に、キャッシュを無効にしてからページの更新を実行する方が、すべてのライブラリを再構築するよりも効果的です。 &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
+* [クライアントライブラリの再ビルド](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - すべてのクライアントライブラリの再ビルドまたはクライアントライブラリのキャッシュの無効化を AEM に強制的に行わせることができます。このツールは、生成された CSS を AEM に強制的に再コンパイルさせるので、LESS を使用した開発の際に効果的です。一般的に、キャッシュを無効化してからページの更新を行う方が、すべてのライブラリを再ビルドするよりも効果的です。&lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
 
-![clientlib のデバッグ](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
+![clientlibs のデバッグ](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
 
 >[!NOTE]
 >
->常に [!UICONTROL クライアントライブラリの再構築] ツールを使用する場合は、すべてのクライアントライブラリを 1 回再構築するだけの価値がある場合があります。 この処理には約 15 分かかりますが、通常は将来のキャッシュの問題が解消されます。
+>[!UICONTROL クライアントライブラリの再ビルド]ツールを使用して、絶えずキャッシュを無効化する必要がある場合は、すべてのクライアントライブラリを 1 回再ビルドするだけの価値があるかもしれません。この処理には約 15 分かかりますが、実行すれば、通常は、今後発生する可能性のあるキャッシュの問題が解消されます。

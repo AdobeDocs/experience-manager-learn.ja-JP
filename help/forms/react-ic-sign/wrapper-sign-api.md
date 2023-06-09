@@ -1,6 +1,6 @@
 ---
-title: 署名用にユーザーに提示する Web フォームを作成します
-description: AEMバンドルを作成して、この使用例に必要なAcrobat署名メソッドを公開します。
+title: 署名用にユーザーに提示する web フォームを作成します
+description: ユースケースに必要な Acrobat Sign メソッドを公開する AEM バンドルを作成します。
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,21 +12,21 @@ exl-id: b7ddc0bd-db93-44e0-83cc-bccde604bd91
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
-# Acrobat Sign REST API 用のラッパーの作成
+# Acrobat Sign REST API のラッパーの作成
 
-Web フォームを作成してエンドユーザーに返すためのカスタムAEMバンドルが開発されました。
+Web フォームを作成してエンドユーザーに返すためのカスタム AEM バンドルが開発されました。
 
-* [一時的なドキュメントを作成](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). この呼び出しでアップロードされたドキュメントは、アップロード後 7 日間のみ使用できるので、一時的なドキュメントと呼ばれます。 返された一時的なドキュメント ID は、アップロードされたファイルを参照する必要がある API 呼び出しで使用できます。 一時的なドキュメント要求は、ファイル名、MIME タイプ、ファイルストリームの 3 つの部分で構成されるマルチパート要求です。 このリクエストでは、一度に 1 つのファイルのみアップロードできます。
-* [Web フォームを作成](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).これは、新しい Web フォームの作成に使用されるプライマリエンドポイントです。 Web フォームは ACTIVE 状態で作成され、Web フォームを直ちにホストします。
-* [Web フォームの取得](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets)ユーザーの Web フォームを取得します。 この Web フォームは、ドキュメントの署名用に呼び出し元のアプリケーションに表示されます。
+* [一時的なドキュメントを作成](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)。この呼び出しでアップロードされたドキュメントは、アップロード後 7 日間のみ使用できるので、一時的なドキュメントと呼ばれます。返された一時的なドキュメント ID は、アップロードされたファイルを参照する必要がある API 呼び出しで使用できます。一時的なドキュメントのリクエストは、ファイル名、MIME タイプ、ファイルストリームの 3 つの部分で構成されるマルチパートリクエストです。このリクエストでは、一度に 1 つのファイルのみアップロードできます。
+* [Web フォームを作成](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)。これは、新しい web フォームの作成に使用されるプライマリエンドポイントです。Web フォームはアクティブ状態で作成され、web フォームを直ちにホストします。
+* [Web フォームを取得](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets)。ユーザーの web フォームを取得します。この web フォームは、ドキュメントに署名するために呼び出し元のアプリケーションに表示されます。
 
 ## Acrobat Sign OSGi 設定の作成
 
-Acrobat Sign REST API では、統合キーと統合キーに関連付けられた電子メールが必要です。 これら 2 つの値は、次に示すように、OSGi 設定プロパティとして提供されます
+Acrobat Sign REST API には、統合キーと統合キーに関連付けられているメールが必要です。これら 2 つの値は、次に示すように、OSGi 設定プロパティとして指定します。
 
 ![sign-configuration](assets/sign-configuration.png)
 
@@ -159,7 +159,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## ウィジェット URL の取得
+## ウィジェット URL を取得
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {

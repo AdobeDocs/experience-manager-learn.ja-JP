@@ -13,13 +13,13 @@ last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 80%
+ht-degree: 95%
 
 ---
 
 # Web ページへのアダプティブフォームまたは HTML5 フォームの埋め込み
 
-埋め込まれたアダプティブフォームではすべての機能を使用できるので、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページ上の他の要素のコンテキストにとどまり、同時にフォームを操作できます。
+埋め込まれたアダプティブフォームではすべての機能を使用できるので、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは web ページの他の要素から離れることなく、同時にフォームの操作も行うことができます。
 
 次のビデオでは、web ページにアダプティブフォームまたはHTML5 フォームを埋め込むために必要な手順を説明しています。
 最適な前提条件やベストプラクティスなどについては、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html)を参照してください。

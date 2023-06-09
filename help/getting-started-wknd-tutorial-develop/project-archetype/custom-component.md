@@ -14,7 +14,7 @@ exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
 source-wordcount: '4057'
-ht-degree: 93%
+ht-degree: 99%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 93%
 1. Sling モデルを使用してビジネスロジックをカプセル化する方法を学びます。
 1. HTL スクリプト内から Sling モデルを使用する方法を理解します。
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 WKND チュートリアルのこのパートでは、記事の投稿者に関する作成済みの情報を表示するために使用する署名コンポーネントを作成します。
 
@@ -79,9 +79,9 @@ WKND チュートリアルのこのパートでは、記事の投稿者に関す
 
 ## 署名コンポーネントの作成 {#create-byline-component}
 
-最初に、署名コンポーネントノード構造を作成し、ダイアログを定義します。これはAEMのコンポーネントを表し、JCR 内の場所によってコンポーネントのリソースタイプを暗黙的に定義します。
+最初に、署名コンポーネントノード構造を作成し、ダイアログを定義します。これは、AEM のコンポーネントを表し、JCR 内のその場所によってコンポーネントのリソースタイプを暗黙的に定義します。
 
-ダイアログには、コンテンツ作成者が提供できるインターフェイスが表示されます。 この実装では、AEM WCM コアコンポーネントの&#x200B;**画像**&#x200B;コンポーネントを署名の画像のオーサリングとレンダリングの処理に活用し、このコンポーネントの `sling:resourceSuperType` として設定します。
+ダイアログは、コンテンツ作成者が提供できるインターフェイスを表示します。この実装では、AEM WCM コアコンポーネントの&#x200B;**画像**&#x200B;コンポーネントを署名の画像のオーサリングとレンダリングの処理に活用し、このコンポーネントの `sling:resourceSuperType` として設定します。
 
 ### コンポーネント定義の作成 {#create-component-definition}
 
@@ -121,11 +121,11 @@ WKND チュートリアルのこのパートでは、記事の投稿者に関す
 
 ### ダイアログ定義の作成 {#create-the-dialog-definition}
 
-次に、次のフィールドを使用して署名コンポーネントのダイアログを定義します。
+次に、以下のフィールドを含む、署名コンポーネント用のダイアログを定義します。
 
-* **名前**:投稿者の名前を示すテキストフィールドです。
-* **画像**:投稿者の自己紹介画像への参照。
-* **職業**:貢献者に起因する職業のリスト。 職業はアルファベット順 (a ～ z) に並べ替える必要があります。
+* **名前**：寄稿者の名前のテキストフィールド。
+* **画像**：寄稿者の自己紹介写真への参照。
+* **職業**：寄稿者に起因する職業のリスト。職業は、アルファベットの昇順（a～z）で並べ替えられる必要があります。
 
 1. `byline` フォルダーで、`_cq_dialog` という名前のフォルダーを作成します。
 1. `byline/_cq_dialog` 内で、`.content.xml` という名前のファイルを追加します。これは、ダイアログの XML 定義です。 次の XML コードを追加します。
@@ -203,9 +203,9 @@ WKND チュートリアルのこのパートでは、記事の投稿者に関す
 
    ![署名用の完了ダイアログ](assets/custom-component/byline-dialog-created.png)
 
-### ポリシーダイアログを作成する {#create-the-policy-dialog}
+### ポリシーダイアログの作成 {#create-the-policy-dialog}
 
-ダイアログの作成と同じ方法に従って、ポリシーダイアログ（旧称：デザインダイアログ）を作成し、コアコンポーネントの画像コンポーネントから継承されたポリシー設定の不要なフィールドを非表示にします。
+ダイアログ作成と同じ方法でポリシーダイアログ（以前のデザインダイアログ）を作成して、コアコンポーネントの画像コンポーネントから継承されたポリシー設定の不要なフィールドを非表示にします。
 
 1. `byline` フォルダーで、`_cq_design_dialog` という名前のフォルダーを作成します。
 1. `byline/_cq_design_dialog` 内で、`.content.xml` という名前のファイルを追加します。ファイルを次のように更新します。次の XML を使用します。 `.content.xml` を開いて、以下の XML をコピー＆ペーストすると簡単です。
@@ -510,9 +510,9 @@ Sling Model は、JCR から Java™ 変数へのデータのマッピングを�
    * `@Model` 注釈は、AEM にデプロイされる際に、BylineImpl を Sling Model として登録します。
    * `adaptables` パラメーターは、このモデルがリクエストによって適合できることを指定します。
    * `adapters` パラメーターを使用すると、実装クラスを署名インターフェイスの下に登録できます。これにより、HTL スクリプトは（実装を直接呼び出すのではなく）インターフェイスを介して Sling Model を呼び出すことができます。アダプターについて詳しくは、[こちら](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)を参照してください。
-   * `resourceType` は（既に作成した）署名コンポーネントリソースタイプを指し、複数の実装がある場合に正しいモデルを解決するのに役立ちます。[モデルクラスとリソースタイプの関連付けについて詳しくは、こちらを参照してください。](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130).
+   * `resourceType` は（既に作成した）署名コンポーネントリソースタイプを指し、複数の実装がある場合に正しいモデルを解決するのに役立ちます。[モデルクラスのリソースタイプとの関連付けについて詳しくは、こちらを参照してください](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)。
 
-### Sling モデルメソッドの実装 {#implementing-the-sling-model-methods}
+### Sling Model メソッドの実装 {#implementing-the-sling-model-methods}
 
 #### getName() {#implementing-get-name}
 
@@ -874,9 +874,9 @@ public class BylineImpl implements Byline {
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
    ```
 
-   CSS クラスは、 [BEM 命名規則](https://getbem.com/naming/). BEM 規則の使用は必須ではありませんが、コアコンポーネントの CSS クラスで使用され、通常はクリーンで読み取り可能な CSS ルールになるので、BEM をお勧めします。
+   CSS クラスは [BEM 命名規則](https://getbem.com/naming/)に従うことに注意してください。BEM 規則の使用は必須ではありませんが、コアコンポーネント CSS クラスで使用され、一般的にクリーンで読みやすい CSS ルールになるので、BEM をお勧めします。
 
-### HTL での Sling モデルオブジェクトのインスタンス化 {#instantiating-sling-model-objects-in-htl}
+### HTL での Sling Model オブジェクトのインスタンス化 {#instantiating-sling-model-objects-in-htl}
 
 [Use ブロックステートメント](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use)は、HTL スクリプトで Sling モデルオブジェクトをインスタンス化し、HTL スクリプトを HTL 変数に割り当てるために使用されます。
 
@@ -894,7 +894,7 @@ public class BylineImpl implements Byline {
 
 ### Sling モデルメソッドへのアクセス {#accessing-sling-model-methods}
 
-HTL は JSTL から借用し、Java™ゲッターメソッド名を同じ短縮したものを使用します。
+HTL は JSTL から借用し、同じ Java™ getter メソッド名の短縮形を使用します。
 
 例えば、署名 Sling モデルの `getName()` メソッドの呼び出しは `byline.name` に短縮でき、同様に `byline.isEmpty` の代わりに `byline.empty` に短縮できます。完全なメソッド名 `byline.getName` または `byline.isEmpty` を使用しても機能します。`()` は、HTL でメソッドを呼び出すために使用されません（JSTL と同様）。
 
@@ -914,13 +914,13 @@ HTL は JSTL から借用し、Java™ゲッターメソッド名を同じ短縮
 
 式は、HTL 式の `@` 演算子を使用して追加されます。
 
-1. 職業のリストを「,」で結合するには、次のコードを使用します。
+1. 職業のリストを「,」で結合するには、以下のコードを使用します。
 
    ```html
    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
    ```
 
-### プレースホルダーを条件付きで表示する {#conditionally-displaying-the-placeholder}
+### プレースホルダーの条件付き表示 {#conditionally-displaying-the-placeholder}
 
 AEM コンポーネントのほとんどの HTL スクリプトでは、**プレースホルダーパラダイム**&#x200B;を使用して、**コンポーネントが誤って作成されており AEM パブリッシュに表示されないことを作成者に視覚的に提示します**。この判断を推進するには、コンポーネントの背後の Sling モデル（この場合は `Byline.isEmpty()`）にメソッドを実装する必要があります。
 
@@ -1016,7 +1016,7 @@ AEM コンポーネントのほとんどの HTL スクリプトでは、**プレ
 
 ### Sling モデル登録の確認 {#reviewing-the-sling-model-registration}
 
-この [AEM Web コンソールの Sling Models Status ビュー](http://localhost:4502/system/console/status-slingmodels) には、AEMに登録されているすべての Sling モデルが表示されます。 署名 Sling モデルは、このリストを確認することで、インストール済みとして検証され、認識されます。
+[AEM Web コンソールの Sling モデルステータス表示](http://localhost:4502/system/console/status-slingmodels)には、AEM に登録されたすべての Sling モデルが表示されます。署名 Sling モデルは、このリストを確認することで、インストールされ、認識されていることを検証できます。
 
 **BylineImpl** がこのリストに表示されない場合、Sling モデルの注釈に関する問題か、モデルがコアプロジェクトの正しいパッケージ（`com.adobe.aem.guides.wknd.core.models`）に追加されなかった可能性があります。
 

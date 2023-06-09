@@ -23,7 +23,7 @@ AEM 6.4.2 では、Adobe Stock アセットを AEM から直接検索、プレ�
 
 >[!NOTE]
 >
->この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新のサービスパック 2 を展開した AEM 6.4 が必要です。AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。
+>この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新のサービスパック 2 をデプロイした AEM 6.4 が必要です。AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。
 
 Adobe Stock と AEM Assets の統合により、コンテンツ作成者とマーケティング担当者は、クリエイティブまたはマーケティングの目的で、簡単にストックアセットのライセンスを取得して使用できるようになります。オムニサーチを使用して、場所フィルターを Adobe Stock として追加するか、AEM Assets のメインナビゲーションをナビゲートして Adobe Stock Coral UI を検索アイコンをクリックすることにより、ストックアセット検索を実行できます。
 
@@ -33,15 +33,15 @@ Adobe Stock と AEM Assets の統合により、コンテンツ作成者とマ�
 
 * AEM ワークスペースを離れることなく、Adobe Stock アセットの検索を実行します。
 * アセットのライセンスを取得することなく、Adobe Stock アセットをプレビュー用に保存します。
-* Adobe Stock アセットのライセンスを取得して AEM Assets に保存する機能
-* AEM Assets UI 内で Adobe Stock から類似のアセットを検索する機能
+* Adobe Stock アセットのライセンスを取得して AEM Assets に保存する機能。
+* AEM Assets UI 内で Adobe Stock から類似のアセットを検索する機能。
 * Adobe Stock web サイトの AEM Assets 内での Stock 検索から選択したアセットを表示します。
 * ライセンス済みアセットファイルには、識別しやすい青いライセンス済みバッジが付きます。
 
 ### アセットメタデータ
 
 * ライセンス済みアセットは AEM Assets に保存されます。アセットのプロパティには、別個のアセットメタデータタブの下にある Stock メタデータが含まれます。
-* アセットのメタデータにライセンス参照を追加する機能
+* アセットのメタデータにライセンス参照を追加する機能。
 
 ### アセット Stock プロファイル
 

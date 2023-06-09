@@ -13,7 +13,7 @@ exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -32,7 +32,7 @@ _この章の IDE スクリーンショットは、[Visual Studio Code](https://
 
 次のソフトウェアがインストールされている必要があります。
 
-- [Node.js v18](https://nodejs.org/ja)
+- [Node.js v18](https://nodejs.org/ja/en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目的
@@ -71,6 +71,7 @@ React アプリを取得するには：
 1. `.env.development` を更新して、AEM as a Cloud Service のパブリッシュサービスに接続します。
 
    - `REACT_APP_HOST_URI` の値を AEM as a Cloud Service の公開 URL（例：`REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`）に設定し、`REACT_APP_AUTH_METHOD` の値を `none` に設定します。
+
    >[!NOTE]
    >
    > プロジェクト設定、コンテンツフラグメントモデル、作成したコンテンツフラグメント、GraphQL エンドポイントおよび前の手順からの永続クエリが公開されていることを確認します。
@@ -94,7 +95,7 @@ React アプリを取得するには：
 
 >[!IMPORTANT]
 >
->   この React アプリは部分的に実装されています。 このチュートリアルの手順に従って、実装を完了します。 実装が必要な JavaScript ファイルには次のコメントが含まれています。これらのファイルのコードを、必ずこのチュートリアルで指定したコードで追加または更新してください。
+>   この React アプリは部分的に実装されています。このチュートリアルの手順に従って、実装を完了します。実装が必要な JavaScript ファイルには次のコメントが含まれています。これらのファイルのコードを、必ずこのチュートリアルで指定したコードで追加または更新してください。
 >
 >
 > //*********************************
@@ -102,6 +103,7 @@ React アプリを取得するには：
 >  // TODO ::これを実装するには、AEM ヘッドレスチュートリアルの手順に従います。
 >
 >  //*********************************
+>
 
 ## React アプリの詳細な構造
 
@@ -143,7 +145,7 @@ export default aemHeadlessClient;
 
 ## AEM GraphQL 永続クエリの実行の実装
 
-汎用を実装するには `fetchPersistedQuery(..)` 関数を使用してAEM GraphQLで永続化されたクエリを実行すると、 `usePersistedQueries.js` ファイル。 この `fetchPersistedQuery(..)` 関数は `aemHeadlessClient` オブジェクトの `runPersistedQuery()` 関数を使用して、promise ベースの動作でクエリを非同期で実行します。
+汎用の `fetchPersistedQuery(..)` 関数を実装して AEM GraphQL 永続クエリを実行するには、`usePersistedQueries.js` ファイルを開きます。この `fetchPersistedQuery(..)` 関数は `aemHeadlessClient` オブジェクトの `runPersistedQuery()` 関数を使用して、promise ベースの動作でクエリを非同期で実行します。
 
 後で、カスタムの React `useEffect` フックはこの関数を呼び出して、AEM から特定のデータを取得します。
 
@@ -490,7 +492,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 内部の仕組み
 
-ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象 `all-teams` リクエスト。GraphQL API リクエストに注意してください。 `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI` ( 例： <https://publish-p123-e456.adobeaemcloud.com>) をクリックします。 リクエストは、React アプリのドメインに対しておこなわれます。 [プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) は次を使用して有効になっています： `http-proxy-middleware` モジュール。
+ブラウザーの&#x200B;**開発者ツール**／**ネットワーク**&#x200B;と `all-teams` リクエストの&#x200B;_フィルター_&#x200B;を開きます。GraphQL API リクエスト `/graphql/execute.json/my-project/all-teams` は `http://localhost:3000` に対して実行され、`REACT_APP_HOST_URI` の値（例：<https://publish-p123-e456.adobeaemcloud.com>）に対しては実行&#x200B;**されない**&#x200B;ことがわかります。リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
 
 
 ![プロキシを介した GraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
@@ -505,7 +507,7 @@ module.exports = function(app) {
   ...
 ```
 
-ローカルプロキシの使用は、実稼動のデプロイメントに適したオプションではありません。詳しくは、 _実稼動のデプロイメント_ 」セクションに入力します。
+なお、ローカルプロキシの使用は、実稼動デプロイメントに適したオプションではありません。詳しくは、_実稼動デプロイメント_&#x200B;の節を参照してください。
 
 ## おめでとうございます。{#congratulations}
 

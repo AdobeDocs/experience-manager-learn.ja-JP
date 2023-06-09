@@ -11,20 +11,21 @@ last-substantial-update: 2019-03-20T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
 # AEM Forms とのユーザープロファイルデータ統合の使用{#using-user-profile-data-integration-with-aem-forms}
 
-AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。次のものが標準でサポートされています。 ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
+AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のデータソースが標準でサポートされています。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
 リレーショナルデータベース - MySQL、Microsoft SQL Server、IBM DB2、Oracle RDBMS
 
 1. AEM ユーザープロファイル
 1. RESTful Web サービス
-1. SOAP ベースの Web サービス
-1. OData サービスこの記事では、AEMユーザープロファイル情報と Adaptive Formsの統合について説明します。
+1. SOAP ベースの web サービス
+1. OData サービス
+この記事では、AEM ユーザープロファイル情報とアダプティブフォームの統合について重点的に説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432?quality=12&learn=on)
 

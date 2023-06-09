@@ -14,7 +14,7 @@ exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 94%
 
 * HTML と JavaScript の基本的なスキル
 * 以下のツールをローカルにインストールする必要があります。
-   * [Node.js v18](https://nodejs.org/)
+   * [Node.js v18](https://nodejs.org/ja/)
    * [Git](https://git-scm.com/)
    * IDE（例：[Microsoft® Visual Studio Code](https://code.visualstudio.com/)）
 
@@ -57,4 +57,4 @@ ht-degree: 94%
 
 ソースコードとコンテンツパッケージは、[AEM Guides - WKND GraphQL GitHub プロジェクト](https://github.com/adobe/aem-guides-wknd-graphql)で入手することができます。
 
-チュートリアルまたはコードに問題がある場合は、 [GitHub の問題](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+チュートリアルまたはコードに問題が見つかった場合は、[GitHub イシュー](https://github.com/adobe/aem-guides-wknd-graphql/issues)を報告してください。

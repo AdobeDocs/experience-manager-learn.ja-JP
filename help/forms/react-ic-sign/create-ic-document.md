@@ -1,5 +1,5 @@
 ---
-title: API を使用してインタラクティブ通信ドキュメントを生成する
+title: API を使用したインタラクティブ通信ドキュメントの生成
 description: React アプリからデータを結合してインタラクティブ通信ドキュメントを生成する
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
@@ -12,18 +12,18 @@ exl-id: d97ff584-7fa0-48bc-9b83-ba45c26b7d87
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
 source-wordcount: '113'
-ht-degree: 24%
+ht-degree: 91%
 
 ---
 
 # インタラクティブ通信ドキュメントの生成
 
-API を使用してインタラクティブ通信ドキュメントを生成するには、次の手順を実行する必要があります
+API を使用してインタラクティブ通信ドキュメントを生成するには、次の手順を実行する必要があります。
 
 * 事前入力サービスの作成
 * インタラクティブ通信ドキュメントの生成
 
-サービス名 `ccm-print-test` は、このサービスへのアクセスに使用されます。 この事前入力サービスを定義したら、サーブレットまたはワークフロープロセスステップの実装でこのサービスにアクセスすると、印刷チャネルドキュメントを生成できます。
+このサービスにアクセスするには、サービス名「`ccm-print-test`」を使用します。この事前入力サービスを定義したら、サーブレットまたはワークフロープロセスステップの実装でこのサービスにアクセスすると、印刷チャネルドキュメントを生成できます。
 
 ```java
 package com.acrobatsign.core;
@@ -278,7 +278,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## ウィジェット URL の取得
+## ウィジェット URL を取得
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {

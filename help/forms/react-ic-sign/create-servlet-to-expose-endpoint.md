@@ -1,6 +1,6 @@
 ---
-title: Web フォームの URL を返すために呼び出すことができるエンドポイントを公開します
-description: AEMサーブレットを作成して Web フォームの URL を返す
+title: 呼び出されて web フォーム URL を返すことができるエンドポイントの公開
+description: Web フォーム URL を返す AEM サーブレットを作成します
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,13 +12,13 @@ exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 2%
+ht-degree: 80%
 
 ---
 
 # Acrobat Sign Web フォーム URL を作成
 
-次のコードは、POSTエンドポイントを公開するために記述されました。 このエンドポイントは、送信されたデータから icTemplateName を抽出し、エンドユーザーが署名するためのAcrobat Sign Web フォーム URL を返します。
+次のコードは、POST エンドポイントを公開するためのものです。このエンドポイントは、送信されたデータから icTemplateName を抽出し、エンドユーザーが署名するための Acrobat Sign web フォーム URL を返します。
 
 
 ```java

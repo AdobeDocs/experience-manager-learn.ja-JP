@@ -11,7 +11,7 @@ index: y
 source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
 workflow-type: tm+mt
 source-wordcount: '1825'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -238,7 +238,7 @@ ht-degree: 81%
    + [5 — フォームをカード形式で表示する](headless-forms/display-forms-card-view.md)
    + [6 — 選択したフォームを表示](headless-forms/open-form-card-view.md)
 
-+ FormsおよびAcrobat Signを使用した React アプリ {#react-ic-sign}
++ React アプリと Forms および Acrobat Sign の連携 {#react-ic-sign}
    + [1 — はじめに](react-ic-sign/introduction.md)
    + [2 — ドキュメントを生成](react-ic-sign/create-ic-document.md)
    + [3 - Acrobat Sign API ラッパー](react-ic-sign/wrapper-sign-api.md)
