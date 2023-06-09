@@ -14,9 +14,9 @@ thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1678'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 90%
 1. BEM 表記と、それを使用してスタイルのスコープを慎重に設定する方法について学びます。
 1. 編集可能なテンプレートを使用して詳細なポリシー設定を適用します。
 
-## 作成する内容 {#what-build}
+## 作ろうとしているもの {#what-build}
 
 この章では、[スタイルシステム機能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=ja)を使用して、Article ページで使用される&#x200B;**タイトル**&#x200B;コンポーネントと&#x200B;**テキスト**&#x200B;コンポーネントのバリエーションを作成します。
 
@@ -77,9 +77,9 @@ ht-degree: 90%
 
 ## 背景 {#background}
 
-この [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja) 開発者およびテンプレートエディターは、コンポーネントの複数の視覚的バリエーションを作成できます。 作成者は、次に、ページの構成時に使用するスタイルを決定できます。 チュートリアルではこの後、ローコードアプローチでコアコンポーネントを使用しつつ、スタイルシステムを使用していくつかの独自のスタイルを実現します。
+[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)により、開発者およびテンプレート編集者はコンポーネントの複数の視覚的バリエーションを作成できます。次に、作成者はページを構成する際に、使用するスタイルを決定できます。チュートリアルではこの後、ローコードアプローチでコアコンポーネントを使用しつつ、スタイルシステムを使用していくつかの独自のスタイルを実現します。
 
-スタイルシステムの一般的な概念は、作成者がコンポーネントの外観の様々なスタイルを選択できるということです。 「スタイル」は、コンポーネントの外側の div に挿入される追加の CSS クラスに基づいています。 クライアントライブラリでは、コンポーネントの外観が変わるように、これらのスタイルクラスに基づいて CSS ルールが追加されます。
+スタイルシステムの大まかな考え方は、コンポーネントの表示について、作成者が様々なスタイルを選択できるようにすることです。「スタイル」は、コンポーネントの外側の div に挿入された追加の CSS クラスをベースに実現されます。これらのスタイルクラスに基づいて、CSS ルールがクライアントライブラリに追加され、コンポーネントの外観が変更されるようになります。
 
  [スタイルシステムに関する詳細なドキュメントについては、こちら](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=ja)を参照してください。[スタイルシステムを理解するための優れたテクニカルビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html?lang=ja)も用意されています。
 
@@ -183,9 +183,9 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >スタイルを常にターゲットコンポーネントに厳密にスコープ設定することをお勧めします。 これにより、余分なスタイルがページの他の領域に影響を与えることを防ぐことができます。
+   >スタイルを常にターゲットコンポーネントで使用する範囲に収めることは、ベストプラクティスと見なされます。これにより、ページの他の領域が余分なスタイルの影響を受けることを回避できます。
    >
-   >すべてのコアコンポーネントは、**[BEM 記法](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)に準拠しています。**&#x200B;コンポーネントのデフォルトのスタイルを作成する際に、外部の CSS クラスをターゲットにすることをお勧めします。 もう 1 つのベストプラクティスは、コアコンポーネントの BEM 表記で指定されたクラス名を、HTML要素ではなくターゲットにすることです。
+   >すべてのコアコンポーネントは、**[BEM 記法](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)に準拠しています。**&#x200B;ベストプラクティスとして、コンポーネントのデフォルトスタイルを作成する際は、外部の CSS クラスを指定します。また、HTML 要素ではなく、コアコンポーネントの BEM 記法で指定されたクラス名を指定することが推奨されます。
 
 1. ブラウザーと AEM ページに戻ります。アンダーラインスタイルが追加されていることがわかります。
 
