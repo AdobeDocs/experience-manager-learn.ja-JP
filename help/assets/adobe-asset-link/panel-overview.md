@@ -1,6 +1,6 @@
 ---
-title: AdobeAsset Link パネルの概要
-description: AdobeAsset Link を使用すると、クリエイティブユーザーは、InDesign、PhotoshopおよびIllustratorのアプリ内パネルを使用して、AEM Assetsに保存されているアセットを参照、検索、チェックアウトおよびチェックインできます。 Adobeアセットリンクパネルの UI とその機能について説明します。
+title: Adobe Asset Link パネルの概要
+description: Adobe Asset Link を使用すると、クリエイティブユーザーは、InDesign、Photoshop および Illustrator のアプリ内パネルを使用して、AEM Assets に保存されているアセットを参照、検索、チェックアウトおよびチェックインすることができます。Adobe Asset Link パネルの UI とその機能について紹介します。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -11,14 +11,14 @@ role: User
 level: Beginner
 exl-id: ba8d0cd1-b7d2-4628-a069-5ef21cc214c6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AdobeAsset Link パネルの概要 {#adobe-asset-link-panel-overview}
+# Adobe Asset Link パネルの概要 {#adobe-asset-link-panel-overview}
 
-AdobeAsset Link を使用すると、クリエイティブユーザーは、InDesign、PhotoshopおよびIllustratorのアプリ内パネルを使用して、AEM Assetsに保存されているアセットを参照、検索、チェックアウトおよびチェックインできます。 Adobeアセットリンクパネルの UI とその機能について説明します。
+Adobe Asset Link を使用すると、クリエイティブユーザーは、InDesign、Photoshop および Illustrator のアプリ内パネルを使用して、AEM Assets に保存されているアセットを参照、検索、チェックアウトおよびチェックインすることができます。Adobe Asset Link パネルの UI とその機能について紹介します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
