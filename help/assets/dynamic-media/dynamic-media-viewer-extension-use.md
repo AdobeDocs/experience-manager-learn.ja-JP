@@ -1,6 +1,6 @@
 ---
-title: Adobe AnalyticsとAdobeLaunch でのDynamic Media Viewers の使用
-description: Dynamic Media ビューア 5.13 のリリースと共に、Adobe Launch の Dynamic Media ビューア拡張機能を使用すると、Dynamic Media、Adobe Analytics、Adobe Launch のユーザーは、Adobe Launch 設定で Dynamic Media ビューア固有のイベントとデータを使用できます。
+title: Dynamic Media Viewer と Adobe Analytics および Adobe Experience Platform Launch の使用
+description: Dynamic Media ビューア 5.13 のリリースと共に、Adobe Launch の Dynamic Media ビューア拡張機能を使用すると、Dynamic Media、Adobe Analytics、Adobe Experience Platform Launch のユーザーは、Adobe Experience Platform Launch 設定で Dynamic Media ビューア固有のイベントとデータを使用できます。
 sub-product: Dynamic Media
 feature: Asset Insights
 version: 6.4, 6.5
@@ -9,27 +9,27 @@ role: User
 level: Beginner
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '360'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# Adobe AnalyticsとAdobeLaunch でのDynamic Media Viewers の使用{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Dynamic Media Viewer と Adobe Analytics および Adobe Experience Platform Launch の使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-Dynamic MediaとAdobe Analyticsを使用しているお客様は、Dynamic Mediaビューア拡張機能を使用して、Web サイト上でのDynamic Mediaビューアの使用状況を追跡できるようになりました。
+Dynamic Media と Adobe Analytics をご利用のお客様は、Dynamic Media Viewer 拡張機能を使用して、web サイト上での Dynamic Media Viewer の使用状況を追跡できるようになりました。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
 >[!NOTE]
 >
-> この機能では、Dynamic Media Scene7モードでAdobe Experience Managerを実行します。 また、 [Adobe Experience Platform LaunchとAEMインスタンスの統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja).
+> この機能を利用するには、Dynamic Media Scene7 モードで Adobe Experience Manager を実行します。また、[Adobe Experience Platform Launch と AEM インスタンスを統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)する必要があります。
 
-Dynamic Media Viewer 拡張機能の導入に伴い、Adobe Experience Managerでは、Dynamic Mediaビューア (5.13) で配信されるアセットの高度な分析サポートを提供し、Dynamic Mediaビューアを Sites ページで使用した場合のイベント追跡をより詳細に制御できるようになりました。
+Dynamic Media Viewer 拡張機能の導入に伴い、Adobe Experience Manager では、Dynamic Media Viewer (5.13) で配信されるアセットの高度な分析サポートを提供し、Dynamic Media Viewer を Sites ページで使用した場合のイベント追跡をより詳細に制御できるようになりました。
 
-既にAEM Assetsと Sites がある場合は、Launch プロパティをAEMオーサーインスタンスと統合できます。 Launch の統合を Web サイトに関連付けたら、ビューアのイベント追跡を有効にして、Dynamic Media コンポーネントをページに追加できます。
+既に AEM Assets と Sites がある場合は、Experience Platform Launch プロパティを AEM オーサーインスタンスと統合できます。Experience Platform Launch の統合を web サイトに関連付けたら、ビューアのイベント追跡を有効にして、Dynamic Media コンポーネントをページに追加できます。
 
-AEM Assetsのみのお客様またはDynamic Media Classicのお客様は、ビューアの埋め込みコードを取得して、ページに追加できます。 その後、ビューアイベントを追跡するために、Launch スクリプトライブラリを手動でページに追加できます。
+AEM Assets のみのお客様または Dynamic Media Classic のお客様は、ビューアの埋め込みコードを取得して、ページに追加できます。その後、Experience Platform Launch スクリプトライブラリを手動でページに追加することで、ビューアイベントを追跡できるようになります。
 
 次の表に、Dynamic Media ビューアイベントと、サポートされている引数を示します。
 
@@ -108,7 +108,7 @@ AEM Assetsのみのお客様またはDynamic Media Classicのお客様は、ビ�
          <td> %event.detail.dm.METADATA.type% </td>
       </tr>
       <tr>
-         <td> MILESTONE </td>
+         <td> マイルストーン </td>
          <td> %event.detail.dm.MILESTONE.milestone% </td>
       </tr>
       <tr>
@@ -164,6 +164,6 @@ AEM Assetsのみのお客様またはDynamic Media Classicのお客様は、ビ�
 
 ## その他のリソース{#additional-resources}
 
-* [Adobe Experience ManagerとAdobeLaunch の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)
-* [Dynamic Media Scene7モードでのAdobe Experience Managerの実行](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=ja)
-* [Dynamic Media ビューアと Adobe Analytics および Adobe Launch の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)
+* [Adobe Experience Manager と Adobe Launch の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)
+* [Dynamic Media Scene7 モードでの Adobe Experience Manager の実行](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=ja)
+* [Dynamic Media ビューアと Adobe Analytics および Adobe Experience Platform Launch の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html?lang=ja)
