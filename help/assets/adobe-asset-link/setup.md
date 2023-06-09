@@ -1,6 +1,6 @@
 ---
-title: Adobeアセットリンクの設定
-description: Photoshop、Illustrator、InDesign、XDなどのCreative CloudアプリをAdobe Experience Manager Assets に接続する、無料でAdobeアセットリンクを設定する方法について説明します。
+title: Adobe Asset Link のセットアップ
+description: Adobe Asset Link を無料でセットアップする方法について説明します。このプラグインは、Photoshop、Illustrator、InDesign、XD などの Creative Cloud アプリを Adobe Experience Manager Assets に接続します。
 feature: Adobe Asset Link
 version: Cloud Service
 topic: Content Management
@@ -10,31 +10,31 @@ kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '208'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Adobeアセットリンクの設定
+# Adobe Asset Link のセットアップ
 
-クリエイティブチームやマーケティングチームがコンテンツ作成プロセスでアセットに対して共同作業を容易にすることで、組織にすばやく影響を与えます。 IT にいる場合は、Photoshop、Illustrator、InDesign、XDなどのCreative CloudアプリをAdobe Experience Manager Assets に接続する、AdobeAsset Link を無料ですばやく設定する方法を学習します。
+コンテンツ作成プロセスでクリエイティブチームやマーケティングチームがアセットに対する共同作業を容易に行えるようにすることで、組織に迅速な効果をもたらします。IT 担当者向けに、Adobe Asset Link を無料ですばやくセットアップする方法を説明します。このプラグインは、Photoshop、Illustrator、InDesign、XD などの Creative Cloud アプリを Adobe Experience Manager Assets に接続します。
 
-## AEM as a Cloud Service用の Asset Link の設定
+## AEM as a Cloud Service 用の Asset Link のセットアップ
 
-AEM as a Cloud Service用のAdobeアセットリンクの設定、ユーザーの使用権限とAEMのas a Cloud Serviceの設定、AdobeAsset Link のインストールと使用の方法について説明します。
+AEM as a Cloud Service 用に Adobe Asset Link をセットアップする方法、ユーザーの使用資格と AEM as a Cloud Service の設定、Adobe Asset Link をインストールして使用する方法などについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
-## Managed Servicesおよびオンプレミス用の Asset Link の設定
+## Managed Services およびオンプレミス用の Asset Link のセットアップ
 
-Adobe Managed Services またはオンプレミスで実行するAEM 6 用のAdobeアセットリンクを設定する方法、Adobeの使用権限とAEMのas a Cloud Serviceを設定する方法、ユーザーアセットリンクをインストールして使用する方法について説明します。
+Adobe Managed Services またはオンプレミスで動作する AEM 6 用に Adobe Asset Link をセットアップする方法、ユーザーの使用資格と AEM as a Cloud Service の設定、Adobe Asset Link をインストールして使用する方法などについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
 
-## ドメイン信頼用のアセットリンクの設定
+## ドメインの信頼に対応する Asset Link のセットアップ
 
-ドメインの信頼とは何か、Experience Manager AssetsでAdobeの Asset Link を使用する場合の意味、およびドメインの信頼を設定する方法について説明します。
+ドメインの信頼とは何か、Experience Manager Assets で Adobe Asset Link を使用する意味、ドメインの信頼をセットアップする方法などについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)
