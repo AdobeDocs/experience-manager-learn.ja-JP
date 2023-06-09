@@ -1,6 +1,6 @@
 ---
 title: コンテンツフラグメントのプレビュー
-description: すべての作成者に対してコンテンツフラグメントプレビューを使用して、コンテンツの変更がAEMヘッドレスエクスペリエンスに与える影響をすばやく確認する方法を説明します。
+description: すべてのオーサーにコンテンツフラグメントのプレビューを使用して、コンテンツの変更が AEM ヘッドレスエクスペリエンスに与える影響をすばやく確認する方法を説明します。
 version: Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
@@ -10,74 +10,74 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: tm+mt
+exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '513'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # コンテンツフラグメントのプレビュー
 
-AEMヘッドレスアプリケーションは、統合オーサリングプレビューをサポートします。 プレビューエクスペリエンスは、AEM オーサーのコンテンツフラグメントエディターとカスタムアプリ（HTTP 経由でアドレス可能）をリンクさせ、プレビュー中のコンテンツフラグメントをレンダリングするアプリへのディープリンクを可能にします。
+AEM ヘッドレスアプリケーションは、統合オーサリングプレビューをサポートしています。プレビューエクスペリエンスでは、AEM オーサーのコンテンツフラグメントエディターをカスタムアプリ（HTTP でアドレス可能）とリンクして、プレビュー中のコンテンツフラグメントをレンダリングするアプリへのディープリンクを可能にします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 コンテンツフラグメントのプレビューを使用するには、次の条件を満たす必要があります。
 
-1. 作成者がアクセス可能な URL にアプリをデプロイする必要があります
-1. アプリが（AEM パブリッシュサービスではなく）AEM オーサーサービスに接続するように設定されている必要があります
-1. アプリは、使用可能な URL またはルートを使用して設計される必要があります [コンテンツフラグメントのパスまたは ID](#url-expressions) をクリックして、アプリエクスペリエンスでプレビュー用に表示するコンテンツフラグメントを選択します。
+1. オーサーからアクセス可能な URL にアプリをデプロイする必要があります。
+1. （AEM パブリッシュサービスではなく）AEM オーサーサービスに接続するようにアプリを設定する必要があります。
+1. アプリの設計に使用する URL またはルートは、[コンテンツフラグメントのパスまたは ID](#url-expressions) を使用して、アプリのエクスペリエンスでプレビューに表示するコンテンツフラグメントを選択できる必要があります。
 
 ## プレビュー URL
 
-プレビュー URL、使用 [URL 式](#url-expressions)は、コンテンツフラグメントモデルのプロパティに設定されます。
+[URL 式](#url-expressions) を使用したプレビュー URL は、コンテンツフラグメントモデルのプロパティで設定します。
 
-![コンテンツフラグメントモデルプレビュー URL](./assets/preview/cf-model-preview-url.png)
+![コンテンツフラグメントモデルのプレビュー URL](./assets/preview/cf-model-preview-url.png)
 
-1. 管理者として AEM オーサーサービスにログインします。
-1. に移動します。 __ツール/一般/コンテンツフラグメントモデル__
-1. を選択します。 __コンテンツフラグメントモデル__ を選択し、 __プロパティ__ 上部のアクションバーを作成します。
-1. 次を使用してコンテンツフラグメントモデルのプレビュー URL を入力 [URL 式](#url-expressions)
+1. AEM オーサーサービスに管理者としてログインします。
+1. __ツール／一般／コンテンツフラグメントモデル__&#x200B;に移動します。
+1. __コンテンツフラグメントモデル__&#x200B;を選択し、上部のアクションバーから「__プロパティ__」を選択します。
+1. [URL 式](#url-expressions)を使用して、コンテンツフラグメントモデルのプレビュー URL を入力します。
    + プレビュー URL は、AEM オーサーサービスに接続するアプリのデプロイメントを指している必要があります。
 
 ### URL 式
 
-各コンテンツフラグメントモデルには、プレビュー URL を設定できます。 プレビュー URL は、コンテンツフラグメントごとに、次の表に示す URL 式を使用してパラメーター化できます。 1 つのプレビュー URL で複数の URL 式を使用できます。
+各コンテンツフラグメントモデルには、プレビュー URL を設定できます。プレビュー URL は、次の表に示す URL 式を使用して、コンテンツフラグメントごとにパラメーター化できます。1 つのプレビュー URL で複数の URL 式を使用できます。
 
 |  | URL 式 | 値 |
 | --------------------------------------- | ----------------------------------- | ----------- |
 | コンテンツフラグメントのパス | `${contentFragment.path}` | `/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali` |
-| コンテンツフラグメント ID | `${contentFragment.id}` | `12c34567-8901-2aa3-45b6-d7890aa1c23c` |
+| コンテンツフラグメントの ID | `${contentFragment.id}` | `12c34567-8901-2aa3-45b6-d7890aa1c23c` |
 | コンテンツフラグメントのバリエーション | `${contentFragment.variation}` | `main` |
 | コンテンツフラグメントモデルのパス | `${contentFragment.model.path}` | `/conf/wknd-shared/settings/dam/cfm/models/adventure` |
-| コンテンツフラグメントモデル名 | `${contentFragment.model.name}` | `adventure` |
+| コンテンツフラグメントモデルの名前 | `${contentFragment.model.name}` | `adventure` |
 
 プレビュー URL の例：
 
-+ プレビュー URL __冒険__ モデルは次のようになります `https://preview.app.wknd.site/adventure${contentFragment.path}` が `https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali`
-+ プレビュー URL __記事__ モデルは次のようになります `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` 解決された `https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main`
++ __Adventure__ モデルのプレビュー URL は、`https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali` に解決される `https://preview.app.wknd.site/adventure${contentFragment.path}` のようになります。
++ __Article__ モデルのプレビュー URL は、`https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main` に解決される `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` のようになります。
 
 ## アプリ内プレビュー
 
-設定済みのコンテンツフラグメントモデルを使用するコンテンツフラグメントには、「プレビュー」ボタンが付きます。 「プレビュー」ボタンをクリックすると、コンテンツフラグメントモデルのプレビュー URL が開き、開いているコンテンツフラグメントの値が [URL 式](#url-expressions).
+設定済みのコンテンツフラグメントモデルを使用したコンテンツフラグメントにはすべて、「プレビュー」ボタンが付きます。「プレビュー」ボタンをクリックすると、コンテンツフラグメントモデルのプレビュー URL が開き、開いているコンテンツフラグメントの値が [URL 式](#url-expressions) に挿入されます。
 
 ![「プレビュー」ボタン](./assets/preview/preview-button.png)
 
-アプリでコンテンツフラグメントの変更をプレビューする際に、ハード更新（ブラウザーのローカルキャッシュをクリア）を実行します。
+アプリでコンテンツフラグメントの変更をプレビューする際には、ハード更新（ブラウザーのローカルキャッシュのクリア）を実行します。
 
 ## React の例
 
-AEMヘッドレスGraphQL API を使用してAEMのアドベンチャーを表示するシンプルな React アプリ WKND アプリを見てみましょう。
+WKND アプリを見てみましょう。これは、AEM ヘッドレス GraphQL API を使用して AEM 内のアドベンチャーを表示するシンプルな React アプリです。
 
-サンプルコードは、 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial).
+サンプルコードは [Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial) で入手できます。
 
 ## URL とルート
 
-コンテンツフラグメントのプレビューに使用する URL またはルートは、 [URL 式](#url-expressions). このプレビュー対応バージョンの WKND アプリでは、アドベンチャーコンテンツフラグメントが `AdventureDetail` ルートにバインドされたコンポーネント `/adventure<CONTENT FRAGMENT PATH>`. したがって、WKND アドベンチャーモデルのプレビュー URL は、 `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` このルートを解決するには。
+コンテンツフラグメントのプレビューに使用する URL またはルートは、[URL 式](#url-expressions)を使用して構成できる必要があります。このプレビュー対応バージョンの WKND アプリでは、ルート `/adventure<CONTENT FRAGMENT PATH>` にバインドされた `AdventureDetail` コンポーネントを介してアドベンチャーのコンテンツフラグメントが表示されます。そのため、このルートに解決するには、WKND Adventure モデルのプレビュー URL を `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` に設定する必要があります。
 
-コンテンツフラグメントのプレビューは、 [URL 式](#url-expressions) プレビュー可能な方法でアプリ内でそのコンテンツフラグメントをレンダリングする
+コンテンツフラグメントのプレビューが機能するのは、アドレス指定可能なルートがアプリにある場合のみであり、プレビュー可能な形でそのコンテンツフラグメントをアプリにレンダリングする [URL 式](#url-expressions)を、そのルートに入力できる必要があります。
 
 + `src/App.js`
 
@@ -106,9 +106,9 @@ function App() {
 export default App;
 ```
 
-### 作成したコンテンツを表示
+### 作成したコンテンツの表示
 
-この `AdventureDetail` コンポーネントは、コンテンツフラグメントパスを解析し、 `${contentFragment.path}` [URL 式](#url-expressions)をルート URL から取得し、それを使用して WKND アドベンチャーを収集してレンダリングします。
+`AdventureDetail` コンポーネントは、`${contentFragment.path}` [URL 式](#url-expressions)を介してプレビュー URL に挿入されたコンテンツフラグメントパスを、ルート URL から単純に解析し、それを使用して WKND Adventure を収集してレンダリングします。
 
 + `src/components/AdventureDetail.js`
 
