@@ -10,9 +10,9 @@ kt: 10797
 thumbnail: kt-10797.jpg
 exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '566'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
