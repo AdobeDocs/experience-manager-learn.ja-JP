@@ -10,9 +10,9 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '619'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 92%
 
 Adobe Experience Manager as a Cloud Service のクロスオリジンリソース共有（CORS）は、AEM 以外の web プロパティが、AEM の GraphQL API に対してブラウザーベースのクライアントサイド呼び出しを行うのを容易にします。
 
-次の記事では、 _単一起源の_ CORS を介して特定のセットのAEMヘッドレスエンドポイントにアクセスする。 単一オリジンとは、AEMにアクセスするのはAEM以外の 1 つのドメインのみで、例えば、https://app.example.comはhttps://www.example.comに接続することを意味します。 キャッシュに関する懸念があるので、複数オリジンアクセスは、この方法を使用して動作しない可能性があります。
+次の記事では、CORS を介して AEM ヘッドレス エンドポイントの特定のセットへの&#x200B;_単一オリジン_&#x200B;アクセスを設定する方法について説明します。単一オリジンとは、単一の非 AEM ドメインのみが AEM にアクセスすることを意味します。例えば、https://app.example.com が https://www.example.com に接続します。キャッシュに関する懸念があるので、マルチオリジンアクセスは、この方法を使用して動作しない可能性があります。
 
 >[!TIP]
 >
