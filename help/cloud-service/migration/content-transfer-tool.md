@@ -1,6 +1,6 @@
 ---
 title: コンテンツ転送ツールの使用
-description: オンプレミスまたは AMS でホストされているAEMからAEM as a Cloud Service環境にコンテンツを移行する場合は、コンテンツ転送ツールを使用することをお勧めします。
+description: オンプレミスまたは AMS でホストされている AEM から、AEM as a Cloud Service 環境にコンテンツを移行する場合は、コンテンツ転送ツールを使用することをお勧めします。
 version: Cloud Service
 doc-type: technical-video
 topics: migration
@@ -14,15 +14,15 @@ role: Architect, Developer
 level: Beginner
 exl-id: 0cefc336-2a46-4a11-a734-ba1cb63c5cbe
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
 # コンテンツ転送ツールの使用
 
-オンプレミスまたは AMS でホストされているAEMからAEM as a Cloud Service環境にコンテンツを移行する場合は、コンテンツ転送ツールを使用することをお勧めします。
+オンプレミスまたは AMS でホストされている AEM から、AEM as a Cloud Service 環境にコンテンツを移行する場合は、コンテンツ転送ツールを使用することをお勧めします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
 
