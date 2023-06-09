@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 AEM Content Migration Part2
-description: コンテンツの移行に関する 2 つ目のビデオでは、James と Darin がAEM as a Cloud Serviceへの移行に役立つコンテンツ転送ツール (CTT) の使用について説明します。
+title: Cloud 5 AEM コンテンツ移行パート 2
+description: コンテンツの移行に関する 2 つ目のビデオでは、James と Darin が AEM as a Cloud Service への移行に役立つコンテンツ転送ツール（CTT）の使用について説明します。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -10,15 +10,15 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342268.jpeg
 exl-id: 8b31c415-bf12-420f-a81a-6065c56ccbed
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 45%
+ht-degree: 100%
 
 ---
 
 # クラウドへの移行 - 第 2 部
 
-コンテンツの移行に関する 2 つ目のビデオでは、James と Darin がAEM as a Cloud Serviceへの移行に役立つコンテンツ転送ツール (CTT) の使用について説明します。
+コンテンツの移行に関する 2 つ目のビデオでは、James と Darin が AEM as a Cloud Service への移行に役立つコンテンツ転送ツール（CTT）の使用について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342268?quality=12&learn=on)
 
