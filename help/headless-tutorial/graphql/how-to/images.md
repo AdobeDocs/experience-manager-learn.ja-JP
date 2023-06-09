@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスでの最適化された画像の使用
-description: AEMヘッドレスを使用して最適化された画像 URL をリクエストする方法について説明します。
+title: AEM ヘッドレスでの最適化された画像の使用
+description: 最適化された画像 URL を AEM ヘッドレスでリクエストする方法について説明します。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -11,33 +11,33 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '934'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# AEMヘッドレスで画像を最適化 {#images-with-aem-headless}
+# AEM ヘッドレスでの最適化された画像 {#images-with-aem-headless}
 
-画像は、 [豊富で魅力的なAEMヘッドレスエクスペリエンスの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja). AEMヘッドレスは、画像アセットの管理と、その最適化された配信をサポートします。
+画像は、[機能豊富で魅力的な AEM ヘッドレスエクスペリエンスの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja)における重要な側面になります。AEM ヘッドレスでは、画像アセットとそれらの最適化された配信の管理をサポートしています。
 
-AEMヘッドレスコンテンツモデリングで使用されるコンテンツフラグメントは、多くの場合、ヘッドレスエクスペリエンスでの表示を目的とした画像アセットを参照します。 AEM GraphQLクエリを記述して、画像の参照元に基づいて画像に URL を提供できます。
+AEM ヘッドレスコンテンツモデリングで使用されるコンテンツフラグメントでは、多くの場合、ヘッドレスエクスペリエンスでの表示を目的とした画像アセットを参照します。AEM の GraphQLクエリを記述すると、画像の参照元に基づいて画像の URL を指定できます。
 
-この `ImageRef` タイプには、コンテンツ参照用の 4 つの URL オプションがあります。
+`ImageRef` タイプには、コンテンツ参照用の URL オプションが 4 つあります。
 
-+ `_path` はAEMで参照されているパスで、AEM origin（ホスト名）は含まれていません
-+ `_dynamicUrl` は、Web に最適化された優先画像アセットの完全な URL です。
-   + この `_dynamicUrl` にはAEM接触チャネルが含まれていないので、ドメイン（AEM オーサーまたは AEM パブリッシュサービス）はクライアントアプリケーションによって提供される必要があります。
-+ `_authorUrl` は、AEM オーサー上の画像アセットの完全な URL です
-   + [AEM オーサー](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) は、ヘッドレスアプリケーションのプレビューエクスペリエンスを提供するために使用できます。
++ `_path` は AEM で参照されているパスであり、AEM オリジン（ホスト名）を含んでいません。
++ `_dynamicUrl` は、web に最適化された推奨画像アセットの完全な URL です。
+   + `_dynamicUrl` には AEM オリジンが含まれていないので、ドメイン（AEM オーサーサービスまたは AEM パブリッシュサービス）はクライアントアプリケーション側で指定する必要があります。
++ `_authorUrl` は、AEM オーサー上の画像アセットの完全な URL です。
+   + [AEM オーサー](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=ja)を使用すると、ヘッドレスアプリケーションのプレビューエクスペリエンスを提供できます。
 + `_publishUrl` は、AEM パブリッシュ上の画像アセットの完全な URL です。
-   + [AEM パブリッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) は、通常、ヘッドレスアプリケーションの実稼動デプロイメントで画像が表示される場所です。
+   + [AEM パブリッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=ja)は、通常、ヘッドレスアプリケーションの実稼動デプロイメントで表示される画像の提供元になります。
 
-この `_dynamicUrl` は、画像アセットに使用する推奨 URL で、 `_path`, `_authorUrl`、および `_publishUrl` 可能な限り
+`_dynamicUrl` は、画像アセットに使用する推奨 URL であり、可能な限り `_path`、`_authorUrl` および `_publishUrl` の代わりに使用してください。
 
-|  | AEM as a Cloud Service | AEMas a Cloud ServiceRDE | AEM SDK | AEM 6.5 |
+|  | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
-| Web に最適化された画像をサポートしますか？ | ✔ | ✔ | ✘ | ✘ |
+| Web に最適化された画像のサポート | ✔ | ✔ | ✘ | ✘ |
 
 
 >[!CONTEXTUALHELP]
@@ -47,15 +47,15 @@ AEMヘッドレスコンテンツモデリングで使用されるコンテン�
 
 ## コンテンツフラグメントモデル
 
-画像参照を含む「コンテンツフラグメント」フィールドが __コンテンツ参照__ データタイプ。
+画像参照を含んだコンテンツフラグメントフィールドが、__コンテンツ参照__&#x200B;データタイプであることを確認します。
 
-フィールドタイプについては、 [コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)、フィールドを選択し、 __プロパティ__ 」タブを右にクリックします。
+[コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=ja)のフィールドタイプを確認するには、フィールドを選択し、右側の「__プロパティ__」タブを調べます。
 
-![画像へのコンテンツ参照を含むコンテンツフラグメントモデル](./assets/images/content-fragment-model.jpeg)
+![画像へのコンテンツ参照を含んだコンテンツフラグメントモデル](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL永続クエリ
+## GraphQL 永続クエリ
 
-GraphQLクエリで、フィールドを `ImageRef` を入力し、リクエストします。 `_dynamicUrl` フィールドに入力します。 例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) 画像アセット参照用の画像 URL をその中に含める `primaryImage` フィールドに入力し、新しい永続化クエリで実行できます `wknd-shared/adventure-image-by-path` 次のように定義されます。
+GraphQL クエリで、フィールドを `ImageRef` タイプとして返し、`_dynamicUrl` フィールドをリクエストします。例えば、[WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd)でアドベンチャーをクエリし、その画像アセット参照の画像 URL を `primaryImage` フィールドに格納するには、次のように定義された新しい永続クエリ `wknd-shared/adventure-image-by-path` を使用します。
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -91,25 +91,25 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-この `$path` 変数 `_path` フィルターにはコンテンツフラグメントへの完全パスが必要です ( 例： `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`) をクリックします。
+`_path` フィルターで使用する `$path` 変数には、コンテンツフラグメントへの完全なパス（例：`/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`）が必要です。
 
-この `_assetTransform` は、 `_dynamicUrl` は、提供される画像レンディションを最適化するように構築されます。 Web に最適化された画像の URL は、URL のクエリパラメーターを変更することで、クライアント上で調整することもできます。
+`_assetTransform` は、提供する画像レンディションを最適化するために `_dynamicUrl` をどのように構成するかを定義します。Web に最適化された画像の URL は、URL のクエリパラメーターを変更することで、クライアント上で調整することもできます。
 
-| GraphQLパラメーター | URL パラメーター | 説明 | 必須 | GraphQL変数値 | URL パラメーターの値 | URL パラメーターの例 |
+| GraphQL パラメーター | URL パラメーター | 説明 | 必須 | GraphQL パラメーターの値 | URL パラメーターの値 | URL パラメーターの例 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | 該当なし | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | 該当なし | 該当なし |
-| `seoName` | 該当なし | URL のファイルセグメントの名前。 指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、 `-`または `_` | 該当なし | 該当なし |
-| `crop` | `crop` | 画像から取り出した切り抜きフレームは、画像のサイズ内にある必要があります | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | 出力画像のサイズ（高さと幅の両方）をピクセル単位で指定します。 | ✘ | 正の整数 | カンマ区切りの正の整数（順） `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | イメージの回転（度単位）。 | ✘ | `R90`、`R180`、`R270` | `90`、`180`、`270` | `?rotate=90` |
-| `flip` | `flip` | 画像を反転します。 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` | `h`、`v`、`hv` | `?flip=h` |
-| `quality` | `quality` | 画質（元の画質のパーセント）。 | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | 出力画像の幅（ピクセル単位）。 条件 `size` が指定されている `width` は無視されます。 | ✘ | 正の整数 | 正の整数 | `?width=1600` |
-| `preferWebP` | `preferwebp` | If `true` ブラウザーが WebP をサポートしている場合、AEMは WebP を提供します。 `format`. | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
+| `format` | 該当なし | 画像アセットの形式。 | ✔ | `GIF`、`PNG`、`PNG8`、`JPG`、`PJPG`、`BJPG`、`WEBP`、`WEBPLL`、`WEBPLY` | 該当なし | 該当なし |
+| `seoName` | 該当なし | URL 内のファイルセグメントの名前。指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、`-` または `_` | 該当なし | 該当なし |
+| `crop` | `crop` | 画像から切り抜いたフレーム（画像のサイズに収まる必要があります） | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 | 数値座標のコンマ区切り文字列（`<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>`） | `?crop=10,20,300,400` |
+| `size` | `size` | 出力画像のサイズ（高さと幅の両方、ピクセル単位） | ✘ | 正の整数 | コンマ区切りの正の整数（`<WIDTH>,<HEIGHT>` の順） | `?size=1200,800` |
+| `rotation` | `rotate` | 画像の回転（度単位） | ✘ | `R90`、`R180`、`R270` | `90`、`180`、`270` | `?rotate=90` |
+| `flip` | `flip` | 画像の反転 | ✘ | `HORIZONTAL`、`VERTICAL`、`HORIZONTAL_AND_VERTICAL` | `h`、`v`、`hv` | `?flip=h` |
+| `quality` | `quality` | 画質（元の画質に対するパーセント） | ✘ | 1～100 | 1～100 | `?quality=80` |
+| `width` | `width` | 出力画像の幅（ピクセル単位）。`size` が指定されている場合、`width` は無視されます。 | ✘ | 正の整数 | 正の整数 | `?width=1600` |
+| `preferWebP` | `preferwebp` | `true` の場合、ブラウザーが WebP をサポートしていれば、`format` にかかわらず、AEM は WebP を提供します。 | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
 
-## GraphQL応答
+## GraphQL 応答
 
-結果の JSON 応答には、画像アセットへの Web 最適化 URL を含む要求されたフィールドが含まれます。
+結果として得られる JSON 応答には要求されたフィールドが含まれ、そのフィールドには画像アセットへの web に最適化された URL が含まれます。
 
 ```json {highlight="8"}
 {
@@ -127,9 +127,9 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-アプリケーションで参照画像の Web 最適化画像を読み込むには、 `_dynamicUrl` の `primaryImage` を画像のソース URL として設定します。
+アプリケーションで参照画像の web に最適化された画像を読み込むには、`primaryImage` の `_dynamicUrl` を画像のソース URL として設定します。
 
-React では、AEM Publish から Web に最適化された画像を表示すると、次のようになります。
+React では、AEM Publish から web に最適化された画像を表示すると、次のようになります。
 
 ```jsx
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -139,11 +139,11 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-忘れないで下さい `_dynamicUrl` ではAEMドメインが含まれていないので、解決する画像 URL の目的の接触チャネルを指定する必要があります。
+`_dynamicUrl` には AEM ドメインが含まれていないため、解決する画像 URL の目的のオリジンを指定する必要があります。
 
 ## レスポンシブ URL
 
-上記の例は、単一サイズの画像を使用することを示していますが、Web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。 レスポンシブ画像は、 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 次のコードスニペットに、 `_dynamicUrl` をベースにし、異なる幅のパラメーターを追加して、異なるレスポンシブビューを強化します。 また、 `width` クエリパラメーターを使用できますが、クライアントは他のクエリパラメーターを追加して、必要に応じて画像アセットをさらに最適化できます。
+上記の例では単一サイズの画像を使用していますが、web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。レスポンシブ画像は、[img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)を使用して実装することができます。次のコードスニペットでは、`_dynamicUrl` をベースとして使用し、様々な幅のパラメーターを付加することで、様々なレスポンシブビューを実現する方法を示しています。`width` クエリパラメーターを使用できるだけでなく、クライアントが他のクエリパラメーターを追加して、必要に応じて画像アセットをさらに最適化することもできます。
 
 ```javascript
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -173,28 +173,28 @@ document.body.innerHTML=`<picture>
 
 ## React の例
 
-次の手順に従って、Web に最適化された画像を表示するシンプルな React アプリケーションを作成します。 [レスポンシブ画像パターン](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). レスポンシブ画像には、主に次の 2 つのパターンがあります。
+[レスポンシブ画像パターン](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/)に従って、web に最適化された画像を表示するシンプルな React アプリケーションを作成してみましょう。レスポンシブ画像には、主に次の 2 つのパターンがあります。
 
-+ [srcset を含む Img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) パフォーマンスの向上
-+ [画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計管理のため
++ パフォーマンスの向上のための [srcset を含む img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)
++ 設計管理のための[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 
 
-### srcset を含む Img 要素
+### srcset を含む img 要素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-[srcset を含む img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) を `sizes` 属性を使用して、画面サイズごとに異なる画像アセットを指定します。 Img srcsets は、画面サイズごとに異なる画像アセットを提供する場合に役立ちます。
+[srcset を含む img 要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) を `sizes` 属性で使用することにより、異なる画面サイズに対して異なる画像アセットを提供します。img srcsets は、異なる画面サイズに対して異なる画像アセットを提供する場合に役立ちます。
 
 ### 画像要素
 
-[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 複数の `source` 要素を使用して、画面サイズごとに異なる画像アセットを提供します。 Picture 要素は、画面サイズごとに異なる画像レンディションを提供する場合に役立ちます。
+[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture)は複数の `source` 要素とともに使用され、異なる画面サイズに対して異なる画像アセットを提供します。画像要素は、異なる画面サイズ対してに異なる画像レンディションを提供する場合に役立ちます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
 ### サンプルコード
 
-この簡単な React アプリでは、 [AEMヘッドレス SDK](./aem-headless-sdk.md) アドベンチャーコンテンツにAEMヘッドレス API を照会し、 [srcset を含む img 要素](#img-element-with-srcset) および [画像要素](#picture-element). この `srcset` および `sources` カスタムを使用 `setParams` 関数を使用して、web 最適化された配信クエリパラメーターを `_dynamicUrl` 画像のレンディションを変更する必要があるので、web クライアントのニーズに基づいて配信される画像レンディションを変更します。
+このシンプルな React アプリは、[AEM ヘッドレス SDK](./aem-headless-sdk.md) を使用して AEM ヘッドレス API でアドベンチャーのコンテンツをクエリし、[srcset 付きの img 要素](#img-element-with-srcset)と [picture 要素](#picture-element)を使用して web に最適化された画像を表示します。`srcset` と `sources` は、カスタムの `setParams` 関数を使用して、web に最適化された配信クエリパラメーターを画像の `_dynamicUrl` に追加することにより、web クライアントのニーズに基づいて配信される画像表現を変更します。
 
-AEMに対するクエリは、カスタム React フックで実行されます。 [AEMヘッドレス SDK を使用する useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
+AEM に対するクエリは、[AEM ヘッドレス SDK を使用する](./aem-headless-sdk.md#graphql-persisted-queries)カスタム React フック useAdventureByPath で実行されます。
 
 ```javascript
 // src/App.js
