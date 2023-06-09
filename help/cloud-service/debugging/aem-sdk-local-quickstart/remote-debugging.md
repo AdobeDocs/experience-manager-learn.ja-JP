@@ -1,6 +1,6 @@
 ---
 title: AEM SDK のリモートデバッグ
-description: AEM SDK のローカルクイックスタートを使用すると、IDE からのリモート Java デバッグが可能になり、AEMでのライブコードの実行手順を進めて、正確な実行フローを理解できます。
+description: AEM SDK のローカルクイックスタートを使用すると、IDE からのリモート Java デバッグが可能になり、AEM でのライブコード実行を 1 ステップずつ進めて正確な実行フローを把握できるようになります。
 kt: 5251
 topic: Development
 feature: Developer Tools
@@ -9,9 +9,9 @@ level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
 source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '280'
+ht-degree: 100%
 
 ---
 
@@ -19,29 +19,29 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
 
-AEM SDK のローカルクイックスタートを使用すると、IDE からのリモート Java デバッグが可能になり、AEMでのライブコードの実行手順を進めて、正確な実行フローを理解できます。
+AEM SDK のローカルクイックスタートを使用すると、IDE からのリモート Java デバッグが可能になり、AEM でのライブコード実行を 1 ステップずつ進めて正確な実行フローを把握できるようになります。
 
-リモートデバッガーをAEMに接続するには、AEM SDK のローカルクイックスタートを特定のパラメーター (`-agentlib:...`) を使用して、IDE が接続できるようになります。
+リモートデバッガーを AEM に接続するには、AEM SDK のローカルクイックスタートを特定のパラメーター（`-agentlib:...`）を使用して起動し、IDE から接続できるようにする必要があります。
 
 ```
 $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
-+ AEM SDK は Java 11 のみをサポートします
-+ `address` ポートAEMがリモートデバッグ接続をリッスンするように指定します。このポートは、ローカル開発マシン上の使用可能なポートに変更できます。
-+ 最後のパラメータ ( 例： `aem-author-p4502.jar`) はAEM SKD Quickstart Jar です。 AEM オーサーサービス (`aem-author-p4502.jar`) または AEM パブリッシュサービス (`aem-publish-p4503.jar`) をクリックします。
++ AEM SDK は Java 11 のみをサポートしています。
++ AEM がリモートデバッグ接続をリッスンするポートを `address` で指定します。これは、ローカル開発マシン上で使用可能な任意のポートに変更できます。
++ 最後のパラメーター（例：`aem-author-p4502.jar`）は AEM SKD Quickstart Jar です。AEM オーサーサービス（`aem-author-p4502.jar`）または AEM パブリッシュサービス（`aem-publish-p4503.jar`）のいずれかを指定できます。
 
 
-## IDE の設定手順
+## IDE セットアップ手順
 
-ほとんどの Java IDE は Java プログラムのリモートデバッグをサポートしていますが、各 IDE の正確な設定手順は異なります。 正確な手順については、IDE のリモートデバッグ設定の手順を確認してください。 通常、IDE の構成には次の項目が必要です。
+ほとんどの Java IDE は Java プログラムのリモートデバッグをサポートしていますが、正確なセットアップ手順は各 IDE によって異なります。正確な手順については、ご利用の IDE のリモートデバッグセットアップ手順を確認してください。通常、IDE の設定には次の項目が必要です。
 
-+ ホストAEM SDK のローカルクイックスタートがリッスンしています ( つまり、 `localhost`.
-+ ポートAEM SDK のローカルクイックスタートが、リモートデバッグ接続 ( `address` AEM SDK のローカルクイックスタートを開始する際のパラメーター。
-+ リモートデバッグにソースコードを提供する Maven プロジェクトを指定する必要が生じる場合があります。これは、OSGi バンドル maven プロジェクトプロジェクトです。
++ AEM SDK のローカルクイックスタートがリッスンしているホスト（`localhost`）。
++ AEM SDK のローカルクイックスタートがリモートデバッグ接続のためにリッスンしているポート（AEM SDK のローカルクイックスタートを起動する際に `address` パラメーターで指定されるポート）。
++ 時には、リモートデバッグの対象となるソースコードを提供する Maven プロジェクトを指定する必要があります。これは、OSGi バンドルの Maven プロジェクトです。
 
-### 手順の設定
+### セットアップ手順
 
-+ [VS Code Java リモートデバッガの設定](https://code.visualstudio.com/docs/java/java-debugging)
-+ [IntelliJ IDEA リモートデバッガの設定](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
-+ [Eclipse リモートデバッガーの設定](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
++ [VS Code Java リモートデバッガーのセットアップ](https://code.visualstudio.com/docs/java/java-debugging)
++ [IntelliJ IDEA リモートデバッガーのセットアップ](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
++ [Eclipse リモートデバッガーのセットアップ](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
