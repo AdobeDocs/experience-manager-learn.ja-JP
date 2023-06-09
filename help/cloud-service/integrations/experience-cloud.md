@@ -12,7 +12,7 @@ last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '922'
 ht-degree: 100%
 
@@ -23,24 +23,24 @@ ht-degree: 100%
 AEM as a Cloud Service でサポートされているその他の Adobe Experience Cloud 製品との統合について説明します。
 統合の設定方法と使用方法に関するドキュメントについては、Experience Cloud 製品をクリックします。
 
-|  | AEM Sites | AEM Assets | AEM Forms |
+|                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
-| [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
-| Advertising |  |  |  |
+| [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
+| Advertising |           |            |          |
 | [Analytics](#adobe-analytics) | ✔ | ✔ | ✔ |
-| Audience Manager |  |  |  |
-| Campaign Classic |  |  |  |
-| Campaign Standard |  |  |  |
-| [Commerce](#adobe-commerce) | ✔ | ✔ |  |
-| Customer Journey Analytics |  |  |  |
-| [Experience Platform タグ](#adobe-experience-platform-tags) | ✔ |  | ✔ |
-| [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| [Learning Manager](#adobe-learning-manager) | ✔ |  |  |
-| Marketo Engage |  |  |  |
-| Real-time CDP |  |  |  |
+| Audience Manager |           |            |          |
+| Campaign Classic |           |            |          |
+| Campaign Standard |           |            |          |
+| [Commerce](#adobe-commerce) | ✔ | ✔ |          |
+| Customer Journey Analytics |           |            |          |
+| [Experience Platform タグ](#adobe-experience-platform-tags) | ✔ |            | ✔ |
+| [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
+| [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
+| Marketo Engage |           |            |          |
+| Real-time CDP |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
-| [Target](#adobe-target) | ✔ |  |  |
-| [Workfront](#adobe-workfront) |  | ✔ |  |
+| [Target](#adobe-target) | ✔ |            |          |
+| [Workfront](#adobe-workfront) |           | ✔ |          |
 
 
 ## Adobe Acrobat Sign
