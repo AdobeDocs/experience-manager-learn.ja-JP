@@ -1,6 +1,6 @@
 ---
-title: 急速開発環境を使用した開発ライフサイクル
-description: 新しい開発ライフサイクルが、ラピッド開発環境と RDE の主なメリットを使用してどのように表示されるかを説明します。
+title: 迅速な開発環境を使用した開発ライフサイクル
+description: 迅速な開発環境（RDE）とその主なメリットを活かして、新しい開発ライフサイクルがどのようなものになるかを説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,19 +9,19 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '136'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
+# 迅速な開発環境を使用した開発ライフサイクル
 
-# 急速開発環境を使用した開発ライフサイクル
+RDE を使用した開発／デプロイメントライフサイクルと、それによって価値がどう迅速に実現されるかを説明します。
 
-RDE を使用した開発/デプロイメントのライフサイクルと、それが速度と共にどのように価値をもたらすかについて説明します。
-
-次のビデオでは、RDE ベースの開発スルーデプロイメントのライフサイクルを紹介します。 このビデオでは、RDE を効率的に使用するための主なサブタスクと開発フローの概要を説明します。
+次のビデオでは、開発からデプロイまでの RDE ベースのライフサイクルについて説明しています。このビデオでは、RDE を効率的に使用するための主なサブタスクと開発フローの概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
@@ -33,16 +33,15 @@ RDE を使用した開発/デプロイメントのライフサイクルと、そ
 - 開発サイクルの高速化
 - ダウンタイムの短縮
 - テストの向上
-- コラボレーションの向上
+- 共同作業の向上
 - 生産性の向上
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## その他のリソース
 
-[複数の開発者の共同作業シナリオ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[複数の開発者の共同作業シナリオ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=ja#multiple-developers-collaborating-on-the-same-rde)
 
-[ローカル開発環境の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
+[ローカル開発環境のセットアップ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)
 
-[AdobeCloud Manager の使用 — CI/CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
-
+[Adobe Cloud Manager の使用 - CI／CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html?lang=ja)
