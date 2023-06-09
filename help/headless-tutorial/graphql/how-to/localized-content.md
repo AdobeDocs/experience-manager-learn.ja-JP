@@ -10,9 +10,9 @@ kt: 10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
 source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '508'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ AEM のローカライズされたコンテンツフラグメントが、[推奨
 
 ## GraphQL 永続クエリ
 
-AEM は、ロケールコードごとにコンテンツを自動的にフィルタリングする `_locale` GraphQL フィルターを提供します。例えば、 [WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd) は、新しい永続クエリで実行できます `wknd-shared/adventures-by-locale` 次のように定義されます。
+AEM は、ロケールコードごとにコンテンツを自動的にフィルタリングする `_locale` GraphQL フィルターを提供します。例えば、[WKND Site プロジェクト](https://github.com/adobe/aem-guides-wknd)のすべての英語のアドベンチャーのクエリは、次のように定義された新しい永続クエリ `wknd-shared/adventures-by-locale` で実行できます。
 
 ```graphql
 query($locale: String!) {
