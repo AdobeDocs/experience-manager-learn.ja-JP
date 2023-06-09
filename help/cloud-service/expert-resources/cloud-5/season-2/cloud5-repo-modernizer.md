@@ -9,15 +9,15 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '60'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # Cloud 5 - Repository Modernizer
 
-repository modernizer がAEM as a Cloud Serviceへの移行にどのように役立つかを調べ、その仕組みとその理由を簡単に説明します。
+Repository Modernizer が AEM as a Cloud Service への移行にどのように役立つのか、その仕組みとその理由を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 
