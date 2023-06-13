@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 82df468bc9a5f83133adbd7aa7332bb5c21a695c
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 96%
+source-wordcount: '956'
+ht-degree: 95%
 
 ---
 
@@ -73,10 +73,11 @@ ht-degree: 96%
          + コンテンツフラグメント{#content-fragments}
             + [概要](./developing/extensibility/ui/content-fragments/overview.md)
             + 例{#examples}
-               + [プロパティの一括更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [AI 画像生成](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
+               + [プロパティの一括更新](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [カスタムグリッド列](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
                + [XML として書き出し](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
+               + [RTE ツールバーボタン](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
    + 開発の基本{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)
