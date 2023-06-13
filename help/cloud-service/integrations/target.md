@@ -10,20 +10,15 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
+source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1671'
 ht-degree: 2%
 
 ---
 
 # コンテンツフラグメントを使用したAEMヘッドレスエクスペリエンスのパーソナライズ
-
->[!IMPORTANT]
->
-> Adobe TargetへのAdobe Experience Managerコンテンツフラグメントの書き出しは、AEM as a Cloud Serviceで使用できます [プレリリースチャネル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=ja#new-features).
-
-
 
 このチュートリアルでは、AEMコンテンツフラグメントをAdobe Targetに書き出し、AdobeWeb SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。 この [React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) は、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を調べるために使用されます。
 
@@ -198,7 +193,7 @@ An [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/doc
 
 ## AEMヘッドレスアプリへのパーソナライゼーションの追加{#code}
 
-このチュートリアルでは、を介してAdobe Targetのコンテンツフラグメントオファーを使用したシンプルな React アプリのパーソナライズについて説明します。 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). この方法は、JavaScript ベースの Web エクスペリエンスをパーソナライズするために使用できます。
+このチュートリアルでは、を介してAdobe Targetのコンテンツフラグメントオファーを使用したシンプルな React アプリのパーソナライズについて説明します。 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja). この方法は、JavaScript ベースの Web エクスペリエンスをパーソナライズするために使用できます。
 
 Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモバイル SDK](https://developer.adobe.com/client-sdks/documentation/).
 
