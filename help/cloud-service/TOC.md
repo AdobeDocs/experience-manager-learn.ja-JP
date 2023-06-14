@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 95%
+source-wordcount: '961'
+ht-degree: 91%
 
 ---
 
@@ -183,17 +183,18 @@ ht-degree: 95%
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    +  Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
-      + [はじめに](./forms/developing-for-cloud-service/getting-started.md)
-      + [IntelliJ のインストール](./forms/developing-for-cloud-service/intellij-set-up.md)
-      + [Git の設定](./forms/developing-for-cloud-service/setup-git.md)
-      + [IntelliJ と AEM の同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
-      + [フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [フォームポータルコンポーネントの有効化](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [クラウドサービスと FDM の組み込み](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [コンテキスト対応のクラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [Cloud Manager へのプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [ローカル開発環境へのデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [Maven アーキタイプの更新](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [1 — はじめに](./forms/developing-for-cloud-service/getting-started.md)
+      + [2 - IntelliJ のインストール](./forms/developing-for-cloud-service/intellij-set-up.md)
+      + [3 - Git の設定](./forms/developing-for-cloud-service/setup-git.md)
+      + [4 - IntelliJ をAEMと同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [5 — フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [6 — カスタム送信ハンドラー](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
+      + [7 - Forms Portal コンポーネントの有効化](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [8 -Cloud Servicesと FDM を含む](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 — コンテキスト対応クラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [10 - Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 — 開発環境へのデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [12 - Maven アーキタイプの更新](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + アダプティブフォームの作成{#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
       + [テーマの作成](./forms/create-first-af/create-theme.md)

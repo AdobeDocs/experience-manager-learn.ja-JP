@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8852
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 0%
+source-wordcount: '210'
+ht-degree: 2%
 
 ---
 
@@ -40,18 +40,28 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 }
 ```
 
-## カスタム送信の作成
+## カスタム送信ハンドラーの作成
 
-app/bankingapplication フォルダーに、 [AEM Formsの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
+カスタム送信アクションを `apps/bankingapplication` フォルダー内に [AEM Formsの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). このチュートリアルの目的で、SubmitToAEMServlet というフォルダーを `apps/bankingapplication` CRX リポジトリのノード。
+
 post.formstution.jsp の次のコードは、/bin/formstutorial にマウントされたPOSTに要求を転送するだけです。 これは、前の手順で作成したサーブレットと同じです
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
+IntelliJ のAEMプロジェクトで、 `apps/bankingapplication` フォルダーに移動し、「新規」を選択します。 |新しいパッケージダイアログボックスで、apps.bankingapplication の後に SubmitToAEMServlet をパッケージ化して入力します。 「 SubmitToAEMServlet 」ノードを右クリックし、「 repo 」を選択します。 | AEMプロジェクトをAEMサーバーリポジトリと同期するコマンドを取得します。
+
+
 ## アダプティブフォームの設定
 
-これで、アダプティブフォームを設定して、次の名前のカスタム送信ハンドラーに送信できます。 **AEM Servlet に送信**
+これで、任意のアダプティブフォームを設定して、次の名前のカスタム送信ハンドラーに送信できます。 **AEM Servlet に送信**
+
+## 次の手順
+
+[フォームポータルコンポーネントの有効化](./forms-portal-components.md)
+
+
 
 
 

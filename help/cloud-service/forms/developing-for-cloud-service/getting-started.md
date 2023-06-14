@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
-source-wordcount: '231'
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+workflow-type: tm+mt
+source-wordcount: '235'
 ht-degree: 100%
 
 ---
@@ -34,3 +34,7 @@ ht-degree: 100%
 * コマンドプロンプトウィンドウを開き、**c:\cloudmanager** に移動します。 
 * [テキストファイル](assets/creating-maven-project.txt)の内容をコピーしてコマンドプロンプトウィンドウに貼り付けます。 [最新バージョン](https://github.com/adobe/aem-project-archetype/releases)によっては、DarchetypeVersion=30 を変更する必要があります。 この記事の作成時点での最新バージョンは 30 でした。
 * Enter キーを押してコマンドを実行します。すべてが正しく行われた場合は、ビルド成功のメッセージが表示されます。
+
+## 次の手順
+
+[IntelliJ のインストール](./intellij-set-up.md)

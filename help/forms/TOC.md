@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1828'
 ht-degree: 82%
 
 ---
@@ -237,6 +237,7 @@ ht-degree: 82%
    + [4 — 入力するフォームを選択](headless-forms/select-form-from-drop-down-list.md)
    + [5 — フォームをカード形式で表示する](headless-forms/display-forms-card-view.md)
    + [6 — 選択したフォームを表示](headless-forms/open-form-card-view.md)
+   + [7 — フォームの送信を処理](headless-forms/display-thank-you-message.md)
 
 + React アプリと Forms および Acrobat Sign の連携 {#react-ic-sign}
    + [1 — はじめに](react-ic-sign/introduction.md)

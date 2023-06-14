@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
-source-wordcount: '504'
-ht-degree: 100%
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Cygwin は、Microsoft Windows 上でネイティブに動作する POSIX 互換
 
 c:\cloudmanager の下に adoberepo というフォルダーを作成します。
 
-[リポジトリツールをインストール]（https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo）リポジトリツールのインストールでは、リポジトリファイルをコピーして c:\cloudmanger\adoberepo フォルダーに配置するだけです。
+[リポジトリツールのインストール](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) リポジトリツールのインストールは、リポジトリファイルをコピーしてc:\cloudmanger\adoberepo folderフォルダーに配置するだけです。
 
 パス環境変数 C:\cygwin64\bin、C:\CloudManager\adoberepo に以下を追加します。
 
@@ -35,7 +35,7 @@ c:\cloudmanager の下に adoberepo というフォルダーを作成します�
 * IntelliJ の起動
 * Ctrl + Alt + S キーを押して、設定ウィンドウを起動します。
 * ツール/外部ツールを選択して「+」記号をクリックし、スクリーンショットのように入力します。
-   ![rep](assets/repo.png)
+  ![rep](assets/repo.png)
 * 必ず、「グループ」ドロップダウンフィールドに「repo」と入力して、repo という名前のグループを作成し、作成するすべてのコマンドが **repo** グループに属するようにします。
 
 
@@ -91,3 +91,7 @@ c:\aemformscs\aem-sdk\author
 * aem-forms-addon-xxxxx.far をインストールフォルダーにコピーします。
 * コマンドプロンプトを開き、 c:\aemformscs\aem-sdk\author に移動してコマンド java -jar aem-author-p4502.jar -gui を入力します。 
 これにより、AEM インスタンスに forms アドオンパッケージがデプロイされます。
+
+## 次の手順
+
+[AEMのフォームおよびテンプレートとAEMプロジェクトの同期](./deploy-your-first-form.md)

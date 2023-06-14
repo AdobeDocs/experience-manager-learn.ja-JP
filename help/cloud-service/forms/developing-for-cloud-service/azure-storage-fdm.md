@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
-source-wordcount: '221'
-ht-degree: 100%
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 98%
 
 ---
 
@@ -47,3 +47,7 @@ ui.content プロジェクトの filter.xml に適切なエントリを含める
 >[!NOTE]
 >
 >Cloud Manager を使用してプロジェクトをビルドおよびデプロイする際に、クラウドサービス設定で Azure アクセスキーを再入力する必要があります。 アクセス キーを再入力しないために、[次の記事](./context-aware-fdm.md)で説明されているように、環境変数を使用してコンテキスト対応の構成を作成することをお勧めします。
+
+## 次の手順
+
+[コンテキスト対応設定の作成](./context-aware-fdm.md)
