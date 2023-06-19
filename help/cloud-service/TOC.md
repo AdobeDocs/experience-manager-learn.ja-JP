@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '963'
 ht-degree: 91%
 
 ---
@@ -79,6 +79,7 @@ ht-degree: 91%
                + [XML として書き出し](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
                + [RTE ツールバーボタン](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
                + [RTE ウィジェット](./developing/extensibility/ui/content-fragments/examples/editor-rte-widget.md)
+               + [RTE バッジ](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
    + 開発の基本{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [ローカル開発環境](./developing/basics/local-development-environment.md)
