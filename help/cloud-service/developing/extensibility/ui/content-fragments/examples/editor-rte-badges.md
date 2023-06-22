@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '765'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # リッチテキストエディター (RTE) へのバッジの追加
 
-![コンテンツフラグメントエディターのバッジの例](./assets/rte/rte-badge-home.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  は、リッチテキストエディター (RTE) 内のテキストを編集不可にする拡張機能です。 つまり、バッジとして宣言されたバッジは完全にのみ削除でき、部分的には編集できません。 また、RTE 内で特別な色付けをサポートしているので、コンテンツ作成者に対して、テキストがバッジであり、編集できないことを明確に示します。 また、バッジテキストの意味に関する視覚的な手掛かりを提供します。
 
