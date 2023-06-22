@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 93%
@@ -70,7 +70,7 @@ c:\cloudmanager の下に adoberepo というフォルダーを作成します�
 
 ui.content など、aem-banking-application プロジェクト内の任意のプロジェクトを選択して右クリックすると repo オプションが表示され、repo オプションの下に以前追加した 4 つのコマンドが表示されます。
 
-## AEM オーサーインスタンスをセットアップします。
+## AEM オーサーインスタンスをセットアップします。{#set-up-aem-author-instance}
 
 次の手順に従って、ローカルシステム上にクラウド対応インスタンスをすばやくセットアップできます。
 * [最新の AEM SDK をダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)

@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 91%
+source-wordcount: '977'
+ht-degree: 89%
 
 ---
 
@@ -208,6 +208,10 @@ ht-degree: 91%
       + [資産パネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [開始パネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
+   + ヘッドレスフォームを持つカスタム送信サービス{#custom-submit-headless-forms}
+      + [1 — はじめに](./forms/custom-submit-headless-forms/introduction.md)
+      + [2 — カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
+      + [3 — 応答を表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
    + AEM Forms と Analytics{#forms-and-analytics}
       + [はじめに](./forms/form-data-analytics/introduction.md)
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)

@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '206'
-ht-degree: 100%
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 89%
 
 ---
 
@@ -24,11 +24,15 @@ ht-degree: 100%
 * crx にログインする
 * アプリの下に、「sling :folder」タイプのノードを作成します。このノードを CustomSubmitHelpx と呼びましょう。
 * 新しく作成したノードを保存します。
-* 新しく作成したノードに次の 2 つのプロパティを追加します
-* プロパティ名 | プロパティ値
-* guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel | xfa,xsd,basic
-* jcr :description | CustomSubmitHelpx
+* 新しく作成したノードに次の 3 つのプロパティを追加します。
+
+| プロパティ名 | プロパティの値 |
+|----------------    | ---------------------------------|
+| guideComponentType | fd/af/components/guidesubmittype |
+| guideDataModel | xfa,xsd,basic |
+| jcr :description | CustomSubmitHelpx |
+
+
 * 変更内容を保存します
 * CustomSubmitHelpx ノードの下に post.POST.jsp という新しいファイルを作成します。アダプティブフォームが送信されると、この JSP が呼び出されます。このファイルに要件に応じた JSP コードを書き込むことができます。次のコードは、リクエストをサーブレットに転送します。
 
