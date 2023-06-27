@@ -3,6 +3,7 @@ title: Workfront for AEM 拡張コネクタ の AEMタグ、プロジェクト�
 description: Workfront データを介してアセットで AEM タグを使用し、プロジェクトにリンクされたフォルダーを使用し、Workfront データを AEM アセットフォルダーメタデータスキーマに使用する方法について説明します。
 version: Cloud Service
 topic: Content Management, Integrations
+feature: Asset Management
 role: Admin, Architect, Developer
 level: Beginner
 kt: 9720
@@ -10,10 +11,10 @@ thumbnail: 340333.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '109'
+ht-degree: 100%
 
 ---
 

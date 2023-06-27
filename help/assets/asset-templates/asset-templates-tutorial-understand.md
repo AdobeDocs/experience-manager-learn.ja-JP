@@ -3,10 +3,11 @@ title: AEM Assets の InDesign ファイルとアセットテンプレートに�
 description: このビデオチュートリアルでは、AEM Assets のアセットテンプレート機能で使用する InDesign ファイルの定義と、それに伴うすべての考慮事項について順を追って説明します。
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 100%
@@ -35,6 +36,7 @@ ht-degree: 100%
 4. FPO ロゴ画像（[zip で提供](assets/asset-templates-tutorial-video--supporting-files.zip)）をマスターページのロゴ要素に追加します。
 
    * **右クリックし**、**調整／フレーム調整オプション...／コンテンツ調整／フレームに均等に流し込む**&#x200B;を選択します。
+
    フレーム調整オプションと現在のユースケースに適したオプションについて詳しくは、[こちら](https://helpx.adobe.com/jp/indesign/using/frames-objects.html#fitting_objects_to_frames)を参照してください。
 
 5. ページ内のマスターテンプレートからヘッダー（ロゴと会社名）をコピーし、「同じ位置にペースト」を使用してページにペーストします。

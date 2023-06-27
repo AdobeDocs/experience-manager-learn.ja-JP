@@ -3,11 +3,12 @@ title: アップグレードする理由について
 description: Adobe Experience Manager 6 の最新バージョンへのアップグレードを検討しているお客様向けの主な機能の概要。
 version: 6.5
 topic: Upgrade
+feature: Release Information
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '2602'
 ht-degree: 100%
 

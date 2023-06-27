@@ -1,13 +1,14 @@
 ---
 title: AEM Sites 成熟度評価
-seo-title: AEM Sites Maturity Assessment
 description: このチェックリストは、AEM Sites インスタンスの成熟度を評価する際に回答する必要がある主な質問の概要を示します。
-seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
 audience: author, marketer, developer
+role: Admin
+level: Intermediate
+topic: Administration
 feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 100%
 

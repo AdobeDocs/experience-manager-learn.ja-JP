@@ -3,14 +3,15 @@ title: ローカル AEM でのアセット共有 Commons の設定
 description: Assets Share Commons の機能と技術の両方を理解するための資料
 version: 6.4, 6.5
 topic: Content Management
+feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-21T00:00:00Z
 exl-id: ab16d5e0-71d9-4518-a03b-4aa5d2ec95a7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '75'
+ht-degree: 100%
 
 ---
 

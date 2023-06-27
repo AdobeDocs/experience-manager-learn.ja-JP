@@ -9,11 +9,12 @@ version: Cloud Service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 100%
 
@@ -41,11 +42,11 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
    ![A/B アクティビティ](assets/ab-target-activity.png)
 
-1. **Visual Experience Composer** オプションを選択し、アクティビティ URL を指定して「**次へ**」をクリックします。
+1. 「**Visual Experience Composer**」オプションを選択し、アクティビティ URL を指定して「**次へ**」をクリックします。
 
    ![アクティビティ URL](assets/ab-test-url.png)
 
-1. Visual Experience Composer では、新しいアクティビティを作成した後、左側に「*エクスペリエンス A*」および 「*エクスペリエンス B*」の 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
+1. 新しいアクティビティを作成した後、Visual Experience Composer の左側に「*エクスペリエンス A*」と「*エクスペリエンス B*」という 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
 
    ![エクスペリエンスオプション](assets/experience-options.png)
 
@@ -63,7 +64,7 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
 1. 「目標と設定」では、「レポートソース」として「Adobe Target」を選択し、「目標指標」として「ページビューアクションによるコンバージョン」を選択します。
 
-   ![ゴール](assets/goals.png)
+   ![目標](assets/goals.png)
 
 1. アクティビティの名前を指定して保存します。
 1. 保存したアクティビティをアクティブ化して、変更をライブにプッシュします。

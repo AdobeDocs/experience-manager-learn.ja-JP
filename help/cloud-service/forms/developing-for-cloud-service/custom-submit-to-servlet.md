@@ -7,8 +7,10 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
+feature: Developer Tools
 kt: 8852
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+exl-id: 832f7e82-3e03-4ac6-9c8b-e96f0efecd32
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 2%
@@ -60,8 +62,3 @@ IntelliJ のAEMプロジェクトで、 `apps/bankingapplication` フォルダ�
 ## 次の手順
 
 [フォームポータルコンポーネントの有効化](./forms-portal-components.md)
-
-
-
-
-

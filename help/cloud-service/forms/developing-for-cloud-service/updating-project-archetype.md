@@ -7,10 +7,11 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
+feature: AEM Project Archetype
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 100%
 
@@ -39,16 +40,15 @@ ht-degree: 100%
 
 * ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```から次の場所に HandleFormSubmission サーブレットをコピーします
 
-
-   ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
+  ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
 * CustomSubmit を
-   ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` を aem-banking-application から aem-banking-application1 プロジェクトへコピーします
+  ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` を aem-banking-application から aem-banking-application1 プロジェクトへコピーします
 
 * IntelliJ に新しいプロジェクトを読み込みます
 
 * 次の行を含めるように、aem-banking-application1 プロジェクトの ui.apps モジュールの filter.xml を更新します
-   ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
+  ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
 
 すべてのコードを新しいプロジェクトにコピーしたら、このプロジェクトを Cloud Manager にプッシュできます。
 

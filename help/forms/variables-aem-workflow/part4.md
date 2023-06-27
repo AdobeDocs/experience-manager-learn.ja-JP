@@ -3,11 +3,12 @@ title: AEM ワークフローの変数 [第 4 部]
 description: AEM ワークフローでの XML、JSON、ArrayList、Document タイプの変数の使用
 version: 6.5
 topic: Development
+feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 100%
 
@@ -79,4 +80,4 @@ CustomRoutes ArrayList 変数が送信データからの値で初期化される
 * 「経費管理者に割り当て」というタイトルの新しいタスクが表示されます
 * タスクに関連付けられたフォームを開きます
 * マネージャー名を持つ 2 つのカスタムルートが表示されます
-   [ReviewExpenseReportWorkflow を探索します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) このワークフローでは、ArrayList 変数、JSON 型変数、Or-Sokut コンポーネントのルールエディターを使用します
+  [ReviewExpenseReportWorkflow を探索します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) このワークフローでは、ArrayList 変数、JSON 型変数、Or-Sokut コンポーネントのルールエディターを使用します

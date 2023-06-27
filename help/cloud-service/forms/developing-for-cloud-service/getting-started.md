@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 100%
@@ -19,6 +19,7 @@ ht-degree: 100%
 # 必要なソフトウェアのインストール
 
 このチュートリアルでは、AEM Forms プロジェクトを作成し、IntelliJ とリポジトリツールを使用して AEM Forms プロジェクトをローカル AEM インスタンスと同期するために必要な手順を説明します。 また、プロジェクトをローカル Git リポジトリに追加し、ローカル Git リポジトリを Cloud Manager リポジトリにプッシュする方法についても説明します。
+
 
 
 

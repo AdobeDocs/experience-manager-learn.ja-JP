@@ -3,14 +3,14 @@ title: AEM as a Cloud Service コンテンツの移行に関する FAQ
 description: AEM as a Cloud Service へのコンテンツの移行に関するよくある質問への回答を示します。
 version: Cloud Service
 doc-type: article
-feature: Migration
 topic: Migration
+feature: Migration
 role: Architect, Developer
 level: Beginner
 kt: 11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 97%

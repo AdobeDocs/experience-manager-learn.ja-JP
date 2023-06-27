@@ -3,11 +3,12 @@ title: Asset Share Commons のユーザーエクスペリエンスについて
 description: Assets Share Commons の機能と技術の両方を理解するための資料
 version: 6.4, 6.5
 topic: Content Management
+feature: Asset Distribution
 role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 100%

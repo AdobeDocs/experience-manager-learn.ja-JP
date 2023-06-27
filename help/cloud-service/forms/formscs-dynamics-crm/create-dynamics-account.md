@@ -5,10 +5,11 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
-feature: Adaptive Forms
+feature: Adaptive Forms, Integrations
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: ec4ed3e1-98ae-41ce-9891-09da3321edd5
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -26,4 +27,3 @@ ht-degree: 0%
 次のビデオでは、Microsoft Dynamics を Azure Active Directory に登録する手順について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340743?quality=12&learn=on)
-

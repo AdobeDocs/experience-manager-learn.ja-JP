@@ -9,11 +9,12 @@ version: Cloud Service
 kt: 4641
 thumbnail: 32032.jpg
 topic: Architecture
+feature: Sling Model
 role: Architect, Developer
 level: Beginner
 exl-id: 92afc9c4-3d58-4787-86f6-46495d89c4d4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 100%
 

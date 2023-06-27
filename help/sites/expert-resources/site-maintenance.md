@@ -1,12 +1,13 @@
 ---
 title: 日常のサイトメンテナンスガイド
-seo-title: Your Routine Site Maintenance Guide
 description: 管理者、作成者、開発者のどれに該当しようと、サイトメンテナンスでは、AEM Sites インスタンスのあらゆる側面に触れます。このガイドを使用すると、成功に向けた戦略を確実に設定することができます。
-seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+role: Admin
+level: Beginner, Intermediate
+topic: Administration
 audience: author, marketer, developer
 feature: Learn From Your Peers
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 97%
