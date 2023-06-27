@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
-workflow-type: ht
-source-wordcount: '74'
-ht-degree: 100%
+source-git-commit: cdc34a11cf9f6edd54f7423218cb66a93a104a92
+workflow-type: tm+mt
+source-wordcount: '76'
+ht-degree: 97%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 100%
    + [管理](basics/managing.md)
    + [使用](basics/using.md)
    + [コンテンツの作成](basics/creating.md)
+   + [クイックアクセス](basics/quick-access.md)
    + [共同作業](basics/collaborating.md)
    + [リンク共有](basics/link-sharing.md)
 
