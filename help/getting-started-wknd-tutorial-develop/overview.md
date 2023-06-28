@@ -5,7 +5,7 @@ topics: development
 version: Cloud Service
 activity: develop
 audience: developer
-KT: 4132
+jira: KT-13565
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
@@ -15,10 +15,10 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 5f43db64f68218ed3d349508a2c4fd232601a9ef
+workflow-type: tm+mt
 source-wordcount: '599'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 100%
 
 ## 概要 {#wknd-tutorial-overview}
 
-この複数パートから成るチュートリアルは、Adobe Experience Manager（AEM）の最新の標準やテクノロジーを使用して Web サイトを実装するための手順を開発者に教えることを目的としています。このチュートリアルを修了すると、開発者はプラットフォームの基本的な基礎について理解し、AEM の一般的な設計パターンに関する知識を得ることができます。
+このマルチパートチュートリアルの目的は、Adobe Experience Manager(AEM) の最新の標準とテクノロジーを使用して Web サイトを実装する方法を開発者に教えることです。 このチュートリアルを修了すると、開発者はプラットフォームの基本的な基礎について理解し、AEM の一般的な設計パターンに関する知識を得ることができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
