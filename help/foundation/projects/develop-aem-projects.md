@@ -12,9 +12,9 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 source-git-commit: 481b8877e252b885da307fcf4d96f8a50f026fa6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4571'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -154,7 +154,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
    1. 別の **nt:unstructured** ノードを、approvers というラベルを付けて、roles ノードの子として追加します。
    1. String プロパティ **jcr:title**=&quot;**Approvers**&quot;、**roleclass**=&quot;**owner**&quot;、**roleid**=&quot;**approvers**&quot; を追加します。
       1. approvers ノードの名前、および jcr:title と roleid には、（roleid が一意である限り）任意の文字列値を指定できます。
-      1. **ロールクラス** は、 [3 つの OOTB ロール](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project): **所有者**, **編集者**、および **監視者**.
+      1. **roleclass** は、**owner**、**editor**、**observer** の [3 つの OOTB の役割](https://docs.adobe.com/docs/ja/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project)に基づいて、その役割に適用される権限を管理します。
       1. 一般に、カスタムの役割が管理の役割の色彩が強い場合、roleclass は **owner** にできます。フォトグラファーやデザイナーなど、オーサリング上のより具体的な役割の場合は、**editor** の roleclass で十分です。**owner** と **editor** の大きな違いは、プロジェクトの所有者はプロジェクトのプロパティを更新したり、新しいユーザーをプロジェクトに追加したりできる点です。
 
    ```shell
