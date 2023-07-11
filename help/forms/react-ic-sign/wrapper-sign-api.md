@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: b7ddc0bd-db93-44e0-83cc-bccde604bd91
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '267'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -198,4 +198,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 次の手順
 
-[Acrobat Sign Widget URL の生成](./create-servlet-to-expose-endpoint.md)
+[Acrobat Sign ウィジェット URL の生成](./create-servlet-to-expose-endpoint.md)
