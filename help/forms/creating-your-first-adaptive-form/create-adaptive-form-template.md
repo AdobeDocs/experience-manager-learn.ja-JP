@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 404c345b-efc3-44b9-bc38-6d911627ff5a
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
 ht-degree: 100%
 
@@ -28,5 +28,5 @@ ht-degree: 100%
 
 ## 次の手順
 
-[アダプティブフォームフラグメントを作成](./create-form-fragment.md)
+[アダプティブフォームフラグメントの作成](./create-form-fragment.md)
 
