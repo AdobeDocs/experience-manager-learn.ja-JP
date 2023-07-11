@@ -17,9 +17,9 @@ role: Developer
 level: Beginner
 exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '348'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ AEM で監視フォルダーを設定する場合、監視フォルダーにフ�
 * interactiveCommunicationsDocument へのパスが、印刷する正しいドキュメントを指していることを確認します。（1 行目）
 * saveLocation（2 行目）をメモしておきます。必要に応じて変更できます。
 * フォームデータモデルへの入力パラメーターがリクエスト属性にバインドされ、そのバインド値が「accountnumber」に設定されていることを確認します。 以下のスクリーンショットを参照してください。
-   ![リクエスト](assets/requestattributeprintchannel.gif)
+  ![リクエスト](assets/requestattributeprintchannel.gif)
 
 * 次の内容の ccountnumbers.xml ファイルを作成します
 
