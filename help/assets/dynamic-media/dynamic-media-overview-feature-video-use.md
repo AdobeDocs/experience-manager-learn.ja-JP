@@ -8,9 +8,9 @@ role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '842'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 97%
 * 画像およびレスポンシブビューアーへのコピー URL
 * URL へのスマート切り抜きバリエーション
 
-## AEM Sitesで使用
+## AEM Sites での使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ ht-degree: 97%
 * 画像パスへの切り抜き
 * Photoshop ファイルからのテキストテンプレートの作成
 
-## JPEGファイルサイズ管理
+## JPEG ファイルサイズ管理
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
