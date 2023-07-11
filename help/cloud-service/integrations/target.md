@@ -12,7 +12,7 @@ jira: KT-12433
 thumbnail: KT-12433.jpeg
 exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
 source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1671'
 ht-degree: 100%
 
