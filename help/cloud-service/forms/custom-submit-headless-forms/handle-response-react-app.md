@@ -10,9 +10,9 @@ feature: Adaptive Forms
 topic: Development
 kt: 13520
 source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '51'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
