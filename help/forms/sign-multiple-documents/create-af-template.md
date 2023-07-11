@@ -14,9 +14,9 @@ role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '120'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -36,4 +36,4 @@ ht-degree: 92%
 
 ## 次の手順
 
-[使用された](./create-initial-form.md)
+[ユーザーが署名するフォームの選択](./create-initial-form.md)
