@@ -13,9 +13,9 @@ role: Developer
 level: Beginner
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1621'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ SPA Editor SDK を使用して AEM ページにマッピングすることで、
 
 ## 作成する内容
 
-この章では、AEM の SPA にナビゲーションを追加します。 ナビゲーションメニューは AEM のページ階層によって起動され、[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)が提供する JSON モデルを活用します。
+この章では、AEM の SPA にナビゲーションを追加します。 ナビゲーションメニューは AEM のページ階層によって起動され、[ナビゲーションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=ja)が提供する JSON モデルを活用します。
 
 ![追加されたナビゲーション](assets/navigation-routing/navigation-added.png)
 
