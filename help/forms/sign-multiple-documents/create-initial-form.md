@@ -10,9 +10,9 @@ kt: 6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '177'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -37,4 +37,4 @@ ht-degree: 96%
 
 ## 次の手順
 
-[署名に使用するフォームを作成](./create-forms-for-signing.md)
+[署名に使用するフォームの作成](./create-forms-for-signing.md)
