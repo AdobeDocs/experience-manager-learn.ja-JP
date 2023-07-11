@@ -1,6 +1,6 @@
 ---
-title: AEM UI 拡張機能Adobe I/O Runtimeアクション
-description: AEM UI 拡張機能モーダルを作成する方法について説明します。
+title: AEM UI 拡張機能の Adobe I/O Runtime アクション
+description: AEM UI 拡張機能モーダルを作成する方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,9 +11,9 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '556'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -21,10 +21,9 @@ ht-degree: 76%
 
 ![AEM UI 拡張機能のランタイムアクション](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
-AEM UI 拡張機能には、オプションで任意の数のを含めることができます [Adobe I/O Runtime actions](https://developer.adobe.com/runtime/docs/).
+AEM UI 拡張機能には、オプションで任意の数の [Adobe I/O Runtime アクション](https://developer.adobe.com/runtime/docs/)を組み込むことができます。
 
-Adobe I/O Runtime のアクションは、拡張機能によって呼び出すことができるサーバーレス関数です。 アクションは、AEM やその他の Adobe web サービスとのやり取りを必要とする作業を実行する場合に役立ちます。
-アクションは通常、長時間（数秒以上）のタスクを実行したり、AEM や他の web サービスに HTTP リクエストを送信したりする場合に最も役に立ちます。
+Adobe I/O Runtime のアクションは、拡張機能で呼び出すことができるサーバーレス関数です。アクションは、AEM やその他の Adobe web サービスとのやり取りが必要な作業を実行する場合に役立ちます。アクションは通常、長時間（数秒以上）のタスクを実行したり、AEM や他の web サービスに HTTP リクエストを送信したりする場合に最も役に立ちます。
 
 Adobe I/O Runtime アクションを使用して作業を実行する利点は、次のとおりです。
 
@@ -32,17 +31,17 @@ Adobe I/O Runtime アクションを使用して作業を実行する利点は�
 + ユーザーがアクションを中断することはできません（例えば、ブラウザーを更新するなど）。
 + アクションは非同期なので、ユーザーをブロックすることなく、必要に応じて実行できます
 
-AEM UI 拡張機能のコンテキストでは、多くの場合、アクションはAEM as a Cloud Serviceとの直接通信に使用されます。
+AEM UI 拡張機能のコンテキストでは、アクションは次のような場合に AEM as a Cloud Service との直接通信によく使用されます。
 
-+ 選択したコンテンツまたは現在のコンテンツに関するAEMからの関連データの収集
++ 選択されたコンテンツまたは現在のコンテンツに関する関連データの AEM からの収集
 + コンテンツに対するカスタム操作の実行
 + コンテンツのカスタム作成
 
-AEM UI 拡張機能は、特定のAEM UI、拡張機能およびそのサポートアクションで表示されますが、は、カスタムAEM API エンドポイントを含む、使用可能なAEM HTTP API を呼び出すことができます。
+AEM UI 拡張機能は、特定の AEM UI、拡張機能およびそのサポートアクションに表示されますが、カスタム AEM API エンドポイントなど、使用可能なあらゆる AEM HTTP API を呼び出すことができます。
 
 ## アクションの呼び出し
 
-Adobe I/O Runtimeのアクションは、主にAEM UI 拡張機能の 2 つの場所から呼び出されます。
+Adobe I/O Runtime のアクションは、主に AEM UI 拡張機能の次の 2 つの場所から呼び出されます。
 
 1. [拡張機能登録の](./extension-registration.md) `onClick(..)` ハンドラー
 1.  [モーダル](./modal.md)内
