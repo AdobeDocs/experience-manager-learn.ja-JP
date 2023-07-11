@@ -11,23 +11,23 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '304'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # 拡張機能の登録
 
-AEM UI 拡張機能は、React に基づく特殊な App Builder アプリで、 [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/) UI フレームワーク。
+AEM UI 拡張機能は、React をベースとする特殊な Application Builder アプリで、[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) UI フレームワークを使用します。
 
-AEM UI 拡張機能が表示される場所と方法を定義するには、拡張機能の App Builder アプリケーションで次の 2 つの設定が必要です。アプリのルーティングと拡張機能の登録。
+AEM UI 拡張機能が表示される場所と方法を定義するには、拡張機能の Application Builder アプリで、アプリのルーティングと拡張機能の登録という 2 つの設定が必要です。
 
 ## アプリルート{#app-routes}
 
-拡張機能の `App.js` 宣言する [React ルーター](https://reactrouter.com/ja/main) AEM UI で拡張を登録するインデックスルートを含む
+拡張機能の `App.js` では、AEM UI に拡張機能を登録するインデックスルートを含む [React ルーター](https://reactrouter.com/ja/main)を宣言します。
 
-AEM UI が最初に読み込まれるとインデックスルートが呼び出され、このルートのターゲットは拡張機能がコンソールに公開される方法を定義します。
+AEM UI が最初に読み込まれると、インデックスルートが呼び出されます。このルートのターゲットは、拡張機能がコンソールでどのように公開されるかを定義します。
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
 
@@ -52,30 +52,30 @@ function App(props) {
 
 ## 拡張機能の登録
 
-`ExtensionRegistration.js` は、拡張機能のインデックスルートを介して直ちに読み込まれ、拡張機能の登録ポイントを操作する必要があります。
+`ExtensionRegistration.js` は、拡張機能のインデックスルートを通じて直ちに読み込まれる必要があり、拡張機能の登録ポイントとして機能します。
 
-次の場合に選択したAEM UI 拡張機能テンプレートに基づく [App Builder アプリ拡張機能の初期化](./app-initialization.md)の場合、異なる拡張ポイントがサポートされます。
+[Application Builder アプリ拡張機能を初期化](./app-initialization.md)する際に選択した AEM UI 拡張機能テンプレートに応じて、様々な拡張ポイントがサポートされています。
 
 + [コンテンツフラグメント UI 拡張ポイント](./content-fragments/overview.md#extension-points)
 
 
-## 条件付きで拡張機能を含める
+## 拡張機能の条件付き組み込み
 
-AEM UI 拡張機能は、カスタムロジックを実行して、拡張機能が表示されるAEM環境を制限できます。 このチェックは、 `register` を呼び出す `ExtensionRegistration` コンポーネントに含まれ、拡張機能を表示しない場合は直ちに返されます。
+AEM UI 拡張機能では、カスタムロジックを実行して、拡張機能が表示される AEM 環境を制限できます。このチェックは `ExtensionRegistration` コンポーネントでの `register` 呼び出しの前に実行され、拡張機能を表示すべきでない場合は直ちに戻ります。
 
-このチェックには使用可能なコンテキストが制限されています：
+このチェックで使用できるコンテキストは限られています。
 
-+ 拡張機能が読み込まれるAEMホスト。
-+ 現在のユーザーのAEMアクセストークン。
++ 拡張機能が読み込まれる AEM ホスト。
++ 現在のユーザーの AEM アクセストークン。
 
-拡張機能の読み込みに関する最も一般的なチェックは次のとおりです。
+拡張機能を読み込むための最も一般的なチェックは、次のとおりです。
 
-+ AEMホスト (`new URLSearchParams(window.location.search).get('repo')`) を使用して、拡張機能を読み込む必要があるかどうかを判断します。
-   + 特定のプログラムの一部であるAEM環境でのみ拡張機能を表示します（以下の例を参照）。
-   + 特定のAEM環境 (AEMホスト ) でのみ拡張機能を表示します。
-+ の使用 [Adobe I/O Runtime action](./runtime-action.md) を使用してAEMに対する HTTP 呼び出しをおこない、現在のユーザーに拡張機能を表示する必要があるかどうかを判断します。
++ AEMホスト（`new URLSearchParams(window.location.search).get('repo')`）を使用して、拡張機能を読み込むかどうかを判断します。
+   + 特定のプログラムの構成要素である AEM 環境でのみ拡張機能を表示します（以下の例を参照）。
+   + 特定の AEM 環境（AEM ホスト）でのみ拡張機能を表示します。
++ [Adobe I/O Runtime アクション](./runtime-action.md)を使用して AEM への HTTP 呼び出しを行い、現在のユーザーに拡張機能を表示するかどうかを判断します。
 
-次の例は、プログラム内のすべての環境に拡張機能を制限する方法を示しています `p12345`.
+次の例は、プログラム `p12345` のすべての環境に拡張機能を制限する方法を示しています。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
