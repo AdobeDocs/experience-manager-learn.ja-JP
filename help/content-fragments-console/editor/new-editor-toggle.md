@@ -1,6 +1,6 @@
 ---
-title: 新しいエディター切り替え — コンテンツフラグメントエディター
-description: 「新しいコンテンツフラグメントを学ぶ」切り替えを使用すると、デフォルトの新しいコンテンツフラグメントエディターとクラシックエディターを簡単に切り替えることができます。
+title: 新しいエディター切替スイッチ - コンテンツフラグメントエディター
+description: デフォルトの新しいコンテンツフラグメントエディターとクラシックエディターを簡単に切り替えることができる新しいエディター切替スイッチについて説明します。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -9,16 +9,16 @@ level: Beginner
 doc-type: Feature Video
 last-substantial-update: 2023-05-12T00:00:00Z
 jira: KT-13240
-source-git-commit: 4c22214659ebeae9fa2d09828060a08b8f056821
-workflow-type: tm+mt
+exl-id: 35f9995d-50d7-4582-8bcc-16ed1811c41b
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# 新規エディター切替スイッチ
 
-# 新しいエディタ切り替え
-
-「新しいエディター」切り替えを使用して、新しいデフォルトのコンテンツフラグメントエディターとクラシックエディターを簡単に切り替える方法を説明します。
+新しいエディター切替スイッチを使用して、デフォルトの新しいコンテンツフラグメントエディターとクラシックエディターを簡単に切り替える方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
