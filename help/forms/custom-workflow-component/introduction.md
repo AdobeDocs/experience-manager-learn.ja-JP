@@ -9,9 +9,9 @@ level: Beginner
 last-substantial-update: 2022-11-28T00:00:00Z
 exl-id: 9f00a2f9-d388-4bcc-bdd6-66531dbb3ed2
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -29,4 +29,4 @@ ht-degree: 88%
 
 ## 次の手順
 
-次を書き込みます。 [WorkflowProcess インターフェイスの実装によるカスタム Java コード](./custom-process-step-aem-workflow.md)
+[WorkflowProcess インターフェイスの実装によるカスタム Java コード](./custom-process-step-aem-workflow.md)の記述
