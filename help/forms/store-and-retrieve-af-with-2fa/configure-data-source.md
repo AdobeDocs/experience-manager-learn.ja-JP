@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '303'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -60,4 +60,4 @@ MySQL Workbench で、[データベーススキーマ](assets/data-base-schema.s
 
 ## 次の手順
 
-[フォームの添付ファイルを保存するコードを記述する](./store-form-attachments.md)
+[フォームの添付ファイルを保存するコードの記述](./store-form-attachments.md)
