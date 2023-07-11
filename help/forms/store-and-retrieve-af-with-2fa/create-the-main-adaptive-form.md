@@ -12,9 +12,9 @@ role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,4 +36,4 @@ ht-degree: 97%
 
 ## 次の手順
 
-[保存済みフォームを取得するフォームを作成する](./retrieve-saved-form.md)
+[保存済みフォームを取得するフォームの作成](./retrieve-saved-form.md)
