@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレス最初のチュートリアル
-description: AEMヘッドレスファーストアプリケーションになる方法を説明します。
+title: AEM ヘッドレスの最初のチュートリアル
+description: AEM ヘッドレスの最初のアプリケーションにする方法を説明します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -10,57 +10,57 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
-workflow-type: tm+mt
+exl-id: 395af1ec-ceee-4b4d-98e8-007f560b318b
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '427'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-
-# AEMヘッドレス最初のチュートリアル
+# AEM ヘッドレスの最初のチュートリアル
 
 {{aem-headless-trials-promo}}
 
-このたびは、AEMヘッドレス API とGraphQLを駆使した、React を使用した Web エクスペリエンスの構築に関するチュートリアルをご利用いただき、誠にありがとうございます。 このチュートリアルでは、React、Adobe Experience Manager(AEM) ヘッドレス API、GraphQLの機能を組み合わせて、動的でインタラクティブな Web アプリケーションを作成するプロセスを順を追って説明します。
+このチュートリアルでは、AEM ヘッドレス API と GraphQL を完全に活用した React を使用して web エクスペリエンスを作成する方法について説明します。このチュートリアルでは、React、Adobe Experience Manager（AEM）ヘッドレス API、GraphQL の機能を組み合わせて、動的でインタラクティブな web アプリケーションを作成するプロセスを説明します。
 
-React は、シンプルさ、再利用性、コンポーネントベースのアーキテクチャで知られる、ユーザーインターフェイスを構築するための一般的な JavaScript ライブラリです。 AEMは、堅牢なコンテンツ管理機能を提供し、ヘッドレス API を提供します。開発者は、様々なチャネルやアプリケーションを通じて、AEMに保存されたコンテンツやデータにアクセスできます。
+React は、ユーザーインターフェイスを作成するための一般的な JavaScript ライブラリであり、そのシンプルさ、再利用性、コンポーネントベースのアーキテクチャで知られています。AEM は、堅牢なコンテンツ管理機能を提供し、開発者が様々なチャネルやアプリケーションを通じて AEM に保存されているコンテンツやデータへのアクセスを可能にするヘッドレス API を公開します。
 
-AEMヘッドレス API を活用することで、AEMインスタンスからコンテンツ、アセットおよびデータを取得し、それらを使用して React アプリケーションを強化できます。 API 用の柔軟なクエリ言語であるGraphQLを使用すると、AEMインスタンスから特定のデータを効率的かつ正確にリクエストし、React とAEMをシームレスに統合できます。
+AEM のヘッドレス API を活用すると、AEM インスタンスからコンテンツ、アセット、データを取得し、これらを使用して React アプリケーションを強化できます。API 用の柔軟なクエリ言語である GraphQL は、AEM インスタンスから特定のデータをリクエストする効率的かつ正確な方法を提供し、React と AEM 間のシームレスな統合を可能にします。
 
-![AEMヘッドレスファーストチュートリアル](./assets/overview/overview.png)
+![AEM ヘッドレスの最初のチュートリアル](./assets/overview/overview.png)
 
-このチュートリアル全体で、GraphQLで React およびAEMヘッドレス API を使用して Web エクスペリエンスを構築する手順を順を追って説明します。 開発環境を設定し、React とAEM間の接続を確立し、GraphQLクエリを使用してコンテンツを取得し、Web アプリケーションで動的にレンダリングする方法について説明します。
+このチュートリアルでは、GraphQL を使用した React および AEM のヘッドレス API を使用して web エクスペリエンスを作成するプロセスを段階的に説明します。開発環境を設定し、React と AEM 間の接続を確立し、GraphQL クエリを使用してコンテンツを取得し、web アプリケーションで動的にレンダリングする方法を学びます。
 
-ここでは、React プロジェクトの設定、AEMでの認証の確立、GraphQLを使用したAEMからのコンテンツのクエリ、React コンポーネントでのデータの処理、キャッシュとページネーションを使用したパフォーマンスの最適化などのトピックについて説明します。
+ここでは、React プロジェクトの設定、AEM による認証の確立、GraphQL を使用した AEM からのコンテンツのクエリ、React コンポーネント内のデータの処理、キャッシュとページネーションを利用したパフォーマンスの最適化などのトピックについて説明します。
 
-このチュートリアルを最後までに、React、AEMヘッドレス API、GraphQLを活用して、強力で魅力的な Web エクスペリエンスを構築する方法について明確に理解できます。 次の Web アプリケーションの構築に取り組みましょう。
+このチュートリアルを終了すると、React、AEM のヘッドレス API、GraphQL を活用して強力で魅力的な web エクスペリエンスを作成する方法について明確な理解が得られます。次の web アプリケーションの作成に取り組みましょう。
 
 ## 前提条件
 
 ### スキル
 
-+ React の能力
-+ GraphQL能力
-+ AEM as a Cloud Serviceの基本知識
++ React に精通している
++ GraphQL に精通している
++ AEM as a Cloud Service の基本知識
 
 ### AEM as a Cloud Service
 
-このチュートリアルでは、AEMas a Cloud Service環境に管理者がアクセスできる必要があります。
+このチュートリアルでは、AEM as a Cloud Service 環境への管理者アクセス権が必要です。
 
 ### ソフトウェア
 
 + [Node.js v16 以降](https://nodejs.org/ja/)
-   + を実行して、ノードのバージョンを確認します。 `node -v` コマンドラインから
+   + コマンドラインから `node -v` を実行して、Node のバージョンを確認します。
 + [npm 6 以降](https://www.npmjs.com/)
-   + を実行して npm のバージョンを確認する `npm -v` コマンドラインから
+   + コマンドラインから `npm -v` を実行して、npm のバージョンを確認します。
 + [Git](https://git-scm.com/)
-   + を実行して Git のバージョンを確認する `git -v` コマンドラインから
+   + コマンドラインから `git -v` を実行して、Git のバージョンを確認します。
 
-用途 [ノードバージョンマネージャ (nvm)](https://github.com/nvm-sh/nvm) を使用して、同じマシンに複数のバージョンの node.js が存在することに対処できます。
+[ノードバージョンマネージャー（nvm）](https://github.com/nvm-sh/nvm)を使用して、同じマシン上に複数のバージョンの Node.js を存在させるようにします。
 
-コンピュータにソフトウェアをグローバルにインストールする権限を持っていることを確認します。
+コンピューターにソフトウェアをグローバルにインストールする権限があることを確認します。
 
 ## 次の手順
 
-環境が設定されたら、次の手順に進みます。 [AEM as a Cloud Serviceでのコンテンツのセットアップとオーサリング](./1-content-modeling.md)
+環境が設定されたら、[AEM as a Cloud Service でのコンテンツの設定と作成](./1-content-modeling.md)の手順に進みます。
