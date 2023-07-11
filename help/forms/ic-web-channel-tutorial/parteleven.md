@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '334'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -60,4 +60,4 @@ ht-degree: 98%
 
 ## 次の手順
 
-[Web チャネルドキュメントを配信するための準備](./parttwelve.md)
+[Web チャネルドキュメントの配信準備](./parttwelve.md)
