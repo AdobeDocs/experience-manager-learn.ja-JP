@@ -1,29 +1,29 @@
 ---
-title: SPAでのヘッドレスアダプティブフォームの使用
-description: SPAにヘッドレス連絡フォームを実装する
+title: SPA でのヘッドレスアダプティブフォームの使用
+description: SPA でのヘッドレスお問い合わせフォームの実装
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
-workflow-type: tm+mt
+exl-id: a295e04a-d56b-4226-ab0d-b85728b5c1fe
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-
 # ヘッドレスアダプティブフォームの埋め込み
 
-この [このチュートリアルでは、様々なヘッドレス API について説明します](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) フォームのリスト表示、送信を行うための
+この[チュートリアルでは、フォームのリスト、表示、送信を可能にする様々なヘッドレス API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) について説明します。
 
-この記事では、アダプティブフォームをヘッドレスで一覧表示、表示、送信するために提供される様々なヘッドレス API について説明します。
+この記事では、ヘッドレス方式でアダプティブフォームをリスト、表示、送信できるようにするために提供されている様々なヘッドレス API について説明します。
 
-この記事では、既存の単一ページアプリを使用し、SPA Web サイトにヘッドレスアダプティブフォームのリストを作成して表示することを前提としています。
+この記事では、既存の単一ページアプリを使用し、SPA web サイトでヘッドレスアダプティブフォームをリストして表示することを前提としています。
 
-次のスクリーンショットは、SPAに埋め込まれた連絡先 US フォームを示しています
+次のスクリーンショットは、SPA に埋め込まれたお問い合わせフォームを示しています。
 
 ![contact-us-form](./assets/contact-us-form.png)
 
@@ -31,11 +31,10 @@ ht-degree: 2%
 
 * React エクスペリエンス
 
-* AEM Forms 6.5.16 の実行中のインスタンス
+* AEM Forms 6.5.16 の実行インスタンス
 
-* [オーサーインスタンスとパブリッシュインスタンスでヘッドレスフォームを有効にする](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [オーサーインスタンスとパブリッシュインスタンスでヘッドレスフォームを有効にする](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=ja)
 
 ## 次の手順
 
-[依存関係をインストール](./install-af-react-libraries.md)
-
+[依存関係のインストール](./install-af-react-libraries.md)
