@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: d97ff584-7fa0-48bc-9b83-ba45c26b7d87
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '113'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -317,4 +317,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 次の手順
 
-を書く [Acrobat Sign API を公開するための OSGi サービスラッパー](./wrapper-sign-api.md)
+[Acrobat Sign API を公開するための OSGi サービスラッパーの作成](./wrapper-sign-api.md)
