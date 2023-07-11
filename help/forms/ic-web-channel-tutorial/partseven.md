@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 3babebd8-3c17-4583-9201-d93bae82f134
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
