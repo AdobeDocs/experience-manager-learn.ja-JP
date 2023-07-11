@@ -9,9 +9,9 @@ version: 6.5, Cloud Service
 kt: 2963
 index: y
 source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -46,11 +46,11 @@ ht-degree: 95%
       + [3 - AEM GraphQL API の調査](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 - 永続化された GraphQL クエリ](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - クライアントアプリケーション統合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + ヘッドレスファーストチュートリアル{#headless-first}
+   + ヘッドレスの最初のチュートリアル{#headless-first}
       + [概要](./graphql/headless-first-tutorial/overview.md)
-      + [1 — コンテンツモデリング](./graphql/headless-first-tutorial/1-content-modeling.md)
-      + [2 - AEMヘッドレス API と React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
-      + [3 — 複雑なコンポーネント](./graphql/headless-first-tutorial/3-complex-components.md)
+      + [1 - コンテンツモデリング](./graphql/headless-first-tutorial/1-content-modeling.md)
+      + [2 - AEM ヘッドレス API と React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
+      + [3 - 複合コンポーネント](./graphql/headless-first-tutorial/3-complex-components.md)
 + デプロイメント{#deployments}
    + [概要](./graphql/deployment/overview.md)
    + [シングルページアプリ](./graphql/deployment/spa.md)
