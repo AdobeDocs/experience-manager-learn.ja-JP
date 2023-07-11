@@ -11,9 +11,9 @@ role: User
 level: Beginner
 exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '265'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -51,4 +51,4 @@ com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/r
 
 ## 次の手順
 
-[サンプルアセットをデプロイしてソリューションをテストする](./deploy-this-sample.md)
+[サンプルアセットをデプロイしてソリューションをテスト](./deploy-this-sample.md)
