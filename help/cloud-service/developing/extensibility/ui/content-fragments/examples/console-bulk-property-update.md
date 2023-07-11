@@ -12,9 +12,9 @@ doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '808'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 92%
 
 ## 拡張ポイント
 
-この例は、延長点まで延長されます `actionBar` をクリックして、コンテンツフラグメントコンソールにカスタムボタンを追加します。
+この例では、拡張ポイント `actionBar` まで拡張して、コンテンツフラグメントコンソールにカスタムボタンを追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| 拡張対象の AEM UI | 拡張ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントコンソール](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [アクションバー](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
@@ -151,7 +151,7 @@ function ExtensionRegistration() {
 1. 一括プロパティアップデート操作の応答。アップデートされたコンテンツフラグメントとアップデートできなかったコンテンツフラグメントのリスト
 
 重要な点は、拡張機能からの AEM とのインタラクションは、[AppBuilder Adobe I/O Runtime アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)に委任する必要があります。これは、[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) で実行される別のサーバーレスプロセスです。
-AEMとの通信にAdobe I/O Runtimeアクションを使用する場合、クロスオリジンリソース共有 (CORS) 接続の問題を回避します。
+Adobe I/O Runtime アクションを使用して AEM と通信するのは、クロスオリジンリソース共有（CORS）接続の問題を回避するためです。
 
 プロパティ一括更新フォームが送信されると、カスタムの `onSubmitHandler()` が Adobe I/O Runtime アクションを呼び出し、現在の AEM ホスト（ドメイン）とユーザーの AEM アクセストークンを渡します。これが [AEM コンテンツフラグメント API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja) を呼び出して、コンテンツフラグメントを更新します。
 
