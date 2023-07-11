@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '177'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -49,4 +49,4 @@ ht-degree: 96%
 
 ## 次の手順
 
-[ドキュメントにテキストと画像を追加する](./partseven.md)
+[ドキュメントへのテキストと画像の追加](./partseven.md)
