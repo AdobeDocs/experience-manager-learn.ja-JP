@@ -9,16 +9,16 @@ level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '167'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
 # カスタムプロセスステップ
 
 
-カスタムプロセスステップが実装され、添付ファイル名と添付ファイル名を含む配列リストタイプのワークフロー変数を入力するようになりました。 この変数は、その後、「 E メールを送信」ワークフローコンポーネントで使用されます。 OSGi バンドルの作成に詳しくない場合は、[次の手順に従ってください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
+添付ファイルと添付ファイル名を含んだ配列リストタイプのワークフロー変数に値を入力するように、カスタムプロセスステップが実装されました。この変数は、「メールを送信」ワークフローコンポーネントで使用されます。OSGi バンドルの作成に詳しくない場合は、[次の手順に従ってください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
 
 カスタムプロセスステップのコードでは、以下を行います。
 
@@ -118,4 +118,4 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 ## 次の手順
 
-[ローカルシステム上でソリューションをテストする](./test.md)
+[ローカルシステムでのソリューションのテスト](./test.md)
