@@ -9,7 +9,7 @@ topic: Content Management
 feature: Learn From Your Peers
 exl-id: a118dde6-0b25-4cc6-92bf-54b15620bbf4
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
 ht-degree: 100%
 
