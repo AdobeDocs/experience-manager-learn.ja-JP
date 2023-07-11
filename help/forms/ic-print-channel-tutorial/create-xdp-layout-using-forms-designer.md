@@ -18,9 +18,9 @@ role: Developer
 level: Beginner
 exl-id: 1bda648c-01be-44f1-aa73-3f5e7365d094
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '131'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,4 +36,4 @@ ht-degree: 97%
 
 ## 次の手順
 
-[ドキュメントフラグメントを作成](./create-document-fragment.md)
+[ドキュメントフラグメントの作成](./create-document-fragment.md)
