@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '367'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -271,4 +271,4 @@ String pkey = addNewProfile.createProfile(profile);
 
 ## 次の手順
 
-[ACS プロファイル情報を使用したアダプティブフォームの事前入力](./partthree.md)
+[ACS プロファイル情報を使用したアダプティブフォームへの事前入力](./partthree.md)
