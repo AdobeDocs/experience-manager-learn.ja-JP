@@ -12,9 +12,9 @@ doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1396'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -47,11 +47,11 @@ OpenAI または DALL.E 2 で画像を生成して AEM DAM にアップロード
 1. AEM as a Cloud Service は画像を DAM に保存し、Adobe I/O Runtime アクションに対して成功または失敗の応答を返します。 アップロード応答が成功すると、Adobe I/O Runtime アクションから AEM への別の HTTP リクエストを使用して、選択されたコンテンツフラグメントの画像プロパティ値が更新されます。
 1. モーダルは、Adobe I/O Runtime アクションから応答を受け取り、新しく生成されてアップロードされた画像の AEM アセットの詳細リンクを提供します。
 
-## 拡張ポイント
+## 拡張機能ポイント
 
-この例は、延長点まで延長されます `actionBar` をクリックして、コンテンツフラグメントコンソールにカスタムボタンを追加します。
+この例では、拡張機能ポイント `actionBar` まで拡張して、コンテンツフラグメントコンソールにカスタムボタンを追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| AEM UI 拡張 | 拡張機能ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントコンソール](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [アクションバー](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
@@ -62,12 +62,12 @@ OpenAI または DALL.E 2 で画像を生成して AEM DAM にアップロード
 + 検索するテンプレート：`All Extension Points`
 + インストールするテンプレートを選択：` @adobe/aem-cf-admin-ui-ext-tpl`
 + 拡張機能の名前は？：`Image generation`
-+ 拡張機能の簡単な説明を入力します。 `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
++ 拡張機能の短い説明を入力：`An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
 + 開始するバージョン：`0.0.1`
 + 次は何を行いますか？
    + `Add a custom button to Action Bar`
-      + ボタンのラベル名を指定します。 `Generate Image`
-      + ボタンのモーダルを表示する必要がありますか？ `y`
+      + ボタンのラベル名を指定：`Generate Image`
+      + ボタンのモーダルを表示する必要がありますか？`y`
    + `Add server-side handler`
       + Adobe I/O Runtime では、サーバーレスのコードをオンデマンドで呼び出すことができます。 このアクションの名前を指定：`generate-image`
 
@@ -472,7 +472,7 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->`buildAssetDetailsURL()` 関数内の `aemAssetdetailsURL` 変数値は、[統合シェル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=ja#overview)が有効になっていることを前提としています。統合シェルを無効にした場合は、 `/ui#/aem` を変数値から取得します。
+>`buildAssetDetailsURL()` 関数内の `aemAssetdetailsURL` 変数値は、[統合シェル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=ja#overview)が有効になっていることを前提としています。統合シェルを無効にしてある場合は、`/ui#/aem` を変数値から削除する必要があります。
 
 
 ### Adobe I/O Runtime アクション
@@ -488,7 +488,7 @@ Adobe Runtime アクションは、AEM、Adobe、サードパーティの web �
 1. モーダルで表示する成功と失敗のキー情報を返す（`GenerateImageModal.js`）
 
 
-#### エントリポイント (`index.js`)
+#### エントリポイント（`index.js`）
 
 `index.js` は、上記の 1～3 のタスクを調整するために、それぞれの JavaScript モジュール（`generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`）を使用します。これらのモジュールと関連コードについては、次の[サブセクション](#image-generation-module---generate-image-using-openaijs)で説明します。 
 
@@ -583,7 +583,7 @@ async function main(params) {
 exports.main = main;
 ```
 
-#### 画像の生成
+#### 画像生成
 
 このモジュールは、[openai](https://github.com/openai/openai-node) ライブラリを使用して OpenAI の[画像生成](https://beta.openai.com/docs/guides/images/image-generation-beta)エンドポイントを呼び出す役割を果たします。`.env` ファイルで定義されている OpenAI API 秘密鍵を取得するには、`params.OPENAI_API_KEY` を使用します。
 
@@ -641,7 +641,7 @@ module.exports = {
 };
 ```
 
-#### AEMにアップロード
+#### AEM へのアップロード
 
 このモジュールでは、[AEM アップロード](https://github.com/adobe/aem-upload)ライブラリを使って、OpenAI で生成された画像を AEM にアップロードします。生成された画像は、まず Node.js [ファイルシステム](https://nodejs.org/api/fs.html)ライブラリ を使用して App Builder ランタイムにダウンロードされ、AEM へのアップロードが完了すると削除されます。
 
