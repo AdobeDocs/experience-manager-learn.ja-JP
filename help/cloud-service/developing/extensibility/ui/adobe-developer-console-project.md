@@ -1,5 +1,5 @@
 ---
-title: AEM UI 拡張機能用のAdobe Developer Console プロジェクトの作成
+title: AEM UI の拡張性に対応する Adobe Developer Console プロジェクトの作成
 description: 他の Adobe サービスへのアクセスを定義し、そのデプロイメントを管理する Adobe Developer Console プロジェクトの作成方法を説明します。
 version: Cloud Service
 feature: Developer Tools
@@ -13,9 +13,9 @@ kt: 11658
 thumbnail: 3412875.jpeg
 exl-id: 06afb6d0-6ae6-47d4-a3d9-c48bb7d572f6
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '114'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
@@ -27,6 +27,6 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
-> 上記のビデオでは、コンテンツフラグメントコンソール拡張機能を使用してAdobe Developer Console プロジェクトを作成する方法を示しています。 ただし、扱う概念はすべてのAEM UI 拡張機能に適用できることに注意してください。
+> 上記のビデオでは、コンテンツフラグメントコンソール拡張機能を使用して Adobe Developer Console プロジェクトの作成の例を示します。ただし、ここで扱う概念はすべての AEM UI 拡張機能に適用できます。
 
-[Adobe Developer Console プロジェクトの作成に関する詳細な手順](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console)は、Adobe Developer のドキュメントを参照してください。
+[Adobe Developer Console プロジェクトの作成に関する詳細な手順](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console)については、Adobe Developer のドキュメントを参照してください。
