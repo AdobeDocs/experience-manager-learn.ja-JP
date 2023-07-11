@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '146'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -73,4 +73,4 @@ $(document).ready(function () {
 
 ## 次の手順
 
-[OTP サービスを使用したユーザーの検証](./verify-users-with-otp.md)
+[OTP サービスでのユーザーの検証](./verify-users-with-otp.md)
