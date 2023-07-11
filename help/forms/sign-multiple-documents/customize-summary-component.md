@@ -10,9 +10,9 @@ role: Developer
 level: Experienced
 exl-id: fb68579d-241c-414d-92f4-13194f4d1923
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -50,4 +50,4 @@ summary.jsp には次のコードが含まれます。 カテゴリ ID で識別
 
 ## 次の手順
 
-[署名用の次のフォームを取得します](./create-client-lib.md)
+[署名用の次のフォームの取得](./create-client-lib.md)
