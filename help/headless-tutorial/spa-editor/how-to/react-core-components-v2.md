@@ -10,7 +10,7 @@ kt: 10900
 thumbnail: kt-10900.jpeg
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '586'
 ht-degree: 100%
 
