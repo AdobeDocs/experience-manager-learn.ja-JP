@@ -8,20 +8,20 @@ role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '386'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # データソースの設定
 
-AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。次のタイプが標準でサポートされています。 ただし、少しカスタマイズするだけで、他のデータソースと統合することもできます。
+AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用できます。ただし、少しカスタマイズするだけで、他のデータソースと統合することもできます。
 
 1. リレーショナルデータベース - MySQL、Microsoft SQL Server、IBM DB2、Oracle RDBMS
 1. AEM ユーザープロファイル
 1. RESTful Web サービス
-1. SOAP ベースの Web サービス
+1. SOAP ベースの web サービス
 1. OData サービス
 
 AEM Forms と Marketo の統合には、RESTful web サービスを使用しています。 統合の最初のステップは、[ データソース](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices)の設定です。このチュートリアルの一部として提供されている Swagger ファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
@@ -52,5 +52,5 @@ Host プロパティは Marketo インスタンスに固有です。
 
 ## 次の手順
 
-[すべてを組み合わせてテスト](./part4.md)
+[テストのまとめ](./part4.md)
 
