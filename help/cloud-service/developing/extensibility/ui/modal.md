@@ -1,6 +1,6 @@
 ---
-title: AEM UI 拡張モーダル
-description: AEM UI 拡張機能モーダルを作成する方法について説明します。
+title: AEM UI 拡張機能モーダル
+description: AEM UI 拡張機能モーダルを作成する方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,19 +11,19 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '313'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
 # 拡張機能モーダル
 
-![AEM UI 拡張モーダル](./assets/modal/modal.png){align="center"}
+![AEM UI 拡張機能モーダル](./assets/modal/modal.png){align="center"}
 
-AEM UI 拡張モーダルは、カスタム UI をAEM UI 拡張にアタッチする方法を提供します。
+AEM UI 拡張機能モーダルは、カスタム UI を AEM UI 拡張機能に接続する方法を提供します。
 
-モデルは、 [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/)を使用すれば、拡張機能に必要なカスタム UI を作成できます。カスタム UI には次のものが含まれますが、これらに限定されません。
+モーダルは [React スペクトル](https://react-spectrum.adobe.com/react-spectrum/)に基づく React アプリケーションであり、拡張機能に必要な任意のカスタム UI を作成できます。
 
 + 確認ダイアログ
 + [入力フォーム](https://react-spectrum.adobe.com/react-spectrum/#forms)
@@ -184,7 +184,7 @@ export default function MyModal() {
 
 ## モーダルを閉じる
 
-![AEM UI 拡張機能モーダル閉じるボタン](./assets/modal/close.png){align="center"}
+![AEM UI 拡張機能モーダルの「閉じる」ボタン](./assets/modal/close.png){align="center"}
 
 モーダルでは、独自のクローズコントロールを提供する必要があります。これは `guestConnection.host.modal.close()` を呼び出すことによって行われます。
 
