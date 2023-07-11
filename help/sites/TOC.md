@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '458'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 95%
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
    + [ローンチ](page-authoring/launches.md)
-   + 仲間から学ぶ {#expert-advice}
+   + 他のユーザーから学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + コンポーネント {#components}
    + [コンポーネント開発](components/component-development.md)
@@ -43,7 +43,7 @@ ht-degree: 95%
    + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
    + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + コンテンツフラグメント {#content-fragments}
-   + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
+   + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja)
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
    + [コンテンツフラグメントの配信](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [コンテンツフラグメントの翻訳](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -123,7 +123,7 @@ ht-degree: 95%
       + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
-+ 仲間から学ぶ {#expert-resources}
++ 他のユーザーから学ぶ {#expert-resources}
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
