@@ -10,7 +10,7 @@ feature: Operations
 index: y
 exl-id: de4315b4-9e9b-4c5a-8c04-2c225a8b9f73
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
 ht-degree: 100%
 
