@@ -7,10 +7,11 @@ kt: 13490
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
-workflow-type: tm+mt
+exl-id: 162663db-c439-4258-9ba1-16cf0771171d
+source-git-commit: d926bb35623e8d3bb8dd564e07d3cb394342e367
+workflow-type: ht
 source-wordcount: '172'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -104,5 +105,4 @@ export default function Contact(){
 }
 ```
 
-上記のコードでは、ネイティブの HTML コンポーネントが使用され、アダプティブフォームで使用されるコンポーネントにマッピングされます。 例えば、アダプティブフォームのテキスト入力コンポーネントを TextField コンポーネントにマッピングするとします。 記事で使用されるネイティブコンポーネント [ここからダウンロードできます](./assets/native-components.zip)
-
+上記のコードでは、アダプティブフォームで使用されるコンポーネントにマッピングされるネイティブ HTML コンポーネントを使用します。例えば、アダプティブフォームのテキスト入力コンポーネントを TextField コンポーネントにマッピングするとします。この記事で使用されているネイティブコンポーネントは、[こちらからダウンロードできます](./assets/native-components.zip)
