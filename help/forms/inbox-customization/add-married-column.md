@@ -13,9 +13,9 @@ role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '311'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -90,7 +90,7 @@ return isMarried(inboxItem);
 * _作成_&#x200B;メニューから&#x200B;_ファイルをアップロード_&#x200B;を選択して、[サンプルフォームを読み込みます](assets/snap-form.zip)
 * [フォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * _婚姻ステータス_を選択し、フォームを送信します
-   [インボックスを表示します](http://localhost:4502/aem/inbox)
+  [インボックスを表示します](http://localhost:4502/aem/inbox)
 
 フォームを送信するとワークフローがトリガーされ、タスクが「admin」ユーザーに割り当てられます。このスクリーンショットに示すように、「既婚」列の下に値が表示されます。
 
@@ -98,4 +98,4 @@ return isMarried(inboxItem);
 
 ## 次の手順
 
-[既婚の列を表示](./use-sightly-template.md)
+[既婚列の表示](./use-sightly-template.md)
