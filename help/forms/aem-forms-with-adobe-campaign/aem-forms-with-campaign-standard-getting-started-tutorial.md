@@ -9,9 +9,9 @@ level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,4 +41,4 @@ AEM Forms を ACS と統合するには、次の手順に従う必要があり�
 
 ## 次の手順
 
-[JWT とアクセストークンを生成](partone.md)
+[JWT とアクセストークンの生成](partone.md)
