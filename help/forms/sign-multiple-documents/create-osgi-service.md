@@ -10,9 +10,9 @@ role: Developer
 level: Experienced
 exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '362'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -208,4 +208,4 @@ public String getNextFormToSign(int customerID) {
 
 ## 次の手順
 
-[最初のフォームの送信を処理するメインワークフローを作成します](./create-main-workflow.md)
+[最初のフォーム送信を処理するメインワークフローの作成](./create-main-workflow.md)
