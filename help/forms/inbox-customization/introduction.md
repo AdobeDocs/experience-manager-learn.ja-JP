@@ -14,9 +14,9 @@ level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -58,4 +58,4 @@ Experience Manager インボックスをカスタマイズして、列のデフ�
 
 ## 次の手順
 
-[既婚の列を追加](./add-married-column.md)
+[既婚列の追加](./add-married-column.md)
