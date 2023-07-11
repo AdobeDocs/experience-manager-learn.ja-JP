@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '340'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -237,5 +237,5 @@ return "Pre Fill Forms Using Campaign Profile";
 
 ## 次の手順
 
-[フォームデータモデルを使用したAdobe Campaignプロファイルの作成](./partfour.md)
+[フォームデータモデルを使用した Adobe Campaign プロファイルの作成](./partfour.md)
 
