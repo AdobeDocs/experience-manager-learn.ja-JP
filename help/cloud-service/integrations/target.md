@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレスと Target のパーソナライゼーション
-description: このチュートリアルでは、AEMコンテンツフラグメントをAdobe Targetに書き出し、AdobeWeb SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。
+title: AEM ヘッドレスと Target のパーソナライゼーション
+description: このチュートリアルでは、AEM コンテンツフラグメントを Adobe Target に書き出し、Adobe Web SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。
 version: Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
@@ -14,57 +14,57 @@ exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
 source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# コンテンツフラグメントを使用したAEMヘッドレスエクスペリエンスのパーソナライズ
+# コンテンツフラグメントを使用した AEM ヘッドレスエクスペリエンスのパーソナライズ
 
-このチュートリアルでは、AEMコンテンツフラグメントをAdobe Targetに書き出し、AdobeWeb SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。 この [React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) は、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を調べるために使用されます。
+このチュートリアルでは、AEM コンテンツフラグメントを Adobe Target に書き出し、Adobe Web SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。[React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=ja)を使用して、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を探索します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
-このチュートリアルでは、AEMとAdobe Targetの設定に関する手順を説明します。
+このチュートリアルでは、AEM と Adobe Target の設定に関する手順を説明します。
 
-1. [Adobe TargetのAdobe IMS設定を作成](#adobe-ims-configuration) （AEM オーサー）
-1. [Adobe TargetCloud Service](#adobe-target-cloud-service) （AEM オーサー）
-1. [AEM AssetsCloud ServiceーへのAdobe Targetフォルダーの適用](#configure-asset-folders) （AEM オーサー）
-1. [Adobe TargetCloud Service](#permission) Adobe Admin Console
-1. [コンテンツフラグメントを書き出し](#export-content-fragments) AEM オーサーからターゲットへ
-1. [コンテンツフラグメントオファーを使用したアクティビティの作成](#activity) Adobe Target
-1. [Experience Platformデータストリームの作成](#datastream-id) Experience Platform
-1. [パーソナライゼーションを React ベースのAEMヘッドレスアプリに統合する](#code) AdobeWeb SDK を使用する。
+1. AEM オーサーでの [Adobe Target の Adobe IMS 設定の作成](#adobe-ims-configuration)
+1. AEM オーサーでの [Adobe Target Cloud Service の作成](#adobe-target-cloud-service)
+1. AEM オーサーでの [AEM Assets フォルダーへの Adobe Target Cloud Service の適用](#configure-asset-folders)
+1. Adobe Admin Console での [Adobe Target Cloud Service の権限](#permission)
+1. AEM オーサーから Target への[コンテンツフラグメントの書き出し](#export-content-fragments)
+1. Adobe Target での[コンテンツフラグメントオファーを使用したアクティビティの作成](#activity)
+1. Experience Platform での [Experience Platform データストリームの作成](#datastream-id)
+1. Adobe Web SDK を使用して、[パーソナライゼーションを React ベースの AEM ヘッドレスアプリに統合](#code)します。
 
-## Adobe IMS設定{#adobe-ims-configuration}
+## Adobe IMS 設定{#adobe-ims-configuration}
 
-AEMとAdobe Target間の認証を容易にするAdobe IMS設定。
+AEM と Adobe Target 間の認証を容易にする Adobe IMS 設定。
 
-レビュー [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html) Adobe IMS設定の作成手順を参照してください。
+Adobe IMS 設定の作成方法に関する詳しい手順については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html?lang=ja)を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416495/?quality=12&learn=on)
 
-## Adobe TargetCloud Service{#adobe-target-cloud-service}
+## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
-Adobe TargetCloud Serviceは、コンテンツフラグメントをAdobe Targetに書き出しやすくするために、AEMで作成されます。
+Adobe Target Cloud Service は、コンテンツフラグメントを Adobe Target に書き出しやすくするために、AEM で作成されます。
 
-レビュー [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja) Adobe TargetCloud Serviceの作成手順を参照してください。
+Adobe Target Cloud Service を作成する手順については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja)を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
 ## アセットフォルダーの設定{#configure-asset-folders}
 
-コンテキスト対応Cloud Serviceで設定したAdobe Target設定は、Adobe Targetに書き出すコンテンツフラグメントを含むAEM Assetsフォルダー階層に適用する必要があります。
+コンテキスト対応設定で設定された Adobe Target Cloud Service は、Adobe Target に書き出すコンテンツフラグメントを含む AEM Assets フォルダー階層に適用する必要があります。
 
-+++詳しい手順については、展開してください。
++++詳しい手順については、展開してください
 
-1. にログインします。 __AEM オーサーサービス__ DAM 管理者として
-1. に移動します。 __アセット/ファイル__&#x200B;で、 `/conf` 適用先
-1. アセットフォルダーを選択し、「 」を選択します。 __プロパティ__ 上部のアクションバーから
-1. を選択します。 __Cloud Services__ タブ
-1. クラウド設定がコンテキスト対応設定 (`/conf`) にAdobe TargetCloud Services設定が含まれます。
-1. 選択 __Adobe Target__ から __Cloud Service設定__ ドロップダウン。
-1. 選択 __保存して閉じる__ 右上に
+1. __AEM オーサーサービス__&#x200B;に DAM 管理者としてログインします
+1. __アセット／ファイル__&#x200B;に移動し、`/conf` が適用されているアセットフォルダーを見つけます
+1. アセットフォルダーを選択し、アクションバーの「__プロパティ__」を選択します
+1. 「__Cloud Services__」タブを選択します
+1. クラウド設定が、Adobe Target Cloud Services 設定を含むコンテキスト対応設定（`/conf`）に設定されていることを確認します。
+1. __Cloud Service 設定__&#x200B;ドロップダウンリストから「__Adobe Target__」を選択します。
+1. 右上の「__保存して閉じる__」を選択します。
 
 +++
 
@@ -74,16 +74,16 @@ Adobe TargetCloud Serviceは、コンテンツフラグメントをAdobe Target�
 
 ## AEM Target 統合の権限{#permission}
 
-Adobe Target統合は、developer.adobe.com プロジェクトとして表示され、 __編集者__ Adobe Admin Consoleの製品ロールを使用して、コンテンツフラグメントをAdobe Targetに書き出すことができます。
+コンテンツフラグメントを Adobe Target に書き出すには、developer.adobe.com プロジェクトとして表示される Adobe Target 統合に、製品&#x200B;__編集者__&#x200B;の役割を Adobe Admin Console で付与する必要があります。
 
-+++詳しい手順については、展開してください。
++++詳しい手順については、展開してください
 
-1. Adobe Admin ConsoleでAdobe Target製品を管理できるExperience Cloudとしてユーザーにログインします。
-1. を開きます。 [Adobe Admin Console](https://adminconsole.adobe.com)
-1. 選択 __製品__ そして、 __Adobe Target__
-1. の __製品プロファイル__ タブ、選択 __*DefaultWorkspace*__
-1. を選択します。 __API 資格情報__ タブ
-1. このリストで developer.adobe.com アプリを見つけ、 __製品の役割__ から __編集者__
+1. Adobe Admin Console で、Adobe Target 製品を管理できるユーザーとして Experience Cloud にログインします。
+1. [Adobe Admin Console](https://adminconsole.adobe.com) を開きます。
+1. 「__製品__」を選択してから、__Adobe Target__ を開きます。
+1. 「__製品プロファイル__」タブで、「__*DefaultWorkspace*__」を選択します。
+1. 「__API 資格情報__」タブを選択します。
+1. このリストで developer.adobe.com アプリを見つけ、そのアプリの「__製品の役割__」を&#x200B;__編集者__&#x200B;に設定します。
 
 +++
 
@@ -91,30 +91,30 @@ Adobe Target統合は、developer.adobe.com プロジェクトとして表示さ
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
 
-## コンテンツフラグメントを Target に書き出す{#export-content-fragments}
+## Target へのコンテンツフラグメントの書き出し{#export-content-fragments}
 
-の下に存在するコンテンツフラグメント [設定済みのAEM Assetsフォルダー階層](#apply-adobe-target-cloud-service-to-aem-assets-folders) は、コンテンツフラグメントオファーとしてAdobe Targetに書き出すことができます。 これらのコンテンツフラグメントオファーは、Target の JSON オファーの特殊な形式で、ヘッドレスアプリでパーソナライズされたエクスペリエンスを提供するために、Target アクティビティで使用できます。
+[設定済みの AEM Assetsフォルダー階層](#apply-adobe-target-cloud-service-to-aem-assets-folders)の下に存在するコンテンツフラグメントは、コンテンツフラグメントオファーとして Adobe Target に書き出すことができます。これらのコンテンツフラグメントオファーは、Target における特殊な形式の JSON オファーであり、Target アクティビティで使用して、パーソナライズされたエクスペリエンスをヘッドレスアプリで提供できます。
 
-+++詳しい手順については、展開してください。
++++詳しい手順については、展開してください
 
-1. にログインします。 __AEM オーサー__ DAM ユーザーとして
-1. に移動します。 __アセット/ファイル__&#x200B;を開き、「Adobe Target enabled」フォルダーの下で、JSON として Target に書き出すコンテンツフラグメントを探します。
-1. Adobe Targetに書き出すコンテンツフラグメントを選択します。
-1. 選択 __Adobe Targetオファーに書き出し__ 上部のアクションバーから
-   + このアクションは、コンテンツフラグメントの完全にハイドレートされた JSON 表現を、「コンテンツフラグメントオファー」としてAdobe Targetに書き出します。
-   + 完全にハイドレートされた JSON 表現をAEMで確認できます
-      + コンテンツフラグメントを選択
+1. __AEM オーサー__&#x200B;に DAM ユーザーとしてログインします。
+1. __アセット／ファイル__&#x200B;に移動し、「Adobe Target 有効」フォルダーの下で、JSON として Target に書き出すコンテンツフラグメントを見つけます。
+1. Adobe Target に書き出すコンテンツフラグメントを選択します。
+1. 上部のアクションバーの「__Adobe Target オファーに書き出し__」を選択します。
+   + このアクションは、コンテンツフラグメントの完全にハイドレートされた JSON 表現を、「コンテンツフラグメントオファー」として Adobe Target に書き出します。
+   + 完全にハイドレートされた JSON 表現を AEM で確認できます。
+      + コンテンツフラグメントを選択します。
       + サイドパネルを展開します。
-      + 選択 __プレビュー__ 左側のパネルのアイコン
-      + Adobe Targetに書き出された JSON 表現は、メインビューに表示されます
-1. にログインします。 [Adobe Experience Cloud](https://experience.adobe.com) Adobe Targetのエディターの役割を持つユーザー
-1. 次の [Experience Cloud](https://experience.adobe.com)を選択します。 __ターゲット__ 右上の製品切り替えボタンからAdobe Targetを開きます。
-1. 「デフォルトのワークスペース」が __ワークスペース切り替え__ をクリックします。
-1. を選択します。 __オファー__ 上部のナビゲーションの「 」タブ
-1. を選択します。 __タイプ__ ドロップダウン、選択 __コンテンツフラグメント__
-1. AEMから書き出したコンテンツフラグメントがリストに表示されることを確認します。
-   + オファーにカーソルを合わせ、 __表示__ ボタン
-   + 以下を確認します。 __オファー情報__ また、 __AEMディープリンク__ AEM オーサーサービスでコンテンツフラグメントを直接開く
+      + 左側のパネルの「__プレビュー__」アイコンを選択します。
+      + Adobe Target に書き出される JSON 表現がメインビューに表示されます。
+1. Adobe Target の編集者の役割を持つユーザーで [Adobe Experience Cloud](https://experience.adobe.com) にログインします。
+1. [Experience Cloud](https://experience.adobe.com) で、右上の製品スイッチャーから「__Target__」を選択して、Adobe Target を開きます。
+1. 右上の&#x200B;__ワークスペーススイッチャー__&#x200B;でデフォルトのワークスペースが選択されていることを確認します。
+1. 上部のナビゲーションで「__オファー__」タブを選択します。
+1. 「__タイプ__」ドロップダウンを選択し、「__コンテンツフラグメント__」を選択します。
+1. AEM から書き出したコンテンツフラグメントがリストに表示されることを確認します。
+   + オファーにポインタを合わせて、「__表示__」ボタンを選択します。
+   + __オファー情報__&#x200B;を確認し、AEM オーサーサービスでコンテンツフラグメントを直接開く __AEM ディープリンク__&#x200B;を参照します。
 
 +++
 
@@ -124,36 +124,36 @@ Adobe Target統合は、developer.adobe.com プロジェクトとして表示さ
 
 ## コンテンツフラグメントオファーを使用した Target アクティビティ{#activity}
 
-Adobe Targetでは、コンテンツフラグメントオファー JSON をコンテンツとして使用するアクティビティを作成し、AEMで作成および管理されたコンテンツを使用してヘッドレスアプリでパーソナライズされたエクスペリエンスを実現できます。
+Adobe Target では、コンテンツフラグメントオファー JSON をコンテンツとして使用するアクティビティを作成できるので、AEM で作成および管理されたコンテンツを使用するヘッドレスアプリで、パーソナライズされたエクスペリエンスを提供できます。
 
-この例では、シンプルな A/B アクティビティを使用しますが、任意の Target アクティビティを使用できます。
+この例では、単純な A/B アクティビティを使用しますが、任意の Target アクティビティを使用できます。
 
-+++詳しい手順については、展開してください。
++++詳しい手順については、展開してください
 
-1. を選択します。 __アクティビティ__ 上部のナビゲーションの「 」タブ
-1. 選択 __+アクティビティを作成__&#x200B;をクリックし、作成するアクティビティのタイプを選択します。
-   + この例では、単純な __A/B テスト__ しかし、コンテンツフラグメントオファーは、どのアクティビティタイプでも機能します
-1. 内 __アクティビティを作成__ ウィザード
-   + 選択 __Web__
-   + In __Experience Composer を選択__&#x200B;を選択します。 __フォーム__
-   + In __ワークスペースを選択__&#x200B;を選択します。 __デフォルトのワークスペース__
-   + In __プロパティを選択__、アクティビティを使用できるプロパティを選択するか、 __プロパティの制限がありません__ を使用して、すべてのプロパティで使用できるようにします。
-   + 選択 __次へ__ アクティビティを作成するには
-1. 「 」を選択して、アクティビティの名前を変更します。 __名前変更__ 左上
-   + アクティビティにわかりやすい名前を付ける
-1. 最初のエクスペリエンスで、 __場所 1__ ターゲットとするアクティビティ
-   + この例では、という名前のカスタムの場所をターゲットにします。 `wknd-adventure-promo`
-1. の下 __コンテンツ__ 「デフォルトコンテンツ」を選択し、「 __コンテンツフラグメントを変更__
-1. このエクスペリエンス用に書き出したコンテンツフラグメントを選択し、「 」を選択します。 __完了__
-1. 「コンテンツテキスト」領域で「コンテンツフラグメントオファー JSON」を確認します。これは、AEM オーサーサービスでコンテンツフラグメントのプレビューアクションから利用できる JSON と同じです。
-1. 左側のレールで、エクスペリエンスを追加し、提供する別のコンテンツフラグメントオファーを選択します
-1. 選択 __次へ__&#x200B;をクリックし、アクティビティの必要に応じてターゲット設定ルールを設定します。
-   + この例では、A/B テストは手動で50/50分割したままにします。
-1. 選択 __次へ__&#x200B;をクリックし、アクティビティの設定を完了します。
-1. 選択 __保存して閉じる__ そして意味のある名前を付け
-1. Adobe Targetの「アクティビティ」から、 __有効化__ 右上の非アクティブ/アクティブ化/アーカイブドロップダウンから、次の操作を実行します。
+1. 上部のナビゲーションで「__アクティビティ__」タブを選択します。
+1. 「__+ アクティビティを作成__」を選択したあと、作成するアクティビティのタイプを選択します。
+   + この例では、単純な __A/B テスト__&#x200B;を作成しますが、コンテンツフラグメントオファーはあらゆるタイプのアクティビティを強化できます。
+1. __アクティビティを作成__&#x200B;ウィザードで以下を行います。
+   + 「__Web__」を選択します。
+   + __Experience Composer を選択__&#x200B;で「__フォーム__」を選択します。
+   + __ワークスペースを選択__&#x200B;で「__デフォルトのワークスペース__」を選択します。
+   + __プロパティを選択__&#x200B;で、アクティビティを使用できるプロパティを選択するか、「__プロパティの制限なし__」を選択してすべてのプロパティで使用できるようにします。
+   + 「__次へ__」を選択して、アクティビティを作成します。
+1. 左上の「__名前変更__」を選択して、アクティビティの名前を変更します。
+   + アクティビティに意味のある名前を付けます。
+1. 初期のエクスペリエンスで、ターゲットとするアクティビティの「__場所 1__」を設定します。
+   + この例では、`wknd-adventure-promo` という名前のカスタムの場所をターゲットにします。
+1. __コンテンツ__&#x200B;の下の「デフォルトコンテンツ」を選択し、「__コンテンツフラグメントを変更__」を選択します。
+1. このエクスペリエンス用に書き出したコンテンツフラグメントを選択し、「__完了__」を選択します。
+1. コンテンツテキスト領域でコンテンツフラグメントオファー JSON を確認します。これは、コンテンツフラグメントのプレビューアクションを使用して AEM オーサーサービスで入手できる JSON と同じです。
+1. 左側のパネルで、エクスペリエンスを追加し、提供する別のコンテンツフラグメントオファーを選択します。
+1. 「__次へ__」を選択し、アクティビティの必要に応じてターゲティングルールを設定します。
+   + この例では、A/B テストを手動で 50/50 に分割したままにします。
+1. 「__次へ__」を選択し、アクティビティの設定を完了します。
+1. 「__保存して閉じる__」を選択し、意味のある名前を付けます。
+1. Adobe Target のアクティビティで、右上の非アクティブ／アクティベート／アーカイブドロップダウンから「__アクティベート__」を選択します。
 
-Adobe Targetアクティビティ `wknd-adventure-promo` の場所を統合し、AEMヘッドレスアプリで公開できるようになりました。
+`wknd-adventure-promo` の場所をターゲットにする Adobe Target アクティビティを AEM ヘッドレスアプリに統合して公開できるようになりました。
 
 +++
 
@@ -161,29 +161,29 @@ Adobe Targetアクティビティ `wknd-adventure-promo` の場所を統合し�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
-## Experience Platformデータストリーム ID{#datastream-id}
+## Experience Platform データストリーム ID{#datastream-id}
 
-An [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) AEMヘッドレスアプリが [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
+AEM ヘッドレスアプリで [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja) を使用して Adobe Target とやり取りするには、[Adobe Experience Platform データストリーム](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html?lang=ja) ID が必要です。
 
-+++詳しい手順については、展開してください。
++++詳しい手順については、展開してください
 
-1. に移動します。 [Adobe Experience Cloud](https://experience.adobe.com/)
-1. 開く __Experience Platform__
-1. 選択 __データ収集/データストリーム__ を選択し、 __新規データストリーム__
-1. 新規データストリームウィザードで、次のように入力します。
+1. [Adobe Experience Cloud](https://experience.adobe.com/) に移動します。
+1. __Experience Platform__ を開きます。
+1. __データ収集／データストリーム__&#x200B;を選択し、「__新しいデータストリーム__」を選択します。
+1. 新しいデータストリームウィザードで、次のように入力します。
    + 名前：`AEM Target integration`
-   + 説明: `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
-   + イベントスキーマ： `Leave blank`
+   + 説明：`Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
+   + イベントスキーマ：`Leave blank`
 1. 「__保存__」を選択します
-1. 選択 __サービスを追加__
-1. In __サービス__ 選択 __Adobe Target__
-   + 有効： __はい__
-   + プロパティトークン： __空白のままにする__
-   + ターゲット環境 ID: __空白のままにする__
-      + Target 環境は、 Adobe Target ( ) で設定できます。 __管理/ホスト__.
-   + Target サードパーティ ID 名前空間： __空白のままにする__
+1. 「__サービスを追加__」を選択します。
+1. __サービス__&#x200B;で「__Adobe Target__」を選択します
+   + 有効：__はい__
+   + プロパティトークン：__空白のままにします__
+   + ターゲット環境 ID：__空白のままにします__
+      + ターゲット環境は、Adobe Target の&#x200B;__管理／ホスト__&#x200B;で設定できます。
+   + ターゲットサードパーティ ID 名前空間：__空白のままにします__
 1. 「__保存__」を選択します
-1. 右側で、 __データストリーム ID__ 使用 [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) 設定呼び出し。
+1. 右側で、[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja) 設定呼び出しで使用する&#x200B;__データストリーム ID__ をコピーします。
 
 +++
 
@@ -191,29 +191,29 @@ An [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/doc
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
 
-## AEMヘッドレスアプリへのパーソナライゼーションの追加{#code}
+## AEM ヘッドレスアプリへのパーソナライゼーションの追加{#code}
 
-このチュートリアルでは、を介してAdobe Targetのコンテンツフラグメントオファーを使用したシンプルな React アプリのパーソナライズについて説明します。 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja). この方法は、JavaScript ベースの Web エクスペリエンスをパーソナライズするために使用できます。
+このチュートリアルでは、[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) 経由で Adobe Target のコンテンツフラグメントオファーを使用して、シンプルな React アプリをパーソナライズする方法を説明します。このアプローチを使用すると、JavaScript ベースの web エクスペリエンスをパーソナライズできます。
 
-Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモバイル SDK](https://developer.adobe.com/client-sdks/documentation/).
+Android™ および iOS のモバイルエクスペリエンスは、[アドビの Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用して類似したパターンに従ってパーソナライズできます。
 
 ### 前提条件
 
 + Node.js 14
 + Git
-+ [WKND Shared 2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) AEM as a Cloud Author および Publish Services にインストールされている
++ [WKND Shared 2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) が、クラウドオーサーおよびパブリッシュサービスとして AEM にインストールされている
 
 ### セットアップ
 
-1. サンプル React アプリのソースコードをからダウンロードします。 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql)
+1. [Github.com](https://github.com/adobe/aem-guides-wknd-graphql) からサンプル React アプリのソースコードをダウンロードします。
 
    ```shell
    $ mkdir -p ~/Code
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. コードベースを次の場所で開きます。 `~/Code/aem-guides-wknd-graphql/personalization-tutorial` お気に入りの IDE 内
-1. アプリの接続先となるAEMサービスのホストを更新する `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
+1. お気に入りの IDE で `~/Code/aem-guides-wknd-graphql/personalization-tutorial` にあるコードベースを開きます。
+1. アプリを `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development` に接続する AEM サービスのホストを更新します。
 
    ```
    ...
@@ -221,7 +221,7 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
    ...
    ```
 
-1. アプリを実行し、設定済みのAEMサービスに接続されていることを確認します。 コマンドラインから、次のコマンドを実行します。
+1. アプリを実行し、設定済みの AEM サービスに接続していることを確認します。コマンドラインから、次を実行します。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
@@ -229,21 +229,21 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
    $ npm run start
    ```
 
-1. のインストール [AdobeWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package) を NPM パッケージとして追加します。
+1. [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ja#option-3%3A-using-the-npm-package) を NPM パッケージとしてインストールします。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
    $ npm install @adobe/alloy
    ```
 
-   Web SDK をコード内で使用して、アクティビティの場所別にコンテンツフラグメントオファー JSON を取得できます。
+   Web SDK をコード内で使用すると、アクティビティの場所別にコンテンツフラグメントオファー JSON を取得できます。
 
    Web SDK を設定する場合、次の 2 つの ID が必要です。
 
-   + `edgeConfigId` これは [データストリーム ID](#datastream-id)
-   + `orgId` 次の場所にあるAEMas a Cloud Service/TargetAdobe組織 ID __Experience Cloud/プロファイル/アカウント情報/現在の組織 ID__
+   + `edgeConfigId`：[データストリーム ID](#datastream-id)
+   + `orgId`：__Experience Cloud／プロファイル／アカウント情報／現在の組織 ID__ で確認できる AEM as a Cloud Service／Target アドビ組織 ID
 
-   Web SDK を呼び出すと、Adobe Targetアクティビティの場所 ( この例では `wknd-adventure-promo`) を `decisionScopes` 配列。
+   Web SDK を呼び出す際は、Adobe Target アクティビティの場所（この例では、`wknd-adventure-promo`）を、`decisionScopes` 配列の値として設定する必要があります。
 
    ```javascript
    import { createInstance } from "@adobe/alloy";
@@ -255,7 +255,7 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
 
 ### 実装
 
-1. React コンポーネントの作成 `AdobeTargetActivity.js` Adobe Targetアクティビティを表示します。
+1. React コンポーネント `AdobeTargetActivity.js` を作成して、Adobe Target アクティビティを表示します。
 
    __src/components/AdobeTargetActivity.js__
 
@@ -338,15 +338,15 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
    };
    ```
 
-   AdobeTargetActivity React コンポーネントは、次のようにを使用して呼び出します。
+   AdobeTargetActivity React コンポーネントは、次のように呼び出します。
 
    ```jsx
    <AdobeTargetActivity activityLocation={"wknd-adventure-promo"} OfferComponent={AdventurePromo}/>
    ```
 
-1. React コンポーネントの作成 `AdventurePromo.js` アドベンチャー JSON Adobe Targetサービスをレンダリングするには：
+1. React コンポーネント `AdventurePromo.js` を作成して、Adobe Target が提供するアドベンチャー JSON をレンダリングします。
 
-   この React コンポーネントは、アドベンチャーコンテンツフラグメントを表す完全にハイドレートされた JSON を取得し、プロモーション方法で表示します。 Adobe Targetコンテンツフラグメントオファーから提供される JSON を表示する React コンポーネントは、Adobe Targetに書き出されるコンテンツフラグメントに基づいて、必要に応じて様々で複雑になります。
+   この React コンポーネントは、アドベンチャーコンテンツのフラグメントを表す完全にハイドレートされた JSON を取得し、プロモーション方法で表示します。Adobe Target コンテンツフラグメントオファーから提供される JSON を表示する React コンポーネントは、Adobe Target に書き出されるコンテンツフラグメントに基づいて、必要に応じて多様かつ複雑にすることができます。
 
    __src/components/AdventurePromo.js__
 
@@ -432,7 +432,7 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
    <AdventurePromo adventure={adventureJSON}/>
    ```
 
-1. React アプリのに AdobeTargetActivity コンポーネントを追加する `Home.js` 冒険のリストの上に
+1. AdobeTargetActivity コンポーネントを、アドベンチャーのリストの上にある React アプリの `Home.js` に追加します。
 
    __src/components/Home.js__
 
@@ -453,14 +453,14 @@ Android™およびiOSのモバイルエクスペリエンスは、 [Adobeのモ
    }
    ```
 
-1. React アプリが実行されていない場合は、 `npm run start`.
+1. React アプリが実行されていない場合は、`npm run start` を使用して再起動します。
 
-   2 つの異なるブラウザーで React アプリを開き、A/B テストで各ブラウザーに異なるエクスペリエンスを提供できるようにします。 両方のブラウザーに同じアドベンチャーオファーが表示される場合は、別のエクスペリエンスが表示されるまで、いずれかのブラウザーを閉じるか、再度開いてみてください。
+   2 つの異なるブラウザーで React アプリを開き、A/B テストが各ブラウザーに異なるエクスペリエンスを提供できるようにします。両方のブラウザーに同じアドベンチャーオファーが表示される場合は、もう一方のエクスペリエンスが表示されるまで、ブラウザーの 1 つを閉じて再度開きます。
 
-   次の画像は、 `wknd-adventure-promo` Adobe Targetのロジックに基づくアクティビティ。
+   次の画像は、Adobe Target のロジックに基づいて、`wknd-adventure-promo` アクティビティに対して表示される 2 つの異なるコンテンツフラグメントオファーを示しています。
 
    ![エクスペリエンスオファー](./assets/target/offers-in-app.png)
 
 ## おめでとうございます。
 
-これで、コンテンツフラグメントをAdobe Targetに書き出し、Adobe Targetアクティビティでコンテンツフラグメントオファーを使用し、AEMヘッドレスアプリでそのアクティビティを表示して、エクスペリエンスをパーソナライズするようにAEMas a Cloud Serviceを設定しました。
+コンテンツフラグメントを Adobe Target に書き出すように AEM as a Cloud Service を設定し、Adobe Target アクティビティでコンテンツフラグメントオファーを使用し、このアクティビティを AEM ヘッドレスアプリに表示して、エクスペリエンスをパーソナライズしました。

@@ -1,6 +1,6 @@
 ---
 title: コンテンツフラグメントコンソールのビデオ
-description: コンテンツフラグメントの管理とオーサリングを容易にするAEMコンテンツフラグメントコンソールについて説明します。
+description: コンテンツフラグメントの管理とオーサリングを簡単にする AEM のコンテンツフラグメントコンソールについて説明します。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -12,17 +12,17 @@ exl-id: 68caf431-8d81-4a72-a768-7b04082870d3
 source-git-commit: 73c7a13586edc5dbe16c16e017ee6f8ac91c1380
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 15%
+ht-degree: 97%
 
 ---
 
 # コンテンツフラグメントコンソールのビデオ
 
-![AEM Content Fragment Editor](./assets/main.png)
+![AEM コンテンツフラグメントエディター](./assets/main.png)
 
-Adobe Experience Managerのコンテンツフラグメントコンソールを使用すると、コンテンツフラグメントの管理とオーサリングが簡単になります。 これらのビデオを使用して、コンテンツフラグメントコンソールを最大限に活用する方法を学びます。
+Adobe Experience Manager のコンテンツフラグメントコンソールを使用すると、コンテンツフラグメントの管理とオーサリングが簡単になります。これらのビデオでコンテンツフラグメントコンソールを最大限に活用する方法を説明します。
 
-以下を確認します。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja)  コンテンツフラグメントコンソールとその機能の詳細については、を参照してください。
+コンテンツフラグメントコンソールとその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja)を参照してください。
 
 ## ビデオ
 
@@ -49,13 +49,14 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragments-console.md" title="概要">概要</a>
             </p>
-            <p class="is-size-6">コンテンツフラグメントコンソールの概要です。</p>
+            <p class="is-size-6">コンテンツフラグメントコンソールの
+簡単な概要です。</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -66,10 +67,11 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./search/fast-filtering.md" title="高速フィルター"
+            <a href="./search/fast-filtering.md" title="高速フィルタリング"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="高速フィルター">
+                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="高速
+フィルタリング">
             </a>
           </figure>
         </div>
@@ -78,15 +80,17 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./search/fast-filtering.md" title="高速フィルター">高速フィルター</a>
+              <a href="./search/fast-filtering.md" title="高速フィルタリング">高速
+フィルタリング</a>
             </p>
-            <p class="is-size-6">インラインフィルタリングを使用してコンテンツフラグメントをすばやく見つけます。</p>
+            <p class="is-size-6">インラインフィルタリングを使用して、コンテンツフラグメントを
+素早く見つけます。</p>
             <a href="./search/fast-filtering.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -97,10 +101,11 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/new-editor-toggle.md" title="新しいエディタ切り替え"
+            <a href="./editor/new-editor-toggle.md" title="新しいエディター切替スイッチ"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新しいエディタ切り替え">
+                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新しい
+エディター切替スイッチ">
             </a>
           </figure>
         </div>
@@ -109,15 +114,17 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/new-editor-toggle.md" title="新しいエディタ切り替え">新しいエディタ切り替え</a>
+              <a href="./editor/new-editor-toggle.md" title="新しいエディター切替スイッチ">新しい
+エディター切替スイッチ</a>
             </p>
-            <p class="is-size-6">従来のエディターから新しいエディターにシームレスに移行します。</p>
+            <p class="is-size-6">従来のエディターから新しいエディターに
+シームレスに移行します。</p>
             <a href="./editor/new-editor-toggle.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -128,7 +135,8 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/non-asset-content-references.md" title="アセット以外のコンテンツ参照" tabindex="-1">
+            <a href="./editor/non-asset-content-references.md" title="アセット以外の
+コンテンツ参照" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3419313?format=jpeg"
                 alt="アセット以外のコンテンツ参照">
@@ -140,15 +148,17 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/non-asset-content-references.md" title="アセット以外のコンテンツ参照">アセット以外のコンテンツ参照</a>
+              <a href="./editor/non-asset-content-references.md" title="アセット以外の
+コンテンツ参照">アセット以外のコンテンツ参照</a>
             </p>
-            <p class="is-size-6">エクスペリエンスフラグメントとページをコンテンツフラグメントに組み込みます。</p>
+            <p class="is-size-6">エクスペリエンスフラグメントとページを
+コンテンツフラグメントに組み込みます。</p>
             <a href="./editor/non-asset-content-references.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -162,7 +172,8 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <a href="./editor/rte-variant-compare.md" title="RTE バリアントの比較"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE バリアントの比較">
+                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE
+ バリアントの比較">
             </a>
           </figure>
         </div>
@@ -171,15 +182,17 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/rte-variant-compare.md" title="RTE バリアントの比較">RTE バリアントの比較</a>
+              <a href="./editor/rte-variant-compare.md" title="RTE バリアントの
+比較">RTE バリアントの比較</a>
             </p>
-            <p class="is-size-6">複数のチャネルにわたってリッチテキストコンテンツを簡単に整列できます。</p>
+            <p class="is-size-6">リッチテキストコンテンツをチャネル間で
+簡単に調整します。</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -203,15 +216,17 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/language-copies.md" title="言語コピー">言語コピー</a>
+              <a href="./editor/language-copies.md" title="言語コピー">言語
+コピー</a>
             </p>
-            <p class="is-size-6">コンテンツフラグメント言語コピーを容易に管理</p>
+            <p class="is-size-6">コンテンツフラグメントの言語コピーを
+簡単に管理します。</p>
             <a href="./editor/language-copies.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>
@@ -241,9 +256,9 @@ Adobe Experience Managerのコンテンツフラグメントコンソールを�
             <a href="./search/references.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">ビデオを見る</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ team: TM
 source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -108,7 +108,7 @@ ht-degree: 98%
    + [Dynamic Media の概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 画像 {#images}
-      + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
+      + [Dynamic Media スナップショット](dynamic-media/dynamic-media-snapshot.md)
       + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
       + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
@@ -124,8 +124,8 @@ ht-degree: 98%
       + [Adobe Analytics との統合](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + AEM Sitesでの使用 {#dm-with-aem-sites}
-      + [エクスペリエンスフラグメント ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+   + AEM Sites での使用 {#dm-with-aem-sites}
+      + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
    + チュートリアル {#tutorials}

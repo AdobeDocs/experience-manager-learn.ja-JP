@@ -11,7 +11,7 @@ last-substantial-update: 2021-04-23T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -93,5 +93,5 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 ## 次の手順
 
-[サードパーティの jar を含める](./include-third-party-jars.md)
+[サードパーティ JAR の組み込み](./include-third-party-jars.md)
 

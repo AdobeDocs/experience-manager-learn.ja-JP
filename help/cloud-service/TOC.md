@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 5feeed5c0725c7985a8fe85794315c272e5cde4b
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 89%
+ht-degree: 93%
 
 ---
 
@@ -63,11 +63,11 @@ ht-degree: 89%
          + [アクセストークンの生成](./developing/extensibility/app-builder/jwt-auth.md)
       + UI 拡張機能{#ui}
          + [概要](./developing/extensibility/ui/overview.md)
-         + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
-         + [アプリを初期化](./developing/extensibility/ui/app-initialization.md)
-         + [拡張機能を登録](./developing/extensibility/ui/extension-registration.md)
+         + [Adobe Developer Console プロジェクト](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [アプリの初期化](./developing/extensibility/ui/app-initialization.md)
+         + [拡張機能の登録](./developing/extensibility/ui/extension-registration.md)
          + [モーダル](./developing/extensibility/ui/modal.md)
-         + [Adobe I/O Runtime Action](./developing/extensibility/ui/runtime-action.md)
+         + [Adobe I/O Runtime アクション](./developing/extensibility/ui/runtime-action.md)
          + [確認](./developing/extensibility/ui/verify.md)
          + [デプロイ](./developing/extensibility/ui/deploy.md)
          + コンテンツフラグメント{#content-fragments}
@@ -182,7 +182,7 @@ ht-degree: 89%
       + [アセットワークフロー移行ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
-+ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
++ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja)
 + Forms{#forms}
    +  Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
       + [1 — はじめに](./forms/developing-for-cloud-service/getting-started.md)
@@ -210,7 +210,7 @@ ht-degree: 89%
       + [開始パネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
    + ヘッドレスフォームを持つカスタム送信サービス{#custom-submit-headless-forms}
-      + [1 — はじめに](./forms/custom-submit-headless-forms/introduction.md)
+      + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
       + [2 — カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 — 応答を表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
    + AEM Forms と Analytics{#forms-and-analytics}
@@ -307,7 +307,7 @@ ht-degree: 89%
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja)
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja)
 + エキスパートリソース {#expert-resources}
-   + AEM Champions {#aem-champions}
+   + AEM チャンピオン {#aem-champions}
       + [Cloud Manager オンボーディングプレイブック](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager 環境タイプ](./expert-resources/aem-champions/environment-types.md)
       + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)

@@ -10,7 +10,7 @@ exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
 source-wordcount: '252'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -36,6 +36,6 @@ ht-degree: 98%
 
 ## 次の手順
 
-[Web チャネルドキュメントテンプレートの作成](./partfour.md)
+[Web チャネルドキュメントのテンプレートの作成](./partfour.md)
 
 

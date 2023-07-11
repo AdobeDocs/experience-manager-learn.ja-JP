@@ -1,6 +1,6 @@
 ---
-title: コンテンツフラグメントを XML に書き出し
-description: コンテンツフラグメントをAEMコンテンツフラグメントエディターから書き出す方法を説明します。
+title: XML へのコンテンツフラグメントの書き出し
+description: AEM コンテンツフラグメントエディターからコンテンツフラグメントを書き出す方法を学ぶ
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -10,43 +10,43 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+exl-id: 5738b5ec-3b86-4eed-9d48-8318c748fd38
+source-git-commit: d926bb35623e8d3bb8dd564e07d3cb394342e367
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-
-# コンテンツフラグメントを XML に書き出し
+# XML へのコンテンツフラグメントの書き出し
 
 ![コンテンツフラグメントエディターのヘッダーメニュー拡張の例](./assets/export-to-xml/hero.png){align="center"}
 
-カスタムボタンは、 `headerMenu` 拡張ポイント。 この例では、ヘッダーメニューにボタンを追加する方法と、click イベントを処理して、アクティブなコンテンツフラグメントを XML または CSV 形式で書き出す方法を示します。
+`headerMenu` 拡張ポイントを使用すると、コンテンツフラグメントエディターのヘッダーメニューにカスタムボタンを追加できます。この例では、ヘッダーメニューにボタンを追加する方法と、クリックイベントを処理してアクティブなコンテンツフラグメントを XML または CSV として書き出す方法を示しています。
 
-ヘッダーボタンは、1 つのボタンとして、またはサブ項目を含むボタンとして存在することができます。 この例では、サブ項目を含むボタンを実装する方法を示しますが、1 つのボタンを実装するためにコメントアウトされたコードを含めます。
+ヘッダーボタンは、単一のボタンとして存在することも、サブ項目を含むボタンとして存在することもできます。この例では、サブ項目を含むボタンを実装する方法を示しますが、単一のボタンを実装するためのコメントアウトされたコードが含まれます。
 
 ## 拡張ポイント
 
-この例は、延長点まで延長されます `headerBar` をクリックして、カスタムボタンをコンテンツフラグメントエディターに追加します。
+この例では、拡張機能ポイント `headerBar` まで拡張して、コンテンツフラグメントエディターにカスタムボタンを追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| 拡張対象の AEM UI | 拡張機能ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [ヘッダーメニュー](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 拡張機能の例
 
-次の使用例は、2 つのサブ項目を持つヘッダーメニューボタンを作成します。1 つはアクティブなコンテンツフラグメントを XML（実装済み）として書き出し、もう 1 つはアクティブなコンテンツフラグメントを CSV（未実装）として書き出します。
+次の例では、2 つのサブ項目を含むヘッダーメニューボタンを作成します。1 つはアクティブなコンテンツフラグメントを XML として書き出すボタン（実装済み）、もう 1 つはアクティブなコンテンツフラグメントを CSV として書き出すボタン（未実装）です。
 
-このコードは、拡張機能の登録ファイルでコンテンツフラグメントのコンテンツを取得する方法と、コンテンツフラグメントの JSON コンテンツを変換する方法を示します。
+このコードは、コンテンツフラグメントのコンテンツを拡張機能の登録ファイルで取得する方法と、コンテンツフラグメントの JSON コンテンツを変換して書き出す方法を示しています。
 
 ### 拡張機能の登録
 
-`ExtensionRegistration.js`は、index.html ルートにマッピングされ、AEM拡張機能のエントリポイントで、次の項目を定義します。
+index.html ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、以下を定義します。
 
-+ 拡張ボタンの場所が表示されます (`headerMenu`) をAEMオーサリングエクスペリエンスで使用する場合
-+ getButton() 関数の拡張ボタンの定義
-+ ボタン、 onClick() 関数、サブ項目のリスト、およびそのクリックハンドラーのクリックハンドラー。
++ AEM オーサリングエクスペリエンスに表示される「拡張機能」ボタンの場所（`headerMenu`）
++ getButton() 関数内の拡張機能ボタンの定義
++ onClick() 関数内のボタンのクリックハンドラーまたはサブ項目のリストとそのクリックハンドラー
 
 `src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -145,13 +145,13 @@ export default ExtensionRegistration;
 
 #### コンテンツフラグメントデータ
 
-アクティブなコンテンツフラグメントは、 `getContentFragment()` メソッド `guestConnection.host.contentFragment` オブジェクト。
+アクティブなコンテンツフラグメントは、`guestConnection.host.contentFragment` オブジェクトの `getContentFragment()` メソッドを使用して取得できます。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-この `contentFragment` オブジェクトには、パス、モデル、メタデータ、メインコンテンツ、その他のバリアントを含む、コンテンツフラグメントに関するすべての情報が含まれます。
+`contentFragment` オブジェクトには、パス、モデル、メタデータ、メインコンテンツ、バリアントなど、コンテンツフラグメントに関するすべての情報が含まれています。
 
 ```json
 {

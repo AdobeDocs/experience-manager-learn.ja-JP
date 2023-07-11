@@ -14,7 +14,7 @@ exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
 source-wordcount: '4057'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1008,7 +1008,7 @@ AEM コンポーネントのほとんどの HTL スクリプトでは、**プレ
 
 ### スタイルが設定されていない署名コンポーネントの確認 {#reviewing-the-unstyled-byline-component}
 
-1. 更新をデプロイした後で、「[Ultimate Guide to LA Skateparks](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)」ページ、またはこの章の前半で署名コンポーネントを追加した場所に移動します。
+1. 更新をデプロイした後で、[Ultimate Guide to LA Skateparks](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) ページ、またはこの章の前半で署名コンポーネントを追加した場所に移動します。
 
 1. **画像**、**名前**&#x200B;および&#x200B;**職業**&#x200B;が表示され、スタイルは未設定ですが、作業中の署名コンポーネントが存在します。
 

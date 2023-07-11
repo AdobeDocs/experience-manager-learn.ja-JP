@@ -1,6 +1,6 @@
 ---
-title: 使用可能なフォームのリストからフォームを選択
-description: リストフォーム API を使用したドロップダウンリストの入力
+title: 使用可能なフォームリストからのフォームの選択
+description: listforms API を使用してドロップダウンリストにデータを入力します
 feature: Adaptive Forms
 version: 6.5
 kt: 13346
@@ -11,19 +11,19 @@ exl-id: 31008bb3-316b-4035-89ea-e830b429b927
 source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 1%
+ht-degree: 88%
 
 ---
 
-# 入力するフォームをドロップダウンリストから選択します
+# ドロップダウンリストからの入力対象フォームの選択
 
-ドロップダウンリストを使用すると、ユーザーにオプションのリストを表示する、コンパクトで整理された方法を提供できます。 ドロップダウンリスト内の項目には、 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+ドロップダウンリストを使用すると、オプションのリストを整理された形でコンパクトにユーザーに提示でできます。ドロップダウンリスト内の項目には、[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) の結果が入力されます。
 
 ![カード表示](./assets/forms-drop-down.png)
 
 ## ドロップダウンリスト
 
-次のコードは、リストフォーム API 呼び出しの結果をドロップダウンリストに入力するために使用されました。 ユーザーの選択に基づいて、アダプティブフォームが表示され、ユーザーが入力して送信できます。 [マテリアル UI コンポーネント](https://mui.com/) は、このインターフェイスの作成に使用されています
+listforms API 呼び出しの結果をドロップダウンリストに入力するために、次のコードを使用しました。ユーザーの選択に応じて、ユーザーが入力して送信するためのアダプティブフォームが表示されます。このインターフェイスの作成には、[Material UI コンポーネント](https://mui.com/)を使用しています。
 
 ```javascript
 import * as React from 'react';
@@ -123,12 +123,12 @@ const getAFForms =async()=>
 }
 ```
 
-このユーザーインターフェイスの作成では、次の 2 つの API 呼び出しが使用されました
+このユーザーインターフェイスの作成では、次の 2 つの API 呼び出しを使用しました。
 
-* [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). フォームを取得する呼び出しは、コンポーネントがレンダリングされる際に 1 回だけおこなわれます。 API 呼び出しの結果は、 afForms 変数に格納されます。
-上記のコードでは、 map 関数を使用して afForms を繰り返し処理し、 afForms 配列内の各アイテムに対して、 MenuItem コンポーネントを作成して Select コンポーネントに追加します。
+* [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)。フォームを取得する呼び出しは、コンポーネントのレンダリング時に 1 回だけ行われます。API 呼び出しの結果は、afForms 変数に格納されます。
+上記のコードでは、map 関数を使用して afForms を反復処理し、afForms 配列内の項目ごとに MenuItem コンポーネントを作成して Select コンポーネントに追加します。
 
-* フォームを取得 — GET 呼び出しが [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)（ id は、ドロップダウンリストでユーザーが選択したアダプティブフォームの id） このGET呼び出しの結果は、 selectedForm に保存されます。
+* フォームを取得 — GET 呼び出しが [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)（ id は、ドロップダウンリストでユーザーが選択したアダプティブフォームの id） この GET 呼び出しの結果は、selectedForm に格納されます。
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);
@@ -137,7 +137,7 @@ console.log(formJSON.afModelDefinition);
 setForm(formJSON.afModelDefinition);
 ```
 
-* 選択したフォームを表示します。 次のコードは、選択したフォームの表示に使用されました。 AdaptiveForm 要素は、 aemforms/af-react-renderer npm パッケージで提供され、マッピングと formJson をプロパティとして想定します
+* 選択されたフォームの表示。選択されたフォームを表示するために、次のコードを使用しました。AdaptiveForm 要素は aemforms/af-react-renderer npm パッケージに用意されており、mappings と formJson がその要素のプロパティとして必要です。
 
 ```
 <div><AdaptiveForm mappings={extendMappings} formJson={selectedForm}/></div>
@@ -145,4 +145,4 @@ setForm(formJSON.afModelDefinition);
 
 ## 次の手順
 
-[フォームをカードレイアウトで表示する](./display-forms-card-view.md)
+[カードレイアウトでのフォームの表示](./display-forms-card-view.md)

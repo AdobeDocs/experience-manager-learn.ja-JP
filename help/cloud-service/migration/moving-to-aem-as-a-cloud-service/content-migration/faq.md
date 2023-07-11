@@ -13,7 +13,7 @@ exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '2296'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ CTT 関連のアドビのサポートチケットの作成時に詳細を提供�
 
 ### Q：ソース システムから最新の BPA レポートを取得していますが、これを使用するにはどうすればよいですか？
 
-レポートを CSV 形式で書き出し、[IMS 組織に関連付けられている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=ja) Cloud Acceleration Manager にアップロードします。次に、[準備段階で説明されている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)レビュープロセスを実行します。
+レポートを CSV 形式で書き出し、[IMS 組織に関連付けられている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=ja) Cloud Acceleration Manager にアップロードします。次に、[準備段階で説明されている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=ja)レビュープロセスを実行します。
 
 ツールが提供するコードとコンテンツの複雑さの評価を確認し、コードリファクタリングバックログまたはクラウド移行評価につながる、関連するアクション項目をメモしておいてください。
 
@@ -80,7 +80,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 簡単に答えると「**はい**」です。
 
-ユーザーマッピング&#x200B;**なし**&#x200B;で CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）のみがソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
+ユーザーマッピング&#x200B;**なし**&#x200B;で CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）のみがソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=ja)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
 
 この場合、SAML ID プロバイダーは、認証ハンドラーを使用して AEM に直接送信するのではなく、Federated ID または Enterprise IDを使用するように、Adobe IMS に対して設定されます。
 
@@ -88,13 +88,13 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 簡単に答えると「**はい**」です。
 
-ユーザーマッピングで CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）がソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
+ユーザーマッピングで CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）がソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=ja)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
 
 この場合、ユーザーは個人用の Adobe ID を使用します。この Adobe ID は IMS 管理者が AEMaaCS へのアクセス権を付与するために使用します。
 
 ### Q：CTT では「ワイプ」および「上書き」という用語にはどのような意味がありますか？
 
-[抽出フェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)では、前の抽出サイクルからのステージングコンテナのデータを上書きするか、差分（追加／更新／削除）をこのデータに追加します。ステージングコンテナは、移行セットに関連付けられた Blob ストレージコンテナにすぎません。移行セットごとに、専用のステージングコンテナが用意されています。
+[抽出フェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=ja#extraction-setup-phase)では、前の抽出サイクルからのステージングコンテナのデータを上書きするか、差分（追加／更新／削除）をこのデータに追加します。ステージングコンテナは、移行セットに関連付けられた Blob ストレージコンテナにすぎません。移行セットごとに、専用のステージングコンテナが用意されています。
 
 [取り込みフェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html?lang=ja)では、AEMaaCS のコンテンツリポジトリ全体を置き換えるか、ステージング移行コンテナからのコンテンツの差分（追加／更新／削除）を同期します。
 
@@ -224,6 +224,6 @@ CTT プロセスでは、以下のリソースに接続する必要がありま�
 
 + [Cloud 内の Experience Manager への移行に関するヒントとテクニック（Summit 2022）](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html?lang=ja)
 
-+ [CTT エキスパートシリーズビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
++ [CTT エキスパートシリーズビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html?lang=ja)
 
-+ [他の AEMaaCS トピックに関するエキスパートシリーズビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)
++ [他の AEMaaCS トピックに関するエキスパートシリーズビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html?lang=ja)

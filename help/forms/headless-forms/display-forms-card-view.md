@@ -1,6 +1,6 @@
 ---
-title: 取得したフォームをカード表示で表示
-description: フォームを表示するには、listforms API を使用します
+title: 取得したフォームのカード表示
+description: listforms API を使用したフォームの表示
 feature: Adaptive Forms
 version: 6.5
 kt: 13311
@@ -11,22 +11,22 @@ exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
 source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# フォームをカード形式で取得して表示する
+# フォームの取得とカード形式での表示
 
-カード表示形式は、情報やデータをカード形式で表示するデザインパターンです。 各カードは、個別のコンテンツまたはデータ入力を表し、通常は、特定の要素が配置された視覚的に異なるコンテナで構成されます。
-React のクリック可能なカードは、カードやタイルに似たインタラクティブコンポーネントで、ユーザーがクリックまたはタップできます。 クリック可能なカードをクリックまたはタップすると、別のページへの移動、モーダルの開く、UI の更新など、指定したアクションまたは動作がトリガーされます。
+カード表示形式は、情報やデータをカード形式で表示するデザインパターンです。各カードは、個別のコンテンツまたはデータエントリを表し、通常は、特定の要素が内部に配置された視覚的に異なるコンテナで構成されます。
+React のクリック可能なカードは、カードやタイルに似たインタラクティブコンポーネントで、ユーザーがクリックまたはタップできます。クリック可能なカードをクリックまたはタップすると、別のページへの移動、モーダルのオープン、UI の更新など、指定したアクションまたは動作がトリガーされます。
 
-この記事では、 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) フォームを取得してカード形式でフォームを表示するには、click イベントでアダプティブフォームを開きます。
+この記事では、[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) でフォームを取得してカード形式で表示し、クリックイベントでアダプティブフォームを開きます。
 
 ![カード表示](./assets/card-view-forms.png)
 
 ## カードテンプレート
 
-次のコードは、カードテンプレートのデザインに使用されました。 カードテンプレートには、アダプティブフォームのタイトルと説明がAdobeロゴと共に表示されます。 [マテリアル UI コンポーネント](https://mui.com/) は、このレイアウトの作成に使用されています。
+次のコードを使用して、カードテンプレートをデザインしました。このカードテンプレートには、アダプティブフォームのタイトルと説明がアドビロゴと共に表示されます。[Material UI コンポーネント](https://mui.com/)が、このレイアウトの作成に使用されています。
 
 
 
@@ -76,15 +76,15 @@ const extendMappings =
 };
 ```
 
-次のルートが Main.js で定義され、DisplayForm.js に移動します。
+DisplayForm.js に移動するために、次のルートを Main.js で定義しました。
 
 ```javascript
     <Route path="/displayForm/:formID" element={<DisplayForm/>} exact/>
 ```
 
-## フォームを取得
+## フォームの取得
 
-listforms API は、AEMサーバーからフォームを取得するために使用されました。 API は JSON オブジェクトの配列を返し、各 JSON オブジェクトはフォームを表します。
+listforms API を使用して、AEM サーバーからフォームを取得しました。この API は JSON オブジェクトの配列を返し、各 JSON オブジェクトはフォームを表します。
 
 ```javascript
 import { useState,useEffect } from "react";
@@ -127,8 +127,8 @@ export default function ListForm(){
 }
 ```
 
-上記のコードでは、 map 関数を使用して fetchedForms を繰り返し処理し、 fetchedForms 配列内の各アイテムに対して FormCard コンポーネントを作成し、 Grid コンテナに追加します。 これで、必要に応じて、React アプリで ListForm コンポーネントを使用できます。
+上記のコードでは、map 関数を使用して fetchedForms を反復処理し、fetchedForms 配列内の項目ごとに FormCard コンポーネントを作成してグリッドコンテナに追加します。これで、必要に応じて、React アプリで ListForm コンポーネントを使用できるようになりました。
 
 ## 次の手順
 
-[ユーザーがカードをクリックしたときにアダプティブフォームを表示する](./open-form-card-view.md)
+[ユーザーによるカードクリック時のアダプティブフォームの表示](./open-form-card-view.md)

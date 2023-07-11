@@ -1,6 +1,6 @@
 ---
-title: AEM Content Fragments 拡張機能
-description: AEMas a Cloud Serviceのコンテンツフラグメント拡張機能を構築してデプロイする方法について説明します。
+title: AEM コンテンツフラグメント拡張機能
+description: AEM as a Cloud Service コンテンツフラグメント拡張機能を作成してデプロイする方法を説明します
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -14,21 +14,21 @@ exl-id: 4e3bb09c-8437-4f1d-bc88-a882a38e246c
 source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
 workflow-type: tm+mt
 source-wordcount: '924'
-ht-degree: 7%
+ht-degree: 90%
 
 ---
 
-# AEM Content Fragments 拡張機能
+# AEM コンテンツフラグメントの拡張性
 
-AEM Content Fragments UI は、コンテンツフラグメントの作成、管理、編集を管理するための強力な拡張可能な UI です。 ニーズに合わせて UI をカスタマイズするために、いくつかの拡張ポイントを使用できます。 拡張する UI に応じて、様々な拡張ポイントを使用できます。
+AEM コンテンツフラグメント UI は、コンテンツフラグメントの作成、管理および編集を管理するための強力で拡張可能な UI です。ニーズに合わせて UI をカスタマイズするために使用できる拡張ポイントがいくつかあります。拡張対象の UI によって、使用できる拡張ポイントは異なります。
 
-## コンテンツフラグメントコンソール拡張ポイント
+## コンテンツフラグメントコンソールの拡張ポイント
 
-AEM(Adobe Experience Manager) のコンテンツフラグメントコンソールは、コンテンツフラグメントを一元管理し、整理するためのユーザーインターフェイスです。 コンテンツフラグメントの作成、編集、公開、追跡のための包括的なツールと機能のセットを提供し、様々なチャネルやタッチポイントをまたいで構造化コンテンツを効率的に管理できます。
+AEM（Adobe Experience Manager）のコンテンツフラグメントコンソールは、コンテンツフラグメントを一元的に管理および整理するためのユーザーインターフェイスです。コンテンツフラグメントを作成、編集、公開および追跡するための包括的なツールおよび機能セットを提供するので、ユーザーは、様々なチャネルやタッチポイントにわたって構造化コンテンツを効率的に管理できます。
 
 ![コンテンツフラグメントコンソール](./assets/overview/cfc.png)
 
-[AEMコンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja) は、コンテンツフラグメントのリストと管理を行うための拡張可能な UI です。 [AEMコンテンツフラグメントコンソールの拡張機能が作成される](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) の使用 `@adobe/aem-cf-admin-ui-ext-tpl` App Builder テンプレート。
+[AEM コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=ja)は、コンテンツフラグメントのリストと管理を行うための拡張可能な UI です。`@adobe/aem-cf-admin-ui-ext-tpl` Application Builder テンプレートを使用して、[AEM コンテンツフラグメントコンソール拡張機能を作成します](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation)。
 
 次のコンテンツフラグメントコンソール拡張ポイントを使用できます。
 
@@ -47,8 +47,8 @@ AEM(Adobe Experience Manager) のコンテンツフラグメントコンソー�
               <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" title="アクションバー" target="_blank" rel="referrer">アクションバー</a></p>
               <p class="is-size-6">1 つ以上のコンテンツフラグメントが選択されている場合のアクションをカスタマイズします。</p>
               <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-              </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
             </div>
           </div>
         </div>
@@ -67,8 +67,8 @@ AEM(Adobe Experience Manager) のコンテンツフラグメントコンソー�
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" title="グリッド列" target="_blank" rel="referrer">グリッド列</a></p>
           <p class="is-size-6">コンテンツフラグメントリストに表示されるデータをカスタマイズします。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -87,8 +87,8 @@ AEM(Adobe Experience Manager) のコンテンツフラグメントコンソー�
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" title="ヘッダーメニュー" target="_blank" rel="referrer">ヘッダーメニュー</a></p>
           <p class="is-size-6">コンテンツフラグメントが選択されていない場合のアクションをカスタマイズします。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -97,11 +97,11 @@ AEM(Adobe Experience Manager) のコンテンツフラグメントコンソー�
 
 ## コンテンツフラグメントエディターの拡張ポイント
 
-AEM(Adobe Experience Manager) のコンテンツフラグメントエディターは、コンテンツフラグメントの作成、編集、管理をユーザーがおこなうためのユーザーインターフェイスコンポーネントです。 構造化されたコンテンツを操作するための視覚的に直感的で使いやすい環境を提供し、コンテンツ要素の定義と整理、テンプレートの適用、バリエーションの管理、様々なチャネルでのコンテンツの表示方法のプレビューをおこなえます。 コンテンツフラグメントエディターは、複数のデジタルエクスペリエンスに簡単に配布および公開できる、再利用可能でモジュラー型のコンテンツを作成するプロセスを合理化します。
+AEM（Adobe Experience Manager）のコンテンツフラグメントエディターは、ユーザーがコンテンツフラグメントを作成、編集および管理できるようにするユーザーインターフェイスコンポーネントです。構造化コンテンツを操作するための視覚的に直感的でわかりやすい環境を提供するので、ユーザーは、コンテンツ要素を定義および整理したり、テンプレートを適用したり、バリエーションを管理したり、様々なチャネルでのコンテンツの表示をプレビューしたりできます。コンテンツフラグメントエディターにより、複数のデジタルエクスペリエンスにわたって簡単に配布および公開できる再利用可能なモジュール型コンテンツを効率的に作成できるようになります。
 
 ![コンテンツフラグメントエディター](./assets/overview/cfe.png)
 
-AEM Content Fragments Editor は、コンテンツフラグメントを編集するための拡張可能な UI です。 [AEMコンテンツフラグメントエディターの拡張機能が作成される](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) の使用 `@adobe/aem-cf-editor-ui-ext-tpl` App Builder テンプレート。
+AEM コンテンツフラグメントエディターは、コンテンツフラグメントを編集するための拡張可能な UI です。`@adobe/aem-cf-editor-ui-ext-tpl` Application Builder テンプレートを使用して、[AEM コンテンツフラグメントエディター拡張機能を作成します](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/)。
 
 次のコンテンツフラグメントエディター拡張ポイントを使用できます。
 
@@ -118,10 +118,10 @@ AEM Content Fragments Editor は、コンテンツフラグメントを編集す
         <div class="card-content is-padded-small">
           <div class="content">
             <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/" title="ヘッダーメニュー" target="_blank" rel="referrer">ヘッダーメニュー</a></p>
-            <p class="is-size-6">コンテンツフラグメントエディターのヘッダーメニューでアクションをカスタマイズします。</p>
+            <p class="is-size-6">コンテンツフラグメントエディターのヘッダーメニューのアクションをカスタマイズします。</p>
             <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-            </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
           </div>
         </div>
       </div>
@@ -130,18 +130,18 @@ AEM Content Fragments Editor は、コンテンツフラグメントを編集す
     <div class="card" style="height: 100%">
       <div class="card-image">
         <figure class="image is-16by9">
-          <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" title="リッチテキストエディターのツールバー" tabindex="-1" target="_blank" rel="referrer">
-            <img class="is-bordered-r-small" src="./assets/overview/cfe-rte-toolbar.png" alt="リッチテキストエディターのツールバー">
+          <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" title="リッチテキストエディターツールバー" tabindex="-1" target="_blank" rel="referrer">
+            <img class="is-bordered-r-small" src="./assets/overview/cfe-rte-toolbar.png" alt="リッチテキストエディターツールバー">
           </a>
         </figure>
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" title="リッチテキストエディターのツールバー"  target="_blank" rel="referrer">リッチテキストエディターのツールバー</a></p>
-          <p class="is-size-6">コンテンツフラグメントエディターのリッチテキストエディター (RTE) にカスタムボタンを追加します。</p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" title="リッチテキストエディターツールバー"  target="_blank" rel="referrer">リッチテキストエディターツールバー</a></p>
+          <p class="is-size-6">コンテンツフラグメントエディターのリッチテキストエディター（RTE）にカスタムボタンを追加します。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -159,10 +159,10 @@ AEM Content Fragments Editor は、コンテンツフラグメントを編集す
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/" title="リッチテキストエディターウィジェット" target="_blank" rel="referrer">リッチテキストエディターウィジェット</a></p>
-          <p class="is-size-6">RTE でキーストロークにバインドされるアクションをカスタマイズします。</p>
+          <p class="is-size-6">キーストロークにバインドされる RTE のアクションをカスタマイズします。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -179,19 +179,19 @@ AEM Content Fragments Editor は、コンテンツフラグメントを編集す
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/ " title="リッチテキストエディターバッジ" target="_blank" rel="referrer">リッチテキストエディターバッジ</a></p>
-          <p class="is-size-6">RTE 内の編集不可能なスタイルブロックをカスタマイズします。</p>
+          <p class="is-size-6">RTE 内の編集できないスタイル付きブロックをカスタマイズします。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ドキュメントを表示</span>
+ </a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-## 拡張の例
+## 拡張例
 
-AEM UI 拡張機能コード例のコレクションへようこそ。 このリソースは、Adobe Experience Manager(AEM) ユーザーインターフェイスの拡張に関する実際のデモとインサイトを提供するように設計されています。 AEMの機能を強化したい開発者であれ、これらのコード例は有益な参考になります。
+AEM UI 拡張性コード例のコレクションにようこそ。このリソースは、Adobe Experience Manager（AEM）ユーザーインターフェイスの拡張に関する実践的なデモとインサイトを提供するように設計されています。AEM の機能の強化を検討している開発者であるかどうかにかかわらず、これらのコード例は貴重な参考資料として役に立ちます。
 
 <div class="columns is-multiline">
   <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Bulk property update">
@@ -205,11 +205,11 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-bulk-property-update.md" title="プロパティの一括更新">コンテンツフラグメントの一括更新</a></p>
-          <p class="is-size-6">モーダルアクションとAdobe I/O Runtimeアクションを含むコンテンツフラグメントコンソールアクションバー拡張機能。</p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-bulk-property-update.md" title="プロパティの一括更新">コンテンツフラグメントプロパティの一括更新</a></p>
+          <p class="is-size-6">モーダルと Adobe I/O Runtime アクションを備えたコンテンツフラグメントコンソールアクションバー拡張機能です。</p>
           <a href="./examples/console-bulk-property-update.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -218,18 +218,18 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
         <div class="card" style="height: 100%">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI ベースの画像生成とAEM拡張機能へのアップロード" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="OpenAI ベースの画像生成とAEM拡張機能へのアップロード">
+                    <a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI ベースの画像生成と AEM へのアップロードを行う拡張機能" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="OpenAI ベースの画像生成と AEM へのアップロードを行う拡張機能">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI ベースの画像生成とAEM拡張機能へのアップロード">OpenAPI 画像生成</a></p>
-                    <p class="is-size-6">OpenAI を使用して画像を生成し、AEMにアップロードして、選択したコンテンツフラグメントの画像プロパティを更新するアクションバー拡張機能の例を見てみましょう。</p>
+                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI ベースの画像生成と AEM へのアップロードを行う拡張機能">OpenAPI 画像生成</a></p>
+                    <p class="is-size-6">OpenAI を使用して画像を生成し、それを AEM にアップロードして、選択されたコンテンツフラグメントの画像プロパティを更新するアクションバー拡張機能の例について説明します。</p>
                     <a href="./examples/console-image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -248,8 +248,8 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/custom-grid-columns.md" title="カスタム列">カスタム列</a></p>
           <p class="is-size-6">コンテンツフラグメントコンソールにカスタム列を追加します。</p>
           <a href="./examples/custom-grid-columns.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -258,18 +258,18 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
     <div class="card" style="height: 100%">
       <div class="card-image">
         <figure class="image is-16by9">
-          <a href="./examples/editor-export-to-xml.md" title="XML に書き出し" tabindex="-1">
-            <img class="is-bordered-r-small" src="./examples/assets/export-to-xml/card.png" alt="XML に書き出し">
+          <a href="./examples/editor-export-to-xml.md" title="XML への書き出し" tabindex="-1">
+            <img class="is-bordered-r-small" src="./examples/assets/export-to-xml/card.png" alt="XML への書き出し">
           </a>
         </figure>
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-export-to-xml.md" title="XML に書き出し">XML に書き出し</a></p>
-          <p class="is-size-6">コンテンツフラグメントエディターからコンテンツフラグメントを XML 形式で書き出します。</p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-export-to-xml.md" title="XML への書き出し">XML への書き出し</a></p>
+          <p class="is-size-6">コンテンツフラグメントエディターからコンテンツフラグメントを XML として書き出します。</p>
           <a href="./examples/editor-export-to-xml.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -288,8 +288,8 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="リッチテキストエディターのツールバーボタン">リッチテキストエディターのツールバーボタン</a></p>
           <p class="is-size-6">コンテンツフラグメントエディターで、カスタムツールバーボタンを RTE フィールドに追加します。</p>
           <a href="./examples/editor-rte-toolbar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -308,8 +308,8 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="リッチテキストエディターウィジェット">リッチテキストエディターウィジェット</a></p>
           <p class="is-size-6">コンテンツフラグメントエディターで、リッチテキストエディターにウィジェットを追加します。</p>
           <a href="./examples/editor-rte-widget.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>
@@ -328,8 +328,8 @@ AEM UI 拡張機能コード例のコレクションへようこそ。 このリ
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-badges.md" title="リッチテキストエディターバッジ">リッチテキストエディターバッジ</a></p>
           <p class="is-size-6">コンテンツフラグメントエディターでリッチテキストエディターにバッジを追加します。</p>
           <a href="./examples/editor-rte-badges.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
-          </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+ </a>
         </div>
       </div>
     </div>

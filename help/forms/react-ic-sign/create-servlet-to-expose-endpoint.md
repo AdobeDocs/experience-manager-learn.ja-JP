@@ -12,11 +12,11 @@ exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
-# Acrobat Sign Web フォーム URL を作成
+# Acrobat Sign web フォーム URL の作成
 
 次のコードは、POST エンドポイントを公開するためのものです。このエンドポイントは、送信されたデータから icTemplateName を抽出し、エンドユーザーが署名するための Acrobat Sign web フォーム URL を返します。
 
@@ -89,5 +89,5 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 
 ## 次の手順
 
-[ローカルシステムにチュートリアルアセットをデプロイする](./deploy-assets-on-your-server.md)
+[ローカルシステムへのチュートリアルアセットのデプロイ](./deploy-assets-on-your-server.md)
 
