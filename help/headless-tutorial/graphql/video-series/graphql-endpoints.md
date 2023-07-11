@@ -11,9 +11,9 @@ thumbnail: 333339.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 190623cc-8959-46b3-95de-e7d01bf5acdb
 source-git-commit: 93b85ed46a3d94555e5c805ec2c4f893afc3d50b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '55'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -25,6 +25,6 @@ GraphQL エンドポイントを有効にし、エンドポイントに対して
 
 + GraphQL エンドポイントを有効にする方法を学びます。
 + エンドポイントに対して GraphQL クエリを実行する方法を学びます。
-+ GraphQLエンドポイントの公開方法について
++ GraphQL エンドポイントの公開方法について
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
