@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレス API と React - AEMヘッドレスの最初のチュートリアル
-description: AEM GraphQL API からコンテンツフラグメントデータを取得し、React アプリで表示する方法を説明します。
+title: AEM ヘッドレス API と React - AEM ヘッドレスの最初のチュートリアル
+description: AEM の GraphQL API からコンテンツフラグメントデータを取得し、React アプリで表示する方法を説明します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -10,36 +10,36 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
-workflow-type: tm+mt
+exl-id: 9cdd77c6-b5ee-4c66-aa38-30f93bdac4e6
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '869'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM ヘッドレス API と React
 
-# AEMヘッドレス API と React
+このチュートリアルの章では、AEM ヘッドレス SDK を使用して Adobe Experience Manager（AEM）ヘッドレス API と接続するための React アプリの設定を説明します。AEM の GraphQL API からコンテンツフラグメントデータを取得し、React アプリで表示する方法を説明します。
 
-このチュートリアルの章では、AEMヘッドレス SDK を使用してAdobe Experience Manager(AEM) ヘッドレス API と接続するための React アプリの設定について説明します。 AEM GraphQL API からコンテンツフラグメントデータを取得し、React アプリで表示する方法について説明します。
+AEM のヘッドレス API を使用すると、任意のクライアントアプリから AEM コンテンツにアクセスできます。AEM Headless SDK を使用して AEM のヘッドレス API に接続するように React アプリを設定する手順を説明します。この設定により、React アプリと AEM の間に再利用可能な通信チャネルが確立されます。
 
-AEMヘッドレス API を使用すると、任意のクライアントアプリからAEMコンテンツにアクセスできます。 AEMヘッドレス SDK を使用してAEMヘッドレス API に接続するように React アプリを設定する手順を説明します。 この設定により、React アプリとAEMの間に再利用可能な通信チャネルが確立されます。
+次に、AEM Headless SDK を使用して、AEM の GraphQL API からコンテンツフラグメントデータを取得します。AEM のコンテンツフラグメントは、構造化されたコンテンツ管理を提供します。AEM Headless SDK を利用すると、GraphQL を使用してコンテンツフラグメントデータを簡単にクエリして取得できます。
 
-次に、AEMヘッドレス SDK を使用して、AEM GraphQL API からコンテンツフラグメントデータを取得します。 AEMのコンテンツフラグメントは、構造化されたコンテンツ管理を提供します。 AEMヘッドレス SDK を使用すると、GraphQLを使用してコンテンツフラグメントデータのクエリや取得を簡単におこなえます。
+コンテンツフラグメントデータを取得したら、React アプリに統合します。データを魅力的な方法で書式設定して表示する方法を説明します。React コンポーネントでコンテンツフラグメントデータを処理およびレンダリングし、アプリの UI とのシームレスな統合を保証するためのベストプラクティスを説明します。
 
-コンテンツフラグメントデータを取得したら、それを React アプリに統合します。 データを魅力的な方法で書式設定し表示する方法を学びます。 React コンポーネントでのコンテンツフラグメントデータの処理とレンダリングのベストプラクティスを取り上げ、アプリの UI とシームレスに統合します。
-
-チュートリアル全体で、説明、コード例、実用的なヒントを提供します。 最終的に、React アプリを設定してAEMヘッドレス API に接続し、AEMヘッドレス SDK を使用してコンテンツフラグメントデータを取得し、React アプリでシームレスに表示することができます。 それでは、始めましょう。
+チュートリアル全体を通して、説明、コード例および実用的なヒントを提供します。最終的には、AEM ヘッドレス API に接続し、AEM ヘッドレス SDK を使用してコンテンツフラグメントデータを取得し、React アプリにシームレスに表示するように React アプリを設定できるようになります。それでは、始めましょう。
 
 
-## React アプリのクローン
+## React アプリのクローンの作成
 
-1. 次のアプリを複製： [Github](https://github.com/lamontacrook/headless-first/tree/main) 次のコマンドをコマンドラインで実行します。
+1. コマンドラインで次のコマンドを実行して、[Github](https://github.com/lamontacrook/headless-first/tree/main) からアプリのクローンを作成します。
 
    ```
    $ git clone git@github.com:lamontacrook/headless-first.git
    ```
 
-1. を `headless-first` ディレクトリを開き、依存関係をインストールします。
+1. `headless-first` ディレクトリに移動し、依存関係をインストールします。
 
    ```
    $ cd headless-first
@@ -48,7 +48,7 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
 
 ## React アプリの設定
 
-1. という名前のファイルを作成します。 `.env` プロジェクトのルートに配置します。 In `.env` 次の値を設定します。
+1. プロジェクトのルートに `.env` という名前のファイルを作成します。`.env` で次の値を設定します。
 
    ```
    REACT_APP_AEM=<URL of the AEM instance>
@@ -57,49 +57,49 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    REACT_APP_TOKEN=<developer token>
    ```
 
-1. Cloud Manager で開発者トークンを取得できます。 にログインします。 [AdobeCloud Manager](https://experience.adobe.com/). クリック __Experience Manager/Cloud Manager__. 適切なプログラムを選択し、環境の横にある省略記号をクリックします。
+1. Cloud Manager で開発者トークンを取得できます。[Adobe Cloud Manager](https://experience.adobe.com/) にログインします。__Experience Manager／Cloud Manager__ をクリックします。適切なプログラムを選択し、環境の横にある省略記号をクリックします。
 
    ![AEM Developer Console](./assets/2/developer-console.png)
 
-   1. をクリックします。 __統合__ タブ
-   1. クリック __「ローカルトークン」タブと「ローカル開発トークンを取得」__ ボタン
-   1. クローズしたクォーテーションの前まで、オープンクォーテーションの後のアクセストークンをコピーします。
-   1. コピーしたトークンをの値として貼り付けます。 `REACT_APP_TOKEN` 内 `.env` ファイル。
-   1. 次に、を実行してアプリを作成します。 `npm ci` コマンドライン上で
-   1. 次に、React アプリを起動し、次を実行します。 `npm run start` コマンドライン上で
-   1. In [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) という名前のファイル `context.js`  には、 `.env` ファイルをデスクトップアプリケーションのコンテキストに追加します。
+   1. 「__統合__」タブをクリックします。
+   1. __「ローカルトークン」タブと「ローカル開発トークンを取得」__&#x200B;ボタンを順にクリックします。
+   1. 開始引用符の後から終了引用符の前までのアクセストークンをコピーします。
+   1. コピーしたトークンを `.env` ファイル内の `REACT_APP_TOKEN` の値としてペーストします。
+   1. コマンドラインで `npm ci` を実行して、アプリを作成します。
+   1. 次に、React アプリを起動し、コマンドラインで `npm run start` を実行します。
+   1. [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) の `context.js` という名前のファイルには、`.env` ファイルの値をアプリのコンテキストに設定するコードが含まれています。
 
 ## React アプリの実行
 
-1. 次を実行して React アプリを起動します。 `npm run start` コマンドライン上で
+1. コマンドラインで `npm run start` を実行して、React アプリを起動します。
 
    ```
    $ npm run start
    ```
 
-   React アプリが起動し、次の操作を行うためのブラウザーウィンドウが開きます。 `http://localhost:3000`. React アプリに対する変更は、ブラウザーで自動的に再読み込みされます。
+   React アプリが起動し、ブラウザーウィンドウが開き、`http://localhost:3000` が表示されます。React アプリへの変更は、ブラウザーで自動的に再読み込みされます。
 
-## AEMヘッドレス API への接続
+## AEM のヘッドレス API への接続
 
-1. React アプリをAEM as a Cloud Serviceに接続するには、次の点に注意してください。 `App.js`. 内 `React` インポート、追加 `useContext`.
+1. React アプリを AEM as a Cloud Service に接続するには、`App.js` にいくつかの項目を追加します。`React` の読み込みで、`useContext` を追加します。
 
    ```javascript
    import React, {useContext} from 'react';
    ```
 
-   インポート `AppContext` から `context.js` ファイル。
+   `context.js` ファイルから `AppContext` を読み込みます。
 
    ```javascript
    import { AppContext } from './utils/context';
    ```
 
-   アプリコード内で、コンテキスト変数を定義します。
+   次に、アプリコード内で、コンテキスト変数を定義します。
 
    ```javascript
    const context = useContext(AppContext);
    ```
 
-   最後に、リターンコードを `<AppContext.Provider> ... </AppContext.Provider>`.
+   最後に、リターンコードを `<AppContext.Provider> ... </AppContext.Provider>` に含めます。
 
    ```javascript
    ...
@@ -110,7 +110,7 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    </div>);
    ```
 
-   参照用に、 `App.js` 今はこのようになるはずです。
+   参照用に、`App.js` は次のようになります。
 
    ```javascript
    import React, {useContext} from 'react';
@@ -137,27 +137,27 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    export default App;
    ```
 
-1. 次をインポート： `AEMHeadless` SDK. この SDK は、アプリがAEMヘッドレス API とやり取りする際に使用するヘルパーライブラリです。
+1. `AEMHeadless` SDK を読み込みます。この SDK は、アプリが AEM のヘッドレス API とのやり取りに使用するヘルパーライブラリです。
 
-   この import 文を `home.js`.
+   次の import 文を `home.js` に追加します。
 
    ```javascript
    import AEMHeadless from '@adobe/aem-headless-client-js';
    ```
 
-   以下を追加します。 `{ useContext, useEffect, useState }` から` React` インポート文。
+   次の `{ useContext, useEffect, useState }` を ` React` の import 文に追加します。
 
    ```javascript
    import React, { useContext, useEffect, useState } from 'react';
    ```
 
-   次をインポート： `AppContext`.
+   `AppContext` を読み込みます。
 
    ```javascript
    import { AppContext } from '../../utils/context';
    ```
 
-   内部 `Home` コンポーネント、取得 `context` 変数を `AppContext`.
+   `Home` コンポーネント内で、`AppContext` から `context` 変数を取得します。
 
    ```javascript
    const Home = () => {
@@ -166,7 +166,7 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    }
    ```
 
-1. 内でAEMヘッドレス SDK を初期化する  `useEffect()`AEMヘッドレス SDK は、  `context` 変数を変更します。
+1. `context` 変数が変更されると AEM ヘッドレス SDK も変更が必要なので、`useEffect()` 内で AEM ヘッドレス SDK を初期化します。
 
    ```javascript
    useEffect(() => {
@@ -180,10 +180,10 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
 
    >[!NOTE]
    >
-   > ここに `context.js` ～の下に立ち入る `/utils` は、 `.env` ファイル。 参照用に、 `context.url` は、AEMas a Cloud Service環境の URL です。 この `context.endpoint` は、前のレッスンで作成したエンドポイントへの完全パスです。 最後に、 `context.token` は開発者トークンです。
+   > `/utils` の下に、`.env` ファイルから要素を読み取る `context.js` ファイルがあります。なお、`context.url` は AEM as a Cloud Service 環境の URL です。`context.endpoint` は、前のレッスンで作成したエンドポイントへの完全パスです。最後に、`context.token` は開発者トークンです。
 
 
-1. AEMヘッドレス SDK からのコンテンツを公開する React 状態を作成します。
+1. AEM ヘッドレス SDK を通じて得られるコンテンツを公開する React 状態を作成します。
 
    ```javascript
    const Home = () => {
@@ -192,7 +192,7 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    }
    ```
 
-1. アプリをAEMに接続します。 前のレッスンで作成した永続化されたクエリを使用します。 次のコードを `useEffect` AEMヘッドレス SDK の初期化後。 を `useEffect` ～に依存する  `context` 変数に関する情報を次に示します。
+1. アプリを AEM に接続します。前のレッスンで作成した永続クエリを使用します。AEM ヘッドレス SDK が初期化された後で、次のコードを `useEffect` 内に追加します。以下に示すように、`useEffect` を `context` 変数に依存させます。
 
 
    ```javascript
@@ -210,22 +210,22 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    }, [context]);
    ```
 
-1. 開発者ツールのネットワーク表示を開き、 GraphQLリクエストを確認します。
+1. 開発者ツールのネットワーク表示を開いて、GraphQL リクエストを確認します。
 
    `<url to environment>/graphql/execute.json/pure-headless/teaser%3Bpath%3D%2Fcontent%2Fdam%2Fpure-headless%2Fhero`
 
-   ![Chrome Dev Tools](./assets/2/dev-tools.png)
+   ![Chrome の DevTools](./assets/2/dev-tools.png)
 
-   AEMヘッドレス SDK がGraphQLのリクエストをエンコードし、指定されたパラメーターを追加します。 ブラウザーでリクエストを開くことができます。
+   AEM ヘッドレス SDK が GraphQL のリクエストをエンコードし、指定されたパラメーターを追加します。ブラウザーでリクエストを開くことができます。
 
    >[!NOTE]
    >
-   > リクエストはオーサー環境に送信されるので、同じブラウザーの別のタブで環境にログインする必要があります。
+   > このリクエストはオーサー環境に送信されるので、同じブラウザーの別のタブでこの環境にログインする必要があります。
 
 
-## コンテンツフラグメントコンテンツをレンダリング
+## コンテンツフラグメントコンテンツのレンダリング
 
-1. アプリケーションでコンテンツフラグメントを表示します。 を返す `<div>` ティーザーのタイトルを入力します。
+1. アプリでコンテンツフラグメントを表示します。ティーザーのタイトルを含んだ `<div>` を返します。
 
    ```javascript
    return (
@@ -237,7 +237,7 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
 
    画面にティーザーのタイトルフィールドが表示されます。
 
-1. 最後の手順では、ページにティーザーを追加します。 React ティーザーコンポーネントがパッケージに含まれています。 まず、インポートを含めます。 の上部 `home.js` ファイルに次の行を追加します。
+1. 最後の手順として、ティーザーをページに追加します。React ティーザーコンポーネントはパッケージに含まれています。まず、import 文を含めます。`home.js` ファイルの先頭に次の行を追加します。
 
    `import Teaser from '../../components/teaser/teaser';`
 
@@ -251,13 +251,13 @@ AEMヘッドレス API を使用すると、任意のクライアントアプリ
    );
    ```
 
-   これで、フラグメント内にコンテンツが含まれたティーザーが表示されます。
+   これで、フラグメント内にコンテンツを含んだティーザーが表示されます。
 
 
 ## 次の手順
 
-おめでとうございます。AEMヘッドレス SDK を使用して、AEMヘッドレス API と統合するよう React アプリを正常に更新しました。
+これで完了です。AEM ヘッドレス SDK を使用して AEM ヘッドレス API と統合するように、React アプリを正常に更新しました。
 
-次に、参照されるコンテンツフラグメントをAEMから動的にレンダリングする、より複雑な画像リストコンポーネントを作成します。
+次は、参照されている AEM 内のコンテンツフラグメントを動的にレンダリングする、より複雑な画像リストコンポーネントを作成します。
 
 [次の章：画像リストコンポーネントの作成](./3-complex-components.md)
