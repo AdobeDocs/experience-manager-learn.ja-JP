@@ -10,9 +10,9 @@ role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '333'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -50,4 +50,4 @@ ht-degree: 97%
 
 ## 次の手順
 
-[ローカルシステム上でソリューションをテストする](./testing-and-trouble-shooting.md)
+[ローカルシステムでのソリューションのテスト](./testing-and-trouble-shooting.md)
