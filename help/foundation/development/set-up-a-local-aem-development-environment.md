@@ -13,7 +13,7 @@ exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2603'
 ht-degree: 100%
 
