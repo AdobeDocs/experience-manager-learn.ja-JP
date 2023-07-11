@@ -11,9 +11,9 @@ role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '192'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -83,4 +83,4 @@ public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest req
 
 ## 次の手順
 
-[フォームデータを保存する](./store-form-data.md)
+[フォームデータの保存](./store-form-data.md)
