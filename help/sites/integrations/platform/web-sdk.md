@@ -12,9 +12,9 @@ jira: KT-13156
 thumbnail: KT-13156.jpeg
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
 source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1340'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ AEM as a Cloud Service と Experience Platform [Web SDK](https://experienceleagu
 
 また、[Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja) で [WKND - サンプル Adobe Experience Manager プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)のページビュー データを収集して送信する方法も説明します。
 
-この設定が完了したら、ソリッド基礎を実装しました。 また、次のようなアプリケーションを使用して、Experience Platformの実装を進める準備が整いました。 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)、および [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja). 高度な実装は、Web および顧客データを標準化して、顧客エンゲージメントを促進するのに役立ちます。
+このセットアップを完了すると、強固な基盤が実装されたことになります。また、[Real-time Customer Data Platform（Real-Time CDP）](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja)、[Customer Journey Analytics（CJA）](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)、[Adobe Journey Optimizer（AJO）](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)などのアプリケーションを使用して Experience Platform の実装を進める準備も整います。高度な実装は、web と顧客のデータを標準化することで、顧客エンゲージメントの向上に役立ちます。
 
 ## 前提条件
 
@@ -52,7 +52,7 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 
 エクスペリエンスデータモデル（XDM）スキーマを使用すると、カスタマーエクスペリエンスのデータを標準化できます。**WKND ページビュー**&#x200B;のデータを収集するには、XDM スキーマを作成し、アドビが提供するフィールド グループ `AEP Web SDK ExperienceEvent` を web データ収集に使用します。
 
-小売、金融サービス、医療など、一連の参照データモデルに特化した汎用および業界があります。詳しくは、 [業界データモデルの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) を参照してください。
+小売、金融機関、ヘルスケアなどの汎用および業界固有の参照データモデルのスイートがあります。詳しくは、[業界データモデルの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html?lang=ja)を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
@@ -78,14 +78,14 @@ Experience Platform でタグ（旧称 Experience Platform Launch）のプロパ
 + データ要素：WKND サイトの Adobe Client Data Layer を使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。および、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に「[XDM スキーマを作成](#create-xdm-schema---experience-platform)」手順で作成）
 + ルール：Adobe Client Data Layer がトリガーする `cmp:show` イベントを使用して、WKND web ページにアクセスするたびに、プラットフォーム エッジ ネットワークにデータを送信します。
 
-を使用してタグライブラリを構築および公開する際に、 **公開フロー**&#x200B;を使用する場合、 **変更されたリソースをすべて追加** 」ボタンをクリックします。 個々のリソースを識別して選択する代わりに、データ要素、ルール、タグ拡張などのすべてのリソースを選択する場合。 また、開発フェーズでは、ライブラリを _開発_ 環境を検証し、 _ステージ_ または _実稼動_ 環境。
+**公開フロー**&#x200B;を使用してタグライブラリをビルドおよび公開する際に、「**変更されたすべてのリソースを追加**」ボタンを使用できます。個々のリソースを識別して選択する代わりに、データ要素、ルール、タグ拡張機能などのすべてのリソースを選択します。また、開発フェーズでは、ライブラリを&#x200B;_開発環境_&#x200B;のみに公開し、検証して&#x200B;_ステージング_&#x200B;環境または&#x200B;_実稼動_&#x200B;環境に昇格することもできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
 
 
 >[!TIP]
 >
->このビデオに示すデータ要素とルールイベントコードは、参照用に利用できます。 **下のアコーディオン要素を展開する**. ただし、Adobeクライアントデータレイヤーを使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用する概念は引き続き適用されます。
+>ビデオに示されているデータ要素とルールイベントコードは参照用に利用できます。**以下のアコーディオン要素を展開**&#x200B;してください。ただし、Adobe Client Data Layer を使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用するという概念は引き続き適用されます。
 
 
 +++ データ要素とルールイベントコード
@@ -211,7 +211,7 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 
 >[!AVAILABILITY]
 >
->必要に応じて **エンドツーエンドビデオ** これは、個々のセットアップ手順のビデオではなく、統合プロセス全体に対応しています。 [ここ](https://video.tv.adobe.com/v/3418905/) にアクセスします。
+>個々のセットアップ手順のビデオではなく、統合プロセス全体をカバーする&#x200B;**エンドツーエンドのビデオ**&#x200B;を希望する場合は、[こちら](https://video.tv.adobe.com/v/3418905/)をクリックしてアクセスできます。
 
 ## その他のリソース
 
