@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 exl-id: 16170f0d-6933-47f2-aefa-951599d163c0
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '91'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -34,4 +34,4 @@ ht-degree: 90%
 
 ## 次の手順
 
-[収入パネルへのテーブルおよびその他のコンポーネントの追加](./adding-table-to-income-panel.md)
+[収入パネルへのテーブルとその他のコンポーネントの追加](./adding-table-to-income-panel.md)
