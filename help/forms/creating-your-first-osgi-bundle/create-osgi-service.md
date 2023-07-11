@@ -9,7 +9,7 @@ level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '354'
 ht-degree: 100%
 
@@ -113,5 +113,5 @@ Postman を使用してPOST 呼び出しを行い、入力パラメーターを�
 
 ## 次の手順
 
-[Sling サーブレットを作成](./create-servlet.md)
+[Sling サーブレットの作成](./create-servlet.md)
 
