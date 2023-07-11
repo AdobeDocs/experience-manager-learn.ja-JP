@@ -11,9 +11,9 @@ thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '427'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -22,30 +22,30 @@ ht-degree: 2%
 
 ![コンテンツフラグメントコンソールのカスタムグリッド列](./assets/custom-grid-columns/hero.png){align="center"}
 
-カスタムグリッド列は、  `contentFragmentGrid` 拡張ポイント。 この例では、最終変更日に基づいて、人間が読み取り可能な形式でコンテンツフラグメントページを表示するカスタム列を追加する方法を示します。
+`contentFragmentGrid` 拡張機能ポイントを使用して、カスタムグリッド列をコンテンツフラグメントコンソールに追加できます。この例では、最終変更日に基づいて、人間が読み取り可能な形式でコンテンツフラグメントページを表示するカスタム列を追加する方法を説明します。
 
 ## 拡張ポイント
 
-この例は、延長点まで延長されます `contentFragmentGrid` をクリックして、コンテンツフラグメントコンソールにカスタム列を追加します。
+この例では、拡張機能ポイント `contentFragmentGrid` まで拡張して、コンテンツフラグメントコンソールにカスタム列を追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| 拡張対象の AEM UI | 拡張ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントコンソール](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [グリッド列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## 拡張機能の例
 
-次の例では、カスタム列を作成します。 `Age` コンテンツフラグメントの年齢を人間が読み取り可能な形式で表示します。 年齢は、コンテンツフラグメントの最終変更日から計算されます。
+次の例では、コンテンツフラグメントの年数を、人間が読み取り可能な形式で表示するカスタム列 `Age` を作成します。年数はコンテンツフラグメントの最終変更日から計算されます。
 
-このコードは、拡張機能の登録ファイルでコンテンツフラグメントのメタデータを取得する方法と、コンテンツフラグメントの JSON コンテンツを変換する方法を示します。
+このコードは、拡張機能の登録ファイルでコンテンツフラグメントのメタデータを取得する方法と、コンテンツフラグメントの JSON コンテンツを変換して書き出す方法を示しています。
 
-この例では、 [ルクソン](https://moment.github.io/luxon/) コンテンツフラグメントの年齢を計算するライブラリ ( `npm i luxon`.
+この例では、[Luxon](https://moment.github.io/luxon/) ライブラリを使用して、`npm i luxon` 経由でインストールされたコンテンツフラグメントの年数を計算します。
 
 ### 拡張機能の登録
 
-`ExtensionRegistration.js`は、index.html ルートにマッピングされ、AEM拡張機能のエントリポイントで、次の項目を定義します。
+index.html ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、次を定義します。
 
-+ 拡張機能の場所は、それ自体を挿入します (`contentFragmentGrid`) をAEMオーサリングエクスペリエンスで使用する場合
-+ カスタム列の定義 ( `getColumns()` 関数
++ AEM オーサリングエクスペリエンスでそれ自体（`contentFragmentGrid`）を挿入する拡張機能の場所
++ `getColumns()` 関数でのカスタム列の定義
 + 各カスタム列の値（行別）
 
 ```javascript
@@ -147,7 +147,7 @@ export default ExtensionRegistration;
 
 #### コンテンツフラグメントデータ
 
-この `render(..)` メソッド `getColumns()` はフラグメントの配列を渡します。 配列内の各オブジェクトは、グリッド内の行を表し、コンテンツフラグメントに関する次のメタデータを含みます。 このメタデータは、グリッド内の一般的なカスタム列に使用できます。
+`getColumns()` の `render(..)` メソッドにはフラグメントの配列が渡されます。配列内の各オブジェクトはグリッド内の行を表し、コンテンツフラグメントに関する次のメタデータが含まれています。このメタデータは、グリッド内の一般的なカスタム列に使用できます。
 
 
 ```javascript
@@ -159,7 +159,7 @@ render: async function (fragments) {
 }
 ```
 
-サンプルのコンテンツフラグメント JSON は、 `fragments` パラメーター `render(..)` メソッド。
+`render(..)` メソッドの `fragments` パラメーターの要素として使用できるコンテンツフラグメント JSON の例。
 
 ```json
 {
@@ -202,13 +202,13 @@ render: async function (fragments) {
 }
 ```
 
-カスタム列にデータを入力するために他のデータが必要な場合は、AEM オーサーに対して HTTP リクエストを実行して、データを取得できます。
+カスタム列へのデータ入力に他のデータが必要な場合は、AEM オーサーに HTTP リクエストを送信してデータを取得できます。
 
 >[!IMPORTANT]
 >
-> AEM オーサーインスタンスが許可するように設定されていることを確認します。 [クロスオリジンリクエスト](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) AppBuilder アプリが実行されているオリジンから。 許可されたオリジンに含まれる `https://localhost:9080`、AppBuilder ステージの接触チャネルおよび AppBuilder の実稼動チャネル。
+> AEM オーサーインスタンスが AppBuilder アプリが実行されているオリジンからの[クロスオリジンリクエスト](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=ja)を許可するように設定されていることを確認します。許可されているオリジンには、`https://localhost:9080`、AppBuilder ステージオリジン、AppBuilder の実稼動オリジンが含まれます。
 >
-> または、拡張機能からカスタム [AppBuilder のアクション](../../runtime-action.md) は、拡張機能に代わって AEM オーサーに要求をおこないます。
+> または、拡張機能は、拡張機能に代わって AEM オーサーにリクエストを行うカスタム [AppBuilder アクション](../../runtime-action.md)を呼び出すこともできます。
 
 
 ```javascript
@@ -225,9 +225,9 @@ const response = await fetch(`${context.aemHost}${fragment.id.slice('/content/da
 
 #### 列定義
 
-render メソッドの結果は、キーがコンテンツフラグメント ( または `fragment.id`) で始まり、値は列に表示する値です。
+render メソッドの結果は、キーがコンテンツフラグメント（または `fragment.id`）のパスであり、値が列に表示される値である JavaScript オブジェクトです。
 
-例えば、この拡張機能の結果は、 `age` 列は次のとおりです。
+例えば、この拡張機能の `age` 列の結果は次のようになります。
 
 ```json
 {
