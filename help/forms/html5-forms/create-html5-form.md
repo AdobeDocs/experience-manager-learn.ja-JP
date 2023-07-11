@@ -15,15 +15,15 @@ level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '481'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # HTML5 フォームの作成
 
-HTML5 フォームは、Adobe Experience Manager の新機能で、XFA フォームテンプレート（xdp）を HTML5 形式でレンダリングできます。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。HTML5 フォームは、XFA フォームテンプレートの既存の機能をサポートするだけでなく、モバイルデバイス用に手書き署名などの新しい機能を追加します。
+HTML5 フォームは、Adobe Experience Manager の新機能で、XFA フォームテンプレート（xdp）を HTML5 形式でレンダリングできます。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。HTML5 フォームは、XFA フォームテンプレートの既存の機能をサポートしているだけでなく、モバイルデバイス用に手書き署名などの新しい機能もあります。
 
 ## 前提条件
 
