@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1498'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -86,7 +86,7 @@ Homebrew を使用している場合は、以下の __Homebrew を使用して�
    1. 次のコマンドを使用して、Node.js がインストールされていることを確認します。`node -v`
    1. 次のコマンドを使用して、npm がインストールされていることを確認します。`npm -v`
 + または、Node.js をダウンロードしてインストールします（macOS、Linux、Windows の場合）
-   1. [Node.js をダウンロードしてインストールする](https://nodejs.org/en/download/)
+   1. [Node.js をダウンロードしてインストールする](https://nodejs.org/ja/download/)
    1. ターミナル／コマンドプロンプトを開きます。
    1. 次のコマンドを使用して、Node.js がインストールされていることを確認します。`node -v`
    1. 次のコマンドを使用して、npm がインストールされていることを確認します。`npm -v`
@@ -121,7 +121,7 @@ Apache Maven は、AEM プロジェクトの Maven アーキタイプから生�
 
 + AEM as a Cloud Services サービスからのログの確認
 + CLI からの Cloud Manager パイプラインの管理
-+ デプロイ先 [AEMの迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)
++ [AEM の迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)へのデプロイ
 
 ### Adobe I/O CLI のインストール
 
@@ -154,11 +154,11 @@ Adobe I/O CLI が Cloud Manager と通信するには、[Adobe I/O コンソー�
 
 Adobe I/O CLI を使用して Cloud Manager の[コマンドの実行](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)を開始します。
 
-### AEM Rapid Development Environment プラグインの設定{#rde}
+### AEM の迅速な開発環境プラグインのセットアップ{#rde}
 
-AEM Rapid Development Environment プラグインを使用すると、aio CLI とAEM as a Cloud Serviceの間のやり取りが可能になります [迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja) 経由 `aio aem:rde` コマンドを使用します。
+AEM の迅速な開発環境プラグインを使用すると、aio CLI が `aio aem:rde` コマンドで、AEM as a Cloud Service の[迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)とやり取りできるようになります。
 
-1. 実行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` をインストールするには、 [AEM Rapid Development Environments プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde).
+1. `aio plugins:install @adobe/aio-cli-plugin-aem-rde` を実行して、[AEM の迅速な開発環境プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde)をインストールします。
 
 ### Adobe I/O CLI Asset Compute プラグインの設定{#aio-asset-compute}
 
