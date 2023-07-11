@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '357'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ AEM Forms にログインします。
 * このようにして、request 属性を通じてフォームデータモデルに accountnumber を渡します。
 
 * 必ず変更内容を保存してください。
-   ![fdm](assets/requestattribute.gif)
+  ![fdm](assets/requestattribute.gif)
 
 ## Web チャンネルドキュメントのメール配信のテスト {#test-email-delivery-of-web-channel-document}
 
@@ -77,4 +77,4 @@ AEM Forms にログインします。
 
 ## 次の手順
 
-[電子メール配信の設定](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[メール配信のセットアップ](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
