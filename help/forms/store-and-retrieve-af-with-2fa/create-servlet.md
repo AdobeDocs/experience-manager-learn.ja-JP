@@ -11,9 +11,9 @@ role: Developer
 level: Experienced
 exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '88'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -81,4 +81,4 @@ public class StoreDataInDBWithAttachmentsInfo extends SlingAllMethodsServlet {
 
 ## 次の手順
 
-[保存されたフォームデータでフォームをレンダリング](./retrieve-saved-form.md)
+[保存されたフォームデータを持つフォームのレンダリング](./retrieve-saved-form.md)
