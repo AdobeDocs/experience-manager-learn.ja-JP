@@ -1,6 +1,6 @@
 ---
-title: 複雑な画像リストコンポーネントの構築 — AEMヘッドレス最初のチュートリアル
-description: コンテンツフラグメント、コンテンツ参照、画像の操作方法について説明します。
+title: 複雑な画像リストコンポーネントの作成 - AEM ヘッドレスに関する最初のチュートリアル
+description: コンテンツフラグメント、コンテンツ参照および画像の操作方法について説明します。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -10,39 +10,39 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
-workflow-type: tm+mt
+exl-id: bd9df5ed-d55f-45f2-8d54-2501bcaa39bb
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '590'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-
 # 複雑なコンポーネントの作成
 
-このチュートリアルの章では、コンテンツフラグメント、ネストされたコンテンツフラグメント参照、参照画像アセットをレンダリングする複雑な画像リストコンポーネントの作成について説明します。 React アプリをユニバーサルエディターを使用して編集可能にすることで、さらに一歩進めていきます。
+チュートリアルのこの章では、コンテンツフラグメント、ネストされたコンテンツフラグメント参照および参照される画像アセットをレンダリングする複雑な画像リストコンポーネントの作成について説明します。React アプリをユニバーサルエディターを使用して編集できるようにすることで、作業をさらに一歩進めます。
 
-Adobe Experience Manager(AEM) のコンテンツフラグメントは、コンテンツを構造化された方法で管理します。 コンテンツフラグメントを活用して画像リストコンポーネントを設定し、ネストされた参照の処理や参照元の画像アセットの表示をおこないます。
+Adobe Experience Manager（AEM）のコンテンツフラグメントにより、コンテンツを構造化された方法で管理できます。コンテンツフラグメントを活用して画像リストコンポーネントにデータを入力し、ネストされた参照の処理や参照される画像アセットの表示を行います。
 
-このチュートリアル全体で、画像リストコンポーネントの構築、ネストされた参照の処理、参照画像アセットのレンダリング、ユニバーサルエディターの統合の手順を説明します。 依存関係を設定し、コンポーネント構造を設計し、コンテンツフラグメントを取得して解析し、ユニバーサルエディターを使用してアプリを編集可能にする方法を学びます。
+このチュートリアルでは、画像リストコンポーネントの作成、ネストされた参照の処理、参照される画像アセットのレンダリングおよびユニバーサルエディターの統合について順を追って説明します。依存関係のセットアップ方法、コンポーネント構造の設計方法、コンテンツフラグメントの取得および解析方法およびユニバーサルエディターを使用してアプリを編集可能にする方法について説明します。
 
-このチュートリアルの章の最後までに、完全に機能し、編集可能な画像リストコンポーネントを使用できます。 React アプリで動的コンポーネントを作成し、ユニバーサルエディターでのコンテンツオーサリングエクスペリエンスを強化するための知識とスキルが身に付きます。 編集可能な画像リストコンポーネントの構築を開始しましょう。
+チュートリアルのこの章を終了すると、実用的かつ編集可能な画像リストコンポーネントを作成できるようになります。React アプリで動的コンポーネントを作成し、ユニバーサルエディターでのコンテンツオーサリングエクスペリエンスを強化するための知識とスキルを身に付けることができます。それでは、編集可能な画像リストコンポーネントの作成を開始しましょう。
 
 ## 画像リストの作成
 
-1. 次に、いくつかのオファーフラグメントと画像リストコンポーネントを作成する必要があります。  コンテンツフラグメントコンソールに移動します。
+1. ここで、いくつかのオファーフラグメントと １ つの画像リストコンポーネントを作成する必要があります。コンテンツフラグメントコンソールに移動します。
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   タイプのフラグメントを作成します `imagelist` ( モデルは `imagelist`) の場合は、タイトルを指定します。 `imagelist`.
+   `imagelist` タイプ（モデルは `imagelist`）のフラグメントを作成したいので、それに `imagelist` というタイトルを付けます。
 
-   コンテンツフラグメントエディターでは、フラグメントを選択して、フラグメントを組み込むか、作成することができます。  「フラグメントを作成」を選択します。
+   コンテンツフラグメントエディターでは、含めるフラグメントを選択するか、フラグメントを作成することができます。フラグメントの作成を選択します。
 
-   モデルのタイプは画像リストです。  フラグメントにタイトルと名前を付けます。
+   モデルのタイプは画像リストです。フラグメントにタイトルと名前を付けます。
 
-1. 画像リストは、他のフラグメントへの参照を含むコンテナタイプのフラグメントなので、新しいオファーはエディターから直接作成できます。  オファーフラグメントを作成し、インクルードおよび画像の説明と記事を作成します。  以下からテキストを切り取って貼り付けることができます。  フラグメントのタイトルをカードのタイトルとして使用します。
+1. 画像リストは、他のフラグメントへの参照を含むコンテナタイプのフラグメントなので、新しいオファーをエディターから直接作成できます。オファーフラグメントを作成し、画像の説明と記事を含めます。以下のテキストをカット＆ペーストすることができます。フラグメントのタイトルをカードのタイトルとして使用しています。
 
-   __Article1__
+   __記事 1__
 
    _タイトル_
 
@@ -81,7 +81,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    Like a faint torch, a striking green hue shines through the tent fabric, disappearing just as quickly. The sound of zippers does its best to penetrate the ocean's roar, as we curiously peek our heads out into the freezing wind. Moments after, we sprint out in sweatpants, cameras in hand to document the fabled phenomenon the past week's cloud layer has prevented us from seeing; the Aurora Borealis. It starts with only the faintest streaks of green and blue, seemingly appearing out of thin air, only to vanish before our eyes have had a chance to adjust to the dark. Every pulse becoming more radiant, and before we know it we are gazing in awe at the dancing curtains, shifting colors under starry skies. After a week of battling the elements, it's as if Mother Nature has decided to treat us with just a taste of the breathtaking beauty she is capable of, as if we have finally proven ourselves worthy. With our jaws still open, we watch on as the mesmerizing curtains of emerald green are veiled in a dark cloud layer, and the winds once again take hold of the bay. The exhibition is over for now, but these islands will stay in our minds forever. See you next time, Lofoten, may the forces of life yet again gravitate us towards your majestic shores, because in the hardship of finding what we came for, something else has emerged, a yearning for the undisturbed, the unknown and the truly magical. It's waiting for you no matter where you are in the world.
    ```
 
-   __第 2 条__
+   __記事 2__
 
    _タイトル_
 
@@ -124,7 +124,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    Then there's the surf. A pointbreak breaking for 300 meters down a shallow coral shelf, producing immaculate almond-shaped barrels, grinding down the reef at a barely makeable speed. Even though many of the waves race past me on my struggling backhand, the few that I make it to the end of are some of the best I've ever experienced, and I have a hard time containing my excitement, hooting and hollering to Sofia on the cliffs, with her Canon 5D in hand. The line-up out back is an eclectic mix of old salty men on oversized gun surfboards, young semi-pros with stickered boards, girlfriends on longboards and hippies with dreadlocks and big smiles. Nothing of the notorious localism I have read about online, even though I quickly learn to respect the noticeable pecking order, letting the obviously more skilled crowd get the biggest set waves. There are still plenty of action for everyone, and a friendly smile opens up even the grumpiest old-timer. After the sun has set, the same faces are seen around campfires and tailgate barbeques all over the campground, where many seem to have gotten stuck for the season, ignoring distant calls of civilization urging them to return to normal lives. As the stars come out, we set up our cameras for timelapses, hoping to capture some of the magic that is happening above us, all the while our heads turn heavy from the five hours in the water and the beverages that followed.
    ```
 
-   __第 3 条__
+   __記事 3__
 
    _タイトル_
 
@@ -157,7 +157,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    Fast forward 5000 years, and although human ingenuity, competition and spirit for invention has further evolved this once crude way of transportation, the principles remain the same. We designed our now countless different models of wooden planks to float on top of powder snow, crafted metal edges to cut through ice, we shaved off every superfluous gram we could find to help us on our journeys, to reach farther, higher and steeper. And today, when in many places, multi-billion dollar corporations charge us big money to ride down over-crowded slopes, many of us are returning to the original way of skiing. Exchanging lift queues for solitude, quantity for quality, and apres-ski beer for trail mix, a new generation of skiers are rediscovering the virtue of earning one's turns, the silence of the mountains, and how far into the unknown a little off-season cardio training can get you.
    ```
 
-   __第 4 条__
+   __記事 4__
 
    _タイトル_
 
@@ -190,7 +190,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. クエリエディターに戻り、この新しいコンポーネントを取得します。  ここでは、 `OfferModel` を使用します。
+1. クエリエディターに戻り、この新しいコンポーネントを取得します。クエリで `OfferModel` とメタデータを参照していることに注意してください。メタデータはカードのタイトルに使用します。
 
    ```graphql
    query imageList {
@@ -226,13 +226,13 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    }
    ```
 
-1. これをアプリに接続します。  アドビの `home.js`新しいクエリを参照します。 上 `useEffect()` 設定 `list` および `setList`.
+1. 次に、これをアプリに関連付けます。`home.js` で新しいクエリを参照します。`useEffect()` の上に `list` と `setList` を設定します。
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   内側 `useEffect()` imagelist クエリの新しいリクエスト。
+   `useEffect()` 内には、画像リストクエリの新しいリクエストが含まれています。
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -252,7 +252,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    <div>{list.cards && <ImageList content={list.cards} />}</div>
    ```
 
-   画像リストのコンポーネントを見てみましょう。  画像リスト内で、各オファーをループします。
+   画像リストのコンポーネントを見てみましょう。画像リスト内で、各オファーを反復処理します。
 
    ```javascript
    {content.items && content.items.map((items) => (
@@ -279,7 +279,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    };
    ```
 
-   また、画像コンポーネントを参照し、動的 URL を渡すことに注意してください。
+   また、画像コンポーネントを参照し、動的 URL を渡します。
 
    画像コンポーネント内では、動的 URL を使用して、複数の URL を持つソースセットを作成します。
 
@@ -292,15 +292,15 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    ];
    ```
 
-## ユニバーサルエディターの有効化
+## ユニバーサルエディターを有効にする
 
-1. 追加 `<meta />` をデスクトップアプリケーションに追加します。  開く `App.js` をクリックし、ファイルの上部に import を挿入します。
+1. `<meta />` をアプリに追加します。`App.js` を開き、ファイルの先頭に import を挿入します。
 
    ```javascript
    import { Helmet } from 'react-helmet';
    ```
 
-   アプリ内で以下のコードを追加します。
+   アプリのリターン内に次のコードを追加します。
 
    ```javascript
    <Helmet>
@@ -310,39 +310,39 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
 
    >[!TIP]
    >
-   > ヘルメットライブラリを使用して、 `.env` ファイルに書き込む必要がありますが、 `index.html`.
+   > ヘルメットライブラリを使用して、`.env` ファイルに基づいて動的にしていますが、`index.html` にハードコードすることもできます。
 
-1. 次に、各カードを編集するためのフラグメントとデータタイプを識別するためのカードを更新します。
+1. 次に、カードを更新して、各カードを編集するためのフラグメントとデータタイプを識別します。
 
-   内部 `<div className='card' key={card._path}>`
+   `<div className='card' key={card._path}>` 内に
 
-   追加
+   次を追加します
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
    ```
 
-   これで、以下がおこなわれます。
+   これで、次のようになります。
 
    ```javascript
    <div className='card' key={card._path} itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope>
    ```
 
-1. 次に、編集可能なものを特定します。
+1. 次に、編集可能な情報を特定します。
 
-   移動先 `<h3 />` 追加：
+   `<h3 />` に次を追加します。
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   この `<div />` 追加：
+   `<div />` に次を追加します。
 
    ```javascript
    itemProp="description" itemType="richtext"
    ```
 
-   カードの最終コード：
+   カードの最終コードは、次のようになります。
 
    ```javascript
    const Cards = ({ content }) => {
@@ -361,7 +361,7 @@ Adobe Experience Manager(AEM) のコンテンツフラグメントは、コン�
    };
    ```
 
-の最終コード `home.js`:
+`home.js` の最終コード：
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';
@@ -421,4 +421,4 @@ export default Home;
 
 ## おめでとうございます。
 
-AEMヘッドレス API を完全に活用し、ユニバーサルエディターで編集可能なAEMヘッドレスエクスペリエンスが正常に作成されました。
+AEM ヘッドレス API を完全に活用し、ユニバーサルエディターで編集できる AEM ヘッドレスエクスペリエンスが正常に作成されました。
