@@ -1,6 +1,6 @@
 ---
 title: AEM UI 拡張機能のデプロイ
-description: AEM UI 拡張機能のデプロイ方法について説明します。
+description: AEM UI 拡張機能のデプロイ方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,9 +11,9 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '777'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
