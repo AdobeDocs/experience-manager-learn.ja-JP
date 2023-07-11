@@ -11,9 +11,9 @@ role: Developer
 level: Experienced
 exl-id: d722cb9c-6c8a-44de-aaea-fc07a555b864
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '116'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -107,4 +107,4 @@ public class RenderForm extends SlingAllMethodsServlet {
 
 ## 次の手順
 
-[クライアントライブラリを作成してサーブレットを呼び出し、フォームデータを保存する](./create-client-lib.md)
+[サーブレットを呼び出してフォームデータを保存するクライアントライブラリの作成](./create-client-lib.md)
