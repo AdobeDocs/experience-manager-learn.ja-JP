@@ -10,9 +10,9 @@ kt: 6899
 thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -43,4 +43,4 @@ Apache Sling Connection Pooled DataSource を作成し、以下のスクリー�
 
 ## 次の手順
 
-[データベースにデータを格納して取得する OSGi サービスを作成する](./create-osgi-service.md)
+[データベースのデータを格納および取得するための OSGi サービスの作成](./create-osgi-service.md)
