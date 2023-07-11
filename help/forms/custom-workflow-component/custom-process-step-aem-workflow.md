@@ -1,5 +1,5 @@
 ---
-title: ダイアログを含むカスタムプロセスステップの実装
+title: ダイアログを使用したカスタムプロセスステップの実装
 description: カスタムプロセスステップを使用してアダプティブフォームの添付ファイルをファイルシステムに書き込む方法
 feature: Workflow
 version: 6.5
@@ -9,17 +9,17 @@ level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '462'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # カスタムプロセスステップ
 
-このチュートリアルは、カスタムワークフローコンポーネントの実装が必要なAEM Formsのお客様を対象としています。ワークフローコンポーネントの作成の最初の手順は、ワークフローコンポーネントに関連付けられる Java コードを記述することです。 このチュートリアルでは、アダプティブフォームの添付ファイルをファイルシステムに保存する簡単な java クラスを記述します。この Java コードは、ワークフローコンポーネントで指定された引数を読み取ります。
+このチュートリアルは、カスタムワークフローコンポーネントの実装が必要な AEM Forms のお客様を対象としています。ワークフローコンポーネントを作成する最初のステップは、ワークフローコンポーネントに関連付けられる Java コードを記述することです。このチュートリアルでは、アダプティブフォームの添付ファイルをファイルシステムに保存する簡単な Java クラスを記述します。この Java コードは、ワークフローコンポーネントで指定された引数を読み取ります。
 
-次の手順は、Java クラスを記述し、クラスを OSGi バンドルとしてデプロイするために必要です
+Java クラスを記述し、クラスを OSGi バンドルとしてデプロイするには、次の手順が必要です
 
 ## Maven プロジェクトの作成
 
@@ -28,7 +28,8 @@ ht-degree: 65%
 
 ### WorkflowProcess を実装するクラスの作成
 
-Eclipse IDE で Maven プロジェクトを開きます。 **[projectname]**／**core** フォルダーを展開します。src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージに、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドをオーバーライドする必要があります。 execute メソッドの署名は、パブリック void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throwsWorkflowException
+Eclipse IDE で Maven プロジェクトを開きます。 **[projectname]**／**core** フォルダーを展開します。src/main/java フォルダーを展開します。 「core」で終わるパッケージが表示されます。 このパッケージに、WorkflowProcess を実装する Java クラスを作成します。 execute メソッドをオーバーライドする必要があります。 execute メソッドの署名は、次のとおりです。
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
 
 このチュートリアルでは、アダプティブフォームに追加された添付ファイルを AEM ワークフローの一環としてファイルシステムに書き込みます。
 
@@ -116,11 +117,11 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath - AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。 これは、添付ファイルを保存する AEM 内のフォルダーの名前（ワークフローのペイロードを基準とする相対パス）です。
+* attachmentsPath - AEM Workflow を呼び出すようにアダプティブフォームの送信アクションを設定したときに、アダプティブフォームで指定したのと同じ場所です。これは、添付ファイルを保存する AEM 内のフォルダーの名前（ワークフローのペイロードを基準とする相対パス）です。
 
 * saveToLocation - AEM サーバーのファイルシステム上で添付ファイルを保存する場所です。
 
-これら 2 つの値は、ワークフローコンポーネントのダイアログを使用してプロセス引数として渡されます
+これら 2 つの値は、ワークフローコンポーネントのダイアログを使用してプロセス引数として渡されます。
 
 ![ProcessStep](assets/custom-workflow-component.png)
 
@@ -129,7 +130,7 @@ QueryBuilder サービスは、attachmentsPath フォルダー下の nt:file タ
 
 >[!NOTE]
 >
->AEM Forms に固有の Document オブジェクトを使用しているので、aemfd-client-sdk の依存関係を Maven プロジェクトに含める必要があります。 
+>AEM Forms に固有の Document オブジェクトを使用しているので、aemfd-client-sdk の依存関係を Maven プロジェクトに含める必要があります。
 
 ```xml
 <dependency>
@@ -146,5 +147,5 @@ QueryBuilder サービスは、attachmentsPath フォルダー下の nt:file タ
 
 ## 次の手順
 
-を [カスタムワークフローコンポーネント](./custom-workflow-component.md)
+[カスタムワークフローコンポーネント](./custom-workflow-component.md)の作成
 
