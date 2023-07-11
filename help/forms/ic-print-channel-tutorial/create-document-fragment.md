@@ -17,9 +17,9 @@ role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,4 +41,4 @@ ht-degree: 98%
 
 ## 次の手順
 
-[印刷チャネルドキュメントを作成](./create-print-channel-document.md)
+[印刷チャネルドキュメントの作成](./create-print-channel-document.md)
