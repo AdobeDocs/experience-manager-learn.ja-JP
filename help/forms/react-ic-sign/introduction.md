@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 2ff7be5b-884c-420d-9a06-f0e2a99d3ef3
 source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '174'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -37,4 +37,4 @@ ht-degree: 92%
 
 ## 次の手順
 
-を書く [インタラクティブ通信ドキュメントを生成するためのカスタム OSGi サービス](./create-ic-document.md) ドキュメント化された API の使用
+ドキュメント化された API を使用した[インタラクティブ通信ドキュメントを生成するためのカスタム OSGi サービス](./create-ic-document.md)の記述
