@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 exl-id: cd8e5fad-d17a-4f80-b4f6-0d43be4dfb80
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '62'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -29,4 +29,4 @@ ht-degree: 82%
 
 ## 次の手順
 
-[カスタム関数を使用してドロップダウンを生成する](./using-custom-functions-and-code-editor.md)
+[カスタム関数を使用したドロップダウンへの入力](./using-custom-functions-and-code-editor.md)
