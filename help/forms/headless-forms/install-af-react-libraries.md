@@ -1,19 +1,19 @@
 ---
 title: 必要なアダプティブフォームの React ライブラリのインストール
-description: React プロジェクトに必要な依存関係を追加する
+description: React プロジェクトへの必要な依存関係の追加
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
-workflow-type: tm+mt
+exl-id: 46b43c2e-ed99-4bfd-88eb-eeea816dfecf
+source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
-
 
 # 必要な依存関係のインストール
 
@@ -22,7 +22,7 @@ React プロジェクトでヘッドレスアダプティブフォームの使�
 * @aemforms/af-react-components
 * @aemforms/af-react-renderer
 
-package.json を更新して、次の依存関係を含めます。 書き込み時0.22.41は現在のバージョンでした
+package.json を更新して、次の依存関係を含めます。執筆時点では 0.22.41 が現在のバージョンでした
 
 ```json
 "@aemforms/af-react-components": "^0.22.41",
@@ -31,11 +31,11 @@ package.json を更新して、次の依存関係を含めます。 書き込み
 
 >[!NOTE]
 >
->このチュートリアルのドロップダウンリストとカードレイアウトは、 [マテリアル UI ライブラリ](https://mui.com/). 適切なマテリアル UI パッケージをダウンロードして、コードをシステムで動作させる必要があります。
+>このチュートリアルのドロップダウンリストとカードレイアウトは、[マテリアル UI ライブラリ](https://mui.com/)を使用して作成しました。コードをシステムで動作させるには、適切なマテリアル UI パッケージをダウンロードする必要があります。
 
-## プロキシを設定
+## プロキシの設定
 
-クロスオリジンリソース共有 (CORS) は、アプリがホストされているドメインとは異なるドメインに Web ブラウザーからリクエストを送信することを制限するセキュリティメカニズムです。 別のドメインでホストされている API からデータを取得しようとすると、CORS エラーが発生する場合があります。 プロキシを設定すると、CORS の制限を回避して、React アプリから API にリクエストを送信できます。 src フォルダー内の setUpProxy.js というファイルで、次のコードを使用しています。 **ターゲットを、パブリッシュインスタンスを指すように変更してください。**
+クロスオリジンリソース共有（CORS）は、アプリがホストされているドメインとは異なるドメインに web ブラウザーからリクエストを送信することを制限するセキュリティメカニズムです。別のドメインでホストされている API からデータを取得しようとすると、CORS エラーが発生することがあります。プロキシを設定すると、CORS の制限を回避して、React アプリから API にリクエストを送信できます。src フォルダー内の setUpProxy.js というファイルで、次のコードを使用しています。**パブリッシュインスタンスを指すようにターゲットを変更する必要があります。**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -55,8 +55,8 @@ module.exports = function(app) {
 };
 ```
 
-また、 **http-proxy-middleware** モジュールをプロジェクトに追加します。
+また、**http-proxy-middleware** モジュールをインストールしてプロジェクトに追加する必要もあります。
 
 ## 次の手順
 
-[埋め込むフォームを取得](./fetch-the-form.md)
+[埋め込むフォームの取得](./fetch-the-form.md)
