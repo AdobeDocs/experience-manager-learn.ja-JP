@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: d742d77b-a064-46e8-862a-2d3e1cc56f63
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '123'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -37,4 +37,4 @@ Web チャネルドキュメントテンプレートを作成したら、その�
 
 ## 次の手順
 
-[ドキュメントフラグメントを作成](./partfive.md)
+[ドキュメントフラグメントの作成](./partfive.md)
