@@ -10,7 +10,7 @@ feature: User and Groups
 index: y
 exl-id: 595252dd-a882-4faa-938b-7aeb5a383056
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '44'
 ht-degree: 100%
 
