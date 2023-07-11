@@ -10,9 +10,9 @@ level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '574'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,6 @@ ht-degree: 92%
 >* Microsoft Visual C++ 2010 再頒布可能パッケージ
 >* Microsoft Visual C++ 2012 再頒布可能パッケージ
 >* Microsoft Visual C++ 2013 再頒布可能パッケージ（6.5 時点）
-
 
 ただし、AEM Forms のインストールについては、[公式ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)に従うことをお勧めします。次の手順に従って、Windows 環境に AEM Forms をインストールし設定できます。
 
@@ -70,10 +69,10 @@ ht-degree: 92%
 * ドキュメントサービスが機能するには、次の 2 つのプロパティが必要です。
 * sling.properties ファイルを保存します。
 * [適切な Forms アドオンパッケージをダウンロードします。](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
-* 次を使用してフォームアドオンパッケージをインストールする [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp).
+* [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して、Forms アドオンパッケージをインストールします。
 * アドオンパッケージをインストールしたら、次の手順に従う必要があります。
 
-   * **すべてのバンドルがアクティブ状態であることを確認します。 （AEMFD Signatures バンドルを除く）。**
+   * **すべてのバンドルがアクティブ状態であることを確認します。（AEMFD Signatures バンドルを除く）。**
    * **通常、すべてのバンドルがアクティブ状態になるまでに 5 分以上かかります。**
 
    * **すべてのバンドルがアクティブになったら（AEMFD Signatures バンドルを除く）、システムを再起動して AEM Forms のインストールを完了します。**
@@ -86,4 +85,4 @@ ht-degree: 92%
 1. 変更を保存します。
 
 おめでとうございます。これで、システムへの AEM Forms のインストールと設定が完了しました。
-必要に応じて、サーバーで [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja) または [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) を設定できます
+必要に応じて、サーバーで [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=ja) または [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=ja) を設定できます
