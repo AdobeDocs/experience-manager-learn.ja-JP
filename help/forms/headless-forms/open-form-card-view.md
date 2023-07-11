@@ -1,22 +1,23 @@
 ---
-title: カードをクリックしてフォームを表示
-description: カード表示からフォームにドリルダウン
+title: カードのクリックによるフォームの表示
+description: カード表示からフォームにドリルダウンします
 feature: Adaptive Forms
 version: 6.5
 kt: 13372
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
-workflow-type: tm+mt
+exl-id: e7cc7e22-9413-4820-9a52-d63ab29aff09
+source-git-commit: d926bb35623e8d3bb8dd564e07d3cb394342e367
+workflow-type: ht
 source-wordcount: '61'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# カードのクリックでのフォームの表示
+# カードクリック時のフォームの表示
 
-次のコードは、ユーザーがカードをクリックしたときにフォームを表示するために使用されました。 useParams 関数を使用して、表示するフォームのパスがこの URL から抽出されます。
+ユーザーがカードをクリックしたときにフォームを表示するために、次のコードを使用しました。表示するフォームのパスは、useParams 関数を使用して URL から抽出されます。
 
 ```javascript
 import Form from './components/Form';
