@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 1d7093a8-3765-46ec-912a-b5a5503fd5af
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '244'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,4 +40,4 @@ ht-degree: 98%
 
 ## 次の手順
 
-[インタラクティブ通信ドキュメントを作成](./partsix.md)
+[インタラクティブ通信ドキュメントの作成](./partsix.md)
