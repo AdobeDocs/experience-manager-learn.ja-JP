@@ -11,9 +11,9 @@ level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 exl-id: d537a80a-de61-4d43-bdef-f7d661c43dc8
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '179'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 96%
 
 ## 次の手順
 
-[ローカルシステム上でソリューションをテストする](./deploy-on-your-system.md)
+[ローカルシステムでのソリューションのテスト](./deploy-on-your-system.md)
