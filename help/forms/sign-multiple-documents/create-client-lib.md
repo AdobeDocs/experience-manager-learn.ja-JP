@@ -10,9 +10,9 @@ role: Developer
 level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '91'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -78,4 +78,4 @@ $(document).ready(function()
 
 ## 次の手順
 
-[このユースケースで使用するカスタムフォームテンプレートの作成](./create-af-template.md)
+[このユースケース用のカスタムフォームテンプレートの作成](./create-af-template.md)
