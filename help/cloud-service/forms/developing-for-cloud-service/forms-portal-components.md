@@ -10,9 +10,9 @@ feature: Core Components
 kt: 10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '349'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
