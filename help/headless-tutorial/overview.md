@@ -1,6 +1,6 @@
 ---
-title: AEMのヘッドレスのTutorials
-description: Adobe Experience Managerのヘッドレス CMS チュートリアルのコレクションです。 API、フレームワーク、サンプルアプリケーション別にチュートリアルを参照します。
+title: AEM のヘッドレスに関するチュートリアル
+description: Adobe Experience Manager のヘッドレス CMS チュートリアルのコレクション。API、フレームワーク、サンプルアプリケーションごとのチュートリアルを参照してください。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
@@ -8,23 +8,23 @@ level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '503'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-# AEMのヘッドレスのTutorials{#aem-headless-tutorials}
+# AEM のヘッドレスに関するチュートリアル{#aem-headless-tutorials}
 
 {{aem-headless-trials-promo}}
 
-Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションが用意されています。 実践チュートリアルを使用して、様々なオプションの使用方法を検討し、適切なオプションを選択します。
+Adobe Experience Manager（AEM）には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションがあります。実践チュートリアルを使用して、様々なオプションの使用方法を検討し、自分に適切なオプションを選択してください。
 
 >[!TIP]
 >
->このチュートリアルは、 **～することで学ぶ**. 詳しくは、次のページを参照してください。 [AEMヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). この一連のチュートリアルとジャーニーは互いを補完し合っています。
+>このチュートリアルのコレクションは、**実践で学びたい**&#x200B;人向けに設計されています。概念を基礎から学びたい場合は、[AEM ヘッドレス開発者ジャーニー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html?lang=ja)をご覧ください。この一連のチュートリアルとジャーニーは相互に補完し合っています。
 
-## Tutorials（API 別）
+## チュートリアル（API 別）
 
 <table>
 <tr>
@@ -34,11 +34,11 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja">
-    <strong>GraphQL API</strong>
-    </a>
+ <strong>GraphQL API</strong>
+ </a>
     </div>
     <p>
-    <em>アプリケーションでAEM GraphQL API を使用してコンテンツに対してクエリを実行する方法を説明します。</em>
+    <em>アプリケーションで AEM GraphQL API を使用して、コンテンツをクエリする方法を説明します。</em>
     <p>
   </td>
   <td>
@@ -47,21 +47,21 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
-    <strong>トークン認証</strong>
-    </a>
+ <strong>トークン認証</strong>
+ </a>
     </div>
     <p>
-    <em>アプリケーションがAEMで安全に認証される方法を説明します。</em>
+    <em>アプリケーションが AEM で安全に認証される方法を説明します。</em>
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
       <img alt="コンテンツサービス" src="./assets/content-services.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-        <strong>コンテンツサービス</strong>
-      </a>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
+ <strong>コンテンツサービス</strong>
+ </a>
     </div>
     <p>
     <em>アプリケーションで REST API を使用してコンテンツを使用する方法を説明します。</em>
@@ -72,44 +72,44 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 
 ## サンプルアプリケーション
 
-サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 これらの完成した例をダウンロードしてインストールし、すぐに使い始めます。
+サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。これらの完成した例をダウンロードしてインストールすると、すぐに始められます。
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
-      <img alt="iOSの例" src="./assets/ios-example.png" />
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=ja">
+      <img alt="iOS の例" src="./assets/ios-example.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
-    <strong>iOS SwiftUI の例</strong>
-    </a>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=ja">
+ <strong>iOS SwiftUI の例</strong>
+ </a>
     </div>
     <p>
-    <em>AEM GraphQL API を利用したiOSアプリケーション。</em>
+    <em>AEM GraphQL API を利用した iOS アプリケーション。</em>
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=ja">
     <img alt="Android の例" src="./assets/android-example.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android™の例</strong>
-    </a>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=ja">
+ <strong>Android™ の例</strong>
+ </a>
     </div>
     <p>
-    <em>AEM GraphQL API を利用した Android™アプリケーション。</em>
+    <em>AEM GraphQL API を利用した Android™ アプリケーション。</em>
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=ja">
       <img alt="React の例" src="./assets/react-example.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
-        <strong>React の例</strong>
-      </a>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=ja">
+ <strong>React の例</strong>
+ </a>
     </div>
     <p>
     <em>AEM GraphQL API を利用した React アプリケーション。</em>
@@ -118,77 +118,77 @@ Adobe Experience Manager(AEM) には、ヘッドレスエンドポイントを�
 </tr>
 </table>
 
-## Tutorials — フレームワーク別
+## フレームワーク別のチュートリアル
 
-使用するテクノロジーに基づいて、次のチュートリアルを参照します。 コンテキスト内オーサリングとエクスペリエンス管理のオプションを使用して、AEMが純粋なヘッドレスの使用例を超える方法を説明します。
+使用されているテクノロジーに応じたチュートリアルを以下で参照してください。コンテキスト内オーサリングとエクスペリエンス管理のオプションを使用して、AEM が純粋なヘッドレスユースケースの先を行く方法を説明します。
 
 <table>
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja">
-      <img alt="React — ヘッドレス" src="./assets/react-headless.png" />
+      <img alt="React - ヘッドレス" src="./assets/react-headless.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja">
-    <strong>React — ヘッドレス</strong>
+    <strong>React - ヘッドレス</strong>
     </a>
     </div>
     <p>
-    <em>純粋なヘッドレスシナリオで、GraphQLを使用して React JS アプリを構築します。</em>
+    <em>純粋なヘッドレスシナリオで GraphQL を使用して、React JS アプリを作成します。</em>
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <img alt="React — リモートエディター" src="./assets/react-remote.png" />
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=ja">
+    <img alt="React - リモートエディター" src="./assets/react-remote.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <strong>React — リモートエディター</strong>
-    </a>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=ja">
+ <strong>React - リモートエディター</strong>
+ </a>
     </div>
     <p>
-    <em>リモートでホストされる React アプリケーションの一部をコンテキスト内で作成する。</em>
+    <em>リモートでホストされる React アプリケーションの一部をコンテキスト内で作成します。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja">
-      <img alt="React - SPA Editor" src="./assets/react-spa-editor.png" />
+      <img alt="React - SPA エディター" src="./assets/react-spa-editor.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja">
-        <strong>React - SPA Editor</strong>
-      </a>
+ <strong>React - SPA エディター</strong>
+ </a>
     </div>
     <p>
-    <em>AEM SPAエディターを使用して、React アプリの完全なエクスペリエンスを管理します。</em>
+    <em>AEM SPA エディターを使用して、React アプリの完全なエクスペリエンスを管理します。</em>
     <p>
   </td>
 </tr>
 <tr>  
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <img alt="Andriod — コンテンツサービス" src="./assets/android.png" />
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
+    <img alt="Andriod - コンテンツサービス" src="./assets/android.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <strong>Android — コンテンツサービス</strong>
-    </a>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
+ <strong>Android - コンテンツサービス</strong>
+ </a>
     </div>
     <p>
-    <em>Content Services と REST を使用して、モバイル Android™アプリケーションを強化します。</em>
+    <em>コンテンツサービスと REST を使用して、モバイル Android™ アプリケーションの機能を強化します。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
-      <img alt="Node.js — 認証" src="./assets/node-js.png" />
+      <img alt="Node.js - 認証" src="./assets/node-js.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
-        <strong>Node.js — 認証</strong>
-      </a>
+ <strong>Node.js - 認証</strong>
+ </a>
     </div>
     <p>
-    <em>開発者とサービストークンを使用して Node.js アプリを構築し、認証します。</em>
+    <em>開発者トークンとサービストークンを使用して認証する Node.js アプリを作成します。</em>
     <p>
   </td>
   <td></td>
