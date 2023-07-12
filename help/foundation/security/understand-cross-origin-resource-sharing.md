@@ -12,10 +12,10 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 73bb813c961cf988355984b0385998a493ee3716
+source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 98%
+source-wordcount: '966'
+ht-degree: 93%
 
 ---
 
@@ -182,7 +182,22 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 | いいえ | AEM パブリッシュ | 認証済み | 認証済みリクエストでは CORS ヘッダーをキャッシュしないでください。リクエスト元ユーザーの認証／承認ステータスが配信済みリソースにどのような影響を与えるかを判断するのは困難なので、これは、認証済みリクエストをキャッシュしないという一般的なガイダンスに従っています。 |
 | はい | AEM パブリッシュ | 匿名 | Dispatcher でキャッシュ可能な匿名リクエストは、応答ヘッダーもキャッシュできるので、今後の CORS リクエストで、キャッシュされたコンテンツにアクセスできるようになります。AEM パブリッシュで CORS 設定を変更した場合は、影響を受けるキャッシュ済みリソースを無効化する&#x200B;**必要があります** 。影響を受ける可能性のあるキャッシュ済みコンテンツを判断するのは難しいので、ベストプラクティスとしては、コードまたは設定のデプロイメントについては Dispatcher キャッシュをパージするように推奨されています。 |
 
-CORS ヘッダーのキャッシュを許可するには、すべてのサポート AEM パブリッシュの dispatcher.any ファイルに以下の設定を追加します。
+### CORS リクエストヘッダーの許可
+
+必要な [処理のためにAEMにパススルーする HTTP リクエストヘッダー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)だから、それはディスパッチャーの `/clientheaders` 設定。
+
+```
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### CORS 応答ヘッダーのキャッシュ
+
+キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers) を AEM パブリッシュに追加します。 `dispatcher.any` ファイル。
 
 ```
 /publishfarm {
