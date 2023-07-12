@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: ht
-source-wordcount: '279'
-ht-degree: 100%
+source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
+workflow-type: tm+mt
+source-wordcount: '318'
+ht-degree: 83%
 
 ---
 
@@ -94,26 +94,48 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher 設定 {#dispatcher-configuration}
 
-キャッシュされたコンテンツの CORS ヘッダーをキャッシュし提供できるようにするには、AEM パブリッシュのすべての `dispatcher.any` サポートファイルに次の [/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders) を追加します。
+### CORS リクエストヘッダーの許可
+
+必要な [処理のためにAEMにパススルーする HTTP リクエストヘッダー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)だから、それはディスパッチャーの `/clientheaders` 設定。
 
 ```
-/myfarm { 
-  ...
-  /clientheaders {
-      "Access-Control-Allow-Origin"
-      "Access-Control-Expose-Headers"
-      "Access-Control-Max-Age"
-      "Access-Control-Allow-Credentials"
-      "Access-Control-Allow-Methods"
-      "Access-Control-Allow-Headers"
-  }
-  ...
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### CORS 応答ヘッダーのキャッシュ
+
+キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers) を AEM パブリッシュに追加します。 `dispatcher.any` ファイル。
+
+```
+/publishfarm {
+    ...
+    /cache {
+        ...
+        # CORS HTTP response headers
+        # https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+        /headers {
+            ...
+            "Access-Control-Allow-Origin"
+            "Access-Control-Expose-Headers"
+            "Access-Control-Max-Age"
+            "Access-Control-Allow-Credentials"
+            "Access-Control-Allow-Methods"
+            "Access-Control-Allow-Headers"
+        }
+    ...
+    }
+...
 }
 ```
 
 `dispatcher.any` ファイルを変更した後、**web サーバーアプリケーションを再起動**&#x200B;します。
 
-`/clientheaders` 設定更新後の次のリクエストでヘッダーが適切にキャッシュされるようにするには、キャッシュを完全にクリアすることが必要です。
+`/cache /headers` 設定更新後の次のリクエストでヘッダーが適切にキャッシュされるようにするには、キャッシュを完全にクリアすることが必要です。
 
 ## サポート資料 {#supporting-materials}
 
