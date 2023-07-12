@@ -12,10 +12,10 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
+source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 93%
+source-wordcount: '1007'
+ht-degree: 88%
 
 ---
 
@@ -64,7 +64,7 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
 #### [!UICONTROL 公開済みのヘッダー]
 
 * `"exposedheaders" <header>`
-* ブラウザーがアクセスできる応答ヘッダーを示すヘッダーパラメーターのリストです。
+* ブラウザーがアクセスできる応答ヘッダーを示すヘッダーパラメーターのリストです。 CORS リクエスト（プリフライトではない）の場合、空でない場合、これらの値は `Access-Control-Expose-Headers` 応答ヘッダー。 リスト内の値（ヘッダー名）は、ブラウザーからアクセス可能になります。この機能がないと、これらのヘッダーをブラウザーで読み取ることはできません。
 
 #### [!UICONTROL 最大経過年数]
 
@@ -74,7 +74,7 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
 #### [!UICONTROL サポートされるヘッダー]
 
 * `"supportedheaders" <header>`
-* 実際のリクエストを行うときに使用できる HTTP ヘッダーを示す `header` パラメーターのリスト。
+* リスト `header` 実際のリクエストをおこなう際に使用できる HTTP リクエストヘッダーを示すパラメーター。
 
 #### [!UICONTROL 許可されるメソッド]
 
@@ -98,8 +98,7 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
   ],
   "supportedmethods":[
     "GET",
-    "HEAD",
-    "OPTIONS"
+    "HEAD"
   ],
   "alloworigin":[
     "http://127.0.0.1:3000",
@@ -140,7 +139,6 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
     "HEAD"
     "POST",
     "DELETE",
-    "OPTIONS",
     "PUT"
   ],
   "alloworigin":[
