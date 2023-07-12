@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
-source-wordcount: '211'
-ht-degree: 100%
+source-git-commit: d0027647ce3157173d2592728757150199db930d
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 63%
 
 ---
 
@@ -26,35 +26,15 @@ ht-degree: 100%
 
 AEM Site のページエディターは、web コンテンツを作成および編集するための強力なツールです。ページエディターのツールと機能には、ページエディターの UI ツールバーからアクセスできます。
 
-次のビデオでは、ページエディターの主な機能について重点的に説明します。
+次のビデオでは、ページエディターの主な機能の一部を紹介します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
-ページエディターの機能には次のものがあります。
 
-* コンポーネントとアセットのドラッグ＆ドロップ
-* ページ上のすべてのコンポーネントのインデックスを提供するコンテンツツリーパネル
-* コンテンツ作成者向けの追加情報やクイックアクションにアクセスできるページ情報パネル
-   * プロパティを開く
-   * ページをロールアウト
-   * ワークフローを開始
-   * ページをロック／ページのロックを解除
-   * ページを公開／ページを非公開
-   * テンプレートを編集
-   * 公開済みとして表示
-   * 管理画面で表示
-   * ヘルプ
-* コンポーネントパネルへのコンポーネントのアイコンおよび説明の追加
-* DAM 内のアセットを編集するための直接リンク
-* レスポンシブグリッドでのインラインコンテンツ編集のエミュレーターとコンポーネントの迅速な管理
-* ページ編集モード
-   * 編集モード
-   * レイアウトモード
-   * 開発者モード
-* パスファインダーフォームフィールドのオートコンプリートとキーワード検索
-* 現在のページのワークフローステータスバー
+詳しくは、 [AEMドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja).
 
 ## その他のリソース {#additional-resources}
 
-* [ページコンテンツの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
+* [AEM Page Editor ドキュメント [(https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)]
+* [ページコンテンツドキュメントの編集](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
 * [Sites オーサリングユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
