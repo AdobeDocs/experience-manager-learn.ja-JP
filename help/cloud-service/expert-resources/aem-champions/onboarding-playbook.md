@@ -10,8 +10,8 @@ doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
 exl-id: a52b253c-14b4-465b-9714-7f321435a945
-source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
-workflow-type: ht
+source-git-commit: 2e37a7ae14f98e2298bcb0a625f8ed55edcee6ad
+workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 >[!TIP]
 >
->[オンボーディングプレイブックをここからダウンロードします。](./assets/AEM-Cloud-Manager-Onboarding-Playbook.xlsx)
+>[オンボーディングプレイブックをここからダウンロードします。](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
 
 テクニカルリーダーの Rakesh Pasupuleti からのヒントをご確認ください。Rakesh は Adobe Experience Manager のチャンピオンで、オンボーディングプレイブックの使用方法に関するアイデアを紹介します。
 
