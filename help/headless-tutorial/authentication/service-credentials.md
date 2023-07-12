@@ -14,10 +14,10 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '1937'
-ht-degree: 100%
+source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
+workflow-type: tm+mt
+source-wordcount: '1924'
+ht-degree: 99%
 
 ---
 
@@ -107,7 +107,7 @@ JWT の生成に必要な詳細はサービス資格情報で指定されます�
 1. 外部アプリケーションは、サービス資格情報の情報を使用して JWT トークンを構築します。
 1. JWT トークンは Adobe IMS に送信され、アクセストークンと交換されます。
 1. Adobe IMS は、AEM as a Cloud Service へのアクセスに使用できるアクセストークンを返します
-   + アクセストークンには有効期限をリクエストできます。アクセストークンの有効期間を短くし、必要に応じて更新することをお勧めします。
+   + アクセストークンは有効期限を変更できません。
 1. 外部アプリケーションは、AEM as a Cloud Service に HTTP リクエストを行い、アクセストークンを Bearer トークンとして HTTP リクエストの認証ヘッダーに追加します。
 1. AEM as a Cloud Service が、HTTP リクエストを受信して認証し、HTTP リクエストで要求された作業を実行し、HTTP レスポンスを外部アプリケーションに返します。
 
