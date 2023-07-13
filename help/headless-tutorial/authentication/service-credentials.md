@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
+source-git-commit: f8ed9fddb5f244860ba229b46a80638a7269d95e
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1925'
 ht-degree: 99%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Manager（AEM）as a Cloud Service との統合については�
 テクニカルアカウントは 1 回だけ作成されますが、秘密鍵はテクニカルアカウントに関連付けられたサービス資格情報の管理に使用します。 例えば、新しい秘密鍵とサービス資格情報は、現在の秘密鍵の有効期限が切れる前に生成され、サービス資格情報のユーザーが中断なしにアクセスできるようにする必要があります。
 
 1. 必ず以下としてログインします。
-   + __Adobe IMS 組織管理者__
+   + __Adobe IMS組織のシステム管理者__
    + __AEM オーサー__&#x200B;の __AEM 管理者__ IMS 製品プロファイルのメンバー
 1. [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) にログインします。 
 1. AEM as a Cloud Service 環境を含むプログラムを開き、サービス資格情報のセットアップを統合します。
