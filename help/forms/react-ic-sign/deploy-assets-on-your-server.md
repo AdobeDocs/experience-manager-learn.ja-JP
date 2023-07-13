@@ -9,10 +9,10 @@ level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
-source-wordcount: '148'
-ht-degree: 100%
+source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 46%
 
 ---
 
@@ -25,14 +25,21 @@ ht-degree: 100%
 * [インタラクティブ通信のサンプルテンプレート](assets/waiver-interactive-communication.zip)
 * [DevelopingWithServiceUser バンドルのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * OSGi configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [サンプルの React アプリコードは、こちらからダウンロードできます](assets/src.zip)
+  **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 
+## サンプル React アプリのデプロイ
 
+* [サンプル React アプリのダウンロード](assets/mult-step-form1.zip)
+* React アプリのコンテンツを新しいフォルダーに解凍します。
+* フォルダーに移動し、次のコマンドを実行します。
 
-サンプルの React アプリをローカル環境にデプロイする必要があります。
+```java
+npm install
+npm start
+```
 
-環境に合わせてエンドポイント URL を変更する必要があります。EmergencyContact.js ファイルを開き、fetch メソッド内の URL を変更します。
+EmergencyContact.js ファイルを開き、fetch メソッドの URL を環境に合わせて変更します。
+
 
 ```javascript
  const getWebForm=async()=>
@@ -49,6 +56,6 @@ ht-degree: 100%
  
 ```
 
-React アプリから AEM エンドポイントへの POST 呼び出しを有効にするには、Adobe Granite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドで適切なエントリを指定する必要があります。
+React アプリからAEMエンドポイントに対してPOST呼び出しを有効にするには、AdobeGranite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドに適切なエンティティを指定する必要があります。
 
 ![cors-setting](assets/cors-settings.png)
