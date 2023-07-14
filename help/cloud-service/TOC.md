@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 5feeed5c0725c7985a8fe85794315c272e5cde4b
+source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '987'
 ht-degree: 93%
 
 ---
@@ -99,10 +99,11 @@ ht-degree: 93%
       + [OSGi 設定の基本](./developing/osgi-services/configurations.md)
       + [OCD を使用した OSGi 設定](./developing/osgi-services/configurations-ocd.md)
    + 詳細{#advanced}
-      + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [サービスユーザー](./developing/advanced/service-users.md)
-      + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
+      + [CSRF 保護](./developing/advanced/csrf-protection.md)
+      + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
+      + [サービスユーザー](./developing/advanced/service-users.md)
+      + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 迅速な開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
