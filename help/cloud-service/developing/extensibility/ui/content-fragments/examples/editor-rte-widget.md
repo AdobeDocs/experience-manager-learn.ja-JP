@@ -1,6 +1,6 @@
 ---
-title: リッチテキストエディター (RTE) へのウィジェットの追加
-description: AEMコンテンツフラグメントエディターでリッチテキストエディター (RTE) にウィジェットを追加する方法を説明します。
+title: リッチテキストエディター（RTE）へのウィジェットの追加
+description: AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にウィジェットを追加する方法を説明します。
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -12,46 +12,46 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
 source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '567'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# リッチテキストエディター (RTE) へのウィジェットの追加
+# リッチテキストエディター（RTE）へのウィジェットの追加
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
-リッチテキストエディター (RTE) に動的コンテンツを追加するには、 **widgets** 機能を使用できます。 ウィジェットは、RTE にシンプルな UI または複雑な UI を統合するのに役立ち、UI は、選択した JS フレームワークを使用して作成できます。 これらは、押すことで開かれるダイアログと考えることができます `{` RTE の特殊キー。
+リッチテキストエディター（RTE）に動的コンテンツを追加するには、**ウィジェット**&#x200B;機能を使用できます。ウィジェットは、シンプルな UI または複雑な UI を RTE に統合するのに役立ち、UI は選択した JS フレームワークを使用して作成できます。これらは、RTE で `{` 特殊キーを押すと開くダイアログと考えることができます。
 
-通常、ウィジェットは、外部のシステム依存関係を持つ動的コンテンツを挿入する場合や、現在のコンテキストに基づいて変更される場合がある動的コンテンツを挿入する場合に使用します。
+通常、ウィジェットは、外部システムに依存関係がある動的コンテンツや、現在のコンテキストに基づいて変更される可能性のある動的コンテンツを挿入するために使用します。
 
-この **widgets** が **RTE** を使用してコンテンツフラグメントエディターで `rte` 拡張ポイント。 使用 `rte` 拡張ポイント `getWidgets()` メソッド 1 つ以上のウィジェットが追加されます。 これらは、 `{` コンテキストメニューオプションを開くための特別なキー。次に、目的のウィジェットを選択してカスタムダイアログ UI を読み込みます。
+**ウィジェット**&#x200B;は、`rte` 拡張ポイントを使用してコンテンツフラグメントエディターの **RTE** に追加します。`rte` 拡張ポイントの `getWidgets()` メソッドを使用して、1 つ以上のウィジェットを追加します。これらをトリガーするには、`{` 特殊キーを押してコンテキストメニューオプションを開き、目的のウィジェットを選択してカスタムダイアログ UI を読み込みます。
 
-この例では、 _割引コードリスト_ をクリックし、WKND アドベンチャー固有の割引コードを RTE コンテンツ内に追加します。 これらの割引コードは、Order Management System(OMS)、Product Information Management(PIM)、Home gloned Application、Adobeの AppBuilder アクションなど、外部システムで管理できます。
+この例では、RTE コンテンツ内で WKND アドベンチャー固有のディスカウントコードを検索、選択、追加するために、_ディスカウントコードリスト_&#x200B;というウィジェットを追加する方法を示します。これらのディスカウントコードは、注文管理システム（OMS）、製品情報管理（PIM）、自社製アプリケーション、Adobe AppBuilder アクションなどの外部システムで管理できます。
 
-話を簡単にするために、この例では [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) ウィジェットまたはダイアログ UI、およびハードコードされた WKND アドベンチャー名、割引コードデータを開発するためのフレームワーク。
+作業をシンプルにするために、この例では [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して、ウィジェットまたはダイアログ UI とハードコードされた WKND アドベンチャー名、ディスカウントコードデータを開発します。
 
-## 拡張ポイント
+## 拡張機能ポイント
 
-この例は、延長点まで延長されます `rte` をクリックして、ウィジェットをコンテンツフラグメントエディターで RTE に追加します。
+この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE にウィジェットを追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| AEM UI 拡張 | 拡張機能ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 拡張機能の例
 
-次の例では、 _割引コードリスト_ ウィジェット。 を押して、 `{` RTE 内の特別なキーを使用する場合は、コンテキストメニューが開いた後で、 _割引コードリスト_ オプションを選択すると、ダイアログ UI が開きます。
+次の例では、_ディスカウントコードリスト_&#x200B;ウィジェットを作成します。RTE 内で `{` 特殊キーを押すとコンテキストメニューが開き、コンテキストメニューから「_ディスカウントコードリスト_」オプションを選択するとダイアログ UI が開きます。
 
-WKND コンテンツ作成者は、現在のアドベンチャー固有の割引コードがある場合、そのコードを検索、選択および追加できます。
+WKND コンテンツ作成者は、現在のアドベンチャー固有のディスカウントコード（使用可能な場合）を検索、選択、追加できます。
 
 ### 拡張機能の登録
 
-`ExtensionRegistration.js`は、index.html ルートにマッピングされ、AEM拡張機能のエントリポイントで、次の項目を定義します。
+index.html ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、次を定義します。
 
-+ のウィジェット定義 `getWidgets()` ～と機能する `id, label and url` 属性。
-+ この `url` 属性値、相対 URL パス (`/index.html#/discountCodes`) をクリックして、ダイアログ UI を読み込みます。
++ `id, label and url` 属性を含む `getWidgets()` 関数のウィジェット定義。
++ `url` 属性値、ダイアログ UI を読み込むための相対 URL パス（`/index.html#/discountCodes`）。
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -87,9 +87,9 @@ function ExtensionRegistration() {
 }
 ```
 
-### 追加 `discountCodes` ～に道を開く `App.js`{#add-widgets-route}
+### `App.js` で `discountCodes` ルートを追加{#add-widgets-route}
 
-メインの React コンポーネント内 `App.js`、 `discountCodes` 上記の相対 URL パスの UI をレンダリングするルート。
+React のメインコンポーネント `App.js` に、`discountCodes` ルートを追加して、上記の相対 URL パスの UI をレンダリングします。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -109,15 +109,15 @@ function ExtensionRegistration() {
 ...
 ```
 
-### 作成 `DiscountCodes` React コンポーネント{#create-widget-react-component}
+### `DiscountCodes` React コンポーネントの作成{#create-widget-react-component}
 
-ウィジェットまたはダイアログ UI は、 [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワーク。 この `DiscountCodes` コンポーネントコードの主な特徴を次に示します。
+ウィジェットまたはダイアログ UI は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して作成します。`DiscountCodes` コンポーネントのコードと、主なハイライトを次に示します。
 
-+ UI は、次のような React Spectrum コンポーネントを使用してレンダリングされます。 [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [ボタン](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ この `adventureDiscountCodes` 配列には、アドベンチャー名と割引コードのハードコードマッピングが含まれています。 実際のシナリオでは、このデータは、Adobeの AppBuilder アクションや、PIM、OMS、自宅開発、クラウドプロバイダーベースの API ゲートウェイなどの外部システムから取得できます。
-+ この `guestConnection` は `useEffect` [React フック](https://react.dev/reference/react/useEffect) コンポーネントの状態として管理されます。 AEMホストとの通信に使用されます。
-+ この `handleDiscountCodeChange` 関数は、選択されたアドベンチャー名の割引コードを取得し、state 変数を更新します。
-+ この `addDiscountCode` 関数 `guestConnection` オブジェクトは、実行する RTE 命令を提供します。 この場合、 `insertContent` RTE に挿入する実際の割引コードの命令およびHTMLコードスニペット。
++ UI は、[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html) などの React Spectrum コンポーネントを使用してレンダリングします。
++ `adventureDiscountCodes` 配列には、アドベンチャー名とディスカウントコードのハードコードされたマッピングが含まれています。実際のシナリオでは、このデータは Adobe AppBuilder アクションや、PIM、OMS、自社製またはクラウドプロバイダーベースの API ゲートウェイなどの外部システムから取得できます。
++ `guestConnection` は、`useEffect` [React hook](https://react.dev/reference/react/useEffect) を使用して初期化し、コンポーネントの状態として管理します。これは、AEM ホストとの通信に使用します。
++ `handleDiscountCodeChange` 関数は、選択したアドベンチャー名のディスカウントコードを取得し、状態変数を更新します。
++ `guestConnection` オブジェクトを使用する `addDiscountCode` 関数は、実行する RTE 命令を提供します。この場合、`insertContent` 命令と、実際のディスカウントコードの HTML コードスニペットを RTE に挿入します。
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 
