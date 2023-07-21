@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 source-git-commit: 36b4217a899b462296d4389bc96a644da97d5da4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '619'
 ht-degree: 100%
 
