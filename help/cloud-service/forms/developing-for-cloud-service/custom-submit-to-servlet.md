@@ -11,17 +11,17 @@ feature: Developer Tools
 kt: 8852
 exl-id: 832f7e82-3e03-4ac6-9c8b-e96f0efecd32
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# サーブレットを作成して送信されたデータを処理
+# 送信されたデータを処理するためのサーブレットの作成
 
 IntelliJ で aem-banking プロジェクトを起動します。
 簡単なサーブレットを作成して、送信されたデータをログファイルに出力します。次のスクリーンショットに示すように、コードがコアプロジェクト内にあることを確認します。
-![create-servlet](assets/create-servlet.png)
+![サーブレットの作成](assets/create-servlet.png)
 
 ```java
 package com.aem.bankingapplication.core.servlets;
@@ -44,20 +44,20 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## カスタム送信ハンドラーの作成
 
-カスタム送信アクションを `apps/bankingapplication` フォルダー内に [AEM Formsの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). このチュートリアルの目的で、SubmitToAEMServlet というフォルダーを `apps/bankingapplication` CRX リポジトリのノード。
+[以前のバージョンの AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=ja) で作成したのと同じ方法で、`apps/bankingapplication` フォルダーにカスタム送信アクションを作成します。このチュートリアルでは、CRX リポジトリの `apps/bankingapplication` ノードの下に SubmitToAEMServlet というフォルダーを作成します。
 
-post.formstution.jsp の次のコードは、/bin/formstutorial にマウントされたPOSTに要求を転送するだけです。 これは、前の手順で作成したサーブレットと同じです
+post.POST.jsp 内の次のコードは、/bin/formstutorial にマウントされたサーブレットにリクエストを転送するだけです。これは、前の手順で作成したサーブレットと同じです
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-IntelliJ のAEMプロジェクトで、 `apps/bankingapplication` フォルダーに移動し、「新規」を選択します。 |新しいパッケージダイアログボックスで、apps.bankingapplication の後に SubmitToAEMServlet をパッケージ化して入力します。 「 SubmitToAEMServlet 」ノードを右クリックし、「 repo 」を選択します。 | AEMプロジェクトをAEMサーバーリポジトリと同期するコマンドを取得します。
+IntelliJ の AEM プロジェクトで、`apps/bankingapplication` フォルダーを右クリックし、新規／パッケージを選択し、新しいパッケージダイアログボックスの apps.bankingapplication の後に SubmitToAEMServlet と入力します。SubmitToAEMServlet ノードを右クリックし、リポジトリ／コマンドを取得を選択して、AEM プロジェクトを AEM サーバーリポジトリと同期します。
 
 
 ## アダプティブフォームの設定
 
-これで、任意のアダプティブフォームを設定して、次の名前のカスタム送信ハンドラーに送信できます。 **AEM Servlet に送信**
+これで、**AEM サーブレットに送信**&#x200B;と呼ばれるこのカスタム送信ハンドラーに送信するようにアダプティブフォームを設定できます。
 
 ## 次の手順
 
