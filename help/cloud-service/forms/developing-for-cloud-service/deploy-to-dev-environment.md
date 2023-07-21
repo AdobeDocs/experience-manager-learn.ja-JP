@@ -11,9 +11,9 @@ feature: Code Deployment
 kt: 8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
