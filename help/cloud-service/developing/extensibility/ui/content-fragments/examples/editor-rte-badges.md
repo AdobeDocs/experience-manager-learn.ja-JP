@@ -1,6 +1,6 @@
 ---
-title: リッチテキストエディター (RTE) へのバッジの追加
-description: AEMコンテンツフラグメントエディターでリッチテキストエディター (RTE) にバッジを追加する方法を説明します。
+title: リッチテキストエディター（RTE）へのバッジの追加
+description: AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にバッジを追加する方法を説明します。
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -11,56 +11,56 @@ thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '765'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# リッチテキストエディター (RTE) へのバッジの追加
+# リッチテキストエディター（RTE）へのバッジの追加
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
-[リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  は、リッチテキストエディター (RTE) 内のテキストを編集不可にする拡張機能です。 つまり、バッジとして宣言されたバッジは完全にのみ削除でき、部分的には編集できません。 また、RTE 内で特別な色付けをサポートしているので、コンテンツ作成者に対して、テキストがバッジであり、編集できないことを明確に示します。 また、バッジテキストの意味に関する視覚的な手掛かりを提供します。
+[リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)は、リッチテキストエディター（RTE）のテキストを編集不可にする拡張機能です。つまり、そのように宣言されたバッジは完全に削除することのみが可能で、部分的に編集することはできません。 これらのバッジは、RTE 内の特別な色付けもサポートしており、テキストがバッジであるため、編集できないことをコンテンツ作成者に明確に示します。さらに、バッジのテキストの意味に関する視覚的なヒントも示します。
 
-RTE バッジの最も一般的な使用例は、バッジを [RTE ウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/). これにより、RTE ウィジェットによって RTE に挿入されたコンテンツを編集できなくなります。
+RTE バッジの最も一般的なユースケースでは、[RTE ウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/)と組み合わせて使用します。これにより、RTE ウィジェットによって RTE に挿入されたコンテンツを編集できなくなります。
 
-通常、ウィジェットと関連付けられたバッジは、外部のシステム依存関係を持つ動的コンテンツを追加するために使用されますが、 _コンテンツ作成者が_ 整合性を維持するために挿入された動的コンテンツ。 削除できるのは、項目全体のみです。
+通常、ウィジェットに関連付けられたバッジは、外部システムに依存関係がある動的コンテンツを追加するために使用しますが、挿入した動的コンテンツを&#x200B;_コンテンツ作成者が変更_&#x200B;して整合性を維持することはできません。コンテンツ作成者は、項目全体としてのみ削除できます。
 
-この **バッジ** が **RTE** を使用してコンテンツフラグメントエディターで `rte` 拡張ポイント。 使用 `rte` 拡張ポイント `getBadges()` メソッド：1 つ以上のバッジを追加します。
+**バッジ**&#x200B;は、`rte` 拡張ポイントを使用して、コンテンツフラグメントエディターの **RTE** に追加します。`rte` 拡張ポイントの `getBadges()` メソッドを使用して、1 つまたは複数のバッジを追加します。
 
-この例では、 _大きなグループの予約顧客サービス_ WKND アドベンチャー専用のカスタマーサービスの詳細を検索、選択および追加するには、次のようにします。 **担当者名** および **電話番号** を設定します。 バッジ機能の使用 **電話番号** 作成済み **編集不可** ただし、WKND コンテンツ作成者は、代表名を編集できます。
+この例では、_大規模グループ予約カスタマーサービス_&#x200B;というウィジェットを追加して、RTE コンテンツ内で&#x200B;**担当者名**&#x200B;や&#x200B;**電話番号**&#x200B;など、WKND アドベンチャー固有のカスタマーサービスの詳細を検索、選択、追加する方法を示します。バッジ機能を使用すると、**電話番号**&#x200B;は&#x200B;**編集不可**&#x200B;になりますが、WKND コンテンツ作成者は担当者名を編集できます。
 
-また、 **電話番号** のスタイルが異なる（青）ので、バッジ機能の追加の使用例です。
+また、**電話番号**&#x200B;のスタイルが異なります（青）。これは、バッジ機能の追加のユースケースです。
 
-話を簡単にするために、この例では [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) ウィジェットまたはダイアログ UI とハードコードされた WKND カスタマーサービスの電話番号を開発するためのフレームワーク。 コンテンツの非編集および異なるスタイル要素を制御するには、 `#` 文字が `prefix` および `suffix` バッジ定義の属性。
+作業をシンプルにするために、この例では [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して、ウィジェットまたはダイアログ UI とハードコードされた WKND カスタマーサービスの電話番号を開発します。コンテンツの非編集および異なるスタイル要素を制御するには、バッジ定義の `prefix` および `suffix` 属性で `#` 文字を使用します。
 
 ## 拡張ポイント
 
-この例は、延長点まで延長されます `rte` をクリックして、コンテンツフラグメントエディターで RTE にバッジを追加します。
+この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE にバッジを追加します。
 
 | AEM UI 拡張 | 拡張ポイント |
 | ------------------------ | --------------------- | 
-| [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) および [リッチテキストエディターウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
+| [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)と[リッチテキストエディターウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 拡張機能の例
 
-次の例では、 _大きなグループの予約顧客サービス_ ウィジェット。 を押して、 `{` キーを押すと、RTE ウィジェットのコンテキストメニューが開きます。 次を選択すると、 _大きなグループの予約顧客サービス_ オプションを選択すると、カスタムモーダルが開きます。
+次の例では、_大規模グループ予約カスタマーサービス_&#x200B;ウィジェットを作成します。RTE 内で `{` キーを押すと、RTE ウィジェットのコンテキストメニューが開きます。コンテキストメニューから「_大規模グループ予約カスタマーサービス_」オプションを選択すると、カスタムモーダルが開きます。
 
-目的のカスタマーサービス番号をモーダルから追加すると、バッジによって _電話番号を編集できません_ 青い色でスタイルを設定します。
+目的のカスタマーサービス番号をモーダルから追加すると、バッジによって&#x200B;_電話番号が編集不可_&#x200B;になり、スタイルは青色になります。
 
 ### 拡張機能の登録
 
 `index.html` ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、以下を定義します。
 
-+ バッジの定義は、 `getBadges()` 設定属性の使用 `id`, `prefix`, `suffix`, `backgroundColor` および `textColor`.
-+ この例では、 `#` 文字は、このバッジの境界を定義するために使用されます。つまり、RTE 内の、 `#` は、このバッジのインスタンスとして扱われます。
++ バッジの定義は、設定属性の `id`、`prefix`、`suffix`、`backgroundColor`、`textColor` を使用して `getBadges()` で定義します。
++ この例では、`#` 文字を使用してこのバッジの境界を定義しています。つまり、`#` で囲まれた RTE 内の文字列はすべて、このバッジのインスタンスとして扱われます。
 
-また、RTE ウィジェットの主な詳細も参照してください。
+また、RTE ウィジェットの次の主な詳細も確認します。
 
-+ のウィジェット定義 `getWidgets()` ～と機能する `id`, `label` および `url` 属性。
-+ この `url` 属性値、相対 URL パス (`/index.html#/largeBookingsCustomerService`) をクリックして、モーダルを読み込みます。
++ `id`、`label`、`url` 属性を含む `getWidgets()` 関数のウィジェット定義。
++ `url` 属性値、モーダルを読み込む相対 URL パス（`/index.html#/largeBookingsCustomerService`）。
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
@@ -108,9 +108,9 @@ function ExtensionRegistration() {
 }
 ```
 
-### 追加 `largeBookingsCustomerService` ～に道を開く `App.js`{#add-widgets-route}
+### `App.js` への `largeBookingsCustomerService` ルートの追加{#add-widgets-route}
 
-メインの React コンポーネント内 `App.js`、 `largeBookingsCustomerService` 上記の相対 URL パスの UI をレンダリングするルート。
+React のメインコンポーネント `App.js` に、`largeBookingsCustomerService` ルートを追加して、上記の相対 URL パスの UI をレンダリングします。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -130,20 +130,20 @@ function ExtensionRegistration() {
 ...
 ```
 
-### 作成 `LargeBookingsCustomerService` React コンポーネント{#create-widget-react-component}
+### `LargeBookingsCustomerService` React コンポーネントの作成{#create-widget-react-component}
 
-ウィジェットまたはダイアログ UI は、 [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワーク。
+ウィジェットまたはダイアログ UI は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して作成します。
 
-カスタマーサービスの詳細を追加する際に React コンポーネントコードは、電話番号変数を `#` バッジをバッジに変換する登録済みのバッジ文字（例： ） `#${phoneNumber}#`したがって、編集不可能にします。
+React コンポーネントコードは、カスタマーサービスの詳細を追加する際に、電話番号変数を `#` 登録バッジ文字で囲んで、`#${phoneNumber}#` などのバッジに変換し、編集不可にします。
 
-主な特徴を次に示します。 `LargeBookingsCustomerService` コード：
+`LargeBookingsCustomerService` コードの主なハイライトを次に示します。
 
-+ UI は、次のような React Spectrum コンポーネントを使用してレンダリングされます。 [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [ボタン](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ この `largeGroupCustomerServiceList` 配列には、代表名と電話番号のハードコードされたマッピングが含まれています。 実際のシナリオでは、このデータは、Adobeの AppBuilder アクション、外部システム、または自宅で開発した、またはクラウドプロバイダーベースの API ゲートウェイから取得できます。
-+ この `guestConnection` は `useEffect` [React フック](https://react.dev/reference/react/useEffect) コンポーネントの状態として管理されます。 AEMホストとの通信に使用されます。
-+ この `handleCustomerServiceChange` 関数は、代表名と電話番号を取得し、コンポーネント状態変数を更新します。
-+ この `addCustomerServiceDetails` 関数 `guestConnection` オブジェクトは、実行する RTE 命令を提供します。 この場合、 `insertContent` 命令およびHTMLコードスニペット。
-+ を **電話番号は編集できません** バッジを使用する場合、 `#` 特殊文字を前後に追加する `phoneNumber` 変数、例： `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
++ UI は、[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html) などの React Spectrum コンポーネントを使用してレンダリングします。
++ `largeGroupCustomerServiceList` 配列には、担当者名と電話番号のハードコードされたマッピングが含まれています。実際のシナリオでは、このデータは Adobe AppBuilder アクション、外部システム、自社製またはクラウドプロバイダーベースの API ゲートウェイから取得できます。
++ `guestConnection` は、`useEffect` [React hook](https://react.dev/reference/react/useEffect) を使用して初期化し、コンポーネントの状態として管理します。これは、AEM ホストとの通信に使用します。
++ `handleCustomerServiceChange` 関数は、担当者名と電話番号を取得し、コンポーネントの状態変数を更新します。
++ `guestConnection` オブジェクトを使用する `addCustomerServiceDetails` 関数は、実行する RTE 命令を提供します。この場合は、`insertContent` 命令と HTML コードスニペットを使用します。
++ バッジを使用して&#x200B;**電話番号を編集不可**&#x200B;にするには、`...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>` のように、`phoneNumber` 変数の前後に `#` 特殊文字を追加します。
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 
