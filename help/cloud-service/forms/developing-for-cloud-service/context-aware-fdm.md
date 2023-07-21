@@ -11,33 +11,34 @@ feature: Developer Tools
 kt: 10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '395'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# コンテキスト対応クラウド設定
+# コンテキスト対応のクラウド設定
 
-ローカル環境でクラウド設定を作成し、成功したテストをおこなう場合、アップストリーム環境で同じクラウド設定を使用し、エンドポイント、秘密鍵/パスワード、ユーザー名を変更する必要はありません。 この使用例を実現するために、Cloud Service上のAEM Formsでは、コンテキスト対応クラウド設定を定義する機能が導入されました。
-例えば、異なる接続文字列とキーを使用して、開発、ステージ、実稼動環境で Azure ストレージアカウントのクラウド設定を再利用できます。
+ローカル環境でクラウド設定を作成し、テストが成功した場合、アップストリーム環境で同じクラウド設定を使用しても、エンドポイント、秘密鍵／パスワード、ユーザー名を変更する必要はありません。このユースケースを実現するために、Cloud Service 上の AEM Forms にコンテキスト対応のクラウド設定を定義する機能を導入しました。
+例えば、Azure ストレージアカウントのクラウド設定は、異なる接続文字列とキーを使用することで、開発環境、ステージング環境、実稼動環境で再利用できます。
 
-コンテキスト対応クラウド設定を作成するには、次の手順が必要です
+コンテキスト対応のクラウド設定を作成するのに必要な手順を次に示します。
 
 ## 環境変数の作成
 
-標準環境変数は、Cloud Manager を介して設定および管理できます。これらは実行時環境に提供され、OSGi 設定で使用できます。[環境変数には、環境固有の値または環境シークレットを変更内容に応じて指定できます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+標準環境変数は、Cloud Manager を介して設定および管理できます。これらは実行時環境に提供され、OSGi 設定で使用できます。[環境変数には、環境固有の値または環境シークレットを変更内容に応じて指定できます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=ja)
 
 
 
-次のスクリーンショットは、定義された azure_key と azure_connection_string の環境変数を示しています
+次のスクリーンショットは、定義した azure_key と azure_connection_string の環境変数を示しています
 ![environment_variables](assets/environment-variables.png)
 
-その後、これらの環境変数は、適切な環境で使用する設定ファイルで指定できます。例えば、すべてのオーサーインスタンスでこれらの環境変数を使用する場合は、config.author フォルダーで次に示すように設定ファイルを定義します
+これらの環境変数は、適切な環境で使用する設定ファイルで指定できます
+例えば、すべてのオーサーインスタンスでこれらの環境変数を使用する場合は、次に指定するように config.author フォルダーで設定ファイルを定義します
 
 ## 設定ファイルを作成
 
-IntelliJ で プロジェクトを開きます。 config.author に移動し、という名前のファイルを作成します。
+IntelliJ で プロジェクトを開きます。config.author に移動し、ファイルを作成します。
 
 ```java
 org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integrationTest.cfg.json
@@ -45,7 +46,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 ![config.author](assets/config-author.png)
 
-前の手順で作成したファイルに、次のテキストをコピーします。 このファイル内のコードは、 accountName プロパティと accountKey プロパティの値を環境変数で上書きしています **azure_connection_string** および **azure_key**.
+前の手順で作成したファイルに、次のテキストをコピーします。 このファイルのコードは、accountName プロパティと accountKey プロパティの値を環境変数 **azure_connection_string** と **azure_key** で上書きしています。
 
 ```json
 {
@@ -61,14 +62,14 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 >[!NOTE]
 >
->この設定は、クラウドサービスインスタンス内のすべてのオーサー環境に適用されます。 パブリッシュ環境に設定を適用するには、同じ設定ファイルを intelliJ プロジェクトの config.publish フォルダーに配置する必要があります
+>この設定は、クラウドサービスインスタンス内のすべてのオーサー環境に適用されます。設定をパブリッシュ環境に適用するには、同じ設定ファイルを IntelliJ プロジェクトの config.publish フォルダーに配置する必要があります
 >[!NOTE]
-> 上書きされるプロパティがクラウド設定の有効なプロパティであることを確認してください。 クラウド設定に移動して、次に示すように、上書きするプロパティを見つけます。
+> 上書きされるプロパティがクラウド設定の有効なプロパティであることを確認してください。クラウド設定に移動して、次に示すように、上書きするプロパティを見つけます。
 
 ![cloud-config-property](assets/cloud-config-properties.png)
 
-基本的な認証を使用する REST ベースのクラウド設定の場合、通常は serviceEndPoint、userName、および password プロパティの環境変数を作成します。
+基本認証を使用する REST ベースのクラウド設定の場合は、通常、serviceEndPoint、userName および password のプロパティの環境変数を作成する必要があります。
 
 ## 次の手順
 
-[AEMプロジェクトを Cloud Manager にプッシュします](./push-project-to-cloud-manager-git.md)
+[AEM プロジェクトを Cloud Manager にプッシュ](./push-project-to-cloud-manager-git.md)
