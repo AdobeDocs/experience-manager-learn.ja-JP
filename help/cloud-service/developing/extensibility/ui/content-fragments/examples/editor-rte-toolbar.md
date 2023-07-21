@@ -1,6 +1,6 @@
 ---
-title: リッチテキストエディター (RTE) ツールバーへのカスタムボタンの追加
-description: AEMコンテンツフラグメントエディターでリッチテキストエディター (RTE) ツールバーにカスタムボタンを追加する方法を説明します。
+title: リッチテキストエディター（RTE）ツールバーへのカスタムボタンの追加
+description: AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）ツールバーにカスタムボタンを追加する方法を説明します。
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -12,46 +12,46 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 2b72c282-bce8-4f2a-bce6-f2f31e96ec88
 source-git-commit: 6f537a0c7605b96f6c6b43ff8c5bf634369171cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '399'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# リッチテキストエディター (RTE) ツールバーへのカスタムボタンの追加
+# リッチテキストエディター（RTE）ツールバーへのカスタムボタンの追加
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-カスタムボタンを **RTE ツールバー** を使用してコンテンツフラグメントエディターで `rte` 拡張ポイント。 この例では、 _ヒントを追加_ を RTE ツールバーに追加し、RTE 内のコンテンツを変更します。
+`rte` 拡張ポイントを使用すると、コンテンツフラグメントエディターの **RTE ツールバー**&#x200B;にカスタムボタンを追加できます。この例では、「_ヒントを追加_」というカスタムボタンを RTE ツールバーに追加し、RTE 内のコンテンツを変更する方法を示します。
 
-使用 `rte` 拡張ポイント `getCustomButtons()` メソッド 1 つまたは複数のカスタムボタンを **RTE ツールバー**. また、次のような標準の RTE ボタンを追加または削除することもできます。 _コピー、貼り付け、太字、斜体_ using `getCoreButtons()` および `removeButtons)` 各メソッドで使用できます。
+`rte` 拡張ポイントの `getCustomButtons()` メソッドを使用すると、1 つまたは複数のカスタムボタンを **RTE ツールバー**&#x200B;に追加できます。また、`getCoreButtons()` メソッドと `removeButtons)` メソッドをそれぞれ使用して、_コピー、ペースト、太字、斜体_&#x200B;などの標準 RTE ボタンを追加または削除することもできます。
 
-この例では、ハイライト表示された注記やヒントを、カスタム _ヒントを追加_ ツールバーボタン 強調表示されたメモまたはヒントのコンテンツには、HTML要素を介して適用された特別な書式と、関連する CSS クラスがあります。 プレースホルダーコンテンツとHTMLコードは、 `onClick()` のコールバックメソッド `getCustomButtons()`.
+この例では、カスタムの「_ヒントを追加_」ツールバーボタンを使用して、ハイライト表示されたメモまたはヒントを挿入する方法を示します。ハイライト表示されたメモまたはヒントのコンテンツには、HTML 要素および関連する CSS クラスを介して特別な書式設定が適用されます。プレースホルダーのコンテンツと HTML コードは、`getCustomButtons()` の `onClick()` コールバックメソッドを使用して挿入します。
 
 ## 拡張ポイント
 
-この例は、延長点まで延長されます `rte` をクリックして、コンテンツフラグメントエディターの RTE ツールバーにカスタムボタンを追加します。
+この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE ツールバーにカスタムボタンを追加します。
 
-| AEM UI 拡張 | 拡張ポイント |
+| AEM UI 拡張 | 拡張機能ポイント |
 | ------------------------ | --------------------- | 
-| [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターのツールバー](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
+| [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターツールバー](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## 拡張機能の例
 
-次の例では、 _ヒントを追加_ RTE ツールバーのカスタムボタン。 クリック操作により、RTE の現在のキャレット位置にプレースホルダーテキストが挿入されます。
+次の例では、RTE ツールバーに「_ヒントを追加_」カスタムボタンを作成します。ククリックアクションにより、RTE の現在のキャレット位置にプレースホルダーテキストが挿入されます。
 
-このコードでは、カスタムボタンをアイコンと共に追加し、クリックハンドラー関数を登録する方法を示します。
+このコードでは、アイコン付きのカスタムボタンを追加し、クリックハンドラー関数を登録する方法を示します。
 
 ### 拡張機能の登録
 
-`ExtensionRegistration.js`は、index.html ルートにマッピングされ、AEM拡張機能のエントリポイントで、次の項目を定義します。
+index.html ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、次を定義します。
 
-+ RTE ツールバーボタンの定義 ( `getCustomButtons()` ～と機能する `id, tooltip and icon` 属性。
++ `id, tooltip and icon` 属性を含む `getCustomButtons()` 関数の RTE ツールバーボタンの定義。
 + `onClick()` 関数内のボタンのクリックハンドラー。
-+ クリックハンドラー関数は、 `state` オブジェクトを引数として使用して、RTE のコンテンツをHTMLまたはテキスト形式で取得します。 ただし、この例では使用されていません。
-+ クリックハンドラー関数は、命令配列を返します。 この配列には、 `type` および `value` 属性。 コンテンツを挿入するには、 `value` 属性HTMLコードスニペット、 `type` 属性は `insertContent`. コンテンツを置き換える使用例がある場合は、 `replaceContent` 命令タイプ。
++ クリックハンドラー関数は、`state` オブジェクトを引数として受け取り、RTE のコンテンツを HTML またはテキスト形式で取得します。ただし、この例では使用しません。
++ クリックハンドラー関数は、命令配列を返します。この配列には、`type` 属性と `value` 属性を持つオブジェクトがあります。コンテンツを挿入するには、`value` 属性で HTML コードスニペットを使用し、`type` 属性で `insertContent` を使用します。コンテンツを置き換えるユースケースがある場合は、`replaceContent` 命令タイプを使用します。
 
-この `insertContent` 値はHTML文字列 `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. CSS クラス `cmp-contentfragment__element-tip` 値の表示に使用されるのは、ウィジェットで定義されているのではなく、この「コンテンツフラグメント」フィールドが表示される web エクスペリエンスに実装されます。
+`insertContent` 値は、HTML 文字列 `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>` です。値の表示に使用する CSS クラス `cmp-contentfragment__element-tip` は、ウィジェット内で定義されず、このコンテンツフラグメントフィールドを表示する web エクスペリエンスに実装されます。
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
