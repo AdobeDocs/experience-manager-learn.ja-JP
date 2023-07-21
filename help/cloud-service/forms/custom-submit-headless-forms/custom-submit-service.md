@@ -1,5 +1,5 @@
 ---
-title: ヘッドレスアダプティブフォーム送信を処理するカスタム送信サービスを作成する
+title: ヘッドレスアダプティブフォーム送信を処理するカスタム送信サービスを作成
 description: 送信されたデータに基づいてカスタム応答を返す
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -10,34 +10,34 @@ feature: Adaptive Forms
 topic: Development
 kt: 13520
 source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '474'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 
 # カスタム送信の作成
 
-AEM Formsには、ほとんどの使用例を満たす多数の追加設定済み送信オプションが用意されています。これらの事前定義済み送信アクションに加えて、AEM Formsでは、必要に応じてフォーム送信を処理する独自のカスタム送信ハンドラーを作成できます。
+AEM Forms には、ほとんどのユースケースに対応できる、多数の送信オプションが標準で用意されています。これらの事前定義済み送信アクションに加えて、AEM Forms では、必要に応じてフォーム送信を処理する独自のカスタム送信ハンドラーを作成できます。
 
-カスタム送信サービスを作成するには、次の手順に従いました
+カスタム送信サービスを書き込むには、次の手順に従います
 
-## AEM Project を作成
+## AEM プロジェクトを作成
 
-既に既存のAEM FormsCloud Serviceプロジェクトがある場合は、 [カスタム送信サービスの作成に進む](#Write-the-custom-submit-service)
+既存の AEM Forms Cloud Service プロジェクトがある場合は、[カスタム送信サービスの書き込み](#Write-the-custom-submit-service)に進むことができます
 
-* c ドライブに cloudmanager というフォルダーを作成します。
-* この新しく作成されたフォルダーに移動します
-* の内容をコピーして貼り付けます。 [このテキストファイル](./assets/creating-maven-project.txt) コマンドプロンプトウィンドウで、DarchetypeVersion=41 を [最新バージョン](https://github.com/adobe/aem-project-archetype/releases). この記事の作成時点での最新バージョンは 41 でした。
+* C ドライブ上に cloudmanager というフォルダーを作成します。
+* この新しく作成したフォルダーに移動します
+* [このテキストファイル](./assets/creating-maven-project.txt)の内容をコマンドプロンプトウィンドウにコピー＆ペーストします。[最新バージョン](https://github.com/adobe/aem-project-archetype/releases)に応じて、DarchetypeVersion=41 の変更が必要な場合があります。この記事の作成時点での最新バージョンは 41 でした。
 * Enter キーを押してコマンドを実行します。すべてが正しく行われた場合は、ビルド成功のメッセージが表示されます。
 
 ## カスタム送信サービスの書き込み{#Write-the-custom-submit-service}
 
-IntelliJ を起動し、AEMプロジェクトを開きます。 という新しい Java クラスを作成します。 **HandleRegistrationFormSubmission** 下のスクリーンショットに示すように
+IntelliJ を起動し、AEM プロジェクトを開きます。以下のスクリーンショットに示すように、**HandleRegistrationFormSubmission** という名前の新しい Java クラスを作成します
 ![custom-submit-service](./assets/custom-submit-service.png)
 
-このサービスを実装するために、次のコードが記述されました。
+このサービスを実装するには、次のコードを書き込みます。
 
 ```java
 package com.aem.bankingapplication.core;
@@ -85,11 +85,11 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 }
 ```
 
-## アプリの下に crx ノードを作成します。
+## apps の下での crx ノードの作成
 
-ui.apps ノードを展開し、という名前の新しいパッケージを作成します。 **HandleRegistrationFormSubmission** 次のスクリーンショットに示すように、apps ノードの下に
+ui.apps ノードを展開し、以下のスクリーンショットに示すように、apps ノードの下に **HandleRegistrationFormSubmission** という新しいパッケージを作成します
 ![crx-node](./assets/crx-node.png)
-.content.xml という名前のファイルを **HandleRegistrationFormSubmission**. 次のコードを.content.xml にコピー&amp;ペーストします。
+**HandleRegistrationFormSubmission** の下に .content.xml というファイルを作成します。次のコードを .content.xml にコピー＆ペーストします。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,30 +101,30 @@ ui.apps ノードを展開し、という名前の新しいパッケージを作
     submitService="Core Custom AF Submit"/>
 ```
 
-の値 **submitService** 要素は一致する必要があります  **serviceName = &quot;Core Custom AF Submit&quot;** FormSubmitActionService 実装の
+**submitService** 要素の値は、FormSubmitActionService 実装の **serviceName = &quot;Core Custom AF Submit&quot;** と一致する必要があります。
 
-## ローカルのAEM Formsインスタンスにコードをデプロイします
+## ローカル AEM Forms インスタンスにコードをデプロイ
 
-変更を Cloud Manager リポジトリーにプッシュする前に、コードをローカルの Cloud Ready オーサーインスタンスにデプロイして、コードをテストすることをお勧めします。 オーサーインスタンスが実行中であることを確認します。
-クラウド対応のオーサーインスタンスにコードをデプロイするには、AEMプロジェクトのルートフォルダーに移動し、次のコマンドを実行します
+変更を Cloud Manager リポジトリにプッシュする前に、ローカルのクラウド対応オーサーインスタンスにコードをデプロイしてテストすることをお勧めします。オーサーインスタンスが実行中であることを確認します。
+クラウド対応オーサーインスタンスにコードをデプロイするには、AEM プロジェクトのルートフォルダーに移動し、次のコマンドを実行します
 
 ```
 mvn clean install -PautoInstallSinglePackage
 ```
 
-これにより、コードが 1 つのパッケージとしてオーサーインスタンスにデプロイされます
+これにより、コードが 1 つの単一パッケージとしてオーサーインスタンスにデプロイされます
 
-## コードを cloud manager にプッシュし、コードをデプロイします。
+## Cloud Manager へのコードのプッシュと、コードのデプロイ
 
 ローカルインスタンス上のコードを確認したら、コードをクラウドインスタンスにプッシュします。
-変更をローカルの Git リポジトリにプッシュしてから、Cloud Manager リポジトリにプッシュします。 以下を参照してください。  [Git の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [AEMプロジェクトの cloud manager リポジトリへのプッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) および [開発環境へのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) 記事。
+変更をローカル Git リポジトリにプッシュしてから、Cloud Manager リポジトリにプッシュします。[Git の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html?lang=ja)、[Cloud Manager リポジトリへの AEM プロジェクトのプッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html?lang=ja)、[開発環境へのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html?lang=ja)の記事を参照してください。
 
-パイプラインが正常に実行されたら、次のスクリーンショットに示すように、フォームの送信アクションをカスタム送信ハンドラーに関連付けることができます
+パイプラインが正常に実行されると、以下のスクリーンショットに示すように、フォームの送信アクションをカスタム送信ハンドラーに関連付けられるようになります
 ![submit-action](./assets/configure-submit-action.png)
 
 ## 次の手順
 
-[React アプリでカスタム応答を表示する](./handle-response-react-app.md)
+[React アプリでカスタム応答を表示](./handle-response-react-app.md)
 
 
 
