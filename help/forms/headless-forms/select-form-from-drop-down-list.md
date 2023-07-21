@@ -9,9 +9,9 @@ role: User
 level: Intermediate
 exl-id: 31008bb3-316b-4035-89ea-e830b429b927
 source-git-commit: 529e98269a08431152686202a8a2890712b9c835
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '286'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -128,7 +128,7 @@ const getAFForms =async()=>
 * [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)。フォームを取得する呼び出しは、コンポーネントのレンダリング時に 1 回だけ行われます。API 呼び出しの結果は、afForms 変数に格納されます。
 上記のコードでは、map 関数を使用して afForms を反復処理し、afForms 配列内の項目ごとに MenuItem コンポーネントを作成して Select コンポーネントに追加します。
 
-* フォームを取得 — GET 呼び出しが [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)（ id は、ドロップダウンリストでユーザーが選択したアダプティブフォームの id） この GET 呼び出しの結果は、selectedForm に格納されます。
+* フォームの取得 - [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition) に対して GET 呼び出しが行われます。id は、ドロップダウンリストでユーザーが選択したアダプティブフォームの ID です。この GET 呼び出しの結果は、selectedForm に格納されます。
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);
