@@ -238,7 +238,7 @@ ht-degree: 99%
    + [4 - 入力するフォームの選択](headless-forms/select-form-from-drop-down-list.md)
    + [5 - カード形式でのフォームの表示](headless-forms/display-forms-card-view.md)
    + [6 - 選択したフォームの表示](headless-forms/open-form-card-view.md)
-   + [7 — フォームの送信を処理](headless-forms/display-thank-you-message.md)
+   + [7 - フォーム送信の処理](headless-forms/display-thank-you-message.md)
 
 + React アプリと Forms および Acrobat Sign の連携 {#react-ic-sign}
    + [1 - はじめに](react-ic-sign/introduction.md)
@@ -262,7 +262,7 @@ ht-degree: 99%
    + [モバイルフォーム送信時に PDF を生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [モバイルフォームからインタラクティブ PDF を生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成](document-services/generate-interactive-dor.md)
-   + [ Reader 拡張機能資格情報の設定](document-services/configuring-reader-extension-osgi.md)
+   + [Reader 拡張機能資格情報の設定](document-services/configuring-reader-extension-osgi.md)
    + [XDP レンディションの PDF への使用権限の適用](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [アップロードされた PDF への使用権限の適用](document-services/apply-reader-extension-rights-to-pdf.md)
    + [ドキュメントの認証](document-services/certifying-documents-aem-forms-tutorial.md)

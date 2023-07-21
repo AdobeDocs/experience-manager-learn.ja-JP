@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 93%
+ht-degree: 99%
 
 ---
 
@@ -185,18 +185,18 @@ ht-degree: 93%
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
 + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja)
 + Forms{#forms}
-   +  Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
-      + [1 — はじめに](./forms/developing-for-cloud-service/getting-started.md)
+   + Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
+      + [1 - はじめに](./forms/developing-for-cloud-service/getting-started.md)
       + [2 - IntelliJ のインストール](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 - Git の設定](./forms/developing-for-cloud-service/setup-git.md)
-      + [4 - IntelliJ をAEMと同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
-      + [5 — フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [6 — カスタム送信ハンドラー](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 - Forms Portal コンポーネントの有効化](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 -Cloud Servicesと FDM を含む](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [9 — コンテキスト対応クラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [10 - Cloud Manager にプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [11 — 開発環境へのデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [4 - IntelliJ と AEM の同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [5 - フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [6 - カスタム送信ハンドラー](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
+      + [7 - フォームポータルコンポーネントの有効化](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [8 - クラウドサービスと FDM の組み込み](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 - コンテキスト対応のクラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [10 - Cloud Manager へのプッシュ](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 - 開発環境へのデプロイ](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [12 - Maven アーキタイプの更新](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + アダプティブフォームの作成{#create-first-af}
       + [はじめに](./forms/create-first-af/introduction.md)
@@ -210,10 +210,10 @@ ht-degree: 93%
       + [資産パネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [開始パネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
-   + ヘッドレスフォームを持つカスタム送信サービス{#custom-submit-headless-forms}
+   + ヘッドレスフォームを使用したカスタム送信サービス {#custom-submit-headless-forms}
       + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
-      + [2 — カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
-      + [3 — 応答を表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
+      + [2 - カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
+      + [3 - 応答の表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
    + AEM Forms と Analytics{#forms-and-analytics}
       + [はじめに](./forms/form-data-analytics/introduction.md)
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
