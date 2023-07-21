@@ -11,9 +11,9 @@ thumbnail: 22140.jpg
 last-substantial-update: 2022-06-05T00:00:00Z
 exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
 source-git-commit: a5f8ef3c507274be30da8ea225d2daf7a983cf86
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '71'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -26,4 +26,4 @@ AEM Assets は、直感的なユーザーエクスペリエンスを通じて大
 
 >[!IMPORTANT]
 >
->AEM 6.5 では、 [アセットレポート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting)を使用すると、管理者は、追跡するものとレポートに含めるものを定義できます。
+>AEM 6.5 では、[アセットレポート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=ja#prerequisite-for-reporting)を使用すると、管理者は、何をトラックし、何をレポートに含めるかを定義できます。
