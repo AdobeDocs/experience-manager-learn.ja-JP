@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 89%
 * crx にログインする
 * アプリの下に、「sling :folder」タイプのノードを作成します。このノードを CustomSubmitHelpx と呼びましょう。
 * 新しく作成したノードを保存します。
-* 新しく作成したノードに次の 3 つのプロパティを追加します。
+* 新しく作成したノードに次の 3 つのプロパティを追加します
 
 | プロパティ名 | プロパティの値 |
 |----------------    | ---------------------------------|
