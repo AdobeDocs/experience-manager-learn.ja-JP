@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '582'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 99%
 
 ---
 
@@ -48,7 +50,6 @@ WKND サイトのホームページには、カードレイアウトの形式で
 1. マーケターが Adobe Target 内に A/B ターゲットアクティビティを作成します。
    1. Adobe Target ウィンドウから「**アクティビティ**」タブに移動します。
    2. 「**アクティビティの作成**」ボタンをクリックし、アクティビティの種類として **A/B テスト** を選択します。
-
       ![Adobe Target - アクティビティを作成](assets/personalization-use-case-2/create-ab-activity.png)
    3. **Web** チャネルを選択し、**Visual Experience Composer** を選択します。
    4. **アクティビティ URL** を入力し、「**次へ**」をクリックして Visual Experience Composer を開きます。
@@ -63,7 +64,6 @@ WKND サイトのホームページには、カードレイアウトの形式で
       ![コンテナの選択](assets/personalization-use-case-3/container-selection.png)
    9. 並べ替えたいコンテナをクリックし、目的の場所にドラッグ＆ドロップします。*最高のロースター*&#x200B;コンテナを 1 行目の 1 列目から 1 行目の 3 列目に並べ替えましょう。現在、*最高のロースター*&#x200B;コンテナは&#x200B;*写真展*コンテナの隣にあります。
       ![コンテナの入れ替え](assets/personalization-use-case-3/container-swap.png)
-
       **並べ替え後**
       ![入れ替えられたコンテナ](assets/personalization-use-case-3/after-swap-1-3.png)
    10. 同じように、他のカードコンテナの位置を並べ替えます。

@@ -3,13 +3,15 @@ title: AEM Forms と Marketo の連携（第 2 部）
 description: AEM Forms フォームデータモデルを使用した AEM Forms と Marketo の統合に関するチュートリアル
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: ht
-source-wordcount: '363'
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '366'
 ht-degree: 100%
 
 ---
@@ -205,4 +207,3 @@ public class MarketoConfigurationService {
 ## 次の手順
 
 [RESTful サービスベースのデータソースの作成](./part3.md)
-

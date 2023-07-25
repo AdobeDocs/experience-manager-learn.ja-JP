@@ -3,13 +3,15 @@ title: AEM Forms と Marketo（第 3 部）
 description: AEM Forms フォームデータモデルを使用した AEM Forms と Marketo の統合に関するチュートリアル
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: ht
-source-wordcount: '386'
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '389'
 ht-degree: 100%
 
 ---
@@ -53,4 +55,3 @@ Host プロパティは Marketo インスタンスに固有です。
 ## 次の手順
 
 [テストのまとめ](./part4.md)
-

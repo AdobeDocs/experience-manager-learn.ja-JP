@@ -1,6 +1,6 @@
 ---
-title: Workfront for Experience Manager 拡張コネクタに関するセッション
-description: Adobe Workfront および Experience Manager Assets 拡張コネクタの基本について説明します。
+title: 拡張コネクタを使用したWorkfrontとAEM Assetsの統合
+description: Adobe WorkfrontとExperience Manager Assetsの拡張コネクタ統合の基本について説明します。
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -9,19 +9,21 @@ level: Beginner
 kt: 9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
-source-wordcount: '256'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '271'
+ht-degree: 72%
 
 ---
 
-# Workfront for Experience Manager 拡張コネクタのエキスパートシリーズ
+# WorkfrontとAEM Assetsの拡張コネクタとの統合
 
 ![AEM エキスパートシリーズ](./assets/banner.png)
 
-この 4 部構成のビデオシリーズで、アドビの Workfront および Experience Manager Assets エキスパートによるセッションに参加しましょう。Workfront for Experience Manager 拡張コネクタのあらゆる側面について説明しています。
+この 4 部構成のビデオシリーズで、AdobeのWorkfrontとExperience Manager Assetsのエキスパートにご参加ください。拡張コネクタを使用したWorkfrontとAEM Assetsの統合に関する詳細を説明し、説明します。
 
 このエキスパートシリーズは 4 部構成で、プロダクトマネージャ、コンサルタント、アドビパートナーといったアドビ製品のエキスパートのグループが以下について解説します。
 

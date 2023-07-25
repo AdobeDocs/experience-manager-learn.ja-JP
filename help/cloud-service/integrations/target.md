@@ -1,6 +1,6 @@
 ---
-title: AEM ヘッドレスと Target のパーソナライゼーション
-description: このチュートリアルでは、AEM コンテンツフラグメントを Adobe Target に書き出し、Adobe Web SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。
+title: AEMヘッドレスと Target の統合
+description: Experience PlatformWeb SDK を使用して、AEMヘッドレスとAdobe Targetを統合し、ヘッドレスエクスペリエンスをパーソナライズする方法について説明します。
 version: Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
@@ -10,30 +10,32 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEMヘッドレスas a Cloud Service" before-title="false"
 exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
-workflow-type: ht
-source-wordcount: '1671'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '1679'
+ht-degree: 96%
 
 ---
 
-# コンテンツフラグメントを使用した AEM ヘッドレスエクスペリエンスのパーソナライズ
+# AEMヘッドレスと Target の統合
 
-このチュートリアルでは、AEM コンテンツフラグメントを Adobe Target に書き出し、Adobe Web SDK を使用してヘッドレスエクスペリエンスをパーソナライズする方法について説明します。[React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=ja)を使用して、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を探索します。
+AEMコンテンツフラグメントをAdobe Targetに書き出し、Adobe Experience Platform Web SDK の alloy.js を使用してヘッドレスエクスペリエンスをパーソナライズすることで、AEM Headless をAdobe Targetに統合する方法を説明します。 [React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=ja)を使用して、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を探索します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 このチュートリアルでは、AEM と Adobe Target の設定に関する手順を説明します。
 
 1. AEM オーサーでの [Adobe Target の Adobe IMS 設定の作成](#adobe-ims-configuration)
-1. AEM オーサーでの [Adobe Target Cloud Service の作成](#adobe-target-cloud-service)
-1. AEM オーサーでの [AEM Assets フォルダーへの Adobe Target Cloud Service の適用](#configure-asset-folders)
-1. Adobe Admin Console での [Adobe Target Cloud Service の権限](#permission)
-1. AEM オーサーから Target への[コンテンツフラグメントの書き出し](#export-content-fragments)
-1. Adobe Target での[コンテンツフラグメントオファーを使用したアクティビティの作成](#activity)
-1. Experience Platform での [Experience Platform データストリームの作成](#datastream-id)
-1. Adobe Web SDK を使用して、[パーソナライゼーションを React ベースの AEM ヘッドレスアプリに統合](#code)します。
+2. AEM オーサーでの [Adobe Target Cloud Service の作成](#adobe-target-cloud-service)
+3. AEM オーサーでの [AEM Assets フォルダーへの Adobe Target Cloud Service の適用](#configure-asset-folders)
+4. Adobe Admin Console での [Adobe Target Cloud Service の権限](#permission)
+5. AEM オーサーから Target への[コンテンツフラグメントの書き出し](#export-content-fragments)
+6. Adobe Target での[コンテンツフラグメントオファーを使用したアクティビティの作成](#activity)
+7. Experience Platform での [Experience Platform データストリームの作成](#datastream-id)
+8. Adobe Web SDK を使用して、[パーソナライゼーションを React ベースの AEM ヘッドレスアプリに統合](#code)します。
 
 ## Adobe IMS 設定{#adobe-ims-configuration}
 

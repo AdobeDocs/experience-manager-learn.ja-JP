@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '586'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 99%
 
 ---
 
@@ -29,7 +31,7 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
 この演習では、次のユーザーが関与し、管理者アクセスが必要なタスクを実行する必要があります。
 
-* **コンテンツ制作者／コンテンツエディター**（Adobe Experience Manager）
+* **コンテンツプロデューザー／コンテンツ編集者**（Adobe Experience Manager）
 * **マーケター**（Adobe Target／最適化チーム）
 
 ### WKND サイトのホームページ
@@ -42,7 +44,7 @@ WKND サイトはホームページのデザインを一新し、現在のホー
    * それぞれがローカルホスト 4502 と 4503 で実行中の [AEM オーサーインスタンスとパブリッシュインスタンス](./implementation.md#getting-aem)。
    * [Adobe Experience Platform Launch を使用して Adobe Target と統合された AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 組織の Adobe Experience Cloud へのアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションをプロビジョニングされた Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -57,7 +59,6 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 1. マーケターは、リダイレクトオファーをエクスペリエンスとして A／B ターゲットアクティビティを作成し、成功の目標と指標を追加した新しいホームページに 100％の web サイトトラフィックを割り当てます。
    1. Adobe Target ウィンドウから「**アクティビティ**」タブに移動します。
    2. 「**アクティビティの作成**」ボタンをクリックし、アクティビティの種類として **A/B テスト** を選択します。
-
       ![Adobe Target - アクティビティを作成](assets/personalization-use-case-2/create-ab-activity.png)
    3. **Web** チャネルを選択し、**Visual Experience Composer** を選択します。
    4. **アクティビティ URL** を入力し、「**次へ**」をクリックして Visual Experience Composer を開きます。
@@ -72,9 +73,9 @@ WKND サイトはホームページのデザインを一新し、現在のホー
       ![エクスペリエンス B](assets/personalization-use-case-2/redirect-url-2.png)
    9. 変更を&#x200B;**保存**&#x200B;して、アクティビティ作成の次のステップに進みます。
    10. 「**トラフィックの割り当て方法**」で「手動」を選択し、100％のトラフィックを&#x200B;**エクスペリエンス B** に割り当てます。
-      ![エクスペリエンス B のトラフィック](assets/personalization-use-case-2/traffic.png)
+      ![エクスペリエンス B トラフィック](assets/personalization-use-case-2/traffic.png)
    11. 「**次へ**」をクリックします。
-   12. アクティビティの「**目標指標**」を指定し、A／B テストを保存して閉じます。
+   12. アクティビティの&#x200B;**目標指標**を提供し、A/B テストを保存して閉じます。
       ![A／B テストの目標指標](assets/personalization-use-case-2/goal-metric.png)
    13. アクティビティに名前（**新しいデザインの WKND ホームページ**）を付けて、変更を保存します。
    14. アクティビティの詳細画面から、アクティビティを&#x200B;**アクティベート**します。

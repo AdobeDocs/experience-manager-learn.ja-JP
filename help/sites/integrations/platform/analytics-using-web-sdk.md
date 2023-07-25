@@ -1,6 +1,6 @@
 ---
-title: Platform Web SDK を使用した Adobe Analytics の統合
-description: Platform Web SDK を使用して Adobe Experience Manager（AEM）と Adobe Analytics を統合する方法に関する最新のアプローチを説明します。このチュートリアルでは、ページビュー数と CTA クリック数のデータを収集し、Adobe Analytics Workspace でデータインサイトを得る手順を説明します。
+title: AEM SitesとAdobe Analyticsの Platform Web SDK との統合
+description: 最新の Platform Web SDK アプローチを使用して、AEM SitesとAdobe Analyticsを統合します。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
-workflow-type: ht
-source-wordcount: '1647'
-ht-degree: 100%
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '1637'
+ht-degree: 97%
 
 ---
 
-
-# Platform Web SDK を使用した Adobe Analytics の統合
+# AEM SitesとAdobe Analyticsの Platform Web SDK との統合
 
 Platform Web SDK を使用して Adobe Experience Manager（AEM）と Adobe Analytics を統合する方法に関する&#x200B;**最新のアプローチ**&#x200B;を説明します。この包括的なチュートリアルでは、[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) ページビュー数と CTA クリック数のデータをシームレスに収集するプロセスを説明します。様々な指標やディメンションを参照できる Adobe Analysis Workspace で収集したデータを視覚化することで、有益なインサイトを得ることができます。また、Platform データセットを参照してデータを検証および分析することもできます。AEM と Adobe Analytics の機能をデータ駆動型の意思決定に活用するこのジャーニーに参加してください。
 

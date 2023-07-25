@@ -1,29 +1,30 @@
 ---
-title: Adobe Experience Manager と Adobe Target の統合
-seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
+title: AEM SitesとAdobe Targetの統合
+seo-title: An article covering different ways to integrate Adobe Experience Manager (AEM) Sites with Adobe Target for delivering personalized content.
 description: 様々なシナリオで Adobe Target と Adobe Experience Manager の連携を設定する方法を説明する記事です。
 seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '659'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '661'
+ht-degree: 94%
 
 ---
 
-# Adobe Experience Manager と Adobe Target の統合
+# AEM SitesとAdobe Targetの統合
 
-この節では、様々なシナリオで Adobe Experience Manager と Adobe Target の連携を設定する方法について説明します。 シナリオと組織要件に基づいています。
+この節では、様々なシナリオでAdobe Experience Manager SitesとAdobe Targetを設定する方法について説明します。 シナリオと組織要件に基づいています。
 
 * **Adobe Target JavaScript ライブラリの追加（すべてのシナリオで必要）**
 AEM でホストされるサイトの場合、[Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) を使用して Target ライブラリをサイトに追加できます。 Launch は、関連性の高いカスタマーエクスペリエンス（顧客体験）の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
 * **Adobe Target クラウドサービスの追加（エクスペリエンスフラグメントシナリオで必要）**
-AEM のお客様がエクスペリエンスフラグメントオファーを使用してAdobe Target 内でアクティビティを作成する場合、従来のクラウドサービスを使用して Adobe Target と AEM を統合する必要があります。この統合は、エクスペリエンスフラグメントを HTML／JSON オファーとして AEM から Target にプッシュし、オファーと AEM の同期を保つために必要です。 
-*この統合は、シナリオ 1 の実装に必要です。*
+AEM のお客様がエクスペリエンスフラグメントオファーを使用してAdobe Target 内でアクティビティを作成する場合、従来のクラウドサービスを使用して Adobe Target と AEM を統合する必要があります。この統合は、エクスペリエンスフラグメントを HTML／JSON オファーとして AEM から Target にプッシュし、オファーと AEM の同期を保つために必要です。*この統合は、シナリオ 1 の実装に必要です。*
 
 ## 前提条件
 
@@ -36,7 +37,7 @@ AEM のお客様がエクスペリエンスフラグメントオファーを使�
       * [デジタルデータレイヤー](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * 組織の Adobe Experience Cloud へのアクセス - `https://<yourcompany>.experiencecloud.adobe.com` 
+   * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションをプロビジョニングされた Experience Cloud
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)

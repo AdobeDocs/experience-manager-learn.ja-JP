@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 1%
+source-wordcount: '1694'
+ht-degree: 12%
 
 ---
 
@@ -21,7 +23,7 @@ AEMエクスペリエンスフラグメントをHTMLオファーとしてAdobe T
 
 AEMでは、パーソナライゼーション戦略に生かすために、すべてのコンテンツとアセットが一元的に統合されます。 AEMを使用すると、コードを記述することなく、1 か所でデスクトップ、タブレット、モバイルデバイス用のコンテンツを簡単に作成できます。 デバイスごとにページを作成する必要はありません。AEMは、コンテンツを使用して各エクスペリエンスを自動的に調整します。
 
-Target では、行動、コンテキスト、オフラインの変数を組み込んだルールベースの手法と AI 駆動の機械学習手法を組み合わせ、それらを基にパーソナライズされたエクスペリエンスを大規模に提供できます。  Target では、A/B テストや多変量分析 (MVT) アクティビティを簡単に設定して実行し、最適なオファー、コンテンツ、エクスペリエンスを見極めることができます。
+Target では、行動、コンテキスト、オフラインの変数を組み込んだルールベースの手法と AI 駆動の機械学習手法を組み合わせ、それらを基にパーソナライズされたエクスペリエンスを大規模に提供できます。  Target では、A/B テストや多変量分析（MVT） を簡単に設定して実行し、最適なオファー、コンテンツ、エクスペリエンスを見極めることができます。
 
 エクスペリエンスフラグメントは、Target を使用してビジネス成果を高めているマーケターとコンテンツ作成者を連携させる大きな一歩を踏み出します。
 
@@ -29,23 +31,23 @@ Target では、行動、コンテキスト、オフラインの変数を組み�
 
 WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じてアメリカ全土で、各州で行われるオーディションに、サイトユーザーを新規登録してもらいたいと考えています。 マーケターには、WKND サイトのホームページでキャンペーンを実行するタスクが割り当てられ、ユーザーの場所に関連するバナーメッセージと、イベントの詳細ページへのリンクが割り当てられています。 WKND サイトのホームページを参照し、現在の場所に基づいてユーザーのパーソナライズされたエクスペリエンスを作成し、配信する方法を学びます。
 
-### 関連するユーザー
+### 関係するユーザー
 
-この練習では、次のユーザーが関与し、管理者アクセスが必要なタスクを実行する必要があります。
+この演習では、次のユーザーが関与し、管理者アクセスが必要なタスクを実行する必要があります。
 
-* **コンテンツ作成者/コンテンツエディター** (Adobe Experience Manager)
-* **マーケター** (Adobe Target/最適化チーム )
+* **コンテンツプロデューザー／コンテンツ編集者**（Adobe Experience Manager）
+* **マーケター**（Adobe Target／最適化チーム）
 
 ### 前提条件
 
 * **AEM**
-   * [AEMオーサーインスタンスとパブリッシュインスタンス](./implementation.md#getting-aem) localhost 4502 と 4503 でそれぞれ実行している
+   * それぞれがローカルホスト 4502 と 4503 で実行中の [AEM オーサーインスタンスとパブリッシュインスタンス](./implementation.md#getting-aem)。
 * **Experience Cloud**
-   * 組織へのアクセスAdobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * 次のソリューションでプロビジョニングされたExperience Cloud
+   * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 次のソリューションをプロビジョニングされた Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-### WKND サイトホームページ
+### WKND サイトのホームページ
 
 ![AEM Target シナリオ 1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
@@ -79,7 +81,7 @@ WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じ�
 
 ### GeoTargeting を使用するオーディエンスの作成 {#marketer-audience}
 
-1. 組織に移動 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`<https://<yourcompany>.experiencecloud.adobe.com`)
+1. 組織の [Adobe Experience Cloud](https://experiencecloud.adobe.com/) に移動（`<https://<yourcompany>.experiencecloud.adobe.com`）
 1. Adobe IDを使用してログインし、正しい組織に属していることを確認します。
 1. ソリューション切り替えボタンで、 **ターゲット** その後 **起動する** Adobe Target。
 
@@ -101,9 +103,9 @@ WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じ�
 
 1. クリック **ルールを追加/地域**.
 1. クリック **選択**&#x200B;次のいずれかのオプションを選択します。
-   * 国
+   * Country
    * **都道府県** *（WKND サイト SkateFest キャンペーンの状態を選択）*
-   * City（市区町村）
+   * City
    * 郵便番号
    * 緯度
    * 経度
@@ -130,16 +132,16 @@ WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じ�
 
 ### GeoTargeting を使用するアクティビティの作成
 
-1. Adobe Targetウィンドウで、に移動します。 **アクティビティ** タブをクリックします。
+1. Adobe Target ウィンドウから「**アクティビティ**」タブに移動します。
 1. クリック **アクティビティを作成** をクリックし、 **エクスペリエンスのターゲット設定** アクティビティタイプ。
-1. を選択します。 **Web** チャネルと選択 **Visual Experience Composer**.
+1. **Web** チャネルを選択し、**Visual Experience Composer** を選択します。
 1. 次を入力します。 **アクティビティ URL** をクリックし、 **次へ** をクリックして Visual Experience Composer を開きます。
 
    WKND サイトホームページの公開 URL:http://localhost:4503/content/wknd/en.html
 
    ![エクスペリエンスのターゲット設定アクティビティ](assets/personalization-use-case-1/target-activity.png)
 
-1. の場合 **Visual Experience Composer** 読み込むには、有効にするには **安全でないスクリプトの読み込みを許可** ブラウザーで、ページをリロードします。
+1. **Visual Experience Composer** を読み込むには、ブラウザーで「**安全でないスクリプトの読み込みを許可する**」を有効にして、ページをリロードします。
 
    ![エクスペリエンスのターゲット設定アクティビティ](assets/personalization-use-case-1/load-unsafe-scripts.png)
 
@@ -168,12 +170,12 @@ WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じ�
    >また、レポートソースとしてAdobe Analyticsを選択することもできます。
 
 1. 現在のアクティビティ名の上にマウスポインターを置くと、名前をに変更できます。 **WKND SkateFest — 米国**、 **保存して閉じる** 変更内容。
-1. アクティビティの詳細画面で、 **有効化** アクティビティを選択します。
+1. アクティビティの詳細画面から、アクティビティを&#x200B;**アクティベート**&#x200B;してください。
 
-   ![アクティビティを有効化](assets/personalization-use-case-1/activate-activity.png)
+   ![アクティビティをアクティベート](assets/personalization-use-case-1/activate-activity.png)
 
 1. これで、WKND SkateFest キャンペーンがすべての WKND サイト訪問者に対して有効になります。
-1. 次に移動： [WKND サイトホームページ](http://localhost:4503/content/wknd/en.html)に設定され、その地域 (*状態：カリフォルニア*) をクリックします。
+1. 次に移動： [WKND サイトホームページ](http://localhost:4503/content/acme//.html)に設定され、その地域 (*状態：カリフォルニア*) をクリックします。
 
    ![アクティビティ QA](assets/personalization-use-case-1/wknd-california.png)
 
@@ -183,7 +185,7 @@ WKND サイトは、 **SkateFest チャレンジ** ウェブサイトを通じ�
 
    ![アクティビティ QA](assets/personalization-use-case-1/activity-qa.png)
 
-1. 次に移動： [WKND サイトホームページ](http://localhost:4503/content/wknd/en.html)を表示し、位置情報（状態）に基づいて WKND SkateFest オファーを表示できるようになります。
+1. 次に移動： [WKND サイトホームページ](http://localhost:4503/content/acme//.html)を表示し、位置情報（状態）に基づいて WKND SkateFest オファーを表示できるようになります。
 1. 以下のビデオを見て、オファーがページにどのように配信されるか、レスポンストークンをカスタマイズする方法、品質チェックの実行方法を理解してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=12&learn=on)

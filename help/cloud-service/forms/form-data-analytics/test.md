@@ -7,13 +7,15 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
-source-wordcount: '180'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 90%
 
 ---
 
@@ -55,3 +57,7 @@ _satellite.setDebug(true)
 [AEP デバッガー拡張機能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja)をブラウザーに追加すると（ログインする必要があります）、より詳細なデバッグ情報を取得できます。
 
 ![platform-debugger](assets/platform-debugger.png)
+
+## これで完了です
+
+AEM FormsとAdobe Analyticsを正常に統合し、フォームデータフィールドに関するレポートを作成できました。

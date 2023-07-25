@@ -5,15 +5,17 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
-workflow-type: ht
-source-wordcount: '840'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '842'
+ht-degree: 99%
 
 ---
 
-# AEM と Adobe Target の使用の手引き {#getting-started-with-aem-target}
+# AEM SitesとAdobe Targetの統合 {#getting-started-with-aem-target}
 
 AEM と Target は、両方とも強力なソリューションで、機能が重複しているように見えます。 パーソナライズされたエクスペリエンスを提供するために、これらの製品をどのように、いつ組み合わせて使用すればよいかを理解するのに苦労する場合があります。 各エンドユーザーに最適化されたエクスペリエンスを提供するには、組織内の異なるチームが緊密に連携し、誰が何を行うかを定義する必要があります。
 
@@ -38,7 +40,7 @@ AEM は、パーソナライズされたコンテンツを作成し、すべて�
 * Target は、AEM エクスペリエンスフラグメントのマークアップをアクティビティのオファーとして使用します
 * Target はエクスペリエンスフラグメント HTML を配信し、AEM は参照画像を提供します
 
-   ![エクスペリエンスフラグメントを使用したパーソナライゼーションの図](assets/personalization-use-case-1/use-case-1-diagram.png)
+  ![エクスペリエンスフラグメントを使用したパーソナライゼーションの図](assets/personalization-use-case-1/use-case-1-diagram.png)
 
 **このシナリオを実装するには、次の操作が必要です。**
 
@@ -59,7 +61,7 @@ VEC は Adobe Target の主な機能の 1 つです。 VEC を使用すると、
 * Adobe Target VEC を使用して新しいコンテンツが作成されます
 * AEM がホストするサイトと AEM 以外がホストするサイトの両方に適用されます
 
-   ![Visual Experience Composer を使用したパーソナライズ機能の図](assets/personalization-use-case-3/use-case-diagram-3.png)
+  ![Visual Experience Composer を使用したパーソナライズ機能の図](assets/personalization-use-case-3/use-case-diagram-3.png)
 
 **このシナリオを実装するには、次の操作が必要です。**
 
@@ -77,7 +79,7 @@ Adobe Experience Manager と Adobe Target の統合は、サイトのユーザ�
 * ここで新しいコンテンツは作成されません
 * AEM サイトと非 AEM サイトの両方に適用されます
 
-   ![図](assets/personalization-use-case-2/use-case-2-diagram.png)
+  ![図](assets/personalization-use-case-2/use-case-2-diagram.png)
 
 **このシナリオを実装するには、次の操作が必要です。**
 

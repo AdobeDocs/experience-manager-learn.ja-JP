@@ -4,7 +4,6 @@ description: Visual Experience Composer を使用して  Adobe Target Activity �
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
-activity: use
 version: Cloud Service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
@@ -12,11 +11,13 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
-source-wordcount: '517'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 98%
 
 ---
 

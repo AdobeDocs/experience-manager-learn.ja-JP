@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="統合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
-source-wordcount: '1064'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '1067'
+ht-degree: 99%
 
 ---
 
@@ -27,9 +29,8 @@ ht-degree: 100%
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O コンソール](https://console.adobe.io)
 
-      >[!NOTE]
-      >Experience Platform Launch で開発、承認、公開、拡張機能の管理および環境の管理の権限が必要です。ユーザーインターフェイスオプションが使用できず、これらの手順を完了できない場合は、Experience Cloud 管理者に問い合わせてアクセス権を要求してください。Experience Platform Launch の権限について詳しくは、[ドキュメントを参照](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=ja)してください。
-
+     >[!NOTE]
+     >Experience Platform Launch で開発、承認、公開、拡張機能の管理および環境の管理の権限が必要です。ユーザーインターフェイスオプションが使用できず、これらの手順を完了できない場合は、Experience Cloud 管理者に問い合わせてアクセス権を要求してください。Experience Platform Launch の権限について詳しくは、[ドキュメントを参照](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=ja)してください。
 
 * **ブラウザープラグイン**
    * Adobe Experience Cloud Debugger（[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)）

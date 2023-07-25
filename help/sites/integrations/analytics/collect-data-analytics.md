@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics でページデータを収集
-description: イベント駆動型 Adobe Client Data Layer を使用して、Adobe Experience Manager で構築された web サイトでのユーザーアクティビティに関するデータを収集します。タグルールを使用してこれらのイベントをリッスンし、データを Adobe Analytics レポートスイートに送信する方法を説明します。
+title: AEM SitesとAdobe AnalyticsのAdobe Analyticsタグ拡張機能との統合
+description: イベントドリブン型Adobeクライアントデータレイヤーを使用して、AEM SitesとAdobe Analyticsを統合し、Adobe Experience Managerで作成された Web サイトでのユーザーアクティビティに関するデータを収集します。 タグルールを使用してこれらのイベントをリッスンし、データを Adobe Analytics レポートスイートに送信する方法を説明します。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -8,22 +8,23 @@ role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+badgeIntegration: label="統合" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
-workflow-type: ht
-source-wordcount: '2447'
-ht-degree: 100%
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+workflow-type: tm+mt
+source-wordcount: '2470'
+ht-degree: 96%
 
 ---
 
-# Adobe Analytics でのページデータの収集
+# AEM SitesとAdobe Analyticsの統合
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされました。その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja)を参照してください。
 
 
-[AEM コアコンポーネントと共に Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja) の組み込み機能を使用して、Adobe Experience Manager Sites 内のページに関するデータを収集する方法を説明します。[Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)と [Adobe Analytics 拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=ja)を使用して、ページデータを Adobe Analytics に送信するためのルールを作成します。
+AEM SitesとAdobe Analyticsを、 [AdobeクライアントデータレイヤーとAEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja) をクリックして、Adobe Experience Manager Sitesのページに関するデータを収集します。 [Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)と [Adobe Analytics 拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=ja)を使用して、ページデータを Adobe Analytics に送信するためのルールを作成します。
 
 ## 作成するもの {#what-build}
 
@@ -160,7 +161,7 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 
    上記のコードスニペットで、データレイヤーに[関数をプッシュ](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)して、イベントリスナーを追加します。`cmp:show` イベントがトリガーされると、`pageShownEventHandler` 関数が呼び出されます。この関数では、いくつかの健全性チェックが追加され、イベントをトリガーしたコンポーネントの[データレイヤーの最新状態](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)で新しい `event` が作成されます。
 
-   最後に、`trigger(event)` 関数が呼び出されます。`trigger()` 関数はタグプロパティ内の予約名であり、ルールを&#x200B;**トリガー**&#x200B;します。`event` オブジェクトはパラメーターとして渡され、このパラメーターがタグプロパティ内の別の予約名で公開されます。これで、タグプロパティ内のデータ要素が、`event.component['someKey']` などのコードスニペットを使用して様々なプロパティを参照できるようになりました。
+   最後に、`trigger(event)` 関数が呼び出されます。この `trigger()` 関数は、タグプロパティ内の予約名で、ルールを&#x200B;**トリガー**&#x200B;します。`event` オブジェクトはパラメーターとして渡され、タグプロパティ内の別の予約名で公開されます。タグプロパティ内のデータ要素は、`event.component['someKey']` などのコードスニペットを使用して様々なプロパティを参照できるようになりました。
 
 1. 変更を保存します。
 1. 次に、**アクション**&#x200B;で「**追加**」をクリックして、**アクションの設定**&#x200B;ウィザードを開きます。
@@ -212,11 +213,11 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    }
    ```
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 
    >[!NOTE]
    >
-   > `event` オブジェクトは、タグプロパティの&#x200B;**ルール**&#x200B;をトリガーしたイベントに基づいて使用可能になりスコープ設定されることを思い出してください。データ要素の値は、データ要素がルール内で&#x200B;*参照*&#x200B;されるまで設定されません。したがって、このデータ要素は、前のステップで作成された「**ページの読み込み**」ルールなどのルール内で安全に使用できます&#x200B;*が*、他のコンテキストでは安全に使用できません。
+   > `event` オブジェクトは、タグプロパティの&#x200B;**ルール**&#x200B;をトリガーしたイベントに基づいて利用可能になり、スコープが設定されることを思い出してください。データ要素の値は、データ要素がルール内で&#x200B;*参照*&#x200B;されるまで設定されません。したがって、このデータ要素は、前のステップで作成された「**ページの読み込み**」ルールなどのルール内で安全に使用できます&#x200B;*が*、他のコンテキストでは安全に使用できません。
 
 ### ページ名
 
