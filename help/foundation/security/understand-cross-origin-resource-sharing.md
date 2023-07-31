@@ -13,9 +13,9 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1007'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
 #### [!UICONTROL 公開済みのヘッダー]
 
 * `"exposedheaders" <header>`
-* ブラウザーがアクセスできる応答ヘッダーを示すヘッダーパラメーターのリストです。 CORS リクエスト（プリフライトではない）の場合、空でない場合、これらの値は `Access-Control-Expose-Headers` 応答ヘッダー。 リスト内の値（ヘッダー名）は、ブラウザーからアクセス可能になります。この機能がないと、これらのヘッダーをブラウザーで読み取ることはできません。
+* ブラウザーがアクセスできる応答ヘッダーを示すヘッダーパラメーターのリスト。CORS リクエスト（プリフライトではない）に対して、空でない場合、これらの値は `Access-Control-Expose-Headers` 応答ヘッダーにコピーされます。リスト内の値（ヘッダー名）は、ブラウザーからアクセス可能になります。この機能がないと、これらのヘッダーをブラウザーで読み取ることはできません。
 
 #### [!UICONTROL 最大経過年数]
 
@@ -74,7 +74,7 @@ CORS 設定は、AEM で OSGi 設定ファクトリとして管理され、各�
 #### [!UICONTROL サポートされるヘッダー]
 
 * `"supportedheaders" <header>`
-* リスト `header` 実際のリクエストをおこなう際に使用できる HTTP リクエストヘッダーを示すパラメーター。
+* 実際のリクエストを行うときに使用できる HTTP リクエストヘッダーを示す `header` パラメーターのリスト。
 
 #### [!UICONTROL 許可されるメソッド]
 
@@ -182,7 +182,7 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 
 ### CORS リクエストヘッダーの許可
 
-必要な [処理のためにAEMにパススルーする HTTP リクエストヘッダー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)だから、それはディスパッチャーの `/clientheaders` 設定。
+必要な [HTTP リクエストヘッダーを処理のために AEM にパススルーする](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)ことを許可するには、Disaptcher の `/clientheaders` 設定で許可する必要があります。
 
 ```
 /clientheaders {
@@ -195,7 +195,7 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 
 ### CORS 応答ヘッダーのキャッシュ
 
-キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers) を AEM パブリッシュに追加します。 `dispatcher.any` ファイル。
+キャッシュされたコンテンツの CORS ヘッダーをキャッシュし提供できるようにするには、AEM パブリッシュの `dispatcher.any` ファイルに次の [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers) を追加します。
 
 ```
 /publishfarm {
@@ -244,4 +244,4 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 
 * [クロスオリジンリソース共有ポリシーの AEM OSGi 設定ファクトリ](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [クロスオリジンリソース共有（W3C）](https://www.w3.org/TR/cors/)
-* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Access_control_CORS)
