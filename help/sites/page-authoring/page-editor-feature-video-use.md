@@ -16,9 +16,9 @@ role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
 source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '127'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -26,15 +26,15 @@ ht-degree: 70%
 
 AEM Site のページエディターは、web コンテンツを作成および編集するための強力なツールです。ページエディターのツールと機能には、ページエディターの UI ツールバーからアクセスできます。
 
-次のビデオでは、ページエディターの主な機能の一部を紹介します。
+次のビデオでは、ページエディターの主な機能の一部について重点的に説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
 
-詳しくは、 [AEMドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja).
+[ページエディターの機能の完全な概要については、AEM ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja)を参照してください。
 
 ## その他のリソース {#additional-resources}
 
-* [AEM Page Editor ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja)
-* [ページコンテンツドキュメントの編集](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
+* [AEM ページエディタードキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja)
+* [ページコンテンツの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
 * [Sites オーサリングユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
