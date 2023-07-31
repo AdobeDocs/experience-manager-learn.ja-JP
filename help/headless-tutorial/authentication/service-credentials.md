@@ -15,9 +15,9 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 source-git-commit: f8ed9fddb5f244860ba229b46a80638a7269d95e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1925'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Manager（AEM）as a Cloud Service との統合については�
 テクニカルアカウントは 1 回だけ作成されますが、秘密鍵はテクニカルアカウントに関連付けられたサービス資格情報の管理に使用します。 例えば、新しい秘密鍵とサービス資格情報は、現在の秘密鍵の有効期限が切れる前に生成され、サービス資格情報のユーザーが中断なしにアクセスできるようにする必要があります。
 
 1. 必ず以下としてログインします。
-   + __Adobe IMS組織のシステム管理者__
+   + __Adobe IMS 組織のシステム管理者__
    + __AEM オーサー__&#x200B;の __AEM 管理者__ IMS 製品プロファイルのメンバー
 1. [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) にログインします。 
 1. AEM as a Cloud Service 環境を含むプログラムを開き、サービス資格情報のセットアップを統合します。
@@ -107,7 +107,7 @@ JWT の生成に必要な詳細はサービス資格情報で指定されます�
 1. 外部アプリケーションは、サービス資格情報の情報を使用して JWT トークンを構築します。
 1. JWT トークンは Adobe IMS に送信され、アクセストークンと交換されます。
 1. Adobe IMS は、AEM as a Cloud Service へのアクセスに使用できるアクセストークンを返します
-   + アクセストークンは有効期限を変更できません。
+   + アクセストークンの有効期限を変更することはできません。
 1. 外部アプリケーションは、AEM as a Cloud Service に HTTP リクエストを行い、アクセストークンを Bearer トークンとして HTTP リクエストの認証ヘッダーに追加します。
 1. AEM as a Cloud Service が、HTTP リクエストを受信して認証し、HTTP リクエストで要求された作業を実行し、HTTP レスポンスを外部アプリケーションに返します。
 
