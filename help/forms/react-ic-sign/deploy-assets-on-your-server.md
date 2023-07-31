@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
 source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 46%
+ht-degree: 100%
 
 ---
 
@@ -27,18 +27,18 @@ ht-degree: 46%
 * OSGi configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 
-## サンプル React アプリのデプロイ
+## サンプル React アプリをデプロイ
 
-* [サンプル React アプリのダウンロード](assets/mult-step-form1.zip)
-* React アプリのコンテンツを新しいフォルダーに解凍します。
-* フォルダーに移動し、次のコマンドを実行します。
+* [サンプル React アプリをダウンロードします](assets/mult-step-form1.zip)
+* React アプリのコンテンツを新しいフォルダーに解凍します
+* フォルダーに移動し、次のコマンドを実行します
 
 ```java
 npm install
 npm start
 ```
 
-EmergencyContact.js ファイルを開き、fetch メソッドの URL を環境に合わせて変更します。
+EmergencyContact.js ファイルを開き、環境に合わせて fetch メソッド内の URL を変更します。
 
 
 ```javascript
@@ -56,6 +56,6 @@ EmergencyContact.js ファイルを開き、fetch メソッドの URL を環境�
  
 ```
 
-React アプリからAEMエンドポイントに対してPOST呼び出しを有効にするには、AdobeGranite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドに適切なエンティティを指定する必要があります。
+React アプリから AEM エンドポイントへの POST 呼び出しを有効にするには、Adobe Granite クロスオリジンリソース共有ポリシー設定の「許可されたオリジン」フィールドで適切なエントリを指定する必要があります。
 
 ![cors-setting](assets/cors-settings.png)
