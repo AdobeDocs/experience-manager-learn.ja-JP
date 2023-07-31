@@ -9,12 +9,12 @@ role: Developer
 level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
-last-substantial-update: 2022-10-03T00:00:00Z
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
-source-wordcount: '802'
-ht-degree: 100%
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+workflow-type: tm+mt
+source-wordcount: '811'
+ht-degree: 95%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 ## AEM の要件
 
-Next.js アプリは、次の AEM デプロイメントオプションで動作します。すべてのデプロイメントで、[WKND Shared v2.1.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest)または [WKND Site v2.1.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)を AEM as a Cloud Service 環境にインストールする必要があります。
+Next.js アプリは、次の AEM デプロイメントオプションで動作します。すべてのデプロイメントで、[WKND Shared v3.0.0 以降](https://github.com/adobe/aem-guides-wknd-shared/releases/latest)または [WKND Site v3.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)を AEM as a Cloud Service 環境にインストールする必要があります。
 
 この例の Next.js アプリケーションは、__AEM パブリッシュ__&#x200B;サービスに接続するように設計されています。
 
@@ -112,43 +112,73 @@ AEM ヘッドレスのベストプラクティスに従い、Next.js アプリ�
 + `wknd/adventures-all` 持続的なクエリで、AEM 内のすべてのアドベンチャーを簡潔なプロパティセットで返します。 この永続クエリは、初期ビューのアドベンチャーリストを制御します。
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
 + `wknd/adventure-by-slug` 永続クエリ。`slug`（アドベンチャーを一意に識別するカスタムプロパティ）によって、完全なプロパティセットを含む単一のアドベンチャーを返します。この永続クエリで、アドベンチャーの詳細ビューが強化されます。
 
 ```
-# Retrieves an adventure Content Fragment based on it's slug
-# Example query variables: 
-# {"slug": "bali-surf-camp"} 
-# Technically returns an adventure list but since the the slug 
-# property is set to be unique in the CF Model, only a single CF is expected
+# Retrieves an Adventure Fragment based on it's unique slug.
+#
+# Required query variables:
+# - {"slug": "bali-surf-camp"}
+#
+# Optional query variables:
+# - { 
+#     "imageFormat": "JPG",
+#     "imageSeoName": "my-adventure",
+#     "imageWidth": 1600,
+#     "imageQuality": 90 
+#   }
+#  
+# This query returns an adventure list but since the the slug property is set to be unique in the Content Fragment Model, only a single Content Fragment is expected.
 
-query($slug: String!) {
-  adventureList(filter: {
-        slug: {
-          _expressions: [ { value: $slug } ]
-        }
-      }) {
+query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    filter: {slug: {_expressions: [{value: $slug}]}}
+    _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
     items {
       _path
       title
@@ -163,22 +193,22 @@ query($slug: String!) {
       primaryImage {
         ... on ImageRef {
           _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
         json
         plaintext
+        html
       }
       itinerary {
         json
         plaintext
+        html
       }
     }
     _references {
-      ...on AdventureModel {
+      ... on AdventureModel {
         _path
         slug
         title
@@ -219,9 +249,9 @@ async getAllAdventures() {
 
 // And so on, and so forth ... 
 
-async getAdventureSlugs() { ... }
+async getAdventureSlugs(queryVariables) { ... }
 
-async getAdventuresBySlug(slug) { ... }
+async getAdventuresBySlug(slug, queryVariables) { ... }
 ...
 ```
 
@@ -231,17 +261,17 @@ Next.js アプリは、アドベンチャーデータを提示するために 2 
 
 + `src/pages/index.js`
 
-   [Next.js の getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) を使用して `getAllAdventures()` を呼び出し、各アドベンチャーをカードとして表示します。
+  [Next.js の getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) を使用して `getAllAdventures()` を呼び出し、各アドベンチャーをカードとして表示します。
 
-   `getServerSiteProps()` を使用すると、この Next.js ページのサーバーサイドレンダリングが可能になります。
+  `getServerSiteProps()` を使用すると、この Next.js ページのサーバーサイドレンダリングが可能になります。
 
 + `src/pages/adventures/[...slug].js`
 
-   1 つのアドベンチャーの詳細を表示する [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes)。この動的ルートは、`adventures/index.js` ページのアドベンチャー選択を介して渡された `slug` パラメーターを使用して `getAdventureBySlug(..)` を呼び出し、[Next.js の getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) を使用して各アドベンチャーのデータをプリフェッチします。
+  1 つのアドベンチャーの詳細を表示する [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes)。この動的ルートは、 [Next.js の getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) ～への呼び出しを通じて `getAdventureBySlug(slug, queryVariables)` の使用 `slug` アドベンチャー選択経由で渡されるパラメーター `adventures/index.js` ページ、および `queryVariables` を使用して、画像フォーマット、幅、画質を制御する。
 
-   動的ルートは、[Next.js の getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) を使用してすべてのアドベンチャーの詳細をプリフェッチし、GraphQL クエリ `getAdventurePaths()` によって返されるアドベンチャーの完全なリストに基づいてすべての可能なルート配列を入力できます。
+  動的ルートは、[Next.js の getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) を使用してすべてのアドベンチャーの詳細をプリフェッチし、GraphQL クエリ `getAdventurePaths()` によって返されるアドベンチャーの完全なリストに基づいてすべての可能なルート配列を入力できます。
 
-   `getStaticPaths()` と `getStaticProps(..)` の使用により、これらの Next.js ページの静的サイト生成が可能になりました。
+  `getStaticPaths()` と `getStaticProps(..)` の使用により、これらの Next.js ページの静的サイト生成が可能になりました。
 
 ## デプロイメント設定
 

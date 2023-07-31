@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 ## 前提条件
 
-この多段階チュートリアルの前の部分で説明した手順が完了しているか、[tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip) が AEM as a Cloud Service のオーサーサービスとパブリッシュサービスにインストールされていることを前提としています。
+このマルチパートチュートリアルの前の部分で説明した手順が完了していることを前提としています。 [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) がAEM as a Cloud Service Author サービスおよび Publish サービスにインストールされている。
 
 _この章の IDE スクリーンショットは、[Visual Studio Code](https://code.visualstudio.com/)から取得しています。_
 

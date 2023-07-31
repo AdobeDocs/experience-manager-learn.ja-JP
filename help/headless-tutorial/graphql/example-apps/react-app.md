@@ -9,12 +9,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-last-substantial-update: 2022-11-09T00:00:00Z
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: ht
-source-wordcount: '916'
-ht-degree: 100%
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+workflow-type: tm+mt
+source-wordcount: '892'
+ht-degree: 97%
 
 ---
 
@@ -32,23 +32,22 @@ ht-degree: 100%
 
 次のツールをローカルにインストールする必要があります。
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 + [Node.js v18](https://nodejs.org/ja/)
 + [Git](https://git-scm.com/)
 
 ## AEM の要件
 
-React アプリケーションは、次の AEM デプロイメントオプションと連携します。 すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0)をインストールする必要があります。
+React アプリケーションは、次の AEM デプロイメントオプションと連携します。 すべてのデプロイメントに[WKND Site v2.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja?lang=ja#install-local-aem-instances)
+   + が必要 [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 
 React アプリケーションは __AEM パブリッシュ__&#x200B;環境で使用できますが、React アプリケーションの設定で認証が提供されている場合は、AEM オーサーからコンテンツをソース化できます。
 
 ## 使用方法
 
-1. `adobe/aem-guides-wknd-graphql` レポジトリーのクローンを作成します。
+1. `adobe/aem-guides-wknd-graphql` リポジトリのクローンを作成します。
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
@@ -60,7 +59,7 @@ React アプリケーションは __AEM パブリッシュ__&#x200B;環境で使
 
    ```plain
    # Server namespace
-   REACT_APP_HOST_URI=http://localhost:4503
+   REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com
    
    #AUTH (Choose one method)
    # Authentication methods: 'service-token', 'dev-token', 'basic' or leave blank to use no authentication
@@ -100,43 +99,73 @@ AEM ヘッドレスのベストプラクティスに従い、React アプリケ�
 + `wknd/adventures-all` 永続クエリ。AEM のすべてのアドベンチャーを要約されたプロパティセットとともに返します。この永続クエリは、初期ビューのアドベンチャーリストを制御します。
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
 + `wknd/adventure-by-slug` 永続クエリ。`slug`（アドベンチャーを一意に識別するカスタムプロパティ）によって、完全なプロパティセットを含む単一のアドベンチャーを返します。この永続クエリで、アドベンチャーの詳細ビューが強化されます。
 
 ```
-# Retrieves an adventure Content Fragment based on it's slug
-# Example query variables: 
-# {"slug": "bali-surf-camp"} 
-# Technically returns an adventure list but since the the slug 
-# property is set to be unique in the CF Model, only a single CF is expected
+# Retrieves an Adventure Fragment based on it's unique slug.
+#
+# Required query variables:
+# - {"slug": "bali-surf-camp"}
+#
+# Optional query variables:
+# - { 
+#     "imageFormat": "JPG",
+#     "imageSeoName": "my-adventure",
+#     "imageWidth": 1600,
+#     "imageQuality": 90 
+#   }
+#  
+# This query returns an adventure list but since the the slug property is set to be unique in the Content Fragment Model, only a single Content Fragment is expected.
 
-query($slug: String!) {
-  adventureList(filter: {
-        slug: {
-          _expressions: [ { value: $slug } ]
-        }
-      }) {
+query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    filter: {slug: {_expressions: [{value: $slug}]}}
+    _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
     items {
       _path
       title
@@ -151,22 +180,22 @@ query($slug: String!) {
       primaryImage {
         ... on ImageRef {
           _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
         json
         plaintext
+        html
       }
       itinerary {
         json
         plaintext
+        html
       }
     }
     _references {
-      ...on AdventureModel {
+      ... on AdventureModel {
         _path
         slug
         title
@@ -196,18 +225,20 @@ AEM の永続クエリは HTTP GET を介して実行され、[JavaScript 用 AE
  *
  * @returns an array of Adventure JSON objects, and array of errors
  */
-export function useAdventuresByActivity(adventureActivity) {
+export function useAdventuresByActivity(adventureActivity, params = {}) {
   ...
+  let queryVariables = params;
+
   // If an activity is provided (i.e "Camping", "Hiking"...) call wknd-shared/adventures-by-activity query
   if (adventureActivity) {
     // The key is 'activity' as defined in the persisted query
-    const queryParameters = { activity: adventureActivity };
+    queryVariables = { ...queryVariables, activity: adventureActivity };
 
     // Call the AEM GraphQL persisted query named "wknd-shared/adventures-by-activity" with parameters
-    response = await fetchPersistedQuery("wknd-shared/adventures-by-activity", queryParameters);
+    response = await fetchPersistedQuery("wknd-shared/adventures-by-activity", queryVariables);
   } else {
     // Else call the AEM GraphQL persisted query named "wknd-shared/adventures-all" to get all adventures
-    response = await fetchPersistedQuery("wknd-shared/adventures-all");
+    response = await fetchPersistedQuery("wknd-shared/adventures-all", queryVariables);
   }
   
   ... 
@@ -252,17 +283,17 @@ React アプリケーションは、2 つのビューを使用して、web エ�
 
 + `src/components/Adventures.js`
 
-   `src/api/usePersistedQueries.js` から `getAdventuresByActivity(..)` を呼び出して、返されたアドベンチャーをリストに表示します。
+  `src/api/usePersistedQueries.js` から `getAdventuresByActivity(..)` を呼び出して、返されたアドベンチャーをリストに表示します。
 
 + `src/components/AdventureDetail.js`
 
-   `Adventures` コンポーネントでアドベンチャー選択経由で渡される `slug` パラメーターを使用して `getAdventureBySlug(..)` を呼び出し、単一のアドベンチャーの詳細を表示します。
+  `Adventures` コンポーネントでアドベンチャー選択経由で渡される `slug` パラメーターを使用して `getAdventureBySlug(..)` を呼び出し、単一のアドベンチャーの詳細を表示します。
 
 ### 環境変数
 
 複数の[環境変数](https://create-react-app.dev/docs/adding-custom-environment-variables)を使用して AEM 環境に接続します。デフォルトでは `http://localhost:4503` で実行されている AEM パブリッシュに接続します。`.env.development` ファイルを更新し、AEM 接続を変更します。
 
-+ `REACT_APP_HOST_URI=http://localhost:4502`：AEM ターゲットホストに設定します
++ `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`：AEM ターゲットホストに設定します
 + `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`：GraphQL エンドポイントのパスを設定します。このアプリは永続クエリのみを使用するので、この React アプリでは使用されません。
 + `REACT_APP_AUTH_METHOD=`：推奨される認証方法。オプションであるため、デフォルトでは認証は使用されません。
    + `service-token`：サービス資格情報を使用して AEM as a Cloud Service でアクセストークンを取得します
@@ -281,6 +312,4 @@ AEM オーサー環境に接続する場合、[認証方法を設定する必要
 
 ### クロスオリジンリソース共有（CORS）
 
-この React アプリケーションは、ターゲットの AEM 環境で実行される AEM ベースの CORS 設定に依存し、React アプリが `http://localhost:3000` において開発モードで実行されることを前提とします。[CORS 設定](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)は、[WKND サイト](https://github.com/adobe/aem-guides-wknd)の一部です。
-
-![CORS 設定](assets/react-app/cross-origin-resource-sharing-configuration.png)
+この React アプリケーションは、ターゲットの AEM 環境で実行される AEM ベースの CORS 設定に依存し、React アプリが `http://localhost:3000` において開発モードで実行されることを前提とします。以下を確認します。[AEMヘッドレスデプロイメントドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html) を参照してください。
