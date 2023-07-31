@@ -11,7 +11,7 @@ index: y
 source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
 workflow-type: tm+mt
 source-wordcount: '1832'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 99%
    + [OCR データ抽出](some-useful-integrations/ocr-data-extraction.md)
    + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
    + [ServiceNow との統合](some-useful-integrations/service-now.md)
-   + [SendGrid での電子メールの送信](some-useful-integrations/send-grid.md)
+   + [SendGrid でのメールの送信](some-useful-integrations/send-grid.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [1 - 環境のセットアップ](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -59,7 +59,7 @@ ht-degree: 99%
    + [アダプティブフォームでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブフォームの Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
    + [ルールエディターでのカスタム関数](adaptive-forms/custom-functions-aem-forms.md)
-   + [web ページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
+   + [Web ページへのアダプティブフォームの埋め込み](adaptive-forms/embed-af-web-page.md)
    + [文字列の配列を作成](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [AEM Forms の項目読み込みパス](adaptive-forms/using-item-load-path.md)
    + [OSGi ワークフローで XML の Set Value を使用する](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)

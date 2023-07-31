@@ -1,6 +1,6 @@
 ---
-title: CSRF 保護
-description: 認証済みユーザーに許可されたPOST、PUT、および削除リクエストにAEM CSRF トークンを生成し、追加する方法について説明します。
+title: CSRF 対策
+description: AEM CSRF トークンを生成し、認証済みユーザーに対して AEM への許可された POST、PUT、DELETE リクエストに追加する方法を説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -13,40 +13,40 @@ thumbnail: KT-13651.jpeg
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
 source-wordcount: '443'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# CSRF 保護
+# CSRF 対策
 
-認証済みユーザーに許可されたPOST、PUT、および削除リクエストにAEM CSRF トークンを生成し、追加する方法について説明します。
+AEM CSRF トークンを生成し、認証済みユーザーに対して AEM への許可された POST、PUT、DELETE リクエストに追加する方法を説明します。
 
-AEMには有効な CSRF トークンの送信が必要です __認証済み__ __POST__、__PUT、または __DELETE__ AEM オーサーサービスとパブリッシュサービスの両方に対する HTTP リクエスト。
+AEM では、__認証された__ __POST__、__PUT、__DELETE__ HTTP リクエストに対して、AEM オーサーサービスとパブリッシュサービスの両方に有効な CSRF トークンを送信する必要があります。
 
-CSRF トークンは、 __GET__ リクエストまたは __匿名__ リクエスト。
+CSRF トークンは、__GET__ リクエストや&#x200B;__匿名__&#x200B;リクエストには必要ありません。
 
-CSRF トークンがPOST、PUT、またはDELETEのリクエストと共に送信されない場合、AEMは 403 Forbidden 応答を返し、AEMは次のエラーをログに記録します。
+CSRF トークンが POST、PUT、DELETE リクエストで送信されない場合、AEM は 403 Forbidden 応答を返し、次のエラーをログに記録します。
 
 ```log
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] isValidRequest: empty CSRF token - rejecting
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-詳しくは、 [AEM CSRF 保護の詳細に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html).
+[AEM の CSRF 対策について詳しくは、ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=ja)を参照してください。
 
 
 ## CSRF クライアントライブラリ
 
-AEMは、コアプロトタイプ関数のパッチを適用することで、CSRF トークン XHR およびフォームPOSTリクエストの生成と追加に使用できるクライアントライブラリを提供します。 機能は、 `granite.csrf.standalone` クライアントライブラリカテゴリ。
+AEM は、コアプロトタイプ関数にパッチを適用することで、CSRF トークン XHR を生成および追加し、POST リクエストを形成するために使用できるクライアントライブラリを提供します。この機能は、`granite.csrf.standalone` クライアントライブラリカテゴリによって提供されます。
 
-この方法を使用するには、 `granite.csrf.standalone` ページ上で読み込まれるクライアントライブラリへの依存関係として。 例えば、 `wknd.site` クライアントライブラリカテゴリ、追加 `granite.csrf.standalone` ページ上で読み込まれるクライアントライブラリへの依存関係として。
+この方法を使用するには、ページに読み込まれるクライアントライブラリに依存関係として `granite.csrf.standalone` を追加します。例えば、`wknd.site` クライアントライブラリカテゴリを使用している場合は、ページに読み込まれるクライアントライブラリに依存関係として `granite.csrf.standalone` を追加します。
 
-## CSRF 保護を使用したカスタムフォームの送信
+## CSRF 対策を備えたカスタムフォームの送信
 
-次の [`granite.csrf.standalone` クライアントライブラリ](#csrf-client-library) を使用すると、CSRF トークンを手動でフォーム送信に追加することができます。 次の例は、フォーム送信に CSRF トークンを追加する方法を示しています。
+[`granite.csrf.standalone` クライアントライブラリ](#csrf-client-library)の使用がユースケースに適さない場合は、フォーム送信に CSRF トークンを手動で追加できます。次の例は、フォーム送信に CSRF トークンを追加する方法を示しています。
 
-このコードスニペットは、フォーム送信時に、AEMから CSRF トークンを取得し、という名前のフォーム入力に追加する方法を示しています。 `:cq_csrf_token`. CSRF トークンの有効期間は短いので、フォームの送信直前に CSRF トークンを取得して設定し、有効性を確保することをお勧めします。
+このコードスニペットは、フォーム送信時に AEM から CSRF トークンを取得し、`:cq_csrf_token` という名前のフォーム入力に追加する方法を示しています。CSRF トークンの有効期間は短いので、フォーム送信の直前に CSRF トークンを取得して設定し、その有効期間を確保することをお勧めします。
 
 ```javascript
 // Attach submit handler event to form onSubmit
@@ -71,11 +71,11 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 });
 ```
 
-## CSRF 保護を使用して取得
+## CSRF 対策による取得
 
-次の [`granite.csrf.standalone` クライアントライブラリ](#csrf-client-library) は、使用事例に適していません。XHR に手動で CSRF トークンを追加したり、リクエストを取得したりできます。 次の例は、CSRF トークンを XHR に追加し、fetch で作成した XHR に追加する方法を示しています。
+[`granite.csrf.standalone` クライアントライブラリ](#csrf-client-library)の使用がユースケースに適さない場合は、CSRF トークンを XHR に手動で追加するか、リクエストを取得できます。次の例は、取得で生成した XHR に CSRF トークンを追加する方法を示しています。
 
-このコードスニペットは、AEMから CSRF トークンを取得し、取得リクエストの `CSRF-Token` HTTP リクエストヘッダー。 CSRF トークンの有効期間は短いので、フェッチリクエストが実行される直前に CSRF トークンを取得して設定し、有効性を確保することをお勧めします。
+このコードスニペットは、AEM から CSRF トークンを取得し、取得リクエストの `CSRF-Token` HTTP リクエストヘッダーに追加する方法を示しています。CSRF トークンの有効期間は短いので、取得リクエストの直前に CSRF トークンを取得して設定し、その有効期間を確保することをお勧めします。
 
 ```javascript
 /**
@@ -101,7 +101,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher 設定
 
-AEM パブリッシュサービスで CSRF トークンを使用する場合は、CSRF トークンエンドポイントへのGET要求を許可するように Dispatcher 設定を更新する必要があります。 次の設定は、AEM パブリッシュサービスの CSRF トークンエンドポイントに対するGETリクエストを許可します。 この設定が追加されない場合、CSRF トークンエンドポイントは 404 Not Found 応答を返します。
+AEM パブリッシュサービスで CSRF トークンを使用する場合、CSRF トークンエンドポイントへの GET リクエストを許可するように Dispatcher 設定を更新する必要があります。次の設定では、AEM パブリッシュサービスの CSRF トークンエンドポイントへの GET リクエストを許可します。 この設定が追加されない場合、CSRF トークンエンドポイントは 404 Not Found 応答を返します。
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

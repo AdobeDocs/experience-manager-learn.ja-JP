@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
 workflow-type: tm+mt
 source-wordcount: '1015'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -100,7 +100,7 @@ ht-degree: 97%
       + [OCD を使用した OSGi 設定](./developing/osgi-services/configurations-ocd.md)
    + 詳細{#advanced}
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
-      + [CSRF 保護](./developing/advanced/csrf-protection.md)
+      + [CSRF 対策](./developing/advanced/csrf-protection.md)
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
