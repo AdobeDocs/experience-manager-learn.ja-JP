@@ -8,9 +8,9 @@ level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '318'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -96,7 +96,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### CORS リクエストヘッダーの許可
 
-必要な [処理のためにAEMにパススルーする HTTP リクエストヘッダー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)だから、それはディスパッチャーの `/clientheaders` 設定。
+[必要な HTTP リクエストヘッダーを AEM に通過して処理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)できるようにするには、Disaptcher の `/clientheaders` 設定でこれらのヘッダーを許可する必要があります。
 
 ```
 /clientheaders {
@@ -109,7 +109,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### CORS 応答ヘッダーのキャッシュ
 
-キャッシュされたコンテンツでの CORS ヘッダーのキャッシュと提供を許可するには、以下を追加します。 [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers) を AEM パブリッシュに追加します。 `dispatcher.any` ファイル。
+キャッシュされたコンテンツの CORS ヘッダーをキャッシュし提供できるようにするには、AEM パブリッシュの `dispatcher.any` ファイルに次の [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#caching-http-response-headers)を追加します。
 
 ```
 /publishfarm {
@@ -144,4 +144,4 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 * [AEM でのクロスオリジンリソース共有（CORS）について](./understand-cross-origin-resource-sharing.md)
 * [クロスオリジンリソース共有（W3C）](https://www.w3.org/TR/cors/)
-* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [HTTP アクセス制御（Mozilla MDN）](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Access_control_CORS)
