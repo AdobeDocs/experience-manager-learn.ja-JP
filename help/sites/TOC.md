@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
-workflow-type: ht
-source-wordcount: '458'
+source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
+workflow-type: tm+mt
+source-wordcount: '459'
 ht-degree: 100%
 
 ---
@@ -124,6 +124,7 @@ ht-degree: 100%
       + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
 + 他のユーザーから学ぶ {#expert-resources}
+   + [概要](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
