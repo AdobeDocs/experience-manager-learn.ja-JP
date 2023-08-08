@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
-source-wordcount: '303'
-ht-degree: 100%
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 96%
 
 ---
 
@@ -23,14 +23,18 @@ AEM で外部データベースとの統合を有効にする方法は多数あ�
 最初の手順では、適切な [MySQL ドライバー](https://mvnrepository.com/artifact/mysql/mysql-connector-java)を AEM にダウンロードしてデプロイします。
 次に、データベースに固有の Sling Connection Pooled DataSource プロパティを設定します。次のスクリーンショットは、このチュートリアルで使用する設定を示しています。データベーススキーマは、このチュートリアルアセットの一部として提供されます。
 
-![data-source](assets/data-source.JPG)
-
-
-* JDBC ドライバークラス：`com.mysql.cj.jdbc.Driver`
-* JDBC 接続 URI：`jdbc:mysql://localhost:3306/aemformstutorial`
-
 >[!NOTE]
 >OSGi サービスで使用される名前なので、データソース `StoreAndRetrieveAfData` に名前を付けてください。
+
+
+![data-source](assets/data-source.JPG)
+
+| プロパティ名 | プロパティの値 |   |
+|---------------------|------------------------------------------------------------------------------------|---|
+| データソース名 | StoreAndRetrieveAfData |   |
+| JDBC ドライブクラス | jdbc:mysql://localhost:3306/aemformstutorial |   |
+| JDBC 接続 URI | jdbc:mysql://localhost:3306/aemformstutorial?serverTimezone=UTC&amp;autoReconnect=true |   |
+|                     |                                                                                    |   |
 
 
 ## データベースの作成

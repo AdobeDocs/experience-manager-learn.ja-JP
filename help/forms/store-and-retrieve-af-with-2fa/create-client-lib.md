@@ -10,8 +10,8 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 100%
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
             success: function (x) {
               bootbox.alert(
                 "This is your reference number.<br>" +
-                  x.data.path +
+                  x.data.applicationID +
                   " <br>You will need this to retrieve your application",
                 function () {
                   console.log(
@@ -69,7 +69,7 @@ $(document).ready(function () {
 >[!NOTE]
 > ダイアログボックスを表示するために、[bootbox javascript ライブラリ](http://bootboxjs.com/examples.html)を使用しました
 
-このサンプルで使用しているクライアントライブラリは、[こちらからダウンロード](assets/client-libraries.zip)できます
+このサンプルで使用しているクライアントライブラリは、[こちらからダウンロード](assets/store-af-with-attachments-client-lib.zip)できます
 
 ## 次の手順
 

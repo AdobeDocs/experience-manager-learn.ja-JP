@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 100%
+source-wordcount: '391'
+ht-degree: 87%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ## データソースの作成
 
-**StoreAndRetrieveAfData** というデータソースを作成する必要があります。OSGi バンドル内のコードでは、このデータソース名を使用します。
+Apache Sling 接続プールに入れられた、という名前のデータソースを作成する必要があります。 **StoreAndRetrieveAfData** 前の手順で作成したデータベーススキーマを指している。 OSGi バンドル内のコードは、このデータソース名を使用します。
 
 ## フォームデータモデルの作成
 
@@ -43,13 +43,13 @@ ht-degree: 100%
 
 ## 次の OSGi バンドルのデプロイ
 
-[データベースに対してデータの保存と取得を行うためのコード](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)を含んだバンドルをデプロイします。
+[データベースに対してデータの保存と取得を行うためのコード](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)を含んだバンドルをデプロイします。
 [developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) をダウンロードして解凍します。
 Felix web コンソールを使用して DevelopingWithServiceUser.jar ファイルをデプロイします。
 
 ## クライアントライブラリのデプロイ
 
-このサンプルでは、2 つのクライアントライブラリを使用します。 これらの[クライアントライブラリ](assets/client-libraries.zip)を AEM に読み込みます。
+このサンプルでは、2 つのクライアントライブラリを使用します。 これらの[クライアントライブラリ](assets/store-af-with-attachments-client-lib.zip)を AEM に読み込みます。
 
 ## カスタムアダプティブフォームテンプレートの読み込み
 
@@ -59,7 +59,7 @@ Felix web コンソールを使用して DevelopingWithServiceUser.jar ファイ
 
 このサンプルを構成する 2 つのフォームを AEM に読み込む必要があります。 サンプルフォームは、[こちらからダウンロード](assets/sample-forms.zip)できます。
 
-[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) を編集モードで開きます。アダプティブフォーム内の適切なフィールドに、 API キーと API シークレットの値を指定します。
+[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) を編集モードで開きます。アダプティブフォーム内の適切なフィールドに、「 Vonage API Key 」と「 API Secret 」の値を指定します。
 
 ## ソリューションのテスト
 
