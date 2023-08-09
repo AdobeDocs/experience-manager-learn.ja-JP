@@ -10,10 +10,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 100%
+source-wordcount: '1792'
+ht-degree: 97%
 
 ---
 
@@ -32,12 +32,32 @@ Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイッ�
 
 ## Java のインストール
 
-Experience Manager は Java アプリケーションなので、開発ツールをサポートするには Java SDK が必要です。
+Experience Managerは Java アプリケーションなので、開発ツールをサポートするにはOracleJava SDK が必要です。
 
 1. [最新の Java SDK 11 をダウンロードしてインストール](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. 次のコマンドを実行して、Java 11 SDK がインストールされていることを確認します。
-   + Windows：`java -version`
-   + macOS／Linux：`java --version`
+1. 次のコマンドを実行して、OracleJava 11 SDK がインストールされていることを確認します。
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java --version
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -version
+```
+
+>[!TAB Linux]
+
+```shell
+$ java --version
+```
+
+>[!ENDTABS]
 
 ![Java](./assets/aem-runtime/java.png)
 
@@ -69,7 +89,18 @@ AEM as a Cloud Service SDK または AEM SDK には、AEM オーサーおよび�
    [ダブルクリックして](#troubleshooting-double-click)、AEM as Cloud Service クイックスタート jar を起動することは&#x200B;*できません*。
 1. Web ブラウザーで [http://localhost:4502](http://localhost:4502) のローカル AEM オーサーサービスにアクセスします。
 
-Windows：
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ mkdir -p ~/aem-sdk/author
+$ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
+$ cd ~/aem-sdk/author
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Windows]
 
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
@@ -78,7 +109,7 @@ $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
 
-macOS／Linux：
+>[!TAB Linux]
 
 ```shell
 $ mkdir -p ~/aem-sdk/author
@@ -86,6 +117,9 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
+
+>[!ENDTABS]
+
 
 ## ローカル AEM パブリッシュサービスの設定
 
@@ -100,16 +134,9 @@ $ java -jar aem-author-p4502.jar
    AEM as Cloud Service クイックスタート Jar を[ダブルクリック](#troubleshooting-double-click)しても、起動&#x200B;*できません*。
 1. Web ブラウザーで [http://localhost:4503](http://localhost:4503) のローカル AEM パブリッシュサービスにアクセスします。
 
-Windows：
+>[!BEGINTABS]
 
-```shell
-$ mkdir -p c:\Users\<My User>\aem-sdk\publish
-$ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ cd c:\Users\<My User>\aem-sdk\publish
-$ java -jar aem-publish-p4503.jar
-```
-
-macOS／Linux：
+>[!TAB macOS]
 
 ```shell
 $ mkdir -p ~/aem-sdk/publish
@@ -118,9 +145,35 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
+>[!TAB Windows]
+
+```shell
+$ mkdir -p c:\Users\<My User>\aem-sdk\publish
+$ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
+$ cd c:\Users\<My User>\aem-sdk\publish
+$ java -jar aem-publish-p4503.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ mkdir -p ~/aem-sdk/publish
+$ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
+$ cd ~/aem-sdk/publish
+$ java -jar aem-publish-p4503.jar
+```
+
+>[!ENDTABS]
+
+
 ## プレリリースモードでのローカル AEM サービスの設定
 
 ローカルの AEM ランタイムは、[プレリリース モード](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=ja)で開始できるため、開発者は AEM as a Cloud Service の次のリリースの機能に対してビルドすることができます。プレリリースは、ローカル AEM ランタイムの最初の起動時に `-r prerelease` 引数を渡すことにより有効になります。これは、ローカルの AEM オーサーサービスと AEM パブリッシュサービスの両方で使用できます。
+
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
 
 ```shell
 # For AEM Author service in prerelease mode
@@ -129,6 +182,28 @@ $ java -jar aem-author-p4502.jar -r prerelease
 # For AEM Publish service in prerelease mode
 $ java -jar aem-publish-p4503.jar -r prerelease
 ```
+
+>[!TAB Windows]
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
+```
+
+>[!TAB Linux]
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
+```
+
+>[!ENDTABS]
 
 ## コンテンツ配布のシミュレーション {#content-distribution}
 
@@ -227,11 +302,51 @@ AEM SDK のアップグレードの間に上記の方法を使用してコード
 
 AEM オーサーサービスを起動するには、`cd` を使用してクイックスタート Jar のあるディレクトリへと移動し、コマンドを実行します。
 
-`$ java -jar aem-author-p4502.jar`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!ENDTABS]
 
 または、AEM パブリッシュサービスを起動するには、`cd` でクイックスタート Jar があるディレクトリに移動して、コマンドを実行します。
 
-`$ java -jar aem-publish-p4503.jar`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!ENDTABS]
 
 ### コマンドラインからのクイックスタート Jar の起動がすぐに中止される{#troubleshooting-java-8}
 
@@ -249,12 +364,31 @@ Quickstart: aborting
 ```
 
 これは、AEM as a Cloud Service には Java SDK 11 が必要で、異なるバージョン（おそらく Java 8）を実行しているためです。この問題を解決するには、[Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) をダウンロードしてインストールします。
-Java SDK 11 をインストールしたら、コマンドラインから次のコマンドを実行して、その SDK がアクティブなバージョンであることを確認します。
 
-Java 11 SDK がインストールされたら、コマンドラインからコマンドを実行して、その SDK がアクティブなバージョンであることを確認します。
 
-+ Windows：`java -version`
-+ macOS／Linux：`java --version`
+oracleJava 11 SDK がインストールされたら、コマンドラインからコマンドを実行して、その SDK がアクティブなバージョンであることを確認します。
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java --version
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -version
+```
+
+>[!TAB Linux]
+
+```shell
+$ java --version
+```
+
+>[!ENDTABS]
 
 ## その他のリソース
 
