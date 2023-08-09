@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 181023c9584bcd5084778ebf00d34f8ecaa74524
+source-git-commit: f8fd13d3f315aa0bd9f268b9fe81b9d9c17b243c
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 42%
@@ -140,7 +140,7 @@ AEM パブリッシュ（およびプレビュー）サービスの Dispatcher �
 1. AEM パブリッシュサービスの vhost 設定ファイルを、Dispatcher 設定プロジェクト（通常は、 ）で開きます。 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
 2. の内容をコピーします。 `<IfDefine ENABLE_CORS>...</IfDefine>` を、有効な vhost 設定ファイルにブロックします。
 
-   ```{line-numbers="true"}
+   ```{ highlight="19"}
    <VirtualHost *:80>
      ...
      <IfModule mod_headers.c>
