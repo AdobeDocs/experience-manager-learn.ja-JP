@@ -1,6 +1,6 @@
 ---
-title: IMS を使用してAEM Sitesをタグプロパティに接続
-description: AEMでの IMS 設定を使用して、AEM Sitesをタグプロパティに接続する方法について説明します。 このセットアップでは、Launch API で AEM を認証し、AEM が Launch API を介して通信してタグプロパティにアクセスできるようにします。
+title: IMS を使用した AEM Sites とタグプロパティの接続
+description: AEM の IMS 設定を使用して AEM Sites とタグプロパティを接続する方法を説明します。このセットアップでは、Launch API で AEM を認証し、AEM が Launch API を介して通信してタグプロパティにアクセスできるようにします。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -13,16 +13,16 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '313'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# IMS を使用してAEM Sitesをタグプロパティに接続{#connect-aem-and-tag-property-using-ims}
+# IMS を使用した AEM Sites とタグプロパティの接続{#connect-aem-and-tag-property-using-ims}
 
 >[!NOTE]
 >
