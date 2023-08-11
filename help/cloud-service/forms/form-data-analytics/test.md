@@ -13,9 +13,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -60,4 +60,4 @@ _satellite.setDebug(true)
 
 ## これで完了です
 
-AEM FormsとAdobe Analyticsを正常に統合し、フォームデータフィールドに関するレポートを作成できました。
+AEM Forms as a Cloud Service と Adobe Analytics を正常に統合して、フォームデータフィールドに関するレポートを作成しました。
