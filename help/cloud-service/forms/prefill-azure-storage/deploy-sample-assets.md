@@ -1,6 +1,6 @@
 ---
 title: サンプルアセットのデプロイ
-description: サンプルアセットをローカルクラウド対応システムにデプロイします。
+description: サンプルアセットをローカルクラウド対応のシステムにデプロイします。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -9,26 +9,26 @@ version: Cloud Service
 topic: Integrations
 kt: 13717
 source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '198'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # サンプルアセットのデプロイ
 
-このユースケースをシステムで動作させるには、ローカルクラウド対応システムに次のアセットをデプロイしてください。
+このユースケースをシステムで動作させるには、ローカルクラウド対応のシステムに次のアセットをデプロイしてください。
 
-* 必要な設定/アカウントがすべて、[概要ドキュメント](./introduction.md)
+* [概要ドキュメント](./introduction.md)に記載されている必要な設定／アカウントがすべて作成済みであることを確認してください。
 
 * [カスタムアダプティブフォームテンプレートと、関連するページコンポーネントをインストールします。](./assets/azure-portal-template-page-component.zip)
 
-* [SendGrid フォームデータモデルのインストール](./assets/send-grid-form-data-model.zip). このフォームデータモデルが機能するには、アドレスから検証された API キーと SendGrid を提供する必要があります。 フォームデータモデルエディターでフォームデータモデルをテストする
+* [SendGrid フォームデータモデルをインストールします](./assets/send-grid-form-data-model.zip)。このフォームデータモデルが機能するには、API キーと SendGrid の検証元アドレスを指定する必要があります。フォームデータモデルエディターでフォームデータモデルをテストします。
 
-* [Azure ベースのフォームデータモデルのインストール](./assets/azure-storage-fdm.zip). フォームデータモデルが機能するには、Azure ストレージアカウントの資格情報を指定する必要があります。 フォームデータモデルエディターでフォームデータモデルをテストします。
+* [Azure でサポートされているフォームデータモデルをインストールします](./assets/azure-storage-fdm.zip)。このフォームデータモデルが機能するには、Azure ストレージアカウントの資格情報を指定する必要があります。フォームデータモデルエディターでフォームデータモデルをテストします。
 
-* [サンプルのアダプティブフォームを読み込む](./assets/credit-applications-af.zip)
+* [サンプルアダプティブフォームを読み込みます。](./assets/credit-applications-af.zip)
 * [クライアントライブラリを読み込みます。](./assets/client-lib.zip)
-* [フォームをプレビューする](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled). 有効な電子メールアドレスを入力し、「保存」ボタンをクリックします。 フォームデータは Azure ストレージに保存され、保存されたフォームへのリンクが記載された電子メールが、指定された電子メールアドレスに送信されます。
+* [フォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled)。有効なメールアドレスを入力し、「保存」ボタンをクリックします。フォームデータが Azure ストレージに保存され、保存されたフォームへのリンクが記載されたメールが、指定したメールアドレスに送信されます。
 
 
