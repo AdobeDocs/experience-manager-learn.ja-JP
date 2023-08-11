@@ -1,6 +1,6 @@
 ---
-title: AEM FormsとMarketoの統合
-description: AEM Formsフォームデータモデルを使用してAEM FormsとMarketoを統合する方法を説明します。
+title: AEM Forms と Marketo の統合
+description: AEM Forms フォームデータモデルを使用して AEM Forms と Marketo を統合する方法を説明します
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -11,13 +11,13 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '379'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# AEM FormsとMarketoの統合
+# AEM Forms と Marketo の統合
 
 アドビの一部である Marketo は、メール、モバイル、ソーシャル、デジタル広告、web 管理、分析などのアカウントベースのマーケティングに重点を置いたマーケティング自動処理ソフトウェアを提供しています。
 
