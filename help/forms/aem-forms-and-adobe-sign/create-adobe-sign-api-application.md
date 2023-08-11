@@ -11,9 +11,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0fea826c-b481-4c8f-872f-e429430ed3a6
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -27,4 +27,4 @@ Acrobat Sign プラットフォームと統合するには、Acrobat Sign 上で
 
 ## 次の手順
 
-[Acrobat Signクラウド設定を作成](./create-adobe-sign-cloud-configuration.md)
+[Acrobat Sign クラウド設定の作成](./create-adobe-sign-cloud-configuration.md)
