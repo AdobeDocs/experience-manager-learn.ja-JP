@@ -10,12 +10,12 @@ kt: 9124
 thumbnail: 337575.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: fe9d1305-7add-4434-a4a9-16e0fb805574
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '62'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
