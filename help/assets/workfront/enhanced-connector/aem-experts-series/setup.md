@@ -11,12 +11,12 @@ thumbnail: 340331.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: f0018d16-af96-4b92-b0fc-6130d812bf8f
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '90'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
