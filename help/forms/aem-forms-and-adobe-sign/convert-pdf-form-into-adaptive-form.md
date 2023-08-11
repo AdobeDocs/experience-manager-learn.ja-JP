@@ -11,7 +11,7 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 9aab3eb0-03a5-4962-a2ff-d44a17dc140e
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '134'
 ht-degree: 100%
 
@@ -27,4 +27,4 @@ Adobe Sensei を活用した AEM Forms 自動フォーム変換サービスで�
 
 ## 次の手順
 
-[変換後のアダプティブフォームを設定する](./configure-converted-adaptive-form.md)
+[変換したアダプティブフォームの設定](./configure-converted-adaptive-form.md)
