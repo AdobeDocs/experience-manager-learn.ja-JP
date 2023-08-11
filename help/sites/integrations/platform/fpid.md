@@ -1,6 +1,6 @@
 ---
-title: AEM を使用した Adobe Experience Platform FPID の生成 Sites
-description: AEM Sitesを使用してAdobe Experience Platform FPID Cookie を生成または更新する方法について説明します。
+title: AEM を使用した Adobe Experience Platform FPID の生成Sites
+description: AEM Sites を使用して Adobe Experience Platform FPID Cookie を生成または更新する方法について説明します。
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -10,18 +10,18 @@ last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1040'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
-# AEM SitesでのExperience PlatformFPID の生成
+# AEM Sites を使用した Experience Platform FPID の生成
 
-Adobe Experience Manager(AEM)Sites とAdobe Experience Platform(AEP) を統合する場合、ユーザーアクティビティを一意に追跡するために、一意のファーストパーティデバイス ID(FPID)cookie を生成し、維持する必要があります。
+Adobe Experience Manager（AEM）Sites と Adobe Experience Platform（AEP）を統合するには、AEM が、ユーザーアクティビティを一意に追跡するために一意のファーストパーティデバイス ID（FPID）Cookie を生成し維持管理する必要があります。
 
 サポートドキュメントを読んで、[ファーストパーティデバイス ID と Experience Cloud ID の連携方法の詳細をご確認ください](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=ja)。
 
