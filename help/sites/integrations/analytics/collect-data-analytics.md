@@ -1,6 +1,6 @@
 ---
-title: AEM SitesとAdobe AnalyticsのAdobe Analyticsタグ拡張機能との統合
-description: イベントドリブン型Adobeクライアントデータレイヤーを使用して、AEM SitesとAdobe Analyticsを統合し、Adobe Experience Managerで作成された Web サイトでのユーザーアクティビティに関するデータを収集します。 タグルールを使用してこれらのイベントをリッスンし、データを Adobe Analytics レポートスイートに送信する方法を説明します。
+title: Adobe Analytics タグ拡張機能を使用した AEM Sites と Adobe Analytics の統合
+description: イベント駆動型 Adobe Client Data Layer を使用して、AEM Sites と Adobe Analytics を統合し、Adobe Experience Manager で構築された web サイトでのユーザーアクティビティに関するデータを収集します。タグルールを使用してこれらのイベントをリッスンし、データを Adobe Analytics レポートスイートに送信する方法を説明します。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -11,20 +11,20 @@ thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="統合" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2470'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# AEM SitesとAdobe Analyticsの統合
+# AEM Sites と Adobe Analytics の統合
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされました。その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja)を参照してください。
 
 
-AEM SitesとAdobe Analyticsを、 [AdobeクライアントデータレイヤーとAEMコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja) をクリックして、Adobe Experience Manager Sitesのページに関するデータを収集します。 [Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)と [Adobe Analytics 拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=ja)を使用して、ページデータを Adobe Analytics に送信するためのルールを作成します。
+Adobe Analytics タグ拡張機能を使用して AEM Sites と Adobe Analytics を統合し、[AEM コアコンポーネントと共に Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja) の組み込み機能を使用して、Adobe Experience Manager Sites 内のページに関するデータを収集する方法を説明します。[Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)と [Adobe Analytics 拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=ja)を使用して、ページデータを Adobe Analytics に送信するためのルールを作成します。
 
 ## 作成するもの {#what-build}
 
