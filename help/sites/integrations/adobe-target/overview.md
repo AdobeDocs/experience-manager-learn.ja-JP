@@ -1,6 +1,6 @@
 ---
-title: AEM SitesとAdobe Targetの統合
-description: AEM SitesとAdobe Targetを統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
+title: AEM Sites と Adobe Target の統合
+description: AEM Sites と Adobe Target を統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
 audience: all
 doc-type: feature video
@@ -11,20 +11,20 @@ topic: Integrations, Personalization
 role: User
 level: Beginner
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '256'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
-# AEM SitesとAdobe Targetの統合
+# AEM Sites と Adobe Target の統合
 
-AEM SitesとAdobe Targetを統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
+AEM Sites と Adobe Target を統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
 
-Adobe Experience Manager(AEM) とAdobe Targetは、補完的な機能を備えた強力なソリューションで、パーソナライズされたエクスペリエンスを提供するシームレスな統合を提供します。 しかし、お客様は、これらの製品をどのように、いつ一緒に効果的に使用するかを理解する際に課題に直面する可能性があります。 各エンドユーザーのエクスペリエンスを最適化するには、組織内の様々なチームが緊密に共同作業し、明確な役割と責務を定義することが不可欠です。 AEMとAdobe Targetの統合を活用することで、チームは調和して、優れたパーソナライズされたエクスペリエンスを提供できます。
+Adobe Experience Manager（AEM）と Adobe Target は、補完的な機能を持つ強力なソリューションで、パーソナライズされたエクスペリエンスを提供するためのシームレスな統合を提供します。ただし、お客様は、これらの製品を効果的に組み合わせて使用する方法とタイミングを理解する際に課題に直面する場合があります。すべてのエンドユーザーのエクスペリエンスを最適化するには、組織内の様々なチームが緊密に協力し、役割と責任を明確に定義することが不可欠です。AEM と Adobe Target の統合を活用することで、チームは円滑に作業して、パーソナライズされた非常に優れたエクスペリエンスを提供できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41241?quality=12&learn=on)
 
