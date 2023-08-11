@@ -1,6 +1,6 @@
 ---
 title: Visual Experience Composer を使用したパーソナライズ機能
-description: Visual Experience Composer を使用して  Adobe Target Activity を作成する方法を説明します。
+description: Visual Experience Composer を使用して Adobe Target Activity を作成する方法を説明します。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -12,12 +12,12 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '526'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
