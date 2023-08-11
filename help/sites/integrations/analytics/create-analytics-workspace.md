@@ -12,7 +12,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="統合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2162'
 ht-degree: 100%
 
