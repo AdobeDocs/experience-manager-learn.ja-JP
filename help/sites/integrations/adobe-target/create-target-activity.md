@@ -12,16 +12,16 @@ topic: Integrations
 role: User
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '127'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# エクスペリエンスフラグメントオファーを使用して  Adobe Target Activity を作成する {#target-activity-experience-fragment}
+# エクスペリエンスフラグメントオファーを使用して Adobe Target Activity を作成する {#target-activity-experience-fragment}
 
 AEM エクスペリエンスフラグメントオファーを使用して、 Adobe Target Activity を作成およびテストする方法について説明します。
 
