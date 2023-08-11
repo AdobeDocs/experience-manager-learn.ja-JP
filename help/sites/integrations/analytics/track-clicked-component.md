@@ -11,7 +11,7 @@ thumbnail: KT-6296.jpg
 badgeIntegration: label="統合" type="positive"
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1886'
 ht-degree: 100%
 
