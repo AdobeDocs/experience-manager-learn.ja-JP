@@ -1,6 +1,6 @@
 ---
-title: AEM FormsとAcrobat Signの統合
-description: Acrobat SignとAEM Formsを統合して、複雑なトランザクションを自動化し、シームレスなデジタルエクスペリエンスの一環として法的な電子署名を含めます。
+title: AEM Forms と Acrobat Sign の統合
+description: Acrobat Sign と AEM Forms を統合すると、複雑なトランザクションを自動化し、シームレスなデジタルエクスペリエンスの一環として法的な電子サインを含めることができます。
 feature: Adaptive Forms, Acrobat Sign
 version: 6.4,6.5
 topic: Integrations, Development
@@ -11,17 +11,17 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# AEM FormsとAcrobat Signの統合
+# AEM Forms と Acrobat Sign の統合
 
-AEM forms をAcrobat Signと統合し、アダプティブフォームの電子署名ワークフローを有効にする方法について説明します。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+AEM Forms を Acrobat Sign と統合して、アダプティブフォームの電子サインワークフローを有効にする方法を説明します。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-AEM FormsとAcrobat Signの統合により、次のことが可能になります。
+AEM Forms と Acrobat Sign の統合により、次の操作が可能になります。
 
 * アダプティブフォームを使用してデータをキャプチャし、署名用に自動生成されたレコードのドキュメント（DoR）を表示する
 * PDF テンプレートを基にしたアダプティブフォームの作成。データを PDF テンプレートと結合し、署名用に同じものを表示
@@ -38,4 +38,4 @@ Acrobat Sign を AEM Forms に統合するには、以下のものが必要で�
 
 ## 次の手順
 
-[SSL を設定](./set-up-ssl.md)
+[SSL のセットアップ](./set-up-ssl.md)
