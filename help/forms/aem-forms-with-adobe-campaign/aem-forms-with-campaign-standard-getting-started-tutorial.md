@@ -1,5 +1,5 @@
 ---
-title: AEM FormsとAdobe Campaign Standardの統合
+title: AEM Forms と Adobe Campaign Standard の統合
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Adobe Campaign Standard を統合し、ACS キャンペーンプロファイル情報などを取得します。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
@@ -11,17 +11,17 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
-# AEM FormsとAdobe Campaign Standardの統合
+# AEM Forms と Adobe Campaign Standard の統合
 
 ![formsandcampaign](assets/helpx-cards-forms.png)
 
-AEM FormsとAdobe Campaign Standard(ACS) を統合する方法について説明します。
+AEM Forms と Adobe Campaign Standard（ACS）の統合方法を説明します。
 
 ACS には豊富な API のセットが公開されており、ACS を好みの技術とインターフェイスさせることができます。このチュートリアルでは、AEM Forms と ACS とのインターフェイスに専念します。
 
