@@ -13,9 +13,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ return ApplicantsStateOfResidence;
 
 ![validation-error](assets/validation-error.png)
 
-次のカスタムコードが、 `validationError` データ要素の値。
+次のカスタムコードは、`validationError` データ要素の値を設定するために記述されました。
 
 ```javascript
 var validationError = "";
