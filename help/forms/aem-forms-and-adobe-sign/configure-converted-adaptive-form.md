@@ -11,9 +11,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '96'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -27,5 +27,5 @@ PDFフォームをアダプティブフォームに変換した後、通常は�
 
 ## これで完了です
 
-変換後のアダプティブフォームが、インプレース署名機能用にAcrobat Sign統合を使用するように設定されました。
+インプレース署名エクスペリエンスに Acrobat Sign 統合を使用するように、変換後のアダプティブフォームを正常に設定しました。
 
