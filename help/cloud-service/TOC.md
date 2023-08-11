@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1015'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -248,13 +248,13 @@ ht-degree: 98%
       + [Azure ストレージへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
       + [フォームへの事前入力](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [送信データのクエリ](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + フォーム入力の保存と再開{#prefill-azure-storage}
+   + フォーム入力の保存と再開 {#prefill-azure-storage}
       + [1 - はじめに](./forms/prefill-azure-storage/introduction.md)
-      + [2 — ページコンポーネントを作成](./forms/prefill-azure-storage/page-component.md)
+      + [2 - ページコンポーネントの作成](./forms/prefill-azure-storage/page-component.md)
       + [3 - アダプティブフォームテンプレートの作成](./forms/prefill-azure-storage/associate-page-component.md)
       + [4 - Azure ストレージ統合の作成](./forms/prefill-azure-storage/create-fdm.md)
       + [5 - SendGrid 統合の作成](./forms/prefill-azure-storage/send-grid-fdm.md)
-      + [6 — アダプティブフォームの作成](./forms/prefill-azure-storage/create-af.md)
+      + [6 - アダプティブフォームの作成](./forms/prefill-azure-storage/create-af.md)
       + [7 - サンプルアセットのデプロイ](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
    + レビューワークフローの作成{#create-aem-workflow}
