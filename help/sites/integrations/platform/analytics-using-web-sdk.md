@@ -1,6 +1,6 @@
 ---
-title: AEM SitesとAdobe Analyticsの Platform Web SDK との統合
-description: 最新の Platform Web SDK アプローチを使用して、AEM SitesとAdobe Analyticsを統合します。
+title: Platform Web SDK を使用した AEM Sites と Adobe Analytics の統合
+description: 最新の Platform Web SDK アプローチを使用して、AEM Sites と Adobe Analytics を統合します。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -11,16 +11,16 @@ last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1637'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# AEM SitesとAdobe Analyticsの Platform Web SDK との統合
+# Platform Web SDK を使用した AEM Sites と Adobe Analytics の統合
 
 Platform Web SDK を使用して Adobe Experience Manager（AEM）と Adobe Analytics を統合する方法に関する&#x200B;**最新のアプローチ**&#x200B;を説明します。この包括的なチュートリアルでは、[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) ページビュー数と CTA クリック数のデータをシームレスに収集するプロセスを説明します。様々な指標やディメンションを参照できる Adobe Analysis Workspace で収集したデータを視覚化することで、有益なインサイトを得ることができます。また、Platform データセットを参照してデータを検証および分析することもできます。AEM と Adobe Analytics の機能をデータ駆動型の意思決定に活用するこのジャーニーに参加してください。
 
