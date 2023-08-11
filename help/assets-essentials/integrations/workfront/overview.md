@@ -1,6 +1,6 @@
 ---
-title: Adobe WorkfrontとAEM Assets Essentials の統合
-description: WorkfrontとAEM Assets Essentials の統合方法について説明します。
+title: Adobe Workfront と AEM Assets Essentials の統合
+description: Workfront と AEM Assets Essentials の統合方法を説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -12,22 +12,22 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 last-substantial-update: 2022-10-13T00:00:00Z
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Adobe WorkfrontとAEM Assets Essentials の統合
+# Adobe Workfront と AEM Assets Essentials の統合
 
-WorkfrontとAEM Assets Essentials を統合して、クリエイティブワークフローの管理を合理化する方法を説明します。
+Workfront と AEM Assets Essentials を統合して、クリエイティブワークフローの管理を効率化する方法を説明します。
 
-WorkfrontをAEM Assets Essentials と統合するには、次の手順に従います。
+Workfront と AEM Assets Essentials を統合するには、次の手順に従います。
 
 1. [統合の設定](./configure.md)
-1. [WorkfrontフィールドのAssets Essentialsメタデータへのマッピング](./map-metadata.md)
+1. [Workfront フィールドから Assets Essentials メタデータへのマッピング](./map-metadata.md)
 
-統合を設定すると、次の操作を実行できます。
+統合を設定すると、以下が可能になります。
 
-1. [WorkfrontとAEM Assets Essentials の間でファイルを共有する](./link-send.md)
-1. [バージョンファイル](./versions.md)
+1. [Workfront と AEM Assets Essentials の間でのファイルの共有](./link-send.md)
+1. [ファイルのバージョン管理](./versions.md)
