@@ -1,6 +1,6 @@
 ---
-title: AEM SitesとExperience PlatformWeb SDK の統合
-description: AEM Sites as a Cloud ServiceをExperience PlatformWeb SDK と統合する方法について説明します。 この基本的なステップは、Adobe Analytics、Target などの Adobe Experience Cloud 製品や、Real-time Customer Data Platform、Customer Journey Analytics、Journey Optimizer などの最近の革新的な製品を統合するために不可欠です。
+title: AEM Sites と Experience Platform Web SDK の統合
+description: AEM Sites as a Cloud Service と Experience Platform Web SDK を統合する方法を説明します。この基本的なステップは、Adobe Analytics、Target などの Adobe Experience Cloud 製品や、Real-time Customer Data Platform、Customer Journey Analytics、Journey Optimizer などの最近の革新的な製品を統合するために不可欠です。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -14,13 +14,13 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1354'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# AEM SitesとExperience PlatformWeb SDK の統合
+# AEM Sites と Experience Platform Web SDK の統合
 
 AEM as a Cloud Service と Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) を統合する方法を説明します。この基本的なステップは、Adobe Analytics、Target などの Adobe Experience Cloud 製品や、Real-time Customer Data Platform、Customer Journey Analytics、Journey Optimizer などの最近の革新的な製品を統合するために不可欠です。
 
