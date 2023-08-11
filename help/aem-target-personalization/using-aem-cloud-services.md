@@ -1,7 +1,7 @@
 ---
-title: Cloud Servicesを使用したAdobe Experience ManagerとAdobe Targetの統合
+title: クラウドサービスを使用した Adobe Experience Manager と Adobe Target の統合
 seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
-description: AEM Cloud Serviceを使用したAdobe Experience Manager(AEM) とAdobe Targetの統合方法に関する詳しい手順
+description: AEM Cloud Service を使用して Adobe Experience Manager（AEM）と Adobe Target を統合する方法を順を追って説明します
 seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
 feature: Experience Fragments
 topic: Personalization
@@ -11,27 +11,27 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '354'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# AEMレガシーCloud Servicesの使用
+# AEM の従来のクラウドサービスの使用
 
-この節では、レガシーCloud Servicesを使用してAdobe Experience Manager(AEM) をAdobe Targetと設定する方法について説明します。
+この節では、従来のクラウドサービスを使用して Adobe Experience Manager（AEM）と Adobe Target の連携をセットアップする方法を説明します。
 
 >[!NOTE]
 >
-> Adobe TargetとのAEMレガシーCloud Serviceは、 **のみ** AEMから Target へのコンテンツの公開を容易にする、AEM オーサーとAdobe Targetのバックエンド接続を直接確立するために使用します。 AdobeLaunch は、AEMが提供する、公開されている Web サイトエクスペリエンス上でAdobe Targetを公開するために使用します。
+> AEM の従来のクラウドサービスと Adobe Target の連携は、AEM オーサーから Adobe Target への直接のバックエンド接続を確立して、AEM から Target にコンテンツを公開しやすくするために&#x200B;**のみ**&#x200B;使用します。Adobe Launch は、AEM から提供される公開 web サイトエクスペリエンスに Adobe Target を表示するために使用します。
 
-AEM Experience Fragment オファーを使用してパーソナライゼーションアクティビティを強化するには、次の章に進み、従来のクラウドサービスを使用してAEMとAdobe Targetを統合します。 この統合は、エクスペリエンスフラグメントをHTML/JSON オファーとしてAEMから Target にプッシュし、Target オファーとAEMの同期を維持するために必要です。 この統合は、 [シナリオ 1：概要の節で説明](./overview.md#personalization-using-aem-experience-fragment).
+AEM エクスペリエンスフラグメントオファーを使用してパーソナライゼーションアクティビティを強化するには、次の章に進み、従来のクラウドサービスを使用して AEM と Adobe Target を統合します。この統合は、AEM からエクスペリエンスフラグメントを HTML／JSON オファーとして Target にプッシュし、ターゲットオファーと AEM の同期を保つために必要です。この統合は、[概要の節で説明したシナリオ 1](./overview.md#personalization-using-aem-experience-fragment) を実装するために必要です。
 
 ## 前提条件
 
 * **AEM**
 
-   * このチュートリアルを完了するには、AEMオーサーインスタンスとパブリッシュインスタンスが必要です。 AEMインスタンスをまだ設定していない場合は、次の手順に従います [ここ](./implementation.md#set-up-aem).
+   * このチュートリアルを完了するには、AEM オーサーインスタンスおよびパブリッシュインスタンスが必要です。AEM インスタンスをまだセットアップしていない場合は、[こちら](./implementation.md#set-up-aem)の手順に従ってください。
 
 * **Experience Cloud**
    * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
@@ -40,16 +40,16 @@ AEM Experience Fragment オファーを使用してパーソナライゼーシ�
 
      >[!NOTE]
      >
-     > 顧客は、[アドビサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)から Experience Platform Launch と Adobe I/O をプロビジョニングするか、システム管理者に連絡する必要があります。
+     > 顧客は、[アドビサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に依頼して Experience Platform Launch と Adobe I/O をプロビジョニングするか、システム管理者に連絡する必要があります。
 
-### AEMとAdobe Targetの統合
+### AEM と Adobe Target の統合
 
 >[!VIDEO](https://video.tv.adobe.com/v/28428?quality=12&learn=on)
 
-1. Adobe IMS認証 (*Adobe Target API を使用*) (00:34)
-2. Adobe Target Client Code (01:50)の取得
-3. Adobe Target (02:08)のAdobe IMS設定の作成
-4. Adobe I/Oコンソール内で Target API にアクセスするためのテクニカルアカウントを作成(02:08)ます
-5. Adobe TargetCloud ServiceをAEM Experience Fragments に追加(04:12)
+1. Adobe IMS 認証を使用した Adobe Target Cloud Service の作成（*Adobe Target API を使用*）（00:34）
+2. Adobe Target クライアントコードの取得（01:50）
+3. Adobe Target の Adobe IMS 設定の作成（02:08）
+4. Adobe I/O コンソール内でターゲット API にアクセスするためのテクニカルアカウントの作成（02:08）
+5. AEM エクスペリエンスフラグメントへの Adobe Target Cloud Service の追加（04:12）
 
-この時点で、正常に統合されました [レガシーCloud Servicesを使用したAdobe TargetとのAEM](./using-aem-cloud-services.md#integrating-aem-target-options) オプション 2 で詳しく説明されているように。 これで、AEM内でエクスペリエンスフラグメントを作成し、エクスペリエンスフラグメントをHTMLオファーまたは JSON オファーとしてAdobe Targetに公開できるようになり、これを使用してアクティビティを作成できます。
+この時点で、オプション 2 で説明した[従来のクラウドサービスを使用して AEM と Adobe Target](./using-aem-cloud-services.md#integrating-aem-target-options) を正常に統合しました。これで、AEM 内でエクスペリエンスフラグメントを作成し、そのエクスペリエンスフラグメントを HTML オファーまたは JSON オファーとして Adobe Target に公開したあと、アクティビティの作成に使用できるようになります。
