@@ -1,6 +1,6 @@
 ---
 title: Acrobat Sign アプリケーションの作成
-description: Acrobat Sign Application は、AEM FormsとAcrobat Signの統合を作成する最初の手順です。
+description: Acrobat Sign アプリケーションは、AEM Forms と Acrobat Sign との統合を作成する最初のステップです。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -14,9 +14,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '77'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
