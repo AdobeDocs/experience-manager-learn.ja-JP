@@ -11,9 +11,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1067'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
