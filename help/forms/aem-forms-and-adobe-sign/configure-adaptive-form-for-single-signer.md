@@ -11,7 +11,7 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b90c5c00-ec62-4809-9ab6-047eba2f2bb0
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '72'
 ht-degree: 100%
 
@@ -30,4 +30,4 @@ ht-degree: 100%
 
 ## 次の手順
 
-[2 名の署名者に対するアダプティブフォームの設定](./configure-adaptive-form-for-two-signers.md)
+[署名者が 2 名のアダプティブフォームの設定](./configure-adaptive-form-for-two-signers.md)
