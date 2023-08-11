@@ -1,5 +1,5 @@
 ---
-title: AEM Sitesでの LaunchCloud Service設定の作成
+title: AEM Sites での Launch クラウドサービス設定の作成
 description: AEM で Launch クラウドサービス設定を作成する方法について説明します。Launch クラウドサービス設定はその後、既存のサイトに適用でき、オーサー環境とパブリッシュ環境の両方でタグライブラリの読み込みを確認できます。
 topics: integrations
 audience: administrator
@@ -13,12 +13,12 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '556'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
