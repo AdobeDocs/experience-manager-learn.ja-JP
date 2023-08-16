@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
+source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1838'
 ht-degree: 100%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 100%
    + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
    + [ServiceNow との統合](some-useful-integrations/service-now.md)
    + [SendGrid でのメールの送信](some-useful-integrations/send-grid.md)
+   + [Azure ストレージへのフォームデータの保存](some-useful-integrations/store-form-data-in-azure-storage.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [1 - 環境のセットアップ](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
