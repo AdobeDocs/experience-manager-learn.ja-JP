@@ -1,5 +1,5 @@
 ---
-title: ModSecurity を有効にしてAEMサイトを DoS 攻撃から保護
+title: ModSecurity を使用して、AEMサイトを DoS 攻撃から保護します。
 description: OWASP ModSecurity コアルールセット (CRS) を使用して、ModSecurity を有効にして、サイトをサービス拒否 (DoS) 攻撃から保護する方法を説明します。
 feature: Security
 version: 6.5, Cloud Service
@@ -10,7 +10,7 @@ kt: 10385
 thumbnail: KT-10385.png
 doc-type: article
 last-substantial-update: 2023-08-15T00:00:00Z
-source-git-commit: fc183d88bf772944562d0dd825b4d590266f3ffd
+source-git-commit: 31d54b14fc6381e8b231cf85d3c808b88c7df098
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 3%
@@ -53,7 +53,7 @@ OWSAP®は、 [OWASP® ModSecurity コアルールセット (CRS)](https://githu
 
 1. を作成します。 `modsec/crs` 内のフォルダ `dispatcher/src/conf.d/` をAEMプロジェクトのコードに追加します。 例えば、 [AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd).
 
-   ![AEMプロジェクトコード内の CRS フォルダー — ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png)
+   ![AEMプロジェクトコード内の CRS フォルダー — ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
 1. をコピーします。 `coreruleset-X.Y.Z/rules` ダウンロードした CRS リリースパッケージから `dispatcher/src/conf.d/modsec/crs` フォルダー。
 1. をコピーします。 `coreruleset-X.Y.Z/crs-setup.conf.example` ファイルをダウンロードした CRS リリースパッケージから `dispatcher/src/conf.d/modsec/crs` フォルダーと名前をに変更します。 `crs-setup.conf`.
@@ -69,7 +69,7 @@ OWSAP®は、 [OWASP® ModSecurity コアルールセット (CRS)](https://githu
 
    WKND プロジェクトコードで、名前が変更された CRS ルールと設定ファイルを参照してください。
 
-   ![AEMプロジェクトコード内で CRS ルールを無効にしました — ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="100" zoomable="yes"}
+   ![AEMプロジェクトコード内で CRS ルールを無効にしました — ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## サービス拒否 (DoS) 保護ルールを有効にして構成します
 
@@ -96,7 +96,7 @@ OWSAP®は、 [OWASP® ModSecurity コアルールセット (CRS)](https://githu
        setvar:'tx.dos_block_timeout=600'"    
    ```
 
-この例のルール設定では、 **DOS_COUNTER_THRESHOLD** は 25 で、 **DOS_BURST_TIME_SLICE** は 60 秒、 **DOS_BLOCK_TIMEOUT** タイムアウトは 600 秒です。 この設定では、60 秒以内に静的ファイルを除く 25 件を超えるリクエストが DoS 攻撃と見なされ、その結果、リクエストクライアントが 600 秒（または 10 分）ブロックされます。
+この例のルール設定では、 **DOS_COUNTER_THRESHOLD** は 25 で、 **DOS_BURST_TIME_SLICE** は 60 秒、 **DOS_BLOCK_TIMEOUT** タイムアウトは 600 秒です。 この設定では、静的ファイルを除く 25 件を超えるリクエスト (60 秒以内に DoS 攻撃と見なされ、その結果、リクエストクライアントが 600 秒（または 10 分）ブロックされます。
 
 >[!WARNING]
 >
