@@ -5,10 +5,10 @@ recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
-source-wordcount: '131'
-ht-degree: 100%
+source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 79%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 Experience Manager Assets Essentials は、軽量なアセット管理とコラボレーションを実現する、合理化されたユーザーインターフェイスを提供します。
 
-Assets Essentials を使用した Adobe の管理方法およびアセットを Adobe Orchestrator と統合する方法に関するビデオをご覧ください。
+Assets Essentialsを使用したアセットの管理方法、およびAdobe WorkfrontおよびAdobeジャーニーオーケストレーターとの統合方法に関する以下のビデオをご覧ください。
 
 ## Assets Essentials の詳細
 
