@@ -8,16 +8,16 @@ role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
-source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
-workflow-type: ht
-source-wordcount: '443'
-ht-degree: 100%
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
+workflow-type: tm+mt
+source-wordcount: '459'
+ht-degree: 93%
 
 ---
 
 # アダプティブフォームで事前入力サービスを使用する
 
-既存データを使用して、アダプティブフォームのフィールドを事前入力することができます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。この記事では、AEM Forms の事前入力サービスを使用したアダプティブフォームの事前入力について説明します。
+既存のデータを使用して、アダプティブフォームのフィールドに事前に値を設定することができます。 ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。この記事では、AEM Forms の事前入力サービスを使用したアダプティブフォームの事前入力について説明します。
 
 アダプティブフォームの事前入力に関する様々な方法の詳細は、[こちらのドキュメントをご覧ください](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html?lang=ja#AEMFormsprefillservice)。
 
@@ -26,6 +26,10 @@ ht-degree: 100%
 以下のコードスニペットには、DataXMLProvider インターフェイスを実装するクラスがあります。ログインしたユーザーにアクセスし、ログインしたユーザーのプロファイル情報を取得します。次に、「data」というルートノード要素を持つ XML ドキュメントを作成し、このデータノードに適切な要素を追加します。XML ドキュメントが構築されると、XML ドキュメントの入力ストリームが返されます。
 
 次に、このクラスが OSGi バンドルになり、AEM にデプロイされます。バンドルがデプロイされると、この事前入力サービスをアダプティブフォームの事前入力サービスとして使用できるようになります。
+
+>[!NOTE]
+>
+>この記事で説明する方法を使用して、xml または json データを使用してフォームに事前入力できます。
 
 ```java
 package com.aem.prefill.core;

@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
-source-wordcount: '1838'
-ht-degree: 100%
+source-wordcount: '1841'
+ht-degree: 99%
 
 ---
 
@@ -187,6 +187,7 @@ ht-degree: 100%
    + [ArrayList 変数](variables-aem-workflow/part4.md)
    + [フォームデータモデルの変数](variables-aem-workflow/form-data-model.md)
    + [AEM ワークフローのルールエディター](variables-aem-workflow/part5.md)
+   + [ログワークフロー変数](variables-aem-workflow/part6.md)
 + フォームデータを確認{#review-form-data}
    + [1 - はじめに](review-form-data/introduction.md)
    + [2 - コンポーネントの作成](review-form-data/create-component.md)
