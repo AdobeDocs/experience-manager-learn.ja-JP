@@ -9,8 +9,8 @@ level: Experienced
 kt: 10385
 thumbnail: KT-10385.png
 doc-type: article
-last-substantial-update: 2023-08-15T00:00:00Z
-source-git-commit: 31d54b14fc6381e8b231cf85d3c808b88c7df098
+last-substantial-update: 2023-08-18T00:00:00Z
+source-git-commit: c6f954968fdc43ea9070df52a4709da2ed04cacc
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 3%
@@ -21,6 +21,8 @@ ht-degree: 3%
 # ModSecurity を使用してAEMサイトを DoS 攻撃から保護する
 
 ModSecurity を有効にして、 **OWASP ModSecurity コアルールセット (CRS)** をAdobe Experience Manager(AEM)Publish Dispatcher に設定します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
 
 ## 概要
 
