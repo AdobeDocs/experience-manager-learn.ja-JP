@@ -9,10 +9,10 @@ level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 77b960315c07ba194642a412a0cc6049edcf7bd2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '332'
+ht-degree: 95%
 
 ---
 
@@ -27,6 +27,8 @@ AEM as a Cloud Service の検索インデックス、AEM 6 インデックス定
 ![インデックスコンバーターツール](./assets/index-converter.png)
 
 コードベースのリファクタリングの一環として、[インデックスコンバーターツール](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter)を使用して、カスタム Oak インデックス定義を AEM as a Cloud Service 互換インデックス定義に変換します。
+
+以下を確認します。 [インデックスコンバーターのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=ja) を参照してください。
 
 ## 重要なアクティビティ
 
