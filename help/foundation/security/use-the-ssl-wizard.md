@@ -3,7 +3,7 @@ title: AEM での SSL ウィザードの使用
 description: Adobe Experience Manager SSL セットアップウィザードを使用すると、AEM インスタンスを HTTPS 経由で実行するように簡単に設定できます。
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
 version: 6.5, Cloud Service
-jira: KT-13465
+jira: KT-13839
 topics: security, operations
 feature: Security
 activity: use
@@ -15,7 +15,8 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: f6e9d1f1991abf34765b28e6e05382a58a6203e3
+last-substantial-update: 2023-08-08T00:00:00Z
+source-git-commit: 1a8e3f37554f98c1366a1a06cb4a7b867866dd1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 31%
@@ -37,7 +38,7 @@ ht-degree: 31%
 
 ## SSL 設定ウィザードの使用
 
-に移動します。 __AEM オーサー/ツール/セキュリティ/SSL 設定__&#x200B;をクリックし、 __SSL 設定ウィザード__.
+に移動します。 __AEM Author / Tools / Security / SSL Configuration__&#x200B;をクリックし、 __SSL 設定ウィザード__.
 
 ![SSL 設定ウィザード](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
