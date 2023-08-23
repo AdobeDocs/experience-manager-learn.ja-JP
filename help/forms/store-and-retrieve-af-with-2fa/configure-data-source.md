@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM で外部データベースとの統合を有効にする方法は多数あ�
 >OSGi サービスで使用される名前なので、データソース `StoreAndRetrieveAfData` に名前を付けてください。
 
 
-![data-source](assets/data-source.JPG)
+![データソース](assets/data-source.JPG)
 
 | プロパティ名 | プロパティの値 |   |
 |---------------------|------------------------------------------------------------------------------------|---|
