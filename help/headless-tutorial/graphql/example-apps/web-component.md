@@ -9,12 +9,12 @@ level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEMヘッドレスas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
 source-git-commit: 701d6d46d716faf51ba5ce3ed31de68928963e54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '549'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -39,9 +39,9 @@ Web コンポーネントは、次の AEM デプロイメントオプション�
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
-   + が必要 [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) ( ローカルのAEM 6.5 またはAEM SDK に接続する場合 )
+   + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) が必要（ローカルの AEM 6.5 または AEM SDK に接続する場合）
 
-このアプリは、 [basic-tutorial-solution.content.zip](../multi-step/assets/explore-graphql-api/basic-tutorial-solution.content.zip) インストールされ、必要な [デプロイメント設定](../deployment/web-component.md) が適切に配置されている
+このアプリの例は、[basic-tutorial-solution.content.zip](../multi-step/assets/explore-graphql-api/basic-tutorial-solution.content.zip) がインストールされ、必要な[デプロイメント設定](../deployment/web-component.md)が整っていることに依存します。
 
 
 >[!IMPORTANT]
