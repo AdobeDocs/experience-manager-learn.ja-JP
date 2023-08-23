@@ -11,11 +11,11 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-badgeVersions: label="AEMヘッドレスas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '898'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -38,11 +38,11 @@ ht-degree: 96%
 
 ## AEM の要件
 
-React アプリケーションは、次の AEM デプロイメントオプションと連携します。 すべてのデプロイメントに[WKND Site v3.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
+React アプリケーションは、次の AEM デプロイメントオプションと連携します。 すべてのデプロイメントに [WKND Site v3.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
-   + が必要 [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+   + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) が必要
 
 React アプリケーションは __AEM パブリッシュ__&#x200B;環境で使用できますが、React アプリケーションの設定で認証が提供されている場合は、AEM オーサーからコンテンツをソース化できます。
 
@@ -313,4 +313,4 @@ AEM オーサー環境に接続する場合、[認証方法を設定する必要
 
 ### クロスオリジンリソース共有（CORS）
 
-この React アプリケーションは、ターゲットの AEM 環境で実行される AEM ベースの CORS 設定に依存し、React アプリが `http://localhost:3000` において開発モードで実行されることを前提とします。以下を確認します。[AEMヘッドレスデプロイメントドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html) を参照してください。
+この React アプリケーションは、ターゲット AEM 環境で動作する AEM ベースの CORS 設定に依存し、React アプリが `http://localhost:3000` で開発モードで動作することを前提としています。CORS をセットアップして設定する方法について詳しくは、[AEM ヘッドレスデプロイメントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html?lang=ja)を参照してください。
