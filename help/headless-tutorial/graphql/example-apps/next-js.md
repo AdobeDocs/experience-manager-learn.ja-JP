@@ -10,12 +10,12 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEMヘッドレスas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '817'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -268,7 +268,7 @@ Next.js アプリは、アドベンチャーデータを提示するために 2 
 
 + `src/pages/adventures/[...slug].js`
 
-  1 つのアドベンチャーの詳細を表示する [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes)。この動的ルートは、 [Next.js の getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) ～への呼び出しを通じて `getAdventureBySlug(slug, queryVariables)` の使用 `slug` アドベンチャー選択経由で渡されるパラメーター `adventures/index.js` ページ、および `queryVariables` を使用して、画像フォーマット、幅、画質を制御する。
+  1 つのアドベンチャーの詳細を表示する [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes)。この動的ルートは、`adventures/index.js` ページでのアドベンチャー選択を通じて渡された `slug` パラメーターと画像の形式、幅および画質を制御する `queryVariables` を使用した `getAdventureBySlug(slug, queryVariables)` の呼び出しを介して [Next.js の getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) を使用して、各アドベンチャーのデータをプリフェッチします。
 
   動的ルートは、[Next.js の getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) を使用してすべてのアドベンチャーの詳細をプリフェッチし、GraphQL クエリ `getAdventurePaths()` によって返されるアドベンチャーの完全なリストに基づいてすべての可能なルート配列を入力できます。
 
