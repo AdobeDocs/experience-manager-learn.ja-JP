@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1188'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 97%
 
 ## 前提条件
 
-このマルチパートチュートリアルの前の部分で説明した手順が完了していることを前提としています。 [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) がAEM as a Cloud Service Author サービスおよび Publish サービスにインストールされている。
+この多段階チュートリアルの前の部分で説明した手順が完了しているか、[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) が AEM as a Cloud Service のオーサーサービスとパブリッシュサービスにインストールされていることを前提としています。
 
 _この章の IDE スクリーンショットは、[Visual Studio Code](https://code.visualstudio.com/)から取得しています。_
 
