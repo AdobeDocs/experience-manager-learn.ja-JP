@@ -17,15 +17,15 @@ level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 source-git-commit: 1a8e3f37554f98c1366a1a06cb4a7b867866dd1b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '447'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # AEM での SSL ウィザードの使用
 
-組み込みの SSL ウィザードを使用して、Adobe Experience Managerで SSL を設定し、HTTPS 経由で実行する方法を説明します。
+組み込みの SSL ウィザードを使用して、Adobe Experience Manager で SSL を設定し、HTTPS で実行する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
@@ -38,57 +38,57 @@ ht-degree: 31%
 
 ## SSL 設定ウィザードの使用
 
-に移動します。 __AEM Author / Tools / Security / SSL Configuration__&#x200B;をクリックし、 __SSL 設定ウィザード__.
+__AEM オーサー／ツール／セキュリティ／SSL 設定__&#x200B;に移動し、__SSL 設定ウィザード__&#x200B;を開きます。
 
 ![SSL 設定ウィザード](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
-### ストアの資格情報を作成
+### ストア資格情報を作成
 
-を作成するには、以下を実行します。 _キーストア_ ～と関連している `ssl-service` システムユーザーとグローバル _トラストストア_&#x200B;を使用する場合は、 __ストア資格情報__ ウィザードの手順です。
+`ssl-service` システムユーザーおよびグローバル&#x200B;_トラストストア_&#x200B;に関連する&#x200B;_キーストア_&#x200B;を作成するには、__ストア資格情報__&#x200B;ウィザードの手順を使用します。
 
-1. パスワードを入力し、 __キーストア__ ～と関連している `ssl-service` システムユーザー。
-1. グローバルのパスワードを入力し、パスワードを確認します __トラストストア__. これはシステム全体の Trust Store で、既に作成されている場合、入力されたパスワードは無視されます。
+1. パスワードを入力して、`ssl-service` システムユーザーに関連する&#x200B;__キーストア__&#x200B;のパスワードを確認します。
+1. パスワードを入力して、グローバル&#x200B;__トラストストア__&#x200B;のパスワードを確認します。システム全体のトラストストアで、既にトラストストアが作成されている場合、入力されたパスワードは無視されることに注意してください。
 
-   ![SSL 設定 — ストア資格情報](assets/use-the-ssl-wizard/store-credentials.png)
+   ![SSL 設定 - ストア資格情報](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### 秘密鍵と証明書をアップロード
 
-次の手順で _秘密鍵_ および _SSL 証明書_&#x200B;を使用する場合は、 __鍵と証明書__ ウィザードの手順です。
+_秘密鍵_&#x200B;および _SSL 証明書_&#x200B;をアップロードするには、__キーと証明書__&#x200B;ウィザードの手順を使用します。
 
-通常、IT 部門が CA 信頼済みの証明書と鍵を提供しますが、自己署名済みの証明書はに使用できます __開発__ および __テスト__ 目的。
+通常、IT 部門が CA 信頼済みの証明書とキーを提供しますが、自己署名済みの証明書は&#x200B;__開発__&#x200B;および&#x200B;__テスト__&#x200B;の目的で使用できます。
 
-自己署名証明書を作成またはダウンロードするには、 [自己署名型秘密鍵および証明書](#self-signed-private-key-and-certificate).
+自己署名証明書を作成またはダウンロードするには、[自己署名の秘密鍵および証明書](#self-signed-private-key-and-certificate)を参照してください。
 
-1. をアップロードします。 __秘密鍵__ DER(Distinguished Encoding Rules) 形式の PEM とは異なり、DER でエンコードされたファイルには、次のようなプレーンテキストステートメントは含まれません。 `-----BEGIN CERTIFICATE-----`
-1. 関連する __SSL 証明書__ （内） `.crt` 形式を使用します。
+1. DER（Distinguished Encoding Rules）形式の&#x200B;__秘密鍵__&#x200B;をアップロードします。PEM とは異なり、DER でエンコードされたファイルには、`-----BEGIN CERTIFICATE-----` のようなプレーンテキストステートメントは含まれません。
+1. `.crt` 形式の関連する __SSL 証明書__&#x200B;をアップロードします。
 
-   ![SSL の設定 — 秘密鍵と証明書](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
+   ![SSL の設定 - 秘密鍵と証明書](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
-### SSL コネクタの詳細の更新
+### SSL コネクターの詳細を更新
 
-次の手順で _hostname_ および _ポート_ を使用します。 __SSL コネクタ__ ウィザードの手順です。
+_hostname_ および&#x200B;_ポート_&#x200B;をアップロードするには、__SSL コネクター__&#x200B;ウィザードの手順を使用します。
 
-1. を更新または検証します。 __HTTPS ホスト名__ 値の場合は、 `Common Name (CN)` 証明書から。
-1. を更新または検証します。 __HTTPS ポート__ の値です。
+1. __HTTPS ホスト名__&#x200B;値を更新または検証し、証明書の `Common Name (CN)` を一致させる必要があります。
+1. __HTTPS ポート__&#x200B;の値を更新または検証します。
 
-   ![SSL の設定 — SSL コネクタの詳細](assets/use-the-ssl-wizard/ssl-connector-details.png)
+   ![SSL 設定 - SSL コネクターの詳細](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
-### SSL 設定の確認
+### SSL 設定の検証
 
-1. SSL を検証するには、 __HTTPS URL に移動__ 」ボタンをクリックします。
-1. セル署名済み証明書を使用している場合は、 `Your connection is not private` エラー。
+1. SSL を検証するには、「__HTTPS URL に移動__」ボタンをクリックします。
+1. 自己署名証明書を使用している場合は、`Your connection is not private` エラーが表示されます。
 
-   ![SSL 設定 — HTTPS 経由でのAEMの検証](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+   ![SSL 設定 - HTTPS 経由での AEM の検証](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
-## 自己署名型秘密鍵および証明書
+## 自己署名秘密鍵および証明書
 
-次の zip ファイルにはが含まれます。 [!DNL DER] および [!DNL CRT] AEM SSL をローカルで設定するために必要なファイルで、ローカル開発の目的でのみ使用します。
+次の ZIP には、ローカルで AEM SSL を設定するために必要な [!DNL DER] および [!DNL CRT] のファイルが含まれており、ローカルでの開発のみを目的としています。
 
 この [!DNL DER] および [!DNL CERT] ファイルは、便宜上提供され、次の「秘密鍵と自己署名証明書を生成する」のセッションで説明されている手順を使用して生成されます。
 
 必要な場合、証明書のパスフレーズは **admin** です。
 
-この localhost — 秘密鍵と自己署名証明書.zip （有効期限は 2028 年 7 月）
+この localhost - 秘密鍵および自己署名証明書.zip（有効期限 2028年7月）
 
 [証明書ファイルをダウンロードする](assets/use-the-ssl-wizard/certificate.zip)
 
