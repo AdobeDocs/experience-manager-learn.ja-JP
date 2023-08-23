@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
-workflow-type: ht
-source-wordcount: '1188'
-ht-degree: 100%
+source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
+workflow-type: tm+mt
+source-wordcount: '1218'
+ht-degree: 97%
 
 ---
 
@@ -489,6 +489,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 ## アプリを試す
 
 アプリ [http://localhost:3000/](http://localhost:3000/) をレビューし、_Members_ のリンクをクリックします。また、AEM でコンテンツフラグメントを追加することで、チームやメンバーを Team Alpha にさらに追加することもできます。
+
+>[!IMPORTANT]
+>
+>実装の変更を検証する場合、または上記の変更後にアプリを動作させることができない場合は、 [basic-tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) ソリューション分岐。
 
 ## 内部の仕組み
 
