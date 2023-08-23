@@ -1,17 +1,17 @@
 ---
-title: ピアの概要から学ぶ
-description: ピアの概要から学ぶ
+title: 「他のユーザーから学ぶ」の概要
+description: 「他のユーザーから学ぶ」の概要
 feature: Learn From Your Peers
 source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '59'
-ht-degree: 30%
+ht-degree: 100%
 
 ---
 
-# ピアの概要から学ぶ
+# 「他のユーザーから学ぶ」の概要
 
-同業者から学習すると、AEMのエキスパートが作成およびキュレーションした一連のリソースを利用して、Experience Managerを最大限に活用することができます。
+「他のユーザーから学ぶ」では、Experience Manager を最大限に活用できるように、AEM エキスパートによって作成およびキュレーションされた一連のリソースを用意しています。
 
 * [AEM Sites の成熟度評価](/help/sites/expert-resources/maturity-assessment.md)
 * [サイトメンテナンス](/help/sites/expert-resources/site-maintenance.md)
