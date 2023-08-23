@@ -11,9 +11,9 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1621'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -84,7 +84,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!TAB Windows]
 
-解凍 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` into `C:\Users\<My User>\aem-sdk\dispatcher` （必要に応じて、見つからないフォルダを作成します）。
+`aem-sdk-dispatcher-tools-x.x.x-windows.zip` を `C:\Users\<My User>\aem-sdk\dispatcher` に解凍します（必要に応じて、欠落しているフォルダーを作成します）。
 
 >[!TAB Linux]
 
