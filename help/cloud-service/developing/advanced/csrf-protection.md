@@ -11,7 +11,7 @@ last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
 source-git-commit: 38db146129ceab83af50bf97cd6eb2d7179adbbf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '443'
 ht-degree: 100%
 
