@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '391'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 87%
 
 ## データソースの作成
 
-Apache Sling 接続プールに入れられた、という名前のデータソースを作成する必要があります。 **StoreAndRetrieveAfData** 前の手順で作成したデータベーススキーマを指している。 OSGi バンドル内のコードは、このデータソース名を使用します。
+前の手順で作成したデータベーススキーマを指す **StoreAndRetrieveAfData** という Apache Sling Connection Pooled DataSource を作成する必要があります。OSGi バンドル内のコードでは、このデータソース名を使用します。
 
 ## フォームデータモデルの作成
 
@@ -59,7 +59,7 @@ Felix web コンソールを使用して DevelopingWithServiceUser.jar ファイ
 
 このサンプルを構成する 2 つのフォームを AEM に読み込む必要があります。 サンプルフォームは、[こちらからダウンロード](assets/sample-forms.zip)できます。
 
-[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) を編集モードで開きます。アダプティブフォーム内の適切なフィールドに、「 Vonage API Key 」と「 API Secret 」の値を指定します。
+[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) を編集モードで開きます。アダプティブフォームの適切なフィールドに、Vonage API キーおよび API 秘密鍵の値を指定します。
 
 ## ソリューションのテスト
 
