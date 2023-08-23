@@ -10,12 +10,12 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEMヘッドレスas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '990'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 97%
 
 ## AEM の要件
 
-iOS アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに[WKND Site v3.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
+iOS アプリケーションは、次の AEM デプロイメントオプションと連携します。すべてのデプロイメントに [WKND Site v3.0.0 以降](https://github.com/adobe/aem-guides-wknd/releases/latest)をインストールする必要があります。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
@@ -277,7 +277,7 @@ SwiftUI は、アプリケーションの様々な表示で使用されます。
 
 ### リモート画像
 
-アドベンチャーコンテンツフラグメントで参照される画像は、AEM が提供します。 この iOS アプリは、GraphQL 応答のパス `_dynamicUrl` フィールドを使用し、プレフィックス `AEM_SCHEME` と `AEM_HOST` を付けて完全修飾 URL を作成します。AEM SDK に対応した開発の場合、 `_dynamicUrl` は null を返すので、画像の `_path` フィールドに入力します。
+アドベンチャーコンテンツフラグメントで参照される画像は、AEM が提供します。 この iOS アプリは、GraphQL 応答のパス `_dynamicUrl` フィールドを使用し、プレフィックス `AEM_SCHEME` と `AEM_HOST` を付けて完全修飾 URL を作成します。AEM SDK に対応した開発の場合、`_dynamicUrl` は null を返すので、画像の `_path` フィールドにフォールバックします。
 
 認証が必要な AEM 上の保護されたリソースに接続する場合は、資格情報も画像リクエストに追加する必要があります。
 
