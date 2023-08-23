@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
 source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1454'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -391,7 +391,7 @@ GraphQL エンドポイントは、コンテンツフラグメントに対して
 
 ## ソリューションファイル {#solution-files}
 
-過去 3 つの章で作成したコンテンツ、モデル、永続的なクエリをダウンロードします。 [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
+最後の 3 つの章で作成したコンテンツ、モデル、永続クエリをダウンロードします（[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)）。
 
 ## その他のリソース
 
