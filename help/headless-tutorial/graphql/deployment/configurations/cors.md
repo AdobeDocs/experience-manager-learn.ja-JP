@@ -11,15 +11,15 @@ thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
 source-git-commit: f619c431d91271b2031dcb233f3e08c3008b78ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '627'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
 # クロスオリジンリソース共有（CORS）
 
-Adobe Experience Manager as a Cloud Serviceのクロスオリジンリソース共有 (CORS) は、AEM以外の Web プロパティを使用して、AEM GraphQL API やその他のAEMヘッドレスリソースに対するブラウザーベースのクライアント側呼び出しをおこないます。
+Adobe Experience Manager as a Cloud Service のクロスオリジンリソース共有（CORS）は、AEM 以外の web プロパティが、AEM の GraphQL API およびその他の AEM ヘッドレスリソースに対してブラウザーベースのクライアントサイド呼び出しを容易に行えるようにします。
 
 >[!TIP]
 >
@@ -35,7 +35,7 @@ AEM に接続するクライアントが AEM と同じオリジン（ホスト�
 
 ## AEM オーサー
 
-AEM オーサーサービスで CORS を有効にする方法は、AEM パブリッシュサービスおよびAEMプレビューサービスとは異なります。 AEM オーサーサービスでは、OSGi 設定を AEM オーサーサービスの実行モードフォルダーに追加する必要があり、Dispatcher 設定は使用しません。
+AEM オーサーサービスでの CORS の有効化は、AEM パブリッシュサービスおよび AEM プレビューサービスの場合とは異なります。AEM オーサーサービスでは、OSGi 設定を AEM オーサーサービスの実行モードフォルダーに追加する必要があり、Dispatcher 設定は使用しません。
 
 ### OSGi 設定
 
@@ -46,7 +46,7 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 | CORS OSGi 設定が必要 | ✔ | ✘ | ✘ |
 
 
-次の例は、AEM オーサーの OSGi 設定 (`../config.author/..`) なので、AEM オーサーサービス上でのみアクティブです。
+次の例は、AEM オーサーの OSGi 設定（`../config.author/..`）を定義し、AEM オーサーサービス上でのみアクティブです。
 
 主な設定プロパティは次のとおりです。
 
@@ -54,13 +54,13 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 + `allowedpaths` は指定したオリジンから許可される URL パスパターンを指定します。
    + AEM GraphQLで永続化クエリをサポートするには、パターン「`/graphql/execute.json.*`」を追加します。
    + エクスペリエンスフラグメントをサポートするには、パターン「`/content/experience-fragments/.*`」を追加します。
-+ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 AEM GraphQLで永続化されたクエリ（およびエクスペリエンスフラグメント）をサポートするには、 `GET` .
-+ `supportedheaders` 次を含む `"Authorization"` AEM オーサーへのリクエストは、認証される必要があります。
-+ `supportscredentials` が `true` AEM オーサーへのリクエストは、認証される必要があります。
++ `supportedmethods` は、CORS リクエストで許可される HTTP メソッドを指定します。 AEM GraphQL 永続クエリ（およびエクスペリエンスフラグメント）をサポートするには、`GET` を追加します。
++ AEM オーサーへのリクエストとして `"Authorization"` を含む `supportedheaders` は、認証を受ける必要があります。
++ AEM オーサーへのリクエストとして `true` に設定されている `supportscredentials` は、認証を受ける必要があります。
 
 [ CORS OSGi の設定について詳しくは、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
 
-次の例では、AEM GraphQLでの AEM オーサーでの永続クエリの使用をサポートしています。 クライアント定義の GraphQL クエリを使用するには、`allowedpaths` および `POST` からの GraphQL エンドポイント URL を `supportedmethods` に追加します。
+次の例では、 AEM オーサーでの AEM GraphQL 永続クエリの使用をサポートしています。クライアント定義の GraphQL クエリを使用するには、`allowedpaths` および `POST` からの GraphQL エンドポイント URL を `supportedmethods` に追加します。
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -101,12 +101,12 @@ AEM CORS OSGi 設定ファクトリは、CORS HTTP リクエストを受け入�
 
 ## AEM パブリッシュ
 
-AEM パブリッシュ（およびプレビュー）サービスで CORS を有効にする方法は、AEM オーサーサービスとは異なります。 AEM パブリッシュサービスでは、AEM Dispatcher 設定を AEM パブリッシュの Dispatcher 設定に追加する必要があります。 AEM Publish では、 [OSGi 設定](#osgi-configuration).
+AEM パブリッシュ（およびプレビュー）サービスで CORS を有効にすることは、AEM オーサーサービスとは異なります。AEM パブリッシュサービスでは、AEM Dispatcher 設定を AEM パブリッシュの Dispatcher 設定に追加する必要があります。AEM パブリッシュは、[OSGi 設定](#osgi-configuration)を使用しません。
 
 AEM パブリッシュで CORS を設定する際には、次の点を確認します。
 
-+ The `Origin` HTTP リクエストヘッダーを AEM パブリッシュサービスに送信するには、 `Origin` ヘッダー（以前に追加された場合）をAEM Dispatcher プロジェクトの `clientheaders.any` ファイル。 任意 `Access-Control-` ヘッダーを `clientheaders.any` ファイルと Dispatcher が、AEM パブリッシュサービスではなく、これらを管理します。
-+ 次の項目がある場合： [CORS OSGi 設定](#osgi-configuration) を AEM パブリッシュサービスで有効にするには、設定を削除し、 [Dispatcher vhost の設定](#set-cors-headers-in-vhost) 以下に概要を示します。
++ `Origin` HTTP リクエストヘッダーは、AEM Dispatcher プロジェクトの `clientheaders.any` ファイルから `Origin` ヘッダー（以前に追加されていた場合）を削除すると、AEM パブリッシュサービスに送信できなくなります。`Access-Control-` ヘッダーは、`clientheaders.any` ファイルから削除する必要があり、AEM パブリッシュサービスではなく Dispatcher がこれらを管理します。
++ AEM パブリッシュサービスで [CORS OSGi 設定](#osgi-configuration)が有効になっている場合は、これらを削除し、その設定を以下で説明する [Dispatcher vhost 設定](#set-cors-headers-in-vhost)に移行する必要があります。
 
 ### Dispatcher 設定
 
@@ -118,8 +118,8 @@ AEM パブリッシュ（およびプレビュー）サービスの Dispatcher �
 
 #### vhost での CORS ヘッダーの設定
 
-1. AEM パブリッシュサービスの vhost 設定ファイルを、Dispatcher 設定プロジェクト（通常は、 ）で開きます。 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
-2. の内容をコピーします。 `<IfDefine ENABLE_CORS>...</IfDefine>` を、有効な vhost 設定ファイルにブロックします。
+1. Dispatcher 設定プロジェクトで、AEM パブリッシュサービスの vhost 設定ファイルを開きます。通常は、`dispatcher/src/conf.d/available_vhosts/<example>.vhost` にあります。
+2. 以下の `<IfDefine ENABLE_CORS>...</IfDefine>` ブロックの内容を、有効な vhost 設定ファイルにコピーします。
 
    ```{ highlight="19"}
    <VirtualHost *:80>
@@ -176,18 +176,18 @@ AEM パブリッシュ（およびプレビュー）サービスの Dispatcher �
    </VirtualHost>
    ```
 
-3. 以下の行の正規表現を更新して、AEM パブリッシュサービスにアクセスする目的のオリジンを照合します。 複数のオリジンが必要な場合は、この行を複製し、各接触チャネル/接触チャネルパターンに対して更新します。
+3. 以下の行の正規表現を更新して、AEM パブリッシュサービスにアクセスする目的の接触チャネルと一致させます。複数の接触チャネルが必要な場合は、この行を複製し、接触チャネル／接触チャネルパターンごとに更新します。
 
    ```
    SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*.your-domain.tld(:\d+)?$)#" CORSTrusted=true
    ```
 
-   + 例えば、オリジンからの CORS アクセスを有効にするには、次のようにします。
+   + 例えば、接触チャネルからの CORS アクセスを有効にするには：
 
-      + の任意のサブドメイン `https://example.com`
-      + 任意のポート `http://localhost`
+      + `https://example.com` の任意のサブドメイン
+      + `http://localhost` 上の任意のポート
 
-     行を次の 2 行に置き換えます。
+     この行を次の 2 行に置き換えます。
 
      ```
      SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.example\.com$)#" CORSTrusted=true
@@ -196,4 +196,4 @@ AEM パブリッシュ（およびプレビュー）サービスの Dispatcher �
 
 #### Dispatcher 設定の例
 
-+ [Dispatcher の設定例は、WKND プロジェクトに記載されています。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost)
++ [Dispatcher 設定の例は、WKND プロジェクトで確認できます。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost)
