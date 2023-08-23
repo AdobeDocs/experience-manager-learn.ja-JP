@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1484'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ Adobe Experience Manager（AEM）開発では、最小限の開発ツールセ�
 Experience Manager は Java アプリケーションなので、開発と AEM as a Cloud Service SDK をサポートするには Java SDK が必要です。
 
 1. [最新リリースの Java 11 SDK をダウンロードしてインストールする](https://experience.adobe.com/#/downloads/content/software-distribution/jp/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. 次のコマンドを実行して、OracleJava 11 SDK がインストールされていることを確認します。
+1. 次のコマンドを実行して、Oracle Java 11 SDK がインストールされていることを確認します。
 
 >[!BEGINTABS]
 
