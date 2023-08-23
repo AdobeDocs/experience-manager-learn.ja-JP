@@ -7,7 +7,7 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '459'
 ht-degree: 100%
 
