@@ -1,6 +1,6 @@
 ---
-title: Azure ストレージにフォーム送信を保存
-description: REST API を使用して Azure ストレージにフォームデータを保存する
+title: Azure ストレージへのフォーム送信の保存
+description: REST API を使用した Azure ストレージへのフォームデータの保存
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,40 +9,41 @@ level: Beginner
 last-substantial-update: 2023-08-14T00:00:00Z
 kt: 13781
 source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '453'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Azure Storage にフォーム送信を保存する
+# Azure ストレージへのフォーム送信の保存
 
-この記事では、送信されたAEM Formsデータを Azure Storage に保存するための REST 呼び出しの実行方法を説明します。
-送信されたフォームデータを Azure ストレージに保存するには、次の手順に従う必要があります。
+この記事では、REST 呼び出しを実行して、送信した AEM Forms データを Azure ストレージに保存する方法を説明します。
+送信したフォームデータを Azure ストレージに保存するには、次の手順に従う必要があります。
 
 ## Azure ストレージアカウントの作成
 
-[Azure ポータルアカウントにログインし、ストレージアカウントを作成します](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1). ストレージアカウントにわかりやすい名前を付け、「Review」をクリックし、「Create」をクリックします。 これにより、すべてのデフォルト値を持つストレージアカウントが作成されます。 この記事の目的で、当社のストレージアカウントに名前を付けました。 `aemformstutorial`.
+[Azure Portal アカウントにログインし、ストレージアカウントを作成します](https://learn.microsoft.com//ja-jp/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1)。ストレージアカウントにわかりやすい名前を付けて、「レビュー」をクリックしたあと、「作成」をクリックします。これにより、すべてのデフォルト値を使用してストレージアカウントが作成されます。この記事では、ストレージアカウントに `aemformstutorial` という名前を付けました。
 
-## 共有アクセスを作成
+## 共有アクセスの作成
 
-Azure Storage コンテナとのやり取りの認証の共有アクセス署名または SAS メソッドを使用します。
-ポータルのストレージアカウントページで、左側の [ 共有アクセスの署名 ] メニュー項目をクリックし、新しい共有アクセスの署名キー設定ページを開きます。 次のスクリーンショットに示すように、設定と適切な終了日を必ず指定し、「 SAS と接続文字列を生成」ボタンをクリックします。 BLOB サービスの SAS URL をコピーします。 この URL を使用して HTTP 呼び出しをおこないます
+Shared Access Signature（SAS）の認証メソッドを使用して、Azure ストレージコンテナを操作できるようになります。
+ポータルのストレージアカウントページで、左側の「Shared Access Signature」
+メニュー項目をクリックして、新しい Shared Access Signature キー設定ページを開きます。次のスクリーンショットに示すように、設定と適切な終了日を必ず指定し、「SAS と接続文字列を生成する」ボタンをクリックします。BLOB サービス SAS URL をコピーします。この URL を使用して HTTP 呼び出しを行います。
 ![shared-access-keys](./assets/shared-access-signature.png)
 
-## コンテナを作成
+## コンテナの作成
 
-次に、フォーム送信のデータを格納するコンテナを作成する必要があります。
-ストレージアカウントページで、左側の「コンテナ」メニュー項目をクリックし、「 」という名前のコンテナを作成します。 `formssubmissions`. パブリックアクセスレベルがプライベートに設定されていることを確認します。
+次に、フォーム送信のデータを保存するコンテナを作成する必要があります。
+ストレージアカウントページで、左側の「コンテナ」メニュー項目をクリックし、`formssubmissions` というコンテナを作成します。パブリックアクセスレベルを必ずプライベートに設定してください。
 ![コンテナ](./assets/new-container.png)
 
-## PUTリクエストを作成
+## PUT リクエストの作成
 
-次の手順では、送信されたフォームデータを Azure ストレージにPUTする保存リクエストを作成します。 BLOB サービスの SAS URL を変更して、URL にコンテナ名と BLOB ID を含める必要があります。 すべてのフォーム送信は、一意の BLOB ID で識別する必要があります。 一意の BLOB ID は、通常、コード内で作成され、PUT要求の URL に挿入されます。
-次に、PUTリクエストの URL の一部を示します。 The `aemformstutorial` はストレージアカウントの名前で、formsubmissions は、データが一意の BLOB ID と共に保存されるコンテナです。 残りの URL は同じままです。
+次に、送信したフォームデータを Azure ストレージに保存するための PUT リクエストを作成します。BLOB サービス SAS URL を変更して、URL にコンテナ名と BLOB ID を含める必要があります。フォーム送信はすべて、一意の BLOB ID で識別する必要があります。一意の BLOB ID は通常、コード内で作成し、PUT リクエストの URL に挿入します。
+PUT リクエストの URL の一部を以下に示します。`aemformstutorial` はストレージアカウントの名前で、formsubmissions は一意の BLOB ID でデータを保存するコンテナです。URL の残りの部分は同じままです。
 https://aemformstutorial.blob.core.windows.net/formsubmissions/00cb1a0c-a891-4dd7-9bd2-67a22bef3b8b?...............
 
-次の関数は、送信されたフォームデータを Azure ストレージに保存するために、PUTリクエストを使用して記述されます。 URL では、コンテナ名と uuid が使用されていることに注意してください。 以下に示すサンプルコードを使用して OSGi サービスまたは Sling サーブレットを作成し、フォーム送信を Azure ストレージに保存することができます。
+PUT リクエストを使用して、送信したフォームデータを Azure ストレージに保存するために作成した関数を以下に示します。なお、URL では、コンテナ名と UUID を使用しています。以下に示すサンプルコードを使用して OSGi サービスまたは Sling サーブレットを作成し、フォーム送信を Azure ストレージに保存できます。
 
 ```java
  public String saveFormDatainAzure(String formData) {
@@ -69,7 +70,7 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/00cb1a0c-a891-4dd
     }
 ```
 
-## コンテナに保存されたデータを検証
+## コンテナに保存したデータの確認
 
 ![form-data-in-container](./assets/form-data-in-container.png)
 
