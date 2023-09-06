@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1841'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 99%
    + [カスケードドロップダウンリスト](some-useful-integrations/geonames-org.md)
    + [ServiceNow との統合](some-useful-integrations/service-now.md)
    + [SendGrid でのメールの送信](some-useful-integrations/send-grid.md)
-   + [Azure ストレージへのフォームデータの保存](some-useful-integrations/store-form-data-in-azure-storage.md)
+   + [Azure ストレージへフォームデータを保存](some-useful-integrations/store-form-data-in-azure-storage.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [1 - 環境のセットアップ](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
