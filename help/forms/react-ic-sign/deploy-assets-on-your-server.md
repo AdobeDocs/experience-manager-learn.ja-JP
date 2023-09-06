@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
 source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '168'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -60,4 +60,4 @@ React アプリから AEM エンドポイントへの POST 呼び出しを有効
 
 ![cors-setting](assets/cors-settings.png)
 
-詳しくは、 [AEMとの CORS について](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja) を参照してください。
+CORS 設定オプションについて詳しくは、[AEM での CORS について](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)を参照してください。
