@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: ht
-source-wordcount: '1015'
-ht-degree: 100%
+source-git-commit: 6cbd8f3c49d44e75337715c35c198008da8ae7b9
+workflow-type: tm+mt
+source-wordcount: '1023'
+ht-degree: 99%
 
 ---
 
@@ -128,6 +128,10 @@ ht-degree: 100%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
    + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja)
++ キャッシュ{#caching}
+   + [概要](./caching/overview.md)
+   + [AEM Publish Service](./caching/publish.md)
+   + [AEM Author サービス](./caching/author.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
