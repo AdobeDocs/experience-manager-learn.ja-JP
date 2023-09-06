@@ -1,6 +1,6 @@
 ---
-title: AEM Workflow の変数のログ [Part6]
-description: AEMワークフロー変数の値をログに記録
+title: AEM ワークフローの変数のログ記録 [パート 6]
+description: AEM ワークフロー変数の値のログ記録
 version: 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
@@ -8,19 +8,19 @@ role: Developer
 level: Beginner
 kt: 13783
 source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Workflow で変数の値を記録する
+# AEM ワークフローでの変数値のログ記録
 
-変数の値をログに記録するのは、ソフトウェア開発の一般的な方法です。 AEMワークフローの実行方法を追跡し、開発者が理解し、問題を診断し、AEMワークフロー内のデータのフローを監視するのに役立ちます。
+変数の値をログ記録することは、ソフトウェア開発では一般的な方法です。これは、開発者が AEM ワークフローの実行方法をトラックして理解し、問題を診断し、AEM ワークフロー内のデータフローを監視するのに役立ちます。
 
 
 
-カスタムプロセスステップに関連付けられた次のコードは、FormDataModel 型を除くすべての型の変数の値を記録します。
+カスタムプロセスステップに関連付けられた次のコードは、FormDataModel タイプを除くすべてのタイプの変数の値をログ記録します。
 
 ```java
 package com.variablelogger.core;
@@ -173,9 +173,9 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 >[!NOTE]
 >
->ドキュメントは、AEMサーバーインストール環境のルートフォルダーに保存されます。
+>ドキュメントは、AEM サーバーインストールのルートフォルダーに保存されます。
 
-## サンプルバンドルをデプロイします。
+## サンプルバンドルをデプロイ
 
-[変数ロガーバンドルをデプロイします。](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) Felix Web コンソールを使用します。
-このバンドルをAEMワークフローのプロセスステップに関連付け、String 変数と Document 変数の値をログに記録します。
+Felix web コンソールを使用して、[変数ロガーバンドルをデプロイします](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar)。
+このバンドルを AEM ワークフローのプロセスステップに関連付けて、String 変数と Document 変数の値をログ記録します。
