@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1218'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -339,7 +339,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 この機能には、次が必要です。
 
-- `src/api/usePersistedQueries.js` の新しい [custom React useEffect フック](https://react.dev/reference/react/useEffect#useeffect)は、パラメータ化された `my-project/person-by-name` 永続クエリを呼び出し、単一の人物レコードを返します。
+- `src/api/usePersistedQueries.js` の新しい[カスタム React useEffect フック](https://react.dev/reference/react/useEffect#useeffect)は、パラメータ化された `my-project/person-by-name` 永続クエリを呼び出し、単一の人物レコードを返します。
 
 - `src/components/Person.js` にある React コンポーネントは、人物のフルネームをクエリパラメーターとして使用し、新しいカスタム React `useEffect` フックを呼び出して、人物データをレンダリングするものです。
 
@@ -492,7 +492,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 >[!IMPORTANT]
 >
->実装の変更を検証する場合、または上記の変更後にアプリを動作させることができない場合は、 [basic-tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) ソリューション分岐。
+>実装の変更を検証する場合や、上記の変更後にアプリを動作させることができない場合は、[基本チュートリアル](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial)のソリューション分岐を参照してください。
 
 ## 内部の仕組み
 
