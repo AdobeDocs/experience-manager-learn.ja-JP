@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
-workflow-type: ht
-source-wordcount: '1845'
-ht-degree: 100%
+source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
+workflow-type: tm+mt
+source-wordcount: '1851'
+ht-degree: 99%
 
 ---
 
@@ -176,6 +176,7 @@ ht-degree: 100%
    + [xml ドキュメントからのノードの抽出](custom-workflow-steps/extract-xml-node.md)
    + [ファイルシステムへのドキュメントの保存](custom-workflow-steps/write-payload-document.md)
    + [送信したデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
+   + [ドキュメントのリストからドキュメントを抽出](custom-workflow-steps/extract-document-from-list.md)
 + カスタムワークフローコンポーネント{#custom-workflow-component}
    + [1 - はじめに](custom-workflow-component/introduction.md)
    + [2 - Java コードの記述](custom-workflow-component/custom-process-step-aem-workflow.md)
