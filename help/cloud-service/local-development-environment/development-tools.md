@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
-workflow-type: ht
-source-wordcount: '1484'
+source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
+workflow-type: tm+mt
+source-wordcount: '1483'
 ht-degree: 100%
 
 ---
@@ -70,11 +70,27 @@ Homebrew は、macOS、Windows および Linux 用のオープンソースパッ
 1. ターミナルを開く
 1. 次のコマンドを実行して、Homebrew が既にインストールされているかどうかを確認します。 `brew --version`
 1. Homebrew がインストールされていない場合は、Homebrew をインストールします。
-   + [Homebrew を macOS にインストール](https://brew.sh/)
-      + macOS で Homebrew を使用する場合、[Xcode](https://apps.apple.com/us/app/xcode/id497799835) または[コマンドラインツール](https://developer.apple.com/download/more/)が必要です。このツールは次のコマンドでインストールできます。
-         + `xcode-select --install`
-   + [Linux で Homebrew をインストール](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [Windows 10 Homebrew をインストール](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+[](https://brew.sh/)macOS で Homebrew を使用する場合、[Xcode](https://apps.apple.com/us/app/xcode/id497799835) または[コマンドラインツール](https://developer.apple.com/download/more/)が必要です。このツールは次のコマンドでインストールできます。
+
+```shell
+$ xcode-select --install
+```
+
+>[!TAB Windows]
+
+[Windows 10 Homebrew をインストール](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!TAB Linux]
+
+[Linux で Homebrew をインストール](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!ENDTABS]
+
 1. 次のコマンドを実行して、Homebrew がインストールされていることを確認します。 `brew --version`
 
 ![Homebrew](./assets/development-tools/homebrew.png)
