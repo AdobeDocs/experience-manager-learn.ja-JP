@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1845'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 99%
    + [レビューワークフローの作成](handling-form-submissions/creating-a-review-workflow.md)
    + [ワークフローを起動するためアダプティブフォームの設定](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [「Thank You」ページの表示](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
-   + [「ありがとうございます」ページのカスタマイズ](handling-form-submissions/thank-you-page-on-fdm-submission.md)
+   + [「Thank you」ページのカスタマイズ](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [外部エンドポイントに送信](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [メールの送信](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [有給休暇リクエストワークフロー](handling-form-submissions/paid-time-off-request-workflow.md)
