@@ -10,10 +10,10 @@ feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: 73c7a13586edc5dbe16c16e017ee6f8ac91c1380
-workflow-type: ht
-source-wordcount: '67'
-ht-degree: 100%
+source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
+workflow-type: tm+mt
+source-wordcount: '70'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,8 @@ ht-degree: 100%
 
 + [概要](overview.md)
 + 基本{#basics}
-   + [概要](./basics/content-fragments-console.md)
+   + [コンソールの概要](./basics/content-fragments-console.md)
+   + [エディターの概要](./basics/content-fragment-editor.md)
 + 検索と検出{#search}
    + [高速フィルタリング](search/fast-filtering.md)
    + [参照](search/references.md)

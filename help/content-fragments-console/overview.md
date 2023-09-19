@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Catalog
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: 68caf431-8d81-4a72-a768-7b04082870d3
-source-git-commit: 73c7a13586edc5dbe16c16e017ee6f8ac91c1380
-workflow-type: ht
-source-wordcount: '219'
-ht-degree: 100%
+source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 91%
 
 ---
 
@@ -28,17 +28,17 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
 
 
 <div class="columns is-multiline">
-    <!-- Overview -->
+    <!-- Console overview -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Overview" tabindex="1">
+      aria-label="Console overview" tabindex="1">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./basics/content-fragments-console.md" title="概要"
+            <a href="./basics/content-fragments-console.md" title="コンソールの概要"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3409492?format=jpeg"
-                alt="概要">
+                alt="コンソールの概要">
             </a>
           </figure>
         </div>
@@ -47,7 +47,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragments-console.md" title="概要">概要</a>
+              <a href="./basics/content-fragments-console.md" title="概要">コンソールの概要</a>
             </p>
             <p class="is-size-6">コンテンツフラグメントコンソールの
 簡単な概要です。</p>
@@ -61,6 +61,38 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
         </div>
       </div>
     </div>
+    <!-- Editor overview -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Editor overview" tabindex="1">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./basics/content-fragment-editor.md" title="エディターの概要"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                alt="エディターの概要">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">4 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./basics/content-fragment-editor.md" title="概要">エディターの概要</a>
+            </p>
+            <p class="is-size-6">コンテンツフラグメントエディターの概要です。</p>
+            <a href="./basics/content-fragment-editor.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>    
     <!-- Fast filtering -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Fast filtering" tabindex="2">
