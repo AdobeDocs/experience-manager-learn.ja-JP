@@ -7,16 +7,21 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
-workflow-type: ht
-source-wordcount: '318'
-ht-degree: 100%
+source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
+workflow-type: tm+mt
+source-wordcount: '376'
+ht-degree: 84%
 
 ---
 
 # クロスオリジンリソース共有（CORS）に対応する開発
 
-[!DNL CORS] を活用して、クライアントサイド JavaScript で外部 web アプリケーションから AEM コンテンツにアクセスする簡単な例です。
+[!DNL CORS] を活用して、クライアントサイド JavaScript で外部 web アプリケーションから AEM コンテンツにアクセスする簡単な例です。この例では、 CORS OSGi 設定を使用して、AEMでの CORS アクセスを有効にします。 OSGi 設定アプローチは、次の場合に実行できます。
+
++ 単一の接触チャネルは、AEM Publish コンテンツにアクセスします
++ AEM Author には CORS アクセスが必要です
+
+AEM Publish への複数オリジンアクセスが必要な場合は、 [このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
