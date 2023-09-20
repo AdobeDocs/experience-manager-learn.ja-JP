@@ -12,16 +12,23 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
-workflow-type: ht
-source-wordcount: '1007'
-ht-degree: 100%
+source-git-commit: f47beff14782bb3f570d32818b000fc279394f19
+workflow-type: tm+mt
+source-wordcount: '1052'
+ht-degree: 95%
 
 ---
 
 # クロスオリジンリソース共有（[!DNL CORS]）について
 
 Adobe Experience Manager のクロスオリジンリソース共有（[!DNL CORS]）を使用すると、AEM 以外の web プロパティを使用して、認証済みおよび未認証の両方で AEM へのクライアントサイド呼び出しを行い、コンテンツを取得したり、AEM と直接やり取りしたりできます。
+
+このドキュメントで概要を説明している OSGi 設定は、次の場合に十分です。
+
+1. AEM Publish での単一オリジンリソース共有
+2. AEM Author への CORS アクセス
+
+AEM Publish で複数オリジンの CORS アクセスが必要な場合は、 [このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 ## Adobe Granite クロスオリジンリソース共有ポリシー OSGi 設定
 
@@ -182,7 +189,7 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 
 ### CORS リクエストヘッダーの許可
 
-必要な [HTTP リクエストヘッダーを処理のために AEM にパススルーする](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)ことを許可するには、Disaptcher の `/clientheaders` 設定で許可する必要があります。
+[必要な HTTP リクエストヘッダーを AEM に通過して処理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)できるようにするには、Disaptcher の `/clientheaders` 設定でこれらのヘッダーを許可する必要があります。
 
 ```
 /clientheaders {
