@@ -10,10 +10,10 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
-workflow-type: ht
-source-wordcount: '1621'
-ht-degree: 100%
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
+workflow-type: tm+mt
+source-wordcount: '1695'
+ht-degree: 95%
 
 ---
 
@@ -143,13 +143,16 @@ $ ./bin/validate.sh ./src
 
 AEM Dispatcher は、`src` Dispatcher および Apache web サーバーの設定ファイルに対して Docker を使用してローカルで実行されます 。
 
+
 >[!BEGINTABS]
 
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+$ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
+
+The `docker_run_hot_reload` 実行可能ファイルは、 `docker_run` 変更時に設定ファイルがリロードされるので、手動で終了して再起動する必要はありません。 `docker_run`. または、 `docker_run` を使用できますが、手動で終了し、再起動する必要があります `docker_run` 設定ファイルが変更された場合。
 
 >[!TAB Windows]
 
@@ -160,8 +163,10 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+$ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
+
+The `docker_run_hot_reload` 実行可能ファイルは、 `docker_run` 変更時に設定ファイルがリロードされるので、手動で終了して再起動する必要はありません。 `docker_run`. または、 `docker_run` を使用できますが、手動で終了し、再起動する必要があります `docker_run` 設定ファイルが変更された場合。
 
 >[!ENDTABS]
 
@@ -176,7 +181,7 @@ Dispatcher 設定の src フォルダーへのパスを指定する、Dispatcher
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -188,7 +193,7 @@ $ bin\docker_run src host.docker.internal:4503 8080
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -202,7 +207,7 @@ Experience Manager プロジェクトの Dispatcher 設定に対して Dispatche
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -214,7 +219,7 @@ $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.int
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -243,7 +248,7 @@ Dispatcher のデバッグに役立つパラメーターは以下のとおりで
 >[!TAB macOS]
 
 ```shell
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -255,7 +260,7 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/c
 >[!TAB Linux]
 
 ```shell
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -359,7 +364,7 @@ Phase 3 finished
 >[!TAB macOS]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run.sh src <HOST IP>:4503 8080`
++ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
@@ -369,7 +374,7 @@ Phase 3 finished
 >[!TAB Linux]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run.sh src <HOST IP>:4503 8080`
++ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 
