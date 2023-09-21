@@ -11,10 +11,10 @@ kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
-workflow-type: ht
-source-wordcount: '912'
-ht-degree: 100%
+source-git-commit: 0c6294ac468ad4ead041a68f381c6781a5c29b44
+workflow-type: tm+mt
+source-wordcount: '1013'
+ht-degree: 92%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 100%
 ## 前提条件 {#prerequisites}
 
 この章の手順は、Adobe Experience Manager as a Cloud Service 環境で実行します。AEM 環境への管理者アクセス権があることを確認します。このチュートリアルを完了するときは、[サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=ja)と[開発環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=ja)を使用することをお勧めします。
+
+[実稼動プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=ja) 環境はこのチュートリアルでも使用できますが、このチュートリアルのアクティビティが、ターゲット環境で実行される作業に影響を与えないようにする必要があります。このチュートリアルでは、ターゲットAEM環境にコンテンツとコードをデプロイします。
+
+The [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=ja) は、このチュートリアルの一部で使用できます。 クラウドサービスに依存するこのチュートリアルの側面（例： ） [Cloud Manager のフロントエンドパイプラインでのテーマのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=ja)は、AEM SDK で実行できません。
 
 詳細については、[オンボーディングドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=ja)を確認してください。
 
