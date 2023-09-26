@@ -13,14 +13,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 100%
 
 ---
 
 # AEM での初めての Angular SPA の作成 {#introduction}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。このチュートリアルでは、架空のライフスタイルブランド WKND の Angular アプリケーションの実装について順を追って説明します。Angular アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。SPA エディターは、Angular コンポーネントを AEM コンポーネントにマッピングします。AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
 
@@ -43,9 +45,9 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 ## 最新のコード
 
-チュートリアルコードはすべて、[GitHub](https://github.com/adobe/aem-guides-wknd-spa) にあります。
+チュートリアルコードはすべて [GitHub](https://github.com/adobe/aem-guides-wknd-spa) にあります。
 
-[最新のコードベース](https://github.com/adobe/aem-guides-wknd-spa/releases)は、ダウンロード可能な AEM パッケージとして入手できます。
+この[最新のコードベース](https://github.com/adobe/aem-guides-wknd-spa/releases)は、ダウンロード可能な AEM パッケージとして入手できます。
 
 ## 前提条件
 
@@ -62,13 +64,13 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
+このチュートリアルを完了するには、ローカル開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップするためのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を参照してください。
+> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップするためのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を確認してください。
 >
-> **AEM 6.5 を初めて使用する場合は、**[ローカル開発環境のセットアップについてのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)を参照してください。
+> **AEM 6.5 を初めて使用する場合は、**[ローカル開発環境のセットアップに関するガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)を参照してください。
 
 ## 次の手順 {#next-steps}
 

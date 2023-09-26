@@ -9,14 +9,16 @@ level: Beginner
 kt: 4321
 thumbnail: 32192.jpg
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 47%
+ht-degree: 55%
 
 ---
 
 # ページのプロパティについて {#understanding-page-properties-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティを紹介します。
 
@@ -35,7 +37,7 @@ ht-degree: 47%
       * サブタイトル
       * 説明
    * オン / オフタイム
-   * バニティー URL
+   * バニティ URL
 * 詳細
    * 設定
       * 言語
@@ -56,6 +58,6 @@ ht-degree: 47%
 
 ## その他のリソース {#additional-resources}
 
-* [ページプロパティの編集ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [ページコンテンツドキュメントの編集](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [ページプロパティの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [ページコンテンツの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
+* [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=ja)

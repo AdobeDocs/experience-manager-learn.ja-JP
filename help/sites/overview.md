@@ -5,14 +5,16 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 100%
 
 ---
 
 # AEM Sites のビデオおよびチュートリアル {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス管理プラットフォームです。このユーザーガイドには、AEM Sites の多くの機能に関するビデオとチュートリアルが含まれています。
 

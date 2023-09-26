@@ -3,14 +3,16 @@ title: Adobe Experience Manager でコンテンツベロシティを促進する
 description: 企業組織におけるコンテンツベロシティとその価値について学びます。 効果的な実装と、その過程で注意すべき落とし穴の 4 つの原則に進みます。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: de31d6e97b84781aa05ca441fc6e9fc4bc59ccc3
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '2814'
 ht-degree: 100%
 
 ---
 
 # Adobe Experience Manager でコンテンツベロシティを促進する方法
+
+{{edge-delivery-services}}
 
 カスタマーエクスペリエンスリーダーとして、Adobe Experience Manager プラットフォームの真の価値を解き放つために不可欠なコンポーネントである、コンテンツの速度を促進するための適切なフレームワークと原則を確実に持つことがいかに困難であるかを理解しています。この記事では、企業組織におけるコンテンツベロシティとその価値について説明します。 次に、効果的な実装と、その過程で注意すべき落とし穴の 4 つの原則について詳しく説明します。
 

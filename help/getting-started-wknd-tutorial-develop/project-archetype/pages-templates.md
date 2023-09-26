@@ -10,14 +10,16 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '3040'
 ht-degree: 100%
 
 ---
 
 # ページとテンプレート {#pages-and-template}
+
+{{edge-delivery-services-and-page-editor}}
 
 この章では、ベースページコンポーネントと編集可能なテンプレートとの関係を探索します。[Adobe XD](https://helpx.adobe.com/jp/support/xd.html) の一部のモックアップに基づいて、スタイルが設定されていない記事テンプレートを作成する方法について説明します。テンプレートを作成するプロセスでは、コアコンポーネントと編集可能なテンプレートの詳細ポリシー設定について説明します。
 

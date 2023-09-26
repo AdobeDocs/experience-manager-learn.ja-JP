@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 100%
@@ -23,6 +23,8 @@ ht-degree: 100%
 ---
 
 # スタイルシステムの使用 {#using-the-style-system-with-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Adobe Experience Manager のスタイルシステムを使用すると、バックエンドの開発をしなくてもコンポーネントの視覚的なバリエーションが可能になり、AEM コンポーネントの再利用性が向上し、より多用途で効率的なコンテンツのオーサリングが可能になります。 スタイルシステムを AEM コアコンポーネント、テンプレートエディター、レスポンシブレイアウトと組み合わせて使用すると、豊富なエクスペリエンスをすばやく作成するための強力な機能が提供されます。
 

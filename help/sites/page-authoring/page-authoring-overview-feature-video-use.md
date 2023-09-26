@@ -15,14 +15,16 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 100%
 
 ---
 
 # ページのオーサリング {#authoring-page-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 サイトエディターの UI を使用して Adobe Experience Manager Sites でページを作成する方法を説明します。
 

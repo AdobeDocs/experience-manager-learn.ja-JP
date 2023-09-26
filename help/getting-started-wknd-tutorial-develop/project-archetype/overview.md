@@ -11,14 +11,16 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
 # AEM Sites の基本を学ぶ - プロジェクトアーキタイプ {#project-archetype}
+
+{{edge-delivery-services-and-page-editor}}
 
 これは、Adobe Experience Manager（AEM）を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。このチュートリアルでは、架空のライフスタイルブランド WKND の AEM サイトの実装について順を追って説明します。
 
@@ -37,7 +39,7 @@ ht-degree: 100%
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする、macOS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャしています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
+このチュートリアルを完了するには、ローカル開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする、macOS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャしています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
 
 ### 必要なソフトウェア
 
@@ -54,7 +56,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップする方法についてのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を参照してください。
+> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップするためのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を確認してください。
 >
 > **AEM 6.5 を初めて使用する場合は、**[ローカル開発環境のセットアップについてのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)を参照してください。
 
@@ -64,7 +66,7 @@ ht-degree: 100%
 
 **[GitHub：WKND サイトプロジェクト](https://github.com/adobe/aem-guides-wknd)**
 
-さらに、チュートリアルの各章は、GitHub に独自のブランチを持っています。ユーザーは、前のパートに対応するブランチをチェックするだけで、どこからでもチュートリアルを開始できます。
+また、チュートリアルの各パートには、GitHub に独自のブランチがあります。 ユーザは、前の部分に対応するブランチをチェックアウトするだけで、いつでもチュートリアルを開始できます。
 
 ## 次の手順 {#next-steps}
 

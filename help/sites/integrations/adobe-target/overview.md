@@ -13,14 +13,16 @@ level: Beginner
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
 
 ---
 
 # AEM Sites と Adobe Target の統合
+
+{{edge-delivery-services-and-page-editor}}
 
 AEM Sites と Adobe Target を統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
 

@@ -15,14 +15,16 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 100%
 
 ---
 
 # ページエディターの使用 {#using-page-editor-with-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 AEM Site のページエディターは、web コンテンツを作成および編集するための強力なツールです。ページエディターのツールと機能には、ページエディターの UI ツールバーからアクセスできます。
 

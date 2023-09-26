@@ -15,14 +15,16 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 100%
 
 ---
 
 # レスポンシブレイアウトについて {#understanding-responsive-layout-with-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Adobe Experience Manager Sites では、レスポンシブなサイトデザインを促進するために、デバイスの幅に基づいて作成者がコンポーネントの幅を管理できます。レイアウトモードとレイアウトコンテナを使用すると、AEM UI を離れずに、各種デバイス向けのレスポンシブコンテンツを作成し、エンドユーザーエクスペリエンスをプレビューできます。
 

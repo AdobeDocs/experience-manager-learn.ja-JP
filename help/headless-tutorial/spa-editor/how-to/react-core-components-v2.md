@@ -9,14 +9,16 @@ level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 100%
 
 ---
 
 # AEM React 編集可能コンポーネント v2 の使用方法
+
+{{edge-delivery-services}}
 
 AEM は [AEM React 編集可能コンポーネント v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components) を提供しています。これは、React コンポーネントの作成を可能にする Node.js ベースの SDK であり、AEM SPA エディターを使用したコンテキスト内コンポーネント編集をサポートしています。
 

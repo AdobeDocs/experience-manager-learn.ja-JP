@@ -9,14 +9,16 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 100%
 
 ---
 
 # はじめに
+
+{{edge-delivery-services}}
 
 開発者向けのマルチパートチュートリアルへようこそ。ここでは、AEM SPA エディターを使用して編集可能な AEM コンテンツで既存の React ベース（Next.js）のリモート SPA を拡張する方法を見ていきます。
 

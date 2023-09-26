@@ -4,7 +4,7 @@ description: Adobe Experience Manager（AEM）as a Cloud Service のチュート
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 100%
@@ -12,6 +12,8 @@ ht-degree: 100%
 ---
 
 # AEM as a Cloud Service のビデオおよびチュートリアル {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEM as a Cloud Service は、次世代の Experience Manager 製品ラインを導入し、過去の投資とイノベーションに基づいて構築し、すべてのユースケースと機能を維持および拡張します。
 

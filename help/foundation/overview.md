@@ -4,7 +4,7 @@ description: Adobe Experience Manager Foundation のヘルプについては、�
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 100%
@@ -13,6 +13,8 @@ ht-degree: 100%
 
 # AEM Foundation のビデオとチュートリアル {#overview}
 
+{{edge-delivery-services}}
+
 Adobe Experience Manager は、AEM Sites、Assets、Forms のユーザーが使用できる共通の機能セットを提供します。
 
 <div id="whats-new-section">
@@ -20,14 +22,13 @@ Adobe Experience Manager は、AEM Sites、Assets、Forms のユーザーが使�
 ## 新機能
 
 * **[AEM におけるワークフローの使用（ビデオ）](./workflow/use-workflow.md)**
-
-   *AEM ワークフローは、AEM でコンテンツの共同作業、管理、処理を行う方法を提供します。*
+  *AEM ワークフローは、AEM でコンテンツの共同作業、管理、処理を行う方法を提供します。*
 
 * **[Cloud Manager for AEM について（ビデオ）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager for AEM を使用すると、AEM 環境の管理、検査、セルフサービスを簡単に行うことができます。*
+  *Cloud Manager for AEM を使用すると、AEM 環境の管理、検査、セルフサービスを簡単に行うことができます。*
 
 * **[Cloud Manager CI/CD Pipeline の使用（ビデオ）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *Cloud Manager の CI/CD パイプラインを使用して、安全で一貫性のあるデプロイメントを確実に実行する方法について説明します。*
+  *Cloud Manager の CI/CD パイプラインを使用して、安全で一貫性のあるデプロイメントを確実に実行する方法について説明します。*
 
 </div>
 

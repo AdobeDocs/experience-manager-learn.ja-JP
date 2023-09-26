@@ -13,14 +13,16 @@ feature: Authoring
 role: User
 level: Beginner
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 100%
 
 ---
 
 # ページバージョンの作成 {#creating-page-versions-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 ページのバージョン管理を使用すると、コンテンツ作成者はページのバージョンを作成することでページに関連付けられた変更を追跡でき、バージョンのプレビュー、バージョンの復元、ページの現在のバージョンとの比較を行うことができます。
 

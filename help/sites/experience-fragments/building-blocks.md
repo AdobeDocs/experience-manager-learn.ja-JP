@@ -11,7 +11,7 @@ doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 100%
@@ -20,6 +20,7 @@ ht-degree: 100%
 
 # エクスペリエンスフラグメントと構築ブロック {#building-blocks}
 
+{{edge-delivery-services-and-page-editor}}
 
 構築ブロックは、エクスペリエンスフラグメントのサブ機能です。構築ブロックを使用すると、コンテンツ作成者はエクスペリエンスフラグメントの様々なバリエーションでコンポーネントを再利用できます。
 

@@ -2,14 +2,16 @@
 title: AEM チュートリアル
 description: Adobe Experience Manager のビデオとチュートリアルのコレクションです。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
-source-git-commit: ebe252116f677ff7486346077736d0ee450896c1
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 100%
 
 ---
 
 # Experience Manager チュートリアル {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager（AEM）は、優れたエクスペリエンス管理プラットフォームです。このユーザガイドには、AEM から得られる価値を最大限に高めるうえで役に立つビデオとチュートリアルが含まれています。
 
