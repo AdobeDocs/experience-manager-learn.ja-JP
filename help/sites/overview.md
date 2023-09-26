@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 100%
+source-wordcount: '361'
+ht-degree: 65%
 
 ---
 
@@ -18,27 +18,22 @@ ht-degree: 100%
 
 Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス管理プラットフォームです。このユーザーガイドには、AEM Sites の多くの機能に関するビデオとチュートリアルが含まれています。
 
-
-<div id="whats-new-section">
+<div id="whats-new-section-skip"></div>
 
 ## 新機能
 
-* **[AEM Sites でのローンチの使用（ビデオ）](./page-authoring/launches.md)**
-  *AEM Sites のローンチとその使用方法、将来のリリース向けに web サイトコンテンツを準備する方法について説明します。*
+* **[AEMとEdge Delivery Servicesの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=ja)**
+  *AEM Sites、AEM Assets、AEMヘッドレス、AEM Forms、Edge Delivery Servicesなど、Adobe Experience Manager(AEM) の包括的な世界を、この有益な概要ビデオで確認できます。*
 
-* **[AEM コンポーネントでの Adobe クライアントデータレイヤーのカスタマイズ（チュートリアル）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-  *カスタム AEM コンポーネントのコンテンツで Adobe クライアントデータレイヤーを更新する方法について説明します。*
+* **[AEMとEdge Delivery Services (ビデオ)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
+  *Adobe Experience Manager(AEM) とEdge Delivery Servicesが提供する価値について説明します。*
 
-* **[AEM ヘッドレス GraphQL の概要（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
-  *AEM GraphQL API を使用して、ネイティブモバイルアプリで使用される AEM のコンテンツを公開する方法です。*
+* **[AEMの進化について学ぶ（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
+  *AEM 6.5 からAEM as a Cloud Serviceへ、最後にEdge Delivery Servicesへと、 AEMの進化とその価値について説明します。*
 
-* **[コンテンツフラグメントの使用（ビデオシリーズ）](./content-fragments/content-fragments-feature-video-use.md)**
-  *コンテンツフラグメントは、チャンネルに依存しない、再利用可能なコンテンツです。*
+* **[AEMとEdge Delivery Servicesのアーキテクチャの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
+  *AEM as a Cloud Serviceのアーキテクチャの詳細*
 
-* **[SPA エディターの使用（ビデオ）](./spa-editor/spa-editor-framework-feature-video-use.md)**
-  *単一ページアプリケーション（SPA）の AEM 編集機能について説明します。*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
