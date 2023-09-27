@@ -15,9 +15,9 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 source-git-commit: 65d8fd58f421a186e3624918c70cc5d79ec23700
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1967'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ function getCommandLineParams() {
 1. __ツール__／__セキュリティ__／__ユーザー__&#x200B;に移動します。
 1. 手順 1 で特定した&#x200B;__ログイン名__&#x200B;を持つ AEM ユーザーを探し、その&#x200B;__プロパティ__&#x200B;を開きます。
 1. 「__グループ__」タブに移動して、__DAM ユーザー__&#x200B;グループ（アセットへの書き込みアクセス権を持つグループ）を追加します。
-   + [提供されたAEMのユーザーグループのリストを表示する](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja#built-in-users-and-groups) をクリックして、最適な権限を取得するためのサービスユーザーをに追加します。 AEMが指定したユーザーグループがない場合は、独自のを作成し、適切な権限を追加します。
+   + [AEM が提供するユーザーグループのリストを参照](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja#built-in-users-and-groups)して、最適な権限を取得するためのサービスユーザーを追加します。AEM が提供するユーザーグループが十分でない場合は、独自のグループを作成し、適切な権限を追加します。
 1. 「__保存して閉じる__」をタップします。
 
 アセットに対する書き込み権限を持つテクニカルアカウントが AEM で許可された状態で、アプリケーションを再実行します。
