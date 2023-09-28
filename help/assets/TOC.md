@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
-workflow-type: ht
-source-wordcount: '396'
-ht-degree: 100%
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 98%
 
 ---
 
@@ -63,6 +63,9 @@ ht-degree: 100%
    + [画像のカスタムスマートタグ](metadata/custom-smart-tags.md)
    + [ビデオのスマートタグ](metadata/video-smart-tags.md)
    + [メタデータの読み込みと書き出し](metadata/metadata-import-export.md)
+
++ エッジ配信サービス{#edge-delivery-services}
+   + [Sidekickプラグイン](./edge-delivery-services/sidekick-plugin.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)
