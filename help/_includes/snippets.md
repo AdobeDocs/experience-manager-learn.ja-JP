@@ -1,8 +1,8 @@
 ---
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 30%
+source-wordcount: '129'
+ht-degree: 29%
 
 ---
 # スニペット
@@ -13,12 +13,12 @@ ht-degree: 30%
 
 ## エッジ配信サービス{#edge-delivery-services}
 
-[!BADGE AEMからEdge Delivery Servicesに公開する場合は、ここをクリックします。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
+[!BADGE Edge Delivery Servicesを使用したAEM Sitesからの公開の場合は、ここをクリックしてください。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
 
 ## Edge Delivery Servicesとページエディター{#edge-delivery-services-and-page-editor}
 
-[!BADGE AEMからEdge Delivery Servicesに公開する場合は、ここをクリックします。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
+[!BADGE Edge Delivery Servicesを使用したAEM Sitesからの公開の場合は、ここをクリックしてください。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
 
 ## Edge Delivery Servicesとユニバーサルビジュアルエディター{#edge-delivery-services-and-universal-visual-editor}
 
-[!BADGE AEMからEdge Delivery Servicesに公開する場合は、ここをクリックします。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
+[!BADGE Edge Delivery Servicesを使用したAEM Sitesからの公開の場合は、ここをクリックしてください。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="AEMからEdge Delivery Servicesに公開"}
