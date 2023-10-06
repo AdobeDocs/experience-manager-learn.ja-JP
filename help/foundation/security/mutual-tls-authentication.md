@@ -1,5 +1,5 @@
 ---
-title: 相互トランスポート層セキュリティ (mTLS) 認証
+title: AEMからの相互トランスポート層セキュリティ (mTLS) 認証
 description: 相互トランスポート層セキュリティ (mTLS) 認証が必要なAEMから Web API への HTTPS 呼び出しをおこなう方法について説明します。
 feature: Security
 version: 6.5, Cloud Service
@@ -10,15 +10,15 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '754'
 ht-degree: 12%
 
 ---
 
 
-# 相互トランスポート層セキュリティ (mTLS) 認証
+# AEMからの相互トランスポート層セキュリティ (mTLS) 認証
 
 相互トランスポート層セキュリティ (mTLS) 認証が必要なAEMから Web API への HTTPS 呼び出しをおこなう方法について説明します。
 
@@ -81,7 +81,7 @@ mTLS 保護 API をAEMから呼び出すには、次の手順を大まかに実�
 
 ### 証明書交換
 
-AEM証明書に自己署名 CA を使用している場合は、上記のように、証明書または内部の証明機関 (CA) 証明書を API プロバイダーと交換します。
+上記のように、AEM証明書に自己署名 CA を使用している場合は、証明書または内部の証明機関 (CA) 証明書を API プロバイダーに送信します。
 
 また、API プロバイダーが自己署名 CA 証明書を使用している場合は、API プロバイダーから証明書または内部証明機関 (CA) 証明書を受け取ります。
 
