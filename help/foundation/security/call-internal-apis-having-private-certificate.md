@@ -10,17 +10,19 @@ kt: 11548
 thumbnail: KT-11548.png
 doc-type: article
 last-substantial-update: 2023-08-25T00:00:00Z
-source-git-commit: d4859d8af066d456f16f76869e99432aaa5b9863
-workflow-type: ht
-source-wordcount: '484'
-ht-degree: 100%
+exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
+source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 86%
 
 ---
-
 
 # プライベート証明書を使用した内部 API の呼び出し
 
 プライベート証明書または自己署名証明書を使用した、AEM から web API への HTTPS 呼び出し方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424853?quality=12&learn=on)
 
 デフォルトでは、自己署名証明書を使用する web API に HTTPS 接続を確立しようとすると、次のエラーで接続が失敗します。
 
@@ -59,7 +61,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 ## HttpClient と、AEM TrustStore でのマテリアルの読み込み
 
-_プライベート証明書または自己署名証明書_&#x200B;を使用する API エンドポイントを呼び出すには、[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) の `SSLContextBuilder` を AEM の TrustStore で読み込み、接続を簡単にするために使用する必要があります。
+を持つ API エンドポイントを呼び出すには、以下を実行します。 _個人または自己署名の証明書_、 [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)&#39;s `SSLContextBuilder` は、AEM TrustStore と共に読み込まれ、接続を容易にするために使用される必要があります。
 
 次の手順に従います。
 
@@ -148,3 +150,10 @@ _プライベート証明書または自己署名証明書_&#x200B;を使用す�
 プライベート証明書を使用して内部 API を効果的に呼び出す従来の方法には、JVM キーストアの変更が含まれます。これは、Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) コマンドを使用してプライベート証明書を読み込むことで実現します。
 
 ただし、この方法はセキュリティのベストプラクティスと一致していないので、AEM では&#x200B;**グローバルトラストストア**&#x200B;と [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html) を利用することで優れたオプションを提供します。
+
+
+## ソリューションパッケージ
+
+ビデオの下に表示されているサンプルの Node.js プロジェクトは、 [ここ](assets/internal-api-call/REST-APIs.zip).
+
+AEMサーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` 支部 [参照](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
