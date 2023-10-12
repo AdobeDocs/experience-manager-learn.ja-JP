@@ -10,10 +10,10 @@ kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="統合" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '2470'
-ht-degree: 100%
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
+source-wordcount: '2468'
+ht-degree: 97%
 
 ---
 
@@ -53,9 +53,9 @@ Adobe Analytics タグ拡張機能を使用して AEM Sites と Adobe Analytics 
 
 ## WKND サイトに向けたタグ環境の切り替え
 
-[WKND](http://wknd.site/us/en.html) は、[オープンソースプロジェクト](https://github.com/adobe/aem-guides-wknd)に基づいて構築された公開サイトであり、AEM 実装の参考用および[チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)として設計されています。
+The [WKND](https://wknd.site/us/en.html) は、 [オープンソースプロジェクト](https://github.com/adobe/aem-guides-wknd) 参照として設計され、 [チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja) (AEM実装用 )
 
-AEM 環境をセットアップして WKND コードベースをインストールする代わりに、Experience Platform デバッガーを使用して、ライブの [WKND Site](http://wknd.site/us/en.html) を&#x200B;*お使いの*&#x200B;タグプロパティに&#x200B;**切り替える**&#x200B;ことができます。ただし、既に [Adobe Client Data Layer が有効になっている](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#installation-activation)場合は、独自の AEM サイトを使用できます。
+AEM 環境をセットアップして WKND コードベースをインストールする代わりに、Experience Platform デバッガーを使用して、ライブの [WKND Site](https://wknd.site/us/en.html) を&#x200B;*お使いの*&#x200B;タグプロパティに&#x200B;**切り替える**&#x200B;ことができます。ただし、既に [Adobe Client Data Layer が有効になっている](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#installation-activation)場合は、独自の AEM サイトを使用できます。
 
 1. Experience Platform にログインし、[タグプロパティを作成](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ja)します（まだの場合）。
 1. 初期のタグ JavaScript [ライブラリが作成され](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library?lang=ja)、タグ[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)に昇格されたことを確認します。
@@ -63,7 +63,7 @@ AEM 環境をセットアップして WKND コードベースをインストー�
 
    ![タグプロパティ埋め込みコードのコピー](assets/collect-data-analytics/launch-environment-copy.png)
 
-1. ブラウザーで新しいタブを開き、[WKND Site](http://wknd.site/us/en.html) に移動します。
+1. ブラウザーで新しいタブを開き、[WKND Site](https://wknd.site/us/en.html) に移動します。
 1. Experience Platform デバッガーブラウザー拡張機能を開きます
 
    ![Experience Platform デバッガー](assets/collect-data-analytics/experience-platform-debugger-extension.png)
@@ -80,7 +80,7 @@ AEM 環境をセットアップして WKND コードベースをインストー�
 
 [WKND 参照プロジェクト](https://github.com/adobe/aem-guides-wknd)は AEM コアコンポーネントで構築されており、デフォルトで [Adobe Client Data Layer が有効](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#installation-activation)になっています。次に、Adobe Client Data Layer が有効になっていることを確認します。
 
-1. [WKND Site](http://wknd.site/us/en.html) に移動します。
+1. [WKND Site](https://wknd.site/us/en.html) に移動します。
 1. ブラウザーのデベロッパーツールを開き、**コンソール**&#x200B;に移動します。次のコマンドを実行します。
 
    ```js
@@ -115,7 +115,7 @@ AEM 環境をセットアップして WKND コードベースをインストー�
 
 ## 「ページの読み込み」ルールの作成
 
-Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、`cmp:show` イベントがトリガーされます。`cmp:show` イベントがページデータレイヤーから発生したときにトリガーされるルールを作成します。
+Adobeクライアントデータレイヤーは **イベント駆動型の** データレイヤー。 AEM ページデータレイヤーが読み込まれると、`cmp:show` イベントがトリガーされます。`cmp:show` イベントがページデータレイヤーから発生したときにトリガーされるルールを作成します。
 
 1. Experience Platform に移動し、AEM サイトと統合されているタグプロパティに移動します。
 1. タグプロパティ UI の「**ルール**」セクションに移動し、「**新しいルールを作成**」をクリックします。
@@ -178,9 +178,9 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
    console.log("Page template: " + event.component['xdm:template']);
    ```
 
-   `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。ここで、`component` はカスタムイベントでデータレイヤーに対する `getState` から得られる現在のページです。
+   `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。ここで、 `component` は、データレイヤーから派生した現在のページです `getState` カスタムイベント内。
 
-1. 変更内容を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、コードを、AEM サイトで使用される[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)に昇格させます。
+1. 変更を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
 
    >[!NOTE]
    >

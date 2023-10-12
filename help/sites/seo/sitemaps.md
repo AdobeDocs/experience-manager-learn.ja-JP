@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: ht
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -48,7 +48,7 @@ AEM のサイトマップは、[Sling マッピング](https://sling.apache.org/
 
 ### サイトマップスケジューラーの OSGi 設定
 
-（[cron 式](http://www.cronmaker.com)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
+（[cron 式](http://www.cronmaker.com／)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -87,7 +87,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## リソース
 
-+ [AEM サイトマップのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=ja#building-an-xml-sitemap-on-aem)
++ [AEM サイトマップのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Apache Sling サイトマップのドキュメント](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org サイトマップのドキュメント](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org サイトマップインデックスファイルのドキュメント](https://www.sitemaps.org/protocol.html#index)

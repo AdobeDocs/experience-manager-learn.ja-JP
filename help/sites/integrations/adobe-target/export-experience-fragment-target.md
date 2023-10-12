@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '201'
-ht-degree: 100%
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 80%
 
 ---
 
@@ -47,9 +47,9 @@ Adobe Admin Console で適切な権限を持たずにエクスペリエンスフ
 
 #### 解決策
 
-1. AEM 統合で使用する Adobe Target 製品プロファイルの管理者権限で [Admin Console](https://adminconsole.adobe.com/) にログインします。
+1. ログイン先 [Admin Console](https://adminconsole.adobe.com/) を使用し、Adobe Target Product Profile の管理権限を使用するが、AEM統合を使用する。
 2. __製品／Adobe Target／製品プロファイル__&#x200B;を選択します
-3. 「__統合__」タブで、AEM as a Cloud Service 環境用の統合（Adobe I/O プロジェクトと同じ名前）を選択します。
+3. の下 __統合__ 「 」タブで、AEMas a Cloud Service環境用の統合を選択します (Adobe Developerプロジェクトと同じ名前 )。
 4. __編集者__&#x200B;または&#x200B;__承認者__&#x200B;の役割を割り当てます。
 
    ![Target API エラー](assets/target-permissions.png)
@@ -58,5 +58,5 @@ Adobe Target 統合に正しい権限を追加すると、このエラーが解�
 
 ## サポートリンク
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

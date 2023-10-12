@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '470'
-ht-degree: 100%
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 89%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Target を使用して、AEMでホストされているサイトのペー�
 
 ## 前提条件
 
-AEM web サイトのすべてのページをパーソナライズするには、次の設定を行う必要があります。
+AEM Web サイトのすべてのページをパーソナライズするには、次の設定を行う必要があります。
 
 1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
 1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
@@ -47,7 +47,7 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
    ![アクティビティ URL](assets/ab-test-url.png)
 
-1. 新しいアクティビティを作成した後、Visual Experience Composer の左側に「*エクスペリエンス A*」と「*エクスペリエンス B*」という 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
+1. Visual Experience Composer では、アクティビティを作成した後、左側に次の 2 つのタブが表示されます。 *エクスペリエンス A* および *エクスペリエンス B*. リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、 **エクスペリエンスを追加** 」ボタンをクリックします。
 
    ![エクスペリエンスオプション](assets/experience-options.png)
 
@@ -82,5 +82,5 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
 ## サポートリンク
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

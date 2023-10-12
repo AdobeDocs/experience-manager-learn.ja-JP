@@ -1,7 +1,7 @@
 ---
-title: Experience Platform Launch と Adobe I/O を使用した Adobe Experience Manager と Adobe Target の統合
+title: Experience Platform LaunchとAdobe Developerを使用したAdobe Experience ManagerとAdobe Targetの統合
 seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
-description: Experience Platform Launch と Adobe I/O を使用して、Adobe Experience Manager と Adobe Target を統合する方法をステップバイステップで説明
+description: Experience Platform LaunchとAdobe Developerを使用してAdobe Experience ManagerとAdobe Targetを統合する方法に関する詳しい手順
 seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 feature: Experience Fragments
 topic: Personalization
@@ -10,35 +10,35 @@ level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '1067'
-ht-degree: 100%
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
+source-wordcount: '1057'
+ht-degree: 86%
 
 ---
 
-# Adobe I/O コンソールを使用した Adobe Experience Platform Launch の使用
+# Adobe DeveloperコンソールからのAdobe Experience Platform Launchの使用
 
 ## 前提条件
 
 * [AEM オーサーとパブリッシュインスタンス](./implementation.md#set-up-aem)をそれぞれローカルホストのポート 4502 と 4503 で実行中である
 * **Experience Cloud**
-   * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
-   * 次のソリューションをプロビジョニングされた Experience Cloud
+   * 組織の Adobe Experience Cloud へのアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
+   * Experience Cloudの次のソリューションでのプロビジョニング
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
-      * [Adobe I/O コンソール](https://console.adobe.io)
+      * [Adobe 開発者コンソール](https://developer.adobe.com/console/)
 
      >[!NOTE]
      >Experience Platform Launch で開発、承認、公開、拡張機能の管理および環境の管理の権限が必要です。ユーザーインターフェイスオプションが使用できず、これらの手順を完了できない場合は、Experience Cloud 管理者に問い合わせてアクセス権を要求してください。Experience Platform Launch の権限について詳しくは、[ドキュメントを参照](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=ja)してください。
 
 * **ブラウザープラグイン**
-   * Adobe Experience Cloud Debugger（[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)）
+   * Adobe Experience Cloud Debugger（[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)）
    * Experience Platform Launch および DTM スイッチ（[Chrome](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk)）
 
 ## 関係するユーザー
 
-この統合には、次のようなオーディエンスの関与が必要となります。また、一部のタスクでは管理者権限が必要となることがあります。
+この統合では、次のオーディエンスが関与し、タスクを実行するには、管理者アクセスが必要になる場合があります。
 
 * デベロッパー
 * AEM Admin
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ## はじめに
 
-AEM は、Experience Platform Launch との標準の統合を提供します。この統合により、AEM 管理者は使いやすいインターフェイスを使用して Experience Platform Launch を容易に設定できるので、これら 2 つのツールを設定する際の労力とエラー数を削減できます。また、Adobe Target の拡張機能を Experience Platform Launch に追加するだけで、AEM web ページ上で Adobe Target のすべての機能を使用できます。
+AEM は、Experience Platform Launch との標準の統合を提供します。この統合により、AEM管理者は使いやすいインターフェイスを使用して簡単にExperience Platform Launchを設定できるので、これら 2 つのツールを設定する際の労力とエラー数を削減できます。 また、Adobe Target の拡張機能を Experience Platform Launch に追加するだけで、AEM web ページ上で Adobe Target のすべての機能を使用できます。
 
 この節では、次の統合手順を説明します。
 
@@ -88,7 +88,7 @@ AEM は、Experience Platform Launch との標準の統合を提供します。�
 
 #### Target 拡張機能の追加
 
-Adobe Target 拡張機能は、最新の web 用の Target JavaScript SDK、`at.js` を使用したクライアントサイドの実装をサポートしています。以前の Target ライブラリ `mbox.js` をご利用のお客様は、[at.js にアップグレード](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)していただくことで、Experience Platform Launch をご利用いただけます。
+Adobe Target 拡張機能は、最新の web 用の Target JavaScript SDK、`at.js` を使用したクライアントサイドの実装をサポートしています。以前の Target ライブラリ `mbox.js` をご利用のお客様は、[at.js にアップグレード](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)していただくことで、Experience Platform Launch をご利用いただけます。
 
 Target 拡張機能は、次の 2 つの主要な部分で構成されています。
 
@@ -99,7 +99,7 @@ Target 拡張機能は、次の 2 つの主要な部分で構成されていま�
    * グローバル mbox にパラメーターを追加
    * Fire Global mbox
 
-1. **拡張機能**&#x200B;の下に、Experience Platform Launch プロパティで既にインストールされている拡張機能のリストが表示されます。（[Experience Platform Launch Core 拡張機能](https://exchange.adobe.com/experiencecloud.details.100223.adobe-launch-core-extension.html)はデフォルトでインストールされます）
+1. **拡張機能**&#x200B;の下に、Experience Platform Launch プロパティで既にインストールされている拡張機能のリストが表示されます。（[Experience Platform Launch Core 拡張機能](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)はデフォルトでインストールされます）
 2. 「**拡張機能カタログ**」オプションを選択し、フィルターで Target を検索します。
 3. 最新バージョンの Adobe Target at.js を選択し、「**インストール**」オプションをクリックします。
    ![Experience Platform Launch - 新規プロパティ](assets/using-launch-adobe-io/launch-target-extension.png)
@@ -138,9 +138,9 @@ Target 拡張機能は、次の 2 つの主要な部分で構成されていま�
 
 >[!NOTE]
 >
-> Adobe I/O 統合に、適切な [ の役割を持つワークスペースを選択するアクセス権を付与し、中央のチームが少数のワークスペース API 駆動型の変更を行えるようにします](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html?lang=ja)。
+> 適切なを持つ選択したワークスペースに対するAdobe Developer統合のアクセス権を付与する [一部のワークスペースでのみ API 主導の変更を行えるようにする役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html?lang=ja).
 
-1. Adobe I/O の資格情報を使用して、AEM で IMS 統合を作成します。（01:12～03:55）
+1. Adobe Developerの資格情報を使用して、AEMで IMS 統合を作成します。 (01:12～03:55)
 2. Experience Platform Launch で、プロパティを作成します。（[上記](#create-launch-property)が対象）
 3. 手順 1 の IMS 統合を使用して、Experience Platform Launch 統合を作成し、Experience Platform Launch プロパティを読み込みます。
 4. AEM で、ブラウザー設定を使用して Experience Platform Launch 統合をサイトにマッピングします。（05:28～06:14）

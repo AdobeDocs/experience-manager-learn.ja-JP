@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '617'
-ht-degree: 100%
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+workflow-type: tm+mt
+source-wordcount: '613'
+ht-degree: 84%
 
 ---
 
@@ -29,7 +29,7 @@ Experience Platform Launch ルールを使用して、ページリクエスト�
 
 ## ページ読み込みルール
 
-Adobe Client Data Layer は、イベント駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、イベント`cmp:show`が発生します。ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。次に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
+Adobeクライアントデータレイヤーは、イベント駆動型のデータレイヤーです。 AEMページデータレイヤーが読み込まれると、イベントをトリガーします。 `cmp:show` . ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。以下に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
 
 ### カスタムページ表示イベント{#page-event}
 
@@ -41,7 +41,7 @@ Experience Platform Launch プロパティで、新しい&#x200B;**イベント*
 + __イベントタイプ：__&#x200B;カスタムコード
 + __名前：__ Page Show Event Handler（または説明的なもの）
 
-「__編集画面を開く__」ボタンをタップして、次のコードを貼り付けます。このコードは&#x200B;__必須__&#x200B;で、__イベント設定__&#x200B;とそれに続く&#x200B;__アクション__&#x200B;に追加する必要があります。
+次をタップします。 __編集画面を開く__ 」ボタンをクリックし、次のコードスニペットに貼り付けます。 このコードは&#x200B;__必須__&#x200B;で、__イベント設定__&#x200B;とそれに続く&#x200B;__アクション__&#x200B;に追加する必要があります。
 
 ```javascript
 // Define the event handler function
@@ -81,7 +81,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-カスタム関数は `pageShownEventHandler` を定義し、AEM コアコンポーネントが発するイベントをリスニングし、コアコンポーネントの関連情報を導き出し、イベントオブジェクトにパッケージし、ペイロードに導き出したイベント情報で Experience Platform Launch イベントをトリガーします。
+カスタム関数は、 `pageShownEventHandler`は、AEMコアコンポーネントから発行されるイベントをリッスンし、コアコンポーネントから関連情報を導出し、それをイベントオブジェクトにパッケージ化し、Launch イベントをそのペイロードに派生イベント情報とトリガー付けします。
 
 Experience Platform Launch ルールは Experience Platform Launch の`trigger(...)`関数を使用してトリガーされます。この関数は、ルールのイベント のカスタムコードのコードスニペット定義内で&#x200B;__のみ__&#x200B;利用可能です。
 
@@ -162,7 +162,7 @@ window.targetGlobalSettings = {
 ## サポートリンク
 
 + [Adobe Client Data Layer ドキュメント](https://github.com/adobe/adobe-client-data-layer/wiki)
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 + [Adobe Client Data Layer とコアコンポーネントのドキュメントの使用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)
-+ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=ja)
++ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=ja)
