@@ -10,17 +10,19 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
+exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
+source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 12%
+source-wordcount: '800'
+ht-degree: 11%
 
 ---
-
 
 # AEMからの相互トランスポート層セキュリティ (mTLS) 認証
 
 相互トランスポート層セキュリティ (mTLS) 認証が必要なAEMから Web API への HTTPS 呼び出しをおこなう方法について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS または双方向 TLS 認証により、 **クライアントとサーバの両方が互いに認証を行う**. この認証は、電子証明書を使用しておこなわれます。 これは、強力なセキュリティと ID の検証が重要なシナリオで一般的に使用されます。
 
@@ -221,3 +223,9 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 非公開証明書を使用して mTLS API を効果的に呼び出す従来の方法では、JVM キーストアの変更が行われています。 これは、Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) コマンドを使用してプライベート証明書を読み込むことで実現します。
 
 ただし、この方法はセキュリティのベストプラクティスと一致しておらず、AEMは、 **ユーザー固有のキーストアとグローバル TrustStore** および [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+## ソリューションパッケージ
+
+ビデオの下に表示されているサンプルの Node.js プロジェクトは、 [ここ](assets/internal-api-call/REST-APIs.zip).
+
+AEMサーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` 支部 [参照](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
