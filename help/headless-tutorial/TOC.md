@@ -8,8 +8,8 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
-workflow-type: ht
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 + [AEM ヘッドレスの概要](./overview.md)
 + GraphQL {#graphql}
-   + [AEM ヘッドレス開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+   + [AEM ヘッドレス開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja){target=_blank}
    + [概要](./graphql/overview.md)
    + クイックセットアップ {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
