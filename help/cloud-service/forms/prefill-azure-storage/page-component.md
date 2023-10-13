@@ -8,13 +8,13 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: ht
+exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 100%
 
 ---
-
 
 # ページコンポーネント
 
@@ -85,4 +85,3 @@ storeandfetch ノードの下に azureportal.jsp というファイルを作成�
 ### 次の手順
 
 [ページコンポーネントとテンプレートの関連付け](./associate-page-component.md)
-

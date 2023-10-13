@@ -8,8 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: ht
+exl-id: b40b0ef4-efa9-400e-82d8-aa0c7feb7be4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 100%
 
@@ -38,5 +39,3 @@ ht-degree: 100%
 ### 次の手順
 
 [ページコンポーネントの作成](./page-component.md)
-
-

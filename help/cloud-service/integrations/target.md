@@ -12,9 +12,9 @@ jira: KT-12433
 thumbnail: KT-12433.jpeg
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
-exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '1679'
 ht-degree: 100%
 

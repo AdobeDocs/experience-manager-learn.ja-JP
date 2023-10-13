@@ -8,8 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2023-07-14T00:00:00Z
-source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
-workflow-type: ht
+exl-id: 62b73f4b-69d8-4ede-9d57-3d6472d25d5a
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
 
@@ -76,4 +77,3 @@ AEM Forms から SendGrid 動的テンプレートを使用してメールを送
 `template_id` が SendGrid 動的メールテンプレートの ID に対応していることと、メールアドレスが有効で、SendGrid によって検証されていることを確認します。`personalizations` セクションの値を使用すると、アダプティブフォームからユーザーが入力したデータを使用してメールをパーソナライズできます。
 
 これらの手順に従って、提供されたペイロードをカスタマイズすると、SendGrid 動的テンプレートと AEM Forms の統合を効果的にテストできます。
-

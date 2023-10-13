@@ -8,8 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: ht
+exl-id: 4b2d1e50-9fa1-4934-820b-7dae984cee00
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 100%
 
@@ -33,5 +34,3 @@ AEM Forms と SendGrid の統合を作成するには、次の手順に従って
 ### 次の手順
 
 [Azure ストレージ統合の作成](./create-fdm.md)
-
-

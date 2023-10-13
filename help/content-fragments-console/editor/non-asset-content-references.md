@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 last-substantial-update: 2023-05-12T00:00:00Z
 jira: KT-13241
-exl-id: 7dd1a5f9-e2f7-4b36-92ce-ac036637bdf0
-source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
-workflow-type: ht
+exl-id: aac044b2-903a-47c7-8461-824c43902972
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 100%
 

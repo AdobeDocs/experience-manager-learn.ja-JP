@@ -8,9 +8,9 @@ thumbnail: 3419421.jpeg
 topic: Content Management
 role: User
 level: Intermediate
-exl-id: 1307ef4d-7f36-4eb9-af9f-97edb836271a
-source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
-workflow-type: ht
+exl-id: 3f2f3fe4-a3cf-4494-a318-bf82aee20dc7
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 100%
 

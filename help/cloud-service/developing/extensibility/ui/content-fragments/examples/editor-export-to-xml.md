@@ -10,9 +10,9 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-exl-id: 5738b5ec-3b86-4eed-9d48-8318c748fd38
-source-git-commit: d926bb35623e8d3bb8dd564e07d3cb394342e367
-workflow-type: ht
+exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 100%
 

@@ -10,13 +10,13 @@ jira: KT-13453
 thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: ht
+exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 100%
 
 ---
-
 
 # カスタムグリッド列
 
@@ -28,7 +28,7 @@ ht-degree: 100%
 
 この例では、拡張機能ポイント `contentFragmentGrid` まで拡張して、コンテンツフラグメントコンソールにカスタム列を追加します。
 
-| 拡張対象の AEM UI | 拡張ポイント |
+| 拡張対象の AEM UI | 拡張機能ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントコンソール](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [グリッド列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 

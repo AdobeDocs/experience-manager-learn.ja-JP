@@ -12,9 +12,9 @@ jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
-exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 100%
 

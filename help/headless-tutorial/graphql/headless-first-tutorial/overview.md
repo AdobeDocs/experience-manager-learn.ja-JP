@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-exl-id: 395af1ec-ceee-4b4d-98e8-007f560b318b
-source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
-workflow-type: ht
+exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 100%
 

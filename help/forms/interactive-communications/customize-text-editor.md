@@ -12,9 +12,9 @@ level: Beginner
 feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 kt: 13126
-exl-id: f12ab119-ac8e-4cc8-af86-cbffa30e72c5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
+exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 100%
 
@@ -175,7 +175,6 @@ tbxeditor-config.xml ファイルを編集してフォントをカスタマイ�
       また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
    1. 「**すべて保存**」をクリックします。
-
 
 ## クライアントコンピューターへのカスタムフォントの追加 {#addcustomfonts}
 

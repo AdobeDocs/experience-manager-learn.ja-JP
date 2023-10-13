@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 kt: kt-13918
 last-substantial-update: 2023-09-12T00:00:00Z
-source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
+exl-id: b0baac71-3074-49d5-9686-c9955b096abb
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 3%
@@ -53,7 +54,3 @@ ht-degree: 3%
 >[!NOTE]
 >
 >その後、抽出したドキュメントは、「電子メールを送信」や「FDM ステップを起動」など、他のワークフローステップで使用できます
-
-
-
-

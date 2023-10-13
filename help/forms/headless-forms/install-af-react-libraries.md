@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-exl-id: 46b43c2e-ed99-4bfd-88eb-eeea816dfecf
-source-git-commit: 0a8b60cb69f3f185375d34c8cb9ab90bc84c85cd
-workflow-type: ht
+exl-id: 0ed44016-d52a-4980-a0b1-06da149c3cb1
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 100%
 
