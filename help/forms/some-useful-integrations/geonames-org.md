@@ -9,10 +9,10 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 5fc4a11b7f7f26a62f49cc8614e6bf699cc1697a
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 100%
+source-wordcount: '636'
+ht-degree: 91%
 
 ---
 
@@ -48,14 +48,11 @@ OpenAPI Specification（旧称 Swagger Specification）は、REST API の API �
 >[!NOTE]
 > AEM Forms は、OpenAPI Specification version 2.0（旧 Swagger）をサポートしています。
 
-[Swagger Editor](https://editor.swagger.io/) を使用して swagger ファイルを作成し、国または州のすべての国と子要素を取得する操作を記述します。Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 完成した Swagger ファイルは、[ここ](assets/swagger-files.zip)からダウンロードできます
-Swagger ファイルは、次の REST API を記述します
-* [すべての国を取得](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Geoname オブジェクトの子の取得](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+[Swagger Editor](https://editor.swagger.io/) を使用して swagger ファイルを作成し、国または州のすべての国と子要素を取得する操作を記述します。Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 
 
 ## データソースの作成
 
-AEM／AEM Forms をサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソースを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=ja)する必要があります。[Swagger ファイル](assets/swagger-files.zip)を使用してデータソースを作成します。2 つのデータソースを作成する必要があります（1 つはすべての国を取得するためのデータソースで、もう 1 つは子要素を取得するためのデータソース）
+AEM／AEM Forms をサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソースを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=ja)する必要があります。[Swagger ファイル](assets/geonames-swagger-files.zip)を使用してデータソースを作成します。2 つのデータソースを作成する必要があります（1 つはすべての国を取得するためのデータソースで、もう 1 つは子要素を取得するためのデータソース）
 
 
 ## フォームデータモデルの作成
@@ -83,3 +80,13 @@ AEM Forms のデータ統合機能には、[フォームデータモデル](http
 ### 演習
 
 フォームに郡と市という名前の 2 つのドロップダウンリストを追加して、選択した国と都道府県に基づいて郡と市を一覧表示します。![演習](assets/cascading-drop-down-exercise.png)
+
+
+### サンプルアセット
+
+次のアセットをダウンロードして、カスケード・ドロップダウン・リストの作成の基本を学ぶことができます。完成した Swagger ファイルは、 [ここ](assets/geonames-swagger-files.zip)
+Swagger ファイルは、次の REST API を記述します
+* [すべての国を取得](http://api.geonames.org/countryInfoJSON?username=yourusername)
+* [Geoname オブジェクトの子の取得](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+
+完了 [フォームデータモデルは、こちらからダウンロードできます。](assets/geonames-api-form-data-model.zip)
