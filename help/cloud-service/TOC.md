@@ -38,7 +38,7 @@ ht-degree: 98%
    + [Sling](./underlying-technology/introduction-sling.md)
    + [オーサーおよびパブリッシュサービス](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
-+ エッジ配信サービス {#edge-delivery-services}
++ Edge 配信サービス {#edge-delivery-services}
    + [AEM AssetsSidekickプラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
@@ -57,7 +57,7 @@ ht-degree: 98%
 + ローカル開発環境の設定 {#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
    + [開発ツール](./local-development-environment/development-tools.md)
-   + [ローカルAEM SDK](./local-development-environment/aem-runtime.md)
+   + [ローカル AEM SDK](./local-development-environment/aem-runtime.md)
    + [ローカル Dispatcher ツール](./local-development-environment/dispatcher-tools.md)
 + 開発{#developing}
    + 拡張性{#extensibility}
@@ -129,7 +129,7 @@ ht-degree: 98%
       + リスク{#risks}
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
-   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}。
+   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}
 + キャッシュ{#caching}
    + [概要](./caching/overview.md)
    + [AEM パブリッシュサービス](./caching/publish.md)
@@ -189,7 +189,7 @@ ht-degree: 98%
       + [アセットワークフロー移行ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
-+ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}。
++ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
 + Forms{#forms}
    + Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
       + [1 - はじめに](./forms/developing-for-cloud-service/getting-started.md)
@@ -317,7 +317,7 @@ ht-degree: 98%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
-   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}。
+   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja){target=_blank}
    + [SPA エディター（React）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja){target=_blank}
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}

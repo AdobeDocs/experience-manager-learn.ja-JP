@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Service Development 用のローカルAEM SDK の設定
-description: AEM as a Cloud Service SDK の Quickstart Jar を使用して、ローカルAEM SDK ランタイムを設定します。
+title: AEM as a Cloud Service 開発用のローカル AEM SDK の設定
+description: AEM as a Cloud Service SDK のクイックスタート jar を使用して、ローカル AEM SDK ランタイムを設定します。
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -13,11 +13,11 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
 source-wordcount: '1793'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# ローカルAEM SDK の設定 {#set-up-local-aem-sdk}
+# ローカル AEM SDK の設定 {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"

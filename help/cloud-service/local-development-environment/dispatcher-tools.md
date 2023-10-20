@@ -13,7 +13,7 @@ exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
 source-wordcount: '1695'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -152,7 +152,7 @@ AEM Dispatcher は、`src` Dispatcher および Apache web サーバーの設定
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-The `docker_run_hot_reload` 実行可能ファイルは、 `docker_run` 変更時に設定ファイルがリロードされるので、手動で終了して再起動する必要はありません。 `docker_run`. または、 `docker_run` を使用できますが、手動で終了し、再起動する必要があります `docker_run` 設定ファイルが変更された場合。
+`docker_run_hot_reload` 実行可能ファイルは、`docker_run` を手動で終了して再起動する必要がなく、設定ファイルを変更するとリロードするので、`docker_run` よりも推奨されます。または、`docker_run` を使用することができますが、設定ファイルを変更した際は、`docker_run` を手動で終了して再起動する必要があります。
 
 >[!TAB Windows]
 
@@ -166,7 +166,7 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-The `docker_run_hot_reload` 実行可能ファイルは、 `docker_run` 変更時に設定ファイルがリロードされるので、手動で終了して再起動する必要はありません。 `docker_run`. または、 `docker_run` を使用できますが、手動で終了し、再起動する必要があります `docker_run` 設定ファイルが変更された場合。
+`docker_run_hot_reload` 実行可能ファイルは、`docker_run` を手動で終了して再起動する必要がなく、設定ファイルを変更するとリロードするので、`docker_run` よりも推奨されます。または、`docker_run` を使用することができますが、設定ファイルを変更した際は、`docker_run` を手動で終了して再起動する必要があります。
 
 >[!ENDTABS]
 
@@ -352,7 +352,7 @@ Phase 3 finished
 
 `host.docker.internal` は Docker コンテナに指定されるホスト名であり、ホストに解決されます。docs.docker.com によれば、次のとおりです（[macOS](https://docs.docker.com/desktop/networking/)、[Windows](https://docs.docker.com/desktop/networking/)）。
 
-> Docker 18.03 以降では、特別な DNS 名 host.docker.internal に接続することをお勧めします。この DNS 名は、ホストが使用する内部 IP アドレスに解決されます。
+> Docker 18.03 以降のレコメンデーションは、特別な DNS 名 host.docker.internal に接続することです。この DNS 名は、ホストが使用する内部 IP アドレスに解決されます。
 
 `bin/docker_run src host.docker.internal:4503 8080` の結果、__Waiting until host.docker.internal is available__（host.docker.internal が使用可能になるまで待機中）というメッセージが表示された場合は、以下を実行します。
 

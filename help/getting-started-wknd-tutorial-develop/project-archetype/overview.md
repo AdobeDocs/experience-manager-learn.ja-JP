@@ -14,7 +14,7 @@ recommendations: disable
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 92%
 
 **[GitHub：WKND サイトプロジェクト](https://github.com/adobe/aem-guides-wknd)**
 
-また、チュートリアルの各パートには、GitHub に独自のブランチがあります。 ユーザは、前の部分に対応するブランチをチェックアウトするだけで、いつでもチュートリアルを開始できます。
+さらに、チュートリアルの各パートは、GitHub に独自のブランチを持っています。ユーザーは、前のパートに対応するブランチをチェックするだけで、どこからでもチュートリアルを開始できます。
 
 ## 次の手順 {#next-steps}
 

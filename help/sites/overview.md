@@ -8,7 +8,7 @@ exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
 workflow-type: tm+mt
 source-wordcount: '361'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -22,17 +22,17 @@ Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス�
 
 ## 新機能
 
-* **[AEMとEdge Delivery Servicesの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=ja)**
-  *AEM Sites、AEM Assets、AEMヘッドレス、AEM Forms、Edge Delivery Servicesなど、Adobe Experience Manager(AEM) の包括的な世界を、この有益な概要ビデオで確認できます。*
+* **[AEM と Edge 配信サービスの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=ja)**
+  *この有益な概要ビデオでは、AEM Sites、AEM Assets、AEM ヘッドレス、AEM Forms、Edge 配信サービスなど、包括的な Adobe Experience Manager（AEM）について説明します。*
 
-* **[AEMとEdge Delivery Services (ビデオ)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
-  *Adobe Experience Manager(AEM) とEdge Delivery Servicesが提供する価値について説明します。*
+* **[AEM および Edge 配信サービスとは(ビデオ)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=ja)**
+  *Adobe Experience Manager（AEM）と Edge 配信サービスが提供する価値について説明します。*
 
-* **[AEMの進化について学ぶ（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
-  *AEM 6.5 からAEM as a Cloud Serviceへ、最後にEdge Delivery Servicesへと、 AEMの進化とその価値について説明します。*
+* **[AEMの進化について学ぶ（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html?lang=ja)**
+  *AEM 6.5 から AEM as a Cloud Service、最終的に Edge 配信サービスに至るまで、AEM の進化と提供する価値について説明します。*
 
-* **[AEMとEdge Delivery Servicesのアーキテクチャの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
-  *AEM as a Cloud Serviceのアーキテクチャの詳細*
+* **[Edge 配信サービスを使用した AEM のアーキテクチャの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=ja)**
+  *AEM as a Cloud Service のアーキテクチャについて説明します。*
 
 
 <div id="recs-overview-body-1"></div>

@@ -1,6 +1,6 @@
 ---
-title: AEM Sitesのページプロパティについて
-description: 次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティメタデータを紹介します。
+title: AEM Sites のページプロパティについて
+description: 次のビデオでは、Adobe Experience Manager のページに関連付けられたページプロパティのメタデータの概要について説明します。
 version: 6.4, 6.5
 topic: Content Management
 feature: Page Editor
@@ -12,22 +12,22 @@ exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
-# ページのプロパティについて {#understanding-page-properties-aem-sites}
+# ページプロパティについて {#understanding-page-properties-aem-sites}
 
 {{edge-delivery-services-and-page-editor}}
 
-次のビデオでは、Adobe Experience Managerのページに関連付けられたページプロパティを紹介します。
+次のビデオでは、Adobe Experience Manager のページに関連付けられたページプロパティの概要について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
-このビデオでは、次のページのプロパティ要素について説明します。
+このビデオでは、次のページプロパティ要素について説明します。
 
 * 基本
-   * タイトルとタグ 
+   * タイトルとタグ
       * タイトル
       * タグ
       * ナビゲーション内で非表示にする
@@ -47,7 +47,7 @@ ht-degree: 55%
    * クラウド設定
    * テンプレート設定
    * 認証要件
-   * エクスポート
+   * 書き出し
 * サムネール
 * ソーシャルメディア共有
 * クラウドサービスの設定
@@ -58,6 +58,6 @@ ht-degree: 55%
 
 ## その他のリソース {#additional-resources}
 
-* [ページプロパティの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [ページプロパティの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html?lang=ja)
 * [ページコンテンツの編集に関するドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja)
 * [ページのオーサリングのクイックスタートガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=ja)

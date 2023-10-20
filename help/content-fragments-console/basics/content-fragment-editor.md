@@ -1,6 +1,6 @@
 ---
 title: コンテンツフラグメントエディター
-description: AEMコンテンツフラグメントエディターの簡単な紹介です。
+description: AEM のコンテンツフラグメントエディターの簡単な概要を説明します。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -14,12 +14,12 @@ exl-id: 842622c7-4a1c-42bb-88e9-42717e3dac8e
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '22'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
 # コンテンツフラグメントエディター
 
-AEMコンテンツフラグメントエディターの簡単な紹介です。
+AEM のコンテンツフラグメントエディターの簡単な概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)

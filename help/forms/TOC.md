@@ -11,7 +11,7 @@ index: y
 source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
 workflow-type: tm+mt
 source-wordcount: '1851'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -176,7 +176,7 @@ ht-degree: 99%
    + [xml ドキュメントからのノードの抽出](custom-workflow-steps/extract-xml-node.md)
    + [ファイルシステムへのドキュメントの保存](custom-workflow-steps/write-payload-document.md)
    + [送信したデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
-   + [ドキュメントのリストからドキュメントを抽出](custom-workflow-steps/extract-document-from-list.md)
+   + [ドキュメントのリストからのドキュメントの抽出](custom-workflow-steps/extract-document-from-list.md)
 + カスタムワークフローコンポーネント{#custom-workflow-component}
    + [1 - はじめに](custom-workflow-component/introduction.md)
    + [2 - Java コードの記述](custom-workflow-component/custom-process-step-aem-workflow.md)

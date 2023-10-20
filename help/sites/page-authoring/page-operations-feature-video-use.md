@@ -1,6 +1,6 @@
 ---
-title: AEM Sitesでの基本的なページ操作
-description: 次のビデオでは、Adobe Experience Manager Sitesページの基本的なページ管理操作を実行する方法を重点的に説明します。
+title: AEM Sites での基本的なページ操作
+description: 次のビデオでは、Adobe Experience Manager Sites ページの基本的なページ管理操作を実行する方法を重点的に説明します。
 version: 6.4, 6.5
 topic: Content Management
 feature: Page Editor, Editable Templates
@@ -12,7 +12,7 @@ exl-id: d4f33657-d3b1-46d3-848c-8b73ce149797
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '69'
-ht-degree: 39%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 39%
 
 {{edge-delivery-services-and-page-editor}}
 
-Adobe Experience Manager Sitesページの基本的なページ管理操作を実行する方法を説明します。
+Adobe Experience Manager Sites ページの基本的なページ管理操作を実行する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32147?quality=12&learn=on)
 

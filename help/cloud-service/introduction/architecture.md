@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service のアーキテクチャ
-description: 基盤となるアーキテクチャと、Edge Delivery Servicesを使用してas a Cloud Serviceした重要なAEM部分を確認します。
+description: Edge 配信サービスを使用する AEM as a Cloud Service の基盤となるアーキテクチャと重要な部分について説明します。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -12,7 +12,7 @@ exl-id: c7ccfee6-c252-4ba4-831a-1c37b36ac964
 source-git-commit: 8c1993bf5ba75b375929b1587c69231e87b2e76b
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
@@ -20,6 +20,6 @@ ht-degree: 29%
 
 {{edge-delivery-services}}
 
-基盤となるアーキテクチャと、Edge Delivery Servicesを使用してas a Cloud Serviceした重要なAEM部分を確認します。
+Edge 配信サービスを使用する AEM as a Cloud Service の基盤となるアーキテクチャと重要な部分について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)

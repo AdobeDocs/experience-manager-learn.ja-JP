@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service の進化
-description: AEM 6.5 からAEM as a Cloud Serviceへ、最後にEdge Delivery Servicesへと、 AEMの進化とその価値について説明します。
+description: AEM 6.5 から AEM as a Cloud Service、最終的に Edge 配信サービスに至るまで、AEM の進化と提供する価値について説明します。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -12,14 +12,14 @@ exl-id: 32390a8d-8257-44b7-9009-bfa5e518a1e0
 source-git-commit: 16586b9a42c57b5ad08fee9713cbeb11d65c895e
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# AEMの変化
+# AEM の進化
 
 {{edge-delivery-services}}
 
-AEM 6.5 からAEM as a Cloud Serviceへ、最後にEdge Delivery Servicesへと、 AEMの進化とその価値について説明します。
+AEM 6.5 から AEM as a Cloud Service、最終的に Edge 配信サービスに至るまで、AEM の進化と提供する価値について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330543?quality=12&learn=on)

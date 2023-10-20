@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 100%
 

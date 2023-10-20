@@ -15,7 +15,7 @@ exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 source-git-commit: f47beff14782bb3f570d32818b000fc279394f19
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 95%
 
 Adobe Experience Manager のクロスオリジンリソース共有（[!DNL CORS]）を使用すると、AEM 以外の web プロパティを使用して、認証済みおよび未認証の両方で AEM へのクライアントサイド呼び出しを行い、コンテンツを取得したり、AEM と直接やり取りしたりできます。
 
-このドキュメントで概要を説明している OSGi 設定は、次の場合に十分です。
+このドキュメントで説明している OSGi 設定は、次の場合に十分です。
 
-1. AEM Publish での単一オリジンリソース共有
-2. AEM Author への CORS アクセス
+1. AEM パブリッシュでの単一オリジンリソース共有
+2. AEM オーサーへの CORS アクセス
 
-AEM Publish で複数オリジンの CORS アクセスが必要な場合は、 [このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+AEM パブリッシュでのマルチオリジン CORS アクセスが必要な場合は、[このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=ja#dispatcher-configuration)を参照してください。
 
 ## Adobe Granite クロスオリジンリソース共有ポリシー OSGi 設定
 
