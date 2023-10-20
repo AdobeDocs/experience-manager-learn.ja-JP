@@ -11,9 +11,9 @@ doc-type: Catalog
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: d92c36e2-fbfa-43a3-8c5f-0371cc99f352
 source-git-commit: 82926e56d01222186a4d677b29ab9230aa71458a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -83,7 +83,8 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragment-editor.md" title="概要">エディターの概要</a>
             </p>
-            <p class="is-size-6">コンテンツフラグメントエディターの概要です。</p>
+            <p class="is-size-6">コンテンツフラグメントエディターの
+簡単な概要です。</p>
             <a href="./basics/content-fragment-editor.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
