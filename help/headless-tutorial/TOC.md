@@ -9,7 +9,7 @@ version: 6.5, Cloud Service
 kt: 2963
 index: y
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
 ht-degree: 100%
 
