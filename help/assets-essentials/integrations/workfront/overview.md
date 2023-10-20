@@ -13,7 +13,7 @@ badgeVersions: label="AEM Assets Essentials" before-title="false"
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: b8d9b213-867e-457d-932d-1fedc4e1b1d7
 source-git-commit: b9f56c78cb817d59bd6c2480e01f1d0bb3088036
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
 ht-degree: 100%
 
