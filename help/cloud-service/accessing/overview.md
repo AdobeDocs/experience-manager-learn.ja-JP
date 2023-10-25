@@ -11,7 +11,7 @@ thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
 >title="Adobe IMS の概要"
->abstract="AEM as a Cloud Service は、AEM オーサーサービスへのユーザー (管理者と通常のユーザーの両方) のログインを容易にするために、Adobe IMS (Identity Management System) を活用します。Adobe IMS のユーザー、グループおよび製品プロファイルを AEM のグループおよび権限と連動して使用し、AEM オーサーサービスへのきめ細かなアクセス制御を提供する方法を説明します。"
+>abstract="AEM as a Cloud Service は、AEM オーサーサービスへのユーザー (管理者と通常のユーザーの両方) のログインを容易にするために、Adobe IMS (Identity Management System) を活用します。Adobe IMS のユーザー、グループおよび製品プロファイルを AEM のグループおよび権限と連携して使用し、AEM オーサーサービスへのきめ細かなアクセス制御を提供する方法を説明します。"
 
 AEM as a Cloud Service により、AEM アプリケーションをクラウドネイティブな方法で利用できます。そのため、Adobe IMS（ID 管理システム）を活用することで、管理者ユーザーも一般ユーザーも AEM オーサーサービスにログインしやすくなります。
 

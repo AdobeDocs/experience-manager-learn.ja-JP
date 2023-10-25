@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ AEM ヘッドレスコンテンツモデリングで使用されるコンテン�
 
 `_dynamicUrl` は、画像アセットに使用する推奨 URL であり、可能な限り `_path`、`_authorUrl` および `_publishUrl` の代わりに使用してください。
 
-|  | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
+|                                | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
 | Web に最適化された画像のサポート | ✔ | ✔ | ✘ | ✘ |
 
