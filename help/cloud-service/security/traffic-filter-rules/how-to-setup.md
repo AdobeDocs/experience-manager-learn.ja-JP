@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 - _ルールの作成_ 適切なAEMプロジェクト構造および設定ファイルを使用して、
 - _ルールのデプロイ_ Adobeクラウド管理の設定パイプラインを使用します。
-- _テストルール_ 様々なツールを使用したトラフィックの生成
+- _テストルール_ 様々なツールを使用したトラフィックの生成。
 - _結果の分析_ AEMCS CDN ログとダッシュボードツールを使用する。
 
 ### AEMプロジェクトでのルールの作成
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 1. AEMプロジェクトの最上位レベルで、フォルダーを作成します。 `config`.
 
-1. 内 `config` フォルダーを作成し、 `cdn.yaml`.
+1. 内 `config` フォルダを作成し、新しいファイルを作成します。 `cdn.yaml`.
 
 1. 次のメタデータを `cdn.yaml` ファイル：
 
