@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1054'
 ht-degree: 98%
 
 ---
@@ -155,6 +155,12 @@ ht-degree: 98%
       + [DataSourcePool を使用した SQL 接続](./networking/examples/sql-datasourcepool.md)
       + [Java SQL API を使用した SQL 接続](./networking/examples/sql-java-apis.md)
       + [メールサービス](./networking/examples/email-service.md)
++ セキュリティ {#security}
+   + WAF ルールを含むトラフィックフィルタールール{#traffic-filter-and-waf-rules}
+      + [概要](./security/traffic-filter-rules/overview.md)
+      + [設定方法](./security/traffic-filter-rules/how-to-setup.md)
+      + [例と結果の分析](./security/traffic-filter-rules/examples-and-analysis.md)
+      + [ベストプラクティス](./security/traffic-filter-rules/best-practices.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
