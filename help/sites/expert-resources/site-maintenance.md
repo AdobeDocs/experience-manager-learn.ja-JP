@@ -6,9 +6,10 @@ level: Beginner, Intermediate
 topic: Administration
 audience: author, marketer, developer
 feature: Learn From Your Peers
+jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 100%
 
