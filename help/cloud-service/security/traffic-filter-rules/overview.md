@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '266'
 ht-degree: 4%
 
 ---
@@ -24,11 +24,13 @@ ht-degree: 4%
 
 ## 概要
 
-セキュリティ侵害のリスクを軽減することは、どの組織にとっても最も優先事項です。 AEMCS には、Web サイトやアプリケーションを保護するためのトラフィックフィルタールール機能（WAF ルールを含む）が用意されています。
+セキュリティ侵害のリスクを軽減することは、どの組織にとっても最も優先事項です。 AEMCS は、Web サイトやアプリケーションを保護するための、WAF ルールを含むトラフィックフィルタールール機能を備えています。
 
 トラフィックフィルタールールが [組み込み CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=ja) リクエストがAEMインフラストラクチャに到達する前に評価されます。 この機能を使用すると、Web サイトのセキュリティを大幅に強化し、正当なリクエストのみがAEMインフラストラクチャにアクセスできるようにすることができます。
 
-このチュートリアルでは、WAF ルールを含むトラフィックフィルタールールの作成、デプロイ、テスト、および結果の分析のプロセスについて説明します。
+このチュートリアルでは、WAF ルールを含むトラフィックフィルタールールの結果を作成、デプロイ、テスト、分析するプロセスについて説明します。
+
+トラフィックフィルタールールについて詳しくは、 [この記事](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
 
 >[!IMPORTANT]
 >

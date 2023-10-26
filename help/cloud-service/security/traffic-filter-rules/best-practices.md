@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # WAF ルールを含むトラフィックフィルタールールのベストプラクティス
 
-WAF ルールを含む、トラフィックフィルタールールの推奨ベストプラクティスについて説明します。 この記事に記載されているベストプラクティスは完全なものではなく、独自のセキュリティポリシーや手順の代用になるものではないことに注意する必要があります。
+WAF ルールを含む、トラフィックフィルタールールに関する推奨ベストプラクティスを説明します。 この記事に記載されているベストプラクティスは完全なものではなく、独自のセキュリティポリシーや手順の代用になるものではないことに注意する必要があります。
 
 ## 一般的なベストプラクティス
 

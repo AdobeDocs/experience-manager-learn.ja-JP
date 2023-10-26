@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 1%
@@ -30,7 +30,7 @@ Adobe Experience Manager as a Cloud Service(AEMCS)CDN ログとダッシュボ�
 
 ## 例
 
-WAF ルールを含む、トラフィックフィルタールールの様々な例を見てみましょう。 前述の説明に従って、必要な設定プロセスが完了していることを確認します。 [設定方法](./how-to-setup.md) チャプターが作成され、次のクローンが作成されました： [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+WAF ルールを含むトラフィックフィルタールールの様々な例を見てみましょう。 前述の説明に従って、必要な設定プロセスが完了していることを確認します。 [設定方法](./how-to-setup.md) チャプターが作成され、次のクローンが作成されました： [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### リクエストのログ
 
