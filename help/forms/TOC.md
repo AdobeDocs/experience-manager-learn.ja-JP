@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
+source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
 workflow-type: tm+mt
-source-wordcount: '1851'
-ht-degree: 100%
+source-wordcount: '1874'
+ht-degree: 99%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 100%
    + [ServiceNow との統合](some-useful-integrations/service-now.md)
    + [SendGrid でのメールの送信](some-useful-integrations/send-grid.md)
    + [Azure ストレージへフォームデータを保存](some-useful-integrations/store-form-data-in-azure-storage.md)
+   + [Azure Blob を使用したフォームの入力](some-useful-integrations/fetch-form-data-from-azure-storage.md)
 + OSGi バンドルの作成 {#creating-your-first-osgi-bundle}
    + [1 - 環境のセットアップ](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - OSGi サービスの作成](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -142,6 +143,12 @@ ht-degree: 100%
    + [9 - メインフォームの作成](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 - MyAccount フォームの作成](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 - サンプルのデプロイ](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
++ PDF ファイルからデータを読み込み{#import-data-from-pdf-form}
+   + [1 - はじめに](import-data-from-pdf-form/introduction.md)
+   + [2 - アダプティブフォームの作成](import-data-from-pdf-form/create-adaptive-form.md)
+   + [3 - OSGi サービスの作成](import-data-from-pdf-form/create-osgi-service.md)
+   + [4 — アダプティブフォームへの入力](import-data-from-pdf-form/populate-adaptive-form.md)
+   + [5 — ソリューションのテスト](import-data-from-pdf-form/test-the-solution.md)
 + 送信したデータの CSV 形式での書き出し{#export-submitted-data-csv-format}
    + [送信したデータの書き出し](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
