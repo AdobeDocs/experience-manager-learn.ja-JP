@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 設定プロセスには、次のものが含まれます。
 
 - _ルールの作成_ 適切なAEMプロジェクト構造および設定ファイルを使用して、
-- _ルールのデプロイ_ Adobeクラウド管理の設定パイプラインを使用します。
+- _ルールのデプロイ_ AdobeCloud Manager の設定パイプラインを使用している場合。
 - _テストルール_ 様々なツールを使用したトラフィックの生成。
 - _結果の分析_ AEMCS CDN ログとダッシュボードツールを使用する。
 

@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1512'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 1%
 
 Adobe Experience Manager as a Cloud Service(AEMCS)CDN ログとダッシュボードツールを使用して、様々なタイプのトラフィックフィルタールールを宣言し、結果を分析する方法について説明します。
 
-この節では、WAF ルールを含むトラフィックフィルタールールの実用的な例を調べます。 を使用して、URI（またはパス）、IP アドレス、リクエスト数、様々な攻撃タイプに基づいて、リクエストのログ作成、許可、ブロックをおこなう方法を学習します。 [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+この節では、WAF ルールを含むトラフィックフィルタールールの実用的な例を見ていきます。 URI（またはパス）、IP アドレス、リクエスト数、様々な攻撃タイプに基づいて、 [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
-さらに、AEMCS CDN ログを取り込むダッシュボードツールを使用して、Adobe提供のサンプルダッシュボードを通じて重要な指標を視覚化する方法を見つけます。
+さらに、AEMCS CDN ログを取り込むダッシュボードツールを使用して、Adobe提供のサンプルダッシュボードを通じて重要な指標を視覚化する方法について説明します。
 
-特定の要件に合わせるには、カスタムダッシュボードを拡張および作成して、より深いインサイトを得たり、AEMサイトのルール設定を最適化したりできます。
+特定の要件に合わせるには、カスタムダッシュボードを拡張および作成して、AEMサイトのルール設定をより深く把握し、最適化します。
 
 ## 例
 
-WAF ルールを含むトラフィックフィルタールールの様々な例を見てみましょう。 前述の説明に従って、必要な設定プロセスが完了していることを確認します。 [設定方法](./how-to-setup.md) チャプターが作成され、次のクローンが作成されました： [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+WAF ルールを含むトラフィックフィルタールールの様々な例を見てみましょう。 前述の説明に従って、必要な設定プロセスが完了していることを確認します。 [設定方法](./how-to-setup.md) チャプターとあなたがクローンを作成した [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### リクエストのログ
 
@@ -68,7 +68,7 @@ data:
 
   ![Cloud Manager 設定パイプライン](./assets/cloud-manager-config-pipeline.png)
 
-- パブリッシュサービスでプログラムの WKND サイトにログインおよびログアウトして、ルールをテストします ( 例： `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`) をクリックします。 以下を使用できます。 `asmith/asmith` ユーザー名とパスワード。
+- パブリッシュサービスでプログラムの WKND サイトにログインおよびサインアウトして、ルールをテストします ( 例： `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`) をクリックします。 以下を使用できます。 `asmith/asmith` ユーザー名とパスワード。
 
   ![WKND ログイン](./assets/wknd-login.png)
 
@@ -104,11 +104,11 @@ data:
 
 ### リクエストのブロック
 
-この例では、 _内部_ フォルダー： `/content/wknd/internal` デプロイ済みの WKND プロジェクトのパス。 次に、次のようなトラフィックフィルタールールを宣言します。 **トラフィックをブロック** を使用して、組織に一致する指定の IP アドレス（企業 VPN など）以外の場所からサブページを作成できます。
+この例では、 _内部_ パスのフォルダー `/content/wknd/internal` をデプロイします。 次に、次のようなトラフィックフィルタールールを宣言します。 **トラフィックをブロック** を使用して、組織に一致する指定の IP アドレス（企業 VPN など）以外の場所からサブページを作成できます。
 
-独自の内部ページ ( `demo-page.html`) または [添付のパッケージ](./assets/demo-internal-pages-package.zip)
+独自の内部ページ ( `demo-page.html`) または [添付のパッケージ](./assets/demo-internal-pages-package.zip).
 
-- WKND プロジェクトの `/config/cdn.yaml` ファイル。
+- WKND プロジェクトの `/config/cdn.yaml` ファイル：
 
 ```yaml
 kind: CDN
@@ -200,7 +200,7 @@ data:
   $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
   ```
 
-  このコマンドは、120 件のリクエストを 5 秒間実行し、レポートを出力します。 成功率が 32.5%で、残りの場合は 406 HTTP 応答コードを受信し、トラフィックがブロックされたことを示しています。
+  このコマンドは、120 件のリクエストを 5 秒間実行し、レポートを出力します。 ご覧のように、成功率は 32.5%です。残りの部分に対しては 406 HTTP 応答コードを受信し、トラフィックがブロックされたことを示しています。
 
   ![ベジータ・ドス攻撃](./assets/vegeta-dos-attack.png)
 
@@ -212,7 +212,7 @@ data:
 
 ![ELK ツールダッシュボード DoS リクエスト](./assets/elk-tool-dashboard-dos.png)
 
-また、 **クライアント IP、国、ユーザーエージェントによる上位 100 件の攻撃** パネルには、追加の詳細が表示されます。この詳細を使用して、ルール設定をさらに最適化できます。
+また、 **クライアント IP、国、ユーザーエージェントによる上位 100 件の攻撃** パネルには、追加の詳細が表示されます。この詳細を使用して、ルールの設定をさらに最適化できます。
 
 ![ELK ツールダッシュボードで上位 100 件のリクエストを実行](./assets/elk-tool-dashboard-dos-top-100.png)
 
@@ -220,7 +220,7 @@ data:
 
 これまでのトラフィックフィルタールールの例は、Sites およびFormsのすべてのお客様が設定できます。
 
-次に、拡張セキュリティまたは WAF-DDoS 保護ライセンスを購入したお客様の経験を見てみましょう。 これにより、AEMサイトをより高度な攻撃から保護するための高度なルールを設定できます。
+次に、拡張セキュリティまたは WAF-DDoS 保護ライセンスを購入したお客様の経験を見てみましょう。このライセンスを使用して、より高度な攻撃から Web サイトを保護する高度なルールを設定できます。
 
 続行する前に、トラフィックフィルタールールのドキュメントに記載されているように、プログラムの WAF-DoS 保護を有効にします。 [設定手順](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup).
 
@@ -248,7 +248,7 @@ WAF ルールが宣言される前でも、まずエクスペリエンスを確�
 
 ![ELK ツールダッシュボード WAF フラグ付きリクエスト](./assets/elk-tool-dashboard-waf-flagged.png)
 
-以下の点に注意してください。 **WAF フラグ配布とトップ攻撃** パネルには、追加の詳細が表示されます。これは、ルールの設定をさらに最適化するために使用できます。
+以下の点に注意してください。 **WAF フラグ配布** および **トップ攻撃** パネルには、追加の詳細が表示されます。これは、ルールの設定をさらに最適化するために使用できます。
 
 ![ELK ツールダッシュボード WAF フラグ攻撃リクエスト](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
@@ -319,7 +319,7 @@ data:
 
 ![ELK ツールダッシュボード WAF ブロックリクエスト](./assets/elk-tool-dashboard-waf-blocked.png)
 
-また、 **WAF フラグ配布とトップ攻撃** パネルに追加の詳細が表示されます。
+また、 **WAF フラグ配布** および **トップ攻撃** パネルに追加の詳細が表示されます。
 
 ![ELK ツールダッシュボード WAF フラグ攻撃リクエスト](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -327,7 +327,7 @@ data:
 
 ### 包括的な分析
 
-上記の _分析_ セクションでは、 **特定のルール** ダッシュボードツールを使用する。 以下を含む他のダッシュボードパネルを使用して、分析結果をさらに詳しく調べることができます。
+上記の _分析_ セクションでは、ダッシュボードツールを使用して特定のルールの結果を分析する方法を学びました。 以下を含む他のダッシュボードパネルを使用して、分析結果をさらに詳しく調べることができます。
 
 
 - 分析済み、フラグ付きおよびブロック済みのリクエスト

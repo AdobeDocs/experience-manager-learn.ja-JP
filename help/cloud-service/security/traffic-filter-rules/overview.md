@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 4%
+source-wordcount: '285'
+ht-degree: 3%
 
 ---
 
@@ -30,12 +30,13 @@ ht-degree: 4%
 
 このチュートリアルでは、WAF ルールを含むトラフィックフィルタールールの結果を作成、デプロイ、テスト、分析するプロセスについて説明します。
 
-トラフィックフィルタールールについて詳しくは、 [この記事](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
+トラフィックフィルタールールについて詳しくは、 [この記事](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
 
 >[!IMPORTANT]
 >
-> 「WAF ルール」と呼ばれるトラフィックフィルタルールのサブカテゴリには、WAF-DoS 保護ライセンスが必要です。
+> 「WAF ルール」と呼ばれるトラフィックフィルタルールのサブカテゴリには、WAF-DoS 保護または拡張セキュリティライセンスが必要です。
 
+フィードバックをいただくか、E メールでトラフィックフィルタールールに関するご質問をお寄せください **aemcs-waf-adopter@adobe.com**.
 
 ## 次の手順
 
