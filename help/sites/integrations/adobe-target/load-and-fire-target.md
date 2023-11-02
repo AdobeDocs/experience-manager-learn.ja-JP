@@ -15,9 +15,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Experience Platform Launch ルールを使用して、ページリクエスト�
 
 ## ページ読み込みルール
 
-Adobeクライアントデータレイヤーは、イベント駆動型のデータレイヤーです。 AEMページデータレイヤーが読み込まれると、イベントをトリガーします。 `cmp:show` . ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。以下に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
+Adobe Client Data Layer は、イベント駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、`cmp:show` イベントがトリガーされます。ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。次に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
 
 ### カスタムページ表示イベント{#page-event}
 
@@ -41,7 +41,7 @@ Experience Platform Launch プロパティで、新しい&#x200B;**イベント*
 + __イベントタイプ：__&#x200B;カスタムコード
 + __名前：__ Page Show Event Handler（または説明的なもの）
 
-次をタップします。 __編集画面を開く__ 」ボタンをクリックし、次のコードスニペットに貼り付けます。 このコードは&#x200B;__必須__&#x200B;で、__イベント設定__&#x200B;とそれに続く&#x200B;__アクション__&#x200B;に追加する必要があります。
+「__エディターを開く__」ボタンをタップして、次のコードスニペットをペーストします。このコードは&#x200B;__必須__&#x200B;で、__イベント設定__&#x200B;とそれに続く&#x200B;__アクション__&#x200B;に追加する必要があります。
 
 ```javascript
 // Define the event handler function
@@ -81,7 +81,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-カスタム関数は、 `pageShownEventHandler`は、AEMコアコンポーネントから発行されるイベントをリッスンし、コアコンポーネントから関連情報を導出し、それをイベントオブジェクトにパッケージ化し、Launch イベントをそのペイロードに派生イベント情報とトリガー付けします。
+カスタム関数は `pageShownEventHandler` を定義し、AEM コアコンポーネントが発するイベントをリッスンし、コアコンポーネントの関連情報を導き出し、イベントオブジェクトにパッケージし、ペイロードに導き出したイベント情報で Experience Platform Launch イベントをトリガーします。
 
 Experience Platform Launch ルールは Experience Platform Launch の`trigger(...)`関数を使用してトリガーされます。この関数は、ルールのイベント のカスタムコードのコードスニペット定義内で&#x200B;__のみ__&#x200B;利用可能です。
 
