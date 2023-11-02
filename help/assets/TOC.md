@@ -65,7 +65,7 @@ ht-degree: 99%
    + [メタデータの読み込みと書き出し](metadata/metadata-import-export.md)
 
 + Edge 配信サービス{#edge-delivery-services}
-   + [Sidekickプラグイン](./edge-delivery-services/sidekick-plugin.md)
+   + [Sidekick プラグイン](./edge-delivery-services/sidekick-plugin.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)

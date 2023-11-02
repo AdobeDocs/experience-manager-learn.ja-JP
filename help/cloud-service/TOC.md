@@ -9,7 +9,7 @@ team: TM
 source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 98%
    + [オーサーおよびパブリッシュサービス](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge 配信サービス {#edge-delivery-services}
-   + [AEM AssetsSidekickプラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
+   + [AEM Assets Sidekick プラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=ja){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
