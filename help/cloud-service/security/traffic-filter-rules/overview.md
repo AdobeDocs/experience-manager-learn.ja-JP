@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 3%
 
 ---
 
-
 # トラフィックフィルタールール（WAF ルールを含む）による Web サイトの保護
 
 詳細 **トラフィックフィルタールール**（次のサブカテゴリを含む） **Web アプリケーションファイアウォール (WAF) ルール** (AEMas a Cloud Service(AEMCS)) の ルールの作成、デプロイ、テストの方法についてお読みください。 また、結果を分析してAEMサイトを保護します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
 ## 概要
 
@@ -41,6 +43,5 @@ ht-degree: 3%
 ## 次の手順
 
 学ぶ [設定方法](./how-to-setup.md) トラフィックフィルタールールを作成、デプロイおよびテストするための機能。 詳しくは、 **Elasticsearch、ログスタッシュ、きばな (ELK)** AEMCS CDN ログの結果を分析するためのスタックダッシュボードツール。
-
 
 

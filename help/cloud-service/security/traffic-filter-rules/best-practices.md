@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
 
-
 # WAF ルールを含むトラフィックフィルタールールのベストプラクティス
 
 WAF ルールを含む、トラフィックフィルタールールに関する推奨ベストプラクティスを説明します。 この記事に記載されているベストプラクティスは完全なものではなく、独自のセキュリティポリシーや手順の代用になるものではないことに注意する必要があります。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
 ## 一般的なベストプラクティス
 
@@ -150,3 +152,6 @@ data:
 ## 概要
 
 最後に、このチュートリアルでは、Adobe Experience Manager as a Cloud Service(AEMCS) での Web アプリケーションのセキュリティを強化するために必要な知識とツールを習得しました。 実用的なルールの例と結果の分析に対するインサイトを使用すると、Web サイトやアプリケーションを効果的に保護できます。
+
+
+
