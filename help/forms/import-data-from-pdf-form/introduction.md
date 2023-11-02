@@ -1,6 +1,6 @@
 ---
-title: アダプティブフォームへのPDFファイルからのデータの読み込み
-description: PDFファイルの読み込みによるアダプティブフォームの入力に関するチュートリアル
+title: PDF ファイルからアダプティブフォームへのデータの読み込み
+description: PDFファイルの読み込みによるアダプティブフォームへのデータの入力に関するチュートリアル
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,29 +8,29 @@ role: Developer
 level: Beginner
 kt: 14196
 source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '96'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # はじめに
 
-一般的な使用例としては、部分的に入力されたPDFフォームからアダプティブフォームに入力する機能があります。
+一般的なユースケースでは、部分的に完成した PDF フォームからアダプティブフォームに入力する機能を備えています。
 
-この使用例を示すために、以下を使用します。 [IRS フォーム F23](./assets/f23.pdf)
+このユースケースを説明するために、[IRS フォーム F23](./assets/f23.pdf) を使用します。
 
 ## 前提条件
 
 以下が必要です。
 
-* FormsアドオンパッケージをインストールしたAEMの動作中のインスタンス。
+* フォームアドオンパッケージがインストールされた AEM の実用的なインスタンス。
 
 * [このドキュメントに従って設定された開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)
 
 * AEM Forms Designer
 
-* AcrobatまたはReader
+* Acrobat または Reader
 
 ## 次の手順
 
