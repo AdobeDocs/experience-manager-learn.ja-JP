@@ -11,15 +11,15 @@ role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
 # クライアントライブラリの作成
 
-作成 [クライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja) これには、メソッドを呼び出すコードが含まれます。 `doAjaxSubmitWithFileAttachment` の `guideBridge` CSS クラスで識別されるボタンの click イベントの API **保存ボタン**.  `**/bin/storeafdatawithattachments` でリッスンしているエンドポイントに、アダプティブフォームデータ、`fileMap` および `mobileNumber` を渡します。
+CSS クラス **savebutton** によって識別されるボタンのクリックイベントで、`guideBridge` API のメソッド `doAjaxSubmitWithFileAttachment` を呼び出すコードを含む[クライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja)を作成します。`**/bin/storeafdatawithattachments` でリッスンしているエンドポイントに、アダプティブフォームデータ、`fileMap` および `mobileNumber` を渡します。
 
 フォームデータを保存すると、一意のアプリケーション ID が生成され、ダイアログボックスでユーザーに表示されます。ダイアログボックスを閉じると、ユーザーはフォームに移動し、一意のアプリケーション ID を使用して、保存済みのアダプティブフォームを取得できます。
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 使用済み [ブートボックス JavaScript ライブラリ](https://bootboxjs.com/examples.html) ダイアログボックスを表示するには
+> ダイアログボックスを表示するために、[bootbox JavaScript ライブラリ](https://bootboxjs.com/examples.html)を使用しました
 
 このサンプルで使用しているクライアントライブラリは、[こちらからダウンロード](assets/store-af-with-attachments-client-lib.zip)できます.
 
