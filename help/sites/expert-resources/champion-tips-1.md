@@ -11,7 +11,7 @@ audience: author, marketer
 jira: KT-14251
 exl-id: d5967fb5-c151-478e-a554-41e235de3f83
 source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
 ht-degree: 100%
 
