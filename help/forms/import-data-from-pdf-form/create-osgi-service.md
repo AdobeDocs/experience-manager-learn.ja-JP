@@ -1,6 +1,6 @@
 ---
-title: OSGi サービスを作成してデータを書き出しフォームからPDF
-description: FormsService API を使用してPDFフォームからデータを書き出す
+title: PDF フォームからデータを書き出す OSGi サービスの作成
+description: FormsService API を使用した PDFフォームからのデータの書き出し
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,17 +8,17 @@ role: Developer
 level: Beginner
 kt: 14196
 source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # データを書き出し
 
-PDFファイルからアダプティブフォームにデータを入力する最初の手順は、指定されたPDFファイルからデータを書き出し、AEMリポジトリに保存することです。
+PDF ファイルからアダプティブフォームに入力する最初の手順では、指定した PDF ファイルからデータを書き出し、AEM リポジトリに保存します。
 
-次のコードは、アップロードされた PDF からデータを抽出し、アダプティブフォームの入力に使用できる以上の正しい形式を取得するためにマッサージされたものです
+次のコードは、アップロードされた PDF とメッセージからデータを抽出して、アダプティブフォームの入力に使用できる正しい形式を取得するために書き込まれました
 
 ```java
 public String getFormData(Document pdfForm) {
@@ -61,7 +61,7 @@ public String getFormData(Document pdfForm) {
 }
 ```
 
-次に、 _**topmostSubForm**_ 適切な名前空間を持つ
+以下は、適切な名前空間を持つ _**topmostSubForm**_ を抽出するために書き込まれたユーティリティ関数です
 
 ```java
 private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, String tagName) {
@@ -76,7 +76,7 @@ private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, Strin
 }
 ```
 
-抽出したデータは、crx リポジトリの/content/exporteddata ノードに保存されます。 書き出されたデータのファイルパスが呼び出し元のアプリケーションに返され、アダプティブフォームに入力されます。
+抽出したデータは、crx リポジトリの /content/exporteddata ノードに保存されます。書き出されたデータのファイルパスは、アダプティブフォームに入力するために呼び出し元のアプリケーションに返されます。
 
 ## 次の手順
 
