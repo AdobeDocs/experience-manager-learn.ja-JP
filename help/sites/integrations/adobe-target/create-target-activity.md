@@ -15,9 +15,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ AEM エクスペリエンスフラグメントオファーを使用して、 Ado
 
 ## 前提条件
 
-エクスペリエンスフラグメントオファーを使用してAdobe Targetアクティビティを作成するには、次の設定を行う必要があります。
+エクスペリエンスフラグメントオファーを使用して Adobe Target アクティビティを作成するには、次の設定を行う必要があります。
 
 1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
 1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
