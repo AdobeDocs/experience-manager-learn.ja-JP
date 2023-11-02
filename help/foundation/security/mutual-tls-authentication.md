@@ -1,6 +1,6 @@
 ---
-title: AEMからの相互トランスポート層セキュリティ (mTLS) 認証
-description: 相互トランスポート層セキュリティ (mTLS) 認証が必要なAEMから Web API への HTTPS 呼び出しをおこなう方法について説明します。
+title: AEM からの Mutual Transport Layer Security（mTLS）認証
+description: AEM から Mutual Transport Layer Security（mTLS）認証を必要とする web API への HTTPS 呼び出しを行う方法について説明します。
 feature: Security
 version: 6.5, Cloud Service
 topic: Security, Development
@@ -12,21 +12,21 @@ doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '800'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# AEMからの相互トランスポート層セキュリティ (mTLS) 認証
+# AEM からの Mutual Transport Layer Security（mTLS）認証
 
-相互トランスポート層セキュリティ (mTLS) 認証が必要なAEMから Web API への HTTPS 呼び出しをおこなう方法について説明します。
+AEM から Mutual Transport Layer Security（mTLS）認証を必要とする web API への HTTPS 呼び出しを行う方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
-mTLS または双方向 TLS 認証により、 **クライアントとサーバの両方が互いに認証を行う**. この認証は、電子証明書を使用しておこなわれます。 これは、強力なセキュリティと ID の検証が重要なシナリオで一般的に使用されます。
+mTLS または双方向 TLS 認証は、**クライアントとサーバーの両方に相互認証**&#x200B;をリクエストすることで、TLS プロトコルのセキュリティを強化します。この認証は、電子証明書を使用して実行されます。これは、強力なセキュリティと ID 検証が重要なシナリオで一般的に使用されます。
 
-デフォルトでは、mTLS 認証が必要な Web API への HTTPS 接続を試みると、次のエラーで接続が失敗します。
+デフォルトでは、mTLS 認証を必要とする web API に HTTPS 接続を確立しようとすると、次のエラーで接続が失敗します。
 
 ```
 javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
@@ -34,27 +34,27 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 この問題は、クライアントが自身を認証する証明書を提示しない場合に発生します。
 
-mTLS 認証を必要とする API を、 [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) および **AEMキーストアと TrustStore**.
+[Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) と **AEM のキーストアおよびトラストストア**&#x200B;を使用して、mTLS 認証を必要とする API を正常に呼び出す方法を学びましょう。
 
 
-## HttpClient とAEM KeyStore の資料を読み込む
+## HttpClient と、AEM キーストアでのマテリアルの読み込み
 
-mTLS 保護 API をAEMから呼び出すには、次の手順を大まかに実行する必要があります。
+AEM から mTLS で保護された API を呼び出すには、大まかには、次の手順を実行する必要があります。
 
-### AEM Certificate Generation
+### AEM 証明書の生成
 
-組織のセキュリティチームと提携して、AEM証明書をリクエストします。 セキュリティチームは、証明書に関する詳細 ( キー、証明書署名要求 (CSR)、CSR を使用して証明書が発行されるなど ) を提供または要求します。
+組織のセキュリティチームと連携して、AEM 証明書をリクエストします。セキュリティチームは、キー、証明書署名要求（CSR）、CSR を使用して証明書が発行されるなど、証明書関連の詳細を提供または要求します。
 
-デモ用に、証明書関連の詳細 ( キー、証明書署名要求 (CSR) など ) を生成します。 次の例では、自己署名 CA を使用して証明書を発行します。
+デモの目的で、キー、証明書署名要求（CSR）など、証明書関連の詳細を生成します。次の例では、自己署名 CA を使用して証明書を発行します。
 
-- まず、内部証明機関 (CA) 証明書を生成します。
+- まず、内部証明機関（CA）証明書を生成します。
 
   ```shell
   # Create an internal Certification Authority (CA) certificate
   openssl req -new -x509 -days 9999 -keyout internal-ca-key.pem -out internal-ca-cert.pem
   ```
 
-- AEM証明書を生成します。
+- AEM 証明書を生成します。
 
   ```shell
   # Generate Key
@@ -70,7 +70,7 @@ mTLS 保護 API をAEMから呼び出すには、次の手順を大まかに実�
   openssl verify -CAfile internal-ca-cert.pem client-cert.pem
   ```
 
-- AEM秘密鍵を DER 形式に変換します。AEM KeyStore では、秘密鍵が DER 形式で必要です。
+- AEM 秘密鍵を DER 形式に変換します。AEM のキーストアには、DER 形式の秘密鍵が必要です。
 
   ```shell
   openssl pkcs8 -topk8 -inform PEM -outform DER -in client-key.pem -out client-key.der -nocrypt
@@ -78,56 +78,56 @@ mTLS 保護 API をAEMから呼び出すには、次の手順を大まかに実�
 
 >[!TIP]
 >
->自己署名 CA 証明書は、開発目的でのみ使用されます。 実稼動環境では、信頼された認証局 (CA) を使用して証明書を発行します。
+>自己署名 CA 証明書は、開発目的でのみ使用されます。実稼動環境では、信頼できる証明機関（CA）を使用して証明書を発行します。
 
 
-### 証明書交換
+### 証明書の交換
 
-上記のように、AEM証明書に自己署名 CA を使用している場合は、証明書または内部の証明機関 (CA) 証明書を API プロバイダーに送信します。
+上記のように、AEM 証明書に自己署名 CA を使用する場合は、証明書または内部証明機関（CA）証明書を API プロバイダーに送信します。
 
-また、API プロバイダーが自己署名 CA 証明書を使用している場合は、API プロバイダーから証明書または内部証明機関 (CA) 証明書を受け取ります。
+また、API プロバイダーが自己署名 CA 証明書を使用している場合は、API プロバイダーから証明書または内部証明機関（CA）証明書を受信します。
 
-### 証明書のインポート
+### 証明書の読み込み
 
-AEM証明書を読み込むには、次の手順に従います。
+AEM 証明書を読み込むには、次の手順に従います。
 
-1. にログインします。 **AEM Author** as a **administrator**.
+1. **AEM オーサー**&#x200B;に&#x200B;**管理者**&#x200B;としてログインします。
 
-1. に移動します。 **AEM作成者/ツール/セキュリティ/ユーザー/作成または既存のユーザーの選択**.
+1. **AEM オーサー／ツール／セキュリティ／ユーザー／既存のユーザーを作成または選択**&#x200B;に移動します。
 
-   ![既存のユーザーを作成または選択](assets/mutual-tls-authentication/create-or-select-user.png)
+   ![既存のユーザーの作成または選択](assets/mutual-tls-authentication/create-or-select-user.png)
 
-   デモ用に、という名前の新しいユーザーが `mtl-demo-user` が作成されました。
+   デモの目的で、`mtl-demo-user` という名前の新しいユーザーが作成されます。
 
-1. を開くには、 **ユーザープロパティ**」をクリックし、ユーザー名をクリックします。
+1. **ユーザープロパティ**&#x200B;を開くには、ユーザー名をクリックします。
 
-1. クリック **キーストア** タブを押し、 **キーストアを作成** 」ボタンをクリックします。 次に、 **キーストアのアクセスパスワードを設定** ダイアログで、このユーザーのキーストアのパスワードを設定し、「保存」をクリックします。
+1. 「**キーストア**」タブ、「**キーストアを作成**」ボタンの順にクリックします。次に、**キーストアアクセスパスワードを設定**&#x200B;ダイアログで、このユーザーのキーストアのパスワードを設定し、「保存」をクリックします。
 
-   ![キーストアを作成](assets/mutual-tls-authentication/create-keystore.png)
+   ![キーストアの作成](assets/mutual-tls-authentication/create-keystore.png)
 
-1. 新しい画面で、 **DER ファイルから秘密鍵を追加** セクションでは、次の手順に従います。
+1. 新しい画面の「**DER ファイルから秘密鍵を追加**」セクションで、次の手順に従います。
 
    1. エイリアスを入力
 
-   1. 上記で生成された DER 形式でAEM秘密鍵を読み込みます。
+   1. 上記で生成した AEM 秘密鍵を DER 形式で読み込みます。
 
-   1. 上記で生成された証明書チェーンファイルをインポートします。
+   1. 上記で生成した証明書チェーンファイルを読み込みます。
 
-   1. 送信をクリック
+   1. 「送信」をクリックします
 
-      ![AEM秘密鍵を読み込む](assets/mutual-tls-authentication/import-aem-private-key.png)
+      ![AEM 秘密鍵の読み込み](assets/mutual-tls-authentication/import-aem-private-key.png)
 
 1. 証明書が正常に読み込まれたことを確認します。
 
-   ![AEM秘密鍵と証明書が読み込まれました](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
+   ![読み込まれた AEM 秘密鍵と証明書](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-API プロバイダーが自己署名 CA 証明書を使用している場合は、受け取った証明書をAEM TrustStore に読み込み、次の手順に従います。 [ここ](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material).
+API プロバイダーが自己署名 CA 証明書を使用している場合は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=ja#httpclient-and-load-aem-truststore-material)の手順に従って、受信した証明書を AEM のトラストストアに読み込みます。
 
-同様に、AEMが自己署名 CA 証明書を使用している場合は、API プロバイダーに読み込むように要求します。
+同様に、AEM が自己署名 CA 証明書を使用している場合は、API プロバイダーに読み込むようにリクエストします。
 
-### HttpClient を使用した一般的な mTLS API 呼び出しコードの作成
+### HttpClient を使用したプロトタイプの mTLS API 呼び出しコード
 
-Java™コードを以下のように更新します。次を使用するには： `@Reference` AEMを取得するための注釈 `KeyStoreService` service 呼び出し元のコードは、OSGi コンポーネントまたはサービス、または Sling モデル ( および `@OsgiService` が使用されています )。
+Java™コードを以下のように更新します。`@Reference` の注釈を使用して AEM の `KeyStoreService` サービスを取得するには、呼び出しコードを OSGi コンポーネント／サービスや、Sling モデルにする必要があります（そこで `@OsgiService` を使用します）。
 
 
 ```java
@@ -212,20 +212,20 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 ```
 
 - OOTB `com.adobe.granite.keystore.KeyStoreService` OSGi サービスを OSGi コンポーネントに挿入します。
-- 次を使用してユーザーのAEMキーストアを取得する `KeyStoreService` および `ResourceResolver`、 `getAEMKeyStore(...)` メソッドで実行できます。
-- API プロバイダーが自己署名 CA 証明書を使用している場合は、グローバルAEM TrustStore ( `getAEMTrustStore(...)` メソッドで実行できます。
+- `KeyStoreService` と `ResourceResolver` を使用して AEM キーストアを取得します。これは `getAEMKeyStore(...)` メソッドで行います。
+- API プロバイダーが自己署名 CA 証明書を使用している場合は、グローバル AEM トラストストアを取得します。これは `getAEMTrustStore(...)` メソッドで行います。
 - `SSLContextBuilder` のオブジェクトを作成します。Java™ [API の詳細](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)を参照してください。
-- ユーザーのAEMキーストアをに読み込みます。 `SSLContextBuilder` using `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` メソッド。
-- キーストアのパスワードは、キーストアの作成時に設定されたパスワードです。OSGi 設定で保存する必要があります。詳しくは、 [シークレットの設定値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values?lang=ja).
+- `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` メソッドを使用して、AEM キーストアを `SSLContextBuilder` に読み込みます。
+- キーストアのパスワードは、キーストアの作成時に設定したパスワードで、OSGi 設定に保存する必要があります。[秘密の設定値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values?lang=ja)を参照してください。
 
 ## JVM キーストアの変更の回避
 
-非公開証明書を使用して mTLS API を効果的に呼び出す従来の方法では、JVM キーストアの変更が行われています。 これは、Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) コマンドを使用してプライベート証明書を読み込むことで実現します。
+プライベート証明書を使用して mTLS API を効果的に呼び出す従来の方法には、JVM キーストアの変更が含まれます。これは、Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) コマンドを使用してプライベート証明書を読み込むことで実現します。
 
-ただし、この方法はセキュリティのベストプラクティスと一致しておらず、AEMは、 **ユーザー固有のキーストアとグローバル TrustStore** および [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+ただし、この方法はセキュリティのベストプラクティスと一致していないので、AEM では&#x200B;**ユーザー固有のキーストアおよびグローバルトラストストア**&#x200B;と [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html) を利用することで優れたオプションを提供します。
 
 ## ソリューションパッケージ
 
-ビデオの下に表示されているサンプルの Node.js プロジェクトは、 [ここ](assets/internal-api-call/REST-APIs.zip).
+ビデオでデモされているサンプル Node.js プロジェクトは、[こちら](assets/internal-api-call/REST-APIs.zip)からダウンロードできます。
 
-AEMサーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` 支部 [参照](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+AEM サーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` ブランチで入手できます。[こちら](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets)を参照してください。
