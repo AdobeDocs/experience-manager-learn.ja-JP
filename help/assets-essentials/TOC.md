@@ -9,7 +9,7 @@ feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '77'
 ht-degree: 100%
 
