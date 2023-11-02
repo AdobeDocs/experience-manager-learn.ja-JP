@@ -12,9 +12,9 @@ doc-type: article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 ## HttpClient と、AEM TrustStore でのマテリアルの読み込み
 
-を持つ API エンドポイントを呼び出すには、以下を実行します。 _個人または自己署名の証明書_、 [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)&#39;s `SSLContextBuilder` は、AEM TrustStore と共に読み込まれ、接続を容易にするために使用される必要があります。
+_プライベート証明書または自己署名証明書_&#x200B;を使用する API エンドポイントを呼び出すには、[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) の `SSLContextBuilder` を AEM の TrustStore で読み込み、接続を簡単にするために使用する必要があります。
 
 次の手順に従います。
 
@@ -154,6 +154,6 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 ## ソリューションパッケージ
 
-ビデオの下に表示されているサンプルの Node.js プロジェクトは、 [ここ](assets/internal-api-call/REST-APIs.zip).
+ビデオでデモされているサンプル Node.js プロジェクトは、[こちら](assets/internal-api-call/REST-APIs.zip)からダウンロードできます。
 
-AEMサーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` 支部 [参照](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+AEM サーブレットコードは、WKND Sites プロジェクトの `tutorial/web-api-invocation` ブランチで入手できます。[こちら](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets)を参照してください。
