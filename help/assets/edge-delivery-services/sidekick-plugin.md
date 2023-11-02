@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsSidekickのプラグインとEdge Delivery Services
-description: AEM AssetsSidekickプラグインを使用して、管理対象アセットを、Edge Delivery Servicesを通じて提供されるインパクトの大きいエクスペリエンスに組み込む方法を説明します。
+title: AEM Assets Sidekick プラグインと Edge 配信サービス
+description: AEM Assets Sidekick プラグインを利用して、Edge 配信サービスを通じて提供される影響力の高いエクスペリエンスに管理対象アセットを組み込む方法について説明します。
 version: Cloud Service
 feature: Edge Delivery Services, Selectors
 topic: Content Management
@@ -12,16 +12,16 @@ jira: KT-14070
 thumbnail: 3424615.jpeg
 exl-id: e8ed49a5-4ad2-4759-bf0f-1dae8478d996
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsSidekickのプラグインとEdge Delivery Services
+# AEM Assets Sidekick プラグインと Edge 配信サービス
 
 {{edge-delivery-services}}
 
-詳しくは、 [AEM AssetsSidekickプラグイン](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) を使用して、管理対象アセットを、Edge Delivery Servicesを通じて提供されるインパクトの大きいエクスペリエンスに組み込むことができます。
+[AEM Assets Sidekick プラグイン](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)を利用して、Edge 配信サービスを通じて提供される影響力の高いエクスペリエンスに管理対象アセットを組み込む方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)
