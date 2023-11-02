@@ -11,7 +11,7 @@ jira: KT-14254
 level: Beginner, Intermediate
 exl-id: c88c3ec7-9060-43e2-a6a2-d47bba6f7cf3
 source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2034'
 ht-degree: 100%
 
