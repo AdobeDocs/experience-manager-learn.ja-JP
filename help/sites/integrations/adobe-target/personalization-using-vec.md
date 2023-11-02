@@ -15,9 +15,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '522'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -27,20 +27,20 @@ Visual Experience Composer（VEC）を使用して Target アクティビティ�
 
 ## 前提条件
 
-AEM Web サイトで VEC を使用するには、次の設定を行う必要があります。
+AEM web サイトで VEC を使用するには、次の設定を行う必要があります。
 
 1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
 1. [Experience Platform Launch からの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
 
 ## シナリオの概要
 
-WKND サイトのホームページには、ローカルアクティビティや、情報カードの形式で都市の周りで行う最善の行動が表示されます。 あなたはマーケターとして、「Adventure」セクションのティーザーのテキストを変更し、コンバージョンがどのように向上したかを理解することで、ホームページを変更するタスクを割り当てられました。
+WKND サイトのホームページには、情報カードの形式で、ある都市のローカルのアクティビティや付近の人気スポットが表示されます。あなたはマーケターとして、「Adventure」セクションのティーザーのテキストを変更し、コンバージョンがどのように向上したかを理解することで、ホームページを変更するタスクを割り当てられました。
 
 ## Visual Experience Composer（VEC）を使用した A/B テストの作成手順
 
 1.  [Adobe Experience Cloud](https://experience.adobe.com/) にログインして「__ターゲット__」をタップし、「__アクティビティ__」タブに移動します。
 
-   + 表示されない __Target__ Experience Cloudダッシュボードで、右上の組織切り替えボタンで正しいAdobe組織が選択され、ユーザーに Target へのアクセス権が付与されていることを確認します ( [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Experience Cloud ダッシュボードで「__ターゲット__」が表示されない場合は、右上の組織切り替えボタンで正しい Adobe 組織が選択され、[Adobe Admin Console](https://adminconsole.adobe.com/) でユーザーにターゲットへのアクセス権が付与されていることを確認します。
 
 1. 「**アクティビティを作成**」ボタンをクリックし、「**A/B テスト**」アクティビティを選択します。
 
@@ -50,7 +50,7 @@ WKND サイトのホームページには、ローカルアクティビティや
 
    ![アクティビティ URL](assets/ab-test-url.png)
 
-1. Visual Experience Composer では、アクティビティを作成した後、左側に次の 2 つのタブが表示されます。 *エクスペリエンス A* および *エクスペリエンス B*. リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、 **エクスペリエンスを追加** 」ボタンをクリックします。
+1. Visual Experience Composer では、アクティビティを作成した後、左側に「*エクスペリエンス A*」および 「*エクスペリエンス B*」の 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
 
    ![エクスペリエンス A](assets/experience.png)
 
@@ -86,7 +86,7 @@ WKND サイトのホームページには、ローカルアクティビティや
 
 ## 概要
 
-この章では、テストを実行するコードを変更することなく、Web ページのレイアウトとコンテンツをドラッグ&amp;ドロップ、入れ替え、変更することで、Visual Experience Composer を使用してエクスペリエンスを作成できました。
+この章では、テストを実行するコードを変更することなく、web ページのレイアウトとコンテンツをドラッグ＆ドロップ、入れ替え、変更することで、Visual Experience Composer を使用してエクスペリエンスを作成できました。
 
 ## サポートリンク
 
