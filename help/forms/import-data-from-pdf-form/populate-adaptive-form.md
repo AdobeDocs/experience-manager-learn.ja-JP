@@ -1,5 +1,5 @@
 ---
-title: setData メソッドを使用してアダプティブフォームに入力する
+title: setData メソッドを使用してアダプティブフォームに入力
 description: データ抽出用にアップロードされた PDF ファイルを送信し、抽出したデータをアダプティブフォームに入力します
 feature: Adaptive Forms
 version: 6.5
@@ -8,15 +8,15 @@ role: Developer
 level: Beginner
 kt: 14196
 source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Ajax 呼び出しを行う
 
-ユーザーが pdf ファイルをアップロードしたら、POST呼び出しをサーブレットに対しておこない、アップロードしたPDFドキュメントをPOSTリクエストに渡す必要があります。 POSTリクエストは、crx リポジトリ内の書き出されたデータへのパスを返します。
+ユーザーが PDF ファイルをアップロードした際、サーブレットに対して POST 呼び出しを行い、アップロードした PDF ドキュメントを POST リクエストで渡す必要があります。POST リクエストは、crx リポジトリ内の書き出されたデータへのパスを返す
 
 ```javascript
 $("#fileElem").on('change', function (e) {
@@ -56,8 +56,8 @@ function handleFiles(formData) {
 }
 ```
 
-次にマウントされたサーブレット： **_/bin/ExtractDataFromPDF_** は、PDFファイルからデータを抽出し、抽出したデータが保存されている crx ノードのパスを返します。
-The [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) メソッドを使用して、アダプティブフォームのデータを設定します。
+**_/bin/ExtractDataFromPDF_** にマウントされたサーブレットは、PDF ファイルからデータを抽出し、抽出したデータが保存されている crx ノードのパスを返します。
+次に、[GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) メソッドを使用してアダプティブフォームのデータを設定します。
 
 ## 次の手順
 
