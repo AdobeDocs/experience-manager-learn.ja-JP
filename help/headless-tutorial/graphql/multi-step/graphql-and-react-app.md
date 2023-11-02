@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1218'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -89,7 +89,7 @@ React アプリを取得するには：
    $ npm start
    ```
 
-1. React アプリは、開発モードで [http://localhost:3000/](http://localhost:3000/) で起動します。チュートリアル全体で React アプリに加えた変更は、直ちに反映されます。
+1. React アプリは、開発モードで [http://localhost:3000/](http://localhost:3000/) で起動します。チュートリアルで React アプリに加えた変更は、直ちに反映されます。
 
 ![部分的に実装された React アプリ](./assets/graphql-and-external-app/partially-implemented-react-app.png)
 
@@ -100,7 +100,7 @@ React アプリを取得するには：
 >
 > //*********************************
 >
->  // TODO AEMヘッドレスチュートリアルの手順に従ってこれを実装します。
+>  // TODO  これを実装するには、AEM ヘッドレスチュートリアルの手順に従います。
 >
 >  //*********************************
 >
@@ -496,7 +496,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 内部の仕組み
 
-ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象： `all-teams` リクエスト。GraphQL API リクエストに関する注意 `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI`例： `<https://publish-pxxx-exxx.adobeaemcloud.com`. リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
+ブラウザーの&#x200B;**開発者ツール**／**ネットワーク**&#x200B;と `all-teams` リクエストの&#x200B;_フィルター_&#x200B;を開きます。GraphQL API リクエスト `/graphql/execute.json/my-project/all-teams` は `http://localhost:3000` に対して実行され、`REACT_APP_HOST_URI` の値（例：`<https://publish-pxxx-exxx.adobeaemcloud.com`）に対しては実行&#x200B;**されない**&#x200B;ことがわかります。リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
 
 
 ![プロキシを介した GraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
