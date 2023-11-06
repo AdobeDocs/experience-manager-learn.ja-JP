@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
-source-wordcount: '200'
-ht-degree: 100%
+source-git-commit: e9c0974d35493a607969124b2906564fc97bcdea
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 95%
 
 ---
 
@@ -39,11 +39,11 @@ AEM エクスペリエンスフラグメントを Adobe Target オファーと�
 
 Adobe Admin Console で適切な権限を持たずにエクスペリエンスフラグメントを Adobe Target に書き出すと、AEM オーサーサービスで次のエラーが発生します。
 
-    ![Target API UI Error](assets/error-target-offer.png)
+![Target API UI エラー](assets/error-target-offer.png)
 
 さらに、次のメッセージが `aemerror` ログに記録されます。
 
-    ! [Target API Console Error](assets/target-console-error.png)
+![Target API コンソールエラー](assets/target-console-error.png)
 
 #### 解決策
 
