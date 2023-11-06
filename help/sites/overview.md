@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '324'
 ht-degree: 100%
 
 ---
@@ -27,9 +27,6 @@ Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス�
 
 * **[AEM および Edge 配信サービスとは(ビデオ)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=ja)**
   *Adobe Experience Manager（AEM）と Edge 配信サービスが提供する価値について説明します。*
-
-* **[AEMの進化について学ぶ（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html?lang=ja)**
-  *AEM 6.5 から AEM as a Cloud Service、最終的に Edge 配信サービスに至るまで、AEM の進化と提供する価値について説明します。*
 
 * **[Edge 配信サービスを使用した AEM のアーキテクチャの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=ja)**
   *AEM as a Cloud Service のアーキテクチャについて説明します。*

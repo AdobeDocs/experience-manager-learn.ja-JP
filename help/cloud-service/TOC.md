@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 99%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 99%
    + [画像](./aem-trials/images.md)
 + AEM as a Cloud Service の概要{#introduction}
    + [AEM as a Cloud Service とは](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [進化](./introduction/evolution.md)
    + [アーキテクチャ](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 戦略とソートリーダーシップ{#strategy}
@@ -129,7 +128,7 @@ ht-degree: 99%
       + リスク{#risks}
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
-   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}
+   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}。
 + キャッシュ{#caching}
    + [概要](./caching/overview.md)
    + [AEM パブリッシュサービス](./caching/publish.md)
@@ -195,7 +194,7 @@ ht-degree: 99%
       + [アセットワークフロー移行ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
-+ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
++ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}。
 + Forms{#forms}
    + Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
       + [1 - はじめに](./forms/developing-for-cloud-service/getting-started.md)
@@ -323,7 +322,7 @@ ht-degree: 99%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
-   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
+   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}。
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja){target=_blank}
    + [SPA エディター（React）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja){target=_blank}
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
