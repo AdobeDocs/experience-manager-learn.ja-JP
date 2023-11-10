@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
+source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
 workflow-type: tm+mt
-source-wordcount: '1053'
-ht-degree: 99%
+source-wordcount: '1058'
+ht-degree: 98%
 
 ---
 
@@ -133,6 +133,7 @@ ht-degree: 99%
    + [概要](./caching/overview.md)
    + [AEM パブリッシュサービス](./caching/publish.md)
    + [AEM オーサーサービス](./caching/author.md)
+   + [CDN キャッシュヒット率分析](./caching/cdn-cache-hit-ratio-analysis.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
