@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1231'
 ht-degree: 2%
 
 ---
@@ -41,11 +41,11 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 1. 目的の AEMCS 環境で、 **ログをダウンロード** 省略記号メニューから。
 
-   ![ログのダウンロード — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="200" zoomable="yes"}
+   ![ログのダウンロード — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
 1. Adobe Analytics の **ログをダウンロード** ダイアログで、 **公開** ドロップダウンメニューから「サービス」を選択し、「 **cdn** 行。
 
-   ![CDN ログ — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="200" zoomable="yes"}
+   ![CDN ログ — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
 
 ダウンロードしたログファイルが次の場所にある場合： _今日_ ファイルの拡張子はです。 `.log` それ以外の場合、過去のログファイルの拡張子は `.log.gz`.
@@ -71,11 +71,11 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
 
    1. を開きます。 **CDN キャッシュヒット率** ダッシュボードを表示するには、 Hamberger メニュー/ Analytics /ダッシュボード/CDN キャッシュヒット率をクリックします。
 
-      ![CDN キャッシュヒット率 — Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="200" zoomable="yes"}
+      ![CDN キャッシュヒット率 — Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
    1. 右上隅から目的の時間範囲を選択します。
 
-      ![時間範囲 — きばなダッシュボード](assets/cdn-logs-analysis/time-range.png){width="200" zoomable="yes"}
+      ![時間範囲 — きばなダッシュボード](assets/cdn-logs-analysis/time-range.png){width="500" zoomable="yes"}
 
    1. The **CDN キャッシュヒット率** ダッシュボードは説明がつかない状態です。
 
@@ -83,14 +83,14 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
       - キャッシュタイプ別のキャッシュ率
       - キャッシュタイプ別のキャッシュ数
 
-      ![合計リクエスト分析 — Kibana ダッシュボード](assets/cdn-logs-analysis/total-request-analysis.png){width="200" zoomable="yes"}
+      ![合計リクエスト分析 — Kibana ダッシュボード](assets/cdn-logs-analysis/total-request-analysis.png){width="500" zoomable="yes"}
 
    1. The _リクエストまたは MIME タイプ別の分析_ には、次の詳細が表示されます。
       - キャッシュタイプ別のキャッシュ率
       - キャッシュタイプ別のキャッシュ数
       - 上位の MISS および PASS URL
 
-      ![リクエストまたは MIME タイプ別の分析 — Kibana ダッシュボード](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="200" zoomable="yes"}
+      ![リクエストまたは MIME タイプ別の分析 — Kibana ダッシュボード](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="500" zoomable="yes"}
 
 #### 環境名またはプログラム ID によるフィルタリング
 
@@ -98,11 +98,11 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
 
 1. 「 CDN Cache Hit Ratio」ダッシュボードで、 **フィルターを追加** アイコン。
 
-   ![フィルター — きばなダッシュボード](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![フィルター — きばなダッシュボード](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. Adobe Analytics の **フィルターを追加** モーダルを開くには、 `aem_env_name.keyword` フィールドに値を入力し、 `is` 演算子と次のフィールドに必要な環境名を入力し、最後に「 」をクリックします。 _フィルターを追加_.
 
-   ![フィルターを追加 — Kibana ダッシュボード](assets/cdn-logs-analysis/add-filter.png){width="200" zoomable="yes"}
+   ![フィルターを追加 — Kibana ダッシュボード](assets/cdn-logs-analysis/add-filter.png){width="500" zoomable="yes"}
 
 #### ホスト名によるフィルタリング
 
@@ -110,11 +110,11 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
 
 1. 「 CDN Cache Hit Ratio」ダッシュボードで、 **フィルターを追加** アイコン。
 
-   ![フィルター — きばなダッシュボード](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![フィルター — きばなダッシュボード](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. Adobe Analytics の **フィルターを追加** モーダルを開くには、 `host.keyword` フィールドに値を入力し、 `is` 演算子と次のフィールドに必要なホスト名を入力し、最後に「 」をクリックします。 _フィルターを追加_.
 
-   ![ホストフィルター — Kibana ダッシュボード](assets/cdn-logs-analysis/add-host-filter.png){width="200" zoomable="yes"}
+   ![ホストフィルター — Kibana ダッシュボード](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
 同様に、分析要件に基づいて、ダッシュボードにフィルターを追加します。
 
@@ -127,7 +127,7 @@ CDN ログの分析を高速化するには、 [AEM-as-a-CloudService - CDN ロ�
 ダウンロードされた `aemcs_cdn_logs_analysis.ipynb` 「インタラクティブ Python ノートブック」ファイルには説明が必要ですが、各セクションの主な特徴は次のとおりです。
 
 - **追加のライブラリのインストール**：をインストールします。 `termcolor` および `tabulate` Python ライブラリ。
-- **CDN ログファイルを読み込み**：を使用して CDN ログファイルを読み込みます。 `log_file` 変数の値を変更する場合は、必ずその値を更新してください。 また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
+- **CDN ログを読み込む**：を使用して CDN ログファイルを読み込みます。 `log_file` 変数の値を変更する場合は、必ずその値を更新してください。 また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
 - **分析の実行**：最初のコードブロックは _合計、HTML、JS/CSS およびイメージリクエストの分析結果を表示_キャッシュヒット率の割合、棒グラフおよび円グラフを表示します。
 2 番目のコードブロックは、 _HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件_&#x200B;の場合は、URL とそのカウントがテーブル形式で表示されます。
 
@@ -141,33 +141,33 @@ Jupyter ノートブックをExperience Platformで実行するには、次の�
 
 1. にログインします。 [Adobe Experience Cloud](https://experience.adobe.com/)( ホームページ/ **クイックアクセス** セクション/クリック **Experience Platform**
 
-   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="200" zoomable="yes"}
+   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
 1. Adobe Experience Platformホームページ/「 Data Science 」セクションで、 **ノートブック** メニュー項目。 Jupyter Notebooks 環境を開始するには、 **JupyterLab** タブをクリックします。
 
-   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/datascience-notebook.png){width="200" zoomable="yes"}
+   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
 1. JupyterLab メニューで、 **ファイルをアップロード** アイコン、ダウンロードした CDN ログファイルをアップロードし、 `aemcs_cdn_logs_analysis.ipynb` ファイル。
 
-   ![ファイルのアップロード — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="200" zoomable="yes"}
+   ![ファイルのアップロード — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. を開きます。 `aemcs_cdn_logs_analysis.ipynb` ファイルをダブルクリックして保存します。
 
 1. Adobe Analytics の **CDN ログファイルを読み込み** ノートブックのセクションで、 `log_file` の値です。
 
-   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="200" zoomable="yes"}
+   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
 1. 選択したセルを実行して先に進むには、 **再生** アイコン。
 
-   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="200" zoomable="yes"}
+   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
 1. 実行後 **合計、HTML、JS/CSS およびイメージリクエストの分析結果を表示** コード・セルには、キャッシュ・ヒット率の割合、棒グラフおよび円グラフが表示されます。
 
-   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="200" zoomable="yes"}
+   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
 1. 実行後 **HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件** コードセルの場合、出力には上位 5 件の MISS および PASS リクエスト URL が表示されます。
 
-   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/output-top-urls.png){width="200" zoomable="yes"}
+   ![ノートブックログファイルの値の更新](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
 Jupyter Notebook を拡張し、要件に基づいて CDN ログを分析できます。
 
