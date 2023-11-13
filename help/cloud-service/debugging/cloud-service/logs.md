@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '998'
-ht-degree: 100%
+source-git-commit: 0565cf592a437acf5080dab1d3ee2d410997f01d
+workflow-type: tm+mt
+source-wordcount: '1007'
+ht-degree: 98%
 
 ---
 
@@ -173,7 +173,7 @@ AEM as a Cloud Service 環境ごとのログレベルに関するアドビの一
 
 + ローカル開発（AEM SDK）：`DEBUG`
 + 開発：`DEBUG`
-+ ステージング：`WARN`
++ ステージ：`WARN`
 + 実稼動：`ERROR`
 
 環境のタイプごとに最適なログレベルの設定は AEM as a Cloud Service で行われ、ログレベルはコードで維持管理されます。
@@ -187,7 +187,7 @@ AEM as a Cloud Service 環境ごとのログレベルに関するアドビの一
 
 環境ごとに静的な既知の Java ログレベルを設定する代わりに、AEM as Cloud Service の[環境固有の変数](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#environment-specific-configuration-values)を使用してログレベルをパラメーター化し、[Adobe I/O CLI と Cloud Manager プラグイン](#aio-cli)から値を動的に変更することができます。
 
-これには、環境固有の変数プレースホルダーを使用するようにログ OSGi 設定を更新する必要があります。 [ログレベルのデフォルト値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#default-values)は、[アドビの推奨値](#log-levels)に従って設定する必要があります。次に例を示します。
+これには、環境固有の変数プレースホルダーを使用するようにログ OSGi 設定を更新する必要があります。 [ログレベルのデフォルト値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#default-values)は、[アドビのレコメンデーション値](#log-levels)に従って設定する必要があります。次に例を示します。
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
@@ -203,7 +203,7 @@ AEM as a Cloud Service 環境ごとのログレベルに関するアドビの一
 このアプローチでは、次のマイナス面を考慮する必要があります。
 
 + [使用できる環境変数の数は限られており](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#number-of-variables)、ログレベルを管理する変数を作成すると、その変数が使用されます。
-+ 環境変数は、プログラムで [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) または [Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#cloud-manager-api-format-for-setting-properties) を介してのみ管理できます。
++ 環境変数は、 [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=ja), [Adobe I/OCLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)、および [Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#cloud-manager-api-format-for-setting-properties).
 + 環境変数の変更は、サポートされているツールで手動でリセットする必要があります。実稼動などのトラフィックが多い環境を詳細度の低いログレベルにリセットし忘れると、ログが氾濫し、AEM のパフォーマンスに影響を与える可能性があります。
 
 _環境固有の変数は Apache web サーバーや Dispatcher のログ設定には機能しません。これらが OSGi 設定を通して行われないからです。_
