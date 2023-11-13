@@ -1,6 +1,6 @@
 ---
 title: WAF ルールを含むトラフィックフィルタールールの設定方法
-description: WAF ルールを含むトラフィックフィルタールールの結果を作成、デプロイ、テスト、および分析するための設定方法について説明します。
+description: WAF ルールを含むトラフィックフィルタールールの作成、デプロイ、テスト、結果の分析を設定する方法について説明します。
 version: Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -14,34 +14,34 @@ exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # WAF ルールを含むトラフィックフィルタールールの設定方法
 
-学ぶ **設定方法** トラフィックフィルタールール（WAF ルールを含む）。 結果の作成、デプロイ、テスト、分析についてお読みください。
+WAF ルールを含むトラフィックフィルタールールの&#x200B;**設定方法**&#x200B;について説明します。結果の作成、デプロイ、テスト、分析について参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425407?quality=12&learn=on)
 
 ## セットアップ
 
-設定プロセスには、次のものが含まれます。
+設定プロセスには、次の項目が含まれます。
 
-- _ルールの作成_ 適切なAEMプロジェクト構造および設定ファイルを使用して、
-- _ルールのデプロイ_ AdobeCloud Manager の設定パイプラインを使用している場合。
-- _テストルール_ 様々なツールを使用したトラフィックの生成。
-- _結果の分析_ AEMCS CDN ログとダッシュボードツールを使用する。
+- _ルールの作成_：適切な AEM プロジェクト構造と設定ファイルを使用します。
+- _ルールのデプロイ_：Adobe Cloud Manager の設定パイプラインを使用します。
+- _ルールのテスト_：様々なツールを使用してトラフィックを生成します。
+- _結果の分析_：AEMCS CDN ログとダッシュボード ツールを使用します。
 
-### AEMプロジェクトでのルールの作成
+### AEM プロジェクトでのルールの作成
 
 ルールを作成するには、次の手順に従います。
 
-1. AEMプロジェクトの最上位レベルで、フォルダーを作成します。 `config`.
+1. AEM プロジェクトの最上位に `config` フォルダーを作成します。
 
-1. 内 `config` フォルダを作成し、新しいファイルを作成します。 `cdn.yaml`.
+1. `config` フォルダー内に、`cdn.yaml` という新しいファイルを作成します。
 
-1. 次のメタデータを `cdn.yaml` ファイル：
+1. 次のメタデータを `cdn.yaml` ファイルに追加します。
 
 ```yaml
 kind: CDN
@@ -56,9 +56,9 @@ data:
     rules:
 ```
 
-次の例を参照してください： `cdn.yaml` ファイルをAEM Guides WKND Sites Project 内に配置します。
+AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を参照してください。
 
-![WKND AEMプロジェクトルールファイルとフォルダー](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
+![WKND AEM プロジェクトルールファイルとフォルダー](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
 ### Cloud Manager を使用したルールのデプロイ {#deploy-rules-through-cloud-manager}
 
@@ -66,43 +66,43 @@ data:
 
 1. [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) で Cloud Manager にログインし、適切な組織とプログラムを選択します。
 
-1. 次に移動： _パイプライン_ カード _プログラムの概要_ ページで、 **+追加** 」ボタンをクリックして、目的のパイプラインタイプを選択します。
+1. _プログラムの概要_&#x200B;ページから&#x200B;_パイプライン_&#x200B;カードに移動し、「**+ 追加**」ボタンをクリックして目的のパイプラインタイプを選択します。
 
    ![Cloud Manager パイプラインカード](./assets/cloud-manager-pipelines-card.png)
 
-   上の例では、デモ用です。 _実稼動以外のパイプラインを追加_ は、開発環境が使用されているので、選択されています。
+   上の例では、開発環境を使用しているので、デモの目的で「_実稼動以外のパイプラインを追加_」が選択されています。
 
-1. Adobe Analytics の _実稼動以外のパイプラインを追加_ ダイアログで、次の詳細を選択して入力します。
+1. _実稼動以外のパイプラインを追加_&#x200B;ダイアログで、次の詳細を選択して入力します。
 
    1. 設定手順：
 
       - **タイプ**：デプロイメントパイプライン
-      - **パイプライン名**:Dev-Config
+      - **パイプライン名**：Dev-Config
 
       ![Cloud Manager 設定パイプラインダイアログ](./assets/cloud-manager-config-pipeline-step1-dialog.png)
 
-   2. ソースコードの手順：
+   2. ソースコード手順：
 
-      - **デプロイするコード**：ターゲットのデプロイメント
+      - **デプロイするコード**：ターゲットデプロイメント
       - **次を含む**：設定
       - **デプロイメント環境**：環境の名前（例：wknd-program-dev）。
-      - **リポジトリ**：パイプラインがコードを取得する元の Git リポジトリ。例： `wknd-site`
-      - **Git ブランチ**:Git リポジトリブランチの名前。
-      - **コードの場所**: `/config`（前の手順で作成した最上位の設定フォルダーに対応）
+      - **リポジトリ**：パイプラインがコードを取得する元の Git リポジトリ。例：`wknd-site`
+      - **Git ブランチ**：Git リポジトリブランチの名前。
+      - **コードの場所**：`/config`（前の手順で作成した最上位の設定フォルダーに対応）
 
       ![Cloud Manager 設定パイプラインダイアログ](./assets/cloud-manager-config-pipeline-step2-dialog.png)
 
-### トラフィック生成によるルールのテスト
+### トラフィックの生成によるルールのテスト
 
-ルールをテストするには、様々なサードパーティツールが使用でき、組織が推奨するツールを使用できます。 デモ用に、次のツールを使用します。
+ルールをテストするために、様々なサードパーティツールが使用可能で、組織には推奨ツールがある場合があります。デモの目的で、次のツールを使用します。
 
-- [Curl](https://curl.se/) を参照してください。
+- [cURL](https://curl.se/)：URL の呼び出しや応答コードの確認などの基本的なテストに使用します。
 
-- [ベジータ](https://github.com/tsenart/vegeta) サービス拒否 (DOS) を実行する。 次のインストール手順に従います： [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta)：サービス拒否（DOS）を実行するために使用します。[Vegeta GitHub](https://github.com/tsenart/vegeta#install) のインストール手順に従います。
 
-- [Nikto](https://github.com/sullo/nikto/wiki) XSS や SQL インジェクションなどの潜在的な問題やセキュリティの脆弱性を見つける。 次のインストール手順に従います： [Nikto GitHub](https://github.com/sullo/nikto).
+- [Nikto](https://github.com/sullo/nikto/wiki)：XSS、SQL インジェクションなどの潜在的な問題やセキュリティの脆弱性を見つけます。[Nikto GitHub](https://github.com/sullo/nikto) のインストール手順に従います。
 
-- 次のコマンドを実行して、ツールがインストールされ、ターミナルで使用可能であることを確認します。
+- 次のコマンドを実行して、ツールがインストールされ、ターミナルで使用できることを確認します。
 
   ```shell
   # Curl version check
@@ -118,9 +118,9 @@ data:
 
 ### ダッシュボードツールを使用した結果の分析
 
-ルールを作成、デプロイ、テストした後、 **Elasticsearch、ログスタッシュ、きばな (ELK)** ダッシュボードツール。 AEMCS CDN ログを解析でき、結果を様々なグラフやグラフの形式で視覚化できます。
+ルールを作成、デプロイ、テストした後、**Elasticsearch、Logstash、Kibana（ELK）**&#x200B;ダッシュボードツールを使用して結果を分析できます。AEMCS CDN ログを解析して、結果を様々なグラフの形式で視覚化できます。
 
-ダッシュボードツールは、 [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub リポジトリ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) をインストールし、 **トラフィックフィルタールール（WAF を含む）** ダッシュボード。
+ダッシュボードツールは [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub リポジトリ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool)から直接クローンを作成し、手順に従って&#x200B;**トラフィックフィルタールール（WAF を含む）**&#x200B;ダッシュボードをインストールして読み込みます。
 
 - サンプルダッシュボードを読み込むと、Elastic ダッシュボードのツールページは次のようになります。
 
@@ -133,4 +133,4 @@ data:
 
 ## 次の手順
 
-WAF ルールを含むトラフィックフィルタールールを [例と結果の分析](./examples-and-analysis.md) この章では、 AEM WKND Sites Project を使用します。
+[例と結果分析](./examples-and-analysis.md)の章で、AEM WKND Sites プロジェクトを使用して、WAF ルールを含むトラフィックフィルタールールを宣言する方法について説明します。
