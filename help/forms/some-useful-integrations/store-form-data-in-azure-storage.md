@@ -10,9 +10,9 @@ last-substantial-update: 2023-08-14T00:00:00Z
 kt: 13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '597'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
@@ -32,18 +32,18 @@ ht-degree: 56%
 ストレージアカウントページで、左側の「コンテナ」メニュー項目をクリックし、`formssubmissions` というコンテナを作成します。パブリックアクセスレベルを必ずプライベートに設定してください。
 ![コンテナ](./assets/new-container.png)
 
-## コンテナで SAS を作成する
+## コンテナ上に SAS を作成
 
 Shared Access Signature（SAS）の認証メソッドを使用して、Azure ストレージコンテナを操作できるようになります。
-ストレージアカウントのコンテナに移動し、省略記号をクリックし、スクリーンショットに示すように、「 Generate SAS 」オプションを選択します。
+ストレージアカウントのコンテナに移動し、省略記号をクリックし、スクリーンショットに示すように、「SAS を生成」オプションを選択します
 ![sas-on-container](./assets/sas-on-container.png)
-次のスクリーンショットに示すように、適切な権限と終了日を必ず指定し、「 Generate SAS token and URL 」をクリックします。 BLOB SAS トークンと BLOB SAS URL をコピーします。 HTTP 呼び出しには、次の 2 つの値を使用します
-![shared-access-keys](./assets/shared-access-signature.png)
+次のスクリーンショットに示すように、適切な権限と終了日を必ず指定し、「SAS トークンと URL を生成」をクリックします。Blob SAS トークンと Blob SAS URL をコピーします。これら 2 つの値を使用して HTTP 呼び出し
+![shared-access-keys](./assets/shared-access-signature.png) を行います
 
 
-## BLOB SAS トークンとストレージ URI を指定します
+## Blob SAS トークンとストレージ URI を指定します
 
-コードをより一般的にするには、次に示すように、OSGi 設定を使用して 2 つのプロパティを設定します。 The _**aemformstudation**_ は、ストレージアカウントの名前です。 _**formsubmissions**_ は、データを格納するコンテナです。
+コードをより汎用的にするには、次に示すように、OSGi 設定を使用して 2 つのプロパティを設定します。_**aemformstutorial**_ はストレージアカウントの名前で、_**formsubmissions**_ はデータを保存するコンテナです。
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -51,7 +51,8 @@ Shared Access Signature（SAS）の認証メソッドを使用して、Azure ス
 
 次に、送信したフォームデータを Azure ストレージに保存するための PUT リクエストを作成します。フォーム送信はすべて、一意の BLOB ID で識別する必要があります。一意の BLOB ID は通常、コード内で作成し、PUT リクエストの URL に挿入します。
 PUT リクエストの URL の一部を以下に示します。`aemformstutorial` はストレージアカウントの名前で、formsubmissions は一意の BLOB ID でデータを保存するコンテナです。URL の残りの部分は同じままです。
-https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken以下は、送信されたフォームデータを Azure ストレージにPUTリクエストを使用して保存するために記述された関数です。 なお、URL では、コンテナ名と UUID を使用しています。以下に示すサンプルコードを使用して OSGi サービスまたは Sling サーブレットを作成し、フォーム送信を Azure ストレージに保存できます。
+https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken
+PUT リクエストを使用して、送信したフォームデータを Azure ストレージに保存するために作成した関数を以下に示します。なお、URL では、コンテナ名と UUID を使用しています。以下に示すサンプルコードを使用して OSGi サービスまたは Sling サーブレットを作成し、フォーム送信を Azure ストレージに保存できます。
 
 ```java
  public String saveFormDatainAzure(String formData) {
@@ -93,13 +94,13 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken�
 
 * [カスタム OSGi バンドルのデプロイ](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
 
-* [カスタムアダプティブフォームテンプレートと、テンプレートに関連付けられたページコンポーネントを読み込みます。](./assets/store-and-fetch-from-azure.zip)
+* [カスタムアダプティブフォームテンプレートと、テンプレートに関連付けられたページコンポーネントを読み込みます](./assets/store-and-fetch-from-azure.zip)
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal Configuration で適切な値を指定します。
-* [BankAccount フォームをプレビューして送信します](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します
+* [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
-* データが任意の Azure ストレージコンテナに保存されていることを確認します。 BLOB ID をコピーします。
-* [BankAccount フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) Azure ストレージのデータが事前入力されるフォームの URL で、BLOB ID を guid パラメーターとして指定します。
+* データが任意の Azure ストレージコンテナに保存されていることを確認します。Blob ID をコピーします。
+* [BankAccount フォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)し、Azure ストレージからのデータが事前に入力されるフォームの URL で、guid パラメーターとして Blob ID を指定します
 
