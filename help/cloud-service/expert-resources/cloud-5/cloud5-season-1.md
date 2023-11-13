@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 source-git-commit: cacac9b58678316cea6a3cac5ebdb56427690d7d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '548'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
