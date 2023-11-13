@@ -8,21 +8,22 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 kt: 14238
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
-workflow-type: tm+mt
+exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
+source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
+workflow-type: ht
 source-wordcount: '282'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # Azure ストレージからデータを取得
 
-この記事では、Azure ストレージに保存されたデータをアダプティブフォームに入力する方法について説明します。
-ここでは、アダプティブフォームのデータが Azure ストレージに保存されていることを前提としており、アダプティブフォームにそのデータを事前入力する必要があると想定しています。
+この記事では、Azure ストレージに保存されているデータをアダプティブフォームに入力する方法について説明します。
+ここでは、アダプティブフォームのデータが Azure ストレージに保存されており、アダプティブフォームにそのデータを事前入力する必要があると想定しています。
 
-## GETリクエストを作成
+## GET リクエストを作成
 
-次の手順では、blobID を使用して Azure ストレージからデータを取得するコードを記述します。 データを取得するために次のコードが書き込まれました。 URL は、OSGi 設定の sasToken 値と storageURI 値、および getBlobData 関数に渡される blobID を使用して構築されました
+次の手順では、blobID を使用して Azure ストレージからデータを取得するコードを記述します。データを取得するには、次のコードを書き込みます。URL は、OSGi 設定の sasToken 値と storageURI 値、および getBlobData 関数に渡された blobID を使用して構築されました
 
 ```java
  @Override
@@ -56,7 +57,7 @@ public String getBlobData(String blobID) {
 }
 ```
 
-アダプティブフォームが `guid` パラメーターを URL 内で指定すると、テンプレートに関連付けられたカスタムページコンポーネントが取得され、Azure ストレージのデータを使用してアダプティブフォームに入力されます。
+アダプティブフォームが URL 内の `guid` パラメーターを使用してレンダリングされると、テンプレートに関連付けられたカスタムページコンポーネントが Azure ストレージからデータを取得し、アダプティブフォームにデータを入力します。
 テンプレートに関連付けられているページコンポーネントには、次の JSP コードが含まれます。
 
 ```java
@@ -77,13 +78,12 @@ if(guid!=null&&!guid.isEmpty())
 
 * [カスタム OSGi バンドルのデプロイ](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
 
-* [カスタムアダプティブフォームテンプレートと、テンプレートに関連付けられたページコンポーネントを読み込みます。](./assets/store-and-fetch-from-azure.zip)
+* [カスタムアダプティブフォームテンプレートと、テンプレートに関連付けられたページコンポーネントを読み込みます](./assets/store-and-fetch-from-azure.zip)
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal Configuration で適切な値を指定します。
-* [BankAccount フォームをプレビューして送信します](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します
+* [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
-* データが任意の Azure ストレージコンテナに保存されていることを確認します。 BLOB ID をコピーします。
-* [BankAccount フォームのプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) Azure ストレージのデータが事前入力されるフォームの URL で、BLOB ID を guid パラメーターとして指定します。
-
+* データが任意の Azure ストレージコンテナに保存されていることを確認します。Blob ID をコピーします。
+* [BankAccount フォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)し、Azure ストレージからのデータが事前に入力されるフォームの URL で、guid パラメーターとして Blob ID を指定します
