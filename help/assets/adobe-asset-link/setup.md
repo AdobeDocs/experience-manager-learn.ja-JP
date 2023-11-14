@@ -9,10 +9,10 @@ level: Beginner
 kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '208'
-ht-degree: 100%
+source-git-commit: 288eaf8bab20cfb0ecbfa8455198fa63252e2e71
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,11 @@ ht-degree: 100%
 AEM as a Cloud Service 用に Adobe Asset Link をセットアップする方法、ユーザーの使用資格と AEM as a Cloud Service の設定、Adobe Asset Link をインストールして使用する方法などについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
+
+上記のビデオには表示されません。Adobeアセットリンクは、 __管理パッケージ__ Creative Cloudパッケージマネージャーのオプション：
+
+1. 選択 __Adobeアセットリンク CEP__ in __プラグインを選択__ step
+2. 次の日： __オプションの手順__ 選択 __セルフサービスインストールを有効にする__ および __管理者以外のユーザーにアプリの更新とインストールを許可__ 管理者以外がCreative Cloudのアプリとプラグインを管理する権限を持つことを有効にする。
 
 ## Managed Services およびオンプレミス用の Asset Link のセットアップ
 
