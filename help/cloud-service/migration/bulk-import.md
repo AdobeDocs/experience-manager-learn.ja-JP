@@ -14,16 +14,20 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4912087feb69ccbed3c66a34941fa6d083af6319
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 100%
+source-wordcount: '146'
+ht-degree: 47%
 
 ---
 
 # 一括読み込みの使用
 
-AEM as a Cloud Service の一括読み込みツールを使用すると、管理者は安全かつ効率的な方法でクラウドストレージ（Azure Blob Storage または Amazon S3）からアセットを一括で読み込むことができます。
+AEM as a Cloud Serviceの一括読み込みツールを使用すると、管理者は安全で効率的な方法でクラウドストレージからアセットを一括で読み込むことができます。
+
+>[!TIP]
+>
+> このビデオの入力ソースは、Azure Blob ストレージとAmazon S3 のみを表示します。ただし、使用可能なソースは、時間の経過と共に増加し続けます。 サポートされる入力ソースの完全なリストについては、製品で使用可能なオプションを参照してください。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
