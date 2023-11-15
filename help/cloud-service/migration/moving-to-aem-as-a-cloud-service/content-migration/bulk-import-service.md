@@ -9,16 +9,18 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
-source-wordcount: '157'
-ht-degree: 100%
+source-git-commit: 8a4f4a1370d93aa592d5d67208ad5f85034db0bf
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 71%
 
 ---
 
 # 一括読み込みサービス
 
 AEM as a Cloud Service の一括読み込みサービスを使用して、AEM 以外のソースからアセットを読み込む方法について説明します。
+
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
 
@@ -28,9 +30,13 @@ AEM as a Cloud Service の一括読み込みサービスを使用して、AEM �
 
 一括読み込みサービスは、Azure Blob ストレージまたは Amazon S3 ストレージに保存されたファイルをアセットとして AEM as a Cloud Service に転送するために使用されます。
 
+>[!TIP]
+>
+> このビデオの入力ソースは、Azure Blob ストレージとAmazon S3 のみを表示します。ただし、使用可能なソースは、時間の経過と共に増加し続けます。 サポートされる入力ソースの完全なリストについては、製品で使用可能なオプションを参照してください。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+
 ## 重要なアクティビティ
 
-+ 読み込むファイルをクラウドストレージプロバイダー（Azure Blob ストレージまたは Amazon S3） にアップロードします。
++ 読み込むファイルをクラウドストレージプロバイダーにアップロードします。
 + AEM as a Cloud Service オーサーサービスを設定して、一括読み込みサービスを実行します。
 + 一括サービスインポーターを 1 回限りの読み込みとして実行するか、定期的な読み込みスケジュールを設定します。
 
