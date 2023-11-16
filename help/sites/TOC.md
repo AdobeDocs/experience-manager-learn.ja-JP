@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 3f27a728bbaba1ff5a4c7d25e23c3979e59d73ea
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 91%
@@ -25,7 +25,6 @@ ht-degree: 91%
    + [リダイレクト](document-authoring/redirects.md)
    + [一括メタデータ](document-authoring/bulk-metadata.md)
    + [ページメタデータ](document-authoring/page-metadata.md)
-   + [レスポンシブナビゲーション](document-authoring/responsive-navigation.md)
    + 方法{#how-to}
       + [ドキュメント監査](./document-authoring/how-to/document-audit.md)
       + [ドキュメント権限](./document-authoring/how-to/document-permissions.md)
@@ -34,6 +33,7 @@ ht-degree: 91%
       + [iFrame を埋め込む](./document-authoring/how-to/iframes.md)
       + [画像の代替テキスト](./document-authoring/how-to/image-alt-text.md)
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
+      + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
 + ページオーサリング {#page-authoring}
    + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
    + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -54,11 +54,6 @@ ht-degree: 91%
    + [ローンチ](page-authoring/launches.md)
    + 他のユーザーから学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
-+ コンポーネント {#components}
-   + [コンポーネント開発](components/component-development.md)
-   + [コアコンポーネント](components/core-components-feature-video-understand.md)
-   + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
-   + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
@@ -99,6 +94,11 @@ ht-degree: 91%
    + [エクスペリエンスフラグメントと Adobe Target のセットアップ](personalization/experience-fragment-target-technical-video-setup.md)
    + [Adobe Target でのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [ContextHub のセットアップ](personalization/context-hub-technical-video-setup.md)
++ コンポーネント {#components}
+   + [コンポーネント開発](components/component-development.md)
+   + [コアコンポーネント](components/core-components-feature-video-understand.md)
+   + [Web に最適化された画像配信](components/web-optimized-image-delivery.md)
+   + [コンポーネントコンソール](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [サイトマップ](./seo/sitemaps.md)
 + 単一ページアプリケーション {#spa-editor}
