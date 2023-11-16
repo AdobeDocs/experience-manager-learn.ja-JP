@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
+source-git-commit: 4e93bc88b0ee5a805f2aaf1e66900f084ae01247
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1433'
 ht-degree: 2%
 
 ---
@@ -20,10 +20,12 @@ ht-degree: 2%
 
 # CDN キャッシュヒット率の分析
 
-提供されるAEMas a Cloud Serviceの分析方法を説明します **CDN ログ** とは、次のようなインサイトを得る **キャッシュヒット率**、および **の上位の URL _MISS_ および _パス_ キャッシュの種類** 最適化のために
+CDN でキャッシュされるコンテンツは、Web サイトユーザーが経験する待ち時間を短縮します。ユーザーは、要求が Apache/Dispatcher またはAEMパブリッシュに戻るのを待つ必要はありません。 このことを念頭に置いておくと、CDN でキャッシュ可能なコンテンツの量を最大限に増やすために、CDN キャッシュのヒット率を最適化することが重要です。
+
+提供されるAEMas a Cloud Serviceの分析方法を説明します **CDN ログ** とは、次のようなインサイトを得る **キャッシュヒット率**、および **の上位の URL _MISS_ および _パス_ キャッシュの種類**、最適化のために使用します。
 
 
-CDN ログは JSON 形式で利用できます。この形式には、以下のような様々なフィールドが含まれています。 `url`, `cache`を参照してください。詳しくは、 [CDN ログ形式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). The `cache` フィールドには、 _キャッシュの状態_ とその値は、HIT、MISS、PASS のいずれかです。 可能な値の詳細を確認します。
+CDN ログは JSON 形式で利用できます。この形式には、以下のような様々なフィールドが含まれています。 `url`, `cache`. 詳しくは、 [CDN ログ形式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). The `cache` フィールドには、 _キャッシュの状態_ とその値は、HIT、MISS、PASS のいずれかです。 可能な値の詳細を確認します。
 
 | キャッシュの状態 </br> 可能な値 | 説明 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -32,6 +34,11 @@ CDN ログは JSON 形式で利用できます。この形式には、以下の�
 | パス | リクエストされたデータは _明示的にキャッシュしないように設定_ とは、常にAEMサーバーから取得されます。 |
 
 このチュートリアルの目的は、 [AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd) がAEMas a Cloud Service環境にデプロイされ、 [Apache JMeter](https://jmeter.apache.org/).
+
+このチュートリアルは、次の手順を実行するように構成されています。
+1. Cloud Manager を使用した CDN ログのダウンロード
+1. これらの CDN ログの分析。ローカルにインストールされたダッシュボード、またはリモートからアクセスした Jupiter Notebook(Adobe Experience Platformのライセンスを持つユーザー向け ) の 2 つの方法で実行できます。
+1. CDN キャッシュ設定の最適化
 
 ## CDN ログをダウンロード
 
@@ -52,12 +59,12 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 ## ダウンロードした CDN ログの分析
 
-キャッシュヒット率などのインサイト、MISS および PASS キャッシュタイプの上位 URL を得るには、ダウンロードした CDN ログファイルを分析します。 これらのインサイトは、 [CDN キャッシュの設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja) サイトのパフォーマンスを向上させます。
+キャッシュヒット率や MISS および PASS キャッシュタイプの上位の URL などのインサイトを得るには、ダウンロードした CDN ログファイルを分析します。 これらのインサイトは、 [CDN キャッシュの設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja) サイトのパフォーマンスを向上させます。
 
-CDN ログを分析するには、この記事で **Elasticsearch、ログスタッシュ、きばな (ELK)** [ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) および [Jupyter Notebook](https://jupyter.org/).
+CDN ログを分析するには、次の 2 つのオプションを紹介します。 **Elasticsearch、ログスタッシュ、きばな (ELK)** [ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) および [Jupyter Notebook](https://jupyter.org/). ELK ダッシュボードツールは、ノートパソコンにローカルにインストールでき、Jupyry Notebook ツールにリモートからアクセスできます [Adobe Experience Platformの一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) Adobe Experience Platformのライセンスを持つユーザー向けに、追加のソフトウェアをインストールしないで
 
 
-### ダッシュボードツールの使用
+### オプション 1:ELK ダッシュボードツールの使用
 
 The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを検索、分析、視覚化するための拡張性の高いソリューションを提供する一連のツールです。 Elasticsearch、ログスタッシュ、きばなから成る。
 
@@ -69,7 +76,7 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
 
    1. ダウンロードした CDN ログファイルを環境固有のフォルダー内にコピーします。
 
-   1. を開きます。 **CDN キャッシュヒット率** ダッシュボードを表示するには、 Hamberger メニュー/ Analytics /ダッシュボード/CDN キャッシュヒット率をクリックします。
+   1. を開きます。 **CDN キャッシュヒット率** ダッシュボードを表示するには、左上隅のナビゲーションメニュー/ Analytics /ダッシュボード/CDN キャッシュヒット率をクリックします。
 
       ![CDN キャッシュヒット率 — Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -118,26 +125,24 @@ The [ELK スタック](https://www.elastic.co/elastic-stack) は、データを�
 
 同様に、分析要件に基づいて、ダッシュボードにフィルターを追加します。
 
-### Jupyter Notebook の使用
+### オプション 2:Jupyter ノートブックの使用
 
-The [Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース Web アプリケーションです。 データの変換、ビジュアライゼーション、統計的モデリングに使用されます。
+ソフトウェアをローカルにインストールしない（前の節の ELK ダッシュボードツール）場合は、別のオプションもありますが、Adobe Experience Platformのライセンスが必要です。
 
-CDN ログの分析を高速化するには、 [AEM-as-a-CloudService - CDN ログ分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) ファイル。
+The [Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース Web アプリケーションです。 データの変換、ビジュアライゼーション、統計的モデリングに使用されます。 リモートからアクセス可能 [Adobe Experience Platformの一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
 
-ダウンロードされた `aemcs_cdn_logs_analysis.ipynb` 「インタラクティブ Python ノートブック」ファイルには説明が必要ですが、各セクションの主な特徴は次のとおりです。
+#### インタラクティブ Python ノートブックファイルのダウンロード
+
+まず、 [AEM-as-a-CloudService - CDN ログ分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) ファイルに含める必要があります。 この「Interactive Python Notebook」ファイルは説明に基づいて説明できますが、各セクションの主な特徴は次のとおりです。
 
 - **追加のライブラリのインストール**：をインストールします。 `termcolor` および `tabulate` Python ライブラリ。
-- **CDN ログを読み込む**：を使用して CDN ログファイルを読み込みます。 `log_file` 変数の値を変更する場合は、必ずその値を更新してください。 また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
+- **CDN ログを読み込む**：を使用して CDN ログファイルを読み込みます。 `log_file` 変数の値に設定します。必ず値を更新してください。 また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
 - **分析の実行**：最初のコードブロックは _合計、HTML、JS/CSS およびイメージリクエストの分析結果を表示_キャッシュヒット率の割合、棒グラフおよび円グラフを表示します。
-2 番目のコードブロックは、 _HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件_&#x200B;の場合は、URL とそのカウントがテーブル形式で表示されます。
+2 番目のコードブロックは、 _HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件_&#x200B;の場合に、URL とその数を表形式で表示します。
 
-#### Jupyter ノートブックをExperience Platformで実行
+#### Jupyter ノートブックの実行
 
->[!IMPORTANT]
->
->Experience Platformを使用している場合、またはライセンスを取得している場合は、追加のソフトウェアをインストールせずに Jupyter Notebook を実行できます。
-
-Jupyter ノートブックをExperience Platformで実行するには、次の手順に従います。
+次に、次の手順に従って、Adobe Experience Platformで Jupyter ノートブックを実行します。
 
 1. にログインします。 [Adobe Experience Cloud](https://experience.adobe.com/)( ホームページ/ **クイックアクセス** セクション/クリック **Experience Platform**
 
