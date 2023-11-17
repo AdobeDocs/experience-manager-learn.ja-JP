@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 4225be50cd3ed4c19c7c6ca90f22df826d6d19a6
+source-git-commit: 521f11e24b2d1a89b9c26d4407ca417dc21caa29
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 90%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 90%
       + [前提条件](./edge-delivery-services/developing/prerequisites.md)
       + [AEM boilerplate](./edge-delivery-services/developing/aem-boilerplate.md)
       + [コンテンツリポジトリー](./edge-delivery-services/developing/content-repository.md)
+      + [AEM boilerplate](./edge-delivery-services/developing/aem-boilerplate.md)
       + [プレビューと公開](./edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](./edge-delivery-services/developing/sidekick.md)
       + [ドキュメント構造](./edge-delivery-services/developing/document-structure.md)
