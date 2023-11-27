@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '1318'
-ht-degree: 100%
+source-git-commit: bccaccd386d065720cddfd689cbadc220609b8a8
+workflow-type: tm+mt
+source-wordcount: '1319'
+ht-degree: 98%
 
 ---
 
@@ -45,7 +45,7 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
    + アクセストークン（Bearer トークン）
 + Cloud Manager プログラム ID
 + Cloud Manager 環境 ID
-+ 必要なすべての接続パラメーターにアクセスできる仮想プライベートネットワーク。
++ A **ルートベース** 必要なすべての接続パラメーターへのアクセスが可能な仮想プライベートネットワーク。
 
 詳しくは、次の Cloud Manager API 資格情報の設定、構成、取得方法、およびそれらを使用した Cloud Manager API 呼び出しの作成方法に関するチュートリアルを参照してください。
 
@@ -257,9 +257,9 @@ AEM から HTTP／HTTPS で接続する場合、VPN を使用すると、HTTP／
 
 AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP など）、接続は AEM から提供される特別なホスト名を使用して行う必要があります。
 
-| 変数名 | 使用 | Java™ コード | OSGi 設定 |
-| - | - | - | - |
-|`AEM_PROXY_HOST` | HTTP／HTTPS 以外の接続のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| 変数名 | 以下を使用し、 | Java™コード | OSGi 設定 |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | 非 HTTP/HTTPS 接続用のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
 外部サービスへの接続は、その後、`AEM_PROXY_HOST` とマッピングされたポート（`portForwards.portOrig`）を使用しで呼び出されます。次に、AEM はこれをマッピングされた外部ホスト名（`portForwards.name`）とポート（`portForwards.portDest`）にルーティングします。
