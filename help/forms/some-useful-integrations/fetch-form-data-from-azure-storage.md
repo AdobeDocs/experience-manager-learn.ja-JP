@@ -8,11 +8,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 kt: 14238
-exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
-source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
-workflow-type: ht
-source-wordcount: '282'
-ht-degree: 100%
+source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -47,18 +46,18 @@ public String getBlobData(String blobID) {
 
     } catch (ClientProtocolException e) {
 
-        log.error("Got Client Protocol Exception " + e.getMessage());
+        log.debug("Got Client Protocol Exception " + e.getMessage());
     } catch (IOException e) {
 
-        log.error("Got IOEXception " + e.getMessage());
+        log.debug("Got IOEXception " + e.getMessage());
     }
 
     return null;
 }
 ```
 
-アダプティブフォームが URL 内の `guid` パラメーターを使用してレンダリングされると、テンプレートに関連付けられたカスタムページコンポーネントが Azure ストレージからデータを取得し、アダプティブフォームにデータを入力します。
-テンプレートに関連付けられているページコンポーネントには、次の JSP コードが含まれます。
+URL に guid パラメーターが指定されたアダプティブフォームがレンダリングされると、テンプレートに関連付けられたカスタムページコンポーネントは、Azure ストレージからアダプティブフォームを取得し、そのデータを入力します。
+次に、テンプレートに関連付けられたページコンポーネントの jsp 内のコードを示します。
 
 ```java
 com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage azureStorage = sling.getService(com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage.class);
@@ -82,8 +81,11 @@ if(guid!=null&&!guid.isEmpty())
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します
+* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します。
+
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * データが任意の Azure ストレージコンテナに保存されていることを確認します。Blob ID をコピーします。
+
 * [BankAccount フォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)し、Azure ストレージからのデータが事前に入力されるフォームの URL で、guid パラメーターとして Blob ID を指定します
+
