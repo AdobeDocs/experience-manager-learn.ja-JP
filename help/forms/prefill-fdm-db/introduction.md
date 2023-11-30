@@ -3,15 +3,15 @@ title: フォームデータモデルを使用したフォームへの事前入�
 description: フォームデータモデルのリクエスト属性を使用したアダプティブフォームへの事前入力
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 4419
+jira: KT-4419
 thumbnail: 36387.jpg
 topic: Development
 role: User
 level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 100%
 

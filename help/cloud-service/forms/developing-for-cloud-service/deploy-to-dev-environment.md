@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Code Deployment
-kt: 8851
+jira: KT-8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 100%
 

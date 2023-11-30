@@ -3,14 +3,14 @@ title: ' [!DNL ServiceNow] との統合'
 description: フォームデータモデルを使用して、すべてのインシデントを作成および表示します。
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 9957
+jira: KT-9957
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
 last-substantial-update: 2022-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 100%
 
@@ -46,11 +46,11 @@ AEM Forms のフォームデータモデルを使用して、[!DNL ServiceNow] �
 ## ServiceNow インスタンスの資格情報にアクセス
 
 * ユーザープロファイルをクリックします。
-   ![ユーザープロファイルをクリックします](assets/snow-1.png)
+  ![ユーザープロファイルをクリックします](assets/snow-1.png)
 
 * 「インスタンスのパスワードの管理」をクリックします。
 * インスタンスの詳細が次のように表示されます。
-   ![インスタンスの詳細](assets/snow-3.png)
+  ![インスタンスの詳細](assets/snow-3.png)
 
 ## 統合のテスト
 

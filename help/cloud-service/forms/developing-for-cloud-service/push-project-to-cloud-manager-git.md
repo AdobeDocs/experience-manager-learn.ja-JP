@@ -7,10 +7,10 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8851
+jira: KT-8851
 exl-id: e61cea37-b931-49c6-9e5d-899628535480
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 100%
 

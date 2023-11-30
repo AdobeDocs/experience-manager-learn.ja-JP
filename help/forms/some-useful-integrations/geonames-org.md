@@ -3,14 +3,14 @@ title: カスケードドロップダウンリスト
 description: 以前のドロップダウンリスト選択に基づいてドロップダウンリストを生成します。
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 9724
+jira: KT-9724
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: 5fc4a11b7f7f26a62f49cc8614e6bf699cc1697a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 100%
 

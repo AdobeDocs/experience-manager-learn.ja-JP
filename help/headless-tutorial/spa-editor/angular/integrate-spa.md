@@ -2,21 +2,20 @@
 title: SPA の統合 | AEM SPA Editor と Angular の概要
 description: Angular で記述された単一ページアプリケーション（SPA）のソースコードを、Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。Angular の CLI ツールなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 feature: SPA Editor
-topics: development
-doc-type: tutorial
 version: Cloud Service
 activity: develop
 audience: developer
-kt: 5310
+jira: KT-5310
 thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2187'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -40,7 +39,7 @@ Angular で記述された単一ページアプリケーション（SPA）のソ
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認してください。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
 
 ### コードの取得
 
@@ -353,7 +352,7 @@ AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の
 
 1. ブラウザーで [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) に移動します。
 
-   これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
+   これは、アプリケーションを動作させているAEMで書き出された JSON です。 JSON 出力をコピーします。
 
 2. IDE に戻り、`ui.frontend/src` に移動して、**mocks** と **json** という名前の新しいフォルダーを追加して、次のフォルダー構造に一致させます。
 

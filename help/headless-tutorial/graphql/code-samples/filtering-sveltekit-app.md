@@ -6,19 +6,19 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11811
+jira: KT-11811
 thumbnail: KT-11811.jpg
 index: false
 hide: true
 recommendations: noCatalog, noDisplay
 hidefromtoc: true
-source-git-commit: a0a1c7e5d3dd74454b9b8ab787ce7447e73ee098
-workflow-type: ht
+exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 100%
 
 ---
-
 
 # SvelteKit アプリのフィルタリング
 

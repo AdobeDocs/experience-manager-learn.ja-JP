@@ -6,9 +6,10 @@ topic: Content Management
 feature: Templates
 role: User
 level: Intermediate
+doc-type: Tutorial
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 100%
 

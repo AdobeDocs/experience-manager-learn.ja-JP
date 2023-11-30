@@ -1,14 +1,14 @@
 ---
 title: Asset Compute 拡張機能に対応する Asset Compute プロジェクトの作成
 description: Asset Compute プロジェクトは、Adobe I/O CLI を使用して生成される Node.js プロジェクトであり、Adobe I/O Runtime へのデプロイと AEM as a Cloud Service との統合を可能にする特定の構造に準拠しています。
-kt: 6269
+jira: KT-6269
 thumbnail: 40197.jpg
 topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 100%
@@ -59,9 +59,8 @@ _Asset Compute プロジェクト生成のクリックスルー（音声なし�
    + ファイルを任意のフォルダーに移動し、設定エントリ `ASSET_COMPUTE_INTEGRATION_FILE_PATH` を持つ `.env` ファイルからそのフォルダーを参照します。ファイルパスは、絶対パスでも、プロジェクトのルートからの相対パスでも構いません。次に例を示します。
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
-      または
+     または
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=../../secrets/wkndAemAssetCompute-81368-Development.json.json`
-
 
 > メモ
 > このファイルには資格情報が含まれています。プロジェクト内にファイルを保存する場合は、必ず `.gitignore` ファイルに追加して共有されないようにします。同じことが `.env` ファイルにも当てはまります。これらの資格情報ファイルを共有したり、Git に保存したりしないでください。

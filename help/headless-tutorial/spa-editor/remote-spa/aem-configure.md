@@ -5,13 +5,14 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7631
+jira: KT-7631
 thumbnail: kt-7631.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1246'
 ht-degree: 100%
 
@@ -161,7 +162,7 @@ AEM がリモート SPA を SPA エディターに読み込むには、SPA の�
    </jcr:root>
    ```
 
-1. `localhost_any` で、フォルダー `wknd-app-routes-adventure` を作成します。
+1. `localhost_any` で、フォルダー `wknd-app-routes-adventure` を作成します
 1. `wknd-app-routes-adventure` で、次の内容のファイル `.content.xml` を作成します。
 
    ```
@@ -254,7 +255,7 @@ Sling マッピングは `http` および `localhost` で実行される AEM に
 
 ![SPA エディターの CORS 設定](./assets/aem-project/cors-configuration.png)
 
-重要な設定オプションは次のとおりです。
+重要な設定要素は次のとおりです。
 
 + `alloworigin` は、AEM からコンテンツを取得できるホストを指定します。
    + `localhost:3000` は、ローカルで実行されている SPA をサポートするために追加されています

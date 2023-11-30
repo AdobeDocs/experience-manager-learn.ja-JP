@@ -2,16 +2,13 @@
 title: Dynamic Media Classic のメインワークフローとアセットのプレビュー
 description: 作成（およびアップロード）、オーサリング（および公開）、配信の 3 つの手順を含む、Dynamic Media Classic の主なワークフローについて説明します。 Dynamic Media Classic のアセットをプレビューする方法について説明します。
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, architecture, publishing
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2703'
 ht-degree: 100%
 

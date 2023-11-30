@@ -4,9 +4,9 @@ breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
-workflow-type: ht
-source-wordcount: '232'
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
+source-wordcount: '228'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 100%
    + [AEM プロジェクトの開発](./projects/develop-aem-projects.md)
    + [プロジェクトマスターの使用](./projects/use-project-masters.md)
 + セキュリティ {#security}
-   + [AEMセキュリティ通知（2018年11月）](./security/aem-security-notification-2018-11.md)
    + [クロスオリジンリソース共有（CORS）に対応する開発](./security/develop-for-cross-origin-resource-sharing.md)
    + [クロスオリジンリソース共有（CORS）について](./security/understand-cross-origin-resource-sharing.md)
    + [SSL ウィザードの使用](./security/use-the-ssl-wizard.md)

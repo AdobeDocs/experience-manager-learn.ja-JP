@@ -2,16 +2,13 @@
 title: スマートイメージング
 description: Dynamic Media Classic のスマートイメージングは、クライアントブラウザーの機能に応じて、画像の形式と品質を自動的に最適化することで、画像配信のパフォーマンスを向上させます。それには、Adobe Sensei AI 機能を活用し、既存の画像プリセットと連携します。スマートイメージングの詳細と、それを使用してページ読み込みの高速化によりカスタマーエクスペリエンス（顧客体験）を向上させる方法について説明します。
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, renditions, images
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 100%
 

@@ -9,9 +9,10 @@ feature: Learn From Your Peers
 role: Admin, User
 jira: KT-14254
 level: Beginner, Intermediate
+doc-type: Article
 exl-id: c88c3ec7-9060-43e2-a6a2-d47bba6f7cf3
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2034'
 ht-degree: 100%
 

@@ -5,11 +5,12 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: b33d1509-531d-40c3-9b26-1d18c8d86a97
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '465'
+ht-degree: 100%
 
 ---
 
@@ -62,6 +63,7 @@ AEM Content Services は設定（コンテンツフラグメントモデル、�
 1. 新しい web ブラウザーで、AEM Publish からログアウトし、次の URL をリクエストします（ホスト：ポートで AEM Publish が実行されている場合は `http://localhost:4503`）。
 
    * [http://localhost:4503/content/wknd-mobile/en/api/events.model.json](http://localhost:4503/content/wknd-mobile/en/api/events.model.tidy.json)
+
    これらのリクエストでは、対応する AEM オーサーエンドポイントがレビューされた場合と同じ JSON 応答を返す必要があります。 そうでない場合は、すべてのパブリケーションが成功したことを確認します（レプリケーションキューをチェックします）。 [!DNL WKND Mobile] `ui.apps` パッケージが AEM Publish にインストールされるので、 AEM Publish の `error.log` を見直します。
 
 ## 次の手順

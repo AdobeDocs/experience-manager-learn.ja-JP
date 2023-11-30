@@ -4,14 +4,14 @@ description: アプリケーション ID と電話番号の検証に成功した
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6599
+jira: KT-6599
 thumbnail: 6599.jpg
 topic: Development
 role: User
 level: Beginner
 exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 100%
 

@@ -3,14 +3,15 @@ title: プロジェクトの作成｜AEM SPA エディターと React の使用�
 description: AEM SPA エディターと統合された React アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを生成する方法を説明します。
 feature: SPA Editor, AEM Project Archetype
 version: Cloud Service
-kt: 413
+jira: KT-413
 thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: c489a033f34aecaa0af10e3868c258feba6aaae6
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 100%
 
@@ -35,7 +36,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
 
 ## 前提条件
 
-必要なツールと[ローカル開発環境](overview.md#local-dev-environment)の設定方法を確認します。**オーサー**&#x200B;モードで起動した Adobe Experience Manager の新しいインスタンスが、ローカルで実行されていることを確認します。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールや手順を確認します。**オーサー**&#x200B;モードで起動した Adobe Experience Manager の新しいインスタンスが、ローカルで実行されていることを確認します。
 
 ## プロジェクトの作成 {#create}
 
@@ -148,7 +149,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
 
 1. **Sites** コンソール（[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）に移動します。
 
-   WKND SPA は、国、言語、ホームページを含む基本的なサイト構造を含んでいます。この階層は、アーキタイプのデフォルトの `language_country` および `isSingleCountryWebsite` の値に基づいています。これらの値は、プロジェクトを生成する際に[使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#avilable-properties)で上書きされる場合があります。
+   WKND SPA は、国、言語、ホームページを含む基本的なサイト構造を含んでいます。この階層は、アーキタイプの `language_country` と `isSingleCountryWebsite` のデフォルト値に基づいています。これらの値は、プロジェクトを生成する際に[使用可能なプロパティ](https://github.com/adobe/aem-project-archetype#avilable-properties)で上書きされる場合があります。
 
 2. **us**／**en**／**WKND SPA React ホームページ**&#x200B;ページを選択し、メニューバーの「**編集**」ボタンをクリックしてページを開きます。
 
@@ -156,9 +157,9 @@ AEM SPA エディターと統合された React アプリケーションの出�
 
 3. **テキスト**&#x200B;コンポーネントは既にページに追加されています。このコンポーネントは、AEM の他のコンポーネントと同様に編集できます。
 
-   ![テキストコンポーネントを更新](./assets/create-project/update-text-component.gif)
+   ![テキストコンポーネントの更新](./assets/create-project/update-text-component.gif)
 
-4. 追加の&#x200B;**テキスト**&#x200B;コンポーネントをページに追加します。
+4. さらに&#x200B;**テキスト**&#x200B;コンポーネントをページに追加します。
 
    オーサリングエクスペリエンスは、従来の AEM Sites ページと似ています。 現在、使用できるコンポーネントの数は限られています。チュートリアルの過程で、さらに追加されます。
 
@@ -189,7 +190,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
    しかし、*このコンテンツはどこから取得されるのでしょうか。*
 
 3. タブに戻ります。[http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
-4. ブラウザーのデベロッパーツールを開き、更新中にページのネットワークトラフィックを調べます。 **XHR** リクエストを表示します。
+4. ブラウザーのデベロッパーツールを開き、更新中にページのネットワークトラフィックを調べます。 **XHR** リクエストを確認します。
 
    ![XHR リクエスト](./assets/create-project/xhr-requests.png)
 
@@ -222,7 +223,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
    >
    > JSON 出力を自動的にフォーマットするブラウザー拡張機能をインストールすると役立つ場合があります。
 
-## これで完了です。 {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 最初の AEM SPA エディタープロジェクトを作成できました。
 

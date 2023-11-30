@@ -3,15 +3,15 @@ title: コンテンツフラグメントのオーサリング - AEM ヘッドレ
 description: Adobe Experience Manager（AEM）および GraphQL の概要コンテンツフラグメントモデルに基づいて、新しいコンテンツフラグメントを作成し、編集します。コンテンツフラグメントのバリエーションを作成する方法について説明します。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6713
+jira: KT-6713
 thumbnail: 22451.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 100%
 

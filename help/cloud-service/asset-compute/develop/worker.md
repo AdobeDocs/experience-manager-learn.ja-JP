@@ -1,28 +1,28 @@
 ---
-title: asset computeワーカーの開発
-description: asset computeワーカーは、Asset computeプロジェクトの中核となるもので、アセットで実行された作業を実行（編成）して新しいレンディションを作成するカスタム機能を提供します。
+title: Asset Compute ワーカーの開発
+description: Asset computeワーカーは、Asset computeプロジェクトの中核となるもので、アセットで実行された作業を実行（編成）して新しいレンディションを作成するカスタム機能を提供します。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6282
+jira: KT-6282
 thumbnail: KT-6282.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# asset computeワーカーの開発
+# Asset Compute ワーカーの開発
 
-asset computeワーカーは、Asset computeプロジェクトの中核となり、アセットで実行された作業を実行（編成）して新しいレンディションを作成するカスタム機能を提供します。
+Asset computeワーカーは、Asset computeプロジェクトの中核となり、アセットで実行された作業を実行（編成）して新しいレンディションを作成するカスタム機能を提供します。
 
 asset computeプロジェクトは、アセットの元のバイナリを名前付きのレンディションに変換せずにコピーする、単純なワーカーを自動生成します。 このチュートリアルでは、このワーカーを変更して、より興味深いレンディションを作成し、Asset computeワーカーの力を説明します。
 
@@ -30,22 +30,22 @@ asset computeのぼやけたバージョンで、アセットレンディショ�
 
 ## asset computeワーカー呼び出しの論理フロー
 
-asset computeワーカーは、 `renditionCallback(...)` 関数の呼び出しは、概念的には次のようになります。
+Asset Compute ワーカーは、Asset Compute SDK ワーカー API コントラクトを `renditionCallback(...)` 関数で実装します。この関数は、概念的には次のようなものになります。
 
-+ __入力：__ AEMアセットの元のバイナリパラメーターと処理プロファイルパラメーター
++ __入力：__ AEM アセットのオリジナルバイナリパラメーターと処理プロファイルパラメーター
 + __出力：__ AEMアセットに追加する 1 つ以上のレンディション
 
-![asset computeワーカーの論理フロー](./assets/worker/logical-flow.png)
+![Asset computeワーカーの論理フロー](./assets/worker/logical-flow.png)
 
-1. AEM オーサーサービスはAsset computeワーカーを呼び出し、アセットの __(1a)__ 元のバイナリ (`source` パラメータ )、および __(1b)__ 処理プロファイル (`rendition.instructions` パラメーター )。
+1. AEMオーサーサービスはAsset computeワーカーを呼び出し、アセットの __(1a)__ 元のバイナリ (`source` パラメータ )、および __(1b)__ 処理プロファイル (`rendition.instructions` パラメーター )。
 1. asset computeSDK は、カスタムAsset computeメタデータワーカーの実行を調整します。 `renditionCallback(...)` 関数、アセットの元のバイナリに基づく新しいバイナリレンディションの生成 __(1a)__ および任意のパラメータ __(1b)__.
 
    + このチュートリアルでは、レンディションが「処理中」に作成されます。つまり、ワーカーはレンディションを構成しますが、ソースバイナリを他の Web サービス API に送信して、レンディションを生成することもできます。
 
 1. asset computeワーカーは、新しいレンディションのバイナリデータをに保存します。 `rendition.path`.
-1. に書き込まれるバイナリデータ `rendition.path` は、Asset computeSDK を介して AEM オーサーサービスに転送され、 __(4a)__ テキストレンディションと __(4b)__ アセットのメタデータノードに保持されます。
+1. に書き込まれるバイナリデータ `rendition.path` は、Asset computeSDK を介してAEMオーサーサービスに転送され、 __(4a)__ テキストレンディションと __(4b)__ アセットのメタデータノードに保持されます。
 
-上の図は、Asset compute開発者に関する懸念事項と、Asset computeワーカー呼び出しへの論理的な流れを示しています。 興味深い事に [内部でのAsset compute実行の詳細](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html) が使用できますが、依存できるのはパブリックAsset computeSDK API 契約のみです。
+上の図は、Asset compute開発者に関する懸念事項と、Asset computeワーカー呼び出しへの論理的な流れを示しています。 興味深い事に [内部でのAsset compute実行の詳細](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html) が使用できますが、依存できるのはパブリックAsset computeSDK API の契約のみです。
 
 ## 作業者の解剖学
 
@@ -149,9 +149,9 @@ Node.js ベースのAsset computeプロジェクトは、堅牢な [npm モジ�
 
 ## パラメーターを読み取り
 
-asset computeワーカーは、AEM as a Cloud Serviceオーサーサービスで定義された処理プロファイル経由で渡すことができるパラメーターを読み取ることができます。 パラメーターは、 `rendition.instructions` オブジェクト。
+Asset computeワーカーは、AEM as a Cloud Serviceオーサーサービスで定義された処理プロファイル経由で渡すことができるパラメーターを読み取ることができます。 パラメーターは、 `rendition.instructions` オブジェクト。
 
-これらは、 `rendition.instructions.<parameterName>` を設定します。
+これらは、 `rendition.instructions.<parameterName>` 」と入力します。
 
 ここでは、設定可能なレンディションの `SIZE`, `BRIGHTNESS` および `CONTRAST`処理プロファイル経由で指定されていない場合は、デフォルト値を指定します。 注意： `renditions.instructions` は、AEMas a Cloud Serviceの処理プロファイルから呼び出されたときに文字列として渡されるので、ワーカーコード内で正しいデータ型に変換されるようにします。
 
@@ -180,12 +180,12 @@ exports.main = worker(async (source, rendition, params) => {
 
 ## エラーのスロー{#errors}
 
-asset computeワーカーは、エラーを引き起こす状況が発生する場合があります。 AdobeAsset computeSDK が提供する [事前定義済みのエラーのスイート](https://github.com/adobe/asset-compute-commons#asset-compute-errors) これは、このような状況が発生した場合にスローされる可能性があります。 特定のエラータイプが適用されない場合、 `GenericError` 使用するか、特定のカスタム `ClientErrors` を定義できます。
+Asset computeワーカーは、エラーを引き起こす状況が発生する場合があります。 AdobeAsset computeSDK が提供する [事前定義済みのエラーのスイート](https://github.com/adobe/asset-compute-commons#asset-compute-errors) これは、このような状況が発生した場合にスローされる可能性があります。 特定のエラータイプが適用されない場合、 `GenericError` 使用するか、特定のカスタム `ClientErrors` を定義できます。
 
 レンディションの処理を開始する前に、このワーカーのコンテキストですべてのパラメーターが有効でサポートされていることを確認します。
 
 + 次のレンディション指示パラメーターを確認します。 `SIZE`, `CONTRAST`、および `BRIGHTNESS` は有効です。 そうでない場合は、カスタムエラーをスローします `RenditionInstructionsError`.
-   + カスタム `RenditionInstructionsError` を拡張するクラス `ClientError` は、このファイルの末尾で定義されます。 特定のカスタムエラーを使用すると、 [テストの作成](../test-debug/test.md) 労働者の
+   + カスタム `RenditionInstructionsError` を拡張するクラス `ClientError` は、このファイルの末尾で定義されます。 特定のカスタムエラーを使用すると、 [テストの作成](../test-debug/test.md) 労働者にとって
 
 ```javascript
 'use strict';
@@ -239,20 +239,20 @@ class RenditionInstructionsError extends ClientError {
 
 パラメーターが読み取られ、不要部分が削除され検証されると、コードが書き込まれてレンディションが生成されます。 レンディション生成の擬似コードを次に示します。
 
-1. 新しい `renditionImage` 四角い寸法のキャンバス `size` パラメーター。
+1. 新規作成 `renditionImage` で指定された四角い寸法のキャンバス `size` パラメーター。
 1. の作成 `image` オブジェクトをソースアセットのバイナリから取得する
-1. 以下を使用： __Jimp__ 画像を変換するライブラリ：
+1. 以下を使用します。 __Jimp__ 画像を変換するライブラリ：
    + 元の画像を中央の四角形に切り抜く
    + 「2 乗」画像の中心から円を切り取る
    + 次の条件で定義された寸法内に収まるように拡大/縮小 `SIZE` パラメーター値
-   + コントラストを `CONTRAST` パラメーター値
+   + 以下に基づいてコントラストを調整 `CONTRAST` パラメーター値
    + 明るさを `BRIGHTNESS` パラメーター値
-1. 変換後の場所 `image` の真ん中に `renditionImage` 透明な背景を持つ
-1. 作文を書く `renditionImage` から `rendition.path` したがって、アセットレンディションとしてAEMに保存し直すことができます。
+1. 変換後の場所 `image` ～の真ん中に `renditionImage` 透明な背景を持つ
+1. 作文を書きなさい。 `renditionImage` から `rendition.path` したがって、アセットレンディションとしてAEMに保存し直すことができます。
 
 このコードは、 [Jimp API](https://github.com/oliver-moran/jimp#jimp) を使用して、これらの画像変換を実行します。
 
-asset computeワーカーは、同期的に作業を完了し、 `rendition.path` 労働者の前に完全に書き戻されなければならない `renditionCallback` 完了。 これには、非同期関数呼び出しが `await` 演算子 JavaScript の非同期関数と、それらを同期的に実行する方法について詳しくない場合は、 [JavaScript の await 演算子](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
+Asset computeワーカーは、同期的に作業を完了し、 `rendition.path` 労働者の前に完全に書き戻されなければならない `renditionCallback` 完了します。 これには、非同期関数呼び出しが、 `await` 演算子を使用します。 JavaScript の非同期関数と、それらを同期的に実行する方法について詳しくない場合は、 [JavaScript の await 演算子](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
 
 完成した作業者 `index.js` は次のようになります。
 
@@ -320,10 +320,10 @@ class RenditionInstructionsError extends ClientError {
 
 これで、ワーカーコードが完了し、以前に [manifest.yml](./manifest.md)の場合は、ローカルAsset compute開発ツールを使用して実行し、結果を確認できます。
 
-1. asset computeプロジェクトのルートから
+1. Asset Compute プロジェクトのルートから
 1. 実行 `aio app run`
 1. asset compute開発ツールが新しいウィンドウで開くのを待つ
-1. 内 __ファイルを選択…__ 」ドロップダウンで、処理するサンプル画像を選択します。
+1. Adobe Analytics の __ファイルを選択…__ 」ドロップダウンで、処理するサンプル画像を選択します。
    + ソースアセットバイナリとして使用するサンプル画像ファイルを選択
    + まだ存在しない場合は、 __(+)__ を左側にアップロードし、 [サンプル画像](../assets/samples/sample-file.jpg) ファイルを作成し、[ 開発ツール ] ブラウザウィンドウを更新します。
 1. 更新 `"name": "rendition.png"` を使用して、透明な PNG を生成します。
@@ -340,8 +340,8 @@ class RenditionInstructionsError extends ClientError {
    }
    ```
 
-1. タップ __実行__ レンディションが生成されるのを待ちます。
-1. この __レンディション__ セクションでは、生成されたレンディションのプレビューが表示されます。 レンディションのプレビューをタップして、レンディション全体をダウンロードします。
+1. 「__実行__」をタップして、 レンディションが生成されるのを待ちます。
+1. この「__レンディション__」セクションでは、生成されたレンディションのプレビューが表示されます。レンディションのプレビューをタップして、レンディション全体をダウンロードします。
 
    ![デフォルトの PNG レンディション](./assets/worker/default-rendition.png)
 
@@ -352,7 +352,7 @@ class RenditionInstructionsError extends ClientError {
 >[!WARNING]
 >
 >ローカル開発時に、様々なデータ型を使用して値を渡すことができます。AEMからCloud Service処理プロファイルに文字列として渡す場合は、必要に応じて正しいデータ型が解析されるようにします。
-> 例えば、Jimp&#39;s `crop(width, height)` 関数には、そのパラメーターが必要です `int`&#39;s.If `parseInt(rendition.instructions.size)` は int に解析されず、 `jimp.crop(SIZE, SIZE)` パラメーターは「String」タイプと互換性がないので、失敗します。
+> 例えば、Jimp&#39;s `crop(width, height)` 関数には、そのパラメーターが必要です `int`&#39;s.次の場合 `parseInt(rendition.instructions.size)` は int に解析されず、 `jimp.crop(SIZE, SIZE)` パラメーターは「String」タイプと互換性がないので、失敗します。
 
 アドビのコードは次のパラメーターを受け入れます。
 
@@ -382,7 +382,7 @@ class RenditionInstructionsError extends ClientError {
    }
    ```
 
-1. タップ __実行__ 再度
+1. タップ __実行__ 再び
 1. レンディションのプレビューをタップして、生成されたレンディションをダウンロードして確認します。 サイズと、デフォルトのレンディションと比較したコントラストと明るさの変更に注意してください。
 
    ![パラメーター化された PNG レンディション](./assets/worker/parameterized-rendition.png)
@@ -391,10 +391,10 @@ class RenditionInstructionsError extends ClientError {
 
 ## Github の Worker index.js
 
-最終 `index.js` は、GitHub で以下の場所から入手できます。
+最終的な `index.js` は、GitHub で次の場所から入手できます。
 
 + [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
 ## トラブルシューティング
 
-+ [レンディションが部分的に描画されたか破損しています](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
++ [返されたレンディションが部分的に描画されたか破損している](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)

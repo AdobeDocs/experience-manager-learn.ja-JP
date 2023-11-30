@@ -6,11 +6,12 @@ feature: APIs
 topic: Development
 role: Developer
 level: Beginner
+doc-type: Article
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 100%
 
@@ -102,6 +103,7 @@ AEM では複数のクエリ言語をサポートしています。 主な言語
 >[!CAUTION]
 >
 >AEM QueryBuilder API は ResourceResolver オブジェクトをリークします。 このリークを軽減するには、次の[コード例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164)に従います。
+>
 
 ## [!DNL Sling] API
 
@@ -135,7 +137,7 @@ AEM では複数のクエリ言語をサポートしています。 主な言語
 
 * **[JCR 2.0 Javadoc](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR（Java™ Content Repository）2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) は、JCR 実装（AEM の場合、 [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/)）の仕様の一部です。 すべての JCR 実装は、これらの API に準拠し API を実装する必要があります。したがって、これは AEM のコンテンツを操作するための最も低レベルの API になります。
+[JCR（Java™ Content Repository）2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) は、JCR 実装（AEM の場合、[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/)）の仕様の一部です。すべての JCR 実装は、これらの API に準拠し API を実装する必要があります。したがって、これは AEM のコンテンツを操作するための最も低レベルの API になります。
 
 JCR 自体は階層型／ツリーベースの NoSQL データストアで、AEM ではこれをコンテンツリポジトリとして使用します。 JCR には、コンテンツの CRUD からコンテンツのクエリまで、サポートされている様々な API があります。 この堅牢な API にもかかわらず、AEM や [!DNL Sling] の高レベルの抽象概念より優先されることはまれです。
 
@@ -195,7 +197,7 @@ OSGi コンポーネントプロパティでの定義や読み取りなど、低
 
 ### AEM Asset API
 
-* [ `com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html) より [ `com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) を優先します。
+* [`com.day.cq.dam.api` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) より [`com.adobe.granite.asset.api` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html) を優先します。
 
    * `com.day.cq` Assets API には、AEM のアセット管理ユースケースに対するより相補的なツールが用意されているのに対して、
    * Granite Assets API では、低レベルのアセット管理ユースケース（バージョン、関係）をサポートしています。

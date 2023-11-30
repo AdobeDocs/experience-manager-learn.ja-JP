@@ -6,16 +6,17 @@ topic: Development, Administration
 feature: Operations, Dispatcher
 role: Developer, Architect
 level: Intermediate
-kt: 11466
+jira: KT-11466
 last-substantial-update: 2022-10-14T00:00:00Z
 index: y
-source-git-commit: 00ea3a8e6b69cd99cf293093d38b59df51f6a26d
-workflow-type: ht
+doc-type: Article
+exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 100%
 
 ---
-
 
 # URL リダイレクト
 
@@ -30,7 +31,7 @@ URL リダイレクトは、web サイト操作の一環として一般的な側
 
 AEM の URL リダイレクトソリューションは次のとおりです。
 
-|  | AEM プロジェクトコードとしての管理とデプロイ | マーケティング／コンテンツチームによる変更機能 | AEM as Cloud Service との互換性 | リダイレクトの実行場所 |
+|                                                   | AEM プロジェクトコードとしての管理とデプロイ | マーケティング／コンテンツチームによる変更機能 | AEM as Cloud Service との互換性 | リダイレクトの実行場所 |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
 | [Edge と独自の CDN](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge／CDN |
 | [Dispatcher 設定としての Apache `mod_rewrite` ルール](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
@@ -82,4 +83,3 @@ URL リダイレクトを管理するために [ACS AEM Commons](https://adobe-c
 1. マーケティングチームまたはスーパーユーザーが、AEM 開発チームおよび AEM デプロイメントを使用せずにリダイレクトルールを管理できるようにします。
 1. 変更またはリスク軽減を管理、検証、追跡、および元に戻すプロセス。
 1. **CDN サービスを介したエッジでの配信** ソリューションの&#x200B;_内容領域専門家_&#x200B;の利用可能性。
-

@@ -1,12 +1,8 @@
 ---
 title: AEM Sites での Launch クラウドサービス設定の作成
 description: AEM で Launch クラウドサービス設定を作成する方法について説明します。Launch クラウドサービス設定はその後、既存のサイトに適用でき、オーサー環境とパブリッシュ環境の両方でタグライブラリの読み込みを確認できます。
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5982
+jira: KT-5982
 thumbnail: 38566.jpg
 topic: Integrations
 feature: Integrations
@@ -14,9 +10,10 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 100%
 

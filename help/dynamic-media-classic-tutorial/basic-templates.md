@@ -2,16 +2,13 @@
 title: 基本テンプレートの概要
 description: Dynamic Media Classic の基本テンプレートについて説明します。これは、Image Server から呼び出される画像ベースのテンプレートで、画像とレンダリング済みテキストで構成されます。テンプレートは、公開後に URL を使用して動的に変更できます。Photoshop PSD を Dynamic Media Classic にアップロードして、テンプレートの基礎として使用する方法について説明します。画像レイヤーで構成されるシンプルなマーチャンダイジング基本テンプレートを作成します。テキストレイヤーを追加し、パラメーターを使用してそれらを可変にします。テンプレート URL を作成し、web ブラウザーを使用して画像を動的に操作します。
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 100%
 
@@ -356,11 +353,11 @@ Image Server にプッシュされた変更を確認するには、公開を実�
 
 プリセット名の両側にドル記号（$）が付いた画像プリセットとは異なり、パラメーターには、先頭に 1 つのドル記号が付きます。このドル記号を付けることが重要です。
 
-**正解**
+**正しい形式：**
 
 `$text=46-inch LCD HDTV`
 
-**不正解**
+**間違った形式：**
 
 `$text$=46-inch LCD HDTV`
 

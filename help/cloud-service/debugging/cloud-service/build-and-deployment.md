@@ -7,14 +7,14 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5434
+jira: KT-5434
 thumbnail: kt-5424.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2523'
 ht-degree: 100%
 
@@ -33,14 +33,14 @@ Adobe Cloud Manager は、AEM as a Cloud Service へのコード構築とデプ�
 ### 環境が無効な状態です
 
 + __エラーメッセージ：__環境が無効な状態です。
-   ![環境が無効な状態です](./assets/build-and-deployment/validation__invalid-state.png)
+  ![環境が無効な状態です](./assets/build-and-deployment/validation__invalid-state.png)
 + __原因：__&#x200B;パイプラインのターゲット環境は、新しいビルドを受け入れることができない移行状態にあります。
 + __解決策：__&#x200B;実行中（または更新が利用可能）になるまで待ちます。環境が削除されている場合は、環境を再作成するか、別の環境を選択してビルドします。
 
 ### パイプラインに関連付けられている環境が見つかりません
 
 + __エラーメッセージ：__環境が削除済みとマークされています。
-   ![環境が削除済みとマークされています](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
+  ![環境が削除済みとマークされています](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
 + __原因：__パイプラインで使用するように設定された環境が削除されました。
 同じ名前の新しい環境が再作成されても、Cloud Manager は、パイプラインを同じ名前の環境に自動的に再関連付けしません。
 + __解決策：__&#x200B;パイプライン設定を編集し、デプロイ先の環境を再選択します。
@@ -48,7 +48,7 @@ Adobe Cloud Manager は、AEM as a Cloud Service へのコード構築とデプ�
 ### パイプラインに関連付けられた Git ブランチが見つかりません
 
 + __エラーメッセージ：__無効なパイプライン：XXXXX。Reason=Branch=xxxx がリポジトリ内に見つかりません。
-   ![無効なパイプライン：XXXXX。Reason=Branch=xxxx がリポジトリに見つかりません](./assets/build-and-deployment/validation__branch-not-found.png)
+  ![無効なパイプライン：XXXXX。Reason=Branch=xxxx がリポジトリに見つかりません](./assets/build-and-deployment/validation__branch-not-found.png)
 + __原因：__&#x200B;パイプラインで使用するように設定された Git ブランチが削除されました。
 + __解決策：__&#x200B;見つからない Git ブランチを全く同じ名前で再作成するか、別の既存のブランチからビルドするようにパイプラインを再設定します。
 
@@ -135,16 +135,15 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 このエラーを防ぐには、AEM as a Cloud Service 環境のアップデートが使用可能な場合は常に、次のビルドまたはデプロイの一部としてアップデートを含め、アプリケーションコードベースでコアコンポーネントのバージョンを繰り上げた後に必ずアップデートを含めます。
 
 + __症状：__
-イメージのビルド手順が失敗し、特定のバージョン範囲で  
-`com.adobe.cq.wcm.core.components...` パッケージを `core` プロジェクトで読み込めなかったというエラーレポートが表示されます。
+イメージのビルド手順が失敗し、特定のバージョン範囲で `com.adobe.cq.wcm.core.components...` パッケージを `core` プロジェクトで読み込めなかったというエラーレポートが表示されます。
 
-   ```
-   [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
-   [ERROR] Analyser detected errors on feature 'com.adobe.granite:aem-ethos-app-image:slingosgifeature:aem-runtime-application-publish-dev:1.0.0-SNAPSHOT'. See log output for error messages.
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD FAILURE
-   [INFO] ------------------------------------------------------------------------
-   ```
+  ```
+  [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
+  [ERROR] Analyser detected errors on feature 'com.adobe.granite:aem-ethos-app-image:slingosgifeature:aem-runtime-application-publish-dev:1.0.0-SNAPSHOT'. See log output for error messages.
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD FAILURE
+  [INFO] ------------------------------------------------------------------------
+  ```
 
 + __原因：__&#x200B;アプリケーションの OSGi バンドル（`core` プロジェクトで定義）は、AEM as a Cloud Service にデプロイされたものとは異なるバージョンレベルで、コアコンポーネントのコア依存関係から Java クラスを読み込みます。
 + __解決策：__
@@ -158,7 +157,7 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 
 + [Adobe Admin Console](https://adminconsole.adobe.com)／「サポート」タブ／ケースを作成
 
-   _複数のアドビ組織のメンバーの場合は、ケースを作成する前に、アドビ組織スイッチャーで、失敗したパイプラインを持つアドビ組織が選択されていることを確認します。_
+  _複数のアドビ組織のメンバーの場合は、ケースを作成する前に、アドビ組織スイッチャーで、失敗したパイプラインを持つアドビ組織が選択されていることを確認します。_
 
 ## デプロイ
 
@@ -173,7 +172,7 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 ### Cloud Manager のパイプラインに古い AEM バージョンが含まれる
 
 + __原因__：Cloud Manager のパイプラインに、ターゲット環境にデプロイされる AEM よりも古いバージョンの CD が含まれます。 これは、新しいバージョンの AEM を実行している新しい環境をパイプラインが再利用し、指すように設定された場合に発生する可能性があります。 これは、環境の AEM のバージョンがパイプラインの AEM のバージョンよりも大きいかどうかを確認することで識別できます。
-   ![Cloud Manager のパイプラインに古い AEM バージョンが含まれる](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
+  ![Cloud Manager のパイプラインに古い AEM バージョンが含まれる](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
 + __解決策：__
    + ターゲット環境で「更新可能」が設定されている場合は、環境のアクションから「更新」を選択し、ビルドを再実行します。
    + 対象の環境で「更新可能」が設定されていない場合、最新バージョンの AEM が実行されています。 これを解決するには、パイプラインを削除し、再作成します。
@@ -210,7 +209,7 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 1. デプロイメントに含まれるコンテンツパッケージを少なくとも 1 つ特定し、`/var` に書き込みます。
 1. 次の場所で、プライマリ（太字の）配布キューがブロックされていることを確認します。
    + AEM オーサー／ツール／デプロイメント／配布
-      ![ブロックされた配布キュー](./assets/build-and-deployment/deploy-to__var--distribution.png)
+     ![ブロックされた配布キュー](./assets/build-and-deployment/deploy-to__var--distribution.png)
 1. 後続のデプロイメントに失敗した場合は、「ログをダウンロード」ボタンを使用して、Cloud Manager の「デプロイ」ログをダウンロードします。
 
    ![「デプロイ」ログをダウンロードする](./assets/build-and-deployment/deploy-to__var--download-logs.png)
@@ -242,4 +241,4 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 
 + [Adobe Admin Console](https://adminconsole.adobe.com)／「サポート」タブ／ケースを作成
 
-   _複数の Adobe 組織のメンバーである場合は、ケースを作成する前に、パイプラインが失敗している Adobe 組織が Adobe 組織スイッチャーで選択されていることを確認します。_
+  _複数の Adobe 組織のメンバーである場合は、ケースを作成する前に、パイプラインが失敗している Adobe 組織が Adobe 組織スイッチャーで選択されていることを確認します。_

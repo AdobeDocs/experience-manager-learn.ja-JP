@@ -6,18 +6,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11366
+jira: KT-11366
 thumbnail: KT-11366.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: ht
+exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 100%
 
 ---
-
 
 # Vue アプリケーションのフィルタリング
 

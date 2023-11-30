@@ -1,17 +1,16 @@
 ---
 title: AEM エクスペリエンスフラグメントと Adobe Target を使用したパーソナライゼーション
-seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
 description: Adobe Experience Manager エクスペリエンスフラグメントと Adobe Target を使用してパーソナライズされたエクスペリエンスを作成して配信する方法を説明するエンドツーエンドのチュートリアル。
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 100%
 

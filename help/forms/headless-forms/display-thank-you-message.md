@@ -3,12 +3,12 @@ title: フォーム送信時に「ありがとうございます」メッセー�
 description: onSubmitSuccess ハンドラーを使用して、設定済みの「ありがとうございます」メッセージを React アプリに表示します
 feature: Adaptive Forms
 version: 6.5
-kt: 13490
+jira: KT-13490
 topic: Development
 role: User
 level: Intermediate
 exl-id: 489970a6-1b05-4616-84e8-52b8c87edcda
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 100%

@@ -5,13 +5,14 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7634
+jira: KT-7634
 thumbnail: kt-7634.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 100%
 
@@ -176,7 +177,7 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
    + タイトル： __WKND アドベンチャー__
    + 種類／サイズ：__H2__
 
-      ![タイトルコンポーネントダイアログ](./assets/spa-fixed-component/title-dialog.png)
+     ![タイトルコンポーネントダイアログ](./assets/spa-fixed-component/title-dialog.png)
 
 1. 「__完了__」をタップして保存します。
 1. AEM SPA エディターで変更をプレビューします。

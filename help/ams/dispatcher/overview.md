@@ -7,13 +7,14 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
-workflow-type: ht
+doc-type: Catalog
+exl-id: 4f72d010-f488-490a-83fb-38ff1b1e8183
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Managed Services Dispatcher マニュアル
 

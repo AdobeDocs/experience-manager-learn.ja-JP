@@ -5,17 +5,18 @@ feature: Dynamic Media Classic, Image Sets, Mixed Media Sets, Spin Sets
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 45c86ff2-d991-46a7-a8d1-25c9fec142d9
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1433'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # 画像、スウォッチ、スピンおよび混在メディアセット {#media-sets}
 
-動的なサイズ変更やズームのために 1 つの画像だけでなく、Dynamic Media Classicのコレクションを設定することで、より豊富なオンラインエクスペリエンスを実現します。 この節では、Dynamic Media Classicで次のリッチメディアセットを作成する方法を学びます。
+動的なサイズ変更やズームのために 1 つの画像だけでなく、Dynamic Media Classicのコレクションを設定することで、より豊富なオンラインエクスペリエンスを実現します。 この節では、Dynamic Media Classicで次のリッチメディアセットを作成する方法について説明します。
 
 - 画像セット
 - スウォッチセット
@@ -32,7 +33,7 @@ ht-degree: 2%
 
 ### セットのタイプ
 
-Dynamic Media Classicで作成できる 4 種類のセットについて説明します。画像、スウォッチ、スピンおよび混在メディアセット
+Dynamic Media Classicで作成できる 4 種類のセット（画像、スウォッチ、スピン、混在メディアセット）について説明します。
 
 ## 画像セット
 
@@ -101,7 +102,7 @@ _混在メディアセットの例_
 
 - 方法を学ぶ [混在メディアセットの作成](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
 
-Web サイト上にズーム、セットまたはビデオ用の画像を表示するには、それをDynamic Media Classicの「ビューア」で呼び出します。 Dynamic Media Classicには、スウォッチセット、スピンセット、ビデオなどのリッチメディアアセットのビューアが含まれています。
+Web サイト上にズーム、セットまたはビデオ用の画像を表示するには、その画像をDynamic Media Classicの「ビューア」で呼び出します。 Dynamic Media Classicには、スウォッチセット、スピンセット、ビデオなどのリッチメディアアセットのビューアが含まれています。
 
 詳細情報： [AEM AssetsとDynamic Media Classicのビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=ja).
 
@@ -118,7 +119,7 @@ Web サイト上にズーム、セットまたはビデオ用の画像を表示�
 
 以前は、バッチセットプリセットの作成が非常に簡単な、単純な命名規則を提案していました。 ただし、プリセットは非常に柔軟なので、複雑な命名方法を扱うことができます。 つまり、1 つのセットに属する画像は、共通の名前（多くの場合、SKU 番号または製品 ID）で結び付ける必要があります。 Dynamic Media Classicでは、すべての画像をプリセットに使用するためのデフォルトの命名規則を指定するか、異なる命名規則を持つ複数のプリセットを作成できます。
 
-バッチセットプリセットはアップロード時にのみ適用されます。画像がアップロードされた後は実行できません。 したがって、すべての画像の読み込みを開始する前に、命名規則を計画し、作成したプリセットを取得することが重要です。
+バッチセットプリセットはアップロード時にのみ適用され、画像のアップロード後は実行できません。 したがって、すべての画像の読み込みを開始する前に、命名規則を計画し、作成したプリセットを取得することが重要です。
 
 プリセットを作成した後、会社管理者は、プリセットをアクティブにするか非アクティブにするかを選択できます。 「アクティブ」は、これらがの下のアップロードページに表示されることを意味します。 **ジョブオプション**&#x200B;非アクティブなプリセットは非表示のままです。
 
@@ -128,7 +129,7 @@ Web サイト上にズーム、セットまたはビデオ用の画像を表示�
 
 次に、作成後のアップロード時のバッチセットプリセットの使用方法を示します。
 
-1. クリック **アップロード** を選択し、 **デスクトップから** または **FTP 経由**.
+1. クリック **アップロード** を選択し、次のいずれかを選択します。 **デスクトップから** または **FTP 経由**.
 2. クリック **ジョブオプション**.
 3. を開きます。 **バッチセットプリセット** 「 」オプションを選択し、プリセットをオンまたはオフにして、アップロードで使用します。
 4. アップロードが完了したら、フォルダー内で完了したセットを確認します。

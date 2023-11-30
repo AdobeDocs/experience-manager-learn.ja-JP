@@ -4,14 +4,14 @@ description: サーブレットを作成して、フォームデータを保存�
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6539
+jira: KT-6539
 thumbnail: 6539.pg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
-source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 100%
 

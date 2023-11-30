@@ -8,15 +8,15 @@ role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-01-05T00:00:00Z
-kt: 11664
+jira: KT-11664
 thumbnail: kt-11664.jpeg
-source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
-workflow-type: ht
+exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
 
 ---
-
 
 # レスポンシブブレークポイント
 

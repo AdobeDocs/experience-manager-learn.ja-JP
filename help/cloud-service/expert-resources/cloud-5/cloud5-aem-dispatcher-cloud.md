@@ -4,13 +4,13 @@ description: Darin と James が、いくつかのベストプラクティスと
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 10054
+jira: KT-10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 100%
 

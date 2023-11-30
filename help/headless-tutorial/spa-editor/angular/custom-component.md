@@ -2,19 +2,16 @@
 title: カスタムコンポーネントの作成 | AEM SPA エディターと Angular の基本を学ぶ
 description: AEM SPA エディターで使用するカスタムコンポーネントを作成する方法を説明します。オーサーダイアログと Sling モデルを開発して JSON モデルを拡張し、カスタムコンポーネントを設定する方法について説明します。
 feature: SPA Editor
-doc-type: tutorial
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
-kt: 5831
+jira: KT-5831
 thumbnail: 5831-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 100%
 
@@ -40,7 +37,7 @@ AEM SPA エディターで使用するカスタムコンポーネントを作成
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールや手順を確認してください。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認します。
 
 ### コードの取得
 
@@ -58,7 +55,7 @@ AEM SPA エディターで使用するカスタムコンポーネントを作成
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   [AEM 6.x](overview.md#compatibility) を使用している場合は、`classic` プロファイルを追加します。
+   [AEM 6.x](overview.md#compatibility) を使用する場合は、以下の `classic` プロファイルを追加します。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -156,7 +153,7 @@ AEM コンポーネントは、ノードおよびプロパティとして定義�
 
    >[!NOTE]
    >
-   > [コア コンポーネントの定義を確認することで、ダイアログのより多くの例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を確認できます。また、[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) の `/libs/granite/ui/components/coral/foundation/form` の下にある `select`、`textarea`、`pathfield` などの追加のフォームフィールドも確認できます。
+   > [コア コンポーネントの定義を確認することで、ダイアログのより多くの例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)を確認できます。[CRXDE-Lite ](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) の `/libs/granite/ui/components/coral/foundation/form` の下にある`select`、`textarea`、`pathfield` などの追加のフォームフィールドを表示することもできます。
 
    従来の AEM コンポーネントでは、通常 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) スクリプトが必要です。SPA がコンポーネントをレンダリングするので、HTL スクリプトは必要ありません。
 
@@ -236,7 +233,8 @@ SPA エディターのコンテキストでは、Sling モデルは [Sling Model
    メッセージの値を大文字で返すための「ビジネスロジック」がいくつか追加されています。 これにより、オーサーダイアログに保存されている生の値と、Sling モデルで公開される値の違いを確認できます。
 
    >[!NOTE]
-   >完成した CustomComponentImpl.java は、[こちら](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で確認できます。
+   >
+   完成した CustomComponentImpl.java は、[こちら](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で確認できます。
 
 ## Angular コンポーネントの更新
 
@@ -292,9 +290,9 @@ SPA エディターのコンテキストでは、Sling モデルは [Sling Model
 2. [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html) にある SPA ページテンプレートに移動します。
 3. レイアウトコンテナのポリシーを更新して、新しい `Custom Component` を許可されたコンポーネントとして追加します。
 
-   ![レイアウトコンテナポリシーの更新](assets/custom-component/custom-component-allowed.png)
+   ![レイアウトコンテナポリシーを更新](assets/custom-component/custom-component-allowed.png)
 
-   ポリシーへの変更を保存し、`Custom Component` を許可されたコンポーネントとして確認します。
+   ポリシーへの変更を保存し、許可されたコンポーネントとして `Custom Component` を確認します。
 
    ![許可されたコンポーネントとしてのカスタムコンポーネント](assets/custom-component/custom-component-allowed-layout-container.png)
 

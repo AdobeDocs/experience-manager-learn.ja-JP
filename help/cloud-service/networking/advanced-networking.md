@@ -6,12 +6,12 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 100%
 
@@ -21,14 +21,14 @@ ht-degree: 100%
 
 AEM as a Cloud Service は、AEM as a Cloud Service プログラムとの接続を正確に管理できる高度なネットワークを提供します。
 
-|  | [実稼動プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=ja) | [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=ja) |
+|                                                   | [実稼動プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=ja) | [サンドボックスプログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=ja) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | 高度なネットワークをサポート | ✔ | ✘ |
 
 
 AEM の高度なネットワークは、外部サービスとの接続を管理する 3 つのオプションで構成されています。 Cloud Manager プログラムとその AEM as a Cloud Service 環境では、一度に 1 つのタイプの高度なネットワーク設定のみを使用できるので、最も適切なタイプが選択されていることを確認します。
 
-|  | 標準ポートの HTTP／HTTPS | 非標準ポートでの HTTP/HTTPS | HTTP／HTTPS 以外の接続 | 出力専用 IP | 「No-proxy hosts」リスト | VPN 保護サービスに接続する | IP で AEM 公開トラフィックを制限する |
+|                                   | 標準ポートの HTTP／HTTPS | 非標準ポートでの HTTP/HTTPS | HTTP／HTTPS 以外の接続 | 出力専用 IP | 「No-proxy hosts」リスト | VPN 保護サービスに接続する | IP で AEM 公開トラフィックを制限する |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __高度なネットワークなし__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__柔軟なポートエグレス__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |

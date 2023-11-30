@@ -6,8 +6,9 @@ feature: Search
 topic: Content Management
 role: Developer
 level: Beginner
+doc-type: Technical Video
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 100%
@@ -26,28 +27,28 @@ ht-degree: 100%
 
 1. Oak Search Machine Translation OSGi バンドルをダウンロードしてインストールする
    * AEM の Oak バージョンに対応する [Oak Search Machine Translation OSGi バンドル](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22)をダウンロードします。
-   * ダウンロードした Oak Search Machine Translation OSGi バンドルを [ `/system/console/bundles`](http://localhost:4502/system/console/bundles) 経由で AEM にインストールします。
+   * ダウンロードした Oak Search Machine Translation OSGi バンドルを [`/system/console/bundles` ](http://localhost:4502/system/console/bundles) 経由で AEM にインストールします。
 
 2. Apache Joshua 言語パックをダウンロードして更新します
    * 目的の [Apache Joshua 言語パック](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)をダウンロードして解凍します。
    * `joshua.config` ファイルを編集し、以下で始まる 2 行をコメントアウトします。
 
-      ```
-      feature-function = LanguageModel ...
-      ```
+     ```
+     feature-function = LanguageModel ...
+     ```
 
    * 言語パックのモデルフォルダーのサイズを決定して記録します。これは、AEM で必要とされる余分なヒープ領域の量に影響します。
    * 解凍した Apache Joshua 言語パックフォルダー（`joshua.config` の編集済み）を以下の場所に移動します。
 
-      ```
-      .../crx-quickstart/opt/<source_language-target_language>
-      ```
+     ```
+     .../crx-quickstart/opt/<source_language-target_language>
+     ```
 
-      次に例を示します。
+     次に例を示します。
 
-      ```
-       .../crx-quickstart/opt/es-en
-      ```
+     ```
+      .../crx-quickstart/opt/es-en
+     ```
 
 3. ヒープメモリ割り当てを更新して、AEM を再起動します
    * AEM を停止します。
@@ -56,11 +57,13 @@ ht-degree: 100%
       * AEM の pre-language-lack のヒープサイズ + モデルディレクトリのサイズを最も近い 2 GB に切り上げた値
       * 例：プレ言語パックに関して、AEM のインストール実行に 8 GB のヒープが必要で、言語パックのモデルフォルダーが非圧縮で 3.8 GB の場合、新しいヒープサイズは次のようになります。
 
-         オリジナル `8GB` +（`3.75GB` を最も近い `2GB` で切り上げた値 `4GB`）の合計値である `12GB`
+        オリジナル `8GB` +（`3.75GB` を最も近い `2GB` で切り上げた値 `4GB`）の合計値である `12GB`
+
    * マシンに、利用可能なメモリ空き容量がこの値の量あることを確認します。
    * AEM 起動スクリプトを更新して、新しいヒープサイズに合わせて調整します
 
       * 例：`java -Xmx12g -jar cq-author-p4502.jar`
+
    * ヒープサイズを増やして AEM を再起動します。
 
    >[!NOTE]
@@ -93,8 +96,8 @@ ht-degree: 100%
    * 言語パックを更新した場合、AEM で更新をインストールするには、上記の手順 2 ～ 4 に従い、必要に応じてヒープサイズを調整する必要があります。
 
       * 解凍した言語パックを crx-quickstart/opt フォルダーに移動する場合は、新しいフォルダーにコピーする前に既存の言語パックフォルダーを移動します。
-   * AEM を再起動する必要がない場合は、更新された言語パックに関連する Apache Jackrabbit Oak Machine Translation Fulltext Query Terms Provider OSGi 設定を再保存して、AEM が更新されたファイルを処理できるようにします。
 
+   * AEM を再起動する必要がない場合は、更新された言語パックに関連する Apache Jackrabbit Oak Machine Translation Fulltext Query Terms Provider OSGi 設定を再保存して、AEM が更新されたファイルを処理できるようにします。
 
 ## damAssetLucene インデックスの更新 {#updating-damassetlucene-index}
 

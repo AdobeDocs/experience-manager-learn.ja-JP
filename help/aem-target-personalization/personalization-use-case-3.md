@@ -1,17 +1,16 @@
 ---
 title: Adobe Target Visual Experience Composer を使用したパーソナライゼーション
-seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
 description: パーソナライズされたエクスペリエンスを Adobe Target Visual Experience Composer（VEC）で作成して配信する方法を示す、エンドツーエンドのチュートリアルです。
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 100%
 

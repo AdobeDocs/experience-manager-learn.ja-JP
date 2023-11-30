@@ -2,14 +2,14 @@
 title: フォームフラグメントの作成
 description: AEM Forms は、パネルやフィールドのグループなどのフォームセグメントを一度だけ作成し、適応するフォーム間で再利用できる便利なメカニズムを提供します。
 feature: Adaptive Forms
-kt: 5862
+jira: KT-5862
 thumbnail: 37325.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 86a67f43-882f-4e97-b528-17492689fcfc
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 100%
 

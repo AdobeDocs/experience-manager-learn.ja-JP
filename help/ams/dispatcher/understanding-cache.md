@@ -6,13 +6,14 @@ version: 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
-workflow-type: ht
+doc-type: Article
+exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 100%
 
 ---
-
 
 # キャッシュについて
 

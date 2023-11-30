@@ -7,14 +7,14 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6270
+jira: KT-6270
 thumbnail: KT-6270.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ Asset Compute ワーカーの開発を開始する前に、プロジェクトが
 + キーペアが Adobe I/O によって生成された場合は、`config.zip` の一部として自動ダウンロードされます。
 + 公開鍵を Adobe I/O に指定した場合は、一致する秘密鍵も所有している必要があります。
 + これらのキーペアがない場合は、新規キーペアを生成するか、次の場所に新規公開鍵をアップロードできます。
-   [https://console.adobe.com](https://console.adobe.io)／Asset Compute App Builder プロジェクト／Workspaces @ Development ／サービスアカウント（JWT）。
+  [https://console.adobe.com](https://console.adobe.io)／Asset Compute App Builder プロジェクト／Workspaces @ Development ／サービスアカウント（JWT）。
 
 `private.key` ファイルはシークレットを含んでいるので、Git にチェックインせず、プロジェクト外部の安全な場所に保存する必要があります。
 
@@ -106,12 +106,12 @@ Asset Compute プロジェクトの Asset Compute 開発ツールを開始する
    $ aio app run
    ```
 
-1. ローカルの Asset Compute 開発ツールは、デフォルトの web ブラウザー（__http://localhost:9000__）で開きます。
+1. ローカルの Asset Compute 開発ツールが、デフォルトの web ブラウザー __http://localhost:9000__ で開きます。
 
-   ![aio アプリ実行](assets/environment-variables/aio-app-run.png)
+   ![aio app run](assets/environment-variables/aio-app-run.png)
 
 1. 開発ツール初期化時のエラーメッセージについては、コマンドライン出力と web ブラウザーで確認します。
-1. Asset Compute 開発ツールを停止するには、`aio app run` を実行したウィンドウで `Ctrl-C` をクリックしてプロセスを終了します。
+1. Asset Compute 開発ツールを停止するには、`aio app run` を実行したウィンドウで `Ctrl-C` をタップしてプロセスを終了します。
 
 ## トラブルシューティング
 

@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7633
+jira: KT-7633
 thumbnail: kt-7633.jpeg
 last-substantial-update: 2022-11-01T00:00:00Z
+doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 100%
 

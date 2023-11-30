@@ -2,10 +2,7 @@
 title: Adobe Cloud Manager について
 description: Adobe Cloud Manager は、AEM 環境の管理、内観、セルフサービスを容易に行える、シンプルで堅牢なソリューションを提供します。
 sub-product: Experience Manager Cloud Manager, Experience Manager
-topics: best-practices, cicd, development, operations, governance
-doc-type: feature video
-activity: understand
-audience: developer, implementer, administrator, architect
+doc-type: Feature Video
 topic: Architecture
 feature: Cloud Manager
 role: Architect
@@ -13,8 +10,8 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
 

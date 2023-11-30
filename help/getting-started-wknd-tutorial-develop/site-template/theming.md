@@ -2,19 +2,19 @@
 title: ワークフローのテーマ設定 | AEM クイックサイト作成
 description: Adobe Experience Manager サイトのテーマソースを更新して、ブランド固有のスタイルを適用する方法を説明します。 プロキシサーバーを使用して、CSS と JavaScript のアップデートのライブプレビューを表示する方法を説明します。 このチュートリアルでは、Adobe Cloud Manager のフロントエンドパイプラインを使用して AEM サイトにテーマのアップデートをデプロイする方法についても説明します。
 version: Cloud Service
-type: Tutorial
 feature: Core Components
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '479'
+ht-degree: 100%
 
 ---
 

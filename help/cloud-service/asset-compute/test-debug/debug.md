@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6285
+jira: KT-6285
 thumbnail: 40383.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 100%
@@ -31,11 +31,11 @@ Asset Compute ワーカーのデバッグで最も基本的な形式は、ワー
 次のログステートメントは、Asset Compute ワーカーの実行方法に応じてレビューで様々に使用できます。
 
 + `aio app run` から、ログは標準出力と[開発ツール](../develop/development-tool.md)のアクティベーションログにプリント
-   ![aio app run console.log(...)](./assets/debug/console-log__aio-app-run.png)
+  ![aio app run console.log(...)](./assets/debug/console-log__aio-app-run.png)
 + `aio app test`から、ログは `/build/test-results/test-worker/test.log` にプリント
-   ![aio app test console.log(...)](./assets/debug/console-log__aio-app-test.png)
+  ![aio app test console.log(...)](./assets/debug/console-log__aio-app-test.png)
 + `wskdebug` を使用して、ログはステートメントを VS Code デバッグコンソール（表示／デバッグコンソール）、標準出力にプリント
-   ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
+  ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
 + `aio app logs` を使用して、ログはステートメントをアクティベーションログ出力にプリント
 
 ## アタッチされたデバッガーを介したリモートデバッグ
@@ -100,7 +100,7 @@ Adobe I/O Runtime で直接呼び出すことで、[AEM as a Cloud Service は�
 1. デバッグが必要なワークスペースに基づいて、[ワークスペース固有の環境変数](../deploy/runtime.md)が `AIO_runtime_namespace` および `AIO_runtime_auth` を介して設定されいることを確認します。
 1. コマンドラインから `aio app logs` を実行します。
    + ワークスペースで大量のトラフィックが発生する場合は、`--limit` フラグからアクティベーションログの数を増やします。
-      `$ aio app logs --limit=25`
+     `$ aio app logs --limit=25`
 1. 最新のアクティベーションログ（最大は指定された `--limit`）は、レビュー用のコマンド出力として返されます。
 
    ![aio app logs](./assets/debug/aio-app-logs.png)

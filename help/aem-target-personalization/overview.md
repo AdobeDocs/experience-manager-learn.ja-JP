@@ -7,9 +7,10 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 100%
 

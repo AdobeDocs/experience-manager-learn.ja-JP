@@ -6,9 +6,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: ht
+jira: KT-14196
+exl-id: c3032669-154c-4565-af6e-32d94e975e37
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 100%
 
@@ -81,4 +82,3 @@ private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, Strin
 ## 次の手順
 
 [PDF ファイルからデータを読み込み](./populate-adaptive-form.md)
-

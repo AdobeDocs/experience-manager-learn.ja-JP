@@ -3,15 +3,15 @@ title: 単一の署名者を持つアダプティブフォーム
 description: 単一の署名者を持つアダプティブフォームです。このビデオでは、単一の署名者を持つアダプティブフォームの設定に必要な、様々な手順について説明します。
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 39475.jpg
-kt: 6103
+jira: KT-6103
 topic: Development
 role: User
 level: Beginner
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b90c5c00-ec62-4809-9ab6-047eba2f2bb0
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 100%
 

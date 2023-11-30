@@ -2,17 +2,17 @@
 title: フルスタックプロジェクトの ui.frontend モジュールを確認する
 description: Maven ベースのフルスタック AEM Sites プロジェクトのフロントエンド開発、デプロイメント、配信のライフサイクルを確認します。
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 100%
@@ -70,41 +70,41 @@ Cloud Manager で&#x200B;[__フルスタック__&#x200B;パイプラインを実
 
    1. `webpack.common` - これには、WKND リソースのバンドルと最適化を指示する&#x200B;__共通__&#x200B;設定が含まれます。__output__ プロパティは、作成する統合ファイル（JavaScript バンドルとも呼ばれますが、AEM OSGi バンドルと混同しないように）を出力する場所を指定します。デフォルトの名前は `clientlib-site/js/[name].bundle.js` に設定されています。
 
-   ```javascript
-       ...
-       output: {
-               filename: 'clientlib-site/js/[name].bundle.js',
-               path: path.resolve(__dirname, 'dist')
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      output: {
+              filename: 'clientlib-site/js/[name].bundle.js',
+              path: path.resolve(__dirname, 'dist')
+          }
+      ...    
+  ```
 
    1. `webpack.dev.js` には、webpack-dev-serve の&#x200B;__開発__&#x200B;設定が含まれており、使用する HTML テンプレートを指しています。また、`localhost:4502` で実行されている AEM インスタンスへのプロキシ設定も含まれます。
 
-   ```javascript
-       ...
-       devServer: {
-           proxy: [{
-               context: ['/content', '/etc.clientlibs', '/libs'],
-               target: 'http://localhost:4502',
-           }],
-       ...    
-   ```
+  ```javascript
+      ...
+      devServer: {
+          proxy: [{
+              context: ['/content', '/etc.clientlibs', '/libs'],
+              target: 'http://localhost:4502',
+          }],
+      ...    
+  ```
 
    1. `webpack.prod.js` には&#x200B;__実稼働__&#x200B;設定が含まれており、プラグインを使用して開発ファイルを最適化されたバンドルに変換します。
 
-   ```javascript
-       ...
-       module.exports = merge(common, {
-           mode: 'production',
-           optimization: {
-               minimize: true,
-               minimizer: [
-                   new TerserPlugin(),
-                   new CssMinimizerPlugin({ ...})
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      module.exports = merge(common, {
+          mode: 'production',
+          optimization: {
+              minimize: true,
+              minimizer: [
+                  new TerserPlugin(),
+                  new CssMinimizerPlugin({ ...})
+          }
+      ...    
+  ```
 
 
 * バンドルされたリソースは、[aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) プラグインを使用して、`clientlib.config.js` ファイルで管理されている設定を使用して `ui.apps` モジュールに移動されます。

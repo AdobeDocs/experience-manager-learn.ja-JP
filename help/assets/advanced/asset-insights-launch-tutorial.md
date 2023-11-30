@@ -9,9 +9,10 @@ level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 100%
 
@@ -69,7 +70,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
+Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
 
 AEM アセットインサイトの設定の場合は、以下の資格情報が必要です。
 
@@ -87,7 +88,7 @@ Adobe Analytics 拡張機能の追加、ページ読み込みルールの作成�
 
 >[!NOTE]
 >
->必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
+必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
 
 ### ルール 1：ページトラッカー（pagetracker.js） {#rule-page-tracker-pagetracker-js}
 

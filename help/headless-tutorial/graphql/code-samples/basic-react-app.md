@@ -7,18 +7,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11134
+jira: KT-11134
 thumbnail: KT-11134.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: ht
+exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
 
 ---
-
 
 # 基本の React アプリ
 

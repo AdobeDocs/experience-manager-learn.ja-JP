@@ -6,15 +6,15 @@ audience: administrator
 doc-type: feature video
 activity: use
 version: Cloud Service
-kt: 6871
+jira: KT-6871
 thumbnail: 26318.jpg
 topic: Architecture
 feature: Cloud Manager, Environments
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: f4311522-b8fb-4375-9ecc-73e0207a63b2
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 100%
 

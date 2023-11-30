@@ -6,9 +6,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: ht
+jira: KT-14196
+exl-id: b286c3e9-70df-46e8-b0bc-21599ab1ec06
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 
@@ -48,8 +49,3 @@ PDF から書き出されたデータ
 ## 次の手順
 
 [OSGi サービスの作成](./create-osgi-service.md)
-
-
-
-
-

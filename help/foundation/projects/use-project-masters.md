@@ -6,10 +6,11 @@ topic: Content Management, Collaboration
 feature: Projects
 level: Intermediate
 role: User
-kt: 256
+jira: KT-256
 thumbnail: 17740.jpg
+doc-type: Feature Video
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 100%

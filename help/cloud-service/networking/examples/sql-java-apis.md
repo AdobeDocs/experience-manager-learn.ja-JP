@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9356
+jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 100%
 
@@ -26,9 +26,9 @@ SQL データベース（およびその他の非 HTTP／HTTPS サービス）�
 
 次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-このチュートリアルを行う前に、[適切な](../advanced-networking.md#advanced-networking)高度なネットワーク設定がされていることを確認します。
+このチュートリアルを開始する前に、高度なネットワーク機能の設定が[適切](../advanced-networking.md#advanced-networking)にセットアップされていることを確認してください。
 
-| 高度なネットワーク機能なし | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
+| 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 

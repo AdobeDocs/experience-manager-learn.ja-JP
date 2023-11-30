@@ -7,11 +7,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-kt: 7131
+jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2357'
 ht-degree: 100%
 

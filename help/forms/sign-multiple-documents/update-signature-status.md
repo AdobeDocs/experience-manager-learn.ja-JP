@@ -3,14 +3,14 @@ title: データベース内のフォームの署名ステータスの更新
 description: AEM ワークフローを使用した、データベース内の署名済みフォームの署名ステータスの更新
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 6888
+jira: KT-6888
 thumbnail: 6888.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 100%
 

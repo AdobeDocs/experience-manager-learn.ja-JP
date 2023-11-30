@@ -7,14 +7,14 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5802
+jira: KT-5802
 thumbnail: KT-5802.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 + __エラー__：レンディションのレンダリングが不完全（画像の場合）または破損していて開くことができない。
 
-   ![レンディションが部分的に描画された状態で返されます](./assets/troubleshooting/develop__await.png)
+  ![レンディションが部分的に描画された状態で返されます](./assets/troubleshooting/develop__await.png)
 
 + __原因__：レンディションがに完全に `rendition.path` に書き込まれることができる前に、ワーカーの `renditionCallback` 関数が関数が終了しています。
 + __解決策__：カスタムワーカーコードを確認し、`await` を使用してすべての非同期の呼び出しが確実に同期されるようにします。
@@ -84,7 +84,7 @@ Asset Compute 開発ツールが古いデータを取り込む状態に入る場
 + __原因：__&#x200B;この機能は実装されていません
 + __解決策：__`.env` で定義された資格情報を使用して、クラウドストレージプロバイダーにログインします。開発ツールで使用されている（および `.env` で指定されている）コンテナを特定し、__ソース__&#x200B;フォルダーに移動して、ソース画像をすべて削除します。削除されたソースファイルが引き続きドロップダウンに表示される場合は、開発ツールの「アプリケーションの状態」でローカルにキャッシュされている可能性があるので、「[ソースファイルのドロップダウンが正しくありません](#source-files-dropdown-incorrect)」にまとめられている手順を実行することが必要な場合があります。
 
-   ![Microsoft Azure Blob Storage](./assets/troubleshooting/dev-tool__remove-source-files.png)
+  ![Microsoft Azure Blob Storage](./assets/troubleshooting/dev-tool__remove-source-files.png)
 
 ## テスト{#test}
 
@@ -94,7 +94,7 @@ Asset Compute 開発ツールが古いデータを取り込む状態に入る場
 + __原因：__ JavaScript 構文エラーなどの予期しないエラーにより、ワーカーはレンディションの生成に失敗しました。
 + __解決策：__`/build/test-results/test-worker/test.log` でテストの実行の `test.log` を確認します。このファイル内で、失敗したテストケースに対応するセクションを探し、エラーを確認します。
 
-   ![トラブルシューティング - レンディションが生成されていません](./assets/troubleshooting/test__no-rendition-generated.png)
+  ![トラブルシューティング - レンディションが生成されていません](./assets/troubleshooting/test__no-rendition-generated.png)
 
 ### テストで、間違ったレンディションが生成され、テストが失敗する{#tests-generates-incorrect-rendition}
 
@@ -139,11 +139,11 @@ Asset Compute 開発ツールが古いデータを取り込む状態に入る場
 + __原因__：`@adobe/aio-cli-plugin-asset-compute` 1.3.x のバグによって、`Ctrl-C` が終了コマンドとして認識されていません。
 + __解決策__：`@adobe/aio-cli-plugin-asset-compute` をバージョン 1.4.1 以降に更新します
 
-   ```
-   $ aio update
-   ```
+  ```
+  $ aio update
+  ```
 
-   ![トラブルシューティング - aio の更新](./assets/troubleshooting/debug__terminate.png)
+  ![トラブルシューティング - aio の更新](./assets/troubleshooting/debug__terminate.png)
 
 ## デプロイ{#deploy}
 

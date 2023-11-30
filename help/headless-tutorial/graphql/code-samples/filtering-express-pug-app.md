@@ -6,19 +6,19 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11812
+jira: KT-11812
 thumbnail: KT-11812.jpg
 index: false
 hide: true
 hidefromtoc: true
 recommendations: noCatalog, noDisplay
-source-git-commit: ac2b3a766caea1013165aedd3478bf859212cc89
-workflow-type: ht
+exl-id: b64f33ab-cd18-4cbc-a57e-baf505f1442a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 100%
 
 ---
-
 
 # Express アプリのフィルタリング
 

@@ -6,15 +6,15 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10797
+jira: KT-10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 2%
+ht-degree: 16%
 
 ---
-
 
 # AEMヘッドレス Web コンポーネントのデプロイメント
 
@@ -25,11 +25,11 @@ AEMヘッドレス [Web コンポーネント](https://developer.mozilla.org/en-
 
 Web コンポーネント/JS デプロイメントを実行するには、次のデプロイメント設定をインプレースにする必要があります。
 
-| Web コンポーネント/JS アプリが | コンテンツ作成者 | AEM パブリッシュ | AEMプレビュー |
+| Web コンポーネント/JS アプリが | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| [クロスオリジンリソース共有 (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEMホスト](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [クロスオリジンリソース共有（CORS）](./configurations/cors.md) | ✔ | ✔ | ✔ |
+| [AEM ホスト](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## Web コンポーネントの例
 
@@ -49,7 +49,7 @@ Adobeは、Web コンポーネントの例を提供しています。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web コンポーネント">Web コンポーネント</a></p>
-                   <p class="is-size-6">純粋な JavaScript で記述された、AEMヘッドレス GraphQL API のコンテンツを使用する Web コンポーネントの例です。</p>
+                   <p class="is-size-6">純粋な JavaScript で記述された、AEMヘッドレスGraphQL API のコンテンツを使用する Web コンポーネントの例です。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
                    </a>

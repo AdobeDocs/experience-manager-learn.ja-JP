@@ -3,15 +3,15 @@ title: フォーム添付ファイルのアセンブリ
 description: 指定された順序でフォームの添付ファイルを組み合わせます
 feature: Assembler
 version: 6.4,6.5
-kt: 6406
+jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 100%
 
@@ -88,7 +88,7 @@ return mapOfDocuments;
 ### Assembler サービスを使用したドキュメントのアセンブリ
 
 DDX とドキュメントマップが作成されたら、次の手順では Assembler サービスを使用してドキュメントを作成します。
-次のコードは、&grave;DF を組み合わせ、組み合わせられた PDF を返します。
+次のコードは、DF を組み合わせ、組み合わせられた PDF を返します。
 
 ```java
 private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object> mapOfDocuments, com.adobe.aemfd.docmanager.Document ddxDocument)
@@ -141,7 +141,7 @@ session.save();
 * ブラウザーで[添付ファイルのアセンブリフォーム](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)にアクセスします
 * ID ドキュメントに添付ファイルを追加し、いくつかの PDF ドキュメントを銀行取引明細書セクションに追加します
 * フォームを送信してワークフローをトリガーします
-* 組み合わせた PDF の[&#128279;](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) crx にあるワークフローのペイロードフォルダーを確認します
+* 組み合わせた PDF の[ crx にあるワークフローのペイロードフォルダー](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)を確認します
 
 >[!NOTE]
 > カスタムバンドルのロガーを有効にしている場合、DDX 、および組み合わせたファイルは AEM インストールのフォルダーに書き込まれます。

@@ -3,15 +3,15 @@ title: GraphQL API の探索 - AEM ヘッドレス - GraphQL の概要
 description: Adobe Experience Manager（AEM）および GraphQL の概要組み込みの GraphQL IDE を使用してAEM の GraphQL API について見ていきます。 AEM がコンテンツフラグメントモデルに基づいて GraphQL スキーマを自動生成する方法について説明します。GraphQL 構文を使用して、基本的なクエリを作成してみます。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6714
+jira: KT-6714
 thumbnail: KT-6714.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 100%
 

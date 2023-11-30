@@ -6,18 +6,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11133
+jira: KT-11133
 thumbnail: KT-11133.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: ht
+exl-id: c238dd83-65d3-4b04-b90e-19ed250b8e36
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 100%
 
 ---
-
 
 # Angular アプリのフィルタリング
 

@@ -6,14 +6,15 @@ topics: development
 version: Cloud Service
 activity: develop
 audience: developer
-kt: 4854
+jira: KT-4854
 thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2257'
 ht-degree: 100%
 

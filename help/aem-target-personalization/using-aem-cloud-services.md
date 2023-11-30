@@ -1,17 +1,16 @@
 ---
 title: クラウドサービスを使用した Adobe Experience Manager と Adobe Target の統合
-seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
 description: AEM Cloud Service を使用して Adobe Experience Manager（AEM）と Adobe Target を統合する方法を順を追って説明します
-seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 100%
 

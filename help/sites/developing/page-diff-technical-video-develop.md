@@ -2,17 +2,14 @@
 title: AEM Sites でのページ差異に対応した開発
 description: このビデオでは、AEM Sites のページ差異の機能にカスタムスタイルを提供する方法を説明します。
 feature: Authoring
-topics: development
-audience: developer
-doc-type: technical video
-activity: develop
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Beginner
+doc-type: Technical Video
 exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 100%
 

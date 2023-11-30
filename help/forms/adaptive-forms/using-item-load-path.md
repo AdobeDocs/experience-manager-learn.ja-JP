@@ -3,14 +3,15 @@ title: 項目読み込みパスを使用したドロップダウンリストへ�
 description: crx ノードから値を読み取るためのドロップダウンリストの設定と入力
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 10961
+jira: KT-10961
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
-workflow-type: ht
+exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 100%
 
@@ -26,7 +27,7 @@ crx でこのようなノードを作成するには、次の手順に従いま�
 * 保存
 * 新しく作成したアセットノードをクリックし、次に示すようにプロパティを設定します。
 * assettypes という文字列型のプロパティを作成します（必要に応じて名前を付けることができます）。プロパティが複数値であることを確認します。必要な値を指定して保存します。
-   ![item-load-path](assets/item-load-path-crx.png)
+  ![item-load-path](assets/item-load-path-crx.png)
 
 これらの値をドロップダウンリストに読み込むには、項目読み込みパスのプロパティに **/content/assets/assettypes** というパスを指定します。
 

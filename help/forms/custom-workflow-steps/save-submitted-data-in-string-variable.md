@@ -6,11 +6,12 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 11199
+jira: KT-11199
 last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
-workflow-type: ht
+exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 100%
 

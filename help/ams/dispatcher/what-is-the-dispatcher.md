@@ -7,13 +7,14 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 829ad9733b4326c79b9b574b13b1d4c691abf877
+doc-type: Article
+exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
-
 
 # 「Dispatcher」とは
 
@@ -39,15 +40,15 @@ Apache サーバーの動作に関する基本的な説明です。
 
 AEM Dispatcher モジュールの機能に関する基本的なAdobe:
 
-- デフォルトのファイルハンドラーを強化
+- デフォルトのファイルハンドラーを強化します
 - 不正なリクエストを除外/ AEMのソフトベリー/エンドポイントを保護
-- 複数のレンダラーが存在する場合は、負荷分散が行われます
+- 複数のレンダラーが存在する場合は、負荷分散が行われます。
 - ライブキャッシュディレクトリを可能にする/停滞したファイルのフラッシュをサポート
 - すべての AMS インストールの前面にあり、Web サイトやアセットをクライアントのブラウザーに配信します
-- AEMサーバーが独自に達成できるよりもはるかに高速に再提供するリクエストをキャッシュします
+- AEMサーバーが独自に達成できるよりもはるかに高速に再提供するリクエストをキャッシュします。
 - その他…
 
-## web トラフィックワークフロー
+## Web トラフィックワークフロー
 
 基本的な Dispatcher サーバーを構築するために、どのコンポーネントが一緒にインストールされているかを理解すると、Adobeマネージャーサービス設定の基本的な Web トラフィックワークフローを理解できます。
 これは、AEMコンテンツの訪問者にコンテンツを提供するシステムチェーン内で、AEM が果たす役割を理解するのに役立ちます。
@@ -86,4 +87,4 @@ AEM Author User activates content
             * Next request for that content will request fresh copy from publisher *
 ```
 
-[次へ —> 基本ファイルレイアウト](./basic-file-layout.md)
+[次へ —> 基本的なファイルレイアウト](./basic-file-layout.md)

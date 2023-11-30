@@ -4,14 +4,14 @@ description: 「保存して終了」ボタンのクリックイベントを処�
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6597
+jira: KT-6597
 thumbnail: 6597.pg
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 100%
 

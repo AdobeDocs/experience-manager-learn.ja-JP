@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 version: Cloud Service
 topic: Integrations
-kt: 8474
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
-workflow-type: ht
+jira: KT-8474
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 100%
 

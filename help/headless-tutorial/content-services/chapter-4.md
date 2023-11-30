@@ -5,11 +5,12 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '785'
+ht-degree: 100%
 
 ---
 
@@ -70,14 +71,14 @@ API エンドポイントの構成を理解し、どのコンテンツを [!DNL 
    * **[!DNL WKND Mobile > Image]**
 
       * アプリのロゴ
+
    * **[!DNL WKND Mobile > Text]**
 
       * アプリの紹介テキスト
+
    * **[!DNL WKND Mobile > Content Fragment List]**
 
       * アプリで表示できるイベントカテゴリのリスト
-
-
 
 1. 完了したら、右上隅にある「**[!UICONTROL 完了]**」チェックマークをタップします。
 1. ブラウザーウィンドウを&#x200B;**更新**&#x200B;して、新しく[!UICONTROL 許可されたコンポーネント]のリストを左側のパネルに表示します。

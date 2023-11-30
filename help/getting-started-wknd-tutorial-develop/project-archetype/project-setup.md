@@ -2,18 +2,18 @@
 title: AEM Sites の基本を学ぶ - プロジェクトの設定
 description: Maven マルチモジュールプロジェクトを作成して、Experience Manager サイトのコードと設定を管理します。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-kt: 3418
+jira: KT-3418
 thumbnail: 30152.jpg
+doc-type: Tutorial
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 100%
 

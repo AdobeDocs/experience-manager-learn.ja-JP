@@ -6,13 +6,13 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9351
+jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1218'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -211,9 +211,9 @@ AEM から HTTP／HTTPS 接続を作成するときに、専用のエグレス I
 
 AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP など）、接続は AEM から提供される特別なホスト名を使用して行う必要があります。
 
-| 変数名 | 使用 | Java™ コード | OSGi 設定 |
-| - | - | - | - |
-|`AEM_PROXY_HOST` | HTTP／HTTPS 以外の接続のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| 変数名 | 以下を使用し、 | Java™コード | OSGi 設定 |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | 非 HTTP/HTTPS 接続用のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
 外部サービスへの接続は、その後、`AEM_PROXY_HOST` とマッピングされたポート（`portForwards.portOrig`）を使用しで呼び出されます。次に、AEM はこれをマッピングされた外部ホスト名（`portForwards.name`）とポート（`portForwards.portDest`）にルーティングします。

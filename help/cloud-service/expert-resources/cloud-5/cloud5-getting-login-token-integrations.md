@@ -4,12 +4,12 @@ description: Cloud Service 統合用のログイントークンの取得方法�
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 9981
+jira: KT-9981
 hidefromtoc: true
 thumbnail: 341277.jpeg
 exl-id: 41d78e6b-7076-4f4f-8d2c-4bf969b61024
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 100%
 

@@ -2,17 +2,17 @@
 title: オーサリングと公開の概要 | AEM クイックサイト作成
 description: Adobe Experience Manager（AEM）のページエディターを使用して、web サイトのコンテンツを更新します。 オーサリングを容易にするためにコンポーネントを使用する方法について説明します。 AEM オーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに変更を公開する方法を学びます。
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
 level: Beginner
-kt: 7497
+jira: KT-7497
 thumbnail: KT-7497.jpg
+doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 100%
 

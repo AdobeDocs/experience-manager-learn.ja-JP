@@ -4,14 +4,14 @@ description: OTP を使用して、アプリケーション番号に関連付け
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6594
+jira: KT-6594
 thumbnail: 6594.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d486d5de-efd9-4dd3-9d9c-1bef510c6073
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 100%
 

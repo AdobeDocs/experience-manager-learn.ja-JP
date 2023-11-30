@@ -2,20 +2,20 @@
 title: 単体テスト
 description: カスタムコンポーネントのチュートリアルで作成した署名コンポーネントの Sling モデルの動作を検証する単体テストを実装します。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: APIs, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 4089
+jira: KT-4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+doc-type: Tutorial
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2980'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -68,7 +68,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 ## 背景 {#unit-testing-background}
 
-このチュートリアルでは、署名コンポーネントの [Sling モデル](https://sling.apache.org/documentation/bundles/models.html)（[カスタム AEM コンポーネントの作成](custom-component.md)で作成したもの）の[単体テスト](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88)を記述する方法を見ていきます。単体テストとは、Java™ コードの想定される動作を検証するために Java™ で記述されるビルド時テストです。通常、各単体テストは小規模で、想定される結果に対してメソッド（または作業単位）の出力を検証します。
+このチュートリアルでは、署名コンポーネントの [Sling モデル](https://sling.apache.org/documentation/bundles/models.html)（[カスタム AEM コンポーネントの作成](custom-component.md)で作成したもの）の[単体テスト](https://en.wikipedia.org/wiki/Unit_testing)を記述する方法を見ていきます。単体テストとは、Java™ コードの想定される動作を検証するために Java™ で記述されるビルド時テストです。通常、各単体テストは小規模で、想定される結果に対してメソッド（または作業単位）の出力を検証します。
 
 アドビでは、AEM のベストプラクティスを適用し、以下を使用します。
 
@@ -111,7 +111,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 1. **aem-guides-wknd/core/pom.xml** を開き、対応するテストの依存関係が使用可能であることを確認します。
 
-   **コア**&#x200B;プロジェクトの並列ソースフォルダーには、単体テストと、サポートするテストファイルが含まれます。この **test** フォルダーはテストクラスをソースコードから分離しますが、ソースコードと同じパッケージ内にあるようにテストを動作させることができます。
+   **コア**&#x200B;プロジェクトの並列ソースフォルダーには、単体テストと、サポートするテストファイルが含まれます。この **テスト** フォルダーでは、テストクラスをソースコードから分離できますが、テストは、ソースコードと同じパッケージに存在するかのように動作します。
 
 ## JUnit テストの作成 {#creating-the-junit-test}
 
@@ -137,8 +137,6 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
    1. テストファイルとして容易に識別できます _対象_ `BylineImpl.java`
    1. ただし、テストファイルを区別します _から_ 試験を受けているクラス `BylineImpl.java`
-
-
 
 ## BylineImplTest.java のレビュー {#reviewing-bylineimpltest-java}
 
@@ -184,7 +182,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
    まず、テストするクラスのパブリックメソッドごとに 1 つのテストメソッドから始めます。そのため、次のようにします。
 
-   | BylineImpl.java |  | BylineImplTest.java |
+   | BylineImpl.java |              | BylineImplTest.java |
    | ------------------|--------------|---------------------|
    | getName() | 右記でテスト | testGetName() |
    | getOccupations() | 右記でテスト | testGetOccupations() |
@@ -209,10 +207,10 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 単体テストを作成する際の主なアプローチは次の 2 つです。
 
-* [TDD またはテスト駆動開発](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA)。実装を開発する直前に単体テストの増分を記述、テストを記述、実装を記述してテストを合格します。
-* 最初に実装をおこなう開発。動作するコードを最初に開発してから、そのコードを検証するテストを記述します。
+* [TDD またはテスト主導型開発](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA)：実装が開発される直前に、単体テストを増分的に記述します。テストを記述し、テストが合格するように実装を記述します。
+* 実装優先開発：まず作業用コードを開発し、そのコードを検証するテストを記述します。
 
-このチュートリアルでは、後者のアプローチを使用します（前の章で動作する **BylineImpl.java** を作成済みのため）。このため、パブリックメソッドの動作だけでなく、いくつかの実装の詳細についても確認および理解しておく必要があります。優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
+このチュートリアルでは、後者の方法を使用します ( 作業用の **BylineImpl.java** 前の章で参照 )。 このため、パブリックメソッドの動作だけでなく、実装の詳細の一部も確認し、理解する必要があります。 優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
 
 AEM における TDD には高度な専門知識が必要です。AEM 開発や AEM コードの単体テストを熟知した AEM 開発者が使用することで最大限の効果を発揮できます。
 
@@ -239,8 +237,8 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    この変数 `ctx` は、一部の AEM および Sling の抽象化するモック AEM コンテキストを公開します。
 
    * BylineImpl Sling モデルはこのコンテキストに登録されます。
-   * モック JCR コンテンツ構造はこのコンテキストで作成されます。
-   * カスタム OSGi サービスはこのコンテキスト内で登録できます。
+   * モック JCR コンテンツ構造は、このコンテキストで作成されます。
+   * カスタム OSGi サービスは、このコンテキストで登録できます。
    * 一般的に必要となる様々なモックオブジェクトおよびヘルパー（SlingHttpServletRequest オブジェクトなど）、様々なモック Sling および AEM OSGi サービス（ModelFactory、PageManager、ページ、テンプレート、ComponentManager、コンポーネント、TagManager、タグなど）を提供します。
       * *これらのオブジェクトのすべてのメソッドが実装されるわけではありません。*
    * [その他](https://wcm.io/testing/aem-mock/usage.html)
@@ -284,7 +282,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 ## getName() のテスト {#testing-get-name}
 
-基本的なモックコンテキストの設定が完了したところで、**BylineImpl&#39;s getName()** の最初のテストを作成しましょう。このテストでは、リソースの「**name**」プロパティに保存されている作成済みの正しい名前をメソッド **getName()** が返すことを確認する必要があります。
+基本的なモックコンテキストの設定が完了したので、次のための最初のテストを作成します。 **BylineImpl の getName()**. このテストでは、リソースの「**name**」プロパティに保存されている作成済みの正しい名前をメソッド **getName()** が返すことを確認する必要があります。
 
 1. **BylineImplTest.java** の **testGetName**() メソッドを次のように更新します。
 
@@ -412,7 +410,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 ## getOccupations() のテスト {#testing-get-occupations}
 
-成功です。最初のテストは成功しました。先へ進み、`getOccupations()` をテストします。モックコンテキストの初期化が `@Before setUp()` メソッドで行われたため、`getOccupations()` を含むこのテストケースのすべての `@Test` メソッドで利用できるようになります。
+よかった！ 最初のテストは成功しました。先へ進み、`getOccupations()` をテストします。モックコンテキストの初期化が `@Before setUp()` メソッドで行われたため、`getOccupations()` を含むこのテストケースのすべての `@Test` メソッドで利用できるようになります。
 
 このメソッドは、職業プロパティに保存されている職業のリストをアルファベット順（降順）に並べ替えて返します。
 
@@ -460,7 +458,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    }
    ```
 
-1. テストを実行すると、再び成功します。職業を並べ替えたことが良かったようです。
+1. テストを実行し、再び合格します。 職業が正常に機能しているようです！
 
    ![職業パスを取得](assets/unit-testing/testgetoccupations-pass.png)
 
@@ -472,10 +470,10 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 `isEmpty()` のテストは、様々な条件でのテストが必要なので、興味深いものです。 **BylineImpl.java** の `isEmpty()` メソッドをレビューするには、次の条件をテストする必要があります。
 
-* 名前が空のときに true を返す。
-* 職業が null または空のときに true を返す。
-* 画像が空または src URL がない場合 true を返す。
-* 名前、職業、および Image（src URL) が存在する
+* 名前が空の場合に true を返します
+* 職業が null または空の場合に true を返します
+* 画像が null の場合、または src URL がない場合に true を返します。
+* 名前、職業、画像（src URL を含む）が存在する場合、false を返します
 
 これにより、`BylineImplTest.json` で特定の条件や新しいモックリソース構造をテストする新しいテストメソッドを作成して、これらのテストを実施する必要があります。
 

@@ -2,17 +2,14 @@
 title: AEM Sites スタイルシステムのベストプラクティスについて
 description: Adobe Experience Manager Sites でスタイルシステムを実装する際のベストプラクティスについて詳しく説明する記事です。
 feature: Style System
-topics: development, components, front-end-development
-audience: developer
-doc-type: article
-activity: understand
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1536'
 ht-degree: 100%
 
@@ -200,7 +197,7 @@ CSS クラスの名前 `cmp-teaser--alternate` は、「右揃え」という作
 ![プロモ右揃えセカンダリ](assets/promo-alternate-secondary.png)
 
 * **レイアウトスタイル**
-   * スタイル名：**プロモ（右揃え）**
+   * スタイル名： **プロモ（右揃え）**
    * CSS クラス：`cmp-teaser--promo cmp-teaser--alternate`
 * **表示スタイル**
    * スタイル名：**イエロー**
@@ -256,7 +253,7 @@ CSS クラスの名前 `cmp-teaser--alternate` は、「右揃え」という作
    * スタイル名：**プロモ**
    * CSS クラス：`cmp-teaser--hero`
 * **表示スタイル**
-   * スタイル名： **グリーン**
+   * スタイル名：**グリーン**
    * CSS クラス：`cmp-teaser--primary-color`
 * **有効な CSS クラス**：`cmp-teaser--hero.cmp-teaser--primary-color`
 

@@ -3,16 +3,17 @@ title: SPA の統合 | AEM SPA エディターと React の使用の手引き
 description: React で記述された単一ページアプリケーション（SPA）のソースコードを Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 feature: SPA Editor
 version: Cloud Service
-kt: 4853
+jira: KT-4853
 thumbnail: 4853-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +34,7 @@ React で記述された単一ページアプリケーション（SPA）のソ�
 
 ![AEM の新しいヘッダー](./assets/integrate-spa/final-header-component.png)
 
-*静的 `Header`コンポーネントを追加するよう SPA が拡張されています* 
+*SPA を拡張して静的 `Header` コンポーネントを追加する*
 
 ## 前提条件
 
@@ -41,15 +42,15 @@ React で記述された単一ページアプリケーション（SPA）のソ�
 
 ## アプローチの統合 {#integration-approach}
 
-AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` と `ui.frontend`）が作成されました。
+AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の 2 つのモジュールが作成されました。
 
-`ui.frontend` モジュールは、すべての SPA ソース コードを含む [webpack](https://webpack.js.org/) プロジェクトです。SPA の開発とテストの大部分は、webpack プロジェクトで行われます。 実稼動ビルドがトリガーされると、SPA は webpack を使用して構築およびコンパイルされます。コンパイル済みのアーティファクト（CSS および Javascript）は `ui.apps` モジュールにコピーされ、その後 AEM ランタイムにデプロイされます。
+`ui.frontend` モジュールは、すべての SPA ソースコードを含む [webpack](https://webpack.js.org/) プロジェクトです。SPA の開発とテストの大部分は、webpack プロジェクトで行われます。 実稼動ビルドがトリガーされると、SPA は webpack を使用して構築およびコンパイルされます。コンパイル済みのアーティファクト（CSS および JavaScript）が `ui.apps` モジュールにコピーされ、AEM ランタイムにデプロイされます。
 
-![ui.frontend の全体的なアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
+![ui.frontend の大まかなアーキテクチャ](assets/integrate-spa/ui-frontend-architecture.png)
 
-*SPA 統合の全体的な概要です。*
+*SPA 統合の大まかな概要を示します。*
 
-フロントエンドビルドに関する追加情報は、[こちら](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=ja)を参照してください。
+フロントエンドビルドに関する追加情報は、[こちらを参照](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=ja)してください。
 
 ## SPA 統合を検査する {#inspect-spa-integration}
 
@@ -57,9 +58,9 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
 
 1. 任意の IDE で、AEM プロジェクトを開きます。このチュートリアルでは、 [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) を使用します。
 
-   ![VSCode - AEM WKND SPA プロジェクト](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VS コード - AEM WKND SPA プロジェクト](./assets/integrate-spa/vscode-ide-openproject.png)
 
-1. `ui.frontend` フォルダーを展開して検査します。`ui.frontend/package.json` をファイルを開きます。
+1. `ui.frontend` フォルダーを展開して調べます。`ui.frontend/package.json` をファイルを開きます。
 
 1. `dependencies` の下に、`react-scripts` を含む `react` に関連するいくつかの項目が表示されます。
 
@@ -96,11 +97,11 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
 
    npm モジュール [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) を使用すると、この処理が容易になります。
 
-1. `ui.frontend/clientlib.config.js` ファイルを調べます。この設定ファイルは、クライアントライブラリの生成方法を確認するために [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) に使用されます。
+1. `ui.frontend/clientlib.config.js` ファイルを調べます。この設定ファイルは、クライアントライブラリの生成方法を決定するために [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) によって使用されます。
 
-1. `ui.frontend/pom.xml` ファイルを調べます。このファイルは、`ui.frontend` フォルダーを [Maven モジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。`pom.xml` ファイルは、Maven のビルド時に SPA を&#x200B;**テスト**&#x200B;および&#x200B;**ビルド**&#x200B;するために [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) を使用するように更新されています。
+1. `ui.frontend/pom.xml` ファイルを検査します。このファイルは、`ui.frontend` フォルダーを [Maven モジュール](https://maven.apache.org/guides/mini/guide-multiple-modules.html)に変換します。`pom.xml` ファイルは [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) を使用して Maven のビルド時に SPA を&#x200B;**テスト**&#x200B;および&#x200B;**ビルド**&#x200B;されます。
 
-1. `ui.frontend/src/index.js` でファイル `index.js` を開きます。
+1. ファイル `index.js` を `ui.frontend/src/index.js` で検査します。
 
    ```js
    //ui.frontend/src/index.js
@@ -125,7 +126,7 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
    });
    ```
 
-   `index.js` は SPA のエントリポイントです。`ModelManager` は、AEM SPA Editor JS SDK で提供されます。 これは、`pageModel`（JSON コンテンツ）を呼び出してアプリケーションにコピーする役割を担います。
+   `index.js` は、SPA のエントリポイントです。`ModelManager` は、AEM SPA Editor JS SDK によって提供されます。これは、`pageModel`（JSON コンテンツ）を呼び出してアプリケーションにコピーする役割を担います。
 
 1. `ui.frontend/src/components/import-components.js` でファイル `import-components.js` を検査します。このファイルは、標準の **React コアコンポーネント**&#x200B;を読み込んで、プロジェクトで使用できるようにします。次の章では、AEM コンテンツと SPA コンポーネントのマッピングを調べます。
 
@@ -196,7 +197,7 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. `ui.apps` フォルダーに移動し、`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` の下で、コンパイル済みの SPA ファイルが `ui.frontend/build` フォルダーからコピーされていることが分かります。
+1. `ui.apps` フォルダーに移動します。`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` の下に `ui.frontend/build` フォルダーからコピーされたコンパイル済みの SPA ファイルが表示されます。
 
    ![ui.apps で生成されたクライアントライブラリ](./assets/integrate-spa/compiled-spa-uiapps.png)
 
@@ -342,7 +343,7 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
 
    更新された SPA が AEM にあるので、オーサリングを続行できます。
 
-## これで完了です。 {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで完了です。SPA を更新し、AEM との統合を確認しました。これで、**webpack-dev-server** を使用して AEM JSON モデル API に対して SPA を開発する方法を理解できました。
 
@@ -360,7 +361,7 @@ AEM プロジェクトの一部として、2 つのモジュール（`ui.apps` �
 1. `ui.frontend/public/mock-content` の下に `mock.model.json` という名前のファイルを新規作成します。
 1. ブラウザーで、[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に移動します。
 
-   これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
+   これは、アプリケーションを動作させているAEMで書き出された JSON です。 JSON 出力をコピーします。
 
 1. 前の手順で出力された JSON をファイル `mock.model.json` に貼り付けます。
 

@@ -2,18 +2,14 @@
 title: AEM のシステム概要ダッシュボードの使用
 description: 以前のバージョンの AEM では、管理者は AEM インスタンスの全体像を把握するために、複数の場所を参照する必要がありました。システム概要では、AEM インスタンスの設定、ハードウェアおよびヘルスの概要を 1 つのダッシュボードにすべて表示することでこれを解決することを目的としています。
 version: 6.4, 6.5
-topics: administration, operations, monitoring
 feature: Operations
-activity: use
-audience: administrator, architect, developer, implementer
-doc-type: technical video
-contentOwner: dgordon
+doc-type: Technical Video
 topic: Administration
 role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 100%
 

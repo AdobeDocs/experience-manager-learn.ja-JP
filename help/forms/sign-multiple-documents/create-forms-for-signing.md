@@ -3,14 +3,14 @@ title: 署名用フォームの作成
 description: 署名パッケージに含める必要があるフォームを作成します。
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 6893
+jira: KT-6893
 thumbnail: 6893.jpg
 topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 100%
 

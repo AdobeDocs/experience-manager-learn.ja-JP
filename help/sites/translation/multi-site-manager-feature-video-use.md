@@ -1,22 +1,15 @@
 ---
 title: AEM Sites でのマルチサイトマネージャーの使用
-seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
 description: ライブコピーの概要とブループリント設定マネージャーは、Multi Site Manager を操作するためのタッチ UI 対応インターフェイスです。
-seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
 feature: Multi Site Manager
-topics: localization, authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
-discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
 topic: Localization
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 100%
 

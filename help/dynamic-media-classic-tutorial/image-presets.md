@@ -1,19 +1,16 @@
 ---
 title: 画像プリセット
-description: 画像プリセット（Dynamic Media Classic の場合）には、特定のサイズ、形式、画質およびシャープニングで画像を作成するために必要なすべての設定が含まれています。画像プリセットは、動的サイズ設定の主要なコンポーネントです。 Dynamic Media Classic で URL を見ると、画像プリセットが使用されているかどうかを簡単に確認できます。画像プリセットと、それが役に立つ理由およびその作成方法について説明します。
+description: Dynamic Media Classicの画像プリセットには、特定のサイズ、形式、画質およびシャープニングでの画像の作成に必要なすべての設定が含まれています。 画像プリセットは、動的サイズ設定の主要なコンポーネントです。 Dynamic Media Classic で URL を見ると、画像プリセットが使用されているかどうかを簡単に確認できます。画像プリセットと、それが役に立つ理由およびその作成方法について説明します。
 feature: Dynamic Media Classic, Image Presets
-doc-type: tutorial
-topics: development, authoring, configuring
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: e472db7c-ac3f-4f66-85af-5a4c68ba609e
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 

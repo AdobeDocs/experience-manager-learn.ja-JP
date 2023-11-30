@@ -6,11 +6,12 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: 11245
+jira: KT-11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
-workflow-type: ht
+exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 100%
 
@@ -61,6 +62,3 @@ mvn clean install -PautoInstallSinglePackage
 
 問題がなければ、パッケージがサードパーティバンドルと共に AEM インスタンスにインストールされます。 バンドルは [Felix web コンソール](http://localhost:4502/system/console/bundles)を使用して確認できます。サードパーティバンドルは、次に示す `crx` リポジトリの /apps フォルダーにあります。
 ![サードパーティ](assets/custom-bundle1.png)
-
-
-

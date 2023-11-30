@@ -4,14 +4,14 @@ description: 新しい添付ファイルマップと共にフォームデータ�
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6538
+jira: KT-6538
 thumbnail: 6538.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 100%
 

@@ -7,21 +7,22 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 8185
+jira: KT-8185
 thumbnail: 332439.jpg
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 0%
+ht-degree: 79%
 
 ---
 
-# POST呼び出し
+# POST 呼び出しを行う
 
 
-次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTPPOST呼び出しをおこないます。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、リクエストのオプションのパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。[このドキュメントに従って、Formsクラウドインスタンスにカスタムフォントをデプロイしてください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
+次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、オプションのリクエストパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。 [カスタムフォントを Forms クラウドインスタンスにデプロイするには、このドキュメントに従ってください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en)プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
 
-次のコードは、データをテンプレートと結合して pdf を生成する場合に使用しました
+次のコードは、データをテンプレートと結合して PDF を生成する場合に使用しました。
 
 ```java
 public class DocumentGeneration

@@ -4,12 +4,12 @@ description: ユーザーインターフェイスや API からログにアク�
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 9927
+jira: KT-9927
 hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 100%
 

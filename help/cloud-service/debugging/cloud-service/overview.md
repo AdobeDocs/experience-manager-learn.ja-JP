@@ -7,15 +7,15 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5346
+jira: KT-5346
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 0%
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,7 @@ AEM as a Cloud Serviceは、AEMアプリケーションのクラウドネイテ�
 
 ログには、AEMでのアプリケーションのas a Cloud Service的な機能の詳細と、デプロイメントの問題に関するインサイトが記録されます。
 
-[ログを使用したAEMのas a Cloud Service的なデバッグ](./logs.md)
+[ログを使用した AEM as a Cloud Service のデバッグ](./logs.md)
 
 ## ビルドとデプロイメント
 
@@ -35,14 +35,14 @@ Adobe Cloud Manager のパイプラインは、AEM as a Cloud Serviceにデプ�
 
 [AEMのas a Cloud Service的なビルドとデプロイメントのデバッグ](./build-and-deployment.md)
 
-## デベロッパーコンソール
+## Developer Console
 
 開発者コンソールは、AEM as a Cloud Serviceでのアプリケーションの認識方法と機能を理解するのに役立つ、様々な情報とAEMas a Cloud Service環境の概要を提供します。
 
-[開発者コンソールでas a Cloud ServiceしたAEMのデバッグ](./developer-console.md)
+[Developer Console での AEM as a Cloud Service のデバッグ](./developer-console.md)
 
-## リポジトリブラウザ
+## リポジトリブラウザー
 
-リポジトリブラウザーは、AEMの基になるデータストアを表示し、AEMのas a Cloud Service環境を簡単にデバッグできる強力なツールです。 リポジトリブラウザーは、実稼動、ステージング、開発上のAEMのリソースとプロパティ、および作成者、公開、プレビューの各サービスの読み取り専用表示をサポートします。
+リポジトリブラウザーは、AEM の基盤となるデータストアを可視化する強力なツールで、AEM as a Cloud Service 環境のデバッグを容易にします。リポジトリブラウザーは、実稼動、ステージングおよび開発時の AEM のリソースとプロパティおよびオーサー、パブリッシュ、プレビューの各サービスの読み取り専用ビューをサポートしています。
 
-[リポジトリブラウザーでas a Cloud ServiceしたAEMのデバッグ](./repository-browser.md)
+[リポジトリブラウザーを使用した AEM as a Cloud Service のデバッグ](./repository-browser.md)

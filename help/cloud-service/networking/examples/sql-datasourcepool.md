@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9355
+jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ SQL データベース（およびその他の非 HTTP／HTTPS サービス）�
 
 次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-このチュートリアルに従う前に、[適切](../advanced-networking.md#advanced-networking)なネットワークの詳細設定が設定されていることを確認してください。
+このチュートリアルを開始する前に、高度なネットワーク機能の設定が[適切](../advanced-networking.md#advanced-networking)にセットアップされていることを確認してください。
 
 | 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -133,11 +133,11 @@ public class JdbcExternalServiceImpl implements ExternalService {
 
 ## MySQL ドライバーの依存関係
 
-AEM as a Cloud Service では、多くの場合、接続をサポートするために Java™ データベースドライバーを提供する必要があります。 ドライバーの提供は、通常、これらのドライバーを含む OSGi バンドルアーティファクトを `all` パッケージを介して AEM プロジェクトに埋め込むことによって最適に実現されます。
+AEM as a Cloud Service では、多くの場合、接続をサポートするために Java™ データベースドライバーを提供する必要があります。 ドライバーの提供は、通常、これらのドライバーを含む OSGi バンドルアーティファクトを `all` パッケージ経由で AEM プロジェクトに埋め込むことで達成します。
 
 ### pom.xml のリファクタリング
 
-データベースドライバーの依存関係をリアクター `pom.xml` に含めた後、`all` サブプロジェクトで参照します。
+データベースドライバの依存関係をリアクター `pom.xml` に含め、`all` サブプロジェクトで参照します。
 
 + `pom.xml`
 
@@ -159,7 +159,7 @@ AEM as a Cloud Service では、多くの場合、接続をサポートするた
 
 ## すべての pom.xml
 
-データベースドライバーの依存アーティファクトを `all` パッケージに埋め込み、AEM as a Cloud Service にデプロイして利用できるようにします。これらのアーティファクトは、データベースドライバーの Java™ クラスを書き出す OSGi バンドルである&#x200B;__必要があります__。
+データベースドライバーの依存関係アーティファクトを `all` パッケージをAEM as a Cloud Service上にデプロイして使用できるようにします。これらのアーティファクトは&#x200B;__必須__&#x200B;データベースドライバー Java™ クラスを書き出す OSGi バンドルである必要があります。
 
 + `all/pom.xml`
 

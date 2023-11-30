@@ -7,13 +7,14 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
-workflow-type: ht
+doc-type: Article
+exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 100%
 
 ---
-
 
 # 基本的なファイルレイアウト
 

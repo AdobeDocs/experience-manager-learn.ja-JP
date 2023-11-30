@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9353
+jira: KT-9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 100%
 
@@ -38,9 +38,9 @@ AEM の `DefaultMailService` を高度なネットワークエグレスポート
 
 次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-このチュートリアルの手順を実施する前に、[適切](../advanced-networking.md#advanced-networking)な高度なネットワーク設定が設定されていることを確認します。
+このチュートリアルを開始する前に、高度なネットワーク機能の設定が[適切](../advanced-networking.md#advanced-networking)にセットアップされていることを確認してください。
 
-| 高度なネットワーク機能なし | [柔軟なエグレスポート](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
+| 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
@@ -82,6 +82,6 @@ AEM の [DefaultMailService](https://experienceleague.adobe.com/docs/experience-
 + [Cloud Manager の環境設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=ja)
 + または `aio CLI` コマンドの使用
 
-   ```shell
-   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
-   ```
+  ```shell
+  $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
+  ```

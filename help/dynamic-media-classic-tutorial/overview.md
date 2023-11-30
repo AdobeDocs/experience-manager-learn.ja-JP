@@ -1,16 +1,14 @@
 ---
 title: Dynamic Media Classic ベストプラクティスチュートリアル
 description: Dynamic Media Classic は、顧客がリッチメディアコンテンツの制作、オーサリング、配信を行うハブです。このベストプラクティスチュートリアルは、Dynamic Media Classic の現在および新規ユーザーが、アドビが提供するこの強力なリッチメディアソリューションで実行できる操作をより深く理解できるように作成されました。チュートリアルのこの部分では、Dynamic Media Classic の概要と主な機能、およびユーザーインターフェイスについて簡単に説明します。　
-doc-type: tutorial
-audience: all
-activity: develop, use
 feature: Dynamic Media Classic
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 100%
 

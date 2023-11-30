@@ -7,13 +7,14 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
-workflow-type: ht
+doc-type: Article
+exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 100%
 
 ---
-
 
 # 変数の使用と理解
 
@@ -272,7 +273,7 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 
 ```
 <VirtualHost *:80> 
-	DocumentRoot	${PUBLISH_DOCROOT} 
+    DocumentRoot    ${PUBLISH_DOCROOT} 
 ```
 
 次に、コマンドを実行して、コンパイルされた出力を確認します。

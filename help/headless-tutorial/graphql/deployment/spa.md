@@ -6,16 +6,16 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10587
+jira: KT-10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
-workflow-type: ht
+exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 100%
 
 ---
-
 
 # AEM ヘッドレス SPA デプロイメント
 

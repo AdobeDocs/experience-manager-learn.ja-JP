@@ -6,15 +6,15 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10829
+jira: KT-10829
 thumbnail: kt-10829.jpg
-source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
-workflow-type: ht
+exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 100%
 
 ---
-
 
 # Dispatcher フィルター
 

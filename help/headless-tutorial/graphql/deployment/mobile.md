@@ -6,15 +6,15 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10796
+jira: KT-10796
 thumbnail: KT-10796.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
-workflow-type: ht
+exl-id: 1f536079-b3ce-4807-be88-804378e75d37
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 100%
 
 ---
-
 
 # AEM ヘッドレスモバイルデプロイメント
 
@@ -80,5 +80,3 @@ AEM ヘッドレス API への HTTP 接続はブラウザーのコンテキス�
        </div>
     </div>
 </div>
-
-

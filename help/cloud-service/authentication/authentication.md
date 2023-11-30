@@ -6,12 +6,12 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 10436
+jira: KT-10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service は、複数の認証オプションをサポートしており、サービスの種類によって異なります。
 
-|  | AEM オーサー | AEM パブリッシュ |
+|                       | AEM オーサー | AEM パブリッシュ |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
 | • [Adobe IMS を介した SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=ja#how-to-set-up) | ✔ | ✘ |

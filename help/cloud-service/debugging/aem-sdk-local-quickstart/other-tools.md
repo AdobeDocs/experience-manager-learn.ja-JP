@@ -7,13 +7,13 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5251
+jira: KT-5251
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 100%
 
@@ -64,9 +64,9 @@ CRXDE Lite で「アクセス制御のテスト」コンソールにアクセス
 
 結果は次のように表示されます。
 
-+ __パス__ 評価されたパスを繰り返します
-+ __プリンシパル__ パスが評価されたユーザーまたはグループを繰り返します
-+ __プリンシパル__ 選択したプリンシパルが属するすべてのプリンシパルの一覧が表示されます。
++ __Path__ 評価されたパスを繰り返します
++ __Principal__ パスが評価されたユーザーまたはグループを繰り返します
++ __Principals__ 選択したプリンシパルが属するすべてのプリンシパルの一覧が表示されます。
    + これは、継承を通じてアクセス許可を提供する推移的なグループメンバーシップの理解に役立ちます。
 + __パスでの権限__ 選択したプリンシパルが評価されたパスに対して持つすべての JCR 権限の一覧が表示されます
 

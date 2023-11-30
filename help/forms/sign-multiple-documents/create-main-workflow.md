@@ -4,13 +4,13 @@ description: 署名用のフォームをデータベースに保存するため�
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
-kt: 6887
+jira: KT-6887
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 100%
 

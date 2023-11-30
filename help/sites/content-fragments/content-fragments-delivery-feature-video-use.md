@@ -4,19 +4,14 @@ seo-title: Delivering Content Fragments in Adobe Experience Manager
 description: コンテンツフラグメントは、レイアウトとは無関係に、コアコンポーネントを使用して AEM Sites で直接使用することも、ヘッドレスでダウンストリームチャネルに配信することもできます。
 seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivered in a headless manner to downstream channels.
 feature: Content Fragments
-topics: authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-uuid: 045473d2-5abe-4414-b91c-d369f3069ead
-discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
 

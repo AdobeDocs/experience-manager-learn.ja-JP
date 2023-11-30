@@ -6,15 +6,15 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10798
+jira: KT-10798
 thumbnail: kt-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
-workflow-type: ht
+exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 100%
 
 ---
-
 
 # AEM ヘッドレスサーバー間デプロイメント
 

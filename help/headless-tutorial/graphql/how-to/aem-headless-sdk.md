@@ -6,11 +6,11 @@ topic: Headless
 feature: GraphQL API
 role: Developer
 level: Intermediate
-kt: 10269
+jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 100%
 

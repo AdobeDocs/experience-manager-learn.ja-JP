@@ -3,18 +3,18 @@ title: スタイルシステムを使用した開発
 seo-title: Developing with the Style System
 description: 個々のスタイルを実装し、Experience Manager のスタイルシステムを使用してコアコンポーネントを再利用する方法について説明します。 このチュートリアルでは、ブランド固有の CSS とテンプレートエディターの高度なポリシー設定を使用してコアコンポーネントを拡張するためのスタイルシステムに対応する開発について説明します。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: Core Components, Style System
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 4128
+jira: KT-4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
+doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 100%
 

@@ -2,19 +2,19 @@
 title: ローカル開発アクセストークン
 description: AEM ローカル開発アクセストークンは、HTTP を介して AEM オーサーまたはパブリッシュサービスとプログラムでやり取りする AEM as a Cloud Service との統合の開発を高速化するために使用されます。
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
+doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 100%
@@ -70,7 +70,7 @@ AEM as a Cloud Service にプログラムでアクセスする必要がある統
 1. コマンドラインパラメーターで指定された AEM アセットフォルダー内のすべてのアセットをリストアップします（`listAssetsByFolder(...)`）。
 1. リストアップされたアセットのメタデータを、コマンドラインパラメーターで指定された値で更新します（`updateMetadata(...)`）。
 
-アクセストークンを使用して AEM への認証をプログラムで行う際の重要なポイントは、AEM に対して行われるすべての HTTP リクエストに以下の形式で Authorization HTTP リクエストヘッダーを追加することです。
+アクセストークンを使用して AEM への認証をプログラムで行う際の重要な要素は、AEM に対して行われるすべての HTTP リクエストに以下の形式で Authorization HTTP リクエストヘッダーを追加することです。
 
 + `Authorization: Bearer ACCESS_TOKEN`
 

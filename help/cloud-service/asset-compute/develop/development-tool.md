@@ -7,14 +7,14 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6283
+jira: KT-6283
 thumbnail: 40241.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: cbe08570-e353-4daf-94d1-a91a8d63406d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 100%
 
@@ -64,19 +64,19 @@ _開発ツールで Asset Compute ワークを実行したときのクリック�
    + その他のキーと値もこの JSON オブジェクトで指定でき、`rendition.instructions` オブジェクトのワーカーで利用できます。
       + オプションで `size`、`contrast` および `brightness` の値を追加できます。
 
-         ```json
-         {
-             "renditions": [
-                 {
-                     "worker": "...",
-                     "name": "rendition.png",
-                     "size":"800",
-                     "contrast": "0.30",
-                     "brightness": "-0.15"
-                 }
-             ]
-         }
-         ```
+        ```json
+        {
+            "renditions": [
+                {
+                    "worker": "...",
+                    "name": "rendition.png",
+                    "size":"800",
+                    "contrast": "0.30",
+                    "brightness": "-0.15"
+                }
+            ]
+        }
+        ```
 
 1. 「__実行__」ボタンをタップします。
 1. __「レンディション」セクション__&#x200B;でレンディションのプレースホルダーに入力します

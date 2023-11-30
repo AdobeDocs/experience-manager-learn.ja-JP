@@ -2,13 +2,13 @@
 title: Dispatcher ツールのデバッグ
 description: Dispatcher ツールは、コンテナ化された Apache web サーバー環境を提供します。この環境を使用して、AEM as a Cloud Services の AEM パブリッシュサービスの Dispatcher をローカルでシミュレートできます。Dispatcher ツールのログとキャッシュコンテンツのデバッグは、エンドツーエンドの AEM アプリケーションと、サポートするキャッシュおよびセキュリティ設定が正しいことを確認するために不可欠です。
 feature: Dispatcher
-kt: 5918
+jira: KT-5918
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: f0adf7a6-c7c2-449a-9fa5-402c54b812e5
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 100%
 

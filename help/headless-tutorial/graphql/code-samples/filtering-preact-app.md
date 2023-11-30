@@ -6,18 +6,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11389
+jira: KT-11389
 thumbnail: KT-11389.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
-workflow-type: ht
+exl-id: d2b7e8ab-8bbc-495f-94f1-362ea47b3853
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 100%
 
 ---
-
 
 # Preact アプリのフィルタリング
 

@@ -4,13 +4,13 @@ description: このエピソードは、Adobe App Builder を使用する外部�
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 10279
+jira: KT-10279
 thumbnail: 342375.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 100%
 

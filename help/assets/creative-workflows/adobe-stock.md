@@ -7,9 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
+doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 100%
 
@@ -25,7 +26,7 @@ AEM 6.4.2 では、Adobe Stock アセットを AEM から直接検索、プレ�
 >
 >この統合を利用するには、[Adobe Stock エンタープライズプラン](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)と、最新のサービスパック 2 をデプロイした AEM 6.4 が必要です。AEM 6.4 サービスパックについて詳しくは、[リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)を参照してください。
 
-Adobe Stock と AEM Assets の統合により、コンテンツ作成者とマーケティング担当者は、クリエイティブまたはマーケティングの目的で、簡単にストックアセットのライセンスを取得して使用できるようになります。オムニサーチを使用して、場所フィルターを Adobe Stock として追加するか、AEM Assets のメインナビゲーションをナビゲートして Adobe Stock Coral UI を検索アイコンをクリックすることにより、ストックアセット検索を実行できます。
+Adobe Stock と AEM Assets の統合により、コンテンツ作成者とマーケターは、クリエイティブまたはマーケティングの目的で、簡単にストックアセットのライセンスを取得して使用できるようになります。オムニサーチを使用して、場所フィルターを Adobe Stock として追加するか、AEM Assets のメインナビゲーションをナビゲートして Adobe Stock Coral UI を検索アイコンをクリックすることにより、ストックアセット検索を実行できます。
 
 ## 機能
 

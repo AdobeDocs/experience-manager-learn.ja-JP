@@ -2,20 +2,18 @@
 title: Target 呼び出しの読み込みと実行
 description: Experience Platform Launch ルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。Adobe Client Data Layer を使用してページ情報を取得し、パラメーターとして渡すことで、訪問者の web ページでの体験に関するデータを収集、保存、そのデータに容易にアクセスすることができます。
 feature: Core Components, Adobe Client Data Layer
-topics: integrations, administration, development
-audience: administrator, developer
-doc-type: technical video
 version: Cloud Service
-kt: 6133
+jira: KT-6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 100%
 

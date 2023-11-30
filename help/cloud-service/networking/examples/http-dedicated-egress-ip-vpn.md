@@ -6,13 +6,13 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 0%
+ht-degree: 37%
 
 ---
 
@@ -20,26 +20,26 @@ ht-degree: 0%
 
 HTTP/HTTPS 接続は、専用の出力 IP アドレスまたは VPN を使用して、AEMas a Cloud Serviceから自動的にプロキシ化され、特別な情報は不要です `portForwards` ルール。
 
-## 高度なネットワークサポート
+## 高度なネットワーク機能のサポート
 
-次のコード例は、次のアドバンスドネットワークオプションでサポートされています。
+次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
 次を確認します。 [専用の出力 IP アドレスまたは VPN](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
 
-| 高度なネットワークがありません | [柔軟なポート出力](../flexible-port-egress.md) | [出力専用 IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
+| 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✘ | ✔ | ✔ |
 
 >[!CAUTION]
 >
-> このコード例は、 [出力専用 IP アドレス](../dedicated-egress-ip-address.md) および [VPN](../vpn.md). 類似していますが、異なるコード例が [フレキシブルポートエグレス用の非標準ポートでの HTTP/HTTPS 接続](./http-on-non-standard-ports-flexible-port-egress.md).
+> このコード例は、 [出力専用 IP アドレス](../dedicated-egress-ip-address.md) および [VPN](../vpn.md). 類似していますが、異なるコード例がに対して用意されています。 [フレキシブルポートエグレス用の非標準ポートでの HTTP/HTTPS 接続](./http-on-non-standard-ports-flexible-port-egress.md).
 
-## コード例
+## コードサンプル
 
-この Java™コードの例は、AEM as a Cloud Serviceで実行できる OSGi サービスで、8080 上の外部 Web サーバーへの HTTP 接続をおこないます。 HTTPS（または HTTP）接続は、AEMas a Cloud Serviceから自動的にプロキシ化され、特別な開発は不要です。
+この Java™ コードサンプルは、AEM as a Cloud Service で動作する OSGi サービスで、8080 上の外部 web サーバーへの HTTP 接続を行います。HTTPS（または HTTP）接続は、AEMas a Cloud Serviceから自動的にプロキシ化され、特別な開発は不要です。
 
 >[!NOTE]
-> 次をお勧めします。 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) は、AEMからの HTTP/HTTPS 呼び出しに使用されます。
+> AEM からの HTTP／HTTPS 呼び出しには [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) を使用することをお勧めします。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

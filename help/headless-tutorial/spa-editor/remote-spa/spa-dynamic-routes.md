@@ -5,13 +5,14 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7636
+jira: KT-7636
 thumbnail: kt-7636.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 100%
 
@@ -101,7 +102,6 @@ SPA が AEM SPA エディターで開かれたときの SPA 要求のマッピ�
    これは、`ResponsiveGrid` コンポーネントが AEM リソースからコンテンツを取得するように指示するものです。
 
    + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
-
 
 `AdventureDetail.js` を次の行で更新します。
 

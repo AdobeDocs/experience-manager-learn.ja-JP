@@ -5,8 +5,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 873d8e69-5a05-44ac-8dae-bba21f82b823
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 100%
@@ -83,7 +84,6 @@ JSON 出力とその形式は、`.model.json` セレクターを使用してペ�
 >
 > この JSON は、`.tidy` セレクターを使用して、人間が読みやすいように&#x200B;**整えられた**（フォーマットされた）形で出力できます。
 > * [http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json](http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json)
-
 
 ## 次の手順
 

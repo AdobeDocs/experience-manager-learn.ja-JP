@@ -3,18 +3,18 @@ title: AEM SPA エディターと React の基本を学ぶ
 description: WKND SPA を使用して、Adobe Experience Manager（AEM）で編集可能な最初の React 単一ページアプリケーション（SPA）を作成します。AEM の SPA Editor で React JS フレームワークを使用して SPA を作成する方法について学習します。このマルチパートチュートリアルでは、架空のライフスタイルブランドである WKND 向けの React アプリケーションの実装について説明します。このチュートリアルでは、SPA のエンドツーエンドの作成と AEM との統合について説明します。
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5912
+jira: KT-5912
 thumbnail: 5912-spa-react.jpg
 feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 100%
