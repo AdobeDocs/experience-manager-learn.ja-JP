@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '287'
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '281'
 ht-degree: 100%
 
 ---
@@ -37,6 +38,7 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
    * 大きなフォームを開発する場合は、フォームフラグメントを考慮する必要があります。フォームフラグメントの遅延読み込みを有効にして読み込み時間を短縮
    * **dataModel**
       * 適切なデータモデルへのアダプティブフォームの関連付けをお勧めします
+
    * **オブジェクトイベント**
       * オブジェクトの表示に関連するコードは、常にそのオブジェクトの表示イベントに配置する必要があります。
    * **スクリプト**

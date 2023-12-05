@@ -2,21 +2,19 @@
 title: ビルドとデプロイメント
 description: Adobe Cloud Manager は、AEM as a Cloud Service へのコード構築とデプロイメントを容易にします。ビルドプロセスの手順中にエラーが発生し、解決のためのアクションが必要になる場合があります。 このガイドでは、デプロイメントでの一般的なエラーと、それらへの最適なアプローチ方法について説明します。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5434
 thumbnail: kt-5424.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 694
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2523'
-ht-degree: 100%
+source-wordcount: '2476'
+ht-degree: 99%
 
 ---
 
@@ -135,7 +133,7 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 このエラーを防ぐには、AEM as a Cloud Service 環境のアップデートが使用可能な場合は常に、次のビルドまたはデプロイの一部としてアップデートを含め、アプリケーションコードベースでコアコンポーネントのバージョンを繰り上げた後に必ずアップデートを含めます。
 
 + __症状：__
-イメージのビルド手順が失敗し、特定のバージョン範囲で `com.adobe.cq.wcm.core.components...` パッケージを `core` プロジェクトで読み込めなかったというエラーレポートが表示されます。
+画像の作成手順が失敗し、 `com.adobe.cq.wcm.core.components...` 特定のバージョン範囲のパッケージを、 `core` プロジェクト。
 
   ```
   [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.

@@ -1,10 +1,7 @@
 ---
 title: Adobe Cloud Manager の使用 - アクティビティ
 description: Cloud Manager では、プログラムのアクティビティの表示を統合し、実稼動環境と非実稼動環境の両方ですべての CI/CD Pipeline 実行を一覧表示できます。これにより、ユーザーは現在進行中のパイプラインを表示し、以前のデプロイを確認できます。
-topics: Administration
-audience: administrator
 doc-type: feature video
-activity: use
 version: Cloud Service
 jira: KT-6874
 thumbnail: 26319.jpg
@@ -13,9 +10,10 @@ feature: Cloud Manager, Code Deployment
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 82a9d00f-abe6-4600-92b1-41b5f0b5e352
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 62
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '102'
 ht-degree: 100%
 
 ---

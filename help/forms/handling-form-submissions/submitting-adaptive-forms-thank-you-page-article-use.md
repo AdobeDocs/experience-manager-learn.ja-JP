@@ -1,14 +1,8 @@
 ---
 title: 「ありがとうございます」ページへの送信
-seo-title: Submitting To Thank You Page
 description: アダプティブフォーム送信時の「ありがとうございます」ページの表示
-seo-description: Display a thank you page on submitting Adaptive Form
-uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
 feature: Adaptive Forms
-topics: developing
-audience: implementer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
 topic: Development
@@ -16,9 +10,10 @@ role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '260'
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '251'
 ht-degree: 100%
 
 ---

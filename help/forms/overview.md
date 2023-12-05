@@ -5,9 +5,10 @@ topic: Development
 role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 96ff44c4b9806205682ab305d391614f92bb2536
-workflow-type: ht
-source-wordcount: '297'
+duration: 98
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '277'
 ht-degree: 100%
 
 ---
@@ -21,16 +22,13 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作�
 ## 新機能
 
 * **[フォームデータモデルサービスを起動する手順でのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-
-   *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
+  *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
 
 * **[インタラクティブ通信ドキュメント内の複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
-
-   *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
+  *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
 
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *特定のフォームに関連付けられていないワークフローモデルの作成*
+  *特定のフォームに関連付けられていないワークフローモデルの作成*
 
 </div>
 
@@ -96,10 +94,10 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作�
 
 ## その他のリソース
 
-* [AEM Sites 作成ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
+* [AEM Sites オーサリングドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
 * [AEM Sites 開発ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=ja)
 * [AEM Sites 管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=ja)
-* [AEM Sites デプロイドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=ja)
+* [AEM Sites 導入ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=ja)
 * [AEM as a Cloud Service のチュートリアル](/help/cloud-service/overview.md)
 * [AEM Assets のチュートリアル](/help/assets/overview.md)
 * [AEM Forms のチュートリアル](/help/forms/overview.md)

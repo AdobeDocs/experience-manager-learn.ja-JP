@@ -7,10 +7,11 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 700
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 100%
+source-wordcount: '2658'
+ht-degree: 99%
 
 ---
 
@@ -57,10 +58,10 @@ Dynamic Media Classic ソリューションのワークフローは、次の 3 �
 - **現在のフォルダーにある、ベースが同じアセット名を拡張子に関わらず上書き**。
 置換画像を元の画像と同じフォルダーにアップロードする必要がありますが、ファイル名の拡張子は元の画像と異なることができます。例えば、chair.tif は chair.jpg を置き換えます。
 
-- **任意のフォルダーにあるベース名と拡張子が同じファイルを上書き**。
+- **任意のフォルダでベース名と拡張子が同じファイルを上書き**.
 置換画像のファイル名拡張子が元の画像と同じである必要があります（例えば、chair.jpg は chair.tif ではなく chair.jpg を置き換える必要があります）。 ただし、置換画像を、元の画像と別のフォルダーにアップロードできます。更新された画像は新しいフォルダーにあり、元の場所のファイルはなくなります。
 
-- **任意のフォルダーでベース名が同じファイルを拡張子に関わらず上書き**。
+- **任意のフォルダでベース名が同じファイルを上書き**.
 このオプションは、最も包括的な置換ルールです。 置換画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置換することができます。元のファイルが別のフォルダーにある場合、置換画像は、アップロード先の新しいフォルダーに存在します。
 
 詳しくは、[画像を上書きオプション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=ja#using-the-overwrite-images-option)を参照してください。

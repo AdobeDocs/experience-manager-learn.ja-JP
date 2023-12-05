@@ -10,10 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 765
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 100%
+source-wordcount: '1622'
+ht-degree: 98%
 
 ---
 
@@ -364,17 +365,17 @@ Phase 3 finished
 >[!TAB macOS]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ その後、次を実行 `docker_run` ホスト IP アドレスを使用： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
 + コマンドプロンプトから `ipconfig` を実行し、ホストマシンの __IPv4 アドレス__&#x200B;を記録します。
-+ そして、この IP アドレスを使用して `docker_run` を実行します。 `$ bin\docker_run src <HOST IP>:4503 8080`
++ 次に、次を実行します。 `docker_run` この IP アドレスを使用する場合： `$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ 次に、ホスト IP アドレスを使って `docker_run` を実行します。 `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ その後、次を実行 `docker_run` ホスト IP アドレスを使用： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 

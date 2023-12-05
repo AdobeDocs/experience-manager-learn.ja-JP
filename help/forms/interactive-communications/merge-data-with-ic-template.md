@@ -2,19 +2,17 @@
 title: データの結合による印刷チャネルドキュメントの生成
 description: 入力ストリームに含まれるデータを結合して、印刷チャネルドキュメントを生成する方法を説明します
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '479'
+duration: 223
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '445'
 ht-degree: 100%
 
 ---
@@ -179,7 +177,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 * [ChangeOfBeneficiaryForm を開きます。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * 次に示すように、必ずアダプティブフォームが AEM のワークフローに送信されるように設定します。
-   ![画像](assets/generateic.PNG)
+  ![画像](assets/generateic.PNG)
 * [ワークフローモデルを設定します。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)プロセスステップとメール送信コンポーネントが、お使いの環境に応じて設定されていることを確認します。
 * [ChangeOfBeneficiaryForm をプレビューします。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 詳細情報を入力して送信します。
 * ワークフローが起動し、送信メールコンポーネントで指定された受信者に、IC 印刷チャネルドキュメントが添付ファイルとして送信されます。

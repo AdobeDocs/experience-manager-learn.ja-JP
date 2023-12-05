@@ -1,12 +1,8 @@
 ---
 title: AEM Forms のカスタムアセットタイプの一覧表示
 description: AEM Forms のカスタムアセットタイプの一覧表示（第 2 部）
-uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
 topic: Development
@@ -14,10 +10,11 @@ role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
 last-substantial-update: 2019-07-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '593'
-ht-degree: 100%
+duration: 184
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 97%
 
 ---
 
@@ -78,7 +75,7 @@ ht-degree: 100%
 
 ## 「検索とリスター」コンポーネントの設定 {#configure-search-and-lister-component}
 
-カスタムテンプレートを定義したら、このカスタムテンプレートを「検索とリスター」コンポーネントに関連付ける必要があります。 ブラウザーで[この URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html) を参照します。
+カスタムテンプレートを定義したら、このカスタムテンプレートを「検索とリスター」コンポーネントに関連付ける必要があります。 ブラウザーを指し示す [この url に](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 デザインモードに切り替え、許可されたコンポーネントグループに「検索とリスター」コンポーネントを含めるように段落システムを設定します。 Search &amp; Lister コンポーネントは、ドキュメントサービスグループの一部として含まれています。
 
@@ -108,7 +105,7 @@ ht-degree: 100%
 
 ![assettypes](assets/assettypes.png)
 
-これで Search &amp; Lister ポータルコンポーネントの設定が完了したので、次に Lister の動作を確認します。 ブラウザーで[この URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled) にアクセスしてください。結果は、次の画像のようになります。
+これで Search &amp; Lister ポータルコンポーネントの設定が完了したので、次に Lister の動作を確認します。 ブラウザーを指し示す [この url に](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 結果は、次の画像のようになります。
 
 >[!NOTE]
 >

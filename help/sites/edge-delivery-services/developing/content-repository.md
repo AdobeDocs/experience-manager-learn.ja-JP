@@ -10,15 +10,16 @@ doc-type: Technical Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14477, KT-14478
 thumbnail: 3425712.jpeg
-source-git-commit: 155790de88f6775a6624637dce3f98a018de4afc
+duration: 423
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '126'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# コンテンツリポジトリー
+# コンテンツリポジトリ
 
 Adobe Experience Manager(AEM) をEdge Delivery Servicesと統合するには、まず [SharePoint](#sharepoint) または [Google Drive](#google-drive) をコンテンツリポジトリとして追加します。 どちらのプラットフォームもAEMとうまく連携し、コンテンツの管理と配信をスムーズにおこなえます。 環境設定に合うものを選択し、手順に従ってAEMおよびEdge Delivery Servicesを使い始めます。
 

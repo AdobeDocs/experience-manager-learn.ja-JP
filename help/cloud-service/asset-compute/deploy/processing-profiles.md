@@ -2,21 +2,19 @@
 title: asset computeワーカーとAEM処理プロファイルの統合
 description: AEM as a Cloud Serviceは、AEM Assets処理プロファイルを介してAdobe I/O RuntimeにデプロイされるAsset computeワーカーと統合されます。 処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理するように Author サービスで設定され、アセットレンディションとしてワーカーによって生成されたファイルを保存します。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 179
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 16%
+source-wordcount: '622'
+ht-degree: 13%
 
 ---
 
@@ -30,13 +28,13 @@ asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディシ
 
 ![処理プロファイル](./assets/processing-profiles/new-processing-profile.png)
 
-1. AEM as a Cloud Service オーサーサービスに __AEM 管理者__&#x200B;としてログイン。これは、サンドボックス内で開発環境または環境を使用することをお勧めします。
+1. AEM as a Cloud Service Author サービスに as a としてログイン __AEM Administrator__. これは、サンドボックス内で開発環境または環境を使用することをお勧めします。
 1. __ツール／アセット／処理プロファイル__&#x200B;に移動します。
 1. タップ __作成__ ボタン
 1. 処理プロファイルに名前を付けます。 `WKND Asset Renditions`
 1. 「__カスタム__」タブをタップし、「__新規追加__」をタップします
 1. 新しいサービスを定義します
-   + __レンディション名:__ `Circle`
+   + __レンディション名：__ `Circle`
       + AEM Assetsでこのレンディションを識別するために使用されたレンディションのファイル名
    + __拡張子：__ `png`
       + 生成されるレンディションの拡張。 をに設定します。 `png` これは、作業者の web サービスがサポートするサポートされる出力形式で、円の切り取りの背後に透明な背景が作成されるためです。
@@ -55,7 +53,7 @@ asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディシ
          + 値：`0.10`
       + これらのキーと値のペアは、Asset computeワーカーに渡され、を通じて使用できます。 `rendition.instructions` JavaScript オブジェクト。
    + __MIME タイプ__
-      + __次を含む：__ `image/jpeg`、`image/png`、`image/gif`、`image/bmp`、`image/tiff`）を適用します
+      + __次を含む：__ `image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
          + ワーカーの npm モジュールで使用される MIME タイプは、これらの MIME タイプのみです。 このリストは、カスタムワーカーが処理する処理を制限します。
       + __除外：__ `Leave blank`
          + このサービス設定を使用して、これらの MIME タイプを持つアセットを決して処理しないでください。 この場合、使用するのは許可リストのみです。
@@ -75,7 +73,7 @@ asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディシ
 
    ![生成されたレンディション](./assets/processing-profiles/rendition.png)
 
-## 完了!
+## 終了！
 
 これで完了です。完了しました [チュートリアル](../overview.md) AEMas a Cloud ServiceのAsset computeマイクロサービスを拡張する方法について これで、AEMas a Cloud Serviceのオーサーサービスで使用するカスタムAsset computeワーカーを設定、開発、テスト、デバッグおよびデプロイする機能が必要になりました。
 

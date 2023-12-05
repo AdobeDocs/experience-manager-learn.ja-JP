@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
-source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
-workflow-type: ht
-source-wordcount: '357'
+exl-id: e116038f-7d86-41ee-b1b0-7b8569121d6d
+duration: 130
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '346'
 ht-degree: 100%
 
 ---
@@ -88,3 +90,4 @@ http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 >[!NOTE]
 >
 >AEM Forms のインストールが完了していることを確認します。すべてのバンドルがアクティブ状態である必要があります。
+>

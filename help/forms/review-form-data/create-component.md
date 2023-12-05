@@ -2,17 +2,17 @@
 title: フォームデータを一覧表示するコンポーネントを作成する
 description: 送信前にフォームデータを確認するための概要コンポーネントの作成に関するチュートリアル。
 feature: Adaptive Forms
-topics: development
-doc-type: tutorial
+doc-type: Tutorial
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2023-01-22T00:00:00Z
 exl-id: d537a80a-de61-4d43-bdef-f7d661c43dc8
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
-source-wordcount: '179'
+duration: 49
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '169'
 ht-degree: 100%
 
 ---

@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: b286c3e9-70df-46e8-b0bc-21599ab1ec06
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 61
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 100%
+source-wordcount: '201'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 100%
 ## XFA がスキーマに基づいていない
 
 * XDP を AEM Forms Designer で開きます。
-* ファイル／フォームのプロパティ／プレビューを選択します。。
+* ファイルをクリック |フォームのプロパティ |プレビュー。
 * 「プレビューデータを生成」をクリックします。
 * 「生成」をクリックします。
 * `form-data.xml` などの意味のあるファイル名を指定する

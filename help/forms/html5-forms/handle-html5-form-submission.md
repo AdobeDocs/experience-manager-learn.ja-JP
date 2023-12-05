@@ -2,10 +2,7 @@
 title: HTML5 フォームの送信処理
 description: HTML5 フォーム送信ハンドラーを作成
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 jira: KT-5269
 thumbnail: kt-5269.jpg
@@ -14,10 +11,11 @@ role: Developer
 level: Experienced
 exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 99
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 10%
+source-wordcount: '251'
+ht-degree: 7%
 
 ---
 
@@ -69,8 +67,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### Exclude パスにエントリを追加
 
-* [configMgr](http://localhost:4502/system/console/configMgr) に移動します。 
-
+* に移動します。 [configMgr](http://localhost:4502/system/console/configMgr).
 * _Adobe Granite CSRF フィルター_&#x200B;を検索します。
 * 「除外されたパス」セクションに次のエントリを追加します。
 * _/content/AemFormsSamples/handlehml5formsubmission_

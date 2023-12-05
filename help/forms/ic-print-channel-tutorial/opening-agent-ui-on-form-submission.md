@@ -1,14 +1,8 @@
 ---
 title: POST 送信時にエージェント UI を開く
-seo-title: Opening Agent UI On POST Submission
 description: これは、印刷チャネル用の最初のインタラクティブなコミュニケーションドキュメントを作成するためのマルチステップチュートリアルの第 11 部です。 ここでは、フォーム送信時にアドホック通信を作成するエージェント UI インターフェイスを起動します。
-seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will launch the agent ui interface for creating ad-hoc correspondence on form submission.
-uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 jira: KT-6168
 thumbnail: 40122.jpg
@@ -16,9 +10,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 199
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '322'
 ht-degree: 100%
 
 ---

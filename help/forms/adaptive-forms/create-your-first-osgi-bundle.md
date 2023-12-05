@@ -2,19 +2,17 @@
 title: AEM forms での最初の OSGi バンドルの作成
 description: Maven と Eclipse を使用して最初の OSGi バンドルを構築
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '820'
-ht-degree: 100%
+duration: 240
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '816'
+ht-degree: 99%
 
 ---
 
@@ -63,14 +61,14 @@ Maven `settings.xml` ファイルは、様々な方法で Maven の実行を設�
 
 ## Eclipse のインストール
 
-最新バージョンの [Eclipse](https://www.eclipse.org/downloads/) をインストールします
+最新バージョンの [eclipse](https://www.eclipse.org/downloads/) をインストールします
 
 ## 最初のプロジェクトの作成
 
 アーキタイプは、Maven プロジェクトテンプレートツールキットです。アーキタイプは、同じ種類の他のすべてのものの作成元となる、オリジナルのパターンまたはモデルとして定義されます。 アドビでは、一貫性のある Maven プロジェクト生成手段となるシステムを提供することを目指しているため、この名前は適切です。アーキタイプは、作成者がユーザー用の Maven プロジェクトテンプレートを作成する際に役立ち、ユーザーはこれを使用することで、これらのプロジェクトテンプレートのパラメーター化されたバージョンを生成できます。
 最初の Maven プロジェクトを作成するには、次の手順に従います。
 
-* C ドライブに `aemformsbundles` という名前の新しいフォルダーを作成します。
+* C ドライブで `aemformsbundles` という名前の新しいフォルダーを作成します。
 * コマンドプロンプトを開き、`c:\aemformsbundles` に移動します。
 * コマンドプロンプトで次のコマンドを実行します。
 * `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
@@ -95,9 +93,9 @@ Enter キーを押して、他のプロパティのデフォルト値をその�
 
 ## Eclipse への プロジェクトの読み込み
 
-**Eclipse** の起動 
+**Eclipse** を起動します
 
-ここに示すように、**ファイル／読み込み**&#x200B;に移動し、「**既存の Maven プロジェクト**」を選択します。
+ここに示すように、**ファイル／読み込み**&#x200B;に移動し、「**既存 Maven プロジェクト**」を選択します
 
 ![data-source](assets/import-mvn-project.JPG)
 
@@ -110,11 +108,11 @@ Enter キーを押して、他のプロパティのデフォルト値をその�
 >[!NOTE]
 >必要に応じて、適切なモジュールを読み込むように選択できます。 プロジェクトで Java コードを作成するだけの場合は、コアモジュールのみを選択して読み込みます。
 
-「**終了**」をクリックして読み込みを開始します。
+読み込み処理を開始するには「**終了**」をクリックします
 
-プロジェクトが Eclipse に読み込まれると、多数の `learningaemforms.xxxx` フォルダーが表示されます。
+プロジェクトが Eclipse に読み込まれると、複数の `learningaemforms.xxxx` フォルダーができます
 
-`learningaemforms.core` フォルダーの下にある `src/main/java` を展開します。  コードの大部分をこのフォルダー内に記述することになります。
+`learningaemforms.core` フォルダーの下にある `src/main/java` を展開します。コードの大部分をこのフォルダー内に記述することになります。
 
 ![data-source](assets/learning-core.JPG)
 

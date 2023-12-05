@@ -2,21 +2,19 @@
 title: Asset Compute ワーカーの開発
 description: Asset computeワーカーは、Asset computeプロジェクトの中核となるもので、アセットで実行された作業を実行（編成）して新しいレンディションを作成するカスタム機能を提供します。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6282
 thumbnail: KT-6282.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 652
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 5%
+source-wordcount: '1386'
+ht-degree: 4%
 
 ---
 
@@ -340,7 +338,7 @@ class RenditionInstructionsError extends ClientError {
    }
    ```
 
-1. 「__実行__」をタップして、 レンディションが生成されるのを待ちます。
+1. タップ __実行__ レンディションが生成されるのを待ちます。
 1. この「__レンディション__」セクションでは、生成されたレンディションのプレビューが表示されます。レンディションのプレビューをタップして、レンディション全体をダウンロードします。
 
    ![デフォルトの PNG レンディション](./assets/worker/default-rendition.png)

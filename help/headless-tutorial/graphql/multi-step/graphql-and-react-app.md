@@ -10,10 +10,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 611
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 100%
+source-wordcount: '1181'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +33,7 @@ _この章の IDE スクリーンショットは、[Visual Studio Code](https://
 
 次のソフトウェアがインストールされている必要があります。
 
-- [Node.js v18](https://nodejs.org/ja/en)
+- [Node.js v18](https://nodejs.org/ja)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目的
@@ -496,7 +497,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 内部の仕組み
 
-ブラウザーの&#x200B;**開発者ツール**／**ネットワーク**&#x200B;と `all-teams` リクエストの&#x200B;_フィルター_&#x200B;を開きます。GraphQL API リクエスト `/graphql/execute.json/my-project/all-teams` は `http://localhost:3000` に対して実行され、`REACT_APP_HOST_URI` の値（例：`<https://publish-pxxx-exxx.adobeaemcloud.com`）に対しては実行&#x200B;**されない**&#x200B;ことがわかります。リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
+ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象： `all-teams` リクエスト。 GraphQL API リクエストに関する注意 `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI`例： `<https://publish-pxxx-exxx.adobeaemcloud.com`. リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
 
 
 ![プロキシを介した GraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

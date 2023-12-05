@@ -10,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 711
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2213'
 ht-degree: 54%
 
 ---
@@ -90,7 +91,7 @@ AEM SPA Editor JS SDK を使用して、AngularコンポーネントをAdobe Exp
 
    `text` および `richText` は、SPA コンポーネントに公開される追加のプロパティです。
 
-### テキスト コンポーネントを検査する
+### Inspect Text コンポーネント
 
 1. 新しいターミナルを開き、 `ui.frontend` フォルダーをプロジェクト内に配置します。 実行 `npm install` その後 `npm start` を起動します。 **webpack dev server**:
 

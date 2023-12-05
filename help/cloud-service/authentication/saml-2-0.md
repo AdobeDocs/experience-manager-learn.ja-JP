@@ -10,9 +10,10 @@ jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 2511
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '3123'
+source-wordcount: '3137'
 ht-degree: 100%
 
 ---

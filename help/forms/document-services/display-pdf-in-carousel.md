@@ -9,10 +9,11 @@ level: Experienced
 jira: KT-10292
 exl-id: c1d248c3-8208-476e-b0ae-cab25575cd6a
 last-substantial-update: 2021-10-12T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 92
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 100%
+source-wordcount: '320'
+ht-degree: 95%
 
 ---
 
@@ -53,7 +54,7 @@ pdf-carousel コンポーネントを設定します（下のスクリーンシ�
 
 1. [パッケージマネージャーを使用](http://localhost:4502/crx/packmgr/index.jsp)して、[クライアントライブラリ](assets/pdf-carousel-client-lib.zip)をローカルの AEM インスタンスに読み込みます。
 1. [パッケージマネージャーを使用](http://localhost:4502/crx/packmgr/index.jsp)して、[PDF カルーセルコンポーネント](assets/pdf-carousel-component.zip)をローカルの AEM インスタンスに読み込みます。
-1. [パッケージマネージャーを使用](assets/adaptive-form-pdf-carousel.zip)して、[アダプティブフォーム](http://localhost:4502/crx/packmgr/index.jsp)をローカルの AEM インスタンスに読み込みます。
+1. [アダプティブフォームの読み込み](assets/adaptive-form-pdf-carousel.zip) をローカルのAEMインスタンスに追加します。 [パッケージマネージャーの使用](http://localhost:4502/crx/packmgr/index.jsp)
 1. [アセットファイルのアップロードリンクを使用](http://localhost:4502/assets.html/content/dam)して、[表示するサンプルの PDF](assets/pdf-carousel-sample-documents.zip) をローカルの AEM インスタンスに読み込みます。
 1. [アダプティブフォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 1. 「レビュー」タブにドキュメントへのタブを付けます。 カルーセルコンポーネントに 3 つの PDF ドキュメントが表示されます。

@@ -11,9 +11,10 @@ thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 975
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '233'
 ht-degree: 100%
 
 ---
@@ -49,7 +50,7 @@ AEM のサイトマップは、[Sling マッピング](https://sling.apache.org/
 
 ### サイトマップスケジューラーの OSGi 設定
 
-（[cron 式](http://www.cronmaker.com／)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
+（[cron 式](http://www.cronmaker.com/)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 

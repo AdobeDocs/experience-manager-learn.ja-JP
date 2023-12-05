@@ -13,16 +13,17 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 75ffd84a-62b1-480f-b05f-3664f54bb171
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 43
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 68%
+source-wordcount: '138'
+ht-degree: 57%
 
 ---
 
 # jQuery と Handlebars を使用したフィルタリング
 
-を使用する JavaScript アプリを使用してデータをフィルタリングするAEMヘッドレスGraphQL API 機能を調べる [jQuery](https://jquery.com/) および [Handlebars](https://handlebarsjs.com/). この アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
+を使用する JavaScript アプリを使用してデータをフィルタリングするAEMヘッドレスGraphQL API 機能を調べる [jQuery](https://jquery.com/) および [Handlebars](https://handlebarsjs.com/). このアプリは、アクティビティタイプでフィルタリング可能な WKND アドベンチャのリストを作成します。
 
 このコードは、Adobeの [JavaScript 用AEMヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 永続化されたGraphQLクエリを呼び出す。 このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
 

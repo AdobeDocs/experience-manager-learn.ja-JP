@@ -11,9 +11,10 @@ thumbnail: KT-10798.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 203
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '437'
 ht-degree: 100%
 
 ---

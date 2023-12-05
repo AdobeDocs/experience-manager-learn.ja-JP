@@ -1,22 +1,18 @@
 ---
 title: 印刷チャネルドキュメント用の 2 列レイアウトの作成
-seo-title: Creating two column layouts for print channel documents
 description: 印刷チャネルドキュメントの 2 列レイアウトを作成する
-seo-description: Create 2 column layouts for print channel document
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 416e3401-ba9f-4da3-8b07-2d39f9128571
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 64
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -27,9 +23,9 @@ ht-degree: 0%
 
 AEM Forms Designer を使用して 2 列のレイアウトを作成する際の大まかな手順を次に示します。
 
-* 1 ページ目のマスターページに 2 つのコンテンツ領域を作成
+* 1 ページ目のマスターページに 2 つのコンテンツ領域を作成する
 * 2 つのコンテンツ領域に「leftcolumn」と「rightcolumn」という名前を付けます。
-* 1 つのコンテンツ領域（デフォルト）を持つ 2 つ目のマスターページを作成します
+* 1 つのコンテンツ領域（デフォルト）を持つ 2 つ目のマスターページを作成します。
 * 「ページ編集」タブ（名称未設定サブフォーム）（1 ページ目）と（名称未設定サブフォーム）(page2) を選択し、下のスクリーンショットに示すように、プロパティを設定します。
 
 ![page1](assets/untitledsubform_paginationproperties.gif)

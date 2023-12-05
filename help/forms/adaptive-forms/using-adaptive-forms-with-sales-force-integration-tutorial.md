@@ -2,16 +2,16 @@
 title: AEM Forms 6.3 および 6.4 での Salesforce を使用したデータソースの設定
 description: フォームデータモデルを使用した AEM Forms と Salesforce の統合
 feature: Adaptive Forms, Form Data Model
-topics: integrations
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '892'
+duration: 232
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '816'
 ht-degree: 100%
 
 ---
@@ -93,6 +93,7 @@ SFDC でリードオブジェクトを作成する POST サービスを含める
       * 名前：CreateLeadInSalesForce
       * タイトル：CreateLeadInSalesForce
       * サービスタイプ：RESTful サービス
+
    * 「次へ」をクリックします。
    * Swagger ソース：ファイル
    * 前の手順でダウンロードした Swagger ファイルを参照して選択します。
@@ -104,7 +105,6 @@ SFDC でリードオブジェクトを作成する POST サービスを含める
    * 認証範囲：** api chatter_api full id openid refresh_token visualforce web**
    * 認証ハンドラ：認証ベアラー
    * 「OAuth に接続」ボタンをクリックします。エラーが発生した場合は、上記の手順ですべての情報が正しく入力されていることを確認してください。
-
 
 SalesForce を使用するデータソースを作成したら、作成したデータソースを使用してフォームデータ統合を作成できます。これに関するドキュメントリンクについては、[こちら](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/create-form-data-models.html)を参照してください。
 

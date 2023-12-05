@@ -9,9 +9,10 @@ role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '279'
+duration: 226
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '261'
 ht-degree: 100%
 
 ---
@@ -25,7 +26,7 @@ AEM Forms 6.4 以降では、フォームデータモデルを AEM ワークフ�
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 * [setvalue バンドルをダウンロードしデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、メタデータプロパティを設定するカスタム OSGi バンドルです。
->!![NOTE]AEM Forms 6.5 以降では、[ここで説明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)されているように、この機能は標準で提供されています。
+>AEM Forms 6.5 以降では、[ここで説明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)されているように、この機能は標準で提供されています。
 
 *  [こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=ja)の説明に従って、SampleRest.war ファイルを使用して Tomcat をセットアップします。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは 200～800 の乱数になります。
 

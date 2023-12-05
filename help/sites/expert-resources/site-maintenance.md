@@ -4,14 +4,14 @@ description: 管理者、作成者、開発者のどれに該当しようと、�
 role: Admin
 level: Beginner, Intermediate
 topic: Administration
-audience: author, marketer, developer
 feature: Learn From Your Peers
 jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
-workflow-type: ht
-source-wordcount: '1084'
-ht-degree: 100%
+duration: 266
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '998'
+ht-degree: 99%
 
 ---
 
@@ -59,7 +59,7 @@ AEM のアセットが削除されると、基になっているデータスト�
 
 ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。
 
-#### [監査ログメンテナンス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html?lang=ja
+#### [監査ログのメンテナンス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
 
 監査ログの対象となる AEM イベントが発生すると、多くのアーカイブデータが生成されます。このデータは、レプリケーション、アセットのアップロード、およびその他のシステムアクティビティによって、短期間で増大する可能性があります。
 

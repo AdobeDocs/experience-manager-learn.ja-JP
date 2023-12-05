@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '457'
+exl-id: d7887e2e-c2d4-4f0c-b117-ba7c41ea539a
+duration: 147
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '432'
 ht-degree: 100%
 
 ---
@@ -20,7 +22,7 @@ ht-degree: 100%
 この記事では、xdp フラグメントを使用して PDF ファイルを生成する際に、出力サービスを使用します。 メインの xdp とフラグメントは crx リポジトリに存在します。 AEM のファイルシステムフォルダー構造を模倣することが重要です。 例えば、xdp の fragments フォルダーでフラグメントを使用する場合は、AEM のベースフォルダーに **fragments** というフォルダーを作成する必要があります。ベースフォルダーにはベース xdp テンプレートが格納されます。例えば、ファイルシステムに次の構造がある場合
 * c:\xdptemplates - これには、ベースの xdp テンプレートが含まれます
 * c:\xdptemplates\fragments - このフォルダーにはフラグメントが含まれ、メインテンプレートは以下に示すようにフラグメントを参照します。
-   ![fragment-xdp](assets/survey-fragment.png)。
+  ![fragment-xdp](assets/survey-fragment.png)。
 * フォルダー xdpdocuments には、ベーステンプレートと **fragments** フォルダー内のフラグメントが含まれます。
 
 [フォームとドキュメント UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) を使用して、必要な構造を作成できます。
@@ -71,7 +73,7 @@ out.println("Document genreated and saved to " + filePath);
 **パッケージをインストールした後、Adobe Granite CSRF フィルターの次の URL を許可リストに加える必要があります。**
 
 1. 上記のパスを許可リストに加えるには、下記の手順に従ってください。
-1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
+1. [configMgr にログインします](http://localhost:4502/system/console/configMgr)。
 1. Adobe Granite CSRF フィルターを検索します。
 1. 除外されたセクションに次のパスを追加して、保存します。
 1. /content/AemFormsSamples/usingfragments

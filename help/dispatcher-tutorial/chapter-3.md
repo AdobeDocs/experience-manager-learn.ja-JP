@@ -1,5 +1,5 @@
 ---
-title: 「第 3 章 - 高度な Dispatcher キャッシュのトピック」
+title: 第 3 章 — Dispatcher の高度なキャッシュに関するトピック
 description: これは、AEM のキャッシュに関して 3 部にわたるシリーズの第 3 部です。第 1 部と第 2 部では、Dispatcher のプレーン HTTP キャッシュとその制限事項について説明しました。第 3 部では、そうした制限を克服する方法に関するいくつかの案について説明します。
 feature: Dispatcher
 topic: Architecture
@@ -7,10 +7,11 @@ role: Architect
 level: Intermediate
 doc-type: Tutorial
 exl-id: 7c7df08d-02a7-4548-96c0-98e27bcbc49b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1674
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '6187'
-ht-degree: 100%
+source-wordcount: '6172'
+ht-degree: 99%
 
 ---
 
@@ -267,7 +268,7 @@ Dispatcher の前に（短い）TTL ベースのキャッシュのレイヤー�
 
 #### 参照
 
-* [ACS Commons http キャッシュ](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+* [ACS Commons http Cache](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
 * [Ehcache キャッシュフレームワーク](https://www.ehcache.org)
 
 ### 基本用語

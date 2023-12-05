@@ -5,14 +5,15 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 1756ba04a39f65655618288e19cbaefb1bbda38d
-workflow-type: ht
-source-wordcount: '500'
-ht-degree: 100%
+duration: 211
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 99%
 
 ---
 
-# Cloud 5 シーズン 2
+# クラウド 5 シーズン 2
 
 >[!VIDEO](https://video.tv.adobe.com/v/346567?quality=12&learn=on)
 

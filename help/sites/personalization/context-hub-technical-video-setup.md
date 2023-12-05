@@ -1,6 +1,6 @@
 ---
 title: AEM Sites を使用したパーソナライズ機能のための ContextHub のセットアップ
-description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。このページでは、AEM サイトページに Context Hub を追加する方法について説明します。
+description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーを表します。 このページでは、AEMサイトページに Context Hub を追加する方法について説明します。
 feature: Context Hub
 version: 6.4, 6.5
 topic: Personalization
@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 doc-type: Technical Video
 exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 385
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 100%
+source-wordcount: '383'
+ht-degree: 93%
 
 ---
 

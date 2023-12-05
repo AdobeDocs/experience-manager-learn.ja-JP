@@ -7,10 +7,11 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1644
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '6260'
-ht-degree: 100%
+source-wordcount: '6219'
+ht-degree: 99%
 
 ---
 
@@ -353,11 +354,11 @@ Image Server にプッシュされた変更を確認するには、公開を実�
 
 プリセット名の両側にドル記号（$）が付いた画像プリセットとは異なり、パラメーターには、先頭に 1 つのドル記号が付きます。このドル記号を付けることが重要です。
 
-**正しい形式：**
+**正しい構文：**
 
 `$text=46-inch LCD HDTV`
 
-**間違った形式：**
+**誤った構文：**
 
 `$text$=46-inch LCD HDTV`
 

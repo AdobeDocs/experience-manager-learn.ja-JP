@@ -1,6 +1,6 @@
 ---
 title: PDFG サービスでアプリケーションサーバーのトランザクションタイムアウトを変更する方法
-description: PDF ジェネレーターのアプリケーションサーバーのトランザクションタイムアウトを変更するための手順
+description: PDF Generator のアプリケーションサーバーのトランザクションタイムアウトを変更するための手順
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -9,10 +9,11 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: ec190f18-1ab8-4fac-adec-3b64caee290a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 93
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '59'
+ht-degree: 100%
 
 ---
 

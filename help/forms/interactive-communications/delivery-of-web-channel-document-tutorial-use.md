@@ -2,17 +2,16 @@
 title: インタラクティブ通信ドキュメントの配信 - Web チャネル AEM Forms
 description: メール内のリンク経由での web チャネルドキュメントの配信
 feature: Interactive Communication
-audience: developer
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '277'
+duration: 85
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '279'
 ht-degree: 100%
 
 ---

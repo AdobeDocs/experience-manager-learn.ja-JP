@@ -1,20 +1,16 @@
 ---
 title: HTM5 フォーム送信で AEM ワークフローをトリガーする - PDF 送信を処理
-seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: オフラインモードでのモバイルフォームへの入力の継続とモバイルフォームの送信による AEM ワークフローのトリガー
-seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
-workflow-type: ht
+duration: 182
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 100%
 

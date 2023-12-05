@@ -2,21 +2,19 @@
 title: Developer Console
 description: AEM as a Cloud Service には、デバッグに役立つ、実行中の AEM サービスの様々な詳細を表示する Developer Console が環境ごとに用意されています。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5433
 thumbnail: kt-5433.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 388
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 100%
+source-wordcount: '1408'
+ht-degree: 99%
 
 ---
 
@@ -167,7 +165,7 @@ Java パッケージを使用すると、未解決の読み込みやスクリプ
 
 ## クエリ
 
-「クエリ」タブは、AEM での検索クエリの実行内容および方法に関するインサイトを提供します。この機能は、[AEM SDK ローカルクイックスタートのツール／クエリパフォーマンス](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)コンソールと同じです。
+「クエリ」タブは、AEM での検索クエリの実行内容および方法に関するインサイトを提供します。この機能は、  [AEM SDK のローカルクイックスタートのツール/クエリパフォーマンス](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) コンソール。
 
 「クエリ」タブは、特定のポッドが選択されている場合にのみ機能します。これは、そのポッドのクエリパフォーマンス web コンソールを開くので、開発者が AEM サービスにログインするためのアクセス権を持っている必要があるからです。
 

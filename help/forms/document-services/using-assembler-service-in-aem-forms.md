@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '207'
+duration: 121
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '192'
 ht-degree: 100%
 
 ---
@@ -123,4 +124,3 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 > * 必ず PDF ファイルのみをドラッグ&amp;ドロップしてください。
 >
 >
-

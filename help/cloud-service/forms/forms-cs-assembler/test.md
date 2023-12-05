@@ -8,9 +8,10 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '270'
+duration: 80
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '256'
 ht-degree: 100%
 
 ---
@@ -45,6 +46,6 @@ ht-degree: 100%
 
 
 >[!NOTE]
-> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを通過するには、必ず [AEM のテクニカルアカウントユーザーに適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=ja#configure-access-in-aem)を付与します。
+> 初めて java プログラムを実行すると、HTTP 403 エラーが発生します。 これを解決するには、必ず [AEM のテクニカルアカウントユーザーに適切な権限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=ja#configure-access-in-aem)を付与する必要があります。
 
-このコースでは **AEM Forms ユーザー**&#x200B;の役割が使用されています。
+このコースでは、**AEM Forms ユーザー**&#x200B;の役割を使用しました。

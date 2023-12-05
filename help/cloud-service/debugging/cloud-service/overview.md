@@ -2,20 +2,18 @@
 title: デバッグAEM as a Cloud Service
 description: セルフサービスで拡張性の高いクラウドインフラストラクチャを使用すると、AEMの開発者は、AEMas a Cloud Serviceの様々なファセットを理解し、デバッグする方法を理解し、ビルドとデプロイから、実行中のAEMアプリケーションの詳細の取得に至るまで理解する必要があります。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5346
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 26%
+ht-degree: 23%
 
 ---
 
@@ -39,7 +37,7 @@ Adobe Cloud Manager のパイプラインは、AEM as a Cloud Serviceにデプ�
 
 開発者コンソールは、AEM as a Cloud Serviceでのアプリケーションの認識方法と機能を理解するのに役立つ、様々な情報とAEMas a Cloud Service環境の概要を提供します。
 
-[Developer Console での AEM as a Cloud Service のデバッグ](./developer-console.md)
+[開発者コンソールでas a Cloud ServiceしたAEMのデバッグ](./developer-console.md)
 
 ## リポジトリブラウザー
 

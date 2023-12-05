@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
-workflow-type: ht
-source-wordcount: '157'
+exl-id: 07a1a9fc-7224-4e2d-8b6d-d935b1125653
+duration: 45
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '144'
 ht-degree: 100%
 
 ---
@@ -24,5 +26,3 @@ Day CQ Mail Service を設定します。 SMTP を正しく設定する必要が
 [フォームをプレビューします。](http://localhost:4502/content/dam/formsanddocuments/co-operators/accountopeningform/jcr:content?wcmmode=disabled)
 詳細を入力し、1 つ以上の投資ファンドを選択し、フォームを送信します。
 ウェルカムキットへのリンクが記載されたメールが届きます。
-
-

@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
-workflow-type: ht
-source-wordcount: '364'
+exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
+duration: 95
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '360'
 ht-degree: 100%
 
 ---
@@ -66,9 +68,3 @@ cq:formParameters ノードのプロパティに注意してください。
 ![from-parameters-properties](assets/form-parameters-properties.png)
 
 プロパティ PROCESS の値は、ワークフローコンポーネントに関連付けられる Java コードを示します。
-
-
-
-
-
-

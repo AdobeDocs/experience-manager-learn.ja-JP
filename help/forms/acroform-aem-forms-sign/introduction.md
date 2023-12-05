@@ -2,16 +2,14 @@
 title: Acroforms と AEM Forms の連携
 description: Acroform を使用したアダプティブ フォームの作成と、データをマージして PDF の取得に関して、順を追って説明するチュートリアル。データを結合した PDF は、Acrobat Sign を使用した署名用に送信することができます。
 feature: adaptive-forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.5
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
-source-wordcount: '257'
+duration: 69
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '248'
 ht-degree: 100%
 
 ---

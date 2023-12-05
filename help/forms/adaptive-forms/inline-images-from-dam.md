@@ -2,7 +2,6 @@
 title: アダプティブフォームでの DAM 画像のインライン表示
 description: アダプティブフォームでの DAM 画像のインライン表示
 feature: Adaptive Forms
-topics: development
 version: 6.4,6.5
 topic: Development
 role: Developer
@@ -10,9 +9,11 @@ level: Experienced
 last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
-workflow-type: ht
-source-wordcount: '210'
+exl-id: 339eb16e-8ad8-4b98-939c-b4b5fd04d67e
+duration: 92
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '200'
 ht-degree: 100%
 
 ---

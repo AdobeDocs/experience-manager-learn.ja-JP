@@ -7,9 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 734
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '983'
 ht-degree: 100%
 
 ---

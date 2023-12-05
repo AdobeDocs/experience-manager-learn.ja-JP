@@ -1,6 +1,6 @@
 ---
 title: Windows セットアップ時のマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
-description: Windows セットアップ時の複数ユーザー PDF ジェネレーターに関する問題をトラブルシューティングします。
+description: Windows セットアップ時の複数ユーザー PDF Generator に関する問題をトラブルシューティングします。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: 2fddb3a9-570c-4b50-a685-4287a1ddafe1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%

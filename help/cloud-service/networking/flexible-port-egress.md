@@ -1,6 +1,6 @@
 ---
 title: フレキシブルポートエグレス
-description: フレキシブルポートエグレスをセットアップし使用して、AEM as a Cloud Service から外部サービスへの外部接続をサポートする方法について説明します。
+description: 柔軟なポート出力を設定して使用し、AEMas a Cloud Serviceから外部サービスへの外部接続をサポートする方法について説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -9,10 +9,11 @@ level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 946
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 96%
+source-wordcount: '1060'
+ht-degree: 93%
 
 ---
 
@@ -160,7 +161,7 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
 
 フレキシブルポートエグレスプロキシを有効にすると、AEM コードおよび設定でそれらを使用して外部サービスを呼び出すことができます。外部呼び出しには、AEM での処理方法が 2 種類あります。
 
-1. 外部サービスへの HTTP／HTTPS 呼び出し（非標準ポート）
+1. 非標準ポート上の外部サービスへの HTTP/HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対して行われる HTTP／HTTPS 呼び出しが含まれます。
 1. 外部サービスへの HTTP／HTTPS 以外の呼び出し
    + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP／HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。

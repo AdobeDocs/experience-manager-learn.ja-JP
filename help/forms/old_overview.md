@@ -4,9 +4,10 @@ description: 初心者から AEM Forms の経験豊富なデベロッパー向�
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
-workflow-type: ht
-source-wordcount: '516'
+duration: 152
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '405'
 ht-degree: 100%
 
 ---
@@ -18,16 +19,13 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作�
 ## 新機能
 
 * **[フォームデータモデルサービスを起動する手順でのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-
-   *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
+  *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
 
 * **[インタラクティブ通信ドキュメント内の複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
-
-   *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
+  *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
 
 * **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *特定のフォームに関連付けられていないワークフローモデルの作成*
+  *特定のフォームに関連付けられていないワークフローモデルの作成*
 
 ## スタッフのおすすめ
 

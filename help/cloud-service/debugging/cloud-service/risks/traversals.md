@@ -1,7 +1,6 @@
 ---
 title: AEM as a Cloud Service でのトラバーサルの警告
 description: AEM as a Cloud Service でのトラバーサルの警告を軽減する方法を説明します。
-topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
@@ -11,9 +10,10 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '715'
 ht-degree: 100%
 
 ---

@@ -3,8 +3,6 @@ title: SPA の統合 | AEM SPA Editor と Angular の概要
 description: Angular で記述された単一ページアプリケーション（SPA）のソースコードを、Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。Angular の CLI ツールなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 feature: SPA Editor
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-5310
 thumbnail: 5310-spa-angular.jpg
 topic: SPA
@@ -12,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 760
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2045'
 ht-degree: 99%
 
 ---

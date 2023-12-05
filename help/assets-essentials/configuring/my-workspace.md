@@ -1,6 +1,6 @@
 ---
 title: Assets Essentials マイワークスペース
-description: マイワークスペースのユーザー設定可能なウィジェットを使用して、作業効率を高める方法を説明します。
+description: My Workspace のユーザーが設定可能なウィジェットを使用して、より効率的に作業する方法を説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -11,10 +11,11 @@ jira: KT-11800
 thumbnail: 3413809.jpeg
 doc-type: Feature Video
 exl-id: da9363f3-43a9-4396-b8e8-15267fd7a689
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 154
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 100%
+ht-degree: 64%
 
 ---
 

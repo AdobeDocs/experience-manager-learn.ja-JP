@@ -1,7 +1,6 @@
 ---
 title: 完全な web ページエクスペリエンスのパーソナライゼーション
 description: Adobe Target を使用して AEM web サイトのページを新しいページにリダイレクトする Target アクティビティの作成方法を説明します。
-topics: integrations, authoring, personalization, activity, offers
 jira: KT-6353
 thumbnail: 6353-personalization-web-page.jpg
 topic: Integrations
@@ -12,9 +11,10 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 126
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '460'
 ht-degree: 100%
 
 ---

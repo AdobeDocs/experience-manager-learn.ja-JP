@@ -1,30 +1,26 @@
 ---
 title: HTM5 フォーム送信でのトリガーAEMワークフロー — カスタムプロファイルの作成
-seo-title: Trigger AEM Workflow on HTML5 Form Submission
-description: モバイルフォームをオフラインモードで入力し続け、モバイルフォームをトリガーAEMワークフローに送信します
-seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+description: オフラインモードでのモバイルフォームへの入力の継続とモバイルフォームの送信による AEM ワークフローのトリガー
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+duration: 151
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 0%
+source-wordcount: '301'
+ht-degree: 5%
 
 ---
 
 # カスタムプロファイルを作成
 
-ここでは、 [カスタムプロファイル。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDP をHTMLとしてレンダリングします。 デフォルトのプロファイルは、XDP のをHTMLとしてレンダリングするために初期設定で提供されます。 これは、Mobile Forms Rendition サービスのカスタマイズバージョンを表します。 Mobile Form Rendition サービスを使用して、Mobile Formsの外観、動作およびインタラクションをカスタマイズできます。 カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。 次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
+ここでは、 [カスタムプロファイル。](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDP をHTMLとしてレンダリングします。 デフォルトのプロファイルは、XDP のをHTMLとしてレンダリングするために初期設定で提供されます。 これは、Mobile Forms Rendition サービスのカスタマイズバージョンを表します。 Mobile Forms Rendition サービスを使用して、Mobile Formsの外観、動作およびインタラクションをカスタマイズできます。 カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。 次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
 
-を使用してフォームデータを取得する `formBridge` JavaScript API。 我々は、 `getDataXML()` メソッド：
+を使用してフォームデータを取得する `formBridge` JavaScript API。 我々は、を利用する `getDataXML()` メソッド：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});

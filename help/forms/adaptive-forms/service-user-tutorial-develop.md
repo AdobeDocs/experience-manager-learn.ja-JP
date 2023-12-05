@@ -7,10 +7,11 @@ role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
 last-substantial-update: 2020-09-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 187
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 2%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 2%
 
 この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します
 
-以前のバージョンのAdobe Experience Manager(AEM) では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。 AEM 6.3 では、管理リソースリゾルバーの使用は廃止されました。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
+以前のバージョンのAdobe Experience Manager(AEM) では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。 AEM 6.3 では、管理リソースリゾルバーの使用は非推奨（廃止予定）となっています。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
 
 詳細情報 [AEMでのサービスユーザーの作成と使用](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
@@ -28,7 +29,7 @@ ht-degree: 2%
 1. 「管理者」としてログイン
 1. 「ユーザー管理」をクリックします。
 1. 「システムユーザーを作成」をクリックします。
-1. ユーザー ID タイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します
+1. ユーザー ID タイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します。
 1. [configMgr を開きます。](http://localhost:4502/system/console/configMgr)
 1. を検索 _Apache Sling Service User Mapper Service_ をクリックして、プロパティを開きます。
 1. 次をクリック： *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
@@ -54,7 +55,7 @@ ht-degree: 2%
    1. ユーザー「 data 」を検索します。 これは、前の手順で作成したのと同じシステムユーザーです。
    1. ユーザーをダブルクリックし、「権限」タブをクリックします。
    1. 「読み取り」アクセス権を「コンテンツ」フォルダーに付与します。
-   1. サービスユーザーを使用して/content フォルダーにアクセスするには、次のコードを使用します
+   1. サービスユーザーを使用して/content フォルダーにアクセスするには、次のコードを使用します。
 
 
 

@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: 1471929f-d269-4adc-88ad-2ad3682305e1
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '400'
+duration: 105
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '362'
 ht-degree: 100%
 
 ---
@@ -34,7 +35,7 @@ AEM Forms を使用してドキュメントを認証するには、次の手順�
 * **fd-service ユーザを検索するには、結果ページをスクロールして、すべてのユーザを読み込む必要があります**。
 * fd-service ユーザをダブルクリックして、ユーザ設定ウィンドウを開きます。
 * 「秘密鍵をキーストアファイルから追加」をクリックします。証明書に固有のエイリアスとパスワードを指定します。
-   ![add-certificate](assets/adding-certificate-keystore.PNG)
+  ![add-certificate](assets/adding-certificate-keystore.PNG)
 * 変更を保存します。
 
 ## OSGi サービスの作成
@@ -55,13 +56,12 @@ AEM Forms を使用してドキュメントを認証するには、次の手順�
 * [カスタムドキュメントサービスバンドル](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)をダウンロードしインストールします。
 * [サービスユーザーバンドルを使用した開発](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)をダウンロードしインストールします。
 * [Apache Sling Service User Mapper Service に次のエントリが追加されていることを確認します](http://localhost:4502/system/console/configMgr)。
-
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**（以下のスクリーンショットを参照）
-   ![User-Mapper](assets/user-mapper-service.PNG)
+  **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**（以下のスクリーンショットを参照）
+  ![User-Mapper](assets/user-mapper-service.PNG)
 * [サンプルのアダプティブフォームを読み込みます。](assets/certify-pdf-af.zip)
 * [カスタム送信を読み込みインストールします。](assets/custom-submit-certify.zip)
 * [アダプティブフォームを開きます](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)。
 * 認証が必要な PDF ドキュメントをアップロードします。
-   **オプション** - ドキュメントの認証に使用する署名フィールドを指定します。
+  **オプション** - ドキュメントの認証に使用する署名フィールドを指定します。
 * 送信をクリックします。
 * 認証済みの PDF が返されます。

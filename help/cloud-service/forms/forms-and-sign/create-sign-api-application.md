@@ -13,15 +13,16 @@ thumbnail: 332436.jpg
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 113
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '77'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
 # Acrobat Sign API アプリケーションの作成
 
-Acrobat Sign プラットフォームと統合するには、Acrobat Sign 上で API アプリケーションを作成する必要があります。API アプリケーションは、クライアントアプリケーションの代表として、Acrobat Sign プラットフォームとやり取りします。API アプリケーションは、顧客ドメインまたはパートナードメインで作成できます。。
+Acrobat Sign プラットフォームと統合するには、Acrobat Sign 上で API アプリケーションを作成する必要があります。API アプリケーションは、クライアントアプリケーションの代表として、Acrobat Sign プラットフォームとやり取りします。API アプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: 第 2 章 - Dispatcher インフラストラクチャ
+title: 第 2 章 — Dispatcher インフラストラクチャ
 description: パブリッシュおよび Dispatcher のトポロジについて理解します。最も一般的なトポロジと設定について説明します。
 feature: Dispatcher
 topic: Architecture
@@ -7,10 +7,11 @@ role: Architect
 level: Beginner
 doc-type: Tutorial
 exl-id: a25b6f74-3686-40a9-a148-4dcafeda032f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 512
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 100%
+source-wordcount: '1882'
+ht-degree: 99%
 
 ---
 

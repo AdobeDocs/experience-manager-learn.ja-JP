@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
-workflow-type: ht
-source-wordcount: '158'
+exl-id: d23b51ba-1efb-4505-b5b3-44a02177e467
+duration: 44
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '140'
 ht-degree: 100%
 
 ---
@@ -30,7 +32,3 @@ ht-degree: 100%
 
 * [フォームをプレビューします](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled)。
 ダウンロードするニュースレターを 2 つ選択します。選択したニュースレターは 1 つの PDF に結合されて、返されます。
-
-
-
-

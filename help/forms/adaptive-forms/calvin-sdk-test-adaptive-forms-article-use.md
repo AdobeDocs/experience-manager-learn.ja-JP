@@ -3,16 +3,16 @@ title: AEM アダプティブフォームでの自動テストの使用
 description: Calvin SDK を使用したアダプティブフォームの自動テスト
 feature: Adaptive Forms
 doc-type: article
-activity: develop
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '443'
+duration: 142
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '436'
 ht-degree: 100%
 
 ---

@@ -2,10 +2,7 @@
 title: SPA コンポーネントの AEM コンポーネントへのマッピング | AEM SPA Editor と React の使用の手引き
 description: AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。標準搭載の AEM React コアコンポーネントの使用方法についても説明します。
 feature: SPA Editor
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-4854
 thumbnail: 4854-spa-react.jpg
 topic: SPA
@@ -13,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 657
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2123'
 ht-degree: 100%
 
 ---

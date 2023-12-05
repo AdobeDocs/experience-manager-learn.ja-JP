@@ -1,14 +1,8 @@
 ---
 title: 監視フォルダーを使用して印刷チャネルドキュメントを生成する
-seo-title: Generating Print Channel Documents Using Watched Folder
 description: これは、印刷チャネル用の最初のインタラクティブコミュニケーションドキュメントを作成するための。マルチステップチュートリアルの第 10 部です。 ここでは、監視フォルダーのメカニズムを使用して印刷チャネルドキュメントを生成します。
-seo-description: This is part 10 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will generate print channel documents using the watched folder mechanism.
-uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
@@ -16,9 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
-source-wordcount: '348'
+duration: 98
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '351'
 ht-degree: 100%
 
 ---

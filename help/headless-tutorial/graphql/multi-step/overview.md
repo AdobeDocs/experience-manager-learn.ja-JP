@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレスの基本を学ぶ（実践チュートリアル）- GraphQL
 description: AEM GraphQL API を使用してコンテンツを作成および公開する方法を説明するエンドツーエンドのチュートリアルです。
-doc-type: tutorial
+doc-type: Tutorial
 mini-toc-levels: 1
 jira: KT-6678
 thumbnail: KT-6678.jpg
@@ -11,9 +11,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 81
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '277'
 ht-degree: 100%
 
 ---

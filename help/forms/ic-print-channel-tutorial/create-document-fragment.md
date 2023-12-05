@@ -1,13 +1,8 @@
 ---
 title: ドキュメントフラグメントの作成
 description: これは、最初のインタラクティブな通信ドキュメントを作成するためのマルチステップのチュートリアルの 第 5 部です。   ここでは、受信者の名前とアドレスを格納するドキュメントフラグメントを作成します。
-seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
-uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 jira: KT-5958
@@ -16,9 +11,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 235
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '224'
 ht-degree: 100%
 
 ---

@@ -10,9 +10,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 3592
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1278'
 ht-degree: 100%
 
 ---
@@ -121,7 +122,7 @@ Homebrew を使用している場合は、以下の __Homebrew を使用して�
 
 ## Node.js （および npm）のインストール{#node-js}
 
-[Node.js](https://nodejs.org) は、AEM プロジェクトの __ui.frontend__ サブプロジェクトのフロントエンドアセットを操作するために使用される JavaScript ランタイム環境です。Node.js は [npm](https://www.npmjs.com／) と一緒に配布される、事実上の Node.js パッケージマネージャーで、JavaScript の依存関係の管理に使用されます。
+[Node.js](https://nodejs.org) は、AEM プロジェクトの __ui.frontend__ サブプロジェクトのフロントエンドアセットを操作するために使用される JavaScript ランタイム環境です。Node.js は [npm](https://www.npmjs.com/) と一緒に配布される、事実上の Node.js パッケージマネージャーで、JavaScript の依存関係の管理に使用されます。
 
 >[!BEGINTABS]
 

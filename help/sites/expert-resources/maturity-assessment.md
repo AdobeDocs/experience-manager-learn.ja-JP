@@ -1,15 +1,15 @@
 ---
 title: AEM Sites 成熟度評価
 description: このチェックリストは、AEM Sites インスタンスの成熟度を評価する際に回答する必要がある主な質問の概要を示します。
-audience: author, marketer, developer
 role: Admin
 level: Intermediate
 topic: Administration
 feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
-source-wordcount: '332'
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '308'
 ht-degree: 100%
 
 ---

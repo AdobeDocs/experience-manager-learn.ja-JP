@@ -9,9 +9,10 @@ role: Developer
 level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 259
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '257'
 ht-degree: 100%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 100%
 
 AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM ワークフローの一部として使用できるようになりました。 次のビデオでは、AEM ワークフローでフォームデータモデルステップを設定するのに必要な手順を説明しています。
 
->!![NOTE]このビデオで示される機能を使用するには、AEM Forms 6.5.1 が必要です。
+>このビデオで示される機能を使用するには、AEM Forms 6.5.1 が必要です。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=12&learn=on)
@@ -29,7 +30,7 @@ AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM �
 
 *  [こちら](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)の説明に従って、SampleRest.war ファイルを使用して Tomcat を設定します。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは、200 から 800 の間の乱数になります。
 
-* [ パッケージマネージャーを使用して AEM にアセットを読み込みます。](assets/aem65-loanapplication.zip)
+* [パッケージマネージャーを使用して AEM にアセットを読み込みます。](assets/aem65-loanapplication.zip)
 * パッケージの内容は次のとおりです。
 
    * FDM ステップを使用するワークフローモデル。

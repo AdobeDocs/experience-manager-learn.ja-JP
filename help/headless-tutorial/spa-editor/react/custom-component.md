@@ -2,7 +2,6 @@
 title: カスタム天気予報コンポーネントの作成 | AEM SPA Editor と React の使用の手引き
 description: AEM SPA Editor で使用するカスタム天気予報コンポーネントを作成する方法について説明します。オーサーダイアログと Sling モデルを開発して JSON モデルを拡張し、カスタムコンポーネントを設定する方法について説明します。Open Weather API と React Open Weather コンポーネントを使用します。
 feature: SPA Editor
-topics: development
 version: Cloud Service
 jira: KT-5878
 thumbnail: 5878-spa-react.jpg
@@ -11,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 472
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1105'
 ht-degree: 100%
 
 ---

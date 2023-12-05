@@ -10,10 +10,11 @@ doc-type: Article
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 564
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 100%
+source-wordcount: '1726'
+ht-degree: 99%
 
 ---
 
@@ -197,7 +198,7 @@ OSGi コンポーネントプロパティでの定義や読み取りなど、低
 
 ### AEM Asset API
 
-* [`com.day.cq.dam.api` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) より [`com.adobe.granite.asset.api` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html) を優先します。
+* 優先 [`com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) over [`com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
 
    * `com.day.cq` Assets API には、AEM のアセット管理ユースケースに対するより相補的なツールが用意されているのに対して、
    * Granite Assets API では、低レベルのアセット管理ユースケース（バージョン、関係）をサポートしています。

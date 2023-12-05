@@ -1,14 +1,8 @@
 ---
 title: 外部サーバーへのアダプティブフォームの送信
-seo-title: Submitting Adaptive Form to External Server
 description: 外部サーバーで実行中の REST エンドポイントへのアダプティブフォームの送信
-seo-description: Submitting Adaptive Form to REST endpoint running on external server
-uuid: 1a46e206-6188-4096-816a-d59e9fb43263
 feature: Adaptive Forms
-topics: developing
-audience: implementer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
 topic: Development
@@ -16,9 +10,10 @@ role: Developer
 level: Beginner
 exl-id: 5363c3f7-9006-4430-b647-f3283a366a64
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '346'
+duration: 109
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '340'
 ht-degree: 100%
 
 ---

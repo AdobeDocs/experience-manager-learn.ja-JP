@@ -1,17 +1,16 @@
 ---
 title: 第 3 章 - イベントコンテンツフラグメントのオーサリング - コンテンツサービス
-seo-title: Getting Started with AEM Content Services - Chapter 3 - Authoring Event Content Fragments
 description: AEM ヘッドレスチュートリアルの第 3 章では、第 2 章で作成したコンテンツフラグメントモデルからイベントコンテンツフラグメントを作成およびオーサリングする方法について説明します。
-seo-description: Chapter 3 of the AEM Headless tutorial covers creating and authoring Event Content Fragments from the Content Fragment Model created in Chapter 2.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 46ef11a2-81bd-4ff7-b9ef-9f8cba52c6a8
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 205
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '423'
 ht-degree: 100%
 
 ---

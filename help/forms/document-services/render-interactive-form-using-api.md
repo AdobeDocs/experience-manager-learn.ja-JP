@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 106
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 1%
+source-wordcount: '341'
+ht-degree: 11%
 
 ---
 
@@ -41,21 +42,21 @@ interactivePDF = formsService.renderPDFForm("schengen.xdp", xmlData, renderOptio
 return interactivePDF;
 ```
 
-行 1:xdp テンプレートを含むフォルダーの場所
+行 1: xdp テンプレートを含むフォルダーの場所
 
-行 2-4:PDFFormRenderOptions を作成し、そのプロパティを設定します
+Line2-4: PDFFormRenderOptions を作成し、そのプロパティを設定します。
 
-行 7:FormsService の renderPDFForm サービス操作を使用してインタラクティブPDFを生成する
+7 行目： FormsService の renderPDFForm サービス操作を使用して Generate InteractivePDFを実行します
 
-行 11:生成されたインタラクティブ pdf を呼び出し元のアプリケーションに返します
+11 行目：生成されたインタラクティブ pdf を呼び出し元のアプリケーションに返します
 
-**システム上のサンプルパッケージをテストするには**
+**システム上のサンプルパッケージをテストするには：**
 1. [DevelopingWithServiceUserBundle をダウンロードしてインストールする](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Felix Web コンソールを使用して、DocumentServices サンプルバンドルをダウンロードしてインストールします。](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [AEMパッケージマネージャーを使用して、パッケージをダウンロードしてインストールします](assets/downloadinteractivepdffrommobileform.zip)
+1. [AEM パッケージマネージャーを使用して、パッケージをダウンロードしてインストールします。](assets/downloadinteractivepdffrommobileform.zip)
 
-1. [configMgr にログイン](http://localhost:4502/system/console/configMgr)
-1. AdobeGranite CSRF Filter を検索します。
+1. [configMgr にログインします](http://localhost:4502/system/console/configMgr)。
+1. Adobe Granite CSRF フィルターを検索します。
 1. 除外されたセクションに次のパスを追加して、保存します。
 1. /bin/generateinteractivepdf
 1. を検索 _Apache Sling Service User Mapper Service_ をクリックして、プロパティを開きます。
@@ -63,7 +64,7 @@ return interactivePDF;
       * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
    1. 「保存」をクリックします。
 1. [モバイルフォームを開く](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. いくつかのフィールドに入力し、 ***ダウンロードして入力….*** button
+1. いくつかのフィールドに入力し、 ***ダウンロードして入力....*** ボタン
 1. インタラクティブ pdf がローカルシステムにダウンロードされます
 
 

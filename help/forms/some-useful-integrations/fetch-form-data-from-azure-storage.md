@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 108
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 82%
+source-wordcount: '258'
+ht-degree: 75%
 
 ---
 
@@ -81,7 +82,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します。
+* OSGi 設定コンソールを使用して、Azure Portal の設定で適切な値を指定します。
 
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

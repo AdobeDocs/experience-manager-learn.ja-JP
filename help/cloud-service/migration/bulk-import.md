@@ -3,10 +3,7 @@ title: AEM Assets での一括読み込みの使用
 description: AEM as a Cloud Service の一括読み込みツールを使用すると、管理者は安全かつ効率的な方法でクラウドストレージ（Azure Blob Storage または Amazon S3）からアセットを一括で読み込むことができます。
 version: Cloud Service
 doc-type: technical-video
-topics: Migration
 feature: Migration
-activity: develop
-audience: developer
 jira: KT-6729
 thumbnail: 329680.jpg
 topic: Migration
@@ -14,10 +11,11 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 38
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 47%
+source-wordcount: '138'
+ht-degree: 50%
 
 ---
 

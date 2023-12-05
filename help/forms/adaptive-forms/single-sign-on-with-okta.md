@@ -8,9 +8,10 @@ role: Admin
 level: Experienced
 exl-id: 85c9b51e-92bb-4376-8684-57c9c3204b2f
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '756'
+duration: 203
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '733'
 ht-degree: 100%
 
 ---
@@ -39,9 +40,9 @@ Trust Store のパスワードは覚えておいてください。このパス�
 * [Global Trust Store](http://localhost:4502/libs/granite/security/content/truststore.html) に移動します。
 * 「CER ファイルから証明書を追加」をクリックします。OKTA から提供された IdP 証明書を追加し、「送信」をクリックします。
 
-   >[!NOTE]
-   >
-   >証明書はどのユーザーにもマッピングしないでください
+  >[!NOTE]
+  >
+  >証明書はどのユーザーにもマッピングしないでください
 
 Trust Store に証明書を追加すると、以下のスクリーンショットに示すように証明書エイリアスが取得されます。エイリアス名は異なる場合があります。
 

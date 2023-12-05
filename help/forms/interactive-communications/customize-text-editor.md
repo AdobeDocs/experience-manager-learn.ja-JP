@@ -1,10 +1,7 @@
 ---
 title: テキストエディターのカスタマイズ
-seo-title: Customize text editor
 description: テキストエディターのカスタマイズ方法について説明します。
-seo-description: Learn how to customize text editor.
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
@@ -13,10 +10,11 @@ feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 193
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 100%
+source-wordcount: '596'
+ht-degree: 96%
 
 ---
 
@@ -170,7 +168,7 @@ tbxeditor-config.xml ファイルを編集してフォントをカスタマイ�
       * フォントファミリーとサイズ、高さ、文字間隔および日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには、XML ファイルで次のエントリを作成する必要があります。 `<font>Sazanami Mincho Medium</font>`. アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
       また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 

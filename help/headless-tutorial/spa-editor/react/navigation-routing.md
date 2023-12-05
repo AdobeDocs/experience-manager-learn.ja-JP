@@ -2,10 +2,7 @@
 title: ナビゲーションとルーティングを追加 | AEM SPA Editor と React の使用の手引き
 description: SPA Editor SDK を使用して AEM ページにマッピングすることで、SPA の複数のビューをサポートする方法について説明します。 動的ナビゲーションは、React Router と React Core Components を使用して実装されています。
 feature: SPA Editor
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-4988
 thumbnail: 4988-spa-react.jpg
 topic: SPA
@@ -13,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 467
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1481'
 ht-degree: 100%
 
 ---
@@ -210,7 +208,7 @@ SPA Editor SDK を使用して AEM ページにマッピングすることで、
 
 ## React ルーティングの検査  {#react-routing}
 
-ナビゲーションとルーティングは [React Router](https://reactrouter.com/en/main) で実装されています。React Router は、React アプリケーション用のナビゲーションコンポーネントのコレクションです。[AEM React コアコアコンポーネント](https://github.com/adobe/aem-react-core-wcm-components-base)は、React Router の機能を使用して、前の手順で使用した&#x200B;**ナビゲーション**&#x200B;コンポーネントを実装します。
+ナビゲーションとルーティングは [React Router](https://reactrouter.com/ja/main) で実装されています。React Router は、React アプリケーション用のナビゲーションコンポーネントのコレクションです。[AEM React コアコアコンポーネント](https://github.com/adobe/aem-react-core-wcm-components-base)は、React Router の機能を使用して、前の手順で使用した&#x200B;**ナビゲーション**&#x200B;コンポーネントを実装します。
 
 次に、React Router が SPA とどのように統合されているかを調べ、React Router の[リンク](https://reactrouter.com/en/main/components/link)コンポーネントを使用して実験します。
 

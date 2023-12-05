@@ -10,9 +10,10 @@ jira: KT-4321
 thumbnail: 32192.jpg
 doc-type: Feature Video
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 433
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '119'
 ht-degree: 100%
 
 ---

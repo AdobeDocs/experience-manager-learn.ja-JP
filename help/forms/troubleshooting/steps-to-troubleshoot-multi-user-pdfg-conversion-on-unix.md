@@ -1,6 +1,6 @@
 ---
 title: UNIX セットアップでのマルチユーザー PDFG 変換に関する問題のトラブルシューティング手順
-description: UNIX セットアップでのマルチユーザーPDFジェネレーターに関する問題のトラブルシューティング。
+description: UNIX セットアップ時の複数ユーザー PDF Generator に関する問題のトラブルシューティング。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,10 +9,11 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: 35732b0f-a492-4d7f-b152-4a43d2c9b58b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 149
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '46'
+ht-degree: 100%
 
 ---
 

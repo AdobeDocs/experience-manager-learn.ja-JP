@@ -7,9 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
-workflow-type: ht
-source-wordcount: '106'
+exl-id: ba9e80af-aecd-4558-a236-798c823e695c
+duration: 151
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '105'
 ht-degree: 100%
 
 ---
@@ -161,7 +163,3 @@ public class CreatePage implements WorkflowProcess {
   }
 }
 ```
-
-
-
-
