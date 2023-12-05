@@ -235,7 +235,7 @@ SPA エディターのコンテキストでは、Sling モデルは [Sling Model
 
    >[!NOTE]
    >
-   完成した CustomComponentImpl.java は、[こちら](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で確認できます。
+   >完成した CustomComponentImpl.java は、[こちら](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)で確認できます。
 
 ## Angular コンポーネントの更新
 
