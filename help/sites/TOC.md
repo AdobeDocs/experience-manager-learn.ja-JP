@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
+source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 90%
+source-wordcount: '491'
+ht-degree: 85%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 90%
 
 + [概要](overview.md)
 + ドキュメントのオーサリング {#document-authoring}
+   + [概要](document-authoring/overview.md)
    + [セットアップ](document-authoring/set-up.md)
    + [プレビューと公開](document-authoring/preview-and-publish.md)
    + [ドキュメント構造](document-authoring/document-structure.md)
@@ -64,12 +65,13 @@ ht-degree: 90%
 + エクスペリエンスフラグメント {#experience-fragments}
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
-   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja){target=_blank}。
+   + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja){target=_blank}
 + Edge 配信サービス{#edge-delivery-services}
+   + [概要](./edge-delivery-services/overview.md)
    + 開発{#developing}
       + [前提条件](edge-delivery-services/developing/prerequisites.md)
       + [AEM boilerplate](edge-delivery-services/developing/aem-boilerplate.md)
-      + [コンテンツリポジトリー](edge-delivery-services/developing/content-repository.md)
+      + [コンテンツリポジトリ](edge-delivery-services/developing/content-repository.md)
       + [プレビューと公開](edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](edge-delivery-services/developing/sidekick.md)
       + [ドキュメント構造](edge-delivery-services/developing/document-structure.md)
@@ -80,7 +82,7 @@ ht-degree: 90%
 + 開発 {#developing}
    + [Edge 配信サービス](developing/edge-delivery-services.md)
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
-   + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}。
+   + [AEM Sitesの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja){target=_blank}
    + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja){target=_blank}
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
@@ -92,7 +94,7 @@ ht-degree: 90%
    + [ソーシャルメディア共有](developing/social-media-sharing-technical-video-use.md)
    + [コンポーネントアイコンのカスタマイズ](developing/component-icons-technical-video-develop.md)
 + パーソナライゼーション {#personalization}
-   + [Adobe Target との統合](https://helpx.adobe.com/jp/marketing-cloud/how-to/aem-target.html){target=_blank}。
+   + [Adobe Targetとの統合](https://helpx.adobe.com/jp/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [エクスペリエンスフラグメントと Adobe Target のセットアップ](personalization/experience-fragment-target-technical-video-setup.md)
    + [Adobe Target でのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [ContextHub のセットアップ](personalization/context-hub-technical-video-setup.md)
@@ -105,7 +107,7 @@ ht-degree: 90%
    + [サイトマップ](./seo/sitemaps.md)
 + 単一ページアプリケーション {#spa-editor}
    + [SPA エディターの使用](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja){target=_blank}。
+   + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja){target=_blank}
 + マルチサイト管理 {#multi-site-management}
    + [言語コピーの概要](./multi-site-management/language-copy-overview.md)
    + [ライブコピーとブループリント](./multi-site-management/live-copy-and-blueprint.md)
