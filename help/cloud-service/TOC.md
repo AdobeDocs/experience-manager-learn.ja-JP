@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 43c021b051806380b3211f2d7357555622217b91
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 97%
+source-wordcount: '1072'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 97%
       + [Experience Manager - ガバナンスおよびスタッフ配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Adobe Experience Manager でコンテンツベロシティを促進する方法](./introduction/drive-content-velocity-for-sites.md)
       + [AEM スタイルシステムによるコンテンツベロシティの促進](./introduction/accelerate-content-velocity-aem.md)
-+ Experience Cloud との統合{#integrations}
++ Experience Cloudの統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
 + 基盤となる技術 {#underlying-technology}
@@ -128,12 +128,15 @@ ht-degree: 97%
       + リスク{#risks}
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
-   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}。
+   + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}
 + キャッシュ{#caching}
    + [概要](./caching/overview.md)
    + [AEM パブリッシュサービス](./caching/publish.md)
    + [AEM オーサーサービス](./caching/author.md)
    + [CDN キャッシュヒット率分析](./caching/cdn-cache-hit-ratio-analysis.md)
+   + 方法{#how-to}
+      + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
+      + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
@@ -195,7 +198,7 @@ ht-degree: 97%
       + [アセットワークフロー移行ツール](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Cloud Acceleration Manager の操作](./migration/cloud-acceleration-manager/navigating.md)
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
-+ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}。
++ [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
 + Forms{#forms}
    + Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
       + [1 - はじめに](./forms/developing-for-cloud-service/getting-started.md)
@@ -330,7 +333,7 @@ ht-degree: 97%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
-   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}。
+   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja){target=_blank}
    + [SPA エディター（React）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja){target=_blank}
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
