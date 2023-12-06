@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f6491d04f7f23da75366904a7965103465d33f87
-workflow-type: ht
-source-wordcount: '403'
-ht-degree: 100%
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 97%
 
 ---
 
@@ -84,8 +84,9 @@ ht-degree: 100%
       + [Asset Share Commons アセットキット](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
-+ クリエイティブワークフローとの統合{#creative-workflows}
++ クリエイティブワークフロー{#creative-workflows}
    + [Adobe Express](./creative-workflows/adobe-express.md)
+   + [Adobe ExpressAEM Assetsアドオン](./creative-workflows/adobe-express-aem-assets-add-on.md)
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
    + [Adobe アセットリンク](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
