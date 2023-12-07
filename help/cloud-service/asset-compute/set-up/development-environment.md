@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
 duration: 140
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 6995b0221e381979aca0aeb540fe04d71b16eaae
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '459'
 ht-degree: 100%
 
 ---
@@ -40,7 +40,7 @@ Asset Compute マイクロサービスを拡張するには、ローカルの開
 1. 必要な npm モジュールと Adobe I/O CLI プラグインをコマンドラインからインストールします。
 
    ```
-   $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
+   $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
@@ -76,11 +76,8 @@ Asset Compute ワーカーは [Node.js](https://nodejs.org/) をベースにし�
 [Adobe I/O CLI をインストール](../../local-development-environment/development-tools.md#aio-cli)します。Adobe I/O CLI（__aio__）は、Adobe I/O テクノロジーの使用および同テクノロジーとのやり取りを容易にするコマンドライン（CLI）npm モジュールで、カスタム Asset Compute ワーカーの生成にもローカル開発にも使用されます。
 
 ```
-$ npm install -g @adobe/aio-cli@7.1.0
+$ npm install -g @adobe/aio-cli
 ```
-
-_Adobe I/O CLI バージョン 7.1.0 が必要です。現時点では、Adobe I/O CLI のこれ以降のバージョンはサポートされていません。_
-
 
 ## Adobe I/O CLI Asset Compute プラグインのインストール{#aio-asset-compute}
 
