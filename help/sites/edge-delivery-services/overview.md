@@ -10,10 +10,11 @@ jira: KT-14643
 doc-type: Catalog
 duration: 30
 last-substantial-update: 2023-05-12T00:00:00Z
-source-git-commit: d80a4187ab9d1e8fc69569af4a0454cdb9b4e009
+exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
+source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 24%
+source-wordcount: '329'
+ht-degree: 27%
 
 ---
 
@@ -347,4 +348,68 @@ ht-degree: 24%
         </div>
       </div>
     </div>
+    <!--Social Media Sharing -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Social Media Sharing" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/social-media-sharing.md" title="ソーシャルメディア共有"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                alt="ソーシャルメディア共有">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/social-media-sharing.md" title="ソーシャルメディア共有">ソーシャルメディア共有</a>
+            </p>
+            <p class="is-size-6">ソーシャルメディア共有用にコンテンツを最適化する方法を説明します。</p>
+            <a href="./how-to/social-media-sharing.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Delete a Page -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Deleting Pages" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/delete-page.md" title="ページの削除"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                alt="ページの削除">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/delete-page.md" title="ページの削除">ページの削除</a>
+            </p>
+            <p class="is-size-6">ページを削除する方法を説明します。</p>
+            <a href="./how-to/delete-page.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
