@@ -4,10 +4,10 @@ breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 100%
+source-wordcount: '224'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 100%
    + [AMS での IMS 認証について](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Adobe Cloud Manager について](./cloud-manager/understand-cloud-manager-for-aem.md)
-   + [Adobe Cloud Manager での CI/CD Pipeline の使用](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [CI／CD パイプライン](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [カスタム権限](./cloud-manager/cloud-permissions.md)
 + 開発 {#development}
    + [Sling Model Exporter の開発](./development/develop-sling-model-exporter.md)
    + [ローカル AEM 開発環境のセットアップ](./development/set-up-a-local-aem-development-environment.md)
