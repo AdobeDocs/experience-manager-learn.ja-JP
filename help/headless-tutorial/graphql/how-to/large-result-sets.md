@@ -12,10 +12,10 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 439
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: d7f3c5193cc53f050d24dd66705a3979fb710c36
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -177,7 +177,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### ページ分割された次の結果セット
 
-次の結果セットは、`after` パラメーターと前のクエリの `endCursor` 値を使用して取得できます。取得する結果がこれ以上ない場合、`hasNextPage` は `false` です。
+次の結果セットは、 `after` パラメーターと `endCursor` の値を指定します。 取得する結果がこれ以上ない場合、`hasNextPage` は `false` です。
 
 ##### クエリ変数
 
