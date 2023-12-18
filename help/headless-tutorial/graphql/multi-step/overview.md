@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 81
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 90c3ef479b289c9b319735fd28a1e39875c421a9
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 100%
+source-wordcount: '266'
+ht-degree: 81%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 100%
 
 ### AEM 環境
 
-このチュートリアルを完了するには、 AEM as a Cloud Service 環境への AEM 管理者アクセスをお勧めします。AEM as a Cloud Service 環境にアクセスできない場合は、[ローカル AEM as a Cloud Service クイックスタート SDK](/help/cloud-service/local-development-environment/aem-runtime.md) を使用することができます。ただし、コンテンツフラグメントのナビゲーションなど、一部の製品の UI 画面が異なることに注意する必要があります。
+このチュートリアルを完了するには、AEM管理者がAEM as a Cloud Service環境にアクセスできることをお勧めします。 AEMのas a Cloud Service環境にアクセスできない場合は、 [AEM Headless 体験版に登録する](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=ja) AEMヘッドレス機能の参照。
 
 ## それでは、始めましょう。
 
