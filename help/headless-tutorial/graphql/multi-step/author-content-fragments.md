@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 227
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 234c163a2936ca07bdf259038f1b22c4363fae3c
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 100%
+source-wordcount: '853'
+ht-degree: 92%
 
 ---
 
@@ -75,6 +75,10 @@ ht-degree: 100%
 
 
 ## コンテンツフラグメントの作成 {#create-content-fragment}
+
+>[!TIP]
+>
+>ローカルのAEM SDK ユーザーの場合： AEM Assets UI を利用して、以下に説明するコンテンツフラグメント UI の代わりに、コンテンツフラグメントを作成および作成します。 詳しい手順については、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=ja).
 
 次に、**チーム**&#x200B;および&#x200B;**人物**&#x200B;のモデルに基づいて、いくつかのコンテンツフラグメントが作成されます。
 
@@ -145,6 +149,10 @@ ht-degree: 100%
 1. 「**保存して閉じる**」をクリックして、チームアルファフラグメントへの変更を保存します。
 
 ## コンテンツフラグメントの公開
+
+>[!TIP]
+>
+>ローカルAEM SDK ユーザーの場合： AEM Assets UI を利用して、以下に説明するコンテンツフラグメント UI の代わりに、コンテンツフラグメントを公開します。 詳しい手順については、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
 
 レビューと検証が完了したら、作成した `Content Fragments` を公開します
 
