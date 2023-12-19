@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 95%
 
 ---
@@ -133,7 +133,7 @@ ht-degree: 95%
    + [概要](./caching/overview.md)
    + [AEM パブリッシュサービス](./caching/publish.md)
    + [AEM オーサーサービス](./caching/author.md)
-   + [CDN キャッシュヒット率分析](./caching/cdn-cache-hit-ratio-analysis.md)
+   + [CDN キャッシュヒット率の分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 方法{#how-to}
       + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
       + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
@@ -226,7 +226,7 @@ ht-degree: 95%
       + [資産パネルの設定](./forms/create-first-af/configure-assets-panel.md)
       + [開始パネルの設定](./forms/create-first-af/configure-start-panel.md)
       + [ツールバーの追加と設定](./forms/create-first-af/add-configure-toolbar.md)
-   + ヘッドレスフォームを使用したカスタム送信サービス {#custom-submit-headless-forms}
+   + ヘッドレスフォームを使用したカスタム送信サービス{#custom-submit-headless-forms}
       + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - 応答の表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
@@ -264,13 +264,17 @@ ht-degree: 95%
       + [OSGi 設定の作成](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [インデックスタグの作成](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [カスタム送信を作成](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+   + コアコンポーネントベースのフォームの事前入力{#prefill-core-component-based-form}
+      + [はじめに](./forms/prefill-core-component-form/introduction.md)
+      + [書き込み事前入力サービス](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [ソリューションをテスト](./forms/prefill-core-component-form/test-solution.md)
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
       + [Azure ストレージへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
       + [フォームへの事前入力](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [送信データのクエリ](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + フォーム入力の保存と再開 {#prefill-azure-storage}
+   + フォーム入力の保存と再開{#prefill-azure-storage}
       + [1 - はじめに](./forms/prefill-azure-storage/introduction.md)
       + [2 - ページコンポーネントの作成](./forms/prefill-azure-storage/page-component.md)
       + [3 - アダプティブフォームテンプレートの作成](./forms/prefill-azure-storage/associate-page-component.md)
