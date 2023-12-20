@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 95%
+source-wordcount: '1096'
+ht-degree: 94%
 
 ---
 
@@ -164,6 +164,11 @@ ht-degree: 95%
       + [設定方法](./security/traffic-filter-rules/how-to-setup.md)
       + [例と結果の分析](./security/traffic-filter-rules/examples-and-analysis.md)
       + [ベストプラクティス](./security/traffic-filter-rules/best-practices.md)
++ AEM Eventing{#aem-eventing}
+   + [概要](./eventing/overview.md)
+   + 例{#examples}
+      + [Webhook - AEMイベントの受信](./eventing/examples/webhook.md)
+      + [ジャーナリング — AEMイベントの読み込み](./eventing/examples/journaling.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
