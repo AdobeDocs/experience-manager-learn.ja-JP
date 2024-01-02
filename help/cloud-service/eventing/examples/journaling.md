@@ -9,11 +9,11 @@ level: Beginner
 doc-type: Tutorial
 duration: 0
 last-substantial-update: 2023-12-07T00:00:00Z
-jira: KT-14649
-thumbnail: KT-14649.jpeg
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+jira: KT-14734
+thumbnail: KT-14734.jpeg
+source-git-commit: 839d552199fe7d10a0cde4011bdfe8cf42cc8ec9
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -81,4 +81,6 @@ Adobeが提供する Web アプリケーションにアクセスするには、�
 
 ## その他のリソース
 
-- [ウェブフックのソースコードの問題](https://glitch.com/edit/#!/indigo-speckle-antler)
+- [ウェブフックのソースコードの問題](https://glitch.com/edit/#!/indigo-speckle-antler) は参照可能です。 これは、 [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) UI をレンダリングするコンポーネント。
+
+- [Adobe I/Oイベントジャーナル API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) は、イベントの最初、次、最後のバッチ、ページネーションなど、API に関する詳細情報を提供します。
