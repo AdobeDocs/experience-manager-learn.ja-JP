@@ -13,7 +13,7 @@ duration: 26
 source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 98%
 >title="コードのデプロイ"
 >abstract="Cloud Manager Git リポジトリと外部 Git リポジトリの統合および AEM as a Cloud Service へのプロジェクトのデプロイ"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=ja#cloud-manager" text="プロジェクトの結合"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Cloud Manager でのコードのデプロイ"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=ja" text="Cloud Manager でのコードのデプロイ"
 
 Cloud Manager Git リポジトリと外部 Git リポジトリの統合および AEM as a Cloud Service へのプロジェクトのデプロイ
 

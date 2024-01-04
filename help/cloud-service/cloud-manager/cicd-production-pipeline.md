@@ -14,7 +14,7 @@ duration: 423
 source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '147'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 97%
 >id="aemcloud_devops_prodpipeline"
 >title="CI／CD 実稼動パイプライン"
 >abstract="CI／CD 実稼動パイプラインの設定では、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーターおよびパフォーマンステストパラメーターを定義します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="コードのデプロイ"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="実稼動フェーズへのデプロイメント"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=ja" text="コードのデプロイ"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=ja" text="実稼動フェーズへのデプロイメント"
 
 ## 設定
 
