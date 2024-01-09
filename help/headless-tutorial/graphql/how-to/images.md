@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 449
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 100%
@@ -133,6 +133,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 React では、AEM Publish から web に最適化された画像を表示すると、次のようになります。
 
 ```jsx
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
@@ -147,6 +148,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 上記の例では単一サイズの画像を使用していますが、web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。レスポンシブ画像は、[img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)を使用して実装することができます。次のコードスニペットでは、`_dynamicUrl` をベースとして使用し、様々な幅のパラメーターを付加することで、様々なレスポンシブビューを実現する方法を示しています。`width` クエリパラメーターを使用できるだけでなく、クライアントが他のクエリパラメーターを追加して、必要に応じて画像アセットをさらに最適化することもできます。
 
 ```javascript
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 // Read the data from GraphQL response
