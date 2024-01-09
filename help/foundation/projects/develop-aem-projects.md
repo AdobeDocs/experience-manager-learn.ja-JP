@@ -1,6 +1,6 @@
 ---
 title: AEM でのプロジェクトの開発
-description: AEM プロジェクトの開発方法を説明する開発チュートリアルです。このチュートリアルでは、AEM 内で新規プロジェクトを作成して、コンテンツオーサリングのワークフローとタスクの管理に使用できるカスタムプロジェクトテンプレートを作成します。
+description: AEMプロジェクト用の開発方法を示す開発チュートリアルです。 このチュートリアルでは、AEM 内で新規プロジェクトを作成して、コンテンツオーサリングのワークフローとタスクの管理に使用できるカスタムプロジェクトテンプレートを作成します。
 version: 6.4, 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
@@ -9,16 +9,16 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1753
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: b9b8dd9d815d7a0ef800635a74b030c50821b9df
 workflow-type: tm+mt
-source-wordcount: '4460'
-ht-degree: 100%
+source-wordcount: '4441'
+ht-degree: 83%
 
 ---
 
 # AEM でのプロジェクトの開発
 
-これは、[!DNL AEM Projects] の開発方法を説明する開発チュートリアルです。このチュートリアルでは、AEM 内で新規プロジェクトを作成して、コンテンツオーサリングのワークフローとタスクの管理に使用できるカスタムプロジェクトテンプレートを作成します。
+これは、の開発方法を示す開発チュートリアルです。 [!DNL AEM Projects]. このチュートリアルでは、AEM内でプロジェクトを作成して、コンテンツオーサリングワークフローとタスクを管理するために使用できるカスタムプロジェクトテンプレートを作成します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,9 +26,9 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-[[!DNL AEM Projects]](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/projects.html) は AEM の機能で、AEM Sites または Assets の実装の一環として、コンテンツ作成に関連するすべてのワークフローとタスクを簡単に管理およびグループ化できるように設計されています。
+[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) は AEM の機能で、AEM Sites または Assets の実装の一環として、コンテンツ作成に関連するすべてのワークフローとタスクを簡単に管理およびグループ化できるように設計されています。
 
-AEM プロジェクトには、複数の [OOTB プロジェクトテンプレート](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates)が付属しています。新規プロジェクトを作成する際に、作成者はこれらの使用可能なテンプレートから選択できます。独自のビジネス要件を持つ大規模な AEM 実装では、ニーズに合わせてカスタマイズされたカスタムプロジェクトテンプレートを作成する必要があります。カスタムプロジェクトテンプレートを作成することで、開発者はプロジェクトダッシュボードを設定し、カスタムワークフローに関連付けて、ビジネス上の役割をプロジェクト用に追加作成できます。ここでは、プロジェクトテンプレートの構造を概観し、サンプルテンプレートを作成します。
+AEM プロジェクトには、複数の [OOTB プロジェクトテンプレート](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)が付属しています。プロジェクトを作成する際に、作成者は使用可能なテンプレートから選択できます。 独自のビジネス要件を持つ大規模な AEM 実装では、ニーズに合わせてカスタマイズされたカスタムプロジェクトテンプレートを作成する必要があります。カスタムプロジェクトテンプレートを作成することで、開発者はプロジェクトダッシュボードを設定し、カスタムワークフローに関連付けて、ビジネス上の役割をプロジェクト用に追加作成できます。プロジェクトテンプレートの構造を見て、サンプルを作成します。
 
 ![カスタムプロジェクトカード](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,13 +39,13 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 * [完成済みのチュートリアルパッケージ](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-このチュートリアルでは、読者が [AEM の開発手法](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/the-basics.html)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)についてある程度理解していることを前提としています。取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)にのみデプロイするようにしてください。
+このチュートリアルでは、読者が [AEM の開発手法](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html)についてある程度理解していることを前提としています。取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html)にのみデプロイするようにしてください。
 
 ## プロジェクトテンプレートの構造
 
-プロジェクトテンプレートはソース管理下に置き、/apps 下のアプリケーションフォルダーの直下に配置してください。**&#42;/projects/templates/**&lt;my-template> という命名規則に沿ったサブフォルダーに置くのが理想です。この命名規則に従って配置することで、プロジェクトの作成時に作成者が新しいカスタムテンプレートを自動的に使用できるようになります。使用可能なプロジェクトテンプレートの設定は、**cq:allowedTemplates** プロパティによって **/content/projects/jcr:content** ノードに設定されます。デフォルトでは、次のような正規表現になります。**/(apps|libs)/.&#42;/projects/templates/.&#42;**
+プロジェクトテンプレートはソース管理下に置き、/apps 下のアプリケーションフォルダーの直下に配置してください。名前付け規則がのサブフォルダーに配置するのが理想的です。 **&#42;/projects/templates/**&lt;my-template>. この命名規則に従って配置することで、プロジェクトの作成時に作成者が新しいカスタムテンプレートを自動的に使用できるようになります。使用可能なプロジェクトテンプレートの設定は、**cq:allowedTemplates** プロパティによって **/content/projects/jcr:content** ノードに設定されます。デフォルトでは、次のような正規表現になります。**/(apps|libs)/.&#42;/projects/templates/.&#42;**
 
-プロジェクトテンプレートのルートノードには、**cq:Template** の **jcr:primaryType** があります。そのルートノードの直下に、**gadgets**、**roles**、**workflows** の 3 つのノードがあります。これらのノードはすべて **nt:unstructured** です。また、ルートノードの直下に、「プロジェクトを作成」ウィザードでテンプレートを選択するときに表示される thumbnail.png ファイルを配置することもできます。
+プロジェクトテンプレートのルートノードには、**cq:Template** の **jcr:primaryType** があります。のルートノードの下に、次の 3 つのノードがあります。 **ガジェット**, **役割**、および **workflows**. これらのノードはすべて **nt:unstructured** です。また、ルートノードの直下に、「プロジェクトを作成」ウィザードでテンプレートを選択するときに表示される thumbnail.png ファイルを配置することもできます。
 
 完全なノード構造は次のとおりです。
 
@@ -69,15 +69,15 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 ### gadgets {#gadgets}
 
-このノードには追加のプロパティはありませんが、gadgets ノードの子は、新しいプロジェクトの作成時にプロジェクトのダッシュボードに表示されるプロジェクトタイルを制御します。 [プロジェクトタイル](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （ガジェットやポッドとも呼ばれます）は、プロジェクトのワークプレースに表示されるシンプルなカードです。 OOTB タイルの完全なリストは、**/libs/cq/gui/components/projects/admin/pod にあります。**プロジェクト所有者は、プロジェクトの作成後、いつでもタイルの追加や削除を行うことができます。
+このノードには追加のプロパティはありませんが、gadgets ノードの子は、新しいプロジェクトの作成時にプロジェクトのダッシュボードに表示されるプロジェクトタイルを制御します。 [プロジェクトタイル](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) （ガジェットやポッドとも呼ばれます）は、プロジェクトのワークプレースに表示されるシンプルなカードです。 OOTB タイルの完全なリストは、**/libs/cq/gui/components/projects/admin/pod にあります。**プロジェクト所有者は、プロジェクトの作成後、いつでもタイルの追加や削除を行うことができます。
 
 ### roles {#roles}
 
-すべてのプロジェクトには、[デフォルトの役割](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject)として、**監視者**、 **編集者**、**所有者**&#x200B;の 3 つがあります。roles ノードの直下に子ノードを追加すると、プロジェクトのビジネス固有の役割をテンプレートに追加できます。 そして、これらの役割を、プロジェクトに関連付けされている特定のワークフローに結び付けることができます。
+3 つあります [デフォルトの役割](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) すべてのプロジェクトに対して： **監視者**, **エディター**、および **所有者**. ロールノードの下に子ノードを追加すると、ビジネス固有のプロジェクトロールをテンプレートに追加できます。 そして、これらの役割を、プロジェクトに関連付けされている特定のワークフローに結び付けることができます。
 
 ### workflows {#workflows}
 
-カスタムプロジェクトテンプレートを作成する最も魅力的な理由の 1 つは、プロジェクトで使用可能なワークフローを設定できる点です。 これらは OOTB ワークフローでもカスタムワークフローでも構いません。 **workflows** ノードの直下には **models** ノード（これも `nt:unstructured`）が必要で、その直下の子ノードは使用可能なワークフローモデルを指定します。プロパティ**modelId **は、/etc/workflow 下のワークフローモデルとプロパティを指し、**wizard** は、ワークフローの開始時に使用されるダイアログを指します。 プロジェクトの大きな利点は、ワークフローの開始時にビジネス固有のメタデータを取得するカスタムダイアログ（ウィザード）を追加できることで、ワークフロー内でさらに多くのアクションを実行できます。
+カスタムプロジェクトテンプレートを作成する最も魅力的な理由の 1 つは、プロジェクトで使用可能なワークフローを設定できる点です。 これらは OOTB ワークフローでもカスタムワークフローでも構いません。 **workflows** ノードの直下には **models** ノード（これも `nt:unstructured`）が必要で、その直下の子ノードは使用可能なワークフローモデルを指定します。プロパティ**modelId **は、/etc/workflow 下のワークフローモデルとプロパティを指し、**wizard** は、ワークフローの開始時に使用されるダイアログを指します。 プロジェクトの大きな利点は、ワークフローの開始時にビジネス固有のメタデータをキャプチャするためのカスタムダイアログ（ウィザード）を追加できることで、ワークフロー内でさらに多くのアクションを実行できます。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,9 +90,9 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 ## プロジェクトテンプレートの作成 {#creating-project-template}
 
-主にノードをコピー／設定しているので、CRXDE Lite を使用します。 ローカルの AEM インスタンスで、[CRXDE Lite](http://localhost:4502/crx/de/index.jsp) を開きます。
+主にノードのコピー/設定を行うので、CRXDE Liteを使用します。 ローカルのAEMインスタンスで、を開きます。 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. まず、`/apps/&lt;your-app-folder&gt;` の直下に新しいフォルダーを作成して、名前を `projects` とします。その直下に別のフォルダーを作成して、名前を `templates` とします。
+1. まず、の下にフォルダーを作成します。 `/apps/&lt;your-app-folder&gt;` 名前付き `projects`. その直下に別のフォルダーを作成して、名前を `templates` とします。
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -100,7 +100,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
                                 + templates (nt:folder)
    ```
 
-1. 作業を容易にするために、既存のシンプルなプロジェクトテンプレートからカスタムテンプレートの作成を開始します。
+1. 作業を容易にするために、既存のシンプルなプロジェクトテンプレートからカスタムテンプレートを開始します。
 
    1. ノード **/libs/cq/core/content/projects/templates/default** をコピーして、手順 1 で作成した *templates* フォルダーの下にペーストします。
 
@@ -148,11 +148,11 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 1. プロジェクトテンプレートにカスタムの「承認者」役割を追加します。
 
-   1. プロジェクトテンプレート（authoring-project）ノードの直下に新しい **nt:unstructured** ノードを追加して、**roles** というラベルを付けます。
+   1. プロジェクトテンプレート (authoring-project) ノードの下に、新しい **nt:unstructured** ノードラベル付きの **役割**.
    1. 別の **nt:unstructured** ノードを、approvers というラベルを付けて、roles ノードの子として追加します。
    1. String プロパティ **jcr:title**=&quot;**Approvers**&quot;、**roleclass**=&quot;**owner**&quot;、**roleid**=&quot;**approvers**&quot; を追加します。
       1. approvers ノードの名前、および jcr:title と roleid には、（roleid が一意である限り）任意の文字列値を指定できます。
-      1. **roleclass** は、**owner**、**editor**、**observer** の [3 つの OOTB の役割](https://docs.adobe.com/docs/ja/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project)に基づいて、その役割に適用される権限を管理します。
+      1. **ロールクラス** は、 [OOTB の 3 つの役割](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html): **所有者**, **編集者**、および **監視者**.
       1. 一般に、カスタムの役割が管理の役割の色彩が強い場合、roleclass は **owner** にできます。フォトグラファーやデザイナーなど、オーサリング上のより具体的な役割の場合は、**editor** の roleclass で十分です。**owner** と **editor** の大きな違いは、プロジェクトの所有者はプロジェクトのプロパティを更新したり、新しいユーザーをプロジェクトに追加したりできる点です。
 
    ```shell
@@ -165,7 +165,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
                 - roleid = "approver"
    ```
 
-1. 「シンプルなプロジェクト」テンプレートをコピーすると、4 つの OOTB ワークフローが設定されます。workflows/models の直下の各ノードは、特定のワークフローと、そのワークフローの開始ダイアログウィザードを指しています。このチュートリアルの後半では、このプロジェクトのカスタムワークフローを作成します。ここでは、workflow/models の下のノードを削除します。
+1. 単純なプロジェクトテンプレートをコピーすると、4 つの OOTB ワークフローが設定されます。 workflows/models の直下の各ノードは、特定のワークフローと、そのワークフローの開始ダイアログウィザードを指しています。このチュートリアルの後半では、このプロジェクトのカスタムワークフローを作成します。現時点では、workflow/models の下のノードを削除します。
 
    ```shell
    ../projects/templates/authoring-project
@@ -176,10 +176,10 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
                - (remove ootb models)
    ```
 
-1. コンテンツ作成者がプロジェクトテンプレートを簡単に識別できるように、カスタムサムネールを追加できます。推奨サイズは 319 x 319 ピクセルです。
-   1. CRXDE Lite で、ガジェット、役割、ワークフローのノードの兄弟として、**thumbnail.png** という名前の新しいファイルを作成します。
-   1. 保存して、`jcr:content` ノードに移動し、`jcr:data` プロパティをダブルクリックします（「表示」をクリックしないでください）。
-      1. これにより、`jcr:data` ファイルを編集するダイアログが表示され、カスタムサムネールをアップロードできます。
+1. コンテンツ作成者がプロジェクトテンプレートを簡単に識別できるように、カスタムサムネールを追加できます。 推奨サイズは 319 x 319 ピクセルです。
+   1. CRXDE Liteで、という名前のガジェット、役割、ワークフローノードの兄弟としてファイルを作成します。 **thumbnail.png**.
+   1. 保存して、 `jcr:content` ノードに移動し、 `jcr:data` プロパティ（「表示」をクリックしないでください）。
+      1. これにより、編集を求めるメッセージが表示されます `jcr:data` ファイルダイアログに表示され、カスタムサムネールをアップロードできます。
 
    ```shell
    ../projects/templates/authoring-project
@@ -247,13 +247,13 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 ## カスタムプロジェクトテンプレートのテスト
 
-新しいプロジェクトを作成して、プロジェクトテンプレートをテストできるようになりました。
+次に、プロジェクトを作成して、プロジェクトテンプレートをテストできます。
 
 1. カスタムテンプレートが、プロジェクト作成用のオプションの 1 つとして表示されます。
 
    ![テンプレートを選択](./assets/develop-aem-projects/choose-template.png)
 
-1. カスタムテンプレートを選択したら、「次へ」をクリックし、プロジェクトメンバーに入力する際に、承認者の役割として追加できることに注意してください。
+1. カスタムテンプレートを選択した後、「次へ」をクリックし、プロジェクトメンバーに入力する際に、承認者の役割として追加できることに注意してください。
 
    ![承認](./assets/develop-aem-projects/user-approver.png)
 
@@ -264,7 +264,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 ## ワークフローを使用する理由
 
-従来、承認プロセスを中心とする AEM ワークフローは、参加者ワークフローステップを使用していました。 AEM インボックスには、タスクとワークフローに関する詳細が含まれており、AEM プロジェクトとの統合が強化されています。 これらの機能により、プロジェクト作成タスクプロセス手順の使用がより魅力的なオプションになります。
+従来、承認プロセスを中心とする AEM ワークフローは、参加者ワークフローステップを使用していました。 AEM Inbox には、タスクとワークフローに関する詳細が含まれており、AEM Projects との統合が強化されています。 これらの機能により、プロジェクト作成タスクプロセス手順の使用がより魅力的なオプションになります。
 
 ### タスクを実行する理由
 
@@ -278,41 +278,41 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 参加者ステップと同様に、タスクを動的に割り当てたり、ルーティングしたりすることができます。 タイトル、優先度などのタスクメタデータは、次のチュートリアルで説明するように、以前のアクションに基づいて動的に設定することもできます。
 
-タスクには参加者ステップよりもいくつかの利点がありますが、追加のオーバーヘッドが発生し、プロジェクトの外ではそれほど役に立ちません。これに加えて、タスクのすべての動的な動作は、独自の制限を持つ ecma スクリプトを使用してコーディングする必要があります。
+タスクには参加者ステップよりもいくつかの利点がありますが、追加のオーバーヘッドが発生し、プロジェクトの外ではそれほど役に立ちません。さらに、タスクのすべての動的な動作は、独自の制限を持つ ecma スクリプトを使用してコーディングする必要があります。
 
 ## サンプルユースケースの要件 {#goals-tutorial}
 
 ![ワークフロープロセスダイアグラム](./assets/develop-aem-projects/workflow-process-diagram.png)
 
-上の図は、サンプルの承認ワークフローの全体的な要件の概要を示しています。
+上の図に、サンプルの承認ワークフローの要件の概要を示します。
 
 最初のステップは、コンテンツの一部の編集を終了するタスクを作成することです。 ワークフローイニシエーターがこの最初のタスクの担当者を選択できるようにします。
 
 最初のタスクが完了すると、担当者はワークフローをルーティングする次の 3 つのオプションを使用できます。
 
-**通常**- 通常のルーティングでは、プロジェクトの承認者グループに割り当てられたタスク（レビューと承認の実行用）を作成します。 タスクの優先順位は標準で、期限は作成日から 5 日間です。
+**通常**- 通常のルーティングでは、プロジェクトの承認者グループに割り当てられたタスク（レビューと承認の実行用）を作成します。 タスクの優先順位は「標準」で、期限は作成日から 5 日間です。
 
-**緊急** - 緊急ルーティングは、プロジェクトの承認者グループに割り当てられたタスクも作成します。タスクの優先順位が高く、期限は 1 日だけです。
+**緊急** - 緊急ルーティングは、プロジェクトの承認者グループに割り当てられたタスクも作成します。タスクの優先順位が「高」で、期限は 1 日だけです。
 
 **スキップ** - このサンプルワークフローでは、最初の参加者には承認グループをスキップするオプションがあります。（これが「承認」ワークフローの目的を覆す可能性がありますが、追加のルーティング機能を説明することができます）
 
-承認者グループは、コンテンツを承認するか、再作業用に最初の担当者に返送することができます。 再作業用に返送された場合、新しいタスクが作成され、適切に「再作業用に返送」というラベルが付けられます。
+承認者グループは、コンテンツを承認するか、再作業のために最初の担当者に返送できます。 送り返される場合は、新しいタスクが作成され、適切なラベルで「再作業用に送り返し」が付けられます。
 
 ワークフローの最後のステップは、ページやアセットの ootb アクティベートプロセスステップを利用し、ペイロードを複製します。
 
 ## ワークフローモデルの作成
 
-1. AEM 開始メニューでツール／ワークフロー／モデルに移動します。右上隅の「作成」をクリックして、ワークフローモデルを新規作成します。
+1. AEM Start メニューで、ツール/ワークフロー/モデルに移動します。 右上隅の「作成」をクリックして、ワークフローモデルを作成します。
 
    新しいモデルに「コンテンツ承認ワークフロー」というタイトルを付け、URL 名に「content-approval-workflow」と入力します。
 
    ![ワークフロー作成ダイアログ](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [ワークフローの作成に関する詳細については、こちら](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/workflows-models.html)をお読みください。
+   [ワークフローの作成について詳しくは、こちらを参照してください。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 
-1. ベストプラクティスとして、カスタムワークフローは、 /etc/workflow/models の下の専用フォルダーにグループ化する必要があります。 CRXDE Lite で、/etc/workflow/models の下に、**「aem-guides」**&#x200B;という名前で、新しい&#x200B;**「nt:folder」**&#x200B;を作成します。サブフォルダーを追加すると、アップグレードまたはサービスパックのインストール中に、カスタムワークフローが誤って上書きされることがなくなります。
+1. ベストプラクティスとして、カスタムワークフローは、 /etc/workflow/models の下の専用フォルダーにグループ化する必要があります。 CRXDE Liteで、 **&#39;nt:folder&#39;** /etc/workflow/models の下で、次の名前を付けます。 **&quot;aem-guides&quot;**. サブフォルダーを追加することで、アップグレード時や Service Pack のインストール時にカスタムワークフローが誤って上書きされるのを防ぐことができます。
 
-   &#42;サブフォルダー全体がアップグレードやサービスパックによって上書きされる可能性もあるため、/etc/workflow/models/dam や /etc/workflow/models/projects などの ootb サブフォルダーの下にフォルダーやカスタムワークフローを配置しないことが重要です。
+   &#42;フォルダーまたはカスタムワークフローは、/etc/workflow/models/dam や/etc/workflow/models/projects のような ootb サブフォルダーの下に配置しないことが重要です。サブフォルダー全体がアップグレードやサービスパックによって上書きされる場合もあるからです。
 
    ![6.3 でのワークフローモデルの場所](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
@@ -320,16 +320,16 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
    >[!NOTE]
    >
-   >AEM 6.4 以降を使用している場合、ワークフローの場所が変更されています。詳しくは、[こちらを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >AEM 6.4 以降を使用している場合、ワークフローの場所が変更されています。詳しくは、[こちらを参照してください。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
-   AEM 6.4 以降を使用している場合、ワークフローモデルは `/conf/global/settings/workflow/models` の下に作成されます。/conf ディレクトリで上記の手順を繰り返し、`aem-guides` という名前のサブフォルダーを追加し、その下に `content-approval-workflow` を移動します。
+   AEM 6.4 以降を使用している場合、ワークフローモデルは `/conf/global/settings/workflow/models` の下に作成されます。上記の手順を/conf ディレクトリで繰り返し、という名前のサブフォルダーを追加します。 `aem-guides` をクリックし、 `content-approval-workflow` その下に
 
    ![最新のワークフロー定義の場所](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 6.4 以降のワークフローモデルの場所
 
 1. AEM 6.3 で導入されたのは、特定のワークフローにワークフローステージを追加する機能です。ステージは、「ワークフロー情報」タブのインボックスからユーザーに表示されます。ワークフローの現在のステージと、その前後のステージがユーザーに表示されます。
 
-   ステージを設定するには、サイドキックからページのプロパティダイアログを開きます。4 番目のタブには、「ステージ」というラベルが付いています。このワークフローの 3 つのステージを設定するには、以下の値を追加します。
+   ステージを設定するには、Sidekickからページのプロパティダイアログを開きます。 4 番目のタブには、「ステージ」というラベルが付いています。このワークフローの 3 つのステージを設定するには、以下の値を追加します。
 
    1. コンテンツの編集
    1. 承認
@@ -347,11 +347,11 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 1. プロジェクトタスクを作成ワークフロープロセスは、ワークフローのステップとしてタスクを作成するように設計されています。タスクを完了した後にのみ、ワークフローが前に進みます。 プロジェクトタスクを作成ステップの強力な側面は、ワークフローのメタデータ値を読み取り、それらを使用して動的にタスクを作成できる点です。
 
-   最初に、デフォルトで作成される参加者ステップを削除します。コンポーネントメニューのサイドキックから&#x200B;**「プロジェクト」**&#x200B;サブ見出しを展開し、**「プロジェクトタスクを作成」**&#x200B;をモデルにドラッグ＆ドロップします。
+   最初に、デフォルトで作成される参加者ステップを削除します。コンポーネントSidekickのメニューから、 **&quot;プロジェクト&quot;** 小見出しとドラッグ&amp;ドロップ **&quot;プロジェクトタスクを作成&quot;** をモデルに貼り付けます。
 
    「プロジェクトタスクを作成」ステップをダブルクリックして、ワークフローダイアログを開きます。以下のプロパティを設定します。
 
-   このタブは、すべてのワークフロープロセスステップで共通で、「タイトル」と「説明」を設定します（これらはエンドユーザーには表示されません）。 設定する重要なプロパティは、ワークフローステージをドロップダウンメニューから&#x200B;**「コンテンツを編集」**&#x200B;に設定することです。
+   このタブは、すべてのワークフロープロセスステップで共通で、「タイトル」と「説明」を設定します（これらはエンドユーザーには表示されません）。 設定する重要なプロパティは、ワークフローステージ ( ) です。 **&quot;コンテンツを編集&quot;** を選択します。
 
    ```shell
    Common Tab
@@ -372,7 +372,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
        Due In - Days = "2"
    ```
 
-   「ルーティング」タブは、ユーザーがタスクを完了するために使用できるアクションを指定できるオプションのダイアログです。これらのアクションは単なる文字列値であり、ワークフローのメタデータに保存されます。これらの値は、ワークフローの後半でスクリプトやプロセスステップで読み取り、ワークフローを動的に「ルーティング」することができます。[ワークフローの目標](#goals-tutorial)に基づいて、このタブに 3 つのアクションを追加します。
+   「ルーティング」タブは、ユーザーがタスクを完了するために使用できるアクションを指定できるオプションのダイアログです。これらのアクションは文字列値に過ぎず、ワークフローのメタデータに保存されます。 これらの値は、ワークフローの後半でスクリプトやプロセスステップで読み取り、ワークフローを動的に「ルーティング」することができます。実行するワークフロー目標に基づいて、このタブに次の 3 つのアクションを追加します。
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 1. 前の手順では、タスクを事前作成スクリプトを参照しました。ここで、ワークフローメタデータ値「**assignee**」の値に基づいてタスクの担当者を設定するスクリプトを作成します。**「assignee」**&#x200B;の値は、ワークフローがキックオフされたときに設定します。また、ワークフローのメタデータの&#x200B;**「taskPriority」** 値と **&quot;taskDueDate&quot; ** を読み取って、最初のタスクの有効期限が切れたときに動的に設定することで、タスクの優先度を動的に選択するワークフローメタデータを読み取ります。
 
-   組織のために、アプリフォルダーの下にフォルダーを作成して、すべてのプロジェクト関連スクリプト **/apps/aem-guides/projects-tasks/projects/scripts** を保持します。このフォルダーの下に、**「start-task-config.ecma」**&#x200B;という名前の新しいファイルを作成します。&#42;start-task-config.ecma ファイルへのパスが、手順 4 の「詳細設定」タブで設定したパスと一致するようにします。
+   組織のために、アプリフォルダーの下にフォルダーを作成して、すべてのプロジェクト関連スクリプト **/apps/aem-guides/projects-tasks/projects/scripts** を保持します。このフォルダーの下に、という名前のファイルを作成します。 **&quot;start-task-config.ecma&quot;**. &#42;start-task-config.ecma ファイルへのパスが、手順 4 の「詳細設定」タブで設定したパスと一致するようにします。
 
    ファイルのコンテンツとして以下を追加します。
 
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >AEM 6.4 を使用している場合、ワークフローの場所が変更されました。 `/var/workflow/models/aem-guides/content-approval-workflow` の下にあるランタイムワークフローモデルの場所を `modelId` プロパティに指定します。
    >
    >
-   >[ワークフローの場所の変更について詳しくは、こちら](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)を参照してください。
+   >[ワークフローの場所の変更について詳しくは、こちら](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)を参照してください。
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [完成したチュートリアルパッケージのダウンロード](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM プロジェクトのドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/projects.html)
+* [AEM プロジェクトのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
