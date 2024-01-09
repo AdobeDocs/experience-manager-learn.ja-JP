@@ -12,9 +12,9 @@ duration: 0
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
+source-git-commit: 7f69fc888a7b603ffefc70d89ea470146971067e
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,9 @@ AEMインスタンスのパフォーマンスに影響を与えない、効率�
 
 ### OOTB インデックスのカスタマイズ
 
-- OOTB インデックスをカスタマイズする場合は、を使用します。 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名規則を使用します。 例： `cqPageLucene-custom-1` または `damAssetLucene-8-custom-1`. これは、OOTB インデックスが更新されるたびに、カスタマイズされたインデックス定義を結合するのに役立ちます。 詳しくは、 [標準提供のインデックスの変更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) を参照してください。
+- In **AEMCS** OOTB インデックスをカスタマイズする場合は、を使用します。 **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** 命名規則を使用します。 例： `cqPageLucene-custom-1` または `damAssetLucene-8-custom-1`. これは、OOTB インデックスが更新されるたびに、カスタマイズされたインデックス定義を結合するのに役立ちます。 詳しくは、 [標準提供のインデックスの変更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) を参照してください。
+
+- In **AEM 6.X**、上記の名前 _機能しない_&#x200B;ただし、OOTB のインデックスを、 `indexRules` ノード。
 
 - 常に CRX DE Package Manager(/crx/packmgr/) を使用してAEMインスタンスから最新の OOTB インデックス定義をコピーし、名前を変更して XML ファイル内にカスタマイズを追加します。
 
@@ -57,11 +59,13 @@ AEMインスタンスのパフォーマンスに影響を与えない、効率�
 
 ### 完全なカスタムインデックス
 
-- 完全なカスタムインデックスを作成する場合は、 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名規則を使用します。 例えば、`wknd.adventures-1-custom-1` のようになります。これにより、名前の競合を回避できます。 ここで `wknd` はプレフィックスで、 `adventures` は、カスタムインデックス名です。
+完全なカスタムインデックスの作成は、上記のオプションが機能しない場合にのみ、最後のオプションにする必要があります。
+
+- 完全なカスタムインデックスを作成する場合は、 **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** 命名規則を使用します。 例えば、`wknd.adventures-1-custom-1` のようになります。これにより、名前の競合を回避できます。 ここで `wknd` はプレフィックスで、 `adventures` は、カスタムインデックス名です。 この規則は、AEM 6.X と AEMCS の両方に適用され、AEMCS への将来の移行に備えるのに役立ちます。
 
 - AEMCS は Lucene インデックスのみをサポートしているので、AEMCS への今後の移行に備えて、常に Lucene インデックスを使用します。 詳しくは、 [Lucene インデックスとプロパティインデックス](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) を参照してください。
 
-- カスタムインデックスを `dam:Asset` ノードタイプを指定するが、OOTB をカスタマイズする `damAssetLucene` インデックス。 これは、パフォーマンスと機能の問題の一般的な根本原因です。
+- OOTB インデックスと同じノードタイプでカスタムインデックスを作成しないでください。 代わりに、OOTB インデックスを、 `indexRules` ノード。 例えば、 `dam:Asset` ノードタイプを指定するが、OOTB をカスタマイズする `damAssetLucene` インデックス。 _これは、パフォーマンスと機能の問題の一般的な根本原因でした_.
 
 - また、例えば複数のノードタイプを追加しないでください。 `cq:Page` および `cq:Tag` インデックス作成ルール (`indexRules`) ノードで使用できます。 代わりに、ノードタイプごとに別々のインデックスを作成します。
 
@@ -70,7 +74,7 @@ AEMインスタンスのパフォーマンスに影響を与えない、効率�
 - インデックス定義のガイドラインを次に示します。
    - ノードタイプ (`jcr:primaryType`) は、 `oak:QueryIndexDefinition`
    - インデックスのタイプ (`type`) は、 `lucene`
-   - async プロパティ (`async`) は、 `async, rt`
+   - async プロパティ (`async`) は、 `async,nrt`
    - 用途 `includedPaths` を回避します。 `excludedPaths` プロパティ。 常に設定 `queryPaths` の値を `includedPaths` の値です。
    - パスの制限を適用するには、 `evaluatePathRestrictions` プロパティを `true`.
    - 用途 `tags` プロパティを使用してインデックスにタグを付け、クエリ時にこのタグ値を指定してインデックスを使用します。 一般的なクエリ構文は次のとおりです。 `<query> option(index tag <tagName>)`.
@@ -80,7 +84,7 @@ AEMインスタンスのパフォーマンスに影響を与えない、効率�
       - jcr:primaryType = "oak:QueryIndexDefinition"
       - type = "lucene"
       - compatVersion = 2
-      - async = ["async", "rt"]
+      - async = ["async", "nrt"]
       - includedPaths = ["/content/wknd"]
       - queryPaths = ["/content/wknd"]
       - evaluatePathRestrictions = true
@@ -90,7 +94,7 @@ AEMインスタンスのパフォーマンスに影響を与えない、効率�
 
 ### 例
 
-いくつかの例を見て、ベストプラクティスを理解しましょう。
+ベストプラクティスを理解するために、いくつかの例を確認します。
 
 #### タグプロパティの不適切な使用方法
 
