@@ -9,21 +9,22 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14501
 duration: 40
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
+source-git-commit: 016b06d3bd5b62945c168588839454544b2f7d41
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 46%
+source-wordcount: '130'
+ht-degree: 45%
 
 ---
 
 # はじめに
 
-このチュートリアルでは、BLOB インデックスタグを使用して Azure ストレージにフォーム送信を保存する簡単な使用例を実装します。 BLOB インデックスタグは、キー値インデックスタグ属性を使用して、データの管理と検出の機能を提供します。 単一のコンテナ内、またはストレージアカウント内のすべてのコンテナ間で、オブジェクトを分類して検索できます。
+このチュートリアルでは、BLOB インデックスタグを使用して Azure ストレージにフォーム送信を保存する簡単な使用例を実装する方法を学びます。 BLOB インデックスタグは、キー値インデックスタグ属性を使用して、データの管理と検出の機能を提供します。 単一のコンテナ内、またはストレージアカウント内のすべてのコンテナ間で、オブジェクトを分類して検索できます。
 ![blob-index-tags](assets/blob-with-index-tags.png)
 
 ## 前提条件
 
-* AEM Forms CS を使用した経験がある。
+* AEM Forms CS を使った経験
 * Cloud Manager を使用してコードをデプロイした経験。
 * AEM Forms CS のクラウド対応インスタンスへのアクセス権限。
 
