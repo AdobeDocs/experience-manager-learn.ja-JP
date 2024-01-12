@@ -14,7 +14,7 @@ duration: 765
 source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 91%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
 >title="ローカル Dispatcher ツール"
->abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。AEMas a Cloud ServiceSDK には、Dispatcher をローカルで検証およびシミュレートするための、推奨される Dispatcher ツールバージョンが含まれています。"
+>abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。AEM as a Cloud Service SDK には、推奨 Dispatcher ツールのバージョンが含まれているので、Dispatcher をローカルで容易に設定、検証、シミュレーションできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja" text="AEM as a Cloud Service SDK のダウンロード"
 

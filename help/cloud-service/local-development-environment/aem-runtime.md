@@ -14,7 +14,7 @@ duration: 563
 source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
 source-wordcount: '1696'
-ht-degree: 88%
+ht-degree: 91%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 88%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
 >title="ローカル AEM ランタイム"
->abstract="Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、そのコードをデプロイおよびテストし、AEMas a Cloud Serviceの環境にデプロイできます。"
+>abstract="Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、ソース管理にコミットして AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイしてテストできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja" text="AEM as a Cloud Service の SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html" text="AEM as a Cloud Service SDK のダウンロード"
 
-Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、カスタムコード、設定およびコンテンツをソース管理にコミットする前に、そのコードをデプロイおよびテストし、AEMas a Cloud Serviceの環境にデプロイできます。
+Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、ソース管理にコミットして AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイしてテストできます。
 
 `~` は、ユーザーのディレクトリの略記法として使用されます。Windows では、これは `%HOMEPATH%` に相当します。
 
