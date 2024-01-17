@@ -10,10 +10,10 @@ level: Beginner
 doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 duration: 242
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 7e1f538b111815a7934b798e0dac3587d8962c31
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 <li><strong>エクスペリエンス</strong> を形成するコンテンツとプレゼンテーションを定義する 1 つ以上の AEM コンポーネントの再利用可能な複合物で、それ自体が理にかなっているもの</li>
 </ul>
 </td>
-</tr><tr><td><strong>コアテナント</strong></td>
+</tr><tr><td><strong>主なガイドライン</strong></td>
 <td><ul>
 <li>コンテンツ中心</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html?lang=ja" target="_blank">構造化されたフォームベースのデータ モデル</a>によって定義されます。</li>
