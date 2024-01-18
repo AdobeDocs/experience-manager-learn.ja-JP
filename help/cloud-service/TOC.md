@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+source-git-commit: aa6cd605c617de45003a96b1c14e37f055a8c566
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1103'
 ht-degree: 94%
 
 ---
@@ -319,6 +319,7 @@ ht-degree: 94%
    + OneDrive と SharePoint にフォーム送信を保存{#one-drive}
       + [フォームデータを OneDrive に保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [フォームデータを SharePoint に保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
+      + [SharePointリストのデータを使用してフォームに事前入力する](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
 + Asset Compute の拡張性{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
