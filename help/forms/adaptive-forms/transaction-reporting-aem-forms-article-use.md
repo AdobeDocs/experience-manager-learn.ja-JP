@@ -9,16 +9,16 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 96
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 4b88045a626b5e7bd1386e62ee54ac6fe2ce9282
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 100%
+source-wordcount: '331'
+ht-degree: 87%
 
 ---
 
 # AEM Forms でのトランザクションレポートの使用{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1 では、フォーム送信数、ドキュメントサービスを使用したドキュメントのレンダリング、インタラクティブ通信（web チャネルと印刷チャネル）のレンダリングを取得するトランザクションレポートが導入されました。この機能は主に、フォームの送信数やレンダリングされたドキュメントの数に基づいてソフトウェアのライセンスを取得したい顧客向けです。この機能は、現在、AEM Forms OSGi スタックでのみ使用できます。
+AEM Forms 6.4.1 では、フォーム送信数、ドキュメントサービスを使用したドキュメントのレンダリング、およびインタラクティブ通信（Web チャネルと印刷チャネル）のレンダリングを取り込むトランザクションレポートが導入されました。この機能は、現在、AEM Forms OSGi スタックでのみ使用できます。
 
 ## トランザクションレポートの有効化 {#enabling-transaction-reporting}
 
