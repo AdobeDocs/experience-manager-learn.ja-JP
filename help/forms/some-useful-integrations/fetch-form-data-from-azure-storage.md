@@ -8,8 +8,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
-duration: 108
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 88
+exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 75%
@@ -89,4 +90,3 @@ if(guid!=null&&!guid.isEmpty())
 * データが任意の Azure ストレージコンテナに保存されていることを確認します。Blob ID をコピーします。
 
 * [BankAccount フォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)し、Azure ストレージからのデータが事前に入力されるフォームの URL で、guid パラメーターとして Blob ID を指定します
-

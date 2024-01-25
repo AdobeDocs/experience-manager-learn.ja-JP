@@ -8,17 +8,17 @@ role: Developer
 level: Intermediate
 exl-id: abb74d44-d1b9-44d6-a49f-36c01acfecb4
 last-substantial-update: 2020-07-07T00:00:00Z
-duration: 115
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 94
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
 # AEM Forms での監視フォルダーの使用{#using-watched-folders-in-aem-forms}
 
-管理者は、監視PDFーと呼ばれるネットワークフォルダーを設定し、ユーザーがファイル（監視フォルダーなど）を監視フォルダーに配置すると、事前に設定されたワークフロー、サービス、スクリプトの操作が開始され、追加されたファイルが処理されます。 指定した操作を実行した後、指定した出力フォルダーに結果ファイルを保存します。 ワークフロー、サービスおよびスクリプトについて詳しくは、こちらを参照してください。
+管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、スクリプトの操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、結果ファイルを指定された出力フォルダーに保存します。ワークフロー、サービスおよびスクリプトについて詳しくは、こちらを参照してください。
 
 監視フォルダーの作成について詳しくは、[こちら](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html?lang=ja)をクリックしてください。
 

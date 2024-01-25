@@ -3,8 +3,8 @@ title: AEM Sites でのリソースステータスの作成
 description: Adobe Experience Manager の Resource Status API は、AEM の様々なエディター web UI でステータスメッセージを公開するためのプラグイン可能なフレームワークです。
 doc-type: Tutorial
 version: 6.4, 6.5
-duration: 133
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 108
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 100%

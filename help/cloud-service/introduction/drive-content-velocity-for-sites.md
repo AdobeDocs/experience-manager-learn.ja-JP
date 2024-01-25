@@ -3,11 +3,11 @@ title: Adobe Experience Manager でコンテンツベロシティを促進する
 description: 企業組織におけるコンテンツベロシティとその価値について学びます。 効果的な実装と、その過程で注意すべき落とし穴の 4 つの原則に進みます。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 728
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 635
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2742'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -148,7 +148,7 @@ AEM は、企業やブランドの多くの部分とその有効性に関与す�
 一般に、次の経験則に従うのが最善です。
 
 * エクスペリエンスの 80％以上を[標準搭載のコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)と[スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)で促進することを目標にします。お客様の証言によると、これで製品ロードマップを活用するためのより拡張性の高い基盤が構築されるだけでなく、速度が最大 50％向上します。
-* [編集可能なテンプレートの設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=ja) 静的テンプレートから移動します。 編集可能なテンプレート（スタイルシステムの使用に必要）を設定する場合は、テンプレート作成者（web サイトのページやセクションで使用できる様々なスタイル設定を制御する）テンプレート作成者を割り当てる必要があります。日常業務の観点から考えると、テンプレート自体に対するこのような更新はごくわずかです。
+* [編集可能なテンプレートを設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=ja)し、静的なテンプレートから離します。編集可能なテンプレート（スタイルシステムの使用に必要）を設定する場合は、テンプレート作成者（web サイトのページやセクションで使用できる様々なスタイル設定を制御する）テンプレート作成者を割り当てる必要があります。日常業務の観点から考えると、テンプレート自体に対するこのような更新はごくわずかです。
 * 可能な場合は、[エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=ja)を使用します。エクスペリエンスフラグメントの一般的なユースケースはマルチチャネル配信ですが、複数の領域でコンテンツを手作業によって更新せず、サイト全体で一度に 1 つの領域にコンテンツを入力する場合にも効果的です。これにより、時間と労力を大幅に節約でき、オーサリングチームはより具体的で豊かなエクスペリエンスの実現に取り組むことができます。
 * 豊かなエクスペリエンスを作成します。組織は、上記の 80／20 ルールに従い、一般的なメンテナンスアップデートの代わりに特定の CSS とバックエンド開発を利用して、厳選されたエクスペリエンスを提供することができます。
 * 拡張性の高い基盤を選択し、リブランディングを迅速に進めます。最新の実装に基づいてスタイルシステムを実行すると、プラットフォーム全体で効率的にリブランディングを行うことができます。CSS スキンを変更して幅広いコンテンツセクターを更新すると、迅速なテストと検証が可能になり、ROI に直接影響を与えることで、サイトのエクスペリエンスの品質を向上させることができます。
