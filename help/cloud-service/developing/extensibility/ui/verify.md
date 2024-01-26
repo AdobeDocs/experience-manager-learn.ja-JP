@@ -10,11 +10,11 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
-duration: 633
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 637
+source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 100%
+source-wordcount: '739'
+ht-degree: 96%
 
 ---
 
@@ -67,6 +67,7 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
 
 上記の `-> https://localhost:9080` として示されているローカルアプリケーションの URL をメモします
 
+1. 最初に（接続エラーが表示された場合は常に）開きます `https://localhost:9080` （またはローカルアプリケーションの URL が何であれ）Web ブラウザーで、手動でを受け入れます。 [HTTPS 証明書](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
 1. 次の 2 つのクエリパラメーターを [AEM UI の URL](#aem-ui-url) に追加します
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`、通常は `&ext=https://localhost:9080` です。
