@@ -8,8 +8,8 @@ role: Developer
 level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
-duration: 266
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 272
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 100%
@@ -43,17 +43,17 @@ AEM Adaptive Forms での CAPTCHA の追加と使用
 >オーサーインスタンス上のファイルシステムのバンドル ID に移動します。
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* HMAC ファイルおよびマスターファイルをコピーします。
+* HMAC ファイルおよびマスターファイルをコピーします。
 >
->パブリッシュインスタンスで [Felix web コンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file バンドルを検索します。 バンドル ID をメモします。
+パブリッシュインスタンスで [Felix web コンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file バンドルを検索します。 バンドル ID をメモします。
 >
->パブリッシュインスタンスのファイルシステム上のバンドル ID に移動します。
+パブリッシュインスタンスのファイルシステム上のバンドル ID に移動します。
 >
->* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* 既存の HMAC ファイルとマスターファイルを削除します。
->* オーサーインスタンスからコピーした HMAC ファイルとマスターファイルを貼り付けます。
+* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* 既存の HMAC ファイルとマスターファイルを削除します。
+* オーサーインスタンスからコピーした HMAC ファイルとマスターファイルを貼り付けます。
 >
->AEM Publish サーバーを再起動します。
+AEM Publish サーバーを再起動します。
 
 ## サポート資料 {#supporting-materials}
 

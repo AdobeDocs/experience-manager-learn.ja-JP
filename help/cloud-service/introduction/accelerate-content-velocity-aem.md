@@ -3,8 +3,8 @@ title: AEM スタイルシステムによるコンテンツベロシティの促
 description: AEM スタイルシステムを使用して、組織のデザイナー、コンテンツ作成者および開発者が、顧客が期待するスピードと規模でエクスペリエンスを作成し提供できるようにする方法を説明します。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 191
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 216
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 100%
