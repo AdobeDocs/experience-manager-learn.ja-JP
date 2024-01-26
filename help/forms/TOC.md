@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
-workflow-type: ht
-source-wordcount: '1874'
-ht-degree: 100%
+source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+workflow-type: tm+mt
+source-wordcount: '2001'
+ht-degree: 99%
 
 ---
 
@@ -131,6 +131,11 @@ ht-degree: 100%
    + [2 - Zip フォームの添付ファイル](zipping-form-attachments/custom-process-step.md)
    + [3 - メールフォームの添付ファイル](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - ソリューションのテスト](zipping-form-attachments/test.md)
++ データと添付ファイルをフォームに事前入力する{#prefill-form-with-data-attachments}
+   + [1 - はじめに](prefill-form-with-data-attachments/introduction.md)
+   + [2 — カスタム送信の作成](prefill-form-with-data-attachments/create-custom-submit.md)
+   + [3 - OSGi 設定の作成](prefill-form-with-data-attachments/create-osgi-configuration.md)
+   + [4 — 事前入力サービスの作成](prefill-form-with-data-attachments/create-prefill-service.md)
 + アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
    + [1 - はじめに](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 - データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
