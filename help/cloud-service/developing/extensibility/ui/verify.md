@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
-source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
+source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 96%
@@ -39,9 +39,9 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
 例えば、コンテンツフラグメントコンソールの拡張機能をプレビューするには、次の操作を実行します。
 
 1. 目的の AEM as a Cloud Service 環境にログインします。
-2. 「__コンテンツフラグメント__」アイコンを選択します。
-3. AEM コンテンツフラグメントコンソールがブラウザーに読み込まれるまで待ちます。
-4. AEM コンテンツフラグメントコンソールの URL をブラウザーのアドレスバーからコピーします。URL は以下のようになります。
+1. 「__コンテンツフラグメント__」アイコンを選択します。
+1. AEM コンテンツフラグメントコンソールがブラウザーに読み込まれるまで待ちます。
+1. AEM コンテンツフラグメントコンソールの URL をブラウザーのアドレスバーからコピーします。URL は以下のようになります。
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
@@ -80,11 +80,11 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-2. プレビュー URL をブラウザーにコピー＆ぺーストします。
+1. プレビュー URL をブラウザーにコピー＆ぺーストします。
 
    + 最初に、それからは定期的に、ローカルアプリケーションのホスト（`https://localhost:9080`）の [HTTPS 証明書を受け入れる](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)必要があります。
 
-3. AEM UI は、検証用に拡張機能のローカルバージョンが挿入されて読み込まれます。
+1. AEM UI は、検証用に拡張機能のローカルバージョンが挿入されて読み込まれます。
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
 以下のブックマークレットは、`https://localhost:9080` にある拡張機能の[ローカル開発ビルド](#verify-local-development-builds)をプレビューします。[ステージビルド](#verify-stage-builds)をプレビューするには、デプロイ済みの App Builder アプリの URL に設定された `previewApp` 変数を使用してブックマークレットを作成します。
 
 1. ブラウザーにブックマークを作成します。
-2. ブックマークを編集します。
-3. ブックマークに `AEM UI Extension Preview (localhost:9080)` などの意味のある名前を付けます。
-4. ブックマークの URL を次のコードに設定します。
+1. ブックマークを編集します。
+1. ブックマークに `AEM UI Extension Preview (localhost:9080)` などの意味のある名前を付けます。
+1. ブックマークの URL を次のコードに設定します。
 
    ```javascript
    javascript: (() => {
@@ -161,7 +161,7 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
    })();
    ```
 
-5. 拡張可能な AEM UI に移動してプレビュー拡張機能を読み込み、ブックマークレットをクリックします。
+1. 拡張可能な AEM UI に移動してプレビュー拡張機能を読み込み、ブックマークレットをクリックします。
 
 >[!TIP]
 >
