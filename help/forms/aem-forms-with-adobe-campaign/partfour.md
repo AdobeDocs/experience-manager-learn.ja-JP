@@ -11,7 +11,7 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
 duration: 126
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '431'
 ht-degree: 100%
 
