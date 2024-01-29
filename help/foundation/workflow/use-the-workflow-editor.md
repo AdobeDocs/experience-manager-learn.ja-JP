@@ -13,7 +13,7 @@ last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: KT-657.jpg
 duration: 436
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
 ht-degree: 100%
 
