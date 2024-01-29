@@ -6,8 +6,8 @@ version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
-source-wordcount: '185'
+workflow-type: ht
+source-wordcount: '176'
 ht-degree: 100%
 
 ---
