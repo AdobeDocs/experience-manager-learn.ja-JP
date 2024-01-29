@@ -9,7 +9,7 @@ level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 504
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1052'
 ht-degree: 100%
 
