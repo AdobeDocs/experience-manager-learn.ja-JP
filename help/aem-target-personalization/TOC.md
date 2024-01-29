@@ -7,7 +7,7 @@ version: 6.5
 index: y
 jira: KT-2214
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
 ht-degree: 100%
 
