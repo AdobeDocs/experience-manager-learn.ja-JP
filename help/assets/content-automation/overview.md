@@ -11,7 +11,7 @@ thumbnail: 333197.jpeg
 doc-type: Catalog
 exl-id: be5ca0e7-54fb-4d19-bf7a-8985b11b3aba
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
 ht-degree: 100%
 
