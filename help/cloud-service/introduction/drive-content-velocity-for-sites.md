@@ -5,7 +5,7 @@ solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
 duration: 718
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2742'
 ht-degree: 100%
 
