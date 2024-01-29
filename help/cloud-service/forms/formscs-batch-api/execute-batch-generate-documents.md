@@ -11,7 +11,7 @@ jira: KT-9674
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
 duration: 223
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '81'
 ht-degree: 100%
 
