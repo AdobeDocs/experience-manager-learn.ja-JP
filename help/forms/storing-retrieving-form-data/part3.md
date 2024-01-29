@@ -10,7 +10,7 @@ level: Experienced
 exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
 duration: 62
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '93'
 ht-degree: 100%
 
