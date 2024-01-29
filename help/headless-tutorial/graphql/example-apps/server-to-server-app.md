@@ -13,7 +13,7 @@ badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
 duration: 145
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
 ht-degree: 100%
 
