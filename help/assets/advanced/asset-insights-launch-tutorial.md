@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '811'
 ht-degree: 100%
 
@@ -71,7 +71,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
+Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
 
 AEM アセットインサイトの設定の場合は、以下の資格情報が必要です。
 
@@ -89,7 +89,7 @@ Adobe Analytics 拡張機能の追加、ページ読み込みルールの作成�
 
 >[!NOTE]
 >
->必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
+必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
 
 ### ルール 1：ページトラッカー（pagetracker.js） {#rule-page-tracker-pagetracker-js}
 
