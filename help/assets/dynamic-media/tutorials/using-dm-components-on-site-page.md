@@ -11,7 +11,7 @@ doc-type: Tutorial
 exl-id: b500261a-5b96-41b8-8270-fb6bde95d48a
 duration: 114
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '35'
 ht-degree: 100%
 
