@@ -12,7 +12,7 @@ jira: KT-9542
 exl-id: 06621fc7-afde-4073-8f15-fe9eeab1d084
 duration: 454
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '51'
 ht-degree: 100%
 
