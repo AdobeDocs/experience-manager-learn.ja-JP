@@ -8,7 +8,7 @@ feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
 duration: 76
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '308'
 ht-degree: 100%
 
