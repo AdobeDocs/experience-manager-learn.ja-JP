@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
 duration: 68
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
 ht-degree: 100%
 
