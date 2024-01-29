@@ -13,7 +13,7 @@ thumbnail: 332435.pg
 exl-id: 7e3d449f-f22e-4bf4-a20e-82f3d76004a2
 duration: 230
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '26'
 ht-degree: 100%
 
