@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
+source-git-commit: d178059f6f00228586e692465f7f437129bffaae
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 90%
@@ -97,7 +97,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 `_assetTransform` は、提供する画像レンディションを最適化するために `_dynamicUrl` をどのように構成するかを定義します。Web に最適化された画像の URL は、URL のクエリパラメーターを変更することで、クライアント上で調整することもできます。
 
 | GraphQL パラメーター | 説明 | 必須 | GraphQL パラメーターの値 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+|-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
 | `seoName` | URL 内のファイルセグメントの名前。指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、`-` または `_` |
 | `crop` | 画像から切り抜いたフレーム（画像のサイズに収まる必要があります） | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 |
@@ -107,6 +107,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 | `quality` | 画質（元の画質に対するパーセント） | ✘ | 1～100 |
 | `width` | 出力画像の幅（ピクセル単位）。`size` が指定されている場合、`width` は無視されます。 | ✘ | 正の整数 |
 | `preferWebP` | `true` の場合、ブラウザーが WebP をサポートしていれば、`format` にかかわらず、AEM は WebP を提供します。 | ✘ | `true`、`false` |
+
 
 ## GraphQL 応答
 
