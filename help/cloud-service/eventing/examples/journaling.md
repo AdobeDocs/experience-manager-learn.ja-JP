@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 163
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # ジャーナリングとAEMイベント
 
 ジャーナルからAEMイベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
 ジャーナル処理は、AEMイベントを使用するプルメソッドで、ジャーナルは、イベントの順序付きリストです。 Adobe I/Oイベントジャーナル API を使用すると、ジャーナルからAEMイベントを取得し、アプリケーションで処理できます。 この方法を使用すると、指定したケイデンスに基づいてイベントを管理し、それらを一括で効率的に処理できます。 詳しくは、 [ジャーナリング](https://developer.adobe.com/events/docs/guides/journaling_intro/) 保持期間やページネーションなどの重要な考慮事項を含む、詳細なインサイトに関する情報。
 
