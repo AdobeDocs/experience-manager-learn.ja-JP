@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 79%
+source-wordcount: '559'
+ht-degree: 66%
 
 ---
 
@@ -61,16 +61,18 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
 1. /content/AemFormsSamples/outputservice
 1. /content/AemFormsSamples/renderxdp
 1. 「Sling Referrer Filter」を検索します。
-1. 「Allow Empty」チェックボックスをオンにします（この設定はテスト目的でのみ使用してください）。
-サンプルコードをテストする方法は多数あります。 Postman アプリを使用するのが最もすばやく簡単です。Postman を使用すると、サーバーに POST リクエストを送信できます。 システムに Postman アプリをインストールします。
-アプリを起動し、次の URL を入力してデータ書き出し API をテストします。
+1. 「Allow Empty」チェックボックスをオンにします（この設定は、テスト目的でのみ使用する必要があります）。
 
-ドロップダウンリストから「POST」を選択していることを確認してください。
-http://localhost:4502/content/AemFormsSamples/exportdata.html
-「認証」を必ず「基本認証」として指定してください。AEM サーバーのユーザー名とパスワードを指定します。
-「本文」タブに移動し、下の画像に示すようにリクエストパラメータを指定します。
-![export](assets/postexport.png)
-次に「送信」ボタンをクリックします。
+## サンプルのテスト
+
+サンプルコードをテストするには、様々な方法があります。Postman アプリを使用するのが最もすばやく簡単です。Postmanを使用すると、サーバーにPOSTリクエストを送信できます。
+
+* システムにPostmanアプリをインストールします。
+* アプリを起動し、適切な URL を入力します。
+* ドロップダウンリストから「POST」を選択していることを確認します。
+* 「Authorization」を「Basic Auth」として指定してください。 AEM Server のユーザー名とパスワードの指定
+* 「本文」タブで要求パラメーターを指定します。
+* 「送信」ボタンをクリックします。
 
 このパッケージには 4 つのサンプルが含まれています。 次の段落では、Output サービスまたは Forms サービスを使用するタイミング、サービスの URL、各サービスが想定する入力パラメーターについて説明します。
 

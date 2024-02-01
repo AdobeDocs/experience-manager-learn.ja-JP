@@ -9,16 +9,21 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '205'
-ht-degree: 100%
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 88%
 
 ---
 
 # AEM Forms でのカスタム送信の作成 {#writing-a-custom-submit-in-aem-forms}
 
 アダプティブフォーム用に独自のカスタム送信アクションを簡単かつ迅速に作成する方法
+
+>[!NOTE]
+>この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。
+>[コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+
 
 この記事では、アダプティブフォームの送信を処理するカスタム送信アクションを作成するために必要な手順について説明します。
 

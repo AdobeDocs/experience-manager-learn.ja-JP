@@ -10,10 +10,10 @@ last-substantial-update: 2023-08-14T00:00:00Z
 jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '555'
-ht-degree: 100%
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 90%
 
 ---
 
@@ -21,6 +21,10 @@ ht-degree: 100%
 
 この記事では、REST 呼び出しを実行して、送信した AEM Forms データを Azure ストレージに保存する方法を説明します。
 送信したフォームデータを Azure ストレージに保存するには、次の手順に従う必要があります。
+
+>[!NOTE]
+>この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。 [コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## Azure ストレージアカウントの作成
 
@@ -45,6 +49,7 @@ Shared Access Signature（SAS）の認証メソッドを使用して、Azure ス
 ## Blob SAS トークンとストレージ URI を指定します
 
 コードをより汎用的にするには、次に示すように、OSGi 設定を使用して 2 つのプロパティを設定します。_**aemformstutorial**_ はストレージアカウントの名前で、_**formsubmissions**_ はデータを保存するコンテナです。
+ストレージ URI の末尾に/があり、SAS トークンがで始まっていることを確認してください。
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -99,7 +104,8 @@ PUT リクエストを使用して、送信したフォームデータを Azure 
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal 設定で適切な値を指定します
+* [OSGi 設定コンソールを使用して、Azure Portal Configuration で適切な値を指定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * データが任意の Azure ストレージコンテナに保存されていることを確認します。Blob ID をコピーします。

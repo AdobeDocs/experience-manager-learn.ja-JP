@@ -10,17 +10,20 @@ last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
 duration: 81
 exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 75%
+source-wordcount: '286'
+ht-degree: 59%
 
 ---
 
 # Azure ストレージからデータを取得
 
 この記事では、Azure ストレージに保存されているデータをアダプティブフォームに入力する方法について説明します。
-ここでは、アダプティブフォームのデータが Azure ストレージに保存されており、アダプティブフォームにそのデータを事前入力する必要があると想定しています。
+ここでは、アダプティブフォームのデータが Azure ストレージに保存されていることを前提としており、そのデータをアダプティブフォームに事前入力する必要があると想定しています。
+>[!NOTE]
+>この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。[コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## GET リクエストを作成
 
@@ -83,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* OSGi 設定コンソールを使用して、Azure Portal の設定で適切な値を指定します。
+* [OSGi 設定コンソールを使用して、Azure Portal の設定で適切な値を指定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
 
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
