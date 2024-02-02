@@ -1,6 +1,6 @@
 ---
-title: AEM での認証サポートについて
-description: AEM でサポートされている認証（場合によっては承認）メカニズムに関する統合的なビューです。
+title: AEM 6.x での認証のサポート
+description: AEM 6.x でサポートされる認証メカニズムの統合ビュー。
 version: 6.4, 6.5
 feature: User and Groups
 doc-type: Article
@@ -12,14 +12,14 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 duration: 38
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '119'
-ht-degree: 100%
+source-git-commit: 9ef35d4d20ea574ac2051d7d3e997ecc18c2aaaa
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 81%
 
 ---
 
-# AEM 6.x での認証サポートについて
+# AEM 6.x での認証のサポート
 
 AEM でサポートされている認証（場合によっては承認）メカニズムに関する統合的なビューです。
 
