@@ -1,22 +1,22 @@
 ---
 title: AEM Forms で Output サービスや Forms サービスを使用した開発
-description: AEM Forms での Output サービスおよび Forms サービス API の使用
+description: AEM Formsでの Output およびForms Service API を使用した開発について説明します。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+source-git-commit: 8e9bf8001e4bb7341aeadd65ffd2543da359e061
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 66%
+source-wordcount: '565'
+ht-degree: 62%
 
 ---
 
 # AEM Forms で Output サービスや Forms サービスを使用した開発{#developing-with-output-and-forms-services-in-aem-forms}
 
-AEM Forms での Output サービスおよび Forms サービス API の使用
+AEM Formsでの Output およびForms Service API を使用した開発について説明します。
 
 この記事では、以下に注目します。
 
