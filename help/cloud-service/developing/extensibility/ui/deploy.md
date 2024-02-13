@@ -8,21 +8,19 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2024-01-26T00:00:00Z
+last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 96%
+source-wordcount: '765'
+ht-degree: 100%
 
 ---
 
 # 拡張機能のデプロイ
 
 AEM as a Cloud Service 環境で使用するには、拡張機能の Application Builder アプリをデプロイして承認する必要があります。
-
-![Adobe交換](./assets/deploy/adobe-exchange.png){align="center"}
 
 拡張機能の Application Builder アプリをデプロイする際に注意すべき考慮事項がいくつかあります。
 
@@ -79,9 +77,9 @@ Adobe Developer Console ワークスペースには、AEM as a Cloud Service 環
 ![拡張機能を承認](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. [Adobe Exchange](https://exchange.adobe.com/) にログインします
-2. に移動します。 __管理__ > __Experience Cloudアプリ__
-3. 拡張機能の App Builder アプリを&#x200B;__レビュー__&#x200B;します
-4. 拡張機能の変更を許可できる場合、レビューを&#x200B;__承認__&#x200B;します。これにより、アドビ組織内のすべての AEM as a Cloud Service オーサーサービスに拡張機能が直ちに挿入されます。
+1. __管理__／__レビュー保留中のアプリ__&#x200B;に移動します
+1. 拡張機能の App Builder アプリを&#x200B;__レビュー__&#x200B;します
+1. 拡張機能の変更を許可できる場合、レビューを&#x200B;__承認__&#x200B;します。これにより、アドビ組織内のすべての AEM as a Cloud Service オーサーサービスに拡張機能が直ちに挿入されます。
 
 拡張機能のリクエストが承認されると、AEM as a Cloud Service のオーサーサービスで拡張機能が直ちにアクティブになります。
 
@@ -94,7 +92,7 @@ App Builder 拡張機能アプリの更新は、[初期デプロイメント](#i
 新しいバージョンの拡張機能をデプロイするには、まずその拡張機能を失効させる（削除する）必要があります。拡張機能は、失効している間、AEM コンソールでは使用できません。
 
 1. [Adobe Exchange](https://exchange.adobe.com/) にログインします。
-1. に移動します。 __管理__ > __Experience Cloudアプリ__
+1. __管理__／__App Builder アプリ__&#x200B;に移動します。
 1. 更新する拡張機能を&#x200B;__失効__&#x200B;させます。
 
 ### 拡張機能のデプロイ
@@ -130,10 +128,10 @@ App Builder 拡張機能アプリの更新は、[初期デプロイメント](#i
 
 #### デプロイメントのリクエストを承認
 
-![拡張機能を承認](./assets/deploy/review.png){align="center"}
+![拡張機能を承認](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. [Adobe Exchange](https://exchange.adobe.com/) にログインします
-1. に移動します。 __管理__ > __Experience Cloudアプリ__
+1. __管理__／__レビュー保留中のアプリ__&#x200B;に移動します
 1. 拡張機能の App Builder アプリを&#x200B;__レビュー__&#x200B;します
 1. 拡張機能の変更を許可できる場合、レビューを&#x200B;__承認__&#x200B;します。これにより、アドビ組織内のすべての AEM as a Cloud Service オーサーサービスに拡張機能が直ちに挿入されます。
 
@@ -146,5 +144,5 @@ App Builder 拡張機能アプリの更新は、[初期デプロイメント](#i
 拡張機能を削除するには、Adobe Exchange から失効させる（削除する）必要があります。拡張機能が失効されると、すべての AEM as a Cloud Service オーサーサービスから削除されます。
 
 1. [Adobe Exchange](https://exchange.adobe.com/) にログインします
-1. に移動します。 __管理__ > __Experience Cloudアプリ__
+1. __管理__／__App Builder アプリ__&#x200B;に移動します
 1. 削除する拡張機能を&#x200B;__失効__&#x200B;させます
