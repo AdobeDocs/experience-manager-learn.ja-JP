@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 5d8ee3b9ab6fb974f7faebb1d0ce42d699e2063c
+source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 1%
@@ -102,7 +102,7 @@ AEM Assetsイベントを受け取り、前の手順で作成したAdobe I/O Run
 
 メタデータの取得と更新を実行するには、まず自動作成された _汎用_ のアクションコード `src/dx-excshell-1/actions/generic` フォルダー。
 
-完全なコードについては、添付の WKND-Assets-PIM-Integration.zip ファイルを参照し、以下の節ではキーファイルをハイライトします。
+添付の [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) ファイルの完全なコードを示し、以下の節ではキーファイルをハイライトします。
 
 - The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` ファイルは、PIM API 呼び出しをモックして、SKU や仕入先名などの追加のメタデータを取得します。
 
