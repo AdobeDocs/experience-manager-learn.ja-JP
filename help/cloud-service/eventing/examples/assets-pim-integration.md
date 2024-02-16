@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
+source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -21,17 +21,19 @@ ht-degree: 1%
 
 # PIM 統合用のAEM Assetsイベント
 
-AEM Assetsと製品情報管理 (PIM) システムを統合して、アセットメタデータを更新する方法を説明します。 **AEM Eventing の使用**. AEM Assetsイベントを受け取ると、ビジネス要件に基づいて、AEM、PIM、またはその両方のシステムでアセットメタデータを更新できます。 ただし、この例では、AEMのアセットメタデータを更新します。
+**注意：このチュートリアルでは、実験的なAEMas a Cloud ServiceAPI を使用します。  これらの API にアクセスするには、リリース前のソフトウェア使用許諾契約に同意し、Adobeエンジニアリングによって、お使いの環境でこれらの API を手動で有効にする必要があります。  アクセスをリクエストするには、Adobeサポートにお問い合わせください。 **
 
-アセットメタデータの更新を実行するには **AEM外のコード**、 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) サーバーレスプラットフォームが使用されます。 イベント処理フローは次のとおりです。
+AEM Assetsを製品情報管理 (PIM) や製品ライン管理 (PLM) システムなどのサードパーティシステムと統合して、アセットのメタデータを更新する方法を説明します。 **ネイティブAEM IO イベントの使用**. AEM Assetsイベントを受け取ると、ビジネス要件に基づいて、AEM、PIM、またはその両方のシステムでアセットメタデータを更新できます。 ただし、この例では、AEMでのアセットメタデータの更新について説明します。
+
+アセットメタデータの更新を実行するには **AEM外のコード**、 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)：サーバーレスのプラットフォーム。 イベント処理フローは次のとおりです。
 
 ![PIM 統合用のAEM Assetsイベント](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. AEM Author サービスは、トリガーと _アセット処理が完了しました_ イベントに設定されます。
+1. AEM Author サービスは、トリガーと _アセット処理が完了しました_ イベントを送信する必要があります。  処理の完了を待つことで、メタデータの抽出などの標準の処理が完了したことが確認されてから、処理を続行します。
 1. イベントが [Adobe I/Oイベント](https://developer.adobe.com/events/) サービス。
 1. Adobe I/Oイベントサービスがイベントを [Adobe I/O Runtime Action](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) を処理するために使用します。
-1. Adobe I/O Runtimeアクションは、モックされた PIM API を呼び出して、SKU やサプライヤー情報などの追加のメタデータを取得します。
-1. 取得した追加のメタデータは、AEM Assetsで [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+1. Adobe I/O Runtime Action は、PIM システムの API を呼び出して、SKU、サプライヤー情報などの追加のメタデータを取得します。
+1. PIM から取得した追加のメタデータは、AEM Assetsで [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
 
 ## 前提条件
 
@@ -47,14 +49,14 @@ AEM Assetsと製品情報管理 (PIM) システムを統合して、アセット
 
 大まかな開発手順は次のとおりです。
 
-1. [Adobe Developerコンソール (ADC) でプロジェクトを作成](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
+1. [Adobe Developerコンソール (ADC) でプロジェクトを作成します](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [プロジェクトをローカル開発用に初期化](./runtime-action.md#initialize-project-for-local-development)
 1. ADC でプロジェクトを設定
 1. ADC プロジェクトの通信を有効にするAEM Author サービスを設定します
 1. メタデータの取得と更新を編成するランタイムアクションの開発
-1. AEMオーサーサービスでアセットをアップロードし、メタデータの更新を検証する
+1. アセットをAEMオーサーサービスにアップロードし、メタデータが更新されていることを確認します
 
-1 ～ 2 の詳細な手順については、を参照してください。 [Adobe I/O Runtime Action とAEM Events](./runtime-action.md#) 例、および 3-6 については、以降の節を参照してください。
+手順 1 ～ 2 について詳しくは、 [Adobe I/O Runtime Action とAEM Events](./runtime-action.md#) 例、および手順 3～6 については、次の節を参照してください。
 
 ### Adobe Developerコンソール (ADC) でプロジェクトを設定
 
@@ -62,7 +64,7 @@ AEM Assetsイベントを受け取り、前の手順で作成したAdobe I/O Run
 
 - ADC で、 [プロジェクト](https://developer.adobe.com/console/projects). を選択します。 `Stage` workspace（ランタイムアクションがデプロイされた場所）。
 
-- クリック **サービスを追加** ボタンと選択 **イベント** オプション。 Adobe Analytics の **イベントを追加** ダイアログ、選択 **Experience Cloud** > **AEM Assets**&#x200B;をクリックし、 **次へ**. 追加の設定手順に従い、「 AEMCS インスタンス」を選択します。 _アセット処理が完了しました_ イベント、OAuth サーバー間認証タイプ、およびその他の詳細。
+- 次をクリック： **サービスを追加** ボタンをクリックし、 **イベント** オプション。 Adobe Analytics の **イベントを追加** ダイアログ、選択 **Experience Cloud** > **AEM Assets**&#x200B;をクリックし、 **次へ**. 追加の設定手順に従い、「 AEMCS インスタンス」を選択します。 _アセット処理が完了しました_ イベント、OAuth サーバー間認証タイプ、およびその他の詳細。
 
   ![AEM Assetsイベント — イベントの追加](../assets/examples/assets-pim-integration/add-aem-assets-event.png)
 
@@ -70,13 +72,13 @@ AEM Assetsイベントを受け取り、前の手順で作成したAdobe I/O Run
 
   ![AEM Assetsイベント — イベントの受信](../assets/examples/assets-pim-integration/receive-aem-assets-event.png)
 
-- 同様に、「 **サービスを追加** ボタンと選択 **API** オプション。 Adobe Analytics の **API を追加** モーダルを選択します。 **Experience Cloud** > **AEMas a Cloud ServiceAPI** をクリックします。 **次へ**.
+- 同様に、 **サービスを追加** ボタンをクリックし、 **API** オプション。 Adobe Analytics の **API を追加** モーダルを選択します。 **Experience Cloud** > **AEMas a Cloud ServiceAPI** をクリックします。 **次へ**.
 
   ![AEMas a Cloud ServiceAPI の追加 — プロジェクトの設定](../assets/examples/assets-pim-integration/add-aem-api.png)
 
 - 次に、 **OAuth サーバー間通信** 認証タイプの場合は、をクリックします。 **次へ**.
 
-- 次に、 **AEM Administrators-XXX** 製品プロファイルを選択し、「 **設定済み API を保存**. きめ細かい機能や権限へのアクセス権を取得するには、選択した製品プロファイルを、AEMCS 環境を生成するAEM Assetsイベントに関連付ける必要があります。
+- 次に、 **AEM Administrators-XXX** 製品プロファイルを選択し、「 **設定済み API を保存**. 問題のアセットを更新するには、選択した製品プロファイルを、イベントの作成元であるAEM Assets環境に関連付け、そこでアセットを更新するための十分なアクセス権を持つ必要があります。
 
   ![AEMas a Cloud ServiceAPI の追加 — プロジェクトの設定](../assets/examples/assets-pim-integration/add-aem-api-product-profile-select.png)
 
@@ -104,7 +106,7 @@ AEM Assetsイベントを受け取り、前の手順で作成したAdobe I/O Run
 
 添付の [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) ファイルの完全なコードを示し、以下の節ではキーファイルをハイライトします。
 
-- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` ファイルは、PIM API 呼び出しをモックして、SKU や仕入先名などの追加のメタデータを取得します。
+- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` ファイルは、PIM API 呼び出しをモックして、SKU や仕入先名などの追加のメタデータを取得します。  このファイルはデモ用に使用されます。  エンドツーエンドのフローが機能したら、この関数を実際の PIM システムへの呼び出しで置き換えて、アセットのメタデータを取得します。
 
   ```javascript
   /**
@@ -285,7 +287,7 @@ AEM Assetsと PIM の統合を検証するには、次の手順に従います�
 
 AEMと、PIM などの他のシステムとの間でアセットメタデータを同期する必要が生じる場合が多くあります。 AEM Eventing を使用すると、このような要件を満たすことができます。
 
-- アセットメタデータコードはAEMの外部で実行されるので、AEMオーサーサービスの負荷を回避できるので、独立して拡張できるイベント駆動型アーキテクチャです。
+- アセットメタデータ取得コードはAEMの外部で実行されるので、AEMオーサーサービスの負荷を回避できるので、独立して拡張できるイベント駆動型アーキテクチャです。
 - 新しく導入された Assets オーサー API は、AEMのアセットメタデータの更新に使用されます。
 - API 認証では、OAuth サーバー間（別名クライアント資格情報フロー）を使用します。詳しくは、 [OAuth サーバー間秘密鍵証明書実装ガイド](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - Adobe I/O Runtime Actions の代わりに、他の Web フックまたはAmazon EventBridge を使用して、AEM Assetsイベントを受け取り、メタデータの更新を処理できます。
