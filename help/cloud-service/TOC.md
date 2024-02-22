@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: da8d584e04b5ef375ef5731ea1d5f9e2c0438b2a
+source-git-commit: f2dceed935f563e83092f8e14133746f4126a212
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 92%
+source-wordcount: '1132'
+ht-degree: 91%
 
 ---
 
@@ -384,3 +384,4 @@ ht-degree: 92%
          + [Cloud Manager - 機能テスト](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
       + シーズン 3{#season-3}
          + [サードパーティ検索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
+         + [実際のユーザー監視 (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
