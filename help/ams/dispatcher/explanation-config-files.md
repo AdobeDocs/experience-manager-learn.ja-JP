@@ -10,10 +10,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 478
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
 source-wordcount: '1688'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ Apache web サーバーは、`Include` または `IncludeOptional` ステート�
 | ファイル | ファイルの保存先 | 説明 |
 | ---- | ---------------- | ----------- |
 | ファイル名`.conf` | `/etc/httpd/conf.d/` | デフォルトの Enterprise Linux インストールでは、このファイル拡張子とインクルードフォルダーを、httpd.conf で宣言された設定を上書きする場所として使用し、Apache のグローバルレベルで追加機能を追加できるようにします。 |
-| ファイル名`.vhost` | ステージング：`/etc/httpd/conf.d/available_vhosts/`<br>アクティブ： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b> .vhost ファイルは enabled_vhosts フォルダーにコピーされませんが、available_vhosts/\*.vhost ファイルへの相対パスへの symlinks を使用します。</div></u><br><br> | \*.vhost（仮想ホスト）ファイルは、ホスト名に一致する `<VirtualHosts>` エントリであり、Apache が各ドメイントラフィックを異なるルールで処理できるようにします。`.vhost` ファイルから、`rewrites`、`whitelisting`、`etc` などの他のファイルが含まれます。 |
+| ファイル名`.vhost` | ステージ済み： `/etc/httpd/conf.d/available_vhosts/`<br>アクティブ： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><b>注意：</b> .vhost ファイルは enabled_vhosts フォルダにコピーされませんが、available_vhosts/\*.vhost ファイルへの相対パスへの symlinks を使用します。</u><br><br> | \*.vhost（仮想ホスト）ファイルは、ホスト名に一致する `<VirtualHosts>` エントリであり、Apache が各ドメイントラフィックを異なるルールで処理できるようにします。`.vhost` ファイルから、`rewrites`、`whitelisting`、`etc` などの他のファイルが含まれます。 |
 | ファイル名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` ファイルには `mod_rewrite` ルール（`vhost` ファイルによって明示的に含まれて使用される）が格納されます |
 | ファイル名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` ファイルは `*.vhost` ファイル内から取り込まれます。IP の正規表現または IP の許可リストへの登録を許可する拒否ルールが含まれます。 IP アドレスに基づいて仮想ホストの表示を制限しようとする場合は、これらのファイルの 1 つを生成し、それを `*.vhost` ファイルからインクルードします。 |
 
@@ -43,7 +43,7 @@ Apache web サーバーは、`Include` または `IncludeOptional` ステート�
 | ファイル | ファイルの保存先 | 説明 |
 | --- | --- | --- |
 | ファイル名`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache モジュールは、その設定を `*.any` ファイルから取得します。デフォルトの親インクルードファイルは `conf.dispatcher.d/dispatcher.any` です。 |
-| ファイル名`_farm.any` | ステージング： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>アクティブ： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b> これらの farm ファイルは `enabled_farms` フォルダーにコピーされませんが、`available_farms/*_farm.any` ファイルへの相対パスに `symlinks` を使用します </div> <br/>`*_farm.any` ファイルは `conf.dispatcher.d/dispatcher.any` ファイルに取り込まれています。これらの親 farm ファイルは、レンダリングまたは web サイトタイプごとにモジュールの動作を制御するために存在します。 ファイルは `available_farms` ディレクトリに作成され、`enabled_farms` ディレクトリへの `symlink` によって有効にされます。<br/>`dispatcher.any` ファイルから名前でそれらを自動的に含めます。<br/><b>ベースライン</b> farm ファイルは、最初に読み込まれるようにするために `000_` から始まります。<br><b>カスタム</b> farm ファイルは、適切なインクルード動作を保証するために `100_` で番号スキームを開始してから必要があります。 |
+| ファイル名`_farm.any` | ステージ済み： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>アクティブ： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b> これらのファームファイルは、 `enabled_farms` フォルダは使用しますが、 `symlinks` を `available_farms/*_farm.any` ファイル <br/>`*_farm.any` ファイルは、 `conf.dispatcher.d/dispatcher.any` ファイル。 これらの親 farm ファイルは、レンダリングまたは web サイトタイプごとにモジュールの動作を制御するために存在します。 ファイルは `available_farms` ディレクトリに作成され、`enabled_farms` ディレクトリへの `symlink` によって有効にされます。<br/>`dispatcher.any` ファイルから名前でそれらを自動的に含めます。<br/><b>ベースライン</b> farm ファイルは、最初に読み込まれるようにするために `000_` から始まります。<br><b>カスタム</b> farm ファイルは、適切なインクルード動作を保証するために `100_` で番号スキームを開始してから必要があります。 |
 | ファイル名`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` ファイルは `conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内から取り込まれます。各 farm には、どのトラフィックをフィルターで除外し、レンダラーに送信しないかを変更する一連のルールがあります。 |
 | ファイル名`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` ファイルは `conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内からインクルードされます。これらのファイルは、BLOB マッチングによって照合されて、そのリクエストを処理するためのレンダラーを決定するホスト名または URI パスのリストです。 |
 | FILENAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` ファイルは、`conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内からインクルードされます。これらのファイルは、キャッシュされる項目とキャッシュされない項目を指定します。 |

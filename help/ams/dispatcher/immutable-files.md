@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 266
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '825'
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '824'
 ht-degree: 100%
 
 ---
@@ -309,9 +309,8 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 では、ｗeb サーバーサービスを再読み込みし、新しいドメインを使用します。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
-
-変更したのは、ベースライン設定ファイルに付属の既存のインクルードとコードを変更して活用するうえで必要な部分だけです。詳しく記述する必要があるのは、変更が必要な要素だけです。作業がより容易になり、メンテナンス対象のコードを減らすことができるようになりました。
-</div>
+>[!NOTE]
+>
+>変更したのは、ベースライン設定ファイルに付属の既存のインクルードとコードを変更して活用するうえで必要な部分だけです。詳しく記述する必要があるのは、変更が必要な要素だけです。作業がより容易になり、メンテナンス対象のコードを減らすことができるようになりました。
 
 [次は -> Dispatcher ヘルスチェック](./health-check.md)

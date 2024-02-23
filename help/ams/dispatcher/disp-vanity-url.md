@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1159'
 ht-degree: 80%
 
 ---
@@ -182,9 +182,8 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 - バニティが頻繁に変更されず、頻繁に使用されるステープルエンドポイントの場合は、 `mod_rewrite` ルールを使用します。
 - バニティ名前空間（例：`/aboutus`）を同じ AEM インスタンス上の多数のブランドで再利用する必要がある場合は、書き換えルールを使用します。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
-
-AEM バニティ機能を使用して名前空間を避ける場合は、命名規則を作成できます。`/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus` のようにネストされたバニティ URL の使用 
-</div>
+>[!NOTE]
+>
+>AEM バニティ機能を使用して名前空間を避ける場合は、命名規則を作成できます。`/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus` のようにネストされたバニティ URL の使用 
 
 [次へ -> 一般的なログ](./common-logs.md)

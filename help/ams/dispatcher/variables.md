@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
 duration: 307
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1090'
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '1089'
 ht-degree: 100%
 
 ---
@@ -147,10 +147,9 @@ RUNMODE='sites'
 
 これらは変更できませんが、設定ファイルで使用するのに適しています
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
-
-これは、このファイルがサービスの起動時にのみ含まれるためです。変更を反映するには、サービスを再起動する必要があります。再読み込みでは十分ではなく、再起動が必要です。
-</div>
+>[!NOTE]
+>
+>これは、このファイルがサービスの起動時にのみ含まれるためです。変更を反映するには、サービスを再起動する必要があります。再読み込みでは十分ではなく、再起動が必要です。
 
 ### 変数ファイル（`.vars`）
 

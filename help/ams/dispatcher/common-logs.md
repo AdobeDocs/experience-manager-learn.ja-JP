@@ -10,10 +10,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '799'
-ht-degree: 100%
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 93%
 
 ---
 
@@ -59,10 +59,9 @@ Dispatcher モジュール 4.2.x 以降では、フィルターファイルで�
 
 ## 却下のフィルタリング
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
-設定されているログレベルが低すぎる場合に却下が発生しても、これらのエントリは常に表示されるわけではありません。 これを情報またはデバッグに設定すると、フィルターがリクエストを却下しているかどうかを確認できます。
-</div>
+>[!NOTE]
+>
+>ログレベルが低すぎる場合に却下が発生しても、これらのエントリが常に表示されるわけではありません。 これを情報またはデバッグに設定すると、フィルターがリクエストを却下しているかどうかを確認できます。
 
 サンプルログエントリ：
 
@@ -76,10 +75,9 @@ Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意：</b>
-
-そのリクエストを除外するように Dispatcher のルールが設定されていることを理解します。 この場合は、訪問しようとしたページはわざと却下されたので、何も実行しません。
-</div>
+>[!CAUTION]
+>
+>そのリクエストを除外するように Dispatcher のルールが設定されていることを理解します。 この場合は、訪問しようとしたページはわざと却下されたので、何も実行しません。
 
 ログが次のエントリのような場合：
 
@@ -136,9 +134,9 @@ Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit rat
 
 この数をできるだけ大きくします。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>メモ：</b>
-ファームファイルにキャッシュ設定がある場合でも、フラッシュする頻度が多すぎる、または過度に過剰で、キャッシュヒット率が低くなる可能性があります。
-</div>
+>[!NOTE]
+>
+>ファームファイルにキャッシュ設定がある場合でも、フラッシュする頻度が多すぎる、または過度に過剰で、キャッシュヒット率が低くなる可能性があります。
 
 ## ディレクトリがない
 
