@@ -4,7 +4,7 @@ description: シーズン 3 では、複雑なプロジェクトに取り組ん�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: f2dceed935f563e83092f8e14133746f4126a212
+source-git-commit: 8a88caeb8d894eb281321fc0b28fd41621c5c8db
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 36%
@@ -49,7 +49,7 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
             <div>
                 <a href="./season-3/cloud5-rum.md">
                 <strong>実際のユーザー監視 (RUM)</strong></a>        
-                <br/><em>James Talbot &amp; Varun Mitra 氏 (AEM Engineering)</em>
+                <br/><em>James Talbot &amp; Damian Langsweirdt(AEM Engineering) との連携</em>
             </div>
             <p>
                 <br/>
