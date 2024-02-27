@@ -4,10 +4,10 @@ description: シーズン 3 では、複雑なプロジェクトに取り組ん�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: 8a88caeb8d894eb281321fc0b28fd41621c5c8db
+source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 36%
+source-wordcount: '223'
+ht-degree: 32%
 
 ---
 
@@ -56,7 +56,19 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
                 Explore Real User Monitoring(RUM) は、Edge Delivery Servicesで機能します。
             </p>
         </td>   
-         <td>           
-         </td> 
+ <td>
+            <a href="./season-3/cloud5-edge-workers.md">
+                <img alt="エッジワーカー" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-edge-workers.md">
+                <strong>エッジワーカー</strong></a>        
+                <br/><em>James Talbot &amp; Amol Anand(AEM Engineering) との連携</em>
+            </div>
+            <p>
+                <br/>
+                エッジワーカーとEdge Delivery Servicesの重要性を調べます。
+            </p>
+        </td>   
   </tr>  
 </table>
