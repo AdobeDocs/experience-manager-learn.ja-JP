@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 99%
+source-wordcount: '2009'
+ht-degree: 98%
 
 ---
 
@@ -276,6 +276,7 @@ ht-degree: 99%
    + [フラグメントを使用して PDF を生成する ECMA スクリプト](document-services/using-fragments-in-output-service-watched-folder.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時に PDF を生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [フォーム送信に基づいてコアコンポーネントのPDFを生成する](document-services/generate-pdf-from-core-component-form-submission.md)
    + [モバイルフォームからインタラクティブ PDF を生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成](document-services/generate-interactive-dor.md)
    + [Reader 拡張機能資格情報の設定](document-services/configuring-reader-extension-osgi.md)
