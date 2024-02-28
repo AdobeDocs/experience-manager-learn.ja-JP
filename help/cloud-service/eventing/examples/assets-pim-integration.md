@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
+source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 1%
@@ -26,6 +26,8 @@ ht-degree: 1%
 >このチュートリアルでは、実験的なAEMas a Cloud ServiceAPI を使用します。 これらの API へのアクセス権を取得するには、リリース前のソフトウェア使用許諾契約に同意し、Adobeエンジニアリングによって、お使いの環境でこれらの API を手動で有効にする必要があります。 アクセス権をリクエストするには、「Adobeサポート」にアクセスします。
 
 AEM Assetsを製品情報管理 (PIM) や製品ライン管理 (PLM) システムなどのサードパーティシステムと統合して、アセットのメタデータを更新する方法を説明します。 **ネイティブAEM IO イベントの使用**. AEM Assetsイベントを受け取ると、ビジネス要件に基づいて、AEM、PIM、またはその両方のシステムでアセットメタデータを更新できます。 ただし、この例では、AEMでのアセットメタデータの更新方法を示しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
 アセットメタデータの更新を実行するには **AEM外のコード**、 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)を使用しない場合は、サーバーレスプラットフォームが使用されます。
 
