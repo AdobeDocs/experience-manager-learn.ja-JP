@@ -6,9 +6,9 @@ jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 duration: 490
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '256'
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+workflow-type: tm+mt
+source-wordcount: '156'
 ht-degree: 100%
 
 ---
@@ -20,27 +20,6 @@ ht-degree: 100%
 Adobe Experience Manager（AEM）は as a Cloud Service として利用可能になりました。AEM as a Cloud Service は、次世代の Experience Manager 製品ラインを導入し、過去の投資とイノベーションに基づいて構築し、すべてのユースケースと機能を維持および拡張します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
-
-<div id="whats-new-section">
-
-## 新機能
-
-* **[WAF ルールを含むトラフィックフィルタールールによる web サイトの保護（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html?lang=ja)**
-  *WAF ルールを含むトラフィックフィルタールールを使用して、web サイトを保護する方法を学ぶ*
-
-* **[トークンベースの認証（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja)**
-  *トークンベースの認証を使用して HTTP 経由で AEM as a Cloud Service とやり取りする方法について説明します*
-
-* **[ヘッドレス GraphQL（チュートリアル）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)**
-  *AEM GraphQL API を使用して、外部アプリケーションでエクスペリエンスを強化する方法を説明します。*
-
-* **[Asset Compute メタデータワーカー（チュートリアル）](./asset-compute/advanced/metadata.md)**
-  *Asset Compute ワーカーから AEM にアセットメタデータを書き戻す方法を説明します*
-
-* **[Asset Compute マイクロサービス拡張機能（チュートリアル）](./asset-compute/overview.md)**
-  *Asset Compute ワーカーを開発してカスタムアセットレンディションを生成する方法を学びます*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

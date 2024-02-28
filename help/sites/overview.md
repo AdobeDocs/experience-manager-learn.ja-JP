@@ -6,9 +6,9 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: ht
-source-wordcount: '253'
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+workflow-type: tm+mt
+source-wordcount: '175'
 ht-degree: 100%
 
 ---
@@ -18,21 +18,6 @@ ht-degree: 100%
 {{edge-delivery-services}}
 
 Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス管理プラットフォームです。このユーザーガイドには、AEM Sites の多くの機能に関するビデオとチュートリアルが含まれています。
-
-<div id="whats-new-section">
-
-## 新機能
-
-* **[AEM と Edge 配信サービスの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=ja)**
-  *この有益な概要ビデオでは、AEM Sites、AEM Assets、AEM ヘッドレス、AEM Forms、Edge 配信サービスなど、包括的な Adobe Experience Manager（AEM）について説明します。*
-
-* **[AEM および Edge 配信サービスとは(ビデオ)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=ja)**
-  *Adobe Experience Manager（AEM）と Edge 配信サービスが提供する価値について説明します。*
-
-* **[Edge 配信サービスを使用した AEM のアーキテクチャの概要（ビデオ）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=ja)**
-  *AEM as a Cloud Service のアーキテクチャについて説明します。*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

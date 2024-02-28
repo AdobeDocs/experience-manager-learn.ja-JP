@@ -6,9 +6,9 @@ role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 88
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '277'
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+workflow-type: tm+mt
+source-wordcount: '203'
 ht-degree: 100%
 
 ---
@@ -16,21 +16,6 @@ ht-degree: 100%
 # AEM Forms のチュートリアルとビデオ {#overview}
 
 Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作成、管理、公開、更新するための、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。このユーザガイドには、AEM Forms の多くの機能と性能に関するビデオとチュートリアルが含まれています。
-
-<div id="whats-new-section">
-
-## 新機能
-
-* **[フォームデータモデルサービスを起動する手順でのエラーメッセージの処理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です*
-
-* **[インタラクティブ通信ドキュメント内の複数系列グラフ（ビデオ）](./interactive-communications/multiseriescharts.md)**
-  *同じグラフに複数の系列をプロットします。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフのタイプと関連して使用されます。*
-
-* **[再利用可能なワークフローモデルの作成](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-  *特定のフォームに関連付けられていないワークフローモデルの作成*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -88,8 +73,6 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作�
 </table>
 
 </div>
-
-
 
 
 ## その他のリソース
