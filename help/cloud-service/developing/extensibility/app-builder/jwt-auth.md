@@ -1,6 +1,6 @@
 ---
-title: App Builder アクションでのアクセストークンの生成
-description: App Builder アクションで使用する JWT 資格情報を使用してアクセストークンを生成する方法について説明します。
+title: App Builder アクションでの JWT アクセストークンの生成
+description: App Builder アクションで使用する JWT 資格情報を使用してアクセストークンを生成する方法を説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,18 +10,18 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 161
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '452'
-ht-degree: 100%
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 85%
 
 ---
 
-# App Builder アクションでのアクセストークンの生成
+# App Builder アクションでの JWT アクセストークンの生成
 
 App Builder アクションは、App Builder アプリがデプロイされる Adobe Developer Console プロジェクトに関連付けられた Adobe API とやり取りする必要が生じる場合があります。
 
-このため、App Builderアクションで、目的の Adobe Developer Console プロジェクトに関連する独自のアクセストークンを生成する必要がある場合があります。
+この場合、目的のAdobe Developer Console プロジェクトに関連付けられた独自の JWT アクセストークンを生成するには、App Builder のアクションが必要になることがあります。
 
 >[!IMPORTANT]
 >
@@ -70,22 +70,22 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 >[!TAB macOS]
 
 1. `Terminal` を開きます
-1. コマンド `base64 -i /path/to/private.key | pbcopy` を実行します
+1. コマンドを実行します。 `base64 -i /path/to/private.key | pbcopy`
 1. base64 出力は、クリップボードに自動的にコピーされます
 1. 対応するキーの値として `.env` に貼り付けます
 
 >[!TAB Windows]
 
 1. `Command Prompt` を開きます
-1. コマンド `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key` を実行します
-1. コマンド `findstr /v CERTIFICATE C:\path\to\encoded-private.key` を実行します
+1. コマンドを実行します。 `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
+1. コマンドを実行します。 `findstr /v CERTIFICATE C:\path\to\encoded-private.key`
 1. base64 出力をクリップボードにコピーします
 1. 対応するキーの値として `.env` に貼り付けます
 
 >[!TAB Linux®]
 
 1. ターミナルを開きます
-1. コマンド `base64 private.key` を実行します
+1. コマンドを実行します。 `base64 private.key`
 1. base64 出力をクリップボードにコピーします
 1. 対応するキーの値として `.env` に貼り付けます
 

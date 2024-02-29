@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 91%
+source-wordcount: '1141'
+ht-degree: 90%
 
 ---
 
@@ -60,7 +60,8 @@ ht-degree: 91%
 + 開発{#developing}
    + 拡張性{#extensibility}
       + App Builder{#app-builder}
-         + [アクセストークンの生成](./developing/extensibility/app-builder/jwt-auth.md)
+         + [JWT アクセストークンを生成](./developing/extensibility/app-builder/jwt-auth.md)
+         + [サーバー間アクセストークンの生成](./developing/extensibility/app-builder/server-to-server-auth.md)
       + UI 拡張機能{#ui}
          + [概要](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console プロジェクト](./developing/extensibility/ui/adobe-developer-console-project.md)
