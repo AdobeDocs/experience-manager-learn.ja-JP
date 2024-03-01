@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bd66ad8698e2017cb53b91cae8f1cea92903f05b
+source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '412'
 ht-degree: 96%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 96%
    + [関連付けと関連付け解除](./authoring/relate-unrelate.md)
 
 + 共同作業{#collaboration}
+   + [ウォッチ](./collaboration/watch.md)
    + [タイムラインとインボックス](./collaboration/timeline-and-inbox.md)
    + [コメントと注釈](./collaboration/comments-and-annotations.md)
    + [アセットのチェックインとチェックアウト](./collaboration/check-in-and-check-out.md)
