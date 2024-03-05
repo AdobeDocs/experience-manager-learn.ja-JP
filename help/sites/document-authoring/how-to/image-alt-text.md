@@ -1,6 +1,6 @@
 ---
-title: AEMドキュメントオーサリングでの画像代替テキストの追加
-description: ドキュメントのオーサリングで画像に代替テキストを使用する方法を説明します。
+title: AEM ドキュメントオーサリングで画像の代替テキストを追加
+description: ドキュメントオーサリングで画像に代替テキストを使用する方法を学びます。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425721.jpeg
 duration: 103
 exl-id: 9577aa66-25a7-4092-984d-52eb2662c4ff
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '37'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-AEMドキュメントオーサリングを使用して作成したページの画像に代替テキストを追加する方法を説明します。
+AEM ドキュメントオーサリングを使用して、作成したページの画像に代替テキストを追加する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
