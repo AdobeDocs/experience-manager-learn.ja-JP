@@ -1,6 +1,6 @@
 ---
-title: AEMヘッドレス Web コンポーネントのデプロイメント
-description: Web コンポーネント/純粋な JS ベースのAEMヘッドレスデプロイメントのデプロイメントに関する考慮事項について説明します。
+title: AEM ヘッドレス web コンポーネントデプロイメント
+description: Web コンポーネント／純粋な JS ベースの AEM ヘッドレスデプロイメントのデプロイメントに関する考慮事項について説明します。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -11,22 +11,22 @@ thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
 duration: 61
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
-ht-degree: 21%
+ht-degree: 100%
 
 ---
 
-# AEMヘッドレス Web コンポーネントのデプロイメント
+# AEM ヘッドレス web コンポーネントデプロイメント
 
-AEMヘッドレス [Web コンポーネント](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS デプロイメントは、Web ブラウザーで実行され、ヘッドレスにAEMでコンテンツを消費し、操作する純粋な JavaScript アプリです。 Web コンポーネント/JS のデプロイメントは、 [SPAデプロイメント](./spa.md) 堅牢なSPAフレームワークを使用せず、AEMからコンテンツを表示するために任意の web サイトのコンテキストに埋め込まれ、配信されることが期待されます。
+AEM ヘッドレス [web コンポーネント](https://developer.mozilla.org/en-US/docs/Web/Web_Components)／JS デプロイメントは、web ブラウザーで動作し、AEM のコンテンツをヘッドレス方式で消費し操作する純粋な JavaScript アプリです。Web コンポーネント／JS デプロイメントは、堅牢な SPA フレームワークを使用せず、任意の web サイトのコンテキストに埋め込まれて AEM のコンテンツを表示することが想定される点で、[SPA デプロイメント](./spa.md)とは異なります。
 
 
 ## デプロイメント設定
 
-Web コンポーネント/JS デプロイメントを実行するには、次のデプロイメント設定をインプレースにする必要があります。
+Web コンポーネント／JS デプロイメントでは、次のデプロイメント設定が必要です。
 
-| Web コンポーネント/JS アプリが | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| Web コンポーネント／JS アプリの接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [クロスオリジンリソース共有（CORS）](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -34,7 +34,7 @@ Web コンポーネント/JS デプロイメントを実行するには、次の
 
 ## Web コンポーネントの例
 
-Adobeは、Web コンポーネントの例を提供しています。
+アドビでは、web コンポーネントの例を提供しています。
 
 <div class="columns is-multiline">
     <!-- Web Component -->
@@ -50,7 +50,7 @@ Adobeは、Web コンポーネントの例を提供しています。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web コンポーネント">Web コンポーネント</a></p>
-                   <p class="is-size-6">純粋な JavaScript で記述された、AEMヘッドレスGraphQL API のコンテンツを使用する Web コンポーネントの例です。</p>
+                   <p class="is-size-6">AEM ヘッドレス GraphQL API のコンテンツを使用する、純粋な JavaScript で記述された web コンポーネントの例です。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
                    </a>
