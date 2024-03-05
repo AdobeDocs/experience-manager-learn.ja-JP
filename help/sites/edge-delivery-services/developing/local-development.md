@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Servicesのローカル開発環境の設定
-description: Edge Delivery Servicesのローカル開発環境の設定方法。
+title: Edge Delivery Services 用のローカル開発環境を設定
+description: Edge Delivery Services 用のローカル開発環境の設定方法。
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,35 +13,35 @@ thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 環境のローカル開発
+# ローカル開発環境を設定
 
-開発用のローカル開発環境を設定するEdge Delivery Services。
+Edge Delivery Services 開発用のローカル開発環境の設定方法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
 
 
-## ビデオで概要を説明した手順
+## ビデオで説明されている手順
 
-1. AEM CLI のインストール
+1. AEM CLI をインストールします。
 
    ```
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. ディレクトリを、 [AEM boilerplate](https://github.com/adobe/aem-boilerplate) テンプレート。
+1. ディレクトリを、[AEM ボイラープレート](https://github.com/adobe/aem-boilerplate)テンプレートから作成した git リポジトリであるプロジェクトディレクトリに変更します。
 
    ```
    $ git clone git@github.com:my-org/my-project.git
    $ cd my-project
    ```
 
-1. AEM CLI を実行して、ローカルのAEMインスタンスを起動します。
+1. AEM CLI を実行して、ローカルの AEM インスタンスを起動します。
 
    ```
    $ pwd
@@ -60,4 +60,4 @@ ht-degree: 0%
    opening default browser: http://localhost:3000/
    ```
 
-1. http://localhost:3000/ Web ブラウザーを開いて、AEM Web サイトを表示します。
+1. Web ブラウザーで http://localhost:3000/ を開いて、AEM web サイトを表示します。
