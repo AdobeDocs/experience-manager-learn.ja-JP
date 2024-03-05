@@ -13,15 +13,15 @@ last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 354
 source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '406'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # リッチテキストエディター（RTE）ツールバーへのカスタムボタンの追加
 
-AEMコンテンツフラグメントエディターで、リッチテキストエディター (RTE) ツールバーにカスタムボタンを追加する方法を説明します。
+AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）ツールバーにカスタムボタンを追加する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
