@@ -1,6 +1,6 @@
 ---
 title: Git の操作
-description: Git を使用したEdge Delivery Services開発環境の設定方法。
+description: Git を使用した Edge Delivery Services 開発環境の設定方法。
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425718.jpeg
 duration: 149
 exl-id: 68866a41-7790-49f9-bb9e-49b63ae3b3af
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '25'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Git の設定
+# Git を設定
 
-Git を使用してEdge Delivery Services開発環境を設定します。
+Git を使用して Edge Delivery Services 開発環境を設定します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425718/?learn=on)
