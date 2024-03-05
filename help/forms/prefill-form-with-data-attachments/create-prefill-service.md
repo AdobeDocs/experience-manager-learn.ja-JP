@@ -9,15 +9,15 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # 事前入力サービスの作成
 
-送信されたデータと添付ファイルをフォームに事前入力するために、次の事前入力サービスが書き込まれました
+送信されたデータと添付ファイルをフォームに事前入力するために、次の事前入力サービスが記述作成されました。
 
 ```java
 package com.azuredemo.core;
@@ -121,13 +121,13 @@ public String getBlobData(String blobID) {
 }
 ```
 
-## 事前入力サービスをフォームに関連付ける
+## フォームへの事前入力サービスの関連付け
 
-次に示すように、カスタム事前入力サービスをアダプティブフォームに関連付けます
+次に示すように、カスタム事前入力サービスをアダプティブフォームに関連付けます。
 
 ![prefill-service](assets/prefill-service.png)
 
-以下に示すように、URL に guid パラメーターを含めてフォームをプレビューします
+次に示すように、URL に guid パラメーターを含めてフォームをプレビューします。
 
 ```html
 http://localhost:4502/content/dam/formsanddocuments/azureportal/benefitsenrollment/jcr:content?wcmmode=disabled&guid=411b2f29-f0d0-468c-875b-4562dcc546fe
