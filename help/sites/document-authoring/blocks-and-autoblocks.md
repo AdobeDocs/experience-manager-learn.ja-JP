@@ -1,6 +1,6 @@
 ---
 title: ドキュメントオーサリングでのブロックと自動ブロック
-description: ドキュメントのオーサリングでブロックとオートブロックがどのように使用されるか。
+description: ドキュメントオーサリングでのブロックとオートブロックの使用方法。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425702.jpeg
 duration: 121
 exl-id: a24123aa-486a-429d-bf36-b5f2873bb55a
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-ドキュメントオーサリングでのブロックとオートブロックの使用方法、およびこれらがサイトやオーサリングエクスペリエンスを改善する方法について説明します。
+ドキュメントオーサリングでのブロックとオートブロックの使用方法と、これらによってサイトやオーサリングエクスペリエンスがどのように向上するかについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
