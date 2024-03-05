@@ -10,9 +10,9 @@ doc-type: Technical Video
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
 duration: 653
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '811'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 98%
 
 1. Oak Search Machine Translation OSGi バンドルをダウンロードしてインストールする
    * AEM の Oak バージョンに対応する [Oak Search Machine Translation OSGi バンドル](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22)をダウンロードします。
-   * ダウンロードした Oak Search Machine Translation OSGi バンドルををを介してAEMにインストールします。 [`/system/console/bundles`](http://localhost:4502/system/console/bundles).
+   * ダウンロードした Oak Search Machine Translation OSGi バンドルを [`/system/console/bundles` ](http://localhost:4502/system/console/bundles) 経由で AEM にインストールします。
 
 2. Apache Joshua 言語パックをダウンロードして更新します
    * 目的の [Apache Joshua 言語パック](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)をダウンロードして解凍します。
