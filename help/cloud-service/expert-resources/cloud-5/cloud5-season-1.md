@@ -7,13 +7,13 @@ recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 duration: 179
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '560'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# クラウド 5 シーズン 1
+# Cloud 5 シーズン 1
 
 ## はじめに
 
@@ -83,7 +83,7 @@ AEM Engineering の Cloud 5 シリーズへようこそ。製品の実装フェ�
      </td>   
      <td>
       <a href="./cloud5-aem-dispatcher-cloud.md">
-      <img alt="クラウド内の Dispatcher" src="./imgs/005-thumb.png"/>
+      <img alt="クラウド内 Dispatcher" src="./imgs/005-thumb.png"/>
        </a>  
       <div>
         <a href="./cloud5-aem-dispatcher-cloud.md"><strong>クラウド内の Dispatcher</strong></a>
@@ -100,7 +100,7 @@ AEM Engineering の Cloud 5 シリーズへようこそ。製品の実装フェ�
         </a>
       <div>
          <a href="./cloud5-aem-content-migration-part-1.md"><strong>移行（パート 1）</strong></a>
- <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）、Dr. Applesmith</em>
+         <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）、Dr. Applesmith</em>
       </div>
       <p>
         <br/>
