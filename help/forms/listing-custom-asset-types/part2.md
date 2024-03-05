@@ -12,9 +12,9 @@ exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
 last-substantial-update: 2019-07-10T00:00:00Z
 duration: 163
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '584'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 97%
 
 ## 「検索とリスター」コンポーネントの設定 {#configure-search-and-lister-component}
 
-カスタムテンプレートを定義したら、このカスタムテンプレートを「検索とリスター」コンポーネントに関連付ける必要があります。 ブラウザーを指し示す [この url に](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+カスタムテンプレートを定義したら、このカスタムテンプレートを「検索とリスター」コンポーネントに関連付ける必要があります。 ブラウザーで[この URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html) を参照します。
 
 デザインモードに切り替え、許可されたコンポーネントグループに「検索とリスター」コンポーネントを含めるように段落システムを設定します。 Search &amp; Lister コンポーネントは、ドキュメントサービスグループの一部として含まれています。
 
@@ -105,7 +105,7 @@ ht-degree: 97%
 
 ![assettypes](assets/assettypes.png)
 
-これで Search &amp; Lister ポータルコンポーネントの設定が完了したので、次に Lister の動作を確認します。 ブラウザーを指し示す [この url に](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 結果は、次の画像のようになります。
+これで Search &amp; Lister ポータルコンポーネントの設定が完了したので、次に Lister の動作を確認します。 ブラウザーで[この URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled) を参照します。結果は、次の画像のようになります。
 
 >[!NOTE]
 >
