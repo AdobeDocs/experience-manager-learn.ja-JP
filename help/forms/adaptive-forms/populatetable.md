@@ -10,9 +10,9 @@ exl-id: 6e4b901a-6534-4c34-b315-2f2620b74247
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 57
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -27,8 +27,9 @@ Row1 は、サービス呼び出しから返されるデータに応じて増え
 
 ## お使いのサーバーにこれをデプロイする方法
 
-[ここで指定した Tomcat をインストールします。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[この zip ファイルに含まれる SampleRest.war ファイルを Tomcat にデプロイします。](assets/sample-rest.zip)
-[アセットのインストール](assets/amortizationschedule.zip) AEM package manager の使用
-[償却スケジュール・フォームを開きます。](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-適切な値を入力し、フォームに入力する「償却スケジュールの計算」をクリックします
+[ここで指定しているとおりに Tomcat をインストールします](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)。
+[この zip ファイルに含まれている SampleRest.war ファイルを Tomcat にデプロイします](assets/sample-rest.zip)。
+AEM パッケージマネージャーを使用して[アセットをインストールします](assets/amortizationschedule.zip)。
+[償却スケジュールフォームを開きます](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)。
+適切な値を入力して、「計算」をクリックします。
+計算結果がフォームの償却スケジュールに入力されます。
