@@ -10,9 +10,9 @@ exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 161
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '656'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ afData.afUnboundData.data.initialStep,N
 
 >[!NOTE]
 >
->ユーザープロファイルを使用してアダプティブフォームに事前入力するので、管理者 [ユーザープロファイル情報](http://localhost:4502/security/users.html). 少なくとも、FirstName、LastName、Email の各フィールド値が設定されていることを確認してください。
+>ユーザープロファイルを使用してアダプティブフォームに事前入力するので、管理者の[ユーザープロファイル情報](http://localhost:4502/security/users.html)を確認してください。少なくとも、FirstName、LastName、Email の各フィールド値が設定されていることを確認してください。
 >[ここから](http://localhost:4502/system/console/slinglog) com.aemforms.setvalue.core.SetValueInJson のロガーを有効にすることで、デバッグのログを有効にできます
 
 >[!NOTE]
