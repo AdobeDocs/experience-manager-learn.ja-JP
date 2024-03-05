@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsとAdobe Express
-description: Adobe Express機能を使用して、AEM Assets内でコンテンツを容易に作成および編集する方法を学びます。
+title: AEM Assets と Adobe Express
+description: Adobe Express を使用して AEM Assets 内でコンテンツを簡単に作成および編集する方法について説明します。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Content Management, Content Supply Chain
@@ -13,16 +13,16 @@ jira: KT-14645
 thumbnail: 3425972.jpeg
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '86'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsとAdobe Express
+# AEM Assets と Adobe Express
 
-Adobe Express機能を使用して、Adobe Experience Manager Assets内でコンテンツを容易に作成および編集する方法を学びます。 このビデオでは、コンテンツワークフローを強化し、効率性と使いやすさを実現するために合理化された、既存のアセットの編集と新しいアセットの作成の両方を示します。
+Adobe Express を使用して、Adobe Experience Manager Assets 内でコンテンツを簡単に作成および編集する方法について説明します。このビデオでは、既存アセットの編集と新規アセットの作成の両方を示しながら、コンテンツワークフローの強化について順を追って説明します。すべてのワークフローは、効率性と使いやすさを実現するために効率化されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-設定方法を学ぶ [Adobe Express用AEM Assetsアドオン](./adobe-express-aem-assets-add-on.md) を使用して、Adobe ExpressからAEM Assetsにシームレスにアクセスできます。
+[Adobe Express 用 AEM Assets アドオン](./adobe-express-aem-assets-add-on.md)を設定して Adobe Express から AEM Assets にシームレスにアクセスする方法について説明します。
