@@ -13,15 +13,15 @@ last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 555
 source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '729'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # リッチテキストエディター（RTE）へのバッジの追加
 
-AEMコンテンツフラグメントエディターでリッチテキストエディター (RTE) にバッジを追加する方法を説明します。
+AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にバッジを追加する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
