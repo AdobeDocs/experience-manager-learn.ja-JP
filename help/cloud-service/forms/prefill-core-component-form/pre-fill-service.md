@@ -10,16 +10,16 @@ topic: Integrations
 jira: KT-14675
 duration: 77
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '113'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # DataProvider インターフェイスの実装
 
-最新のアーキタイプを使用してAEMプロジェクトを作成し、次のコードをプロジェクトに追加します。
-通常、データは、データベース、Azure ストレージ、S3 バケット、その他のソースなどの外部データソースから取得されます。 データを取得するには、コードを記述する必要があります。
+最新のアーキタイプを使用して AEM プロジェクトを作成し、次のコードをプロジェクトに追加します。
+通常、データは、データベース、Azure ストレージ、S3 バケット、その他のソースなどの外部データソースから取得されます。データを取得するには、コードを記述する必要があります。
 
 ```java
 package com.aemforms.prefill;
@@ -110,7 +110,7 @@ logger.info("got data  "+data);
 
 ## データマネージャー
 
-プロジェクトに次のコードを含めます。 上記のコードは、この DataManager クラスを使用します
+次のコードをプロジェクトに追加します。上記のコードは、この DataManager クラスを使用します
 
 ```java
 import java.io.Serializable;
@@ -183,8 +183,8 @@ public class DataManager implements Serializable {
 
 ## コードのデプロイ
 
-Cloud Manager を使用して、ローカルのクラウド対応環境に、またはクラウドインスタンスに、コードをデプロイできます。
+クラウドマネージャーを使用して、ローカルのクラウド対応環境に、またはクラウドインスタンスに、コードをデプロイできます。
 
 ### 次の手順
 
-[ソリューションをテスト](./test-solution.md)
+[ソリューションのテスト](./test-solution.md)
