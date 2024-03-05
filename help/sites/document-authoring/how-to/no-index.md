@@ -1,6 +1,6 @@
 ---
-title: AEMドキュメントのオーサリングで検索エンジンのインデックス作成を防ぐ
-description: Edge Delivery Servicesが提供するページが検索エンジンによってインデックス付けされるのを防ぎます。
+title: AEM ドキュメントオーサリングで検索エンジンによるインデックス化を防ぐ
+description: Edge Delivery Services が提供するページが、検索エンジンによってインデックス化されないようにします。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425726.jpeg
 duration: 94
 exl-id: fa22fa48-667b-42bc-9b6e-d8a8935fa7ed
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-AEMドキュメントオーサリングを使用して作成した Web ページが検索エンジンによってインデックス付けされないようにする方法を説明します。
+AEM ドキュメントオーサリングを使用して、作成した web ページが検索エンジンによってインデックス化されないようにする方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
