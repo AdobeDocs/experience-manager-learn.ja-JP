@@ -13,20 +13,20 @@ thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 383
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1352'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
 # CDN キャッシュヒット率の分析
 
-CDN でキャッシュされるコンテンツは、Web サイトユーザーが経験する待ち時間を短縮します。ユーザーは、要求が Apache/Dispatcher またはAEMパブリッシュに戻るのを待つ必要はありません。 このことを念頭に置いておくと、CDN でキャッシュ可能なコンテンツの量を最大限に増やすために、CDN キャッシュのヒット率を最適化することが重要です。
+CDN でキャッシュされるコンテンツは、web サイトユーザーが経験する待ち時間を短縮します。ユーザーは、リクエストが Apache／Dispatcher または AEM パブリッシュに戻るのを待つ必要はありません。このことを念頭に置くと、CDN でキャッシュ可能なコンテンツの量を最大限に増やすために、CDN キャッシュのヒット率を最適化することが重要です。
 
-提供されるAEMas a Cloud Serviceの分析方法を説明します **CDN ログ** とは、次のようなインサイトを得る **キャッシュヒット率**、および **の上位の URL _MISS_ および _パス_ キャッシュの種類**、最適化のために使用します。
+AEM as a Cloud Service が提供する **CDN ログ**&#x200B;を分析し、**キャッシュヒット率**、**_MISS_ および _PASS_ キャッシュタイプの上位 URL** などのインサイトを取得して最適化を実現する方法について説明します。
 
 
-CDN ログは JSON 形式で利用できます。この形式には、以下のような様々なフィールドが含まれています。 `url`, `cache`. 詳しくは、 [CDN ログ形式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=ja#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). `cache` フィールドでは、_キャッシュの状態_&#x200B;に関する情報を提供し、その考えられる値は HIT、MISS または PASS です。考えられる値の詳細を確認してみましょう。
+CDN ログは JSON 形式で利用できます。この形式には、`url`、`cache` といった様々なフィールドが含まれています。詳しくは、[CDN ログ形式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=ja#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)を参照してください。`cache` フィールドでは、_キャッシュの状態_&#x200B;に関する情報を提供し、その考えられる値は HIT、MISS または PASS です。考えられる値の詳細を確認してみましょう。
 
 | キャッシュの状態 </br> 考えられる値 | 説明 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -34,11 +34,11 @@ CDN ログは JSON 形式で利用できます。この形式には、以下の�
 | MISS | リクエストしたデータは _CDN キャッシュ内で見つからないので、AEM サーバーからリクエストする必要があります_。 |
 | PASS | リクエストされたデータは&#x200B;_キャッシュされないように明示的に設定_&#x200B;され、常に AEM サーバーから取得されます。 |
 
-このチュートリアルの目的は、 [AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd) がAEMas a Cloud Service環境にデプロイされ、 [Apache JMeter](https://jmeter.apache.org/).
+このチュートリアルの目的のために、[AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)が AEM as a Cloud Service 環境にデプロイされ、[Apache JMeter](https://jmeter.apache.org/) を使用して小規模なパフォーマンステストがトリガーされます。
 
 このチュートリアルは、次の手順を実行するように構成されています。
 1. Cloud Manager を使用した CDN ログのダウンロード
-1. これらの CDN ログの分析。ローカルにインストールされたダッシュボード、またはリモートからアクセスした Jupiter Notebook(Adobe Experience Platformのライセンスを持つユーザー向け ) の 2 つの方法で実行できます。
+1. これらの CDN ログの分析。ローカルにインストールされたダッシュボード、またはリモートからアクセスした Jupiter Notebook（Adobe Experience Platform のライセンスを持つユーザー向け）の 2 つの方法で実行できます。
 1. CDN キャッシュ設定の最適化
 
 ## CDN ログのダウンロード
@@ -60,12 +60,12 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 ## ダウンロードした CDN ログの分析
 
-キャッシュヒット率や MISS および PASS キャッシュタイプの上位の URL などのインサイトを得るには、ダウンロードした CDN ログファイルを分析します。 これらのインサイトは、[CDN キャッシュ設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja)を最適化し、サイトのパフォーマンスを向上させるのに役立ちます。
+キャッシュヒット率、MISS および PASS キャッシュタイプの上位 URL などのインサイトを取得するには、ダウンロードした CDN ログファイルを分析します。これらのインサイトは、[CDN キャッシュ設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja)を最適化し、サイトのパフォーマンスを向上させるのに役立ちます。
 
-CDN ログを分析するには、次の 2 つのオプションを紹介します。 **Elasticsearch、ログスタッシュ、きばな (ELK)** [ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) および [Jupyter Notebook](https://jupyter.org/). ELK ダッシュボードツールは、ノートパソコンにローカルにインストールでき、Jupyry Notebook ツールにリモートからアクセスできます [Adobe Experience Platformの一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) Adobe Experience Platformのライセンスを持つユーザー向けに、追加のソフトウェアをインストールしないで
+CDN ログを分析するために、この記事では **Elasticsearch、Logstash、Kibana（ELK）**[ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool)と [Jupyter Notebook](https://jupyter.org/) を使用します。ELK ダッシュボードツールは、ノートパソコンにローカルにインストールできます。一方、Adobe Experience Platform のライセンスを取得している場合は、追加のソフトウェアをインストールしなくても、Jupyr Notebook ツールに [Adobe Experience Platform の一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=ja)リモートからアクセスできます。
 
 
-### オプション 1:ELK ダッシュボードツールの使用
+### オプション 1：ELK ダッシュボードツールの使用
 
 [ELK スタック](https://www.elastic.co/elastic-stack)は、データを検索、分析、視覚化するためのスケーラブルなソリューションを提供するツールのセットです。Elasticsearch、Logstash、Kibana で構成されます。
 
@@ -77,7 +77,7 @@ CDN ログを分析するには、次の 2 つのオプションを紹介しま�
 
    1. ダウンロードした CDN ログファイルを環境固有のフォルダー内にコピーします。
 
-   1. を開きます。 **CDN キャッシュヒット率** ダッシュボードを表示するには、左上隅のナビゲーションメニュー/ Analytics /ダッシュボード/CDN キャッシュヒット率をクリックします。
+   1. **CDN キャッシュヒット率**&#x200B;ダッシュボードを表示するには、左上隅のナビゲーションメニュー／分析／ダッシュボード／CDN キャッシュヒット率をクリックします。
 
       ![CDN キャッシュヒット率 - Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -126,24 +126,24 @@ CDN ログを分析するには、次の 2 つのオプションを紹介しま�
 
 同様に、分析要件に基づいて、ダッシュボードにフィルターを追加します。
 
-### オプション 2:Jupyter ノートブックの使用
+### オプション 2：Jupyter ノートブックの使用
 
-ソフトウェアをローカルにインストールしない（前の節の ELK ダッシュボードツール）場合は、別のオプションもありますが、Adobe Experience Platformのライセンスが必要です。
+ソフトウェアをローカルにインストールしない（前のセクションの ELK ダッシュボードツール）場合は、別のオプションもありますが、Adobe Experience Platform ライセンスが必要です。
 
-[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用されます。 リモートからアクセス可能 [Adobe Experience Platformの一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
+[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用します。[Adobe Experience Platform の一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=ja)リモートからアクセス可能です。
 
 #### インタラクティブ Python ノートブックファイルのダウンロード
 
-まず、 [AEM-as-a-CloudService - CDN ログ分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) ファイルに含める必要があります。 この「Interactive Python Notebook」ファイルは説明に基づいて説明できますが、各セクションの主な特徴は次のとおりです。
+まず、[AEM-as-a-CloudService - CDN Logs Analysis - Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) ファイルをダウンロードします。これは CDN ログ分析に役立ちます。ダウンロードした 「インタラクティブ Python ノートブック」ファイルは一目瞭然ですが、以下に各セクションの主な特徴を示します。
 
 - **追加のライブラリをインストール**：`termcolor` および `tabulate` Python ライブラリをインストールします。
-- **CDN ログを読み込む**：を使用して CDN ログファイルを読み込みます。 `log_file` 変数の値に設定します。必ず値を更新してください。 また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html) に変換します。
-- **分析の実行**：最初のコードブロックは _合計、HTML、JS/CSS およびイメージリクエストの分析結果を表示_キャッシュヒット率の割合、棒グラフおよび円グラフを表示します。
-2 番目のコードブロックは、 _HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件_&#x200B;の場合に、URL とその数を表形式で表示します。
+- **CDN ログファイルを読み込み**：`log_file` 変数値を使用して CDN ログファイルを読み込みます。必ずその値を更新してください。また、この CDN ログを [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html) に変換します。
+- **分析を実行**：最初のコードブロックは&#x200B;_合計、HTML、JS/CSS および画像リクエストの分析結果を表示_で、キャッシュヒット率の割合、棒グラフ、円グラフを表示します。
+2 番目のコードブロックは、_HTML、JS/CSS、画像の MISS および PASS リクエスト URL の上位 5 件_&#x200B;で、URL とその数を表形式で表示します。
 
-#### Jupyter ノートブックの実行
+#### Jupyter Notebook の実行
 
-次に、次の手順に従って、Adobe Experience Platformで Jupyter ノートブックを実行します。
+Adobe Experience Platform で Jupyter Notebook を実行するには、次の手順に従います。
 
 1. [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、ホームページ／「**クイックアクセス**」セクション／**Experience Platform** をクリックします
 
