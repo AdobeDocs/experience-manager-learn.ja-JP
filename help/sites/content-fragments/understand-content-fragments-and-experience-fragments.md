@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 duration: 231
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '829'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 <li><strong>エクスペリエンス</strong> を形成するコンテンツとプレゼンテーションを定義する 1 つ以上の AEM コンポーネントの再利用可能な複合物で、それ自体が理にかなっているもの</li>
 </ul>
 </td>
-</tr><tr><td><strong>主なガイドライン</strong></td>
+</tr><tr><td><strong>主要な考え方</strong></td>
 <td><ul>
 <li>コンテンツ中心</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html?lang=ja" target="_blank">構造化されたフォームベースのデータ モデル</a>によって定義されます。</li>
@@ -101,7 +101,7 @@ Adobe Experience Manager のコンテンツフラグメントとエクスペリ�
 </tr><tr><td><strong>使用方法</strong></td>
 <td><ul>
 <li><a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja">AEM ヘッドレス GraphQL API</a> を介した JSON エクスポート</li>
-<li>AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用できる <a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja" target="_blank">AEM コアコンポーネントコンテンツフラグメントコンポーネント</a></li>
+<li>AEM Sites、AEM Screens、またはエクスペリエンスフラグメントで使用できる <a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja" target="_blank">AEM コアコンポーネントコンテンツフラグメントコンポーネント。</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja" target="_blank">AEM Content Services</a> を介した JSON の書き出し（サードパーティでの使用）</li>
 <li>ターゲットオファー向けに JSON を Adobe Target に書き出す</li>
 <li>AEM HTTP Assets API を介したサードパーティによる JSON の利用</li>
