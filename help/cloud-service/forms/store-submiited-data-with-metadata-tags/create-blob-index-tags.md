@@ -1,6 +1,6 @@
 ---
-title: ユーザー指定のメタデータタグを追加するためのチュートリアル
-description: カスタム送信を作成して、Azure にメタデータタグ付きのフォームデータを保存する
+title: ユーザー指定のメタデータタグを追加するチュートリアル
+description: カスタム送信を作成して、メタデータタグ付きのフォームデータを Azure に保存
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,18 +11,18 @@ jira: KT-14501
 duration: 40
 exl-id: eb9bcd1b-c86f-4894-bcf8-9c17e74dd6ec
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# BLOB インデックスタグを追加
+# Blob インデックスタグを追加
 
-データセットが大きくなると、データの海で特定のオブジェクトを見つけるのが難しくなる場合があります。 BLOB インデックスタグは、キー値インデックスタグ属性を使用して、データの管理と検出の機能を提供します。 単一のコンテナ内、またはストレージアカウント内のすべてのコンテナ間で、オブジェクトを分類して検索できます。 例： blob インデックスタグ _**CustomerType=Platinum**_（ここで、プラチナはフィールド CustomerType の値です）。
+データセットが大きくなると、データの海で特定のオブジェクトを見つけるのが難しくなる場合があります。Blob インデックスタグは、キーと値のインデックスタグ属性を使用して、データの管理と検出の機能を提供するものです。単一のコンテナ内、またはストレージアカウント内のすべてのコンテナ間で、オブジェクトを分類して検索できます。例えば、Blob インデックスタグが _**CustomerType=Platinum**_ の場合、「Platinum」は CustomerType フィールドの値です。
 
 ![index-tags](assets/blob-with-index-tags1.png)
-次のコードは、送信されたデータから対応する値を持つ blob インデックスデータタグ文字列を作成します
+次のコードは、送信されたデータから対応する値を持つ Blob インデックスデータタグ文字列を作成します。
 
 ```java
 @Override
