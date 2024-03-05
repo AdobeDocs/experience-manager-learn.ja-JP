@@ -13,9 +13,9 @@ thumbnail: 3425705.jpeg
 duration: 98
 exl-id: cada8642-b677-4b61-927b-f640b3e2a1ac
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '33'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-ドキュメントオーサリングでの一括メタデータの処理方法、および技術的な専門知識を持たない一括メタデータの更新方法を確認します。
+ドキュメントオーサリングでの一括メタデータの処理方法、および技術的な専門知識がなくても一括メタデータを更新できる方法を確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
