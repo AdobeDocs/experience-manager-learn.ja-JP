@@ -1,5 +1,5 @@
 ---
-title: AEM Formsでのサービスユーザーを使用した開発
+title: AEM Forms でのサービスユーザーを使用した開発
 description: この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します
 feature: Adaptive Forms
 topic: Development
@@ -9,53 +9,53 @@ exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
 last-substantial-update: 2020-09-09T00:00:00Z
 duration: 140
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '415'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Formsでのサービスユーザーを使用した開発
+# AEM Forms でのサービスユーザーを使用した開発
 
 この記事では、AEM Formsでサービスユーザーを作成するプロセスについて説明します
 
-以前のバージョンのAdobe Experience Manager(AEM) では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。 AEM 6.3 では、管理リソースリゾルバーの使用は非推奨（廃止予定）となっています。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
+以前のバージョンの Adobe Experience Manager（AEM）では、管理リソースリゾルバーが、リポジトリへのアクセスを必要とするバックエンド処理に使用されていました。AEM 6.3 では、管理リソースリゾルバーの使用は非推奨（廃止予定）となっています。代わりに、リポジトリ内の特定の権限を持つシステムユーザーが使用されます。
 
-詳細情報 [AEMでのサービスユーザーの作成と使用](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
+[AEM でのサービスユーザーの作成と使用](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html?lang=ja)について詳しく説明します。
 
-この記事では、システムユーザーの作成と、ユーザーマッパーのプロパティの設定に関する手順を説明します。
+この記事では、システムユーザーの作成とユーザーマッパープロパティの設定について説明します。
 
-1. に移動します。 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
-1. 「管理者」としてログイン
+1. [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp) に移動します。
+1. 「admin」としてログインします。
 1. 「ユーザー管理」をクリックします。
 1. 「システムユーザーを作成」をクリックします。
-1. ユーザー ID タイプを「 data 」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します。
-1. [configMgr を開きます。](http://localhost:4502/system/console/configMgr)
-1. を検索 _Apache Sling Service User Mapper Service_ をクリックして、プロパティを開きます。
-1. 次をクリック： *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
+1. ユーザー ID タイプを「data」に設定し、緑のアイコンをクリックして、システムユーザーの作成プロセスを完了します。
+1. [configMgr を開く](http://localhost:4502/system/console/configMgr)
+1. _Apache Sling Service User Mapper Service_ を探し、クリックしてプロパティを開きます。
+1. *+* アイコン（プラス）をクリックして、次のサービスマッピングを追加します。
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 
-1. 「保存」をクリックします。
+1. 「保存」をクリック
 
-上記の設定では、 DevelopingWithServiceUser.core がバンドルのシンボリック名になります。 getresourceresolver はサブサービス名です。data は、前の手順で作成したシステムユーザーです。
+上記の設定では、DevelopingWithServiceUser.core がバンドルのシンボル名になります。getresourceresolver はサブサービス名です。data は、前の手順で作成したシステムユーザーです。
 
-また、fd-service ユーザーの代わりにリソースリゾルバーを取得することもできます。 このサービスユーザーは、ドキュメントサービスに使用されます。 例えば、使用権限などを認証/適用する場合、fd-service ユーザーのリソースリゾルバーを使用して操作を実行します
+また、fd-service ユーザーの代わりにリソースリゾルバーを取得することもできます。このサービスユーザーは、ドキュメントサービスに使用されます。例えば、使用権限などを認証／適用する場合、fd-service ユーザーのリソースリゾルバーを使用して操作を実行します
 
 1. [この記事に関連付けられている zip ファイルをダウンロードして展開します。](assets/developingwithserviceuser.zip)
-1. に移動します。 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
 1. OSGi バンドルをアップロードして開始します。
 1. バンドルがアクティブ状態であることを確認します。
-1. これで、 *システムユーザー* また、 *サービスユーザーバンドル*.
+1. これで、*システムユーザー*&#x200B;を正常に作成し、*サービスユーザーバンドル*&#x200B;もデプロイしました。
 
-   /content へのアクセスを提供するには、システムユーザー（「データ」）にコンテンツノードに対する読み取り権限を付与します。
+   /content へのアクセスを提供するには、content ノードに対する読み取り権限をシステムユーザー（「data」）に付与します。
 
-   1. に移動します。 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
-   1. ユーザー「 data 」を検索します。 これは、前の手順で作成したのと同じシステムユーザーです。
+   1.  [http://localhost:4502/useradmin](http://localhost:4502/useradmin) に移動します。
+   1. ユーザー「data」を検索します。これは、前の手順で作成しシステムユーザーと同じです
    1. ユーザーをダブルクリックし、「権限」タブをクリックします。
    1. 「読み取り」アクセス権を「コンテンツ」フォルダーに付与します。
-   1. サービスユーザーを使用して/content フォルダーにアクセスするには、次のコードを使用します。
+   1. サービスユーザーを使用して /content フォルダーにアクセスするには、次のコードを使用します。
 
 
 
@@ -69,7 +69,7 @@ resourceResolver = aemDemoListings.getServiceResolver();
 Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
 ```
 
-バンドル内の/content/dam/data.jsonファイルにアクセスする場合は、次のコードを使用します。 このコードは、/content/dam/ノードの「data」ユーザーに対して読み取り権限が付与されていることを前提としています。
+バンドル内の /content/dam/data.json ファイルにアクセスする場合は、次のコードを使用します。このコードは、/content/dam/ノードの「data」ユーザーに対して読み取り権限が付与されていることを前提としています。
 
 ```java
 @Reference
@@ -94,7 +94,7 @@ try {
 }
 ```
 
-実装の完全なコードを以下に示します。
+実装の完全なコードを以下に示します
 
 ```java
 package com.mergeandfuse.getserviceuserresolver.impl;
