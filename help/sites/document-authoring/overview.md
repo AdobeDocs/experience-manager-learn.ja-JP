@@ -1,6 +1,6 @@
 ---
 title: ドキュメントオーサリングビデオ
-description: AEMでドキュメントオーサリングを設定する方法を説明します。
+description: AEM でドキュメントオーサリングを設定する方法を説明します。
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -10,19 +10,19 @@ jira: KT-14609
 doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
-source-git-commit: e5e1b1b9313f5c7b031c6e4233052dee67c6bd7c
-workflow-type: tm+mt
+exl-id: 172a477f-d277-43c1-8e47-68870b02203c
+source-git-commit: 6672211ef4e03a3ae4c6c5494dda6a2b5053a647
+workflow-type: ht
 source-wordcount: '419'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-
 # ドキュメントオーサリングビデオ
 
-AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュメントを編集および公開できるようにドキュメントのオーサリングを設定する方法を説明します。
+AEM の作成者が Microsoft Word または Google Docs を使用してドキュメントを編集および公開できるようにドキュメントのオーサリングを設定する方法を説明します。
 
-以下を確認します。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=ja) を参照してください。
+ドキュメントオーサリングの設定について詳しくは、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=ja)を参照してください。
 
 ## ドキュメントオーサリングの概要
 
@@ -80,7 +80,7 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="preview-and-publish.md" title="コンテンツのプレビューと公開">エディターの概要</a>
             </p>
-            <p class="is-size-6">AEM Sidekickを使用したコンテンツのプレビューと公開の概要です。</p>
+            <p class="is-size-6">AEM Sidekick を使用したコンテンツのプレビューと公開の概要です。</p>
             <a href="preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -109,7 +109,7 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="document-structure.md" title="ドキュメント構造">ドキュメント構造</a>
+              <a href="document-structure.md" title="ドキュメント構造">ドキュメントの構造</a>
             </p>
             <p class="is-size-6">ドキュメントの構造を調べます。</p>
             <a href="document-structure.md" class="spectrum-Button
@@ -140,7 +140,7 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="default-content-and-sections.md" title="デフォルトのコンテンツとセクション">新しいエディタ切り替え</a>
+              <a href="default-content-and-sections.md" title="デフォルトのコンテンツとセクション">新規エディター切替スイッチ</a>
             </p>
             <p class="is-size-6">デフォルトコンテンツとセクションのドキュメントオーサリングの概念について説明します。</p>
             <a href="default-content-and-sections.md" class="spectrum-Button
@@ -356,11 +356,11 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/document-permissions.md" title="ドキュメントの権限"
+            <a href="./how-to/document-permissions.md" title="ドキュメント権限"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425724/?format=jpeg"
-                alt="ドキュメントの権限">
+                alt="ドキュメント権限">
             </a>
           </figure>
         </div>
@@ -369,7 +369,7 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/document-permissions.md" title="ドキュメントの権限">ドキュメント権限 </a>
+              <a href="./how-to/document-permissions.md" title="ドキュメント権限">ドキュメント権限</a>
             </p>
             <p class="is-size-6">ドキュメントオーサリングでのドキュメント権限の処理方法を確認します。</p>
             <a href="./how-to/document-permissions.md" class="spectrum-Button
@@ -497,7 +497,7 @@ AEMの作成者がMicrosoft Word またはGoogle Docs を使用してドキュ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/image-alt-text.md" title="代替テキストの使用">画像の代替テキストをオーサリング中</a>
+              <a href="./how-to/image-alt-text.md" title="代替テキストの使用">画像代替テキストのオーサリング</a>
             </p>
             <p class="is-size-6">ドキュメントオーサリングでの画像の代替テキストの処理方法を確認します。</p>
             <a href="./how-to/image-alt-text.md" class="spectrum-Button
