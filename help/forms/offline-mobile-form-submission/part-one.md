@@ -1,5 +1,5 @@
 ---
-title: HTM5 フォーム送信でのトリガーAEMワークフロー — カスタムプロファイルの作成
+title: HTM5 フォーム送信で AEM ワークフローをトリガーする - カスタムプロファイルの作成
 description: オフラインモードでのモバイルフォームへの入力の継続とモバイルフォームの送信による AEM ワークフローのトリガー
 feature: Mobile Forms
 doc-type: article
@@ -10,23 +10,23 @@ level: Experienced
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 101
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '301'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # カスタムプロファイルを作成
 
-ここでは、 [カスタムプロファイル。](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/creating-profile.html) プロファイルは、XDP をHTMLとしてレンダリングします。 デフォルトのプロファイルは、XDP のをHTMLとしてレンダリングするために初期設定で提供されます。 これは、Mobile Forms Rendition サービスのカスタマイズバージョンを表します。 Mobile Forms Rendition サービスを使用して、Mobile Formsの外観、動作およびインタラクションをカスタマイズできます。 カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。 次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブPDFを生成し、呼び出し元のアプリケーションにストリーミングします。
+ここでは、[ カスタムプロファイルを作成します。](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/creating-profile.html)プロファイルは、XDP をHTMLとしてレンダリングします。XDP を HTML としてレンダリングするためのデフォルトのプロファイルが初期で提供されます。それはモバイルフォームレンダリングサービスのカスタマイズされたバージョンを表します。モバイルフォームレンダリングサービスを使用して、モバイルフォームの外観、動作、インタラクションをカスタマイズできます。カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブ PDF を生成し、呼び出し元のアプリケーションにストリーミングします。
 
-を使用してフォームデータを取得する `formBridge` JavaScript API。 我々は、を利用する `getDataXML()` メソッド：
+`formBridge` JavaScript API を使用してフォームデータを取得します。`getDataXML()` メソッドを利用します。
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
 ```
 
-成功ハンドラーメソッドでは、AEMで実行されているカスタムサーブレットを呼び出します。 このサーブレットは、モバイルフォームのデータを含むインタラクティブ pdf をレンダリングして返します
+成功ハンドラーメソッドでは、AEM で実行されているカスタムサーブレットを呼び出します。このサーブレットは、モバイルフォームのデータを含むインタラクティブ PDF をレンダリングして返します
 
 ```javascript
 var suc = function(obj) {
@@ -57,9 +57,9 @@ var suc = function(obj) {
 }
 ```
 
-## インタラクティブPDF
+## インタラクティブ PDF を生成
 
-次に、インタラクティブ pdf のレンダリングと呼び出し元のアプリケーションへの pdf の返送を担当するサーブレットコードを示します。 サーブレットがを呼び出します `mobileFormToInteractivePdf` カスタム DocumentServices OSGi サービスのメソッド。
+次に、インタラクティブ PDF をレンダリングして呼び出し元のアプリケーションに PDF を戻すサーブレットコードを示します。サーブレットは、カスタム DocumentServices OSGi サービスの `mobileFormToInteractivePdf` メソッドを呼び出します。
 
 ```java
 import java.io.File;
@@ -119,9 +119,9 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 }
 ```
 
-### インタラクティブのレンダリングPDF
+### インタラクティブ PDF のレンダリング
 
-次のコードは、 [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) モバイルフォームのPDFを使用してインタラクティブデータをレンダリングする場合。
+次のコードは、[Forms Service API](https://helpx.adobe.com/jp/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) を利用して、モバイルフォームからのデータを含むインタラクティブ PDF をレンダリングします。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -144,7 +144,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-部分的に入力されたモバイルフォームからインタラクティブPDFをダウンロードする機能を表示するには、 [ここをクリックしてください](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
-PDFをダウンロードしたら、次の手順では、PDFをAEMワークフローのトリガーに送信します。 このワークフローは、送信されたPDFのデータを結合し、レビュー用の非インタラクティブPDFを生成します。
+部分的に入力されたモバイルフォームからインタラクティブ PDF をダウンロードする機能を確認するには、[ここをクリックしてください](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)。
+PDF をダウンロードしたら、次の手順では、PDF を AEM ワークフローのトリガーに送信します。このワークフローは、送信された PDF のデータを結合し、レビュー用の非インタラクティブ PDF を生成します。
 
 この使用例で作成したカスタムプロファイルは、このチュートリアルアセットの一部として利用できます。
