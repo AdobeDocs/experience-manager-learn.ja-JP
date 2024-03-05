@@ -10,9 +10,9 @@ doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 duration: 303
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '337'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 99%
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
-| sRGB | RGBsRGB | IEC61966-2.1 |
+| sRGB | RGB sRGB | IEC61966-2.1 |
 | UncoatedFogra29 | CMYK | Uncoated FOGRA29 (ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
