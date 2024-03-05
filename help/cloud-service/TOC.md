@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 90%
+source-wordcount: '1148'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 90%
       + [Experience Manager - ガバナンスおよびスタッフ配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Adobe Experience Manager でコンテンツベロシティを促進する方法](./introduction/drive-content-velocity-for-sites.md)
       + [AEM スタイルシステムによるコンテンツベロシティの促進](./introduction/accelerate-content-velocity-aem.md)
-+ Experience Cloudの統合{#integrations}
++ Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
 + 基盤となる技術 {#underlying-technology}
@@ -137,7 +137,7 @@ ht-degree: 90%
    + [CDN キャッシュヒット率の分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 方法{#how-to}
       + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
-      + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
+      + [キャッシュの無効化](./caching/how-to/disable-caching.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
@@ -165,11 +165,11 @@ ht-degree: 90%
       + [設定方法](./security/traffic-filter-rules/how-to-setup.md)
       + [例と結果の分析](./security/traffic-filter-rules/examples-and-analysis.md)
       + [ベストプラクティス](./security/traffic-filter-rules/best-practices.md)
-+ AEM Eventing{#aem-eventing}
++ AEM イベンティング{#aem-eventing}
    + [概要](./eventing/overview.md)
    + 例{#examples}
-      + [Webhook - AEMイベントの受信](./eventing/examples/webhook.md)
-      + [ジャーナリング — AEMイベントの読み込み](./eventing/examples/journaling.md)
+      + [Webhook：AEM イベントの受信](./eventing/examples/webhook.md)
+      + [ジャーナリング：AEM イベントの読み込み](./eventing/examples/journaling.md)
       + [Adobe I/O Runtimeアクション — AEMイベントの受信](./eventing/examples/runtime-action.md)
       + [Adobe I/O Runtime Action - AEM Events の処理](./eventing/examples/event-processing-using-runtime-action.md)
       + [AEM Assetsイベント — PIM 統合](./eventing/examples/assets-pim-integration.md)
@@ -197,7 +197,7 @@ ht-degree: 90%
          + [コミュニケーション](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [はじめに](./migration/cloud-acceleration-manager/introduction.md)
-      + [対応準備状況とベストプラクティスアナライザー](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [準備状況とベストプラクティスアナライザー](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [実装フェーズ](./migration/cloud-acceleration-manager/implementation-phase.md)
       + [コンテンツ転送ツール](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [コードリファクタリングツール](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
@@ -216,7 +216,7 @@ ht-degree: 90%
       + [4 - IntelliJ と AEM の同期](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 - フォームの作成](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 - カスタム送信ハンドラー](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 — リソースタイプを使用したサーブレットの登録](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
+      + [7 - リソースタイプを使用したサーブレットの登録](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
       + [8 - フォームポータルコンポーネントの有効化](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [9 - クラウドサービスと FDM の組み込み](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 - コンテキスト対応のクラウド設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
@@ -267,16 +267,16 @@ ht-degree: 90%
       + [PDF/A ユーティリティ](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [ソリューションのテスト](./forms/forms-cs-assembler/test.md)
       + [課題](./forms/forms-cs-assembler/challenge.md)
-   + Blob インデックスタグを使用してフォーム送信を保存{#store-submiited-data-with-metadata-tags}
+   + Blob インデックスタグを使用したフォーム送信の保存{#store-submiited-data-with-metadata-tags}
       + [はじめに](./forms/store-submiited-data-with-metadata-tags/introduction.md)
-      + [選択グループコンポーネントを拡張](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
-      + [OSGi 設定の作成](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
-      + [インデックスタグの作成](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
-      + [カスタム送信を作成](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+      + [選択グループコンポーネントの拡張](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
+      + [カスタム OSGi 設定の作成](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
+      + [静的タグの作成](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
+      + [カスタム送信の作成](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
    + コアコンポーネントベースのフォームの事前入力{#prefill-core-component-based-form}
       + [はじめに](./forms/prefill-core-component-form/introduction.md)
-      + [書き込み事前入力サービス](./forms/prefill-core-component-form/pre-fill-service.md)
-      + [ソリューションをテスト](./forms/prefill-core-component-form/test-solution.md)
+      + [事前入力サービスの記述](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [ソリューションのテスト](./forms/prefill-core-component-form/test-solution.md)
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
@@ -323,7 +323,7 @@ ht-degree: 90%
    + OneDrive と SharePoint にフォーム送信を保存{#one-drive}
       + [フォームデータを OneDrive に保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [フォームデータを SharePoint に保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
-      + [SharePointリストのデータを使用してフォームに事前入力する](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
+      + [SharePoint リストのデータを使用してフォームに事前入力する](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
 + Asset Compute の拡張性{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
@@ -347,7 +347,7 @@ ht-degree: 90%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
-   + [AEM Sites開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
+   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja){target=_blank}
    + [SPA エディター（React）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja){target=_blank}
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
@@ -388,3 +388,4 @@ ht-degree: 90%
          + [サードパーティ検索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [実際のユーザー監視 (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [エッジワーカー](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [イベントの公開、非公開Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)

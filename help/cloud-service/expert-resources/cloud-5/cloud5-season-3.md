@@ -4,19 +4,19 @@ description: シーズン 3 では、複雑なプロジェクトに取り組ん�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 32%
+source-wordcount: '267'
+ht-degree: 18%
 
 ---
 
 
-# クラウド 5 シーズン 3
+# Cloud 5 シーズン 3
 
 ## はじめに
 
-AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。このシリーズの目標は、AEM Edge Delivery サービスに関する有用な情報を 5 分以内に提供することです。
+AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製品の実装段階での主な問題の 1 つは、十分なコードサンプルや、これらのサンプル、ツールまたは API の実際のデモンストレーションがあることです。 このシリーズの目的は、AEMEdge Delivery Servicesに関する有用な情報を 5 分以内に提供することです。
 
 ## 提案ボックス
 
@@ -56,7 +56,7 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
                 Explore Real User Monitoring(RUM) は、Edge Delivery Servicesで機能します。
             </p>
         </td>   
- <td>
+        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="エッジワーカー" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -70,5 +70,21 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
                 エッジワーカーとEdge Delivery Servicesの重要性を調べます。
             </p>
         </td>   
-  </tr>  
+    </tr>
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-publish-events.md">
+                <img alt="イベントの公開、非公開Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-publish-events.md">
+                <strong>イベントの公開、非公開Edge Delivery Services</strong></a>        
+                <br/><em>James Talbot &amp; Amol Anand(AEM Engineering) との連携</em>
+            </div>
+            <p>
+                <br/>
+                イベントでの公開および非公開時にトリガーされるEdge Delivery Services、およびこれらのイベントの使用例と例を確認します。
+            </p>
+        </td>   
+    </tr>  
 </table>
