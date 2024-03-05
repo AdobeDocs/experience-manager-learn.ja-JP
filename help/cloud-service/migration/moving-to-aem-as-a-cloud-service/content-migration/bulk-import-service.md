@@ -11,9 +11,9 @@ thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
 duration: 661
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '179'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ AEM as a Cloud Service の一括読み込みサービスを使用して、AEM �
 
 >[!TIP]
 >
-> このビデオの入力ソースは、Azure Blob ストレージとAmazon S3 のみを表示します。ただし、使用可能なソースは、時間の経過と共に増加し続けます。 サポートされる入力ソースの完全なリストについては、製品で使用可能なオプションを参照してください。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> このビデオでは入力ソースに Azure Blob Storage と Amazon S3 のみが示されていますが、利用可能なソースは時間と共に増えていきます。サポートされる入力ソースの完全なリストについては、製品で使用可能なオプション、または[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=ja#bulk-upload)を参照してください。
 
 ## 重要なアクティビティ
 
