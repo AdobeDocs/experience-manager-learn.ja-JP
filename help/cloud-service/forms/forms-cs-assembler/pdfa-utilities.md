@@ -1,6 +1,6 @@
 ---
-title: PDFをPDF/A に変換します。
-description: HTTP エンドポイントを使用して、Forms CA 内でPDF/A ファイルを作成および検証します。
+title: PDF を PDF/A に変換します。
+description: HTTP エンドポイントを使用して、Forms CA 内で PDF/A ファイルを作成し検証します。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,19 +11,19 @@ jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
 duration: 52
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # PDF/A ドキュメントの作成と検証
 
-PDF/A は、電子ドキュメントのアーカイブと長期保存に使用するために特化した、ISO 標準化されたポータブルドキュメントフォーマット (PDF) です。 PDF/A はPDFとは異なり、（フォントの埋め込みとは異なり）フォントのリンクや暗号化など、長期アーカイブに適さない機能を禁止しています。
+PDF/A は、電子ドキュメントのアーカイブと長期保存への使用に特化した、Portable Document Format（PDF）の ISO 標準化バージョンです。PDF/A は PDF とは異なり、（フォントの埋め込みではなく）フォントのリンクや暗号化など、長期アーカイブに適さない機能を禁止しています。
 
 ## PDF/A に変換
 
-次のコードは、PDFをPDF/A に変換するために使用されました。
+PDF を PDF/A に変換するには、次のコードを使用します。
 
 ```java
 package com.aemformscs.documentservices;
@@ -93,9 +93,9 @@ public class PDFAUtilities {
 }
 ```
 
-## PDF/A を検証
+## PDF/A の検証
 
-次のコードは、PDF/A コンプライアンスの特定のPDFを検証するために使用します。
+特定の PDF が PDF/A 規格に準拠しているかどうかを検証するには、次のコードを使用します。
 
 ```java
 public void validatePDFA(String postURL) {
