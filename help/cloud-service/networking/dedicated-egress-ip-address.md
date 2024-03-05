@@ -11,9 +11,9 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 duration: 926
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1142'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
 
 >[!MORELIKETHIS]
 >
-> 専用のエグレス IP アドレスの詳細については、AEM as a Cloud Service の[高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address?lang=ja)をお読みください。
+> 専用のエグレス IP アドレスの詳細については、AEM as a Cloud Service の[高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=ja#dedicated-egress-IP-address)をお読みください。
 
 ## 前提条件
 
@@ -212,9 +212,9 @@ AEM から HTTP／HTTPS 接続を作成するときに、専用のエグレス I
 
 AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP など）、接続は AEM から提供される特別なホスト名を使用して行う必要があります。
 
-| 変数名 | 以下を使用し、 | Java™コード | OSGi 設定 |
+| 変数名 | 使用方法 | Java™ コード | OSGi 設定 |
 | - |  - | - | - |
-| `AEM_PROXY_HOST` | 非 HTTP/HTTPS 接続用のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| `AEM_PROXY_HOST` | HTTP／HTTPS 以外の接続用のプロキシホスト | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
 外部サービスへの接続は、その後、`AEM_PROXY_HOST` とマッピングされたポート（`portForwards.portOrig`）を使用しで呼び出されます。次に、AEM はこれをマッピングされた外部ホスト名（`portForwards.name`）とポート（`portForwards.portDest`）にルーティングします。
