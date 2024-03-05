@@ -10,9 +10,9 @@ level: Experienced
 exl-id: 79935ef0-bc73-4625-97dd-767d47a8b8bb
 duration: 111
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '435'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 99%
 
 * ポート 4502 の AEM オーサーインスタンスと、ポート 4503 の AEM パブリッシュインスタンスをインストールする
 * [AEM Forms でのサービスユーザーを使用した開発で指定されている手順に従います](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=ja)。必ずサービスユーザーを作成し、AEM オーサーインスタンスとパブリッシュインスタンスにバンドルをデプロイしてください。
-* [OSGi 設定を開きます。](http://localhost:4503/system/console/configMgr).
+* [OSGi 設定を開きます](http://localhost:4503/system/console/configMgr)。
 * **Apache Sling Referrer Filter** を検索します。「空白を許可」チェックボックスがオンになっていることを確認します。
 * [カスタム AEMormDocumentService バンドルをデプロイします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。このバンドルは、AEM パブリッシュインスタンスにデプロイする必要があります。 このバンドルには、モバイルフォームからインタラクティブ PDF を生成するコードが含まれています。
 * [この記事に関連するアセットをダウンロードして展開します。](assets/offline-pdf-submission-assets.zip)次の情報が表示されます
