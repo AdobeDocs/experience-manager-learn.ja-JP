@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 436
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1181'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -497,7 +497,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 内部の仕組み
 
-ブラウザーの **開発者ツール** > **ネットワーク** および _フィルター_ 対象： `all-teams` リクエスト。 GraphQL API リクエストに関する注意 `/graphql/execute.json/my-project/all-teams` に対して作成される `http://localhost:3000` および **NOT** ～の価値に反して `REACT_APP_HOST_URI`例： `<https://publish-pxxx-exxx.adobeaemcloud.com`. リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
+ブラウザーの&#x200B;**開発者ツール**／**ネットワーク**&#x200B;を開いて、`all-teams` リクエストを&#x200B;_フィルター_&#x200B;します。GraphQL API リクエスト `/graphql/execute.json/my-project/all-teams` は、`REACT_APP_HOST_URI` の値に対して **ではなく** `http://localhost:3000` に対して行われることに注意してください（例：`<https://publish-pxxx-exxx.adobeaemcloud.com`）。リクエストは、React アプリのドメインに対して実行されます。[プロキシ設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)が `http-proxy-middleware` モジュールを使用して有効になっているからです。
 
 
 ![プロキシを介した GraphQL API リクエスト](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
@@ -516,4 +516,4 @@ module.exports = function(app) {
 
 ## おめでとうございます。{#congratulations}
 
-おめでとうございます。AEM の GraphQL API を使用してデータを消費および表示する React アプリを、基本チュートリアルの一部として正常に作成できました。
+これですべて完了です。AEM の GraphQL API を使用してデータを消費および表示する React アプリを、基本チュートリアルの一部として正常に作成できました。
