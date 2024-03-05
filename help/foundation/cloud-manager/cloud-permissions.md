@@ -1,6 +1,6 @@
 ---
 title: Cloud Manager のカスタム権限
-description: AEMの Cloud Manager カスタム権限を使用して様々なチームのアクセスを戦略的に管理し、効率的で安全なプロジェクト管理およびデプロイメントを実現する方法について説明します。
+description: AEM で Cloud Manager のカスタム権限を使用して様々なチームのアクセスを戦略的に管理し、効率的で安全なプロジェクト管理とデプロイメントを実現する方法を学びます。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -12,15 +12,15 @@ jira: KT-14608
 thumbnail: 3425892.jpeg
 duration: 361
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '59'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Cloud Manager のカスタム権限
 
-Cloud Manager の使用方法を学ぶ [カスタム権限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html) 様々なチームのアクセスを戦略的に管理し、プロジェクトの効率的で安全な管理とデプロイメントを確保するためのAEMの機能
+AEM で Cloud Manager の[カスタム権限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=ja)を使用して様々なチームのアクセスを戦略的に管理し、効率的で安全なプロジェクト管理とデプロイメントを実現する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)
