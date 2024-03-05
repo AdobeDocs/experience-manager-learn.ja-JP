@@ -1,5 +1,5 @@
 ---
-title: OSGi 設定の作成
+title: カスタム OSGi 設定の作成
 description: OSGi 設定を使用して Azure Portal の設定を指定します。
 feature: Adaptive Forms
 type: Documentation
@@ -9,15 +9,15 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# OSGi 設定の作成
+# カスタム OSGi 設定の作成
 
-Azure ストレージ URI と SAS トークン URI を指定するために、Azure Portal Configuration と呼ばれるカスタム OSGi 設定が作成されました。 これら 2 つの値は、Azure Storage と通信する REST API の構築に使用されます
+Azure ストレージ URI と SAS トークン URI を指定するために、Azure Portal 設定と呼ばれるカスタム OSGi 設定が作成されました。これら 2 つの値は、Azure ストレージと通信するための REST API の構築に使用されます。
 
 ![azure-portal-configuration](assets/azure-portal-configuration.png)
 
@@ -101,4 +101,4 @@ public class AzurePortalStorageConfigImpl implements AzurePortalConfigurationSer
 
 ## 次の手順
 
-[書き込み事前入力サービス](./create-prefill-service.md)
+[事前入力サービスの記述](./create-prefill-service.md)
