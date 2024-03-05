@@ -12,28 +12,30 @@ jira: KT-14581
 duration: 108
 exl-id: 2a33a9a9-1eef-425d-aec5-465030ee9b74
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '378'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # はじめに
 
-パスによるサーブレットのバインドは、リソースタイプによるバインドと比べると、いくつかのデメリットがあります。つまり、
+パスによるサーブレットのバインドは、リソースタイプによるバインドと比べると、いくつかのデメリットがあります。
 
-* パスバインドサーブレットは、デフォルトの JCR リポジトリ ACL を使用してアクセス制御することはできません
-* パスバインドサーブレットは、パスにのみ登録でき、リソースタイプには登録できません（つまり、サフィックス処理なし）
-* パスバインドサーブレットがアクティブでない場合（例：バンドルが見つからない場合や開始されていない場合）、POSTを実行すると予期しない結果が生じる場合があります。 通常、次の場所にノードを作成する `/bin/xyz` その後、マッピングをバインドするサーブレット・パスをオーバーレイするのは、リポジトリを見ている開発者に対しては透明ではありません。
+* パスバインドサーブレットでは、デフォルトの JCR リポジトリ ACL を使用してアクセス制御することはできません
+* パスバインドサーブレットは、パスにのみ登録でき、リソースタイプには登録できません（例えば、サフィックス処理はありません）
+* パスバインドサーブレットがアクティブでない場合（例：バンドルが見つからない場合や開始されていない場合）、POST を実行すると予期しない結果が生じる場合があります。通常、`/bin/xyz` にノードを作成すると、その後にマッピングをバインドするサーブレットパスをオーバーレイします。
+開発者がリポジトリを見るだけでは透過的ではありません。
+このような欠点を考慮すると、サーブレットをパスではなく、リソースタイプにバインドすることを強くお勧めします。
 
 ## サーブレットの作成
 
-IntelliJ で aem-banking プロジェクトを起動します。 次のスクリーンショットに示すように、サーブレットフォルダーの下に GetFieldChoices というサーブレットを作成します。
+IntelliJ で aem-banking プロジェクトを起動します。次のスクリーンショットに示すように、サーブレットフォルダーの下に GetFieldChoices というサーブレットを作成します。
 ![選択肢](assets/fetchchoices.png)
 
 ## サンプルサーブレット
 
-次のサーブレットは、Sling リソースタイプにバインドされます。 _**azure/fetchchoices**_
+次のサーブレットは、_**azure/fetchchoices**_ の Sling リソースタイプにバインドされます。
 
 
 
@@ -81,11 +83,11 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 
 ## CRX でのリソースの作成
 
-* ローカルのAEM SDK にログインします。
-* という名前のリソースを作成する `fetchchoices` （このノードは好きに名前を付けることができます） `cq:Page` コンテンツノードの下に表示されます。
+* ローカルの AEM SDK にログインします。
+* コンテンツノードの下に `cq:Page` タイプの `fetchchoices` という名前のリソース（このノードには好きに名前を付けることができます）リソースを作成します。
 * 変更内容を保存します。
-* という名前のノードを作成します。 `jcr:content` のタイプ `cq:PageContent` 変更を保存します。
-* 次のプロパティを `jcr:content` ノード
+* `cq:PageContent` のタイプの `jcr:content` という名前のノードを作成して変更を保存します。
+* `jcr:content` ノードに次のプロパティを追加します。
 
 | プロパティ名 | プロパティの値 |
 |--------------------|--------------------|
@@ -93,33 +95,33 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 | sling:resourceType | `azure/fetchchoices` |
 
 
-The `sling:resourceType` 値は、サーブレットで指定された resourceTypes=&quot;azure/fetchchoices&quot;に一致する必要があります。
+`sling:resourceType` 値は、サーブレットで指定された「resourceTypes=&quot;azure/fetchchoice」に一致する必要があります。
 
-これで、を使用してリソースをリクエストすることで、サーブレットを呼び出せるようになりました。 `sling:resourceType` = `azure/fetchchoices` がそのフルパスに配置され、Sling サーブレットに登録されているセレクターまたは拡張機能がある。
+これで、Sling サーブレットに登録されているセレクターまたは拡張機能を使用し、リソースのフルパスに `sling:resourceType` = `azure/fetchchoices` を指定してリクエストして、サーブレットを呼び出すことができるようになりました。
 
 ```html
 http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/forms/af/forrahul/jcr:content/guideContainer
 ```
 
-パス `/content/fetchchoices/jcr:content` は、リソースと拡張のパスです。 `.json` は、サーブレットで指定されているものです
+`/content/fetchchoices/jcr:content` のパスは、リソースと `.json` の拡張のパスで、サーブレットで指定されています。
 
-## AEMプロジェクトを同期
+## AEM プロジェクトを同期する
 
-1. お気に入りのエディターでAEMプロジェクトを開きます。 私はこれに intelliJ を使った。
+1. 使い慣れたエディターで AEM プロジェクトを開きます。この記事では intelliJ を使用しました。
 1. `\aem-banking-application\ui.content\src\main\content\jcr_root\content` の下に `fetchchoices` というフォルダーを作成します。
-1. 右クリック `fetchchoices` フォルダーと選択 `repo | Get Command` （このメニュー項目は、このチュートリアルの前の章で設定します）。
+1. `fetchchoices` フォルダーを右クリックして「`repo | Get Command`」を選択（このメニュー項目は、このチュートリアルの前の章で設定します）します。
 
-このノードは、AEMからローカルのAEMプロジェクトに同期する必要があります。
+このノードは、AEM からローカルの AEM プロジェクトに同期する必要があります。
 
-AEMプロジェクト構造は次のようになります
+AEM プロジェクト構造は次のようになります。
 ![resource-resolver](assets/mapping-servlet-resource.png)
-aem-banking-application\ui.content\src\main\content\META-INF\vaultフォルダーの filter.xml を次のエントリで更新します。
+aem-banking-application\ui.content\src\main\content\META-INF\vault フォルダーの filter.xml を次のエントリで更新します。
 
 ```xml
 <filter root="/content/fetchchoices" mode="merge"/>
 ```
 
-これで、Cloud Manager を使用して、変更をAEMas a Cloud Serviceの環境にプッシュできます。
+これで、Cloud Manager を使用して、変更をAEM as a Cloud Service 環境にプッシュできます。
 
 ## 次の手順
 
