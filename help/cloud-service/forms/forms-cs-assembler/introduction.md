@@ -1,6 +1,6 @@
 ---
-title: 「invoke DDX」操作を使用したForms CS でのPDF操作
-description: invoke DDX を使用してPDFファイルをアセンブリします。
+title: 「DDX を呼び出し」操作を使用した Forms CS での PDF 操作
+description: 「DDX を呼び出し」を使用した PDF ファイルのアセンブリ。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,17 +11,17 @@ jira: KT-9980
 exl-id: 713c4e9e-95ac-48e1-a7fc-2b3ec0b145e5
 duration: 22
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '96'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 # はじめに
 
-このコースでは、Forms CS を使用したPDFドキュメントのPDF操作とアーカイブを使用します。 外部アプリケーションからこれらのマイクロサービスを使用するには、次の手順に従います。
+このコースでは、Forms CS を使用した PDF ドキュメントの PDF 操作とアーカイブを使用します。外部アプリケーションからこれらのマイクロサービスを使用するには、次の手順に従います。
 
 1. AEM テクニカルアカウントのサービス資格情報を生成します。
 1. サービス資格情報から JSON web トークン（JWT）を作成し、アクセストークンと交換します。
 1. AEM でテクニカルアカウントのアクセスを設定します。
-1. アクセストークンを使用して HTTP 呼び出しを行い、PDFファイルを操作し、PDF/A ファイルを生成して検証します
+1. アクセストークンを使用して HTTP 呼び出しを行い、PDF ファイルを操作したり、PDF/A ファイルを生成し検証したりします
