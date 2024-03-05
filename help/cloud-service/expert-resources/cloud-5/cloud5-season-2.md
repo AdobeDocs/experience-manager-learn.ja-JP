@@ -7,13 +7,13 @@ recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
 duration: 202
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '502'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# クラウド 5 シーズン 2
+# Cloud 5 シーズン 2
 
 >[!VIDEO](https://video.tv.adobe.com/v/346567?quality=12&learn=on)
 
