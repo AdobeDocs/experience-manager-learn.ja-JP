@@ -10,9 +10,9 @@ level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 224
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '816'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ Maven は、主に Java プロジェクトで使用されるビルド自動処�
 * zip アーカイブの内容を `c:\maven` に抽出します。
 * `M2_HOME` という名前の環境変数を、`C:\maven\apache-maven-3.6.0` の値を使用して作成します。この **mvn** のバージョンは 3.6.0.です。この記事の作成時点での最新の Maven バージョンは 3.6.3 です。
 * `%M2_HOME%\bin` をパスに追加します。
-* 変更を保存します。
+* 変更内容を保存します。
 * 新しいコマンドプロンプトを開き、`mvn -version` と入力します。以下のスクリーンショットに示されるように、**mvn** バージョンが表示されます。
 
 ![data-source](assets/mvn-version.JPG)
