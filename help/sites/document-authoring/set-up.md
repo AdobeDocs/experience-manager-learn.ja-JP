@@ -1,6 +1,6 @@
 ---
 title: ドキュメントオーサリングの設定
-description: ドキュメントオーサリング用の作成者向け環境の設定方法に関するガイドです。
+description: 作成者がドキュメントオーサリング用環境を設定する方法に関するガイドです。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425699.jpeg
 duration: 109
 exl-id: 3a378f4a-1d08-4f77-997a-d7cd19ad7021
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '33'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
