@@ -12,9 +12,9 @@ last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
 duration: 520
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1726'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -198,9 +198,9 @@ OSGi コンポーネントプロパティでの定義や読み取りなど、低
 
 ### AEM Asset API
 
-* 優先 [`com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) over [`com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
+* [`com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html) より [`com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) を優先します。
 
-   * `com.day.cq` Assets API には、AEM のアセット管理ユースケースに対するより相補的なツールが用意されているのに対して、
+   * `com.day.cq` Assets API には、AEM のアセット管理ユースケースに対するより相補的なツールが用意されているのに対して、。
    * Granite Assets API では、低レベルのアセット管理ユースケース（バージョン、関係）をサポートしています。
 
 ### クエリ API
