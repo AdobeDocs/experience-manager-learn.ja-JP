@@ -1,6 +1,6 @@
 ---
-title: ユーザー指定のメタデータタグを追加するためのチュートリアル
-description: アダプティブフォームデータを Azure ストレージアカウントに保存およびアカウントから取得する方法を説明します。
+title: ユーザー指定のメタデータタグを追加するチュートリアル
+description: アダプティブフォームデータを Azure ストレージアカウントに保存する方法およびアカウントから取得する方法を学びます。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,15 +11,15 @@ jira: KT-14501
 duration: 35
 exl-id: 6a3af59d-f916-451f-887c-0f4580cbcb3e
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '81'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
-# OSGi 設定の作成
+# カスタム OSGi 設定の作成
 
-Azure ストレージ URI と SAS トークン URI を指定するために、Azure Portal Configuration と呼ばれるカスタム OSGi 設定が作成されました。 これら 2 つの値は、Azure Storage と通信する REST API の構築に使用されます
+Azure ストレージ URI と SAS トークン URI を指定するために、Azure Portal 設定と呼ばれるカスタム OSGi 設定が作成されました。これら 2 つの値は、Azure ストレージと通信するための REST API の構築に使用されます。
 
 ![azure-portal-configuration](assets/azure-portal-configuration.png)
 
@@ -103,4 +103,4 @@ public class AzurePortalStorageConfigImpl implements AzurePortalConfigurationSer
 
 ## 次の手順
 
-[BLOB インデックスタグを作成](./create-blob-index-tags.md)
+[Blob インデックスタグを作成](./create-blob-index-tags.md)
