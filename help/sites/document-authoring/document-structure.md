@@ -1,6 +1,6 @@
 ---
 title: ドキュメントオーサリング用のドキュメント構造
-description: ドキュメントオーサリングの組み合わせ方法を確認します。
+description: ドキュメントオーサリングのまとめ方を説明します。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425701.jpeg
 duration: 105
 exl-id: 637a2d44-554d-45e4-aad2-a9e64feb511b
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-デフォルトコンテンツやブロックなどを使用してドキュメントオーサリングを組み立てる方法を調べます。
+デフォルトコンテンツやブロックなどを使用してドキュメントオーサリングがどのようにまとめられるかについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
