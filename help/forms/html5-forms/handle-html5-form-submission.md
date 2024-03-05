@@ -1,6 +1,6 @@
 ---
-title: HTML5 フォームの送信処理
-description: HTML5 フォーム送信ハンドラーを作成
+title: HTML5 フォーム送信の処理
+description: HTML5 フォーム送信ハンドラーの作成
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -13,21 +13,21 @@ exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 75
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# HTML5 フォームの送信処理
+# HTML5 フォーム送信の処理
 
-HTML5 のフォームは、AEMでホストされるサーブレットに送信できます。 送信されたデータは、サーブレットで入力ストリームとしてアクセスできます。 HTML5 フォームを送信するには、AEM Forms Designer を使用してフォームテンプレートに「HTTP 送信ボタン」を追加する必要があります
+HTML5 フォームは、AEM でホストされるサーブレットに送信できます。送信されたデータは、サーブレットで入力ストリームとしてアクセスできます。HTML5 フォームを送信するには、AEM Forms Designer を使用してフォームテンプレートに「HTTP 送信ボタン」を追加する必要があります。
 
-## 送信ハンドラーを作成する
+## 送信ハンドラーの作成
 
-単純なサーブレットを作成して、HTML5 フォームの送信を処理できます。 送信されたデータは、次のコードを使用して抽出できます。 この [servlet](assets/html5-submit-handler.zip) は、このチュートリアルの一部として使用できます。 をインストールしてください。 [servlet](assets/html5-submit-handler.zip) using [パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)
+HTML5 フォーム送信を処理する簡単なサーブレットを作成できます。送信されたデータは、次のコードを使用して抽出できます。この[サーブレット](assets/html5-submit-handler.zip)は、このチュートリアルの一部として利用できます。[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して[サーブレット](assets/html5-submit-handler.zip)をインストールしてください。
 
-9 行目のコードを使用して、J2EE プロセスを呼び出すことができます。 が設定されていることを確認してください [AdobeLiveCycleクライアント SDK の設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) コードを使用して J2EE プロセスを呼び出す場合。
+9 行目以降のコードを使用して、J2EE プロセスを呼び出すことができます。このコードを使用して J2EE プロセスを呼び出す場合は、[Adobe LiveCycle Client SDK Configuration](https://helpx.adobe.com/jp/aem-forms/6/submit-form-data-livecycle-process.html) が設定済みであることを確認してください。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -57,29 +57,29 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ```
 
 
-## 送信フォームの送信 URL のHTML5
+## HTML5 フォームの送信 URL の設定
 
 ![submit-url](assets/submit-url.PNG)
 
-* xdp をタップし、 _プロパティ_->_詳細_
-* http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.htmlをコピーし、「 URL を送信」テキストフィールドに貼り付けます。
-* クリック _SaveAndClose_ 」ボタンをクリックします。
+* xdp をタップし、_プロパティ_／_詳細_&#x200B;をクリックします。
+* http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html をコピーし、「送信 URL」テキストフィールドに貼り付けます。
+* 「_保存して閉じる_」ボタンをクリックします。
 
-### Exclude パスにエントリを追加
+### 除外パスへのエントリの追加
 
-* に移動します。 [configMgr](http://localhost:4502/system/console/configMgr).
+* [configMgr](http://localhost:4502/system/console/configMgr) に移動します。
 * _Adobe Granite CSRF フィルター_&#x200B;を検索します。
-* 「除外されたパス」セクションに次のエントリを追加します。
+* 「除外されるパス」セクションに次のエントリを追加します。
 * _/content/AemFormsSamples/handlehml5formsubmission_
 * 変更内容を保存します。
 
-### フォームをテストする
+### フォームのテスト
 
 * xdp テンプレートをタップします。
-* クリック： _プレビュー_-> プレビューHTML
-* フォームにデータを入力し、「送信」をクリックします
+* _プレビュー_／HTML としてプレビューをクリックします。
+* フォームに何らかのデータを入力し、「送信」をクリックします。
 * サーバーの stdout.log ファイルに書き込まれた送信済みデータが表示されます。
 
 ### 追加情報
 
-この [記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) また、HTML5 からPDFを生成する際に、フォームの送信もお勧めします。
+HTML5 フォーム送信による PDF の生成に関するこの[記事](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html?lang=ja)もお勧めします。
