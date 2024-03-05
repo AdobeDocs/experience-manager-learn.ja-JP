@@ -1,6 +1,6 @@
 ---
 title: React アプリのフィルタリング
-description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャをフィルタリングする簡単な React アプリです。
+description: コンテンツフラグメントを使用してモデル化された WKND アドベンチャーをフィルタリングする、シンプルな React アプリです。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -14,15 +14,15 @@ hidefromtoc: true
 exl-id: 1eb9487e-a82a-4d15-a776-cf004f2e3f01
 duration: 32
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
 # React アプリのフィルタリング
 
-を使用してデータをフィルタリングするAEMヘッドレスGraphQL API 機能について詳しく見る [React](https://reactjs.org/) アプリを使用します。 この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
+[React](https://reactjs.org/) アプリを使用してデータをフィルタリングする AEM ヘッドレス GraphQL API 機能について詳しく説明します。この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
 
 このコードは、Adobe の [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、React から永続化された GraphQL クエリを呼び出します。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
 
