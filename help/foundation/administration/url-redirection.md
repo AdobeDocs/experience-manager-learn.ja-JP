@@ -13,9 +13,9 @@ doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 214
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '781'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ AEM の URL リダイレクトソリューションは次のとおりです。
 |                                                   | AEM プロジェクトコードとしての管理とデプロイ | マーケティング／コンテンツチームによる変更機能 | AEM as Cloud Service との互換性 | リダイレクトの実行場所 |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
 | [Edge と独自の CDN](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge／CDN |
-| [Apache `mod_rewrite` ルールを Dispatcher 設定として](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
+| [Dispatcher 設定としての Apache `mod_rewrite` ルール](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons - リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
 | [ACS Commons - リダイレクトマネージャー](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
 | [`Redirect` ページのプロパティ](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
