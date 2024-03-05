@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services開発者の前提条件
-description: このビデオでは、開発者が開発を始めるのに必要なすべての要素についてEdge Delivery Servicesします。
+title: Edge Delivery Services 開発者の前提条件
+description: このビデオでは、開発者が Edge Delivery Services の開発を始めるのに必要なすべての要素について説明します。
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,20 +13,20 @@ thumbnail: 3425709.jpeg
 duration: 190
 exl-id: 12b2ad4d-ee66-4eb0-b8e6-05b4b6e41d76
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '104'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery Services開発者の前提条件
+# Edge Delivery Services 開発者の前提条件
 
-このビデオでは、開発者が開発を始めるのに必要なすべての要素についてEdge Delivery Servicesします。
+このビデオでは、開発者が Edge Delivery Services の開発を始めるのに必要なすべての要素について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425709/?learn=on)
 
-## Node.js のインストール
+## Node.js をインストール
 
-Edge Delivery Services向けの開発を開始するには、以下を実行します。 [Node.js](https://nodejs.org) システムにインストールする必要があります。 Node.js が既にインストールされているかどうかは、次のコマンドを実行して確認できます： `node -v` 現在のバージョンが存在する場合は、現在のバージョンが表示されます。 Node.js がシステムにインストールされていない場合、詳細なインストール手順については、付属のビデオを参照してください。
+Edge Delivery Services の開発を開始するには、システムに [Node.js](https://nodejs.org) をインストールすることが不可欠です。Node.js が既にインストールされているかどうかを確認するには、コマンドラインで `node -v` を実行します。Node.js が存在する場合は現在のバージョンが表示されます。Node.js がお使いのシステムにインストールされていない場合、インストール手順の詳細については、以下のビデオを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425710/?learn=on)
