@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
 duration: 502
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1689'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -362,7 +362,7 @@ AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の
 1. `ui.frontend/public/mock-content` の下に `mock.model.json` という名前のファイルを新規作成します。
 1. ブラウザーで、[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に移動します。
 
-   これは、アプリケーションを動作させているAEMで書き出された JSON です。 JSON 出力をコピーします。
+   これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
 
 1. 前の手順で出力された JSON をファイル `mock.model.json` に貼り付けます。
 
