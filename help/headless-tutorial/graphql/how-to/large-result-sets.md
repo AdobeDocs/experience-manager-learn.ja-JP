@@ -13,9 +13,9 @@ thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 311
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '843'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -177,7 +177,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### ページ分割された次の結果セット
 
-次の結果セットは、 `after` パラメーターと `endCursor` の値を指定します。 取得する結果がこれ以上ない場合、`hasNextPage` は `false` です。
+次の結果セットは、`after` パラメーターと前のクエリの `endCursor` 値を使用して取得できます。取得する結果がこれ以上ない場合、`hasNextPage` は `false` です。
 
 ##### クエリ変数
 
