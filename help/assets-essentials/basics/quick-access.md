@@ -1,6 +1,6 @@
 ---
 title: クイックアクセス
-description: クイックアクセスがAEM Assetsに個人用レンズとして提供し、割り当てられたタスクに必要なすべてのアセットを指先で保持することで、生産性を高め、ワークフローを合理化する方法を説明します。
+description: クイックアクセスが AEM Assets への個人用レンズとして機能し、割り当てられたタスクに必要なすべてのアセットをすぐに利用できるようにすることで、生産性を向上させ、ワークフローを合理化する方法について説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,9 +13,9 @@ doc-type: Feature Video
 exl-id: 0f62da34-b6d7-42ac-a6f6-08a50483fb25
 duration: 203
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
