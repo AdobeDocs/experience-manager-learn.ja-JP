@@ -9,9 +9,9 @@ level: Beginner
 exl-id: f9782684-3a74-4080-9680-589d3f901617
 duration: 582
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '404'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ XML 変数を使用すると、アダプティブフォームにデータを事�
 
 ### XML 変数とスキーマの使用
 
-**XML 変数とスキーマのマッピングこの機能は、AEM Forms 6.5.1 以降で使用します。**
+**XML 変数とスキーマのマッピング。 この機能は、AEM Forms 6.5.1 以降で使用します。**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28098?quality=12&learn=on)
 
