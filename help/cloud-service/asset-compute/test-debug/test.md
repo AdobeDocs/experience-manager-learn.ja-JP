@@ -1,6 +1,6 @@
 ---
-title: asset computeワーカーのテスト
-description: asset computeプロジェクトは、Asset computeワーカーのテストを簡単に作成して実行するためのパターンを定義します。
+title: Asset Compute ワーカーのテスト
+description: Asset Compute プロジェクトは、Asset compute ワーカーのテストを素早く作成して実行するためのパターンを定義します。
 feature: Asset Compute Microservices
 version: Cloud Service
 doc-type: Tutorial
@@ -12,21 +12,21 @@ level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
 duration: 182
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# asset computeワーカーのテスト
+# Asset Compute ワーカーのテスト
 
-asset computeプロジェクトは、簡単に作成および実行できるパターンを定義します [asset compute労働者の試験](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Asset Compute プロジェクトは、[Asset Compute ワーカー](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html?lang=ja)のテストを素早く作成して実行するためのパターンを定義します。
 
 ## ワーカーテストの分析
 
-Asset computeワーカーのテストは、テストスイートに分類され、各テストスイート内で、テスト条件をアサートする 1 つ以上のテストケースが実行されます。
+Asset Compute ワーカーのテストはテストスイートに分けられ、各テストスイート内では、テスト条件をアサートする 1 つまたは複数のテストケースがあります。
 
-asset computeプロジェクトのテストの構造は次のとおりです。
+Asset Compute プロジェクトのテストの構造は次のとおりです。
 
 ```
 /actions/<worker-name>/index.js
@@ -45,30 +45,30 @@ asset computeプロジェクトのテストの構造は次のとおりです。
 各テストキャストには、以下のファイルを含めることができます。
 
 + `file.<extension>`
-   + テストするソースファイル（拡張子は次の場合を除く任意のファイル） `.link`)
+   + テストするソースファイル（`.link` 以外の任意の拡張子）
    + 必須
 + `rendition.<extension>`
    + 期待されるレンディション
-   + 必須（エラーテストを除く）
+   + 必須（エラーテストの場合を除く）
 + `params.json`
    + 単一レンディションの JSON 命令
    + オプション
 + `validate`
-   + 期待される実際のレンディションファイルパスを引数として取得し、結果に問題がない場合は終了コード 0 を返し、検証または比較に失敗した場合はゼロ以外の終了コードを返すスクリプト。
-   + オプション。デフォルトは `diff` command
-   + 異なる検証ツールを使用するために、Docker 実行コマンドをラップするシェルスクリプトを使用します。
+   + 期待される実際のレンディションファイルのパスを引数として取得し、結果に問題がない場合は終了コード 0 を返し、検証または比較に失敗した場合は 0 以外の終了コードを返すスクリプト。
+   + オプション。デフォルトは `diff` コマンド
+   + 様々な検証ツールを使用するために、Docker run コマンドをラップするシェルスクリプトを使用
 + `mock-<host-name>.json`
-   + JSON 形式の HTTP 応答： [外部サービス呼び出しのモック](https://www.mock-server.com/mock_server/creating_expectations.html).
-   + オプション。ワーカーコードが独自の HTTP リクエストを実行する場合にのみ使用されます。
+   + [外部サービス呼び出しをモックする](https://www.mock-server.com/mock_server/creating_expectations.html)ための JSON 形式の HTTP 応答。
+   + オプション。ワーカーコードが独自の HTTP リクエストを実行する場合にのみ使用
 
-## テストケースの書き込み
+## テストケースの記述
 
-このテストケースは、パラメータ化された入力 (`params.json`) を入力ファイル (`file.jpg`) は、期待される PNG レンディション (`rendition.png`) をクリックします。
+このテストケースでは、入力ファイル（`file.jpg`）のパラメータ化された入力（`params.json`）から期待される PNG レンディション（`rendition.png`）が生成されるとアサートします。
 
-1. 最初に自動生成された `simple-worker` 次の場合のテストケース： `/test/asset-compute/simple-worker` これは無効なので、ワーカーはソースをレンディションにコピーするだけではなくなりました。
-1. 次の場所に新しいテストケースフォルダーを作成します。 `/test/asset-compute/worker/success-parameterized` :PNG レンディションを生成するワーカーの正常な実行をテストします。
-1. Adobe Analytics の `success-parameterized` フォルダーにテストを追加します。 [入力ファイル](./assets/test/success-parameterized/file.jpg) このテストケースの `file.jpg`.
-1. Adobe Analytics の `success-parameterized` フォルダー、新しいファイルを追加します。 `params.json` ワーカーの入力パラメーターを定義する
+1. 最初に、ワーカーはソースをレンディションにコピーするだけではなくなったので、`/test/asset-compute/simple-worker` にある自動生成されたテストケース `simple-worker` を削除します。
+1. PNG レンディションを生成するワーカーの正常な実行をテストするための、新しいテストケースフォルダーを `/test/asset-compute/worker/success-parameterized` に作成します。
+1. `success-parameterized` フォルダーに、このテストケースのテスト[入力ファイル](./assets/test/success-parameterized/file.jpg)を追加し、ファイル名を `file.jpg` とします。
+1. `success-parameterized` フォルダーに、ワーカーの入力パラメーターを定義する `params.json` という名前の新しいファイルを追加します。
 
    ```json
    { 
@@ -78,22 +78,22 @@ asset computeプロジェクトのテストの構造は次のとおりです。
    }
    ```
 
-   これらは、 [開発ツールのAsset computeプロファイル定義](../develop/development-tool.md)、 `worker` キー。
+   これらは、[開発ツールの Asset Compute プロファイル定義](../develop/development-tool.md)に渡される同じキーと値から、`worker` キーを除いたものです。
 
-1. 期待される [レンディションファイル](./assets/test/success-parameterized/rendition.png) このテストケースにを追加します。 `rendition.png`. このファイルは、指定された入力に対するワーカーの期待される出力を表します `file.jpg`.
-1. コマンドラインから、次のコマンドを実行して、プロジェクトルートをテストします。 `aio app test`
-   + 確認 [Docker Desktop](../set-up/development-environment.md#docker) と、サポートする Docker イメージがインストールされ、起動されている
+1. 期待される[レンディションファイル](./assets/test/success-parameterized/rendition.png)をこのテストケースに追加し、ファイル名を `rendition.png` とします。このファイルは、指定された入力 `file.jpg` に対するワーカーの期待される出力を表します。
+1. コマンドラインから、`aio app test` を実行してプロジェクトルートをテストします。
+   + [Docker Desktop](../set-up/development-environment.md#docker) とサポートする Docker イメージがインストール、実行されていることを確認します
    + 実行中の開発ツールインスタンスを終了します
 
-![テスト — 成功 ](./assets/test/success-parameterized/result.png)
+![テスト - 成功](./assets/test/success-parameterized/result.png)
 
-## テストケースのエラーチェックを書き込み中
+## テストケースのエラーチェックの記述
 
-このテストケースでは、 `contrast` パラメーターが無効な値に設定されています。
+このテストケースでは、`contrast` パラメーターが無効な値に設定された場合に、ワーカーが適切なエラーをスローすることをテストします。
 
-1. 次の場所に新しいテストケースフォルダーを作成します。 `/test/asset-compute/worker/error-contrast` 無効のための誤った実行をテストする `contrast` パラメーター値。
-1. Adobe Analytics の `error-contrast` フォルダーにテストを追加します。 [入力ファイル](./assets/test/error-contrast/file.jpg) このテストケースの `file.jpg`. このファイルの内容はこのテストには重要ではありません。 `rendition.instructions` 有効性チェック：このテストケースが検証することを示します。
-1. Adobe Analytics の `error-contrast` フォルダー、新しいファイルを追加します。 `params.json` これは、コンテンツを含むワーカーの入力パラメーターを定義します。
+1. `contrast` パラメーター値が無効なためにワーカーがエラーを実行するかどうかをテストする、新しいテストケースフォルダーを `/test/asset-compute/worker/error-contrast` に作成します。
+1. `error-contrast` フォルダーに、このテストケースのテスト[入力ファイル](./assets/test/error-contrast/file.jpg)を追加し、ファイル名を `file.jpg` とします。このファイルの内容は、このテストには重要ではありません。このテストケースで検証する `rendition.instructions` の有効性チェックに到達するための「破損したソース」チェックの通過に必要です。
+1. `error-contrast` フォルダーに、次のコンテンツを含むワーカーの入力パラメーターを定義する `params.json` という名前の新しいファイルを追加します。
 
    ```json
    {
@@ -102,23 +102,23 @@ asset computeプロジェクトのテストの構造は次のとおりです。
    }
    ```
 
-   + 設定 `contrast` パラメータ `10`に値を指定しない場合は、-1 ～ 1 の間のコントラストが無効です。 `RenditionInstructionsError`.
-   + テストで適切なエラーをアサートするには、 `errorReason` キーを使用して、予期されるエラーに関連付けられた「reason」を取得します。 この無効なコントラストパラメーターは、 [カスタムエラー](../develop/worker.md#errors), `RenditionInstructionsError`、したがって、 `errorReason` このエラーの理由、または`rendition_instructions_error` こう言うと、
+   + コントラストは -1 ～ 1 の範囲である必要があるので、`contrast` パラメーターに無効な値「`10`」を設定し、`RenditionInstructionsError` がスローされるようにします。
+   + `errorReason` キーを、予期されるエラーに関連付けられた「理由」に設定し、テストで適切なエラーがスローされるとアサートします。この無効なコントラストパラメーターは、[カスタムエラー](../develop/worker.md#errors) `RenditionInstructionsError` をスローするので、`errorReason` にこのエラーの理由 `rendition_instructions_error` を設定し、これがスローされるとアサートします。
 
-1. エラーの実行中にレンディションを生成しないので、レンディションは生成しない `rendition.<extension>` ファイルが必要です。
-1. コマンドを実行して、プロジェクトのルートからテストスイートを実行します。 `aio app test`
-   + 確認 [Docker Desktop](../set-up/development-environment.md#docker) と、サポートする Docker イメージがインストールされ、起動されている
+1. エラーの実行中にレンディションは生成されないので、`rendition.<extension>` ファイルは必要ありません。
+1. `aio app test` コマンドを実行して、プロジェクトのルートからテストスイートを実行します。
+   + [Docker Desktop](../set-up/development-environment.md#docker) とサポートする Docker イメージがインストール、実行されていることを確認します
    + 実行中の開発ツールインスタンスを終了します
 
-![テスト — エラーコントラスト](./assets/test/error-contrast/result.png)
+![テスト - コントラストのエラー](./assets/test/error-contrast/result.png)
 
 ## Github のテストケース
 
-最終的なテストケースは、GitHub で次の場所に公開されています。
+最終的なテストケースは GitHub で次の場所から入手できます。
 
-+ [aem-guides-wknd-asset-compute/test/asset-compute/worker](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
++ [aem-guides-wknd-asset-compute/test/asset-compute/metadata-colors](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
 
 ## トラブルシューティング
 
 + [テストの実行中にレンディションが生成されませんでした](../troubleshooting.md#test-no-rendition-generated)
-+ [テストで誤ったレンディションが生成される](../troubleshooting.md#tests-generates-incorrect-rendition)
++ [テストで、間違ったレンディションが生成されます](../troubleshooting.md#tests-generates-incorrect-rendition)
