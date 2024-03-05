@@ -10,9 +10,9 @@ level: Beginner, Intermediate
 exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
 duration: 50
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ AEM SDK のローカルクイックスタートで動作する Java コードの
 
 ## OSGi web コンソール
 
-AEM SDK のローカルクイックスタートには、OSGi Web コンソールがあり、ローカルAEMランタイムに関する様々な情報とイントロスペクションを提供します。これは、AEMでのアプリケーションの認識方法と関数を理解するのに役立ちます。
+AEM SDK のローカルクイックスタートには OSGi web コンソールがあり、AEM でアプリケーションがどう認識され AEM 内でどう機能するかを理解するのに役立つ様々な情報やイントロスペクションをローカルの AEM ランタイムに提供します。
 
 [OSGi web コンソールを使用した AEM SDK のデバッグ](./osgi-web-consoles.md)
 
