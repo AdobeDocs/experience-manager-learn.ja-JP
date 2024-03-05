@@ -1,6 +1,6 @@
 ---
 title: リダイレクト
-description: ドキュメントのオーサリングでのリダイレクトの仕組みと、技術的な専門知識を持たずに作成者がリダイレクトを簡単に設定できる方法について詳しく説明します。
+description: ドキュメントオーサリングでのリダイレクトの仕組みと、技術的な専門知識がなくても作成者がリダイレクトを簡単に設定できる方法について詳しく説明します。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425704.jpeg
 duration: 100
 exl-id: efbb5a79-0427-46fd-b869-906a8ee044ee
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-ドキュメントのオーサリングでのリダイレクトの仕組みと、技術的な専門知識を持たずに作成者がリダイレクトを簡単に設定できる方法について詳しく説明します。
+ドキュメントオーサリングでのリダイレクトの仕組みと、技術的な専門知識がなくても作成者がリダイレクトを簡単に設定できる方法について詳しく説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
