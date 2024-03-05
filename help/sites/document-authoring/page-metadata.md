@@ -1,6 +1,6 @@
 ---
-title: ページメタデータ
-description: ドキュメントのオーサリングでページのメタデータがどのように扱われるかを調べます。
+title: ページのメタデータ
+description: ドキュメントのオーサリング時に、ページのメタデータがどのように扱われるかを調べます。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,16 +13,16 @@ thumbnail: 3425706.jpeg
 duration: 94
 exl-id: e01f08d6-415d-4b15-8d40-cb5b2eb7de8a
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '31'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ページメタデータ
+# ページのメタデータ
 
 {{edge-delivery-services}}
 
-ドキュメントオーサリングでページレベルのメタデータを扱う方法、および作成者が技術的な専門知識を持たずに更新できる方法を確認します。
+ドキュメントのオーサリングでページレベルのメタデータを扱う方法と、作成者が技術的な専門知識なしにメタデータを更新する方法を調べます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
