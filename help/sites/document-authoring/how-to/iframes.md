@@ -1,6 +1,6 @@
 ---
-title: AEMドキュメントオーサリングで iFrame を埋め込む
-description: AEMドキュメントオーサリングで iFrame を使用してコンテンツを埋め込む方法について説明します。
+title: AEM ドキュメントオーサリングで iFrame を埋め込む
+description: AEM ドキュメントオーサリングで iFrame を使用してコンテンツを埋め込む方法を学びます。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425719.jpeg
 duration: 97
 exl-id: 59195777-e2fc-4654-8361-bd449cc19e5a
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '32'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-AEMドキュメントオーサリングで iFrame を使用してコンテンツを埋め込む方法について説明します。
+AEM ドキュメントオーサリングで iFrame を使用してコンテンツを埋め込む方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425719/?learn=on)
