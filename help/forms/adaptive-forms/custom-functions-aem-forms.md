@@ -11,9 +11,9 @@ exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 300
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '319'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -72,7 +72,7 @@ function convertUTC(strUTCString)
 }
 ```
 
-お願いします [jsdoc を参照する](https://jsdoc.app/index.html)javascript 関数への注釈の追加について詳しくは、を参照してください。
+JavaScript 関数の注釈について詳しくは、[jsdoc を参照](https://jsdoc.app/index.html)してください。
 上記のコードには次の 2 つの関数があります。
 **getCountyNamesList** - 文字列の配列を戻す
 **convertUTC** - UTC タイムスタンプをローカルタイムゾーンに変換する
