@@ -1,6 +1,6 @@
 ---
-title: asset computeワーカーとAEM処理プロファイルの統合
-description: AEM as a Cloud Serviceは、AEM Assets処理プロファイルを介してAdobe I/O RuntimeにデプロイされるAsset computeワーカーと統合されます。 処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理するように Author サービスで設定され、アセットレンディションとしてワーカーによって生成されたファイルを保存します。
+title: AEM 処理プロファイルを通じた Asset Compute ワーカーの統合
+description: AEM as a Cloud Service は、AEM Assets 処理プロファイルを介して Adobe I/O Runtime にデプロイされる Asset Compute ワーカーと統合されます。処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理するようにオーサーサービスで設定され、ワーカーがアセットレンディションとして生成したファイルを保存します。
 feature: Asset Compute Microservices
 version: Cloud Service
 doc-type: Tutorial
@@ -12,35 +12,35 @@ level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
 duration: 168
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '622'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
 # AEM 処理プロファイルとの統合
 
-asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディションを生成するには、処理プロファイルを介してAEMas a Cloud Serviceのオーサーサービスに登録する必要があります。 その処理プロファイルの対象となるすべてのアセットには、アップロード時または再処理時にワーカーが呼び出され、カスタムレンディションが生成されて、アセットのレンディションを介して使用できるようになります。
+Asset Compute ワーカーが AEM as a Cloud Service でカスタムレンディションを生成するには、処理プロファイルを介して AEM as a Cloud Service のオーサーサービスに登録する必要があります。その処理プロファイルの対象となるすべてのアセットは、アップロード時または再処理時にワーカーを呼び出し、カスタムレンディションを生成して、アセットのレンディションを介して使用できるようにします。
 
-## 処理プロファイルの定義
+## 処理プロファイルの作成
 
 最初に、設定可能なパラメーターを使用してワーカーを呼び出す新しい処理プロファイルを作成します。
 
 ![処理プロファイル](./assets/processing-profiles/new-processing-profile.png)
 
-1. AEM as a Cloud Service Author サービスに as a としてログイン __AEM Administrator__. これは、サンドボックス内で開発環境または環境を使用することをお勧めします。
+1. AEM as a Cloud Service オーサーサービスに __AEM 管理者__&#x200B;としてログインします。これはチュートリアルなので、開発環境またはサンドボックス内の環境を使用することをお勧めします。
 1. __ツール／アセット／処理プロファイル__&#x200B;に移動します。
-1. タップ __作成__ ボタン
-1. 処理プロファイルに名前を付けます。 `WKND Asset Renditions`
+1. 「__作成__」ボタンをタップします。
+1. 処理プロファイルに名前を付けます。`WKND Asset Renditions`
 1. 「__カスタム__」タブをタップし、「__新規追加__」をタップします
 1. 新しいサービスを定義します
-   + __レンディション名：__ `Circle`
-      + AEM Assetsでこのレンディションを識別するために使用されたレンディションのファイル名
-   + __拡張子：__ `png`
-      + 生成されるレンディションの拡張。 をに設定します。 `png` これは、作業者の web サービスがサポートするサポートされる出力形式で、円の切り取りの背後に透明な背景が作成されるためです。
+   + __レンディション名：__`Circle`
+      + AEM Assets でこのレンディションを識別するために使用されたレンディションのファイル名
+   + __拡張子：__`png`
+      + 生成されるレンディションの拡張子。 `png`（ワーカーの Web サービスがサポートする出力形式）に設定します。円形の切り抜きの背後に透明な背景が表示されます。
    + __エンドポイント：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + これは、を介して取得されたワーカーへの URL です。 `aio app get-url`. URL が、AEM as a Cloud Service 環境に基づいて正しいワークスペースを指していることを確認します。
-      + ワーカー URL が正しいワークスペースを指していることを確認します。 AEMas a Cloud Serviceステージではステージワークスペースの URL を使用し、AEMas a Cloud Service実稼動では実稼動ワークスペースの URL を使用する必要があります。
+      + これは、`aio app get-url` を介して取得されたワーカーへの URL です。URL が、AEM as a Cloud Service 環境に基づいて正しいワークスペースを指していることを確認します。
+      + ワーカー URL が正しいワークスペースを指していることを確認します。AEM as a Cloud Service Stage はステージワークスペース URL を使用し、AEM as a Cloud Service Production は本番ワークスペース URL を使用する必要があります。
    + __サービスパラメーター__
       + 「__パラメーターを追加__」をタップします
          + キー：`size`
@@ -51,9 +51,9 @@ asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディシ
       + 「__パラメーターを追加__」をタップします
          + キー：`brightness`
          + 値：`0.10`
-      + これらのキーと値のペアは、Asset computeワーカーに渡され、を通じて使用できます。 `rendition.instructions` JavaScript オブジェクト。
+      + これらのキーと値のペアは、Asset Compute ワーカーに渡され、`rendition.instructions` JavaScript オブジェクトを通じて使用できます。
    + __MIME タイプ__
-      + __次を含む：__ `image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
+      + __次を含む：__ `image/jpeg`、`image/png`、`image/gif`、`image/bmp``image/tiff`
          + ワーカーの npm モジュールで使用される MIME タイプは、これらの MIME タイプのみです。 このリストは、カスタムワーカーが処理する処理を制限します。
       + __除外：__ `Leave blank`
          + このサービス設定を使用して、これらの MIME タイプを持つアセットを決して処理しないでください。 この場合、使用するのは許可リストのみです。
@@ -61,29 +61,29 @@ asset computeワーカーがAEM as a Cloud Serviceでカスタムレンディシ
 
 ## 処理プロファイルの適用と呼び出し
 
-1. 新しく作成した処理プロファイルを選択します。 `WKND Asset Renditions`
-1. タップ __プロファイルをフォルダーに適用__ 上部のアクションバー
-1. 処理プロファイルを適用するフォルダー（例： ）を選択します。 `WKND` とタップします。 __適用__
-1. を介して処理プロファイルが適用されなかったフォルダーに移動します。 __AEM / Assets /ファイル__ をタップし、 `WKND`.
-1. 新しい画像アセット ([sample-1.jpg](../assets/samples/sample-1.jpg), [sample-2.jpg](../assets/samples/sample-2.jpg)、および [sample-3.jpg](../assets/samples/sample-3.jpg)) は、処理プロファイルが適用されたフォルダーの下にある任意のフォルダーで、アップロードされたアセットの処理待ちです。
-1. アセットをタップして詳細を開きます
-   + デフォルトのレンディションは、カスタムレンディションよりもAEMで迅速に生成および表示される場合があります。
-1. を開きます。 __レンディション__ 左側のサイドバーから表示
-1. 次の名前のアセットをタップします： `Circle.png` 生成されたレンディションを確認します。
+1. 新規作成された処理プロファイルを選択します。`WKND Asset Renditions`
+1. 上部のアクションバーで「__フォルダーにプロファイルを適用__」をタップします。
+1. 処理プロファイルを適用するフォルダー（例：`WKND`）を選択して、「__適用__」をタップします。
+1. __AEM／Assets／ファイル__、`WKND` の順にタップして、処理プロファイルが適用されなかったフォルダーに移動します。
+1. 新しい画像アセット（[sample-1.jpg](../assets/samples/sample-1.jpg)、[sample-2.jpg](../assets/samples/sample-2.jpg)、[sample-3.jpg](../assets/samples/sample-3.jpg)）をアップロードします。処理プロファイルが適用されたフォルダーの下の任意のフォルダーを選択し、アップロードされたアセットが処理されるまで待ちます。
+1. 詳細を表示するにはアセットをタップします。
+   + デフォルトのレンディションは、カスタムレンディションよりも AEM で迅速に生成および表示される場合があります。
+1. 左側のサイドバーから&#x200B;__レンディション__&#x200B;ビューを開きます。
+1. `Circle.png` という名前のアセットをタップして、生成されたレンディションを確認します。
 
    ![生成されたレンディション](./assets/processing-profiles/rendition.png)
 
-## 終了！
+## 完了です。
 
-これで完了です。完了しました [チュートリアル](../overview.md) AEMas a Cloud ServiceのAsset computeマイクロサービスを拡張する方法について これで、AEMas a Cloud Serviceのオーサーサービスで使用するカスタムAsset computeワーカーを設定、開発、テスト、デバッグおよびデプロイする機能が必要になりました。
+これですべて完了です。AEM as a Cloud Service Asset Computee マイクロサービスを拡張する方法に関する[チュートリアル](../overview.md)を完了しました。これで、AEM as a Cloud Service Author サービスで使用するカスタム Asset Compute ワーカーを設定、開発、テスト、デバッグ、デプロイできるようになりました。
 
 ### Github でプロジェクトのソースコード全体を確認する
 
-最終的なAsset computeプロジェクトは、GitHub で次の場所から入手できます。
+最終的な Asset Computeプロジェクトは、GitHub の次の場所から入手できます。
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_「次を含む」GitHub はプロジェクトの最終状態で、ワーカーとテストケースが完全に入力されますが、資格情報 ( ) は含まれていません。 `.env`, `.config.json` または `.aio`._
+_GitHub にはプロジェクトの最終状態が含まれ、ワーカーとテストケースが完全に入力されますが、資格情報（`.env`、`.config.json` または `.aio`_）は含まれません。
 
 ## トラブルシューティング
 
