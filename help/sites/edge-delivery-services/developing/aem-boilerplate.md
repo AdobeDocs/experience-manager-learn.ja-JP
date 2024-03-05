@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services用のAEMボイラープレートからプロジェクトを作成します
-description: Edge Delivery Services用のAEMボイラープレートからプロジェクトを作成します
+title: Edge Delivery Services 用の AEM ボイラープレートからプロジェクトを作成
+description: Edge Delivery Services 用の AEM ボイラープレートからプロジェクトを作成
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425713.jpeg
 duration: 91
 exl-id: 8fa9ac34-d77a-46d1-af19-4b89c1b8d54f
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM boilerplate
+# AEM ボイラープレート
 
-コード Git リポジトリを [AEM boilerplate テンプレート](https://github.com/adobe/aem-boilerplate) (EDGE DELIVERY SERVICES)
+Edge Delivery Services 用の [AEM ボイラープレートテンプレート](https://github.com/adobe/aem-boilerplate)でコード Git リポジトリを設定します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
