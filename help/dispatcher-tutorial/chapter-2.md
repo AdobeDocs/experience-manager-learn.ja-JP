@@ -1,5 +1,5 @@
 ---
-title: 第 2 章 — Dispatcher インフラストラクチャ
+title: 第 2 章 - Dispatcher インフラストラクチャ
 description: パブリッシュおよび Dispatcher のトポロジについて理解します。最も一般的なトポロジと設定について説明します。
 feature: Dispatcher
 topic: Architecture
@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: a25b6f74-3686-40a9-a148-4dcafeda032f
 duration: 504
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1882'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -125,7 +125,7 @@ NFS とはいくらか実験しましたが、NFS は、コンテンツのロッ
 
 <br>
 
-*クロス接続トポロジ：より冗長になり複雑さが増大*
+*クロス接続トポロジ：より冗長になり複雑さが増大。*
 
 一見すると、これは比較的低い予算でさらに冗長性を確保できるようです。 いずれかの Apache サーバーがダウンしても、2 つのパブリッシュシステムでレンダリングを実行できます。 また、いずれかのパブリッシュシステムがクラッシュした場合でも、キャッシュされた読み込みを提供する Dispatcher が 2 つあります。
 
