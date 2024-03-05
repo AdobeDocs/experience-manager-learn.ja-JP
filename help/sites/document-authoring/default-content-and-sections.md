@@ -1,5 +1,5 @@
 ---
-title: デフォルトのコンテンツとセクション
+title: デフォルトコンテンツとセクション
 description: デフォルトコンテンツとセクションのドキュメントオーサリングの概念について詳しく説明します。
 version: 6.5, Cloud Service
 feature: Authoring
@@ -13,13 +13,13 @@ thumbnail: 3425702.jpeg
 duration: 93
 exl-id: 17c7919e-3216-4f71-a553-bc5b2e1b6014
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# デフォルトのコンテンツとセクション
+# デフォルトコンテンツとセクション
 
 {{edge-delivery-services}}
 
