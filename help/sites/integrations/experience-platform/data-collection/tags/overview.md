@@ -1,6 +1,6 @@
 ---
 title: Experience Platform Data Collection Tags（Launch）と AEM の統合
-description: Experience Platform Data Collection Tags は、アドビの次世代タグ管理ソリューションであり、Adobe Analytics、Target、Audience Manager、その他多くのソリューションをデプロイするための最適な方法です。タグ（旧称 Launch）の概要と、Adobe Experience Managerとの推奨される統合について説明します。
+description: Experience Platform Data Collection Tags は、アドビの次世代タグ管理ソリューションであり、Adobe Analytics、Target、Audience Manager、その他多くのソリューションをデプロイするための最適な方法です。ここでは、Tags（旧称 Launch）の概要と Adobe Experience Manager との推奨される統合について説明します。
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5979
 thumbnail: 39090.jpg
@@ -15,9 +15,9 @@ doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
 duration: 256
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
