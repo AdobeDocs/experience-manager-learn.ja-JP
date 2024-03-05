@@ -1,6 +1,6 @@
 ---
-title: ユーザー指定のメタデータタグを追加するためのチュートリアル
-description: アダプティブフォームデータを Azure ストレージアカウントに保存およびアカウントから取得する方法を説明します。
+title: ユーザー指定のメタデータタグを追加するチュートリアル
+description: アダプティブフォームデータを Azure ストレージアカウントに保存する方法およびアカウントから取得する方法を学びます。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,19 +11,19 @@ jira: KT-14501
 duration: 34
 exl-id: 94454327-86d9-468e-9f08-50b8a9c530f3
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 # 選択グループコンポーネントを拡張
 
-checkboxgroup、dropdown および radiobutton のコアコンポーネントが拡張され、「追加のプロパティ」タブが含まれるようになりました。 「追加のプロパティ」タブには、フィールドを BLOB インデックスタブとして使用するかどうかを示すチェックボックスがあります
-![additonal-properties](assets/drop-down-additonal-properties.png). このチェックボックスを選択すると、Searchable という名前のプロパティが作成され、次のスクリーンショットに示すように、jcr リポジトリの値が true に設定されます。
-![検索可能な](assets/searchable-true.png).
+checkboxgroup、dropdown および radiobutton のコアコンポーネントが拡張され、「追加のプロパティ」タブが含まれるようになりました。「追加のプロパティ」タブには、フィールドを Blob インデックスタブとして使用するかどうかを示すチェックボックスがあります。
+![additonal-properties](assets/drop-down-additonal-properties.png)このチェックボックスを選択すると、Searchable という名前のプロパティが作成され、次のスクリーンショットに示すように、JCR リポジトリでこのプロパティの値が true に設定されます。
+![Searchable](assets/searchable-true.png)
 
-次の.content.xml が_cq_dialog フォルダーの下に作成されました。
+次の .content.xml が _cq_dialog フォルダーの下に作成されました。
 
 ![drop-down-project-view](assets/drop-down-project-view.png)
 
@@ -87,4 +87,4 @@ checkboxgroup、dropdown および radiobutton のコアコンポーネントが
 
 ## 次の手順
 
-[Azure ポータル設定の作成](./create-osgi-configuration.md)
+[Azure Portal 設定を作成](./create-osgi-configuration.md)
