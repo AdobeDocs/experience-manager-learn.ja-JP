@@ -1,6 +1,6 @@
 ---
-title: ユーザー指定のメタデータタグを追加するためのチュートリアル
-description: カスタム送信を作成して、Azure にメタデータタグ付きのフォームデータを保存する
+title: ユーザー指定のメタデータタグを追加するチュートリアル
+description: カスタム送信を作成して、メタデータタグ付きのフォームデータを Azure に保存
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,17 +11,17 @@ jira: KT-14501
 duration: 62
 exl-id: 5cd5e37e-9881-4fce-a0cb-402d738f83ae
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '122'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# カスタム送信を作成してフォームの送信を処理する
+# フォームの送信を処理するためのカスタム送信を作成
 
-AEM Forms CS は、Azure にフォームデータを保存するための標準の送信アクションを提供しますが、BLOB に BLOB インデックスタグを作成する機能はありません。 この使用例を満たすために、カスタム送信サービスが作成され、送信されたデータを Azure に保存し、フォーム内で検索可能とマークされたフィールドを使用して BLOB インデックスデータタグを作成しました。
+AEM Forms CS は、Azure にフォームデータを保存する標準の送信アクションを提供します。ただし、Blob で Blob インデックスタグを作成する機能は備わっていません。このユースケースを満たすために、送信されたデータを Azure に保存し、フォーム内で検索可能とマークされたフィールドを使用して Blob インデックスデータタグを作成する、カスタム送信サービスが作成されました。
 
-[コアコンポーネントベースのアダプティブフォーム用のサンプルのカスタム送信ハンドラーは、こちらから参照できます。](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). 次のカスタム送信が、フォーム送信を処理するために書き込まれました
+[コアコンポーネントベースのアダプティブフォーム用のサンプルのカスタム送信ハンドラーは、こちらから利用できます](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)。フォーム送信を処理するために、次のカスタム送信が記述されました。
 
 ```java
 package com.aemforms.saveandfecthfromazure.prefill;
