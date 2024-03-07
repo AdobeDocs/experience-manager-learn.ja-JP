@@ -1,5 +1,5 @@
 ---
-title: JSON スキーマとデータを使用したAEM Forms[ 第 1 部 ]
+title: JSON スキーマとデータを使用した AEM Forms [パート 1]
 description: 複数のパートで構成されているチュートリアルでは、JSON スキーマを使用したアダプティブフォームの作成と、送信されたデータのクエリに関する手順を説明します。
 feature: Adaptive Forms
 doc-type: Tutorial
@@ -10,29 +10,29 @@ level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
 duration: 62
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# JSON スキーマに基づくアダプティブフォームの作成
+# JSON スキーマに基づいてアダプティブフォームを作成する
 
 
-AEM Forms 6.3 リリースでは、JSON スキーマに基づいてアダプティブFormsを作成する機能が導入されました。 JSON スキーマを使用してアダプティブFormsを作成する方法について詳しくは、このドキュメントで説明します [記事](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=ja).
+AEM Forms 6.3 リリースでは、JSON スキーマに基づいてアダプティブフォームを作成する機能が導入されました。JSON スキーマを使用してアダプティブフォームを作成する方法について詳しくは、この[記事](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=ja)を参照してください。
 
-JSON スキーマに基づくアダプティブフォームを作成したら、次の手順では、送信されたデータをデータベースに保存します。 この目的で、様々なデータベースベンダーが導入した新しい JSON データタイプを使用します。 この記事の目的で、MySql 8 データベースを使用して送信データを保存します。
+JSON スキーマに基づくアダプティブフォームを作成したら、次の手順では、送信されたデータをデータベースに保存します。この目的で、様々なデータベースベンダーが導入した新しい JSON データタイプを使用します。 この記事では、MySql 8 データベースを使用して送信データを保存します。
 
-この記事では、MySql 8 データベースを使用していました。 MySQL では、という新しいデータ型が導入されました。 [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). これにより、JSON オブジェクトの保存とクエリが容易になります。 送信されたデータは、データベースの JSON タイプの列に保存されます。
+この記事では、MySql 8 データベースが使用されました。MySQL では、[JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html) という新しいデータタイプが導入されました。これにより、JSON オブジェクトの保存とクエリが容易になります。送信されたデータは、データベースの JSON タイプの列に保存されます。
 
-以下のスクリーンショットは、JSON データタイプに保存された送信済みフォームデータを示しています。 「formdata」列の型は JSON です。 また、列のフォーム名に、データに関連付けられたフォームの名前を格納しました
+以下のスクリーンショットは、JSON データタイプに保存された送信済みフォームデータを示しています。 「formdata」列の型は JSON です。 また、formname 列のデータに関連付けられたフォームの名前を格納しました
 
 >[!NOTE]
 >
->json スキーマファイルの名前が適切に設定されていることを確認してください。 例えば、次の形式で名前を付ける必要があります &lt;name>schema.json. そのため、スキーマファイルは mortgage.schema.json または credit.schema.json にすることができます。
+>JSON スキーマファイルの名前が適切に設定されていることを確認してください。 例えば、&lt;name>schema.json の形式で名前を付ける必要があります。そのため、スキーマファイルは mortgage.schema.json または credit.schema.json にすることができます。
 
 
 ![datastored](assets/datastored.gif)
 
 
-[アダプティブFormsの作成に使用できるサンプル JSON スキーマ。](assets/samplejsonschemas.zip)。zip ファイルをダウンロードして展開し、JSON スキーマを取得します。
+[アダプティブフォームの作成に使用できるサンプル JSON スキーマ。](assets/samplejsonschemas.zip)zip ファイルをダウンロードして展開し、JSON スキーマを取得します。
