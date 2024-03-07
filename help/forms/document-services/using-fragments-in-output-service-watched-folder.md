@@ -1,5 +1,5 @@
 ---
-title: 監視フォルダーでの出力サービスでのフラグメントの使用
+title: 監視フォルダーでの 出力サービスでのフラグメントの使用
 description: crx リポジトリにあるフラグメントを使用して PDF ドキュメントを生成します。
 feature: Output Service
 version: 6.4,6.5
@@ -11,9 +11,9 @@ thumbnail: ecma-fragments.jpg
 exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
 duration: 100
 source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '347'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 63%
 * Output サービス - 通常、 xml データを xdp テンプレートまたは PDF と結合して、統合された PDF を生成するために使用されます。詳細については、出力サービスの [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) を参照してください。このサンプルでは、crx リポジトリ内のフラグメントを使用します。
 
 
-次の ECMA スクリプトは、generatePDFを使用しました。 コード内で ResourceResolver と ResourceResolverHelper が使用されていることに注意してください。 ResourceRelover は、このコードがユーザーコンテキストの外部で実行されるので必要です。
+PDF の生成には次の ECMA スクリプトが使用されました。コードでは ResourceResolver と ResourceResolverHelper が使用されていることに注意してください。ResourceRelover は、このコードがユーザーコンテキストの外部で実行されるので必要です。
 
 ```java
 var inputMap = processorContext.getInputMap();
@@ -66,12 +66,12 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 **システム上のサンプルパッケージをテストするには：**
-* [DevelopingWithServiceUSer バンドルのデプロイ](assets/DevelopingWithServiceUser.jar)
-* エントリを追加 **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** 次のスクリーンショットに示すように、ユーザーマッパーサービスの修正内容。
+* [DevelopingWithServiceUSer バンドルをデプロイします。](assets/DevelopingWithServiceUser.jar)
+* 以下のスクリーンショットに示すように、ユーザーマッパーサービス修正にエントリ **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** を追加します。
   ![ユーザーマッパーの修正](assets/user-mapper-service-amendment.png)
-* [サンプル xdp ファイルと ECMA スクリプトをダウンロードして読み込みます](assets/watched-folder-fragments-ecma.zip).
+* [サンプル xdp ファイルと ECMA スクリプトをダウンロードして読み込みます。](assets/watched-folder-fragments-ecma.zip)
 これにより、c:/fragmentsandoutputservice フォルダーに監視フォルダー構造が作成されます。
 
-* [サンプルデータファイルを抽出します。](assets/usingFragmentsSampleData.zip) 監視フォルダーの install フォルダーに配置します (c:\fragmentsandoutputservice\install)。
+* [サンプルデータファイルを抽出](assets/usingFragmentsSampleData.zip)して、監視フォルダーのインストールフォルダー（c:\fragmentsandoutputservice\install）に配置します。
 
 * 生成された PDF ファイルの監視フォルダー設定の結果フォルダーを確認します。
