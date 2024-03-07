@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services開発
-description: Edge Delivery Servicesを使用して配信されるAEM Web サイトを開発する方法を説明します。
+title: Edge Delivery Services の開発
+description: Edge Delivery Services を使用して配信される AEM web サイトを開発する方法を学びます。
 feature: Edge Delivery Services
 version: 6.4, 6.5, Cloud Service
 topic: Development
@@ -9,12 +9,12 @@ level: Beginner
 doc-type: Catalog
 exl-id: f97c96df-d3c2-4106-8fb0-def6e74897d7
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '78'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery Services開発
+# Edge Delivery Services の開発
 
-Adobe Experience Manager(AEM) でのEdge Delivery Services向け Web サイトの開発は、従来のAEM Web サイトの開発とは異なります。 Edge Delivery Services向けの具体的なガイドラインとベストプラクティスについては、 [Edge Delivery Services開発ドキュメント](../edge-delivery-services/developing/prerequisites.md). このリソースは、開発プロセスがEdge Delivery Servicesの要件に従うようにするための、重要な情報と手順を提供します。
+Edge Delivery Services 用の Adobe Experience Manager（AEM）での web サイト開発は、従来の AEM での web サイト開発とは異なります。Edge Delivery Services に合わせた具体的なガイドラインとベストプラクティスについては、[Edge Delivery Services の開発ドキュメント](../edge-delivery-services/developing/prerequisites.md)を参照してください。このリソースでは、開発プロセスを Edge Delivery Services の要件に確実に適合させるための重要な情報と手順について説明しています。
