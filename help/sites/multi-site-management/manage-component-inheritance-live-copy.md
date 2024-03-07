@@ -1,6 +1,6 @@
 ---
-title: コンポーネントでライブコピーの継承を管理
-description: コンポーネントレベルでライブコピーとそのブループリント間の継承を管理する方法を理解する
+title: コンポーネントでのライブコピー継承の管理
+description: コンポーネントレベルでライブコピーとそのブループリント間の継承を管理する方法を理解します
 feature: Language Copy, Multi Site Manager
 doc-type: Feature Video
 version: 6.4, 6.5, Cloud Service
@@ -12,14 +12,14 @@ level: Beginner
 exl-id: 924fbe94-2e58-4998-a2a9-b77f1aebd61e
 duration: 475
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# コンポーネントでライブコピーの継承を管理 {#manage-live-copy-component}
+# コンポーネントでのライブコピー継承の管理 {#manage-live-copy-component}
 
-コンポーネントレベルでライブコピーとそのブループリント間の継承を管理する方法を説明します。
+コンポーネントレベルでライブコピーとそのブループリント間の継承を管理する方法を理解します
 
 >[!VIDEO](https://video.tv.adobe.com/v/36678?quality=12&learn=on)
