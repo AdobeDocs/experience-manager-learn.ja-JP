@@ -14,9 +14,9 @@ exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
 duration: 870
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2923'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 ## 単体テストと Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja) では、AEM コードの単体テストのベストプラクティスを推奨および促進するために、単体テストの実施と[コードカバレッジレポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)が CI／CD パイプラインに統合されています。
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja) では、AEM コードの単体テストのベストプラクティスを推奨および促進するために、単体テストの実施と[コードカバレッジレポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=ja)が CI／CD パイプラインに統合されています。
 
 コードの単体テストはあらゆるコードベースで有益ですが、Cloud Manager を使用している場合は、Cloud Manager で実行できる単体テストを提供して、コード品質テストおよびレポートを活用することが重要です。
 
@@ -112,7 +112,7 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 1. **aem-guides-wknd/core/pom.xml** を開き、対応するテストの依存関係が使用可能であることを確認します。
 
-   **コア**&#x200B;プロジェクトの並列ソースフォルダーには、単体テストと、サポートするテストファイルが含まれます。この **テスト** フォルダーでは、テストクラスをソースコードから分離できますが、テストは、ソースコードと同じパッケージに存在するかのように動作します。
+   **コア**&#x200B;プロジェクトの並列ソースフォルダーには、単体テストと、サポートするテストファイルが含まれます。この **test** フォルダーにより、テストクラスとソースコードを分離できますが、テストを、ソースコードと同じパッケージに存在するかのように動作させることができます。
 
 ## JUnit テストの作成 {#creating-the-junit-test}
 
@@ -208,10 +208,10 @@ _Java™ 8 と Java™ 11 の両方がシステムにインストールされて
 
 単体テストを作成する際の主なアプローチは次の 2 つです。
 
-* [TDD またはテスト主導型開発](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA)：実装が開発される直前に、単体テストを増分的に記述します。テストを記述し、テストが合格するように実装を記述します。
-* 実装優先開発：まず作業用コードを開発し、そのコードを検証するテストを記述します。
+* [TDD またはテスト主導型開発](https://ja.wikipedia.org/wiki/Test-driven_development)：実装が開発される直前に、単体テストを増分的に記述します。テストを記述し、そのテストが合格するように実装を記述します。
+* 実装優先開発：まず作業用コードを開発したあと、そのコードを検証するテストを記述します。
 
-このチュートリアルでは、後者の方法を使用します ( 作業用の **BylineImpl.java** 前の章で参照 )。 このため、パブリックメソッドの動作だけでなく、実装の詳細の一部も確認し、理解する必要があります。 優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
+このチュートリアルでは、後者のアプローチを使用します（動作する **BylineImpl.java** を前の章で既に作成されています）。このため、パブリックメソッドの動作だけでなく、その実装の詳細の一部についても確認し理解しておく必要があります。優れたテストは入力と出力のみを重視する必要があるので、理屈に合わないと思われるかもしれません。AEM で作業する際には、動作するテストを構築するために、実装に関する様々な考慮事項を理解しておく必要があります。
 
 AEM における TDD には高度な専門知識が必要です。AEM 開発や AEM コードの単体テストを熟知した AEM 開発者が使用することで最大限の効果を発揮できます。
 
@@ -283,7 +283,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 ## getName() のテスト {#testing-get-name}
 
-基本的なモックコンテキストの設定が完了したので、次のための最初のテストを作成します。 **BylineImpl の getName()**. このテストでは、リソースの「**name**」プロパティに保存されている作成済みの正しい名前をメソッド **getName()** が返すことを確認する必要があります。
+基本的なモックコンテキストの設定が完了したので、**BylineImpl の getName()** の最初のテストを作成します。このテストでは、リソースの「**name**」プロパティに保存されている作成済みの正しい名前をメソッド **getName()** が返すことを確認する必要があります。
 
 1. **BylineImplTest.java** の **testGetName**() メソッドを次のように更新します。
 
@@ -411,7 +411,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 ## getOccupations() のテスト {#testing-get-occupations}
 
-よかった！ 最初のテストは成功しました。先へ進み、`getOccupations()` をテストします。モックコンテキストの初期化が `@Before setUp()` メソッドで行われたため、`getOccupations()` を含むこのテストケースのすべての `@Test` メソッドで利用できるようになります。
+よくできました。最初のテストは成功しました。先へ進み、`getOccupations()` をテストします。モックコンテキストの初期化が `@Before setUp()` メソッドで行われたため、`getOccupations()` を含むこのテストケースのすべての `@Test` メソッドで利用できるようになります。
 
 このメソッドは、職業プロパティに保存されている職業のリストをアルファベット順（降順）に並べ替えて返します。
 
@@ -459,7 +459,7 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
    }
    ```
 
-1. テストを実行し、再び合格します。 職業が正常に機能しているようです！
+1. テストを実行すると、再び合格です。職業の並べ替えが正常に機能しているようです。
 
    ![職業パスを取得](assets/unit-testing/testgetoccupations-pass.png)
 
@@ -471,10 +471,10 @@ AEM で記述されるコードの大部分は JCR、Sling または AEM API に
 
 `isEmpty()` のテストは、様々な条件でのテストが必要なので、興味深いものです。 **BylineImpl.java** の `isEmpty()` メソッドをレビューするには、次の条件をテストする必要があります。
 
-* 名前が空の場合に true を返します
-* 職業が null または空の場合に true を返します
-* 画像が null の場合、または src URL がない場合に true を返します。
-* 名前、職業、画像（src URL を含む）が存在する場合、false を返します
+* 名前が空の場合は、true を返します。
+* 職業が null または空の場合は、true を返します。
+* 画像が null の場合または画像に src URL がない場合は、true を返します。
+* 名前、職業、画像（src URL を含む）が存在する場合は、false を返します。
 
 これにより、`BylineImplTest.json` で特定の条件や新しいモックリソース構造をテストする新しいテストメソッドを作成して、これらのテストを実施する必要があります。
 
