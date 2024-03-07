@@ -1,5 +1,5 @@
 ---
-title: 第 3 章 — Dispatcher の高度なキャッシュに関するトピック
+title: 第 3 章 - 高度な Dispatcher キャッシュのトピック
 description: これは、AEM のキャッシュに関して 3 部にわたるシリーズの第 3 部です。第 1 部と第 2 部では、Dispatcher のプレーン HTTP キャッシュとその制限事項について説明しました。第 3 部では、そうした制限を克服する方法に関するいくつかの案について説明します。
 feature: Dispatcher
 topic: Architecture
@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: 7c7df08d-02a7-4548-96c0-98e27bcbc49b
 duration: 1653
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6172'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -268,7 +268,7 @@ Dispatcher の前に（短い）TTL ベースのキャッシュのレイヤー�
 
 #### 参照
 
-* [ACS Commons http Cache](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+* [ACS Commons http キャッシュ](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
 * [Ehcache キャッシュフレームワーク](https://www.ehcache.org)
 
 ### 基本用語
@@ -403,7 +403,7 @@ SDI のドキュメントを慎重に検討することをお勧めします。�
 * [docs.oracle.com - カスタム JSP タグの記述方法](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
 * [Dominik Süß - コンポーネントフィルターの作成と使用](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
 * [sling.apache.org - Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
-* [helpx.adobe.com - AEM での Sling Dynamic Includes の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html?lang=ja)
+* [helpx.adobe.com - AEM での Sling Dynamic Includes の設定](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
 
 
 #### モデルのキャッシュ
