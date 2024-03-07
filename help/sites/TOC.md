@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 85%
 + [概要](overview.md)
 + ドキュメントのオーサリング {#document-authoring}
    + [概要](document-authoring/overview.md)
-   + [セットアップ](document-authoring/set-up.md)
+   + [設定](document-authoring/set-up.md)
    + [プレビューと公開](document-authoring/preview-and-publish.md)
    + [ドキュメント構造](document-authoring/document-structure.md)
-   + [デフォルトのコンテンツとセクション](document-authoring/default-content-and-sections.md)
+   + [デフォルトコンテンツとセクション](document-authoring/default-content-and-sections.md)
    + [ブロックとオートブロック](document-authoring/blocks-and-autoblocks.md)
    + [リダイレクト](document-authoring/redirects.md)
    + [一括メタデータ](document-authoring/bulk-metadata.md)
-   + [ページメタデータ](document-authoring/page-metadata.md)
+   + [ページのメタデータ](document-authoring/page-metadata.md)
    + 方法{#how-to}
       + [ドキュメント監査](./document-authoring/how-to/document-audit.md)
       + [ドキュメント権限](./document-authoring/how-to/document-permissions.md)
@@ -70,21 +70,21 @@ ht-degree: 85%
    + [概要](./edge-delivery-services/overview.md)
    + 開発{#developing}
       + [前提条件](edge-delivery-services/developing/prerequisites.md)
-      + [AEM boilerplate](edge-delivery-services/developing/aem-boilerplate.md)
-      + [コンテンツリポジトリ](edge-delivery-services/developing/content-repository.md)
+      + [AEM ボイラープレート](edge-delivery-services/developing/aem-boilerplate.md)
+      + [コンテンツリポジトリー](edge-delivery-services/developing/content-repository.md)
       + [プレビューと公開](edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](edge-delivery-services/developing/sidekick.md)
       + [ドキュメント構造](edge-delivery-services/developing/document-structure.md)
       + [ローカル開発](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
-   + ハウツー{#how-to}
+   + 方法{#how-to}
       + [RSS フィード](edge-delivery-services/how-to/rss.md)
       + [ソーシャルメディア共有](edge-delivery-services/how-to/social-media-sharing.md)
       + [ページの削除](edge-delivery-services/how-to/delete-page.md)
 + 開発 {#developing}
    + [Edge 配信サービス](developing/edge-delivery-services.md)
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
-   + [AEM Sitesの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
+   + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja){target=_blank}
    + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja){target=_blank}
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
@@ -96,7 +96,7 @@ ht-degree: 85%
    + [ソーシャルメディア共有](developing/social-media-sharing-technical-video-use.md)
    + [コンポーネントアイコンのカスタマイズ](developing/component-icons-technical-video-develop.md)
 + パーソナライゼーション {#personalization}
-   + [Adobe Targetとの統合](https://helpx.adobe.com/jp/marketing-cloud/how-to/aem-target.html){target=_blank}
+   + [Adobe Target との統合](https://helpx.adobe.com/jp/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [エクスペリエンスフラグメントと Adobe Target のセットアップ](personalization/experience-fragment-target-technical-video-setup.md)
    + [Adobe Target でのエクスペリエンスフラグメントの使用](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [ContextHub のセットアップ](personalization/context-hub-technical-video-setup.md)
