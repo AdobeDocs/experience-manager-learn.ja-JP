@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
 duration: 681
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2623'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Dynamic Media Classic には、切り抜きツールなど、UI で便利に使�
 
 Dynamic Media Classic の切り抜きツールにはアセットの詳細ページからアクセスするか、「**編集**」ボタンをクリックします。 ツールを使用して、次の 2 つの方法で切り抜きを行うことができます。
 
-- 切り抜きウィンドウのハンドルをドラッグしたり、「サイズ」ボックスに値を入力したりする、デフォルトの切り抜きモード。 [手動での切り抜き](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop?lang=ja)の方法を参照してください。
+- 切り抜きウィンドウのハンドルをドラッグしたり、「サイズ」ボックスに値を入力したりする、デフォルトの切り抜きモード。 [手動での切り抜き](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=ja#select-an-area-to-crop)の方法を参照してください。
 - トリミング。画像と一致しないピクセル数を計算して、画像の周囲の余白を削除するにはこちらを使用します。 [トリミングによる切り抜き](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=ja#crop-to-remove-white-space-around-an-image)方法を参照してください。
 
 ### _手動での切り抜き_
@@ -124,7 +124,7 @@ _マスター画像の調整されたビュー ASIAN_BR_MAIN_
 
 ## ズームターゲット
 
-また、「**編集**」メニューと画像の「**詳細**」ページではズームターゲットも確認できます。 これらを使用すると、ズーム画像の特定のマーチャンダイジング機能をハイライト表示する「ホットスポット」を設定できます。 大きなマスターを切り抜いて別々の画像を作成する代わりに、ズームビューアでは画像の上に詳細と、作成した短いラベルを表示できます。
+また、「**編集**」メニューと画像の「**詳細**」ページではズームターゲットも確認できます。 これらを使用すると、ズーム画像の特定のマーチャンダイジング機能をハイライト表示する「ホットスポット」を設定できます。大きなマスターを切り抜いて別々の画像を作成する代わりに、ズームビューアでは画像の上に詳細と、作成した短いラベルを表示できます。
 
 ![画像](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -134,7 +134,7 @@ _マスター画像の調整されたビュー ASIAN_BR_MAIN_
 
 ズームターゲットを使用するかどうかを決定するもう 1 つの要因は、ビューアの選択です。 一部のビューアタイプでは、ズームターゲットを表示できません（例えば、フライアウトビューアではサポートされていません）。
 
-詳細情報：[ズームターゲットの作成](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=ja#creating-and-editing-zoom-targets)
+詳細情報：[ズームターゲットの作成](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=ja#creating-and-editing-zoom-targets)。
 
 ![画像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
@@ -174,7 +174,7 @@ _マスター画像の調整されたビュー ASIAN_BR_MAIN_
 
 ![画像](assets/crop-adjusted-zoom-targets/view-size.jpg)
 
-組み込みプリセットのサイズは 900 x 550 です。つまり、ターゲットがそれほど大きいサイズよりも小さくなることはありません。 これはおそらく大きすぎます — 2000 ピクセルの画像がある場合、少なくとも 900 ピクセルの幅の機能のみを呼び出すことができます。 ユーザーは手動でさらにズームできますが、近づくようにガイドすることはできません。 表示サイズを 350 x 350 に設定すると、ターゲットをかなり近くにズームインしたり、サイズを大きくしたりできます。 ただし、ビューアで大きなズーム画像を表示したい場合は、350 ピクセルでロックされているので、新しいプリセットを作成する必要があります。
+組み込みプリセットのサイズは 900 x 550 です。つまり、ターゲットがそれほど大きいサイズよりも小さくなることはありません。 これはおそらく大きすぎます。2,000 ピクセルの画像がある場合、呼び出せるのは最低 900 ピクセルの機能のみです。ユーザーは手動でさらにズームできますが、近づくようにガイドすることはできません。 表示サイズを 350 x 350 に設定すると、ターゲットをかなり近くにズームインしたり、サイズを大きくしたりできます。ただし、ビューアで大きなズーム画像を表示したい場合は、350 ピクセルでロックされているので、新しいプリセットを作成する必要があります。
 
 ### ズームターゲットをサポートするビューアプリセットの作成または編集
 
