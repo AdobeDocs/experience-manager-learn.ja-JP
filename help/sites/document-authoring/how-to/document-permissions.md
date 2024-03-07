@@ -1,6 +1,6 @@
 ---
-title: AEMドキュメントオーサリングを使用した権限ドキュメント
-description: コンテンツ権限をAEMドキュメントオーサリングで管理する方法を説明します。
+title: AEM ドキュメントオーサリングを使用したドキュメント権限の管理
+description: AEM ドキュメントオーサリングを使用してコンテンツの権限を管理する方法を学びます。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425724.jpeg
 duration: 91
 exl-id: a8686bf8-b10a-4fbe-a8f6-d74c2c458d3a
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-AEMドキュメントのオーサリングでドキュメントに権限を設定する方法を説明します。
+AEM ドキュメントオーサリングを使用してドキュメントの権限を管理する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
