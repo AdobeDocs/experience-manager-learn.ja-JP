@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 312
 source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1002'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ AEM SPA エディターと統合された Angular アプリケーションの出
 
 ![WKND SPA Angular スタータープロジェクト](./assets/create-project/what-you-will-build.png)
 
-*従来の Hello World メッセージ*
+*従来の Hello World メッセージ。*
 
 ## 前提条件
 
