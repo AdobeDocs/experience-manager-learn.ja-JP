@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 242
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '853'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 92%
 
 >[!TIP]
 >
->ローカルのAEM SDK ユーザーの場合： AEM Assets UI を利用して、以下に説明するコンテンツフラグメント UI の代わりに、コンテンツフラグメントを作成および作成します。 詳しい手順については、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=ja).
+>ローカル AEM SDK ユーザーの場合、以下に説明するコンテンツフラグメント UI の代わりに、AEM Assets UI を使用してコンテンツフラグメントを作成しオーサリングします。手順について詳しくは、[AEM ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=ja)を参照してください。
 
 次に、**チーム**&#x200B;および&#x200B;**人物**&#x200B;のモデルに基づいて、いくつかのコンテンツフラグメントが作成されます。
 
@@ -152,7 +152,7 @@ ht-degree: 92%
 
 >[!TIP]
 >
->ローカルAEM SDK ユーザーの場合： AEM Assets UI を利用して、以下に説明するコンテンツフラグメント UI の代わりに、コンテンツフラグメントを公開します。 詳しい手順については、 [AEMドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
+>ローカル AEM SDK ユーザーの場合、以下に説明するコンテンツフラグメント UI の代わりに、AEM Assets UI を使用してコンテンツフラグメントを公開します。手順について詳しくは、[AEM ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=ja#publishing-and-referencing-a-fragment)を参照してください。
 
 レビューと検証が完了したら、作成した `Content Fragments` を公開します
 
@@ -163,7 +163,7 @@ ht-degree: 92%
 1. コンテンツフラグメントの横にあるチェックボックスをクリックして、「**公開**」をクリックします。
    ![コンテンツフラグメントの公開](assets/author-content-fragments/publish-content-fragment.png)
 
-## これで完了です。 {#congratulations}
+## おめでとうございます。 {#congratulations}
 
 これで完了です。複数のコンテンツフラグメントを作成し、バリエーションを作成しました。
 
