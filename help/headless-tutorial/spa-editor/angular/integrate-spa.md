@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 649
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2045'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -80,7 +80,7 @@ AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の
 
 次に、`ui.frontend` モジュールを検査して、[AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=ja)によって自動生成される SPA について説明します。
 
-1. 任意の IDE で、WKND SPA 用の AEM プロジェクトを開きます。 このチュートリアルでは、[Visual Studio のコード IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) を使用します。
+1. 任意の IDE で、WKND SPA 用の AEM プロジェクトを開きます。このチュートリアルでは、[Visual Studio のコード IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) を使用します。
 
    ![VS コード - AEM WKND SPA プロジェクト](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -351,7 +351,7 @@ AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の
 
 1. ブラウザーで [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) に移動します。
 
-   これは、アプリケーションを動作させているAEMで書き出された JSON です。 JSON 出力をコピーします。
+   これは、アプリケーションを実行している AEM から書き出した JSON です。JSON 出力をコピーします。
 
 2. IDE に戻り、`ui.frontend/src` に移動して、**mocks** と **json** という名前の新しいフォルダーを追加して、次のフォルダー構造に一致させます。
 
