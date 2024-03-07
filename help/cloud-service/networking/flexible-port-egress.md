@@ -1,6 +1,6 @@
 ---
 title: フレキシブルポートエグレス
-description: 柔軟なポート出力を設定して使用し、AEMas a Cloud Serviceから外部サービスへの外部接続をサポートする方法について説明します。
+description: フレキシブルポートエグレスをセットアップし使用して、AEM as a Cloud Service から外部サービスへの外部接続をサポートする方法について説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -11,9 +11,9 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 duration: 906
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1060'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -161,7 +161,7 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
 
 フレキシブルポートエグレスプロキシを有効にすると、AEM コードおよび設定でそれらを使用して外部サービスを呼び出すことができます。外部呼び出しには、AEM での処理方法が 2 種類あります。
 
-1. 非標準ポート上の外部サービスへの HTTP/HTTPS 呼び出し
+1. 非標準ポートでの外部サービスへの HTTP／HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対して行われる HTTP／HTTPS 呼び出しが含まれます。
 1. 外部サービスへの HTTP／HTTPS 以外の呼び出し
    + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP／HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。
@@ -175,11 +175,11 @@ AEM からの非標準ポート（80 または 443 以外）での HTTP／HTTPS 
 
 AEM には、AEM の HTTP／HTTPS プロキシにマッピングされる 2 組の特別な Java™ システム変数が用意されています。
 
-| 変数名 | 以下を使用し、 | Java™コード | OSGi 設定 |
+| 変数名 | 使用方法 | Java™ コード | OSGi 設定 |
 | - |  - | - | - |
-| `AEM_PROXY_HOST` | HTTP/HTTPS 接続の両方のプロキシホスト | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
-| `AEM_HTTP_PROXY_PORT` | HTTPS 接続のプロキシポート ( フォールバックの設定先： `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` |
-| `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート ( フォールバックの設定先： `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
+| `AEM_PROXY_HOST` | HTTP／HTTPS 接続の両方のプロキシホスト | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| `AEM_HTTP_PROXY_PORT` | HTTPS 接続のプロキシポート（フォールバックを `3128` に設定） | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` |
+| `AEM_HTTPS_PROXY_PORT` | HTTPS 接続のプロキシポート（フォールバックを `3128` に設定） | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
 
 非標準ポートで外部サービスに対して HTTP／HTTPS 呼び出しを行う場合、ポート転送「ルール」が「コード内」で定義されているので、対応する `portForwards` を Cloud Manager API の `enableEnvironmentAdvancedNetworkingConfiguration` 操作を使用して定義しないでください。
 
@@ -207,9 +207,9 @@ AEM には、AEM の HTTP／HTTPS プロキシにマッピングされる 2 組�
 
 AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP など）、接続は AEM から提供される特別なホスト名を使用して行う必要があります。
 
-| 変数名 | 以下を使用し、 | Java™コード | OSGi 設定 |
+| 変数名 | 使用方法 | Java™ コード | OSGi 設定 |
 | - |  - | - | - |
-| `AEM_PROXY_HOST` | 非 HTTP/HTTPS 接続用のプロキシホスト | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| `AEM_PROXY_HOST` | HTTP／HTTPS 以外の接続用のプロキシホスト | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
 外部サービスへの接続は、その後、`AEM_PROXY_HOST` とマッピングされたポート（`portForwards.portOrig`）を使用しで呼び出されます。次に、AEM はこれをマッピングされた外部ホスト名（`portForwards.name`）とポート（`portForwards.portDest`）にルーティングします。
