@@ -12,9 +12,9 @@ level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
 duration: 671
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2476'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -133,7 +133,7 @@ AEM as a Cloud Service では、すべての AEM リリースで最新のコア�
 このエラーを防ぐには、AEM as a Cloud Service 環境のアップデートが使用可能な場合は常に、次のビルドまたはデプロイの一部としてアップデートを含め、アプリケーションコードベースでコアコンポーネントのバージョンを繰り上げた後に必ずアップデートを含めます。
 
 + __症状：__
-画像の作成手順が失敗し、 `com.adobe.cq.wcm.core.components...` 特定のバージョン範囲のパッケージを、 `core` プロジェクト。
+イメージのビルド手順が失敗し、特定のバージョン範囲の `com.adobe.cq.wcm.core.components...` パッケージを `core` プロジェクトで読み込めないというエラーが通知されます。
 
   ```
   [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
