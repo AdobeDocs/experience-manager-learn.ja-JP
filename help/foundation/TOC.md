@@ -5,9 +5,9 @@ user-guide-description: Adobe Experience Manager Foundation のビデオやチ�
 sub-product: Experience Manager
 index: y
 source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 96%
    + [Sling Dynamic Include の設定](./development/set-up-sling-dynamic-include.md)
    + [Java API のベストプラクティス](./development/understand-java-api-best-practices.md)
    + [Sling Model Exporter について](./development/understand-sling-model-exporter.md)
-   + [Oak インデックス作成のベストプラクティスについて](./development/understand-indexing-best-practices.md)
+   + [Oak インデックス作成のベストプラクティス](./development/understand-indexing-best-practices.md)
 + プロジェクト {#projects}
    + [AEM プロジェクトの開発](./projects/develop-aem-projects.md)
    + [プロジェクトマスターの使用](./projects/use-project-masters.md)
