@@ -12,9 +12,9 @@ last-substantial-update: 2020-07-07T00:00:00Z
 duration: 336
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1294'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ XFA Forms は XML ベースです。 このよく構造化された柔軟な形�
 * 動的 Forms は、フォームのレイアウトとページ番号を変更するクライアントサイドスクリプトをサポートしています。例えば、Purchase Order.xdp を動的フォームとして保存すると、無限量のデータに対応するように、Purchase Order.xdp が拡大およびページ番号付けされます
 * 動的 Forms は実行時にフォームのすべてのプロパティをサポートしますが、静的 Forms はサブセットのみをサポートします
 
-* [スタティック PDF フォームとダイナミック PDF フォームの違いについては、このドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [静的 PDF forms と動的 PDF forms の違いについては、このドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html?lang=ja#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >
