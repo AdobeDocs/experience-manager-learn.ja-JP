@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 duration: 668
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2307'
 ht-degree: 100%
 
@@ -60,7 +60,7 @@ Adobe Analytics タグ拡張機能を使用して AEM Sites と Adobe Analytics 
 AEM 環境をセットアップして WKND コードベースをインストールする代わりに、Experience Platform デバッガーを使用して、ライブの [WKND Site](https://wknd.site/us/en.html) を&#x200B;*お使いの*&#x200B;タグプロパティに&#x200B;**切り替える**&#x200B;ことができます。ただし、既に [Adobe Client Data Layer が有効になっている](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#installation-activation)場合は、独自の AEM サイトを使用できます。
 
 1. Experience Platform にログインし、[タグプロパティを作成](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ja)します（まだの場合）。
-1. 初期のタグ JavaScript [ライブラリが作成され](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library?lang=ja)、タグ[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)に昇格されたことを確認します。
+1. 初期のタグ JavaScript [ライブラリが作成され](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=ja#create-a-library)、タグ[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)に昇格されたことを確認します。
 1. ライブラリの公開先のタグ環境から JavaScript 埋め込みコードをコピーします。
 
    ![タグプロパティ埋め込みコードのコピー](assets/collect-data-analytics/launch-environment-copy.png)
@@ -109,7 +109,7 @@ AEM 環境をセットアップして WKND コードベースをインストー�
 
    ページデータを Adobe Analytics に送信するには、データレイヤーの `dc:title`、`xdm:language`、`xdm:template` などの標準プロパティを使用します。
 
-   詳しくは、コアコンポーネントデータスキーマの[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page?lang=ja)を参照してください。
+   詳しくは、コアコンポーネントデータスキーマの[ページスキーマ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja#page)を参照してください。
 
    >[!NOTE]
    >
@@ -182,7 +182,7 @@ Adobe Client Data Layer は、**イベント駆動型**&#x200B;のデータレ�
 
    `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。ここで、`component` はカスタムイベントでデータレイヤーに対する `getState` から得られる現在のページです。
 
-1. 変更を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
+1. 変更を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=ja)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
 
    >[!NOTE]
    >
@@ -379,7 +379,7 @@ Adobe Client Data Layer は、**イベント駆動型**&#x200B;のデータレ�
 
 1. 「[西オーストラリア](https://wknd.site/us/en/magazine/western-australia.html)」などの記事ページに移動します。「ページ名」と「テンプレートタイプ」が変更されるのを確認します。
 
-## これで完了です。
+## おめでとうございます。
 
 イベント駆動型の Adobe Client Data Layer と Experience Platform のタグを使用して、AEM Sites からデータページデータを収集し、Adobe Analytics に送信しました。
 
