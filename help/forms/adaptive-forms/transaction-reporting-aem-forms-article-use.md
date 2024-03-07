@@ -10,15 +10,15 @@ exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 81
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '331'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # AEM Forms でのトランザクションレポートの使用{#using-transaction-reporting-in-aem-forms}
 
-AEM Forms 6.4.1 では、フォーム送信数、ドキュメントサービスを使用したドキュメントのレンダリング、およびインタラクティブ通信（Web チャネルと印刷チャネル）のレンダリングを取り込むトランザクションレポートが導入されました。この機能は、現在、AEM Forms OSGi スタックでのみ使用できます。
+AEM Forms 6.4.1 では、フォーム送信数、ドキュメントサービスを使用したドキュメントのレンダリング、およびインタラクティブ通信（web チャネルと印刷チャネル）のレンダリングを取り込むトランザクションレポートが導入されました。この機能は、現在、AEM Forms OSGi スタックでのみ使用できます。
 
 ## トランザクションレポートの有効化 {#enabling-transaction-reporting}
 
@@ -27,7 +27,7 @@ AEM Forms 6.4.1 では、フォーム送信数、ドキュメントサービス�
 * [configMgr を開く](http://localhost:4502/system/console/configMgr)
 * 「Forms トランザクションレポート」を検索します。
 * 「トランザクションの記録」チェックボックスを選択します。
-* 変更を保存します。
+* 変更内容を保存します。
 
 トランザクションレポートが有効になったら、アダプティブフォームを送信し、ドキュメントサービスを使用してドキュメントを生成するか、またはインタラクティブ通信のドキュメントをレンダリングして、トランザクションレポートの動作を確認できます。
 
