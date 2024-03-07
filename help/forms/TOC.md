@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2034'
 ht-degree: 97%
 
 ---
@@ -133,9 +133,9 @@ ht-degree: 97%
    + [4 - ソリューションのテスト](zipping-form-attachments/test.md)
 + データと添付ファイルをフォームに事前入力する{#prefill-form-with-data-attachments}
    + [1 - はじめに](prefill-form-with-data-attachments/introduction.md)
-   + [2 — カスタム送信の作成](prefill-form-with-data-attachments/create-custom-submit.md)
+   + [2 - カスタム送信の作成](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 - OSGi 設定の作成](prefill-form-with-data-attachments/create-osgi-configuration.md)
-   + [4 — 事前入力サービスの作成](prefill-form-with-data-attachments/create-prefill-service.md)
+   + [4 - 事前入力サービスの作成](prefill-form-with-data-attachments/create-prefill-service.md)
 + アダプティブフォームの保存と取得{#store-and-retrieve-af-with-2fa}
    + [1 - はじめに](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 - データソースの設定](store-and-retrieve-af-with-2fa/configure-data-source.md)
@@ -158,7 +158,7 @@ ht-degree: 97%
    + [送信したデータの書き出し](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
    + [HTML5 フォームの作成](html5-forms/create-html5-form.md)
-   + [HTML5 フォームの送信処理](html5-forms/handle-html5-form-submission.md)
+   + [HTML5 フォーム送信の処理](html5-forms/handle-html5-form-submission.md)
 + AEM Forms と Acrobat Sign{#forms-and-sign}
    + [はじめに](aem-forms-and-adobe-sign/introduction.md)
    + [SSL の設定](aem-forms-and-adobe-sign/set-up-ssl.md)
@@ -220,12 +220,13 @@ ht-degree: 97%
    + [PDF 送信を処理](offline-mobile-form-submission/part-two.md)
    + [PDF をレビューするワークフロー](offline-mobile-form-submission/part-three.md)
    + [システムにデプロイ](offline-mobile-form-submission/part-four.md)
-+ 送信されたデータに対するクエリ{#querying-submitted-data}
-   + [はじめに](querying-submitted-data/introduction.md)
-   + [JSON スキーマに基づくフォームの作成](querying-submitted-data/part1.md)
-   + [送信されたデータを保存](querying-submitted-data/part2.md)
-   + [JSON スキーマを保存](querying-submitted-data/part3.md)
-   + [送信されたデータをクエリする](querying-submitted-data/part4.md)
++ フォーム送信のクエリ{#query-form-submissions}
+   + [はじめに](query-form-submissions/introduction.md)
+   + [検索可能なフィールドの作成](query-form-submissions/part1.md)
+   + [カスタム送信の作成](query-form-submissions/part2.md)
+   + [クエリインターフェイスを作成](query-form-submissions/part3.md)
+   + [事前入力サービスの記述](query-form-submissions/part4.md)
+   + [サンプルのデプロイ](query-form-submissions/part5.md)
 + フォームポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [第 1 部 - カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [第 2 部 - カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
@@ -286,7 +287,9 @@ ht-degree: 97%
    + [フォーム添付ファイルのアセンブリ](document-services/assemble-form-attachments.md)
    + [便利なユーティリティサービス](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
+   + [デザインビュー](forms-designer/design-view.md)
    + [最初のフォームを作成する](forms-designer/create-simple-form.md)
+   + [フォームテンプレートの作成](forms-designer/creating-form-template.md)
    + [フォームのスクリプティング](forms-designer/first-script-designer.md)
    + [XML データ連結](forms-designer/xml-data-binding.md)
    + [データベースのバインディング](forms-designer/binding-to-mysql-db.md)
