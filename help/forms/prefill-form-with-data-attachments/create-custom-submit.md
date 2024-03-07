@@ -1,6 +1,6 @@
 ---
-title: カスタム送信を作成して、フォーム送信に基づくコアコンポーネントを処理する
-description: カスタム送信を作成して、添付ファイル付きのフォームデータを Azure に保存する
+title: コアコンポーネントベースのフォームの送信を処理するためのカスタム送信を作成
+description: 添付ファイル付きのフォームデータを Azure に保存するためのカスタム送信を作成
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -9,15 +9,15 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '187'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# カスタム送信を作成してフォームの送信を処理する
+# フォームの送信を処理するためのカスタム送信を作成
 
-この使用例を満たすために、送信されたデータと添付ファイルを Azure に保存するカスタム送信サービスが作成されました。 コアコンポーネントベースのフォームが送信されると、データは次の形式になります
+このユースケースを満たすために、送信されたデータと添付ファイルを Azure に保存するカスタム送信サービスが作成されました。コアコンポーネントベースのフォームが送信されるとき、データは次の形式になります。
 
 ```json
 {
@@ -38,9 +38,9 @@ ht-degree: 1%
 }
 ```
 
-要素 _**contractcopy**_ は添付ファイルコンポーネントを表し、フォームと共に送信される添付ファイルをキャプチャするために使用されます。
-アダプティブフォームにデータとその添付ファイルを事前入力できるように、送信された添付ファイルが Azure ポータルに保存され、送信されたデータ内の契約コピーオブジェクトのデータ要素が、保存された添付ファイルの URL で更新されます。
-カスタム送信サービスは、添付ファイルを抽出して Azure ポータルに保存します。  更新された送信済みデータは次のようになります
+_**contractcopy**_ 要素は添付ファイルコンポーネントを表し、フォームと共に送信された添付ファイルをキャプチャするために使用されます。
+アダプティブフォームにデータとその添付ファイルを事前入力できるように、送信された添付ファイルが Azure ポータルに保存され、送信されたデータ内の contractcopy オブジェクトのデータ要素が、保存された添付ファイルの URL で更新されます。
+カスタム送信サービスは、添付ファイルを抽出して Azure Portal に保存します。更新された送信済みデータは次のようになります。
 
 
 ```json
@@ -64,7 +64,7 @@ ht-degree: 1%
 ```
 
 
-[コアコンポーネントベースのアダプティブフォーム用のサンプルのカスタム送信ハンドラーは、こちらから参照できます。](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). 次のカスタム送信が、フォーム送信を処理するために書き込まれました
+[コアコンポーネントベースのアダプティブフォーム用のサンプルのカスタム送信ハンドラーはこちらから利用できます](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)。フォーム送信を処理するために、次のカスタム送信が記述されました。
 
 ```java
 package com.azuredemo.core;
@@ -168,7 +168,7 @@ public class StoreFormDataWithAttachments implements FormSubmitActionService {
 }
 ```
 
-## Azure にフォームの添付ファイルを保存する
+## Azure にフォームの添付ファイルを保存
 
 ```java
 @Override
@@ -214,7 +214,7 @@ public String saveFormAttachmentinAzure(InputStream attachmentStream, String fil
 }
 ```
 
-## Azure にフォームデータを保存する
+## Azure にフォームデータを保存
 
 ```java
 @Override
@@ -256,4 +256,4 @@ public String saveFormAttachmentinAzure(InputStream attachmentStream, String fil
 
 ## 次の手順
 
-[OSGi 設定の書き込み](./create-osgi-configuration.md)
+[OSGi 設定を作成](./create-osgi-configuration.md)
