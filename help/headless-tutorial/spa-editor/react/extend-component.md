@@ -1,6 +1,6 @@
 ---
-title: コアコンポーネントの拡張 | AEM SPA Editor と React の使用の手引き
-description: 既存のコアコンポーネントの JSON モデルを拡張し、AEM SPA Editor で使用する方法を説明します。 既存のコンポーネントにプロパティとコンテンツを追加する方法を理解すると、AEM SPA エディター実装の機能を拡張するための強力な手法になります。 Sling Resource Merger の Sling モデルおよび機能の拡張に委任パターンを使用する方法を説明します。
+title: コアコンポーネントの拡張 | AEM SPA エディターと React の概要
+description: 既存のコアコンポーネントの JSON モデルを拡張して AEM SPA エディターで使用する方法を説明します。既存のコンポーネントにプロパティとコンテンツを追加する方法を理解すると、AEM SPA エディター実装の機能を拡張するための強力な手法になります。Sling モデルと Sling Resource Merger の機能を拡張するために委任パターンを使用する方法を学びます。
 feature: SPA Editor, Core Components
 version: Cloud Service
 jira: KT-5879
@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 350
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1058'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
@@ -25,27 +25,27 @@ ht-degree: 16%
 ## 目的
 
 1. 追加のプロパティやコンテンツを使用して、既存のコアコンポーネントを拡張する
-2. `sling:resourceSuperType` を使用したコンポーネントの継承の基本を理解する
-3. 以下を行うために、 [委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) Sling モデルが既存のロジックと機能を再利用するための条件です。
+2. `sling:resourceSuperType` を使用したコンポーネントの継承の基本を理解する。
+3. Sling モデルで[デリゲーションパターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)を使用して既存のロジックと機能を再利用する方法を学びます。
 
 ## 作成する内容
 
-この章では、標準に追加のプロパティを追加するために必要な追加のコードを示します。 `Image` 新しい要求を満たすための要素 `Banner` コンポーネント。 The `Banner` コンポーネントには、標準と同じプロパティがすべて含まれます `Image` コンポーネントに含まれますが、ユーザーが **バナーテキスト**.
+この章では、新しい `Banner` コンポーネントの要件を満たすために、標準の `Image` コンポーネントに追加のプロパティを追加するのに必要な追加コードについて説明します。`Banner` コンポーネントには標準の `Image` コンポーネントと同じプロパティがすべて含まれていますが、ユーザーが **バナーテキスト** を入力するための追加プロパティが含まれています。
 
 ![最終的に作成されたバナーコンポーネント](assets/extend-component/final-author-banner-component.png)
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認してください。この時点で、チュートリアルのユーザーがAEM SPAエディターの機能を確実に理解していることを前提としています。
+[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認してください。この時点で、チュートリアルのユーザーが AEM SPA エディターの機能を確実に理解していることを前提としています。
 
 ## Sling リソーススーパータイプでの継承 {#sling-resource-super-type}
 
-既存のコンポーネントを拡張するには、という名前のプロパティを設定します。 `sling:resourceSuperType` を設定します。  `sling:resourceSuperType`は [プロパティ](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) これは、別のコンポーネントを指すAEMコンポーネントの定義に対して設定できます。 これにより、 `sling:resourceSuperType`.
+既存のコンポーネントを拡張するには、コンポーネントの定義に `sling:resourceSuperType` という名前のプロパティを設定します。`sling:resourceSuperType`は、別のコンポーネントを指す AEM コンポーネントの定義に設定できる[プロパティ](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)です。これにより、`sling:resourceSuperType` として識別されるコンポーネントのすべての機能を継承するようにコンポーネントが明示的に設定されます。
 
-を拡張する場合、 `Image` コンポーネント： `wknd-spa-react/components/image` コードを更新する必要があります ( `ui.apps` モジュール。
+`wknd-spa-react/components/image` にある `Image` コンポーネントを拡張したい場合は、`ui.apps` モジュールのコードを更新する必要があります。
 
-1. の下に新しいフォルダーを作成します。 `ui.apps` ～のモジュール `banner` 時刻 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
-1. の下 `banner` コンポーネント定義を作成する (`.content.xml`) は次のようになります。
+1. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner` にある `banner` の `ui.apps` モジュールの下に新しいフォルダーを作成します。
+1. `banner` の下に、次のようなコンポーネント定義（`.content.xml`）を作成します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,14 +56,14 @@ ht-degree: 16%
        componentGroup="WKND SPA React - Content"/>
    ```
 
-   これは設定 `wknd-spa-react/components/banner` すべての機能を継承する `wknd-spa-react/components/image`.
+   これにより、`wknd-spa-react/components/image` のすべての機能を継承するように `wknd-spa-react/components/banner` が設定されます。
 
 ## cq:editConfig {#cq-edit-config}
 
-The `_cq_editConfig.xml` ファイルは、AEMオーサリング UI でのドラッグ&amp;ドロップ動作を示します。 画像コンポーネントを拡張する場合、リソースタイプがコンポーネント自体に一致することが重要です。
+`_cq_editConfig.xml` ファイルは、AEM オーサリング UI でのドラッグ＆ドロップ動作を示します。Image コンポーネントを拡張する場合、リソースタイプがコンポーネント自体に一致することが重要です。
 
-1. Adobe Analytics の `ui.apps` モジュールは以下に別のファイルを作成します。 `banner` 名前付き `_cq_editConfig.xml`.
-1. 入力 `_cq_editConfig.xml` を次の XML に置き換えます。
+1. `ui.apps` モジュールで、`banner` の下に `_cq_editConfig.xml` という名前の別のファイルを作成します。
+1. `_cq_editConfig.xml` に以下の XML を入力します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -159,7 +159,7 @@ The `_cq_editConfig.xml` ファイルは、AEMオーサリング UI でのドラ
    </jcr:root>
    ```
 
-1. ファイルの固有の側面は、 `<parameters>` resourceType をに設定するノード `wknd-spa-react/components/banner`.
+1. このファイルのユニークな点は、resourceType を `wknd-spa-react/components/banner` に設定する `<parameters>` ノードです。
 
    ```xml
    <parameters
@@ -170,14 +170,14 @@ The `_cq_editConfig.xml` ファイルは、AEMオーサリング UI でのドラ
        imageRotate=""/>
    ```
 
-   ほとんどのコンポーネントでは、 `_cq_editConfig`. 画像のコンポーネントと子孫は例外です。
+   ほとんどのコンポーネントでは、`_cq_editConfig` は必要ありません。画像コンポーネントと子孫は例外です。
 
 ## ダイアログの拡張 {#extend-dialog}
 
-アドビの `Banner` コンポーネントでは、 `bannerText`. Sling 継承を使用しているので、 [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja) ダイアログの一部を上書きまたは拡張する場合。 このサンプルでは、作成者から追加データをキャプチャしてカードコンポーネントに入力するための新しいタブがダイアログに追加されています。
+`Banner` コンポーネントでは、`bannerText` をキャプチャするためにダイアログに追加のテキストフィールドが必要です。Sling 継承を使用している場合、[Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=ja) 機能を使用して、ダイアログの一部を上書きまたは拡張することができます。このサンプルでは、作成者から追加データをキャプチャしてカードコンポーネントに入力するための新しいタブがダイアログに追加されました。
 
-1. Adobe Analytics の `ui.apps` モジュール、 `banner` フォルダー、名前を付けたフォルダーを作成します。 `_cq_dialog`.
-1. の下 `_cq_dialog` ダイアログ定義ファイルの作成 `.content.xml`. 次のように入力します。
+1. `ui.apps` モジュールで、`banner` の下で `_cq_dialog` という名前のフォルダーを作成します。
+1. `_cq_dialog` の下に、ダイアログ定義ファイル `.content.xml` を作成します。以下のように記述します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -231,22 +231,22 @@ The `_cq_editConfig.xml` ファイルは、AEMオーサリング UI でのドラ
    </jcr:root>
    ```
 
-   上記の XML 定義により、という名前の新しいタブが作成されます。 **テキスト** そして注文して *前* 既存の **アセット** タブをクリックします。 1 つのフィールドが含まれます **バナーテキスト**.
+   上記の XML 定義により、**テキストt**&#x200B;という名前の新しいタブが作成され、既存の **Asset** タブの&#x200B;*前*&#x200B;に配置されます。1 つのフィールド「**バナーテキスト**」が含まれます。
 
-1. ダイアログは次のようになります。
+1. 最終的なコードは次のようになります。
 
    ![バナーの最終ダイアログ](assets/extend-component/banner-dialog.png)
 
-   タブを定義する必要がなかったことを確認します。 **アセット** または **メタデータ**. これらは、 `sling:resourceSuperType` プロパティ。
+   **アセット**&#x200B;と&#x200B;**メタデータ**&#x200B;のタブを定義する必要がなかったことを確認します。これらは `sling:resourceSuperType` プロパティを介して継承されます。
 
-   ダイアログをプレビューする前に、SPAコンポーネントと `MapTo` 関数に置き換えます。
+   ダイアログをプレビューする前に、SPA コンポーネントと `MapTo` 関数を実装する必要があります。
 
-## SPAコンポーネントの実装 {#implement-spa-component}
+## SPA コンポーネントの実装 {#implement-spa-component}
 
-SPAエディターでバナーコンポーネントを使用するには、次にマッピングする新しいSPAコンポーネントを作成する必要があります。 `wknd-spa-react/components/banner`. これは、 `ui.frontend` モジュール。
+SPA エディターでバナーコンポーネントを使用するには、`wknd-spa-react/components/banner` にマッピングされる SPA コンポーネントを新規作成する必要があります。これは `ui.frontend` モジュールで実行されます。
 
-1. Adobe Analytics の `ui.frontend` モジュール新しいフォルダーの作成 `Banner` 時刻 `ui.frontend/src/components/Banner`.
-1. `Banner` フォルダーの下に `Banner.js` という名前の新規ファイルを作成します。次のように入力します。
+1. `ui.frontend` モジュールの `ui.frontend/src/components/Banner` に `Banner` のフォルダーを新規作成します。
+1. `Banner` フォルダーの下に `Banner.js` という名前の新規ファイルを作成します。以下のように記述します。
 
    ```js
    import React, {Component} from 'react';
@@ -296,9 +296,9 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    MapTo('wknd-spa-react/components/banner')(Banner, BannerEditConfig);
    ```
 
-   このSPAコンポーネントは、AEMコンポーネントにマッピングされます `wknd-spa-react/components/banner` 作成済み。
+   この SPA コンポーネントは、作成済みの `wknd-spa-react/components/banner` AEM コンポーネントにマッピングされます。
 
-1. 更新 `import-components.js` 時刻 `ui.frontend/src/components/import-components.js` 新しい `Banner` SPAコンポーネント：
+1. `ui.frontend/src/components/import-components.js` で `import-components.js` を更新して新しい `Banner` SPA コンポーネントを含めます。
 
    ```diff
      import './ExperienceFragment/ExperienceFragment';
@@ -306,30 +306,30 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    + import './Banner/Banner';
    ```
 
-1. この時点で、プロジェクトをAEMにデプロイして、ダイアログをテストできます。 Maven のスキルを使用してプロジェクトをデプロイします。
+1. この時点で、プロジェクトを AEM にデプロイして、ダイアログをテストできます。Maven のスキルを使用してプロジェクトをデプロイします。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. SPAテンプレートのポリシーを更新して、 `Banner` コンポーネントを **許可されたコンポーネント**.
+1. SPA テンプレートのポリシーを更新して、`Banner` コンポーネントを&#x200B;**許可されたコンポーネント**&#x200B;として追加します。
 
-1. SPAページに移動し、 `Banner` コンポーネントをSPAページの 1 つに配置します。
+1. SPA ページに移動し、 `Banner` コンポーネントを SPA ページの 1 つに配置します。
 
    ![バナーコンポーネントを追加](assets/extend-component/add-banner-component.png)
 
    >[!NOTE]
    >
-   > このダイアログでは、次の値を保存できます。 **バナーテキスト** ただし、この値はSPAコンポーネントには反映されません。 有効にするには、コンポーネントの Sling モデルを拡張する必要があります。
+   > このダイアログでは、**バナーテキスト**&#x200B;の値を保存できますが、この値は SPA コンポーネントには反映されません。有効にするには、コンポーネントの Sling モデルを拡張する必要があります。
 
 ## Java インターフェイスを追加 {#java-interface}
 
-最終的に、コンポーネントダイアログの値を React コンポーネントに公開するには、の JSON を入力する Sling Model を更新する必要があります。 `Banner` コンポーネント。 これは、 `core` SPAプロジェクトのすべての Java コードを含むモジュール。
+コンポーネントダイアログの値を最終的に React コンポーネントに公開するには、`Banner` コンポーネントの JSON を入力する Sling モデルを更新する必要があります。これは、SPA プロジェクトのすべての Java コードを含む `core` モジュールで行われます。
 
-まず、用の新しい Java インターフェイスを作成します。 `Banner` これは `Image` Java インターフェイス。
+まず、`Image` Java インターフェイスを拡張する `Banner` の Java インターフェイスを新規作成します。
 
-1. Adobe Analytics の `core` モジュール作成新しいファイル名： `BannerModel.java` 時刻 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
+1. `core` モジュールで、`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models` に `BannerModel.java` という名前の新しいファイルを作成します。
 1. `BannerModel.java` に以下を入力します。
 
    ```java
@@ -346,13 +346,13 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    }
    ```
 
-   これにより、すべてのメソッドがコアコンポーネントから継承されます `Image` インターフェイスと新しいメソッドを 1 つ追加します。 `getBannerText()`.
+   これにより、コアコンポーネント `Image` インターフェイスからすべてのメソッドが継承され、1 つの新しいメソッド `getBannerText()` が追加されます。
 
 ## Sling モデルの実装 {#sling-model}
 
-次に、の Sling モデルを実装します。 `BannerModel` インターフェイス。
+次に、`BannerModel` インターフェイスの Sling モデルを実装します。
 
-1. Adobe Analytics の `core` モジュール作成新しいファイル名： `BannerModelImpl.java` 時刻 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`.
+1. `core` モジュールで、`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl` に `BannerModelImpl.java` という名前のファイルを新規作成します。
 
 1. `BannerModelImpl.java` に以下を入力します。
 
@@ -429,9 +429,9 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    }
    ```
 
-   次の点に注意してください。 `@Model` および `@Exporter` Sling Model Exporter を介して Sling Model を JSON としてシリアル化できるようにする注釈。
+   `@Model` および `@Exporter` 注釈を使用して、Sling モデルエクスポーターを介して Sling モデルを JSON としてシリアル化できることを確認してください。
 
-   `BannerModelImpl.java` は [Sling モデルの委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 画像コアコンポーネントからすべてのロジックが書き換えられるのを防ぎます。
+   `BannerModelImpl.java` は [Sling Model のデリゲーションパターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)を使用して、画像コアコンポーネントからのロジックの書き換えを回避します。
 
 1. 次の行を確認します。
 
@@ -441,7 +441,7 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    private Image image;
    ```
 
-   上記の注釈は、という名前の画像オブジェクトをインスタンス化します。 `image` 基準： `sling:resourceSuperType` 継承 `Banner` コンポーネント。
+   上記の注釈は、`Banner` コンポーネントの `sling:resourceSuperType` 継承に基づいて `image` という名前の画像オブジェクトをインスタンス化します。
 
    ```java
    @Override
@@ -450,7 +450,7 @@ SPAエディターでバナーコンポーネントを使用するには、次�
    }
    ```
 
-   その場合、`image` オブジェクトを使用して `Image` インターフェイスで定義されたメソッドを実装することができるので、自分でロジックを書く必要はありません。この手法は、 `getSrc()`, `getAlt()` および `getTitle()`.
+   その場合、`image` オブジェクトを使用して `Image` インターフェイスで定義されたメソッドを実装することができるので、自分でロジックを書く必要はありません。この手法は、`getSrc()`、`getAlt()`、`getTitle()` に使用されます。
 
 1. ターミナルウィンドウを開き、`core` ディレクトリの Maven `autoInstallBundle` プロファイルを使用して `core` モジュールへの更新のみをデプロイします。
 
@@ -461,22 +461,22 @@ SPAエディターでバナーコンポーネントを使用するには、次�
 
 ## まとめ {#put-together}
 
-1. AEMに戻り、 `Banner` コンポーネント。
-1. を更新します。 `Banner` 含めるコンポーネント **バナーテキスト**:
+1. AEMに戻り、`Banner` コンポーネントを含む SPA ページを開きます。
+1. `Banner` コンポーネントを更新して、**バナーテキストt**&#x200B;を含めます。
 
    ![バナーテキスト](assets/extend-component/banner-text-dialog.png)
 
 1. コンポーネントに画像を入力します。
 
-   ![バナーダイアログに画像を追加](assets/extend-component/banner-dialog-image.png)
+   ![ダイアログに画像を追加](assets/extend-component/banner-dialog-image.png)
 
    ダイアログの更新を保存します。
 
-1. これで、のレンダリング値が表示されます。 **バナーテキスト**:
+1. これで、**バナーテキスト**&#x200B;のレンダリング値が表示されます。
 
-![バナーテキストが表示されました](assets/extend-component/banner-text-displayed.png)
+![バナーテキストが表示される](assets/extend-component/banner-text-displayed.png)
 
-1. JSON モデルの応答を次の場所に表示します。 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) を検索し、 `wknd-spa-react/components/card`:
+1. [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) で JSON モデルの応答を確認し、`wknd-spa-react/components/card` を検索します。
 
    ```json
    "banner": {
@@ -487,8 +487,8 @@ SPAエディターでバナーコンポーネントを使用するには、次�
     },
    ```
 
-   JSON モデルは、 `BannerModelImpl.java`.
+   `BannerModelImpl.java` で Sling モデルを実装した後、追加のキーと値のペアで JSON モデルが更新されていることに注目してください。
 
 ## おめでとうございます。 {#congratulations}
 
-これで、を使用してAEMコンポーネントを拡張する方法と、Sling のモデルとダイアログが JSON モデルと連携する方法を学びました。
+これで、AEM コンポーネントの拡張方法と、Sling モデルとダイアログが JSON モデルと連携する仕組みを学びました。
