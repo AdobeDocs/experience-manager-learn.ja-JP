@@ -1,6 +1,6 @@
 ---
 title: データと XDP テンプレートの結合
-description: 必要なPOSTーを使用してエンドポイントにパラメーターリクエストを実行します
+description: 必要なパラメーターを使用してエンドポイントへの POST リクエストを実行する
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -12,16 +12,16 @@ thumbnail: 332439.jpg
 exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
 duration: 46
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '129'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 # POST 呼び出しを行う
 
 
-次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、リクエストのオプションのパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。[このドキュメントに従って、Formsクラウドインスタンスにカスタムフォントをデプロイしてください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) プロパティは options.json リソースファイルで指定します。 エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
+次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 テンプレートとデータファイルは、リソースファイルとして提供されます。 生成された PDF のプロパティは、オプションのリクエストパラメーターで指定されます。embedFonts プロパティは、生成された PDF にカスタムフォントを埋め込むために使用されます。[カスタムフォントを Forms クラウドインスタンスにデプロイするには、このドキュメントに従ってください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=ja)これらのプロパティは options.json リソースファイルで指定します。エンドポイントにはトークンベースの認証があるので、リクエストヘッダーでアクセストークンを渡します。
 
 次のコードは、データをテンプレートと結合して PDF を生成する場合に使用しました。
 
