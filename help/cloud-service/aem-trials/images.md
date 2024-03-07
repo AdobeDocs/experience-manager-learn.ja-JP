@@ -7,9 +7,9 @@ hide: true
 exl-id: c2ee05f0-9e10-4a3b-8ecb-0366116356e8
 duration: 13
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '59'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -19,5 +19,5 @@ ht-degree: 84%
 
 公開する各画像ファイルは、次の構文を使用してこのファイルからリンクする必要があります。
 
-![試用準備ができたメールイメージの個人用アカウント](./assets/select-personal-account.png)
-![Slackの E メール画像](./assets/Slack-email-image.png)
+![体験版準備完了メール画像の個人用アカウント](./assets/select-personal-account.png)
+![Slack のメール画像](./assets/Slack-email-image.png)
