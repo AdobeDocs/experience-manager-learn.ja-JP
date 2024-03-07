@@ -1,6 +1,6 @@
 ---
-title: 専用の出力 IP アドレスと VPN 用の HTTP/HTTPS 接続
-description: Dedicated Egress IP アドレスと VPN を実行するAEMから外部 Web サービスに HTTP/HTTPS リクエストをas a Cloud Serviceする方法を説明します。
+title: 専用エグレス IP アドレスと VPN 用の HTTP／HTTPS 接続
+description: AEM as a Cloud Service から、専用エグレス IP アドレスと VPN 用の外部 Web サービスに対して、HTTP／HTTPS リクエストを行う方法を説明します。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -11,21 +11,21 @@ thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 77
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '228'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
-# 専用の出力 IP アドレスと VPN 用の HTTP/HTTPS 接続
+# 専用エグレス IP アドレスと VPN 用の HTTP／HTTPS 接続
 
-HTTP/HTTPS 接続は、専用の出力 IP アドレスまたは VPN を使用して、AEMas a Cloud Serviceから自動的にプロキシ化され、特別な情報は不要です `portForwards` ルール。
+HTTP/HTTPS 接続は、専用エグレス IP アドレスまたは VPN を使用して、AEM as a Cloud Service から自動的にプロキシ化されるので、特別な `portForwards` ルールは不要です。
 
 ## 高度なネットワーク機能のサポート
 
 次のコードサンプルは、以下の高度なネットワーク機能オプションでサポートされています。
 
-次を確認します。 [専用の出力 IP アドレスまたは VPN](../advanced-networking.md#advanced-networking) このチュートリアルに従う前に、高度なネットワーク設定が設定されています。
+このチュートリアルを行う前に、[専用エグレス IP アドレスまたは VPN ](../advanced-networking.md#advanced-networking) の高度なネットワーキング機能が設定されていることを確認してください。
 
 | 高度なネットワーク機能なし | [柔軟なポートエグレス](../flexible-port-egress.md) | [専用エグレス IP アドレス](../dedicated-egress-ip-address.md) | [仮想プライベートネットワーク](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -33,11 +33,11 @@ HTTP/HTTPS 接続は、専用の出力 IP アドレスまたは VPN を使用し
 
 >[!CAUTION]
 >
-> このコード例は、 [出力専用 IP アドレス](../dedicated-egress-ip-address.md) および [VPN](../vpn.md). 類似していますが、異なるコード例がに対して用意されています。 [フレキシブルポートエグレス用の非標準ポートでの HTTP/HTTPS 接続](./http-on-non-standard-ports-flexible-port-egress.md).
+> このコード例は、[専用エグレス IP アドレス](../dedicated-egress-ip-address.md)および [VPN](../vpn.md) 用です。[フレキシブルポートエグレスの非標準ポートでの HTTP／HTTPS 接続](./http-on-non-standard-ports-flexible-port-egress.md)には、よく似た、異なるコードサンプルがあります。
 
 ## コードサンプル
 
-この Java™ コードサンプルは、AEM as a Cloud Service で動作する OSGi サービスで、8080 上の外部 web サーバーへの HTTP 接続を行います。HTTPS（または HTTP）接続は、AEMas a Cloud Serviceから自動的にプロキシ化され、特別な開発は不要です。
+この Java™ コードサンプルは、AEM as a Cloud Service で動作する OSGi サービスで、8080 上の外部 web サーバーへの HTTP 接続を行います。HTTPS（または HTTP）接続は、AEM as a Cloud Service から自動的にプロキシ化されるので、特別な開発は不要です。
 
 >[!NOTE]
 > AEM からの HTTP／HTTPS 呼び出しには [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) を使用することをお勧めします。
