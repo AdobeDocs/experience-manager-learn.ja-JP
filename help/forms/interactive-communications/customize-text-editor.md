@@ -12,9 +12,9 @@ jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
 duration: 173
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '596'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -168,7 +168,7 @@ tbxeditor-config.xml ファイルを編集してフォントをカスタマイ�
       * フォントファミリーとサイズ、高さ、文字間隔および日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには、XML ファイルで次のエントリを作成する必要があります。 `<font>Sazanami Mincho Medium</font>`. アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには、XML ファイルで `<font>Sazanami Mincho Medium</font>` のように入力する必要があります。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
       また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
