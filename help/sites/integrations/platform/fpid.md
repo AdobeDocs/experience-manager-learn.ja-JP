@@ -1,5 +1,5 @@
 ---
-title: AEM SitesでのAdobe Experience Platform FPID の生成
+title: AEM Sites を使用した Adobe Experience Platform FPID の生成
 description: AEM Sites を使用して Adobe Experience Platform FPID Cookie を生成または更新する方法について説明します。
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
@@ -14,9 +14,9 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 297
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '982'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -165,7 +165,7 @@ AEM FPID サーブレットへの HTTP GET（`/bin/aep/fpid`）は、ブラウ�
 
 AEM FPID サーブレットが呼び出されると、FPID が JSON 応答から取得され、[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=ja) によって使用されて Experience Platform API に送信されます。
 
-詳しくは、Experience Platform の [identityMap での FPID の使用](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap?lang=ja)ドキュメントを参照してください。 
+詳しくは、Experience Platform の [identityMap での FPID の使用](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=ja#identityMap)ドキュメントを参照してください。 
 
 ```javascript
 ...
