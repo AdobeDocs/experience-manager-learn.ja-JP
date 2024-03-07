@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Servicesビデオ
-description: エッジ配信を使用して Web サイトを高速化する方法を説明します。
+title: Edge Delivery Services のビデオ
+description: Edge Delivery を使用して web サイトを高速化する方法を学びます。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -12,19 +12,19 @@ duration: 30
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
 source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '329'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery Servicesビデオ
+# Edge Delivery Services のビデオ
 
-エッジ配信を使用して Web サイトを高速化する方法を説明します。
+Edge Delivery を使用して web サイトを高速化する方法を学びます。
 
-以下を確認します。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=ja) エッジ配信とその機能の詳細については、を参照してください。
+Edge Delivery とその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=ja)を参照してください。
 
-## Edge Delivery Servicesの概要
+## Edge Delivery Services の概要
 
 <div class="columns is-multiline">
     <!-- Prerequisites -->
@@ -48,7 +48,7 @@ ht-degree: 27%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/prerequisites.md" title="前提条件">開発者の前提条件</a>
             </p>
-            <p class="is-size-6">開発を始めるために必要なEdge Delivery Services。</p>
+            <p class="is-size-6">Edge Delivery Services の開発を始めるための必要事項。</p>
             <a href="./developing/prerequisites.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -65,10 +65,11 @@ ht-degree: 27%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/aem-boilerplate.md" title="テンプレートテンプレートを使用"
+            <a href="./developing/aem-boilerplate.md" title="ボイラープレートテンプレートを使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="ボイラープレートの設定">
+                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="設定
+ボイラープレート">
             </a>
           </figure>
         </div>
@@ -77,9 +78,9 @@ ht-degree: 27%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/aem-boilerplate.md" title="テンプレートテンプレートを使用">AEM Boilerplate</a>
+              <a href="./developing/aem-boilerplate.md" title="ボイラープレートテンプレートを使用">AEM ボイラープレート</a>
             </p>
-            <p class="is-size-6">AEM Boilerplate テンプレートを使用して、コードリポジトリを設定します。</p>
+            <p class="is-size-6">AEM ボイラープレートテンプレートを使用して、コードリポジトリを設定します。</p>
             <a href="./developing/aem-boilerplate.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -139,9 +140,9 @@ ht-degree: 27%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/content-repository.md" title="SharePoint をリンク">リンクSharePoint</a>
+              <a href="./developing/content-repository.md" title="SharePoint をリンク">SharePoint をリンク</a>
             </p>
-            <p class="is-size-6">すべてのコンテンツのリポジトリとしてSharePointを使用します。</p>
+            <p class="is-size-6">SharePoint をすべてのコンテンツのリポジトリとして使用します。</p>
             <a href="./developing/content-repository.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
@@ -158,10 +159,10 @@ ht-degree: 27%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/preview-and-publish.md" title="コンテンツのプレビューと公開"
+            <a href="./developing/preview-and-publish.md" title="コンテンツをプレビューおよび公開"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="コンテンツのプレビューと公開">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="コンテンツをプレビューおよび公開">
             </a>
           </figure>
         </div>
@@ -170,9 +171,9 @@ ht-degree: 27%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/preview-and-publish.md" title="コンテンツのプレビューと公開">コンテンツのプレビューと公開</a>
+              <a href="./developing/preview-and-publish.md" title="コンテンツをプレビューおよび公開">コンテンツをプレビューおよび公開</a>
             </p>
-            <p class="is-size-6">AEM Sidekickを使用して、コンテンツをプレビューおよび公開します。</p>
+            <p class="is-size-6">AEM Sidekick を使用して、コンテンツをプレビューおよび公開します。</p>
             <a href="./developing/preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -202,9 +203,9 @@ ht-degree: 27%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/sidekick.md" title="Sidekick の使用">AEM Sidekick</a>
+              <a href="./developing/sidekick.md" title="Sidekick の使用">AEM Sidekick を使用</a>
             </p>
-            <p class="is-size-6">AEM Sidekickの使用方法</p>
+            <p class="is-size-6">AEM Sidekick の使用方法を学びます。</p>
             <a href="./developing/sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -268,7 +269,7 @@ ht-degree: 27%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/local-development.md" title="ローカル開発">ローカル開発</a>
             </p>
-            <p class="is-size-6">ローカル開発環境を設定</p>
+            <p class="is-size-6">ローカル開発環境を設定します。</p>
             <a href="./developing/local-development.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -300,7 +301,7 @@ ht-degree: 27%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/git.md" title="Git との統合">Git との統合</a>
             </p>
-            <p class="is-size-6">Git とEdge Delivery Services</p>
+            <p class="is-size-6">Git と Edge Delivery Services を設定します。</p>
             <a href="./developing/git.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -322,11 +323,11 @@ ht-degree: 27%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/rss.md" title="RSS フィードの作成"
+            <a href="./how-to/rss.md" title="RSS フィードを作成"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
-                alt="RSS フィードの作成">
+                alt="RSS フィードを作成">
             </a>
           </figure>
         </div>
@@ -335,9 +336,9 @@ ht-degree: 27%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/rss.md" title="RSS フィードの作成">RSS フィードの作成</a>
+              <a href="./how-to/rss.md" title="RSS フィードを作成">RSS フィードを作成</a>
             </p>
-            <p class="is-size-6">RSS フィードの作成方法を説明します。</p>
+            <p class="is-size-6">RSS フィードの作成方法を学びます。</p>
             <a href="./how-to/rss.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -369,7 +370,7 @@ ht-degree: 27%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/social-media-sharing.md" title="ソーシャルメディア共有">ソーシャルメディア共有</a>
             </p>
-            <p class="is-size-6">ソーシャルメディア共有用にコンテンツを最適化する方法を説明します。</p>
+            <p class="is-size-6">ソーシャルメディア共有用にコンテンツを最適化する方法を学びます。</p>
             <a href="./how-to/social-media-sharing.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -401,7 +402,7 @@ ht-degree: 27%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/delete-page.md" title="ページの削除">ページの削除</a>
             </p>
-            <p class="is-size-6">ページを削除する方法を説明します。</p>
+            <p class="is-size-6">ページの削除方法を学びます。</p>
             <a href="./how-to/delete-page.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
