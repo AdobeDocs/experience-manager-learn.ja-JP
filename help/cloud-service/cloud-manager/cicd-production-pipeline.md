@@ -12,9 +12,9 @@ level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 415
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '147'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 99%
 
 ## 設定
 
-[CI／CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html)の設定では、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーターおよびパフォーマンステストパラメーターを定義します。
+[CI／CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=ja)の設定では、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーターおよびパフォーマンステストパラメーターを定義します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
