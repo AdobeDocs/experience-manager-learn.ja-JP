@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 437
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1481'
 ht-degree: 100%
 
@@ -208,7 +208,7 @@ SPA Editor SDK を使用して AEM ページにマッピングすることで、
 
 ## React ルーティングの検査  {#react-routing}
 
-ナビゲーションとルーティングは [React Router](https://reactrouter.com/ja/main) で実装されています。React Router は、React アプリケーション用のナビゲーションコンポーネントのコレクションです。[AEM React コアコアコンポーネント](https://github.com/adobe/aem-react-core-wcm-components-base)は、React Router の機能を使用して、前の手順で使用した&#x200B;**ナビゲーション**&#x200B;コンポーネントを実装します。
+ナビゲーションとルーティングは [React Router](https://reactrouter.com/en/main) で実装されています。React Router は、React アプリケーション用のナビゲーションコンポーネントのコレクションです。[AEM React コアコアコンポーネント](https://github.com/adobe/aem-react-core-wcm-components-base)は、React Router の機能を使用して、前の手順で使用した&#x200B;**ナビゲーション**&#x200B;コンポーネントを実装します。
 
 次に、React Router が SPA とどのように統合されているかを調べ、React Router の[リンク](https://reactrouter.com/en/main/components/link)コンポーネントを使用して実験します。
 
