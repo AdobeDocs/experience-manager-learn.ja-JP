@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: 19beb662b63476f4745291338d944502971638a3
+source-git-commit: 80c04ce1ad7d60c1fc75ecc194dd54a2ad5b82fa
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 93%
@@ -130,7 +130,7 @@ Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-つまり、レンダーレベルからの取得とキャッシュからの取得が測定され対比されます。 キャッシュから 80%以上ヒットしたい場合は、[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Dja)のヘルプに従ってください。
+つまり、レンダーレベルからの取得とキャッシュからの取得が測定され対比されます。 キャッシュから 80%以上ヒットしたい場合は、[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=ja)のヘルプに従ってください。
 
 この数をできるだけ大きくします。
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 このエラーは、動的な自動フィルターを使用してバニティ URL を許可するように Dispatcher を設定したが、AEM レンダラーにパッケージをインストールしても設定が完了していない場合に発生します。
 
-この問題を修正するには、AEM インスタンスにバニティ URL 機能パックをインストールし、匿名ユーザーがバニティ URL を読み取れるようにしてください。詳細は[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Dja)
+この問題を修正するには、AEM インスタンスにバニティ URL 機能パックをインストールし、匿名ユーザーがバニティ URL を読み取れるようにしてください。詳細は[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
 
 動作するバニティ URL が次のように設定されます。
 
