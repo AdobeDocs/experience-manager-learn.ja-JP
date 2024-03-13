@@ -4,13 +4,13 @@ description: シーズン 3 では、複雑なプロジェクトに取り組ん�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
+exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
+source-git-commit: 958dc50dfef808470139a2cab214c6cfeb98ff55
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 18%
+source-wordcount: '298'
+ht-degree: 16%
 
 ---
-
 
 # Cloud 5 シーズン 3
 
@@ -84,6 +84,20 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
             <p>
                 <br/>
                 イベントでの公開および非公開時にトリガーされるEdge Delivery Services、およびこれらのイベントの使用例と例を確認します。
+            </p>
+        </td>  
+        <td>
+            <a href="./season-3/cloud5-query-indexes.md">
+                <img alt="クエリインデックスと Excel 式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-query-indexes.md">
+                <strong>クエリインデックスと Excel 式</strong></a>        
+                <br/><em>James Talbot &amp; Varun Mitra 氏 (AEM Engineering)</em>
+            </div>
+            <p>
+                <br/>
+                クエリインデックスの調査と、データセットを操作および並べ替えるための Excel 式の書き込み方法について説明します。
             </p>
         </td>   
     </tr>  
