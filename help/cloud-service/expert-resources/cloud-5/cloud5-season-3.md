@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: 958dc50dfef808470139a2cab214c6cfeb98ff55
+source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '306'
 ht-degree: 16%
 
 ---
@@ -88,16 +88,16 @@ AEM Engineering のシーズン 3 の Cloud 5 シリーズへようこそ。 製
         </td>  
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="クエリインデックスと Excel 式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="クエリインデックスとEdge Delivery Services内の Excel 式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>クエリインデックスと Excel 式</strong></a>        
+                <strong>クエリインデックスと Excel 式 </strong></a>        
                 <br/><em>James Talbot &amp; Varun Mitra 氏 (AEM Engineering)</em>
             </div>
             <p>
                 <br/>
-                クエリインデックスの調査と、データセットを操作および並べ替えるための Excel 式の書き込み方法について説明します。
+                クエリインデックスの調査と、Edge Delivery Services内のデータセットを操作および並べ替えるための Excel 式の書き込み方法について説明します。
             </p>
         </td>   
     </tr>  
