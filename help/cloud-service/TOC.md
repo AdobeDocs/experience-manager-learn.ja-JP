@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
+source-git-commit: 7c80bb25b79a77c4a0bb2bbedf8a7c338177b857
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1166'
 ht-degree: 94%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 94%
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
+      + [Real User Monitoring](./developing/advanced/real-user-monitoring.md)
    + 迅速な開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
