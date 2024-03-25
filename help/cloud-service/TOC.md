@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 7c80bb25b79a77c4a0bb2bbedf8a7c338177b857
+source-git-commit: 9c757ef00776c09a8892f477baad24c58401f4dc
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 94%
+source-wordcount: '1163'
+ht-degree: 98%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 94%
 + 開発{#developing}
    + 拡張性{#extensibility}
       + App Builder{#app-builder}
-         + [JWT アクセストークンを生成](./developing/extensibility/app-builder/jwt-auth.md)
+         + [JWT アクセストークンの生成](./developing/extensibility/app-builder/jwt-auth.md)
          + [サーバー間アクセストークンの生成](./developing/extensibility/app-builder/server-to-server-auth.md)
       + UI 拡張機能{#ui}
          + [概要](./developing/extensibility/ui/overview.md)
@@ -107,7 +107,6 @@ ht-degree: 94%
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [Real User Monitoring](./developing/advanced/real-user-monitoring.md)
    + 迅速な開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
@@ -172,9 +171,9 @@ ht-degree: 94%
    + 例{#examples}
       + [Webhook：AEM イベントの受信](./eventing/examples/webhook.md)
       + [ジャーナリング：AEM イベントの読み込み](./eventing/examples/journaling.md)
-      + [Adobe I/O Runtimeアクション — AEMイベントの受信](./eventing/examples/runtime-action.md)
-      + [Adobe I/O Runtime Action - AEM Events の処理](./eventing/examples/event-processing-using-runtime-action.md)
-      + [AEM Assetsイベント — PIM 統合](./eventing/examples/assets-pim-integration.md)
+      + [Adobe I/O Runtime アクション - AEM イベントの受信](./eventing/examples/runtime-action.md)
+      + [Adobe I/O Runtime アクション - AEM イベントの処理](./eventing/examples/event-processing-using-runtime-action.md)
+      + [AEM Assets イベント - PIM 統合](./eventing/examples/assets-pim-integration.md)
 + 移行 {#migration}
    + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
@@ -389,7 +388,7 @@ ht-degree: 94%
          + [Cloud Manager - 機能テスト](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
       + シーズン 3{#season-3}
          + [サードパーティ検索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
-         + [実際のユーザー監視 (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
+         + [リアルユーザーモニタリング（RUM）](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [エッジワーカー](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [イベントの公開、非公開Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [Edge Delivery Services でのイベントの公開と非公開](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [クエリインデックスと Excel 式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
