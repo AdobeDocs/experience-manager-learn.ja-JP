@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: ht
-source-wordcount: '496'
-ht-degree: 100%
+source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 99%
 
 ---
 
@@ -56,6 +56,8 @@ ht-degree: 100%
    + [ローンチ](page-authoring/launches.md)
    + 他のユーザーから学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
++ 生成 AI {#generative-ai}
+   + [バリエーションを生成](./generative-ai/generate-variations.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
