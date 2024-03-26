@@ -1,6 +1,6 @@
 ---
 title: 特定のフィールドを検索可能にする
-description: Azure ポータルに保存されたフォーム送信のクエリに関する手順を説明するマルチパートチュートリアル
+description: Azure ポータルに保存されたフォーム送信のクエリに関係する手順を説明するマルチパートチュートリアル
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,26 +9,27 @@ role: Developer
 level: Experienced
 jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 1fb7ca83-0ba6-48a3-b3d3-079d0ef89245
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '107'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # 特定のフィールドを検索可能にする
 
-通常、フォームの検索可能なフィールドは、送信されたデータの検索やフィルタリングの条件として使用できる、フォーム内のフィールドを参照します。
-この使用例の目的で、次のフィールドタイプが拡張され、検索可能になりました。
+フォームの検索可能なフィールドは、通常、送信されたデータの検索やフィルタリングの条件として使用できる、フォーム内のフィールドを指します。
+このユースケースの目的で、次のフィールドタイプが拡張され、検索可能になりました。
 
 * checkboxgroup
 * ドロップダウン
-* radiobutton
+* ラジオボタン
 
 フォーム作成者は、以下に示すように、これらのフィールドタイプを検索可能としてマークできます
 ![searchable-field](assets/searchable-fields.png)
 
-フィールドは、次の構造を作成して拡張されました。
+フィールドは、次の構造を作成して拡張されました
 
 ![extended-fields](assets/extend-component.png)
 

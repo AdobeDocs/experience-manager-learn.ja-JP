@@ -11,7 +11,7 @@ jira: KT-10208
 exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
 duration: 42
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '143'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ ht-degree: 100%
 |---|---|
 | データソース名 | `SaveAndContinue` |
 | JDBC ドライバークラス | `com.mysql.cj.jdbc.Driver` |
-| JDBC connection URI | `jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&useSSL=false&characterEncoding=utf8&useUnicode=true` |
+| JDBC 接続 URL | `jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&useSSL=false&characterEncoding=utf8&useUnicode=true` |
 
 * [icdrafts バンドルをデプロイします。](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * OSGI 設定で必ず「_Enable Save Using CCRDocumentInstanceService_」オプションをオンにします（下図を参照）。

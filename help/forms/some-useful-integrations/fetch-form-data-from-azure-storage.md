@@ -11,18 +11,18 @@ jira: KT-14238
 duration: 81
 exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
 source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '286'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
 # Azure ストレージからデータを取得
 
 この記事では、Azure ストレージに保存されているデータをアダプティブフォームに入力する方法について説明します。
-ここでは、アダプティブフォームのデータが Azure ストレージに保存されていることを前提としており、そのデータをアダプティブフォームに事前入力する必要があると想定しています。
+ここでは、アダプティブフォームのデータが Azure ストレージに保存されており、アダプティブフォームにそのデータを事前入力する必要があると想定しています。
 >[!NOTE]
->この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。[コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。[コアコンポーネントベースのアダプティブフォームに関する同様の記事は、こちらから参照できます](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=ja)
 
 
 ## GET リクエストを作成
@@ -61,8 +61,8 @@ public String getBlobData(String blobID) {
 }
 ```
 
-URL に guid パラメーターが指定されたアダプティブフォームがレンダリングされると、テンプレートに関連付けられたカスタムページコンポーネントは、Azure ストレージからアダプティブフォームを取得し、そのデータを入力します。
-次に、テンプレートに関連付けられたページコンポーネントの jsp 内のコードを示します。
+アダプティブフォームが URL 内の guid パラメーターを使用してレンダリングされると、テンプレートに関連付けられているカスタムページコンポーネントが Azure ストレージからデータを取得し、アダプティブフォームにデータを入力します。
+以下は、テンプレートに関連付けられたページコンポーネントの jsp 内のコードです。
 
 ```java
 com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage azureStorage = sling.getService(com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage.class);
@@ -78,7 +78,7 @@ if(guid!=null&&!guid.isEmpty())
 }
 ```
 
-## ソリューションをテスト
+## ソリューションのテスト
 
 * [カスタム OSGi バンドルのデプロイ](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
 
@@ -86,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* [OSGi 設定コンソールを使用して、Azure Portal の設定で適切な値を指定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [OSGi 設定コンソールを使用して、Azure ポータル設定で適切な値を指定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=ja#provide-the-blob-sas-token-and-storage-uri)
 
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

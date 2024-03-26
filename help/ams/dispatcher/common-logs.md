@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
 source-git-commit: 80c04ce1ad7d60c1fc75ecc194dd54a2ad5b82fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '796'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ Dispatcher モジュール 4.2.x 以降では、フィルターファイルで�
 
 >[!NOTE]
 >
->ログレベルが低すぎる場合に却下が発生しても、これらのエントリが常に表示されるわけではありません。 これを情報またはデバッグに設定すると、フィルターがリクエストを却下しているかどうかを確認できます。
+>設定されたログレベルが低すぎる場合に却下が発生しても、これらのエントリは常に表示されるわけではありません。これを情報またはデバッグに設定すると、フィルターがリクエストを却下しているかどうかを確認できます。
 
 サンプルログエントリ：
 
@@ -136,7 +136,7 @@ Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit rat
 
 >[!NOTE]
 >
->ファームファイルにキャッシュ設定がある場合でも、フラッシュする頻度が多すぎる、または過度に過剰で、キャッシュヒット率が低くなる可能性があります。
+>すべてをキャッシュするようにファームファイルにキャッシュ設定を行っている場合でも、フラッシュする頻度が多すぎる、またはフラッシュが過剰すぎるので、キャッシュヒット率が低下する場合があります。
 
 ## ディレクトリがない
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 このエラーは、動的な自動フィルターを使用してバニティ URL を許可するように Dispatcher を設定したが、AEM レンダラーにパッケージをインストールしても設定が完了していない場合に発生します。
 
-この問題を修正するには、AEM インスタンスにバニティ URL 機能パックをインストールし、匿名ユーザーがバニティ URL を読み取れるようにしてください。詳細は[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+この問題を修正するには、AEM インスタンスにバニティ URL 機能パックをインストールし、匿名ユーザーがバニティ URL を読み取れるようにしてください。詳細は[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html?lang=ja)
 
 動作するバニティ URL が次のように設定されます。
 

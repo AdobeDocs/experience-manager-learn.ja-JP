@@ -9,9 +9,9 @@ version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 691
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '600'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 98%
 
 Apache Sling Connection Pooled DataSource は、アダプティブフォームデータの保存に使用されるデータベースを指すように設定されています。 次のスクリーンショットは、インスタンスの設定を示しています。 次のプロパティをコピー＆ペーストすることができます。
 
-* `Datasource Name:aemformstutorial`  — これは、コードで使用される名前です。
+* `Datasource Name:aemformstutorial` - このコードで使用されている名前です。
 
 * `JDBC Driver Class:com.mysql.jdbc.Driver`
 

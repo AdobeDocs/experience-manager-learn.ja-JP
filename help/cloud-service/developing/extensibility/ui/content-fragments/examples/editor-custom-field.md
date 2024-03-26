@@ -1,6 +1,6 @@
 ---
-title: コンテンツフラグメントコンソール — カスタムフィールド
-description: AEMコンテンツフラグメントエディターでカスタムフィールドを作成する方法を説明します。
+title: コンテンツフラグメントコンソール - カスタムフィールド
+description: AEM コンテンツフラグメントエディターでカスタムフィールドを作成する方法について説明します。
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 role: Developer
@@ -10,48 +10,48 @@ duration: 0
 last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
-source-git-commit: bb902089a709ab00853f4856d9bf42c18a5097e7
-workflow-type: tm+mt
+exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '473'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-
 # カスタムフィールド
 
-AEMコンテンツフラグメントエディターでカスタムフィールドを作成する方法を説明します。
+AEM コンテンツフラグメントエディターでカスタムフィールドを作成する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-AEM UI 拡張機能は、 [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークは、AEMの他の部分と一貫した外観と操作性を維持し、また、事前に構築された機能の広範なライブラリを持ち、開発時間を短縮します。
+AEM UI 拡張機能は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して開発する必要があります。これにより、AEM の他の部分と一貫した外観と操作性が維持され、事前に構築された機能の広範なライブラリも備えているので、開発時間が短縮されます。
 
-## 拡張機能ポイント
+## 拡張ポイント
 
-この例では、コンテンツフラグメントエディター内の既存のファイルをカスタム実装で置き換えます。
+この例では、コンテンツフラグメントエディター内の既存のフィールドをカスタム実装で置き換えます。
 
-| AEM UI 拡張 | 拡張機能ポイント |
+| AEM UI 拡張 | 拡張ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [カスタムフォーム要素のレンダリング](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## 拡張機能の例
 
-この例では、標準フィールドを事前定義された SKU のカスタムドロップダウンで置き換えることで、コンテンツフラグメントエディターのフィールド値を事前に定義されたセットに制限する方法を示しています。 作成者は、この特定の SKU リストから選択できます。 SKU は通常、製品情報管理 (PIM) システムから提供されますが、この例では SKU を静的にリストすることでが簡単になります。
+この例では、標準フィールドを事前定義された SKU のカスタムドロップダウンで置き換えることで、コンテンツフラグメントエディターのフィールド値を事前に定義されたセットに制限する方法を示しています。作成者は、この特定の SKU リストから選択できます。SKU は通常、製品情報管理（PIM）システムから提供されますが、この例では SKU を静的にリストすることで簡素化しています。
 
-この例のソースコードは、です。 [ダウンロード可能](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
+この例のソースコードは、[ダウンロード可能](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip)です。
 
 ### コンテンツフラグメントモデルの定義
 
-次の例では、という名前のコンテンツフラグメントフィールドにバインドされます。 `sku` ( [正規表現の一致](#extension-registration) / `^sku$`) をクリックし、カスタムフィールドに置き換えます。 この例では、更新された WKND アドベンチャーコンテンツフラグメントモデルを使用し、定義は次のようになります。
+この例では、（`^sku$` の[正規表現の一致](#extension-registration)を介して）`sku` という名前のコンテンツフラグメントフィールドにバインドされます。この例では、更新された WKND アドベンチャーコンテンツフラグメントモデルを使用し、定義は次のようになります。
 
 ![コンテンツフラグメントモデルの定義](./assets/editor-custom-field/content-fragment-editor.png)
 
-カスタム SKU フィールドがドロップダウンとして表示されているにもかかわらず、その基になるモデルはテキストフィールドとして設定されます。 カスタムフィールドの実装は、適切なプロパティ名とタイプに合わせるだけで済み、標準フィールドをカスタムドロップダウンバージョンに簡単に置き換えることができます。
+カスタム SKU フィールドがドロップダウンとして表示されているにもかかわらず、その基になるモデルはテキストフィールドとして設定されます。カスタムフィールドの実装は、適切なプロパティ名とタイプに合わせるだけで済むので、標準フィールドをカスタムドロップダウンバージョンに簡単に置き換えることができます。
 
 
 ### アプリルート
 
-メインの React コンポーネント内 `App.js`、 `/sku-field` レンダリングするルート `SkuField` React コンポーネント。
+メインの React コンポーネント `App.js` に、`SkuField` React コンポーネントをレンダリングする `/sku-field` を含めます。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -85,14 +85,14 @@ function App() {
 ...
 ```
 
-このカスタムルートは、 `/sku-field` は、 `SkuField` コンポーネントは、以下で使用されます。 [拡張機能の登録](#extension-registration).
+`SkuField` コンポーネントにマッピングされる `/sku-field` のこのカスタムルートは、以下の[拡張機能の登録](#extension-registration)で使用されます。
 
 ### 拡張機能の登録
 
 index.html ルートにマッピングされた `ExtensionRegistration.js` は、AEM 拡張機能のエントリポイントであり、次を定義します。
 
-+ のウィジェット定義 `getDefinitions()` ～と機能する `fieldNameExp` および `url` 属性。 使用可能な属性の完全なリストは、 [カスタムフォーム要素レンダリング API リファレンス](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
-+ The `url` 属性値、相対 URL パス (`/index.html#/skuField`) をクリックして、フィールド UI を読み込みます。
++ `fieldNameExp` や `url` の属性を含む `getDefinitions()` 関数のウィジェット定義。使用可能な属性の完全なリストは、[カスタムフォーム要素レンダリング API リファレンス](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference)で参照できます。
++ `url` 属性値、フィールド UI を読み込む相対 URL パス（`/index.html#/skuField`）。
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -132,13 +132,13 @@ export default ExtensionRegistration;
 
 ### カスタムフィールド
 
-The `SkuField` React コンポーネントは、ピッカーフォームに React Spectrum を使用して、カスタム UI でコンテンツフラグメントAdobeを更新します。 主な機能は次のとおりです。
+`SkuField` React コンポーネントは、ピッカーフォームに Adobe React Spectrum を使用して、カスタム UI でコンテンツフラグメントエディターを更新します。主なものは次のとおりです。
 
-+ 活用中 `useEffect` AEMコンテンツフラグメントエディターの初期化と接続の場合は、設定が完了するまで読み込み状態が表示されます。
-+ iFrame 内でのレンダリングでは、 `onOpenChange` 関数を使用して、AdobeReact Spectrum Picker のドロップダウンに対応します。
-+ を使用して、フィールドの選択をホストに伝えます。 `connection.host.field.onChange(value)` （内） `onSelectionChange` 関数を使用して、選択した値がコンテンツフラグメントモデルのガイドラインに従って検証され、自動保存されることを確認します。
++ AEM コンテンツフラグメントエディターの初期化と接続に `useEffect` を活用すると、設定が完了するまで読み込み状態が表示されます。
++ iFrame 内でのレンダリングでは、Adobe React Spectrum Picker のドロップダウンに合わせて `onOpenChange` 関数を使用して、iFrame の高さを動的に調整します。
++ `onSelectionChange` 関数の `connection.host.field.onChange(value)` を使用してフィールドの選択をホストに返し、選択した値がコンテンツフラグメントモデルのガイドラインに従って検証され、自動保存されることを確認します。
 
-カスタムフィールドは、iFrame 内でコンテンツフラグメントエディターに挿入されてレンダリングされます。 カスタムフィールドコードとコンテンツフラグメントエディター間の通信は、 `connection` オブジェクト ( `attach` 関数を `@adobe/uix-guest` パッケージ。
+カスタムフィールドは、コンテンツフラグメントエディターに挿入された iFrame 内でレンダリングされます。カスタムフィールドコードとコンテンツフラグメントエディター間の通信は、`@adobe/uix-guest` パッケージの `attach` 関数によって確立される `connection` オブジェクトを通じてのみ行われます。
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 

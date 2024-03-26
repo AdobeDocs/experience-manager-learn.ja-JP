@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Real User Monitoring(RUM)
-description: Explore Real User Monitoring(RUM) は、Edge Delivery Servicesで機能します。
+title: Cloud 5 - リアルユーザーモニタリング（RUM）
+description: リアルユーザーモニタリング（RUM）が Edge Delivery Services と連携して動作することを確認します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,16 +9,16 @@ level: Intermediate
 jira: KT-14997
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b905d71cc617a69f16471115edc3d5a38fcd0221
-workflow-type: tm+mt
+exl-id: ee5182fd-b995-419b-be18-a59484f18147
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Real User Monitoring(RUM)
+# Cloud 5 - リアルユーザーモニタリング（RUM）
 
-AdobeがEdge Delivery Servicesと共に提供するAEMサイトに対して提供する Real user monitoring (RUM) 分析と、RUM を Web サイトの改善にどのように使用できるかを調べます。
+Edge Delivery Services に付属している AEM Sites に対してアドビが提供するリアルユーザーモニタリング（RUM）分析と、RUM を web サイトの改善にどのように使用できるかを調べます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427495?quality=12&learn=on)
-

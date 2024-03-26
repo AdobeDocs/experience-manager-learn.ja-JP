@@ -1,6 +1,6 @@
 ---
-title: フォーム送信に対するクエリ
-description: Azure ポータルに保存されたフォーム送信のクエリに関する手順を説明するマルチパートチュートリアル
+title: フォーム送信のクエリ
+description: Azure ポータルに保存されたフォーム送信のクエリに関係する手順を説明するマルチパートチュートリアル
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,30 +9,30 @@ role: Developer
 level: Experienced
 jira: kt-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: b814097c-0066-44da-bba5-6914dee0df75
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '164'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # カスタム送信の作成
 
-フォームの送信を処理するために、カスタム送信ハンドラーが書き込まれました。 高レベルでは、カスタム送信ハンドラーは次の処理を実行します
+フォーム送信を処理するために、カスタム送信ハンドラーが記述されました。大まかに言えば、カスタム送信ハンドラーは以下を行います。
 
 * 送信されたフォームの名前を抽出します。
-* 送信されたデータを抽出します。コアコンポーネントベースのフォームの送信されたデータは、常に JSON 形式になります。
-* フォームの添付ファイルを抽出して Azure ポータルに保存します。 送信された json データを添付ファイルの URL で更新します。
-* BLOB インデックスタグを作成 — フォームの検索可能なフィールドのリストと、その対応する値を送信されたデータから検索します。
-* BLOB インデックスタグを送信されたデータに関連付け、Azure ポータルに保存します。
+* 送信されたデータを抽出します。コアコンポーネントベースのフォームの送信済みデータは、常に JSON 形式になります。
+* フォームの添付ファイルを抽出して Azure portal に保存します。送信された json データに添付ファイルの URL を反映します。
+* BLOB インデックスタグの作成 - フォームの検索可能なフィールドのリストと、それに対応する値を送信済みデータから見つけます。
+* BLOB インデックスタグを送信済みデータと関連付け、Azure portal に保存します。
 
-次のスクリーンショットは、Azure ポータルの BLOB インデックスタグを示しています。
+次のスクリーンショットは、Azure portal 内の BLOB インデックスタグを示しています。
 
 ![blob-index-tags](assets/blob-index-tags.png)
 
-カスタム送信コードは、 **_StoreFormDataWithBlobIndexTagsInAzure_** Azure からデータを保存および取得するためのコードがコンポーネントに含まれている。 **_SaveAndFetchFromAzure_**
+カスタム送信コードは、**_StoreFormDataWithBlobIndexTagsInAzure_** にあり、Azure にデータを保存および取得するためのコードは **_SaveAndFetchFromAzure_** コンポーネントにあります。
 
 ## 次の手順
 
-[クエリインターフェイスを作成](./part3.md)
-
+[クエリインターフェイスの作成](./part3.md)

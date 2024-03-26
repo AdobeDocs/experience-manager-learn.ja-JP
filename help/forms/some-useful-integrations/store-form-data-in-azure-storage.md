@@ -11,9 +11,9 @@ jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 159
 source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '601'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 90%
 送信したフォームデータを Azure ストレージに保存するには、次の手順に従う必要があります。
 
 >[!NOTE]
->この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。 [コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。[コアコンポーネントベースのアダプティブフォームに関する同様の記事は、こちらから参照できます](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=ja)
 
 
 ## Azure ストレージアカウントの作成
@@ -49,7 +49,7 @@ Shared Access Signature（SAS）の認証メソッドを使用して、Azure ス
 ## Blob SAS トークンとストレージ URI を指定します
 
 コードをより汎用的にするには、次に示すように、OSGi 設定を使用して 2 つのプロパティを設定します。_**aemformstutorial**_ はストレージアカウントの名前で、_**formsubmissions**_ はデータを保存するコンテナです。
-ストレージ URI の末尾に/があり、SAS トークンがで始まっていることを確認してください。
+ストレージ URI の末尾に「/」があり、SAS トークンが「?」で始まることを確認してください。
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -104,7 +104,7 @@ PUT リクエストを使用して、送信したフォームデータを Azure 
 
 * [サンプルアダプティブフォームを読み込みます。](./assets/bank-account-sample-form.zip)
 
-* [OSGi 設定コンソールを使用して、Azure Portal Configuration で適切な値を指定します。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [OSGi 設定コンソールを使用して、Azure portal 設定で適切な値を指定します](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=ja#provide-the-blob-sas-token-and-storage-uri)
 
 * [BankAccount フォームをプレビューして送信](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

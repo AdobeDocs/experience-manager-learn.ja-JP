@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — エッジワーカー
-description: AEM SitesとEdge Delivery Servicesのエッジワーカーの重要性と、それらをバックエンドシステムと統合する方法を確認します。
+title: Cloud 5 - エッジワーカー
+description: AEM Sites と Edge Delivery Services のエッジワーカーの重要性と、それらをバックエンドシステムと統合する方法を確認します。
 feature: Edge Delivery Services
 topic: Development
 version: Cloud Service
@@ -8,15 +8,16 @@ role: Admin, Developer
 level: Intermediate
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
-workflow-type: tm+mt
+exl-id: 7b39d955-9f8a-45cc-bc36-be6d454f5578
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '54'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 — エッジワーカー
+# Cloud 5 - エッジワーカー
 
-AEM SitesとEdge Delivery Servicesのエッジワーカーの重要性と、それらをバックエンドシステムと統合する方法を確認します。
+AEM Sites と Edge Delivery Services のエッジワーカーの重要性と、それらをバックエンドシステムと統合する方法を確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)

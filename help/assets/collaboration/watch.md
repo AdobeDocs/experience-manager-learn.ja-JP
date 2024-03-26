@@ -1,6 +1,6 @@
 ---
-title: アセット、フォルダー、コレクションの監視
-description: AEM Assetsのアセット、フォルダーまたはコレクションの変更に関する通知を取得する方法について説明します。
+title: アセット、フォルダー、およびコレクションの監視
+description: AEM Assets のアセット、フォルダーまたはコレクションの変更に関する通知を取得する方法について説明します。
 version: Cloud Service
 feature: Asset Management
 topic: Collaboration
@@ -11,20 +11,20 @@ duration: 116
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15000
 thumbnail: 3427646.jpeg
-source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
-workflow-type: tm+mt
+exl-id: 33531e51-dcbc-4a02-adb1-4abc70a02a28
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '79'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
+# アセット、フォルダー、およびコレクションの監視
 
-# アセット、フォルダー、コレクションの監視
-
-AEM Assetsで監視アセット、フォルダー、またはコレクションが変更された場合に、いつでも通知を受け取る方法を説明します。
+AEM Assets で監視アセット、フォルダー、またはコレクションが変更された場合に、いつでも通知を受け取る方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
 
 >[!TIP]
 >
-> 視聴中のアセット、フォルダー、またはコレクションに変更を加えても、通知は送信されません。 通知は、他のユーザーが監視しているアセット、フォルダーまたはコレクションに変更を加えた場合にのみ送信されます。
+> 監視しているアセット、フォルダー、またはコレクションに変更を加えても、通知はされません。通知は、自分が監視しているアセット、フォルダーまたはコレクションに他のユーザーが変更を加えた場合にのみ送信されます。

@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2034'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ ht-degree: 97%
    + [はじめに](query-form-submissions/introduction.md)
    + [検索可能なフィールドの作成](query-form-submissions/part1.md)
    + [カスタム送信の作成](query-form-submissions/part2.md)
-   + [クエリインターフェイスを作成](query-form-submissions/part3.md)
+   + [クエリインターフェイスの作成](query-form-submissions/part3.md)
    + [事前入力サービスの記述](query-form-submissions/part4.md)
    + [サンプルのデプロイ](query-form-submissions/part5.md)
 + フォームポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
@@ -277,7 +277,7 @@ ht-degree: 97%
    + [フラグメントを使用して PDF を生成する ECMA スクリプト](document-services/using-fragments-in-output-service-watched-folder.md)
    + [1 つのデータファイルからの複数の PDF の生成](document-services/generate-multi-record-pdf.md)
    + [モバイルフォーム送信時に PDF を生成](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [フォーム送信に基づいてコアコンポーネントのPDFを生成する](document-services/generate-pdf-from-core-component-form-submission.md)
+   + [フォーム送信に基づいてコアコンポーネントの PDF を生成](document-services/generate-pdf-from-core-component-form-submission.md)
    + [モバイルフォームからインタラクティブ PDF を生成](document-services/render-interactive-form-using-api.md)
    + [アダプティブフォームからインタラクティブ DoR を生成](document-services/generate-interactive-dor.md)
    + [Reader 拡張機能資格情報の設定](document-services/configuring-reader-extension-osgi.md)
@@ -288,14 +288,14 @@ ht-degree: 97%
    + [便利なユーティリティサービス](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
    + [デザインビュー](forms-designer/design-view.md)
-   + [最初のフォームを作成する](forms-designer/create-simple-form.md)
+   + [最初のフォームの作成](forms-designer/create-simple-form.md)
    + [フォームテンプレートの作成](forms-designer/creating-form-template.md)
    + [フォームのスクリプティング](forms-designer/first-script-designer.md)
-   + [XML データ連結](forms-designer/xml-data-binding.md)
+   + [XML データバインディング](forms-designer/xml-data-binding.md)
    + [データベースのバインディング](forms-designer/binding-to-mysql-db.md)
    + [手書き署名の使用](forms-designer/scribble-signature-form.md)
-   + [電子署名の使用](forms-designer/adding-dig-signature-field.md)
-   + [Reader拡張フォーム](forms-designer/reader-extending-j2ee.md)
+   + [デジタル署名の使用](forms-designer/adding-dig-signature-field.md)
+   + [Reader 拡張フォーム](forms-designer/reader-extending-j2ee.md)
 + 印刷チャネル用のインタラクティブ通信
 {#ic-print-channel-tutorial}
    + [1 - はじめに](ic-print-channel-tutorial/introduction.md)

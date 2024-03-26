@@ -12,9 +12,9 @@ level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 335
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1218'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 99%
 
 ### Asset Compute プロジェクトに Console.json ファイルが見つからない{#missing-console-json}
 
-+ __エラー：__ エラー：検証時に必要なファイルが見つかりません (`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`) を非同期の setupAssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)
++ __エラー：__ エラー：非同期の setupAssetCompute（`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`）の検証時に必要なファイル（`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`）がありません
 + __原因：__&#x200B;この `console.json` ファイルが Asset omputeプロジェクトのルートにありません
 + __解決策：__&#x200B;新しい `console.json` を Adobe I/O プロジェクトからダウンロードします
    1. console.adobe.io で、Asset compute プロジェクトが使用するように設定されている Adobe I/O プロジェクトを開きます

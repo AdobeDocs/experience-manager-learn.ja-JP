@@ -1,27 +1,28 @@
 ---
 title: AEM Forms で Output サービスや Forms サービスを使用した開発
-description: AEM Formsでの Output およびForms Service API を使用した開発について説明します。
+description: AEM Forms での Output および Forms Service API を使用した開発について説明します。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 8e9bf8001e4bb7341aeadd65ffd2543da359e061
-workflow-type: tm+mt
+exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '565'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
 # AEM Forms で Output サービスや Forms サービスを使用した開発{#developing-with-output-and-forms-services-in-aem-forms}
 
-AEM Formsでの Output およびForms Service API を使用した開発について説明します。
+AEM Forms での Output および Forms Service API を使用した開発について説明します。
 
-この記事では、以下に注目します。
+この記事では、次に注目します。
 
-* [Output サービス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)  — 通常、このサービスは、xdp テンプレートまたは pdf と xml データを結合して統合された pdf を生成するために使用されます。
-* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html)  — これは非常に汎用性の高いサービスで、xdp を pdf としてレンダリングしたり、データの書き出し/PDFファイルへの読み込みを行ったりできます。
+* [Output サービス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) - 通常、このサービスは xml データを xdp テンプレートまたは PDF と結合して、フラット化された PDF の生成に使用されます。
+* [Forms サービス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) - これは、xdp を PDF としてレンダリングしたり、PDF ファイルとの間でデータを書き出したり読み込んだりできるようにする、汎用性の高いサービスです。
 
 
 次のコードスニペットは、データを PDF ファイルから書き出しています。
@@ -61,20 +62,20 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
 1. /content/AemFormsSamples/outputservice
 1. /content/AemFormsSamples/renderxdp
 1. 「Sling Referrer Filter」を検索します。
-1. 「Allow Empty」チェックボックスをオンにします（この設定は、テスト目的でのみ使用する必要があります）。
+1. 「Allow Empty」チェックボックスをオンにします（この設定は、テスト目的でのみ使用する必要があります）
 
 ## サンプルのテスト
 
-サンプルコードをテストするには、様々な方法があります。Postman アプリを使用するのが最もすばやく簡単です。Postmanを使用すると、サーバーにPOSTリクエストを送信できます。
+サンプルコードをテストするには、様々な方法があります。Postman アプリを使用するのが最もすばやく簡単です。Postman を使用すると、サーバーに POST リクエストを送信できます。
 
-* システムにPostmanアプリをインストールします。
+* システムに Postman アプリをインストールします。
 * アプリを起動し、適切な URL を入力します。
 * ドロップダウンリストから「POST」を選択していることを確認します。
-* 「Authorization」を「Basic Auth」として指定してください。 AEM Server のユーザー名とパスワードの指定
-* 「本文」タブで要求パラメーターを指定します。
+* 「認証」を「Basic Auth」として指定してください。AEM サーバーのユーザー名とパスワードを指定します。
+* 「本文」タブでリクエストパラメーターを指定します。
 * 「送信」ボタンをクリックします。
 
-このパッケージには 4 つのサンプルが含まれています。 次の段落では、Output サービスまたは Forms サービスを使用するタイミング、サービスの URL、各サービスが想定する入力パラメーターについて説明します。
+このパッケージには 4 つのサンプルが含まれています。次の段落では、Output サービスまたは Forms サービスを使用するタイミング、サービスの URL、各サービスが想定する入力パラメーターについて説明します。
 
 ## OutputService を使用した xdp テンプレートとのデータの結合
 
@@ -88,9 +89,9 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
 
 ### FormsService API の使用
 
-#### データを読み込み
+#### データの読み込み
 
-* FormsService importData を使用してデータをPDFファイルに読み込む
+* FormsService importData を使用したデータの PDF ファイルへの読み込み
 * **POSTURL**：http://localhost:4502/content/AemFormsSamples/mergedata.html
 
 * **リクエストパラメーター：**
@@ -99,21 +100,21 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
    * **xmlfile**：PDF ファイルと結合される xml データファイル
    * **saveLocation**：レンダリングしたドキュメントをファイルシステム上に保存する場所。 例：`c:\\outputsample.pdf`
 
-#### データを書き出し
+#### データの書き出し
 
-* FormsService exportData API を使用して、データファイルからPDFを書き出す
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* FormsService exportData API を使用した PDF ファイルからのデータの書き出し
+* **POST URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **リクエストパラメーター：**
 
    * **pdffile**：データの書き出し元の PDF ファイル
    * **saveLocation**：書き出したデータをファイルシステム上に保存する場所。例：c:\\documents\\exported_data.xml
 
-#### Render XDP
+#### XDP のレンダリング
 
-* XDP テンプレートを静的 PDF または動的 PDF としてレンダリング
-* FormsService renderPDFForm API を使用して xdp テンプレートをPDFとしてレンダリングする
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* 静的または動的 PDF としての XDP テンプレートのレンダリング
+* FormsService renderPDFForm API を使用した PDF としての xdp テンプレートのレンダリング
+* **POST URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
 * リクエストパラメーター：
-   * xdpName:pdf としてレンダリングする xdp ファイルの名前
+   * xdpName：PDF としてレンダリングする xdp ファイルの名前
 
 [この Postman コレクションを読み込んで、API をテストできます。](assets/UsingDocumentServicesInAEMForms.postman_collection.json)

@@ -1,6 +1,6 @@
 ---
 title: App Builder アクションでのサーバー間アクセストークンの生成
-description: App Builder アクションで使用する OAuth サーバー間資格情報を使用して、アクセストークンを生成する方法について説明します。
+description: App Builder アクションで使用する OAuth サーバー間認証情報を使用して、アクセストークンを生成する方法について説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,38 +9,39 @@ level: Intermediate
 jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
 duration: null
-source-git-commit: 8fae7510db1eb7b9483d198592a1628cd9867e2b
-workflow-type: tm+mt
+exl-id: 919cb9de-68f8-4380-940a-17274183298f
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '400'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # App Builder アクションでのサーバー間アクセストークンの生成
 
-App Builder のアクションは、をサポートするAdobeAPI とやり取りする必要が出る場合があります **OAuth サーバー間資格情報** とは、App Builder アプリがデプロイされるAdobe Developer Console プロジェクトに関連付けられています。
+App Builder アクションは、**OAuth サーバー間認証情報**&#x200B;をサポートし、App Builder アプリがデプロイされる Adobe Developer Console プロジェクトに関連付けられた Adobe API とやり取りする必要が生じる場合があります。
 
-このガイドでは、 _OAuth サーバー間資格情報_ App Builder アクションで使用する場合。
+このガイドでは、App Builder アクションで使用する _OAuth サーバー間認証情報_&#x200B;を使用して、アクセストークンを生成する方法について説明します。
 
 >[!IMPORTANT]
 >
-> OAuth サーバー間資格情報は、サービスアカウント (JWT) 資格情報で非推奨（廃止予定）になりました。 ただし、サービスアカウント (JWT) 資格情報のみをサポートするAdobeAPI や、OAuth サーバー間の移行が進行中の場合もあります。 AdobeAPI のドキュメントを確認して、サポートされる資格情報を理解します。
+> サービスアカウント（JWT）資格情報は、OAuth サーバー間認証情報に代わって非推奨（廃止予定）になりました。ただし、サービスアカウント（JWT）資格情報のみをサポートする Adobe API や、OAuth サーバー間の移行が進行中の場合もあります。Adobe API のドキュメントを確認して、サポートされている資格情報を理解します。
 
-## Adobe Developer Console プロジェクト設定
+## Adobe Developer Console プロジェクトの設定
 
-目的のAdobeAPI をAdobe Developer Console プロジェクトに追加する際、 _API の設定_ ステップ、 **OAuth サーバー間通信** 認証タイプ。
+目的の Adobe API を Adobe Developer Console プロジェクトに追加する際、_API の設定_&#x200B;手順で、**OAuth サーバー間**&#x200B;の認証タイプを選択します。
 
-![Adobe Developerコンソール — OAuth サーバー間](./assets/s2s-auth/oauth-server-to-server.png)
+![Adobe Developer Console - OAuth サーバー間](./assets/s2s-auth/oauth-server-to-server.png)
 
-上記の自動作成された統合サービスアカウントを割り当てるには、目的の製品プロファイルを選択します。 したがって、製品プロファイルを介して、サービスアカウントの権限が制御されます。
+上記の自動作成された統合サービスアカウントを割り当てるには、目的の製品プロファイルを選択します。したがって、製品プロファイルを介して、サービスアカウントの権限が制御されます。
 
-![Adobe Developer Console — 製品プロファイル](./assets/s2s-auth/select-product-profile.png)
+![Adobe Developer Console - 製品プロファイル](./assets/s2s-auth/select-product-profile.png)
 
 ## .env ファイル
 
-App Builder プロジェクトの `.env` ファイルに、Adobe Developer Console プロジェクトの OAuth Server-to-Server 資格情報用のカスタムキーを追加します。 OAuth サーバー間秘密鍵証明書の値は、Adobe Developer Console プロジェクトの __資格情報__ > __OAuth サーバー間通信__ 特定のワークスペースの
+App Builder プロジェクトの `.env` ファイルに、Adobe Developer Console プロジェクトの OAuth サーバー間資格情報のカスタムキーを追加します。OAuth サーバー間資格情報の値は、Adobe Developer Console プロジェクトの&#x200B;__資格情報__／__OAuth サーバー間__&#x200B;から指定のワークスペースに対して取得できます。
 
-![Adobe Developerコンソール OAuth サーバー間資格情報](./assets/s2s-auth/oauth-server-to-server-credentials.png)
+![Adobe Developer Console OAuth サーバー間の資格情報](./assets/s2s-auth/oauth-server-to-server-credentials.png)
 
 ```
 ...
@@ -49,11 +50,11 @@ OAUTHS2S_CLIENT_SECRET=p8e-EIRF6kY6EHLBSdw2b-pLUWKodDqJqSz3
 OAUTHS2S_CECREDENTIALS_METASCOPES=AdobeID,openid,ab.manage,additional_info.projectedProductContext,read_organizations,read_profile,account_cluster.read
 ```
 
-値： `OAUTHS2S_CLIENT_ID`, `OAUTHS2S_CLIENT_SECRET`, `OAUTHS2S_CECREDENTIALS_METASCOPES` は、Adobe Developer Console プロジェクトの OAuth サーバー間資格情報画面から直接コピーできます。
+`OAUTHS2S_CLIENT_ID`、`OAUTHS2S_CLIENT_SECRET`、`OAUTHS2S_CECREDENTIALS_METASCOPES` の値は、Adobe Developer Console プロジェクトの OAuth サーバー間資格情報画面から直接コピーできます。
 
 ## 入力マッピング
 
-OAuth Server-to-Server 秘密鍵証明書の値を `.env` ファイルにマッピングする場合は、AppBuilder のアクション入力にマッピングし、アクション自体で読み取れるようにする必要があります。 これを行うには、`ext.config.yaml` アクション `inputs` の各変数のエントリを `PARAMS_INPUT_NAME: $ENV_KEY` の形式で追加します。
+`.env` ファイルにある OAuth サーバー間資格情報の値セットを使用して、アクション自体で読み取ることができるように、それらを AppBuilder アクションの入力にマッピングする必要があります。これを行うには、`ext.config.yaml` アクション `inputs` の各変数のエントリを `PARAMS_INPUT_NAME: $ENV_KEY` の形式で追加します。
 
 次に例を示します。
 
@@ -86,9 +87,9 @@ runtimeManifest:
 
 ## トークンにアクセスするための OAuth サーバー間資格情報
 
-App Builder のアクションでは、OAuth サーバー間資格情報は、 `params` オブジェクト。 これらの資格情報を使用すると、 [OAuth 2.0 ライブラリ](https://oauth.net/code/). または、 [ノード取得ライブラリ](https://www.npmjs.com/package/node-fetch) をクリックして、POSTトークンエンドポイントにAdobe IMSリクエストを送信し、アクセストークンを取得します。
+App Builder のアクションでは、OAuth サーバー間資格情報は `params` オブジェクトで使用できます。これらの資格情報を使用すると、[OAuth 2.0 ライブラリ](https://oauth.net/code/)を使用してアクセストークンを生成できます。または、[ノード取得ライブラリ](https://www.npmjs.com/package/node-fetch)を使用して、Adobe IMS トークンエンドポイントに POST リクエストを送信して、アクセストークンを取得します。
 
-次の例は、 `node-fetch` ライブラリを使用して、POSTトークンエンドポイントにAdobe IMSリクエストを実行し、アクセストークンを取得します。
+次の例は、`node-fetch` ライブラリを使用して、Adobe IMS トークンエンドポイントに POST リクエストを実行し、アクセストークンを取得する方法を示しています。
 
 ```javascript
 const fetch = require("node-fetch");

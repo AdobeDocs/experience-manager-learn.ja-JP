@@ -12,9 +12,9 @@ last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
 source-git-commit: d178059f6f00228586e692465f7f437129bffaae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '843'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -27,14 +27,14 @@ AEM ヘッドレスコンテンツモデリングで使用されるコンテン�
 `ImageRef` タイプには、コンテンツ参照用の URL オプションが 4 つあります。
 
 + `_path` は AEM で参照されているパスであり、AEM オリジン（ホスト名）を含んでいません。
-+ `_dynamicUrl` は、画像アセットの Web に最適化された配信用の URL です。
++ `_dynamicUrl` は、画像アセットの web に最適化された配信用の URL です。
    + `_dynamicUrl` には AEM オリジンが含まれていないので、ドメイン（AEM オーサーサービスまたは AEM パブリッシュサービス）はクライアントアプリケーション側で指定する必要があります。
 + `_authorUrl` は、AEM オーサー上の画像アセットの完全な URL です。
    + [AEM オーサー](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=ja)を使用すると、ヘッドレスアプリケーションのプレビューエクスペリエンスを提供できます。
 + `_publishUrl` は、AEM パブリッシュ上の画像アセットの完全な URL です。
    + [AEM パブリッシュ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=ja)は、通常、ヘッドレスアプリケーションの実稼動デプロイメントで表示される画像の提供元になります。
 
-The `_dynamicUrl` は、画像アセットの配信に使用する推奨 URL です。 `_path`, `_authorUrl`、および `_publishUrl` 可能な限り
+`_dynamicUrl` は、画像アセット配信に使用する推奨 URL であり、可能な限り `_path`、`_authorUrl` および `_publishUrl` の代わりに使用してください。
 
 |                                | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -98,7 +98,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 | GraphQL パラメーター | 説明 | 必須 | GraphQL パラメーターの値 |
 |-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
-| `format` | 画像アセットの形式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
+| `format` | 画像アセットの形式。 | ✔ | `GIF`、`PNG`、`PNG8`、`JPG`、`PJPG`、`BJPG`、`WEBP`、`WEBPLL`、`WEBPLY` |
 | `seoName` | URL 内のファイルセグメントの名前。指定しなかった場合は、画像アセット名が使用されます。 | ✘ | 英数字、`-` または `_` |
 | `crop` | 画像から切り抜いたフレーム（画像のサイズに収まる必要があります） | ✘ | 元の画像サイズの範囲内で切り抜き領域を定義する正の整数 |
 | `size` | 出力画像のサイズ（高さと幅の両方、ピクセル単位） | ✘ | 正の整数 |
@@ -129,7 +129,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-アプリケーションで参照画像の Web 最適化画像を読み込むには、 `_dynamicUrl` の `primaryImage` を画像のソース URL として設定します。
+アプリケーションで参照画像の web に最適化された画像を読み込むには、`primaryImage` の `_dynamicUrl` を画像のソース URL として設定します。
 
 React では、AEM Publish から web に最適化された画像を表示すると、次のようになります。
 
@@ -146,7 +146,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 ## レスポンシブ URL
 
-上記の例では単一サイズの画像を使用していますが、web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。レスポンシブ画像は、[img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)を使用して実装することができます。次のコードスニペットに、 `_dynamicUrl` をベースとして使用します。 `width` は URL パラメーターで、に追加できます。 `_dynamicUrl` 様々なレスポンシブビューに対応するための
+上記の例では単一サイズの画像を使用していますが、web エクスペリエンスでは、レスポンシブ画像セットが必要になる場合が多くあります。レスポンシブ画像は、[img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) または[画像要素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)を使用して実装することができます。次のコードスニペットは、`_dynamicUrl` をベースとして使用する方法を示しています。`width` は様々なレスポンシブビューに対応するために `_dynamicUrl` に追加できる URL パラメーターです。
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.

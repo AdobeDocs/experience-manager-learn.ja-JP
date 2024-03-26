@@ -1,6 +1,6 @@
 ---
 title: XDP ベースのフォームでの XML データバインディングの作成
-description: AEMフォームと XML データソースとの連結を説明する短いビデオ
+description: AEM フォームを XML データソースにバインドする方法を説明する短いビデオ
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -11,16 +11,16 @@ duration: 119
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15058
 thumbnail: 3427625.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
-workflow-type: tm+mt
+exl-id: 11b4f319-9285-478b-a2ed-7967f02108c6
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM Forms Designer での XML データバインディングの作成
 
-# AEM Forms Designer での XML データ連結の作成
-
-AEMフォームと XML データソースとの連結を説明する短いビデオ
+AEM フォームを XML データソースにバインドする方法を説明する短いビデオ
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)

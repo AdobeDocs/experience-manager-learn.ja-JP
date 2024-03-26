@@ -13,9 +13,9 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 388
 source-git-commit: bb902089a709ab00853f4856d9bf42c18a5097e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '773'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -350,8 +350,8 @@ AEM UI 拡張性コード例のコレクションにようこそ。このリソ�
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-custom-field.md" title="カスタムフィールド">カスタムフィールド</a></p>
           <p class="is-size-6">カスタムコンテンツフラグメントフィールドを作成します。</p>
           <a href="./examples/editor-custom-field.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
- </a>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">例を表示</span>
+          </a>
         </div>
       </div>
     </div>

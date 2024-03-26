@@ -13,21 +13,21 @@ last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 725
 source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '175'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 # 一括読み込みの使用
 
-AEM as a Cloud Serviceの一括読み込みツールを使用すると、管理者は安全で効率的な方法でクラウドストレージからアセットを一括で読み込むことができます。
+AEM as a Cloud Service の一括読み込みツールを使用すると、管理者は安全かつ効率的な方法でクラウドストレージからアセットを一括で読み込むことができます。
 
 >[!BEGINTABS]
 
->[!TAB Assets ビュー]
+>[!TAB アセットビュー]
 
-を使用して、多数のファイルをAEM Assetsに読み込む方法を学ぶ [アセット表示](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [一括読み込み](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)Dropboxは、クラウドストレージプロバイダーの例として機能し、わかりやすい統合プロセスを実現します。
+[アセットビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=ja)の[一括読み込み](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=ja)を使用して、多数のファイルを AEM Assets に読み込む方法を学びます。統合プロセスを明確でわかりやすくするため、クラウドストレージプロバイダーの例として Dropbox を使用します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
@@ -37,7 +37,7 @@ AEM as a Cloud Serviceの一括読み込みツールを使用すると、管理�
 
 >[!TIP]
 >
-> このビデオの入力ソースは、Azure Blob ストレージとAmazon S3 のみを表示します。ただし、使用可能なソースは、時間の経過と共に増加し続けます。 サポートされる入力ソースの完全なリストについては、製品で使用可能なオプションを参照してください。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> このビデオでは入力ソースに Azure Blob Storage と Amazon S3 のみが示されていますが、利用可能なソースは時間と共に増えていきます。サポートされる入力ソースの完全なリストについては、製品で使用可能なオプション、または[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=ja#bulk-upload)を参照してください。
 
 ## 一括読み込みのスケジュール設定
 

@@ -8,9 +8,9 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '412'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 96%
    + [関連付けと関連付け解除](./authoring/relate-unrelate.md)
 
 + 共同作業{#collaboration}
-   + [ウォッチ](./collaboration/watch.md)
+   + [所要時間](./collaboration/watch.md)
    + [タイムラインとインボックス](./collaboration/timeline-and-inbox.md)
    + [コメントと注釈](./collaboration/comments-and-annotations.md)
    + [アセットのチェックインとチェックアウト](./collaboration/check-in-and-check-out.md)
@@ -50,7 +50,7 @@ ht-degree: 96%
    + [検索](./search-and-discovery/search.md)
    + [コレクション](./search-and-discovery/collections.md)
    + [検索ブースト](./search-and-discovery/search-boost.md)
-   + [類似画像の検索](./search-and-discovery/find-similar-images.md)
+   + [類似の画像を検索](./search-and-discovery/find-similar-images.md)
 
 + 高度な機能{#advanced}
    + [3D アセット](./advanced/3d-assets.md)
@@ -91,7 +91,7 @@ ht-degree: 96%
 
 + クリエイティブワークフロー{#creative-workflows}
    + [Adobe Express](./creative-workflows/adobe-express.md)
-   + [Adobe ExpressAEM Assetsアドオン](./creative-workflows/adobe-express-aem-assets-add-on.md)
+   + [Adobe Express AEM Assets アドオン](./creative-workflows/adobe-express-aem-assets-add-on.md)
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
    + [Adobe アセットリンク](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
@@ -114,7 +114,7 @@ ht-degree: 96%
    + [クリエイティブの操作](./content-automation/creative-operations.md)
    + [Photoshop のアクション](./content-automation/photoshop-actions.md)
 
-+ Dynamic Media {#dynamic-media}
++ Dynamic Media{#dynamic-media}
    + [Dynamic Media の概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 画像 {#images}

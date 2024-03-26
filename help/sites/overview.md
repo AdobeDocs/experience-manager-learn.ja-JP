@@ -7,7 +7,7 @@ topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '175'
 ht-degree: 100%
 

@@ -1,6 +1,6 @@
 ---
-title: Adobe I/O Runtime Action を使用したAEM Events 処理
-description: Adobe I/O Runtimeアクションを使用して受け取ったAEMイベントを処理する方法を説明します。
+title: Adobe I/O Runtime アクションを使用した AEM イベント処理
+description: Adobe I/O Runtime アクションを使用して受け取った AEM イベントを処理する方法を説明します。
 version: Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
@@ -11,51 +11,51 @@ duration: 0
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
-workflow-type: tm+mt
+exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '578'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Adobe I/O Runtime アクションを使用した AEM イベント処理
 
-# Adobe I/O Runtime Action を使用したAEM Events 処理
-
-次を使用して受け取ったAEMイベントを処理する方法を説明します。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) アクション。 この例は、前の例を強化します [Adobe I/O Runtime Action とAEM Events](runtime-action.md)を使用する場合は、この操作を続行する前に、入力が完了していることを確認してください。
+[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) アクション使用して受け取った AEM イベントを処理する方法を説明します。この例は、前述した例 [Adobe I/O Runtime アクションと AEM イベント](runtime-action.md)を強化したものです。この例に進む前に、それが完了していることを確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
-この例では、イベント処理によって元のイベントデータと受信したイベントがアクティビティメッセージとしてAdobe I/O Runtimeストレージに保存されます。 ただし、イベントが _コンテンツフラグメントが変更されました_ タイプを入力すると、AEMオーサーサービスも呼び出して変更の詳細を検索します。 最後に、イベントの詳細が単一ページアプリケーション (SPA) に表示されます。
+この例では、イベント処理によって元のイベントデータと受信したイベントがアクティビティメッセージとして、Adobe I/O Runtime ストレージに保存されます。ただし、イベントが&#x200B;_変更済みコンテンツフラグメント_&#x200B;タイプの場合は、AEM オーサーサービスも呼び出して、変更の詳細を検索します。最後に、イベントの詳細が単一ページアプリケーション（SPA）に表示されます。
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要です。
+このチュートリアルを完了するには、次が必要になります。
 
-- AEMas a Cloud Service環境 [AEM Eventing enabled](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment). また、サンプル [WKND サイト](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) プロジェクトをそのプロジェクトにデプロイする必要があります。
+- [AEM イベンティングが有効な](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) AEM as a Cloud Service 環境。また、サンプル [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) プロジェクトをそこにデプロイする必要があります。
 
-- アクセス先 [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/) へのアクセス権。
 
-- [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) をローカルマシンにインストールします。
+- ローカルマシンにインストールされた [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
-- 前の例からローカルに初期化されたプロジェクト [Adobe I/O Runtime Action とAEM Events](./runtime-action.md#initialize-project-for-local-development).
+- 前述の例 [Adobe I/O Runtime アクションと AEM イベント](./runtime-action.md#initialize-project-for-local-development)からローカルに初期化されたプロジェクト。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Serviceイベントは、プレリリースモードで登録ユーザーのみが使用できます。 AEMのas a Cloud Service環境でAEMイベンティングを有効にするには、 [AEM-Eventing チーム](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
-## AEM Events プロセッサーアクション
+## AEM イベントプロセッサーアクション
 
-この例では、イベントプロセッサー [アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) は次のタスクを実行します。
+この例では、イベントプロセッサー[アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)は、次のタスクを実行します。
 
 - 受信したイベントを解析してアクティビティメッセージにします。
-- 受け取ったイベントが _コンテンツフラグメントが変更されました_ 「 」と入力し、AEMオーサーサービスにコールバックして変更の詳細を見つけます。
-- 元のイベントデータ、アクティビティメッセージおよび変更の詳細（存在する場合）をAdobe I/O Runtimeストレージに保持します。
+- 受信したイベントが&#x200B;_変更済みコンテンツフラグメント_&#x200B;タイプの場合は、AEM オーサーサービスにコールバックして、変更の詳細を確認します。
+- 元のイベントデータ、アクティビティメッセージおよび変更の詳細（存在する場合）を、Adobe I/O Runtime ストレージに保持します。
 
-上記のタスクを実行するには、まず、プロジェクトにアクションを追加し、JavaScript モジュールを開発して上記のタスクを実行し、最後に、開発されたモジュールを使用するようにアクションコードを更新します。
+上記のタスクを実行するには、まず、プロジェクトにアクションを追加し、JavaScript モジュールを開発して上記のタスクを実行し、最後に、開発したモジュールを使用するようにアクションコードを更新します。
 
-添付の [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip) ファイルの完全なコードを示し、以下の節ではキーファイルをハイライトします。
+完全なコードについて詳しくは、添付の [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip) ファイルを参照してください。以下の節では主要なファイルをハイライト表示しています。
 
-### アクションを追加
+### アクションの追加
 
 - アクションを追加するには、次のコマンドを実行します。
 
@@ -63,15 +63,15 @@ ht-degree: 0%
   aio app add action
   ```
 
-- 選択 `@adobe/generator-add-action-generic` アクションテンプレートとして、アクションに「 」と名前を付けます。 `aem-event-processor`.
+- アクションテンプレートとして「`@adobe/generator-add-action-generic`」を選択し、アクションに `aem-event-processor` という名前を付けます。
 
-  ![アクションを追加](../assets/examples/event-processing-using-runtime-action/add-action-template.png)
+  ![アクションの追加](../assets/examples/event-processing-using-runtime-action/add-action-template.png)
 
 ### JavaScript モジュールの開発
 
 上記のタスクを実行するには、次の JavaScript モジュールを開発します。
 
-- The `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js` モジュールは、受信したイベントが _コンテンツフラグメントが変更されました_ タイプ。
+- `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js` モジュールは、受信したイベントが&#x200B;_変更済みコンテンツフラグメント_&#x200B;タイプであるかどうかを判断します。
 
   ```javascript
   async function needsAEMCallback(aemEvent) {
@@ -98,7 +98,7 @@ ht-degree: 0%
   module.exports = needsAEMCallback;
   ```
 
-- The `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js` モジュールはAEMオーサーサービスを呼び出して変更の詳細を見つけます。
+- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js` モジュールは AEM オーサーサービスを呼び出して、変更の詳細を見つけます。
 
   ```javascript
   ...
@@ -166,9 +166,9 @@ ht-degree: 0%
   ...
   ```
 
-  参照： [AEM Service 資格情報チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) 詳しくは、こちらを参照してください。 また、 [App Builder 設定ファイル](https://developer.adobe.com/app-builder/docs/guides/configuration/) 秘密鍵とアクションパラメーターの管理に使用します。
+  詳しくは、[AEM サービス資格情報チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=ja)を参照してください。また、シークレットとアクションパラメーターを管理する [App Builder 設定ファイル](https://developer.adobe.com/app-builder/docs/guides/configuration/)も参照してください。
 
-- The `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` モジュールは、元のイベントデータ、アクティビティメッセージおよび変更の詳細（存在する場合）をAdobe I/O Runtimeストレージに保存します。
+- `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` モジュールは、元のイベントデータ、アクティビティメッセージおよび変更の詳細（存在する場合）を、Adobe I/O Runtime ストレージに保存します。
 
   ```javascript
   ...
@@ -191,9 +191,9 @@ ht-degree: 0%
   ...
   ```
 
-### アクションコードを更新
+### アクションコードの更新
 
-最後に、次の場所でアクションコードを更新します。 `src/dx-excshell-1/actions/aem-event-processor/index.js` を使用して開発済みモジュールを使用する。
+最後に、開発したモジュールを使用するように `src/dx-excshell-1/actions/aem-event-processor/index.js` でアクションコードを更新します。
 
 ```javascript
 ...
@@ -251,20 +251,15 @@ if (params.challenge) {
 
 ## その他のリソース
 
-- The `src/dx-excshell-1/actions/model` フォルダーの内容 `aemEvent.js` および `errors.js` ファイル。アクションが受け取ったイベントを解析し、エラーを処理するために使用されます。
-- The `src/dx-excshell-1/actions/load-processed-aem-events` フォルダーにはアクションコードが含まれています。このアクションは、SPAがAdobe I/O Runtimeストレージから処理済みのAEMイベントを読み込むために使用します。
-- The `src/dx-excshell-1/web-src` フォルダーには、処理されたAEMイベントを表示するSPAコードが含まれます。
-- The `src/dx-excshell-1/ext.config.yaml` ファイルには、アクションの設定とパラメーターが含まれています。
+- `src/dx-excshell-1/actions/model` フォルダーには、`aemEvent.js` および `errors.js` ファイルが含まれています。これらのファイルは、アクションが受け取ったイベントを解析し、エラーを処理するために使用されます。
+- `src/dx-excshell-1/actions/load-processed-aem-events` フォルダーにはアクションコードが含まれています。このアクションは、SPA が Adobe I/O Runtime ストレージから処理済みの AEM イベントを読み込む際に使用します。
+- `src/dx-excshell-1/web-src` フォルダーには、処理された AEM イベントを表示する SPA コードが含まれます。
+- `src/dx-excshell-1/ext.config.yaml` ファイルには、アクションの設定とパラメーターが含まれています。
 
 ## 概念と重要な留意点
 
 イベント処理の要件は、プロジェクトによって異なりますが、この例で重要なポイントは次のとおりです。
 
-- イベントの処理は、 Adobe I/O Runtime Action を使用しておこなうことができます。
-- Runtime Action は、内部アプリケーション、サードパーティソリューション、Adobeソリューションなどのシステムと通信できます。
-- ランタイムアクションは、コンテンツの変更に関連して設計されたビジネスプロセスのエントリポイントとなります。
-
-
-
-
-
+- イベントの処理の実行には、Adobe I/O Runtime アクションを使用します。
+- ランタイムアクションは、内部アプリケーション、サードパーティソリューション、アドビソリューションなどのシステムと通信できます。
+- ランタイムアクションは、コンテンツ変更を中心に設計されたビジネスプロセスのエントリポイントとなります。

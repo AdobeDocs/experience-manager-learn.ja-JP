@@ -8,9 +8,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 156
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '216'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Acroforms は、Acrobat を使用して作成されたフォームです。 Acro
 
 >[!NOTE]
 >
->入力可能な Acroform を送信して Acrobat Sign で署名する場合は、それに応じてフィールドに名前を付けてください。例えば、フィールドには次の名前を付けます。 **`Sig_es_:signer1:signature`**. これは、Acrobat Sign で認識できる構文です。
+>入力可能な Acroform を送信して Acrobat Sign で署名する場合は、それに応じてフィールドに名前を付けてください。例えば、フィールドに **`Sig_es_:signer1:signature`** という名前を付けることができます。これは、Acrobat Sign で認識できる構文です。
 
 >[!NOTE]
 >

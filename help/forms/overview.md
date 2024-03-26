@@ -7,7 +7,7 @@ sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 88
 source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
 ht-degree: 100%
 

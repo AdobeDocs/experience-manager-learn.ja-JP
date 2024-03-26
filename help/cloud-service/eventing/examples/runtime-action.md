@@ -1,6 +1,6 @@
 ---
-title: Adobe I/O Runtime Action とAEM Events
-description: Adobe I/O Runtimeアクションを使用してAEMイベントを受け取り、ペイロード、ヘッダー、メタデータなどのイベントの詳細を確認する方法について説明します。
+title: Adobe I/O Runtime アクションと AEM イベント
+description: Adobe I/O Runtime アクションを使用して AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を説明します。
 version: Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
@@ -11,23 +11,23 @@ duration: 0
 last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
-workflow-type: tm+mt
+exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '729'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Adobe I/O Runtime アクションと AEM イベント
 
-# Adobe I/O Runtime Action とAEM Events
-
-を使用してAEMイベントを受け取る方法を説明します。 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) アクションを作成し、ペイロード、ヘッダー、メタデータなどのイベントの詳細を確認します。
+[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) アクションを使用して AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427053?quality=12&learn=on)
 
-Adobe I/O Runtimeは、サーバーレスのプラットフォームで、イベントに応じてコードを実行できます。Adobe I/Oは したがって、インフラストラクチャを気にせずに、イベント・ベースのアプリケーションを構築するのに役立ちます。
+Adobe I/O Runtime は、Adobe I/O イベントに応答してコードを実行できるサーバーレスプラットフォームです。これにより、インフラストラクチャを気にせずに、イベントベースのアプリケーションを構築できるようになります。
 
-この例では、Adobe I/O Runtime [アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) はAEMイベントを受け取り、イベントの詳細を記録します。
+この例では、AEM イベントを受け取り、イベントの詳細を記録する Adobe I/O Runtime [アクション](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)を作成します。
 https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 大まかな手順は次のとおりです。
@@ -35,38 +35,38 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 - Adobe Developer Console でのプロジェクトの作成
 - プロジェクトをローカル開発用に初期化
 - Adobe Developer Console でのプロジェクトの設定
-- トリガーAEMイベントと検証アクションの実行
+- AEM イベントのトリガーとアクションの実行の検証
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要です。
+このチュートリアルを完了するには、次が必要になります。
 
-- AEMas a Cloud Service環境 [AEM Eventing enabled](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
 
-- アクセス先 [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/) へのアクセス。
 
-- [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) をローカルマシンにインストールします。
+- ローカルマシンにインストールされた [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Serviceイベントは、プレリリースモードで登録ユーザーのみが使用できます。 AEMのas a Cloud Service環境でAEMイベンティングを有効にするには、 [AEM-Eventing チーム](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
 ## Adobe Developer Console でのプロジェクトの作成
 
 Adobe Developer Console でプロジェクトを作成するには、次の手順に従います。
 
-- に移動します。 [Adobe Developer Console](https://developer.adobe.com/) をクリックします。 **コンソール** 」ボタンをクリックします。
+- [Adobe Developer Console](https://developer.adobe.com/) に移動し、「**コンソール**」ボタンをクリックします。
 
-- Adobe Analytics の **クイックスタート** セクションで、 **テンプレートからプロジェクトを作成**. 次に、 **テンプレートを参照** ダイアログ、選択 **App Builder** テンプレート。
+- 「**クイックスタート**」セクションで、「**テンプレートからプロジェクトを作成**」をクリックします。次に、**テンプレートを参照**&#x200B;ダイアログで、**App Builder** テンプレートを選択します。
 
-- 必要に応じて、プロジェクトタイトル、アプリ名、ワークスペースを追加します。 次に、「 **保存**.
+- 必要に応じて、プロジェクトタイトル、アプリ名、ワークスペースを更新します。次に、「**保存**」をクリックします。
 
   ![Adobe Developer Console でのプロジェクトの作成](../assets/examples/runtime-action/create-project.png)
 
 
 ## プロジェクトをローカル開発用に初期化
 
-プロジェクトにAdobe I/O Runtime Action を追加するには、ローカル開発用にプロジェクトを初期化する必要があります。 ローカルマシンのターミナルを開き、プロジェクトを初期化する場所に移動し、次の手順に従います。
+プロジェクトに Adobe I/O Runtime アクションを追加するには、ローカル開発用にプロジェクトを初期化する必要があります。ローカルマシンのターミナルを開き、プロジェクトを初期化する場所に移動し、次の手順に従います。
 
 - 実行によるプロジェクトの初期化
 
@@ -74,17 +74,17 @@ Adobe Developer Console でプロジェクトを作成するには、次の手�
   aio app init
   ```
 
-- を選択します。 `Organization`、 `Project` 前の手順で作成したワークスペースと、 In `What templates do you want to search for?` ステップ、選択 `All Templates` オプション。
+- `Organization`、前の手順で作成した `Project` およびワークスペースを選択します。`What templates do you want to search for?` 手順で、「`All Templates`」オプションを選択します。
 
-  ![Org-Project-Selection — プロジェクトを初期化](../assets/examples/runtime-action/all-templates.png)
+  ![Org-Project-Selection - プロジェクトの初期化](../assets/examples/runtime-action/all-templates.png)
 
-- テンプレートのリストで、「 」を選択します。 `@adobe/generator-app-excshell` オプション。
+- テンプレートのリストで、「`@adobe/generator-app-excshell`」オプションを選択します。
 
-  ![拡張機能テンプレート — プロジェクトの初期化](../assets/examples/runtime-action/extensibility-template.png)
+  ![拡張テンプレート - プロジェクトの初期化](../assets/examples/runtime-action/extensibility-template.png)
 
 - お気に入りの IDE で、VSCode などのプロジェクトを開きます。
 
-- 選択した _拡張テンプレート_ (`@adobe/generator-app-excshell`) は汎用のランタイムアクションを提供します。コードは `src/dx-excshell-1/actions/generic/index.js` ファイル。 イベントを更新してシンプルにし、イベントの詳細をログに記録して、成功応答を返します。 ただし、次の例では、受け取ったAEMイベントを処理するように拡張されます。
+- 選択した&#x200B;_拡張テンプレート_（`@adobe/generator-app-excshell`）は、汎用のランタイムアクションを提供します。コードは `src/dx-excshell-1/actions/generic/index.js` ファイルにあります。イベントを更新してシンプルにし、イベントの詳細をログに記録して、成功応答を返しましょう。ただし、次の例では、受け取った AEM イベントを処理するように拡張されます。
 
   ```javascript
   const fetch = require("node-fetch");
@@ -129,7 +129,7 @@ Adobe Developer Console でプロジェクトを作成するには、次の手�
   exports.main = main;
   ```
 
-- 最後に、を実行して、更新したアクションをAdobe I/O Runtimeにデプロイします。
+- 最後に、更新されたアクションを実行して Adobe I/O Runtime にデプロイします。
 
   ```bash
   aio app deploy
@@ -137,43 +137,42 @@ Adobe Developer Console でプロジェクトを作成するには、次の手�
 
 ## Adobe Developer Console でのプロジェクトの設定
 
-AEMイベントを受け取り、前の手順で作成したAdobe I/O Runtimeアクションを実行するには、Adobe Developerコンソールでプロジェクトを設定します。
+AEM イベントを受け取り、前の手順で作成した Adobe I/O Runtime アクションを実行するには、Adobe Developer Console でプロジェクトを設定します。
 
-- Adobe Developerコンソールで、 [プロジェクト](https://developer.adobe.com/console/projects) 前の手順で作成し、をクリックして開きます。 を選択します。 `Stage` workspace、アクションがデプロイされた場所です。
+- Adobe Developer Console で、前の手順で作成した[プロジェクト](https://developer.adobe.com/console/projects)に移動し、クリックして開きます。`Stage` ワークスペースを選択します。ここにアクションがデプロイされます。
 
-- クリック **サービスを追加** ボタンと選択 **API** オプション。 Adobe Analytics の **API を追加** モーダルを選択します。 **Adobe サービス** > **I/O 管理 API** をクリックします。 **次へ**、追加の設定手順に従って、「 」をクリックします。 **設定済み API を保存**.
+- 「**サービスを追加**」ボタンをクリックし、「**API**」オプションを選択します。**API を追加**&#x200B;モーダルで、**アドビサービス**／**I/O Management API** を選択し、「**次へ**」をクリックします。追加の設定手順に従って「**設定済み API を保存**」をクリックします。
 
-  ![サービスを追加 — プロジェクトを設定](../assets/examples/runtime-action/add-io-management-api.png)
+  ![サービスを追加 - プロジェクトの設定](../assets/examples/runtime-action/add-io-management-api.png)
 
-- 同様に、「 **サービスを追加** ボタンと選択 **イベント** オプション。 Adobe Analytics の **イベントを追加** ダイアログ、選択 **Experience Cloud** > **AEM Sites**&#x200B;をクリックし、 **次へ**. 追加の設定手順に従い、AEMCS インスタンス、イベントタイプ、その他の詳細を選択します。
+- 同様に、「**サービスを追加**」ボタンをクリックし、「**イベント**」オプションを選択します。**イベントを追加**&#x200B;ダイアログで、**Experience Cloud**／**AEM Sites** を選択し、「**次へ**」をクリックします。追加の設定手順に従い、AEMCS インスタンス、イベントタイプなどの詳細を選択します。
 
-- 最後に、 **イベントの受信方法** ステップ、展開 **実行時アクション** オプションを選択し、 _汎用_ 前の手順で作成したアクション。 クリック **設定済みイベントを保存**.
+- 最後に、**イベントの受信方法**&#x200B;の手順で、「**ランタイムアクション**」オプションを展開し、前の手順で作成した&#x200B;_汎用_&#x200B;アクションを選択します。「**設定済みイベントを保存**」をクリックします。
 
-  ![実行時アクション — プロジェクトの設定 ](../assets/examples/runtime-action/select-runtime-action.png)
+  ![ランタイムアクション - プロジェクトの設定](../assets/examples/runtime-action/select-runtime-action.png)
 
-- イベント登録の詳細を確認し、 **デバッグトレース** 「 」タブに移動して、 **チャレンジプローブ** リクエストと応答。
+- イベント登録の詳細を確認し、「**デバッグトレース**」タブに移動して、**チャレンジプローブ**&#x200B;リクエストと応答を確認します。
 
   ![イベント登録の詳細](../assets/examples/runtime-action/debug-tracing-challenge-probe.png)
 
 
-## トリガーAEMイベント
+## AEM イベントをトリガー
 
-上記のAdobe Developer Console プロジェクトに登録されたAEMas a Cloud Service環境からAEMイベントをトリガーするには、次の手順に従います。
+上記の Adobe Developer Console プロジェクトで登録した AEM as a Cloud Service 環境から AEM イベントをトリガーするには、次の手順に従います。
 
-- を介してAEM as a Cloud Serviceオーサー環境にアクセスし、ログインします。 [Cloud Manager](https://my.cloudmanager.adobe.com/).
+- [Cloud Manager](https://my.cloudmanager.adobe.com/) から AEM as a Cloud Service オーサー環境にアクセスし、ログインします。
 
-- 次の条件に応じて、 **購読済みイベント**&#x200B;コンテンツフラグメントの作成、更新、削除、公開、非公開を行います。
+- **購読しているイベント**&#x200B;に応じて、コンテンツフラグメントの作成、更新、削除、公開、非公開を行います。
 
 ## イベントの詳細を確認
 
-上記の手順を完了すると、AEMイベントが汎用のアクションに配信されていることを確認できます。
+上記の手順を完了すると、AEM イベントが汎用アクションに配信されているのを確認できます。
 
-イベントの詳細は、 **デバッグトレース** イベント登録の詳細のタブ。
+イベントの詳細は、イベント登録詳細の「**デバッグトレース**」タブで確認できます。
 
-![AEMイベントの詳細](../assets/examples/runtime-action/aem-event-details.png)
+![AEM イベントの詳細](../assets/examples/runtime-action/aem-event-details.png)
 
 
 ## 次の手順
 
-次の例では、このアクションを拡張してAEMイベントを処理し、AEMオーサーサービスを呼び出してコンテンツの詳細を取得し、詳細をAdobe I/O Runtimeストレージに保存して、シングルページアプリケーション (SPA) 経由で表示します。
-
+次の例では、このアクションを拡張して AEM イベントを処理し、AEM オーサーサービスをコールバックしてコンテンツの詳細を取得し、詳細を Adobe I/O Runtime ストレージに保存して、シングルページアプリケーション（SPA）経由で表示します。

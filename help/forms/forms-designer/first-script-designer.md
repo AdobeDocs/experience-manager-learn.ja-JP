@@ -11,13 +11,13 @@ duration: 158
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15060
 thumbnail: 3427627.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
-workflow-type: tm+mt
+exl-id: 49a36a08-2819-4ba3-9a7e-2562277d88db
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
-
 
 # AEM Forms Shorts シンプルなフォームスクリプトの作成
 

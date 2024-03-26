@@ -1,6 +1,6 @@
 ---
-title: AEM Forms J2EE のReader拡張PDF forms
-description: エンドユーザーがAdobe/Acrobat ReaderからPDF formsに入力して保存できるようにAEM FormsReader拡張機能を使用する方法を説明する短いビデオ
+title: AEM Forms J2EE の Reader 拡張用 PDF forms
+description: エンドユーザーが Adobe/Acrobat Reader から PDF forms に入力して保存できるように、 AEM Forms Reader Extensions を使用する方法を説明する短いビデオ
 version: 6.5
 feature: Reader Extensions
 topic: Development
@@ -11,16 +11,16 @@ duration: 113
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15061
 thumbnail: 3427629.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
-workflow-type: tm+mt
+exl-id: 3ba3e51a-e4a3-42c3-92e1-97818dc4ad33
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM Forms J2EE の Reader 拡張用 PDF フォーム
 
-# AEM Forms J2EE のPDFフォームのReader拡張
-
-エンドユーザーが AdobeAcrobatReaderからPDF formsを入力および保存できるようにAEM FormsReader拡張機能を使用する方法を説明する短いビデオ
+エンドユーザーが AdobeAcrobatReader から PDF forms を入力および保存できるように、AEM Forms Reader Extensions を使用する方法を説明する短いビデオ
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)

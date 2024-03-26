@@ -11,7 +11,7 @@ thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
 duration: 53
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '191'
 ht-degree: 100%
 
@@ -35,8 +35,8 @@ Apache Sling Connection Pooled DataSource を作成し、以下のスクリー�
 | プロパティ名 | 値 |
 | ------------------------|--------------------------------------- |
 | データソース名 | `SaveAndContinue` |
-| JDBC Driver Class | `com.mysql.cj.jdbc.Driver` |
-| JDBC connection uri | `jdbc:mysql://localhost:3306/aemformstutorial` |
+| JDBC ドライバークラス | `com.mysql.cj.jdbc.Driver` |
+| JDBC 接続 URI | `jdbc:mysql://localhost:3306/aemformstutorial` |
 
 ## Assets
 

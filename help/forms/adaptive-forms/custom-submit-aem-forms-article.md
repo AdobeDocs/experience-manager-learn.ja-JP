@@ -10,9 +10,9 @@ exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
 source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '232'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >この記事のコードは、コアコンポーネントベースのアダプティブフォームでは機能しません。
->[コアコンポーネントベースのアダプティブフォームと同等の記事については、こちらを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+>[コアコンポーネントベースのアダプティブフォームに関する同様の記事は、こちらから参照できます](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=ja)
 
 
 この記事では、アダプティブフォームの送信を処理するカスタム送信アクションを作成するために必要な手順について説明します。

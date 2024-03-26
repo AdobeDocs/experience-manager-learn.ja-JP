@@ -1,6 +1,6 @@
 ---
-title: ローカルサーバーにサンプルをデプロイします。
-description: Azure ポータルに保存されたフォーム送信のクエリに関する手順を説明するマルチパートチュートリアル
+title: サンプルのローカルサーバーへのデプロイ
+description: Azure ポータルに保存されたフォーム送信のクエリに関係する手順を説明するマルチパートチュートリアル
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,28 +9,28 @@ role: Developer
 level: Experienced
 jira: kt-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 44841a3c-85e0-447f-85e2-169a451d9c68
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '117'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ローカルサーバーにサンプルをデプロイします。
+# サンプルのローカルサーバーへのデプロイ
 
-このユースケースをローカルサーバーで動作させるには、以下の手順に従ってください。AEMインスタンスが localhost（4502 ポート）で実行されていると想定されます。
+このユースケースをローカルサーバーで動作させるには、以下の手順に従ってください。この手順では、AEM インスタンスが localhost（4502 ポート）で実行されていると想定しています。
 
-* [パッケージのインストール](assets/azuredemo.all-1.0.0-SNAPSHOT.zip) パッケージマネージャーを使用します。
+* パッケージマネージャーを使って[パッケージをインストール](assets/azuredemo.all-1.0.0-SNAPSHOT.zip)します。
 
-* OSGi configMgr を使用して Azure ポータルの資格情報を指定します
+* OSGi configMgr を使用して Azure ポータルの資格情報を指定
   ![azure-portal](assets/azure-portal-config.png)
-ストレージ URI がスラッシュで終わり、SAS トークンが？で始まることを確認します。
-* に移動します。 [AzureDemo](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/azuredemo)
+ストレージ URI がスラッシュで終わり、SAS トークンが ? で始まることを確認します。
+*  [AzureDemo](http://localhost:4502/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/azuredemo) に移動
 
-* 環境に合わせて次の 3 つのデータソースの認証設定を編集します
+* 次の 3 つのデータソースの認証設定を環境に合わせて編集
   ![data-sources](assets/fdm-data-sources.png)
 
-* プレビューして送信 [ContactUs フォーム](http://localhost:4502/content/dam/formsanddocuments/azureportal/contactus/jcr:content?wcmmode=disabled)
+* [ContactUs フォーム](http://localhost:4502/content/dam/formsanddocuments/azureportal/contactus/jcr:content?wcmmode=disabled)をプレビューして送信
 
 * [フォーム送信のクエリ](http://localhost:4502/content/dam/formsanddocuments/azureportal/queryformsubmissions/jcr:content?wcmmode=disabled)
-

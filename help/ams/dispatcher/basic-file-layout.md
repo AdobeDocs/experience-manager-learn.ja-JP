@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 354
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1130'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -59,18 +59,18 @@ AMS では、基本インストールは、基本オペレーティングシス�
 - 競合や手動の調整なしに、オペレーティングシステムで完全にサポートされるパッチ適用サイクルを許可します
 - 誤ってラベル付けされたファイルコンテキストの SELinux の違反を回避します
 
->[!BEGINSHADEBOX &quot;注意&quot;]
+>[!BEGINSHADEBOX 「メモ」]
 
-AdobeManaged Servicesサーバーのイメージには、通常、小さなオペレーティングシステムのルートドライブが付いています。  データは別のボリュームに配置し、通常は `/mnt`
-次に、以下のデフォルトディレクトリのデフォルトの代わりに、そのボリュームを使用します。
+Adobe Managed Services サーバーの画像には、通常、オペレーティングシステムの小さなルートドライブが付いています。通常 `/mnt` にマウントされる別のボリュームにデータを格納します。
+その後、次のデフォルトディレクトリのデフォルトの代わりに、そのボリュームを使用します。
 
 `DocumentRoot`
 - デフォルト：`/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- デフォルト: `/var/log/httpd`
-- AMS: `/mnt/var/log/httpd`
+- デフォルト：`/var/log/httpd`
+- AMS：`/mnt/var/log/httpd`
 
 古いディレクトリと新しいディレクトリは、混乱を避けるために元のマウントポイントに再びマッピングされることに注意してください。
 別のボリュームを使用することは必須ではありませんが、特筆すべきことです
@@ -297,7 +297,7 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 
 >[!NOTE]
 >
->Apache が提供した既存のファイルは変更されませんでした。 代わりに、私たちは彼らが行くべきディレクトリに私たちを追加した。
+>Apache から提供された既存のファイルは一切変更していません。代わりに、目的のディレクトリに独自のファイルを追加しました。
 
 これで、独自のファイル <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 内で独自のモジュールを使用するようになりました。このファイルにより独自のファイルモジュールが初期化され、初期モジュール固有の設定ファイルが読み込まれます。
 

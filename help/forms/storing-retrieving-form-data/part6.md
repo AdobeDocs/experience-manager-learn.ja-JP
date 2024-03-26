@@ -9,7 +9,7 @@ version: 6.4,6.5
 exl-id: f520e7a4-d485-4515-aebc-8371feb324eb
 duration: 67
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
 ht-degree: 100%
 
@@ -37,8 +37,8 @@ ht-degree: 100%
 | プロパティ名 | 値 |
 | ------------------------|---------------------------------------|
 | データソース名 | `SaveAndContinue` |
-| JDBC Driver Class | `com.mysql.cj.jdbc.Driver` |
-| JDBC connection uri | `jdbc:mysql://localhost:3306/aemformstutorial` |
+| JDBC ドライバークラス | `com.mysql.cj.jdbc.Driver` |
+| JDBC 接続 URI | `jdbc:mysql://localhost:3306/aemformstutorial` |
 
 * [アダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)を開きます。
 * 詳細を入力し、「保存して後で続行」ボタンをクリックします

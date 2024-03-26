@@ -1,6 +1,6 @@
 ---
-title: ジャーナリングとAEMイベント
-description: ジャーナルからAEMイベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
+title: ジャーナル処理と AEM イベント
+description: ジャーナルから AEM イベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
 version: Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
@@ -11,82 +11,82 @@ duration: 163
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
-workflow-type: tm+mt
+exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '630'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# ジャーナル処理と AEM イベント
 
-# ジャーナリングとAEMイベント
-
-ジャーナルからAEMイベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
+ジャーナルから AEM イベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
-ジャーナル処理は、AEMイベントを使用するプルメソッドで、ジャーナルは、イベントの順序付きリストです。 Adobe I/Oイベントジャーナル API を使用すると、ジャーナルからAEMイベントを取得し、アプリケーションで処理できます。 この方法を使用すると、指定したケイデンスに基づいてイベントを管理し、それらを一括で効率的に処理できます。 詳しくは、 [ジャーナリング](https://developer.adobe.com/events/docs/guides/journaling_intro/) 保持期間やページネーションなどの重要な考慮事項を含む、詳細なインサイトに関する情報。
+ジャーナル処理は、AEM イベントを使用するプルメソッド、ジャーナルはイベントの順序付きリストです。Adobe I/O Events Journaling API を使用すると、ジャーナルから AEM イベントを取得して、アプリケーションで処理できます。このアプローチでは、指定したサイクルに基づいてイベントを管理し、それらを一括で効率的に処理できます。保持期間やページネーションなどの重要な考慮事項を含む、詳細なインサイトついては、[ジャーナル処理](https://developer.adobe.com/events/docs/guides/journaling_intro/)を参照してください。
 
-Adobe Developer Console プロジェクト内では、すべてのイベント登録がジャーナリングに対して自動的に有効になり、シームレスな統合が可能になります。
+Adobe Developer Console プロジェクト内では、ジャーナル処理に対してすべてのイベント登録が自動的に有効になり、シームレスな統合が可能になります。
 
-この例では、Adobe提供の _ホスト Web アプリケーション_ を使用すると、アプリケーションを設定しなくても、ジャーナルからAEM Events の最初のバッチを取得できます。 このAdobe提供 Web アプリケーションは、次の場所でホストされます： [グリッチ](https://glitch.com/):Web アプリケーションの構築とデプロイに役立つ Web ベースの環境を提供することで知られているプラットフォームです。 ただし、独自のアプリケーションを使用するオプションも使用できます。
+この例では、アドビ提供の&#x200B;_ホスト型 web アプリケーション_&#x200B;を利用すると、アプリケーションをセットアップしなくても、ジャーナルから AEM イベントの最初のバッチを取得できます。このアドビ提供の web アプリケーションは、[Glitch](https://glitch.com/) にホストされています。Glitch は、web アプリケーションの構築とデプロイに役立つ web ベース環境を提供することで知られているプラットフォームです。ただし、必要に応じて、独自のアプリケーションを使用するオプションも使用できます。
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要です。
+このチュートリアルを完了するには、以下が必要になります。
 
-- AEMas a Cloud Service環境 [AEM Eventing enabled](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
 
-- [AEM Events 用に設定されたAdobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- [AEM イベント用に設定された Adobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Serviceイベントは、プレリリースモードで登録ユーザーのみが使用できます。 AEMのas a Cloud Service環境でAEMイベンティングを有効にするには、 [AEM-Eventing チーム](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
-## Web アプリケーションにアクセス
+## Web アプリケーションへのアクセス
 
-Adobeが提供する Web アプリケーションにアクセスするには、次の手順に従います。
+アドビ提供の web アプリケーションにアクセスするには、次の手順に従います。
 
-- 次にアクセスできることを確認します： [問題 — ホストされた Web アプリケーション](https://indigo-speckle-antler.glitch.me/) をクリックします。
+- 新しいブラウザータブで [Glitch：ホスト型 web アプリケーション](https://indigo-speckle-antler.glitch.me/)にアクセスできることを確認します。
 
-  ![問題 — ホストされた Web アプリケーション](../assets/examples/journaling/glitch-hosted-web-application.png)
+  ![Glitch：ホスト型 web アプリケーション](../assets/examples/journaling/glitch-hosted-web-application.png)
 
-## Adobe Developer Console プロジェクトの詳細を収集
+## Adobe Developer Console プロジェクトの詳細の収集
 
-ログからAEMイベントを取得するには、次のような資格情報を使用します。 _IMS 組織 ID_, _クライアント ID_、および _アクセストークン_ が必要です。 これらの資格情報を収集するには、次の手順に従います。
+ジャーナルから AEM イベントを取得するには、_IMS 組織 ID_、_クライアント ID_、_アクセストークン_&#x200B;などの資格情報が必要です。これらの資格情報を収集するには、次の手順に従います。
 
-- Adobe Analytics の [Adobe Developer Console](https://developer.adobe.com)をクリックして開き、プロジェクトに移動します。
+- [Adobe Developer Console](https://developer.adobe.com) でプロジェクトに移動し、クリックして開きます。
 
-- の下 **資格情報** セクションで、 **OAuth サーバー間通信** 開くためのリンク **資格情報の詳細** タブをクリックします。
+- 「**資格情報**」セクションで、「**OAuth サーバー間**」リンクをクリックして「**資格情報の詳細**」タブを開きます。
 
-- 次をクリック： **アクセストークンを生成** ボタンをクリックしてアクセストークンを生成します。
+- 「**アクセストークンを生成**」ボタンをクリックして、アクセストークンを生成します。
 
   ![Adobe Developer Console プロジェクトのアクセストークンの生成](../assets/examples/journaling/adobe-developer-console-project-generate-access-token.png)
 
-- をコピーします。 **生成されたアクセストークン**, **クライアント ID**、および **組織 ID**. このチュートリアルの後半で必要になります。
+- **生成されたアクセストークン**、**クライアント ID** および&#x200B;**組織 ID** をコピーします。これらは、このチュートリアルで後ほど必要になります。
 
-  ![Adobe Developer Console プロジェクトコピー資格情報](../assets/examples/journaling/adobe-developer-console-project-copy-credentials.png)
+  ![Adobe Developer Console プロジェクトの資格情報のコピー](../assets/examples/journaling/adobe-developer-console-project-copy-credentials.png)
 
-- すべてのイベント登録は、ジャーナリングに対して自動的に有効になります。 次の手順で _一意のジャーナル API エンドポイント_ イベント登録の「 AEM Events 」を購読しているイベントカードをクリックします。 次から： **登録の詳細** タブ、コピー **ジャーナリングの一意の API エンドポイント**.
+- すべてのイベント登録は、ジャーナル処理に対して自動的に有効になっています。イベント登録の&#x200B;_一意のジャーナル処理 API エンドポイント_&#x200B;を取得するには、AEM イベントをサブスクライブしているイベントカードをクリックします。「**登録の詳細**」タブから、**ジャーナル処理の一意の API エンドポイント**&#x200B;をコピーします。
 
-  ![Adobe Developer Console プロジェクトイベントカード](../assets/examples/journaling/adobe-developer-console-project-events-card.png)
+  ![Adobe Developer Console プロジェクトのイベントカード](../assets/examples/journaling/adobe-developer-console-project-events-card.png)
 
-## AEM Events ジャーナルを読み込み
+## AEM イベントジャーナルの読み込み
 
-話を簡単にするために、このホストされた Web アプリケーションは、ジャーナルからAEMイベントの最初のバッチのみを取得します。 これらは、ジャーナルで利用可能な最も古いイベントです。 詳しくは、 [最初の一連のイベント](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal).
+話を簡単にするために、このホスト型 web アプリケーションは、ジャーナルから AEM イベントの最初のバッチのみを取得します。これらは、ジャーナルで使用可能な最も古いイベントです。詳しくは、[イベントの最初のバッチ](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal)を参照してください。
 
-- Adobe Analytics の [問題 — ホストされた Web アプリケーション](https://indigo-speckle-antler.glitch.me/)、 **IMS 組織 ID**, **クライアント ID**、および **アクセストークン** 前の手順でAdobe Developer Console プロジェクトからコピーし、「 **送信**.
+- [Glitch のホストされた web アプリケーション](https://indigo-speckle-antler.glitch.me/)で、Adobe Developer Console プロジェクトからコピーした **IMS 組織 ID**、**クライアント ID** および&#x200B;**アクセストークン**&#x200B;を入力し、「**送信**」をクリックします。
 
-- 成功すると、テーブルコンポーネントにAEMイベントジャーナルデータが表示されます。
+- 成功すると、テーブルコンポーネントに AEM イベントジャーナルデータが表示されます。
 
-  ![AEM Events ジャーナルデータ](../assets/examples/journaling/load-journal.png)
+  ![AEM イベントジャーナルデータ](../assets/examples/journaling/load-journal.png)
 
-- イベントペイロード全体を表示するには、行をダブルクリックします。 AEMイベントの詳細に、Webhook でイベントを処理するために必要な情報がすべて含まれていることを確認できます。 例えば、イベントタイプ (`type`)，イベントソース (`source`)，イベント id (`event_id`)，イベント時刻 (`time`)、およびイベントデータ (`data`) をクリックします。
+- イベントペイロード全体を表示するには、行をダブルクリックします。Web フックでイベントを処理するために必要な情報がすべて AEM イベントの詳細に含まれていることがわかります。例えば、イベントタイプ（`type`）、イベントソース（`source`）、イベント ID（`event_id`）、イベント時刻（`time`）、イベントデータ（`data`）が表示されています。
 
-  ![AEM Event Payload を完了](../assets/examples/journaling/complete-journal-data.png)
+  ![AEM イベントペイロードの全体](../assets/examples/journaling/complete-journal-data.png)
 
 ## その他のリソース
 
-- [ウェブフックのソースコードの問題](https://glitch.com/edit/#!/indigo-speckle-antler) は参照可能です。 これは、 [AdobeReact スペクトル](https://react-spectrum.adobe.com/react-spectrum/index.html) UI をレンダリングするコンポーネント。
+- [Glitch web フックソースコード](https://glitch.com/edit/#!/indigo-speckle-antler)が参照可能です。これは、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) コンポーネントを使用して UI をレンダリングするシンプルな React アプリケーションです。
 
-- [Adobe I/Oイベントジャーナル API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) は、イベントの最初、次、最後のバッチ、ページネーションなど、API に関する詳細情報を提供します。
+- [Adobe I/O Events Journaling API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) は、イベントの最初、次、最後のバッチやページネーションなど、API に関する詳細情報を提供します。

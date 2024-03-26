@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1159'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -99,28 +99,28 @@ Dispatcher には、そのファームファイルに設定セクションがあ
 }
 ```
 
-The `/delay` 秒単位のパラメーターは、一定の間隔単位ではなく条件ベースのチェックで動作します。 Dispatcher は、 `/file` （認識されたバニティー URL のリストを格納）未登録 URL のリクエストを受け取ったとき。 The `/file` 現在の時間と `/file`の最終変更日が次の値より小さい： `/delay` 期間。 次の項目を更新中： `/file` が次の 2 つの条件下で発生します。
+秒単位の `/delay` パラメーターは、一定の間隔単位ではなく条件ベースのチェックで動作します。Dispatcher はリストにない URL のリクエストを受信すると、`/file`（認識されたバニティー URL のリストを格納）の変更タイムスタンプを評価します。現時点と `/file` の最終変更日との間の時間差が `/delay` 期間より小さい場合、`/file` は更新されません。`/file` の更新は、次の 2 つの条件下で発生します。
 
-1. 受信リクエストは、 `/file`.
-1. 少なくとも `/delay` 経過秒数 `/file` が最後に更新されました。
+1. 受信リクエストは、キャッシュされていない、または `/file` にリストされていない URL に対するものです。
+1. `/file` が最後に更新されてから少なくとも `/delay` 秒が経過しました。
 
-このメカニズムは、サービス拒否 (DoS) 攻撃から保護するように設計されています。DoS 攻撃では、バニティー URL 機能を利用して、Dispatcher をリクエストで圧倒する可能性があります。
+このメカニズムは、サービス拒否（DoS）攻撃から保護するように設計されています。DoS 攻撃では、バニティー URL 機能を悪用して、Dispatcher をリクエストで圧倒する可能性があります。
 
-よりシンプルな言い方では、 `/file` バニティー URL を含むは、まだ `/file` また、 `/file`の最終変更は、よりも長く前に行われました。 `/delay` 期間。
+簡単に言うと、バニティー URL を含む `/file` は、`/file` にまだ存在しない URL に対するリクエストが到着した場合と、`/file` の最後の変更が `/delay` 期間よりも前に行われた場合にのみ更新されます。
 
-リフレッシュを明示的にトリガーするには `/file`に値を指定した場合、必要な `/delay` 前回の更新から時間が経過しました。 この目的の URL の例を以下に示します。
+`/file` の更新を明示的にトリガーするには、前回の更新から必要な `/delay` 時間が経過したことを確認した後で、存在しない URL をリクエストできます。この目的の URL の例を以下に示します。
 
 - `https://dispatcher-host-name.com/this-vanity-url-does-not-exist`
 - `https://dispatcher-host-name.com/please-hand-me-that-planet-maestro`
 - `https://dispatcher-host-name.com/random-vanity-url`
 
-このアプローチにより、Dispatcher は `/file`( 指定した `/delay` 間隔は、最後の変更から経過しています。
+このアプローチでは、前回の変更から指定された `/delay` 間隔が経過した場合に、Dispatcher に `/file` の更新を強制します。
 
 応答のキャッシュを `/file` 引数（この例では `/tmp/vanity_urls`）に保存します。
 
-そのため、URI でAEMインスタンスにアクセスすると、取得内容が表示されます。
+そのため、URI で AEM インスタンスにアクセスすると、取得内容が表示されます。
 
-![/libs/granite/dispatcher/content/vanityUrls.htmlからレンダリングされたコンテンツのスクリーンショット](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
+![/libs/granite/dispatcher/content/vanityUrls.html からレンダリングされたコンテンツのスクリーンショット ](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
 文字通り、非常にシンプルなリストです
 

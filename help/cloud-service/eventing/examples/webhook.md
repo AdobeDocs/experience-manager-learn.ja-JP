@@ -1,6 +1,6 @@
 ---
-title: ウェブフックとAEMイベント
-description: Webhook でAEMイベントを受け取り、ペイロード、ヘッダー、メタデータなどのイベントの詳細を確認する方法を説明します。
+title: Web フックと AEM イベント
+description: Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 version: Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
@@ -11,90 +11,90 @@ duration: 156
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
-workflow-type: tm+mt
+exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '550'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Web フックと AEM イベント
 
-# ウェブフックとAEMイベント
-
-Webhook でAEMイベントを受け取り、ペイロード、ヘッダー、メタデータなどのイベントの詳細を確認する方法を説明します。
+Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
-この例では、Adobe提供の _ホスト型 webhook_ を使用すると、独自の Webhook を設定しなくてもAEMイベントを受け取ることができます。 このAdobe提供の Webhook は、 [グリッチ](https://glitch.com/):Web アプリケーションの構築とデプロイに役立つ Web ベースの環境を提供することで知られているプラットフォームです。 ただし、独自の Webhook を使用するオプションも使用できます。
+この例では、アドビが提供する&#x200B;_ホストされた web フック_&#x200B;を使用することで、独自の web フックを設定しなくても AEM イベントを受け取ることができます。このアドビが提供する web フックは、[Glitch](https://glitch.com/) でホストされています。Glitch は、web アプリケーションの構築とデプロイに役立つ web ベースの環境を提供することで知られるプラットフォームです。ただし、希望する場合は独自の web フックを使用することもできます。
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要です。
+このチュートリアルを完了するには、以下が必要になります。
 
-- AEMas a Cloud Service環境 [AEM Eventing enabled](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
 
-- [AEM Events 用に設定されたAdobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- [AEM イベント用に設定された Adobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Serviceイベントは、プレリリースモードで登録ユーザーのみが使用できます。 AEMのas a Cloud Service環境でAEMイベンティングを有効にするには、 [AEM-Eventing チーム](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
-## Webhook にアクセス
+## Web フックにアクセス
 
-Adobeが提供する Webhook にアクセスするには、次の手順に従います。
+アドビが提供する web フックにアクセスするには、次の手順に従います。
 
-- 次にアクセスできることを確認します： [問題 — ホストされた Webhook](https://lovely-ancient-coaster.glitch.me/) をクリックします。
+- 新しいブラウザータブで、[Glitch：ホストされた web フック](https://lovely-ancient-coaster.glitch.me/)にアクセスできることを確認します。
 
-  ![問題 — ホストされた Webhook](../assets/examples/webhook/glitch-hosted-webhook.png)
+  ![Glitch：ホストされた web フック](../assets/examples/webhook/glitch-hosted-webhook.png)
 
-- ウェブフックの一意の名前を入力します（例： ）。 `<YOUR_PETS_NAME>-aem-eventing` をクリックします。 **接続**. 次のようになります。 `Connected to: ${YOUR-WEBHOOK-URL}` メッセージが画面に表示されます。
+- Web フックに一意の名前（例：`<YOUR_PETS_NAME>-aem-eventing`）を入力し、「**Connect**」をクリックします。「`Connected to: ${YOUR-WEBHOOK-URL}`」というメッセージが画面に表示されます。
 
-  ![問題 — ウェブフックの作成](../assets/examples/webhook/glitch-create-webhook.png)
+  ![Glitch：web フックの作成](../assets/examples/webhook/glitch-create-webhook.png)
 
-- 次の項目をメモします。 **Webhook URL**. このチュートリアルの後半で必要になります。
+- **Web フック URL** をメモします。この情報は、このチュートリアルの後半で必要になります。
 
-## Adobe Developer Console Project での Webhook の設定
+## Adobe Developer Console プロジェクトでの web フックの設定
 
-上記の Webhook URL でAEMイベントを受け取るには、次の手順に従います。
+上記の web フック URL で AEM イベントを受け取るには、次の手順に従います。
 
-- Adobe Analytics の [Adobe Developer Console](https://developer.adobe.com)をクリックして開き、プロジェクトに移動します。
+- [Adobe Developer Console](https://developer.adobe.com) でプロジェクトに移動し、クリックして開きます。
 
-- の下 **製品とサービス** 「 」セクションで、省略記号をクリックします。 `...` をクリックし、AEMイベントを Webhook に送信する必要がある目的のイベントカードの横にある「 」をクリックし、 **編集**.
+- 「**製品とサービス**」セクションで、AEM イベントを web フックに送信するイベントカードの横にある省略記号 `...` をクリックして、「**編集**」を選択します。
 
   ![Adobe Developer Console プロジェクトの編集](../assets/examples/webhook/adobe-developer-console-project-edit.png)
 
-- 新しく開かれた **イベント登録の設定** ダイアログ、クリック **次へ** 先に進む **イベントの受信方法** 手順
+- 新しく開かれた&#x200B;**イベント登録の設定**&#x200B;ダイアログで、「**次へ**」をクリックして&#x200B;**イベントの受信方法**&#x200B;の手順に進みます。
 
   ![Adobe Developer Console プロジェクトの設定](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- Adobe Analytics の **イベントの受信方法** ステップ、選択 **ウェブフック** 」オプションを選択し、 **Webhook URL** Glitch がホストする webhook から先ほどコピーし、 **設定済みイベントを保存**.
+- **イベントの受信方法**&#x200B;のステップで、「**Web フック**」オプションを選択し、先ほどの Glitch のホストされた web フックからコピーした **web フック URL** を貼り付けて、「**設定済みイベントを保存**」をクリックします。
 
-  ![Adobe Developer Console Project Webhook](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
+  ![Adobe Developer Console プロジェクトの web フック](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- Glitch Webook ページには、GETリクエストが表示されます。これは、Webhook URL を検証するためにAdobe I/Oイベントによって送信されるチャレンジリクエストです。
+- Glitch の web フックページには、GET リクエストが表示されます。これは、web フック URL を検証するために Adobe I/O イベントによって送信されるチャレンジリクエストです。
 
-  ![問題 — チャレンジリクエスト](../assets/examples/webhook/glitch-challenge-request.png)
+  ![Glitch：チャレンジリクエスト](../assets/examples/webhook/glitch-challenge-request.png)
 
 
-## トリガーAEMイベント
+## AEM イベントをトリガー
 
-上記のAdobe Developer Console プロジェクトに登録されたAEMas a Cloud Service環境からAEMイベントをトリガーするには、次の手順に従います。
+上記の Adobe Developer Console プロジェクトで登録した AEM as a Cloud Service 環境から AEM イベントをトリガーするには、次の手順に従います。
 
-- を介してAEM as a Cloud Serviceオーサー環境にアクセスし、ログインします。 [Cloud Manager](https://my.cloudmanager.adobe.com/).
+- [Cloud Manager](https://my.cloudmanager.adobe.com/) から AEM as a Cloud Service オーサー環境にアクセスし、ログインします。
 
-- 次の条件に応じて、 **購読済みイベント**&#x200B;コンテンツフラグメントの作成、更新、削除、公開、非公開を行います。
+- **購読しているイベント**&#x200B;に応じて、コンテンツフラグメントの作成、更新、削除、公開、非公開を行います。
 
 ## イベントの詳細を確認
 
-上記の手順を完了すると、AEMイベントが Webhook に配信されていることがわかります。 Glitch の Webhook ページでPOSTリクエストを探します。
+上記の手順を完了すると、AEM イベントが web フックに配信されているのを確認できます。Glitch の web フックページで POST リクエストを探します。
 
-![エラー —POSTリクエスト](../assets/examples/webhook/glitch-post-request.png)
+![Glitch： POST リクエスト](../assets/examples/webhook/glitch-post-request.png)
 
-POST要求の主な詳細を次に示します。
+POST リクエストの主な詳細を次に示します。
 
-- パス： `/webhook/${YOUR-WEBHOOK-URL}`例： `/webhook/AdobeTM-aem-eventing`
+- path：`/webhook/${YOUR-WEBHOOK-URL}`（例：`/webhook/AdobeTM-aem-eventing`）
 
-- headers：リクエストヘッダー。Adobe I/Oイベントによって送信されます。次に例を示します。
+- headers：Adobe I/O イベントによって送信されるリクエストヘッダー。次に例を示します。
 
 ```json
 {
@@ -120,7 +120,7 @@ POST要求の主な詳細を次に示します。
 }
 ```
 
-- body/payload：リクエストイベントによって送信されるAdobe I/O本文。次に例を示します。
+- 本文／ペイロード：Adobe I/O Events から送信されるリクエスト本文。次に例を示します。
 
 ```json
 {
@@ -154,8 +154,8 @@ POST要求の主な詳細を次に示します。
 }
 ```
 
-AEMイベントの詳細に、Webhook でイベントを処理するために必要な情報がすべて含まれていることを確認できます。 例えば、イベントタイプ (`type`)，イベントソース (`source`)，イベント id (`event_id`)，イベント時刻 (`time`)、およびイベントデータ (`data`) をクリックします。
+Web フックでイベントを処理するために必要な情報がすべて AEM イベントの詳細に含まれていることがわかります。例えば、イベントタイプ（`type`）、イベントソース（`source`）、イベント ID（`event_id`）、イベント時刻（`time`）およびイベントデータ（`data`）などです。
 
 ## その他のリソース
 
-- [ウェブフックのソースコードの問題](https://glitch.com/edit/#!/lavery-encient-coaster) は参照可能です。
+- [Glitch web フックソースコード](https://glitch.com/edit/#!/lovely-ancient-coaster)が参照可能です。

@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — イベントでのイベントの公開、非公開Edge Delivery Services
-description: イベントでの公開および非公開時にトリガーされるEdge Delivery Services、およびこれらのイベントの使用例と例を確認します。
+title: Cloud 5 - Edge Delivery Services でのイベントの公開、非公開
+description: Edge Delivery Services での公開および非公開時にトリガーされるイベント、およびこれらのイベントを使用するユースケースと例を確認します。
 feature: Edge Delivery Services
 topic: Development
 version: Cloud Service
@@ -12,16 +12,16 @@ last-substantial-update: 2024-03-05T00:00:00Z
 jira: KT-15083
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
-workflow-type: tm+mt
+exl-id: 5f122412-ab70-4b54-b20b-726bc6138b2b
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '66'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Cloud 5 - Edge Delivery Services でのイベントの公開、非公開
 
-# Cloud 5 — イベントでのイベントの公開、非公開Edge Delivery Services
-
-イベントでの公開および非公開時にトリガーされるEdge Delivery Services、およびこれらのイベントの使用例と例を確認します。
+Edge Delivery Services での公開および非公開時にトリガーされるイベント、およびこれらのイベントを使用するユースケースと例を確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)

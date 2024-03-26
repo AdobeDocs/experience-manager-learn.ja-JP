@@ -10,9 +10,9 @@ doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 491
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1708'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 98%
 
 ベースラインインストールでは、次のデフォルトのキャッシュディレクトリを使用します。
 
-- オーサー
+- 作成者
    - `/mnt/var/www/author`
 - パブリッシャー
    - `/mnt/var/www/html`
@@ -316,7 +316,7 @@ Dispatcher モジュールの新しい機能は、キャッシュされた項目
 
 >[!NOTE]
 >
->AEMが TTL ヘッダーを送信するように設定して、Dispatcher がヘッダーを保持するようにする必要があることに注意してください。 この機能を切り替えると、AEM がキャッシュ制御ヘッダーを送信したファイルを削除するタイミングを Dispatcher が把握できるようになります。 AEM が TTL ヘッダーの送信を開始しない場合、Dispatcher は特別な処理を実行しません。
+>AEM で TTL ヘッダーを送信するように設定して、Dispatcher がヘッダーを保持するようにする必要があります。この機能を切り替えると、AEM がキャッシュ制御ヘッダーを送信したファイルを削除するタイミングを Dispatcher が把握できるようになります。 AEM が TTL ヘッダーの送信を開始しない場合、Dispatcher は特別な処理を実行しません。
 
 ## キャッシュフィルタールール
 
