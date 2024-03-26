@@ -1,6 +1,6 @@
 ---
-title: Designer を使用したシンプルなフォームの作成
-description: シンプルなフォームの作成について説明する短いビデオ（2 分以内）
+title: Designer を使用した簡単なフォームの作成
+description: 簡単なフォームの作成について説明する短いビデオ（2 分以内）
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -15,21 +15,21 @@ exl-id: ac482951-9941-4c14-95b2-29d274fa610e
 source-git-commit: c4181907c7b398d2ba1a8735a028695831aca90e
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 3%
+ht-degree: 90%
 
 ---
 
-# AEM Forms Designer を使用したシンプルなフォームの作成
+# AEM Forms Designer を使用した簡単なフォームの作成
 
 はじめに
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
 
-パート 1
+第 1 部
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
 
-パート 2
+第 2 部
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
 
