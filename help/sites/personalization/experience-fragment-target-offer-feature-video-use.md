@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 588
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Manager は、AEM と Target の間のパーソナライズ機�
 
 >[!NOTE]
 >
->`at.js` クライアント ライブラリを使用することをお勧めします。ベストプラクティスは、Experience Platform Launch、Adobe DTM やサードパーティのタグ管理ソリューションなどのタグ管理ソリューションを使用して、ターゲットライブラリをサイトページに追加することです。
+>使用を推奨 `at.js` クライアントライブラリとベストプラクティスは、Adobe Experience Platformのタグなどのタグ管理ソリューションやサードパーティのタグ管理ソリューションを使用して、サイトのページに target ライブラリを追加することです
 
 
 * Adobe Experience Manager の使いやすく強力なコンテンツ作成メカニズムと、Adobe Target の人工知能（AI）および機械学習を組み合わせて使用すると、コンテンツ作成者はすべてのチャネルのコンテンツを一元的に作成および管理することができます。 エクスペリエンスフラグメントを HTML オファーとして Adobe Target に書き出す機能により、マーケターはこれらのオファーを使用して、高度にパーソナライズされたエクスペリエンスをより柔軟に作成できるようになり、作成した各エクスペリエンスをテストおよびスケールできるようになりました。

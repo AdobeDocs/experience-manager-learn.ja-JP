@@ -10,10 +10,10 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 duration: 357
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '358'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 88%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> AEM の従来のクラウドサービスと Adobe Target の連携は、AEM オーサーから Adobe Target への直接のバックエンド接続を確立して、AEM から Target にコンテンツを公開しやすくするために&#x200B;**のみ**&#x200B;使用します。Adobe Launch は、AEM から提供される公開 web サイトエクスペリエンスに Adobe Target を表示するために使用します。
+> AEM の従来のクラウドサービスと Adobe Target の連携は、AEM オーサーから Adobe Target への直接のバックエンド接続を確立して、AEM から Target にコンテンツを公開しやすくするために&#x200B;**のみ**&#x200B;使用します。Adobe Experience Platformのタグは、AEMが提供する、公開されている Web サイトエクスペリエンス上でAdobe Targetを公開するために使用されます。
 
 AEM エクスペリエンスフラグメントオファーを使用してパーソナライゼーションアクティビティを強化するには、次の章に進み、従来のクラウドサービスを使用して AEM と Adobe Target を統合します。この統合は、AEM からエクスペリエンスフラグメントを HTML／JSON オファーとして Target にプッシュし、ターゲットオファーと AEM の同期を保つために必要です。この統合は、[概要の節で説明したシナリオ 1](./overview.md#personalization-using-aem-experience-fragment) を実装するために必要です。
 
@@ -40,7 +40,7 @@ AEM エクスペリエンスフラグメントオファーを使用してパー�
 
      >[!NOTE]
      >
-     > 顧客は、[アドビサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に依頼して Experience Platform Launch と Adobe I/O をプロビジョニングするか、システム管理者に連絡する必要があります。
+     > 顧客は、からのデータ収集とAdobe I/Oを使用してプロビジョニングする必要がある [Adobeのサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) または、システム管理者に問い合わせてください。
 
 ### AEM と Adobe Target の統合
 

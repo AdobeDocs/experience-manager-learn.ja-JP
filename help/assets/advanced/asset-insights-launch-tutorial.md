@@ -1,6 +1,6 @@
 ---
-title: AEM Assets と Adobe Launch を使用したアセットインサイトのセットアップ
-description: この 5 部構成のビデオシリーズでは、Launch By Adobe を介してデプロイされた Experience Manager 用のアセットインサイトのセットアップと設定について順を追って説明します。
+title: AEM Assetsとタグを使用したアセットインサイトの設定
+description: この 5 部構成のビデオシリーズでは、タグを使用してデプロイされたExperience Manager用のアセットインサイトの設定と設定について説明します。
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -12,16 +12,16 @@ badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-tit
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '811'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 87%
 
 ---
 
-# AEM Assets と Adobe Experience Platform Launch を使用したアセットインサイトのセットアップ
+# AEM Assetsとタグを使用したアセットインサイトの設定
 
-この 5 部構成のビデオシリーズでは、Adobe Launch を介してデプロイされた Experience Manager 用のアセットインサイトのセットアップと設定について順を追って説明します。
+この 5 部構成のビデオシリーズでは、タグを使用してデプロイされたExperience Manager用のアセットインサイトの設定と設定について説明します。
 
 ## 第 1 部：アセットインサイトの概要 {#overview}
 
@@ -71,7 +71,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
+Adobe Analytics レポートスイート用に、リアルタイムデータ収集と AEM アセットレポートを有効にする必要があります。AEM アセットレポートを有効にすると、アセットインサイトを追跡するための Analytics 変数が予約されます。
 
 AEM アセットインサイトの設定の場合は、以下の資格情報が必要です。
 
@@ -81,15 +81,15 @@ AEM アセットインサイトの設定の場合は、以下の資格情報が�
 * 共有暗号鍵（*Adobe Analytics／管理者／会社設定／web サービス*&#x200B;で取得可能）。
 * レポートスイート（必ずアセットレポートへの使用に適したレポートスイートを選択してください）
 
-## 第 4 部：Adobe Experience Platform Launch を使用した Adobe Analytics 拡張機能の追加 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## パート 4: Adobe Analytics拡張機能の追加にタグを使用する {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-Adobe Analytics 拡張機能の追加、ページ読み込みルールの作成および Adobe IMS テクニカルアカウントを使用した AEMと Launch の統合。
+Adobe Analytics拡張機能の追加、ページ読み込みルールの作成、AEMとタグの統合 ( タグ付きAdobe IMS) テクニカルアカウント。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 >
->必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
+必ず、すべての変更をオーサーインスタンスからパブリッシュインスタンスにレプリケートしてください。
 
 ### ルール 1：ページトラッカー（pagetracker.js） {#rule-page-tracker-pagetracker-js}
 
@@ -175,13 +175,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 ### コンソールデバッグステートメント {#console-debug-statements}
 
 ```javascript
-//Launch Build Info
+// Tags build info
 _satellite.buildInfo
 
 //Enables debug messages
 _satellite.setDebug(true);
 
-//Asset Insight JS Object
+//Asset Insight JavaScript Object
 assetAnalytics
 
 //List of trackable images
@@ -190,10 +190,8 @@ document.querySelectorAll(".cmp-image__image");
 
 ビデオでは、Analytics をデバッグする方法として、2 つの Google Chrome ブラウザー拡張機能に言及しています。その他のブラウザーでも同様の拡張機能を使用できます。
 
-* [Launch 切り替え Chrome 拡張機能](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=ja)
-* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Chrome 拡張機能「[Launch と DTM の切り替え](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=ja)」を使用して、DTM をデバッグモードに切り替えることもできます。これにより、DTM のデプロイメントに関連するエラーが発生したかどうかを簡単に確認できます。さらに、次のスニペットを追加することで、任意のブラウザーから&#x200B;*開発者ツール／JS コンソール*&#x200B;を通じて DTM を手動でデバッグモードに切り替えることができます。
 
 ## パート 5：Analytics トラッキングのテストとインサイトデータの同期{#analytics-tracking-asset-insights}
 

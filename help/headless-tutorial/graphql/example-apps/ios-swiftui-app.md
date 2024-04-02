@@ -13,10 +13,10 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 duration: 308
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -52,7 +52,7 @@ iOS アプリケーションは __AEM パブリッシュ__&#x200B;環境に接�
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. [Xcode](https://developer.apple.com/xcode/) を起動し、フォルダー `ios-app` を開きます。
+1. 開く [Xcode](https://developer.apple.com/xcode/) フォルダーを開きます。 `ios-app`
 1. `Config.xcconfig` ファイルを変更し、ターゲットの AEM パブリッシュサービスに一致するように `AEM_SCHEME` と `AEM_HOST` を更新します。
 
    ```plain

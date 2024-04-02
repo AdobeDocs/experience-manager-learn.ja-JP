@@ -1,6 +1,6 @@
 ---
 title: Target 呼び出しの読み込みと実行
-description: Experience Platform Launch ルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。Adobe Client Data Layer を使用してページ情報を取得し、パラメーターとして渡すことで、訪問者の web ページでの体験に関するデータを収集、保存、そのデータに容易にアクセスすることができます。
+description: タグルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページから Target 呼び出しを実行する方法について説明します。
 feature: Core Components, Adobe Client Data Layer
 version: Cloud Service
 jira: KT-6133
@@ -13,28 +13,28 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 610
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '587'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 58%
 
 ---
 
 # Target 呼び出しの読み込みと実行 {#load-fire-target}
 
-Experience Platform Launch ルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。web ページの情報を取得し、Adobe Client Data Layer を使用してパラメーターとして渡すことで、web ページでの訪問者の体験に関するデータを収集、保存し、そのデータに容易にアクセスできるようにします。
+タグルールを使用して、ページリクエストにパラメーターを読み込み、渡し、サイトページから Target 呼び出しを実行する方法について説明します。 web ページの情報を取得し、Adobe Client Data Layer を使用してパラメーターとして渡すことで、web ページでの訪問者の体験に関するデータを収集、保存し、そのデータに容易にアクセスできるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## ページ読み込みルール
 
-Adobe Client Data Layer は、イベント駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、`cmp:show` イベントがトリガーされます。ビデオでは、カスタムイベントを使用して `Launch Library Loaded` ルールを呼び出しています。次に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
+Adobe Client Data Layer は、イベント駆動型のデータレイヤーです。AEM ページデータレイヤーが読み込まれると、`cmp:show` イベントがトリガーされます。ビデオでは、カスタムイベントを使用して `tags Library Loaded` ルールを呼び出しています。次に、カスタムイベントとデータ要素に使用されるコードスニペットを示します。
 
 ### カスタムページ表示イベント{#page-event}
 
 ![表示されるページのイベント設定とカスタムコード](assets/load-and-fire-target-call.png)
 
-Experience Platform Launch プロパティで、新しい&#x200B;**イベント**&#x200B;を&#x200B;**ルール**&#x200B;に追加します。
+tags プロパティで、新しい **イベント** から **ルール**
 
 + __拡張機能：__&#x200B;コア
 + __イベントタイプ：__&#x200B;カスタムコード
@@ -53,7 +53,7 @@ var pageShownEventHandler = function(coreComponentEvent) {
         // Debug the AEM Component path the show event is associated with
         console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
 
-        // Create the Launch Event object
+        // Create the tags Event object
         var launchEvent = {
             // Include the ID of the AEM Component that triggered the event
             id: coreComponentEvent.eventInfo.path,
@@ -61,14 +61,14 @@ var pageShownEventHandler = function(coreComponentEvent) {
             component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
         };
 
-        //Trigger the Launch Rule, passing in the new `event` object
-        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // Trigger the tags Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other tags data elements
         // i.e `event.component['someKey']`
         trigger(launchEvent);
    }
 }
 
-// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+// With the AEM Core Component event handler, that proxies the event and relevant information to Data Collection, defined above...
 
 // Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-カスタム関数は `pageShownEventHandler` を定義し、AEM コアコンポーネントが発するイベントをリッスンし、コアコンポーネントの関連情報を導き出し、イベントオブジェクトにパッケージし、ペイロードに導き出したイベント情報で Experience Platform Launch イベントをトリガーします。
+カスタム関数は、 `pageShownEventHandler`は、AEMコアコンポーネントから発行されるイベントをリッスンし、コアコンポーネントから関連情報を導出し、それをイベントオブジェクトにパッケージ化し、ペイロードに派生イベント情報を持つタグ Event をトリガー化します。
 
-Experience Platform Launch ルールは Experience Platform Launch の`trigger(...)`関数を使用してトリガーされます。この関数は、ルールのイベント のカスタムコードのコードスニペット定義内で&#x200B;__のみ__&#x200B;利用可能です。
+タグルールは、タグの `trigger(...)` 関数 __のみ__ は、ルールのイベントのカスタムコードスニペット定義内から使用できます。
 
-`trigger(...)` 関数は、イベントオブジェクトをパラメーターとして受け取ります。このオブジェクトは、Experience Platform Launch データ要素の中で、`event` という別の予約名で公開されています。Experience Platform Launch のデータ要素は、`event.component['someKey']`のような構文を使用して、`event`オブジェクトからこのイベントオブジェクトのデータを参照できるようになりました。
+The `trigger(...)` 関数は、イベントオブジェクトをパラメーターとして取り、そのパラメーターがタグデータ要素に公開されます。このパラメーターは、データ要素内の別の予約名 ( `event`. タグのデータ要素は、 `event` のような構文を使用したオブジェクト `event.component['someKey']`.
 
-`trigger(...)`がイベントのカスタムコードイベントタイプのコンテキスト外（例えばアクション内）で使用された場合、JavaScript エラー`trigger is undefined`が Experience Platform Launch プロパティと統合された web サイト上で投げられます。
+次の場合 `trigger(...)` は、イベントのカスタムコードイベントタイプ（アクション内など）のコンテキスト外で使用され、JavaScript エラー `trigger is undefined` tags プロパティと統合された Web サイトで発生します。
 
 
 ### データ要素
 
 ![データ要素](assets/data-elements.png)
 
-Adobe Experience Platform Launch データ要素は、カスタムページ表示イベント [でトリガーされたイベントオブジェクト](#page-event) のデータを、コア拡張のカスタムコードデータ要素タイプを通じて、Adobe Target で利用可能な変数にマッピングします。
+タグのデータ要素は、イベントオブジェクトからのデータをマッピングします [カスタムの「ページ表示」イベントでトリガーされます。](#page-event) をAdobe Targetで使用できる変数に追加する必要があります（Core 拡張機能のカスタムコードデータ要素タイプを使用）。
 
 #### ページ ID データ要素
 

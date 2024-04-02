@@ -14,10 +14,10 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1235'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '1232'
+ht-degree: 91%
 
 ---
 
@@ -45,7 +45,7 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 + データ管理の&#x200B;**スキーマ**&#x200B;にアクセスします。
 + データ管理の&#x200B;**データセット**&#x200B;にアクセスします。
 + データ管理の&#x200B;**データストリーム**&#x200B;にアクセスします。
-+ データ収集で、**Tags**（旧称：Experience Platform Launch）にアクセスします。
++ アクセス先 **タグ** （データ収集）
 
 必要な権限がない場合は、[Adobe Admin Console](https://adminconsole.adobe.com/) を使用して、システム管理者が必要な権限を付与できます。
 
@@ -75,7 +75,7 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 
 ## タグプロパティの作成 - Experience Platform
 
-Experience Platform でタグ（旧称 Experience Platform Launch）のプロパティを作成し、Web SDK JavaScript ライブラリを WKND web サイトに追加する方法について説明します。新しく定義されたタグプロパティには、次のリソースが含まれています。
+Web SDK JavaScript ライブラリを WKND Web サイトに追加するために、Experience Platformでタグプロパティを作成する方法について説明します。 新しく定義されたタグプロパティには、次のリソースが含まれています。
 
 + タグ拡張：[コア](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)および [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + データ要素：WKND サイトの Adobe Client Data Layer を使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。および、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に「[XDM スキーマを作成](#create-xdm-schema---experience-platform)」手順で作成）
@@ -139,26 +139,26 @@ Experience Platform でタグ（旧称 Experience Platform Launch）のプロパ
   var pageShownEventHandler = function(evt) {
   // defensive coding to avoid a null pointer exception
   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-      //trigger Launch Rule and pass event
+      // trigger tags Rule and pass event
       console.debug("cmp:show event: " + evt.eventInfo.path);
       var event = {
-          //include the path of the component that triggered the event
+          // include the path of the component that triggered the event
           path: evt.eventInfo.path,
-          //get the state of the component that triggered the event
+          // get the state of the component that triggered the event
           component: window.adobeDataLayer.getState(evt.eventInfo.path)
       };
   
-      //Trigger the Launch Rule, passing in the new 'event' object
-      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // Trigger the tags Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other tags data elements
       // i.e 'event.component['someKey']'
       trigger(event);
       }
   }
   
-  //set the namespace to avoid a potential race condition
+  // set the namespace to avoid a potential race condition
   window.adobeDataLayer = window.adobeDataLayer || [];
   
-  //push the event listener for cmp:show into the data layer
+  // push the event listener for cmp:show into the data layer
   window.adobeDataLayer.push(function (dl) {
       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
       dl.addEventListener("cmp:show", pageShownEventHandler);
@@ -174,9 +174,9 @@ AEM Core Components と Adobe Client Data Layer の統合に関する追加情�
 
 ## タグプロパティを AEM に接続
 
-AEM の Adobe IMS および Adobe 起動設定を使用して、最近作成したタグプロパティを AEM にリンクする方法を説明します。AEM as a Cloud Service 環境が確立されると、Adobe Experience Platform Launch を含む、複数の Adobe IMS テクニカルアカウントの設定が自動的に生成されます。ただし、AEM 6.5 バージョンの場合は、手動で設定する必要があります。
+AEMのAdobe Experience Platform設定でAdobe IMSとタグを使用して、最近作成したタグプロパティをAEMにリンクする方法を説明します。 AEMas a Cloud Service環境が確立されると、タグを含む複数のAdobe IMSテクニカルアカウント設定が自動的に生成されます。 ただし、AEM 6.5 バージョンの場合は、手動で設定する必要があります。
 
-タグプロパティをリンクした後、WKND サイトは、Adobe Experience Platform Launch のクラウドサービス設定を使用して、タグプロパティの JavaScript ライブラリを web ページに読み込むことができるようになります。
+タグプロパティをリンクすると、WKND サイトは、 Adobe Experience Platform Cloud Service 設定のタグを使用して、タグプロパティの JavaScript ライブラリを Web ページに読み込むことができます。
 
 ### WKND へのタグプロパティの読み込みを検証
 

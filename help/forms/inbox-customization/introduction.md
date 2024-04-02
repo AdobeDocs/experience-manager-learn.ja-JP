@@ -11,10 +11,10 @@ level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 54
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -32,8 +32,8 @@ Experience Manager インボックスをカスタマイズして、列のデフ�
 
 ## 列をカスタマイズ
 
-[Experience Platform Launch AEM インボックス](http://localhost:4502/aem/inbox)
-以下のスクリーンショットに示すように、_リスト表示_&#x200B;アイコンをクリックしてから&#x200B;_管理者制御_&#x200B;を選択して、管理者制御を開きます。
+[AEMインボックスを開く](http://localhost:4502/aem/inbox)
+Admin Control を開くには、 _リスト表示_ アイコンと選択 _管理コントロール_ 下のスクリーンショットに示すように
 
 ![admin-control](assets/open-customization.png)
 

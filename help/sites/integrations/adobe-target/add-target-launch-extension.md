@@ -1,6 +1,6 @@
 ---
-title: Launch プロパティに Target 拡張機能を追加する
-description: Adobe Experience Platform Launch プロパティに Adobe Target 拡張機能を追加する方法を説明します。
+title: タグプロパティへの Target 拡張機能の追加
+description: tags プロパティにAdobe Target拡張機能を追加する方法を説明します。
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -13,18 +13,18 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 297
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '100'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 41%
 
 ---
 
-# Launch プロパティに Target 拡張機能を追加する {#adobe-target-extension}
+# タグプロパティへの Target 拡張機能の追加 {#adobe-target-extension}
 
-このビデオを進めるには、[AEM と Experience Platform Launch を統合](../experience-platform/data-collection/tags/overview.md)している必要があります。
+このビデオに従うには、既に [Adobe Experience PlatformとAEMの統合タグ](../experience-platform/data-collection/tags/overview.md).
 
-Experience Platform Launch を使用して Adobe Target を AEM web サイトで有効にする方法を説明します。
+タグを使用してAdobe TargetをAEM Web サイトに有効にする方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

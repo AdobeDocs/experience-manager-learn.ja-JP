@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 99%
+source-wordcount: '498'
+ht-degree: 95%
 
 ---
 
@@ -137,12 +137,12 @@ ht-degree: 99%
       + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Platform Web SDK を使用した分析](integrations/platform/analytics-using-web-sdk.md)
-   + Experience Platform データ収集タグ（Experience Platform Launch）{#experience-platform-data-collection-tags}
+   + Adobe Experience Platformのタグ {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [IMS を使用した AEM とタグプロパティの接続](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [AEM Experience Platform Launch クラウドサービスの作成](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [タグ（Experience Platform Launch）実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [「AEM Tags」Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [タグ実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client Data Layer {#adobe-client-data-layer}
       + [Adobe Client Data Layer の使用](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Adobe Client Data Layer のカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -152,7 +152,7 @@ ht-degree: 99%
       + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概要](integrations/adobe-target/overview.md)
-      + [Launch プロパティへのターゲット式の追加](integrations/adobe-target/add-target-launch-extension.md)
+      + [タグプロパティに Target 拡張機能を追加](integrations/adobe-target/add-target-launch-extension.md)
       + [Target 呼び出しの読み込みと実行](integrations/adobe-target/load-and-fire-target.md)
       + [Adobe Target Cloud Service アカウントの作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [Adobe Target へのエクスペリエンスフラグメントの書き出し](integrations/adobe-target/export-experience-fragment-target.md)

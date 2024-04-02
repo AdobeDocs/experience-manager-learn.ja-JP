@@ -12,18 +12,14 @@ badgeIntegration: label="統合" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 527
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1795'
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '1750'
 ht-degree: 100%
 
 ---
 
-# クリックされたコンポーネントの Adobe Analytics でのトラック
-
->[!NOTE]
->
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされました。その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja)を参照してください。
+# クリックされたコンポーネントの Adobe Analytics での追跡
 
 イベント駆動型の [Adobe Client Data Layer を AEM コアコンポーネントと共に](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=ja)使用して、Adobe Experience Manager サイト上にある特定のコンポーネントのクリックをトラックします。タグプロパティのルールを使用してクリックイベントをリッスンし、コンポーネントでフィルタリングして、リンクのトラックビーコンと共にデータを Adobe Analytics に送信する方法について説明します。
 
@@ -151,7 +147,7 @@ Adobe Client Data Layer は、**イベント**&#x200B;駆動型のデータレ�
 
    `event` オブジェクトは、カスタムイベントで呼び出された `trigger()` メソッドから渡されます。`component` オブジェクトは、データレイヤー `getState()` メソッドから派生したコンポーネントの現在の状態で、クリックをトリガーした要素です。
 
-1. 変更を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
+1. 変更を保存し、タグプロパティで[ビルド](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=ja)を実行して、AEM サイトで使用する[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja)にコードを昇格します。
 
    >[!NOTE]
    >

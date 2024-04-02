@@ -5,10 +5,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b879d8e3493599aeecad27f27b0b907c883a0635
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 90%
+ht-degree: 87%
 
 ---
 
@@ -61,7 +61,7 @@ AEM Assetsとは何か、および組織のビジネス目標の達成にどの�
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>Experience Platform Launch でのAEM アセットインサイトの使用</strong>
+      <strong>タグでのAEM Asset Insights の使用</strong>
       </a>
    </div>
    <p>

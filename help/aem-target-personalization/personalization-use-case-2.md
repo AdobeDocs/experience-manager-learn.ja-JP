@@ -10,14 +10,14 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '580'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 95%
 
 ---
 
-# Adobe Target を使用した完全な web ページエクスペリエンスのパーソナライズ機能
+# Adobe Targetを使用した完全な Web ページエクスペリエンスのパーソナライゼーション
 
 前の章では、エクスペリエンスフラグメントとして作成され、AEM から HTML オファーとして書き出されたコンテンツを使用して、Adobe Target 内で位置情報ベースのアクティビティを作成する方法について説明しました。
 
@@ -27,14 +27,14 @@ ht-degree: 100%
 
 WKND サイトはホームページのデザインを一新し、現在のホームページの訪問者を新しいホームページにリダイレクトしたいと考えています。 同時に、再設計されたホームページがユーザーエンゲージメントと収益の改善にどのように役立つかも把握する必要があります。 マーケターは、訪問者を新しいホームページにリダイレクトするアクティビティを作成するタスクを割り当てられています。 WKND サイトのホームページを参照し、Adobe Target を使用してアクティビティを作成する方法を確認していきましょう。
 
-### 関係するユーザー
+### 関連するユーザー
 
 この演習では、次のユーザーが関与し、管理者アクセスが必要なタスクを実行する必要があります。
 
 * **コンテンツプロデューザー／コンテンツ編集者**（Adobe Experience Manager）
 * **マーケター**（Adobe Target／最適化チーム）
 
-### WKND サイトのホームページ
+### WKND サイトホームページ
 
 ![AEM Target シナリオ 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
@@ -42,13 +42,13 @@ WKND サイトはホームページのデザインを一新し、現在のホー
 
 * **AEM**
    * それぞれがローカルホスト 4502 と 4503 で実行中の [AEM オーサーインスタンスとパブリッシュインスタンス](./implementation.md#getting-aem)。
-   * [Adobe Experience Platform Launch を使用して Adobe Target と統合された AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [タグを使用してAdobe Targetと統合されたAEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 組織の Adobe Experience Cloud にアクセス - `https://<yourcompany>.experiencecloud.adobe.com`
    * 次のソリューションをプロビジョニングされた Experience Cloud
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-## コンテンツエディターアクティビティ
+## コンテンツエディターのアクティビティ
 
 1. マーケターは、AEM コンテンツエディターで WKND ホームページのデザイン刷新に関するディスカッションを開始し、要件の詳細を説明します。
    * ***要件***：カードベースのデザインで WKND サイトのホームページのデザインを刷新します。

@@ -10,10 +10,10 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
 duration: 219
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '846'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -46,7 +46,7 @@ AEM は、パーソナライズされたコンテンツを作成し、すべて�
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [Launch とAdobe I/O を使用した AEM と Adobe Target の統合](./implementation.md#integrating-aem-target-options)
+* [タグとAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 * [レガシーのクラウドサービスを使用する AEM と Adobe Target](./implementation.md#integrating-aem-target-options)
 
 ***上記の統合を実装したところで、今度は[詳細なシナリオ](./personalization-use-case-1.md)を見ていきましょう。***
@@ -67,7 +67,7 @@ VEC は Adobe Target の主な機能の 1 つです。 VEC を使用すると、
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [Launch とAdobe I/O を使用した AEM と Adobe Target の統合](./implementation.md#integrating-aem-target-options)
+* [タグとAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 
 ***上記の統合を実装したところで、ここからは[シナリオの詳細](./personalization-use-case-3.md)***&#x200B;を見ていきましょう
 
@@ -85,6 +85,6 @@ Adobe Experience Manager と Adobe Target の統合は、サイトのユーザ�
 
 **このシナリオを実装するには、次の操作が必要です。**
 
-* [Launch とAdobe I/O を使用した AEM と Adobe Target の統合](./implementation.md#integrating-aem-target-options)
+* [タグとAdobe I/Oを使用したAEMとAdobe Targetの統合](./implementation.md#integrating-aem-target-options)
 
-***上記の統合を実装した後、[詳しいシナリオ](./personalization-use-case-2.md)***&#x200B;を参照してください。
+***上記の統合を実装したところで、ここからは[シナリオの詳細](./personalization-use-case-2.md)***&#x200B;を見ていきましょう

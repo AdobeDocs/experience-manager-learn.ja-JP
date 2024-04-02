@@ -6,10 +6,10 @@ sub-product: Experience Manager Sites
 version: 6.5
 index: y
 jira: KT-2214
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -22,5 +22,5 @@ ht-degree: 100%
 + [完全な web ページエクスペリエンスのパーソナライズ機能](./personalization-use-case-2.md)
 + 実装 {#aem-target-implementation}
    + [はじめに](./implementation.md)
-   + [Launch とAdobe I/O を使用した AEM と Adobe Target](./using-launch-adobe-io.md)
+   + [タグとAdobe I/Oを使用したAEMとAdobe Target](./using-launch-adobe-io.md)
    + [レガシーのクラウドサービスを使用する AEM と Adobe Target](./using-aem-cloud-services.md)
