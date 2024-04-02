@@ -12,10 +12,10 @@ last-substantial-update: 2023-12-06T00:00:00Z
 jira: KT-14645
 thumbnail: 3425972.jpeg
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '86'
-ht-degree: 100%
+source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 76%
 
 ---
 
@@ -25,4 +25,4 @@ Adobe Express を使用して、Adobe Experience Manager Assets 内でコンテ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-[Adobe Express 用 AEM Assets アドオン](./adobe-express-aem-assets-add-on.md)を設定して Adobe Express から AEM Assets にシームレスにアクセスする方法について説明します。
+設定方法を学ぶ [AEM AssetsとAdobe Expressのネイティブ統合](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) を使用して、Adobe ExpressからAEM Assetsにシームレスにアクセスできます。
