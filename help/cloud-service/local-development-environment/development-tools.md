@@ -11,10 +11,10 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3592
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1278'
-ht-degree: 100%
+source-git-commit: 23ae098a1fcb2e6c47fee30f6f45b10e7ff97824
+workflow-type: tm+mt
+source-wordcount: '1301'
+ht-degree: 93%
 
 ---
 
@@ -199,17 +199,34 @@ Adobe I/O Cloud Manager プラグインを使用すると、aio CLI で `aio clo
 Adobe I/O CLI が Cloud Manager と通信するには、[Adobe I/O コンソールで Cloud Manager 統合を作成](https://github.com/adobe/aio-cli-plugin-cloudmanager)し、正常に認証するために資格情報を取得する必要があります。
 
 1. [console.adobe.io](https://console.adobe.io) にログインする
-1. 接続先の Cloud Manager 製品を含む組織が Adobe Org スイッチャーでアクティブになっていることを確認する
+1. 接続先の Cloud Manager 製品を含む組織が、組織切り替えボタンでアクティブになっていることをAdobeします。
 1. [Adobe I/O プログラム](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)を新規作成するか、既存のものを開く
-   + Adobe I/O コンソールプログラムは統合を組織的にグループ化したものであり、統合を管理する方法に基づいて、プログラムを作成または既存のものを使用します。
+   + Adobe I/Oコンソールプロジェクトは、統合の管理方法に基づいて、統合、作成または使用および既存のプロジェクトの単なる組織的なグループです。
    + 新規プロジェクトを作成する場合は、プロンプトが表示されたら「空のプロジェクト」を選択します（「テンプレートから作成」は選択しない）。
    + Adobe I/O コンソールプログラムは、Cloud Manager プログラムと概念が異なります。
-1. 「開発者 - Cloud Service」プロファイルを使用して、新規の Cloud Manager API 統合を作成する
+1. 新しい Cloud Manager API 統合の作成
+   + 非推奨の「サービスアカウント (JWT)」認証タイプを選択します（現時点では、CLI で OAuth がサポートされていません）。
+   + キーを作成またはアップロードします。
+   + 製品プロファイル「Developer - Developer」をCloud Service
 1. Adobe I/O CLI の [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) に入力するために必要なサービスアカウント（JWT）資格情報を取得する
+
+   ```json
+   //config.json 
+   {
+      "client_id": "Client ID from Service Account (JWT) credential",
+      "client_secret": "Client Secret from Service Account (JWT) credential",
+      "technical_account_id": "Technical Account ID from Service Account (JWT) credential",
+      "ims_org_id": "Organization ID from Service Account (JWT) credential",
+      "meta_scopes": [
+        "ent_cloudmgr_sdk"
+      ]
+   }
+   ```
+
 1. `config.json` ファイルを Adobe I/O CLI に読み込む
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./path/to/config.json --file --json`
 1. `private.key` ファイルを Adobe I/O CLI に読み込む
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./path/to/private.key --file`
 
 Adobe I/O CLI を使用して Cloud Manager の[コマンドの実行](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)を開始します。
 
