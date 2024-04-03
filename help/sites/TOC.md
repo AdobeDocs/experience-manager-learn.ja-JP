@@ -9,7 +9,7 @@ version: 6.4, 6.5, Cloud Service
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 95%
    + 他のユーザーから学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + 生成 AI {#generative-ai}
-   + [バリエーションを生成](./generative-ai/generate-variations.md)
+   + [バリエーションの生成](./generative-ai/generate-variations.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
