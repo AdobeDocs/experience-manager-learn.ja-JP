@@ -10,8 +10,8 @@ level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 446
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
+workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%
 
@@ -21,11 +21,11 @@ ht-degree: 100%
 
 AEM Forms 6.5 では、複数系列グラフを作成および設定する機能が導入されました。複数系列グラフは、通常、折れ線グラフ、棒グラフ、列グラフの種類に関連して使用されます。次のグラフは、複数系列グラフの良い例です。このグラフは、10,000 米ドルを 3 種類の投資信託に投資した場合の、一定期間の成長を示しています。AEM Formsでこのようなグラフを作成して使用するには、適切なフォームデータモデルを作成する必要があります。
 
-![複数系列グラフ](assets/seriescharts.jfif)
+![複数系列グラフ](assets/series_charts.png)
 
 AEM Forms で複数系列のグラフを作成するには、必要なエンティティとエンティティ間の関連付けを持つ適切なフォームデータモデルを作成する必要があります。次のスクリーンショットは、エンティティと 3 つのエンティティ間の関連付けを示しています。トップレベルでは、Fund エンティティと 1 対多の関連を持つ「組織」というエンティティがあります。次に、Fund エンティティは Performance エンティティと 1 対多の関連があります。
 
-![フォームデータモデル](assets/formdatamodel.jfif)
+![フォームデータモデル](assets/form_data_model.png)
 
 ## 複数系列グラフ用のフォームデータモデルの作成
 

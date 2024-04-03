@@ -10,8 +10,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 97
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
+workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 100%
 
@@ -28,7 +28,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 1. OData サービス
 
 AEM Forms と Marketo の統合には、RESTful web サービスを使用しています。 統合の最初のステップは、[ データソース](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices)の設定です。このチュートリアルの一部として提供されている Swagger ファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
-![データソース](assets/datasource.jfif)
+![データソース](assets/datasource.png)
 
 「marketo.json」は Swagger ファイルです（このチュートリアルのアセットの一部として提供されます）。
 Host プロパティは Marketo インスタンスに固有です。
@@ -51,7 +51,7 @@ Host プロパティは Marketo インスタンスに固有です。
 1. 「サービス」タブに移動します。
 1. 表示される唯一のサービスを選択し、「テストサービス」をクリックします。
 1. 有効な leadId を入力し、「テスト」をクリックします。 すべてがうまくいけば、下のスクリーンショットに示すように、リードの詳細が返されます。
-   ![testresults](assets/testresults.jfif)
+   ![testresults](assets/testresults.png)
 
 ## 次の手順
 
