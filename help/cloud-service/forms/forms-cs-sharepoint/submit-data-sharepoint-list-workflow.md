@@ -1,6 +1,6 @@
 ---
-title: ワークフローステップを使用してSharePointリストにデータを送信
-description: FDM ワークフローを呼び出しステップを使用して、SharePoint リストにデータを挿入します
+title: ワークフローステップを使用して SharePoint リストにデータを送信
+description: FDM を呼び出しワークフローステップを使用して SharePoint リストにデータを挿入
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,37 +8,38 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-15126
-source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
-workflow-type: tm+mt
+exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
+source-git-commit: c2b969829dc44e8235abafe0b53040b9c50fb91b
+workflow-type: ht
 source-wordcount: '245'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# FDM を起動ワークフローステップを使用してSharePointリストにデータを挿入
+# FDM 呼び出しワークフローステップを使用して SharePoint リストにデータを挿入
 
 
-この記事では、AEMワークフローの FDM を起動ステップを使用して、SharePointリストにデータを挿入するために必要な手順を説明します。
+この記事では、AEM ワークフローの FDM 呼び出しステップを使用して SharePoint リストにデータを挿入するために必要なステップについて説明します。
 
-この記事は、 [アダプティブフォームがSharePointリストにデータを送信するように正常に設定されました。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=ja#connect-af-sharepoint-list)
+この記事は、[SharePoint リストにデータを送信するようにアダプティブフォームが正常に設定されている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=ja#connect-af-sharepoint-list)ことを前提としています。
 
 
-## SharePointリストのデータソースに基づいてフォームデータモデルを作成する
+## SharePoint リストデータソースに基づいてフォームデータモデルを作成
 
-* SharePointリストのデータソースに基づいて、新しいフォームデータモデルを作成します。
-* 適切なモデルを追加し、フォームデータモデルの get サービスを実行します。
-* Insert サービスを設定して、トップレベルのモデルオブジェクトを挿入します。
-* insert サービスをテストします。
+* SharePoint リストデータソースに基づいて新しいフォームデータモデルを作成します。
+* 適切なモデルと、フォームデータモデルの get サービスを追加します。
+* トップレベルのモデルオブジェクトを挿入する挿入サービスを設定します。
+* 挿入サービスをテストします。
 
 
 ## ワークフローの作成
 
-* FDM を起動ステップで単純なワークフローを作成します。
-* 前の手順で作成したフォームデータモデルを使用するように FDM を起動手順を設定します。
+* FDM 呼び出しステップを使用して単純なワークフローを作成します。
+* 前のステップで作成したフォームデータモデルを使用する FDM 呼び出しステップを設定します。
 * ![associate-fdm](assets/fdm-insert-1.png)
 
 * ![map-input-parameters](assets/fdm-insert-2.png)
-* JSON ドット表記を使用していることに注意してください。 送信されたデータは以下の形式で、送信されたデータから ContactUS オブジェクトを抽出します。
+* JSON ドット表記を使用しています。送信したデータは以下の形式であり、送信したデータから ContactUS オブジェクトを抽出しています。
 
 ```json
 {
@@ -53,10 +54,10 @@ ht-degree: 3%
 
 
 
-## アダプティブフォームをトリガーAEMワークフローに設定する
+## AEM ワークフローをトリガーするアダプティブフォームの設定
 
-* 前の手順で作成したフォームデータモデルを使用して、アダプティブフォームを作成します。
-* データソースからフォームにフィールドをドラッグ&amp;ドロップします。
+* 前のステップで作成したフォームデータモデルを使用してアダプティブフォームを作成します。
+* データソースからフォームに一部のフィールドをドラッグ＆ドロップします。
 * 次に示すように、フォームの送信アクションを設定します
 * ![送信アクション](assets/configure-af.png)
 
@@ -64,5 +65,4 @@ ht-degree: 3%
 
 ## フォームのテスト
 
-前の手順で作成したフォームをプレビューします。 フォームに入力して送信します。 フォームのデータがSharePointリストに挿入されます。
-
+前のステップで作成したフォームをプレビューします。フォームに入力して送信します。フォームのデータが SharePoint リストに挿入されます。

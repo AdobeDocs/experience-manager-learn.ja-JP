@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services のビデオ
-description: Web サイトをEdge Delivery Servicesで高速化する方法を説明します。
+title: Edge 配信サービスのビデオ
+description: Edge 配信サービスを使用して web サイトを高速化する方法。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -12,19 +12,19 @@ duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
 source-git-commit: df15dc0426918a0e2263efe6fb0de953f49385df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery Services のビデオ
+# Edge 配信サービスのビデオ
 
-Web サイトをEdge Delivery Servicesで高速化する方法を説明します。
+Edge 配信サービスを使用して web サイトを高速化する方法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-以下を確認します。 [ドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) Edge Delivery Servicesとその機能の詳細
+Edge 配信サービスとその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/overview)を参照してください。
 
 ## Edge Delivery Services の概要
 

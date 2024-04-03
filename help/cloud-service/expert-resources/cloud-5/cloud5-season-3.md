@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '306'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -88,16 +88,16 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>  
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="クエリインデックスとEdge Delivery Services内の Excel 式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="Edge 配信サービスでのクエリインデックスと Excel 数式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>クエリインデックスと Excel 式 </strong></a>        
-                <br/><em>James Talbot &amp; Varun Mitra 氏 (AEM Engineering)</em>
+                <strong>クエリインデックスと Excel 数式 </strong></a>        
+                <br/><em>James Talbot と Varun Mitra（AEM エンジニアリングチーム）</em>
             </div>
             <p>
                 <br/>
-                クエリインデックスの調査と、Edge Delivery Services内のデータセットを操作および並べ替えるための Excel 式の書き込み方法について説明します。
+               Edge 配信サービスでのクエリインデックスと、データセットを操作および並べ替えるための Excel 数式の書き込み方法を確認します。
             </p>
         </td>   
     </tr>  

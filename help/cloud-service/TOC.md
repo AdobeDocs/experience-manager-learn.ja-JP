@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 9c757ef00776c09a8892f477baad24c58401f4dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1163'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -325,7 +325,7 @@ ht-degree: 98%
       + [フォームデータを OneDrive に保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [フォームデータを SharePoint に保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [SharePoint リストのデータを使用してフォームに事前入力する](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
-      + [ワークフローを使用してSharePointリストにデータを挿入](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
+      + [ワークフローを使用して SharePoint リストにデータを挿入](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute の拡張性{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
@@ -391,4 +391,4 @@ ht-degree: 98%
          + [リアルユーザーモニタリング（RUM）](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [エッジワーカー](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Edge Delivery Services でのイベントの公開と非公開](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
-         + [クエリインデックスと Excel 式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
+         + [クエリインデックスと Excel 数式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
