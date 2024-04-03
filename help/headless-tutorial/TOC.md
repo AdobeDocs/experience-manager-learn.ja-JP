@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: ht
-source-wordcount: '339'
-ht-degree: 100%
+source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 99%
 
 ---
 
@@ -67,6 +67,7 @@ ht-degree: 100%
    + [ローカライズされたコンテンツ](./graphql/how-to/localized-content.md)
    + [大きな結果セット](./graphql/how-to/large-result-sets.md)
    + [プレビュー](./graphql/how-to/preview.md)
+   + [保護されたコンテンツ](./graphql/how-to/protected-content.md)
    + [AEM ヘッドレス SDK](./graphql/how-to/aem-headless-sdk.md)
    + [AEM 6.5 への GraphiQL のインストール](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 例 {#example-apps}
