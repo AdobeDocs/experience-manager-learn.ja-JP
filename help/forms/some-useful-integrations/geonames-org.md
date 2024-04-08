@@ -10,10 +10,10 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-このチュートリアルでは、[Geonames REST API](http://api.geonames.org/) を使用して、この機能を試すことができます。
+このチュートリアルでは、[Geonames REST API](https://www.geonames.org/export/web-services.html) を使用して、この機能を試すことができます。
 この種のサービスを提供する組織は多数あり、REST API が詳細に文書化されている限り、データ統合機能を使用して AEM Forms と簡単に統合できます
 
 次の手順に従って、AEM Forms にカスケードドロップダウンリストを実装しました
@@ -88,7 +88,7 @@ AEM Forms のデータ統合機能には、[フォームデータモデル](http
 次のアセットをダウンロードして、カスケードドロップダウンリストのサンプルの作成を開始できます
 完成した Swagger ファイルは、[こちら](assets/geonames-swagger-files.zip)からダウンロードできます
 Swagger ファイルには、次の REST API が記述されています
-* [すべての国を取得](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Geoname オブジェクトの子の取得](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [すべての国を取得](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [Geoname オブジェクトの子の取得](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
 入力済みの[フォームデータモデルは、こちらからダウンロードできます](assets/geonames-api-form-data-model.zip)

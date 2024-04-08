@@ -13,10 +13,10 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '270'
-ht-degree: 100%
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
+source-wordcount: '266'
+ht-degree: 93%
 
 ---
 
@@ -44,11 +44,11 @@ ht-degree: 100%
 
 ## Adobe Experience Platform Debugger を使用したデバッグ
 
-アドビでは、統合をデバッグし、理解し、インサイトを得ることができるように、Adobe Experience Platform Debugger の [Chrome 拡張機能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)と [Firefox アドオン](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) を提供しています。
+Adobe提供Adobe Experience Platform Debugger [Chrome 拡張機能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) を使用して、統合をデバッグ、理解し、インサイトを得ることができます。
 
 1. Adobe Experience Platform Debugger の拡張機能を開き、パブリッシュインスタンスでサイトページを開きます。
 
-1. **Adobe Experience Platform Debugger／サマリ／Adobe Experience Platform タグ**&#x200B;セクションで、名前、バージョン、ビルド日、環境、拡張機能などのタグプロパティの詳細を確認します。
+2. **Adobe Experience Platform Debugger／サマリ／Adobe Experience Platform タグ**&#x200B;セクションで、名前、バージョン、ビルド日、環境、拡張機能などのタグプロパティの詳細を確認します。
 
    ![Adobe Experience Platform Debugger とタグプロパティの詳細](assets/tag-property-details.png)
 

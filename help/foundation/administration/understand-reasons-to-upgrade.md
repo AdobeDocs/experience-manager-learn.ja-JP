@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 809
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '2589'
-ht-degree: 99%
+source-wordcount: '2588'
+ht-degree: 98%
 
 ---
 
@@ -717,9 +717,9 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a>と<a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html?lang=ja" target="_blank">ワークフロー</a>管理：</strong>
- AEM プロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク</td>
-            <td> </td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a> およびワークフロー管理：</strong>
+            AEMプロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク。</td>
+            <td> </td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>

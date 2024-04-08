@@ -10,8 +10,8 @@ jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 duration: 906
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
 
@@ -36,7 +36,7 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
 フレキシブルポートエグレスをセットアップするには、以下が必要です。
 
 + Cloud Manager API が有効になっている Adobe Developer Console プロジェクトと [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/?lang=ja)へのアクセス
++ [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)へのアクセス
    + 組織 ID（別名 IMS 組織 ID）
    + クライアント ID（API キー）
    + アクセストークン（Bearer トークン）

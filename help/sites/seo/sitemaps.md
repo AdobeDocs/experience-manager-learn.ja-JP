@@ -12,10 +12,10 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 957
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '233'
-ht-degree: 100%
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 98%
 
 ---
 
@@ -50,7 +50,7 @@ AEM のサイトマップは、[Sling マッピング](https://sling.apache.org/
 
 ### サイトマップスケジューラーの OSGi 設定
 
-（[cron 式](http://www.cronmaker.com/)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
+（[cron 式](https://cron.help/)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -93,4 +93,4 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 + [Apache Sling サイトマップのドキュメント](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org サイトマップのドキュメント](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org サイトマップインデックスファイルのドキュメント](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
++ [Cron ヘルパー](https://cron.help/)

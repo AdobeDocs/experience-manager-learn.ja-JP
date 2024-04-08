@@ -9,10 +9,10 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '4441'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-[[!DNL AEM Projects]](https://docs.adobe.com/content/help/ja/experience-manager-65/authoring/projects/projects.html) は AEM の機能で、AEM Sites または Assets の実装の一環として、コンテンツ作成に関連するすべてのワークフローとタスクを簡単に管理およびグループ化できるように設計されています。
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) は AEM の機能で、AEM Sites または Assets の実装の一環として、コンテンツ作成に関連するすべてのワークフローとタスクを簡単に管理およびグループ化できるように設計されています。
 
-AEM プロジェクトには、複数の [OOTB プロジェクトテンプレート](https://docs.adobe.com/content/help/ja/experience-manager-65/authoring/projects/projects.html)が付属しています。プロジェクトを作成する際に、作成者はこれらの使用可能なテンプレートから選択できます。独自のビジネス要件を持つ大規模な AEM 実装では、ニーズに合わせてカスタマイズされたカスタムプロジェクトテンプレートを作成する必要があります。カスタムプロジェクトテンプレートを作成することで、開発者はプロジェクトダッシュボードを設定し、カスタムワークフローに関連付けて、ビジネス上の役割をプロジェクト用に追加作成できます。ここでは、プロジェクトテンプレートの構造について学び、サンプルテンプレートを作成します。
+AEM プロジェクトには、複数の [OOTB プロジェクトテンプレート](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)が付属しています。プロジェクトを作成する際に、作成者はこれらの使用可能なテンプレートから選択できます。独自のビジネス要件を持つ大規模な AEM 実装では、ニーズに合わせてカスタマイズされたカスタムプロジェクトテンプレートを作成する必要があります。カスタムプロジェクトテンプレートを作成することで、開発者はプロジェクトダッシュボードを設定し、カスタムワークフローに関連付けて、ビジネス上の役割をプロジェクト用に追加作成できます。ここでは、プロジェクトテンプレートの構造について学び、サンプルテンプレートを作成します。
 
 ![カスタムプロジェクトカード](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 * [完成済みのチュートリアルパッケージ](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-このチュートリアルでは、読者が [AEM の開発手法](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/introduction/the-basics.html)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/devtools/ht-projects-maven.html)についてある程度理解していることを前提としています。取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://docs.adobe.com/content/help/ja/experience-manager-65/deploying/deploying/deploy.html)にのみデプロイするようにしてください。
+このチュートリアルでは、読者が [AEM の開発手法](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/devtools/ht-projects-maven.html)についてある程度理解していることを前提としています。取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)にのみデプロイするようにしてください。
 
 ## プロジェクトテンプレートの構造
 
@@ -69,11 +69,11 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
 ### gadgets {#gadgets}
 
-このノードには追加のプロパティはありませんが、gadgets ノードの子は、新しいプロジェクトの作成時にプロジェクトのダッシュボードに表示されるプロジェクトタイルを制御します。 [プロジェクトタイル](https://docs.adobe.com/content/help/ja/experience-manager-65/authoring/projects/projects.html) （ガジェットやポッドとも呼ばれます）は、プロジェクトのワークプレースに表示されるシンプルなカードです。 OOTB タイルの完全なリストは、**/libs/cq/gui/components/projects/admin/pod にあります。**プロジェクト所有者は、プロジェクトの作成後、いつでもタイルの追加や削除を行うことができます。
+このノードには追加のプロパティはありませんが、gadgets ノードの子は、新しいプロジェクトの作成時にプロジェクトのダッシュボードに表示されるプロジェクトタイルを制御します。 [プロジェクトタイル](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （ガジェットやポッドとも呼ばれます）は、プロジェクトのワークプレースに表示されるシンプルなカードです。 OOTB タイルの完全なリストは、**/libs/cq/gui/components/projects/admin/pod にあります。**プロジェクト所有者は、プロジェクトの作成後、いつでもタイルの追加や削除を行うことができます。
 
 ### roles {#roles}
 
-すべてのプロジェクトには、[デフォルトの役割](https://docs.adobe.com/content/help/ja/experience-manager-65/authoring/projects/projects.html)として、**監視者**、**編集者**、**所有者**&#x200B;の 3 つがあります。roles ノードの直下に子ノードを追加すると、ビジネス固有のプロジェクトの役割をテンプレートに追加できます。そして、これらの役割を、プロジェクトに関連付けされている特定のワークフローに結び付けることができます。
+すべてのプロジェクトには、[デフォルトの役割](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)として、**監視者**、**編集者**、**所有者**&#x200B;の 3 つがあります。roles ノードの直下に子ノードを追加すると、ビジネス固有のプロジェクトの役割をテンプレートに追加できます。そして、これらの役割を、プロジェクトに関連付けされている特定のワークフローに結び付けることができます。
 
 ### workflows {#workflows}
 
@@ -152,7 +152,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
    1. 別の **nt:unstructured** ノードを、approvers というラベルを付けて、roles ノードの子として追加します。
    1. String プロパティ **jcr:title**=&quot;**Approvers**&quot;、**roleclass**=&quot;**owner**&quot;、**roleid**=&quot;**approvers**&quot; を追加します。
       1. approvers ノードの名前、および jcr:title と roleid には、（roleid が一意である限り）任意の文字列値を指定できます。
-      1. **roleclass** は、**owner**、**editor**、**observer** の [3 つの OOTB の役割](https://docs.adobe.com/content/docs/ja/aem/6-3/author/projects.html)に基づいて、その役割に適用される権限を管理します。
+      1. **roleclass** は、**owner**、**editor**、**observer** の [3 つの OOTB の役割](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)に基づいて、その役割に適用される権限を管理します。
       1. 一般に、カスタムの役割が管理の役割の色彩が強い場合、roleclass は **owner** にできます。フォトグラファーやデザイナーなど、オーサリング上のより具体的な役割の場合は、**editor** の roleclass で十分です。**owner** と **editor** の大きな違いは、プロジェクトの所有者はプロジェクトのプロパティを更新したり、新しいユーザーをプロジェクトに追加したりできる点です。
 
    ```shell
@@ -308,7 +308,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
    ![ワークフロー作成ダイアログ](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [ワークフローの作成に関する詳細については、こちらをお読みください](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html)。
+   [ワークフローの作成に関する詳細については、こちらをお読みください](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models)。
 
 1. ベストプラクティスとして、カスタムワークフローは、/etc/workflow/models の下の専用フォルダーにグループ化する必要があります。CRXDE Lite で、/etc/workflow/models の下に、**「aem-guides」**&#x200B;という名前で、**「nt:folder」**&#x200B;を作成します。サブフォルダーを追加すると、アップグレードまたはサービスパックのインストール中に、カスタムワークフローが誤って上書きされることがなくなります。
 
@@ -320,7 +320,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 
    >[!NOTE]
    >
-   >AEM 6.4 以降を使用している場合、ワークフローの場所が変更されています。詳しくは、[こちらを参照してください。](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >AEM 6.4 以降を使用している場合、ワークフローの場所が変更されています。詳しくは、[こちらを参照してください。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    AEM 6.4 以降を使用している場合、ワークフローモデルは `/conf/global/settings/workflow/models` の下に作成されます。/conf ディレクトリで上記の手順を繰り返し、`aem-guides` という名前のサブフォルダーを追加し、その下に `content-approval-workflow` を移動します。
 
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >AEM 6.4 を使用している場合、ワークフローの場所が変更されました。 `/var/workflow/models/aem-guides/content-approval-workflow` の下にあるランタイムワークフローモデルの場所を `modelId` プロパティに指定します。
    >
    >
-   >[ワークフローの場所の変更について詳しくは、こちら](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)を参照してください。
+   >[ワークフローの場所の変更について詳しくは、こちら](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)を参照してください。
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [完成したチュートリアルパッケージのダウンロード](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM プロジェクトのドキュメント](https://docs.adobe.com/content/help/ja/experience-manager-65/authoring/projects/projects.html)
+* [AEM プロジェクトのドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)

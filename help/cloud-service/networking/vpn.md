@@ -10,8 +10,8 @@ jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
 仮想プライベートネットワークを設定する場合は、以下が必要です。
 
 + [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)のある Adobeアカウント
-+ [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/?lang=ja)へのアクセス
++ [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)へのアクセス
    + 組織 ID（別名 IMS 組織 ID）
    + クライアント ID（API キー）
    + アクセストークン（Bearer トークン）
