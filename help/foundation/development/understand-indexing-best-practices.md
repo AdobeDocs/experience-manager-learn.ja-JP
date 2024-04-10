@@ -12,13 +12,13 @@ duration: 389
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1418'
-ht-degree: 100%
+exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
+source-git-commit: 78e8a8472d2dd8128c6ce2f1120cb9a41527f31b
+workflow-type: tm+mt
+source-wordcount: '1693'
+ht-degree: 78%
 
 ---
-
 
 # AEM でのインデックス作成のベストプラクティス
 
@@ -41,21 +41,21 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 検索要件を理解し、OOTB インデックスが検索要件をサポートできるかどうかを確認します。[ローカル SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) および開発者コンソールまたは `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 経由の AEMCS で利用可能な&#x200B;**クエリパフォーマンスツール**&#x200B;を使用します。
 
-- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?lang=ja#optimizing-queries)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
+- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
 
-- OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=ja#should-i-create-an-index)を確認してください。
+- OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を確認してください。
    - OOTB インデックスのカスタマイズ：保守とアップグレードが簡単に行える、お勧めのオプション。
    - 完全なカスタムインデックス：上記のオプションが機能しない場合のみ。
 
 ### OOTB インデックスのカスタマイズ
 
-- **AEMCS** では、OOTB インデックスをカスタマイズするときに、**\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>** 命名規則を使用します。 例えば、`cqPageLucene-custom-1` や `damAssetLucene-8-custom-1` です。これは、OOTB インデックスが更新されるたびに、カスタマイズされたインデックス定義を結合するのに役立ちます。詳しくは、[標準提供のインデックスの変更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=ja#changes-to-out-of-the-box-indexes)を参照してください。
+- **AEMCS** では、OOTB インデックスをカスタマイズするときに、**\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>** 命名規則を使用します。 例えば、`cqPageLucene-custom-1` や `damAssetLucene-8-custom-1` です。これは、OOTB インデックスが更新されるたびに、カスタマイズされたインデックス定義を結合するのに役立ちます。詳しくは、[標準提供のインデックスの変更](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing)を参照してください。
 
-- **AEM 6.X** では、上記の命名方法は&#x200B;_機能しません_。`indexRules` ノードの追加プロパティで OOTB インデックスを更新するだけです。
+- 対象： **AEM 6.X**、上記の命名 _動作しない_&#x200B;ただし、で必要なプロパティを使用して OOTB インデックスを更新するだけです `indexRules` ノード。
 
 - 常に CRX DE Package Manager（/crx/packmgr/）を使用して AEM インスタンスから最新の OOTB インデックス定義をコピーし、名前を変更して XML ファイル内にカスタマイズを追加します。
 
-- インデックス定義を AEM プロジェクト（`ui.apps/src/main/content/jcr_root/_oak_index`）に格納して、Cloud Manager CI／CD パイプラインを使用してデプロイします。詳しくは、[カスタムインデックス定義のデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.htm?lang=ja#deploying-custom-index-definitions)を参照してください。
+- インデックス定義を AEM プロジェクト（`ui.apps/src/main/content/jcr_root/_oak_index`）に格納して、Cloud Manager CI／CD パイプラインを使用してデプロイします。詳しくは、[カスタムインデックス定義のデプロイ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing)を参照してください。
 
 ### 完全なカスタムインデックス。
 
@@ -63,13 +63,13 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 完全なカスタムインデックスを作成する場合は、**\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** 命名規則を使用します。例えば、`wknd.adventures-1-custom-1` のようになります。これにより、名前の競合を回避できます。 ここで `wknd` はプレフィックスで、`adventures` は、カスタムインデックス名です。 この規則は、AEM 6.X と AEMCS の両方に適用され、AEMCS への将来の移行に備えるのに役立ちます。
 
-- AEMCS は Lucene インデックスのみをサポートしているので、AEMCS への今後の移行に備えて、常に Lucene インデックスを使用します。 詳しくは、[Lucene インデックスとプロパティインデックス](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=ja#lucene-or-property-indexes)を参照してください。
+- AEMCS は Lucene インデックスのみをサポートしているので、AEMCS への今後の移行に備えて、常に Lucene インデックスを使用します。 詳しくは、[Lucene インデックスとプロパティインデックス](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を参照してください。
 
-- OOTB インデックスと同じノードタイプでカスタムインデックスを作成しないでください。 代わりに、`indexRules` ノードの追加プロパティを使用して OOTB インデックスをカスタマイズします。例えば、`dam:Asset` ノードタイプにカスタムインデックスを作成せず、OOTB `damAssetLucene` インデックスをカスタマイズします。_このことは、パフォーマンスと機能の問題の一般的な根本原因でした_。
+- OOTB インデックスと同じノードタイプでカスタムインデックスを作成しないでください。 代わりに、で必要なプロパティを使用して OOTB インデックスをカスタマイズします。 `indexRules` ノード。 例えば、`dam:Asset` ノードタイプにカスタムインデックスを作成せず、OOTB `damAssetLucene` インデックスをカスタマイズします。_このことは、パフォーマンスと機能の問題の一般的な根本原因でした_。
 
 - また、インデックス作成ルール（`indexRules`）ノードの下に複数のノードタイプ（`cq:Page` や `cq:Tag` など）を追加することは避けてください。代わりに、ノードタイプごとに別々のインデックスを作成します。
 
-- 上記の節で説明したように、インデックス定義をAEMプロジェクト（`ui.apps/src/main/content/jcr_root/_oak_index`）に格納して、Cloud Manager CI／CD パイプラインを使用してデプロイします。詳しくは、[カスタムインデックス定義のデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.htm?lang=ja#deploying-custom-index-definitions)を参照してください。
+- 上記の節で説明したように、インデックス定義をAEMプロジェクト（`ui.apps/src/main/content/jcr_root/_oak_index`）に格納して、Cloud Manager CI／CD パイプラインを使用してデプロイします。詳しくは、[カスタムインデックス定義のデプロイ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing)を参照してください。
 
 - インデックス定義のガイドラインを次に示します。
    - ノードタイプ（`jcr:primaryType`）は `oak:QueryIndexDefinition`
@@ -106,7 +106,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 これはカスタムインデックスの `tags` プロパティの不適切な使用です。Oak クエリエンジンは、推定コストが最も低い原因となる OOTB インデックスを超えるカスタムインデックスを選択します。
 
-正しい方法は、OOTB インデックスをカスタマイズし、`indexRules` ノードにプロパティを追加することです。詳しくは、[OOTB インデックスのカスタマイズ](#customize-the-ootb-index)を参照してください。
+正しい方法は、OOTB インデックスをカスタマイズして、必要なプロパティをに追加することです。 `indexRules` ノード。 詳しくは、[OOTB インデックスのカスタマイズ](#customize-the-ootb-index)を参照してください。
 
 #### `dam:Asset` ノードタイプのインデックス 
 
@@ -118,7 +118,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 Assets に対してオムニサーチを実行すると、誤った結果が返されるので、カスタムインデックスの推定コストが下がります。
 
-`dam:Asset` ノードタイプにカスタムインデックスを作成せず、`indexRules` ノードの追加プロパティを使用して OOTB `damAssetLucene` インデックスをカスタマイズします。
+でカスタムインデックスを作成しないでください `dam:Asset` ノードタイプですが、OOTB をカスタマイズします `damAssetLucene` 必要なプロパティを含んだインデックス `indexRules` ノード。
 
 #### インデックス作成ルールの下の複数のノードタイプ
 
@@ -130,7 +130,7 @@ Assets に対してオムニサーチを実行すると、誤った結果が返�
 
 1 つのインデックスに複数のノードタイプを追加することは推奨されませんが、`cq:Page` と `cq:PageContent` など、ノードタイプが密接に関連している場合は、同じインデックスに複数のノードタイプをインデックス化しても問題ありません。
 
-有効な解決策は、OOTB の `cqPageLucene` と `damAssetLucene` インデックスをカスタマイズし、既存の `indexRules` ノードの下にプロパティを追加することです。
+有効な解決策は、OOTB をカスタマイズすることです `cqPageLucene` および `damAssetLucene` インデックスを作成し、必要なプロパティを既存のの下に追加します。 `indexRules` ノード。
 
 #### `queryPaths` プロパティがない
 
@@ -166,6 +166,78 @@ Assets に対してオムニサーチを実行すると、誤った結果が返�
 
 これは、[詳細検索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features)機能のためにカスタムインデックスを作成する、有効なユースケースです。ただし、インデックス名は **\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** の命名規則に従う必要があります。
 
+## Apache Tika の無効化によるインデックスの最適化
+
+AEMが使用する [Apache Tika](https://tika.apache.org/) （用） _ファイルからのメタデータとテキストコンテンツの抽出_ 種類には、PDF、Word、Excel などがあります。 抽出されたコンテンツはリポジトリに保存され、Oak Lucene インデックスでインデックスが作成されます。
+
+ユーザーがファイル/アセットのコンテンツ内を検索する機能を必要としない場合があります。そのような場合は、Apache Tika を無効にすることで、インデックス作成のパフォーマンスを向上させることができます。 メリットは次のとおりです。
+
+- インデックス作成の高速化
+- インデックスサイズの削減
+- ハードウェア使用量の削減
+
+>[!CAUTION]
+>
+>Apache Tika を無効にする前に、検索要件にアセットのコンテンツ内を検索する機能が必要でないことを確認します。
+
+
+### MIME タイプで無効にする
+
+MIME タイプで Apache Tika を無効にするには、次の手順を使用します。
+
+- を追加 `tika` ノード / `nt:unstructured` カスタムまたは OOBT インデックス定義の下にと入力します。 次の例では、OOTB でPDFの MIME タイプが無効になっています `damAssetLucene` 索引。
+
+```xml
+/oak:index/damAssetLucene
+    - jcr:primaryType = "oak:QueryIndexDefinition"
+    - type = "lucene"
+    ...
+    <tika jcr:primaryType="nt:unstructured">
+        <config.xml/>
+    </tika>
+```
+
+- を追加 `config.xml` と以下の詳細がの下に表示されます。 `tika` ノード。
+
+```xml
+<properties>
+  <parsers>
+    <parser class="org.apache.tika.parser.EmptyParser">
+      <mime>application/pdf</mime>
+      <!-- Add more mime types to disable -->
+  </parsers>
+</properties>
+```
+
+- 保存されたインデックスを更新するには、 `refresh` プロパティ先 `true` インデックス定義ノードの下で、を参照してください [インデックス定義プロパティ](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property) を参照してください。
+
+次の画像は OOTB を示しています `damAssetLucene` を使用したインデックス `tika` ノードと `config.xml` PDFおよびその他の mime タイプを無効にするファイルです。
+
+![tika ノードを使用した OOTB damAssetLucene インデックス](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+
+### 完全に無効にする
+
+Apache Tika を完全に無効にするには、次の手順に従います。
+
+- 追加 `includePropertyTypes` プロパティ `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` また、値をに設定します。 `String`. 例えば、以下の画像では、 `includePropertyTypes` のプロパティが追加されました `dam:Asset` OOBT のノードタイプ `damAssetLucene` 索引。
+
+![IncludePropertyTypes プロパティ](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
+
+- 追加 `data` 次のプロパティがの下に存在する `properties` ノードを選択し、プロパティ定義の上にある最初のノードであることを確認します。 例えば、次の画像を参照してください。
+
+```xml
+/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
+    - jcr:primaryType = "nt:unstructured"
+    - type = "String"
+    - name = "jcr:data"
+    - nodeScopeIndex = false
+    - propertyIndex = false
+    - analyze = false
+```
+
+![データプロパティ](./assets/understand-indexing-best-practices/data-prop.png)
+
+- を設定して、更新されたインデックス定義のインデックスを再作成します。 `reindex` プロパティ先 `true` インデックス定義ノードの下にあります。
 
 ## 便利なツール
 
@@ -201,6 +273,7 @@ OOTB の&#x200B;_クエリパフォーマンスツール_&#x200B;は、[ロー�
 
 詳しくは、次のドキュメントを参照してください。
 
-- [Oak クエリとインデックス作成](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing.html?lang=ja)
-- [クエリとインデックス作成のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?lang=ja)
-- [クエリとインデックス作成のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=ja)
+- [Oak クエリとインデックス作成](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [クエリとインデックス作成のベストプラクティス](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [クエリとインデックス作成のベストプラクティス](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+
