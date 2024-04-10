@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: ht
-source-wordcount: '2034'
-ht-degree: 100%
+source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
+workflow-type: tm+mt
+source-wordcount: '2044'
+ht-degree: 99%
 
 ---
 
@@ -105,6 +105,8 @@ ht-degree: 100%
    + [HTML5 Forms の事前入力](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Salesforce を使用したフォームデータモデル](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [選択コンポーネントへの項目の動的な追加](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ コア – コンポーネントベースのフォーム{#core-component-based-forms}
+   + [GuideBridge API を使用したフォームデータへのアクセス](core-components/submit-data-using-guidebridge-api.md)
 + DAM フォルダーコンテンツの選択とアセンブリ{#select-dam-folder-content}
    + [1 - はじめに](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 - 選択グループの入力](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
