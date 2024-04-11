@@ -14,9 +14,9 @@ badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 190
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '614'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Android アプリケーションは __AEM パブリッシュ__&#x200B;環境に�
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 開く [Android Studio](https://developer.android.com/studio) フォルダーを開きます。 `android-app`
+1. [Android Studio](https://developer.android.com/studio)、フォルダー `android-app` の順に開く
 1. `app/src/main/assets/config.properties` のファイル `config.properties` を変更し、ターゲット AEM 環境に一致するように `contentApi.endpoint` を更新します。
 
    ```plain

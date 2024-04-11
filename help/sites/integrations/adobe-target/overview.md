@@ -14,9 +14,9 @@ doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 278
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ Adobe Experience Manager（AEM）と Adobe Target は、補完的な機能を持
 * __シナリオ 1：__ AEM エクスペリエンスフラグメントオファーを使用したパーソナライズ機能
 
    1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
-   1. [トリガーとAdobe Targetの呼び出し](./load-and-fire-target.md)
+   1. [タグからの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
    1. [AEM オーサーサービスと Adobe Target の統合](./setup-aem-target-cloud-service.md)
    1. [AEM エクスペリエンスフラグメントを Adobe Target に書き出す](./export-experience-fragment-target.md)
    1. [エクスペリエンスフラグメントオファーを使用して web ページの一部をパーソナライズする](./create-target-activity.md)
@@ -43,11 +43,11 @@ Adobe Experience Manager（AEM）と Adobe Target は、補完的な機能を持
 * __シナリオ 2：__ Visual Experience Composer（VEC）を使用したパーソナライズ機能
 
    1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
-   1. [トリガーとAdobe Targetの呼び出し](./load-and-fire-target.md)
+   1. [タグからの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
    1. [Visual Experience Composer で web ページの一部をパーソナライズ](./personalization-using-vec.md)
 
 * __シナリオ 3：__&#x200B;完全な web ページエクスペリエンスのパーソナライズ機能
 
    1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
-   1. [トリガーとAdobe Targetの呼び出し](./load-and-fire-target.md)
+   1. [タグからの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
    1. [完全な web ページエクスペリエンスをパーソナライズ](./personalization-web-page.md)

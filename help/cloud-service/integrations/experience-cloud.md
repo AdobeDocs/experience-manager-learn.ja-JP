@@ -15,9 +15,9 @@ badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 218
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '682'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -95,9 +95,9 @@ Adobe Commerce と AEM as a Cloud Service の統合により、ブランドは�
 + [AEM Content and Commerce ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=ja)
 
 
-## Adobe Experience Platformのタグ
+## Adobe Experience Platform のタグ
 
-Adobe Experience PlatformのタグはAEMとシームレスに統合され、簡単にデプロイおよび管理できます [分析](#adobe-analytics), [ターゲティング](#adobe-target)顧客体験をエンゲージメントするのに必要な、マーケティングおよび広告のタグ。
+Adobe Experience Platform のタグは AEM とシームレスに統合され、[分析](#adobe-analytics)、[ターゲティング](#adobe-target)、マーケティングおよび顧客体験をエンゲージメントするのに必要な広告タグを簡単にデプロイして管理する方法を提供します。
 
 ### AEM Sites
 

@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
 duration: 173
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '596'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 この節では、様々なシナリオで Adobe Experience Manager Sites と Adobe Target の連携をセットアップする方法について説明します。シナリオと組織要件に基づいています。
 
 * **Adobe Target JavaScript ライブラリの追加（すべてのシナリオで必要）**
-AEMでホストされるサイトの場合、を使用して Target ライブラリをサイトに追加できます。 [Adobe Experience Platformのタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja). タグは、顧客体験の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
+AEM でホストされるサイトの場合、[Adobe Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) を使用して Target ライブラリをサイトに追加できます。タグは、関連性の高いカスタマーエクスペリエンス（顧客体験）の実現に必要なすべてのタグをデプロイおよび管理するためのシンプルな手段を提供します。
 * **Adobe Target クラウドサービスの追加（エクスペリエンスフラグメントシナリオで必要）**
 AEM のお客様がエクスペリエンスフラグメントオファーを使用してAdobe Target 内でアクティビティを作成する場合、従来のクラウドサービスを使用して Adobe Target と AEM を統合する必要があります。この統合は、AEM からエクスペリエンスフラグメントを HTML／JSON オファーとして Target にプッシュし、オファーと AEM の同期を保つために必要です。*この統合は、シナリオ 1 の実装に必要です。*
 
@@ -50,7 +50,7 @@ AEM のお客様がエクスペリエンスフラグメントオファーを使�
 
 >[!NOTE]
 >
-> 顧客は、からのデータ収集とAdobe I/Oを使用してプロビジョニングする必要がある [Adobeのサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) または、システム管理者に問い合わせてください。
+> 顧客は、[アドビサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に依頼してデータ収集と Adobe I/O をプロビジョニングするか、システム管理者に連絡する必要があります。
 
 ### AEM の設定{#set-up-aem}
 
@@ -82,4 +82,4 @@ AEM のお客様がエクスペリエンスフラグメントオファーを使�
 10. AEM オーサーにパッケージをインストールした後、アップロードされた各パッケージを AEM パッケージマネージャーで選択し、**詳細／レプリケート**&#x200B;を選択して、パッケージが AEM パブリッシュにデプロイされていることを確認します。 
 11. これで、WKND リファレンスサイトと、このチュートリアルに必要なすべての追加パッケージが正常にインストールされました。
 
-[次の章](./using-launch-adobe-io.md)：次の章では、タグをAEMと統合します。
+[次の章](./using-launch-adobe-io.md)：次の章では、タグを AEM と統合します。

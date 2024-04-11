@@ -15,9 +15,9 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2330
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1529'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ Platform Web SDK を使用して Adobe Analytics を統合するには、次の�
 + データ管理の&#x200B;**スキーマ**&#x200B;にアクセスします。
 + データ管理の&#x200B;**データセット**&#x200B;にアクセスします。
 + データ管理の&#x200B;**データストリーム**&#x200B;にアクセスします。
-+ アクセス先 **タグ**  （データ収集）
++ データ収集の&#x200B;**タグ**&#x200B;にアクセスします。
 
 必要な権限がない場合は、[Adobe Admin Console](https://adminconsole.adobe.com/) を使用して、システム管理者が必要な権限を付与できます。
 

@@ -6,9 +6,9 @@ version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '175'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ AEM Assets とは何か、そして組織のビジネス目標を達成するた
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>タグでのAEM Asset Insights の使用</strong>
+      <strong>タグでの AEM アセットインサイトの使用</strong>
       </a>
    </div>
    <p>

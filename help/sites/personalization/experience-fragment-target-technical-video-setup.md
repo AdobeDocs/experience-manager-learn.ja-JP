@@ -1,6 +1,6 @@
 ---
 title: AEM でのエクスペリエンスフラグメントと Adobe Target の統合のセットアップ
-description: Adobe Experience Manager 6.4 では、AEMと Target の間のパーソナライゼーションワークフローが再設計されました。 AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
+description: Adobe Experience Manager 6.4 は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 feature: Experience Fragments
 version: 6.4, 6.5
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
@@ -11,21 +11,21 @@ doc-type: Technical Video
 exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
 duration: 248
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '216'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
 # エクスペリエンスフラグメントと Adobe Target の統合のセットアップ{#set-up-experience-fragments-and-adobe-target-integration}
 
-Adobe Experience Manager 6.4 では、AEMと Target の間のパーソナライゼーションワークフローが再設計されました。 AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
+Adobe Experience Manager 6.4 は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22380?quality=12&learn=on)
 
 >[!NOTE]
 >
->at.js クライアントライブラリの使用をお勧めします。ベストプラクティスは、Adobe Experience Platformのタグなどのタグ管理ソリューションやサードパーティのタグ管理ソリューションを使用して、サイトのページにターゲットライブラリを追加することです
+>at.js クライアントライブラリの使用をお勧めします。ベストプラクティスは、Adobe Experience Platform のタグなどのタグ管理ソリューションやサードパーティのタグ管理ソリューションを使用して、サイトページにターゲットライブラリを追加することです。
 
 * エクスペリエンスフラグメントフォルダーに適用される Target のクラウドサービス設定は、親フォルダーの直下に作成されたすべてのエクスペリエンスフラグメントに継承されます。子フォルダーは親クラウドサービス設定を継承しません。
 * Target クライアントコードは、Adobe Experience Cloud／Launch Target／「設定」タブ／実装／at.js 設定を編集から取得できます。

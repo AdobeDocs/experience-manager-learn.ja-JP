@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
 duration: 323
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 83%
 
 次のビデオでは、AEM と Adobe Target を統合する方法について説明します。
 
-この統合により、AEM オーサーサービスは Adobe Target と直接通信し、エクスペリエンスフラグメントを AEM から Target にオファーとしてプッシュできるようになります。この統合では、 *not* AEM Sites Web ページにAdobe Target JavaScript(AT.js) を追加して、 [Target 拡張機能を使用したAEMとタグ](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
+この統合により、AEM オーサーサービスは Adobe Target と直接通信し、エクスペリエンスフラグメントを AEM から Target にオファーとしてプッシュできるようになります。この統合では、AEM Sites の web ページに Adobe Target JavaScript（AT.js）が追加&#x200B;*されない*&#x200B;ため、[Target 拡張機能を使用してタグと AEM を統合](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 

@@ -5,9 +5,9 @@ user-guide-description: Adobe Experience Manager Foundation のビデオやチ�
 sub-product: Experience Manager
 index: y
 source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '233'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 98%
    + [AEM プロジェクトの開発](./projects/develop-aem-projects.md)
    + [プロジェクトマスターの使用](./projects/use-project-masters.md)
 + セキュリティ {#security}
-   + [DoS/DoS 防止について](./security/understanding-dos-and-prevention-approaches.md)
+   + [DoS/DDoS 攻撃防止について](./security/understanding-dos-and-prevention-approaches.md)
    + [クロスオリジンリソース共有（CORS）に対応する開発](./security/develop-for-cross-origin-resource-sharing.md)
    + [クロスオリジンリソース共有（CORS）について](./security/understand-cross-origin-resource-sharing.md)
    + [SSL ウィザードの使用](./security/use-the-ssl-wizard.md)

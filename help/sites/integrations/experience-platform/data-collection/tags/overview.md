@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience PlatformとAEMでのタグの統合
-description: Experience Platform Data Collection Tags は、アドビの次世代タグ管理ソリューションであり、Adobe Analytics、Target、Audience Manager、その他多くのソリューションをデプロイするための最適な方法です。Adobe Experience Platformのタグの概要とAdobe Experience Managerとの推奨される統合について説明します。
+title: Adobe Experience Platform のタグと AEM の統合
+description: Experience Platform Data Collection Tags は、アドビの次世代タグ管理ソリューションであり、Adobe Analytics、Target、Audience Manager、その他多くのソリューションをデプロイするための最適な方法です。ここでは、Adobe Experience Platform のタグの概要と、Adobe Experience Manager との推奨される統合について説明します。
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5979
 thumbnail: 39090.jpg
@@ -15,15 +15,15 @@ doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
 duration: 256
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
 # Experience Platform Data Collection Tags と AEM の統合 {#overview}
 
-Adobe Experience PlatformのタグをAdobe Experience Managerと統合する方法を説明します。
+Adobe Experience Platform のタグと Adobe Experience Manager を統合する方法について説明します。
 
 Tags は Adobe Experience Platform の次世代タグ管理テクノロジーです。Tags を使用すると、Adobe Analytics、Target、Audience Manager、その他多くのソリューションを簡単にデプロイできるようになります。ここでは、Tags の概要と Adobe Experience Manager との推奨される統合について説明します。
 
@@ -43,7 +43,7 @@ Experience Platform Data Collection Tags を統合する場合は、以下が必
 
 + Adobe Experience Platform Data Collection でタグプロパティを作成し、それを編集して&#x200B;_ルールを追加_&#x200B;します。次に、_ライブラリを追加_&#x200B;し、新しく追加されたルールを選択し、承認して公開します。
 + 既存（または新規）の IMS 設定を使用して AEM と Tags を接続します。
-+ AEMで、タグクラウドサービス設定を作成し、既存のサイトに適用して、最後にタグのプロパティとライブラリが公開済みサイトまたは作成者サイトに読み込まれていることを確認します。
++ AEM で、タグクラウドサービス設定を作成して既存のサイトに適用し、最後に、タグプロパティとそのライブラリが公開済みサイトまたはオーサーサイトに読み込まれていることを確認します。
 
 ## 次の手順
 
