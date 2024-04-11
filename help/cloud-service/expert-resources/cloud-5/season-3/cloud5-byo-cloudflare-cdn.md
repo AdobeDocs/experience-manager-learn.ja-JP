@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — 独自の Cloudflare CDN を持ち込む
-description: 独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を学ぶ。
+title: Cloud 5 – 独自の Cloudflare CDN の導入
+description: 独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,15 +11,16 @@ recommendations: noDisplay, noCatalog
 duration: 490
 last-substantial-update: 2024-04-05T00:00:00Z
 jira: KT-15271
-source-git-commit: d95d58a2631cfceb05df576f686cc9e22843f388
+exl-id: dc841125-641b-47c0-a88f-d166a088e0ec
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
-# 独自の Cloudflare CDN を持ち込む
+# Cloud 5 – 独自の Cloudflare CDN の導入
 
-独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を学ぶ。
+独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428100/?quality=12&learn=on)

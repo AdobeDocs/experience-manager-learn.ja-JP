@@ -5,10 +5,10 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: c0e995566aad4fceb8bf8ef12ff989f03a626d0f
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 91%
+source-wordcount: '366'
+ht-degree: 83%
 
 ---
 
@@ -102,18 +102,34 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="独自の Cloudflare CDN を持ち込む" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="独自の Cloudflare CDN の導入" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <strong>独自の Cloudflare CDN を持ち込む</strong></a>        
-                <br/><em>James Talbot &amp; Kunwar Saluja(AEM Engineering) と共に</em>
+                <strong>独自の Cloudflare CDN の導入</strong></a>        
+                <br/><em>james Talbot 氏（AEM エンジニアリング担当）および Kunwar Saluja 氏</em>
             </div>
             <p>
                 <br/>
-                独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を学ぶ。
+                独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
             </p>
         </td>           
     </tr>  
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-integrate-assets.md">
+                <img alt="AEM AssetsとEdge Delivery Servicesのドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-integrate-assets.md">
+                <strong>AEM Assetsとドキュメントオーサリングの統合</strong></a>        
+                <br/><em>james Talbot &amp; Darin Kuntze （AEM エンジニアリング）</em>
+            </div>
+            <p>
+                <br/>
+                AEM Assetsをドキュメントオーサリングと統合する方法について説明します。
+            </p>
+        </td>        
+    </tr>      
 </table>
 

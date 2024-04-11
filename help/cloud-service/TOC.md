@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 3f30c5bc85b09e2f3bc17fa591a85cd92c811126
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1171'
 ht-degree: 99%
 
 ---
@@ -392,4 +392,5 @@ ht-degree: 99%
          + [エッジワーカー](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Edge Delivery Services でのイベントの公開と非公開](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [クエリインデックスと Excel 数式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
-         + [独自の Cloudflare CDN を持ち込む](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
+         + [独自の Cloudflare CDN の導入](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
+         + [AEM Assetsの統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
