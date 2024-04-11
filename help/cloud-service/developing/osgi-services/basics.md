@@ -10,10 +10,10 @@ thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
 duration: 492
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '57'
-ht-degree: 100%
+source-git-commit: a18bf2c8b57eaaac3686a26fa1fb39e6fc075af5
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 46%
 
 ---
 
@@ -94,3 +94,5 @@ package com.adobe.aem.wknd.examples.core.adventures;
 
 import org.osgi.annotation.versioning.Version;
 ```
+
+の追加 `package-info.java` は、AEMの他の OSGi バンドルが OSGi サービスインターフェイス（または任意の Java クラス）を解決できるようにするために必要です。 次の場合 `package-info.java` が見つからない場合、Java パッケージとその Java インターフェイスまたはクラスは書き出されません。 これらの Java インターフェイスまたはクラスをこの Java パッケージから読み込もうとする他の OSGi バンドルは、メッセージでエラーが発生します。 __解決できません__ （AEM OSGi バンドルコンソール）。
