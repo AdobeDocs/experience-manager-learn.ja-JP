@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: ht
-source-wordcount: '498'
-ht-degree: 100%
+source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 99%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 100%
       + [画像の代替テキスト](./document-authoring/how-to/image-alt-text.md)
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
       + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
+      + [GenAI プロンプトテンプレート](./document-authoring/how-to/prompt-templates-for-content-variations.md)
 + ページオーサリング {#page-authoring}
    + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
    + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)

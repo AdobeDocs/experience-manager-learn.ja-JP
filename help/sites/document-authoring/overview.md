@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 6672211ef4e03a3ae4c6c5494dda6a2b5053a647
-workflow-type: ht
-source-wordcount: '419'
-ht-degree: 100%
+source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+workflow-type: tm+mt
+source-wordcount: '452'
+ht-degree: 93%
 
 ---
 
@@ -510,7 +510,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
         </div>
       </div>
     </div>
-      <!-- No Index -->
+    <!-- No Index -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="No Index" tabindex="7">
       <div class="card">
@@ -542,4 +542,36 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
         </div>
       </div>
     </div>
+    <!-- GenAI Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Use GenAI Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/prompt-templates-for-content-variations.md" title="GenAI プロンプトテンプレートの使用"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="GenAI プロンプトテンプレートの使用">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/prompt-templates-for-content-variations.md" title="GenAI プロンプトテンプレートの使用">GenAI プロンプトテンプレート</a>
+            </p>
+            <p class="is-size-6">生成 AI プロンプトテンプレートを使用してコンテンツのバリエーションを生成する方法を調べます。</p>
+            <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
