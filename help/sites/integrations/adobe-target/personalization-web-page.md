@@ -15,7 +15,7 @@ duration: 124
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '454'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Target を使用して、AEMでホストされているサイトのペー�
 AEM web サイトのすべてのページをパーソナライズするには、次の設定を行う必要があります。
 
 1. [AEM web サイトへの Adobe Target の追加](./add-target-launch-extension.md)
-1. [トリガーとAdobe Targetの呼び出し](./load-and-fire-target.md)
+1. [タグからの Adobe Target 呼び出しのトリガー](./load-and-fire-target.md)
 
 ## シナリオの概要
 

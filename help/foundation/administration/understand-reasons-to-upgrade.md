@@ -12,7 +12,7 @@ duration: 809
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -623,8 +623,8 @@ Adobe Analytics と DTM の統合が容易になります。オーサー環境�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe Experience Platform統合のタグ</a>:</strong>
-            をAdobeの次世代タグ管理クラウドサービスと統合します。</td>
+            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe Experience Platform のタグ統合</a>：</strong>
+            アドビの次世代タグ管理クラウドサービスと統合します。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -717,8 +717,8 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a> およびワークフロー管理：</strong>
-            AEMプロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク。</td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a> ワークフロー管理：</strong>
+            AEM プロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>

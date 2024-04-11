@@ -1,6 +1,6 @@
 ---
-title: タグプロパティへの Target 拡張機能の追加
-description: tags プロパティにAdobe Target拡張機能を追加する方法を説明します。
+title: タグプロパティに Target 拡張機能を追加
+description: タグプロパティに Adobe Target 拡張機能を追加する方法について説明します。
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -16,15 +16,15 @@ duration: 297
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
-# タグプロパティへの Target 拡張機能の追加 {#adobe-target-extension}
+# タグプロパティに Target 拡張機能を追加 {#adobe-target-extension}
 
-このビデオに従うには、既に [Adobe Experience PlatformとAEMの統合タグ](../experience-platform/data-collection/tags/overview.md).
+このビデオを進めるには、[AEM とAdobe Experience Platform のタグを統合](../experience-platform/data-collection/tags/overview.md)している必要があります。
 
-タグを使用してAdobe TargetをAEM Web サイトに有効にする方法を説明します。
+タグを使用して Adobe Target を AEM web サイトで有効にする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 
