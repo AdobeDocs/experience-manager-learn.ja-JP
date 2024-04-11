@@ -5,10 +5,10 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 83%
+source-wordcount: '363'
+ht-degree: 84%
 
 ---
 
@@ -118,7 +118,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
     <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="AEM AssetsとEdge Delivery Servicesのドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="AEM Assetsとドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">

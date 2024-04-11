@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 93%
+source-wordcount: '591'
+ht-degree: 76%
 
 ---
 
@@ -542,6 +542,70 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
         </div>
       </div>
     </div>
+    <!-- Intro Generate Variation -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations.md" title="バリエーションの生成"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="バリエーションの生成">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations.md" title="バリエーションの生成">バリエーションを生成</a>
+            </p>
+            <p class="is-size-6">Edge Delivery Servicesのバリエーションを生成する概要と、マーケターにとって役立つ方法について説明します。</p>
+            <a href="./how-to/generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!--  Configure Sidekick for Generative Variations  -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Configure Sidekick for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するためのSidekickの設定"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                alt="バリエーションを生成するためのSidekickの設定">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するためのSidekickの設定">バリエーションを生成するためのSidekickの設定</a>
+            </p>
+            <p class="is-size-6">Edge Delivery Servicesドキュメントのオーサリングでバリエーションを生成するためのサイドキックの設定方法を確認します。</p>
+            <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>          
     <!-- GenAI Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Use GenAI Prompt Templates" tabindex="7">
@@ -565,6 +629,70 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             </p>
             <p class="is-size-6">生成 AI プロンプトテンプレートを使用してコンテンツのバリエーションを生成する方法を調べます。</p>
             <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Custom Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/custom-prompt-templates.md" title="GenAI カスタムプロンプトテンプレート"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                alt="GenAI カスタムプロンプトテンプレート">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/custom-prompt-templates.md" title="GenAI カスタムプロンプトテンプレート">GenAI カスタムプロンプトテンプレート</a>
+            </p>
+            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートの作成方法を探索します。</p>
+            <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+ <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">ビデオを視聴</span>
+ </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Saving Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Save Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/save-custom-prompt-template.md" title="GenAI 保存プロンプトテンプレート"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                alt="GenAI 保存プロンプトテンプレート">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/save-custom-prompt-template.md" title="GenAI 保存プロンプトテンプレート">GenAI 保存プロンプトテンプレート</a>
+            </p>
+            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートを保存する方法を探索します。</p>
+            <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
  <span class="spectrum-Button-label has-no-wrap
