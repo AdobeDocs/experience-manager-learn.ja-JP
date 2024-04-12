@@ -43,7 +43,7 @@ AEM 環境に対する DoS 攻撃と DDoS 攻撃を防止および軽減する�
             <td>Web アプリケーションを様々なタイプの攻撃から保護するために設計されたセキュリティソリューション。</td>
             <td>
             <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS 保護ライセンス</a></td>
-            <td>AMS 契約による <a href="ttps://docs.aws.amazon.com/waf/" target="_blank">AWS</a> または <a href="https://azure.microsoft.com/ja-jp/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
+            <td>AMS 契約による <a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a> または <a href="https://azure.microsoft.com/ja-jp/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
             <td>推奨される WAF</td>
         </tr>
         <tr>
