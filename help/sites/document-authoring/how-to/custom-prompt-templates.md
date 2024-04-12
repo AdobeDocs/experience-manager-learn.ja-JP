@@ -10,16 +10,18 @@ doc-type: Feature Video
 duration: 93
 last-substantial-update: 2024-04-11T00:00:00Z
 jira: KT-15325
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
+exl-id: 1d7acd03-9ad1-4e58-a3b5-58c03faeea9d
+source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
 # Edge Delivery Servicesの生成 AI カスタムプロンプトテンプレート
 
 コンテンツのバリエーションを生成するために、Edge Delivery Servicesドキュメントのオーサリングで生成 AI のカスタムプロンプトテンプレートを作成する方法を探索します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428316/?learn=on)
+
+
