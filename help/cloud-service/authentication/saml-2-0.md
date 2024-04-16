@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2430
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '3137'
+source-git-commit: 1f9736acbbccd09cb1b32c247860827b13e85129
+workflow-type: tm+mt
+source-wordcount: '3060'
 ht-degree: 100%
 
 ---
@@ -441,15 +441,6 @@ IDP への認証に成功すると、IDP は HTTP POST を調整して AEM の�
 ```
 
 Apache web サーバーで URL の書き換えが設定されている場合（`dispatcher/src/conf.d/rewrites/rewrite.rules`）、`.../saml_login` エンドポイントへのリクエストが誤ってマングリングされないようにします。
-
-## データ同期の有効化とトークンのカプセル化
-
-SAML 認証フローによって AEM パブリッシュにユーザーが作成されると、AEM ユーザーノードは AEM パブリッシュサービス層全体で認証可能になります。
-これには、[データ同期](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization?lang=ja)および[カプセル化されたトークン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens?lang=ja)が、アドビサポートによって AEM パブリッシュサービスで有効にされる必要があります。
-
-アドビカスタマーサポートに次のリクエストを送信します（[AdminConsole](https://adminconsole.adobe.com)／サポートを使用）。
-
-> プログラム X と環境 Y の AEM パブリッシュサービスで、データ同期とカプセル化されたトークンを有効にします。
 
 ## SAML 設定のデプロイ
 
