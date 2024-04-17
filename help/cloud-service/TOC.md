@@ -151,7 +151,7 @@ ht-degree: 99%
    + [SAML 2.0](./authentication/saml-2-0.md)
 + 高度なネットワーク機能{#networking}
    + [概要](./networking/advanced-networking.md)
-   + [柔軟なポートエグレス](./networking/flexible-port-egress.md)
+   + [フレキシブルポートエグレス](./networking/flexible-port-egress.md)
    + [専用エグレス IP アドレス](./networking/dedicated-egress-ip-address.md)
    + [仮想プライベートネットワーク](./networking/vpn.md)
    + コードの例{#examples}
@@ -281,7 +281,7 @@ ht-degree: 99%
    + Azure Portal ストレージ{#forms-cs-azure-portal}
       + [はじめに](./forms/forms-cs-azure-portal/introduction.md)
       + [フォームデータモデルの作成](./forms/forms-cs-azure-portal/create-fdm.md)
-      + [Azure ストレージへのフォームデータの保存](./forms/forms-cs-azure-portal/create-af.md)
+      + [Azure ストレージへフォームデータを保存](./forms/forms-cs-azure-portal/create-af.md)
       + [フォームへの事前入力](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [送信データのクエリ](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + フォーム入力の保存と再開{#prefill-azure-storage}

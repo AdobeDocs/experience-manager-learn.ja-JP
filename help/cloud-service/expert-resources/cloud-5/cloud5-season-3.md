@@ -8,7 +8,7 @@ exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
 workflow-type: tm+mt
 source-wordcount: '363'
-ht-degree: 84%
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 84%
 
 ## はじめに
 
-AEM エンジニアリングチームによる Cloud 5 シリーズのシーズン 3 へようこそ。製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。このシリーズの目標は、AEM Edge Delivery Services に関する有用な情報を 5 分以内で提供することです。
+AEM エンジニアリングチームによる Cloud 5 シリーズのシーズン 3 へようこそ。 製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。 このシリーズの目標は、AEM Edge Delivery Services に関する有用な情報を 5 分以内で提供することです。
 
 ## 提案ボックス
 
@@ -24,7 +24,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
 
 ## シーズン 3
 
-シーズンごとに長さが異なり、一定のスケジュールでリリースされます。シーズン 3 のトピックは、主に、顧客やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。このページにアクセスして毎週のアップデートを確認するか、選択したソーシャルネットワークでフォローしてください。
+シーズンごとに長さが異なり、一定のスケジュールでリリースされます。 シーズン 3 のトピックは、主に、顧客やパートナーとの日常的な取り組みで発生した過去のリクエストに基づいています。 このページにアクセスして毎週のアップデートを確認するか、選択したソーシャルネットワークでフォローしてください。
 
 <table>
     <tr>
@@ -107,11 +107,11 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
                 <strong>独自の Cloudflare CDN の導入</strong></a>        
-                <br/><em>james Talbot 氏（AEM エンジニアリング担当）および Kunwar Saluja 氏</em>
+                <br/><em>James Talbot と Kunwar Saluja（AEM エンジニアリングチーム）</em>
             </div>
             <p>
                 <br/>
-                独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
+                独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
             </p>
         </td>           
     </tr>  

@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 – 独自の Cloudflare CDN の導入
-description: 独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
+title: Cloud 5 - Bring Your Own（BYO）の Cloudflare CDN
+description: 独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -15,12 +15,12 @@ exl-id: dc841125-641b-47c0-a88f-d166a088e0ec
 source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 81%
 
 ---
 
 # Cloud 5 – 独自の Cloudflare CDN の導入
 
-独自の Cloudflare CDN をEdge Delivery Servicesに設定する方法を探索します。
+独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428100/?quality=12&learn=on)
