@@ -11,15 +11,15 @@ exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '610'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # カスケードドロップダウンリスト
 
-カスケードドロップダウンリストは、1 つの DropDownList コントロールが親または以前の DropDownList コントロールに依存する、一連の依存 DropDownList コントロールです。DropDownList コントロールの項目は、別の DropDownList コントロールからユーザーが選択した項目に基づいて設定されます。
+カスケードドロップダウンリストは、1 つの DropDownList コントロールが親または以前の DropDownList コントロールに依存する、一連の依存 DropDownList コントロールです。 DropDownList コントロールの項目は、別の DropDownList コントロールからユーザーが選択した項目に基づいて設定されます。
 
 ## ユースケースのデモ
 
@@ -32,7 +32,7 @@ ht-degree: 99%
 
 ## 開発者アカウントの作成
 
-[地域名](https://www.geonames.org/login)で開発者アカウントを作成します。ユーザー名をメモします。 このユーザー名は、geonames.org の REST API を呼び出すために必要です。
+[地域名](https://www.geonames.org/login)で開発者アカウントを作成します。 ユーザー名をメモします。 このユーザー名は、geonames.org の REST API を呼び出すために必要です。
 
 ## Swagger／OpenAPI ファイルの作成
 
@@ -49,16 +49,16 @@ OpenAPI Specification（旧称 Swagger Specification）は、REST API の API �
 >[!NOTE]
 > AEM Forms は、OpenAPI Specification version 2.0（旧 Swagger）をサポートしています。
 
-[Swagger Editor](https://editor.swagger.io/) を使用して swagger ファイルを作成し、国または州のすべての国と子要素を取得する操作を記述します。Swagger ファイルは、JSON 形式または YAML 形式で作成できます。 
+[Swagger Editor](https://editor.swagger.io/) を使用して swagger ファイルを作成し、国または州のすべての国と子要素を取得する操作を記述します。 Swagger ファイルは、JSON 形式または YAML 形式で作成できます。
 
 ## データソースの作成
 
-AEM／AEM Forms をサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソースを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=ja)する必要があります。[Swagger ファイル](assets/geonames-swagger-files.zip)を使用してデータソースを作成します。2 つのデータソースを作成する必要があります（1 つはすべての国を取得するためのデータソースで、もう 1 つは子要素を取得するためのデータソース）
+AEM／AEM Forms をサードパーティのアプリケーションと統合するには、クラウドサービス設定で[データソースを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=ja)する必要があります。 [Swagger ファイル](assets/geonames-swagger-files.zip)を使用してデータソースを作成します。 2 つのデータソースを作成する必要があります（1 つはすべての国を取得するためのデータソースで、もう 1 つは子要素を取得するためのデータソース）
 
 
 ## フォームデータモデルの作成
 
-AEM Forms のデータ統合機能には、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=ja)を作成して使用するための直感的なユーザーインターフェイスが付属しています。前の手順で作成したデータソースに基づいて、フォームデータモデルを作成します。 2 つのデータソースを持つフォームデータモデル
+AEM Forms のデータ統合機能には、[フォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=ja)を作成して使用するための直感的なユーザーインターフェイスが付属しています。 前の手順で作成したデータソースに基づいて、フォームデータモデルを作成します。 2 つのデータソースを持つフォームデータモデル
 
 ![FDM](assets/geonames-fdm.png)
 
@@ -80,7 +80,8 @@ AEM Forms のデータ統合機能には、[フォームデータモデル](http
 
 ### 演習
 
-フォームに郡と市という名前の 2 つのドロップダウンリストを追加して、選択した国と都道府県に基づいて郡と市を一覧表示します。![演習](assets/cascading-drop-down-exercise.png)
+フォームに郡と市という名前の 2 つのドロップダウンリストを追加して、選択した国と都道府県に基づいて郡と市を一覧表示します。
+![演習](assets/cascading-drop-down-exercise.png)
 
 
 ### サンプルアセット

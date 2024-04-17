@@ -9,9 +9,9 @@ version: 6.5, Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '341'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

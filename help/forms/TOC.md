@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2044'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -153,7 +153,7 @@ ht-degree: 99%
 + PDF ファイルからデータを読み込み{#import-data-from-pdf-form}
    + [1 - はじめに](import-data-from-pdf-form/introduction.md)
    + [2 - アダプティブフォームを作成](import-data-from-pdf-form/create-adaptive-form.md)
-   + [3 - OSGi サービスを作成](import-data-from-pdf-form/create-osgi-service.md)
+   + [3 - OSGi サービスの作成](import-data-from-pdf-form/create-osgi-service.md)
    + [4 - アダプティブフォームに入力](import-data-from-pdf-form/populate-adaptive-form.md)
    + [5 - ソリューションをテスト](import-data-from-pdf-form/test-the-solution.md)
 + 送信したデータの CSV 形式での書き出し{#export-submitted-data-csv-format}

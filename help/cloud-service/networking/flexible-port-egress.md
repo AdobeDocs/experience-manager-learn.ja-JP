@@ -11,7 +11,7 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 duration: 906
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1060'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 フレキシブルポートエグレスにより、特定のカスタムポート転送ルールを AEM as a Cloud Service に付加することができ、AEM から外部サービスへの接続が可能になります。
 
-Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。次のコマンドを実行する前に、専用のエグレス IP アドレスが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md)であることを確認してください。
+Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 次のコマンドを実行する前に、専用のエグレス IP アドレスが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md)であることを確認してください。
 
 >[!MORELIKETHIS]
 >
@@ -47,15 +47,15 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
+このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。 指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
 
 ## プログラムごとのフレキシブルポートエグレスの有効化
 
 AEM as a Cloud Service でフレキシブルポートエグレスを有効にするところから始めます。
 
-1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、高度なネットワークが設定されている地域を特定します。`region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、高度なネットワークが設定されている地域を特定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
 
-   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=ja#viewing-environment)の下にある AEM as a Cloud Service 環境の地域を見つけます。Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
+   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=ja#viewing-environment)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 
    __listRegions HTTP リクエスト__
 
@@ -67,7 +67,7 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
        -H 'Content-Type: application/json' 
    ```
 
-1. Cloud Manager API の [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、Cloud Manager プログラムのフレキシブルポートエグレスを有効にします。Cloud Manager API の `listRegions` 操作から取得した適切な `region` コードを使用します。
+1. Cloud Manager API の [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、Cloud Manager プログラムのフレキシブルポートエグレスを有効にします。 Cloud Manager API の `listRegions` 操作から取得した適切な `region` コードを使用します。
 
    __createNetworkInfrastructure HTTP リクエスト__
 
@@ -94,7 +94,7 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
        -H 'Content-Type: application/json'
    ```
 
-   HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。まだ完了していない場合は、数分ごとにステータスを再確認します。
+   HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。 まだ完了していない場合は、数分ごとにステータスを再確認します。
 
 ## 環境ごとのフレキシブルポートエグレスプロキシの設定
 
@@ -113,7 +113,7 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
 
    `flexible-port-egress.json` で JSON パラメーターを定義し、`... -d @./flexible-port-egress.json` を介して curl に提供します。
 
-   [サンプルの flexible-port-egress.json](./assets/flexible-port-egress.json) をダウンロードします。このファイルは例に過ぎません。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。 
+   [サンプルの flexible-port-egress.json](./assets/flexible-port-egress.json) をダウンロードします。 このファイルは例に過ぎません。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。
 
    ```json
    {
@@ -152,14 +152,14 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
        -H 'Content-Type: application/json'
    ```
 
-1. フレキシブルポートエグレス設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。`enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作なので、この操作を呼び出すたびにすべてのルールを指定する必要があることに注意してください。
+1. フレキシブルポートエグレス設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。 `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作なので、この操作を呼び出すたびにすべてのルールを指定する必要があることに注意してください。
 
 1. これで、カスタムの AEM コードおよび設定でフレキシブルポートエグレス設定を使用できるようになりました。
 
 
 ## フレキシブルポートエグレスでの外部サービスへの接続
 
-フレキシブルポートエグレスプロキシを有効にすると、AEM コードおよび設定でそれらを使用して外部サービスを呼び出すことができます。外部呼び出しには、AEM での処理方法が 2 種類あります。
+フレキシブルポートエグレスプロキシを有効にすると、AEM コードおよび設定でそれらを使用して外部サービスを呼び出すことができます。 外部呼び出しには、AEM での処理方法が 2 種類あります。
 
 1. 非標準ポートでの外部サービスへの HTTP／HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対して行われる HTTP／HTTPS 呼び出しが含まれます。

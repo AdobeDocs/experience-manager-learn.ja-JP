@@ -8,7 +8,7 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 7d84d7ec2b2af34ad8522abaae9757c331613cd5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '409'
 ht-degree: 100%
 
@@ -74,7 +74,7 @@ ht-degree: 100%
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)
-   + [アセットを書き出し](./sharing/export.md)
+   + [アセットの書き出し](./sharing/export.md)
    + [アセットを公開](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}

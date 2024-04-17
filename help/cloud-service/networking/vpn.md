@@ -11,7 +11,7 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -23,13 +23,13 @@ AEM as a Cloud Service を VPN に接続して、AEM と内部サービスの間
 
 ## 仮想プライベートネットワークとは
 
-仮想プライベートネットワーク（VPN）により、AEM as a Cloud Service のお客様は、Cloud Manager プログラム内の **AEM 環境**&#x200B;を、[サポートされている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=ja#vpn)既存の VPN に接続できます。これにより、AEM as a Cloud Service とお客様のネットワーク内のサービスとの間で、安全で制御された接続を実現できます。
+仮想プライベートネットワーク（VPN）により、AEM as a Cloud Service のお客様は、Cloud Manager プログラム内の **AEM 環境**&#x200B;を、[サポートされている](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=ja#vpn)既存の VPN に接続できます。 これにより、AEM as a Cloud Service とお客様のネットワーク内のサービスとの間で、安全で制御された接続を実現できます。
 
-Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。次のコマンドを実行する前に、仮想プライベートネットワークが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=ja#general-vpn-considerations)であることを確認してください。
+Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 次のコマンドを実行する前に、仮想プライベートネットワークが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=ja#general-vpn-considerations)であることを確認してください。
 
 >[!NOTE]
 >
->ビルド環境を Cloud Manager から VPN に接続することはサポートされていません。プライベートリポジトリからバイナリアーティファクトにアクセスする必要がある場合は、[ここで説明するように](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=ja#password-protected-maven-repositories)、パブリックインターネット上からアクセスできる URL を使用して、パスワードで保護されたセキュアなリポジトリを設定する必要があります。
+>ビルド環境を Cloud Manager から VPN に接続することはサポートされていません。 プライベートリポジトリからバイナリアーティファクトにアクセスする必要がある場合は、[ここで説明するように](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=ja#password-protected-maven-repositories)、パブリックインターネット上からアクセスできる URL を使用して、パスワードで保護されたセキュアなリポジトリを設定する必要があります。
 
 >[!MORELIKETHIS]
 >
@@ -52,15 +52,15 @@ Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークイ
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
+このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。 指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
 
 ## プログラムごとの仮想プライベートネットワークの有効化
 
 AEM as a Cloud Service の仮想プライベートネットワークを有効化することから始めます。
 
-1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細なネットワーク構成が必要な地域を決定します。`region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細なネットワーク構成が必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
 
-   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=ja#viewing-environment)の下にある AEM as a Cloud Service 環境の地域を見つけます。Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
+   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=ja#viewing-environment)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 
    __listRegions HTTP リクエスト__
 
@@ -72,7 +72,7 @@ AEM as a Cloud Service の仮想プライベートネットワークを有効化
        -H 'Content-Type: application/json'
    ```
 
-1. Cloud Manager API の [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、Cloud Manager プログラムの仮想プライベートネットワークを有効化します。Cloud Manager API の `listRegions` 操作から取得した適切な `region` コードを使用します。
+1. Cloud Manager API の [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、Cloud Manager プログラムの仮想プライベートネットワークを有効化します。 Cloud Manager API の `listRegions` 操作から取得した適切な `region` コードを使用します。
 
    __createNetworkInfrastructure HTTP リクエスト__
 
@@ -87,7 +87,7 @@ AEM as a Cloud Service の仮想プライベートネットワークを有効化
 
    `vpn-create.json` で JSON パラメーターを定義し、`... -d @./vpn-create.json` を介して curl に提供します。
 
-   [サンプルの vpn-create.json をダウンロードします](./assets/vpn-create.json)。このファイルは例に過ぎません。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。 
+   [サンプルの vpn-create.json をダウンロードします](./assets/vpn-create.json)。  このファイルは例に過ぎません。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。
 
    ```json
    {
@@ -150,7 +150,7 @@ AEM as a Cloud Service の仮想プライベートネットワークを有効化
        -H 'Content-Type: application/json'
    ```
 
-   HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。まだ完了していない場合は、数分ごとにステータスを再確認します。
+   HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。 まだ完了していない場合は、数分ごとにステータスを再確認します。
 
 ## 環境ごとの仮想プライベートネットワークプロキシの設定
 
@@ -192,7 +192,7 @@ AEM as a Cloud Service の仮想プライベートネットワークを有効化
    }
    ```
 
-   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。`nonProxyHosts` は、共有 IP を介して送信されたトラフィックがアドビによって自動的に最適化される場合に役立ちます。
+   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。 `nonProxyHosts` は、共有 IP を介して送信されたトラフィックがアドビによって自動的に最適化される場合に役立ちます。
 
    各 `portForwards` マッピングでは、詳細ネットワークは次の転送ルールを定義します。
 
@@ -215,13 +215,13 @@ AEM as a Cloud Service の仮想プライベートネットワークを有効化
        -H 'Content-Type: application/json'
    ```
 
-1. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。`enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるため、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
+1. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。 `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるため、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
 
 1. これで、カスタム AEM コードと設定で、仮想プライベート ネットワークのエグレス設定を使用できるようになりました。
 
 ## 仮想プライベートネットワーク経由での外部サービスへの接続
 
-仮想プライベートネットワークを有効にすると、AEM のコードと設定で使用して、VPN 経由で外部サービスを呼び出すことができます。外部呼び出しには、AEM での処理方法が 2 種類あります。
+仮想プライベートネットワークを有効にすると、AEM のコードと設定で使用して、VPN 経由で外部サービスを呼び出すことができます。 外部呼び出しには、AEM での処理方法が 2 種類あります。
 
 1. 外部サービスへの HTTP／HTTPS 呼び出し
    + 標準の 80 または 443 ポート以外のポートで動作するサービスに対して行われる HTTP／HTTPS 呼び出しが含まれます。
@@ -232,7 +232,7 @@ AEM からの標準ポート（80／443）での HTTP／HTTPS リクエストは
 
 ### HTTP／HTTPS
 
-AEM から HTTP／HTTPS で接続する場合、VPN を使用すると、HTTP／HTTPS 接続が自動的 AEM からプロキシされます。HTTP／HTTPS 接続をサポートするために、追加のコードや設定は必要ありません。
+AEM から HTTP／HTTPS で接続する場合、VPN を使用すると、HTTP／HTTPS 接続が自動的 AEM からプロキシされます。 HTTP／HTTPS 接続をサポートするために、追加のコードや設定は必要ありません。
 
 >[!TIP]
 >

@@ -12,7 +12,7 @@ last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
 source-git-commit: f84a6cc54838e5bf87cfa173ef17df4ec745ebcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '370'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ AEM 環境に対する DoS 攻撃と DDoS 攻撃を防止および軽減する�
             <td>Web アプリケーションを様々なタイプの攻撃から保護するために設計されたセキュリティソリューション。</td>
             <td>
             <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS 保護ライセンス</a></td>
-            <td>AMS 契約による <a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a> または <a href="https://azure.microsoft.com/ja-jp/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
+            <td>AMS 契約による <a href="ttps://docs.aws.amazon.com/waf/" target="_blank">AWS</a> または <a href="https://azure.microsoft.com/ja-jp/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
             <td>推奨される WAF</td>
         </tr>
         <tr>

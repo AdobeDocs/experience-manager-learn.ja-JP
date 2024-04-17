@@ -1,6 +1,6 @@
 ---
 title: タグ実装のデバッグ
-description: タグ実装のデバッグに使用されるいくつかの一般的なツールと技術を紹介します。ブラウザーの Developer Console と Experience Platform デバッガー拡張機能を使用して、タグ実装の重要な側面を特定してトラブルシューティングする方法について説明します。
+description: タグ実装のデバッグに使用されるいくつかの一般的なツールと技術を紹介します。 ブラウザーの Developer Console と Experience Platform デバッガー拡張機能を使用して、タグ実装の重要な側面を特定してトラブルシューティングする方法について説明します。
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-6047
 thumbnail: 38567.jpg
@@ -14,21 +14,21 @@ doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '266'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 # タグ実装のデバッグ {#debug-tags-implementation}
 
-タグ実装のデバッグに使用される一般的なツールと技術について紹介します。ブラウザーの Developer Console と Experience Platform デバッガー拡張機能を使用して、タグ実装の重要な側面を特定してトラブルシューティングする方法について説明します。
+タグ実装のデバッグに使用される一般的なツールと技術について紹介します。 ブラウザーの Developer Console と Experience Platform デバッガー拡張機能を使用して、タグ実装の重要な側面を特定してトラブルシューティングする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
 
 ## Satellite オブジェクトを介したクライアントサイドのデバッグ
 
-クライアントサイドのデバッグは、タグプロパティのルールの読み込みまたは実行順序を確認するのに役立ちます。タグプロパティが web サイトに追加されるたびに、`_satellite` JavaScript オブジェクトがブラウザーに存在するようになり、クライアントサイドのイベントとデータの追跡を容易にします。
+クライアントサイドのデバッグは、タグプロパティのルールの読み込みまたは実行順序を確認するのに役立ちます。 タグプロパティが web サイトに追加されるたびに、`_satellite` JavaScript オブジェクトがブラウザーに存在するようになり、クライアントサイドのイベントとデータの追跡を容易にします。
 
 クライアントサイドのデバッグを有効にするには、`_satellite` オブジェクトの `setDebug(true)` メソッドを呼び出します。
 
@@ -44,7 +44,7 @@ ht-degree: 93%
 
 ## Adobe Experience Platform Debugger を使用したデバッグ
 
-Adobe提供Adobe Experience Platform Debugger [Chrome 拡張機能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) を使用して、統合をデバッグ、理解し、インサイトを得ることができます。
+アドビは、Adobe Experience Platform Debugger の [Chrome 拡張機能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)を提供し、統合に関するデバッグ、理解、インサイトを得ることができるようにします。
 
 1. Adobe Experience Platform Debugger の拡張機能を開き、パブリッシュインスタンスでサイトページを開きます。
 

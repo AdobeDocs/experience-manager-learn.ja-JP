@@ -14,7 +14,7 @@ doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 141
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '508'
 ht-degree: 100%
 
@@ -33,11 +33,11 @@ AEM web サイトで VEC を使用するには、次の設定を行う必要が�
 
 ## シナリオの概要
 
-WKND サイトのホームページには、情報カードの形式で、ある都市のローカルのアクティビティや付近の人気スポットが表示されます。あなたはマーケターとして、「Adventure」セクションのティーザーのテキストを変更し、コンバージョンがどのように向上したかを理解することで、ホームページを変更するタスクを割り当てられました。
+WKND サイトのホームページには、情報カードの形式で、ある都市のローカルのアクティビティや付近の人気スポットが表示されます。 あなたはマーケターとして、「Adventure」セクションのティーザーのテキストを変更し、コンバージョンがどのように向上したかを理解することで、ホームページを変更するタスクを割り当てられました。
 
 ## Visual Experience Composer（VEC）を使用した A/B テストの作成手順
 
-1.  [Adobe Experience Cloud](https://experience.adobe.com/) にログインして「__ターゲット__」をタップし、「__アクティビティ__」タブに移動します。
+1. [Adobe Experience Cloud](https://experience.adobe.com/) にログインして「__ターゲット__」をタップし、「__アクティビティ__」タブに移動します。
 
    + Experience Cloud ダッシュボードで「__ターゲット__」が表示されない場合は、右上の組織切り替えボタンで正しい Adobe 組織が選択され、[Adobe Admin Console](https://adminconsole.adobe.com/) でユーザーにターゲットへのアクセス権が付与されていることを確認します。
 
@@ -49,7 +49,7 @@ WKND サイトのホームページには、情報カードの形式で、ある
 
    ![アクティビティ URL](assets/ab-test-url.png)
 
-1. Visual Experience Composer では、アクティビティを作成した後、左側に「*エクスペリエンス A*」および 「*エクスペリエンス B*」の 2 つのタブが表示されます。リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
+1. Visual Experience Composer では、アクティビティを作成した後、左側に「*エクスペリエンス A*」および 「*エクスペリエンス B*」の 2 つのタブが表示されます。 リストからエクスペリエンスを選択します。 新しいエクスペリエンスをリストに追加するには、「**エクスペリエンスを追加**」ボタンをクリックします。
 
    ![エクスペリエンス A](assets/experience.png)
 
@@ -57,7 +57,7 @@ WKND サイトのホームページには、情報カードの形式で、ある
 
    ![要素](assets/select-element.png)
 
-1. テキストを「*Camping in Western Australia*」から「*Adventures of Australia*」に変更します。エクスペリエンスに追加された変更のリストは、「変更」の下に表示されます。 変更した項目をクリックして編集し、CSS セレクターと、その項目に追加された新しいコンテンツを表示することができます。
+1. テキストを「*Camping in Western Australia*」から「*Adventures of Australia*」に変更します。 エクスペリエンスに追加された変更のリストは、「変更」の下に表示されます。 変更した項目をクリックして編集し、CSS セレクターと、その項目に追加された新しいコンテンツを表示することができます。
 
    ![Adventures](assets/adventures.png)
 

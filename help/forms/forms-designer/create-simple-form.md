@@ -13,19 +13,19 @@ jira: KT-15053
 thumbnail: 3427620.jpeg
 exl-id: ac482951-9941-4c14-95b2-29d274fa610e
 source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
 # AEM Forms Designer を使用した簡単なフォームの作成
 
-第 1 部 – タイトル、画像、テキストフィールド、日付フィールドの追加
+第 1 部 - タイトル、画像、テキストフィールドおよび日付フィールドの追加
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
 
-パート 2 - カスタムオブジェクトとフォームフラグメントの追加と作成
+第 2 部 - カスタムオブジェクトおよびフォームフラグメントの追加と作成
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
 

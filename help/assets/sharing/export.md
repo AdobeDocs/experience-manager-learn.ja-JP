@@ -1,6 +1,6 @@
 ---
 title: アセットの書き出し
-description: ローカルマシンにアセットを一括で書き出し、ダウンロードする方法を説明します。
+description: ローカルマシンにアセットを一括で書き出し、ダウンロードする方法について説明します。
 feature: Asset Management
 version: Cloud Service
 topic: Content Management
@@ -10,29 +10,29 @@ last-substantial-update: 2024-04-08T00:00:00Z
 doc-type: Tutorial
 jira: KT-15313
 thumbnail: KT-15313.jpeg
-source-git-commit: 681263a2f4008980fc3119e88d34b73da23eb260
-workflow-type: tm+mt
+exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
+source-git-commit: d574b0080d12f59d250685f62fc426dfff3adb04
+workflow-type: ht
 source-wordcount: '517'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # アセットの書き出し
 
-カスタマイズ可能な Node.js スクリプトを使用してアセットをローカルマシンに書き出す方法を説明します。 このエクスポートスクリプトは、を使用してAEMからアセットをプログラムでダウンロードする方法の例を提供します。 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)を参照してください。特に、元のレンディションに焦点を当てて、最高品質を確保します。 AEM Assetsのフォルダー構造をローカルドライブにレプリケートするように設計されているので、アセットのバックアップや移行が簡単になります。
+カスタマイズ可能な Node.js スクリプトを使用して、ローカルマシンにアセットを書き出す方法について説明します。 この書き出しスクリプトは、[AEM Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) を使用してプログラムで AEM からアセットをダウンロードする方法の例を示します。特に元のレンディションに焦点を当てて最高品質を実現します。 AEM Assets のフォルダー構造をローカルドライブにレプリケートするように設計されているので、アセットのバックアップや移行が簡単になります。
 
-XMPとしてアセットにメタデータが埋め込まれていない限り、スクリプトは関連するメタデータなしでアセットの元のレンディションのみをダウンロードします。 つまり、AEMに保存されていてアセットファイルに統合されていない説明的な情報、分類またはタグは、ダウンロードには含まれません。 その他のレンディションも、スクリプトを変更して含めることでダウンロードできます。 書き出したアセットを保存できるだけのスペースがあることを確認します。
+XMP としてアセットにメタデータが埋め込まれていない限り、スクリプトは関連するメタデータなしでアセットの元のレンディションのみをダウンロードします。 つまり、AEM に保存されているがアセットファイルに統合されていない説明的な情報、分類またはタグは、ダウンロードには含まれません。 スクリプトを変更して含めることで、その他のレンディションもダウンロードできます。 書き出したアセットを保存できるだけのスペースがあることを確認します。
 
-スクリプトは通常、AEM オーサーに対して実行されますが、AEM Assets HTTP API エンドポイントとアセットレンディションにAEM経由でアクセスできる限り、Dispatcher パブリッシュに対しても実行できます。
+スクリプトは通常、AEM オーサーに対して実行されますが、AEM Assets HTTP API エンドポイントとアセットレンディションが Dispatcher 経由でアクセスできる限り、AEM パブリッシュに対しても実行できます。
 
-スクリプトを実行する前に、AEM インスタンスの URL、ユーザー資格情報（アクセストークン）、書き出すフォルダーのパスを指定してスクリプトを設定する必要があります。
+スクリプトを実行する前に、AEM インスタンスの URL、ユーザー資格情報（アクセストークン）、書き出すフォルダーへのパスを使用してスクリプトを設定する必要があります。
 
-## スクリプトを書き出し
+## 書き出しスクリプト
 
-JavaScript モジュールとして記述されたスクリプトは、に依存するので、Node.js プロジェクトの一部です。 `node-fetch`. 次のことができます [プロジェクトを zip ファイルとしてダウンロードします](./assets/export/export-aem-assets-script.zip)または、以下のスクリプトをタイプの空の Node.js プロジェクトにコピーします `module`、および実行 `npm install node-fetch` ：依存関係をインストールします。
+JavaScript モジュールとして記述されたスクリプトは、`node-fetch` への依存関係があるので、Node.js プロジェクトの一部です。 [プロジェクトを zip ファイルとしてダウンロード](./assets/export/export-aem-assets-script.zip)するか、以下のスクリプトをタイプ `module` の空の Node.js プロジェクトにコピーし、`npm install node-fetch` を実行して依存関係をインストールできます。
 
-このスクリプトは、AEM Assets フォルダーツリーの手順を実行し、アセットとフォルダーをマシン上のローカルフォルダーにダウンロードします。 このストアでは、 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) フォルダーおよびアセットデータを取得し、アセットの元のレンディションをダウンロードします。
+このスクリプトは、AEM Assets フォルダーツリーを移動し、アセットとフォルダーをマシン上のローカルフォルダーにダウンロードします。 [AEM Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) を使用してフォルダーとアセットデータを取得し、アセットの元のレンディションをダウンロードします。
 
 ```javascript
 // export-assets.js
@@ -240,9 +240,9 @@ console.timeEnd('Download AEM assets');
 
 ## 書き出しの設定
 
-スクリプトをダウンロードして、スクリプトの下部にある設定変数を更新します。
+スクリプトをダウンロードしたら、スクリプトの下部にある設定変数を更新します。
 
-この `AEM_ACCESS_TOKEN` を入手するには、の手順を使用します。 [AEMas a Cloud Service環境へのトークンベースの認証](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) チュートリアル。 多くの場合、書き出しの完了に要する時間が 24 時間未満で、トークンを生成するユーザーが書き出すアセットへの読み取りアクセス権を持っている限り、24 時間開発者トークンで十分です。
+`AEM_ACCESS_TOKEN` を入手するには、[AEM as a Cloud Service に対するトークンベースの認証](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)チュートリアルの手順を使用します。 多くの場合、書き出しの完了に要する時間が 24 時間未満で、トークンを生成するユーザーが書き出すアセットへの読み取りアクセス権を持っている限り、24 時間の開発者トークンで十分です。
 
 ```javascript
 ...
@@ -269,15 +269,15 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 
 Node.js を使用してスクリプトを実行し、アセットをローカルマシンに書き出します。
 
-アセットの数とサイズによっては、スクリプトの完了に時間がかかる場合があります。 スクリプトの実行時に、 [進行状況を記録](#output) コンソールに移動します。
+アセットの数とサイズによっては、スクリプトの完了に時間がかかる場合があります。 スクリプトが実行されると、[進行状況](#output)をコンソールに記録します。
 
 ```shell
 $ node export-assets.js
 ```
 
-## 出力をエクスポート
+## 出力の書き出し
 
-書き出しスクリプトは、進行状況をコンソールに記録し、ダウンロード中のアセットを示します。 スクリプトが完了すると、アセットは設定で指定されたローカルフォルダーに保存され、ログの最後に、アセットのダウンロードにかかった合計時間が記録されます。
+書き出しスクリプトは、進行状況をコンソールに記録し、ダウンロード中のアセットを示します。 スクリプトが完了すると、アセットは設定で指定されたローカルフォルダーに保存され、アセットのダウンロードにかかった合計時間がログの最後に記録されます。
 
 ```plaintext
 ...
@@ -293,6 +293,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-書き出されたアセットは、設定で指定されたローカルフォルダーにあります `LOCAL_DOWNLOAD_FOLDER`. フォルダー構造はAEM Assetsのフォルダー構造と同じで、適切なサブフォルダーにアセットがダウンロードされます。 これらのファイルはにアップロードできます。 [サポートされるクラウドストレージプロバイダー](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)、用 [一括読み込み](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) を他のAEM インスタンスに送信するか、バックアップ用に送信します。
+書き出されたアセットは、設定 `LOCAL_DOWNLOAD_FOLDER` で指定されたローカルフォルダーにあります。 フォルダー構造は AEM Assets のフォルダー構造と同じで、適切なサブフォルダーにアセットがダウンロードされます。 これらのファイルは、他の AEM インスタンスへの[一括読み込み](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/migration/bulk-import)やバックアップ用に、[サポートされるクラウドストレージプロバイダー](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)にアップロードできます。
 
 ![書き出されたアセット](./assets/export/exported-assets.png)

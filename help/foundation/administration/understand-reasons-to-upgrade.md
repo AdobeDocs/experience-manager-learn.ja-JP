@@ -10,9 +10,9 @@ doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 809
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2588'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ AEM は、AEM 外でのコンテンツの使用を容易にする新しい改善
 
 ### アセット管理
 
-AEM Assets は、DAM の使用、管理、理解を向上させるために、豊豊富なアセット管理機能のセットを引き続き構築します。AEM 6.5 では、Adobe Creative Cloud とクリエイティブワークフローの統合が引き続き改善されます。
+AEM Assets は、DAM の使用、管理、理解を向上させるために、豊豊富なアセット管理機能のセットを引き続き構築します。 AEM 6.5 では、Adobe Creative Cloud とクリエイティブワークフローの統合が引き続き改善されます。
 
 + **Adobe アセットリンク**&#x200B;は、クリエイティブを Adobe Creative Cloud ツールから AEM Assets に直接接続します。
 + **Adobe Stock** 統合により、AEM Assets エクスペリエンスから Adobe Stock 画像に直接アクセスでき、シームレスなコンテンツ検出エクスペリエンスを作成できます。
@@ -82,7 +82,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
 
 以下に、AEM が提供する主な基盤機能のマトリックスを示します。 これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
 
-+ [AEM Foundation リリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html?lang=ja)
++ [AEM Foundation リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/wcm-platform.html)
 
 ***✔<sup>+</sup> このバージョンの機能が大幅に強化されました。***
 
@@ -136,7 +136,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">カスタム検索インデックス</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=jp" target="_blank">カスタム検索インデックス</a>：</strong>
 カスタムインデックス定義を追加して、クエリのパフォーマンスと検索の関連性を最適化する機能。</td>
             <td> </td>
             <td>✔</td>
@@ -170,7 +170,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=jp" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
 AEM 6.0 の導入以降、MongoMK に対する継続的な機能強化が行われています。</td>
             <td> </td>
             <td> </td>
@@ -237,7 +237,7 @@ AEM をすばやく検索して移動します。</td>
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/htl/using/overview.html" target="_blank">HTL テンプレート言語</a>：</strong>
- プレゼンテーションをロジックから分離する最新のテンプレートエンジン。コンポーネントの開発時間が大幅に短縮されます。各リリースで追加された機能。</td>
+ プレゼンテーションをロジックから分離する最新のテンプレートエンジン。 コンポーネントの開発時間が大幅に短縮されます。 各リリースで追加された機能。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -248,7 +248,7 @@ AEM をすばやく検索して移動します。</td>
         </tr>
         <tr>
             <td><strong><a href="https://sling.apache.org/documentation/bundles/models.html" target="_blank">Sling モデル</a>：</strong>
-JCR リソースをビジネスオブジェクトやロジックにモデリングするための柔軟なフレームワーク。各リリースで追加された機能。
+JCR リソースをビジネスオブジェクトやロジックにモデリングするための柔軟なフレームワーク。 各リリースで追加された機能。
             </td>
             <td> </td>
             <td>✔</td>
@@ -274,9 +274,9 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
 
 ## セキュリティ機能
 
-以下に、AEM から提供される主なセキュリティ機能の一覧を示します。これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
+以下に、AEM から提供される主なセキュリティ機能の一覧を示します。 これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
 
-+ [セキュリティリリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security?lang=ja)
++ [セキュリティリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
 ***✔ は、このバージョンでの機能の大幅な強化を示しています。***
 
@@ -297,7 +297,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
     </thead>
     <tbody>
         <tr>
-        <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">サービスユーザー</a></strong>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=jp" target="_blank">サービスユーザー</a></strong>
  <br> 権限を区分化して、管理者権限の不要な使用を回避します。</td>
         <td></td>
         <td>✔</td>
@@ -319,7 +319,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>対策</strong></a>
+        <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=jp" target="_blank"><strong>CSRF</strong> <strong>対策</strong></a>
  <br> クロスサイトリクエストフォージェリーに対する防御が標準で搭載されています。</td>
         <td></td>
         <td></td>
@@ -409,7 +409,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ims-config-and-admin-console.html?lang=ja" target="_blank">Adobe IMS 認証のサポート</a><br>
+        <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS 認証のサポート</a><br>
  </strong>Adobe Managed Services（AMS）専用で、Adobe IMS（Identity Management System）を介して AEM オーサーインスタンスへのアクセスを一元的に管理します。</td>
         <td> </td>
         <td> </td>
@@ -424,7 +424,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
 
 ## Sites の機能
 
-以下に、AEM が提供する主な Sites 機能の一覧を示します。これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
+以下に、AEM が提供する主な Sites 機能の一覧を示します。 これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
 
 + [AEM Sites リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sites.html?lang=ja)
 
@@ -481,7 +481,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/core-components/user-guide.html" target="_blank">コアコンポーネント</a>：</strong>
- サイト開発を促進します。GitHub で入手でき、頻繁なリリーススケジュールと柔軟性の確保に対応できます。</td>
+ サイト開発を促進します。 GitHub で入手でき、頻繁なリリーススケジュールと柔軟性の確保に対応できます。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -591,7 +591,7 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
         </tr>
         <tr>
             <td><strong>Adobe Analytics 統合とコンテンツインサイト：</strong>
-Adobe Analytics と DTM の統合が容易になります。オーサー環境内でパフォーマンス情報を表示します。</td>
+Adobe Analytics と DTM の統合が容易になります。 オーサー環境内でパフォーマンス情報を表示します。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -601,7 +601,7 @@ Adobe Analytics と DTM の統合が容易になります。オーサー環境�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target 統合</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/content-targeting-touch.html?lang=jp" target="_blank">Adobe Target 統合</a>：</strong>
 ターゲット設定されたエクスペリエンスを作成し、再利用可能なオファーライブラリを作成するためのステップバイステップのウィザード。</td>
             <td> </td>
             <td> </td>
@@ -645,7 +645,7 @@ Adobe Analytics と DTM の統合が容易になります。オーサー環境�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">e コマース</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang-jp" target="_blank">e コマース</a>：</strong>
 Web、モバイル、ソーシャルという各種タッチポイントにまたがってブランド化を行い、パーソナライズされたショッピングエクスペリエンスを提供します。
             </td>
             <td>✔</td>
@@ -657,7 +657,7 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/communities/using/overview.html" target="_blank">コミュニティ</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=jp" target="_blank">コミュニティ</a>：</strong>
 フォーラム、スレッドコメント、イベントカレンダーなどの多くの機能を使用して、サイト訪問者との深いエンゲージメントを可能にします。</td>
             <td>✔</td>
             <td>✔</td>
@@ -672,7 +672,7 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
 
 ## Assets の機能
 
-以下に、AEM が提供する主な Assets 機能の一覧を示します。これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
+以下に、AEM が提供する主な Assets 機能の一覧を示します。 これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
 
 + [AEM Assets リリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html?lang=ja)
 
@@ -717,8 +717,8 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a> ワークフロー管理：</strong>
-            AEM プロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク</td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=ja" target="_blank">タスク</a>とワークフロー管理：</strong>
+            AEM プロジェクトを活用したデジタルアセットのレビューと承認のための事前定義済みのワークフローとタスク。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -783,7 +783,7 @@ AEM Sites インスタンスは、別の AEM Assets インスタンスのアセ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">アセットインサイト</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=jp" target="_blank">アセットインサイト</a>：</strong>
 Adobe Analytics を活用して、デジタルアセットの顧客インタラクションをキャプチャし、AEM で表示します。</td>
             <td> </td>
             <td> </td>
@@ -794,7 +794,7 @@ Adobe Analytics を活用して、デジタルアセットの顧客インタラ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多言語アセット</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html?lang=jp" target="_blank">多言語アセット</a>：</strong>
  言語ルートを使用したアセットメタデータの翻訳サポート。</td>
             <td> </td>
             <td> </td>
@@ -816,7 +816,7 @@ Adobe Sensei を利用して、便利なメタデータで画像に自動的に�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html" target="_blank">スマート翻訳検索</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html?lang=jp" target="_blank">スマート翻訳検索</a>：</strong>
 AEM Assets の検索時に検索語句を自動的に翻訳します。</td>
             <td> </td>
             <td> </td>
@@ -827,7 +827,7 @@ AEM Assets の検索時に検索語句を自動的に翻訳します。</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server 統合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html?lang=jp" target="_blank">Adobe InDesign Server 統合</a>：</strong>
 商品カタログを生成します。 InDesign テンプレートに基づいて、パンフレット、チラシ、印刷広告を作成します。</td>
             <td> </td>
             <td> </td>
@@ -850,7 +850,7 @@ Creative Suite 製品で編集するために、アセットをローカルデ�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe 画像ライブラリ</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/imaging-transcoding-library.html?lang=jp" target="_blank">Adobe 画像ライブラリ</a>：</strong>
  <br>高品質のファイル操作に使用される Photoshop および Acrobat PDF ライブラリ。</td>
             <td> </td>
             <td> </td>
@@ -872,7 +872,7 @@ Adobe Create Cloud アプリケーションから AEM Assets に直接アクセ�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock統合</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=jp" target="_blank">Adobe Stock統合</a>：</strong>
  AEM から直接 Adobe Stock 画像にシームレスにアクセスして使用します。</td>
             <td> </td>
             <td> </td>
@@ -907,7 +907,7 @@ Adobe Create Cloud アプリケーションから AEM Assets に直接アクセ�
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html?lang=ja" target="_blank">イメージング</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/managing-assets.html?lang=jp" target="_blank">イメージング</a>：</strong>
  スマート切り抜きを含め、様々なサイズおよび形式で画像を動的に配信します。</td>
             <td> </td>
             <td></td>
@@ -929,7 +929,7 @@ Adobe Create Cloud アプリケーションから AEM Assets に直接アクセ�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">インタラクティブメディア</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/interactive-images.html?lang=jp" target="_blank">インタラクティブメディア</a>：</strong>
  主要なオファーを紹介するクリック可能なコンテンツを含むインタラクティブバナーやビデオを作成します。
             </td>
             <td> </td>
@@ -941,7 +941,7 @@ Adobe Create Cloud アプリケーションから AEM Assets に直接アクセ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>セット（<a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/image-sets.html" target="_blank">画像</a>、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">スピン</a>、<a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混在メディア</a>）：</strong>
+            <td><strong>セット（<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/image-sets.html?lang=jp" target="_blank">画像</a>、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/spin-sets.html?lang=jp" target="_blank">スピン</a>、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/mixed-media-sets.html?lang=jp" target="_blank">混在メディア</a>）：</strong>
  ユーザーが 360 度の視聴エクスペリエンスをズーム、パン、回転、シミュレーションできるようにします。</td>
             <td> </td>
             <td>✔</td>
@@ -963,7 +963,7 @@ Adobe Create Cloud アプリケーションから AEM Assets に直接アクセ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html?lang=ja" target="_blank">配信</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/delivering-dynamic-media-assets.html?lang=jp" target="_blank">配信</a>：</strong>
  HTTP/2 プロトコルを使用した Dynamic Media コンテンツのリンクまたは埋め込みと配信に関する柔軟なオプション。</td>
             <td> </td>
             <td>✔</td>
@@ -1065,7 +1065,7 @@ AEM が提供する主な AEM Forms アドオン機能のマトリックスを�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/upgrade.html" target="_blank">通信監理</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/letters-correspondences/cm-overview.html?lang=jp" target="_blank">通信監理</a>：</strong>
 AEM Forms では、お客様とのパーソナル化されたインタラクティブな通信を作成、管理、提供できます。
             </td>
             <td> </td>
@@ -1078,7 +1078,7 @@ AEM Forms では、お客様とのパーソナル化されたインタラクテ�
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/jp/aem-forms/6-5/whats-new.html#AEMFormsdataintegration" target="_blank">サードパーティデータの統合</a>：</strong>
- データ統合を使用すると、フォーム内のユーザー入力に基づいて、異なるデータソースからデータが取得されます。この場合、フォームを送信すると、取得したデータが取得元のデータソースに再度書き込まれます。
+ データ統合を使用すると、フォーム内のユーザー入力に基づいて、異なるデータソースからデータが取得されます。 この場合、フォームを送信すると、取得したデータが取得元のデータソースに再度書き込まれます。
             </td>
             <td> </td>
             <td> </td>
@@ -1100,7 +1100,7 @@ AEM Forms では、お客様とのパーソナル化されたインタラクテ�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/home.html?lang=ja&amp;topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">Experience Cloud との統合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">Marketing Cloud との統合</a>：</strong>
             Adobe Analytics および Adobe Target との統合により、顧客体験を強化および測定できます。</td>
             <td> </td>
             <td> </td>
@@ -1111,7 +1111,7 @@ AEM Forms では、お客様とのパーソナル化されたインタラクテ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">フォームマネージャー</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-managing-forms.html?lang=jp" target="_blank">フォームマネージャー</a>：</strong>
  分析、翻訳、A/B テスト、レビュー、公開の有効化など、すべてのフォーム／ドキュメント／通信を 1 か所で管理できます。
             </td>
             <td> </td>
@@ -1123,7 +1123,7 @@ AEM Forms では、お客様とのパーソナル化されたインタラクテ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms アプリ</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/aem-forms-app/aem-forms-app.html?lang=jp" target="_blank">AEM Forms アプリ</a>：</strong>
  iOS、Android、Windows のアプリ内でオンライン／オフラインのフォーム処理を実行できるようにします。</td>
             <td> </td>
             <td>✔</td>
@@ -1134,7 +1134,7 @@ AEM Forms では、お客様とのパーソナル化されたインタラクテ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/aem-forms/6-5/adaptive-document.html" target="_blank">インタラクティブ通信</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/jp/aem-forms/6-5/introduction-forms-authoring.html" target="_blank">インタラクティブ通信</a>：</strong>
 グラフ（旧称：アダプティブドキュメント）などのインタラクティブ要素を持つターゲットステートメントなど、豊かなコミュニケーションを作成します。</td>
             <td> </td>
             <td> </td>
