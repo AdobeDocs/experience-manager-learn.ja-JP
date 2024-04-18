@@ -12,10 +12,10 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1449'
-ht-degree: 100%
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
+workflow-type: tm+mt
+source-wordcount: '1472'
+ht-degree: 98%
 
 ---
 
@@ -218,6 +218,8 @@ data:
 また、**クライアント IP、国、およびユーザーエージェント別のトップ 100 攻撃**&#x200B;パネルには追加の詳細が表示され、ルール設定をさらに最適化するために使用できます。
 
 ![ELK ツールダッシュボードのトップ 100 リクエスト](./assets/elk-tool-dashboard-dos-top-100.png)
+
+DoS および DDoS 攻撃の防止方法の詳細については、 [トラフィックフィルタールールを使用した DoS および DDoS 攻撃のブロック](../dos/blocking-dos-attack-using-traffic-filter-rules.md) チュートリアル。
 
 ### WAF ルール
 
