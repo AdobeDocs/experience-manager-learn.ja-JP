@@ -394,4 +394,4 @@ ht-degree: 99%
          + [Edge Delivery Services でのイベントの公開と非公開](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [クエリインデックスと Excel 数式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [独自の Cloudflare CDN の導入](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
-         + [AEM Assetsの統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
+         + [AEM Assets の統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
