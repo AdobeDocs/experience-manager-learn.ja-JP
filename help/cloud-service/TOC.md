@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
+source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 99%
@@ -161,7 +161,7 @@ ht-degree: 99%
       + [Java SQL API を使用した SQL 接続](./networking/examples/sql-java-apis.md)
       + [メールサービス](./networking/examples/email-service.md)
 + セキュリティ {#security}
-   + [トラフィックフィルタールールを使用した DoS/DDoS 攻撃のブロック](./security/dos/blocking-dos-attack-using-traffic-filter-rules.md)
+   + [トラフィックフィルタールールを使用した DoS/DDoS 攻撃のブロック](./security/blocking-dos-attack-using-traffic-filter-rules.md)
    + WAF ルールを含むトラフィックフィルタールール{#traffic-filter-and-waf-rules}
       + [概要](./security/traffic-filter-rules/overview.md)
       + [設定方法](./security/traffic-filter-rules/how-to-setup.md)
