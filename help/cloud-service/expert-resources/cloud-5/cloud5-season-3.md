@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '363'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -118,16 +118,16 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
     <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="AEM Assetsとドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="AEM Assets とドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
-                <strong>AEM Assetsとドキュメントオーサリングの統合</strong></a>        
-                <br/><em>james Talbot &amp; Darin Kuntze （AEM エンジニアリング）</em>
+                <strong>AEM Assets とドキュメントオーサリングの統合</strong></a>        
+                <br/><em>James Talbot と Darin Kuntze（AEM エンジニアリングチーム）</em>
             </div>
             <p>
                 <br/>
-                AEM Assetsをドキュメントオーサリングと統合する方法について説明します。
+                AEM Assets をドキュメントオーサリングと統合する方法について確認します。
             </p>
         </td>        
     </tr>      

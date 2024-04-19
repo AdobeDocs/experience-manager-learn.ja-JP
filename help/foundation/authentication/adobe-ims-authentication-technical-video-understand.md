@@ -13,9 +13,9 @@ last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 431
 source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '399'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Adobe Experience Manager では、AEM インスタンスに対する Admin Conso
 
 Admin Console と Adobe Experience Manager の両方で、ユーザーレベルで権限とアクセスを適用することは避ける必要があります。
 
-Admin Consoleでは、プロダクトコンテキストレベルでユーザーグループを介してユーザーにアクセス権を付与する必要があります。 ユーザーグループは、通常、組織内の論理的な役割によって表現され、Adobe Experience Cloud 製品間でのグループの再利用性を促進するのに最適です。
+Admin Console では、製品コンテキストレベルでユーザーグループを介してユーザーにアクセス権を付与する必要があります。ユーザーグループは、通常、組織内の論理的な役割によって表現され、Adobe Experience Cloud 製品間でのグループの再利用性を促進するのに最適です。
 
 ### Adobe Experience Manager での権限の適用
 

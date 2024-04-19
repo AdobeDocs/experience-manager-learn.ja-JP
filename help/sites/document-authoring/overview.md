@@ -12,9 +12,9 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '591'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -563,13 +563,13 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations.md" title="バリエーションの生成">バリエーションを生成</a>
             </p>
-            <p class="is-size-6">Edge Delivery Servicesのバリエーションを生成する概要と、マーケターにとって役立つ方法について説明します。</p>
+            <p class="is-size-6">Edge Delivery Services でバリエーションを生成する概要と、それがマーケターにとってどのように役立つかを理解します。</p>
             <a href="./how-to/generate-variations.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap
+              <span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">ビデオを視聴</span>
- </a>
+            </a>
           </div>
         </div>
       </div>
@@ -580,11 +580,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するためのSidekickの設定"
+            <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するための Sidekick の設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="バリエーションを生成するためのSidekickの設定">
+                alt="バリエーションを生成するための Sidekick の設定">
             </a>
           </figure>
         </div>
@@ -593,15 +593,15 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するためのSidekickの設定">バリエーションを生成するためのSidekickの設定</a>
+              <a href="./how-to/generate-variations-sidekick-config.md" title="バリエーションを生成するための Sidekick の設定">バリエーションを生成するための Sidekick の設定</a>
             </p>
-            <p class="is-size-6">Edge Delivery Servicesドキュメントのオーサリングでバリエーションを生成するためのサイドキックの設定方法を確認します。</p>
+            <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するための Sidekick の設定方法を確認します。</p>
             <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap
+              <span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">ビデオを視聴</span>
- </a>
+            </a>
           </div>
         </div>
       </div>
@@ -612,11 +612,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/prompt-templates-for-content-variations.md" title="GenAI プロンプトテンプレートの使用"
+            <a href="./how-to/prompt-templates-for-content-variations.md" title="生成 AI プロンプトテンプレートの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="GenAI プロンプトテンプレートの使用">
+                alt="生成 AI プロンプトテンプレートの使用">
             </a>
           </figure>
         </div>
@@ -625,15 +625,15 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/prompt-templates-for-content-variations.md" title="GenAI プロンプトテンプレートの使用">GenAI プロンプトテンプレート</a>
+              <a href="./how-to/prompt-templates-for-content-variations.md" title="生成 AI プロンプトテンプレートの使用">生成 AI プロンプトテンプレート</a>
             </p>
-            <p class="is-size-6">生成 AI プロンプトテンプレートを使用してコンテンツのバリエーションを生成する方法を調べます。</p>
+            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI プロンプトテンプレートの使用方法を確認します。</p>
             <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap
+              <span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">ビデオを視聴</span>
- </a>
+            </a>
           </div>
         </div>
       </div>
@@ -659,13 +659,13 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/custom-prompt-templates.md" title="GenAI カスタムプロンプトテンプレート">GenAI カスタムプロンプトテンプレート</a>
             </p>
-            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートの作成方法を探索します。</p>
+            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートの作成方法を確認します。</p>
             <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap
+              <span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">ビデオを視聴</span>
- </a>
+            </a>
           </div>
         </div>
       </div>
@@ -676,11 +676,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/save-custom-prompt-template.md" title="GenAI 保存プロンプトテンプレート"
+            <a href="./how-to/save-custom-prompt-template.md" title="GenAI プロンプトテンプレートの保存"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="GenAI 保存プロンプトテンプレート">
+                alt="GenAI プロンプトテンプレートの保存">
             </a>
           </figure>
         </div>
@@ -689,15 +689,15 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/save-custom-prompt-template.md" title="GenAI 保存プロンプトテンプレート">GenAI 保存プロンプトテンプレート</a>
+              <a href="./how-to/save-custom-prompt-template.md" title="GenAI プロンプトテンプレートの保存">GenAI プロンプトテンプレートの保存</a>
             </p>
-            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートを保存する方法を探索します。</p>
+            <p class="is-size-6">コンテンツのバリエーションを生成するための生成 AI カスタムプロンプトテンプレートを保存する方法を確認します。</p>
             <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
- <span class="spectrum-Button-label has-no-wrap
+              <span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">ビデオを視聴</span>
- </a>
+            </a>
           </div>
         </div>
       </div>

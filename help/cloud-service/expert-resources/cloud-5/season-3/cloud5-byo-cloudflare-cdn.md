@@ -13,13 +13,13 @@ last-substantial-update: 2024-04-05T00:00:00Z
 jira: KT-15271
 exl-id: dc841125-641b-47c0-a88f-d166a088e0ec
 source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 – 独自の Cloudflare CDN の導入
+# Cloud 5 - Bring Your Own（BYO）の Cloudflare CDN
 
 独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
 

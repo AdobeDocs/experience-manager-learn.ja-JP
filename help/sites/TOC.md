@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '517'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 96%
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
       + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
       + [バリエーションの生成](./document-authoring/how-to/generate-variations.md)
-      + [バリエーションを生成するためのSidekickの設定](./document-authoring/how-to/generate-variations-sidekick-config.md)
+      + [バリエーションを生成するための Sidekick の設定](./document-authoring/how-to/generate-variations-sidekick-config.md)
       + [GenAI プロンプトテンプレート](./document-authoring/how-to/prompt-templates-for-content-variations.md)
       + [GenAI カスタムプロンプトテンプレート](./document-authoring/how-to/custom-prompt-templates.md)
       + [GenAI カスタムプロンプトテンプレートの保存](./document-authoring/how-to/save-custom-prompt-template.md)
