@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
+source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 99%
+source-wordcount: '1184'
+ht-degree: 98%
 
 ---
 
@@ -395,3 +395,4 @@ ht-degree: 99%
          + [クエリインデックスと Excel 数式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [独自の Cloudflare CDN の導入](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [AEM Assets の統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
+         + [AEM Sites向けジェネレーティブ AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
