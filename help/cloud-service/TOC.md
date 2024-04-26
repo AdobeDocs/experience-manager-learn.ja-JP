@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -161,7 +161,7 @@ ht-degree: 98%
       + [Java SQL API を使用した SQL 接続](./networking/examples/sql-java-apis.md)
       + [メールサービス](./networking/examples/email-service.md)
 + セキュリティ {#security}
-   + [トラフィックフィルタールールを使用した DoS/DDoS 攻撃のブロック](./security/blocking-dos-attack-using-traffic-filter-rules.md)
+   + [トラフィックフィルタールールを使用した DoS／DDoS 攻撃のブロック](./security/blocking-dos-attack-using-traffic-filter-rules.md)
    + WAF ルールを含むトラフィックフィルタールール{#traffic-filter-and-waf-rules}
       + [概要](./security/traffic-filter-rules/overview.md)
       + [設定方法](./security/traffic-filter-rules/how-to-setup.md)

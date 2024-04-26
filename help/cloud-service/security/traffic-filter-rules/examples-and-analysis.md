@@ -15,7 +15,7 @@ duration: 626
 source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -219,7 +219,7 @@ data:
 
 ![ELK ツールダッシュボードのトップ 100 リクエスト](./assets/elk-tool-dashboard-dos-top-100.png)
 
-DoS および DDoS 攻撃の防止方法の詳細については、 [トラフィックフィルタールールを使用した DoS および DDoS 攻撃のブロック](../blocking-dos-attack-using-traffic-filter-rules.md) チュートリアル。
+DoS 攻撃と DDoS 攻撃を防止する方法の詳細については、[トラフィックフィルタールールを使用した DoS 攻撃と DDoS 攻撃のブロック](../blocking-dos-attack-using-traffic-filter-rules.md)のチュートリアルをご覧ください。
 
 ### WAF ルール
 
