@@ -9,9 +9,10 @@ level: Intermediate
 jira: KT-13757
 thumbnail: xx.jpg
 doc-type: Tutorial
-source-git-commit: 3b500873ee7307df590ac66dea541a1adf14d726
+exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
+source-git-commit: 03cb7ef0cf79a21ec1b96caf6c11e6f5119f777c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -42,15 +43,14 @@ ht-degree: 1%
    ```json
    {
      "restrictionPropertyNames":[
-       "status"
+       "status",
+       "brand"
      ],
-     "restrictionPaths":[
-       "/content/dam"
-     ]
+     "enabled":true
    }
    ```
 
-1. プロパティ名および制限パスを必要な値に置き換えます。
+1. プロパティ名を必要な値に置き換えます。
 
 
 制限ベースのアクセス制御エントリを追加する前に、新しい最上位エントリを追加して、アセットの権限評価の対象となるすべてのグループ（「投稿者」など）に対する読み取りアクセスをまず拒否する必要があります。
