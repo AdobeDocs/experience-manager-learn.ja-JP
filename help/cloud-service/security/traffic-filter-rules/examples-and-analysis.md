@@ -13,7 +13,7 @@ thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
 source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1472'
 ht-degree: 100%
 

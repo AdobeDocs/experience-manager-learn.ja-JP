@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2059'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -105,10 +105,10 @@ ht-degree: 99%
    + [HTML5 Forms の事前入力](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Salesforce を使用したフォームデータモデル](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [選択コンポーネントへの項目の動的な追加](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ ChatBot でPDFフォームに入力する{#chatbot-and-aem-forms}
++ ChatBot で PDF フォームへの入力{#chatbot-and-aem-forms}
    + [1 - はじめに](chatbot-and-aem-forms/introduction.md)
    + [2 - ChatBot データの解析](chatbot-and-aem-forms/parse-chat-bot-data.md)
-   + [3 - PDFの作成](chatbot-and-aem-forms/merge-data-with-template.md)
+   + [3 - PDF の作成](chatbot-and-aem-forms/merge-data-with-template.md)
 + コア – コンポーネントベースのフォーム{#core-component-based-forms}
    + [GuideBridge API を使用したフォームデータへのアクセス](core-components/submit-data-using-guidebridge-api.md)
 + DAM フォルダーコンテンツの選択とアセンブリ{#select-dam-folder-content}

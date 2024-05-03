@@ -11,9 +11,9 @@ exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 duration: 595
 source-git-commit: 153ce0ff2d433bdbce05ef7fba4856356c0f6d4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '448'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -70,7 +70,7 @@ _hostname_ および&#x200B;_ポート_&#x200B;をアップロードするには
 ### SSL 設定の検証
 
 1. SSL を検証するには、「__HTTPS URL に移動__」ボタンをクリックします。
-1. 自己署名証明書を使用する場合は、次のように表示されます `Your connection is not private` エラー。
+1. 自己署名証明書を使用している場合は、`Your connection is not private` エラーが表示されます。
 
    ![SSL 設定 - HTTPS 経由での AEM の検証](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
