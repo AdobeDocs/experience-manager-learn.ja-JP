@@ -1,6 +1,6 @@
 ---
 title: AEM Assets と Adobe Express
-description: Adobe Express を使用して AEM Assets 内でコンテンツを簡単に作成および編集する方法について説明します。
+description: Adobe Expressを使用してAEM Assets内でコンテンツを作成および編集する方法について説明します。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Content Management, Content Supply Chain
@@ -8,14 +8,13 @@ role: Admin, User
 level: Beginner
 doc-type: Feature Video
 duration: 520
-last-substantial-update: 2023-12-06T00:00:00Z
+last-substantial-update: 2024-05-07T00:00:00Z
 jira: KT-14645
-thumbnail: 3425972.jpeg
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
-source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
-workflow-type: ht
+source-git-commit: f82ef04d4f9dc2996df025e90377f668b1525243
+workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 100%
+ht-degree: 61%
 
 ---
 
@@ -25,4 +24,4 @@ Adobe Express を使用して、Adobe Experience Manager Assets 内でコンテ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-[AEM Assets と Adobe Express のネイティブ統合](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)を設定して Adobe Express から AEM Assets にシームレスにアクセスする方法について説明します。
+また、の設定方法についても説明します [AEM AssetsとAdobe Expressのネイティブ統合](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) Adobe ExpressからAEM Assetsにシームレスにアクセスする。
