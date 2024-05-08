@@ -11,10 +11,10 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '2146'
-ht-degree: 100%
+source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
+workflow-type: tm+mt
+source-wordcount: '1884'
+ht-degree: 97%
 
 ---
 
@@ -77,22 +77,6 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 クローン環境を移行に使用する場合、実稼動サーバーのリソース稼働率に影響はありませんが、実稼動環境とクローンの間のコンテンツの同期に関して不都合な点があります。
 
-### Q：ソースオーサーシステムで、ユーザーがオーサーインスタンスを認証するための SSO が設定されています。この場合、CTT のユーザーマッピング機能を使用する必要がありますか？
-
-簡単に答えると「**はい**」です。
-
-ユーザーマッピング&#x200B;**なし**&#x200B;で CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）のみがソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=ja)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
-
-この場合、SAML ID プロバイダーは、認証ハンドラーを使用して AEM に直接送信するのではなく、Federated ID または Enterprise IDを使用するように、Adobe IMS に対して設定されます。
-
-### Q：使用しているソースオーサーシステムでは、ローカルの AEM ユーザーでオーサーインスタンスに対して認証を行うための基本的な認証がユーザーに設定されています。この場合、CTT のユーザーマッピング機能を使用する必要がありますか？
-
-簡単に答えると「**はい**」です。
-
-ユーザーマッピングで CTT の抽出と取り込みを行うと、コンテンツおよび関連する原則（ユーザー、グループ）がソース AEM から AEMaaCS に移行されます。ただし、Adobe IMS に存在するユーザー（ID）が AEMaaCS インスタンスへのアクセス権を持ち（プロビジョンされていて）正常に認証されるための要件があります。[ユーザーマッピングツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=ja)の役割は、ローカル AEM ユーザーを IMS ユーザーにマッピングして、認証と承認が連携できるようにすることです。
-
-この場合、ユーザーは個人用の Adobe ID を使用します。この Adobe ID は IMS 管理者が AEMaaCS へのアクセス権を付与するために使用します。
-
 ### Q：CTT では「ワイプ」および「上書き」という用語にはどのような意味がありますか？
 
 [抽出フェーズ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=ja#extraction-setup-phase)では、前の抽出サイクルからのステージングコンテナのデータを上書きするか、差分（追加／更新／削除）をこのデータに追加します。ステージングコンテナは、移行セットに関連付けられた Blob ストレージコンテナにすぎません。移行セットごとに、専用のステージングコンテナが用意されています。
@@ -107,10 +91,11 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
    + すべてのアセットを 1 つの移行セットの一部として移行することが可能かどうかを確認してから、それらのアセットを使用しているサイトを段階的に取り込む
 + 現在の状態では、パブリッシュ層でコンテンツを提供できる場合でも、オーサーの取り込みプロセスにより、オーサーインスタンスがコンテンツオーサリングで使用できなくなる
    + このため、オーサーへの取り込みが完了するまで、コンテンツオーサリングアクティビティは凍結される
++ ユーザーは移行されなくなりましたが、グループは
 
 移行を計画する前に、ドキュメントに記載されている追加抽出および取り込みプロセスを確認してください。
 
-### Q：AEMaaCS オーサーインスタンスまたはパブリッシュインスタンスへの取り込みが行われても、エンドユーザーは web サイトを使用できますか？
+### Q:AEMaaCS オーサーインスタンスまたはパブリッシュインスタンスへの取り込みが行われていても、エンドユーザーは web サイトを使用できますか？
 
 はい。コンテンツ移行アクティビティによってエンドユーザーのトラフィックが中断されることはありません。ただし、オーサーの取り込みは、コンテンツのオーサリングが完了するまで凍結されます。
 
@@ -160,7 +145,6 @@ CTT プロセスでは、以下のリソースに接続する必要がありま�
 
 + ターゲット AEM as a Cloud Service 環境：`author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure BLOB ストレージサービス：`casstorageprod.blob.core.windows.net`
-+ ユーザーマッピング IO エンドポイント：`usermanagement.adobe.io`
 
 [ソース接続](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=ja#source-environment-connectivity)の詳細については、ドキュメントを参照してください。
 
@@ -198,7 +182,7 @@ CTT プロセスでは、以下のリソースに接続する必要がありま�
 + オンプレミス／AMS 実稼働オーサーで作業を続ける
 + 今後、他のすべての移行証明サイクルを `wipe=true` で実行する
    + この操作は、完全なノードストアを移行しますが、BLOB 全体とは異なり、変更された BLOB のみを移行します。以前の BLOB セットは、ターゲット AEMaaCS インスタンスの Azure BLOB ストアにあります。
-   + 移行期間、ユーザーマッピング、テスト、その他すべての機能の検証を測定するには、この移行の配達確認を使用します。
+   + 移行期間、テスト、その他すべての機能の検証を測定するには、この移行の配達確認を使用します
 + 最後に、運用開始の週の前に、wipe=true 移行を実行する
    + AEMaaCS で Dynamic Media を接続します。
    + AEMオンプレミスのソースから DM 設定を切断します。
