@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 89920c29e4d5f41263ee21b87e04c97b113c0feb
-workflow-type: ht
-source-wordcount: '413'
-ht-degree: 100%
+source-git-commit: cd20fbc6c960c1ec827b4aaf804d81e7a2c6d92d
+workflow-type: tm+mt
+source-wordcount: '416'
+ht-degree: 99%
 
 ---
 
@@ -49,6 +49,7 @@ ht-degree: 100%
 + 検索と検出{#search-and-discovery}
    + [検索](./search-and-discovery/search.md)
    + [コンテキスト検索](./search-and-discovery/contextual-search.md)
+   + [Adobe Fireflyの統合](./search-and-discovery/adobe-firefly.md)
    + [コレクション](./search-and-discovery/collections.md)
    + [検索ブースト](./search-and-discovery/search-boost.md)
    + [類似の画像を検索](./search-and-discovery/find-similar-images.md)
