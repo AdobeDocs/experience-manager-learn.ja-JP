@@ -9,10 +9,12 @@ level: Beginner, Intermediate, Experienced
 doc-type: Technical Video
 duration: 422
 last-substantial-update: 2024-04-23T00:00:00Z
+hidefromtoc: true
+recommendations: noDisplay, noCatalog
 jira: KT-15348
 exl-id: c7020e3e-2664-42f1-a3b4-c23eb17cbf4b
-source-git-commit: 92320f277cba5723189ab6510f9c72693345c89d
-workflow-type: ht
+source-git-commit: 6d727796d534ce01e1fd4604424e78a21ce937c0
+workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 100%
 
