@@ -1,6 +1,6 @@
 ---
 title: Edge Delivery Servicesでの実験フレームワークの設定
-description: Edge Delivery Servicesで実験フレームワークを設定する方法を確認する
+description: Edge Delivery Services ドキュメントのオーサリングで実験フレームワークを設定する方法について説明します。
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -10,16 +10,18 @@ doc-type: Technical Video
 duration: 106
 last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15479
-source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
+exl-id: 9e767bd7-b86d-4dee-b980-77bd3485d307
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '40'
+source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
-
 # Edge Delivery Servicesでの実験フレームワークの設定
 
-Edge Delivery Servicesで実験フレームワークを設定する方法を確認する
+{{edge-delivery-services}}
+
+Edge Delivery Services ドキュメントのオーサリングで実験フレームワークを設定する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)

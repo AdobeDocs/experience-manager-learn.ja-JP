@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 131008cfeb41789582bf821b724f996b7fb6fabb
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 94%
+source-wordcount: '532'
+ht-degree: 93%
 
 ---
 
@@ -36,19 +36,20 @@ ht-degree: 94%
       + [画像の代替テキスト](./document-authoring/how-to/image-alt-text.md)
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
       + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
-      + [バリエーションの生成](./document-authoring/how-to/generate-variations.md)
-      + [バリエーションを生成するための Sidekick の設定](./document-authoring/how-to/generate-variations-sidekick-config.md)
-      + [GenAI プロンプトテンプレート](./document-authoring/how-to/prompt-templates-for-content-variations.md)
-      + [GenAI カスタムプロンプトテンプレート](./document-authoring/how-to/custom-prompt-templates.md)
-      + [GenAI カスタムプロンプトテンプレートの保存](./document-authoring/how-to/save-custom-prompt-template.md)
-      + [バリエーションを生成するためのターゲットオーディエンス](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
-      + [バリエーションを生成するためのオーディエンス CSV ファイル](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
-      + [バリエーションを生成するためのAdobe Firefly](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
-      + [生成バリエーションアクション](./document-authoring/how-to/generate-variations-actions.md)
-      + [メタデータを使用してプロンプトをカスタマイズする](./document-authoring/how-to/customizing-prompts-using-metadata.md)
-      + [GenAI の信頼とプライバシー](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + バリエーションを生成{#generate-variations}
+         + [概要](./document-authoring/how-to/generate-variations/overview.md)
+         + [Sidekickの設定](./document-authoring/how-to/generate-variations/configure-sidekick.md)
+         + [プロンプトテンプレート](./document-authoring/how-to/generate-variations/prompt-templates.md)
+         + [カスタムプロンプトテンプレート](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
+         + [カスタムプロンプトテンプレートの保存](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
+         + [Adobe Target オーディエンス](./document-authoring/how-to/generate-variations/using-target-audiences.md)
+         + [CSV ファイルオーディエンス](./document-authoring/how-to/generate-variations/using-csv-file-audiences.md)
+         + [Adobe Firefly](./document-authoring/how-to/generate-variations/using-adobe-firefly-for-images.md)
+         + [アクション](./document-authoring/how-to/generate-variations/actions.md)
+         + [信頼とプライバシー](./document-authoring/how-to/generate-variations/trust-privacy.md)
       + [実験フレームワーク](./document-authoring/how-to/experimentation-framework.md)
       + [実験フレームワークの設定](./document-authoring/how-to/setup-experimentation-framework.md)
+      + [実験用のメタデータ](./document-authoring/how-to/experimentation-add-metadata.md)
 + ページオーサリング {#page-authoring}
    + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
    + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)
