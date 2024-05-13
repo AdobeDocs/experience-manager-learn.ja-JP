@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
-workflow-type: ht
-source-wordcount: '1184'
-ht-degree: 100%
+source-git-commit: 14767141348d3d56c154704cc21d39722bb67aec
+workflow-type: tm+mt
+source-wordcount: '1196'
+ht-degree: 99%
 
 ---
 
@@ -112,6 +112,11 @@ ht-degree: 100%
       + [設定方法](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
       + [開発ライフサイクル](./developing/rde/development-life-cycle.md)
+   + ユニバーサルエディター{#universal-editor}
+      + React アプリの編集{#react-app-editing}
+         + [概要](./developing/universal-editor/react-app/overview.md)
+         + [ローカル開発設定](./developing/universal-editor/react-app/local-development-setup.md)
+         + [React アプリの実装](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + AEM のデバッグ{#debugging}
    + AEM SDK のデバッグ{#debugging-aem-sdk}
