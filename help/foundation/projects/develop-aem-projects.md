@@ -9,10 +9,10 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: ht
+source-git-commit: b778fa9334d70b61b0d0fa31b6c62ac03490b11e
+workflow-type: tm+mt
 source-wordcount: '4441'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 * [完成済みのチュートリアルパッケージ](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-このチュートリアルでは、読者が [AEM の開発手法](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://docs.adobe.com/content/help/ja/experience-manager-65/developing/devtools/ht-projects-maven.html)についてある程度理解していることを前提としています。 取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)にのみデプロイするようにしてください。
+このチュートリアルでは、読者が [AEM の開発手法](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en)についてある程度理解していることを前提としています。 取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)にのみデプロイするようにしてください。
 
 ## プロジェクトテンプレートの構造
 
@@ -129,7 +129,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
    1. 新しい **nt:unstructured** ノードを authoring-project/gadgets の直下に追加して、名前を **tasks** にします。
    1. String プロパティを tasks ノードに追加して、**cardWeight**=&quot;100&quot;、**jcr:title**=&quot;Tasks&quot;、**sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot; とします。
 
-   これで、新しいプロジェクトが作成される際に [Tasks タイル](https://experienceleague.adobe.com/docs/?lang=ja#Tasks)がデフォルトで表示されます。
+   これで、新しいプロジェクトが作成される際に [Tasks タイル](https://experienceleague.adobe.com/en/docs)がデフォルトで表示されます。
 
    ```shell
    ../projects/templates/authoring-project
@@ -629,13 +629,13 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. CRXDE-Lite では、`/apps/aem-guides/projects-tasks/projects` フォルダーの下に「wizards」というサブフォルダーを作成します。 新しく作成されたウィザードフォルダーの下の `/libs/cq/core/content/projects/workflowwizards/default_workflow` からデフォルトのウィザードをコピーし、名前を「**content-approval-start**」に変更します。 フルパスは、`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start` になります。
 
-   デフォルトのウィザードは 2 列のウィザードで、最初の列には選択したワークフローモデルのタイトル、説明およびサムネールが表示されます。 2 番目の列には、ワークフロータイトル、コメントを開始およびペイロードパスのフィールドが含まれます。 ウィザードは、標準のタッチ UI フォームであり、標準の [Granite UI フォームコンポーネント](https://experienceleague.adobe.com/docs/?lang=ja)を使用してフィールドに値を入力します。
+   デフォルトのウィザードは 2 列のウィザードで、最初の列には選択したワークフローモデルのタイトル、説明およびサムネールが表示されます。 2 番目の列には、ワークフロータイトル、コメントを開始およびペイロードパスのフィールドが含まれます。 ウィザードは、標準のタッチ UI フォームであり、標準の [Granite UI フォームコンポーネント](https://experienceleague.adobe.com/en/docs)を使用してフィールドに値を入力します。
 
    ![コンテンツ承認ワークフローウィザード](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. ワークフローの最初のタスクの担当者を設定するために使用するウィザードにフィールドを追加します（[ワークフローモデルの作成](#create-workflow-model)：ステップ 5 を参照）。
 
-   `../content-approval-start/jcr:content/items/column2/items` の下に、**「assign」**&#x200B;という名前の `nt:unstructured` タイプの新しいノードを作成します。 プロジェクトのユーザーピッカーコンポーネント（[Granite ユーザーピッカーコンポーネントに基づいています](https://experienceleague.adobe.com/docs/?lang=ja)）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を現在のプロジェクトに属するものだけに簡単に制限できます。
+   `../content-approval-start/jcr:content/items/column2/items` の下に、**「assign」**&#x200B;という名前の `nt:unstructured` タイプの新しいノードを作成します。 プロジェクトのユーザーピッカーコンポーネント（[Granite ユーザーピッカーコンポーネントに基づいています](https://experienceleague.adobe.com/en/docs)）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を現在のプロジェクトに属するものだけに簡単に制限できます。
 
    **assign** ノードの XML 表現を以下に示します。
 
@@ -655,7 +655,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. ワークフローの最初のタスクの優先度を決定する優先度選択フィールドも追加します（[ワークフローモデルの作成](#create-workflow-model)：ステップ 5 を参照）。
 
-   `/content-approval-start/jcr:content/items/column2/items` の下に、**priority** という名前の `nt:unstructured` タイプの新しいノードを作成します。 [Granite UI 選択コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を使用して、フォームフィールドに値を入力します。
+   `/content-approval-start/jcr:content/items/column2/items` の下に、**priority** という名前の `nt:unstructured` タイプの新しいノードを作成します。 [Granite UI 選択コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)を使用して、フォームフィールドに値を入力します。
 
    **priority** ノードの下に、**nt:unstructured** の **items** ノードを追加します。 **items** ノードの下にさらに 3 つのノードを追加して、高、中、低の選択オプションを入力します。 各ノードのタイプは **nt:unstructured** で、**text** と **value** のプロパティが必要です。 text と value の両方が同じ値である必要があります。
 
@@ -691,7 +691,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. ワークフローの開始者が最初のタスクの期日を設定できるようにします。 [Granite UI DatePicker](https://experienceleague.adobe.com/docs/?lang=ja) フォームフィールドを使用して、この入力をキャプチャします。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) を含む非表示フィールドを追加して、入力が Date タイプのプロパティとして JCR に格納されるようにします。
+1. ワークフローの開始者が最初のタスクの期日を設定できるようにします。 [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) フォームフィールドを使用して、この入力をキャプチャします。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) を含む非表示フィールドを追加して、入力が Date タイプのプロパティとして JCR に格納されるようにします。
 
    以下の XML で表される次のプロパティを持つ 2 つの **nt:unstructured** ノードを追加します。
 
