@@ -5,10 +5,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: ht
-source-wordcount: '175'
-ht-degree: 100%
+source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 94%
 
 ---
 
@@ -56,16 +56,16 @@ AEM Assets とは何か、そして組織のビジネス目標を達成するた
    </p>
 </td>
 <td>
-   <a href="./advanced/asset-insights-launch-tutorial.md">
-   <img alt="AEM アセットインサイト" src="./assets/overview/asset-insights.png"/>
+   <a href="../assets-essentials/overview.md">
+   <img alt="AEM Assets Essentials" src="../assets-essentials/assets/overview/getting-started.png"/>
    </a>
    <div>
-      <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>タグでの AEM アセットインサイトの使用</strong>
-      </a>
+      <a href="../assets-essentials/overview.md">
+ <strong>Assets Essentials の概要</strong>
+ </a>
    </div>
    <p>
-      <em>アセットの使用方法に関するインサイトを取得</em>
+      <em>概念からデザイン、配信まで、エクスペリエンスの作成を高速化します。</em>
    <p>
 </td>
 <td>
