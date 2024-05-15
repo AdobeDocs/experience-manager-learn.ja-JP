@@ -12,10 +12,10 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 100%
+source-wordcount: '575'
+ht-degree: 79%
 
 ---
 
@@ -99,7 +99,7 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 - [cURL](https://curl.se/)：URL の呼び出しや応答コードの確認などの基本的なテストに使用します。
 
-- [Vegeta](https://github.com/tsenart/vegeta)：サービス拒否（DOS）を実行するために使用します。[Vegeta GitHub](https://github.com/tsenart/vegeta#install) のインストール手順に従います。
+- [Vegeta](https://github.com/tsenart/vegeta)：サービス拒否（DOS）を実行するために使用します。のインストール手順に従います [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
 
 - [Nikto](https://github.com/sullo/nikto/wiki)：XSS、SQL インジェクションなどの潜在的な問題やセキュリティの脆弱性を見つけます。[Nikto GitHub](https://github.com/sullo/nikto) のインストール手順に従います。
 
@@ -119,9 +119,11 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 ### ダッシュボードツールを使用した結果の分析
 
-ルールを作成、デプロイ、テストした後、**Elasticsearch、Logstash、Kibana（ELK）**&#x200B;ダッシュボードツールを使用して結果を分析できます。AEMCS CDN ログを解析して、結果を様々なグラフの形式で視覚化できます。
+ルールを作成、デプロイおよびテストした後は、を使用して結果を分析できます **CDN** ログと **AEMCS-CDN-Log-Analysis-Tooling**. ツールは、Splunk および ELK （Elasticsearch、Logstash、Kibana）スタックの結果を視覚化する一連のダッシュボードを提供します。
 
-ダッシュボードツールは [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub リポジトリ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool)から直接クローンを作成し、手順に従って&#x200B;**トラフィックフィルタールール（WAF を含む）**&#x200B;ダッシュボードをインストールして読み込みます。
+ツールのクローンは、 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリ。 手順に従って、をインストールして読み込みます。 **CDN トラフィックダッシュボード** および **WAF ダッシュボード** 好みの観察ツールのダッシュボード。
+
+このチュートリアルでは、ELK スタックを使用します。 に従う [AEMCS CDN ログ分析用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) elk スタックの設定手順。
 
 - サンプルダッシュボードを読み込むと、Elastic ダッシュボードのツールページは次のようになります。
 

@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1918'
-ht-degree: 100%
+source-wordcount: '1968'
+ht-degree: 91%
 
 ---
 
@@ -34,7 +34,7 @@ AEM web サイトのデフォルトの DDoS 保護機能を説明します。
 - **ブロック：** Adobe CDN は、CDN PoP（ポイントオブプレゼンス）ごとに特定の IP アドレスからアドビが定義したレートを超える場合、接触チャネルへのトラフィックをブロックします。
 - **アラート：**&#x200B;トラフィックが特定のレートを超えた場合、アクションセンターは接触チャネルトラフィックスパイクのアラート通知を送信します。このアラートは、特定の CDN PoP へのトラフィックが IP アドレスごとの&#x200B;_アドビ定義_&#x200B;リクエストレートを超えると発生します。詳しくは、[トラフィックフィルタールールのアラート](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)を参照してください。
 
-これらの組み込み保護は、DDoS 攻撃のパフォーマンスへの影響を最小限に抑える、組織の能力のベースラインとして考える必要があります。Web サイトごとにパフォーマンス特性が異なり、アドビが定義したレート制限に達する前にパフォーマンスが低下する可能性があるので、_顧客設定_&#x200B;を通じてデフォルトの保護を拡張することをお勧めします。
+これらの組み込み保護は、DDoS 攻撃のパフォーマンスへの影響を最小限に抑える、組織の能力のベースラインとして考える必要があります。Web サイトごとにパフォーマンス特性が異なり、Adobeが定義したレート制限に達する前にパフォーマンスが低下する可能性があるので、次の方法でデフォルトの保護機能を拡張することをお勧めします _顧客設定_.
 
 DDoS 攻撃から web サイトを保護するために、顧客が実行できる追加の推奨対策をいくつか見てみましょう。
 
@@ -76,14 +76,20 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
 
 ## トラフィックパターンの分析 {#analyze-traffic}
 
-サイトが既に実稼働している場合は、CDN ログと次のいずれかの方法を使用して、トラフィックパターンを分析できます。
+サイトが既に実稼働している場合は、CDN ログとAdobe提供のダッシュボードを使用してトラフィックパターンを分析できます。
+
+- **CDN トラフィックダッシュボード**:CDN とオリジンリクエスト率、4xx と 5xx のエラー率、キャッシュされていないリクエストを介してトラフィックに関するインサイトを提供します。 また、は、クライアント IP アドレスあたりの 1 秒あたりの最大 CND およびオリジンリクエスト数と、CDN 設定を最適化するためのより多くのインサイトを提供します。
+
+- **CDN キャッシュヒット率**：キャッシュヒット率の合計とリクエスト数の合計（ヒット、合格、ミスのステータス別）に関するインサイトを提供します。 また、上位のヒット、合格およびミス URL も提供します。
+
+を使用したダッシュボードツールの設定 _次のいずれかのオプション_:
 
 ### ELK：ダッシュボードツールの設定
 
 アドビが提供する **Elasticsearch、Logstash、Kibana（ELK）**&#x200B;のダッシュボードツールを使用して、CDN ログを分析できます。このツールには、トラフィックパターンを視覚化するダッシュボードが含まれており、レート制限トラフィックフィルタールールの最適なしきい値を簡単に決定できます。
 
-- [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub リポジトリのクローンを作成します。
-- [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool?tab=readme-ov-file#how-to-set-up-the-elk-docker-container)の手順に従ってツールを設定します。
+- のクローン [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリ。
+- [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container)の手順に従ってツールを設定します。
 - 設定の一環として、`traffic-filter-rules-analysis-dashboard.ndjson` ファイルをインポートしてデータを視覚化します。_CDN トラフィック_ ダッシュボードには、CDN エッジとオリジンでの IP／POP ごとの最大リクエスト数を表示するビジュアライゼーションが含まれています。
 - [Cloud Manager](https://my.cloudmanager.adobe.com/) の&#x200B;_環境_&#x200B;カードから、AEMCS パブリッシュサービスの CDN ログをダウンロードします。
 
@@ -95,9 +101,9 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
 
 ### Splunk：ダッシュボードツールの設定
 
-[Splunk ログの転送が有効になっている場合は](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)、新しいダッシュボードを作成してトラフィックパターンを分析できます。次の XML ファイルは、Splunk でダッシュボードを作成するのに役立ちます。
+次の顧客： [Splunk ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) では、トラフィックパターンを分析する新しいダッシュボードを作成できます。
 
-- [CDN：トラフィックダッシュボード](./assets/traffic-dashboard.xml)：このダッシュボードは、CDN エッジおよびオリジンのトラフィックパターンに関するインサイトを提供します。CDN エッジとオリジンでの IP／POP ごとの最大リクエスト数を表示するビジュアライゼーションが含まれます。
+Splunk でダッシュボードを作成するには、次に従います [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 手順。
 
 ### データの確認
 

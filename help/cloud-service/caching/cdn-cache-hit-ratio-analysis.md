@@ -12,10 +12,10 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 100%
+source-wordcount: '1458'
+ht-degree: 77%
 
 ---
 
@@ -32,13 +32,14 @@ CDN ログは JSON 形式で利用できます。この形式には、`url`、`c
 |------------------------------------|:-----------------------------------------------------:|
 | HIT | リクエストしたデータは _CDN キャッシュ内で見つかるので、AEM サーバーに取得リクエストを行う必要はありません_。 |
 | MISS | リクエストしたデータは _CDN キャッシュ内で見つからないので、AEM サーバーからリクエストする必要があります_。 |
-| PASS | リクエストされたデータは&#x200B;_キャッシュされないように明示的に設定_&#x200B;され、常に AEM サーバーから取得されます。 |
+| PASS | リクエストされたデータは _キャッシュされないように明示的に設定されています_ また、常にAEM サーバーから取得されます。 |
 
 このチュートリアルの目的のために、[AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)が AEM as a Cloud Service 環境にデプロイされ、[Apache JMeter](https://jmeter.apache.org/) を使用して小規模なパフォーマンステストがトリガーされます。
 
 このチュートリアルは、次の手順を実行するように構成されています。
+
 1. Cloud Manager を使用した CDN ログのダウンロード
-1. これらの CDN ログの分析。ローカルにインストールされたダッシュボード、またはリモートからアクセスした Jupiter Notebook（Adobe Experience Platform のライセンスを持つユーザー向け）の 2 つの方法で実行できます。
+1. これらの CDN ログを分析するには、ローカルインストールされたダッシュボードと、リモートからアクセスする Splunk または Jupityer Notebook （Adobe Experience Platformのライセンスを取得しているユーザー用）の 2 つの方法があります
 1. CDN キャッシュ設定の最適化
 
 ## CDN ログのダウンロード
@@ -60,24 +61,27 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 ## ダウンロードした CDN ログの分析
 
-キャッシュヒット率、MISS および PASS キャッシュタイプの上位 URL などのインサイトを取得するには、ダウンロードした CDN ログファイルを分析します。これらのインサイトは、[CDN キャッシュ設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja)を最適化し、サイトのパフォーマンスを向上させるのに役立ちます。
+キャッシュヒット率、MISS および PASS キャッシュタイプの上位 URL などのインサイトを取得するには、ダウンロードした CDN ログファイルを分析します。これらのインサイトは、[CDN キャッシュ設定](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching)を最適化し、サイトのパフォーマンスを向上させるのに役立ちます。
 
-CDN ログを分析するために、この記事では **Elasticsearch、Logstash、Kibana（ELK）**[ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool)と [Jupyter Notebook](https://jupyter.org/) を使用します。ELK ダッシュボードツールは、ノートパソコンにローカルにインストールできます。一方、Adobe Experience Platform のライセンスを取得している場合は、追加のソフトウェアをインストールしなくても、Jupyr Notebook ツールに [Adobe Experience Platform の一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=ja)リモートからアクセスできます。
+このチュートリアルでは、CDN ログを分析するために、次の 3 つのオプションを紹介します。
 
+1. **Elasticsearch、ログ、およびキバナ （ELK）**：です [ELK ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) はローカルにインストールできます。
+1. **Splunk**：です [Splunk ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) splunk へのアクセスが必要で、 [AEMCS ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) :CDN ログを取り込みます。
+1. [Jupyter ノートブック](https://jupyter.org/)：の一部としてリモートからアクセスできます [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) Adobe Experience Platformのライセンスを取得しているお客様の場合、ソフトウェアを追加でインストールする必要はありません。
 
 ### オプション 1：ELK ダッシュボードツールの使用
 
 [ELK スタック](https://www.elastic.co/elastic-stack)は、データを検索、分析、視覚化するためのスケーラブルなソリューションを提供するツールのセットです。Elasticsearch、Logstash、Kibana で構成されます。
 
-重要な詳細を特定するには、[AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) ダッシュボードツールプロジェクトを使用してみましょう。このプロジェクトでは、ELK スタックの Docker コンテナと、CDN ログを分析するための事前設定済みの Kibana ダッシュボードを提供します。
+主な詳細を識別するには、を使用します [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクト。 このプロジェクトでは、ELK スタックの Docker コンテナと、CDN ログを分析するための事前設定済みの Kibana ダッシュボードを提供します。
 
-1. [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool#how-to-set-up-the-elk-docker-container)の手順に従って、**CDN キャッシュヒット率** Kibana ダッシュボードを読み込む必要があります。
+1. の手順に従います [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) を選択し、必ず以下を読み込みます **CDN キャッシュヒット率** Kibana ダッシュボード。
 
 1. CDN キャッシュヒット率と上位の URL を特定するには、次の手順に従います。
 
-   1. ダウンロードした CDN ログファイルを環境固有のフォルダー内にコピーします。
+   1. ダウンロードした CDN ログファイルを環境固有のログフォルダー内（例：）にコピーします。 `ELK/logs/stage`.
 
-   1. **CDN キャッシュヒット率**&#x200B;ダッシュボードを表示するには、左上隅のナビゲーションメニュー／分析／ダッシュボード／CDN キャッシュヒット率をクリックします。
+   1. を開きます **CDN キャッシュヒット率** 左上隅をクリックしたダッシュボード _ナビゲーションメニュー/Analytics/ダッシュボード/CDN キャッシュヒット率_.
 
       ![CDN キャッシュヒット率 - Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -124,13 +128,24 @@ CDN ログを分析するために、この記事では **Elasticsearch、Logsta
 
    ![ホストフィルター - Kibana ダッシュボード](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
-同様に、分析要件に基づいて、ダッシュボードにフィルターを追加します。
+同様に、分析要件に基づいて、ダッシュボードにさらにフィルターを追加します。
 
-### オプション 2：Jupyter ノートブックの使用
+### オプション 2:Splunk ダッシュボードツールの使用
 
-ソフトウェアをローカルにインストールしない（前のセクションの ELK ダッシュボードツール）場合は、別のオプションもありますが、Adobe Experience Platform ライセンスが必要です。
+この [Splunk](https://www.splunk.com/) は、ログの集計、分析および監視とトラブルシューティングを目的としたビジュアライゼーションの作成に役立つ、一般的なログ分析ツールです。
 
-[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用します。[Adobe Experience Platform の一部として](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=ja)リモートからアクセス可能です。
+主な詳細を識別するには、を使用します [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクト。 このプロジェクトでは、CDN ログを分析する Splunk ダッシュボードを提供します。
+
+1. の手順に従います [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) を選択し、必ず以下を読み込みます **CDN キャッシュヒット率** Splunk ダッシュボード。
+1. 必要に応じて、を更新します _インデックス、ソースタイプ、その他_ splunk ダッシュボードの値をフィルタリングします。
+
+   ![Splunk ダッシュボード](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+### オプション 3：Jupyter ノートブックの使用
+
+ソフトウェアをローカルにインストールしない場合（つまり、前のセクションの ELK ダッシュボードツールの場合）は、別の方法を使用できますが、Adobe Experience Platformのライセンスが必要です。
+
+[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用します。[Adobe Experience Platform の一部として](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)リモートからアクセス可能です。
 
 #### インタラクティブ Python ノートブックファイルのダウンロード
 
@@ -181,6 +196,6 @@ Jupyter Notebook を拡張し、要件に基づいて CDN ログを分析でき�
 
 CDN ログを分析した後、CDN キャッシュ設定を最適化してサイトのパフォーマンスを向上させることができます。AEM のベストプラクティスは、キャッシュヒット率を 90％以上にすることです。
 
-詳しくは、[CDN キャッシュ設定の最適化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=ja#caching)を参照してください。
+詳しくは、[CDN キャッシュ設定の最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching)を参照してください。
 
 AEM WKND プロジェクトには参照 CDN 設定があります。詳しくは、`wknd.vhost` ファイルの [CDN 設定](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190)を参照してください。
