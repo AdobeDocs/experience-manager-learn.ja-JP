@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
-last-substantial-update: 2022-10-17T00:00:00Z
+last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-duration: 2177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+duration: 2200
+source-git-commit: 11c9173cbb2da75bfccba278e33fc4ca567bbda1
 workflow-type: tm+mt
-source-wordcount: '3060'
-ht-degree: 100%
+source-wordcount: '3357'
+ht-degree: 91%
 
 ---
 
@@ -456,3 +456,66 @@ $ git push adobe saml-auth:develop
 ```
 
 フルスタックデプロイメントパイプラインを使用して、ターゲットの Cloud Manager Git ブランチ（この例では `develop`）をデプロイします。
+
+## SAML 認証の呼び出し
+
+SAML 認証フローは、特別に作成されたリンクまたはボタンを作成することにより、AEM サイトの web ページから呼び出すことができます。 以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、「ログイン」ボタンを使用すると、 `saml_request_path`は、SAML 認証が成功すると、ボタンのコンテキストに基づいて、様々なAEM ページに移動します。
+
+### GETリクエスト
+
+SAML 認証を呼び出すには、次の形式の HTTP GETリクエストを作成します。
+
+`HTTP GET /system/sling/login`
+
+およびクエリパラメーターの提供：
+
+| クエリパラメーター名 | クエリパラメーター値 |
+|----------------------|-----------------------|
+| `resource` | で定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パス（サブパス）です。 [AdobeGranite SAML 2.0 Authentication Handler の OSGi 設定](#configure-saml-2-0-authentication-handler) `path` プロパティ。 |
+| `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
+
+例えば、このHTMLリンクは SAML ログインフローをトリガーし、成功するとユーザーをに移動します。 `/content/wknd/us/en/protected/page.html`. これらのクエリパラメーターは、必要に応じてプログラムで設定できます。
+
+```html
+<a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
+    Log in using SAML
+</a>
+```
+
+## POSTリクエスト
+
+SAML 認証を呼び出すには、次の形式の HTTPPOSTリクエストを作成します。
+
+`HTTP POST /system/sling/login`
+
+フォームデータを指定します。
+
+| フォームデータ名 | フォームデータ値 |
+|----------------------|-----------------------|
+| `resource` | で定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パス（サブパス）です。 [AdobeGranite SAML 2.0 Authentication Handler の OSGi 設定](#configure-saml-2-0-authentication-handler) `path` プロパティ。 |
+| `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
+
+
+例えば、このHTMLボタンは、HTTP POSTを使用して SAML ログインフローをトリガーし、成功したら、ユーザーを次の場所に移動します `/content/wknd/us/en/protected/page.html`. これらのフォームデータパラメーターは、必要に応じてプログラムで設定できます。
+
+```html
+<form action="/system/sling/login" method="POST">
+    <input type="hidden" name="resource" value="/content/wknd">
+    <input type="hidden" name="saml_request_path" value="/content/wknd/us/en/protected/page.html">
+    <input type="submit" value="Log in using SAML">
+</form>
+```
+
+### Dispatcher 設定
+
+HTTP GET方式とPOST方式の両方で、AEMへのクライアントアクセスが必要です `/system/sling/login` エンドポイント。そのため、AEM Dispatcher を介して許可する必要があります。
+
+GETまたはPOSTが使用されているかどうかに基づいて必要な URL パターンを許可する
+
+```
+# Allow GET-based SAML authentication invocation
+/0191 { /type "allow" /method "GET" /url "/system/sling/login" /query="*" }
+
+# Allow POST-based SAML authentication invocation
+/0192 { /type "allow" /method "POST" /url "/system/sling/login" }
+```
