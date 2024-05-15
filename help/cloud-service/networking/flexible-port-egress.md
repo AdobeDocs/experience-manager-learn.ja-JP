@@ -10,11 +10,11 @@ jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
-duration: 906
-source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
+duration: 870
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -26,16 +26,16 @@ ht-degree: 74%
 
 フレキシブルポートエグレスにより、特定のカスタムポート転送ルールを AEM as a Cloud Service に付加することができ、AEM から外部サービスへの接続が可能になります。
 
-Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 フレキシブルポートエグレスが最も優れていることを確認します [適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md) 次のコマンドを実行する前のAEMas a Cloud Service用。
+Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 次のコマンドを実行する前に、フレキシブルポートエグレスが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md)であることを確認します。
 
 >[!MORELIKETHIS]
 >
-> フレキシブルポートエグレスについて詳しくは、AEM as a Cloud Service の[高度なネットワーク設定に関するドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)を参照してください。
+> フレキシブルポートエグレスについて詳しくは、AEM as a Cloud Service の[高度なネットワーク設定に関するドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)を参照してください。
 
 
 ## 前提条件
 
-Cloud Manager API を使用してフレキシブルポートエグレスを設定または設定する場合は、次が必要です。
+Cloud Manager API を使用してフレキシブルポートエグレスを設定する場合は、次が必要です。
 
 + Cloud Manager API が有効になっている Adobe Developer Console プロジェクトと [Cloud Manager のビジネスオーナー権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + [Cloud Manager API の認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)へのアクセス
@@ -60,36 +60,36 @@ AEM as a Cloud Service でフレキシブルポートエグレスを有効にす
 
 >[!TAB Cloud Manager]
 
-Cloud Manager を使用して、フレキシブルポートエグレスを有効にできます。 次の手順では、Cloud Manager を使用してAEM as a Cloud Serviceでフレキシブルポートエグレスを有効にする方法の概要を説明します。
+Cloud Manager を使用すると、フレキシブルポートエグレスを有効にすることができます。次の手順では、Cloud Manager を使用して AEM as a Cloud Service でフレキシブルポートエグレスを有効にする方法の概要について説明します。
 
-1. にログインします [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) cloud Manager ビジネスオーナーとして。
+1. Cloud Manager ビジネスオーナーとして [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) にログインします。
 1. 目的のプログラムに移動します。
-1. 左側のメニューで、に移動します。 __[ サービス ]>[ ネットワーク インフラストラクチャ ]__.
-1. 「」を選択します __ネットワークインフラストラクチャの追加__ ボタン。
+1. 左側のメニューで、__サービス／ネットワークインフラストラクチャ__&#x200B;に移動します。
+1. 「__ネットワークインフラストラクチャを追加__」ボタンを選択します。
 
-   ![ネットワークインフラストラクチャの追加](./assets/cloud-manager__add-network-infrastructure.png)
+   ![ネットワークインフラストラクチャを追加](./assets/cloud-manager__add-network-infrastructure.png)
 
-1. が含まれる __ネットワークインフラストラクチャの追加__ ダイアログで、 __柔軟なポートエグレス__ オプションを選択し、 __地域__ 専用のエグレス IP アドレスを作成する場合。
+1. __ネットワークインフラストラクチャを追加__&#x200B;ダイアログで、「__フレキシブルポートエグレス__」オプションを選択し、「__地域__」を選択して専用エグレス IP アドレスを作成します。
 
-   ![フレキシブルポートエグレスの追加](./assets/flexible-port-egress/select-type.png)
+   ![フレキシブルポートエグレスを追加](./assets/flexible-port-egress/select-type.png)
 
-1. を選択 __保存__ フレキシブルポートエグレスの追加を確認します。
+1. 「__保存__」を選択して、フレキシブルポートエグレスの追加を確認します。
 
-   ![フレキシブルポートエグレスの作成の確認](./assets/flexible-port-egress/confirmation.png)
+   ![フレキシブルポートエグレスの作成を確認](./assets/flexible-port-egress/confirmation.png)
 
-1. ネットワークインフラストラクチャが作成され、としてマークされるのを待ちます。 __準備完了__. この処理には最大 1 時間かかる場合があります。
+1. ネットワークインフラストラクチャが作成され、__準備完了__&#x200B;とマークされるまで待ちます。このプロセスには最大 1 時間かかる場合があります。
 
-   ![柔軟なポートエグレス作成ステータス](./assets/flexible-port-egress/ready.png)
+   ![フレキシブルポートエグレスの作成ステータス](./assets/flexible-port-egress/ready.png)
 
-フレキシブルポートエグレスを作成したので、以下に説明するように、Cloud Manager API を使用してポート転送ルールを設定できるようになりました。
+フレキシブルポートエグレスを作成したので、以下の説明に従って Cloud Manager API を使用してポート転送ルールを設定できるようになりました。
 
->[!TAB Cloud Manager の API]
+>[!TAB Cloud Manager API]
 
-Cloud Manager API を使用して、フレキシブルポートエグレスを有効にできます。 次の手順では、Cloud Manager API を使用してAEM as a Cloud Serviceでフレキシブルポートエグレスを有効にする方法の概要を説明します。
+Cloud Manager API を使用すると、フレキシブルポートエグレスを有効にすることができます。次の手順では、Cloud Manager API を使用してAEM as a Cloud Service でフレキシブルポートエグレスを有効にする方法の概要について説明します。
 
-1. まず、Cloud Manager API を使用して、詳細ネットワークが設定されている地域を特定します [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、高度なネットワークが設定されている地域を特定します。`region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
 
-   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
+   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 
    __listRegions HTTP リクエスト__
 
@@ -116,7 +116,7 @@ Cloud Manager API を使用して、フレキシブルポートエグレスを�
 
    Cloud Manager プログラムがネットワークインフラストラクチャをプロビジョニングするまで 15 分待ちます。
 
-3. 環境が終了したことを確認します。 __柔軟なポート出力__ cloud Manager API を使用した設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作、使用する `id` 返される `createNetworkInfrastructure` 前の手順の HTTP リクエスト。
+3. 環境が、Cloud Manager API の [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作を使用して&#x200B;__フレキシブルポートエグレス__&#x200B;の設定を完了したことを、前の手順で `createNetworkInfrastructure` HTTP リクエストから返された `id` を使用して確認します。
 
    __getNetworkInfrastructure HTTP リクエスト__
 
@@ -130,7 +130,7 @@ Cloud Manager API を使用して、フレキシブルポートエグレスを�
 
    HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。 まだ準備完了ではない場合は、数分ごとにステータスを再確認します。
 
-フレキシブルポートエグレスを作成したので、以下に説明するように、Cloud Manager API を使用してポート転送ルールを設定できるようになりました。
+フレキシブルポートエグレスを作成したので、以下の説明に従って Cloud Manager API を使用してポート転送ルールを設定できるようになりました。
 
 >[!ENDTABS]
 
@@ -192,7 +192,7 @@ Cloud Manager API を使用して、フレキシブルポートエグレスを�
 
 1. フレキシブルポートエグレス設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。 `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作なので、この操作を呼び出すたびにすべてのルールを指定する必要があることに注意してください。
 
-1. これで、カスタム AEM コードおよび設定でフレキシブルポートエグレス設定を使用できるようになりました。
+1. これで、カスタムの AEM コードおよび設定でフレキシブルポートエグレス設定を使用できるようになりました。
 
 
 ## フレキシブルポートエグレスでの外部サービスへの接続
@@ -223,7 +223,7 @@ AEM には、AEM の HTTP／HTTPS プロキシにマッピングされる 2 組�
 
 >[!TIP]
 >
-> [完全なルーティングルールセット](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)については、AEM as a Cloud Service のフレキシブルポートエグレスのドキュメントを参照してください。
+> [完全なルーティングルールセット](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)については、AEM as a Cloud Service のフレキシブルポートエグレスのドキュメントを参照してください。
 
 #### コードの例
 
@@ -277,7 +277,7 @@ AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP 
       <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">メールサービス</a></strong></div>
       <p>
-        外部のメールサービスに接続するためにAEMを使用する OSGi 設定例です。
+        外部のメールサービスへの接続に AEM を使用する OSGi 設定例です。
       </p>
     </td>   
 </tr></table>

@@ -7,13 +7,13 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 163
+duration: 280
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
-workflow-type: ht
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 100%
 
@@ -33,7 +33,7 @@ Adobe Developer Console プロジェクト内では、ジャーナル処理に�
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要になります。
+このチュートリアルを完了するには、次が必要になります。
 
 - [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
 

@@ -13,9 +13,9 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-duration: 2330
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: ht
+duration: 2252
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 100%
 
@@ -257,7 +257,7 @@ Analysis Workspace は、柔軟かつインタラクティブな方法でデー�
 
 ## 概要
 
-お疲れ様でした。Platform Web SDK を使用してページビュー数と CTA クリック数のデータを収集、分析するための AEM と Adobe Analytics の設定が完了しました。
+お疲れ様でした。 Platform Web SDK を使用してページビュー数と CTA クリック数のデータを収集、分析するための AEM と Adobe Analytics の設定が完了しました。
 
 Adobe Analytics の実装は、マーケティングチームがユーザーの行動に関するインサイトを得て、情報に基づいた意思決定を行い、コンテンツを最適化し、データ駆動型の意思決定を行ううえできわめて重要です。
 

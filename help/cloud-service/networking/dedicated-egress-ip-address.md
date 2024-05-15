@@ -10,11 +10,11 @@ jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
-duration: 926
-source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
+duration: 891
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -26,15 +26,15 @@ ht-degree: 71%
 
 専用のエグレス IP アドレスを使用すると、AEM as a Cloud Service からのリクエストで専用の IP アドレスを使用でき、外部サービスはこの IP アドレスで受信リクエストをフィルタリングできるようになります。 [フレキシブルエグレスポート](./flexible-port-egress.md)と同様、専用のエグレス IP を使用すると非標準ポートに出力できます。
 
-Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 専用のエグレス IP アドレスが最も多いことを確認する [適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md) 次のコマンドを実行する前のAEMas a Cloud Service用。
+Cloud Manager プログラムでは、__単一の__&#x200B;ネットワークインフラストラクチャタイプのみを持つことができます。 次のコマンドを実行する前に、専用エグレス IP アドレスが AEM as a Cloud Service に最も[適切なタイプのネットワークインフラストラクチャ](./advanced-networking.md)であることを確認します。
 
 >[!MORELIKETHIS]
 >
-> 専用のエグレス IP アドレスの詳細については、AEM as a Cloud Service の[高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)をお読みください。
+> 専用のエグレス IP アドレスの詳細については、AEM as a Cloud Service の[高度なネットワーク設定ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)をお読みください。
 
 ## 前提条件
 
-Cloud Manager API を使用して専用のエグレス IP アドレスを設定する場合は、次が必要です。
+Cloud Manager API を使用して専用エグレス IP アドレスを設定する場合は、次が必要です。
 
 + [Cloud Manager のビジネス所有者権限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)がある Cloud Manager API
 + [Cloud Manager API 認証資格情報](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)にアクセスします
@@ -58,37 +58,37 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
 >[!TAB Cloud Manager]
 
-専用のエグレス IP アドレスは、Cloud Manager を使用して有効にできます。 次の手順では、Cloud Manager を使用してAEM as a Cloud Serviceで専用のエグレス IP アドレスを有効にする方法の概要を説明します。
+Cloud Manager を使用すると、専用エグレス IP アドレスを有効にすることができます。次の手順では、Cloud Manager を使用して AEM as a Cloud Serviceで専用エグレス IP アドレスを有効にする方法の概要について説明します。
 
-1. にログインします [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) cloud Manager ビジネスオーナーとして。
+1. Cloud Manager ビジネスオーナーとして [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) にログインします。
 1. 目的のプログラムに移動します。
-1. 左側のメニューで、に移動します。 __[ サービス ]>[ ネットワーク インフラストラクチャ ]__.
-1. 「」を選択します __ネットワークインフラストラクチャの追加__ ボタン。
+1. 左側のメニューで、__サービス／ネットワークインフラストラクチャ__&#x200B;に移動します。
+1. 「__ネットワークインフラストラクチャを追加__」ボタンを選択します。
 
-   ![ネットワークインフラストラクチャの追加](./assets/cloud-manager__add-network-infrastructure.png)
+   ![ネットワークインフラストラクチャを追加](./assets/cloud-manager__add-network-infrastructure.png)
 
-1. が含まれる __ネットワークインフラストラクチャの追加__ ダイアログで、 __出力専用 IP アドレス__ オプションを選択し、 __地域__ 専用のエグレス IP アドレスを作成する場合。
+1. __ネットワークインフラストラクチャを追加__&#x200B;ダイアログで、「__専用エグレス IP アドレス__」オプションを選択し、「__地域__」を選択して専用エグレス IP アドレスを作成します。
 
-   ![専用のエグレス IP アドレスを追加](./assets/dedicated-egress-ip-address/select-type.png)
+   ![専用エグレス IP アドレスを追加](./assets/dedicated-egress-ip-address/select-type.png)
 
-1. を選択 __保存__ 専用のエグレス IP アドレスの追加を確認します。
+1. 「__保存__」を選択して、専用エグレス IP アドレスの追加を確認します。
 
-   ![専用のエグレス IP アドレスの作成を確認](./assets/dedicated-egress-ip-address/confirmation.png)
+   ![専用エグレス IP アドレスの作成を確認](./assets/dedicated-egress-ip-address/confirmation.png)
 
-1. ネットワークインフラストラクチャが作成され、としてマークされるのを待ちます。 __準備完了__. この処理には最大 1 時間かかる場合があります。
+1. ネットワークインフラストラクチャが作成され、__準備完了__&#x200B;とマークされるまで待ちます。このプロセスには最大 1 時間かかる場合があります。
 
-   ![専用のエグレス IP アドレス作成ステータス](./assets/dedicated-egress-ip-address/ready.png)
+   ![専用エグレス IP アドレスの作成ステータス](./assets/dedicated-egress-ip-address/ready.png)
 
-専用のエグレス IP アドレスを作成したので、以下に説明するように、Cloud Manager API を使用して設定できるようになりました。
+専用エグレス IP アドレスを作成したので、以下の説明に従って Cloud Manager API を使用して設定できます。
 
->[!TAB Cloud Manager の API]
+>[!TAB Cloud Manager API]
 
-専用のエグレス IP アドレスは、Cloud Manager API を使用して有効にできます。 次の手順では、Cloud Manager API を使用してAEM as a Cloud Serviceで専用のエグレス IP アドレスを有効にする方法の概要を説明します。
+Cloud Manager API を使用すると、専用エグレス IP アドレスを有効にすることができます。次の手順では、Cloud Manager API を使用して AEM as a Cloud Service で専用エグレス IP アドレスを有効にする方法の概要について説明します。
 
 
 1. まず、Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細ネットワークが必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
 
-   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
+   [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 
    __listRegions HTTP リクエスト__
 
@@ -115,7 +115,7 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
    Cloud Manager プログラムがネットワークインフラストラクチャをプロビジョニングするまで 15 分待ちます。
 
-3. プログラムが終了したことを確認します。 __出力専用 IP アドレス__ cloud Manager API を使用した設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作、使用する `id` 返される `createNetworkInfrastructure` 前の手順の HTTP リクエスト。
+3. プログラムが、Cloud Manager API の [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作を使用して&#x200B;__専用エグレス IP アドレス__&#x200B;の設定を完了したことを、前の手順で `createNetworkInfrastructure` HTTP リクエストから返された `id` を使用して確認します。
 
    __getNetworkInfrastructure HTTP リクエスト__
 
@@ -129,7 +129,7 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
    HTTP 応答に、__準備完了__&#x200B;の&#x200B;__ステータス__&#x200B;が含まれていることを確認します。 まだ準備完了ではない場合は、数分ごとにステータスを再確認します。
 
-専用のエグレス IP アドレスを作成したので、以下に説明するように、Cloud Manager API を使用して設定できるようになりました。
+専用エグレス IP アドレスを作成したので、以下の説明に従って Cloud Manager API を使用して設定できます。
 
 >[!ENDTABS]
 
@@ -151,7 +151,7 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
    `dedicated-egress-ip-address.json` で JSON パラメーターを定義し、`... -d @./dedicated-egress-ip-address.json` を介して curl に提供します。
 
-   [サンプルの dedicated-egress-ip-address.json をダウンロードします](./assets/dedicated-egress-ip-address.json)。 このファイルは一例です。 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。
+   [サンプルの dedicated-egress-ip-address.json をダウンロードします](./assets/dedicated-egress-ip-address.json)。 このファイルは例に過ぎません。[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) に記載されているオプション／必須フィールドに基づいて、必要に応じてファイルを設定します。
 
    ```json
    {
@@ -176,7 +176,7 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
    専用のエグレス IP アドレス設定の HTTP 署名は、オプションの `nonProxyHosts` 設定もサポートするという点のみ、[柔軟なエグレスポート](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment)と異なります。
 
-   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。 `nonProxyHosts` は、共有 IP を介して送信されたトラフィックがAdobeによって自動的に最適化される場合に役立ちます。
+   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。 共有 IP を介して送信されたトラフィックがアドビによって自動的に最適化されるので、`nonProxyHosts` が役立つ場合があります。
 
    各 `portForwards` マッピングでは、詳細ネットワークは次の転送ルールを定義します。
 
@@ -206,9 +206,9 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 
    ホスト名を `pinged` にすることはできません。これはエグレスであり、イングレス&#x200B;_ではない_&#x200B;からです。
 
-   専用のエグレス IP アドレスは、プログラム内のすべてのAEMas a Cloud Service環境で共有されることに注意してください。
+   専用エグレス IP アドレスは、プログラム内のすべての AEM as a Cloud Service 環境で共有されることに注意してください。
 
-1. これで、カスタム AEM コードおよび設定で、専用のエグレス IP アドレスを使用できるようになりました。 多くの場合、専用のエグレス IP アドレスを使用する場合、外部サービスの AEM as a Cloud Service 接続先は、この専用 IP アドレスからのトラフィックのみを許可するように設定されます。
+1. これで、カスタムの AEM コードおよび設定で専用エグレス IP アドレスを使用できるようになりました。多くの場合、専用のエグレス IP アドレスを使用する場合、外部サービスの AEM as a Cloud Service 接続先は、この専用 IP アドレスからのトラフィックのみを許可するように設定されます。
 
 ## 専用のエグレス IP アドレスを使用した外部サービスへの接続
 
@@ -219,11 +219,11 @@ Cloud Manager API を使用して専用のエグレス IP アドレスを設定�
 1. 外部サービスへの HTTP／HTTPS 以外の呼び出し
    + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP／HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。
 
-標準ポート（80 または 443）上のAEMからの HTTP/HTTPS リクエストはデフォルトで許可されていますが、以下に示すように適切に設定されていない場合は、専用のエグレス IP アドレスを使用しません。
+標準ポート（80／443）上の AEM からの HTTP／HTTPS リクエストはデフォルトで許可されていますが、以下に説明するように適切に設定されていない場合は、専用エグレス IP アドレスを使用しません。
 
 >[!TIP]
 >
-> [ルーティングルールの完全なセット](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)については、AEM as a Cloud Service の専用エグレス IP アドレスのドキュメントを参照してください。
+> [ルーティングルールの完全なセット](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)については、AEM as a Cloud Service の専用エグレス IP アドレスのドキュメントを参照してください。
 
 
 ### HTTP／HTTPS
@@ -282,7 +282,7 @@ AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP 
       <a  href="./examples/email-service.md"><img alt="仮想プライベートネットワーク（VPN）" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">メールサービス</a></strong></div>
       <p>
-        外部のメールサービスに接続するためにAEMを使用する OSGi 設定例です。
+        外部のメールサービスへの接続に AEM を使用する OSGi 設定例です。
       </p>
     </td>   
 </tr></table>

@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
-duration: 62
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 50
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 100%
 
@@ -35,4 +35,4 @@ JSON スキーマに基づくアダプティブフォームを作成したら、
 ![datastored](assets/datastored.gif)
 
 
-[アダプティブフォームの作成に使用できるサンプル JSON スキーマ。](assets/samplejsonschemas.zip)zip ファイルをダウンロードして展開し、JSON スキーマを取得します。
+[アダプティブフォームの作成に使用できるサンプル JSON スキーマ。](assets/samplejsonschemas.zip)といったアドバイスを耳にしたことがある方もいるでしょう。zip ファイルをダウンロードして展開し、JSON スキーマを取得します。

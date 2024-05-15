@@ -7,13 +7,13 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 156
+duration: 358
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
-workflow-type: ht
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ Web フックで AEM イベントを受け取り、イベントの詳細（ペ�
 
 ## 前提条件
 
-このチュートリアルを完了するには、以下が必要になります。
+このチュートリアルを完了するには、次が必要になります。
 
 - [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
 

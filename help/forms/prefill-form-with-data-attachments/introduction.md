@@ -9,8 +9,9 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 exl-id: 488ef5ff-c67d-40e1-b69d-6f2a968d642b
-source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
-workflow-type: ht
+duration: 17
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
 

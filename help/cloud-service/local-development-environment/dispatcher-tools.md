@@ -10,11 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 730
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 624
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 92%
 >id="aemcloud_localdev_dispatcher"
 >title="ローカル Dispatcher ツール"
 >abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。AEM as a Cloud Service SDK には、推奨 Dispatcher ツールのバージョンが含まれているので、Dispatcher をローカルで容易に設定、検証、シミュレーションできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内の Dispatcher"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内 Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja" text="AEM as a Cloud Service SDK のダウンロード"
 
 Adobe Experience Manager（AEM）の Dispatcher は、CDN と AEM パブリッシュ層の間のセキュリティとパフォーマンスのレイヤーを提供する Apache HTTP web サーバーモジュールです。Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。
 
-AEMas a Cloud ServiceSDK には、Dispatcher をローカルで検証およびシミュレートするための、推奨される Dispatcher ツールバージョンが含まれています。 Dispatcher ツールは、次の要素で構成されます。
+AEM as a Cloud Service SDK には、Dispatcher の設定、検証およびシミュレーションをローカルで容易に行えるようにする推奨 Dispatcher ツールバージョンが含まれています。Dispatcher ツールは、以下の要素で構成されています。
 
 + Apache HTTP web サーバーと Dispatcher 設定ファイルのベースラインセット（`.../dispatcher-sdk-x.x.x/src` にあります）
 + `.../dispatcher-sdk-x.x.x/bin/validate` に置かれた設定バリデーター CLI ツール
@@ -47,7 +47,7 @@ AEMas a Cloud ServiceSDK には、Dispatcher をローカルで検証および�
 ## 前提条件
 
 1. Windows ユーザーは、Windows 10 Professional（または Docker をサポートするバージョン）を使用する必要があります。
-1. インストール [Experience Manager公開クイックスタート JAR](./aem-runtime.md) をローカル開発。
+1. [Experience Manager パブリッシュクイックスタート JAR](./aem-runtime.md) を、ローカルの開発マシン上にインストールします。
 
 + オプションとして、ローカルの AEM Publish サービスに最新の [AEM リファレンス web サイト](https://github.com/adobe/aem-guides-wknd/releases)をインストールします。この web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
 
@@ -105,11 +105,11 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## Dispatcher 設定ファイルについて
 
 >[!TIP]
-から作成されたExperience Managerプロジェクト [AEM Project Maven アーキタイプ](https://github.com/adobe/aem-project-archetype) は、この一連の Dispatcher 設定ファイルに事前に設定されているので、Dispatcher ツールの src フォルダーからコピーする必要はありません。
+>  [AEM Project Maven アーキタイプ](https://github.com/adobe/aem-project-archetype)で作成された Experience Manager プロジェクトは、この一連の Dispatcher 設定ファイルに事前に設定されているので、Dispatcher ツールの src フォルダーからコピーする必要はありません。
 
 Dispatcher ツールは、ローカル開発を含むすべての環境の動作を定義する、Apache HTTP web サーバーと Dispatcher 設定ファイルのセットを提供します。
 
-これらのファイルは、Experience ManagerMaven プロジェクト内の `dispatcher/src` フォルダー（Maven プロジェクトに存在しない場合）にExperience Managerします。
+これらのファイルは、Experience Manager Maven プロジェクトにコピーして `dispatcher/src` フォルダーに保存するためのものです（Experience Manager Maven プロジェクトにまだ存在しない場合）。
 
 設定ファイルに関する完全な説明は、展開された Dispatcher ツールでは `dispatcher-sdk-x.x.x/docs/Config.html` として利用できます。
 
@@ -331,7 +331,7 @@ Apache 設定と Dispatcher 設定のベースラインセットは定期的に�
 
 + `dispatcher_vhost.conf`、`default.vhost`、`default.farm` などの更新された不変ファイルを検証し、必要に応じて、これらのファイルから派生したカスタムファイルに、適切な変更を加えます。
 
-+ 設定を再検証します。
++ 設定を再検証すると、合格するはずです。
 
 ```shell
 $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -353,7 +353,7 @@ Phase 3 finished
 
 `host.docker.internal` は Docker コンテナに指定されるホスト名であり、ホストに解決されます。docs.docker.com によれば、次のとおりです（[macOS](https://docs.docker.com/desktop/networking/)、[Windows](https://docs.docker.com/desktop/networking/)）。
 
->Docker 18.03 以降のレコメンデーションは、特別な DNS 名 host.docker.internal に接続することです。この DNS 名は、ホストが使用する内部 IP アドレスに解決されます。
+> Docker 18.03 以降のレコメンデーションは、特別な DNS 名 host.docker.internal に接続することです。この DNS 名は、ホストが使用する内部 IP アドレスに解決されます。
 
 `bin/docker_run src host.docker.internal:4503 8080` の結果、__Waiting until host.docker.internal is available__（host.docker.internal が使用可能になるまで待機中）というメッセージが表示された場合は、以下を実行します。
 
@@ -365,17 +365,17 @@ Phase 3 finished
 >[!TAB macOS]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ その後、次を実行 `docker_run` ホスト IP アドレスを使用： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ 次に、ホスト IP アドレスを使って `docker_run` を実行します：`$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
 + コマンドプロンプトから `ipconfig` を実行し、ホストマシンの __IPv4 アドレス__&#x200B;を記録します。
-+ 次に、次を実行します。 `docker_run` この IP アドレスを使用する場合： `$ bin\docker_run src <HOST IP>:4503 8080`
++ そして、この IP アドレスを使用して `docker_run` を実行します。`$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux®]
 
 + ターミナルから `ifconfig` を実行し、Host __inet__ IPアドレス（通常は __en0__ デバイス）を記録します。
-+ その後、次を実行 `docker_run` ホスト IP アドレスを使用： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ 次に、ホスト IP アドレスを使って `docker_run` を実行します。`$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 

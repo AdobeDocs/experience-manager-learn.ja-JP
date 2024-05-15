@@ -3,9 +3,9 @@ title: Adobe Experience Manager でコンテンツベロシティを促進する
 description: 企業組織におけるコンテンツベロシティとその価値について学びます。 効果的な実装と、その過程で注意すべき落とし穴の 4 つの原則に進みます。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 718
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 589
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 100%
 

@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
-duration: null
+duration: 122
 exl-id: 919cb9de-68f8-4380-940a-17274183298f
-source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
-workflow-type: ht
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 

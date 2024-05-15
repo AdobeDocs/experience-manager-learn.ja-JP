@@ -11,9 +11,9 @@ thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
-duration: 354
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
-workflow-type: ht
+duration: 345
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ AEM コンテンツフラグメントエディターのリッチテキストエ�
 
 この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE ツールバーにカスタムボタンを追加します。
 
-| AEM UI 拡張 | 拡張機能ポイント |
+| AEM UI 拡張 | 拡張ポイント |
 | ------------------------ | --------------------- | 
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターツールバー](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 

@@ -10,8 +10,9 @@ jira: KT-14997
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: ee5182fd-b995-419b-be18-a59484f18147
-source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
-workflow-type: ht
+duration: 371
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 100%
 

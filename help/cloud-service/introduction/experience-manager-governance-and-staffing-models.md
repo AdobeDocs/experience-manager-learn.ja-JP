@@ -3,9 +3,9 @@ title: ガバナンスとスタッフのモデルとアーキタイプ
 description: Adobe Experience Manager（AEM）プラットフォームを運用し、その取り組みを最大限に活用する方法について説明します。
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-duration: 320
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 257
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 100%
 

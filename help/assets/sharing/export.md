@@ -11,8 +11,9 @@ doc-type: Tutorial
 jira: KT-15313
 thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
-source-git-commit: d574b0080d12f59d250685f62fc426dfff3adb04
-workflow-type: ht
+duration: 256
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 100%
 

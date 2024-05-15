@@ -11,9 +11,9 @@ last-substantial-update: 2023-11-30T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
-duration: 116
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 100
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 
@@ -41,7 +41,7 @@ AEM as a Cloud Serviceの CDN で HTTP 応答のキャッシュを無効にす�
 キャッシュを無効にするには、2 つの方法でキャッシュヘッダーを更新します。
 
 1. **Dispatcher vhost の設定：** AEM パブリッシュでのみ使用できます。
-1. **カスタム Java™ コード：** AEM パブリッシュとオーサーの両方で使用できます。
+1. **カスタム Java™コード：** AEM パブリッシュとオーサーの両方で使用できます。
 
 これらの各オプションを確認してみましょう。
 
@@ -67,7 +67,7 @@ AEM as a Cloud Serviceの CDN で HTTP 応答のキャッシュを無効にす�
 既存の CSS キャッシュをバイパスするには、CSS ファイルに対して新しいキャッシュキーを生成するために、CSS ファイルでの変更が必要になることに注意してください。
 
 1. AEM プロジェクト内で、`dispatcher/src/conf.d/available_vhosts` ディレクトリから目的の vhost ファイルを見つけます。
-1. vhost（例：`wknd.vhost`）ファイルを次のように更新します。
+1. その vhost（例：`wknd.vhost`）ファイルを次のように更新します。
 
    ```
    <LocationMatch "^/etc.clientlibs/.*\.(css)$">
@@ -80,7 +80,7 @@ AEM as a Cloud Serviceの CDN で HTTP 応答のキャッシュを無効にす�
    </LocationMatch>
    ```
 
-   `dispatcher/src/conf.d/enabled_vhosts` ディレクトリの vhost ファイルは、`dispatcher/src/conf.d/available_vhosts` ディレクトリのファイルへの&#x200B;**シンボリックリンク**&#x200B;です。存在しない場合は、シンボリックリンクを必ず作成してください。
+   `dispatcher/src/conf.d/enabled_vhosts` ディレクトリ内の vhost ファイルは `dispatcher/src/conf.d/available_vhosts` ディレクトリ内のファイルへの&#x200B;**シンボリックリンク**&#x200B;なので、存在しない場合は、必ずシンボリックリンクを作成してください。
 1. [Cloud Manager の web 層設定パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=ja#web-tier-config-pipelines)または [RDE コマンド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=ja#deploy-apache-or-dispatcher-configuration)を使用して、目的の AEM as a Cloud Service 環境に vhost の変更をデプロイします。
 
 ### カスタム Java™ コード

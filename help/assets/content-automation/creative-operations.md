@@ -10,9 +10,9 @@ thumbnail: 336540.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 doc-type: Feature Video
 exl-id: 10e63038-b6d6-4ac6-b6b4-660a05f83d90
-duration: 637
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 635
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 100%
 

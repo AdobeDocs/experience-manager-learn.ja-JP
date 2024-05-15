@@ -10,8 +10,9 @@ level: Experienced
 jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
 exl-id: 1fb7ca83-0ba6-48a3-b3d3-079d0ef89245
-source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
-workflow-type: ht
+duration: 32
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 100%
 

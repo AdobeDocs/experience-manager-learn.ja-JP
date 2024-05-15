@@ -13,9 +13,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 doc-type: Feature Video
 exl-id: 0e9d056a-4eec-450c-a941-b9563634fe8a
-duration: 1225
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 1222
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 100%
 
