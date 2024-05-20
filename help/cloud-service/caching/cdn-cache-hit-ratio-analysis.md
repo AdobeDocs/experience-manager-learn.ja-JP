@@ -12,10 +12,10 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 77%
+source-wordcount: '1476'
+ht-degree: 75%
 
 ---
 
@@ -52,7 +52,7 @@ CDN ログをダウンロードするには、次の手順に従います。
 
    ![ログのダウンロード - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. **ログをダウンロード**&#x200B;ダイアログで、ドロップダウンメニューから&#x200B;**公開**&#x200B;サービスを選択し、**cdn** 行の横にあるダウンロードアイコンをクリックします。
+1. が含まれる **ログをダウンロード** ダイアログで、 **公開** ドロップダウンメニューから「サービス」を選択し、の横にある「ダウンロード」アイコンをクリックします **CDN** 行。
 
    ![CDN ログ - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -67,7 +67,7 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 1. **Elasticsearch、ログ、およびキバナ （ELK）**：です [ELK ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) はローカルにインストールできます。
 1. **Splunk**：です [Splunk ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) splunk へのアクセスが必要で、 [AEMCS ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) :CDN ログを取り込みます。
-1. [Jupyter ノートブック](https://jupyter.org/)：の一部としてリモートからアクセスできます [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) Adobe Experience Platformのライセンスを取得しているお客様の場合、ソフトウェアを追加でインストールする必要はありません。
+1. **Jupyter ノートブック**：の一部としてリモートからアクセスできます [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) Adobe Experience Platformのライセンスを取得しているお客様の場合、ソフトウェアを追加でインストールする必要はありません。
 
 ### オプション 1：ELK ダッシュボードツールの使用
 
@@ -140,6 +140,10 @@ CDN ログをダウンロードするには、次の手順に従います。
 1. 必要に応じて、を更新します _インデックス、ソースタイプ、その他_ splunk ダッシュボードの値をフィルタリングします。
 
    ![Splunk ダッシュボード](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+>[!NOTE]
+>
+>Splunk ダッシュボードの UI とグラフは ELK ダッシュボードとは異なりますが、重要な詳細は似ています。
 
 ### オプション 3：Jupyter ノートブックの使用
 

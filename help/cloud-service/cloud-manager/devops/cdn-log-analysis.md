@@ -11,13 +11,13 @@ duration: 219
 last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
-source-git-commit: d2c39b57982478badcd12682f082517ee9531d3e
+exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
-
 
 # CDN ログ分析ツール
 
@@ -67,6 +67,4 @@ ht-degree: 1%
 
 この [エルクスタック](https://www.elastic.co/elastic-stack)Elasticsearch、Logstash および Kibana から構成されるも、ログ分析のもう 1 つの強力なオプションです。 これは、Splunk のセットアップ機能やログ転送機能にアクセスできない組織で役立ちます。 ELK スタックをローカルでセットアップするのは簡単です。このツールは Docker 作成ファイルを提供するので、すぐに使い始めることができます。 次に、事前定義済みのダッシュボードを読み込み、Adobe Cloud Manager を使用してダウンロードされた CDN ログを取り込むことができます。
 
-の使用を開始できます [AEMCS CDN ログ分析用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)
-
-
+の使用を開始できます [AEMCS CDN ログ分析用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis) ガイド。
