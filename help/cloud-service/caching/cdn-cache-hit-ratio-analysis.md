@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 75%
@@ -66,7 +66,7 @@ CDN ログをダウンロードするには、次の手順に従います。
 このチュートリアルでは、CDN ログを分析するために、次の 3 つのオプションを紹介します。
 
 1. **Elasticsearch、ログ、およびキバナ （ELK）**：です [ELK ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) はローカルにインストールできます。
-1. **Splunk**：です [Splunk ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) splunk へのアクセスが必要で、 [AEMCS ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) :CDN ログを取り込みます。
+1. **Splunk**：です [Splunk ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) splunk へのアクセスが必要で、 [AEMCS ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) :CDN ログを取り込みます。
 1. **Jupyter ノートブック**：の一部としてリモートからアクセスできます [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) Adobe Experience Platformのライセンスを取得しているお客様の場合、ソフトウェアを追加でインストールする必要はありません。
 
 ### オプション 1：ELK ダッシュボードツールの使用
@@ -136,7 +136,7 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 主な詳細を識別するには、を使用します [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクト。 このプロジェクトでは、CDN ログを分析する Splunk ダッシュボードを提供します。
 
-1. の手順に従います [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) を選択し、必ず以下を読み込みます **CDN キャッシュヒット率** Splunk ダッシュボード。
+1. の手順に従います [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) を選択し、必ず以下を読み込みます **CDN キャッシュヒット率** Splunk ダッシュボード。
 1. 必要に応じて、を更新します _インデックス、ソースタイプ、その他_ splunk ダッシュボードの値をフィルタリングします。
 
    ![Splunk ダッシュボード](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}

@@ -12,7 +12,7 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 1%
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 を活用する組織の場合 [Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) また、Splunk インスタンスへの AEMCS ログ転送を有効にしているユーザーは、事前定義済みのダッシュボードをすばやく読み込むことができます。 この設定により、高速なログ分析が容易になり、AEMの実装を最適化し、DOS 攻撃などのセキュリティ上の脅威を軽減するための実用的なインサイトが提供されます。
 
-の使用を開始できます [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) ガイド。
+の使用を開始できます [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) ガイド。
 
 
 ## ELK 統合
