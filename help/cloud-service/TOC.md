@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d2c39b57982478badcd12682f082517ee9531d3e
+source-git-commit: 211cacf02a73be9e32af91bb6ee5f0d67de56ee0
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1203'
 ht-degree: 98%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 98%
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
+   + [GitHub リポジトリの使用](./cloud-manager/byogithub.md)
    + [CI／CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
    + [CI／CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
