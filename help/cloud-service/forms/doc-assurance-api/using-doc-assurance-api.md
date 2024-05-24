@@ -1,0 +1,160 @@
+---
+title: DocAssurance API の使用
+description: Java の Apache HTTP コンポーネントを使用して DocAssurance API を呼び出すサンプルコード
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
+version: Cloud Service
+feature: Document Services
+topic: Development
+jira: KT-15508
+source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+workflow-type: tm+mt
+source-wordcount: '270'
+ht-degree: 0%
+
+---
+
+# DocAssurance API の使用
+
+この [DocAssurance サービス](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) 署名、証明書、署名フィールドの追加、暗号化、復号化など、PDFドキュメントに対して様々なデジタル署名または暗号化処理を実行する機能を提供します。
+この記事では、API の使用を開始するための Java コードスニペットを提供します。コードスニペットはアクセストークンを利用します。 [この記事では、アクセストークンの生成に必要な手順について説明します。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+
+
+<span class="preview">この機能は、早期導入プログラムで利用できます。 公式メール ID からaem-forms-ea@adobe.comに書き込んで、早期導入プログラムに参加し、この機能へのアクセスをリクエストできます</span>
+
+
+## 前提条件
+
+* AEM Forms Cloud Serviceの使用経験
+* の使用経験 [Apache HTTP コンポーネント](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* AEM FormsCloud Service環境へのアクセス
+
+## Inspect ドキュメント
+
+検査 API を使用して、特定のPDFドキュメントのセキュリティの種類を取得します。 次のコードスニペットは、作業を開始する際に役立ちます。
+
+```java
+...
+File fileToInspect = new File("path_to_your_pdf_file)";
+HttpPost httpPost = new HttpPost("<your_aem_forms_instance>/adobe/forms/document/assure/inspect");
+httpPost.addHeader("Authorization", "Bearer " + accessToken);
+MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+byte[] fileContent = FileUtils.readFileToByteArray(fileToInspect);
+builder.addBinaryBody("document", fileContent, ContentType.create("application/pdf"), "BenefitOverview.pdf");
+try
+{
+    HttpEntity entity = builder.build();
+    httpPost.setEntity(entity);
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    CloseableHttpResponse response = httpclient.execute(httpPost);
+    if (response.getStatusLine().getStatusCode() == 200)   
+    {
+        String json = EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
+        log.info("The mode of encryption is  " + JsonParser.parseString(json).getAsJsonObject().get("mode").getAsString());
+    }
+
+} 
+catch (Exception e)
+{
+   log.error(e.getMessage());
+}
+...
+```
+
+
+## ドキュメントを暗号化
+
+暗号化 API を使用して、パスワードで PDF ドキュメントを暗号化します。 次のサンプルコードスニペットは、特定のPDFを暗号化します。
+
+```java
+...
+File fileToEncrypt = new File("path_to_your_pdf_file");
+HttpPost httpPost = new HttpPost(postURL);
+httpPost.addHeader("Authorization", "Bearer " + accessToken ");
+MultipartEntityBuilder builder = MultipartEntityBuilder.create(); byte[] fileContent = FileUtils.readFileToByteArray(fileToEncrypt); builder.addBinaryBody("document", fileContent, ContentType.create("application/pdf"), "BenefitOverview.pdf");
+String config = "{\"mode\":\"ENCRYPT_WITH_PASSWORD\",\"params\":{\"openPassword\":\"adobe\",\"permPassword\":\"systems\",\"permissions\":[\"ALL_PERM\"]}}";
+ builder.addTextBody("config", config, ContentType.APPLICATION_JSON);
+try
+ {
+    HttpEntity entity = builder.build();
+    httpPost.setEntity(entity);
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    CloseableHttpResponse response = httpclient.execute(httpPost);
+    if (response.getStatusLine().getStatusCode() == 200)
+    {
+       InputStream generatedPDF = response.getEntity().getContent();
+       byte[] bytes = IOUtils.toByteArray(generatedPDF);
+       File encryptedFile = new File("c:\\aem_forms_cs_api\\encrypted.pdf");
+       FileOutputStream outputStream = new FileOutputStream(encryptedFile);
+       outputStream.write(bytes);
+       outputStream.close();
+    }
+
+}
+catch (Exception e)
+ {
+    log.error(e.getMessage());
+ }
+
+...
+```
+
+## PDF への署名フィールドの追加
+
+signfield API を使用して、指定されたPDFに署名を追加します。 次のサンプルコードスニペットでは、ドキュメントの 4 ページ目に SignHere という署名フィールドを追加しています
+
+```java
+...
+File pdfFile = new File(pdfFile1.getPath());
+HttpPost httpPost = new HttpPost(postURL);
+httpPost.addHeader("Authorization", "Bearer "+accessToken);
+MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+byte[] fileContent = FileUtils.readFileToByteArray(pdfFile);
+builder.addBinaryBody("document", fileContent, ContentType.create("application/pdf"), "BenefitOverview.pdf");
+builder.addTextBody("field", "SignHere", ContentType.TEXT_PLAIN);
+String rectangle = "{\"lowerLeftX\":1,\"lowerLeftY\":40,\"width\":100,\"height\":100}";
+builder.addTextBody("rectangle", rectangle, ContentType.APPLICATION_JSON);
+```
+
+
+## 暗号化を削除
+
+暗号化 API に対してPUT処理を使用して、指定されたPDFから暗号化を削除します。 開始するには、次の Java コードスニペットが役立ちます。
+
+```java
+...
+File fileToDecrypt = new File("path_to_your_pdf_file");
+
+HttpPut httpPut = new HttpPut(putURL);
+httpPut.addHeader("Authorization", "Bearer " + accessToken);
+
+MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+byte[] fileContent = FileUtils.readFileToByteArray(fileToDecrypt);
+builder.addBinaryBody("document", fileContent, ContentType.create("application/pdf"), "BenefitOverview.pdf");
+builder.addTextBody("config", "systems", ContentType.TEXT_PLAIN);
+
+try {
+    HttpEntity entity = builder.build();
+    httpPut.setEntity(entity);
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    CloseableHttpResponse response = httpclient.execute(httpPut);
+
+if (response.getStatusLine().getStatusCode() == 200) {
+        InputStream generatedPDF = response.getEntity().getContent();
+        byte[] bytes = IOUtils.toByteArray(generatedPDF);
+        File encryptionRemoved = new File("c:\\aem_forms_cs_api\\encryption_removed.pdf");
+        FileOutputStream outputStream = new FileOutputStream(encryptionRemoved);
+        outputStream.write(bytes);
+        outputStream.close();
+        httpclient.close();
+    }
+} catch (Exception e) {
+    log.error(e.getMessage());
+}
+...
+```
+
+### Postmanコレクション
+
+API のPostman コレクションは、次のようになります [テスト目的でここからダウンロードします](assets/DocAssuranceAPI.postman_collection.json). API を呼び出すには、基本認証またはベアラートークン タイプの認証を使用できます。
