@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 0435cfe082043da1c92a25b0429c508121c0d95c
+source-git-commit: 6736eb9f124d43b6337b74fd9463bd56cee4e15a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '419'
 ht-degree: 97%
 
 ---
@@ -90,7 +90,6 @@ ht-degree: 97%
       + [ローカル AEM でのアセット共有 Commons の設定](./sharing/asset-share-commons-technical-video-setup.md)
       + [アセット共有 Commons のテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons アセットキット](./sharing/asset-share/asset-share-commons-asset-kits.md)
-   + [Connected Assets](./sharing/connected-assets.md)
 
 + クリエイティブワークフロー{#creative-workflows}
    + [Adobe Express の統合](./creative-workflows/adobe-express.md)
@@ -130,7 +129,6 @@ ht-degree: 97%
       + [カスタムビデオのサムネール](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH アダプティブストリーミング](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media スマート切り抜きのビデオ](dynamic-media/dynamic-media-smart-crop-video.md)
-      + [インタラクティブビデオ](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [ビデオプレイヤー](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + ビューア {#viewers}
       + [ビューア](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
