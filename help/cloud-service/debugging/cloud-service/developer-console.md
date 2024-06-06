@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1d9aeb4e5bd41096a28e3375d124bd6b6b8784aa
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 100%
+source-wordcount: '1562'
+ht-degree: 86%
 
 ---
 
@@ -40,13 +40,21 @@ Developer Console には、AEM as a Cloud Service 環境ごとに、Cloud Manage
 
 Developer Console にアクセスして使用するには、 [アドビの Admin Console](https://adminconsole.adobe.com) で開発者の Adobe ID に以下の権限が付与される必要があります。
 
-1. Cloud Manager および AEM as a Cloud Service 製品を有効にしたアドビ組織が、アドビ組織スイッチャーでアクティブになっていることを確認します。
-1. 開発者は、[Cloud Manager 製品&#x200B;__の開発者 - Cloud Service__ 製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=ja#assign-developer)のメンバーであることが必要です。
-   + このメンバーシップが存在しない場合、開発者は Developer Console にログインできません。
+1. Adobe組織スイッチャーでを確認すると、Developer Console で調べるAdobeに関連する環境組織が表示されます。
+1. 開発者コンソールにログインするには、開発者が次のいずれかの役割のメンバーである必要があります。
+   + [Cloud Manager 製品 __開発者 – Cloud Service__ 製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=ja#assign-developer)：この場合、開発者には、選択した開発者コンソールの URL で使用可能な環境の完全なリストが表示されます。Cloud Manager で開発環境または RDE が選択されている場合は、同じプログラム内の他の開発環境または RDE が表示される場合があります。
+   + [__AEM管理者__ 製品プロファイル： __AEM オーサー__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=ja#aem-product-profiles)：この場合、前の箇条書きで説明した環境のリストは、この役割が割り当てられている関連する製品プロファイルに限定されます。
 1. 開発者は、AEM オーサーまたはパブリッシュの [__AEM ユーザー__&#x200B;または __AEM 管理者__&#x200B;製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=ja#aem-product-profiles)のメンバーであることが必要です。
    + このメンバーシップが存在しない場合、 [ステータス](#status)ダンプは 401 Unauthorized エラーでタイムアウトします。
 
 ### Developer Console へのアクセスのトラブルシューティング
+
+#### ログイン時に、探している環境がリストに表示されない
+
+以下を確認します。
+
++ Cloud Manager で選択した環境の 3 つのドットをクリックし、「開発者コンソール」を選択することで、正しい開発者コンソール URL を選択したことになります。
++ 次のいずれかが含まれています [Cloud Manager 製品 __開発者 – Cloud Service__ 製品プロファイル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=ja#assign-developer) 環境の完全なリストを表示するには、または自分が [__AEM管理者__ 製品プロファイル： __AEM オーサー__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=ja#aem-product-profiles) 環境の場合は、見つかりません。
 
 #### ステータスのダンピング時の 401 Unauthorized エラー
 
