@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
+source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 93%
+source-wordcount: '547'
+ht-degree: 91%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 93%
    + [リダイレクト](document-authoring/redirects.md)
    + [一括メタデータ](document-authoring/bulk-metadata.md)
    + [ページのメタデータ](document-authoring/page-metadata.md)
+   + [オーサー認証](document-authoring/author-authentication.md)
    + 方法{#how-to}
       + [ドキュメント監査](./document-authoring/how-to/document-audit.md)
       + [ドキュメント権限](./document-authoring/how-to/document-permissions.md)
@@ -36,6 +37,10 @@ ht-degree: 93%
       + [画像の代替テキスト](./document-authoring/how-to/image-alt-text.md)
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
       + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
+      + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
+      + [インポーターを使用したサイト移行](./document-authoring/how-to/migration-using-importer.md)
+      + [インポーターのカスタマイズ](./document-authoring/how-to/customizing-importer.md)
+      + [インポーターを使用した一括読み込み](./document-authoring/how-to/bulk-importing-using-importer.md)
       + バリエーションを生成{#generate-variations}
          + [概要](./document-authoring/how-to/generate-variations/overview.md)
          + [Sidekickの設定](./document-authoring/how-to/generate-variations/configure-sidekick.md)
