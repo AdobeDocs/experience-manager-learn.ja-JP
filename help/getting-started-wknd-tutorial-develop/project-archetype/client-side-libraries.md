@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
 workflow-type: tm+mt
-source-wordcount: '2546'
-ht-degree: 100%
+source-wordcount: '2554'
+ht-degree: 99%
 
 ---
 
@@ -184,6 +184,16 @@ AEM プロジェクトアーキタイプは、この統合を自動的に設定�
    >[!NOTE]
    >
    >新しいクローンやプロジェクトの生成の後と同様に、`npm install` の実行は 1 回だけ必要です。
+
+1. 開く `ui.frontend/package.json` および **スクリプト** **開始** コマンド追加 `--env writeToDisk=true`.
+
+   ```json
+   {
+     "scripts": { 
+       "start": "webpack-dev-server --open --config ./webpack.dev.js --env writeToDisk=true",
+     }
+   }
+   ```
 
 1. **監視**&#x200B;モードで webpack 開発サーバーを起動するには、次のコマンドを実行します。
 
