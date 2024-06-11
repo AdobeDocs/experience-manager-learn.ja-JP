@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
+source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
 workflow-type: tm+mt
-source-wordcount: '2069'
-ht-degree: 99%
+source-wordcount: '2080'
+ht-degree: 98%
 
 ---
 
@@ -304,6 +304,10 @@ ht-degree: 99%
    + [手書き署名の使用](forms-designer/scribble-signature-form.md)
    + [デジタル署名の使用](forms-designer/adding-dig-signature-field.md)
    + [Reader 拡張フォーム](forms-designer/reader-extending-j2ee.md)
++ AEM Forms Workbench{#forms-workbench}
+   + [ワークベンチの概要](aem-forms-workbench/workbench-introduction.md)
+   + [フォームプロセスの作成](aem-forms-workbench/workbench-creating-a-process.md)
+   + [デバッギンプロセス](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + 印刷チャネル用のインタラクティブ通信
 {#ic-print-channel-tutorial}
    + [1 - はじめに](ic-print-channel-tutorial/introduction.md)
