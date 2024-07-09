@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1229'
 ht-degree: 96%
 
 ---
@@ -405,7 +405,6 @@ ht-degree: 96%
       + シーズン 3{#season-3}
          + [サードパーティ検索](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [リアルユーザーモニタリング（RUM）](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [RUM （Real User Monitoring）エクスプローラ](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
          + [エッジワーカー](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Edge Delivery Services でのイベントの公開と非公開](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [クエリインデックスと Excel 数式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
