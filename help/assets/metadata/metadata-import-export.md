@@ -12,10 +12,10 @@ last-substantial-update: 2022-06-13T00:00:00Z
 doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
 duration: 419
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 726715890d997ba3bb85f4833e220ac2222b3a42
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 100%
+source-wordcount: '378'
+ht-degree: 65%
 
 ---
 
@@ -26,6 +26,22 @@ Adobe Experience Manager Assets のメタデータ読み込み機能および書
 ## メタデータの書き出し {#metadata-export}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+
+>[!TIP]
+>
+> メタデータ書き出し CSV ファイルを Excel で開く場合は、 [Excel インポーター](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) utf-8 でエンコードされた CSV ファイルの問題を回避するために、ファイルをダブルクリックするのではなく、
+>
+> メタデータ書き出し CSV ファイルを Excel で開くには、次の手順に従います。
+> 
+> 1. Microsoft Excel を開く
+> 1. を選択 __ファイル/新規__ 空のスプレッドシートを作成するには
+> 1. 空のスプレッドシートを開いた状態で、を選択します __ファイル/読み込み__
+> 1. を選択 __テキスト__ ファイルを開き、 __インポート__
+> 1. 書き出す CSV ファイルをファイルシステムから選択し、 __データを取得__
+> 1. インポート ウィザードのステップ 1 で、次の項目を選択します __区切り__ およびを設定 __ファイルオリジン__ 対象： __Unicode （UTF-8）__&#x200B;を選択し、 __次__
+> 1. 手順 2 で、を設定します __区切り文字__ 対象： __コンマ__&#x200B;を選択し、 __次__
+> 1. 手順 3 で、を終了します。 __列データフォーマット__ そのまま、をクリックします。 __終了__
+> 1. を選択 __インポート__ データをスプレッドシートに追加するには
 
 ## メタデータの読み込み {#metadata-import}
 
