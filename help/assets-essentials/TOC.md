@@ -8,15 +8,15 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
-workflow-type: ht
-source-wordcount: '77'
-ht-degree: 100%
+source-git-commit: a5eb7cb6ba9b806a57a27ad1a0e01609af713656
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 88%
 
 ---
 
 
-# AEM Assets Essentials のビデオ {#assets-essentials}
+# AEM Assets Essentials ビデオ {#assets-essentials}
 
 + [概要](overview.md)
 
@@ -34,6 +34,7 @@ ht-degree: 100%
    + [マイワークスペース](configuring/my-workspace.md)
    + [メタデータフォーム](configuring/metadata-forms.md)
    + [権限管理](configuring/permissions-management.md)
+   + [分類の管理](configuring/taxonomy-management.md)
 
 + [Creative Cloud 統合](integrations/creative-cloud.md)
 
@@ -44,6 +45,6 @@ ht-degree: 100%
    + [ドキュメントの送信とアセットのリンク](./integrations/workfront/link-send.md)
    + [バージョン履歴](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer の統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
++ [Adobe Journey Optimizerの統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
 
 + [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja){target=_blank}
