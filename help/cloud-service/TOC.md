@@ -115,8 +115,8 @@ ht-degree: 96%
       + [設定方法](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
       + [開発ライフサイクル](./developing/rde/development-life-cycle.md)
-   + ユニバーサルエディター{#universal-editor}
-      + React アプリの編集{#react-app-editing}
+   + ユニバーサルエディター {#universal-editor}
+      + React アプリの編集 {#react-app-editing}
          + [概要](./developing/universal-editor/react-app/overview.md)
          + [ローカル開発設定](./developing/universal-editor/react-app/local-development-setup.md)
          + [React アプリの実装](./developing/universal-editor/react-app/instrument-to-edit-content.md)
@@ -249,7 +249,7 @@ ht-degree: 96%
       + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - 応答の表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
-   + 住所ブロックコンポーネントの作成{#create-address-block}
+   + 住所ブロックコンポーネント {#create-address-block} 作成
       + [1 - はじめに](./forms/create-address-block-component/introduction.md)
       + [2 – 設定](./forms/create-address-block-component/set-up.md)
       + [3 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
@@ -267,8 +267,8 @@ ht-degree: 96%
       + [データとテンプレートの結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [ソリューションのテスト](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
-   + DocAssurance API の使用{#doc-assurance-api}
-+[サンプルコードスニペット](./forms/doc-assurance-api/using-doc-assurance-api.md)
+   + DocAssurance API の使用 {#doc-assurance-api}
++[ サンプルコードスニペット ](./forms/doc-assurance-api/using-doc-assurance-api.md)
    + Batch API を使用したドキュメント生成{#formscs-batch-api}
       + [はじめに](./forms/formscs-batch-api/introduction.md)
       + [Azure ストレージの設定](./forms/formscs-batch-api/configure-azure-storage.md)

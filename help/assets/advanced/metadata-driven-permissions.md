@@ -34,10 +34,10 @@ ht-degree: 54%
 
 ## OSGi 設定 {#configure-permissionable-properties}
 
-メタデータ駆動権限を実装するには、開発者は OSGi 設定をAEM固有の設定にデプロイする必要があります。これにより、as a Cloud Serviceのアセットメタデータプロパティで、メタデータ駆動権限を強化できます。
+メタデータ駆動権限を実装するには、開発者は OSGi 設定をAEM as a Cloud Serviceにデプロイする必要があります。これにより、特定のアセットメタデータプロパティで、メタデータ駆動権限を強化できます。
 
-1. アクセス制御に使用するアセットメタデータプロパティを決定します。プロパティ名は、アセットのの `jcr:content/metadata` リソース。 ここでは、`status` というプロパティにします。
-1. OSGi 設定の作成 `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` AEM Maven プロジェクトで、
+1. アクセス制御に使用するアセットメタデータプロパティを決定します。プロパティ名は、アセットの `jcr:content/metadata` リソース上の JCR プロパティ名です。 ここでは、`status` というプロパティにします。
+1. AEM Maven プロジェクトに OSGi 設定 `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` を作成します。
 1. 作成したファイルに次の JSON を貼り付けます。
 
    ```json
@@ -56,30 +56,30 @@ ht-degree: 54%
 
 制限ベースのアクセス制御エントリを追加する前に、新しいト上位レベルのエントリを追加して、アセットの権限評価の対象となるすべてのグループ（「寄稿者」など）への読み取りアクセスを最初に拒否する必要があります。
 
-1. に移動します。 __ツール→セキュリティ→権限__ 画面
-1. 「」を選択します __投稿者__ グループ （または、すべてのユーザーグループが属する他のカスタムグループ）
-1. クリック __ACE の追加__ 画面の右上隅に
-1. を選択 `/content/dam` （用） __パス__
-1. Enter `jcr:read` （用） __権限__
-1. を選択 `Deny` （用） __権限タイプ__
-1. 「制限」で、次の項目を選択します `rep:ntNames` を入力します `dam:Asset` as the __制限値__
+1. __ツール→セキュリティ →権限__ 画面に移動します
+1. __投稿者__ グループ（またはすべてのユーザーグループが属する他のカスタムグループ）を選択します
+1. 画面の右上隅にある「__ACE を追加__」をクリックします。
+1. __パス__ の `/content/dam` を選択
+1. __権限__ の `jcr:read` を入力
+1. __権限タイプ__ の `Deny` を選択
+1. 「制限」で「`rep:ntNames`」を選択し、「__制限値__」として「`dam:Asset`」と入力します
 1. 「__保存__」をクリックします。
 
 ![アクセスを拒否](./assets/metadata-driven-permissions/deny-access.png)
 
 ## メタデータによるアセットへのアクセス権の付与
 
-アクセス制御エントリを追加して、 [設定済みのアセットメタデータプロパティの値](#configure-permissionable-properties).
+アクセス制御エントリを追加して、[ 設定されたアセットメタデータプロパティ値 ](#configure-permissionable-properties) に基づいてユーザーグループに読み取りアクセス権を付与できるようになりました。
 
-1. に移動します。 __ツール→セキュリティ→権限__ 画面
+1. __ツール→セキュリティ →権限__ 画面に移動します
 1. アセットにアクセスできるユーザーグループを選択します
-1. クリック __ACE の追加__ 画面の右上隅に
-1. を選択 `/content/dam` （またはサブフォルダー） __パス__
-1. Enter `jcr:read` （用） __権限__
-1. を選択 `Allow` （用） __権限タイプ__
-1. 次の下 __制限__、次のいずれかを選択します [osgi 設定で設定されたアセットメタデータプロパティ名](#configure-permissionable-properties)
-1. 必要なメタデータプロパティの値を __制限値__ フィールド
-1. 「」をクリックします __+__ アクセス制御エントリに制限を追加するためのアイコン
+1. 画面の右上隅にある「__ACE を追加__」をクリックします。
+1. __Path__ の `/content/dam` （またはサブフォルダー）を選択
+1. __権限__ の `jcr:read` を入力
+1. __権限タイプ__ の `Allow` を選択
+1. __Restrictions__ で、OSGi 設定で [ 設定されたアセットメタデータプロパティ名の 1 つを選択します ](#configure-permissionable-properties)
+1. 必須のメタデータプロパティ値を「__制限値__」フィールドに入力します
+1. __+__ アイコンをクリックして、アクセス制御エントリに制限を追加します
 1. 「__保存__」をクリックします。
 
 ![アクセスを許可](./assets/metadata-driven-permissions/allow-access.png)
@@ -106,10 +106,10 @@ ht-degree: 54%
 >
 > 次に注意することが重要です。
 > 
-> - メタデータプロパティは、次を使用して、制限に照らして評価されます __文字列の等号__ （`=`）（他のデータ型または演算子は、まだサポートされていません。例：（`>`）または Date プロパティ）
+> - メタデータプロパティは、__文字列等価__ （`=`）を使用して、制限に照らして評価されます（他のデータ型や演算子は、より大きい（`>`）プロパティや日付プロパティではサポートされていません）
 > - 1 つの制限プロパティに対して複数の値を許可するには、「タイプを選択」ドロップダウンから同じプロパティを選択し、新しい制限値（例：`status=approved`、`status=wip`）を入力し、「+」をクリックして制限をエントリに追加することで、アクセス制御エントリに追加の制限を追加できます。
 > ![複数の値を許可](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - __および制限__ は、異なるプロパティ名（など）を持つ 1 つのアクセス制御エントリで複数の制限を通じてサポートされます。 `status=approved`, `brand=Adobe`）が AND 条件として評価されます。つまり、選択したユーザーグループに、次を含むアセットへの読み取りアクセス権が付与されます `status=approved AND brand=Adobe`
+> - __AND 制限__ は、異なるプロパティ名（例：`status=approved`、`brand=Adobe`）の 1 つのアクセス制御エントリ内の複数の制限を介してサポートされます。つまり、選択されたユーザーグループには、`status=approved AND brand=Adobe` のアセットに対する読み取りアクセス権が付与され、AND 条件として評価されます
 > ![複数の制限を許可](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - __OR 制限__ メタデータプロパティ制限を持つ新しいアクセス制御エントリを追加することでサポートされ、エントリに OR 条件を確立します（例：制限を持つ単一のエントリ） `status=approved` を含む単一のエントリ `brand=Adobe` はとして評価されます `status=approved OR brand=Adobe`
+> - __OR 制限__ は、メタデータプロパティ制限を持つ新しいアクセス制御エントリを追加することでサポートされ、エントリに OR 条件を確立します。例えば、制限 `status=approved` を持つ単一のエントリと、`brand=Adobe` を持つ単一のエントリが、`status=approved OR brand=Adobe` として評価されます
 > ![複数の制限を許可](./assets/metadata-driven-permissions/allow-multiple-aces.png)

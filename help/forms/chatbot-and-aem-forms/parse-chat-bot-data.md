@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # ChatBot データの解析
 
-A [ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) は、ChatBot データをAEM サーブレットに送信するために使用されました。
+[ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) を使用して、ChatBot データをAEM サーブレットに送信しました。
 ChatBot でキャプチャされたデータは JSON 形式で、以下のように attributes オブジェクトにユーザーが入力したデータを含んでいます
-![chatbot-data](assets/chat-bot-data.png)
+![ チャットボットデータ ](assets/chat-bot-data.png)
 
 データを XDP テンプレートと結合するには、次の XML を作成する必要があります。 xml のルート要素に注意してください。データが正常に結合されるには、これは XDP テンプレートのルート要素と一致する必要があります。
 
@@ -37,7 +37,7 @@ ChatBot でキャプチャされたデータは JSON 形式で、以下のよう
 </topmostSubForm>
 ```
 
-![xdp テンプレート](assets/xdp-template.png)
+![xdp-template](assets/xdp-template.png)
 
 ## 次の手順
 

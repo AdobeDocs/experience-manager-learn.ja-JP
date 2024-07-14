@@ -300,7 +300,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="author-authentication.md" title="オーサー認証">オーサー認証</a>
+              <a href="author-authentication.md" title="オーサー認証"> オーサー認証 </a>
             </p>
             <p class="is-size-6">オーサー認証を設定する方法を説明します。</p>
             <a href="author-authentication.md" class="spectrum-Button
@@ -625,7 +625,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイト移行">インポーターを使用したサイト移行</a>
+              <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイト移行"> インポーターを使用したサイト移行 </a>
             </p>
             <p class="is-size-6">AEM インポーターツールを使用してサイトをEdge Delivery Servicesに移行する方法を確認します。</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
@@ -657,7 +657,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-importer.md" title="インポーターのカスタマイズ">インポーターのカスタマイズ</a>
+              <a href="./how-to/customizing-importer.md" title="インポーターのカスタマイズ"> インポーターのカスタマイズ </a>
             </p>
             <p class="is-size-6">サイト移行用にAEM インポーターツールをカスタマイズする方法を確認します。</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
@@ -689,7 +689,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="インポーターを使用した一括読み込み">インポーターを使用した一括読み込み</a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="インポーターを使用した一括読み込み"> インポーターを使用した一括インポート </a>
             </p>
             <p class="is-size-6">サイト移行時にAEM インポーターツールを使用して web ページを一括読み込みする方法を確認します。</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
@@ -758,7 +758,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 – Sidekickの設定">バリエーションの生成 – Sidekickの設定</a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 – Sidekickの設定"> バリエーションの生成 – Sidekickの設定 </a>
             </p>
             <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するための Sidekick の設定方法を確認します。</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
@@ -790,7 +790,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 – プロンプトテンプレート">バリエーションの生成 – プロンプトテンプレート</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 – プロンプトテンプレート"> バリエーションの生成 – プロンプトテンプレート </a>
             </p>
             <p class="is-size-6">バリエーションを生成するためにプロンプトテンプレートを使用する方法を調べます。</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
@@ -822,7 +822,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレート">バリエーションの生成 – カスタムプロンプトテンプレート</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレート"> バリエーションの生成 – カスタムプロンプトテンプレート </a>
             </p>
             <p class="is-size-6">バリエーションを生成するためのカスタムプロンプトテンプレートの作成方法を調べます。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
@@ -854,7 +854,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレートの保存">バリエーションの生成 – カスタムプロンプトテンプレートの保存</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレートの保存"> バリエーションの生成 – カスタムプロンプトテンプレートの保存 </a>
             </p>
             <p class="is-size-6">バリエーションを生成するためのカスタムプロンプトテンプレートを保存する方法を調べます。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
@@ -886,7 +886,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 – Adobe Target オーディエンスの使用">バリエーションの生成 – Adobe Target オーディエンスの使用</a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 – Adobe Target オーディエンスの使用"> バリエーションの生成 – Adobe Target オーディエンスの使用 </a>
             </p>
             <p class="is-size-6">コンテンツのバリエーションに適したオーディエンスをターゲット設定するために、Adobe Target オーディエンスを使用する方法を調べます。</p>
             <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
@@ -918,7 +918,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 – CSV ファイルオーディエンスの使用">バリエーションの生成 – CSV ファイルオーディエンスの使用</a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 – CSV ファイルオーディエンスの使用"> バリエーションの生成 – CSV ファイルオーディエンスの使用 </a>
             </p>
             <p class="is-size-6">オーディエンス CSV ファイルを使用してコンテンツバリエーションに適したオーディエンスをターゲットにする方法を調べます。</p>
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
@@ -950,7 +950,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションを生成 – Adobe Fireflyを使用">バリエーションを生成 – Adobe Fireflyを使用</a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションを生成 – Adobe Fireflyを使用"> バリエーションの生成 – Adobe Fireflyの使用 </a>
             </p>
             <p class="is-size-6">Adobe Fireflyを使用して、コンテンツのバリエーションで使用する画像を作成する方法を調べます。</p>
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
@@ -982,7 +982,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 – 生成されたバリエーションに対するアクション">バリエーションの生成 – 生成されたバリエーションに対するアクション</a>
+              <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 – 生成されたバリエーションに対するアクション"> バリエーションの生成 – 生成されたバリエーションに対するアクション </a>
             </p>
             <p class="is-size-6">生成されたコンテンツバリエーションで使用できるアクションを調べます。</p>
             <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
@@ -1014,7 +1014,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 – 信頼とプライバシー">バリエーションの生成 – 信頼とプライバシー</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 – 信頼とプライバシー"> バリエーションの生成 – 信頼とプライバシー </a>
             </p>
             <p class="is-size-6">バリエーションを生成するための信頼とプライバシーをAdobeがどのように処理するかを調べます。</p>
             <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
@@ -1046,7 +1046,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="実験フレームワークの概要">実験フレームワークの概要</a>
+              <a href="./how-to/experimentation-framework.md" title="実験フレームワークの概要"> 実験フレームワークの概要 </a>
             </p>
             <p class="is-size-6">マーケターが、どのコンテンツバリエーションが最も効果的かをテストできる実験フレームワークを調べます。</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
@@ -1078,7 +1078,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークのセットアップ">実験フレームワークのセットアップ</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークのセットアップ"> 実験フレームワークの設定 </a>
             </p>
             <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングで実験フレームワークを設定する方法について説明します。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
@@ -1110,7 +1110,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="実験のメタデータの追加">実験のメタデータの追加</a>
+              <a href="./how-to/experimentation-add-metadata.md" title="実験のメタデータの追加"> 実験のためのメタデータの追加 </a>
             </p>
             <p class="is-size-6">実験用のメタデータの追加を探索</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button

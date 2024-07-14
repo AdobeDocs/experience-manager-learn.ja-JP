@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+exl-id: 40617082-4d23-4c91-a016-2d947187052b
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -17,17 +18,17 @@ ht-degree: 0%
 
 # DocAssurance API の使用
 
-この [DocAssurance サービス](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) 署名、証明書、署名フィールドの追加、暗号化、復号化など、PDFドキュメントに対して様々なデジタル署名または暗号化処理を実行する機能を提供します。
-この記事では、API の使用を開始するための Java コードスニペットを提供します。コードスニペットはアクセストークンを利用します。 [この記事では、アクセストークンの生成に必要な手順について説明します。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+[DocAssurance サービス ](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) は、署名、認証、署名フィールドの追加、暗号化、復号化など、PDFドキュメントに対して様々なデジタル署名または暗号化処理を実行する機能を提供します。
+この記事では、API の使用を開始するための Java コードスニペットを提供します。コードスニペットはアクセストークンを利用します。 [ この記事では、アクセストークンの生成に必要な手順を説明します ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
 
 
-<span class="preview">この機能は、早期導入プログラムで利用できます。 公式メール ID からaem-forms-ea@adobe.comに書き込んで、早期導入プログラムに参加し、この機能へのアクセスをリクエストできます</span>
+<span class="preview"> この機能は、早期導入プログラムで利用できます。 公式メール ID からaem-forms-ea@adobe.comに書き込んで、早期導入プログラムに参加し、この機能へのアクセスをリクエストできます </span>
 
 
 ## 前提条件
 
 * AEM Forms Cloud Serviceの使用経験
-* の使用経験 [Apache HTTP コンポーネント](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* [Apache HTTP コンポーネント ](https://hc.apache.org/httpcomponents-client-4.5.x/) の使用経験
 * AEM FormsCloud Service環境へのアクセス
 
 ## Inspect ドキュメント
@@ -157,4 +158,4 @@ if (response.getStatusLine().getStatusCode() == 200) {
 
 ### Postmanコレクション
 
-API のPostman コレクションは、次のようになります [テスト目的でここからダウンロードします](assets/DocAssuranceAPI.postman_collection.json). API を呼び出すには、基本認証またはベアラートークン タイプの認証を使用できます。
+API のPostman コレクションは、[ テスト目的でここからダウンロード ](assets/DocAssuranceAPI.postman_collection.json) できます。 API を呼び出すには、基本認証またはベアラートークン タイプの認証を使用できます。

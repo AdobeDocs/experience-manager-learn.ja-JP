@@ -4,7 +4,7 @@ description: Adobe Experience Manager のビデオとチュートリアルのコ
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
 doc-type: Catalog
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 100%
 

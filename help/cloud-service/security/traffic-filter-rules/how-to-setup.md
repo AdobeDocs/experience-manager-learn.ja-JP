@@ -99,7 +99,7 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 - [cURL](https://curl.se/)：URL の呼び出しや応答コードの確認などの基本的なテストに使用します。
 
-- [Vegeta](https://github.com/tsenart/vegeta)：サービス拒否（DOS）を実行するために使用します。のインストール手順に従います [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta)：サービス拒否（DOS）を実行するために使用します。[Vegeta GitHub](https://github.com/tsenart/vegeta#install) のインストール手順に従います。
 
 - [Nikto](https://github.com/sullo/nikto/wiki)：XSS、SQL インジェクションなどの潜在的な問題やセキュリティの脆弱性を見つけます。[Nikto GitHub](https://github.com/sullo/nikto) のインストール手順に従います。
 
@@ -119,11 +119,11 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 ### ダッシュボードツールを使用した結果の分析
 
-ルールを作成、デプロイおよびテストした後は、を使用して結果を分析できます **CDN** ログと **AEMCS-CDN-Log-Analysis-Tooling**. ツールは、Splunk および ELK （Elasticsearch、Logstash、Kibana）スタックの結果を視覚化する一連のダッシュボードを提供します。
+ルールを作成、デプロイおよびテストした後、**CDN** ログおよび **AEMCS-CDN-Log-Analysis-Tooling** を使用して結果を分析できます。 ツールは、Splunk および ELK （Elasticsearch、Logstash、Kibana）スタックの結果を視覚化する一連のダッシュボードを提供します。
 
-ツールのクローンは、 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリ。 手順に従って、をインストールして読み込みます。 **CDN トラフィックダッシュボード** および **WAF ダッシュボード** 好みの観察ツールのダッシュボード。
+このツールのクローンは、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリから作成できます。 次に、指示に従って、目的の観測ツール用の **CDN トラフィックダッシュボード** および **WAF ダッシュボード** ダッシュボードをインストールして読み込みます。
 
-このチュートリアルでは、ELK スタックを使用します。 に従う [AEMCS CDN ログ分析用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) elk スタックの設定手順。
+このチュートリアルでは、ELK スタックを使用します。 [ELK Docker Container for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) の手順に従って、ELK スタックを設定します。
 
 - サンプルダッシュボードを読み込むと、Elastic ダッシュボードのツールページは次のようになります。
 

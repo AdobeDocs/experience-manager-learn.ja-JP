@@ -167,8 +167,8 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             </a>
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
-                <strong>ユニバーサルエディターの詳細</strong></a>        
-                <br/><em>james Talbot &amp; Dirk Rudolph 氏（AEM エンジニアリング）</em>
+                <strong> ユニバーサルエディターの詳細 </strong></a>        
+                <br/><em>AEM エンジニアリング、James Talbot &amp; Dirk Rudolph 氏 </em>
             </div>
             <p>
                 <br/>                

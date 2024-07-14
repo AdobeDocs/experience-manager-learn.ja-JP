@@ -129,7 +129,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
    1. 新しい **nt:unstructured** ノードを authoring-project/gadgets の直下に追加して、名前を **tasks** にします。
    1. String プロパティを tasks ノードに追加して、**cardWeight**=&quot;100&quot;、**jcr:title**=&quot;Tasks&quot;、**sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot; とします。
 
-   これで、新しいプロジェクトが作成される際に [Tasks タイル](https://experienceleague.adobe.com/en/docs)がデフォルトで表示されます。
+   これで、新しいプロジェクトが作成される際に [Tasks タイル](https://experienceleague.adobe.com/ja/docs)がデフォルトで表示されます。
 
    ```shell
    ../projects/templates/authoring-project
@@ -629,13 +629,13 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. CRXDE-Lite では、`/apps/aem-guides/projects-tasks/projects` フォルダーの下に「wizards」というサブフォルダーを作成します。 新しく作成されたウィザードフォルダーの下の `/libs/cq/core/content/projects/workflowwizards/default_workflow` からデフォルトのウィザードをコピーし、名前を「**content-approval-start**」に変更します。 フルパスは、`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start` になります。
 
-   デフォルトのウィザードは 2 列のウィザードで、最初の列には選択したワークフローモデルのタイトル、説明およびサムネールが表示されます。 2 番目の列には、ワークフロータイトル、コメントを開始およびペイロードパスのフィールドが含まれます。 ウィザードは、標準のタッチ UI フォームであり、標準の [Granite UI フォームコンポーネント](https://experienceleague.adobe.com/en/docs)を使用してフィールドに値を入力します。
+   デフォルトのウィザードは 2 列のウィザードで、最初の列には選択したワークフローモデルのタイトル、説明およびサムネールが表示されます。 2 番目の列には、ワークフロータイトル、コメントを開始およびペイロードパスのフィールドが含まれます。 ウィザードは、標準のタッチ UI フォームであり、標準の [Granite UI フォームコンポーネント](https://experienceleague.adobe.com/ja/docs)を使用してフィールドに値を入力します。
 
    ![コンテンツ承認ワークフローウィザード](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. ワークフローの最初のタスクの担当者を設定するために使用するウィザードにフィールドを追加します（[ワークフローモデルの作成](#create-workflow-model)：ステップ 5 を参照）。
 
-   `../content-approval-start/jcr:content/items/column2/items` の下に、**「assign」**&#x200B;という名前の `nt:unstructured` タイプの新しいノードを作成します。 プロジェクトのユーザーピッカーコンポーネント（[Granite ユーザーピッカーコンポーネントに基づいています](https://experienceleague.adobe.com/en/docs)）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を現在のプロジェクトに属するものだけに簡単に制限できます。
+   `../content-approval-start/jcr:content/items/column2/items` の下に、**「assign」**&#x200B;という名前の `nt:unstructured` タイプの新しいノードを作成します。 プロジェクトのユーザーピッカーコンポーネント（[Granite ユーザーピッカーコンポーネントに基づいています](https://experienceleague.adobe.com/ja/docs)）を使用します。 このフォームフィールドを使用すると、ユーザーとグループの選択を現在のプロジェクトに属するものだけに簡単に制限できます。
 
    **assign** ノードの XML 表現を以下に示します。
 
@@ -691,7 +691,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. ワークフローの開始者が最初のタスクの期日を設定できるようにします。 [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) フォームフィールドを使用して、この入力をキャプチャします。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) を含む非表示フィールドを追加して、入力が Date タイプのプロパティとして JCR に格納されるようにします。
+1. ワークフローの開始者が最初のタスクの期日を設定できるようにします。 [Granite UI DatePicker](https://experienceleague.adobe.com/ja/docs) フォームフィールドを使用して、この入力をキャプチャします。 また、[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) を含む非表示フィールドを追加して、入力が Date タイプのプロパティとして JCR に格納されるようにします。
 
    以下の XML で表される次のプロパティを持つ 2 つの **nt:unstructured** ノードを追加します。
 

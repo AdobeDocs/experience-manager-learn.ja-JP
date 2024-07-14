@@ -21,13 +21,13 @@ ht-degree: 1%
 
 # CDN ログ分析ツール
 
-について説明します _AEM Cloud Service CDN ログ分析ツール_ このAdobeでは、CDN のパフォーマンスとAEMの実装の両方に関するインサイトを得る方法を説明します。
+Adobeが提供する _AEM Cloud Service CDN ログ分析ツール_ と、CDN のパフォーマンスとAEM実装の両方に関するインサイトを得るのにどのように役立つかについて説明します。
  
 >[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
 
 ## 概要
 
-この [AEMas a Cloud ServiceCDN ログ分析ツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) には、と統合できる事前定義済みのダッシュボードが用意されています [Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) または [エルクスタック](https://www.elastic.co/elastic-stack) CDN ログのリアルタイム監視および分析の場合。
+[AEM as a Cloud Service CDN ログ分析ツール ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) には、CDN ログのリアルタイムな監視と分析のために、[Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) または [ELK スタック ](https://www.elastic.co/elastic-stack) と統合できる事前定義済みのダッシュボードが用意されています。
 
 このツールを使用すると、リアルタイムの監視とプロアクティブな問題検出を実現できます。 これにより、コンテンツ配信の最適化と、サービス拒否（DoS）および分散型サービス拒否（DDoS）攻撃に対する適切なセキュリティ対策が確保されます。
 
@@ -44,27 +44,27 @@ ht-degree: 1%
 
 ログ分析をすばやく開始するために、Adobeでは Splunk と ELK スタックの両方に対応する事前定義済みダッシュボードを提供しています。
 
-- **CDN キャッシュヒット率**：キャッシュヒット率の合計とリクエスト数の合計（ヒット、合格、ミスのステータス別）に関するインサイトを提供します。 また、上位のヒット、合格およびミス URL も提供します。
+- **CDN キャッシュヒット率**：キャッシュヒット率の合計と、リクエストの合計数（ヒット、合格、ミスのステータス別）に関するインサイトを提供します。 また、上位のヒット、合格およびミス URL も提供します。
 
-  ![CDN キャッシュヒット率](assets/CHR-dashboard.png)
+  ![CDN キャッシュヒット率 ](assets/CHR-dashboard.png)
 
-- **CDN トラフィックダッシュボード**:CDN とオリジンリクエスト率、4xx と 5xx のエラー率、キャッシュされていないリクエストを介してトラフィックに関するインサイトを提供します。 また、クライアント IP アドレスあたりの 1 秒あたりの最大 CND およびオリジンリクエスト数と、CDN 設定を最適化するためのより多くのインサイトを提供します。
+- **CDN トラフィックダッシュボード**:CDN とオリジンリクエスト率、4xx と 5xx のエラー率、およびキャッシュされていないリクエストを使用してトラフィックに関するインサイトを提供します。 また、クライアント IP アドレスあたりの 1 秒あたりの最大 CND およびオリジンリクエスト数と、CDN 設定を最適化するためのより多くのインサイトを提供します。
 
-  ![CDN トラフィックダッシュボード](assets/Traffic-dashboard.png)
+  ![CDN トラフィックダッシュボード ](assets/Traffic-dashboard.png)
 
 - **WAF ダッシュボード**：分析済み、フラグ付き、ブロックされたリクエストを通じてインサイトを提供します。 また、WAF フラグ ID による上位攻撃、クライアント IP、国、ユーザーエージェントによる上位 100 名の攻撃者、および WAF 設定を最適化するためのより多くのインサイトを提供します。
 
-  ![WAF ダッシュボード](assets/WAF-Dashboard.png)
+  ![WAF ダッシュボード ](assets/WAF-Dashboard.png)
 
 ## Splunk 統合
 
-を活用する組織の場合 [Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) また、Splunk インスタンスへの AEMCS ログ転送を有効にしているユーザーは、事前定義済みのダッシュボードをすばやく読み込むことができます。 この設定により、高速なログ分析が容易になり、AEMの実装を最適化し、DOS 攻撃などのセキュリティ上の脅威を軽減するための実用的なインサイトが提供されます。
+[Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) を活用し、Splunk インスタンスへの AEMCS ログ転送を有効にしている組織の場合は、事前定義済みのダッシュボードをすばやく読み込むことができます。 この設定により、高速なログ分析が容易になり、AEMの実装を最適化し、DOS 攻撃などのセキュリティ上の脅威を軽減するための実用的なインサイトが提供されます。
 
-の使用を開始できます [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) ガイド。
+AEMCS CDN ログ分析の [Splunk ダッシュボード ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) ガイドの使用を開始できます。
 
 
 ## ELK 統合
 
-この [エルクスタック](https://www.elastic.co/elastic-stack)Elasticsearch、Logstash および Kibana から構成されるも、ログ分析のもう 1 つの強力なオプションです。 これは、Splunk のセットアップ機能やログ転送機能にアクセスできない組織で役立ちます。 ELK スタックをローカルでセットアップするのは簡単です。このツールは Docker 作成ファイルを提供するので、すぐに使い始めることができます。 次に、事前定義済みのダッシュボードを読み込み、Adobe Cloud Manager を使用してダウンロードされた CDN ログを取り込むことができます。
+Elasticsearch、Logstash、Kibana を含む [ELK スタック ](https://www.elastic.co/elastic-stack) は、ログ分析のもう一つの強力なオプションです。 これは、Splunk のセットアップ機能やログ転送機能にアクセスできない組織で役立ちます。 ELK スタックをローカルでセットアップするのは簡単です。このツールは Docker 作成ファイルを提供するので、すぐに使い始めることができます。 次に、事前定義済みダッシュボードを読み込み、Adobe Cloud Managerを使用してダウンロードした CDN ログを取り込むことができます。
 
-の使用を開始できます [AEMCS CDN ログ分析用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis) ガイド。
+AEMCS CDN ログ分析用 [ELK Docker コンテナ ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis) ガイドの使用を開始できます。

@@ -7,7 +7,7 @@ version: 6.5
 feature: Dispatcher
 team: TM
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 100%
 

@@ -8,13 +8,13 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 50%
 
 ---
-
 
 # AEM Formsでの新しいコアコンポーネントの作成
 
@@ -22,7 +22,7 @@ Adobe Experience Manager（AEM）のコンポーネントとは、ページや�
 
 このチュートリアルでは、住所ブロックコンポーネントを作成します。 住所ブロックコンポーネントには、住所、市区町村、都道府県、郵便番号を取得するためのフィールドがあります。
 
-![final-address](assets/final-address-component.png)
+![ 最終アドレス ](assets/final-address-component.png)
 
 ## 前提条件
 

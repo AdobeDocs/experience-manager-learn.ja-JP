@@ -459,7 +459,7 @@ $ git push adobe saml-auth:develop
 
 ## SAML 認証の呼び出し
 
-SAML 認証フローは、特別に作成されたリンクまたはボタンを作成することにより、AEM サイトの web ページから呼び出すことができます。 以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、「ログイン」ボタンを使用すると、 `saml_request_path`は、SAML 認証が成功すると、ボタンのコンテキストに基づいて、様々なAEM ページに移動します。
+SAML 認証フローは、特別に作成されたリンクまたはボタンを作成することにより、AEM サイトの web ページから呼び出すことができます。 以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、「ログイン」ボタンを使用すると、SAML 認証が成功したときにユーザーが取得される「`saml_request_path`」を、ボタンのコンテキストに基づいて異なる「AEM」ページに設定できます。
 
 ### GETリクエスト
 
@@ -471,10 +471,10 @@ SAML 認証を呼び出すには、次の形式の HTTP GETリクエストを作
 
 | クエリパラメーター名 | クエリパラメーター値 |
 |----------------------|-----------------------|
-| `resource` | で定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パス（サブパス）です。 [AdobeGranite SAML 2.0 Authentication Handler の OSGi 設定](#configure-saml-2-0-authentication-handler) `path` プロパティ。 |
+| `resource` | SAML 認証ハンドラーがリッスンする JCR パスまたはサブパスは、[Authentication Granite SAML 2.0Adobeハンドラー OSGi 設定の ](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されます。 |
 | `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
 
-例えば、このHTMLリンクは SAML ログインフローをトリガーし、成功するとユーザーをに移動します。 `/content/wknd/us/en/protected/page.html`. これらのクエリパラメーターは、必要に応じてプログラムで設定できます。
+例えば、このHTMLリンクは SAML ログインフローをトリガーし、成功するとユーザーを `/content/wknd/us/en/protected/page.html` に移動します。 これらのクエリパラメーターは、必要に応じてプログラムで設定できます。
 
 ```html
 <a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
@@ -492,11 +492,11 @@ SAML 認証を呼び出すには、次の形式の HTTPPOSTリクエストを作
 
 | フォームデータ名 | フォームデータ値 |
 |----------------------|-----------------------|
-| `resource` | で定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パス（サブパス）です。 [AdobeGranite SAML 2.0 Authentication Handler の OSGi 設定](#configure-saml-2-0-authentication-handler) `path` プロパティ。 |
+| `resource` | SAML 認証ハンドラーがリッスンする JCR パスまたはサブパスは、[Authentication Granite SAML 2.0Adobeハンドラー OSGi 設定の ](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されます。 |
 | `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
 
 
-例えば、このHTMLボタンは、HTTP POSTを使用して SAML ログインフローをトリガーし、成功したら、ユーザーを次の場所に移動します `/content/wknd/us/en/protected/page.html`. これらのフォームデータパラメーターは、必要に応じてプログラムで設定できます。
+例えば、このHTMLボタンは、HTTP POSTを使用して SAML ログインフローをトリガーし、成功したら、ユーザーを `/content/wknd/us/en/protected/page.html` に移動します。 これらのフォームデータパラメーターは、必要に応じてプログラムで設定できます。
 
 ```html
 <form action="/system/sling/login" method="POST">
@@ -508,7 +508,7 @@ SAML 認証を呼び出すには、次の形式の HTTPPOSTリクエストを作
 
 ### Dispatcher 設定
 
-HTTP GET方式とPOST方式の両方で、AEMへのクライアントアクセスが必要です `/system/sling/login` エンドポイント。そのため、AEM Dispatcher を介して許可する必要があります。
+HTTP GETとPOSTのどちらの方式でも、AEM `/system/sling/login` エンドポイントへのクライアントアクセスが必要なので、AEM Dispatcherを介して許可する必要があります。
 
 GETまたはPOSTが使用されているかどうかに基づいて必要な URL パターンを許可する
 

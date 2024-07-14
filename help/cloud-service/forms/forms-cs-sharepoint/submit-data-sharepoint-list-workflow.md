@@ -89,7 +89,7 @@ ht-degree: 81%
 }
 ```
 
-![基盤ベースのフォーム](assets/foundation-based-form.png)
+![ 基盤ベースのフォーム ](assets/foundation-based-form.png)
 
 ## AEM ワークフローをトリガーするアダプティブフォームの設定
 

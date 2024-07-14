@@ -8,19 +8,19 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%
 
 ---
 
-
 # 住所コンポーネントの作成
 
 ローカルのAEM Forms Cloud Ready インスタンスの CRXDE にログインします。
 
-のコピーを作成 ``/apps/bankingapplication/components/adaptiveForm/button`` ノードを追加して、名前を addressblock に変更します。 addressblock ノードを選択し、次に示すようにプロパティを設定します。
+``/apps/bankingapplication/components/adaptiveForm/button`` ノードのコピーを作成し、名前を addressblock に変更します。 addressblock ノードを選択し、次に示すようにプロパティを設定します。
 
 >[!NOTE]
 >
@@ -31,12 +31,12 @@ ht-degree: 1%
 
 ## cq-template ノードのプロパティ
 
-「」を選択します ``cq-template`` の下のノード ``addressblock`` をノードし、次に示すようにプロパティを設定します。 fieldType が panel に設定されています。
+``addressblock`` ノードの下の ``cq-template`` ノードを選択し、次に示すようにプロパティを設定します。 fieldType が panel に設定されています。
 ![cq-template](assets/cq-template.png)
 
 ## cq-template の下のノードの追加
 
-タイプの次のノードを追加します ``nt:unstructured`` 未満 ``cq-template``
+``cq-template`` の下に、タイプ ``nt:unstructured`` の次のノードを追加します。
 
 * streetaddress
 * 市区町村
@@ -49,34 +49,30 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> この **_bankingapplication_** のパスでは、Maven プロジェクトの appId を参照します。 これは、環境によって異なる場合があります
+> パスの **_bankingapplication_** は、Maven プロジェクトの appId を参照します。 これは、環境によって異なる場合があります
 
-「」を選択します ``streetaddress`` をノードし、次に示すようにプロパティを設定します。
-![番地](assets/streetaddress.png)
+``streetaddress`` ノードを選択し、次に示すようにプロパティを設定します。
+![ 番地 ](assets/streetaddress.png)
 
 ## 都市ノードのプロパティを設定します。
 
-「」を選択します ``city`` をノードし、次に示すようにプロパティを設定します。
-![市](assets/city.png)
+``city`` ノードを選択し、次に示すようにプロパティを設定します。
+![ 市区町村 ](assets/city.png)
 
 ## zip ノードのプロパティの設定
 
-「」を選択します ``zip`` をノードし、次に示すようにプロパティを設定します。
-![郵便番号](assets/zip.png)
+``zip`` ノードを選択し、次に示すようにプロパティを設定します。
+![zip](assets/zip.png)
 
 ## 状態ノードのプロパティの設定
 
-「」を選択します ``state`` をノードし、次に示すようにプロパティを設定します。 状態の fieldType に注意してください。ドロップダウンに設定されています
+``state`` ノードを選択し、次に示すようにプロパティを設定します。 状態の fieldType に注意してください。ドロップダウンに設定されています
 ![state](assets/state.png)
 
 最終的な addressblock コンポーネントは次のようになります
 
-![final-address](assets/crx-address-block.png)
+![ 最終アドレス ](assets/crx-address-block.png)
 
 ## 次の手順
 
 [プロジェクトのデプロイ](./deploy-your-project.md)
-
-
-
-

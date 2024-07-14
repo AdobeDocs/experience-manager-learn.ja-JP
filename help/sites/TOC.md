@@ -41,7 +41,7 @@ ht-degree: 91%
       + [インポーターを使用したサイト移行](./document-authoring/how-to/migration-using-importer.md)
       + [インポーターのカスタマイズ](./document-authoring/how-to/customizing-importer.md)
       + [インポーターを使用した一括読み込み](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + バリエーションを生成{#generate-variations}
+      + バリエーションを生成 {#generate-variations}
          + [概要](./document-authoring/how-to/generate-variations/overview.md)
          + [Sidekickの設定](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [プロンプトテンプレート](./document-authoring/how-to/generate-variations/prompt-templates.md)

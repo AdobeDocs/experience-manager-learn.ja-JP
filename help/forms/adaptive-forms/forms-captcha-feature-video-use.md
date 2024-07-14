@@ -43,15 +43,15 @@ AEM Adaptive Forms での CAPTCHA の追加と使用
 >オーサーインスタンス上のファイルシステムのバンドル ID に移動します。
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* HMAC ファイルおよびマスターファイルをコピーします。
+* HMAC ファイルおよびマスターファイルをコピーします。
 >
->パブリッシュインスタンスで [Felix web コンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file バンドルを検索します。 バンドル ID をメモします。
+パブリッシュインスタンスで [Felix web コンソール](http://localhost:4502/system/console/bundles)を開きます。 com.adobe.granite.crypto.file バンドルを検索します。 バンドル ID をメモします。
 >
->パブリッシュインスタンスのファイルシステム上のバンドル ID に移動します。
+パブリッシュインスタンスのファイルシステム上のバンドル ID に移動します。
 >
->* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* 既存の HMAC ファイルとマスターファイルを削除します。
->* オーサーインスタンスからコピーした HMAC ファイルとマスターファイルを貼り付けます。
+* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* 既存の HMAC ファイルとマスターファイルを削除します。
+* オーサーインスタンスからコピーした HMAC ファイルとマスターファイルを貼り付けます。
 >
 AEM Publish サーバーを再起動します。
 

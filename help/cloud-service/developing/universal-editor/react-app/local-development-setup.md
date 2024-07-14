@@ -27,15 +27,15 @@ AEM ユニバーサルエディターを使用して React アプリのコンテ
 
 このチュートリアルに従うには、以下が必要です。
 
-- HTMLと JavaScript の基本的なスキル。
+- HTMLとJavaScriptの基本的なスキル。
 - 以下のツールをローカルにインストールする必要があります。
    - [Node.js](https://nodejs.org/ja/download/)
    - [Git](https://git-scm.com/downloads)
-   - IDE またはコードエディター（例：） [Visual Studio Code](https://code.visualstudio.com/)
+   - IDE またはコードエディター（[Visual Studio Code](https://code.visualstudio.com/) など）
 - 次をダウンロードしてインストールします。
-   - [AEMAS A CLOUD SERVICESDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：開発目的でAEM オーサーとパブリッシュをローカルに実行するために使用されるクイックスタート JAR が含まれています。
-   - [ユニバーサルエディターサービス](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)：ユニバーサルエディターサービスのローカルコピーで、機能のサブセットを備えており、ソフトウェア配布ポータルからダウンロードできます。
-   - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy):ローカル開発用の自己署名証明書を使用したシンプルなローカル SSL HTTP プロキシ。 AEM ユニバーサルエディターで React アプリをエディターに読み込むには、そのアプリの HTTPS URL が必要です。
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：開発目的でAEM オーサーおよびPublishをローカルに実行するために使用されるクイックスタート Jar が含まれています。
+   - [ ユニバーサルエディターサービス ](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)：ユニバーサルエディターサービスのローカルコピーです。機能のサブセットが含まれており、ソフトウェア配布ポータルからダウンロードできます。
+   - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy):ローカル開発用に自己署名証明書を使用する、シンプルなローカル SSL HTTP プロキシです。 AEM ユニバーサルエディターで React アプリをエディターに読み込むには、そのアプリの HTTPS URL が必要です。
 
 ## ローカル設定
 
@@ -45,22 +45,22 @@ AEM ユニバーサルエディターを使用して React アプリのコンテ
 
 WKND Teams React アプリのコンテンツを提供するには、ローカルのAEM SDK に次のパッケージをインストールします。
 
-- [WKND Teams - コンテンツパッケージ](./assets/basic-tutorial-solution.content.zip)：コンテンツフラグメントモデル、コンテンツフラグメントおよび永続GraphQL クエリが含まれます。
-- [WKND Teams – 設定パッケージ](./assets/basic-tutorial-solution.ui.config.zip)：クロスオリジンリソース共有（CORS）およびトークン認証ハンドラー設定が含まれます。 CORS は、AEM以外の web プロパティがAEM GraphQL API に対してブラウザーベースのクライアントサイド呼び出しを行うのを容易にし、トークン認証ハンドラーを使用してAEMに対して各リクエストを認証します。
+- [WKND Teams - コンテンツパッケージ ](./assets/basic-tutorial-solution.content.zip)：コンテンツフラグメントモデル、コンテンツフラグメントおよび永続GraphQL クエリが含まれます。
+- [WKND Teams – 設定パッケージ ](./assets/basic-tutorial-solution.ui.config.zip)：クロスオリジンリソース共有（CORS）とトークン認証ハンドラーの設定が含まれます。 CORS は、AEM以外の web プロパティがAEMのGraphQL API に対してブラウザーベースのクライアントサイド呼び出しを行うのを容易にし、トークン認証ハンドラーを使用してAEMへの各リクエストを認証します。
 
-  ![WKND Teams - パッケージ](./assets/wknd-teams-packages.png)
+  ![WKND Teams - パッケージ ](./assets/wknd-teams-packages.png)
 
 ### React アプリ
 
 WKND Teams React アプリを設定するには、次の手順に従います。
 
-1. のクローン [WKND Teams React アプリ](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) から `basic-tutorial` ソリューションブランチ。
+1. `basic-tutorial` ソリューションブランチから [WKND Teams React アプリ ](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) を複製します。
 
    ```bash
    $ git clone -b solution/basic-tutorial git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. に移動します。 `basic-tutorial` ディレクトリを選択し、コードエディターで開きます。
+1. `basic-tutorial` ディレクトリに移動し、コードエディターで開きます。
 
    ```bash
    $ cd aem-guides-wknd-graphql/basic-tutorial
@@ -74,19 +74,19 @@ WKND Teams React アプリを設定するには、次の手順に従います。
    $ npm start
    ```
 
-1. お使いのブラウザーで WKND チームの React アプリ（）を開きます。 [http://localhost:3000](http://localhost:3000). チームメンバーとその詳細のリストが表示されます。 AEM React アプリのコンテンツは、GraphQL API （`/graphql/execute.json/my-project/all-teams`）、ブラウザーの「ネットワーク」タブを使用して確認できます。
+1. ブラウザーで WKND チームの React アプリ（[http://localhost:3000](http://localhost:3000)）を開きます。 チームメンバーとその詳細のリストが表示されます。 React アプリのコンテンツは、GraphQL API （`/graphql/execute.json/my-project/all-teams`）を使用してローカル AEM SDK によって提供されます。これは、ブラウザーの「ネットワーク」タブを使用して確認できます。
 
-   ![WKND Teams - React アプリ](./assets/wknd-teams-react-app.png)
+   ![WKND チーム - React アプリ ](./assets/wknd-teams-react-app.png)
 
 ### ユニバーサルエディターサービス
 
-を設定するには **ローカル** ユニバーサルエディターサービスは、次の手順に従います。
+**ローカル** ユニバーサルエディターサービスを設定するには、次の手順に従います。
 
-1. から最新バージョンのユニバーサルエディターサービスをダウンロードします [ソフトウェア配布ポータル](https://experience.adobe.com/jp/downloads).
+1. [ ソフトウェア配布ポータル ](https://experience.adobe.com/jp/downloads) から最新バージョンのユニバーサルエディターサービスをダウンロードします。
 
-   ![ソフトウェア配布 – ユニバーサルエディターサービス](./assets/universal-editor-service.png)
+   ![ ソフトウェア配布 – ユニバーサルエディターサービス ](./assets/universal-editor-service.png)
 
-1. ダウンロードした zip ファイルを解凍し、 `universal-editor-service.cjs` という名前の新しいディレクトリにファイルを送信します。 `universal-editor-service`.
+1. ダウンロードした zip ファイルを解凍し、`universal-editor-service.cjs` ファイルを `universal-editor-service` という名前の新しいディレクトリにコピーします。
 
    ```bash
    $ unzip universal-editor-service-vproduction-<version>.zip
@@ -94,7 +94,7 @@ WKND Teams React アプリを設定するには、次の手順に従います。
    $ cp universal-editor-service.cjs universal-editor-service
    ```
 
-1. 作成 `.env` 内のファイル `universal-editor-service` ディレクトリに移動し、次の環境変数を追加します。
+1. `universal-editor-service` ディレクトリ `.env` ファイルを作成し、次の環境変数を追加します。
 
    ```bash
    # The port on which the Universal Editor service runs
@@ -110,7 +110,7 @@ WKND Teams React アプリを設定するには、次の手順に従います。
    $ node universal-editor-service.cjs
    ```
 
-上記のコマンドは、ポートでユニバーサルエディターサービスを開始します `8000` 次の出力が表示されます。
+上記のコマンドを実行すると、ポート `8000` でユニバーサルエディターサービスが開始し、次の出力が表示されます。
 
 ```bash
 Either no private key or certificate was set. Starting as HTTP server
@@ -123,7 +123,7 @@ AEM ユニバーサルエディターでは、React アプリを HTTPS で提供
 
 次の手順に従って、ローカル SSL HTTP プロキシを設定し、HTTPS でAEM SDK とユニバーサルエディターサービスを提供します。
 
-1. のインストール `local-ssl-proxy` グローバルにパッケージ化します。
+1. `local-ssl-proxy` パッケージをグローバルにインストールします。
 
    ```bash
    $ npm install -g local-ssl-proxy
@@ -131,8 +131,8 @@ AEM ユニバーサルエディターでは、React アプリを HTTPS で提供
 
 1. 次のサービス用のローカル SSL HTTP プロキシの 2 つのインスタンスを開始します。
 
-   - ポート上のAEM SDK ローカル SSL HTTP プロキシ `8443`.
-   - ポート上のユニバーサルエディターサービスのローカル SSL HTTP プロキシ `8001`.
+   - ポート `8443` のAEM SDK ローカル SSL HTTP プロキシ。
+   - ポート `8001` のユニバーサル エディターサービス ローカル SSL HTTP プロキシ。
 
    ```bash
    # AEM SDK local SSL HTTP proxy on port 8443
@@ -146,8 +146,8 @@ AEM ユニバーサルエディターでは、React アプリを HTTPS で提供
 
 WKND Teams React アプリに対して HTTPS を有効にするには、次の手順に従います。
 
-1. 次を押して、React を停止します `Ctrl + C` ターミナルの中です。
-1. を更新 `package.json` を含めるファイル `HTTPS=true` の環境変数 `start` スクリプト。
+1. ターミナルで `Ctrl + C` を押して、React を停止します。
+1. `package.json` ファイルを更新して、`start` スクリプトに `HTTPS=true` 環境変数を含めます。
 
    ```json
    "scripts": {
@@ -156,14 +156,14 @@ WKND Teams React アプリに対して HTTPS を有効にするには、次の�
    }
    ```
 
-1. を更新 `REACT_APP_HOST_URI` が含まれる `.env.development` AEM SDK の HTTPS プロトコルとローカル SSL HTTP プロキシポートを使用するファイル。
+1. AEM SDK の HTTPS プロトコルとローカル SSL HTTP プロキシポートを使用するように、`.env.development` ファイルの `REACT_APP_HOST_URI` を更新します。
 
    ```bash
    REACT_APP_HOST_URI=https://localhost:8443
    ...
    ```
 
-1. を更新 `../src/proxy/setupProxy.auth.basic.js` を使用したリラックスした SSL 設定を使用するファイル `secure: false` オプション。
+1. `secure: false` のオプションを使用して、リラックスした SSL 設定を使用するように `../src/proxy/setupProxy.auth.basic.js` ファイルを更新します。
 
    ```javascript
    ...
@@ -195,9 +195,9 @@ WKND Teams React アプリに対して HTTPS を有効にするには、次の�
 
 次のサービスが HTTPS 経由でローカルに実行されていることを確認します。自己署名証明書については、ブラウザーでセキュリティ警告を受け入れる必要がある場合があります。
 
-1. の WKND チーム React アプリ [https://localhost:3000](https://localhost:3000)
-1. AEM SDK オン [https://localhost:8443](https://localhost:8443)
-1. のユニバーサルエディターサービス [https://localhost:8001](https://localhost:8001)
+1. [https://localhost:3000](https://localhost:3000) の WKND チームの React アプリ
+1. [https://localhost:8443](https://localhost:8443) のAEM SDK
+1. [https://localhost:8001](https://localhost:8001) のユニバーサルエディターサービス
 
 ### ユニバーサルエディターでの WKND Teams React アプリの読み込み
 
@@ -205,15 +205,15 @@ WKND Teams React アプリに対して HTTPS を有効にするには、次の�
 
 1. ブラウザーでユニバーサルエディターhttps://experience.adobe.com/#/aem/editorを開きます。 プロンプトが表示されたら、Adobe IDを使用してログインします。
 
-1. ユニバーサルエディターのサイト URL 入力フィールドに WKND Teams React アプリ URL を入力し、 `Open`.
+1. ユニバーサルエディターのサイト URL 入力フィールドに、WKND Teams React アプリの URL を入力して、「`Open`」をクリックします。
 
-   ![ユニバーサルエディター – サイト URL](./assets/universal-editor-site-url.png)
+   ![ ユニバーサルエディター – サイト URL](./assets/universal-editor-site-url.png)
 
-1. WKND チーム React アプリがユニバーサルエディターに読み込まれる **ただし、まだコンテンツを編集できません**. ユニバーサルエディターを使用してコンテンツ編集を有効にするには、React アプリを実装する必要があります。
+1. WKND チームの React アプリがユニバーサルエディターに読み込まれます **ただし、まだコンテンツを編集することはできません**。 ユニバーサルエディターを使用してコンテンツ編集を有効にするには、React アプリを実装する必要があります。
 
-   ![ユニバーサルエディター – WKND Teams React アプリ](./assets/universal-editor-wknd-teams.png)
+   ![ ユニバーサルエディター – WKND Teams React アプリ ](./assets/universal-editor-wknd-teams.png)
 
 
 ## 次の手順
 
-方法を学ぶ [react アプリを実装してコンテンツを編集します](./instrument-to-edit-content.md).
+[React アプリを実装してコンテンツを編集する ](./instrument-to-edit-content.md) 方法を説明します。

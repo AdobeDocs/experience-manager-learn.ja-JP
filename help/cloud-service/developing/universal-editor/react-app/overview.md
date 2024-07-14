@@ -31,9 +31,9 @@ ht-degree: 1%
 
 - ユニバーサルエディターの概要
 - ローカル開発環境のセットアップ
-   - **AEM SDK**:GraphQL API を使用して、React アプリ用にコンテンツフラグメント内に保存されたコンテンツを提供します。
+   - **AEM SDK**:GraphQL API を使用して、React アプリのコンテンツフラグメント内に保存されたコンテンツを提供します。
    - **React アプリ**:AEMのコンテンツを表示するシンプルなユーザーインターフェイス。
-   - **ユニバーサルエディターサービス**:a _ユニバーサルエディターサービスのローカルコピー_ これは、ユニバーサルエディターとAEM SDK をバインドします。
+   - **ユニバーサルエディターサービス**：ユニバーサルエディターとAEM SDK をバインドする _ユニバーサルエディターサービスのローカルコピー_。
 - ユニバーサルエディターを使用してコンテンツを編集するための React アプリのインストルメント方法
 - ユニバーサルエディターを使用して React アプリのコンテンツを編集する方法
 
@@ -50,14 +50,14 @@ ht-degree: 1%
 
 ## サンプル React アプリ
 
-このチュートリアルではを使用します [**WKND チーム**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) サンプル React アプリとして。 この **WKND チーム** React アプリは、チームメンバーとその詳細のリストを表示します。
+このチュートリアルでは [**WKND Teams**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) をサンプル React アプリとして使用します。 **WKND チーム** の React アプリは、チームメンバーとその詳細のリストを表示します。
 
-チームの詳細（タイトル、説明、チームメンバーなど）は、として保存されます _チーム_ AEMのコンテンツフラグメント。 同様に、人物の詳細（名前、伝記、プロファイル画像など）は、次のように保存されます _人物_ AEMのコンテンツフラグメント。
+チームの詳細（タイトル、説明、チームメンバーなど）は、AEMの _チーム_ コンテンツフラグメントとして保存されます。 同様に、人物の詳細（名前、伝記、プロファイル画像など）は、AEMで _人物_ コンテンツフラグメントとして保存されます。
 
-React アプリのコンテンツは、GraphQL API を使用してAEMによって提供され、ユーザーインターフェイスは 2 つの React コンポーネントを使用して作成されます。 `Teams` および `Person`.
+React アプリのコンテンツは、GraphQL API を使用してAEMによって提供され、ユーザーインターフェイスは、`Teams` と `Person` の 2 つの React コンポーネントを使用して作成されます。
 
-を作成する方法については、対応するチュートリアルを参照してください **WKND チーム** React アプリ。 チュートリアルは次のとおりです [こちら](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+**WKND Teams** React アプリの作成方法については、対応するチュートリアルを参照してください。 チュートリアルは [ こちら ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview) にあります。
 
 ## 次の手順
 
-方法を学ぶ [ローカル開発環境の設定](./local-development-setup.md).
+ローカル開発環境の設定 [ 方法について説明し ](./local-development-setup.md) す。

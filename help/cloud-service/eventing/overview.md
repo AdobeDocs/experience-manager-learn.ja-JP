@@ -27,7 +27,7 @@ AEM イベンティング、その概要、使用する理由、タイミング�
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEMas a Cloud Service環境でAEM イベントを有効にするには、 <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing チーム</a>.
+>AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud ServiceでAEM イベントを有効にするには、<a href="mailto:grp-aem-events@adobe.com">AEM-Eventing team</a> にお問い合わせください。
 
 ## 内容
 
@@ -75,7 +75,7 @@ AEM イベンティングは強力な機能ですが、考慮すべき制限が�
 
 ## 有効にする方法
 
-AEM イベンティングは、AEM as a Cloud Service 環境ごとに有効化され、プレリリースモードの環境でのみ使用できます。に連絡してください <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing チーム</a> :AEM イベントでAEM環境を有効にします。
+AEM イベンティングは、AEM as a Cloud Service 環境ごとに有効化され、プレリリースモードの環境でのみ使用できます。AEM Eventing でAEM環境を有効にするには、<a href="mailto:grp-aem-events@adobe.com">AEM-Eventing team</a> にお問い合わせください。
 
 既に有効になっている場合は、[AEM Cloud Service 環境での AEM イベントの有効化](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)を参照して、次の手順に進んでください。
 

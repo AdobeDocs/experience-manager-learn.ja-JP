@@ -24,4 +24,4 @@ Adobe Express を使用して、Adobe Experience Manager Assets 内でコンテ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-また、の設定方法についても説明します [AEM AssetsとAdobe Expressのネイティブ統合](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) Adobe ExpressからAEM Assetsにシームレスにアクセスする。
+また、[AEM AssetsとAdobe Expressのネイティブ統合を設定し ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)Adobe ExpressからAEM Assetsにシームレスにアクセスする方法についても説明します。

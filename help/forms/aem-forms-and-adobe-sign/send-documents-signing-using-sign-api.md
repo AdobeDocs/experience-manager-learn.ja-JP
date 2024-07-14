@@ -23,22 +23,22 @@ ht-degree: 1%
 
 ## サンプル OSGi バンドルのデプロイ
 
-[OSGi バンドルのデプロイ](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) AEM OSGi web コンソールを使用します。 AEM OSGi web コンソールの Configuration Manager で、API 統合キーと API ユーザーを、以下に示すように OSGi 設定を使用して指定します。
+AEM OSGi web コンソールを使用して [OSGi バンドルをデプロイ ](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) します。 AEM OSGi web コンソールの Configuration Manager で、API 統合キーと API ユーザーを、以下に示すように OSGi 設定を使用して指定します。
 
- に注意してください `AdobeSignHelperMethods` OSGi バンドルは、Adobe Experience Manager（AEM）Adobeコードとして認識されないので、製品サポートではサポートされません。
+ `AdobeSignHelperMethods` OSGi バンドルは、Adobe Experience Manager（AEM）Adobeコードとして認識されないので、製品サポートではサポートされていません。
 ![sign-configuration](assets/sign-configuration.png)
 
 
 ## API ドキュメント
 
-経由で以下を利用できます `AcrobatSignHelperMethods` OSGi バンドルで提供される OSGi サービス。
+OSGi バンドルで提供される `AcrobatSignHelperMethods` OSGi サービスを介して、次の API を使用できます。
 
 ### getTransientDocumentID
 
 `String getTransientDocumentID(Document documentForSigning) throws IOException`
 
 
-契約書または Web フォームの作成に使用されるドキュメントです。 ドキュメントは、送信者によって最初にAcrobat Signにアップロードされます。 これを、以下と呼びます _一時的_ これは、アップロード後 7 日間のみ使用できるので、 このメソッドはを受け入れます `com.adobe.aemfd.docmanager.Document` 一時的なドキュメント ID を返します。
+契約書または Web フォームの作成に使用されるドキュメントです。 ドキュメントは、送信者によって最初にAcrobat Signにアップロードされます。 これは、アップロード後 7 日間のみ使用できるので、_一時的_ と呼ばれます。 このメソッドは `com.adobe.aemfd.docmanager.Document` を受け入れて、一時的なドキュメント ID を返します。
 
 ### getAgreementID
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 ## API の使用
 
-この `AcrobatSignHelperMethods` は OSGi サービスなので、java コードで@Reference 注釈を使用して注釈を付ける必要があります。
+`AcrobatSignHelperMethods` は OSGi サービスなので、java コードで@Reference 注釈を使用して注釈を付ける必要があります。
 
 ```java
 ...

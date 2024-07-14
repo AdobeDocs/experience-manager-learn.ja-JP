@@ -5,7 +5,7 @@ sub-product: Experience Manager
 version: 6.4, 6.5, Cloud Service
 index: y
 source-git-commit: af928e60410022f12207082467d3bd9b818af59d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 100%
 

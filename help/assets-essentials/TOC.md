@@ -45,6 +45,6 @@ ht-degree: 88%
    + [ドキュメントの送信とアセットのリンク](./integrations/workfront/link-send.md)
    + [バージョン履歴](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizerの統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
++ [Adobe Journey Optimizerの統合 ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
 
 + [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja){target=_blank}

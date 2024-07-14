@@ -23,9 +23,9 @@ ht-degree: 0%
 このユースケースを実現するには、GuideBridge API を使用してフォームデータにアクセスし、REST エンドポイントに送信して保存および取得する必要があります。
 
 フォームデータは、ルールエディターを使用するボタンのクリックイベントで保存されます
-![ルールエディター](assets/rule-editor.png)
+![ ルールエディター ](assets/rule-editor.png)
 
-指定されたエンドポイントにデータを送信するために、次の JavaScript 関数を作成しました
+指定されたエンドポイントにデータを送信するために、次のJavaScript関数が作成されました
 
 ```javascript
 /**
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## サーバー側コード
 
-次のサーバー側 Java コードは、フォームデータを処理するために記述されました。 以下は、上記の JavaScript の XHR 呼び出しを介して呼び出される、AEMで動作する Java サーブレットです。
+次のサーバー側 Java コードは、フォームデータを処理するために記述されました。 以下は、上記のJavaScriptの XHR 呼び出しを介して呼び出される、AEMで動作する Java サーブレットです。
 
 ```java
 package com.azuredemo.core.servlets;
