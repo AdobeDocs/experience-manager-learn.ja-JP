@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
+source-git-commit: fe763bad61fba4230612d8ad46a6159e675e1529
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 96%
@@ -268,7 +268,7 @@ ht-degree: 96%
       + [ソリューションのテスト](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
    + DocAssurance API の使用 {#doc-assurance-api}
-+[ サンプルコードスニペット ](./forms/doc-assurance-api/using-doc-assurance-api.md)
+      + [サンプルコードスニペット](./forms/doc-assurance-api/using-doc-assurance-api.md)
    + Batch API を使用したドキュメント生成{#formscs-batch-api}
       + [はじめに](./forms/formscs-batch-api/introduction.md)
       + [Azure ストレージの設定](./forms/formscs-batch-api/configure-azure-storage.md)
