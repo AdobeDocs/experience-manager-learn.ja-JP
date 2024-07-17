@@ -10,17 +10,21 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 100%
+source-wordcount: '278'
+ht-degree: 89%
 
 ---
 
-# フォームデータモデルを使用したアダプティブフォームの作成
+# 統合のテスト
 
-次に、以前の手順で作成したフォームデータモデルに基づいて、アダプティブフォームを作成します。
-ユーザーがリード ID を入力しタブアウトすると、ID でリードを取得する Marketo サービスが呼び出されます。このサービス操作の結果は、アダプティブフォームの適切なフィールドにマッピングされます。
+ここでは、単純なフォーム取得を作成して統合をテストし、Market からのリードオブジェクトを表示します。
+>[!NOTE]
+>
+>この機能は、基盤コンポーネントに基づくフォームに基づいてテストされました。
+
+## アダプティブフォームの作成
 
 1. 「空のフォームテンプレート」に基づいてアダプティブフォームを作成して、以前の手順で作成したフォームデータモデルに関連付けます。
 1. フォームを編集モードで開きます。
@@ -35,12 +39,6 @@ ht-degree: 100%
 
 ![ruleeditor](assets/ruleeditor.png)
 
-## デバッグ
-
-この記事で提供されるバンドルを使用している場合は、次のクラスの[デバッグログ](http://localhost:4502/system/console/slinglog)を有効にすることをお勧めします。
-
-+ `com.marketoandforms.core.impl.MarketoServiceImpl`
-+ `com.marketoandforms.core.MarketoConfigurationService`
 
 ## これで完了です
 
