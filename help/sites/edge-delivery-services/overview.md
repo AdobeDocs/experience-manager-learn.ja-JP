@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: df15dc0426918a0e2263efe6fb0de953f49385df
+source-git-commit: 2aa189c46af16813d2709aa2ec02b509c4bb544e
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 100%
+source-wordcount: '415'
+ht-degree: 80%
 
 ---
 
@@ -25,6 +25,76 @@ Edge 配信サービスを使用して web サイトを高速化する方法。
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
 Edge 配信サービスとその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/overview)を参照してください。
+
+
+## Edge Delivery Services開発者向けチュートリアル
+
+
+<div class="columns is-multiline">
+    <!-- Document-based authoring -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Document-based authoring and Edge Delivery Services tutorial" tabindex="0">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="ドキュメントベースのオーサリング web サイトのチュートリアル"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/document-based-authoring-tutorial.png"
+                alt="ドキュメントベースのオーサリング web サイトのチュートリアル">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="ドキュメントベースのオーサリング web サイトのチュートリアル"> ドキュメントベースのオーサリング web サイトのチュートリアル </a>
+            </p>
+            <p class="is-size-6">ドキュメントベースのオーサリングを使用して作成されたEdge Delivery Services web サイトを作成する方法について説明します。</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold"> チュートリアルを開始 </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Universal Editor -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Universal Editor and Edge Delivery Services tutorial" tabindex="1">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="ユニバーサルエディター web サイトチュートリアル"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/universal-editor-tutorial.png"
+                alt="ユニバーサルエディター web サイトチュートリアル">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="ユニバーサルエディター web サイトチュートリアル"> ユニバーサルエディター web サイトチュートリアル </a>
+            </p>
+            <p class="is-size-6">ユニバーサルエディターを使用して作成されたEdge Delivery Services web サイトを作成する方法を説明します。</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold"> チュートリアルを開始 </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+
+
 
 ## Edge Delivery Services の概要
 
