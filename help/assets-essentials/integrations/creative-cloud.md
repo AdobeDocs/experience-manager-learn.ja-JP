@@ -12,18 +12,19 @@ last-substantial-update: 2022-10-12T00:00:00Z
 doc-type: Feature Video
 exl-id: 74eb8b3c-b521-4fd1-9859-43c06f754005
 duration: 396
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 100%
+source-wordcount: '56'
+ht-degree: 26%
 
 ---
 
-# Creative Cloud と Assets Essentials
 
-Assets Essentials を Adobe Creative Cloud ライブラリと統合して、以下を可能にする方法について説明します。
+# Creative Cloud LibrariesとAEM Assets
 
-+ Assets Essentials のファイルに Creative Cloud ライブラリ経由でシームレスにアクセス
-+ Creative Cloud ライブラリのファイルを Assets Essentials で共有
+AEM AssetsをAdobe Creative Cloud ライブラリと統合して、以下を可能にする方法について説明します。
+
++ AEM AssetsのファイルにCreative Cloud Libraries経由でシームレスにアクセス
++ Creative Cloud Libraries内のファイルをAEM Assetsで共有
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

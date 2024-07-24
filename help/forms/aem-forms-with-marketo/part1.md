@@ -11,9 +11,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 91%
 
 ---
@@ -47,7 +47,6 @@ Marketo と AEM Forms の統合の最初の手順は、API を使用して REST 
 1. client_id
 1. client_secret
 1. identity_endpoint
-1. 認証 URL
 
 [上記のプロパティを取得するには、公式の Marketo ドキュメントに従ってください。](https://developers.marketo.com/rest-api/) または、Marketo インスタンスの管理者に問い合わせることもできます。
 

@@ -10,9 +10,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
 duration: 137
-source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '211'
 ht-degree: 15%
 
 ---
@@ -50,4 +50,4 @@ Marketoの REST API は、2-legged OAuth 2.0 で認証されます。前の手�
 
 ## 次の手順
 
-[RESTful サービスベースのデータソースの作成](./part3.md)
+[フォームデータモデルの作成](./part3.md)

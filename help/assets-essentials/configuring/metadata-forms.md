@@ -1,26 +1,24 @@
 ---
-title: Assets Essentials のメタデータフォーム
-description: Assets Essentials のメタデータフォームを素早く簡単に設定して、アセットメタデータを調整する方法を説明します。
+title: メタデータフォーム
+description: AEM Assets メタデータFormsを素早く簡単に設定して、アセットメタデータを調整する方法を説明します。
 version: Cloud Service
-feature: Assets Essentials
 topic: Content Management
 role: Admin
 level: Beginner
-jira: KT-10230
-thumbnail: 342154.jpeg
-last-substantial-update: 2022-10-10T00:00:00Z
+jira: KT-15654
+last-substantial-update: 2024-07-19T00:00:00Z
 doc-type: Feature Video
 exl-id: 9e68efbb-38bd-4538-b899-5fd356c9322d
-duration: 648
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+duration: 489
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 100%
+source-wordcount: '39'
+ht-degree: 10%
 
 ---
 
-# Assets Essentials のメタデータフォーム
+# メタデータフォーム
 
-Assets Essentials のメタデータフォームを素早く簡単に設定して、アセットを調整する方法を説明します。
+メタデータFormsを素早く簡単に設定して、AEM Assetsで使用可能なアセットメタデータを調整する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/342154?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431686?quality=12&learn=on)

@@ -12,15 +12,15 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Feature Video
 exl-id: a0accb94-ceef-4ecf-b1f6-f47751114242
 duration: 251
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 100%
+source-wordcount: '37'
+ht-degree: 59%
 
 ---
 
-# Assets Essentials の概要
+# はじめに
 
-Assets Essentials にアクセスし、そのユーザーインターフェイスの主な機能を確認する方法について説明します。
+AEM Assetsにアクセスし、そのユーザーインターフェイスの主な機能を確認する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

@@ -10,33 +10,16 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 100%
+source-wordcount: '217'
+ht-degree: 88%
 
 ---
 
-# データソースの設定
+# フォームデータモデルを作成
 
-AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用できます。ただし、少しカスタマイズするだけで、他のデータソースと統合することもできます。
-
-1. リレーショナルデータベース - MySQL、Microsoft SQL Server、IBM DB2、Oracle RDBMS
-1. AEM ユーザープロファイル
-1. RESTful Web サービス
-1. SOAP ベースの web サービス
-1. OData サービス
-
-AEM Forms と Marketo の統合には、RESTful web サービスを使用しています。 統合の最初のステップは、[ データソース](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices)の設定です。このチュートリアルの一部として提供されている Swagger ファイルを使用してください。 次のスクリーンショットは、データソースの設定時に指定する必要がある重要なプロパティを示しています。
-![データソース](assets/datasource.png)
-
-「marketo.json」は Swagger ファイルです（このチュートリアルのアセットの一部として提供されます）。
-Host プロパティは Marketo インスタンスに固有です。
-認証タイプはカスタムで、認証実装は「AemForms とMarketo」を一致させる必要があります。 （コード内でこれを変更していない場合）。
-
-## フォームデータモデルの作成
-
-データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づくフォームデータモデルを作成します。 フォームデータモデルを作成するには、次の手順に従ってください。
+データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づいてフォームデータモデルを作成します。 フォームデータモデルを作成するには、次の手順に従ってください。
 
 ブラウザーで[データ統合ページ](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)を参照します。これには、AEM インスタンスで作成されたすべてのデータ統合が表示されます。
 

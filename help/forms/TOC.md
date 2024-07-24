@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
+source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2086'
 ht-degree: 98%
 
 ---
@@ -240,8 +240,8 @@ ht-degree: 98%
    + [第 2 部 - カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
 + AEM Forms と Marketo{#aem-forms-with-marketo}
    + [第 1 部 - はじめに](aem-forms-with-marketo/part1.md)
-   + [第 2 部 - カスタム認証](aem-forms-with-marketo/part2.md)
-   + [第 3 部 - データソース](aem-forms-with-marketo/part3.md)
+   + [第 2 部 – データSource](aem-forms-with-marketo/part2.md)
+   + [第 3 部 – フォームデータモデル](aem-forms-with-marketo/part3.md)
    + [第 4 部 - まとめ](aem-forms-with-marketo/part4.md)
 
 + AEM Forms と Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -280,6 +280,7 @@ ht-degree: 98%
    + [AEM Forms の監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Forms でのバーコードサービスの使用](document-services/barcode-service-adaptive-forms-article.md)
    + [AEM Formsでの PDFG サービスの使用](document-services/using-pdfg-in-aem-forms.md)
+   + [権限パスワードでPDFを暗号化](document-services/encrypt-pdf-permissions-password.md)
    + [AEM Forms での Output と Forms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [出力サービスでの xdp フラグメントの使用](document-services/using-fragments-in-output-service.md)
    + [フラグメントを使用して PDF を生成する ECMA スクリプト](document-services/using-fragments-in-output-service-watched-folder.md)
