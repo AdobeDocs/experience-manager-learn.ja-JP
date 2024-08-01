@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1234'
 ht-degree: 96%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 96%
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
       + [CSRF 対策](./developing/advanced/csrf-protection.md)
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
+      + [秘密鍵](./developing/advanced/secrets.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 迅速な開発環境{#rde}
@@ -283,6 +284,10 @@ ht-degree: 96%
       + [PDF/A ユーティリティ](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [ソリューションのテスト](./forms/forms-cs-assembler/test.md)
       + [課題](./forms/forms-cs-assembler/challenge.md)
+   + Marketoとの統合 {#froms-cs-with-marketo}
+      + [はじめに](./forms/forms-cs-with-marketo/part1.md)
+      + [データソースの作成](./forms/forms-cs-with-marketo/part2.md)
+      + [フォームデータモデルの作成](./forms/forms-cs-with-marketo/part3.md)
    + Blob インデックスタグを使用したフォーム送信の保存{#store-submiited-data-with-metadata-tags}
       + [はじめに](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [選択グループコンポーネントの拡張](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)

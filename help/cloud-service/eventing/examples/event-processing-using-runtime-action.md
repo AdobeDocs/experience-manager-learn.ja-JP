@@ -12,9 +12,9 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '548'
 ht-degree: 100%
 
 ---
@@ -38,10 +38,6 @@ ht-degree: 100%
 - ローカルマシンにインストールされた [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)。
 
 - 前述の例 [Adobe I/O Runtime アクションと AEM イベント](./runtime-action.md#initialize-project-for-local-development)からローカルに初期化されたプロジェクト。
-
->[!IMPORTANT]
->
->AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
 ## AEM イベントプロセッサーアクション
 

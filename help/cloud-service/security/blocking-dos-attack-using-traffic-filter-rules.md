@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1947'
 ht-degree: 91%
 
 ---
@@ -42,10 +42,6 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
 - 「アラートアクション」を介したレート制限トラフィックフィルタールールの&#x200B;**アラート**&#x200B;を設定し、ルールがトリガーされるとアクションセンターの通知が送信されるようにします。
 - クエリパラメータを無視するように&#x200B;**リクエスト変換**&#x200B;を宣言して、キャッシュカバレッジを増やします。
 
->[!NOTE]
->
->この[トラフィックフィルタールールアラート](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)機能はまだリリースされていません。早期導入プログラムを通じてアクセス権を取得するには、**<aemcs-waf-adopter@adobe.com>** にメールを送信してください。
-
 ### レート制限トラフィックルールのバリエーション {#rate-limit-variations}
 
 レート制限トラフィックルールには、次の 2 つのバリエーションがあります。
@@ -72,7 +68,6 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
 このルールは、実稼動環境への移行を開始する前に設定するのが理想です。実際、多くの組織は攻撃の可能性を示すトラフィックスパイクの警告を受けた場合にのみ、ルールを事後的に宣言します。
 
 特定の PoP に対して、単一の IP アドレスからのトラフィックがデフォルトのしきい値を超えると、接触チャネルトラフィックスパイクアラートが[アクションセンターの通知](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/actions-center)として送信されます。このようなアラートを受信した場合は、レート制限トラフィックフィルタールールを設定することをお勧めします。このデフォルトのアラートは、トラフィックフィルタールールを定義する際に、顧客が明示的に有効にする必要があるアラートとは異なります。このルールについては、後のセクションで説明します。
-
 
 ## トラフィックパターンの分析 {#analyze-traffic}
 

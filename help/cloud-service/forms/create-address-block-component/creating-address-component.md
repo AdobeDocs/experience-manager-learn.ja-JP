@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 3%
 
 ---
 
@@ -68,6 +68,16 @@ ht-degree: 1%
 
 ``state`` ノードを選択し、次に示すようにプロパティを設定します。 状態の fieldType に注意してください。ドロップダウンに設定されています
 ![state](assets/state.png)
+
+## 状態フィールドのデフォルト値を設定
+
+``state`` ノードを選択して、次のプロパティを追加します。
+
+| 名前 | タイプ | 値 |
+|----------|----------|---------------------|
+| 列挙 | 文字列[] | カリフォルニア、ニューヨーク |
+| enumNames | 文字列[] | ニューヨーク州カリフォルニア |
+
 
 最終的な addressblock コンポーネントは次のようになります
 

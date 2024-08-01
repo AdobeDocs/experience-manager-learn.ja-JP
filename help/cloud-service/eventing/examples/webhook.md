@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '520'
 ht-degree: 100%
 
 ---
@@ -35,9 +35,6 @@ Web フックで AEM イベントを受け取り、イベントの詳細（ペ�
 
 - [AEM イベント用に設定された Adobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
->[!IMPORTANT]
->
->AEM as a Cloud Serviceイベンティングは、プレリリースモードで登録のユーザーのみが使用できます。 AEM as a Cloud Service 環境で AEM イベンティングを有効にするには、[AEM-イベンティングチーム](mailto:grp-aem-events@adobe.com)に連絡します。
 
 ## Web フックにアクセス
 
