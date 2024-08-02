@@ -11,10 +11,10 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -37,14 +37,15 @@ ht-degree: 100%
 以下のスクリーンショットに示すように、タブのスタイルエディターを開くと、デフォルトのステートになります。
 ![navigation-tab](assets/navigation-tab.png)
 
-以下に示すように、デフォルトステートの CSS プロパティを設定します。
-| カテゴリー | プロパティ名 | プロパティ値 |
+デフォルトステートの CSS プロパティを次のように設定します
+
+| カテゴリ | プロパティ名 | プロパティの値 |
 |:---|:---|:---|
-| 寸法と位置 | Width | 50px |
+| 寸法と位置 | 幅 | 50 px |
 | テキスト | Font Weight | Bold |
 | テキスト | Color | #FFF |
-| テキスト | Line Height | 3 |
-| テキスト | Text Align | Left |
+| テキスト | 行の高さ | 3 |
+| テキスト | テキストの位置揃え | Left |
 | 背景 | Color | #056dae |
 
 変更内容を保存します。
