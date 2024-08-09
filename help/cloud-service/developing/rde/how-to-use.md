@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 100%
+source-wordcount: '687'
+ht-degree: 91%
 
 ---
 
@@ -49,17 +49,19 @@ $ mvn clean package
 
 ## AEM-RDE プラグインを使用した AEM アーティファクトのデプロイ
 
-`aem:rde:install` コマンドを使用して、様々な AEM アーティファクトをデプロイします。
+まず、[ 最新の `aio` CLI モジュールがインストールされている ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli) ことを確認します。
+
+次に、`aio aem:rde:install` コマンドを使用して、様々なAEM アーティファクトをデプロイします。 今、あなたは次の必要があります
 
 ### `all` パッケージと `dispatcher` パッケージのデプロイ
 
 一般には、まず次のコマンドを実行して `all` パッケージと `dispatcher` パッケージをデプロイすることから始まります。
 
 ```shell
-# Install the 'all' package
+# Install the 'all' content package (zip file)
 $ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
 
-# Install the 'dispatcher' zip
+# Install the 'dispatcher' deployment artifact (zip file)
 $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
 ```
 
@@ -94,12 +96,13 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. Maven ビルドを実行するか個々のファイルを同期して、ローカルの AEM-SDK で変更を検証します。
+1. Maven ビルドを実行するか個々のファイルを同期して、ローカルのAEM SDK で変更を検証します。
 
-1. `ui.apps` パッケージを介して、または個々のダイアログファイルと HTL ファイルをデプロイして、変更を RDE にデプロイします。
+1. パッケージを介して、または個々のダイアログファイル `ui.apps`HTL ファイルをデプロイして、変更を RDE にデプロイします。
 
    ```shell
    # Using 'ui.apps' package
+   
    $ cd ui.apps
    $ mvn clean package
    $ aio aem:rde:install target/aem-guides-wknd.ui.apps-2.1.3-SNAPSHOT.zip
