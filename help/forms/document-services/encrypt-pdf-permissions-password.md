@@ -9,7 +9,7 @@ level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: b823f9e294c42ba258049a942816f9a154a6e1a6
+source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 31%
@@ -18,7 +18,7 @@ ht-degree: 31%
 
 # 権限パスワードでPDFを暗号化
 
-PDFドキュメントをコピー、編集、または印刷するには、オーナーパスワードまたはマスターパスワードとも呼ばれるアクセス許可パスワードが必要です。 [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API を使用して、プログラムによってPDFに権限パスワードを適用する方法を説明します
+PDFドキュメントをコピー、編集、または印刷するには、オーナーパスワードまたはマスターパスワードとも呼ばれるアクセス許可パスワードが必要です。 [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API を使用して、プログラムによってPDFに権限パスワードを適用する方法を説明します。
 
 次の JSP コードは、権限パスワードでPDFを暗号化します。
 
