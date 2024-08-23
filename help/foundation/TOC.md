@@ -4,10 +4,10 @@ breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: 1e1a33986e202ce2af9cf2d03eca7895514465df
+source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 96%
+source-wordcount: '240'
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 96%
 # AEM Foundation のビデオおよびチュートリアル {#foundation}
 
 + [概要](./overview.md)
-+ [POC](./poc.md)
 + 管理 {#administration}
    + [AEM をアップグレードする理由について](./administration/understand-reasons-to-upgrade.md)
    + [oak-run.jar を使用したインデックスの管理](./administration/use-oak-run-jar-to-manage-indexes.md)
