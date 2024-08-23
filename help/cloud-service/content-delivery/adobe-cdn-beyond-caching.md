@@ -1,6 +1,6 @@
 ---
 title: Adobe CDN - キャッシングを超える高度な機能
-description: CDN でのトラフィックの設定、CDN エラーページなど、Adobe CDN のキャッシュ以外の高度な機能について説明します。
+description: CDN でのトラフィックの設定、トークンと資格情報の設定、CDN エラーページなど、Adobe CDN のキャッシュ以外の高度な機能について説明します。
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Adobe CDN - キャッシングを超える高度な機能
 
-CDN でのトラフィックの設定、CDN エラーページなど、Adobe CDN のキャッシュ以外の高度な機能について説明します。
+CDN でのトラフィックの設定、トークンと資格情報の設定、CDN エラーページなど、キャッシュ以外のAdobeコンテンツ配信ネットワーク（CDN）の高度な機能について説明します。
 
 Adobe CDN には、コンテンツのキャッシュ以外に、web サイトのパフォーマンスを最適化するのに役立つ高度な機能がいくつか用意されています。 次のような機能があります。
 
@@ -50,8 +50,7 @@ _CDN 資格情報と認証の設定_ に関する主な機能を説明します�
 
 - **パージ API トークン**：単一またはグループまたはすべてのリソースをキャッシュからパージするための独自のパージキーを作成できます。
 - **基本認証**:Web サイトまたはその一部へのアクセスを制限する場合に使用する、軽量の認証メカニズム。 運用開始前の様々なレビュープロセスの一環として必要となることが多い。
-- **HTTP Adobe検証**：お客様が管理する CDN がヘッダー CDN にトラフィックをルーティングする場合に使用します。 Adobe CDN は、`X-AEM-Edge-Key` ヘッダー値に基づいて受信リクエストを検証します。
-`X-AEM-Edge-Key` ヘッダーに独自の値を作成できます。
+- **HTTP Adobe検証**：お客様が管理する CDN がヘッダー CDN にトラフィックをルーティングする場合に使用します。 Adobe CDN は、`X-AEM-Edge-Key` ヘッダー値に基づいて受信リクエストを検証します。 `X-AEM-Edge-Key` ヘッダーに独自の値を作成できます。
 
 ## CDN エラーページ
 
@@ -87,7 +86,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## その他のリソース
+## 関連Tutorials
 
 [ トラフィックフィルタールールを使用した web サイトの保護 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
@@ -100,7 +99,3 @@ data:
 [CDN 資格情報と認証の設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
 [CDN エラーページの設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
-
-
-
-
