@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 94%
+source-wordcount: '1275'
+ht-degree: 93%
 
 ---
 
@@ -151,7 +151,8 @@ ht-degree: 94%
    + [CDN キャッシュヒット率の分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 方法{#how-to}
       + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
-      + [キャッシュの無効化](./caching/how-to/disable-caching.md)
+      + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
+      + [キャッシュをパージ](./caching/how-to/purge-cache.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
@@ -259,6 +260,10 @@ ht-degree: 94%
       + [2 – 設定](./forms/create-address-block-component/set-up.md)
       + [3 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
       + [4 - コンポーネントのデプロイ](./forms/create-address-block-component/deploy-your-project.md)
+   + クリック可能な画像コンポーネント {#clickable-image-component} 作成
+      + [1 - はじめに](./forms/clickable-image-component/introduction.md)
+      + [2 - コンポーネントの作成](./forms/clickable-image-component/create-component.md)
+      + [3 - クリックイベントの処理](./forms/clickable-image-component/handle-click-event.md)
    + AEM Forms と Analytics{#forms-and-analytics}
       + [はじめに](./forms/form-data-analytics/introduction.md)
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
@@ -421,3 +426,4 @@ ht-degree: 94%
          + [AEM Assets の統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [AEM Sites の生成 AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [ユニバーサルエディターの詳細](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
+         + [サイトの読み込み](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)

@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f344f6c2fdf763a55c18a0db9625ccbe408919e2
+source-git-commit: 3eb4ed310e08f9dd8a527fdb7c42062b285db84e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 97%
+source-wordcount: '417'
+ht-degree: 94%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 97%
    + [アーカイブを抽出](./advanced/extract-archive.md)
    + [権限（CUG）](./advanced/closed-user-groups.md)
    + [メタデータ駆動型の権限](./advanced/metadata-driven-permissions.md)
+   + [ビデオのクローズドキャプション](./advanced/video-closed-captions.md)
    + [透かし](./advanced/watermarks.md)
 
 + 高度なメタデータの管理{#metadata}
@@ -73,6 +74,9 @@ ht-degree: 97%
 
 + Edge 配信サービス{#edge-delivery-services}
    + [Sidekick プラグイン](./edge-delivery-services/sidekick-plugin.md)
+
++ Content Hub{#content-hub}
+   + [Assetsのアップロードと承認プロセス](./content-hub/uploading-assets-and-approval-process.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)

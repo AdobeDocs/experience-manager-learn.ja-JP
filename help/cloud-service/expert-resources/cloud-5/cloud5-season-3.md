@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 94%
+source-wordcount: '445'
+ht-degree: 88%
 
 ---
 
@@ -174,6 +174,21 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 <br/>                
                  ユニバーサルエディターとEdge Delivery Servicesを使用したAEMについて説明します。
             </p>
-        </td>                    
+        </td>
+        <td>
+            <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
+                <img alt="Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込み" 
+                     src="https://video.tv.adobe.com/v/3431603?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
+                <strong> サイトのインポート </strong></a>        
+                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+            </div>
+            <p>
+                <br/>                
+                 Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込みについて説明します。
+            </p>
+        </td>
     </tr>      
 </table>
