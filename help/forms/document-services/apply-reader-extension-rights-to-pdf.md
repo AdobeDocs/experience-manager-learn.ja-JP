@@ -9,10 +9,10 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 100%
+source-wordcount: '357'
+ht-degree: 88%
 
 ---
 
@@ -196,10 +196,18 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 ローカルサーバーでこれをテストするには、次の手順に従います。
 1. [DevelopingWithServiceUser バンドルをダウンロードしてインストールします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+
+1. 次に示すように、configMgr コンソールを使用して、Apache Sling User Mapper Service に次のエントリを追加します。
+
+```
+       DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper](assets/user-mapper-service.PNG)
 1. [ares.ares.core-ares バンドルをダウンロードしてインストールします](assets/ares.ares.core-ares.jar)。これにはカスタムサービスと、使用権限を適用して PDF をストリーミングバックするサーブレットがあります。
 1. [クライアントライブラリとカスタム送信を読み込みます。](assets/applyaresdemo.zip)
 1. [アダプティブフォームを読み込みます。](assets/applyaresform.zip)
-1. Reader Extensions 証明書を「fd-service」ユーザーに追加します。エイリアスが「ares」であることを確認します。
+1. Reader Extensions 証明書を「fd-service」ユーザーに追加します。エイリアスが「**ares**」であることを確認します。
 1. [アダプティブフォームをプレビュー](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)します。
 1. 適切な権限を選択し、PDF ファイルをアップロードします。
 1. 「送信」をクリックして、Reader Extension が追加された PDF を取得します。
