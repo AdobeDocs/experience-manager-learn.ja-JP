@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
+source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -31,12 +31,13 @@ Adobe CDN には、コンテンツのキャッシュ以外に、web サイトの
 
 これらの機能は **セルフサービス** 機能です。 AEM プロジェクトの `cdn.yaml` ファイルで設定され、Cloud Manager設定パイプラインを使用してデプロイされます。
 
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+
 ## CDN でのトラフィックの設定
 
 _CDN でのトラフィックの設定_ に関連する主な機能を説明します。
 
-- **DoS 攻撃防止：**AdobeCDN は、ネットワークでの DoS 攻撃を吸収します
-レイヤー化し、接触チャネルサーバーに到達させないようにします。
+- **DoS 攻撃防止：** Adobe CDN は、ネットワーク層での DoS 攻撃を吸収し、オリジンサーバーに到達するのを防ぎます。
 - **レート制限：** オリジンサーバーが過剰なリクエストによって圧倒されるのを防ぐために、CDN でレート制限を設定できます。
 - **Web アプリケーションファイアウォール（WAF）:** WAFは、SQL インジェクション、クロスサイトスクリプティングなどの、一般的な web アプリケーションの脆弱性から web サイトを保護します。 この機能を使用するには、Enhanced Security ライセンスまたはWAF-DDoS Protection ライセンスが必要です。
 - **リクエスト変換：** ヘッダーの設定や設定解除、クエリパラメーターの変更、cookie などの受信リクエストを変更します。
