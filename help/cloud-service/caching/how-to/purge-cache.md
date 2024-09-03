@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 0639217a3bab7799eec3bbcc40c1a69ed1b12682
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '924'
 ht-degree: 2%
 
 ---
@@ -68,6 +68,8 @@ data:
            type: authenticate # The type of the action, must be authenticate
            authenticator: purge-auth # The name of the authenticator to be used, must match the name from the above authenticators list               
 ```
+
+上記のルールでは、`purgeKey1` と `purgeKey2` の両方が最初から追加され、中断することなく秘密鍵の回転がサポートされます。 ただし、最初は `purgeKey1` のみを使用し、後で秘密鍵を回転させ `purgeKey2` ときに追加できます。
 
 1. 変更内容を保存、コミットし、Adobeのアップストリームリポジトリーにプッシュします。
 
