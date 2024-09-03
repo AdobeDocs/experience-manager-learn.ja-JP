@@ -14,20 +14,20 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b57fb7ce9483dbfe206de7b89e6cf8dba72429a7
 workflow-type: tm+mt
-source-wordcount: '1229'
-ht-degree: 100%
+source-wordcount: '1248'
+ht-degree: 84%
 
 ---
 
 # AEM Sites と Experience Platform Web SDK の統合
 
-AEM as a Cloud Service と Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) を統合する方法を説明します。 この基本的なステップは、Adobe Analytics、Target などの Adobe Experience Cloud 製品や、Real-time Customer Data Platform、Customer Journey Analytics、Journey Optimizer などの最近の革新的な製品を統合するために不可欠です。
+AEM as a Cloud Service と Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html) を統合する方法を説明します。 この基本的なステップは、Adobe Analytics、Target などの Adobe Experience Cloud 製品や、Real-time Customer Data Platform、Customer Journey Analytics、Journey Optimizer などの最近の革新的な製品を統合するために不可欠です。
 
-また、[Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja) で [WKND - サンプル Adobe Experience Manager プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)のページビュー データを収集して送信する方法も説明します。
+また、[Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) で [WKND - サンプル Adobe Experience Manager プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)のページビュー データを収集して送信する方法も説明します。
 
-このセットアップを完了すると、強固な基盤が実装されたことになります。 また、[Real-time Customer Data Platform（Real-Time CDP）](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja)、[Customer Journey Analytics（CJA）](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)、[Adobe Journey Optimizer（AJO）](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)などのアプリケーションを使用して Experience Platform の実装を進める準備も整います。 高度な実装は、web と顧客のデータを標準化することで、顧客エンゲージメントの向上に役立ちます。
+このセットアップを完了すると、強固な基盤が実装されたことになります。 また、[Real-time Customer Data Platform（Real-Time CDP）](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja)、[Customer Journey Analytics（CJA）](https://experienceleague.adobe.com/en/docs/customer-journey-analytics)、[Adobe Journey Optimizer（AJO）](https://experienceleague.adobe.com/en/docs/journey-optimizer)などのアプリケーションを使用して Experience Platform の実装を進める準備も整います。 高度な実装は、web と顧客のデータを標準化することで、顧客エンゲージメントの向上に役立ちます。
 
 ## 前提条件
 
@@ -55,14 +55,14 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 
 エクスペリエンスデータモデル（XDM）スキーマを使用すると、カスタマーエクスペリエンスのデータを標準化できます。 **WKND ページビュー**&#x200B;のデータを収集するには、XDM スキーマを作成し、アドビが提供するフィールド グループ `AEP Web SDK ExperienceEvent` を web データ収集に使用します。
 
-小売、金融機関、ヘルスケアなどの汎用および業界固有の参照データモデルのスイートがあります。詳しくは、[業界データモデルの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html?lang=ja)を参照してください。
+小売、金融機関、ヘルスケアなどの汎用および業界固有の参照データモデルのスイートがあります。詳しくは、[業界データモデルの概要](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/overview)を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
-[XDM システムの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)で、XDM スキーマと関連概念（フィールド グループ、タイプ、クラス、データ型など）について説明します。
+[XDM システムの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home) で、XDM スキーマと関連概念（フィールド グループ、タイプ、クラス、データ型など）について説明します。
 
-[XDM システムの概要](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)は、XDM スキーマと関連概念（フィールドグループ、タイプ、クラス、データ型など）について知るための優れたリソースです。 XDM データモデルの包括的な理解と、XDM スキーマを作成および管理して企業全体でデータを標準化する方法を提供します。 XDM スキーマを詳しく理解し、XDM スキーマがデータの収集プロセスと管理プロセスに与えるメリットを確認します。
+[XDM システムの概要](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home)は、XDM スキーマと関連概念（フィールドグループ、タイプ、クラス、データ型など）について知るための優れたリソースです。 XDM データモデルの包括的な理解と、XDM スキーマを作成および管理して企業全体でデータを標準化する方法を提供します。 XDM スキーマを詳しく理解し、XDM スキーマがデータ収集プロセスと管理プロセスに与えるメリットを確認します。
 
 ## データストリームの作成 - Experience Platform
 
@@ -71,14 +71,14 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
 
-[データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=ja)ページにアクセスして、データ ストリームの概念と、データのガバナンスや構成などの関連トピックを理解します。
+[データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=ja)ページにアクセスして、データ ストリームの概念と、データのガバナンスや構成などの関連トピックを理解します。
 
 ## タグプロパティの作成 - Experience Platform
 
 Experience Platform でタグのプロパティを作成し、Web SDK JavaScript ライブラリを WKND web サイトに追加する方法について説明します。 新しく定義されたタグプロパティには、次のリソースが含まれています。
 
 + タグ拡張：[コア](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)および [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ データ要素：WKND サイトの Adobe Client Data Layer を使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。 および、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に「[XDM スキーマを作成](#create-xdm-schema---experience-platform)」手順で作成）
++ データ要素：WKND サイトの Adobe Client Data Layer を使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。 また、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に [XDM スキーマを作成 ](#create-xdm-schema---experience-platform) 手順
 + ルール：Adobe Client Data Layer がトリガーする `cmp:show` イベントを使用して、WKND web ページにアクセスするたびに、プラットフォーム エッジ ネットワークにデータを送信します。
 
 **公開フロー**&#x200B;を使用してタグライブラリをビルドおよび公開する際に、「**変更されたすべてのリソースを追加**」ボタンを使用できます。 個々のリソースを識別して選択する代わりに、データ要素、ルール、タグ拡張機能などのすべてのリソースを選択します。 また、開発フェーズでは、ライブラリを&#x200B;_開発環境_&#x200B;のみに公開し、検証して&#x200B;_ステージング_&#x200B;環境または&#x200B;_実稼動_&#x200B;環境に昇格することもできます。
@@ -168,19 +168,23 @@ Experience Platform でタグのプロパティを作成し、Web SDK JavaScript
 +++
 
 
-[タグの概要](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) では、データ要素、ルール、エクステンションなどの重要な概念に関する詳細な知識を提供します。
+[タグの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/home) では、データ要素、ルール、エクステンションなどの重要な概念に関する詳細な知識を提供します。
 
-AEM Core Components と Adobe Client Data Layer の統合に関する追加情報については、[AEM コアコンポーネントでの Adobe Client Data Layer の使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)を参照してください。
+AEM Core Components と Adobe Client Data Layer の統合に関する追加情報については、[AEM コアコンポーネントでの Adobe Client Data Layer の使用ガイド](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)を参照してください。
 
 ## タグプロパティを AEM に接続
 
-AEM の Adobe Experience Platform 設定の Adobe IMS およびタグを使用して、最近作成したタグプロパティを AEM にリンクする方法について説明します。 AEM as a Cloud Service 環境が確立されると、タグを含む、複数の Adobe IMS テクニカルアカウントの設定が自動的に生成されます。 ただし、AEM 6.5 バージョンの場合は、手動で設定する必要があります。
+AEM の Adobe Experience Platform 設定の Adobe IMS およびタグを使用して、最近作成したタグプロパティを AEM にリンクする方法について説明します。 AEM as a Cloud Service 環境が確立されると、タグを含む、複数の Adobe IMS テクニカルアカウントの設定が自動的に生成されます。 この手順の詳細については、「[IMS を使用してAEM Sitesをタグプロパティに接続する ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)」を参照してください。
+
+ただし、AEM 6.5 バージョンの場合は、手動で設定する必要があります。
+
+
 
 タグプロパティをリンクした後、WKND サイトは、Adobe Experience Platform のクラウドサービス設定のタグを使用して、タグプロパティの JavaScript ライブラリを web ページに読み込むことができるようになります。
 
 ### WKND へのタグプロパティの読み込みを検証
 
-Adobe Experience Platform Debugger の [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 拡張機能を使用して、タグプロパティが WKND ページに読み込まれているかどうかを確認します。 次を確認します。
+Adobe Experience Platform Debugger[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 拡張機能を使用して、タグプロパティが WKND ページに読み込まれているかどうかを確認します。 次を確認します。
 
 + タグプロパティの詳細（拡張機能、バージョン、名前など）。
 + Platform Web SDK ライブラリのバージョン、データストリーム ID
@@ -190,12 +194,12 @@ Adobe Experience Platform Debugger の [Chrome](https://chrome.google.com/websto
 
 ## データセットの作成 - Experience Platform
 
-Web SDK を使用して収集したページビューのデータは、データセットとして Experience Platform データレイクに保存されます。 データセットは、スキーマに従うデータベーステーブルのように、データの集まりのためのストレージと管理の構成体です。 データセットを作成して、以前に作成したデータストリームを設定し、データを Experience Platform に送信する方法を説明します。
+Web SDK を使用して収集したページビューデータは、データセットとしてExperience Platformデータレイクに保存されます。 データセットは、スキーマに従うデータベーステーブルのように、データの集まりのためのストレージと管理の構成体です。 データセットを作成して、以前に作成したデータストリームを設定し、データを Experience Platform に送信する方法を説明します。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418898?quality=12&learn=on)
 
-[データセットの概要](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=ja)では、概念、設定、その他の取り込み機能に関して追加情報を提供します。
+[データセットの概要](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview)では、概念、設定、その他の取り込み機能に関して追加情報を提供します。
 
 
 ## Experience Platform 内の WKND ページビューデータ
@@ -218,8 +222,8 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 
 ## その他のリソース
 
-+ [コアコンポーネントでの Adobe Client Data Layer の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
-+ [Experience Platform データ収集タグと AEM の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=ja)
-+ [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=ja)
-+ [データ収集チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=ja)
-+ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=ja)
++ [コアコンポーネントでの Adobe Client Data Layer の使用](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
++ [Experience Platform データ収集タグと AEM の統合](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
++ [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
++ [データ収集チュートリアル](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/overview)
++ [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview)
