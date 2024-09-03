@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2089'
 ht-degree: 98%
 
 ---
@@ -224,10 +224,11 @@ ht-degree: 98%
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
 + モバイルフォーム送信からの AEM ワークフローのトリガー{#offline-mobile-form-submission}
    + [はじめに](offline-mobile-form-submission/introduction.md)
-   + [カスタムプロファイル](offline-mobile-form-submission/part-one.md)
-   + [PDF 送信を処理](offline-mobile-form-submission/part-two.md)
-   + [PDF をレビューするワークフロー](offline-mobile-form-submission/part-three.md)
-   + [システムにデプロイ](offline-mobile-form-submission/part-four.md)
+   + [カスタムプロファイル](offline-mobile-form-submission/custom-profile.md)
+   + [フォーム送信の処理](offline-mobile-form-submission/handle-form-submission.md)
+   + [送信されたデータの保存](offline-mobile-form-submission/author-servlet.md)
+   + [PDF をレビューするワークフロー](offline-mobile-form-submission/review-workflow.md)
+   + [システムにデプロイ](offline-mobile-form-submission/deploy-assets.md)
 + フォーム送信のクエリ{#query-form-submissions}
    + [はじめに](query-form-submissions/introduction.md)
    + [検索可能なフィールドの作成](query-form-submissions/part1.md)

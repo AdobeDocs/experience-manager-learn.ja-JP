@@ -1,5 +1,5 @@
 ---
-title: HTM5 フォーム送信での AEM ワークフローのトリガー（概要）
+title: HTML 5 フォーム送信のトリガー AEM ワークフローの概要
 description: オフラインモードでのモバイルフォームへの入力の継続とモバイルフォームの送信による AEM ワークフローのトリガー
 feature: Mobile Forms
 doc-type: article
@@ -9,11 +9,13 @@ role: Developer
 level: Experienced
 exl-id: 88295af5-3022-4462-9194-46d8c979bc8b
 last-substantial-update: 2021-04-07T00:00:00Z
+jira: kt-16133
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 100%
+source-wordcount: '213'
+ht-degree: 96%
 
 ---
 
@@ -26,8 +28,12 @@ ht-degree: 100%
 * Acrobat／Reader からの PDF 送信を処理します。
 * Adobe Experience Manager（AEM）ワークフローをトリガーして、送信された PDF を確認します。
 
-このチュートリアルでは、上記のユースケースを達成するために必要な手順について説明します。 このチュートリアルに関連するサンプルコードとアセットは、[こちらから入手](part-four.md)できます。
+このチュートリアルでは、上記のユースケースを達成するために必要な手順について説明します。 このチュートリアルに関連するサンプルコードとアセットは、[こちらから入手](./deploy-assets.md)できます。
 
 次のビデオでは、ユースケースの概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29677?quality=12&learn=on)
+
+## 次の手順
+
+[カスタムプロファイルを作成](./custom-profile.md)

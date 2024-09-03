@@ -11,7 +11,8 @@ duration: 130
 last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 1%
@@ -83,4 +84,3 @@ Adobe管理 CDN または顧客管理 CDN を使用してドメイン名を実�
 
 **[Adobe管理 CDN を使用したカスタムドメイン名](./custom-domain-name-with-adobe-managed-cdn.md)**：このチュートリアルでは、Adobe管理 CDN を使用して **AEM as a Cloud Serviceの web サイトにカスタムドメイン名を追加する方法を説明します**。
 **[顧客の管理による CDN を使用するカスタムドメイン名](./custom-domain-names-with-customer-managed-cdn.md)**：このチュートリアルでは、顧客の管理による CDN を使用して **AEM as a Cloud Serviceの web サイトにカスタムドメイン名を追加する方法を説明します**。
-

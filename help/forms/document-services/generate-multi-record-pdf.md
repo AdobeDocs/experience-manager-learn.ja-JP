@@ -9,10 +9,10 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 100%
+source-wordcount: '497'
+ht-degree: 93%
 
 ---
 
@@ -127,9 +127,18 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* [zip ファイルの内容をダウンロードして、ファイルシステムに抽出します](assets/mult-records-template-and-xml-file.zip)。この zip ファイルには、テンプレートと xml データファイルが含まれています。
+* [ サンプルアセットをダウンロードします ](assets/mult-records-template-and-xml-file.zip)。この zip ファイルには、テンプレートと xml データファイルが含まれています。
+* [ を読み込みます ]
 * [ブラウザーで Felix web コンソールを参照します。](http://localhost:4502/system/console/bundles)
 * [DevelopingWithServiceUser バンドルをデプロイします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
+
+```java
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper-service](assets/user-mapper-service-fd-service.png)
+
 * [カスタム AEM FormsDocumentServices バンドルをデプロイします](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)（OutputService API を使用して PDF を生成するカスタムバンドル）。
 * [ブラウザーでパッケージマネージャーを指定します。](http://localhost:4502/crx/packmgr/index.jsp)
 * [パッケージをダウンロードし、インストールします](assets/generate-multiple-pdf-from-xml.zip)。このパッケージには、テンプレートとデータファイルをドロップできる HTML ページが含まれています。
