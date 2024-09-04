@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
+source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 88%
+source-wordcount: '482'
+ht-degree: 81%
 
 ---
 
@@ -175,6 +175,8 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                  ユニバーサルエディターとEdge Delivery Servicesを使用したAEMについて説明します。
             </p>
         </td>
+    </tr>  
+    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込み" 
@@ -190,5 +192,20 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                  Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込みについて説明します。
             </p>
         </td>
-    </tr>      
+        <td>
+            <a href="./season-3/cloud5-using-admin-api.md">
+                <img alt="Edge Delivery Servicesでの管理 API の使用" 
+                     src="https://video.tv.adobe.com/v/3433158?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-using-admin-api.md">
+                <strong>Admin API の使用 </strong></a>        
+                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+            </div>
+            <p>
+                <br/>                
+                 Edge Delivery Servicesでの Admin API を使用してコンテンツとコードのライフサイクルを管理する方法について説明します。
+            </p>
+        </td>    
+    </tr>    
 </table>
