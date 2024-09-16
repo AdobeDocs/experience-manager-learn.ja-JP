@@ -4,10 +4,10 @@ breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
+source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 97%
+source-wordcount: '244'
+ht-degree: 95%
 
 ---
 
@@ -38,6 +38,7 @@ ht-degree: 97%
    + [Java API のベストプラクティス](./development/understand-java-api-best-practices.md)
    + [Sling Model Exporter について](./development/understand-sling-model-exporter.md)
    + [Oak インデックス作成のベストプラクティス](./development/understand-indexing-best-practices.md)
+   + [サードパーティアーティファクトのインストール](./development/install-third-party-artifacts.md)
 + プロジェクト {#projects}
    + [AEM プロジェクトの開発](./projects/develop-aem-projects.md)
    + [プロジェクトマスターの使用](./projects/use-project-masters.md)
