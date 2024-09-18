@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '2089'
-ht-degree: 98%
+source-wordcount: '2101'
+ht-degree: 96%
 
 ---
 
@@ -222,13 +222,19 @@ ht-degree: 98%
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
-+ モバイルフォーム送信からの AEM ワークフローのトリガー{#offline-mobile-form-submission}
-   + [はじめに](offline-mobile-form-submission/introduction.md)
-   + [カスタムプロファイル](offline-mobile-form-submission/custom-profile.md)
-   + [フォーム送信の処理](offline-mobile-form-submission/handle-form-submission.md)
-   + [送信されたデータの保存](offline-mobile-form-submission/author-servlet.md)
-   + [PDF をレビューするワークフロー](offline-mobile-form-submission/review-workflow.md)
-   + [システムにデプロイ](offline-mobile-form-submission/deploy-assets.md)
++ PDFフォーム送信時のAEM ワークフローのトリガー {#offline-mobile-form-submission}
+   + [パート - 1](offline-mobile-form-submission/introduction.md)
+   + [パート - 2](offline-mobile-form-submission/custom-profile.md)
+   + [パート - 3](offline-mobile-form-submission/handle-form-submission.md)
+   + [パート - 4](offline-mobile-form-submission/author-servlet.md)
+   + [パート - 5](offline-mobile-form-submission/review-workflow.md)
+   + [パート - 6](offline-mobile-form-submission/deploy-assets.md)
++ モバイルフォーム送信時のAEM トリガーワークフロー {#trigger-aem-workflow-on-mobile-form-submission}
+   + [パート - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [パート - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [パート - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [パート - 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [パート - 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + フォーム送信のクエリ{#query-form-submissions}
    + [はじめに](query-form-submissions/introduction.md)
    + [検索可能なフィールドの作成](query-form-submissions/part1.md)
