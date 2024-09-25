@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-09-24T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: d11b07441d8c46ce9a352e4c623ddc1781b9b9be
+source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1566'
 ht-degree: 1%
 
 ---
@@ -50,8 +50,14 @@ AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルト�
 
 | エラーページの提供元 | 詳細 |
 |---------------------|:-----------------------:|
-| AEM サービスのタイプ – オーサー、パブリッシュ、プレビュー | ページリクエストがAEM サービスタイプによって提供される場合、エラーページはAEM サービスタイプから提供されます。 |
-| Adobeが管理する CDN | Adobeが管理する CDN _AEM サービスの種類に到達できません_ （オリジンサーバー）の場合、エラーページはAdobeが管理する CDN から提供されます。 **ありそうもない出来事だが、言及する価値がある。** |
+| AEM サービスのタイプ – オーサー、パブリッシュ、プレビュー | ページリクエストがAEM サービスタイプによって提供され、上記のエラーシナリオのいずれかが発生した場合、エラーページはAEM サービスタイプから提供されます。 |
+| Adobeが管理する CDN | Adobeが管理する CDN _AEM サービスの種類に到達できません_ （オリジンサーバー）の場合、エラーページはAdobeが管理する CDN から提供されます。 **ありそうもない出来事だが、計画する価値がある。** |
+
+
+例えば、AEM サービスタイプとAdobe管理 CDN から提供されるデフォルトのエラーページは次のとおりです。
+
+![ デフォルトのAEM エラーページ ](./assets/aem-default-error-pages.png)
+
 
 ただし、AEM サービスのタイプとAdobe管理の両方を _カスタマイズ_ CDN エラーページをブランドに合わせてカスタマイズし、より良いユーザーエクスペリエンスを提供することができます。
 
@@ -89,7 +95,11 @@ AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルト�
 
 - WKND サイトページが正しくレンダリングされていることを確認します。
 
-## エラーページをカスタマイズするための ErrorDocument Apache ディレクティブ{#errordocument-directive}
+## AEM提供のエラーページをカスタマイズするための ErrorDocument Apache ディレクティブ{#errordocument}
+
+AEMが提供するエラーページをカスタマイズするには、`ErrorDocument` Apache ディレクティブを使用します。
+
+AEM as a Cloud Serviceでは、「`ErrorDocument` Apache ディレクティブ」オプションは、パブリッシュおよびプレビューのサービスタイプにのみ適用されます。 Apache とDispatcherはデプロイメントアーキテクチャに含まれていないので、オーサーサービスタイプには適用されません。
 
 [AEM WKND](https://github.com/adobe/aem-guides-wknd) プロジェクトで `ErrorDocument` Apache ディレクティブを使用してカスタムエラーページを表示する方法を見てみましょう。
 
@@ -123,28 +133,61 @@ AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルト�
 
 - お使いの環境で間違ったページ名またはパス（例：[https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html) を入力して、WKND サイトのカスタムエラーページを確認します。
 
-## ACS AEM Commons-Error Page Handler：エラーページをカスタマイズします。{#acs-aem-commons-error-page-handler}
+## ACS AEM Commons-Error Page Handler :AEMが提供するエラーページをカスタマイズします{#acs-aem-commons}
 
-ACS AEM Commons Error Page Handler を使用してエラーページをカスタマイズするには、「[ 使用方法 ](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use) の節を参照してください。
+AEMが提供するエラーページを _すべてのAEM サービスタイプ_ にカスタマイズするには、「[ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)」オプションを使用します。
 
-## エラーページをカスタマイズするための CDN エラーページ{#cdn-error-pages}
+。詳細な手順については、[ 使用方法 ](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use) を参照してください。
+
+## CDN 提供のエラーページをカスタマイズするための CDN エラーページ{#cdn-error-pages}
+
+Adobe管理 CDN から提供されるエラーページをカスタマイズするには、「CDN エラーページ」オプションを使用します。
 
 Adobeが管理する CDN がAEM サービスの種類（オリジンサーバー）に到達できない場合に、CDN エラーページを実装してエラーページをカスタマイズします。
 
 >[!IMPORTANT]
 >
-> Adobeが管理する CDN がAEM サービスタイプ（オリジンサーバー）に到達できない可能性は低いですが、計画する価値があります。
+> _Adobeが管理する CDN はAEM サービスの種類に到達でき_ せん。（オリジンサーバー）は **発生する可能性は低いですが** 計画する価値があります。
+
+CDN エラーページを実装する手順の概要は次のとおりです。
+
+- カスタムエラーページコンテンツをシングルページアプリケーション（SPA）として開発します。
+- CDN エラーページに必要な静的ファイルを公開アクセス可能な場所にホストします。
+- CDN ルール（errorPages）を設定し、上記の静的ファイルを参照します。
+- Cloud Manager パイプラインを使用して、設定済みの CDN ルールをAEM as a Cloud Service環境にデプロイします。
+- CDN エラーページをテストします。
 
 
 ### CDN エラーページの概要
 
-CDN エラーページは、Adobeが管理する CDN によって、シングルページアプリケーション（SPA）として実装されます。
+CDN エラーページは、Adobeが管理する CDN によって、シングルページアプリケーション（SPA）として実装されます。 Adobeが管理する CDN が提供するSPA HTMLドキュメントには、最小限のHTMLスニペットが含まれています。 カスタムエラーページのコンテンツは、JavaScript ファイルを使用して動的に生成されます。 JavaScript ファイルは、お客様が公にアクセスできる場所で開発およびホストする必要があります。
 
-WKND 固有のブランドコンテンツは、JavaScript ファイルを使用して動的に生成する必要があります。 JavaScript ファイルは、公開してアクセスできる場所でホストされている必要があります。 したがって、次の静的ファイルを開発し、公開アクセス可能な場所にホストする必要があります。
+Adobeが管理する CDN によって提供されるHTMLスニペットは、次の構造になっています。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    ...
+
+    <title>{title}</title>
+    <link rel="icon" href="{icoUrl}">
+    <link rel="stylesheet" href="{cssUrl}">
+  </head>
+  <body>
+    <script src="{jsUrl}"></script>
+  </body>
+</html>
+```
+
+HTMLスニペットには、次のプレースホルダーが含まれています。
 
 1. **jsUrl**:HTML要素を動的に作成してエラーページコンテンツをレンダリングするJavaScript ファイルの絶対 URL です。
 1. **cssUrl**：エラーページのコンテンツのスタイルを設定する CSS ファイルの絶対 URL です。
 1. **icoUrl**:favicon の絶対 URL。
+
+
 
 ### カスタムエラーページの作成
 
@@ -339,9 +382,11 @@ CDN エラーページをテストするには、次の手順に従います。
 
 ## 概要
 
-このチュートリアルでは、AEM as a Cloud Serviceがホストする web サイトにカスタムエラーページを実装する方法を学びました。
+このチュートリアルでは、エラーページの提供元となるデフォルトのエラーページと、エラーページをカスタマイズするオプションについて学びました。 `ErrorDocument` Apache ディレクティブ、`ACS AEM Commons Error Page Handler`、`CDN Error Pages` オプションを使用してカスタムエラーページを実装する方法を学びました。
 
-また、Adobeが管理する CDN がAEM サービスの種類（オリジンサーバー）に到達できない場合にエラーページをカスタマイズするための CDN エラーページオプションの詳細な手順も説明しました。
+## その他のリソース
 
+- [CDN エラーページの設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
+- [Cloud Manager – 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
 
