@@ -13,7 +13,7 @@ duration: 50
 source-git-commit: 12d7f8f0afc1c19f289c847771cb9f4f965c650c
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -25,8 +25,8 @@ App Builder は、AEM の拡張ポイントを適切に定義するためにバ�
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_extensibility_app_builder"
->title="Adobe Developer App BuilderとAEM ヘッドレスの基本を学ぶ"
->abstract="AEM App Builderを使用して、AEM UI をJavaScriptおよび React と迅速にカスタマイズおよび拡張し、シームレスな統合と迅速なデプロイメントをサポートする方法について説明します。"
+>title="Adobe Developer App Builder と AEM ヘッドレスの基本を学ぶ"
+>abstract="AEM App Builder を使用すると、開発者が JavaScript と React を使用して AEM UI を迅速にカスタマイズおよび拡張し、シームレスな統合と迅速なデプロイメントをサポートできる方法について説明します。"
 
 ## AEM UI 拡張機能の開発
 
