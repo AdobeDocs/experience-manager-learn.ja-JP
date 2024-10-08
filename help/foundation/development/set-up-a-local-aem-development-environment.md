@@ -11,10 +11,10 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 100%
+source-wordcount: '2423'
+ht-degree: 99%
 
 ---
 
@@ -181,6 +181,7 @@ IDE を使用する場合は、Maven プロファイルタブで `classic` に�
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - JCR コンテンツ用の FTP に似たツール
 * **[aemfed](https://aemfed.io/)** - AEM フロントエンドのワークフローを迅速化します
 * **[AEM 同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - コミュニティでサポートされている&#42; Visual Studio Code 用の拡張機能
+* **[WKND プロジェクト ](https://github.com/adobe/aem-guides-wknd)** – このビデオで示すAEM プロジェクトの例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
