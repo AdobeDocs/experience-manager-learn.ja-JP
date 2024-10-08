@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
+source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 72%
+source-wordcount: '566'
+ht-degree: 69%
 
 ---
 
@@ -237,6 +237,21 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             <p>
                 <br/>                
                  合計ブロック時間を改善する方法について説明します。
+            </p>
+        </td>            
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+                <img alt="Lighthouse スコアの最適化 – 第 3 部"
+                     src="https://video.tv.adobe.com/v/3435001?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+                <strong>Lighthouse スコアの最適化 – 第 3 部 </strong></a>
+                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+            </div>
+            <p>
+                <br/>                
+                 Largest Contentful Paint （LCP）を改善する手法について説明します。
             </p>
         </td>            
     </tr>        
