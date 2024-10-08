@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 duration: 112
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ffd90bec7ef63cac96590e59b1b5a92d043cbc03
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '443'
 ht-degree: 100%
 
 ---
@@ -105,47 +105,6 @@ AEM Engineering の Cloud 5 シリーズへようこそ。製品の実装フェ�
       <p>
         <br/>
  クラウドへの移行に関するヒントとテクニックのパート 1（全 2 回）。パート 1 の主な焦点は、移行の準備を整えるためのベストプラクティスと準備作業です。
-      </p>
-   </td> 
-  </tr>
-<tr>
-   <td>
-        <a href="./cloud5-aem-content-migration-part-2.md">
-            <img alt="移行（パート 2）" src="./imgs/007-thumb.png"/>
-        </a>
-      <div>
-        <a href="./cloud5-aem-content-migration-part-2.md"><strong>移行（パート 2）</strong></a>     
- <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
-      </div>
-      <p>
-        <br/>
- クラウドへの移行に関するヒントとテクニックのパート 2（全 2 回）。パート 2 では主に、移行に使用できるツールの使用について説明します。
-      </p>
-     </td>   
-     <td>
-        <a href="./cloud5-aem-dispatcher-validator.md">
-            <img alt="Dispatcher バリデーター" src="./imgs/008-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher バリデーター</strong></a>
- <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
-      </div>
-      <p>
-        <br/>
-  以前の移行に関するディスカッションの成果として、Dispatcher バリデーターと、実行できるタスクの一部について説明します。
-      </p>
-   </td>
-     <td>
-        <a href="./cloud5-aem-search-and-indexing.md">
-            <img alt="インデックス作成と検索に関するヒント" src="./imgs/009-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-search-and-indexing.md"><strong>インデックス作成と検索に関するヒント</strong></a>
- <br/><em>Darin Kuntze、James Talbot（シニアクラウドアーキテクト）</em>
-      </div>
-      <p>
-        <br/>
- インデックス作成や検索のような複雑なものについて、問題が発生する前に、チームが開発時間を最適化し、問題を解決するための簡単な方法について説明します。
       </p>
    </td> 
   </tr>
