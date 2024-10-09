@@ -10,10 +10,10 @@ jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 089bcf71f03bdbb6d21337cc23452afb33ce8098
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -26,7 +26,7 @@ AEM ヘッドレス [web コンポーネント](https://developer.mozilla.org/en
 
 Web コンポーネント／JS デプロイメントでは、次のデプロイメント設定が必要です。
 
-| Web コンポーネント／JS アプリの接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| Web コンポーネント/JS アプリは→に接続 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [クロスオリジンリソース共有（CORS）](./configurations/cors.md) | ✔ | ✔ | ✔ |
