@@ -10,7 +10,7 @@ index: y
 exl-id: 6bb1d501-80c5-4f4d-af09-bbfcfcf51aa6
 duration: 96
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '53'
 ht-degree: 100%
 

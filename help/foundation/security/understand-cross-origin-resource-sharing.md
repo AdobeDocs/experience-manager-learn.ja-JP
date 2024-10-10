@@ -11,9 +11,9 @@ level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
 source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1011'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -187,7 +187,7 @@ Dispatcher 4.1.1 以降の応答ヘッダーはキャッシュ可能です。 �
 
 ### CORS リクエストヘッダーの許可
 
-必要な [HTTP リクエストヘッダーがAEMにパススルーされて処理されるようにするには ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)Dispatcher `/clientheaders` 設定で許可される必要があります。
+[必要な HTTP リクエストヘッダーを AEM に通過して処理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)できるようにするには、Disaptcher の `/clientheaders` 設定でこれらのヘッダーを許可する必要があります。
 
 ```
 /clientheaders {

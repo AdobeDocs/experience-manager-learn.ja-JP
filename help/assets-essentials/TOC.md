@@ -9,18 +9,18 @@ feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
 source-git-commit: 27d4b552d270d92d032384aea0a0f4798d5eca8c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '69'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
 
-# AEM Assets Essentials ビデオ {#assets-essentials}
+# AEM Assets Essentials のビデオ {#assets-essentials}
 
 + [概要](overview.md)
 
-+ [はじめに](./getting-started.md)
++ [概要](./getting-started.md)
 
 + 基本{#basics}
    + [管理](basics/managing.md)
@@ -45,6 +45,6 @@ ht-degree: 88%
    + [ドキュメントの送信とアセットのリンク](./integrations/workfront/link-send.md)
    + [バージョン履歴](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizerの統合 ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
++ [Adobe Journey Optimizer の統合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja){target=_blank}
 
 + [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja){target=_blank}

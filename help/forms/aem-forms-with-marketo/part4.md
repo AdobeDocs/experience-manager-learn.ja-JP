@@ -11,18 +11,18 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
 source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '278'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 # 統合のテスト
 
-ここでは、単純なフォーム取得を作成して統合をテストし、Market からのリードオブジェクトを表示します。
+シンプルなフォーム取得を作成して統合をテストし、マーケットから Lead オブジェクトを表示します。
 >[!NOTE]
 >
->この機能は、基盤コンポーネントに基づくフォームに基づいてテストされました。
+>この機能は、基盤コンポーネントに基づくフォームでテストされました。
 
 ## アダプティブフォームの作成
 

@@ -1,6 +1,6 @@
 ---
-title: クリック可能な画像コンポーネントの作成
-description: AEM Forms Cloud Serviceでのクリック可能な画像コンポーネントの作成
+title: 画像コンポーネントの作成
+description: AEM Forms Cloud Service でのクリック可能な画像コンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,17 +10,17 @@ topic: Development
 jira: KT-15968
 exl-id: b635f171-775d-480e-bf7a-c92ab4af0aee
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# コンポーネントを作成
+# コンポーネントの作成
 
-この記事では、AEM Forms CS 向け開発に関する経験があることを前提としています。また、AEM Forms アーキタイププロジェクトを作成していることも前提としています。
+この記事では、AEM Forms CS 向けの開発に関する経験があることを前提としています。また、AEM Forms アーキタイププロジェクトを作成していることも前提としています。
 
-IntelliJ または任意の他の任意の IDE でAEM Forms プロジェクトを開きます。 の下に svg という新しいノードを作成します。
+IntelliJ または任意の他の IDE で AEM Forms プロジェクトを開きます。以下に、svg という新しいノードを作成します。
 
 ```
 apps\corecomponent\components\adaptiveForm
@@ -28,12 +28,12 @@ apps\corecomponent\components\adaptiveForm
 
 >[!NOTE]
 >
-> ``corecomponent`` は、Maven プロジェクトの作成時に指定された appId です。 この appId は、お使いの環境で異なる可能性があります。
+> ``corecomponent`` は、Maven プロジェクトの作成時に提供された appId です。この appId は、環境によって異なる可能性があります。
 
 
 ## .content.xml ファイルの作成
 
-svg ノードの下に.content.xml というファイルを作成します。 次の内容を、新しく作成したファイルに追加します。 必要に応じて、jcr:description、jcr:title および componentGroup を変更できます。
+svg ノードの下に .content.xml というファイルを作成します。新しく作成したファイルに次の内容を追加します。必要に応じて、jcr:description、jcr:title、componentGroup を変更できます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -45,13 +45,13 @@ svg ノードの下に.content.xml というファイルを作成します。 �
     componentGroup="CustomCoreComponent - Adaptive Form"/>
 ```
 
-## svg.html を作成
+## svg.html の作成
 
-svg.html という名前のファイルを作成します。 このファイルは USA マップのSVGをレンダリングします。[svg.html](assets/svg.html) の内容を、新しく作成したファイルにコピーします。 あなたがコピーしたのは米国の地図のSVGです。 ファイルを保存します。
+svg.html というファイルを作成します。このファイルは、米国マップの SVG をレンダリングします。[svg.html](assets/svg.html) の内容を、新しく作成したファイルにコピーします。コピーしたのは、米国マップの SVG です。ファイルを保存します。
 
 ## プロジェクトのデプロイ
 
-コンポーネントをテストするには、プロジェクトをローカルクラウド対応インスタンスにデプロイします。
+プロジェクトをローカルクラウド対応インスタンスにデプロイして、コンポーネントをテストします。
 
 プロジェクトをデプロイするには、コマンドプロンプトウィンドウでプロジェクトのルートフォルダーに移動し、次のコマンドを実行する必要があります。
 
@@ -59,6 +59,6 @@ svg.html という名前のファイルを作成します。 このファイル�
 mvn clean install -PautoInstallSinglePackage
 ```
 
-これにより、プロジェクトがローカルのAEM Forms インスタンスにデプロイされ、コンポーネントをアダプティブフォームに含めることができます
+これにより、プロジェクトがローカルの AEM Forms インスタンスにデプロイされ、コンポーネントをアダプティブフォームに含めることができるようになります。
 
 ![usa-map](./assets/usa-map.png)

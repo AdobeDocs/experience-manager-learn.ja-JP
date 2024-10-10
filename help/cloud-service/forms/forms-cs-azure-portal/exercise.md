@@ -11,7 +11,7 @@ thumbnail: 335800.jpg
 jira: KT-8481
 duration: 51
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '34'
 ht-degree: 100%
 

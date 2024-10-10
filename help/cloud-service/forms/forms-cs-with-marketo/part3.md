@@ -1,5 +1,5 @@
 ---
-title: AEM Forms Cloud ServiceとMarketoの統合（パート 3）
+title: AEM Forms Cloud Service と Marketo の統合（第 3 部）
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Marketo を統合する方法を説明します
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -12,15 +12,15 @@ last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: 43737765-b1ea-4594-853a-d78f41136b5e
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '235'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
-# フォームデータモデルを作成
+# フォームデータモデルの作成
 
-データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づいてフォームデータモデルを作成します。 フォームデータモデルを作成するには、次の手順に従ってください。
+データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づくフォームデータモデルを作成します。フォームデータモデルを作成するには、次の手順に従ってください。
 
 ブラウザーで[データ統合ページ](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)を参照します。これには、AEM インスタンスで作成されたすべてのデータ統合が表示されます。
 

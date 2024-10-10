@@ -12,9 +12,9 @@ last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
 source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '687'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -49,9 +49,9 @@ $ mvn clean package
 
 ## AEM-RDE プラグインを使用した AEM アーティファクトのデプロイ
 
-まず、[ 最新の `aio` CLI モジュールがインストールされている ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli) ことを確認します。
+まず、[最新の `aio` CLI モジュールがインストールされている](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)ことを確認します。
 
-次に、`aio aem:rde:install` コマンドを使用して、様々なAEM アーティファクトをデプロイします。 今、あなたは次の必要があります
+次に、`aio aem:rde:install` コマンドを使用して、様々な AEM アーティファクトをデプロイします。以下を行う必要があります。
 
 ### `all` パッケージと `dispatcher` パッケージのデプロイ
 
@@ -96,9 +96,9 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. Maven ビルドを実行するか個々のファイルを同期して、ローカルのAEM SDK で変更を検証します。
+1. Maven ビルドを実行するか個々のファイルを同期して、ローカルの AEM SDK で変更を検証します。
 
-1. パッケージを介して、または個々のダイアログファイル `ui.apps`HTL ファイルをデプロイして、変更を RDE にデプロイします。
+1. `ui.apps` パッケージを介して、または個々のダイアログファイルと HTL ファイルをデプロイして、変更を RDE にデプロイします。
 
    ```shell
    # Using 'ui.apps' package

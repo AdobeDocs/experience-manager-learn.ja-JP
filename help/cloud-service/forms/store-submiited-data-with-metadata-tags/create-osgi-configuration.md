@@ -11,7 +11,7 @@ jira: KT-14501
 duration: 39
 exl-id: 6a3af59d-f916-451f-887c-0f4580cbcb3e
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '81'
 ht-degree: 100%
 

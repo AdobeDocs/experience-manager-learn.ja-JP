@@ -1,6 +1,6 @@
 ---
-title: 検索とAdobe Firefly
-description: AEM AssetsとAdobe Fireflyを統合して、空の検索結果を生産的なアセット生成エクスペリエンスに変換する方法を説明します。
+title: 検索と Adobe Firefly
+description: Adobe Firefly と統合された AEM Assets で、空の検索結果を生産性の高いアセット生成エクスペリエンスに変換する方法について説明します。
 version: Cloud Service
 topic: Content Management
 feature: Search, Generative AI
@@ -12,19 +12,19 @@ last-substantial-update: 2024-05-09T00:00:00Z
 jira: KT-15486
 exl-id: 4da5eb7e-fd8c-4a27-a824-1fb72c95933e
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '85'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 検索とAdobe Firefly
+# 検索と Adobe Firefly
 
-空の検索結果を生産的なアセット生成エクスペリエンスに変換し、ワークフロー内で直接アセットを簡単に見つけてアップロードできるようにするAdobe Experience Manager AssetsをAdobe Fireflyと統合した方法を説明します。
+Adobe Firefly と統合された Adobe Experience Manager Assets で、空の検索結果を生産性の高いアセット生成エクスペリエンスに変換し、ユーザーがワークフロー内でアセットを簡単に直接見つけてアップロードできるようにする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429070/?learn=on)
 
 
 >[!TIP]
 >
-> AEM Assetsの検索結果インターフェイスで使用できるようにするには、Adobe Expressを生成する機能のAdobe組織のアセット使用権限にAEM Assets ユーザーが割り当てられている必要があります。
+> AEM Assets 検索結果インターフェイスでアセット生成機能を使用するには、AEM Assets ユーザーにアドビ組織の Adobe Express の使用権限を割り当てる必要があります。

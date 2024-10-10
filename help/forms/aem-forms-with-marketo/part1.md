@@ -12,9 +12,9 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
 source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '352'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 

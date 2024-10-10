@@ -1,6 +1,6 @@
 ---
-title: サードパーティアーティファクトのインストール – 公開 Maven リポジトリでは使用できません
-description: AEM プロジェクトをビルドしてデプロイする際に、公開 Maven リポジトリーで使用できないサードパーティ製アーティファクトをインストールする方法について説明します。
+title: サードパーティアーティファクトのインストール - 公開 Maven リポジトリでは入手できないもの
+description: AEM プロジェクトを構築およびデプロイする際に、*公開 Maven リポジトリでは入手できない* サードパーティアーティファクトをインストールする方法について説明します。
 version: 6.5, Cloud Service
 feature: OSGI
 topic: Development
@@ -12,58 +12,58 @@ last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
 source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1569'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# サードパーティアーティファクトのインストール – 公開 Maven リポジトリでは使用できません
+# サードパーティアーティファクトのインストール - 公開 Maven リポジトリでは入手できないもの
 
-AEM プロジェクトをビルドしてデプロイする際に、*公開されている Maven リポジトリでは使用できない* サードパーティアーティファクトをインストールする方法を説明します。
+AEM プロジェクトを構築およびデプロイする際に、*公開 Maven リポジトリでは入手できない*&#x200B;サードパーティアーティファクトをインストールする方法について説明します。
 
-**サードパーティアーティファクト** は次のようになります。
+**サードパーティアーティファクト**&#x200B;に該当するのは、以下のようなものです。
 
-- [OSGi バンドル ](https://www.osgi.org/resources/architecture/): OSGi バンドルは、Java クラス、リソース、およびバンドルとその依存関係を説明するマニフェストを含む Java™ アーカイブファイルです。
-- [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html):Java クラスとリソースを含む Java™ アーカイブファイル。
-- [ パッケージ ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：パッケージは、リポジトリコンテンツをファイルシステムのシリアル化形式で含む zip ファイルです。
+- [OSGi バンドル](https://www.osgi.org/resources/architecture/)：OSGi バンドルは、Java クラス、リソースおよびバンドルとその依存関係を記述するマニフェストを含む Java™ アーカイブファイルです。
+- [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)：Java クラスとリソースを含む Java™ アーカイブファイル。
+- [パッケージ](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：パッケージは、ファイルシステムのシリアル化形式でリポジトリコンテンツを含む zip ファイルです。
 
 ## 標準シナリオ
 
-通常は、公開 Maven リポジトリーに、AEM プロジェクトの `pom.xml` ファイルの依存関係として *利用可能* サードパーティバンドルのパッケージをインストールします。
+通常は、AEM プロジェクトの `pom.xml` ファイルの依存関係として、公開 Maven リポジトリで&#x200B;*入手可能*&#x200B;なサードパーティのバンドルパッケージをインストールします。
 
 例：
 
-- [AEM WCM コアコンポーネント ](https://github.com/adobe/aem-core-wcm-components) **bundle** が、依存関係として [WKND プロジェクト ](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml` ファイルに追加されます。 ここでは、AEM ランタイムによって提供されるAEM WCM コアコンポーネントバンドルとして `provided` スコープが使用されます。 バンドルがAEM ランタイムによって提供されない場合は、`compile` スコープを使用します。これはデフォルトのスコープです。
+- [AEM WCM コアコンポーネント](https://github.com/adobe/aem-core-wcm-components)**バンドル**&#x200B;は、[WKND プロジェクトの](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml` ファイルに依存関係として追加されます。ここでは、AEM WCM コアコンポーネントバンドルが AEM ランタイムによって提供されるので、`provided` 範囲が使用されます。バンドルが AEM ランタイムによって提供されない場合は、`compile` 範囲を使用します。これがデフォルトの範囲になります。
 
-- [WKND Shared](https://github.com/adobe/aem-guides-wknd-shared) **package** が [WKND プロジェクトの ](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L767-L773) `pom.xml` ファイルに依存関係として追加されます。
+- [WKND 共有](https://github.com/adobe/aem-guides-wknd-shared)**パッケージ**&#x200B;は、[WKND プロジェクトの](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L767-L773) `pom.xml` ファイルに依存関係として追加されます。
 
 
 
 ## まれなシナリオ
 
-AEM プロジェクトを構築およびデプロイする際に、サードパーティのバンドルや jar またはパッケージ **使用できません** を {Maven Central リポジトリー [ または ](https://mvnrepository.com/)4}Adobeの公開リポジトリー ](https://repo.adobe.com/index.html) にインストールする必要が生じる場合があります。[
+場合によっては、AEM プロジェクトを構築およびデプロイする際に、[Maven Central リポジトリ](https://mvnrepository.com/)または[アドビの公開リポジトリ](https://repo.adobe.com/index.html)で&#x200B;**入手できない**&#x200B;サードパーティのバンドル、jar、パッケージをインストールする必要が生じることがあります。
 
-その理由は次のとおりです。
+理由は、以下が考えられます。
 
-- バンドルまたはパッケージは、内部チームまたはサードパーティベンダーによって提供され、_公開 Maven リポジトリでは使用できません_。
+- バンドルまたはパッケージは内部チームまたはサードパーティベンダーによって提供され、_公開 Maven リポジトリでは入手できない_。
 
-- Java™ jar ファイル _OSGi バンドルではありません_ は、公開 Maven リポジトリで使用できる場合とできない場合があります。
+- Java™ jar ファイルは _OSGi バンドルではない_&#x200B;ので、公開 Maven リポジトリで使用できる場合とできない場合がある。
 
-- 公開 Maven リポジトリーで入手可能なサードパーティパッケージの最新バージョンでまだリリースされていない機能が必要です。 ローカルでビルドされた RELEASE バージョンまたは SNAPSHOT バージョンをインストールすることにしました。
+- 公開 Maven リポジトリで入手可能なサードパーティパッケージの最新バージョンでまだリリースされていない機能が必要。ローカルで構築されたリリースバージョンまたはスナップショットバージョンをインストールすることにした。
 
 ## 前提条件
 
-このチュートリアルに従うには、次が必要です。
+このチュートリアルに従うには、以下が必要です。
 
-- [ ローカル AEM開発環境 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) または [ 迅速な開発環境（RDE） ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview) のセットアップ
+- [ローカル AEM 開発環境](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)または[高速開発環境（RDE）](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)の設定。
 
-- [AEM WKND プロジェクト ](https://github.com/adobe/aem-guides-wknd)_サードパーティのバンドル、jar またはパッケージを追加し_ 変更内容を確認します。
+- _サードパーティのバンドル、jar、またはパッケージを追加_&#x200B;し、変更を確認するための [AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)。
 
 ## 設定
 
-- AEM 6.X、AEM as a Cloud Service（AEMCS）ローカル開発環境、RDE 環境をセットアップします。
+- AEM 6.X または AEM as a Cloud Service（AEMCS）のローカル開発環境または RDE 環境を設定します。
 
 - AEM WKND プロジェクトのクローンを作成してデプロイします。
 
@@ -77,29 +77,29 @@ AEM プロジェクトを構築およびデプロイする際に、サードパ�
 
 ## AEM プロジェクトへのサードパーティバンドルのインストール{#install-third-party-bundle}
 
-_公開 Maven リポジトリでは利用できない_ デモ OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip) をAEM WKND プロジェクトにインストールして使用します。
+_公開 Maven リポジトリでは入手できない_&#x200B;デモ OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip) を AEM WKND プロジェクトにインストールおよび使用しましょう。
 
-**my-example-bundle** は OSGi サービス `HelloWorldService` 書き出し、その `sayHello()` メソッドはメッセージ `Hello Earth!` 返します。
+**my-example-bundle** は `HelloWorldService` OSGi サービスを書き出し、その `sayHello()` メソッドは `Hello Earth!` メッセージを返します。
 
-詳しくは、[my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip) ファイルの README.md ファイルを参照してください。
+詳しくは、[my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip) ファイル内の README.md ファイルを参照してください。
 
-### モジュールにバンドル `all` 追加
+### `all` モジュールへのバンドルの追加
 
-最初の手順では、`my-example-bundle` をAEM WKND プロジェクトの `all` モジュールに追加します。
+最初の手順では、`my-example-bundle` を AEM WKND プロジェクトの `all` モジュールに追加します。
 
-- [my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip) ファイルをダウンロードして解凍します。
+- [my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip) ファイルをダウンロードして抽出します。
 
-- AEM WKND プロジェクトの `all` モジュールで、`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリ構造を作成します。 `/all/src/main/content` ディレクトリが存在します。`jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリを作成するだけで済みます。
+- AEM WKND プロジェクトの `all` モジュールで、`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリ構造を作成します。`/all/src/main/content` ディレクトリが存在するので、`jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリのみを作成する必要があります。
 
-- 抽出された `target` ディレクトリから上記の `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリに `my-example-bundle-1.0-SNAPSHOT.jar` ファイルをコピーします。
+- 抽出した `target` ディレクトリから `my-example-bundle-1.0-SNAPSHOT.jar` ファイルを上記の `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリにコピーします。
 
-  ![all module」のサードパーティバンドル ](./assets/install-third-party-articafcts/3rd-party-bundle-all-module.png)
+  ![all モジュールのサードパーティバンドル](./assets/install-third-party-articafcts/3rd-party-bundle-all-module.png)
 
-### バンドルのサービスを使用
+### バンドルからのサービスの使用
 
-AEM WKND プロジェクトの `my-example-bundle` から `HelloWorldService` OSGi サービスを使用します。
+AEM WKND プロジェクトの `my-example-bundle` から `HelloWorldService` OSGi サービスを使用しましょう。
 
-- AEM WKND プロジェクトの `core` モジュールで、`SayHello.java` Sling サーブレット @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` を作成します。
+- AEM WKND プロジェクトの `core` モジュールで、`core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` に `SayHello.java` Sling サーブレットを作成します。
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -138,7 +138,7 @@ AEM WKND プロジェクトの `my-example-bundle` から `HelloWorldService` OS
   }
   ```
 
-- AEM WKND プロジェクトのルート `pom.xml` ファイルで、`my-example-bundle` を依存関係として追加します。
+- AEM WKND プロジェクトのルート `pom.xml` ファイルに、依存関係として `my-example-bundle` を追加します。
 
   ```xml
   ...
@@ -153,12 +153,12 @@ AEM WKND プロジェクトの `my-example-bundle` から `HelloWorldService` OS
   ...
   ```
 
-  ここで：
-   - `system` スコープは、公開 Maven リポジトリで依存関係を検索すべきでないことを示します。
-   - `systemPath` は、AEM WKND プロジェクトの `all` モジュールの `my-example-bundle` ファイルへのパスです。
+  この場合：
+   - `system` 範囲は、依存関係を公開 Maven リポジトリで検索しないことを示します。
+   - `systemPath` は、AEM WKND プロジェクトの `all` モジュール内の `my-example-bundle` ファイルへのパスです。
    - `${maven.multiModuleProjectDirectory}` は、マルチモジュールプロジェクトのルートディレクトリを指す Maven プロパティです。
 
-- AEM WKND プロジェクトの `core` モジュールの `core/pom.xml` ファイルで、`my-example-bundle` を依存関係として追加します。
+- AEM WKND プロジェクトの `core` モジュールの `core/pom.xml` ファイルに、依存関係として `my-example-bundle` を追加します。
 
   ```xml
   ...
@@ -170,55 +170,55 @@ AEM WKND プロジェクトの `my-example-bundle` から `HelloWorldService` OS
   ...
   ```
 
-- 次のコマンドを使用して、AEM WKND プロジェクトをビルドしてデプロイします。
+- 次のコマンドを使用して、AEM WKND プロジェクトを構築およびデプロイします。
 
   ```
   $ mvn clean install -PautoInstallPackage
   ```
 
-- ブラウザーで `http://localhost:4502/bin/sayhello` された URL にアクセスして、`SayHello` サーブレットが期待どおりに動作することを確認します。
+- ブラウザーで URL `http://localhost:4502/bin/sayhello` にアクセスして、`SayHello` サーブレットが期待どおりに動作することを確認します。
 
-- 上記の変更をAEM WKND プロジェクトのリポジトリにコミットします。 次に、Cloud Manager パイプラインを実行して、RDE またはAEM環境で変更を検証します。
+- 上記の変更を AEM WKND プロジェクトのリポジトリにコミットします。次に、Cloud Manager パイプラインを実行して、RDE または AEM 環境の変更を確認します。
 
-  ![SayHello サーブレット – バンドルサービスの検証 ](./assets/install-third-party-articafcts/verify-sayhello-servlet-bundle-service.png)
+  ![SayHello サーブレット - バンドルサービスの検証](./assets/install-third-party-articafcts/verify-sayhello-servlet-bundle-service.png)
 
-AEM WKND プロジェクトの [tutorial/install-3rd-party-bundle](https://github.com/adobe/aem-guides-wknd/compare/main...tutorial/install-3rd-party-bundle) ブランチには、参照用に上記の変更があります。
+AEM WKND プロジェクトの [tutorial/install-3rd-party-bundle](https://github.com/adobe/aem-guides-wknd/compare/main...tutorial/install-3rd-party-bundle) 分岐には、参照用に上記の変更が含まれます。
 
 ### 主な習得事項{#key-learnings-bundle}
 
-公開 Maven リポジトリで利用できない OSGi バンドルは、次の手順に従ってAEM プロジェクトにインストールできます。
+公開 Maven リポジトリで使用できない OSGi バンドルは、次の手順に従って AEM プロジェクトにインストールできます。
 
-- OSGi バンドルを `all` モジュールの `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` ディレクトリにコピーします。 この手順は、バンドルをパッケージ化してAEM インスタンスにデプロイするために必要です。
+- OSGi バンドルを `all` モジュールの `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` ディレクトリにコピーします。この手順は、バンドルをパッケージ化して AEM インスタンスにデプロイするために必要です。
 
-- ルートおよびコアモジュールの `pom.xml` ファイルを更新し、`system` スコープを持つ依存関係として OSGi バンドルを追加し、バンドルファイルを指すよ `systemPath` にします。 この手順は、プロジェクトをコンパイルするために必要です。
+- ルートおよびコアモジュールの `pom.xml` ファイルを更新して、`system` 範囲と `systemPath` がバンドルファイルを指す依存関係として OSGi バンドルを追加します。この手順は、プロジェクトをコンパイルするために必要です。
 
-## AEM プロジェクトへのサードパーティ JAR のインストール
+## AEM プロジェクトへのサードパーティ jar のインストール
 
 この例では、`my-example-jar` は OSGi バンドルではなく、Java jar ファイルです。
 
-_公開されている Maven リポジトリーでは利用できない ](./assets/install-third-party-articafcts/my-example-jar.zip) デモ [my-example-jar_ をAEM WKND プロジェクトにインストールして使用しましょう。
+_公開 Maven リポジトリでは入手できない_&#x200B;デモ用の [my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip) を AEM WKND プロジェクトにインストールおよび使用してみましょう。
 
-**my-example-jar** は Java jar ファイルで、メッセージを返す `sayHello()` メソッドを持つ `MyHelloWorldService` クラス `Hello World!` 含みます。
+**my-example-jar** は、`Hello World!` メッセージを返す `sayHello()` メソッドを持つ `MyHelloWorldService` クラスを含む Java jar ファイルです。
 
-詳しくは、[my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip) ファイルの README.md ファイルを参照してください。
+詳しくは、[my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip) ファイル内の README.md ファイルを参照してください。
 
-### モジュールへの jar`all` 追加
+### `all` モジュールへの jar の追加
 
-最初の手順では、`my-example-jar` をAEM WKND プロジェクトの `all` モジュールに追加します。
+最初の手順では、`my-example-jar` を AEM WKND プロジェクトの `all` モジュールに追加します。
 
 - [my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip) ファイルをダウンロードして抽出します。
 
 - AEM WKND プロジェクトの `all` モジュールで、`all/resource/jar` ディレクトリ構造を作成します。
 
-- 抽出された `target` ディレクトリから上記の `all/resource/jar` ディレクトリに `my-example-jar-1.0-SNAPSHOT.jar` ファイルをコピーします。
+- 抽出した `target` ディレクトリから `my-example-jar-1.0-SNAPSHOT.jar` ファイルを上記の `all/resource/jar` ディレクトリにコピーします。
 
-  ![ すべてのモジュールのサードパーティ – jar](./assets/install-third-party-articafcts/3rd-party-JAR-all-module.png)
+  ![all モジュールのサードパーティ jar](./assets/install-third-party-articafcts/3rd-party-JAR-all-module.png)
 
 ### jar からのサービスの使用
 
-AEM WKND プロジェクトで `my-example-jar` の `MyHelloWorldService` を使用します。
+AEM WKND プロジェクトの `my-example-jar` から `MyHelloWorldService` を使用しましょう。
 
-- AEM WKND プロジェクトの `core` モジュールで、`SayHello.java` Sling サーブレット @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` を作成します。
+- AEM WKND プロジェクトの `core` モジュールで、`core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` に `SayHello.java` Sling サーブレットを作成します。
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -258,7 +258,7 @@ AEM WKND プロジェクトで `my-example-jar` の `MyHelloWorldService` を使
   }    
   ```
 
-- AEM WKND プロジェクトのルート `pom.xml` ファイルで、`my-example-jar` を依存関係として追加します。
+- AEM WKND プロジェクトのルート `pom.xml` ファイルに、依存関係として `my-example-jar` を追加します。
 
   ```xml
   ...
@@ -273,9 +273,9 @@ AEM WKND プロジェクトで `my-example-jar` の `MyHelloWorldService` を使
   ...
   ```
 
-  ここで：
-   - `system` スコープは、公開 Maven リポジトリで依存関係を検索すべきでないことを示します。
-   - `systemPath` は、AEM WKND プロジェクトの `all` モジュールの `my-example-jar` ファイルへのパスです。
+  この場合：
+   - `system` 範囲は、依存関係を公開 Maven リポジトリで検索しないことを示します。
+   - `systemPath` は、AEM WKND プロジェクトの `all` モジュール内の `my-example-jar` ファイルへのパスです。
    - `${maven.multiModuleProjectDirectory}` は、マルチモジュールプロジェクトのルートディレクトリを指す Maven プロパティです。
 
 - AEM WKND プロジェクトの `core` モジュールの `core/pom.xml` ファイルで、次の 2 つの変更を行います。
@@ -292,7 +292,7 @@ AEM WKND プロジェクトで `my-example-jar` の `MyHelloWorldService` を使
      ...
      ```
 
-   - 設定 `bnd-maven-plugin` 更新して、作成中の OSGi バンドル（aem-guides-wknd.core）に `my-example-jar` を含めます。
+   - `bnd-maven-plugin` 設定を更新して、構築中の OSGi バンドル（aem-guides-wknd.core）に `my-example-jar` を含めます。
 
      ```xml
      ...
@@ -319,87 +319,87 @@ AEM WKND プロジェクトで `my-example-jar` の `MyHelloWorldService` を使
      ...
      ```
 
-- 次のコマンドを使用して、AEM WKND プロジェクトをビルドしてデプロイします。
+- 次のコマンドを使用して、AEM WKND プロジェクトを構築およびデプロイします。
 
   ```
   $ mvn clean install -PautoInstallPackage
   ```
 
-- ブラウザーで `http://localhost:4502/bin/sayhello` された URL にアクセスして、`SayHello` サーブレットが期待どおりに動作することを確認します。
+- ブラウザーで URL `http://localhost:4502/bin/sayhello` にアクセスして、`SayHello` サーブレットが期待どおりに動作することを確認します。
 
-- 上記の変更をAEM WKND プロジェクトのリポジトリにコミットします。 次に、Cloud Manager パイプラインを実行して、RDE またはAEM環境で変更を検証します。
+- 上記の変更を AEM WKND プロジェクトのリポジトリにコミットします。次に、Cloud Manager パイプラインを実行して、RDE または AEM 環境の変更を確認します。
 
-  ![SayHello サーブレットの検証 – JAR サービス ](./assets/install-third-party-articafcts/verify-sayhello-servlet-jar-service.png)
+  ![SayHello サーブレット - JAR サービスの検証](./assets/install-third-party-articafcts/verify-sayhello-servlet-jar-service.png)
 
-AEM WKND プロジェクトの [tutorial/install-3rd-party-jar](https://github.com/adobe/aem-guides-wknd/compare/main...tutorial/install-3rd-party-jar) ブランチには、参照用に上記の変更があります。
+AEM WKND プロジェクトの [tutorial/install-3rd-party-jar](https://github.com/adobe/aem-guides-wknd/compare/main...tutorial/install-3rd-party-jar) 分岐には、参照用に上記の変更が含まれます。
 
-Java jar ファイル _公開 Maven リポジトリーでは使用可能だが OSGi バンドルではない_ が含まれているシナリオでは、`<dependency>` の `system` スコープと `systemPath` 要素を除き、上記の手順に従うことができます。
+Java jar ファイルが&#x200B;_公開 Maven リポジトリで使用可能であるが、OSGi バンドルではない_&#x200B;シナリオでは、`<dependency>` の `system` 範囲と `systemPath` 要素が必須ではないことを除いて、上記の手順に従うことができます。
 
 ### 主な習得事項{#key-learnings-jar}
 
-OSGi バンドルではなく Java JAR で、公開 Maven リポジトリで使用できる場合とできない場合は、次の手順に従ってAEM プロジェクトにインストールできます。
+OSGi バンドルではなく、公開 Maven リポジトリで使用できる場合と使用できない場合の Java jar は、次の手順に従って AEM プロジェクトにインストールできます。
 
-- コアモジュールの `pom.xml` ファイルの `bnd-maven-plugin` 設定を更新して、作成中の OSGi バンドルのインラインリソースとして Java jar を含めます。
+- コアモジュールの `pom.xml` ファイル内の `bnd-maven-plugin` 設定を更新して、構築中の OSGi バンドルにインラインリソースとして Java jar を含めます。
 
 次の手順は、Java jar が公開 Maven リポジトリで使用できない場合にのみ必要です。
 
 - Java jar を `all` モジュールの `resource/jar` ディレクトリにコピーします。
 
-- ルートおよびコアモジュールの `pom.xml` ファイルを更新し、`system` スコープを持つ依存関係として Java jar を追加し、jar ファイルを指すよ `systemPath` にします。
+- ルートおよびコアモジュールの `pom.xml` ファイルを更新して、`system` 範囲と `systemPath` が jar ファイルを指す依存関係として Java jar を追加します。
 
 ## AEM プロジェクトへのサードパーティパッケージのインストール
 
-main ブランチからローカルに作成された [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/)_SNAPSHOT_ バージョンをインストールします。
+メイン分岐からローカルに構築された [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) _スナップショット_&#x200B;バージョンをインストールしましょう。
 
-これは、公開 Maven リポジトリでは使用できないAEM パッケージをインストールする手順を示すためにのみ行われます。
+これは、公開 Maven リポジトリでは使用できない AEM パッケージをインストールする手順を示す目的でのみ行います。
 
-ACS AEM Commons パッケージは、公開されている Maven リポジトリで入手できます。 詳しくは、[ACS AEM Commons のAEM Maven プロジェクトへの追加 ](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) を参照して、AEM プロジェクトに追加します。
+ACS AEM Commons パッケージは、公開 Maven リポジトリで入手できます。AEM プロジェクトに追加する方法について詳しくは、[AEM Maven プロジェクトへの ACS AEM Commons の追加](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)を参照してください。
 
-### パッケージをモジュール `all` 追加
+### `all` モジュールへのパッケージの追加
 
-最初の手順では、パッケージをAEM WKND プロジェクトの `all` モジュールに追加します。
+最初の手順では、パッケージを AEM WKND プロジェクトの `all` モジュールに追加します。
 
-- POM ファイルから ACS AEM Commons リリースの依存関係をコメントにするか削除します。 依存関係を特定するには、[AEM Maven プロジェクトへの ACS AEM Commons の追加 ](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) を参照してください。
+- POM ファイルから ACS AEM Commons リリース依存関係をコメント化または削除します。依存関係を特定する方法について詳しくは、[AEM Maven プロジェクトへの ACS AEM Commons の追加](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)を参照してください。
 
-- [ACS AEM Commons リポジトリ ](https://github.com/Adobe-Consulting-Services/acs-aem-commons) の `master` ブランチをローカルマシンにクローンします。
+- [ACS AEM Commons リポジトリ](https://github.com/Adobe-Consulting-Services/acs-aem-commons)の `master` 分岐をローカルマシンにクローン作成します。
 
-- 次のコマンドを使用して、ACS AEM Commons SNAPSHOT バージョンをビルドします。
+- 次のコマンドを使用して、ACS AEM Commons スナップショットバージョンを構築します。
 
   ```
   $mvn clean install
   ```
 
-- ローカルにビルドされたパッケージは@`all/target` にあり、2 つの.zip ファイルがあります。1 つは `-cloud` で終わり、もう 1 つはAEM as a Cloud Service用で、もう 1 つはAEM 6.X 用です。
+- ローカルに構築されたパッケージは `all/target` にあり、2 つの .zip ファイルがあります。`-cloud` で終了するファイルは AEM as a Cloud Service 用で、もう 1 つは AEM 6.X 用です。
 
-- AEM WKND プロジェクトの `all` モジュールで、`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリ構造を作成します。 `/all/src/main/content` ディレクトリが存在します。`jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリを作成するだけで済みます。
+- AEM WKND プロジェクトの `all` モジュールで、`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリ構造を作成します。`/all/src/main/content` ディレクトリが存在するので、`jcr_root/apps/wknd-vendor-packages/container/install` ディレクトリのみを作成する必要があります。
 
-- ローカルで作成されたパッケージ（.zip）ファイルを `/all/src/main/content/jcr_root/apps/mysite-vendor-packages/container/install` ディレクトリにコピーします。
+- ローカルに構築されたパッケージ（.zip）ファイルを `/all/src/main/content/jcr_root/apps/mysite-vendor-packages/container/install` ディレクトリにコピーします。
 
-- 次のコマンドを使用して、AEM WKND プロジェクトをビルドしてデプロイします。
+- 次のコマンドを使用して、AEM WKND プロジェクトを構築およびデプロイします。
 
   ```
   $ mvn clean install -PautoInstallPackage
   ```
 
-- インストールした ACS AEM Commons パッケージを確認します。
+- インストールされた ACS AEM Commons パッケージを確認します。
 
-   - CRX パッケージマネージャー@ `http://localhost:4502/crx/packmgr/index.jsp`
+   - CRX パッケージマネージャー（`http://localhost:4502/crx/packmgr/index.jsp`）
 
-     ![ACS AEM Commons SNAPSHOT バージョンパッケージ ](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-package.png)
+     ![ACS AEM Commons スナップショットバージョンパッケージ](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-package.png)
 
-   - OSGi コンソール @ `http://localhost:4502/system/console/bundles`
+   - OSGi コンソール（`http://localhost:4502/system/console/bundles`）
 
-     ![ACS AEM Commons SNAPSHOT バージョンバンドル ](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-bundle.png)
+     ![ACS AEM Commons スナップショットバージョンバンドル](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-bundle.png)
 
-- 上記の変更をAEM WKND プロジェクトのリポジトリにコミットします。 次に、Cloud Manager パイプラインを実行して、RDE またはAEM環境で変更を検証します。
+- 上記の変更を AEM WKND プロジェクトのリポジトリにコミットします。次に、Cloud Manager パイプラインを実行して、RDE または AEM 環境の変更を確認します。
 
 ### 主な習得事項{#key-learnings-package}
 
-公開 Maven リポジトリーで入手できないAEM パッケージは、次の手順に従ってAEM プロジェクトにインストールできます。
+公開 Maven リポジトリで使用できない AEM パッケージは、次の手順に従って AEM プロジェクトにインストールできます。
 
-- パッケージを `all` モジュールの `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` ディレクトリにコピーします。 この手順は、パッケージをパッケージ化してAEM インスタンスにデプロイするために必要です。
+- パッケージを `all` モジュールの `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` ディレクトリにコピーします。この手順は、パッケージをパッケージ化して AEM インスタンスにデプロイするのに必要です。
 
 
 ## 概要
 
-このチュートリアルでは、AEM プロジェクトの構築およびデプロイ時に、パブリック Maven リポジトリーでは使用できないサードパーティのアーティファクト（バンドル、Java jar およびパッケージ）をインストールする方法を学びました。
+このチュートリアルでは、AEM プロジェクトを構築およびデプロイする際に、公開 Maven リポジトリでは使用できないサードパーティアーティファクト（バンドル、Java jar およびパッケージ）をインストールする方法ついて説明しました。

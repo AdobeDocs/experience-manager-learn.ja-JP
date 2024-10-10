@@ -1,6 +1,6 @@
 ---
-title: Github.com webhook の検証
-description: App Builder アクションでGithub.comからの Webhook リクエストを検証する方法を説明します。
+title: Github.com Webhook の検証
+description: App Builder アクションで Github.com からの Webhook リクエストを検証する方法について説明します。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,21 +10,21 @@ jira: KT-15714
 last-substantial-update: 2023-06-06T00:00:00Z
 exl-id: 5492dc7b-f034-4a7f-924d-79e083349e26
 source-git-commit: 8f64864658e521446a91bb4c6475361d22385dc1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '363'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Github.com webhook の検証
+# Github.com Webhook の検証
 
-Webhook を使用すると、GitHub.comの特定のイベントを購読する統合を作成または設定できます。 これらのイベントのいずれかがトリガーされると、GitHub は HTTP POSTペイロードを Webhook の設定済み URL に送信します。 ただし、セキュリティ上の理由から、受信する Webhook リクエストが実際には悪意のあるアクターからではなく、GitHub からのものであることを確認することが重要です。 このチュートリアルでは、共有暗号鍵を使用して、AdobeのApp Builder アクションでGitHub.com webhook リクエストを検証する手順を説明します。
+Webhook を使用すると、GitHub.com の特定のイベントを購読する統合を作成または設定できます。これらのイベントのいずれかがトリガーされると、GitHub は HTTP POST ペイロードを Webhook の設定済み URL に送信します。ただし、セキュリティ上の理由から、受信する Webhook リクエストが実際には悪意のあるアクターからではなく、GitHub からのものであることを確認することが重要です。このチュートリアルでは、共有暗号鍵を使用して、Adobe App Builder アクションで GitHub.com Webhook リクエストを検証する手順を説明します。
 
-## AppBuilder での Github シークレットの設定
+## AppBuilder での GitHub 秘密鍵の設定
 
-1. **ファイルにシークレット `.env` 追加：**
+1. **`.env` ファイルへの秘密鍵の追加：**
 
-   App Builder プロジェクトの `.env` ファイルに、GitHub.com webhook シークレットのカスタムキーを追加します。
+   App Builder プロジェクトの `.env` ファイルに、GitHub.com Webhook 秘密鍵のカスタムキーを追加します。
 
    ```env
    # Specify your secrets here
@@ -33,13 +33,13 @@ Webhook を使用すると、GitHub.comの特定のイベントを購読する�
    GITHUB_SECRET=my-github-webhook-secret-1234!
    ```
 
-2. **ファイル `ext.config.yaml` 更新：**
+2. **`ext.config.yaml` ファイルの更新：**
 
    GitHub.com Webhook リクエストを検証するには、`ext.config.yaml` ファイルを更新する必要があります。
 
-   - GitHub.comから生のリクエスト本文を受け取るには、AppBuilder アクション `web` の設定を `raw` に設定します。
-   - AppBuilder アクション設定の `inputs` の下で、`GITHUB_SECRET` キーを追加し、秘密鍵を含む `.env` フィールドにマッピングします。 このキーの値は、先頭に `$` が付いた `.env` フィールド名です。
-   - AppBuilder アクション設定の `require-adobe-auth` 注釈を `false` に設定して、Adobe認証を必要とせずにアクションを呼び出せるようにします。
+   - GitHub.com から生のリクエスト本文を受け取るには、AppBuilder アクション `web` の設定を `raw` に設定します。
+   - AppBuilder アクション設定の `inputs` の下で、`GITHUB_SECRET` キーを追加し、秘密鍵を含む「`.env`」フィールドにマッピングします。このキーの値は、先頭に `$` が付いた `.env` フィールド名です。
+   - AppBuilder アクション設定の `require-adobe-auth` 注釈を `false` に設定して、アドビ認証を必要とせずにアクションを呼び出せるようにします。
 
    結果の `ext.config.yaml` ファイルは次のようになります。
 
@@ -69,7 +69,7 @@ Webhook を使用すると、GitHub.comの特定のイベントを購読する�
 
 ## AppBuilder アクションへの検証コードの追加
 
-次に、以下に提供されているJavaScript コード（[GitHub.com のドキュメント ](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example) からコピーしたもの）を AppBuilder アクションに追加します。 必ず `verifySignature` 関数を書き出してください。
+次に、以下に提供されている JavaScript コード（[GitHub.com のドキュメント](https://docs.github.com/ja/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example)からコピーしたもの）を AppBuilder アクションに追加します。必ず `verifySignature` 関数を書き出すようにしてください。
 
 ```javascript
 // src/dx-excshell-1/actions/generic/github-webhook-verification.js
@@ -124,7 +124,7 @@ module.exports = { verifySignature };
 
 ## AppBuilder アクションでの検証の実装
 
-次に、リクエストヘッダーの署名を `verifySignature` 関数によって生成された署名と比較して、リクエストが GitHub からのものであることを確認します。
+次に、リクエストヘッダーの署名と `verifySignature` 関数によって生成された署名を比較して、リクエストが GitHub からのものであることを確認します。
 
 AppBuilder アクションの `index.js` で、`main` 関数に次のコードを追加します。
 
@@ -208,10 +208,10 @@ async function main(params) {
 
 ## GitHub での Webhook の設定
 
-GitHub.comに戻り、webhook を作成する際に、GitHub.comに同じシークレット値を指定します。 `.env` ファイルの `GITHUB_SECRET` キーで指定されたシークレット値を使用します。
+GitHub.com に戻り、Webhook を作成する際に、GitHub.com に同じ秘密鍵の値を指定します。`.env` ファイルの `GITHUB_SECRET` キーで指定された秘密鍵の値を使用します。
 
-GitHub.comで、リポジトリ設定に移動し、webhook を編集します。 Webhook 設定で、「`Secret`」フィールドにシークレット値を指定します。 下部の __Webhook を更新__ をクリックして、変更を保存します。
+GitHub.com で、リポジトリ設定に移動し、Webhook を編集します。Webhook 設定で、「`Secret`」フィールドに秘密鍵の値を指定します。下部にある「__Webhook を更新__」をクリックして、変更を保存します。
 
-![Github Webhook 秘密鍵 ](./assets/github-webhook-verification/github-webhook-settings.png)
+![GitHub Webhook 秘密鍵](./assets/github-webhook-verification/github-webhook-settings.png)
 
-次の手順に従うと、App Builderのアクションで、受信 Webhook リクエストが実際にGitHub.com Webhook からのものであることを安全に確認できます。
+次の手順に従うと、App Builder のアクションで、受信 Webhook リクエストが実際に GitHub.com Webhook からのものであることを安全に確認できます。

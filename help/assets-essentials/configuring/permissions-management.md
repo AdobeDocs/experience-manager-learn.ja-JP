@@ -13,14 +13,14 @@ doc-type: Feature Video
 exl-id: d4d80678-e2e2-4e17-8ce5-6db8651ae59e
 duration: 428
 source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
 # 権限管理
 
-AEM Assetsの権限管理を使用して、組織はどのようにアセットへのアクセスを制御し、ブランドを保護し、コンプライアンスを確保できるかを説明します。
+AEM Assets の権限管理を使用して、組織がアセットへのアクセスを制御し、ブランドを保護し、コンプライアンスを確保する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)

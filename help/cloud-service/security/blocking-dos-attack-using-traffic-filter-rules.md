@@ -13,9 +13,9 @@ jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1947'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ AEM web サイトのデフォルトの DDoS 保護機能を説明します。
 - **ブロック：** Adobe CDN は、CDN PoP（ポイントオブプレゼンス）ごとに特定の IP アドレスからアドビが定義したレートを超える場合、接触チャネルへのトラフィックをブロックします。
 - **アラート：**&#x200B;トラフィックが特定のレートを超えた場合、アクションセンターは接触チャネルトラフィックスパイクのアラート通知を送信します。このアラートは、特定の CDN PoP へのトラフィックが IP アドレスごとの&#x200B;_アドビ定義_&#x200B;リクエストレートを超えると発生します。詳しくは、[トラフィックフィルタールールのアラート](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)を参照してください。
 
-これらの組み込み保護は、DDoS 攻撃のパフォーマンスへの影響を最小限に抑える、組織の能力のベースラインとして考える必要があります。Web サイトごとにパフォーマンス特性が異なり、Adobeが定義したレート制限に達する前にパフォーマンスが低下する可能性があるので、_customer configuration_ を使用してデフォルトの保護機能を拡張することをお勧めします。
+これらの組み込み保護は、DDoS 攻撃のパフォーマンスへの影響を最小限に抑える、組織の能力のベースラインとして考える必要があります。Web サイトごとにパフォーマンス特性が異なり、アドビが定義したレート制限に達する前にパフォーマンスが低下する可能性があるので、_顧客設定_&#x200B;を通じてデフォルトの保護を拡張することをお勧めします。
 
 DDoS 攻撃から web サイトを保護するために、顧客が実行できる追加の推奨対策をいくつか見てみましょう。
 
@@ -71,19 +71,19 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
 
 ## トラフィックパターンの分析 {#analyze-traffic}
 
-サイトが既に実稼働している場合は、CDN ログとAdobe提供のダッシュボードを使用してトラフィックパターンを分析できます。
+サイトが既に実稼働している場合は、CDN ログとアドビが提供するダッシュボードを使用して、トラフィックパターンを分析できます。
 
-- **CDN トラフィックダッシュボード**:CDN とオリジンリクエスト率、4xx と 5xx のエラー率、およびキャッシュされていないリクエストを使用してトラフィックに関するインサイトを提供します。 また、は、クライアント IP アドレスあたりの 1 秒あたりの最大 CND およびオリジンリクエスト数と、CDN 設定を最適化するためのより多くのインサイトを提供します。
+- **CDN トラフィックダッシュボード**：CDN および接触チャネルのリクエストレート、4xx および 5xx エラーレート、キャッシュされていないリクエストを介したトラフィックに関するインサイトを提供します。また、クライアント IP アドレスごとの 1 秒あたりの最大 CND および接触チャネルのリクエスト数と、CDN 設定を最適化する詳細なインサイトも提供します。
 
-- **CDN キャッシュヒット率**：キャッシュヒット率の合計と、リクエストの合計数（ヒット、合格、ミスのステータス別）に関するインサイトを提供します。 また、上位のヒット、合格およびミス URL も提供します。
+- **CDN キャッシュヒット率**：HIT、PASS、MISS のステータス別に、合計キャッシュヒット率とリクエストの合計数に関するインサイトを提供します。また、上位の HIT、PASS、MISS の URL も提供します。
 
-_次のいずれかのオプション_ を使用して、ダッシュボードツールを設定します。
+_次のいずれかのオプション_&#x200B;を使用して、ダッシュボードツールを設定します。
 
 ### ELK：ダッシュボードツールの設定
 
 アドビが提供する **Elasticsearch、Logstash、Kibana（ELK）**&#x200B;のダッシュボードツールを使用して、CDN ログを分析できます。このツールには、トラフィックパターンを視覚化するダッシュボードが含まれており、レート制限トラフィックフィルタールールの最適なしきい値を簡単に決定できます。
 
-- [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリを複製します。
+- [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリのクローンを作成します。
 - [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container)の手順に従ってツールを設定します。
 - 設定の一環として、`traffic-filter-rules-analysis-dashboard.ndjson` ファイルをインポートしてデータを視覚化します。_CDN トラフィック_ ダッシュボードには、CDN エッジとオリジンでの IP／POP ごとの最大リクエスト数を表示するビジュアライゼーションが含まれています。
 - [Cloud Manager](https://my.cloudmanager.adobe.com/) の&#x200B;_環境_&#x200B;カードから、AEMCS パブリッシュサービスの CDN ログをダウンロードします。
@@ -96,9 +96,9 @@ _次のいずれかのオプション_ を使用して、ダッシュボード�
 
 ### Splunk：ダッシュボードツールの設定
 
-[Splunk ログ転送を有効 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) にしている顧客は、新しいダッシュボードを作成して、トラフィックパターンを分析できます。
+[Splunk ログの転送が有効になっている場合は](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)、新しいダッシュボードを作成してトラフィックパターンを分析できます。
 
-Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析用の Splunk ダッシュボード ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) の手順に従います。
+Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis)の手順に従います。
 
 ### データの確認
 
@@ -131,7 +131,7 @@ ELK ダッシュボードと Splunk ダッシュボードでは、次のビジ�
 
 使用する倍数は、オーガニックトラフィック、キャンペーン、その他のイベントによるトラフィックの通常のスパイクの予想値によって異なります。5～10 の倍数が適切な場合があります。
 
-サイトがまだ公開されていない場合は、分析するデータがないので、レート制限トラフィックフィルタールールに設定する適切な値を経験に基づいて推測する必要があります。次に例を示します。
+サイトがまだ公開されていない場合は、分析するデータがないので、レート制限トラフィックフィルタールールに設定する適切な値を経験に基づいて推測する必要があります。例：
 
 | バリエーション | 値 |
 |------------------------------ |:-----------:|

@@ -11,30 +11,30 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-15508
 exl-id: 40617082-4d23-4c91-a016-2d947187052b
 source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '276'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # DocAssurance API の使用
 
-[DocAssurance サービス ](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) は、署名、認証、署名フィールドの追加、暗号化、復号化など、PDFドキュメントに対して様々なデジタル署名または暗号化処理を実行する機能を提供します。
-この記事では、API の使用を開始するための Java コードスニペットを提供します。コードスニペットはアクセストークンを利用します。 [ この記事では、アクセストークンの生成に必要な手順を説明します ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+[DocAssurance サービス](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance)は、署名、認証、署名フィールドの追加、暗号化、復号化など、PDF ドキュメントに対して様々なデジタル署名または暗号化処理を実行する機能を提供します。
+この記事では、API の使用を開始する Java コードスニペットを提供します。コードスニペットはアクセストークンを利用します。[この記事では、アクセストークンの生成に必要な手順を説明します](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)。
 
 
-<span class="preview"> この機能は、早期導入プログラムで利用できます。 公式メール ID からaem-forms-ea@adobe.comに書き込んで、早期導入プログラムに参加し、この機能へのアクセスをリクエストできます </span>
+<span class="preview">この機能は、早期導入プログラムで利用できます。早期導入プログラムに参加し、この機能の利用申請をするには、公式のメール ID で aem-forms-ea@adobe.com までメールを送信してください。</span>
 
 
 ## 前提条件
 
-* AEM Forms Cloud Serviceの使用経験
-* [Apache HTTP コンポーネント ](https://hc.apache.org/httpcomponents-client-4.5.x/) の使用経験
-* AEM FormsCloud Service環境へのアクセス
+* AEM Forms Cloud Service でのエクスペリエンス
+* [Apache HTTP コンポーネント](https://hc.apache.org/httpcomponents-client-4.5.x/)の使用経験
+* AEM Forms Cloud Service 環境へのアクセス
 
-## Inspect ドキュメント
+## ドキュメントの検査
 
-検査 API を使用して、特定のPDFドキュメントのセキュリティの種類を取得します。 次のコードスニペットは、作業を開始する際に役立ちます。
+検査 API を使用して、特定の PDF ドキュメントのセキュリティの種類を取得します。次のコードスニペットは、作業を開始する際に役立ちます。
 
 ```java
 ...
@@ -65,9 +65,9 @@ catch (Exception e)
 ```
 
 
-## ドキュメントを暗号化
+## ドキュメントの暗号化
 
-暗号化 API を使用して、パスワードで PDF ドキュメントを暗号化します。 次のサンプルコードスニペットは、特定のPDFを暗号化します。
+暗号化 API を使用して、パスワードで PDF ドキュメントを暗号化します。次のサンプルコードスニペットは、特定の PDF を暗号化します。
 
 ```java
 ...
@@ -104,7 +104,7 @@ catch (Exception e)
 
 ## PDF への署名フィールドの追加
 
-signfield API を使用して、指定されたPDFに署名を追加します。 次のサンプルコードスニペットでは、ドキュメントの 4 ページ目に SignHere という署名フィールドを追加しています
+署名フィールド API を使用して、指定された PDF に署名を追加します。次のサンプルコードスニペットでは、ドキュメントの 4 ページ目に SignHere という署名フィールドを追加しています。
 
 ```java
 ...
@@ -122,7 +122,7 @@ builder.addTextBody("rectangle", rectangle, ContentType.APPLICATION_JSON);
 
 ## 暗号化を削除
 
-暗号化 API に対してPUT処理を使用して、指定されたPDFから暗号化を削除します。 開始するには、次の Java コードスニペットが役立ちます。
+暗号化 API に対して PUT 操作を使用し、指定された PDF から暗号化を削除します。開始するには、次の Java コードスニペットが役立ちます。
 
 ```java
 ...
@@ -157,6 +157,6 @@ if (response.getStatusLine().getStatusCode() == 200) {
 ...
 ```
 
-### Postmanコレクション
+### Postman コレクション
 
-API のPostman コレクションは、[ テスト目的でここからダウンロード ](assets/DocAssuranceAPI.postman_collection.json) できます。 API を呼び出すには、基本認証またはベアラートークン タイプの認証を使用できます。
+API の Postman コレクションは、[テスト目的でここからダウンロード](assets/DocAssuranceAPI.postman_collection.json)できます。API を呼び出すには、基本認証またはベアラートークンタイプの認証を使用できます。

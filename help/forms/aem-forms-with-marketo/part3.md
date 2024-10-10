@@ -11,15 +11,15 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
 source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '217'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
-# フォームデータモデルを作成
+# フォームデータモデルの作成
 
-データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づいてフォームデータモデルを作成します。 フォームデータモデルを作成するには、次の手順に従ってください。
+データソースを設定した後、次の手順では、前の手順で設定したデータソースに基づくフォームデータモデルを作成します。フォームデータモデルを作成するには、次の手順に従ってください。
 
 ブラウザーで[データ統合ページ](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)を参照します。これには、AEM インスタンスで作成されたすべてのデータ統合が表示されます。
 

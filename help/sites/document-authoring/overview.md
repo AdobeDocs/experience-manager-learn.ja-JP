@@ -12,9 +12,9 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1047'
-ht-degree: 53%
+ht-degree: 100%
 
 ---
 
@@ -300,9 +300,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="author-authentication.md" title="オーサー認証"> オーサー認証 </a>
+              <a href="author-authentication.md" title="オーサー認証">オーサー認証</a>
             </p>
-            <p class="is-size-6">オーサー認証を設定する方法を説明します。</p>
+            <p class="is-size-6">オーサー認証の設定方法について説明します。</p>
             <a href="author-authentication.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -595,7 +595,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">Dynamic Media</a>
             </p>
-            <p class="is-size-6">Dynamic Mediaを使用して最適化された画像配信を行う方法について説明します。</p>
+            <p class="is-size-6">Dynamic Mediaを使用して最適化された画像配信を行う方法を確認します。</p>
             <a href="./how-to/using-dynamic-media.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -612,11 +612,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイト移行"
+            <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイトの移行"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
-                alt="インポーターを使用したサイト移行">
+                alt="インポーターを使用したサイトの移行">
             </a>
           </figure>
         </div>
@@ -625,9 +625,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイト移行"> インポーターを使用したサイト移行 </a>
+              <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイトの移行">インポーターを使用したサイトの移行</a>
             </p>
-            <p class="is-size-6">AEM インポーターツールを使用してサイトをEdge Delivery Servicesに移行する方法を確認します。</p>
+            <p class="is-size-6">AEM インポーターツールを使用してサイトを Edge Delivery Services に移行する方法を確認します。</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -657,9 +657,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-importer.md" title="インポーターのカスタマイズ"> インポーターのカスタマイズ </a>
+              <a href="./how-to/customizing-importer.md" title="インポーターのカスタマイズ">インポーターのカスタマイズ</a>
             </p>
-            <p class="is-size-6">サイト移行用にAEM インポーターツールをカスタマイズする方法を確認します。</p>
+            <p class="is-size-6">サイト移行用に AEM インポーターツールをカスタマイズする方法を確認します。</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -689,7 +689,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="インポーターを使用した一括読み込み"> インポーターを使用した一括インポート </a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="インポーターを使用した一括読み込み">インポーターを使用した一括読み込み</a>
             </p>
             <p class="is-size-6">サイト移行時にAEM インポーターツールを使用して web ページを一括読み込みする方法を確認します。</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
@@ -704,7 +704,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
     </div>                
   </div>
 
-### バリエーションビデオの生成
+### バリエーションの生成ビデオ
 
 <div class="columns is-multiline">
     <!-- Intro Generate Variation -->
@@ -745,11 +745,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 – Sidekickの設定"
+            <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 - Sidekick の設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="バリエーションの生成 – Sidekickの設定">
+                alt="バリエーションの生成 - Sidekick の設定">
             </a>
           </figure>
         </div>
@@ -758,7 +758,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 – Sidekickの設定"> バリエーションの生成 – Sidekickの設定 </a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 - Sidekick の設定">バリエーションの生成 - Sidekick の設定</a>
             </p>
             <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するための Sidekick の設定方法を確認します。</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
@@ -777,11 +777,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 – プロンプトテンプレート"
+            <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 - プロンプトテンプレート"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="バリエーションの生成 – プロンプトテンプレート">
+                alt="バリエーションの生成 - プロンプトテンプレート">
             </a>
           </figure>
         </div>
@@ -790,9 +790,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 – プロンプトテンプレート"> バリエーションの生成 – プロンプトテンプレート </a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="バリエーションの生成 - プロンプトテンプレート">バリエーションの生成 - プロンプトテンプレート</a>
             </p>
-            <p class="is-size-6">バリエーションを生成するためにプロンプトテンプレートを使用する方法を調べます。</p>
+            <p class="is-size-6">バリエーションの生成用にプロンプトテンプレートを使用する方法を確認します。</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -809,11 +809,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレート"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 - カスタムプロンプトテンプレート"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
-                alt="バリエーションの生成 – カスタムプロンプトテンプレート">
+                alt="バリエーションの生成 - カスタムプロンプトテンプレート">
             </a>
           </figure>
         </div>
@@ -822,9 +822,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレート"> バリエーションの生成 – カスタムプロンプトテンプレート </a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 - カスタムプロンプトテンプレート">バリエーションの生成 - カスタムプロンプトテンプレート</a>
             </p>
-            <p class="is-size-6">バリエーションを生成するためのカスタムプロンプトテンプレートの作成方法を調べます。</p>
+            <p class="is-size-6">バリエーションの生成用にカスタムプロンプトテンプレートを作成する方法を確認します。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -841,11 +841,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレートの保存"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 - カスタムプロンプトテンプレートの保存"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="バリエーションの生成 – カスタムプロンプトテンプレートの保存">
+                alt="バリエーションの生成 - カスタムプロンプトテンプレートの保存">
             </a>
           </figure>
         </div>
@@ -854,9 +854,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 – カスタムプロンプトテンプレートの保存"> バリエーションの生成 – カスタムプロンプトテンプレートの保存 </a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 - カスタムプロンプトテンプレートの保存">バリエーションの生成 - カスタムプロンプトテンプレートの保存</a>
             </p>
-            <p class="is-size-6">バリエーションを生成するためのカスタムプロンプトテンプレートを保存する方法を調べます。</p>
+            <p class="is-size-6">バリエーションの生成用にカスタムプロンプトテンプレートを保存する方法を確認します。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -873,11 +873,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 – Adobe Target オーディエンスの使用"
+            <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 - Adobe Target オーディエンスの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
-                alt="バリエーションの生成 – Adobe Target オーディエンスの使用">
+                alt="バリエーションの生成 - Adobe Target オーディエンスの使用">
             </a>
           </figure>
         </div>
@@ -886,9 +886,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 – Adobe Target オーディエンスの使用"> バリエーションの生成 – Adobe Target オーディエンスの使用 </a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 - Adobe Target オーディエンスの使用">バリエーションの生成 - Adobe Target オーディエンスの使用</a>
             </p>
-            <p class="is-size-6">コンテンツのバリエーションに適したオーディエンスをターゲット設定するために、Adobe Target オーディエンスを使用する方法を調べます。</p>
+            <p class="is-size-6">コンテンツのバリエーションに適したオーディエンスをターゲットとするように、Adobe Target オーディエンスを使用する方法を確認します。</p>
             <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -905,11 +905,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 – CSV ファイルオーディエンスの使用"
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 - CSV ファイルオーディエンスの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
-                alt="バリエーションの生成 – CSV ファイルオーディエンスの使用">
+                alt="バリエーションの生成 - CSV ファイルオーディエンスの使用">
             </a>
           </figure>
         </div>
@@ -918,9 +918,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 – CSV ファイルオーディエンスの使用"> バリエーションの生成 – CSV ファイルオーディエンスの使用 </a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 - CSV ファイルオーディエンスの使用">バリエーションの生成 - CSV ファイルオーディエンスの使用</a>
             </p>
-            <p class="is-size-6">オーディエンス CSV ファイルを使用してコンテンツバリエーションに適したオーディエンスをターゲットにする方法を調べます。</p>
+            <p class="is-size-6">コンテンツのバリエーションに適したオーディエンスをターゲットとするように、オーディエンス CSV ファイルを使用する方法を確認します。</p>
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -937,11 +937,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションを生成 – Adobe Fireflyを使用"
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションの生成 - Adobe Firefly の使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
-                alt="バリエーションを生成 – Adobe Fireflyを使用">
+                alt="バリエーションの生成 - Adobe Firefly の使用">
             </a>
           </figure>
         </div>
@@ -950,9 +950,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションを生成 – Adobe Fireflyを使用"> バリエーションの生成 – Adobe Fireflyの使用 </a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションの生成 - Adobe Firefly の使用">バリエーションの生成 - Adobe Firefly の使用</a>
             </p>
-            <p class="is-size-6">Adobe Fireflyを使用して、コンテンツのバリエーションで使用する画像を作成する方法を調べます。</p>
+            <p class="is-size-6">Adobe Firefly を使用して、コンテンツのバリエーションで使用する画像を作成する方法を確認します。</p>
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -969,11 +969,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 – 生成されたバリエーションに対するアクション"
+            <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 - 生成されたバリエーションに対するアクション"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
-                alt="バリエーションの生成 – 生成されたバリエーションに対するアクション">
+                alt="バリエーションの生成 - 生成されたバリエーションに対するアクション">
             </a>
           </figure>
         </div>
@@ -982,9 +982,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 – 生成されたバリエーションに対するアクション"> バリエーションの生成 – 生成されたバリエーションに対するアクション </a>
+              <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 - 生成されたバリエーションに対するアクション">バリエーションの生成 - 生成されたバリエーションに対するアクション</a>
             </p>
-            <p class="is-size-6">生成されたコンテンツバリエーションで使用できるアクションを調べます。</p>
+            <p class="is-size-6">生成されたコンテンツのバリエーションで使用できるアクションを確認します。</p>
             <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -1001,11 +1001,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 – 信頼とプライバシー"
+            <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 - 信頼とプライバシー"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
-                alt="バリエーションの生成 – 信頼とプライバシー">
+                alt="バリエーションの生成 - 信頼とプライバシー">
             </a>
           </figure>
         </div>
@@ -1014,9 +1014,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 – 信頼とプライバシー"> バリエーションの生成 – 信頼とプライバシー </a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 - 信頼とプライバシー">バリエーションの生成 - 信頼とプライバシー</a>
             </p>
-            <p class="is-size-6">バリエーションを生成するための信頼とプライバシーをAdobeがどのように処理するかを調べます。</p>
+            <p class="is-size-6">バリエーションの生成用にアドビが信頼とプライバシーを処理する仕組みを確認します。</p>
             <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -1046,9 +1046,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="実験フレームワークの概要"> 実験フレームワークの概要 </a>
+              <a href="./how-to/experimentation-framework.md" title="実験フレームワークの概要">実験フレームワークの概要</a>
             </p>
-            <p class="is-size-6">マーケターが、どのコンテンツバリエーションが最も効果的かをテストできる実験フレームワークを調べます。</p>
+            <p class="is-size-6">マーケターがどのコンテンツのバリエーションが最も効果的であるかをテストできる実験フレームワークを確認します。</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -1065,11 +1065,11 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークのセットアップ"
+            <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークの設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
-                alt="実験フレームワークのセットアップ">
+                alt="実験フレームワークの設定">
             </a>
           </figure>
         </div>
@@ -1078,9 +1078,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークのセットアップ"> 実験フレームワークの設定 </a>
+              <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークの設定">実験フレームワークの設定</a>
             </p>
-            <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングで実験フレームワークを設定する方法について説明します。</p>
+            <p class="is-size-6">Edge Delivery Services ドキュメントのオーサリングで実験フレームワークの設定方法を確認します。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -1110,9 +1110,9 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="実験のメタデータの追加"> 実験のためのメタデータの追加 </a>
+              <a href="./how-to/experimentation-add-metadata.md" title="実験のメタデータの追加">実験のメタデータの追加</a>
             </p>
-            <p class="is-size-6">実験用のメタデータの追加を探索</p>
+            <p class="is-size-6">実験のメタデータの追加を確認します。</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

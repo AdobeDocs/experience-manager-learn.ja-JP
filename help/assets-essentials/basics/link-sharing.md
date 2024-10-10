@@ -13,14 +13,14 @@ doc-type: Feature Video
 exl-id: 719d3101-2c27-4165-a9d7-97e6f637d71f
 duration: 161
 source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '66'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
 # 公開リンク共有
 
-AEM Assetsの共有リンクを使用して、誤ったアセットや情報を共有するリスクを最小限に抑えながら、内部および外部の関係者とアセットを共有する方法について説明します。
+AEM Assets の共有リンクを使用して、間違ったアセットや情報を共有するリスクを最小限に抑えながら、内部および外部の関係者とアセットを共有する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)

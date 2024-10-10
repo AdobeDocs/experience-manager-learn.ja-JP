@@ -12,9 +12,9 @@ exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '296'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 81%
 
 ## 基盤コンポーネントに基づくアダプティブフォーム
 
-次の形式でデータが送信されます。フォームデータモデルサービスを呼び出しワークフローステップでドット表記を使用して ContactUS JSON オブジェクトを抽出します
+次の形式でデータが送信されます。フォームデータモデルサービスを呼び出しワークフローステップでドット表記を使用して ContactUS JSON オブジェクトを抽出します。
 
 ```json
 {
@@ -90,7 +90,7 @@ ht-degree: 81%
 }
 ```
 
-![ 基盤ベースのフォーム ](assets/foundation-based-form.png)
+![foundation-based-form](assets/foundation-based-form.png)
 
 ## AEM ワークフローをトリガーするアダプティブフォームの設定
 

@@ -12,7 +12,7 @@ doc-type: Feature Video
 exl-id: dc69a95c-ab0b-4a2c-80a3-43a6a052c545
 duration: 198
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
 ht-degree: 100%
 

@@ -12,7 +12,7 @@ level: Intermediate, Experienced
 exl-id: 0327cf61-fd51-4fa7-856d-3febd49c01a0
 duration: 128
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '645'
 ht-degree: 100%
 
@@ -72,7 +72,7 @@ Asset Compute ワーカーがクラウドストレージなどの他の変数を
 1. ターゲットワークスペースのデプロイ先となるすべての環境変数を設定したら、次の deploy コマンドを実行します。
    + `aio app deploy`
 1. AEM as a Cloud Service 処理プロファイルで参照されるワーカー URL は、次からも取得できます。
-   + `aio app get-url`。
+   + `aio app get-url`
 
 Asset Compute プロジェクトのバージョンを変更すると、ワーカーの URL も新しいバージョンを反映するように変更され、URL を処理プロファイルで更新する必要があります。
 

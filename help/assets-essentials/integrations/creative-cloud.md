@@ -1,6 +1,6 @@
 ---
-title: Creative CloudとAEM Assets
-description: AEM AssetsとAdobe Creative Cloud ライブラリとの統合方法について説明します。
+title: Creative Cloud と AEM Assets
+description: AEM Assets と Adobe Creative Cloud ライブラリの統合方法について説明します。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -12,18 +12,18 @@ duration: 302
 last-substantial-update: 2024-08-01T00:00:00Z
 jira: KT-15657
 source-git-commit: 64100b882bf88c57223baab8ebec96a8b428e6ef
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '57'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Creative Cloud LibrariesとAEM Assets
+# Creative Cloud ライブラリと AEM Assets
 
-AEM AssetsをAdobe Creative Cloud ライブラリと統合して、以下を可能にする方法について説明します。
+AEM Assets を Adobe Creative Cloud ライブラリと統合して、次を可能にする方法について説明します。
 
-+ AEM AssetsのファイルにCreative Cloud Libraries経由でシームレスにアクセス
-+ Creative Cloud Libraries内のファイルをAEM Assetsで共有
++ AEM Assets のファイルに Creative Cloud ライブラリ経由でシームレスにアクセス
++ Creative Cloud ライブラリのファイルを AEM Assets で共有
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432401?quality=12&learn=on)

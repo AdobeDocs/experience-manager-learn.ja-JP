@@ -1,6 +1,6 @@
 ---
-title: バリエーションの生成 – Edge Delivery Servicesの信頼とプライバシー
-description: Edge Delivery Services ドキュメントオーサリングでバリエーションを生成するために、Adobeが信頼とプライバシーをどのように処理するかを調べます。
+title: バリエーションを生成 - Edge Delivery Services での信頼とプライバシー
+description: Edge Delivery Services のドキュメントのオーサリングでバリエーションを生成する際にアドビがどのように信頼とプライバシーを扱っているかを確認します。
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -12,14 +12,14 @@ last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15477
 exl-id: b105e133-b026-4c2b-b166-eda48e4b5b16
 source-git-commit: 02e6ce1c5e4e2e090b51c3092228ba6f7f8b482d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# バリエーションの生成 – Edge Delivery Servicesの信頼とプライバシー
+# バリエーションを生成 - Edge Delivery Services での信頼とプライバシー
 
-Edge Delivery Services ドキュメントオーサリングでバリエーションを生成するために、Adobeが信頼とプライバシーをどのように処理するかを調べます。
+Edge Delivery Services のドキュメントのオーサリングでバリエーションを生成する際にアドビがどのように信頼とプライバシーを扱っているかを確認します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)

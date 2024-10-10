@@ -1,5 +1,5 @@
 ---
-title: PDFフォーム送信時のAEM ワークフローのトリガー
+title: PDF フォーム送信での AEM ワークフローのトリガー
 description: オフラインモードでのモバイルフォームへの入力の継続とモバイルフォームの送信による AEM ワークフローのトリガー
 feature: Mobile Forms
 doc-type: article
@@ -13,13 +13,13 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# 部分的に完了したモバイルフォームのダウンロードとAEM ワークフローのトリガーへの送信
+# 部分的に完了したモバイルフォームのダウンロードおよび送信による AEM ワークフローのトリガー
 
 一般的なユースケースは、データ取得アクティビティで XDP を HTML としてレンダリングできるようにすることです。 これは、フォームがシンプルで、オンラインで入力および送信できる場合に適しています。 ただし、フォームが複雑な場合にユーザーがオンラインでフォームを完成できない可能性があるので、オフラインで Acrobat／Reader を使用して入力するインタラクティブバージョンをダウンロードできるようにする必要があります。フォームに入力したら、ユーザーはオンラインでフォームを送信できます。
 このユースケースを達成するには、次の手順を実行する必要があります。
@@ -36,4 +36,4 @@ ht-degree: 91%
 
 ## 次の手順
 
-[カスタムプロファイルを作成](./custom-profile.md)
+[カスタムプロファイルの作成](./custom-profile.md)

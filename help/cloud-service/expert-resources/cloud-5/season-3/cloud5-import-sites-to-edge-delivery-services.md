@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込み
-description: インポーターツールについて説明します。これにより、Edge Delivery Servicesを使用してAEM Sitesにサイトを簡単に読み込むことができます。
+title: Edge Delivery Services を使用した AEM Sites へのサイトの読み込み
+description: Edge Delivery Services を使用して AEM Sites にサイトを簡単に読み込めるインポーターツールについて説明します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -14,14 +14,14 @@ recommendations: noDisplay, noCatalog
 jira: KT-15844
 exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '68'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込み
+# Edge Delivery Services を使用した AEM Sites へのサイトの読み込み
 
-このビデオでは、インポーターツールを使用およびカスタマイズして、既存のサイトをEdge Delivery Servicesと共にAEM Sitesに簡単に読み込むためのベストプラクティスを説明します。 Varun Mitra （クラウドアーキテクト）と共同で作業します。
+このビデオでは、Edge Delivery Services を使用して既存のサイトを AEM Sites に簡単に読み込めるように、インポーターツールを使用およびカスタマイズするベストプラクティスについて説明します。クラウドアーキテクトの Varun Mitra が説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3431603/?learn=on)

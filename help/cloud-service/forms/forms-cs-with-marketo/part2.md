@@ -1,5 +1,5 @@
 ---
-title: AEM Forms Cloud ServiceとMarketoの統合（パート 2）
+title: AEM Forms Cloud Service と Marketo の統合（パート 2）
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Marketo を統合する方法を説明します
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -12,39 +12,39 @@ last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: 75e589fa-f7fc-4d0b-98c8-ce4d603ef2f7
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '218'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
 # データソースの作成
 
-Marketoの REST API は、2-legged OAuth 2.0 で認証されます。前の手順でダウンロードした Swagger ファイルを使用して、データソースを簡単に作成できます
+Marketo の REST API は 2-Legged OAuth 2.0 で認証されます。前の手順でダウンロードした Swagger ファイルを使用して、データソースを簡単に作成できます。
 
-## 設定コンテナの作成
+## 設定コンテナを作成
 
-* AEMにログインします。
-* 次に示すように、「ツール」メニューをクリックし、**設定ブラウザー** をクリックします
+* AEM へログインします。
+* 次に示すように、ツールメニューをクリックし、**設定ブラウザー**&#x200B;をクリックします。
 
-* ![ ツールメニュー ](assets/datasource3.png)
+* ![ツールメニュー](assets/datasource3.png)
 
-* 「**作成**」をクリックし、次に示すように、意味のある名前を指定します。 必ず「クラウド設定」オプションを選択してください（下図を参照）
+* 「**作成**」をクリックし、次に示すように、意味のある名前をつけます。以下に示すように、必ず「クラウド設定」オプションを選択してください。
 
-* ![ 設定コンテナ ](assets/datasource4.png)
+* ![設定コンテナ](assets/datasource4.png)
 
 ## クラウドサービスの作成
 
-* ツール メニューに移動し、クラウドサービス / データソースをクリックします。
+* ツールメニューに移動し、クラウドサービス／データソースをクリックします。
 
-* ![ クラウドサービス ](assets/datasource5.png)
+* ![クラウドサービス](assets/datasource5.png)
 
-* 前の手順で作成した設定コンテナを選択し、「**作成**」をクリックして新しいデータソースを作成します。意味のある名前を指定し、「サービスタイプ」ドロップダウンリストから「RESTful サービス」を選択して、「次へ **をクリックし** す。
+* 前の手順で作成した設定コンテナを選択し、「**作成**」をクリックして新しいデータソースを作成します。意味のある名前を入力し、サービスタイプドロップダウンリストから RESTful サービスを選択して、「**次へ**」をクリックします。
 * ![new-data-source](assets/datasource6.png)
 
-* Swagger ファイルをアップロードし、以下のスクリーンショットに示すように、Marketo インスタンスに固有の付与タイプ、クライアント ID、クライアントシークレット、アクセストークン URL を指定します。
+* Swagger ファイルをアップロードし、以下のスクリーンショットに示すように、Marketo インスタンスに固有の付与タイプ、クライアント ID、クライアント秘密鍵、アクセストークン URL を指定します。
 
-* 接続をテストし、接続が成功したら、青い **作成** ボタンをクリックして、データソースの作成プロセスを完了します。
+* 接続をテストし、接続が成功した場合は、青色の「**作成**」ボタンをクリックして、データソースの作成プロセスを完了します。
 
 * ![data-source-config](assets/datasource1.png)
 

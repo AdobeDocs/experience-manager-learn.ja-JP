@@ -10,7 +10,7 @@ topic: Integrations
 jira: KT-8474
 duration: 25
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '117'
 ht-degree: 100%
 

@@ -1,6 +1,6 @@
 ---
 title: 住所コンポーネントの作成
-description: AEM Forms Cloud Serviceでの新しいアドレスコアコンポーネントの作成
+description: AEM Forms Cloud Service での新しい住所コアコンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,23 +10,23 @@ topic: Development
 jira: KT-15752
 exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
 source-git-commit: a12b1778413079646814cb25567abfc26a429340
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '71'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# 開発環境の設定
+# 開発環境のセットアップ
 
-開発環境のセットアップが完了している場合は、チュートリアルのこのパートをスキップしても問題ありません。
+既に開発環境を設定している場合は、チュートリアルのこの部分をスキップしても問題ありません。
 
-[Maven プロジェクトの作成 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
+[Maven プロジェクトの作成](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
 
-[IntelliJ のインストール ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) – このチュートリアル用のフォントモジュールの追加はスキップできます。
+[IntelliJ のインストール](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) - このチュートリアルでは、フォントモジュールの追加をスキップできます。
 
-[Git を初期化 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
+[Git の初期化](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
 
-[IntelliJ をAEM Formsのローカルクラウド対応インスタンスと同期する ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
+[IntelliJ と AEM Forms のローカルクラウド対応インスタンスの同期](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
 
 ## 次の手順
 

@@ -14,7 +14,7 @@ badgeIntegration: label="統合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2072'
 ht-degree: 100%
 

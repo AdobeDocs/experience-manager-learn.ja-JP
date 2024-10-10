@@ -1,6 +1,6 @@
 ---
-title: クリック可能な画像コンポーネントの作成
-description: AEM Forms Cloud Serviceでのクリック可能な画像コンポーネントの作成
+title: 画像コンポーネントの作成
+description: AEM Forms Cloud Service でのクリック可能な画像コンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,9 +11,9 @@ jira: KT-15968
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 54344a6d-51d3-4a63-b1f1-283bddbc0f8f
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '83'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 7%
 
 クライアントライブラリを作成し、クライアントライブラリをコンポーネントに関連付けます。
 
-クリックイベントで処理するクライアントライブラリの Javascript ファイルに、次のコードを追加します。
-選択した状態に基づいて、エンドポイントから返される適切なデータを表示できます。 エンドポイントの詳細と表示されるデータは、ユースケースによって異なります。
+クリックイベントを処理するには、クライアントライブラリの JavaScript ファイルに次のコードを追加します。
+選択した状態に基づいて、エンドポイントから返される適切なデータを表示できます。エンドポイントの詳細と表示されるデータは、ユースケースによって異なります。
 
 
 

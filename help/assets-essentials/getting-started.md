@@ -13,14 +13,14 @@ doc-type: Feature Video
 exl-id: a0accb94-ceef-4ecf-b1f6-f47751114242
 duration: 251
 source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '37'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
-# はじめに
+# 概要
 
-AEM Assetsにアクセスし、そのユーザーインターフェイスの主な機能を確認する方法について説明します。
+AEM Assets にアクセスし、そのユーザーインターフェイスの主な機能を確認する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

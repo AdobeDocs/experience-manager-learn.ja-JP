@@ -12,9 +12,9 @@ exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
 source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '328'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 96%
 以下のスクリーンショットに示すように、タブのスタイルエディターを開くと、デフォルトのステートになります。
 ![navigation-tab](assets/navigation-tab.png)
 
-デフォルトステートの CSS プロパティを次のように設定します
+以下に示すように、CSS プロパティをデフォルト状態に設定します。
 
 | カテゴリ | プロパティ名 | プロパティの値 |
 |:---|:---|:---|

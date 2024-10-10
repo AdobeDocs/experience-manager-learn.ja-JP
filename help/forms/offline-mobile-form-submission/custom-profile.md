@@ -1,6 +1,6 @@
 ---
-title: HTML5 フォーム送信時のAEM トリガーワークフロー – カスタムプロファイルの作成
-description: カスタムプロファイルを作成し、部分的に入力されたHTML5 フォームのデータを含むインタラクティブ PDF をダウンロードします
+title: HTM5 フォーム送信で AEM ワークフローをトリガー - カスタムプロファイルの作成
+description: 部分的に入力された HTML5 フォームのデータを含むインタラクティブな PDF をダウンロードするカスタムプロファイルを作成します。
 feature: Mobile Forms
 doc-type: article
 version: 6.4, 6.5
@@ -12,13 +12,13 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 102
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '244'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# カスタムプロファイルを作成
+# カスタムプロファイルの作成
 
 ここでは、[ カスタムプロファイルを作成します。](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/creating-profile.html)プロファイルは、XDP をHTMLとしてレンダリングします。XDP を HTML としてレンダリングするためのデフォルトのプロファイルが初期で提供されます。それはモバイルフォームレンダリングサービスのカスタマイズされたバージョンを表します。モバイルフォームレンダリングサービスを使用して、モバイルフォームの外観、動作、インタラクションをカスタマイズできます。カスタムプロファイルでは、guidebridge API を使用してモバイルフォームに入力されたデータをキャプチャします。次に、このデータがカスタムサーブレットに送信され、このサーブレットがインタラクティブ PDF を生成し、呼び出し元のアプリケーションにストリーミングします。
 
@@ -175,4 +175,4 @@ public class GeneratePDFFromMobileFormImpl implements GeneratePDFFromMobileForm 
 
 ## 次の手順
 
-[フォーム送信の処理](./handle-form-submission.md)
+[フォームの送信処理](./handle-form-submission.md)

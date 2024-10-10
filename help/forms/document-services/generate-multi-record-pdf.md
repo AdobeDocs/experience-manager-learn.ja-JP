@@ -12,9 +12,9 @@ duration: 138
 jira: KT-16142
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '498'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -129,7 +129,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-* [ サンプルアセットをダウンロードします ](assets/mult-records-template-and-xml-file.zip)。この zip ファイルには、テンプレートと xml データファイルが含まれています。
+* [サンプルアセットをダウンロードします](assets/mult-records-template-and-xml-file.zip)。この zip ファイルには、テンプレートと xml データファイルが含まれています。
 * [ブラウザーで Felix web コンソールを参照します。](http://localhost:4502/system/console/bundles)
 * [DevelopingWithServiceUser バンドルをデプロイします](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。

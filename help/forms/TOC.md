@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2101'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 96%
    + [Linux への 32 ビットパッケージのインストール](adaptive-forms/installing-aem-form-on-linux.md)
    + [アダプティブフォームでの事前入力サービス](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [クエリパラメーターを使用してアダプティブフォームに入力する](adaptive-forms/prepopulating-adaptive-form-using-query-parameters.md)
-   + [AEM Formsの QR コード](adaptive-forms/qr-code-aem-forms.md)
+   + [AEM Forms の QR コード](adaptive-forms/qr-code-aem-forms.md)
    + [アダプティブフォームでのカスタム送信](adaptive-forms/custom-submit-aem-forms-article.md)
    + [アダプティブフォームの Captcha](adaptive-forms/forms-captcha-feature-video-use.md)
    + [ルールエディターでのカスタム関数](adaptive-forms/custom-functions-aem-forms.md)
@@ -222,19 +222,19 @@ ht-degree: 96%
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
-+ PDFフォーム送信時のAEM ワークフローのトリガー {#offline-mobile-form-submission}
-   + [パート - 1](offline-mobile-form-submission/introduction.md)
-   + [パート - 2](offline-mobile-form-submission/custom-profile.md)
-   + [パート - 3](offline-mobile-form-submission/handle-form-submission.md)
-   + [パート - 4](offline-mobile-form-submission/author-servlet.md)
-   + [パート - 5](offline-mobile-form-submission/review-workflow.md)
-   + [パート - 6](offline-mobile-form-submission/deploy-assets.md)
-+ モバイルフォーム送信時のAEM トリガーワークフロー {#trigger-aem-workflow-on-mobile-form-submission}
-   + [パート - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
-   + [パート - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
-   + [パート - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
-   + [パート - 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
-   + [パート - 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
++ PDF フォーム送信での AEM ワークフローのトリガー{#offline-mobile-form-submission}
+   + [第 1 部](offline-mobile-form-submission/introduction.md)
+   + [第 2 部](offline-mobile-form-submission/custom-profile.md)
+   + [第 3 部](offline-mobile-form-submission/handle-form-submission.md)
+   + [第 4 部](offline-mobile-form-submission/author-servlet.md)
+   + [第 5 部](offline-mobile-form-submission/review-workflow.md)
+   + [第 6 部](offline-mobile-form-submission/deploy-assets.md)
++ モバイルフォーム送信での AEM ワークフローのトリガー{#trigger-aem-workflow-on-mobile-form-submission}
+   + [第 1 部](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [第 2 部](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [第 3 部](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [第 4 部](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [第 5 部](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + フォーム送信のクエリ{#query-form-submissions}
    + [はじめに](query-form-submissions/introduction.md)
    + [検索可能なフィールドの作成](query-form-submissions/part1.md)
@@ -247,8 +247,8 @@ ht-degree: 96%
    + [第 2 部 - カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
 + AEM Forms と Marketo{#aem-forms-with-marketo}
    + [第 1 部 - はじめに](aem-forms-with-marketo/part1.md)
-   + [第 2 部 – データSource](aem-forms-with-marketo/part2.md)
-   + [第 3 部 – フォームデータモデル](aem-forms-with-marketo/part3.md)
+   + [第 2 部 - データソース](aem-forms-with-marketo/part2.md)
+   + [第 3 部 - フォームデータモデル](aem-forms-with-marketo/part3.md)
    + [第 4 部 - まとめ](aem-forms-with-marketo/part4.md)
 
 + AEM Forms と Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -287,7 +287,7 @@ ht-degree: 96%
    + [AEM Forms の監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Forms でのバーコードサービスの使用](document-services/barcode-service-adaptive-forms-article.md)
    + [AEM Formsでの PDFG サービスの使用](document-services/using-pdfg-in-aem-forms.md)
-   + [権限パスワードでPDFを暗号化](document-services/encrypt-pdf-permissions-password.md)
+   + [権限パスワードでの PDF の暗号化](document-services/encrypt-pdf-permissions-password.md)
    + [AEM Forms での Output と Forms Service の使用](document-services/output-and-forms-services-article-develop.md)
    + [出力サービスでの xdp フラグメントの使用](document-services/using-fragments-in-output-service.md)
    + [フラグメントを使用して PDF を生成する ECMA スクリプト](document-services/using-fragments-in-output-service-watched-folder.md)
@@ -313,9 +313,9 @@ ht-degree: 96%
    + [デジタル署名の使用](forms-designer/adding-dig-signature-field.md)
    + [Reader 拡張フォーム](forms-designer/reader-extending-j2ee.md)
 + AEM Forms Workbench{#forms-workbench}
-   + [ワークベンチの概要](aem-forms-workbench/workbench-introduction.md)
+   + [Workbench の概要](aem-forms-workbench/workbench-introduction.md)
    + [フォームプロセスの作成](aem-forms-workbench/workbench-creating-a-process.md)
-   + [デバッギンプロセス](aem-forms-workbench/workbench-recording-and-testing-process.md)
+   + [デバッグプロセス](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + 印刷チャネル用のインタラクティブ通信
 {#ic-print-channel-tutorial}
    + [1 - はじめに](ic-print-channel-tutorial/introduction.md)

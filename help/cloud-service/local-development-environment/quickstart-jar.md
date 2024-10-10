@@ -7,7 +7,7 @@ jira: KT-4677
 thumbnail: 32551.jpg
 duration: 413
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
 ht-degree: 100%
 

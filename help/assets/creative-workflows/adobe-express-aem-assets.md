@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsとのAdobe Expressの統合
-description: Adobe ExpressとAEM Assetsの統合を使用して、コンテンツのサプライチェーンを最適化し、すべてのチームメンバーの生産性とアクセス性を向上させる方法を説明します。
+title: Adobe Express と AEM Assets の統合
+description: Adobe Express と AEM Assets の統合を使用して、コンテンツサプライチェーンを最適化し、すべてのチームメンバーの生産性とアクセシビリティを高める方法について説明します。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Content Management, Content Supply Chain
@@ -12,14 +12,14 @@ doc-type: Feature Video
 duration: 583
 exl-id: 951bb255-e3e7-4bd5-9d48-7ff0469860af
 source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '60'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# AEM AssetsとのAdobe Expressの統合
+# Adobe Express と AEM Assets の統合
 
-AEM Assetsとの [Adobe Express](https://www.adobe.com/express/) 統合を使用して、コンテンツのサプライチェーンを最適化し、すべてのチームメンバーの生産性とアクセス性を向上させる方法を説明します。
+[Adobe Express](https://www.adobe.com/express/) と AEM Assets の統合を使用して、コンテンツサプライチェーンを最適化し、すべてのチームメンバーの生産性とアクセシビリティを高める方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)

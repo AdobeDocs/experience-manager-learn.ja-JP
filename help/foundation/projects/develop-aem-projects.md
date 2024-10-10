@@ -10,9 +10,9 @@ level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4441'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ AEM プロジェクトには、複数の [OOTB プロジェクトテンプレー
 * [完成済みのチュートリアルパッケージ](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub のフルコードリポジトリ](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-このチュートリアルでは、読者が [AEM の開発手法](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en)についてある程度理解していることを前提としています。 取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)にのみデプロイするようにしてください。
+このチュートリアルでは、読者が [AEM の開発手法](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)に関する基礎知識を多少なりとも持ち、[AEM Maven プロジェクトのセットアップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=ja)についてある程度理解していることを前提としています。 取り上げられているすべてのコードは、参考として使用することを目的としており、[ローカル開発 AEM インスタンス](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)にのみデプロイするようにしてください。
 
 ## プロジェクトテンプレートの構造
 

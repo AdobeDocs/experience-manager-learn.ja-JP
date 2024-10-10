@@ -10,9 +10,9 @@ topic: Integrations
 exl-id: 7b2b1e1c-820f-4387-a78b-5d889c31eec0
 duration: 25
 source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '150'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 87%
 |--------------------|-------------------|-------------------------------------------------------|
 | sling:resourceType | 文字列 | azureportalpagecomponent/component/page/storeandfetch |
 
-/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content ノードに移動し、次のプロパティを追加して、変更を保存します。
+/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content ノードに移動し、次のプロパティを追加して変更内容を保存します。
 
 | **プロパティ名** | **プロパティタイプ** | **プロパティ値** |
 |--------------------|-------------------|-------------------------------------------------------|

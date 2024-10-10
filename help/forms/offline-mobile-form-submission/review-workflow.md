@@ -1,6 +1,6 @@
 ---
-title: HTML 5 フォーム送信時のAEM トリガーワークフロー – PDFを確認し、承認します
-description: 送信されたPDFを確認するワークフロー
+title: HTM5 フォーム送信での AEM ワークフローのトリガー - PDF のレビューと承認
+description: 送信された PDF をレビューするワ―クフロー
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -11,9 +11,9 @@ jira: kt-16133
 exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
 duration: 32
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '169'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 

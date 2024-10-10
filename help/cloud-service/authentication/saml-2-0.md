@@ -12,9 +12,9 @@ last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
 source-git-commit: 49f8df6e658b35aa3ba6e4f70cd39ff225c46120
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3919'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -262,7 +262,7 @@ AEM の SAML 設定は、__Adobe Granite SAML 2.0 Authentication Handler__ の O
 | SP エンティティ ID | `serviceProviderEntityId` | ✔ | 文字列 |                           | IDP に対して AEM を一意に識別します。通常は AEM ホスト名です。 |
 | SP の暗号化 | `useEncryption` | ✘ | ブーリアン | `true` | IDP が SAML アサーションを暗号化するかどうかを示します。 `spPrivateKeyAlias` と `keyStorePassword` の設定が必要です。 |
 | SP 秘密鍵エイリアス | `spPrivateKeyAlias` | ✘ | 文字列 |                           |  `authentication-service` ユーザーのキーストアにある秘密鍵のエイリアス。`useEncryption` が `true` に設定されている場合は必須です。 |
-| SP キーストアのパスワード | `keyStorePassword` | ✘ | 文字列 |                           | 「authentication-service」ユーザーのキーストアのパスワード`useEncryption` が `true` に設定されている場合は必須です。 |
+| SP キーストアのパスワード | `keyStorePassword` | ✘ | 文字列 |                           | 「authentication-service」ユーザーのキーストアのパスワード。`useEncryption` が `true` に設定されている場合は必須です。 |
 | デフォルトのリダイレクト | `defaultRedirectUrl` | ✘ | 文字列 | `/` | 認証成功後のデフォルトのリダイレクト URL。AEM ホストからの相対パス（例：`/content/wknd/us/en/html`）を指定することができます。 |
 | ユーザー ID 属性 | `userIDAttribute` | ✘ | 文字列 | `uid` | AEM ユーザーのユーザー ID を含む SAML アサーション属性の名前。名前を使用するには、`Subject:NameId` を空白のままにします。 |
 | AEM ユーザーの自動作成 | `createUser` | ✘ | ブーリアン | `true` | 正常な認証で AEM ユーザーが作成されるかどうかを示します。 |
@@ -444,20 +444,20 @@ Apache web サーバーで URL の書き換えが設定されている場合（`
 
 ### 新しい環境で SAML ユーザーの動的グループメンバーシップを有効にする方法
 
-新しいAEM as a Cloud Service環境でグループ評価のパフォーマンスを大幅に向上させるには、新しい環境で動的グループメンバーシップ機能をアクティブ化することをお勧めします。
-これは、データ同期が有効な場合にも必要な手順です。 詳しくは [ こちら ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier) を参照してください。
-それには、OSGi 設定ファイルに次のプロパティを追加します。
+新しい AEM as a Cloud Service 環境でのグループ評価パフォーマンスを大幅に向上させるには、新しい環境での動的グループメンバーシップ機能のアクティベーションをお勧めします。
+また、これは、データ同期をアクティブ化する際にも必要な手順です。詳しくは、[こちら](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)を参照してください。
+これを行うには、OSGI 設定ファイルに次のプロパティを追加します。
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
 
-この設定では、ユーザーとグループは [Oak外部ユーザー ](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html) として作成されます。 AEMでは、外部のユーザーとグループには、`[user name];[idp]` または `[group name];[idp]` で構成されるデフォルトの `rep:principalName` があります。
-アクセス制御リスト （ACL）はユーザーまたはグループの PrincipalName に関連付けられるというコメント。
-以前に `identitySyncType` が指定されていなかったり、`default` に設定されていた既存の展開にこの構成を展開する場合は、新しいユーザーとグループが作成され、これらの新しいユーザーとグループに ACL を適用する必要があります。 外部グループにローカルユーザーを含めることはできません。 [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html) は、ユーザーがログインを実行する際にのみ作成される場合でも、SAML 外部グループ用の ACL を作成するために使用できます。
-ACL でこのようなリファクタリングを回避するために、標準 [ 移行機能 ](#automatic-migration-to-dynamic-group-membership-for-existing-environments) が実装されました。
+この設定では、ユーザーとグループは [Oak 外部ユーザー](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html)として作成されます。AEM では、外部ユーザーとグループには、`[user name];[idp]` または `[group name];[idp]` で構成されるデフォルトの `rep:principalName` があります。
+アクセス制御リスト（ACL）は、ユーザーまたはグループの PrincipalName に関連付けられます。
+以前に `identitySyncType` を指定していなかったか、`default` に設定した既存のデプロイメントにこの設定をデプロイすると、新しいユーザーとグループが作成され、これらの新しいユーザーとグループに ACL を適用する必要があります。外部グループにローカルユーザーを含めることはできません。[Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html) は、ユーザーがログインを実行する際にのみ作成される場合でも、SAML 外部グループの ACL の作成に使用できます。
+ACL でのこのリファクタリングを回避することを目的に、標準の[移行機能](#automatic-migration-to-dynamic-group-membership-for-existing-environments)が実装されました。
 
-### 動的グループメンバーシップを使用してメンバーシップをローカルおよび外部グループに保存する方法
+### 動的グループメンバーシップを使用してローカルグループと外部グループにメンバーシップを保存する方法
 
-ローカルグループでは、グループのメンバーは oak 属性 `rep:members` に格納されます。 属性には、グループのすべてのメンバーの uid のリストが含まれます。 詳細については、[ こちら ](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository) を参照してください。
+ローカルグループでは、グループメンバーは oak 属性 `rep:members` に保存されます。属性には、グループのすべてのメンバーの UID のリストが含まれます。詳しくは、[こちら](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository)を参照してください。
 例：
 
 ```
@@ -474,8 +474,8 @@ ACL でこのようなリファクタリングを回避するために、標準 
 }
 ```
 
-動的グループメンバーシップを持つ外部グループは、グループエントリにメンバーを格納しません。
-代わりに、グループメンバーシップがユーザーエントリに保存されます。 その他のドキュメントについては、[ こちら ](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html) を参照してください。 例えば、次のグループのOAK ノードがあります。
+動的グループメンバーシップを持つ外部グループでは、グループエントリにメンバーが保存されません。
+代わりに、グループメンバーシップがユーザーエントリに保存されます。追加のドキュメントについて詳しくは、[こちら](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)を参照してください。例えば、次はグループの OAK ノードです。
 
 ```
 {
@@ -493,7 +493,7 @@ ACL でこのようなリファクタリングを回避するために、標準 
 }
 ```
 
-このノードは、そのグループのユーザーメンバー用です。
+そのグループのユーザーメンバーのノードは、次のとおりです。
 
 ```
 {
@@ -518,24 +518,24 @@ ACL でこのようなリファクタリングを回避するために、標準 
 ### 既存の環境の動的グループメンバーシップへの自動移行
 
 この移行を有効にする場合、ユーザー認証中に実行され、次の手順で構成されます。
-1. ローカルユーザーは、元のユーザー名を保持したまま、外部ユーザーに移行されます。 つまり、現在は外部ユーザーとして機能している移行済みローカルユーザーが、前の節で説明した命名構文に従わずに、元のユーザー名を保持します。 `rep:externalId` という名前のプロパティがさらに 1 つ追加され、値は `[user name];[idp]` です。 ユーザー `PrincipalName` は変更されません。
-2. SAML アサーションで受信した外部グループごとに、外部グループが作成されます。 対応するローカルグループが存在する場合は、外部グループがメンバーとしてローカルグループに追加されます。
-3. ユーザーが外部グループのメンバーとして追加されます。
-4. その後、ローカルユーザーは、所属していたすべての Saml ローカルグループから削除されます。 Saml ローカルグループは、OAK プロパティ `rep:managedByIdp` によって識別されます。 このプロパティは、属性 `syncType` が指定されていないか、または `default` に設定されている場合に、Saml 認証ハンドラーによって設定されます。
+1. ローカルユーザーは、元のユーザー名を保持しながら外部ユーザーに移行されます。つまり、移行されたローカルユーザーが外部ユーザーとして機能し、前の節で説明した命名構文に従わずに元のユーザー名を保持します。`[user name];[idp]` の値を持つ `rep:externalId` という 1 つの追加プロパティが追加されます。ユーザーの `PrincipalName` は変更されません。
+2. SAML アサーションで受信した外部グループごとに、外部グループが作成されます。対応するローカルグループが存在する場合、外部グループはローカルグループにメンバーとして追加されます。
+3. ユーザーは、外部グループのメンバーとして追加されます。
+4. その後、ローカルユーザーは、メンバーであったすべての SAML ローカルグループから削除されます。SAML ローカルグループは、OAK プロパティ `rep:managedByIdp` によって識別されます。このプロパティは、属性 `syncType` を指定していないか、`default` に設定した場合に、SAML 認証ハンドラーによって設定されます。
 
-例えば、移行前の `user1` がローカルユーザーで、ローカルグループ `group1` のメンバーである場合、移行後に次の変更が行われます。
-`user1` は外部ユーザーになります。 属性 `rep:externalId` がプロファイルに追加されます。
-`user1` は外部グループのメンバーになります：`group1;idp`
-`user1` は、ローカル グループ `group1` の直接メンバーではなくなりました。
-`group1;idp` はローカル グループ `group1` のメンバです。
-`user1` の場合は、継承を通じてローカルグループ `group1` のメンバーになります
+例えば、移行前に `user1` がローカルユーザーで、ローカルグループ `group1` のメンバーである場合、移行後に次の変更が行われます。
+`user1` は、外部ユーザーになります。属性 `rep:externalId` がプロファイルに追加されます。
+`user1` は、外部グループ `group1;idp` のメンバーになります。
+`user1` は、ローカルグループ `group1` の直接メンバーではなくなりました。
+`group1;idp` は、ローカルグループ `group1` のメンバーです。
+その後、`user1` は、継承を通じてローカルグループ `group1` のメンバーになります。
 
-外部グループのグループメンバーシップは、属性 `rep:authorizableId` のユーザープロファイルに保存されます
+外部グループのグループメンバーシップは、ユーザープロファイルの属性 `rep:authorizableId` に保存されます。
 
 ### 動的グループメンバーシップへの自動移行の設定方法
 
-1. SAML OSGI 設定ファイルでプロパティ `"identitySyncType": "idp_dynamic_simplified_id"` を有効にします：`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` :
-2. 次のプロパティを持つ PID `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...` の新しい OSGI サービスを設定します。
+1. SAML OSGi 設定ファイル `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` でプロパティ `"identitySyncType": "idp_dynamic_simplified_id"` を有効にします。
+2. 次のプロパティを使用して、`com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...` で新しい OSGi サービスを設定します。
 
 ```
 {
@@ -560,22 +560,22 @@ $ git push adobe saml-auth:develop
 
 ## SAML 認証の呼び出し
 
-SAML 認証フローは、特別に作成されたリンクまたはボタンを作成することにより、AEM サイトの web ページから呼び出すことができます。 以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、「ログイン」ボタンを使用すると、SAML 認証が成功したときにユーザーが取得される「`saml_request_path`」を、ボタンのコンテキストに基づいて異なる「AEM」ページに設定できます。
+SAML 認証フローは、特別に作成されたリンクまたはボタンを作成して、AEM サイトの web ページから呼び出すことができます。以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、ログインボタンでは、ボタンのコンテキストに基づいて、SAML 認証が成功した際にユーザーが移動する場所である `saml_request_path` を様々な AEM ページに設定できます。
 
-### GETリクエスト
+### GET リクエスト
 
-SAML 認証を呼び出すには、次の形式の HTTP GETリクエストを作成します。
+SAML 認証は、次の形式で HTTP GET リクエストを作成して呼び出すことができます。
 
 `HTTP GET /system/sling/login`
 
-およびクエリパラメーターの提供：
+次のクエリパラメーターを指定します。
 
-| クエリパラメーター名 | クエリパラメーター値 |
+| クエリパラメーターの名前 | クエリパラメーターの値 |
 |----------------------|-----------------------|
-| `resource` | SAML 認証ハンドラーがリッスンする JCR パスまたはサブパスは、[Authentication Granite SAML 2.0Adobeハンドラー OSGi 設定の ](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されます。 |
-| `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
+| `resource` | [Adobe Granite SAML 2.0 Authentication Handler OSGi 設定の](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パスまたはサブパス。 |
+| `saml_request_path` | SAML 認証が成功した後にユーザーが移動する URL パス。 |
 
-例えば、このHTMLリンクは SAML ログインフローをトリガーし、成功するとユーザーを `/content/wknd/us/en/protected/page.html` に移動します。 これらのクエリパラメーターは、必要に応じてプログラムで設定できます。
+例えば、この HTML リンクは SAML ログインフローをトリガーし、成功するとユーザーを `/content/wknd/us/en/protected/page.html` に移動します。これらのクエリパラメーターは、必要に応じてプログラムで設定できます。
 
 ```html
 <a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
@@ -583,21 +583,21 @@ SAML 認証を呼び出すには、次の形式の HTTP GETリクエストを作
 </a>
 ```
 
-## POSTリクエスト
+## POST リクエスト
 
-SAML 認証を呼び出すには、次の形式の HTTPPOSTリクエストを作成します。
+SAML 認証は、次の形式で HTTP POST リクエストを作成して呼び出すことができます。
 
 `HTTP POST /system/sling/login`
 
-フォームデータを指定します。
+次のフォームデータを指定します。
 
-| フォームデータ名 | フォームデータ値 |
+| フォームデータの名前 | フォームデータの値 |
 |----------------------|-----------------------|
-| `resource` | SAML 認証ハンドラーがリッスンする JCR パスまたはサブパスは、[Authentication Granite SAML 2.0Adobeハンドラー OSGi 設定の ](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されます。 |
-| `saml_request_path` | SAML 認証が成功した後にユーザーが受け取る URL パス。 |
+| `resource` | [Adobe Granite SAML 2.0 Authentication Handler OSGi 設定の](#configure-saml-2-0-authentication-handler) `path` プロパティで定義されている、SAML 認証ハンドラーがリッスンする任意の JCR パスまたはサブパス。 |
+| `saml_request_path` | SAML 認証が成功した後にユーザーが移動する URL パス。 |
 
 
-例えば、このHTMLボタンは、HTTP POSTを使用して SAML ログインフローをトリガーし、成功したら、ユーザーを `/content/wknd/us/en/protected/page.html` に移動します。 これらのフォームデータパラメーターは、必要に応じてプログラムで設定できます。
+例えば、この HTML ボタンは HTTP POST を使用して SAML ログインフローをトリガーし、成功するとユーザーを `/content/wknd/us/en/protected/page.html` に移動します。これらのフォームデータパラメーターは、必要に応じてプログラムで設定できます。
 
 ```html
 <form action="/system/sling/login" method="POST">
@@ -609,9 +609,9 @@ SAML 認証を呼び出すには、次の形式の HTTPPOSTリクエストを作
 
 ### Dispatcher 設定
 
-HTTP GETとPOSTのどちらの方式でも、AEM `/system/sling/login` エンドポイントへのクライアントアクセスが必要なので、AEM Dispatcherを介して許可する必要があります。
+HTTP GET メソッドと POST メソッドはどちらも AEM の `/system/sling/login` エンドポイントへのクライアントアクセスを必要とするので、AEM Dispatcher 経由で許可する必要があります。
 
-GETまたはPOSTが使用されているかどうかに基づいて必要な URL パターンを許可する
+GET または POST が使用されているかどうかに基づいて、必要な URL パターンを許可します。
 
 ```
 # Allow GET-based SAML authentication invocation
