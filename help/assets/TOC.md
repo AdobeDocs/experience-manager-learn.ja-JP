@@ -10,7 +10,7 @@ team: TM
 source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 91%
 + 検索と検出{#search-and-discovery}
    + [検索](./search-and-discovery/search.md)
    + [コンテキスト検索](./search-and-discovery/contextual-search.md)
-   + [Adobe Fireflyの統合](./search-and-discovery/adobe-firefly.md)
+   + [Adobe Firefly の統合](./search-and-discovery/adobe-firefly.md)
    + [コレクション](./search-and-discovery/collections.md)
    + [検索ブースト](./search-and-discovery/search-boost.md)
    + [類似の画像を検索](./search-and-discovery/find-similar-images.md)
@@ -75,10 +75,10 @@ ht-degree: 91%
 + Edge 配信サービス{#edge-delivery-services}
    + [Sidekick プラグイン](./edge-delivery-services/sidekick-plugin.md)
 
-+ Content Hub{#content-hub}
-   + [Content Hubのセットアップ](./content-hub/settingup-content-hub.md)
-   + [Assetsのアップロードと承認プロセス](./content-hub/uploading-assets-and-approval-process.md)
-   + [Assetsへのアクセスとダウンロード](./content-hub/accessing-and-downloading-assets.md)
++ コンテンツハブ{#content-hub}
+   + [コンテンツハブの設定](./content-hub/settingup-content-hub.md)
+   + [アセットのアップロードと承認プロセス](./content-hub/uploading-assets-and-approval-process.md)
+   + [アセットへのアクセスとダウンロード](./content-hub/accessing-and-downloading-assets.md)
    + [Adobe Expressを使用した画像バリアントの作成](./content-hub/creating-image-variants-using-adobe-express.md)
 
 + 共有と配布{#sharing}
@@ -99,7 +99,7 @@ ht-degree: 91%
 
 + クリエイティブワークフロー{#creative-workflows}
    + [Adobe Express の統合](./creative-workflows/adobe-express.md)
-   + [Adobe ExpressとAEM Assets](./creative-workflows/adobe-express-aem-assets.md)
+   + [Adobe Express と AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
    + [Adobe アセットリンク](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)

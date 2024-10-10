@@ -9,7 +9,7 @@ duration: 74
 source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
 workflow-type: tm+mt
 source-wordcount: '566'
-ht-degree: 69%
+ht-degree: 98%
 
 ---
 
@@ -167,87 +167,87 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             </a>
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
-                <strong> ユニバーサルエディターの詳細 </strong></a>        
-                <br/><em>AEM エンジニアリング、James Talbot &amp; Dirk Rudolph 氏 </em>
+                <strong>ユニバーサルエディターの詳細</strong></a>        
+                <br/><em>James Talbot と Dirk Rudolph（AEM エンジニアリングチーム）</em>
             </div>
             <p>
                 <br/>                
-                 ユニバーサルエディターとEdge Delivery Servicesを使用したAEMについて説明します。
+                 ユニバーサルエディターと Edge Delivery Services を使用した AEM について説明します。
             </p>
         </td>
     </tr>  
     <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
-                <img alt="Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込み" 
+                <img alt="Edge Delivery Services を使用した AEM Sites へのサイトの読み込み" 
                      src="https://video.tv.adobe.com/v/3431603?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
-                <strong> サイトのインポート </strong></a>        
-                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+                <strong>サイトの読み込み</strong></a>        
+                <br/><em>James Talbot と Varun Mitra（クラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>                
-                 Edge Delivery Servicesを使用したAEM Sitesへのサイトの読み込みについて説明します。
+                 Edge Delivery Services を使用した AEM Sites へのサイトの読み込みについて説明します。
             </p>
         </td>
         <td>
             <a href="./season-3/cloud5-using-admin-api.md">
-                <img alt="Edge Delivery Servicesでの管理 API の使用" 
+                <img alt="Edge Delivery Services での Admin API の使用" 
                      src="https://video.tv.adobe.com/v/3433158?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-using-admin-api.md">
-                <strong>Admin API の使用 </strong></a>        
-                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+                <strong>Admin API の使用</strong></a>        
+                <br/><em>James Talbot と Varun Mitra（クラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>                
-                 Edge Delivery Servicesでの Admin API を使用してコンテンツとコードのライフサイクルを管理する方法について説明します。
+                 Edge Delivery Services で Admin API を使用してコンテンツとコードのライフサイクルを管理する方法について説明します。
             </p>
         </td>   
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
-                <img alt="Lighthouse スコアの最適化 – 第 1 部" 
+                <img alt="Lighthouse スコアの最適化 - 第 1 部" 
                      src="https://video.tv.adobe.com/v/3433378?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
-                <strong>Lighthouse スコアの最適化 – 第 1 部 </strong></a>
-                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+                <strong>Lighthouse スコアの最適化 – 第 1 部</strong></a>
+                <br/><em>James Talbot と Varun Mitra（クラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>                
-                 lighthouse スコアとは何か、および可能な限り最高の lighthouse スコアを取得するためのテクニックについて説明します。
+                 Lighthouse スコアとは何か、および可能な限り最高の Lighthouse スコアを取得するためのテクニックについて説明します。
             </p>
         </td>            
     </tr> 
     <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
-                <img alt="Lighthouse スコアの最適化 – 第 2 部"
+                <img alt="Lighthouse スコアの最適化 - 第 2 部"
                      src="https://video.tv.adobe.com/v/3434042?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
-                <strong>Lighthouse スコアの最適化 – 第 2 部 </strong></a>
-                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+                <strong>Lighthouse スコアの最適化 - 第 2 部</strong></a>
+                <br/><em>James Talbot と Varun Mitra（クラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>                
-                 合計ブロック時間を改善する方法について説明します。
+                トータルブロッキングタイムを改善するテクニックについて説明します。
             </p>
         </td>            
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
-                <img alt="Lighthouse スコアの最適化 – 第 3 部"
+                <img alt="Lighthouse スコアの最適化 - 第 3 部"
                      src="https://video.tv.adobe.com/v/3435001?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
-                <strong>Lighthouse スコアの最適化 – 第 3 部 </strong></a>
-                <br/><em>James Talbot &amp; Varun Mitra 氏（クラウドアーキテクト） </em>
+                <strong>Lighthouse スコアの最適化 - 第 3 部</strong></a>
+                <br/><em>James Talbot と Varun Mitra（クラウドアーキテクト）</em>
             </div>
             <p>
                 <br/>                
