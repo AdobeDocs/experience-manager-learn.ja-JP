@@ -1,5 +1,5 @@
 ---
-title: Lighthouse スコアの最適化 – 第 3 部
+title: Lighthouse スコアの最適化 - 第 3 部
 description: 最大のコンテンツを含むペイント（LCP）を改善し、Edge Delivery Servicesプロジェクトで可能な限り最高の lighthouse スコアを取得する手法について説明します。
 version: Cloud Service
 feature: Edge Delivery Services
@@ -10,15 +10,17 @@ doc-type: Technical Video
 duration: 616
 last-substantial-update: 2024-10-08T00:00:00Z
 jira: KT-16300
-source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
+hidefromtoc: true
+recommendations: noDisplay, noCatalog
+source-git-commit: 5e7ed607cae211f989ed50c10ae3be47876868cf
 workflow-type: tm+mt
 source-wordcount: '54'
-ht-degree: 0%
+ht-degree: 18%
 
 ---
 
 
-# Lighthouse スコアの最適化 – 第 3 部
+# Lighthouse スコアの最適化 - 第 3 部
 
 最大のコンテンツを含むペイント（LCP）を改善し、Edge Delivery Servicesプロジェクトで可能な限り最高の lighthouse スコアを取得する手法について説明します。
 
