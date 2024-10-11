@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1307'
 ht-degree: 90%
 
 ---
@@ -269,6 +269,11 @@ ht-degree: 90%
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
       + [ルールの作成](./forms/form-data-analytics/rules.md)
       + [ソリューションのテスト](./forms/form-data-analytics/test.md)
+   + ボタンのバリエーションの作成 {#style-system}
+      + [はじめに](./forms/style-system/introduction.md)
+      + [ポリシーの定義](./forms/style-system/style-policy.md)
+      + [バリエーションの定義](./forms/style-system/create-variations.md)
+      + [テストのバリエーション](./forms/style-system/build.md)
    + 垂直タブ {#using-vertical-tabs} 使用
       + [1.はじめに](./forms/using-vertical-tabs/introduction.md)
       + [2. フォームを作成する](./forms/using-vertical-tabs/create-af.md)
