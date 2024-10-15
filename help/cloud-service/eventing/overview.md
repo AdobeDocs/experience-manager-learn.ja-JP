@@ -12,10 +12,10 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 100%
+source-wordcount: '833'
+ht-degree: 96%
 
 ---
 
@@ -67,13 +67,12 @@ AEM イベンティングは、システムアーキテクチャと運用効率�
 AEM イベンティングは強力な機能ですが、考慮すべき制限があります。
 
 - **可用性は AEM as a Cloud Service に限定**：現在、AEM イベンティングは AEM as a Cloud Service でのみ利用可能です。
-- **イベントのサポートが限定的**：現時点では、AEM コンテンツフラグメントイベントのみがサポートされています。ただし、今後、さらに多くのイベントが追加されるにつれ、範囲は拡大すると予想されます。
+
+- **利用可能なイベントタイプ**：利用可能なイベントタイプの現在のリストを確認します [ こちら ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types)。
 
 ## 有効にする方法
 
-AEM イベンティングは、AEM as a Cloud Service 環境ごとに有効化され、プレリリースモードの環境でのみ使用できます。AEM イベンティングを使用して AEM 環境を有効にするには、<a href="mailto:grp-aem-events@adobe.com">AEM - イベンティングチーム</a>にお問い合わせください。
-
-既に有効になっている場合は、[AEM Cloud Service 環境での AEM イベントの有効化](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)を参照して、次の手順に進んでください。
+次の手順については、[AEM Cloud Service環境でのAEM イベントの有効化 ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) を参照してください。
 
 ## サブスクライブ方法
 
