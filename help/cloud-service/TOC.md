@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 90%
+ht-degree: 99%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 90%
    + [CI／CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
    + [CI／CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
-   + [ カスタムドメイン名 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [カスタムドメイン名](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + DevOps{#devops}
       + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
       + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
@@ -107,8 +107,8 @@ ht-degree: 90%
       + [ページバリアントのキャッシュ](./developing/advanced/variant-caching.md)
       + [CSRF 対策](./developing/advanced/csrf-protection.md)
       + [カスタム名前空間](./developing/advanced/custom-namespaces.md)
-      + [HTL からの Sling モデルのパラメーター化](./developing/advanced/sling-model-parameters.md)
-      + [秘密鍵](./developing/advanced/secrets.md)
+      + [HTL から Sling Model のパラメーター化](./developing/advanced/sling-model-parameters.md)
+      + [シークレット](./developing/advanced/secrets.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 迅速な開発環境{#rde}
@@ -116,8 +116,8 @@ ht-degree: 90%
       + [設定方法](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
       + [開発ライフサイクル](./developing/rde/development-life-cycle.md)
-   + ユニバーサルエディター {#universal-editor}
-      + React アプリの編集 {#react-app-editing}
+   + ユニバーサルエディター{#universal-editor}
+      + React アプリの編集{#react-app-editing}
          + [概要](./developing/universal-editor/react-app/overview.md)
          + [ローカル開発設定](./developing/universal-editor/react-app/local-development-setup.md)
          + [React アプリの実装](./developing/universal-editor/react-app/instrument-to-edit-content.md)
@@ -140,10 +140,10 @@ ht-degree: 90%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + コンテンツ配信{#content-delivery}
    + [カスタムドメイン名](./content-delivery/custom-domain-names.md)
-   + [Adobeが管理する CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [アドビが管理する CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
    + [顧客 CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
-   + [ キャッシュ ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
-   + [Adobe CDN - キャッシングの範囲を超える ](./content-delivery/adobe-cdn-beyond-caching.md)
+   + [キャッシュ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
+   + [Adobe CDN - キャッシュの範囲を超える](./content-delivery/adobe-cdn-beyond-caching.md)
    + [カスタムエラーページ](./content-delivery/custom-error-pages.md)
    + [URL リダイレクト](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=ja){target=_blank}
 + キャッシュ{#caching}
@@ -154,7 +154,7 @@ ht-degree: 90%
    + 方法{#how-to}
       + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
       + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
-      + [キャッシュをパージ](./caching/how-to/purge-cache.md)
+      + [キャッシュのパージ](./caching/how-to/purge-cache.md)
 + AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
@@ -255,12 +255,12 @@ ht-degree: 90%
       + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - 応答の表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
-   + 住所ブロックコンポーネント {#create-address-block} 作成
+   + アドレスブロックコンポーネントの作成{#create-address-block}
       + [1 - はじめに](./forms/create-address-block-component/introduction.md)
-      + [2 – 設定](./forms/create-address-block-component/set-up.md)
-      + [3 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
+      + [2 - 設定](./forms/create-address-block-component/set-up.md)
+      + [2 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
       + [4 - コンポーネントのデプロイ](./forms/create-address-block-component/deploy-your-project.md)
-   + クリック可能な画像コンポーネント {#clickable-image-component} 作成
+   + クリック可能な画像コンポーネントの作成{#clickable-image-component}
       + [1 - はじめに](./forms/clickable-image-component/introduction.md)
       + [2 - コンポーネントの作成](./forms/clickable-image-component/create-component.md)
       + [3 - クリックイベントの処理](./forms/clickable-image-component/handle-click-event.md)
@@ -274,10 +274,10 @@ ht-degree: 90%
       + [ポリシーの定義](./forms/style-system/style-policy.md)
       + [バリエーションの定義](./forms/style-system/create-variations.md)
       + [テストのバリエーション](./forms/style-system/build.md)
-   + 垂直タブ {#using-vertical-tabs} 使用
-      + [1.はじめに](./forms/using-vertical-tabs/introduction.md)
-      + [2. フォームを作成する](./forms/using-vertical-tabs/create-af.md)
-      + [3.移動](./forms/using-vertical-tabs/navigation.md)
+   + 垂直タブの使用{#using-vertical-tabs}
+      + [1. はじめに](./forms/using-vertical-tabs/introduction.md)
+      + [2. フォームの作成](./forms/using-vertical-tabs/create-af.md)
+      + [3. ナビゲーション](./forms/using-vertical-tabs/navigation.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
       + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
       + [サービス資格情報の作成](./forms/doc-gen-forms-cs/service-credentials.md)
@@ -286,7 +286,7 @@ ht-degree: 90%
       + [データとテンプレートの結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [ソリューションのテスト](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
-   + DocAssurance API の使用 {#doc-assurance-api}
+   + DocAssurance API の使用{#doc-assurance-api}
       + [サンプルコードスニペット](./forms/doc-assurance-api/using-doc-assurance-api.md)
    + Batch API を使用したドキュメント生成{#formscs-batch-api}
       + [はじめに](./forms/formscs-batch-api/introduction.md)
@@ -303,7 +303,7 @@ ht-degree: 90%
       + [PDF/A ユーティリティ](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [ソリューションのテスト](./forms/forms-cs-assembler/test.md)
       + [課題](./forms/forms-cs-assembler/challenge.md)
-   + Marketoとの統合 {#froms-cs-with-marketo}
+   + Marketo との統合{#froms-cs-with-marketo}
       + [はじめに](./forms/forms-cs-with-marketo/part1.md)
       + [データソースの作成](./forms/forms-cs-with-marketo/part2.md)
       + [フォームデータモデルの作成](./forms/forms-cs-with-marketo/part3.md)
@@ -434,9 +434,9 @@ ht-degree: 90%
          + [AEM Assets の統合](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [AEM Sites の生成 AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [ユニバーサルエディターの詳細](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
-         + [サイトの読み込み](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
-         + [管理 API の使用](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
-         + [Lighthouse スコアの最適化 – パート 1](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
-         + [Lighthouse スコアの最適化 – パート 2](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
-         + [Lighthouse スコアの最適化 – 第 3 部](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
+         + [Sites の読み込み](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
+         + [Admin API の使用](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
+         + [Lighthouse スコアの最適化 - 第 1 部](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
+         + [Lighthouse スコアの最適化 - 第 2 部](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
+         + [Lighthouse スコアの最適化 - 第 3 部](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
 
