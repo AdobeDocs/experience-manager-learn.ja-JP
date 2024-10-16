@@ -12,9 +12,9 @@ mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
 source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '655'
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ SPA と AEM のトラフィックが共有ドメインでどのようにルー�
 
 AEM と同じドメインでホストされている場合に、SPA 実稼動デプロイメントに必要なデプロイメント設定を以下に示します。
 
-| SPAから→への接続 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| SPA の接続先 → | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | クロスオリジンリソース共有（CORS） | ✘ | ✘ | ✘ |
@@ -70,7 +70,7 @@ AEM と SPA には異なるドメインからアクセスできるので、web �
 
 AEM と異なるドメインでホストされている場合に、SPA 実稼動デプロイメントに必要なデプロイメント設定を以下に示します。
 
-| SPAから→への接続 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| SPA の接続先 → | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [クロスオリジンリソース共有（CORS）](./configurations/cors.md) | ✔ | ✔ | ✔ |

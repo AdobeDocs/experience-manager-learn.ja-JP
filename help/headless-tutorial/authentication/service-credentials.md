@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
 source-git-commit: 1a745f4b11007df5636c2fc0bea05d56393ef9c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1963'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 Adobe Experience Manager（AEM）as a Cloud Service との統合については、AEM サービスに対して確実な認証を行う必要があります。 AEM の Developer Console は、外部のアプリケーション、システムおよびサービスが HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラムでやり取りするのを容易にするために使用するサービス資格情報へのアクセス権を付与します。
 
-AEMは、Adobe Developer Console](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) で管理される [S2S OAuth を使用して、他のAdobe製品と統合されています。 サービスアカウントとのカスタム統合の場合、JWT 資格情報がAEM Developer Consoleで使用および管理されます。
+AEM は、[Adobe Developer Console で管理される S2S OAuth](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) を使用して、他のアドビ製品と統合されています。サービスアカウントとのカスタム統合の場合、JWT 資格情報が AEM Developer Console で使用および管理されます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

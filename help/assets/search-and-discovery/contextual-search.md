@@ -12,9 +12,9 @@ last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15377
 exl-id: 34e9186b-890f-4ffe-b158-171c42c563c5
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '85'
-ht-degree: 47%
+ht-degree: 100%
 
 ---
 
@@ -24,10 +24,10 @@ Adobe Experience Manager Assets のコンテキスト検索を使用して、自
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
 
-## コンテキスト検索を切り替え
+## コンテキスト検索の切り替え
 
-すべてのユーザーに対してコンテキスト検索を有効または無効にするには、AEM管理者は __一般設定__ に移動し、__コンテキスト検索__ を目的の設定に切り替えます。
+すべてのユーザーに対してコンテキスト検索を有効または無効にするには、AEM 管理者は&#x200B;__一般設定__&#x200B;に移動し、__コンテキスト検索__&#x200B;を目的の設定に切り替えることで実行できます。
 
-デフォルトでは、すべてのユーザーに対してコンテキスト検索が有効になっています。
+デフォルトでは、コンテキスト検索はすべてのユーザーに対して有効になっています。
 
-![ コンテキスト検索を有効にする ](./assets/contextual-search/enable-contextual-search.png)
+![コンテキスト検索を有効にする](./assets/contextual-search/enable-contextual-search.png)

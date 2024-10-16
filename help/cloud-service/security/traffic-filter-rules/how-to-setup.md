@@ -13,9 +13,9 @@ thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
 source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '575'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -95,7 +95,7 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 ### トラフィックの生成によるルールのテスト
 
-ルールをテストするために、様々なサードパーティツールが使用可能で、組織には推奨ツールがある場合があります。デモの目的で、次のツールを使用します。
+ルールをテストするために、様々なサードパーティツールが使用可能で、組織には推奨ツールがある場合があります。デモとして、次のツールを使ってみましょう。
 
 - [cURL](https://curl.se/)：URL の呼び出しや応答コードの確認などの基本的なテストに使用します。
 
@@ -119,11 +119,11 @@ AEM Guides WKND Sites プロジェクト内の `cdn.yaml` ファイルの例を�
 
 ### ダッシュボードツールを使用した結果の分析
 
-ルールを作成、デプロイおよびテストした後、**CDN** ログおよび **AEMCS-CDN-Log-Analysis-Tooling** を使用して結果を分析できます。 ツールは、Splunk および ELK （Elasticsearch、Logstash、Kibana）スタックの結果を視覚化する一連のダッシュボードを提供します。
+ルールを作成、デプロイ、テストした後、**CDN** ログや **AEMCS-CDN-Log-Analysis-Tooling** を使用して結果を分析できます。このツールは、Splunk および ELK（Elasticsearch、Logstash、Kibana）スタックの結果を視覚化する一連のダッシュボードを提供します。
 
-このツールのクローンは、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub リポジトリから作成できます。 次に、指示に従って、目的の観測ツール用の **CDN トラフィックダッシュボード** および **WAF ダッシュボード** ダッシュボードをインストールして読み込みます。
+ツールで、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Github リポジトリからクローンを作成できます。次に、指示に従って、好みの可観測性ツールの **CDN トラフィックダッシュボード**&#x200B;および **WAF ダッシュボード**&#x200B;をインストールして読み込みます。
 
-このチュートリアルでは、ELK スタックを使用します。 [ELK Docker Container for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) の手順に従って、ELK スタックを設定します。
+このチュートリアルでは、ELK スタックを使ってみましょう。[AEMCS CDN Log Analysis 用の ELK Docker コンテナ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)の手順に従って、ELK スタックを設定します。
 
 - サンプルダッシュボードを読み込むと、Elastic ダッシュボードのツールページは次のようになります。
 

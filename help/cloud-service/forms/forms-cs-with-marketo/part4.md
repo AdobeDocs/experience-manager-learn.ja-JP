@@ -11,18 +11,18 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
 source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '281'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 # 統合のテスト
 
-単純なフォーム取得を作成して統合をテストし、Market からリードオブジェクトを表示します。
+シンプルなフォーム取得を作成して統合をテストし、マーケットから Lead オブジェクトを表示します。
 >[!NOTE]
 >
->この機能は、基盤コンポーネントに基づくフォームに基づいてテストされました。
+>この機能は、基盤コンポーネントに基づくフォームでテストされました。
 
 ## アダプティブフォームの作成
 

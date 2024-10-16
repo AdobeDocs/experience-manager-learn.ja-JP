@@ -8,9 +8,9 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '431'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 98%
    + [コンテンツハブの設定](./content-hub/settingup-content-hub.md)
    + [アセットのアップロードと承認プロセス](./content-hub/uploading-assets-and-approval-process.md)
    + [アセットへのアクセスとダウンロード](./content-hub/accessing-and-downloading-assets.md)
-   + [Adobe Expressを使用した画像バリアントの作成](./content-hub/creating-image-variants-using-adobe-express.md)
+   + [Adobe Express を使用した画像バリアントの作成](./content-hub/creating-image-variants-using-adobe-express.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)

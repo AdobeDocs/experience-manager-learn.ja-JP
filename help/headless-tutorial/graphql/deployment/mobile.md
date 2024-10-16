@@ -11,9 +11,9 @@ thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
 source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '161'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM ヘッドレス API への HTTP 接続はブラウザーのコンテキス�
 
 モバイルアプリケーションのデプロイメントでは、次のデプロイメント設定が必要です。
 
-| モバイルアプリは→に接続します | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| モバイルアプリの接続先 → | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | クロスオリジンリソース共有（CORS） | ✘ | ✘ | ✘ |

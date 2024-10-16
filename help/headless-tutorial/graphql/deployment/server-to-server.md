@@ -11,9 +11,9 @@ thumbnail: kt-10798.jpg
 exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
 duration: 48
 source-git-commit: b607ea10e0eed73b70751b1dd76266a4812d5280
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEMヘッドレス API への HTTP 接続はブラウザーのコンテキスト
 
 サーバー間アプリケーションのデプロイメントを実行するには、次のデプロイメント設定をインプレースにする必要があります。
 
-| サーバー間アプリは→に接続します | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
+| サーバー間アプリケーションの接続先 → | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher フィルター](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | クロスオリジンリソース共有（CORS） | ✘ | ✘ | ✘ |

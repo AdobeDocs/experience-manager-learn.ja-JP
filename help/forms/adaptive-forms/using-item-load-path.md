@@ -12,7 +12,7 @@ thumbnail: item-load.jpg
 exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
 duration: 34
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '180'
 ht-degree: 100%
 

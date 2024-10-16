@@ -1,5 +1,5 @@
 ---
-title: バリエーションの生成 – Edge Delivery ServicesでのSidekickの設定
+title: バリエーションを生成 - Edge Delivery Services の Sidekick 設定
 description: Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するための Sidekick の設定方法を確認します。
 version: Cloud Service
 feature: Authoring
@@ -12,13 +12,13 @@ last-substantial-update: 2024-04-11T00:00:00Z
 jira: KT-15321
 exl-id: b2790752-a2bc-43d1-9f5d-94d82e1224d0
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '44'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# バリエーションの生成 – Edge Delivery ServicesでのSidekickの設定
+# バリエーションを生成 - Edge Delivery Services の Sidekick 設定
 
 {{edge-delivery-services}}
 

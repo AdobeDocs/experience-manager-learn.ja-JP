@@ -13,9 +13,9 @@ thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
 source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1476'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -32,14 +32,14 @@ CDN ログは JSON 形式で利用できます。この形式には、`url`、`c
 |------------------------------------|:-----------------------------------------------------:|
 | HIT | リクエストしたデータは _CDN キャッシュ内で見つかるので、AEM サーバーに取得リクエストを行う必要はありません_。 |
 | MISS | リクエストしたデータは _CDN キャッシュ内で見つからないので、AEM サーバーからリクエストする必要があります_。 |
-| PASS | リクエストされたデータは _明示的にキャッシュされないように設定_ され、常にAEM サーバーから取得されます。 |
+| PASS | リクエストされたデータは&#x200B;_キャッシュされないように明示的に設定_&#x200B;され、常に AEM サーバーから取得されます。 |
 
 このチュートリアルの目的のために、[AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)が AEM as a Cloud Service 環境にデプロイされ、[Apache JMeter](https://jmeter.apache.org/) を使用して小規模なパフォーマンステストがトリガーされます。
 
 このチュートリアルは、次の手順を実行するように構成されています。
 
 1. Cloud Manager を使用した CDN ログのダウンロード
-1. これらの CDN ログを分析するには、ローカルインストールされたダッシュボードと、リモートからアクセスする Splunk または Jupityer Notebook （Adobe Experience Platformのライセンスを取得しているユーザー用）の 2 つの方法があります
+1. これらの CDN ログの分析。ローカルにインストールされたダッシュボード、またはリモートからアクセスした Splunk または Jupiter Notebook（Adobe Experience Platform のライセンスを持つユーザー向け）の 2 つの方法で実行できます。
 1. CDN キャッシュ設定の最適化
 
 ## CDN ログのダウンロード
@@ -52,7 +52,7 @@ CDN ログをダウンロードするには、次の手順に従います。
 
    ![ログのダウンロード - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. **ログをダウンロード** ダイアログで、ドロップダウンメニューから **Publish** サービスを選択し、「**CDN**」行の横にあるダウンロードアイコンをクリックします。
+1. **ログをダウンロード**&#x200B;ダイアログで、ドロップダウンメニューから&#x200B;**公開**&#x200B;サービスを選択し、**CDN** 行の横にあるダウンロードアイコンをクリックします。
 
    ![CDN ログ - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -65,23 +65,23 @@ CDN ログをダウンロードするには、次の手順に従います。
 
 このチュートリアルでは、CDN ログを分析するために、次の 3 つのオプションを紹介します。
 
-1. **Elasticsearch、Logstash、および Kibana （ELK）**: [ELK ダッシュボード ツール ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) はローカルにインストールできます。
-1. **Splunk**:[Splunk ダッシュボードツール ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) は、CDN ログを取り込むために、Splunk および [AEMCS ログ転送が有効 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) へのアクセスが必要です。
-1. **Jupyter Notebook**: Adobe Experience Platformのライセンスを取得しているお客様は、追加のソフトウェアをインストールすることなく ](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)[Adobe Experience Platformの一部としてリモートからアクセスできます。
+1. **Elasticsearch、Logstash、および Kibana（ELK）**：[ELK ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)はローカルにインストールできます。
+1. **Splunk**：[Splunk ダッシュボードツール](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)では、CDN ログを取り込むために、Splunk へのアクセスと [AEMCS ログ転送が有効](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)になっている必要があります。
+1. **Jupyter Notebook**：Adobe Experience Platform のライセンスを取得しているお客様は、追加のソフトウェアをインストールしなくても、[Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) の一部としてリモートからアクセスできます。
 
 ### オプション 1：ELK ダッシュボードツールの使用
 
 [ELK スタック](https://www.elastic.co/elastic-stack)は、データを検索、分析、視覚化するためのスケーラブルなソリューションを提供するツールのセットです。Elasticsearch、Logstash、Kibana で構成されます。
 
-主な詳細を特定するには、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクトを使用します。 このプロジェクトでは、ELK スタックの Docker コンテナと、CDN ログを分析するための事前設定済みの Kibana ダッシュボードを提供します。
+重要な詳細を特定するために、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクトを使用してみましょう。このプロジェクトでは、ELK スタックの Docker コンテナと、CDN ログを分析するための事前設定済みの Kibana ダッシュボードを提供します。
 
-1. [ELK Docker コンテナの設定方法 ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) の手順に従い、**CDN キャッシュヒット率** Kibana ダッシュボードを必ず読み込みます。
+1. [ELK Docker コンテナの設定方法](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container)の手順に従って、**CDN キャッシュヒット率** Kibana ダッシュボードを読み込む必要があります。
 
 1. CDN キャッシュヒット率と上位の URL を特定するには、次の手順に従います。
 
-   1. ダウンロードした CDN ログファイルを環境固有のログフォルダー（例：`ELK/logs/stage`）にコピーします。
+   1. ダウンロードした CDN ログファイルを環境固有のフォルダー内（`ELK/logs/stage` など）にコピーします。
 
-   1. 左上隅の **ナビゲーションメニュー/分析/ダッシュボード/CDN キャッシュヒット率 _をクリックして、「CDN キャッシュヒット率**」ダッシュボードを開き_ す。
+   1. **CDN キャッシュヒット率**&#x200B;ダッシュボードを表示するには、左上隅の&#x200B;_ナビゲーションメニュー／分析／ダッシュボード／CDN キャッシュヒット率_&#x200B;をクリックします。
 
       ![CDN キャッシュヒット率 - Kibana ダッシュボード](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -128,28 +128,28 @@ CDN ログをダウンロードするには、次の手順に従います。
 
    ![ホストフィルター - Kibana ダッシュボード](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
-同様に、分析要件に基づいて、ダッシュボードにさらにフィルターを追加します。
+同様に、分析要件に基づいて、ダッシュボードにフィルターを追加します。
 
-### オプション 2:Splunk ダッシュボードツールの使用
+### オプション 2：Splunk ダッシュボードツールの使用
 
 [Splunk](https://www.splunk.com/) は、監視やトラブルシューティングの目的で、ログの集計、分析、ビジュアライゼーションの作成に役立つ一般的なログ分析ツールです。
 
-主な詳細を特定するには、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクトを使用します。 このプロジェクトでは、CDN ログを分析する Splunk ダッシュボードを提供します。
+重要な詳細を特定するには、[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) プロジェクトを使用してみましょう。このプロジェクトでは、CDN ログを分析する Splunk ダッシュボードを提供します。
 
-1. AEMCS CDN ログ分析用の [Splunk ダッシュボード ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) の手順に従い、**CDN キャッシュヒット率** Splunk ダッシュボードを必ず読み込みます。
-1. 必要に応じて、Splunk ダッシュボードで _インデックス、Source タイプ、その他_ フィルター値を更新します。
+1. [AEMCS CDN ログ分析用の Splunk ダッシュボード](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)の手順に従って、**CDN キャッシュヒット率** Splunk ダッシュボードを読み込む必要があります。
+1. 必要に応じて、Splunk ダッシュボードで&#x200B;_インデックス、ソースタイプ、その他_&#x200B;のフィルター値を更新します。
 
-   ![Splunk ダッシュボード ](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+   ![Splunk ダッシュボード](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
 
 >[!NOTE]
 >
->Splunk ダッシュボードの UI とグラフは ELK ダッシュボードとは異なりますが、重要な詳細は似ています。
+>Splunk ダッシュボードの UI とグラフは ELK ダッシュボードとは異なりますが、主な詳細は似ています。
 
 ### オプション 3：Jupyter ノートブックの使用
 
-ソフトウェアをローカルにインストールしない場合（つまり、前のセクションの ELK ダッシュボードツールの場合）は、別の方法を使用できますが、Adobe Experience Platformのライセンスが必要です。
+ソフトウェアをローカルにインストールしない（前のセクションの ELK ダッシュボードツール）場合は、別のオプションもありますが、Adobe Experience Platform ライセンスが必要です。
 
-[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用します。[Adobe Experience Platform の一部として](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)リモートからアクセス可能です。
+[Jupyter Notebook](https://jupyter.org/) は、コード、テキスト、ビジュアライゼーションを含むドキュメントを作成できるオープンソース web アプリケーションです。データの変換、ビジュアライゼーション、統計的モデリングに使用します。[Adobe Experience Platform の一部として](https://experienceleague.adobe.com/ja/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)リモートからアクセス可能です。
 
 #### インタラクティブ Python ノートブックファイルのダウンロード
 

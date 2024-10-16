@@ -1,6 +1,6 @@
 ---
-title: HTL からの Sling モデルのパラメーター化
-description: AEMで HTL から Sling モデルにパラメーターを渡す方法を説明します。
+title: HTL から Sling Model のパラメーター化
+description: AEM で HTL から Sling Model にパラメーターを渡す方法を説明します。
 version: Cloud Service
 topic: Development
 feature: Sling Model
@@ -9,21 +9,21 @@ jira: KT-15923
 level: Intermediate, Experienced
 exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
 source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# HTL からの Sling モデルのパラメーター化
+# HTL から Sling Model のパラメーター化
 
-Adobe Experience Manager（AEM）は、動的で適応可能な web アプリケーションを構築するための堅牢なフレームワークを提供します。 その強力な機能の 1 つは、Sling モデルをパラメーター化し、柔軟性と再利用性を向上させる機能です。 このチュートリアルでは、パラメーター化された Sling モデルを作成し、HTL （HTMLテンプレート言語）で使用して動的コンテンツをレンダリングする手順を説明します。
+Adobe Experience Manager（AEM）は、動的で柔軟な web アプリケーションを構築するための堅牢なフレームワークを提供します。その強力な機能の 1 つは、Sling Model をパラメーター化し、柔軟性と再利用性を向上させるというものです。このチュートリアルでは、パラメーター化された Sling Model を作成し、HTL（HTML テンプレート言語）で使用して動的コンテンツをレンダリングする手順を説明します。
 
 ## HTL スクリプト
 
-この例では、HTL スクリプトは 2 つのパラメーターを `ParameterizedModel` Sling モデルに送信します。 モデルは、`getValue()` メソッドでこれらのパラメーターを操作し、表示する結果を返します。
+この例では、HTL スクリプトは 2 つのパラメーターを `ParameterizedModel` Sling Model に送信します。モデルは `getValue()` メソッドでこれらのパラメーターを操作し、表示する結果を返します。
 
-この例では 2 つの文字列パラメーターを渡しますが、`@RequestAttribute`](#sling-model-implementation) の注釈が付いた [Sling モデルフィールドタイプが HTL から渡されたオブジェクトのタイプまたは値と一致する限り、任意のタイプの値またはオブジェクトを Sling モデルに渡すことができます。
+この例では 2 つの文字列パラメーターを渡しますが、`@RequestAttribute`](#sling-model-implementation) の注釈が付いた [Sling Model フィールドタイプが HTL から渡されたオブジェクトのタイプまたは値と一致する限り、任意のタイプの値またはオブジェクトを Sling Model に渡すことができます。
 
 ```html
 <sly data-sly-use.myModel="${'com.example.core.models.ParameterizedModel' @ myParameterOne='Hello', myParameterTwo='World'}"
@@ -40,13 +40,13 @@ Adobe Experience Manager（AEM）は、動的で適応可能な web アプリケ
 </sly>
 ```
 
-- **パラメーター化：** `data-sly-use` ステートメントは、`myParameterOne` と `myParameterTwo` を持つ `ParameterizedModel` のインスタンスを作成します。
-- **条件付きレンダリング：** `data-sly-test` は、コンテンツを表示する前にモデルの準備が整っているかどうかを確認します。
-- **プレースホルダー呼び出し：** この `placeholderTemplate` では、モデルの準備が整っていない場合に対処します。
+- **パラメーター化：**`data-sly-use` ステートメントは、`myParameterOne` と `myParameterTwo` を持つ `ParameterizedModel` のインスタンスを作成します。
+- **条件付きレンダリング：**`data-sly-test` は、コンテンツを表示する前にモデルの準備が整っているかどうかを確認します。
+- **プレースホルダー呼び出し：**`placeholderTemplate` では、モデルの準備が整っていない場合に対処します。
 
-## Sling モデルの実装
+## Sling Model の実装
 
-Sling モデルを実装する方法を次に示します。
+Sling Model を実装する方法を次に示します。
 
 ```java
 package com.example.core.models.impl;
@@ -87,11 +87,11 @@ public class ParameterizedModelImpl implements ParameterizedModel {
 }
 ```
 
-- **モデル注釈：** `@Model` 注釈は、このクラスを Sling モデルとして指定し、`SlingHttpServletRequest` から適応可能で、`ParameterizedModel` インターフェイスを実装します。
-- **リクエスト属性：** リク `@RequestAttribute` スト注釈は、モデルに HTL パラメーターを挿入します。
-- **メソッド：** `getValue()` がパラメーターを連結し、パラメーターが空白でないことを `isReady()` がチェックします。
+- **モデル注釈：**`@Model` 注釈は、このクラスを Sling モデルとして指定し、`SlingHttpServletRequest` から適応可能で、`ParameterizedModel` インターフェイスを実装します。
+- **リクエスト属性：**`@RequestAttribute` 注釈は、モデルに HTL パラメーターを挿入します。
+- **メソッド：**`getValue()` がパラメーターを連結し、`isReady()` はパラメーターが空白でないことを確認します。
 
-`ParameterizedModel` インターフェイスは次のように定義されます。
+`ParameterizedModel` インターフェイスは次のように定義します。
 
 ```java
 package com.example.core.models;
@@ -118,7 +118,7 @@ public interface ParameterizedModel {
 
 ## 出力例
 
-パラメーター `"Hello"` および `"World"` を使用して、HTL スクリプトは次の出力を生成します。
+パラメーター `"Hello"` と `"World"` を使用すると、HTL スクリプトは次の出力を生成します。
 
 ```html
 <p>
@@ -126,4 +126,4 @@ public interface ParameterizedModel {
 </p>
 ```
 
-これにより、HTL 経由で提供される入力パラメーターに基づいて、AEMのパラメーター化された Sling モデルがどのように影響を受けるかを示すことができます。
+これは、HTL 経由で提供される入力パラメーターに基づいて、AEM のパラメーター化された Sling モデルがどのように影響を受けるかを示しています。

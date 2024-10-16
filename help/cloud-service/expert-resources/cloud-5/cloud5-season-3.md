@@ -7,9 +7,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
 source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '566'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -251,7 +251,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             </div>
             <p>
                 <br/>                
-                 Largest Contentful Paint （LCP）を改善する手法について説明します。
+                 コンテンツが豊富な最大のペイント（LCP）を改善する手法について説明します。
             </p>
         </td>            
     </tr>        

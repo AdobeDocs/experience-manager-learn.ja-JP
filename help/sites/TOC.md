@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '554'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -38,12 +38,12 @@ ht-degree: 91%
       + [検索エンジンのインデックス作成を防ぐ](./document-authoring/how-to/no-index.md)
       + [レスポンシブナビゲーション](document-authoring/how-to/responsive-navigation.md)
       + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
-      + [インポーターを使用したサイト移行](./document-authoring/how-to/migration-using-importer.md)
+      + [インポーターを使用したサイトの移行](./document-authoring/how-to/migration-using-importer.md)
       + [インポーターのカスタマイズ](./document-authoring/how-to/customizing-importer.md)
       + [インポーターを使用した一括読み込み](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + バリエーションを生成 {#generate-variations}
+      + バリエーションを生成{#generate-variations}
          + [概要](./document-authoring/how-to/generate-variations/overview.md)
-         + [Sidekickの設定](./document-authoring/how-to/generate-variations/configure-sidekick.md)
+         + [Sidekick 設定](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [プロンプトテンプレート](./document-authoring/how-to/generate-variations/prompt-templates.md)
          + [カスタムプロンプトテンプレート](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
          + [カスタムプロンプトテンプレートの保存](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
@@ -54,7 +54,7 @@ ht-degree: 91%
          + [信頼とプライバシー](./document-authoring/how-to/generate-variations/trust-privacy.md)
       + [実験フレームワーク](./document-authoring/how-to/experimentation-framework.md)
       + [実験フレームワークの設定](./document-authoring/how-to/setup-experimentation-framework.md)
-      + [実験用のメタデータ](./document-authoring/how-to/experimentation-add-metadata.md)
+      + [実験のメタデータ](./document-authoring/how-to/experimentation-add-metadata.md)
 + ページオーサリング {#page-authoring}
    + [オーサリング](page-authoring/aem-sites-authoring-overview.md)
    + [ナビゲーション](page-authoring/basic-handling-sites-feature-video-use.md)
