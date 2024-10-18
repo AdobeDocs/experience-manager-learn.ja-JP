@@ -1,6 +1,6 @@
 ---
 title: 住所コンポーネントの作成
-description: AEM Forms Cloud Service での新しい住所コアコンポーネントの作成
+description: AEM Formsのas a Cloud Serviceでの新しいアドレスコアコンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,16 +9,16 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: be25be52-2914-4820-9356-678a326f8edc
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
-workflow-type: ht
-source-wordcount: '196'
-ht-degree: 100%
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 78%
 
 ---
 
 # プロジェクトのデプロイ
 
-AEM Forms Cloud Service へのプロジェクトのデプロイを開始する前に、ローカルのクラウド対応 AEM Forms インスタンスにプロジェクトをデプロイすることをお勧めします。
+AEM Formsas a Cloud Serviceへのプロジェクトのデプロイを開始する前に、ローカルのAEM Forms cloud ready インスタンスにプロジェクトをデプロイすることをお勧めします。
 
 ## 変更内容を AEM プロジェクトに同期する
 

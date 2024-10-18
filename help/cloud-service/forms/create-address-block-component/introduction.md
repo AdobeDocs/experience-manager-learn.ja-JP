@@ -1,6 +1,6 @@
 ---
 title: 住所コンポーネントの作成
-description: AEM Forms Cloud Service での新しい住所コアコンポーネントの作成
+description: AEM Formsのas a Cloud Serviceでの新しいアドレスコアコンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,10 +10,10 @@ topic: Development
 jira: KT-15752
 exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 97%
+ht-degree: 87%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Manager（AEM）のコンポーネントとは、ページや�
 
 ## 前提条件
 
-* AEM Forms Cloud Service インスタンスへのアクセス
+* AEM Formsas a Cloud Serviceインスタンスへのアクセス
 * AEM Forms モジュールを使用したフォームの開発経験
 * AEM／AEM Forms（Git、IntelliJ など）の開発環境のセットアップ経験
 

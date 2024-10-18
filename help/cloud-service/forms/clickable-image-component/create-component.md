@@ -1,6 +1,6 @@
 ---
 title: 画像コンポーネントの作成
-description: AEM Forms Cloud Service でのクリック可能な画像コンポーネントの作成
+description: AEM Formsのas a Cloud Serviceでのクリック可能な画像コンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15968
 exl-id: b635f171-775d-480e-bf7a-c92ab4af0aee
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
-source-wordcount: '221'
-ht-degree: 100%
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 95%
 
 ---
 
