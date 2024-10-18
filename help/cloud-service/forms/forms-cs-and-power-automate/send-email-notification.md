@@ -10,11 +10,12 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-10828
 exl-id: 6e9b91a0-327f-4af1-8308-c938fc9a13b9
+badgeVersions: label="AEM FormsCloud Service" before-title="false"
 duration: 430
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '50'
-ht-degree: 100%
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
+workflow-type: tm+mt
+source-wordcount: '54'
+ht-degree: 92%
 
 ---
 

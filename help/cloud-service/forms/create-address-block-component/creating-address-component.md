@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: ht
-source-wordcount: '297'
-ht-degree: 100%
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 97%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Forms のローカルクラウド対応インスタンスの CRXDE にログ
 ``state`` ノードを選択し、次に示すようにプロパティを設定します。state の fieldType がドロップダウンに設定されます。
 ![state](assets/state.png)
 
-## state フィールドのデフォルト値の設定
+## 状態フィールドのオプションを設定
 
 ``state`` ノードを選択して、次のプロパティを追加します。
 
