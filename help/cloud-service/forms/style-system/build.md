@@ -10,10 +10,10 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: ht
-source-wordcount: '219'
-ht-degree: 100%
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 87%
 
 ---
 
@@ -21,9 +21,11 @@ ht-degree: 100%
 # 変更内容のテスト
 
 **「コアコンポーネントを含む空白」**テンプレートに基づいてアダプティブフォームを作成。フォームに 3 つのボタンをドラッグ＆ドロップし、「Corporate」、「Marketing」、「Default」というラベルを付けます。
-図のようにペイントブラシを選択して、企業ボタンとマーケティングボタンに適切なスタイルバリアントを割り当てます
+次に示すように、ペイントブラシを選択して、適切なスタイルバリアントを企業ボタンとマーケティングボタンに割り当てます。
 
 ![styles](assets/marketing-variation.png)
+
+3 番目のボタンには、デフォルトのスタイルが適用されます。
 
 ## テーマプロジェクトの作成
 
