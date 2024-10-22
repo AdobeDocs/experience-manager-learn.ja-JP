@@ -14,15 +14,15 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
 source-git-commit: c638c1e012952f2f43806a325d729cde088ab9f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1015'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
 # AEM Sites を使用した Experience Platform FPID の生成
 
-AEM Publishを介して配信されるAdobe Experience Manager（AEM）サイトをAdobe Experience Platform AEM（AEP）と統合するには、ユーザーアクティビティを一意に追跡するために、一意のファーストパーティデバイス ID （FPID） cookie を生成し、維持する必要があります。
+AEM Publish 経由で配信される Adobe Experience Manager（AEM）Sites と Adobe Experience Platform（AEP）を統合するには、AEM が、ユーザーアクティビティを一意に追跡するために一意のファーストパーティデバイス ID（FPID）Cookie を生成し維持管理する必要があります。
 
 サポートドキュメントを読んで、[ファーストパーティデバイス ID と Experience Cloud ID の連携方法の詳細をご確認ください](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=ja)。
 
@@ -55,7 +55,7 @@ FPID の一意性要件を組み合わせると、これらのリソースがキ
 
 ### AEM Publish FPID cookie サーブレット
 
-FPID cookie を生成または拡張するには、[Sling サーブレット ](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1) を使用してAEM Publish HTTP エンドポイントを作成する必要があります。
+FPID cookie を生成または拡張するには、[Sling サーブレット](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1)を使用して AEM Publish HTTP エンドポイントを作成する必要があります。
 
 + アクセスに認証が必要ないため、サーブレットは `/bin/aem/fpid` にバインドされています。認証が必要な場合は、Sling リソースタイプにバインドします。
 + このサーブレットは、HTTP GET リクエストを受け入れます。 応答はキャッシュを防ぐために `Cache-Control: no-store` でマークされていますが、このエンドポイントは一意のキャッシュ無効化クエリパラメーターも使用してリクエストする必要があります。
@@ -67,7 +67,7 @@ HTTP リクエストがサーブレットに到達すると、サーブレット
 
 次に、サーブレットは FPID を `{ fpid: "<FPID VALUE>" }` フォームの JSON オブジェクトとして応答に書き込みます。
 
-FPID cookie は `HttpOnly` とマークされているため、FPID を本文でクライアントに提供することが重要です。これは、サーバーのみがその値を読み取ることができ、クライアントサイドのJavaScriptは読み取れないことを意味します。 ページの読み込み時に FPID が不必要に再取得されるのを避けるために、`FPID_CLIENT` cookie も設定されます。これは、FPID が生成され、使用するためにその値がクライアントサイドJavaScriptに公開されることを示します。
+FPID Cookie は `HttpOnly` とマークされているため、FPID を本文でクライアントに提供することが重要です。これは、サーバーのみがその値を読み取ることができ、クライアントサイドの JavaScript は読み取れないことを意味します。ページの読み込み時に FPID が不必要に再取得されるのを避けるために、`FPID_CLIENT` Cookie も設定されます。これは、FPID が生成されたことを示し、その値をクライアントサイドの JavaScript に公開して使用できるようにします。
 
 FPID 値は、Platform Web SDK を使用して呼び出しをパラメーター化するために使用されます。
 
@@ -159,7 +159,7 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 カスタムのクライアントサイド JavaScript をページに追加して、サーブレットを非同期的に呼び出し、FPID cookie を生成または更新して、応答で FPID を返す必要があります。
 
-このJavaScript スクリプトは、通常、次のいずれかのメソッドを使用してページに追加されます。
+この JavaScript スクリプトは、通常、次のいずれかのメソッドを使用して、ページに追加されます。
 
 + [Adobe Experience Platform のタグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)
 + [AEM クライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=ja)

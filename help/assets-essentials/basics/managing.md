@@ -1,5 +1,5 @@
 ---
-title: Assets ビューでのアセットの管理
+title: アセットビューでのアセットの管理
 description: フォルダー構造の作成の基本と、移動、コピー、名前変更などの基本的な操作について説明します。
 version: Cloud Service
 topic: Content Management
@@ -12,14 +12,14 @@ doc-type: Feature Video
 exl-id: 394fc981-9593-492d-9961-b81a627730b1
 duration: 730
 source-git-commit: b87a2e9d740ad4acafdaa159fcf9835125798ab2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
-# Assets ビューでのアセットの管理
+# アセットビューでのアセットの管理
 
-フォルダー構造の作成の基本、移動、コピー、名前変更などの基本的な操作、コレクションについて説明します。
+フォルダー構造の作成の基本と、移動、コピー、名前変更、コレクションなどの基本的な操作について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335733?quality=12&learn=on)

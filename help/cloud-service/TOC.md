@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1307'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -258,7 +258,7 @@ ht-degree: 99%
    + アドレスブロックコンポーネントの作成{#create-address-block}
       + [1 - はじめに](./forms/create-address-block-component/introduction.md)
       + [2 - 設定](./forms/create-address-block-component/set-up.md)
-      + [2 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
+      + [3 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
       + [4 - コンポーネントのデプロイ](./forms/create-address-block-component/deploy-your-project.md)
    + クリック可能な画像コンポーネントの作成{#clickable-image-component}
       + [1 - はじめに](./forms/clickable-image-component/introduction.md)
@@ -269,11 +269,11 @@ ht-degree: 99%
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
       + [ルールの作成](./forms/form-data-analytics/rules.md)
       + [ソリューションのテスト](./forms/form-data-analytics/test.md)
-   + ボタンのバリエーションの作成 {#style-system}
+   + ボタンのバリエーションの作成{#style-system}
       + [はじめに](./forms/style-system/introduction.md)
       + [ポリシーの定義](./forms/style-system/style-policy.md)
       + [バリエーションの定義](./forms/style-system/create-variations.md)
-      + [テストのバリエーション](./forms/style-system/build.md)
+      + [バリエーションのテスト](./forms/style-system/build.md)
    + 垂直タブの使用{#using-vertical-tabs}
       + [1. はじめに](./forms/using-vertical-tabs/introduction.md)
       + [2. フォームの作成](./forms/using-vertical-tabs/create-af.md)

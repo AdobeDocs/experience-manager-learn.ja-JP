@@ -13,7 +13,7 @@ jira: KT-16300
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 source-git-commit: 5e7ed607cae211f989ed50c10ae3be47876868cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '54'
 ht-degree: 100%
 

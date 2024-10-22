@@ -13,9 +13,9 @@ jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
 source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '833'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -68,11 +68,11 @@ AEM イベンティングは強力な機能ですが、考慮すべき制限が�
 
 - **可用性は AEM as a Cloud Service に限定**：現在、AEM イベンティングは AEM as a Cloud Service でのみ利用可能です。
 
-- **利用可能なイベントタイプ**：利用可能なイベントタイプの現在のリストを確認します [ こちら ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types)。
+- **利用可能なイベントタイプ**：利用可能なイベントタイプの現在のリストは[こちら](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types)で確認できます。
 
 ## 有効にする方法
 
-次の手順については、[AEM Cloud Service環境でのAEM イベントの有効化 ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) を参照してください。
+次の手順については、[AEM Cloud Service 環境での AEM イベントの有効化](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)を参照してください。
 
 ## サブスクライブ方法
 
