@@ -7,15 +7,15 @@ feature: Operations, Dispatcher
 role: Developer, Architect
 level: Intermediate
 jira: KT-11466
-last-substantial-update: 2022-10-14T00:00:00Z
+last-substantial-update: 2024-10-22T00:00:00Z
 index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 3cc9b4fa0a30d36638a8c28a73663ffa455ba4a3
-workflow-type: ht
-source-wordcount: '877'
-ht-degree: 100%
+source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 95%
 
 ---
 
@@ -37,7 +37,7 @@ AEM の URL リダイレクトソリューションは次のとおりです。
 | [AEM 管理の CDN による Edge](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge／CDN（組み込み） |
 | [独自の CDN（BYOCDN）による Edge](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge／CDN（BYOCDN） |
 | [Dispatcher 設定としての Apache `mod_rewrite` ルール](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
-| [ACS Commons - リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
+| [ACS Commons - リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS Commons - リダイレクトマネージャー](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
 | [`Redirect` ページのプロパティ](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
@@ -76,7 +76,7 @@ URL リダイレクトを管理するために [ACS AEM Commons](https://adobe-c
 
 #### リダイレクトマップマネージャー
 
-[リダイレクトマップマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html?lang=ja)を使用すると、AEM 6.x 管理者は、Apache Web サーバーに直接アクセスしたり、Apache web サーバーを再起動したりすることなく、[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) ファイルを簡単に管理および公開できます。この機能を使用すると、ユーザーは、開発チームや AEM デプロイメントの手助けを借りずに、AEM のコンソールからリダイレクトルールを作成、更新、および削除できます。リダイレクトマップマネージャは **AEM as a Cloud Service と互換性がありません**。
+[ リダイレクトマップマネージャ ](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html?lang=ja) を使用すると、AEM管理者は、Apache Web サーバーに直接アクセスしたり、Apache web サーバーを再起動したりすることなく、[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) ファイルを簡単に管理および公開できます。 この機能を使用すると、ユーザーは、開発チームや AEM デプロイメントの手助けを借りずに、AEM のコンソールからリダイレクトルールを作成、更新、および削除できます。リダイレクトマネージャーは **AEM as a Cloud Service** と **AEM 6.x** の両方と互換性があります。
 
 #### リダイレクトマネージャ
 
