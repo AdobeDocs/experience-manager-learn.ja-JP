@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
-workflow-type: ht
-source-wordcount: '431'
-ht-degree: 100%
+source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 98%
 
 ---
 
@@ -76,10 +76,12 @@ ht-degree: 100%
    + [Sidekick プラグイン](./edge-delivery-services/sidekick-plugin.md)
 
 + コンテンツハブ{#content-hub}
-   + [コンテンツハブの設定](./content-hub/settingup-content-hub.md)
-   + [アセットのアップロードと承認プロセス](./content-hub/uploading-assets-and-approval-process.md)
-   + [アセットへのアクセスとダウンロード](./content-hub/accessing-and-downloading-assets.md)
-   + [Adobe Express を使用した画像バリアントの作成](./content-hub/creating-image-variants-using-adobe-express.md)
+   + [設定](./content-hub/set-up.md)
+   + [アセットを追加](./content-hub/add-assets.md)
+   + [アセットのダウンロード](./content-hub/download-assets.md)
+   + [Adobe Expressを使用した画像のバリアント](./content-hub/image-variants.md)
+   + [コレクション](./content-hub/collections.md)
+   + [共有](./content-hub/share.md)
 
 + 共有と配布{#sharing}
    + [アセットのダウンロード](./sharing/download.md)
