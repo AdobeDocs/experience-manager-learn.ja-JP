@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1322'
 ht-degree: 99%
 
 ---
@@ -111,6 +111,7 @@ ht-degree: 99%
       + [シークレット](./developing/advanced/secrets.md)
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
+      + [AEM オーサーのリーダーインスタンスでジョブを実行](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
    + 迅速な開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
