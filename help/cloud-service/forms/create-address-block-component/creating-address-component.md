@@ -1,6 +1,6 @@
 ---
 title: 住所コンポーネントの作成
-description: AEM Formsのas a Cloud Serviceでの新しいアドレスコアコンポーネントの作成
+description: AEM Forms as a Cloud Service での新しい住所コアコンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,9 +10,9 @@ topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Forms のローカルクラウド対応インスタンスの CRXDE にログ
 ``state`` ノードを選択し、次に示すようにプロパティを設定します。state の fieldType がドロップダウンに設定されます。
 ![state](assets/state.png)
 
-## 状態フィールドのオプションを設定
+## state フィールドのオプションの設定
 
 ``state`` ノードを選択して、次のプロパティを追加します。
 

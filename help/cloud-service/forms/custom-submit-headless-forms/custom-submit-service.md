@@ -12,9 +12,9 @@ jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '453'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ AEM Forms には、ほとんどのユースケースに対応できる、多数�
 
 ## AEM プロジェクトを作成
 
-既存のAEM Formsas a Cloud Serviceプロジェクトがある場合は [ カスタム送信サービスの作成に進んでください ](#Write-the-custom-submit-service)
+既存の AEM Forms as a Cloud Service プロジェクトがある場合は、[カスタム送信サービスの書き込みに進む](#Write-the-custom-submit-service)ことができます
 
 * C ドライブ上に cloudmanager というフォルダーを作成します。
 * この新しく作成したフォルダーに移動します

@@ -1,5 +1,5 @@
 ---
-title: AEM Formsas a Cloud ServiceとMarketoの統合
+title: AEM Forms as a Cloud Service と Marketo の統合
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Marketo を統合する方法を説明します
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -12,9 +12,9 @@ last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '342'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ Marketo は、システムの機能の多くをリモートで実行できる RE
 
 ## 前提条件
 
-1. AEM Formsas a Cloud Serviceインスタンスへのアクセス
+1. AEM Forms as a Cloud Service インスタンスへのアクセス
 1. フォームデータモデルに精通している
 1. Swagger ファイルの基本知識
 1. アダプティブフォームの作成

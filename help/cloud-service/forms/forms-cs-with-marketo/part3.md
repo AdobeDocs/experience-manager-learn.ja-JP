@@ -1,5 +1,5 @@
 ---
-title: AEM Formsas a Cloud ServiceとMarketoの統合（パート 3）
+title: AEM Forms as a Cloud Service と Marketo の統合（第 3 部）
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Marketo を統合する方法を説明します
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -12,9 +12,9 @@ last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: 43737765-b1ea-4594-853a-d78f41136b5e
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 

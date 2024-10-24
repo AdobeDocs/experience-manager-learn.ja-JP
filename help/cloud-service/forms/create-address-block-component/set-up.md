@@ -1,6 +1,6 @@
 ---
 title: 住所コンポーネントの作成
-description: AEM Formsのas a Cloud Serviceでの新しいアドレスコアコンポーネントの作成
+description: AEM Forms as a Cloud Service での新しい住所コアコンポーネントの作成
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,9 +10,9 @@ topic: Development
 jira: KT-15752
 exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '73'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: AEM Formsのas a Cloud Serviceでの垂直タブの使用
+title: AEM Forms as a Cloud Service での垂直タブの使用
 description: 垂直タブを使用したアダプティブフォームの作成
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -13,9 +13,9 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16023
 exl-id: 84c03212-47dc-4398-a197-e69e3f3bf77e
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '101'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
