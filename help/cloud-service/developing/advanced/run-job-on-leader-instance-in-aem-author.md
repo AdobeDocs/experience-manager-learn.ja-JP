@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Serviceでリーダーインスタンスのジョブを実行する方法
-description: AEM as a Cloud Serviceのリーダーインスタンスでジョブを実行する方法を説明します。
+title: AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法
+description: AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法について説明します。
 version: Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
@@ -12,28 +12,28 @@ last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
 source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '557'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# AEM as a Cloud Serviceでリーダーインスタンスのジョブを実行する方法
+# AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法
 
-AEM as a Cloud Serviceの一部として、AEM オーサーサービスのリーダーインスタンスでジョブを実行する方法と、1 回だけ実行するように設定する方法について説明します。
+AEM as a Cloud Service の一部として、AEM オーサーサービスのリーダーインスタンスでのジョブの実行方法と、1 回のみの実行の設定方法について説明します。
 
-Sling ジョブは、バックグラウンドで動作する非同期タスクで、システムまたはユーザーがトリガーするイベントを処理するように設計されています。 デフォルトでは、これらのジョブはクラスター内のすべてのインスタンス（ポッド）に均等に分散されます。
+Sling ジョブは、バックグラウンドで動作する非同期タスクで、システムまたはユーザーがトリガーするイベントを処理するように設計されています。デフォルトでは、これらのジョブはクラスター内のすべてのインスタンス（ポッド）に均等に分散されます。
 
-詳しくは、[Apache Sling のイベントとジョブ処理 ](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) を参照してください。
+詳しくは、[Apache Sling のイベントとジョブの取り扱い](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)を参照してください。
 
 ## ジョブの作成と処理
 
-デモのために、ジョブプロセッサーにメッセージをログに記録するように指示する単純な _ジョブ_ を作成しましょう。
+デモの目的で、_ジョブプロセッサーにメッセージをログに記録するように指示するシンプルなジョブ_&#x200B;を作成しましょう。
 
 ### ジョブの作成
 
-次のコードを使用して、Apache Sling ジョブを _作成_ します。
+次のコードを使用して、Apache Sling ジョブを&#x200B;_作成_&#x200B;します。
 
 ```java
 package com.adobe.aem.guides.wknd.core.sling.jobs.impl;
@@ -77,14 +77,14 @@ public class SimpleJobCreaterImpl {
 }
 ```
 
-上記のコードで注意すべき重要な点は次のとおりです。
+上記のコードで注意すべき重要なポイントは次のとおりです。
 
-- ジョブのペイロードには、`action` と `message` の 2 つのプロパティがあります。
-- [JobManager](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html) の `addJob(...)` メソッドを使用して、トピック `wknd/simple/job/topic` にジョブを追加します。
+- ジョブペイロードには、`action` と `message` という 2 つのプロパティがあります。
+- [JobManager](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html) の `addJob(...)` メソッドを使用すると、ジョブがトピック `wknd/simple/job/topic` に追加されます。
 
 ### ジョブの処理
 
-上記の Apache Sling ジョブを _処理_ するには、以下のコードを使用します。
+次のコードを使用して、上記の Apache Sling ジョブを&#x200B;_処理_&#x200B;します。
 
 ```java
 package com.adobe.aem.guides.wknd.core.sling.jobs.impl;
@@ -120,25 +120,25 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 }
 ```
 
-上記のコードで注意すべき重要な点は次のとおりです。
+上記のコードで注意すべき重要なポイントは次のとおりです。
 
-- `SimpleJobConsumerImpl` クラスは、`JobConsumer` インターフェイスを実装します。
-- これは、トピック `wknd/simple/job/topic` からジョブを使用するように登録されたサービスです。
-- `process(...)` メソッドは、ジョブペイロードの `message` プロパティをログに記録することでジョブを処理します。
+- `SimpleJobConsumerImpl` クラスは、`JobConsumer` インターフェイスを実装しています。
+- これは、トピック `wknd/simple/job/topic` からのジョブを使用するために登録されたサービスです。
+- `process(...)` メソッドは、ジョブペイロードの `message` プロパティをログに記録してジョブを処理します。
 
 ### デフォルトのジョブ処理
 
-上記のコードをAEM as a Cloud Service環境にデプロイし、複数のAEM オーサー JVM を備えたクラスターとして動作するAEM オーサーサービスで実行すると、ジョブは各AEM オーサーインスタンス（ポッド）で 1 回実行されます。つまり、作成されたジョブの数がポッドの数と一致します。 ポッドの数は、常に複数になりますが（非 RDE 環境の場合）、AEM as a Cloud Serviceの内部リソース管理に基づいて変動します。
+上記のコードを AEM as a Cloud Service 環境にデプロイし、複数の AEM オーサー JVM を持つクラスターとして動作する AEM オーサーサービスで実行すると、ジョブは各 AEM オーサーインスタンス（ポッド）で 1 回実行されます。つまり、作成したジョブの数はポッドの数と一致します。ポッドの数は常に 1 個以上になります（非 RDE 環境の場合）が、AEM as a Cloud Service の内部リソース管理に基づいて変動します。
 
-ジョブはAEM オーサーインスタンス（ポッド）ごとに実行されます。これは、`wknd/simple/job/topic` がAEMのメインキューに関連付けられていて、使用可能なすべてのインスタンスにジョブが配布されるためです。
+`wknd/simple/job/topic` は AEM のメインキューに関連付けられて、使用可能なすべてのインスタンスにジョブを分散するので、ジョブは各 AEM オーサーインスタンス（ポッド）で実行されます。
 
 リソースや外部サービスの作成や更新など、ジョブが状態の変更を担当している場合は、これが問題になることがよくあります。
 
-AEM オーサーサービスでジョブを 1 回だけ実行する場合は、以下に説明する [ ジョブキュー設定 ](#how-to-run-a-job-on-the-leader-instance) を追加します。
+AEM オーサーサービスでジョブを 1 回のみ実行する場合は、次に説明する[ジョブキューの設定](#how-to-run-a-job-on-the-leader-instance)を追加します。
 
-[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager) のAEM オーサーサービスのログを確認することで、これを確かめることができます。
+これを確認するには、[Cloud Manager](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager) で AEM オーサーサービスのログを確認します。
 
-![ すべてのインスタンスで処理されるジョブ ](./assets/run-job-once/job-processed-by-all-instances.png)
+![すべてのインスタンスで処理されるジョブ](./assets/run-job-once/job-processed-by-all-instances.png)
 
 
 以下が表示されます。
@@ -151,11 +151,11 @@ AEM オーサーサービスでジョブを 1 回だけ実行する場合は、�
 <DD.MM.YYYY HH:mm:ss.SSS> INFO [com.adobe.aem.guides.wknd.core.sling.jobs.impl.SimpleJobConsumerImpl] Processing WKND Job, and Job metadata is: Created in activate method
 ```
 
-2 つのログエントリがあり、各AEM オーサーインスタンス（`68775db964-nxxcx` と `68775db964-r4zk7`）に 1 つずつ存在しています。これは、各インスタンス（ポッド）がジョブを処理したことを示しています。
+ログエントリは 2 つあり、AEM オーサーインスタンス（`68775db964-nxxcx` と `68775db964-r4zk7`）ごとに 1 つずつあり、各インスタンス（ポッド）がジョブを処理したことを示しています。
 
-## リーダーインスタンスでジョブを実行する方法
+## リーダーインスタンスでのジョブの実行方法
 
-AEM オーサーサービスでジョブを _1 回だけ_ 実行するには、タイプ **Ordered** の新しい Sling ジョブキューを作成し、そのキューにジョブトピック（`wknd/simple/job/topic`）を関連付けます。 この設定では、リーダーのAEM オーサーインスタンス（ポッド）のみがジョブを処理できます。
+AEM オーサーサービスでジョブを _1 回のみ_&#x200B;実行するには、**順序付き**&#x200B;タイプの新しい Sling ジョブキューを作成し、ジョブトピック（`wknd/simple/job/topic`）をこのキューに関連付けます。この設定では、リーダーの AEM オーサーインスタンス（ポッド）のみがジョブを処理できます。
 
 AEM プロジェクトの `ui.config` モジュールで、OSGi 設定ファイル（`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`）を作成し、`ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author` フォルダーに保存します。
 
@@ -171,13 +171,13 @@ AEM プロジェクトの `ui.config` モジュールで、OSGi 設定ファイ�
   }
 ```
 
-上記の設定で注意すべき重要な点は次のとおりです。
+上記の設定で注意すべき重要なポイントは次のとおりです。
 
-- キュートピックが `wknd/simple/job/topic` に設定されています。
-- キューの種類は `ORDERED` に設定されています。
+- キュートピックは `wknd/simple/job/topic` に設定されています。
+- キュータイプは `ORDERED` に設定されています。
 - 並列ジョブの最大数は `1` に設定されています。
 
-上記の設定をデプロイすると、ジョブはリーダーインスタンスによってのみ処理され、AEM オーサーサービス全体で 1 回だけ実行されるようになります。
+上記の設定をデプロイすると、ジョブはリーダーインスタンスによって排他的に処理され、AEM オーサーサービス全体で 1 回のみ実行されるようになります。
 
 ```
 <DD.MM.YYYY HH:mm:ss.SSS> [cm-pxxxx-exxxx-aem-author-7475cf85df-qdbq5] *INFO* [FelixLogListener] Events.Service.org.apache.sling.event Service [QueueMBean for queue WKND Queue - ORDERED,7755, [org.apache.sling.event.jobs.jmx.StatisticsMBean]] ServiceEvent REGISTERED

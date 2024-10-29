@@ -1,6 +1,6 @@
 ---
-title: 出力サービスを使用したPDFドキュメントの生成
-description: データを XDP テンプレートと結合して、非インタラクティブPDFを生成する
+title: Output サービスを使用した PDF ドキュメントの生成
+description: XDP テンプレートを使用してデータを結合し、非インタラクティブ PDF を生成します。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,27 +10,27 @@ topic: Development
 jira: KT-16384
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 
-# 出力サービスを使用したPDFドキュメントの生成
+# Output サービスを使用した PDF ドキュメントの生成
 
-[ 出力サービス ](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html) は、AEM ドキュメントサービスの一部を成す OSGi サービスです。 様々な出力フォーマットとAEM Forms Designerのデザイン機能をサポートしています。 Output サービスは、XFA テンプレートと XML データを変換して、異なる形式の印刷ドキュメントを生成します。
+[Output サービス](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html)は、AEM ドキュメントサービスの一部である OSGi サービスです。Output サービスは、様々な出力形式や、AEM Forms Designer の出力設計機能をサポートしています。Output サービスでは、XFA テンプレートと XML データを変換して、様々な形式の印刷ドキュメントを生成します。
 
-AEM Formsの Output サービスは、AEM Forms 6.5 のものと非常によく似ています。そのため、AEM Forms 6.5 での Output サービスの使用に詳しい場合は、AEM Formsas a Cloud Serviceのas a Cloud Serviceに移行するのは簡単です。
+AEM Forms as a Cloud Service の Output サービスは AEM Forms 6.5 の Output サービスとよく似ているので、AEM Forms 6.5 の Output サービスの使用に慣れている場合、AEM Forms as a Cloud Service への移行は簡単です。
 
-Output サービスを使用すると、次のことが可能なアプリケーションを作成できます。
+Output サービスを使用すると、次を可能にするアプリケーションを作成できます。
 
 + テンプレートファイルに XML データを格納することで、最終形式のドキュメントを生成する。
 + 非インタラクティブ PDF、ポストスクリプト、PCL、および ZPL のプリントストリームを含む様々な形式でフォームを出力する
 + XFA フォームの PDF ファイルから印刷用 PDF を生成する。
-+ 付属のテンプレートを使用して複数のデータセットを結合することにより、PDF、PostScript、PCL および ZPL の各種形式のドキュメントを一括生成する
++ 付属のテンプレートを用いて複数のデータセットを結合することにより、PDF、PostScript、PCL および ZPL の形式のドキュメントを一括生成する。
 
-このサービスは、AEM Formsas a Cloud Serviceインスタンスのコンテキスト内で使用するように設計されています。 次のコードスニペットは、`OutputService` を使用してサーブレットでPDFドキュメントを生成します。
+このサービスは、AEM Forms as a Cloud Service インスタンスのコンテキスト内で使用するように設計されています。次のコードスニペットでは、`OutputService` を使用してサーブレット内に PDF ドキュメントを生成します。
 
 ```java
 import com.adobe.fd.output.api.OutputService;
