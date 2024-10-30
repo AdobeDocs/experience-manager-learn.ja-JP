@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: ht
-source-wordcount: '1322'
-ht-degree: 100%
+source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+workflow-type: tm+mt
+source-wordcount: '1325'
+ht-degree: 99%
 
 ---
 
@@ -279,6 +279,7 @@ ht-degree: 100%
       + [1. はじめに](./forms/using-vertical-tabs/introduction.md)
       + [2. フォームの作成](./forms/using-vertical-tabs/create-af.md)
       + [3. ナビゲーション](./forms/using-vertical-tabs/navigation.md)
+      + [4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
    + Output と Forms サービスの使用{#forms-cs-output-and-forms-service}
       + [PDF の生成](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
