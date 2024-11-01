@@ -10,7 +10,7 @@ team: TM
 source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 98%
    + [設定](./content-hub/set-up.md)
    + [アセットを追加](./content-hub/add-assets.md)
    + [アセットのダウンロード](./content-hub/download-assets.md)
-   + [Adobe Expressを使用した画像のバリアント](./content-hub/image-variants.md)
+   + [Adobe Express を使用した画像バリアント](./content-hub/image-variants.md)
    + [コレクション](./content-hub/collections.md)
    + [共有](./content-hub/share.md)
 
