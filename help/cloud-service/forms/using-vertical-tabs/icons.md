@@ -1,5 +1,5 @@
 ---
-title: AEM Forms as a Cloud Service での垂直タブの使用
+title: カスタムアイコンの追加
 description: 垂直タブへのカスタムアイコンの追加
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,10 +11,11 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16418
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
+source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 2%
+source-wordcount: '676'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 * ユーザビリティの向上：アイコンを使用して各タブの目的をすばやく伝えることができ、ユーザーが探しているものを一目で見つけやすくなります。 アイコンなどの視覚的なキューは、ユーザーがより直感的に移動するのに役立ちます。
 
-* 視覚的な階層とフォーカス：アイコンを使用すると、タブ間の明確な分離が作成され、視覚的な階層が向上します。 これにより、重要なタブを目立たせ、ユーザーの注意をより効果的に導くことができます。
+* 視覚的な階層とフォーカス：アイコンを使用すると、タブ間の明確な分離が作成され、視覚的な階層が向上します。 これは、重要なタブを目立たせ、ユーザーの注意を効果的に導くのに役立ちます。
 この記事に従うと、次に示すようにアイコンを配置できます
 
 ![icons](assets/icons.png)
@@ -42,9 +43,9 @@ ht-degree: 2%
 
 ## アイコンを保存する icon-map の作成
 
-icon-map を_variable.scss ファイルに作成します。 SCSS map $icon-map はキーと値のペアのコレクションで、各キーはアイコン名（home、family など）を表し、各値はそのアイコンに関連付けられた画像ファイルへのパスです。
+_variable.scss ファイルに icon-map を作成します。 SCSS map $icon-map はキーと値のペアのコレクションで、各キーはアイコン名（home、family など）を表し、各値はそのアイコンに関連付けられた画像ファイルへのパスです。
 
-![variable-scss](assets/variable.scss)
+![variable-scss](assets/variable_scss.png)
 
 ```css
 $icon-map: (
@@ -81,8 +82,7 @@ _mixin.scss に次のコードを追加します
 
 add-icon-to-vertical-tab mixin は、垂直タブ上のテキストの横にカスタムアイコンを追加するように設計されています。 画像をアイコンとしてタブに簡単に含め、テキストの横に配置してスタイルを設定し、一貫性と整列を確保できます。
 
-Mixin の分類
-Mixin の各パートの機能は次のとおりです。
+Mixin の分類。Mixin の各パートの機能は次のとおりです。
 
 パラメーター:
 
