@@ -9,8 +9,8 @@ level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 duration: 122
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 12af84e3d9be24fabb01a64eced6279749668599
+workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 100%
 
@@ -119,3 +119,4 @@ com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDoc
    * xdpName：PDF としてレンダリングする xdp ファイルの名前
 
 [この Postman コレクションを読み込んで、API をテストできます。](assets/UsingDocumentServicesInAEMForms.postman_collection.json)
+
