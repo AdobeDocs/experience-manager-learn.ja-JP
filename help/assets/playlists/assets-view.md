@@ -8,15 +8,15 @@ level: Beginner
 last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
+source-git-commit: c939bf218211ef4f515ac8c7eea67cc5425eb3a9
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
 
-
-# AEM Assets Assetsで再生リストを表示
+# AEM Assets Assets ビデオ再生リストの表示
 
 これらのプレイリストを調べて、AEM Assetsのas a Cloud Serviceの管理者ビュー（設定、最適化、使用、クリエイティブワークフローとのシームレスな統合など）をマスターします。 AEM Assetsのas a Cloud Serviceを活用して、成功に必要なインサイトを得ます。
 
@@ -184,5 +184,3 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
-
