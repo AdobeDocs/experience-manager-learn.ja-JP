@@ -9,16 +9,16 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: d95c0cfc64f22efa1490fb1e0d787b8d76006add
+source-git-commit: 33e0ded0cdcb5d8ed146fdc59c6f37495cd251eb
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
 # 管理者向けビデオ再生リスト
 
-![AEM Assets管理ビュー ](./assets/admin-view.png){align=center}
+![AEM Assets管理者ビュー ](./assets/admin-view.png){align="center"}
 
 これらのプレイリストを調べて、AEM Assetsのas a Cloud Serviceの管理者ビュー（設定、最適化、使用、クリエイティブワークフローとのシームレスな統合など）をマスターします。 AEM Assetsのas a Cloud Serviceを活用して、成功に必要なインサイトを得ます。
 
