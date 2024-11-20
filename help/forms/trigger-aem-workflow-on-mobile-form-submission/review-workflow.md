@@ -1,6 +1,6 @@
 ---
-title: HTML 5 フォーム送信時のAEM トリガーワークフロー – PDFを確認し、承認します
-description: 送信されたPDFを確認するワークフロー
+title: HTM5 フォーム送信での AEM ワークフローのトリガー - PDF のレビューと承認
+description: 送信された PDF をレビューするワ―クフロー
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -10,15 +10,15 @@ level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '172'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
 # 送信された PDF をレビューして承認するワ―クフロー
 
-最後のステップは、レビューと承認を受けるための静的（非インタラクティブ）PDFを生成するAEM ワークフローを作成することです。 ワークフローは、ノード `/content/formsubmissions` に設定された AEM ランチャーを介してトリガーされます。
+最後のステップとして、レビューおよび承認用に静的（非インタラクティブ）PDF を生成する AEM ワークフローを作成します。ワークフローは、ノード `/content/formsubmissions` に設定された AEM ランチャーを介してトリガーされます。
 
 次のスクリーンショットは、ワークフローに含まれているステップを示しています。
 

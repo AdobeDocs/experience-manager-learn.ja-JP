@@ -11,9 +11,9 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
 source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '253'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 81%
 
 ## テーマプロジェクトの作成
 
-次の手順では、テーマプロジェクトを作成します。テーマプロジェクトのルートフォルダーに移動し、コマンド _**npm run build**_ を実行します（以下のスクリーンショットを参照）。
+次の手順では、テーマプロジェクトを作成します。テーマプロジェクトのルートフォルダーに移動し、次のスクリーンショットに示すように、コマンド「_**npm run build**_」を実行します。
 
 ![build-theme](assets/build-theme.png)
 
@@ -47,7 +47,7 @@ ht-degree: 81%
 
 ![final-buttons](assets/final-state-buttons.png)
 
-## 変更をプッシュ
+## 変更内容のプッシュ
 
-変更に満足したら、[ フロントエンドパイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline) を使用して変更をクラウドインスタンスにプッシュできます。
+変更内容に問題がなければ、[フロントエンドパイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)を使用して、変更内容をクラウドインスタンスにプッシュできます。
 

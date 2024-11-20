@@ -1,6 +1,6 @@
 ---
-title: React アプリを実装して、ユニバーサルエディターを使用してコンテンツを編集する
-description: ユニバーサルエディターを使用してコンテンツを編集するように React アプリを実装する方法を説明します。
+title: React アプリを実装してユニバーサルエディターを使用してコンテンツを編集する
+description: ユニバーサルエディターを使用してコンテンツを編集するために React アプリを実装する方法について説明します。
 version: Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
@@ -13,38 +13,38 @@ jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1606'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# React アプリを実装して、ユニバーサルエディターを使用してコンテンツを編集する
+# React アプリを実装してユニバーサルエディターを使用してコンテンツを編集する
 
-ユニバーサルエディターを使用してコンテンツを編集するように React アプリを実装する方法を説明します。
+ユニバーサルエディターを使用してコンテンツを編集するために React アプリを実装する方法について説明します。
 
 ## 前提条件
 
-前の [ローカル開発設定 ](./local-development-setup.md) 手順の説明に従って、ローカル開発環境が設定されていること。
+前の[ローカル開発の設定](./local-development-setup.md)手順で説明したように、ローカル開発環境が設定されています。
 
-## ユニバーサルエディターのコアライブラリを含める
+## ユニバーサルエディターコアライブラリを含める
 
-まず、WKND Teams の React アプリにユニバーサルエディターのコアライブラリを含めます。 これは、編集されたアプリとユニバーサルエディターの間の通信レイヤーを提供するJavaScript ライブラリです。
+まず、WKND Teams React アプリにユニバーサルエディターコアライブラリを含めましょう。これは、編集されたアプリとユニバーサルエディター間の通信レイヤーを提供する JavaScript ライブラリです。
 
-ユニバーサルエディターのコアライブラリを React アプリに含める方法は 2 とおりあります。
+React アプリにユニバーサルエディターコアライブラリを含める方法には、次の 2 つがあります。
 
-1. npm レジストリからのノードモジュール依存関係については、[@adobe/universal-editor-cors](https://www.npmjs.com/package/@adobe/universal-editor-cors) を参照してください。
+1. npm レジストリからの Node モジュール依存関係については、[@adobe/universal-editor-cors](https://www.npmjs.com/package/@adobe/universal-editor-cors) を参照してください。
 1. HTMLファイル内のスクリプトタグ（`<script>`）。
 
-このチュートリアルでは、スクリプトタグのアプローチを使用します。
+このチュートリアルでは、スクリプトタグのアプローチを使ってみましょう。
 
-1. `react-helmet-async` パッケージをインストールして、React アプリで `<script>` タグを管理します。
+1. `react-helmet-async` パッケージをインストールし、React アプリの `<script>` タグを管理します。
 
    ```bash
    $ npm install react-helmet-async
    ```
 
-1. WKND Teams React アプリの `src/App.js` ファイルを更新して、ユニバーサルエディターのコアライブラリを含めます。
+1. WKND Teams React アプリの `src/App.js` ファイルを更新して、ユニバーサルエディターコアライブラリを含めます。
 
    ```javascript
    ...
@@ -83,17 +83,17 @@ ht-degree: 0%
    export default App;
    ```
 
-## メタデータの追加 – コンテンツソース
+## メタデータの追加 - コンテンツのソース
 
-編集のために WKND チーム React アプリ _コンテンツソースを使用_ を接続するには、接続メタデータを指定する必要があります。 ユニバーサルエディターサービスは、このメタデータを使用してコンテンツソースとの接続を確立します。
+WKND Teams React アプリを&#x200B;_コンテンツソースに_&#x200B;接続して編集するには、接続メタデータを指定する必要があります。ユニバーサルエディターサービスでは、このメタデータを使用してコンテンツのソースとの接続を確立します。
 
-接続メタデータは、HTMLファイル `<meta>` タグとして保存されます。 接続メタデータの構文は次のとおりです。
+接続メタデータは、HTML ファイル内の `<meta>` タグとして保存されます。接続メタデータの構文は次のとおりです。
 
 ```html
 <meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
 ```
 
-`<Helmet>` コンポーネント内の WKND Teams React アプリに接続メタデータを追加します。 次の `<meta>` タグで `src/App.js` ファイルを更新します。 この例では、コンテンツソースは、`https://localhost:8443` 上で動作するローカル AEM インスタンスです。
+`<Helmet>` コンポーネント内の WKND Teams React アプリに接続メタデータを追加しましょう。次の `<meta>` タグを使用して `src/App.js`ファイルを更新します。この例では、コンテンツのソースは、`https://localhost:8443` で実行されているローカル AEM インスタンスです。
 
 ```javascript
 ...
@@ -125,19 +125,19 @@ return (
 export default App;
 ```
 
-`aemconnection` は、コンテンツソースの短い名前を提供します。 その後のインストルメンテーションでは、短い名前を使用してコンテンツソースを参照します。
+`aemconnection` では、コンテンツのソースの短い名前を指定します。後続の実装では、短い名前を使用してコンテンツのソースを参照します。
 
-## メタデータの追加 – ローカルユニバーサルエディターサービスの設定
+## メタデータの追加 - ローカルユニバーサルエディターサービスの設定
 
-Adobeにホストされたユニバーサルエディターサービスの代わりに、ユニバーサルエディターサービスのローカルコピーがローカル開発に使用されます。 ローカルサービスはユニバーサルエディターとAEM SDK をバインドするので、ローカルのユニバーサルエディターサービスのメタデータを WKND Teams React アプリに追加します。
+ローカル開発には、アドビがホストするユニバーサルエディターサービスの代わりに、ユニバーサルエディターサービスのローカルコピーが使用されます。ローカルサービスはユニバーサルエディターと AEM SDK をバインドするので、ローカルユニバーサルエディターサービスのメタデータを WKND Teams React アプリに追加しましょう。
 
-これらの設定は、HTMLファイルの `<meta>` タグとしても保存されます。 ローカルのユニバーサルエディターサービスのメタデータの構文は、次のとおりです。
+また、これらの設定は、HTML ファイルの `<meta>` タグとしても保存されます。ローカルユニバーサルエディターサービスのメタデータの構文は次のとおりです。
 
 ```html
 <meta name="urn:adobe:aue:config:service" content="<url>">
 ```
 
-`<Helmet>` コンポーネント内の WKND Teams React アプリに接続メタデータを追加します。 次の `<meta>` タグで `src/App.js` ファイルを更新します。 この例では、ローカルのユニバーサルエディターサービスが `https://localhost:8001` 上で実行されています。
+`<Helmet>` コンポーネント内の WKND Teams React アプリに接続メタデータを追加しましょう。次の `<meta>` タグを使用して `src/App.js`ファイルを更新します。この例では、ローカルユニバーサルエディターサービスは、`https://localhost:8001` で実行されています。
 
 ```javascript
 ...
@@ -178,16 +178,16 @@ export default App;
 
 ## React コンポーネントの実装
 
-_チームのタイトルとチームの説明_ など、WKND チームの React アプリのコンテンツを編集するには、React コンポーネントを実装する必要があります。 インストルメンテーションとは、ユニバーサルエディターを使用して編集可能にするHTML要素に、関連するデータ属性（`data-aue-*`）を追加することを意味します。 データ属性の詳細については、[ 属性と型 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) を参照してください。
+_チームのタイトルとチームの説明_&#x200B;など、WKND Teams React アプリのコンテンツを編集するには、React コンポーネントを実装する必要があります。実装とは、ユニバーサルエディターを使用して編集可能にする HTML 要素に関連するデータ属性（`data-aue-*`）を追加することを意味します。データ属性について詳しくは、[属性とタイプ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)を参照してください。
 
 ### 編集可能な要素の定義
 
-まず、ユニバーサルエディターを使用して編集する要素を定義します。 WKND Teams の React アプリでは、チームのタイトルと説明がAEMの Team コンテンツフラグメントに保存されるので、最も適した編集候補になります。
+まず、ユニバーサルエディターを使用して編集する要素を定義しましょう。WKND Teams React アプリでは、チームのタイトルと説明は AEM のチームコンテンツフラグメントに保存されるので、編集に最適です。
 
-`Teams` React コンポーネントを実装して、チームのタイトルと説明を編集可能にしましょう。
+`Teams` React コンポーネントを実装して、チームのタイトルと説明を編集できるようにしましょう。
 
 1. WKND Teams React アプリの `src/components/Teams.js` ファイルを開きます。
-1. `data-aue-prop`、`data-aue-type`、`data-aue-label` 属性をチームのタイトルと説明の要素に追加します。
+1. チームのタイトルと説明の要素に、`data-aue-prop`、`data-aue-type` および `data-aue-label` 属性を追加します。
 
    ```javascript
    ...
@@ -208,23 +208,23 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    export default Teams;
    ```
 
-1. WKND Teams React アプリを読み込むブラウザーで、ユニバーサルエディターページを更新します。 これで、チームのタイトルと説明の要素が編集可能であることが確認できます。
+1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、チームのタイトルと説明の要素が編集可能であることが確認できます。
 
-   ![ ユニバーサルエディター – WKND チームのタイトルと説明を編集可能 ](./assets/universal-editor-wknd-teams-title-desc-editable.png)
+   ![ユニバーサルエディター - WKND Teams のタイトルと説明が編集可能](./assets/universal-editor-wknd-teams-title-desc-editable.png)
 
-1. インライン編集またはプロパティパネルを使用してチームのタイトルや説明を編集しようとすると、読み込みスピナーが表示されますが、コンテンツを編集できません。 ユニバーサルエディターは、コンテンツの読み込みと保存のためのAEM リソースの詳細を認識しないためです。
+1. インライン編集またはプロパティパネルを使用してチームのタイトルまたは説明を編集しようとすると、読み込みスピナーが表示されますが、コンテンツを編集できません。ユニバーサルエディターは、コンテンツの読み込みと保存に関する AEM リソースの詳細を認識していないからです。
 
-   ![ ユニバーサルエディター – WKND Teams のタイトルと説明の読み込み ](./assets/universal-editor-wknd-teams-title-desc-editable-loading.png)
+   ![ユニバーサルエディター - WKND Teams のタイトルと説明の読み込み](./assets/universal-editor-wknd-teams-title-desc-editable-loading.png)
 
-まとめると、上記の変更により、チームのタイトルと説明の要素がユニバーサルエディターで編集可能としてマークされます。 ただし、**インラインまたはプロパティパネル経由で）編集して変更を保存することはまだできません**。そのため、`data-aue-resource` 属性を使用してAEM リソースの詳細を追加する必要があります。 次の手順でそれを行いましょう。
+要約すると、上記の変更により、チームのタイトルと説明の要素がユニバーサルエディターで編集可能としてマークされます。ただし、**まだ変更を編集して（インラインまたはプロパティパネル経由で）保存することはできません**。そのためには、`data-aue-resource` 属性を使用して AEM リソースの詳細を追加する必要があります。次の手順で実行しましょう。
 
-### AEM リソースの詳細を定義
+### AEM リソースの詳細の定義
 
-編集したコンテンツをAEMに保存し直し、プロパティパネルにコンテンツを読み込むには、AEM リソースの詳細をユニバーサルエディターに指定する必要があります。
+編集したコンテンツを AEM に保存し直し、プロパティパネルにコンテンツを読み込むには、AEM リソースの詳細をユニバーサルエディターに指定する必要があります。
 
-この場合、AEM リソースは Team コンテンツフラグメントパスなので、リソースの詳細を最上位レベルの `<div>` 要素の `Teams` React コンポーネントに追加します。
+この場合、AEM リソースはチームコンテンツフラグメントパスなので、最上位レベルの `<div>` 要素にある `Teams` React コンポーネントにリソースの詳細を追加しましょう。
 
-1. `src/components/Teams.js` ファイルを更新して、`data-aue-resource`、`data-aue-type` および `data-aue-label` 属性を最上位の `<div>` 要素に追加します。
+1. `src/components/Teams.js` ファイルを更新して、最上位の `<div>` 要素に `data-aue-resource`、`data-aue-type` および `data-aue-label` 属性を追加します。
 
    ```javascript
    ...
@@ -250,37 +250,37 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    export default Teams;
    ```
 
-   `data-aue-resource` 属性の値は、Team コンテンツフラグメントのAEM リソースパスです。 `urn:aemconnection:` プレフィックスには、接続メタデータで定義されたコンテンツ ソースの短い名前を使用します。
+   `data-aue-resource` 属性の値は、チームコンテンツフラグメントの AEM リソースパスです。`urn:aemconnection:` プレフィックスでは、接続メタデータで定義されたコンテンツのソースの短い名前を使用します。
 
-1. WKND Teams React アプリを読み込むブラウザーで、ユニバーサルエディターページを更新します。 最上位のチーム要素が編集可能になっていますが、プロパティパネルがまだコンテンツを読み込んでいません。 ブラウザーの「ネットワーク」タブには、コンテンツを読み込む `details` リクエストに対する 401 Unauthorized エラーが表示されます。 認証に IMS トークンを使用しようとしていますが、ローカルのAEM SDK は IMS 認証をサポートしていません。
+1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、最上位の Team 要素は編集可能ですが、プロパティパネルにはまだコンテンツが読み込まれていないことが確認できます。ブラウザーのネットワークタブでは、コンテンツを読み込む `details` リクエストに対して 401 Unauthorized エラーが表示されます。認証に IMS トークンを使用しようとしていますが、ローカル AEM SDK は IMS 認証をサポートしていません。
 
-   ![ ユニバーサルエディター – WKND チームチームを編集可能 ](./assets/universal-editor-wknd-teams-team-editable.png)
+   ![ユニバーサルエディター - WKND Teams チームが編集可能](./assets/universal-editor-wknd-teams-team-editable.png)
 
-1. 401 Unauthorized エラーを修正するには、ユニバーサルエディターで「**認証ヘッダー**」オプションを使用して、ローカル AEM SDK 認証の詳細をユニバーサルエディターに指定する必要があります。 ローカルのAEM SDK として、`admin:admin` 資格情報の値を `Basic YWRtaW46YWRtaW4=` に設定します。
+1. 401 Unauthorized エラーを修正するには、ユニバーサルエディターの「**認証ヘッダー**」オプションを使用して、ローカル AEM SDK 認証の詳細をユニバーサルエディターに指定する必要があります。ローカル AEM SDK と同様に、`admin:admin` 資格情報の値を `Basic YWRtaW46YWRtaW4=` に設定します。
 
-   ![ ユニバーサルエディター – 認証ヘッダーの追加 ](./assets/universal-editor-wknd-teams-team-editable-auth.png)
+   ![ユニバーサルエディター - 認証ヘッダーの追加](./assets/universal-editor-wknd-teams-team-editable-auth.png)
 
-1. WKND Teams React アプリを読み込むブラウザーで、ユニバーサルエディターページを更新します。 プロパティパネルにコンテンツが読み込まれ、チームのタイトルと説明をインラインで編集するか、プロパティパネルを使用することが可能になりました。
+1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、プロパティパネルにコンテンツが読み込まれ、チームのタイトルと説明をインラインで、またはプロパティパネルを使用して編集できることが確認できます。
 
-   ![ ユニバーサルエディター – WKND チームチームを編集可能 ](./assets/universal-editor-wknd-teams-team-editable-props.png)
+   ![ユニバーサルエディター - WKND Teams チームが編集可能](./assets/universal-editor-wknd-teams-team-editable-props.png)
 
-#### 内部で
+#### 内部の仕組み
 
-プロパティパネルは、ローカルのユニバーサルエディターサービスを使用して、AEM リソースからコンテンツを読み込みます。 ブラウザーの「ネットワーク」タブを使用すると、コンテンツの読み込みのためにローカルのユニバーサルエディターサービス（`https://localhost:8001/details`）に対するPOSTリクエストを確認できます。
+プロパティパネルでは、ローカルユニバーサルエディターサービスを使用して AEM リソースからコンテンツを読み込みます。ブラウザーのネットワークタブを使用すると、コンテンツを読み込むためのローカルユニバーサルエディターサービス（`https://localhost:8001/details`）に対する POST リクエストを確認できます。
 
-インライン編集またはプロパティパネルを使用してコンテンツを編集すると、変更内容がローカルのユニバーサルエディターサービスを使用してAEM リソースに保存されます。 ブラウザーの「Network」タブを使用すると、コンテンツを保存するためのローカルのユニバーサルエディターサービス（`https://localhost:8001/update` または `https://localhost:8001/patch`）へのPOSTリクエストを確認できます。
+インライン編集またはプロパティパネルを使用してコンテンツを編集すると、変更内容はローカルユニバーサルエディターサービスを使用して AEM リソースに保存されます。ブラウザーのネットワークタブを使用すると、コンテンツを保存するためのローカルユニバーサルエディターサービス（`https://localhost:8001/update` または `https://localhost:8001/patch`）に対する POST リクエストを確認できます。
 
-![ ユニバーサルエディター – WKND チームチームを編集可能 ](./assets/universal-editor-under-the-hood-request.png)
+![ユニバーサルエディター - WKND Teams チームが編集可能](./assets/universal-editor-under-the-hood-request.png)
 
-リクエストペイロードの JSON オブジェクトには、コンテンツサーバー（`connections`）、リソースパス（`target`）、更新されたコンテンツ（`patch`）など、必要な詳細が含まれています。
+リクエストペイロード JSON オブジェクトには、コンテンツサーバー（`connections`）、リソースパス（`target`）、更新されたコンテンツ（`patch`）などの必要な詳細が含まれます。
 
-![ ユニバーサルエディター – WKND チームチームを編集可能 ](./assets/universal-editor-under-the-hood-payload.png)
+![ユニバーサルエディター - WKND Teams チームが編集可能](./assets/universal-editor-under-the-hood-payload.png)
 
-### 編集可能なコンテンツを展開する
+### 編集可能なコンテンツの展開
 
-編集可能なコンテンツを展開し、実装を **チームメンバー** に適用して、プロパティパネルでチームメンバーを編集できるようにします。
+編集可能なコンテンツを展開し、実装を&#x200B;**チームメンバー**&#x200B;に適用し、プロパティパネルを使用してチームメンバーを編集できるようにしましょう。
 
-上記のように、関連する `data-aue-*` 属性を `Teams` React コンポーネントのチームメンバーに追加しましょう。
+上記のように、`Teams` React コンポーネントのチームメンバーに関連する `data-aue-*` 属性を追加しましょう。
 
 1. `src/components/Teams.js` ファイルを更新して、`<li key={index} className="team__member">` 要素にデータ属性を追加します。
 
@@ -311,23 +311,23 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    export default Teams;
    ```
 
-   `data-aue-type` 属性の値は、チームメンバーがAEMにコンテンツフラグメントとして保存され `Person` ので `component` であり、コンテンツの移動可能/削除可能な部分を示すのに役立ちます。
+   チームメンバーは AEM に `Person` コンテンツフラグメントとして保存されるので、`data-aue-type` 属性の値は `component` であり、コンテンツの移動可能／削除可能な部分を示すのに役立ちます。
 
-1. WKND Teams React アプリを読み込むブラウザーで、ユニバーサルエディターページを更新します。 これで、プロパティパネルを使用してチームメンバーを編集できることが確認できます。
+1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、プロパティパネルを使用してチームメンバーは編集可能であることが確認できます。
 
-   ![ ユニバーサルエディター – WKND チームチームメンバーが編集可能 ](./assets/universal-editor-wknd-teams-team-members-editable.png)
+   ![ユニバーサルエディター - WKND Teams チームメンバーが編集可能](./assets/universal-editor-wknd-teams-team-members-editable.png)
 
-#### 内部で
+#### 内部の仕組み
 
-上記のように、コンテンツの取得と保存は、ローカルのユニバーサルエディターサービスによって行われます。 `/details`、`/update` または `/patch` のリクエストは、コンテンツの読み込みと保存のためにローカルのユニバーサルエディターサービスに対して行われます。
+上記のように、コンテンツの取得と保存はローカルユニバーサルエディターサービスによって実行されます。`/details`、`/update` または `/patch` リクエストは、コンテンツの読み込みと保存のためにローカルユニバーサルエディターサービスに対して行われます。
 
 ### コンテンツの追加および削除の定義
 
-これまでのところ、既存のコンテンツを編集可能にしましたが、新しいコンテンツを追加する場合はどうすればよいですか？ ユニバーサルエディターを使用して、WKND チームにチームメンバーを追加または削除する機能を追加しましょう。 したがって、コンテンツ作成者は、AEMに移動してチームメンバーを追加または削除する必要はありません。
+ここまでで、既存のコンテンツを編集可能にしてきました。では、新しいコンテンツを追加するにはどうすればよいしょうか？ユニバーサルエディターを使用して、WKND チームにチームメンバーを追加または削除する機能を追加しましょう。したがって、コンテンツ作成者は、AEM に移動しなくてもチームメンバーを追加または削除できます。
 
-ただし、簡単にまとめると、WKND チームメンバーはAEMに `Person` コンテンツフラグメントとして保存され、`teamMembers` プロパティを使用して Team コンテンツフラグメントに関連付けられます。 AEMでモデル定義を確認するには、[my-project](http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf/my-project) にアクセスしてください。
+ただし、簡単にまとめると、WKND チームメンバーは AEM に `Person` コンテンツフラグメントとして保存され、`teamMembers` プロパティを使用してチームコンテンツフラグメントに関連付けられます。AEM のモデル定義を確認するには、[my-project](http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf/my-project) を参照してください。
 
-1. まず、コンポーネント定義ファイル `/public/static/component-definition.json` を作成します。 このファイルには、`Person` コンテンツフラグメントのコンポーネント定義が含まれています。 `aem/cf` プラグインを使用すると、適用するデフォルト値を指定するモデルとテンプレートに基づいて、コンテンツフラグメントを挿入できます。
+1. まず、コンポーネント定義ファイル `/public/static/component-definition.json` を作成します。このファイルには、`Person` コンテンツフラグメントのコンポーネント定義が含まれます。`aem/cf` プラグインを使用すると、適用するデフォルト値を指定するモデルとテンプレートに基づいて、コンテンツフラグメントを挿入できます。
 
    ```json
    {
@@ -360,7 +360,7 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    }
    ```
 
-1. 次に、WKND チーム React アプリの `index.html` で、上記のコンポーネント定義ファイルを参照します。 `public/index.html` ファイルの `<head>` セクションを更新して、コンポーネント定義ファイルを含めます。
+1. 次に、WKND Teams React アプリの `index.html` にある上記のコンポーネント定義ファイルを参照します。コンポーネント定義ファイルを含めるように、`public/index.html`ファイルの `<head>` セクションを更新します。
 
    ```html
    ...
@@ -373,7 +373,7 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    ...
    ```
 
-1. 最後に、`src/components/Teams.js` ファイルを更新して、データ属性を追加します。 チームメンバーのコンテナとして機能する **MEMBERS** セクションでは、`data-aue-prop`、`data-aue-type`、`data-aue-label` の属性を `<div>` 要素に追加します。
+1. 最後に、`src/components/Teams.js` ファイルを更新して、データ属性を追加します。チームメンバーのコンテナとして機能する「**MEMBERS**」セクションでは、`<div>` 要素に `data-aue-prop`、`data-aue-type`、`data-aue-label` 属性を追加しましょう。
 
    ```javascript
    ...
@@ -403,24 +403,24 @@ _チームのタイトルとチームの説明_ など、WKND チームの React
    export default Teams;
    ```
 
-1. WKND Teams React アプリを読み込むブラウザーで、ユニバーサルエディターページを更新します。 **MEMBERS** セクションがコンテナとして機能することがわかります。 新しいチームメンバーを挿入するには、プロパティパネルと「**+**」アイコンを使用します。
+1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、「**MEMBERS**」セクションがコンテナとして機能することが確認できます。プロパティパネルと **+** アイコンを使用して、新しいチームメンバーを挿入できます。
 
-   ![ ユニバーサルエディター – WKND チームチームメンバーが挿入 ](./assets/universal-editor-wknd-teams-add-team-members.png)
+   ![ユニバーサルエディター - WKND Teams チームメンバーが挿入](./assets/universal-editor-wknd-teams-add-team-members.png)
 
-1. チームメンバーを削除するには、チームメンバーを選択して「**削除**」アイコンをクリックします。
+1. チームメンバーを削除するには、チームメンバーを選択し、**削除**&#x200B;アイコンをクリックします。
 
-   ![ ユニバーサルエディター – WKND Teams チームメンバーが削除する ](./assets/universal-editor-wknd-teams-delete-team-members.png)
+   ![ユニバーサルエディター - WKND Teams チームメンバーが削除](./assets/universal-editor-wknd-teams-delete-team-members.png)
 
-#### 内部で
+#### 内部の仕組み
 
-コンテンツの追加と削除の操作は、ローカルのユニバーサルエディターサービスによって行われます。 詳細なペイロードを含んだ `/add` または `/remove` に対するPOSTリクエストは、AEMにコンテンツを追加または削除するために、ローカルのユニバーサルエディターサービスに対して行われます。
+コンテンツの追加および削除操作は、ローカルユニバーサルエディターサービスによって実行されます。AEM にコンテンツを追加または削除するために、詳細なペイロードを含む `/add` または `/remove` への POST リクエストがローカルユニバーサルエディターサービスに対して行われます。
 
 ## ソリューションファイル
 
-実装の変更を確認する場合、またはユニバーサルエディターで WKND Teams React アプリを操作できない場合は、[basic-tutorial-instrumented-for-UE](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) ソリューションブランチを参照してください。
+実装の変更を検証する場合や、WKND Teams React アプリをユニバーサルエディターで動作させることができない場合は、[basic-tutorial-instrumented-for-UE](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) ソリューション分岐を参照してください。
 
-作業中の **basic-tutorial** ブランチとのファイルごとの比較は、（こちら [ で利用でき ](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1) す。
+作業用 **basic-tutorial** 分岐とのファイル別の比較は、[こちら](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1)を参照してください。
 
 ## これで完了です
 
-ユニバーサルエディターを使用してコンテンツを追加、編集、削除するための WKND Teams React アプリのインストルメントが正常に行われました。 コアライブラリを含め、接続とローカルユニバーサルエディターサービスのメタデータを追加し、様々なデータ（`data-aue-*`）属性を使用して React コンポーネントを実装する方法を学びました。
+ユニバーサルエディターを使用してコンテンツを追加、編集、削除するための WKND Teams React アプリが正常に実装されました。コアライブラリを含める方法、接続とローカルユニバーサルエディターサービスのメタデータを追加する方法、様々なデータ（`data-aue-*`）属性を使用して React コンポーネントを実装する方法について説明しました。

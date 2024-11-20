@@ -1,6 +1,6 @@
 ---
-title: Adobeが管理する CDN を使用したカスタムドメイン名
-description: Adobeが管理する CDN を使用するAEM as a Cloud Service web サイトにカスタムドメイン名を実装する方法を説明します。
+title: アドビが管理する CDN を使用したカスタムドメイン名
+description: アドビが管理する CDN を使用する AEM as a Cloud Service web サイトに、カスタムドメイン名を実装する方法について説明します。
 version: Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
@@ -13,15 +13,15 @@ jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
 source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '726'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
 # Adobe CDN を使用したカスタムドメイン名
 
-Adobeコンテンツ配信ネットワーク（CDN）を使用するAEM as a Cloud Service web サイトのカスタムドメイン名を実装する方法について説明します。
+Adobe コンテンツ配信ネットワーク（CDN）を使用する AEM as a Cloud Service web サイトに、カスタムドメイン名を実装する方法について説明します。
 
 このチュートリアルでは、Transport Layer Security（TLS）を使用して HTTPS アドレス可能なカスタムドメイン名 `wknd.enablementadobe.com` を追加して、サンプル [AEM WKND](https://github.com/adobe/aem-guides-wknd) サイトのブランディングを強化します。
 
@@ -29,7 +29,7 @@ Adobeコンテンツ配信ネットワーク（CDN）を使用するAEM as a Clo
 
 大まかな手順は次のとおりです。
 
-![Adobe CDN を使用したカスタムドメイン名 ](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}
+![Adobe CDN を使用したカスタムドメイン名](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}
 
 ## 前提条件
 
@@ -38,9 +38,9 @@ Adobeコンテンツ配信ネットワーク（CDN）を使用するAEM as a Clo
 - [OpenSSL](https://www.openssl.org/) と [dig](https://www.isc.org/blogs/dns-checker/) が、ローカルマシンにインストールされている。
 - 次のサードパーティのサービスへのアクセス権が付与されている。
    - 認証局（CA）- [DigitCert](https://www.digicert.com/) などのサイトドメインンに対して署名付き証明書をリクエストする場合
-   - ドメインネームシステム（DNS）ホスティングサービス - Azure DNS や AWS Route 53 などのカスタムドメインに対して DNS レコードを追加する場合。
-- **ビジネスオーナー ](https://my.cloudmanager.adobe.com/) または { デプロイメントマネージャー** の役割として **0}AdobeのCloud Manager** にアクセスします。[
-- サンプル [AEM WKND](https://github.com/adobe/aem-guides-wknd) サイトは、[ 実稼動プログラム ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs) タイプのAEM as a Cloud Service環境にデプロイされます。
+   - ドメイン名システム（DNS）ホスティングサービス - Azure DNS や AWS Route 53 などのカスタムドメインに対して DNS レコードを追加する場合。
+- **ビジネスオーナー**&#x200B;または&#x200B;**デプロイメントマネージャー**&#x200B;の役割として [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) へのアクセス権が付与されている。
+- サンプル [AEM WKND](https://github.com/adobe/aem-guides-wknd) サイトが、[実稼動プログラム](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)タイプの AEM as a Cloud Service 環境にデプロイされている。
 
 サードパーティのサービスへのアクセス権が付与されていない場合は、_セキュリティチームまたはホスティングチームと共同作業して手順を完了します_。
 
@@ -50,7 +50,7 @@ Adobeコンテンツ配信ネットワーク（CDN）を使用するAEM as a Clo
 
 以下 2 つのオプションがあります。
 
-1. `openssl` コマンドラインツールを使用して、サイトドメインの秘密鍵と証明書署名要求（CSR）を生成します。 署名済み証明書を要求するには、CSR を認証局（CA）に送信します。
+1. `openssl` コマンドラインツールを使用して、サイトドメインの秘密鍵と証明書署名要求（CSR）を生成します。署名付き証明書をリクエストするには、CSR を認証局（CA）に送信します。
 1. ホスティングチームは、サイトに必要な秘密鍵と署名付き証明書を提供します。
 
 最初のオプションの手順を確認してみましょう。
@@ -62,11 +62,11 @@ Adobeコンテンツ配信ネットワーク（CDN）を使用するAEM as a Clo
 $ openssl req -newkey rsa:2048 -keyout <YOUR-SITE-NAME>.key -out <YOUR-SITE-NAME>.csr -nodes
 ```
 
-署名済み証明書を要求するには、CA のドキュメントに従って、生成された CSR を CA に提供します。 CA が CSR に署名すると、署名付き証明書ファイルを受け取ることができます。
+署名付き証明書をリクエストするには、CA のドキュメントに従って、生成した CSR を CA に提供します。CA が CSR に署名すると、署名付き証明書ファイルを受け取ることができます。
 
 ### 署名付き証明書の確認
 
-署名済み証明書をCloud Managerに追加する前に、確認します。 次のコマンドを使用して、証明書の詳細を確認します。
+署名付き証明書を Cloud Manager に追加する前に確認します。次のコマンドを使用して証明書の詳細を確認します。
 
 ```bash
 # Review the certificate details
@@ -75,7 +75,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 署名付き証明書には、ルート証明書および中間証明書と、エンドエンティティ証明書を含む証明書チェーンが含まれる場合があります。
 
-Adobe Cloud Managerは、エンドエンティティ証明書と証明書チェーン _別々のフォームフィールド内_ を受け取るので、署名済み証明書からエンドエンティティ証明書と証明書チェーンを抽出する必要があります。
+Adobe Cloud Manager では、エンドエンティティ証明書と証明書チェーンを&#x200B;_別のフォームフィールドで_&#x200B;受け入れるので、署名付き証明書からエンドエンティティ証明書と証明書チェーンを抽出する必要があります。
 
 このチュートリアルでは、`*.enablementadobe.com` ドメインに対して発行された [DigitCert](https://www.digicert.com/) 署名付き証明書が例として使用されます。エンドエンティティと証明書チェーンは、署名付き証明書をテキストエディターで開き、`-----BEGIN CERTIFICATE-----` マーカーと `-----END CERTIFICATE-----` マーカーの間の内容をコピーすれば抽出されます。
 
@@ -83,7 +83,7 @@ Adobe Cloud Managerは、エンドエンティティ証明書と証明書チェ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427906?quality=12&learn=on)
 
-SSL 証明書をCloud Managerに追加するには、[SSL 証明書を追加 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate) のドキュメントに従ってください。
+Cloud Manager で SSL 証明書を追加するには、[SSL 証明書の追加](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate)ドキュメントに従ってください。
 
 ## ドメイン名の検証
 
@@ -91,7 +91,7 @@ SSL 証明書をCloud Managerに追加するには、[SSL 証明書を追加 ](h
 
 ドメイン名を検証するには、次の手順に従います。
 
-- [ カスタムドメイン名を追加 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) ドキュメントに従って、Cloud Managerにドメイン名を追加します。
+- [カスタムドメイン名の追加](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name)ドキュメントに従って、Cloud Manager にドメイン名を追加します。
 - DNS ホスティングサービスに AEM 固有の [TXT レコード](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record)を追加します。
 - `dig` コマンドを使用して DNS サーバーにクエリを実行し、上記の手順を確認します。
 
@@ -126,9 +126,9 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 ;; MSG SIZE  rcvd: 181
 ```
 
-このチュートリアルでは Azure DNS を使用しますが、任意の DNS プロバイダーを使用できます。 TXT レコードを追加するには、DNS ホスティングサービスのドキュメントに従う必要があります。
+ここのチュートリアルでは、Azure DNS を使用しますが、任意の DNS プロバイダーを使用できます。TXT レコードを追加するには、DNS ホスティングサービスのドキュメントに従う必要があります。
 
-問題がある場合は、[ ドメイン名のステータスの確認 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status) のドキュメントを確認してください。
+問題がある場合は、[ドメイン名のステータスの確認](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status)ドキュメントを確認します。
 
 ## DNS レコードの設定
 
@@ -142,7 +142,7 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 
 このチュートリアルでは、**サブドメイン** `wknd.enablementadobe.com` を使用しているので、`cdn.adobeaemcloud.com` を指す CNAME レコードタイプが追加されます。
 
-ただし、**ルートドメイン** を使用している場合は、Adobeから提供される特定の IP アドレスを指す APEX レコードタイプ（別名 A、ALIAS または ANAME）を追加する必要があります。
+ただし、**ルートドメイン**&#x200B;を使用している場合は、アドビが提供する特定の IP アドレスを指す APEX レコードタイプ（別名 A、ALIAS、または ANAME）を追加する必要があります。
 
 ## サイトの検証
 

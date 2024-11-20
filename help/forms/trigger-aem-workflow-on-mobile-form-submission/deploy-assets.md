@@ -1,5 +1,5 @@
 ---
-title: HTML5 フォーム送信時のAEM トリガーワークフロー – ユースケースを動作させる
+title: HTML5 フォーム送信での AEM ワークフローのトリガー - ユースケースを動作させる
 description: ローカルシステムへのサンプルアセットのデプロイ
 feature: Mobile Forms
 doc-type: article
@@ -10,58 +10,58 @@ level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '392'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# このユースケースをシステムで動作させる
+# このユースケースをお使いのシステムで動作させる
 
 >[!NOTE]
 >
->サンプルアセットがシステム上で動作するようにするには、AEM Forms オーサーインスタンスとAEM Forms パブリッシュインスタンスへのアクセス権があることを前提としています。
+>サンプルアセットがシステム上で動作するには、AEM Forms オーサーインスタンスと AEM Forms パブリッシュインスタンスにアクセスできることが前提となります。
 
-ローカルシステムでこのユースケースを機能させるには、次の手順に従います。
+ローカルシステムでこのユースケースを動作させるには、次の手順に従います。
 
-## AEM Forms オーサーインスタンスに以下をデプロイします
+## AEM Forms オーサーインスタンスに以下をデプロイする
 
 * [MobileFormToWorkflow バンドルのインストール](assets/MobileFormToWorkflow.core-1.0.0-SNAPSHOT.jar)
 
-* [ サービスユーザーバンドルを使用した開発をデプロイする ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
-configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
+* [サービスユーザーバンドルを使用して開発をデプロイする](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=ja)
+configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します
 
 ```
 DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 ```
 
-* [configMgr](http://localhost:4502/system/console/configMg) を使用して、AEM Server Credentials 設定のフォルダー名を指定することで、フォーム送信を別のフォルダーに格納できます。 フォルダーを変更する場合は、そのフォルダーにランチャーを作成して、ワークフロー **ReviewSubmittedPDF** をトリガーします
+* [configMgr](http://localhost:4502/system/console/configMg) を使用して、AEM Server の資格情報設定のフォルダー名を指定することで、フォーム送信を別のフォルダーに格納できます。フォルダーを変更する場合は、ワークフロー **ReviewSubmittedPDF** をトリガーするランチャーをフォルダー上に作成してください。
 
 ![config-author](assets/author-config.png)
-* [ パッケージマネージャーを使用して、サンプル xdp とワークフローパッケージを読み込みます ](assets/xdp-form-and-workflow.zip)。
+* [パッケージマネージャーを使用して、サンプル xdp とワークフローパッケージを読み込みます](assets/xdp-form-and-workflow.zip)。
 
 
-## 次のアセットをパブリッシュインスタンスにデプロイします
+## 次のアセットをパブリッシュインスタンスにデプロイする
 
 * [MobileFormToWorkflow バンドルのインストール](assets/MobileFormToWorkflow.core-1.0.0-SNAPSHOT.jar)
 
-* [configMgr](http://localhost:4503/system/console/configMgr) を使用して送信したデータをAEM サーバー資格情報に保存するために、オーサーインスタンスのユーザー名とパスワードおよび **AEM リポジトリ内の既存の場所** を指定します。 AEM Workflow Server 上のエンドポイントの URL はそのままにすることができます。 これは、ノードで指定された送信内からデータを抽出して保存するエンドポイントです。
+* オーサーインスタンスのユーザー名とパスワードおよび **AEM リポジトリ内の既存の場所**&#x200B;を指定し、[configMgr](http://localhost:4503/system/console/configMgr) を使用して送信されたデータを AEM サーバーの資格情報に保存します。AEM ワークフローサーバー上のエンドポイントの URL はそのままにすることができます。これは、指定されたノードの送信からデータを抽出して保存するエンドポイントです。
   ![publish-config](assets/publish-config.png)
 
-* [ サービスユーザーバンドルを使用した開発をデプロイする ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [サービスユーザーバンドルを使用した開発のデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=ja)
 * [OSGi 設定を開きます](http://localhost:4503/system/console/configMgr)。
 * **Apache Sling Referrer Filter** を検索します。「空白を許可」チェックボックスがオンになっていることを確認します。
 
 
 ## ソリューションのテスト
 
-* オーサーインスタンスにログインします
-* [w9.xdp の詳細プロパティを編集します ](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/w9.xdp)。 送信 URL とレンダリングプロファイルが以下に示すように正しく設定されていることを確認します。
+* オーサーインスタンスにログイン
+* [w9.xdp の詳細プロパティを編集します](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/w9.xdp)。送信 URL とレンダリングプロファイルが以下に示すように正しく設定されていることを確認します。
   ![xdp-advanced-properties](assets/mobile-form-properties.png)
 
-* w9.xdp のPublish
-* パブリッシュインスタンスにログインします
-* [w9 フォームをプレビューする ](http://localhost:4503/content/dam/formsanddocuments/w9.xdp/jcr:content)
+* w9.xdp の公開
+* パブリッシュインスタンスにログイン
+* [w9 フォームのプレビュー](http://localhost:4503/content/dam/formsanddocuments/w9.xdp/jcr:content)
 * フォームフィールドに入力し、フォームを送信します
 * 管理者として AEM オーサーインスタンスにログインします。
 * [AEM インボックスを確認する](http://localhost:4502/aem/inbox)

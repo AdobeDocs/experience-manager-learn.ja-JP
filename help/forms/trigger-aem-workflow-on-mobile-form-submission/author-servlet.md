@@ -1,6 +1,6 @@
 ---
-title: HTML 5 フォーム送信時のAEM トリガーワークフロー – フォーム送信を処理します
-description: HTML5 フォームが送信されたときにAEM ワークフローをトリガーし、送信されたデータをリポジトリに保存する方法を説明します。
+title: HTM5 フォーム送信で AEM ワークフローをトリガーする - フォーム送信を処理
+description: HTML5 フォーム送信時に AEM ワークフローをトリガーし、送信したデータをリポジトリに保存する方法について説明します。
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -10,21 +10,21 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 jira: kt-16215
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
-# 送信されたデータの保存
+# 送信したデータを保存
 
 次の手順では、送信したデータを AEM オーサーのリポジトリに保存します。`/bin/startworkflow` にマウントされたサーブレットは、送信したデータを保存します。
-AEM ワークフローランチャーは、&lt;node_to_store_submitted_data> ノードの下にタイプ `nt:file` の新しいリソースが作成されるたびにトリガーになるように設定されています。 このワークフローは、送信されたデータを xdp テンプレートと結合することで、非インタラクティブまたは静的 PDF を作成します。生成された PDF は、レビューと承認のためにユーザーに割り当てられます。
+AEM ワークフローランチャーは、タイプ `nt:file` の新しいリソースが &lt;node_to_store_submitted_data> ノードの下に作成されるたびにトリガーするように設定されています。このワークフローは、送信されたデータを xdp テンプレートと結合することで、非インタラクティブまたは静的 PDF を作成します。生成された PDF は、レビューと承認のためにユーザーに割り当てられます。
 
-送信したデータを &lt;node_to_store_submitted_data> ノードに保存するには、OSGi サービスを利用します。こ `GetResolver` サービスを使用すると、送信したデータを `fd-service` system ユーザーを使用して保存できます。このユーザーは、すべてのAEM Forms インストールで利用できます。
+送信したデータを &lt;node_to_store_submitted_data> ノードに保存するのに、`GetResolver` OSGi サービスを利用して、すべての AEM Forms インストールで利用可能な `fd-service` システムユーザーを使用して送信したデータを保存できます。
 
-送信されたデータが格納されるノードは、[ サンプルアセットのデプロイ ](./deploy-assets.md) で説明されているように、ConfigMgr を使用して設定できます。
+送信したデータを保存したノードは、[サンプルアセットのデプロイ](./deploy-assets.md)の説明に従って、ConfigMgr を使用して設定できます。
 
 ```java
 package com.aemforms.mobileforms.core.servlets;

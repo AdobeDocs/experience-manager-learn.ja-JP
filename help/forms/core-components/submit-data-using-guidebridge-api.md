@@ -11,21 +11,21 @@ last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
 duration: 68
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# GuideBridge API を使用したフォームデータのPOST化
+# GuideBridge API を使用したフォームデータの投稿
 
 フォームの「保存と再開」を使用すると、ユーザーはフォームの入力の進行状況を保存し、後で再開できます。
 このユースケースを実現するには、GuideBridge API を使用してフォームデータにアクセスし、REST エンドポイントに送信して保存および取得する必要があります。
 
 フォームデータは、ルールエディターを使用するボタンのクリックイベントで保存されます
-![ ルールエディター ](assets/rule-editor.png)
+![ルールエディター](assets/rule-editor.png)
 
-指定されたエンドポイントにデータを送信するために、次のJavaScript関数が作成されました
+指定されたエンドポイントにデータを送信するために、次の JavaScript 関数が書き込まれました
 
 ```javascript
 /**
@@ -68,9 +68,9 @@ ht-degree: 0%
 
 
 
-## サーバー側コード
+## サーバーサイドコード
 
-次のサーバー側 Java コードは、フォームデータを処理するために記述されました。 以下は、上記のJavaScriptの XHR 呼び出しを介して呼び出される、AEMで動作する Java サーブレットです。
+次のサーバーサイド Java コードは、フォームデータを処理するために書き込まれました。以下は、上記の JavaScript の XHR 呼び出しを通じて呼び出される、AEM で動作する Java サーブレットです。
 
 ```java
 package com.azuredemo.core.servlets;

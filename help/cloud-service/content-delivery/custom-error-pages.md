@@ -1,6 +1,6 @@
 ---
 title: カスタムエラーページ
-description: AEM as a Cloud Serviceがホストする web サイトにカスタムエラーページを実装する方法について説明します。
+description: AEM as a Cloud Service でホストされる web サイトにカスタムエラーページを実装する方法について説明します。
 version: Cloud Service
 feature: Brand Experiences, Configuring, Developing
 topic: Content Management, Development
@@ -12,23 +12,23 @@ last-substantial-update: 2024-09-24T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1566'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
 # カスタムエラーページ
 
-AEM as a Cloud Serviceがホストする web サイトにカスタムエラーページを実装する方法について説明します。
+AEM as a Cloud Service でホストされる web サイトにカスタムエラーページを実装する方法について説明します。
 
-このチュートリアルでは、次の内容について学習します。
+このチュートリアルでは、次の内容について説明します。
 
 - デフォルトのエラーページ
 - エラーページの提供元
-   - AEM サービスのタイプ – オーサー、パブリッシュ、プレビュー
-   - Adobeが管理する CDN
+   - AEM サービスタイプ - オーサー、パブリッシュ、プレビュー
+   - アドビが管理する CDN
 - エラーページをカスタマイズするためのオプション
    - ErrorDocument Apache ディレクティブ
    - ACS AEM Commons - エラーページハンドラー
@@ -36,30 +36,30 @@ AEM as a Cloud Serviceがホストする web サイトにカスタムエラー�
 
 ## デフォルトのエラーページ
 
-エラーページを表示するタイミング、デフォルトのエラーページ、およびエラーページの提供元を見てみましょう。
+エラーページが表示されるタイミング、デフォルトのエラーページ、およびエラーページの提供元を確認しましょう。
 
 エラーページは、次の場合に表示されます。
 
-- ページが存在しません（404）
-- ページへのアクセスが許可されていません（403）
-- コードの問題またはサーバーに到達できないため、サーバーエラー（500）が発生しました。
+- ページが存在しない（404）
+- ページへのアクセスが承認されていない（403）
+- コードの問題またはサーバーに到達できないので、サーバーエラーが発生する（500）.
 
-AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルトのエラーページ_ を提供しています。 これは汎用のページで、ブランドと一致しません。
+AEM as a Cloud Service では、上記のシナリオに対して&#x200B;_デフォルトのエラーページ_&#x200B;が提供されます。これは汎用のページで、ブランドと一致しません。
 
-デフォルトのエラーページ _提供されます_ は、_AEM サービスの種類_ オーサー、パブリッシュ、プレビュー）または _Adobeが管理する CDN_ から提供されます。 詳しくは、次の表を参照してください。
+デフォルトのエラーページは、_AEM サービスタイプ_（オーサー、パブリッシュ、プレビュー）または&#x200B;_アドビが管理する CDN_ から&#x200B;_提供されます_。詳しくは、次の表を参照してください。
 
 | エラーページの提供元 | 詳細 |
 |---------------------|:-----------------------:|
-| AEM サービスのタイプ – オーサー、パブリッシュ、プレビュー | ページリクエストがAEM サービスタイプによって提供され、上記のエラーシナリオのいずれかが発生した場合、エラーページはAEM サービスタイプから提供されます。 |
-| Adobeが管理する CDN | Adobeが管理する CDN _AEM サービスの種類に到達できません_ （オリジンサーバー）の場合、エラーページはAdobeが管理する CDN から提供されます。 **ありそうもない出来事だが、計画する価値がある。** |
+| AEM サービスタイプ - オーサー、パブリッシュ、プレビュー | ページリクエストが AEM サービスタイプによって処理され、上記のいずれかのエラーシナリオが発生すると、AEM サービスタイプからエラーページが提供されます。 |
+| アドビが管理する CDN | アドビが管理する CDN が _AEM サービスタイプ（接触チャネルサーバー）に到達できない_&#x200B;場合、エラーページはアドビが管理する CDNから提供されます。**可能性が低いイベントですが、計画する価値はあります。** |
 
 
-例えば、AEM サービスタイプとAdobe管理 CDN から提供されるデフォルトのエラーページは次のとおりです。
+例えば、AEM サービスタイプとアドビが管理する CDN から提供されるデフォルトのエラーページは次のとおりです。
 
-![ デフォルトのAEM エラーページ ](./assets/aem-default-error-pages.png)
+![デフォルトの AEM エラーページ](./assets/aem-default-error-pages.png)
 
 
-ただし、AEM サービスのタイプとAdobe管理の両方を _カスタマイズ_ CDN エラーページをブランドに合わせてカスタマイズし、より良いユーザーエクスペリエンスを提供することができます。
+ただし、_AEM サービスタイプとアドビが管理する CDN エラーページの両方をカスタマイズ_&#x200B;して、ブランドに一致させて、より優れたユーザーエクスペリエンスを提供できます。
 
 ## エラーページをカスタマイズするためのオプション
 
@@ -67,22 +67,22 @@ AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルト�
 
 | 適用先 | オプション名 | 説明 |
 |---------------------|:-----------------------:|:-----------------------:|
-| AEM サービスタイプ – 公開とプレビュー | ErrorDocument ディレクティブ | Apache 設定ファイルの [ErrorDocument](https://httpd.apache.org/docs/2.4/custom-error.html) ディレクティブを使用して、カスタムエラーページのパスを指定します。 AEM サービスタイプ（パブリッシュとプレビュー）にのみ適用されます。 |
-| AEM サービスタイプ – オーサー、パブリッシュ、プレビュー | ACS AEM Commons エラーページハンドラー | [ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html) を使用すると、すべてのAEM サービスタイプでエラーをカスタマイズできます。 |
-| Adobeが管理する CDN | CDN エラーページ | Adobeが管理する CDN がAEM サービスの種類（オリジンサーバー）に到達できない場合は、CDN エラーページを使用してエラーページをカスタマイズできます。 |
+| AEM サービスタイプ - パブリッシュとプレビュー | ErrorDocument ディレクティブ | カスタムエラーページへのパスを指定するには、Apache 設定ファイルの [ErrorDocument](https://httpd.apache.org/docs/2.4/custom-error.html) ディレクティブを使用します。AEM サービスタイプ（パブリッシュとプレビュー）にのみ適用されます。 |
+| AEM サービスタイプ – オーサー、パブリッシュ、プレビュー | ACS AEM Commons エラーページハンドラー | [ACS AEM Commons エラーページハンドラー](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)を使用して、すべての AEM サービスタイプでエラーをカスタマイズします。 |
+| アドビが管理する CDN | CDN エラーページ | CDN エラーページを使用して、アドビが管理する CDN が AEM サービスタイプ（接触チャネルサーバー）に到達できない場合のエラーページをカスタマイズします。 |
 
 
 ## 前提条件
 
-このチュートリアルでは、_ErrorDocument_ ディレクティブ、_ACS AEM Commons Error Page Handler_ および _CDN Error Pages_ オプションを使用してエラーページをカスタマイズする方法を説明します。 このチュートリアルに従うには、次が必要です。
+このチュートリアルでは、_ErrorDocument_ ディレクティブ、_ACS AEM Commons エラーページハンドラー_&#x200B;および _CDN エラーページ_&#x200B;オプションを使用して、エラーページをカスタマイズする方法について説明します。このチュートリアルに従うには、以下が必要です。
 
-- [ ローカル AEM開発環境 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)AEM as a Cloud Service環境 「_CDN エラーページ_」オプションは、AEM as a Cloud Service環境に適用できます。
+- [ローカル AEM 開発環境](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)または AEM as a Cloud Service 環境。「_CDN エラーページ_」オプションは、AEM as a Cloud Service 環境に適用できます。
 
-- エラーページをカスタマイズする ](https://github.com/adobe/aem-guides-wknd)0}AEM WKND プロジェクト }。[
+- エラーページをカスタマイズする [AEM WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)。
 
 ## 設定
 
-- 次の手順に従って、AEM WKND プロジェクトのクローンを作成し、ローカル AEM開発環境にデプロイします。
+- AEM WKND プロジェクトのクローンを作成し、ローカル AEM 開発環境にデプロイするには、次の手順に従います。
 
   ```
   # For local AEM development environment
@@ -91,23 +91,23 @@ AEM as a Cloud Serviceでは、上記のシナリオ向けに _デフォルト�
   $ mvn clean install -PautoInstallSinglePackage -PautoInstallSinglePackagePublish
   ```
 
-- AEM as a Cloud Service環境の場合は、[ フルスタックパイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline) を実行してAEM WKND プロジェクトをデプロイします。[ 実稼動以外のパイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline) の例を参照してください。
+- AEM as a Cloud Service 環境の場合、[フルスタックパイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)を実行して AEM WKND プロジェクトをデプロイします。[実稼動以外のパイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline)の例を参照してください。
 
 - WKND サイトページが正しくレンダリングされていることを確認します。
 
-## AEM提供のエラーページをカスタマイズするための ErrorDocument Apache ディレクティブ{#errordocument}
+## AEM が提供するエラーページをカスタマイズするための ErrorDocument Apache ディレクティブ{#errordocument}
 
-AEMが提供するエラーページをカスタマイズするには、`ErrorDocument` Apache ディレクティブを使用します。
+AEM が提供するエラーページをカスタマイズするには、`ErrorDocument` Apache ディレクティブを使用します。
 
-AEM as a Cloud Serviceでは、「`ErrorDocument` Apache ディレクティブ」オプションは、パブリッシュおよびプレビューのサービスタイプにのみ適用されます。 Apache とDispatcherはデプロイメントアーキテクチャに含まれていないので、オーサーサービスタイプには適用されません。
+AEM as a Cloud Service では、`ErrorDocument` Apache ディレクティブオプションは、パブリッシュおよびプレビューサービスタイプにのみ適用されます。Apache と Dispatcher はデプロイメントアーキテクチャの一部ではないので、オーサーサービスタイプには適用されません。
 
-[AEM WKND](https://github.com/adobe/aem-guides-wknd) プロジェクトで `ErrorDocument` Apache ディレクティブを使用してカスタムエラーページを表示する方法を見てみましょう。
+[AEM WKND](https://github.com/adobe/aem-guides-wknd) プロジェクトで `ErrorDocument` Apache ディレクティブを使用してカスタムエラーページを表示する方法を確認しましょう。
 
-- `ui.content.sample` モジュールには、ブランド [ エラーページ ](https://github.com/adobe/aem-guides-wknd/tree/main/ui.content.sample/src/main/content/jcr_root/content/wknd/language-masters/en/errors) @ `/content/wknd/language-masters/en/errors` が含まれています。 [ ローカル AEM](http://localhost:4502/sites.html/content/wknd/language-masters/en/errors) またはAEM as a Cloud Service `https://author-p<ID>-e<ID>.adobeaemcloud.com/ui#/aem/sites.html/content/wknd/language-masters/en/errors` 環境でレビューします。
+- `ui.content.sample` モジュールには、ブランドの[エラーページ](https://github.com/adobe/aem-guides-wknd/tree/main/ui.content.sample/src/main/content/jcr_root/content/wknd/language-masters/en/errors) @ `/content/wknd/language-masters/en/errors` が含まれます。[ローカルの AEM](http://localhost:4502/sites.html/content/wknd/language-masters/en/errors) または AEM as a Cloud Service `https://author-p<ID>-e<ID>.adobeaemcloud.com/ui#/aem/sites.html/content/wknd/language-masters/en/errors` 環境で確認します。
 
-- `dispatcher` モジュールの `wknd.vhost` ファイルには、次が含まれます。
-   - 上記の [ エラーページ ](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L139-L143) を指す [ErrorDocument ディレクティブ ](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/variables/custom.vars#L7-L8)。
-   - [DispatcherPassError](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L133) 値は 1 に設定されているので、Dispatcherは Apache がすべてのエラーを処理できます。
+- `dispatcher` モジュールの `wknd.vhost` ファイルには次の内容が含まれます。
+   - 上記の[エラーページ](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/variables/custom.vars#L7-L8)を指す [ErrorDocument ディレクティブ](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L139-L143)。
+   - [DispatcherPassError](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L133) の値は 1 に設定されているので、Dispatcher では Apache にすべてのエラーを処理させます。
 
   ```
   ...
@@ -131,38 +131,38 @@ AEM as a Cloud Serviceでは、「`ErrorDocument` Apache ディレクティブ�
   ...
   ```
 
-- お使いの環境で間違ったページ名またはパス（例：[https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html) を入力して、WKND サイトのカスタムエラーページを確認します。
+- お使いの環境に正しくないページ名またはパス（例：[https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html)）を入力して、WKND サイトのカスタムエラーページを確認します。
 
-## ACS AEM Commons-Error Page Handler :AEMが提供するエラーページをカスタマイズします{#acs-aem-commons}
+## AEM が提供するエラーページをカスタマイズするための ACS AEM Commons エラーページハンドラー{#acs-aem-commons}
 
-AEMが提供するエラーページを _すべてのAEM サービスタイプ_ にカスタマイズするには、「[ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)」オプションを使用します。
+_すべての AEM サービスタイプ_&#x200B;で AEM が提供するエラーページをカスタマイズするには、[ACS AEM Commons エラーページハンドラー](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html)オプションを使用できます。
 
-。詳細な手順については、[ 使用方法 ](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use) を参照してください。
+。詳細な手順については、[使用方法](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use)の節を参照してください。
 
-## CDN 提供のエラーページをカスタマイズするための CDN エラーページ{#cdn-error-pages}
+## CDN が提供するエラーページをカスタマイズするための CDN エラーページ{#cdn-error-pages}
 
-Adobe管理 CDN から提供されるエラーページをカスタマイズするには、「CDN エラーページ」オプションを使用します。
+アドビが管理する CDN によって提供されるエラーページをカスタマイズするには、CDN エラーページ オプションを使用します。
 
-Adobeが管理する CDN がAEM サービスの種類（オリジンサーバー）に到達できない場合に、CDN エラーページを実装してエラーページをカスタマイズします。
+CDN エラーページを実装して、アドビが管理する CDN が AEM サービスタイプ（接触チャネルサーバー）に到達できない場合のエラーページをカスタマイズしましょう。
 
 >[!IMPORTANT]
 >
-> _Adobeが管理する CDN はAEM サービスの種類に到達でき_ せん。（オリジンサーバー）は **発生する可能性は低いですが** 計画する価値があります。
+> _アドビが管理する CDN が AEM サービスタイプ（接触チャネルサーバー）に到達できない_&#x200B;ことは&#x200B;**可能性が低いイベント**&#x200B;ですが、計画する価値はあります。
 
-CDN エラーページを実装する手順の概要は次のとおりです。
+CDN エラーページを実装する大まかな手順は次のとおりです。
 
-- カスタムエラーページコンテンツをシングルページアプリケーション（SPA）として開発します。
-- CDN エラーページに必要な静的ファイルを公開アクセス可能な場所にホストします。
+- カスタムエラーページコンテンツを単一ページアプリケーション（SPA）として開発します。
+- CDN エラーページに必要な静的ファイルを、パブリックアクセス可能な場所にホストします。
 - CDN ルール（errorPages）を設定し、上記の静的ファイルを参照します。
-- Cloud Manager パイプラインを使用して、設定済みの CDN ルールをAEM as a Cloud Service環境にデプロイします。
+- Cloud Manager パイプラインを使用して、設定済みの CDN ルールを AEM as a Cloud Service 環境にデプロイします。
 - CDN エラーページをテストします。
 
 
 ### CDN エラーページの概要
 
-CDN エラーページは、Adobeが管理する CDN によって、シングルページアプリケーション（SPA）として実装されます。 Adobeが管理する CDN が提供するSPA HTMLドキュメントには、最小限のHTMLスニペットが含まれています。 カスタムエラーページのコンテンツは、JavaScript ファイルを使用して動的に生成されます。 JavaScript ファイルは、お客様が公にアクセスできる場所で開発およびホストする必要があります。
+CDN エラーページは、アドビが管理する CDN によって単一ページアプリケーション（SPA）として実装されます。アドビが管理する CDN によって配信される SPA HTML ドキュメントには、最小限の HTML スニペットが含まれます。カスタムエラーページのコンテンツは、JavaScript ファイルを使用して動的に生成されます。JavaScript ファイルは、お客様がパブリックアクセス可能な場所で開発およびホストする必要があります。
 
-Adobeが管理する CDN によって提供されるHTMLスニペットは、次の構造になっています。
+アドビが管理する CDN によって配信される HTML スニペットの構造は次のとおりです。
 
 ```html
 <!DOCTYPE html>
@@ -181,19 +181,19 @@ Adobeが管理する CDN によって提供されるHTMLスニペットは、次
 </html>
 ```
 
-HTMLスニペットには、次のプレースホルダーが含まれています。
+HTMLスニペットには、次のプレースホルダーが含まれます。
 
-1. **jsUrl**:HTML要素を動的に作成してエラーページコンテンツをレンダリングするJavaScript ファイルの絶対 URL です。
-1. **cssUrl**：エラーページのコンテンツのスタイルを設定する CSS ファイルの絶対 URL です。
-1. **icoUrl**:favicon の絶対 URL。
+1. **jsUrl**：HTML 要素を動的に作成してエラーページのコンテンツをレンダリングする JavaScript ファイルの絶対 URL。
+1. **cssUrl**：エラーページのコンテンツのスタイルを設定する CSS ファイルの絶対 URL。
+1. **icoUrl**：favicon の絶対 URL。
 
 
 
-### カスタムエラーページの作成
+### カスタムエラーページの開発
 
-WKND 固有のブランドエラーページコンテンツをシングルページアプリケーション（SPA）として開発しましょう。
+WKND 固有のブランドのエラーページのコンテンツを単一ページアプリケーション（SPA）として開発しましょう。
 
-デモのために、[React](https://react.dev/) を使用しますが、任意のJavaScript フレームワークまたはライブラリを使用できます。
+デモの目的で、[React](https://react.dev/) を使用しますが、任意の JavaScript フレームワークやライブラリを使用できます。
 
 - 次のコマンドを実行して、新しい React プロジェクトを作成します。
 
@@ -203,7 +203,7 @@ WKND 固有のブランドエラーページコンテンツをシングルペー
 
 - お気に入りのコードエディターでプロジェクトを開き、以下のファイルを更新します。
 
-   - `src/App.js`: エラーページのコンテンツをレンダリングするメインコンポーネントです。
+   - `src/App.js`：エラーページのコンテンツをレンダリングするメインコンポーネントです。
 
      ```javascript
      import logo from "./wknd-logo.png";
@@ -231,7 +231,7 @@ WKND 固有のブランドエラーページコンテンツをシングルペー
      export default App;
      ```
 
-   - `src/App.css`: エラーページのコンテンツのスタイルを設定します。
+   - `src/App.css`：エラーページのコンテンツのスタイルを設定します。
 
      ```css
      .App {
@@ -277,19 +277,19 @@ WKND 固有のブランドエラーページコンテンツをシングルペー
      }
      ```
 
-   - `wknd-logo.png` ファイルを `src` フォルダーに追加します。 [ ファイル ](https://github.com/adobe/aem-guides-wknd/blob/main/ui.frontend/src/main/webpack/resources/images/favicons/favicon-512.png) を `wknd-logo.png` のようにコピーします。
+   - `wknd-logo.png` ファイルを `src` フォルダーに追加します。[ファイル](https://github.com/adobe/aem-guides-wknd/blob/main/ui.frontend/src/main/webpack/resources/images/favicons/favicon-512.png)を `wknd-logo.png` としてコピーします。
 
-   - `favicon.ico` ファイルを `public` フォルダーに追加します。 [ ファイル ](https://github.com/adobe/aem-guides-wknd/blob/main/ui.frontend/src/main/webpack/resources/images/favicons/favicon-32.png) を `favicon.ico` のようにコピーします。
+   - `favicon.ico` ファイルを `public` フォルダーに追加します。[ファイル](https://github.com/adobe/aem-guides-wknd/blob/main/ui.frontend/src/main/webpack/resources/images/favicons/favicon-32.png)を `favicon.ico` としてコピーします。
 
-   - プロジェクトを実行して、WKND ブランド CDN エラーページの内容を確認します。
+   - プロジェクトを実行して、WKND ブランドの CDN エラーページのコンテンツを確認します。
 
      ```
      $ npm start
      ```
 
-     ブラウザーを開き、`http://localhost:3000/` に移動して CDN エラーページのコンテンツを確認します。
+     ブラウザーを開き、`http://localhost:3000/` に移動して、CDN エラー ページのコンテンツを確認します。
 
-   - 静的ファイルを生成するプロジェクトを構築します。
+   - 静的ファイルを生成するプロジェクトを作成します。
 
      ```
      $ npm run build
@@ -298,42 +298,42 @@ WKND 固有のブランドエラーページコンテンツをシングルペー
      静的ファイルは、`build` フォルダーに生成されます。
 
 
-または、上記の React プロジェクトファイルを含んだ [aem-cdn-error-page.zip](./assets/aem-cdn-error-page.zip) ファイルをダウンロードすることもできます。
+または、上記の React プロジェクトファイルを含む [aem-cdn-error-page.zip](./assets/aem-cdn-error-page.zip) ファイルをダウンロードすることもできます。
 
-次に、上記の静的ファイルを公開アクセス可能な場所にホストします。
+次に、上記の静的ファイルをパブリックアクセス可能な場所にホストします。
 
-### CDN エラーページに必要なホストの静的ファイル
+### CDN エラーページに必要な静的ファイルのホスト
 
-Azure Blob Storage で静的ファイルをホストします。 ただし、[Netlify](https://www.netlify.com/)、{Vercel](https://vercel.com/)、[AWS S3[ などの任意の静的ファイルホスティングサービスを使用 ](https://aws.amazon.com/s3/) きます。
+Azure Blob Storage で静的ファイルをホストしましょう。ただし、[Netlify](https://www.netlify.com/)、[Vercel](https://vercel.com/)、[AWS S3](https://aws.amazon.com/s3/) などの静的ファイルホスティングサービスを使用できます。
 
-- 公式の [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal) ドキュメントに従って、コンテナを作成し、静的ファイルをアップロードします。
+- コンテナーを作成し、静的ファイルをアップロードするには、公式の [Azure Blob Storage](https://learn.microsoft.com/ja-jp/azure/storage/blobs/storage-quickstart-blobs-portal) ドキュメントに従います。
 
   >[!IMPORTANT]
   >
-  >サービスをホストする他の静的ファイルを使用している場合は、静的ファイルをホストするためのドキュメントに従ってください。
+  >他の静的ファイルホスティングサービスを使用している場合は、静的ファイルをホストするためのドキュメントに従います。
 
-- 静的ファイルが公開でアクセスできることを確認します。 WKND デモ固有のストレージアカウント設定は、次のとおりです。
+- 静的ファイルがパブリックアクセス可能であることを確認します。WKND デモ固有のストレージアカウント設定は、次のとおりです。
 
-   - **ストレージ アカウント名**: `aemcdnerrorpageresources`
-   - **コンテナ名**: `static-files`
+   - **ストレージアカウント名**：`aemcdnerrorpageresources`
+   - **コンテナ名**：`static-files`
 
   ![Azure Blob Storage](./assets/azure-blob-storage-settings.png)
 
-- 上記のコンテナ `static-files` は、以下のファイル（`build` フォルダーから）がアップロードされます。
+- 上記の `static-files` コンテナには、`build` フォルダーから以下のファイルがアップロードされます。
 
-   - `error.js`: `build/static/js/main.<hash>.js` ファイルの名前が `error.js` に変更され [ パブリックにアクセス可能 ](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/error.js) になりました。
-   - `error.css`: `build/static/css/main.<hash>.css` ファイルの名前が `error.css` に変更され [ パブリックにアクセス可能 ](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/error.css) になりました。
-   - `favicon.ico`:`build/favicon.ico` ファイルは、そのままアップロードされ、[ 公開アクセス可能 ](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/favicon.ico) になります。
+   - `error.js`：`build/static/js/main.<hash>.js` ファイルの名前が `error.js` に変更され、[パブリックアクセス可能になりました](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/error.js)。
+   - `error.css`：`build/static/css/main.<hash>.css` ファイルの名前が `error.css` に変更され、[パブリックアクセス可能になりました](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/error.css)。
+   - `favicon.ico`：`build/favicon.ico` ファイルがそのままアップロードされ、[パブリックにアクセス可能になりました](https://aemcdnerrorpageresources.blob.core.windows.net/static-files/favicon.ico)。
 
 次に、CDN ルール（errorPages）を設定し、上記の静的ファイルを参照します。
 
 ### CDN ルールの設定
 
-上記の静的ファイルを使用して CDN エラーページのコンテンツをレンダリングする `errorPages` CDN ルールを設定します。
+上記の静的ファイルを使用して CDN エラーページのコンテンツをレンダリングする `errorPages` CDN ルールを設定しましょう。
 
-1. AEM プロジェクトのメイン `config` フォルダーから `cdn.yaml` ファイルを開きます。 例えば、[WKND プロジェクトの cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) ファイルです。
+1. AEM プロジェクトのメイン `config` フォルダーから `cdn.yaml` ファイルを開きます。例えば、[WKND プロジェクトの cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) ファイルです。
 
-1. `cdn.yaml` ファイルに次の CDN ルールを追加します。
+1. 次の CDN ルールを `cdn.yaml` ファイルに追加します。
 
    ```yaml
    kind: "CDN"
@@ -352,41 +352,41 @@ Azure Blob Storage で静的ファイルをホストします。 ただし、[Ne
          jsUrl: https://aemcdnerrorpageresources.blob.core.windows.net/static-files/error.js # The PUBLIC URL of the JavaScript file
    ```
 
-1. 変更内容を保存、コミットし、Adobeのアップストリームリポジトリーにプッシュします。
+1. 変更を保存し、コミットして、Adobe アップストリームリポジトリにプッシュします。
 
 ### CDN ルールのデプロイ
 
-最後に、Cloud Manager パイプラインを使用して、設定済みの CDN ルールをAEM as a Cloud Service環境にデプロイします。
+最後に、Cloud Manager パイプラインを使用して、設定済みの CDN ルールを AEM as a Cloud Service 環境にデプロイします。
 
-1. Cloud Managerで、「**パイプライン** セクションに移動します。
+1. Cloud Manager で、「**パイプライン**」セクションに移動します。
 
-1. 新しいパイプラインを作成するか、**Config** ファイルのみをデプロイする既存のパイプラインを選択します。 詳しい手順については、[ 設定パイプラインの作成 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager) を参照してください。
+1. 新しいパイプラインを作成するか、**設定**&#x200B;ファイルのみをデプロイする既存のパイプラインを選択します。手順について詳しくは、[設定パイプラインの作成](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)を参照してください。
 
-1. 「**実行**」ボタンをクリックして、CDN ルールをデプロイします。
+1. 「**実行**」ボタンをクリックして CDN ルールをデプロイします。
 
-![CDN ルールのデプロイ ](./assets/deploy-cdn-rule-for-cdn-error-pages.png)
+![CDN ルールのデプロイ](./assets/deploy-cdn-rule-for-cdn-error-pages.png)
 
 ### CDN エラーページのテスト
 
 CDN エラーページをテストするには、次の手順に従います。
 
-- ブラウザーを開き、Publish環境の URL に移動するか、`cdnstatus?code=404` を URL に追加します（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)。または、[ カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします
+- ブラウザーを開いてパブリッシュ環境の URL に移動し、URL に `cdnstatus?code=404` を追加します（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)）。または、[カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします。
 
-  ![WKND - CDN エラーページ ](./assets/wknd-cdn-error-page.png)
+  ![WKND - CDN エラーページ](./assets/wknd-cdn-error-page.png)
 
 - サポートされているコードは、403、404、406、500 および 503 です。
 
-- ブラウザーの「ネットワーク」タブを確認し、静的ファイルが Azure Blob ストレージから読み込まれていることを確認します。 Adobeが管理する CDN が提供するHTMLドキュメントには最小限のコンテンツが含まれており、JavaScript ファイルはブランド化されたエラーページコンテンツを動的に作成します。
+- ブラウザーのネットワークタブを確認して、静的ファイルが Azure Blob Storage から読み込まれていることを確認します。アドビが管理する CDN によって配信される HTML ドキュメントには最小限のコンテンツが含まれ、JavaScript ファイルによってブランドのエラーページのコンテンツが動的に作成されます。
 
-  ![CDN エラーページの「ネットワーク」タブ ](./assets/wknd-cdn-error-page-network-tab.png)
+  ![CDN エラーページのネットワークタブ](./assets/wknd-cdn-error-page-network-tab.png)
 
 ## 概要
 
-このチュートリアルでは、エラーページの提供元となるデフォルトのエラーページと、エラーページをカスタマイズするオプションについて学びました。 `ErrorDocument` Apache ディレクティブ、`ACS AEM Commons Error Page Handler`、`CDN Error Pages` オプションを使用してカスタムエラーページを実装する方法を学びました。
+このチュートリアルでは、エラーページの提供元となるデフォルトのエラーページと、エラーページをカスタマイズするオプションについて説明しました。`ErrorDocument` Apache ディレクティブ、`ACS AEM Commons Error Page Handler`、および `CDN Error Pages` オプションを使用してカスタムエラーページを実装する方法について説明しました。
 
 ## その他のリソース
 
-- [CDN エラーページの設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
+- [CDN エラーページの設定](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
-- [Cloud Manager – 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
+- [Cloud Manager - 設定パイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
 

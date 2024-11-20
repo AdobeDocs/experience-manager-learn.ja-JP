@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Content Hubでのアセットのダウンロード
-description: Adobe Experience Manager Assets Content Hubでアセットを移動、検索、フィルタリング、ダウンロードする方法について説明します。
+title: AEM Assets コンテンツハブでのアセットのダウンロード
+description: Adobe Experience Manager Assets コンテンツハブでアセットを移動、検索、フィルタリング、ダウンロードする方法について説明します。
 version: Cloud Service
 feature: Asset Management, Marketing Campaigns, Metadata
 topic: Content Supply Chain, Content Management
@@ -13,14 +13,14 @@ jira: KT-15986
 thumbnail: KT-15986.jpeg
 exl-id: b48556f5-cc51-4f4d-b02d-de2909e51b02
 source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Assets Content Hubでのアセットのダウンロード
+# AEM Assets コンテンツハブでのアセットのダウンロード
 
-Adobe Experience Manager Assets Content Hubでアセットを移動、検索、ダウンロードする方法について説明します。
+Adobe Experience Manager Assets コンテンツハブでアセットを移動、検索、ダウンロードする方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433135/?learn=on)

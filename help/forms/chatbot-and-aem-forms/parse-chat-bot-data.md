@@ -1,6 +1,6 @@
 ---
-title: Chatbot でのAEM Formsの使用
-description: ChatBot データの解析
+title: チャットボットでの AEM Forms の使用
+description: チャットボットデータの解析
 feature: Adaptive Forms
 version: 6.5
 jira: KT-15344
@@ -10,19 +10,19 @@ level: Intermediate
 exl-id: 3c304b0a-33f8-49ed-a576-883df4759076
 duration: 22
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# ChatBot データの解析
+# チャットボットデータの解析
 
-[ChatBot webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) を使用して、ChatBot データをAEM サーブレットに送信しました。
-ChatBot でキャプチャされたデータは JSON 形式で、以下のように attributes オブジェクトにユーザーが入力したデータを含んでいます
-![ チャットボットデータ ](assets/chat-bot-data.png)
+チャットボットデータを AEM サーブレットに送信するために、[チャットボット web フック](https://www.chatbot.com/help/webhooks/what-are-webhooks/)が使用されました。
+チャットボットで取得されたデータは、次に示すように、ユーザーが属性オブジェクトにデータを入力した JSON 形式です
+![チャットボットデータ](assets/chat-bot-data.png)
 
-データを XDP テンプレートと結合するには、次の XML を作成する必要があります。 xml のルート要素に注意してください。データが正常に結合されるには、これは XDP テンプレートのルート要素と一致する必要があります。
+データを XDP テンプレートと結合するには、次の XML を作成する必要があります。xml のルート要素に注意してください。データを正常に結合するには、これは XDP テンプレートのルート要素と一致する必要があります。
 
 
 ```xml

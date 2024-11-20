@@ -1,6 +1,6 @@
 ---
-title: HTML5 フォーム送信時のAEM トリガーワークフロー
-description: HTML5 フォームの送信を処理します
+title: HTML5 フォーム送信での AEM ワークフローのトリガー
+description: HTML5 フォームの送信処理
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -10,22 +10,22 @@ jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
-# フォーム送信の処理
+# フォームの送信処理
 
-このパートでは、AEM Publish上で実行され、HTML5 のフォーム送信を処理するシンプルなサーブレットを作成します。 このサーブレットは、送信されたデータを `nt:file` ノードとしてAEM オーサーのリポジトリに保存するAEM オーサーインスタンスで動作するサーブレットに対して HTTPPOSTリクエストを行います。
+このパートでは、AEM パブリッシュで実行され、HTML5 フォームの送信を処理するシンプルなサーブレットを作成します。このサーブレットは、送信されたデータを AEM オーサーのリポジトリ内の `nt:file` ノードとして保存する役割を担う AEM オーサーインスタンスで実行されているサーブレットに HTTP POST リクエストを送信します。
 
-次に、HTML5 フォームの送信を処理するサーブレットのコードを示します。 このサーブレットでは、AEM オーサーインスタンスの **/bin/startworkflow** にマウントされたサーブレットに対して POST 呼び出しを行います。このサーブレットは、フォームデータを AEM オーサーのリポジトリに保存します。
+HTML5 送信を処理するサーブレットのコードを以下に示します。このサーブレットでは、AEM オーサーインスタンスの **/bin/startworkflow** にマウントされたサーブレットに対して POST 呼び出しを行います。このサーブレットは、フォームデータを AEM オーサーのリポジトリに保存します。
 
 
 ## AEM パブリッシュサーブレット
 
-次のコードは、HTML 5 のフォーム送信を処理します。 このコードは、パブリッシュインスタンスで実行されます。
+次のコードは、HTML5 フォームの送信を処理します。このコードは、パブリッシュインスタンスで実行されます。
 
 ```java
 package com.aemforms.mobileforms.core.servlets;
@@ -118,4 +118,4 @@ public class HandleFormSubmission extends SlingAllMethodsServlet implements Seri
 
 ## 次の手順
 
-[送信されたデータをオーサーインスタンスに保存](./author-servlet.md)
+[オーサーインスタンスに送信したデータの保存](./author-servlet.md)
