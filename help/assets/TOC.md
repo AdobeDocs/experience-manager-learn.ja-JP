@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '435'
 ht-degree: 57%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 57%
 + [概要](overview.md)
 
 + ビデオ再生リスト {#video-playlists}
-   + [管理ビュー](playlists/admin-view.md)
    + [アセットビュー](playlists/assets-view.md)
+   + [管理ビュー](playlists/admin-view.md)
 
 + 設定{#configuring}
    + [ベースラインフォルダー](configuring/baseline-folders.md)
@@ -82,14 +82,15 @@ ht-degree: 57%
 + コンテンツハブ{#content-hub}
    + [概要](./content-hub/overview.md)
    + [設定](./content-hub/set-up.md)
-   + [アセットを追加](./content-hub/add-assets.md)
-   + [アセットをダウンロード](./content-hub/download-assets.md)
+   + [設定](./content-hub/configure.md)
+   + [アセットの追加](./content-hub/add-assets.md)
+   + [アセットのダウンロード](./content-hub/download-assets.md)
    + [Adobe Expressを使用した画像のバリアント](./content-hub/image-variants.md)
    + [コレクション](./content-hub/collections.md)
    + [共有](./content-hub/share.md)
 
 + 共有と配布 {#sharing}
-   + [アセットをダウンロード](./sharing/download.md)
+   + [アセットのダウンロード](./sharing/download.md)
    + [アセットの書き出し](./sharing/export.md)
    + [アセットを公開します。](./sharing/publish.md)
 
