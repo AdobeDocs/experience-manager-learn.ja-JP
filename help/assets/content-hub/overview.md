@@ -1,6 +1,6 @@
 ---
-title: AEM AssetsContent Hub
-description: AEN Assets as a Cloud ServiceのContent Hubについて説明します。
+title: AEM Assets コンテンツハブ
+description: AEN Assets as a Cloud Service のコンテンツハブについて説明します。
 version: Cloud Service
 feature: Asset Management, Upload, Marketing Campaigns
 topic: Content Supply Chain, Content Management
@@ -9,29 +9,30 @@ level: Beginner
 doc-type: Catalog
 duration: 45
 last-substantial-update: 2024-10-31T00:00:00Z
-source-git-commit: 16bccf53b8f7507f64dd53a7152192630e3f8ec8
+exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
+source-git-commit: b5f8f545772a9b3f4d15e4816d53f81a513c716c
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 7%
+source-wordcount: '467'
+ht-degree: 83%
 
 ---
 
+# AEM Assets コンテンツハブ
 
-# AEM AssetsContent Hub
+![AEM Assets コンテンツハブ](./assets/overview/hero.png){align=center}
 
-![AEM Assets Content Hub](./assets/overview/hero.png){align=center}
-
-Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットをアップロードしたり、タグを適用したり、承認ワークフローについて理解したりする方法について説明します。
+Adobe Experience Manager Assets as a Cloud Service コンテンツハブでアセットをアップロードし、タグを適用し、承認ワークフローを理解する方法について説明します。
 
 
-## Content Hub ビデオ
+## コンテンツハブに関するビデオ
 
-このビデオシリーズでは、AEM Assets Content Hubを効果的に操作するために必要なすべての内容を説明します。 アセットの管理からチームとの共同作業に至るまで、各動画では、日常業務でAEM Assets Content Hubを最大限に活用するのに役立つ明確な手順と実践的なヒントを提供します。
+このビデオシリーズでは、AEM Assets コンテンツハブを効果的に操作するために必要な内容をすべてカバーします。アセットの管理からチームとの共同作業まで、各ビデオでは、AEM Assets コンテンツハブを日常業務で最大限に活用するための明確な手順と実用的なヒントを提供します。
 
 
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up {title = Set up}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure {title = Configure}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets {title = Add assets}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets {title = Download assets}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants {title = Create image variants}
@@ -45,8 +46,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" title="設定">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433513/?format=jpeg&nocache=1730408523156" alt="設定"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/set-up" title="設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433513/?format=jpeg&nocache=1732113280955" alt="設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -54,12 +55,35 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" title="設定"> 設定 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/set-up" target="_blank" rel="referrer" title="設定">設定</a>
                     </p>
-                    <p class="is-size-6">Cloud Manager プログラムおよび assets アドオンのAdobeを使用して、Experience Manager Assets Content Hubを設定する方法について説明します。 製品プロファイルを使用してユーザーのアクセスを設定する方法についても説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service で Adob Experience Manager Assets コンテンツハブを設定する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルの利用 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/set-up" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Configure">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" title="設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439311/?format=jpeg&nocache=1732113280958" alt="設定"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" title="設定">設定</a>
+                    </p>
+                    <p class="is-size-6">使用可能なタブを移動する方法と、組織のニーズに合わせて設定オプションをカスタマイズする方法を説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
         </div>
@@ -68,8 +92,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" title="アセットを追加">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1730408523136" alt="アセットを追加"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/add-assets" title="アセットの追加" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1732113280960" alt="アセットの追加"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -77,12 +101,12 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" title="アセットを追加"> アセットの追加 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/add-assets" target="_blank" rel="referrer" title="アセットの追加">アセットの追加</a>
                     </p>
-                    <p class="is-size-6">Adobe Experience Manager Assets Content Hubでアセットをアップロードしたり、タグを適用したり、承認ワークフローについて理解したりする方法について説明します。</p>
+                    <p class="is-size-6">Adobe Experience Manager Assets コンテンツハブでアセットをアップロードし、タグを適用し、承認ワークフローを理解する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルの利用 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/add-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 詳細情報 </span>
                 </a>
             </div>
         </div>
@@ -91,8 +115,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" title="アセットのダウンロード">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433135/?format=jpeg&nocache=1730408523154" alt="アセットのダウンロード"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/download-assets" title="アセットのダウンロード" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433135/?format=jpeg&nocache=1732113280972" alt="アセットのダウンロード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,12 +124,12 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" title="アセットをダウンロード">アセットのダウンロード</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/download-assets" target="_blank" rel="referrer" title="アセットのダウンロード">アセットのダウンロード</a>
                     </p>
-                    <p class="is-size-6">Adobe Experience Manager Assets Content Hubでアセットを移動、検索、フィルタリング、ダウンロードする方法について説明します。</p>
+                    <p class="is-size-6">Adobe Experience Manager Assets コンテンツハブでアセットを移動、検索、フィルタリング、ダウンロードする方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルの利用 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/download-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
         </div>
@@ -114,8 +138,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" title="画像のバリアントの作成">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435003/?format=jpeg&nocache=1730408523138" alt="画像のバリアントの作成"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/image-variants" title="画像バリアントの作成" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435003/?format=jpeg&nocache=1732113280971" alt="画像バリアントの作成"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -123,12 +147,12 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" title="画像のバリアントの作成"> 画像のバリアントの作成 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" title="画像バリアントの作成">画像バリアントの作成</a>
                     </p>
-                    <p class="is-size-6">Experience Manager Assets Content Hub内でAdobe Expressを使用して、画像のバリアントを作成および編集する方法について説明します。</p>
+                    <p class="is-size-6">Experience Manager Assets コンテンツハブ内で Adobe Express を使用して画像バリアントを作成および編集する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルの利用 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
         </div>
@@ -137,8 +161,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" title="コレクション">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1730408523160" alt="コレクション"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/collections" title="コレクション" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1732113280972" alt="コレクション"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -146,12 +170,12 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" title="コレクション">コレクション</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/collections" target="_blank" rel="referrer" title="コレクション">コレクション</a>
                     </p>
-                    <p class="is-size-6">AEM Assets Content Hubでコレクションを作成および使用して、アセットへのアクセスを効率化し、共同作業を促進し、様々なプロジェクトにわたって効率的かつ整理されたチームワークを確保する方法について説明します。</p>
+                    <p class="is-size-6">AEM Assets コンテンツハブでコレクションを作成して使用し、アセットへのアクセスを効率化、共同リソース共有を促進して、様々なプロジェクト間で効率的かつ組織的なチームワークを確保する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ビデオを視聴 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/collections" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
         </div>
@@ -160,8 +184,8 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" title="共有">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1730408523158" alt="共有"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/share" title="共有" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1732113280986" alt="共有"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -169,12 +193,12 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" title="共有"> 共有 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/share" target="_blank" rel="referrer" title="共有">共有</a>
                     </p>
-                    <p class="is-size-6">AEM Assets Content Hubでアセットやコレクションをチームメンバーと共有し、効果的なチームワークを促進し、アセット共有を保護する方法について説明します。</p>
+                    <p class="is-size-6">AEM Assets コンテンツハブでチームメンバーとアセットやコレクションを共有し、効果的なチームワークと安全なアセット共有を促進する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ビデオを視聴 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/share" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
         </div>
@@ -182,16 +206,9 @@ Adobe Experience Manager Assetsas a Cloud ServiceContent Hubでアセットを�
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
+## コンテンツハブに関するドキュメント
 
-
-
-
-
-
-
-## Content Hub ドキュメント
-
-Content Hub Content Hubを理解して最大限に活用するのに役立つ、AEM Assetsの製品ドキュメントをご覧ください。 これらのリソースでは、その機能を使用するための詳細なガイダンスを提供し、効率的なアセット管理に必要なサポートを提供します。
+AEM Assets コンテンツハブを理解し、最大限に活用するには、コンテンツハブの製品ドキュメントを参照してください。これらのリソースでは、その機能の使用に関する詳細なガイダンスを示し、効率的なアセット管理に必要なサポートを確実に提供します。
 
 
 <!-- CARDS
@@ -207,8 +224,8 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub ドキュメント">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="Content Hub ドキュメント"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="コンテンツハブに関するドキュメント" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="コンテンツハブに関するドキュメント"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -216,12 +233,12 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub ドキュメント">Content Hub ドキュメント </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" title="コンテンツハブに関するドキュメント">コンテンツハブに関するドキュメント</a>
                     </p>
-                    <p class="is-size-6">Content Hubの詳細、主なメリット、アクセス方法、Content Hubで利用できるオプションに関するフィードバックの提供方法について説明します。</p>
+                    <p class="is-size-6">このドキュメントは、Content Hubの主なメリット、アクセス方法、利用可能なオプションに関するフィードバックを提供する方法を学ぶための入口として機能します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ドキュメントを参照 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 詳細情報 </span>
                 </a>
             </div>
         </div>
@@ -230,7 +247,7 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="コンテンツハブのデプロイ">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="コンテンツハブのデプロイ" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub./media_13f7f053438556286beebdf1266b2d2bf18469b68.png?width=400&format=png&optimize=medium" alt="コンテンツハブのデプロイ"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -239,12 +256,12 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="コンテンツハブのデプロイ">Content Hubのデプロイ </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" title="コンテンツハブのデプロイ">コンテンツハブのデプロイ</a>
                     </p>
-                    <p class="is-size-6">Content Hubをデプロイしてアクティブ化し、様々なタイプの権限（アセットのアップロード、ユーザーのAdobe Express）を持つユーザーにアクセスを提供する方法と、ユーザーに管理者権限を提供する方法について説明します。</p>
+                    <p class="is-size-6">Content Hubをデプロイしてアクティブ化し、アセットのアップロードや管理者アクセスなど、様々な権限をユーザーに提供する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ドキュメントを参照 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 詳細情報 </span>
                 </a>
             </div>
         </div>
@@ -253,8 +270,8 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Content Hubの FAQ">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="Content Hubの FAQ"
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="コンテンツハブに関するよくある質問" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="コンテンツハブに関するよくある質問"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -262,12 +279,12 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Content Hubの FAQ">Content Hubの FAQ</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" target="_blank" rel="referrer" title="コンテンツハブに関するよくある質問">コンテンツハブに関するよくある質問</a>
                     </p>
-                    <p class="is-size-6">Content Hubに関するよくある質問（FAQ）のいくつかへの回答を得ます。</p>
+                    <p class="is-size-6">コンテンツハブに関するよくある質問（FAQ）への回答を参照してください。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ドキュメントを参照 </span>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 詳細情報 </span>
                 </a>
             </div>
         </div>
@@ -275,8 +292,5 @@ Content Hub Content Hubを理解して最大限に活用するのに役立つ、
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-
-
-
-
-
+<br/>
+<br/>
