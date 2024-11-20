@@ -11,13 +11,13 @@ jira: KT-16515
 thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 2%
 
 ---
-
 
 # AEM API の概要{#aem-apis-overview}
 
@@ -71,7 +71,7 @@ OpenAPI ベースのAEM API と、AdobeAPI へのアクセスの重要な概念�
 
 **Forms**
 
-- [Forms Acrobat サービス ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): フォームおよびドキュメントを操作するための API。
+- [Forms通信 API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): フォームおよびドキュメントを操作するための API。
 
 今後のリリースでは、その他のユースケースをサポートするために、さらに OpenAPI ベースのAEM API が追加される予定です。
 
@@ -89,7 +89,7 @@ OpenAPI ベースのAEM API は、次の認証方法をサポートしていま�
 
 AdobeAPI にアクセスする前に、次の主要な概念を理解することが不可欠です。
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**:AdobeAPI、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。 これは、AEM アプリケーションのデバッグに使用される _AEM_ Developer Consoleとは異なることに注意してください。
+- **[Adobe Developer Console](https://developer.adobe.com/)**:AdobeAPI、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。 AEM アプリケーションのデバッグに使用される _AEM_ Developer Consoleとは異なることに注意してください。
 
 - **[Adobe Developer Console プロジェクト ](https://developer.adobe.com/developer-console/docs/guides/projects/)**: API 統合、イベントおよびランタイム関数を一元的に管理する場所です。 ここでは、API を設定し、認証を設定して、必要な資格情報を生成します。
 

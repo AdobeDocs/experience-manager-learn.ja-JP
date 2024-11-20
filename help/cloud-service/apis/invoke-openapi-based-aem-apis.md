@@ -1,6 +1,6 @@
 ---
 title: OpenAPI ベースのAEM API を呼び出す方法
-description: アプリケーションから OpenAPI ベースのAEM API を呼び出す方法を説明します。
+description: カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -11,17 +11,17 @@ jira: KT-16516
 thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1761'
 ht-degree: 1%
 
 ---
 
-
 # OpenAPI ベースのAEM API を呼び出す方法{#invoke-openapi-based-aem-apis}
 
-カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を呼び出す方法について説明します。
+カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
 
 >[!AVAILABILITY]
 >
@@ -501,4 +501,3 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
 このチュートリアルでは、カスタムアプリケーションから OpenAPI ベースのAEM API を呼び出す方法を学びました。 Adobe Developer Console（ADC）プロジェクトへのAEM API のアクセスを有効にし、ADC プロジェクトを作成して設定しました。
 ADC プロジェクトで、AEM API を追加し、その認証タイプを設定して、製品プロファイルを関連付けました。 また、ADC プロジェクト通信を有効にするようにAEM インスタンスを設定し、Assets オーサー API を呼び出すサンプル NodeJS アプリケーションを開発しました。
-
