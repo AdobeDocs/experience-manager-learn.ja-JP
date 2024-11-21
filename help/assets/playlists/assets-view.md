@@ -1,17 +1,17 @@
 ---
-title: AEM Assets Assets ビデオ再生リストの表示
-description: 製品の専門知識を高めるように設計されたこのビデオプレイリストのコレクションで、Assets ビューでAEM Assetsのas a Cloud Serviceを使用する方法を説明します。
+title: AEM Assets Assets ビューのビデオ再生リスト
+description: 商品に関する知識を高めることを目的として、厳選された一連のビデオプレイリストで、Assets ビューでAEM Assetsのas a Cloud Serviceを操作する方法を説明します。
 version: Cloud Service
 topic: Content Management
 role: User
 level: Beginner
-last-substantial-update: 2024-11-01T00:00:00Z
+last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: 889d9a15041e23fa42d24c508a131690db58738a
+source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '409'
 ht-degree: 1%
 
 ---
