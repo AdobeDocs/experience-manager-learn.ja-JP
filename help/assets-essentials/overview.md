@@ -7,9 +7,9 @@ thumbnail: aem-assets-essentials-videos.jpg
 doc-type: Catalog
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: cd82b877a3b5b4d3459e3d024af9a8dd26cfc3f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ Assets Essentials を使用した Adobe の管理方法およびアセットを 
 </td>
 <td>
    <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja">
-   <img alt="Assets Essentialsドキュメント" src="./assets/overview/assets-essentials-docs.png"/>
+   <img alt="Assets Essentials ドキュメント" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=ja">
@@ -52,7 +52,7 @@ Assets Essentials を使用した Adobe の管理方法およびアセットを 
 </td>
 <td>
    <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja">
-   <img alt="Adobe Journey OptimizerとAssets Essentials" src="./assets/overview/adobe-journey-optimizer.png" />
+   <img alt="Adobe Journey Optimizer と Assets Essentials" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=ja">

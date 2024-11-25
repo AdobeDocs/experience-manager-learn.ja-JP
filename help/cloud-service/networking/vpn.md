@@ -12,9 +12,9 @@ exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
 source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1467'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Cloud Manager API を使用して仮想プライベートネットワークを�
 + Cloud Manager 環境 ID
 + 必要なすべての接続パラメーターにアクセスできる&#x200B;**ルートに戻づいた**&#x200B;仮想プライベートネットワーク。
 
-詳しくは [Cloud Manger API 資格情報の設定、設定、取得方法を確認 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)、それらを使用してCloud Manager API 呼び出しを行う方法を参照してください。
+詳しくは、[Cloud Manager API 資格情報の設定、構成、取得方法を確認](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)し、それらを使用して Cloud Manager API 呼び出しを実行します。
 
 このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。 指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
 

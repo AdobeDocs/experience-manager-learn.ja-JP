@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1335'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 99%
 + [概要](./overview.md)
 + AEM 体験版 {#aem-trials}
    + [画像](./aem-trials/images.md)
-+ 再生リスト {#playlists}
-   + [AEM開発](./playlists/development.md)
++ プレイリスト{#playlists}
+   + [AEM 開発](./playlists/development.md)
 + AEM as a Cloud Service の概要{#introduction}
    + [AEM as a Cloud Service とは](./introduction/what-is-aem-as-a-cloud-service.md)
    + [アーキテクチャ](./introduction/architecture.md)
@@ -143,7 +143,7 @@ ht-degree: 99%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
-   + [OpenAPI ベースのAEM API を呼び出す](./apis/invoke-openapi-based-aem-apis.md)
+   + [OpenAPI ベースの AEM API の呼び出し](./apis/invoke-openapi-based-aem-apis.md)
 + コンテンツ配信{#content-delivery}
    + [カスタムドメイン名](./content-delivery/custom-domain-names.md)
    + [アドビが管理する CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)

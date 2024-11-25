@@ -12,9 +12,9 @@ exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
 source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1275'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ Cloud Manager API を使用してフレキシブルポートエグレスを設�
 + Cloud Manager プログラム ID
 + Cloud Manager 環境 ID
 
-詳しくは [Cloud Manger API 資格情報の設定、設定、取得方法を確認 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)、それらを使用してCloud Manager API 呼び出しを行う方法を参照してください。
+詳しくは、[Cloud Manager API 資格情報の設定、構成、取得方法を確認](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)し、それらを使用して Cloud Manager API 呼び出しを実行します。
 
 このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。 指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
 

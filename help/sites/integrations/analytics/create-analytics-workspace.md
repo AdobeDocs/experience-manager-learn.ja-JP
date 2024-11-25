@@ -14,9 +14,9 @@ badgeIntegration: label="統合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
 source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2072'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ WKND マーケティングチームは、どの `Call to Action (CTA)` ボタン
 ### 目的 {#objective}
 
 1. レポートスイートを作成するか、既存のレポートスイートを使用します。
-1. レポート スイートで[コンバージョン変数（eVars）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=ja)と[成功イベント（Events）](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)を設定します。
+1. レポート スイートで[コンバージョン変数（eVars）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=ja)と[成功イベント（Events）](https://experienceleague.adobe.com/ja/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)を設定します。
 1. [Analysis Workspace プロジェクト](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=ja)を作成し、インサイトをすばやく作成、分析および共有できるツールを使用してデータを分析します。
 1. Analysis Workspace プロジェクトを他のチームメンバーと共有します。
 
