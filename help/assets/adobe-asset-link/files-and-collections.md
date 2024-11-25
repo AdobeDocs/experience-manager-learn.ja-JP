@@ -10,9 +10,9 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: eaf9e9fc-2058-442a-bf78-27e82c33386d
-duration: 276
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+duration: 277
+source-git-commit: 30745ba12e9b1bd9e1f3f137c68456efb67cf39a
+workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 100%
 
@@ -23,3 +23,4 @@ ht-degree: 100%
 Asset Link パネル内から AEM Assets ファイルおよびコレクションにすばやく簡単にアクセスする方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)
+
