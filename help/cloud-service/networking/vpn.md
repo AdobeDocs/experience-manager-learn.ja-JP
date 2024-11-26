@@ -217,7 +217,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
 
    `vpn-configure.json` で JSON パラメーターを定義し、`... -d @./vpn-configure.json` を介して curl に提供します。
 
-[サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
+   [サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
 
    ```json
    {
