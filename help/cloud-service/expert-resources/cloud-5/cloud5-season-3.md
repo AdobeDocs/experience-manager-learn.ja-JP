@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
-workflow-type: ht
-source-wordcount: '566'
+source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
+workflow-type: tm+mt
+source-wordcount: '541'
 ht-degree: 100%
 
 ---
@@ -44,36 +44,6 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
             </p>
         </td>   
         <td>
-            <a href="./season-3/cloud5-rum.md">
-                <img alt="リアルユーザーモニタリング（RUM）" src="https://video.tv.adobe.com/v/3427495?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum.md">
-                <strong>リアルユーザーモニタリング（RUM）</strong></a>        
-                <br/><em>James Talbot と Damian Langsweirdt（AEM エンジニアリングチーム）</em>
-            </div>
-            <p>
-                <br/>
-                リアルユーザーモニタリング（RUM）が Edge Delivery Services と連携して動作することを確認します。
-            </p>
-        </td>   
-        <!--
-        <td>
-            <a href="./season-3/cloud5-rum-explorer.md">
-                <img alt="Real User Monitoring (RUM) Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum-explorer.md">
-                <strong>Real User Monitoring (RUM) Explorer</strong></a>        
-                <br/><em>with James Talbot & Damian Langsweirdt, AEM Engineering</em>
-            </div>
-            <p>
-                <br/>
-                Learn about Real User Monitoring (RUM) Explorer and how to access it.
-            </p>
-        </td>   
-        -->
-        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="エッジワーカー" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -87,8 +57,6 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 エッジワーカーと Edge Delivery Services の重要性を探ります。
             </p>
         </td>   
-    </tr>
-    <tr>
         <td>
             <a href="./season-3/cloud5-publish-events.md">
                 <img alt="Edge Delivery Services でのイベントの公開と非公開" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
@@ -103,6 +71,8 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 Edge Delivery Services での公開および非公開時にトリガーされるイベント、およびこれらのイベントを使用するユースケースと例を確認します。
             </p>
         </td>  
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
                 <img alt="Edge 配信サービスでのクエリインデックスと Excel 数式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
@@ -131,8 +101,6 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
             </p>
         </td>           
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
                 <img alt="AEM Assets とドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
@@ -146,7 +114,9 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 <br/>
                 AEM Assets をドキュメントオーサリングと統合する方法について確認します。
             </p>
-        </td>        
+        </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
                 <img alt="AEM Sites の生成 AI" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
@@ -175,8 +145,6 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                  ユニバーサルエディターと Edge Delivery Services を使用した AEM について説明します。
             </p>
         </td>
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="Edge Delivery Services を使用した AEM Sites へのサイトの読み込み" 
@@ -192,6 +160,8 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                  Edge Delivery Services を使用した AEM Sites へのサイトの読み込みについて説明します。
             </p>
         </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-using-admin-api.md">
                 <img alt="Edge Delivery Services での Admin API の使用" 
@@ -222,8 +192,6 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                  Lighthouse スコアとは何か、および可能な限り最高の Lighthouse スコアを取得するためのテクニックについて説明します。
             </p>
         </td>            
-    </tr> 
-    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
                 <img alt="Lighthouse スコアの最適化 - 第 2 部"
@@ -238,7 +206,9 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
                 <br/>                
                 トータルブロッキングタイムを改善するテクニックについて説明します。
             </p>
-        </td>            
+        </td>   
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
                 <img alt="Lighthouse スコアの最適化 - 第 3 部"
