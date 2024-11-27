@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
+source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
 workflow-type: tm+mt
-source-wordcount: '1331'
-ht-degree: 100%
+source-wordcount: '1346'
+ht-degree: 99%
 
 ---
 
@@ -275,6 +275,12 @@ ht-degree: 100%
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
       + [ルールの作成](./forms/form-data-analytics/rules.md)
       + [ソリューションのテスト](./forms/form-data-analytics/test.md)
+   + 国ドロップダウンコンポーネント {#countries-drop-down} 作成中
+      + [はじめに](./forms/countries-drop-down/introduction.md)
+      + [コンポーネントを作成](./forms/countries-drop-down/component.md)
+      + [ダイアログを作成](./forms/countries-drop-down/dialog.md)
+      + [Sling モデルの作成](./forms/countries-drop-down/slingmodel.md)
+      + [ビルドとテスト](./forms/countries-drop-down/build.md)
    + ボタンのバリエーションの作成{#style-system}
       + [はじめに](./forms/style-system/introduction.md)
       + [ポリシーの定義](./forms/style-system/style-policy.md)
