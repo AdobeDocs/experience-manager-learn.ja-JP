@@ -9,16 +9,22 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '794'
-ht-degree: 100%
+source-git-commit: fd372c7ee387504e4316a6ca657a77fe0a0c511e
+workflow-type: tm+mt
+source-wordcount: '855'
+ht-degree: 93%
 
 ---
 
 # AEM Assets と Dynamic Media の連携 {#understanding-aem-dynamic-media}
 
 このマルチパートビデオシリーズでは、Adobe Experience Manager Dynamic Media をコンテンツ提供サービスとして使用してメディアコンテンツを管理およびアクセスする方法の概要を説明します。Dynamic Media では、動的なデジタルエクスペリエンスを管理および公開できます。これは Experience Manager Assets に固有の機能です。アドビのフレームワークとコンポーネントスイートを使用すると、マーケターは、インタラクティブなマルチメディアエクスペリエンスをカスタマイズして、あらゆるデバイスに提供できます。
+
+## Dynamic Media ライブデモ
+
+[![AEM Assets Dynamic Media ライブデモ ](./assets/overview/live-demo.png)](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
+
+最先端のソリューションが生まれるアドビの [**ライブデモ**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html) で、AdobeDynamic Mediaの可能性を探索してください。 [**動的なAssets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html) によってワークフローを合理化してコンテンツ管理を強化する方法と、すべてのチャネルでオーディエンスを魅了する [**インタラクティブなエクスペリエンス**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html) を発見する方法を説明します。 [Dynamic Mediaがコンテンツ戦略を変革する方法を確認する ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
 
 ## Dynamic Media の概要
 
