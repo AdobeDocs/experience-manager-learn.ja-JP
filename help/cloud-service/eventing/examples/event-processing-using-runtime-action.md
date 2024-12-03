@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
+source-git-commit: 933493afff905bf27ba3d752c543c2e92732bc4c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
@@ -259,4 +259,3 @@ if (params.challenge) {
 - イベントの処理の実行には、Adobe I/O Runtime アクションを使用します。
 - ランタイムアクションは、内部アプリケーション、サードパーティソリューション、アドビソリューションなどのシステムと通信できます。
 - ランタイムアクションは、コンテンツ変更を中心に設計されたビジネスプロセスのエントリポイントとなります。
-
