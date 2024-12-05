@@ -8,16 +8,16 @@ role: Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 duration: 0
-last-substantial-update: 2024-09-24T00:00:00Z
+last-substantial-update: 2024-12-04T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
-workflow-type: ht
-source-wordcount: '1566'
-ht-degree: 100%
+exl-id: c3bfbe59-f540-43f9-81f2-6d7731750fc6
+source-git-commit: 97680d95d4cd3cb34956717a88c15a956286c416
+workflow-type: tm+mt
+source-wordcount: '1657'
+ht-degree: 93%
 
 ---
-
 
 # カスタムエラーページ
 
@@ -50,14 +50,18 @@ AEM as a Cloud Service では、上記のシナリオに対して&#x200B;_デフ
 
 | エラーページの提供元 | 詳細 |
 |---------------------|:-----------------------:|
-| AEM サービスタイプ - オーサー、パブリッシュ、プレビュー | ページリクエストが AEM サービスタイプによって処理され、上記のいずれかのエラーシナリオが発生すると、AEM サービスタイプからエラーページが提供されます。 |
+| AEM サービスタイプ - オーサー、パブリッシュ、プレビュー | ページリクエストがAEM サービスタイプによって提供され、上記のエラーシナリオのいずれかが発生した場合、エラーページはAEM サービスタイプから提供されます。 デフォルトでは、`x-aem-error-pass: true` ヘッダーが設定されていない場合、5XX エラーページはAdobeが管理する CDN エラーページによって上書きされます。 |
 | アドビが管理する CDN | アドビが管理する CDN が _AEM サービスタイプ（接触チャネルサーバー）に到達できない_&#x200B;場合、エラーページはアドビが管理する CDNから提供されます。**可能性が低いイベントですが、計画する価値はあります。** |
+
+>[!NOTE]
+>
+>AEM as Cloud Service では、バックエンドから 5XX エラーを受け取った場合、CDN は汎用のエラーページを返します。 バックエンドの実際の応答が通過できるようにするには、応答に `x-aem-error-pass: true` というヘッダーを追加する必要があります。
+>これは、AEM または Apache／Dispatcher レイヤーからの応答に対してのみ機能します。中間のインフラストラクチャレイヤーから発生したその他の予期しないエラーの場合も、汎用のエラーページが表示されます。
 
 
 例えば、AEM サービスタイプとアドビが管理する CDN から提供されるデフォルトのエラーページは次のとおりです。
 
 ![デフォルトの AEM エラーページ](./assets/aem-default-error-pages.png)
-
 
 ただし、_AEM サービスタイプとアドビが管理する CDN エラーページの両方をカスタマイズ_&#x200B;して、ブランドに一致させて、より優れたユーザーエクスペリエンスを提供できます。
 
@@ -110,22 +114,33 @@ AEM as a Cloud Service では、`ErrorDocument` Apache ディレクティブオ�
    - [DispatcherPassError](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L133) の値は 1 に設定されているので、Dispatcher では Apache にすべてのエラーを処理させます。
 
   ```
+  # In `wknd.vhost` file:
+  
   ...
-  # ErrorDocument directive in wknd.vhost file
+  
+  ## ErrorDocument directive
   ErrorDocument 404 ${404_PAGE}
   ErrorDocument 500 ${500_PAGE}
   ErrorDocument 502 ${500_PAGE}
   ErrorDocument 503 ${500_PAGE}
   ErrorDocument 504 ${500_PAGE}
   
+  ## Add Header for 5XX error page response
+  <IfModule mod_headers.c>
+    ### By default, CDN overrides 5XX error pages. To allow the actual response of the backend to pass through, add the header x-aem-error-pass: true
+    Header set x-aem-error-pass "true" "expr=%{REQUEST_STATUS} >= 500 && %{REQUEST_STATUS} < 600"
+  </IfModule>
+  
   ...
-  # DispatcherPassError value in wknd.vhost file
+  ## DispatcherPassError directive
   <IfModule disp_apache2.c>
       ...
       DispatcherPassError        1
   </IfModule>
   
-  # Custom error pages path in custom.vars file
+  # In `custom.vars` file
+  ...
+  ## Define the error page paths
   Define 404_PAGE /content/wknd/us/en/errors/404.html
   Define 500_PAGE /content/wknd/us/en/errors/500.html
   ...
@@ -370,7 +385,7 @@ Azure Blob Storage で静的ファイルをホストしましょう。ただし�
 
 CDN エラーページをテストするには、次の手順に従います。
 
-- ブラウザーを開いてパブリッシュ環境の URL に移動し、URL に `cdnstatus?code=404` を追加します（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)）。または、[カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします。
+- ブラウザーで、AEM as a Cloud ServiceのPublish URL に移動し、`cdnstatus?code=404` をその URL に追加します（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)。または [ カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします）
 
   ![WKND - CDN エラーページ](./assets/wknd-cdn-error-page.png)
 
@@ -389,4 +404,3 @@ CDN エラーページをテストするには、次の手順に従います。
 - [CDN エラーページの設定](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
 - [Cloud Manager - 設定パイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
-
