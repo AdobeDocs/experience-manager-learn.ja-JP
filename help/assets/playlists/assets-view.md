@@ -9,10 +9,10 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
+source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 1%
+source-wordcount: '405'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials
+* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials {title=Get started with Assets view}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -52,8 +52,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">AEM as a Cloud Serviceに対するAdobe IMSを使用したユーザーの認証方法と、Adobe IMSユーザー、ユーザーグループおよび製品プロファイルを使用してAEMおよびその機能および機能へのアクセスを制御する方法について説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -70,13 +70,13 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="AEM Assets Essentials の基本を学ぶ">AEM Assets Essentials の概要 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="Assets ビューの基本を学ぶ">Assets ビューの概要 </a>
                     </p>
                     <p class="is-size-6">AEM Assets Essentials で部門のアセット管理を効率化する方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -122,8 +122,8 @@ Assets ビューインターフェイスをプロのように操作する – �
                     <p class="is-size-6">AEM AssetsでAdobe Fireflyと Gen AI を使用してコンテンツベロシティ（コンテンツ創出の速度）を向上させる方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -145,8 +145,8 @@ Assets ビューインターフェイスをプロのように操作する – �
                     <p class="is-size-6">AEM Assets Assets ビュー検索を使用してアセットをすばやく簡単に見つける方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -162,6 +162,8 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials
+  { title = Manage Creative Workflows Using Workfront and AEM Assets }
+  { description = Learn how Adobe Workfront and AEM Assets help your organization manage the creative workflow. }
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -179,13 +181,13 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理">WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理">WorkfrontとAEM Assetsを使用したクリエイティブワークフローの管理 </a>
                     </p>
-                    <p class="is-size-6">Adobe WorkfrontとExperience Manager Assets Essentials でクリエイティブワークフローを管理する方法を説明します。</p>
+                    <p class="is-size-6">Adobe WorkfrontとAEM Assetsがクリエイティブワークフローの管理にどのように役立つかを説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
