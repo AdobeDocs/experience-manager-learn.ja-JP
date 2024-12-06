@@ -9,10 +9,10 @@ thumbnail: 340994.jpeg
 hidefromtoc: true
 exl-id: 3d6f3506-e1ec-4eeb-869f-02db2821b8c6
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '70'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 87%
 
 ---
 
@@ -30,3 +30,7 @@ AEM CDN の使用のパート 2 と、様々なオプションについて詳し
 + 独自の CDN の導入（BYOCDN）
 
 [パート 1 を表示](cloud5-aem-cdn-part1.md)
+
+## その他のリソース
+
+[Cloud 5 シーズン 1](cloud5-season-1.md) ページの関連ビデオをご覧ください。

@@ -10,10 +10,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: b2571a84-101f-4330-8a5f-9ef5e4344591
 duration: 286
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '67'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '79'
+ht-degree: 87%
 
 ---
 
@@ -28,3 +28,8 @@ ht-degree: 100%
 + 検索とインデックス作成の[概要](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=ja)
 + AEM [インデックスコンバーター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=ja)
 + エキスパートシリーズ：[ディープダイブ](../../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
+
+
+## その他のリソース
+
+[Cloud 5 シーズン 1](cloud5-season-1.md) ページの関連ビデオをご覧ください。

@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 38580af1-e5ad-431a-b41d-634fb136ce64
 duration: 290
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '61'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '73'
+ht-degree: 86%
 
 ---
 
@@ -26,3 +26,7 @@ ht-degree: 100%
 
 + mod_rewrite の概要
 + [mod_rewrite ドキュメント](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
+
+## その他のリソース
+
+[Cloud 5 シーズン 2](../cloud5-season-2.md) ページの関連ビデオをご覧ください。

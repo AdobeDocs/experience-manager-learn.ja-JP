@@ -9,10 +9,10 @@ hidefromtoc: true
 thumbnail: 341277.jpeg
 exl-id: 41d78e6b-7076-4f4f-8d2c-4bf969b61024
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '103'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 91%
 
 ---
 
@@ -33,3 +33,7 @@ Cloud Service 統合用のログイントークンの取得方法と、そのい
 + 生成されたトークンの簡単な使用
 
 このトピックについて詳しくは、[トークンベースの認証](/help/headless-tutorial/authentication/overview.md)に関するチュートリアルを参照してください。
+
+## その他のリソース
+
+[Cloud 5 シーズン 1](cloud5-season-1.md) ページの関連ビデオをご覧ください。

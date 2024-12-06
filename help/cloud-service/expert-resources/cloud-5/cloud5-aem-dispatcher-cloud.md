@@ -10,10 +10,10 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '87'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '99'
+ht-degree: 89%
 
 ---
 
@@ -30,3 +30,7 @@ Darin と James が、いくつかのベストプラクティスと AMS／オン
    + [移行ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html?lang=ja)
    + [ブログ](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
 + [移行ツール](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
+
+## その他のリソース
+
+[Cloud 5 シーズン 1](cloud5-season-1.md) ページの関連ビデオをご覧ください。

@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 09a4b4fd-b4b5-413b-bd27-d0c1c41b1c8d
 duration: 315
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '76'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 88%
 
 ---
 
@@ -26,3 +26,7 @@ ht-degree: 100%
 
 + 自動チェックの概要
 + [カスタムコード品質ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=ja)
+
+## その他のリソース
+
+[Cloud 5 シーズン 2](../cloud5-season-2.md) ページの関連ビデオをご覧ください。

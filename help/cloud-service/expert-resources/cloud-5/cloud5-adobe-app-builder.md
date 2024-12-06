@@ -10,10 +10,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
 duration: 312
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '72'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 88%
 
 ---
 
@@ -30,3 +30,7 @@ Amol Anand が、Adobe App Builder との統合の概要と、使用する場所
 + [ログとモニタリング](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
 + [システム制限](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)の設定
 + [ローカル開発](https://developer.adobe.com/app-builder/docs/resources/debugging/?lang=ja)ヒント
+
+## その他のリソース
+
+[Cloud 5 シーズン 1](cloud5-season-1.md) ページの関連ビデオをご覧ください。

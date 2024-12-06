@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
 duration: 317
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '64'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '76'
+ht-degree: 86%
 
 ---
 
@@ -26,3 +26,7 @@ Admin Console 内で AEM のコンテキストでの各項目の機能につい�
 
 + [Admin Console について](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
 + [Admin Console の概要](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)
+
+## その他のリソース
+
+[Cloud 5 シーズン 2](../cloud5-season-2.md) ページの関連ビデオをご覧ください。

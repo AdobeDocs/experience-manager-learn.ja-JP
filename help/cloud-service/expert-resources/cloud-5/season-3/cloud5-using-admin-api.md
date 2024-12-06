@@ -13,10 +13,10 @@ recommendations: noDisplay, noCatalog
 last-substantial-update: 2024-09-04T00:00:00Z
 jira: KT-16087
 exl-id: 93a8a2b5-ddd2-43f7-a02b-63036b450614
-source-git-commit: 5ec7ae13051ca9a374007b69e36c70e51ad546a0
-workflow-type: ht
-source-wordcount: '59'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 85%
 
 ---
 
@@ -25,3 +25,7 @@ ht-degree: 100%
 クラウドアーキテクトの Varun Mitra が、Edge Delivery Services で [AEM Admin API](https://www.aem.live/docs/admin.html) を使用してコンテンツとコードのライフサイクルを管理する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433158/?learn=on)
+
+## その他のリソース
+
+[Cloud 5 シーズン 3](../cloud5-season-3.md) ページの関連ビデオをご覧ください。
