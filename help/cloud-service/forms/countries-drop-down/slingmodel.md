@@ -1,6 +1,6 @@
 ---
-title: コンポーネント用の Sling Model の作成
-description: コンポーネント用の Sling Model の作成
+title: コンポーネントの Sling モデルの作成
+description: コンポーネントの Sling モデルの作成
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,43 +11,43 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '384'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# コンポーネント用の Sling Model の作成
+# コンポーネントの Sling モデルの作成
 
-AEMの Sling モデルは、コンポーネントのバックエンドロジックの開発を簡素化するために使用される Java ベースのフレームワークです。 これにより、開発者は注釈を使用してAEM リソース（JCR ノード）から Java オブジェクトにデータをマッピングでき、コンポーネントの動的データをクリーンで効率的に処理できます。
-このクラス CountriesDropDownImpl は、AEM（Adobe Experience Manager）プロジェクトの CountriesDropDown インターフェイスの実装です。 これにより、ユーザーが選択した大陸に基づいて国を選択できるドロップダウンコンポーネントが強化されます。 ドロップダウンデータは、AEM DAM （Digital Asset Manager）に保存されている JSON ファイルから動的に読み込まれます。
+AEM の Sling モデルは、コンポーネントのバックエンドロジックの開発を簡素化するために使用される Java ベースのフレームワークです。これにより、開発者は注釈を使用して AEM リソース（JCR ノード）のデータを Java オブジェクトにマッピングでき、コンポーネントの動的データを処理するためのクリーンかつ効率的な方法が提供されます。
+このクラス CountriesDropDownImpl は、AEM（Adobe Experience Manager）プロジェクトの CountriesDropDown インターフェイスの実装です。これにより、ユーザーが選択した大陸に基づいて国を選択できるドロップダウンコンポーネントが強化されます。ドロップダウンデータは、AEM DAM（Digital Asset Manager）に保存されている JSON ファイルから動的に読み込まれます。
 
 **クラスのフィールド**
 
-* **multiSelect**：ドロップダウンで複数の選択を許可するかどうかを示します。
-デフォルト値が false の@ValueMapValue を使用して、コンポーネントプロパティから挿入されます。
-* **request**：現在の HTTP リクエストを表します。 コンテキスト固有の情報にアクセスする場合に役立ちます。
-* **大陸**：ドロップダウン用に選択した大陸を保存します（例：「アジア」、「ヨーロッパ」）。
-コンポーネントのプロパティダイアログから挿入されます。指定がない場合は、デフォルト値が「asia」になります。
-* **resourceResolver**:AEM リポジトリ内のリソースにアクセスして操作するために使用します。
-* **jsonData**：選択した大陸に対応する JSON ファイルから解析されたデータを格納する JSONObject。
+* **multiSelect**：ドロップダウンで複数選択を許可するかどうかを示します。
+デフォルト値が false の @ValueMapValue を使用してコンポーネントプロパティから挿入されます。
+* **request**：現在の HTTP リクエストを表します。コンテキスト固有の情報へのアクセスに役立ちます。
+* **continent**：ドロップダウンで選択した大陸を保存します（例：「アジア」、「ヨーロッパ」）。
+コンポーネントのプロパティダイアログから挿入されます。指定していない場合は、デフォルト値が「アジア」になります。
+* **resourceResolver**：AEM リポジトリ内のリソースにアクセスして操作するために使用されます。
+* **jsonData**：選択した大陸に対応する JSON ファイルから解析されたデータを保存する JSONObject。
 
-**クラス内のメソッド**
+**クラスの更新**
 
-* **getContinent （）** 大陸フィールドの値を返す単純なメソッド。
-デバッグ目的で返された値をログに記録します。
-* **init （）** クラスが構築され、依存関係が挿入された後に実行される、@PostConstruct で注釈が付いたライフサイクルメソッド。大陸の値に基づいて、JSON ファイルへのパスを動的に構築します。
-Resolver を使用してAEM DAM から JSON ファイルを取得します。
-ファイルをアセットに適応させ、そのコンテンツを読み取り、JSONObject に解析します。
+* **getContinent()**：大陸フィールドの値を返す簡単なメソッド。
+デバッグの目的で返された値をログに記録します。
+* **init()**：クラスが構築され、依存関係が挿入された後に実行される、@PostConstruct で注釈が付けられたライフサイクルメソッド。大陸の値に基づいて JSON ファイルへのパスを動的に構築します。
+resourceResolver を使用して AEM DAM から JSON ファイルを取得します。
+ファイルをアセットに適合させ、そのコンテンツを読み取り、JSONObject に解析します。
 この処理中のエラーや警告をログに記録します。
-* **getEnums （）** 解析された JSON データからすべてのキー（国コード）を取得します。
-キーをアルファベット順に並べ、配列として返します。
-返される国コードの数を記録します。
-* **getEnumNames （）** 解析された JSON データからすべての国名を抽出します。
-名前をアルファベット順に並べ、配列として返します。
-国の合計数と取得した各国名を記録します。
-* **isMultiSelect （）** multiSelect フィールドの値を返し、ドロップダウンが複数選択を許可するかどうかを示します。
+* **getEnums()**：解析された JSON データからすべてのキー（国コード）を取得します。
+キーをアルファベット順に並べ替え、配列として返します。
+返される国コードの数をログに記録します。
+* **getEnumNames()**：解析された JSON データからすべての国名を抽出します。
+名前をアルファベット順に並べ替え、配列として返します。
+国の合計数と取得した各国名をログに記録します。
+* **isMultiSelect()**：multiSelect フィールドの値を返し、ドロップダウンで複数選択を許可するかどうかを示します。
 
 
 
@@ -186,4 +186,4 @@ public class CountriesDropDownImpl extends AbstractOptionsFieldImpl implements C
 
 ## 次の手順
 
-[ビルド、デプロイ、テスト](./build.md)
+[作成、デプロイ、テスト](./build.md)

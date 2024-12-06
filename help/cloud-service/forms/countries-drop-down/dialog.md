@@ -1,6 +1,6 @@
 ---
-title: 国コンポーネント用のダイアログの作成
-description: コンポーネント用ダイアログの作成
+title: 国コンポーネントのダイアログの作成
+description: コンポーネントのダイアログの作成
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,22 +11,22 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# 国コンポーネント用のダイアログの作成
+# 国コンポーネントのダイアログの作成
 
-国コンポーネントは、ドロップダウンコンポーネントのダイアログ構造を継承しますが、「continent」という新しいプロパティが導入されます。 さらに、ダイアログは、ドロップダウンコンポーネントから継承された特定のフィールドを非表示にするようにカスタマイズされており、作成者は目的の大陸を選択できます。
+国コンポーネントは、ドロップダウンコンポーネントのダイアログ構造を継承しますが、大陸という新しいプロパティが導入されます。さらに、ダイアログは、ドロップダウンコンポーネントから継承された特定のフィールドを非表示にし、作成者が目的の大陸を選択できるようにカスタマイズされます。
 
 このダイアログを作成する最も簡単な方法は、次のとおりです。
 
-1. AEM プロジェクトで、国コンポーネントフォルダーの下に_cq_dialog という名前のフォルダーを作成します。
+1. AEM プロジェクトで、国コンポーネントフォルダーの下に _cq_dialog という名前のフォルダーを作成します。
 2. _cq_dialog フォルダー内に、.content.xml という名前のファイルを作成します。
-3. 以下の XML コードをこのファイルに貼り付けます。
-4. 変更内容を保存し、プロジェクトをAEMと同期します。
+3. 以下の XML コードをこのファイルにペーストします。
+4. 変更内容を保存し、プロジェクトを AEM と同期します。
 
 これにより、国コンポーネントのダイアログ設定が追加されます。
 
@@ -216,4 +216,4 @@ ht-degree: 6%
 
 ## 次の手順
 
-[Sling モデルを作成します。](./slingmodel.md)
+[Sling モデルの作成。](./slingmodel.md)
