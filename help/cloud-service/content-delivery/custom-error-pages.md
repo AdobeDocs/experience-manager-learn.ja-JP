@@ -13,9 +13,9 @@ jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: c3bfbe59-f540-43f9-81f2-6d7731750fc6
 source-git-commit: 97680d95d4cd3cb34956717a88c15a956286c416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1657'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -50,13 +50,13 @@ AEM as a Cloud Service では、上記のシナリオに対して&#x200B;_デフ
 
 | エラーページの提供元 | 詳細 |
 |---------------------|:-----------------------:|
-| AEM サービスタイプ - オーサー、パブリッシュ、プレビュー | ページリクエストがAEM サービスタイプによって提供され、上記のエラーシナリオのいずれかが発生した場合、エラーページはAEM サービスタイプから提供されます。 デフォルトでは、`x-aem-error-pass: true` ヘッダーが設定されていない場合、5XX エラーページはAdobeが管理する CDN エラーページによって上書きされます。 |
+| AEM サービスタイプ - オーサー、パブリッシュ、プレビュー | ページリクエストが AEM サービスタイプによって処理され、上記のいずれかのエラーシナリオが発生すると、AEM サービスタイプからエラーページが提供されます。デフォルトでは、`x-aem-error-pass: true` ヘッダーを設定しない限り、5XX エラーページはアドビが管理する CDN エラーページによって上書きされます。 |
 | アドビが管理する CDN | アドビが管理する CDN が _AEM サービスタイプ（接触チャネルサーバー）に到達できない_&#x200B;場合、エラーページはアドビが管理する CDNから提供されます。**可能性が低いイベントですが、計画する価値はあります。** |
 
 >[!NOTE]
 >
->AEM as Cloud Service では、バックエンドから 5XX エラーを受け取った場合、CDN は汎用のエラーページを返します。 バックエンドの実際の応答が通過できるようにするには、応答に `x-aem-error-pass: true` というヘッダーを追加する必要があります。
->これは、AEM または Apache／Dispatcher レイヤーからの応答に対してのみ機能します。中間のインフラストラクチャレイヤーから発生したその他の予期しないエラーの場合も、汎用のエラーページが表示されます。
+>AEM as Cloud Service では、バックエンドから 5XX エラーを受け取った場合、CDN は汎用のエラーページを返します。バックエンドの実際の応答が通過できるようにするには、応答に `x-aem-error-pass: true` というヘッダーを追加する必要があります。
+>これは、AEM または Apache／Dispatcher レイヤーからの応答に対してのみ機能します。中間のインフラストラクチャレイヤーから発生したその他の予期しないエラーの場合もやはり、汎用のエラーページが表示されます。
 
 
 例えば、AEM サービスタイプとアドビが管理する CDN から提供されるデフォルトのエラーページは次のとおりです。
@@ -385,7 +385,7 @@ Azure Blob Storage で静的ファイルをホストしましょう。ただし�
 
 CDN エラーページをテストするには、次の手順に従います。
 
-- ブラウザーで、AEM as a Cloud ServiceのPublish URL に移動し、`cdnstatus?code=404` をその URL に追加します（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)。または [ カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします）
+- ブラウザーで、AEM as a Cloud Service のパブリッシュ URL に移動し、URL（例：[https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404)）に `cdnstatus?code=404` を追加するか、[カスタムドメイン URL](https://wknd.enablementadobe.com/cdnstatus?code=404) を使用してアクセスします
 
   ![WKND - CDN エラーページ](./assets/wknd-cdn-error-page.png)
 

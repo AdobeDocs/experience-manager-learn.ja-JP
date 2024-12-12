@@ -14,9 +14,9 @@ recommendations: noDisplay, noCatalog
 jira: KT-15348
 exl-id: c7020e3e-2664-42f1-a3b4-c23eb17cbf4b
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '76'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
