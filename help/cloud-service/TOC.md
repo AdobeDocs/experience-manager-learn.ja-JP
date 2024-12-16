@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 891fd1cfdcb82a6d4f1bb031cfa11893a69d0546
+source-git-commit: 9c0c0594d8bcecbf1e0daf7f3c5d7146adcdb08f
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 99%
@@ -417,9 +417,9 @@ ht-degree: 99%
    + クラウド 5{#cloud-5}
       + [はじめに](./expert-resources/cloud-5/cloud5-introduction.md)
       + [シーズン 4](./expert-resources/cloud-5/cloud5-season-4.md)
-      + [シーズン 1](./expert-resources/cloud-5/cloud5-season-1.md)
       + [シーズン 3](./expert-resources/cloud-5/cloud5-season-3.md)
       + [シーズン 2](./expert-resources/cloud-5/cloud5-season-2.md)
+      + [シーズン 1](./expert-resources/cloud-5/cloud5-season-1.md)
       + [AEM CDN 第 1 部](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
       + [AEM CDN 第 2 部](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM ログファイル](./expert-resources/cloud-5/cloud5-aem-log-files.md)
