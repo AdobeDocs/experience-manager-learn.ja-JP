@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 30745ba12e9b1bd9e1f3f137c68456efb67cf39a
-workflow-type: ht
-source-wordcount: '445'
-ht-degree: 100%
+source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 99%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 100%
    + [3D アセット](./advanced/3d-assets.md)
    + [注釈 PDF 出力](./advanced/customizing-annotations-pdf-output.md)
    + [Assets レポート](./advanced/asset-reports.md)
+   + [Content credentials](./advanced/content-credentials.md)
    + [ブロックされたタグ](./advanced/blocked-tags.md)
    + [アーカイブの抽出](./advanced/extract-archive.md)
    + [権限（CUG）](./advanced/closed-user-groups.md)
