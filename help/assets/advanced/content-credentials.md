@@ -1,6 +1,6 @@
 ---
-title: Content credentials
-description: AEM Assets content credentialsで検証可能なメタデータを提供して、デジタルアセットの信頼性と整合性を確保する方法を説明します。
+title: コンテンツ資格情報
+description: AEM Assets コンテンツ資格情報で検証可能なメタデータを提供し、デジタルアセットの信頼性と整合性を確保する仕組みについて説明します。
 version: Cloud Service
 feature: Asset Management
 role: Leader, User
@@ -9,16 +9,16 @@ doc-type: Feature Video
 duration: 229
 last-substantial-update: 2024-12-19T00:00:00Z
 jira: KT-15659
-source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
-workflow-type: tm+mt
+exl-id: 1b12e19c-7d01-49cc-b81d-cc843cd7432b
+source-git-commit: 3c7dc1062d174f3f8642f1a1a32dc848dc15e885
+workflow-type: ht
 source-wordcount: '47'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# コンテンツ資格情報
 
-# Content credentials
-
-AEM Assets content credentialsが、検証可能なメタデータを提供してデジタルアセットの信頼性と整合性を確保し、コンテンツ作成の信頼性と透明性を高める方法を説明します。
+AEM Assets コンテンツ認証情報で検証可能なメタデータを提供し、デジタルアセットの信頼性と整合性を確保して、コンテンツ作成の信頼性と透明性を促進する仕組みについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)

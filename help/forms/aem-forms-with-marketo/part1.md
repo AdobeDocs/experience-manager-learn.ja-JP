@@ -12,9 +12,9 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
 source-git-commit: e02c3f66787c78152700b24236c29e9796f721de
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '386'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Marketo は、システムの機能の多くをリモートで実行できる RE
 
 >[!NOTE]
 >
->このチュートリアルは、AEM Forms 6.5 向けに特別にカスタマイズされています。AEM Formsas a Cloud ServiceとAdobe Marketo Engageの統合を検討している場合は、[ その統合に関する専用ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage) を参照してください。
+>このチュートリアルは、AEM Forms 6.5 専用です。AEM Forms as a Cloud Service を Adobe Marketo Engage の統合を検討している場合は、[その統合に関する専用ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage)を参照してください。
 
 このチュートリアルでは、フォームデータモデルを使用して、AEM Forms を Marketo と統合する手順について説明します。チュートリアルを完了すると、Marketo に対してカスタム認証を行う OSGi バンドルが作成されます。また、提供された Swagger ファイルを使用してデータソースを設定することもできます。
 
