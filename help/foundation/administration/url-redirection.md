@@ -12,10 +12,10 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 50ddda35adbb3af0b66a6e24a135fd5b94a3fb3a
-workflow-type: ht
-source-wordcount: '885'
-ht-degree: 100%
+source-git-commit: 907a313a9ed7e92358f0aa2503f8333fb26ba35d
+workflow-type: tm+mt
+source-wordcount: '949'
+ht-degree: 93%
 
 ---
 
@@ -38,7 +38,7 @@ AEM の URL リダイレクトソリューションは次のとおりです。
 | [独自の CDN（BYOCDN）による Edge](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge／CDN（BYOCDN） |
 | [Dispatcher 設定としての Apache `mod_rewrite` ルール](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons - リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
-| [ACS Commons - リダイレクトマネージャー](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
+| [ACS Commons - リダイレクトマネージャー](#redirect-manager) | ✘ | ✔ | ✔ | AEM/Dispatcher |
 | [`Redirect` ページのプロパティ](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
@@ -81,6 +81,8 @@ URL リダイレクトを管理するために [ACS AEM Commons](https://adobe-c
 #### リダイレクトマネージャ
 
 [リダイレクトマネージャ](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html?lang=ja)を使用すると、AEM のユーザーは、AEM からのリダイレクトを簡単に管理および公開できます。この実装は Java™サーブレットフィルターに基づいているので、一般的な JVM リソースの使用になります。また、この機能により、AEM 開発チームや AEM のデプロイメントに依存する必要がなくなります。リダイレクトマネージャーは **AEM as a Cloud Service** および **AEM 6.x** と互換性があります。最初のリダイレクトされたリクエストは、デフォルトで 301/302（ほとんどの）CDN のキャッシュ 301/302 を生成するために AEM パブリッシュサービスにヒットする必要があります。
+
+[Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html?lang=ja) では、{Apache RewriteMap[ 用に ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) リダイレクトをテキストファイルにコンパイル [ することで **パイプラインを使用しない URL リダイレクト ](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)[ 戦略（** AEM as a Cloud Service](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) もサポートしています。これにより、Apache web サーバーに直接アクセスしたり、再起動を必要としたりすることなく、Apache web サーバーで使用されるリダイレクトを更新できます。 このシナリオでは、最初のリダイレクトリクエストはAEM Publish サービスではなく、Apache web サーバーにヒットします。
 
 ### この `Redirect` ページプロパティ
 
