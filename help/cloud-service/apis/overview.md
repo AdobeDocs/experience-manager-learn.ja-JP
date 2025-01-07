@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '1024'
 ht-degree: 2%
 
 ---
@@ -85,6 +85,16 @@ OpenAPI ベースのAEM API は、次の認証方法をサポートしていま�
 
 - **OAuth シングルページアプリ資格情報**：ブラウザーで動作するSPA用に設計されています。このブラウザーは、バックエンドサーバーを使用せずに、ユーザーの代わりに API にアクセスする必要があります。 _authorization_code_ 付与タイプを使用し、PKCE （Proof Key for Code Exchange）を使用したクライアント側のセキュリティメカニズムに依存して、認証コードフローを保護します。 詳しくは、[OAuth 単一ページアプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential) を参照してください。
 
+### OAuth サーバー間と OAuth web アプリ/シングルページアプリの資格情報の違い{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+
+| | OAuth サーバー間 | OAuth ユーザー認証（web アプリ） |
+| --- | --- | --- |
+| 認証の目的 | 機械間インタラクション用に設計されています。 | ユーザー主導のインタラクション用に設計されています。 |
+| トークンの動作 | クライアントアプリケーション自体を表すアクセストークンを発行します。 | 認証済みユーザーの代わりにアクセストークンを発行します。 |
+| ユースケース | ユーザーインタラクションのない API アクセスを必要とするバックエンドサービス。 | ユーザーの代わりに API にアクセスする、フロントエンドおよびバックエンドコンポーネントを持つ web アプリケーション。 |
+| セキュリティに関する考慮事項 | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザーの認証をおこなうと、独自の一時的なアクセストークンが付与されます。 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 |
+| 付与タイプ | _client_credentials_ | _authorization_code_ |
+
 ## AdobeAPI および関連概念へのアクセス{#accessing-adobe-apis-and-related-concepts}
 
 AdobeAPI にアクセスする前に、次の主要な概念を理解することが不可欠です。
@@ -102,4 +112,7 @@ AdobeAPI にアクセスする前に、次の主要な概念を理解するこ�
 次のような様々なAEM API タイプを理解している場合
 OpenAPI ベースのAEM API と、AdobeAPI へのアクセスに関する主な概念を理解したら、AEMとやり取りするカスタムアプリケーションの構築を開始できます。
 
-[OpenAPI ベースのAEM API を呼び出す方法 ](invoke-openapi-based-aem-apis.md) チュートリアルを開始しましょう。
+それでは、始めましょう。
+
+- [ サーバー間認証のための OpenAPI ベースのAEM API の呼び出し ](invoke-openapi-based-aem-apis.md) チュートリアル。このチュートリアルでは、（OAuth サーバー間資格情報を使用して _OpenAPI ベースのAEM API にアクセスする方法を実演_ します。
+- [Web アプリからのユーザー認証を使用して OpenAPI ベースのAEM API を呼び出す ](invoke-openapi-based-aem-apis-from-web-app.md) チュートリアル。このチュートリアルでは、_Web アプリケーションから OAuth Web アプリ資格情報を使用して OpenAPI ベースのAEM API にアクセスする方法を説明します_。

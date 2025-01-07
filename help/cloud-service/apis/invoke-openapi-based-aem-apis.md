@@ -1,6 +1,6 @@
 ---
 title: OpenAPI ベースのAEM API を呼び出す方法
-description: カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
+description: OAuth サーバー間認証を使用して、カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1800'
 ht-degree: 1%
 
 ---
 
-# OpenAPI ベースのAEM API を呼び出す方法{#invoke-openapi-based-aem-apis}
+# OpenAPI ベースのAEM API を呼び出してサーバー間認証を行う{#invoke-openapi-based-aem-apis}
 
-カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
+_OAuth サーバー間_ 認証を使用して、カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
+
+OAuth サーバー間認証は、ユーザーの操作なしで API アクセスが必要なバックエンドサービスに最適です。 クライアントアプリケーションの認証には、OAuth 2.0 _client_credentials_ 付与タイプを使用します。
 
 >[!AVAILABILITY]
 >
@@ -30,7 +32,7 @@ ht-degree: 1%
 このチュートリアルでは、次の方法を学びます。
 
 - お使いのAEM as a Cloud Service環境で OpenAPI ベースのAEM API アクセスを有効にします。
-- OAuth サーバー間認証を使用してAEM API にアクセスするように、Adobe Developer Console（ADC）プロジェクトを作成および設定します。
+- Adobe Developer Console（ADC）プロジェクトを作成し、_OAuth サーバー間認証_ を使用してAEM API にアクセスするように設定します。
 - Assets オーサー API を呼び出して特定のアセットのメタデータを取得するサンプル NodeJS アプリケーションを開発します。
 
 開始する前に、[AdobeAPI へのアクセスと関連概念 ](overview.md#accessing-adobe-apis-and-related-concepts) の節を確認してください。
@@ -432,7 +434,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 }
 ```
 
-おめでとうございます。 OAuth サーバー間認証を使用して、カスタムアプリケーションから OpenAPI ベースのAEM API を正常に呼び出しました。
+これで完了です。OAuth サーバー間認証を使用して、カスタムアプリケーションから OpenAPI ベースのAEM API を正常に呼び出しました。
 
 ### アプリケーションコードを確認します
 

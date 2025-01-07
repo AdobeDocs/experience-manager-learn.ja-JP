@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9c0c0594d8bcecbf1e0daf7f3c5d7146adcdb08f
-workflow-type: ht
-source-wordcount: '1356'
-ht-degree: 100%
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+workflow-type: tm+mt
+source-wordcount: '1361'
+ht-degree: 99%
 
 ---
 
@@ -143,7 +143,8 @@ ht-degree: 100%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
-   + [OpenAPI ベースの AEM API の呼び出し](./apis/invoke-openapi-based-aem-apis.md)
+   + [OpenAPI ベースのAEM API （サーバー間）](./apis/invoke-openapi-based-aem-apis.md)
+   + [OpenAPI ベースのAEM API （ユーザー認証済み）](./apis/invoke-openapi-based-aem-apis-from-web-app.md)
 + コンテンツ配信{#content-delivery}
    + [カスタムドメイン名](./content-delivery/custom-domain-names.md)
    + [アドビが管理する CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
