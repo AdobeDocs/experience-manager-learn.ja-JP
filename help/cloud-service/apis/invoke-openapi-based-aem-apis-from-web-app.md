@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 52749190860961ed2baf4c3c3cd7a6b55a87af58
 workflow-type: tm+mt
 source-wordcount: '2433'
 ht-degree: 1%
@@ -37,7 +37,8 @@ WKND PIM アプリは、AEM as a Cloud Serviceに保存された製品属性と�
 
 Adobe Developer Console（ADC）プロジェクトは、OAuth Web App 認証を使用してAssets オーサー API にアクセスするように設定されています。 これにより、_authorization_code_ 付与フローを開始するために必要な _client_id_ と _client_secret_ が WKND-PIM Web アプリに提供されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 次の図に、WKND-PIM web アプリの機能フローを示します _Assets オーサー API とやり取りするためのユーザー固有のアクセストークンの取得_。
 
