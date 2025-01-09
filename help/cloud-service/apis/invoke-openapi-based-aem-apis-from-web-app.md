@@ -1,5 +1,5 @@
 ---
-title: Web アプリから OpenAPI ベースのAEM API を呼び出す方法
+title: Web アプリからのユーザー認証を使用した OpenAPI ベースのAEM API の呼び出し
 description: OAuth web アプリ認証を使用して、カスタム web アプリからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を呼び出す方法について説明します。
 version: Cloud Service
 feature: Developing
@@ -9,15 +9,15 @@ level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
 thumbnail: KT-16718.jpeg
-last-substantial-update: 2024-12-17T00:00:00Z
+last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+exl-id: dc35256a-3873-413f-b282-90948efd5f31
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2433'
 ht-degree: 1%
 
 ---
-
 
 # Web アプリからのユーザー認証を使用した OpenAPI ベースのAEM API の呼び出し{#invoke-openapi-based-aem-apis-from-web-app}
 
@@ -36,6 +36,8 @@ OAuth web アプリ認証は、ユーザーの代わりにAEM API にアクセ�
 WKND PIM アプリは、AEM as a Cloud Serviceに保存された製品属性とそのアセットメタデータを管理するように設計されたサンプル web アプリケーションです。 この例では、web アプリをAdobeAPI とシームレスに統合して、効率的でユーザー中心のワークフローを提供する方法を示します。
 
 Adobe Developer Console（ADC）プロジェクトは、OAuth Web App 認証を使用してAssets オーサー API にアクセスするように設定されています。 これにより、_authorization_code_ 付与フローを開始するために必要な _client_id_ と _client_secret_ が WKND-PIM Web アプリに提供されます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
 
 次の図に、WKND-PIM web アプリの機能フローを示します _Assets オーサー API とやり取りするためのユーザー固有のアクセストークンの取得_。
 
@@ -66,7 +68,7 @@ WKND-PIM web アプリは、[Node.js](https://nodejs.org/ja) と [Express](https
 
 ## このチュートリアルの使用方法{#how-to-use-this-tutorial}
 
-[Web アプリの主要なコードスニペットを確認 ](#review-web-app-key-code-snippets) セクションのいずれかを選択して、WKND-PIM Web アプリで使用される OAuth Web アプリ認証フローと API 呼び出しコードスニペットを理解できます。 または、「[Web アプリの設定と実行 ](#setup-run-web-app)」セクションに直接進み、ローカルマシン上で WKND-PIM Web アプリを設定して実行します。
+[Web アプリの主要なコードスニペットを確認 ](#review-web-app-key-code-snippets) セクションのいずれかを参照して、WKND-PIM web アプリで使用される OAuth Web アプリ認証フローと API 呼び出しコードスニペットを理解します。 または、「[Web アプリの設定と実行 ](#setup-run-web-app)」セクションに直接進み、ローカルマシン上で WKND-PIM Web アプリを設定して実行します。
 
 ## Web アプリの主要なコードスニペットの確認{#review-web-app-key-code-snippets}
 
@@ -404,6 +406,11 @@ function getTransformedMetadata(metadata) {
 
 有効期限が切れる前にアクセストークンを更新するには、更新トークンフローを実装します。 ただし、チュートリアルの内容をシンプルにするために、WKND-PIM web アプリでは、更新トークンフローを実装していません。
 
+
+>[!TIP]
+>
+>次の節では、WKND-PIM web アプリをローカルマシンで試し、OAuth web アプリ認証フローと API 呼び出しの実践的なエクスペリエンスを提供します。
+
 ## Web アプリケーションのセットアップと実行
 
 ローカルマシンで WKND-PIM web アプリを設定および実行して、OAuth web アプリ認証フローと API 呼び出しを理解します。
@@ -644,7 +651,7 @@ ADC プロジェクトの OAuth Web アプリ資格情報クライアント ID �
 
 >[!IMPORTANT]
 >
->認証済みユーザーがアセットメタデータのレビューまたは更新に必要な権限を持っていない場合、OpenAPI ベースのAEM API は 403 Forbidden エラーを返します。 これにより、ユーザーが認証済みで、有効な IMS アクセストークンを持っている場合でも、必要な権限がなければAEM リソースにアクセスできなくなります。
+>認証済みユーザーがアセットメタデータのレビューまたは更新に必要な権限を持っていない場合、OpenAPI ベースのAEM API は 403 Forbidden エラーを返します。 これにより、ユーザーが認証され、有効な IMS アクセストークンを持っている場合でも、必要な権限がなければAEM リソースにアクセスできなくなります。
 
 
 ### アプリケーションコードを確認します
