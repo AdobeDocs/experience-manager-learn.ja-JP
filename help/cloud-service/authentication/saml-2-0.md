@@ -11,10 +11,10 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 87dd4873152d4690abb1efcfebd43d10033afa0a
-workflow-type: ht
-source-wordcount: '3919'
-ht-degree: 100%
+source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
+workflow-type: tm+mt
+source-wordcount: '4037'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ AEM パブリッシュ SAML 統合の一般的なフローは次のとおりで�
    + ユーザーが、IDP に資格情報の入力を求められます。
    + ユーザーが既に IDP で認証されていて、追加の資格情報を提供する必要はありません。
 1. IDP が、ユーザーのデータを含む SAML アサーションを生成し、IDP の非公開証明書を使用して署名します。
-1. IDP 、HTTP POST 経由で SAML アサーションを、ユーザーの web ブラウザー経由で、AEM パブリッシュに送信します。
+1. IDP は、HTTP POST経由で、ユーザーの web ブラウザー（EACH_PROTECTED_PATH/saml_login）経由で SAML アサーションをAEM Publishに送信します。
 1. AEM パブリッシュ SAML アサーションを受け取り、IDP 公開証明書を使用して SAML アサーションの整合性と信頼性を検証します。
 1. AEM パブリッシュ、SAML 2.0 OSGi 設定と SAML アサーションの内容に基づいて AEM ユーザーレコードを管理します。
    + ユーザーを作成する
@@ -440,6 +440,9 @@ IDP への認証に成功すると、IDP は HTTP POST を調整して AEM の�
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
+>[!NOTE]
+>様々な保護パスや個別の IDP エンドポイントに対して複数の SAML 設定をAEMにデプロイする場合は、IDP が EACH_PROTECTED_PATH/saml_login エンドポイントに投稿して、AEM側の適切な SAML 設定が選択されることを確認します。 同じ保護パスに重複した SAML 設定がある場合、SAML 設定の選択はランダムに実行されます。
+
 Apache web サーバーで URL の書き換えが設定されている場合（`dispatcher/src/conf.d/rewrites/rewrite.rules`）、`.../saml_login` エンドポイントへのリクエストが誤ってマングリングされないようにします。
 
 ### 新しい環境で SAML ユーザーの動的グループメンバーシップを有効にする方法
@@ -561,6 +564,12 @@ $ git push adobe saml-auth:develop
 ## SAML 認証の呼び出し
 
 SAML 認証フローは、特別に作成されたリンクまたはボタンを作成して、AEM サイトの web ページから呼び出すことができます。以下に説明するパラメーターは、必要に応じてプログラムで設定できます。例えば、ログインボタンでは、ボタンのコンテキストに基づいて、SAML 認証が成功した際にユーザーが移動する場所である `saml_request_path` を様々な AEM ページに設定できます。
+
+## SAML 使用時のセキュリティ保護されたキャッシュ
+
+AEM パブリッシュインスタンスでは、通常、ほとんどのページがキャッシュされます。 ただし、SAML で保護されたパスの場合は、auth_checker 設定を使用して、キャッシュを無効にするか、保護されたキャッシュを有効にする必要があります。 詳しくは、こちら [ 詳細をご覧ください ](https://experienceleague.adobe.com/ja/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+
+auth_checker を有効にせずに保護されたパスをキャッシュすると、予期しない動作が発生する可能性があることに注意してください。
 
 ### GET リクエスト
 
