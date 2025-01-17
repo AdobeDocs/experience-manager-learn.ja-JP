@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
-workflow-type: ht
-source-wordcount: '833'
+source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
+workflow-type: tm+mt
+source-wordcount: '860'
 ht-degree: 100%
 
 ---
@@ -125,5 +125,14 @@ AEM イベントを使用する主な手法としては、_プッシュ_&#x200B;
           Adobe I/O Runtime アクションを使用して受け取った AEM イベントを処理する方法を説明します。イベント処理には、AEM コールバック、イベントデータの永続性、および SPA での表示が含まれます。
         </p>
       </td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>
+        <a  href="./examples/assets-pim-integration.md"><img alt="PIM 統合用の AEM Assets イベント" src="./assets/examples/assets-pim-integration/PIM-integration-tile.png"/></a>
+        <div><strong><a href="./examples/assets-pim-integration.md">PIM 統合用の AEM Assets イベント</a></strong></div>
+        <p>
+          メタデータの更新に AEM Assets と製品情報管理（PIM）システムを統合する方法を説明します。
+        </p>
+      </td>
+  </tr> 
 </table>
