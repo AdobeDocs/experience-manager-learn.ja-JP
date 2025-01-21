@@ -11,10 +11,10 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
-workflow-type: ht
-source-wordcount: '4037'
-ht-degree: 100%
+source-git-commit: 6f8d2bdd4ffb1c643cebcdd59fb529d8da1c44cf
+workflow-type: tm+mt
+source-wordcount: '4262'
+ht-degree: 93%
 
 ---
 
@@ -445,6 +445,10 @@ IDP への認証に成功すると、IDP は HTTP POST を調整して AEM の�
 
 Apache web サーバーで URL の書き換えが設定されている場合（`dispatcher/src/conf.d/rewrites/rewrite.rules`）、`.../saml_login` エンドポイントへのリクエストが誤ってマングリングされないようにします。
 
+## 動的グループメンバーシップ
+
+動的グループメンバーシップは、グループの評価とプロビジョニングのパフォーマンスを向上させる [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html) の機能です。 この節では、この機能が有効な場合のユーザーとグループの保存方法、および SAML 認証ハンドラーの設定を変更して新規または既存の環境に対して有効にする方法について説明します。
+
 ### 新しい環境で SAML ユーザーの動的グループメンバーシップを有効にする方法
 
 新しい AEM as a Cloud Service 環境でのグループ評価パフォーマンスを大幅に向上させるには、新しい環境での動的グループメンバーシップ機能のアクティベーションをお勧めします。
@@ -518,7 +522,17 @@ ACL でのこのリファクタリングを回避することを目的に、標�
 }
 ```
 
-### 既存の環境の動的グループメンバーシップへの自動移行
+### 既存環境の SAML ユーザーに対して動的グループメンバーシップを有効にする方法
+
+前の節で説明したように、外部ユーザーとグループの形式は、ローカルユーザーとグループに使用される形式とは少し異なります。 外部グループ用の新しい ACL を定義して新しい外部ユーザーをプロビジョニングするか、以下に説明するように移行ツールを使用できます。
+
+#### 外部ユーザーを持つ既存の環境の動的グループメンバーシップの有効化
+
+次のプロパティが指定されている場合、SAML 認証ハンドラーは外部ユーザーを作成します：`"identitySyncType": "idp"`。 この場合、このプロパティを `"identitySyncType": "idp_dynamic"` に変更すると、動的グループ メンバーシップを有効にできます。 移行は必要ありません。
+
+#### ローカルユーザーを持つ既存の環境の動的グループメンバーシップへの自動移行
+
+次のプロパティが指定されている場合、SAML 認証ハンドラーはローカルユーザーを作成します：`"identitySyncType": "default"`。 これは、プロパティが指定されていない場合のデフォルト値でもあります。 ここでは、自動移行手順で実行される手順について説明します。
 
 この移行を有効にする場合、ユーザー認証中に実行され、次の手順で構成されます。
 1. ローカルユーザーは、元のユーザー名を保持しながら外部ユーザーに移行されます。つまり、移行されたローカルユーザーが外部ユーザーとして機能し、前の節で説明した命名構文に従わずに元のユーザー名を保持します。`[user name];[idp]` の値を持つ `rep:externalId` という 1 つの追加プロパティが追加されます。ユーザーの `PrincipalName` は変更されません。
@@ -533,18 +547,20 @@ ACL でのこのリファクタリングを回避することを目的に、標�
 `group1;idp` は、ローカルグループ `group1` のメンバーです。
 その後、`user1` は、継承を通じてローカルグループ `group1` のメンバーになります。
 
-外部グループのグループメンバーシップは、ユーザープロファイルの属性 `rep:authorizableId` に保存されます。
+外部グループのグループメンバーシップは、プロパティ `rep:externalPrincipalNames` のユーザープロファイルに保存されます
 
 ### 動的グループメンバーシップへの自動移行の設定方法
 
-1. SAML OSGi 設定ファイル `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` でプロパティ `"identitySyncType": "idp_dynamic_simplified_id"` を有効にします。
-2. 次のプロパティを使用して、`com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...` で新しい OSGi サービスを設定します。
+1. SAML OSGi 設定ファイルでプロパティ `"identitySyncType": "idp_dynamic_simplified_id"` を有効にします：`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` :
+2. `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~` で始まるファクトリ PID を持つ新しい OSGi サービスを設定します。 例えば、PID は `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP` のようになります。 次のプロパティを設定します。
 
 ```
 {
-  "idpIdentifier": "<vaule of identitySyncType of saml configuration to be migrated>"
+  "idpIdentifier": "<value of IDP Identifier (idpIdentifier)" property from the "com.adobe.granite.auth.saml.SamlAuthenticationHandler" configuration to be migrated>"
 }
 ```
+
+複数の SAML 設定を移行するには、`com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration` 用の複数の OSGi ファクトリ設定を作成し、それぞれに移行する `idpIdentifier` を指定する必要があります。
 
 ## SAML 設定のデプロイ
 
