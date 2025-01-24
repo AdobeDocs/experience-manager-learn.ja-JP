@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: 2aa189c46af16813d2709aa2ec02b509c4bb544e
-workflow-type: ht
-source-wordcount: '415'
-ht-degree: 100%
+source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 82%
 
 ---
 
@@ -29,69 +29,69 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
 
 ## Edge Delivery Services 開発者向けチュートリアル
 
+<!-- CARDS 
 
-<div class="columns is-multiline">
-    <!-- Document-based authoring -->
-    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
-      aria-label="Document-based authoring and Edge Delivery Services tutorial" tabindex="0">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="ドキュメントベースのオーサリング web サイトのチュートリアル"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="./assets/overview/document-based-authoring-tutorial.png"
-                alt="ドキュメントベースのオーサリング web サイトのチュートリアル">
-            </a>
-          </figure>
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial
+  {title = Document-based authoring and Edge Delivery Services tutorial}
+  {description = Learn how to create Edge Delivery Services web sites authored using Document-based authoring.}
+  {cta = Start the tutorial}
+
+* ./developing/universal-editor/0-overview.md
+  {title = Universal Editor and Edge Delivery Services tutorial}
+  {description = Learn the basics of creating an Edge Delivery Services web sites authored with Universal Editor.}
+  {cta = Start the tutorial}
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Document-based authoring and Edge Delivery Services tutorial">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="ドキュメントベースのオーサリングとEdge Delivery Servicesのチュートリアル" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="ドキュメントベースのオーサリングとEdge Delivery Servicesのチュートリアル"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" title="ドキュメントベースのオーサリングとEdge Delivery Servicesのチュートリアル"> ドキュメントベースのオーサリングとEdge Delivery Servicesのチュートリアル </a>
+                    </p>
+                    <p class="is-size-6">ドキュメントベースのオーサリングを使用して作成された Edge Delivery Services web サイトを作成する方法について説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルを開始 </span>
+                </a>
+            </div>
         </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="ドキュメントベースのオーサリング web サイトのチュートリアル">ドキュメントベースのオーサリング web サイトのチュートリアル</a>
-            </p>
-            <p class="is-size-6">ドキュメントベースのオーサリングを使用して作成された Edge Delivery Services web サイトを作成する方法について説明します。</p>
-            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">チュートリアルを開始</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- Universal Editor -->
-    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
-      aria-label="Universal Editor and Edge Delivery Services tutorial" tabindex="1">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="ユニバーサルエディター web サイトチュートリアル"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="./assets/overview/universal-editor-tutorial.png"
-                alt="ユニバーサルエディター web サイトチュートリアル">
-            </a>
-          </figure>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Universal Editor and Edge Delivery Services tutorial">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./developing/universal-editor/0-overview.md" title="ユニバーサルエディターとEdge Delivery Servicesのチュートリアル" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="developing/universal-editor/assets/0-overview/hero.png" alt="ユニバーサルエディターとEdge Delivery Servicesのチュートリアル"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" title="ユニバーサルエディターとEdge Delivery Servicesのチュートリアル"> ユニバーサルエディターとEdge Delivery Servicesのチュートリアル </a>
+                    </p>
+                    <p class="is-size-6">ユニバーサルエディターを使用して作成されたEdge Delivery Services web サイトの作成の基本について説明します。</p>
+                </div>
+                <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> チュートリアルを開始 </span>
+                </a>
+            </div>
         </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="ユニバーサルエディター web サイトチュートリアル">ユニバーサルエディター web サイトチュートリアル</a>
-            </p>
-            <p class="is-size-6">ユニバーサルエディターを使用してオーサリングされた Edge Delivery Services web サイトを作成する方法について説明します。</p>
-            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">チュートリアルを開始</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>    
-  </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
 
