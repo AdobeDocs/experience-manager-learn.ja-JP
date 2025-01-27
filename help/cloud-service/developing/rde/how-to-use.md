@@ -11,22 +11,22 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
-workflow-type: ht
-source-wordcount: '687'
-ht-degree: 100%
+source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
+workflow-type: tm+mt
+source-wordcount: '792'
+ht-degree: 80%
 
 ---
 
 # 迅速な開発環境の使用方法
 
-迅速な開発環境（RDE）を AEM as a Cloud Service で&#x200B;**使用する方法**&#x200B;を説明します。お気に入りの統合開発環境（IDE）から RDE にコードとコンテンツをデプロイして、ほぼ最終的なコードを開発するサイクルを高速化します。
+AEM as a Cloud Serviceの迅速な開発環境（RDE **について** 使用方法）を説明します。 お気に入りの統合開発環境（IDE）から RDE にコードとコンテンツをデプロイして、ほぼ最終的なコードを開発するサイクルを高速化します。
 
 お気に入りの IDE から AEM-RDE の `install` コマンドを実行して様々な AEM アーティファクトを RDE にデプロイする方法を、[AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) を使用して説明します。
 
 - AEM のコードとコンテンツのパッケージ（すべて、ui.apps）のデプロイメント
 - OSGi バンドルと設定ファイルのデプロイメント
-- zip ファイルでの Apache および Dispatcher 設定のデプロイメント
+- zip ファイルでの Apache およびDispatcher設定のデプロイメント
 - HTL や `.content.xml`（ダイアログ XML）などの個々のファイルのデプロイメント
 - `status, reset and delete` などの他の RDE コマンドの確認
 
@@ -96,7 +96,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. Maven ビルドを実行するか個々のファイルを同期して、ローカルの AEM SDK で変更を検証します。
+1. Maven ビルドを実行するか個々のファイルを同期して、ローカルのAEM SDKで変更を検証します。
 
 1. `ui.apps` パッケージを介して、または個々のダイアログファイルと HTL ファイルをデプロイして、変更を RDE にデプロイします。
 
@@ -191,7 +191,7 @@ Apache または Dispatcher 設定ファイルを&#x200B;**個別にデプロイ
    ...
    ```
 
-1. ローカルで変更を検証します。詳しくは、[Dispatcher のローカルでの実行](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=ja#run-dispatcher-locally)を参照してください。
+1. ローカルで変更を検証します。詳しくは、[Dispatcher のローカルでの実行](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools)を参照してください。
 1. 次のコマンドを実行して、変更を RDE にデプロイします。
 
    ```shell
@@ -200,7 +200,49 @@ Apache または Dispatcher 設定ファイルを&#x200B;**個別にデプロイ
    $ aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
    ```
 
+1. RDE での変更を検証します。
+
+### 設定（YAML）ファイルのデプロイ
+
+CDN、メンテナンスタスク、ログ転送およびAEM API 認証設定ファイルは、`install` コマンドを使用して RDE にデプロイできます。 これらの設定は、AEM プロジェクトの `config` フォルダーで YAML ファイルとして管理されます。詳しくは、[ サポートされる設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations) を参照してください。
+
+設定ファイルのデプロイ方法を説明するには、`cdn` 設定ファイルを機能強化して RDE にデプロイします。
+
+1. `config` フォルダーの `cdn.yaml` ファイルを開きます。
+1. 目的の設定を更新します。例えば、レート制限を 1 秒あたり 200 リクエストに更新します
+
+   ```yaml
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev", "stage", "prod"]
+   data:
+     trafficFilters:
+       rules:
+       #  Block client for 5m when it exceeds an average of 100 req/sec to origin on a time window of 10sec
+       - name: limit-origin-requests-client-ip
+         when:
+           reqProperty: tier
+           equals: 'publish'
+         rateLimit:
+           limit: 200 # updated rate limit
+           window: 10
+           count: fetches
+           penalty: 300
+           groupBy:
+             - reqProperty: clientIp
+         action: log
+   ...
+   ```
+
+1. 次のコマンドを実行して、RDE に変更をデプロイします。
+
+   ```shell
+   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   ```
+
 1. RDE での変更の検証
+
 
 ## 追加の AEM RDE プラグインコマンド
 
@@ -222,7 +264,7 @@ aem rde restart  Restart the author and publish of an RDE
 aem rde status   Get a list of the bundles and configs deployed to the current rde.
 ```
 
-上記のコマンドを使用すると、お気に入りの IDE から RDE を管理して、開発／デプロイメントのライフサイクルを迅速化できます。
+上記のコマンドを使用すると、お気に入りの IDE から RDE を管理して、開発/デプロイメントのライフサイクルを迅速化できます。
 
 ## 次の手順
 
@@ -231,8 +273,8 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## その他のリソース
 
-[RDE コマンドのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=ja#rde-cli-commands)
+[RDE コマンドのドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 [AEM の迅速な開発環境とやり取りするための Adobe I/O Runtime CLI プラグイン](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM プロジェクトのセットアップ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja)
+[AEM プロジェクトのセットアップ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
