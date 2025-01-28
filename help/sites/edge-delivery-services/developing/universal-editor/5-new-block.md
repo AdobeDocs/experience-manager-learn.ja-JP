@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
+source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # 新しいブロックを作成
 
@@ -136,6 +136,12 @@ $ git checkout -b teaser origin/main
 - [CTAの要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) と [ フィールド折りたたみ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) を使用して、テキストコンテンツフィールドをグループ化します。
 
 [ フィールドを折りたたむ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[ 要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)、または [ タイプの推論 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) に詳しくない場合は、続行する前にリンクされているドキュメントを確認してください。これらは適切に構造化されたブロックモデルの作成に不可欠なものだからです。
+
+次の例では、
+
+- [ 型の推論 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) を使用すると、`image` フィールドから `<img>`HTML要素が自動的に作成されます。 フィールドの折りたたみは、`image` フィールドと `imageAlt` フィールドと共に使用して、`<img>` HTML要素を作成します。 `src` 属性は `image` フィールドの値に設定され、`alt` 属性は `imageAlt` フィールドの値に設定されます。
+- `textContent` は、フィールドの分類に使用されるグループ名です。 セマンティックにする必要がありますが、このブロックに固有のものであれば何でも構いません。 これにより、ユニバーサルエディターは、最終的なHTML出力の同じ `<div>` 要素内でこのプレフィックスを持つすべてのフィールドをレンダリングするように通知されます。
+- フィールドの折りたたみは、コールトゥアクション（CTA）の `textContent` グループ内でも適用されます。 CTAは、[type inference](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) を使用して `<a>` として作成されます。 `cta` フィールドは、`<a>` 要素の `href` 属性を設定するために使用され、`ctaText` フィールドは、`<a ...>` タグ内のリンクのテキストコンテンツを提供します。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
