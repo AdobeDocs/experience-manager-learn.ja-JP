@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 doc-type: Catalog
 jira: KT-15832
-duration: 89
+duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: aa8ea183639c4c63be74f7ef1ce099c89454c099
+source-git-commit: 9dd07383a3d46d1bbecd2dc8574e6d06a0535fee
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 7%
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサイトを設定する方法について説明します。 このセットアップにより、ユニバーサルエディターとのシームレスな開発が可能になり、コンテンツの作成と、Edge Delivery Servicesを通じた迅速なコンテンツ配信が可能になります。
 
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -87,7 +87,7 @@ AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサ�
 ## 開発設定
 
 迅速な web サイトローカル開発を可能にする開発環境の設定方法を説明します。 このセットアップにより、ユニバーサルエディターを使用したシームレスなサイト作成と、Edge Delivery Servicesを通じた効率的なコンテンツ配信が可能になり、最適化されたスムーズな開発ワークフローが実現します。
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -163,7 +163,7 @@ AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./5-new-block.md" title="ブロックの作成" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/5-new-block/teaser-block.png" alt="ブロックの作成"
+                        <img class="is-bordered-r-small" src="./assets/5-new-block/card.png" alt="ブロックの作成"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,7 +186,7 @@ AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./6-author-block.md" title="ブロックのオーサリング" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/6-author-block/open-new-site.png" alt="ブロックのオーサリング"
+                        <img class="is-bordered-r-small" src="./assets/6-author-block/card.png" alt="ブロックのオーサリング"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -209,7 +209,7 @@ AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7a-block-css.md" title="CSS を使用したブロックの開発" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="CSS を使用したブロックの開発"
+                        <img class="is-bordered-r-small" src="./assets/7a-block-css/card.png" alt="CSS を使用したブロックの開発"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -232,7 +232,7 @@ AEM as a Cloud Serviceでコードプロジェクトを作成し、新しいサ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7b-block-js-css.md" title="CSS と JS を使用したブロックの開発" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="CSS と JS を使用したブロックの開発"
+                        <img class="is-bordered-r-small" src="./assets/7b-block-js-css/card.png" alt="CSS と JS を使用したブロックの開発"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
