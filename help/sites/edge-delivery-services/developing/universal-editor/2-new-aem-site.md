@@ -9,9 +9,10 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
+source-git-commit: 567d2803c5cee274104b38f847820f7665320195
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -43,3 +44,4 @@ AEM オーサーでサイトを作成した後、Edge Delivery Services プレ�
 3. **宛先** の下の **プレビュー** を選択し、**次へ** をクリックします。
 4. **子を含める設定** で、「**子を含める**」を選択し、他のオプションの選択を解除して、「**OK**」をクリックします。
 5. **Publish** をクリックして、サイトのコンテンツをプレビュー用に公開します。
+6. プレビュー用に公開すると、ページはEdge Delivery Servicesプレビュー環境で使用できるようになります（ページはAEM プレビューサービスには表示されません）。
