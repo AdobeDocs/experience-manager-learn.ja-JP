@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
+source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
-
 
 # Edge Delivery Servicesコードプロジェクトの作成
 
@@ -32,7 +32,7 @@ Edge Delivery Servicesが配信する [AEM web サイトには ](https://experie
 3. **AEM コード同期 GitHub アプリをインストール** し、リポジトリへのアクセス権を付与します。 [ アプリはこちら ](https://github.com/apps/aem-code-sync) で確認できます。
 4. **新しいプロジェクトの`fstab.yaml`** を、正しいAEM オーサーサービスを指すように設定します。
 
-   * 実験には、下位のAEM as a Cloud Service環境（ステージング、開発、RDE）を使用できますが、実際の web サイト実装は実稼動のAEM オーサーサービスを使用するように設定する必要があります。
+   * 実験には、下位のAEM as a Cloud Service環境（ステージングまたは開発）を使用できますが、実際の web サイトの実装は実稼動のAEM サービスを使用するように設定する必要があります。
 
 5. **新しいプロジェクトの`paths.json`** を編集して、AEM オーサーサービスのパスを web サイトのルートにマッピングします。
 
