@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
+source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Edge Delivery Servicesが配信する [AEM web サイトには ](https://experie
 
 ![ 新規Edge Delivery Servicesプロジェクト ](./assets/1-new-project/new-project.png)
 
-ユニバーサルエディターでコンテンツを編集可能なEdge Delivery Servicesコードプロジェクトを作成するには、次の手順に従います。
+ユニバーサルエディターでコンテンツを編集可能なEdge Delivery Servicesコードプロジェクト ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) 詳細な手順については、ドキュメントで説明しています [ に従います。  以下は、このチュートリアルで使用する値を含む、手順の概要です。
 
 1. **GitHub アカウントを設定します。** 組織のプロジェクトを作成する場合は、組織に GitHub アカウントがあり、自分がメンバーであることを確認します。
 2. **2}AEM Boilerplate XWalk プロジェクトテンプレートを使用して** 新しいコードプロジェクトを作成します ](https://github.com/adobe-rnd/aem-boilerplate-xwalk)。[
@@ -36,4 +36,4 @@ Edge Delivery Servicesが配信する [AEM web サイトには ](https://experie
 
 5. **新しいプロジェクトの`paths.json`** を編集して、AEM オーサーサービスのパスを web サイトのルートにマッピングします。
 
-詳しい手順については、はじめる前に [GitHub プロジェクトの作成 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) の節を参照してください。
+この Git リポジトリは、[ローカル開発環境、章 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/edge-delivery-services/developing/universal-editor/3-local-development-environment) およびコードの開発場所で複製されます。
