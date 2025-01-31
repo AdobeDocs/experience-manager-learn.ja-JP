@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
+source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -322,6 +322,8 @@ $ git checkout -b teaser origin/main
 | `definition.plugins.xwalk.page.resourceType` | ユニバーサルエディターでコンポーネントをレンダリングするための Sling リソースタイプを定義します。 常に `core/franklin/components/block/v#/block` リソースタイプを使用します。 |
 | `definition.plugins.xwalk.page.template.name` | ブロックの名前。 ブロックのフォルダー名に一致するように、小文字でハイフンを付ける必要があります。 この値は、ユニバーサルエディターでブロックのインスタンスにラベルを付ける場合にも使用されます。 |
 | `definition.plugins.xwalk.page.template.model` | この定義を `model` 定義にリンクします。この定義は、ユニバーサルエディターでブロックに表示されるオーサリングフィールドを制御します。 この値は、`model.id` 値に一致する必要があります。 |
+| `definition.plugins.xwalk.page.template.classes` | 値がブロックHTML要素の `class` 属性に追加されるオプションのプロパティ。 これにより、同じブロックのバリアントを使用できます。 `classes` の値は、[ クラスフィールドを追加 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) してブロックの [model](#block-model) に編集可能にすることができます。 |
+
 
 ブロック定義の JSON の例を次に示します。
 
