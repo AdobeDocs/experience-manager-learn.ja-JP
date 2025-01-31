@@ -10,11 +10,11 @@ jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2024-03-22T00:00:00Z
-duration: 184
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: ht
-source-wordcount: '603'
-ht-degree: 100%
+duration: 185
+source-git-commit: 1ad0c609ca0edb34e556c1453462c6d1041f5807
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
