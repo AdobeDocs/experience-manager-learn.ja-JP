@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: 567d2803c5cee274104b38f847820f7665320195
+source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ AEM サイトは、web サイトのコンテンツが保存およびオーサリ
 
 ![Edge Delivery Servicesとユニバーサルエディターの新しいAEM サイト ](./assets/2-new-aem-site/new-site.png)
 
-新しいAEM サイトを作成するには、次の手順に従います。
-
+[ ドキュメントに記載されている詳細な手順 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) に従って、新しいAEM サイトを作成します。  以下は、このチュートリアルで使用する値を含む、手順の概要です。
 1. AEM オーサーで **新しいサイトを作成** します。 このチュートリアルでは、次のサイト命名を使用します。
    * サイトのタイトル：`WKND (Universal Editor)`
    * サイト名：`aem-wknd-eds-ue`
+
+      * サイト名の値は、`paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping) に追加されたサイトのパス名 [ 一致する必要があります。
+
 2. **AEM オーサリングサイトテンプレートを使用して、[Edge Delivery Servicesから** 最新のテンプレートを読み込みます ](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)。
 3. GitHub リポジトリ名と一致するように **サイトに名前を付け**、「GitHub URL」をリポジトリの URL として設定します。
-
-手順について詳しくは、はじめる前にの [ 新しいAEM サイトの作成と編集 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) の節を参照してください。
 
 ## プレビューする新しいサイトをPublish
 
