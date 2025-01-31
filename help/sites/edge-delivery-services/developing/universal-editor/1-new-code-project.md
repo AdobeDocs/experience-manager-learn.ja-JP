@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
+source-git-commit: 176be4209409763b69ceff5e893d0e857efa6d30
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '287'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Edge Delivery Servicesが配信する [AEM web サイトには ](https://experie
 
 ![ 新規Edge Delivery Servicesプロジェクト ](./assets/1-new-project/new-project.png)
 
-ユニバーサルエディターでコンテンツを編集可能なEdge Delivery Servicesコードプロジェクト ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) 詳細な手順については、ドキュメントで説明しています [ に従います。  以下は、このチュートリアルで使用する値を含む、手順の概要です。
+ユニバーサルエディターでコンテンツを編集可能なEdge Delivery Servicesコードプロジェクトを作成するには、[ ドキュメントで説明されている詳細な手順 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) に従ってください。  以下は、このチュートリアルで使用する値を含む、手順の概要です。
 
 1. **GitHub アカウントを設定します。** 組織のプロジェクトを作成する場合は、組織に GitHub アカウントがあり、自分がメンバーであることを確認します。
 2. **2}AEM Boilerplate XWalk プロジェクトテンプレートを使用して** 新しいコードプロジェクトを作成します ](https://github.com/adobe-rnd/aem-boilerplate-xwalk)。[
