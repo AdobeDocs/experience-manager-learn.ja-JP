@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 700
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
+source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '967'
 ht-degree: 2%
 
 ---
-
 
 # ローカル開発環境を設定
 
@@ -65,7 +65,7 @@ Edge Delivery Servicesweb サイトプロジェクトの開発ツールとプロ
 
 ## GitHub リポジトリのクローン
 
-AEM Edge Delivery Servicesのコードプロジェクトを含む [GitHub リポジトリ ](./1-new-code-project.md) をローカル開発環境にクローンします。
+AEM Edge Delivery Servicesのコードプロジェクトを含む新しいコードプロジェクトの章で作成した [GitHub リポジトリ ](./1-new-code-project.md) を、ローカル開発環境に複製します。
 
 ![GitHub リポジトリのクローン ](./assets/3-local-development-environment/github-clone.png)
 
@@ -120,6 +120,8 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 ```
 
 AEM CLI を使用すると、ブラウザーの `http://localhost:3000/` に web サイトが開きます。 プロジェクト内の変更は、コンテンツの変更 [ プレビュー環境への公開が必要）と web ブラウザーの更新 ](./6-author-block.md) に応じて、web ブラウザーで自動的にホットリロードされます。
+
+Web サイトが 404 ページで開いた場合は、[ 新規コードプロジェクト ](./1-new-code-project.md) で更新された [fstab.yaml または paths.json](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) が誤って設定されているか、変更が `main` ブランチにコミットされていない可能性があります。
 
 ## JSON フラグメントの作成
 
@@ -208,4 +210,3 @@ $ npm run lint:fix
 ```
 
 >[!ENDTABS]
-
