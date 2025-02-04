@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
-workflow-type: ht
-source-wordcount: '1947'
-ht-degree: 100%
+source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
+workflow-type: tm+mt
+source-wordcount: '1924'
+ht-degree: 98%
 
 ---
 
@@ -109,7 +109,7 @@ ELK ダッシュボードと Splunk ダッシュボードでは、次のビジ�
   **ELK ダッシュボード**：
   ![ELK ダッシュボード：IP／POP あたりの最大リクエスト数](./assets/elk-edge-max-per-ip-pop.png)
 
-  **Splunk ダッシュボード**：\
+  **Splunk ダッシュボード**：
   ![Splunk ダッシュボード：IP／POP あたりの最大リクエスト数](./assets/splunk-edge-max-per-ip-pop.png)
 
 - **クライアント IP および POP ごとのオリジン RPS**：このビジュアライゼーションには、**オリジンでの** IP／POP あたりの最大リクエスト数が表示されます。ビジュアライゼーションのピークは、リクエストの最大数を示します。
@@ -168,10 +168,10 @@ data:
           count: all # count all requests
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true
-    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average            
+          alert: true
+    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average
       - name: prevent-dos-attacks-origin
         when:
           reqProperty: tier
@@ -183,17 +183,12 @@ data:
           count: fetches # count only fetches
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true   
-          
+          alert: true
 ```
 
 接触チャネルルールと Edge ルールの両方が宣言され、アラートプロパティが `true` に設定されているので、しきい値に達した場合は常にアラートを受信でき、攻撃を示している可能性があります。
-
->[!NOTE]
->
->experimental_alert の前にある _実験的な_ prefix_ は、アラート機能がリリースされると削除されます。早期導入プログラムに参加するには、**<aemcs-waf-adopter@adobe.com>** にメールを送信します。
 
 数時間または数日間トラフィックを監視して、正当なトラフィックがこれらのレートを超えないように、アクションタイプを最初にログに記録するように設定することをお勧めします。数日後、ブロックモードに変更します。
 
@@ -211,13 +206,13 @@ AEMCS 環境に変更をデプロイするには、次の手順に従います�
 kind: "CDN"
 version: "1"
 metadata:
-  envTypes: 
+  envTypes:
     - dev
     - stage
-    - prod  
-data:  
-  experimental_requestTransformations:
-    rules:            
+    - prod
+data:
+  requestTransformations:
+    rules:
       - name: unset-all-query-params-except-those-needed
         when:
           reqProperty: tier
@@ -229,7 +224,7 @@ data:
 
 ## トラフィックフィルタールールアラートの受信 {#receiving-alerts}
 
-上記のように、トラフィックフィルタールールに *experimental_alert: true* が含まれている場合、ルールが一致するとアラートを受信します。
+前述のように、トラフィックフィルタールールに *alert:true* が含まれる場合、ルールが一致するとアラートが受信されます。
 
 ## アラートに対するアクション {#acting-on-alerts}
 
@@ -242,7 +237,7 @@ data:
 >[!CAUTION]
 >
 > これらの手順は、実稼動環境では実行しないでください。次の手順はシミュレーションの目的でのみ使用します。
-> 
+>
 >トラフィックのスパイクを示すアラートを受信した場合は、[トラフィックパターンの分析](#analyzing-traffic-patterns)の節に進みます。
 
 攻撃をシミュレートするには、[Apache ベンチマーク](https://httpd.apache.org/docs/2.4/programs/ab.html)、[Apache JMeter](https://jmeter.apache.org/)、[Vegeta](https://github.com/tsenart/vegeta) などのツールを使用できます。
