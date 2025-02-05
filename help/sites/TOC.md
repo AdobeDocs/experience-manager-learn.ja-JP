@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '582'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -100,11 +100,11 @@ ht-degree: 96%
       + [Git](edge-delivery-services/developing/git.md)
       + ユニバーサルエディター {#universal-editor}
          + [概要](./edge-delivery-services/developing/universal-editor/0-overview.md)
-         + [新規コードプロジェクト](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
-         + [新しいAEM サイト](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [新しいコードプロジェクト](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
+         + [新しい AEM サイト](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
          + [ローカル開発環境](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
          + [Web サイトのブランディング](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
-         + [新規ブロック](./edge-delivery-services/developing/universal-editor/5-new-block.md)
+         + [新しいブロック](./edge-delivery-services/developing/universal-editor/5-new-block.md)
          + [ブロックのオーサリング](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [CSS のみを使用したブロック](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [CSS および JS を使用したブロック](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)

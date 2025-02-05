@@ -1,6 +1,6 @@
 ---
 title: CSS を使用したブロックの開発
-description: ユニバーサルエディターを使用して編集可能な、Edge Delivery Services用の CSS を使用したブロックを開発します。
+description: ユニバーサルエディターを使用して編集できる、Edge Delivery Services 用の CSS を使用してブロックを開発します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,33 +9,33 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
+source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
+workflow-type: ht
 source-wordcount: '437'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # CSS を使用したブロックの開発
 
-Edge Delivery Services内のブロックは、CSS を使用してスタイル設定されます。 ブロックの CSS ファイルは、ブロックのディレクトリに格納され、ブロックと同じ名前が付けられます。 例えば、`teaser` という名前のブロックの CSS ファイルは、`blocks/teaser/teaser.css` にあります。
+Edge Delivery Services のブロックは、CSS を使用してスタイル設定されます。ブロックの CSS ファイルは、ブロックのディレクトリに保存され、ブロックと同じ名前が付けられます。例えば、`teaser` という名前のブロックの CSS ファイルは、`blocks/teaser/teaser.css` にあります。
 
-理想的には、スタイル設定にブロックに必要なのは CSS のみで、JavaScriptによる DOM の変更や CSS クラスの追加は不要です。 JavaScriptが必要かどうかは、ブロックの [ コンテンツモデリング ](./5-new-block.md#block-model) とその複雑さによって異なります。 必要に応じて、[JavaScriptをブロック ](./7b-block-js-css.md) 追加できます。
+理想的には、ブロックでは、DOM を変更したり CSS クラスを追加したりするために JavaScript に依存することなく、スタイル設定に CSS のみが必要になります。JavaScript の必要性は、ブロックの[コンテンツモデリング](./5-new-block.md#block-model)とその複雑さによって異なります。必要に応じて、[ブロックの JavaScript](./7b-block-js-css.md) を追加できます。
 
-CSS のみのアプローチを使用すると、（ほとんど）ベアセマンティックのブロックのHTML要素がターゲットとなり、スタイルが設定されます。
+CSS のみのアプローチを使用すると、ブロックの（ほとんどの）ベアセマンティック HTML 要素がターゲットとなり、スタイル設定されます。
 
-## ブロックHTML
+## ブロックの HTML
 
-Edge Delivery Services ブロックのスタイルを設定する方法を理解するには、まず、スタイル設定に使用できる DOM を確認します。 DOM は、AEM CLI のローカル開発環境が提供するブロックを調べることで確認できます。 ユニバーサルエディターの DOM は若干異なるので、使用しないでください。
+ブロックのスタイル設定方法を理解するには、まず、スタイル設定に使用できる Edge Delivery Services によって公開される DOM を確認します。DOM は、AEM CLI のローカル開発環境によって提供されるブロックを調べることで確認できます。ユニバーサルエディターの DOM は若干異なるので、使用しないでください。
 
 >[!BEGINTABS]
 
->[!TAB  スタイルに DOM]
+>[!TAB スタイル設定する DOM]
 
-次に、スタイル設定のターゲットとなるティーザーブロックの DOM を示します。
+以下は、スタイル設定のターゲットとなるティーザーブロックの DOM です。
 
-Edge Delivery Services JavaScriptによって推測される `<p class="button-container">...` 素として [ 自動的に拡張 ](./4-website-branding.md#inferred-elements) される要素に注意してください。
+`<p class="button-container">...` は、Edge Delivery Services JavaScript によって推測された要素として[自動的に拡張](./4-website-branding.md#inferred-elements)されます。
 
 ```html
 ...
@@ -71,19 +71,19 @@ Edge Delivery Services JavaScriptによって推測される `<p class="button-c
 ...
 ```
 
->[!TAB DOM を見つける方法 ]
+>[!TAB DOM を見つける方法]
 
-スタイル設定する DOM を見つけるには、スタイルが設定されていないブロックが含まれているページをローカル開発環境で開き、ブロックを選択して、DOM を調べます。
+スタイル設定する DOM を見つけるには、ローカル開発環境でスタイル設定されていないブロックを含むページを開き、ブロックを選択して DOM を検査します。
 
-![Inspect ブロック DOM](./assets/7a-block-css/inspect-block-dom.png)
+![ブロックの DOM の検査](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
-## CSS をブロック
+## ブロックの CSS
 
-ファイル名としてブロックの名前を使用して、ブロックのフォルダーに新しい CSS ファイルを作成します。 例えば、**ティーザー** ブロックの場合、ファイルは `/blocks/teaser/teaser.css` にあります。
+ブロックの名前をファイル名として使用して、ブロックのフォルダーに新しい CSS ファイルを作成します。例えば、**ティーザー**&#x200B;ブロックの場合、ファイルは `/blocks/teaser/teaser.css` にあります。
 
-この CSS ファイルは、Edge Delivery ServicesのJavaScriptがページ上でティーザーブロックを表す DOM 要素を検出すると、自動的に読み込まれます。
+この CSS ファイルは、Edge Delivery Services の JavaScript がページ上でティーザーブロックを表す DOM 要素を検出すると自動的に読み込まれます。
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -208,15 +208,15 @@ However since these element can only appear in the second/last div per our block
 }
 ```
 
-## 開発のプレビュー
+## 開発プレビュー
 
-CSS がコードプロジェクトで記述されているため、AEM CLI のホットリロードで変更内容が反映されるので、CSS によるブロックへの影響を迅速かつ簡単に理解できます。
+CSS はコードプロジェクトに書き込まれているので、AEM CLI のホットリロードによって変更が行われ、CSS がブロックにブロックに与える影響をすばやく簡単に確認できます。
 
-![CSS のみのプレビュー ](./assets/7a-block-css/local-development-preview.png)
+![CSS のみのプレビュー](./assets/7a-block-css/local-development-preview.png)
 
-## コードをリンクする
+## コードのリント
 
-クリーンで一貫性のあるコードを確実に変更するため、コードを [ 頻繁に lint](./3-local-development-environment.md#linting) します。 リンティングは、問題を早期に発見し、開発全体の時間を短縮するのに役立ちます。 すべてのリンティングの問題が解決されるまで、開発作業を `main` に結合することはできません。
+コードの変更がクリーンで一貫性のあることを確認するために、[頻繁にリント](./3-local-development-environment.md#linting)します。リンティングを行うと、問題を早期に発見し、全体的な開発時間を短縮できます。すべてのリンティングの問題が解決されるまで、開発作業を `main` に結合できません。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -224,9 +224,9 @@ CSS がコードプロジェクトで記述されているため、AEM CLI の�
 $ npm run lint:css
 ```
 
-## ユニバーサルエディターでプレビュー
+## ユニバーサルエディターでのプレビュー
 
-AEM ユニバーサルエディターで変更を表示するには、変更を追加してコミットし、ユニバーサルエディターで使用される Git リポジトリーブランチにプッシュします。 この手順は、ブロックを実装してもオーサリングエクスペリエンスが中断しなかったことを確認するのに役立ちます。
+AEM のユニバーサルエディターで変更を表示するには、ユニバーサルエディターで使用される Git リポジトリ分岐に変更を追加、コミット、プッシュします。この手順は、ブロックの実装によってオーサリングエクスペリエンスが中断されないようにするのに役立ちます。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -238,5 +238,4 @@ $ git push origin teaser
 
 これで、`?ref=teaser` クエリパラメーターを追加する際に、ユニバーサルエディターで変更をプレビューできます。
 
-![ ユニバーサルエディターのティーザー ](./assets/7a-block-css/universal-editor-preview.png)
-
+![ユニバーサルエディターのティーザー](./assets/7a-block-css/universal-editor-preview.png)

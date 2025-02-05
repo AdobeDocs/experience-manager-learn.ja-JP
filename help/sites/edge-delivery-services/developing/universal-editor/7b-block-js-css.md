@@ -1,6 +1,6 @@
 ---
 title: CSS と JS を使用したブロックの開発
-description: ユニバーサルエディターを使用して編集可能な、CSS とJavaScriptを使用したEdge Delivery Services用ブロックを作成します。
+description: ユニバーサルエディターを使用して編集できる、Edge Delivery Services 用の CSS と JavaScript を使用してブロックを開発します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,43 +9,43 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
+source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
+workflow-type: ht
 source-wordcount: '768'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# CSS と JavaScript を使用したブロックの開発
 
-# CSS とJavaScriptを使用したブロックの開発
+[前の章](./7b-block-js-css.md)では、CSS のみを使用してブロックをスタイル設定する方法について説明しました。ここでは、JavaScript と CSS の両方を使用してブロックを開発することに焦点を当てます。
 
-[ 前の章 ](./7b-block-js-css.md) では、CSS のみを使用したブロックのスタイル設定について説明しました。 現在は、JavaScriptと CSS の両方を使用したブロックの開発に焦点が移っています。
+次の例に、ブロックを 3 つの方法で拡張する方法を示します。
 
-この例では、次の 3 つの方法でブロックを拡張する方法を示します。
-
-1. カスタム CSS クラスを追加します。
+1. カスタム CSS クラスの追加。
 1. イベントリスナーを使用した動きの追加。
-1. オプションでティーザーのテキストに含めることができる利用条件の処理。
+1. ティーザーのテキストにオプションで含めることができる利用条件の処理。
 
 ## 一般的なユースケース
 
-この方法は、次のような状況で特に役立ちます。
+このアプローチは、次のシナリオで特に役立ちます。
 
-- **外部 CSS 管理：** ブロックの CSS がEdge Delivery Servicesの外部で管理され、HTML構造と整合していない場合。
-- **追加属性：** アクセシビリティ用の [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) や [ マイクロデータ ](https://developer.mozilla.org/ja/docs/Web/HTML/Microdata) などの追加属性が必要な場合。
-- **JavaScriptの機能強化：** イベントリスナーなどのインタラクティブ機能が必要な場合。
+- **外部 CSS 管理：**&#x200B;ブロックの CSS が Edge Delivery Services の外部で管理され、HTML 構造と一致していない場合。
+- **追加属性：**&#x200B;アクセシビリティの [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) や[マイクロデータ](https://developer.mozilla.org/ja/docs/Web/HTML/Microdata)などの追加属性が必要な場合。
+- **JavaScript の機能強化：**&#x200B;イベントリスナーなどのインタラクティブな機能が必要な場合。
 
-この手法はブラウザーネイティブのJavaScript DOM 操作に依存しますが、DOM を変更する際に、特に要素を移動する場合は注意が必要です。 このような変更は、ユニバーサルエディターのオーサリングエクスペリエンスを妨げる可能性があります。 大規模な DOM 変更の必要性を最小限に抑えるために、ブロックの [ コンテンツモデル ](./5-new-block.md#block-model) は慎重に設計されるのが理想です。
+この方法はブラウザーネイティブの JavaScript DOM 操作に依存しますが、DOM を変更する場合、特に要素を移動する場合は注意が必要です。このような変更により、ユニバーサルエディターのオーサリングエクスペリエンスが中断される場合があります。理想的には、ブロックの[コンテンツモデル](./5-new-block.md#block-model)は、大規模な DOM 変更の必要性を最小限に抑えるように慎重に設計する必要があります。
 
-## ブロックHTML
+## ブロックの HTML
 
-ブロック開発にアプローチするには、まず、Edge Delivery Servicesによって公開された DOM を確認します。 JavaScriptで構造を強化し、CSS でスタイルを設定します。
+ブロック開発にアプローチするには、まず Edge Delivery Services によって公開される DOM を確認します。構造は JavaScript で強化され、CSS でスタイル設定されます。
 
 >[!BEGINTABS]
 
->[!TAB  飾る DOM]
+>[!TAB 装飾する DOM]
 
-次に、JavaScriptや CSS を使用してデコレートする対象となるティーザーブロックの DOM を示します。
+次は、JavaScript と CSS を使用して装飾するターゲットとなるティーザーブロックの DOM です。
 
 ```html
 ...
@@ -81,18 +81,18 @@ ht-degree: 0%
 ...
 ```
 
->[!TAB DOM を見つける方法 ]
+>[!TAB DOM を見つける方法]
 
-デコレートする DOM を見つけるには、ローカル開発環境でデコレートされていないブロックを含むページを開き、ブロックを選択して、DOM を調べます。
+装飾する DOM を見つけるには、ローカル開発環境で装飾されていないブロックを含むページを開き、ブロックを選択して DOM を検査します。
 
-![Inspect ブロック DOM](./assets/7a-block-css/inspect-block-dom.png)
+![ブロックの DOM の検査](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
 
-## JavaScriptをブロック
+## ブロックの JavaScript
 
-ブロックにJavaScript機能を追加するには、ブロックのディレクトリに、ブロックと同じ名前（例：`/blocks/teaser/teaser.js`）でJavaScript ファイルを作成します。
+ブロックに JavaScript 機能を追加するには、ブロックのディレクトリにブロックと同じ名前の JavaScript ファイル（例：`/blocks/teaser/teaser.js`）を作成します。
 
 JavaScript ファイルでは、デフォルトの関数を書き出す必要があります。
 
@@ -100,12 +100,12 @@ JavaScript ファイルでは、デフォルトの関数を書き出す必要が
 export default function decorate(block) { ... }
 ```
 
-デフォルトの関数は、Edge Delivery ServicesHTML内のブロックを表す DOM 要素/ツリーを受け取り、ブロックのレンダリング時に実行されるカスタム JavaScriptを含みます。
+デフォルトの関数は、Edge Delivery Services HTML のブロックを表す DOM 要素／ツリーを取得し、ブロックのレンダリング時に実行されるカスタム JavaScript を含みます。
 
-この例のJavaScriptは、主に次の 3 つのアクションを実行します。
+この例の JavaScript は、主に次の 3 つのアクションを実行します。
 
-1. CTA ボタンにイベントリスナーを追加し、マウスポインターを置くと画像をズームします。
-1. ブロックの要素にセマンティック CSS クラスを追加します。これは、既存の CSS デザインシステムを統合する場合に役立ちます。
+1. CTA ボタンにイベントリスナーを追加し、ポインタを合わせる際に画像をズームします。
+1. ブロックの要素にセマンティック CSS クラスを追加します。これは、既存の CSS デザインシステムを統合する際に役立ちます。
 1. `Terms and conditions:` で始まる段落に特別な CSS クラスを追加します。
 
 [!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
@@ -171,15 +171,15 @@ export default function decorate(block) {
 }
 ```
 
-## CSS をブロック
+## ブロックの CSS
 
-[ 前の章 ](./7a-block-css.md) で `teaser.css` ーザーを作成した場合は、削除するか、名前を `teaser.css.bak` に変更します。この章では、ティーザーブロックに対して異なる CSS を実装しているからです。
+[前の章](./7a-block-css.md)で `teaser.css` を作成した場合は、削除するか、`teaser.css.bak` に名前を変更します。この章では、ティーザーブロックに異なる CSS を実装するからです。
 
-ブロックのフォルダに `teaser.css` ファイルを作成します。 このファイルには、ブロックをスタイル設定する CSS コードが含まれています。 この CSS コードは、ブロックの要素と、`teaser.js` でJavaScriptによって追加された特定のセマンティクス CSS クラスを対象としています。
+ブロックのフォルダーに `teaser.css` ファイルを作成します。このファイルには、ブロックをスタイル設定する CSS コードが含まれます。この CSS コードは、ブロックの要素と、`teaser.js` の JavaScript によって追加された特定のセマンティクス CSS クラスをターゲットとしています。
 
-ベア要素のスタイルは、直接設定することも、カスタムで適用した CSS クラスを使用して設定することもできます。 より複雑なブロックの場合は、セマンティック CSS クラスを適用すると、特に、より長い期間でより大きなチームで作業する場合に、CSS をより理解しやすく維持管理しやすくすることができます。
+ベア要素は、直接スタイル設定することも、カスタム適用された CSS クラスを使用してスタイル設定することもできます。より複雑なブロックの場合、セマンティック CSS クラスを適用すると、特に長期間にわたって大規模なチームで作業する場合に、CSS をよりわかりやすく保守しやすくなります。
 
-[ 前と同様に ](./7a-block-css.md#develop-a-block-with-css)、他のブロックとの競合を避けるために、CSS を `.block.teaser` にスコープ設定します。
+[前と同様に](./7a-block-css.md#develop-a-block-with-css)、他のブロックとの競合を避けるために、CSS の範囲を `.block.teaser`に設定します。
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -292,11 +292,11 @@ export default function decorate(block) {
 }
 ```
 
-## 利用条件を追加
+## 利用条件の追加
 
-上記の実装により、テキストフ `Terms and conditions:` ールドで始まる特別なスタイル設定を行う段落がサポートされます。 この機能を検証するには、ユニバーサルエディターでティーザーブロックのテキストコンテンツを更新して、利用条件を含めます。
+上記の実装では、`Terms and conditions:` というテキストで始まる段落を特別にスタイル設定するサポートが追加されます。この機能を検証するには、ユニバーサルエディターで、ティーザーブロックのテキストコンテンツを更新して利用条件を含めます。
 
-[ ブロックの作成 ](./6-author-block.md) の手順に従い、テキストを編集して最後に **利用条件** 段落を含めます。
+[ブロックのオーサリング](./6-author-block.md)の手順に従って、テキストを編集して最後に&#x200B;**利用条件**&#x200B;の段落を含めます。
 
 ```
 WKND Adventures
@@ -306,17 +306,17 @@ Join us on one of our next adventures. Browse our list of curated experiences an
 Terms and conditions: By signing up, you agree to the rules for participation and booking.
 ```
 
-段落がローカル開発環境で利用条件スタイルでレンダリングされることを確認します。 これらのコードの変更は、ユニバーサルエディターが使用するように設定されている [GitHub のブランチにプッシュされる ](#preview-in-universal-editor) まで、ユニバーサルエディターには反映されません。
+段落がローカル開発環境で利用条件のスタイルでレンダリングされることを確認します。これらのコード変更は、ユニバーサルエディターが使用するように設定されている [GitHub の分岐にプッシュ](#preview-in-universal-editor)されるまで、ユニバーサルエディターに反映されません。
 
-## 開発のプレビュー
+## 開発プレビュー
 
-CSS とJavaScriptが追加されると、AEM CLI のローカル開発環境が変更内容をホットリロードし、コードがブロックに与える影響をすばやく簡単に視覚化できます。 CTAの上にマウスポインターを置き、ティーザーの画像がズームインおよびズームアウトされていることを確認します。
+CSS と JavaScript を追加すると、AEM CLI のローカル開発環境によって変更がホットリロードされ、コードがブロックに与える影響をすばやく簡単に視覚化できます。CTA にポインタを合わせて、ティーザーの画像がズームインおよびズームアウトされることを確認します。
 
-![CSS および JS を使用したティーザーのローカル開発プレビュー ](./assets/7b-block-js-css/local-development-preview.png)
+![CSS および JS を使用したティーザーのローカル開発プレビュー](./assets/7b-block-js-css/local-development-preview.png)
 
-## コードをリンクする
+## コードのリント
 
-コードの変更を [ 頻繁に lint](./3-local-development-environment.md#linting) して、クリーンで一貫性のある状態に保ちます。 定期的なリンティングは、問題を早期に発見し、開発全体の時間を短縮するのに役立ちます。 リンティングの問題がすべて解決されるまで、開発作業を `main` ブランチに結合することはできません。
+コードの変更をクリーンで一貫性のある状態に保つには、[頻繁にリント](./3-local-development-environment.md#linting)します。定期的なリンティングを行うと、問題を早期に発見し、全体的な開発時間を短縮できます。すべてのリンティングの問題が解決されるまで、開発作業を `main` 分岐に結合できません。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -324,9 +324,9 @@ CSS とJavaScriptが追加されると、AEM CLI のローカル開発環境が�
 $ npm run lint
 ```
 
-## ユニバーサルエディターでプレビュー
+## ユニバーサルエディターでのプレビュー
 
-AEM ユニバーサルエディターで変更を表示するには、変更を追加してコミットし、ユニバーサルエディターで使用される Git リポジトリーブランチにプッシュします。 これにより、ブロックを実装してもオーサリングエクスペリエンスが妨げられることはありません。
+AEM のユニバーサルエディターで変更を表示するには、ユニバーサルエディターで使用される Git リポジトリ分岐に変更を追加、コミット、プッシュします。これにより、ブロックの実装によってオーサリングエクスペリエンスが中断されなくなります。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -338,5 +338,4 @@ $ git push origin teaser
 
 これで、`?ref=teaser` クエリパラメーターを追加する際に、ユニバーサルエディターで変更をプレビューできます。
 
-![ ユニバーサルエディターのティーザー ](./assets/7b-block-js-css/universal-editor-preview.png)
-
+![ユニバーサルエディターのティーザー](./assets/7b-block-js-css/universal-editor-preview.png)

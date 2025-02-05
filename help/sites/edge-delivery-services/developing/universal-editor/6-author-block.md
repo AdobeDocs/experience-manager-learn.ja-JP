@@ -1,6 +1,6 @@
 ---
 title: ブロックのオーサリング
-description: ユニバーサルエディターを使用してEdge Delivery Services ブロックを作成します。
+description: ユニバーサルエディターを使用して Edge Delivery Services ブロックを作成します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,56 +9,56 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
+source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
+workflow-type: ht
 source-wordcount: '379'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # ブロックのオーサリング
 
-[ ティーザーブロックの JSON](./5-new-block.md) を `teaser` ブランチにプッシュすると、AEM ユニバーサルエディターでブロックが編集可能になります。
+[ティーザーブロックの JSON](./5-new-block.md) を `teaser` 分岐にプッシュすると、ブロックは AEM ユニバーサルエディターで編集できるようになります。
 
-開発時のブロックのオーサリングは、次のようないくつかの理由で重要です。
+開発中のブロックのオーサリングは、次のようないくつかの理由で重要です。
 
 1. ブロックの定義とモデルが正確であることを確認します。
-1. これにより、開発者はブロックのセマンティックHTMLを確認でき、開発の基盤となります。
-1. これにより、コンテンツとセマンティックHTMLの両方をプレビュー環境にデプロイでき、ブロックの開発を迅速化できます。
+1. これにより、開発者は開発の基盤となるブロックのセマンティック HTML を確認できます。
+1. これにより、プレビュー環境に対するコンテンツとセマンティック HTML の両方のデプロイメントが可能になり、より迅速なブロック開発がサポートされます。
 
-## `teaser` ブランチのコードを使用してユニバーサルエディターを開きます
+## `teaser` 分岐のコードを使用してユニバーサルエディターを開く
 
 1. AEM オーサーにログインします。
-2. **Sites** に移動して、（前の章 [ で作成したサイト（WKND （ユニバーサルエディター） ](./2-new-aem-site.md) を選択します。
+2. **Sites** に移動して、[前の章](./2-new-aem-site.md)で作成したサイト（WKND（ユニバーサルエディター））を選択します。
 
    ![AEM Sites](./assets/6-author-block/open-new-site.png)
 
-3. ページを作成または編集して新しいブロックを追加し、コンテキストでローカル開発をサポートできるようにします。 ページはサイト内のどこでも作成できますが、多くの場合、新しい作業ごとに個別のページを作成することをお勧めします。 **ブランチ** という名前の新しい「フォルダー」ページを作成します。 各サブページは、同じ名前の Git ブランチの開発をサポートするために使用されます。
+3. ページを作成または編集して新しいブロックを追加し、ローカル開発をサポートするコンテキストが使用できることを確認します。ページはサイト内のどこにでも作成できますが、多くの場合、新しい作業内容ごとに個別のページを作成することが最適です。**分岐**&#x200B;という名前の新しい「フォルダー」ページを作成します。各サブページは、同じ名前の Git 分岐の開発をサポートするのに使用されます。
 
-   ![AEM Sites - ブランチを作成ページ ](./assets/6-author-block/branches-page-3.png)
+   ![AEM Sites - 分岐を作成ページ](./assets/6-author-block/branches-page-3.png)
 
-4. **ブランチ** ページの下に開発ブランチ名と一致する **ティーザー** という新しいページを作成し、**開く** をクリックしてページを編集します。
+4. **分岐**&#x200B;ページで、開発分岐名と一致する&#x200B;**ティーザー**&#x200B;というタイトルの新しいページを作成し、「**開く**」をクリックしてページを編集します。
 
-   ![AEM Sites - ティーザーページを作成 ](./assets/6-author-block/teaser-page-3.png)
+   ![AEM Sites - ティーザーを作成ページ](./assets/6-author-block/teaser-page-3.png)
 
-5. URL に `?ref=teaser` を追加して、`teaser` ブランチからコードを読み込むようにユニバーサルエディターを更新します。 必ずクエリパラメーター **BEFORE** を `#` の記号として追加してください。
+5. URL に `?ref=teaser` を追加して、ユニバーサルエディターを更新し、`teaser` 分岐からコードを読み込みます。`#` 記号の&#x200B;**前**&#x200B;にクエリパラメーターを追加します。
 
-   ![ ユニバーサルエディター – ティーザーブランチを選択 ](./assets/6-author-block/select-branch.png)
+   ![ユニバーサルエディター – ティーザー分岐の選択](./assets/6-author-block/select-branch.png)
 
-6. **メイン** の下の最初のセクションを選択し、「**追加**」ボタンをクリックして **ティーザー** ブロックを選択します。
+6. **メイン**&#x200B;の下にある最初のセクションを選択し、「**追加**」ボタンをクリックして、**ティーザー**&#x200B;ブロックを選択します。
 
-   ![ ユニバーサルエディター – ブロックを追加 ](./assets/6-author-block/add-teaser-2.png)
+   ![ユニバーサルエディター - ブロックの追加](./assets/6-author-block/add-teaser-2.png)
 
-7. キャンバスで、新しく追加されたティーザーを選択し、右側またはインライン編集機能を使用してフィールドを作成します。
+7. キャンバス上で、新しく追加されたティーザーを選択し、右側のフィールドまたはインライン編集機能を使用してフィールドを作成します。
 
-   ![ ユニバーサルエディター – 作成者ブロック ](./assets/6-author-block/author-block.png)
+   ![ユニバーサルエディター - ブロックの作成](./assets/6-author-block/author-block.png)
 
-8. オーサリングが完了したら、前のブラウザータブ（AEM Sites管理）に切り替えて「ティーザー」ページを選択し、「**パブリケーションの管理**」をクリックします。次に、「**プレビュー**」を選択して変更内容をプレビュー環境に公開します。 その後、変更内容が web サイトの `aem.page` ドメインに公開されます。
-   ![AEM Sites - Publishまたはプレビュー ](./assets/6-author-block/publish-to-preview.png)
+8. オーサリングが完了したら、前のブラウザータブ（AEM Sites 管理者）に切り替えて、ティーザーページを選択し、「**パブリケーションを管理**」をクリックして「**プレビュー**」を選択し、変更をプレビュー環境に公開します。変更は、web サイトの `aem.page` ドメインに公開されます。
+   ![AEM Sites - 公開またはプレビュー](./assets/6-author-block/publish-to-preview.png)
 
-9. プレビューに公開する変更が表示されるのを待ってから、[AEM CLI](./3-local-development-environment.md#install-the-aem-cli)[http://localhost:3000/branches/teaser} を使用して Web ページを開き ](http://localhost:3000/branches/teaser) す。
+9. 変更がプレビューに公開されるまで待ってから、[AEM CLI](./3-local-development-environment.md#install-the-aem-cli) 経由で [http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser) の web ページを開きます。
 
-   ![ ローカルサイト – 更新 ](./assets/6-author-block/preview.png)
+   ![ローカルサイト - 更新](./assets/6-author-block/preview.png)
 
-これで、作成したティーザーブロックのコンテンツとセマンティックHTMLがプレビュー web サイトで利用できるようになり、ローカル開発環境でAEM CLI を使用して開発する準備が整いました。
+これで、作成したティーザーブロックのコンテンツとセマンティック HTML がプレビュー web サイトで使用でき、ローカル開発環境で AEM CLI を使用して開発する準備が整いました。

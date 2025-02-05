@@ -1,6 +1,6 @@
 ---
 title: Web サイトのブランディングの追加
-description: Edge Delivery Servicesサイトのグローバル CSS、CSS 変数および web フォントを定義します。
+description: Edge Delivery Services サイトのグローバル CSS、CSS 変数および web フォントを定義します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,34 +11,34 @@ jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
 source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Web サイトのブランディングの追加
 
-最初に、グローバルスタイルを更新し、CSS 変数を定義し、web フォントを追加して、ブランド全体を設定します。 これらの基本要素により、web サイトの一貫性と保守性が維持され、サイト全体で一貫して適用される必要があります。
+最初に、グローバルスタイルを更新し、CSS 変数を定義し、web フォントを追加して、ブランド全体を設定します。これらの基本要素により、web サイトの一貫性と保守性が確保され、サイト全体で一貫して適用される必要があります。
 
 ## GitHub イシューの作成
 
-すべてを整理しておくには、GitHub を使用して作業を追跡します。 まず、この作業体系の GitHub イシューを作成します。
+すべてを整理しておくには、GitHub を使用して作業を追跡します。まず、この作業内容に関する GitHub イシューを作成します。
 
-1. GitHub リポジトリに移動します（詳しくは、[ コードプロジェクトの作成 ](./1-new-code-project.md) の章を参照）。
-2. **イシュー** タブをクリックしてから、**新しいイシュー** をクリックします。
-3. 作業を行うために、**タイトル** と **説明** を記述します。
-4. **新しいイシューを送信** をクリックします。
+1. GitHub リポジトリに移動します（詳しくは、[コードプロジェクトの作成](./1-new-code-project.md)の章を参照）。
+2. 「**イシュー**」タブをクリックし、「**新規イシュー**」をクリックします。
+3. 実行する作業の&#x200B;**タイトル**&#x200B;と&#x200B;**説明**&#x200B;を書き込みます。
+4. 「**新規イシューを送信**」をクリックします。
 
-GitHub イシューは、後で [ プルリクエストの作成 ](#merge-code-changes) 時に使用されます。
+GitHub イシューは、後で[プルリクエストの作成](#merge-code-changes)時に使用されます。
 
-![GitHub 新しいイシューを作成 ](./assets/4-website-branding/github-issues.png)
+![GitHub での新規イシューの作成](./assets/4-website-branding/github-issues.png)
 
-## 作業ブランチの作成
+## 作業用分岐の作成
 
-組織を維持し、コードの品質を確保するには、作業の各部門に新しいブランチを作成します。 これにより、新しいコードがパフォーマンスに悪影響を与えるのを防ぎ、変更が完了する前に変更が有効にならないようにします。
+組織を維持し、コードの品質を確保するには、作業内容別に新しい分岐を作成します。この方法により、新しいコードがパフォーマンスに悪影響を与えるのを防ぎ、変更が完了する前に変更が有効にならないようにします。
 
-この章では、web サイトの基本的なスタイルに重点を置いて、`wknd-styles` という名前のブランチを作成します。
+この章では、web サイトの基本的なスタイルに焦点を当てるので、`wknd-styles` という名前の分岐を作成します。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -48,21 +48,21 @@ $ git checkout -b wknd-styles
 
 ## グローバル CSS
 
-Edge Delivery Servicesは、`styles/styles.css` にあるグローバル CSS ファイルを使用して、web サイト全体の共通スタイルを設定します。 `styles.css` では、色、フォント、間隔などの側面を制御し、サイト全体ですべてが一貫して見えるようにします。
+Edge Delivery Services では、`styles/styles.css` にあるグローバル CSS ファイルを使用して、web サイト全体の共通スタイルを設定します。`styles.css` では、カラー、フォント、間隔などの側面を制御し、サイト全体ですべてが一貫して見えるようにします。
 
-グローバル CSS は、ブロックなどの下位レベルの構成に依存せず、サイトの全体的なルックアンドフィールや共有される視覚的処理に重点を置く必要があります。
+グローバル CSS では、ブロックなどの下位レベルの構造に依存せず、サイトの全体的なルックアンドフィールと、共有される視覚的処理に焦点を合わせる必要があります。
 
 グローバル CSS スタイルは、必要に応じて上書きできます。
 
 ### CSS 変数
 
-[CSS 変数 ](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) は、カラー、フォント、サイズなどのデザイン設定を保存する優れた方法です。 変数を使用すると、これらの要素を 1 か所で変更し、サイト全体で更新できます。
+[CSS 変数](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)は、カラー、フォント、サイズなどのデザイン設定を保存する優れた方法です。変数を使用すると、これらの要素を 1 か所で変更し、サイト全体で更新できます。
 
 CSS 変数のカスタマイズを開始するには、次の手順に従います。
 
-1. コードエディターで `styles/styles.css` ファイルを開きます。
-2. グローバル CSS 変数が格納されている `:root` 宣言を見つけます。
-3. WKND ブランドに一致するようにカラーおよびフォント変数を変更します。
+1. `styles/styles.css` ファイルをコードエディターで開きます。
+2. グローバル CSS 変数が保存されている `:root` 宣言を見つけます。
+3. WKND ブランドに合致するカラーおよびフォント変数を変更します。
 
 次に例を示します。
 
@@ -88,17 +88,17 @@ CSS 変数のカスタマイズを開始するには、次の手順に従いま�
 }
 ```
 
-`:root` の節のその他の変数を探索し、デフォルト設定を確認します。
+`:root` セクションの他の変数を探索して、デフォルト設定を確認します。
 
-Web サイトを開発し、同じ CSS 値を繰り返す状況が発生した場合は、スタイルの管理を容易にするために新しい変数の作成を検討します。 CSS 変数を利用するその他の CSS プロパティの例としては、`border-radius`、`padding`、`margin`、`box-shadow` などがあります。
+Web サイトを開発する際に、同じ CSS 値を繰り返す状況が発生した場合は、スタイルの管理を簡単にする新しい変数の作成を検討します。CSS 変数を使用することができる他の CSS プロパティの例には、`border-radius`、`padding`、`margin`、`box-shadow` などがあります。
 
 ### ベア要素
 
-ベア要素は、CSS クラスを使用する代わりに、要素名を通じて直接スタイル設定されます。 例えば、`.page-heading` の CSS クラスにスタイルを設定するのではなく、`h1 { ... }` を使用して `h1` 要素にスタイルが適用されます。
+ベア要素は、CSS クラスを使用する代わりに、要素名を通じて直接スタイル設定されます。例えば、`.page-heading` CSS クラスにスタイルを設定する代わりに、`h1 { ... }` を使用して `h1` 要素にスタイルを適用します。
 
-`styles/styles.css` ファイルでは、ベアHTML要素に一連のベーススタイルが適用されます。 Edge Delivery Services web サイトでは、Edge Delivery サービスのネイティブなセマンティックHTMLに合わせているので、ベア要素の使用が優先されます。
+`styles/styles.css` ファイルでは、一連の基本スタイルが HTML ベア要素に適用されます。Edge Delivery Services の web サイトでは、Edge Delivery Service のネイティブなセマンティック HTML に準拠しているので、ベア要素の使用が優先されます。
 
-WKND ブランディングに合わせるには、`styles.css` でいくつかのベア要素のスタイルを設定します。
+WKND ブランディングに合わせるには、`styles.css` でいくつかのベア要素をスタイル設定します。
 
 ```css
 /* styles/styles.css */
@@ -119,15 +119,15 @@ h2::after {
 ...
 ```
 
-これらのスタイルにより、`h2` 要素は、上書きされない限り、WKND ブランディングを使用して一貫してスタイル設定され、明確な視覚階層を作成するのに役立ちます。 各 `h2` の下の部分的な黄色い下線は、見出しに独特のタッチを追加します。
+これらのスタイルにより、上書きされない限り、`h2` 要素は一貫して WKND ブランディングでスタイル設定され、明確な視覚階層を作成するのに役立ちます。各 `h2` の下にある部分的な黄色の下線が、見出しに独特のタッチを追加しています。
 
 ### 推測される要素
 
-Edge Delivery Servicesでは、プロジェクトの `scripts.js` と `aem.js` コードは、HTML内のコンテキストに基づいて、特定のベアHTML要素を自動的に強化します。
+Edge Delivery Services では、プロジェクトの `scripts.js` および `aem.js` コードが、HTML 内のコンテキストに基づいて特定のベア HTML 要素を自動的に強化します。
 
-例えば、囲まれたテキストをインラインで囲むのではなく、独自の行で作成したアンカー（`<a>`）要素は、このコンテキストに基づいてボタンと推論されます。 これらのアンカーは、CSS クラス `button-container` を持つコンテナ `div` で自動的にラップされ、アンカー要素には `button` の CSS クラスが追加されます。
+例えば、周囲のテキストとインラインではなく、独自の行に作成されたアンカー（`<a>`）要素は、このコンテキストに基づいてボタンであると推測されます。これらのアンカーは、CSS クラス `button-container` を持つコンテナ `div` で自動的にラップされ、アンカー要素には `button` CSS クラスが追加されます。
 
-例えば、リンクが単独の行で作成される場合、Edge Delivery Services JavaScriptは DOM を次のように更新します。
+例えば、リンクを独自の行に作成すると、Edge Delivery Services JavaScript は DOM を次のように更新します。
 
 ```html
 <p class="button-container">
@@ -135,9 +135,9 @@ Edge Delivery Servicesでは、プロジェクトの `scripts.js` と `aem.js` �
 </p>
 ```
 
-これらのボタンは、WKND ブランドに合わせてカスタマイズできます。WKND ブランドでは、ボタンが黒いテキストの黄色の長方形として表示されます。
+これらのボタンは、WKND ブランドに合わせてカスタマイズできます。WKND ブランドでは、ボタンは黄色の長方形に黒色のテキストが表示されます。
 
-次に、`styles.css` で「推測されるボタン」のスタイルを設定する方法の例を示します。
+次に、`styles.css` で「推測されるボタン」をスタイル設定する方法の例を示します。
 
 ```css
 /* styles/styles.css */
@@ -170,18 +170,18 @@ button {
 }
 ```
 
-この CSS は基本ボタンスタイルを定義し、大文字テキスト、黄色の背景、黒のテキストなど WKND 固有の処理が含まれます。 `background-color` プロパティと `color` プロパティでは、CSS 変数を使用して、ボタンのスタイルをブランドのカラーと揃えることができます。 このアプローチにより、柔軟に保ちながら、サイト全体でボタンのスタイルが一貫して設定されます。
+この CSS は、基本ボタンスタイルを定義し、大文字のテキスト、黄色の背景、黒色のテキストなどの WKND 固有の処理が含まれます。`background-color` および `color` プロパティでは、CSS 変数を使用して、ボタンのスタイルをブランドのカラーと一致させることができます。このアプローチにより、柔軟性を維持しながら、サイト全体でボタンが一貫してスタイル設定されます。
 
-## Web フォント
+## Web Fonts
 
-Edge Delivery Servicesプロジェクトでは、web フォントの使用を最適化して高いパフォーマンスを維持し、Lighthouse スコアへの影響を最小限に抑えます。 この方法では、サイトの視覚的なアイデンティティを損なうことなく高速なレンダリングが保証されます。 最適なパフォーマンスを得るために web フォントを効率的に実装する方法を以下に示します。
+Edge Delivery Services プロジェクトでは、Web Fonts の使用を最適化して高いパフォーマンスを維持し、Lighthouse スコアへの影響を最小限に抑えます。この方法により、サイトの視覚的なアイデンティティを損なうことなく、高速なレンダリングが確保されます。Web Fonts を効率的に実装して最適なパフォーマンスを実現する方法を次に示します。
 
-### 書体面
+### フォントフェイス
 
-`styles/fonts.css` ファイルで CSS `@font-face` 宣言を使用してカスタム web フォントを追加します。 `fonts.css` に `@font-faces` を追加すると、最適な時間に web フォントが読み込まれるので、Lighthouse のスコアを維持するのに役立ちます。
+`styles/fonts.css` ファイルの CSS `@font-face` 宣言を使用して、カスタム web フォントを追加します。`@font-faces` を `fonts.css` に追加すると、Web Fonts が最適なタイミングで読み込まれるので、Lighthouse スコアの維持に役立ちます。
 
 1. `styles/fonts.css` を開きます。
-2. WKND ブランドフォントを含めるには、`Asar` および `Source Sans Pro` の `@font-face` 宣言を追加します。
+2. WKND ブランドフォント（`Asar` および `Source Sans Pro`）を含めるには、次の `@font-face` 宣言を追加します。
 
 ```css
 /* styles/fonts.css */
@@ -250,13 +250,13 @@ Edge Delivery Servicesプロジェクトでは、web フォントの使用を最
 }
 ```
 
-このチュートリアルで使用するフォントはGoogle Fonts から取得していますが、web フォントは、[Adobe Fonts](https://fonts.adobe.com/) を含むすべてのフォントプロバイダーから取得できます。
+このチュートリアルで使用されているフォントは、Google Fonts から取得していますが、Web Fonts は [Adobe Fonts](https://fonts.adobe.com/) を含む任意のフォントプロバイダーから取得できます。
 
-+++ローカル web フォントファイルの使用
++++ローカル Web Fonts ファイルの使用
 
-または、Web フォントファイルを `/fonts` フォルダーのプロジェクトにコピーして、`@font-face` 宣言で参照できます。
+または、Web Fonts ファイルを `/fonts` フォルダーのプロジェクトにコピーし、`@font-face` 宣言で参照します。
 
-このチュートリアルでは、リモートのホスト型 web フォントを使用するので、より簡単にフォローできます。
+このチュートリアルでは、簡単に理解できるように、リモートでホストされている Web Fonts を使用しています。
 
 ```css
 /* styles/fonts.css */
@@ -271,7 +271,7 @@ Edge Delivery Servicesプロジェクトでは、web フォントの使用を最
 
 +++
 
-最後に、新しいフォントを使用するように `styles/styles.css` の CSS 変数を更新します。
+最後に、新しいフォントを使用するように、`styles/styles.css` CSS 変数を更新します。
 
 ```css
 /* styles/styles.css */
@@ -285,15 +285,15 @@ Edge Delivery Servicesプロジェクトでは、web フォントの使用を最
 }
 ```
 
-`roboto-fallback` と `roboto-condensed-fallback` は、カスタムフ `Asar` ームと `Source Sans Pro` の web フォントをサポートするために「[ フォールバックフォント ](#fallback-fonts)」セクションで更新され、連携するフォールバックフォントです。
+`roboto-fallback` と `roboto-condensed-fallback` は、カスタム `Asar` および `Source Sans Pro` web フォントをサポートするように調整するように、[フォールバックフォント](#fallback-fonts)の節で更新されるフォールバックフォントです。
 
 ### フォールバックフォント
 
-Web フォントは、サイズが原因でパフォーマンスに影響を与えることが多く、累積レイアウトシフト（CLS）スコアが増加し、Lighthouse の全体的なスコアが低下する可能性があります。 Web フォントの読み込み中にテキストを即座に表示するために、Edge Delivery Servicesプロジェクトでは、ブラウザーネイティブのフォールバックフォントが使用されます。 このアプローチにより、目的のフォントを適用しながら、スムーズなユーザーエクスペリエンスを維持できます。
+Web Fonts は、サイズによりパフォーマンスに影響を与えることが多く、累積レイアウトシフト（CLS）スコアが増加し、全体的な Lighthouse スコアが低下する可能性があります。Web Fonts の読み込み中にテキストを即座に表示するように、Edge Delivery Services プロジェクトではブラウザーネイティブのフォールバックフォントが使用されます。このアプローチは、目的のフォントを適用しながら、スムーズなユーザーエクスペリエンスを維持するのに役立ちます。
 
-最適なフォールバックフォントを選択するには、Adobeの [Helix Font Fallback Chrome拡張機能 ](https://www.aem.live/developer/font-fallback) を使用します。この拡張機能により、カスタムフォントが読み込まれる前に、使用するブラウザーのフォントが厳密に一致するかを決定します。 結果として生成されるフォールバックフォント宣言は、パフォーマンスを向上させ、ユーザーにシームレスなエクスペリエンスを提供するために、`styles/styles.css` ファイルに追加する必要があります。
+最適なフォールバックフォントを選択するには、アドビの [Helix Font Fallback Chrome 拡張機能](https://www.aem.live/developer/font-fallback)を使用します。これにより、カスタムフォントが読み込まれる前に、ブラウザーで使用する近似フォントが決定されます。パフォーマンスを向上させ、ユーザーにシームレスなエクスペリエンスを確保するには、結果として得られるフォールバックフォント宣言を `styles/styles.css` ファイルに追加する必要があります。
 
-[Helix Font Fallback Chrome拡張機能 ](https://www.aem.live/developer/font-fallback) を使用するには、Edge Delivery Servicesの web サイトで使用されるのと同じバリエーションに web フォントが適用されている web ページがあることを確認します。 このチュートリアルでは、[wknd.site](http://wknd.site/us/en.html) の拡張機能について説明します。 Web サイトを開発するときは、[wknd.site](http://wknd.site/us/en.html) ではなく、作業中のサイトに拡張機能を適用します。
+[Helix Font Fallback Chrome 拡張機能](https://www.aem.live/developer/font-fallback)を使用するには、web ページに Edge Delivery Services の web サイトで使用されているものと同じバリエーションの web フォントが適用されていることを確認します。このチュートリアルでは、[wknd.site](http://wknd.site/us/en.html) の拡張機能について説明します。Web サイトを開発する際は、拡張機能を [wknd.site](http://wknd.site/us/en.html) ではなく、作業中のサイトに適用します。
 
 ```css
 /* styles/styles.css */
@@ -318,7 +318,7 @@ Web フォントは、サイズが原因でパフォーマンスに影響を与�
 ...
 ```
 
-フォールバックフォントファミリー名を `styles/styles.css` のフォント CSS 変数の「実際の」フォントファミリー名の後に追加します。
+`styles/styles.css` のフォント CSS 変数の「実際」のフォントファミリー名の後に、フォールバックフォントファミリー名を追加します。
 
 ```css
 /* styles/styles.css */
@@ -332,11 +332,11 @@ Web フォントは、サイズが原因でパフォーマンスに影響を与�
 }
 ```
 
-## 開発のプレビュー
+## 開発プレビュー
 
-CSS を追加すると、AEM CLI のローカル開発環境が変更内容を自動的に再読み込みするので、CSS がブロックに与える影響をすばやく簡単に確認できます。
+CSS を追加すると、AEM CLI のローカル開発環境によって変更が自動的に再読み込みされるので、CSS がブロックに与える影響をすばやく簡単に確認できます。
 
-![WKND ブランド CSS の開発プレビュー ](./assets/4-website-branding/preview.png)
+![WKND ブランド CSS の開発プレビュー](./assets/4-website-branding/preview.png)
 
 
 ## 最終的な CSS ファイルのダウンロード
@@ -346,17 +346,17 @@ CSS を追加すると、AEM CLI のローカル開発環境が変更内容を�
 * [`styles.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/styles.css)
 * [`fonts.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/fonts.css)
 
-## CSS ファイルのリンク
+## CSS ファイルのリント
 
-コードの変更を [ 頻繁に lint](./3-local-development-environment.md#linting) し、クリーンで一貫性のあるものにします。 定期的にリンティングを行うと、問題を早期に発見でき、開発全体の時間を短縮できます。 リンティングの問題がすべて解決されるまで、作業を main ブランチに結合できないことに注意してください。
+コードの変更が確実にクリーンで一貫性を持たせるには、[頻繁にリント](./3-local-development-environment.md#linting)します。定期的にリンティングを行うと、問題を早期に発見し、全体的な開発時間を短縮できます。すべてのリンティングの問題が解決されるまで、作業をメイン分岐に結合できません。
 
 ```bash
 $ npm run lint:css
 ```
 
-## コードの変更を結合
+## コードの変更の結合
 
-変更内容を GitHub の `main` ブランチに結合すると、これらの更新時に将来の作業を構築できます。
+これらの更新に基づいて今後の作業をビルドするには、変更を GitHub の `main` 分岐に結合します。
 
 ```bash
 $ git add .
@@ -364,13 +364,13 @@ $ git commit -m "Add global CSS, CSS variables, and web fonts"
 $ git push origin wknd-styles
 ```
 
-変更が `wknd-styles` ブランチにプッシュされたら、GitHub でプルリクエストを作成して、`main` ブランチにマージします。
+変更が `wknd-styles` 分岐にプッシュされたら、GitHub でプルリクエストを作成して、`main` 分岐に結合します。
 
-1. [ プロジェクトの新規作成 ](./1-new-code-project.md) の章で作成した GitHub リポジトリに移動します。
-2. 「**プルリクエスト**」タブをクリックし、「**新規プルリクエスト**」を選択します。
-3. `wknd-styles` をソースブランチ、`main` をターゲットブランチとして設定します。
+1. [新しいプロジェクトの作成](./1-new-code-project.md)の章から GitHub リポジトリに移動します。
+2. 「**プルリクエスト**」タブをクリックし、「**新しいプルリクエスト**」を選択します。
+3. `wknd-styles` をソース分岐として設定し、`main` をターゲット分岐として設定します。
 4. 変更を確認し、「**プルリクエストを作成**」をクリックします。
-5. プルリクエストの詳細で、**次を追加します**。
+5. プルリクエストの詳細に、**次の内容を追加します**。
 
    ```
    Add basic global CSS, CSS variables, and web fonts (including fallback fonts) to support the WKND brand.
@@ -382,11 +382,11 @@ $ git push origin wknd-styles
    - After: https://wknd-styles--wknd-aem-eds-ue--davidjgonzalez.aem.live/
    ```
 
-   * `Fix #1` では、先ほど作成した GitHub の問題について説明しています。
-   * テスト URL は、検証と比較に使用するブランチをAEM コード同期に示します。 「After」 URL は、作業ブランチ `wknd-styles` を使用して、コードの変更が Web サイトのパフォーマンスに与える影響を確認します。
+   * `Fix #1` は、以前に作成した GitHub イシューを参照します。
+   * テスト URL では、検証と比較に使用する分岐を AEM Code Sync に指示します。「After」の URL では、作業用分岐 `wknd-styles`を使用して、コードの変更が web サイトのパフォーマンスに与える影響を確認します。
 
-6. **プルリクエストを作成** をクリックします。
-7. [AEM コード同期 GitHub アプリ ](./1-new-code-project.md) が **品質チェックを完了** するまで待ちます。 失敗した場合は、エラーを解決してチェックを再実行します。
-8. チェックが合格したら、**プルリクエストをマージ** して `main` に入れます。
+6. 「**プルリクエストを作成**」をクリックします。
+7. [AEM Code Sync GitHub アプリ](./1-new-code-project.md)が&#x200B;**品質チェックを完了**&#x200B;するまで待ちます。失敗した場合は、エラーを解決してチェックを再実行します。
+8. チェックに合格したら、`main` に&#x200B;**プルリクエストを結合**&#x200B;します。
 
-変更内容を `main` にマージすると、実稼動環境にデプロイされたものとは見なされず、これらの更新に基づいて新しい開発を続行できます。
+変更を `main` に結合すると、実稼動環境にデプロイされたとは見なされず、これらの更新に基づいて新しい開発を進めることができます。
