@@ -1,6 +1,6 @@
 ---
 title: ブロックの作成
-description: ユニバーサルエディターで編集可能なEdge Delivery Services web サイトのブロックを作成します。
+description: ユニバーサルエディターで編集できる Edge Delivery Services の web サイト用のブロックを作成します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,36 +13,36 @@ exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
 source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
 source-wordcount: '1742'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
-# 新しいブロックを作成
+# 新しいブロックの作成
 
-この章では、ユニバーサルエディターを使用して、Edge Delivery Services web サイト用の新しい編集可能なティーザーブロックを作成するプロセスについて説明します。
+この章では、ユニバーサルエディターを使用して、Edge Delivery Services web サイト用の新しい編集できるティーザーブロックを作成するプロセスについて説明します。
 
-![ 新しいティーザーブロック ](./assets//5-new-block/teaser-block.png)
+![新しいティーザーブロック](./assets//5-new-block/teaser-block.png)
 
-`teaser` という名前のブロックに、次の要素が表示されます。
+`teaser` という名前のブロックでは、次の要素を示します。
 
 - **画像**：視覚的に魅力的な画像。
-- **テキストコンテンツ**:
-   - **タイトル**：フォーカスを引き出すための説得力のある見出し。
-   - **本文**：オプションの利用条件など、コンテキストや詳細を提供する説明的なコンテンツ。
-   - **コールトゥアクション（CTA）ボタン**：ユーザーのインタラクションを促し、さらなるエンゲージメントの実現に導くように設計されたリンク。
+- **テキストコンテンツ**：
+   - **タイトル**：注目を集める説得力のある見出し。
+   - **本文**：オプションの利用条件を含む、コンテキストや詳細を提供する説明的なコンテンツ。
+   - **コールトゥアクション（CTA）ボタン**：ユーザーのインタラクションを促し、さらなるエンゲージメントを促すように設計されたリンク。
 
-`teaser` ブロックのコンテンツはユニバーサルエディターで編集できるため、使いやすさと web サイト全体での再利用性が確保されます。
+`teaser` ブロックのコンテンツはユニバーサルエディターで編集できるので、web サイト全体での使いやすさと再利用性が確保されます。
 
-`teaser` ブロックは、ボイラープレートの `hero` ブロックに似ています。したがって、`teaser` ブロックは、開発の概念を説明する簡単な例としてのみ機能するように設計されています。
+`teaser` ブロックはボイラープレートの `hero` ブロックに似ています。したがって、`teaser` ブロックは開発の概念を説明する簡単な例としてのみ使用されることを目的としています。
 
-## 新しい Git ブランチの作成
+## 新しい Git 分岐の作成
 
-クリーンで整理されたワークフローを維持するには、特定の開発タスクごとに新しいブランチを作成します。 これにより、不完全なコードやテストされていないコードを実稼動環境にデプロイする際の問題を回避できます。
+クリーンで組織化されたワークフローを維持するには、特定の開発タスクごとに新しい分岐を作成します。これにより、不完全なコードやテストされていないコードを実稼動環境にデプロイする際に発生する問題を回避できます。
 
-1. **main ブランチから開始**：最新の実稼動コードを使用して作業することで、堅牢な基盤を確保できます。
-2. **リモート変更の取得**:GitHub から最新のアップデートを取得すると、開発を開始する前に、最新のコードを確実に利用できるようになります。
-   - 例：`wknd-styles` ブランチからの変更を `main` に結合した後、最新の更新を取得する
-3. **新しいブランチの作成**:
+1. **メイン分岐から開始**：最新の実稼動コードから作業することで、強固な基盤が確保されます。
+2. **リモート変更を取得**：GitHub から最新の更新を取得すると、開発を開始する前に最新のコードが使用できます。
+   - 例：`wknd-styles` 分岐からの変更を `main` に結合した後、最新の更新を取得します。
+3. **新しい分岐を作成**：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -51,11 +51,11 @@ $ git fetch origin
 $ git checkout -b teaser origin/main  
 ```
 
-`teaser` ブランチを作成したら、ティーザーブロックの開発を開始できます。
+`teaser` 分岐を作成すると、ティーザーブロックの開発を開始する準備が整います。
 
-## フォルダーをブロック
+## ブロックのフォルダー
 
-プロジェクトの `blocks` ディレクトリに `teaser` という名前の新規フォルダーを作成します。 このフォルダーには、ブロックの JSON、CSS、JavaScript ファイルが含まれ、ブロックのファイルを 1 か所に整理します。
+プロジェクトの `blocks` ディレクトリに `teaser` という名前の新しいフォルダーを作成します。このフォルダーには、ブロックの JSON、CSS、JavaScript ファイルが含まれており、ブロックのファイルが 1 つの場所に整理されます。
 
 ```
 # ~/Code/aem-wknd-eds-ue
@@ -63,17 +63,17 @@ $ git checkout -b teaser origin/main
 /blocks/teaser
 ```
 
-ブロックフォルダー名はブロックの ID として機能し、開発全体でブロックを参照するために使用されます。
+ブロックフォルダー名は、ブロックの ID として機能し、開発全体を通じてブロックを参照するのに使用されます。
 
-## JSON をブロック
+## ブロックの JSON
 
-ブロック JSON は、ブロックの 3 つの主要な側面を定義します。
+ブロックの JSON は、ブロックの次の 3 つの主要な側面を定義します。
 
-- **定義**：ブロックをユニバーサルエディターの編集可能なコンポーネントとして登録し、ブロックモデルおよびオプションでフィルターにリンクします。
-- **モデル**: ブロックのオーサリングフィールドと、これらのフィールドがセマンティックEdge Delivery ServicesHTMLとしてレンダリングされる方法を指定します。
-- **フィルター**：ユニバーサルエディターを使用してブロックを追加できるコンテナを制限するフィルタリングルールを設定します。 ほとんどのブロックはコンテナではなく、その ID が他のコンテナブロックのフィルターに追加されます。
+- **定義**：ブロックをユニバーサルエディターで編集できるコンポーネントとして登録し、ブロックモデルおよびオプションでフィルターにリンクします。
+- **モデル**：ブロックのオーサリングフィールドと、これらのフィールドがセマンティック Edge Delivery Services HTML としてレンダリングされる方法を指定します。
+- **フィルター**：ユニバーサルエディター経由でブロックを追加できるコンテナを制限するフィルタリングルールを設定します。ほとんどのブロックはコンテナではありませんが、その ID は他のコンテナブロックのフィルターに追加されます。
 
-次の初期構造を持つ新しいファイルを `/blocks/teaser/_teaser.json` に正確な順序で作成します。 キーが正しくない場合は、正しく作成されない可能性があります。
+次の初期構造を正確な順序で使用して、`/blocks/teaser/_teaser.json` に新しいファイルを作成します。キーの順序が正しくない場合、正しく作成されない場合があります。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -87,61 +87,61 @@ $ git checkout -b teaser origin/main
 
 ### ブロックモデル
 
-ブロックモデルは、以下を定義するので、ブロック設定の重要な部分になります。
+ブロックモデルは、以下を定義するので、ブロックの設定の重要な部分です。
 
-1. 編集可能なフィールドを定義したオーサリングエクスペリエンス。
+1. 編集できるフィールドを定義することによるオーサリングエクスペリエンス。
 
-   ![ ユニバーサルエディターのフィールド ](./assets/5-new-block/fields-in-universal-editor.png)
+   ![ユニバーサルエディターのフィールド](./assets/5-new-block/fields-in-universal-editor.png)
 
-2. フィールドの値がEdge Delivery ServicesHTMLにレンダリングされる方法。
+2. フィールドの値を Edge Delivery Services HTML にレンダリングする方法。
 
-モデルには [ ブロックの定義に対応する `id` が割り当てられ ](#block-definition) 編集可能なフィールドを指定する `fields` 配列が含まれています。
+モデルには、[ブロックの定義](#block-definition)に対応する `id` が割り当てられ、編集できるフィールドを指定する `fields` 配列が含まれます。
 
 `fields` 配列の各フィールドには、次の必須プロパティを含む JSON オブジェクトがあります。
 
 | JSON プロパティ | 説明 |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `component` | [ フィールドタイプ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types) （`text`、`reference`、`aem-content` など）。 |
-| `name` | フィールドの名前。AEMで値が保存されている JCR プロパティにマッピングされます。 |
+| `component` | `text`、`reference`、`aem-content` などの[フィールドタイプ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)。 |
+| `name` | AEM で値が保存される JCR プロパティにマッピングされるフィールドの名前。 |
 | `label` | ユニバーサルエディターで作成者に表示されるラベル。 |
 
-オプションを含むプロパティの包括的なリストについては、[ ユニバーサルエディターフィールドのドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields) を参照してください。
+オプションを含むプロパティの包括的なリストについて詳しくは、[ユニバーサルエディターのフィールド](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields)のドキュメントを参照してください。
 
-#### ブロック設計
+#### ブロックデザイン
 
-![ ティーザーブロック ](./assets/5-new-block/block-design.png)
+![ティーザーブロック](./assets/5-new-block/block-design.png)
 
-ティーザーブロックには、次の編集可能な要素が含まれています。
+ティーザーブロックには、次の編集できる要素が含まれます。
 
 1. **画像**：ティーザーの視覚的なコンテンツを表します。
-2. **テキストコンテンツ**：タイトル、本文、コールトゥアクションボタンが含まれ、白い長方形に収められています。
-   - **title** と **body text** は、同じリッチテキストエディターで作成できます。
-   - **CTA** は、**label** の `text` フィールド、および **link** の `aem-content` フィールドを介してオーサリングできます。
+2. **テキストコンテンツ**：タイトル、本文、コールトゥアクションボタンが含まれ、白色の長方形内に配置されます。
+   - **タイトル**&#x200B;と&#x200B;**本文**&#x200B;は、同じリッチテキストエディターを使用して作成できます。
+   - **CTA** は、**ラベル**&#x200B;の「`text`」フィールドと&#x200B;**リンク**&#x200B;の「`aem-content`」フィールドを使用して作成できます。
 
-ティーザーブロックのデザインは、2 つの論理コンポーネント（画像コンテンツとテキストコンテンツ）に分割され、構造化された直感的なオーサリングエクスペリエンスをユーザーに提供します。
+ティーザーブロックのデザインは、これら 2 つの論理コンポーネント（画像とテキストコンテンツ）に分割され、構造化された直感的なオーサリングエクスペリエンスをユーザーに提供します。
 
-### ブロックフィールド
+### ブロックのフィールド
 
-ブロックに必要な次のフィールドを定義します。画像、画像の代替テキスト、テキスト、CTA ラベル、CTA リンク。
+ブロックに必要なフィールド（画像、画像の代替テキスト、テキスト、CTA ラベル、CTA リンク）を定義します。
 
 >[!BEGINTABS]
 
->[!TAB  正しい方法 ]
+>[!TAB 正しい方法]
 
-**このタブでは、ティーザーブロックを適切にモデル化する方法を説明します。**
+**このタブでは、ティーザーブロックをモデル化する正しい方法について説明します。**
 
-ティーザーは、画像とテキストの 2 つの論理領域で構成されます。 Edge Delivery ServicesHTMLを目的の web エクスペリエンスとして表示するために必要なコードを簡単にするために、ブロックモデルにはこの構造を反映する必要があります。
+ティーザーは、画像とテキストという 2 つの論理領域で構成されます。Edge Delivery Services HTML を目的の web エクスペリエンスとして表示するのに必要なコードを簡素化するには、ブロックモデルでこの構造を反映する必要があります。
 
-- **フィールドを折りたたむ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) を使用して、** 画像 **と [ 画像代替テキスト** をグループ化します。
-- [CTAの要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) と [ フィールド折りたたみ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) を使用して、テキストコンテンツフィールドをグループ化します。
+- [フィールドの折りたたみ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)を使用して、**画像**&#x200B;と&#x200B;**画像の代替テキスト**&#x200B;をグループ化します。
+- [要素のグループ化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)と [CTA のフィールドの折りたたみ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)を使用して、テキストコンテンツフィールドをグループ化します。
 
-[ フィールドを折りたたむ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[ 要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)、または [ タイプの推論 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) に詳しくない場合は、続行する前にリンクされているドキュメントを確認してください。これらは適切に構造化されたブロックモデルの作成に不可欠なものだからです。
+[フィールドの折りたたみ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[要素のグループ化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)、または[型推論](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)に慣れていない場合は、適切に構造化されたブロックモデルを作成するのに不可欠であるので、続行する前にリンクされているドキュメントを確認します。
 
-次の例では、
+以下に例を示します。
 
-- [ 型の推論 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) を使用すると、`image` フィールドから `<img>`HTML要素が自動的に作成されます。 フィールドの折りたたみは、`image` フィールドと `imageAlt` フィールドと共に使用して、`<img>` HTML要素を作成します。 `src` 属性は `image` フィールドの値に設定され、`alt` 属性は `imageAlt` フィールドの値に設定されます。
-- `textContent` は、フィールドの分類に使用されるグループ名です。 セマンティックにする必要がありますが、このブロックに固有のものであれば何でも構いません。 これにより、ユニバーサルエディターは、最終的なHTML出力の同じ `<div>` 要素内でこのプレフィックスを持つすべてのフィールドをレンダリングするように通知されます。
-- フィールドの折りたたみは、コールトゥアクション（CTA）の `textContent` グループ内でも適用されます。 CTAは、[type inference](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) を使用して `<a>` として作成されます。 `cta` フィールドは、`<a>` 要素の `href` 属性を設定するために使用され、`ctaText` フィールドは、`<a ...>` タグ内のリンクのテキストコンテンツを提供します。
+- [型推論](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)は、「`image`」フィールドから `<img>` HTML 要素を自動的に作成するのに使用されます。フィールドの折りたたみは、「`image`」フィールドと「`imageAlt`」フィールドで使用され、`<img>` HTML 要素を作成します。`src` 属性は「`image`」フィールドの値に設定され、`alt` 属性は「`imageAlt`」フィールドの値に設定されます。
+- `textContent` は、フィールドを分類するのに使用されるグループ名です。セマンティックにする必要がありますが、このブロックに固有のものであれば何でも構いません。これにより、ユニバーサルエディターに、このプレフィックスを持つすべてのフィールドを最終的な HTML 出力の同じ `<div>` 要素内にレンダリングするように通知されます。
+- フィールドの折りたたみは、コールトゥアクション（CTA）の `textContent` グループ内でも適用されます。CTA は、[型推論](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)を通じて `<a>` として作成されます。「`cta`」フィールドは `<a>` 要素の `href` 属性を設定するのに使用され、「`ctaText`」フィールドは `<a ...>` タグ内のリンクのテキストコンテンツを提供します。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -192,9 +192,9 @@ $ git checkout -b teaser origin/main
 }
 ```
 
-このモデルは、ブロックのユニバーサルエディターのオーサリング入力を定義します。
+このモデルは、ブロックのユニバーサルエディターでのオーサリング入力を定義します。
 
-このブロックの結果のEdge Delivery ServicesHTMLでは、画像が最初の div に配置され、要素グループ `textContent` フィールドが 2 番目の div に配置されます。
+このブロックの結果として得られる Edge Delivery Services HTML では、最初の div に画像が配置され、2 番目の div に要素グループの「`textContent`」フィールドが配置されます。
 
 ```html
 <div>
@@ -215,17 +215,17 @@ $ git checkout -b teaser origin/main
 </div>        
 ```
 
-[ 次の章 ](./7a-block-css.md) で示すように、このHTML構造により、まとまりのあるユニットとしてブロックのスタイルを簡単に設定できます。
+[次の章](./7a-block-css.md)で説明するように、この HTML 構造により、ブロックをまとまりのある単位としてスタイル設定することが簡素化されます。
 
-フィールドの折りたたみと要素のグループ化を使用しない場合の結果については、上記の **間違った方法** タブを参照してください。
+フィールドの折りたたみと要素のグループ化を使用しない場合の結果を理解するには、上記の「**間違った方法**」タブを参照してください。
 
->[!TAB  間違った方法 ]
+>[!TAB 間違った方法]
 
-**このタブは、ティーザーブロックをモデル化するための次善の方法を示していますが、これは正しい方法に対する並置にすぎません。**
+**このタブでは、ティーザーブロックをモデル化する次善策としての方法について説明しますが、正しい方法との比較にすぎません。**
 
-[ フィールドを折りたたむ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) および [ 要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) を使用せずに、各フィールドをブロックモデル内のスタンドアロンフィールドとして定義することは魅力的に思われるかもしれません。 ただし、この監視により、ブロックを凝集体ユニットとしてスタイル設定することが複雑になります。
+[フィールドの折りたたみ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)や[要素のグループ化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)を使用せずに、各フィールドをブロックモデル内のスタンドアロンフィールドとして定義することは魅力的に思える場合があります。ただし、この見落としにより、ブロックをまとまりのある単位としてスタイル設定することが複雑になります。
 
-例えば、ティーザーモデルは、次のようにフィールドの折りたたみや要素のグループ化を **なし** で定義できます。
+例えば、ティーザーモデルは、フィールドの折りたたみや要素のグループ化を&#x200B;**行わず**&#x200B;に次のように定義できます。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -276,7 +276,7 @@ $ git checkout -b teaser origin/main
 }
 ```
 
-ブロックのEdge Delivery ServicesHTMLによって、各フィールドの値が別々の `div` にレンダリングされるので、コンテンツの理解、スタイルの適用、HTML構造の調整が複雑になり、目的のデザインが実現されます。
+ブロックの Edge Delivery Services HTML では、各フィールドの値を個別の `div` にレンダリングするので、目的のデザインを実現するコンテンツの理解、スタイルの適用、HTML 構造の調整が複雑になります。
 
 ```html
 <div>
@@ -304,24 +304,24 @@ $ git checkout -b teaser origin/main
 </div>        
 ```
 
-各フィールドは独自の `div` で分離されているので、画像コンテンツとテキストコンテンツを統一された単位としてスタイル設定することは困難です。 必要なデザインを手間と創造性をもって実現することは可能ですが、[ 要素のグループ化 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) を使用してテキストコンテンツフィールドをグループ化し、[ フィールドの折りたたみ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) を使用して、作成した値を要素属性として追加する方が、よりシンプルで簡単かつ意味的に正しい方法です。
+各フィールドは独自の `div` に分離されているので、画像とテキストコンテンツをまとまりのある単位としてスタイル設定することが困難です。労力と創造性で目的のデザインを実現することは可能ですが、[要素のグループ化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)を使用してテキストコンテンツフィールドをグループ化し、[フィールドの折りたたみ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)を使用して、作成された値を要素属性として追加する方が、よりシンプルで簡単であり、セマンティクス的にも適切です。
 
-ティーザーブロックをより適切にモデル化する方法については、上の **書き込み方法** タブを参照してください。
+ティーザーブロックをより適切にモデル化する方法について詳しくは、上記の「**正しい方法**」タブを参照してください。
 
 >[!ENDTABS]
 
 
-### ブロック定義
+### ブロックの定義
 
-ブロック定義は、ユニバーサルエディターにブロックを登録します。 ブロック定義で使用される JSON プロパティの分類を次に示します。
+ブロックの定義では、ユニバーサルエディターにブロックを登録します。ブロックの定義で使用される JSON プロパティの分類を以下に示します。
 
 | JSON プロパティ | 説明 |
 |---------------|-------------|
-| `definition.title` | ユニバーサルエディターの **追加** ブロックに表示されるブロックのタイトル。 |
-| `definition.id` | `filters` での使用を制御するために使用される、ブロックの一意の ID。 |
-| `definition.plugins.xwalk.page.resourceType` | ユニバーサルエディターでコンポーネントをレンダリングするための Sling リソースタイプを定義します。 常に `core/franklin/components/block/v#/block` リソースタイプを使用します。 |
-| `definition.plugins.xwalk.page.template.name` | ブロックの名前。 ブロックのフォルダー名に一致するように、小文字でハイフンを付ける必要があります。 この値は、ユニバーサルエディターでブロックのインスタンスにラベルを付ける場合にも使用されます。 |
-| `definition.plugins.xwalk.page.template.model` | この定義を `model` 定義にリンクします。この定義は、ユニバーサルエディターでブロックに表示されるオーサリングフィールドを制御します。 この値は、`model.id` 値に一致する必要があります。 |
+| `definition.title` | ユニバーサルエディターの&#x200B;**追加**&#x200B;ブロックに表示されるブロックのタイトル。 |
+| `definition.id` | `filters` での使用を制御するのに使用される、ブロックの一意の ID。 |
+| `definition.plugins.xwalk.page.resourceType` | ユニバーサルエディターでコンポーネントをレンダリングする Sling リソースタイプを定義します。常に `core/franklin/components/block/v#/block` リソースタイプを使用します。 |
+| `definition.plugins.xwalk.page.template.name` | ブロックの名前。ブロックのフォルダー名と一致するように、小文字にしてハイフンで区切る必要があります。この値は、ユニバーサルエディターでブロックのインスタンスにラベルを付ける場合にも使用されます。 |
+| `definition.plugins.xwalk.page.template.model` | ユニバーサルエディターでブロックに対して表示されるオーサリングフィールドを制御する `model` 定義にこの定義をリンクします。ここの値は、`model.id` 値と一致する必要があります。 |
 | `definition.plugins.xwalk.page.template.classes` | 値がブロックHTML要素の `class` 属性に追加されるオプションのプロパティ。 これにより、同じブロックのバリアントを使用できます。 `classes` の値は、[ クラスフィールドを追加 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) してブロックの [model](#block-model) に編集可能にすることができます。 |
 
 
@@ -357,13 +357,13 @@ $ git checkout -b teaser origin/main
 この例では、次のようになります。
 
 - このブロックの名前は「ティーザー」で、ユニバーサルエディターで編集できるフィールドを決定する `teaser` モデルを使用します。
-- このブロックには、`textContent_text` フィールドのデフォルトコンテンツが含まれます。これは、タイトルと本文テキスト用のリッチテキスト領域であり、CTA（コールトゥアクション）のリンクとラベル用の `textContent_cta` と `textContent_ctaText` です。 初期コンテンツを含んだテンプレートのフィールド名は、[ コンテンツモデルのフィールド配列 ](#block-model) で定義されたフィールド名と一致します。
+- ブロックには、タイトルと本文のリッチテキスト領域である「`textContent_text`」フィールドのデフォルトコンテンツと、CTA（コールトゥアクション）リンクとラベルの `textContent_cta` と `textContent_ctaText` が含まれます。初期コンテンツを含むテンプレートのフィールド名は、[コンテンツモデルのフィールド配列](#block-model)で定義されたフィールド名と一致します。
 
-この構造により、ブロックは、レンダリングに適したフィールド、コンテンツモデル、リソースタイプを使用して、ユニバーサルエディターで設定されます。
+この構造により、レンダリング用の適切なフィールド、コンテンツモデル、リソースタイプを使用して、ブロックがユニバーサルエディターで設定されます。
 
-### フィルターのブロック
+### ブロックのフィルター
 
-ブロックの `filters` 配列は、[ コンテナブロック ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container) について、コンテナに追加できるその他のブロックを定義します。 フィルターは、コンテナに追加できるブロック ID （`model.id`）のリストを定義します。
+ブロックの `filters` 配列は、[コンテナブロック](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)の場合、コンテナに追加できる他のブロックを定義します。フィルターは、コンテナに追加できるブロック ID（`model.id`）のリストを定義します。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -375,11 +375,11 @@ $ git checkout -b teaser origin/main
 }
 ```
 
-ティーザーコンポーネントは [ コンテナブロック ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container) ではないので、他のブロックを追加することはできません。 その結果、`filters` の配列は空のままになります。 代わりに、ティーザーの ID をセクションブロックのフィルターリストに追加して、ティーザーをセクションに追加できるようにします。
+ティーザーコンポーネントは[コンテナブロック](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)ではないので、他のブロックを追加できません。その結果、`filters` 配列は空のままになります。代わりに、ティーザーの ID をセクションブロックのフィルターリストに追加して、ティーザーをセクションに追加できるようにします。
 
-![ ブロックフィルター ](./assets/5-new-block/filters.png)
+![ブロックのフィルター](./assets/5-new-block/filters.png)
 
-断面ブロックなどのAdobe提供のブロックは、フィルタをプロジェクトの `models` フォルダに格納します。 調整するには、Adobe提供のブロック（例：`/models/_section.json`）の JSON ファイルを見つけ、ティーザーの ID （`teaser`）をフィルターリストに追加します。 この設定は、ティーザーコンポーネントをセクションコンテナブロックに追加できることをユニバーサルエディターにシグナルで通知します。
+アドビが提供するブロック（セクションブロックなど）は、プロジェクトの `models` フォルダーにフィルターを保存します。調整するには、アドビが提供するブロックの JSON ファイル（`/models/_section.json` など）を見つけて、ティーザーの ID（`teaser`）をフィルターリストに追加します。この設定により、ティーザーコンポーネントをセクションコンテナブロックに追加できることがユニバーサルエディターに通知されます。
 
 [!BADGE /models/_section.json]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -408,9 +408,9 @@ $ git checkout -b teaser origin/main
 
 `teaser` のティーザーブロック定義 ID が `components` 配列に追加されます。
 
-## JSON ファイルをリンクする
+## JSON ファイルのリント
 
-変更がクリーンで一貫性を持つようにするため、必ず [ 頻繁にリントする ](./3-local-development-environment.md#linting) ようにします。 リンティングは、頻繁に問題を早期に発見し、開発全体の時間を短縮するのに役立ちます。 `npm run lint:js` コマンドは JSON ファイルもリンクし、構文エラーをキャッチします。
+変更がクリーンで一貫性のあることを確認するには、[頻繁にリント](./3-local-development-environment.md#linting)します。頻繁にリンティングを行うと、問題を早期に発見し、全体的な開発時間を短縮できます。`npm run lint:js` コマンドも JSON ファイルをリントし、構文エラーを検出します。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -418,9 +418,9 @@ $ git checkout -b teaser origin/main
 $ npm run lint:js
 ```
 
-## プロジェクト JSON の構築
+## プロジェクトの JSON のビルド
 
-ブロック JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json`）を設定したら、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` の各ファイルにコンパイルする必要があります。 コンパイルは、プロジェクトの [build JSON](./3-local-development-environment.md#build-json-fragments) npm スクリプトを実行して行われます。
+ブロックの JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json`）を設定したら、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` ファイルにコンパイルする必要があります。コンパイルは、プロジェクトの[ビルド JSON](./3-local-development-environment.md#build-json-fragments) npm スクリプトを実行することによって行われます。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -430,9 +430,9 @@ $ npm run build:json
 
 ## ブロック定義のデプロイ
 
-ユニバーサルエディターでブロックを使用できるようにするには、プロジェクトをコミットし、GitHub リポジトリのブランチ（この場合は `teaser` ブランチ）にプッシュする必要があります。
+ユニバーサルエディターでブロックを使用できるようにするには、プロジェクトをコミットして GitHub リポジトリの分岐（この場合は、`teaser` 分岐）にプッシュする必要があります。
 
-ユニバーサルエディターが使用する正確なブランチ名は、ユニバーサルエディターの URL を使用して、ユーザーごとに調整できます。
+ユニバーサルエディターが使用する正確な分岐名は、ユニバーサルエディターの URL を通じてユーザー別に調整できます。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -442,4 +442,4 @@ $ git commit -m "Add teaser block JSON files so it is available in Universal Edi
 $ git push origin teaser
 ```
 
-クエリパラメーター `?ref=teaser` を使用してユニバーサルエディターを開くと、新しい `teaser` ブロックがブロックパレットに表示されます。 ブロックにはスタイル設定がないので、ブロックのフィールドがセマンティックHTMLとしてレンダリングされ、[ グローバル CSS](./4-website-branding.md#global-css) を介してのみスタイル設定されます。
+クエリパラメーター `?ref=teaser` を使用してユニバーサルエディターを開くと、新しい `teaser` ブロックがブロックパレットに表示されます。ブロックにはスタイル設定がないので、ブロックのフィールドはセマンティック HTML としてレンダリングされ、[グローバル CSS](./4-website-branding.md#global-css) を通じてのみスタイル設定されます。
