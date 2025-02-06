@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
-workflow-type: ht
-source-wordcount: '1308'
-ht-degree: 100%
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+workflow-type: tm+mt
+source-wordcount: '1315'
+ht-degree: 99%
 
 ---
 
@@ -292,6 +292,8 @@ Edge Delivery Services プロジェクトでは、Web Fonts の使用を最適�
 Web Fonts は、サイズによりパフォーマンスに影響を与えることが多く、累積レイアウトシフト（CLS）スコアが増加し、全体的な Lighthouse スコアが低下する可能性があります。Web Fonts の読み込み中にテキストを即座に表示するように、Edge Delivery Services プロジェクトではブラウザーネイティブのフォールバックフォントが使用されます。このアプローチは、目的のフォントを適用しながら、スムーズなユーザーエクスペリエンスを維持するのに役立ちます。
 
 最適なフォールバックフォントを選択するには、アドビの [Helix Font Fallback Chrome 拡張機能](https://www.aem.live/developer/font-fallback)を使用します。これにより、カスタムフォントが読み込まれる前に、ブラウザーで使用する近似フォントが決定されます。パフォーマンスを向上させ、ユーザーにシームレスなエクスペリエンスを確保するには、結果として得られるフォールバックフォント宣言を `styles/styles.css` ファイルに追加する必要があります。
+
+![ らせんフォントフォールバックChrome拡張機能 ](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
 [Helix Font Fallback Chrome 拡張機能](https://www.aem.live/developer/font-fallback)を使用するには、web ページに Edge Delivery Services の web サイトで使用されているものと同じバリエーションの web フォントが適用されていることを確認します。このチュートリアルでは、[wknd.site](http://wknd.site/us/en.html) の拡張機能について説明します。Web サイトを開発する際は、拡張機能を [wknd.site](http://wknd.site/us/en.html) ではなく、作業中のサイトに適用します。
 
