@@ -12,10 +12,10 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 7fe1116de7cf69b3b7ce14ac0b97906f8986546b
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '2433'
-ht-degree: 1%
+source-wordcount: '2462'
+ht-degree: 8%
 
 ---
 
@@ -410,7 +410,7 @@ function getTransformedMetadata(metadata) {
 
 >[!TIP]
 >
->次の節では、WKND-PIM web アプリをローカルマシンで試し、OAuth web アプリ認証フローと API 呼び出しの実践的なエクスペリエンスを提供します。
+>次の節に従って、ローカルマシンで WKND-PIM web アプリを試し、OAuth web アプリ認証フローと API 呼び出しの実践的なエクスペリエンスを得ることができます。
 
 ## Web アプリケーションのセットアップと実行
 
@@ -499,11 +499,11 @@ function getTransformedMetadata(metadata) {
 
 ADC プロジェクトの OAuth Web アプリ資格情報クライアント ID がAEM インスタンスと通信できるようにするには、AEM インスタンスを設定する必要があります。
 
-それには、AEM プロジェクトの `config.yaml` ファイルで設定を定義します。 次に、Cloud Managerで設定パイプラインを使用して `config.yaml` ファイルをデプロイします。
+これを行うには、AEM プロジェクトの `config.yaml`ファイルで設定を定義します。 次に、Cloud Manager の設定パイプラインを使用して `config.yaml` ファイルをデプロイします。
 
-1. AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを探すか作成します。
+1. AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを見つけるか作成します。
 
-   ![ 設定 YAML を見つける ](assets/web-app/locate-config-yaml.png)
+   ![YAML 設定ファイルを見つける](assets/web-app/locate-config-yaml.png)
 
 1. 次の設定を `config.yaml` ファイルに追加します。
 
@@ -520,17 +520,22 @@ ADC プロジェクトの OAuth Web アプリ資格情報クライアント ID �
 
    `<ADC Project's OAuth Web App credential ClientID>` を ADC プロジェクトの OAuth Web アプリ資格情報の実際の ClientID に置き換えます。 このチュートリアルで使用する API エンドポイントはオーサー層でのみ使用できますが、その他の API の場合、yaml 設定に _publish_ または _preview_ ノードを含めることもできます。
 
-1. 設定の変更を Git リポジトリにコミットし、変更内容をリモートリポジトリにプッシュします。
+   >[!CAUTION]
+   >
+   > デモのために、すべての環境で同じ ClientID が使用されます。 セキュリティと制御を強化するために、環境（開発、ステージ、実稼動）ごとに個別のクライアント ID を使用することをお勧めします。
 
-1. Cloud Managerで設定パイプラインを使用して、上記の変更をデプロイします。 コマンドラインツールを使用して `config.yaml` ファイルを RDE にインストールすることもできます。
 
-   ![config.yaml のデプロイ ](assets/deploy-config-yaml.png)
+1. 設定の変更を Git リポジトリにコミットし、変更をリモートリポジトリにプッシュします。
+
+1. Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`config.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
+
+   ![config.yaml のデプロイ](assets/deploy-config-yaml.png)
 
 ### アセットメタデータスキーマの作成と適用
 
-デフォルトでは、WKND Sites プロジェクトには、製品属性を保存するために必要なアセットメタデータスキーマがありません。 アセットメタデータスキーマを作成して、AEM インスタンスのアセットフォルダーに適用します。
+デフォルトでは、WKND Sites プロジェクトには、製品属性を保存するために必要なアセットメタデータスキーマがありません。 アセットメタデータスキーマを作成して、AEM インスタンスのアセットフォルダーに適用してみましょう。
 
-1. AEM as a Cloud Service Asset インスタンスにログインします。 [ アセット表示 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) を使用して `/content/dam/wknd-shared/en` フォルダーに移動します。
+1. AEM as a Cloud Service Asset インスタンスにログインします。 [ アセット表示 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/authoring/switch-views) を使用して `/content/dam/wknd-shared/en` フォルダーに移動します。
 
    ![ フォルダーに移動 ](assets/web-app/navigate-to-folder.png)
 
@@ -542,18 +547,18 @@ ADC プロジェクトの OAuth Web アプリ資格情報クライアント ID �
 
 1. 左側のパネルから **設定**/**メタデータForms** オプションに移動し、「**作成**」ボタンをクリックします。
 
-1. **メタデータフォームを作成** ダイアログで、次の詳細を入力し、「**作成**」をクリックします。
+1. **メタデータフォームを作成**&#x200B;ダイアログで、次の詳細を入力し、「**作成**」をクリックします。
    - 名前：`PIM`
    - 既存のフォーム構造をテンプレートとして使用：`Check`
-   - 次の中から選択します。`default`
+   - 次から選択：`default`
 
-   ![ メタデータフォームの作成 ](assets/web-app/create-metadata-form.png)
+   ![メタデータフォームを作成](assets/web-app/create-metadata-form.png)
 
 1. **+** アイコンをクリックして新しい **PIM** タブを追加し、そのタブに **1 行のテキスト** コンポーネントを追加します。 メタデータプロパティ名は、プレフィックスで始める必要 `pim:` あります。
 
-   ![ 「PIM を追加」タブ ](assets/web-app/add-pim-tab.png)
+   ![「PIM」タブを追加](assets/web-app/add-pim-tab.png)
 
-   | ラベル | Placeholder | メタデータプロパティ |
+   | ラベル | プレースホルダー | メタデータプロパティ |
    | --- | --- | --- |
    | SKU | SKU ID を入力 | `pim:sku` |
    | 製品タイプ | 例：バックパック、テント、ジャケット | `pim:productType` |
@@ -562,11 +567,11 @@ ADC プロジェクトの OAuth Web アプリ資格情報クライアント ID �
    | モデル | モデル名を入力 | `pim:model` |
    | ブランド名 | ブランド名を入力 | `pim:brandName` |
 
-1. **保存** および **閉じる** をクリックして、メタデータフォームを保存します。
+1. 「**保存**&#x200B;して&#x200B;**閉じる**」をクリックして、メタデータフォームを保存します。
 
 1. 最後に、**PIM** メタデータスキーマを **PIM** フォルダーに適用します。
 
-   ![ メタデータスキーマの適用 ](assets/web-app/apply-metadata-schema.png)
+   ![メタデータスキーマを適用](assets/web-app/apply-metadata-schema.png)
 
 上記の手順を実行すると、**PIM** フォルダーのアセットに製品属性メタデータを保存する準備が整います。
 

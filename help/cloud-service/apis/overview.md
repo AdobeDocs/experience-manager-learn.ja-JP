@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 2%
@@ -75,7 +75,7 @@ OpenAPI ベースのAEM API と、AdobeAPI へのアクセスの重要な概念�
 
 今後のリリースでは、その他のユースケースをサポートするために、さらに OpenAPI ベースのAEM API が追加される予定です。
 
-## 認証のサポート{#authentication-support}
+### 認証のサポート{#authentication-support}
 
 OpenAPI ベースのAEM API は、次の認証方法をサポートしています。
 
@@ -95,7 +95,7 @@ OpenAPI ベースのAEM API は、次の認証方法をサポートしていま�
 | セキュリティに関する考慮事項 | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザーの認証をおこなうと、独自の一時的なアクセストークンが付与されます。 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 |
 | 付与タイプ | _client_credentials_ | _authorization_code_ |
 
-## AdobeAPI および関連概念へのアクセス{#accessing-adobe-apis-and-related-concepts}
+### AdobeAPI および関連概念へのアクセス{#accessing-adobe-apis-and-related-concepts}
 
 AdobeAPI にアクセスする前に、次の主要な概念を理解することが不可欠です。
 

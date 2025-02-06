@@ -11,10 +11,10 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 6%
+source-wordcount: '962'
+ht-degree: 7%
 
 ---
 
@@ -236,10 +236,13 @@ RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
 
 ブラウザーまたは `curl` コマンドを使用して、URL リダイレクトをテストします。 `/ski/westcoast` URL にアクセスし、`/us/en/adventures/tahoe-skiing.html` にリダイレクトすることを確認します。
 
-
 ## 概要
 
 このチュートリアルでは、AEM as a Cloud Service環境でパイプラインを使用しない設定を使用して URL リダイレクトを管理する方法を学びました。
 
 マーケティングチームは、URL リダイレクトをキーと値のペアとしてテキストファイルに管理して DAM にアップロードするか、ACS Commons - リダイレクトマップマネージャーまたはリダイレクトマネージャーを使用することができます。 Dispatcherの設定が更新され、URL リダイレクトが RewriteMap として読み込まれ、受信リクエストに適用されます。
 
+## その他のリソース
+
+- [ パイプラインを使用しない URL リダイレクト ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [URL リダイレクト](url-redirection.md)

@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '1803'
-ht-degree: 1%
+source-wordcount: '1831'
+ht-degree: 8%
 
 ---
 
@@ -170,15 +170,15 @@ _製品_ ウィンドウに、新しく追加されたAdmin Consoleプロファ�
    ![ 認証設定 ](assets/authentication-configuration.png)
 
 
-## AEM インスタンスを設定して、ADC プロジェクト通信を有効にします
+## ADC プロジェクト通信を有効にする AEM インスタンスの設定
 
-ADC プロジェクトの OAuth サーバー間資格情報クライアント ID をAEM インスタンスと通信できるようにするには、AEM インスタンスを設定する必要があります。
+AEM インスタンスと通信する ADC プロジェクトの OAuth サーバー間資格情報クライアント ID を有効にするには、AEM インスタンスを設定する必要があります。
 
-それには、AEM プロジェクトの `config.yaml` ファイルで設定を定義します。 次に、Cloud Managerで設定パイプラインを使用して `config.yaml` ファイルをデプロイします。
+これを行うには、AEM プロジェクトの `config.yaml`ファイルで設定を定義します。 次に、Cloud Manager の設定パイプラインを使用して `config.yaml` ファイルをデプロイします。
 
-1. AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを探すか作成します。
+1. AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを見つけるか作成します。
 
-   ![ 設定 YAML を見つける ](assets/locate-config-yaml.png)
+   ![YAML 設定ファイルを見つける](assets/locate-config-yaml.png)
 
 1. 次の設定を `config.yaml` ファイルに追加します。
 
@@ -195,11 +195,15 @@ ADC プロジェクトの OAuth サーバー間資格情報クライアント ID
 
    `<ADC Project's OAuth Server-to-Server credential ClientID>` を ADC プロジェクトの OAuth サーバー間資格情報の実際の ClientID に置き換えます。 このチュートリアルで使用する API エンドポイントはオーサー層でのみ使用できますが、その他の API の場合、yaml 設定に _publish_ または _preview_ ノードを含めることもできます。
 
-1. 設定の変更を Git リポジトリにコミットし、変更内容をリモートリポジトリにプッシュします。
+   >[!CAUTION]
+   >
+   > デモのために、すべての環境で同じ ClientID が使用されます。 セキュリティと制御を強化するために、環境（開発、ステージ、実稼動）ごとに個別のクライアント ID を使用することをお勧めします。
 
-1. Cloud Managerで設定パイプラインを使用して、上記の変更をデプロイします。 コマンドラインツールを使用して `config.yaml` ファイルを RDE にインストールすることもできます。
+1. 設定の変更を Git リポジトリにコミットし、変更をリモートリポジトリにプッシュします。
 
-   ![config.yaml のデプロイ ](assets/config-pipeline.png)
+1. Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`config.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
+
+   ![config.yaml のデプロイ](assets/config-pipeline.png)
 
 ## サンプル NodeJS アプリケーションの開発
 
@@ -434,7 +438,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 }
 ```
 
-これで完了です。OAuth サーバー間認証を使用して、カスタムアプリケーションから OpenAPI ベースのAEM API を正常に呼び出しました。
+これで完了です。 OAuth サーバー間認証を使用して、カスタムアプリケーションから OpenAPI ベースのAEM API を正常に呼び出しました。
 
 ### アプリケーションコードを確認します
 

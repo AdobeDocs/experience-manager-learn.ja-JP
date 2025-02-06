@@ -12,10 +12,10 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
-workflow-type: ht
-source-wordcount: '1489'
-ht-degree: 100%
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+workflow-type: tm+mt
+source-wordcount: '1517'
+ht-degree: 98%
 
 ---
 
@@ -126,6 +126,11 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
   ```
 
   `<ADC Project's OAuth Server-to-Server credential ClientID>` を ADC プロジェクトの OAuth サーバー間資格情報の実際のクライアント ID に置き換えます。
+
+  >[!CAUTION]
+  >
+  > デモのために、すべての環境で同じ ClientID が使用されます。 セキュリティと制御を強化するために、環境（開発、ステージ、実稼動）ごとに個別のクライアント ID を使用することをお勧めします。
+
 
 - 設定の変更を Git リポジトリにコミットし、変更をリモートリポジトリにプッシュします。
 
