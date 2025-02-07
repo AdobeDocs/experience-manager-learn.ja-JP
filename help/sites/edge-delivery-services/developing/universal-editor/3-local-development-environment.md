@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '973'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Edge Delivery Services の web サイトプロジェクトの開発ツールと�
 
 ## 開発トポロジ
 
-このビデオでは、ユニバーサルエディターで編集可能なEdge Delivery Services web サイトプロジェクトの開発トポロジの概要を説明します。
+このビデオでは、ユニバーサルエディターで編集できる Edge Delivery Services の web サイトプロジェクトの開発トポロジの概要について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
 
@@ -71,7 +71,7 @@ Edge Delivery Services の web サイトプロジェクトの開発ツールと�
 
 ## GitHub リポジトリのクローンを作成
 
-AEM Edge Delivery Servicesのコードプロジェクトを含む新しいコードプロジェクトの章で作成した [GitHub リポジトリ ](./1-new-code-project.md) を、ローカル開発環境に複製します。
+ローカル開発環境に AEM Edge Delivery Services のコードプロジェクトを含む、[新しいコードプロジェクトの章で作成した GitHub リポジトリ](./1-new-code-project.md)のクローンを作成します。
 
 ![GitHub リポジトリのクローン](./assets/3-local-development-environment/github-clone.png)
 
@@ -127,7 +127,7 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 
 AEM CLI により、ブラウザーで web サイト `http://localhost:3000/` が開きます。プロジェクトの変更は web ブラウザーに自動的にホットリロードされますが、コンテンツの変更には[プレビュー環境に公開](./6-author-block.md)し、web ブラウザーを更新する必要があります。
 
-Web サイトが 404 ページで開いた場合は、[ 新規コードプロジェクト ](./1-new-code-project.md) で更新された [fstab.yaml または paths.json](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) が誤って設定されているか、変更が `main` ブランチにコミットされていない可能性があります。
+Web サイトで 404 ページが表示される場合は、[新しいコードプロジェクト](./1-new-code-project.md)で更新された [fstab.yaml または paths.json](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) が誤って設定されているか、変更が `main` 分岐にコミットされていない可能性があります。
 
 ## JSON フラグメントの作成
 

@@ -13,9 +13,9 @@ jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1924'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ data:
 
 ## トラフィックフィルタールールアラートの受信 {#receiving-alerts}
 
-前述のように、トラフィックフィルタールールに *alert:true* が含まれる場合、ルールが一致するとアラートが受信されます。
+上記のように、トラフィックフィルタールールに *alert: true* が含まれている場合、ルールが一致するとアラートを受信します。
 
 ## アラートに対するアクション {#acting-on-alerts}
 

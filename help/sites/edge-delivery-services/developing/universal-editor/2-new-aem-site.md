@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
 source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -25,12 +25,12 @@ AEM サイトは、web サイトのコンテンツを保存および作成する
 
 ![Edge Delivery Services とユニバーサルエディターの新しい AEM サイト](./assets/2-new-aem-site/new-site.png)
 
-[ ドキュメントに記載されている詳細な手順 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) に従って、新しいAEM サイトを作成します。  以下は、このチュートリアルで使用する値を含む、手順の概要です。
+新しい AEM サイトを作成するには、[ドキュメントに記載されている詳細な手順](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)に従います。以下は、このチュートリアルで使用される値を含む手順の概要リストです。
 1. AEM オーサーで&#x200B;**新しいサイトを作成**&#x200B;します。このチュートリアルでは、次のサイト名を使用します。
    * サイトのタイトル：`WKND (Universal Editor)`
    * サイト名：`aem-wknd-eds-ue`
 
-      * サイト名の値は、`paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping) に追加されたサイトのパス名 [ 一致する必要があります。
+      * サイト名の値は、[`paths.json` に追加](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping)されたサイトのパス名と一致する必要があります。
 
 2. [AEM オーサリングを使用した Edge Delivery Services サイトテンプレート](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)から&#x200B;**最新のテンプレートを読み込みます**。
 3. GitHub リポジトリ名と一致するように&#x200B;**サイトに名前を付け**、GitHub URL をリポジトリの URL として設定します。
@@ -44,4 +44,4 @@ AEM オーサーでサイトを作成したら、Edge Delivery Services プレ�
 3. **宛先**&#x200B;の下にある「**プレビュー**」を選択し、「**次へ**」をクリックします。
 4. **子を含める設定**&#x200B;で、「**子を含める**」を選択し、他のオプションを選択解除して、「**OK**」をクリックします。
 5. 「**公開**」をクリックし、サイトのコンテンツを公開してプレビューします。
-6. プレビュー用に公開すると、ページはEdge Delivery Servicesプレビュー環境で使用できるようになります（ページはAEM プレビューサービスには表示されません）。
+6. プレビューに公開すると、ページは Edge Delivery Services プレビュー環境で使用できます（ページは AEM プレビューサービスには表示されません）。
