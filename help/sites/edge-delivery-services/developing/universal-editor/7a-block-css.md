@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
@@ -99,15 +99,16 @@ CSS のみのアプローチを使用すると、ブロックの（ほとんど�
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The image is rendered to the first div in the block */
-    & picture {
+    picture {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
 
-        & img {
+        img {
             object-fit: cover;
             object-position: center;
             width: 100%;
@@ -143,53 +144,52 @@ CSS のみのアプローチを使用すると、ブロックの（ほとんど�
         **/
 
         /* Regardless of the authored heading level, we only want one style the heading */
-        & h1,
-        & h2,
-        & h3,
-        & h4,
-        & h5,
-        & h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & h1::after,
-        & h2::after,
-        & h3::after,
-        & h4::after,
-        & h5::after,
-        & h6::after {
+        h1::after,
+        h2::after,
+        h3::after,
+        h4::after,
+        h5::after,
+        h6::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
-        }
 
-        & .button {
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
+            .button {
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
     }
-
 }
 
 /** Animations 

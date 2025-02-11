@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
-workflow-type: ht
-source-wordcount: '1742'
-ht-degree: 100%
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+workflow-type: tm+mt
+source-wordcount: '1767'
+ht-degree: 96%
 
 ---
 
@@ -420,15 +420,11 @@ $ npm run lint:js
 
 ## プロジェクトの JSON のビルド
 
-ブロックの JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json`）を設定したら、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` ファイルにコンパイルする必要があります。コンパイルは、プロジェクトの[ビルド JSON](./3-local-development-environment.md#build-json-fragments) npm スクリプトを実行することによって行われます。
+ブロック JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json` など）を設定すると、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` の各ファイルに自動的にコンパイルされます。 このコンパイルは、[AEM Boilerplate XWalk プロジェクトテンプレート [ に含まれている ](https://typicode.github.io/husky/)Husky](https://github.com/adobe-rnd/aem-boilerplate-xwalk) プリコミットフックによって自動的に処理されます。
 
-```bash
-# ~/Code/aem-wknd-eds-ue
+ビルドは、手動でトリガーすることも、プロジェクトの [ ビルド JSON](./3-local-development-environment.md#build-json-fragments) NPM スクリプトを使用してプログラムでトリガーすることもできます。
 
-$ npm run build:json
-```
-
-## ブロック定義のデプロイ
+## ブロック JSON をデプロイします
 
 ユニバーサルエディターでブロックを使用できるようにするには、プロジェクトをコミットして GitHub リポジトリの分岐（この場合は、`teaser` 分岐）にプッシュする必要があります。
 
@@ -439,6 +435,7 @@ $ npm run build:json
 
 $ git add .
 $ git commit -m "Add teaser block JSON files so it is available in Universal Editor"
+# JSON files are compiled automatically and added to the commit via a husky precommit hook
 $ git push origin teaser
 ```
 

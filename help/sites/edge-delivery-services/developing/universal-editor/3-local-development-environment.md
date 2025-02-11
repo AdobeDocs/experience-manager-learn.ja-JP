@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
-workflow-type: ht
-source-wordcount: '973'
-ht-degree: 100%
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 94%
 
 ---
 
@@ -138,7 +138,10 @@ Web サイトで 404 ページが表示される場合は、[新しいコード�
    - **定義フラグメント**：`/blocks/example/_example.json` に保存されます。
    - **フィルターフラグメント**：`/blocks/example/_example.json` に保存されます。
 
-NPM スクリプトは、これらの JSON フラグメントをコンパイルし、プロジェクトルートの適切な場所に配置します。JSON ファイルを作成するには、提供されている NPM スクリプトを使用します。例えば、すべてのフラグメントをコンパイルするには、次を実行します。
+
+[AEM Boilerplate XWalk プロジェクトテンプレート ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) には、JSON フラグメントへの変更を検出し、`git commit` 成時に適切な `component-*.json` ファイルにコンパイルする [ ハスキー ](https://typicode.github.io/husky/) プリコミットフックが含まれています。
+
+次の NPM スクリプトは、JSON ファイルを作成するために `npm run` を使用して手動で実行できますが、ハスキーなプリコミットフックが自動的に処理するので、通常は必要ありません。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
