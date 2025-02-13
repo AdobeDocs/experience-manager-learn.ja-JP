@@ -13,7 +13,7 @@ exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -179,7 +179,7 @@ export default function decorate(block) {
 
 ベア要素は、直接スタイル設定することも、カスタム適用された CSS クラスを使用してスタイル設定することもできます。より複雑なブロックの場合、セマンティック CSS クラスを適用すると、特に長期間にわたって大規模なチームで作業する場合に、CSS をよりわかりやすく保守しやすくなります。
 
-[ 以前と同様 ](./7a-block-css.md#develop-a-block-with-css)、他のブロックとの競合を避け `.block.teaser` ために、[CSS ネスト ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) を使用して CSS の範囲をスコープに設定します。
+[前と同様に](./7a-block-css.md#develop-a-block-with-css)、他のブロックとの競合を避けるために、[CSS ネスト](https://developer.mozilla.org/ja/docs/Web/CSS/CSS_nesting)を使用して CSS の範囲を `.block.teaser` に設定します。
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
