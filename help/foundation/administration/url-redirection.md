@@ -12,10 +12,10 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
+source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 100%
+source-wordcount: '961'
+ht-degree: 96%
 
 ---
 
@@ -76,13 +76,13 @@ URL リダイレクトを管理するために [ACS AEM Commons](https://adobe-c
 
 #### リダイレクトマップマネージャー
 
-[リダイレクトマップマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)を使用すると、AEM 管理者は、Apache web サーバーに直接アクセスしたり、Apache web サーバーを再起動したりすることなく、[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) ファイルを簡単に管理および公開できます。この機能を使用すると、ユーザーは、開発チームや AEM デプロイメントの手助けを借りずに、AEM のコンソールからリダイレクトルールを作成、更新、および削除できます。リダイレクトマップマネージャーは、**AEM as a Cloud Service**（[パイプライン不要の URL リダイレクト](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)戦略を参照）と **AEM 6.x** の両方と互換性があります。
+[リダイレクトマップマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)を使用すると、AEM 管理者は、Apache web サーバーに直接アクセスしたり、Apache web サーバーを再起動したりすることなく、[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) ファイルを簡単に管理および公開できます。この機能を使用すると、ユーザーは、開発チームや AEM デプロイメントの手助けを借りずに、AEM のコンソールからリダイレクトルールを作成、更新、および削除できます。リダイレクトマップマネージャは、**AEM as a Cloud Service** （[ パイプラインのない URL リダイレクト ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) 戦略および関連する [ チュートリアル ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects#acs-commons---redirect-map-manager)）と **AEM 6.x** の両方に対応しています。
 
 #### リダイレクトマネージャ
 
 [リダイレクトマネージャ](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)を使用すると、AEM のユーザーは、AEM からのリダイレクトを簡単に管理および公開できます。この実装は Java™サーブレットフィルターに基づいているので、一般的な JVM リソースの使用になります。また、この機能により、AEM 開発チームや AEM のデプロイメントに依存する必要がなくなります。リダイレクトマネージャーは **AEM as a Cloud Service** および **AEM 6.x** と互換性があります。最初のリダイレクトされたリクエストは、デフォルトで 301/302（ほとんどの）CDN のキャッシュ 301/302 を生成するために AEM パブリッシュサービスにヒットする必要があります。
 
-また、[リダイレクトマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)は、リダイレクトを [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) 用の[テキストファイルにコンパイル](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)することで、**AEM as a Cloud Service** の[パイプライン不要の URL リダイレクト](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)戦略もサポートしています。これにより、Apache Web サーバーに直接アクセスしたり再起動を必要としたりすることなく、Apache Web サーバーで使用されるリダイレクトを更新できます。このシナリオでは、最初のリダイレクトリクエストは AEM パブリッシュサービスではなく Apache Web サーバーに送信されます。
+また、[リダイレクトマネージャー](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)は、リダイレクトを [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) 用の[テキストファイルにコンパイル](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html)することで、**AEM as a Cloud Service** の[パイプライン不要の URL リダイレクト](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)戦略もサポートしています。これにより、Apache Web サーバーに直接アクセスしたり再起動を必要としたりすることなく、Apache Web サーバーで使用されるリダイレクトを更新できます。詳しくは、[ チュートリアル ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects#acs-commons---redirect-manager) を参照してください。 このシナリオでは、最初のリダイレクトリクエストは AEM パブリッシュサービスではなく Apache Web サーバーに送信されます。
 
 ### この `Redirect` ページプロパティ
 

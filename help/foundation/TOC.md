@@ -4,10 +4,10 @@ breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
 index: y
-source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
+source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 100%
+source-wordcount: '248'
+ht-degree: 98%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 100%
    + [オンラインでのリビジョンクリーンアップの使用](./administration/use-online-revision-clean-up.md)
    + [システム概要ダッシュボードの使用](./administration/use-the-system-overview-dashboard.md)
    + [URL リダイレクト](./administration/url-redirection.md)
+   + [パイプラインを使用しない URL リダイレクトの実装](./administration/implementing-pipeline-free-url-redirects.md)
 + 認証 {#authentication}
    + [OKTA と AEM](authentication/okta-saml-integration.md)
    + [OAuth スコープ](authentication/oauth-code-sample-develop.md)
