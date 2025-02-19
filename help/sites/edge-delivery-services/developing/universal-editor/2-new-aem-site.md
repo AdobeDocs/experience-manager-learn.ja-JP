@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
 source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 95%
 
 AEM サイトは、web サイトのコンテンツを編集、管理、公開する場所です。Edge Delivery Services 経由で配信され、ユニバーサルエディターを使用して作成された AEM サイトを作成するには、[AEM オーサリングを使用した Edge Delivery Services サイトテンプレート](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)を使用して AEM オーサーで新しいサイトを作成します。
 
-AEM サイトは、web サイトのコンテンツを保存および作成する場所です。最後のエクスペリエンスは、AEMサイト内容と [ウェブサイトのコード](./1-new-code-project.md)の組み合わせです。
+AEM サイトは、web サイトのコンテンツを保存および作成する場所です。最終的なエクスペリエンスは、AEM サイトのコンテンツと [web サイトのコード](./1-new-code-project.md)を組み合わせたものです。
 
 ![Edge Delivery Services とユニバーサルエディターの新しい AEM サイト](./assets/2-new-aem-site/new-site.png)
 

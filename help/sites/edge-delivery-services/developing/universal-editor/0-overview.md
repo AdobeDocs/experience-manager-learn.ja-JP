@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
 source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '558'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -255,7 +255,7 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
 
 ## 次の手順
 
-このチュートリアルを完了したので、これらの中心となるハウツーを使用して学んだことに基づいて構築してください。 これらのガイドでは、ここで扱ったコードと概念を拡張し、役割固有の使用例、高度なテクニック、Edge Delivery Servicesとユニバーサルエディターの開発スキルを強化するためのその他のヒントを調べます。
+このチュートリアルは完了しました。次は、上記の集中的なハウツーで学んだ内容に基づいて作業を進めます。上記のガイドでは、ここで説明したコードと概念を拡張し、役割固有のユースケース、高度なテクニック、Edge Delivery Services とユニバーサルエディターの開発スキルを強化するその他のヒントについて説明します。
 
 <!-- CARDS 
 
@@ -277,9 +277,9 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="ブロックオプション"> ブロックオプション </a>
+                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="ブロックオプション">ブロックオプション</a>
                     </p>
-                    <p class="is-size-6">複数の表示オプションを持つブロックを作成する方法を説明します。</p>
+                    <p class="is-size-6">複数の表示オプションを使用してブロックを作成する方法について説明します。</p>
                 </div>
                 <a href="./how-to/block-options.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>

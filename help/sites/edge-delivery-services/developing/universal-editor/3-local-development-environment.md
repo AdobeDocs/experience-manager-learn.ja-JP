@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '994'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -139,9 +139,9 @@ Web サイトで 404 ページが表示される場合は、[新しいコード�
    - **フィルターフラグメント**：`/blocks/example/_example.json` に保存されます。
 
 
-[AEM Boilerplate XWalk プロジェクトテンプレート ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) には、JSON フラグメントへの変更を検出し、`git commit` 成時に適切な `component-*.json` ファイルにコンパイルする [ ハスキー ](https://typicode.github.io/husky/) プリコミットフックが含まれています。
+[AEM ボイラープレート XWalk プロジェクトテンプレート](https://github.com/adobe-rnd/aem-boilerplate-xwalk)には、JSON フラグメントへの変更を検出し、`git commit` 時に適切な `component-*.json` ファイルにコンパイルする [Husky](https://typicode.github.io/husky/) の pre-commit フックが含まれます。
 
-次の NPM スクリプトは、JSON ファイルを作成するために `npm run` を使用して手動で実行できますが、ハスキーなプリコミットフックが自動的に処理するので、通常は必要ありません。
+次の NPM スクリプトは、`npm run` 経由で手動で実行して JSON ファイルを作成できますが、husky の pre-commit フックによって自動的に処理されるので、通常は必要ありません。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue

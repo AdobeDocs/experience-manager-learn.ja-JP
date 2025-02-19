@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1767'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -420,11 +420,11 @@ $ npm run lint:js
 
 ## プロジェクトの JSON のビルド
 
-ブロック JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json` など）を設定すると、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` の各ファイルに自動的にコンパイルされます。 このコンパイルは、[AEM Boilerplate XWalk プロジェクトテンプレート [ に含まれている ](https://typicode.github.io/husky/)Husky](https://github.com/adobe-rnd/aem-boilerplate-xwalk) プリコミットフックによって自動的に処理されます。
+ブロックの JSON ファイル（`blocks/teaser/_teaser.json`、`models/_section.json` など）を設定したら、プロジェクトの `component-models.json`、`component-definitions.json`、`component-filters.json` ファイルに自動的にコンパイルされます。このコンパイルは、[AEM ボイラープレート XWalk プロジェクトテンプレート](https://github.com/adobe-rnd/aem-boilerplate-xwalk)に含まれる [Husky](https://typicode.github.io/husky/) pre-commit フックによって自動的に処理されます。
 
-ビルドは、手動でトリガーすることも、プロジェクトの [ ビルド JSON](./3-local-development-environment.md#build-json-fragments) NPM スクリプトを使用してプログラムでトリガーすることもできます。
+また、プロジェクトの[ビルド JSON](./3-local-development-environment.md#build-json-fragments) NPM スクリプトを使用して、ビルドを手動またはプログラムでトリガーすることもできます。
 
-## ブロック JSON をデプロイします
+## ブロック JSON のデプロイ
 
 ユニバーサルエディターでブロックを使用できるようにするには、プロジェクトをコミットして GitHub リポジトリの分岐（この場合は、`teaser` 分岐）にプッシュする必要があります。
 
