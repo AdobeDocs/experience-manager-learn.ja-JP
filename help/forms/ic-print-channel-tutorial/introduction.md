@@ -1,6 +1,6 @@
 ---
-title: 印刷チャネル用の最初のインタラクティブ通信を作成する
-description: 印刷チャネル用のインタラクティブ通信を作成するために必要な手順について説明します。 インタラクティブ通信は、AEM Forms 6.4 で新しく導入されました。
+title: 印刷チャネル用の最初のインタラクティブ通信の作成
+description: 印刷チャネル用のインタラクティブ通信を作成するために必要な手順について説明します。インタラクティブ通信は、AEM Forms 6.4 で新たに導入されました。
 feature: Interactive Communication
 doc-type: Tutorial
 version: 6.4,6.5
@@ -11,13 +11,13 @@ exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
 duration: 31
 source-git-commit: 61d97738e295d9dc39281cb59e6ef1ca73944387
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '169'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
-# 印刷チャネル用の最初のインタラクティブ通信を作成します
+# 印刷チャネル用の最初のインタラクティブ通信の作成
 
 インタラクティブ通信は AEM Forms 6.4 で新たに導入されました。このドキュメントでは、印刷チャネル用のインタラクティブ通信を作成するために必要な手順を説明します。
 
