@@ -1,5 +1,5 @@
 ---
-title: OpenAPI ベースのAEM API を呼び出してサーバー間認証を行う
+title: OpenAPI ベースのAEM API を呼び出して、サーバー間認証を行います
 description: OAuth サーバー間認証を使用して、カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
 version: Cloud Service
 feature: Developing
@@ -12,14 +12,14 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: b3d053a09dfc8989441a21bf0d8c4771d816106f
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 8%
+source-wordcount: '1855'
+ht-degree: 10%
 
 ---
 
-# OpenAPI ベースのAEM API を呼び出してサーバー間認証を行う{#invoke-openapi-based-aem-apis}
+# OpenAPI ベースのAEM API を呼び出して、サーバー間認証を行います{#invoke-openapi-based-aem-apis}
 
 _OAuth サーバー間_ 認証を使用して、カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を設定して呼び出す方法について説明します。
 
@@ -35,7 +35,7 @@ OAuth サーバー間認証は、ユーザーの操作なしで API アクセス
 - Adobe Developer Console（ADC）プロジェクトを作成し、_OAuth サーバー間認証_ を使用してAEM API にアクセスするように設定します。
 - Assets オーサー API を呼び出して特定のアセットのメタデータを取得するサンプル NodeJS アプリケーションを開発します。
 
-開始する前に、[AdobeAPI へのアクセスと関連概念 ](overview.md#accessing-adobe-apis-and-related-concepts) の節を確認してください。
+開始する前に、[Adobe API へのアクセスおよび関連概念 ](overview.md#accessing-adobe-apis-and-related-concepts) の節を確認してください。
 
 ## 前提条件
 
@@ -59,7 +59,7 @@ OAuth サーバー間認証は、ユーザーの操作なしで API アクセス
 1. AEM API アクセスを有効にします。
 1. Adobe Developer Console（ADC）プロジェクトを作成します。
 1. ADC プロジェクトの設定
-   1. 目的のAEM API を追加
+   1. 目的のAEM API を追加する
    1. 認証の設定
    1. 製品プロファイルと認証設定の関連付け
 1. AEM インスタンスを設定して、ADC プロジェクト通信を有効にします
@@ -72,12 +72,12 @@ OAuth サーバー間認証は、ユーザーの操作なしで API アクセス
 
 AEM as a Cloud Service環境の最新化は、次の 2 つの手順で構成されます。
 
-- 最新のAEM リリースバージョンへのアップデート
+- AEMの最新リリースバージョンへのアップデート
 - 新しい製品プロファイルを追加します。
 
-### AEM インスタンスを更新
+### AEM インスタンスの更新
 
-AEM インスタンスを更新するには、「Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**更新**」オプションを選択します。
+AEM インスタンスを更新するには、「Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**更新**」オプションを選択します。
 
 ![AEM インスタンスの更新 ](assets/update-aem-instance.png)
 
@@ -85,17 +85,17 @@ AEM インスタンスを更新するには、「Adobe[Cloud Manager](https://my
 
 ![ 最新のAEM リリースバージョンを選択 ](assets/select-latest-aem-release.png)
 
-この場合、フルスタックパイプラインの名前は _Dev :: Fullstack-Deploy_ AEM環境名は _wknd-program-dev_ ですが、状況によって異なる場合があります。
+この場合、フルスタックパイプラインの名前は _Dev :: Fullstack-Deploy_ で、AEM環境の名前は _wknd-program-dev_ ですが、状況によって異なる場合があります。
 
 ### 新しい製品プロファイルを追加
 
-AEM インスタンスに新しい製品プロファイルを追加するには、「Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**製品プロファイルを追加**」オプションを選択します。
+AEM インスタンスに新しい製品プロファイルを追加するには、Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**製品プロファイルを追加**」オプションを選択します。
 
 ![ 新しい製品プロファイルを追加 ](assets/add-new-product-profiles.png)
 
 環境名の横にある _省略記号_ アイコンをクリックし、**アクセスを管理**/**プロファイルを作成** を選択すると、新しく追加された製品プロファイルを確認できます。
 
-_製品_ ウィンドウに、新しく追加されたAdmin Consoleプロファイルが表示されます。
+_Admin Console_ ウィンドウに、新しく追加された製品プロファイルが表示されます。
 
 ![ 新製品プロファイルの確認 ](assets/review-new-product-profiles.png)
 
@@ -117,7 +117,7 @@ _製品_ ウィンドウに、新しく追加されたAdmin Consoleプロファ�
 
 ![AEM Assets API Users Service と製品プロファイルの関連付け ](assets/associate-aem-assets-api-users-service-with-product-profile.png)
 
-最新化の前に、AEM オーサーインスタンスで 2 つの製品プロファイル（**AEM Administrators-XXX} と** 2}AEM Users-XXX **が使用可能であることに注意してください。**&#x200B;また、これらの既存の製品プロファイルを新しいサービスに関連付けることもできます。
+最新化の前に、AEM オーサーインスタンスで 2 つの製品プロファイル（**AEM Administrators-XXX} と** 2}AEM Users-XXX}**が使用可能であることに注意してください。**&#x200B;また、これらの既存の製品プロファイルを新しいサービスに関連付けることもできます。
 
 ## Adobe Developer Console（ADC）プロジェクトの作成
 
@@ -141,7 +141,7 @@ _製品_ ウィンドウに、新しく追加されたAdmin Consoleプロファ�
 
 ## ADC プロジェクトの設定
 
-次に、ADC プロジェクトを設定してAEM API を追加し、その認証を設定して、製品プロファイルを関連付けます。
+次に、ADC プロジェクトを設定して、AEM API を追加し、その認証を設定して、製品プロファイルを関連付けます。
 
 1. AEM API を追加するには、「**API を追加**」ボタンをクリックします。
 
@@ -159,16 +159,20 @@ _製品_ ウィンドウに、新しく追加されたAdmin Consoleプロファ�
 
    ![ 資格情報の名前を変更 ](assets/rename-credential.png)
 
-1. **AEM Administrators - author - Program XXX - Environment XXX** Product Profile を選択し、「**保存**」をクリックします。 ご覧のように、AEM Assets API ユーザーサービスに関連付けられた製品プロファイルのみを選択できます。
+1. 「**AEM管理者 – 作成者 – プログラム XXX – 環境 XXX** 製品プロファイル」を選択し、「**保存**」をクリックします。 ご覧のように、AEM Assets API ユーザーサービスに関連付けられた製品プロファイルのみを選択できます。
 
    ![製品プロファイルを選択](assets/select-product-profile.png)
+
+   >[!CAUTION]
+   >
+   >    サービスアカウント（別名テクニカルアカウント）ユーザーは、**AEM Administrators - XX - XX** 製品プロファイルに関連付けられているので、フルアクセス権を取得します。
+
 
 1. AEM API と認証設定を確認します。
 
    ![AEM API 設定 ](assets/aem-api-configuration.png)
 
    ![ 認証設定 ](assets/authentication-configuration.png)
-
 
 ## ADC プロジェクト通信を有効にする AEM インスタンスの設定
 
@@ -197,7 +201,7 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
 
    >[!CAUTION]
    >
-   > デモのために、すべての環境で同じ ClientID が使用されます。 セキュリティと制御を強化するために、環境（開発、ステージ、実稼動）ごとに個別のクライアント ID を使用することをお勧めします。
+   > デモ目的では、すべての環境で同じクライアント ID が使用されます。セキュリティと制御の強化に、環境（開発、ステージ、実稼動）ごとに個別のクライアント ID を使用することをお勧めします。
 
 1. 設定の変更を Git リポジトリにコミットし、変更をリモートリポジトリにプッシュします。
 
@@ -221,15 +225,15 @@ Java や Python などの他のプログラミング言語を使用して、ア�
 GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 ```
 
-特定のアセットのメタデータを取得するには、`bucket` と `assetId` の値が必要です。 `bucket` はAEM インスタンス名で、Adobeドメイン名（.adobeaemcloud.com）は除かれています（例：`author-p63947-e1420428`）。
+特定のアセットのメタデータを取得するには、`bucket` と `assetId` の値が必要です。 `bucket` は、例えば `author-p63947-e1420428` のように、AEM インスタンス名からAdobe ドメイン名（.adobeaemcloud.com）を除いたものです。
 
 `assetId` は、`urn:aaid:aem:` のプレフィックスが付いたアセットの JCR UUID です（例：`urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`）。 `assetId` を取得する方法は複数あります。
 
-- AEM asset path `.json` 拡張機能を追加して、アセットのメタデータを取得します。 例えば、を `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json` して、`jcr:uuid` プロパティを探します。
+- AEM アセットのパス `.json` 拡張機能を追加して、アセットのメタデータを取得します。 例えば、を `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json` して、`jcr:uuid` プロパティを探します。
 
 - または、ブラウザーの要素インスペクターでアセットを調べることで、`assetId` を取得できます。 `data-id="urn:aaid:aem:..."` 属性を探します。
 
-  ![Inspect アセット ](assets/inspect-asset.png)
+  ![ アセットの検査 ](assets/inspect-asset.png)
 
 ### ブラウザーを使用した API の呼び出し
 
@@ -243,7 +247,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
    ![API ドキュメント ](assets/api-documentation.png)
 
 1. 次の値を入力します。
-   1. `bucket` の値は、Adobeドメイン名を除いたAEM インスタンス名です（例：.adobeaemcloud.com）。例：`author-p63947-e1420428`
+   1. `bucket` の値は、AEM インスタンス名からAdobe ドメイン名を除いたものです（例：.adobeaemcloud.com）。例：`author-p63947-e1420428`
 
    1. `Bearer Token` と `X-Api-Key` の値に関連する **セキュリティ** セクションは、ADC プロジェクトの OAuth サーバー間資格情報から取得されます。 **アクセストークンを生成** をクリックして、`Bearer Token` の値を取得し、`ClientID` の値を `X-Api-Key` として使用します。
       ![ アクセストークンの生成 ](assets/generate-access-token.png)
@@ -505,5 +509,5 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
 ## 概要
 
-このチュートリアルでは、カスタムアプリケーションから OpenAPI ベースのAEM API を呼び出す方法を学びました。 Adobe Developer Console（ADC）プロジェクトへのAEM API のアクセスを有効にし、ADC プロジェクトを作成して設定しました。
+このチュートリアルでは、カスタムアプリケーションから OpenAPI ベースのAEM API を呼び出す方法を学びました。 AEM API へのアクセスを有効にし、Adobe Developer Console（ADC）プロジェクトを作成して設定しました。
 ADC プロジェクトで、AEM API を追加し、その認証タイプを設定して、製品プロファイルを関連付けました。 また、ADC プロジェクト通信を有効にするようにAEM インスタンスを設定し、Assets オーサー API を呼び出すサンプル NodeJS アプリケーションを開発しました。
