@@ -11,10 +11,10 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 duration: 1053
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '62'
-ht-degree: 100%
+source-git-commit: 7d114e59c0fb975994540e0af2e3d31a09c5a38f
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 64%
 
 ---
 
@@ -121,6 +121,8 @@ public class ContentStatisticsImpl implements ContentStatistics {
 ```
 
 ### org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config
+
+`ACLOptions` のように、すべての Sling リポジトリ初期化ディレクティブが `.config` 拡張機能でサポートされているわけではありません。 高度なディレクティブを使用するには、Sling リポジトリ初期化ディレクティブの各行が個別の文字列リテラルである `.cfg.json` 形式を使用します。
 
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config`
 
