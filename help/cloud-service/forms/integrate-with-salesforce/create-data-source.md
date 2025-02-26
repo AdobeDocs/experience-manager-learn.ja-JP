@@ -10,12 +10,12 @@ topic: Development
 feature: Adaptive Forms, Integrations
 jira: KT-7148
 thumbnail: 331755.jpg
-exl-id: c0a875bd-55b6-4f63-a58d-eecb62ae703b
+exl-id: e2d56e91-c13e-4787-a97f-255938b5d290
 duration: 173
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '34'
-ht-degree: 100%
+source-git-commit: ce22dd482417a54d222165deaf485ff69c2856b7
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 41%
 
 ---
 
@@ -24,3 +24,13 @@ ht-degree: 100%
 前の手順で作成した Swagger ファイルを使用して、REST ベースのデータソースを作成します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+
+| 設定 | 値 |
+|---------------------|-----------------------------------------------------------------|
+| OAuth URL | https://login.salesforce.com/services/oauth2/authorize |
+| 認証範囲 | api chatter_api full id openid refresh_token visualforce web |
+| 更新トークン URL | https://newfocus-dev-ed.my.salesforce.com/services/oauth2/token |
+| トークン URL にアクセス | https://newfocus-dev-ed.my.salesforce.com/services/oauth2/token |
+
+
+**更新およびアクセストークン URL のドメイン名は、Salesforce アカウントの設定に合わせて変更する必要があります**

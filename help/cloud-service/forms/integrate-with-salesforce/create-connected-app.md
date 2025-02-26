@@ -10,10 +10,10 @@ feature: Adaptive Forms, Integrations
 topic: Development
 jira: KT-7152
 thumbnail: 331757.jpg
-exl-id: 6e130397-9747-4d60-9975-4c45c5aab87b
+exl-id: d9e6a4de-ba2c-4565-86aa-117646d665f5
 duration: 243
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: ce22dd482417a54d222165deaf485ff69c2856b7
+workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
 
@@ -22,8 +22,9 @@ ht-degree: 100%
 # 接続アプリケーションを作成
 
 接続アプリケーションは、API や、SAML、OAuth、OpenID Connect などの標準プロトコルを使用して、外部アプリケーションと Salesforce との統合を可能にするフレームワークです。 接続アプリケーションは、これらのプロトコルを使用して、外部アプリの認証、承認、およびシングルサインオン（SSO）の提供を行います。
+<!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
 
 >[!NOTE]
 >デベロッパー版では REST API がデフォルトで有効になっているため、[Salesforce デベロッパー版](https://developer.salesforce.com/signup) でアカウントを作成してください。
