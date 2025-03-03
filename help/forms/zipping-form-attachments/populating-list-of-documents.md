@@ -1,6 +1,6 @@
 ---
 title: リスト変数に値を入力するカスタムプロセスステップ
-description: ドキュメントタイプと文字列タイプのリスト変数に値を入力するカスタムプロセスステップ
+description: Adobe Experience Managerで document タイプと string タイプのリスト変数に値を入力するカスタムプロセスステップを作成する方法を説明します。
 feature: Workflow
 topic: Development
 version: 6.5
@@ -9,28 +9,29 @@ level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '157'
-ht-degree: 100%
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 7%
 
 ---
 
+
 # カスタムプロセスステップ
 
+このガイドでは、カスタムプロセスステップを作成して、Adobe Experience Managerで添付ファイルと添付ファイル名を含んだ配列リストタイプのリスト変数を入力する手順について説明します。 これらの変数は、メールを送信ワークフローコンポーネントには必須です。
 
-添付ファイルと添付ファイル名を含んだ配列リストタイプのワークフロー変数に値を入力するように、カスタムプロセスステップが実装されました。この変数は、「メールを送信」ワークフローコンポーネントで使用されます。OSGi バンドルの作成に詳しくない場合は、[次の手順に従ってください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
+OSGi バンドルの作成に不慣れな場合は、次の [ 手順 ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja) に従ってください。
 
-カスタムプロセスステップのコードでは、以下を行います。
+カスタムプロセスステップのコードは、次のアクションを実行します。
 
-* ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルをクエリします。 フォルダー名がプロセス引数としてプロセスステップに渡されます。
-
-* `listOfDocuments` ワークフロー変数に値を入力します。
-* `attachmentNames` ワークフロー変数に値を入力します。
-* ワークフロー変数（`no_of_attachments`）の値を設定します。
+1. ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルのクエリ。 フォルダー名がプロセス引数としてステップに渡されます。
+2. `listOfDocuments` ワークフロー変数を設定します。
+3. `attachmentNames` ワークフロー変数を設定します。
+4. ワークフロー変数 `no_of_attachments` の値を設定します。
 
 ```java
- package com.aemforms.formattachments.core;
+package com.aemforms.formattachments.core;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -57,9 +58,8 @@ import com.day.cq.search.result.SearchResult;
 
 @Component(property = {
         Constants.SERVICE_DESCRIPTION + "=PopulateListOfDocuments",
-        "process.label" + "=PopulateListOfDocuments"
+        "process.label=PopulateListOfDocuments"
 })
-
 public class PopulateListOfDocuments implements WorkflowProcess {
 
         private static final Logger log = LoggerFactory.getLogger(PopulateListOfDocuments.class);
@@ -70,7 +70,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
         public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException
         {
                 String payloadPath = workItem.getWorkflowData().getPayload().toString();
-                log.debug("The payload path  is" + payloadPath);
+                log.debug("The payload path is" + payloadPath);
                 MetaDataMap metaDataMap = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
                 Session session = workflowSession.adaptTo(Session.class);
                 Map < String, String > map = new HashMap < String, String > ();
@@ -112,10 +112,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> コードが機能するために、次の変数がワークフローで必ず定義されるようにしてください。
-> *listOfDocuments* - ドキュメントの ArrayList タイプの変数
-> *attachmentNames* - 文字列の ArrayList タイプの変数
-> *no_of_attachments* - Double タイプの変数
+> コードが機能するために、次の変数がワークフローで定義されていることを確認します。
+> 
+> - `listOfDocuments`: ドキュメントの ArrayList タイプの変数
+> - `attachmentNames`：文字列の ArrayList タイプの変数
+> - `no_of_attachments`:Double タイプの変数
 
 ## 次の手順
 

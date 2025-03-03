@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: ht
-source-wordcount: '585'
-ht-degree: 100%
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+workflow-type: tm+mt
+source-wordcount: '588'
+ht-degree: 99%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 100%
          + [CSS および JS を使用したブロック](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
          + 方法{#how-to}
             + [ブロックオプション](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
+            + [ヘッダーとフッター](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
    + 方法{#how-to}
       + [RSS フィード](edge-delivery-services/how-to/rss.md)
       + [ソーシャルメディア共有](edge-delivery-services/how-to/social-media-sharing.md)

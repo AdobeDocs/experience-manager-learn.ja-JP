@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: ht
-source-wordcount: '1958'
-ht-degree: 100%
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+workflow-type: tm+mt
+source-wordcount: '1961'
+ht-degree: 98%
 
 ---
 
@@ -404,7 +404,7 @@ AEM オーサーサービスで、開発用のティーザーブロックを追�
 
 ### 公開してプレビュー
 
-ティーザーブロックをページに追加したら、「**パブリケーションを管理**」と AEM オーサーのサイト管理を使用して[ページを公開してプレビュー](../6-author-block.md)します。
+ティーザーブロックがページに追加されたら、ユニバーサルエディターの [ 公開 ](../6-author-block.md) ボタンを使用して **プレビューにページを公開** し、「**プレビューに公開**」を選択します。
 
 ## ブロックの HTML
 
