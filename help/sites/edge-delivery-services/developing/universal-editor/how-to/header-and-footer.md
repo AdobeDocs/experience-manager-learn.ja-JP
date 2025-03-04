@@ -9,13 +9,13 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 jira: KT-17470
 duration: 300
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
+source-git-commit: d201afc730010f0bf202a1d72af4dfa3867239bc
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1207'
 ht-degree: 18%
 
 ---
-
 
 # ヘッダーとフッターの開発
 
@@ -370,7 +370,7 @@ $ git push origin header-and-footer
 
 ![ フッタープレビュー ](./assets/header-and-footer/footer-preview.png){align="center"}
 
->[!TAB  フッターのオーサリング ]
+>[!TAB  フッターコンテンツ ]
 
 フッターページの列ブロックを使用して、3 列の効果を作成します。
 
