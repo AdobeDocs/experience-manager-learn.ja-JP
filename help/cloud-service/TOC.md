@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
-workflow-type: ht
-source-wordcount: '1366'
-ht-degree: 100%
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+workflow-type: tm+mt
+source-wordcount: '1377'
+ht-degree: 98%
 
 ---
 
@@ -143,8 +143,14 @@ ht-degree: 100%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
-   + [OpenAPI ベースの AEM API（サーバー間）](./apis/invoke-openapi-based-aem-apis.md)
-   + [OpenAPI ベースの AEM API（ユーザー認証済み）](./apis/invoke-openapi-based-aem-apis-from-web-app.md)
+   + OpenAPI{#openapis}
+      + [概要](./apis/openapis/overview.md)
+      + [設定方法](./apis/openapis/setup.md)
+      + [サーバー間認証](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
+      + [ユーザー認証（web アプリ）](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + 方法{#how-to}
+         + [資格情報と製品プロファイル管理](./apis/openapis/how-to/credentials-and-product-profile-management.md)
+         + [権限管理](./apis/openapis/how-to/services-user-group-permission-management.md)
 + コンテンツ配信{#content-delivery}
    + [カスタムドメイン名](./content-delivery/custom-domain-names.md)
    + [アドビが管理する CDN を使用したカスタムドメイン名](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)

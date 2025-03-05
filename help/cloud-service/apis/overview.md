@@ -1,118 +1,307 @@
 ---
 title: AEM API の概要
-description: Adobe Experience Manager（AEM）の様々なタイプの API について説明し、OpenAPI 仕様ベースの API、一般的に OpenAPI ベースのAEM API の概要を示します。
+description: Adobe Experience Manager（AEM）の様々なタイプの API について説明し、統合用に選択する API を理解します。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
 level: Beginner
 doc-type: Article
-jira: KT-16515
-thumbnail: KT-16515.jpeg
-last-substantial-update: 2024-11-20T00:00:00Z
+jira: KT-17425
+thumbnail: KT-17425.jpeg
+last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 2%
+source-wordcount: '945'
+ht-degree: 5%
 
 ---
 
 # AEM API の概要{#aem-apis-overview}
 
-Adobe Experience Manager（AEM）as a Cloud Serviceの様々なタイプの API について説明し、[OpenAPI 仕様（OAS） ](https://swagger.io/specification/) ベースのAEM API、一般的に OpenAPI ベースのAEM API の概要を示します。
+Adobe Experience Manager（AEM）の様々なタイプの API について説明し、統合用に選択する API を理解します。
 
-AEM as a Cloud Serviceは、コンテンツ、アセットおよびフォームを作成、読み取り、更新および削除するための幅広い API を提供します。 これらの API により、デベロッパーはAEMとやり取りするカスタムアプリケーションを作成できます。
+AEMでコンテンツ、アセット、フォームを作成、読み取り、更新、削除するには、開発者は様々な API を使用できます。 これらの API により、デベロッパーはAEMとやり取りするカスタムアプリケーションを作成できます。
 
-AEMの様々なタイプの API を調べて、AdobeAPI へのアクセスの主要な概念を理解しましょう。
+AEMの様々なタイプの API を探索し、統合に選択する API を理解しましょう。
 
 ## AEM API の種類{#types-of-aem-apis}
 
-AEMは、オーサーサービスとパブリッシュサービスのタイプとやり取りするための従来の API と最新の API の両方を提供しています。
+AEMは、オーサーサービスとパブリッシュサービスのタイプとやり取りするための次の API を提供します。
 
-- **レガシー API**：以前のAEM バージョンで導入されたレガシー API は、後方互換性のために引き続きサポートされています。
-
-- **最新の API**:REST、OpenAPI 仕様に基づき、これらの API は、現在の API デザインのベストプラクティスに従っており、新しい統合に推奨されます。
-
-
-| AEM API タイプ | 仕様 | 入手方法 | ユースケース | 例 |
+| AEM API のタイプ | 説明 | 入手方法 | ユースケース | API サンプル |
 | --- | --- | --- | --- | --- |
-| 従来の（非 RESTful） API | Sling サーブレット | AEM 6.X、AEM as a Cloud Service | レガシー統合、下位互換性 | [Query Builder API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) その他 |
-| RESTful API | HTTP、JSON | AEM 6.X、AEM as a Cloud Service | CRUD 操作、最新のアプリケーション | [Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[ ワークフロー REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[ コンテンツサービス用の JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) など |
-| GraphQLの API | GraphQL | AEM 6.X、AEM as a Cloud Service | ヘッドレス CMS、SPA、モバイルアプリ | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
-| OpenAPI ベースのAEM API | REST、OpenAPI | **AEM as a Cloud Serviceのみ** | API ファースト開発、最新のアプリケーション | [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[Folders API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)、[Forms Acrobat サービス ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) その他 |
+| OpenAPI ベースのAEM API | Assets、Sites およびForms用の標準化された機械読み取り可能な API。 | **AEM as a Cloud Serviceのみ** | API ファースト開発、最新のアプリケーション | [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[Folders API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)、[Forms Acrobat サービス ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) その他 |
+| RESTful API | AEM リソースとやり取りするための従来の REST エンドポイント。 | AEM 6.X、AEM as a Cloud Service | CRUD 操作、最新のアプリケーション | [Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[ ワークフロー REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[ コンテンツサービス用の JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) など |
+| GraphQLの API | 柔軟なクエリを使用して構造化コンテンツを効率的に取得するために最適化されています。 | AEM 6.X、AEM as a Cloud Service | ヘッドレスCMS、SPA、モバイルアプリ | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
+| 従来の（非 RESTful） API | JCR、Sling モデル、Query Builder などの古い API。 | AEM 6.X、AEM as a Cloud Service | レガシー統合、下位互換性 | [Query Builder API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) その他 |
 
->[!IMPORTANT]
->
->OpenAPI ベースのAEM API はAEM as a Cloud Serviceでのみ使用でき、AEM 6.X とは互換性がありません。
+詳しくは、[Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/) ページを参照してください。
 
-AEM API について詳しくは、[Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/) を参照してください。
+## 選択する API{#which-api-to-choose}
 
-OpenAPI ベースのAEM API と、AdobeAPI へのアクセスの重要な概念を詳しく見てみましょう。
+統合用の API を選択する際には、次の要因を考慮します。
 
-## OpenAPI ベースのAEM API{#openapi-based-aem-apis}
+- **ユースケース**:AEM API がユースケースをサポートしているかどうかを判断します。 可能な限り、AEMを操作するための標準化された最新のアプローチを提供する _OpenAPI ベースのAEM API を使用_ してください。 OpenAPI ベースの API が利用できない場合は、RESTful API またはGraphQL API を使用し、最後の手段として従来の API を使用することを検討してください。
 
->[!AVAILABILITY]
->
->OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
+- **互換性**：選択した API がAEMのバージョンと互換性があることを確認します。 例えば、_OpenAPI ベースのAEM API はAEM as a Cloud Service専用で_ AEM 6.X では使用できません。
 
-[OpenAPI 仕様 ](https://swagger.io/specification/) （旧称 Swagger）は、RESTful API の定義に広く使用されている標準です。 AEM as a Cloud Serviceには、複数の OpenAPI 仕様ベースの API （または単に OpenAPI ベースのAEM API）が用意されており、AEMのオーサーサービスまたはパブリッシュサービスのタイプとやり取りするカスタムアプリケーションを簡単に作成できます。 以下に例を示します。
+- **AEM サービスのタイプ：オーサーとパブリッシュ**: アクセスモデルが異なるので、API の選択も、オーサーサービスとパブリッシュサービスのどちらで実行されるかによっても異なります。 AEM オーサーサービスは、コンテンツの作成に使用され、常に認証が必要です。 AEM パブリッシュサービスはコンテンツ配信に使用され、ユースケースによっては認証が不要な場合があります。
 
-**Sites**
+- **認証**:API が使用する認証方法をサポートしていることを確認します。 例：
+   - **OpenAPI ベースのAEM API**: クライアント資格情報（サーバー間）、認証コード（web アプリ）、コード交換のプルーフキー（シングルページアプリ）付与タイプなど、OAuth 2.0 認証をサポートします。 その他のAEM API では、OAuth 2.0 認証をサポートしていません。
+   - **RESTful API**:JSON web トークン（JWT）認証をサポートし、トークンベースの認証としても認識されます。
 
-- [Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)：コンテンツフラグメントを操作するための API。
+## JSON web トークン（JWT）と OAuth 2.0 の違い{#difference-between-jwt-and-oauth}
 
-**Assets**
+次に、AEM API で使用される 2 つの一般的な認証メカニズムである、JSON web トークン（JWT）と OAuth 2.0 を比較します。
 
-- [ フォルダー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)：フォルダーの作成、リスト化、削除などのフォルダーを操作するための API。
-
-- [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/): アセットとそのメタデータを操作するための API。
-
-**Forms**
-
-- [Forms通信 API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): フォームおよびドキュメントを操作するための API。
-
-今後のリリースでは、その他のユースケースをサポートするために、さらに OpenAPI ベースのAEM API が追加される予定です。
-
-### 認証のサポート{#authentication-support}
-
-OpenAPI ベースのAEM API は、次の認証方法をサポートしています。
-
-- **OAuth サーバー間資格情報**: ユーザーの操作なしで API へのアクセスが必要なバックエンドサービスに最適です。 _client_credentials_ 付与タイプを使用して、サーバーレベルで安全なアクセス管理を有効にします。 詳しくは、[OAuth サーバー間資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential) を参照してください。
-
-- **OAuth web アプリ資格情報**：ユーザーの代わりにAEM API にアクセスするフロントエンドおよび _バックエンド_ コンポーネントを持つ web アプリケーションに適しています。 _authorization_code_ 付与タイプを使用し、バックエンドサーバーが秘密鍵とトークンを安全に管理します。 詳しくは、[OAuth Web アプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential) を参照してください。
-
-- **OAuth シングルページアプリ資格情報**：ブラウザーで動作するSPA用に設計されています。このブラウザーは、バックエンドサーバーを使用せずに、ユーザーの代わりに API にアクセスする必要があります。 _authorization_code_ 付与タイプを使用し、PKCE （Proof Key for Code Exchange）を使用したクライアント側のセキュリティメカニズムに依存して、認証コードフローを保護します。 詳しくは、[OAuth 単一ページアプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential) を参照してください。
-
-### OAuth サーバー間と OAuth web アプリ/シングルページアプリの資格情報の違い{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
-
-| | OAuth サーバー間 | OAuth ユーザー認証（web アプリ） |
+| 機能 | JSON web トークン（JWT） | OAuth 2.0 |
 | --- | --- | --- |
-| 認証の目的 | 機械間インタラクション用に設計されています。 | ユーザー主導のインタラクション用に設計されています。 |
-| トークンの動作 | クライアントアプリケーション自体を表すアクセストークンを発行します。 | 認証済みユーザーの代わりにアクセストークンを発行します。 |
-| ユースケース | ユーザーインタラクションのない API アクセスを必要とするバックエンドサービス。 | ユーザーの代わりに API にアクセスする、フロントエンドおよびバックエンドコンポーネントを持つ web アプリケーション。 |
-| セキュリティに関する考慮事項 | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザーの認証をおこなうと、独自の一時的なアクセストークンが付与されます。 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 |
-| 付与タイプ | _client_credentials_ | _authorization_code_ |
+| 使用されている場所 | RESTful API | OpenAPI ベースのAEM API （RESTful API やその他の API ではサポートされていません） |
+| 目的 | サービス認証 | ユーザーまたはサービスの認証 |
+| ユーザーインタラクション | ユーザーインタラクションは不要です | 認証コードおよびシングルページアプリ付与タイプに必要なユーザーインタラクション |
+| ～に最適である | サーバー間 API 呼び出し | アプリおよびユーザーに対する安全で許可されたアクセス |
+| 必要な情報 | JWT に署名するための秘密鍵 | OAuth 2.0 のクライアント ID とクライアント秘密鍵 |
+| トークンの有効期限 | 短時間のみ有効（多くの場合、更新が必要） | アクセストークンは短時間のみ有効です。 更新トークンは長期間有効で、新しいアクセストークンの取得に使用されます |
+| 資格情報管理 | [AEM Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) | [Adobe Developer Console](https://developer.adobe.com/developer-console/) |
 
-### AdobeAPI および関連概念へのアクセス{#accessing-adobe-apis-and-related-concepts}
+## OpenAPI ベースのAEM API
 
-AdobeAPI にアクセスする前に、次の主要な概念を理解することが不可欠です。
+OpenAPI ベースのAEM API と、Adobe API へのアクセスに関する重要な概念について詳しくは、[OpenAPI ベースのAEM API](./openapis/overview.md) ガイドを参照してください。
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**:AdobeAPI、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。 AEM アプリケーションのデバッグに使用される _AEM_ Developer Consoleとは異なることに注意してください。
+### ユースケース
 
-- **[Adobe Developer Console プロジェクト ](https://developer.adobe.com/developer-console/docs/guides/projects/)**: API 統合、イベントおよびランタイム関数を一元的に管理する場所です。 ここでは、API を設定し、認証を設定して、必要な資格情報を生成します。
+<!-- CARDS
+{target = _self}
 
-- **[製品プロファイル ](https://helpx.adobe.com/jp/enterprise/using/manage-product-profiles.html)**：製品プロファイルは、AEM、Adobe Target、Adobe AnalyticsなどのAdobe製品へのユーザーまたはアプリケーションのアクセスを制御できる権限プリセットを提供します。 すべてのAdobe製品には、事前に定義された製品プロファイルが関連付けられています。
+* ./openapis/use-cases/invoke-api-using-oauth-s2s.md
+  {title = Invoke API using Server-to-Server authentication}
+  {description = Learn how to invoke OpenAPI-based AEM APIs from a custom NodeJS application using OAuth Server-to-Server authentication.}
+  {image = ./openapis/assets/s2s/OAuth-S2S.png}
+* ./openapis/use-cases/invoke-api-using-oauth-web-app.md
+  {title = Invoke API using Web App authentication}
+  {description = Learn how to invoke OpenAPI-based AEM APIs from a custom web application using OAuth Web App authentication.}
+  {image = ./openapis/assets/web-app/OAuth-WebApp.png}  
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Server-to-Server authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" title="サーバー間認証を使用した API の呼び出し" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./openapis/assets/s2s/OAuth-S2S.png" alt="サーバー間認証を使用した API の呼び出し"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="サーバー間認証を使用した API の呼び出し"> サーバー間認証を使用した API の呼び出し </a>
+                    </p>
+                    <p class="is-size-6">OAuth サーバー間認証を使用して、カスタム NodeJS アプリケーションから OpenAPI ベースのAEM API を呼び出す方法を説明します。</p>
+                </div>
+                <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Web App authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" title="Web アプリ認証を使用した API の呼び出し" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./openapis/assets/web-app/OAuth-WebApp.png" alt="Web アプリ認証を使用した API の呼び出し"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="Web アプリ認証を使用した API の呼び出し">Web アプリ認証を使用した API の呼び出し </a>
+                    </p>
+                    <p class="is-size-6">OAuth web アプリ認証を使用して、カスタム web アプリケーションから OpenAPI ベースのAEM API を呼び出す方法を説明します。</p>
+                </div>
+                <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-- **サービス**：サービスは、実際の権限を定義し、製品プロファイルに関連付けられます。 権限プリセットを減らしたり増やしたりするには、製品プロファイルに関連付けられているサービスの選択を解除または選択します。 これにより、製品とその API へのアクセスレベルを制御できます。 AEM as a Cloud Serviceでは、サービスは、リポジトリノード用に事前定義されたアクセス制御リスト（ACL）を持つユーザーグループを表し、詳細な権限管理を可能にします。
 
-## 次の手順{#next-steps}
 
-次のような様々なAEM API タイプを理解している場合
-OpenAPI ベースのAEM API と、AdobeAPI へのアクセスに関する主な概念を理解したら、AEMとやり取りするカスタムアプリケーションの構築を開始できます。
+## GraphQL API – 例
 
-それでは、始めましょう。
+GraphQL API とその使用方法について詳しくは、[AEM ヘッドレスの概要 – GraphQL](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview) を参照してください
 
-- [ サーバー間認証のための OpenAPI ベースのAEM API の呼び出し ](invoke-openapi-based-aem-apis.md) チュートリアル。このチュートリアルでは、（OAuth サーバー間資格情報を使用して _OpenAPI ベースのAEM API にアクセスする方法を実演_ します。
-- [Web アプリからのユーザー認証を使用して OpenAPI ベースのAEM API を呼び出す ](invoke-openapi-based-aem-apis-from-web-app.md) チュートリアル。このチュートリアルでは、_Web アプリケーションから OAuth Web アプリ資格情報を使用して OpenAPI ベースのAEM API にアクセスする方法を説明します_。
+### ユースケース
+
+<!-- CARDS
+{target = _self}
+
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
+  {title = Single Page Application (SPA)}
+  {description = Learn how to build a Single Page Application (SPA) that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/react-app-card.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
+  {title = Mobile App}
+  {description = Learn how to build a mobile app that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/ios-app-card.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
+  {title = Web Component}
+  {description = Learn how to build a web component that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/web-component-card.png}
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Single Page Application (SPA)">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" title="単一ページアプリケーション（SPA）" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/react-app-card.png" alt="単一ページアプリケーション（SPA）"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" title="単一ページアプリケーション（SPA）"> 単一ページアプリケーション（SPA） </a>
+                    </p>
+                    <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得する単一ページアプリケーション（SPA）の作成方法について説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Mobile App">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" title="モバイルアプリ" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/ios-app-card.png" alt="モバイルアプリ"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" title="モバイルアプリ"> モバイルアプリ </a>
+                    </p>
+                    <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得するモバイルアプリを作成する方法を説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Web Component">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" title="Web コンポーネント" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/web-component-card.png" alt="Web コンポーネント"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" title="Web コンポーネント">Web コンポーネント </a>
+                    </p>
+                    <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得する web コンポーネントの作成方法について説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+## RESTful API – 例
+
+[Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) や [JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) などの RESTful API の詳細を説明します。
+
+### ユースケース
+
+<!-- CARDS
+{target = _self}
+
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
+  {title = Invoke API using Server-to-Server authentication}
+  {description = Learn how to build a native mobile app that fetches content from AEM using Content Services RESTful APIs.}
+  {image = ./assets/RESTful-Content-Service.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
+  {title = Token-based Authentication for RESTful APIs}
+  {description = Learn how to invoke RESTful APIs using JSON Web Token (JWT) authentication.}
+  {image = ./assets/RESTful-TokenAuth.png}
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Server-to-Server authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" title="サーバー間認証を使用した API の呼び出し" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/RESTful-Content-Service.png" alt="サーバー間認証を使用した API の呼び出し"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" title="サーバー間認証を使用した API の呼び出し"> サーバー間認証を使用した API の呼び出し </a>
+                    </p>
+                    <p class="is-size-6">コンテンツサービス RESTful API を使用して、AEMからコンテンツを取得するネイティブモバイルアプリを作成する方法を説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Token-based Authentication for RESTful APIs">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" title="RESTful API のトークンベースの認証" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/RESTful-TokenAuth.png" alt="RESTful API のトークンベースの認証"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" target="_self" rel="referrer" title="RESTful API のトークンベースの認証">RESTful API のトークンベースの認証 </a>
+                    </p>
+                    <p class="is-size-6">JSON web トークン（JWT）認証を使用して RESTful API を呼び出す方法について説明します。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
