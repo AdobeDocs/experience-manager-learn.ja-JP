@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1387'
 ht-degree: 98%
 
 ---
@@ -309,8 +309,12 @@ ht-degree: 98%
       + [データとテンプレートの結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [ソリューションのテスト](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
-   + DocAssurance API の使用{#doc-assurance-api}
-      + [サンプルコードスニペット](./forms/doc-assurance-api/using-doc-assurance-api.md)
+   + Forms Document Services API の使用 {#forms-document-services-api}
+      + [はじめに](./forms/forms-document-services/introduction.md)
+      + [OpenAPI の設定](./forms/forms-document-services/using-open-api.md)
+      + [アクセストークンの生成](./forms/forms-document-services/generate-access-token.md)
+      + [使用権限の適用](./forms/forms-document-services/make-api-calls.md)
+      + [サンプルコード](./forms/forms-document-services/sample-project.md)
    + Batch API を使用したドキュメント生成{#formscs-batch-api}
       + [はじめに](./forms/formscs-batch-api/introduction.md)
       + [Azure ストレージの設定](./forms/formscs-batch-api/configure-azure-storage.md)
