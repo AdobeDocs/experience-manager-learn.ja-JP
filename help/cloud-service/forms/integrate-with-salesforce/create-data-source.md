@@ -13,9 +13,9 @@ thumbnail: 331755.jpg
 exl-id: e2d56e91-c13e-4787-a97f-255938b5d290
 duration: 173
 source-git-commit: ce22dd482417a54d222165deaf485ff69c2856b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
 
@@ -33,4 +33,4 @@ ht-degree: 41%
 | トークン URL にアクセス | https://newfocus-dev-ed.my.salesforce.com/services/oauth2/token |
 
 
-**更新およびアクセストークン URL のドメイン名は、Salesforce アカウントの設定に合わせて変更する必要があります**
+**更新およびアクセストークンの URL のドメイン名は、Salesforce アカウントの設定に合わせて変更する必要があります。**
