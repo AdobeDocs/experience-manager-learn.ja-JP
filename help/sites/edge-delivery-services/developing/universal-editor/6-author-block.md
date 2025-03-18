@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
-source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
-workflow-type: ht
-source-wordcount: '379'
-ht-degree: 100%
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
+workflow-type: tm+mt
+source-wordcount: '376'
+ht-degree: 93%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 100%
 
    ![ユニバーサルエディター - ブロックの作成](./assets/6-author-block/author-block.png)
 
-8. オーサリングが完了したら、前のブラウザータブ（AEM Sites 管理者）に切り替えて、ティーザーページを選択し、「**パブリケーションを管理**」をクリックして「**プレビュー**」を選択し、変更をプレビュー環境に公開します。変更は、web サイトの `aem.page` ドメインに公開されます。
+8. オーサリングが完了したら、ユニバーサルエディターの右上にある「**公開**」ボタンを選択し、「**プレビュー** に公開」を選択して、変更内容をプレビュー環境に公開します。 変更は、web サイトの `aem.page` ドメインに公開されます。
    ![AEM Sites - 公開またはプレビュー](./assets/6-author-block/publish-to-preview.png)
 
 9. 変更がプレビューに公開されるまで待ってから、[AEM CLI](./3-local-development-environment.md#install-the-aem-cli) 経由で [http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser) の web ページを開きます。

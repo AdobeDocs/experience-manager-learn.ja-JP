@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 100%
+source-wordcount: '450'
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 100%
    + [3D アセット](./advanced/3d-assets.md)
    + [注釈 PDF 出力](./advanced/customizing-annotations-pdf-output.md)
    + [Assets レポート](./advanced/asset-reports.md)
-   + [コンテンツ資格情報](./advanced/content-credentials.md)
+   + [Content Credentials](./advanced/content-credentials.md)
    + [ブロックされたタグ](./advanced/blocked-tags.md)
    + [アーカイブの抽出](./advanced/extract-archive.md)
    + [権限（CUG）](./advanced/closed-user-groups.md)
@@ -138,6 +138,7 @@ ht-degree: 100%
    + [Dynamic Media の概要](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic デスクトップアプリケーション](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 画像 {#images}
+      + [Dynamic Media テンプレート](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media スナップショット](dynamic-media/dynamic-media-snapshot.md)
       + [スマート切り抜き](dynamic-media/smart-crop-feature-video-use.md)
       + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
