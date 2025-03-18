@@ -9,7 +9,7 @@ team: TM
 source-git-commit: a11dd10cedbc8e77fa23d128562d6b3a3ae23c14
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -310,7 +310,7 @@ ht-degree: 97%
       + [データとテンプレートの結合](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [ソリューションのテスト](./forms/doc-gen-forms-cs/test.md)
       + [課題](./forms/doc-gen-forms-cs/challenge.md)
-   + Forms Document Services API の使用 {#forms-document-services-api}
+   + Forms Document Services API の使用{#forms-document-services-api}
       + [はじめに](./forms/forms-document-services/introduction.md)
       + [OpenAPI の設定](./forms/forms-document-services/using-open-api.md)
       + [アクセストークンの生成](./forms/forms-document-services/generate-access-token.md)
