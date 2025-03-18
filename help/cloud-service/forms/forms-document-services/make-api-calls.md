@@ -1,6 +1,6 @@
 ---
-title: Usagerights API の使用
-description: 提供されたPDFに使用権限を適用するサンプルコード
+title: 使用権限 API の使用
+description: 提供された PDF に使用権限を適用するサンプルコード
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,20 +9,21 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: a4e2132b-3cfd-4377-8998-6944365edec5
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# API 呼び出しを行う
+# API 呼び出しの実行
 
 ## 使用権限の適用
 
-アクセストークンを取得したら、次に、指定したPDFに使用権限を適用する API リクエストを実行します。 これには、呼び出しを認証するためのリクエストヘッダーにアクセストークンを含め、ドキュメントの安全で承認された処理を確保することが含まれます。
+アクセストークンを取得したら、次に、指定された PDF に使用権限を適用する API リクエストを実行します。それには、呼び出しを認証するためのアクセストークンをリクエストヘッダーに含めて、ドキュメントの安全で承認された処理が確実に行われるようにする必要があります。
 
-次の関数は、使用権限を適用します
+次の関数は使用権限を適用します
 
 ```java
 public void applyUsageRights(String accessToken,String endPoint) {
@@ -86,37 +87,37 @@ public void applyUsageRights(String accessToken,String endPoint) {
 
 
 
-* **API エンドポイントとペイロードの設定**
-   * 指定された `endPoint` と事前定義済みの `BUCKET` を使用して API URL を作成します。
-   * 適用する権限を指定する JSON 文字列（`usageRights`）を定義します。例えば、次のようなものです。
+* **API エンドポイントおよびペイロードの設定**
+   * 指定された `endPoint` と定義済みの `BUCKET` を使用して API URL を作成します。
+   * 適用する権限を指定する JSON 文字列（`usageRights`）を定義します。例えば、次のような権限です。
       * コメント
       * 埋め込みファイル
-      * フォームの入力
-      * フォームデータのエクスポート
+      * フォーム入力
+      * フォームデータの書き出し
 
-* **PDF ファイルを読み込む**
+* **PDF ファイルの読み込み**
    * `pdffiles` ディレクトリから `withoutusagerights.pdf` ファイルを取得します。
    * ファイルが見つからない場合、エラーをログに記録して終了します。
 
 * **HTTP リクエストの準備**
-   * PDF ファイルをバイト配列に読み取ります。
-   * `MultipartEntityBuilder` を使用して、以下を含むマルチパートリクエストを作成します。
-      * PDF ファイルをバイナリ本文として指定します。
-      * テキスト本文として使用する `usageRights` JSON。
-   * ヘッダー付きの HTTP `POST` リクエストを設定します。
-      * 認証用に `Authorization: Bearer <accessToken>` します。
-      * `X-Adobe-Accept-Experimental: 1` （API の互換性のために必要になる場合があります）。
+   * PDF ファイルを読み取ってバイト配列に格納します。
+   * `MultipartEntityBuilder` を使用して、以下を含んだマルチパートリクエストを作成します。
+      * PDF ファイル（バイナリ本文）
+      * `usageRights` JSON（テキスト本文）
+   * 次のヘッダーを含んだ HTTP `POST` リクエストを設定します。
+      * `Authorization: Bearer <accessToken>`（認証用）
+      * `X-Adobe-Accept-Experimental: 1`（API の互換性のために必要になる可能性があります）
 
 * **リクエストの送信と応答の処理**
    * `httpClient.execute(httpPost)` を使用して HTTP リクエストを実行します。
-   * 応答を読み取ります（使用権限が適用された、更新されたPDFであると想定）。
-   * 受け取ったPDF コンテンツを `SAVE_LOCATION` の **&quot;ReaderExtended.pdf&quot;** に書き込みます。
+   * 応答（使用権限が適用された更新済みの PDF となる見込み）を読み取ります。
+   * 受け取った PDF コンテンツを `SAVE_LOCATION` の **ReaderExtended.pdf** に書き込みます。
 
 * **エラーの処理とクリーンアップ**
-   * `IOException` のエラーをキャッチしてログに記録します。
-   * すべてのリソース（ストリーム、HTTP クライアント、応答）が `finally` ブロックで適切に閉じられることを確認します。
+   * `IOException` エラーを取得してログに記録します。
+   * すべてのリソース（ストリーム、HTTP クライアント、応答）が必ず `finally` ブロックで適切に閉じられるようにします。
 
-applyUsageRights 関数を呼び出す main.java コードを次に示します
+applyUsageRights 関数を呼び出す main.java コードを次に示します。
 
 ```java
 package com.aemformscs.communicationapi;
@@ -145,11 +146,11 @@ public class Main {
 }
 ```
 
-`main` メソッドは、`AccessTokenService` から `getAccessToken()` を呼び出すことにより初期化します。このメソッドは有効なトークンを返すと想定されます。
+`main` メソッドは、`AccessTokenService` から `getAccessToken()` を呼び出すことにより初期化を行います。この呼び出しで有効なトークンが返されるはずです。
 
-* その後、`DocumentGeneration` クラスから `applyUsageRights()` を呼び出して、次を渡します。
+* その後、`DocumentGeneration` クラスの `applyUsageRights()` を呼び出して、次のものを渡します。
    * 取得した `accessToken`
-   * 使用権限を適用するための API エンドポイント。
+   * 使用権限を適用するための API エンドポイント
 
 
 ## 次の手順

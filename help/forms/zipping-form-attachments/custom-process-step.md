@@ -1,5 +1,5 @@
 ---
-title: 添付ファイルを Zip ファイルに圧縮するカスタムプロセスステップ
+title: 添付ファイルを zip ファイルに圧縮するカスタムプロセスステップ
 description: アダプティブフォームの添付ファイルを zip ファイルに追加し、その zip ファイルをワークフロー変数に保存するカスタムプロセスステップ
 feature: Adaptive Forms
 version: 6.5
@@ -10,20 +10,20 @@ kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
 duration: 75
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
 # カスタムプロセスステップ
 
-フォームの添付ファイルを含んだ zip ファイルを作成するためのカスタムプロセスステップを実装しました。 OSGi バンドルの作成に詳しくない場合は、[ 次の手順に従ってください ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
+フォームの添付ファイルを含んだ zip ファイルを作成するためのカスタムプロセスステップを実装しました。OSGi バンドルの作成に詳しくない場合は、[こちらの手順に従ってください](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)。
 
 カスタムプロセスステップのコードでは、以下を行います。
 
-- ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルをクエリします。 フォルダー名がプロセス引数としてプロセスステップに渡されます。
+- ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルをクエリします。フォルダー名がプロセス引数としてプロセスステップに渡されます。
 - フォームの添付ファイルを含んだ zip ファイルを作成して、ペイロードフォルダーに保存します。
 - ワークフロー変数（no_of_attachments）の値を設定します。
 
@@ -141,6 +141,6 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 ## 次の手順
 
-[ArrayList ワークフロー変数に添付ファイルと添付ファイル名を入力する](./custom-process-step.md)
+[ArrayList ワークフロー変数に添付ファイルと添付ファイル名を入力](./custom-process-step.md)
 
 

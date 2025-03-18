@@ -1,6 +1,6 @@
 ---
 title: ヘッダーとフッター
-description: Edge Delivery Servicesとユニバーサルエディターでヘッダーとフッターを開発する方法を説明します。
+description: Edge Delivery Services とユニバーサルエディターでヘッダーとフッターを開発する方法について説明します。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,25 +11,25 @@ jira: KT-17470
 duration: 300
 exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
 source-git-commit: d201afc730010f0bf202a1d72af4dfa3867239bc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1207'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 # ヘッダーとフッターの開発
 
-![ ヘッダーとフッター ](./assets/header-and-footer/hero.png){align="center"}
+![ヘッダーとフッター](./assets/header-and-footer/hero.png){align="center"}
 
-ヘッダーとフッターは、HTML `<header>` および `<footer>` 要素に直接連結されるので、Edge Delivery Services（EDS）において独特の役割を果たします。 通常のページコンテンツとは異なり、ページは個別に管理され、ページキャッシュ全体をパージしなくても独立して更新できます。 実装はコードプロジェクト内で `blocks/header` および `blocks/footer` の下のブロックとして存在しますが、作成者は、任意のブロックの組み合わせを含めることができる専用のAEM ページを通じてコンテンツを編集できます。
+ヘッダーとフッターは、HTML `<header>` および `<footer>` 要素に直接バインドされるので、Edge Delivery Services（EDS）において一意の役割を果たします。通常のページコンテンツとは異なり、個別に管理されるので、ページキャッシュ全体をパージする必要がなく、独立して更新できます。これらの実装はコードプロジェクト内で `blocks/header` および `blocks/footer` の下のブロックとして存在しますが、作成者は任意の組み合わせのブロックを含めることができる専用の AEM ページを通じてコンテンツを編集できます。
 
 ## ヘッダーブロック
 
-![ ヘッダーブロック ](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![ヘッダーブロック](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
 ヘッダーは、Edge Delivery Services HTML `<header>` 要素にバインドされる特別なブロックです。
-`<header>` 要素は空で配信され、XHR （AJAX）を介して別のAEM ページに入力されます。
-これにより、ヘッダーをページコンテンツとは独立して管理でき、すべてのページの完全なキャッシュパージを必要とせずにヘッダーを更新できます。
+`<header>` 要素は空で配信され、XHR（AJAX）を通じて別の AEM ページに入力されます。
+これにより、ヘッダーをページコンテンツとは独立して管理し、すべてのページの完全なキャッシュパージを行わなくても更新できます。
 
 ヘッダーブロックは、ヘッダーコンテンツを含むAEM ページフラグメントをリクエストし、`<header>` 要素でレンダリングする役割を果たします。
 
@@ -58,45 +58,45 @@ export default async function decorate(block) {
 }
 ```
 
-`loadFragment()` 関数は `${navPath}.plain.html` に対して XHR （AJAX）リクエストを行い、ページの `<main>` タグに存在するAEM ページのHTMLの EDS HTML レンディションを返し、そのコンテンツを含むすべてのブロックで処理し、更新された DOM ツリーを返します。
+`loadFragment()` 関数は、`${navPath}.plain.html` にページの `<main>` タグ内に存在する AEM ページの HTML の EDS HTML レンディションを返す XHR（AJAX）リクエストを行い、そのコンテンツを含むすべてのブロックで処理し、更新された DOM ツリーを返します。
 
 ## ヘッダーページの作成
 
 ヘッダーブロックを開発する前に、まずそのコンテンツをユニバーサルエディターで作成して、開発対象を用意します。
 
-ヘッダーコンテンツは、`nav` という名前の専用のAEM ページにあります。
+ヘッダーコンテンツは、`nav` という名前の専用の AEM ページにあります。
 
-![ デフォルトのヘッダーページ ](./assets/header-and-footer/header-page.png){align="center"}
+![デフォルトのヘッダーページ](./assets/header-and-footer/header-page.png){align="center"}
 
 ヘッダーを作成するには：
 
 1. ユニバーサルエディターで `nav` ページを開きます
-1. デフォルトのボタンを、WKND ロゴを含む **画像ブロック** に置き換えます
-1. **テキストブロック** 内のナビゲーションメニューを次の方法で更新します。
+1. デフォルトのボタンを、WKND ロゴを含む&#x200B;**画像ブロック**&#x200B;に置き換えます
+1. **テキストブロック**&#x200B;内のナビゲーションメニューを次の方法で更新します。
    - 目的のナビゲーションリンクの追加
    - 必要に応じたサブナビゲーション項目の作成
-   - 現時点では、ホームページ（`/`）へのすべてのリンクを設定
+   - 現時点では、ホームページ（`/`）へのすべてのリンクの設定
 
-![ ユニバーサルエディターのオーサーヘッダーブロック ](./assets/header-and-footer/header-author.png){align="center"}
+![ユニバーサルエディターのヘッダーブロックを作成](./assets/header-and-footer/header-author.png){align="center"}
 
-### 公開してプレビュー
+### プレビューへの公開
 
-ヘッダーページを更新した状態で、[ ページをプレビュー用に公開 ](../6-author-block.md) します。
+ヘッダーページを更新した状態で、[プレビューにページを公開](../6-author-block.md)します。
 
-ヘッダーコンテンツは独自のページ（`nav` ページ）に存在するので、ヘッダーの変更を有効にするには、そのページを公開する必要があります。 ヘッダーを使用する他のページを公開しても、Edge Delivery Servicesのヘッダーコンテンツは更新されません。
+ヘッダーコンテンツは独自のページ（`nav` ページ）に存在するので、ヘッダーの変更を有効にするには、そのページを明示的に公開する必要があります。ヘッダーを使用する他のページを公開しても、Edge Delivery Services のヘッダーコンテンツは更新されません。
 
 ## ブロックの HTML
 
 ブロック開発を開始するには、まず Edge Delivery Services プレビューによって公開される DOM 構造を確認します。DOM は JavaScript で強化され、CSS でスタイル設定され、ブロックの作成とカスタマイズの基盤を提供します。
 
-ヘッダーはフラグメントとして読み込まれるので、DOM に挿入され、`loadFragment()` 経由でデコレートされた後に、XHR リクエストによって返されるHTMLを調べる必要があります。 これは、ブラウザーのデベロッパーツールで DOM を調べることで実行できます。
+ヘッダーはフラグメントとして読み込まれるので、DOM に挿入され、`loadFragment()` 経由で装飾された後に、XHR リクエストによって返される HTML を調べる必要があります。これは、ブラウザーの開発者ツールで DOM を検査することで実行できます。
 
 
 >[!BEGINTABS]
 
 >[!TAB 装飾する DOM]
 
-次に、提供された `header.js` を使用して読み込まれ、DOM に挿入された後のヘッダーページのHTMLを示します。
+次に、指定された `header.js` を使用して読み込まれ、DOM に挿入された後のヘッダーページの HTML を示します。
 
 ```html
 <header class="header-wrapper">
@@ -141,16 +141,16 @@ export default async function decorate(block) {
 
 >[!TAB DOM を見つける方法]
 
-Web ブラウザーのデベロッパーツールでページの `<header>` 要素を検索および検査します。
+Web ブラウザーの開発者ツールでページの `<header>` 要素を検索および検査します。
 
-![ ヘッダー DOM](./assets/header-and-footer/header-dom.png){align="center"}
+![ヘッダー DOM](./assets/header-and-footer/header-dom.png){align="center"}
 
 >[!ENDTABS]
 
 
 ## ブロックの JavaScript
 
-[AEM Boilerplate XWalk プロジェクトテンプレートの `/blocks/header/header.js` ファイルは ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) ドロップダウンメニューやレスポンシブモバイルビューなど、JavaScriptのナビゲーションを提供します。
+[AEM ボイラープレート XWalk プロジェクトテンプレート](https://github.com/adobe-rnd/aem-boilerplate-xwalk)の `/blocks/header/header.js` ファイルには、ドロップダウンメニューやレスポンシブモバイルビューなどのナビゲーション用の JavaScript が用意されています。
 
 `header.js` スクリプトは多くの場合、サイトのデザインに合わせて大幅にカスタマイズされますが、ヘッダーページフラグメントを取得して処理する `decorate()` の最初の行を保持することが不可欠です。
 
@@ -167,19 +167,19 @@ export default async function decorate(block) {
 
 残りのコードは、プロジェクトのニーズに合わせて変更できます。
 
-ヘッダー要件に応じて、ボイラープレートコードを調整または削除できます。 このチュートリアルでは、提供されたコードを使用して、最初に作成した画像の周りにハイパーリンクを追加し、サイトのホームページにリンクすることで、コードを強化します。
+ヘッダー要件に応じて、ボイラープレートコードを調整または削除できます。このチュートリアルでは、指定されたコードを使用して、最初に作成した画像の周囲にハイパーリンクを追加し、サイトのホームページにリンクすることで、コードを強化します。
 
-テンプレートのコードは、次の順序の 3 つのセクションで構成されると仮定して、ヘッダーページフラグメントを処理します。
+テンプレートのコードは、次の順序で 3 つのセクションで構成されると想定して、ヘッダーページフラグメントを処理します。
 
-1. **ブランドセクション** - ロゴを含み、`.nav-brand` クラスでスタイル設定されます。
-2. **セクションセクション** - サイトのメインメニューを定義し、スタイルを `.nav-sections` に設定します。
-3. **ツールセクション** – 検索、ログイン/ログアウト、プロファイルなどの要素が含まれ、スタイルは `.nav-tools` に設定されます。
+1. **「ブランド」セクション** - ロゴが含まれ、`.nav-brand` クラスでスタイル設定されます。
+2. **「セクション」セクション** - サイトのメインメニューを定義し、`.nav-sections` でスタイル設定されます。
+3. **「ツール」セクション** - 検索、ログイン／ログアウト、プロファイルなどの要素が含まれ、`.nav-tools` でスタイル設定されます。
 
-ロゴ画像からホームページへのハイパーリンクを作成するには、次のようにブロックJavaScriptを更新します。
+ロゴ画像をホームページにハイパーリンクさせるには、ブロック JavaScript を次のように更新します。
 
 >[!BEGINTABS]
 
->[!TAB  更新されたJavaScript]
+>[!TAB 更新された JavaScript]
 
 ロゴ画像をサイトのホームページ（`/`）へのリンクでラップする更新されたコードを以下に示します。
 
@@ -214,9 +214,9 @@ export default async function decorate(block) {
 }
 ```
 
->[!TAB  オリジナルJavaScript]
+>[!TAB 元の JavaScript]
 
-以下は、テンプレートから生成された元の `header.js` です。
+テンプレートから生成された元の `header.js` を以下に示します。
 
 [!BADGE /blocks/header/header.js]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -252,11 +252,11 @@ export default async function decorate(block) {
 
 ## ブロックの CSS
 
-`/blocks/header/header.css` を更新して、WKND のブランドに従ってスタイルを設定します。
+`/blocks/header/header.css` を更新して、WKND のブランドに従ってスタイル設定します。
 
-`header.css` の下部にカスタム CSS を追加して、チュートリアルの変更を見やすく理解しやすくします。 これらのスタイルはテンプレートの CSS ルールに直接統合することもできますが、別々に保つことで、何が変更されたかを理解するのに役立ちます。
+チュートリアルの変更を見やすく、理解しやすくするために、`header.css` の下部にカスタム CSS を追加します。これらのスタイルはテンプレートの CSS ルールに直接統合することもできますが、個別にしておくと、変更された内容を理解するのに役立ちます。
 
-元のセットの後に新しいルールを追加するので、テンプレートルールよりも優先されるように、`header .header.block nav` CSS セレクターでラップします。
+元のセットの後に新しいルールを追加するので、テンプレートルールよりも優先されるように、`header .header.block nav` CSS セレクターでまとめます。
 
 [!BADGE /blocks/header/header.css]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -322,9 +322,9 @@ header .header.block nav {
 
 ## 開発プレビュー
 
-CSS とJavaScriptが開発されると、AEM CLI のローカル開発環境が変更内容をホットリロードし、コードがブロックに与える影響をすばやく簡単に視覚化できます。 CTA にポインタを合わせて、ティーザーの画像がズームインおよびズームアウトされることを確認します。
+CSS と JavaScript を開発すると、AEM CLI のローカル開発環境によって変更がホットリロードされ、コードがブロックに与える影響をすばやく簡単に視覚化できます。CTA にポインタを合わせて、ティーザーの画像がズームインおよびズームアウトされることを確認します。
 
-![CSS および JS を使用したヘッダーのローカル開発プレビュー ](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![CSS および JS を使用したヘッダーのローカル開発プレビュー](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
 ## コードのリント
 
@@ -351,11 +351,11 @@ $ git push origin header-and-footer
 
 これで、`?ref=header-and-footer` クエリパラメーターを使用する際に、ユニバーサルエディターに変更が表示されます。
 
-![ ユニバーサルエディターのヘッダー ](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
+![ユニバーサルエディターのヘッダー](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
 
 ## フッター
 
-ヘッダーと同様に、フッターコンテンツは専用のAEM ページ（この場合はフッターページ（`footer`））に作成されます。 フッターは、フラグメントとして読み込まれ、CSS とJavaScriptでデコレートされるのと同じパターンに従います。
+ヘッダーと同様に、フッターコンテンツは専用の AEM ページ（この場合は、フッター ページ（`footer`））で作成されます。フッターはフラグメントとして読み込まれ、CSS と JavaScript で装飾されるのと同じパターンに従います。
 
 >[!BEGINTABS]
 
@@ -364,26 +364,26 @@ $ git push origin header-and-footer
 フッターは、次を含む 3 列のレイアウトで実装する必要があります。
 
 - プロモーション（画像とテキスト）が表示されている左側の列
-- ナビゲーションリンクを含む中央列
+- ナビゲーションリンクを含む中央の列
 - ソーシャルメディアリンクを含む右側の列
-- 著作権を含む 3 列すべてが一番下にある行
+- 3 列すべて（著作権を含む）にまたがる、一番下にある行
 
-![ フッタープレビュー ](./assets/header-and-footer/footer-preview.png){align="center"}
+![フッタープレビュー](./assets/header-and-footer/footer-preview.png){align="center"}
 
->[!TAB  フッターコンテンツ ]
+>[!TAB フッターコンテンツ]
 
-フッターページの列ブロックを使用して、3 列の効果を作成します。
+フッターページの列ブロックを使用して、3 列のエフェクトを作成します。
 
 | 列 1 | 列 2 | 列 3 |
 | ---------|----------------|---------------|
 | 画像 | 見出し 3 | 見出し 3 |
 | テキスト | リンクのリスト | リンクのリスト |
 
-![ ヘッダー DOM](./assets/header-and-footer/footer-author.png){align="center"}
+![ヘッダー DOM](./assets/header-and-footer/footer-author.png){align="center"}
 
->[!TAB  フッターコード ]
+>[!TAB フッターコード]
 
-以下の CSS では、フッターブロックのスタイルを 3 列のレイアウト、一定の間隔およびタイポグラフィで設定します。 フッター実装では、テンプレートで提供されるJavaScriptのみを使用します。
+以下の CSS では、3 列のレイアウト、一貫した間隔およびテキスト編集を使用してフッターブロックをスタイル設定します。フッターの実装では、テンプレートで指定される JavaScript のみを使用します。
 
 [!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="以下のコードサンプルのファイル名。"}
 
@@ -462,13 +462,13 @@ footer {
 
 ## おめでとうございます。
 
-これで、Edge Delivery Servicesとユニバーサルエディターでヘッダーとフッターを管理および開発する方法を確認しました。 学習内容：
+これで、Edge Delivery Services とユニバーサルエディターでヘッダーとフッターを管理および開発する方法を確認しました。学習内容：
 
-- メインコンテンツとは別の専用のAEM ページで作成
-- 非同期でフラグメントとして読み込まれ、独立した更新を有効にする
-- JavaScriptと CSS で装飾して、レスポンシブナビゲーションエクスペリエンスを作成
-- ユニバーサルエディターとシームレスに統合され、コンテンツ管理を容易にします。
+- メインコンテンツとは別の専用の AEM ページで作成
+- 非同期でフラグメントとして読み込み、独立した更新を有効にする
+- JavaScript と CSS で装飾して、レスポンシブナビゲーションエクスペリエンスを作成
+- コンテンツ管理を簡単に実現するユニバーサルエディターとシームレスに統合
 
-このパターンは、サイト全体のナビゲーションコンポーネントを実装するための、柔軟で保守可能なアプローチを提供します。
+上記のパターンでは、サイト全体のナビゲーションコンポーネントを実装することを目的に、柔軟で保守性が確保されるアプローチについて説明しています。
 
 その他のベストプラクティスと高度なテクニックについて詳しくは、[ユニバーサルエディターのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)を参照してください。

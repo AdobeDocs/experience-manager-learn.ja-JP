@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '586'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -301,9 +301,9 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/header-and-footer.md" target="_blank" rel="referrer" title="ヘッダーとフッター"> ヘッダーとフッター </a>
+                        <a href="./how-to/header-and-footer.md" target="_blank" rel="referrer" title="ヘッダーとフッター">ヘッダーとフッター</a>
                     </p>
-                    <p class="is-size-6">Edge Delivery Servicesとユニバーサルエディターでのヘッダーとフッターの使用方法を説明します。</p>
+                    <p class="is-size-6">Edge Delivery Services とユニバーサルエディターでヘッダーとフッターを使用する方法について説明します。</p>
                 </div>
                 <a href="./how-to/header-and-footer.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>

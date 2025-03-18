@@ -1,6 +1,6 @@
 ---
 title: リスト変数に値を入力するカスタムプロセスステップ
-description: Adobe Experience Managerで document タイプと string タイプのリスト変数に値を入力するカスタムプロセスステップを作成する方法を説明します。
+description: Adobe Experience Manager でドキュメントタイプと文字列タイプのリスト変数に値を入力するカスタムプロセスステップを作成する方法について説明します。
 feature: Workflow
 topic: Development
 version: 6.5
@@ -10,24 +10,24 @@ kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 
 # カスタムプロセスステップ
 
-このガイドでは、カスタムプロセスステップを作成して、Adobe Experience Managerで添付ファイルと添付ファイル名を含んだ配列リストタイプのリスト変数を入力する手順について説明します。 これらの変数は、メールを送信ワークフローコンポーネントには必須です。
+このガイドでは、Adobe Experience Manager で添付ファイルと添付ファイル名を含んだ配列リストタイプのリスト変数に値を入力するカスタムプロセスステップの作成について説明します。これらの変数は、メールを送信ワークフローコンポーネントには必須です。
 
-OSGi バンドルの作成に不慣れな場合は、次の [ 手順 ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja) に従ってください。
+OSGi バンドルの作成に詳しくない場合は、こちらの[手順](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=ja)に従ってください。
 
-カスタムプロセスステップのコードは、次のアクションを実行します。
+カスタムプロセスステップのコードでは、次のアクションを実行します。
 
-1. ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルのクエリ。 フォルダー名がプロセス引数としてステップに渡されます。
-2. `listOfDocuments` ワークフロー変数を設定します。
-3. `attachmentNames` ワークフロー変数を設定します。
+1. ペイロードフォルダーにあるすべてのアダプティブフォーム添付ファイルのクエリを実行します。フォルダー名がプロセス引数としてステップに渡されます。
+2. `listOfDocuments` ワークフロー変数に値を入力します。
+3. `attachmentNames` ワークフロー変数に値を入力します。
 4. ワークフロー変数 `no_of_attachments` の値を設定します。
 
 ```java
@@ -112,11 +112,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> コードが機能するために、次の変数がワークフローで定義されていることを確認します。
+> コードが機能するために、次の変数がワークフローで必ず定義されるようにしてください。
 > 
-> - `listOfDocuments`: ドキュメントの ArrayList タイプの変数
+> - `listOfDocuments`：ドキュメントの ArrayList タイプの変数
 > - `attachmentNames`：文字列の ArrayList タイプの変数
-> - `no_of_attachments`:Double タイプの変数
+> - `no_of_attachments`：Double タイプの変数
 
 ## 次の手順
 

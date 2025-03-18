@@ -1,6 +1,6 @@
 ---
 title: GuideBridge API を使用したフォームデータの投稿
-description: アダプティブフォーム用の GuideBridge API を使用して、フォームデータにアクセスし、送信する方法を説明します。 フォームデータを簡単に保存および取得できます。
+description: アダプティブフォーム用の GuideBridge API を使用して、フォームデータにアクセスし、送信する方法について説明します。フォームデータを簡単に保存および取得できます。
 duration: 68
 feature: Adaptive Forms
 version: 6.5
@@ -11,22 +11,22 @@ jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
 # GuideBridge API を使用したフォームデータへのアクセスと送信
 
-GuideBridge API を利用して、フォームデータにアクセスし、保存と取得のために REST エンドポイントにフォームデータを送信する方法を説明します。 この機能を使用すると、ユーザーはフォーム完了をシームレスに保存および再開できます。
+GuideBridge API を利用して、フォームデータにアクセスし、保存と取得のために REST エンドポイントにフォームデータを送信する方法について説明します。この機能を使用すると、ユーザーはフォーム完了をシームレスに保存および再開できます。
 
-ルールエディターでボタンをクリックしてJavaScript関数をトリガーすることで、フォームデータが保存される。
+ルールエディターでボタンをクリックして JavaScript 関数をトリガーすることで、フォームデータが保存されます。
 
 ![ルールエディター](assets/rule-editor.png)
 
-以下のJavaScript関数は、フォームデータを指定されたエンドポイントに送信する方法を示しています。
+以下の JavaScript 関数は、フォームデータを指定されたエンドポイントに送信する方法を示しています。
 
 ```javascript
 /**
@@ -67,9 +67,9 @@ function submitFormDataAndAttachments(endpoint) {
 }
 ```
 
-## サーバー側コード
+## サーバーサイドコード
 
-次のサーバーサイド Java コードで、フォームデータの処理を行います。 AEMのこの Java サーブレットは、上記のJavaScript関数の XHR 呼び出しを介して呼び出されます。
+次のサーバーサイド Java コードで、フォームデータ処理を行います。AEM のこの Java サーブレットは、上記の JavaScript 関数の XHR 呼び出しを通じて呼び出されます。
 
 ```java
 package com.azuredemo.core.servlets;

@@ -9,32 +9,31 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: f1fcc4bb-cc31-45e8-b7bb-688ef6a236bb
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
-
 
 # ローカル環境でのテスト
 
 * プロジェクトの読み込み
 
-   * [ サンプルプロジェクト ](./assets/formsdocumentservices.zip) をダウンロードして抽出します。
-   * 好みの **Java 開発環境** IntelliJ IDEA、Eclipse または VS Code）を開き、プロジェクトを Maven プロジェクトとして読み込みます
+   * [サンプルプロジェクト](./assets/formsdocumentservices.zip)のダウンロードと抽出
+   * 任意の **Java 開発環境**（IntelliJ IDEA、Eclipse または VS Code）を開き、プロジェクトを Maven プロジェクトとして読み込みます。
 * 資格情報の設定
 
-   * ファイル `resources/credentials/server_credentials.json` を見つけます。
-   * これを開き、環境に固有の **資格情報を更新** します。
+   * `resources/credentials/server_credentials.json` ファイルを見つけます。
+   * これを開き、環境に固有の&#x200B;**資格情報を更新**&#x200B;します。
    * 次の有効な値が含まれていることを確認します。
-     `clientId`、`clientSecret`、`adobeIMSV3TokenEndpointURL` および
+     `clientId`、`clientSecret`、`adobeIMSV3TokenEndpointURL`。
      `scopes`
 
-* Main クラスの実行
+* メインクラスの実行
 
-   * `src/main/java/Main.java` に移動し、main メソッドを実行します。
+   * `src/main/java/Main.java` に移動し、メインメソッドを実行します。
 
-* 実行の検証
-   * ターミナルウィンドウで出力を確認します
-
+* 実行の確認
+   * ターミナルウィンドウで出力を確認します。

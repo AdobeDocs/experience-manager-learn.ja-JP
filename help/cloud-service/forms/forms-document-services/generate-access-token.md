@@ -9,17 +9,18 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: 100cab4b-16bd-4358-b0f0-61dbfd64d412
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '180'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # アクセストークンの生成
 
-アクセストークンは、REST API へのリクエストを認証および承認するために使用される資格情報です。 通常、ユーザーまたはアプリケーションが正常にログインした後、認証サーバー（OAuth 2.0 または OpenID Connect など）によって発行されます。 セキュリティで保護されたForms ドキュメントサービス API を呼び出す場合、クライアントの ID を検証するために、リクエストヘッダーにアクセストークンが含まれます。
-アクセストークンの送信リクエストの例を次に示します
+アクセストークンは、REST API へのリクエストを認証および承認するために使用される資格情報です。通常、ユーザーまたはアプリケーションが正常にログインした後、認証サーバー（OAuth 2.0 または OpenID Connect など）によって発行されます。セキュリティ保護された Forms Document Services API を呼び出す際、クライアントの ID を確認するために、リクエストヘッダーにアクセストークンが含まれます。
+アクセストークンの送信リクエストの例を以下に示します
 
 ```java
 POST /api/data HTTP/1.1
@@ -27,7 +28,7 @@ Host: example.com
 Authorization: Bearer eyJhbGciOiJIUzI1...
 ```
 
-アクセストークンの生成には、次のコードを使用しました。
+アクセストークンの生成には、次のコードを使用しました
 
 ```java
 import java.io.InputStream;
@@ -99,7 +100,7 @@ public class AccessTokenService {
 }
 ```
 
-AccessTokenService クラスは、Adobeの IMS 認証サービスから OAuth アクセストークンを取得する役割を果たします。 JSON ファイル（server_credentials.json）からクライアント資格情報を読み取り、認証リクエストを作成して、Adobe トークンエンドポイントに送信します。 その後、応答が解析されてアクセストークンが抽出され、セキュアな API 呼び出しに使用されます。 クラスには、信頼性を確保しデバッグを容易にする、適切なログとエラー処理が含まれています。
+AccessTokenService クラスは、アドビの IMS 認証サービスから OAuth アクセストークンを取得する役割を果たします。JSON ファイル（server_credentials.json）からクライアント資格情報を読み取り、認証リクエストを作成して、Adobe トークンエンドポイントに送信します。その後、応答が解析されて、セキュア API 呼び出しに使用するアクセストークンが抽出されます。クラスには、信頼性を確保してデバッグをより簡単にする、適切なログとエラー処理が含まれています。
 
 ## 次の手順
 
