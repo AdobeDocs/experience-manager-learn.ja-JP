@@ -12,8 +12,8 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
-workflow-type: ht
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 100%
 
@@ -247,7 +247,7 @@ data:
 次の [Vegeta](https://github.com/tsenart/vegeta) コマンドを使用すると、web サイトに対して多くのリクエストを行うことができます。
 
 ```shell
-$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=5s | vegeta report
+$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=60s | vegeta report
 ```
 
 上記のコマンドは、5 秒間で 120 件のリクエストを実行し、レポートを出力します。Web サイトにレート制限がないとすると、トラフィックのスパイクが発生する可能性があります。
