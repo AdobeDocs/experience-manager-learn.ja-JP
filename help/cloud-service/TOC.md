@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 99%
    + [CI／CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
    + [カスタムドメイン名](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
-   + [ コンテンツの復元 ](./cloud-manager/content-restore.md)
+   + [コンテンツの復元](./cloud-manager/content-restore.md)
    + DevOps{#devops}
       + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
       + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
