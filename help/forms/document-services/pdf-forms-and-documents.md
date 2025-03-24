@@ -4,15 +4,15 @@ description: PDF は実際には一連のファイル形式です。この記事
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: PDF Generator
 jira: KT-7071
 topic: Development
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 273
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 100%
 

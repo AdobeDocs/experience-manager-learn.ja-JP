@@ -2,15 +2,15 @@
 title: AEM Sites でのマルチサイトマネージャーの使用
 description: ライブコピーの概要とブループリント設定マネージャーは、Multi Site Manager を操作するためのタッチ UI 対応インターフェイスです。
 feature: Multi Site Manager
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
 duration: 507
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 100%
 

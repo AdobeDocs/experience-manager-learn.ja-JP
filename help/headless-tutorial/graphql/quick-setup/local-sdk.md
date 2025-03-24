@@ -1,7 +1,7 @@
 ---
 title: ローカル AEM SDK を使用した AEM ヘッドレスのクイックセットアップ
 description: Adobe Experience Manager（AEM）と GraphQL の基本を学ぶAEM SDK をインストールし、サンプルコンテンツを追加し、GraphQL API を使用して AEM のコンテンツを使用するアプリケーションをデプロイします。AEM がオムニチャネルエクスペリエンスを強化する仕組みを説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6386
 thumbnail: KT-6386.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
 duration: 242
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 100%
 

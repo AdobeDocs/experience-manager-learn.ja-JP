@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレス API と React - AEM ヘッドレスの最初のチュートリアル
 description: AEM の GraphQL API からコンテンツフラグメントデータを取得し、React アプリで表示する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,8 +12,8 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 100%
 

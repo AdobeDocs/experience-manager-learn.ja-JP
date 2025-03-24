@@ -6,10 +6,10 @@ user-guide-description: AEM Forms 開発の初心者および経験者向け AEM
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 100%
 

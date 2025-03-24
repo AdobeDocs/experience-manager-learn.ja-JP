@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレスとリッチテキストの併用
 description: Adobe Experience Manager コンテンツフラグメントと複数行リッチテキストエディターを併用してコンテンツの作成方法と参照コンテンツを埋め込む方法、そして AEM の GraphQL API がリッチテキストを JSON として配信し、ヘッドレスアプリケーションが配信内容を使用する方法を学びます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 jira: KT-9985
 feature: Content Fragments, GraphQL API
@@ -10,8 +10,8 @@ level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 duration: 785
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 100%
 

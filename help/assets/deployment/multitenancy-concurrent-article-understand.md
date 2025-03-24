@@ -2,15 +2,15 @@
 title: マルチテナント機能と同時開発について
 description: Adobe Experience Manager Assets を使用したマルチテナント実装を管理するメリット、課題および手法について説明します。
 feature: Connected Assets
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 437
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 100%
 

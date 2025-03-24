@@ -1,7 +1,7 @@
 ---
 title: AEM Sites の基本を学ぶ | AEM クイックサイト作成
 description: ローコードアプローチに従って、クイックサイト作成と事前定義済みサイトテンプレートを使用して Adobe Experience Manager で初めてのサイトを作成する方法を説明します。標準提供のコンポーネントやテンプレートを使用すると、迅速にサイトを立ち上げることができます。Adobe XD ドリブンのテーマワークフローを使用すると、CSS と JavaScript だけでブランド固有のスタイルやカスタマイズを適用できます。新規プロジェクトや新任のデベロッパーにお勧めです。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -11,8 +11,8 @@ thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 100%
 

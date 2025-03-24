@@ -1,7 +1,7 @@
 ---
 title: AEM Site ページのページバージョンの作成
 description: 次のビデオでは、ページバージョンの作成方法、ページバージョンのプレビューおよび復元方法、現在のページバージョンと保存済みのページバージョンの比較方法を説明しています。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4630
 thumbnail: 32151.jpg
 topic: Content Management
@@ -11,8 +11,8 @@ level: Beginner
 doc-type: Feature Video
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
 duration: 288
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 100%
 

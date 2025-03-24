@@ -1,7 +1,7 @@
 ---
 title: Git へのシンボリックリンクの適切な追加
 description: Dispatcher 設定で作業する際にシンボリックリンクを追加する方法と場所について説明します。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,8 +10,8 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: ページテンプレート
 description: ページテンプレートを作成および変更する方法について説明します。ページテンプレートとページとの関係を理解します。ページテンプレートのポリシーを設定することにより、コンテンツのきめ細かいガバナンスとブランドの一貫性を実現する方法を説明します。  Adobe XD で作成したモックアップをもとに、適切に構造化された雑誌記事テンプレートを作成しました。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
 duration: 1561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 100%
 

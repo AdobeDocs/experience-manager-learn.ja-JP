@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service 開発用の Dispatcher ツールを設定する
 description: AEM SDK の Dispatcher ツールを使用すると、Dispatcher をローカルで容易にインストール、実行およびトラブルシューティングできるようになるので、Adobe Experience Manager（AEM）プロジェクトのローカル開発が簡単になります。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
 role: Developer
@@ -11,10 +11,10 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 624
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '1621'
-ht-degree: 100%
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
+source-wordcount: '1620'
+ht-degree: 98%
 
 ---
 
@@ -51,7 +51,7 @@ AEM as a Cloud Service SDK には、Dispatcher の設定、検証およびシミ
 
 + オプションとして、ローカルの AEM Publish サービスに最新の [AEM リファレンス web サイト](https://github.com/adobe/aem-guides-wknd/releases)をインストールします。この web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
 
-1. [Docker](https://www.docker.com/)（Docker Desktop 2.2.0.5 以降および Docker Engine v19.03.9以降）の最新バージョンをローカル開発マシンにインストールして起動します。
+1. [Docker](https://www.docker.com/) （Docker Desktop 2.2.0.5+/Docker Engine v19.03.9 以降）の最新バージョンをローカル開発マシンにインストールして起動します。
 
 ## Dispatcher ツールのダウンロード（AEM SDK の一部として）
 

@@ -1,7 +1,7 @@
 ---
 title: ブロックされたタグ
 description: ブロックしたタグを使用して文化的に機密性が高いスマートタグ、不適切なスマートタグ、物議を醸すスマートタグなどの適用を防止することで、AEM as a Cloud Service でのアセット管理を強化する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Asset Management
 topic: Content Management
 role: Admin, User
@@ -12,8 +12,8 @@ last-substantial-update: 2024-01-12T00:00:00Z
 jira: KT-14778
 thumbnail: 3426839.jpeg
 exl-id: 0d02faeb-6290-4f57-800c-4f7ee62f1352
-source-git-commit: 7b98bc06892c897ae76f51f62e5503e667756fda
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 100%
 

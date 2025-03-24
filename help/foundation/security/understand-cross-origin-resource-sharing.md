@@ -1,7 +1,7 @@
 ---
 title: AEM でのクロスオリジンリソース共有（CORS）について
 description: Adobe Experience Manager のクロスオリジンリソース共有（CORS）を使用すると、AEM 以外の Web プロパティで、認証済みおよび未認証の両方の AEM に対してクライアントサイドの呼び出しを行い、コンテンツをフェッチしたり、AEM と直接やり取りしたりできます。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: Security, APIs
 doc-type: Article
@@ -10,8 +10,8 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 100%
 

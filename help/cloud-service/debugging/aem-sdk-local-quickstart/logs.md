@@ -2,7 +2,7 @@
 title: ログを使用したAEM SDK のデバッグ
 description: ログは AEM アプリケーションのデバッグの最前線として機能しますが、デプロイされた AEM アプリケーションでの適切なログの記録に依存します。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5252
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
 duration: 411
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 100%
 

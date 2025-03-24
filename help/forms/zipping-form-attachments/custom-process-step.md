@@ -2,15 +2,15 @@
 title: 添付ファイルを zip ファイルに圧縮するカスタムプロセスステップ
 description: アダプティブフォームの添付ファイルを zip ファイルに追加し、その zip ファイルをワークフロー変数に保存するカスタムプロセスステップ
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
 duration: 75
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 100%
 

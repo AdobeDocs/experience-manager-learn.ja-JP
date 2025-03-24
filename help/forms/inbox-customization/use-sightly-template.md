@@ -3,15 +3,15 @@ title: Sightly テンプレートを使用したインボックスデータの�
 description: Sightly テンプレートを使用して、ワークフローの追加データを表示するカスタム列を追加します
 feature: Adaptive Forms
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
 

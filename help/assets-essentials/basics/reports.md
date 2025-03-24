@@ -1,7 +1,7 @@
 ---
 title: Assets レポート
 description: AEM Assets のアセットレポートを使用して、DAM アクティビティに関するインサイトを取得する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: Admin, Leader, User
@@ -11,8 +11,8 @@ duration: 196
 last-substantial-update: 2024-08-05T00:00:00Z
 jira: KT-15656
 exl-id: 0ed7aea8-67b6-438a-bf1f-0f4ebd7c95aa
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 100%
 

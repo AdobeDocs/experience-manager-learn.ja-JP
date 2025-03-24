@@ -4,14 +4,14 @@ description: OpenAPI ベースの Forms Document Services API の使用方法を
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 7d8755de-c227-40e9-a533-0b20c91f1610
-source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 100%
 

@@ -1,15 +1,15 @@
 ---
 title: AEM as a Cloud Service での秘密鍵の管理
 description: AEM が提供するツールとテクニックを使用して機密情報を保護し、アプリケーションの安全性と機密性を維持できるように、AEM as a Cloud Service 内で秘密鍵を管理するベストプラクティスについて説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Security
 feature: OSGI, Cloud Manager
 role: Developer
 jira: KT-15880
 level: Intermediate, Experienced
 exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 100%
 

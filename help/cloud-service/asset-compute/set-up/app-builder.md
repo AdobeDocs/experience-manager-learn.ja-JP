@@ -2,7 +2,7 @@
 title: Asset Compute の拡張機能のために App Builder を設定する
 description: Asset Compute プロジェクトは特別に定義された App Builder プロジェクトなので、Adobe Developer Console で App Builder にアクセスして設定およびデプロイする必要があります。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6268
 thumbnail: 40183.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
 duration: 197
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 100%
 

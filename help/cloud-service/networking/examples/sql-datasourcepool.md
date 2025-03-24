@@ -1,7 +1,7 @@
 ---
 title: JDBC DataSourcePool を使用した SQL 接続
 description: AEM JDBC DataSourcePool とエグレスポートを使用して AEM as a Cloud Serviceから SQL データベースに接続する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,8 +10,8 @@ jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 100%
 

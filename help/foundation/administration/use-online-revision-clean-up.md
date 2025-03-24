@@ -1,7 +1,7 @@
 ---
 title: オンラインでのリビジョンクリーンアップの使用
 description: オンラインでのリビジョンのクリーンアップについての簡単な概要オンラインでのリビジョンのクリーンアップは、オフラインでのリビジョンのクリーンアップが頻繁に必要になるのを緩和します。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: JCR
 doc-type: Technical Video
 topic: Administration
@@ -9,8 +9,8 @@ role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
 duration: 108
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 100%
 

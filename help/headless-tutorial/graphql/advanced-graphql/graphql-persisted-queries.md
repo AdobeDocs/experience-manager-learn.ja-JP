@@ -1,15 +1,15 @@
 ---
 title: 永続 GraphQL クエリ - AEM ヘッドレスの高度な概念 - GraphQL
 description: Adobe Experience Manager（AEM）ヘッドレスの高度な概念についてのこの章では、永続 GraphQL クエリを作成し、パラメーターを使用して更新する方法について説明します。永続クエリでキャッシュコントロールパラメーターを渡す方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
 duration: 183
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: Asset Compute の拡張性に対応するローカル開発環境のセットアップ
 description: Asset Compute ワーカー（Node.js JavaScript アプリケーション）の開発には、Node.js や様々な npm モジュールから Docker Desktop や Microsoft Visual Studio Code に至るまで、従来の AEM 開発とは異なる特有の開発ツールが必要になります。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6266
 thumbnail: KT-6266.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
 duration: 96
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 100%
 

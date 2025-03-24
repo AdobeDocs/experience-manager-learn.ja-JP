@@ -2,7 +2,7 @@
 title: コアコンポーネントの拡張 | AEM SPA エディターと React の概要
 description: 既存のコアコンポーネントの JSON モデルを拡張して AEM SPA エディターで使用する方法を説明します。既存のコンポーネントにプロパティとコンテンツを追加する方法を理解すると、AEM SPA エディター実装の機能を拡張するための強力な手法になります。Sling モデルと Sling Resource Merger の機能を拡張するために委任パターンを使用する方法を学びます。
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
@@ -11,8 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 100%
 

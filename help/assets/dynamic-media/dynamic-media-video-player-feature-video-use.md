@@ -2,15 +2,15 @@
 title: AEM Dynamic Media でのビデオプレーヤーの使用
 description: AEM Dynamic Media ビデオプレーヤーは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするために Flash ランタイムに依存していましたが、Flash ベースのコンテンツストリーミングを積極的に導入するようになりました。HLS（Apple の HTTP ライブストリーミングビデオ配信プロトコル）の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 duration: 568
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 100%
 

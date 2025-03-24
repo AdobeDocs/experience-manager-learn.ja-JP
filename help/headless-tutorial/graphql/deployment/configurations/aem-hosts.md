@@ -1,7 +1,7 @@
 ---
 title: AEM GraphQL 用 AEM ホストの管理
 description: AEM ヘッドレスアプリで AEM ホストを設定する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,10 +10,10 @@ jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1614'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -110,7 +110,7 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### React useEffect(...) フック
+#### React useEffect （..） フック
 
 カスタム React useEffect フックは、ビューをレンダリングする React コンポーネントの代わりに、AEM ホストで初期化された AEM ヘッドレスクライアントを呼び出します。
 

@@ -1,7 +1,7 @@
 ---
 title: AEM Sidekick と Edge 配信サービス
 description: Edge 配信サービスで Sidekick を使用してコンテンツを公開する。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -12,8 +12,8 @@ jira: KT-14481
 thumbnail: 3425715.jpeg
 duration: 136
 exl-id: 47fc8774-43c1-4e0b-8101-cff628059b09
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 100%
 

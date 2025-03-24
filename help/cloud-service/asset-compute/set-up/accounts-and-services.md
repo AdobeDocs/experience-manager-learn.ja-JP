@@ -2,7 +2,7 @@
 title: Asset Compute 拡張機能のアカウントとサービスの設定
 description: Asset Compute ワーカーの開発には、AEM as a Cloud Service、Application Builder、Microsoft や Amazon が提供するクラウドストレージなどのアカウントおよびサービスにアクセスできる必要があります。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6264
 thumbnail: 40377.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
 duration: 212
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 100%
 

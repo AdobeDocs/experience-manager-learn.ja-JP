@@ -1,7 +1,7 @@
 ---
 title: Workfront 拡張コネクタプロジェクトフォルダー
 description: Adobe Workfront および Experience Manager Assets 拡張コネクタを使用する場合のプロジェクトフォルダーについて説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
@@ -14,8 +14,8 @@ badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-tit
 doc-type: Feature Video
 exl-id: 0e9d056a-4eec-450c-a941-b9563634fe8a
 duration: 1222
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: オーサリングと公開の概要 | AEM クイックサイト作成
 description: Adobe Experience Manager（AEM）のページエディターを使用して、web サイトのコンテンツを更新します。 オーサリングを容易にするためにコンポーネントを使用する方法について説明します。 AEM オーサー環境とパブリッシュ環境の違いを理解し、ライブサイトに変更を公開する方法を学びます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
 duration: 263
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 100%
 
@@ -127,7 +127,7 @@ AEM 環境は&#x200B;**オーサーサービス**&#x200B;と&#x200B;**パブリ�
    ![参照の公開](assets/author-content-publish/publish-references.png)
 
 1. 最後に、**WKND サイト**&#x200B;の横のボックスにチェックを入れ、右上隅の「**次へ**」をクリックします。
-1. **ワークフロー**&#x200B;ステップで、「**ワークフロータイトル**」を入力します。これは任意のテキストで構いません。後で、監査証跡の一部として役に立ちます。「初期公開」と入力し、「**公開**」をクリックします。
+1. **ワークフロー**&#x200B;ステップで、「**ワークフロータイトル**」を入力します。これは任意のテキストで構いません。後で、監査記録の一部として役に立ちます。「初期公開」と入力し、「**公開**」をクリックします。
 
 ![ワークフローステップの初期公開](assets/author-content-publish/workflow-step-publish.png)
 

@@ -1,7 +1,7 @@
 ---
 title: ヘッダーとフッター
 description: Edge Delivery Services とユニバーサルエディターでヘッダーとフッターを開発する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-17470
 duration: 300
 exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
-source-git-commit: d201afc730010f0bf202a1d72af4dfa3867239bc
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 100%
 

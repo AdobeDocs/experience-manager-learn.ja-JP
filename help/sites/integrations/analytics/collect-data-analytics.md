@@ -1,7 +1,7 @@
 ---
 title: Adobe Analytics タグ拡張機能を使用した AEM Sites と Adobe Analytics の統合
 description: イベント駆動型 Adobe Client Data Layer を使用して、AEM Sites と Adobe Analytics を統合し、Adobe Experience Manager で構築された web サイトでのユーザーアクティビティに関するデータを収集します。タグルールを使用してこれらのイベントをリッスンし、データを Adobe Analytics レポートスイートに送信する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,8 +12,8 @@ badgeIntegration: label="統合" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 duration: 490
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 100%
 

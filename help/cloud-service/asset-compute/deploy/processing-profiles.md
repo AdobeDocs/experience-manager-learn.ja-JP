@@ -2,7 +2,7 @@
 title: AEM 処理プロファイルを通じた Asset Compute ワーカーの統合
 description: AEM as a Cloud Service は、AEM Assets 処理プロファイルを介して Adobe I/O Runtime にデプロイされる Asset Compute ワーカーと統合されます。処理プロファイルは、カスタムワーカーを使用して特定のアセットを処理するようにオーサーサービスで設定され、ワーカーがアセットレンディションとして生成したファイルを保存します。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: AEM Sites と Adobe Target の統合
 description: AEM Sites と Adobe Target を統合して、パーソナライズされたエクスペリエンスを提供する方法を説明します。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6043
 thumbnail: 41241.jpg
 topic: Integrations, Personalization
@@ -13,8 +13,8 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 262
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 100%
 

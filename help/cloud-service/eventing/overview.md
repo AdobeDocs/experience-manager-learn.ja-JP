@@ -1,7 +1,7 @@
 ---
 title: AEM イベンティング
 description: AEM イベンティング、その概要、使用する理由、タイミング、その例について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,8 +12,8 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: AEM Assets マイクロサービスと AEM as a Cloud Service への移行
 description: AEM Assets as a Cloud Service の Asset Compute マイクロサービスで、従来の AEM ワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
 role: Developer
@@ -10,8 +10,8 @@ jira: KT-8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
 duration: 973
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: Asset Compute メタデータワーカーの開発
 description: 画像アセットで最も一般的に使用されている色を取得し、その色の名前を AEM のアセットのメタデータに書き戻す Asset Compute メタデータワーカーの作成方法について説明します。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6448
 thumbnail: 327313.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
 duration: 432
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1405'
 ht-degree: 100%
 

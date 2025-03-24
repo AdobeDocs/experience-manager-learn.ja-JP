@@ -2,15 +2,15 @@
 title: Dynamic Media と AEM Assets の連携の概要
 description: このビデオシリーズでは、Adobe Experience Manager Dynamic Media をコンテンツ提供サービスとして使用してメディアコンテンツを管理およびアクセスする方法の概要を説明します。Dynamic Media では、動的なデジタルエクスペリエンスを管理および公開できます。これは Experience Manager Assets に固有の機能です。アドビのフレームワークとコンポーネントスイートを使用すると、マーケターは、インタラクティブなマルチメディアエクスペリエンスをカスタマイズして、あらゆるデバイスに提供できます。
 feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: fd372c7ee387504e4316a6ca657a77fe0a0c511e
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 100%
 

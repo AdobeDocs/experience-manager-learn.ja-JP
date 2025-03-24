@@ -1,7 +1,7 @@
 ---
 title: サイトの作成 | AEM クイックサイト作成
 description: サイト作成ウィザードを使用して新しい web サイトを生成する方法を説明します。アドビが提供する標準サイトテンプレートは、新しいサイトの出発点となります。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: oak-run.jar を使用したインデックスの管理
 description: oak-run.jar の index コマンドには、インデックス統計の収集、インデックスの整合性チェックの実行、インデックス自体の作成／再作成など、AEM で Oak インデックスを管理するための様々な機能が統合されています。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 doc-type: Technical Video
 topic: Performance
@@ -9,8 +9,8 @@ role: Developer
 level: Experienced
 exl-id: be49718e-f1f5-4ab2-9c9d-6430a52bb439
 duration: 726
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 100%
 

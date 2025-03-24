@@ -1,7 +1,7 @@
 ---
 title: クラウド 5 AEM CDN 第 1 部
 description: これは、AEM as a Cloud Service の CDN に関するディープダイブの第 1 部です。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 role: Admin, Developer
 level: Intermediate
@@ -11,8 +11,8 @@ jira: KT-9797
 thumbnail: 340760.jpeg
 exl-id: 8b608b05-48ee-434f-8d5a-6c5ff1969dcf
 duration: 297
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 100%
 

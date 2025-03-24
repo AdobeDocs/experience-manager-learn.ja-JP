@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service へのアクセスの設定
 description: AEM as a Cloud Service により、AEM アプリケーションをクラウドネイティブな方法で利用できます。そのため、Adobe IMS（ID 管理システム）を活用することで、管理者ユーザーも一般ユーザーも AEM オーサーサービスにログインしやすくなります。Adobe IMS のユーザー、グループおよび製品プロファイルを AEM のグループや権限と連携させて、AEM オーサーへの特定のアクセスを許可する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -11,8 +11,8 @@ thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 duration: 113
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 100%
 

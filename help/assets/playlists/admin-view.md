@@ -1,7 +1,7 @@
 ---
 title: AEM Assets管理者：ビデオ再生リストを表示
-description: 製品スキルを向上させるために設計されたこのビデオプレイリストのコレクションを使用して、AEM Assetsのas a Cloud Serviceの管理機能を活用する方法を説明します。
-version: Cloud Service
+description: AEM Assets as a Cloud Serviceの管理機能を、製品スキルを向上させるために設計された一連のビデオプレイリストと共に活用する方法を説明します。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,10 +9,10 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 33e0ded0cdcb5d8ed146fdc59c6f37495cd251eb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '561'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ![AEM Assets管理者ビュー ](./assets/admin-view.png){align="center"}
 
-これらのプレイリストを調べて、AEM Assetsのas a Cloud Serviceの管理者ビュー（設定、最適化、使用、クリエイティブワークフローとのシームレスな統合など）をマスターします。 AEM Assetsのas a Cloud Serviceを活用して、成功に必要なインサイトを得ます。
+これらのプレイリストを調べて、AEM Assets as a Cloud Serviceの管理者ビューをマスターします。これには、設定、最適化、使用、クリエイティブワークフローとのシームレスな統合などが含まれます。 AEM Assets as a Cloud Serviceを使用して成功するために必要なインサイトを得る。
 
 ## 管理ビューの設定
 
-AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレスに動作させるための基本的な設定および設定の基本を学びます。
+AEM Assets as a Cloud Serviceをチームやプロジェクトに対してシームレスに動作させるための基本的な設定および設定の基本を学びます。
 
 <!-- CARDS
 
@@ -47,13 +47,13 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Experience Managerへの管理者アクセスの設定">Experience Managerへの管理アクセスの設定 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Experience Managerへの管理者アクセスの設定">Experience Managerへの管理者アクセスの設定 </a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud Serviceに対するAdobe IMSを使用したユーザーの認証方法と、Adobe IMSユーザー、ユーザーグループおよび製品プロファイルを使用してAEMおよびその機能および機能へのアクセスを制御する方法について説明します。</p>
+                    <p class="is-size-6">ユーザーがAEM as a Cloud Serviceに対してAdobe IMSを使用して認証する方法、およびAdobe IMSユーザー、ユーザーグループ、製品プロファイルを使用してAEMとその機能および機能性へのアクセスを制御する方法を確認します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -75,8 +75,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">ベースラインコンテンツアーキテクチャや分類の設定からメタデータやアセット処理のカスタマイズに至るまで、中心的事項を設定して、AEM Assets実装のための強固な基盤を確立する方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-configure-administrators" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -122,8 +122,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">ナビゲーション、アセットの整理およびモデル化の方法、作成、更新、削除などの基本的な操作など、AEM Assets管理ビューの基本について説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-business-users" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -145,8 +145,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">AEM Assetsのアセットメタデータについて知る必要のあるすべての事項を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-understand-metadata" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -168,8 +168,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">AEM Assetsで検索エクスペリエンスを最大限に活用する方法を説明します</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-optimize-search" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -191,8 +191,8 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
                     <p class="is-size-6">AEM Assetsでスマートタグを使用してアセットを検出可能にする方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-smart-tags" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -208,7 +208,7 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
 
 ## クリエイティブワークフローとAEM Assetsの接続
 
-AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合することで、スムーズなコラボレーションを活用し、凝集した効率的なワークフローを確保します。
+AEM Assets as a Cloud Serviceをクリエイティブツールと統合し、凝集した効率的なワークフローを確保することで、スムーズなコラボレーションを実現します。
 
 <!-- CARDS
 
@@ -236,8 +236,8 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
                     <p class="is-size-6">コンテンツ自動処理アドオンを使用して、Adobe Experience Manager Assets as a Cloud Service をAdobe Creative Cloud Service API と統合し、アセットを効率的に処理する方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>
@@ -245,8 +245,8 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="AEM Assets コンテンツ自動処理でのクリエイティブ操作の使用" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets コンテンツ自動処理でのクリエイティブ操作の使用"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="AEM Assets コンテンツ自動処理でのCreative操作の使用" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets コンテンツ自動処理でのCreative操作の使用"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,13 +254,13 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="AEM Assets コンテンツ自動処理でのクリエイティブ操作の使用">AEM Assets コンテンツ自動処理でのクリエイティブ操作の使用 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="AEM Assets コンテンツ自動処理でのCreative操作の使用">AEM Assets コンテンツ自動処理でのCreative操作の使用 </a>
                     </p>
-                    <p class="is-size-6">コンテンツ自動化アドオンを使用して、Adobe Experience Manager AssetsでCreative Cloud操作を実行する方法を説明します。</p>
+                    <p class="is-size-6">コンテンツ自動処理アドオンを使用して、Adobe Experience Manager AssetsでCreative Cloud操作を実行する方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
+                </a>
             </div>
         </div>
     </div>

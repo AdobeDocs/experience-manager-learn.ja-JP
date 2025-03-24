@@ -1,7 +1,7 @@
 ---
 title: カスタムドメイン名のオプション
 description: AEM as a Cloud Service でホストされる web サイトのカスタムドメイン名を管理および実装する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
 role: Admin, Architect, Developer
@@ -12,10 +12,10 @@ last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
-source-wordcount: '600'
-ht-degree: 100%
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
+source-wordcount: '599'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ AEM as a Cloud Service でホストされる web サイトのドメイン名を�
 
 ### ドメイン名とは
 
-ドメイン名は、インターネット上の特定の場所（170.2.14.16 のような IP アドレス）を指す、わかりやすい名前の web サイト名（例：adobe.com）です。
+ドメイン名は、adobe.comのような人間にわかりやすい名前の web サイト名で、インターネット上の特定の場所（170.2.14.16 のような IP アドレス）を指します。
 
 ### AEM as a Cloud Service のデフォルトのドメイン名
 

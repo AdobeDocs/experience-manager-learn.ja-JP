@@ -1,7 +1,7 @@
 ---
 title: 専用エグレス IP アドレス
 description: 専用のエグレス IP アドレスを設定して使用する方法を説明します。このアドレスを使用すると、AEM からの送信接続を専用の IP から発信できます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,8 +11,8 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: OpenAPI ベースのAEM API の設定
 description: AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API へのアクセスを有効にする方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,13 +11,13 @@ jira: KT-17426
 thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 7%
 
 ---
-
 
 # OpenAPI ベースのAEM API の設定
 
@@ -243,4 +243,3 @@ AEM インスタンスを設定して ADC プロジェクト通信を有効に�
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-

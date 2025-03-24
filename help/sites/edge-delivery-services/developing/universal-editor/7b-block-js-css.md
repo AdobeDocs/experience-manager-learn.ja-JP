@@ -1,7 +1,7 @@
 ---
 title: CSS と JS を使用したブロックの開発
 description: ユニバーサルエディターを使用して編集できる、Edge Delivery Services 用の CSS と JavaScript を使用してブロックを開発します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 100%
 

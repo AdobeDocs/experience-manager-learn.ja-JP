@@ -2,15 +2,15 @@
 title: AEM Dynamic Media でのカラーマネジメントについて
 description: このビデオでは、Dynamic Media のカラーマネジメントと、この機能を使用して AEM Assets でカラー補正プレビュー機能を使用できるようにする方法について説明します。
 feature: Image Profiles, Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 duration: 274
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 100%
 

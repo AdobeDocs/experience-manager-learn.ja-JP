@@ -1,15 +1,15 @@
 ---
 title: AEM GraphQL API の解説 - AEM ヘッドレスの高度な概念 - GraphQL
 description: GraphiQL IDE を使用して GraphQL クエリを送信します。フィルター、変数およびディレクティブを使用した高度なクエリについて説明します。複数行テキストフィールドからの参照などのフラグメント参照やコンテンツ参照をクエリします。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
 duration: 438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 100%
 

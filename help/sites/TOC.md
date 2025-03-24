@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites チュートリアル
 feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: 6.4, 6.5, Cloud Service
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: ht
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: Brand Portal の使用
 description: AEM オーサーと AEM Assets Brand Portal の統合に関するビデオウォークスルー。
 feature: Brand Portal
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,10 +10,10 @@ last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '1703'
-ht-degree: 100%
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
+source-wordcount: '1702'
+ht-degree: 98%
 
 ---
 
@@ -101,7 +101,7 @@ Dynamic Media ビデオのエンコードは、次の場所からダウンロー
 
 ### Brand Portal への公開のスケジュール設定
 
-[AEM（6.4.2.0）](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)オーサーインスタンスから Brand Portal へのアセット（およびフォルダー）公開ワークフローのスケジュールに未来の日時を指定できるようになりました。
+[AEM（6.4.2.0）からBrand PortalへのAssets（およびフォルダー）公開ワークフロー ](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) 後の日時にスケジュール設定できます。
 
 同様に、「Brand Portal で非公開」ワークフローのスケジュールを設定することで、公開されているアセットを未来の特定の日時にポータルから取り下げることができます。
 

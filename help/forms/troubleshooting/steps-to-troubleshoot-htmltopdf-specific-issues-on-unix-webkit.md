@@ -4,14 +4,14 @@ description: UNIX 設定で Webkit を使用して、HtmltoPDF の問題をト�
 type: Troubleshooting
 role: Developer
 level: Intermediate
-version: 6.5
+version: Experience Manager 6.5
 feature: PDF Generator
 topic: Development
 index: y
 exl-id: 6afe3b69-1422-4832-a189-57cbc0658ac1
 duration: 120
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 100%
 

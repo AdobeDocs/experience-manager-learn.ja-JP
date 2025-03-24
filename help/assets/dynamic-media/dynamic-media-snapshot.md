@@ -2,7 +2,7 @@
 title: スナップショットを使用した Dynamic Media イメージングを探る
 description: Dynamic Media Snapshot は視覚的なデモツールです。最適化された動的な画像配信を実現する Dynamic Media の強力な機能をわかりやすく伝えることを目的としています。
 feature: Smart Services, Image Sets, Image Profiles
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-13269
 thumbnail: 3419421.jpeg
 topic: Content Management
@@ -11,8 +11,8 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 3f2f3fe4-a3cf-4494-a318-bf82aee20dc7
 duration: 214
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
 

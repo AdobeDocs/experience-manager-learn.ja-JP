@@ -1,7 +1,7 @@
 ---
 title: AEM でのプロジェクトの開発
 description: AEM プロジェクトの開発方法を説明する開発チュートリアルです。 このチュートリアルでは、AEM 内で新規プロジェクトを作成して、コンテンツオーサリングのワークフローとタスクの管理に使用できるカスタムプロジェクトテンプレートを作成します。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
 topic: Development
@@ -9,8 +9,8 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 100%
 

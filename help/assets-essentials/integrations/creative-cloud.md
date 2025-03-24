@@ -1,7 +1,7 @@
 ---
 title: Creative Cloud と AEM Assets
 description: AEM Assets と Adobe Creative Cloud ライブラリの統合方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: User
@@ -11,8 +11,8 @@ exl-id: 74eb8b3c-b521-4fd1-9859-43c06f754005
 duration: 302
 last-substantial-update: 2024-08-01T00:00:00Z
 jira: KT-15657
-source-git-commit: 64100b882bf88c57223baab8ebec96a8b428e6ef
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 100%
 

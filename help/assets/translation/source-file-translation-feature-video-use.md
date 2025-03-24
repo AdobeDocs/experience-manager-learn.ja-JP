@@ -1,7 +1,7 @@
 ---
 title: AEM Assets でのソースファイル翻訳の使用
 description: Adobe Experience Manager（AEM）Assets では、共通の属性を共有するアセットを識別し、新しい関連アセット機能を使用して、それらのアセットを関連アセットとしてマークすることができます。 また、ユーザーはアセット間のソース／派生関係を定義できるので、アセットの生成元を簡単に識別できます。 派生アセットで翻訳ワークフローを実行すると、ソースファイルが参照するアセットが取得されて翻訳に含まれるので、マルチサイトの維持にかかる労力が軽減されます。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Translation
 role: User
@@ -12,8 +12,8 @@ thumbnail: 18331.jpg
 doc-type: Feature Video
 exl-id: 19155d51-18a7-42ca-9a73-1b5fa1355d58
 duration: 248
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 100%
 

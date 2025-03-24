@@ -1,7 +1,7 @@
 ---
 title: AEM での OAuth 範囲の開発
 description: Adobe Experience Manager の拡張可能な OAuth 範囲を使用すると、エンドユーザーによって許可されたクライアントアプリケーションからのリソースに対するアクセス制御が可能になります。 次の図は、AEM のコンテキストでのリクエストフローを示しています。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: User and Groups
 topic: Development
 role: Developer
@@ -9,8 +9,8 @@ level: Experienced
 doc-type: Article
 exl-id: dd37355e-cfc7-4581-ac22-d89c951c22cf
 duration: 27
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 100%
 

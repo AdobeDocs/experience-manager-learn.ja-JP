@@ -1,7 +1,7 @@
 ---
 title: AEM Sites でのコンポーネントコンソールの使用
 description: コンポーネントコンソールは、開発者と管理者が Sites 実装の様々なコンポーネントをすべて一元的に管理できる場所を提供します。 次のビデオでは、コンポーネントコンソールの機能について詳しく説明します。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Content Management
 role: User
@@ -9,8 +9,8 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
 duration: 224
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 100%
 

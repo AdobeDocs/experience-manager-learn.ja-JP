@@ -3,15 +3,15 @@ title: Dynamic Media Viewer と Adobe Analytics およびタグの使用
 description: Dynamic Media Viewer 5.13 のリリースと共に、タグの Dynamic Media Viewer 拡張機能を使用すると、Dynamic Media、Adobe Analytics、タグのユーザーは、タグ設定で Dynamic Media Viewer 固有のイベントとデータを使用できます。
 sub-product: Dynamic Media
 feature: Asset Insights
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 duration: 576
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 100%
 

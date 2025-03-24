@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法
 description: AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
 role: Architect, Developer
@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: ht
+exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 100%
 
 ---
-
 
 # AEM as a Cloud Service のリーダーインスタンスでのジョブの実行方法
 

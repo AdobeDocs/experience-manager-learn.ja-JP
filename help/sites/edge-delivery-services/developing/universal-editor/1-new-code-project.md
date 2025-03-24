@@ -1,7 +1,7 @@
 ---
 title: コードプロジェクトの作成
 description: ユニバーサルエディターを使用して編集できる、Edge Delivery Services のコードプロジェクトを作成します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 176be4209409763b69ceff5e893d0e857efa6d30
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 100%
 

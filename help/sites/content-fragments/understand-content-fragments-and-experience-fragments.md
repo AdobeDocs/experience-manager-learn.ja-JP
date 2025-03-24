@@ -3,15 +3,15 @@ title: コンテンツフラグメントとエクスペリエンスフラグメ�
 description: コンテンツフラグメントとエクスペリエンスフラグメントの類似点と相違点、および各タイプを使用するタイミングと方法について学びます。
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 duration: 168
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 100%
 

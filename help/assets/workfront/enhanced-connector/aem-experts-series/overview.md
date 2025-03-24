@@ -1,7 +1,7 @@
 ---
 title: 拡張コネクタを使用した Workfront と AEM Assets の統合
 description: Adobe Workfront と Experience Manager Assets 拡張コネクタ統合の基本について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
@@ -13,8 +13,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 100%
 

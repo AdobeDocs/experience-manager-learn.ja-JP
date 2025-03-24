@@ -4,14 +4,14 @@ description: サーバー間認証用の OpenAPI ベースの AEM Forms Communic
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: b9c0b04b-6131-4752-b2f0-58e1fb5f40aa
-source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 100%
 

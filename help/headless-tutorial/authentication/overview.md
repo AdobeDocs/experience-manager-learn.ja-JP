@@ -1,7 +1,7 @@
 ---
 title: 外部アプリケーションからの AEM as a Cloud Service の認証
 description: ローカル開発のアクセストークンとサービス資格情報を使用して、外部アプリケーションで HTTP を通じて AEM as a Cloud Service をプログラムで認証し、やり取りする方法を調べます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330460.jpg
@@ -11,8 +11,8 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 100%
 

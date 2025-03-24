@@ -1,7 +1,7 @@
 ---
 title: タグプロパティに Target 拡張機能を追加
 description: タグプロパティに Adobe Target 拡張機能を追加する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
 topic: Integrations
@@ -13,8 +13,8 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 290
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 100%
 

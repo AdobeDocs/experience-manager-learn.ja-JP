@@ -1,7 +1,7 @@
 ---
 title: トラフィックフィルタールール（WAF ルールを含む）による web サイトの保護
 description: Web アプリケーションファイアウォール（WAF）ルールのサブカテゴリを含む、トラフィックフィルタールールについて説明します。ルールを作成、デプロイおよびテストする方法。また、結果を分析して AEM sites を保護します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,8 +12,8 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
 duration: 165
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: プロパティの一括更新の例 AEM コンテンツフラグメントコンソールの拡張機能
 description: コンテンツフラグメントのプロパティを一括更新する AEM コンテンツフラグメントコンソール拡張機能の例。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 100%
 

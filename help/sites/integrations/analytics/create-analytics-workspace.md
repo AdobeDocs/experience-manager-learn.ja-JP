@@ -1,7 +1,7 @@
 ---
 title: Analysis Workspace でのデータの分析
 description: Adobe Experience Manager サイトから取得しデータを、Adobe Analytics レポートスイートの指標とディメンションにマッピングする方法について説明します。Adobe Analytics の Analysis Workspace 機能を使用して、詳細なレポートダッシュボードを作成する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: User
@@ -13,8 +13,8 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="統合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 100%
 

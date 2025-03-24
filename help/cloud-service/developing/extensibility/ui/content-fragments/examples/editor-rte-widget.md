@@ -2,7 +2,7 @@
 title: リッチテキストエディター（RTE）へのウィジェットの追加
 description: AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にウィジェットを追加する方法を説明します。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 100%
 

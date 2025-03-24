@@ -2,7 +2,7 @@
 title: ビルドとデプロイメント
 description: Adobe Cloud Manager は、AEM as a Cloud Service へのコード構築とデプロイメントを容易にします。ビルドプロセスの手順中にエラーが発生し、解決のためのアクションが必要になる場合があります。 このガイドでは、デプロイメントでの一般的なエラーと、それらへの最適なアプローチ方法について説明します。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5434
 thumbnail: kt-5424.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
 duration: 534
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 100%
 

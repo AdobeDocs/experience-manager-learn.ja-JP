@@ -1,7 +1,7 @@
 ---
 title: AEM チャンピオンのヒントとテクニック - Cloud Manager 環境タイプ
 description: AEM チャンピオンでありエキスパートである Rakesh Pasupuleti からの Cloud Manager の環境タイプに関するヒントをご確認ください。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager
 topic: Administration
 role: Admin, Architect
@@ -11,8 +11,8 @@ last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13229
 exl-id: 66159aac-a5ca-47fb-b374-f0fe5f8e1198
 duration: 306
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 100%
 

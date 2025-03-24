@@ -1,7 +1,7 @@
 ---
 title: AEM へのアクセスの設定に関するウォークスルー
 description: Adobe AdminConsole で Adobe IMS ユーザー、ユーザーグループ、製品プロファイルを設定する簡単な手順と、AEM Author でこれらの Adobe IMS 抽象を活用して特定のグループベースの権限を定義し、管理する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -11,8 +11,8 @@ thumbnail: 39155.jpg
 last-substantial-update: 2023-05-19T00:00:00Z
 exl-id: 0ca50fa4-0b2a-4e6d-becb-7a91fc6b4166
 duration: 504
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 100%
 

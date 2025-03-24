@@ -1,7 +1,7 @@
 ---
 title: 簡易検索の実装ガイド
 description: 簡易検索の実装は、2017 Summit lab AEM Search Demystified の資料です。このページには、このラボの資料が含まれています。 ラボのガイド付きツアーについては、このページの「プレゼンテーション」の節でラボワークブックを参照してください。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 topic: Development
 role: Developer
@@ -11,8 +11,8 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 100%
 

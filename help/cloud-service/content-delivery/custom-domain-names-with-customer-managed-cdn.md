@@ -1,7 +1,7 @@
 ---
 title: 顧客が管理する CDN を使用したカスタムドメイン名
 description: 顧客が管理する CDN を使用する AEM as a Cloud Service web サイトにカスタムドメイン名を実装する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 100%

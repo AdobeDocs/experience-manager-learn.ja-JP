@@ -1,7 +1,7 @@
 ---
 title: AEM Sites の基本を学ぶ - プロジェクトアーキタイプ
 description: AEM Sites の基本を学ぶ - プロジェクトアーキタイプ。WKND チュートリアルは、Adobe Experience Manager を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。このチュートリアルでは、架空のライフスタイルブランド「WKND」の AEM サイトの実装について順を追って説明します。プロジェクトの設定、コアコンポーネント、編集可能テンプレート、クライアントライブラリおよびコンポーネント開発などの基本的なトピックが含まれます。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 100%
 

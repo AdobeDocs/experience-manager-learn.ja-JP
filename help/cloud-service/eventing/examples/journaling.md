@@ -1,7 +1,7 @@
 ---
 title: ジャーナル処理と AEM イベント
 description: ジャーナルから AEM イベントの初期セットを取得し、各イベントの詳細を調べる方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,8 +12,8 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 100%
 

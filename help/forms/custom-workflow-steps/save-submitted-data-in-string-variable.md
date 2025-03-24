@@ -2,7 +2,7 @@
 title: 送信したデータを文字列変数に保存
 description: 連結されたデータを抽出し、文字列型のワークフロー変数に保存するカスタムプロセスステップ
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,8 +11,8 @@ last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
 exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 100%
 

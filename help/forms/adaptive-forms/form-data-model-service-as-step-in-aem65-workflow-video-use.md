@@ -3,15 +3,15 @@ title: AEM 6.5 ワークフローのステップとしてのフォームデー�
 description: AEM Forms 6.5 には、AEM ワークフローで変数を作成する機能が導入されています。 この新しい機能により、AEM ワークフローで「フォームデータモデルサービスを呼び出し」を非常に簡単に使用できるようになりました。次のビデオでは、AEM ワークフローで「フォームデータモデルサービスを呼び出し」を使用する際の手順を説明します。
 feature: Workflow
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 100%
 

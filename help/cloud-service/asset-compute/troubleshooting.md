@@ -2,7 +2,7 @@
 title: AEM Assets の Asset compute 拡張機能のトラブルシューティング
 description: 以下に、AEM Assets 用のカスタム Asset compute ワーカーを開発およびデプロイする際に発生する可能性のある、一般的な問題とエラーのインデックスと、解決方法を示します。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5802
 thumbnail: KT-5802.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 100%
 

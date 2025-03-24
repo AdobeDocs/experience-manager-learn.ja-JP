@@ -5,13 +5,14 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: ht
+exl-id: 68030c25-1674-4a64-9f5f-c1a74a38e3ca
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 100%
 
@@ -93,5 +94,3 @@ _mixins.scss ファイルは、次のスクリーンショットに示すよう�
 ## 次の手順
 
 [バリエーションのテスト](./build.md)
-
-

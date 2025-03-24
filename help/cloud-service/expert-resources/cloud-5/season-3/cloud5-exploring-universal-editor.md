@@ -1,7 +1,7 @@
 ---
 title: ユニバーサルエディターの確認
 description: AEM エンジニアリングの Dirk Rudolph が、ユニバーサルエディターと Edge Delivery Services についてインタビューを受けます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer, Leader, User
@@ -13,8 +13,8 @@ duration: 532
 last-substantial-update: 2024-06-13T00:00:00Z
 jira: KT-15715
 exl-id: 2f029feb-7273-48e4-91a4-2ac0bf697356
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 100%
 

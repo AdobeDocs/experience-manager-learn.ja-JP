@@ -1,7 +1,7 @@
 ---
 title: アドビが管理する CDN を使用したカスタムドメイン名
 description: アドビが管理する CDN を使用する AEM as a Cloud Service web サイトに、カスタムドメイン名を実装する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,8 +12,8 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 

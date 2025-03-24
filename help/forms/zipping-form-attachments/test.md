@@ -2,15 +2,15 @@
 title: ソリューションのテスト - 2 つのアプローチをテストする際に必要な手順
 description: フォームに添付ファイルを追加し、ワークフローをトリガーしてメールを送信することで、ソリューションをテストします。
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: ce9b9203-b44c-4a52-821c-ae76e93312d2
 duration: 41
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 100%
 

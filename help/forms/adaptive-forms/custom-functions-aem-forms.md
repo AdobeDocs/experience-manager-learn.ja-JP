@@ -2,7 +2,7 @@
 title: AEM Forms のカスタム関数
 description: アダプティブフォームでのカスタム関数の作成と使用
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: User
 level: Beginner
@@ -10,8 +10,8 @@ jira: KT-9685
 exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 286
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 100%
 

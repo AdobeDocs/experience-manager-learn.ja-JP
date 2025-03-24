@@ -2,7 +2,7 @@
 title: AEM Sites でのページのオーサリング
 description: 次のビデオでは、サイトエディターの UI を使用して Adobe Experience Manager Sites で新しいページを作成する方法を重点的に説明します。
 feature: Page Editor, Editable Templates
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-4497
 thumbnail: 31828.jpg
 topic: Content Management
@@ -11,8 +11,8 @@ level: Beginner
 doc-type: Feature Video
 exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
 duration: 337
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 100%
 

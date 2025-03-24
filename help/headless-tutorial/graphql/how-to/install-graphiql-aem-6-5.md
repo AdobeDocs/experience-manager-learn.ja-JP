@@ -1,7 +1,7 @@
 ---
 title: AEM 6.5 への GraphiQL IDE のインストール
 description: AEM 6.5 に GraphiQL IDE をインストールして設定する方法を説明します
-version: 6.5
+version: Experience Manager 6.5
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -10,8 +10,8 @@ jira: KT-11614
 thumbnail: KT-10253.jpeg
 exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
 duration: 41
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 100%
 

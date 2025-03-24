@@ -1,7 +1,7 @@
 ---
 title: スタイルシステムを使用した開発
 description: 個々のスタイルを実装し、Experience Manager のスタイルシステムを使用してコアコンポーネントを再利用する方法について説明します。 このチュートリアルでは、ブランド固有の CSS とテンプレートエディターの高度なポリシー設定を使用してコアコンポーネントを拡張するためのスタイルシステムに対応する開発について説明します。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Style System
 topic: Content Management, Development
 role: Developer
@@ -13,8 +13,8 @@ doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 duration: 358
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 100%
 

@@ -1,7 +1,7 @@
 ---
 title: Workfront for AEM 拡張コネクタの詳細設定とワークフロー
 description: Workfront for AEM 拡張コネクタの詳細設定と、AEM で高度なワークフローとランチャーを設定して、AEM と Workfront 間のデータの同期を管理する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
@@ -14,8 +14,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 7d44e1b7-7216-431d-b866-6adcc8673d53
 duration: 2844
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 100%
 

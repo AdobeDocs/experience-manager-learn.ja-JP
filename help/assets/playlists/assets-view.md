@@ -1,7 +1,7 @@
 ---
 title: AEM Assets Assets ビューのビデオ再生リスト
-description: 商品に関する知識を高めることを目的として、厳選された一連のビデオプレイリストで、Assets ビューでAEM Assetsのas a Cloud Serviceを操作する方法を説明します。
-version: Cloud Service
+description: 商品に関する知識を高めることを目的として、厳選されたビデオプレイリストを使用して、Assets ビューでAEM Assets as a Cloud Serviceを操作する方法を説明します。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 2%
@@ -20,11 +20,11 @@ ht-degree: 2%
 
 ![AEM Assets Assetsのビュー ](./assets/assets-view.png){align="center"}
 
-これらのプレイリストを調べて、AEM Assetsのas a Cloud ServiceのAssets ビュー（設定、最適化、使用、クリエイティブワークフローとのシームレスな統合など）をマスターします。 AEM Assetsのas a Cloud Serviceを活用して、成功に必要なインサイトを得ます。
+これらのプレイリストを調べて、AEM Assets as a Cloud Service Assetsのビューをマスターします。これには、設定、最適化、使用、クリエイティブワークフローとのシームレスな統合などが含まれます。 AEM Assets as a Cloud Serviceを使用して成功するために必要なインサイトを得る。
 
 ## Assets ビューを設定
 
-AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレスに動作させるための基本的な設定および設定の基本を学びます。
+AEM Assets as a Cloud Serviceをチームやプロジェクトに対してシームレスに動作させるための基本的な設定および設定の基本を学びます。
 
 <!-- CARDS
 
@@ -47,9 +47,9 @@ AEM Assetsas a Cloud Serviceをチームやプロジェクトでシームレス�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Experience Managerへの管理者アクセスの設定">Experience Managerへの管理アクセスの設定 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Experience Managerへの管理者アクセスの設定">Experience Managerへの管理者アクセスの設定 </a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud Serviceに対するAdobe IMSを使用したユーザーの認証方法と、Adobe IMSユーザー、ユーザーグループおよび製品プロファイルを使用してAEMおよびその機能および機能へのアクセスを制御する方法について説明します。</p>
+                    <p class="is-size-6">ユーザーがAEM as a Cloud Serviceに対してAdobe IMSを使用して認証する方法、およびAdobe IMSユーザー、ユーザーグループ、製品プロファイルを使用してAEMとその機能および機能性へのアクセスを制御する方法を確認します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
@@ -108,8 +108,8 @@ Assets ビューインターフェイスをプロのように操作する – �
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="Adobe Fireflyを使用して画像Assetsを生成" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_16fdb25830809ba4c0fe9fda9afa150b64b0f83f5.jpeg?width=400&format=pjpg&optimize=medium" alt="Adobe Fireflyを使用して画像Assetsを生成"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="Adobe Fireflyを使用した画像Assetsの生成" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_16fdb25830809ba4c0fe9fda9afa150b64b0f83f5.jpeg?width=400&format=pjpg&optimize=medium" alt="Adobe Fireflyを使用した画像Assetsの生成"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -117,9 +117,9 @@ Assets ビューインターフェイスをプロのように操作する – �
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" title="Adobe Fireflyを使用して画像Assetsを生成">Adobe Fireflyを使用して画像Assetsを生成 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" title="Adobe Fireflyを使用した画像Assetsの生成">Adobe Fireflyを使用した画像Assetsの生成 </a>
                     </p>
-                    <p class="is-size-6">AEM AssetsでAdobe Fireflyと Gen AI を使用してコンテンツベロシティ（コンテンツ創出の速度）を向上させる方法を説明します。</p>
+                    <p class="is-size-6">Adobe Fireflyと Gen AI を使用してAEM Assetsでコンテンツベロシティ（コンテンツ創出の速度）を向上させる方法を説明します。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">所要時間</span>
@@ -157,7 +157,7 @@ Assets ビューインターフェイスをプロのように操作する – �
 
 ## クリエイティブワークフローとAEM Assetsの接続
 
-AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合することで、スムーズなコラボレーションを活用し、凝集した効率的なワークフローを確保します。
+AEM Assets as a Cloud Serviceをクリエイティブツールと統合し、凝集した効率的なワークフローを確保することで、スムーズなコラボレーションを実現します。
 
 <!-- CARDS
 
@@ -172,8 +172,8 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="Creativeと Assets Essentials を使用したWorkfront ワークフローの管理" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="Creativeと Assets Essentials を使用したWorkfront ワークフローの管理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -181,7 +181,7 @@ AEM Assetsのas a Cloud Serviceをクリエイティブツールと統合する�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="WorkfrontとAssets Essentialsを使用したクリエイティブワークフローの管理">WorkfrontとAEM Assetsを使用したクリエイティブワークフローの管理 </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Creativeと Assets Essentials を使用したWorkfront ワークフローの管理">WorkfrontとAEM Assetsを使用したCreative ワークフローの管理 </a>
                     </p>
                     <p class="is-size-6">Adobe WorkfrontとAEM Assetsがクリエイティブワークフローの管理にどのように役立つかを説明します。</p>
                 </div>

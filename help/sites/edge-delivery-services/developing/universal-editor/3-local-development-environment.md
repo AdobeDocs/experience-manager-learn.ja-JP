@@ -1,7 +1,7 @@
 ---
 title: ローカル開発環境の設定
 description: Edge Delivery Services で配信され、ユニバーサルエディターで編集できるサイトのローカル開発環境を設定します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 100%
 

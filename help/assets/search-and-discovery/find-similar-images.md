@@ -1,7 +1,7 @@
 ---
 title: AEM Assets で類似の画像を検索
 description: AEM Assets の類似画像検索を使用すると、ニーズに合った最適な画像を簡単に見つけることができます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Search
 role: User
@@ -12,8 +12,8 @@ last-substantial-update: 2024-01-08T00:00:00Z
 jira: KT-14752
 thumbnail: 3426796.jpeg
 exl-id: 32e02a15-75cd-4a64-93b4-34c8dd044b11
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 100%
 

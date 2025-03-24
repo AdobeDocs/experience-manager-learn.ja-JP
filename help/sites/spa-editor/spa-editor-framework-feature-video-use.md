@@ -1,7 +1,7 @@
 ---
 title: AEM Sites での SPA エディターの使用
 description: AEM の単一ページアプリケーションエディターフレームワークを使用すると、作成者は、単一ページアプリケーション（SPA）のコンテンツを編集できます。React フレームワークのいずれかを使用する開発者は、SPA を作成し、SPA の領域を AEM コンポーネントにマッピングして、作成者が使い慣れた AEM Sites 編集ツールを使用できるようにします。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: SPA
 feature: SPA Editor
 role: Developer
@@ -11,8 +11,8 @@ thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%
 

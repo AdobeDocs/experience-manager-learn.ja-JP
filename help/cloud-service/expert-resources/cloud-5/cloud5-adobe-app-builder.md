@@ -1,7 +1,7 @@
 ---
 title: Cloud 5 Adobe App Builder
 description: このエピソードは、Adobe App Builder を使用する外部統合パターンを掘り下げます
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 jira: KT-10279
@@ -10,8 +10,8 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
 duration: 312
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 100%
 

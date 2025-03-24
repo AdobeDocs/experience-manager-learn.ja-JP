@@ -2,7 +2,7 @@
 title: ワークフローの自動開始
 description: 自動開始ワークフローは、アップロード時または再処理時にカスタムワークフローを自動的に呼び出すことで、アセット処理を拡張します。
 feature: Asset Compute Microservices, Workflow
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4994
 thumbnail: 37323.jpg
 topic: Development
@@ -12,8 +12,8 @@ last-substantial-update: 2023-05-14T00:00:00Z
 doc-type: Feature Video
 exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
 duration: 385
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 100%
 

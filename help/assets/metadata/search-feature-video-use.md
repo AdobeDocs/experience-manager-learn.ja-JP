@@ -1,11 +1,11 @@
 ---
 title: AEM Assets での検索の使用
 description: これらのビデオでは、AEM で導入された Assets 検索の機能強化について説明します。 作成者は、各メタデータプロパティを更新することで、キーワード検索結果の特定のアセットを強化できます。 また、Assets オムニサーチの述語の高度な設定についても見てみます。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 doc-type: Feature Video
 duration: 373
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 100%
 

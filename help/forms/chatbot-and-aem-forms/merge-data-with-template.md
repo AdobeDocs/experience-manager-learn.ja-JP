@@ -2,15 +2,15 @@
 title: データと XDP テンプレートの結合
 description: データをテンプレートと結合した PDF ドキュメントの作成
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 6a865402-db3d-4e0e-81a0-a15dace6b7ab
 duration: 15
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 100%
 

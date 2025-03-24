@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレスモバイルデプロイメント
 description: モバイル AEM ヘッドレスデプロイメントのデプロイメントに関する考慮事項について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,8 +10,8 @@ jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 100%
 

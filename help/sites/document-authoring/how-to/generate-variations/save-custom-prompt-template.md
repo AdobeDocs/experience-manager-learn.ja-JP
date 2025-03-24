@@ -1,7 +1,7 @@
 ---
 title: バリエーションを生成 - Edge Delivery Services でカスタムプロンプトテンプレートを保存する
 description: Edge Delivery Services ドキュメントのオーサリングにおける、バリエーションを生成するカスタムプロンプトテンプレートの保存方法を確認します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: Admin, Developer, Leader, User
@@ -11,8 +11,8 @@ duration: 76
 last-substantial-update: 2024-04-11T00:00:00Z
 jira: KT-15326
 exl-id: d1a99714-b984-44fa-826c-125d3dc37670
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

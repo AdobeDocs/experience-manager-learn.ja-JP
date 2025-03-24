@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service のキャッシュ
 description: AEM as a Cloud Service のキャッシュの一般的な概要を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
 role: Architect, Developer
@@ -12,8 +12,8 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: e76ed4c5-3220-4274-a315-a75e549f8b40
 duration: 36
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 100%
 

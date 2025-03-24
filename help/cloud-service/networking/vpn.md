@@ -1,7 +1,7 @@
 ---
 title: 仮想プライベートネットワーク（VPN）
 description: AEM as a Cloud Service を VPN に接続して、AEM と内部サービスの間に安全な通信チャネルを作成する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,8 +11,8 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 100%
 
@@ -217,7 +217,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
 
    `vpn-configure.json` で JSON パラメーターを定義し、`... -d @./vpn-configure.json` を介して curl に提供します。
 
-   [サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
+[サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
 
    ```json
    {

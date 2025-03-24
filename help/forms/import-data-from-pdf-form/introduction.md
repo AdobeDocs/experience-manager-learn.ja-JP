@@ -2,15 +2,15 @@
 title: PDF ファイルからアダプティブフォームへのデータの読み込み
 description: PDFファイルの読み込みによるアダプティブフォームへのデータの入力に関するチュートリアル
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: a9ad8f4d-695e-4eb3-8d35-a399d1700f90
 duration: 16
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 100%
 

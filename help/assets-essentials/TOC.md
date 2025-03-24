@@ -4,12 +4,12 @@ user-guide-description: Adobe Experience Manager Assets Essentials のビデオ�
 breadcrumb-title: AEM Assets Essentials のビデオ
 solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: 27d4b552d270d92d032384aea0a0f4798d5eca8c
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 100%
 

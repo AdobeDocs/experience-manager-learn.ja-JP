@@ -1,15 +1,15 @@
 ---
 title: AEM プロジェクトとインボックスでのカレンダー表示の使用
 description: AEM のカレンダー表示では、プロジェクトとタスクをカレンダーに表示して追跡し、プロジェクトの管理とスケジュール設定を容易にします。 カレンダー表示では、現在進行中のプロジェクトやタスク、計画済みのタスク、まもなく期限切れのタスク、期限切れとなったタスクを全体的に確認できます。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Workflow, Projects
 doc-type: Feature Video
 topic: Collaboration
 role: User
 level: Beginner
 duration: 478
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 100%
 

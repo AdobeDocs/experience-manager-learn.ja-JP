@@ -1,7 +1,7 @@
 ---
 title: AEM パブリッシュサービスを使用した実稼動のデプロイメント - AEM ヘッドレス入門 - GraphQL
 description: AEM オーサーサービスとパブリッシュサービス、ヘッドレスアプリケーションで推奨されるデプロイメントパターンについて説明します。このチュートリアルでは、環境変数を使用して、ターゲット環境に基づいて GraphQL エンドポイントを動的に変更する方法を説明します。クロスオリジンリソース共有（CORS）用に AEM を適切に設定する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -11,8 +11,8 @@ jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
 duration: 486
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 100%
 

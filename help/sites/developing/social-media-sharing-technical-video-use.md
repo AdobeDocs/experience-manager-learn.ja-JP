@@ -2,15 +2,15 @@
 title: AEM Sites でのソーシャルメディア共有の使用
 description: ソーシャルメディア共有コンポーネントの設定と使用について説明します。
 feature: Core Components
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Technical Video
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
 duration: 511
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 100%
 

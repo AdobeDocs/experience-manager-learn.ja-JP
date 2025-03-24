@@ -2,7 +2,7 @@
 title: Sling の概要
 description: Adobe Experience Manager の基盤テクノロジースタックの一部である、オープンソースの RESTful web フレームワーク、Sling の紹介です。
 doc-type: technical video
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4641
 thumbnail: 32032.jpg
 topic: Architecture
@@ -11,8 +11,8 @@ role: Architect, Developer
 level: Beginner
 exl-id: 92afc9c4-3d58-4787-86f6-46495d89c4d4
 duration: 242
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 100%
 

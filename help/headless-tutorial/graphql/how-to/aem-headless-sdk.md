@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレス SDK の使用
 description: AEM ヘッドレス SDK を使用して GraphQL クエリを作成する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -10,10 +10,10 @@ jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 duration: 200
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -88,7 +88,7 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ React useEffect(...) 例
++++ React useEffect （..）の例
 
 React プロジェクトのルートから `npm install` コマンドを実行して、[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) をインストールします。
 
@@ -96,7 +96,7 @@ React プロジェクトのルートから `npm install` コマンドを実行�
 $ npm i @adobe/aem-headless-client-js
 ```
 
-このコード例は、[React useEffect(..) フック](https://reactjs.org/docs/hooks-effect.html) を使用して AEM GraphQL への非同期呼び出しを実行する方法を示しています。
+このコード例は、[React useEffect （..） フックを使用して ](https://reactjs.org/docs/hooks-effect.html)AEM GraphQLへの非同期呼び出しを実行する方法を示しています。
 
 React で `useEffect` を使用して非同期の GraphQL 呼び出しを行うのは、次の理由で役立ちます。
 

@@ -2,7 +2,7 @@
 title: スタイルシステムと AEM Sites の使用
 description: Adobe Experience Manager のスタイルシステムを使用すると、バックエンドの開発をしなくてもコンポーネントの視覚的なバリエーションが可能になり、AEM コンポーネントの再利用性が向上し、より多用途で効率的なコンテンツのオーサリングが可能になります。 スタイルシステムを AEM コアコンポーネント、テンプレートエディター、レスポンシブレイアウトと組み合わせて使用すると、豊富なエクスペリエンスをすばやく作成するための強力な機能が提供されます。
 feature: Style System
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-974
 thumbnail: 21750.jpg
 topic: Content Management
@@ -11,8 +11,8 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
 duration: 220
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 100%
 

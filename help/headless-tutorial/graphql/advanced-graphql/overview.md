@@ -1,15 +1,15 @@
 ---
 title: AEM ヘッドレスの高度な概念 - GraphQL
 description: Adobe Experience Manager（AEM）GraphQL API の高度な概念を説明したエンドツーエンドチュートリアルです。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 100%
 

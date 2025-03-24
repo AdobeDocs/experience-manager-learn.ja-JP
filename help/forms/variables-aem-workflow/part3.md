@@ -1,15 +1,15 @@
 ---
 title: AEM ワークフローの変数 [第 3 部]
 description: AEM ワークフローでの XML、JSON、ArrayList、Document タイプの変数の使用
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 849bfe6c-6b7f-44d0-85bc-5df0287a9bca
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 100%
 

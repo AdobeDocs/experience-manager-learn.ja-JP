@@ -1,7 +1,7 @@
 ---
 title: 標準 AEM プロジェクトアーキタイプのフロントエンドパイプラインの有効化
 description: 標準 AEM プロジェクトのフロントエンドパイプラインを有効にして、CSS、JavaScript、フォント、アイコンなどの静的リソースのデプロイを迅速化する方法を説明します。また、AEM のフルスタックバックエンド開発からフロントエンド開発を切り離す方法も説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -15,8 +15,8 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 

@@ -1,15 +1,15 @@
 ---
 title: コンテンツフラグメントモデルの作成（AEM ヘッドレスの高度な概念） - GraphQL
 description: この章では、Adobe Experience Manager（AEM）ヘッドレスの高度な概念のタブプレースホルダー、日時、JSON オブジェクト、フラグメント参照、コンテンツ参照を追加して、コンテンツフラグメントモデルを編集する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
 duration: 757
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 100%
 

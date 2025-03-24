@@ -1,7 +1,7 @@
 ---
 title: クラウドでの Dispatcher の使用
 description: Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 jira: KT-10054
@@ -10,8 +10,8 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
 duration: 311
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 100%
 

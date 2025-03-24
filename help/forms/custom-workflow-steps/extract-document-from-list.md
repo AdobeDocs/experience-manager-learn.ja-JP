@@ -2,7 +2,7 @@
 title: AEM ワークフローでのドキュメントのリストからのドキュメントの抽出
 description: ドキュメントのリストから特定のドキュメントを抽出するカスタムワークフローコンポーネント
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,8 +10,8 @@ kt: kt-13918
 last-substantial-update: 2023-09-12T00:00:00Z
 exl-id: b0baac71-3074-49d5-9686-c9955b096abb
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 100%
 

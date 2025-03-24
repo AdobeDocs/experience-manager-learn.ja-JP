@@ -2,15 +2,15 @@
 title: AEM Assets Dynamic Media でのパノラマ画像ビューアおよび縦長画像ビューアの使用
 description: AEM 6.4 の Dynamic Media ビューアの機能強化には、パノラマ画像ビューア、パノラマバーチャルリアリティ画像ビューア、縦長画像ビューアの追加が含まれています。 パノラマビューアを使用すると、部屋、物件、場所、風景の魅力的で没入感のあるエクスペリエンスを、カスタム開発を行わずに簡単に提供できます。
 feature: Video Profiles, Video Profiles, 360 VR Video
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
 duration: 535
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 100%
 

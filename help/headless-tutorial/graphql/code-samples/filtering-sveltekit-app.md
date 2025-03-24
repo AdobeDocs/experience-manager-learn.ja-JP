@@ -1,7 +1,7 @@
 ---
 title: シンプルな SvelteKit アプリ
 description: コンテンツフラグメントを使用してモデル化された WKND のアドベンチャーを表示する、シンプルな SvelteKit アプリです。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -14,8 +14,8 @@ recommendations: noCatalog, noDisplay
 hidefromtoc: true
 exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 100%
 

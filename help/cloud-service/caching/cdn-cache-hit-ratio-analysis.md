@@ -1,7 +1,7 @@
 ---
 title: CDN キャッシュヒット率の分析
 description: AEM as a Cloud Service が提供する CDN ログを分析する方法について説明します。キャッシュヒット率、MISS および PASS キャッシュタイプの上位 URL などのインサイトを取得して最適化を実現します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,8 +12,8 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 100%
 

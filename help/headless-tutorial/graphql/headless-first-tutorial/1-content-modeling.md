@@ -1,7 +1,7 @@
 ---
 title: コンテンツモデリング - AEM ヘッドレスの最初のチュートリアル
 description: コンテンツフラグメントの活用、フラグメントモデルの作成および AEM での GraphQL エンドポイントの使用の方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,8 +12,8 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 100%
 

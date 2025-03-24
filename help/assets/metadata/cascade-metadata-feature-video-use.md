@@ -1,7 +1,7 @@
 ---
 title: AEM Assets でのカスケードメタデータの使用
 description: 高度なメタデータ管理機能により、カスケードフィールドルールを作成して AEM Assets 内のメタデータ間のコンテキスト関係を設定できます。 次のビデオでは、フィールドの要件、表示およびコンテキストに応じた選択肢に関する新しい動的ルールについて説明します。 このビデオでは、管理者がこれらのルールをカスタムメタデータスキーマに適用するために必要な手順についても詳しく説明します。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management
 feature: Metadata
 role: User
@@ -12,8 +12,8 @@ last-substantial-update: 2022-06-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
 duration: 345
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

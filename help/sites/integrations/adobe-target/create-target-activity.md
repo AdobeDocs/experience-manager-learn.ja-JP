@@ -2,7 +2,7 @@
 title: エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成
 description: AEM エクスペリエンスフラグメントオファーを使用して、 Adobe Target Activity を作成およびテストする方法について説明します。
 feature: Experience Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6351
 thumbnail: 41246.jpg
 topic: Integrations
@@ -13,8 +13,8 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 100%
 

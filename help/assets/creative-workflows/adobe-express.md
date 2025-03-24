@@ -1,7 +1,7 @@
 ---
 title: AEM Assets と Adobe Express
 description: Adobe Express を使用して、AEM Assets 内でコンテンツを作成および編集する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Content Management, Content Supply Chain
 role: Admin, User
@@ -11,8 +11,8 @@ duration: 510
 last-substantial-update: 2024-05-07T00:00:00Z
 jira: KT-14645
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 100%
 

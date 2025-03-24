@@ -2,7 +2,7 @@
 title: Asset Compute 拡張機能用の環境変数の設定
 description: 環境変数は、ローカル開発用に .env ファイルで管理され、ローカル開発に必要な Adobe I/O 資格情報とクラウドストレージ資格情報を提供するために使用されます。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6270
 thumbnail: KT-6270.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
 duration: 121
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 100%
 

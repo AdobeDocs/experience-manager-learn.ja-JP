@@ -2,7 +2,7 @@
 title: AEM UI 拡張機能
 description: App Builder を使用して拡張機能を作成する AEM UI 拡張機能について説明します。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -10,8 +10,8 @@ recommendations: noDisplay
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
 duration: 50
-source-git-commit: 12d7f8f0afc1c19f289c847771cb9f4f965c650c
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 100%
 

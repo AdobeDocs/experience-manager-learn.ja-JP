@@ -1,7 +1,7 @@
 ---
 title: CSRF 対策
 description: AEM CSRF トークンを生成し、認証済みユーザーに対して AEM への許可された POST、PUT、DELETE リクエストに追加する方法を説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Developer
@@ -12,8 +12,8 @@ jira: KT-13651
 thumbnail: KT-13651.jpeg
 exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
 duration: 125
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: ModSecurity を使用して AEMサイトを DoS 攻撃から保護する方法
 description: ModSecurity を有効にして、OWASP ModSecurity Core Rule Set（CRS）を使用してサイトをサービス拒否（DoS）攻撃から保護する方法を説明します。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect
 level: Experienced
@@ -12,10 +12,10 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '1172'
-ht-degree: 100%
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
+source-wordcount: '1171'
+ht-degree: 98%
 
 ---
 
@@ -111,7 +111,7 @@ OWSAP® は、[OWASP® ModSecurity Core Rule Set（CRS）](https://github.com/co
 CRS を初期化し、よくある誤検知を削除して、サイトのローカルの例外を追加するには、次の手順に従います。
 
 1. CRS を初期化するには、**REQUEST-901-INITIALIZATION** ファイルから `.disabled` を削除します。つまり、`REQUEST-901-INITIALIZATION.conf.disabled` ファイルの名前を `REQUEST-901-INITIALIZATION.conf` に変更します。
-1. ローカル IP（127.0.0.1）ping などのよくある誤検知を削除するには、**REQUEST-905-COMMON-EXCEPTIONS** ファイルから `.disabled` を削除します。
+1. ローカル IP （127.0.0.1） ping などの一般的な誤検出を削除するには、**REQUEST-905-COMMON-EXCEPTIONS** ファイルから `.disabled` を削除します。
 1. AEM プラットフォームまたはサイト固有のパスなど、ローカルの例外を追加するには、`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` の名前を `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf` に変更します。
    1. 新しく名前を変更したファイルに AEM プラットフォーム固有のパス例外を追加します。
 

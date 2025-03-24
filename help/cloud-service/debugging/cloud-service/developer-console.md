@@ -2,7 +2,7 @@
 title: Developer Console
 description: AEM as a Cloud Service には、デバッグに役立つ、実行中の AEM サービスの様々な詳細を表示する Developer Console が環境ごとに用意されています。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5433
 thumbnail: kt-5433.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
 duration: 295
-source-git-commit: 1d9aeb4e5bd41096a28e3375d124bd6b6b8784aa
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 100%
 

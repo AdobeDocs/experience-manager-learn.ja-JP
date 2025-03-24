@@ -1,7 +1,7 @@
 ---
 title: コンテンツフラグメントモデルの定義 - AEMヘッドレス使用の手引き - GraphQL
 description: Adobe Experience Manager（AEM）および GraphQL の概要AEM でコンテンツフラグメントモデルを使用してコンテンツをモデル化し、スキーマを構築する方法について説明します。既存のモデルを確認し、モデルを作成します。スキーマの定義に使用できる様々なデータタイプについて説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6712
 thumbnail: 22452.jpg
@@ -11,8 +11,8 @@ role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
 duration: 228
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 100%
 

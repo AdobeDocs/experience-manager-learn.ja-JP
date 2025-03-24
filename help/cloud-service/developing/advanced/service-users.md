@@ -1,7 +1,7 @@
 ---
 title: サービスユーザー
 description: AEM コードでサービスユーザーを作成および使用して、制御されたプログラムによる AEM リポジトリへのアクセスを提供する方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Security
 role: Developer
@@ -11,8 +11,8 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 duration: 1053
-source-git-commit: 7d114e59c0fb975994540e0af2e3d31a09c5a38f
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 100%
 

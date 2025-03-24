@@ -2,7 +2,7 @@
 title: AEM Sites でのレスポンシブレイアウトについて
 description: AEM では、レイアウトコンテナコンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。レスポンシブレイアウトを使用すると、コンテンツ作成者は、各種デバイス向けのレスポンシブコンテンツを作成し、AEM 内でエンドユーザーエクスペリエンスをプレビューできます。
 feature: Page Editor, Editable Templates
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-4252
 thumbnail: 32012.jpg
 topic: Content Management
@@ -11,8 +11,8 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
 duration: 367
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
 

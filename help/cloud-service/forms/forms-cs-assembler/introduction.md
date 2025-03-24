@@ -4,15 +4,15 @@ description: 「DDX を呼び出し」を使用した PDF ファイルのアセ�
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9980
 exl-id: 713c4e9e-95ac-48e1-a7fc-2b3ec0b145e5
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 duration: 18
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 100%
 

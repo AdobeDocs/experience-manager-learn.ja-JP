@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service のデバッグ
 description: 拡張性の高いセルフサービスのクラウドインフラストラクチャ上で動作するので、AEM 開発者はビルドとデプロイから、実行中の AEM アプリケーションの詳細の取得に至るまで、AEM as a Cloud Service の様々な側面を把握しデバッグする方法を理解する必要があります。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5346
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
 duration: 60
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 

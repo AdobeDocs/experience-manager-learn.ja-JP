@@ -1,7 +1,7 @@
 ---
 title: AEM Modernization Tools を使用した AEM as a Cloud Service への移行
 description: AEM Modernization Tools を使用して、既存の AEM プロジェクトとコンテンツをアップグレードし、AEMとas a Cloud Service の互換性を保つ方法について説明します。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,8 +10,8 @@ jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
 duration: 2502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%
 

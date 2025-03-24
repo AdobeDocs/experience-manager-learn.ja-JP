@@ -1,7 +1,7 @@
 ---
 title: AEM を使用したクロスオリジンリソース共有（CORS）の開発
 description: CORS を活用して、クライアントサイド JavaScript を使用して外部 web アプリケーションから AEM コンテンツにアクセスする簡単な例です。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
@@ -9,8 +9,8 @@ feature: Security
 doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 duration: 333
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 100%
 
