@@ -2,15 +2,15 @@
 title: アダプティブフォームを作成する際に従う必要がある命名規則とベストプラクティス
 description: アダプティブフォームを作成する際に従う必要がある命名規則とベストプラクティス
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 57
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 100%
 

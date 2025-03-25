@@ -2,7 +2,7 @@
 title: 1 つのデータファイルからの複数の PDF の生成
 description: OutputService は、フォームデザインとフォームデザインを結合するデータを使用してドキュメントを作成する多くの方法を提供します。複数の個々のレコードを含む 1 つの大きな xml から複数の PDF を生成する方法を説明します。
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,8 +11,8 @@ last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
 jira: KT-16142
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
 

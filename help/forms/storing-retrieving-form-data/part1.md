@@ -1,15 +1,15 @@
 ---
 title: MySQL データベースからのフォームデータの格納と取得 - データソースの設定
 description: フォームデータの保存と取得に関わる手順について説明する、複数のパートで構成されているチュートリアル
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
 duration: 36
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 100%
 

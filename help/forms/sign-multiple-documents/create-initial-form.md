@@ -2,7 +2,7 @@
 title: プロセスをトリガーする初期フォームの作成
 description: メール通知をトリガーして署名プロセスを開始するための初期フォームを作成します。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: User
 level: Intermediate
@@ -10,8 +10,8 @@ jira: KT-6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
 duration: 35
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 100%
 

@@ -3,13 +3,13 @@ title: フォームデータモデルの作成（パート 3）
 description: これは、最初のインタラクティブ通信ドキュメントを作成するための複数の手順からなるチュートリアルの第 3 部です。ここでは、フォームデータモデルを作成します。フォームデータモデルを使用すると、複数の異なるデータソースを設定して接続できます。直感的なユーザーインターフェイスを使用して、接続されたデータソースをまたいでビジネスエンティティやサービスの統合データ表現スキーマを作成できます。
 feature: Interactive Communication
 topic: Development
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
 duration: 406
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
 

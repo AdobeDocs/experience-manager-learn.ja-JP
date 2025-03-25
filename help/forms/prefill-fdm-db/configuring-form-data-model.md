@@ -2,7 +2,7 @@
 title: フォームデータモデルの設定
 description: RDBMS データソースに基づくフォームデータモデルの作成
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5812
 thumbnail: kt-5812.jpg
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
 duration: 103
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 100%
 

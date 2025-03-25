@@ -2,7 +2,7 @@
 title: フォーム添付ファイルのアセンブリ
 description: 指定された順序でフォームの添付ファイルを組み合わせます
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
@@ -11,8 +11,8 @@ level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 100%
 

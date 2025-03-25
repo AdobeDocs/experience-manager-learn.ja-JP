@@ -2,15 +2,15 @@
 title: AEM Forms におけるフォームエディターの改善点
 description: AEM 6.3 のこのリリースでは、アダプティブフォームとアダプティブドキュメントのオーサリングを簡素化するための新機能と機能強化がいくつか導入されています。これらの機能強化により、市場投入までの時間が短縮されます。また、ビジネスユーザーは、フォームとドキュメントを業務に使用できるようになります。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
 duration: 522
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 100%
 

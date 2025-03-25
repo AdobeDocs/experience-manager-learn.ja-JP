@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームデータを使用してインタラクティブ DoR を生成する
 description: アダプティブフォームデータを XDP テンプレートと結合してダウンロード可能な PDF を生成する
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 100%
 

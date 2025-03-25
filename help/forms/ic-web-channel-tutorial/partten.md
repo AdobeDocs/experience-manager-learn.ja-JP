@@ -3,15 +3,15 @@ title: 退職後収入見通しパネルの設定
 description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 10 部です。ここでは、テキストおよびグラフコンポーネントを追加して、定年後の収入見通しのパネルを設定します。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
 duration: 71
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 100%
 

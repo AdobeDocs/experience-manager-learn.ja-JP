@@ -2,7 +2,7 @@
 title: AEM Forms と Acrobat Sign を使用した React アプリ
 description: Acrobat Signと AEM Forms では、複雑なトランザクションを自動化し、シームレスなデジタルエクスペリエンスの一環として法的な電子サインを含めることができます。
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,8 +10,8 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 64172af3-2905-4bc8-8311-68c2a70fb39e
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 100%
 

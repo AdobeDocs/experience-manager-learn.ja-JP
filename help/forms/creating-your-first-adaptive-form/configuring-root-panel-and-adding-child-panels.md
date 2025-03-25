@@ -2,7 +2,7 @@
 title: ルートパネルへの子パネルの追加
 description: ルートパネルレイアウトを「左側のタブ」に設定し、子パネルをルートパネルに追加します。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 28536.jpg
 jira: KT-4209
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 exl-id: a68c41b8-3e80-4b25-a933-9ceb8aee1e01
 duration: 187
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 100%
 

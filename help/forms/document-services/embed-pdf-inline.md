@@ -1,7 +1,7 @@
 ---
 title: レコードのドキュメントをインラインで表示
 description: アダプティブフォームデータを XDP テンプレートと結合し、Document Cloud の埋め込み PDF API を使用して PDF をインラインで表示します。
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 165
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: カスケードドロップダウンリスト
 description: 以前のドロップダウンリスト選択に基づいてドロップダウンリストを生成します。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-9724
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 185
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 100%
 

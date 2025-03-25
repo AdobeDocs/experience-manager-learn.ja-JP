@@ -3,7 +3,7 @@ title: 外部サーバーへのアダプティブフォームの送信
 description: 外部サーバーで実行中の REST エンドポイントへのアダプティブフォームの送信
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
 topic: Development
 role: Developer
@@ -11,8 +11,8 @@ level: Beginner
 exl-id: 5363c3f7-9006-4430-b647-f3283a366a64
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 100%
 

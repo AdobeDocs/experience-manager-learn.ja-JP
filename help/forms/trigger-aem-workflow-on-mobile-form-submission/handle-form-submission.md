@@ -3,14 +3,15 @@ title: HTML5 フォーム送信での AEM ワークフローのトリガー
 description: HTML5 フォームの送信処理
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: ht
+exl-id: 5fbc0cb9-5b55-4269-9172-039414db89cc
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 100%
 

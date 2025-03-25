@@ -3,7 +3,7 @@ title: 投稿セクションへのテーブルの追加
 description: これは、最初のインタラクティブ通信ドキュメントを作成するためのマルチステップチュートリアルの第 9 部です。このパートでは、投稿セクションにテーブルを追加します。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
@@ -12,8 +12,8 @@ role: Developer
 level: Beginner
 exl-id: b5a6c1c9-2be1-4622-b85b-a1996fb86a2f
 duration: 246
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 100%
 

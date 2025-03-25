@@ -2,7 +2,7 @@
 title: 項目読み込みパスを使用したドロップダウンリストへの入力
 description: crx ノードから値を読み取るためのドロップダウンリストの設定と入力
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-10961
 topic: Development
 role: Developer
@@ -11,8 +11,8 @@ last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
 exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
 duration: 34
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 100%
 

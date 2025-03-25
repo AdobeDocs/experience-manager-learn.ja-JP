@@ -3,15 +3,15 @@ title: 投資ミックスパネルの設定
 description: これは、初めてのインタラクティブなコミュニケーションドキュメントを作成するための、複数の手順からなるチュートリアルの第 11 部です。この部分では、現在の投資ミックスとモデルの投資ミックスを表示する円グラフを追加します。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
 duration: 69
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 100%
 

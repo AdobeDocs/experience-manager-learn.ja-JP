@@ -2,15 +2,15 @@
 title: アダプティブフォームワークフローでのワークフローコメントの取得
 description: AEM ワークフローでのワークフローコメントの取得
 feature: Workflow
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
 last-substantial-update: 2020-10-10T00:00:00Z
 duration: 73
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 100%
 

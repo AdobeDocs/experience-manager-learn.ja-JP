@@ -2,15 +2,15 @@
 title: AEM Forms で Output サービスや Forms サービスを使用した開発
 description: AEM Forms での Output および Forms Service API を使用した開発について説明します。
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 duration: 122
-source-git-commit: 12af84e3d9be24fabb01a64eced6279749668599
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 100%
 

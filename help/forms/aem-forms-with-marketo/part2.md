@@ -2,7 +2,7 @@
 title: AEM Forms と Marketo の連携（第 2 部）
 description: AEM Forms フォームデータモデルを使用した AEM Forms と Marketo の統合に関するチュートリアル
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,8 +10,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
 duration: 137
-source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 100%
 

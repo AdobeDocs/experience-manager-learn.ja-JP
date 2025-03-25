@@ -2,15 +2,15 @@
 title: AEM Forms での監視フォルダーの使用
 description: AEM Forms での監視フォルダーの設定と使用
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: abb74d44-d1b9-44d6-a49f-36c01acfecb4
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 100%
 

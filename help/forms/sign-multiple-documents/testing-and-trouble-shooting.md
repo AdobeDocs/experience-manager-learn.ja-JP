@@ -2,7 +2,7 @@
 title: 複数のドキュメントに署名するソルーションのトラブルシューティング
 description: ソリューションのテストと問題の発生
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6960
 thumbnail: 6960.jpg
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Intermediate
 exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
 duration: 81
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 100%
 

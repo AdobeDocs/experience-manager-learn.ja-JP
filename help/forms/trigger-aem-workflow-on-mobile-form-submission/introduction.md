@@ -3,15 +3,16 @@ title: HTM5 フォーム送信での AEM ワークフローのトリガー（概
 description: モバイルフォーム送信での AEM ワークフローのトリガー
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: c6ffa8f7a398b01fc12e1e2efe4382c941900496
-workflow-type: ht
+exl-id: ce51b25f-6069-4799-9a61-98c0a672e821
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 100%
 

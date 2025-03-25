@@ -3,19 +3,19 @@ title: HTM5 フォーム送信で AEM ワークフローをトリガーする - 
 description: HTML5 フォーム送信時に AEM ワークフローをトリガーし、送信したデータをリポジトリに保存する方法について説明します。
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 jira: kt-16215
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: ht
+exl-id: e0bde892-1da0-4b72-a408-ad7b84086939
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 100%
 
 ---
-
 
 # 送信したデータを保存
 
@@ -124,4 +124,3 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 ## 次の手順
 
 [ワークフローランチャーとワークフロー](./review-workflow.md)
-

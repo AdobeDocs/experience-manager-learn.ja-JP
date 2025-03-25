@@ -3,7 +3,7 @@ title: 添付ファイル付きフォームデータの MySQL データベース
 description: 添付ファイルを含んだフォームデータの保存と取得に関する手順について説明するマルチパートチュートリアル
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6593
 thumbnail: 327122.jpg
 topic: Development
@@ -12,8 +12,8 @@ level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
 duration: 148
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 100%
 

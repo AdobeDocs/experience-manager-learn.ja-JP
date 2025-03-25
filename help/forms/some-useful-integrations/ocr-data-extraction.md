@@ -2,7 +2,7 @@
 title: OCR データ抽出
 description: 政府発行ドキュメントからデータを抽出し、フォームに入力します。
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6679
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 145
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 100%
 

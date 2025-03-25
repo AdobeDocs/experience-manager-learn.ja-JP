@@ -3,14 +3,14 @@ title: AEM forms での最初の OSGi バンドルの作成
 description: Maven と Eclipse を使用して最初の OSGi バンドルを構築
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 100%
 

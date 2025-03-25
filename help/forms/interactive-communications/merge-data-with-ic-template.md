@@ -3,15 +3,15 @@ title: データの結合による印刷チャネルドキュメントの生成
 description: 入力ストリームに含まれるデータを結合して、印刷チャネルドキュメントを生成する方法を説明します
 feature: Interactive Communication
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 151
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 100%
 

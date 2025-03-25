@@ -2,7 +2,7 @@
 title: 収入パネルへのコンポーネントの追加
 description: 収入パネルにテーブルを追加します。テーブルの行を設定し、ルールエディターを使用して総計を計算します。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 22198.jpg
 jira: KT-4211
 topic: Development
@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 exl-id: e7674c46-259f-4dbd-96db-c40369534911
 duration: 352
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 100%
 

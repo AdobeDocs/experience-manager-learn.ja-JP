@@ -2,7 +2,7 @@
 title: AEM Forms と Adobe Campaign Standard の統合
 description: AEM Forms フォームデータモデルを使用して AEM Forms と Adobe Campaign Standard を統合し、ACS キャンペーンプロファイル情報などを取得します。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -11,8 +11,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 44
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 100%
 

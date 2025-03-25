@@ -2,15 +2,15 @@
 title: Assembler サービスを使用した XDP ステッチ
 description: AEM Forms の Assembler サービスを使用した XDP のステッチ
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
 exl-id: e116038f-7d86-41ee-b1b0-7b8569121d6d
 duration: 91
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 100%
 
