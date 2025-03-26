@@ -11,16 +11,22 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 100%
+source-wordcount: '1556'
+ht-degree: 82%
 
 ---
 
 # 仮想プライベートネットワーク（VPN）
 
 AEM as a Cloud Service を VPN に接続して、AEM と内部サービスの間に安全な通信チャネルを作成する方法を説明します。
+
+>[!IMPORTANT]
+>
+>VPN とポート転送は、Cloud Manager UI を通じて、または API 呼び出しを使用して設定できます。 このチュートリアルでは、API メソッドに焦点を当てます。
+>
+>UI を使用する場合は、[AEM as a Cloud Serviceの高度なネットワーク機能の設定 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) を参照してください。
 
 ## 仮想プライベートネットワークとは
 
@@ -49,9 +55,13 @@ Cloud Manager API を使用して仮想プライベートネットワークを�
 + Cloud Manager 環境 ID
 + 必要なすべての接続パラメーターにアクセスできる&#x200B;**ルートに戻づいた**&#x200B;仮想プライベートネットワーク。
 
-詳しくは、[Cloud Manager API 資格情報の設定、構成、取得方法を確認](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)し、それらを使用して Cloud Manager API 呼び出しを実行します。
+詳しくは [Cloud Manger API 資格情報の設定、設定および取得方法を確認して ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)Cloud Manager API 呼び出しに使用します。
 
-このチュートリアルでは、`curl` を使用して Cloud Manager API を設定します。 指定された `curl` コマンドは、Linux／macOS 構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
+>[!IMPORTANT]
+>
+>このチュートリアルでは、`curl` を使用してCloud Manager API を設定します *プログラムによるアプローチを希望する場合*。 指定された `curl` コマンドは、Linux® またはmacOS構文を想定しています。 Windows のコマンドプロンプトを使用する場合は、`\` 改行文字を `^` で置換します。
+>
+>または、Cloud Manager UI を使用して同じタスクを実行することもできます。 *UI アプローチをご希望の場合*、[AEM as a Cloud Serviceの高度なネットワーク機能の設定 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) を参照してください。
 
 ## プログラムごとの仮想プライベートネットワークの有効化
 
@@ -71,7 +81,7 @@ Cloud Manager を使用すると、フレキシブルポートエグレスを有
 
    ![ネットワークインフラストラクチャを追加](./assets/cloud-manager__add-network-infrastructure.png)
 
-1. __ネットワークインフラストラクチャを追加__&#x200B;ダイアログで、「__仮想プライベートネットワーク__」オプションを選択します。フィールドに入力して、「__続行__」を選択します。組織のネットワーク管理者と連携して、正しい値を取得します。
+1. __ネットワークインフラストラクチャを追加__ ダイアログボックスで、「__仮想プライベートネットワーク__」オプションを選択します。 フィールドに入力して、「__続行__」を選択します。組織のネットワーク管理者と連携して、正しい値を取得します。
 
    ![VPN を追加](./assets/vpn/select-type.png)
 
@@ -240,7 +250,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
    }
    ```
 
-   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。 共有 IP を介して送信されたトラフィックがアドビによって自動的に最適化されるので、`nonProxyHosts` が役立つ場合があります。
+   `nonProxyHosts` は、ポート 80 または 443 が専用のエグレス IP ではなくデフォルトの共有 IP アドレス範囲を介してルーティングされるホストのセットを宣言します。 `nonProxyHosts` は、Adobeが自動的に最適化する共有 IP を介してトラフィックが送信される場合に役立ちます。
 
    各 `portForwards` マッピングでは、詳細ネットワークは次の転送ルールを定義します。
 
@@ -251,7 +261,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
    AEM デプロイメントで必要とする外部サービスが HTTP／HTTPS __のみ__&#x200B;の場合は、`portForwards` 配列を空のままにします。これらのルールは非 HTTP／HTTPS リクエストにのみ必要なためです。
 
 
-&#x200B;2. 環境ごとに、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、VPN ルーティングルールが有効であることを検証します。
+2. 環境ごとに、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、VPN ルーティングルールが有効であることを検証します。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -263,18 +273,18 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
        -H 'Content-Type: application/json'
    ```
 
-&#x200B;3. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。 `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるため、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
+3. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。 `enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるため、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
 
-&#x200B;4. これで、カスタム AEM コードおよび設定で仮想プライベートネットワークエグレス設定を使用できるようになりました。
+4. これで、カスタム AEM コードおよび設定で仮想プライベートネットワークエグレス設定を使用できるようになりました。
 
 ## 仮想プライベートネットワーク経由での外部サービスへの接続
 
-仮想プライベートネットワークを有効にすると、AEM のコードと設定で使用して、VPN 経由で外部サービスを呼び出すことができます。 外部呼び出しには、AEM での処理方法が 2 種類あります。
+仮想プライベートネットワークを有効にすると、AEMのコードと設定で使用して、VPN 経由で外部サービスを呼び出すことができます。 外部呼び出しには、AEM での処理方法が 2 種類あります。
 
 1. 外部サービスへの HTTP／HTTPS 呼び出し
-   + 標準の 80 または 443 ポート以外のポートで動作するサービスに対して行われる HTTP／HTTPS 呼び出しが含まれます。
-1. 外部サービスへの HTTP／HTTPS 以外の呼び出し
-   + HTTP 以外の呼び出し（メールサーバーとの接続、SQL データベース、HTTP／HTTPS 以外のプロトコルで実行されるサービスなど）が含まれます。
+   + これらの外部サービスには、標準ポート 80 または 443 以外のポートで動作するサービスに対して行われる HTTP/HTTPS 呼び出しが含まれます。
+1. 外部サービスへの HTTP/HTTPS 以外の呼び出し
+   + これらの外部サービスには、メールサーバー、SQL データベース、HTTP/HTTPS 以外のプロトコルを使用するサービスへの接続など、HTTP 以外の呼び出しが含まれます。
 
 AEM からの標準ポート（80／443）での HTTP／HTTPS リクエストはデフォルトで許可されていますが、以下のように適切に設定されていない場合、VPN 接続は使用されません。
 
@@ -344,7 +354,7 @@ AEM から HTTP／HTTPS 以外の接続を作成する場合（例：SQL、SMTP 
     </td>
 </tr></table>
 
-### AEM as a Cloud Service へのVPN 経由でのアクセスの制限
+### VPN を使用してAEM as a Cloud Serviceへのアクセスを制限する
 
 仮想プライベートネットワークの設定で、AEM as a Cloud Service 環境へのアクセスを VPN に制限します。
 
