@@ -13,9 +13,9 @@ jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '599'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ AEM as a Cloud Service でホストされる web サイトのドメイン名を�
 
 ### ドメイン名とは
 
-ドメイン名は、adobe.comのような人間にわかりやすい名前の web サイト名で、インターネット上の特定の場所（170.2.14.16 のような IP アドレス）を指します。
+ドメイン名は、インターネット上の特定の場所（170.2.14.16 のような IP アドレス）を指す、わかりやすい名前の web サイト名（例：adobe.com）です。
 
 ### AEM as a Cloud Service のデフォルトのドメイン名
 

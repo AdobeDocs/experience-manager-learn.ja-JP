@@ -14,7 +14,7 @@ badgeVersions: label="AEM Assets Essentials" before-title="false"
 doc-type: Catalog
 exl-id: 42c0e51d-abb2-4445-98bd-65d813f580ca
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '56'
 ht-degree: 100%
 

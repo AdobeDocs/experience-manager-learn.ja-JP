@@ -8,7 +8,7 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 34
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '176'
 ht-degree: 100%
 

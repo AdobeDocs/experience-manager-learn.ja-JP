@@ -9,7 +9,7 @@ jira: KT-15880
 level: Intermediate, Experienced
 exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '702'
 ht-degree: 100%
 

@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
 duration: 41
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '208'
 ht-degree: 100%
 

@@ -12,7 +12,7 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
 duration: 219
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
 ht-degree: 100%
 

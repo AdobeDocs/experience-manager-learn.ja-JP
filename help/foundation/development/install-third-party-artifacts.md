@@ -13,7 +13,7 @@ jira: KT-16207
 thumbnail: KT-16207.jpeg
 exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1569'
 ht-degree: 100%
 

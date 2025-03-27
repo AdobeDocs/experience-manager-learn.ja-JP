@@ -12,9 +12,9 @@ last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -152,7 +152,7 @@ Homebrew を使用している場合は、以下の __Homebrew を使用して�
 
 ## Maven のインストール
 
-Apache Maven は、AEM プロジェクトの Maven アーキタイプから生成された AEM プロジェクトを作成するために使用される、オープンソースの Java コマンドラインツールです。 すべての主要な IDE （[IntelliJ IDEA](https://www.jetbrains.com/idea/)、[Visual Studio Code](https://code.visualstudio.com/)、[Eclipse](https://www.eclipse.org/) など）に Maven のサポートが統合されています。
+Apache Maven は、AEM プロジェクトの Maven アーキタイプから生成された AEM プロジェクトを作成するために使用される、オープンソースの Java コマンドラインツールです。 すべての主要な IDE（[IntelliJ IDEA](https://www.jetbrains.com/idea/)、[Visual Studio Code](https://code.visualstudio.com/)、[Eclipse](https://www.eclipse.org/) など）に、Maven のサポートが統合されています。
 
 
 >[!BEGINTABS]
@@ -206,10 +206,10 @@ Adobe I/O CLI が Cloud Manager と通信するには、[Adobe I/O コンソー�
    + Adobe I/O コンソールプログラムは、Cloud Manager プログラムと概念が異なります。
 1. 新しい Cloud Manager API 統合を作成する
    + 「Oauth サーバー間」資格情報タイプを選択します。
-   + 「Deployment Manager - Cloud Service」製品プロファイルを選択します。
-   + 設定済み API を保存
-1. Adobe I/O CLI の [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) に入力するために必要な資格情報を取得します。新しく作成した「OAuth サーバー間」資格情報を開き、右上のアクションバーから「JSON をダウンロード」を選択します。
-1. ダウンロードした JSON ファイルを開き、すべてのキーの名前を lowecase に変更します。 例えば、`CLIENT_ID` は `client_id` になります。
+   + 「デプロイメントマネージャー - Cloud Service」製品プロファイルを選択します。
+   + 設定済み API を保存します
+1. 新しく作成した「OAuth サーバー間」資格情報を開き、右上のアクションバーから「JSON をダウンロード」を選択して、Adobe I/O CLI の [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) に入力するために必要な資格情報を取得します。
+1. ダウンロードした JSON ファイルを開き、すべてのキーの名前を小文字に変更します。例えば、`CLIENT_ID` は `client_id` になります。
 1. `config.json` ファイルを Adobe I/O CLI に読み込む
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager /path/to/downloaded/json --file --json`
 

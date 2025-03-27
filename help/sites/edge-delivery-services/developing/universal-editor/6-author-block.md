@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 500
 exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '376'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 93%
 
    ![ユニバーサルエディター - ブロックの作成](./assets/6-author-block/author-block.png)
 
-8. オーサリングが完了したら、ユニバーサルエディターの右上にある「**公開**」ボタンを選択し、「**プレビュー** に公開」を選択して、変更内容をプレビュー環境に公開します。 変更は、web サイトの `aem.page` ドメインに公開されます。
+8. オーサリングが完了したら、ユニバーサルエディターの右上にある「**公開**」ボタンを選択し、**プレビュー**&#x200B;に公開して、変更をプレビュー環境に公開します。変更は、web サイトの `aem.page` ドメインに公開されます。
    ![AEM Sites - 公開またはプレビュー](./assets/6-author-block/publish-to-preview.png)
 
 9. 変更がプレビューに公開されるまで待ってから、[AEM CLI](./3-local-development-environment.md#install-the-aem-cli) 経由で [http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser) の web ページを開きます。

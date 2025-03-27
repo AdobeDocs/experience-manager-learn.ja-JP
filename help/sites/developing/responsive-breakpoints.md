@@ -13,7 +13,7 @@ thumbnail: kt-11664.jpeg
 exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
 duration: 52
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '256'
 ht-degree: 100%
 

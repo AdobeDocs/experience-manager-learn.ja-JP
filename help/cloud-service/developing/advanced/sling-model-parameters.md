@@ -9,7 +9,7 @@ jira: KT-15923
 level: Intermediate, Experienced
 exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
 ht-degree: 100%
 

@@ -11,7 +11,7 @@ doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1231'
 ht-degree: 100%
 

@@ -11,9 +11,9 @@ doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1702'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -101,7 +101,7 @@ Dynamic Media ビデオのエンコードは、次の場所からダウンロー
 
 ### Brand Portal への公開のスケジュール設定
 
-[AEM（6.4.2.0）からBrand PortalへのAssets（およびフォルダー）公開ワークフロー ](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) 後の日時にスケジュール設定できます。
+アセット（およびフォルダー）を [AEM（6.4.2.0）](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)オーサーインスタンスから Brand Portal へ公開するワークフローのスケジュールに未来の日時を指定できるようになりました。
 
 同様に、「Brand Portal で非公開」ワークフローのスケジュールを設定することで、公開されているアセットを未来の特定の日時にポータルから取り下げることができます。
 
@@ -205,7 +205,7 @@ Brand Portal と AEM の連携に向けて強化された機能が新しく追�
 
 ## その他のリソース{#additional-resources}
 
-* [Brand Portal の新機能](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html?lang=ja)
+* [Brand Portal の新機能](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/whats-new.html)
 * [AEM オーサーのレプリケーションエージェント](https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [ダウンロードの高速化ガイド](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal のアドビドキュメント](https://helpx.adobe.com/jp/experience-manager/brand-portal/using/brand-portal.html)

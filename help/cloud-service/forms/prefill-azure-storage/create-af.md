@@ -11,7 +11,7 @@ thumbnail: 335423.jpg
 exl-id: 0b543c6b-9cfd-4fac-b8d0-33153c036f4b
 duration: 60
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '287'
 ht-degree: 100%
 

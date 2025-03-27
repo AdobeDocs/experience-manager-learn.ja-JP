@@ -12,7 +12,7 @@ thumbnail: 332439.jpg
 exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
 duration: 49
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '129'
 ht-degree: 100%
 

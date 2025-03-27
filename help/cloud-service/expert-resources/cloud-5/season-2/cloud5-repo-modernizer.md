@@ -10,7 +10,7 @@ recommendations: noDisplay, noCatalog
 exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
 duration: 306
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
 ht-degree: 100%
 

@@ -14,7 +14,7 @@ badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-tit
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
 ht-degree: 100%
 

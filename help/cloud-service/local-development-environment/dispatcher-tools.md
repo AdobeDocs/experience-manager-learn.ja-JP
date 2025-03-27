@@ -12,9 +12,9 @@ last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 624
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1620'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
 >title="ローカル Dispatcher ツール"
->abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。AEM as a Cloud Service SDK には、推奨 Dispatcher ツールのバージョンが含まれているので、Dispatcher をローカルで容易に設定、検証、シミュレーションできます。"
+>abstract="Dispatcher は、Experience Manager アーキテクチャ全体に不可欠な要素であり、ローカル開発セットアップの一部になります。AEM as a Cloud Service SDK には、Dispatcher の設定、検証およびシミュレーションをローカルで容易に行えるようにする推奨 Dispatcher ツールバージョンが含まれています。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=ja" text="クラウド内 Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja" text="AEM as a Cloud Service SDK のダウンロード"
 
@@ -51,7 +51,7 @@ AEM as a Cloud Service SDK には、Dispatcher の設定、検証およびシミ
 
 + オプションとして、ローカルの AEM Publish サービスに最新の [AEM リファレンス web サイト](https://github.com/adobe/aem-guides-wknd/releases)をインストールします。この web サイトは、作業中の Dispatcher を視覚化するために、このチュートリアルで使用されます。
 
-1. [Docker](https://www.docker.com/) （Docker Desktop 2.2.0.5+/Docker Engine v19.03.9 以降）の最新バージョンをローカル開発マシンにインストールして起動します。
+1. [Docker](https://www.docker.com/)（Docker Desktop 2.2.0.5 以降および Docker Engine v19.03.9以降）の最新バージョンをローカル開発マシンにインストールして起動します。
 
 ## Dispatcher ツールのダウンロード（AEM SDK の一部として）
 
@@ -59,7 +59,7 @@ AEM as a Cloud Service SDK（AEM SDK）には、開発用に Dispatcher モジ�
 
 AEM as a Cloud Service SDK を既にダウンロードして[ローカル AEM ランタイムをセットアップ](./aem-runtime.md)してある場合は、再度ダウンロードする必要はありません。
 
-1. Adobe ID を使用して、[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1) にログインします。
+1. Adobe ID を使用して、[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1) にログインします。
    + AEM as a Cloud Service SDK をダウンロードするには、Adobe 組織が AEM as a Cloud Service 用にプロビジョニングされている&#x200B;__必要があります__
 1. 最新の __AEM SDK__ 結果レコードをクリックしてダウンロードします。
 

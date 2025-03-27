@@ -12,7 +12,7 @@ thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
 duration: 486
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2137'
 ht-degree: 100%
 

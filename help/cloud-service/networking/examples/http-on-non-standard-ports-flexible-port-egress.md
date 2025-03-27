@@ -11,7 +11,7 @@ thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 duration: 86
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
 ht-degree: 100%
 

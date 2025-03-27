@@ -13,7 +13,7 @@ exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
 duration: 263
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1285'
 ht-degree: 100%
 

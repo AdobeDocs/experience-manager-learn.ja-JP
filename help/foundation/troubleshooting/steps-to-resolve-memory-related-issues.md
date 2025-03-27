@@ -12,7 +12,7 @@ doc-type: Technical Video
 exl-id: 6477e9df-f33f-46b1-aa9b-535063da65dd
 duration: 109
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
 ht-degree: 100%
 

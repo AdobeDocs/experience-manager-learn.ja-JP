@@ -11,9 +11,9 @@ thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1614'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -28,9 +28,9 @@ AEM ヘッドレスアプリケーションのデプロイでは、AEM の URL �
 
 | AEM ヘッドレスデプロイメントのタイプ | AEM 環境 | AEM サービス |
 |-------------------------------|:---------------------:|:----------------:|
-| 実稼動 | 実稼動 | パブリッシュ |
+| 実稼動 | 実稼動 | 公開 |
 | オーサリングプレビュー | 実稼動 | プレビュー |
-| 開発 | 開発 | パブリッシュ |
+| 開発 | 開発 | 公開 |
 
 デプロイメントタイプの順列を処理するために、各アプリのデプロイメントは、接続先の AEM サービスを指定する設定を使用して作成されます。次に、設定済みの AEM サービスのホストやドメインを使用して、AEM GraphQL API の URL と画像 URL を作成します。ビルドに依存する設定を管理するための正しい方法を判断するには、AEM ヘッドレスアプリのフレームワーク（React、iOS、Android™ など）のドキュメントを参照してください。その方法はフレームワークによって異なります。
 
@@ -110,7 +110,7 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### React useEffect （..） フック
+#### React useEffect(...) フック
 
 カスタム React useEffect フックは、ビューをレンダリングする React コンポーネントの代わりに、AEM ホストで初期化された AEM ヘッドレスクライアントを呼び出します。
 

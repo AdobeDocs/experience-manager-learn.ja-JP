@@ -12,7 +12,7 @@ thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
 duration: 33
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '85'
 ht-degree: 100%
 

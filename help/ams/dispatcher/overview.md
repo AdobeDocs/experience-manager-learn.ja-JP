@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Catalog
 exl-id: 4f72d010-f488-490a-83fb-38ff1b1e8183
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
 ht-degree: 100%
 
