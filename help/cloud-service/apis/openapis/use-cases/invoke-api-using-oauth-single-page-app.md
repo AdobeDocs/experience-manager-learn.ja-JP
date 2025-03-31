@@ -11,13 +11,13 @@ jira: KT-17430
 thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
-
 
 # OAuth 単一ページアプリを使用した OpenAPI ベースのAEM API の呼び出し
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 OAuth シングルページアプリ認証は、ブラウザーで実行されるJavaScript ベースのアプリケーションに最適です。 バックエンドサーバーがない場合も、ユーザーの代わりにAEM API とやり取りするためにアクセストークンを取得する必要がある場合も同様です。
 
-PKCE フローは、OAuth 2.0 _authorization_code_ 付与タイプを拡張し、認証コードの傍受を防いでセキュリティを強化します。 詳しくは、[OAuth サーバー間と OAuth web アプリ/シングルページアプリ資格情報の違い ](../overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials) を参照してください。
+PKCE フローは、OAuth 2.0 _authorization_code_ 付与タイプを拡張し、認証コードの傍受を防いでセキュリティを強化します。 詳しくは、[OAuth サーバー間資格情報と web アプリ間資格情報とシングルページアプリ資格情報の違い ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) を参照してください。
 
 >[!AVAILABILITY]
 >

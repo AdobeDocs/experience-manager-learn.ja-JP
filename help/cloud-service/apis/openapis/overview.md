@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '1015'
 ht-degree: 2%
 
 ---
@@ -59,15 +59,18 @@ OpenAPI ベースのAEM API は、次の付与タイプを含む、OAuth 2.0 認
 
 - **OAuth 単一ページアプリ資格情報**：ブラウザーで実行される SPA 用に設計されています。バックエンドサーバーを使用せずに、ユーザーの代わりに API にアクセスする必要があります。 _authorization_code_ 付与タイプを使用し、PKCE （Proof Key for Code Exchange）を使用したクライアント側のセキュリティメカニズムに依存して、認証コードフローを保護します。 詳しくは、[OAuth 単一ページアプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential) を参照してください。
 
-## OAuth サーバー間と OAuth web アプリ/シングルページアプリの資格情報の違い{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+## OAuth サーバー間と web アプリとシングルページアプリの資格情報の違い{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
-| | OAuth サーバー間 | OAuth ユーザー認証（web アプリ） |
-| --- | --- | --- |
-| 認証の目的 | 機械間インタラクション用に設計されています。 | ユーザー主導のインタラクション用に設計されています。 |
-| トークンの動作 | クライアントアプリケーション自体を表すアクセストークンを発行します。 | 認証済みユーザーの代わりにアクセストークンを発行します。 |
-| ユースケース | ユーザーインタラクションのない API アクセスを必要とするバックエンドサービス。 | ユーザーの代わりに API にアクセスする、フロントエンドおよびバックエンドコンポーネントを持つ web アプリケーション。 |
-| セキュリティに関する考慮事項 | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザーの認証をおこなうと、独自の一時的なアクセストークンが付与されます。 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 |
-| 付与タイプ | _client_credentials_ | _authorization_code_ |
+次の表に、OpenAPI ベースのAEM API でサポートされる 3 つの OAuth 認証方法の違いを示します。
+
+|  | OAuth サーバー間 | OAuth Web アプリ | OAuth 単一ページアプリ（SPA） |
+| --- | --- | --- | --- |
+| **認証の目的** | 機械間インタラクション用に設計されています。 | _バックエンド_ を使用した web アプリでのユーザー主導のインタラクション用に設計されています。 | _クライアントサイド JavaScript アプリケーション_ でのユーザー主導のインタラクション用に設計されています。 |
+| **トークン動作** | クライアントアプリケーション自体を表すアクセストークンを発行します。 | 認証済みユーザーの代わりに _バックエンド経由で_ アクセストークンを発行します。 | 認証済みユーザーの代わりに _フロントエンドのみのフローを介して_ アクセストークンを発行します。 |
+| **ユースケース** | ユーザーインタラクションのない API アクセスを必要とするバックエンドサービス。 | ユーザーの代わりに API にアクセスする、フロントエンドおよびバックエンドコンポーネントを持つ web アプリケーション。 | バックエンドを持たないユーザーの代わりに API にアクセスする、純粋なフロントエンド（JavaScript）アプリケーション。 |
+| **セキュリティに関する考慮事項** | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザー認証後、ユーザーには、バックエンド呼び出しを使用して独自の _一時的なアクセストークン_ が付与されます。 アクセストークンの認証コードを交換するために、機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザー認証後、ユーザーには、フロントエンド呼び出しを通じて独自の _一時的アクセストークン_ が付与されます。 フロントエンドアプリに保存すると安全ではないため、`client_secret` は使用しません。 アクセストークンの認証コードを交換するために PKCE に依存します。 |
+| **付与タイプ** | _client_credentials_ | _authorization_code_ | _authorization_code_ と **PKCE** |
+| **Adobe Developer Consoleの資格情報の種類** | OAuth サーバー間 | OAuth Web アプリ | OAuth 単一ページアプリ |
 
 ## Adobe API へのアクセスと関連概念{#accessing-adobe-apis-and-related-concepts}
 

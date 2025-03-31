@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
 source-wordcount: '2245'
 ht-degree: 5%
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 OAuth Web アプリを使用するカスタム Web アプリからユーザーベースの認証を使用して、AEM as a Cloud Serviceで OpenAPI ベースのAEM API を呼び出す方法について説明します。
 
-OAuth web アプリ認証は、ユーザーの代わりにAEM API にアクセスする **必要があるフロントエンドおよび _バックエンド_ コンポーネントを持つ web アプリケーションに最適** す。 また、OAuth 2.0 _authorization_code_ 付与タイプを使用して、ユーザーの代わりにAEM API にアクセスするためのアクセストークンを取得します。 詳しくは、[OAuth サーバー間の資格情報と OAuth web アプリ/シングルページアプリの資格情報の違い ](../overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials) を参照してください。
+OAuth web アプリ認証は、ユーザーの代わりにAEM API にアクセスする **必要があるフロントエンドおよび _バックエンド_ コンポーネントを持つ web アプリケーションに最適** す。 また、OAuth 2.0 _authorization_code_ 付与タイプを使用して、ユーザーの代わりにAEM API にアクセスするためのアクセストークンを取得します。 詳しくは、[OAuth サーバー間資格情報と web アプリ間資格情報とシングルページアプリ資格情報の違い ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) を参照してください。
 
 >[!AVAILABILITY]
 >
