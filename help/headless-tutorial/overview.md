@@ -8,7 +8,7 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 100%
@@ -16,8 +16,6 @@ ht-degree: 100%
 ---
 
 # AEM のヘッドレスに関するチュートリアル{#aem-headless-tutorials}
-
-{{aem-headless-trials-promo}}
 
 Adobe Experience Manager（AEM）には、ヘッドレスエンドポイントを定義し、そのコンテンツを JSON 形式で配信する複数のオプションがあります。実践チュートリアルを使用して、様々なオプションの使用方法を検討し、自分に適切なオプションを選択してください。
 

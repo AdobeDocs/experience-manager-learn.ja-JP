@@ -12,16 +12,14 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 100%
 
 ---
 
 # AEM ヘッドレスの基本を学ぶ - GraphQL
-
-{{aem-headless-trials-promo}}
 
 ヘッドレス CMS シナリオで AEM の GraphQL API を使用してコンテンツを作成および公開し、外部アプリで使用する方法を示すエンドツーエンドのチュートリアルです。
 

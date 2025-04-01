@@ -12,16 +12,14 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 100%
 
 ---
 
 # AEM ヘッドレスの最初のチュートリアル
-
-{{aem-headless-trials-promo}}
 
 このチュートリアルでは、AEM ヘッドレス API と GraphQL を完全に活用した React を使用して web エクスペリエンスを作成する方法について説明します。このチュートリアルでは、React、Adobe Experience Manager（AEM）ヘッドレス API、GraphQL の機能を組み合わせて、動的でインタラクティブな web アプリケーションを作成するプロセスを説明します。
 

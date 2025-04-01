@@ -9,16 +9,14 @@ exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
 duration: 626
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 100%
 
 ---
 
 # AEM ヘッドレスの基本を学ぶ - GraphQL {#getting-started-with-aem-headless}
-
-{{aem-headless-trials-promo}}
 
 コンテンツ フラグメント用の AEM の GraphQL API
 外部クライアントアプリケーションが AEM で管理されるコンテンツを使用してエクスペリエンスをレンダリングするヘッドレス CMS シナリオをサポートします。

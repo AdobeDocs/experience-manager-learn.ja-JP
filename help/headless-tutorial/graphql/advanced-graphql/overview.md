@@ -8,16 +8,14 @@ role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 100%
 
 ---
 
 # AEM ヘッドレスの高度な概念
-
-{{aem-headless-trials-promo}}
 
 このエンドツーエンドチュートリアルは、Adobe Experience Manager（AEM）のヘッドレスと GraphQL の基礎を説明した[基本チュートリアル](../multi-step/overview.md)の続きです。この詳細チュートリアルでは、コンテンツフラグメントモデル、コンテンツフラグメントおよび AEM GraphQL 永続クエリの操作（クライアントアプリケーションでの GraphQL 永続クエリの使用など）に関する詳細を説明します。
 
