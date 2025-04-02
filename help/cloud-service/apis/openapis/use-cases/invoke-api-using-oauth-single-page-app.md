@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 22d3c0058c04a1d812a95a47472f96efaa597513
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 2%
@@ -61,6 +61,9 @@ Adobe Developer Console（ADC）プロジェクトは、OAuth シングルペー
 >[!IMPORTANT]
 >
 >ADC プロジェクトは _client_secret_ を提供しません。 代わりに、SPA は _code_verifier_ と _code_challenge_ を生成して、_アクセストークン_ の認証コードを安全に交換します。 これにより、クライアント側でクライアントの秘密鍵を保存する必要がなくなり、セキュリティが強化されます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+
 
 次の図に、WKND SPA の機能フローを示します _OpenAPI ベースのAEM API を呼び出すためのユーザー固有のアクセストークンを取得する_。
 
