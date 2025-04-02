@@ -11,7 +11,7 @@ level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
 duration: 34
 source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '91'
 ht-degree: 100%
 

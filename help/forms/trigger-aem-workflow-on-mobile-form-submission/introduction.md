@@ -12,7 +12,7 @@ jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: ce51b25f-6069-4799-9a61-98c0a672e821
 source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '195'
 ht-degree: 100%
 

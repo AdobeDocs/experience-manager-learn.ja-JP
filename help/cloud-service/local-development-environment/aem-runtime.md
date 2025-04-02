@@ -12,9 +12,9 @@ last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 411
 source-git-commit: 99e3cadc71ca4e26f9e4034085788dfc5407d1bb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1696'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 >title="ローカル AEM ランタイム"
 >abstract="Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、ソース管理にコミットして AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイしてテストできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=ja" text="AEM as a Cloud Service の SDK"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html" text="AEM as a Cloud Service SDK のダウンロード"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEM as a Cloud Service SDK のダウンロード"
 
 Adobe Experience Manager（AEM）は、AEM as a Cloud Service SDK のクイックスタート jar を使用してローカルで実行できます。これにより、開発者は、ソース管理にコミットして AEM as a Cloud Service 環境にデプロイする前に、カスタムコード、設定およびコンテンツをデプロイしてテストできます。
 
@@ -66,7 +66,7 @@ $ java --version
 
 AEM as a Cloud Service SDK または AEM SDK には、AEM オーサーおよびパブリッシュを開発用にローカルで実行するために使用されるクイックスタート jar と、Dispatcher ツールの互換バージョンが含まれています。
 
-1. Adobe IDを使用して ](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html)0}https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html} にログインします[
+1. Adobe ID を使用して、[https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) にログインします。
    + AEM as a Cloud Service SDK をダウンロードするには、アドビ組織が AEM as a Cloud Service に対してプロビジョニングされている&#x200B;__必要があります__。
 1. 「__AEM as a Cloud Service__」タブに移動します
 1. __公開日__&#x200B;を&#x200B;__降__&#x200B;順で並べ替えます

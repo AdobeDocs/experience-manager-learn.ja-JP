@@ -11,7 +11,7 @@ level: Experienced
 jira: kt-16215
 exl-id: e0bde892-1da0-4b72-a408-ad7b84086939
 source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
 ht-degree: 100%
 
