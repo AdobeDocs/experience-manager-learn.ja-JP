@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 7212bec910320847e9375dd1956a8cf76df1d579
+source-git-commit: 3d42029f193f293631585314983956618d707244
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2113'
 ht-degree: 2%
 
 ---
@@ -569,6 +569,7 @@ WKND SPA の全体的なコード構造と主なエントリポイントを確�
 
 ## その他のリソース{#additional-resources}
 
+- [Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
 - [ ユーザー認証の実装ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/)
 - [ リクエストを承認 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
 - [ アクセストークンの取得 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
