@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: a98ca7ddc155190b63664239d604d11ad470fdf5
+source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 87%
@@ -27,9 +27,9 @@ AEM as a Cloud Serviceの CDN で HTTP 応答のキャッシュを無効にす�
 
 ## 新しいデフォルトのキャッシュ動作
 
-Caching of HTTP responses in AEM as a Cloud Service’s CDN is controlled by the following HTTP response headers from the origin `Cache-Control`, `Surrogate-Control`, or `Expires`.  Origin responses that contain `private`, `no-cache` or `no-store` in  `Cache-Control` are not cached.
+AEM as a Cloud Service CDN での HTTP 応答のキャッシングは、接触チャネル `Cache-Control`、`Surrogate-Control`、`Expires` からの次の HTTP 応答ヘッダーによって制御されます。  `Cache-Control` に `private`、`no-cache` または `no-store` を含むオリジン応答はキャッシュされません。
 
-Review the [default caching behavior](./enable-caching.md#default-caching-behavior) for AEM Publish and Author when an AEM Project Archetype based AEM project is deployed.
+AEM プロジェクトアーキタイプベースのAEM プロジェクトがデプロイされた際の、AEM パブリッシュおよびオーサーの [ デフォルトのキャッシュ動作 ](./enable-caching.md#default-caching-behavior) を確認します。
 
 
 ## キャッシュを無効にする
@@ -56,7 +56,7 @@ Review the [default caching behavior](./enable-caching.md#default-caching-behavi
 <LocationMatch "$URL$ || $URL_REGEX$">
     # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
-    Header unset Surroagate-Control
+    Header unset Surrogate-Control
     Header unset Expires
 
     # Instructs the Browser and the CDN to not cache the response.
