@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 229
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '948'
-ht-degree: 100%
+source-git-commit: 0363505b426d6e4733c57409e17e9d69f7a567c7
+workflow-type: tm+mt
+source-wordcount: '962'
+ht-degree: 93%
 
 ---
 
@@ -167,14 +167,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 ## 推奨ログレベル{#log-levels}
 
-AEM as a Cloud Service 環境ごとのログレベルに関するアドビの一般的なガイダンスは次のとおりです。
-
-+ ローカル開発（AEM SDK）：`DEBUG`
-+ 開発：`DEBUG`
-+ ステージ：`WARN`
-+ 実稼動：`ERROR`
-
-環境のタイプごとに最適なログレベルの設定は AEM as a Cloud Service で行われ、ログレベルはコードで維持管理されます。
+AEM as a Cloud Service環境ごとのログレベルに関するAdobeの一般的なガイダンスは、AEMのデフォルトのログ設定（デフォルトのログレベルは `INFO`）に従うことです。 また、Adobeでは、ログステートメントでカスタムコードを実装し、`INFO` のログレベルで実行できるようにすることをお勧めします。 ログレベルはコードで維持管理されます
 
 + Java ログの設定は、OSGi 設定で維持管理されます。
 + Dispatcher プロジェクト内の Apache web サーバーおよび Dispatcher ログレベル
