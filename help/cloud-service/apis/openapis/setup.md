@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 7%
@@ -27,6 +27,9 @@ AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API への
 >
 >OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
 
+>[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
+
+
 の高度な設定プロセスには、次の手順が含まれます。
 
 1. AEM as a Cloud Service環境の最新化。
@@ -35,14 +38,14 @@ AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API への
 1. ADC プロジェクトの設定
 1. AEM インスタンスを設定して、ADC プロジェクト通信を有効にします。
 
-## AEM as a Cloud Serviceの最新化
+## AEM as a Cloud Serviceの最新化{#modernization-of-aem-as-a-cloud-service-environment}
 
 AEM as a Cloud Service環境の最新化は、次の手順を含む環境アクティビティごとに 1 回行われます。
 
 - AEM リリース **2024.10.18459.20241031T210302Z** 以降に更新します。
 - リリース 2024.10.18459.20241031T210302Z より前に環境が作成された場合は、新しい製品プロファイルを追加します。
 
-### AEM インスタンスの更新
+### AEM インスタンスの更新{#update-aem-instance}
 
 AEM インスタンスを更新するには、「Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**更新**」オプションを選択します。
 
@@ -54,7 +57,7 @@ AEM インスタンスを更新するには、「Adobe [Cloud Manager](https://m
 
 この場合、フルスタックパイプラインの名前は **Dev :: Fullstack-Deploy** で、AEM環境の名前は **wknd-program-dev** です。 名前が異なる場合があります。
 
-### 新しい製品プロファイルを追加
+### 新しい製品プロファイルを追加{#add-new-product-profiles}
 
 AEM インスタンスに新しい製品プロファイルを追加するには、Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) の「_環境_」セクションで、環境名の横にある _省略記号_ アイコンを選択し、「**製品プロファイルを追加**」オプションを選択します。
 
@@ -88,7 +91,7 @@ _新しい製品プロファイル_ が存在すると、Adobe Developer Console
 >
 >上記の手順は、AEM Assets API のサーバー間認証を有効にするために重要です。 この関連付けがないと、AEM Assets API をサーバー間認証方法と共に使用できません。
 
-## Adobe Developer Console（ADC）プロジェクトの作成
+## Adobe Developer Console（ADC）プロジェクトの作成{#adc-project}
 
 ADC プロジェクトを使用して、目的の API を追加し、その認証を設定して、認証アカウントを製品プロファイルに関連付けます。
 
@@ -110,7 +113,7 @@ ADC プロジェクトを作成するには、次の手順に従います。
 
    ![ プロジェクト名を編集 ](./assets/setup/edit-project-name.png)
 
-## ADC プロジェクトの設定
+## ADC プロジェクトの設定{#configure-adc-project}
 
 ADC プロジェクトを作成したら、目的のAEM API を追加し、その認証を設定して、認証アカウントを製品プロファイルに関連付ける必要があります。
 
@@ -144,7 +147,7 @@ ADC プロジェクトを作成したら、目的のAEM API を追加し、そ�
 
 **OAuth Web アプリ** または **OAuth 単一ページアプリ** の認証方法を選択した場合、製品プロファイルの関連付けは表示されませんが、アプリケーションリダイレクト URI が必要です。 アプリケーションリダイレクト URI は、認証コードによる認証後にユーザーをアプリケーションにリダイレクトするために使用されます。 関連するユースケースのチュートリアルでは、このような認証固有の設定の概要を説明します。
 
-## AEM インスタンスを設定して、ADC プロジェクト通信を有効にします
+## AEM インスタンスを設定して、ADC プロジェクト通信を有効にします{#configure-aem-instance}
 
 ADC プロジェクトのクライアント ID をAEM インスタンスと通信できるようにするには、AEM インスタンスを設定する必要があります。
 
