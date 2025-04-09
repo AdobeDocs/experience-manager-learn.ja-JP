@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1291'
 ht-degree: 7%
 
 ---
@@ -68,12 +68,11 @@ _Admin Console_ ウィンドウに、新しく追加された製品プロファ�
 
 上記の手順で、AEM as a Cloud Service環境の最新化が完了します。
 
-## AEM API アクセスの有効化
+## AEM API アクセスの有効化{#enable-aem-apis-access}
 
 _新しい製品プロファイル_ が存在すると、Adobe Developer Console（ADC）で OpenAPI ベースのAEM API アクセスが可能になります。 [Adobe Developer Console（ADC） ](./overview.md#accessing-adobe-apis-and-related-concepts) は、Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。
 
-新しく追加された製品プロファイルは、_サービス_ に関連付けられています。これは、事前定義されたアクセス制御リスト（ACL） _を持つ_AEM ユーザーグループを表します。
-_サービス_ は、AEM API へのアクセスレベルを制御するために使用されます。
+新しく追加された製品プロファイルは、_サービス_ に関連付けられています。これは、事前定義されたアクセス制御リスト（ACL） _を持つ_ AEM ユーザーグループを表します。 _サービス_ は、AEM API へのアクセスレベルを制御するために使用されます。
 
 また、製品プロファイルに関連付けられた _サービス_ を選択または選択解除して、アクセスレベルを増減することもできます。
 
@@ -81,9 +80,13 @@ _サービス_ は、AEM API へのアクセスレベルを制御するために
 
 ![ 製品プロファイルに関連付けられたサービスのレビュー ](./assets/setup/review-services-associated-with-product-profile.png)
 
-デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。 新しく追加された **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile に関連付けましょう。 この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的の認証を設定し、認証アカウントを製品プロファイルに関連付けることができます。
+デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。 新しく追加された **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile に関連付けましょう。 この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的のサーバー間認証を設定し、ADC プロジェクトの認証アカウント（次の手順で作成）を製品プロファイルに関連付けることができます。
 
 ![AEM Assets API Users Service と製品プロファイルの関連付け ](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
+
+>[!IMPORTANT]
+>
+>上記の手順は、AEM Assets API のサーバー間認証を有効にするために重要です。 この関連付けがないと、AEM Assets API をサーバー間認証方法と共に使用できません。
 
 ## Adobe Developer Console（ADC）プロジェクトの作成
 

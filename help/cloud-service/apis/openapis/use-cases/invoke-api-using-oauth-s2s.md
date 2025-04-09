@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1719'
 ht-degree: 4%
 
 ---
@@ -73,6 +73,11 @@ OAuth サーバー間認証は、ユーザーの操作なしで API アクセス
 ## ADC プロジェクトの設定
 
 ADC プロジェクトの設定手順が、[OpenAPI ベースのAEM API の設定 ](../setup.md) から _繰り返し_ されます。 これを繰り返して、Assets Author API を追加し、その認証方法を OAuth サーバー間として設定します。
+
+>[!TIP]
+>
+>[OpenAPI ベースのAEM API の設定 **記事から** AEM API アクセスの有効化 ](../setup.md#enable-aem-apis-access) 手順が完了していることを確認します。 これがないと、サーバー間認証オプションは使用できません。
+
 
 1. [Adobe Developer Console](https://developer.adobe.com/console/projects) から目的のプロジェクトを開きます。
 
