@@ -9,7 +9,7 @@ doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '352'
 ht-degree: 100%
 
