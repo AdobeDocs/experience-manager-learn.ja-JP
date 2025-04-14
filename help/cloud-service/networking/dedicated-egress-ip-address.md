@@ -11,10 +11,10 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1360'
-ht-degree: 100%
+source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
+workflow-type: tm+mt
+source-wordcount: '1370'
+ht-degree: 98%
 
 ---
 
@@ -226,7 +226,7 @@ Cloud Manager API を使用すると、専用エグレス IP アドレスを有�
 
 ### HTTP／HTTPS
 
-AEM から HTTP／HTTPS 接続を作成するときに、専用のエグレス IP アドレスを使用すると、HTTP／HTTPS 接続は専用のエグレス IP アドレスを使用して AEM から自動的にプロキシされます。 HTTP／HTTPS 接続をサポートするために、追加のコードや設定は必要ありません。
+AEM から HTTP／HTTPS 接続を作成するときに、専用のエグレス IP アドレスを使用すると、HTTP／HTTPS 接続は専用のエグレス IP アドレスを使用して AEM から自動的にプロキシされます。 専用のエグレス IP アドレス高度なネットワーク機能を設定する場合を除き、HTTP/HTTPS 接続をサポートするために追加のコードや設定は必要ありません。
 
 #### コードの例
 
