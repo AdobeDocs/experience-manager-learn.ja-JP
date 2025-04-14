@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
+source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 7%
@@ -35,7 +35,7 @@ AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API への
 1. AEM as a Cloud Service環境の最新化。
 1. AEM API アクセスを有効にします。
 1. Adobe Developer Console（ADC）プロジェクトを作成します。
-1. ADC プロジェクトの設定
+1. ADC プロジェクトを設定します。
 1. AEM インスタンスを設定して、ADC プロジェクト通信を有効にします。
 
 ## AEM as a Cloud Serviceの最新化{#modernization-of-aem-as-a-cloud-service-environment}
