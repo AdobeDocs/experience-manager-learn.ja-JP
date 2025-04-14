@@ -9,15 +9,14 @@ role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
 duration: 50
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: ht
+source-git-commit: ed8749f312dc5ad18e047163bcae28d6753b6f8c
+workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 100%
 
 ---
 
 # JSON スキーマに基づいてアダプティブフォームを作成する
-
 
 AEM Forms 6.3 リリースでは、JSON スキーマに基づいてアダプティブフォームを作成する機能が導入されました。JSON スキーマを使用してアダプティブフォームを作成する方法について詳しくは、この[記事](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=ja)を参照してください。
 
@@ -31,8 +30,6 @@ JSON スキーマに基づくアダプティブフォームを作成したら、
 >
 >JSON スキーマファイルの名前が適切に設定されていることを確認してください。 例えば、&lt;name>schema.json の形式で名前を付ける必要があります。そのため、スキーマファイルは mortgage.schema.json または credit.schema.json にすることができます。
 
-
 ![datastored](assets/datastored.gif)
-
 
 [アダプティブフォームの作成に使用できるサンプル JSON スキーマ。](assets/samplejsonschemas.zip)zip ファイルをダウンロードして展開し、JSON スキーマを取得します。
