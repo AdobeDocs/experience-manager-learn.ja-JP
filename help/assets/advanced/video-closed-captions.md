@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media でのビデオのクローズドキャプション
-description: クローズドキャプションは、ビデオファイルが Dynamic Media にアップロードされると自動生成されます。
+description: AI を使用してビデオのキャプションを作成する方法を説明します。 クローズドキャプションは、ビデオファイルが Dynamic Media にアップロードされると自動生成されます。
 version: Experience Manager as a Cloud Service
 feature: Dynamic Media
 role: User
@@ -10,10 +10,10 @@ duration: 233
 last-substantial-update: 2025-03-11T00:00:00Z
 jira: KT-15930
 exl-id: ffbe2da8-1ffe-4d61-a3fa-c76136933dc2
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '42'
-ht-degree: 100%
+source-git-commit: f5453865714eca0273a79f76e4654b889de82ab4
+workflow-type: tm+mt
+source-wordcount: '50'
+ht-degree: 84%
 
 ---
 
