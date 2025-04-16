@@ -13,9 +13,9 @@ thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
 source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '432'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -27,9 +27,9 @@ AEM as a Cloud Serviceの CDN で HTTP 応答のキャッシュを無効にす�
 
 ## 新しいデフォルトのキャッシュ動作
 
-AEM as a Cloud Service CDN での HTTP 応答のキャッシングは、接触チャネル `Cache-Control`、`Surrogate-Control`、`Expires` からの次の HTTP 応答ヘッダーによって制御されます。  `Cache-Control` に `private`、`no-cache` または `no-store` を含むオリジン応答はキャッシュされません。
+AEM as a Cloud Service CDN での HTTP 応答のキャッシュは、接触チャネルからの HTTP 応答ヘッダー `Cache-Control`、`Surrogate-Control` または `Expires` によって制御されます。`Cache-Control` に `private`、`no-cache` または `no-store` が含まれる接触チャネル応答はキャッシュされません。
 
-AEM プロジェクトアーキタイプベースのAEM プロジェクトがデプロイされた際の、AEM パブリッシュおよびオーサーの [ デフォルトのキャッシュ動作 ](./enable-caching.md#default-caching-behavior) を確認します。
+AEM プロジェクトアーキタイプベースの AEM プロジェクトがデプロイされたときの、AEM パブリッシュおよびオーサーでの[デフォルトのキャッシュ動作](./enable-caching.md#default-caching-behavior)を確認します。
 
 
 ## キャッシュを無効にする

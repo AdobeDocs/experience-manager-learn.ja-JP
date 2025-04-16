@@ -12,7 +12,7 @@ exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
 source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1531'
 ht-degree: 100%
 
@@ -261,7 +261,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
    AEM デプロイメントで必要とする外部サービスが HTTP／HTTPS __のみ__&#x200B;の場合は、`portForwards` 配列を空のままにします。これらのルールは非 HTTP／HTTPS リクエストにのみ必要なためです。
 
 
-&#x200B;2. 環境ごとに、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、VPN ルーティングルールが有効であることを検証します。
+2. 環境ごとに、Cloud Manager API の [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、VPN ルーティングルールが有効であることを検証します。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP リクエスト__
 
@@ -273,9 +273,9 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
        -H 'Content-Type: application/json'
    ```
 
-&#x200B;3. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。`enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるので、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
+3. 仮想プライベートネットワークのプロキシ設定は、Cloud Manager API の [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して更新できます。`enableEnvironmentAdvancedNetworkingConfiguration` は `PUT` 操作であるので、この操作を呼び出すたびにすべてのルールを提供する必要があることに注意してください。
 
-&#x200B;4. これで、カスタム AEM コードおよび設定で仮想プライベートネットワークエグレス設定を使用できるようになりました。
+4. これで、カスタム AEM コードおよび設定で仮想プライベートネットワークエグレス設定を使用できるようになりました。
 
 ## 仮想プライベートネットワーク経由での外部サービスへの接続
 
