@@ -8,10 +8,10 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: ht
-source-wordcount: '352'
-ht-degree: 100%
+source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
+workflow-type: tm+mt
+source-wordcount: '375'
+ht-degree: 93%
 
 ---
 
@@ -117,7 +117,7 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
 </tr>
 </table>
 
-## フレームワーク別のチュートリアル
+## チュートリアル
 
 使用されているテクノロジーに応じたチュートリアルを以下で参照してください。コンテキスト内オーサリングとエクスペリエンス管理のオプションを使用して、AEM が純粋なヘッドレスユースケースの先を行く方法を説明します。
 
@@ -137,6 +137,19 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <p>
   </td>
   <td>
+    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+      <img alt="React - ユニバーサルエディターを使用したコンテンツの編集" src="./assets/react-universal-editor.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+        <strong>React - ユニバーサルエディターを使用したコンテンツの編集 </strong>
+      </a>
+    </div>
+    <p>
+    <em> ユニバーサルエディターを使用して、React アプリケーションのコンテンツを編集します。</em>
+    <p>
+  </td>  
+  <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=ja">
     <img alt="React - リモートエディター" src="./assets/react-remote.png" />
     </a>
@@ -149,6 +162,8 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <em>リモートでホストされる React アプリケーションの一部をコンテキスト内で作成します。</em>
     </p>
   </td>
+</tr>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja">
       <img alt="React - SPA エディター" src="./assets/react-spa-editor.png" />
@@ -162,8 +177,6 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <em>AEM SPA エディターを使用して、React アプリの完全なエクスペリエンスを管理します。</em>
     <p>
   </td>
-</tr>
-<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
     <img alt="Andriod - コンテンツサービス" src="./assets/android.png" />
@@ -190,6 +203,5 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <em>開発者トークンとサービストークンを使用して認証する Node.js アプリを作成します。</em>
     <p>
   </td>
-  <td></td>
 </tr>
 </table>
