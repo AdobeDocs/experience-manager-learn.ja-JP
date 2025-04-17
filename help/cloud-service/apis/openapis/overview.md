@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1002'
 ht-degree: 2%
 
 ---
@@ -45,10 +45,6 @@ ht-degree: 2%
 
 今後のリリースでは、追加のユースケースをサポートするために、OpenAPI ベースのAEM API がさらに追加される予定です。
 
->[!AVAILABILITY]
->
->OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
-
 ## 認証のサポート{#authentication-support}
 
 OpenAPI ベースのAEM API は、次の付与タイプを含む、OAuth 2.0 認証をサポートしています。
@@ -71,6 +67,7 @@ OpenAPI ベースのAEM API は、次の付与タイプを含む、OAuth 2.0 認
 | **セキュリティに関する考慮事項** | 機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザー認証後、ユーザーには、バックエンド呼び出しを使用して独自の _一時的なアクセストークン_ が付与されます。 アクセストークンの認証コードを交換するために、機密性の高い資格情報（`client_id`、`client_secret`）をバックエンドシステムに安全に保存します。 | ユーザー認証後、ユーザーには、フロントエンド呼び出しを通じて独自の _一時的アクセストークン_ が付与されます。 フロントエンドアプリに保存すると安全ではないため、`client_secret` は使用しません。 アクセストークンの認証コードを交換するために PKCE に依存します。 |
 | **付与タイプ** | _client_credentials_ | _authorization_code_ | _authorization_code_ と **PKCE** |
 | **Adobe Developer Consoleの資格情報の種類** | OAuth サーバー間 | OAuth Web アプリ | OAuth 単一ページアプリ |
+| **チュートリアル** | [ サーバー間認証を使用した API の呼び出し ](./use-cases/invoke-api-using-oauth-s2s.md) | [Web アプリ認証を使用した API の呼び出し ](./use-cases/invoke-api-using-oauth-web-app.md) | [ シングルページアプリ認証を使用した API の呼び出し ](./use-cases/invoke-api-using-oauth-single-page-app.md) |
 
 ## Adobe API へのアクセスと関連概念{#accessing-adobe-apis-and-related-concepts}
 
