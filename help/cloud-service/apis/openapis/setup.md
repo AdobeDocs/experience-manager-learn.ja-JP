@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1274'
 ht-degree: 7%
 
 ---
@@ -23,12 +23,7 @@ ht-degree: 7%
 
 AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API へのアクセスを有効にする方法について説明します。
 
->[!AVAILABILITY]
->
->OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
-
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
-
 
 の高度な設定プロセスには、次の手順が含まれます。
 
@@ -151,14 +146,13 @@ ADC プロジェクトを作成したら、目的のAEM API を追加し、そ�
 
 ADC プロジェクトのクライアント ID をAEM インスタンスと通信できるようにするには、AEM インスタンスを設定する必要があります。
 
-それには、の `config.yaml` ファイルで API 設定を定義します。
-AEM プロジェクトをデプロイし、Cloud Managerで設定パイプラインを使用してデプロイする。
+それには、API 設定を YAML ファイルで定義し、Cloud Managerの設定パイプラインを使用してデプロイします。 YAML ファイルには、AEM インスタンスと通信できる ADC プロジェクトの許可されたクライアント ID が定義されています。
 
-1. AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを見つけるか作成します。
+1. AEM プロジェクトで、`config` フォルダーから `api.yaml` ファイルを見つけるか作成します。
 
-   ![YAML 設定ファイルを見つける](./assets/setup/locate-config-yaml.png)
+   ![API YAML を見つけます ](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
-1. 次の設定を `config.yaml` ファイルに追加します。
+1. 次の設定を `api.yaml` ファイルに追加します。
 
    ```yaml
    kind: "API"
@@ -179,9 +173,9 @@ AEM プロジェクトをデプロイし、Cloud Managerで設定パイプライ
 
 1. 設定変更をコミットし、Cloud Manager パイプラインが接続されているリモート Git リポジトリに変更をプッシュします。
 
-1. Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`config.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
+1. Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`api.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
 
-   ![config.yaml のデプロイ](./assets/setup/config-pipeline.png)
+   ![YAML のデプロイ ](./assets/setup/config-pipeline.png)
 
 ## 次の手順
 

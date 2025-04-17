@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1687'
 ht-degree: 4%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 4%
 _OAuth サーバー間_ 認証を使用して、カスタムアプリケーションからAEM as a Cloud Serviceで OpenAPI ベースのAEM API を呼び出す方法について説明します。
 
 OAuth サーバー間認証は、ユーザーの操作なしで API アクセスが必要なバックエンドサービスに最適です。 クライアントアプリケーションの認証には、OAuth 2.0 _client_credentials_ 付与タイプを使用します。
-
->[!AVAILABILITY]
->
->OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
 
 ## 学習内容{#what-you-learn}
 

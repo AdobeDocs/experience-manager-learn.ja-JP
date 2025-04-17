@@ -12,10 +12,10 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 3d42029f193f293631585314983956618d707244
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2113'
-ht-degree: 2%
+source-wordcount: '2081'
+ht-degree: 3%
 
 ---
 
@@ -26,10 +26,6 @@ ht-degree: 2%
 OAuth シングルページアプリ認証は、ブラウザーで実行されるJavaScript ベースのアプリケーションに最適です。 バックエンドサーバーがない場合も、ユーザーの代わりにAEM API とやり取りするためにアクセストークンを取得する必要がある場合も同様です。
 
 PKCE フローは、OAuth 2.0 _authorization_code_ 付与タイプを拡張し、認証コードの傍受を防いでセキュリティを強化します。 詳しくは、[OAuth サーバー間資格情報と web アプリ間資格情報とシングルページアプリ資格情報の違い ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) を参照してください。
-
->[!AVAILABILITY]
->
->OpenAPI ベースのAEM API は、早期アクセスプログラムの一部として利用できます。 これらにアクセスすることに関心がある場合は、ユースケースの説明を記載した電子メール ](mailto:aem-apis@adobe.com)0}aem-apis@adobe.com} を送信することをお勧めします。[
 
 ## 学習内容{#what-you-learn}
 

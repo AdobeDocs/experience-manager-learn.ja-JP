@@ -12,10 +12,10 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1517'
-ht-degree: 100%
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+workflow-type: tm+mt
+source-wordcount: '1518'
+ht-degree: 99%
 
 ---
 
@@ -106,13 +106,13 @@ AEM Assets イベントを受け取り、前の手順で作成した Adobe I/O R
 
 AEM インスタンスと通信する ADC プロジェクトの OAuth サーバー間資格情報クライアント ID を有効にするには、AEM インスタンスを設定する必要があります。
 
-これを行うには、AEM プロジェクトの `config.yaml`ファイルで設定を定義します。 次に、Cloud Manager の設定パイプラインを使用して `config.yaml` ファイルをデプロイします。
+これを行うには、AEM プロジェクトの `api.yaml`ファイルで設定を定義します。 次に、Cloud Manager の設定パイプラインを使用して `api.yaml` ファイルをデプロイします。
 
-- AEM プロジェクトで、`config` フォルダーから `config.yaml` ファイルを見つけるか作成します。
+- AEM プロジェクトで、`config` フォルダーから `api.yaml` ファイルを見つけるか作成します。
 
-  ![YAML 設定ファイルを見つける](../assets/examples/assets-pim-integration/locate-config-yaml.png)
+  ![API YAML を見つけます ](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
-- 次の設定を `config.yaml` ファイルに追加します。
+- 次の設定を `api.yaml` ファイルに追加します。
 
   ```yaml
   kind: "API"
@@ -134,9 +134,9 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
 
 - 設定の変更を Git リポジトリにコミットし、変更をリモートリポジトリにプッシュします。
 
-- Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`config.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
+- Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`api.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
 
-  ![config.yaml のデプロイ](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![API YAML のデプロイ ](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### ランタイムアクションの開発
 
