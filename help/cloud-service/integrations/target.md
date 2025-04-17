@@ -14,10 +14,10 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
 duration: 1549
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: adc2f352544b4718522073642c6bf971b3600616
+workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -42,9 +42,7 @@ AEM コンテンツフラグメントを Adobe Target に書き出すことで A
 
 AEM と Adobe Target 間の認証を容易にする Adobe IMS 設定。
 
-Adobe IMS 設定の作成方法に関する詳しい手順については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html?lang=ja)を参照してください。
-
->[!VIDEO](https://video.tv.adobe.com/v/3416495/?quality=12&learn=on)
+Adobe IMS 設定の作成方法に関する詳しい手順については、[ドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service)を参照してください。
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
