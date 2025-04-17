@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '450'
-ht-degree: 100%
+source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 + [概要](overview.md)
 
-+ ビデオプレイリスト{#video-playlists}
++ ビデオ再生リスト{#video-playlists}
    + [アセットビュー](playlists/assets-view.md)
    + [管理ビュー](playlists/admin-view.md)
 
@@ -86,8 +86,10 @@ ht-degree: 100%
    + [Adobe Express を使用した画像バリアント](./content-hub/image-variants.md)
    + [コレクション](./content-hub/collections.md)
    + [共有](./content-hub/share.md)
+   + ユースケース{#use-cases}
+      + [アセットの管理](./content-hub/use-cases/manage-assets.md)
 
-+ Edge 配信サービス{#edge-delivery-services}
++ Edge Delivery Services{#edge-delivery-services}
    + [Sidekick プラグイン](./edge-delivery-services/sidekick-plugin.md)
 
 + Adobe GenStudio{#adobe-genstudio}
@@ -109,7 +111,7 @@ ht-degree: 100%
       + [アセット共有 Commons のテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons アセットキット](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ クリエイティブワークフロー{#creative-workflows}
++ Creative ワークフロー{#creative-workflows}
    + [Adobe Express の統合](./creative-workflows/adobe-express.md)
    + [Adobe Express と AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
@@ -155,7 +157,7 @@ ht-degree: 100%
       + [Adobe Analytics でのビューア](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + AEM Sites での使用 {#dm-with-aem-sites}
+   + AEM Sitesでの使用 {#dm-with-aem-sites}
       + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
@@ -175,7 +177,7 @@ ht-degree: 100%
       + [Dynamic Media Classic アプリでのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
-+ Workfront の統合{#workfront}
++ Workfrontの統合{#workfront}
    + 拡張コネクタ{#enhanced-connector}
       + [強化機能コネクタの基本](./workfront/enhanced-connector/basics.md)
       + [プロジェクトフォルダー](./workfront/enhanced-connector/project-folders.md)
