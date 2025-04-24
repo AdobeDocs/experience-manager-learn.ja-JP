@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2423'
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
+workflow-type: tm+mt
+source-wordcount: '2408'
 ht-degree: 100%
 
 ---
@@ -179,7 +179,6 @@ IDE を使用する場合は、Maven プロファイルタブで `classic` に�
 
 * **Visual Studio Code** の&#x200B;[**ダウンロード**](https://code.visualstudio.com/Download)
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - JCR コンテンツ用の FTP に似たツール
-* **[aemfed](https://aemfed.io/)** - AEM フロントエンドのワークフローを迅速化します
 * **[AEM 同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - コミュニティでサポートされている&#42; Visual Studio Code 用の拡張機能
 * **[WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)** - このビデオで示す AEM プロジェクトの例。
 
@@ -189,8 +188,7 @@ IDE を使用する場合は、Maven プロファイルタブで `classic` に�
 * 00:53 - Maven を使用したソースコードのビルドとデプロイ
 * 04:03 - Repo コマンドラインツールを使用したコード変更のプッシュ
 * 08:29 - Repo コマンドラインツールを使用したコード変更のプル
-* 10:40 - aemfed ツールを使用したコード変更のプッシュ
-* 14:24 - トラブルシューティング、クライアントライブラリの再ビルド
+* 10:32 - トラブルシューティング、クライアントライブラリの再ビルド
 
 ### [!DNL CRXDE Lite]
 

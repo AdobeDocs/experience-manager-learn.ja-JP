@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2554'
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
+workflow-type: tm+mt
+source-wordcount: '2432'
 ht-degree: 100%
 
 ---
@@ -394,14 +394,6 @@ AEM プロジェクトアーキタイプは、この統合を自動的に設定�
    > 静的マークアップの画像ソースは、ローカル AEM インスタンス上のライブ画像コンポーネントを指しています。 画像のパスが変更された場合、AEM が起動されていない場合、ブラウザーがローカルの AEM インスタンスにログインしていない場合は、画像が壊れて表示されます。 外部リソースに渡す場合は、画像を静的な参照で置き換えることもできます。
 
 1. コマンドラインに `CTRL+C` と入力すると、webpack サーバーを&#x200B;**停止**&#x200B;できます。
-
-### aemfed {#develop-aemfed}
-
-**[aemfed](https://aemfed.io/)** は、フロントエンド開発の高速化に使用できるオープンソースのコマンドラインツールです。 [aemsync](https://www.npmjs.com/package/aemsync)、[Browsersync](https://browsersync.io/)、[Sling ログトレーサー](https://sling.apache.org/documentation/bundles/log-tracers.html)を備えています。
-
-大まかに言うと、`aemfed` は **ui.apps** モジュール内のファイルの変更をリッスンし、それらを実行中の AEM インスタンスに直接自動的に同期するように設計されています。変更に基づき、ローカルブラウザーが自動更新されるので、フロントエンド開発がスピードアップします。aemfed は Sling ログトレーサーとも連携し、サーバーサイドのすべてのエラーを直接ターミナルに自動表示します。
-
-**ui.apps** モジュール内で多くの作業を行い、HTL スクリプトを修正し、カスタムコンポーネントを作成する場合、**aemfed** は強力なツールとして使用できます。[完全なドキュメントについては、こちら](https://github.com/abmaonline/aemfed)を参照してください。
 
 ### クライアントサイドライブラリのデバッグ {#debugging-clientlibs}
 
