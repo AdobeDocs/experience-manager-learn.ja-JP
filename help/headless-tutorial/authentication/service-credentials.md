@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+workflow-type: tm+mt
 source-wordcount: '1963'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 サービス資格情報が読み取られると、それらを使用して JWT が生成され、JWT がアクセストークン用の Adobe IMS API と交換されます。その後、このアクセストークンを使用して、AEM as a Cloud Service にアクセスできます。
 
-このサンプルアプリケーションは Node.js ベースなので、[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュールを使用すると、JWT の生成と Adobe IMS との交換がスムーズになります。アプリケーションが別の言語で開発されている場合は、[適切なコードサンプル](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)を参照し、他のプログラミング言語を使用して Adobe IMS に対する HTTP リクエストを作成する方法を確認してください。
+このサンプルアプリケーションは Node.js ベースなので、[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュールを使用すると、JWT の生成と Adobe IMS との交換がスムーズになります。アプリケーションが別の言語で開発されている場合は、[適切なコードサンプル](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)を参照し、他のプログラミング言語を使用して Adobe IMS に対する HTTP リクエストを作成する方法を確認してください。
 
 1. `getAccessToken(..)` を更新して JSON ファイルの内容を調べ、ローカル開発のアクセストークンかサービス資格情報かを判断します。その簡単な方法は、`.accessToken` プロパティが存在するかどうかを確認することです。このプロパティはローカル開発のアクセストークン JSON に対してのみ存在します。
 

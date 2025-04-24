@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 2%
@@ -51,9 +51,9 @@ OpenAPI ベースのAEM API は、次の付与タイプを含む、OAuth 2.0 認
 
 - **OAuth サーバー間資格情報**: ユーザーの操作なしで API へのアクセスが必要なバックエンドサービスに最適です。 _client_credentials_ 付与タイプを使用して、サーバーレベルで安全なアクセス管理を有効にします。 詳しくは、[OAuth サーバー間資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential) を参照してください。
 
-- **OAuth web アプリ資格情報**：ユーザーの代わりにAEM API にアクセスするフロントエンドおよび _バックエンド_ コンポーネントを持つ web アプリケーションに適しています。 _authorization_code_ 付与タイプを使用し、バックエンドサーバーが秘密鍵とトークンを安全に管理します。 詳しくは、[OAuth Web アプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential) を参照してください。
+- **OAuth web アプリ資格情報**：ユーザーの代わりにAEM API にアクセスするフロントエンドおよび _バックエンド_ コンポーネントを持つ web アプリケーションに適しています。 _authorization_code_ 付与タイプを使用し、バックエンドサーバーが秘密鍵とトークンを安全に管理します。 詳しくは、[OAuth Web アプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) を参照してください。
 
-- **OAuth 単一ページアプリ資格情報**：ブラウザーで実行される SPA 用に設計されています。バックエンドサーバーを使用せずに、ユーザーの代わりに API にアクセスする必要があります。 _authorization_code_ 付与タイプを使用し、PKCE （Proof Key for Code Exchange）を使用したクライアント側のセキュリティメカニズムに依存して、認証コードフローを保護します。 詳しくは、[OAuth 単一ページアプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential) を参照してください。
+- **OAuth 単一ページアプリ資格情報**：ブラウザーで実行される SPA 用に設計されています。バックエンドサーバーを使用せずに、ユーザーの代わりに API にアクセスする必要があります。 _authorization_code_ 付与タイプを使用し、PKCE （Proof Key for Code Exchange）を使用したクライアント側のセキュリティメカニズムに依存して、認証コードフローを保護します。 詳しくは、[OAuth 単一ページアプリ資格情報 ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) を参照してください。
 
 ## OAuth サーバー間と web アプリとシングルページアプリの資格情報の違い{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
