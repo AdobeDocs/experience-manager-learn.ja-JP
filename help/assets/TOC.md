@@ -8,9 +8,9 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '454'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 92%
 
 + [概要](overview.md)
 
-+ ビデオ再生リスト{#video-playlists}
++ ビデオプレイリスト{#video-playlists}
    + [アセットビュー](playlists/assets-view.md)
    + [管理ビュー](playlists/admin-view.md)
 
@@ -111,14 +111,14 @@ ht-degree: 92%
       + [アセット共有 Commons のテーマ設定](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons アセットキット](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Creative ワークフロー{#creative-workflows}
++ クリエイティブワークフロー{#creative-workflows}
    + [Adobe Express の統合](./creative-workflows/adobe-express.md)
    + [Adobe Express と AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM デスクトップアプリ](./creative-workflows/aem-desktop-app.md)
-   + [Adobe アセットリンク](./creative-workflows/adobe-asset-link.md)
+   + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe アセットリンク{#adobe-asset-link}
++ Adobe Asset Link{#adobe-asset-link}
    + [設定](./adobe-asset-link/setup.md)
    + [Adobe Asset Link へのアクセス](./adobe-asset-link/launch-adobe-asset-link.md)
    + [パネルの概要](./adobe-asset-link/panel-overview.md)
@@ -157,7 +157,7 @@ ht-degree: 92%
       + [Adobe Analytics でのビューア](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + AEM Sitesでの使用 {#dm-with-aem-sites}
+   + AEM Sites での使用 {#dm-with-aem-sites}
       + [エクスペリエンスフラグメント](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media コアコンポーネント](dynamic-media/dynamic-media-core-components.md)
 
@@ -177,7 +177,7 @@ ht-degree: 92%
       + [Dynamic Media Classic アプリでのアセットのダウンロード](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
-+ Workfrontの統合{#workfront}
++ Workfront の統合{#workfront}
    + 拡張コネクタ{#enhanced-connector}
       + [強化機能コネクタの基本](./workfront/enhanced-connector/basics.md)
       + [プロジェクトフォルダー](./workfront/enhanced-connector/project-folders.md)

@@ -9,9 +9,9 @@ doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '375'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -137,16 +137,16 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
-      <img alt="React - ユニバーサルエディターを使用したコンテンツの編集" src="./assets/react-universal-editor.png" />
+    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+      <img alt="React - ユニバーサルエディターを通じたコンテンツの編集" src="./assets/react-universal-editor.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
-        <strong>React - ユニバーサルエディターを使用したコンテンツの編集 </strong>
+      <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+        <strong>React - ユニバーサルエディターを通じたコンテンツの編集</strong>
       </a>
     </div>
     <p>
-    <em> ユニバーサルエディターを使用して、React アプリケーションのコンテンツを編集します。</em>
+    <em>ユニバーサルエディターを使用して、React アプリケーションのコンテンツを編集します。</em>
     <p>
   </td>  
   <td>

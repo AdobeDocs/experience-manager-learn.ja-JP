@@ -13,9 +13,9 @@ doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
 source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ AEM の URL リダイレクトソリューションは次のとおりです。
 
 このオプションは、AEM as a Cloud Service のお客様のみが利用できます。
 
-[AEM 管理の CDN](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) には、Edge レベルのリダイレクトソリューションが提供されており、オリジンとの往復時間を短縮できます。[ サーバーサイドのリダイレクト ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors) 機能を使用すると、AEM プロジェクトコードにリダイレクトルールを設定し、[Config パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager) を使用してデプロイできます。 CDN 設定ファイル（`cdn.yaml`）のサイズは 100 KB 以下にする必要があります。
+[AEM 管理の CDN](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) には、Edge レベルのリダイレクトソリューションが提供されており、オリジンとの往復時間を短縮できます。[サーバーサイドのリダイレクト](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors)機能を使用すると、AEM プロジェクトコードにリダイレクトルールを設定し、[Config パイプライン](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)を使用してデプロイできます。CDN 設定ファイル（`cdn.yaml`）のサイズは 100 KB 以下にする必要があります。
 
 Edge または CDN レベルでリダイレクトを管理すると、パフォーマンスが向上します。
 

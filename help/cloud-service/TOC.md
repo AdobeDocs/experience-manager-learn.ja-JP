@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
 source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1385'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -17,20 +17,20 @@ ht-degree: 87%
 # Adobe Experience Manager as a Cloud Service チュートリアル {#cloud-service}
 
 + [概要](./overview.md)
-+ AEM体験版 {#aem-trials}
++ AEM 体験版 {#aem-trials}
    + [画像](./aem-trials/images.md)
-+ Playlists{#playlists}
++ プレイリスト{#playlists}
    + [AEM 開発](./playlists/development.md)
 + AEM as a Cloud Service の概要{#introduction}
    + [AEM as a Cloud Service とは](./introduction/what-is-aem-as-a-cloud-service.md)
    + [アーキテクチャ](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 戦略とソートリーダーシップ{#strategy}
-      + [Experience Manager - ガバナンスおよびスタッフ配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [Experience Manager - ガバナンスおよび人員配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [AEM ヘッドレスと Target](./integrations/target.md)
-+ 基盤技術 {#underlying-technology}
++ 基盤となる技術 {#underlying-technology}
    + [AEM アーキテクチャ](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java コンテンツリポジトリー](./underlying-technology/introduction-jcr.md)
@@ -38,7 +38,7 @@ ht-degree: 87%
    + [オーサーおよびパブリッシュサービス](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick プラグイン ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=ja){target=_blank}
+   + [AEM Assets Sidekick プラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=ja){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
@@ -46,9 +46,9 @@ ht-degree: 87%
    + [CI／CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
    + [CI／CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
-   + [ カスタムドメイン名 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [カスタムドメイン名](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + [コンテンツの復元](./cloud-manager/content-restore.md)
-   + 開発オペレーション{#devops}
+   + DevOps{#devops}
       + [コードのデプロイ](./cloud-manager/devops/deploy-code.md)
       + [プロジェクトの結合](./cloud-manager/devops/merge-projects.md)
       + [パイプラインの設定](./cloud-manager/devops/configure-pipelines.md)
@@ -114,7 +114,7 @@ ht-degree: 87%
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [AEM オーサーのリーダーインスタンスでのジョブの実行](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
-   + 迅速な開発環境{#rde}
+   + 高速開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
       + [使用方法](./developing/rde/how-to-use.md)
@@ -125,8 +125,8 @@ ht-degree: 87%
          + [ローカル開発設定](./developing/universal-editor/react-app/local-development-setup.md)
          + [React アプリの実装](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
-+ AEMのデバッグ{#debugging}
-   + AEM SDKのデバッグ{#debugging-aem-sdk}
++ AEM のデバッグ{#debugging}
+   + AEM SDK のデバッグ{#debugging-aem-sdk}
       + [概要](./debugging/aem-sdk-local-quickstart/overview.md)
       + [ログ](./debugging/aem-sdk-local-quickstart/logs.md)
       + [リモートデバッグ](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
@@ -143,7 +143,7 @@ ht-degree: 87%
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
-   + OpenAPIs{#openapis}
+   + OpenAPI{#openapis}
       + [概要](./apis/openapis/overview.md)
       + [設定方法](./apis/openapis/setup.md)
       + [サーバー間認証](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
@@ -169,7 +169,7 @@ ht-degree: 87%
       + [キャッシュを有効にする](./caching/how-to/enable-caching.md)
       + [キャッシュを無効にする](./caching/how-to/disable-caching.md)
       + [キャッシュのパージ](./caching/how-to/purge-cache.md)
-+ AEMへのアクセス{#accessing}
++ AEM へのアクセス{#accessing}
    + [概要](./accessing/overview.md)
    + [Adobe IMS ユーザー](./accessing/adobe-ims-users.md)
    + [Adobe IMS ユーザーグループ](./accessing/adobe-ims-user-groups.md)
@@ -240,7 +240,7 @@ ht-degree: 87%
       + [Cloud Acceleration Manager の使用](./migration/cloud-acceleration-manager/using.md)
 + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
 + Forms{#forms}
-   + Forms as a Cloud Service向けの開発{#developing-for-cloud-service}
+   + Forms as a Cloud Service 向けの開発{#developing-for-cloud-service}
       + [1 - はじめに](./forms/developing-for-cloud-service/getting-started.md)
       + [2 - IntelliJ のインストール](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 - Git の設定](./forms/developing-for-cloud-service/setup-git.md)
@@ -270,7 +270,7 @@ ht-degree: 87%
       + [1 - はじめに](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - カスタム送信サービスの作成](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - 応答の表示](./forms/custom-submit-headless-forms/handle-response-react-app.md)
-   + 住所ブロックコンポーネントの作成{#create-address-block}
+   + アドレスブロックコンポーネントの作成{#create-address-block}
       + [1 - はじめに](./forms/create-address-block-component/introduction.md)
       + [2 - 設定](./forms/create-address-block-component/set-up.md)
       + [3 - コンポーネントの作成](./forms/create-address-block-component/creating-address-component.md)
@@ -279,7 +279,7 @@ ht-degree: 87%
       + [1 - はじめに](./forms/clickable-image-component/introduction.md)
       + [2 - コンポーネントの作成](./forms/clickable-image-component/create-component.md)
       + [3 - クリックイベントの処理](./forms/clickable-image-component/handle-click-event.md)
-   + AEM Formsと Analytics{#forms-and-analytics}
+   + AEM Forms と Analytics{#forms-and-analytics}
       + [はじめに](./forms/form-data-analytics/introduction.md)
       + [データ要素の作成](./forms/form-data-analytics/data-elements.md)
       + [ルールの作成](./forms/form-data-analytics/rules.md)
@@ -300,7 +300,7 @@ ht-degree: 87%
       + [2. フォームの作成](./forms/using-vertical-tabs/create-af.md)
       + [3. ナビゲーション](./forms/using-vertical-tabs/navigation.md)
       + [4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
-   + Output および forms サービスの使用{#forms-cs-output-and-forms-service}
+   + Output と Forms サービスの使用{#forms-cs-output-and-forms-service}
       + [PDF の生成](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
       + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
@@ -322,7 +322,7 @@ ht-degree: 87%
       + [USC バッチ設定の作成](./forms/formscs-batch-api/configure-usc-batch.md)
       + [バッチ設定の作成](./forms/formscs-batch-api/create-batch-config.md)
       + [バッチの実行](./forms/formscs-batch-api/execute-batch-generate-documents.md)
-   + Forms CS でのPDF操作{#forms-cs-assembler}
+   + Forms CS での PDF 操作{#forms-cs-assembler}
       + [はじめに](./forms/forms-cs-assembler/introduction.md)
       + [サービス資格情報の作成](./forms/forms-cs-assembler/service-credentials.md)
       + [JWT トークンの作成](./forms/forms-cs-assembler/create-jwt.md)
@@ -331,7 +331,7 @@ ht-degree: 87%
       + [PDF/A ユーティリティ](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [ソリューションのテスト](./forms/forms-cs-assembler/test.md)
       + [課題](./forms/forms-cs-assembler/challenge.md)
-   + Marketoとの統合{#froms-cs-with-marketo}
+   + Marketo との統合{#froms-cs-with-marketo}
       + [はじめに](./forms/forms-cs-with-marketo/part1.md)
       + [データソースの作成](./forms/forms-cs-with-marketo/part2.md)
       + [フォームデータモデルの作成](./forms/forms-cs-with-marketo/part3.md)
@@ -341,7 +341,7 @@ ht-degree: 87%
       + [カスタム OSGi 設定の作成](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [静的タグの作成](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [カスタム送信の作成](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
-   + コアコンポーネントベースのフォームに事前入力{#prefill-core-component-based-form}
+   + コアコンポーネントベースのフォームの事前入力{#prefill-core-component-based-form}
       + [はじめに](./forms/prefill-core-component-form/introduction.md)
       + [事前入力サービスの記述](./forms/prefill-core-component-form/pre-fill-service.md)
       + [ソリューションのテスト](./forms/prefill-core-component-form/test-solution.md)
@@ -364,7 +364,7 @@ ht-degree: 87%
       + [ワークフローストレージの外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [ワークフローモデルの作成](./forms/create-aem-workflow/create-workflow.md)
       + [ワークフローのトリガー](./forms/create-aem-workflow/configure-af.md)
-   + AEM FormsのAcrobat Sign{#forms-and-sign}
+   + Acrobat Sign と AEM Forms の連携{#forms-and-sign}
       + [はじめに](./forms/forms-and-sign/introduction.md)
       + [Acrobat Sign API アプリケーション](./forms/forms-and-sign/create-sign-api-application.md)
       + [Acrobat Sign クラウド設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
@@ -375,12 +375,12 @@ ht-degree: 87%
       + [送信されたフォームデータの解析](./forms/forms-cs-and-power-automate/send-email-notification.md)
       + [メール添付ファイルとしての DoR の送信](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [送信されたデータからのフォーム添付ファイルの抽出](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
-   + Microsoft Dynamicsとの統合{#formscs-dynamics-crm}
+   + Microsoft Dynamics との統合{#formscs-dynamics-crm}
       + [Dynamics アプリケーションの作成](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [データソースの設定](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
       + [フォームデータモデルの作成](./forms/formscs-dynamics-crm/create-form-data-model.md)
       + [アダプティブフォームの作成](./forms/formscs-dynamics-crm/create-adaptive-form.md)
-   + Salesforceとの統合{#integrate-with-salesforce}
+   + Salesforce との統合{#integrate-with-salesforce}
       + [はじめに](./forms/integrate-with-salesforce/introduction.md)
       + [接続アプリケーションを作成](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Swagger ファイルの作成](./forms/integrate-with-salesforce/describe-rest-api.md)
@@ -388,12 +388,12 @@ ht-degree: 87%
       + [フォームデータモデルの作成](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [フォーム送信のテスト](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [クリックイベントのテスト](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + フォームの送信データを 1 つのドライブと SharePoint に保存{#one-drive}
+   + OneDrive と SharePoint にフォーム送信を保存{#one-drive}
       + [フォームデータを OneDrive に保存](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [フォームデータを SharePoint に保存](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [SharePoint リストのデータを使用してフォームに事前入力する](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [ワークフローを使用して SharePoint リストにデータを挿入](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
-+ Asset Computeの拡張性{#asset-compute}
++ Asset Compute の拡張性{#asset-compute}
    + [概要](./asset-compute/overview.md)
    + 設定{#set-up}
       + [アカウントとサービスのプロビジョニング](./asset-compute/set-up/accounts-and-services.md)
@@ -422,7 +422,7 @@ ht-degree: 87%
    + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja){target=_blank}
 + エキスパートリソース {#expert-resources}
-   + AEMチャンピオン {#aem-champions}
+   + AEM チャンピオン {#aem-champions}
       + [Cloud Manager オンボーディングプレイブック](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager 環境タイプ](./expert-resources/aem-champions/environment-types.md)
       + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
