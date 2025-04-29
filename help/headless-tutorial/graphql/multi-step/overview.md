@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
-source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
-workflow-type: ht
-source-wordcount: '266'
-ht-degree: 100%
+source-git-commit: 888b00396f1d5d0b2dcb6895affdadf2907162fa
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 91%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ### AEM 環境
 
-このチュートリアルを完了するには、AEM as a Cloud Service 環境に AEM 管理者としてアクセスできることをお勧めします。AEM as a Cloud Service 環境にアクセスできない場合は、[AEM ヘッドレス体験版に新規登録](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=ja)して AEM のヘッドレス機能を調べてください。
+このチュートリアルを完了するには、AEM as a Cloud Service環境へのAEM管理者アクセス権を持つことをお勧めします。
 
 ## それでは、始めましょう。
 
