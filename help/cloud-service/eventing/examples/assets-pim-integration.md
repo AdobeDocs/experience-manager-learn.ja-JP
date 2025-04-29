@@ -110,7 +110,7 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
 
 - AEM プロジェクトで、`config` フォルダーから `api.yaml` ファイルを見つけるか作成します。
 
-  ![API YAML を見つけます ](../assets/examples/assets-pim-integration/locate-api-yaml.png)
+  ![API YAML を見つける](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
 - 次の設定を `api.yaml` ファイルに追加します。
 
@@ -136,7 +136,7 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
 
 - Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`api.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
 
-  ![API YAML のデプロイ ](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![API YAML をデプロイ](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### ランタイムアクションの開発
 
