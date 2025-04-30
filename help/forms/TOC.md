@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms のチュートリアル
 sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2101'
-ht-degree: 100%
+source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
+workflow-type: tm+mt
+source-wordcount: '2104'
+ht-degree: 93%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 100%
    + [HTML5 Forms の事前入力](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Salesforce を使用したフォームデータモデル](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [選択コンポーネントへの項目の動的な追加](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ ChatBot で PDF フォームへの入力{#chatbot-and-aem-forms}
++ PDF フォームへの ChatBot の入力{#chatbot-and-aem-forms}
    + [1 - はじめに](chatbot-and-aem-forms/introduction.md)
    + [2 - ChatBot データの解析](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 - PDF の作成](chatbot-and-aem-forms/merge-data-with-template.md)
@@ -138,7 +138,7 @@ ht-degree: 100%
    + [2 - Zip フォームの添付ファイル](zipping-form-attachments/custom-process-step.md)
    + [3 - メールフォームの添付ファイル](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - ソリューションのテスト](zipping-form-attachments/test.md)
-+ データと添付ファイルをフォームに事前入力する{#prefill-form-with-data-attachments}
++ フォームへのデータと添付ファイルの事前入力{#prefill-form-with-data-attachments}
    + [1 - はじめに](prefill-form-with-data-attachments/introduction.md)
    + [2 - カスタム送信の作成](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 - OSGi 設定の作成](prefill-form-with-data-attachments/create-osgi-configuration.md)
@@ -166,7 +166,7 @@ ht-degree: 100%
 + HTML5 Forms{#html5-forms}
    + [HTML5 フォームの作成](html5-forms/create-html5-form.md)
    + [HTML5 フォーム送信の処理](html5-forms/handle-html5-form-submission.md)
-+ AEM Forms と Acrobat Sign{#forms-and-sign}
++ AEM FormsとAcrobat Sign{#forms-and-sign}
    + [はじめに](aem-forms-and-adobe-sign/introduction.md)
    + [SSL の設定](aem-forms-and-adobe-sign/set-up-ssl.md)
    + [Acrobat Sign API アプリケーションの作成](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
@@ -180,7 +180,7 @@ ht-degree: 100%
    + [変換後のアダプティブフォームを設定する](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Acrobat Sign での XDP テンプレートの使用](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
    + [Acrobat Sign ヘルパーメソッドの使用](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
-+ 複数フォームへの署名{#sign-multiple-documents}
++ 複数のFormsに署名{#sign-multiple-documents}
    + [1 - はじめに](sign-multiple-documents/introduction.md)
    + [2 - データソースの設定](sign-multiple-documents/configure-data-source.md)
    + [3 - OSGi サービスの作成](sign-multiple-documents/create-osgi-service.md)
@@ -192,7 +192,7 @@ ht-degree: 100%
    + [9 - 初期フォームの作成](sign-multiple-documents/create-initial-form.md)
    + [10 - 署名用フォームの作成](sign-multiple-documents/create-forms-for-signing.md)
    + [11 - ソリューションのテスト](sign-multiple-documents/testing-and-trouble-shooting.md)
-+ カスタムワークフローの手順{#custom-workflow-steps}
++ カスタムワークフローステップ{#custom-workflow-steps}
    + [xml ドキュメントからのノードの抽出](custom-workflow-steps/extract-xml-node.md)
    + [ファイルシステムへのドキュメントの保存](custom-workflow-steps/write-payload-document.md)
    + [送信したデータを文字列変数に保存](custom-workflow-steps/save-submitted-data-in-string-variable.md)
@@ -222,14 +222,14 @@ ht-degree: 100%
    + [クライアントライブラリ](storing-retrieving-form-data/part4.md)
    + [アダプティブフォームテンプレート](storing-retrieving-form-data/part5.md)
    + [サンプルアセットのデプロイ](storing-retrieving-form-data/part6.md)
-+ PDF フォーム送信での AEM ワークフローのトリガー{#offline-mobile-form-submission}
++ PDF フォーム送信時のAEM ワークフローのトリガー{#offline-mobile-form-submission}
    + [第 1 部](offline-mobile-form-submission/introduction.md)
    + [第 2 部](offline-mobile-form-submission/custom-profile.md)
    + [第 3 部](offline-mobile-form-submission/handle-form-submission.md)
    + [第 4 部](offline-mobile-form-submission/author-servlet.md)
    + [第 5 部](offline-mobile-form-submission/review-workflow.md)
    + [第 6 部](offline-mobile-form-submission/deploy-assets.md)
-+ モバイルフォーム送信での AEM ワークフローのトリガー{#trigger-aem-workflow-on-mobile-form-submission}
++ モバイルフォーム送信時のAEMのトリガーワークフロー{#trigger-aem-workflow-on-mobile-form-submission}
    + [第 1 部](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
    + [第 2 部](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
    + [第 3 部](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
@@ -242,7 +242,7 @@ ht-degree: 100%
    + [クエリインターフェイスの作成](query-form-submissions/part3.md)
    + [事前入力サービスの記述](query-form-submissions/part4.md)
    + [サンプルのデプロイ](query-form-submissions/part5.md)
-+ フォームポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
++ Forms ポータルでのカスタムアセットタイプのリスト{#listing-custom-asset-types}
    + [第 1 部 - カスタムアセットタイプの登録](listing-custom-asset-types/part1.md)
    + [第 2 部 - カスタムテンプレートの作成](listing-custom-asset-types/part2.md)
 + AEM Forms と Marketo{#aem-forms-with-marketo}
@@ -251,7 +251,7 @@ ht-degree: 100%
    + [第 3 部 - フォームデータモデル](aem-forms-with-marketo/part3.md)
    + [第 4 部 - まとめ](aem-forms-with-marketo/part4.md)
 
-+ AEM Forms と Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
++ Adobe Campaign StandardのAEM Forms{#aem-forms-with-adobe-campaign}
    + [1 - はじめに](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
    + [2 - トークンの生成](aem-forms-with-adobe-campaign/partone.md)
    + [3 - フォーム送信時の ACS プロファイルの作成](aem-forms-with-adobe-campaign/parttwo.md)
@@ -263,7 +263,7 @@ ht-degree: 100%
    + [ウェルカムキットコンポーネントを作成する](welcome-kit/create-welcomekit-component.md)
    + [ワークフローコンポーネントの作成](welcome-kit/create-workflow-component.md)
    + [ソリューションのテスト](welcome-kit/testing-the-solution.md)
-+ ヘッドレスフォーム API {#embed-form-spa}
++ ヘッドレスForms API {#embed-form-spa}
    + [1 - はじめに](headless-forms/introduction.md)
    + [2 - 依存関係のインストール](headless-forms/install-af-react-libraries.md)
    + [3 - フォームの取得](headless-forms/fetch-the-form.md)
@@ -272,7 +272,7 @@ ht-degree: 100%
    + [6 - 選択したフォームの表示](headless-forms/open-form-card-view.md)
    + [7 - フォーム送信の処理](headless-forms/display-thank-you-message.md)
 
-+ React アプリと Forms および Acrobat Sign の連携 {#react-ic-sign}
++ FormsとAcrobat Signを使用した React アプリ {#react-ic-sign}
    + [1 - はじめに](react-ic-sign/introduction.md)
    + [2 - ドキュメントの生成](react-ic-sign/create-ic-document.md)
    + [3 - Acrobat Sign API ラッパー](react-ic-sign/wrapper-sign-api.md)
@@ -316,7 +316,7 @@ ht-degree: 100%
    + [Workbench の概要](aem-forms-workbench/workbench-introduction.md)
    + [フォームプロセスの作成](aem-forms-workbench/workbench-creating-a-process.md)
    + [デバッグプロセス](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ 印刷チャネル用のインタラクティブ通信
++ 印刷チャネル用のインタラクティブ通信 
 {#ic-print-channel-tutorial}
    + [1 - はじめに](ic-print-channel-tutorial/introduction.md)
    + [2 - Tomcat の設定](ic-print-channel-tutorial/set-up-tomcat.md)
@@ -334,7 +334,7 @@ ht-degree: 100%
    + [はじめに](store-retrieve-letters/introduction.md)
    + [実装](store-retrieve-letters/save-draft-letters.md)
    + [サンプルのデプロイ](store-retrieve-letters/deploy-on-your-server.md)
-+ インタラクティブコミュニケーション {#interactive-communications}
++ インタラクティブ通信 {#interactive-communications}
    + [Batch API の使用](interactive-communications/batch-generation-interactive-communications.md)
    + [複数系列グラフ](interactive-communications/multiseriescharts.md)
    + [送信されたデータからの印刷チャネルドキュメントの生成](interactive-communications/merge-data-with-ic-template.md)
@@ -343,7 +343,8 @@ ht-degree: 100%
    + [AEM Forms 印刷チャネルドキュメントでのテーブルコンポーネントの使用](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [監視フォルダーを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [テキストエディターのカスタマイズ](interactive-communications/customize-text-editor.md)
-
++ ExL NewsLetters{#exl-newsletters}
+   + [アーカイブ](./newsletters/archives.md)
 + Web チャネルのインタラクティブ通信 {#ic-web-channel-tutorial}
    + [1 - はじめに](ic-web-channel-tutorial/introduction.md)
    + [2 - Tomcat の設定](ic-web-channel-tutorial/partone.md)
