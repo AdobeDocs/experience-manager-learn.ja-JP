@@ -12,9 +12,9 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 7cd9efb62d1afdcc089e1e6260d6cf2fc5495afe
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ AEMは、オーサーサービスとパブリッシュサービスのタイプ�
 
 | AEM API のタイプ | 説明 | 入手方法 | ユースケース | API サンプル |
 | --- | --- | --- | --- | --- |
-| OpenAPI ベースのAEM API | Assets、Sites およびForms用の標準化された機械読み取り可能な API。 | **AEM as a Cloud Serviceのみ** | API ファースト開発、最新のアプリケーション | [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[Folders API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)、[Forms Acrobat サービス ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) その他 |
+| OpenAPI ベースのAEM API | Assets、Sites およびForms用の標準化された機械読み取り可能な API。 | **AEM as a Cloud Serviceのみ** | API ファースト開発、最新のアプリケーション | [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[Folders API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)、[Forms Document Services API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) その他 |
 | RESTful API | AEM リソースとやり取りするための従来の REST エンドポイント。 | AEM 6.X、AEM as a Cloud Service | CRUD 操作、最新のアプリケーション | [Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[ ワークフロー REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[ コンテンツサービス用の JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) など |
 | GraphQLの API | 柔軟なクエリを使用して構造化コンテンツを効率的に取得するために最適化されています。 | AEM 6.X、AEM as a Cloud Service | ヘッドレスCMS、SPA、モバイルアプリ | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
 | 従来の（非 RESTful） API | JCR、Sling モデル、Query Builder などの古い API。 | AEM 6.X、AEM as a Cloud Service | レガシー統合、下位互換性 | [Query Builder API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) その他 |
