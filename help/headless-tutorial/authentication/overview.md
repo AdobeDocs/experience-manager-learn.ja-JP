@@ -24,7 +24,7 @@ AEM は、GraphQL、AEM コンテンツサービスから Assets HTTP API まで
 
 このチュートリアルでは、外部アプリケーションがアクセストークンを使用して、HTTP 経由で AEM as a Cloud Service に対してプログラムで認証とやり取りを行う方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410081?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

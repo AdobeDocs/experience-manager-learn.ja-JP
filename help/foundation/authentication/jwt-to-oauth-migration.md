@@ -25,4 +25,4 @@ ht-degree: 100%
 サービスアカウント（JWT）資格情報は、非推奨（廃止予定）としてマークされていますが、2025年1月27日（PT）までは引き続き機能します。したがって、2025年1月27日（PT）より前に、新しい OAuth サーバー間資格情報を使用できるようにアプリケーションまたは統合を移行する必要があります。詳しくは、[移行ガイド](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)を参照してください。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449239/?learn=on&captions=jpn)
