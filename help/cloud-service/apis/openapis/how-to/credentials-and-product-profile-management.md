@@ -81,7 +81,7 @@ _製品プロファイル_ は、AEM リソースにアクセスするための�
 
 資格情報（別名テクニカルアカウントユーザー）には、AEM リソースの _作成、更新、削除_ （CUD））などの追加の権限が必要な場合があります。 その場合、必要な権限を提供する _サービス_ に関連付けられた新しい _製品プロファイル_ を追加する必要があります。
 
-例えば、AEM Assets オーサー API の呼び出しでGET以外のリクエストに対して [403 エラー ](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests) が発生した場合は、**AEM管理者 – オーサー – プログラム XXX – 環境 XXX**_製品プロファイル_ を追加して問題を解決できます。
+例えば、AEM Assets オーサー API の呼び出しでGET以外のリクエストに対して [403 エラー ](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests) が発生した場合は、**AEM管理者 – オーサー – プログラム XXX – 環境 XXX**&#x200B;_製品プロファイル_ を追加して問題を解決できます。
 
 >[!CAUTION]
 >
@@ -103,7 +103,7 @@ AEM API の製品プロファイルを追加するには、ADC プロジェク�
 
 ![ 製品プロファイルサービス ](../assets/how-to/product-profile-services.png)
 
-アセットのメタデータを更新する **0}PATCH} リクエストは問題なく機能するようになりました。**
+アセットのメタデータを更新する **0&rbrace;PATCH&rbrace; リクエストは問題なく機能するようになりました。**
 
 ![PATCH リクエスト ](../assets/how-to/patch-request.png)
 

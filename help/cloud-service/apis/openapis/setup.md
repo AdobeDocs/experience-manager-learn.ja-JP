@@ -92,7 +92,7 @@ ADC プロジェクトを使用して、目的の API を追加し、その認�
 
 ADC プロジェクトを作成するには、次の手順に従います。
 
-1. Adobe IDを使用して ](https://developer.adobe.com/console)0}Adobe Developer Console} にログインします。[
+1. Adobe IDを使用して [&#128279;](https://developer.adobe.com/console)0&rbrace;Adobe Developer Console&rbrace; にログインします。
 
    ![Adobe Developer Console](./assets/setup/adobe-developer-console.png)
 

@@ -82,7 +82,7 @@ AEM ユーザーコンテキストが関係する場合は常に、ユーザー�
 
 Adobe API にアクセスする前に、次の主要な構成要素を理解しておく必要があります。
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**: Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。 これは、AEM アプリケーションのデバッグに使用される _0}Developer Console}AEMとは異なることに注意してください。_
+- **[Adobe Developer Console](https://developer.adobe.com/)**: Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。 これは、AEM アプリケーションのデバッグに使用される _0&rbrace;Developer Console&rbrace;AEMとは異なることに注意してください。_
 
 - **[Adobe Developer Console プロジェクト ](https://developer.adobe.com/developer-console/docs/guides/projects/)**: API 統合、イベントおよびランタイム関数を一元的に管理する場所です。 ここでは、API を設定し、認証を設定して、必要な資格情報を生成します。
 
