@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM で Cloud Manager の[カスタム権限](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=ja)を使用して様々なチームのアクセスを戦略的に管理し、効率的で安全なプロジェクト管理とデプロイメントを実現する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449805/?learn=on&captions=jpn)

@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # AEM SDK のリモートデバッグ
 
->[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38130?quality=12&learn=on&captions=jpn)
 
 AEM SDK のローカルクイックスタートを使用すると、IDE からのリモート Java デバッグが可能になり、AEM でのライブコード実行を 1 ステップずつ進めて正確な実行フローを把握できるようになります。
 

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Windows セットアップで OpenOffice 固有のエラーが発生した場合にトラブルシューティングを行う手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418079?quality=12&learn=on&captions=jpn)

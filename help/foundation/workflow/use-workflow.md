@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM ワークフローを使用すると、AEM でコンテンツを共同作業、管理、処理することができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/27848?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410289?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

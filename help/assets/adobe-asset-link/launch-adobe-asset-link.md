@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケターの共同作業を強化できます。最も使い慣れた Creative Cloud デスクトップアプリから直接、Adobe Experience Manager Assets（AEM Assets）に保存されているコンテンツにアクセスできます。Creative Cloud デスクトップから Adobe Asset Link パネルを起動する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33733?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38679?quality=12&learn=on&captions=jpn)

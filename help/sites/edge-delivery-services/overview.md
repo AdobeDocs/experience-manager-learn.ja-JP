@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Edge 配信サービスを使用して web サイトを高速化する方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453445/?learn=on&captions=jpn)
 
 Edge 配信サービスとその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/overview)を参照してください。
 
@@ -108,7 +108,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/prerequisites.md" title="前提条件"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434585/?format=jpeg&captions=jpn"
                 alt="前提条件">
             </a>
           </figure>
@@ -140,7 +140,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/aem-boilerplate.md" title="ボイラープレートテンプレートを使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="設定
+                src="https://video.tv.adobe.com/v/3434612/?format=jpeg&captions=jpn" alt="設定
 ボイラープレート">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/content-repository.md" title="Google Drive をリンク"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Google Drive をリンク">
+                src="https://video.tv.adobe.com/v/3434721/?format=jpeg&captions=jpn" alt="Google Drive をリンク">
             </a>
           </figure>
         </div>
@@ -202,7 +202,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="SharePoint をリンク" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3446029/?format=jpeg&captions=jpn"
                 alt="SharePoint をリンク">
             </a>
           </figure>
@@ -234,7 +234,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/preview-and-publish.md" title="コンテンツをプレビューおよび公開"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="コンテンツをプレビューおよび公開">
+                src="https://video.tv.adobe.com/v/3434710/?format=jpeg&captions=jpn" alt="コンテンツをプレビューおよび公開">
             </a>
           </figure>
         </div>
@@ -265,7 +265,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/sidekick.md" title="Sidekick の使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441281/?format=jpeg&captions=jpn"
                 alt="Sidekick の使用">
             </a>
           </figure>
@@ -297,7 +297,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/document-structure.md" title="ドキュメント構造"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425716/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445190/?format=jpeg&captions=jpn"
                 alt="ドキュメント構造">
             </a>
           </figure>
@@ -329,7 +329,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/local-development.md" title="ローカル開発"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434732/?format=jpeg&captions=jpn"
                 alt="ローカル開発">
             </a>
           </figure>
@@ -361,7 +361,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./developing/git.md" title="Git との統合"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441827/?format=jpeg&captions=jpn"
                 alt="Git との統合">
             </a>
           </figure>
@@ -398,7 +398,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./how-to/rss.md" title="RSS フィードを作成"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438000/?format=jpeg&captions=jpn"
                 alt="RSS フィードを作成">
             </a>
           </figure>
@@ -430,7 +430,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./how-to/social-media-sharing.md" title="ソーシャルメディア共有"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439438/?format=jpeg&captions=jpn"
                 alt="ソーシャルメディア共有">
             </a>
           </figure>
@@ -462,7 +462,7 @@ Edge 配信サービスとその機能について詳しくは、[ドキュメ�
             <a href="./how-to/delete-page.md" title="ページの削除"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438091/?format=jpeg&captions=jpn"
                 alt="ページの削除">
             </a>
           </figure>

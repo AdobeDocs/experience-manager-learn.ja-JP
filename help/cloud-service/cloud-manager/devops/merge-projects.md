@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Cloud Manager を使用して AEM as a Cloud Service にデプロイするために、複数のプロジェクトを単一のプロジェクトに結合する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330535?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345859?quality=12&learn=on&captions=jpn)

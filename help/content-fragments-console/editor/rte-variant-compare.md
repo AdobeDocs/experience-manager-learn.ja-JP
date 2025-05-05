@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM を使用して、コンテンツフラグメントバリエーション内の RTE フィールドを簡単に比較および同期する方法を説明します。これらのバリエーションを比較し同期させることで、コンテンツフラグメントを使用するすべてのチャネルで一貫したメッセージングを確保できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437547/?learn=on&captions=jpn)

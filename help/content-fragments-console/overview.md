@@ -38,7 +38,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./basics/content-fragments-console.md" title="コンソールの概要"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
+                src="https://video.tv.adobe.com/v/3449332?format=jpeg&captions=jpn"
                 alt="コンソールの概要">
             </a>
           </figure>
@@ -104,7 +104,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./search/fast-filtering.md" title="高速フィルタリング"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="高速
+                src="https://video.tv.adobe.com/v/3436697?format=jpeg&captions=jpn" alt="高速
 フィルタリング">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./editor/non-asset-content-references.md" title="アセット以外の
 コンテンツ参照" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436763?format=jpeg&captions=jpn"
                 alt="アセット以外のコンテンツ参照">
             </a>
           </figure>
@@ -206,7 +206,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./editor/rte-variant-compare.md" title="RTE バリアントの比較"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE
+                src="https://video.tv.adobe.com/v/3437547?format=jpeg&captions=jpn" alt="RTE
  バリアントの比較">
             </a>
           </figure>
@@ -240,7 +240,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./editor/language-copies.md" title="言語コピー"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436957?format=jpeg&captions=jpn"
                 alt="言語コピー">
             </a>
           </figure>
@@ -274,7 +274,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./search/references.md" title="参照"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
+                src="https://video.tv.adobe.com/v/3423640?format=jpeg&captions=jpn"
                 alt="参照">
             </a>
           </figure>

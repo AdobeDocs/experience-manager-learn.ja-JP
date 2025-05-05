@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services で Dynamic Media を使用して最適化された画像とビデオの配信を行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429593/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438897/?learn=on&captions=jpn)

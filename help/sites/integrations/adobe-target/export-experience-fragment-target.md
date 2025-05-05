@@ -24,7 +24,7 @@ ht-degree: 100%
 
 AEM エクスペリエンスフラグメントを Adobe Target オファーとして書き出す方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328972?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

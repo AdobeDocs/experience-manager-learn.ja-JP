@@ -23,10 +23,10 @@ ht-degree: 100%
 
 このビデオでは、開発者が Edge Delivery Services の開発を始めるのに必要なすべての要素について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434585/?learn=on&captions=jpn)
 
 ## Node.js をインストール
 
 Edge Delivery Services の開発を開始するには、システムに [Node.js](https://nodejs.org) をインストールすることが不可欠です。Node.js が既にインストールされているかどうかを確認するには、コマンドラインで `node -v` を実行します。Node.js が存在する場合は現在のバージョンが表示されます。Node.js がお使いのシステムにインストールされていない場合、インストール手順の詳細については、以下のビデオを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425710/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438302/?learn=on&captions=jpn)

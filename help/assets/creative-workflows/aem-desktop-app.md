@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM Desktop App を使用すると、デスクトップ上で管理されるあらゆるアセットに対し、あらゆるアプリケーションおよびファイル形式で簡単にアクセスできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34018?quality=12&learn=on&captions=jpn)
 
 + 専用のデスクトップアプリケーションを使用して、参照と検索を介して AEM でアセットを検出します。
 + 最適化された帯域幅管理により、多数の大きなアセットをアップロードおよびダウンロードできます。

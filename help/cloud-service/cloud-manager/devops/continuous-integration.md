@@ -27,4 +27,4 @@ ht-degree: 100%
 
 Abode Cloud Manager を使用したベストプラクティスと継続的な統合について学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345852?quality=12&learn=on&captions=jpn)

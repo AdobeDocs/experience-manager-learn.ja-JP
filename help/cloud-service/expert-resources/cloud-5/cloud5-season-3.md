@@ -31,7 +31,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
     <tr>
         <td>
             <a href="./season-3/cloud5-3rd-party-search.md">
-                <img alt="サードパーティ検索" src="https://video.tv.adobe.com/v/3427040?format=jpeg"/>
+                <img alt="サードパーティ検索" src="https://video.tv.adobe.com/v/3452594?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
@@ -45,7 +45,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>   
         <td>
             <a href="./season-3/cloud5-edge-workers.md">
-                <img alt="エッジワーカー" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+                <img alt="エッジワーカー" src="https://video.tv.adobe.com/v/3448116?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
@@ -59,7 +59,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>   
         <td>
             <a href="./season-3/cloud5-publish-events.md">
-                <img alt="Edge Delivery Services でのイベントの公開と非公開" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+                <img alt="Edge Delivery Services でのイベントの公開と非公開" src="https://video.tv.adobe.com/v/3446657?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
@@ -75,7 +75,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
     <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="Edge 配信サービスでのクエリインデックスと Excel 数式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="Edge 配信サービスでのクエリインデックスと Excel 数式" src="https://video.tv.adobe.com/v/3453764?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
@@ -89,7 +89,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="独自の Cloudflare CDN の導入" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="独自の Cloudflare CDN の導入" src="https://video.tv.adobe.com/v/3452537?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
@@ -103,7 +103,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
         </td>           
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="AEM Assets とドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="AEM Assets とドキュメントオーサリングの統合" src="https://video.tv.adobe.com/v/3448941?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
@@ -119,7 +119,7 @@ AEM エンジニアリングチームによる Cloud 5 シリーズのシーズ�
     <tr>
         <td>
             <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
-                <img alt="AEM Sites の生成 AI" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
+                <img alt="AEM Sites の生成 AI" src="https://video.tv.adobe.com/v/3451116?format=jpeg&captions=jpn"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">

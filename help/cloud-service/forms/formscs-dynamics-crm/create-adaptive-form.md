@@ -22,4 +22,4 @@ ht-degree: 100%
 
 次のビデオでは、リードオブジェクトを作成および表示するためにアダプティブフォームを作成および設定する手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449309?quality=12&learn=on&captions=jpn)

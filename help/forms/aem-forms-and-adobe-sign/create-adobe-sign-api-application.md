@@ -24,7 +24,7 @@ Acrobat Sign プラットフォームと統合するには、Acrobat Sign 上で
 
 次のビデオでは、Acrobat Sign API アプリケーションの作成に必要な手順について説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327835?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

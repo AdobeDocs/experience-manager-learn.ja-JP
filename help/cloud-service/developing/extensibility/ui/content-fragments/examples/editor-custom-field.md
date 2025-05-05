@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントエディターでカスタムフィールドを作成する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437635?learn=on&captions=jpn)
 
 AEM UI 拡張機能は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して開発する必要があります。これにより、AEM の他の部分と一貫した外観と操作性が維持され、事前に構築された機能の広範なライブラリも備えているので、開発時間が短縮されます。
 

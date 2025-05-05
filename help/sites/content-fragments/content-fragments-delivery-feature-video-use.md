@@ -30,7 +30,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントは、関連�
 
 ## Web ページでのコンテンツフラグメントの使用 {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38062?quality=12&learn=on&captions=jpn)
 
 コンテンツフラグメントは、AEM Sites ページで使用することができ、同様の方法で、AEM WCM コアコンポーネントの[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)を使用して、エクスペリエンス フラグメントで使用することもできます。
 
@@ -38,7 +38,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントは、関連�
 
 ## コンテンツフラグメントを JSON として公開 {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38067?quality=12&learn=on&captions=jpn)
 
 AEM コンテンツサービスは、コンテンツを正規化された JSON 形式にレンディションする、AEM ページベースの HTTP エンドポイントの作成を容易にします。
 
@@ -49,7 +49,7 @@ AEM コンテンツサービスは、コンテンツを正規化された JSON �
 
 ## Assets HTTP API の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40326?quality=12&learn=on&captions=jpn)
 
 AEM 6.5 で初めて導入され、Assets HTTP API を使用してコンテンツフラグメントのサポートを強化しました。これにより、開発者はコンテンツフラグメントに対して、作成、読み取り、更新、削除（CRUD）操作を簡単に実行できます。
 

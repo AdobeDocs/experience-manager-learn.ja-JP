@@ -23,7 +23,7 @@ ht-degree: 100%
 
 独自の Cloudflare CDN を Edge Delivery Services に設定する方法を探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428100/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452537/?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース
 

@@ -26,7 +26,7 @@ OSGi サービスを以下にバインドする方法など、OSGi コンポー�
 
 の各ライフサイクルイベント
 
->[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417893?quality=12&learn=on&captions=jpn)
 
 ## リソース
 

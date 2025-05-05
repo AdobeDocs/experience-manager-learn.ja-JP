@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Assets コンテンツハブでチームメンバーとアセットやコレクションを共有し、効果的なチームワークと安全なアセット共有を促進する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3435685/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445356/?learn=on&captions=jpn)

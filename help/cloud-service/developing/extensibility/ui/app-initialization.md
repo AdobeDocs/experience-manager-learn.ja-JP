@@ -24,7 +24,7 @@ ht-degree: 100%
 
 拡張機能の表示場所と実行する作業を定義する AEM UI 拡張機能の App Builder アプリを初期化します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447077?quality=12&learn=on&captions=jpn)
 
 >[!IMPORTANT]
 >

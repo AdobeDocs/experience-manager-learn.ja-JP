@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms CS には、変数、添付ファイルなどのワークフローデータを外部ストレージアカウントに保存する新しい機能が追加されました。このビデオでは、ワークフローデータを Azure ストレージに保存する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/339610?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342967?quality=12&learn=on&captions=jpn)

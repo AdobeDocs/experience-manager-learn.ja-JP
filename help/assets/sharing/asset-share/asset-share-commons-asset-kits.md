@@ -23,6 +23,6 @@ ht-degree: 100%
 
 Asset Share Common の[アセットキット](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)を使用して、AEM Assets のフォルダーまたはコレクションからアセットを一覧表示する、共有可能なカスタム web ページを生成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453448?quality=12&learn=on&captions=jpn)
 
 _[アセットキット](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)は、Asset Share Commons 2.5.4 以降でのみ使用できます。_

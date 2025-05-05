@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Experience Manager Assets は Adobe Sensei を利用して、ビデオの主要な要素を説明するキーワードでインテリジェントにビデオアセットにタグを付け、AEM ユーザーによるキーワード検索で簡単に見つけられるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340532?quality=12&learn=on&captions=jpn)

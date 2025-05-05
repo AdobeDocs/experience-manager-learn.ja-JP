@@ -22,4 +22,4 @@ ht-degree: 100%
 
 プライベート GitHub リポジトリを AEM Cloud Manager に接続して、コード品質管理を効率化し、ワークフローを自動化する方法について説明します。チェックとシームレスなコラボレーションを統合して、開発プロセスを強化します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429302/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452416/?learn=on&captions=jpn)

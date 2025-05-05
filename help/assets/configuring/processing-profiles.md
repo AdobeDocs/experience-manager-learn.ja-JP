@@ -23,4 +23,4 @@ ht-degree: 100%
 
 処理プロファイルでは、AEM as a Cloud Service 内のアセットに対して作成されるレンディションを定義します。
 
->[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40080?quality=12&learn=on&captions=jpn)

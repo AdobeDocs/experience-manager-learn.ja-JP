@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、自己署名証明書を生成する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417890?quality=12&learn=on&captions=jpn)

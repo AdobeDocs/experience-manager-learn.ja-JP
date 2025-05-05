@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Assets Dynamic Media は、インタラクティブメディアビューアを介して、アセットのホットスポットをエクスペリエンスフラグメントと統合します。マーケターは、エクスペリエンスフラグメントをテキスト、画像、リンクで作成して、カスタムポップアップに入力し、そのポップアップをバナー、カルーセル、ビデオのホットスポットに関連付けることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22115?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40416?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

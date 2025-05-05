@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Edge Delivery Services Sidekick のカスタマイズ方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425725/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438000/?learn=on&captions=jpn)

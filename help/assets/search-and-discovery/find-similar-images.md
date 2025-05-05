@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets の類似画像検索を使用すると、ニーズに合った最適な画像を簡単に見つけることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438478/?learn=on&captions=jpn)

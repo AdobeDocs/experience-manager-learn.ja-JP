@@ -22,4 +22,4 @@ ht-degree: 100%
 
 次のビデオでは、フォームデータモデルを作成して設定する手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444793?quality=12&learn=on&captions=jpn)

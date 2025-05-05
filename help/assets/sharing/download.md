@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アセットとそのレンディションをローカルマシンにダウンロードして、使用および共有する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/35090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39508?quality=12&learn=on&captions=jpn)

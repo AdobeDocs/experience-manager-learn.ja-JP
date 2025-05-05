@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、Designer で HTML のプレビューを有効にする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335498?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417898?quality=12&learn=on&captions=jpn)

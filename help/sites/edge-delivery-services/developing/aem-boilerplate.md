@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Edge Delivery Services 用の [AEM ボイラープレートテンプレート](https://github.com/adobe/aem-boilerplate)でコード Git リポジトリを設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434612/?learn=on&captions=jpn)

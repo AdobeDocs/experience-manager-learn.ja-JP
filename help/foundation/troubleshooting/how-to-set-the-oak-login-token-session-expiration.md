@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Oak ログイントークンのセッションの有効期限を設定する手順について説明しています。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418640?quality=12&learn=on&captions=jpn)

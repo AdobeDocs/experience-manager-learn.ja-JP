@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets で効率的にデジタルアセットを管理する方法をビデオで学びます。この有益なビデオでは、アセット階層を簡単に整理し DAM に直接アップロードするための ZIP 解凍機能を紹介しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426368/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447143/?learn=on&captions=jpn)

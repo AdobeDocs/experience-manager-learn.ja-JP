@@ -22,4 +22,4 @@ ht-degree: 100%
 
 言語コピー用の翻訳プロジェクトを作成、編集、管理する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36486?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41622?quality=12&learn=on&captions=jpn)

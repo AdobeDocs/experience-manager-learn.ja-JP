@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms への手書き署名の追加について説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427626/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437321/?learn=on&captions=jpn)

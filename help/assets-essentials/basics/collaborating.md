@@ -23,4 +23,4 @@ ht-degree: 100%
 
 コメント、注釈、タスクを使用してアセット管理で共同作業する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443991?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Adobe Experience Manager のテクノロジースタックの一部として、[!DNL OSGi]、[!DNL JCR]、[!DNL Oak] および [!DNL Sling] のテクノロジーを紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37022?quality=12&learn=on&captions=jpn)

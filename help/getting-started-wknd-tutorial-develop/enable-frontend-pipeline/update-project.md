@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## フルスタック AEM プロジェクトの設定変更の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453610?quality=12&learn=on&captions=jpn)
 
 ## 前提条件 {#prerequisites}
 

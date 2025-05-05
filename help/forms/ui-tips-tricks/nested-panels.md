@@ -36,7 +36,7 @@ FormContainer には、「前へ」ボタンと「次へ」ボタンを含んだ
 
 このデフォルトの動作を変更するには、以下の操作を行う必要があります。
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438632?quality=12&learn=on&captions=jpn)
 
 
 コードエディターを使用して、以下のコードを「**次へ**」ボタンのクリックイベントに追加します。
@@ -57,7 +57,7 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 
 スタイルエディターを使用すると、タブの子パネルのタイトルを非表示にすることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439125?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

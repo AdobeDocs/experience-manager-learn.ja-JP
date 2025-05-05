@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、lc_turnkey.xml で使用するキーストアパスワードを暗号化する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418087?quality=12&learn=on&captions=jpn)

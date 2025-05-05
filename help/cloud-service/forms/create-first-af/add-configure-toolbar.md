@@ -23,4 +23,4 @@ ht-degree: 100%
 
 ツールバーは通常、フォームコンテナレベルで追加されます。 ツールバーには、フォームの次のパネルや前のパネルに移動するためのボタン、フォームを送信するためボタン、フォームデータを保存するためのボタンなどを含めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424946?quality=12&learn=on&captions=jpn)

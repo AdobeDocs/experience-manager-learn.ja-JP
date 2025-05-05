@@ -24,7 +24,7 @@ ht-degree: 100%
 
 AEM Sites のドキュメントオーサリングで利用できる新しい生成 AI 機能について説明します。バックエンドで使用されるテクノロジー、使用されるデータモデル、これらのモデルのトレーニング方法に加えて、機能、Adobe Firefly と Adobe Express との統合について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428436/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451116/?learn=on&captions=jpn)
 
 ## その他のリソース
 

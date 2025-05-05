@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms でパフォーマンスのログを有効にして、Forms と Output サービスに関する問題をデバッグするプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439716?quality=12&learn=on&captions=jpn)

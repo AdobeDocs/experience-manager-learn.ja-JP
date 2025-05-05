@@ -20,11 +20,11 @@ ht-degree: 100%
 
 AEM Assets のカスタムビデオサムネールを使用すると、作成者は生成された一連のサムネールから適切なサムネールを選択できます。 ビデオに対して生成されるサムネールの数を簡単にカスタマイズできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/16467?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38210?quality=12&learn=on&captions=jpn)
 
 ## ビデオサムネールのカスタマイズ
 
->[!VIDEO](https://video.tv.adobe.com/v/18867?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38250?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

@@ -25,7 +25,7 @@ Adobe Experience Manager Assets のメタデータ読み込み機能および書
 
 ## メタデータの書き出し {#metadata-export}
 
->[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39396?quality=12&learn=on&captions=jpn)
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Adobe Experience Manager Assets のメタデータ読み込み機能および書
 
 ## メタデータの読み込み {#metadata-import}
 
->[!VIDEO](https://video.tv.adobe.com/v/21374?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413185?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

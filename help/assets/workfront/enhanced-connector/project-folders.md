@@ -29,4 +29,4 @@ ht-degree: 100%
 + フォルダーメタデータのマッピング
 + フォルダーメタデータの継承
 
->[!VIDEO](https://video.tv.adobe.com/v/337586?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454760?quality=12&learn=on&captions=jpn)

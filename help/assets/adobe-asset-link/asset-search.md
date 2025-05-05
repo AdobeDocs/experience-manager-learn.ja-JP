@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Asset Link パネルを使用すると、クリエイティブユーザーはキーワードを使用して AEM Assets に保存されているアセットを検索したり、特定の場所で検索を実行したりできます。Adobe Asset Link では、基本的な検索オプションに加えて、AEM Assets 内でアセットを使用して視覚的に類似した結果を検索することもできます。Adobe Sensei の機械学習を活用したビジュアル検索では、ターゲット画像に関連する美的特徴を備えた結果が表示されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38591?quality=12&learn=on&captions=jpn)

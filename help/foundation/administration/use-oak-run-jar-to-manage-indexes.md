@@ -26,7 +26,7 @@ ht-degree: 100%
 
 ## [!DNL oak-run.jar] index コマンドの基本
 
->[!VIDEO](https://video.tv.adobe.com/v/21475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40117?quality=12&learn=on&captions=jpn)
 
 * 使用される [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) のバージョンは、AEM インスタンスで使用される Oak のバージョンと一致する必要があります。
 * [!DNL oak-run.jar] を使用してインデックスを管理する場合は、**[!DNL index]** コマンドを様々なフラグと共に活用して、様々な操作をサポートします。
@@ -35,21 +35,21 @@ ht-degree: 100%
 
 ## インデックスの統計
 
->[!VIDEO](https://video.tv.adobe.com/v/21477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39298?quality=12&learn=on&captions=jpn)
 
 * `oak-run.jar` では、すべてのインデックス定義、重要なインデックス統計およびインデックス内容をオフライン分析用にダンプします。
 * インデックス統計の収集は、使用中の AEM インスタンスで安全に実行できます。
 
 ## インデックスの整合性チェック
 
->[!VIDEO](https://video.tv.adobe.com/v/21476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36800?quality=12&learn=on&captions=jpn)
 
 * `oak-run.jar` では、Lucene Oak インデックスが破損しているかどうかをすばやく判別します。
 * 整合性チェックレベル 1 および 2 の場合は、使用中の AEM インスタンスで整合性チェックを安全に実行できます。
 
 ## [!DNL oak-run.jar] を使用した TarMK オンラインインデックス作成 {#tarmkonlineindexingwithoakrunjar}
 
->[!VIDEO](https://video.tv.adobe.com/v/21479?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36803?quality=12&learn=on&captions=jpn)
 
 * [!DNL oak-run.jar] を使用した [!DNL TarMK] のオンラインインデックス作成は、`oak:queryIndexDefinition` ノードで `reindex=true` を設定するよりも高速です。パフォーマンスは向上しますが、[!DNL oak-run.jar] を使用したオンラインインデックス作成には、インデックス作成を実行するためのメンテナンスウィンドウが必要です。
 
@@ -57,13 +57,13 @@ ht-degree: 100%
 
 ## oak-run.jar を使用した TarMK オフラインインデックス作成
 
->[!VIDEO](https://video.tv.adobe.com/v/21478?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36801?quality=12&learn=on&captions=jpn)
 
 * [!DNL oak-run.jar] を使用した [!DNL TarMK] のオフラインインデックス作成は、単一の [!DNL oak-run.jar] コマンドのみ必要なので、[!DNL TarMK] を対象とする [!DNL oak-run.jar] ベースの最もシンプルなインデックス作成アプローチですが、使用するには、AEM インスタンスをシャットダウンする必要があります。
 
 ## oak-run.jar を使用した TarMK アウトオブバンドインデックス作成
 
->[!VIDEO](https://video.tv.adobe.com/v/21480?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341018?quality=12&learn=on&captions=jpn)
 
 * [!DNL oak-run.jar] を使用した [!DNL TarMK] でのアウトオブバンドインデックス作成により、使用中の AEM インスタンスに対するインデックス作成の影響を最小限に抑えることができます。
 * アウトオブバンドインデックス作成は、インデックス作成／再作成に要する時間が使用可能なメンテナンスウィンドウを超える場合に、AEM インストールで推奨されるインデックス作成アプローチです。

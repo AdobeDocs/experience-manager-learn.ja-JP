@@ -23,7 +23,7 @@ ht-degree: 100%
 
 編集可能なテンプレートを使用すると、専門的な作成者が Adobe Experience Manager（AEM）Sites でページテンプレートを作成および更新し、ポリシーの詳細設定を管理できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449612?quality=12&learn=on&captions=jpn)
 
 新しい AEM Sites の構築に対するレコメンデーションは、編集可能なテンプレートを使用することです。
 

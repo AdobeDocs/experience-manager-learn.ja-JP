@@ -24,7 +24,7 @@ AEM Forms 6.4 での web チャネルドキュメントテンプレートの作�
 >[!VIDEO](https://video.tv.adobe.com/v/22342?quality=12&learn=on)
 
 AEM Forms 6.5 での web チャネルドキュメントテンプレートの作成
->[!VIDEO](https://video.tv.adobe.com/v/27807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34419?quality=12&learn=on&captions=jpn)
 
 このテンプレートには、様々な種類のドキュメントフラグメントを格納するターゲット領域／プレースホルダーが含まれます。 例えば、テンプレートにはロゴ用のターゲット領域と、テキストコンテンツ用の別のターゲット領域を含めることができます。
 

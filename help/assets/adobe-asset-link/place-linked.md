@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets からリンク場所操作でアセットを使用する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34839?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38608?quality=12&learn=on&captions=jpn)

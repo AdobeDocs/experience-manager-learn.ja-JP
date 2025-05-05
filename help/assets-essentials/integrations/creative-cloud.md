@@ -26,4 +26,4 @@ AEM Assets を Adobe Creative Cloud ライブラリと統合して、次を可�
 + AEM Assets のファイルに Creative Cloud ライブラリ経由でシームレスにアクセス
 + Creative Cloud ライブラリのファイルを AEM Assets で共有
 
->[!VIDEO](https://video.tv.adobe.com/v/3432401?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444009?quality=12&learn=on&captions=jpn)

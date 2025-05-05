@@ -23,4 +23,4 @@ ht-degree: 100%
 
 DoR を抽出し、Power Automate のワークフローでメール添付ファイルとして送信します。
 次のビデオでは、送信されたデータから DoR を抽出するために必要な手順を説明しています。
->[!VIDEO](https://video.tv.adobe.com/v/346731?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413036?quality=12&learn=on&captions=jpn)

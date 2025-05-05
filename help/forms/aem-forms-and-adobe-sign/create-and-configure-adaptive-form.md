@@ -22,7 +22,7 @@ ht-degree: 100%
 
 次のビデオでは、DoR を自動生成するアダプティブフォームの作成と設定に必要な手順を説明します。このビデオでは、AEM ワークフローをトリガーするアダプティブフォームの設定に必要な手順についても説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/38348?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327811?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

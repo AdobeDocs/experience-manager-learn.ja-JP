@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ソーシャルメディア共有コンポーネントの設定と使用について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328273?quality=12&learn=on&captions=jpn)
 
 この動画では、[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) サンプル web サイトを使用して、ソーシャルメディア共有コンポーネント（[AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)の一部）の次の機能について説明します。
 

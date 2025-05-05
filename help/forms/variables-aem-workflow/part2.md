@@ -30,7 +30,7 @@ AEM Forms 6.5 以降では、AEM ワークフローで JSON タイプの変数�
 
 スキーマをワークフローモデルの JSON タイプの変数にマッピングできます。その後、スキーマブラウザーを使用して、スキーマ要素をワークフローモデルの文字列／数値変数にマッピングできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35346?quality=12&learn=on&captions=jpn)
 
 お使いのシステムでアセットを動作させるには、次の手順に従ってください。
 

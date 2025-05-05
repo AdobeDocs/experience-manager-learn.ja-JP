@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge 配信サービスを使用する AEM as a Cloud Service の基盤となるアーキテクチャと重要な部分について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346183?quality=12&learn=on&captions=jpn)

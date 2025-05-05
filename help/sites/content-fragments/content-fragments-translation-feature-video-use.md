@@ -22,7 +22,7 @@ ht-degree: 100%
 
 コンテンツフラグメントを Adobe Experience Manager でローカライズおよび翻訳する方法を説明します。 コンテンツフラグメントに関連付けられている混在メディアアセットも、抽出および翻訳の対象となります。
 
->[!VIDEO](https://video.tv.adobe.com/v/18131?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410326?quality=12&learn=on&captions=jpn)
 
 ## コンテンツフラグメントの翻訳のユースケース {#content-fragment-translation-use-cases}
 

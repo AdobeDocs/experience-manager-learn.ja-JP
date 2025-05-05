@@ -23,4 +23,4 @@ ht-degree: 100%
 
 コンテンツを公開するには、Edge 配信サービスの AEM Sidekick を使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425715/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441281/?learn=on&captions=jpn)

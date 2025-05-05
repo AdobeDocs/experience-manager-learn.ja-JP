@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ページプロパティのメタデータフィールドのカスタマイズは、一般的にSites の導入で必要となります。 このビデオでは、Sling Resource Merger の機能を使用してこれを実現する、最も効果的な方法を確認できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410344?quality=12&learn=on&captions=jpn)
 
 上のビデオでは、 [WKND 参照サイト](https://github.com/adobe/aem-guides-wknd)のページプロパティのカスタマイズについて確認できます。
 

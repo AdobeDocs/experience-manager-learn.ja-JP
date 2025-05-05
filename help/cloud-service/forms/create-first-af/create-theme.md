@@ -23,4 +23,4 @@ ht-degree: 100%
 
 テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれており、様々なフォームでテーマを再利用できます。スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマをフォームに適用すると、指定したスタイルがフォームの対応コンポーネントに反映されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/332229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424879?quality=12&learn=on&captions=jpn)

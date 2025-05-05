@@ -23,4 +23,4 @@ ht-degree: 100%
 
 フラグメントの使用により、大量のフォームの作成とメンテナンスを簡単に短時間で実行できます。フォームを作成するときに、必要なフラグメントへの参照を挿入すると、このフラグメントがフォームに表示されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438416?quality=12&learn=on&captions=jpn)

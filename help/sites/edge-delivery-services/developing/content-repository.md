@@ -33,12 +33,12 @@ Adobe Experience Manager（AEM）を Edge 配信サービスと統合するに�
 
 SharePoint を Edge 配信サービスで使用するコンテンツリポジトリとして設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446029/?learn=on&captions=jpn)
 
 >[!TAB Google Drive]
 
 Google Drive を Edge 配信サービスで使用するコンテンツリポジトリとして設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434721/?learn=on&captions=jpn)
 
 >[!ENDTABS]

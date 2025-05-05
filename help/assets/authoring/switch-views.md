@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets as a Cloud Service の[アセットビューと管理ビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html?lang=ja#persona-based-experiences)を効率的に切り替え、シームレスなアセット管理を実現する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439028/?learn=on&captions=jpn)

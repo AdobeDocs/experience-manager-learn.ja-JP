@@ -22,7 +22,7 @@ ht-degree: 100%
 
 リポジトリブラウザーは、AEM の基盤となるデータストアを可視化する強力なツールで、AEM as a Cloud Service 環境のデバッグを容易にします。リポジトリブラウザーは、実稼動、ステージングおよび開発時の AEM のリソースとプロパティおよびオーサー、パブリッシュ、プレビューの各サービスの読み取り専用ビューをサポートしています。
 
->[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447055?quality=12&learn=on&captions=jpn)
 
 リポジトリブラウザーは、AEM as a Cloud Service 環境で&#x200B;__のみ__&#x200B;使用できます（ローカル AEM SDK をデバッグするには [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) を使用します）。
 

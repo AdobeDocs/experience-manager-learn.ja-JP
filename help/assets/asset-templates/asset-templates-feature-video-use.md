@@ -30,10 +30,10 @@ ht-degree: 100%
 
 このビデオでは、Adobe InDesign、Adobe InDesign Server および AEM Assets を使用して、AEM で印刷可能なアセットを生成するための概念と手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35352?quality=12&learn=on&captions=jpn)
 
 ## 技術的概要 {#technical-overview}
 
 このビデオでは、AEM Assets アセットテンプレート機能の技術的概要と、AEM が InDesign を通じて AEM Assets とコンテンツの構成を容易にし、機能豊かで魅力的な印刷エクスペリエンスを実現する方法を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38229?quality=12&learn=on&captions=jpn)

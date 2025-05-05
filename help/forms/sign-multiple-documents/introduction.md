@@ -22,7 +22,7 @@ ht-degree: 100%
 住宅ローンを申請する場合でも、新しい銀行口座を開設する場合でも、複数のフォームに記入し署名する必要があります。AEM Forms と Acrobat Sign の統合により、複数のフォームへの入力と署名が簡単になります。
 次のビデオでは、複数のフォームに署名する場合のユースケースについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444969?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

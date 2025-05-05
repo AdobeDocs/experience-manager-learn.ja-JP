@@ -31,10 +31,10 @@ ht-degree: 100%
 
 [CI／CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=ja)の設定では、パイプラインを開始するトリガー、実稼動デプロイメントを制御するパラメーターおよびパフォーマンステストパラメーターを定義します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327602?quality=12&learn=on&captions=jpn)
 
 ### パイプラインの実行
 
 [CI／CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=ja)は、ステージングを通じてコードを構築して実稼動環境にデプロイするために使用され、価値創出までの時間を短縮します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327609?quality=12&learn=on&captions=jpn)

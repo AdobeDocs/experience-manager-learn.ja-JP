@@ -23,4 +23,4 @@ ht-degree: 100%
 
 セクションやデフォルトコンテンツなどを使用して、Edge Delivery Services ドキュメントを構成する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445190/?learn=on&captions=jpn)

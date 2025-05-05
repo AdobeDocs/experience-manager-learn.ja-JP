@@ -39,8 +39,8 @@ ht-degree: 100%
 * サンプルのアダプティブフォームは、[Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms) というフォルダーにあります
 
 次のビデオでは、AEM ワークフローをトリガーするアダプティブフォームの設定方法を説明します
->[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329438?quality=12&learn=on&captions=jpn)
 
 次のビデオでは、ワークフローのペイロードと、crx リポジトリのその他の詳細を説明します
 
->[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329446?quality=12&learn=on&captions=jpn)

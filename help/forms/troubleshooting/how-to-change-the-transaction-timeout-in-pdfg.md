@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Forms PDFG サービスでアプリケーションサーバーのトランザクションタイムアウトを変更するプロセスを説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335555?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418071?quality=12&learn=on&captions=jpn)

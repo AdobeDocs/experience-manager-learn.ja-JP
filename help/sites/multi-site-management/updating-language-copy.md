@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Experience Platform Launch を使用して言語コピーの変更をアップデート、確認、承認する方法について学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41630?quality=12&learn=on&captions=jpn)

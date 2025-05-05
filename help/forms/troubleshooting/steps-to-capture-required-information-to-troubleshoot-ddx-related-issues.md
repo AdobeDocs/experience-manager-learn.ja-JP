@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Forms Assembler サービスでの DDX 関連の問題のトラブルシューティングに必要な情報を取得する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439181?quality=12&learn=on&captions=jpn)

@@ -59,4 +59,4 @@ Reducer 関数は、グラフに表示される値を集計またはグループ
 
 次のビデオでは、reducer 関数の使用に関する手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/21368?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38217?quality=12&learn=on&captions=jpn)

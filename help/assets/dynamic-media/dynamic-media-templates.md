@@ -21,4 +21,4 @@ ht-degree: 100%
 
 構成可能な画像アセットである Dynamic Media テンプレート、そのベストプラクティス、およびパーソナライズされたコンテンツ配信の需要を満たす方法について説明します。テンプレートを作成および管理する方法と、テンプレートを使用して大規模にパーソナライズされたコンテンツを配信する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451728/?learn=on&enablevpops&captions=jpn)

@@ -18,10 +18,10 @@ ht-degree: 100%
 
 ## アセットメタデータを使用した検索ブースト {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410338?quality=12&learn=on&captions=jpn)
 
 ## 複数値タグおよびタグ検索用述語の詳細設定 {#multi-value-tag-predicates}
 
 **複数値検索用述語**&#x200B;を使用すると、検索結果でテキストを簡単に一致させることができます。タグの述語にいくつかの機能が強化され、アセット検索結果のフィルタリングをより効率的に行えるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/16457?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39503?quality=12&learn=on&captions=jpn)

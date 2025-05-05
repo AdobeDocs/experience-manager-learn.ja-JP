@@ -23,4 +23,4 @@ ht-degree: 100%
 Azure ストレージアカウントには、BLOB、ファイル共有、キュー、テーブル、ディスクなど、Azure Storage のすべてのデータオブジェクトが含まれています。ストレージアカウントは、HTTP または HTTPS で世界中のどこからでもアクセスできる Azure Storage データ用の一意の名前空間を提供します。ストレージアカウント内のデータは、耐久性があり、可用性が高く、安全で、非常にスケーラブルです。
 次のビデオでは、Azure ストレージアカウントを設定するプロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340127?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343722?quality=12&learn=on&captions=jpn)

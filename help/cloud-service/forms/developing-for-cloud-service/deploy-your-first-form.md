@@ -29,7 +29,7 @@ FormTemplates と BankingApplication という 2 つのフォルダーを作成�
 
 次のビデオを視聴して、IntelliJ および Repo ツールを使用してこれらのアセットを AEM プロジェクトに同期してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448623?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

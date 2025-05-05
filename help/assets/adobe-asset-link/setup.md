@@ -26,7 +26,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service 用に Adobe Asset Link をセットアップする方法、ユーザーの使用資格と AEM as a Cloud Service の設定、Adobe Asset Link をインストールして使用する方法などについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343260?quality=12&learn=on&captions=jpn)
 
 上のビデオには示されていませんが、Creative Cloud パッケージマネージャーの「__管理パッケージ__」オプションから Adobe Asset Link を追加できます。
 
@@ -37,11 +37,11 @@ AEM as a Cloud Service 用に Adobe Asset Link をセットアップする方法
 
 Adobe Managed Services またはオンプレミスで動作する AEM 6 用に Adobe Asset Link をセットアップする方法、ユーザーの使用資格と AEM as a Cloud Service の設定、Adobe Asset Link をインストールして使用する方法などについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434110?quality=12&learn=on&captions=jpn)
 
 
 ## ドメインの信頼に対応する Asset Link のセットアップ
 
 ドメインの信頼とは何か、Experience Manager Assets で Adobe Asset Link を使用する意味、ドメインの信頼をセットアップする方法などについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454131?quality=12&learn=on&captions=jpn)

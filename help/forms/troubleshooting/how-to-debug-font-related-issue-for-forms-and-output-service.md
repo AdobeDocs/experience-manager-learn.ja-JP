@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Forms と出力サービスの変換に関する問題をデバッグするために、関連資料を取り込むプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439905?quality=12&learn=on&captions=jpn)

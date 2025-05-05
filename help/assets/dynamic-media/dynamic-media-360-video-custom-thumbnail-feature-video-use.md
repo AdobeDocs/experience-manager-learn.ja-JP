@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM 6.5 の Dynamic Media ビューアの機能強化には、360 ビデオレンダリング、360 メディアビューア（video360Social および video360VR）のサポートと、カスタムビデオサムネールを選択する機能が含まれています。
 
->[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34575?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

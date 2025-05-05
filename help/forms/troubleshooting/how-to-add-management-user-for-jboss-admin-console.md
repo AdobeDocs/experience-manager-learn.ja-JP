@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、JBoss Admin Console の管理ユーザーを追加する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418660?quality=12&learn=on&captions=jpn)

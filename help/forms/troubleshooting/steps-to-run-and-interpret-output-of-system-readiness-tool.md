@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms PDFG System Readiness Tool（SRT）の実行と出力の解釈のプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335543?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417902?quality=12&learn=on&captions=jpn)

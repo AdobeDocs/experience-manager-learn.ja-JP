@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アコーディオンレイアウトを使用した繰り返し可能なパネルを使用して、申込者のアセットをキャプチャします。
 
->[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445179?quality=12&learn=on&captions=jpn)

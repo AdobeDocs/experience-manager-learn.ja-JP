@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングを使用して、作成したページの画像に代替テキストを追加する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438676/?learn=on&captions=jpn)

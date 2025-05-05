@@ -24,4 +24,4 @@ ht-degree: 100%
 
 AEM Sites のローンチでは、今後のリリースで web サイトのコンテンツを作成およびレビューすることができます。 ローンチの作成中、実稼動 web サイトは通常どおりに進化し、毎日変更することができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346840?quality=12&learn=on&captions=jpn)

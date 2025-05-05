@@ -28,7 +28,7 @@ ht-degree: 100%
 
 ## Dynamic Media の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35065?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 ## AEM Sites での使用
 
->[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35066?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 100%
 
 ## 混在メディアコレクションの作成
 
->[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35067?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 100%
 
 ## 画像プリセット
 
->[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34500?quality=12&learn=on&captions=jpn)
 
 このビデオでは、画像プリセットの概要と作成方法を説明します。画像プリセットは、URL で画像がリクエストされるたびにその画像に適用される一連の Image Server 引数に対する URL 短縮機能です。画像プリセットを拡張および編集するための貴重なテクニックを学びます。
 
@@ -84,7 +84,7 @@ ht-degree: 100%
 
 ## 高度な URL 修飾子
 
->[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34494?quality=12&learn=on&captions=jpn)
 
 このビデオでは、Dynamic Media の URL 修飾子を使用して、画像のサイズ変更にとどまらず、背景の透明度、組み込みクリッピングパス、切り抜き、変数としてのテキストなどのソースファイル自体の機能を活用する方法を説明します。
 
@@ -96,7 +96,7 @@ ht-degree: 100%
 
 ## JPEG ファイルサイズ管理
 
->[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35216?quality=12&learn=on&captions=jpn)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ ht-degree: 100%
 
 ## クローズドキャプション
 
->[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34417?quality=12&learn=on&captions=jpn)
 
 クローズドキャプションを Dynamic Media ビデオに容易に追加するには、コピー URL を追加して、追加のクローズドキャプションファイルドキュメント（任意のビデオの CC 情報を含む web.VTT サイドカーファイル）を指定します。
 

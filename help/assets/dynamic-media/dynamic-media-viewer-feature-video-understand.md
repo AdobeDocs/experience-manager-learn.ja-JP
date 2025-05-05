@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Dynamic Media ビューアの機能強化により、AEM オーサーでは web サイトのユーザーに対するアセットの表示方法を定義およびカスタマイズできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40388?quality=12&learn=on&captions=jpn)
 
 主な機能強化を次に示します。
 

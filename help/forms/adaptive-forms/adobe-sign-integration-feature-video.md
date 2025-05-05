@@ -26,7 +26,7 @@ ht-degree: 100%
 
 AEM Forms での Acrobat Sign の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38339?quality=12&learn=on&captions=jpn)
 
 *このビデオでは、Acrobat Sign Cloud Service をセットアップし、AEM アダプティブフォームに複数の署名フィールドを追加する手順について説明します。*
 

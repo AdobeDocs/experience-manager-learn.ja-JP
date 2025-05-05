@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、モバイルフォームのデバッグログを取り込む手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438588?quality=12&learn=on&captions=jpn)

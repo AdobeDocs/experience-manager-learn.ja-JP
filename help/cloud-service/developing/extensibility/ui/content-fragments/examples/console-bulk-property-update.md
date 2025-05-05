@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # プロパティの一括アップデートの例の拡張
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454450?quality=12&learn=on&captions=jpn)
 
 この例の AEM コンテンツフラグメントコンソール拡張機能は、コンテンツフラグメントプロパティを共通の値に一括アップデートする [アクションバー](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) の拡張機能です。
 

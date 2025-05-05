@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media Classic App を使用して安全にプレビューできるよう、Dynamic Media にテスト用画像サーバー（クライアント IP フィルター）の詳細を追加するプロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335462?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418644?quality=12&learn=on&captions=jpn)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe アセットを使用すると、作業中のクリエイティブアプリから直接 AEM Assets をチェックアウトして、すぐに編集を開始できます。Creative Cloud アプリでの編集が完了したら、適切なバージョン管理やコメントを使用して、AEM Assets にアセットを簡単にチェックインすることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38638?quality=12&learn=on&captions=jpn)

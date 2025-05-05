@@ -67,7 +67,7 @@ else
 
 **ルールエディターを使用した項目の追加**
 
->[!VIDEO](https://video.tv.adobe.com/v/26847?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36232?quality=12&learn=on&captions=jpn)
 
 **コードエディターを使用した項目の追加**
 

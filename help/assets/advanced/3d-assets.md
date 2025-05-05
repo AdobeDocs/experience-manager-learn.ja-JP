@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets as a Cloud Serviceでの 3D アセットのサポートについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420690/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423676/?learn=on&captions=jpn)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Sites でのライブコピーとそのブループリントの関係を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36676?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41573?quality=12&learn=on&captions=jpn)

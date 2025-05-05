@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Workbench のメモリパラメーターを調整するプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417903?quality=12&learn=on&captions=jpn)

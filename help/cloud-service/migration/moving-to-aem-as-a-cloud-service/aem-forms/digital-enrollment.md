@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Forms as a Cloud Service がデジタル登録の使用例をサポートする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455135?quality=12&learn=on&captions=jpn)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 メタデータフォルダースキーマを使用すると、アセット上で直接管理するのではなく、アセットフォルダー自体に関連付けられたメタデータを管理および確認できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37295?quality=12&learn=on&captions=jpn)

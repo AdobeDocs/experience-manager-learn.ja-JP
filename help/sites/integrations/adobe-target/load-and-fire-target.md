@@ -24,7 +24,7 @@ ht-degree: 100%
 
 タグルールを使用して、ページリクエストにパラメーターを読み込み、渡して、サイトページから Target 呼び出しを実行する方法について説明します。 web ページの情報を取得し、Adobe Client Data Layer を使用してパラメーターとして渡すことで、web ページでの訪問者の体験に関するデータを収集、保存し、そのデータに容易にアクセスできるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328997?quality=12&learn=on&captions=jpn)
 
 ## ページ読み込みルール
 

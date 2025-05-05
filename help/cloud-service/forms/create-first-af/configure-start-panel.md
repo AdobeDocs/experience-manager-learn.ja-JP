@@ -23,4 +23,4 @@ ht-degree: 100%
 
 リッチテキストエディターを使用して、静的テキストコンポーネント内のテキストのスタイルを設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332235?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440111?quality=12&learn=on&captions=jpn)

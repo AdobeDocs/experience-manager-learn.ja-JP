@@ -23,7 +23,7 @@ ht-degree: 100%
 
 アドビが提供する _AEM Cloud Service CDN ログ分析ツール_と、CDN のパフォーマンスおよび AEM 実装の両方に関するインサイトを取得する上でどのように役立つかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446106?quality=12&learn=on&captions=jpn)
 
 ## 概要
 

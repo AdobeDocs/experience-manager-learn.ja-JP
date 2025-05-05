@@ -27,7 +27,7 @@ Edge Delivery Services の web サイトプロジェクトの開発ツールと�
 
 このビデオでは、ユニバーサルエディターで編集できる Edge Delivery Services の web サイトプロジェクトの開発トポロジの概要について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443979/?learn=on&enablevpops&captions=jpn)
 
 +++その他の開発トポロジの詳細を参照してください
 

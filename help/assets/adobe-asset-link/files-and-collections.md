@@ -22,5 +22,5 @@ ht-degree: 100%
 
 Asset Link パネル内から AEM Assets ファイルおよびコレクションにすばやく簡単にアクセスする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38662?quality=12&learn=on&captions=jpn)
 

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM 6.3 のアダプティブフォームのテーマエディターの改善
 
->[!VIDEO](https://video.tv.adobe.com/v/19497?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39216?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

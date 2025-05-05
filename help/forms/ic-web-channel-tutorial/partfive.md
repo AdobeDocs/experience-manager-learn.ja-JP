@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ここでは、受信者の名前とアドレスを格納するドキュメントフラグメントを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36369?quality=12&learn=on&captions=jpn)
 
 ドキュメントフラグメントには、インタラクティブ通信ドキュメントのテキストコンテンツが格納されます。 このテキストコンテンツは、静的テキストにすることも、基になるデータモデル要素の値から挿入することもできます。 例：{name} 様（「様」は静的テキスト、「{name}」はフォームデータ要素名）。 実行時に、これは name 要素の値に応じて、Gloria Rios 様または John Jacobs 様に解決されます。
 

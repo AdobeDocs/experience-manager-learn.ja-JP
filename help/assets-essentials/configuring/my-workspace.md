@@ -23,4 +23,4 @@ ht-degree: 100%
 
 マイワークスペースのユーザー設定可能なウィジェットを使用して、作業効率を高める方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418580?quality=12&learn=on&captions=jpn)

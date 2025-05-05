@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media Classic アプリでアセットをダウンロードする手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335458?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418100?quality=12&learn=on&captions=jpn)

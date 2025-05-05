@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Adobe Experience Manager Assets のコンテキスト検索を使用して、自然言語クエリでアセットを効率的に見つける方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438951/?learn=on&captions=jpn)
 
 ## コンテキスト検索の切り替え
 

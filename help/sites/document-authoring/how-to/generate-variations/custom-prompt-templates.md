@@ -24,6 +24,6 @@ ht-degree: 100%
 
 Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するカスタムプロンプトテンプレートの構築方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428316/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438500/?learn=on&captions=jpn)
 
 

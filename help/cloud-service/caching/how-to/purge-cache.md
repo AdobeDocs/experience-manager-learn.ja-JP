@@ -25,7 +25,7 @@ AEM as a Cloud Service の CDN からキャッシュされた HTTP 応答をパ�
 
 このチュートリアルでは、「API トークンをパージ」を設定し、セルフサービス機能を使用してサンプル [AEM WKND](https://github.com/adobe/aem-guides-wknd) サイトの CDN キャッシュをパージする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436925?quality=12&learn=on&captions=jpn)
 
 ## キャッシュの無効化と明示的なパージ
 

@@ -27,7 +27,7 @@ Adobe Experience Platform のタグと Adobe Experience Manager を統合する�
 
 Tags は Adobe Experience Platform の次世代タグ管理テクノロジーです。Tags を使用すると、Adobe Analytics、Target、Audience Manager、その他多くのソリューションを簡単にデプロイできるようになります。ここでは、Tags の概要と Adobe Experience Manager との推奨される統合について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445201?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

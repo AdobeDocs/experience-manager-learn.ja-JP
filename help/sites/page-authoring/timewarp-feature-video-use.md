@@ -24,7 +24,7 @@ ht-degree: 100%
 
 タイムワープは Adobe Experience Manager Sites の機能で、過去の特定の時刻ページの状態をすばやく確認できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/17453?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410307?quality=12&learn=on&captions=jpn)
 
 ## 追加のリソース {#more-resources}
 

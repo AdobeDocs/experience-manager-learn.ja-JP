@@ -22,13 +22,13 @@ Adobe Experience Manager（AEM）Assets は、web ベースのリポジトリで
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
 >abstract="必要なアセットを素早く見つけて編集する方法を学びます。"
->additional-url="https://video.tv.adobe.com/v/3427944" text="AEM Assets のウォークスルー"
+>additional-url="https://video.tv.adobe.com/v/3454804?captions=jpn" text="AEM Assets のウォークスルー"
 
 ## AEM Assets のウォークスルー
 
 AEM Assets とは何か、そして組織のビジネス目標を達成するための AEM Assets の使用方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427944?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454804?learn=on&captions=jpn)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

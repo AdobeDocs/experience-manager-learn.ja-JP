@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *この動画では、Forms と出力サービスの変換用のフォントを埋め込む手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436475?quality=12&learn=on&captions=jpn)

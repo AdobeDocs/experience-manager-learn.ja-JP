@@ -40,7 +40,7 @@ ht-degree: 100%
 
 * このビデオでは、ローカルの AEM Forms インスタンスを Adobe Cloud 上で自動フォーム変換サービスに接続するために必要な手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327722?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

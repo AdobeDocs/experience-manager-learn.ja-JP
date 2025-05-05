@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM CDN の使用のパート 2 と、様々なオプションについて詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340994?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448409?quality=12&learn=on&captions=jpn)
 
 ## このシリーズのパート 2 の内容
 

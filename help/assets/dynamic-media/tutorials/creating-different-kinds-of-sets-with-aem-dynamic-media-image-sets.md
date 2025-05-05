@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、AEM Dynamic Media を使用して画像セットを作成するプロセスについて順を追って説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335581?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418633?quality=12&learn=on&captions=jpn)

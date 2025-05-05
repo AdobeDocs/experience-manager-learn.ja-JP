@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Adobe Firefly と統合された Adobe Experience Manager Assets で、空の検索結果を生産性の高いアセット生成エクスペリエンスに変換し、ユーザーがワークフロー内でアセットを簡単に直接見つけてアップロードできるようにする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429070/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438258/?learn=on&captions=jpn)
 
 
 >[!TIP]

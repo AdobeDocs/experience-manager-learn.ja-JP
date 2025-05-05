@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service の透かし処理機能を使用すると、カスタムの画像レンディションを任意の PNG 画像を使用して透かし付けできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/41536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329454?quality=12&learn=on&captions=jpn)

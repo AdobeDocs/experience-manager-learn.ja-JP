@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、JBoss アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418088?quality=12&learn=on&captions=jpn)

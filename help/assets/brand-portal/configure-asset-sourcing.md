@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、アセットソーシングと Brand Portal の連携を設定する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418653?quality=12&learn=on&captions=jpn)

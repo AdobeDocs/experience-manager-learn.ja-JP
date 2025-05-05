@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ローカル開発環境の設定 - このチュートリアルでは、AEM as a Cloud Service SDK を使用して Adobe Experience Manager（AEM）用のローカル開発環境を設定する手順について説明します。AEM Projects の開発、ビルド、コンパイルに必要な開発ツールや、ローカルランタイムが含まれているので、開発者は、Adobe Cloud Manager を使用して AEM as a Cloud Service に新しい機能をデプロイする前に、新しい機能をローカルランタイムですばやく検証できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36511?quality=12&learn=on&captions=jpn)
 
 ![AEM as a Cloud Service ローカル開発環境のテクノロジースタック](./assets/overview/aem-sdk-technology-stack.png)
 

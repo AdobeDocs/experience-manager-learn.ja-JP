@@ -23,10 +23,10 @@ ht-degree: 100%
 
 **アセットパネルの設定**
 
->[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326885?quality=12&learn=on&captions=jpn)
 
 **概要タイトルの設定**
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35439?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media でビデオを処理するためのビデオプロファイルの作成プロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335382?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418095?quality=12&learn=on&captions=jpn)

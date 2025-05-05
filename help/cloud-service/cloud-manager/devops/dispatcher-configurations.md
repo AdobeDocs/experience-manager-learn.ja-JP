@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Dispatcher が AEM as Cloud Service および Cloud Manager でどのように動作するかを調べるには、ベストプラクティスと例を使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345845?quality=12&learn=on&captions=jpn)

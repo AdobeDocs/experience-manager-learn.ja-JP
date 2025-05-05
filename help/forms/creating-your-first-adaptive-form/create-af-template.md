@@ -22,7 +22,7 @@ ht-degree: 100%
 ここで作成したテンプレートは、今後のアダプティブフォームの基礎となります。
 次のビデオでは、アダプティブフォームテンプレートの基本的な作成手順を示します
 
->[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326691?quality=12&learn=on&captions=jpn)
 
 詳しくは、[アダプティブフォームテンプレートドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=ja)を参照してください
 

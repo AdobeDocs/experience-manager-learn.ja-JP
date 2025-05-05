@@ -23,4 +23,4 @@ ht-degree: 100%
 
 前の手順で設定したデータソースに基づいてフォームデータモデルを作成します
 
->[!VIDEO](https://video.tv.adobe.com/v/331756?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411546?quality=12&learn=on&captions=jpn)

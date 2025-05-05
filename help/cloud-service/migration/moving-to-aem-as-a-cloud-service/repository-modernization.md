@@ -21,7 +21,7 @@ ht-degree: 100%
 
 リポジトリの最新化、可変コンテンツと不変コンテンツ、パッケージ構造および Repository Modernizer CLI ツールについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454793?quality=12&learn=on&captions=jpn)
 
 ## Repository Modernizer ツール
 

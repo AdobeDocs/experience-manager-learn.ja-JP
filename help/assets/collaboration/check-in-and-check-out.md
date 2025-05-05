@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アセットのマルチユーザーコラボレーションを容易にする AEM のチェックイン機能およびチェックアウト機能の使用方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36902?quality=12&learn=on&captions=jpn)

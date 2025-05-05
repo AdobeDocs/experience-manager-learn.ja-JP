@@ -23,14 +23,14 @@ ht-degree: 100%
 
 画像用の AEM Assets のスマートタグは、画像アセットに派生メタデータタグを自動的に追加することで AEM Assets の検索を強化し、適切な画像を見つけやすく、迅速にオーサリングできるようにし、オーサリングエクスペリエンスを向上させます。
 
->[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444055?quality=12&learn=on&captions=jpn)
 
 ## AEM 6.x の設定{#set-up}
 
 >[!NOTE]
 > 画像用のスマートタグは、AEM as a Cloud Service 用に自動的にプロビジョニングされます。
 
->[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444166?quality=12&learn=on&captions=jpn)
 
 Adobe I/O で統合を作成してスマートコンテンツサービスを使用する前に、以下の事項を確認します。
 

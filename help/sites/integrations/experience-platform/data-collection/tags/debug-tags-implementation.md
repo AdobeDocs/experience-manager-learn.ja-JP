@@ -24,7 +24,7 @@ ht-degree: 100%
 
 タグ実装のデバッグに使用される一般的なツールと技術について紹介します。 ブラウザーの Developer Console と Experience Platform デバッガー拡張機能を使用して、タグ実装の重要な側面を特定してトラブルシューティングする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327406?quality=12&learn=on&captions=jpn)
 
 ## Satellite オブジェクトを介したクライアントサイドのデバッグ
 

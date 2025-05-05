@@ -22,4 +22,4 @@ ht-degree: 100%
 
 [Adobe Express](https://www.adobe.com/express/) と AEM Assets の統合を使用して、コンテンツサプライチェーンを最適化し、すべてのチームメンバーの生産性とアクセシビリティを高める方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453133/?learn=on&captions=jpn)

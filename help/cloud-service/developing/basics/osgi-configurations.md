@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service で OSGi 設定を定義してデプロイする方法を探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330559?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345874?quality=12&learn=on&captions=jpn)

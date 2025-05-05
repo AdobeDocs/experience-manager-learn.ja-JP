@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM でアセット間の関係を確立および管理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/331107?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346826?quality=12&learn=on&captions=jpn)

@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Dynamic Media と Adobe Analytics をご利用のお客様は、Dynamic Media Viewer 拡張機能を使用して、web サイト上での Dynamic Media Viewer の使用状況を追跡できるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36372?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

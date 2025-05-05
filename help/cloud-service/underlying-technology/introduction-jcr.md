@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager で使用される Java コンテンツリポジトリ（JCR）の概要です。JCR は AEM テクノロジースタックのベースレベルであり、基盤となるコンテンツ永続性、ストレージ、検索、アクセス制御などを担当しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/32030?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37027?quality=12&learn=on&captions=jpn)

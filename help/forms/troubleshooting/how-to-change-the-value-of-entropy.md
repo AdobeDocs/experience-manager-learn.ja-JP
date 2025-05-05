@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、エントロピーの値を変更する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437679?quality=12&learn=on&captions=jpn)

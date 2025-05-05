@@ -25,7 +25,7 @@ ht-degree: 100%
 
 AEM パブリッシュへのマルチオリジンアクセスが必要な場合は、[このドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=ja#dispatcher-configuration)を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40848?quality=12&learn=on&captions=jpn)
 
 このビデオの内容は次のとおりです。
 

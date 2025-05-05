@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、UNIX セットアップでのマルチユーザー PDFG 変換に関する問題のトラブルシューティングについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335549?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418072?quality=12&learn=on&captions=jpn)

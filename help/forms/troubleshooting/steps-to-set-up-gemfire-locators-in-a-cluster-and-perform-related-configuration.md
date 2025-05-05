@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、クラスター内で GemFire ロケーターを設定し、関連する設定を実行する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335544?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417891?quality=12&learn=on&captions=jpn)

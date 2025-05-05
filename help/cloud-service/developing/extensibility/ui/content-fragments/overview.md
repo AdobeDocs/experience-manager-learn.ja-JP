@@ -341,7 +341,7 @@ AEM UI 拡張性コード例のコレクションにようこそ。このリソ�
       <div class="card-image">
         <figure class="image is-16by9">
           <a href="./examples/editor-custom-field.md" title="カスタムフィールド" tabindex="-1">
-            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427585?format=jpeg" alt="カスタムフィールド">
+            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3437635?format=jpeg&captions=jpn" alt="カスタムフィールド">
           </a>
         </figure>
       </div>

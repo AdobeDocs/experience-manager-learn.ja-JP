@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms PDFG 用の Windows セットアップで Acrobat 固有の問題が発生した場合のトラブルシューティング手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418075?quality=12&learn=on&captions=jpn)

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM Assets で監視アセット、フォルダー、またはコレクションが変更された場合に、いつでも通知を受け取る方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439626/?learn=on&captions=jpn)
 
 >[!TIP]
 >

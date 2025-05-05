@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM フォームを XML データソースにバインドする方法を説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439827/?learn=on&captions=jpn)

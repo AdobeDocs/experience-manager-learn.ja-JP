@@ -23,4 +23,4 @@ ht-degree: 100%
 
 エンドユーザーが AdobeAcrobatReader から PDF forms を入力および保存できるように、AEM Forms Reader Extensions を使用する方法を説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439516/?learn=on&captions=jpn)

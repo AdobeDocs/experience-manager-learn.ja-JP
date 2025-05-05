@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM as a Cloud における[可変コンテンツと不変コンテンツ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=ja)の重要性と違い、およびそれが開発方法に与える影響について学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330555?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345904?quality=12&learn=on&captions=jpn)

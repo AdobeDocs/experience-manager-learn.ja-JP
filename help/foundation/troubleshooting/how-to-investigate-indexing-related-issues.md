@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM でのインデックス作成関連の問題を調査する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418654?quality=12&learn=on&captions=jpn)

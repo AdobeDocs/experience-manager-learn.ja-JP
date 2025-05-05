@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM のコンテンツフラグメント UI により、高速フィルタリングを使用してコンテンツフラグメントを簡単に見つけることができます。この機能を使用すると、特定のコンテンツフラグメントをすばやく簡単に見つけることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436697/?learn=on&captions=jpn)

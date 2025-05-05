@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets 用の For Placement Only（FPO）レンディションの作成方法と使用方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38599?quality=12&learn=on&captions=jpn)

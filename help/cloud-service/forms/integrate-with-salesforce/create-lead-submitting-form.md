@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Sales Force フォームデータモデルに基づいてアダプティブフォームを作成し、フォームを送信して Salesforce でのリードの生成をテストします。
 
->[!VIDEO](https://video.tv.adobe.com/v/331758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411564?quality=12&learn=on&captions=jpn)

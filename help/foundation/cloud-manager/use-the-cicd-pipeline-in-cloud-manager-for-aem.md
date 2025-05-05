@@ -30,19 +30,19 @@ Cloud Manager および Cloud Manager プログラムの概要です。
 >
 >これらの動画では、ビルド、テスト、デプロイに要する時間をスピードアップし、視聴時間を短縮しました。完全なパイプラインの実行には通常 45 分以上かかります（必須の 30 分のパフォーマンステストを含む）。プロジェクトのサイズ、AEM インスタンスの数、UAT プロセスの数に応じて異なります。
 
->[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39313?quality=12&learn=on&captions=jpn)
 
 ## CI／CD パイプラインの設定
 
 このビデオでは、Cloud Manager でのプログラムのパイプラインの設定について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39350?quality=12&learn=on&captions=jpn)
 
 ## 失敗のパイプライン実行
 
 このビデオでは、Cloud Manager で必要とされる品質チェックに失敗するコードを使用する CI/CD Pipeline の実行を、 **[!DNL yellow]** リポジトリブランチで行う方法を見ていきます。
 
->[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39355?quality=12&learn=on&captions=jpn)
 
 ## 成功のパイプライン実行
 
@@ -50,7 +50,7 @@ Cloud Manager および Cloud Manager プログラムの概要です。
 
 このビデオでは、Cloud Manager の[!UICONTROL アクティビティ]コンソールについても見てきます。このコンソールでは、アクティブな実行に再度入ることや、完了した実行または失敗した実行を確認することができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39360?quality=12&learn=on&captions=jpn)
 
 ## サポート資料
 

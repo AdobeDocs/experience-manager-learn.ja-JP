@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングでのドキュメントワークフローの使用方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425720/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438291/?learn=on&captions=jpn)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 オープンソース Adobe Experience Manager の基盤テクノロジースタックの一部である、オープンソースの [!DNL RESTful] フレームワーク、[!DNL Sling] の紹介です。
 
->[!VIDEO](https://video.tv.adobe.com/v/32032?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37025?quality=12&learn=on&captions=jpn)

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 作成者向けのドキュメントオーサリングの設定方法に関するガイドです。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438863/?learn=on&captions=jpn)

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM Adaptive Forms での CAPTCHA の追加と使用
 
->[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39206?quality=12&learn=on&captions=jpn)
 
 *このビデオでは、組み込みの AEM CAPTCHA サービスと Google の reCAPTCHA サービスの両方を使用して、AEM Adaptive Forms に CAPTCHA を追加するプロセスを順を追って説明します。*
 

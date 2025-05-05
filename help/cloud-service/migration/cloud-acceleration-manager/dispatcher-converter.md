@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Dispatcher コンバーターが既存の AEM Dispatcher 設定を AEM as a Cloud Service と互換性を持つように自動的に更新する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336695?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441451?quality=12&learn=on&captions=jpn)

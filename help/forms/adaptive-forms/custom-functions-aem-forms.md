@@ -85,4 +85,4 @@ functions.js
 ## カスタム関数の使用
 
 次のビデオでは、アダプティブフォームのルールエディターでカスタム関数を使用する手順について説明します。
->[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445842?quality=12&learn=on&captions=jpn)

@@ -36,7 +36,7 @@ ht-degree: 100%
 
 ## 作ろうとしているもの {#what-build}
 
->[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36015?quality=12&learn=on&captions=jpn)
 
 この章では、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用して、新しい Adobe Experience Manager プロジェクトを生成します。AEM プロジェクトには、Sites の実装に使用する完全なコード、コンテンツ、設定が含まれています。この章で生成されるプロジェクトは、WKND サイトの実装の基礎となり、今後の章で構築されます。
 

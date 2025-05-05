@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、アセットのダウンロードレポートを有効にする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335463?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418645?quality=12&learn=on&captions=jpn)

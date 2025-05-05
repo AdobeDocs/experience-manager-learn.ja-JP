@@ -32,4 +32,4 @@ ht-degree: 100%
 
 次のビデオでは、バッチ設定のトリガーについて説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343708?quality=12&learn=on&captions=jpn)

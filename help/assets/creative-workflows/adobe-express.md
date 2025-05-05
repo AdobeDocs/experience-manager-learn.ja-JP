@@ -22,6 +22,6 @@ ht-degree: 100%
 
 Adobe Express を使用して、Adobe Experience Manager Assets 内でコンテンツを簡単に作成および編集する方法について説明します。このビデオでは、既存アセットの編集と新規アセットの作成の両方を示しながら、コンテンツワークフローの強化について順を追って説明します。すべてのワークフローは、効率性と使いやすさを実現するために効率化されています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444077/?learn=on&captions=jpn)
 
 また、[AEM Assets と Adobe Express のネイティブ統合](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)を設定して、Adobe Express から AEM Assets にシームレスにアクセスする方法についても説明します。

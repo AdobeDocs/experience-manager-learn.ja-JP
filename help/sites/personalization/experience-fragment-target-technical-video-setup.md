@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Adobe Experience Manager 6.4 は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22380?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328891?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

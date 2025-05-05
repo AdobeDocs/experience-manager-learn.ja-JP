@@ -24,4 +24,4 @@ ht-degree: 100%
 
 アセット管理者の検索レールを使用すると、オムニサーチのカスタム条件を使用してアセットを検索できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/35842?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40072?quality=12&learn=on&captions=jpn)

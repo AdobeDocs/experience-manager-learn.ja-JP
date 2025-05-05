@@ -31,11 +31,11 @@ ht-degree: 100%
 
 **フォームをトリガー AEM ワークフローの設定**
 
->[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35440?quality=12&learn=on&captions=jpn)
 
 **ワークフローの手順**
 
->[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35441?quality=12&learn=on&captions=jpn)
 
 **送信者に表示される休暇リクエストフォーム**
 

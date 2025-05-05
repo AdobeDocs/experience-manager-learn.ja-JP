@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、テスト用に FormsIVS と OutputIVS でカスタム XDP およびデータファイルを更新する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439738?quality=12&learn=on&captions=jpn)

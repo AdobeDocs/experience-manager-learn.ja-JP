@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Power Automate ワークフローを使用して、フォームの添付ファイルを抽出し、メールで送信します。
 次の動画では、送信されたデータからフォームの添付ファイルを抽出するために必要な手順を説明しています。
->[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413030?quality=12&learn=on&captions=jpn)
 
 Parse JSON スキーマのステップで使用する必要がある添付ファイルオブジェクトのスキーマは次のとおりです。
 

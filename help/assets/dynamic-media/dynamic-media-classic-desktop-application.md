@@ -22,7 +22,7 @@ ht-degree: 100%
 
 アドビは、ブラウザーと同様のエクスペリエンスと、Adobe Flash Player に依存しない機能的に同等のインターフェイスを備えた、Dynamic Media Classic のデスクトップアプリケーションを導入しました。
 
->[!VIDEO](https://video.tv.adobe.com/v/36645?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327759?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

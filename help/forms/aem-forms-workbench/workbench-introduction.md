@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Forms Workbench のユーザーインターフェイスを順を追って説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3429493/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439798/?learn=on&captions=jpn)

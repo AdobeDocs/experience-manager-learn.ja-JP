@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Assets Dynamic Media の DASH アダプティブストリーミングプロトコルを使用して、配信されたビデオが利用可能な帯域幅に適応し、スムーズな再生エクスペリエンスを実現する仕組みを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429072/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443618/?learn=on&captions=jpn)

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 前の手順で作成した Swagger ファイルを使用して、REST ベースのデータソースを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411552?quality=12&learn=on&captions=jpn)
 
 | 設定 | 値 |
 |---------------------|-----------------------------------------------------------------|

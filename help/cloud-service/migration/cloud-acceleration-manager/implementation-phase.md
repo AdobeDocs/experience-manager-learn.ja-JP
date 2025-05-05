@@ -21,4 +21,4 @@ ht-degree: 100%
 
 主な実装フェーズを確認して理解するか、Cloud Acceleration Manager を使用して AEM as a Cloud Service に移行します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438280?quality=12&learn=on&captions=jpn)

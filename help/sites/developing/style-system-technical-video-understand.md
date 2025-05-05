@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ## スタイルシステム用のコード作成方法について {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40396?quality=12&learn=on&captions=jpn)
 
 提供された AEM パッケージ（**technical-review.sites.style-system-1.0.0.zip**）は、サンプルのタイトルスタイル、We.Retail レイアウトコンテナおよびタイトルコンポーネントのサンプルポリシー、サンプルページをインストールします。
 

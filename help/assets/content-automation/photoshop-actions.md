@@ -23,4 +23,4 @@ ht-degree: 100%
 
 コンテンツ作成者が Creative Cloud API とコンテンツ自動化アドオンを使用して、AEM Assets 内で Photoshop のアクションを実行する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444071?quality=12&learn=on&captions=jpn)

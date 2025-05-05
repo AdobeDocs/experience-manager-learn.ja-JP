@@ -21,7 +21,7 @@ ht-degree: 100%
 
 サードパーティ検索を Edge 配信サービスに統合する最適な方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452594?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース
 

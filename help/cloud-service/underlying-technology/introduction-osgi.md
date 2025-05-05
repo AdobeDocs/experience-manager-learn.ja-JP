@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager の基礎となる [!DNL Java] アプリケーションの動的なモジュール型アーキテクチャである、[!DNL OSGi] の概要について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37026?quality=12&learn=on&captions=jpn)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets の権限管理を使用して、組織がアセットへのアクセスを制御し、ブランドを保護し、コンプライアンスを確保する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345461?quality=12&learn=on&captions=jpn)

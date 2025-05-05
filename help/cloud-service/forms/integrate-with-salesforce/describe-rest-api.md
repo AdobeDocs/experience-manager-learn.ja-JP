@@ -23,6 +23,6 @@ ht-degree: 100%
 
 [OPEN API 2.0 仕様](https://swagger.io/docs/specification/2-0/basic-structure/)を使用した Salesforce REST API について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/331754?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411570?quality=12&learn=on&captions=jpn)
 
 Swagger ファイルは[こちら](assets/sfdc-rest-swagger.zip)からダウンロードできます。 

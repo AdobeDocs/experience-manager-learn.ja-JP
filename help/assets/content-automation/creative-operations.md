@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager Assets as a Cloud Service を Adobe Creative Cloud Service API と統合してアセットを処理するコンテンツ自動化アドオンを使用する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444088?quality=12&learn=on&captions=jpn)

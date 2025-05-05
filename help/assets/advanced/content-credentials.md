@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Assets [コンテンツ資格情報](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/assets-view/content-credentials)で検証可能なメタデータを提供し、デジタルアセットの信頼性と整合性を確保して、コンテンツ作成の信頼性と透明性を促進する仕組みについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441712/?learn=on&enablevpops&captions=jpn)

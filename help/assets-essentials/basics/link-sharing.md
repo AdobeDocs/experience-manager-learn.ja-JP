@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets の共有リンクを使用して、間違ったアセットや情報を共有するリスクを最小限に抑えながら、内部および外部の関係者とアセットを共有する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345008?quality=12&learn=on&captions=jpn)

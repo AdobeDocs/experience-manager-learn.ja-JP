@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service の実装について異なる考え方をする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336956?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454307?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 概要は、Adobe Experience Manager Assets コンテンツ自動処理機能で Photoshop と Lightroom の機能を適用する場合のものです。
 
->[!VIDEO](https://video.tv.adobe.com/v/333197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416777?quality=12&learn=on&captions=jpn)

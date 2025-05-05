@@ -20,4 +20,4 @@ ht-degree: 100%
 
 AEM のコンテンツフラグメントエディターにより、高速フィルタリングを使用してコンテンツフラグメントを簡単に見つけることができます。この機能を使用すると、特定のコンテンツフラグメントをすばやく簡単に見つけることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419311/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436957/?learn=on&captions=jpn)

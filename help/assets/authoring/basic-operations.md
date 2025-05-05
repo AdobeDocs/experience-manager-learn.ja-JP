@@ -23,4 +23,4 @@ ht-degree: 100%
 
 フォルダーの作成方法や、アセットのアップロード、コピー、移動、削除の方法など、AEM Assets の基本的な操作について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32044?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37153?quality=12&learn=on&captions=jpn)

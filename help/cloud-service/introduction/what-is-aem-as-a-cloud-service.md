@@ -24,4 +24,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service および Edge 配信サービスの概要と、配信する価値について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330546?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346162?quality=12&learn=on&captions=jpn)

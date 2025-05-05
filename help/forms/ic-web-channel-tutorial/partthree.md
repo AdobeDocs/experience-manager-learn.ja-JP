@@ -25,7 +25,7 @@ ht-degree: 100%
 
 **AEM Forms 6.5 以降でのフォームデータモデルの作成**
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34418?quality=12&learn=on&captions=jpn)
 
 フォームデータモデルは、正しく設定されたデータソースに依存します。前の手順で設定したデータソースを、このフォームデータモデルの基礎として使用します。
 

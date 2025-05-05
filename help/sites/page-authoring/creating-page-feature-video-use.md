@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Adobe Experience Manager でページテンプレートを使用してサイトページを作成する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37210?quality=12&learn=on&captions=jpn)

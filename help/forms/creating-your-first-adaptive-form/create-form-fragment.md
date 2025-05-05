@@ -21,7 +21,7 @@ ht-degree: 100%
 フラグメントは、フォームの再使用可能な部分です。例えば、住所ブロックや法的情報などがフラグメントになります。フラグメントの使用により、大量のフォームの作成とメンテナンスを簡単に短時間で実行できます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/37325?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326679?quality=12&learn=on&captions=jpn)
 
 
 

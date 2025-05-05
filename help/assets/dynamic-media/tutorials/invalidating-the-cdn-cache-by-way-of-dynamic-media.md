@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media を使用して CDN キャッシュを無効にするプロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335457?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418636?quality=12&learn=on&captions=jpn)

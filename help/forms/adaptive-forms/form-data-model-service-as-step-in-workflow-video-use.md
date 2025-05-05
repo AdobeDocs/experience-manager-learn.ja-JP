@@ -22,7 +22,7 @@ ht-degree: 100%
 AEM Forms 6.4 以降では、フォームデータモデルを AEM ワークフローの一部として使用できるようになりました。次のビデオでは、AEM ワークフローでフォームデータモデルステップを設定するのに必要な手順を説明しています。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330118?quality=12&learn=on&captions=jpn)
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 * [setvalue バンドルをダウンロードしデプロイします](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。これは、メタデータプロパティを設定するカスタム OSGi バンドルです。

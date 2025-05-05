@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、UM セッションタイムアウトを増やす手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335503?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418080?quality=12&learn=on&captions=jpn)

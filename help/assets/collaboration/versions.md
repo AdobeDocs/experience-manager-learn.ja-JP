@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM によるアセットバージョンの作成方法と管理方法を調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32052?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37140?quality=12&learn=on&captions=jpn)

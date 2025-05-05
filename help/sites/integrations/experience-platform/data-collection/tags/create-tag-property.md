@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Adobe Experience Manager と統合するための最小限の設定でタグプロパティを作成する方法を説明します。タグ UI を紹介し、拡張機能、ルールおよび公開ワークフローについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327449?quality=12&learn=on&captions=jpn)
 
 ## タグプロパティの作成
 

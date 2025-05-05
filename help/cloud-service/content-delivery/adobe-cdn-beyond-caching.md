@@ -31,7 +31,7 @@ Adobe CDN では、コンテンツのキャッシュを超える、web サイト
 
 これらの機能は&#x200B;**セルフサービス**&#x200B;機能です。AEM プロジェクトの `cdn.yaml` ファイルで設定され、Cloud Manager 設定パイプラインを使用してデプロイされます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440270?quality=12&learn=on&captions=jpn)
 
 ## CDN でのトラフィックの設定
 

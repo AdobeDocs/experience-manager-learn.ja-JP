@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM のコードリファクタリングツールを使用して、既存の AEM プロジェクトの変換を自動化し、AEM as a Cloud Serviceに対応する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444716?quality=12&learn=on&captions=jpn)

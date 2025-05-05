@@ -21,4 +21,4 @@ ht-degree: 100%
 
 クローズドキャプションは、Dynamic Media でビデオファイルを AEM Assets にアップロードすると自動生成されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446388/?learn=on&captions=jpn)

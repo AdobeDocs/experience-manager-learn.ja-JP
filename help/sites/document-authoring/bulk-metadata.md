@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングでの一括メタデータの処理方法、および技術的な専門知識がなくても一括メタデータを更新できる方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438405/?learn=on&captions=jpn)

@@ -23,7 +23,7 @@ ht-degree: 100%
 署名ドキュメントコンポーネントを使用して AEM ワークフローを作成します。 自動生成された DoR を利用して、署名コンポーネントで署名用に送信します。
 このビデオでは、署名用のドキュメントを送信する効率的なワークフローを作成するために必要な様々な手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327819?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

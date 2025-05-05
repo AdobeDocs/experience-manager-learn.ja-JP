@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Sales Force フォームデータモデルに基づいてアダプティブフォームを作成し、ボタンのクリックイベントで Salesforce でリードの作成をテスト
 
->[!VIDEO](https://video.tv.adobe.com/v/331892?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411582?quality=12&learn=on&captions=jpn)

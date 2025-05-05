@@ -20,7 +20,7 @@ ht-degree: 100%
 
 3 部構成のシリーズの第 1 部では、Cloud Manager の基本を探求し、エクスペリエンス監査機能に足を踏み入れます。
 
->[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449178?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

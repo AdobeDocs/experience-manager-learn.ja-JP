@@ -20,7 +20,7 @@ ht-degree: 100%
 
 オフラインでのリビジョンのクリーンアップを頻繁に行う必要性を軽減する、オンラインでのリビジョンのクリーンアップに関する簡単な概要を紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30039?quality=12&learn=on&captions=jpn)
 
 ## サポート資料
 

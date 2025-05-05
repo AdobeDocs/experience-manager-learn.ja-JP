@@ -22,4 +22,4 @@ ht-degree: 100%
 
 使用可能なタブを移動する方法と、組織のニーズに合わせて設定オプションをカスタマイズする方法について説明します。このビデオは、管理者が様々な設定を理解するのに役立ち、最適なパフォーマンスと組織の目標との整合性を確保する設定の調整方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3439311/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3439312/?learn=on&enablevpops&captions=jpn)

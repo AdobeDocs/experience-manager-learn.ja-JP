@@ -22,4 +22,4 @@ ht-degree: 100%
 
 ライブコピーを作成ウィザードを使用して、ブループリントからサイトのライブコピーを作成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36677?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41581?quality=12&learn=on&captions=jpn)

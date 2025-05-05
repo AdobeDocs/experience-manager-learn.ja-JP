@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、データベースの初期化が機能しない場合に手動で Bootstrap を使用するプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436270?quality=12&learn=on&captions=jpn)

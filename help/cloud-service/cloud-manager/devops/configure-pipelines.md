@@ -27,4 +27,4 @@ ht-degree: 100%
 
 Cloud Manager で様々なタイプのパイプラインと、プロジェクトを成功に導くための設定方法について探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345838?quality=12&learn=on&captions=jpn)

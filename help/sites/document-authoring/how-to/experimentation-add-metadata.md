@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services ドキュメントのオーサリングでの実験のメタデータを追加する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440105/?learn=on&captions=jpn)

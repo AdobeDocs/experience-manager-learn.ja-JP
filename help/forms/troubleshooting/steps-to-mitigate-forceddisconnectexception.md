@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、ForcedDisconnectException を軽減するための考えられる原因と手順を説明します*。
 
->[!VIDEO](https://video.tv.adobe.com/v/335483?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438720?quality=12&learn=on&captions=jpn)

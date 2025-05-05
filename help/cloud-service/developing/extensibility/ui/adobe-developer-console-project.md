@@ -24,7 +24,7 @@ ht-degree: 100%
 
 他の Adobe サービスへのアクセスを定義し、そのデプロイメントを管理する Adobe Developer Console プロジェクトを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442014?quality=12&learn=on&captions=jpn)
 
 >[!IMPORTANT]
 >

@@ -46,7 +46,7 @@ Adobe コンテンツ配信ネットワーク（CDN）を使用する AEM as a C
 
 ## SSL 証明書の生成
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441468?quality=12&learn=on&captions=jpn)
 
 以下 2 つのオプションがあります。
 

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Asset Link を使用すると、クリエイティブユーザーは、InDesign、Photoshop および Illustrator のアプリ内パネルを使用して、AEM Assets に保存されているアセットを参照、検索、チェックアウトおよびチェックインすることができます。Adobe Asset Link パネルの UI とその機能について紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38670?quality=12&learn=on&captions=jpn)

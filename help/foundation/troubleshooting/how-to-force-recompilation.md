@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、すべての Sling スクリプト（jsp、java および sightly）の再コンパイルを強制的に実行する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418642?quality=12&learn=on&captions=jpn)

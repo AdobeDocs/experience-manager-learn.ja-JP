@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager の Dynamic Media 3D サポートにより、インタラクティブな 3D を活用したエクスペリエンスを大規模に簡単にカスタマイズして提供できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/35156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39525?quality=12&learn=on&captions=jpn)

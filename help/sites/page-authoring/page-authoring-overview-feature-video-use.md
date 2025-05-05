@@ -24,7 +24,7 @@ ht-degree: 100%
 
 サイトエディターの UI を使用して Adobe Experience Manager Sites でページを作成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36943?quality=12&learn=on&captions=jpn)
 
 このビデオでは、次の機能を紹介します。
 

@@ -28,4 +28,4 @@ ht-degree: 100%
 1. AEM でテクニカルアカウントのアクセスを設定します。
 1. アクセストークンを使用して HTTP 呼び出しを実行します。
 
->[!VIDEO](https://video.tv.adobe.com/v/334859?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342222?quality=12&learn=on&captions=jpn)

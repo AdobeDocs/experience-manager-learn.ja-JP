@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service の検索インデックス、AEM 6 インデックス定義を変換して AEM as a Cloud Service と互換性を持たせる方法、インデックスを AEM as a Cloud Service にデプロイする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454715?quality=12&learn=on&captions=jpn)
 
 ## インデックスコンバーターツール
 

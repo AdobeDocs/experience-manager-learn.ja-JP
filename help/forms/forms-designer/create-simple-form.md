@@ -23,13 +23,13 @@ ht-degree: 100%
 
 第 1 部 - タイトル、画像、テキストフィールドおよび日付フィールドの追加
 
->[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439727/?learn=on&captions=jpn)
 
 第 2 部 - カスタムオブジェクトおよびフォームフラグメントの追加と作成
 
->[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439582/?learn=on&captions=jpn)
 
 ヘルプコンテンツへのアクセス
 
->[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437233/?learn=on&captions=jpn)
 

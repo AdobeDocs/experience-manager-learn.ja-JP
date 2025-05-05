@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Engineering の Cloud 5 シリーズへようこそ。製品の実装フェーズにおける主な問題の 1 つは、十分な数のコードサンプルや、これらのサンプル、ツールまたは API のライブデモを用意することです。このシリーズの目標は、AEM as a Cloud Service に関する有用な情報を 5 分以内で提供することです。
 
->[!VIDEO](https://video.tv.adobe.com/v/340667?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447824?quality=12&learn=on&captions=jpn)

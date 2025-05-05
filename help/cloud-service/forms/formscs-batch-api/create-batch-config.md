@@ -26,7 +26,7 @@ ht-degree: 100%
 >API 呼び出しを行うには、AEM ユーザーが ```forms-users``` グループに属していることを確認してください。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343701?quality=12&learn=on&captions=jpn)
 
 ## バッチ設定の作成
 

@@ -25,7 +25,7 @@ ht-degree: 100%
 
 AEM Sites には、コンテンツを公開および非公開にするためのオプションがいくつか用意されています。このビデオでは、様々な方法とその機能について説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/32193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36797?quality=12&learn=on&captions=jpn)
 
 AEM Sites には、作成者のワークフローに基づいて、コンテンツを公開および非公開にする方法がいくつか用意されています。
 

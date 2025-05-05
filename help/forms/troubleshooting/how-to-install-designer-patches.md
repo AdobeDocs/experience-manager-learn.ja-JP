@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Designer のパッチをインストールするプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335504?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418073?quality=12&learn=on&captions=jpn)

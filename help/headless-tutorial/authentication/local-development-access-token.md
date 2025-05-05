@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service にプログラムでアクセスする必要がある統合を構築する開発者は、ローカル開発アクティビティを容易にするために、AEM の一時的なアクセストークンを容易かつ迅速に取得する必要があります。このニーズを満たすために、AEM Developer Console を使用して、AEM にプログラムでアクセスするために使用できる一時的なアクセストークンを自己生成できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345203?quality=12&learn=on&captions=jpn)
 
 ## ローカル開発アクセストークンの生成
 

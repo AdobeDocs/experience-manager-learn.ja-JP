@@ -20,7 +20,7 @@ ht-degree: 100%
 
 コンポーネントコンソールは、開発者と管理者が Sites 実装の様々なコンポーネントをすべて一元的に管理できる場所を提供します。 次のビデオでは、コンポーネントコンソールの機能について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/17417?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38282?quality=12&learn=on&captions=jpn)
 
 コンポーネントコンソールには次の機能があります。
 

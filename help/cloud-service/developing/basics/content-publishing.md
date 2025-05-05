@@ -21,4 +21,4 @@ ht-degree: 100%
 
 コンテンツ配布の概念や Adobe パイプラインなど、AEM as a Cloud Service のコンテンツ公開の仕組みを調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346190?quality=12&learn=on&captions=jpn)

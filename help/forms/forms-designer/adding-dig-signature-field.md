@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms へのデジタル署名の追加について説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439527/?learn=on&captions=jpn)

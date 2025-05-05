@@ -22,7 +22,7 @@ ht-degree: 100%
 
 **初めてのアダプティブフォームの作成**
 
->[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327843?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

@@ -289,7 +289,7 @@ Dispatcher ツールのバージョン番号は、Experience Manager よりも�
 
 Apache 設定と Dispatcher 設定のベースラインセットは定期的に強化され、AEM as a Cloud Service SDK バージョンと共にリリースされます。ベストプラクティスとしては、強化されたベースライン設定を AEM プロジェクトに取り込み、[ローカル検証](#validate-configurations)や Cloud Manager パイプラインのエラーを回避するとよいでしょう。`.../dispatcher-sdk-x.x.x/bin` フォルダーの `update_maven.sh` スクリプトを使用して更新します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35078?quality=12&learn=on&captions=jpn)
 
 *このビデオでは説明のために macOS を使用しています。Windows／Linux 版の同等のコマンドを使用すれば、同様の結果を得ることができます。*
 

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Edge Delivery Services 開発用のローカル開発環境の設定方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434732/?learn=on&captions=jpn)
 
 
 ## ビデオで説明されている手順

@@ -49,7 +49,7 @@ ht-degree: 100%
 
 次に、モックアップの構造に合致する新しいテンプレートを AEM で作成します。これは、AEM のローカルインスタンスで行います。以下のビデオで示す手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413000?quality=12&learn=on&captions=jpn)
 
 次のサムネールを使用して、テンプレートを特定できます（または独自のテンプレートをアップロードできます）。
 
@@ -66,7 +66,7 @@ ht-degree: 100%
 
 Site テンプレートから、ヘッダーとフッターが生成されました。次に、モックアップと一致するようにエクスペリエンスフラグメントを更新します。以下のビデオの手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447800?quality=12&learn=on&captions=jpn)
 
 ビデオの大まかな手順は次のとおりです。
 
@@ -78,7 +78,7 @@ Site テンプレートから、ヘッダーとフッターが生成されまし
 
 次に、Magazine Article Page テンプレートを使用して新しいページを作成します。サイトのモックアップと一致するようにページのコンテンツを作成します。以下のビデオの手順に従います。
 
->[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343314?quality=12&learn=on&captions=jpn)
 
 [用意されているテキスト](./assets/page-templates/la-skateparks-copy.txt)を記事の本文に入力します。
 

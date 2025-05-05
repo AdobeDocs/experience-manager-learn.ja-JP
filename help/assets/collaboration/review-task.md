@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets のレビュータスクが、最も一般的なレビューおよび承認ワークフローをスムーズにする方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32050?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36756?quality=12&learn=on&captions=jpn)

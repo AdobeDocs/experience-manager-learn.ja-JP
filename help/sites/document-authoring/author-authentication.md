@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services を使用したドキュメントのオーサリングで、AEM Sidekick 経由でオーサー認証を設定する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429594/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438179/?learn=on&captions=jpn)

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Acrobat Sign プラットフォームと統合するには、Acrobat Sign 上で API アプリケーションを作成する必要があります。API アプリケーションは、クライアントアプリケーションの代表として、Acrobat Sign プラットフォームとやり取りします。API アプリケーションは、顧客ドメインまたはパートナードメインで作成できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411764?quality=12&learn=on&captions=jpn)

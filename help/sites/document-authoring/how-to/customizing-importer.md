@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services を使用したドキュメントオーサリングへのサイト移行中に、AEM インポーターをカスタマイズして、効率と精度を最大化する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429596/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444246/?learn=on&captions=jpn)

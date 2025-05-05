@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms Designer でのスクリプトの作成とテストについて説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443708/?learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Forms Assembler サービスで PDF/A 変換と検証の問題をトラブルシューティングするために必要な情報を取得する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439193?quality=12&learn=on&captions=jpn)

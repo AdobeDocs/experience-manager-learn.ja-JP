@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アダプティブフォームの送信時に Power Automate フローを起動します。次のビデオでは、Forms CS を設定して Microsoft Power Automate と統合するために必要な手順を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412132?quality=12&learn=on&captions=jpn)

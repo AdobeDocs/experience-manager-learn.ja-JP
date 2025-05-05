@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Sites と Edge Delivery Services のエッジワーカーの重要性と、それらをバックエンドシステムと統合する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448116?learn=on&captions=jpn)
 
 ## その他のリソース
 

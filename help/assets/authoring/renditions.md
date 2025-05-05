@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets のレンディションと、そのプレビュー方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36968?quality=12&learn=on&captions=jpn)

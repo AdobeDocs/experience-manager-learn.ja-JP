@@ -23,4 +23,4 @@ ht-degree: 100%
 
 すぐに使用できるテンプレートや、好みに合わせてカスタマイズできるテンプレートがいくつか用意されています。テンプレートは、AEM Forms Designer 内で作成および管理することもできます。空のページ、テンプレート、スプレッドシート、PDF、Microsoft Word のファイルから開始できます。このビデオでは、これらのすべてのオプションと、すぐに使用できるものについて説明します
 
->[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439147/?learn=on&captions=jpn)

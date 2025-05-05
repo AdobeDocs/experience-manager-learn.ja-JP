@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Adobe Experience Manager Forms as a cloud service と Salesforce の統合の概要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/331891?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411576?quality=12&learn=on&captions=jpn)

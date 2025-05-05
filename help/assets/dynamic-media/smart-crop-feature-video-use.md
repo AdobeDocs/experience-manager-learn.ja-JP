@@ -21,7 +21,7 @@ ht-degree: 100%
 
 スマート切り抜きでは Adobe Sensei を使用して、レスポンシブデザインでのコンテンツの切り抜きにおける時間とコストのかかるタスクを排除します。
 
->[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40412?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

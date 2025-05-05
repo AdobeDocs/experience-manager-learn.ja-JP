@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、HAR（HTTP アーカイブ）ログを取得する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335488?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417889?quality=12&learn=on&captions=jpn)

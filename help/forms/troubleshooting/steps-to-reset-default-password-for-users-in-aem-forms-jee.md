@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms JEE で管理者のデフォルトパスワードをリセットする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335541?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418090?quality=12&learn=on&captions=jpn)

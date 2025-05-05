@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets のナビゲーションの基本を解説します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37096?quality=12&learn=on&captions=jpn)

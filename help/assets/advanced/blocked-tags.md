@@ -23,4 +23,4 @@ ht-degree: 100%
 
 ブロックしたタグを使用して文化的に機密性が高いスマートタグ、不適切なスマートタグ、物議を醸すスマートタグなどの適用を防止することで、AEM as a Cloud Service でのアセット管理を強化する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448501/?learn=on&captions=jpn)

@@ -29,11 +29,11 @@ AEM Forms で複数系列のグラフを作成するには、必要なエンテ�
 
 ## 複数系列グラフ用のフォームデータモデルの作成
 
->[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35442?quality=12&learn=on&captions=jpn)
 
 ### 線系列グラフの設定
 
->[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35443?quality=12&learn=on&captions=jpn)
 
 お使いのシステムでこれをテストするには、次の手順に従ってください。
 

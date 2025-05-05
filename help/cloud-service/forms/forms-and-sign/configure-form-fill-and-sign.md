@@ -25,4 +25,4 @@ ht-degree: 100%
 
 このビデオでは、フォームの入力者と署名者が同じ人物である場合のフォームを設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332439?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411758?quality=12&learn=on&captions=jpn)

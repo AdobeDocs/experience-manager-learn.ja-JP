@@ -21,7 +21,7 @@ ht-degree: 100%
 
 契約段階から Cloud Manager を使用した環境のセットアップまで、AEM as a Cloud Service へのオンボーディングについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431504?quality=12&learn=on&captions=jpn)
 
 ## Cloud Manager および Admin Console
 

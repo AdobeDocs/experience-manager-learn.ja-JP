@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM Assets をドキュメントオーサリングと統合して、Edge Delivery Services で優れたエクスペリエンスを提供する方法について確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428302/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448941/?quality=12&learn=on&captions=jpn)
 
 
 ## その他のリソース

@@ -28,8 +28,8 @@ ht-degree: 100%
 
 ## 月給計算済み要素の作成
 
->[!VIDEO](https://video.tv.adobe.com/v/23855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40404?quality=12&learn=on&captions=jpn)
 
 ### StateandZip 計算済み要素の作成
 
->[!VIDEO](https://video.tv.adobe.com/v/23856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40406?quality=12&learn=on&captions=jpn)

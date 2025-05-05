@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ## ユースケースのデモ
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437306?quality=12&learn=on&captions=jpn)
 
 このチュートリアルでは、[Geonames REST API](https://www.geonames.org/export/web-services.html) を使用して、この機能を試すことができます。
 この種のサービスを提供する組織は多数あり、REST API が詳細に文書化されている限り、データ統合機能を使用して AEM Forms と簡単に統合できます

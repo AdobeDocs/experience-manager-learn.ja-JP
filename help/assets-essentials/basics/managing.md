@@ -22,4 +22,4 @@ ht-degree: 100%
 
 フォルダー構造の作成の基本と、移動、コピー、名前変更、コレクションなどの基本的な操作について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335733?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413852?quality=12&learn=on&captions=jpn)

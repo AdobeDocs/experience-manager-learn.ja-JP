@@ -24,7 +24,7 @@ AEM のクラウドサービス設定を使用すると、AEM と他のクラウ
 
 次のビデオでは、AEM と Acrobat Sign を統合するためのクラウドサービス設定を作成するために必要な手順を説明します
 
->[!VIDEO](https://video.tv.adobe.com/v/38179?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327827?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

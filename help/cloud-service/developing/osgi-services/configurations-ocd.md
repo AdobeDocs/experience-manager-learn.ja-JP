@@ -20,7 +20,7 @@ ht-degree: 100%
 
 OSGi サービスで ObjectClassDefinitions を OSGi 設定表現として作成および指定する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335730?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418097?quality=12&learn=on&captions=jpn)
 
 ## リソース
 

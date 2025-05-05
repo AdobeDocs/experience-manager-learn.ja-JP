@@ -28,7 +28,7 @@ ht-degree: 100%
 
 AEM オーサーサービスへのアクセスを必要とするユーザーは、[AdobeAdmin Console](https://adminconsole.adobe.com) で [Adobe IMS ユーザー](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)として管理されます。Adobe IMS ユーザーとは何か、および Admin Console での Adobe IMS ユーザーへのアクセス方法や管理方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327558?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース
 

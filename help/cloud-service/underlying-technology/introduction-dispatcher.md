@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM アーキテクチャの一部としての [!DNL dispatcher] の機能と特徴を紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32029?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37029?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース {#additional-resources}
 

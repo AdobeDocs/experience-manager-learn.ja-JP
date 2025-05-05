@@ -24,4 +24,4 @@ ht-degree: 100%
 
 AEM Forms のワークフローコンポーネントを使用して、ワークフローモデルを作成します。状態変数の値に基づいてワークフローを分岐するには、OR 分岐コンポーネントを使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453192?quality=12&learn=on&captions=jpn)

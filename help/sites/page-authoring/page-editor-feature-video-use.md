@@ -26,7 +26,7 @@ AEM Site のページエディターは、web コンテンツを作成および�
 
 次のビデオでは、ページエディターの主な機能の一部について重点的に説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37194?quality=12&learn=on&captions=jpn)
 
 
 [ページエディターの機能の完全な概要については、AEM ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=ja)を参照してください。

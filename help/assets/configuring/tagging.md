@@ -23,4 +23,4 @@ ht-degree: 100%
 
 タグは、Assets のフォルダー階層全体でアセットを管理するための不可欠なツールです。タグ付け分類の確立は、ユーザーが AEM でアセットを検出および整理できるようにするうえで重要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37313?quality=12&learn=on&captions=jpn)

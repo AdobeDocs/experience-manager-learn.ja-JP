@@ -23,4 +23,4 @@ ht-degree: 100%
 
 [AEM Sidekick](./sidekick.md) を使用した Edge Delivery Services で、コンテンツをプレビューおよび公開します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425714/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434710/?learn=on&captions=jpn)

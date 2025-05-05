@@ -25,7 +25,7 @@ Adobe Experience Manager as a Cloud Service を使用した開発が初めての
 
 ## WKND 開発者向けチュートリアル {#wknd-developer-tutorial}
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330918?quality=12&learn=on&captions=jpn)
 
 このチュートリアルは **AEM as a Cloud Service** で動作するように設計されており、**AEM 6.5 以降**&#x200B;および **AEM 6.4.2 以降**&#x200B;と下位互換性があります。
 
@@ -35,7 +35,7 @@ Adobe Experience Manager as a Cloud Service を使用した開発が初めての
 
 WKND チュートリアルを完了したら、次のビデオで、WKND プロジェクトを AEM as a Cloud Service にデプロイする方法の概要をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34668?quality=12&learn=on&captions=jpn)
 
 このビデオでは、WKND サイトプロジェクトに関する以下の方法を示します。
 

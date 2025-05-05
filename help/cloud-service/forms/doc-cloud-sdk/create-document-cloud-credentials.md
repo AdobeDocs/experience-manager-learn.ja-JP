@@ -27,4 +27,4 @@ ht-degree: 100%
 
 ビデオに従って Adobe I/O プロジェクトを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/333220?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440093?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service で [AEM Maven プロジェクト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=ja#developing)を構築するためのベストプラクティスを探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330557?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345890?quality=12&learn=on&captions=jpn)

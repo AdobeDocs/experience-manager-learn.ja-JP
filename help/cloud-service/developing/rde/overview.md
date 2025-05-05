@@ -27,7 +27,7 @@ AEM as a Cloud Service の迅速な開発環境（RDE）について説明しま
 - RDE とは
 - 開発からデプロイまでのサイクルの短縮にどう役立つか
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453599?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

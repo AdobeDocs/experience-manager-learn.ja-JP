@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Adobe Firefly を使用して、Edge Delivery Services ドキュメントのオーサリングで適切なオーディエンスをターゲットにするコンテンツのバリエーションで使用する画像を作成する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438357/?learn=on&captions=jpn)

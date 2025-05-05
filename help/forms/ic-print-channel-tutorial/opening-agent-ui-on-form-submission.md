@@ -26,7 +26,7 @@ ht-degree: 100%
 
 次のビデオでは、使用例を示します
 
->[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328989?quality=12&learn=on&captions=jpn)
 
 ```java
 String accountNumber = request.getParameter("accountnumber"))

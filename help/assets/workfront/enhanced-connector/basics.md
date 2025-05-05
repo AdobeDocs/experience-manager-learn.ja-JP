@@ -31,4 +31,4 @@ ht-degree: 100%
 + アセットのバージョン管理
 + アセットの自動公開
 
->[!VIDEO](https://video.tv.adobe.com/v/337575?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454294?quality=12&learn=on&captions=jpn)

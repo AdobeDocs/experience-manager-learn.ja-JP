@@ -24,7 +24,7 @@ ht-degree: 100%
 >
 > 以下のビデオは AEM 6.3 で録画されました。AEM 6.4 以降では、翻訳ルール XML ファイルを保存するための新しいリポジトリ構造を導入しました。AEM 6.4 以降で翻訳設定 UI を使用する場合、ルールは `/conf/global/settings/translation/rules/translation_rules.xml` の場所に保存されます。詳しくは、[翻訳するコンテンツの識別](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/tc-rules.html?lang=ja-JP) を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38440?quality=12&learn=on&captions=jpn)
 
 翻訳ルールは、翻訳用に抽出される AEM 内のコンテンツを識別します。標準搭載の翻訳ルールは、テキストコンポーネントや画像コンポーネントの代替テキストなど、一般的なユースケースに対応します。プロジェクトの翻訳要件に応じて、追加のルールが必要になる場合があります。一般的な翻訳ルールでは、ユーザーは次の項目を指定できます。
 

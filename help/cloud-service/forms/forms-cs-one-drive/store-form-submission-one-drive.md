@@ -22,4 +22,4 @@ ht-degree: 100%
 
 アダプティブフォームデータを Microsoft OneDrive に保存します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415792/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431101/?quality=12&learn=on&captions=jpn)

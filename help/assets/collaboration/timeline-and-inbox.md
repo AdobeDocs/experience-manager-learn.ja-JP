@@ -24,4 +24,4 @@ ht-degree: 100%
 
 共同作業に使用される、AEM Assets の主要な web コンソールについて理解します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36795?quality=12&learn=on&captions=jpn)

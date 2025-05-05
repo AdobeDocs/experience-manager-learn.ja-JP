@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、User Management でユーザーとグループを追加するプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335485?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418081?quality=12&learn=on&captions=jpn)

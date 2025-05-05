@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Forms PDFG サービスにおけるサーバー変換とサーバーグローバルタイムアウトの更新手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335514?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418070?quality=12&learn=on&captions=jpn)

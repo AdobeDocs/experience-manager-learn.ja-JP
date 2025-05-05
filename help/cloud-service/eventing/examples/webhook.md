@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449749?quality=12&learn=on&captions=jpn)
 
 この例では、アドビが提供する&#x200B;_ホストされた web フック_&#x200B;を使用することで、独自の web フックを設定しなくても AEM イベントを受け取ることができます。このアドビが提供する web フックは、[Glitch](https://glitch.com/) でホストされています。Glitch は、web アプリケーションの構築とデプロイに役立つ web ベースの環境を提供することで知られるプラットフォームです。ただし、希望する場合は独自の web フックを使用することもできます。
 

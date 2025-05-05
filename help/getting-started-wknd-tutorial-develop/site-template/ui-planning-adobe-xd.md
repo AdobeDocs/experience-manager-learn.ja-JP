@@ -51,7 +51,7 @@ ht-degree: 100%
 
 ## WKND UI キット {#wknd-ui-kit}
 
->[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36098?quality=12&learn=on&captions=jpn)
 
 大まかな手順：
 

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms PDFG 用の UNIX セットアップで OpenOffice 固有のエラーが発生した場合のトラブルシューティング手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417905?quality=12&learn=on&captions=jpn)

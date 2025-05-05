@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、AEM Dynamic Media 設定を削除する手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335363?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418641?quality=12&learn=on&captions=jpn)

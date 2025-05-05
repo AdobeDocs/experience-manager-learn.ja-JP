@@ -45,7 +45,7 @@ ht-degree: 100%
 
 次のビデオでは、このチュートリアルで扱う概念の大まかな概要を説明しています。このチュートリアルでは、より高度なデータタイプを使用したコンテンツフラグメントモデルの定義、コンテンツフラグメントのネスト、AEM への GraphQL クエリの永続化について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446128?quality=12&learn=on&captions=jpn)
 
 >[!CAUTION]
 >

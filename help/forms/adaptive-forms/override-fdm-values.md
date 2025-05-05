@@ -32,4 +32,4 @@ AEM Forms 6.5.13 では、フォームデータモデルのプロパティをオ
 
 >[!NOTE]
 >このビデオで紹介している機能には、AEM Forms 6.5.13 が必要です。
->[!VIDEO](https://video.tv.adobe.com/v/343762?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410231?quality=12&learn=on&captions=jpn)

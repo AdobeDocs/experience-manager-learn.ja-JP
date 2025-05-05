@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Experience Manager Assets コンテンツハブでアセットをアップロードし、タグを適用し、承認ワークフローを理解する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450283/?learn=on&captions=jpn)

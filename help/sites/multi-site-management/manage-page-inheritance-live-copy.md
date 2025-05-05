@@ -21,4 +21,4 @@ ht-degree: 100%
 # ページでライブコピーの継承を管理する {#manage-live-copy-page}
 
 ページレベルでライブコピーとそのブループリント間の継承を管理する方法を説明します。
->[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41590?quality=12&learn=on&captions=jpn)

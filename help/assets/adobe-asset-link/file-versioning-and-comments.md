@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Asset Link パネルを使用すると、AEM Assets のアセットのファイル詳細（サムネール、基本メタデータ、バージョンなど）にパネル内からアクセスできます。ファイルのバージョンを作成、プレビュー、比較する方法について確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38629?quality=12&learn=on&captions=jpn)

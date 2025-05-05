@@ -48,7 +48,7 @@ ht-degree: 100%
 >
 > 前の章を正常に完了した場合は、プロジェクトを再利用して、スタータープロジェクトをチェックアウトする手順をスキップできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345304?quality=12&learn=on&captions=jpn)
 
 新しいコマンドラインターミナルを開き、以下のアクションを実行します。
 
@@ -88,7 +88,7 @@ ht-degree: 100%
 
 コンポーネントは、web ページの小さなモジュール型構築ブロックと考えることができます。 コンポーネントを再利用するには、コンポーネントを設定可能にする必要があります。 これは、オーサーダイアログを通じて実行します。次に、簡単なコンポーネントを作成して、ダイアログ内の値が AEM にどのように保持されるかを調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345294?quality=12&learn=on&captions=jpn)
 
 上記のビデオで実行している大まかな手順を以下に示します。
 
@@ -106,7 +106,7 @@ HTML テンプレート言語（**[HTL](https://experienceleague.adobe.com/docs/
 
 次に、テキストメッセージの前に追加の挨拶を表示するように `HelloWorld` HTL スクリプトを更新します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345287?quality=12&learn=on&captions=jpn)
 
 上記のビデオで実行している大まかな手順を以下に示します。
 
@@ -176,7 +176,7 @@ Sling モデルは、JCR から Java™ 変数へのデータのマッピング�
 
 次に、JCR に格納された値にビジネスロジックを適用してから値をページに出力するため、`HelloWorldModel` Sling モデルを少し更新します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36150?quality=12&learn=on&captions=jpn)
 
 1. ファイル `HelloWorldModel.java`（`HelloWorld` コンポーネントで使用される Sling モデル）を開きます。
 
@@ -289,7 +289,7 @@ Sling モデルは、JCR から Java™ 変数へのデータのマッピング�
 
 次に、 `HelloWorld` コンポーネントの CSS スタイルを更新します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344336?quality=12&learn=on&captions=jpn)
 
 上記のビデオで実行している大まかな手順を以下に示します。
 

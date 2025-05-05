@@ -47,11 +47,11 @@ XML 変数を使用すると、アダプティブフォームにデータを事�
 
 **XML 変数とスキーマのマッピング。 この機能は、AEM Forms 6.5.1 以降で使用します。**
 
->[!VIDEO](https://video.tv.adobe.com/v/28098?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35348?quality=12&learn=on&captions=jpn)
 
 #### 送信メールでの変数の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/26441?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35349?quality=12&learn=on&captions=jpn)
 
 お使いのシステムでアセットを動作させるには、次の手順に従ってください。
 

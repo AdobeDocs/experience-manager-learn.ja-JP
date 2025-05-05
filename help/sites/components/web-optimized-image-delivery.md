@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM コアコンポーネントを使用して、AEM as a Cloud Service のサイトで web に最適化された画像配信を有効にする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449993?quality=12&learn=on&captions=jpn)

@@ -21,7 +21,7 @@ ht-degree: 100%
 
 組み込みの SSL ウィザードを使用して、Adobe Experience Manager で SSL を設定し、HTTPS で実行する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37918?quality=12&learn=on&captions=jpn)
 
 
 >[!NOTE]

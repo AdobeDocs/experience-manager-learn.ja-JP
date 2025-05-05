@@ -24,4 +24,4 @@ ht-degree: 100%
 
 CSV ファイルオーディエンスを使用して、Edge Delivery Services ドキュメントのオーサリングで関連コンテンツを持つ適切なオーディエンスをターゲットにする方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436882/?learn=on&captions=jpn)

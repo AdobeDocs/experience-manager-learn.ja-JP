@@ -26,7 +26,7 @@ ht-degree: 100%
 
 タグを使用して Adobe Target を AEM web サイトで有効にする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329005?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

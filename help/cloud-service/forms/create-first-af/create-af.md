@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アダプティブフォームを作成し、作成したテーマに関連付けます。
 
->[!VIDEO](https://video.tv.adobe.com/v/332237?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424907?quality=12&learn=on&captions=jpn)

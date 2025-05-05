@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Edge 配信サービスでのクエリインデックスと、データセットを操作および並べ替えるための Excel 数式の書き込み方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427787/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453764/?learn=on&captions=jpn)
 
 ## その他のリソース
 

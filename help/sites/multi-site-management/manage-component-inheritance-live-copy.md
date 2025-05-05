@@ -22,4 +22,4 @@ ht-degree: 100%
 
 コンポーネントレベルでライブコピーとそのブループリント間の継承を管理する方法を理解します
 
->[!VIDEO](https://video.tv.adobe.com/v/36678?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41598?quality=12&learn=on&captions=jpn)

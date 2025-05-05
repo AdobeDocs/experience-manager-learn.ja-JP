@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Assets as a Cloud Service の Asset Compute マイクロサービスで、従来の AEM ワークフローのこの役割に代わって、アセットに関するレンディションを自動的かつ効率的に生成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454285?quality=12&learn=on&captions=jpn)
 
 ## ワークフロー移行ツール
 

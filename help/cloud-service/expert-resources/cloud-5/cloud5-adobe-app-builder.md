@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Amol Anand が、Adobe App Builder との統合の概要と、使用する場所とタイミングの内幕を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448751?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

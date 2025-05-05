@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms JEE のサービスのトランザクションタイムアウトを変更する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436796?quality=12&learn=on&captions=jpn)

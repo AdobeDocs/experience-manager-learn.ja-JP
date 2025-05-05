@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEMドキュメントのオーサリングを使用して作成したドキュメントを監査する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425722/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437712/?learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Maven プロジェクトアーキタイプを使用して新しい AEM アプリケーションプロジェクトを作成することで、ベストプラクティスに適合させ、AEM 開発を迅速に開始できるようにする方法を探ります。
 
->[!VIDEO](https://video.tv.adobe.com/v/330551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345911?quality=12&learn=on&captions=jpn)

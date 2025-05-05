@@ -28,15 +28,15 @@ ht-degree: 100%
 
 ## ドロップダウンリストに入力する関数 {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326877?quality=12&learn=on&captions=jpn)
 
 ### パネルの概要タイトルを設定する {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35439?quality=12&learn=on&captions=jpn)
 
 #### パネルを検証する {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35438?quality=12&learn=on&captions=jpn)
 
 次に、パネルのフィールドを検証するためのコードを示します
 

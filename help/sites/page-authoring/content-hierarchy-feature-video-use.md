@@ -24,4 +24,4 @@ ht-degree: 100%
 
 AEM Sitesで組織のサイトページを作成および整理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/31785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410350?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、ヘルプメニューから Workbench ログを収集するプロセスを順を追って説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417899?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、FormsIVS および OutputIVS サンプルを使用して UI から読み込みテストを実行する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441466?quality=12&learn=on&captions=jpn)

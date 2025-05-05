@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Experience Manager as a Cloud Service における Cloud Acceleration Manager のナビゲーションエクスペリエンスを探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336698?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446723?quality=12&learn=on&captions=jpn)

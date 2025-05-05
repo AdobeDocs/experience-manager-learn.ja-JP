@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Mediaで画像プリセットを作成する手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418637?quality=12&learn=on&captions=jpn)

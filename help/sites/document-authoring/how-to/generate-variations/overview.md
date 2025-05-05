@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services でバリエーションを生成する概要と、それがマーケターにとってどのように役立つかを理解します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438555/?learn=on&captions=jpn)

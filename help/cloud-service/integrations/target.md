@@ -25,7 +25,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントを Adobe Target に書き出すことで AEM ヘッドレスを Adobe Target と統合し、それらのコンテンツフラグメントと Adobe Experience Platform Web SDK の alloy.js を使用してヘッドレスエクスペリエンスをパーソナライズする方法を説明します。[React WKND アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=ja)を使用して、WKND アドベンチャーを促進するために、コンテンツフラグメントオファーを使用してパーソナライズされた Target アクティビティをエクスペリエンスに追加する方法を探索します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422155/?quality=12&learn=on&captions=jpn)
 
 このチュートリアルでは、AEM と Adobe Target の設定に関する手順を説明します。
 
@@ -50,7 +50,7 @@ Adobe Target Cloud Service は、コンテンツフラグメントを Adobe Targ
 
 Adobe Target Cloud Service を作成する手順については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja)を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422650/?quality=12&learn=on&captions=jpn)
 
 
 ## アセットフォルダーの設定{#configure-asset-folders}
@@ -71,7 +71,7 @@ Adobe Target Cloud Service を作成する手順については、[ドキュメ�
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422658/?quality=12&learn=on&captions=jpn)
 
 ## AEM Target 統合の権限{#permission}
 
@@ -90,7 +90,7 @@ Adobe Target Cloud Service を作成する手順については、[ドキュメ�
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441973/?quality=12&learn=on&captions=jpn)
 
 ## Target へのコンテンツフラグメントの書き出し{#export-content-fragments}
 
@@ -121,7 +121,7 @@ Adobe Target Cloud Service を作成する手順については、[ドキュメ�
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422674/?quality=12&learn=on&captions=jpn)
 
 ## コンテンツフラグメントオファーを使用した Target アクティビティ{#activity}
 
@@ -160,7 +160,7 @@ Adobe Target では、コンテンツフラグメントオファー JSON をコ�
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444782/?quality=12&learn=on&captions=jpn)
 
 ## Experience Platform データストリーム ID{#datastream-id}
 
@@ -190,7 +190,7 @@ AEM ヘッドレスアプリで [Adobe Web SDK](https://experienceleague.adobe.c
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422177/?quality=12&learn=on&captions=jpn)
 
 ## AEM ヘッドレスアプリへのパーソナライゼーションの追加{#code}
 

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Photoshop Express を使用して、アセットのアップロード、バージョンの作成、アセットの編集を行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444003?quality=12&learn=on&captions=jpn)

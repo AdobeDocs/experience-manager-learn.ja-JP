@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service の一部として提供される CDN について、どのような機能があるのか、独自の CDN をもたらすのかどうかなどを深く掘り下げます。これは全 2 部のうちの第 1 部です。
 
->[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447838?quality=12&learn=on&captions=jpn)
 
 ## このシリーズの第 1 部で説明されるコンテンツ
 

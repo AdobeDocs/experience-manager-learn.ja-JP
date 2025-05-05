@@ -24,4 +24,4 @@ Cloud Manager では、プログラムのアクティビティの表示を統合
 
 また、Cloud Manager では、ユーザー単位で [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html?lang=ja) と統合し、興味のあるイベントやアクションをどこにでも表示できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34278?quality=12&learn=on&captions=jpn)

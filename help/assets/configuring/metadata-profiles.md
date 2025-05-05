@@ -23,4 +23,4 @@ ht-degree: 100%
 
 メタデータプロファイルを使用すると、デフォルトのメタデータをアセットフォルダー内のアセットに自動的に適用でき、AEM ユーザーに対するメタデータ管理の負担を軽減し、メタデータの一貫性を向上できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/33974?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37280?quality=12&learn=on&captions=jpn)

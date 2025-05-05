@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、UNIX 設定（WebKit 変換）での HtmltoPDF 固有の問題をトラブルシューティングするプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418078?quality=12&learn=on&captions=jpn)

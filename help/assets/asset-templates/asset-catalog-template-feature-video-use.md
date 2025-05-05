@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM 6.4 のカタログ機能強化は、AEM アセットテンプレートと InDesign Server を使用してカタログページを作成する機能を提供します。ユーザーは、InDesign テンプレートを使用してカタログページを作成し、製品プロパティを編集可能なフィールドにマッピングできます。後でこれを使用して、様々な製品について同様のページを作成できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39303?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

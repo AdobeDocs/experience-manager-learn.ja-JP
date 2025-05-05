@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Dynamic Media ビデオプレーヤーは、デスクトップクライアントやブラウザーでのアダプティブビデオストリーミングをサポートするために Flash ランタイムに依存していましたが、Flash ベースのコンテンツストリーミングを積極的に導入するようになりました。HLS（Apple の HTTP ライブストリーミングビデオ配信プロトコル）の導入に伴い、Flash に依存せずにコンテンツをストリーミングできるようになりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38016?quality=12&learn=on&captions=jpn)
 
 ## Flash に依存しないビデオプレーヤーの概要 {#quick-look-into-non-flash-video-player}
 

@@ -22,7 +22,7 @@ ht-degree: 100%
 子パネルをルートパネルに追加します。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326913?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >子パネルをルートパネルに追加する場合は、**編集モードになっていることを確認します。編集ボタンは、ブラウザーの右上にあります。**

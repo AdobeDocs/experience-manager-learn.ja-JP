@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、AEM Sites の web ページで Dynamic Media 対応のコアコンポーネントを使用するプロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335461?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418091?quality=12&learn=on&captions=jpn)

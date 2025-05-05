@@ -24,7 +24,7 @@ AEM UI 拡張機能は、拡張機能が属する Adobe 組織内の任意の AE
 
 拡張機能のテストは、そのリクエストに対してのみ、AEM に拡張機能を読み込むように指示する、特別に作成された URL を介して行われます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417482?quality=12&learn=on&captions=jpn)
 
 >[!IMPORTANT]
 >

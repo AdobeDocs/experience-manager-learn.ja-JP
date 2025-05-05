@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM as a Cloud Service のコンテンツフラグメントオーサリングコンソールの基本的な機能について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449332?quality=12&learn=on&captions=jpn)

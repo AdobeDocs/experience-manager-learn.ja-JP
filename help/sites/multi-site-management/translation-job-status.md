@@ -22,4 +22,4 @@ ht-degree: 100%
 
 翻訳ジョブまたはジョブ内の項目に関連付けられた様々なステータスを理解します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36685?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41556?quality=12&learn=on&captions=jpn)

@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms OSGi で 管理者のデフォルトのパスワードをリセットする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335542?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418089?quality=12&learn=on&captions=jpn)

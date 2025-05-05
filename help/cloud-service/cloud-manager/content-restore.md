@@ -22,4 +22,4 @@ ht-degree: 100%
 
 このステップバイステップチュートリアルでは、AEM as a Cloud Service でコンテンツを復元する方法について説明します。コンテンツの整合性を確保しながら、以前のコンテンツを効率的に復元するタイミングと方法を理解します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416149/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441309/?learn=on&enablevpops&captions=jpn)

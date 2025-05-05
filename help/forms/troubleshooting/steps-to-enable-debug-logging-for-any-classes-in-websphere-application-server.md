@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、WebSphere アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418661?quality=12&learn=on&captions=jpn)

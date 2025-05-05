@@ -22,4 +22,4 @@ ht-degree: 100%
 
 言語コピーの作成ウィザードを使用して、AEM サイトの言語コピーを作成する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36483?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41606?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms PDFG 用の UNIX の設定で strace トレースを有効にする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418077?quality=12&learn=on&captions=jpn)

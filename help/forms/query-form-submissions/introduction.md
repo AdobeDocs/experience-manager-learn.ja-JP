@@ -22,7 +22,7 @@ ht-degree: 100%
 
 次のビデオでは、ユースケースについて説明しています
 
->[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443497?learn=on&captions=jpn)
 
 
 このチュートリアルに従うには、以下にアクセスできるようにしておいてください。

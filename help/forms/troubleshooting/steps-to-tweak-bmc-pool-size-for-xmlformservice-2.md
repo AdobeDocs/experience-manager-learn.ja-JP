@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、XMLFormService の bmc プールサイズを調整する手順（2／2）を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439050?quality=12&learn=on&captions=jpn)

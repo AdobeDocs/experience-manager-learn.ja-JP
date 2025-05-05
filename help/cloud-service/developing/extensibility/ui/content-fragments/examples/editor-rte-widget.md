@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にウィジェットを追加する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447433?quality=12&learn=on&captions=jpn)
 
 リッチテキストエディター（RTE）に動的コンテンツを追加するには、**ウィジェット**&#x200B;機能を使用できます。ウィジェットは、シンプルな UI または複雑な UI を RTE に統合するのに役立ち、UI は選択した JS フレームワークを使用して作成できます。これらは、RTE で `{` 特殊キーを押すと開くダイアログと考えることができます。
 

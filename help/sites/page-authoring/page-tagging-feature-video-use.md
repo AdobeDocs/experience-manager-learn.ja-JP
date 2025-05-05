@@ -24,4 +24,4 @@ ht-degree: 100%
 
 タグ付けを使用して、Adobe Experience Manager で web ページを管理および整理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36818?quality=12&learn=on&captions=jpn)

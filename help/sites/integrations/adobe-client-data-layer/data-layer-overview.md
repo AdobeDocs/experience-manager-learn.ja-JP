@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Adobe Client Data Layer は、web ページでの訪問者エクスペリエンスに関するデータを収集および保存し、このデータに容易にアクセスするための標準的な方法を導入しています。Adobe Client Data Layer はプラットフォームに依存しませんが、AEM で使用するためにコアコンポーネントに完全に統合されています。
 
->[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330110?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、Windows サーバーで JVM のヒープダンプをキャプチャする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335490?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418086?quality=12&learn=on&captions=jpn)

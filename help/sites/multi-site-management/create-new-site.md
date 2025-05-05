@@ -22,4 +22,4 @@ ht-degree: 100%
 
 サイトの作成ウィザードを使用して、既存の言語コピーから国別のサイトを作成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36684?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41540?quality=12&learn=on&captions=jpn)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 アセットリンクパネルを使用して、AEM Assets との間でアセットファイルをダウンロードおよびアップロードする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38654?quality=12&learn=on&captions=jpn)

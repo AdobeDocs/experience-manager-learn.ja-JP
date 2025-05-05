@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Workbench でのシンプルなフォームプロセスの作成を順を追って説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3429494/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440226/?learn=on&captions=jpn)

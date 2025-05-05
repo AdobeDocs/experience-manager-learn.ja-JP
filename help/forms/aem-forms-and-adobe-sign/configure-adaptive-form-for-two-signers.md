@@ -22,7 +22,7 @@ ht-degree: 100%
 
 このビデオでは、2 名の署名者とアダプティブフォームを設定するために必要な様々な手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327743?quality=12&learn=on&captions=jpn)
 
 このビデオに関連するアセットは、次のリンクからダウンロードできます。
 

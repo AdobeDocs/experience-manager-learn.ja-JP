@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms OSGi の任意のクラスのデバッグログを有効にする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335521?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418639?quality=12&learn=on&captions=jpn)

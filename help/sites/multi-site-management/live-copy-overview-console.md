@@ -22,4 +22,4 @@ ht-degree: 100%
 
 サイト全体の継承を表示または管理する方法、ライブコピーの概要コンソールを使用してロールアウト操作を実行する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326734?quality=12&learn=on&captions=jpn)

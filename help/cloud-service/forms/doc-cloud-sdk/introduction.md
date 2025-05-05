@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Experience Manager Forms as a Cloud Service と Document Cloud API の統合に関するユースケースの概要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/333241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413006?quality=12&learn=on&captions=jpn)

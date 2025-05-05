@@ -22,4 +22,4 @@ ht-degree: 100%
 
 コンテンツフラグメントコンテンツフィールドで、エクスペリエンスフラグメントやページなど、様々なタイプの AEM コンテンツの参照をサポートする方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436763/?learn=on&captions=jpn)

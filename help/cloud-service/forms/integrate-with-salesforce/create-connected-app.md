@@ -24,7 +24,7 @@ ht-degree: 100%
 接続アプリケーションは、API や、SAML、OAuth、OpenID Connect などの標準プロトコルを使用して、外部アプリケーションと Salesforce との統合を可能にするフレームワークです。 接続アプリケーションは、これらのプロトコルを使用して、外部アプリの認証、承認、およびシングルサインオン（SSO）の提供を行います。
 <!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447258?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >デベロッパー版では REST API がデフォルトで有効になっているため、[Salesforce デベロッパー版](https://developer.salesforce.com/signup) でアカウントを作成してください。

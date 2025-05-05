@@ -22,7 +22,7 @@ ht-degree: 100%
 
 コンテンツ転送ツールを使用して、AEM 6.3 以降から AEM as a Cloud Service にコンテンツを移行する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454748?quality=12&learn=on&captions=jpn)
 
 ## コンテンツ転送ツールの使用
 

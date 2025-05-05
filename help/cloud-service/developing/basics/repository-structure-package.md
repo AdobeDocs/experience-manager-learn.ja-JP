@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM アプリケーションの[リポジトリ構造パッケージ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=ja)、その重要性、最適な定義方法を見ていきます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345918?quality=12&learn=on&captions=jpn)

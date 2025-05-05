@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub JavaScript API を使用すると、ストアにアクセスして、データを必要に応じて作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。このページでは、AEM サイトページに Context Hub を追加する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/23765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38099?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

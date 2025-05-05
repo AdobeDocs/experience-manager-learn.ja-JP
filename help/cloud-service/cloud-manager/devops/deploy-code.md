@@ -28,4 +28,4 @@ ht-degree: 100%
 
 Cloud Manager Git リポジトリと外部 Git リポジトリの統合および AEM as a Cloud Service へのプロジェクトのデプロイ
 
->[!VIDEO](https://video.tv.adobe.com/v/330534?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345866?quality=12&learn=on&captions=jpn)

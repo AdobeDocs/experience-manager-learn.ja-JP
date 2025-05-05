@@ -28,5 +28,5 @@ ht-degree: 100%
 + 実際のシナリオでバリエーションを使用する方法について説明します。
 + 特定のバリエーションをリクエストするための GraphQL 構文を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449321?quality=12&learn=on&captions=jpn)
 

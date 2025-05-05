@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Assets の Assets ビューでタグ付け分類を管理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3431081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447367/?learn=on&captions=jpn)

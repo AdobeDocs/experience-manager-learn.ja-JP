@@ -24,5 +24,5 @@ ht-degree: 100%
 
 Edge Delivery Services ドキュメントのオーサリングでバリエーションを生成するための Sidekick の設定方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436987/?learn=on&captions=jpn)
 

@@ -24,7 +24,7 @@ ht-degree: 100%
 + Java POJO を OSGi サービスに変換する方法
 + OSGi サービスを Java インターフェイスに連結する方法
 
->[!VIDEO](https://video.tv.adobe.com/v/335476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417892?quality=12&learn=on&captions=jpn)
 
 ## リソース
 

@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM Forms OSGi インスタンスで SSL を有効にする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335524?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418662?quality=12&learn=on&captions=jpn)

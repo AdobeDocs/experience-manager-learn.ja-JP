@@ -22,7 +22,7 @@ ht-degree: 100%
 
 画像コンポーネントは、Experience Manager コアコンポーネントの一部で、Dynamic Media の組み込みサポートを備えています。画像コンポーネントを使用すれば、コンテンツ作成者は、AEM Sites ページ上で、画像プリセット、スマート切り抜き、画像修飾子など、Dynamic Media の機能を使用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341407?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース
 

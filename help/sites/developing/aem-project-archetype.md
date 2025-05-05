@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEMプロジェクトには、実装向けのすべてのコードと設定が含まれています。 [!DNL AEM Project Archetype] は、独自の AEM プロジェクトの起点として、最小限のベストプラクティスベースの Adobe Experience Manager プロジェクトを作成します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37030?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース {#additional-resources}
 

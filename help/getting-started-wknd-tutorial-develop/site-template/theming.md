@@ -39,7 +39,7 @@ ht-degree: 100%
 
 次に、WKND ブランドのルックアンドフィールに合わせて、サイトのテーマソースを変更します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453621?quality=12&learn=on&captions=jpn)
 
 ビデオの大まかな手順は次のとおりです。
 

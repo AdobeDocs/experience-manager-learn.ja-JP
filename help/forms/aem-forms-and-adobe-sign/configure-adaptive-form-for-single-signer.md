@@ -23,7 +23,7 @@ ht-degree: 100%
 
 このビデオでは、単一の署名者を持つアダプティブフォームの設定に必要な、様々な手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327731?quality=12&learn=on&captions=jpn)
 
 このビデオに関連するアセットは、次のリンクからダウンロードできます
 

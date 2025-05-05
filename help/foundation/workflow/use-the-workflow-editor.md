@@ -23,4 +23,4 @@ ht-degree: 100%
 
 ワークフローは、Experience Manager でのビジネスプロセス管理を可能にし、コンテンツの自動処理に使用されるだけでなく、人間の意思決定を必要とするガバナンスとプロセスを促進します。ワークフローは、一連のステップで構成され、[!UICONTROL ワークフローモデルエディター]で作成および管理するワークフローモデルによって定義されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/22201?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/347050?quality=12&learn=on&captions=jpn)

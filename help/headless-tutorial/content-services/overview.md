@@ -25,7 +25,7 @@ AEM コンテンツサービスでは、AEM Sitesで web ページの作成に�
 
 AEM を使用してコンテンツを構築および表示し、ネイティブモバイルアプリで使用する方法を、ヘッドレス CMS シナリオで示すエンドツーエンドのチュートリアルです。
 
->[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35436?quality=12&learn=on&captions=jpn)
 
 このチュートリアルでは、AEM コンテンツサービスを使用して、イベント情報（音楽、パフォーマンス、アートなど）を表示するモバイルアプリのエクスペリエンスを強化する方法について説明します。 これは WKND チームによってキュレーションされます。
 

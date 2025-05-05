@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM でのレプリケーションの問題を解決する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418657?quality=12&learn=on&captions=jpn)

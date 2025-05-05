@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## 作業の内容
 
->[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437012?quality=12&learn=on&captions=jpn)
 
 このチュートリアルでは、画像アセットで最も一般的に使用されている色を取得し、その色の名前を AEM のアセットのメタデータに書き戻す Asset Compute メタデータワーカーを作成します。このワーカー自体は基本的なものですが、このチュートリアルでは、このワーカーを通して、Asset Compute ワーカーを使用して AEM as a Cloud Service のアセットにメタデータを書き戻す方法について説明します。
 

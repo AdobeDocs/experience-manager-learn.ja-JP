@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ルールエディターを使用すると、ユーザーは AEM アダプティブフォームにロジックを追加できます。AEM 6.3 では、いくつかの方法でルールエディターが強化され、技術系ユーザーと非技術系ユーザーの両方が、インテリジェンスをより簡単かつ迅速に追加できるようになっています。
 
->[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39211?quality=12&learn=on&captions=jpn)
 
 **ルールエディターには、次のような改善点があります。**
 

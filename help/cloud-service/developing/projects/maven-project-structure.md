@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Maven プロジェクトの構造とサブプロジェクトおよびそれらの用途をざっと説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/334280?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417888?quality=12&learn=on&captions=jpn)

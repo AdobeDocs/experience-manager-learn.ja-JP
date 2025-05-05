@@ -27,4 +27,4 @@ ht-degree: 100%
 
 Adobe AdminConsole で Adobe IMS ユーザー、ユーザーグループ、製品プロファイルを設定する簡単な手順と、AEM Author でこれらの Adobe IMS 抽象を活用して特定のグループベースの権限を定義し、管理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39155?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327373?quality=12&learn=on&captions=jpn)

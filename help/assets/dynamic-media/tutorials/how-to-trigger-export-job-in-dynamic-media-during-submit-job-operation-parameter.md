@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、ジョブ送信操作のパラメーターを使用して Dynamic Media で書き出しジョブをトリガーにする手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335454?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418102?quality=12&learn=on&captions=jpn)

@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Darin と James が、いくつかのベストプラクティスと AMS／オンプレミスとの違いを含め、 AEM Cloud の Dispatcher について説明します。また、クラウドへの移行についても触れています。
 
->[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448728?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

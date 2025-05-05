@@ -22,7 +22,7 @@ ht-degree: 100%
 
 プロジェクトマスターは、 [!DNL AEM Projects]を使用したユーザーおよびチームの管理を大幅に簡素化します。
 
->[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410332?quality=12&learn=on&captions=jpn)
 
 管理者は **[!DNL Master Project]** を作成し、 プロジェクトチームの一部としてユーザーに役割／権限を割り当てます。 プロジェクトはマスタープロジェクトから作成され、自動的にチームメンバーシップを継承します。 これには、次のようないくつかの利点があります。
 

@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Edge Delivery Services での公開および非公開時にトリガーされるイベント、およびこれらのイベントを使用するユースケースと例を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446657?learn=on&captions=jpn)
 
 ## その他のリソース
 

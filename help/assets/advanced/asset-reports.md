@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM Assets は、直感的なユーザーエクスペリエンスを通じて大規模なリポジトリに対応して拡張できるエンタープライズレベルのレポートフレームワークを提供します。
 
->[!VIDEO](https://video.tv.adobe.com/v/22140?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410283?quality=12&learn=on&captions=jpn)
 
 
 >[!IMPORTANT]

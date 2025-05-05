@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングでのブロックとオートブロックの使用方法と、これらによってサイトやオーサリングエクスペリエンスがどのように向上するかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439497/?learn=on&captions=jpn)

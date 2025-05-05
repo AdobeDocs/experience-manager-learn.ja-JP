@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、コマンドラインからプロセスパージツールを実行する手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438368?quality=12&learn=on&captions=jpn)

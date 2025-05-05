@@ -25,7 +25,7 @@ Adobe Experience Manager（AEM）Assets では、共通の属性を共有する�
 
 ## マルチサイトアセットソースファイル管理 {#multisite-asset-source-file-management}
 
->[!VIDEO](https://video.tv.adobe.com/v/18331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39159?quality=12&learn=on&captions=jpn)
 
 関連アセットを使用すると、共有特性やプロパティを持つクロスリンクアセットをより適切に管理し、ワークフローを効率化できます。
 

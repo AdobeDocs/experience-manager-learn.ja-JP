@@ -24,4 +24,4 @@ ht-degree: 100%
 
 AEM インポーターツールを使用して設定し、ドキュメントが作成したサイトを Edge Delivery Services に移行する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429595/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443697/?learn=on&captions=jpn)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms Designer の Designer ビューに関する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436818/?learn=on&captions=jpn)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Form を MySQL データベースにバインドする方法を説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3427624/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439560/?learn=on&captions=jpn)

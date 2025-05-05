@@ -23,6 +23,6 @@ ht-degree: 100%
 
 AEM オーサーから AEM パブリッシュにアセットとそのレンディションを公開する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344742?quality=12&learn=on&captions=jpn)
 
 _アセットを公開する前に、AEM Assets デプロイメントに AEM パブリッシュサービスのライセンスが付与されていることを確認します。_

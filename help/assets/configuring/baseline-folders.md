@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Assets でベースラインフォルダーを定義すると、デジタルアセット管理のための堅牢なコンテンツアーキテクチャと基盤を確立できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/33496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37331?quality=12&learn=on&captions=jpn)

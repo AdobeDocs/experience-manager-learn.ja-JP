@@ -23,7 +23,7 @@ AEM SDK のログにアクセスすると、AEM SDK ローカルクイックス�
 
 ## AEM ログ
 
->[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38129?quality=12&learn=on&captions=jpn)
 
 ログは AEM アプリケーションのデバッグの最前線として機能しますが、デプロイされた AEM アプリケーションでの適切なログの記録に依存します。 アドビでは、AEM SDK のローカルクイックスタートおよび AEM as a Cloud Service の開発環境でのログの表示を正規化し、設定の煩雑さや再デプロイを減らすため、ローカル開発と AEM as a Cloud Service 開発のログ設定をできるだけ類似したものにすることをお勧めします。
 

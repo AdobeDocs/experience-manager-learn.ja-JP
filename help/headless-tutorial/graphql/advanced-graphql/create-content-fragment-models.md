@@ -43,7 +43,7 @@ ht-degree: 100%
 
 次のビデオでは、コンテンツフラグメントモデルと、このチュートリアルでの使用方法について概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449520?quality=12&learn=on&captions=jpn)
 
 ## コンテンツフラグメントモデルを作成する {#create-models}
 

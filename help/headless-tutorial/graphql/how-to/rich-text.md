@@ -533,7 +533,7 @@ const renderReference = {
 
 ## エンドツーエンドの例
 
->[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449701?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

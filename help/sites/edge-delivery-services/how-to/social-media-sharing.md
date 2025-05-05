@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Edge Delivery を使用してコンテンツをソーシャルメディア共有に最適化する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425974/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439438/?learn=on&captions=jpn)

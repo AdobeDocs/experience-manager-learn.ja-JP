@@ -24,7 +24,7 @@ ht-degree: 100%
 
 次のビデオでは、AEM Sites の AEM オーサー環境でのオーサリングの基本概念の概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36796?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース {#additional-resources}
 

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM 6.3 Forms では、hobbes.js フレームワーク上に構築された Calvin SDK を使用して、アダプティブフォーム用 AEM 内でテストケースを作成できる機能が導入されています。
 
->[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40390?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

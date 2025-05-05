@@ -28,7 +28,7 @@ ht-degree: 100%
 
 Adobe Experience Manager は、Adobe IMS ユーザー、ユーザーグループおよび製品プロファイルに基づいて構築され、AEM へのカスタマイズ可能なアクセスをユーザーに提供します。 [AEM が提供するユーザーグループ](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/security/security#built-in-users-and-groups)に基づいて作成される AEM グループと権限を定義する方法、および Adobe IMS の抽象概念と連携して、AEM へのシームレスでカスタマイズ可能なアクセスを提供する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327381?quality=12&learn=on&captions=jpn)
 
 ## その他のリソース
 

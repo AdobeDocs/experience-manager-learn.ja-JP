@@ -23,4 +23,4 @@ ht-degree: 100%
 
 「コピーを配置」操作を使用して AEM Assets のアセットを使用する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38617?quality=12&learn=on&captions=jpn)

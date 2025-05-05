@@ -28,4 +28,4 @@ GraphQL エンドポイントを有効にし、エンドポイントに対して
 + エンドポイントに対して GraphQL クエリを実行する方法を学びます。
 + GraphQL エンドポイントの公開方法について
 
->[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445024?quality=12&learn=on&captions=jpn)

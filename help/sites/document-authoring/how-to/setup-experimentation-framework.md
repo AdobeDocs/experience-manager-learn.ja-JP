@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services ドキュメントのオーサリングで実験フレームワークの設定方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438926/?learn=on&captions=jpn)

@@ -28,7 +28,7 @@ ht-degree: 100%
 AEM Forms のインスタンスが機能していることを確認してください。[インストールガイド](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=ja)に従って、AEM Forms をインストールおよび設定してください。
 
 次のビデオでは、AEM Forms コンポーネントを使用したレビューと承認のワークフローの作成について説明しています。
->[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329022?quality=12&learn=on&captions=jpn)
 
 
 何らかの理由でワークフローを作成できない場合は、完成したワークフローを[こちら](assets/review-submitted-data-workflow.zip)からダウンロードし、[パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用して AEM インスタンスに読み込むことができます。

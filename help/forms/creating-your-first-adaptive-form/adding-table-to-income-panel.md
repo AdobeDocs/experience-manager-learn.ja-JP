@@ -23,7 +23,7 @@ ht-degree: 100%
 
 **テーブルコンポーネントの追加と設定**
 
->[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326904?quality=12&learn=on&captions=jpn)
 
 
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 ## 総計を計算するルールを作成する {#create-rule-to-calculate-grand-total}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326893?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

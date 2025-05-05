@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Sites の言語コピーを使用して、多言語サイトを作成する方法の概要を説明します
 
->[!VIDEO](https://video.tv.adobe.com/v/36487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41614?quality=12&learn=on&captions=jpn)

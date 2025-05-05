@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ## ユースケースのデモ
 
->[!VIDEO](https://video.tv.adobe.com/v/327122?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346931?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

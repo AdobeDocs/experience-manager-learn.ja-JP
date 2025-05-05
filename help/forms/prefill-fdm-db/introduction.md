@@ -29,7 +29,7 @@ ht-degree: 100%
 * フォームデータモデルのリクエスト属性の使用
 
 次のビデオでは、コースの概要を説明します。
->[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409946?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

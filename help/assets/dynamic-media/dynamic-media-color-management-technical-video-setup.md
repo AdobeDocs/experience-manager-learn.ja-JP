@@ -20,7 +20,7 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media のカラーマネジメントと、この機能を使用して AEM Assets でカラー補正プレビュー機能を使用できるようにする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38002?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

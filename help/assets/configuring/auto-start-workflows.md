@@ -23,7 +23,7 @@ ht-degree: 100%
 
 自動開始ワークフローは、アセット処理の完了後のアップロード時または再処理時にカスタムワークフローを自動的に呼び出すことで、AEM as a Cloud Service のアセット処理を拡張します。
 
->[!VIDEO](https://video.tv.adobe.com/v/37323?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326762?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

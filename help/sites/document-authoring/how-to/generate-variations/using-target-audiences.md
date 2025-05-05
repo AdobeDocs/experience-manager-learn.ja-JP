@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Adobe Target オーディエンスを使用して、Edge Delivery Services ドキュメントのオーサリングで関連コンテンツを持つ適切なオーディエンスをターゲットにする方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437756/?learn=on&captions=jpn)

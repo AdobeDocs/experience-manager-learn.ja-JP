@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM でコメントと注釈を使用して、アセットに関するコミュニケーションと共同作業を行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36919?quality=12&learn=on&captions=jpn)

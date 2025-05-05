@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Cloud Service 統合用のログイントークンの取得方法と、そのいくつかのユースケースに関する詳細なガイドです。
 
->[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448638?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

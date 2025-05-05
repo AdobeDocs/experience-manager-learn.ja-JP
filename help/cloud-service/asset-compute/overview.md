@@ -27,7 +27,7 @@ AEM 6.x ではカスタム AEM ワークフロープロセスを使用してア�
 
 ## 作業の内容
 
->[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410023?quality=12&learn=on&captions=jpn)
 
 このチュートリアルでは、オリジナルのアセットを円に切り抜いてアセットレンディションを作成し設定可能なコントラストと明るさを適用する、シンプルな Asset Compute ワーカーの作成について順を追って説明します。ワーカー自体は基本的ですが、このチュートリアルではこのワーカーを使用して、AEM as a Cloud Service で使用するカスタム Asset Compute ワーカーの作成、開発およびデプロイを行います。
 

@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM Forms と Sign の統合による既存の XDP テンプレートの活用について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327803?quality=12&learn=on&captions=jpn)
 
 このビデオに関連するアセットは、次のリンクからダウンロードできます。
 

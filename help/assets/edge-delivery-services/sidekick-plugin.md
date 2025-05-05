@@ -25,4 +25,4 @@ ht-degree: 100%
 
 [AEM Assets Sidekick プラグイン](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)を利用して、Edge 配信サービスを通じて提供される影響力の高いエクスペリエンスに管理対象アセットを組み込む方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3435823/?learn=on&captions=jpn)

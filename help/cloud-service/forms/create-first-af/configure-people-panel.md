@@ -23,4 +23,4 @@ ht-degree: 100%
 
 配偶者の詳細フラグメントをユーザーパネルに追加します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332234?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425105?quality=12&learn=on&captions=jpn)

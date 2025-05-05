@@ -22,7 +22,7 @@ AEM の堅牢な翻訳フレームワークを使用すると、サポートさ�
 
 ## AEM 6.5 での翻訳機能の強化
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34395?quality=12&learn=on&captions=jpn)
 
 AEM 6.5 の翻訳機能の強化には、次のものが含まれます。
 
@@ -36,7 +36,7 @@ AEM 6.5 の翻訳機能の強化には、次のものが含まれます。
 
 ## AEM 6.4 での翻訳機能の強化
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38297?quality=12&learn=on&captions=jpn)
 
 作成者は、サイト管理またはプロジェクト管理から直接多言語翻訳プロジェクトをすばやく容易に作成でき、自動的にローンチを昇格させるようにプロジェクトをセットアップしたり、自動処理のスケジュールを設定したりできます。
 

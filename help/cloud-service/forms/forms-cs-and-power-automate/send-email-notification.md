@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Microsoft Power Automate を使用して、フォーム送信からフィールド値を抽出し、アダプティブフォーム送信者にメール通知を送信します。
 
->[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431479?quality=12&learn=on&captions=jpn)

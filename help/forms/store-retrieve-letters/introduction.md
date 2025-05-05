@@ -26,7 +26,7 @@ ht-degree: 100%
 
 次のビデオでは、このユースケースを示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/342129?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441440?quality=12&learn=on&captions=jpn)
 
 ## 前提条件
 

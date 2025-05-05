@@ -22,4 +22,4 @@ ht-degree: 100%
 
 バッチデータの設定は、バッチ API 用 Blob ストレージの特定のインスタンスを設定するのに役立ちます。顧客が所有する Microsoft Azure BLOB ストレージ内で入力および出力の場所を指定できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/340128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343715?quality=12&learn=on&captions=jpn)

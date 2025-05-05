@@ -26,7 +26,7 @@ AEM Sites のページ差分機能では、ページ内で変更されたコン�
 
 ## ページバージョンの比較 {#comparing-page-versions}
 
->[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36792?quality=12&learn=on&captions=jpn)
 
 **HTML の変更点**
 

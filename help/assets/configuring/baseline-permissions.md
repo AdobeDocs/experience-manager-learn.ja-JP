@@ -23,4 +23,4 @@ ht-degree: 100%
 
 [ベースラインアセットフォルダー](./baseline-folders.md)でのユーザーアクセスの管理は、ガバナンスの重要な側面であり、プロセスを適切にサポートできるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327050?quality=12&learn=on&captions=jpn)

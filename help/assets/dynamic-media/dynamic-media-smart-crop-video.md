@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Dynamic Media のビデオのスマート切り抜きでは、Adobe Sensei を使用してビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326471?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

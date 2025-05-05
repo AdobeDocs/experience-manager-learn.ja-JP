@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM 開発ワークフローでの Dispatcher バリデーターの使用方法の簡単な例です。
 
->[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448420?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

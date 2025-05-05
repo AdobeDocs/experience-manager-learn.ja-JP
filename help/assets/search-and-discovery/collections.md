@@ -23,4 +23,4 @@ ht-degree: 100%
 
 コレクションが AEM Assets にもたらす代替ビューについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32053?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36876?quality=12&learn=on&captions=jpn)

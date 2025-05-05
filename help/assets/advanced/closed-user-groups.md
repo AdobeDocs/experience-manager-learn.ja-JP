@@ -23,7 +23,7 @@ ht-degree: 100%
 
 クローズドユーザーグループ（CUG）は、公開されたサイト上の特定のユーザーグループに対するコンテンツへのアクセスを制限するために使用する機能です。このビデオでは、クローズドユーザーグループを Adobe Experience Manager Assets と共に使用して、アセットの特定のフォルダーへのアクセスを制限する方法を示します。AEM Assets でのクローズドユーザーグループのサポートは、AEM 6.4 で初めて導入されました。
 
->[!VIDEO](https://video.tv.adobe.com/v/22155?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410277?quality=12&learn=on&captions=jpn)
 
 ## AEM Assets を使用したクローズドユーザーグループ（CUG）
 

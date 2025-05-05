@@ -23,7 +23,7 @@ ht-degree: 100%
 
 このパートでは、REST ベースのデータソースを作成します。次のビデオでは、データソースの作成手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34418?quality=12&learn=on&captions=jpn)
 
 このチュートリアルに関連するアセットの一部として提供された Swagger ファイルを使用してください。アセットは、このチュートリアルの[はじめに](introduction.md)で利用できます。
 

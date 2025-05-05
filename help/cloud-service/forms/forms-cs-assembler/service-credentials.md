@@ -21,6 +21,6 @@ ht-degree: 100%
 
 AEM as a Cloud Service との統合では、AEM に対して安全に認証できる必要があります。 AEM の Developer Consoleは、サービス資格情報を生成します。これは、外部のアプリケーション、システムおよびサービスによって、HTTP 経由で AEM オーサーまたはパブリッシュサービスとプログラム的にやり取りするために使用されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342226?quality=12&learn=on&captions=jpn)
 
 ダウンロードしたサービス資格情報ファイルは、指定した Eclipse の service_token.json というリソースファイルとして保存されます。 service_token ファイルの値は、JWT の生成と、JWT とアクセストークンの交換に使用されます。 ユーティリティクラス GetServiceCredentials は、 service_token.json リソースファイルからプロパティ値を取得するために使用されます。

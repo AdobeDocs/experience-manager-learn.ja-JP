@@ -23,4 +23,4 @@ ht-degree: 100%
 
 子パネルをルートパネルに追加し、子パネルのレイアウトを設定します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447277?quality=12&learn=on&captions=jpn)

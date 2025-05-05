@@ -24,7 +24,7 @@ ht-degree: 100%
 AEM Forms と Acrobat Sign の統合の前提条件の 1 つは、SSL を使用するように AEM インスタンスを設定することです。Adobe Experience Manager SSL セットアップウィザードを使用すると、AEM インスタンスを HTTPS 経由で実行するように簡単に設定できます。
 次のビデオでは、ウィザードを使用して SSL を設定するために必要な手順を説明します
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37918?learn=on&captions=jpn)
 
 ## 次の手順
 

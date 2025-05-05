@@ -27,4 +27,4 @@ ht-degree: 100%
 
 コード内のコンパイルエラーを調査し、このコードが AEM as a Cloud Service のベストプラクティスに従っているかどうかを確認します
 
->[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345721?quality=12&learn=on&captions=jpn)

@@ -21,5 +21,5 @@ ht-degree: 100%
 
 このビデオに示されているように、使用例を強化します
 
->[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436564?quality=12&learn=on&captions=jpn)
 

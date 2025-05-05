@@ -20,7 +20,7 @@ ht-degree: 100%
 
 OSGi 設定のキーと値のペアを使用して OSGi 設定データを定義し、OSGi サービスに公開する、低レベルのアプローチについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418098?quality=12&learn=on&captions=jpn)
 
 ## リソース
 

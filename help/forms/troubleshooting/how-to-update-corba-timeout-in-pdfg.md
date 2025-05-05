@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、トランザクションのロールバックの問題を軽減するために PDFG で CORBA タイムアウトを更新する方法をについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335512?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417901?quality=12&learn=on&captions=jpn)

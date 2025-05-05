@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Edge Delivery Services のドキュメントのオーサリングでバリエーションを生成する際にアドビがどのように信頼とプライバシーを扱っているかを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440015/?learn=on&captions=jpn)

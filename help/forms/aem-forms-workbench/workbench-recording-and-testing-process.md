@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Workbench でのフォームプロセスのデバッグを順を追って説明する短いビデオ
 
->[!VIDEO](https://video.tv.adobe.com/v/3429495/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439816/?learn=on&captions=jpn)

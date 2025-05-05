@@ -37,7 +37,7 @@ Reader 拡張機能の資格情報は fd-service ユーザーに関連付けら�
 
 ビデオに従って、fd-service ユーザーに資格情報を追加してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447288?quality=12&learn=on&captions=jpn)
 
 
 pfx ファイルの詳細を一覧表示するコマンドです。次のコマンドは、pfx ファイルと同じディレクトリにあることを前提としています。

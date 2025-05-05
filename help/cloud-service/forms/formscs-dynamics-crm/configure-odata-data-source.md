@@ -22,4 +22,4 @@ ht-degree: 100%
 
 次のビデオでは、Microsoft Dynamics に接続するクラウドサービス設定を作成する手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448299?quality=12&learn=on&captions=jpn)

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングで　レスポンシブナビゲーションを実行する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438163/?learn=on&captions=jpn)

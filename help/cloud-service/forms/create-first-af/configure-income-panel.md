@@ -23,4 +23,4 @@ ht-degree: 100%
 
 申込者の収入源を取り込むために、収入パネルにテーブルコンポーネントを追加します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425123?quality=12&learn=on&captions=jpn)

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ユーザーインターフェイスや API からログにアクセスする方法など、AEM as a Cloud Service でログにアクセスする方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448479?quality=12&learn=on&captions=jpn)
 
 ## このビデオで扱うコンテンツ
 

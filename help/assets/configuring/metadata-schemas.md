@@ -23,4 +23,4 @@ ht-degree: 100%
 
 メタデータスキーマは、ユーザーが AEM でアセットのメタデータを操作するインターフェイスを定義します。その定義とアセットへの適用は、デジタルアセット管理にとって重要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/33696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37303?quality=12&learn=on&captions=jpn)

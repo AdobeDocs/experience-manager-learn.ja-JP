@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、ジョブマネージャーからプロセスレコードを削除する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437668?quality=12&learn=on&captions=jpn)

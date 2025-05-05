@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM Forms 6.4 で導入されたメール送信手順です。この手順を使用して、添付ファイルの有無に関わらずメールを送信できるビジネスプロセスやワークフローを構築できます。 次のビデオでは、メール送信コンポーネントの設定手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/21499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38534?quality=12&learn=on&captions=jpn)
 
 この記事の中では、次の使用例について説明します。
 

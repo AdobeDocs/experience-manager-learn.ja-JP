@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Adobe Experience Manager（AEM）[!UICONTROL システム概要]は、AEM インスタンスの設定、ハードウェアおよびヘルスの概要を、1 つのダッシュボードにすべて表示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40394?quality=12&learn=on&captions=jpn)
 
 1. システム概要には、 **AEM 開始**／**[!UICONTROL ツール]**／**[!UICONTROL 運用]**／**[!UICONTROL システム概要]**&#x200B;でアクセスできます。
 

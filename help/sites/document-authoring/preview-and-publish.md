@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングを使用してコンテンツを作成および公開する方法に関する、詳しい手順ガイドです。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425700/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441336/?learn=on&captions=jpn)

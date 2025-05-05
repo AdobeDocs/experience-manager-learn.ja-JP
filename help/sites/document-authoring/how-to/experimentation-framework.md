@@ -24,4 +24,4 @@ ht-degree: 100%
 
 マーケターが Edge Delivery Services のドキュメントオーサリングでどのコンテンツのバリエーションが最も効果的であるかをテストできる、実験フレームワークを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429061/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437855/?learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、詳細 ORB トレースを有効にする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439072?quality=12&learn=on&captions=jpn)

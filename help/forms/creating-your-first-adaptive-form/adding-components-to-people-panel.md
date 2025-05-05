@@ -23,15 +23,15 @@ ht-degree: 100%
 
 **AEM Forms 6.3 および 6.4 の人物パネルの設定**
 
->[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326921?quality=12&learn=on&captions=jpn)
 
 **AEM Forms 6.5 以降の人物パネルの設定**
 
->[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326937?quality=12&learn=on&captions=jpn)
 
 **配偶者の詳細ルール**
 
->[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326929?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

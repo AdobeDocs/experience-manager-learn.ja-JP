@@ -36,7 +36,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="set-up.md" title="ドキュメントオーサリングの設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425699/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438863/?format=jpeg&captions=jpn"
                 alt="ドキュメントオーサリングの概要">
             </a>
           </figure>
@@ -68,7 +68,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="preview-and-publish.md" title="コンテンツのプレビューと公開"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425700/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441336/?format=jpeg&captions=jpn"
                 alt="コンテンツのプレビューと公開">
             </a>
           </figure>
@@ -100,7 +100,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="document-structure.md" title="ドキュメント構造"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425701/?format=jpeg" alt="ドキュメント構造">
+                src="https://video.tv.adobe.com/v/3438808/?format=jpeg&captions=jpn" alt="ドキュメント構造">
             </a>
           </figure>
         </div>
@@ -131,7 +131,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="default-content-and-sections.md" title="デフォルトのコンテンツとセクション"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="デフォルトのコンテンツとセクション">
+                src="https://video.tv.adobe.com/v/3437976/?format=jpeg&captions=jpn" alt="デフォルトのコンテンツとセクション">
             </a>
           </figure>
         </div>
@@ -161,7 +161,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
           <figure class="image is-16by9">
             <a href="blocks-and-autoblocks.md" title="ブロックとオートブロック" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425703/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439497/?format=jpeg&captions=jpn"
                 alt="ブロックとオートブロック">
             </a>
           </figure>
@@ -194,7 +194,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="redirects.md" title="リダイレクト"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425704/?format=jpeg" alt="リダイレクト">
+                src="https://video.tv.adobe.com/v/3438543/?format=jpeg&captions=jpn" alt="リダイレクト">
             </a>
           </figure>
         </div>
@@ -225,7 +225,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="bulk-metadata.md" title="一括メタデータ"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425705/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438405/?format=jpeg&captions=jpn"
                 alt="一括メタデータ">
             </a>
           </figure>
@@ -258,7 +258,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="page-metadata.md" title="ページメタデータ"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425706/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438065/?format=jpeg&captions=jpn"
                 alt="ページメタデータ">
             </a>
           </figure>
@@ -290,7 +290,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="author-authentication.md" title="オーサー認証"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429594/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438179/?format=jpeg&captions=jpn"
                 alt="オーサー認証">
             </a>
           </figure>
@@ -327,7 +327,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/responsive-navigation.md" title="レスポンシブナビゲーション"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425707/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438163/?format=jpeg&captions=jpn"
                 alt="レスポンシブナビゲーション">
             </a>
           </figure>
@@ -359,7 +359,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/document-audit.md" title="ドキュメント監査"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425722/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437712/?format=jpeg&captions=jpn"
                 alt="ドキュメント監査">
             </a>
           </figure>
@@ -391,7 +391,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/document-permissions.md" title="ドキュメント権限"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425724/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438102/?format=jpeg&captions=jpn"
                 alt="ドキュメント権限">
             </a>
           </figure>
@@ -423,7 +423,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/document-versions.md" title="ドキュメントのバージョン"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425728/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438793/?format=jpeg&captions=jpn"
                 alt="ドキュメントのバージョン">
             </a>
           </figure>
@@ -455,7 +455,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/document-workflows.md" title="ドキュメントワークフロー"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425720/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438291/?format=jpeg&captions=jpn"
                 alt="ドキュメントワークフロー">
             </a>
           </figure>
@@ -487,7 +487,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/iframes.md" title="iFrame の使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425719/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438390/?format=jpeg&captions=jpn"
                 alt="iFrame の使用">
             </a>
           </figure>
@@ -519,7 +519,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/image-alt-text.md" title="代替テキストの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425721/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438676/?format=jpeg&captions=jpn"
                 alt="代替テキストの使用">
             </a>
           </figure>
@@ -551,7 +551,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/no-index.md" title="インデックス作成の防止"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425726/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438113/?format=jpeg&captions=jpn"
                 alt="インデックス作成の防止">
             </a>
           </figure>
@@ -583,7 +583,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/using-dynamic-media.md" title="Dynamic Media"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429593/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438897/?format=jpeg&captions=jpn"
                 alt="Dynamic Media">
             </a>
           </figure>
@@ -615,7 +615,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/migration-using-importer.md" title="インポーターを使用したサイトの移行"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3443697/?format=jpeg&captions=jpn"
                 alt="インポーターを使用したサイトの移行">
             </a>
           </figure>
@@ -647,7 +647,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/customizing-importer.md" title="インポーターのカスタマイズ"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429596/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3444246/?format=jpeg&captions=jpn"
                 alt="インポーターのカスタマイズ">
             </a>
           </figure>
@@ -679,7 +679,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/bulk-importing-using-importer.md" title="インポーターを使用した一括読み込み"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429597/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445886/?format=jpeg&captions=jpn"
                 alt="インポーターを使用した一括読み込み">
             </a>
           </figure>
@@ -748,7 +748,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/configure-sidekick.md" title="バリエーションの生成 - Sidekick の設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436987/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - Sidekick の設定">
             </a>
           </figure>
@@ -812,7 +812,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/custom-prompt-templates.md" title="バリエーションの生成 - カスタムプロンプトテンプレート"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438500/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - カスタムプロンプトテンプレート">
             </a>
           </figure>
@@ -876,7 +876,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/using-target-audiences.md" title="バリエーションの生成 - Adobe Target オーディエンスの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437756/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - Adobe Target オーディエンスの使用">
             </a>
           </figure>
@@ -908,7 +908,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="バリエーションの生成 - CSV ファイルオーディエンスの使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436882/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - CSV ファイルオーディエンスの使用">
             </a>
           </figure>
@@ -940,7 +940,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="バリエーションの生成 - Adobe Firefly の使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438357/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - Adobe Firefly の使用">
             </a>
           </figure>
@@ -972,7 +972,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/actions.md" title="バリエーションの生成 - 生成されたバリエーションに対するアクション"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437272/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - 生成されたバリエーションに対するアクション">
             </a>
           </figure>
@@ -1004,7 +1004,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/generate-variations/trust-privacy.md" title="バリエーションの生成 - 信頼とプライバシー"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440015/?format=jpeg&captions=jpn"
                 alt="バリエーションの生成 - 信頼とプライバシー">
             </a>
           </figure>
@@ -1036,7 +1036,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/experimentation-framework.md" title="実験フレームワークの概要"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437855/?format=jpeg&captions=jpn"
                 alt="実験フレームワークの概要">
             </a>
           </figure>
@@ -1068,7 +1068,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/setup-experimentation-framework.md" title="実験フレームワークの設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438926/?format=jpeg&captions=jpn"
                 alt="実験フレームワークの設定">
             </a>
           </figure>
@@ -1100,7 +1100,7 @@ AEM の作成者が Microsoft Word または Google Docs を使用してドキ�
             <a href="./how-to/experimentation-add-metadata.md" title="実験のメタデータの追加"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440105/?format=jpeg&captions=jpn"
                 alt="実験のメタデータの追加">
             </a>
           </figure>

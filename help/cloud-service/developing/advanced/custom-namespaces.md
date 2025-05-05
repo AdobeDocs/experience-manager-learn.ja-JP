@@ -35,7 +35,7 @@ ht-degree: 100%
 
 カスタム名前空間は、[Sling リポジトリ初期化（repoinit）](https://sling.apache.org/documentation/bundles/repository-initialization.html)スクリプトで管理され、OSGi 設定として AEM as a Cloud Service にデプロイされて [AEM プロジェクトの](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) `ui.config` プロジェクトに追加されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416847?quality=12&learn=on&captions=jpn)
 
 ## リソース
 

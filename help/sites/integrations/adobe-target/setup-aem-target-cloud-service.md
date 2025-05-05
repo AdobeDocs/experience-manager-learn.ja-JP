@@ -25,7 +25,7 @@ ht-degree: 100%
 
 この統合により、AEM オーサーサービスは Adobe Target と直接通信し、エクスペリエンスフラグメントを AEM から Target にオファーとしてプッシュできるようになります。この統合では、AEM Sites の web ページに Adobe Target JavaScript（AT.js）が追加&#x200B;*されない*&#x200B;ため、[Target 拡張機能を使用してタグと AEM を統合](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)します。
 
->[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329014?quality=12&learn=on&captions=jpn)
 
 >[!CAUTION]
 >

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 AEM Forms as a Cloud Service がサポートするユースケースと機能について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336968?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443368?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Windows セットアップ時のマルチユーザー PDFG 変換に関する問題のトラブルシューティングのプロセスを説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417900?quality=12&learn=on&captions=jpn)

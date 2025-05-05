@@ -21,7 +21,7 @@ ht-degree: 100%
 
 [!DNL Apache HTTP Web Server] 上で動作する [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) と [!DNL Apache Sling Dynamic Include] をインストールし、使用するための手順を紹介するビデオです。
 
->[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39179?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

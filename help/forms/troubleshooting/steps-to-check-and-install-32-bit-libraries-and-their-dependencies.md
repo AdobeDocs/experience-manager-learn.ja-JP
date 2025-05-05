@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、必要な 32 ビット Microsoft Visual C++ 再配布可能パッケージの確認とインストールのプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418082?quality=12&learn=on&captions=jpn)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 既存の AEM Assets ワークフローを AEM as a Cloud Service に移行する際にアセットワークフロー移行ツールがどう役に立つかを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438973?quality=12&learn=on&captions=jpn)

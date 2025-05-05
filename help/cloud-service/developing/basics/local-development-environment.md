@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service SDK を使用して、ローカル開発環境のダウンロードと設定を行う方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330558?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345882?quality=12&learn=on&captions=jpn)
 
 _このビデオで紹介している `license.properties` は、AEM SDK を実行するために必要ではなくなりました。_
 

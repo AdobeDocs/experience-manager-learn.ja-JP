@@ -23,7 +23,7 @@ AEM as a Cloud Service の一括読み込みサービスを使用して、AEM �
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453280?quality=12&learn=on&captions=jpn)
 
 ## 一括読み込みサービスの使用
 

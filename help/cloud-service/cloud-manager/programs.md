@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Cloud Manager **プログラム**&#x200B;は、ビジネスイニシアチブの論理セットをサポートする AEM 環境セットであり、通常は購入したサービスレベル契約（SLA）に対応しています。例えば、あるプログラムが、グローバルなパブリック web サイトをサポートする AEM リソースを表す一方で、別のプログラムは社内の中核的 DAM を表します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34266?quality=12&learn=on&captions=jpn)

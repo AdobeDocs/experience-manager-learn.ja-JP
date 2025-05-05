@@ -20,4 +20,4 @@ ht-degree: 100%
 
 このビデオでは、AEM Dynamic Media でスマート切り抜きイメージプロファイルを作成する手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418634?quality=12&learn=on&captions=jpn)

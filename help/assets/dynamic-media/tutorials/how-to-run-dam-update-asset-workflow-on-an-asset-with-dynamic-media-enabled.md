@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、Dynamic Media が有効になっているアセットで DAM アセットの更新ワークフローを実行するプロセスについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418643?quality=12&learn=on&captions=jpn)

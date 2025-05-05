@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Edge Delivery Services ドキュメントのオーサリングで、保存、コピー、評価など、生成されたコンテンツのバリエーションに使用できるアクションをを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428795/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437272/?learn=on&captions=jpn)

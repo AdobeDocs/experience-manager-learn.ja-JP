@@ -29,7 +29,7 @@ Brand Portal の 2019年9月リリースで最も注目すべきは、アセッ�
 
 Brand Portal のアセットソーシングを使用すると、サードパーティの代理店やチームからアセットを収集し、それらを Experience Manager 作成者にシームレスに同期してレビューおよび使用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34104?quality=12&learn=on&captions=jpn)
 
 *アセットソーシングを使用するには、Experience Manager Author 6.5 SP2（6.5.2）以降が必要です*
 
@@ -37,7 +37,7 @@ Experience Manager Author でアセットソーシングを構成および設定
 
 ## Brand Portal 2019年2月の機能および機能強化{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40331?quality=12&learn=on&captions=jpn)
 
 Brand Portal の 2019年2月のリリースでは、テキスト検索の機能強化と、お客様からの主なご要望への対応に重点を当てています。
 
@@ -165,7 +165,7 @@ Brand Portal では、Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://l
 
 Brand Portal と AEM の連携に向けて強化された機能が新しく追加されました。
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40331?quality=12&learn=on&captions=jpn)
 
 ### ナビゲーションの向上
 

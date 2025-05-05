@@ -21,4 +21,4 @@ ht-degree: 100%
 
 このビデオでは、アセットの公開 URL または埋め込みコードを生成する手順について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335364?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418101?quality=12&learn=on&captions=jpn)

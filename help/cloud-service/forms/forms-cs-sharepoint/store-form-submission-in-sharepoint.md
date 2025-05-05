@@ -22,4 +22,4 @@ ht-degree: 100%
 
 アダプティブフォームデータを設定して Microsoft Sharepoint に保存する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452522/?quality=12&learn=on&captions=jpn)

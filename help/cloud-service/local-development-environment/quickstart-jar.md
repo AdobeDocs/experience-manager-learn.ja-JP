@@ -18,6 +18,6 @@ ht-degree: 100%
 
 AEM Quickstart JAR を使用して、Adobe Experience Manager のローカルインスタンスを数分でインストールし、実行する方法について説明します。 AEM Quickstart JAR は、ローカルコンピューターにインストールして実行できる AEM ランタイムです。
 
->[!VIDEO](https://video.tv.adobe.com/v/32551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37005?quality=12&learn=on&captions=jpn)
 
 より詳細な設定

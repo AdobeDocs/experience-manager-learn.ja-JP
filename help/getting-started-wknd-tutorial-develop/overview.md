@@ -30,7 +30,7 @@ ht-degree: 100%
 
 このマルチパートチュートリアルの目的は、Adobe Experience Manager(AEM) の最新の標準とテクノロジーを使用して Web サイトを実装する方法を開発者に教えることです。 このチュートリアルを修了すると、開発者はプラットフォームの基本的な基礎について理解し、AEM の一般的な設計パターンに関する知識を得ることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330918?quality=12&learn=on&captions=jpn)
 
 ## Sites プロジェクトを開始するためのオプション
 

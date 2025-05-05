@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager Sites でのコンポーネント開発の概要です。 ダイアログ、Sling モデル、HTL スクリプト、クライアントサイドライブラリの概要が含まれています。
 
->[!VIDEO](https://video.tv.adobe.com/v/32547?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36512?quality=12&learn=on&captions=jpn)

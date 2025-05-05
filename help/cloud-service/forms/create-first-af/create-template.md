@@ -23,4 +23,4 @@ ht-degree: 100%
 
 アダプティブフォームテンプレートは、アダプティブフォームの作成に使用される特定のプロパティとコンテンツ構造を持つ特殊な AEM ページテンプレートです。このテンプレートのレイアウト、スタイル、基本的な初期コンテンツ構造は事前に設定されています。すべてのアダプティブフォームは、テンプレートに基づいています。
 
->[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446150?quality=12&learn=on&captions=jpn)
