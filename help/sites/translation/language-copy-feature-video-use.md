@@ -24,5 +24,5 @@ AEM 6.3 言語コピー作成ウィザードのサイト翻訳機能の強化に
 
 ## その他のリソース {#additional-resources}
 
-* [言語コピーウィザードのドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html?lang=ja)
+* [言語コピーウィザードのドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/tc-wizard.html?lang=ja)
 * [MSM のベストプラクティス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

@@ -81,7 +81,7 @@ AEM でサポートされている認証（場合によっては承認）メカ�
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a および 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf?lang=ja" target="_blank">OAuth 1.0a および 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>

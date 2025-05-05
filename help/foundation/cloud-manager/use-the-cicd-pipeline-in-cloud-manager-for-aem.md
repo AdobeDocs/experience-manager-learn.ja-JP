@@ -55,6 +55,6 @@ Cloud Manager および Cloud Manager プログラムの概要です。
 ## サポート資料
 
 * [Cloud Manager ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)
-* [コードスキャン [!DNL SonarQube] ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)をダウンロード
+* [コードスキャン [!DNL SonarQube] ルール](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=ja)をダウンロード
    * *リンクされたセクションの下部にある XLSX*
 * [[!DNL SonarQube] Java™ ルールのインデックス](https://rules.sonarsource.com/java/)

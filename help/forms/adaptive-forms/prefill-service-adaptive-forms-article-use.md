@@ -20,7 +20,7 @@ ht-degree: 100%
 
 既存データを使用して、アダプティブフォームのフィールドを事前入力できます。ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。アダプティブフォームのフィールドに事前入力する方法は複数あります。この記事では、AEM Forms の事前入力サービスを使用したアダプティブフォームの事前入力について説明します。
 
-アダプティブフォームの事前入力に関する様々な方法の詳細は、[こちらのドキュメントをご覧ください](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html?lang=ja#AEMFormsprefillservice)。
+アダプティブフォームの事前入力に関する様々な方法の詳細は、[こちらのドキュメントをご覧ください](https://helpx.adobe.com/jp/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html?lang=ja#AEMFormsprefillservice)。
 
 事前入力サービスを使用してアダプティブフォームに事前入力するには、`com.adobe.forms.common.service.DataXMLProvider` インターフェイスを実装するクラスを作成する必要があります。メソッド `getDataXMLForDataRef` には、アダプティブフォームがフィールドの事前入力に使用するデータを作成して返すロジックがあります。このメソッドでは、任意のソースからデータを取得し、データドキュメントの入力ストリームを返すことができます。以下のサンプルコードで、ログインしているユーザーのユーザープロファイル情報を取得し、XML ドキュメントを作成します。この XML ドキュメントの入力ストリームは、アダプティブフォームで使用されます。
 

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ローカルの AEM インスタンスでこのユースケースを機能させるには、以下に示す手順に従ってください。
 
-* zip ファイルに含まれている [DevelopingWithServiceUser バンドルをデプロイします](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
+* zip ファイルに含まれている [DevelopingWithServiceUser バンドルをデプロイします](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=ja)。
 
 * [configMgr](http://localhost:4502/system/console/configMgr)を使用して、Apache Sling Service User Mapper Service にエントリ **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** を追加します。
 

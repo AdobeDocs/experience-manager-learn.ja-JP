@@ -82,7 +82,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> カスタムプロジェクトの開始点として、汎用の [AEM コアコンポーネント UI キットも使用できます](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)。
+> カスタムプロジェクトの開始点として、汎用の [AEM コアコンポーネント UI キットも使用できます](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=ja)。
 
 ## 記事ページテンプレートの作成
 

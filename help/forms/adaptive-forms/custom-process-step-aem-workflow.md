@@ -42,9 +42,9 @@ public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaData
 
 execute メソッドを使用すると、次の 3 つの変数にアクセスできます。
 
-**WorkItem**：workItem 変数は、ワークフローに関連するデータにアクセスできるようにします。 公開 API のドキュメントは[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)で参照できます。 
+**WorkItem**：workItem 変数は、ワークフローに関連するデータにアクセスできるようにします。 公開 API のドキュメントは[こちら](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)で参照できます。 
 
-**WorkflowSession**：workflowSession 変数を使用すると、ワークフローを制御できます。公開 API のドキュメントについて詳しくは、[こちら](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)を参照してください。
+**WorkflowSession**：workflowSession 変数を使用すると、ワークフローを制御できます。公開 API のドキュメントについて詳しくは、[こちら](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html?lang=ja)を参照してください。
 
 **MetaDataMap**：ワークフローに関連付けられているすべてのメタデータです。 プロセスステップに渡されるプロセス引数は、 MetaDataMap オブジェクトを使用して参照できます。[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 

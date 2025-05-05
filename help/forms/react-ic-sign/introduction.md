@@ -34,7 +34,7 @@ ht-degree: 100%
 この使用事例が機能するには、以下が必要です。
 
 * Forms アドオンパッケージを含む AEM サーバー
-* [Acrobat Sign アプリケーションの統合キー](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* [Acrobat Sign アプリケーションの統合キー](https://helpx.adobe.com/jp/sign/kb/how-to-create-an-integration-key.html)
 
 ## 次の手順
 

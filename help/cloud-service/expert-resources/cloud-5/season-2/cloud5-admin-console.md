@@ -24,7 +24,7 @@ Admin Console 内で AEM のコンテキストでの各項目の機能につい�
 
 ## このビデオで扱うコンテンツ
 
-+ [Admin Console について](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console について](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html?lang=ja)
 + [Admin Console の概要](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)
 
 ## その他のリソース

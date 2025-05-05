@@ -22,7 +22,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 以下のビデオは AEM 6.3 で録画されました。AEM 6.4 以降では、翻訳ルール XML ファイルを保存するための新しいリポジトリ構造を導入しました。AEM 6.4 以降で翻訳設定 UI を使用する場合、ルールは `/conf/global/settings/translation/rules/translation_rules.xml` の場所に保存されます。詳しくは、[翻訳するコンテンツの識別](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html?lang=ja-JP) を参照してください。
+> 以下のビデオは AEM 6.3 で録画されました。AEM 6.4 以降では、翻訳ルール XML ファイルを保存するための新しいリポジトリ構造を導入しました。AEM 6.4 以降で翻訳設定 UI を使用する場合、ルールは `/conf/global/settings/translation/rules/translation_rules.xml` の場所に保存されます。詳しくは、[翻訳するコンテンツの識別](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/tc-rules.html?lang=ja-JP) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 ## その他のリソース {#additional-resources}
 
-* [翻訳するコンテンツの特定](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html?lang=ja-JP)
+* [翻訳するコンテンツの特定](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/tc-rules.html?lang=ja-JP)
 * [多言語サイトのコンテンツの翻訳](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/tc-manage.html](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-manage.html?lang=ja)
 * [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html?lang=ja)

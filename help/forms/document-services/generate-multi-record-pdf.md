@@ -25,7 +25,7 @@ OutputService は、フォームデザインとフォームデザインを結合
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-データ xml には 2 つのレコードがあります。 各レコードは、form1 要素で表されます。 この xml は OutputService の [generatePDFOutputBatch メソッド](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html?lang=ja)に渡され、PDF ドキュメントのリストを取得します（レコードごとに 1 つ）
+データ xml には 2 つのレコードがあります。 各レコードは、form1 要素で表されます。 この xml は OutputService の [generatePDFOutputBatch メソッド](https://helpx.adobe.com/jp/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html?lang=ja)に渡され、PDF ドキュメントのリストを取得します（レコードごとに 1 つ）
 generatePDFOutputBatch メソッドの署名は次のパラメーターを取ります
 
 * templates - キーで識別されるテンプレートを含むマップ

@@ -23,7 +23,7 @@ AEM は、ヘッドレスコンテンツに[翻訳統合フレームワーク](h
 
 ## アセットフォルダー構造{#assets-folder-structure}
 
-AEM のローカライズされたコンテンツフラグメントが、[推奨のローカライゼーション構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure)になっていることを確認します。
+AEM のローカライズされたコンテンツフラグメントが、[推奨のローカライゼーション構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html?lang=ja#recommended-structure)になっていることを確認します。
 
 ![ローカライズされた AEM アセットフォルダー](./assets/localized-content/asset-folders.jpg)
 

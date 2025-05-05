@@ -31,7 +31,7 @@ ht-degree: 100%
 ![フォームとドキュメント](assets/fragment-folder-structure-ui.png)
 
 
-* Output サービス - 通常、 xml データを xdp テンプレートまたは PDF と結合して、統合された PDF を生成するために使用されます。詳細については、出力サービスの [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) を参照してください。このサンプルでは、crx リポジトリ内のフラグメントを使用します。
+* Output サービス - 通常、 xml データを xdp テンプレートまたは PDF と結合して、統合された PDF を生成するために使用されます。詳細については、出力サービスの [javadoc](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) を参照してください。このサンプルでは、crx リポジトリ内のフラグメントを使用します。
 
 
 次のコードは、フラグメントを PDF ファイルに含めるために使用されました。

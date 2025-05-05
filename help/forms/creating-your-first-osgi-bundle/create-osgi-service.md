@@ -80,7 +80,7 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 
 10 行目の注釈 `@Component(...)` は、この Java クラスを OSGi コンポーネントとしてマークすると共に、OSGi サービスとして登録します。
 
-この `@Reference` 注釈は、OSGi 宣言型サービスの一部であり、[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) の参照を変数 `outputService` に挿入するために使用されます。
+この `@Reference` 注釈は、OSGi 宣言型サービスの一部であり、[Outputservice](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) の参照を変数 `outputService` に挿入するために使用されます。
 
 
 ## バンドルのビルドとデプロイ

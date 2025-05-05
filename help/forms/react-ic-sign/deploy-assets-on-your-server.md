@@ -24,7 +24,7 @@ ht-degree: 100%
 * [Adobe Sign ラッパーバンドル](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
 * [インタラクティブ通信のサンプルテンプレート](assets/waiver-interactive-communication.zip)
-* [DevelopingWithServiceUser バンドルのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* [DevelopingWithServiceUser バンドルのデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=ja)
 * OSGi configMgr を使用して、Apache Sling Service User Mapper Service に次のエントリを追加します。
   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 

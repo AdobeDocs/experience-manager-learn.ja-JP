@@ -36,6 +36,6 @@ AEM Forms 6.5 以降では、AEM ワークフローで JSON タイプの変数�
 
 * [パッケージマネージャーを使用して、アセットをダウンロードし AEM に読み込みます。](assets/jsonandstringvariable.zip)
 * [ワークフローモデルを調べて](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html)、ワークフローで使用されている変数を理解します。
-* [メールサービスを設定します](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html?lang=ja#ConfiguringtheMailService)。
+* [メールサービスを設定します](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/notification.html?lang=ja#ConfiguringtheMailService)。
 * [アダプティブフォームを開きます](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)。
 * 詳細を入力し、フォームを送信します。

@@ -175,7 +175,7 @@ Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作�
 
 ## その他のリソース
 
-* [Experience League - AEM に関する情報](https://experienceleague.adobe.com/?lang=ja#recommended/solutions/experience-manager)
+* [Experience League - AEM に関する情報](https://experienceleague.adobe.com/ja?lang=ja#recommended/solutions/experience-manager)
 * [AEM Sites ドキュメントのオーサリング](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=ja)
 * [AEM Sites 開発ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=ja)
 * [AEM Sites 管理ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=ja)

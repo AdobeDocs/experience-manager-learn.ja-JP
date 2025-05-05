@@ -45,7 +45,7 @@ ht-degree: 100%
 ## 次の OSGi バンドルのデプロイ
 
 [データベースに対してデータの保存と取得を行うためのコード](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)を含んだバンドルをデプロイします。
-[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) をダウンロードして解凍します。
+[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=ja) をダウンロードして解凍します。
 Felix web コンソールを使用して DevelopingWithServiceUser.jar ファイルをデプロイします。
 
 ## クライアントライブラリのデプロイ

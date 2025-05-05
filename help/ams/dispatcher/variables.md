@@ -178,7 +178,7 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-独自の変数ファイルを作成する場合は、内容に応じて名前を付け、マニュアルの[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention)に記載されている命名基準に従ってください。上記の例では、変数ファイルが設定ファイルで使用する変数として、様々な DNS エントリをホストしています。
+独自の変数ファイルを作成する場合は、内容に応じて名前を付け、マニュアルの[こちら](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html?lang=ja#naming-convention)に記載されている命名基準に従ってください。上記の例では、変数ファイルが設定ファイルで使用する変数として、様々な DNS エントリをホストしています。
 
 ## 変数の使用
 

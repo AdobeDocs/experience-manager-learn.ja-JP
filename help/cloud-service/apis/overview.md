@@ -34,9 +34,9 @@ AEMは、オーサーサービスとパブリッシュサービスのタイプ�
 | AEM API のタイプ | 説明 | 入手方法 | ユースケース | API サンプル |
 | --- | --- | --- | --- | --- |
 | OpenAPI ベースのAEM API | Assets、Sites およびForms用の標準化された機械読み取り可能な API。 | **AEM as a Cloud Serviceのみ** | API ファースト開発、最新のアプリケーション | [Assets オーサー API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[Folders API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)、[Forms Document Services API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) その他 |
-| RESTful API | AEM リソースとやり取りするための従来の REST エンドポイント。 | AEM 6.X、AEM as a Cloud Service | CRUD 操作、最新のアプリケーション | [Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[ ワークフロー REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[ コンテンツサービス用の JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) など |
-| GraphQLの API | 柔軟なクエリを使用して構造化コンテンツを効率的に取得するために最適化されています。 | AEM 6.X、AEM as a Cloud Service | ヘッドレスCMS、SPA、モバイルアプリ | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
-| 従来の（非 RESTful） API | JCR、Sling モデル、Query Builder などの古い API。 | AEM 6.X、AEM as a Cloud Service | レガシー統合、下位互換性 | [Query Builder API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) その他 |
+| RESTful API | AEM リソースとやり取りするための従来の REST エンドポイント。 | AEM 6.X、AEM as a Cloud Service | CRUD 操作、最新のアプリケーション | [Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[ ワークフロー REST API](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[ コンテンツサービス用の JSON エクスポーター ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) など |
+| GraphQLの API | 柔軟なクエリを使用して構造化コンテンツを効率的に取得するために最適化されています。 | AEM 6.X、AEM as a Cloud Service | ヘッドレスCMS、SPA、モバイルアプリ | [GraphQL API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
+| 従来の（非 RESTful） API | JCR、Sling モデル、Query Builder などの古い API。 | AEM 6.X、AEM as a Cloud Service | レガシー統合、下位互換性 | [Query Builder API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) その他 |
 
 詳しくは、[Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/) ページを参照してください。
 
@@ -66,7 +66,7 @@ AEMは、オーサーサービスとパブリッシュサービスのタイプ�
 | ～に最適である | サーバー間 API 呼び出し | アプリおよびユーザーに対する安全で許可されたアクセス |
 | 必要な情報 | JWT に署名するための秘密鍵 | OAuth 2.0 のクライアント ID とクライアント秘密鍵 |
 | トークンの有効期限 | 短時間のみ有効（多くの場合、更新が必要） | アクセストークンは短時間のみ有効です。 更新トークンは長期間有効で、新しいアクセストークンの取得に使用されます |
-| 資格情報管理 | [AEM Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) | [Adobe Developer Console](https://developer.adobe.com/developer-console/) |
+| 資格情報管理 | [AEM Developer Console](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) | [Adobe Developer Console](https://developer.adobe.com/developer-console/) |
 
 ## OpenAPI ベースのAEM API
 
@@ -168,22 +168,22 @@ OpenAPI ベースのAEM API と、Adobe API へのアクセスに関する重要
 
 ## GraphQL API – 例
 
-GraphQL API とその使用方法について詳しくは、[AEM ヘッドレスの概要 – GraphQL](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview) を参照してください
+GraphQL API とその使用方法について詳しくは、[AEM ヘッドレスの概要 – GraphQL](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview) を参照してください
 
 ### ユースケース
 
 <!-- CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
+* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
   {title = Single Page Application (SPA)}
   {description = Learn how to build a Single Page Application (SPA) that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/react-app-card.png}
-* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
+* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
   {title = Mobile App}
   {description = Learn how to build a mobile app that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/ios-app-card.png}
-* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
+* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
   {title = Web Component}
   {description = Learn how to build a web component that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/web-component-card.png}
@@ -194,7 +194,7 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" title="単一ページアプリケーション（SPA）" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" title="単一ページアプリケーション（SPA）" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/react-app-card.png" alt="単一ページアプリケーション（SPA）"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -203,11 +203,11 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" title="単一ページアプリケーション（SPA）"> 単一ページアプリケーション（SPA） </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" title="単一ページアプリケーション（SPA）"> 単一ページアプリケーション（SPA） </a>
                     </p>
                     <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得する単一ページアプリケーション（SPA）の作成方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
@@ -217,7 +217,7 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" title="モバイルアプリ" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" title="モバイルアプリ" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/ios-app-card.png" alt="モバイルアプリ"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -226,11 +226,11 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" title="モバイルアプリ"> モバイルアプリ </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" title="モバイルアプリ"> モバイルアプリ </a>
                     </p>
                     <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得するモバイルアプリを作成する方法を説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
@@ -240,7 +240,7 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" title="Web コンポーネント" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" title="Web コンポーネント" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/web-component-card.png" alt="Web コンポーネント"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -249,11 +249,11 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" title="Web コンポーネント">Web コンポーネント </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" title="Web コンポーネント">Web コンポーネント </a>
                     </p>
                     <p class="is-size-6">GraphQL API を使用して、AEMからコンテンツを取得する web コンポーネントの作成方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
@@ -264,18 +264,18 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
 
 ## RESTful API – 例
 
-[Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) や [JSON エクスポーター ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) などの RESTful API の詳細を説明します。
+[Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) や [JSON エクスポーター ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) などの RESTful API の詳細を説明します。
 
 ### ユースケース
 
 <!-- CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
+* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
   {title = Using Content Services for Headless App}
   {description = Learn how to build a native mobile app that fetches content from AEM using Content Services RESTful APIs.}
   {image = ./assets/RESTful-Content-Service.png}
-* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
+* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
   {title = Token-based Authentication for RESTful APIs}
   {description = Learn how to invoke RESTful APIs using JSON Web Token (JWT) authentication.}
   {image = ./assets/RESTful-TokenAuth.png}
@@ -286,7 +286,7 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" title="ヘッドレスアプリでのコンテンツサービスの使用" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" title="ヘッドレスアプリでのコンテンツサービスの使用" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/RESTful-Content-Service.png" alt="ヘッドレスアプリでのコンテンツサービスの使用"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -295,11 +295,11 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" title="ヘッドレスアプリでのコンテンツサービスの使用"> ヘッドレスアプリでのコンテンツサービスの使用 </a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" title="ヘッドレスアプリでのコンテンツサービスの使用"> ヘッドレスアプリでのコンテンツサービスの使用 </a>
                     </p>
                     <p class="is-size-6">コンテンツサービス RESTful API を使用して、AEMからコンテンツを取得するネイティブモバイルアプリを作成する方法を説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>

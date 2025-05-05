@@ -29,7 +29,7 @@ ht-degree: 100%
 
 ## カスタムメタデータプロパティの作成
 
-推奨されるアプローチは、[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html?lang=ja#getUserMetadataMap--) の getUserMetadata メソッドを実装する OSGI コンポーネントを作成することです。
+推奨されるアプローチは、[WorkitemUserMetadataService](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html?lang=ja#getUserMetadataMap--) の getUserMetadata メソッドを実装する OSGI コンポーネントを作成することです。
 
 次のコードは、4 つのメタデータプロパティ（_firstName_、_lastName_、_reason_、 _amountRequested_) を作成し、送信されたデータから値を設定します。 例えば、メタデータプロパティ _firstName_ の値は、送信されたデータから firstName と呼ばれる要素の値に設定されます。 次のコードは、アダプティブフォームの送信済みデータが xml 形式であることを前提としています。 JSON スキーマまたはフォームデータモデルに基づくアダプティブフォームは、JSON 形式のデータを生成します。
 

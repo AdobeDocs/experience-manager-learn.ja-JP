@@ -43,7 +43,7 @@ AEM Forms 6.4 で導入されたメール送信手順です。この手順を使
 1. [Developingwithserviceuser バンドルをデプロイします。](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 1. [setvalue バンドルをダウンロードしてインストールします。](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)このバンドルには、ワークフローのプロセス手順の一部としてメタデータプロパティを作成するためのコードが含まれています。
-1. [Day CQ メールサービスの設定](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html?lang=ja)
+1. [Day CQ メールサービスの設定](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/notification.html?lang=ja)
 1. [パッケージマネージャーを使用して、この記事に関連付けられたアセットを CRX に読み込んでインストールします。](assets/emaildoraemformskt.zip)
 1. [アダプティブフォーム](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)を起動します。必須フィールドに入力して送信します。
 1. DocumentOfRecord を添付ファイルとして含むメールが届きます。

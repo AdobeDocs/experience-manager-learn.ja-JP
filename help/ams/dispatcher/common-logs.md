@@ -33,7 +33,7 @@ ht-degree: 100%
 
 ```
 Fri Jul 20 03:35:09 2018 W pid 8300 (tid 139937910880384) /etc/httpd/conf/publish-filters.any:5: Allowing requests with globs is considered unsafe.
-Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_en' on how to use attributes 
+Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_jp' on how to use attributes 
 method/url/query/protocol/path/selectors/extension/suffix instead.
 ```
 
