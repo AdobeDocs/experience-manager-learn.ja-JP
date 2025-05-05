@@ -12,9 +12,9 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
 source-git-commit: 1049f605eb1c3b68e70e34d4cdad31858b076858
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '847'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -95,21 +95,21 @@ App Builder 拡張機能アプリの更新は、[初期デプロイメント](#i
 1. __管理__／__App Builder アプリ__&#x200B;に移動します。
 1. 更新する拡張機能を&#x200B;__失効__&#x200B;させます。
 
-拡張機能を失効させた後も、その拡張機能は、拡張機能マネージャーで失効済みステータスで引き続き表示されます。 完全に削除するには、プロジェクトを削除する必要があります。
+拡張機能を失効させた後も、Extension Manager では、その拡張機能が失効済みステータスで引き続き表示されます。完全に削除するには、プロジェクトを削除する必要があります。
 
 プロジェクトを削除するボタンは右上にあります。
 
-![「削除」ボタン](./assets/deploy/extension-delete-button.png){align="center"}
+![削除ボタン](./assets/deploy/extension-delete-button.png){align="center"}
 
-拡張機能が失効しない限り、プロジェクトを削除することはできません。
+拡張機能を失効させない限り、プロジェクトは削除できません。
 
-![ プロジェクトを削除することはできません ](./assets/deploy/extension-can-not-delete-project.png){align="center"}
+![プロジェクトは削除できません](./assets/deploy/extension-can-not-delete-project.png){align="center"}
 
-拡張機能が取り消されると、プロジェクトを削除できます。
+拡張機能を失効させると、プロジェクトを削除できます。
 
-![ プロジェクトを削除することはできません ](./assets/deploy/extension-delete-procject.png){align="center"}
+![プロジェクトは削除できません](./assets/deploy/extension-delete-procject.png){align="center"}
 
-プロジェクトを削除すると、Extension Managerに拡張機能が表示されなくなります。
+プロジェクトを削除すると、Extension Manager に拡張機能が表示されなくなります。
 
 ### 拡張機能のデプロイ
 

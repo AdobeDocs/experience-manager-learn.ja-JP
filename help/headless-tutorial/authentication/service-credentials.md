@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1963'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Manager（AEM）as a Cloud Service との統合については�
 
 AEM は、[Adobe Developer Console で管理される S2S OAuth](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) を使用して、他のアドビ製品と統合されています。サービスアカウントとのカスタム統合の場合、JWT 資格情報が AEM Developer Console で使用および管理されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/342226?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 サービス資格情報が[ローカル開発アクセストークン](./local-development-access-token.md)と似ているように見えるかもしれませんが、いくつかの重要な点で異なります。
 

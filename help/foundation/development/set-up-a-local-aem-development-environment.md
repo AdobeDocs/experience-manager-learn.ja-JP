@@ -12,7 +12,7 @@ doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
 source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2408'
 ht-degree: 100%
 
@@ -161,7 +161,7 @@ IDE を使用する場合は、Maven プロファイルタブで `classic` に�
 1. [!DNL IntelliJ IDEA] を [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download) からダウンロードしてインストールします。
 1. [!DNL Repo]（コマンドラインツール）を [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation) からインストールします。
 
->[!VIDEO](https://video.tv.adobe.com/v/39741?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 * 00:00 - Maven プロジェクトの読み込み
 * 05:47 - Maven を使用したソースコードのビルドとデプロイ

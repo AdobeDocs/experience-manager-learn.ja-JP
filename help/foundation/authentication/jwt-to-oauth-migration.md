@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-19T00:00:00Z
 jira: KT-16019
 exl-id: d4c9a509-baec-44e7-8b0b-6b469c1b5c2b
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 98%
 サービスアカウント（JWT）資格情報は、非推奨（廃止予定）としてマークされていますが、2025年1月27日（PT）までは引き続き機能します。したがって、2025年1月27日（PT）より前に、新しい OAuth サーバー間資格情報を使用できるようにアプリケーションまたは統合を移行する必要があります。詳しくは、[移行ガイド](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)を参照してください。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3449239/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)

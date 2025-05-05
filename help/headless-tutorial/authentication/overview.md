@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '621'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ AEM は、GraphQL、AEM コンテンツサービスから Assets HTTP API まで
 
 このチュートリアルでは、外部アプリケーションがアクセストークンを使用して、HTTP 経由で AEM as a Cloud Service に対してプログラムで認証とやり取りを行う方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3410081?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 前提条件
 
