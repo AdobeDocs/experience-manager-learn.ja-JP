@@ -13,9 +13,9 @@ last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
 source-git-commit: 888b00396f1d5d0b2dcb6895affdadf2907162fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '238'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 91%
 
 ### AEM 環境
 
-このチュートリアルを完了するには、AEM as a Cloud Service環境へのAEM管理者アクセス権を持つことをお勧めします。
+このチュートリアルを完了するには、AEM as a Cloud Service 環境に対する AEM 管理者アクセス権を持っていることが推奨されます。
 
 ## それでは、始めましょう。
 
