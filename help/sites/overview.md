@@ -1,15 +1,15 @@
 ---
 title: AEM Sites のビデオおよびチュートリアル
-description: Adobe Experience Manager Sitesの特長と機能に関するビデオとチュートリアルをご覧ください。 AEM Sitesは、優れた experience management platform です。
+description: Adobe Experience Manager Sites の特長と機能に関するビデオとチュートリアルをご覧ください。AEM Sites は、優れたエクスペリエンス管理プラットフォームです。
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 85472bce41e7d2911bcb15d1ec70be2b094012fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '512'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ AEM Sites では、エクスペリエンスの作成、オーサリング、配�
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional Sites - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -62,7 +62,7 @@ AEM Sites では、エクスペリエンスの作成、オーサリング、配�
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
