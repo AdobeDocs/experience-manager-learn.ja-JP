@@ -121,7 +121,7 @@ Java や Python などの他のプログラミング言語を使用して、ア�
 
 ### API を確認する
 
-アプリケーションを開発する前に、{2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
+アプリケーションを開発する前に、&lbrace;2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -424,7 +424,7 @@ API が正常に呼び出されると、ADC プロジェクトの OAuth サー�
 
   ![ テクニカルアカウントユーザー ](../assets/s2s/technical-account-user.png)
 
-- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2}AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
+- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2&rbrace;AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
 
   ![ テクニカルアカウントユーザーメンバーシップ ](../assets/s2s/technical-account-user-membership.png)
 
