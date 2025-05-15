@@ -12,16 +12,18 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 7%
+source-wordcount: '1440'
+ht-degree: 6%
 
 ---
 
 # OpenAPI ベースのAEM API の設定
 
 AEM as a Cloud Service環境を設定して、OpenAPI ベースのAEM API へのアクセスを有効にする方法について説明します。
+
+この例では、サーバー間認証方法を使用するAEM Assets API を使用して、設定プロセスを示します。 他の OpenAPI ベースのAEM API についても、同じ手順に従うことができます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -78,13 +80,25 @@ _新しい製品プロファイル_ が存在すると、Adobe Developer Console
 
 ![ 製品プロファイルに関連付けられたサービスのレビュー ](./assets/setup/review-services-associated-with-product-profile.png)
 
-デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。 新しく追加された **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile に関連付けましょう。 この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的のサーバー間認証を設定し、ADC プロジェクトの認証アカウント（次の手順で作成）を製品プロファイルに関連付けることができます。
+### AEM Assets API アクセスの有効化{#enable-aem-assets-apis-access}
+
+デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。 新しく追加された **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile またはAEM Assets API アクセスに使用するその他の製品プロファイルに関連付けます。
 
 ![AEM Assets API Users Service と製品プロファイルの関連付け ](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
+### サーバー間認証を有効にする
+
+目的のAEM API に対してサーバー間認証を有効にするには、Adobe Developer Console（ADC）を使用してインテグレーションを設定するユーザーを、サービスが関連付けられている Product Profile に Developer として追加する必要があります。
+
+例えば、AEM Assets API に対してサーバー間認証を有効にするには、ユーザーを開発者として **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** Product Profile に追加する必要があります。
+
+![ 製品プロファイルへの開発者の関連付け ](./assets/setup/associate-developer-to-product-profile.png)
+
+この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的のサーバー間認証を設定し、ADC プロジェクトの認証アカウント（次の手順で作成）を製品プロファイルに関連付けることができます。
+
 >[!IMPORTANT]
 >
->上記の手順は、AEM Assets API のサーバー間認証を有効にするために重要です。 この関連付けがないと、AEM Assets API をサーバー間認証方法と共に使用できません。
+>上記の手順は、目的のAEM API のサーバー間認証を有効にするために重要です。 この関連付けがないと、AEM API をサーバー間認証方法と共に使用できません。
 
 ## Adobe Developer Console（ADC）プロジェクトの作成{#adc-project}
 
@@ -92,7 +106,7 @@ ADC プロジェクトを使用して、目的の API を追加し、その認�
 
 ADC プロジェクトを作成するには、次の手順に従います。
 
-1. Adobe IDを使用して [&#128279;](https://developer.adobe.com/console)0&rbrace;Adobe Developer Console&rbrace; にログインします。
+1. Adobe IDを使用して ](https://developer.adobe.com/console)0}Adobe Developer Console} にログインします。[
 
    ![Adobe Developer Console](./assets/setup/adobe-developer-console.png)
 
@@ -126,6 +140,11 @@ ADC プロジェクトを作成したら、目的のAEM API を追加し、そ�
 
    サーバー間の認証は、ユーザーの操作なしで API へのアクセスが必要なバックエンドサービスに最適です。 Web アプリとシングルページアプリの認証オプションは、ユーザーの代わりに API アクセスを必要とするアプリケーションに適しています。 詳しくは、[OAuth サーバー間資格情報と web アプリ間資格情報とシングルページアプリ資格情報の違い ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) を参照してください。
 
+   >[!TIP]
+   >
+   >サーバー間認証オプションが表示されない場合は、統合を設定するユーザーが、サービスが関連付けられている製品プロファイルに開発者として追加されていないことを意味します。 詳しくは、[ サーバー間認証を有効にする ](#enable-server-to-server-authentication) を参照してください。
+
+
 1. 必要に応じて、識別しやすくするために API の名前を変更できます。 デモ用に、デフォルト名が使用されます。
 
    ![ 資格情報の名前を変更 ](./assets/s2s/rename-credential.png)
@@ -150,7 +169,7 @@ ADC プロジェクトのクライアント ID をAEM インスタンスと通�
 
 1. AEM プロジェクトで、`config` フォルダーから `api.yaml` ファイルを見つけるか作成します。
 
-   ![API YAML を見つけます ](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
+   ![API YAML を見つける](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
 1. 次の設定を `api.yaml` ファイルに追加します。
 

@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1727'
 ht-degree: 4%
 
 ---
@@ -89,6 +89,10 @@ ADC プロジェクトの設定手順が、[OpenAPI ベースのAEM API の設�
 
    ![ 認証を選択 ](../assets/s2s/select-authentication.png)
 
+   >[!TIP]
+   >
+   >サーバー間認証オプションが表示されない場合は、統合を設定するユーザーが、サービスが関連付けられている製品プロファイルに開発者として追加されていないことを意味します。 詳しくは、[ サーバー間認証を有効にする ](../setup.md#enable-server-to-server-authentication) を参照してください。
+
 1. 識別を容易にするために資格情報の名前を変更し（必要に応じて）、「**次へ**」をクリックします。 デモ用に、デフォルト名が使用されます。
 
    ![ 資格情報の名前を変更 ](../assets/s2s/rename-credential.png)
@@ -117,7 +121,7 @@ Java や Python などの他のプログラミング言語を使用して、ア�
 
 ### API を確認する
 
-アプリケーションを開発する前に、&lbrace;2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
+アプリケーションを開発する前に、{2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -420,7 +424,7 @@ API が正常に呼び出されると、ADC プロジェクトの OAuth サー�
 
   ![ テクニカルアカウントユーザー ](../assets/s2s/technical-account-user.png)
 
-- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2&rbrace;AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
+- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2}AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
 
   ![ テクニカルアカウントユーザーメンバーシップ ](../assets/s2s/technical-account-user-membership.png)
 
