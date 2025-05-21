@@ -12,8 +12,8 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: ht
+source-git-commit: ab499385a1df8c4b0ac58b6a382faa29b262e3ba
+workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 100%
 
@@ -221,7 +221,7 @@ AEM インスタンスと通信する ADC プロジェクトの OAuth サーバ�
         'Content-Type': 'application/json-patch+json',
         'If-Match': '*',
         'X-Adobe-Accept-Experimental': '1',
-        'X-Api-Key': 'aem-assets-management-api', // temporary value
+        'X-Api-Key': '12345676', // Use the `ClientID` value from the ADC Project's credentials section
         Authorization: `Bearer ${access_token}`,
       },
       body: JSON.stringify(transformedMetadata),
