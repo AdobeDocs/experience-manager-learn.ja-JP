@@ -12,10 +12,10 @@ badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title
 doc-type: Tutorial
 exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '145'
-ht-degree: 100%
+source-git-commit: 22bd6237bb1665bf87c6302d2988135b505e40c0
+workflow-type: tm+mt
+source-wordcount: '191'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,12 @@ ht-degree: 100%
 
 この統合により、AEM オーサーサービスは Adobe Target と直接通信し、エクスペリエンスフラグメントを AEM から Target にオファーとしてプッシュできるようになります。この統合では、AEM Sites の web ページに Adobe Target JavaScript（AT.js）が追加&#x200B;*されない*&#x200B;ため、[Target 拡張機能を使用してタグと AEM を統合](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)します。
 
->[!VIDEO](https://video.tv.adobe.com/v/329014?quality=12&learn=on&captions=jpn)
+>[!WARNING]
+>
+>このビデオでは、AEMをAdobe Targetに接続するための、非推奨（廃止予定）の JWT 認証方法について説明します。 ただし、OAuth サーバー間認証方法を使用することをお勧めします。 詳しくは、[AEMの JWT から OAuth への資格情報の移行 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration.html) を参照してください。 この変更を反映するために、ビデオの更新に取り組んでいます。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
