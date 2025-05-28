@@ -6,10 +6,10 @@ topic: Content Management
 role: User
 level: Beginner, Intermediate, Experienced
 doc-type: Feature Video
-duration: 542
+duration: 560
 last-substantial-update: 2025-05-28T00:00:00Z
 jira: KT-18197
-source-git-commit: 2ffe4706856f0dbf63f2916af010f23bdb7b0045
+source-git-commit: a509b7c41e6adb05e6c3b791ac2e99f635973322
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 6%
@@ -60,5 +60,5 @@ AEMの Dynamic Media を使用して、バーチャルレンディションの�
 
 ## Dynamic Media Image Server API
 
-* [Dynamic Media 画像サービングおよび画像レンダリング API](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
+* [Dynamic Media 画像サービングおよび画像レンダリング API](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
 * [Dynamic Media スナップショットのプレビュー ](https://snapshot.scene7.com/)
