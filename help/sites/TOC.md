@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '588'
-ht-degree: 100%
+source-git-commit: 17aa4aeb053a0bc0beca5e005185c49cf7a06a67
+workflow-type: tm+mt
+source-wordcount: '594'
+ht-degree: 96%
 
 ---
 
@@ -73,10 +73,10 @@ ht-degree: 100%
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
    + [ローンチ](page-authoring/launches.md)
-   + 他のユーザーから学ぶ {#expert-advice}
+   + 同僚から学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + 生成 AI {#generative-ai}
-   + [バリエーションの生成](./generative-ai/generate-variations.md)
+   + [バリエーションを生成](./generative-ai/generate-variations.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントコンソール](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=ja){target=_blank}
    + [コンテンツフラグメントのオーサリング](content-fragments/content-fragments-feature-video-use.md)
@@ -87,7 +87,7 @@ ht-degree: 100%
    + [エクスペリエンスフラグメントの使用](experience-fragments/experience-fragments-feature-video-use.md)
    + [構築ブロック](experience-fragments/building-blocks.md)
    + [コンテンツフラグメントとエクスペリエンスフラグメントの比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja){target=_blank}
-+ Edge 配信サービス{#edge-delivery-services}
++ Edge Delivery Services{#edge-delivery-services}
    + [概要](./edge-delivery-services/overview.md)
    + 開発{#developing}
       + [前提条件](edge-delivery-services/developing/prerequisites.md)
@@ -108,10 +108,10 @@ ht-degree: 100%
          + [ブロックのオーサリング](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [CSS のみを使用したブロック](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [CSS および JS を使用したブロック](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
-         + 方法{#how-to}
+         + ハウツー{#how-to}
             + [ブロックオプション](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
             + [ヘッダーとフッター](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
-   + 方法{#how-to}
+   + ハウツー{#how-to}
       + [RSS フィード](edge-delivery-services/how-to/rss.md)
       + [ソーシャルメディア共有](edge-delivery-services/how-to/social-media-sharing.md)
       + [ページの削除](edge-delivery-services/how-to/delete-page.md)
@@ -119,7 +119,7 @@ ht-degree: 100%
    + [Edge 配信サービス](developing/edge-delivery-services.md)
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
    + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
-   + [AEM ヘッドレスの概要](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja){target=_blank}
+   + [AEM ヘッドレスの基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja){target=_blank}
    + [AEM SPA エディターと React の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=ja){target=_blank}
    + [ページプロパティの拡張](developing/page-properties-technical-video-develop.md)
    + [レスポンシブブレークポイント](developing/responsive-breakpoints.md)
@@ -176,9 +176,9 @@ ht-degree: 100%
       + [IMS を使用した AEM とタグプロパティの接続](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [AEM タグクラウドサービスの作成](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [タグ実装のデバッグ](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe Client Data Layer {#adobe-client-data-layer}
-      + [Adobe Client Data Layer の使用](integrations/adobe-client-data-layer/data-layer-overview.md)
-      + [Adobe Client Data Layer のカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
+   + Adobe クライアントデータレイヤー {#adobe-client-data-layer}
+      + [アドビクライアントデータレイヤーの使用](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [アドビクライアントデータレイヤーのカスタマイズ](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analytics {#analytics}
       + [Adobe Analytics でページデータを収集](integrations/analytics/collect-data-analytics.md)
       + [クリックされたコンポーネントの Adobe Analytics での追跡](integrations/analytics/track-clicked-component.md)
@@ -192,8 +192,9 @@ ht-degree: 100%
       + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
-+ 他のユーザーから学ぶ {#expert-resources}
++ 同僚から学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
+   + [AEM Sitesでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
