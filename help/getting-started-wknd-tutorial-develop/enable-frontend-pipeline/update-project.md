@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
+workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## フルスタック AEM プロジェクトの設定変更の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/3453610?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -94,7 +94,7 @@ ht-degree: 100%
            }),
        new CopyWebpackPlugin({
            patterns: [
-               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site' }
+               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './theme' }
            ]
        })
    ...
