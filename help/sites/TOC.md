@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: 17aa4aeb053a0bc0beca5e005185c49cf7a06a67
+source-git-commit: d138fd849f8d82228b48b0f5b21f1198388e82af
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 96%
+source-wordcount: '588'
+ht-degree: 97%
 
 ---
 
@@ -194,7 +194,6 @@ ht-degree: 96%
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
 + 同僚から学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
-   + [AEM Sitesでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)
