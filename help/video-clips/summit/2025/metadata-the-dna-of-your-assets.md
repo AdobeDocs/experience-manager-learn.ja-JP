@@ -25,4 +25,4 @@ ht-degree: 0%
 
 メタデータがワークフロー、検索、インサイトをどのように推進するか、および自動化によってメタデータを強化してブランド標準に合わせる方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461966/?learn=on&enablevpops&captions=jpn)

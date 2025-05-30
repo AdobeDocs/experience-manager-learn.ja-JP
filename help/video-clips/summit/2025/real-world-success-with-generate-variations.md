@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman が、コンテンツベロシティを向上させ、タイムラインを短縮し、コンバージョンを促進するために、Adobe.comがどのようにバリエーションを生成を使用したかを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462692/?learn=on&enablevpops&captions=jpn)

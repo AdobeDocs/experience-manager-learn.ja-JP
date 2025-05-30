@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Experience Catalyst が AI を活用して、WordPress サイトをAEM Cloud Services に簡単に移行する方法をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461977/?learn=on&enablevpops&captions=jpn)

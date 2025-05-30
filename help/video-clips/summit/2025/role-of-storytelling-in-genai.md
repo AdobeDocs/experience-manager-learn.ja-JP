@@ -25,4 +25,4 @@ ht-degree: 0%
 
 カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の GenAI ツールのデザインにどのように関連しているかを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462010/?learn=on&enablevpops&captions=jpn)

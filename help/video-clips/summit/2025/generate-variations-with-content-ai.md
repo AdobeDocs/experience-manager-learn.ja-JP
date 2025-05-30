@@ -25,4 +25,4 @@ ht-degree: 0%
 
 コンテンツ AI を使用して、魅力的なコンテンツのバリエーションを迅速かつ効率的に作成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461878/?learn=on&enablevpops&captions=jpn)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 AEM AI アシスタントを使用して、商品に関する知識の検索を簡単にし、サポートチケットの作成を自動化する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461911/?learn=on&enablevpops&captions=jpn)

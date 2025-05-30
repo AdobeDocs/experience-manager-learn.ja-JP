@@ -25,4 +25,4 @@ ht-degree: 0%
 
 属性ベースのアクセス制御、ブランド化されたランディングページ、プラットフォーム間の統合検索など、Content Hubの新機能について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461811/?learn=on&enablevpops&captions=jpn)
