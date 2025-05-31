@@ -221,7 +221,7 @@ AEM Assets コンテンツハブを様々なコンテキストで効果的に利
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="AEM Assets コンテンツハブでアセットを管理する方法" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1744751770120" alt="AEM Assets コンテンツハブでアセットを管理する方法"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463057/?format=jpeg&nocache=1744751770120&captions=jpn" alt="AEM Assets コンテンツハブでアセットを管理する方法"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

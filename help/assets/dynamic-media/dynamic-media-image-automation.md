@@ -21,7 +21,7 @@ ht-degree: 6%
 
 AEMの Dynamic Media を使用して、バーチャルレンディションの作成、透明性の管理、スケーラブルなコンテンツ再利用のための画像処理の自動化を行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459589/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463046/?learn=on&enablevpops&captions=jpn)
 
 
 ## Dynamic Media アセットの例

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM Assets コンテンツハブを使用して、承認済みブランドアセットを簡単に管理および共有し、チームがこれまでより迅速にマーケティングキャンペーンを実行できるようにする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3457638/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463057/?learn=on&enablevpops&captions=jpn)
