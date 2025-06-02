@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 4%
@@ -121,7 +121,7 @@ Java や Python などの他のプログラミング言語を使用して、ア�
 
 ### API を確認する
 
-アプリケーションを開発する前に、&lbrace;2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
+アプリケーションを開発する前に、{2[Assets オーサー API から ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) 指定したアセットのメタデータを配信する _エンドポイントを確認してみましょう。_ API 構文は次のとおりです。
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -139,9 +139,9 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ### ブラウザーを使用した API の呼び出し
 
-アプリケーションを開発する前に、[API ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/) にある **試す** 機能を使用して API を呼び出します。
+アプリケーションを開発する前に、[API ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) にある **試す** 機能を使用して API を呼び出します。
 
-1. ブラウザーで [Assets Author API ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/) を開きます。
+1. ブラウザーで [Assets Author API ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) を開きます。
 
 1. 「_メタデータ_」セクションを展開し、「**指定したアセットのメタデータを配信**」オプションをクリックします。
 
@@ -424,7 +424,7 @@ API が正常に呼び出されると、ADC プロジェクトの OAuth サー�
 
   ![ テクニカルアカウントユーザー ](../assets/s2s/technical-account-user.png)
 
-- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2&rbrace;AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
+- テクニカルアカウントユーザーをクリックして、**グループ** メンバーシップなどのユーザーの詳細を表示します。 次に示すように、テクニカルアカウントユーザーは、**AEM Assets Collaborator Users - author - Program XXX - Environment XXX および** 2}AEM Assets Collaborator Users - Service **ユーザーグループに関連付けられています。**
 
   ![ テクニカルアカウントユーザーメンバーシップ ](../assets/s2s/technical-account-user-membership.png)
 
