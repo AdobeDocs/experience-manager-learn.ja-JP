@@ -59,7 +59,7 @@ Adobe Developer Console（ADC）プロジェクトは、OAuth 単一ページア
 >ADC プロジェクトは _client_secret_ を提供しません。代わりに、SPA は _code_verifier_ と _code_challenge_ を生成して、_アクセストークン_&#x200B;の承認コードを安全に交換します。これにより、クライアント側でクライアントの秘密鍵を保存する必要がなくなり、セキュリティが強化されます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3456965?quality=12&learn=on&captions=jpn)
 
 
 

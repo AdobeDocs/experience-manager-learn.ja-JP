@@ -24,4 +24,4 @@ ht-degree: 100%
 
 大量のレコードを処理する際に、クエリと検索の最適化を使用して lighthouse のスコアを 100 購入に設定します。クエリインデックスの最適化、検索機能の強化、最善のパフォーマンス最適化のためのクエリインデックスの分割を行うテクニックを活用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440979/?learn=on&enablevpops&captions=jpn)

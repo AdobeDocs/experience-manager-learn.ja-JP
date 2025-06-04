@@ -24,4 +24,4 @@ ht-degree: 100%
 
 塹壕の物語 - Edge Delivery Services を Google マップと統合する方法と、統合によってパフォーマンスを最適化する方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440990/?learn=on&enablevpops&captions=jpn)

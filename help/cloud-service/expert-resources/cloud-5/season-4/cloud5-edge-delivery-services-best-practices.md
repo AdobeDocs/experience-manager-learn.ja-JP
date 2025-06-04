@@ -24,4 +24,4 @@ ht-degree: 100%
 
 経験豊富な設計者が Edge Delivery Services での開発手法を説明します。Kiran が、プロジェクトで直面した多くの問題とその解決方法を紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441001/?learn=on&enablevpops&captions=jpn)
