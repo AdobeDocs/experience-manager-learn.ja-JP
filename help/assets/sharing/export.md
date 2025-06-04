@@ -13,9 +13,9 @@ thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
 source-git-commit: 107a9a77a1bf2337f309d503a4a310d8d0781f0d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '510'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ XMP としてアセットにメタデータが埋め込まれていない限り�
 
 ## 書き出しスクリプト
 
-JavaScript モジュールとして記述されたスクリプトは、`node-fetch` および `p-limit` に依存するので、Node.js プロジェクトの一部です。 以下のスクリプトを `module` タイプの空の Node.js プロジェクトにコピーし、`npm install node-fetch p-limit` を実行して依存関係をインストールできます。
+JavaScript モジュールとして記述されたスクリプトは、`node-fetch` と `p-limit` への依存関係があるので、Node.js プロジェクトの一部です。以下のスクリプトを `module` タイプの空の Node.js プロジェクトにコピーし、`npm install node-fetch p-limit` を実行して依存関係をインストールできます。
 
 このスクリプトは、AEM Assets フォルダーツリーを移動し、アセットとフォルダーをマシン上のローカルフォルダーにダウンロードします。 [AEM Assets HTTP API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) を使用してフォルダーとアセットデータを取得し、アセットの元のレンディションをダウンロードします。
 

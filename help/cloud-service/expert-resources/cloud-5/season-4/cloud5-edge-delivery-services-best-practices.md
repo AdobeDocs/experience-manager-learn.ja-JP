@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Edge Delivery Servicesの開発のベストプラクティス
-description: 経験豊富なアーキテクトが、Edge Delivery Servicesでの開発手法を説明します。
+title: Cloud 5 - Edge Delivery Services 開発のベストプラクティス
+description: 経験豊富な設計者が Edge Delivery Services での開発手法を説明します。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -14,14 +14,14 @@ last-substantial-update: 2024-12-12T00:00:00Z
 jira: KT-16667
 exl-id: fac67cdd-ef7a-4b82-8690-9798d0b01ff4
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '61'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Edge Delivery Servicesの開発のベストプラクティス
+# Cloud 5 - Edge Delivery Services 開発のベストプラクティス
 
-経験豊富なアーキテクトが、Edge Delivery Servicesでの開発手法を説明します。 Kiran は、プロジェクトで直面した多くの問題とその解決方法を紹介します。
+経験豊富な設計者が Edge Delivery Services での開発手法を説明します。Kiran が、プロジェクトで直面した多くの問題とその解決方法を紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3441001/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3440978/?learn=on&enablevpops)
