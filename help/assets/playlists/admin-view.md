@@ -28,8 +28,8 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-configure-administrators
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-all-configure-administrative-access
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-configure-administrators
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -39,7 +39,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-all-configure-administrative-access" title="Experience Manager への管理者アクセスの設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1130bb3c4cd41705ba451f3219632a7d57f9b3f85.jpeg?width=400&format=pjpg&optimize=medium" alt="Experience Manager への管理者アクセスの設定"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_1130bb3c4cd41705ba451f3219632a7d57f9b3f85.jpeg?width=400&format=pjpg&optimize=medium" alt="Experience Manager への管理者アクセスの設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -62,7 +62,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-configure-administrators" title="AEM Assets の設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_10ff5e029664c15b4f0982e17cd2420f86892026e.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets の設定"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_10ff5e029664c15b4f0982e17cd2420f86892026e.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets の設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -96,10 +96,10 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-business-users  
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-understand-metadata
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-optimize-search
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-smart-tags
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-get-started-business-users  
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-understand-metadata
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-optimize-search
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-use-smart-tags
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -109,7 +109,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-get-started-business-users" title="ビジネスユーザー向け AEM Assets 管理者ビューの概要" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1ef8147e9c1eae5160028ef72a069e1dc359f67d6.jpeg?width=400&format=pjpg&optimize=medium" alt="ビジネスユーザー向け AEM Assets 管理者ビューの概要"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_1ef8147e9c1eae5160028ef72a069e1dc359f67d6.jpeg?width=400&format=pjpg&optimize=medium" alt="ビジネスユーザー向け AEM Assets 管理者ビューの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -132,7 +132,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-understand-metadata" title="AEM Assets でのアセットメタデータについて" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_14b36b75c74414a6466b1285aaec1e8c77fa3df5c.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets でのアセットメタデータについて"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_14b36b75c74414a6466b1285aaec1e8c77fa3df5c.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets でのアセットメタデータについて"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,7 +155,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-optimize-search" title="AEM Assets での検索の最適化" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1f15aea73bd3e4e5dda006cf15154ffa716096f29.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets での検索の最適化"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_1f15aea73bd3e4e5dda006cf15154ffa716096f29.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets での検索の最適化"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -178,7 +178,7 @@ AEM Assets as a Cloud Service をチームやプロジェクトに対してシ�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-use-smart-tags" title="スマートタグを使用したアセット検出の強化" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1812d95f81d708d5f0fef7e1003bcab6413afe4aa.jpeg?width=400&format=pjpg&optimize=medium" alt="スマートタグを使用したアセット検出の強化"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_1812d95f81d708d5f0fef7e1003bcab6413afe4aa.jpeg?width=400&format=pjpg&optimize=medium" alt="スマートタグを使用したアセット検出の強化"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -212,8 +212,8 @@ AEM Assets as a Cloud Service をクリエイティブツールと統合し、�
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-create-renditions-content-automation
+* https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-use-creative-operations-with-content-automation
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -223,7 +223,7 @@ AEM Assets as a Cloud Service をクリエイティブツールと統合し、�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-create-renditions-content-automation" title="AEM コンテンツ自動処理を使用したカスタムレンディションの作成" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_13985b4766ee5b638f540f60e2a52fb024471662e.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM コンテンツ自動処理を使用したカスタムレンディションの作成"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_13985b4766ee5b638f540f60e2a52fb024471662e.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM コンテンツ自動処理を使用したカスタムレンディションの作成"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -246,7 +246,7 @@ AEM Assets as a Cloud Service をクリエイティブツールと統合し、�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="AEM Assets コンテンツ自動化によるクリエイティブ操作の使用" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets コンテンツ自動化によるクリエイティブ操作の使用"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Assets コンテンツ自動化によるクリエイティブ操作の使用"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
