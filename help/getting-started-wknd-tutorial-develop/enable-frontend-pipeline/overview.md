@@ -15,14 +15,16 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 
 ---
 
 # 標準 AEM プロジェクトアーキタイプのフロントエンドパイプラインの有効化{#enable-front-end-pipeline-standard-aem-project}
+
+{{traditional-aem}}
 
 [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用して作成された [AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd)（別名、標準 AEM プロジェクト）を有効にして、CSS、JavaScript、フォント、アイコンなどのフロントエンドリソースをフロントエンドパイプラインを使用してデプロイし、開発からデプロイメントまでのサイクルを高速化する方法を説明します。AEM のフルスタックバックエンド開発からフロントエンド開発を切り離す方法も説明します。また、これらのフロントエンドリソースが AEM リポジトリから&#x200B;__ではなく__ CDN から提供される方法、つまり配信パラダイムの変化についても説明します
 
