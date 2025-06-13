@@ -1,6 +1,6 @@
 ---
-title: Personalization用 Dynamic Media テンプレート
-description: Dynamic Media テンプレートを使用してバナーをその場でパーソナライズし、様々なオーディエンス向けのバリエーションを簡単に作成する方法を説明します。
+title: パーソナライゼーション用 Dynamic Media テンプレート
+description: Dynamic Media テンプレートを使用し、バナーのその場でのパーソナライゼーションを有効にして、様々なオーディエンス向けのバリエーションを簡単に作成する方法について説明します。
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -13,16 +13,16 @@ feature: Generate Variations, Personalization, Rich Text Editor, Integrations
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: d4458e36-348a-4903-9990-1382443f128b
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# パーソナライゼーション用 Dynamic Media テンプレート
 
-# Personalization用 Dynamic Media テンプレート
-
-Dynamic Media テンプレートを使用してバナーをその場でパーソナライズし、様々なオーディエンス向けのバリエーションを簡単に作成する方法を説明します。
+Dynamic Media テンプレートを使用し、バナーのその場でのパーソナライゼーションを有効にして、様々なオーディエンス向けのバリエーションを簡単に作成する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459222/?learn=on&enablevpops)

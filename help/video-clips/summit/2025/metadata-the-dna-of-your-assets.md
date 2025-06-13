@@ -1,6 +1,6 @@
 ---
-title: メタデータ - Assetsの DNA
-description: メタデータがワークフロー、検索、インサイトをどのように推進するか、および自動化によってメタデータを強化してブランド標準に合わせる方法について説明します。
+title: メタデータ - アセットの DNA
+description: メタデータによってワークフロー、検索、インサイトを推進する方法、および自動化によってメタデータを強化し、ブランド標準に適合させる方法について説明します。
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -13,16 +13,16 @@ feature: Search, Tagging, Workflow
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# メタデータ：アセットの DNA
 
-# メタデータ：Assetsの DNA
+メタデータによってワークフロー、検索、インサイトを推進する方法、および自動化によってメタデータを強化し、ブランド標準に適合させる方法について説明します。
 
-メタデータがワークフロー、検索、インサイトをどのように推進するか、および自動化によってメタデータを強化してブランド標準に合わせる方法について説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/3461966/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

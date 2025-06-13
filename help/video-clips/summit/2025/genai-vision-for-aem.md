@@ -1,6 +1,6 @@
 ---
-title: Adobeの GenAI Vision for AEM
-description: GenAI ツールを使用して、参入障壁を減らし、ワークフローを統合し、ビジネスへの影響を最大限に高める、Adobeのアプローチについて説明します。
+title: アドビの AEM 用生成 AI ビジョン
+description: 生成 AI ツールを使用して参入障壁を下げ、ワークフローを統合し、ビジネスへの影響を最大化するアドビのアプローチについて説明します。
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites, Sensei
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
@@ -13,16 +13,16 @@ feature: Generative AI, Integrations, Onboarding, Operations
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 193543f3-5200-479b-8735-3b529291ff7c
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# アドビの AEM 用生成 AI ビジョン
 
-# Adobeの GenAI Vision for AEM
-
-GenAI ツールを使用して、参入障壁を減らし、ワークフローを統合し、ビジネスへの影響を最大限に高める、Adobeのアプローチについて説明します。
+生成 AI ツールを使用して参入障壁を下げ、ワークフローを統合し、ビジネスへの影響を最大化するアドビのアプローチについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459231/?learn=on&enablevpops)

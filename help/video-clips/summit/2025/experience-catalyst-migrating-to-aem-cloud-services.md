@@ -1,6 +1,6 @@
 ---
 title: Experience Catalyst - AEM Cloud Services への移行
-description: Experience Catalyst が AI を活用して、WordPress サイトをAEM Cloud Services に簡単に移行する方法をご覧ください。
+description: Experience Catalyst で AI を活用して WordPress サイトを AEM Cloud Services に簡単に移行する方法をご覧ください。
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
@@ -13,16 +13,16 @@ feature: Generative AI, Migration, Onboarding, Developer Tools, Projects
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: da9a0a9b-000b-4dd6-895e-8b20ade31664
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Experience Catalyst：AEM Cloud Services への移行
 
-# Experience Catalyst:AEM Cloud Services への移行
+Experience Catalyst で AI を活用して WordPress サイトを AEM Cloud Services に簡単に移行する方法をご覧ください。
 
-Experience Catalyst が AI を活用して、WordPress サイトをAEM Cloud Services に簡単に移行する方法をご覧ください。
-
->[!VIDEO](https://video.tv.adobe.com/v/3461977/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)

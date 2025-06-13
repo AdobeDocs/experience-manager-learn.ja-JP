@@ -8,9 +8,9 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 2ffe4706856f0dbf63f2916af010f23bdb7b0045
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '456'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

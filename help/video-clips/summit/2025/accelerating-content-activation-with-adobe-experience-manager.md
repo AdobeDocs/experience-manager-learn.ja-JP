@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Managerを使用したコンテンツアクティベーションの高速化
-description: Adobe Experience Managerが、信頼性、パーソナライゼーション、ROI を維持しながら、企業がコンテンツのアクティベーションを迅速に行うのに役立つ仕組みを説明します。
+title: Adobe Experience Manager によるコンテンツアクティベーションの高速化
+description: Adobe Experience Manager を使って、信頼性、パーソナライゼーション、ROI を維持しながら、ブランドコンテンツを迅速にアクティベーションする方法を説明します。
 cloud: Experience Cloud
 solution: Experience Manager Assets, Sensei
 feature-set: Experience Manager Assets
@@ -13,16 +13,16 @@ feature: Brand Experiences, Content Personalization, Marketing Campaigns, Multic
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 177150b3-6be3-4594-b1ca-f7f080effdfd
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Adobe Experience Manager によるコンテンツアクティベーションの高速化
 
-# Adobe Experience Managerを使用したコンテンツアクティベーションの高速化
-
-Adobe Experience Managerが、信頼性、パーソナライゼーション、ROI を維持しながら、企業がコンテンツのアクティベーションを迅速に行うのに役立つ仕組みを説明します。
+Adobe Experience Manager を使って、信頼性、パーソナライゼーション、ROI を維持しながら、ブランドコンテンツを迅速にアクティベーションする方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459239/?learn=on&enablevpops)

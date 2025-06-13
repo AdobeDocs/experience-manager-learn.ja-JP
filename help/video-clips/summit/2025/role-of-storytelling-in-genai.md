@@ -1,6 +1,6 @@
 ---
-title: GenAI におけるストーリーテリングの役割
-description: カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の GenAI ツールのデザインにどのように関連しているかを確認します。
+title: 生成 AI でのストーリーテリングの役割
+description: カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の生成 AI ツールのデザインにどのように関連しているかについて説明します。
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites, Sensei
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
@@ -13,16 +13,16 @@ feature: Generative AI
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: f3902c6e-7f32-49ce-982a-76d264b87fd0
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# 生成 AI でのストーリーテリングの役割
 
-# GenAI におけるストーリーテリングの役割
+カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の生成 AI ツールのデザインにどのように関連しているかについて説明します。
 
-カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の GenAI ツールのデザインにどのように関連しているかを確認します。
-
->[!VIDEO](https://video.tv.adobe.com/v/3462010/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)

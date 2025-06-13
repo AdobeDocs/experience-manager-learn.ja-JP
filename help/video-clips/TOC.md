@@ -1,17 +1,17 @@
 ---
-user-guide-title: Adobe Experience Manager ビデオショーツ
-breadcrumb-title: ビデオショーツ
+user-guide-title: Adobe Experience Manager のショートビデオ
+breadcrumb-title: ショートビデオ
 user-guide-description: 非表示のコレクション
 auto-video-transcripts: true
 source-git-commit: 57a207cc492912537be024315119d4a8d9dadebe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '63'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Manager ビデオショーツ {#video-clips}
+# Adobe Experience Manager のショートビデオ {#video-clips}
 
 + Adobe Summit {#summit}
    + 2025 {#2025}

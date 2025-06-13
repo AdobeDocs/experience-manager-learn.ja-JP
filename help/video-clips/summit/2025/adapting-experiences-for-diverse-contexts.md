@@ -1,6 +1,6 @@
 ---
-title: 様々なコンテキストへのエクスペリエンスの適応
-description: エクスペリエンス生成を使用して、マーケターがコントロールを維持しながら、様々なペルソナ、チャネル、地域に合わせてコンテンツを調整する方法を説明します。
+title: 様々なコンテキストに対するエクスペリエンスの適応
+description: エクスペリエンス生成により、マーケターがコントロールを維持しながら、様々なペルソナ、チャネル、地域に合わせてコンテンツを適応させる方法について説明します。
 cloud: Experience Cloud
 solution: Experience Manager Assets, Experience Manager Sites
 feature-set: Experience Manager Assets, Experience Manager Sites
@@ -13,16 +13,16 @@ feature: Brand Experiences, Content Personalization, Multichannel Delivery, Rend
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 71c0c58e-5789-417b-9a61-f290ca1b4ae5
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# 様々なコンテキストに対するエクスペリエンスの適応
 
-# 様々なコンテキストへのエクスペリエンスの適応
-
-エクスペリエンス生成を使用して、マーケターがコントロールを維持しながら、様々なペルソナ、チャネル、地域に合わせてコンテンツを調整する方法を説明します。
+エクスペリエンス生成により、マーケターがコントロールを維持しながら、様々なペルソナ、チャネル、地域に合わせてコンテンツを適応させる方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)

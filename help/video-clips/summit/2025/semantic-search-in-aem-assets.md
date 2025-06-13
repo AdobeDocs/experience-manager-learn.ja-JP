@@ -1,6 +1,6 @@
 ---
-title: AEM Assetsでのセマンティック検索
-description: AEM Assetsのセマンティック検索を使用して、意図に合ったコンテンツをより効果的に見つける方法を説明します。
+title: AEM Assets でのセマンティック検索
+description: AEM Assets のセマンティック検索を使用して、意図に一致するコンテンツをより効果的に見つける方法について説明します。
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
@@ -13,16 +13,16 @@ feature: Generate Variations, Generative AI, Search, Tagging
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 1666878c-11ee-4f94-a307-605d96e21619
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '44'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM Assets でのセマンティック検索
 
-# AEM Assetsでのセマンティック検索
+AEM Assets のセマンティック検索を使用して、意図に一致するコンテンツをより効果的に見つける方法について説明します。
 
-AEM Assetsのセマンティック検索を使用して、意図に合ったコンテンツをより効果的に見つける方法を説明します。
-
->[!VIDEO](https://video.tv.adobe.com/v/3461889/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)

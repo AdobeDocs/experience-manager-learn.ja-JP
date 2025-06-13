@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 source-git-commit: 7e13dda1303e33181bdb6845c8274b0e59ea5505
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '594'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 96%
    + [スタイルシステム](page-authoring/style-system-feature-video-use.md)
    + [タイムワープ](page-authoring/timewarp-feature-video-use.md)
    + [ローンチ](page-authoring/launches.md)
-   + 同僚から学ぶ {#expert-advice}
+   + 他のユーザーから学ぶ {#expert-advice}
       + [サイト階層のヒント](page-authoring/expert-advice/site-hierarchy.md)
 + 生成 AI {#generative-ai}
    + [バリエーションを生成](./generative-ai/generate-variations.md)
@@ -108,15 +108,15 @@ ht-degree: 96%
          + [ブロックのオーサリング](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [CSS のみを使用したブロック](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [CSS および JS を使用したブロック](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
-         + ハウツー{#how-to}
+         + 方法{#how-to}
             + [ブロックオプション](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
             + [ヘッダーとフッター](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
-   + ハウツー{#how-to}
+   + 方法{#how-to}
       + [RSS フィード](edge-delivery-services/how-to/rss.md)
       + [ソーシャルメディア共有](edge-delivery-services/how-to/social-media-sharing.md)
       + [ページの削除](edge-delivery-services/how-to/delete-page.md)
 + 開発 {#developing}
-   + [Edge 配信サービス](developing/edge-delivery-services.md)
+   + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM プロジェクトアーキタイプ](developing/aem-project-archetype.md)
    + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [AEM ヘッドレスの基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja){target=_blank}
@@ -192,9 +192,9 @@ ht-degree: 96%
       + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
       + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
       + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
-+ 同僚から学ぶ {#expert-resources}
++ 他のユーザーから学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
-   + [AEM Sitesでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
+   + [AEM サイトでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites の成熟度評価](expert-resources/maturity-assessment.md)
    + [サイトメンテナンス](expert-resources/site-maintenance.md)
    + [AEM チャンピオンのヒントとテクニック：セッション 1](expert-resources/champion-tips-1.md)

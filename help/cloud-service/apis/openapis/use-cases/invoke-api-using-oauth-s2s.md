@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
 source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1727'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 
    >[!TIP]
    >
-   >サーバー間認証オプションが表示されない場合は、統合を設定するユーザーが、サービスが関連付けられている製品プロファイルに開発者として追加されていないことを意味します。 詳しくは、[ サーバー間認証を有効にする ](../setup.md#enable-server-to-server-authentication) を参照してください。
+   >サーバー間認証オプションが表示されない場合は、統合を設定するユーザーが、サービスが関連付けられている製品プロファイルに開発者として追加されていないということを意味します。詳しくは、[サーバー間認証を有効にする](../setup.md#enable-server-to-server-authentication)を参照してください。
 
 1. （必要に応じて）識別を容易にするために資格情報の名前を変更し、「**次へ**」をクリックします。デモ用には、デフォルト名が使用されます。
 
