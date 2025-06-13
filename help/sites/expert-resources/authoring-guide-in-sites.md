@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM チャンピオンの Brett Birschbach が、Adobe Experience Manager（AEM）Sites 内でライブオーサリングガイドを作成するためのベストプラクティスを共有します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459572/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463134/?learn=on&enablevpops&captions=jpn)
