@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 100%
 
 ---
 
 # ナビゲーションとルーティングの追加 {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 AEM ページと SPA エディター SDK を使用して SPA の複数のビューがサポートされている仕組みについて説明します。Angular ルートを使用して動的ナビゲーションを実装し、既存のヘッダーコンポーネントに追加します。
 

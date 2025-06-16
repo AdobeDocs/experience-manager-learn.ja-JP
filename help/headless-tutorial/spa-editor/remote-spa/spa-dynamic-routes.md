@@ -12,14 +12,17 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 100%
 
 ---
 
 # 動的ルートと編集可能なコンポーネント
+
+{{spa-editor-deprecation}}
 
 この章では、2 つの動的な「アドベンチャーの詳細」ルートを有効にして、編集可能なコンポーネント（__Bali Surf Camp__ と __Beervana in Portland__）をサポートします。
 
@@ -43,8 +46,8 @@ SPA の動的ルートの編集可能なコンポーネントのマッピング�
 
 したがって、このマッピングに基づいて、次の場所に 2 つの新しい AEM ページを作成する必要があります。
 
-+ `/content/wknd-app/us/en/home/adventure/bali-surf-camp`
-+ `/content/wknd-app/us/en/home/adventure/beervana-in-portland`
+* `/content/wknd-app/us/en/home/adventure/bali-surf-camp`
+* `/content/wknd-app/us/en/home/adventure/beervana-in-portland`
 
 ## リモート SPA のマッピング
 
@@ -60,13 +63,13 @@ SPA が AEM SPA エディターで開かれたときの SPA 要求のマッピ�
 
 1. AEM オーサーにログインします。
 1. __Sites／WKND アプリ／米国／英語／WKND アプリのホームページ__&#x200B;に移動します
-   + この AEM ページは SPA のルートとしてマッピングされるので、ここから他の SPA ルートの AEM ページ構造の構築を開始します。
+   1. この AEM ページは SPA のルートとしてマッピングされるので、ここから他の SPA ルートの AEM ページ構造の構築を開始します。
 1. 「__作成__」をタップし、「__ページ__」を選択します
 1. __リモート SPA ページ__&#x200B;テンプレートを選択し、「__次へ__」をタップします
 1. ページプロパティの入力
-   + __タイトル__：Adventure
-   + __名前__：`adventure`
-      + この値は AEM ページの URL を定義するので、SPA のルートセグメントと一致する必要があります。
+   1. __タイトル__：Adventure
+   1. __名前__：`adventure`
+      1. この値は AEM ページの URL を定義するので、SPA のルートセグメントと一致する必要があります。
 1. 「__完了__」をタップします
 
 次に、編集可能な領域が必要な各 SPA URL に対応する AEM ページを作成します。
@@ -75,14 +78,14 @@ SPA が AEM SPA エディターで開かれたときの SPA 要求のマッピ�
 1. 「__作成__」をタップし、「__ページ__」を選択します
 1. __リモート SPA ページ__&#x200B;テンプレートを選択し、「__次へ__」をタップします
 1. ページプロパティの入力
-   + __タイトル__：Bali Surf Camp
-   + __名前__：`bali-surf-camp`
-      + この値は AEM ページの URL を定義するので、SPA のルートの最後のセグメントと一致する必要があります
+   1. __タイトル__：Bali Surf Camp
+   1. __名前__：`bali-surf-camp`
+      1. この値は AEM ページの URL を定義するので、SPA のルートの最後のセグメントと一致する必要があります
 1. 「__完了__」をタップします
 1. 手順 3～6 を繰り返して、__Beervana in Portland__ ページ（以下を含む）を作成します。
-   + __タイトル__：Beervana in Portland
-   + __名前__：`beervana-in-portland`
-      + この値は AEM ページの URL を定義するので、SPA のルートの最後のセグメントと一致する必要があります
+   1. __タイトル__：Beervana in Portland
+   1. __名前__：`beervana-in-portland`
+      1. この値は AEM ページの URL を定義するので、SPA のルートの最後のセグメントと一致する必要があります
 
 これら 2 つの AEM ページには、一致する SPA ルート用にそれぞれオーサリングされたコンテンツが格納されます。 他の SPA ルートでオーサリングが必要な場合は、AEM のリモート SPA ページのルートページ（`/content/wknd-app/us/en/home`）の下にある SPA の URL で、新しい AEM ページを作成する必要があります。
 
@@ -97,12 +100,12 @@ SPA が AEM SPA エディターで開かれたときの SPA 要求のマッピ�
 1. `react-app-/src/components/AdventureDetail.js` を開いて編集する
 1. `ResponsiveGrid` コンポーネントを読み込んで、`<h2>Itinerary</h2>` コンポーネントの上に配置します。
 1. `<ResponsiveGrid...>` コンポーネントに次の属性を設定します。`pagePath` 属性は、上で定義されたマッピングに従ってアドベンチャーページにマップされる現在の `slug` を追加することに注意します。
-   + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
-   + `itemPath = 'root/responsivegrid'`
+   1. `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
+   1. `itemPath = 'root/responsivegrid'`
 
    これは、`ResponsiveGrid` コンポーネントが AEM リソースからコンテンツを取得するように指示するものです。
 
-   + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
+   1. `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 
 `AdventureDetail.js` を次の行で更新します。
 
@@ -147,16 +150,16 @@ function AdventureDetailRender(props) {
 1. AEM オーサーにログインします。
 1. __Sites／WKND アプリ／米国／英語__&#x200B;に移動
 1. __WKND アプリのホームページ__ のページを&#x200B;__編集__
-   + __Bali Surf Camp__ SPAで編集するルートに移動
+   1. __Bali Surf Camp__ SPAで編集するルートに移動
 1. 右上のモードセレクターから&#x200B;__プレビュー__&#x200B;を選択
 1. SPA 内の __Bali Surf Camp__ のカードをタップして、そのルートに移動します。
 1. モードセレクターから「__編集__」を選択します。
 1. 「__Itinerary__」のすぐ上にある&#x200B;__レイアウトコンテナ__&#x200B;の編集可能な領域を見つける
 1. __ページエディターのサイドバー__&#x200B;をクリックし、「__コンポーネント表示__」を選択します。
 1. 有効なコンポーネントのいくつかを&#x200B;__レイアウトコンテナ__&#x200B;にドラッグします。
-   + 画像
-   + テキスト
-   + タイトル
+   1. 画像
+   1. テキスト
+   1. タイトル
 
    プロモーションマーケティング資料を作成します。 次のようになります。
 
@@ -173,8 +176,8 @@ AEM ページがマッピングされていないアドベンチャーの詳細�
 
 これで完了です。オーサリング機能が SPA で動的ルートに追加されました。
 
-+ AEM React 編集可能コンポーネントの ResponsiveGrid コンポーネントを動的ルートに追加しました。
-+ SPA（Bali Surf Camp と Beervana in Portland）での 2 つの特定のルートのオーサリングをサポートする AEM ページを作成しました。
-+ 動的な Bali Surf Camp ルートのコンテンツを作成しました。
+* AEM React 編集可能コンポーネントの ResponsiveGrid コンポーネントを動的ルートに追加しました。
+* SPA（Bali Surf Camp と Beervana in Portland）での 2 つの特定のルートのオーサリングをサポートする AEM ページを作成しました。
+* 動的な Bali Surf Camp ルートのコンテンツを作成しました。
 
 AEM SPA エディターを使用して、特定の編集可能な領域を Remote SPA に追加する方法の最初の手順を完了しました。

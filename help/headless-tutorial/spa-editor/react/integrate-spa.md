@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
 duration: 409
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '1689'
 ht-degree: 100%
 
 ---
 
 # SPA を統合 {#developer-workflow}
+
+{{spa-editor-deprecation}}
 
 React で記述された単一ページアプリケーション（SPA）のソースコードを Adobe Experience Manager（AEM）プロジェクトと統合する方法を説明します。webpack 開発サーバーなどの最新のフロントエンドツールを使用して、AEM JSON モデル API に対する SPA を迅速に開発する方法を説明します。
 
@@ -67,7 +70,7 @@ AEM プロジェクトの一部として、`ui.apps` および `ui.frontend` の
 
    `ui.frontend` は [Create React App](https://create-react-app.dev/)（略して CRA）に基づく React アプリケーションです。`react-scripts` バージョンは、使用される CRA のバージョンを示します。
 
-1. また、`@adobe` プレフィックスが付いた複数の依存関係もあります。
+1. また、`@adobe` 接頭辞が付いた複数の依存関係もあります。
 
    ```json
    "@adobe/aem-react-editable-components": "~1.1.2",

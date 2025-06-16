@@ -11,8 +11,9 @@ last-substantial-update: 2022-11-11T00:00:00Z
 doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 100%
 
@@ -26,7 +27,7 @@ ht-degree: 100%
 
 このチュートリアルは、AEM の GraphQL API を介して AEM コンテンツフラグメントコンテンツを使用する React アプリである [WKND GraphQL アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)をベースにしていますが、SPA コンテンツのコンテキスト内オーサリングは提供していません。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444848?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## このチュートリアルについて
 
@@ -67,31 +68,31 @@ ht-degree: 100%
 >
 > **ローカル開発環境のセットアップに関するサポートが必要な場合は、**[AEM as a Cloud Service SDK を使用するローカル開発環境のセットアップに関するガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を参照してください。
 
-## 1. SPA エディターに対応する AEM の設定
+## &#x200B;1. SPA エディターに対応する AEM の設定
 
 SPA を AEM SPA エディターと統合するには、AEM の設定が必要です。これらの設定は、AEM プロジェクトを通じて管理およびデプロイされます。この章では、必要な設定とその定義方法について説明します。
 
 + [SPA エディター向けの AEM の設定方法についてはこちらを参照](./aem-configure.md)
 
-## 2. SPA のブートストラップ
+## &#x200B;2. SPA のブートストラップ
 
 AEM SPA エディターで SPA をオーサリングコンテキストに統合するには、SPA に対していくつかの追加を行う必要があります。
 
 + [AEM SPA エディター向けに SPA をブートストラップする方法についてはこちらを参照](./spa-bootstrap.md)
 
-## 3. 編集可能な固定コンポーネント
+## &#x200B;3. 編集可能な固定コンポーネント
 
 まず、編集可能な「固定コンポーネント」を SPA に追加する方法を調べます。この例では、特定の編集可能なコンポーネントを SPA に配置する方法を示しています。作成者はコンポーネントのコンテンツを変更できますが、コンポーネントを削除したり、コンポーネントの配置や位置またはサイズを変更したりすることはできません。
 
 + [編集可能な固定コンポーネントについてはこちらを参照](./spa-fixed-component.md)
 
-## 4. 編集可能なコンテナコンポーネント
+## &#x200B;4. 編集可能なコンテナコンポーネント
 
 次に、編集可能な「コンテナコンポーネント」を SPA に追加する方法を説明します。 この例では、SPA にコンテナコンポーネントを配置する方法を示しています。 コンテナコンポーネントを使用すると、作成者は許可されたコンポーネントをその中に配置したり、コンポーネントのレイアウトを調整したりできます。
 
 + [編集可能なコンテナコンポーネントについて学ぶ](./spa-container-component.md)
 
-## 5. 動的ルートと編集可能コンポーネント
+## &#x200B;5. 動的ルートと編集可能コンポーネント
 
 最後に、動的ルート（ルートのパラメータに基づいて異なるコンテンツを表示するルート）に関する前の章で説明した概念を活用します。 この例では、AEM SPA エディターを使用して、プログラムによって駆動、生成されるルートのコンテンツを作成する方法を示します。
 

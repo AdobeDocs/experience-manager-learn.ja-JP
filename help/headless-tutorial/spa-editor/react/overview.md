@@ -12,8 +12,9 @@ doc-type: Tutorial
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
 duration: 71
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 
@@ -21,7 +22,7 @@ ht-degree: 100%
 
 # AEM での React SPA の作成（チュートリアル） {#overview}
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。このチュートリアルでは、架空のライフスタイルブランド WKND の React アプリケーションの実装について順を追って説明します。React アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。このエディターは、React コンポーネントを AEM コンポーネントにマッピングします。AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
 

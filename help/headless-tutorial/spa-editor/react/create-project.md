@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 duration: 250
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 100%
 
 ---
 
 # プロジェクトを作成 {#spa-editor-project}
+
+{{spa-editor-deprecation}}
 
 AEM SPA エディターと統合された React アプリケーションの出発点として、Adobe Experience Manager（AEM）Maven プロジェクトを生成する方法を説明します。
 
@@ -136,7 +139,7 @@ AEM SPA エディターと統合された React アプリケーションの出�
 
 1. ローカルの AEM インスタンス（[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)）で&#x200B;**パッケージマネージャー**&#x200B;に移動します。
 
-1. `aem-guides-wknd-spa.react` というプレフィックスがついた複数のパッケージが表示されます。
+1. `aem-guides-wknd-spa.react` という接頭辞がついた複数のパッケージが表示されます。
 
    ![WKND SPA パッケージ](assets/create-project/package-manager.png)
 

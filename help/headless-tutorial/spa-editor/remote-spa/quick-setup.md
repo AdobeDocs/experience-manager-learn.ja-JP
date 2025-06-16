@@ -12,14 +12,17 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 
 ---
 
 # クイックセットアップ
+
+{{spa-editor-deprecation}}
 
 クイックセットアップの手順は簡単で、WKND アプリをリモート SPA としてインストールして実行し、AEM SPA Editor を使用してオーサリングします。
 
@@ -56,7 +59,7 @@ _クイックセットアップの手順を紹介するビデオ_
 
 デフォルトの `admin/admin` 資格情報を使用して、ポート 4502 に AEM SDK クイックスタートをダウンロードしてインストールします。
 
-1. [最新の AEM SDK をダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
+1. [最新の AEM SDK をダウンロードします](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
 1. AEM SDK を `~/aem-sdk` に解凍します
 1. AEM SDK Quickstart Jar を実行します
 

@@ -12,14 +12,17 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 100%
 
 ---
 
 # 編集可能なコンテナコンポーネント
+
+{{spa-editor-deprecation}}
 
 [固定コンポーネント](./spa-fixed-component.md)では、SPA コンテンツを柔軟にオーサリングできますが、このアプローチは堅牢で、開発者は編集可能コンテンツの正確な構成を定義する必要があります。作成者が優れたエクスペリエンスを作成できるように、SPA エディターでは、SPA でのコンテナコンポーネントの使用をサポートしています。コンテナコンポーネントを使用すると、作成者は、従来の AEM Sites オーサリングと同様に、許可されたコンポーネントをコンテナにドラッグ＆ドロップしたり、オーサリングしたりできます。
 
@@ -31,8 +34,8 @@ ht-degree: 100%
 
 次のように、コンテナコンポーネントをホームビューに追加します。
 
-+ AEM React 編集可能コンポーネントの `ResponsiveGrid` コンポーネントを読み込む
-+ ResponsiveGrid コンポーネントで使用するカスタム編集可能 React コンポーネント（テキストおよび画像）を読み込んで登録します
+* AEM React 編集可能コンポーネントの `ResponsiveGrid` コンポーネントを読み込む
+* ResponsiveGrid コンポーネントで使用するカスタム編集可能 React コンポーネント（テキストおよび画像）を読み込んで登録します
 
 ### ResponsiveGrid コンポーネントの使用
 
@@ -41,12 +44,12 @@ ht-degree: 100%
 1. `react-app/src/components/Home.js` を開いて編集する
 1. `@adobe/aem-react-editable-components` から `ResponsiveGrid` コンポーネントを読み込み、`Home` コンポーネントに追加します。
 1. `<ResponsiveGrid...>` コンポーネントに次の属性を設定します。
-   + `pagePath = '/content/wknd-app/us/en/home'`
-   + `itemPath = 'root/responsivegrid'`
+   1. `pagePath = '/content/wknd-app/us/en/home'`
+   1. `itemPath = 'root/responsivegrid'`
 
    これは、`ResponsiveGrid` コンポーネントが AEM リソースからコンテンツを取得するように指示するものです。
 
-   + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
+   1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    `itemPath` は、`Remote SPA Page` AEM テンプレートで定義された `responsivegrid` ノードにマッピングされ、`Remote SPA Page` AEM テンプレートから作成された新しい AEM ページに自動的に作成されます。
 
@@ -284,9 +287,9 @@ export default EditableImage;
 
 AEM コンテナコンポーネントは、ポリシーを使用して、許可されるコンポーネントを指示します。SPA でレンダリングできるのは、対応する SPA コンポーネントがマッピングされている AEM コンポーネントだけであるため、これは SPA エディターを使用する場合に重要な設定です。SPA 実装を提供したコンポーネントのみが許可されていることを確認します。
 
-+ `EditableTitle`（`wknd-app/components/title` にマッピング）
-+ `EditableText`（`wknd-app/components/text` にマッピング）
-+ `EditableImage`（`wknd-app/components/image` にマッピング）
+* `EditableTitle`（`wknd-app/components/title` にマッピング）
+* `EditableText`（`wknd-app/components/text` にマッピング）
+* `EditableImage`（`wknd-app/components/image` にマッピング）
 
 リモート SPA ページテンプレートの reponsivegrid コンテナを構成するには、次の手順を実行します。
 
@@ -304,9 +307,9 @@ AEM コンテナコンポーネントは、ポリシーを使用して、許可�
 
 1. 右側の「__許可されたコンポーネント__」タブで、「__WKND APP - CONTENT__」を展開します。
 1. 次の項目のみが選択されていることを確認します。
-   + 画像
-   + テキスト
-   + タイトル
+   1. 画像
+   1. テキスト
+   1. タイトル
 
    ![リモート SPA ページ](./assets/spa-container-component/templates-allowed-components.png)
 
@@ -319,13 +322,13 @@ SPA が 3 つの編集可能な React コンポーネント（`EditableTitle`、
 1. AEM オーサーにログインします。
 1. __サイト／WKND アプリ__&#x200B;に移動します。 
 1. 「__ホーム__」をタップし、上部のアクションバーの「__編集__」を選択します。
-   + 「Hello World」テキストコンポーネントが表示されます。このコンポーネントは、AEM プロジェクトアーキタイプからプロジェクトを生成する際に、自動的に追加されたものです。
+   1. 「Hello World」テキストコンポーネントが表示されます。このコンポーネントは、AEM プロジェクトアーキタイプからプロジェクトを生成する際に、自動的に追加されたものです。
 1. ページエディターの右上にある編集モードセレクターから「__編集__」を選択します。
 1. タイトルの下にある&#x200B;__レイアウトコンテナ__&#x200B;の編集可能な領域を見つけます。
 1. __ページエディターのサイドバー__&#x200B;をクリックし、「__コンポーネント表示__」を選択します。
 1. 次のコンポーネントを&#x200B;__レイアウトコンテナ__&#x200B;にドラッグします。
-   + 画像
-   + タイトル
+   1. 画像
+   1. タイトル
 1. コンポーネントをドラッグして、コンテナ内で次のように並べ替えます。
    1. タイトル
    1. 画像
@@ -333,8 +336,8 @@ SPA が 3 つの編集可能な React コンポーネント（`EditableTitle`、
 1. __タイトル__&#x200B;コンポーネントを&#x200B;__作成__&#x200B;します。
    1. タイトルコンポーネントをタップし、__レンチ__&#x200B;アイコンをタップしてタイトルコンポーネントを&#x200B;__編集__&#x200B;します。
    1. 次のテキストを追加します。
-      + タイトル：__Summer is coming, let&#39;s make the most of it!__
-      + タイプ：__H1__
+      1. タイトル：__Summer is coming, let&#39;s make the most of it!__
+      1. タイプ：__H1__
    1. 「__完了__」をタップします
 1. __画像__&#x200B;コンポーネントを&#x200B;__作成__&#x200B;します。
    1. 画像コンポーネント上の（アセットビューに切り替えた後の）サイドバーから画像をドラッグします
@@ -344,19 +347,19 @@ SPA が 3 つの編集可能な React コンポーネント（`EditableTitle`、
 1. __テキスト__&#x200B;コンポーネントを&#x200B;__作成__&#x200B;します。
    1. テキストコンポーネントをタップし、__レンチ__&#x200B;アイコンをタップして編集します
    1. 次のテキストを追加します。
-      + _Right now, you can get 15% on all 1-week adventures, and 20% off on all adventures that are 2 weeks or longer! At checkout, add the campaign code SUMMERISCOMING to get your discounts!_
+      1. _Right now, you can get 15% on all 1-week adventures, and 20% off on all adventures that are 2 weeks or longer! At checkout, add the campaign code SUMMERISCOMING to get your discounts!_
    1. 「__完了__」をタップします
 
 1. コンポーネントが作成されましたが、垂直方向に積み重ねられて表示されています。
 
    ![作成済みコンポーネント](./assets/spa-container-component/authored-components.png)
 
-AEM のレイアウトモードを使用して、コンポーネントのサイズとレイアウトを調整できます。
+   AEM のレイアウトモードを使用して、コンポーネントのサイズとレイアウトを調整できます。
 
 1. 右上のモードセレクターを使用して、__レイアウトモード__&#x200B;に切り替えます。
 1. 画像コンポーネントとテキスト コンポーネントを並べて&#x200B;__サイズ変更__&#x200B;します。
-   + __画像__&#x200B;コンポーネントは __8 列幅__&#x200B;です。
-   + __テキスト__&#x200B;コンポーネントは __3 列幅__&#x200B;です。
+   1. __画像__&#x200B;コンポーネントは __8 列幅__&#x200B;です。
+   1. __テキスト__&#x200B;コンポーネントは __3 列幅__&#x200B;です。
 
    ![レイアウトコンポーネント](./assets/spa-container-component/layout-components.png)
 
@@ -370,11 +373,11 @@ AEM のレイアウトモードを使用して、コンポーネントのサイ�
 
 作成者が WKND アプリに編集可能なコンポーネントを追加できる、コンテナコンポーネントが追加されました。次の方法を学習しました。
 
-+ SPA で AEM React Editable Component の `ResponsiveGrid` コンポーネントを使用する
-+ コンテナコンポーネントを介して SPA で使用する編集可能な React コンポーネント（テキストと画像）を作成および登録する
-+ SPA が有効なコンポーネントを許可するようにリモート SPA ページテンプレートを設定する
-+ コンテナコンポーネントに編集可能なコンポーネントを追加する
-+ SPA エディターでコンポーネントを作成およびレイアウトする
+* SPA で AEM React Editable Component の `ResponsiveGrid` コンポーネントを使用する
+* コンテナコンポーネントを介して SPA で使用する編集可能な React コンポーネント（テキストと画像）を作成および登録する
+* SPA が有効なコンポーネントを許可するようにリモート SPA ページテンプレートを設定する
+* コンテナコンポーネントに編集可能なコンポーネントを追加する
+* SPA エディターでコンポーネントを作成およびレイアウトする
 
 ## 次の手順
 

@@ -11,8 +11,9 @@ level: Beginner
 doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 100%
 
@@ -20,7 +21,7 @@ ht-degree: 100%
 
 # AEM での初めての Angular SPA の作成 {#introduction}
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。このチュートリアルでは、架空のライフスタイルブランド WKND の Angular アプリケーションの実装について順を追って説明します。Angular アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。SPA エディターは、Angular コンポーネントを AEM コンポーネントにマッピングします。AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
 

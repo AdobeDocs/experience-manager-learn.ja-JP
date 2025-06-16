@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
 duration: 308
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 100%
 
 ---
 
 # カスタムコンポーネントの作成 {#custom-component}
+
+{{spa-editor-deprecation}}
 
 AEM SPA エディターで使用するカスタムコンポーネントを作成する方法を説明します。オーサーダイアログと Sling モデルを開発して JSON モデルを拡張し、カスタムコンポーネントを設定する方法について説明します。
 

@@ -11,20 +11,23 @@ thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%
 
 ---
 
-# AEM Sites での SPA エディターの使用 {#using-the-spa-editor-with-aem-sites}
+# AEM Sites での SPA エディターの使用
+
+{{spa-editor-deprecation}}
 
 AEM Sites でのシングルページアプリケーションのコンテンツオーサリングに関する概要ビデオです。
 
 AEM SPA エディターを使用すると、作成者は、シングルページアプリケーション（SPA）のコンテンツを編集できます。 React フレームワークを使用するデベロッパーは、SPA を作成し、SPA の領域を AEM コンポーネントにマッピングして、作成者が使い慣れた AEM Sites 編集ツールを使用できるようにします。 以下のビデオでは、 WKND SPA サンプルサイトで使用するコンテキスト内編集機能の一部を示しています。 WKND SPA プロジェクトには、両方の React 実装が含まれています。
 
->[!VIDEO](https://video.tv.adobe.com/v/326770?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
 >[!NOTE]
 >

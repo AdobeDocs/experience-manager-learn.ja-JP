@@ -12,14 +12,17 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 100%
 
 ---
 
 # 編集可能な固定コンポーネント
+
+{{spa-editor-deprecation}}
 
 編集可能な React コンポーネントは、「固定」することも、SPA の表示にハードコードすることもできます。 これにより、デベロッパーは SPA エディター互換のコンポーネントを SPA 表示に配置し、ユーザーは AEM SPA エディターでコンポーネントのコンテンツを作成できるようになります。
 
@@ -31,8 +34,8 @@ ht-degree: 100%
 
 次のように、__固定__&#x200B;コンポーネントをホームビューに追加します。
 
-+ カスタムの編集可能なタイトルコンポーネントを作成し、プロジェクトのタイトルのリソースタイプに登録します。
-+ 編集可能なタイトルコンポーネントを SPA ホームビューに配置する
+* カスタムの編集可能なタイトルコンポーネントを作成し、プロジェクトのタイトルのリソースタイプに登録します。
+* 編集可能なタイトルコンポーネントを SPA ホームビューに配置する
 
 ### 編集可能な React タイトルコンポーネントの作成
 
@@ -175,10 +178,10 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
    ![タイトルコンポーネントのアクションバー](./assets/spa-fixed-component/title-action-bar.png)
 
 1. タイトルコンポーネントを作成します。
-   + タイトル： __WKND アドベンチャー__
-   + 種類／サイズ：__H2__
+   1. タイトル： __WKND アドベンチャー__
+   1. 種類／サイズ：__H2__
 
-     ![タイトルコンポーネントダイアログ](./assets/spa-fixed-component/title-dialog.png)
+      ![タイトルコンポーネントダイアログ](./assets/spa-fixed-component/title-dialog.png)
 
 1. 「__完了__」をタップして保存します。
 1. AEM SPA エディターで変更をプレビューします。
@@ -190,9 +193,9 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
 
 WKND アプリに編集可能な固定コンポーネントが追加されました。 次の方法を学習しました。
 
-+ SPA への固定（ただし編集可能）コンポーネントの作成
-+ AEM での固定コンポーネントの作成
-+ 作成したコンテンツのリモート SPA での確認
+* SPA への固定（ただし編集可能）コンポーネントの作成
+* AEM での固定コンポーネントの作成
+* 作成したコンテンツのリモート SPA での確認
 
 ## 次の手順
 
