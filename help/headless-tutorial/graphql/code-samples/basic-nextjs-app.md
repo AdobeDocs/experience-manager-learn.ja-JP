@@ -14,9 +14,9 @@ hide: true
 hidefromtoc: true
 exl-id: 2d4396dc-2346-4561-b040-eba0ab62a96f
 duration: 22
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '116'
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+workflow-type: tm+mt
+source-wordcount: '98'
 ht-degree: 100%
 
 ---
@@ -29,8 +29,6 @@ ht-degree: 100%
 
 + AEM パブリッシュサービスに接続し、認証を必要としない
 + WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug` を使用する
-
-この Next.js アプリの構築方法の詳細については、[サンプル Next.js アプリのドキュメント](../example-apps/next-js.md)を参照してください。
 
 >[!IMPORTANT]
 >
