@@ -12,10 +12,10 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
-workflow-type: ht
-source-wordcount: '1440'
-ht-degree: 100%
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+workflow-type: tm+mt
+source-wordcount: '1493'
+ht-degree: 90%
 
 ---
 
@@ -27,7 +27,7 @@ AEM as a Cloud Service 環境を設定して、OpenAPI ベースの AEM API へ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
-高度な設定プロセスには、次の手順が含まれます。
+大まかな設定プロセスには、次の手順が含まれます。
 
 1. AEM as a Cloud Service 環境の最新化。
 1. AEM API アクセスの有効化。
@@ -40,7 +40,7 @@ AEM as a Cloud Service 環境を設定して、OpenAPI ベースの AEM API へ�
 AEM as a Cloud Service 環境の最新化は、次の手順を含む環境アクティビティごとに 1 回行われます。
 
 - AEM リリース（**2024.10.18459.20241031T210302Z**）以降に更新します。
-- リリース（2024.10.18459.20241031T210302Z）より前に環境が作成された場合は、新しい製品プロファイルを追加します。
+- リリース 2024.10.18459.20241031T210302Z より前に環境が作成された場合は、新しい製品プロファイルを追加します。
 
 ### AEM インスタンスの更新{#update-aem-instance}
 
@@ -70,7 +70,7 @@ _Admin Console_ ウィンドウに、新しく追加された製品プロファ�
 
 ## AEM API アクセスの有効化{#enable-aem-apis-access}
 
-_新しい製品プロファイル_&#x200B;が存在すると、Adobe Developer Console（ADC）で OpenAPI ベースの AEM API アクセスが可能になります。[Adobe Developer Console（ADC）](./overview.md#accessing-adobe-apis-and-related-concepts)は、Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。
+_新しい製品プロファイル_&#x200B;が存在すると、Adobe Developer Console（ADC）で OpenAPI ベースの AEM API アクセスが可能になります。[Adobe Developer Console（ADC） ](./overview.md#accessing-adobe-apis-and-related-concepts) は、Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。
 
 新しく追加された製品プロファイルは、_サービス_&#x200B;に関連付けられています。これは、_事前定義されたアクセス制御リスト（ACL）を持つ AEM ユーザーグループ_&#x200B;を表します。_サービス_&#x200B;は、AEM API へのアクセスレベルを制御するために使用されます。
 
@@ -94,7 +94,7 @@ _新しい製品プロファイル_&#x200B;が存在すると、Adobe Developer 
 
 ![開発者を製品プロファイルに関連付ける](./assets/setup/associate-developer-to-product-profile.png)
 
-この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的のサーバー間認証を設定し、ADC プロジェクトの認証アカウント（次の手順で作成）を製品プロファイルに関連付けることができます。
+この関連付けの後、ADC プロジェクトの _Asset Author API_ で目的のサーバー間認証を設定し、次の手順で作成する ADC プロジェクトの認証アカウントを製品プロファイルに関連付けることができます。
 
 >[!IMPORTANT]
 >
@@ -134,6 +134,10 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
    ![AEM API の追加](./assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >    目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
+
 1. 次に、_API を設定_&#x200B;ダイアログで、目的の認証オプションを選択します。例えば、この場合、「**サーバー間**」認証オプションが選択されます。
 
    ![認証の選択](./assets/s2s/select-authentication.png)
@@ -159,7 +163,7 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
    ![認証設定](./assets/s2s/authentication-configuration.png)
 
-**OAuth Web アプリ**&#x200B;または **OAuth 単一ページアプリ**&#x200B;の認証方法を選択した場合、製品プロファイルの関連付けは表示されませんが、アプリケーションリダイレクト URI が必要です。アプリケーションリダイレクト URI は、認証コードによる認証後にユーザーをアプリケーションにリダイレクトするために使用されます。関連するユースケースのチュートリアルでは、このような認証固有の設定について概説しています。
+**OAuth Web アプリ**&#x200B;または **OAuth 単一ページアプリ**&#x200B;の認証方法を選択した場合、製品プロファイルの関連付けは表示されませんが、アプリケーションリダイレクト URI が必要です。アプリケーションリダイレクト URI は、認証コードによる認証後にユーザーをアプリケーションにリダイレクトするために使用されます。関連するユースケースのチュートリアルでは、このような認証固有の設定の概要を説明しています。
 
 ## ADC プロジェクト通信を有効にする AEM インスタンスの設定{#configure-aem-instance}
 

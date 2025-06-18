@@ -12,10 +12,10 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: ht
-source-wordcount: '2213'
-ht-degree: 100%
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+workflow-type: tm+mt
+source-wordcount: '2262'
+ht-degree: 97%
 
 ---
 
@@ -49,7 +49,7 @@ WKND PIM アプリは、AEM as a Cloud Service 内に保存された製品属性
 
 Adobe Developer Console（ADC）プロジェクトは、OAuth web アプリ認証を使用して Assets Author API にアクセスするように設定されています。これにより、_authorization_code_ 付与フローを開始するために必要な _client_id_ と _client_secret_ が WKND-PIM web アプリに提供されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442758?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 次の図は、WKND-PIM web アプリが _Assets Author API とやり取りするためのユーザー固有のアクセストークンを取得する_&#x200B;機能フローを示しています。
@@ -460,6 +460,10 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 1. _API を追加_&#x200B;ダイアログで、_Experience Cloud_ でフィルタリングし「**AEM Assets Author API**」カードを選択して、「**次へ**」をクリックします。
 
    ![AEM API を追加](../assets/s2s/add-aem-api.png)
+
+   >[!TIP]
+   >
+   >目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
 
 1. 次に、_API を設定_&#x200B;ダイアログで「**ユーザー認証**」認証オプションを選択し、「**次へ**」をクリックします。
 

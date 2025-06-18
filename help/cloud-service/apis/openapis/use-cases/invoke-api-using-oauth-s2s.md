@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
-workflow-type: ht
-source-wordcount: '1727'
-ht-degree: 100%
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+workflow-type: tm+mt
+source-wordcount: '1776'
+ht-degree: 97%
 
 ---
 
@@ -84,6 +84,10 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 1. _API を追加_&#x200B;ダイアログで、_Experience Cloud_ でフィルタリングし「**AEM Assets Author API**」カードを選択して、「**次へ**」をクリックします。
 
    ![AEM API を追加](../assets/s2s/add-aem-api.png)
+
+   >[!TIP]
+   >
+   >目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
 
 1. 次に、_API を設定_&#x200B;ダイアログで「**サーバー間**」認証オプションを選択し、「**次へ**」をクリックします。サーバー間認証は、ユーザーインタラクションなしで API アクセスが必要なバックエンドサービスに最適です。
 
