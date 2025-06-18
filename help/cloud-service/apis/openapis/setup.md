@@ -136,7 +136,7 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
    >[!TIP]
    >
-   >    目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
+   >    目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**&#x200B;というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
 
 1. 次に、_API を設定_&#x200B;ダイアログで、目的の認証オプションを選択します。例えば、この場合、「**サーバー間**」認証オプションが選択されます。
 

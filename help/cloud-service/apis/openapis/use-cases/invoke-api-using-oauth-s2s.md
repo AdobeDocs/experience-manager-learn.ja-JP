@@ -87,7 +87,7 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 
    >[!TIP]
    >
-   >目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
+   >目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**&#x200B;というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
 
 1. 次に、_API を設定_&#x200B;ダイアログで「**サーバー間**」認証オプションを選択し、「**次へ**」をクリックします。サーバー間認証は、ユーザーインタラクションなしで API アクセスが必要なバックエンドサービスに最適です。
 
