@@ -30,7 +30,7 @@ ht-degree: 70%
 >このビデオでは、AEMをAdobe Targetに接続するための、非推奨（廃止予定）の JWT 認証方法について説明します。 ただし、OAuth サーバー間認証方法を使用することをお勧めします。詳しくは、[AEM の JWT から OAuth への資格情報の移行](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration)を参照してください。アドビでは、この変更を反映するために、ビデオの更新に取り組んでいます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329014?quality=12&learn=on&captions=jpn)
 
 >[!CAUTION]
 >
