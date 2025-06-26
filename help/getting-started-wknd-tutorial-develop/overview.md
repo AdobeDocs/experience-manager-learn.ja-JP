@@ -14,7 +14,7 @@ doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
 source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '577'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 このマルチパートチュートリアルの目的は、Adobe Experience Manager(AEM) の最新の標準とテクノロジーを使用して Web サイトを実装する方法を開発者に教えることです。 このチュートリアルを修了すると、開発者はプラットフォームの基本的な基礎について理解し、AEM の一般的な設計パターンに関する知識を得ることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330918?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
 ## Sites プロジェクトを開始するためのオプション
 
