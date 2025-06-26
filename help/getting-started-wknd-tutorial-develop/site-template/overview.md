@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ローコードアプローチに従って、クイックサイト作成と事前定義済みサイトテンプレートを使用して Adobe Experience Manager で初めてのサイトを作成する方法を説明します。標準提供のコンポーネントやテンプレートを使用すると、迅速にサイトを立ち上げることができます。Adobe XD ドリブンのテーマワークフローを使用すると、CSS と JavaScript だけでブランド固有のスタイルやカスタマイズを適用できます。新規プロジェクトや新任のデベロッパーにお勧めです。
 
->[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343266?quality=12&learn=on&captions=jpn)
 
 * [Adobe XD UI キット](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM サイトテンプレート](https://github.com/adobe/aem-site-template-basic)
