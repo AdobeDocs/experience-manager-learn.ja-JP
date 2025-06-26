@@ -31,7 +31,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->SPA エディターは、新しいプロジェクトでは[非推奨（廃止予定）になりました](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/spa-editor-deprecation)。アドビでは既存のプロジェクトに対して引き続きサポートしますが、新しいプロジェクトには使用しないでください。AEM でヘッドレスコンテンツの管理に推奨されるエディターは次のようになりました。
+>SPA エディターは、新しいプロジェクトでは[非推奨（廃止予定）になりました](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/spa-editor-deprecation)。アドビでは既存のプロジェクトに対して引き続きサポートしますが、新しいプロジェクトには使用しないでください。AEM でヘッドレスコンテンツの管理に推奨されるエディターは次のようになりました。
 >
 >* ヘッドレスコンテンツを視覚的に編集する[ユニバーサルエディター](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring)。
->* ヘッドレスコンテンツをフォームベースで編集する[コンテンツフラグメントエディター](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing)。
+>* ヘッドレスコンテンツをフォームベースで編集する[コンテンツフラグメントエディター](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing)。
