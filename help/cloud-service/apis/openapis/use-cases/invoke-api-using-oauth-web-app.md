@@ -49,7 +49,7 @@ WKND PIM アプリは、AEM as a Cloud Service 内に保存された製品属性
 
 Adobe Developer Console（ADC）プロジェクトは、OAuth web アプリ認証を使用して Assets Author API にアクセスするように設定されています。これにより、_authorization_code_ 付与フローを開始するために必要な _client_id_ と _client_secret_ が WKND-PIM web アプリに提供されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442758?quality=12&learn=on&captions=jpn)
 
 
 次の図は、WKND-PIM web アプリが _Assets Author API とやり取りするためのユーザー固有のアクセストークンを取得する_&#x200B;機能フローを示しています。
