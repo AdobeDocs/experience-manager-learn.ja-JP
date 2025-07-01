@@ -13,9 +13,9 @@ last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
 source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2130'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ Adobe Developer Console（ADC）プロジェクトは、OAuth 単一ページア
 >ADC プロジェクトは _client_secret_ を提供しません。代わりに、SPA は _code_verifier_ と _code_challenge_ を生成して、_アクセストークン_&#x200B;の承認コードを安全に交換します。これにより、クライアント側でクライアントの秘密鍵を保存する必要がなくなり、セキュリティが強化されます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456965?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -387,7 +387,7 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 
    >[!TIP]
    >
-   >目的の **AEM API カード** が無効になっていて、_無効になっている理由&#x200B;**ライセンスが必要です**&#x200B;というメッセージが表示されます。理由の 1 つ_、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service環境の最新化 ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) を参照してください。
+   >必要な **AEM API カード**&#x200B;が無効になっている場合と、_無効になっている理由_&#x200B;情報に「**ライセンスが必要です**」というメッセージが表示される場合、理由の 1 つは、AEM as a Cloud Service環境を最新化していないことが考えられます。詳しくは、[AEM as a Cloud Service 環境の最新化](../setup.md#modernization-of-aem-as-a-cloud-service-environment)を参照してください。
 
 1. 次に、_API を設定_&#x200B;ダイアログで「**ユーザー認証**」認証オプションを選択し、「**次へ**」をクリックします。
 

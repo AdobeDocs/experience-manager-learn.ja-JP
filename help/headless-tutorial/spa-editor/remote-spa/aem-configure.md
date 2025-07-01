@@ -14,9 +14,9 @@ exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
 duration: 297
 hide: true
 source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1229'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ $ mvn -B archetype:generate \
 $ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
-最後のコマンドは、AEM プロジェクトフォルダーの名前を変更するだけで、AEM プロジェクトであることが明確になり、リモート SPA と混同しないようにします（_A）**
+_最後のコマンドは、AEM プロジェクトであることを明確にし、リモート SPA** と混同しないよう、AEM プロジェクトフォルダーの名前を変更するだけです
 
 `frontendModule="react"` が指定されている場合、`ui.frontend` プロジェクトは、リモート SPA の使用例には使用されません。SPAは、AEM の外部的な開発と管理を行い、AEM をコンテンツ API としてのみ使用します。 `frontendModule="react"` フラグは、プロジェクトに `spa-project` AEM Java™ 依存関係を組み込み、リモート SPA ページ テンプレートを設定するために必要です。
 

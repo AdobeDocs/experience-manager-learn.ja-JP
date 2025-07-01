@@ -12,9 +12,9 @@ mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
 source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '640'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -114,7 +114,7 @@ AEM と異なるドメインでホストされている場合に、SPA 実稼動
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React アプリ - AEM ヘッドレスの例">React アプリ - AEM ヘッドレスの例 </a>
+                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React アプリ - AEM ヘッドレスの例">React アプリ - AEM ヘッドレスの例</a>
                     </p>
                     <p class="is-size-6">サンプルアプリケーションは、Adobe Experience Manager（AEM）のヘッドレス機能を調べるうえで役に立ちます。 この React アプリケーションは、永続クエリを使用して AEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。</p>
                 </div>

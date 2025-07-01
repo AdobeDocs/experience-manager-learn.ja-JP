@@ -13,7 +13,7 @@ exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
 source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '571'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ ht-degree: 100%
 
 このチュートリアルは、AEM の GraphQL API を介して AEM コンテンツフラグメントコンテンツを使用する React アプリである [WKND GraphQL アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)をベースにしていますが、SPA コンテンツのコンテキスト内オーサリングは提供していません。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444848?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## このチュートリアルについて
 
