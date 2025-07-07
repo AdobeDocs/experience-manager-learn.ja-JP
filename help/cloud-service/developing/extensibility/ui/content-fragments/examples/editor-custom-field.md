@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
 workflow-type: ht
 source-wordcount: '473'
 ht-degree: 100%
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントエディターでカスタムフィールドを作成する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437635?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI 拡張機能は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して開発する必要があります。これにより、AEM の他の部分と一貫した外観と操作性が維持され、事前に構築された機能の広範なライブラリも備えているので、開発時間が短縮されます。
 
@@ -189,7 +189,7 @@ const SkuField = (props) => {
    * In these cases adjust the Content Fragment Editor's iframe's height so the field doesn't get cut off.     *
    * @param {*} isOpen true if the picker is open, false if it's closed
    */
-  const onOpenChange = async (isOpen) => {
+  const onOpenChange = (isOpen) => {
     if (isOpen) {
       // Calculate the height of the picker box and its label, and surrounding padding.
       const pickerHeight = Number(document.body.clientHeight.toFixed(0));
@@ -202,12 +202,15 @@ const SkuField = (props) => {
       const height = Math.min(pickerHeight + optionsHeight, 400);
 
       // Set the height of the iframe in the Content Fragment Editor
-      await connection.host.field.setHeight(height);
+      connection.host.field.setStyles({
+        current: { height, },
+        parent: { height, },
+      })
     } else {
-      // Set the height of the iframe in the Content Fragment Editor to the height of the closed picker.
-      await connection.host.field.setHeight(
-        Number(document.body.clientHeight.toFixed(0))
-      );
+      connection.host.field.setStyles({
+        current: { height: 74 },
+        parent: { height: 74 },
+      })
     }
   };
 
