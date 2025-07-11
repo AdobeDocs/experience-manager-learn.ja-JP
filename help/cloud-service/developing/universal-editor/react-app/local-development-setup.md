@@ -12,8 +12,8 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 7c58c5cb6a3d99a9577206b3e5e0b8dcd55a850e
+workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 100%
 
@@ -98,9 +98,9 @@ WKND Teams React アプリを設定するには、次の手順に従います。
 
    ```bash
    # The port on which the Universal Editor service runs
-   EXPRESS_PORT=8000
+   UES_PORT=8000
    # Disable SSL verification
-   NODE_TLS_REJECT_UNAUTHORIZED=0
+   UES_TLS_REJECT_UNAUTHORIZED=false
    ```
 
 1. ローカルのユニバーサルエディターサービスを開始します。
