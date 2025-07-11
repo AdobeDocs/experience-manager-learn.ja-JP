@@ -13,10 +13,10 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
+workflow-type: tm+mt
 source-wordcount: '1693'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Manager（AEM）でのインデックス作成のベストプ�
 - AEM as a Cloud Service は Oak Lucene インデックスのみをサポートします。
 - インデックスの設定は、AEM プロジェクトコードベースで管理し、Cloud Manager CI／CD パイプラインを使用してデプロイする必要があります。
 - 特定のクエリに対して複数のインデックスが使用可能な場合、**推定コストが最も低い指標を使用**&#x200B;します。
-- 特定のクエリに使用できるインデックスがない場合、一致するコンテンツを見つけるためにコンテンツツリが走査されます。 ただし、`org.apache.jackrabbit.oak.query.QueryEngineSettingsService` はデフォルトで、10,000 個のノードをトラバースするだけです。
+- 特定のクエリに使用できるインデックスがない場合、一致するコンテンツを見つけるためにコンテンツツリが走査されます。 ただし、`org.apache.jackrabbit.oak.query.QueryEngineSettingsService` を介したデフォルトの制限では、100,000 個のノードのみをトラバースします。
 - 現在のユーザーが読み取りアクセス権を持っていることを確認するため、クエリの結果は&#x200B;**最終的にフィルタリングされ**&#x200B;ます。 つまり、クエリ結果は、インデックスで指定されたノードの数よりも少なくなる場合があります。
 - インデックス定義を変更した後にリポジトリーのインデックスを再作成するには時間が必要で、リポジトリーのサイズに応じて異なります。
 
@@ -41,7 +41,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 検索要件を理解し、OOTB インデックスが検索要件をサポートできるかどうかを確認します。 [ローカル SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) および開発者コンソールまたは `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 経由の AEMCS で利用可能な&#x200B;**クエリパフォーマンスツール**&#x200B;を使用します。
 
-- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
+- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)を参考にしてください。
 
 - OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。 ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を確認してください。
    - OOTB インデックスのカスタマイズ：保守とアップグレードが簡単に行える、お勧めのオプション。
@@ -61,7 +61,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 完全なカスタムインデックスの作成は、上記のオプションが機能しない場合にのみ、最後のオプションにする必要があります。
 
-- 完全なカスタムインデックスを作成する場合は、**\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** 命名規則を使用します。 例えば、`wknd.adventures-1-custom-1` のようになります。 これにより、名前の競合を回避できます。 ここで `wknd` はプレフィックスで、`adventures` は、カスタムインデックス名です。 この規則は、AEM 6.X と AEMCS の両方に適用され、AEMCS への将来の移行に備えるのに役立ちます。
+- 完全なカスタムインデックスを作成する場合は、**\&lt;接頭辞>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** 命名規則を使用します。 例えば、`wknd.adventures-1-custom-1` のようになります。 これにより、名前の競合を回避できます。 ここで `wknd` は接頭辞で、`adventures` は、カスタムインデックス名です。 この規則は、AEM 6.X と AEMCS の両方に適用され、AEMCS への将来の移行に備えるのに役立ちます。
 
 - AEMCS は Lucene インデックスのみをサポートしているので、AEMCS への今後の移行に備えて、常に Lucene インデックスを使用します。 詳しくは、[Lucene インデックスとプロパティインデックス](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を参照してください。
 
@@ -164,7 +164,7 @@ Assets に対してオムニサーチを実行すると、誤った結果が返�
 
 ##### 分析
 
-これは、[詳細検索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features)機能のためにカスタムインデックスを作成する、有効なユースケースです。 ただし、インデックス名は **\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** の命名規則に従う必要があります。
+これは、[詳細検索](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features)機能のためにカスタムインデックスを作成する、有効なユースケースです。 ただし、インデックス名は **\&lt;接頭辞>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** の命名規則に従う必要があります。
 
 ## Apache Tika を無効にすることによるインデックスの最適化
 
