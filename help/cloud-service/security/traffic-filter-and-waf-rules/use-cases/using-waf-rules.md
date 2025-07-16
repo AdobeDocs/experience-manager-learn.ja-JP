@@ -59,7 +59,7 @@ AEM WKND プロジェクトの `cdn.yaml` ファイルに追加される 3 つ�
 
 この規則 **ブロック** は、悪意のあるものとしてフラグ付けされた IP アドレスから生成される、疑わしい *および* 要求の両方を示します。 これらの条件はどちらも満たされているので、誤検知（正当なトラフィックがブロックされる）のリスクは非常に低いと確信できます。 既知の不正な IP は、脅威インテリジェンスフィードやその他のソースに基づいて特定されます。
 
-これらのリクエストを識別するには、`ATTACK-FROM-BAD-IP` WAF フラグを使用します。 いくつかのWAF フラグ [ ここにリストされています ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) を集計します。
+これらのリクエストを識別するには、`ATTACK-FROM-BAD-IP` WAF フラグを使用します。 いくつかのWAF フラグ [ ここにリストされています ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) を集計します。
 
 ```yaml
 kind: "CDN"
@@ -220,7 +220,7 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 - **トラフィックパターンの監視**:CDN ログと ELK ダッシュボードを使用して、トラフィックパターンを監視し、トラフィックの異常やスパイクを特定します。 検出された攻撃の種類を把握するには、ELK ダッシュボードの _0&rbrace;WAF フラグの配布_ および _上位の攻撃」パネルに注意してください。_
 - **wafFlags の調整**：フラグが頻繁 `ATTACK` トリガーされるか、
-攻撃ベクトルを微調整する必要があります。特定のWAF フラグを使用してカスタムルールを作成できます。 [WAF フラグ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。 最初に `log` モードで新しいカスタムルールを試すことを検討してください。
+攻撃ベクトルを微調整する必要があります。特定のWAF フラグを使用してカスタムルールを作成できます。 [WAF フラグ ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。 最初に `log` モードで新しいカスタムルールを試すことを検討してください。
 - **ブロッキングルールに移行**：トラフィックパターンを検証し、WAF フラグを調整したら、ブロッキングルールへの移行を検討できます。
 
 ## 概要
@@ -316,5 +316,5 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 ## その他のリソース
 
-- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
-- [WAF フラグの一覧 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
+- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
+- [WAF フラグの一覧 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)

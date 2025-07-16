@@ -38,7 +38,7 @@ ht-degree: 18%
 
 ## トラフィックフィルタールールのベストプラクティス
 
-- Adobe[ 推奨される標準トラフィックフィルタールール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules) をベースラインとして使用します。これには、エッジ、接触チャネル保護、OFAC ベースの制限のルールが含まれます。
+- Adobe[ 推奨される標準トラフィックフィルタールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules) をベースラインとして使用します。これには、エッジ、接触チャネル保護、OFAC ベースの制限のルールが含まれます。
 - アラートおよびログを定期的に確認して、不正使用や設定ミスのパターンを特定します。
 - アプリケーションのトラフィックパターンとユーザーの行動に基づいて、レート制限のしきい値を調整します。
 
@@ -55,9 +55,9 @@ ht-degree: 18%
 
 ## WAF ルールのベストプラクティス
 
-- Adobe[ 推奨されるWAFのルール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules) から始めます。これには、既知の不正な IP をブロックするルール、DDoS 攻撃を検出するルール、ボットの不正使用を軽減するルールが含まれます。
+- Adobe[ 推奨されるWAFのルール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules) から始めます。これには、既知の不正な IP をブロックするルール、DDoS 攻撃を検出するルール、ボットの不正使用を軽減するルールが含まれます。
 - `ATTACK` WAFは、潜在的な脅威に対して警告する必要があります。 `block` に移行する前に、誤検出がないことを確認します。
-- 推奨されるWAFのルールが具体的な脅威に対応していない場合は、アプリケーション固有の要件に基づいてカスタムルールを作成することを検討してください。 [WAF フラグ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。
+- 推奨されるWAFのルールが具体的な脅威に対応していない場合は、アプリケーション固有の要件に基づいてカスタムルールを作成することを検討してください。 [WAF フラグ ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。
 
 ## ルールの実装
 
@@ -132,6 +132,6 @@ AEM as a Cloud ServiceにトラフィックフィルタールールとWAF ルー
 ## その他のリソース
 
 - [WAFルールを含むトラフィックフィルタールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
-- [AEMでの DoS/DDoS 防止について ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
+- [AEMでの DoS/DDoS 防止について ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
 - [ トラフィックフィルタールールを使用した DoS および DDoS 攻撃のブロック ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules)
 

@@ -388,6 +388,6 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 ## その他のリソース
 
-- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
 
 
