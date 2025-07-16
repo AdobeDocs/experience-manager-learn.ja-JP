@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
-workflow-type: ht
-source-wordcount: '1385'
-ht-degree: 100%
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+workflow-type: tm+mt
+source-wordcount: '1400'
+ht-degree: 98%
 
 ---
 
@@ -192,11 +192,16 @@ ht-degree: 100%
       + [メールサービス](./networking/examples/email-service.md)
 + セキュリティ {#security}
    + [トラフィックフィルタールールを使用した DoS／DDoS 攻撃のブロック](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + WAF ルールを含むトラフィックフィルタールール{#traffic-filter-and-waf-rules}
-      + [概要](./security/traffic-filter-rules/overview.md)
-      + [設定方法](./security/traffic-filter-rules/how-to-setup.md)
-      + [例と結果の分析](./security/traffic-filter-rules/examples-and-analysis.md)
-      + [ベストプラクティス](./security/traffic-filter-rules/best-practices.md)
+   + WAF ルールを含むトラフィックフィルタールール {#traffic-filter-and-waf-rules}
+      + [AEM Web サイトの保護](./security/traffic-filter-and-waf-rules/overview.md)
+      + [設定方法](./security/traffic-filter-and-waf-rules/setup.md)
+      + [トラフィックフィルタールールの使用](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
+      + [WAF ルールの使用](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
+      + [ベストプラクティス](./security/traffic-filter-and-waf-rules/best-practices.md)
+      + 方法{#how-to}
+         + [機密性の高いリクエストの監視](./security/traffic-filter-and-waf-rules/how-to/request-logging.md)
+         + [アクセスの制限](./security/traffic-filter-and-waf-rules/how-to/request-blocking.md)
+         + [リクエストの標準化](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
 + AEM イベンティング{#aem-eventing}
    + [概要](./eventing/overview.md)
    + 例{#examples}
@@ -296,10 +301,10 @@ ht-degree: 100%
       + [バリエーションの定義](./forms/style-system/create-variations.md)
       + [バリエーションのテスト](./forms/style-system/build.md)
    + 垂直タブの使用{#using-vertical-tabs}
-      + [1. はじめに](./forms/using-vertical-tabs/introduction.md)
-      + [2. フォームの作成](./forms/using-vertical-tabs/create-af.md)
-      + [3. ナビゲーション](./forms/using-vertical-tabs/navigation.md)
-      + [4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
+      + [&#x200B;1. はじめに](./forms/using-vertical-tabs/introduction.md)
+      + [&#x200B;2. フォームの作成](./forms/using-vertical-tabs/create-af.md)
+      + [&#x200B;3. ナビゲーション](./forms/using-vertical-tabs/navigation.md)
+      + [&#x200B;4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
    + Output と Forms サービスの使用{#forms-cs-output-and-forms-service}
       + [PDF の生成](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}

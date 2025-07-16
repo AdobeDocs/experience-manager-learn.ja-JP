@@ -13,10 +13,10 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -49,7 +49,7 @@ Cloud Manager [でパイプラインを作成およびデプロイするため�
 
 「__ソースコード__」タブで、「リポジトリ」フィールドと「Git ブランチ」フィールドの値が正しいこと、ブランチにフロントエンドパイプライン契約の変更があることも確認します。
 
-![ソースコード設定パイプライン](assets/fullstack-wknd-source-code-config.png)
+![Source コード設定パイプライン ](assets/fullstack-wknd-source-code-config.png)
 
 
 ## フロントエンドパイプラインの作成
