@@ -14,9 +14,9 @@ jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
 source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1693'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Manager（AEM）でのインデックス作成のベストプ�
 - AEM as a Cloud Service は Oak Lucene インデックスのみをサポートします。
 - インデックスの設定は、AEM プロジェクトコードベースで管理し、Cloud Manager CI／CD パイプラインを使用してデプロイする必要があります。
 - 特定のクエリに対して複数のインデックスが使用可能な場合、**推定コストが最も低い指標を使用**&#x200B;します。
-- 特定のクエリに使用できるインデックスがない場合、一致するコンテンツを見つけるためにコンテンツツリが走査されます。 ただし、`org.apache.jackrabbit.oak.query.QueryEngineSettingsService` を介したデフォルトの制限では、100,000 個のノードのみをトラバースします。
+- 特定のクエリに使用できるインデックスがない場合、一致するコンテンツを見つけるためにコンテンツツリが走査されます。 ただし、`org.apache.jackrabbit.oak.query.QueryEngineSettingsService` はデフォルトで、100,000 個のノードのみを走査します。
 - 現在のユーザーが読み取りアクセス権を持っていることを確認するため、クエリの結果は&#x200B;**最終的にフィルタリングされ**&#x200B;ます。 つまり、クエリ結果は、インデックスで指定されたノードの数よりも少なくなる場合があります。
 - インデックス定義を変更した後にリポジトリーのインデックスを再作成するには時間が必要で、リポジトリーのサイズに応じて異なります。
 
@@ -41,7 +41,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 検索要件を理解し、OOTB インデックスが検索要件をサポートできるかどうかを確認します。 [ローカル SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) および開発者コンソールまたは `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 経由の AEMCS で利用可能な&#x200B;**クエリパフォーマンスツール**&#x200B;を使用します。
 
-- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
+- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)を参考にしてください。
 
 - OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。 ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を確認してください。
    - OOTB インデックスのカスタマイズ：保守とアップグレードが簡単に行える、お勧めのオプション。
