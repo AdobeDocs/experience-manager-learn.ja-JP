@@ -10,7 +10,8 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18306
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: 0a738af8-666b-48dc-8187-9b7e6a8d7e1b
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 14%
@@ -22,6 +23,8 @@ ht-degree: 14%
 Web アプリケーションファイアウォール（WAF）ルールを含むトラフィックフィルタールールについて **設定方法** を説明します。 このチュートリアルでは、後続のチュートリアルの基盤を設定します。ここでは、ルールを設定してデプロイし、その後、結果のテストと分析を行います。
 
 設定プロセスを示すために、チュートリアルでは [AEM WKND サイトプロジェクト ](https://github.com/adobe/aem-guides-wknd) を使用します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469396/?quality=12&learn=on)
 
 ## 設定の概要
 

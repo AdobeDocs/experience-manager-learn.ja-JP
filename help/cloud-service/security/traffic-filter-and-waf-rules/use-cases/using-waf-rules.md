@@ -11,7 +11,8 @@ last-substantial-update: 2025-06-04T00:00:00Z
 badgeLicense: label="ライセンスが必要" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 7%
@@ -27,6 +28,9 @@ AEM as a Cloud Serviceで _AEMが推奨する_ Web Application Firewall （WAF�
 >[!IMPORTANT]
 >
 > WAF トラフィックフィルタールールには、追加の **WAF-DDoS 保護** または **セキュリティの強化** ライセンスが必要です。 標準のトラフィックフィルタールールは、Sites およびFormsのお客様がデフォルトで使用できます。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学習目標
 
@@ -59,7 +63,7 @@ AEM WKND プロジェクトの `cdn.yaml` ファイルに追加される 3 つ�
 
 この規則 **ブロック** は、悪意のあるものとしてフラグ付けされた IP アドレスから生成される、疑わしい *および* 要求の両方を示します。 これらの条件はどちらも満たされているので、誤検知（正当なトラフィックがブロックされる）のリスクは非常に低いと確信できます。 既知の不正な IP は、脅威インテリジェンスフィードやその他のソースに基づいて特定されます。
 
-これらのリクエストを識別するには、`ATTACK-FROM-BAD-IP` WAF フラグを使用します。 いくつかのWAF フラグ [ ここにリストされています ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) を集計します。
+これらのリクエストを識別するには、`ATTACK-FROM-BAD-IP` WAF フラグを使用します。 いくつかのWAF フラグ [ ここにリストされています ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) を集計します。
 
 ```yaml
 kind: "CDN"
@@ -144,7 +148,7 @@ data:
 ...
 ```
 
-上記の規則は有効ですが、（ビジネス要件に合わせてこの規則をまだカスタマイズしていない場合は `ATTACK-FROM-BAD-IP` `ATTACK` フラグと _WAF フラグを使用する新しい `wafFlags` 則に移行することをお勧めします_。
+上記の規則は有効ですが、（ビジネス要件に合わせてこの規則をまだカスタマイズしていない場合は `ATTACK-FROM-BAD-IP``ATTACK` フラグと _WAF フラグを使用する新しい `wafFlags` 則に移行することをお勧めします_。
 
 ベストプラクティスとの一貫性を保つために、新しいルールに移行するには、次の手順に従います。
 
@@ -218,9 +222,9 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 ルールを絞り込むには、次の手順を考慮します。
 
-- **トラフィックパターンの監視**:CDN ログと ELK ダッシュボードを使用して、トラフィックパターンを監視し、トラフィックの異常やスパイクを特定します。 検出された攻撃の種類を把握するには、ELK ダッシュボードの _0&rbrace;WAF フラグの配布_ および _上位の攻撃」パネルに注意してください。_
+- **トラフィックパターンの監視**:CDN ログと ELK ダッシュボードを使用して、トラフィックパターンを監視し、トラフィックの異常やスパイクを特定します。 検出された攻撃の種類を把握するには、ELK ダッシュボードの _0}WAF フラグの配布_ および _上位の攻撃」パネルに注意してください。_
 - **wafFlags の調整**：フラグが頻繁 `ATTACK` トリガーされるか、
-攻撃ベクトルを微調整する必要があります。特定のWAF フラグを使用してカスタムルールを作成できます。 [WAF フラグ ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。 最初に `log` モードで新しいカスタムルールを試すことを検討してください。
+攻撃ベクトルを微調整する必要があります。特定のWAF フラグを使用してカスタムルールを作成できます。 [WAF フラグ ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) の完全なリストについては、ドキュメントを参照してください。 最初に `log` モードで新しいカスタムルールを試すことを検討してください。
 - **ブロッキングルールに移行**：トラフィックパターンを検証し、WAF フラグを調整したら、ブロッキングルールへの移行を検討できます。
 
 ## 概要
@@ -316,5 +320,5 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 ## その他のリソース
 
-- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
-- [WAF フラグの一覧 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
+- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
+- [WAF フラグの一覧 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)

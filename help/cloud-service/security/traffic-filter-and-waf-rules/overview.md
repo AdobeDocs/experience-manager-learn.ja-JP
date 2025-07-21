@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 1%
 
 ---
-
 
 # 概要 – AEM Web サイトの保護
 
@@ -27,6 +27,9 @@ AEMの **Web Application Firewall （WAF）** ルールのサブカテゴリを�
 >[!IMPORTANT]
 >
 > WAF トラフィックフィルタールールには、追加の **WAF-DDoS 保護** または **セキュリティの強化** ライセンスが必要です。 標準のトラフィックフィルタールールは、Sites およびFormsのお客様がデフォルトで使用できます。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
 
 ## AEM as a Cloud Serviceのトラフィックセキュリティの概要
 
@@ -52,7 +55,7 @@ AEM as a Cloud Serviceでは、統合 CDN レイヤーを活用して、web サ�
 
 標準のトラフィックフィルタールールは、レート制限またはブロック特定の領域などのビジネス固有のポリシーを適用したり、IP アドレス、パス、ユーザーエージェントなどのリクエストプロパティおよびヘッダーに基づくトラフィックをブロックしたりするのに役立ちます。
 一方、WAFのトラフィックフィルタールールは、既知の web 攻撃および攻撃ベクトルに対して包括的でプロアクティブな保護機能を提供し、誤検出を制限する高度なインテリジェンスを備えています（例：正当なトラフィックをブロックする）。
-両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[ トラフィックフィルタールールの構文 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax) を参照してください。
+両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[ トラフィックフィルタールールの構文 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax) を参照してください。
 
 ## これらを使用するタイミングと理由
 
@@ -79,14 +82,14 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
    - （接触チャネルで _1 秒あたり 100 件を超えるリクエストを行う IP のレート制限_
    - 外国Assets管理庁（OFAC）の上場国からのトラフィックのブロック
 
-- **WAF トラフィックフィルタールール** （アドオンライセンスが必要）: SQL インジェクション、クロスサイトスクリプティング（XSS） [ その他の web アプリケーション攻撃などの、](https://owasp.org/www-project-top-ten/)OWASP トップ 10&rbrace; の高度な脅威に対する追加の保護を提供します。
+- **WAF トラフィックフィルタールール** （アドオンライセンスが必要）: SQL インジェクション、クロスサイトスクリプティング（XSS） [ その他の web アプリケーション攻撃などの、](https://owasp.org/www-project-top-ten/)OWASP トップ 10} の高度な脅威に対する追加の保護を提供します。
 以下に例を示します。
    - 既知の不正な IP アドレスからの要求をブロックしています
    - 攻撃のフラグが設定された疑わしい要求のログ記録またはブロック
 
 >[!TIP]
 >
-> まず、Adobeのセキュリティに関する専門知識と継続的な更新を活用するために **Adobeが推奨するルール &rbrace; を適用します。**&#x200B;ビジネスに特定のリスクやエッジケースがある場合、または誤検出（正当なトラフィックのブロック）が発生した場合は、**カスタムルール** を定義するか、デフォルトのセットをニーズに合わせて拡張できます。
+> まず、Adobeのセキュリティに関する専門知識と継続的な更新を活用するために **Adobeが推奨するルール } を適用します。**&#x200B;ビジネスに特定のリスクやエッジケースがある場合、または誤検出（正当なトラフィックのブロック）が発生した場合は、**カスタムルール** を定義するか、デフォルトのセットをニーズに合わせて拡張できます。
 
 ## 今すぐ始める
 
