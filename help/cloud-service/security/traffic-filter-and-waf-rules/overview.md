@@ -55,7 +55,7 @@ AEM as a Cloud Serviceでは、統合 CDN レイヤーを活用して、web サ�
 
 標準のトラフィックフィルタールールは、レート制限またはブロック特定の領域などのビジネス固有のポリシーを適用したり、IP アドレス、パス、ユーザーエージェントなどのリクエストプロパティおよびヘッダーに基づくトラフィックをブロックしたりするのに役立ちます。
 一方、WAFのトラフィックフィルタールールは、既知の web 攻撃および攻撃ベクトルに対して包括的でプロアクティブな保護機能を提供し、誤検出を制限する高度なインテリジェンスを備えています（例：正当なトラフィックをブロックする）。
-両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[ トラフィックフィルタールールの構文 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax) を参照してください。
+両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[ トラフィックフィルタールールの構文 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax) を参照してください。
 
 ## これらを使用するタイミングと理由
 
