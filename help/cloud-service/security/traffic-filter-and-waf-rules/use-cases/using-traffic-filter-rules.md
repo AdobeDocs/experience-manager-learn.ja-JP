@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
+source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 7%
@@ -23,7 +23,7 @@ ht-degree: 7%
 AEM as a Cloud Serviceで _AEMが推奨する_ 標準のトラフィックフィルタールール **を使用して、Adobe Web サイトを DoS （Denial of Service）、分散型 Denial of Service （DDoS）** ボットの不正使用から保護する方法について説明します。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469395/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469396/?quality=12&learn=on)
 
 ## 学習目標
 
@@ -391,4 +391,4 @@ Splunk でダッシュボードを作成するには、[AEMCS CDN ログ分析�
 
 ## その他のリソース
 
-- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [ 推奨されるスタータールール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
