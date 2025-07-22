@@ -24,7 +24,7 @@ ht-degree: 84%
 Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449749?quality=12&learn=on&captions=jpn)
 
 
 >[!IMPORTANT]
