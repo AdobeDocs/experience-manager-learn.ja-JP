@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '520'
-ht-degree: 100%
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+workflow-type: tm+mt
+source-wordcount: '533'
+ht-degree: 84%
 
 ---
 
@@ -23,9 +23,17 @@ ht-degree: 100%
 
 Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449749?quality=12&learn=on&captions=jpn)
 
-この例では、アドビが提供する&#x200B;_ホストされた web フック_&#x200B;を使用することで、独自の web フックを設定しなくても AEM イベントを受け取ることができます。このアドビが提供する web フックは、[Glitch](https://glitch.com/) でホストされています。Glitch は、web アプリケーションの構築とデプロイに役立つ web ベースの環境を提供することで知られるプラットフォームです。ただし、希望する場合は独自の web フックを使用することもできます。
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+
+
+>[!IMPORTANT]
+>
+>このチュートリアルのライブデモエンドポイントは、以前 [Glitch](https://glitch.com/) でホストされていました。 2025 年 7 月をもって、Glitch はホスティングサービスを廃止し、エンドポイントにアクセスできなくなりました。
+>>アドビでは、デモを代替プラットフォームに移行する取り組みを積極的に進めています。 チュートリアルのコンテンツは引き続き正確で、更新されたリンクはすぐに提供されます。
+>>ご理解とご辛抱をお願いいたします。
+
+ライブデモエンドポイントが再び使用可能になるまで、独自の Webhook を使用します。
 
 ## 前提条件
 
@@ -155,4 +163,4 @@ Web フックでイベントを処理するために必要な情報がすべて 
 
 ## その他のリソース
 
-- [Glitch web フックソースコード](https://glitch.com/edit/#!/lovely-ancient-coaster)が参照可能です。
+- [AEM - イベント Webhook](../assets/examples/webhook/aemeventing-webhook.tgz) のソースコードは、参照用に利用できます。
