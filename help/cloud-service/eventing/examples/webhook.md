@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 00301753eae983a17160b783a9b166537baf5ee0
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 84%
+source-wordcount: '523'
+ht-degree: 67%
 
 ---
 
@@ -24,16 +24,17 @@ ht-degree: 84%
 Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3449749?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 
 >[!IMPORTANT]
 >
->このチュートリアルのライブデモエンドポイントは、以前 [Glitch](https://glitch.com/) でホストされていました。 2025 年 7 月をもって、Glitch はホスティングサービスを廃止し、エンドポイントにアクセスできなくなりました。
->&#x200B;>アドビでは、デモを代替プラットフォームに移行する取り組みを積極的に進めています。 チュートリアルのコンテンツは引き続き正確で、更新されたリンクはすぐに提供されます。
->&#x200B;>ご理解とご辛抱をお願いいたします。
+>このビデオは、グリッチがホストする Webhook エンドポイントを参照します。 Glitch がホスティングサービスを廃止したため、Webhook は Azure App Service に移行されました。
+>
+>機能は同じままです。ホスティングプラットフォームのみが変更されました。
 
-ライブデモエンドポイントが再び使用可能になるまで、独自の Webhook を使用します。
+
+Adobeが提供するサンプル Webhook を使用する代わりに、独自の Webhook エンドポイントを使用してAEM イベントを受け取ることもできます。
 
 ## 前提条件
 
@@ -46,15 +47,15 @@ Web フックで AEM イベントを受け取り、イベントの詳細（ペ�
 
 ## Web フックにアクセス
 
-アドビが提供する web フックにアクセスするには、次の手順に従います。
+Adobeが提供するサンプル Webhook にアクセスするには、次の手順に従います。
 
-- 新しいブラウザータブで、[Glitch：ホストされた web フック](https://lovely-ancient-coaster.glitch.me/)にアクセスできることを確認します。
+- 新しいブラウザータブで [Adobeが提供するサンプル Webhook](https://aemeventing-webhook.azurewebsites.net/) にアクセスできることを確認します。
 
-  ![Glitch：ホストされた web フック](../assets/examples/webhook/glitch-hosted-webhook.png)
+  ![Adobeが提供するサンプル webhook](../assets/examples/webhook/adobe-provided-webhook.png)
 
 - Web フックに一意の名前（例：`<YOUR_PETS_NAME>-aem-eventing`）を入力し、「**Connect**」をクリックします。「`Connected to: ${YOUR-WEBHOOK-URL}`」というメッセージが画面に表示されます。
 
-  ![Glitch：web フックの作成](../assets/examples/webhook/glitch-create-webhook.png)
+  ![Webhook エンドポイントの作成 ](../assets/examples/webhook/create-webhook-endpoint.png)
 
 - **Web フック URL** をメモします。この情報は、このチュートリアルの後半で必要になります。
 
@@ -72,13 +73,13 @@ Web フックで AEM イベントを受け取り、イベントの詳細（ペ�
 
   ![Adobe Developer Console プロジェクトの設定](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- **イベントの受信方法**&#x200B;のステップで、「**Web フック**」オプションを選択し、先ほどの Glitch のホストされた web フックからコピーした **web フック URL** を貼り付けて、「**設定済みイベントを保存**」をクリックします。
+- **イベントの受け取り方法** ステップで、「**Webhook**」オプションを選択し、Adobeが提供するサンプル Webhook から以前にコピーした **Webhook URL** を貼り付けて、「**設定済みのイベントを保存**」をクリックします。
 
   ![Adobe Developer Console プロジェクトの web フック](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- Glitch の web フックページには、GET リクエストが表示されます。これは、web フック URL を検証するために Adobe I/O イベントによって送信されるチャレンジリクエストです。
+- Adobeが提供するサンプル Webhook ページにGET リクエストが表示されます。これは、Webhook URL を検証するためにAdobe I/O Eventsから送信されるチャレンジリクエストです。
 
-  ![Glitch：チャレンジリクエスト](../assets/examples/webhook/glitch-challenge-request.png)
+  ![Webhook - チャレンジリクエスト ](../assets/examples/webhook/webhook-challenge-request.png)
 
 
 ## AEM イベントをトリガー
@@ -91,9 +92,9 @@ Web フックで AEM イベントを受け取り、イベントの詳細（ペ�
 
 ## イベントの詳細を確認
 
-上記の手順を完了すると、AEM イベントが web フックに配信されているのを確認できます。Glitch の web フックページで POST リクエストを探します。
+上記の手順を完了すると、AEM イベントが web フックに配信されているのを確認できます。Adobeが提供するサンプル Webhook ページで POST リクエストを探します。
 
-![Glitch： POST リクエスト](../assets/examples/webhook/glitch-post-request.png)
+![Webhook - POST リクエスト ](../assets/examples/webhook/webhook-post-request.png)
 
 POST リクエストの主な詳細を次に示します。
 
@@ -103,25 +104,34 @@ POST リクエストの主な詳細を次に示します。
 
 ```json
 {
-"connection": "close",
-"x-forwarded-for": "34.205.178.127,::ffff:10.10.10.136,::ffff:10.10.84.114",
-"x-forwarded-proto": "https,http,http",
-"x-forwarded-port": "443,80,80",
-"host": "lovely-ancient-coaster.glitch.me",
-"content-length": "826",
-"x-adobe-public-key2-path": "/prod/keys/pub-key-IkpzhSpTw0.pem",
-"x-adobe-delivery-id": "18abfb47-d24a-4684-ade8-f442a3444033",
-"x-adobe-provider": "aemsites_7ABB3E6A5A7491460A495D61@AdobeOrg_acct-aem-p46652-e1074060@adobe.com",
-"x-adobe-public-key1-path": "/prod/keys/pub-key-Ptc2pD9vT9.pem",
-"x-adobe-event-id": "a0f3fb7d-b02c-4612-aac6-e472b80af793",
-"x-adobe-event-code": "aem.sites.contentFragment.modified",
-"user-agent": "Adobe/1.0",
-"x-adobe-digital-signature-2": "zGLso15+6PV6X6763/x6WqgxDlEXpkv5ty8q4njaq3aUngAI9VCcYonbScEjljRluzjZ05uMJmRfNxwjj60syxEJPuc0dpmMU635gfna7I4T7IaHs496wx4m2E5mvCM+aKbNQ+NPOutyTqI8Ovq29P2P87GIgMlGhAtOaxRVGNc6ksBxc2tCWbrKUhW8hPJ0sHphU499dN4TT32xrZaiRw4akT3M/hYydsA8dcWpJ7S4dpuDS21YyDHAB8s9Dawtr3fyPEyLgZzpwZDfCqQ8gdSCGqKscE4pScwqPkKOYCHDnBvDZVe583jhcZbHGjk7Ncp/FrgQk7avWsk5XlzcuA==",
-"x-adobe-digital-signature-1": "QD7THFJ1vmJqD/BatIpzO6+ACQ9cSKPR7XVaW0LI7cN/xs7ucyri6dmkerOPe9EJpjGoqCg8rxWedrIRQB3lgVskChbHH3Ujx5YG0aTQLSd1Lsn5CFbW1U0l0GqId9Cnd6MccrqSznZXcdW1rMFuRk8+gqwabBifSaLbu3r30G5hmqQd72VtiYTE4m23O3jYIMiv62pRP+a+p4NjNj1XG320uRSry+BPniTjDJ6oN/Ng7aUEKML8idZ/ZTqeh/rJSrVO95UryUolFDRwDkRn5zKonbvhSLAeXzaPhvimWUHtldq9M1WTyRMpsBk8BRzaklxlq+woJ2UjYPUIEzjotw==",
-"accept-encoding": "deflate,compress,identity",
-"content-type": "application/cloudevents+json; charset=UTF-8",
-"x-forwarded-host": "lovely-ancient-coaster.glitch.me",
-"traceparent": "00-c27558588d994f169186ca6a3c6607d4-a7e7ee36625488d4-01"
+  "host": "aemeventing-webhook.azurewebsites.net",
+  "user-agent": "Adobe/1.0",
+  "accept-encoding": "deflate,compress,identity",
+  "max-forwards": "10",
+  "x-adobe-public-key2-path": "/prod/keys/pub-key-kruhWwu4Or.pem",
+  "x-adobe-delivery-id": "25c36f70-9238-4e4c-b1d8-4d9a592fed9d",
+  "x-adobe-provider": "aemsites_7ABB3E6A5A7491460A495D61@AdobeOrg_acct-aem-p63947-e1249010@adobe.com",
+  "x-adobe-public-key1-path": "/prod/keys/pub-key-lyTiz3gQe4.pem",
+  "x-adobe-event-id": "b555a1b1-935b-4541-b410-1915775338b5",
+  "x-adobe-event-code": "aem.sites.contentFragment.modified",
+  "x-adobe-digital-signature-2": "Lvw8+txbQif/omgOamJXJaJdJMLDH5BmPA+/RRLhKG2LZJYWKiomAE9DqKhM349F8QMdDq6FXJI0vJGdk0FGYQa6JMrU+LK+1fGhBpO98LaJOdvfUQGG/6vq8/uJlcaQ66tuVu1xwH232VwrQOKdcobE9Pztm6UX0J11Uc7vtoojUzsuekclKEDTQx5vwBIYK12bXTI9yLRsv0unBZfNRrV0O4N7KA9SRJFIefn7hZdxyYy7IjMdsoswG36E/sDOgcnW3FVM+rhuyWEizOd2AiqgeZudBKAj8ZPptv+6rZQSABbG4imOa5C3t85N6JOwffAAzP6qs7ghRID89OZwCg==",
+  "x-adobe-digital-signature-1": "ZQywLY1Gp/MC/sXzxMvnevhnai3ZG/GaO4ThSGINIpiA/RM47ssAw99KDCy1loxQyovllEmN0ifAwfErQGwDa5cuJYEoreX83+CxqvccSMYUPb5JNDrBkG6W0CmJg6xMeFeo8aoFbePvRkkDOHdz6nT0kgJ70x6mMKgCBM+oUHWG13MVU3YOmU92CJTzn4hiSK8o91/f2aIdfIui/FDp8U20cSKKMWpCu25gMmESorJehe4HVqxLgRwKJHLTqQyw6Ltwy2PdE0guTAYjhDq6AUd/8Fo0ORCY+PsS/lNxim9E9vTRHS7TmRuHf7dpkyFwNZA6Au4GWHHS87mZSHNnow==",
+  "x-arr-log-id": "881073f0-7185-4812-9f17-4db69faf2b68",
+  "client-ip": "52.37.214.82:46066",
+  "disguised-host": "aemeventing-webhook.azurewebsites.net",
+  "x-site-deployment-id": "aemeventing-webhook",
+  "was-default-hostname": "aemeventing-webhook.azurewebsites.net",
+  "x-forwarded-proto": "https",
+  "x-appservice-proto": "https",
+  "x-arr-ssl": "2048|256|CN=Microsoft Azure RSA TLS Issuing CA 03, O=Microsoft Corporation, C=US|CN=*.azurewebsites.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US",
+  "x-forwarded-tlsversion": "1.3",
+  "x-forwarded-for": "52.37.214.82:46066",
+  "x-original-url": "/webhook/AdobeTechMarketing-aem-eventing",
+  "x-waws-unencoded-url": "/webhook/AdobeTechMarketing-aem-eventing",
+  "x-client-ip": "52.37.214.82",
+  "x-client-port": "46066",
+  "content-type": "application/cloudevents+json; charset=UTF-8",
+  "content-length": "1178"
 }
 ```
 
@@ -130,32 +140,41 @@ POST リクエストの主な詳細を次に示します。
 ```json
 {
   "specversion": "1.0",
+  "id": "83b0eac0-56d6-4499-afa6-4dc58ff6ac7f",
+  "source": "acct:aem-p63947-e1249010@adobe.com",
   "type": "aem.sites.contentFragment.modified",
-  "source": "acct:aem-p46652-e1074060@adobe.com",
-  "id": "bf922a49-9db4-4377-baf4-70e96e15c45f",
-  "time": "2023-12-12T20:36:43.583228Z",
-  "dataschema": "https://ns.adobe.com/xdm/aem/sites/events/content-fragment-modified.json",
   "datacontenttype": "application/json",
+  "dataschema": "https://ns.adobe.com/xdm/aem/sites/events/content-fragment-modified.json",
+  "time": "2025-07-24T13:53:23.994109827Z",
+  "eventid": "b555a1b1-935b-4541-b410-1915775338b5",
+  "event_id": "b555a1b1-935b-4541-b410-1915775338b5",
+  "recipient_client_id": "606d4074c7ea4962aaf3bc2a5ac3b7f9",
+  "recipientclientid": "606d4074c7ea4962aaf3bc2a5ac3b7f9",
   "data": {
     "user": {
-      "imsUserId": "933E1F8A631CAA0F0A495E53@80761f6e631c0c7d495fb3.e",
-      "principalId": "xxx@adobe.com",
-      "displayName": "First LastName",
+      "imsUserId": "ims-933E1F8A631CAA0F0A495E53@80761f6e631c0c7d495fb3.e",
+      "principalId": "xx@adobe.com",
+      "displayName": "Sachin Mali"
     },
     "path": "/content/dam/wknd-shared/en/adventures/beervana-portland/beervana-in-portland",
+    "sourceUrl": "https://author-p63947-e1249010.adobeaemcloud.com",
     "model": {
-      "id": "/conf/wknd-shared/settings/dam/cfm/models/adventure"
+      "id": "L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvYWR2ZW50dXJl",
+      "path": "/conf/wknd-shared/settings/dam/cfm/models/adventure"
     },
-    "id": "9a2d3e6a-efda-4079-a86e-0ef2ede692da",
+    "id": "9e1e9835-64c8-42dc-9d36-fbd59e28f753",
+    "tags": [
+      "wknd-shared:region/nam/united-states",
+      "wknd-shared:activity/social",
+      "wknd-shared:season/fall"
+    ],
     "properties": [
       {
-        "name": "groupSize",
+        "name": "price",
         "changeType": "modified"
       }
     ]
-  },
-  "event_id": "a0f3fb7d-b02c-4612-aac6-e472b80af793",
-  "recipient_client_id": "f51ea733ba404db299fefbf285dc1c42"
+  }
 }
 ```
 
