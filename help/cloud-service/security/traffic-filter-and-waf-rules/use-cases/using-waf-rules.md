@@ -30,7 +30,7 @@ AEM as a Cloud Serviceで _AEMが推奨する_ Web Application Firewall （WAF�
 > WAF トラフィックフィルタールールには、追加の **WAF-DDoS 保護** または **セキュリティの強化** ライセンスが必要です。 標準のトラフィックフィルタールールは、Sites およびFormsのお客様がデフォルトで使用できます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469431/?quality=12&learn=on&captions=jpn)
 
 ## 学習目標
 
