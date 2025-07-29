@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1400'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -193,9 +193,9 @@ ht-degree: 98%
 + セキュリティ {#security}
    + [トラフィックフィルタールールを使用した DoS／DDoS 攻撃のブロック](./security/blocking-dos-attack-using-traffic-filter-rules.md)
    + WAF ルールを含むトラフィックフィルタールール {#traffic-filter-and-waf-rules}
-      + [AEM Web サイトの保護](./security/traffic-filter-and-waf-rules/overview.md)
+      + [AEM web サイトの保護](./security/traffic-filter-and-waf-rules/overview.md)
       + [設定方法](./security/traffic-filter-and-waf-rules/setup.md)
-      + [トラフィックフィルタールールの使用](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
+      + [トラフィックフィルタルールの使用](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
       + [WAF ルールの使用](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
       + [ベストプラクティス](./security/traffic-filter-and-waf-rules/best-practices.md)
       + 方法{#how-to}

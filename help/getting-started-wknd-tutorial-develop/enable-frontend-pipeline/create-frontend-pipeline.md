@@ -1,6 +1,6 @@
 ---
 title: フロントエンドパイプラインを使用したデプロイ
-description: フロントエンドリソースを構築し、AEM as a Cloud Service の組み込み CDN にデプロイするフロントエンドパイプラインを作成して実行する方法を説明します。
+description: フロントエンドリソースを構築し、AEM as a Cloud Service のビルトインの CDN にデプロイするフロントエンドパイプラインを作成して実行する方法を説明します。
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
@@ -14,9 +14,9 @@ doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '685'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Cloud Manager [でパイプラインを作成およびデプロイするため�
 
 「__ソースコード__」タブで、「リポジトリ」フィールドと「Git ブランチ」フィールドの値が正しいこと、ブランチにフロントエンドパイプライン契約の変更があることも確認します。
 
-![Source コード設定パイプライン ](assets/fullstack-wknd-source-code-config.png)
+![ソースコード設定パイプライン](assets/fullstack-wknd-source-code-config.png)
 
 
 ## フロントエンドパイプラインの作成

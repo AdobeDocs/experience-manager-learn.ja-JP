@@ -1,6 +1,6 @@
 ---
 title: アクセスの制限
-description: AEM as a Cloud Serviceでトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法を説明します。
+description: AEM as a Cloud Service のトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法について説明します。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -10,37 +10,38 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18312
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+exl-id: 53cb8996-4944-4137-a979-6cf86b088d42
+source-git-commit: 71454ea9f1302d8d1c08c99e937afefeda2b1322
+workflow-type: ht
 source-wordcount: '390'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
 # アクセスの制限
 
-AEM as a Cloud Serviceでトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法を説明します。
+AEM as a Cloud Service のトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法について説明します。
 
-このチュートリアルでは、AEM Publish サービスで **パブリック IP から内部パスへのリクエストをブロック** する方法について説明します。
+このチュートリアルでは、AEM パブリッシュサービスで&#x200B;**パブリック IP からの内部パスへのリクエストをブロック**&#x200B;する方法について説明します。
 
 ## リクエストをブロックする理由とタイミング
 
-トラフィックのブロックは、特定の条件下で機密性の高いリソースや URL へのアクセスを防ぐことで、組織のセキュリティポリシーを強化するのに役立ちます。 ロギングと比較すると、ブロッキングはより厳密なアクションで、特定のソースからのトラフィックが不正または不要であると確信できる場合に使用する必要があります。
+トラフィックをブロックすると、特定の条件下で機密性の高いリソースや URL へのアクセスを防ぐことで、組織のセキュリティポリシーの適用に役立ちます。ログと比較すると、ブロックはより厳格なアクションで、特定のソースからのトラフィックが不正または不要であると確信できる場合に使用する必要があります。
 
 ブロックが適切な一般的なシナリオは次のとおりです。
 
-- `internal` ページまたは `confidential` ページへのアクセスを内部 IP 範囲のみに制限する（例えば、企業 VPN の背後など）。
-- ボットトラフィック、自動スキャナー、または IP またはジオロケーションで識別される脅威アクターをブロックします。
-- ステージングされた移行中に非推奨（廃止予定）または保護されていないエンドポイントへのアクセスを防止する。
+- `internal` ページや `confidential` ページへのアクセスを内部 IP 範囲にのみ制限します（例：企業 VPN の背後など）。
+- IP または位置情報によって特定されるボットトラフィック、自動スキャナーまたは脅威アクターをブロックします。
+- ステージングされた移行中に、非推奨（廃止予定）または安全でないエンドポイントへのアクセスを防ぎます。
 - パブリッシュ層でのオーサリングツールまたは管理ルートへのアクセスを制限します。
 
 ## 前提条件
 
-続行する前に、[ トラフィックフィルターとWAF ルールの設定方法 ](../setup.md) チュートリアルの説明に従って、必要な設定を完了していることを確認してください。 また、[AEM WKND サイトプロジェクト ](https://github.com/adobe/aem-guides-wknd) のクローンを作成して、AEM環境にデプロイしました。
+続行する前に、[トラフィックフィルタールールと WAF ルールの設定方法](../setup.md)チュートリアルの説明に従って必要な設定が完了していることを確認します。また、[AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd)のクローンを作成し、AEM 環境にデプロイしておきます。
 
-## 例：パブリック IP からの内部パスをブロックする
+## 例：パブリック IP からの内部パスのブロック
 
-この例では、パブリック IP アドレスから `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html` などの内部 WKND ページへの外部アクセスをブロックするルールを設定します。 このページにアクセスできるのは、信頼できる IP 範囲内のユーザー（企業の VPN など）のみです。
+この例では、パブリック IP アドレスから `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html` などの内部 WKND ページへの外部アクセスをブロックするルールを設定します。このページにアクセスできるのは、信頼できる IP 範囲（企業 VPN など）内のユーザーのみです。
 
 独自の内部ページ（`demo-page.html` など）を作成することも、[添付されているパッケージ](../assets/how-to/demo-internal-pages-package.zip)を使用することもできます。
 
@@ -68,7 +69,7 @@ data:
 
 - 変更をコミットして Cloud Manager Git リポジトリにプッシュします。
 
-- Cloud Manager設定パイプラインを使用して [ 以前に作成した ](../setup.md#deploy-rules-using-adobe-cloud-manager) 変更内容をAEM環境にデプロイします。
+- [以前に作成した](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定パイプラインを使用して、変更を AEM 環境にデプロイします。
 
 - WKND サイトの内部ページ（`https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html` など）にアクセスするか、または以下の CURL コマンドを使用して、ルールをテストします。
 
@@ -80,8 +81,8 @@ data:
 
 ## 分析中
 
-`block-internal-paths` ルールの結果を分析するには、[ 設定チュートリアル ](../setup.md#cdn-logs-ingestion) の説明と同じ手順に従います
+`block-internal-paths` ルールの結果を分析するには、[設定チュートリアル](../setup.md#cdn-logs-ingestion)で説明したのと同じ手順に従います。
 
-**ブロックされたリクエスト** と対応する値が、クライアントの IP （cli_ip）、ホスト、URL、アクション（waf_action）、ルール名（waf_match）の各列に表示されます。
+**ブロックされたリクエスト**&#x200B;と、クライアント IP（cli_ip）、ホスト、URL、アクション（waf_action）、ルール名（waf_match）の各列に対応する値が表示されます。
 
 ![ELK ツールダッシュボードのブロックされたリクエスト](../assets/how-to/elk-tool-dashboard-blocked.png)
