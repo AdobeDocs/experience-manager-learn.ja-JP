@@ -1,6 +1,6 @@
 ---
-title: 概要 – AEM Web サイトの保護
-description: AEM as a Cloud Serviceの Web アプリケーションファイアウォール（AEM）ルールのサブカテゴリを含むトラフィックフィルタールールを使用して、DoS、DDoS および悪意のあるトラフィックからWAF web サイトを保護する方法について説明します。
+title: 概要 - AEM web サイトの保護
+description: AEM as a Cloud Service の web アプリケーションファイアウォール（WAF）ルールのサブカテゴリを含むトラフィックフィルタールールを使用して、AEM web サイトを DoS 攻撃、DDoS 攻撃、悪意のあるトラフィックから保護する方法について説明します。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -14,86 +14,86 @@ exl-id: e6d67204-2f76-441c-a178-a34798fe266d
 source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1185'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# 概要 – AEM Web サイトの保護
+# 概要 - AEM web サイトの保護
 
-AEMの **Web Application Firewall （WAF）** ルールのサブカテゴリを含む **トラフィックフィルタールール** を使用して、DoS、分散型 DoS （Denial of Service）、悪意のあるトラフィックおよび高度な攻撃からAEM as a Cloud Service web サイトを保護する方法について説明します。
+AEM as a Cloud Service の **web アプリケーションファイアウォール（WAF）**&#x200B;ルールのサブカテゴリを含む&#x200B;**トラフィックフィルタールール**&#x200B;を使用して、AEM web サイトをサービス拒否（DoS）攻撃、分散型サービス拒否（DDoS）攻撃、悪意のあるトラフィック、高度な攻撃から保護する方法について説明します。
 
-また、標準トラフィックフィルターとWAF トラフィックフィルタールールの違い、それらを使用するタイミング、Adobeが推奨するルールの使用を開始する方法についても説明します。
+また、標準トラフィックフィルタールールと WAF トラフィックフィルタールールの違い、使用するタイミング、アドビの推奨されるルールの使用を開始する方法についても説明します。
 
 >[!IMPORTANT]
 >
-> WAF トラフィックフィルタールールには、追加の **WAF-DDoS 保護** または **セキュリティの強化** ライセンスが必要です。 標準のトラフィックフィルタールールは、Sites およびFormsのお客様がデフォルトで使用できます。
+> WAFトラフィックフィルタールールには、追加の **WAF-DDoS 保護**&#x200B;または&#x200B;**拡張セキュリティ**&#x200B;のライセンスが必要です。Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
 
-## AEM as a Cloud Serviceのトラフィックセキュリティの概要
+## AEM as a Cloud Service のトラフィックセキュリティの概要
 
-AEM as a Cloud Serviceでは、統合 CDN レイヤーを活用して、web サイトの配信を保護および最適化します。 CDN レイヤーの最も重要なコンポーネントの 1 つは、トラフィックルールを定義および適用する機能です。 これらのルールは、パフォーマンスを犠牲にすることなく、サイトを乱用、誤用、攻撃から保護するための保護シールドとして機能します。
+AEM as a Cloud Service では、統合された CDN レイヤーを活用して、web サイトの配信を保護および最適化します。CDN レイヤーの最も重要なコンポーネントの 1 つは、トラフィックルールを定義および適用する機能です。これらのルールは、パフォーマンスを犠牲にすることなく、不正使用、誤用、攻撃からサイトを保護するための保護シールドとして機能します。
 
-トラフィックのセキュリティは、稼働時間を維持し、機密データを保護し、正当なユーザーにシームレスなエクスペリエンスを提供するために不可欠です。 AEMには、次の 2 つのカテゴリのセキュリティルールがあります。
+トラフィックセキュリティは、稼動時間を維持し、機密性の高いデータを保護し、正当なユーザーに対してシームレスなエクスペリエンスを提供するために不可欠です。AEM では、次の 2 つのカテゴリのセキュリティルールを提供します。
 
 - **標準トラフィックフィルタールール**
 - **Web アプリケーションファイアウォール（WAF）トラフィックフィルタールール**
 
-このルールセットは、一般的で高度な web 脅威の防止、悪意のあるクライアントや不適切な動作をするクライアントからのノイズの低減、リクエストのロギング、ブロック、パターン検出による観察性の向上に役立ちます。
+ルールセットは、一般的な web 脅威と高度な web 脅威を防御し、悪意のあるクライアントや不正なクライアントからのノイズを削減し、リクエストのログ記録、ブロック、パターン検出を通じて確認性を向上させるのに役立ちます。
 
-## 標準とWAFのトラフィックフィルタールールの違い
+## 標準および WAF トラフィックフィルタールールの違い
 
 | 機能 | 標準トラフィックフィルタールール | WAF トラフィックフィルタールール |
 |--------------------------|--------------------------------------------------|---------------------------------------------------------|
-| 目的 | DoS、DDoS、スクレーピング、ボットアクティビティなどの乱用を防ぐ | ボットからも保護される高度な攻撃パターン（OWASPトップ 10 など）を検出して対処します。 |
+| 目的 | DoS 攻撃、DDoS 攻撃、スクレイピング、ボットアクティビティなどの不正使用を防止します | 高度な攻撃パターン（OWASP 上位 10 件など）を検出して対応します。また、ボットからも保護します |
 | 例 | レート制限、ジオブロック、ユーザーエージェントフィルタリング | SQL インジェクション、XSS、既知の攻撃 IP |
-| 柔軟性 | YAML 経由での高度な設定可能 | 事前定義済みのWAF フラグを使用し、YAML 経由で高度に設定可能 |
-| 推奨モード | `log` モードで開始してから、`block` モードに移動します | WAF フラグの `block` モード `ATTACK-FROM-BAD-IP`WAF フラグの `log` モードから始めて、両方 `ATTACK` フラグの `block` モードに移行します |
-| デプロイメント | YAML で定義され、Cloud Manager設定パイプラインを介してデプロイされます | `wafFlags` を使用して YAML で定義し、Cloud Manager設定パイプラインを介してデプロイします |
-| ライセンス | Sites およびForms ライセンスに含まれる | **WAF-DDoS Protection または Enhanced Security のライセンスが必要** |
+| 柔軟性 | YAML 経由での高度な設定が可能 | 事前定義済みの WAF フラグを使用し、YAML 経由での高度な設定が可能 |
+| 推奨されるモード | `log` モードで開始し、`block` モードに移行します | `ATTACK-FROM-BAD-IP` WAF フラグを `block` モード、`ATTACK` WAF フラグを `log` モードで開始し、両方を `block` モードに移行します |
+| デプロイメント | YAML で定義し、Cloud Manager 設定パイプライン経由でデプロイします | `wafFlags` を使用して YAML で定義し、Cloud Manager 設定パイプライン経由でデプロイします |
+| ライセンス | Sites および Forms ライセンスに含まれます | **WAF-DDoS 保護または拡張セキュリティのライセンスが必要です** |
 
-標準のトラフィックフィルタールールは、レート制限またはブロック特定の領域などのビジネス固有のポリシーを適用したり、IP アドレス、パス、ユーザーエージェントなどのリクエストプロパティおよびヘッダーに基づくトラフィックをブロックしたりするのに役立ちます。
-一方、WAFのトラフィックフィルタールールは、既知の web 攻撃および攻撃ベクトルに対して包括的でプロアクティブな保護機能を提供し、誤検出を制限する高度なインテリジェンスを備えています（例：正当なトラフィックをブロックする）。
-両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[ トラフィックフィルタールールの構文 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax) を参照してください。
+標準トラフィックフィルタールールは、レート制限や特定の地域のブロックなどのビジネス固有のポリシーの適用と、IPアドレス、パス、ユーザーエージェントなどのリクエストのプロパティおよびヘッダーに基づくトラフィックのブロックに役立ちます。
+一方、WAF トラフィックフィルタールールは、既知の web 悪用や攻撃ベクトルに対する包括的でプロアクティブな保護を提供し、誤検知（例：正当なトラフィックのブロック）を制限する高度なインテリジェンスを備えています。
+両方のタイプのルールを定義するには、YAML 構文を使用します。詳しくは、[トラフィックフィルタールールの構文](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)を参照してください。
 
-## これらを使用するタイミングと理由
+## 使用するタイミングと理由
 
-**標準のトラフィックフィルタールールの使用** は、次の場合に行います。
+**標準トラフィックフィルタールール**&#x200B;は、次の場合に使用します。
 
-- IP レートスロットルなど、組織固有の制限を適用する場合。
-- フィルタリングが必要な特定のパターン（悪意のある IP アドレス、地域、ヘッダーなど）を認識している。
+- IP レートスロットルなど、組織固有の制限を適用する必要がある。
+- フィルタリングが必要な特定のパターン（例：悪意のある IP アドレス、地域、ヘッダー）を認識している。
 
-**WAF トラフィックフィルタールールの使用** は次の場合に行います。
+**WAF トラフィックフィルタールール**&#x200B;は、次の場合に使用します。
 
-- エキスパートデータソースから収集された、既知の攻撃パターン（インジェクション、プロトコルの不正使用など）や、既知の悪意のある IP から包括的な **プロアクティブな保護** を得る必要があります。
-- 正当なトラフィックをブロックする可能性を制限しながら、悪意のあるリクエストを拒否する場合。
-- シンプルな設定ルールを適用することで、一般的で高度な脅威から保護する労力を制限する必要があります。
+- エキスパーのデータソースから収集された既知の悪意のある IP だけでなく、広い既知の攻撃パターン（例：インジェクション、プロトコルの不正使用）から、包括的で&#x200B;**プロアクティブな保護**&#x200B;が必要である。
+- 正当なトラフィックをブロックする可能性を制限しながら、悪意のあるリクエストを拒否する必要がある。
+- シンプルな設定ルールを適用して、一般的な脅威と高度な脅威に対する防御にかかる労力を制限する必要がある。
 
-これらのルールを組み合わせることで、AEM as a Cloud Serviceのお客様は、デジタルプロパティを保護する際に、プロアクティブかつリアクティブな対策を講じることができます。
+これらのルールを組み合わせることで、AEM as a Cloud Service のお客様がデジタルプロパティのセキュリティを確保するためにプロアクティブとリアクティブの両方の対策を講じることができる多層防御戦略が実現します。
 
-## Adobeが推奨するルール
+## アドビの推奨されるルール
 
-Adobeには、標準トラフィックフィルターおよびWAF トラフィックフィルタールールの推奨ルールが用意されており、AEM サイトをすばやく保護するのに役立ちます。
+アドビでは、AEM サイトをすばやく保護できるように、標準トラフィックフィルタールールと WAF トラフィックフィルタールールの推奨されるルールを提供します。
 
-- **標準トラフィックフィルタールール** （デフォルトで使用可能）:**CDN Edge**、**接触チャネル**、または制裁対象国からのトラフィックに対する DoS、DDoS およびボット攻撃などの一般的な乱用シナリオに対処します。\
+- **標準トラフィックフィルタールール**（デフォルトで使用可能）：**CDN エッジ**、**接触チャネル**&#x200B;または制裁対象国からのトラフィックに対する DoS 攻撃、DDoS 攻撃、ボット攻撃などの一般的な不正使用シナリオに対処します。\
   以下に例を示します。
-   - （CDN エッジで _1 秒あたり 500 件を超えるリクエストを行う IP のレート制限_
-   - （接触チャネルで _1 秒あたり 100 件を超えるリクエストを行う IP のレート制限_
-   - 外国Assets管理庁（OFAC）の上場国からのトラフィックのブロック
+   - _CDN エッジ_&#x200B;で 1 秒あたり 500 件を超えるリクエストを行う IP のレート制限
+   - _接触チャネル_&#x200B;で 1 秒あたり 100 件を超えるリクエストを行う IP のレート制限
+   - 米国財務省外国資産管理室（OFAC）がリストした国からのトラフィックのブロック
 
-- **WAF トラフィックフィルタールール** （アドオンライセンスが必要）: SQL インジェクション、クロスサイトスクリプティング（XSS） [ その他の web アプリケーション攻撃などの、](https://owasp.org/www-project-top-ten/)OWASP トップ 10&rbrace; の高度な脅威に対する追加の保護を提供します。
+- **WAF トラフィックフィルタールール**（アドオンライセンスが必要）：SQL インジェクション、クロスサイトスクリプティング（XSS）、他の web アプリケーション攻撃など、[OWASP 上位 10 件](https://owasp.org/www-project-top-ten/)の脅威を含む高度な脅威に対する追加の保護を提供します。
 以下に例を示します。
-   - 既知の不正な IP アドレスからの要求をブロックしています
-   - 攻撃のフラグが設定された疑わしい要求のログ記録またはブロック
+   - 既知の不正な IP アドレスからのリクエストのブロック
+   - 攻撃としてフラグ付けされた疑わしいリクエストのログ記録またはブロック
 
 >[!TIP]
 >
-> まず、Adobeのセキュリティに関する専門知識と継続的な更新を活用するために **Adobeが推奨するルール &rbrace; を適用します。**&#x200B;ビジネスに特定のリスクやエッジケースがある場合、または誤検出（正当なトラフィックのブロック）が発生した場合は、**カスタムルール** を定義するか、デフォルトのセットをニーズに合わせて拡張できます。
+> アドビのセキュリティに関する専門知識と継続的な更新のメリットを活用するには、まず&#x200B;**アドビの推奨されるルール**&#x200B;を適用します。ビジネスに特定のリスクやエッジケースがある場合や、誤検知（正当なトラフィックのブロック）が発生した場合は、**カスタムルール**&#x200B;を定義するか、デフォルトのセットをニーズに合わせて拡張できます。
 
 ## 今すぐ始める
 
-次の設定ガイドとユースケースに従って、AEM as a Cloud ServiceでWAF ルールを含むトラフィックフィルタールールを定義、デプロイ、テスト、分析する方法を説明します。 これにより背景知識が習得でき、後で自信を持ってAdobeが推奨するルールを適用できます。
+次の設定ガイドとユースケースに従って、AEM as a Cloud Service でトラフィックフィルタールール（WAF ルールを含む）を定義、デプロイ、テスト、分析する方法について説明します。これにより、アドビの推奨されるルールを自信を持って適用するための背景知識が得られます。
 
 <!-- CARDS
 {target = _self}
@@ -119,22 +119,22 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./setup.md" target="_self" rel="referrer" title="WAF ルールを含むトラフィックフィルタールールの設定方法">WAF ルールを含むトラフィックフィルタールールの設定方法 </a>
+                        <a href="./setup.md" target="_self" rel="referrer" title="WAF ルールを含むトラフィックフィルタールールの設定方法">WAF ルールを含むトラフィックフィルタールールの設定方法</a>
                     </p>
-                    <p class="is-size-6">WAF ルールを含むトラフィックフィルタールールを作成、デプロイ、テスト、および分析するための設定方法について説明します。</p>
+                    <p class="is-size-6">WAF ルールを含むトラフィックフィルタールールの作成、デプロイ、テスト、結果の分析を設定する方法について説明します。</p>
                 </div>
                 <a href="./setup.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 今すぐ開始 </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">今すぐ開始</span>
+                </a>
             </div>
         </div>
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Adobeが推奨するルール設定ガイド
+## アドビの推奨されるルール設定ガイド
 
-このガイドでは、AEM as a Cloud Service環境でAdobe推奨の標準トラフィックフィルターおよびWAF トラフィックフィルタールールを設定してデプロイする手順を順を追って説明します。
+このガイドでは、AEM as a Cloud Service 環境でアドビの推奨される標準トラフィックフィルタールールと WAF トラフィックフィルタールールを設定およびデプロイするための手順について段階的に説明します。
 
 <!-- CARDS
 {target = _self}
@@ -157,8 +157,8 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/using-traffic-filter-rules.md" title="標準のトラフィックフィルタールールを使用したAEM web サイトの保護" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/use-cases/using-traffic-filter-rules.png" alt="標準のトラフィックフィルタールールを使用したAEM web サイトの保護"
+                    <a href="./use-cases/using-traffic-filter-rules.md" title="標準トラフィックフィルタールールを使用した AEM web サイトの保護" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/using-traffic-filter-rules.png" alt="標準トラフィックフィルタールールを使用した AEM web サイトの保護"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -166,13 +166,13 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="標準のトラフィックフィルタールールを使用したAEM web サイトの保護"> 標準のトラフィックフィルタールールを使用したAEM web サイトの保護 </a>
+                        <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="標準トラフィックフィルタールールを使用した AEM web サイトの保護">標準トラフィックフィルタールールを使用したAEM web サイトの保護</a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud ServiceでAdobeが推奨する標準トラフィックフィルタールールを使用して、DoS、DDoS、ボットの不正使用からAEM web サイトを保護する方法について説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service でアドビの推奨される標準トラフィックフィルタールールを使用して、AEM web サイトを DoS 攻撃、DDoS 攻撃、ボットの不正使用から保護する方法について説明します。</p>
                 </div>
                 <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ルールの適用 </span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ルールを適用</span>
+                </a>
             </div>
         </div>
     </div>
@@ -180,8 +180,8 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/using-waf-rules.md" title="WAF ルールを使用したAEM web サイトの保護" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/use-cases/using-waf-rules.png" alt="WAF ルールを使用したAEM web サイトの保護"
+                    <a href="./use-cases/using-waf-rules.md" title="WAF ルールを使用した AEM web サイトの保護" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/using-waf-rules.png" alt="WAF ルールを使用した AEM web サイトの保護"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -189,12 +189,12 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" title="WAF ルールを使用したAEM web サイトの保護">WAF ルールを使用したAEM web サイトの保護 </a>
+                        <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" title="WAF ルールを使用した AEM web サイトの保護">WAF ルールを使用した AEM web サイトの保護</a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud ServiceでAdobeが推奨する Web Application Firewall （AEM）トラフィックフィルタールールを使用して、DoS、DDoS、ボットの不正使用などの高度な脅威からWAF web サイトを保護する方法について説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service でアドビの推奨される web アプリケーションファイアウォール（WAF）トラフィックフィルタールールを使用して、DoS 攻撃、DDoS 攻撃、ボットの不正使用などの高度な脅威から AEM web サイトを保護する方法について説明します。</p>
                 </div>
                 <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">WAFのアクティブ化 </span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">WAF をアクティブ化</span>
                 </a>
             </div>
         </div>
@@ -204,7 +204,7 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
 
 ## 高度なユースケース
 
-より高度なシナリオについては、特定のビジネス要件に基づいてカスタムトラフィックフィルタールールを実装する方法を示す、次のユースケースを参照できます。
+より高度なシナリオについて詳しくは、特定のビジネス要件に基づいてカスタムトラフィックフィルタールールを実装する方法を示す次のユースケースを参照してください。
 
 <!-- CARDS
 {target = _self}
@@ -230,9 +230,9 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-logging.md" target="_self" rel="referrer" title="機密性の高いリクエストの監視"> 機密リクエストの監視 </a>
+                        <a href="./how-to/request-logging.md" target="_self" rel="referrer" title="機密性の高いリクエストの監視">機密性の高いリクエストの監視</a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud Serviceのトラフィックフィルタールールを使用して機密リクエストをログに記録して監視する方法を説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service のトラフィックフィルタールールを使用して機密性の高いリクエストをログに記録し、監視する方法について説明します。</p>
                 </div>
                 <a href="./how-to/request-logging.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -253,9 +253,9 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-blocking.md" target="_self" rel="referrer" title="アクセスの制限"> アクセスの制限 </a>
+                        <a href="./how-to/request-blocking.md" target="_self" rel="referrer" title="アクセスの制限">アクセスの制限</a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud Serviceでトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法を説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service のトラフィックフィルタールールを使用して特定のリクエストをブロックし、アクセスを制限する方法について説明します。</p>
                 </div>
                 <a href="./how-to/request-blocking.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -276,9 +276,9 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-transformation.md" target="_self" rel="referrer" title="リクエストの標準化"> リクエストの標準化 </a>
+                        <a href="./how-to/request-transformation.md" target="_self" rel="referrer" title="リクエストの標準化">リクエストの標準化</a>
                     </p>
-                    <p class="is-size-6">AEM as a Cloud Serviceのトラフィックフィルタールールを使用してリクエストを変換し、標準化する方法を説明します。</p>
+                    <p class="is-size-6">AEM as a Cloud Service のトラフィックフィルタールールを使用してリクエストを変換し、標準化する方法について説明します。</p>
                 </div>
                 <a href="./how-to/request-transformation.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -291,4 +291,4 @@ Adobeには、標準トラフィックフィルターおよびWAF トラフィ�
 
 ## その他のリソース
 
-- [WAFルールを含むトラフィックフィルタールール ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [WAF ルールを含むトラフィックフィルタールール](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
