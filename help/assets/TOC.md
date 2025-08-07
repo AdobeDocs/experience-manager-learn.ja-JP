@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 2ffe4706856f0dbf63f2916af010f23bdb7b0045
-workflow-type: ht
-source-wordcount: '456'
+source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
+workflow-type: tm+mt
+source-wordcount: '458'
 ht-degree: 100%
 
 ---
@@ -147,6 +147,7 @@ ht-degree: 100%
       + [画像のシャープニング](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [カラーマネジメント](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + ビデオ {#video}
+      + [ベストプラクティス](dynamic-media/dynamic-media-video-best-practices.md)
       + [360 ビデオ](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [カスタムビデオのサムネール](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH アダプティブストリーミング](dynamic-media/dynamic-media-dash.md)
