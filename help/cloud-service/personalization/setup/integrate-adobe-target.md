@@ -140,7 +140,7 @@ Adobe Target設定をエクスペリエンスフラグメントに関連付け�
 
 ## その他のリソース
 
-- [Target API の概要 ](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
-- [ ターゲットオファー ](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
+- [Target API の概要 ](https://experienceleague.adobe.com/ja/docs/target-dev/developer/api/target-api-overview)
+- [ ターゲットオファー ](https://experienceleague.adobe.com/ja/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- [AEMのエクスペリエンスフラグメント ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- [AEMのエクスペリエンスフラグメント ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
