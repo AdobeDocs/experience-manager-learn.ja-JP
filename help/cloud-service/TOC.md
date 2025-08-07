@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
-source-wordcount: '1400'
-ht-degree: 100%
+source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+workflow-type: tm+mt
+source-wordcount: '1414'
+ht-degree: 99%
 
 ---
 
@@ -141,6 +141,13 @@ ht-degree: 100%
       + [リポジトリブラウザー](./debugging/cloud-service/repository-browser.md)
       + リスク{#risks}
          + [トラバーサルの警告](./debugging/cloud-service/risks/traversals.md)
++ パーソナライゼーション {#personalization}
+   + [概要](./personalization/overview.md)
+   + セットアップ{#setup}
+      + [Adobe Target を統合](./personalization/setup/integrate-adobe-target.md)
+      + [タグの統合](./personalization/setup/integrate-adobe-tags.md)
+   + ユースケース {#use-cases}
+      + [実験（A/B テスト）](./personalization/use-cases/experimentation.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
    + OpenAPI{#openapis}
