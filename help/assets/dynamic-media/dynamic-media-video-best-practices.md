@@ -20,7 +20,7 @@ ht-degree: 0%
 
 アダプティブストリーミング、様々な画面サイズでのスマート切り抜き、カスタムビューアプリセット、キャプション、オーディオトラック、チャプターマーカーのサポートなど、AEM Dynamic Media でのビデオの公開と最適化のベストプラクティスについて説明します。 ビューアのエクスペリエンス、アクセシビリティおよびデバイス間のマーケティング効果を強化する方法に重点を置いています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470634/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470679/?learn=on&enablevpops&captions=jpn)
 
 ## サポートリソース
 
