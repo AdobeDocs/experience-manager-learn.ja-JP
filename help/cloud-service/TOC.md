@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+source-git-commit: 7d6f6d710f7ecbe01359f54e0f51d3e84ec64373
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1403'
 ht-degree: 99%
 
 ---
@@ -343,10 +343,6 @@ ht-degree: 99%
       + [PDF/A ユーティリティ](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [ソリューションのテスト](./forms/forms-cs-assembler/test.md)
       + [課題](./forms/forms-cs-assembler/challenge.md)
-   + Marketo との統合{#froms-cs-with-marketo}
-      + [はじめに](./forms/forms-cs-with-marketo/part1.md)
-      + [データソースの作成](./forms/forms-cs-with-marketo/part2.md)
-      + [フォームデータモデルの作成](./forms/forms-cs-with-marketo/part3.md)
    + Blob インデックスタグを使用したフォーム送信の保存{#store-submiited-data-with-metadata-tags}
       + [はじめに](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [選択グループコンポーネントの拡張](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
