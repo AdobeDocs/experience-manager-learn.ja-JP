@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Emily Kellman が、Adobe.com で「バリエーションを生成」を使用して、コンテンツ速度を向上させ、タイムラインを短縮し、コンバージョン率を高める方法を共有します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462692/?learn=on&enablevpops&captions=jpn)
