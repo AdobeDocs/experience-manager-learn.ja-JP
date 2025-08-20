@@ -2,7 +2,7 @@
 title: Adobe Experience Manager によるコンテンツアクティベーションの高速化
 description: Adobe Experience Manager を使って、信頼性、パーソナライゼーション、ROI を維持しながら、ブランドコンテンツを迅速にアクティベーションする方法を説明します。
 cloud: Experience Cloud
-solution: Experience Manager Assets, Sensei
+solution: Experience Manager Assets
 feature-set: Experience Manager Assets
 role: User, Leader, Admin, Developer, Architect
 level: Beginner, Intermediate, Experienced
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 177150b3-6be3-4594-b1ca-f7f080effdfd
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
 

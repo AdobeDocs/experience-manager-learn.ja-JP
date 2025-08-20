@@ -1,7 +1,7 @@
 ---
 title: OAuth 単一ページアプリを使用した OpenAPI ベースの AEM API の呼び出し
 description: OAuth 2.0 PKCE フロー経由でカスタム単一ページアプリ（SPA）からユーザーベースの認証を使用して、AEM as a Cloud Service で OpenAPI ベースの AEM API を呼び出す方法を学びます。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -12,8 +12,8 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: ht
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ Adobe Developer Console（ADC）プロジェクトは、OAuth 単一ページア
 >ADC プロジェクトは _client_secret_ を提供しません。代わりに、SPA は _code_verifier_ と _code_challenge_ を生成して、_アクセストークン_&#x200B;の承認コードを安全に交換します。これにより、クライアント側でクライアントの秘密鍵を保存する必要がなくなり、セキュリティが強化されます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456965?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
