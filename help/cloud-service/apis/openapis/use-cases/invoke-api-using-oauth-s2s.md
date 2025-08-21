@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: ht
-source-wordcount: '1776'
-ht-degree: 100%
+source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
+workflow-type: tm+mt
+source-wordcount: '1811'
+ht-degree: 97%
 
 ---
 
@@ -79,11 +79,14 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
 
 1. AEM API を追加するには、「**API を追加**」ボタンをクリックします。
 
-   ![API を追加](../assets/s2s/add-api.png)
+   ![API の追加](../assets/s2s/add-api.png)
 
-1. _API を追加_&#x200B;ダイアログで、_Experience Cloud_ でフィルタリングし「**AEM Assets Author API**」カードを選択して、「**次へ**」をクリックします。
+1. _API を追加_ ダイアログで、_Experience Cloudでフィルタリングし_ 「**AEM Assets オーサー API**」カードを選択して、「**次へ**」をクリックします。
+別の OpenAPI ベースのAEM API が必要な場合は、[Adobe Developer ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を参照して、ユースケースに一致する API を見つけます。
 
-   ![AEM API を追加](../assets/s2s/add-aem-api.png)
+   以下の例では、**AEM Assets オーサー API** を追加する手順について説明します。
+
+   ![AEM API の追加](../assets/s2s/add-aem-api.png)
 
    >[!TIP]
    >
@@ -480,3 +483,4 @@ ADC プロジェクトで、AEM API を追加し、その認証タイプを設�
 ## その他のリソース
 
 - [OAuth サーバー間資格情報実装ガイド](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+
