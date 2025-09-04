@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18720
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
+source-git-commit: d81c657daa0b572076a4dcc0813d204e4bea77b0
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
-
 
 # 実験（A/B テスト）
 
@@ -34,11 +34,17 @@ A/B テストは、コンテンツの様々なバージョンを比較して、�
 
 バリエーションは WKND ホームページに表示され、パフォーマンスを測定し、エンゲージメントとコンバージョンを向上させるバージョンを判断できます。
 
-[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html) にアクセスして、実行中の A/B テストを確認します。
+![A/B テスト ](../assets/use-cases/experiment/view-ab-test-variations.png)
+
+### ライブデモ
+
+[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html) にアクセスして、実行中の A/B テストを確認します。 以下のビデオでは、3 つのバリエーションの **西オーストラリアでのキャンプ** がすべて、異なるブラウザーを使用してホームページに表示されています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3473005/?learn=on&enablevpops)
 
 ## 前提条件
 
-この実験のユースケースを進める前に、次の手順を完了していることを確認してください。
+実験のユースケースを進める前に、次の手順を完了していることを確認してください。
 
 - [Adobe Targetの統合 ](../setup/integrate-adobe-target.md)：パーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
 - [Adobe Experience Platformのタグ統合 ](../setup/integrate-adobe-tags.md): AEM コードを再デプロイしなくても、チームがJavaScriptを管理してパーソナライゼーションやデータ収集のためにデプロイできます。
@@ -250,7 +256,7 @@ A/B テストの動作を確認するには、[WKND イネーブルメント web
 
 ## その他のリソース
 
-- [A/B テストの概要 ](https://experienceleague.adobe.com/ja/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/home)
-- [ データストリームの概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B テストの概要 ](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [ データストリームの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
