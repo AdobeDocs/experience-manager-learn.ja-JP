@@ -12,8 +12,8 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 252d7045ba43c0998e9bb98fa86c399812ce92e9
+workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ React アプリにユニバーサルエディターコアライブラリを含�
                      Loads the LATEST Universal Editor library
                    */}
                    <script
-                       src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+                       src="https://universal-editor-service.adobe.io/cors.js"
                        async
                    />
                </Helmet>
@@ -106,7 +106,7 @@ return (
                     Loads the LATEST Universal Editor library
                 */}
                 <script
-                    src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+                    src="https://universal-editor-service.adobe.io/cors.js"
                     async
                 />
                 {/* AEM Universal Editor :: Connection metadata 
@@ -151,7 +151,7 @@ function App() {
               Loads the LATEST Universal Editor library
           */}
           <script
-            src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+            src="https://universal-editor-service.adobe.io/cors.js"
             async
           />
           {/* AEM Universal Editor :: Connection metadata 
@@ -250,7 +250,7 @@ _チームのタイトルとチームの説明_&#x200B;など、WKND Teams React
    export default Teams;
    ```
 
-   `data-aue-resource` 属性の値は、チームコンテンツフラグメントの AEM リソースパスです。`urn:aemconnection:` プレフィックスでは、接続メタデータで定義されたコンテンツのソースの短い名前を使用します。
+   `data-aue-resource` 属性の値は、チームコンテンツフラグメントの AEM リソースパスです。`urn:aemconnection:` 接頭辞では、接続メタデータで定義されたコンテンツのソースの短い名前を使用します。
 
 1. WKND Teams React アプリを読み込むブラウザーでユニバーサルエディターページを更新します。これで、最上位の Team 要素は編集可能ですが、プロパティパネルにはまだコンテンツが読み込まれていないことが確認できます。ブラウザーのネットワークタブでは、コンテンツを読み込む `details` リクエストに対して 401 Unauthorized エラーが表示されます。認証に IMS トークンを使用しようとしていますが、ローカル AEM SDK は IMS 認証をサポートしていません。
 
