@@ -22,7 +22,7 @@ ht-degree: 48%
 
 ビデオの Dynamic Media スマート切り抜きは、ビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326471?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >

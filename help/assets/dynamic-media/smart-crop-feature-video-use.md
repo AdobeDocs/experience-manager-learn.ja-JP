@@ -21,7 +21,7 @@ ht-degree: 87%
 
 スマート切り抜きを使用すると、レスポンシブデザインでのコンテンツの切り抜きにおける時間とコストのかかるタスクを排除できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40412?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >
