@@ -39,7 +39,7 @@ ht-degree: 3%
 
 ## ユニバーサルエディターの実装
 
-ユニバーサルエディターは、編集可能なコンテンツを識別し、UI とHTML コンテンツの間のつながりを確立するために [0}AEM属性とメタタグ } を必要とします。](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)
+ユニバーサルエディターは、編集可能なコンテンツを識別し、UI とHTML コンテンツの間のつながりを確立するために [0&rbrace;AEM属性とメタタグ &rbrace; を必要とします。](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)
 
 ### ユニバーサルエディターのタグの追加
 
