@@ -1,6 +1,6 @@
 ---
 title: ビデオに対する Dynamic Media スマート切り抜きの使用
-description: Dynamic Media のビデオのスマート切り抜きでは、Adobe Sensei を使用してビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
+description: ビデオの Dynamic Media スマート切り抜きは、ビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 feature: Smart Crop, Video Profiles, Viewer Presets
 version: Experience Manager as a Cloud Service
 jira: KT-5977
@@ -11,18 +11,18 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 15eb725c-d6f6-4ab9-8d39-dc05fbba1ff3
 duration: 397
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '94'
-ht-degree: 100%
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 48%
 
 ---
 
 # ビデオに対する Dynamic Media スマート切り抜きの使用 {#using-smart-crop-video}
 
-Dynamic Media のビデオのスマート切り抜きでは、Adobe Sensei を使用してビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
+ビデオの Dynamic Media スマート切り抜きは、ビデオの目標地点をインテリジェントに追跡し、ビデオがすべての画面サイズで最適に表示されるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/326471?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
 
 >[!NOTE]
 >

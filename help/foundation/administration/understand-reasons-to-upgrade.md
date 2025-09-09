@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 538
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2588'
-ht-degree: 100%
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '2576'
+ht-degree: 94%
 
 ---
 
@@ -86,7 +86,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
 
 ***✔<sup>+</sup> このバージョンの機能が大幅に強化されました。***
 
-***✔<sup>SP</sup> は、機能がサービスパックまたは機能パックを介して使用可能であることを示します。***
+***✔<sup>SP</sup> は、サービスパックまたは機能パックを介して機能が使用可能であることを示します。***
 
 <table>
     <thead>
@@ -136,7 +136,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=jp" target="_blank">カスタム検索インデックス</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=jp" target="_blank">カスタム検索インデックス</a>：</strong>
 カスタムインデックス定義を追加して、クエリのパフォーマンスと検索の関連性を最適化する機能。</td>
             <td> </td>
             <td>✔</td>
@@ -170,7 +170,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?lang=ja&&amp;lang=jp" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=jp" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
 AEM 6.0 の導入以降、MongoMK に対する継続的な機能強化が行われています。</td>
             <td> </td>
             <td> </td>
@@ -278,9 +278,9 @@ JCR リソースをビジネスオブジェクトやロジックにモデリン�
 
 + [セキュリティリリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
-***✔ は、このバージョンでの機能の大幅な強化を示しています。***
+***✔は、このバージョンでの機能の大幅な強化を示しています。***
 
-***✔<sup>+</sup> は、サービスパックまたは機能パックを通じて機能が使用可能であることを示します。***
+***✔<sup>+</sup> は、サービスパックまたは機能パックを介して機能が使用可能であることを示しています。***
 
 <table>
     <thead>
@@ -645,7 +645,7 @@ Adobe Analytics と DTM の統合が容易になります。 オーサー環境�
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang=ja&lang-jp" target="_blank">e コマース</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang-jp" target="_blank">e コマース</a>：</strong>
 Web、モバイル、ソーシャルという各種タッチポイントにまたがってブランド化を行い、パーソナライズされたショッピングエクスペリエンスを提供します。
             </td>
             <td>✔</td>
@@ -674,9 +674,9 @@ Web、モバイル、ソーシャルという各種タッチポイントにま�
 
 以下に、AEM が提供する主な Assets 機能の一覧を示します。 これらの機能の一部は以前のバージョンで導入されたもので、リリースごとに段階的に機能強化が追加されています。
 
-+ [AEM Assets リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/assets.html?lang=ja)
++ [AEM Assets リリースノート](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html?lang=ja)
 
-***✔ は、このバージョンでの機能の大幅な強化を示しています。***
+***✔は、このバージョンでの機能の大幅な強化を示しています。***
 
 ***✔<sup>+</sup> は、サービスパックまたは機能パックを介して機能が使用可能であることを示しています。***
 
@@ -794,7 +794,7 @@ Adobe Analytics を活用して、デジタルアセットの顧客インタラ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/multilingual-assets.html?lang=jp" target="_blank">多言語アセット</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html?lang=jp" target="_blank">多言語アセット</a>：</strong>
  言語ルートを使用したアセットメタデータの翻訳サポート。</td>
             <td> </td>
             <td> </td>
@@ -805,8 +805,8 @@ Adobe Analytics を活用して、デジタルアセットの顧客インタラ�
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank">スマートタグとモデレート</a>：</strong>
-Adobe Sensei を利用して、便利なメタデータで画像に自動的にタグ付けします。</td>
+            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank"> スマートタグとモデレート </a>:</strong>
+            Adobe AI を活用して、便利なメタデータで画像を自動的にタグ付けします。</td>
             <td> </td>
             <td></td>
             <td> </td>
@@ -827,7 +827,7 @@ AEM Assets の検索時に検索語句を自動的に翻訳します。</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/jp/experience-manager/6-5/assets/using/indesign.html?lang=jp" target="_blank">Adobe InDesign Server 統合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html?lang=jp" target="_blank">Adobe InDesign Server 統合</a>：</strong>
 商品カタログを生成します。 InDesign テンプレートに基づいて、パンフレット、チラシ、印刷広告を作成します。</td>
             <td> </td>
             <td> </td>

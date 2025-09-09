@@ -11,10 +11,10 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 duration: 115
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Asset Compute プロジェクトのルートにある `manifest.yml` には、�
 
 ワーカーは、`actions` の下の Adobe I/O Runtimeアクションエントリとして定義され、一連の設定で構成されます。
 
-他の Adobe I/O 統合にアクセスするワーカーは、`annotations -> require-adobe-auth` プロパティを `true` に設定する必要があります。これにより、`params.auth` オブジェクトを介して[ワーカーの Adobe I/O 資格情報が公開される](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=ja#access-adobe-apis)からです。 これは通常、ワーカーが Adobe Photoshop、Lightroom、Sensei API などの Adobe I/O API を呼び出すときに必要であり、ワーカーごとに切り替えることができます。
+他の Adobe I/O 統合にアクセスするワーカーは、`annotations -> require-adobe-auth` プロパティを `true` に設定する必要があります。これにより、`params.auth` オブジェクトを介して[ワーカーの Adobe I/O 資格情報が公開される](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=ja#access-adobe-apis)からです。 これは通常、ワーカーがAdobe PhotoshopやLightroom API などのAdobe I/O API を呼び出すときに必要であり、ワーカーごとに切り替えることができます。
 
 1. 自動生成されたワーカー `manifest.yml` を開いて確認します。複数の Asset Compute ワーカーを含むプロジェクトでは、`actions` 配列の下に各ワーカーのエントリを定義する必要があります。
 
@@ -44,7 +44,7 @@ packages:
         limits:
           concurrency: 10
         annotations:
-          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, Lightroom or Sensei APIs.
+          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, or Lightroom.
 ```
 
 ## 制限の定義
@@ -113,7 +113,7 @@ Asset Compute プロジェクトの Asset Compute 開発ツールを開始する
    $ aio app run
    ```
 
-1. ローカルの Asset Compute 開発ツールが、デフォルトの web ブラウザー __http://localhost:9000__ で開きます。
+1. ローカルのAsset Compute開発ツールが、デフォルトの web ブラウザー__http://localhost :9000__で開きます。
 
    ![aio app run](assets/environment-variables/aio-app-run.png)
 

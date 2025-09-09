@@ -8,10 +8,10 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
 duration: 173
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '873'
-ht-degree: 100%
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '867'
+ht-degree: 97%
 
 ---
 
@@ -40,7 +40,7 @@ Dynamic Media Classic は、顧客がリッチメディアコンテンツの制�
 
 - **Dynamic Imaging。** リアルタイム編集、書式設定とサイズ設定、インタラクティブなズームとパン、カラーとテクスチャのスウォッチ、360 度スピン、画像テンプレート、マルチメディアビューアを指す包括的な用語です。
 - **ビデオ。** 最終的なビデオをアップロードして公開し、設定可能なビデオビューアに順を追ってダウンロードします。
-- **スマートイメージング。** Adobe Sensei AI の機能を活用して、既存の「画像プリセット」と連携してクライアントのブラウザーの機能に基づいて、画像形式、サイズ、画質を自動的に最適化し、配信パフォーマンスを向上させるテクノロジーです。
+- **スマートイメージング。クライアントのブラウザーの機能に基づいて、画像形式、サイズ、画質を自動的に最適化し、画像配信のパフォーマンスを向上させるために既存の「画像プリセット」と連携する** テクノロジー。
 
 ソリューションのその他の機能については、[Dynamic Media Classic のドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=ja)を参照してください。
 

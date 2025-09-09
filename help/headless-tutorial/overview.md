@@ -8,10 +8,10 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
-workflow-type: ht
-source-wordcount: '375'
-ht-degree: 100%
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 96%
 
 ---
 
@@ -41,6 +41,19 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <p>
   </td>
   <td>
+    <a href="./open-api/basic/overview.md">
+      <img alt="OpenAPI" src="./assets/content-services.png" />
+    </a>
+     <div>
+      <a href="./open-api/basic/overview.md">
+        <strong>OpenAPI</strong>
+      </a>
+    </div>
+    <p>
+    <em> アプリケーションで OpenAPI ベースの REST API を使用してコンテンツを使用する方法を説明します。</em>
+    <p>
+  </td>
+  <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja">
     <img alt="トークンベースの認証" src="./assets/token-auth-icon.png" />
     </a>
@@ -52,20 +65,7 @@ Adobe Experience Manager（AEM）には、ヘッドレスエンドポイント�
     <p>
     <em>アプリケーションが AEM で安全に認証される方法を説明します。</em>
     </p>
-  </td>
-  <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
-      <img alt="コンテンツサービス" src="./assets/content-services.png" />
-    </a>
-     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja">
- <strong>コンテンツサービス</strong>
- </a>
-    </div>
-    <p>
-    <em>アプリケーションで REST API を使用してコンテンツを使用する方法を説明します。</em>
-    <p>
-  </td>
+  </td>  
 </tr>
 </table>
 

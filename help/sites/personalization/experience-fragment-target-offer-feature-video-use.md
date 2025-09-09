@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 574
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Adobe Experience Manager は、AEM と Target の間のパーソナライズ機能ワークフローを新たに認識します。 AEM 内で作成されたエクスペリエンスは、HTML オファーとして Adobe Target に直接配信できるようになりました。これによりマーケターは、様々なチャネルをまたいでコンテンツをシームレスにテストし、パーソナライズできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/38085?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Adobe Experience Manager は、AEM と Target の間のパーソナライズ機�
 * HTML オファーとエクスペリエンスフラグメントオファーの主な違いは、後者の編集は AEM でのみ行なえ、その後 Adobe Target と同期できることです
 * エクスペリエンスフラグメントフォルダーに適用される Target のクラウドサービス設定は、親フォルダーの直下に作成されたすべてのエクスペリエンスフラグメントに継承されます。子フォルダーは親クラウドサービス設定を継承しません。
 * パーソナライズされたオファーを作成するために、AEM 内に保存されたコンテンツを簡単に活用できるようになりました。
-* 自動割り当て、自動ターゲット、Automated Personalization などの Adobe Sensei を利用したアクティビティを含む、様々な種類の Target アクティビティを作成できます
+* 自動配分、自動ターゲット、Automated Personalizationなどの AI を活用したアクティビティを含む、様々なタイプの Target アクティビティを作成できます
 
 ## その他のリソース {#additional-resources}
 

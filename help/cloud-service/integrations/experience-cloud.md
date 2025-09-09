@@ -14,9 +14,9 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '682'
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '640'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,6 @@ AEM as a Cloud Service でサポートされているその他の Adobe Experien
 | [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
 | Marketo Engage |           |            |          |
 | Real-time CDP |           |            |          |
-| [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
 | [Target](#adobe-target) | ✔ |            |          |
 | [Workfront](#adobe-workfront) |           | ✔ |          |
 
@@ -63,12 +62,12 @@ Adobe Analytics と AEM as a Cloud Service との統合により、カスタマ�
 
 + [Adobe Analytics 統合の設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-analytics.html?lang=ja)
 + [AEM Sites と Analytics のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html?lang=ja)
-+  Adobe Client Data Layer（ACDL）
++ アドビクライアントデータレイヤー（ACDL）
 
    + [AEM WCM コアコンポーネントでの ACDL の拡張](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=ja)
    + [ACDL と AEM WCM コアコンポーネントの統合](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html?lang=ja)
    + [ACDL を使用したイベント駆動型データの処理](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html?lang=ja)
-   + [Adobe Client Data Layer（ACDL）のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
+   + [アドビクライアントデータレイヤー（ACDL）のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
 
 ### AEM Assets
 
@@ -125,10 +124,6 @@ Adobe Learning Manager（旧称 Adobe Captivate Prime）は、顧客や従業員
 
 + [AEM Sites と Adobe Learning Manager の統合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html?lang=ja)
 
-## Adobe Sensei
-
-Adobe Sensei は、スマートタグ、スマート切り抜き、ビジュアル検索などを使用してコンテンツ管理のプロセスを変換する AI および機械学習テクノロジーを提供します。
-
 ### AEM Sites
 
 + [コンテンツフラグメントのテキストの要約](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html?lang=ja#summarizing-text)
@@ -171,5 +166,5 @@ Adobe Workfront と AEM as a Cloud Service との統合により、デジタル�
 + [Workfront 拡張コネクタのビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html?lang=ja)
 + AEM Assets Essentials
 
-   + [Adobe Workfront for Assets Essentials のユーザーガイド](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Adobe Workfront for Assets Essentials のユーザーガイド](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
    + [Adobe Workfront と Assets Essentials のビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=ja)
