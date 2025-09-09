@@ -43,7 +43,7 @@ ht-degree: 12%
 
 このサンプル React アプリは、（`http://localhost:3000` 上で）ローカルで実行され、OpenAPI を使用してAEM パブリッシュサービスのAEM コンテンツフラグメント配信に接続します。 この連携を許可するには、AEM Publish （またはプレビュー）サービスで CORS （クロスオリジンリソース共有）が設定されている必要があります。
 
-[`http://localhost:3000` 上で動作する SPA の設定に関する手順で、AEM パブリッシュサービスへの CORS リクエストを許可します ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
+[`http://localhost:3000` 上で動作する SPA の設定に関する手順で、AEM パブリッシュサービスへの CORS リクエストを許可します ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
 
 ### ローカル CORS プロキシ
 

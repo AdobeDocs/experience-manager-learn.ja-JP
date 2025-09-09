@@ -46,7 +46,7 @@ ht-degree: 3%
 まず、React アプリをユニバーサルエディター互換として識別するために必要なメタタグを追加します。
 
 1. React アプリで `public/index.html` を開きます。
-1. React アプリの [ セクションに ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
+1. React アプリの [ セクションに ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
 
    ```html
    <!DOCTYPE html>
