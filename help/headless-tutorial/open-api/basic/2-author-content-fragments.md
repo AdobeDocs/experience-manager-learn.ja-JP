@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 700
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: 01f51a3556cfbcc22bbe31c4c05c11caaab71708
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 11%
 
 ---
 
-# コンテンツフラグメントのオーサリング
+# コンテンツフラグメントの作成
 
 この章では、[ チームおよび人物コンテンツフラグメントモデル ](./1-content-fragment-models.md) に基づいて、新しいコンテンツフラグメントを作成し、編集します。 これらのコンテンツフラグメントは、OpenAPI を使用したAEM コンテンツフラグメント配信を使用して React アプリで消費されるコンテンツになります。
 
