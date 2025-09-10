@@ -1,5 +1,5 @@
 ---
-title: ユニバーサルエディターを使用して React アプリを編集可能にする | ヘッドレスチュートリアル第 5 部
+title: ユニバーサルエディターを使用した React アプリの編集 | ヘッドレスチュートリアル第 5 部
 description: 必要な実装と設定を追加して、React アプリをAEM ユニバーサルエディターで編集可能にする方法を説明します。
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
@@ -8,15 +8,15 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 800
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: da3bfa25a424e3176fb7d53189169515db225228
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 3%
 
 ---
 
 
-# ユニバーサルエディターを使用して React アプリを編集可能にする
+# ユニバーサルエディターを使用した React アプリの編集
 
 この章では、[ 前の章 ](./4-react-app.md) で作成した React アプリを、AEM Universal Editor を使用して編集可能にする方法を説明します。 ユニバーサルエディターを使用すると、コンテンツ作成者は、ヘッドレスアプリケーションのシームレスなエクスペリエンスを維持しながら、React アプリエクスペリエンスのコンテキスト内で直接コンテンツを編集できます。
 
@@ -39,14 +39,14 @@ ht-degree: 3%
 
 ## ユニバーサルエディターの実装
 
-ユニバーサルエディターは、編集可能なコンテンツを識別し、UI とHTML コンテンツの間のつながりを確立するために [0&rbrace;AEM属性とメタタグ &rbrace; を必要とします。](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)
+ユニバーサルエディターは、編集可能なコンテンツを識別し、UI とHTML コンテンツの間のつながりを確立するために [0}AEM属性とメタタグ } を必要とします。](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)
 
 ### ユニバーサルエディターのタグの追加
 
 まず、React アプリをユニバーサルエディター互換として識別するために必要なメタタグを追加します。
 
 1. React アプリで `public/index.html` を開きます。
-1. React アプリの [ セクションに ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
+1. React アプリの [ セクションに ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
 
    ```html
    <!DOCTYPE html>
