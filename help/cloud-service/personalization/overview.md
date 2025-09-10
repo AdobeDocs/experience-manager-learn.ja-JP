@@ -10,10 +10,11 @@ doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
+source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 6%
+source-wordcount: '338'
+ht-degree: 5%
 
 ---
 
@@ -115,10 +116,16 @@ AEMCS、Adobe TargetおよびAdobe Experience Platformでサポートされて�
 {target = _self}
 
 * ./use-cases/experimentation.md
-  {title = Experimentation (A/B Testing)}
-  {description = Learn how to test different content variations in AEMCS using Adobe Target for A/B testing.}
-  {image = ./assets/use-cases/experiment/experimentation.png}
-  {cta = Learn Experimentation}
+    {title = Experimentation (A/B Testing)}
+    {description = Learn how to test different content variations in AEMCS using Adobe Target for A/B testing.}
+    {image = ./assets/use-cases/experiment/experimentation.png}
+    {cta = Learn Experimentation}
+
+* ./use-cases/behavioral-targeting.md
+    {title = Behavioral Targeting}
+    {description = Learn how to personalize content based on user behavior using Adobe Experience Platform and Adobe Target.}
+    {image = ./assets/use-cases/behavioral-targeting/behavioral-targeting.png}
+    {cta = Learn Behavioral Targeting}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -145,24 +152,28 @@ AEMCS、Adobe TargetおよびAdobe Experience Platformでサポートされて�
             </div>
         </div>
     </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Behavioral Targeting">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./use-cases/behavioral-targeting.md" title="行動ターゲティング" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/behavioral-targeting/behavioral-targeting.png" alt="行動ターゲティング"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" title="行動ターゲティング"> 行動ターゲティング </a>
+                    </p>
+                    <p class="is-size-6">Adobe Experience PlatformとAdobe Targetを使用して、ユーザーの行動に基づいてコンテンツをパーソナライズする方法を説明します。</p>
+                </div>
+                <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 行動ターゲティングについて </span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
