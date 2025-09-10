@@ -92,7 +92,7 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
 行動データに基づいてオーディエンスを作成するには、ユーザーが web サイトに訪問したり、web サイトとやり取りしたりする際に、データを収集して保存する必要があります。 この例では、ユーザーを **家族旅行者** オーディエンスとして分類するには、ページビューデータを収集する必要があります。 プロセスは、Adobe Experience Platformから開始して、このデータの収集に必要なコンポーネントを設定します。
 
-[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Experience Platform} に移動します。**
+[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Experience Platform&rbrace; に移動します。**
 
 ![Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
 
@@ -511,7 +511,7 @@ AEMでは、タグ プロパティが統合され、ページビューデータ�
 
 まず、AEM オーサーサービスにログインして、パーソナライズされたコンテンツを作成し設定します。
 
-- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Experience Manager} に移動します。**
+- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Experience Manager&rbrace; に移動します。**
 
   ![Experience Manager](../assets/use-cases/behavioral-targeting/dx-experience-manager.png)
 
@@ -574,7 +574,7 @@ Target 設定がエクスペリエンスフラグメントに適用され、パ�
 
 Adobe Targetでは、Experience Platformで作成された行動オーディエンスと、AEMから書き出されたパーソナライズされたオファーが適切に使用可能であることが検証されます。 次に、オーディエンスのターゲティングとパーソナライズされたコンテンツを組み合わせ、行動ターゲティングエクスペリエンスを提供するアクティビティを作成します。
 
-- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Adobe Target} に移動します。**
+- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Adobe Target&rbrace; に移動します。**
 
   ![Adobe Target](../assets/use-cases/behavioral-targeting/adobe-target.png)
 
