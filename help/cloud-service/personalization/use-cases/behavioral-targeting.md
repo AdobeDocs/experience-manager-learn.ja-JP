@@ -58,7 +58,7 @@ Adobe Experience Platform（AEP）とAdobe Targetを使用して、ユーザー�
 - [Adobe Targetの統合 ](../setup/integrate-adobe-target.md)：チームがパーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
 - [Adobe Experience Platformのタグの統合 ](../setup/integrate-adobe-tags.md):AEM コードを再デプロイしなくても、チームがJavaScriptを管理して、パーソナライゼーションやデータ収集のためにデプロイできるようになります。
 
-[Adobe Experience Cloud ID サービス（ECID） ](https://experienceleague.adobe.com/en/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データストリーム、オーディエンス、ID、プロファイルなど）についても理解している。
+[Adobe Experience Cloud ID サービス（ECID） ](https://experienceleague.adobe.com/ja/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データストリーム、オーディエンス、ID、プロファイルなど）についても理解している。
 
 Adobe Targetではシンプルなオーディエンスを作成できますが、Adobe Experience Platform（AEP）では、行動データやトランザクションデータなどの様々なデータソースを使用して、オーディエンスを作成および管理し、完全な顧客プロファイルを構築するための最新のアプローチを提供します。
 
@@ -658,9 +658,9 @@ AEMページで行動ターゲティングの実装を検証します。
 
 ## その他のリソース
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [ データストリームの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edgeのセグメント化 ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [ オーディエンスタイプ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target接続 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/home)
+- [ データストリームの概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edgeのセグメント化 ](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [ オーディエンスタイプ ](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target接続 ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
