@@ -21,4 +21,4 @@ ht-degree: 0%
 
 AEM Assets as a Cloud ServiceでAdobe GenAI を使用して、コンテンツの管理と検出に役立つアセットメタデータを生成および拡張する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474891/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474902/?learn=on&enablevpops&captions=jpn)
