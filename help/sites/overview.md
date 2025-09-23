@@ -6,10 +6,10 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 36917be459162e5399620c976bfe953cc5553c82
-workflow-type: ht
-source-wordcount: '637'
-ht-degree: 100%
+source-git-commit: 2b3ff1957f9da313b71a73492777700ddbd79854
+workflow-type: tm+mt
+source-wordcount: '786'
+ht-degree: 38%
 
 ---
 
@@ -17,23 +17,23 @@ ht-degree: 100%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager（AEM）Sites は、優れたエクスペリエンス管理プラットフォームです。このユーザーガイドには、AEM Sites の多くの機能に関するビデオとチュートリアルが含まれています。
+Adobe Experience Manager（AEM） Sites は、Adobeの Experience Management Platform であり、Web サイト、モバイルアプリ、その他のデジタルチャネルなどを通じて、デジタルエクスペリエンスをオーサリング、管理および配信できます。
 
-## AEM Sites で作成する 3 つの方法
+## AEM Sitesでエクスペリエンスを配信する 3 つの方法
 
-AEM Sites では、エクスペリエンスの作成、オーサリング、配信を行うための 3 つの方法を用意しています。完全なページの作成、エッジパフォーマンスの最適化、ヘッドレスアプリの強化など、AEM Sites では、プロジェクトのニーズに合わせて柔軟なオプションを提供します。
+AEM Sites では、エクスペリエンスの作成、オーサリング、配信を行うための 3 つの方法を用意しています。Web サイトを構築する場合でも、エッジのパフォーマンスに合わせて最適化する場合でも、ヘッドレスアプリを強化する場合でも、AEM Sitesはプロジェクトニーズに合わせた柔軟なオプションを提供します。
 
-1. **Edge Delivery Services** web サイトでは、ドキュメントベースのオーサリングまたは Adobe ユニバーサルエディターを活用してコンテンツを作成し、アクティブ化して、Edge Delivery Services で HTML web ページとしてエンドユーザーに配信します。このオプションは、主に高いパフォーマンス、スケーラビリティ、速度を必要とする&#x200B;_新規および既存のプロジェクト_&#x200B;向けです。
-1. **ヘッドレス／API ファースト** web エクスペリエンスでは、コンテンツフラグメントエディターまたはユニバーサルエディターを使用してコンテンツを作成し、アクティブ化して、AEM パブリッシュで JSON として配信します。このオプションは主に、モバイルアプリ、シングルページアプリケーション（SPA）またはその他のヘッドレスアプリケーションにコンテンツをヘッドレス配信する必要がある&#x200B;_新規および既存のプロジェクト_&#x200B;向けです。
-1. **従来の AEM** は、AEM Sites を使って Web エクスペリエンスを構築する最新のアプローチではありません。従来の AEM ユーザーは、AEM オーサーのページエディターを使用してコンテンツを作成し、アクティブ化して、AEM パブリッシュで HTML web ページとしてエンドユーザーに配信します。従来のAEMは、_既存のプロジェクト_&#x200B;に使用することをお勧めします。
+1. **Edge Delivery Services** のエクスペリエンスでは、AdobeのEdge Networkを使用して、高速かつ低遅延のコンテンツが配信されます。 このサービスは、消費デバイス、検索エンジン、GenAI エージェント用にコンテンツを自動的に最適化します。 作成者は、Adobe ユニバーサルエディターまたはドキュメントベースのオーサリングを使用してコンテンツを作成します。
+1. **ヘッドレス/API ファースト** エクスペリエンスでは、AEM パブリッシュを使用して、モバイルアプリ、シングルページアプリケーション（SPA）、その他のヘッドレスクライアント向けに、HTTP API 経由でコンテンツを JSON として配信します。 作成者は、コンテンツフラグメントエディターまたはユニバーサルエディターを使用してコンテンツを作成します。
+1. **従来のAEM** エクスペリエンスでは、AEM パブリッシュを使用して、コンテンツをHTML web ページとして配信します。 作成者は、AEM作成者のページエディターを使用してコンテンツを作成します。 このオプションは、既存のプロジェクトまたは移行済みのプロジェクトに最適です。
 
-これらのオプションは、マーケティング組織の様々なニーズを満たし、あらゆるチャネルやデバイスをまたいで高速かつ大規模にパーソナライズされた魅力的なエクスペリエンスを提供するように設計されています。
+3 つのオプションはすべて強力なアプローチであり、最良の選択は使用例と組織のニーズによって異なります。 各アプローチを使用すると、チームは、パーソナライズされた魅力的なエクスペリエンスを、あらゆるチャネルやデバイスにわたって迅速かつ大規模に提供できます。
 
 >[!IMPORTANT]
 >
-> **Edge Delivery Services** は、AEM Sitesを使用して構築する最新の方法です。Adobe の Edge Network の機能を活用して、パフォーマンスの高い web サイトを大規模に配信するように設計されています。
+> **Edge Delivery Services** は、AEMで web サイトを配信するための最新かつ最も高度な方法です。 Adobe Edge Networkの速度と拡張性を、最新のオーサリングオプションと組み合わせています。 新規プロジェクトにはEdge Delivery Servicesをお勧めしますが、AEM Sitesは引き続きヘッドレスと従来のアプローチをサポートしており、ニーズに最適なパスを選択できます。
 
-次の図に、様々なパスを示します。
+次の図は、AEM Sitesでエクスペリエンスを作成するための様々なオプションを示しています。
 
 ![AEM-Sites-Content-Authoring-and-Experience-Delivery-Paths.png](./assets/aem-sites-authoring-and-experience-delivery-paths.png){width="700" zoomable="yes"}
 
@@ -43,32 +43,36 @@ AEM Sites では、エクスペリエンスの作成、オーサリング、配�
 
 |            | Edge Delivery Services | ヘッドレス／API ファースト | 従来のAEM |
 |---------------------|------------------------------|---------------------------------|---------------------------------------------|
-| **次に最適** | 高いトラフィック、パフォーマンス、スケーラビリティが求められる web サイト | モバイルアプリ、SPA、その他のヘッドレスアプリケーション | 既存のプロジェクト （最新のアプローチではない） |
-| **オーサリングツール** | ドキュメントベースのオーサリング、ユニバーサルエディター | コンテンツフラグメント、ユニバーサルエディター | ページエディター |
-| **作成済みコンテンツストア** | ドキュメントまたは AEM オーサー（JCR） | AEM オーサー（JCR） | AEM オーサー（JCR） |
+| **最適な対象** | 高いトラフィック、パフォーマンス、スケーラビリティが求められる web サイト | モバイルアプリ、SPA、その他のヘッドレスアプリケーション | 既存のプロジェクトまたは移行済みプロジェクト |
+| **オーサリングツール** | ドキュメントベースのオーサリング、ユニバーサルエディター、ページエディター | コンテンツフラグメント、ユニバーサルエディター | ページエディター、ユニバーサルエディター |
+| **作成したコンテンツストア** | ドキュメントまたは AEM オーサー（JCR） | AEM オーサー（JCR） | AEM オーサー（JCR） |
 | **配信** | Edge Delivery Services | AEM パブリッシュ（Adobe CDN + Dispatcher を使用） | AEM パブリッシュ（Adobe CDN + Dispatcher を使用） |
 | **配信コンテンツストア** | Edge Delivery Services | AEM パブリッシュ（JCR） | AEM パブリッシュ（JCR） |
-| **配信形式** | HTML | JSON | HTML |
-| **開発テクノロジー** | JavaScript、CSS | 任意（例：Swift、React など） | Java™、JavaScript、CSS |
-| **実装段階** | 新規および既存のプロジェクト | 新規および既存のプロジェクト | 既存のプロジェクトのみ |
+| **配信フォーマット** | HTML | JSON | HTML |
+| **開発技術** | JavaScript、CSS | 任意（例：Swift、React など） | Java™、HTL、JavaScript、CSS |
+| **検索ボットと GenAI エージェントのサポート** | ボット、検索エンジン、GenAI エージェント向けに最適化 | ボットおよびエージェントに対して機能しますが、SSR または追加の設定が必要になる場合があります。 | ボットに適していますが、Edge Delivery Servicesに比べてパフォーマンスが低下する場合があります |
+
+## AMS またはオンプレミスからの移行
+
+AMS またはオンプレミス（OTP）からEdge Delivery Servicesに移行する場合は、AdobeからAEM as a Cloud Serviceに直接移行する評価を行うことをお勧めします。 この作業は、通常、AEM as a Cloud Service パブリッシュに移行する場合と同程度ですが、パフォーマンスと拡張性が向上します。 現時点でEdge Delivery Servicesが適切ではないと判断した場合、または他のアプローチがお客様のニーズにより適している場合、お客様のプロジェクトで引き続き完全にサポートされ、有効なオプションとなります。
 
 ## チュートリアル
 
-次のチュートリアルを通じて、AEM Sites で作成する 3 つのパスのそれぞれについて説明します。
+AEM Sitesで構築する 3 つのアプローチを詳しく説明します。 以下のチュートリアルでは、各オプションの仕組み、関連するツール、それらを使用するタイミングについて説明します。
 
 <!-- CARDS
 
 * https://www.aem.live/docs/
   {title = Edge Delivery Services - Guides}
-  {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
+  {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with Edge Delivery Services.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -91,7 +95,7 @@ AEM Sites では、エクスペリエンスの作成、オーサリング、配�
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" title="Edge Delivery Services - ガイド">Edge Delivery Services - ガイド</a>
                     </p>
-                    <p class="is-size-6">包括的なガイドを使用して、Edge Delivery Services について説明します。ビルド、パブリッシュ、ローンチガイドでは、EDS の使用を開始するために必要なすべての内容をカバーしています。</p>
+                    <p class="is-size-6">包括的なガイドを使用して、Edge Delivery Services について説明します。ビルド、パブリッシュ、ローンチのガイドには、Edge Delivery Servicesを使い始めるために必要なすべてが記載されています。</p>
                 </div>
                 <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
