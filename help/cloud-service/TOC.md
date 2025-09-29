@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+source-git-commit: 5f135785f9ff696e75d07b6c22442febd3aa35da
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1407'
 ht-degree: 99%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 99%
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 戦略とソートリーダーシップ{#strategy}
       + [Experience Manager - ガバナンスおよび人員配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
++ [Experience Hub](./experience-hub.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [AEM ヘッドレスと Target](./integrations/target.md)
@@ -43,8 +44,8 @@ ht-degree: 99%
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [GitHub リポジトリの使用](./cloud-manager/byogithub.md)
-   + [CI／CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
-   + [CI／CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
+   + [CI/CD 実稼動パイプライン](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD 実稼動以外のパイプライン](./cloud-manager/cicd-non-production-pipeline.md)
    + [アクティビティ](./cloud-manager/activity.md)
    + [カスタムドメイン名](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + [コンテンツの復元](./cloud-manager/content-restore.md)
