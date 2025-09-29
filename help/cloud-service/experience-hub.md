@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Experience Hubは、Adobe Experience Managerを使用するための主要な出発点となります。 必要なすべてのツール、環境、リソースが 1 か所にまとめられるので、移動、管理、作業をより迅速に行うことができます。 Experience Hubでは、複数のログインやブックマークを切り替える代わりに、合理化された単一のエントリポイントを提供するので、エクスペリエンスの作成、配信および最適化に集中するのに役立ちます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475246/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475247/?learn=on&enablevpops&captions=jpn)
 
 使い始めるのは簡単です。[experience.adobe.com](https://experience.adobe.com) に移動してAdobe IDでログインし、ナビゲーションメニューから **Experience Manager** を選択します。 そこから、Experience Hubに移動し、AEMを操作するために必要なすべてにすばやくアクセスできます。
 
