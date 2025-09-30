@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '792'
-ht-degree: 100%
+source-git-commit: 2f7e10680c7211da836e33fdd241cd7f5d633d5f
+workflow-type: tm+mt
+source-wordcount: '788'
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 お気に入りの IDE から AEM-RDE の `install` コマンドを実行して様々な AEM アーティファクトを RDE にデプロイする方法を、[AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) を使用して説明します。
 
-- AEM のコードとコンテンツのパッケージ（すべて、ui.apps）のデプロイメント
+- AEM のコードとコンテンツパッケージ（すべて、ui.apps）のデプロイメント
 - OSGi バンドルと設定ファイルのデプロイメント
 - zip ファイルでの Apache および Dispatcher 設定のデプロイメント
 - HTL や `.content.xml`（ダイアログ XML）などの個々のファイルのデプロイメント
@@ -51,7 +51,7 @@ $ mvn clean package
 
 まず、[最新の `aio` CLI モジュールがインストールされている](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)ことを確認します。
 
-次に、`aio aem:rde:install` コマンドを使用して、様々な AEM アーティファクトをデプロイします。以下を行う必要があります。
+次に、`aio aem:rde:install` コマンドを使用して、様々なAEM アーティファクトをデプロイします。
 
 ### `all` パッケージと `dispatcher` パッケージのデプロイ
 
