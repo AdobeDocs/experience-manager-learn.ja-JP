@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 5f135785f9ff696e75d07b6c22442febd3aa35da
+source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1410'
 ht-degree: 99%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 99%
    + 戦略とソートリーダーシップ{#strategy}
       + [Experience Manager - ガバナンスおよび人員配置モデルとアーキタイプ](./introduction/experience-manager-governance-and-staffing-models.md)
 + [Experience Hub](./experience-hub.md)
++ [AEM AI アシスタント](./aem-ai-assisstant.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [AEM ヘッドレスと Target](./integrations/target.md)
