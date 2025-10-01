@@ -8,9 +8,9 @@ doc-type: Feature Video
 duration: 205
 last-substantial-update: 2025-09-30T00:00:00Z
 jira: KT-19319
-source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
+source-git-commit: 823f3cf14794a1b55a53cea10bd012c739dea1b6
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '70'
 ht-degree: 8%
 
 ---
@@ -18,6 +18,6 @@ ht-degree: 8%
 
 # AEM AI アシスタント
 
-AEM AI アシスタントを使用してAdobe Experience Managerのワークフローをシンプル化する方法を説明します。 機能の検索、ベストプラクティスの学習、問題のトラブルシューティング、サポートチケットの作成など、AEMのインテリジェントな機能となります。 AI を活用したガイダンス、インサイト、サポートにより、生産性を高めます。
+[AEM AI アシスタント ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) を使用してAdobe Experience Manager ワークフローを簡単に実行する方法を説明します。 機能の検索、ベストプラクティスの学習、問題のトラブルシューティング、サポートチケットの作成など、AEMのインテリジェントな機能となります。 AI を活用したガイダンス、インサイト、サポートにより、生産性を高めます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
