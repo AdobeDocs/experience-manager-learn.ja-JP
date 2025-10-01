@@ -47,7 +47,7 @@ Adobe Experience Manager Assets as a Cloud Service コンテンツハブでア�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/set-up" title="設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472918/?format=jpeg&nocache=1759339176339" alt="設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472936/?format=jpeg&nocache=1759339176339&captions=jpn" alt="設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -70,7 +70,7 @@ Adobe Experience Manager Assets as a Cloud Service コンテンツハブでア�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/configure" title="設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472917/?format=jpeg&nocache=1759339176369" alt="設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472947/?format=jpeg&nocache=1759339176369&captions=jpn" alt="設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -93,7 +93,7 @@ Adobe Experience Manager Assets as a Cloud Service コンテンツハブでア�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/add-assets" title="アセットの追加" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1759339176806" alt="アセットの追加"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450283/?format=jpeg&nocache=1759339176806&captions=jpn" alt="アセットの追加"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -162,7 +162,7 @@ Adobe Experience Manager Assets as a Cloud Service コンテンツハブでア�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/collections" title="コレクション" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1759339176447" alt="コレクション"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445301/?format=jpeg&nocache=1759339176447&captions=jpn" alt="コレクション"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +185,7 @@ Adobe Experience Manager Assets as a Cloud Service コンテンツハブでア�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/content-hub/share" title="共有" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474890/?format=jpeg&nocache=1759339176327" alt="共有"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474920/?format=jpeg&nocache=1759339176327&captions=jpn" alt="共有"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -244,7 +244,7 @@ AEM Assets コンテンツハブを様々なコンテキストで効果的に利
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="AEM Assets コンテンツハブでアセットを管理する方法" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1759339177153" alt="AEM Assets コンテンツハブでアセットを管理する方法"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463057/?format=jpeg&nocache=1759339177153&captions=jpn" alt="AEM Assets コンテンツハブでアセットを管理する方法"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
