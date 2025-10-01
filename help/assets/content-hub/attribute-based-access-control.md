@@ -24,4 +24,4 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
 
-AEM Assets Content Hub属性ベースのアクセス制御に関するドキュメントから [ 属性ベースのアクセス制御定義スプレッドシートをダウンロード ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) します。
+AEM Assets Content Hub属性ベースのアクセス制御に関するドキュメントから [&#x200B; 属性ベースのアクセス制御定義スプレッドシートをダウンロード &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) します。
