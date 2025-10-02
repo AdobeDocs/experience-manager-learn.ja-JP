@@ -12,8 +12,8 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
+workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ AEM Sites のサイトマップを作成して SEO を強化する方法につ�
 >
 >このビデオでは、サイトマップ内の相対 URI の使用について説明します。 サイトマップは、[絶対 URL を使用する必要があります](https://sitemaps.org/protocol.html)。 絶対 URL を有効にする方法については、以下のビデオでは説明していないため、[設定](#absolute-sitemap-urls)を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3454362?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 設定
 
@@ -52,7 +52,7 @@ AEM のサイトマップは、[Sling マッピング](https://sling.apache.org/
 
 （[cron 式](https://cron.help/)を使用して）サイトマップが生成／再生成され、AEM にキャッシュされる頻度について、[OSGi ファクトリ設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)を定義します。
 
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.author`
 
 ```json
 {
