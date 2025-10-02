@@ -22,4 +22,4 @@ ht-degree: 100%
 
 非推奨（廃止予定）のサービスアカウント（JWT）資格情報から他のアドビソリューションを新しい OAuth サーバー間資格情報に移行する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449239/?learn=on&captions=jpn)
