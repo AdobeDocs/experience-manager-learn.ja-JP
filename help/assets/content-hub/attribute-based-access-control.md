@@ -22,6 +22,6 @@ ht-degree: 1%
 
 属性ベースのアクセス制御（ABAC）を使用して、AEM Assets Content Hub のアセットへのアクセスを設定および制御する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475415/?learn=on&enablevpops&captions=jpn)
 
 AEM Assets Content Hub属性ベースのアクセス制御に関するドキュメントから [&#x200B; 属性ベースのアクセス制御定義スプレッドシートをダウンロード &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) します。
