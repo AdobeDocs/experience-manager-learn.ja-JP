@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # ユニバーサルエディターを使用した React アプリの編集
 
-この章では、[ 前の章 ](./4-react-app.md) で作成した React アプリを、AEM Universal Editor を使用して編集可能にする方法を説明します。 ユニバーサルエディターを使用すると、コンテンツ作成者は、ヘッドレスアプリケーションのシームレスなエクスペリエンスを維持しながら、React アプリエクスペリエンスのコンテキスト内で直接コンテンツを編集できます。
+この章では、[&#x200B; 前の章 &#x200B;](./4-react-app.md) で作成した React アプリを、AEM Universal Editor を使用して編集可能にする方法を説明します。 ユニバーサルエディターを使用すると、コンテンツ作成者は、ヘッドレスアプリケーションのシームレスなエクスペリエンスを維持しながら、React アプリエクスペリエンスのコンテキスト内で直接コンテンツを編集できます。
 
 ![ユニバーサルエディター](./assets/5/main.png)
 
@@ -26,8 +26,8 @@ ht-degree: 3%
 
 ## 前提条件
 
-* このチュートリアルの前の手順、特に [AEMのコンテンツフラグメント配信 OpenAPI を使用する React アプリの作成 ](./4-react-app.md) は完了しました
-* [ ユニバーサルエディターの使用と実装方法 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) に関する実用的な知識。
+* このチュートリアルの前の手順、特に [AEMのコンテンツフラグメント配信 OpenAPI を使用する React アプリの作成 &#x200B;](./4-react-app.md) は完了しました
+* [&#x200B; ユニバーサルエディターの使用と実装方法 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) に関する実用的な知識。
 
 ## 目的
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 まず、React アプリをユニバーサルエディター互換として識別するために必要なメタタグを追加します。
 
 1. React アプリで `public/index.html` を開きます。
-1. React アプリの [ セクションに ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
+1. React アプリの [&#x200B; セクションに &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) ユニバーサルエディターのメタタグと CORS スクリプト `<head>` を追加します。
 
    ```html
    <!DOCTYPE html>
@@ -88,7 +88,7 @@ ht-degree: 3%
 次に、ユニバーサルエディター属性を追加して、チームコンポーネントを編集可能にします。
 
 1. `src/components/Teams.js` を開きます。
-1. `Team` コンポーネントを更新して、[ ユニバーサルエディターのデータ属性 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) を含めます。
+1. `Team` コンポーネントを更新して、[&#x200B; ユニバーサルエディターのデータ属性 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) を含めます。
 
    `data-aue-resource` 属性を設定する場合は、OpenAPI API を使用したAEM コンテンツフラグメント配信によって返されるコンテンツフラグメントへのAEM パスの後に、コンテンツフラグメントバリエーションへのサブパス（この場合は `/jcr:content/data/master`）が付いていることを確認します。
 
@@ -214,7 +214,7 @@ ht-degree: 3%
 同様に、ユニバーサルエディター属性を人物コンポーネントに追加します。
 
 1. `src/components/Person.js` を開きます。
-1. コンポーネントを更新して、[ ユニバーサルエディターのデータ属性 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) を含めます。
+1. コンポーネントを更新して、[&#x200B; ユニバーサルエディターのデータ属性 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) を含めます。
 
    `data-aue-resource` 属性を設定する場合は、OpenAPI API を使用したAEM コンテンツフラグメント配信によって返されるコンテンツフラグメントへのAEM パスの後に、コンテンツフラグメントバリエーションへのサブパス（この場合は `/jcr:content/data/master`）が付いていることを確認します。
 
@@ -294,7 +294,7 @@ ht-degree: 3%
 
 ### 完成したコードを取得する
 
-この章の完全なソースコードは [Github.com で入手できます ](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic_5-end)。
+この章の完全なソースコードは [Github.com で入手できます &#x200B;](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic_5-end)。
 
 
 ```bash
@@ -336,9 +336,9 @@ $ git checkout tags/headless_open-api_basic_5-end
 
 ### ユニバーサルエディターで開く
 
-![ ユニバーサルエディターでアプリを開く ](./assets/5/open-app-in-universal-editor.png)
+![&#x200B; ユニバーサルエディターでアプリを開く &#x200B;](./assets/5/open-app-in-universal-editor.png)
 
-1. [ ユニバーサルエディター ](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) に移動します。
+1. [&#x200B; ユニバーサルエディター &#x200B;](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) に移動します。
 1. 「**サイト URL**」フィールドに、HTTPS React アプリ URL を入力します：`https://localhost:3001`。
 1. 「**開く**」を選択します。
 
@@ -346,7 +346,7 @@ $ git checkout tags/headless_open-api_basic_5-end
 
 ### 編集機能のテスト
 
-![ ユニバーサルエディターで編集 ](./assets/5/edit-in-universal-editor.png)
+![&#x200B; ユニバーサルエディターで編集 &#x200B;](./assets/5/edit-in-universal-editor.png)
 
 1. ユニバーサルエディターで、React アプリの編集可能な要素にポインタを合わせます。
 
@@ -368,10 +368,10 @@ $ git checkout tags/headless_open-api_basic_5-end
 
 ## ユニバーサルエディターのデータ属性
 
-ユニバーサルエディター用アプリケーションの実装に関する完全なドキュメントについては、[ ユニバーサルエディターのドキュメント ](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) を参照してください。
+ユニバーサルエディター用アプリケーションの実装に関する完全なドキュメントについては、[&#x200B; ユニバーサルエディターのドキュメント &#x200B;](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) を参照してください。
 
 ## おめでとうございます。
 
 これですべて完了です。ユニバーサルエディターを React アプリと正常に統合しました。 コンテンツ作成者は、React アプリインターフェイス内でコンテンツフラグメントを直接編集できるようになり、ヘッドレスアーキテクチャのメリットを維持しながら、シームレスなオーサリングエクスペリエンスを提供します。
 
-このチュートリアルの最終ソースコードは、`main`GitHub.com リポジトリ [ の ](https://github.com/adobe/aem-tutorials/tree/main) ブランチから取得できます。
+このチュートリアルの最終ソースコードは、`main`GitHub.com リポジトリ [&#x200B; の &#x200B;](https://github.com/adobe/aem-tutorials/tree/main) ブランチから取得できます。

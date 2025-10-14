@@ -18,15 +18,15 @@ ht-degree: 1%
 
 # AEM OpenAPI ベースのコンテンツフラグメント配信 API について
 
-AEMの [OpenAPI を使用したAEM コンテンツフラグメント配信 ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/) は、任意のアプリケーションまたはチャネルに構造化コンテンツを配信する強力な方法を提供します。 この章では、OpenAPI を使用して、ドキュメントの **試す** 機能を通じてコンテンツフラグメントを取得する方法を説明します。
+AEMの [OpenAPI を使用したAEM コンテンツフラグメント配信 &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/) は、任意のアプリケーションまたはチャネルに構造化コンテンツを配信する強力な方法を提供します。 この章では、OpenAPI を使用して、ドキュメントの **試す** 機能を通じてコンテンツフラグメントを取得する方法を説明します。
 
 ## 前提条件 {#prerequisites}
 
-これは複数のパートから成るチュートリアルで、[ コンテンツフラグメントのオーサリング ](./2-author-content-fragments.md) でまとめられている手順が完了していることを前提としています。
+これは複数のパートから成るチュートリアルで、[&#x200B; コンテンツフラグメントのオーサリング &#x200B;](./2-author-content-fragments.md) でまとめられている手順が完了していることを前提としています。
 
 必ず以下を用意します。
 
-* `https://publish-<PROGRAM_ID>-e<ENVIRONMENT_ID >.adobeaemcloud.com/` コンテンツフラグメントの公開先 [ のAEM Publish サービスのホスト名（](./2-author-content-fragments.md#publish-content-fragments) など）。 AEM プレビューサービスを公開する場合は、そのホスト名を使用できます（例：`https://preview-<PROGRAM_ID>-e<ENVIRONMENT_ID>.adobeaemcloud.com/`）。
+* `https://publish-<PROGRAM_ID>-e<ENVIRONMENT_ID >.adobeaemcloud.com/` コンテンツフラグメントの公開先 [&#x200B; のAEM Publish サービスのホスト名（](./2-author-content-fragments.md#publish-content-fragments) など）。 AEM プレビューサービスを公開する場合は、そのホスト名を使用できます（例：`https://preview-<PROGRAM_ID>-e<ENVIRONMENT_ID>.adobeaemcloud.com/`）。
 
 ## 目的 {#objectives}
 
@@ -35,21 +35,21 @@ AEMの [OpenAPI を使用したAEM コンテンツフラグメント配信 ](htt
 
 ## 配信 API
 
-OpenAPI を使用したAEM コンテンツフラグメント配信 API は、コンテンツフラグメントを取得するための RESTful インターフェイスを提供します。 このチュートリアルで説明する API は、AEMのパブリッシュサービスおよびプレビューサービスでのみ使用でき、オーサーサービスでは使用できません。 [AEM オーサーサービス上のコンテンツフラグメントとのやり取り ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/) 用の他の OpenAPI があります。
+OpenAPI を使用したAEM コンテンツフラグメント配信 API は、コンテンツフラグメントを取得するための RESTful インターフェイスを提供します。 このチュートリアルで説明する API は、AEMのパブリッシュサービスおよびプレビューサービスでのみ使用でき、オーサーサービスでは使用できません。 [AEM オーサーサービス上のコンテンツフラグメントとのやり取り &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/) 用の他の OpenAPI があります。
 
 ## API の探索
 
-[OpenAPI API ドキュメントを使用したAEM コンテンツフラグメント配信には ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/)API を参照し、ブラウザーから直接テストできる「試す」機能があります。 これは、API エンドポイントとその機能を理解するための優れた方法です。
+[OpenAPI API ドキュメントを使用したAEM コンテンツフラグメント配信には &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/)API を参照し、ブラウザーから直接テストできる「試す」機能があります。 これは、API エンドポイントとその機能を理解するための優れた方法です。
 
-[AEM Sites API ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/) をブラウザーで開きます。
+[AEM Sites API ドキュメント &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/) をブラウザーで開きます。
 
 API は、左側のナビゲーションの「**フラグメント配信** セクションの下に一覧表示されます。 このセクションを展開すると、使用可能な API を確認できます。 API を選択すると、メインパネルに API の詳細が表示され、右側のパネルに「**試す**」セクションが表示され、ブラウザーから直接 API をテストして参照できます。
 
-![OpenAPI API ドキュメントを使用したAEM コンテンツフラグメント配信 ](./assets/3/docs-overview.png)
+![OpenAPI API ドキュメントを使用したAEM コンテンツフラグメント配信 &#x200B;](./assets/3/docs-overview.png)
 
 ## コンテンツフラグメントのリスト
 
-1. ブラウザーで、OpenAPI 開発者向けドキュメントを使用して [AEM コンテンツフラグメント配信を開きます ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/)
+1. ブラウザーで、OpenAPI 開発者向けドキュメントを使用して [AEM コンテンツフラグメント配信を開きます &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/)
 1. 左側のナビゲーションで、「**フラグメント配信**」セクションを展開し、「**すべてのコンテンツフラグメントをリスト**」 API を選択します。
 
 この API を使用すると、すべてのコンテンツフラグメントのページ分割されたリストをAEMからフォルダー別に取得できます。 この API を使用する最も簡単な方法は、コンテンツフラグメントを含むフォルダーへのパスを指定することです。
@@ -61,7 +61,7 @@ AEM パブリッシュサービスを使用しているため、バケットをA
 
 * **バケット**: `publish-p138003-e1400351`
 
-![ 試してみる ](./assets/3/try-it-bucket.png)
+![&#x200B; 試してみる &#x200B;](./assets/3/try-it-bucket.png)
 
 バケットが設定されると、「**Target サーバー**」フィールドの値が、AEM パブリッシュサービスの完全な API URL （例：`https://publish-p138003-e1400351.adobeaemcloud.com/adobe/contentFragments`）に自動的に更新されます。
 
@@ -76,12 +76,12 @@ AEM パブリッシュサービスを使用しているため、バケットをA
   >[!TIP]
   > パスを入力する場合は、そのプレフィックスが `/content/dam/` であり、末尾がスラッシュ **で終わる** ない `/` ことを確認します。
 
-  ![ パラメーターを試す ](assets/3/try-it-parameters.png)
+  ![&#x200B; パラメーターを試す &#x200B;](assets/3/try-it-parameters.png)
 
 1. 「**送信**」ボタンを選択して、API 呼び出しを実行します。
 1. **試す** パネルの「**応答**」タブに、指定したフォルダーのコンテンツフラグメントのリストを含む JSON 応答が表示されます。 応答は次のようになります。
 
-   ![ 応答を試す ](./assets/3/try-it-response.png)
+   ![&#x200B; 応答を試す &#x200B;](./assets/3/try-it-response.png)
 
 1. 応答には、`path` パラメーターの `/content/dam/my-project` フォルダーに、**Person** と **Team** の両方のコンテンツフラグメントを含むサブフォルダーを含むすべてのコンテンツフラグメントが含まれます。
 1. `items` 配列をクリックして、`Team Alpha` 項目の `id` 値を特定します。 この ID は、次の節で、単一のコンテンツフラグメントの詳細を取得するために使用します。
@@ -138,5 +138,5 @@ AEM パブリッシュサービスを使用しているため、バケットをA
 
 ## 次の手順
 
-次の章の [React アプリの作成 ](./4-react-app.md) では、外部アプリケーションが OpenAPI を使用してAEM コンテンツフラグメント配信とやり取りする方法を見ていきます。
+次の章の [React アプリの作成 &#x200B;](./4-react-app.md) では、外部アプリケーションが OpenAPI を使用してAEM コンテンツフラグメント配信とやり取りする方法を見ていきます。
 

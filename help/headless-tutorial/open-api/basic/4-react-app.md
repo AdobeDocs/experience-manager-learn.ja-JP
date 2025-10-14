@@ -28,7 +28,7 @@ ht-degree: 12%
 
 次のソフトウェアがインストールされている必要があります。
 
-* [Node.js v22 以降 ](https://nodejs.org/ja)
+* [Node.js v22 以降 &#x200B;](https://nodejs.org/ja)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目的
@@ -43,11 +43,11 @@ ht-degree: 12%
 
 このサンプル React アプリは、（`http://localhost:3000` 上で）ローカルで実行され、OpenAPI を使用してAEM パブリッシュサービスのAEM コンテンツフラグメント配信に接続します。 この連携を許可するには、AEM Publish （またはプレビュー）サービスで CORS （クロスオリジンリソース共有）が設定されている必要があります。
 
-[`http://localhost:3000` 上で動作する SPA の設定に関する手順で、AEM パブリッシュサービスへの CORS リクエストを許可します ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
+[`http://localhost:3000` 上で動作する SPA の設定に関する手順で、AEM パブリッシュサービスへの CORS リクエストを許可します &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
 
 ### ローカル CORS プロキシ
 
-または、開発用に、AEMへの CORS に対応した接続を確立する [ ローカル CORS プロキシ ](https://www.npmjs.com/package/local-cors-proxy) を実行します。
+または、開発用に、AEMへの CORS に対応した接続を確立する [&#x200B; ローカル CORS プロキシ &#x200B;](https://www.npmjs.com/package/local-cors-proxy) を実行します。
 
 ```bash
 $ npm install --global lcp
@@ -62,11 +62,11 @@ $ lcp --proxyUrl https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.adobeaemcloud.c
 
 OpenAPI を使用してAEM コンテンツフラグメント配信とやり取りし、そこから取得したチームや人物のデータを表示するために必要なコードを使用して、スタブ化されたサンプル React アプリを実装します。
 
-サンプル React アプリのソースコードは [Github.com で入手 ](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) できます。
+サンプル React アプリのソースコードは [Github.com で入手 &#x200B;](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) できます。
 
 React アプリを取得するには：
 
-1. [ タグ ](https://github.com/adobe/aem-tutorials) から [`headless_open-api_basic`Github.com](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic) のサンプル WKND OpenAPI React アプリを複製します。
+1. [&#x200B; タグ &#x200B;](https://github.com/adobe/aem-tutorials) から [`headless_open-api_basic`Github.com](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic) のサンプル WKND OpenAPI React アプリを複製します。
 
    ```shell
    $ cd ~/Code
@@ -91,7 +91,7 @@ React アプリを取得するには：
    REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com
    ```
 
-   [ ローカル CORS プロキシ ](#local-cors-proxy) を使用する場合、`REACT_APP_HOST_URI` を `http://localhost:8010/proxy` に設定します。
+   [&#x200B; ローカル CORS プロキシ &#x200B;](#local-cors-proxy) を使用する場合、`REACT_APP_HOST_URI` を `http://localhost:8010/proxy` に設定します。
 
    ```
    # AEM Publish (or Preview) service that provides Content Fragments
@@ -130,7 +130,7 @@ React アプリを取得するには：
 
 React アプリのメインビューにチームとそのメンバーを表示する機能を構築します。 この機能には、次が必要です。
 
-* 新しい [custom React useEffect フック ](https://react.dev/reference/react/useEffect#useeffect) は、取得リクエストを通じて **List all Content Fragments API** を呼び出し、表示する各 `fullName` の `teamMember` 値を取得します。
+* 新しい [custom React useEffect フック &#x200B;](https://react.dev/reference/react/useEffect#useeffect) は、取得リクエストを通じて **List all Content Fragments API** を呼び出し、表示する各 `fullName` の `teamMember` 値を取得します。
 
 完了すると、アプリのメインビューに AEM のチームデータが入力されます。
 
@@ -138,7 +138,7 @@ React アプリのメインビューにチームとそのメンバーを表示�
 
 1. `src/components/Teams.js` を開きます。
 
-1. **チーム** コンポーネントを実装して、[ すべてのコンテンツフラグメント API を一覧表示 ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/#operation/fragments/getFragments) からチームのリストを取得し、チームコンテンツをレンダリングします。 これは、次の手順に分かれます。
+1. **チーム** コンポーネントを実装して、[&#x200B; すべてのコンテンツフラグメント API を一覧表示 &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/#operation/fragments/getFragments) からチームのリストを取得し、チームコンテンツをレンダリングします。 これは、次の手順に分かれます。
 
 1. AEM `useEffect` すべてのコンテンツフラグメントをリスト **API を呼び出し、データを React コンポーネントのステートに保存する** フックを作成します。
 1. 返された **チーム** コンテンツフラグメントごとに、**コンテンツフラグメントを取得** API を呼び出して、メンバーとその `fullNames` を含む、チームの完全にハイドレートされた詳細を取得します。
@@ -253,15 +253,15 @@ React アプリのメインビューにチームとそのメンバーを表示�
 
 ## 人物機能の実装
 
-[ チームの機能 ](#implement-teams-functionality) が完成したので、チームメンバーまたは個人の詳細表示を処理する機能を実装します。
+[&#x200B; チームの機能 &#x200B;](#implement-teams-functionality) が完成したので、チームメンバーまたは個人の詳細表示を処理する機能を実装します。
 
-![Person ビュー ](./assets/4/person.png)
+![Person ビュー &#x200B;](./assets/4/person.png)
 
 次の手順を実行します。
 
 1. `src/components/Person.js` を開きます。
 1. `Person` React コンポーネントで、`id` ルートパラメーターを解析します。 React アプリのルートは、以前、`id` URL パラメーターを受け入れるように設定されていました（`/src/App.js` を参照）。
-1. [ コンテンツフラグメント API を取得 ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/#operation/fragments/getFragment) からAEMに人物データを取得します。
+1. [&#x200B; コンテンツフラグメント API を取得 &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/#operation/fragments/getFragment) からAEMに人物データを取得します。
 
    ```javascript
    import "./Person.scss";
@@ -341,7 +341,7 @@ React アプリのメインビューにチームとそのメンバーを表示�
 
 ### 完成したコードを取得する
 
-この章の完全なソースコードは [Github.com で入手できます ](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic_4-end)。
+この章の完全なソースコードは [Github.com で入手できます &#x200B;](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic_4-end)。
 
 ```bash
 $ git fetch --tags

@@ -22,7 +22,7 @@ ht-degree: 22%
 
 このチュートリアルでは、OpenAPI を使用してAEMのコンテンツフラグメント配信を使用し、ヘッドレスなAEM シナリオで外部アプリで使用して、CMS コンテンツを構築および公開する方法を説明します。 これは、WKND チームと関連するメンバーの詳細を表示する React アプリの作成について考え、これらの概念を調べます。 チームとメンバーはAEM コンテンツフラグメントモデルを使用してモデル化され、OpenAPI を使用したAEM コンテンツフラグメント配信を使用して React アプリによって使用されます。
 
-![WKND Teams アプリ ](./assets/overview/main.png)
+![WKND Teams アプリ &#x200B;](./assets/overview/main.png)
 
 このチュートリアルでは、以下のトピックを扱います。
 
@@ -40,7 +40,7 @@ ht-degree: 22%
 * AEM Sites as a Cloud Service
 * HTML と JavaScript の基本的なスキル
 * 以下のツールをローカルにインストールする必要があります。
-   * [Node.js v22 以降 ](https://nodejs.org/ja/)
+   * [Node.js v22 以降 &#x200B;](https://nodejs.org/ja/)
    * [Git](https://git-scm.com/)
    * IDE（例：[Microsoft® Visual Studio Code](https://code.visualstudio.com/)）
 
@@ -54,9 +54,9 @@ ht-degree: 22%
 
 ## GitHub プロジェクト
 
-ソースコードとコンテンツパッケージは、[AEM ヘッドレスチュートリアル ](https://github.com/adobe/aem-tutorials)GitHub リポジトリに格納されています。
+ソースコードとコンテンツパッケージは、[AEM ヘッドレスチュートリアル &#x200B;](https://github.com/adobe/aem-tutorials)GitHub リポジトリに格納されています。
 
-[`main` ブランチには ](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) このチュートリアルの最終的なソースコードが含まれます。
+[`main` ブランチには &#x200B;](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) このチュートリアルの最終的なソースコードが含まれます。
 各手順の最後にあるコードのスナップショットは、Git タグとして利用できます。
 
 * 第 4 章の開始 – React アプリ：[`headless_open-api_basic`](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic//headless/open-api/basic)

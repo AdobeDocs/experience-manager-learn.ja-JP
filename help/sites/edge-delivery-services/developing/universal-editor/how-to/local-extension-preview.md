@@ -19,7 +19,7 @@ ht-degree: 0%
 # ローカルのユニバーサルエディター拡張機能のプレビュー
 
 >[!TIP]
-> 方法を説明します [ ユニバーサルエディター拡張機能の作成 ](https://developer.adobe.com/uix/docs/services/aem-universal-editor/)。
+> 方法を説明します [&#x200B; ユニバーサルエディター拡張機能の作成 &#x200B;](https://developer.adobe.com/uix/docs/services/aem-universal-editor/)。
 
 開発中にユニバーサルエディター拡張機能をプレビューするには、次の操作が必要です。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 拡張機能をローカルで実行
 
-ここでは、[ ユニバーサルエディター拡張機能 ](https://developer.adobe.com/uix/docs/services/aem-universal-editor/) が既に作成されていて、ローカルでテストおよび開発する際にプレビューすることを前提としています。
+ここでは、[&#x200B; ユニバーサルエディター拡張機能 &#x200B;](https://developer.adobe.com/uix/docs/services/aem-universal-editor/) が既に作成されていて、ローカルでテストおよび開発する際にプレビューすることを前提としています。
 
 ユニバーサルエディター拡張機能を次で起動します。
 
@@ -62,18 +62,18 @@ https://localhost:9080
 
 ブラウザーに証明書に関する警告が表示されます。 証明書を受け入れて続行します。
 
-![ 自己署名証明書を受け入れる ](./assets/local-extension-preview/accept-certificate.png)
+![&#x200B; 自己署名証明書を受け入れる &#x200B;](./assets/local-extension-preview/accept-certificate.png)
 
 承認されると、ローカル拡張機能のプレースホルダーページが表示されます。
 
-![ 拡張機能にアクセス可能 ](./assets/local-extension-preview/extension-accessible.png)
+![&#x200B; 拡張機能にアクセス可能 &#x200B;](./assets/local-extension-preview/extension-accessible.png)
 
 
 ## ユニバーサルエディターでページを開く
 
-[ ユニバーサルエディターコンソール ](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) を使用して、またはユニバーサルエディターを使用するAEM Sitesのページを編集して、ユニバーサルエディターを開きます。
+[&#x200B; ユニバーサルエディターコンソール &#x200B;](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/) を使用して、またはユニバーサルエディターを使用するAEM Sitesのページを編集して、ユニバーサルエディターを開きます。
 
-![ ページをユニバーサルエディターで開く ](./assets/local-extension-preview/open-page-in-ue.png)
+![&#x200B; ページをユニバーサルエディターで開く &#x200B;](./assets/local-extension-preview/open-page-in-ue.png)
 
 
 ## 拡張機能の読み込み
@@ -91,7 +91,7 @@ https://localhost:9080
 https://author-pXXX-eXXX.adobeaemcloud.com/content/aem-ue-wknd/index.html?devMode=true&ext=https://localhost:9080
 ```
 
-![ ユニバーサルエディターの場所の URL を更新 ](./assets/local-extension-preview/update-location-url.png)
+![&#x200B; ユニバーサルエディターの場所の URL を更新 &#x200B;](./assets/local-extension-preview/update-location-url.png)
 
 
 ## 拡張機能のプレビュー
@@ -102,5 +102,5 @@ https://author-pXXX-eXXX.adobeaemcloud.com/content/aem-ue-wknd/index.html?devMod
 
 ローカルで行ったコード変更は、直ちに反映されます。
 
-![ ローカル拡張機能が読み込まれました ](./assets/local-extension-preview/extension-loaded.png)
+![&#x200B; ローカル拡張機能が読み込まれました &#x200B;](./assets/local-extension-preview/extension-loaded.png)
 

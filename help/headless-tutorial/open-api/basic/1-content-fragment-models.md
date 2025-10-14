@@ -107,7 +107,7 @@ ht-degree: 42%
 
 1. 最終的な&#x200B;**人物**&#x200B;モデルは次のようになります。
 
-   ![Person コンテンツフラグメントモデル ](assets/1/person-content-fragment-model.png)
+   ![Person コンテンツフラグメントモデル &#x200B;](assets/1/person-content-fragment-model.png)
 
 1. 「**保存**」をクリックして、変更を保存します。
 
@@ -142,13 +142,13 @@ ht-degree: 42%
 
 1. 最終&#x200B;**チーム**&#x200B;モデルは次のようになります。
 
-   ![ 最終チームコンテンツフラグメントモデル ](assets/1/team-content-fragment-model.png)
+   ![&#x200B; 最終チームコンテンツフラグメントモデル &#x200B;](assets/1/team-content-fragment-model.png)
 
 1. 「**保存**」をクリックして、変更を保存します。
 
 1. これで、2 つのモデルを使用できるようになります。
 
-   ![2 つのコンテンツフラグメントモデル ](assets/1/two-content-fragment-models.png)
+   ![2 つのコンテンツフラグメントモデル &#x200B;](assets/1/two-content-fragment-models.png)
 
 ## これで完了です。
 

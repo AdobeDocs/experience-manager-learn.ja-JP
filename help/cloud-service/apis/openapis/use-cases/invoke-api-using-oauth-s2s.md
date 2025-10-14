@@ -82,7 +82,7 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
    ![API の追加](../assets/s2s/add-api.png)
 
 1. _API を追加_ ダイアログで、_Experience Cloudでフィルタリングし_ 「**AEM Assets オーサー API**」カードを選択して、「**次へ**」をクリックします。
-別の OpenAPI ベースのAEM API が必要な場合は、[Adobe Developer ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を参照して、ユースケースに一致する API を見つけます。
+別の OpenAPI ベースのAEM API が必要な場合は、[Adobe Developer ドキュメント &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を参照して、ユースケースに一致する API を見つけます。
 
    以下の例では、**AEM Assets オーサー API** を追加する手順について説明します。
 
