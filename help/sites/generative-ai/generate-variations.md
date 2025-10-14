@@ -11,9 +11,9 @@ last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
 exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 100%
+ht-degree: 67%
 
 ---
 
@@ -25,4 +25,4 @@ Adobe Experience Manager のバリエーションを生成は、あらゆるエ�
 
 ## AEM オーサリングでのバリエーションを生成の使用
 
-+ __ドキュメントのオーサリング：__&#x200B;バリエーションを生成を利用して動的でパーソナライズされたドキュメントを作成し、ドキュメントベースの web サイトをより魅力的なエクスペリエンスに高める方法について説明します。[ドキュメントを表示](https://www.aem.live/docs/sidekick-generate-variations)
++ __ドキュメントオーサリング :__動的でパーソナライズされたドキュメントを作成するために生成バリエーションを利用する方法を説明し、ドキュメントベースの web サイトを、より魅力的で魅力的なエクスペリエンスに引き上げます。 [ドキュメントを表示](https://www.aem.live/docs/sidekick-generate-variations)
