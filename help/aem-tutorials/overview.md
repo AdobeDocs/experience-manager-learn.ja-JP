@@ -29,9 +29,9 @@ Adobe Experience Manager（AEM）は、優れたエクスペリエンス管理�
 
 + [AEM Sites の基本を学ぶ - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
 + [AEM ヘッドレスの基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
-+ [OpenAPI を使用したAEM コンテンツフラグメント配信の概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview)
++ [OpenAPI を使用したAEM コンテンツフラグメント配信の概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview)
 + [&#x200B; ユニバーサルエディターを使用した React アプリの編集 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview)
-+ [Personalizationの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
++ [Personalizationの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview)
 + [RDE の概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)
-+ [AEM API の概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/overview)
++ [AEM API の概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/aem-apis/overview)
 + [AEM Web サイトの保護 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
