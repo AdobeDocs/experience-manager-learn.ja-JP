@@ -33,11 +33,11 @@ ht-degree: 1%
 
 ## 使用例
 
-このチュートリアルでは、[ サンプル WKND サイト ](https://github.com/adobe/aem-guides-wknd) を使用して、**スキー** アドベンチャーを購入した **ログインユーザー** が **WKND ホームページ** でどのようにパーソナライズされたヒーローを表示するかをプロセスで示します。
+このチュートリアルでは、[&#x200B; サンプル WKND サイト &#x200B;](https://github.com/adobe/aem-guides-wknd) を使用して、**スキー** アドベンチャーを購入した **ログインユーザー** が **WKND ホームページ** でどのようにパーソナライズされたヒーローを表示するかをプロセスで示します。
 
 ヒーローエクスペリエンスは、_スキー_ アドベンチャーを購入したユーザーにとって不可欠なスキー用具である **アップセル** を試みます。 **スキー** アドベンチャーを購入していないユーザーには、デフォルトのヒーローコンテンツが表示されます。 したがって、ヒーローエクスペリエンスは、購入履歴とログインステータスに基づいてユーザーに対してパーソナライズされます。 このパーソナライゼーションを有効にするには、様々なシステムのデータを結合して完全な顧客プロファイルを作成し、パーソナライゼーションアクティビティに使用します。
 
-![ 既知のユーザーPersonalization](../assets/use-cases/known-user-personalization/personalized-hero-on-wknd-home-page.png)
+![&#x200B; 既知のユーザーPersonalization](../assets/use-cases/known-user-personalization/personalized-hero-on-wknd-home-page.png)
 
 ### システム全体でのユーザーデータ管理
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 論理図は、WKND サイトとのユーザーインタラクションと、行動データおよびトランザクションデータを収集してExperience Platformにフィードする方法を示しています。
 
-![ 既知のユーザーPersonalization](../assets/use-cases/known-user-personalization/logical-known-user-personalization.png)
+![&#x200B; 既知のユーザーPersonalization](../assets/use-cases/known-user-personalization/logical-known-user-personalization.png)
 
 これは、既知のユーザーパーソナライゼーションの概念を示すために簡略化されたバージョンです。 実際のシナリオでは、行動データとトランザクションデータが収集および保存されるシステムが複数ある場合があります。
 
@@ -73,10 +73,10 @@ ht-degree: 1%
 
 既知のユーザーパーソナライゼーションのユースケースに進む前に、次の手順を完了していることを確認してください。
 
-- [Adobe Targetの統合 ](../setup/integrate-adobe-target.md)：チームがパーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
-- [Adobe Experience Platformのタグの統合 ](../setup/integrate-adobe-tags.md):AEM コードを再デプロイしなくても、チームがJavaScriptを管理して、パーソナライゼーションやデータ収集のためにデプロイできるようになります。
+- [Adobe Targetの統合 &#x200B;](../setup/integrate-adobe-target.md)：チームがパーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
+- [Adobe Experience Platformのタグの統合 &#x200B;](../setup/integrate-adobe-tags.md):AEM コードを再デプロイしなくても、チームがJavaScriptを管理して、パーソナライゼーションやデータ収集のためにデプロイできるようになります。
 
-[Adobe Experience Cloud ID サービス（ECID） ](https://experienceleague.adobe.com/en/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データセット、データストリーム、オーディエンス、ID およびプロファイルなど）についても理解している。
+[Adobe Experience Cloud ID サービス（ECID） &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データセット、データストリーム、オーディエンス、ID およびプロファイルなど）についても理解している。
 
 このチュートリアルでは、Adobe Experience Platformでの ID のステッチと顧客プロファイルの作成について説明します。 したがって、行動データとトランザクションデータを組み合わせて、完全な顧客プロファイルを作成できます。
 
@@ -125,7 +125,7 @@ Adobe Experience Platform(AEP)のさまざまなソリューションを使用�
 
 まず、Adobe Experience Platformにログインし、データの収集とステッチに必要なコンポーネントを設定します。
 
-[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えツールまたは「クイックアクセス」セクションから **2}Experience Platform} に移動します。**
+[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えツールまたは「クイックアクセス」セクションから **2&rbrace;Experience Platform&rbrace; に移動します。**
 
 ![Experience Platform](../assets/use-cases/known-user-personalization/experience-platform.png)
 
@@ -139,7 +139,7 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **ID** をクリックします。 次に、右上の「**ID 名前空間を作成**」ボタンをクリックします。
 
-  ![ID 名前空間の作成 ](../assets/use-cases/known-user-personalization/create-identity-namespace.png)
+  ![ID 名前空間の作成 &#x200B;](../assets/use-cases/known-user-personalization/create-identity-namespace.png)
 
 - **ID 名前空間を作成** ダイアログで、以下を入力します。
    - **表示名**:WKND ユーザー Id
@@ -148,7 +148,7 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
   「**作成**」をクリックして、ID 名前空間を作成します。
 
-  ![ID 名前空間の作成 ](../assets/use-cases/known-user-personalization/create-identity-namespace-dialog.png)
+  ![ID 名前空間の作成 &#x200B;](../assets/use-cases/known-user-personalization/create-identity-namespace-dialog.png)
 
 ### スキーマの作成
 
@@ -160,17 +160,17 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **スキーマ** をクリックし、右上から **スキーマを作成** ボタンをクリックします。 次に、「**手動**」オプションを選択し、「**選択**」ボタンをクリックします。
 
-  ![ スキーマを作成 ](../assets/use-cases/known-user-personalization/create-schema.png)
+  ![&#x200B; スキーマを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-schema.png)
 
 - **スキーマを作成** ウィザードの **スキーマの詳細** 手順で、「**エクスペリエンスイベント**」オプション（ページビュー数、クリック数、ユーザーインタラクションなどの時系列データ）を選択し、「**次へ**」をクリックします。
 
-  ![ スキーマ作成ウィザード ](../assets/use-cases/known-user-personalization/create-schema-details.png)
+  ![&#x200B; スキーマ作成ウィザード &#x200B;](../assets/use-cases/known-user-personalization/create-schema-details.png)
 
 - **名前とレビュー** ステップには、次を入力します。
    - **スキーマ表示名**:WKND-RDE-Known-User-Personalization-Behavior
    - **選択されたクラス**:XDM ExperienceEvent
 
-  ![ スキーマの詳細 ](../assets/use-cases/known-user-personalization/create-schema-name-review.png)
+  ![&#x200B; スキーマの詳細 &#x200B;](../assets/use-cases/known-user-personalization/create-schema-name-review.png)
 
 - スキーマを次のように更新します。
    - **フィールドグループを追加**:AEP Web SDK ExperienceEvent
@@ -178,7 +178,7 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
   「**保存**」をクリックして、スキーマを作成します。
 
-  ![ スキーマの更新 ](../assets/use-cases/known-user-personalization/update-schema.png)
+  ![&#x200B; スキーマの更新 &#x200B;](../assets/use-cases/known-user-personalization/update-schema.png)
 
 - ユーザーがログイン（認証済み）または匿名のどちらであるかを把握するには、スキーマにカスタムフィールドを追加します。 このユースケースでは、**Ski** アドベンチャーを購入した既知のユーザー向けにコンテンツをパーソナライズすることを目標としています。 したがって、ユーザーがログイン（認証済み）されているか、匿名であるかを識別することが重要です。
 
@@ -192,11 +192,11 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
      下にスクロールして、「**適用**」ボタンをクリックします。
 
-     ![ カスタムフィールドを追加 ](../assets/use-cases/known-user-personalization/add-custom-field.png)
+     ![&#x200B; カスタムフィールドを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-custom-field.png)
 
 - 最終的な行動データスキーマは次のようになります。
 
-  ![ 最終スキーマ ](../assets/use-cases/known-user-personalization/final-schema.png)
+  ![&#x200B; 最終スキーマ &#x200B;](../assets/use-cases/known-user-personalization/final-schema.png)
 
 #### トランザクションデータスキーマ
 
@@ -204,13 +204,13 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
 - **スキーマを作成** ウィザードの **スキーマの詳細** 手順で、「**個人プロファイル**」オプション（顧客属性、環境設定、購入履歴などのレコードベースのデータ）を選択し、「**次へ** をクリックします。
 
-  ![ スキーマ作成ウィザード ](../assets/use-cases/known-user-personalization/create-transactional-schema.png)
+  ![&#x200B; スキーマ作成ウィザード &#x200B;](../assets/use-cases/known-user-personalization/create-transactional-schema.png)
 
 - **名前とレビュー** ステップには、次を入力します。
    - **スキーマ表示名**:WKND-RDE-Known-User-Personalization-Transactional
    - **クラス選択済み**: XDM 個人プロファイル
 
-  ![ スキーマの詳細 ](../assets/use-cases/known-user-personalization/create-transactional-schema-name-review.png)
+  ![&#x200B; スキーマの詳細 &#x200B;](../assets/use-cases/known-user-personalization/create-transactional-schema-name-review.png)
 
 - ユーザーの WKND Adventure の購入の詳細を保存するには、まず購入の識別子として機能するカスタムフィールドを追加します。 WKND ユーザー ID （`wkndUserId`）は、システム全体で共通の識別子です。
    - スキーマ名の横にある「**+**」ボタンをクリックします。
@@ -220,15 +220,15 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
       - **タイプ**：文字列
       - **割り当て先**：フィールドグループ/`wknd-user-purchase-details`
 
-  ![ カスタムフィールドを追加 ](../assets/use-cases/known-user-personalization/add-custom-identity.png)
+  ![&#x200B; カスタムフィールドを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-custom-identity.png)
 
    - 下にスクロールし、「**ID**」、「**プライマリ ID**」（様々なソースからのデータを統合プロファイルに結び付けるために使用されるメイン ID）をチェックし、「**ID 名前空間**」ドロップダウンで「**WKND ユーザー ID**」を選択します。 最後に、「**適用** ボタンをクリックします。
 
-  ![ カスタムフィールドを追加 ](../assets/use-cases/known-user-personalization/add-custom-identity-as-primary.png)
+  ![&#x200B; カスタムフィールドを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-custom-identity-as-primary.png)
 
 - カスタムプライマリ ID フィールドを追加すると、スキーマは次のようになります。
 
-  ![ 最終スキーマ ](../assets/use-cases/known-user-personalization/final-transactional-schema.png)
+  ![&#x200B; 最終スキーマ &#x200B;](../assets/use-cases/known-user-personalization/final-transactional-schema.png)
 
 - 同様に、次のフィールドを追加して、ユーザーとアドベンチャーの追加の購入の詳細を保存します。
 
@@ -252,11 +252,11 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
   | 国 | 国 | 文字列 | フィールドグループ/`wknd-user-purchase-details` |
   | zipCode | 郵便番号 | 文字列 | フィールドグループ/`wknd-user-purchase-details` |
 
-  ![ 追加フィールド ](../assets/use-cases/known-user-personalization/additional-fields.png)
+  ![&#x200B; 追加フィールド &#x200B;](../assets/use-cases/known-user-personalization/additional-fields.png)
 
 - スキーマのプロファイルを有効にします。
 
-  ![ プロファイルを有効にする ](../assets/use-cases/known-user-personalization/enable-profile.png)
+  ![&#x200B; プロファイルを有効にする &#x200B;](../assets/use-cases/known-user-personalization/enable-profile.png)
 
 これで、行動データとトランザクションデータの両方のスキーマを作成しました。
 
@@ -268,23 +268,23 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **データセット** をクリックし、右上から **データセットを作成** ボタンをクリックします。 次に、「**スキーマベース**」オプションを選択し、「**次へ**」をクリックします。
 
-  ![ データセットを作成 ](../assets/use-cases/known-user-personalization/create-behavioral-dataset.png)
+  ![&#x200B; データセットを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-behavioral-dataset.png)
 
 - **スキーマを選択** 手順については、**WKND-RDE-Known-User-Personalization-Behavioral** スキーマを選択し、「**次へ**」をクリックします。
 
-  ![ スキーマを選択 ](../assets/use-cases/known-user-personalization/select-behavioral-schema.png)
+  ![&#x200B; スキーマを選択 &#x200B;](../assets/use-cases/known-user-personalization/select-behavioral-schema.png)
 
 - **データセットを設定** 手順については、次を入力します。
    - **名前**:WKND-RDE-Known-User-Personalization-Behavioral
    - **説明**：ユーザーログインステータスを使用したページビューなどの行動データのデータセット。
 
-  ![ データセットの設定 ](../assets/use-cases/known-user-personalization/configure-behavioral-dataset.png)
+  ![&#x200B; データセットの設定 &#x200B;](../assets/use-cases/known-user-personalization/configure-behavioral-dataset.png)
 
   「**終了**」をクリックして、データセットを作成します。
 
 - **プロファイル** スイッチを切り替えて、プロファイルのデータセットを有効にします。
 
-  ![ プロファイルを有効にする ](../assets/use-cases/known-user-personalization/enable-behavioral-profile.png)
+  ![&#x200B; プロファイルを有効にする &#x200B;](../assets/use-cases/known-user-personalization/enable-behavioral-profile.png)
 
 #### トランザクションデータデータセット
 
@@ -297,7 +297,7 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
   最終的なトランザクションデータデータセットは次のようになります。
 
-  ![ 最終的なトランザクションデータデータセット ](../assets/use-cases/known-user-personalization/final-transactional-data-dataset.png)
+  ![&#x200B; 最終的なトランザクションデータデータセット &#x200B;](../assets/use-cases/known-user-personalization/final-transactional-data-dataset.png)
 
 両方のデータセットを配置したら、データストリームを作成して、web サイトからExperience Platformへのデータフローを有効にできます。
 
@@ -309,7 +309,7 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **データストリーム** をクリックし、**データストリームを作成** をクリックします。
 
-  ![ データストリームの作成 ](../assets/use-cases/known-user-personalization/create-behavioral-datastream.png)
+  ![&#x200B; データストリームの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-behavioral-datastream.png)
 
 - **新しいデータストリーム** 手順で、以下を入力します。
 
@@ -317,13 +317,13 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
    - **説明**：行動データをExperience Platformに送信するデータストリーム
    - **マッピングスキーマ**:WKND-RDE-Known-User-Personalization-Behavioral
 
-  ![ データストリームを設定 ](../assets/use-cases/known-user-personalization/configure-behavioral-datastream.png)
+  ![&#x200B; データストリームを設定 &#x200B;](../assets/use-cases/known-user-personalization/configure-behavioral-datastream.png)
 
   「**保存**」をクリックして、データストリームを作成します。
 
 - データストリームを作成したら、「**サービスを追加**」をクリックします。
 
-  ![ サービスを追加 ](../assets/use-cases/known-user-personalization/add-service.png)
+  ![&#x200B; サービスを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-service.png)
 
 - **サービスを追加** の手順で、ドロップダウンから「**Adobe Experience Platform**」を選択し、次の情報を入力します。
    - **イベントデータセット**:WKND-RDE-Known-User-Personalization-Behavior
@@ -334,14 +334,14 @@ WKND ユーザー ID （`wkndUserId`）の ID 名前空間を作成しましょ�
 
   「**保存**」をクリックして、サービスを追加します。
 
-  ![Adobe Experience Platform サービスの設定 ](../assets/use-cases/known-user-personalization/configure-adobe-experience-platform-service.png)
+  ![Adobe Experience Platform サービスの設定 &#x200B;](../assets/use-cases/known-user-personalization/configure-adobe-experience-platform-service.png)
 
 - **サービスを追加** 手順で、ドロップダウンから「**Adobe Target**」を選択し、**ターゲット環境 ID** を入力します。 Target 環境 ID は、Adobe Targetの **管理**/**環境** にあります。 「**保存**」をクリックして、サービスを追加します。
-  ![Adobe Target サービスの設定 ](../assets/use-cases/known-user-personalization/configure-adobe-target-service.png)
+  ![Adobe Target サービスの設定 &#x200B;](../assets/use-cases/known-user-personalization/configure-adobe-target-service.png)
 
 - 最終的なデータストリームは次のようになります。
 
-  ![ 最終データストリーム ](../assets/use-cases/known-user-personalization/final-behavioral-datastream.png)
+  ![&#x200B; 最終データストリーム &#x200B;](../assets/use-cases/known-user-personalization/final-behavioral-datastream.png)
 
 データストリームは、Web SDKを介して行動データをExperience Platformに送信するように設定されました。
 
@@ -355,13 +355,13 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 
 ユーザーが WKND サイトにアクセスしたときのページビューデータと、ユーザーのログインステータス + ユーザー ID （ログインしている場合）をキャプチャするタグプロパティを作成しましょう。
 
-[Adobe タグの統合 ](../setup/integrate-adobe-tags.md) 手順で作成したタグプロパティを更新できます。 ただし、簡単にするために、新しいタグプロパティが作成されます。
+[Adobe タグの統合 &#x200B;](../setup/integrate-adobe-tags.md) 手順で作成したタグプロパティを更新できます。 ただし、簡単にするために、新しいタグプロパティが作成されます。
 
 ### タグプロパティの作成
 
 - **Adobe Experience Platform** で、左側のナビゲーションから「**タグ**」をクリックし、「**新しいプロパティ**」ボタンをクリックします。
 
-  ![ 新しいタグプロパティの作成 ](../assets/use-cases/known-user-personalization/create-new-tags-property.png)
+  ![&#x200B; 新しいタグプロパティの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-new-tags-property.png)
 
 - **プロパティを作成** ダイアログで、以下を入力します。
    - **プロパティ名**:WKND-RDE-Known-User-Personalization
@@ -370,13 +370,13 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 
   **保存** をクリックして、プロパティを作成します。
 
-  ![ 新しいタグプロパティの作成 ](../assets/use-cases/known-user-personalization/create-new-tags-property-dialog.png)
+  ![&#x200B; 新しいタグプロパティの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-new-tags-property-dialog.png)
 
 - 新しいプロパティを開き、左側のナビゲーションで **拡張機能** をクリックして、「**カタログ**」タブをクリックします。 **Web SDK** を検索し、「**インストール**」ボタンをクリックします。
-  ![Web SDK拡張機能のインストール ](../assets/use-cases/known-user-personalization/install-web-sdk-extension.png)
+  ![Web SDK拡張機能のインストール &#x200B;](../assets/use-cases/known-user-personalization/install-web-sdk-extension.png)
 
 - **拡張機能をインストール** ダイアログで、前に作成した **データストリーム** を選択し、「**保存**」をクリックします。
-  ![ データストリームを選択 ](../assets/use-cases/known-user-personalization/select-datastream.png)
+  ![&#x200B; データストリームを選択 &#x200B;](../assets/use-cases/known-user-personalization/select-datastream.png)
 
 #### データ要素の追加
 
@@ -385,7 +385,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 次のデータ要素を作成して、重要なページの詳細を取り込みます。
 
 - 左側のナビゲーションから **データ要素** をクリックし、「**新しいデータ要素の作成**」ボタンをクリックします。
-  ![ 新しいデータ要素の作成 ](../assets/use-cases/known-user-personalization/create-new-data-element.png)
+  ![&#x200B; 新しいデータ要素の作成 &#x200B;](../assets/use-cases/known-user-personalization/create-new-data-element.png)
 
 - **新しいデータ要素を作成** ダイアログで、次の情報を入力します。
    - **Name**：ホスト名
@@ -399,7 +399,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
      }        
      ```
 
-  ![ ホスト名データ要素 ](../assets/use-cases/known-user-personalization/host-name-data-element.png)
+  ![&#x200B; ホスト名データ要素 &#x200B;](../assets/use-cases/known-user-personalization/host-name-data-element.png)
 
 - 同様に、次のデータ要素を作成します。
 
@@ -429,7 +429,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
      }        
      ```
 
-  ![ サイトセクションのデータ要素 ](../assets/use-cases/known-user-personalization/site-section-data-element.png)
+  ![&#x200B; サイトセクションのデータ要素 &#x200B;](../assets/use-cases/known-user-personalization/site-section-data-element.png)
 
    - **名前**：ページ名
    - **拡張機能**: **Core** を選択します
@@ -443,7 +443,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
      }
      ```
 
-  ![ ページ名データ要素 ](../assets/use-cases/known-user-personalization/page-name-data-element.png)
+  ![&#x200B; ページ名データ要素 &#x200B;](../assets/use-cases/known-user-personalization/page-name-data-element.png)
 
 
    - **名前**:WKND ユーザー ID
@@ -462,7 +462,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
      }        
      ```
 
-  ![WKND ユーザー ID データ要素 ](../assets/use-cases/known-user-personalization/wknd-user-id-data-element.png)
+  ![WKND ユーザー ID データ要素 &#x200B;](../assets/use-cases/known-user-personalization/wknd-user-id-data-element.png)
 
 
    - **名前**:WKND ユーザーステータス
@@ -481,7 +481,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
      }        
      ```
 
-  ![WKND ログインステータスデータ要素 ](../assets/use-cases/known-user-personalization/wknd-login-status-data-element.png)
+  ![WKND ログインステータスデータ要素 &#x200B;](../assets/use-cases/known-user-personalization/wknd-login-status-data-element.png)
 
 - 次に、**ID マップ** タイプのデータ要素を作成します。 ID マップは、複数のユーザー識別子を保存し、それらをリンクする標準の XDM 構造であり、システム間で ID をステッチできます。 このデータ要素は、WKND ユーザー ID （ログインしている場合）を ID マップオブジェクトの一部として保存するために使用されます。
 
@@ -498,7 +498,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 
   「**保存**」をクリックして、データ要素を作成します。
 
-  ![ID マップデータ要素 ](../assets/use-cases/known-user-personalization/identity-map-data-element.png)
+  ![ID マップデータ要素 &#x200B;](../assets/use-cases/known-user-personalization/identity-map-data-element.png)
 
 - 次に、**変数** 型のデータ要素を作成します。 このデータ要素には、Experience Platformに送信する前にページの詳細が入力されています。
 
@@ -512,11 +512,11 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 
   「**保存**」をクリックして、データ要素を作成します。
 
-  ![XDM 変数ページビューデータ要素 ](../assets/use-cases/known-user-personalization/xdm-variable-pageview-data-element.png)
+  ![XDM 変数ページビューデータ要素 &#x200B;](../assets/use-cases/known-user-personalization/xdm-variable-pageview-data-element.png)
 
    - 最終的なデータ要素は次のようになります。
 
-     ![ 最終データ要素 ](../assets/use-cases/known-user-personalization/final-data-elements.png)
+     ![&#x200B; 最終データ要素 &#x200B;](../assets/use-cases/known-user-personalization/final-data-elements.png)
 
 #### ルールの追加
 
@@ -525,7 +525,7 @@ _トランザクション_ データは、バッチ取り込み（リアルタ�
 Experience Platformに送信する前に、他のデータ要素を使用して **XDM-Variable Pageview** データ要素にデータを入力するためのルールを作成します。 このルールは、ユーザーが WKND web サイトを閲覧するとトリガーされます。
 
 - 左側のナビゲーションから **ルール** をクリックし、「**新規ルールを作成**」ボタンをクリックします。
-  ![ 新しいルールの作成 ](../assets/use-cases/known-user-personalization/create-new-rule.png)
+  ![&#x200B; 新しいルールの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-new-rule.png)
 
 - **新規ルールを作成** ダイアログで、以下を入力します。
    - **名前**：すべてのページ – 読み込み時 – ユーザーデータを含む
@@ -642,7 +642,7 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
         | identityMap | IdentityMap-WKND ユーザー ID |
         | _$YOUR_NAMESPACE$.wkndLoginStatus | WKND ユーザーステータス |
 
-     ![ 変数の更新アクション ](../assets/use-cases/known-user-personalization/update-variable-action.png)
+     ![&#x200B; 変数の更新アクション &#x200B;](../assets/use-cases/known-user-personalization/update-variable-action.png)
 
       - 「**変更を保持**」をクリックして、アクション設定を保存します。
 
@@ -652,15 +652,15 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
       - **アクションタイプ**: **イベントを送信** を選択します
       - 右パネルの「**データ**」セクションで、**XDM-Variable Pageview** データ要素を **Web Webpagedetails ページビュー** タイプにマッピングします。
 
-     ![ イベント送信アクション ](../assets/use-cases/known-user-personalization/send-event-action.png)
+     ![&#x200B; イベント送信アクション &#x200B;](../assets/use-cases/known-user-personalization/send-event-action.png)
 
    - また、右側のパネルの「**Personalization**」セクションで、「**ビジュアルパーソナライゼーションの決定をレンダリング**」オプションをオンにします。 次に、「**変更を保持**」をクリックしてアクションを保存します。
 
-     ![Personalization セクション ](../assets/use-cases/known-user-personalization/personalization-section.png)
+     ![Personalization セクション &#x200B;](../assets/use-cases/known-user-personalization/personalization-section.png)
 
 - ルールは次のようになります。
 
-  ![ 最後のルール ](../assets/use-cases/known-user-personalization/final-rule.png)
+  ![&#x200B; 最後のルール &#x200B;](../assets/use-cases/known-user-personalization/final-rule.png)
 
 ページビューのデータと、ユーザーのログインステータス + ユーザー ID （ログインしている場合）をExperience Platformに送信するように、ルールが設定されました。
 
@@ -671,7 +671,7 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 ライブラリは、Web サイトに構築およびデプロイされるすべてのタグ設定（データ要素、ルール、拡張機能）のコレクションです。 データ収集が正しく機能するように、すべてをまとめます。 既知のユーザーによるパーソナライゼーションの場合、ライブラリが公開され、データ収集ルールが web サイト上でアクティブになります。
 
 - 左側のナビゲーションから **公開フロー** をクリックし、「**ライブラリを追加**」ボタンをクリックします。
-  ![ ライブラリを追加 ](../assets/use-cases/known-user-personalization/add-library.png)
+  ![&#x200B; ライブラリを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-library.png)
 
 - **ライブラリを追加** ダイアログで、次の情報を入力します。
    - **名前**:1.0
@@ -680,10 +680,10 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 
   **保存して開発用にビルド** をクリックして、ライブラリを作成します。
 
-  ![ ライブラリを追加 ](../assets/use-cases/known-user-personalization/add-library-dialog.png)
+  ![&#x200B; ライブラリを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-library-dialog.png)
 
 - ライブラリを実稼動環境に公開するには、「**承認して実稼動環境に公開**」をクリックします。 公開が完了すると、プロパティがAEMで使用できるようになります。
-  ![ 承認して公開 ](../assets/use-cases/known-user-personalization/approve-publish.png)
+  ![&#x200B; 承認して公開 &#x200B;](../assets/use-cases/known-user-personalization/approve-publish.png)
 
 ライブラリが公開され、AEM ページからデータを収集する準備が整いました。
 
@@ -693,13 +693,13 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 
 - **Adobe Experience Platform** で、左側のナビゲーションから「**プロファイル**」をクリックし、「**結合ポリシー**」タブをクリックします。
 
-  ![ 結合ポリシー ](../assets/use-cases/known-user-personalization/profile-merge-policies.png)
+  ![&#x200B; 結合ポリシー &#x200B;](../assets/use-cases/known-user-personalization/profile-merge-policies.png)
 
 このユースケースでは、結合ポリシーが作成されます。 ただし、既存の結合ポリシーがある場合は、それを使用できます。 **デフォルトの結合ポリシー** オプションと **アクティブオンEdge結合ポリシー** オプションの両方を必ず有効にします（これにより、プロファイルデータを Edge Network で使用して、リアルタイムのパーソナライゼーションの意思決定が可能になります）。
 
 これらの設定により、行動データとトランザクションデータが適切に統合され、リアルタイムオーディエンスの評価に使用できるようになります。
 
-![ 結合ポリシー ](../assets/use-cases/known-user-personalization/merge-policy.png)
+![&#x200B; 結合ポリシー &#x200B;](../assets/use-cases/known-user-personalization/merge-policy.png)
 
 ### （V2）Adobe Targetの宛先の設定
 
@@ -707,10 +707,10 @@ Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成�
 
 - **Adobe Experience Platform** で、左側のナビゲーションから「**宛先**」をクリックし、「**カタログ**」タブをクリックします。 **Personalization** を検索し、**（v2） Adobe Target** の宛先を選択します。
 
-  ![Adobe Targetの宛先 ](../assets/use-cases/known-user-personalization/adobe-target-destination.png)
+  ![Adobe Targetの宛先 &#x200B;](../assets/use-cases/known-user-personalization/adobe-target-destination.png)
 
 - **宛先のアクティブ化** 手順で、宛先の名前を指定し、「**宛先に接続**」ボタンをクリックします。
-  ![ 宛先への接続 ](../assets/use-cases/known-user-personalization/connect-to-destination.png)
+  ![&#x200B; 宛先への接続 &#x200B;](../assets/use-cases/known-user-personalization/connect-to-destination.png)
 
 - 「**宛先の詳細**」セクションで、次の情報を入力します。
    - **名前**:WKND-RDE-Known-User-Personalization-Destination
@@ -718,11 +718,11 @@ Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成�
    - **データストリーム**：以前に作成した **データストリーム** を選択します
    - **Workspace**: Adobe Target Workspace を選択します
 
-  ![ 宛先の詳細 ](../assets/use-cases/known-user-personalization/destination-details.png)
+  ![&#x200B; 宛先の詳細 &#x200B;](../assets/use-cases/known-user-personalization/destination-details.png)
 
 - **次へ** をクリックして、宛先の設定を完了します。
 
-  ![ 宛先の設定 ](../assets/use-cases/known-user-personalization/destination-configuration.png)
+  ![&#x200B; 宛先の設定 &#x200B;](../assets/use-cases/known-user-personalization/destination-configuration.png)
 
 設定が完了すると、この宛先を使用して、Experience Platformで作成されたオーディエンスをAdobe Targetに対してアクティブ化し、パーソナライゼーションアクティビティで使用できるようになります。
 
@@ -734,7 +734,7 @@ Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成�
 
 ### WKND サイトのログイン機能の強化
 
-WKND サイトのログイン機能を強化するには、GitHub から [WKND サイトプロジェクト ](https://github.com/adobe/aem-guides-wknd) を複製し、新しい機能ブランチを作成してお気に入りの IDE で開きます。
+WKND サイトのログイン機能を強化するには、GitHub から [WKND サイトプロジェクト &#x200B;](https://github.com/adobe/aem-guides-wknd) を複製し、新しい機能ブランチを作成してお気に入りの IDE で開きます。
 
 ```shell
 $ mkdir -p ~/Code
@@ -911,9 +911,9 @@ $ git checkout -b feature/known-user-personalization
   $ mvn clean install -PautoInstallSinglePackage
   ```
 
-  `asmith/asmith` （または作成した他のユーザー）の資格情報を使用してログインします。その資格情報は [ プロジェクトに ](https://github.com/adobe/aem-guides-wknd/blob/main/ui.content.sample/src/main/content/jcr_root/home/users/wknd/l28HasMYWAMHAaGkv-Lj/.content.xml) 含まれ `aem-guides-wknd` す。
+  `asmith/asmith` （または作成した他のユーザー）の資格情報を使用してログインします。その資格情報は [&#x200B; プロジェクトに &#x200B;](https://github.com/adobe/aem-guides-wknd/blob/main/ui.content.sample/src/main/content/jcr_root/home/users/wknd/l28HasMYWAMHAaGkv-Lj/.content.xml) 含まれ `aem-guides-wknd` す。
 
-  ![ ログイン ](../assets/use-cases/known-user-personalization/userid-in-session-storage.png)
+  ![&#x200B; ログイン &#x200B;](../assets/use-cases/known-user-personalization/userid-in-session-storage.png)
 
   ここでは、テスト用に ID `teddy` を持つ新しいユーザーを作成しました。
 
@@ -931,25 +931,25 @@ $ git checkout -b feature/known-user-personalization
 
 この手順では、以前に作成されたタグプロパティをAEM ページに統合して、既知のユーザーのパーソナライゼーションのためのデータ収集を有効にします。 タグプロパティは、ユーザーが WKND サイトに訪問した際に、ページビューデータと、ユーザーのログインステータス + ユーザー ID （ログインしている場合）を自動的に取得します。
 
-タグプロパティをAEM ページに統合するには、[Adobe Experience Platformでのタグの統合 ](../setup/integrate-adobe-tags.md) の手順に従います。
+タグプロパティをAEM ページに統合するには、[Adobe Experience Platformでのタグの統合 &#x200B;](../setup/integrate-adobe-tags.md) の手順に従います。
 
 別のプロパティではなく、以前に作成した **WKND-RDE-Known-User-Personalization** タグプロパティを使用してください。
 
-![Tags プロパティ ](../assets/use-cases/known-user-personalization/tags-property.png)
+![Tags プロパティ &#x200B;](../assets/use-cases/known-user-personalization/tags-property.png)
 
 統合すると、タグプロパティは既知のユーザーのパーソナライゼーションデータをAEM ページから収集し、オーディエンス作成用にExperience Platformに送信します。
 
 ### AEMページでのデータ収集の検証
 
-AEM ページからデータ収集を検証するには、ブラウザーのデベロッパーツールを使用して、ネットワークリクエストを調べ、Experience Platformに送信されるデータを確認します。 [Experience Platform Debugger} を使用してデータ収集を検証することもでき ](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
+AEM ページからデータ収集を検証するには、ブラウザーのデベロッパーツールを使用して、ネットワークリクエストを調べ、Experience Platformに送信されるデータを確認します。 [Experience Platform Debugger&rbrace; を使用してデータ収集を検証することもでき &#x200B;](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
 
 - ブラウザーで、AEM as a Cloud Service環境にデプロイされた WKND サイトに移動します。 匿名の場合は、同様のデータ収集リクエストが表示されます。
 
-  ![ 匿名データ収集 ](../assets/use-cases/known-user-personalization/anonymous-data-collection.png)
+  ![&#x200B; 匿名データ収集 &#x200B;](../assets/use-cases/known-user-personalization/anonymous-data-collection.png)
 
 - `asmith/asmith` 資格情報を使用してログインすると、同様のデータ収集リクエストが表示されます。
 
-  ![ ログイン済みデータ収集 ](../assets/use-cases/known-user-personalization/logged-in-data-collection.png)
+  ![&#x200B; ログイン済みデータ収集 &#x200B;](../assets/use-cases/known-user-personalization/logged-in-data-collection.png)
 
 `identityMap` 変数と `_YOUR_NAMESPACE.wkndLoginStatus` 変数は、それぞれユーザー ID とログインステータスに設定されています。
 
@@ -957,11 +957,11 @@ AEM ページからデータ収集を検証するには、ブラウザーのデ�
 
 この手順では、Adobe TargetをAEMと統合し、パーソナライズされたコンテンツ（エクスペリエンスフラグメント）をAdobe Targetに書き出せるようにします。 この連携により、Adobe Targetでは、AEMで作成されたコンテンツを、Experience Platformで作成された既知のユーザーオーディエンスと共にパーソナライゼーションアクティビティに使用できます。
 
-Adobe Targetを統合し、**WKND-RDE-Known-User-Personalization** オーディエンスオファーをAdobe Targetに書き出すには、[Adobe Experience PlatformへのAdobe Targetの統合 ](../setup/integrate-adobe-target.md) の手順に従います。
+Adobe Targetを統合し、**WKND-RDE-Known-User-Personalization** オーディエンスオファーをAdobe Targetに書き出すには、[Adobe Experience PlatformへのAdobe Targetの統合 &#x200B;](../setup/integrate-adobe-target.md) の手順に従います。
 
 Target 設定がエクスペリエンスフラグメントに適用され、パーソナライゼーションアクティビティで使用するためにAdobe Targetに書き出すことができることを確認します。
 
-![Target 設定を使用したエクスペリエンスフラグメント ](../assets/use-cases/known-user-personalization/experience-fragments-with-target-configuration.png)
+![Target 設定を使用したエクスペリエンスフラグメント &#x200B;](../assets/use-cases/known-user-personalization/experience-fragments-with-target-configuration.png)
 
 統合すると、エクスペリエンスフラグメントをAEMからAdobe Targetに書き出し、既知のユーザーオーディエンスに対するパーソナライズされたオファーとして使用できます。
 
@@ -971,15 +971,15 @@ Target 設定がエクスペリエンスフラグメントに適用され、パ�
 
 - AEMで **エクスペリエンスフラグメント** をクリックし、**WKND Site Fragments** フォルダーに移動します。 目的の場所で、新しいエクスペリエンスフラグメントを作成します。
 
-  ![ エクスペリエンスフラグメントの作成 ](../assets/use-cases/known-user-personalization/create-experience-fragment.png)
+  ![&#x200B; エクスペリエンスフラグメントの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-experience-fragment.png)
 
 - ティーザーコンポーネントを追加してエクスペリエンスフラグメントを作成し、スキー用具のアップセルに関連するコンテンツを追加してカスタマイズします。
 
-  ![ オーサーエクスペリエンスフラグメント ](../assets/use-cases/known-user-personalization/author-experience-fragment.png)
+  ![&#x200B; オーサーエクスペリエンスフラグメント &#x200B;](../assets/use-cases/known-user-personalization/author-experience-fragment.png)
 
 - エクスペリエンスフラグメントをAdobe Targetに書き出します。
 
-  ![ エクスペリエンスフラグメントを書き出し ](../assets/use-cases/known-user-personalization/export-experience-fragment.png)
+  ![&#x200B; エクスペリエンスフラグメントを書き出し &#x200B;](../assets/use-cases/known-user-personalization/export-experience-fragment.png)
 
 パーソナライズされたオファーを、アクティビティで使用できるよう、Adobe Targetで使用できるようになりました。
 
@@ -995,7 +995,7 @@ Adobe Experience Platformに再度アクセスして、行動データが収集�
 
   ![データ統計の取り込み](../assets/use-cases/known-user-personalization/ingest-data-stats.png)
 
-- プロファイルが作成されていることを確認するには、左側のナビゲーションの [ **プロファイル** をクリックします。 次に、 **参照** タブに移動し、次の条件を使用してフィルタリングします。
+- プロファイルが作成されていることを確認するには、左側のナビゲーションの &lbrack; **プロファイル** をクリックします。 次に、 **参照** タブに移動し、次の条件を使用してフィルタリングします。
    - **Merge ポリシー**:$YOUR_MERGE_POLICY_NAME
    - **IDサービス名前空間**:ECID(Experience Cloud ID、Adobe Systemsによって各訪問者のブラウザーに自動的に割り当てられる一意の識別子)
    - **IDサービス値**:検索文字列ブラウザーの開発者ツールまたは Experience Platform デバッガーを使用します。 これは、 `MCMID|` プレフィックスを含まない AMCV_$NAMESPACE$ cookie値です。
@@ -1003,15 +1003,15 @@ Adobe Experience Platformに再度アクセスして、行動データが収集�
   ![ECID](../assets/use-cases/known-user-personalization/ecid.png)
 
 - 「**表示** ボタンをクリックします。
-  ![ プロファイルリスト ](../assets/use-cases/known-user-personalization/profile-list.png)
+  ![&#x200B; プロファイルリスト &#x200B;](../assets/use-cases/known-user-personalization/profile-list.png)
 
 - プロファイルをクリックすると、プロファイルの詳細が表示されます。
-  ![ プロファイルの詳細 ](../assets/use-cases/known-user-personalization/profile-details.png)
+  ![&#x200B; プロファイルの詳細 &#x200B;](../assets/use-cases/known-user-personalization/profile-details.png)
 
   この場合、2 つの異なるブラウザーから WKND サイトにアクセスしたので、ユーザー `teddy` に 2 つの ECID が関連付けられています。 両方の ECID のデータがステッチされ、プロファイルが作成されます。 ID ステッチの機能と、それを使用して完全な顧客プロファイルを作成する方法についての認識が始まりました。 間もなく、トランザクションデータは行動データと結び付けられ、完全な顧客プロファイルが作成されます。
 
 - 「**イベント**」タブをクリックすると、プロファイルに関連するイベントが表示されます。
-  ![ プロファイルイベント ](../assets/use-cases/known-user-personalization/profile-events.png)
+  ![&#x200B; プロファイルイベント &#x200B;](../assets/use-cases/known-user-personalization/profile-events.png)
 
 ### トランザクションデータの取り込み
 
@@ -1019,19 +1019,19 @@ Adobe Experience Platformに再度アクセスして、行動データが収集�
 
 - Adobe Experience Platformで **データセット** をクリックし、**WKND-RDE-Known-User-Personalization-Transactional** データセットを開きます。
 
-  ![ トランザクションデータセット ](../assets/use-cases/known-user-personalization/transactional-dataset.png)
+  ![&#x200B; トランザクションデータセット &#x200B;](../assets/use-cases/known-user-personalization/transactional-dataset.png)
 
 - 右側のパネルで「**データを追加**」セクションを探し、[ski-adventure-purchase-data.json](../assets/use-cases/known-user-personalization/ski-adventure-purchase-data.json) ファイルをそれにドラッグします。 このファイルには、WKND アドベンチャーの購入のためのダミーのトランザクションデータが含まれています。 実際のシナリオでは、このデータはバッチまたはストリーミング取得を使用して他のシステム（OMS、CRM、MDM など）から取得されます。
 
-  ![ データを追加 ](../assets/use-cases/known-user-personalization/add-data.png)
+  ![&#x200B; データを追加 &#x200B;](../assets/use-cases/known-user-personalization/add-data.png)
 
 - データ処理が完了するまで待ちます。
 
-  ![ データ処理 ](../assets/use-cases/known-user-personalization/data-processing.png)
+  ![&#x200B; データ処理 &#x200B;](../assets/use-cases/known-user-personalization/data-processing.png)
 
 - データ処理が完了したら、データセットページを更新します。
 
-  ![ データを使用したトランザクションデータセット ](../assets/use-cases/known-user-personalization/transactional-dataset-with-data.png)
+  ![&#x200B; データを使用したトランザクションデータセット &#x200B;](../assets/use-cases/known-user-personalization/transactional-dataset-with-data.png)
 
 ### 行動データとトランザクションデータのステッチの検証
 
@@ -1042,17 +1042,17 @@ Adobe Experience Platformに再度アクセスして、行動データが収集�
    - **ID 名前空間**:ECID
    - **ID 値**：行動データと関連プロファイルのフィルタリングに使用したのと同じ ECID 値を使用します。
 
-  ![ ステッチされたプロファイルリスト ](../assets/use-cases/known-user-personalization/stitched-profile-list.png)
+  ![&#x200B; ステッチされたプロファイルリスト &#x200B;](../assets/use-cases/known-user-personalization/stitched-profile-list.png)
 
 - プロファイルをクリックすると、プロファイルの詳細が表示されます。 トランザクションデータと行動データを結び付けて、完全な顧客プロファイルを作成します。
 
-  ![ ステッチプロファイルの詳細 ](../assets/use-cases/known-user-personalization/stitched-profile-details.png)
+  ![&#x200B; ステッチプロファイルの詳細 &#x200B;](../assets/use-cases/known-user-personalization/stitched-profile-details.png)
 
 - **属性** タブをクリックすると、プロファイルに関連付けられたトランザクションデータと行動データの詳細が表示されます。
-  ![ ステッチされたプロファイル属性 ](../assets/use-cases/known-user-personalization/stitched-profile-attributes.png)
+  ![&#x200B; ステッチされたプロファイル属性 &#x200B;](../assets/use-cases/known-user-personalization/stitched-profile-attributes.png)
 
 - **ID グラフを表示** リンクをクリックして、プロファイルの ID グラフを表示します。
-  ![ID グラフ ](../assets/use-cases/known-user-personalization/identity-graph.png)
+  ![ID グラフ &#x200B;](../assets/use-cases/known-user-personalization/identity-graph.png)
 
 これで完了です。行動データとトランザクションデータをステッチして、完全な顧客プロファイルを作成している。
 
@@ -1067,7 +1067,7 @@ Experience Platformで（ECID ではなく） WKND ユーザー ID を使用し�
    - **ID 名前空間**:WKND ユーザー ID
    - **ID 値**:`teddy` または `asmith`、または使用したその他のユーザー ID。
 
-  ![ ステッチされたプロファイルリスト ](../assets/use-cases/known-user-personalization/stitched-profile-list-using-wknd-user-id.png)
+  ![&#x200B; ステッチされたプロファイルリスト &#x200B;](../assets/use-cases/known-user-personalization/stitched-profile-list-using-wknd-user-id.png)
 
 - プロファイルをクリックすると、前の手順で見たものと同じプロファイルの詳細が表示されます。
   ![ステッチされたプロフィール詳細](../assets/use-cases/known-user-personalization/stitched-profile-details-using-wknd-user-id.png)
@@ -1086,13 +1086,13 @@ Experience Platformで（ECID ではなく） WKND ユーザー ID を使用し�
    - **説明**:ログインしていて、スキーアドベンチャーを購入したユーザー
    - **評価方法**:**Edge** を選択します（ユーザーが参照したときにオーディエンスのメンバーシップをリアルタイムで評価し、即時にパーソナライゼーションを有効にします）
 
-  ![ オーディエンスを作成 ](../assets/use-cases/known-user-personalization/create-audience-step.png)
+  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-audience-step.png)
 
 - 次に、「**属性**」タブをクリックして、「**Techmarketingdemos** （または$NAMESPACE$）」フィールドグループに移動します。 「**購入したアドベンチャー** フィールドを **構築を開始** セクションにドラッグ&amp;ドロップします。 次の詳細を入力します。
 
   **Adventure Purchased**:「**Contains**」を選択し、「**ski**」の値を入力します。
 
-  ![ オーディエンスを作成 ](../assets/use-cases/known-user-personalization/create-audience-step-attributes.png)
+  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-audience-step-attributes.png)
 
 - 次に、「**イベント**」タブに切り替えて、「**techmarketingdemos**」（または$NAMESPACE$）フィールドグループに移動します。 「**WKND ログインステータス**」フィールドを「**イベント**」セクションにドラッグ&amp;ドロップします。 次の詳細を入力します。
 
@@ -1100,15 +1100,15 @@ Experience Platformで（ECID ではなく） WKND ユーザー ID を使用し�
 
   また、「**今日** オプションも選択します。
 
-  ![ オーディエンスを作成 ](../assets/use-cases/known-user-personalization/create-audience-step-events.png)
+  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-audience-step-events.png)
 
 - オーディエンスをレビューし、「**宛先に対してアクティブ化** ボタンをクリックします。
 
-  ![ オーディエンスをレビュー ](../assets/use-cases/known-user-personalization/review-audience.png)
+  ![&#x200B; オーディエンスをレビュー &#x200B;](../assets/use-cases/known-user-personalization/review-audience.png)
 
 - **宛先に対してアクティブ化** ダイアログで、前の手順で作成したAdobe Targetの宛先を選択し、手順に従ってオーディエンスをアクティブ化します。 **次へ** をクリックして、宛先の設定を完了します。
 
-  ![ 宛先に対してアクティブ化 ](../assets/use-cases/known-user-personalization/activate-to-destination.png)
+  ![&#x200B; 宛先に対してアクティブ化 &#x200B;](../assets/use-cases/known-user-personalization/activate-to-destination.png)
 
 これで完了です。オーディエンスを作成し、Adobe Targetの宛先に対してアクティブ化しました。
 
@@ -1116,7 +1116,7 @@ Experience Platformで（ECID ではなく） WKND ユーザー ID を使用し�
 
 Adobe Targetでは、Experience Platformで作成されたオーディエンスと、AEMから書き出されたパーソナライズされたオファーが適切に使用可能であることが検証されます。 次に、オーディエンスのターゲティングとパーソナライズされたコンテンツを組み合わせて、既知のユーザーのパーソナライゼーションエクスペリエンスを提供するアクティビティを作成します。
 
-- Adobe Experience Cloudにログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **0}Adobe Target} に移動します。**
+- Adobe Experience Cloudにログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **0&rbrace;Adobe Target&rbrace; に移動します。**
 
   ![Adobe Target](../assets/use-cases/known-user-personalization/adobe-target.png)
 
@@ -1126,15 +1126,15 @@ Adobe Targetでは、Experience Platformで作成されたオーディエンス�
 
 - Adobe Targetで、「**オーディエンス**」をクリックし、**UpSell-Ski-Equipment-To-Authenticated** オーディエンスが作成されていることを確認します。
 
-  ![ オーディエンス ](../assets/use-cases/known-user-personalization/audiences.png)
+  ![&#x200B; オーディエンス &#x200B;](../assets/use-cases/known-user-personalization/audiences.png)
 
 - オーディエンスをクリックすると、オーディエンスの詳細が表示され、適切に設定されていることを確認できます。
 
-  ![ オーディエンスの詳細 ](../assets/use-cases/known-user-personalization/audience-details.png)
+  ![&#x200B; オーディエンスの詳細 &#x200B;](../assets/use-cases/known-user-personalization/audience-details.png)
 
 - **オファー** をクリックし、AEMから書き出したオファーが存在することを確認します。 私の場合、オファー（またはエクスペリエンスフラグメント）は **スキーの項目が必要** と呼ばれます。
 
-  ![Personalization オファーの既知のユーザー ](../assets/use-cases/known-user-personalization/known-user-personalization-offers.png)
+  ![Personalization オファーの既知のユーザー &#x200B;](../assets/use-cases/known-user-personalization/known-user-personalization-offers.png)
 
   これにより、Adobe Experience Platform、AEMおよびAdobe Target間の統合アクションが検証されます。
 
@@ -1143,19 +1143,19 @@ Adobe Targetでは、Experience Platformで作成されたオーディエンス�
 Adobe Targetのアクティビティは、パーソナライズされたコンテンツを特定のオーディエンスに配信するタイミングと方法を定義する、パーソナライゼーションキャンペーンです。 既知のユーザーによるパーソナライゼーションの場合、ログインしてスキーアドベンチャーを購入したユーザーに対してスキー用品のアップセルオファーを表示するアクティビティを作成します。
 
 - Adobe Targetで、「**アクティビティ**」をクリックし、「**アクティビティを作成**」ボタンをクリックして、「**エクスペリエンスのターゲット設定**」アクティビティタイプを選択します。
-  ![ アクティビティを作成 ](../assets/use-cases/known-user-personalization/create-activity.png)
+  ![&#x200B; アクティビティを作成 &#x200B;](../assets/use-cases/known-user-personalization/create-activity.png)
 
 - **エクスペリエンスのターゲット設定アクティビティを作成** ダイアログで、**Web** type and **Visual** composer オプション（パーソナライズされたエクスペリエンスを web サイト上で直接作成およびテストできるWYSIWYG エディター）を選択して、WKND サイトのホームページの URL を入力します。 「**作成** ボタンをクリックして、アクティビティを作成します。
 
-  ![ 「エクスペリエンスのターゲット設定」アクティビティの作成 ](../assets/use-cases/known-user-personalization/create-experience-targeting-activity.png)
+  ![&#x200B; 「エクスペリエンスのターゲット設定」アクティビティの作成 &#x200B;](../assets/use-cases/known-user-personalization/create-experience-targeting-activity.png)
 
 - エディターで、「**UpSell-Ski-Equipment-To-Authenticated**」オーディエンスを選択し、上位のヒーローコンテンツの代わりに「**スキーの必須アイテム**」オファーを追加します。 参考のために以下のスクリーンショットを参照してください。
 
-  ![ オーディエンスとオファーを使用したアクティビティ ](../assets/use-cases/known-user-personalization/activity-with-audience-n-offer.png)
+  ![&#x200B; オーディエンスとオファーを使用したアクティビティ &#x200B;](../assets/use-cases/known-user-personalization/activity-with-audience-n-offer.png)
 
 - 「**次へ**」をクリックして「**目標と設定**」セクションを適切な目標と指標で設定し、アクティブ化して、変更をライブにプッシュします。
 
-  ![ 目標と設定を使用したアクティベート ](../assets/use-cases/known-user-personalization/activate-with-goals-and-settings.png)
+  ![&#x200B; 目標と設定を使用したアクティベート &#x200B;](../assets/use-cases/known-user-personalization/activate-with-goals-and-settings.png)
 
 これで完了です。これで、ログインしてスキーアドベンチャーを購入したユーザーに、既知のユーザーであるパーソナライゼーションエクスペリエンスを提供する準備が整いました。
 
@@ -1165,13 +1165,13 @@ WKND サイトで既知のユーザーパーソナライゼーション実装を
 
 - ログインしていない場合は、WKND サイトのホームページに移動すると、デフォルトのヒーローコンテンツが表示されます。
 
-  ![ デフォルトのヒーローコンテンツ ](../assets/use-cases/known-user-personalization/default-hero-content.png)
+  ![&#x200B; デフォルトのヒーローコンテンツ &#x200B;](../assets/use-cases/known-user-personalization/default-hero-content.png)
 
 - `teddy/teddy` （または `asmith/asmith`）資格情報を使用してログインすると、パーソナライズされたヒーローコンテンツが表示されます。
 
-  ![ パーソナライズされたヒーローコンテンツ ](../assets/use-cases/known-user-personalization/personalized-hero-content.png)
+  ![&#x200B; パーソナライズされたヒーローコンテンツ &#x200B;](../assets/use-cases/known-user-personalization/personalized-hero-content.png)
 
-- ブラウザー開発者ツール開く、「ネットワーク&#x200B;****&#x200B;タブを確認します。`interact`ごとにフィルターして、Web SDK リクエストを探します。リクエスト/応答には、Web SDK イベントとAdobe Target決定の詳細が表示されます。
+- ブラウザー開発者ツール開く、「ネットワーク&#x200B;**&#x200B;**&#x200B;タブを確認します。`interact`ごとにフィルターして、Web SDK リクエストを探します。リクエスト/応答には、Web SDK イベントとAdobe Target決定の詳細が表示されます。
 
   リクエスト出力は次のようになります。
   ![SDK ネットワークリクエストWeb](../assets/use-cases/known-user-personalization/web-sdk-network-request.png)
@@ -1186,7 +1186,7 @@ WKND サイトで既知のユーザーパーソナライゼーション実装を
 
 - [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
 - [データストリームの概要](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edgeのセグメント化 ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [ オーディエンスタイプ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target接続 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edgeのセグメント化 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [&#x200B; オーディエンスタイプ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target接続 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
