@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1412'
 ht-degree: 99%
 
 ---
@@ -151,6 +151,7 @@ ht-degree: 99%
    + ユースケース {#use-cases}
       + [実験（A/B テスト）](./personalization/use-cases/experimentation.md)
       + [行動ターゲティング](./personalization/use-cases/behavioral-targeting.md)
+      + [既知のユーザーのPersonalization](./personalization/use-cases/known-user-personalization.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
    + OpenAPI{#openapis}
@@ -221,7 +222,7 @@ ht-degree: 99%
       + [Adobe I/O Runtime アクション - AEM イベントの処理](./eventing/examples/event-processing-using-runtime-action.md)
       + [AEM Assets イベント - PIM 統合](./eventing/examples/assets-pim-integration.md)
 + 移行 {#migration}
-   + [コンテンツ転送ツール](./migration/content-transfer-tool.md)
+   + [コンテンツトランスファーツール](./migration/content-transfer-tool.md)
    + [アセットの一括読み込み](./migration/bulk-import.md)
    + AEM as a Cloud Service への移行 {#moving-to-aem-as-a-cloud-service}
       + [はじめに](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
@@ -235,7 +236,7 @@ ht-degree: 99%
       + [検索とインデックス作成](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + コンテンツの移行 {#content-migration}
          + [一括読み込みサービス](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
-         + [コンテンツ転送ツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [コンテンツトランスファーツール](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [FAQ](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [トラブルシューティング](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Forms as a Cloud Service {#aem-forms}

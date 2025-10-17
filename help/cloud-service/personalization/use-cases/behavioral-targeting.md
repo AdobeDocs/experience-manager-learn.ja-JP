@@ -10,9 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2025-09-10T00:00:00Z
 jira: KT-19113
 thumbnail: KT-19113.jpeg
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+exl-id: fd7204fa-03f2-40df-9f0a-487a5aec2891
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '4180'
+source-wordcount: '4185'
 ht-degree: 0%
 
 ---
@@ -31,13 +32,13 @@ Adobe Experience Platform（AEP）とAdobe Targetを使用して、ユーザー�
 
 このチュートリアルでは、**Bali Surf Camp**、_Riverside Camp_、または _Tahoe Skiing_ のいずれかのアドベンチャーページを訪問した _匿名ユーザー_ が、WKND ホームページの **Next Adventures** セクションの上にパーソナライズされたヒーローを表示する方法を、プロセスで示します。
 
-![&#x200B; 行動ターゲティング &#x200B;](../assets/use-cases/behavioral-targeting/family-travelers.png)
+![ 行動ターゲティング ](../assets/use-cases/behavioral-targeting/family-travelers.png)
 
 デモの目的で、このブラウジング動作を持つユーザーは「家族旅行者 **オーディエンスに分類さ** ます。
 
 ### ライブデモ
 
-[WKND イネーブルメント web サイト &#x200B;](https://wknd.enablementadobe.com/us/en.html) にアクセスして、行動ターゲティングの動作を確認します。 このサイトでは、3 つの異なる行動ターゲティングエクスペリエンスを提供します。
+[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html) にアクセスして、行動ターゲティングの動作を確認します。 このサイトでは、3 つの異なる行動ターゲティングエクスペリエンスを提供します。
 
 - **ホームページ**：ユーザーが _Bali Surf Camp_、_Riverside Camp_、_Tahoe Skiing_ のいずれかのアドベンチャーページを閲覧した後にホームページにアクセスすると、**家族旅行者** オーディエンスに分類され、「_次のアドベンチャー_」セクションの上にパーソナライズされたヒーローセクションが表示されます。
 
@@ -45,7 +46,7 @@ Adobe Experience Platform（AEP）とAdobe Targetを使用して、ユーザー�
 
 - **マガジンページ**：ユーザーが _3 つ以上_ の記事を読むと、それらは **マガジンリーダー** オーディエンスに分類され、マガジンページにパーソナライズされたヒーローセクションが表示されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474002/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
 
 >[!TIP]
 >
@@ -55,10 +56,10 @@ Adobe Experience Platform（AEP）とAdobe Targetを使用して、ユーザー�
 
 行動ターゲティングのユースケースを進める前に、以下を完了していることを確認してください。
 
-- [Adobe Targetの統合 &#x200B;](../setup/integrate-adobe-target.md)：チームがパーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
-- [Adobe Experience Platformのタグの統合 &#x200B;](../setup/integrate-adobe-tags.md):AEM コードを再デプロイしなくても、チームがJavaScriptを管理して、パーソナライゼーションやデータ収集のためにデプロイできるようになります。
+- [Adobe Targetの統合 ](../setup/integrate-adobe-target.md)：チームがパーソナライズされたコンテンツをAEMで一元的に作成および管理し、Adobe Targetでオファーとしてアクティブ化できるようにします。
+- [Adobe Experience Platformのタグの統合 ](../setup/integrate-adobe-tags.md):AEM コードを再デプロイしなくても、チームがJavaScriptを管理して、パーソナライゼーションやデータ収集のためにデプロイできるようになります。
 
-[Adobe Experience Cloud ID サービス（ECID） &#x200B;](https://experienceleague.adobe.com/ja/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データストリーム、オーディエンス、ID、プロファイルなど）についても理解している。
+[Adobe Experience Cloud ID サービス（ECID） ](https://experienceleague.adobe.com/en/docs/id-service/using/home) および [Adobe Experience Platform](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/home) の概念（スキーマ、データストリーム、オーディエンス、ID、プロファイルなど）についても理解している。
 
 Adobe Targetではシンプルなオーディエンスを作成できますが、Adobe Experience Platform（AEP）では、行動データやトランザクションデータなどの様々なデータソースを使用して、オーディエンスを作成および管理し、完全な顧客プロファイルを構築するための最新のアプローチを提供します。
 
@@ -86,41 +87,41 @@ Adobe Targetではシンプルなオーディエンスを作成できますが�
 
 4. **AEM ページで行動ターゲティングの実装を検証する**
 
-AEPの様々なソリューションを使用して、行動データの収集、管理および取得を行い、オーディエンスを作成します。 これらのオーディエンスは、Adobe Targetでアクティブ化されます。 Adobe Targetのアクティビティを使用すると、パーソナライズされたエクスペリエンスがユーザーに配信されます。
+AEPの様々なソリューションを使用して、行動データの収集、管理および取得を行い、オーディエンスを作成します。 これらのオーディエンスは、Adobe Targetでアクティブ化されます。 Adobe Targetのアクティビティを使用すると、オーディエンス条件に一致するユーザーにパーソナライズされたエクスペリエンスが配信されます。
 
 ## Adobe Experience Platformの手順
 
-行動データに基づいてオーディエンスを作成するには、ユーザーが web サイトに訪問したり、web サイトとやり取りしたりする際に、データを収集して保存する必要があります。 この例では、ユーザーを **家族旅行者** オーディエンスとして分類するには、ページビューデータを収集する必要があります。 プロセスは、Adobe Experience Platformから開始して、このデータの収集に必要なコンポーネントを設定します。
+行動データに基づいてオーディエンスを作成するには、ユーザーがWebサイトを訪問または操作するときにデータを収集してストアする必要があります。 この例では、ユーザーを **家族旅行者** オーディエンスとして分類するには、ページビューデータを収集する必要があります。 プロセスは、Adobe Experience Platformから開始して、このデータの収集に必要なコンポーネントを設定します。
 
-[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Experience Platform&rbrace; に移動します。**
+[Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Experience Platform} に移動します。**
 
 ![Adobe Experience Cloud](../assets/use-cases/behavioral-targeting/exp-cloud.png)
 
 ### スキーマの作成と設定
 
-スキーマは、Adobe Experience Platformで収集するデータの構造および形式を定義します。 データの一貫性を確保し、標準化されたデータフィールドに基づいて意味のあるオーディエンスを作成できます。 行動ターゲティングの場合、ページビューイベントとユーザーインタラクションをキャプチャできるスキーマが必要です。
+スキーマでは、Adobe Experience Platform で収集するデータの構造と形式を定義します。 データの一貫性を確保し、標準化されたデータフィールドに基づいて意味のあるオーディエンスを作成できます。 行動ターゲティングには、ページビューイベントをキャプチャしてインタラクションをユーザーできるスキーマが必要です。
 
-行動ターゲティング用のページビューデータを収集するスキーマを作成します。
+行動ターゲティングのためにページビューデータを収集するためのスキーマ作成。
 
-- **Adobe Experience Platform** のホームページで、左側のナビゲーションから「**スキーマ**」をクリックし、「**スキーマを作成**」をクリックします。
+- **Adobe Experience Platform** ホームページで、左ナビゲーションの「**スキーマ**&#x200B;をクリックしてから、**作成 スキーマ** をクリックします。
 
-  ![&#x200B; スキーマを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-schema.png)
+  ![作成スキーマ](../assets/use-cases/behavioral-targeting/create-schema.png)
 
-- **スキーマを作成** ウィザードの **スキーマの詳細** 手順で「**エクスペリエンスイベント**」オプションを選択し、「**次へ**」をクリックします。
+- 「 **作成 スキーマ** ウィザード、「 **スキーマ詳細** 」ステップで、「 **エクスペリエンスイベント** 」オプションを選択し、「 **次へ**」をクリックします。
 
-  ![&#x200B; スキーマ作成ウィザード &#x200B;](../assets/use-cases/behavioral-targeting/create-schema-details.png)
+  ![ スキーマ作成ウィザード ](../assets/use-cases/behavioral-targeting/create-schema-details.png)
 
 - **名前とレビュー** ステップには、次を入力します。
    - **スキーマ表示名**:WKND-RDE-Behavioral-Targeting
    - **選択されたクラス**:XDM ExperienceEvent
 
-  ![&#x200B; スキーマの詳細 &#x200B;](../assets/use-cases/behavioral-targeting/create-schema-name-review.png)
+  ![ スキーマの詳細 ](../assets/use-cases/behavioral-targeting/create-schema-name-review.png)
 
 - スキーマを次のように更新します。
    - **フィールドグループを追加**:AEP Web SDK ExperienceEvent
    - **プロファイル**：有効にする
 
-  ![&#x200B; スキーマの更新 &#x200B;](../assets/use-cases/behavioral-targeting/update-schema.png)
+  ![ スキーマの更新 ](../assets/use-cases/behavioral-targeting/update-schema.png)
 
 - 「**保存**」をクリックして、スキーマを作成します。
 
@@ -131,26 +132,26 @@ AEPの様々なソリューションを使用して、行動データの収集�
 ページビューデータを格納するデータセットを作成しましょう。
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **データセット** をクリックし、**データセットを作成** をクリックします。
-  ![&#x200B; データセットを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-dataset.png)
+  ![ データセットを作成 ](../assets/use-cases/behavioral-targeting/create-dataset.png)
 
 - **データセットを作成** の手順で「**スキーマからデータセットを作成**」オプションを選択し、「次へ **をクリックし** す。
-  ![&#x200B; データセット作成ウィザード &#x200B;](../assets/use-cases/behavioral-targeting/create-dataset-wizard.png)
+  ![ データセット作成ウィザード ](../assets/use-cases/behavioral-targeting/create-dataset-wizard.png)
 
 - **スキーマからデータセットを作成** ウィザードの **スキーマを選択** 手順で、**WKND-RDE-Behavior-Targeting** スキーマを選択し **「次へ** をクリックします。
-  ![&#x200B; スキーマを選択 &#x200B;](../assets/use-cases/behavioral-targeting/select-schema.png)
+  ![ スキーマを選択 ](../assets/use-cases/behavioral-targeting/select-schema.png)
 
 - **データセットを設定** 手順については、次を入力します。
    - **名前**:WKND-RDE-Behavioral-Targeting
    - **説明**：ページビューデータを格納するデータセット
 
-  ![&#x200B; データセットの設定 &#x200B;](../assets/use-cases/behavioral-targeting/configure-dataset.png)
+  ![ データセットの設定 ](../assets/use-cases/behavioral-targeting/configure-dataset.png)
 
   「**終了**」をクリックして、データセットを作成します。
 
 - 次のようにデータセットを更新します。
    - **プロファイル**：有効にする
 
-  ![&#x200B; データセットを更新 &#x200B;](../assets/use-cases/behavioral-targeting/update-dataset.png)
+  ![ データセットを更新 ](../assets/use-cases/behavioral-targeting/update-dataset.png)
 
 ### データストリームの作成と設定
 
@@ -166,11 +167,11 @@ AEPの様々なソリューションを使用して、行動データの収集�
    - **マッピングスキーマ**:WKND-RDE-Behavioral-Targeting
 「**保存**」をクリックして、データストリームを作成します。
 
-  ![&#x200B; データストリームを設定 &#x200B;](../assets/use-cases/behavioral-targeting/configure-datastream-name-review.png)
+  ![ データストリームを設定 ](../assets/use-cases/behavioral-targeting/configure-datastream-name-review.png)
 
 - データストリームを作成したら、「**サービスを追加**」をクリックします。
 
-  ![&#x200B; サービスを追加 &#x200B;](../assets/use-cases/behavioral-targeting/add-service.png)
+  ![ サービスを追加 ](../assets/use-cases/behavioral-targeting/add-service.png)
 
 - **サービスを追加** の手順で、ドロップダウンから「**Adobe Experience Platform**」を選択し、次の情報を入力します。
    - **イベントデータセット**:WKND-RDE 行動ターゲティング
@@ -181,10 +182,10 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
   「**保存**」をクリックして、サービスを追加します。
 
-  ![Adobe Experience Platform サービスの設定 &#x200B;](../assets/use-cases/behavioral-targeting/configure-adobe-experience-platform-service.png)
+  ![Adobe Experience Platform サービスの設定 ](../assets/use-cases/behavioral-targeting/configure-adobe-experience-platform-service.png)
 
-- **サービスを追加** 手順で、ドロップダウンから「**Adobe Target**」を選択し、**ターゲット環境 ID** を入力します。 Target 環境 ID は、Adobe Targetの **管理**/**環境** にあります。 「**保存**」をクリックして、サービスを追加します。
-  ![Adobe Target サービスの設定 &#x200B;](../assets/use-cases/behavioral-targeting/configure-adobe-target-service.png)
+- **サービスを追加** 手順で、ドロップダウンから「**Adobe Target**」を選択し、**ターゲット環境 ID** を入力します。 Target 環境 ID は、Adobe Targetの **管理**/**環境** にあります。 [ **保存** ] をクリックしてサービスを追加します。
+  ![Adobe Target サービスの設定 ](../assets/use-cases/behavioral-targeting/configure-adobe-target-service.png)
 
 ### タグプロパティの作成と設定
 
@@ -192,16 +193,16 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
 ユーザーが web サイトを訪問した際に、ページビューデータを取得するタグプロパティを作成します。
 
-このユースケースでは、ページ名、URL、サイトセクション、ホスト名などのページの詳細が収集されます。 これらの詳細は、行動オーディエンスの作成に使用されます。
+この使用例では、ページ名、URL、サイトセクション、ホスト名など、ページの詳細が収集されます。 これらの詳細は、行動オーディエンスを作成するために使用されます。
 
-[Adobe タグの統合 &#x200B;](../setup/integrate-adobe-tags.md) 手順で作成したタグプロパティを更新できます。 ただし、簡単にするために、新しいタグプロパティが作成されます。
+[Adobe Systems統合タグ](../setup/integrate-adobe-tags.md)手順で作成したタグプロパティを更新できます。ただし、わかりやすくするために、新しいタグプロパティが作成されます。
 
-#### タグプロパティの作成
+#### 作成タグプロパティ
 
 タグプロパティを作成するには、次の手順を実行します。
 
 - **Adobe Experience Platform** で、左側のナビゲーションから「**タグ**」をクリックし、「**新しいプロパティ**」ボタンをクリックします。
-  ![&#x200B; 新しいタグプロパティの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
+  ![ 新しいタグプロパティの作成 ](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
 
 - **プロパティを作成** ダイアログで、以下を入力します。
    - **プロパティ名**:WKND-RDE-Behavioral-Targeting
@@ -210,13 +211,13 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
   **保存** をクリックして、プロパティを作成します。
 
-  ![&#x200B; 新しいタグプロパティの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-new-tags-property-dialog.png)
+  ![ 新しいタグプロパティの作成 ](../assets/use-cases/behavioral-targeting/create-new-tags-property-dialog.png)
 
 - 新しいプロパティを開き、左側のナビゲーションで **拡張機能** をクリックして、「**カタログ**」タブをクリックします。 **Web SDK** を検索し、「**インストール**」ボタンをクリックします。
-  ![Web SDK拡張機能のインストール &#x200B;](../assets/use-cases/behavioral-targeting/install-web-sdk-extension.png)
+  ![Web SDK拡張機能のインストール ](../assets/use-cases/behavioral-targeting/install-web-sdk-extension.png)
 
 - **拡張機能をインストール** ダイアログで、前に作成した **データストリーム** を選択し、「**保存**」をクリックします。
-  ![&#x200B; データストリームを選択 &#x200B;](../assets/use-cases/behavioral-targeting/select-datastream.png)
+  ![ データストリームを選択 ](../assets/use-cases/behavioral-targeting/select-datastream.png)
 
 #### データ要素の追加
 
@@ -225,7 +226,7 @@ AEPの様々なソリューションを使用して、行動データの収集�
 次のデータ要素を作成して、重要なページの詳細を取り込みます。
 
 - 左側のナビゲーションから **データ要素** をクリックし、「**新しいデータ要素の作成**」ボタンをクリックします。
-  ![&#x200B; 新しいデータ要素の作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-new-data-element.png)
+  ![ 新しいデータ要素の作成 ](../assets/use-cases/behavioral-targeting/create-new-data-element.png)
 
 - **新しいデータ要素を作成** ダイアログで、次の情報を入力します。
    - **Name**：ホスト名
@@ -239,7 +240,7 @@ AEPの様々なソリューションを使用して、行動データの収集�
      }
      ```
 
-  ![&#x200B; ホスト名データ要素 &#x200B;](../assets/use-cases/behavioral-targeting/host-name-data-element.png)
+  ![ ホスト名データ要素 ](../assets/use-cases/behavioral-targeting/host-name-data-element.png)
 
 - 同様に、次のデータ要素を作成します。
 
@@ -294,7 +295,7 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
   「**保存**」をクリックして、データ要素を作成します。
 
-  ![XDM 変数ページビューの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-xdm-variable-pageview.png)
+  ![XDM 変数ページビューの作成 ](../assets/use-cases/behavioral-targeting/create-xdm-variable-pageview.png)
 
 - **データ要素** リストには、次の 4 つのデータ要素が含まれている必要があります。
 
@@ -306,8 +307,8 @@ AEPの様々なソリューションを使用して、行動データの収集�
 
 Experience Platformに送信する前に、他のデータ要素を使用して **XDM-Variable Pageview** データ要素にデータを入力するためのルールを作成します。 このルールは、ユーザーが WKND web サイトを閲覧するとトリガーされます。
 
-- 左側のナビゲーションから **ルール** をクリックし、「**新規ルールを作成**」ボタンをクリックします。
-  ![&#x200B; 新しいルールの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-new-rule.png)
+- 左ナビゲーションの「 **ルール** 」をクリックし、「 **新規作成ルール** ボタンをクリックします。
+  ![ 新しいルールの作成 ](../assets/use-cases/behavioral-targeting/create-new-rule.png)
 
 - **新規ルールを作成** ダイアログで、以下を入力します。
 
@@ -315,8 +316,8 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 
    - 「**イベント**」セクションで「**追加**」をクリックして **イベント設定** ウィザードを開きます。
       - **拡張機能**: **Core** を選択します
-      - **イベントタイプ**: **カスタムコード** を選択します
-      - **エディターを開く** ボタンをクリックし、次のコードスニペットを入力します。
+      - **イベント 書式 ＜例外＞Photoshop のみ「テキスト」**: [ **特例文字] Codeを選択します。**
+      - **開くエディター** 次のコードスニペットボタンして入力します。
 
         ```javascript
         var pageShownEventHandler = function(evt) {
@@ -348,9 +349,9 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
         });
         ```
 
-   - 「**条件**」セクションで「**追加**」をクリックして **条件設定** ウィザードを開きます。
-      - **論理タイプ**:「**標準**」を選択します
-      - **拡張機能**: **Core** を選択します
+   - 「 **条件** セクションで、「 **追加** 」をクリックして、「 **条件 Configuration** ウィザードを開きます。
+      - **ロジック 書式 ＜例外＞Photoshop のみ「テキスト」**:「 **」を選択します標準**
+      - **拡張**:「 **Core」を選択します。**
       - **条件タイプ**:「**カスタムコード**」を選択します
       - **エディターを開く** ボタンをクリックし、次のコードスニペットを入力します。
 
@@ -369,7 +370,7 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
       - **アクションタイプ**:**変数を更新** を選択します
       - **web**/**webPageDetails**/**name** を **Page Name** データ要素にマッピングします
 
-        ![&#x200B; 変数の更新アクション &#x200B;](../assets/use-cases/behavioral-targeting/update-variable-action.png)
+        ![ 変数の更新アクション ](../assets/use-cases/behavioral-targeting/update-variable-action.png)
 
       - 同様に、**server** を **Host Name** データ要素にマッピングし、**siteSection** を **Site Section** データ要素にマッピングします。 **pageView**/**value** は、`1` と入力してページビューイベントを指定します。
 
@@ -380,17 +381,17 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
       - **アクションタイプ**: **イベントを送信** を選択します
       - 右パネルの「**データ**」セクションで、**XDM-Variable Pageview** データ要素を **Web Webpagedetails ページビュー** タイプにマッピングします。
 
-     ![&#x200B; イベント送信アクション &#x200B;](../assets/use-cases/behavioral-targeting/send-event-action.png)
+     ![ イベント送信アクション ](../assets/use-cases/behavioral-targeting/send-event-action.png)
 
       - また、右側のパネルの「**Personalization**」セクションで、「**ビジュアルパーソナライゼーションの決定をレンダリング**」オプションをオンにします。  次に、「**変更を保持**」をクリックしてアクションを保存します。
 
-     ![Personalization セクション &#x200B;](../assets/use-cases/behavioral-targeting/personalization-section.png)
+     ![Personalization セクション ](../assets/use-cases/behavioral-targeting/personalization-section.png)
 
    - 「**変更を保持**」をクリックして、ルールを保存します。
 
 - ルールは次のようになります。
 
-  ![&#x200B; ルール &#x200B;](../assets/use-cases/behavioral-targeting/rule.png)
+  ![ ルール ](../assets/use-cases/behavioral-targeting/rule.png)
 
 上記のルール作成手順には多くの詳細があるので、ルールを作成する際は注意が必要です。 複雑に聞こえるかもしれませんが、これらの設定手順により、AEM コードを更新したりアプリケーションを再デプロイしたりしなくても、プラグアンドプレイで動作することを覚えておいてください。
 
@@ -399,7 +400,7 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 ライブラリは、Web サイトに構築およびデプロイされるすべてのタグ設定（データ要素、ルール、拡張機能）のコレクションです。 データ収集が正しく機能するように、すべてをまとめます。 行動ターゲティングの場合は、ライブラリが公開され、web サイト上でデータ収集ルールがアクティブになります。
 
 - 左側のナビゲーションから **公開フロー** をクリックし、「**ライブラリを追加**」ボタンをクリックします。
-  ![&#x200B; ライブラリを追加 &#x200B;](../assets/use-cases/behavioral-targeting/add-library.png)
+  ![ ライブラリを追加 ](../assets/use-cases/behavioral-targeting/add-library.png)
 
 - **ライブラリを追加** ダイアログで、次の情報を入力します。
    - **名前**:1.0
@@ -408,10 +409,10 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 
   **保存して開発用にビルド** をクリックして、ライブラリを作成します。
 
-  ![&#x200B; ライブラリを追加 &#x200B;](../assets/use-cases/behavioral-targeting/add-library-dialog.png)
+  ![ ライブラリを追加 ](../assets/use-cases/behavioral-targeting/add-library-dialog.png)
 
 - **開発** スイムレーン用にライブラリがビルドされたら、省略記号（3 つのドット）をクリックし、「**承認して実稼動環境に公開**」オプションを選択します。
-  ![&#x200B; 承認して実稼動環境に公開 &#x200B;](../assets/use-cases/behavioral-targeting/approve-publish-to-production.png)
+  ![ 承認して実稼動環境に公開 ](../assets/use-cases/behavioral-targeting/approve-publish-to-production.png)
 
 これで完了です。ページの詳細を収集してExperience Platformに送信するルールを含むタグプロパティを作成しました。 これは、行動オーディエンスを作成するための基本的な手順です。
 
@@ -428,32 +429,32 @@ Experience Platformに送信する前に、他のデータ要素を使用して 
 
 - **Adobe Experience Platform** で、左側のナビゲーションから「**プロファイル**」をクリックし、「**結合ポリシー**」タブをクリックします。
 
-  ![&#x200B; 結合ポリシー &#x200B;](../assets/use-cases/behavioral-targeting/merge-policies.png)
+  ![ 結合ポリシー ](../assets/use-cases/behavioral-targeting/merge-policies.png)
 
 - 既存の結合ポリシーを使用できますが、このチュートリアルでは、次の設定を使用して新しい結合ポリシーを作成します。
 
-  ![&#x200B; デフォルトの結合ポリシー &#x200B;](../assets/use-cases/behavioral-targeting/default-merge-policy.png)
+  ![ デフォルトの結合ポリシー ](../assets/use-cases/behavioral-targeting/default-merge-policy.png)
 
 - 必ず「**デフォルトの結合ポリシー**」オプションと「**Edgeでアクティブ化の結合ポリシー**」オプションの両方を有効にします。 これらの設定により、行動データが適切に統合され、リアルタイムオーディエンス評価に使用できるようになります。
 
 ### （V2）Adobe Targetの宛先の設定
 
-Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成した行動オーディエンスをAdobe Targetで直接アクティブ化できます。 これにより、行動オーディエンスをAdobe Targetのパーソナライゼーションアクティビティに使用できます。
+Adobe Target 出力先 (V2) を使用すると、Experience Platform で作成された行動オーディエンスを Adobe Target で直接アクティブ化できます。 この接続により、行動オーディエンスを Adobe Target のパーソナライズ機能アクティビティで使用できます。
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **宛先** をクリックし、「**カタログ**」タブをクリックして **Personalizationでフィルタリングし、** （v2）Adobe Target **の宛先を選択し** す。
 
-  ![Adobe Targetの宛先 &#x200B;](../assets/use-cases/behavioral-targeting/adobe-target-destination.png)
+  ![Adobe Targetの宛先 ](../assets/use-cases/behavioral-targeting/adobe-target-destination.png)
 
 - **宛先のアクティブ化** 手順で、宛先の名前を指定し、「**宛先に接続**」ボタンをクリックします。
-  ![&#x200B; 宛先への接続 &#x200B;](../assets/use-cases/behavioral-targeting/connect-to-destination.png)
+  ![ 宛先への接続 ](../assets/use-cases/behavioral-targeting/connect-to-destination.png)
 
-- 「**宛先の詳細**」セクションで、次の情報を入力します。
-   - **名前**:WKND-RDE-Behaviour-Targeting-Destination
-   - **説明**：行動ターゲティングオーディエンスの宛先
+- [ **出力先の詳細** ] セクションで、次を入力します。
+   - **名前**: WKND-RDE-Behavioral-Targeting-出力先
+   - **説明**:行動ターゲティングオーディエンス向けの出力先
    - **データストリーム**：以前に作成した **データストリーム** を選択します
    - **Workspace**: Adobe Target Workspace を選択します
 
-  ![&#x200B; 宛先の詳細 &#x200B;](../assets/use-cases/behavioral-targeting/destination-details.png)
+  ![ 宛先の詳細 ](../assets/use-cases/behavioral-targeting/destination-details.png)
 
 - **次へ** をクリックして、宛先の設定を完了します。
 
@@ -466,24 +467,24 @@ Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成�
 オーディエンスを作成するには、次の手順を実行します。
 
 - **Adobe Experience Platform** で、左側のナビゲーションから **オーディエンス** をクリックし、「**オーディエンスを作成** ボタンをクリックします。
-  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-audience.png)
+  ![ オーディエンスを作成 ](../assets/use-cases/behavioral-targeting/create-audience.png)
 
 - **オーディエンスを作成** ダイアログで「**ルールを作成**」オプションを選択し、「**作成**」ボタンをクリックします。
-  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-audience-dialog.png)
+  ![ オーディエンスを作成 ](../assets/use-cases/behavioral-targeting/create-audience-dialog.png)
 
 - **作成** 手順で、以下を入力します。
    - **名前**：ファミリートラベラー
    - **説明**：家族に優しいアドベンチャーページを訪問したユーザー
    - **評価方法**:**Edge** を選択します（リアルタイムのオーディエンス評価用）
 
-  ![&#x200B; オーディエンスを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-audience-step.png)
+  ![ オーディエンスを作成 ](../assets/use-cases/behavioral-targeting/create-audience-step.png)
 
 - 次に、「**イベント**」タブをクリックして **Web**/**Web ページの詳細** に移動し、「**URL**」フィールドを「**イベントルール**」セクションにドラッグ&amp;ドロップします。 「**URL**」フィールドをさらに「**イベントルール**」セクションに 2 回ドラッグします。 以下の値を入力します。
    - **URL**:「**contains**」オプションを選択して、`riverside-camping-australia` を入力します
    - **URL**:「**contains**」オプションを選択して、`bali-surf-camp` を入力します
    - **URL**:「**contains**」オプションを選択して、`gastronomic-marais-tour` を入力します
 
-  ![&#x200B; イベントルール &#x200B;](../assets/use-cases/behavioral-targeting/event-rules.png)
+  ![ イベントルール ](../assets/use-cases/behavioral-targeting/event-rules.png)
 
 - 「**イベント**」セクションで、「**今日**」オプションを選択します。 オーディエンスは次のようになります。
 
@@ -491,15 +492,15 @@ Adobe Targetの宛先（V2）を使用すると、Experience Platformで作成�
 
 - オーディエンスをレビューし、「**宛先に対してアクティブ化** ボタンをクリックします。
 
-  ![&#x200B; 宛先に対してアクティブ化 &#x200B;](../assets/use-cases/behavioral-targeting/activate-to-destination.png)
+  ![ 宛先に対してアクティブ化 ](../assets/use-cases/behavioral-targeting/activate-to-destination.png)
 
 - **宛先に対してアクティブ化** ダイアログで、前の手順で作成したAdobe Targetの宛先を選択し、手順に従ってオーディエンスをアクティブ化します。
 
-  ![&#x200B; 宛先に対してアクティブ化 &#x200B;](../assets/use-cases/behavioral-targeting/activate-to-destination-dialog.png)
+  ![ 宛先に対してアクティブ化 ](../assets/use-cases/behavioral-targeting/activate-to-destination-dialog.png)
 
 - AEPにはまだデータがないので、オーディエンス数は 0 になります。 ユーザーが web サイトに訪問し始めると、データが収集され、オーディエンス数が増加します。
 
-  ![&#x200B; オーディエンス数 &#x200B;](../assets/use-cases/behavioral-targeting/audience-count.png)
+  ![ オーディエンス数 ](../assets/use-cases/behavioral-targeting/audience-count.png)
 
 これで完了です。オーディエンスを作成し、Adobe Targetの宛先に対してアクティブ化しました。
 
@@ -511,22 +512,22 @@ AEMでは、タグ プロパティが統合され、ページビューデータ�
 
 まず、AEM オーサーサービスにログインして、パーソナライズされたコンテンツを作成し設定します。
 
-- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Experience Manager&rbrace; に移動します。**
+- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Experience Manager} に移動します。**
 
   ![Experience Manager](../assets/use-cases/behavioral-targeting/dx-experience-manager.png)
 
 - AEM オーサー環境に移動して、「**Sites**」ボタンをクリックします。
-  ![AEM オーサー環境 &#x200B;](../assets/use-cases/behavioral-targeting/aem-author-environment.png)
+  ![AEM オーサー環境 ](../assets/use-cases/behavioral-targeting/aem-author-environment.png)
 
 ### タグプロパティのAEMページへの統合と挿入
 
 この手順では、前に作成した Tags プロパティをAEM ページに統合して、行動ターゲティングのためのデータ収集を有効にします。 タグプロパティは、ユーザーが web サイトを訪問したときに、ページビューデータを自動的にキャプチャしてExperience Platformに送信します。
 
-タグプロパティをAEM ページに統合するには、[Adobe Experience Platformでのタグの統合 &#x200B;](../setup/integrate-adobe-tags.md) の手順に従います。
+タグプロパティをAEM ページに統合するには、[Adobe Experience Platformでのタグの統合 ](../setup/integrate-adobe-tags.md) の手順に従います。
 
 別のプロパティではなく、以前に作成した **WKND-RDE-Behaviour-Targeting** タグプロパティを使用してください。
 
-![Tags プロパティ &#x200B;](../assets/use-cases/behavioral-targeting/tags-property.png)
+![Tags プロパティ ](../assets/use-cases/behavioral-targeting/tags-property.png)
 
 統合すると、タグプロパティはAEM ページから行動データを収集し、オーディエンス作成のためにExperience Platformに送信するようになります。
 
@@ -534,11 +535,11 @@ AEMでは、タグ プロパティが統合され、ページビューデータ�
 
 この手順では、Adobe TargetをAEMと統合し、パーソナライズされたコンテンツ（エクスペリエンスフラグメント）をAdobe Targetに書き出せるようにします。 この連携により、Adobe Targetでは、AEMで作成されたコンテンツを、Experience Platformで作成された行動オーディエンスと共にパーソナライゼーションアクティビティに使用できます。
 
-Adobe Targetを統合し、**ファミリートラベラー** オーディエンスオファーをAdobe Targetに書き出すには、[Adobe Experience PlatformでのAdobe Targetの統合 &#x200B;](../setup/integrate-adobe-target.md) の手順に従います。
+Adobe Targetを統合し、**ファミリートラベラー** オーディエンスオファーをAdobe Targetに書き出すには、[Adobe Experience PlatformでのAdobe Targetの統合 ](../setup/integrate-adobe-target.md) の手順に従います。
 
 Target 設定がエクスペリエンスフラグメントに適用され、パーソナライゼーションアクティビティで使用するためにAdobe Targetに書き出すことができることを確認します。
 
-![Target 設定を使用したエクスペリエンスフラグメント &#x200B;](../assets/use-cases/behavioral-targeting/experience-fragments-with-target-configuration.png)
+![Target 設定を使用したエクスペリエンスフラグメント ](../assets/use-cases/behavioral-targeting/experience-fragments-with-target-configuration.png)
 
 統合すると、エクスペリエンスフラグメントをAEMからAdobe Targetに書き出し、行動オーディエンスのパーソナライズされたオファーとして使用できます。
 
@@ -554,15 +555,15 @@ Target 設定がエクスペリエンスフラグメントに適用され、パ�
 
 - **WKND サイトフラグメント** フォルダーに移動してから **おすすめ** サブフォルダーに移動して、「**作成**」ボタンをクリックします。
 
-  ![&#x200B; エクスペリエンスフラグメントの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-experience-fragment.png)
+  ![ エクスペリエンスフラグメントの作成 ](../assets/use-cases/behavioral-targeting/create-experience-fragment.png)
 
 - **エクスペリエンスフラグメントを作成** ダイアログで、「Web バリエーションテンプレート」を選択し、「**次へ**」をクリックします。
 
-  ![&#x200B; エクスペリエンスフラグメントの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-experience-fragment-dialog.png)
+  ![ エクスペリエンスフラグメントの作成 ](../assets/use-cases/behavioral-targeting/create-experience-fragment-dialog.png)
 
 - ティーザーコンポーネントを追加して新しく作成したエクスペリエンスフラグメントを作成し、家族の旅行者に関連するコンテンツを使用してカスタマイズします。 アドベンチャートラベルに興味があるファミリーにアピールする、魅力的な見出し、説明、call-to-actionを追加します。
 
-  ![&#x200B; オーサーエクスペリエンスフラグメント &#x200B;](../assets/use-cases/behavioral-targeting/author-experience-fragment.png)
+  ![ オーサーエクスペリエンスフラグメント ](../assets/use-cases/behavioral-targeting/author-experience-fragment.png)
 
 - 作成したエクスペリエンスフラグメントを選択し、「**Adobe Targetに書き出し** ボタンをクリックします。
 
@@ -574,7 +575,7 @@ Target 設定がエクスペリエンスフラグメントに適用され、パ�
 
 Adobe Targetでは、Experience Platformで作成された行動オーディエンスと、AEMから書き出されたパーソナライズされたオファーが適切に使用可能であることが検証されます。 次に、オーディエンスのターゲティングとパーソナライズされたコンテンツを組み合わせ、行動ターゲティングエクスペリエンスを提供するアクティビティを作成します。
 
-- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2&rbrace;Adobe Target&rbrace; に移動します。**
+- [Adobe Experience Cloud](https://experience.adobe.com/) にログインし、アプリ切り替えボタンまたは「クイックアクセス」セクションから **2}Adobe Target} に移動します。**
 
   ![Adobe Target](../assets/use-cases/behavioral-targeting/adobe-target.png)
 
@@ -584,15 +585,15 @@ Adobe Targetでは、Experience Platformで作成された行動オーディエ�
 
 - Adobe Targetで **オーディエンス** をクリックし、ファミリートラベラーズオーディエンスが作成されていることを確認します。
 
-  ![&#x200B; オーディエンス &#x200B;](../assets/use-cases/behavioral-targeting/audiences.png)
+  ![ オーディエンス ](../assets/use-cases/behavioral-targeting/audiences.png)
 
 - オーディエンスをクリックすると、オーディエンスの詳細が表示され、適切に設定されていることを確認できます。
 
-  ![&#x200B; オーディエンスの詳細 &#x200B;](../assets/use-cases/behavioral-targeting/audience-details.png)
+  ![ オーディエンスの詳細 ](../assets/use-cases/behavioral-targeting/audience-details.png)
 
 - 次に、「**オファー** をクリックし、AEMから書き出したオファーが存在することを確認します。 私の場合、オファー（またはエクスペリエンスフラグメント）は **家族全員のための冒険の味** と呼ばれます。
 
-  ![&#x200B; オファー &#x200B;](../assets/use-cases/behavioral-targeting/offers.png)
+  ![ オファー ](../assets/use-cases/behavioral-targeting/offers.png)
 
 ### アクティビティの作成と設定
 
@@ -601,19 +602,19 @@ Adobe Targetのアクティビティは、パーソナライズされたコン�
 これで、パーソナライズされたエクスペリエンスを「家族のお客様 **オーディエンスのホームページに提供するアクティビティ** 作成されました。
 
 - Adobe Targetで、「**アクティビティ**」をクリックし、「**アクティビティを作成**」ボタンをクリックして、「**エクスペリエンスのターゲット設定**」アクティビティタイプを選択します。
-  ![&#x200B; アクティビティを作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-activity.png)
+  ![ アクティビティを作成 ](../assets/use-cases/behavioral-targeting/create-activity.png)
 
 - **エクスペリエンスのターゲット設定アクティビティを作成** ダイアログで、「**Web** type and **Visual** composer」オプションを選択し、WKND サイトのホームページの URL を入力します。 「**作成** ボタンをクリックして、アクティビティを作成します。
 
-  ![&#x200B; 「エクスペリエンスのターゲット設定」アクティビティの作成 &#x200B;](../assets/use-cases/behavioral-targeting/create-experience-targeting-activity.png)
+  ![ 「エクスペリエンスのターゲット設定」アクティビティの作成 ](../assets/use-cases/behavioral-targeting/create-experience-targeting-activity.png)
 
 - エディターで、「**家族旅行** オーディエンスを選択し、「次のアドベンチャー **セクションの前に** 家族全員のアドベンチャーの味 **オファーを追加します**。 参考のために以下のスクリーンショットを参照してください。
 
-  ![&#x200B; オーディエンスとオファーを使用したアクティビティ &#x200B;](../assets/use-cases/behavioral-targeting/activity-with-audience-n-offer.png)
+  ![ オーディエンスとオファーを使用したアクティビティ ](../assets/use-cases/behavioral-targeting/activity-with-audience-n-offer.png)
 
 - 「**次へ**」をクリックして「**目標と設定**」セクションを適切な目標と指標で設定し、アクティブ化して、変更をライブにプッシュします。
 
-  ![&#x200B; 目標と設定を使用したアクティベート &#x200B;](../assets/use-cases/behavioral-targeting/activate-with-goals-and-settings.png)
+  ![ 目標と設定を使用したアクティベート ](../assets/use-cases/behavioral-targeting/activate-with-goals-and-settings.png)
 
 これで完了です。パーソナライズされたエクスペリエンスを WKND サイトのホームページの **ファミリートラベラー** オーディエンスに提供するためのアクティビティを作成し、開始しました。 アクティビティがライブになり、行動条件に一致するユーザーにパーソナライズされたコンテンツが表示されます。
 
@@ -623,44 +624,44 @@ Adobe Targetのアクティビティは、パーソナライズされたコン�
 
 AEMページで行動ターゲティングの実装を検証します。
 
-- 公開されたサイト（例えば、[WKND イネーブルメント web サイト &#x200B;](https://wknd.enablementadobe.com/us/en.html)）にアクセスして、_Bali Surf Camp_ または _Riverside Camping_ または _Tahoe Skiing_ のアドベンチャーページを参照します。 ページビューイベントをトリガーし、データを収集できるように、ページに 30 秒以上かけてください。
+- 公開されたサイト（例えば、[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html)）にアクセスして、_Bali Surf Camp_ または _Riverside Camping_ または _Tahoe Skiing_ のアドベンチャーページを参照します。 ページビューイベントをトリガーし、データを収集できるように、ページに 30 秒以上かけてください。
 
 - 次に、ホームページに再度アクセスすると、「次のアドベンチャー **セクションの前に、** ファミリー旅行者 **オーディエンスのパーソナライズされたエクスペリエンスが表示** れます。
 
-  ![&#x200B; パーソナライズされたエクスペリエンス &#x200B;](../assets/use-cases/behavioral-targeting/personalized-experience-on-home-page.png)
+  ![ パーソナライズされたエクスペリエンス ](../assets/use-cases/behavioral-targeting/personalized-experience-on-home-page.png)
 
 - ブラウザーのデベロッパーツールを開き、「**ネットワーク**」タブをチェックします。 `interact` でフィルタリングして、web SDK リクエストを見つけます。 リクエストには、web SDK イベントの詳細を表示する必要があります。
 
-  ![Web SDK ネットワークリクエスト &#x200B;](../assets/use-cases/behavioral-targeting/web-sdk-network-request-on-home-page.png)
+  ![Web SDK ネットワークリクエスト ](../assets/use-cases/behavioral-targeting/web-sdk-network-request-on-home-page.png)
 
 - 応答には、**ファミリートラベラー** オーディエンスに含まれていることを示す、Adobe Targetによるパーソナライゼーションの決定が含まれている必要があります。
 
-  ![Web SDKの応答 &#x200B;](../assets/use-cases/behavioral-targeting/web-sdk-response-on-home-page.png)
+  ![Web SDKの応答 ](../assets/use-cases/behavioral-targeting/web-sdk-response-on-home-page.png)
 
 これで完了です。AEM ページで行動ターゲティングの実装を検証しました。 データ収集からオーディエンス評価、パーソナライゼーションまでの完全なフローが正しく機能するようになりました。
 
 ## ライブデモ
 
-行動のターゲティングの動作を確認するには、[WKND イネーブルメント web サイト &#x200B;](https://wknd.enablementadobe.com/us/en.html) を参照してください。 行動ターゲティングエクスペリエンスには、次の 3 つがあります。
+行動のターゲティングの動作を確認するには、[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html) を参照してください。 行動ターゲティングエクスペリエンスには、次の 3 つがあります。
 
 - **ホームページ**：家族旅行のオーディエンスの場合、「次のアドベンチャー _セクションの上にパーソナライズされたヒーローオファーが表示さ_ ます。 ユーザーがホームページを訪問して _Bali Surf Camp_ または _Riverside Camp_ または _Tahoe Skiing_ アドベンチャーページを訪問した場合、そのユーザーは **ファミリー旅行者** オーディエンスに分類されます。 オーディエンスのタイプは **Edge** なので、評価はリアルタイムで行われます。
 
 - **アドベンチャーページ**：サーフィン愛好家の場合、アドベンチャーページはパーソナライズされたヒーローセクションで表示されます。 ユーザーが _Bali Surf Camp_ または _Surf Camp （コスタリカ）_ のアドベンチャーページを閲覧すると、ユーザーは **サーフィンの興味** オーディエンスに分類されます。 オーディエンスタイプは **バッチ** なので、評価はリアルタイムではなく、1 日のような期間にわたって行われます。 再訪問者に便利です。
 
-  ![&#x200B; パーソナライズされたアドベンチャーページ &#x200B;](../assets/use-cases/behavioral-targeting/personalized-adventure-page.png)
+  ![ パーソナライズされたアドベンチャーページ ](../assets/use-cases/behavioral-targeting/personalized-adventure-page.png)
 
 - **マガジンページ**：マガジンリーダーの場合、マガジンページはパーソナライズされたヒーローセクションとともに表示されます。 ユーザーが _3 つ以上_ の記事を読むと、そのユーザーは **雑誌読者** オーディエンスに分類されます。 オーディエンスタイプは **バッチ** なので、評価はリアルタイムではなく、1 日のような期間にわたって行われます。 再訪問者に便利です。
 
-  ![&#x200B; パーソナライズされた雑誌ページ &#x200B;](../assets/use-cases/behavioral-targeting/personalized-magazine-page.png)
+  ![ パーソナライズされた雑誌ページ ](../assets/use-cases/behavioral-targeting/personalized-magazine-page.png)
 
 最初のオーディエンスはリアルタイムのパーソナライゼーションに対して **Edge** の評価を使用し、2 番目と 3 番目のオーディエンスはパーソナライゼーションに対して **バッチ** の評価を使用しています。これは、再訪問者に最適です。
 
 
 ## その他のリソース
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/home)
-- [&#x200B; データストリームの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edgeのセグメント化 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [&#x200B; オーディエンスタイプ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target接続 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [ データストリームの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edgeのセグメント化 ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [ オーディエンスタイプ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target接続 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
