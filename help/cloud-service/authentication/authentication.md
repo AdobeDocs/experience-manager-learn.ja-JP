@@ -25,7 +25,7 @@ AEM as a Cloud Service は、複数の認証オプションをサポートして
 |                       | AEM オーサー | AEM パブリッシュ |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✔ |
-| [OpenID Connect （OIDC） ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier) | ✘ | ✔ |
+| [OpenID Connect （OIDC） &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier) | ✘ | ✔ |
 | [Adobe IMSを介した SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=ja#how-to-set-up) | ✔ | ✔ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
 | [シングルサインオン（SSO）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=ja#integration-with-an-idp) | ✘ | ✔ |
