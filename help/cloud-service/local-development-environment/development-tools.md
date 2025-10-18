@@ -246,7 +246,7 @@ __[Visual Studio Code](https://code.visualstudio.com/)__（VS Code）は、フ�
 
 Visual Studio Code は、主に JavaScript、CSS、HTML などのフロントエンドコードを作成するフロントエンド開発者に最適な選択肢です。VS Code は[拡張機能](https://code.visualstudio.com/docs/java/java-tutorial)を介して Java をサポートしていますが、Java 特有の拡張機能で提供される高度な機能の一部が欠落している可能性があります。
 
->[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3457737?captions=jpn&quality=12&learn=on)
 
 + [Visual Studio Code のダウンロード](https://code.visualstudio.com/Download)
 + [Repo ツールのダウンロード](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)

@@ -182,7 +182,7 @@ IDE を使用する場合は、Maven プロファイルタブで `classic` に�
 * **[AEM 同期](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - コミュニティでサポートされている&#42; Visual Studio Code 用の拡張機能
 * **[WKND プロジェクト](https://github.com/adobe/aem-guides-wknd)** - このビデオで示す AEM プロジェクトの例。
 
->[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3457737?captions=jpn&quality=12&learn=on)
 
 * 00:30 - Maven プロジェクトの読み込み
 * 00:53 - Maven を使用したソースコードのビルドとデプロイ
