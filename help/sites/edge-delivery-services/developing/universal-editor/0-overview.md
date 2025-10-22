@@ -101,7 +101,7 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="ローカル開発環境の設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="ローカル開発環境の設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443979/?captions=jpn&format=jpeg&nocache=1753811862249" alt="ローカル開発環境の設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
