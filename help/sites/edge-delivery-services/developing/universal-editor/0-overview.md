@@ -1,6 +1,7 @@
 ---
 title: Edge Delivery Services とユニバーサルエディターの開発者向けチュートリアル
 description: AEM ユニバーサルエディターで作成され、Edge Delivery Services を使用して配信される新しい web サイトの開発の基本について説明します。
+short-description: Edge Delivery Servicesを使用した、強力なオーサリング機能とユニバーサルエディターおよび超高速配信を組み合わせたAEM web サイトを構築するための開発者向けチュートリアルです。 新規プロジェクトを作成する方法、ローカル開発環境を設定する方法、カスタムブロックを構築する方法について説明します。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0ad5d66549970337118220156d7a6b0fd30fd57
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 94%
+source-wordcount: '658'
+ht-degree: 89%
 
 ---
 
@@ -100,7 +101,7 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="ローカル開発環境の設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443979/?format=jpeg&nocache=1753811862249&captions=jpn" alt="ローカル開発環境の設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="ローカル開発環境の設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
