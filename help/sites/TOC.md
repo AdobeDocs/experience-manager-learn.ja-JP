@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: bc1c7a96a3d5dbc23fb7d34343cee0cfc2853be9
+source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 99%
+source-wordcount: '564'
+ht-degree: 98%
 
 ---
 
@@ -171,6 +171,7 @@ ht-degree: 99%
       + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Platform Web SDK を使用した分析](integrations/platform/analytics-using-web-sdk.md)
+      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Adobe Experience Platform のタグ {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -185,14 +186,9 @@ ht-degree: 99%
       + [クリックされたコンポーネントの Adobe Analytics での追跡](integrations/analytics/track-clicked-component.md)
       + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [概要](integrations/adobe-target/overview.md)
-      + [タグプロパティへのターゲット式の追加](integrations/adobe-target/add-target-launch-extension.md)
-      + [Target 呼び出しの読み込みと実行](integrations/adobe-target/load-and-fire-target.md)
-      + [Adobe Target Cloud Service アカウントの作成](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [Adobe Target へのエクスペリエンスフラグメントの書き出し](integrations/adobe-target/export-experience-fragment-target.md)
-      + [エクスペリエンスフラグメントオファーを使用した Target アクティビティの作成](integrations/adobe-target/create-target-activity.md)
-      + [Visual Experience Composer を使用したパーソナライズ機能](integrations/adobe-target/personalization-using-vec.md)
-      + [完全な web ページエクスペリエンスのパーソナライゼーション](integrations/adobe-target/personalization-web-page.md)
+      + [概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [ 設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [ユースケース](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 他のユーザーから学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
    + [AEM サイトでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)

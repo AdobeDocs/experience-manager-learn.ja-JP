@@ -14,10 +14,10 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 100%
+source-wordcount: '638'
+ht-degree: 99%
 
 ---
 
@@ -147,14 +147,16 @@ Adobe Target は AEM as a Cloud Service と統合し、AEM のコンテンツを
 
 ### AEM Sites
 
-+ [Adobe Target 統合の設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja)
++ [Adobe Target 統合の設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
+
++[Personalizationのユースケース ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+
 + エクスペリエンスフラグメントを Target に
 
    + [エクスペリエンスフラグメントを Target に公開](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja)
    + [エクスペリエンスフラグメントを JSON として Target に公開](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=ja)
 
 + [Target での AEM Context Hub の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html?lang=ja#creating-an-adobe-target-audience-using-the-audience-console)
-+ [AEM Sites と Target のチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html?lang=ja)
 
 ## Adobe Workfront
 
