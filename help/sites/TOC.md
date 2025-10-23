@@ -171,7 +171,7 @@ ht-degree: 98%
       + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Platform Web SDK を使用した分析](integrations/platform/analytics-using-web-sdk.md)
-      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Adobe Target](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Adobe Experience Platform のタグ {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -186,9 +186,9 @@ ht-degree: 98%
       + [クリックされたコンポーネントの Adobe Analytics での追跡](integrations/analytics/track-clicked-component.md)
       + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [&#x200B; 設定 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
-      + [ユースケース](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+      + [概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [&#x200B; 設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [ユースケース](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 他のユーザーから学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
    + [AEM サイトでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
