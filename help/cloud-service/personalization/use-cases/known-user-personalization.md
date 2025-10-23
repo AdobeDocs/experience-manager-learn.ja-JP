@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 使用例
 
-![&#x200B; ビデオ &#x200B;](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
+![&#x200B; ビデオ &#x200B;](https://video.tv.adobe.com/v/3476110/?captions=jpn&learn=on&enablevpops)
 
 このチュートリアルでは、[&#x200B; サンプル WKND サイト &#x200B;](https://github.com/adobe/aem-guides-wknd) を使用して、**スキー** アドベンチャーを購入した **ログインユーザー** が **WKND ホームページ** でどのようにパーソナライズされたヒーローを表示するかをプロセスで示します。
 
