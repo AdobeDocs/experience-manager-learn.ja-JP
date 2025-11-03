@@ -4,10 +4,10 @@ description: ニュースレターのアーカイブ済みバージョンをダ�
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: 150272efe062cfbabdad4f1987be80a89b4bbd4c
+source-git-commit: 4a5c297e600edba0aca77cae805ae90f2477f0c5
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 94%
+source-wordcount: '52'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,8 @@ Experience League の月刊コンテンツニュースレターは、このペ�
 | [4 月](assets/April-Newsletter.pdf) |
 | [5月](assets/May-Newsletter.pdf) |
 | [6 月](assets/June-Newsletter.pdf) |
-| [7 月 &#x200B;](assets/July-Newsletter.pdf) |
-| [8 月 &#x200B;](assets/August-Newsletter.pdf) |
-| [9 月 &#x200B;](assets/Sept-Newsletter.pdf) |
+| [7 月 ](assets/July-Newsletter.pdf) |
+| [8 月 ](assets/August-Newsletter.pdf) |
+| [9 月 ](assets/Sept-Newsletter.pdf) |
+| [10 月 ](assets/Oct-Newsletter.pdf) |
 
