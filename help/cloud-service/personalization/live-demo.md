@@ -21,7 +21,7 @@ ht-degree: 2%
 
 [WKND イネーブルメント web サイト &#x200B;](https://wknd.enablementadobe.com/us/en.html){target="wknd"} にアクセスして、A/B テスト、行動ターゲティング、既知のユーザーパーソナライゼーションの実際の例をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476462/?captions=jpn&learn=on&enablevpops)
 
 このページでは、各パーソナライゼーションシナリオの実践デモについて説明します。 これを使用して、独自のAEM サイトにこれらの機能を構築する前に、何が可能かを調べます。
 
