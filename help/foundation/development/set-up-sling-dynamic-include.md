@@ -131,7 +131,7 @@ ht-degree: 100%
 
    >[!TIP]
    >
-   > 上記の glob `*.nocache.html*` ルールで末尾の `*` を省略すると、[サブリソースのリクエストで問題](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)が発生する可能性があります。
+   > 上記の glob `*.nocache.html*` ルールで末尾の `*` を省略すると、[サブリソースのリクエストで問題](https://github.com/AdobeDocs/experience-manager-learn.ja-JP/issues/16)が発生する可能性があります。
 
    ```shell
    /cache {
