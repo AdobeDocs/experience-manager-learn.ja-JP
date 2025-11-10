@@ -13,10 +13,10 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
-workflow-type: ht
-source-wordcount: '1693'
-ht-degree: 100%
+source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
+workflow-type: tm+mt
+source-wordcount: '1706'
+ht-degree: 97%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Manager（AEM）でのインデックス作成のベストプ�
 - 特定のクエリに対して複数のインデックスが使用可能な場合、**推定コストが最も低い指標を使用**&#x200B;します。
 - 特定のクエリに使用できるインデックスがない場合、一致するコンテンツを見つけるためにコンテンツツリが走査されます。 ただし、`org.apache.jackrabbit.oak.query.QueryEngineSettingsService` はデフォルトで、100,000 個のノードのみを走査します。
 - 現在のユーザーが読み取りアクセス権を持っていることを確認するため、クエリの結果は&#x200B;**最終的にフィルタリングされ**&#x200B;ます。 つまり、クエリ結果は、インデックスで指定されたノードの数よりも少なくなる場合があります。
-- インデックス定義を変更した後にリポジトリーのインデックスを再作成するには時間が必要で、リポジトリーのサイズに応じて異なります。
+- インデックス定義を変更した後にリポジトリのインデックス再作成を行うには時間が必要で、リポジトリのサイズに応じて異なります。
 
 AEM インスタンスのパフォーマンスに影響を与えない、効率的で正しい検索機能を使用するには、インデックス作成のベストプラクティスを理解することが重要です。
 
@@ -41,7 +41,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 検索要件を理解し、OOTB インデックスが検索要件をサポートできるかどうかを確認します。 [ローカル SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) および開発者コンソールまたは `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 経由の AEMCS で利用可能な&#x200B;**クエリパフォーマンスツール**&#x200B;を使用します。
 
-- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
+- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)を参考にしてください。
 
 - OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。 ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を確認してください。
    - OOTB インデックスのカスタマイズ：保守とアップグレードが簡単に行える、お勧めのオプション。
@@ -53,7 +53,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - **AEM 6.X** では、上記の命名方法は&#x200B;_機能しません_。`indexRules` ノードの必要なプロパティで OOTB インデックスを更新するだけです。
 
-- 常に CRX DE Package Manager（/crx/packmgr/）を使用して AEM インスタンスから最新の OOTB インデックス定義をコピーし、名前を変更して XML ファイル内にカスタマイズを追加します。
+- 常に CRX DE パッケージマネージャー（/crx/packmgr/）を使用して AEM インスタンスから最新の OOTB インデックス定義をコピーし、名前を変更して XML ファイル内にカスタマイズを追加します。
 
 - インデックス定義を AEM プロジェクト（`ui.apps/src/main/content/jcr_root/_oak_index`）に格納して、Cloud Manager CI／CD パイプラインを使用してデプロイします。 詳しくは、[カスタムインデックス定義のデプロイ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/indexing)を参照してください。
 
@@ -112,7 +112,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 以下の画像は、`includedPaths` プロパティが特定のパスに設定された `dam:Asset` ノードタイプのカスタムインデックスを示しています。
 
-![dam:Asset ノードタイプのインデックス](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![DAM のインデックス :Asset ノードタイプ ](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
 
 ##### 分析
 
@@ -243,13 +243,13 @@ Apache Tika を完全に無効にするには、次の手順に従います。
 
 インデックスの定義、分析、最適化に役立つツールをいくつか見てみましょう。
 
-### インデックス作成ツール
+### インデックス作成ツールとOak ツール
 
-[Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) ツールは、入力クエリに基づいて&#x200B;**インデックス定義を生成する**&#x200B;のに役立ちます。 カスタムインデックスを作成するための良い出発点となります。
+[Oak Index Definition Generator](https://thomasmueller.github.io/oakTools/indexDefGenerator.html) ツールは、入力クエリに基づいて&#x200B;**インデックス定義を生成する**&#x200B;のに役立ちます。 カスタムインデックスを作成するための良い出発点となります。
 
-### インデックス分析ツール
-
-[Index Definition Analyzer](https://oakutils.appspot.com/analyze/index) は、**インデックス定義を分析する**&#x200B;のに役立つツールで、インデックス定義を改善するための推奨事項を提供します。
+[Oak ツール ](https://thomasmueller.github.io/oakTools/index.html) には、他のものも含まれます
+インデックス作成とクエリに関連するユーティリティ（例えば、JSON 形式と XML 形式の間でインデックスを変換する場合）
+XPath クエリを SQL-2 に変換し、インデックスを比較します。
 
 ### クエリパフォーマンスツール
 
