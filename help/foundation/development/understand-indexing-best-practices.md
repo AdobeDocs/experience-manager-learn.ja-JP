@@ -112,7 +112,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 以下の画像は、`includedPaths` プロパティが特定のパスに設定された `dam:Asset` ノードタイプのカスタムインデックスを示しています。
 
-![DAM のインデックス :Asset ノードタイプ ](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![DAM のインデックス :Asset ノードタイプ &#x200B;](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
 
 ##### 分析
 
@@ -247,7 +247,7 @@ Apache Tika を完全に無効にするには、次の手順に従います。
 
 [Oak Index Definition Generator](https://thomasmueller.github.io/oakTools/indexDefGenerator.html) ツールは、入力クエリに基づいて&#x200B;**インデックス定義を生成する**&#x200B;のに役立ちます。 カスタムインデックスを作成するための良い出発点となります。
 
-[Oak ツール ](https://thomasmueller.github.io/oakTools/index.html) には、他のものも含まれます
+[Oak ツール &#x200B;](https://thomasmueller.github.io/oakTools/index.html) には、他のものも含まれます
 インデックス作成とクエリに関連するユーティリティ（例えば、JSON 形式と XML 形式の間でインデックスを変換する場合）
 XPath クエリを SQL-2 に変換し、インデックスを比較します。
 
