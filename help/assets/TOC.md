@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
+source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 99%
+source-wordcount: '467'
+ht-degree: 98%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 99%
    + [メタデータ駆動型の権限](./advanced/metadata-driven-permissions.md)
    + [ビデオのクローズドキャプション](./advanced/video-closed-captions.md)
    + [透かし](./advanced/watermarks.md)
+   + [プログラムによるアセットのアップロード](./advanced/programmatic-asset-upload.md)
 
 + 高度なメタデータの管理{#metadata}
    + [GenAI メタデータ](metadata/genai-metadata.md)
