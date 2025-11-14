@@ -39,7 +39,7 @@ _直接バイナリアップロード_ アプローチを使用すると、_事�
 
 直接バイナリアップロードフローでは、事前署名済み URL を使用してバイナリデータがクラウドストレージに直接アップロードされます。 AEM as a Cloud Serviceは、事前署名済み URL の生成や、アップロード完了に関するAEM Asset Compute サービスへの通知など、軽量の処理を行います。 次の論理フロー図は、直接バイナリアップロードフローを示しています。
 
-![ 直接バイナリアップロードフロー ](./assets/programmatic-asset-upload/direct-binary-asset-upload-flow.png)
+![&#x200B; 直接バイナリアップロードフロー &#x200B;](./assets/programmatic-asset-upload/direct-binary-asset-upload-flow.png)
 
 ### aem-upload ライブラリ
 
@@ -50,11 +50,11 @@ _直接バイナリアップロード_ アプローチを使用すると、_事�
 
 >[!CAUTION]
 >
->Java では、[aem-upload](https://github.com/adobe/aem-upload) ライブラリに相当するものはありません。 クライアントアプリケーションは、_直接バイナリアップロード_ アプローチを使用するために、Node.js で記述する必要があります。 詳しくは、[Experience Manager Assetsの API と操作 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) ページを参照してください。
+>Java では、[aem-upload](https://github.com/adobe/aem-upload) ライブラリに相当するものはありません。 クライアントアプリケーションは、_直接バイナリアップロード_ アプローチを使用するために、Node.js で記述する必要があります。 詳しくは、[Experience Manager Assetsの API と操作 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) ページを参照してください。
 
 ## サンプルアプリケーション
 
-[aem-asset-upload-sample](./assets/programmatic-asset-upload/aem-asset-upload-sample.zip) アプリケーションを使用して、プログラムによるアセットのアップロードプロセスを学びます。 サンプルアプリケーションは、`FileSystemUpload`aem-upload`DirectBinaryUpload` ライブラリから [ クラスと ](https://github.com/adobe/aem-upload) クラスの両方を使用する方法を示しています。
+[aem-asset-upload-sample](./assets/programmatic-asset-upload/aem-asset-upload-sample.zip) アプリケーションを使用して、プログラムによるアセットのアップロードプロセスを学びます。 サンプルアプリケーションは、`FileSystemUpload`aem-upload`DirectBinaryUpload` ライブラリから [&#x200B; クラスと &#x200B;](https://github.com/adobe/aem-upload) クラスの両方を使用する方法を示しています。
 
 ### 前提条件
 
@@ -89,17 +89,17 @@ _直接バイナリアップロード_ アプローチを使用すると、_事�
    $ npm install
    ```
 
-   ![ サンプルアプリケーション ](./assets/programmatic-asset-upload/install-dependencies.png)
+   ![&#x200B; サンプルアプリケーション &#x200B;](./assets/programmatic-asset-upload/install-dependencies.png)
 
 ### サンプルアプリケーションの設定
 
 サンプルアプリケーションを実行する前に、AEM オーサー URL、_認証方法_ アセットフォルダーパスなど、AEM as a Cloud Service環境に必要な詳細を設定する必要があります。
 
-_aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://github.com/adobe/aem-upload) がサポートされています。 次の表に、サポートされる _認証方法_ とその目的をまとめます。
+_aem-upload_ Node.js ライブラリでは [&#x200B; 複数の認証方法 &#x200B;](https://github.com/adobe/aem-upload) がサポートされています。 次の表に、サポートされる _認証方法_ とその目的をまとめます。
 
-| | 基本認証 | [ローカル開発トークン ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [ サービス資格情報 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web アプリ ](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | 基本認証 | [ローカル開発トークン &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [&#x200B; サービス資格情報 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web アプリ &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
-| はサポートされていますか？ | &amp;check; | &amp;check; | &amp;check; | &amp;cross; | &amp;cross; | &amp;cross; |
+| はサポートされていますか？ | &check; | &check; | &check; | &cross; | &cross; | &cross; |
 | 目的 | ローカル開発 | ローカル開発 | 実稼動 | 該当なし | 該当なし | 該当なし |
 
 サンプルアプリケーションを設定するには、次の手順に従います。
@@ -124,15 +124,15 @@ _aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://git
 
 1. **ツール**/**セキュリティ**/**ユーザー** に移動し、「**作成**」ボタンをクリックします。
 
-   ![ ユーザーを作成 ](./assets/programmatic-asset-upload/create-user.png)
+   ![&#x200B; ユーザーを作成 &#x200B;](./assets/programmatic-asset-upload/create-user.png)
 
 1. ユーザーの詳細を入力します
 
-   ![ ユーザーの詳細 ](./assets/programmatic-asset-upload/user-details.png)
+   ![&#x200B; ユーザーの詳細 &#x200B;](./assets/programmatic-asset-upload/user-details.png)
 
 1. 「**グループ**」タブで **DAM ユーザー** グループを追加します。 「**保存して閉じる** ボタンをクリックします。
 
-   ![DAM ユーザーグループの追加 ](./assets/programmatic-asset-upload/add-dam-users-group.png)
+   ![DAM ユーザーグループの追加 &#x200B;](./assets/programmatic-asset-upload/add-dam-users-group.png)
 
 1. `AEM_USERNAME` および `AEM_PASSWORD` の環境変数を、作成したユーザーのユーザー名とパスワードで更新します。
 
@@ -140,7 +140,7 @@ _aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://git
 
 ローカル開発トークンを取得するには、**AEM** Developer Consoleを使用する必要があります。 生成されたトークンのタイプは JSON Web トークン（JWT）です。
 
-1. [Adobe Cloud Managerにログインし ](https://experience.adobe.com/#/@aem/cloud-manager) 目的の **環境** 詳細ページに移動します。 「**」。..「** をクリックし、「**Developer Console**」を選択します。
+1. [Adobe Cloud Managerにログインし &#x200B;](https://experience.adobe.com/#/@aem/cloud-manager) 目的の **環境** 詳細ページに移動します。 「**」。..「** をクリックし、「**Developer Console**」を選択します。
 
    ![デベロッパーコンソール](./assets/programmatic-asset-upload/developer-console.png)
 
@@ -148,7 +148,7 @@ _aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://git
 
 1. 「**ツール**」セクションで「**統合**」を選択し、「**ローカルトークンを取得**」ボタンをクリックします。
 
-   ![ ローカルトークンを取得 ](./assets/programmatic-asset-upload/get-local-token.png)
+   ![&#x200B; ローカルトークンを取得 &#x200B;](./assets/programmatic-asset-upload/get-local-token.png)
 
 1. トークン値をコピーし、そのトークン値を使用して `AEM_BEARER_TOKEN` 環境変数を更新します。
 
@@ -158,7 +158,7 @@ _aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://git
 
 サービス資格情報を取得するには、**AEM** Developer Consoleを使用する必要があります。 [jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm モジュールを使用して、JSON web トークン（JWT）タイプのトークンを生成するために使用されます。
 
-1. [Adobe Cloud Managerにログインし ](https://experience.adobe.com/#/@aem/cloud-manager) 目的の **環境** 詳細ページに移動します。 「**」。..「** をクリックし、「**Developer Console**」を選択します。
+1. [Adobe Cloud Managerにログインし &#x200B;](https://experience.adobe.com/#/@aem/cloud-manager) 目的の **環境** 詳細ページに移動します。 「**」。..「** をクリックし、「**Developer Console**」を選択します。
 
    ![デベロッパーコンソール](./assets/programmatic-asset-upload/developer-console.png)
 
@@ -166,17 +166,17 @@ _aem-upload_ Node.js ライブラリでは [ 複数の認証方法 ](https://git
 
 1. 「**ツール**」セクションで「**統合**」を選択し、「**新規テクニカルアカウントを作成**」ボタンをクリックします。
 
-   ![ サービス資格情報の取得 ](./assets/programmatic-asset-upload/get-service-credentials.png)
+   ![&#x200B; サービス資格情報の取得 &#x200B;](./assets/programmatic-asset-upload/get-service-credentials.png)
 
 1. 「**表示**」オプションをクリックして、サービス資格情報 JSON をコピーします。
 
-   ![ サービス資格情報 ](./assets/programmatic-asset-upload/service-credentials.png)
+   ![&#x200B; サービス資格情報 &#x200B;](./assets/programmatic-asset-upload/service-credentials.png)
 
 1. サンプルアプリケーションのルートに `service-credentials.json` ファイルを作成し、そのファイルにサービス資格情報 JSON を貼り付けます。
 
 1. service-credentials.json ファイルへのパスを使用して `AEM_SERVICE_CREDENTIALS_FILE` 環境変数を更新します。
 
-1. サービス資格情報のユーザーが、AEM as a Cloud Service環境にアセットをアップロードするために必要な権限を持っていることを確認します。 詳しくは、[AEMでのアクセスの設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem) ページを参照してください。
+1. サービス資格情報のユーザーが、AEM as a Cloud Service環境にアセットをアップロードするために必要な権限を持っていることを確認します。 詳しくは、[AEMでのアクセスの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem) ページを参照してください。
 
 >[!ENDTABS]
 
@@ -224,7 +224,7 @@ DEBUG=false
 サンプルアプリケーションでは、サンプルアセットをAEM as a Cloud Service環境にアップロードする 3 つの異なる方法を示します。
 
 1. **FileSystemUpload** - ディレクトリ構造がサポートされ、自動フォルダー作成が可能なローカルファイルシステムからファイルをアップロードします
-1. **DirectBinaryUpload** - [ リモートファイル ](https://placehold.co/600x400/red/white?text=Adobe+Experience+Manager+Assets) をアップロードします。 ファイルバイナリは、AEM as a Cloud Service環境にアップロードする前にメモリにバッファーされます。
+1. **DirectBinaryUpload** - [&#x200B; リモートファイル &#x200B;](https://placehold.co/600x400/red/white?text=Adobe+Experience+Manager+Assets) をアップロードします。 ファイルバイナリは、AEM as a Cloud Service環境にアップロードする前にメモリにバッファーされます。
 1. **バッチアップロード** – 自動再試行ロジックとエラー回復を使用して、ローカルファイルシステムから複数のファイルをバッチでアップロードします。 そのバックグラウンドで、`FileSystemUpload` クラスを使用してローカルファイルシステムからファイルをアップロードします。
 
 アップロードされるアセットは `sample-assets` フォルダーにあり、`img`、`video` および `doc` サブフォルダーを含みます。各サブフォルダーには、いくつかのサンプルアセットが含まれています。
@@ -274,7 +274,7 @@ All files uploaded successfully!
 
 1. AEM as a Cloud Service環境の `FileSystemUpload` オプションを使用してアップロードされたAssets:
 
-   ![FileSystemUpload クラスを使用して、AEM as a Cloud Service環境にアセットをアップロードする ](./assets/programmatic-asset-upload/uploaded-assets-aem-file-system-upload.png)
+   ![FileSystemUpload クラスを使用して、AEM as a Cloud Service環境にアセットをアップロードする &#x200B;](./assets/programmatic-asset-upload/uploaded-assets-aem-file-system-upload.png)
 
 >[!TAB DirectBinaryUpload]
 
@@ -298,7 +298,7 @@ All files uploaded successfully!
 
 1. AEM as a Cloud Service環境の `DirectBinaryUpload` オプションを使用してアップロードされたAssets:
 
-![DirectBinaryUpload クラスを使用して、AEM as a Cloud Service環境にアセットをアップロードする ](./assets/programmatic-asset-upload/uploaded-assets-aem-direct-binary-upload.png)
+![DirectBinaryUpload クラスを使用して、AEM as a Cloud Service環境にアセットをアップロードする &#x200B;](./assets/programmatic-asset-upload/uploaded-assets-aem-direct-binary-upload.png)
 
 >[!TAB  バッチアップロード ]
 
@@ -326,7 +326,7 @@ All files uploaded successfully!
 
 1. AEM as a Cloud Service環境の `Batch Upload` オプションを使用してアップロードされたAssets:
 
-![BatchUpload クラスを使用してAEM as a Cloud Service環境にアセットをアップロードする ](./assets/programmatic-asset-upload/uploaded-assets-aem-batch-upload.png)
+![BatchUpload クラスを使用してAEM as a Cloud Service環境にアセットをアップロードする &#x200B;](./assets/programmatic-asset-upload/uploaded-assets-aem-batch-upload.png)
 
 >[!ENDTABS]
 
