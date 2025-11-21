@@ -9,7 +9,7 @@ sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
 source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 100%
 
@@ -282,8 +282,8 @@ ht-degree: 100%
    + [PDF forms のタイプ](document-services/pdf-forms-and-documents.md)
    + [アダプティブフォームに PDF を埋め込む](document-services/embed-pdf-inline.md)
    + [PDF のカルーセルコンポーネント内](document-services/display-pdf-in-carousel.md)
-   + [AEM Forms での Assembler サービスの使用](document-services/using-assembler-service-in-aem-forms.md)
-   + [Assembler サービスでの XDP のステッチ](document-services/xdp-stitching-using-assembler-service.md)
+   + [AEM Forms でのアセンブラーサービスの使用](document-services/using-assembler-service-in-aem-forms.md)
+   + [アセンブラーサービスでの XDP のステッチ](document-services/xdp-stitching-using-assembler-service.md)
    + [AEM Forms の監視フォルダーの使用](document-services/watched-folders-document-services-article-use.md)
    + [AEM Forms でのバーコードサービスの使用](document-services/barcode-service-adaptive-forms-article.md)
    + [AEM Formsでの PDFG サービスの使用](document-services/using-pdfg-in-aem-forms.md)
@@ -312,11 +312,11 @@ ht-degree: 100%
    + [手書き署名の使用](forms-designer/scribble-signature-form.md)
    + [デジタル署名の使用](forms-designer/adding-dig-signature-field.md)
    + [Reader 拡張フォーム](forms-designer/reader-extending-j2ee.md)
-+ AEM Forms Workbench{#forms-workbench}
-   + [Workbench の概要](aem-forms-workbench/workbench-introduction.md)
++ AEM Forms ワークベンチ{#forms-workbench}
+   + [ワークベンチの概要](aem-forms-workbench/workbench-introduction.md)
    + [フォームプロセスの作成](aem-forms-workbench/workbench-creating-a-process.md)
    + [デバッグプロセス](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ 印刷チャネル用のインタラクティブ通信 
++ 印刷チャネル用のインタラクティブなコミュニケーション 
 {#ic-print-channel-tutorial}
    + [1 - はじめに](ic-print-channel-tutorial/introduction.md)
    + [2 - Tomcat の設定](ic-print-channel-tutorial/set-up-tomcat.md)
@@ -334,25 +334,25 @@ ht-degree: 100%
    + [はじめに](store-retrieve-letters/introduction.md)
    + [実装](store-retrieve-letters/save-draft-letters.md)
    + [サンプルのデプロイ](store-retrieve-letters/deploy-on-your-server.md)
-+ インタラクティブ通信 {#interactive-communications}
++ インタラクティブなコミュニケーション {#interactive-communications}
    + [Batch API の使用](interactive-communications/batch-generation-interactive-communications.md)
    + [複数系列グラフ](interactive-communications/multiseriescharts.md)
    + [送信されたデータからの印刷チャネルドキュメントの生成](interactive-communications/merge-data-with-ic-template.md)
    + [抑制関数の使用](interactive-communications/reducer-functions-in-charts-aem-forms-video-use.md)
    + [印刷チャネルドキュメントの 2 列レイアウト](interactive-communications/two-column-layout-aem-forms-article-use.md)
    + [AEM Forms 印刷チャネルドキュメントでのテーブルコンポーネントの使用](interactive-communications/table-in-print-channel-documents-video-use.md)
-   + [監視フォルダーを使用した印刷チャネル用のインタラクティブ通信ドキュメントの生成](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+   + [監視フォルダーを使用した印刷チャネル用のインタラクティブなコミュニケーションドキュメントの生成](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [テキストエディターのカスタマイズ](interactive-communications/customize-text-editor.md)
 + ExL ニュースレター{#exl-newsletters}
    + [アーカイブ](./newsletters/archives.md)
-+ Web チャネルのインタラクティブ通信 {#ic-web-channel-tutorial}
++ Web チャネルのインタラクティブなコミュニケーション {#ic-web-channel-tutorial}
    + [1 - はじめに](ic-web-channel-tutorial/introduction.md)
    + [2 - Tomcat の設定](ic-web-channel-tutorial/partone.md)
    + [3 - データソースの作成](ic-web-channel-tutorial/parttwo.md)
    + [4 - フォームデータモデルの作成](ic-web-channel-tutorial/partthree.md)
    + [5 - Web チャネルドキュメントのテンプレートの作成](ic-web-channel-tutorial/partfour.md)
    + [6 - ドキュメントフラグメントの作成](ic-web-channel-tutorial/partfive.md)
-   + [7 - インタラクティブ通信ドキュメントの作成](ic-web-channel-tutorial/partsix.md)
+   + [7 - インタラクティブなコミュニケーションドキュメントの作成](ic-web-channel-tutorial/partsix.md)
    + [8 - テキストと画像の追加](ic-web-channel-tutorial/partseven.md)
    + [9 - 折れ線グラフの設定](ic-web-channel-tutorial/parteight.md)
    + [10 - テーブルの設定](ic-web-channel-tutorial/partnine.md)
@@ -395,11 +395,11 @@ ht-degree: 100%
    + [ドキュメントセキュリティ：Acrobat でドキュメントセキュリティモジュールを使用して作成したポリシーを適用する方法](troubleshooting/how-to-apply-policy-created-using-document-security-module-in-acrobat.md)
    + [User Management：AEM Forms JEE でユーザーまたはグループを追加する方法](troubleshooting/how-to-add-users-or-groups-in-aem-forms-jee.md)
    + [User Management：UM セッションタイムアウトを増やす方法](troubleshooting/how-to-increase-um-session-timeout.md)
-   + [Workbench：https を使用した Workbench への接続](troubleshooting/connecting-workbench-using-https.md)
-   + [Workbench：ヘルプメニューからの Workbench ログの収集](troubleshooting/gathering-workbench-logs-from-help-menu.md)
-   + [Workbench：Workbench のデバッグ出力を有効にする方法](troubleshooting/how-to-enable-debug-output-for-workbench.md)
-   + [Workbench：Workbench のメモリパラメーターの調整方法](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
-   + [Workbench：Workbench パフォーマンスパラメーターの調整方法](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
+   + [ワークベンチ：https を使用したワークベンチへの接続](troubleshooting/connecting-workbench-using-https.md)
+   + [ワークベンチ：ヘルプメニューからのワークベンチログの収集](troubleshooting/gathering-workbench-logs-from-help-menu.md)
+   + [ワークベンチ：ワークベンチのデバッグ出力を有効にする方法](troubleshooting/how-to-enable-debug-output-for-workbench.md)
+   + [ワークベンチ：ワークベンチのメモリパラメーターの調整方法](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
+   + [ワークベンチ：ワークベンチパフォーマンスパラメーターの調整方法](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
    + [Designer：C++ 再頒布可能パッケージに対する Designer の依存関係](troubleshooting/dependency-of-vc-on-designer.md)
    + [Designer：HTML プレビューを有効にする方法](troubleshooting/how-to-enable-html-preview.md)
    + [Designer：PDF プレビューを有効にする方法](troubleshooting/how-to-enable-pdf-preview.md)

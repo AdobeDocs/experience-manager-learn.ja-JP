@@ -5,9 +5,9 @@ user-guide-description: Adobe Experience Manager Foundation のビデオやチ�
 sub-product: Experience Manager
 index: y
 source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 100%
    + [ModSecurity CRS DoS 攻撃保護](./security/modsecurity-crs-dos-attack-protection.md)
    + [プライベート証明書を使用した API への HTTPS 接続](./security/call-internal-apis-having-private-certificate.md)
    + [AEM からの Mutual TLS（mTLS）認証](./security/mutual-tls-authentication.md)
-   + [JWT から OAuth への資格情報の移行](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [JWT から OAuth への資格情報の移行 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + ワークフロー {#workflow}
    + [ワークフローエディターの使用](./workflow/use-the-workflow-editor.md)
    + [ワークフローを使用](./workflow/use-workflow.md)
@@ -59,7 +59,7 @@ ht-degree: 100%
 + トラブルシューティング {#troubleshooting}
    + [アセットのダウンロードレポートを有効にする方法](./troubleshooting/how-to-enable-asset-download-report.md)
    + [AEM 6.4 での再コンパイルの強制方法](./troubleshooting/how-to-force-recompilation.md)
-   + [AEM でインデックスに関連する問題を調査する方法](./troubleshooting/how-to-investigate-indexing-related-issues.md)
+   + [AEM でインデックス作成に関連する問題を調査する方法](./troubleshooting/how-to-investigate-indexing-related-issues.md)
    + [AEM での SAML 関連の問題を調査する方法](./troubleshooting/how-to-investigate-saml-related-issues.md)
    + [AEM での検索関連の問題を調査する方法](./troubleshooting/how-to-investigate-search-related-issues.md)
    + [Oak ログイントークンのセッションの有効期限を設定する方法](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)

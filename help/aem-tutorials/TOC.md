@@ -24,9 +24,9 @@ ht-degree: 51%
 + [AEM Guides](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html?lang=ja){target=_blank}
 + マルチステップチュートリアル {#multi}
    + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
-   + [OpenAPI を使用したAEM コンテンツフラグメント配信の概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview){target=_blank}
-   + [&#x200B; ユニバーサルエディターを使用した React アプリの編集](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
-   + [Personalizationの概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview){target=_blank}
-   + [RDE の概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview){target=_blank}
-   + [AEM API の概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/aem-apis/overview){target=_blank}
-   + [AEM Web サイトの保護](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview){target=_blank}
+   + [OpenAPI を使用したAEM コンテンツフラグメント配信の概要 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview){target=_blank}
+   + [ ユニバーサルエディターを使用した React アプリの編集 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
+   + [Personalizationの概要 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview){target=_blank}
+   + [RDE の概要 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview){target=_blank}
+   + [AEM API の概要 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/overview){target=_blank}
+   + [AEM Web サイトの保護 ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview){target=_blank}

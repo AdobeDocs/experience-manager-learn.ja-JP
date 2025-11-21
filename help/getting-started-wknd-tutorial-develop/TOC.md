@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 index: y
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
    + [3 - Adobe XDでの UI 計画](./site-template/ui-planning-adobe-xd.md)
    + [4 - ページテンプレート](./site-template/page-templates.md)
    + [5 - テーマ設定](./site-template/theming.md)
-+ フロントエンドパイプラインの有効化 - DevOps{#enable-frontend-pipeline-devops}
++ フロントエンドパイプラインの有効化 – DevOps{#enable-frontend-pipeline-devops}
    + [概要](./enable-frontend-pipeline/overview.md)
    + [1 - フルスタックプロジェクトのレビュー](./enable-frontend-pipeline/review-uifrontend-module.md)
    + [2 - フロントエンドパイプラインを使用するためのプロジェクトの更新](./enable-frontend-pipeline/update-project.md)
