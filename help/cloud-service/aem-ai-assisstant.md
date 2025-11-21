@@ -20,4 +20,4 @@ ht-degree: 8%
 
 [AEM AI アシスタント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) を使用してAdobe Experience Manager ワークフローを簡単に実行する方法を説明します。 機能の検索、ベストプラクティスの学習、問題のトラブルシューティング、サポートチケットの作成など、AEMのインテリジェントな機能となります。 AI を活用したガイダンス、インサイト、サポートにより、生産性を高めます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475359/?captions=jpn&learn=on&enablevpops)
