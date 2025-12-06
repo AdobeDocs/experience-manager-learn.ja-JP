@@ -71,7 +71,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./basics/content-fragment-editor.md" title="エディターの概要"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                src="https://video.tv.adobe.com/v/3477328?captions=jpn&format=jpeg"
                 alt="エディターの概要">
             </a>
           </figure>
@@ -138,7 +138,7 @@ Adobe Experience Manager のコンテンツフラグメントコンソールを�
             <a href="./editor/new-editor-toggle.md" title="新しいエディター切替スイッチ"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新しい
+                src="https://video.tv.adobe.com/v/3477317?captions=jpn&format=jpeg" alt="新しい
 エディター切替スイッチ">
             </a>
           </figure>

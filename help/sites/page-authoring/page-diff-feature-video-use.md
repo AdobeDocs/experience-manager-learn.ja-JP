@@ -41,7 +41,7 @@ AEM Sites のページ差分機能では、ページ内で変更されたコン�
 
 ## ローンチページの比較 {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477339?captions=jpn&quality=12&learn=on)
 
 ページ差分機能を使用すると、ブループリントとライブコピーの違いやブループリントと言語コピーの違いを特定することもできます。
 

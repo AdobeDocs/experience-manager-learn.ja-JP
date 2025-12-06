@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM のコンテンツフラグメントエディターの簡単な概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477328/?captions=jpn&learn=on)

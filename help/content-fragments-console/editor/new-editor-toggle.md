@@ -22,4 +22,4 @@ ht-degree: 100%
 
 新しいエディター切替スイッチを使用して、デフォルトの新しいコンテンツフラグメントエディターとクラシックエディターを簡単に切り替える方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477317/?captions=jpn&learn=on)
