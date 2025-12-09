@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: ht
-source-wordcount: '1963'
-ht-degree: 100%
+source-git-commit: dc29a4b7857ee8d1405c9ef8d14f09374c2bfd01
+workflow-type: tm+mt
+source-wordcount: '1962'
+ht-degree: 98%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Manager（AEM）as a Cloud Service との統合については�
 
 AEM は、[Adobe Developer Console で管理される S2S OAuth](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) を使用して、他のアドビ製品と統合されています。サービスアカウントとのカスタム統合の場合、JWT 資格情報が AEM Developer Console で使用および管理されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/342226?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 サービス資格情報が[ローカル開発アクセストークン](./local-development-access-token.md)と似ているように見えるかもしれませんが、いくつかの重要な点で異なります。
 
@@ -124,7 +124,7 @@ JWT の生成に必要な詳細はサービス資格情報で指定されます�
 
 + サービス資格情報が存在する場合、外部アプリケーションは AEM as a Cloud Service にアクセスする際に、ローカル開発アクセストークンではなく、このアクセストークンを使用します
 
-このチュートリアルでは、（1）サービス資格情報からの JWT の生成、（2）1 回の関数呼び出しによるアクセストークンとの交換の両方にアドビの `@adobe/jwt-auth` npm モジュールを使用しています。アプリケーションが JavaScript ベースではない場合は[他の言語のサンプルコード](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)を参照し、サービス資格情報から JWT の作成方法と Abode IMS でのアクセストークンとの交換方法をご確認ください。
+このチュートリアルでは、（1）サービス資格情報からの JWT の生成、（2）1 回の関数呼び出しによるアクセストークンとの交換の両方にアドビの `@adobe/jwt-auth` npm モジュールを使用しています。アプリケーションがJavaScript ベースでない場合は、選択した言語でカスタムコードを作成し、サービス資格情報から JWT を作成して、Adobe IMSでアクセストークンと交換できます。
 
 ## サービス資格情報の読み取り
 
@@ -213,7 +213,7 @@ function getCommandLineParams() {
 
 ## AEM でのアクセス権の設定
 
-サービス資格情報から得られるアクセストークンでは、__寄稿者__ AEM ユーザーグループに属するテクニカルアカウント AEM ユーザーを使用します。
+サービス資格情報から得られるアクセストークンでは、__寄稿者__ AEM ユーザーグループのメンバーシップを持つテクニカルアカウント AEM ユーザーを使用します。
 
 ![サービス資格情報 - テクニカルアカウント AEM ユーザー](./assets/service-credentials/technical-account-user.png)
 
