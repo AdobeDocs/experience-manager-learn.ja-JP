@@ -25,7 +25,7 @@ Adobe Experience Manager（AEM）as a Cloud Service との統合については�
 
 AEM は、[Adobe Developer Console で管理される S2S OAuth](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) を使用して、他のアドビ製品と統合されています。サービスアカウントとのカスタム統合の場合、JWT 資格情報が AEM Developer Console で使用および管理されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342226?captions=jpn&quality=12&learn=on)
 
 サービス資格情報が[ローカル開発アクセストークン](./local-development-access-token.md)と似ているように見えるかもしれませんが、いくつかの重要な点で異なります。
 
