@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+source-git-commit: 6acf7f1d5c91b29a64b372b678f04b7cb880039b
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '566'
 ht-degree: 98%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 98%
       + [ドキュメント構造](edge-delivery-services/developing/document-structure.md)
       + [ローカル開発](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
+      + [設定パイプライン](edge-delivery-services/developing/cloud-manager-configuration-pipeline.md)
       + ユニバーサルエディター {#universal-editor}
          + [概要](./edge-delivery-services/developing/universal-editor/0-overview.md)
          + [新しいコードプロジェクト](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
@@ -171,7 +172,7 @@ ht-degree: 98%
       + [FPID の生成](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Platform Web SDK を使用した分析](integrations/platform/analytics-using-web-sdk.md)
-      + [Adobe Target](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Adobe Experience Platform のタグ {#experience-platform-data-collection-tags}
       + [概要](integrations/experience-platform/data-collection/tags/overview.md)
       + [タグプロパティの作成](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -186,9 +187,9 @@ ht-degree: 98%
       + [クリックされたコンポーネントの Adobe Analytics での追跡](integrations/analytics/track-clicked-component.md)
       + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [概要](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [&#x200B; 設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
-      + [ユースケース](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+      + [概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [ 設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [ユースケース](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 他のユーザーから学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)
    + [AEM サイトでのオーサリングガイドの作成](expert-resources/authoring-guide-in-sites.md)
