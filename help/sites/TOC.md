@@ -188,7 +188,7 @@ ht-degree: 98%
       + [Analysis Workspace でのデータの分析](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [ 設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [&#x200B; 設定 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
       + [ユースケース](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + 他のユーザーから学ぶ {#expert-resources}
    + [概要](expert-resources/learn-from-your-peers-overview.md)

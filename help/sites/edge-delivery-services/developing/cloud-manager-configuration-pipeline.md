@@ -24,4 +24,4 @@ Adobe [Cloud Manager](https://my.cloudmanager.adobe.com) でEdge Delivery設定�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3458975/?learn=on&enablevpops)
 
-設定オプションと形式の概要については [](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds)Edge Delivery設定パイプラインのドキュメントを参照してください。
+設定オプションと形式の概要については [&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds)Edge Delivery設定パイプラインのドキュメントを参照してください。
