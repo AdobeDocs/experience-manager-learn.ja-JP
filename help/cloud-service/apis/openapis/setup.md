@@ -12,10 +12,10 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: ht
-source-wordcount: '1493'
-ht-degree: 100%
+source-git-commit: 2160ed585ebfd958275af9aa8ef0aab750f684ef
+workflow-type: tm+mt
+source-wordcount: '1859'
+ht-degree: 61%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM as a Cloud Service 環境を設定して、OpenAPI ベースの AEM API へのアクセスを有効にする方法を学びます。
 
-この例では、サーバー間認証を使用する AEM Assets API を使った設定プロセスを示します。他の OpenAPI ベースの AEM API でも、同じ手順に従います。
+この例では、{Server-to-Server **認証方式を使用する** 0}AEM Assets API **を使用して、OpenAPI ベースのAEM API のセットアッププロセスを示します。**&#x200B;同様の手順に従って、[ その他の OpenAPI ベースのAEM API](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を設定できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -35,20 +35,26 @@ AEM as a Cloud Service 環境を設定して、OpenAPI ベースの AEM API へ�
 1. ADC プロジェクトの設定。
 1. ADC プロジェクト通信を有効にする AEM インスタンスの設定。
 
+## 前提条件
+
+- Cloud ManagerおよびAEM as a Cloud Service環境へのアクセス
+- Adobe Developer Console（ADC）にアクセスします。
+- `api.yaml` ファイルの API 設定を追加または更新するAEM プロジェクト。
+
 ## AEM as a Cloud Service 環境の最新化。{#modernization-of-aem-as-a-cloud-service-environment}
 
-AEM as a Cloud Service 環境の最新化は、次の手順を含む環境アクティビティごとに 1 回行われます。
+AEM as a Cloud Service環境の最新化は、次の手順を含む **環境ごとに 1 回のアクティビティ** です。 AEM as a Cloud Service環境を既に最新化している場合は、この手順をスキップできます。
 
 - AEM リリース（**2024.10.18459.20241031T210302Z**）以降に更新します。
 - リリース（2024.10.18459.20241031T210302Z）より前に環境が作成された場合は、新しい製品プロファイルを追加します。
 
 ### AEM インスタンスの更新{#update-aem-instance}
 
-AEM インスタンスを更新するには、「Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある&#x200B;_省略記号_&#x200B;アイコンを選択し、「**更新**」オプションを選択します。
+- AEM インスタンスを更新するには、Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) にログインした後、「_環境_」セクションに移動し、環境名の横にある _省略記号_ アイコンを選択して、「**更新**」オプションを選択します。
 
 ![AEM インスタンスの更新](./assets/setup/update-aem-instance.png)
 
-次に、「**送信**」ボタンをクリックし、_推奨_&#x200B;フルスタックパイプラインを実行します。
+- 次に、「**送信**」ボタンをクリックし、_推奨_&#x200B;フルスタックパイプラインを実行します。
 
 ![最新の AEM リリースバージョンの選択](./assets/setup/select-latest-aem-release.png)
 
@@ -56,41 +62,41 @@ AEM インスタンスを更新するには、「Adobe [Cloud Manager](https://m
 
 ### 新しい製品プロファイルの追加{#add-new-product-profiles}
 
-AEM インスタンスに新しい製品プロファイルを追加するには、「Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある&#x200B;_省略記号_&#x200B;アイコンを選択し、「**製品プロファイルの追加**」オプションを選択します。
+- AEM インスタンスに新しい製品プロファイルを追加するには、「Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)」の「_環境_」セクションで、環境名の横にある&#x200B;_省略記号_&#x200B;アイコンを選択し、「**製品プロファイルの追加**」オプションを選択します。
 
 ![新しい製品プロファイルの追加](./assets/setup/add-new-product-profiles.png)
 
-環境名の横にある&#x200B;_省略記号_&#x200B;アイコンをクリックし、**アクセスを管理**／**プロファイルの作成**&#x200B;を選択すると、新しく追加された製品プロファイルを確認できます。
+- 環境名の横にある _省略記号_ アイコンをクリックし、**アクセスを管理**/**オーサープロファイル** を選択して、新しく追加された製品プロファイルを確認します。
 
-_Admin Console_ ウィンドウに、新しく追加された製品プロファイルが表示されます。
+- _Admin Console_ ウィンドウに、新しく追加された製品プロファイルが表示されます。 AEM Assets、AEM Sites、AEM FormsなどのAEMの使用権限に応じて、異なる製品プロファイルが表示される場合があります。 例えば、このケースではAEM Assetsと Sites の使用権限があるので、次の製品プロファイルが表示されます。
 
 ![新しい製品プロファイルの確認](./assets/setup/review-new-product-profiles.png)
 
-上記の手順で、AEM as a Cloud Service 環境の最新化が完了します。
+- 上記の手順で、AEM as a Cloud Service 環境の最新化が完了します。
 
 ## AEM API アクセスの有効化{#enable-aem-apis-access}
 
-_新しい製品プロファイル_&#x200B;が存在すると、Adobe Developer Console（ADC）で OpenAPI ベースの AEM API アクセスが可能になります。[Adobe Developer Console（ADC）](./overview.md#accessing-adobe-apis-and-related-concepts)は、Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。
+_新しい製品プロファイル_ が存在すると、[Adobe Developer Console（ADC） ](https://developer.adobe.com/) で OpenAPI ベースのAEM API アクセスが可能になります。 これらの製品プロファイルがないと、Adobe Developer Console（ADC）で OpenAPI ベースのAEM API を設定することはできません。
 
-新しく追加された製品プロファイルは、_サービス_&#x200B;に関連付けられています。これは、_事前定義されたアクセス制御リスト（ACL）を持つ AEM ユーザーグループ_&#x200B;を表します。_サービス_&#x200B;は、AEM API へのアクセスレベルを制御するために使用されます。
+新しく追加された製品プロファイルは、_サービス_&#x200B;に関連付けられています。これは、_事前定義されたアクセス制御リスト（ACL）を持つ AEM ユーザーグループ_&#x200B;を表します。_サービス_ は、AEM API へのアクセスレベルを制御するために使用されます。 また、製品プロファイルに関連付けられた&#x200B;_サービス_&#x200B;を選択または選択解除して、アクセスレベルを増減することもできます。
 
-また、製品プロファイルに関連付けられた&#x200B;_サービス_&#x200B;を選択または選択解除して、アクセスレベルを増減することもできます。
-
-製品プロファイル名の横にある&#x200B;_詳細を表示_&#x200B;アイコンをクリックして、関連付けを確認します。
+製品プロファイル名の横にある _詳細を表示_ アイコンをクリックして、関連付けを確認します。 次のスクリーンショットでは、**AEM Sites Content Managers - author - Program XXX - Environment XXX** Product Profile と **AEM Sites Content Managers** Service の関連付けを確認できます。 他の製品プロファイルとそのサービスとの関連を確認します。
 
 ![製品プロファイルに関連付けられたサービスの確認](./assets/setup/review-services-associated-with-product-profile.png)
 
 ### AEM API アクセスを有効にする{#enable-aem-assets-apis-access}
 
-デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。新しく追加された **AEM Assets 共同作業者ユーザー - オーサー - プログラム XXX - 環境 XXX** 製品プロファイルまたはAEM Assets API アクセスに使用するその他の製品プロファイルに関連付けましょう。
+この例では、**AEM Assets API** を使用して、OpenAPI ベースのAEM API の設定プロセスを示します。 ただし、デフォルトでは、**AEM Assets API Users** Service は製品プロファイルに関連付けられていません。 目的の製品プロファイルに関連付ける必要があります。
+
+新しく追加された **AEM Assets 共同作業者ユーザー - オーサー - プログラム XXX - 環境 XXX** 製品プロファイルまたはAEM Assets API アクセスに使用するその他の製品プロファイルに関連付けましょう。
 
 ![AEM Assets API Users Service を製品プロファイルを関連付ける](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
 ### サーバー間認証を有効にする
 
-目的の AEM API に対するサーバー間認証を有効にするには、Adobe Developer Console（ADC）を使用して統合を設定しているユーザーを、サービスが関連付けられている製品プロファイルに開発者として追加する必要があります。
+目的の OpenAPI ベースのAEM API に対してサーバー間認証を有効にするには、Adobe Developer Console（ADC）を使用して統合を設定するユーザーを、_サービス_ が関連付けられている _製品プロファイル_ に Developer として追加する必要があります。
 
-例えば、AEM Assets API に対してサーバー間認証を有効にするには、ユーザーを開発者として **AEM Assets 共同作業者ユーザー - オーサー - プログラム XXX - 環境 XXX** 製品ファイルに追加する必要があります。
+例えば、AEM Assets API に対してサーバー間認証を有効にするには、ユーザーを開発者として **AEM Assets Collaborator Users - author - Program XXX - Environment XXX**_Product Profile_ に追加する必要があります。
 
 ![開発者を製品プロファイルに関連付ける](./assets/setup/associate-developer-to-product-profile.png)
 
@@ -100,7 +106,11 @@ _新しい製品プロファイル_&#x200B;が存在すると、Adobe Developer 
 >
 >上記の手順は、目的の AEM API のサーバー間認証を有効にするために重要です。この関連付けがないと、AEM API をサーバー間認証で使用することができません。
 
+上記のすべての手順を実行して、OpenAPI ベースのAEM as a Cloud Service API へのアクセスを有効にするAEM環境を準備しました。 次に、Adobe Developer Console（ADC）プロジェクトを作成して、OpenAPI ベースのAEM API を設定する必要があります。
+
 ## Adobe Developer Console（ADC）プロジェクトの作成。{#adc-project}
+
+Adobe Developer Console（ADC）プロジェクトは、OpenAPI ベースのAEM API の設定に使用します。 [Adobe Developer Console（ADC）](./overview.md#accessing-adobe-apis-and-related-concepts)は、Adobe API、SDK、リアルタイムイベント、サーバーレス関数などにアクセスするための開発者ハブです。
 
 ADC プロジェクトを使用して、目的の API を追加し、その認証を設定して、認証アカウントを製品プロファイルに関連付けます。
 
@@ -125,6 +135,8 @@ ADC プロジェクトを作成するには、次の手順に従います。
 ## ADC プロジェクトの設定{#configure-adc-project}
 
 ADC プロジェクトを作成したら、目的の AEM API を追加し、その認証を設定して、認証アカウントを製品プロファイルに関連付ける必要があります。
+
+この場合、**AEM Assets API** は、OpenAPI ベースのAEM API 設定プロセスを示すために使用されます。 ただし、同様の手順に従って、**AEM Sites API**、**AEM Forms API など、他の OpenAPI ベースのAEM API を追加す** ことができます。 AEMの使用権限によって、Adobe Developer Console（ADC）で使用可能な API が決まります。
 
 1. AEM API を追加するには、「**API を追加**」ボタンをクリックします。
 
@@ -167,15 +179,17 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
 ## ADC プロジェクト通信を有効にする AEM インスタンスの設定{#configure-aem-instance}
 
-AEM インスタンスと通信する ADC プロジェクトのクライアント ID を有効にするには、AEM インスタンスを設定する必要があります。
+次に、上記の ADC プロジェクト通信を有効にするようにAEM インスタンスを設定する必要があります。 この設定では、ADC プロジェクトの ClientID がAEM インスタンスと通信できず、403 Forbidden エラーが発生します。 この設定は、許可されたクライアント ID のみがAEM インスタンスと通信できるようにするファイアウォールルールと考えてください。
 
-それには、API 設定を YAML ファイルで定義し、Cloud Manager の設定パイプラインを使用してデプロイします。YAML ファイルには、AEM インスタンスと通信できる ADC プロジェクトの許可されたクライアント ID が定義されています。
+手順に従って、上記の ADC プロジェクト通信を有効になるようにAEM インスタンスを設定します。
 
-1. AEM プロジェクトで、`config` フォルダーから `api.yaml` ファイルを見つけるか作成します。
+1. ローカルマシンでAEM プロジェクトに移動し（または、まだクローンしていない場合はクローンを作成）、`config` フォルダーを見つけます。
 
-   ![API YAML を見つける](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
+1. AEM プロジェクトで、`api.yaml` フォルダーから `config` ファイルを探すか、作成します。 ここでは、[AEM WKND サイトプロジェクト ](https://github.com/adobe/aem-guides-wknd) を使用して、OpenAPI ベースのAEM API の設定プロセスを示します。
 
-1. 次の設定を `api.yaml` ファイルに追加します。
+   ![API YAML を見つける](./assets/setup/locate-api-yaml.png)
+
+1. ADC プロジェクトのクライアント ID がAEM インスタンスと通信できるように、`api.yaml` ファイルに次の設定を追加します。
 
    ```yaml
    kind: "API"
@@ -196,9 +210,11 @@ AEM インスタンスと通信する ADC プロジェクトのクライアン�
 
 1. 設定変更をコミットし、Cloud Manager パイプラインが接続されているリモート Git リポジトリに変更をプッシュします。
 
-1. Cloud Manager の設定パイプラインを使用して、上記の変更をデプロイします。 また、`api.yaml` ファイルは、コマンドラインツールを使用して RDE にインストールすることもできます。
+1. Cloud Managerで [Config パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) を使用して、上記の変更をデプロイします。
 
    ![YAML のデプロイ](./assets/setup/config-pipeline.png)
+
+`api.yaml` ファイルは、（コマンドラインツールを使用して [](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[ にインストールすることもでき ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files) す。 これは、実稼動環境にデプロイする前に設定変更をテストする場合に役立ちます。
 
 ## 次の手順
 
