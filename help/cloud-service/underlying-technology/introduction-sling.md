@@ -7,12 +7,12 @@ jira: KT-4641
 thumbnail: 32032.jpg
 topic: Architecture
 feature: Sling Model
-role: Architect, Developer
+role: Developer
 level: Beginner
 exl-id: 92afc9c4-3d58-4787-86f6-46495d89c4d4
 duration: 242
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 100%
 
@@ -22,4 +22,4 @@ ht-degree: 100%
 
 オープンソース Adobe Experience Manager の基盤テクノロジースタックの一部である、オープンソースの [!DNL RESTful] フレームワーク、[!DNL Sling] の紹介です。
 
->[!VIDEO](https://video.tv.adobe.com/v/37025?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/32032?quality=12&learn=on)

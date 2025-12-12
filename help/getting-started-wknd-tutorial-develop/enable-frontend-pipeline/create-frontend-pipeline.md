@@ -4,7 +4,7 @@ description: フロントエンドリソースを構築し、AEM as a Cloud Serv
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 100%
 
@@ -83,7 +83,7 @@ __最も重要なこと__&#x200B;は、「__コードロケーション__」フ�
 
 >[!IMPORTANT]
 >
->__スタイルが設定されていない__ WKND サイトが正常に戻り、今回は&#x200B;__フロントエンド__&#x200B;パイプラインの実行がフルスタックのパイプラインよりもずっと速かったことに気づくでしょう。
+>__スタイルが設定されていない__ WKND サイトが正常に戻り、今回は&#x200B;__フロントエンド__&#x200B;パイプライン実行がフルスタックのパイプラインよりもずっと速かったことに気づくでしょう。
 
 ## スタイルの変更と新しい配信パラダイムの検証
 

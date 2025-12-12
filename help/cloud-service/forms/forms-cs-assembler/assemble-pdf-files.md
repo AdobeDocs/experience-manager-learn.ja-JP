@@ -10,8 +10,8 @@ topic: Development
 jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
 duration: 56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 100%
 
@@ -21,13 +21,13 @@ ht-degree: 100%
 
 
 次の手順では、必要なパラメーターを使用して、エンドポイントに対する HTTP POST 呼び出しを行います。 DDX ファイルと PDF ファイルは、リソースファイルとして提供されます。 エンドポイントにはトークンベースの認証があり、リクエストヘッダーでアクセストークンを渡します。
-Assembler サービスを利用するときは、必要な出力を記述するために Document Description XML（DDX）と呼ばれる XML ベースの言語を使用します。DDX は、PDF がドキュメントの構築ブロックを表す宣言的なマークアップ言語です。次の DDX が、要素ソース要素で識別された 2 つの PDF ドキュメントの結合に使用されました。
+アセンブラーサービスを利用するときは、必要な出力を記述するために Document Description XML（DDX）と呼ばれる XML ベースの言語を使用します。DDX は、PDF がドキュメントの構築ブロックを表す宣言的なマークアップ言語です。次の DDX が、要素ソース要素で識別された 2 つの PDF ドキュメントの結合に使用されました。
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">
 <PDF result="doc3.pdf"> 
-	<PDF source="CA-Drivers-Handbook.pdf"/>
- 	<PDF source="CA-Parent-Teen-Handbook.pdf"/>
+  <PDF source="CA-Drivers-Handbook.pdf"/>
+  <PDF source="CA-Parent-Teen-Handbook.pdf"/>
   </PDF>
 </DDX>
 ```

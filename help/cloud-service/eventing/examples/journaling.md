@@ -4,7 +4,7 @@ description: ジャーナルから AEM イベントの初期セットを取得�
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 280
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 87%
@@ -32,8 +32,8 @@ Adobe Developer Console プロジェクト内では、ジャーナル処理に�
 >[!IMPORTANT]
 >
 >このチュートリアルのライブデモエンドポイントは、以前 [Glitch](https://glitch.com/) でホストされていました。 2025 年 7 月をもって、Glitch はホスティングサービスを廃止し、エンドポイントにアクセスできなくなりました。
->&#x200B;>アドビでは、デモを代替プラットフォームに移行する取り組みを積極的に進めています。 チュートリアルのコンテンツは引き続き正確で、更新されたリンクはすぐに提供されます。
->&#x200B;>ご理解とご辛抱をお願いいたします。
+>アドビでは、デモを代替プラットフォームに移行する取り組みを積極的に進めています。 チュートリアルのコンテンツは引き続き正確で、更新されたリンクはすぐに提供されます。
+>ご理解とご辛抱をお願いいたします。
 
 ライブデモエンドポイントが再び使用可能になるまで、独自のアプリケーションを使用します。
 
@@ -41,7 +41,7 @@ Adobe Developer Console プロジェクト内では、ジャーナル処理に�
 
 このチュートリアルを完了するには、次が必要になります。
 
-- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
+- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service 環境。
 
 - [AEM イベント用に設定された Adobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 

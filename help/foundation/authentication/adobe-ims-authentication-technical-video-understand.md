@@ -6,14 +6,14 @@ feature: User and Groups
 doc-type: Technical Video
 jira: KT-781
 topic: Architecture
-role: Architect
+role: Developer
 level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 405
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Adobe Experience Manager では、AEM インスタンスに対する Admin Console サポートと、Managed Services 上の AEM 用 Adobe Identity Management システム（IMS）ベースの認証が導入されています。この統合により、AEM Managed Services のお客様は、1 つの統合 web コンソールですべての Experience Cloud ユーザーを管理できるようになります。AEM インスタンスに関連付けられた製品プロファイルにユーザーとグループを割り当て、特定の AEM インスタンスへのアクセスを一元管理できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/327596?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Adobe Experience Manager IMS 認証のサポートは、「内部」ユーザー（作成者、レビュー担当者、管理者、開発者など）のみが対象で、web サイトの訪問者など外部のエンドユーザーには適用されません。
 * [Admin Console](https://adminconsole.adobe.com/) は、AEM Managed Services の顧客を IMS 組織として、AEM インスタンスを製品コンテキストとして表します。Admin Console システムと製品管理者は、定義と管理ができます。

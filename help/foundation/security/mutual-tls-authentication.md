@@ -4,7 +4,7 @@ description: AEM から Mutual Transport Layer Security（mTLS）認証を必要
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Experienced
 jira: KT-13881
 thumbnail: KT-13881.png
@@ -12,8 +12,8 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM から Mutual Transport Layer Security（mTLS）認証を必要とする web API への HTTPS 呼び出しを行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447860?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS または双方向 TLS 認証は、**クライアントとサーバーの両方に相互認証**&#x200B;をリクエストすることで、TLS プロトコルのセキュリティを強化します。この認証は、電子証明書を使用して実行されます。これは、強力なセキュリティと ID 検証が重要なシナリオで一般的に使用されます。
 

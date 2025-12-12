@@ -4,15 +4,15 @@ description: セキュリティを強化し、リスクを軽減するために�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18310
 thumbnail: null
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
-source-git-commit: 71454ea9f1302d8d1c08c99e937afefeda2b1322
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 100%
 

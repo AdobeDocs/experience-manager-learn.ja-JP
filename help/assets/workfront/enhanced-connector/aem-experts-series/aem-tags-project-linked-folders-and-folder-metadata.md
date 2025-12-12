@@ -4,7 +4,7 @@ description: Workfront データを介してアセットで AEM タグを使用�
 version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 jira: KT-9720
 thumbnail: 340333.jpeg
@@ -14,10 +14,10 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 duration: 2633
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '121'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 92%
 
 ---
 
@@ -33,4 +33,4 @@ Workfront データを介してアセットでの AEM タグの使用を促進�
 
 ## 修正
 
-+ __@ 4:34 および 6:20__ AEM タグの構文が正しくありません。 ビデオには `we-retail:apparel/footwear` と表示されます。正しい構文は、`["we-retail:apparel/footwear"]`（またはもっと一般的には `["namespace:tag/childtag"]` ）です。
++ __@ 4:34 および 6 :20__AEM タグの構文が正しくありません。 ビデオには `we-retail:apparel/footwear` と表示されます。正しい構文は、`["we-retail:apparel/footwear"]`（またはもっと一般的には `["namespace:tag/childtag"]` ）です。

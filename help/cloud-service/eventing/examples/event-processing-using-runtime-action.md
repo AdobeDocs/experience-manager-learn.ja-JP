@@ -4,7 +4,7 @@ description: Adobe I/O Runtime アクションを使用して受け取った AEM
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 558
@@ -12,8 +12,8 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
 

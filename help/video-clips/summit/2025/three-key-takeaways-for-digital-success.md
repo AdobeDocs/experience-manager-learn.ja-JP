@@ -4,7 +4,7 @@ description: デジタルエクスペリエンスを最適化するための 3 �
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 39ed523f-abcd-49b5-978f-b795e109d7f5
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 デジタルエクスペリエンスを最適化するための 3 つの主要な原則（基本の修正、AI の活用、戦略的リーダーの強化）について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462042/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)

@@ -4,7 +4,7 @@ description: AEM as a Cloud Service の CDN からキャッシュされた HTTP 
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ AEM as a Cloud Service の CDN からキャッシュされた HTTP 応答をパ�
 
 このチュートリアルでは、「API トークンをパージ」を設定し、セルフサービス機能を使用してサンプル [AEM WKND](https://github.com/adobe/aem-guides-wknd) サイトの CDN キャッシュをパージする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3436925?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
 
 ## キャッシュの無効化と明示的なパージ
 

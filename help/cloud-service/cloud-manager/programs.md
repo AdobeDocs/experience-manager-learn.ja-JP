@@ -7,12 +7,12 @@ jira: KT-6845
 thumbnail: 26313.jpg
 topic: Architecture
 feature: Cloud Manager, Production Programs, Sandbox Programs
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
 duration: 114
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
 
@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Cloud Manager **プログラム**&#x200B;は、ビジネスイニシアチブの論理セットをサポートする AEM 環境セットであり、通常は購入したサービスレベル契約（SLA）に対応しています。例えば、あるプログラムが、グローバルなパブリック web サイトをサポートする AEM リソースを表す一方で、別のプログラムは社内の中核的 DAM を表します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34266?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)

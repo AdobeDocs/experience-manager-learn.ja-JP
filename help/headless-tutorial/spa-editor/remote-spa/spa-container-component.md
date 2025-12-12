@@ -3,7 +3,7 @@ title: 編集可能な React コンテナコンポーネントをリモート SP
 description: AEM オーサーがコンポーネントをドラッグ＆ドロップできるようにする編集可能なコンテナコンポーネントをリモート SPA に追加する方法を学びます。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7635
 thumbnail: kt-7635.jpeg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -347,7 +347,7 @@ SPA が 3 つの編集可能な React コンポーネント（`EditableTitle`、
 1. __テキスト__&#x200B;コンポーネントを&#x200B;__作成__&#x200B;します。
    1. テキストコンポーネントをタップし、__レンチ__&#x200B;アイコンをタップして編集します
    1. 次のテキストを追加します。
-      1. _Right now, you can get 15% on all 1-week adventures, and 20% off on all adventures that are 2 weeks or longer! At checkout, add the campaign code SUMMERISCOMING to get your discounts!_
+      1. _Right now, you can get 15% on all 1-week adventures, and 20% off on all adventures that are 2 weeks or longer! チェックアウト時に、キャンペーンコード「SUMMERISCOMING」を入力して割引を適用してください。_
    1. 「__完了__」をタップします
 
 1. コンポーネントが作成されましたが、垂直方向に積み重ねられて表示されています。
@@ -364,7 +364,7 @@ SPA が 3 つの編集可能な React コンポーネント（`EditableTitle`、
    ![レイアウトコンポーネント](./assets/spa-container-component/layout-components.png)
 
 1. AEM ページエディターで変更内容を&#x200B;__プレビュー__
-1. [http://localhost:3000](http://localhost:3000) でローカルに実行している WKND アプリを更新し、作成した変更を確認します。
+1. [http://localhost:3000](http://localhost:3000) でローカルに実行している WKND アプリを更新して、作成した変更を確認します。
 
    ![SPA のコンテナコンポーネント](./assets/spa-container-component/localhost-final.png)
 

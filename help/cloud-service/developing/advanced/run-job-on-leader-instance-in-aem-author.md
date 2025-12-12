@@ -4,7 +4,7 @@ description: AEM as a Cloud Service のリーダーインスタンスでのジ�
 version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
-role: Architect, Developer
+role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
 exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 100%
 

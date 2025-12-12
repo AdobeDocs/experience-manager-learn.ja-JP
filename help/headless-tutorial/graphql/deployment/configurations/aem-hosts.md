@@ -4,15 +4,15 @@ description: AEM ヘッドレスアプリで AEM ホストを設定する方法�
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1614'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '1610'
 ht-degree: 100%
 
 ---
@@ -162,7 +162,7 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 +++
 
-+++ iOS™ の例
++++ iOS™ の例 
 
 この例は、[AEM ヘッドレス iOS™ アプリの例](../../example-apps/ios-swiftui-app.md)に基づいており、[ビルド固有の設定変数](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)に基づいて様々な AEM ホストに接続するように AEM GraphQL API リクエストを設定する方法を示しています。 
 
@@ -195,7 +195,7 @@ let aemHost: String = try Configuration.value(for: "AEM_HOST")      // publish-p
 let aemHeadlessClient = Aem(scheme: aemScheme, host: aemHost);
 ```
 
-カスタム AEM ヘッドレスクライアント（`api/Aem.swift`）には、AEM GraphQL API リクエストの前に設定済みの AEM `scheme` および `host` を付けるメソッド `makeRequest(..)` が含まれています。
+カスタム AEM ヘッドレスクライアント（`api/Aem.swift`）には、AEM GraphQL API リクエストの前に接頭辞として設定済みの AEM `scheme` および `host` を付けるメソッド `makeRequest(..)` が含まれています。
 
 + `api/Aem.swift`
 
@@ -290,7 +290,7 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ヘッドレスアプリから AEM に対する画像リクエストは、[前述の表](#managing-aem-hosts)で説明したように、正しい AEM サービスとやり取りするように設定する必要があります。
 
-アドビでは、AEM の GraphQL API の `_dynamicUrl` フィールドを通じて入手できる[最適化された画像](../../how-to/images.md)を使用することをお勧めします。`_dynamicUrl` フィールドは、AEM GraphQL API に対するクエリに使用される AEM サービスホストをプレフィックスにできるホストレス URL を返します。GraphQL 応答の `_dynamicUrl` フィールドは次のようになります。
+アドビでは、AEM の GraphQL API の `_dynamicUrl` フィールドを通じて入手できる[最適化された画像](../../how-to/images.md)を使用することをお勧めします。`_dynamicUrl` フィールドは、AEM GraphQL API に対するクエリに使用される AEM サービスホストを接頭辞にできるホストレス URL を返します。GraphQL 応答の `_dynamicUrl` フィールドは次のようになります。
 
 ```json
 {
@@ -302,7 +302,7 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ### 例
 
-様々なヘッドレスアプリフレームワークに設定可能になっている AEM ホスト値に、画像 URL でプレフィックスを付ける方法の例を以下に示します。この例では、`_dynamicUrl` フィールドを使用して画像参照を返す GraphQL クエリを使用することを想定しています。
+様々なヘッドレスアプリフレームワークに設定可能になっている AEM ホスト値に、画像 URL で接頭辞を付ける方法の例を以下に示します。この例では、`_dynamicUrl` フィールドを使用して画像参照を返す GraphQL クエリを使用することを想定しています。
 
 次に例を示します。
 
@@ -347,7 +347,7 @@ query ($path: String!) {
 
 この例では、[AEM ヘッドレス React アプリの例](../../example-apps/react-app.md)に基づいて、環境変数に基づく適切な AEM サービスに接続するように画像 URL を設定する方法を説明します。
 
-この例では、画像参照の `_dynamicUrl` フィールドのプレフィックスを設定可能な `REACT_APP_AEM_HOST` React 環境変数に設定する方法を示しています。
+この例では、画像参照の `_dynamicUrl` フィールドの接頭辞を設定可能な `REACT_APP_AEM_HOST` React 環境変数に設定する方法を示しています。
 
 #### React 環境ファイル
 
@@ -379,7 +379,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### React コンポーネント
 
-React コンポーネントは、`REACT_APP_AEM_HOST` 環境変数を読み込みし、画像 `_dynamicUrl` の値をプレフィックスして、完全に解決可能な画像 URL を提供します。
+React コンポーネントは、`REACT_APP_AEM_HOST` 環境変数を読み込みし、画像 `_dynamicUrl` の値を接頭辞して、完全に解決可能な画像 URL を提供します。
 
 この同じ `REACT_APP_AEM_HOST` 環境変数は、AEM から GraphQL データを取得するために使用する `useAdventureByPath(..)` カスタム useEffect フックで使用される、AEM ヘッドレスのクライアントを初期化するのに使用されます。同じ変数を使用して GraphQL API リクエストを画像 URL として作成し、React アプリが両方のユースケースで同じ AEM サービスとやり取りできるようにします。
 
@@ -446,7 +446,7 @@ class Aem: ObservableObject {
 
 #### iOS ビュー
 
-iOS ビューは、完全に解決可能な画像 URL を提供するために、画像 `_dynamicUrl` の値をプレフィックスします。
+iOS ビューは、完全に解決可能な画像 URL を提供するために、画像 `_dynamicUrl` の値を接頭辞します。
 
 + `WKNDAdventures/Views/AdventureListItemView.swift`
 
@@ -512,7 +512,7 @@ android {
 
 #### AEM 画像の読み込み
 
-Android™ では、`ImageGetter` を使用して、AEM から画像データを取得し、ローカルにキャッシュします。 `prepareDrawableFor(..)` では、アクティブなビルド設定で定義された AEM サービスホストを使用して、画像パスのプレフィックスとして AEM への解決可能な URL を作成します。
+Android™ では、`ImageGetter` を使用して、AEM から画像データを取得し、ローカルにキャッシュします。 `prepareDrawableFor(..)` では、アクティブなビルド設定で定義された AEM サービスホストを使用して、画像パスの接頭辞として AEM への解決可能な URL を作成します。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/RemoteImagesCache.java`
 

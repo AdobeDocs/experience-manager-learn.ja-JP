@@ -10,8 +10,8 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Apache web サーバーは、`Include` または `IncludeOptional` ステート�
 | ファイル | ファイルの保存先 | 説明 |
 | --- | --- | --- |
 | ファイル名`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache モジュールは、その設定を `*.any` ファイルから取得します。デフォルトの親インクルードファイルは `conf.dispatcher.d/dispatcher.any` です。 |
-| ファイル名`_farm.any` | ステージング：`/etc/httpd/conf.dispatcher.d/available_farms/`<br>アクティブ：`/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>メモ：</b>これらのファームファイルは、`enabled_farms` フォルダーにはコピーされませんが、`available_farms/*_farm.any` ファイルの相対パスへの `symlinks` を使用します。<br/>`*_farm.any` ファイルは、`conf.dispatcher.d/dispatcher.any` ファイル内に含まれます。これらの親 farm ファイルは、レンダリングまたは web サイトタイプごとにモジュールの動作を制御するために存在します。 ファイルは `available_farms` ディレクトリに作成され、`enabled_farms` ディレクトリへの `symlink` によって有効にされます。<br/>`dispatcher.any` ファイルから名前でそれらを自動的に含めます。<br/><b>ベースライン</b> farm ファイルは、最初に読み込まれるようにするために `000_` から始まります。<br><b>カスタム</b> farm ファイルは、適切なインクルード動作を保証するために `100_` で番号スキームを開始してから必要があります。 |
+| ファイル名`_farm.any` | ステージング：`/etc/httpd/conf.dispatcher.d/available_farms/`<br>アクティブ：`/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>メモ：</b>これらのファームファイルは、`enabled_farms` フォルダーにはコピーされませんが、`available_farms/*_farm.any` ファイルの相対パスへの `symlinks` を使用します。<br/>`*_farm.any` ファイルは、`conf.dispatcher.d/dispatcher.any` ファイル内に含まれます。これらの親 farm ファイルは、レンダリングまたは web サイトタイプごとにモジュールの動作を制御するために存在します。 ファイルは `available_farms` ディレクトリに作成され、`enabled_farms` ディレクトリへの `symlink` によって有効にされます。<br/>`dispatcher.any` ファイルから名前でそれらを自動的に含めます。<br/><b>ベースライン</b> farm ファイルは、最初に読み込まれるようにするために `000_` から始まります。<br><b>カスタム</b> farm ファイルは、適切なインクルード動作を保証するために `100_` で番号スキームを開始してから必要があります。 | |
 | ファイル名`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` ファイルは `conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内から取り込まれます。各 farm には、どのトラフィックをフィルターで除外し、レンダラーに送信しないかを変更する一連のルールがあります。 |
 | ファイル名`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` ファイルは `conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内からインクルードされます。これらのファイルは、BLOB マッチングによって照合されて、そのリクエストを処理するためのレンダラーを決定するホスト名または URI パスのリストです。 |
 | FILENAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` ファイルは、`conf.dispatcher.d/enabled_farms/*_farm.any` ファイル内からインクルードされます。これらのファイルは、キャッシュされる項目とキャッシュされない項目を指定します。 |

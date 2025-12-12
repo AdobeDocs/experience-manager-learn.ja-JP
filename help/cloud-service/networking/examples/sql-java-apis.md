@@ -4,15 +4,15 @@ description: Java™ SQL API と出力ポートを使用して、AEM as a Cloud 
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 duration: 124
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '295'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '291'
 ht-degree: 100%
 
 ---

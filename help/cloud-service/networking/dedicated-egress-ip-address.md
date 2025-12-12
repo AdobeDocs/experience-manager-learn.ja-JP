@@ -4,15 +4,15 @@ description: 専用のエグレス IP アドレスを設定して使用する方
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 100%
 
@@ -84,7 +84,7 @@ Cloud Manager を使用すると、専用エグレス IP アドレスを有効�
 Cloud Manager API を使用すると、専用エグレス IP アドレスを有効にすることができます。次の手順では、Cloud Manager API を使用して AEM as a Cloud Service で専用エグレス IP アドレスを有効にする方法の概要について説明します。
 
 
-1. まず、Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細ネットワークが必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細ネットワークが必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、本番環境が存在する地域が使用されます。
 
    [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 

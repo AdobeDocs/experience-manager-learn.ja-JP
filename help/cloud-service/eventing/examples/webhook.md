@@ -4,7 +4,7 @@ description: Web フックで AEM イベントを受け取り、イベントの�
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 358
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 00301753eae983a17160b783a9b166537baf5ee0
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 67%
@@ -24,7 +24,7 @@ ht-degree: 67%
 Web フックで AEM イベントを受け取り、イベントの詳細（ペイロード、ヘッダー、メタデータなど）を確認する方法を学びます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3449749?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 
 >[!IMPORTANT]
@@ -40,7 +40,7 @@ Adobeが提供するサンプル Webhook を使用する代わりに、独自の
 
 このチュートリアルを完了するには、次が必要になります。
 
-- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service環境。
+- [AEM イベント処理が有効](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)になっている AEM as a Cloud Service 環境。
 
 - [AEM イベント用に設定された Adobe Developer Console プロジェクト](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
@@ -55,7 +55,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 - Web フックに一意の名前（例：`<YOUR_PETS_NAME>-aem-eventing`）を入力し、「**Connect**」をクリックします。「`Connected to: ${YOUR-WEBHOOK-URL}`」というメッセージが画面に表示されます。
 
-  ![Webhook エンドポイントの作成 &#x200B;](../assets/examples/webhook/create-webhook-endpoint.png)
+  ![Webhook エンドポイントの作成 ](../assets/examples/webhook/create-webhook-endpoint.png)
 
 - **Web フック URL** をメモします。この情報は、このチュートリアルの後半で必要になります。
 
@@ -79,7 +79,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 - Adobeが提供するサンプル Webhook ページにGET リクエストが表示されます。これは、Webhook URL を検証するためにAdobe I/O Eventsから送信されるチャレンジリクエストです。
 
-  ![Webhook - チャレンジリクエスト &#x200B;](../assets/examples/webhook/webhook-challenge-request.png)
+  ![Webhook - チャレンジリクエスト ](../assets/examples/webhook/webhook-challenge-request.png)
 
 
 ## AEM イベントをトリガー
@@ -94,7 +94,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 上記の手順を完了すると、AEM イベントが web フックに配信されているのを確認できます。Adobeが提供するサンプル Webhook ページで POST リクエストを探します。
 
-![Webhook - POST リクエスト &#x200B;](../assets/examples/webhook/webhook-post-request.png)
+![Webhook - POST リクエスト ](../assets/examples/webhook/webhook-post-request.png)
 
 POST リクエストの主な詳細を次に示します。
 

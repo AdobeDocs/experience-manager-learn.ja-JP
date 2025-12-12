@@ -4,7 +4,7 @@ description: アドビが管理する CDN を使用する AEM as a Cloud Service
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 1042
@@ -12,8 +12,8 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 
@@ -46,7 +46,7 @@ Adobe コンテンツ配信ネットワーク（CDN）を使用する AEM as a C
 
 ## SSL 証明書の生成
 
->[!VIDEO](https://video.tv.adobe.com/v/3441468?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 以下 2 つのオプションがあります。
 

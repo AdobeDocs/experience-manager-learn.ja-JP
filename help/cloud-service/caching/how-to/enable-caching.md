@@ -4,7 +4,7 @@ description: AEM as a Cloud Service の CDN で HTTP 応答のキャッシュを
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-11-17T00:00:00Z
@@ -12,9 +12,9 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '637'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '631'
 ht-degree: 100%
 
 ---

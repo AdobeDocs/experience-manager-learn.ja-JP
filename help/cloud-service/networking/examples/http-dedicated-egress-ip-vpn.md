@@ -4,15 +4,15 @@ description: AEM as a Cloud Service から、専用エグレス IP アドレス�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 70
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '228'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '224'
 ht-degree: 100%
 
 ---

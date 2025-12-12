@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '855'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '854'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 100%
 
 ## Dynamic Media の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/35065?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 ## AEM Sites での使用
 
->[!VIDEO](https://video.tv.adobe.com/v/35066?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 100%
 
 ## 混在メディアコレクションの作成
 
->[!VIDEO](https://video.tv.adobe.com/v/35067?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ ht-degree: 100%
 
 ## 画像プリセット
 
->[!VIDEO](https://video.tv.adobe.com/v/34500?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 このビデオでは、画像プリセットの概要と作成方法を説明します。画像プリセットは、URL で画像がリクエストされるたびにその画像に適用される一連の Image Server 引数に対する URL 短縮機能です。画像プリセットを拡張および編集するための貴重なテクニックを学びます。
 
@@ -84,7 +84,7 @@ ht-degree: 100%
 
 ## 高度な URL 修飾子
 
->[!VIDEO](https://video.tv.adobe.com/v/34494?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 このビデオでは、Dynamic Media の URL 修飾子を使用して、画像のサイズ変更にとどまらず、背景の透明度、組み込みクリッピングパス、切り抜き、変数としてのテキストなどのソースファイル自体の機能を活用する方法を説明します。
 
@@ -96,7 +96,7 @@ ht-degree: 100%
 
 ## JPEG ファイルサイズ管理
 
->[!VIDEO](https://video.tv.adobe.com/v/35216?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ ht-degree: 100%
 
 ## クローズドキャプション
 
->[!VIDEO](https://video.tv.adobe.com/v/34417?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 クローズドキャプションを Dynamic Media ビデオに容易に追加するには、コピー URL を追加して、追加のクローズドキャプションファイルドキュメント（任意のビデオの CC 情報を含む web.VTT サイドカーファイル）を指定します。
 
@@ -115,4 +115,8 @@ ht-degree: 100%
 
 このビデオでは、画像の忠実性を維持するために画像のシャープニングが重要な理由と、詳細設定を使用して完全な画像を作成する方法を説明します。
 
->[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&amp;config=/etc/dam/presets/viewer/Video_social&amp;serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&amp;contenturl=%2F&amp;config2=/etc/dam/presets/analytics&amp;videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&amp;posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+<!--
+This link is broken
+
+>[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+-->

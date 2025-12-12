@@ -4,7 +4,7 @@ description: AEM プロジェクトを構築およびデプロイする際に、
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
 exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 100%
 

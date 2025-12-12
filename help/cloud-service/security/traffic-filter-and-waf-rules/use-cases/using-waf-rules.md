@@ -4,7 +4,7 @@ description: AEM as a Cloud Service でアドビの推奨される web アプリ
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
@@ -12,7 +12,7 @@ badgeLicense: label="ライセンスが必要です" type="positive" before-titl
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 100%
@@ -30,7 +30,7 @@ AEM as a Cloud Service で&#x200B;_アドビの推奨される_  **web アプ�
 > WAFトラフィックフィルタールールには、追加の **WAF-DDoS 保護**&#x200B;または&#x200B;**拡張セキュリティ**&#x200B;のライセンスが必要です。Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469431/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学習目標
 

@@ -4,7 +4,7 @@ description: ModSecurity を有効にして、OWASP ModSecurity Core Rule Set（
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect
+role: Admin, Developer
 level: Experienced
 jira: KT-10385
 thumbnail: KT-10385.png
@@ -12,8 +12,8 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 ModSecurity を有効にして、Adobe Experience Manager（AEM）パブリッシュ Dispatcher 上で **OWASP ModSecurity Core Rule Set（CRS）**&#x200B;を使用してサイトをサービス拒否（DoS）攻撃から保護する方法を説明します。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3452123?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
 
 ## 概要
 
@@ -240,7 +240,7 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ## デプロイ
 
-ローカルで検証した Dispatcher 設定を、Cloud Manager の [web 層](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=ja#web-tier-config)または[フルスタック](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=ja#full-stack-code)パイプラインを使用してデプロイします。また、[迅速な開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)を使用して、短期間で開発することもできます。
+ローカルで検証した Dispatcher 設定を、Cloud Manager の [web 層](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=ja#web-tier-config)または[フルスタック](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=ja#full-stack-code)パイプラインを使用してデプロイします。また、[高速開発環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=ja)を使用して、短期間で開発することもできます。
 
 ## 確認
 

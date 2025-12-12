@@ -4,7 +4,7 @@ description: OAuth サーバー間認証を使用してカスタムアプリケ�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 jira: KT-16516
@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 97%
@@ -82,7 +82,7 @@ ADC プロジェクトの設定手順は、[OpenAPI ベースの AEM API の設�
    ![API の追加](../assets/s2s/add-api.png)
 
 1. _API を追加_ ダイアログで、_Experience Cloudでフィルタリングし_ 「**AEM Assets オーサー API**」カードを選択して、「**次へ**」をクリックします。
-別の OpenAPI ベースのAEM API が必要な場合は、[Adobe Developer ドキュメント &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を参照して、ユースケースに一致する API を見つけます。
+別の OpenAPI ベースのAEM API が必要な場合は、[Adobe Developer ドキュメント ](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を参照して、ユースケースに一致する API を見つけます。
 
    以下の例では、**AEM Assets オーサー API** を追加する手順について説明します。
 

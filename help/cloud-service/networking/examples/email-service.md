@@ -4,15 +4,15 @@ description: エグレスポートを使用してメールサービスに接続�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
 duration: 76
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '334'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '330'
 ht-degree: 100%
 
 ---

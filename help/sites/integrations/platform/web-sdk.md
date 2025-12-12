@@ -4,7 +4,7 @@ description: AEM Sites as a Cloud Service と Experience Platform Web SDK を統
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
-role: Admin, Architect, Data Architect, Developer
+role: Admin, Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
@@ -14,8 +14,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 100%
 
@@ -71,15 +71,15 @@ Experience Platform Web SDK を統合するには、次の操作が必要です�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
 
-[データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=ja)ページにアクセスして、データ ストリームの概念と、データのガバナンスや構成などの関連トピックを理解します。
+[データストリームの概要](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=ja)ページにアクセスして、データストリームの概念と、データガバナンスおよび設定などの関連トピックを理解します。
 
 ## タグプロパティの作成 - Experience Platform
 
 Experience Platform でタグのプロパティを作成し、Web SDK JavaScript ライブラリを WKND web サイトに追加する方法について説明します。 新しく定義されたタグプロパティには、次のリソースが含まれています。
 
 + タグ拡張：[コア](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)および [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ データ要素：WKND サイトの Adobe Client Data Layer を使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。 また、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に「[XDM スキーマを作成](#create-xdm-schema---experience-platform)」手順で作成）。
-+ ルール：Adobe Client Data Layer がトリガーする `cmp:show` イベントを使用して、WKND web ページにアクセスするたびに、Platform Edge Network にデータを送信します。
++ データ要素：WKND サイトのアドビクライアントデータレイヤーを使用して page-name、site-section、host-name を抽出するカスタムコードタイプのデータ要素。 また、新しく作成した WKND XDM スキーマビルドインに準拠する XDM オブジェクトタイプのデータ要素（以前に「[XDM スキーマを作成](#create-xdm-schema---experience-platform)」手順で作成）。
++ ルール：アドビクライアントデータレイヤーがトリガーする `cmp:show` イベントを使用して、WKND web ページにアクセスするたびに、Platform Edge Network にデータを送信します。
 
 **公開フロー**&#x200B;を使用してタグライブラリをビルドおよび公開する際に、「**変更されたすべてのリソースを追加**」ボタンを使用できます。 個々のリソースを識別して選択する代わりに、データ要素、ルール、タグ拡張機能などのすべてのリソースを選択します。 また、開発フェーズでは、ライブラリを&#x200B;_開発環境_&#x200B;のみに公開し、検証して&#x200B;_ステージング_&#x200B;環境または&#x200B;_実稼動_&#x200B;環境に昇格することもできます。
 
@@ -88,7 +88,7 @@ Experience Platform でタグのプロパティを作成し、Web SDK JavaScript
 
 >[!TIP]
 >
->ビデオに示されているデータ要素とルールイベントコードは参照用に利用できます。**以下のアコーディオン要素を展開**&#x200B;してください。 ただし、Adobe Client Data Layer を使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用するという概念は引き続き適用されます。
+>ビデオに示されているデータ要素とルールイベントコードは参照用に利用できます。**以下のアコーディオン要素を展開**&#x200B;してください。 ただし、アドビクライアントデータレイヤーを使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用するという概念は引き続き適用されます。
 
 
 +++ データ要素とルールイベントコード
@@ -170,7 +170,7 @@ Experience Platform でタグのプロパティを作成し、Web SDK JavaScript
 
 [タグの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/home) では、データ要素、ルール、エクステンションなどの重要な概念に関する詳細な知識を提供します。
 
-AEM Core Components と Adobe Client Data Layer の統合に関する追加情報については、[AEM コアコンポーネントでの Adobe Client Data Layer の使用ガイド](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)を参照してください。
+AEM Core Components とアドビクライアントデータレイヤーの統合に関する追加情報については、[AEM コアコンポーネントでのアドビクライアントデータレイヤーの使用ガイド](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)を参照してください。
 
 ## タグプロパティを AEM に接続
 
@@ -190,7 +190,7 @@ Adobe Experience Platform Debugger の [Chrome](https://chrome.google.com/websto
 + Platform Web SDK ライブラリのバージョン、データストリーム ID
 + Experience Platform Web SDK の一部の `events` 属性としての XDM オブジェクト
 
->[!VIDEO](https://video.tv.adobe.com/v/3454494?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
 
 ## データセットの作成 - Experience Platform
 
@@ -222,7 +222,7 @@ AEM（特に WKND サイト）で Web SDK を設定したら、サイトペー�
 
 ## その他のリソース
 
-+ [コアコンポーネントでの Adobe Client Data Layer の使用](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
++ [コアコンポーネントでのアドビクライアントデータレイヤーの使用](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
 + [Experience Platform データ収集タグと AEM の統合](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
 + [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/ja/docs/platform-learn/data-collection/web-sdk/overview)
 + [データ収集チュートリアル](https://experienceleague.adobe.com/ja/docs/platform-learn/data-collection/overview)

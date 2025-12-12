@@ -3,11 +3,11 @@ title: AEM Dispatcher Cache のチュートリアル
 description: このチュートリアルの目的は、Dispatcher の仕組みと使用方法をより深く理解することです。
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Beginner
 doc-type: Catalog
 exl-id: 9780870e-9ac6-46f9-abc4-87c9470ef7e7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 100%

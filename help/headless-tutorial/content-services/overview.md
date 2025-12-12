@@ -8,10 +8,10 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -25,9 +25,9 @@ AEM コンテンツサービスでは、AEM Sitesで web ページの作成に�
 
 AEM を使用してコンテンツを構築および表示し、ネイティブモバイルアプリで使用する方法を、ヘッドレス CMS シナリオで示すエンドツーエンドのチュートリアルです。
 
->[!VIDEO](https://video.tv.adobe.com/v/35436?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
-このチュートリアルでは、AEM コンテンツサービスを使用して、イベント情報（音楽、パフォーマンス、アートなど）を表示するモバイルアプリのエクスペリエンスを強化する方法について説明します。 これは WKND チームによってキュレーションされます。
+このチュートリアルでは、AEM コンテンツサービスを使用して、WKND チームがキュレーションしたイベント情報（音楽、パフォーマンス、アートなど）を表示するモバイルアプリのエクスペリエンスを強化する方法について説明します。
 
 このチュートリアルでは、次のトピックについて説明します。
 

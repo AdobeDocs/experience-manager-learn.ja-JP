@@ -4,7 +4,7 @@ description: フルスタック AEM プロジェクトを更新してフロン�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 # フルスタック AEM プロジェクトを更新して、フロントエンドパイプラインを使用する {#update-project-enable-frontend-pipeline}
 
-この章では、__WKND Sites プロジェクト__&#x200B;の設定を変更して、完全なフルスタックパイプラインの実行を要求するのではなく、フロントエンドパイプラインを使用して JavaScript と CSS をデプロイします。これにより、フロントエンドアーティファクトとバックエンドアーティファクトの開発とデプロイメントのライフサイクルを切り離し、より迅速で反復的な開発プロセス全体を実現することができます。
+この章では、__WKND Sites プロジェクト__&#x200B;の設定を変更して、完全なフルスタックパイプライン実行を要求するのではなく、フロントエンドパイプラインを使用して JavaScript と CSS をデプロイします。これにより、フロントエンドアーティファクトとバックエンドアーティファクトの開発とデプロイメントのライフサイクルを切り離し、より迅速で反復的な開発プロセス全体を実現することができます。
 
 ## 目的 {#objectives}
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## フルスタック AEM プロジェクトの設定変更の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/3453610?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 前提条件 {#prerequisites}
 
@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ## 注意 - 「_フロントエンドパイプラインを有効にする_」ボタン
 
-[パネルセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=ja)の「[サイト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=ja)」オプションでサイトルートまたはサイトページを選択すると、「**フロントエンドパイプラインを有効にする**」ボタンが表示されます。「**フロントエンドパイプラインを有効にする**」ボタンをクリックすると、上記の **Sling 設定**&#x200B;が上書きされるので、Cloud Manager パイプラインを実行して上記の変更をデプロイした後は、**このボタンをクリックしないでください**。
+[パネルセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=ja)の「[サイト](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=ja)」オプションでサイトルートまたはサイトページを選択すると、「**フロントエンドパイプラインを有効にする**」ボタンが表示されます。「**フロントエンドパイプラインを有効にする**」ボタンをクリックすると、上記の **Sling 設定**&#x200B;が上書きされるので、Cloud Manager パイプライン実行によって上記の変更をデプロイした後は、**このボタンをクリックしないでください**。
 
 ![「フロントエンドパイプラインを有効にする」ボタン](assets/enable-front-end-Pipeline-button.png)
 

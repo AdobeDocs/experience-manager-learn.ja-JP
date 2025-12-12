@@ -4,7 +4,7 @@ description: AEMで URL リダイレクトを実行するための様々なオ�
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development, Administration
 feature: Operations, Dispatcher
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-11466
 last-substantial-update: 2024-10-22T00:00:00Z
@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
-workflow-type: ht
-source-wordcount: '961'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '943'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ URL リダイレクトは、web サイト操作の一環として一般的な側
 
 [AEM（6.x）aka AEM Classic](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/dispatcher-tutorial/chapter-2) と [AEM as a Cloud Service](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/overview/architecture) インフラストラクチャに精通している必要があります。主な違いは次のとおりです。
 
-1. AEM as a Cloud Service には[組み込み CDN](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) がありますが、お客様は AEM の管理による CDN の前に CDN（BYOCDN）を提供できます。
+1. AEM as a Cloud Service には[ビルトインの CDN](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) がありますが、お客様は AEM の管理による CDN の前に CDN（BYOCDN）を提供できます。
 1. オンプレミスまたは Adobe Managed Services（AMS）のどちらの AEM 6.x にも AEM の管理による CDN が含まれていないため、お客様は独自の CDN を用意する必要があります。
 
 他の AEM サービス（AEM オーサー、パブリッシュ、Dispatcher）については、AEM 6.x と AEM as a Cloud Service の間で概念的に似ています。
@@ -34,7 +34,7 @@ AEM の URL リダイレクトソリューションは次のとおりです。
 
 |                                                   | AEM プロジェクトコードとしての管理とデプロイ | マーケティング／コンテンツチームによる変更機能 | AEM as Cloud Service との互換性 | リダイレクトの実行場所 |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
-| [AEM 管理の CDN による Edge](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge／CDN（組み込み） |
+| [AEM 管理の CDN による Edge](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge／CDN（ビルトイン） |
 | [独自の CDN（BYOCDN）による Edge](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge／CDN（BYOCDN） |
 | [Dispatcher 設定としての Apache `mod_rewrite` ルール](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons - リダイレクトマップマネージャ](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |

@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 100%
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントエディターでカスタムフィールドを作成する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437635?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI 拡張機能は、[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) フレームワークを使用して開発する必要があります。これにより、AEM の他の部分と一貫した外観と操作性が維持され、事前に構築された機能の広範なライブラリも備えているので、開発時間が短縮されます。
 
@@ -31,7 +31,7 @@ AEM UI 拡張機能は、[Adobe React Spectrum](https://react-spectrum.adobe.com
 この例では、コンテンツフラグメントエディター内の既存のフィールドをカスタム実装で置き換えます。
 
 | AEM UI 拡張 | 拡張ポイント |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [カスタムフォーム要素のレンダリング](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## 拡張機能の例

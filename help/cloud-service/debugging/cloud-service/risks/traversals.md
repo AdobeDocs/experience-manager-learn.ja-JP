@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service でのトラバーサルの警告
 description: AEM as a Cloud Service でのトラバーサルの警告を軽減する方法を説明します。
 feature: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 jira: KT-10427
 hidefromtoc: true
@@ -11,10 +11,10 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 100%
+ht-degree: 88%
 
 ---
 
@@ -106,9 +106,9 @@ _トラバーサルの警告とは_
 
 </div>
 
-## 1. 分析{#analyze}
+## &#x200B;1. 分析{#analyze}
 
-まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 これを行うには、Cloud Manager から、{target="_blank"}過去 __3 日間__&#x200B;におけるすべての環境（開発、ステージング、実稼動）の[パブリッシュサービスの `aemerror` ログをダウンロードします](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja)。
+まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 これを行うには、Cloud Managerから [ パブリッシュサービスの `aemerror` ログをダウンロード ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja){target="_blank"} 過去 __3 日間）すべての環境（開発、ステージング、実稼動__ から行います。
 
 ![AEM as a Cloud Service ログをダウンロード](./assets/traversals/download-logs.jpg)
 
@@ -151,7 +151,7 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
     ...
 ```
 
-## 2. 調整{#adjust}
+## &#x200B;2. 調整{#adjust}
 
 問題のあるクエリとその呼び出しコードが見つかったら、調整を行う必要があります。 トラバーサルの警告を軽減するために、次の 2 種類の調整を行うことができます。
 
@@ -159,24 +159,24 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __クエリを変更__&#x200B;して、既存のインデックス制限に解決する新しいクエリ制限を追加します。 可能であれば、インデックスを変更するよりもクエリを変更することをお勧めします。
 
-+ [クエリのパフォーマンスを調整する方法を説明します](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
++ [ クエリのパフォーマンスを調整する方法を説明します ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}。
 
 ### インデックスの調整
 
 __AEM インデックスを変更（または作成）__&#x200B;して、既存のクエリ制限をインデックスの更新で解決できるようにします。
 
-+ [既存のインデックスを調整する方法を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
-+ [インデックスの作成方法を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
++ [ 既存のインデックスを調整する方法を学ぶ ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
++ [ インデックスの作成方法を学ぶ ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
 
-## 3. 検証{#verify}
+## &#x200B;3. 検証{#verify}
 
 クエリ、インデックス、またはその両方に対して行われた調整は、トラバーサルの警告を軽減するために検証する必要があります。
 
 ![説明クエリ](./assets/traversals/verify.gif)
 
- [クエリの調整](#adjust-the-query)のみを行う場合、 クエリは Developer Consoleの [説明クエリ ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を介して、AEM as a Cloud Service上で直接テストできます。AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
+[ クエリの調整 ](#adjust-the-query) のみを行う場合、クエリはDeveloper Console [ クエリの説明 ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を介して、AEM as a Cloud Service上で直接テストできます。 AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
 
-[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 インデックスの調整がデプロイされた状態では、Developer Console の[説明クエリ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries) {target="_blank"} で、クエリを実行してさらに調整できます。
+[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 インデックスの調整がデプロイされた状態では、Developer Consoleの [ 説明クエリ ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を使用して、クエリを実行してさらに調整できます。
 
 最終的に、すべての変更（クエリとコード）は Git にコミットされ、Cloud Manager を使用して AEM as a Cloud Serviceにデプロイされます。 デプロイ後、元のトラバーサル警告に関連付けられたコードパスをテストし、トラバーサル警告が `aemerror` ログに表示されないことを確認します。
 

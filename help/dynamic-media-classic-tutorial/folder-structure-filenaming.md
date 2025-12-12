@@ -8,8 +8,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 100%
 
@@ -51,7 +51,7 @@ Dynamic Media Classic のすべての URL とトランザクションは、ア�
 
 - Dynamic Media Classic では、アセットがどのフォルダーにあるかに関わらず、2 つのアセットに同じ名前を付けることはできません。
 - 名前では大文字と小文字が区別されます。例えば、Chair.jpg、chair.jpg および CHAIR.jpg の場合は、3 つの異なるアセット ID が作成されます。
-- ベストプラクティスとして、アセット ID には空白や記号を含めないでください。 スペースや記号を使用すると、これらの文字を URL エンコードする必要があるため、実装がより難しくなります。例えば、スペース「 」は「%20」になります。
+- ベストプラクティスとして、アセット ID には空白やシンボルを含めないでください。 スペースやシンボルを使用すると、これらの文字を URL エンコードする必要があるため、実装がより難しくなります。例えば、スペース「 」は「%20」になります。
 
 命名規則は、基本的には Dynamic Media Classic と統合する方法になります。バックオフィスシステムはクローズドシステムなので、通常、Dynamic Media Classic に統合することはありません。 これは、URL 形式の命令を待つ受動的なパートナーです。
 
@@ -77,7 +77,7 @@ Dynamic Media Classic のすべての URL とトランザクションは、ア�
 | AA123 | 代替ビュー | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |         | 色付きビュー | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
 |         | スウォッチ | AA123_BLU_SW.tif | AA123_BLU_SW |
-|         | 画像セットまたはスウォッチセット |                                             | AA123 または AA123_SET | -- |
+|         | 画像セットまたはスウォッチセット |                                             | AA123 または AA123_SET |
 
 画像セットやスウォッチセットなどのセットコレクションを処理する場合は、セット自体にも一意の名前を付ける必要があります。そのため、この場合、セットにはベース SKU を名前として付けるか、SKU に「_SET」拡張子を付けるとよいでしょう。
 

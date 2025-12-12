@@ -4,7 +4,7 @@ description: OAuth web アプリを使用するカスタム web アプリから�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
@@ -12,8 +12,8 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 100%
 
@@ -49,7 +49,7 @@ WKND PIM アプリは、AEM as a Cloud Service 内に保存された製品属性
 
 Adobe Developer Console（ADC）プロジェクトは、OAuth web アプリ認証を使用して Assets Author API にアクセスするように設定されています。これにより、_authorization_code_ 付与フローを開始するために必要な _client_id_ と _client_secret_ が WKND-PIM web アプリに提供されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442758?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 次の図は、WKND-PIM web アプリが _Assets Author API とやり取りするためのユーザー固有のアクセストークンを取得する_&#x200B;機能フローを示しています。

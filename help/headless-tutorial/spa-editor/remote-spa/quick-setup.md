@@ -3,7 +3,7 @@ title: SPA エディターとリモート SPA のクイックセットアップ
 description: リモート SPA と AEM SPA Editor を 15 分で使い始める方法について説明します。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7629
 thumbnail: 333181.jpg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '726'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 93%
 
 ---
 
@@ -69,7 +69,7 @@ _クイックセットアップの手順を紹介するビデオ_
    # Provide `admin` as the admin user's password
    ```
 
-AEM SDK が開始し、[http://localhost:4502](http://localhost:4502) で自動的に開始します。次の資格情報を使用してログインします。
+AEM SDKが開始し、[http://localhost:4502](http://localhost:4502) に自動的に開始します。 次の資格情報を使用してログインします。
 
 + ユーザー名：`admin`
 + パスワード：`admin`
@@ -79,7 +79,7 @@ AEM SDK が開始し、[http://localhost:4502](http://localhost:4502) で自動�
 このチュートリアルは __WKND 2.1.0+ の__&#x200B;プロジェクト（コンテンツ用）に依存しています。
 
 1. [`aem-guides-wknd.all.x.x.x.zip` の最新バージョンをダウンロードします](https://github.com/adobe/aem-guides-wknd/releases)
-1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) で `admin` 資格情報を使用して AEM SDK のパッケージマネージャーにログインします。
+1. [ の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
 1. 手順 1 でダウンロードした `aem-guides-wknd.all.x.x.x.zip` を&#x200B;__アップロードします__
 1. エントリ `aem-guides-wknd.all-x.x.x.zip` の「__インストール__」ボタンをクリックします
 
@@ -89,7 +89,7 @@ AEM SDK が開始し、[http://localhost:4502](http://localhost:4502) で自動�
 
 1. [ダウンロード ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
 1. [ダウンロード ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) で `admin` 資格情報を使用して AEM SDK のパッケージマネージャーにログインします。
+1. [ の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
 1. 手順 1 でダウンロードした `wknd-app.all.x.x.x.zip` を&#x200B;__アップロードします__
 1. エントリ `wknd-app.all.x.x.x.zip` の「__インストール__」ボタンをクリックします
 1. 手順 2 でダウンロードした `wknd-app.ui.content.sample.x.x.x.zip` を __アップロード__&#x200B;します

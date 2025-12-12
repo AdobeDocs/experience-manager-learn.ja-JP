@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 100%
@@ -27,7 +27,7 @@ AEM Sites のサイトマップを作成して SEO を強化する方法につ�
 >
 >このビデオでは、サイトマップ内の相対 URI の使用について説明します。 サイトマップは、[絶対 URL を使用する必要があります](https://sitemaps.org/protocol.html)。 絶対 URL を有効にする方法については、以下のビデオでは説明していないため、[設定](#absolute-sitemap-urls)を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3454362?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 設定
 

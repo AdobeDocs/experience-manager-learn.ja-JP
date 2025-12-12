@@ -12,8 +12,8 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 100%
 
@@ -55,8 +55,8 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントと GraphQL
    | データタイプ | 名前 | 必須 | オプション |
    |----------|------|----------|---------|
    | コンテンツ参照 | アセット | はい | 必要に応じて、デフォルトの画像を追加します。例：/content/dam/wknd-headless/assets/AdobeStock_307513975.mp4 |
-   | 1 行のテキスト | title（タイトル） | はい |
-   | 1 行のテキスト | 事前タイトル | いいえ |
+   | 1 行のテキスト | title（タイトル） | はい | |
+   | 1 行のテキスト | 事前タイトル | いいえ | |
    | 複数行テキスト | 説明 | いいえ | デフォルトのタイプがリッチテキストであることを確認します |
    | 列挙 | スタイル | はい | ドロップダウンとしてレンダリングします。オプションは、ヒーロー／ヒーローとおすすめ／おすすめです |
 

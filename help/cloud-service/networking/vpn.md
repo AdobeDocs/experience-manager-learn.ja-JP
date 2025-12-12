@@ -4,15 +4,15 @@ description: AEM as a Cloud Service を VPN に接続して、AEM と内部サ�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 100%
 
@@ -111,7 +111,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
 
 Cloud Manager API を使用して、仮想プライベートネットワークを有効にすることができます。次の手順では、Cloud Manager API を使用して AEM as a Cloud Service で VPN を有効にする方法の概要について説明します。
 
-1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細なネットワーク構成が必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、詳細なネットワーク構成が必要な地域を決定します。 `region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、本番環境が存在する地域が使用されます。
 
    [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 
@@ -227,7 +227,7 @@ VPN を作成したので、以下の説明に従って Cloud Manager API を使
 
    `vpn-configure.json` で JSON パラメーターを定義し、`... -d @./vpn-configure.json` を介して cURL に提供します。
 
-   [サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
+[サンプル vpn-configure.json のダウンロード](./assets/vpn-configure.json)
 
    ```json
    {

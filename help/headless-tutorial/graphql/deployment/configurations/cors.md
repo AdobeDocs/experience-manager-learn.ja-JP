@@ -4,16 +4,16 @@ description: AEM GraphQLで使用するためのクロスオリジンリソー�
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2024-03-22T00:00:00Z
 duration: 185
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '603'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '593'
 ht-degree: 100%
 
 ---

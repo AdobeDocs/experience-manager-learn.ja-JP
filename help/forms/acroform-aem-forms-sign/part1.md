@@ -1,14 +1,14 @@
 ---
 title: Acroforms と AEM Forms の連携
 description: Acroform と AEM Forms の統合の第 1 部です。Acroform を使用してアダプティブフォームを作成し、データを結合して PDF を取得する方法を説明します。
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 144
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 100%
 

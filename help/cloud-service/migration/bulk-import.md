@@ -7,13 +7,13 @@ feature: Migration
 jira: KT-6729, KT-14796
 thumbnail: 329680.jpg
 topic: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 712
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 100%
 
@@ -29,11 +29,11 @@ AEM as a Cloud Service の一括読み込みツールを使用すると、管理
 
 [アセットビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=ja)の[一括読み込み](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=ja)を使用して、多数のファイルを AEM Assets に読み込む方法を学びます。統合プロセスを明確でわかりやすくするため、クラウドストレージプロバイダーの例として Dropbox を使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451955/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
 >[!TAB 管理ビュー]
 
->[!VIDEO](https://video.tv.adobe.com/v/341389?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 >[!TIP]
 >

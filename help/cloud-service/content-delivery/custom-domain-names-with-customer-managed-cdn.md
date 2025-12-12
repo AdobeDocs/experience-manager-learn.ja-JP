@@ -4,7 +4,7 @@ description: 顧客が管理する CDN を使用する AEM as a Cloud Service we
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 
 ## SSL 証明書の生成
 
->[!VIDEO](https://video.tv.adobe.com/v/3441468?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 以下 2 つのオプションがあります。
 
@@ -222,7 +222,7 @@ HTTP ヘッダー検証 CDN ルールを設定してデプロイするには、�
 
 ## X-AEM-Edge-Key HTTPヘッダーで秘密鍵を渡す
 
->[!VIDEO](https://video.tv.adobe.com/v/3445046?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
 顧客 CDN を更新して、`X-AEM-Edge-Key` HTTP ヘッダーで秘密鍵を渡すようにします。Adobe CDN では、この秘密鍵を使用して、リクエストが顧客 CDN からのものであることを検証し、`Host` ヘッダーの値を顧客 CDN から受信した`X-Forwarded-Host` の値に変換します。
 

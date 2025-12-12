@@ -4,7 +4,7 @@ description: AEM as a Cloud Service の web に最適化された画像配信 Ja
 version: Experience Manager as a Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
 topic: Performance, Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
@@ -12,8 +12,8 @@ jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
 duration: 352
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 100%
 

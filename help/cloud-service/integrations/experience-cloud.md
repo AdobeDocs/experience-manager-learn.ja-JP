@@ -4,7 +4,7 @@ description: AEM as a Cloud Service でサポートされているその他の A
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations
-role: Leader, Architect, Admin, Developer
+role: Leader, Admin, Developer
 level: Beginner
 jira: KT-10718
 thumbnail: KT-10718.png
@@ -14,7 +14,7 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 99%
@@ -147,9 +147,9 @@ Adobe Target は AEM as a Cloud Service と統合し、AEM のコンテンツを
 
 ### AEM Sites
 
-+ [Adobe Target 統合の設定](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
++ [Adobe Target 統合の設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
 
-+[Personalizationのユースケース &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
++[Personalizationのユースケース ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 
 + エクスペリエンスフラグメントを Target に
 

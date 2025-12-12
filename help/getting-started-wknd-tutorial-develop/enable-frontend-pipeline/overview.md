@@ -4,7 +4,7 @@ description: 標準 AEM プロジェクトのフロントエンドパイプラ�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -15,8 +15,8 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用して作成された [AEM WKND Sites プロジェクト](https://github.com/adobe/aem-guides-wknd)（別名、標準 AEM プロジェクト）を有効にして、CSS、JavaScript、フォント、アイコンなどのフロントエンドリソースをフロントエンドパイプラインを使用してデプロイし、開発からデプロイメントまでのサイクルを高速化する方法を説明します。AEM のフルスタックバックエンド開発からフロントエンド開発を切り離す方法も説明します。また、これらのフロントエンドリソースが AEM リポジトリから&#x200B;__ではなく__ CDN から提供される方法、つまり配信パラダイムの変化についても説明します
 
 
-`ui.frontend` アーティファクトの作成と組み込み CDN へのデプロイのみを行う新しいフロントエンドパイプラインが Adobe Cloud Manager で作成され、AEM にその場所を通知します。AEM で、web ページの HTML 生成時に、`<link>` および `<script>` タグが `href` 属性値のこのアーティファクトの場所を参照します。
+`ui.frontend` アーティファクトの作成とビルトインの CDN へのデプロイのみを行う新しいフロントエンドパイプラインが Adobe Cloud Manager で作成され、AEM にその場所を通知します。AEM で、web ページの HTML 生成時に、`<link>` および `<script>` タグが `href` 属性値のこのアーティファクトの場所を参照します。
 
 ただし、WKND Sites AEM プロジェクトの変換後は、フロントエンド開発者は、独自のデプロイメントパイプラインを持つ、AEM 上のフルスタックバックエンド開発とは別に、または並行して作業を行うことができます。
 

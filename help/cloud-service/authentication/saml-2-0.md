@@ -4,17 +4,17 @@ description: AEM as a Cloud Service パブリッシュサービスで SAML 2.0 �
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '4262'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '4233'
+ht-degree: 99%
 
 ---
 
@@ -56,7 +56,7 @@ AEM パブリッシュ SAML 統合の一般的なフローは次のとおりで�
 
 ## 設定の手順
 
->[!VIDEO](https://video.tv.adobe.com/v/3455328?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 このビデオでは、AEM as a Cloud Service のパブリッシュサービスとの SAML 2.0 統合の設定、および Okta を IDP として使用する方法について説明します。
 
@@ -141,7 +141,7 @@ _認証サービスのキーストアの作成が必要なのは、[SAML 2.0 認
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   _パッケージを使用して次の一時的な回避策を実行します。_
+   パッケージを使用して次の一時的な回避策を使用する（_U） :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する
@@ -228,7 +228,7 @@ AuthnRequest 署名と SAML アサーション暗号化は両方ともオプシ�
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   _パッケージを使用して次の一時的な回避策を実行します。_
+   パッケージを使用して次の一時的な回避策を使用する（_U） :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する

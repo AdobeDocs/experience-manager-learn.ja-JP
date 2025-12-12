@@ -4,7 +4,7 @@ description: PGA TOUR が大規模なトーナメント中に予期しないト�
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -13,8 +13,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 8b13fb6c-f16f-45ba-aca1-c72c7e218b95
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 100%
 

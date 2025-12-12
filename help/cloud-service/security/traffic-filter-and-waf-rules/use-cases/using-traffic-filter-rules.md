@@ -4,14 +4,14 @@ description: AEM as a Cloud Service でアドビの推奨される標準トラ�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 100%

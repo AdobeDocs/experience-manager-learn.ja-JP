@@ -4,7 +4,7 @@ description: セマンティック検索とインテントベースの検出が�
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: c726c62a-d3a9-471f-8091-4fb00010a7d9
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
 

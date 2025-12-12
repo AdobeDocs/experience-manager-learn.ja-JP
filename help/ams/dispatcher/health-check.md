@@ -10,8 +10,8 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 100%
 
@@ -87,7 +87,7 @@ AEM が機能しているかどうかを示すには、基本的なページの�
 ```
 Listen 81
 <VirtualHost *:81>
-    ServerName	"health"
+    ServerName "health"
     ...SNIP...
     ScriptAlias /health/ "/var/www/cgi-bin/health/"
 </VirtualHost>
@@ -101,7 +101,7 @@ Listen 81
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-これらのファイルには、意図的にプレフィックスとして `000_` という名前が付けられています。ライブサイトと同じドメイン名を使用するように、意図的に設定されています。  命名の目的は、AEM バックエンドの 1 つに問題があることがヘルスチェックで検出された場合に、このファイルを有効にすることです。次に、ページのない 503 HTTP 応答コードのみの代わりに、エラーページを表示します。同じ `ServerName` または `ServerAlias` を共有しながら、その `.vhost` ファイルの前に読み込まれるため、通常の `.vhost` ファイルからトラフィックを盗むことになります。その結果、特定のドメイン宛てのページが、通常のトラフィックフローが通過するデフォルトの vhost ではなく、異常な vhost に移動します。
+これらのファイルには、意図的に接頭辞として `000_` という名前が付けられています。ライブサイトと同じドメイン名を使用するように、意図的に設定されています。  命名の目的は、AEM バックエンドの 1 つに問題があることがヘルスチェックで検出された場合に、このファイルを有効にすることです。次に、ページのない 503 HTTP 応答コードのみの代わりに、エラーページを表示します。同じ `ServerName` または `ServerAlias` を共有しながら、その `.vhost` ファイルの前に読み込まれるため、通常の `.vhost` ファイルからトラフィックを盗むことになります。その結果、特定のドメイン宛てのページが、通常のトラフィックフローが通過するデフォルトの vhost ではなく、異常な vhost に移動します。
 
 ヘルスチェックスクリプトを実行すると、現在のヘルスステータスがログアウトされます。  1 分に 1 回、サーバー上で cron ジョブが実行され、ログ内の非正常なエントリを探します。  オーサー AEM インスタンスが正常ではないことが検出されると、シンボリックリンクが有効になります。
 
@@ -128,6 +128,7 @@ RELOAD_MODE='author'
 ```
 
 有効なオプション：
+
 - author
    - これはデフォルトのオプションです。
    - これにより、正常でない場合にオーサー用のメンテナンスページが表示されます。
@@ -142,27 +143,27 @@ RELOAD_MODE='author'
 
 ```
 <VirtualHost *:80>
-	ServerName	unhealthyauthor
-	ServerAlias	${AUTHOR_DEFAULT_HOSTNAME}
-	ErrorDocument	503 /error.html
-	DocumentRoot	/mnt/var/www/default
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride None
-	</Directory>
-	<Directory "/mnt/var/www/default">
-		AllowOverride None
-		Require all granted
-	</Directory>
-	<IfModule mod_headers.c>
-		Header always add X-Dispatcher ${DISP_ID}
-		Header always add X-Vhost "unhealthy-author"
-	</IfModule>
-	<IfModule mod_rewrite.c>
-		ReWriteEngine   on
-		RewriteCond %{REQUEST_URI} !^/error.html$
-		RewriteRule ^/* /error.html [R=503,L,NC]
-	</IfModule>
+    ServerName    unhealthyauthor
+    ServerAlias    ${AUTHOR_DEFAULT_HOSTNAME}
+    ErrorDocument    503 /error.html
+    DocumentRoot    /mnt/var/www/default
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory "/mnt/var/www/default">
+        AllowOverride None
+        Require all granted
+    </Directory>
+    <IfModule mod_headers.c>
+        Header always add X-Dispatcher ${DISP_ID}
+        Header always add X-Vhost "unhealthy-author"
+    </IfModule>
+    <IfModule mod_rewrite.c>
+        ReWriteEngine   on
+        RewriteCond %{REQUEST_URI} !^/error.html$
+        RewriteRule ^/* /error.html [R=503,L,NC]
+    </IfModule>
 </VirtualHost>
 ```
 

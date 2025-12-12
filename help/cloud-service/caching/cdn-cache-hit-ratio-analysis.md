@@ -4,7 +4,7 @@ description: AEM as a Cloud Service が提供する CDN ログを分析する方
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
@@ -12,8 +12,8 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 100%
 

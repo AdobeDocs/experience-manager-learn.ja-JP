@@ -4,7 +4,7 @@ description: Adobe Experience Manager（AEM）の様々なタイプの API に�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Article
 jira: KT-17425
@@ -12,8 +12,8 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 7cd9efb62d1afdcc089e1e6260d6cf2fc5495afe
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 100%
 
@@ -175,15 +175,15 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
 <!-- CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
   {title = Single Page Application (SPA)}
   {description = Learn how to build a Single Page Application (SPA) that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/react-app-card.png}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
   {title = Mobile App}
   {description = Learn how to build a mobile app that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/ios-app-card.png}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
   {title = Web Component}
   {description = Learn how to build a web component that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/web-component-card.png}
@@ -271,11 +271,11 @@ GraphQL API とその使用方法について詳しくは、[AEM ヘッドレス
 <!-- CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
   {title = Using Content Services for Headless App}
   {description = Learn how to build a native mobile app that fetches content from AEM using Content Services RESTful APIs.}
   {image = ./assets/RESTful-Content-Service.png}
-* https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
   {title = Token-based Authentication for RESTful APIs}
   {description = Learn how to invoke RESTful APIs using JSON Web Token (JWT) authentication.}
   {image = ./assets/RESTful-TokenAuth.png}

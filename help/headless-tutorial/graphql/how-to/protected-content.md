@@ -4,14 +4,14 @@ description: AEM ヘッドレスでコンテンツを保護する方法につい
 version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 duration: 254
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 100%
 

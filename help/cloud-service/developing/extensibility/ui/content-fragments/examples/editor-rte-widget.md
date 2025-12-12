@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM コンテンツフラグメントエディターのリッチテキストエディター（RTE）にウィジェットを追加する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447433?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 リッチテキストエディター（RTE）に動的コンテンツを追加するには、**ウィジェット**&#x200B;機能を使用できます。ウィジェットは、シンプルな UI または複雑な UI を RTE に統合するのに役立ち、UI は選択した JS フレームワークを使用して作成できます。これらは、RTE で `{` 特殊キーを押すと開くダイアログと考えることができます。
 
@@ -40,7 +40,7 @@ AEM コンテンツフラグメントエディターのリッチテキストエ�
 この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE にウィジェットを追加します。
 
 | AEM UI 拡張 | 拡張ポイント |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 拡張機能の例

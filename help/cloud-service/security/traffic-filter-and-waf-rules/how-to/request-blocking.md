@@ -4,15 +4,15 @@ description: AEM as a Cloud Service のトラフィックフィルタールー�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18312
 thumbnail: null
 exl-id: 53cb8996-4944-4137-a979-6cf86b088d42
-source-git-commit: 71454ea9f1302d8d1c08c99e937afefeda2b1322
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 100%
 

@@ -4,7 +4,7 @@ description: AEM as a Cloud Service のトラフィックフィルタールー�
 version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 436
@@ -12,8 +12,8 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 100%
 
@@ -115,8 +115,8 @@ DDoS 攻撃から web サイトを保護するために、顧客が実行でき�
                     <p class="is-size-6">AEM as a Cloud Service でアドビの推奨される標準トラフィックフィルタールールを使用して、AEM web サイトを DoS 攻撃、DDoS 攻撃、ボットの不正使用から保護する方法について説明します。</p>
                 </div>
                 <a href="./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ルールを適用</span>
-                </a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">ルールを適用</span>
+                </a>
             </div>
         </div>
     </div>

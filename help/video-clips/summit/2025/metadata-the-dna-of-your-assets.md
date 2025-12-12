@@ -4,7 +4,7 @@ description: メタデータによってワークフロー、検索、インサ�
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 メタデータによってワークフロー、検索、インサイトを推進する方法、および自動化によってメタデータを強化し、ブランド標準に適合させる方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461966/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

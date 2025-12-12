@@ -5,16 +5,16 @@ version: Experience Manager as a Cloud Service
 doc-type: article
 topic: Migration
 feature: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1884'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '1877'
+ht-degree: 97%
 
 ---
 
@@ -26,14 +26,14 @@ AEM as a Cloud Service へのコンテンツの移行に関するよくある質
 
 + **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=ja)
 + **BPA**：[ベストプラクティスアナライザー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=ja)
-+ **CTT**：[コンテンツ転送ツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=ja)
++ **CTT**：[コンテンツトランスファーツール](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=ja)
 + **CAM**：[Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=ja)
 + **IMS**：[Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=ja)
 + **DM**：[Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html?lang=ja)
 
 CTT 関連のアドビのサポートチケットの作成時に詳細を提供するには、以下のテンプレートを使用します。
 
-![コンテンツ移行アドビのサポートチケットテンプレート](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
+![ コンテンツ移行Adobe サポートチケットテンプレート ](../../assets/faq/adobe-support-ticket-template.png) {align="center"}
 
 ## コンテンツ移行に関する一般的な質問
 
@@ -41,7 +41,7 @@ CTT 関連のアドビのサポートチケットの作成時に詳細を提供�
 
 次の 3 つの方法を使用できます
 
-+ コンテンツ転送ツールの使用（AEM 6.3 以降 → AEMaaCS）
++ コンテンツトランスファーツールの使用（AEM 6.3 以降 → AEMaaCS）
 + パッケージマネージャーの使用（AEM → AEMaaCS）
 + 標準で用意されているアセットの一括読み込みサービスの使用（S3／Azure → AEMaaCS）
 
@@ -59,7 +59,7 @@ CTT 関連のアドビのサポートチケットの作成時に詳細を提供�
 
 ### Q：ソースオーサーで抽出し、AEMaaCS オーサーに取り込んでパブリッシュすることをお勧めしますか？
 
-オーサー層とパブリッシュ層の間では、抽出と取り込みを常に 1:1 で実行します。ただし、ソース実稼動オーサーを抽出して、開発、ステージ、実稼動の CS に取り込むこともできます。
+オーサー層とパブリッシュ層の間では、1:1 抽出と取り込みを実行することを常にお勧めします。 ただし、ソース実稼動オーサーを抽出して、開発、ステージ、実稼動の CS に取り込むこともできます。
 
 ### Q：CTT を使用したソース AEM から AEMaaCS へのコンテンツ移行にかかる時間を見積もる方法はありますか。
 
@@ -115,7 +115,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 はい、[検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=ja)機能（CTT の一部）に含まれています。
 
-### Q：お客様は、AEMaaCS Dev から AEMaaCS Stage や AEMaaCS Prod など、AEMaaCS 環境間でコンテンツを移動する必要があります。 これらの使用例でコンテンツ転送ツールを使用できますか？
+### Q：お客様は、AEMaaCS Dev から AEMaaCS Stage や AEMaaCS Prod など、AEMaaCS 環境間でコンテンツを移動する必要があります。 これらの使用例でコンテンツトランスファーツールを使用できますか？
 
 残念ですが、できません。CTT の使用例は、オンプレミス／AMS でホストされている AEM 6.3 以降のソースから AEMaaCS クラウド環境にコンテンツを移行する場合です。 [CTT ドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=ja)。
 
@@ -125,7 +125,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 公開ドキュメントは、学習に基づいて継続的に改善されていますが、いくつかの大まかな問題カテゴリと考えられる基礎的な理由を次に示します。
 
-![AEM as a Cloud Service のコンテンツ移行抽出の問題](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Service コンテンツ移行の抽出の問題 ](../../assets/faq/extraction-issues.jpg) {align="center"}
 
 ### Q：取り込み中にどのような問題が予想されますか？
 
@@ -133,7 +133,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 考えられる問題カテゴリを次に示します（これを唯一のリストとみなさないでください）。
 
-![AEM as a Cloud Service のコンテンツ移行の取り込み問題](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Serviceのコンテンツ移行の取り込み問題 ](../../assets/faq/ingestion-issues.jpg) {align="center"}
 
 
 
@@ -207,7 +207,7 @@ CTT プロセスでは、以下のリソースに接続する必要がありま�
 
 ## その他のリソース
 
-+ [Cloud 内の Experience Manager への移行に関するヒントとテクニック（Summit 2022）](https://business.adobe.com/jp/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html?lang=ja)
++ [Cloud 内の Experience Manager への移行に関するヒントとテクニック（Summit 2022）](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html?lang=ja)
 
 + [CTT エキスパートシリーズビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html?lang=ja)
 

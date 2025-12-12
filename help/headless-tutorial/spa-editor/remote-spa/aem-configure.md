@@ -3,7 +3,7 @@ title: AEM for SPA エディターと Remote SPA を設定
 description: AEM SPA エディターがリモート SPA を作成できるように、設定およびコンテンツ要件を設定するには、AEM プロジェクトが必要です。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7631
 thumbnail: kt-7631.jpeg
@@ -13,8 +13,8 @@ doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
 duration: 297
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 100%
 

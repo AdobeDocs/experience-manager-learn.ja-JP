@@ -4,15 +4,15 @@ description: AEM GraphQL で使用する AEM パブリッシュ Dispatcher フ�
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10829
 thumbnail: kt-10829.jpg
 exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
 duration: 48
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '207'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '200'
 ht-degree: 100%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Manager as a Cloud Service は、AEM パブリッシュ Dispatc
 
 ## Dispatcher フィルター設定
 
-AEM パブリッシュ Dispatcher フィルター設定は、AEM に到達するために許可される URL パターンを定義し、AEM で保持されるクエリエンドポイントの URL プレフィックスを含める必要があります。
+AEM パブリッシュ Dispatcher フィルター設定は、AEM に到達するために許可される URL パターンを定義し、AEM で保持されるクエリエンドポイントの URL 接頭辞を含める必要があります。
 
 | クライアントの接続先 | AEM オーサー | AEM パブリッシュ | AEM プレビュー |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|

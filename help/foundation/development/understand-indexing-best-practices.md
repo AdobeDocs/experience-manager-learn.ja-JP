@@ -6,14 +6,14 @@ sub-product: Experience Manager, Experience Manager Sites
 feature: Search
 doc-type: Article
 topic: Development
-role: Developer, Architect
+role: Developer
 level: Beginner
 duration: 373
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 97%
@@ -41,7 +41,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 - 検索要件を理解し、OOTB インデックスが検索要件をサポートできるかどうかを確認します。 [ローカル SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) および開発者コンソールまたは `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` 経由の AEMCS で利用可能な&#x200B;**クエリパフォーマンスツール**&#x200B;を使用します。
 
-- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=ja)を参考にしてください。
+- 最適なクエリを定義します。[クエリの最適化](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)フローチャートと [JCR クエリチートシート](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)を参考にしてください。
 
 - OOTB インデックスが検索要件をサポートしない場合は、2 つのオプションがあります。 ただし、[効率的なインデックス作成のヒント](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)を確認してください。
    - OOTB インデックスのカスタマイズ：保守とアップグレードが簡単に行える、お勧めのオプション。
@@ -112,7 +112,7 @@ AEM インスタンスのパフォーマンスに影響を与えない、効率�
 
 以下の画像は、`includedPaths` プロパティが特定のパスに設定された `dam:Asset` ノードタイプのカスタムインデックスを示しています。
 
-![DAM のインデックス :Asset ノードタイプ &#x200B;](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![DAM のインデックス :Asset ノードタイプ ](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
 
 ##### 分析
 
@@ -247,7 +247,7 @@ Apache Tika を完全に無効にするには、次の手順に従います。
 
 [Oak Index Definition Generator](https://thomasmueller.github.io/oakTools/indexDefGenerator.html) ツールは、入力クエリに基づいて&#x200B;**インデックス定義を生成する**&#x200B;のに役立ちます。 カスタムインデックスを作成するための良い出発点となります。
 
-[Oak ツール &#x200B;](https://thomasmueller.github.io/oakTools/index.html) には、他のものも含まれます
+[Oak ツール ](https://thomasmueller.github.io/oakTools/index.html) には、他のものも含まれます
 インデックス作成とクエリに関連するユーティリティ（例えば、JSON 形式と XML 形式の間でインデックスを変換する場合）
 XPath クエリを SQL-2 に変換し、インデックスを比較します。
 

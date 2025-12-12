@@ -3,7 +3,7 @@ title: 編集可能なコンポーネントのリモート SPA 動的ルート�
 description: リモート SPA の動的ルートに編集可能なコンポーネントを追加する方法を説明します。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7636
 thumbnail: kt-7636.jpeg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '903'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '902'
+ht-degree: 94%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 
 前の 2 つの章では、編集可能なコンポーネントのコンテンツを SPA のホームビューから、`/content/wknd-app/us/en/` の AEM の対応するリモート SPA ルートページにマッピングしました。
 
-SPA の動的ルートの編集可能なコンポーネントのマッピングの定義は似ていますが、ルートのインスタンスと AEM ページの間で 1 対 1 のマッピングスキームを作成する必要があります。
+SPA の動的ルートの編集可能なコンポーネントのマッピングの定義は似ていますが、ルートのインスタンスとAEMページの間で 1:1 のマッピングスキームを作成する必要があります。
 
 このチュートリアルでは、パスの最後のセグメントである WKND アドベンチャーコンテンツフラグメントの名前の名前を取得し、`/content/wknd-app/us/en/adventure` の下のシンプルなパスにマッピングします。
 
@@ -166,7 +166,7 @@ function AdventureDetailRender(props) {
    ![Bali Adventure Detail のオーサリング](./assets/spa-dynamic-routes/adventure-detail-edit.png)
 
 1. __AEM ページエディターで変更内容をプレビュー__
-1. [http://localhost:3000](http://localhost:3000) でローカルに動作している WKND アプリを更新し、__Bali Surf Camp__ ルートに移動して、オーサリングした変更を確認します。
+1. [http://localhost:3000](http://localhost:3000) でローカルに実行している WKND アプリを更新し、__Bali Surf Camp__ ルートに移動して、オーサリングした変更を確認します。
 
    ![リモートSPA Bali](./assets/spa-dynamic-routes/remote-spa-final.png)
 

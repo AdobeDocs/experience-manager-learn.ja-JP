@@ -4,16 +4,16 @@ description: AEM as a Cloud Service の高度なネットワークオプショ�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
 duration: 85
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '450'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '420'
 ht-degree: 100%
 
 ---

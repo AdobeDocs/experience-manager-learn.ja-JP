@@ -4,15 +4,15 @@ description: フレキシブルポートエグレスをセットアップし使�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 100%
 
@@ -85,7 +85,7 @@ Cloud Manager を使用すると、フレキシブルポートエグレスを有
 
 Cloud Manager API を使用すると、フレキシブルポートエグレスを有効にすることができます。次の手順では、Cloud Manager API を使用してAEM as a Cloud Service でフレキシブルポートエグレスを有効にする方法の概要について説明します。
 
-1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、高度なネットワークが設定されている地域を特定します。`region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、実稼動環境が存在する地域が使用されます。
+1. まず、Cloud Manager API の [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作を使用して、高度なネットワークが設定されている地域を特定します。`region name` は後続の Cloud Manager API 呼び出しを行うために必要です。 通常、本番環境が存在する地域が使用されます。
 
    [Cloud Manager](https://my.cloudmanager.adobe.com) で、[環境の詳細](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)の下にある AEM as a Cloud Service 環境の地域を見つけます。 Cloud Manager に表示される地域名は、Cloud Manager API で使用される[地域コードにマッピング](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments?lang=ja)できます。
 

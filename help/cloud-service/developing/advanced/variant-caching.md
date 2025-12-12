@@ -1,13 +1,13 @@
 ---
 title: AEM as a Cloud Service でのページのバリアントのキャッシュ
 description: ページのバリアントのキャッシュをサポートするために AEM as a Cloud Service を設定および使用する方法について説明します。
-role: Architect, Developer
+role: Developer
 topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 100%
 

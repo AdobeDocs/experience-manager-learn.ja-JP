@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 100%
 
@@ -53,7 +53,7 @@ OpenAI または DALL.E 2 で画像を生成して AEM DAM にアップロード
 この例では、拡張機能ポイント `actionBar` まで拡張して、コンテンツフラグメントコンソールにカスタムボタンを追加します。
 
 | AEM UI 拡張 | 拡張機能ポイント |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [コンテンツフラグメントコンソール](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [アクションバー](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 ## 拡張機能の例

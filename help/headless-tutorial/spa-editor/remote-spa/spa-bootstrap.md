@@ -3,7 +3,7 @@ title: SPA エディター用のリモート SPA のBootstrap
 description: AEM SPA エディターの互換性を確保するためにリモート SPA のブートストラップを行う方法を説明します。
 topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7633
 thumbnail: kt-7633.jpeg
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
 duration: 327
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1167'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -129,7 +129,7 @@ AEM とのやり取りの方法を理解できるように、いくつかの環�
        * @returns true if the SPA request should be re-routed to AEM
        */
        const toAEM = function(path, req) {
-           return path.startsWith('/content') || 
+           return path.startsWith('/content') ||
                path.startsWith('/graphql') ||
                path.endsWith('.model.json')
        }
@@ -320,13 +320,13 @@ AEM コンテナに追加されたコンポーネントの AEM レイアウト�
    $ npm run start
    ```
 
-1. [http://localhost:3000](http://localhost:3000) で SPA を参照します。すべてがうまく表示されるはずです。
+1. [http://localhost:3000](http://localhost:3000) で SPA を参照します。 すべてがうまく表示されるはずです。
 
-![http://localhost:3000 で動作する SPA](./assets/spa-bootstrap/localhost-3000.png)
+![http://localhostで動作する SPA:3000](./assets/spa-bootstrap/localhost-3000.png)
 
 ## AEM SPA エディターで SPA を開く
 
-SPA が [http://localhost:3000](http://localhost:3000) で動作している状態で、AEM SPA エディターを使用して SPA を開きます。SPA ではまだ何も編集できません。AEM での SPA の動作を検証するだけです。
+SPA が [http://localhost:3000](http://localhost:3000) で動作している状態で、AEM SPA エディターを使用して SPA を開きます。 SPA ではまだ何も編集できません。AEM での SPA の動作を検証するだけです。
 
 1. AEM オーサーにログインします。
 1.  __Sites／WKND アプリ／米国／英語__&#x200B;に移動します。
@@ -337,7 +337,7 @@ SPA が [http://localhost:3000](http://localhost:3000) で動作している状�
 1. 右上のモード切り替えボタンを使用して「__プレビュー__」に切り替えます
 1. SPA の周りをクリックします
 
-   ![http://localhost:3000 で実行される SPA](./assets/spa-bootstrap/spa-editor.png)
+   ![http://localhostで動作する SPA:3000](./assets/spa-bootstrap/spa-editor.png)
 
 ## おめでとうございます。
 

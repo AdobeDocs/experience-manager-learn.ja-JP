@@ -4,7 +4,7 @@ description: 最新の Platform Web SDK アプローチを使用して、AEM Sit
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
-role: Admin, Architect, Data Architect, Developer
+role: Admin, Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
@@ -14,8 +14,8 @@ badgeIntegration: label="統合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 100%
 
@@ -118,7 +118,7 @@ Analytics の設定と概念について詳しくは、次のリソースを参�
 
 + ページ名のマッピング先 `eVar5`
 + **pageview** Analytics 呼び出し（またはビーコンを送信）のトリガー
-+ Adobe Client Data Layer を使用した CTA データの収集
++ アドビクライアントデータレイヤーを使用した CTA データの収集
 + CTA ID と名前をそれぞれ `eVar6` および `eVar7` にマッピングします。また、CTA のクリック数は `event7` までカウントされます。
 + **リンククリック** Analytics 呼び出し（またはビーコンを送信）のトリガー
 
@@ -127,7 +127,7 @@ Analytics の設定と概念について詳しくは、次のリソースを参�
 
 >[!TIP]
 >
->このビデオに示されているデータ要素とルールイベントコードは、参照用に利用できます。**下のアコーディオン要素を展開してください**。ただし、Adobe Client Data Layer を使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用するという概念は引き続き適用されます。
+>このビデオに示されているデータ要素とルールイベントコードは、参照用に利用できます。**下のアコーディオン要素を展開してください**。ただし、アドビクライアントデータレイヤーを使用していない場合は、以下のコードを変更する必要がありますが、データ要素を定義してルール定義で使用するという概念は引き続き適用されます。
 
 +++ データ要素とルールイベントコード
 
@@ -214,7 +214,7 @@ Analytics の設定と概念について詳しくは、次のリソースを参�
 
 +++
 
-AEM Core Components と Adobe Client Data Layer の統合に関する追加情報については、[AEM コアコンポーネントでの Adobe Client Data Layer の使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)を参照してください。
+AEM コアコンポーネントとアドビクライアントデータレイヤーの統合に関する追加情報については、[AEM コアコンポーネントでのアドビクライアントデータレイヤーの使用ガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)を参照してください。
 
 
 >[!INFO]
@@ -274,7 +274,7 @@ Adobe Analytics の実装は、マーケティングチームがユーザーの�
 ## その他のリソース
 
 + [Experience Platform Web SDK の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=ja)
-+ [コアコンポーネントでの Adobe Client Data Layer の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
++ [コアコンポーネントでのアドビクライアントデータレイヤーの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=ja)
 + [Experience Platform データ収集タグと AEM の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=ja)
 + [Adobe Experience Platform Web SDK と Edge Network の概要](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=ja)
 + [データ収集チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=ja)

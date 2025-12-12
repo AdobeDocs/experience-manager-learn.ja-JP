@@ -10,10 +10,10 @@ level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,9 @@ ht-degree: 100%
 
 AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM ワークフローの一部として使用できるようになりました。 次のビデオでは、AEM ワークフローでフォームデータモデルステップを設定するのに必要な手順を説明しています。
 
->このビデオで示される機能を使用するには、AEM Forms 6.5.1 が必要です。
+>[!NOTE]
+>
+>このビデオで紹介している機能には、AEM Forms 6.5.1 が必要です。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=12&learn=on)
@@ -38,5 +40,6 @@ AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM �
    * 送信時にワークフローをトリガーするためのアダプティブフォーム。
 * [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled) を開きます。詳細を入力して送信します。 フォーム送信時に、[loanapplication ワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガーされます。
 
-![ ワークフロー ](assets/invokefdm651.PNG)
+![ ワークフロー ](assets/invokefdm651.PNG).
+
 信用スコアが 500 を超える場合、ワークフローは OR 分割コンポーネントを利用して、アプリケーションを管理者にルーティングします。 信用スコアが 500 未満の場合、申し込みは cavery にルーティングされます。

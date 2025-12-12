@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 538
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 100%
 
@@ -44,7 +44,7 @@ RTE バッジの最も一般的なユースケースでは、[RTE ウィジェ�
 この例では、拡張ポイント `rte` まで拡張して、コンテンツフラグメントエディターの RTE にバッジを追加します。
 
 | AEM UI 拡張 | 拡張ポイント |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [コンテンツフラグメントエディター](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [リッチテキストエディターバッジ](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)と[リッチテキストエディターウィジェット](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 拡張機能の例
