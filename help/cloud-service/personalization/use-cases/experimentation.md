@@ -256,7 +256,7 @@ A/B テストの動作を確認するには、[WKND イネーブルメント web
 
 ## その他のリソース
 
-- [A/B テストの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [&#x200B; データストリームの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B テストの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/home)
+- [&#x200B; データストリームの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)

@@ -54,7 +54,7 @@ _直接バイナリアップロード_ アプローチを使用すると、_事�
 
 >[!CAUTION]
 >
->Java では、[aem-upload](https://github.com/adobe/aem-upload) ライブラリに相当するものはありません。 クライアントアプリケーションは、_直接バイナリアップロード_ アプローチを使用するために、Node.js で記述する必要があります。 詳しくは、[Experience Manager Assetsの API と操作 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) ページを参照してください。
+>Java では、[aem-upload](https://github.com/adobe/aem-upload) ライブラリに相当するものはありません。 クライアントアプリケーションは、_直接バイナリアップロード_ アプローチを使用するために、Node.js で記述する必要があります。 詳しくは、[Experience Manager Assetsの API と操作 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) ページを参照してください。
 
 ## サンプルアプリケーション
 
@@ -101,7 +101,7 @@ _直接バイナリアップロード_ アプローチを使用すると、_事�
 
 _aem-upload_ Node.js ライブラリでは [&#x200B; 複数の認証方法 &#x200B;](https://github.com/adobe/aem-upload) がサポートされています。 次の表に、サポートされる _認証方法_ とその目的をまとめます。
 
-| | 基本認証 | [ローカル開発トークン &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [&#x200B; サービス資格情報 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web アプリ &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | 基本認証 | [ローカル開発トークン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [&#x200B; サービス資格情報 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth Web アプリ &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
 | はサポートされていますか？ | &check; | &check; | &check; | &cross; | &cross; | &cross; |
 | 目的 | ローカル開発 | ローカル開発 | 実稼動 | 該当なし | 該当なし | 該当なし |
@@ -180,7 +180,7 @@ _aem-upload_ Node.js ライブラリでは [&#x200B; 複数の認証方法 &#x20
 
 1. service-credentials.json ファイルへのパスを使用して `AEM_SERVICE_CREDENTIALS_FILE` 環境変数を更新します。
 
-1. サービス資格情報のユーザーが、AEM as a Cloud Service環境にアセットをアップロードするために必要な権限を持っていることを確認します。 詳しくは、[AEMでのアクセスの設定 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem) ページを参照してください。
+1. サービス資格情報のユーザーが、AEM as a Cloud Service環境にアセットをアップロードするために必要な権限を持っていることを確認します。 詳しくは、[AEMでのアクセスの設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem) ページを参照してください。
 
 >[!ENDTABS]
 

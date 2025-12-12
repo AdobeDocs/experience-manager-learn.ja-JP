@@ -127,5 +127,5 @@ Tags 設定を適用して、web SDKとパーソナライゼーションロジ�
 
 ## その他のリソース
 
-- [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
+- [Adobe Experience Platform Debugger の概要](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home)
 - [Tags の概要](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/home)
