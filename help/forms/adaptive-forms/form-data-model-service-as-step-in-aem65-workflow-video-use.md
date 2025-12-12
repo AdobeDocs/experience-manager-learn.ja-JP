@@ -30,7 +30,7 @@ AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM �
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 
-*  [こちら](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)の説明に従って、SampleRest.war ファイルを使用して Tomcat を設定します。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは、200 から 800 の間の乱数になります。
+* [こちら](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)の説明に従って、SampleRest.war ファイルを使用して Tomcat を設定します。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは、200 から 800 の間の乱数になります。
 
 * [パッケージマネージャーを使用して AEM にアセットを読み込みます。](assets/aem65-loanapplication.zip)
 * パッケージの内容は次のとおりです。
@@ -40,6 +40,6 @@ AEM Forms 6.4 以降では、フォームデータモデルサービスを AEM �
    * 送信時にワークフローをトリガーするためのアダプティブフォーム。
 * [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled) を開きます。詳細を入力して送信します。 フォーム送信時に、[loanapplication ワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガーされます。
 
-![ ワークフロー ](assets/invokefdm651.PNG).
+![&#x200B; ワークフロー &#x200B;](assets/invokefdm651.PNG).
 
 信用スコアが 500 を超える場合、ワークフローは OR 分割コンポーネントを利用して、アプリケーションを管理者にルーティングします。 信用スコアが 500 未満の場合、申し込みは cavery にルーティングされます。

@@ -55,7 +55,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 - Web フックに一意の名前（例：`<YOUR_PETS_NAME>-aem-eventing`）を入力し、「**Connect**」をクリックします。「`Connected to: ${YOUR-WEBHOOK-URL}`」というメッセージが画面に表示されます。
 
-  ![Webhook エンドポイントの作成 ](../assets/examples/webhook/create-webhook-endpoint.png)
+  ![Webhook エンドポイントの作成 &#x200B;](../assets/examples/webhook/create-webhook-endpoint.png)
 
 - **Web フック URL** をメモします。この情報は、このチュートリアルの後半で必要になります。
 
@@ -79,7 +79,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 - Adobeが提供するサンプル Webhook ページにGET リクエストが表示されます。これは、Webhook URL を検証するためにAdobe I/O Eventsから送信されるチャレンジリクエストです。
 
-  ![Webhook - チャレンジリクエスト ](../assets/examples/webhook/webhook-challenge-request.png)
+  ![Webhook - チャレンジリクエスト &#x200B;](../assets/examples/webhook/webhook-challenge-request.png)
 
 
 ## AEM イベントをトリガー
@@ -94,7 +94,7 @@ Adobeが提供するサンプル Webhook にアクセスするには、次の手
 
 上記の手順を完了すると、AEM イベントが web フックに配信されているのを確認できます。Adobeが提供するサンプル Webhook ページで POST リクエストを探します。
 
-![Webhook - POST リクエスト ](../assets/examples/webhook/webhook-post-request.png)
+![Webhook - POST リクエスト &#x200B;](../assets/examples/webhook/webhook-post-request.png)
 
 POST リクエストの主な詳細を次に示します。
 

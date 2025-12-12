@@ -30,9 +30,9 @@ AEM Forms 6.4 以降では、フォームデータモデルを AEM ワークフ�
 
   >[!NOTE]
   >
-  >AEM Forms 6.5 以降では、[ ここで説明 ](form-data-model-service-as-step-in-aem65-workflow-video-use.md) されているように、この機能は標準で提供されています。
+  >AEM Forms 6.5 以降では、[&#x200B; ここで説明 &#x200B;](form-data-model-service-as-step-in-aem65-workflow-video-use.md) されているように、この機能は標準で提供されています。
 
-*  [こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=ja)の説明に従って、SampleRest.war ファイルを使用して Tomcat をセットアップします。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは 200～800 の乱数になります。
+* [こちら](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=ja)の説明に従って、SampleRest.war ファイルを使用して Tomcat をセットアップします。Tomcat にデプロイされた war ファイルには、申込者の信用スコアを返すコードが含まれています。信用スコアは 200～800 の乱数になります。
 
 * [パッケージマネージャーを使用して、アセットを AEM に読み込みます](assets/invoke-fdm-as-service-step.zip)。パッケージには次のものが含まれています。
 
@@ -41,6 +41,6 @@ AEM Forms 6.4 以降では、フォームデータモデルを AEM ワークフ�
    * 送信時にワークフローをトリガーするためのアダプティブフォーム。
 * [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled) を開きます。詳細を入力して送信します。 フォーム送信時に、[loanapplication ワークフロー](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)がトリガーされます。
 
-![ ワークフロー ](assets/fdm-as-service-step-workflow.PNG).
+![&#x200B; ワークフロー &#x200B;](assets/fdm-as-service-step-workflow.PNG).
 
 信用スコアが 500 を超える場合、ワークフローは OR 分割コンポーネントを利用して、アプリケーションを管理者にルーティングします。 信用スコアが 500 未満の場合、申し込みは cavery にルーティングされます。

@@ -96,7 +96,7 @@ JWT の生成に必要な詳細はサービス資格情報で指定されます�
 
 簡単にするため、このチュートリアルではコマンドラインからサービス資格情報を渡します。ただし、IT セキュリティチームと協力して、組織のセキュリティガイドラインに従ってこれらの資格情報を保存し、アクセスする方法を理解するようにしてください。
 
-1. [ダウンロードしたサービス資格情報 JSON ](#download-service-credentials)をプロジェクトのルートにある `service_token.json` という名前のファイルにコピーします。
+1. [ダウンロードしたサービス資格情報 JSON &#x200B;](#download-service-credentials)をプロジェクトのルートにある `service_token.json` という名前のファイルにコピーします。
 
    + _資格情報_ は Git にコミットしないようにしてください。
 
@@ -191,7 +191,7 @@ function getCommandLineParams() {
 
    ローカル開発アクセストークン JSON またはサービス資格情報 JSON のどちらファイルが、`file` のコマンドラインパラメーターを介して渡されるかに応じて、アプリケーションがアクセストークンを取得します。
 
-   サービス資格情報は 365 日ごとに期限切れになりますが、JWT と対応するアクセストークンは頻繁に期限切れになり、期限切れになる前に更新する必要があることに注意してください。 これは、（Adobe IMSが提供する `refresh_token`[ を使用して実行でき ](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) す。
+   サービス資格情報は 365 日ごとに期限切れになりますが、JWT と対応するアクセストークンは頻繁に期限切れになり、期限切れになる前に更新する必要があることに注意してください。 これは、（Adobe IMSが提供する `refresh_token`[&#x200B; を使用して実行でき &#x200B;](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) す。
 
 1. これらの変更を行った上で、サービス資格情報 JSON は AEM Developer Console からダウンロードされ、簡単にするために、この `index.js` と同じフォルダー内に `service_token.json` として保存されました。次に、コマンドラインパラメーター `file` を `service_token.json` に置き換えてアプリケーションを実行し、`propertyValue` を新しい値に更新すると、効果が AEM で明らかになります。
 

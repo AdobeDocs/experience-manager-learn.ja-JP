@@ -329,7 +329,7 @@ AEM コンテナに追加されたコンポーネントの AEM レイアウト�
 SPA が [http://localhost:3000](http://localhost:3000) で動作している状態で、AEM SPA エディターを使用して SPA を開きます。 SPA ではまだ何も編集できません。AEM での SPA の動作を検証するだけです。
 
 1. AEM オーサーにログインします。
-1.  __Sites／WKND アプリ／米国／英語__&#x200B;に移動します。
+1. __Sites／WKND アプリ／米国／英語__&#x200B;に移動します。
 1. __WKND アプリのホームページ__&#x200B;を選択して「__編集__」をタップすると、SPA が表示されます。
 
    ![WKND アプリホームページの編集](./assets/spa-bootstrap/edit-home.png)

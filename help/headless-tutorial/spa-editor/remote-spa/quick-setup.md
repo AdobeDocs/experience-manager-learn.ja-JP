@@ -79,7 +79,7 @@ AEM SDKが開始し、[http://localhost:4502](http://localhost:4502) に自動�
 このチュートリアルは __WKND 2.1.0+ の__&#x200B;プロジェクト（コンテンツ用）に依存しています。
 
 1. [`aem-guides-wknd.all.x.x.x.zip` の最新バージョンをダウンロードします](https://github.com/adobe/aem-guides-wknd/releases)
-1. [ の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
+1. [&#x200B; の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
 1. 手順 1 でダウンロードした `aem-guides-wknd.all.x.x.x.zip` を&#x200B;__アップロードします__
 1. エントリ `aem-guides-wknd.all-x.x.x.zip` の「__インストール__」ボタンをクリックします
 
@@ -87,9 +87,9 @@ AEM SDKが開始し、[http://localhost:4502](http://localhost:4502) に自動�
 
 簡単な設定を実行するために、チュートリアルの最終的な AEM 設定とコンテンツを含む AEM パッケージがここに用意されています。
 
-1. [ダウンロード ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [ダウンロード ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. [ の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
+1. [ダウンロード &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [ダウンロード &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [&#x200B; の資格情報で、:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin` のAEM SDK パッケージマネージャーにログインします。
 1. 手順 1 でダウンロードした `wknd-app.all.x.x.x.zip` を&#x200B;__アップロードします__
 1. エントリ `wknd-app.all.x.x.x.zip` の「__インストール__」ボタンをクリックします
 1. 手順 2 でダウンロードした `wknd-app.ui.content.sample.x.x.x.zip` を __アップロード__&#x200B;します

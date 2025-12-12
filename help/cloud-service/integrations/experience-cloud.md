@@ -149,7 +149,7 @@ Adobe Target は AEM as a Cloud Service と統合し、AEM のコンテンツを
 
 + [Adobe Target 統合の設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
 
-+[Personalizationのユースケース ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
++[Personalizationのユースケース &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 
 + エクスペリエンスフラグメントを Target に
 

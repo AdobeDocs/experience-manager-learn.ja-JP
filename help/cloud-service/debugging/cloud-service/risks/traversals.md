@@ -108,7 +108,7 @@ _トラバーサルの警告とは_
 
 ## &#x200B;1. 分析{#analyze}
 
-まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 これを行うには、Cloud Managerから [ パブリッシュサービスの `aemerror` ログをダウンロード ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja){target="_blank"} 過去 __3 日間）すべての環境（開発、ステージング、実稼動__ から行います。
+まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 これを行うには、Cloud Managerから [&#x200B; パブリッシュサービスの `aemerror` ログをダウンロード &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja){target="_blank"} 過去 __3 日間）すべての環境（開発、ステージング、実稼動__ から行います。
 
 ![AEM as a Cloud Service ログをダウンロード](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __クエリを変更__&#x200B;して、既存のインデックス制限に解決する新しいクエリ制限を追加します。 可能であれば、インデックスを変更するよりもクエリを変更することをお勧めします。
 
-+ [ クエリのパフォーマンスを調整する方法を説明します ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}。
++ [&#x200B; クエリのパフォーマンスを調整する方法を説明します &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}。
 
 ### インデックスの調整
 
 __AEM インデックスを変更（または作成）__&#x200B;して、既存のクエリ制限をインデックスの更新で解決できるようにします。
 
-+ [ 既存のインデックスを調整する方法を学ぶ ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
-+ [ インデックスの作成方法を学ぶ ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
++ [&#x200B; 既存のインデックスを調整する方法を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
++ [&#x200B; インデックスの作成方法を学ぶ &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
 
 ## &#x200B;3. 検証{#verify}
 
@@ -174,9 +174,9 @@ __AEM インデックスを変更（または作成）__&#x200B;して、既存�
 
 ![説明クエリ](./assets/traversals/verify.gif)
 
-[ クエリの調整 ](#adjust-the-query) のみを行う場合、クエリはDeveloper Console [ クエリの説明 ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を介して、AEM as a Cloud Service上で直接テストできます。 AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
+[&#x200B; クエリの調整 &#x200B;](#adjust-the-query) のみを行う場合、クエリはDeveloper Console [&#x200B; クエリの説明 &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を介して、AEM as a Cloud Service上で直接テストできます。 AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
 
-[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 インデックスの調整がデプロイされた状態では、Developer Consoleの [ 説明クエリ ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を使用して、クエリを実行してさらに調整できます。
+[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 インデックスの調整がデプロイされた状態では、Developer Consoleの [&#x200B; 説明クエリ &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} を使用して、クエリを実行してさらに調整できます。
 
 最終的に、すべての変更（クエリとコード）は Git にコミットされ、Cloud Manager を使用して AEM as a Cloud Serviceにデプロイされます。 デプロイ後、元のトラバーサル警告に関連付けられたコードパスをテストし、トラバーサル警告が `aemerror` ログに表示されないことを確認します。
 

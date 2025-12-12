@@ -33,7 +33,7 @@ AEM as a Cloud Service へのコンテンツの移行に関するよくある質
 
 CTT 関連のアドビのサポートチケットの作成時に詳細を提供するには、以下のテンプレートを使用します。
 
-![ コンテンツ移行Adobe サポートチケットテンプレート ](../../assets/faq/adobe-support-ticket-template.png) {align="center"}
+![&#x200B; コンテンツ移行Adobe サポートチケットテンプレート &#x200B;](../../assets/faq/adobe-support-ticket-template.png) {align="center"}
 
 ## コンテンツ移行に関する一般的な質問
 
@@ -125,7 +125,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 公開ドキュメントは、学習に基づいて継続的に改善されていますが、いくつかの大まかな問題カテゴリと考えられる基礎的な理由を次に示します。
 
-![AEM as a Cloud Service コンテンツ移行の抽出の問題 ](../../assets/faq/extraction-issues.jpg) {align="center"}
+![AEM as a Cloud Service コンテンツ移行の抽出の問題 &#x200B;](../../assets/faq/extraction-issues.jpg) {align="center"}
 
 ### Q：取り込み中にどのような問題が予想されますか？
 
@@ -133,7 +133,7 @@ CTT 抽出プロセスで使用されるリソースの量は、ノード数、B
 
 考えられる問題カテゴリを次に示します（これを唯一のリストとみなさないでください）。
 
-![AEM as a Cloud Serviceのコンテンツ移行の取り込み問題 ](../../assets/faq/ingestion-issues.jpg) {align="center"}
+![AEM as a Cloud Serviceのコンテンツ移行の取り込み問題 &#x200B;](../../assets/faq/ingestion-issues.jpg) {align="center"}
 
 
 

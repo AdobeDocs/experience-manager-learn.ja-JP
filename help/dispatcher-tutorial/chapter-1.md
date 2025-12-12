@@ -106,7 +106,7 @@ Dispatcher モジュールは、ホスト側の Apache サーバーが提供す�
 
 Dispatcher について詳しく理解するために、単純なサンプル URL の構造を再度参照してみましょう。次の例を見てみましょう。
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
 
 * `http` はプロトコルを示します。
 
@@ -1100,7 +1100,7 @@ statfilelevel が 0 のデフォルトのケースを見てみましょう。
 
 ![/statfileslevel &quot;0&quot;：_ _.stat_ _ を docroot に作成します。無効化ドメインは、すべてのサイトを含むインストール全体に広がります](assets/chapter-1/statfile-level-0.png)
 
-`/statfileslevel "0":``.stat` ファイルが docroot に作成されます。無効化ドメインは、すべてのサイトを含むインストール全体にわたります。
+`/statfileslevel "0":` `.stat` ファイルが docroot に作成されます。無効化ドメインは、すべてのサイトを含むインストール全体にわたります。
 
 どのファイルが無効化されても、Dispatcher の docroot の最上部にある `.stat` ファイルは常に更新されます。したがって、`/content/site-b/home` を無効にすると、`/content/site-a` にあるすべてのファイルも、docroot の `.stat` ファイルより古くなるので無効になります。`site-b` を無効にするときに、これが必要でないことは明らかです。
 

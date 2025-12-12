@@ -170,7 +170,7 @@ Adobe Managed Services（AMS）ユーザー専用の [Cloud Manager](https://ado
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=jp" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&lang=jp" target="_blank">MongoMK のパフォーマンスと安定性</a>：</strong>
 AEM 6.0 の導入以降、MongoMK に対する継続的な機能強化が行われています。</td>
             <td> </td>
             <td> </td>
