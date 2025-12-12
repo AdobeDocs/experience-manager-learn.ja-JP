@@ -28,7 +28,7 @@ ht-degree: 100%
 
 これらの課題を克服するために、GraphQL はクエリベースの API を提供し、クライアントが AEM に必要なコンテンツのみをクエリし、単一の API 呼び出しを使用して受信できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452880?captions=jpn&quality=12&learn=on)
 
 このビデオでは、AEM で実装された GraphQL API の概要を説明します。 AEM の GraphQL API は主に、ヘッドレスデプロイメントの一環として AEM コンテンツフラグメントをダウンストリームアプリケーションに配信するように設計されています。
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 >id="aemcloud_learn_headless_graphql_overview"
 >title="AEM ヘッドレスの基本を学ぶ - GraphQL"
 >abstract="GraphQL を使用してコンテンツフラグメントを配信する方法を説明します。"
->additional-url="https://video.tv.adobe.com/v/328618" text="AEM の GraphQL の概要"
+>additional-url="https://video.tv.adobe.com/v/3452880?captions=jpn" text="AEM の GraphQL の概要"
 
 ## AEM ヘッドレス GraphQL ビデオシリーズ
 

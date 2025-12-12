@@ -190,7 +190,7 @@ Adobe Experience Platform Debugger の [Chrome](https://chrome.google.com/websto
 + Platform Web SDK ライブラリのバージョン、データストリーム ID
 + Experience Platform Web SDK の一部の `events` 属性としての XDM オブジェクト
 
->[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454494?captions=jpn&quality=12&learn=on)
 
 ## データセットの作成 - Experience Platform
 

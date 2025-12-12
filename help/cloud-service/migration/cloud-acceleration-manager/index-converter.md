@@ -21,4 +21,4 @@ ht-degree: 100%
 
 インデックスコンバーターが既存の AEM インデックス定義を AEM as a Cloud Service 互換に自動的に変換する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443774?captions=jpn&quality=12&learn=on)

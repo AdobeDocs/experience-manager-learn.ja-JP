@@ -21,4 +21,4 @@ ht-degree: 100%
 
 すばやく簡単に Experience Manager as a Cloud Service に移行するために Cloud Acceleration Manager がどう役に立つかを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336689?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452715?captions=jpn&quality=12&learn=on)

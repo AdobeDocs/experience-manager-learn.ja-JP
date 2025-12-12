@@ -47,7 +47,7 @@ ht-degree: 100%
 
 ## SSL 証明書の生成
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441468?captions=jpn&quality=12&learn=on)
 
 以下 2 つのオプションがあります。
 
@@ -222,7 +222,7 @@ HTTP ヘッダー検証 CDN ルールを設定してデプロイするには、�
 
 ## X-AEM-Edge-Key HTTPヘッダーで秘密鍵を渡す
 
->[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445046?captions=jpn&quality=12&learn=on)
 
 顧客 CDN を更新して、`X-AEM-Edge-Key` HTTP ヘッダーで秘密鍵を渡すようにします。Adobe CDN では、この秘密鍵を使用して、リクエストが顧客 CDN からのものであることを検証し、`Host` ヘッダーの値を顧客 CDN から受信した`X-Forwarded-Host` の値に変換します。
 

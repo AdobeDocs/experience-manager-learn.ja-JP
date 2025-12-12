@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEMコンテンツフラグメントコンソールとエディターを使用して、参照コンテンツを簡単に理解し、管理する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423640/?captions=jpn&learn=on)

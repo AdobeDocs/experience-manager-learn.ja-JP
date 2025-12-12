@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM AI アシスタントで製品知識の検索を簡素化し、サポートチケットの作成を自動処理する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461911/?captions=jpn&learn=on&enablevpops)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Cloud Manager の目的と AEM as a Cloud Service との連携方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/330545?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346169?captions=jpn&quality=12&learn=on)

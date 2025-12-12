@@ -22,4 +22,4 @@ ht-degree: 100%
 
 [Cloud Manager 環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=ja)は、AEM オーサー、AEM パブリッシュ、Dispatcher の各サービスで構成されます。 環境が異なれば目的も異なり、環境のエンゲージメントに使用できる CI/CD Pipeline も異なります。Cloud Manager 環境には通常、本番環境、ステージング環境、開発環境が 1 つずつあります。
 
->[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34269?captions=jpn&quality=12&learn=on)

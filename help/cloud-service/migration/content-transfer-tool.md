@@ -22,7 +22,7 @@ ht-degree: 100%
 
 オンプレミスまたは AMS でホストされている AEM から、AEM as a Cloud Service 環境にコンテンツを移行する場合は、コンテンツトランスファーツールを使用することをお勧めします。
 
->[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327070?captions=jpn&quality=12&learn=on)
 
 ## その他のリソース {#additional-resources}
 

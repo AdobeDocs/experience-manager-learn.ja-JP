@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM Assets のセマンティック検索を使用して、意図に一致するコンテンツをより効果的に見つける方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461889/?captions=jpn&learn=on&enablevpops)

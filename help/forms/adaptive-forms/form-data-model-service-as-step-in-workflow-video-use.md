@@ -22,7 +22,7 @@ ht-degree: 93%
 AEM Forms 6.4 以降では、フォームデータモデルを AEM ワークフローの一部として使用できるようになりました。次のビデオでは、AEM ワークフローでフォームデータモデルステップを設定するのに必要な手順を説明しています。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330118?captions=jpn&quality=12&learn=on)
 
 お使いのサーバーでこの機能をテストするには、次の手順に従ってください。
 

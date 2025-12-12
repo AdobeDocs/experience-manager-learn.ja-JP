@@ -28,4 +28,4 @@ ht-degree: 100%
 
 [CI/CD 実稼動以外のパイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=ja#non-production-%26-code-quality-only-pipelines)コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。デプロイメントパイプラインは、Git リポジトリから非本番環境へのコードの自動デプロイメントをサポートしています。つまり、ステージング環境や本番環境以外のプロビジョニング済み AEM 環境がサポートされます。
 
->[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327616?captions=jpn&quality=12&learn=on)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Dispatcher 設定の違いの概要と、Dispatcher を Adobe Managed Services（AMS）から AEM as a Cloud Service に移行するためのヒントとテクニックです。
 
->[!VIDEO](https://video.tv.adobe.com/v/330556?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345897?captions=jpn&quality=12&learn=on)

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM から Mutual Transport Layer Security（mTLS）認証を必要とする web API への HTTPS 呼び出しを行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447860?captions=jpn&quality=12&learn=on)
 
 mTLS または双方向 TLS 認証は、**クライアントとサーバーの両方に相互認証**&#x200B;をリクエストすることで、TLS プロトコルのセキュリティを強化します。この認証は、電子証明書を使用して実行されます。これは、強力なセキュリティと ID 検証が重要なシナリオで一般的に使用されます。
 

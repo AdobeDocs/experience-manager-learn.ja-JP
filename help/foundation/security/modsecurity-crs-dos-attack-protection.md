@@ -24,7 +24,7 @@ ht-degree: 100%
 ModSecurity を有効にして、Adobe Experience Manager（AEM）パブリッシュ Dispatcher 上で **OWASP ModSecurity Core Rule Set（CRS）**&#x200B;を使用してサイトをサービス拒否（DoS）攻撃から保護する方法を説明します。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452123?captions=jpn&quality=12&learn=on)
 
 ## 概要
 

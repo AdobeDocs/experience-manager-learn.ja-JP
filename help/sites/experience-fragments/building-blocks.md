@@ -25,7 +25,7 @@ ht-degree: 100%
 
 構築ブロックは、エクスペリエンスフラグメントのサブ機能です。構築ブロックを使用すると、コンテンツ作成者はエクスペリエンスフラグメントの様々なバリエーションでコンポーネントを再利用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/331786?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410271?captions=jpn&quality=12&learn=on)
 
 >[!NOTE]
 >

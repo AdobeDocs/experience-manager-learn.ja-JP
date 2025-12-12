@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Adobe Experience Manager アーキテクチャの一部として、オーサー層とパブリッシュ層を紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37024?captions=jpn&quality=12&learn=on)

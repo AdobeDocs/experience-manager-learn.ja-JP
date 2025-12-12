@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Cloud Acceleration Manager のツールの使用方法に関するナレーション付きウォークスルー。
 
->[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454671?captions=jpn&quality=12&learn=on)

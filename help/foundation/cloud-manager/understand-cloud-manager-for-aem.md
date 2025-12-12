@@ -39,19 +39,19 @@ Adobe Cloud Manager は、AEM 環境の管理、内観、セルフサービス�
 
 [Cloud Manager プログラム](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html?lang=ja)は、ビジネスイニシアチブの論理セットをサポートする AEM 環境セットであり、通常、購入したサービスレベル契約（SLA）に対応しています。例えば、あるプログラムが、グローバルなパブリック web サイトをサポートする AEM リソースを表す一方で、別のプログラムは社内の中核的 DAM を表します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34266?captions=jpn&quality=12&learn=on)
 
 ## 環境 {#environments}
 
 [Cloud Manager 環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html?lang=ja)は、AEM オーサー、AEM パブリッシュおよび Dispatcher インスタンスで構成されます。様々な環境がどのように役割をサポートし、様々な CI/CD Pipeline を使用して関与できるかについて説明します。Cloud Manager 環境には通常、本番環境とステージング環境がそれぞれ 1 つあります。
 
->[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34269?captions=jpn&quality=12&learn=on)
 
 ## レポート {#reports}
 
 [Cloud Manager レポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html?lang=ja)では、各 AEM インスタンスの様々な指標をレポートおよび追跡する一連のグラフを通じて、プログラムの環境と AEM インスタンスを確認できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34274?captions=jpn&quality=12&learn=on)
 
 ## CI/CD 実稼動パイプライン {#cicd-production-pipeline}
 
@@ -65,19 +65,19 @@ Adobe Cloud Manager は、AEM 環境の管理、内観、セルフサービス�
 
 [CI/CD 実稼動パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=ja)の設定では、パイプラインを開始するトリガー、実稼動環境のデプロイを制御するパラメーター、およびテストパラメーターのパフォーマンスを定義します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327602?captions=jpn&quality=12&learn=on)
 
 ### パイプライン実行
 
 [CI/CD 本番パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=ja)は、ステージングを通じてコードを構築して本番環境にデプロイするために使用され、価値創出までの時間を短縮します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327609?captions=jpn&quality=12&learn=on)
 
 ## CI/CD 実稼動以外のパイプライン {#cicd-non-production-pipeline}
 
 [CI/CD 実稼動以外のパイプラインは、コード品質パイプラインとデプロイパイプラインの 2 つのカテゴリに分類されます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=ja)コード品質は、Git ブランチのすべてのコードをパイプライン化し、Cloud Manager のコード品質スキャンに対して構築および評価されます。デプロイメントパイプラインは、Git リポジトリから非本番環境へのコードの自動デプロイメントをサポートしています。つまり、ステージング環境や本番環境以外のプロビジョニング済み AEM 環境がサポートされます。
 
->[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327616?captions=jpn&quality=12&learn=on)
 
 ## アクティビティ {#activity}
 
@@ -85,4 +85,4 @@ Cloud Manager ではプログラムのアクティビティをまとめて表示
 
 また、Cloud Manager は、ユーザーごとのレベルで [Adobe Experience Cloud 通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html?lang=ja)と統合し、関心のあるイベントやアクションをどこにでも表示できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34278?captions=jpn&quality=12&learn=on)

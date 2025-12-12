@@ -27,7 +27,7 @@ ht-degree: 100%
 
 このチュートリアルは、AEM の GraphQL API を介して AEM コンテンツフラグメントコンテンツを使用する React アプリである [WKND GraphQL アプリ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)をベースにしていますが、SPA コンテンツのコンテキスト内オーサリングは提供していません。
 
->[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444848?captions=jpn&quality=12&learn=on)
 
 ## このチュートリアルについて
 

@@ -24,7 +24,7 @@ ht-degree: 100%
 
 次のビデオでは、AEM オーサー環境を使用する際の基本操作を概説します。Sites コンソールを基礎として使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36998?captions=jpn&quality=12&learn=on)
 
 このビデオでは、次の機能を紹介します。
 

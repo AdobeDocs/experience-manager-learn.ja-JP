@@ -29,11 +29,11 @@ AEM as a Cloud Service の一括読み込みツールを使用すると、管理
 
 [アセットビュー](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=ja)の[一括読み込み](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=ja)を使用して、多数のファイルを AEM Assets に読み込む方法を学びます。統合プロセスを明確でわかりやすくするため、クラウドストレージプロバイダーの例として Dropbox を使用します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451955/?captions=jpn&learn=on)
 
 >[!TAB 管理ビュー]
 
->[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341389?captions=jpn&quality=12&learn=on)
 
 >[!TIP]
 >

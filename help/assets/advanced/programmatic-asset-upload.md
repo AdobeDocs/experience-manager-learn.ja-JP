@@ -23,7 +23,7 @@ ht-degree: 2%
 [aem-upload](https://github.com/adobe/aem-upload) Node.js ライブラリを使用するクライアントアプリケーションを使用して、AEM as a Cloud Service環境にアセットをアップロードする方法について説明します。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476953?captions=jpn&quality=12&learn=on)
 
 
 ## 学習内容

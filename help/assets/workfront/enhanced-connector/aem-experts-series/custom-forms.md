@@ -26,6 +26,6 @@ ht-degree: 100%
 
 Workfront と AEM Assets を設定し、Workfront のカスタムフォームと AEM のメタデータスキーマを使用して、アセットメタデータを管理および同期する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431491?captions=jpn&quality=12&learn=on)
 
 _[Workfront for Experience Manager 拡張コネクタに関する 4 部構成のエキスパートシリーズの第 2 部](./overview.md)_

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Adobe Experience Manager では、AEM インスタンスに対する Admin Console サポートと、Managed Services 上の AEM 用 Adobe Identity Management システム（IMS）ベースの認証が導入されています。この統合により、AEM Managed Services のお客様は、1 つの統合 web コンソールですべての Experience Cloud ユーザーを管理できるようになります。AEM インスタンスに関連付けられた製品プロファイルにユーザーとグループを割り当て、特定の AEM インスタンスへのアクセスを一元管理できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327596?captions=jpn&quality=12&learn=on)
 
 * Adobe Experience Manager IMS 認証のサポートは、「内部」ユーザー（作成者、レビュー担当者、管理者、開発者など）のみが対象で、web サイトの訪問者など外部のエンドユーザーには適用されません。
 * [Admin Console](https://adminconsole.adobe.com/) は、AEM Managed Services の顧客を IMS 組織として、AEM インスタンスを製品コンテキストとして表します。Admin Console システムと製品管理者は、定義と管理ができます。

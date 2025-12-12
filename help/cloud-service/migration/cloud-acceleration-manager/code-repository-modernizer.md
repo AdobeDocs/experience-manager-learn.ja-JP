@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Core Repository Modernizer で既存の AEM Maven プロジェクトを自動的に更新して AEM as a Cloud Service との互換性を保つようにする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444661?captions=jpn&quality=12&learn=on)
