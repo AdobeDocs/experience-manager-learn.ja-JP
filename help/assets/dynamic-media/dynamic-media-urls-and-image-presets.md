@@ -21,6 +21,6 @@ ht-degree: 0%
 
 AEM Assets Dynamic Media の URL 構文を調べ、画像プリセットを使用して価値を最大化する方法を学びます。 アセット管理機能を強化し、ワークフローの効率を向上させます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477937/?captions=jpn&learn=on&enablevpops)
 
 この短いビデオでは [AEM Assetsで画像プリセットを作成する方法 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets) をご覧ください。
