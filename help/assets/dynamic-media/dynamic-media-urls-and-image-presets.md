@@ -23,4 +23,4 @@ AEM Assets Dynamic Media の URL 構文を調べ、画像プリセットを使�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
 
-この短いビデオでは [AEM Assetsで画像プリセットを作成する方法 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets) をご覧ください。
+この短いビデオでは [AEM Assetsで画像プリセットを作成する方法 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets) をご覧ください。
