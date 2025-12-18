@@ -37,13 +37,13 @@ _この章の IDE スクリーンショットは、[Visual Studio Code](https://
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=ja)
 + [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja) を使用したローカル設定
-+ [AEM 6.5 LTS](https://experienceleague.adobe.com/docs/experience-manager-65/content/release-notes/release-notes.html?lang=ja) （[GraphQL インデックス パッケージ 1.0.5 以降 ](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/graphql-api/graphql-endpoint.html) がインストールされている）
++ [AEM 6.5 LTS](https://experienceleague.adobe.com/docs/experience-manager-65/content/release-notes/release-notes.html?lang=ja) （[GraphQL インデックス パッケージ 1.0.5 以降 &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/graphql-api/graphql-endpoint.html) がインストールされている）
 
 ### ソフトウェア要件
 
 次のソフトウェアがインストールされている必要があります。
 
-+ [Node.js v18 以降 ](https://nodejs.org/ja)
++ [Node.js v18 以降 &#x200B;](https://nodejs.org/ja)
 + [Visual Studio Code](https://code.visualstudio.com/)
 + [Git](https://git-scm.com/)
 + [Java JDK](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements) （ローカルのAEM SDKまたは 6.5 インスタンスに接続する場合）
@@ -83,7 +83,7 @@ React アプリを取得するには：
 
 1. AEM パブリッシュサービスに接続するように `.env.development` を更新します。
 
-   サンプルプロジェクトの環境変数とその設定方法について詳しくは、[README.md を参照してください ](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#update-environment-variables)。
+   サンプルプロジェクトの環境変数とその設定方法について詳しくは、[README.md を参照してください &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#update-environment-variables)。
 
    **AEM as a Cloud Service**
 
@@ -127,11 +127,11 @@ React アプリを取得するには：
 >   この React アプリは部分的に実装されています。このチュートリアルの手順に従って、実装を完了します。実装が必要な JavaScript ファイルには次のコメントが含まれています。これらのファイルのコードを、必ずこのチュートリアルで指定したコードで追加または更新してください。
 >
 >
-> //*********************************
+> //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 >  // TODO  これを実装するには、AEM ヘッドレスチュートリアルの手順に従います。
 >
->  //*********************************
+>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 
 ## React アプリの詳細な構造
@@ -520,7 +520,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 このサンプル React アプリは、ローカルプロキシを使用してAEMに接続するので、開発中にクロスオリジンリソース共有（CORS）を必要としません。 ローカルプロキシの使用は、迅速な開発を容易にするためのものであり、開発以外のユースケースを対象としたものではありません。
 
-ただし、実稼動シナリオでは、通常、クライアントアプリケーションがユーザーのブラウザーからAEMと直接通信することがベストプラクティスです。 これを有効にするには、場合によっては、web アプリからの取得リクエストを許可するように [CORS をAEMで設定 ](../deployment/overview.md) する必要があります。
+ただし、実稼動シナリオでは、通常、クライアントアプリケーションがユーザーのブラウザーからAEMと直接通信することがベストプラクティスです。 これを有効にするには、場合によっては、web アプリからの取得リクエストを許可するように [CORS をAEMで設定 &#x200B;](../deployment/overview.md) する必要があります。
 
 ## アプリを試す
 

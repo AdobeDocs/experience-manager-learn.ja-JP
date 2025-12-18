@@ -50,11 +50,11 @@ ht-degree: 80%
 
 ## それでは、始めましょう。
 
-[ コンテンツフラグメントモデルの定義 ](content-fragment-models.md) からチュートリアルを開始します。
+[&#x200B; コンテンツフラグメントモデルの定義 &#x200B;](content-fragment-models.md) からチュートリアルを開始します。
 
 ## GitHub プロジェクト
 
-ソースコードとコンテンツパッケージは、`basic-tutorial`AEM Guides - WKND GraphQL GitHub プロジェクト [ の ](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial) フォルダーで入手することができます。
+ソースコードとコンテンツパッケージは、`basic-tutorial`AEM Guides - WKND GraphQL GitHub プロジェクト [&#x200B; の &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial) フォルダーで入手することができます。
 
 
 チュートリアルまたはコードに問題が見つかった場合は、[GitHub イシュー](https://github.com/adobe/aem-guides-wknd-graphql/issues)を報告してください。
