@@ -23,10 +23,10 @@ Experience League の月刊コンテンツニュースレターは、このペ�
 | [4 月](assets/April-Newsletter.pdf) |
 | [5月](assets/May-Newsletter.pdf) |
 | [6 月](assets/June-Newsletter.pdf) |
-| [7 月 ](assets/July-Newsletter.pdf) |
-| [8 月 ](assets/August-Newsletter.pdf) |
-| [9 月 ](assets/Sept-Newsletter.pdf) |
-| [10 月 ](assets/Oct-Newsletter.pdf) |
-| [11 月 ](assets/Nov-Newsletter.pdf) |
-| [12 月 ](assets/Dec-Newsletter.pdf) |
+| [7 月 &#x200B;](assets/July-Newsletter.pdf) |
+| [8 月 &#x200B;](assets/August-Newsletter.pdf) |
+| [9 月 &#x200B;](assets/Sept-Newsletter.pdf) |
+| [10 月 &#x200B;](assets/Oct-Newsletter.pdf) |
+| [11 月 &#x200B;](assets/Nov-Newsletter.pdf) |
+| [12 月 &#x200B;](assets/Dec-Newsletter.pdf) |
 
