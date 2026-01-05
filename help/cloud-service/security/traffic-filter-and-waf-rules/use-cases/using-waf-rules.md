@@ -30,7 +30,7 @@ AEM as a Cloud Service で&#x200B;_アドビの推奨される_  **web アプ�
 > WAFのトラフィックフィルタールールには、追加の Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）ライセンスが必要です。 Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469431/?captions=jpn&quality=12&learn=on)
 
 ## 学習目標
 
