@@ -216,7 +216,7 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
    ![YAML のデプロイ](./assets/setup/config-pipeline.png)
 
-`api.yaml` ファイルは、（コマンドラインツールを使用して [&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[&#x200B; にインストールすることもでき &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files) す。 これは、実稼動環境にデプロイする前に設定変更をテストする場合に役立ちます。
+`api.yaml` ファイルは、（コマンドラインツールを使用して [&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[&#x200B; にインストールすることもでき &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files) す。 これは、実稼動環境にデプロイする前に設定変更をテストする場合に役立ちます。
 
 >[!CAUTION]
 >
