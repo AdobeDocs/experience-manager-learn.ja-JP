@@ -23,7 +23,7 @@ ht-degree: 60%
 
 AEM as a Cloud Service 環境を設定して、OpenAPI ベースの AEM API へのアクセスを有効にする方法を学びます。
 
-この例では、{Server-to-Server **認証方式を使用する** 0}AEM Assets API **を使用して、OpenAPI ベースのAEM API のセットアッププロセスを示します。**&#x200B;同様の手順に従って、[ その他の OpenAPI ベースのAEM API](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を設定できます。
+この例では、{Server-to-Server **認証方式を使用する** 0}AEM Assets API **を使用して、OpenAPI ベースのAEM API のセットアッププロセスを示します。**&#x200B;同様の手順に従って、[&#x200B; その他の OpenAPI ベースのAEM API](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) を設定できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -76,7 +76,7 @@ AEM as a Cloud Service環境の最新化は、次の手順を含む **環境ご�
 
 ## AEM API アクセスの有効化{#enable-aem-apis-access}
 
-_新しい製品プロファイル_ が存在すると、[Adobe Developer Console（ADC） ](https://developer.adobe.com/) で OpenAPI ベースのAEM API アクセスが可能になります。 これらの製品プロファイルがないと、Adobe Developer Console（ADC）で OpenAPI ベースのAEM API を設定することはできません。
+_新しい製品プロファイル_ が存在すると、[Adobe Developer Console（ADC） &#x200B;](https://developer.adobe.com/) で OpenAPI ベースのAEM API アクセスが可能になります。 これらの製品プロファイルがないと、Adobe Developer Console（ADC）で OpenAPI ベースのAEM API を設定することはできません。
 
 新しく追加された製品プロファイルは、_サービス_&#x200B;に関連付けられています。これは、_事前定義されたアクセス制御リスト（ACL）を持つ AEM ユーザーグループ_&#x200B;を表します。_サービス_ は、AEM API へのアクセスレベルを制御するために使用されます。 また、製品プロファイルに関連付けられた&#x200B;_サービス_&#x200B;を選択または選択解除して、アクセスレベルを増減することもできます。
 
@@ -96,7 +96,7 @@ _新しい製品プロファイル_ が存在すると、[Adobe Developer Consol
 
 目的の OpenAPI ベースのAEM API に対してサーバー間認証を有効にするには、Adobe Developer Console（ADC）を使用して統合を設定するユーザーを、_サービス_ が関連付けられている _製品プロファイル_ に Developer として追加する必要があります。
 
-例えば、AEM Assets API に対してサーバー間認証を有効にするには、ユーザーを開発者として **AEM Assets Collaborator Users - author - Program XXX - Environment XXX**_Product Profile_ に追加する必要があります。
+例えば、AEM Assets API に対してサーバー間認証を有効にするには、ユーザーを開発者として **AEM Assets Collaborator Users - author - Program XXX - Environment XXX**&#x200B;_Product Profile_ に追加する必要があります。
 
 ![開発者を製品プロファイルに関連付ける](./assets/setup/associate-developer-to-product-profile.png)
 
@@ -187,7 +187,7 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
 1. ローカルマシンでAEM プロジェクトに移動し（または、まだクローンしていない場合はクローンを作成）、`config` フォルダーを見つけます。
 
-1. AEM プロジェクトで、`api.yaml` フォルダーから `config` ファイルを探すか、作成します。 ここでは、[AEM WKND サイトプロジェクト ](https://github.com/adobe/aem-guides-wknd) を使用して、OpenAPI ベースのAEM API の設定プロセスを示します。
+1. AEM プロジェクトで、`api.yaml` フォルダーから `config` ファイルを探すか、作成します。 ここでは、[AEM WKND サイトプロジェクト &#x200B;](https://github.com/adobe/aem-guides-wknd) を使用して、OpenAPI ベースのAEM API の設定プロセスを示します。
 
    ![API YAML を見つける](./assets/setup/locate-api-yaml.png)
 
@@ -212,11 +212,11 @@ ADC プロジェクトを作成したら、目的の AEM API を追加し、そ�
 
 1. 設定変更をコミットし、Cloud Manager パイプラインが接続されているリモート Git リポジトリに変更をプッシュします。
 
-1. Cloud Managerで [Config パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) を使用して、上記の変更をデプロイします。
+1. Cloud Managerで [Config パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) を使用して、上記の変更をデプロイします。
 
    ![YAML のデプロイ](./assets/setup/config-pipeline.png)
 
-`api.yaml` ファイルは、（コマンドラインツールを使用して [](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[ にインストールすることもでき ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files) す。 これは、実稼動環境にデプロイする前に設定変更をテストする場合に役立ちます。
+`api.yaml` ファイルは、（コマンドラインツールを使用して [&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[&#x200B; にインストールすることもでき &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files) す。 これは、実稼動環境にデプロイする前に設定変更をテストする場合に役立ちます。
 
 >[!CAUTION]
 >
