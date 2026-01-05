@@ -43,7 +43,7 @@ AEM web サイトのデフォルトの DDoS 保護機能を説明します。
 DDoS 攻撃から web サイトを保護するために、顧客が実行できる追加の推奨対策をいくつか見てみましょう。
 
 - アドビの推奨される[標準トラフィックフィルタールール](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)を実装し、疑わしい動作をログに記録してアラートすることで、潜在的に悪意のあるトラフィックパターンを特定します。
-- Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）アドオンを使用して、Adobeが推奨する [WAFのトラフィックフィルタールール ](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md) を実装し、高度なプロトコルやペイロードベースの手法を使用する攻撃を含む高度な攻撃を防御します。
+- Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）アドオンを使用して、Adobeが推奨する [WAFのトラフィックフィルタールール &#x200B;](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md) を実装し、高度なプロトコルやペイロードベースの手法を使用する攻撃を含む高度な攻撃を防御します。
 - 不要なクエリパラメーターを無視するように[リクエスト変換](./traffic-filter-and-waf-rules/how-to/request-transformation.md)を設定して、キャッシュカバレッジを増やします。
 
 ## 今すぐ始める
