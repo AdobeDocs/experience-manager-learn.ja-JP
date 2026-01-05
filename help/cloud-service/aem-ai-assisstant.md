@@ -18,13 +18,13 @@ ht-degree: 6%
 
 # AEM AI アシスタント
 
-[AEM AI アシスタント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) を使用してAdobe Experience Manager ワークフローを簡単に実行する方法を説明します。 機能の検索、ベストプラクティスの学習、問題のトラブルシューティング、サポートチケットの作成など、AEMのインテリジェントな機能となります。 AI を活用したガイダンス、インサイト、サポートにより、生産性を高めます。
+[AEM AI アシスタント ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) を使用してAdobe Experience Manager ワークフローを簡単に実行する方法を説明します。 機能の検索、ベストプラクティスの学習、問題のトラブルシューティング、サポートチケットの作成など、AEMのインテリジェントな機能となります。 AI を活用したガイダンス、インサイト、サポートにより、生産性を高めます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475359/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 
 ## AEM AI アシスタントへのアクセスの設定
 
 [Adobe Admin Console](https://adminconsole.adobe.com) を使用して、Adobe Experience Managerで AI アシスタントへのアクセスを設定する方法を説明します。 この手順は、ユーザーがアシスタントから応答を受け取り、自動チケット作成を活用できるようにするために必要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474067/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
