@@ -11,10 +11,10 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 100%
+source-wordcount: '1195'
+ht-degree: 98%
 
 ---
 
@@ -26,7 +26,7 @@ AEM as a Cloud Service の **web アプリケーションファイアウォー�
 
 >[!IMPORTANT]
 >
-> WAFトラフィックフィルタールールには、追加の **WAF-DDoS 保護**&#x200B;または&#x200B;**拡張セキュリティ**&#x200B;のライセンスが必要です。Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
+> WAFのトラフィックフィルタールールには、追加の Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）ライセンスが必要です。 Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)

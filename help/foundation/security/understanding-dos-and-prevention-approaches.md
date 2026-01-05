@@ -11,10 +11,10 @@ duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 100%
+source-wordcount: '374'
+ht-degree: 98%
 
 ---
 
@@ -42,7 +42,7 @@ AEM 環境に対する DoS 攻撃と DDoS 攻撃を防止および軽減する�
             <td>Web アプリケーションファイアウォール（WAF）</td>
             <td>Web アプリケーションを様々なタイプの攻撃から保護するために設計されたセキュリティソリューション。</td>
             <td>
-            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS 保護ライセンス</a></td>
+            <a href="https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">Extended Security （旧称WAF-DDoS Protection）ライセンス </a></td>
             <td>AMS 契約による <a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a> または <a href="https://azure.microsoft.com/ja-jp/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
             <td>推奨される WAF</td>
         </tr>

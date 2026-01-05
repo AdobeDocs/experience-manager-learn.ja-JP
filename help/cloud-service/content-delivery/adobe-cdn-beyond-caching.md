@@ -12,10 +12,10 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 100%
+source-wordcount: '555'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe CDN では、コンテンツのキャッシュを超える、web サイト
 
 これらの機能は&#x200B;**セルフサービス**&#x200B;機能です。AEM プロジェクトの `cdn.yaml` ファイルで設定され、Cloud Manager 設定パイプラインを使用してデプロイされます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440270?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
 
 ## CDN でのトラフィックの設定
 
@@ -39,7 +39,7 @@ _CDN でのトラフィックの設定_&#x200B;に関連する次の主な機能
 
 - **DoS 攻撃の防止：** Adobe CDN はネットワーク層で DoS 攻撃を吸収し、接触チャネルサーバーに到達するのを防ぎます。
 - **レート制限：**&#x200B;接触チャネルサーバーが過剰なリクエストで過負荷になるのを防ぐために、CDN でレート制限を設定できます。
-- **Web アプリケーションファイアウォール（WAF）：** WAF は、SQL インジェクション、クロスサイトスクリプティングなどの一般的な web アプリケーションの脆弱性から web サイトを保護します。この機能を使用するには、拡張セキュリティライセンスまたは WAF-DDoS 保護ライセンスが必要です。
+- **Web アプリケーションファイアウォール（WAF）：** WAF は、SQL インジェクション、クロスサイトスクリプティングなどの一般的な web アプリケーションの脆弱性から web サイトを保護します。この機能を使用するには、Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）ライセンスが必要です。
 - **リクエスト変換：**&#x200B;ヘッダーの設定や設定解除、クエリパラメーター、Cookie の変更など、受信リクエストを変更します。
 - **応答変換：**&#x200B;ヘッダーの設定や設定解除など、送信応答を変更します。
 - **接触チャネルの選択：**&#x200B;リクエスト URL に基づいて、トラフィックを異なる接触チャネルサーバー（アドビおよびアドビ以外）にルーティングします。

@@ -12,10 +12,10 @@ badgeLicense: label="ライセンスが必要です" type="positive" before-titl
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1376'
-ht-degree: 100%
+source-wordcount: '1386'
+ht-degree: 98%
 
 ---
 
@@ -27,10 +27,10 @@ AEM as a Cloud Service で&#x200B;_アドビの推奨される_  **web アプ�
 
 >[!IMPORTANT]
 >
-> WAFトラフィックフィルタールールには、追加の **WAF-DDoS 保護**&#x200B;または&#x200B;**拡張セキュリティ**&#x200B;のライセンスが必要です。Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
+> WAFのトラフィックフィルタールールには、追加の Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）ライセンスが必要です。 Sites および Forms のお客様は、標準トラフィックフィルタールールをデフォルトで利用できます。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469431/?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 学習目標
 
