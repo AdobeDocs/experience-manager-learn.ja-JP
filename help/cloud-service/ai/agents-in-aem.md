@@ -20,7 +20,7 @@ ht-degree: 0%
 
 [AEM AI アシスタント &#x200B;](./ai-assistant.md) を通じて公開されるエージェントを使用して、タスクを自動化し、ワークフローを効率化する方法を説明します。 エージェントの概要、動作の仕組み、AEMでの作業に適した場所を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3478455/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3478456/?captions=jpn&learn=on&enablevpops)
 
 AEMで使用可能なエージェントとその機能（サンプルプロンプトを含む）の完全なリストについては、[AEMのエージェントのドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) を参照してください。
 

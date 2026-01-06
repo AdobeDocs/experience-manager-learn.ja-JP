@@ -24,7 +24,7 @@ AEMでAEM AI アシスタントとエージェントを使用するには、Adob
 
 [Adobe Admin Console](https://adminconsole.adobe.com) を使用して、Adobe Experience Managerで AI アシスタントへのアクセスを設定する方法を説明します。 この手順は、ユーザーがアシスタントから応答を受け取り、自動チケット作成を活用できるようにするために必要です。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474067/?captions=jpn&learn=on&enablevpops)
 
 ### AEMのエージェント
 
