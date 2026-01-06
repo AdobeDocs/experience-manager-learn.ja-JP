@@ -28,7 +28,7 @@ AEMでAEM AI アシスタントとエージェントを使用するには、Adob
 
 ### AEMのエージェント
 
-AEMでエージェントを使用するには、最初に [AEM AI アシスタント ](#aem-ai-assistant) アクセスが設定されている必要があります。 AEMのエージェントは、Adobeによってプロビジョニングする必要があります。 AEMのエージェントへのアクセスをリクエストするには、Adobe担当者または [Adobe サポート ](https://experienceleague.adobe.com/en/support) にお問い合わせください。
+AEMでエージェントを使用するには、最初に [AEM AI アシスタント &#x200B;](#aem-ai-assistant) アクセスが設定されている必要があります。 AEMのエージェントは、Adobeによってプロビジョニングする必要があります。 AEMのエージェントへのアクセスをリクエストするには、Adobe担当者または [Adobe サポート &#x200B;](https://experienceleague.adobe.com/en/support) にお問い合わせください。
 
 ## プレイグラウンド
 
@@ -36,6 +36,6 @@ AEMにアクセスできない場合や、AEM AI アシスタントやエージ�
 
 AEMは、実稼動環境に影響を与えることなく、AEMのエージェントを含む AI アシスタントの機能を実験できる遊び場を提供します。 これにより、ユーザーは安全な設定で AI アシスタントの機能に慣れることができます。
 
-![AEM プレイグラウンド ](./assets/setup/playground.png)
+![AEM プレイグラウンド &#x200B;](./assets/setup/playground.png)
 
-プレイグラウンドを作成するには、[Experience Hub](https://experience.adobe.com/#/@AdobeOrg/experiencemanager/) に移動し、「製品のお知らせ **** パネルの **プレイグラウンドを作成** を選択します。 プレイグラウンドが設定されると、アクセスするための詳細を記載したメールが届きます。
+プレイグラウンドを作成するには、[Experience Hub](https://experience.adobe.com/#/@AdobeOrg/experiencemanager/) に移動し、「製品のお知らせ **&#x200B;**&#x200B;パネルの **プレイグラウンドを作成** を選択します。 プレイグラウンドが設定されると、アクセスするための詳細を記載したメールが届きます。
