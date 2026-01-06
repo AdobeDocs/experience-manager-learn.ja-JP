@@ -28,7 +28,7 @@ AEMでAEM AI アシスタントとエージェントを使用するには、Adob
 
 ### AEMのエージェント
 
-AEMでエージェントを使用するには、最初に [AEM AI アシスタント &#x200B;](#aem-ai-assistant) アクセスが設定されている必要があります。 AEMのエージェントは、Adobeによってプロビジョニングする必要があります。 AEMのエージェントへのアクセスをリクエストするには、Adobe担当者または [Adobe サポート &#x200B;](https://experienceleague.adobe.com/en/support) にお問い合わせください。
+AEMでエージェントを使用するには、最初に [AEM AI アシスタント &#x200B;](#aem-ai-assistant) アクセスが設定されている必要があります。 AEMのエージェントは、Adobeによってプロビジョニングする必要があります。 AEMのエージェントへのアクセスをリクエストするには、Adobe担当者または [Adobe サポート &#x200B;](https://experienceleague.adobe.com/ja/support) にお問い合わせください。
 
 ## プレイグラウンド
 
