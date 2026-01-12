@@ -22,6 +22,6 @@ ht-degree: 1%
 
 Adobe Snapshot は視覚的なデモツールです。最適化された動的な画像配信を実現する Dynamic Media の強力な機能をわかりやすく伝えることを目的としています。 テスト画像や Dynamic Media の URL を試して、様々な Dynamic Media 画像修飾子、スマートトリミング、ファイルサイズに合わせたスマートイメージング最適化（WebP および AVIF 配信による）の出力を視覚的に確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445564/?captions=jpn&learn=on)
 
 [Adobe Snapshot を起動 &#x200B;](https://snapshot.scene7.com/)
