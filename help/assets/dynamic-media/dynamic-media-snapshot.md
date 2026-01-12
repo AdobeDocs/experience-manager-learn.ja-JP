@@ -24,4 +24,4 @@ Adobe Snapshot は視覚的なデモツールです。最適化された動的�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
 
-[Adobe Snapshot を起動 ](https://snapshot.scene7.com/)
+[Adobe Snapshot を起動 &#x200B;](https://snapshot.scene7.com/)
