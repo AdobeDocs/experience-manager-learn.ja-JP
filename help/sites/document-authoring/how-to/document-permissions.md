@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングを使用してドキュメントの権限を管理する方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438102/?captions=jpn&learn=on)

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 デフォルトコンテンツとセクションのドキュメントオーサリングの概念、およびこれらの概念がより良いサイトを作成する上でどのように役立つかを詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437976/?captions=jpn&learn=on)

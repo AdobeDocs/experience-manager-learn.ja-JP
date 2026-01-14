@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングを使用して、作成した web ページが検索エンジンによってインデックス化されないようにする方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438113/?captions=jpn&learn=on)

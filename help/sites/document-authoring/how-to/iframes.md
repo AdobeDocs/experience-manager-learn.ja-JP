@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングで iFrame を使用してコンテンツを埋め込む方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425719/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438390/?captions=jpn&learn=on)

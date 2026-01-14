@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングでのリダイレクトの仕組みと、技術的な専門知識がなくても作成者がリダイレクトを簡単に設定できる方法について詳しく説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438543/?captions=jpn&learn=on)

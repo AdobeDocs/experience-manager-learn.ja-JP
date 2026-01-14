@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントのオーサリングでページレベルのメタデータを扱う方法と、作成者が技術的な専門知識なしにメタデータを更新する方法を調べます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438065/?captions=jpn&learn=on)

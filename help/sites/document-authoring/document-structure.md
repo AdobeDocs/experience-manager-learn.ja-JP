@@ -25,4 +25,4 @@ ht-degree: 100%
 
 デフォルトコンテンツやブロックなどを使用してドキュメントオーサリングがどのようにまとめられるかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438808/?captions=jpn&learn=on)
