@@ -1,7 +1,7 @@
 ---
 title: ドキュメントオーサリングでのブロックと自動ブロック
 description: ドキュメントオーサリングでのブロックとオートブロックの使用方法。
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,8 +12,8 @@ jira: KT-14468
 thumbnail: 3425702.jpeg
 duration: 119
 exl-id: a24123aa-486a-429d-bf36-b5f2873bb55a
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
+workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングでのブロックとオートブロックの使用方法と、これらによってサイトやオーサリングエクスペリエンスがどのように向上するかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3439497/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)

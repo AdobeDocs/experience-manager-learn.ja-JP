@@ -1,7 +1,7 @@
 ---
-title: AEM ドキュメントオーサリングで検索エンジンによるインデックス化を防ぐ
+title: AEM ドキュメントオーサリングで検索エンジンによるインデックス作成を防ぐ
 description: Edge Delivery Services が提供するページが、検索エンジンによってインデックス化されないようにします。
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User, Developer
@@ -12,8 +12,8 @@ jira: KT-14493
 thumbnail: 3425726.jpeg
 duration: 92
 exl-id: fa22fa48-667b-42bc-9b6e-d8a8935fa7ed
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
+workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 AEM ドキュメントオーサリングを使用して、作成した web ページが検索エンジンによってインデックス化されないようにする方法を学びます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3438113/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)

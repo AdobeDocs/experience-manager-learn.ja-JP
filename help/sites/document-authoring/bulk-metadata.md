@@ -1,7 +1,7 @@
 ---
 title: 一括メタデータ
 description: ドキュメントオーサリングでの一括メタデータの処理方法を確認します。
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,8 +12,8 @@ jira: KT-14471
 thumbnail: 3425705.jpeg
 duration: 96
 exl-id: cada8642-b677-4b61-927b-f640b3e2a1ac
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
+workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 ドキュメントオーサリングでの一括メタデータの処理方法、および技術的な専門知識がなくても一括メタデータを更新できる方法を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3438405/?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
