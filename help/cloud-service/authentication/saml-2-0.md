@@ -11,10 +11,10 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: e0d9db96075b53dd16b3e4488ffaa89d4a545728
 workflow-type: tm+mt
-source-wordcount: '4233'
-ht-degree: 99%
+source-wordcount: '4251'
+ht-degree: 98%
 
 ---
 
@@ -56,7 +56,7 @@ AEM パブリッシュ SAML 統合の一般的なフローは次のとおりで�
 
 ## 設定の手順
 
->[!VIDEO](https://video.tv.adobe.com/v/3455328?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 このビデオでは、AEM as a Cloud Service のパブリッシュサービスとの SAML 2.0 統合の設定、および Okta を IDP として使用する方法について説明します。
 
@@ -68,6 +68,7 @@ SAML 2.0 認証を設定する場合は、次の操作が必要です。
 + AEM as a Cloud Service 環境への AEM 管理者アクセス
 + IDP への管理者アクセス
 + SAML ペイロードの暗号化に使用する公開鍵／秘密鍵のペアへのアクセス（オプション）
++ AEM Sitesページ(またはツリーページ)、AEM Publish への公開、閉じられたユーザーグループ(CUG)による [保護](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 は、AEM パブリッシュまたはプレビューに対するユーザーの認証にのみサポートされます。 IDP を使用して AEM オーサーの認証を管理するには、[IDP を Adobe IMS と統合します](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)。
 
@@ -141,7 +142,7 @@ _認証サービスのキーストアの作成が必要なのは、[SAML 2.0 認
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   パッケージを使用して次の一時的な回避策を使用する（_U） :_
+   パッケージを使用して、次の一時的な回避策_Use :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する
@@ -228,7 +229,7 @@ AuthnRequest 署名と SAML アサーション暗号化は両方ともオプシ�
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   パッケージを使用して次の一時的な回避策を使用する（_U） :_
+   パッケージを使用して、次の一時的な回避策_Use :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する
@@ -335,7 +336,7 @@ AEM は次のユーザー属性を使用し、Adobe Granite SAML 2.0 Authenticat
 
 [AuthnRequest と SAML アサーション](#encrypting-the-authnrequest-and-saml-assertion)を暗号化する場合、プロパティとして `useEncryption`、`spPrivateKeyAlias`、`keyStorePassword` の 3 つが必要です。`keyStorePassword` はパスワードを含むので、その値は OSGi 設定ファイルに保存してはならず、[秘密の設定値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values?lang=ja)を使って挿入する必要があります。
 
-+++（オプション）暗号化を使用するように OSGi 設定を更新する
++++オプションで、暗号化を使用するように OSGi 設定を更新します
 
 1. `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` を IDE で開きます。
 1. 次のように、`useEncryption`、`spPrivateKeyAlias`、`keyStorePassword` の 3 つのプロパティを追加します。
