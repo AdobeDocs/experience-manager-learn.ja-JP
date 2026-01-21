@@ -68,7 +68,7 @@ SAML 2.0 認証を設定する場合は、次の操作が必要です。
 + AEM as a Cloud Service 環境への AEM 管理者アクセス
 + IDP への管理者アクセス
 + SAML ペイロードの暗号化に使用する公開鍵／秘密鍵のペアへのアクセス（オプション）
-+ AEM Sitesページ(またはツリーページ)、AEM Publish への公開、閉じられたユーザーグループ(CUG)による [保護](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sitesページ(またはツリーページ)、AEM Publish への公開、閉じられたユーザーグループ(CUG)による [保護](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 は、AEM パブリッシュまたはプレビューに対するユーザーの認証にのみサポートされます。 IDP を使用して AEM オーサーの認証を管理するには、[IDP を Adobe IMS と統合します](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)。
 
