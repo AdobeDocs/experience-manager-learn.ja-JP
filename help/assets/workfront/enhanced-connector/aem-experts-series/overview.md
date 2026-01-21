@@ -100,4 +100,4 @@ Workfront for AEM 拡張コネクタの詳細設定と、高度なワークフ�
 
 Workfront Fusion を使用してWorkfrontとAEM Assetsをリンクし、プロジェクトの作成とワークフローのオーケストレーションを自動化する場合は、Workfront Fustion とAEM Assetsの統合に関するドキュメントを参照してください。
 
-[Workfront Fusion を使用して、Workfront ワークフローでAEMのイシューをプロジェクトに変換する ](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
+[Workfront Fusion を使用して、Workfront ワークフローでAEMのイシューをプロジェクトに変換する &#x200B;](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
