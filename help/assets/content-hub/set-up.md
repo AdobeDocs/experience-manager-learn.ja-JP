@@ -23,7 +23,7 @@ ht-degree: 56%
 
 Adobe Cloud Manager プログラムとアセットアドオンを使用して Experience Manager Assets コンテンツハブを設定する方法について説明します。また、製品プロファイルを使用してユーザーのアクセスを設定する方法についても説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3472936/?captions=jpn&learn=on)
 
 
 ## AEM Assets Dynamic Media OpenAPI の設定
