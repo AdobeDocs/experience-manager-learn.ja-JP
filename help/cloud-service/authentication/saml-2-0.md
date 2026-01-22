@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: e0d9db96075b53dd16b3e4488ffaa89d4a545728
+source-git-commit: 2ed303e316577363f6d1c265ef7f9cd6d81491d8
 workflow-type: tm+mt
-source-wordcount: '4251'
+source-wordcount: '4277'
 ht-degree: 98%
 
 ---
@@ -56,7 +56,7 @@ AEM パブリッシュ SAML 統合の一般的なフローは次のとおりで�
 
 ## 設定の手順
 
->[!VIDEO](https://video.tv.adobe.com/v/3455328?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 このビデオでは、AEM as a Cloud Service のパブリッシュサービスとの SAML 2.0 統合の設定、および Okta を IDP として使用する方法について説明します。
 
@@ -68,7 +68,7 @@ SAML 2.0 認証を設定する場合は、次の操作が必要です。
 + AEM as a Cloud Service 環境への AEM 管理者アクセス
 + IDP への管理者アクセス
 + SAML ペイロードの暗号化に使用する公開鍵／秘密鍵のペアへのアクセス（オプション）
-+ AEM Sitesページ(またはツリーページ)、AEM Publish への公開、閉じられたユーザーグループ(CUG)による [保護](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites ページ（またはページツリー）をAEM パブリッシュに公開し、[ クローズドユーザーグループ（CUG）によって保護 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions) る
 
 SAML 2.0 は、AEM パブリッシュまたはプレビューに対するユーザーの認証にのみサポートされます。 IDP を使用して AEM オーサーの認証を管理するには、[IDP を Adobe IMS と統合します](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)。
 
@@ -142,7 +142,7 @@ _認証サービスのキーストアの作成が必要なのは、[SAML 2.0 認
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   パッケージを使用して、次の一時的な回避策_Use :_
+   パッケージを使用して次の一時的な回避策を使用する（_U） :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する
@@ -229,7 +229,7 @@ AuthnRequest 署名と SAML アサーション暗号化は両方ともオプシ�
 1. 「__保存して閉じる__」を選択します。
 1. 更新された&#x200B;__認証サービス__&#x200B;ユーザーを含むパッケージを作成します。
 
-   パッケージを使用して、次の一時的な回避策_Use :_
+   パッケージを使用して次の一時的な回避策を使用する（_U） :_
 
    1. __ツール／デプロイメント／パッケージ__&#x200B;に移動します。
    1. パッケージを作成する
@@ -327,7 +327,7 @@ AEM は次のユーザー属性を使用し、Adobe Granite SAML 2.0 Authenticat
    }
    ```
 
-1. プロジェクトに応じて、値を更新してください。設定プロパティの説明については、上記の __SAML 2.0 Authentication Handler OSGi 設定用語集__&#x200B;を参照してください。
+1. プロジェクトに応じて、値を更新してください。設定プロパティの説明については、上記の __SAML 2.0 Authentication Handler OSGi 設定用語集__ を参照してください。 `path` には、クローズドユーザーグループ（CUG）によって保護され、認証を必要とするコンテンツツリーが含まれている必要があり、この認証ハンドラーが保護を担当する必要があります。
 1. OSGi 環境変数とシークレットは、リリースサイクルと同期して値が変化する可能性がある場合や、類似の環境タイプやサービス層間で値が異なる場合に使用することが推奨されますが、必須ではありません。デフォルト値は、上記のように `$[env:..;default=the-default-value]"` 構文で設定できます。
 
 環境ごとの OSGi 設定（`config.publish.dev`、`config.publish.stage` および `config.publish.prod`）は、SAML 設定が環境によって異なる場合に、特定の属性を使用して定義できます。
@@ -336,7 +336,7 @@ AEM は次のユーザー属性を使用し、Adobe Granite SAML 2.0 Authenticat
 
 [AuthnRequest と SAML アサーション](#encrypting-the-authnrequest-and-saml-assertion)を暗号化する場合、プロパティとして `useEncryption`、`spPrivateKeyAlias`、`keyStorePassword` の 3 つが必要です。`keyStorePassword` はパスワードを含むので、その値は OSGi 設定ファイルに保存してはならず、[秘密の設定値](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values?lang=ja)を使って挿入する必要があります。
 
-+++オプションで、暗号化を使用するように OSGi 設定を更新します
++++（オプション）暗号化を使用するように OSGi 設定を更新する
 
 1. `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` を IDE で開きます。
 1. 次のように、`useEncryption`、`spPrivateKeyAlias`、`keyStorePassword` の 3 つのプロパティを追加します。
