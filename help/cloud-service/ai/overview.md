@@ -48,7 +48,7 @@ Experience Manager as a Cloud Serviceは、コンテンツ管理を強化し、�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./setup.md" title="AEMでの AI の設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474066/?format=jpeg&nocache=1769184550491" alt="AEMでの AI の設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474067/?captions=jpn&format=jpeg&nocache=1769184550491" alt="AEMでの AI の設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -71,7 +71,7 @@ Experience Manager as a Cloud Serviceは、コンテンツ管理を強化し、�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant.md" title="AEM AI アシスタント" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1769184550481" alt="AEM AI アシスタント"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475359/?captions=jpn&format=jpeg&nocache=1769184550481" alt="AEM AI アシスタント"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -94,7 +94,7 @@ Experience Manager as a Cloud Serviceは、コンテンツ管理を強化し、�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./agents-in-aem.md" title="AEMのエージェント" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478455/?format=jpeg&nocache=1769184550500" alt="AEMのエージェント"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478456/?captions=jpn&format=jpeg&nocache=1769184550500" alt="AEMのエージェント"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
