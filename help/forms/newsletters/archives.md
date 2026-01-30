@@ -4,10 +4,10 @@ description: ニュースレターのアーカイブ済みバージョンをダ�
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: 42d1e4c0b2fa9413f57a27d4b247389f17fe9163
+source-git-commit: 5de1edcc2349330d31f1adb8944acab1eb2b9352
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 88%
+source-wordcount: '57'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 88%
 
 Experience League の月刊コンテンツニュースレターは、このページからダウンロードできます。特定月のエディションにアクセスしてダウンロードするには、月を選択してください。
 
-| 2025 年 - ニュースレター |
+| 2025 年版ニュースレター |
 |------------|
 | [1 月](assets/Jan-Newsletter.pdf) |
 | [2 月](assets/Feb-Newsletter.pdf) |
@@ -23,10 +23,16 @@ Experience League の月刊コンテンツニュースレターは、このペ�
 | [4 月](assets/April-Newsletter.pdf) |
 | [5月](assets/May-Newsletter.pdf) |
 | [6 月](assets/June-Newsletter.pdf) |
-| [7 月 &#x200B;](assets/July-Newsletter.pdf) |
-| [8 月 &#x200B;](assets/August-Newsletter.pdf) |
-| [9 月 &#x200B;](assets/Sept-Newsletter.pdf) |
-| [10 月 &#x200B;](assets/Oct-Newsletter.pdf) |
-| [11 月 &#x200B;](assets/Nov-Newsletter.pdf) |
-| [12 月 &#x200B;](assets/Dec-Newsletter.pdf) |
+| [7 月 ](assets/July-Newsletter.pdf) |
+| [8 月 ](assets/August-Newsletter.pdf) |
+| [9 月 ](assets/Sept-Newsletter.pdf) |
+| [10 月 ](assets/Oct-Newsletter.pdf) |
+| [11 月 ](assets/Nov-Newsletter.pdf) |
+| [12 月 ](assets/Dec-Newsletter.pdf) |
+
+
+| 2026 年版ニュースレター |
+|------------|
+| [1 月](assets/Jan-2026.pdf) |
+
 
