@@ -27,4 +27,4 @@ ht-degree: 100%
 
 Adobe IMS ユーザーグループは、AEM に公開するユーザーの論理セットを確立し、AEM ユーザーに対する権限を微調整するために利用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327870?captions=jpn&quality=12&learn=on)
