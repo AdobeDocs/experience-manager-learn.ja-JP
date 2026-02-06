@@ -25,7 +25,7 @@ AEM Development Agent は、開発者、DevOps エンジニア、管理者など
 
 >[!TIP]
 >
-> AEMで使用可能なエージェントの完全なリスト、その機能およびアクセス方法については、[AEM as a Cloud Serviceのエージェントの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) も参照してください。
+> AEMで使用可能なエージェントの完全なリスト、その機能およびアクセス方法については、[AEM as a Cloud Serviceのエージェントの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) も参照してください。
 
 
 ## 概要
@@ -41,9 +41,9 @@ AEM Development Agent には、失敗した CI/CD パイプラインの一覧表
 このチュートリアルに従うには、以下が必要です。
 
 - AEMの AI アシスタントとエージェントを有効にしました。 詳しくは、[AEMでの AI の設定 &#x200B;](./setup.md) を参照してください。また、この記事に記載されているプレイグラウンドには、AEM Development Agent の機能がないことに注意してください。
-- 開発者またはプログラムマネージャーの役割でAdobe [0&rbrace;Cloud Manager&rbrace; にアクセスします。 &#x200B;](https://my.cloudmanager.adobe.com/)詳しくは、[&#x200B; 役割の定義 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions) を参照してください。
+- 開発者またはプログラムマネージャーの役割でAdobe [0&rbrace;Cloud Manager&rbrace; にアクセスします。 &#x200B;](https://my.cloudmanager.adobe.com/)詳しくは、[&#x200B; 役割の定義 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions) を参照してください。
 - AEM as a Cloud Service環境
-- [Beta プログラム &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を介してAEMのエージェントにアクセスします
+- [Beta プログラム &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を介してAEMのエージェントにアクセスします
 - ローカルマシンに複製された [WKND Sites プロジェクト &#x200B;](https://github.com/adobe/aem-guides-wknd)
 
 ### AEM Development Agent の現在の機能
@@ -122,7 +122,7 @@ AEM Development Agent の機能は、定期的に拡張および更新されま�
 
 ### コード品質パイプラインの作成と設定
 
-このチュートリアルでは、コード品質パイプライン（実稼動以外）を使用して、トラブルシューティング用にパイプラインのエラーをトリガーします。 コード品質パイプラインについて詳しくは、[CI/CD パイプラインの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction) を参照してください。
+このチュートリアルでは、コード品質パイプライン（実稼動以外）を使用して、トラブルシューティング用にパイプラインのエラーをトリガーします。 コード品質パイプラインについて詳しくは、[CI/CD パイプラインの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction) を参照してください。
 
 - Cloud Managerで、「**パイプライン**」セクションに移動して、**追加**/**実稼動以外のパイプラインを追加** を選択します。
 - **実稼動以外のパイプラインを追加** ダイアログで、以下を設定します。
@@ -210,17 +210,17 @@ WKND Sites プロジェクトには、依存関係の欠如や間違った設定
 
 ![&#x200B; ブランチを比較 &#x200B;](./assets/dev-agent/compare-branches.png)
 
-AEM Development Agent の使用方法について詳しくは、[&#x200B; サンプルプロンプト &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts) も参照してください。
+AEM Development Agent の使用方法について詳しくは、[&#x200B; サンプルプロンプト &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts) も参照してください。
 
 ## 概要
 
 このチュートリアルでは、AEM Development Agent を使用して、AI アシスタントで失敗した CI/CD パイプラインのトラブルシューティングと修正を行う方法を学びました。 また、Agentic AI が、実用的なインサイトとコード変更を提供することで、テクニカルワークフローを加速させる方法についても学びました。
 
-AEM Development Agent およびAEMのその他のエージェントを使用してワークフローを高速化します。詳しくは、[AEMのエージェントの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) を参照してください。
+AEM Development Agent およびAEMのその他のエージェントを使用してワークフローを高速化します。詳しくは、[AEMのエージェントの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) を参照してください。
 
 ## その他のリソース
 
 - [Experience Managerの AI](./overview.md)
-- [AEMにおけるエージェントの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
-- [&#x200B; 開発エージェントの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
-- [AEMにおけるエージェントの概要 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [AEMにおけるエージェントの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [&#x200B; 開発エージェントの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
+- [AEMにおけるエージェントの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
