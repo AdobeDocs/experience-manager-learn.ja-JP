@@ -117,10 +117,10 @@ AEM Analyzer は、非推奨となった **対象** をレポートし、その�
 
 | アナライザー警告タイプ | 説明 | 推奨されるアクション | 参照 |
 | --------------------- | ----------------- | ------------------ | --------- |
-| 非推奨（廃止予定）のAEM API | API はAEM as a Cloud Serviceから削除されます | 使用をサポートされているパブリック API に置き換えます。 | [API 削除ガイダンス &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 非推奨のAEM パッケージまたはクラス | パッケージまたはクラスはサポートされなくなりました | コードをリファクタリングして、推奨される代替値を使用します | [&#x200B; 非推奨の API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| 非推奨のサードパーティライブラリ | ライブラリは今後の SDK ではサポートされません | 依存関係のアップグレードとリファクタリングの使用 | [&#x200B; 一般指針 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 非推奨の Sling/OSGi パターン | 従来の注釈または API が検出されました | 最新の Sling API および OSGi API への移行 | [Sling/OSGi パターンの削除 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 非推奨（廃止予定）のAEM API | API はAEM as a Cloud Serviceから削除されます | 使用をサポートされているパブリック API に置き換えます。 | [API 削除ガイダンス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 非推奨のAEM パッケージまたはクラス | パッケージまたはクラスはサポートされなくなりました | コードをリファクタリングして、推奨される代替値を使用します | [&#x200B; 非推奨の API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| 非推奨のサードパーティライブラリ | ライブラリは今後の SDK ではサポートされません | 依存関係のアップグレードとリファクタリングの使用 | [&#x200B; 一般指針 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 非推奨の Sling/OSGi パターン | 従来の注釈または API が検出されました | 最新の Sling API および OSGi API への移行 | [Sling/OSGi パターンの削除 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
 | 削除予定（将来の日付） | API は引き続き機能しますが、後で削除が適用されます | パイプラインの適用前にクリーンアップをスケジュール | [リリースノート](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### 実践指導
@@ -134,4 +134,4 @@ AEM Analyzer は、非推奨となった **対象** をレポートし、その�
 ## その他のリソース
 
 - [AEM Analyzer Maven プラグイン &#x200B;](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [&#x200B; 非推奨（廃止予定）の機能と削除された機能および API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
+- [&#x200B; 非推奨（廃止予定）の機能と削除された機能および API](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
