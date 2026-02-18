@@ -27,7 +27,7 @@ ht-degree: 100%
 
 Adobe IMS 製品プロファイルは、ユーザーが属する製品プロファイルに応じて、AEM オーサーサービスにログインし、アクセスのベースラインを提供する資格をユーザーに提供します。
 
->[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327578?captions=jpn&quality=12&learn=on)
 
 ## その他のリソース
 
