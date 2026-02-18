@@ -7,10 +7,10 @@ role: Admin
 level: Beginner
 jira: KT-5000
 thumbnail: 39156.jpg
-last-substantial-update: 2026-02-06T00:00:00Z
+last-substantial-update: 2026-02-18T00:00:00Z
 exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
 duration: 312
-source-git-commit: fa6f5b0019ae0f965c7ff2738bb942dd30185662
+source-git-commit: b30dc712c04284eabb06be46af40dd753f8a51e0
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 100%
@@ -27,7 +27,7 @@ ht-degree: 100%
 
 Adobe IMS 製品プロファイルは、ユーザーが属する製品プロファイルに応じて、AEM オーサーサービスにログインし、アクセスのベースラインを提供する資格をユーザーに提供します。
 
->[!VIDEO](https://video.tv.adobe.com/v/327578?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
 
 ## その他のリソース
 
