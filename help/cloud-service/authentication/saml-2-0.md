@@ -56,7 +56,7 @@ AEM パブリッシュ SAML 統合の一般的なフローは次のとおりで�
 
 ## 設定の手順
 
->[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455328?captions=jpn&quality=12&learn=on)
 
 このビデオでは、AEM as a Cloud Service のパブリッシュサービスとの SAML 2.0 統合の設定、および Okta を IDP として使用する方法について説明します。
 
