@@ -21,7 +21,7 @@ ht-degree: 2%
 
 事前定義済みのテンプレートと再利用可能なフラグメントを使用してインタラクティブ通信ドキュメントを作成します。 これにより、ドキュメント作成の一貫性と効率が確保されます。 適切なフォームデータモデル（FDM）を選択し、フラグメントを指定されたターゲット領域に挿入することで、動的データを埋め込みます。 最終的な出力をテストして、精度とフォーマットを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480066/?captions=jpn&learn=on&enablevpops)
 
 ## 次の手順
 

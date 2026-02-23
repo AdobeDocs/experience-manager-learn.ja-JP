@@ -21,4 +21,4 @@ ht-degree: 0%
 
 API とPostmanを使用してインタラクティブなコミュニケーションドキュメントを生成する方法を説明します。 このプロセスには、ドキュメント ID の取得、リクエストの認証、事前入力設定を使用した PDF のレンダリングが含まれます。 この API をアプリケーションに統合して、動的なランタイムパラメーターを渡し、安全に認証する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480017/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480030/?captions=jpn&learn=on&enablevpops)

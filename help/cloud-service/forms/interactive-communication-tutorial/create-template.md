@@ -21,7 +21,7 @@ ht-degree: 3%
 
 インタラクティブ通信テンプレートを作成して、送信する通信を標準化する方法を説明します。 これらのテンプレートにより、顧客コミュニケーションにおける一貫性、ガバナンス、ブランドの整合性が確保されます。 IC Web Designerやオブジェクトライブラリなどのツールを使用して、テンプレートの作成、編集、将来の使用に向けた有効化のプロセスを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480029/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480043/?captions=jpn&learn=on&enablevpops)
 
 ## 次の手順
 

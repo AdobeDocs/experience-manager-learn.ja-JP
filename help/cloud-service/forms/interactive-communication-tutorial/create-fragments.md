@@ -21,7 +21,7 @@ ht-degree: 3%
 
 インタラクティブ通信ドキュメントの再利用可能なフラグメントを開発する方法について説明します。 レイアウトを最適化し、顧客の住所セクションとレター本文セクションに動的なデータバインディングを確保します。 書式設定、配置、余白のコントロールを使用して、ドキュメントのデザインを強化します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480042/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480055/?captions=jpn&learn=on&enablevpops)
 
 ## 次の手順
 
