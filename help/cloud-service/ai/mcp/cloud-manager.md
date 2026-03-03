@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Cloud Manager MCP サーバーを使用すると、AEMの開発者は、コンテキストを切り替えることなく、パイプラインの実行、エラーのデバッグ、IDE でのCloud Manager ツールへの直接アクセスを行うことができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480343/?captions=jpn&learn=on&enablevpops)
