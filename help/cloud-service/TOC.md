@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 6313c25d9f660adc2a76fc8b3baf66ff081d2868
+source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
 workflow-type: tm+mt
-source-wordcount: '1460'
-ht-degree: 96%
+source-wordcount: '1469'
+ht-degree: 95%
 
 ---
 
@@ -32,10 +32,12 @@ ht-degree: 96%
    + [概要](./ai/overview.md)
    + [セットアップとプロビジョニング](./ai/setup.md)
    + [AI アシスタント](./ai/ai-assistant.md)
-   + エージェント #{#agents}
+   + 代理店 {#agents}
       + [概要](./ai/agents/agents-in-aem.md)
       + [開発エージェントと CI/CD のトラブルシューティング](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
-   + MCP サーバー {#mcp-server}
+   + MCP サーバー {#mcp-servers}
+      + [概要](./ai/mcp/overview.md)
+      + [MCP Server を使用したAEM コンテンツ操作の高速化](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP サーバー](./ai/mcp/cloud-manager.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
