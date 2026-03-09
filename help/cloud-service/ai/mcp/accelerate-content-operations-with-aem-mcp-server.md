@@ -22,7 +22,7 @@ ht-degree: 0%
 
 このチュートリアルでは、MCP フローを離れることなく、すべて IDE から _低いAEM環境_ （RDE または開発）に対して _アドベンチャーコンテンツフラグメントの詳細_ レビュー _、_ 更新 [&#x200B; フラグメント（アドベンチャーの価格など）および &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)WKND Adventures React アプリ _の変更を検証_ 検証）します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480896/?captions=jpn&learn=on&enablevpops)
 
 ## 概要
 
