@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI アシスタントは、AEMのタスクを高速化し、即座に回答を提供し、機能の使用方法をガイドし、問題をトラブルシューティングし、サポートチケットを作成します。これらはすべてExperience Manager インターフェイスから行えます。 チームがコンテンツをより迅速に配信し、ドキュメント検索を減らし、運用効率を向上させるのに役立ちます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480859/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480871/?captions=jpn&learn=on&enablevpops)

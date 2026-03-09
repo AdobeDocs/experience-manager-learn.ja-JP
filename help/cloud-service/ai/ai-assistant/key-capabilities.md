@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI アシスタントが、即座のガイダンス、コードスニペット、トラブルシューティング手順を提供することで、AEM ワークフローを高速化する方法を説明します。 これにより、サポート作業が軽減され、チームがより迅速かつ高品質にコンテンツを配信できるようになります。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480858/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480860/?captions=jpn&learn=on&enablevpops)
