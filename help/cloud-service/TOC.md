@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: bf6a6f467c3ded713552e0077b13c41fb45511cb
+source-git-commit: 34f098de6bd15875e5534250b28c08bdb62e74fa
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1484'
 ht-degree: 95%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 95%
 + 認証{#authentication}
    + [概要](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
+   + [SAML ログインフック](./authentication/saml-2-0-login-hook.md)
 + 高度なネットワーク{#networking}
    + [概要](./networking/advanced-networking.md)
    + [フレキシブルポートエグレス](./networking/flexible-port-egress.md)
