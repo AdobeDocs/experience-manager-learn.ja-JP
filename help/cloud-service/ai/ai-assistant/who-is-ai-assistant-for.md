@@ -20,5 +20,5 @@ ht-degree: 0%
 
 AI アシスタントは、Adobe Experience Managerの様々な役割における生産性を向上させます。 コンテンツ作成者はコンテンツの作成と配信を効率化し、テクニカルチームはワークフローとトラブルシューティングを簡素化し、マネージャーは情報に基づいた意思決定をより迅速に行います。 ステップバイステップのガイダンス、即時回答、事前定義済みのプロンプトなどの機能を備えた AI アシスタントは、チームが効率的に作業し、先を行くことを保証します。 AI アシスタントが役割とチームの目標をどのようにサポートするかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481163/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481164/?captions=jpn&learn=on&enablevpops)
 
