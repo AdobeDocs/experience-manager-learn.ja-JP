@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 34f098de6bd15875e5534250b28c08bdb62e74fa
+source-git-commit: 4c5bec95d74d3611dc96d1d23dcd4d3d708e0243
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 95%
+source-wordcount: '1499'
+ht-degree: 94%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 95%
       + [パイプラインの設定](./cloud-manager/devops/configure-pipelines.md)
       + [継続的統合](./cloud-manager/devops/continuous-integration.md)
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
-      + [Dispatcher 設定](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [CDN ログ分析](./cloud-manager/devops/cdn-log-analysis.md)
 + ローカル開発環境の設定 {#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
@@ -335,6 +335,9 @@ ht-degree: 95%
       + [&#x200B;4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
    + Output と Forms サービスの使用{#forms-cs-output-and-forms-service}
       + [PDF の生成](./forms/forms-cs-output-and-forms-service/outputservice.md)
+   + フォーム送信時のAEPでのプロファイルの作成{#aep-integration}
+      + [クラウド設定の作成](./forms/aep-integration/create-cloud-configuration.md)
+      + [AEP送信用のフォームの設定](./forms/aep-integration/create-integration-with-aep.md)
    + インタラクティブ通信のチュートリアル{#interactive-communication-tutorial}
       + [&#x200B;1. はじめに](./forms/interactive-communication-tutorial/introduction.md)
       + [&#x200B;2. FDM の作成](./forms/interactive-communication-tutorial/create-form-data-model.md)
