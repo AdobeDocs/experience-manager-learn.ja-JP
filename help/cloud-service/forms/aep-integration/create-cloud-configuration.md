@@ -22,7 +22,7 @@ ht-degree: 2%
 
 AEM Formsにクラウド設定をセットアップし、Adobe Experience Platformと安全に統合する方法を説明します。 Adobe Developer Console資格情報を使用して、フォームのシームレスなデータ送信および取得を可能にします。 このガイドでは、接続を効率的に設定するための段階的な手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481496/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481497/?captions=jpn&learn=on&enablevpops)
 
 
 ## 次の手順

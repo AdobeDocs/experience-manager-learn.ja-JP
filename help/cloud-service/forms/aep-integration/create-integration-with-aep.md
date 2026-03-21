@@ -22,4 +22,4 @@ ht-degree: 0%
 
 AEM Forms送信を通じて、Adobe Experience Platformでプロファイルを作成および管理する方法について説明します。 この統合により、データ管理が合理化され、ユーザーエクスペリエンスが向上します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481508/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481510/?captions=jpn&learn=on&enablevpops)
