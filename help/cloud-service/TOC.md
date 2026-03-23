@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 4c5bec95d74d3611dc96d1d23dcd4d3d708e0243
+source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1500'
 ht-degree: 94%
 
 ---
@@ -33,16 +33,16 @@ ht-degree: 94%
    + [セットアップとプロビジョニング](./ai/setup.md)
    + AI アシスタント {#ai-assistant}
       + [概要](./ai/ai-assistant/overview.md)
-      + [AI アシスタントとは](./ai/ai-assistant/what-is-ai-assistant.md)
-      + [AI アシスタントとは誰ですか？](./ai/ai-assistant/who-is-ai-assistant-for.md)
+      + [AI アシスタントとは？](./ai/ai-assistant/what-is-ai-assistant.md)
+      + [AI アシスタントとは？](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [主な機能](./ai/ai-assistant/key-capabilities.md)
-   + 代理店 {#agents}
+   + Agents {#agents}
       + [概要](./ai/agents/agents-in-aem.md)
-      + [開発エージェントと CI/CD のトラブルシューティング](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
+      + [開発エージェントとCI/CDのトラブルシューティング](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
    + MCP サーバー {#mcp-servers}
       + [概要](./ai/mcp/overview.md)
-      + [MCP Server を使用したAEM コンテンツ操作の高速化](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
-      + [Cloud Manager MCP サーバー](./ai/mcp/cloud-manager.md)
+      + [MCP ServerでAEMのコンテンツ運用を高速化](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
+      + [Cloud Manager MCP Server](./ai/mcp/cloud-manager.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [AEM ヘッドレスと Target](./integrations/target.md)
@@ -130,7 +130,7 @@ ht-degree: 94%
       + [サービスユーザー](./developing/advanced/service-users.md)
       + [Web に最適化された画像 API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [AEM オーサーのリーダーインスタンスでのジョブの実行](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
-      + [非推奨 API の検索と削除](./developing/advanced/deprecated-apis-find-removal.md)
+      + [非推奨のAPIの検索と削除](./developing/advanced/deprecated-apis-find-removal.md)
    + 高速開発環境{#rde}
       + [概要](./developing/rde/overview.md)
       + [設定方法](./developing/rde/how-to-setup.md)
@@ -165,9 +165,9 @@ ht-degree: 94%
       + [Adobe Target を統合](./personalization/setup/integrate-adobe-target.md)
       + [タグの統合](./personalization/setup/integrate-adobe-tags.md)
    + ユースケース {#use-cases}
-      + [実験（A/B テスト）](./personalization/use-cases/experimentation.md)
+      + [A/B テストによる検証](./personalization/use-cases/experimentation.md)
       + [行動ターゲティング](./personalization/use-cases/behavioral-targeting.md)
-      + [既知のユーザーのPersonalization](./personalization/use-cases/known-user-personalization.md)
+      + [既知のユーザーに関するPersonalization](./personalization/use-cases/known-user-personalization.md)
 + AEM API{#aem-apis}
    + [概要](./apis/overview.md)
    + OpenAPI{#openapis}
@@ -335,15 +335,16 @@ ht-degree: 94%
       + [&#x200B;4. アイコンの追加](./forms/using-vertical-tabs/icons.md)
    + Output と Forms サービスの使用{#forms-cs-output-and-forms-service}
       + [PDF の生成](./forms/forms-cs-output-and-forms-service/outputservice.md)
-   + フォーム送信時のAEPでのプロファイルの作成{#aep-integration}
+   + フォーム送信時にAEPでプロファイルを作成する{#aep-integration}
+      + [はじめに](./forms/aep-integration/introduction.md)
       + [クラウド設定の作成](./forms/aep-integration/create-cloud-configuration.md)
       + [AEP送信用のフォームの設定](./forms/aep-integration/create-integration-with-aep.md)
-   + インタラクティブ通信のチュートリアル{#interactive-communication-tutorial}
+   + インタラクティブコミュニケーションチュートリアル{#interactive-communication-tutorial}
       + [&#x200B;1. はじめに](./forms/interactive-communication-tutorial/introduction.md)
-      + [&#x200B;2. FDM の作成](./forms/interactive-communication-tutorial/create-form-data-model.md)
+      + [&#x200B;2. FDMの作成](./forms/interactive-communication-tutorial/create-form-data-model.md)
       + [&#x200B;3. テンプレートの作成](./forms/interactive-communication-tutorial/create-template.md)
       + [&#x200B;4. フラグメントの作成](./forms/interactive-communication-tutorial/create-fragments.md)
-      + [&#x200B;5. IC 文書の作成](./forms/interactive-communication-tutorial/create-ic-document.md)
+      + [&#x200B;5. IC ドキュメントの作成](./forms/interactive-communication-tutorial/create-ic-document.md)
       + [&#x200B;6. IC ドキュメントの生成](./forms/interactive-communication-tutorial/test-document-generation.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
       + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
