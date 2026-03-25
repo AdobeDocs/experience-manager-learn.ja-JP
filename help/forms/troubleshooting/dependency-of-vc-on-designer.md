@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、Designer の C++ライブラリでの依存関係の問題をトラブルシューティングする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335576?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418074?captions=jpn&quality=12&learn=on)

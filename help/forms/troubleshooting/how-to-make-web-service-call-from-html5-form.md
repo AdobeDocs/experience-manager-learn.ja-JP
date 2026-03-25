@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、web サービスをHTML5 フォームから呼び出すプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417464?captions=jpn&quality=12&learn=on)

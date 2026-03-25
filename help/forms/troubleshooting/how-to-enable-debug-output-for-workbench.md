@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、ワークベンチのデバッグ出力を有効にする手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418085?captions=jpn&quality=12&learn=on)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、HTTPS を使用してワークベンチを AEM Forms サーバーに接続する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335482?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418083?captions=jpn&quality=12&learn=on)

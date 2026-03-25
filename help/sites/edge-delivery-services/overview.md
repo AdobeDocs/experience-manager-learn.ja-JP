@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Edge 配信サービスを使用して web サイトを高速化する方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453445/?captions=jpn&learn=on)
 
 Edge 配信サービスとその機能について詳しくは、[ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/edge-delivery/overview)を参照してください。
 
@@ -109,7 +109,7 @@ CARDS
             <a href="./developing/prerequisites.md" title="前提条件"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434585/?captions=jpn&format=jpeg"
                 alt="前提条件">
             </a>
           </figure>
@@ -141,7 +141,7 @@ CARDS
             <a href="./developing/aem-boilerplate.md" title="ボイラープレートテンプレートを使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="設定
+                src="https://video.tv.adobe.com/v/3434612/?captions=jpn&format=jpeg" alt="設定
 ボイラープレート">
             </a>
           </figure>
@@ -173,7 +173,7 @@ CARDS
             <a href="./developing/content-repository.md" title="Google Drive をリンク"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Google Drive をリンク">
+                src="https://video.tv.adobe.com/v/3434721/?captions=jpn&format=jpeg" alt="Google Drive をリンク">
             </a>
           </figure>
         </div>
@@ -203,7 +203,7 @@ CARDS
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="SharePoint をリンク" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3446029/?captions=jpn&format=jpeg"
                 alt="SharePoint をリンク">
             </a>
           </figure>
@@ -235,7 +235,7 @@ CARDS
             <a href="./developing/preview-and-publish.md" title="コンテンツをプレビューおよび公開"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="コンテンツをプレビューおよび公開">
+                src="https://video.tv.adobe.com/v/3434710/?captions=jpn&format=jpeg" alt="コンテンツをプレビューおよび公開">
             </a>
           </figure>
         </div>
@@ -266,7 +266,7 @@ CARDS
             <a href="./developing/sidekick.md" title="Sidekick の使用"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441281/?captions=jpn&format=jpeg"
                 alt="Sidekick の使用">
             </a>
           </figure>
@@ -298,7 +298,7 @@ CARDS
             <a href="./developing/document-structure.md" title="ドキュメント構造"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425716/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445190/?captions=jpn&format=jpeg"
                 alt="ドキュメント構造">
             </a>
           </figure>
@@ -330,7 +330,7 @@ CARDS
             <a href="./developing/local-development.md" title="ローカル開発"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434732/?captions=jpn&format=jpeg"
                 alt="ローカル開発">
             </a>
           </figure>
@@ -362,7 +362,7 @@ CARDS
             <a href="./developing/git.md" title="Git との統合"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441827/?captions=jpn&format=jpeg"
                 alt="Git との統合">
             </a>
           </figure>
@@ -399,7 +399,7 @@ CARDS
             <a href="./how-to/rss.md" title="RSS フィードを作成"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438000/?captions=jpn&format=jpeg"
                 alt="RSS フィードを作成">
             </a>
           </figure>
@@ -431,7 +431,7 @@ CARDS
             <a href="./how-to/social-media-sharing.md" title="ソーシャルメディア共有"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439438/?captions=jpn&format=jpeg"
                 alt="ソーシャルメディア共有">
             </a>
           </figure>
@@ -463,7 +463,7 @@ CARDS
             <a href="./how-to/delete-page.md" title="ページの削除"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438091/?captions=jpn&format=jpeg"
                 alt="ページの削除">
             </a>
           </figure>

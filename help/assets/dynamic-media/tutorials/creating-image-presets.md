@@ -21,6 +21,6 @@ ht-degree: 55%
 
 このビデオでは、Dynamic Mediaで画像プリセットを作成する手順を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418637?captions=jpn&quality=12&learn=on)
 
 AEM AssetsでDynamic Media URLと画像プリセットを作成するためのベストプラクティスを学び、その仕組みを理解しましょう。 [&#x200B; ビデオを見る](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。

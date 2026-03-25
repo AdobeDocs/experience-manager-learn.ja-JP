@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *このビデオでは、ワークベンチのメモリパラメーターを調整するプロセスについて説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417903?captions=jpn&quality=12&learn=on)
