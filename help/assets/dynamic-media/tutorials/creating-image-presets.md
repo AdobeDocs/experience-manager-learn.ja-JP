@@ -23,4 +23,4 @@ ht-degree: 55%
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
 
-AEM AssetsでDynamic Media URLと画像プリセットを作成するためのベストプラクティスを学び、その仕組みを理解しましょう。 [ ビデオを見る](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。
+AEM AssetsでDynamic Media URLと画像プリセットを作成するためのベストプラクティスを学び、その仕組みを理解しましょう。 [&#x200B; ビデオを見る](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。

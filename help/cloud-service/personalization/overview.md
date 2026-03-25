@@ -38,7 +38,7 @@ AEM as a Cloud Service（AEMCS）とAdobe TargetおよびAdobe Experience Platfo
 
 ## Personalizationのユースケースのライブデモ
 
-[WKND イネーブルメント web サイト ](https://wknd.enablementadobe.com/us/en.html){target="wknd"}で、パーソナライゼーションを実際に体験してください。 デモサイトでは、A/B テスト、行動ターゲティング、既知のユーザーに対するパーソナライゼーションの3種類のパーソナライゼーションが紹介されています。
+[WKND イネーブルメント web サイト &#x200B;](https://wknd.enablementadobe.com/us/en.html){target="wknd"}で、パーソナライゼーションを実際に体験してください。 デモサイトでは、A/B テスト、行動ターゲティング、既知のユーザーに対するパーソナライゼーションの3種類のパーソナライゼーションが紹介されています。
 
 >[!TIP]
 >

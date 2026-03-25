@@ -197,7 +197,7 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 ![WKND CDN ログの ELK](../assets/use-cases/wknd-cdn-logs-elk-waf.png)
 
-ELK アプリケーション内の **WAF ダッシュボード**には、フラグが付けられた
+ELK アプリケーション内の **WAF ダッシュボード**&#x200B;には、フラグが付けられた
 リクエストと、クライアント IP（cli_ip）、ホスト、URL、アクション（waf_action）、ルール名（waf_match）の各列に対応する値が表示されます。
 
 ![WKND WAF ダッシュボードの ELK](../assets/use-cases/elk-tool-dashboard-waf-flagged.png)

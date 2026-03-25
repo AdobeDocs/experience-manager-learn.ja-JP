@@ -25,7 +25,7 @@ ht-degree: 51%
 + マルチステップチュートリアル {#multi}
    + [AEM Sites の基本を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [OpenAPI APIを使用したAEM コンテンツフラグメント配信の概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview){target=_blank}
-   + [ ユニバーサルエディターを使用したReact アプリの編集](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
+   + [&#x200B; ユニバーサルエディターを使用したReact アプリの編集](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview){target=_blank}
    + [Personalizationの概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview){target=_blank}
    + [RDEの使用開始](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/developing/rde/overview){target=_blank}
    + [AEM APIの概要](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/overview){target=_blank}
