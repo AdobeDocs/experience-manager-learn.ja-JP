@@ -9,13 +9,13 @@ topic-tags: forms, adaptive_forms
 topic: Integrations
 discoiquuid: aec562a4-4405-4e6f-9ad5-7477fa1d078f
 targetaudience: target-audience advanced
-index: y
+index: true
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
 duration: 628
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 AEM Forms での Acrobat Sign の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/38339?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
 
 *このビデオでは、Acrobat Sign Cloud Service をセットアップし、AEM アダプティブフォームに複数の署名フィールドを追加する手順について説明します。*
 

@@ -7,12 +7,12 @@ topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-index: y
+index: true
 doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: display, noCatalog
 duration: 74
-source-git-commit: b612e2e36af8f56661a07577e979959c650564ee
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 100%

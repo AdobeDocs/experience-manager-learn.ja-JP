@@ -8,12 +8,12 @@ role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
-index: y
+index: true
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 100%

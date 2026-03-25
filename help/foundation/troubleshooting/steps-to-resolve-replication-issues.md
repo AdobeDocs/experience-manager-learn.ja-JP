@@ -7,12 +7,12 @@ level: Beginner
 version: Experience Manager 6.5
 feature: Developer Tools
 topic: Administration
-index: y
+index: true
 doc-type: Technical Video
 exl-id: aa520806-3937-4100-b75a-78c2460c1b2f
 duration: 107
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 100%
 
@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *このビデオでは、AEM でのレプリケーションの問題を解決する手順について説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/3418657?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

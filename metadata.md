@@ -4,14 +4,16 @@ solution-title: Experience Manager
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-learn.ja-JP
 product: experience manager
-index: y
+index: true
 type: Tutorial
 solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
+landing-page-name: experience-manager
+landing-page-breadcrumb-title: AEM
 auto-video-transcripts: true
-source-git-commit: 445e69684160350bb55171cbcecd61325dcfa643
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '128'
 ht-degree: 100%
 
 ---
@@ -19,7 +21,7 @@ ht-degree: 100%
 
 # 内部使用メタデータ
 
-metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
+metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。 任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
 
 | メタデータ | 機能 |
 |--- |--- |

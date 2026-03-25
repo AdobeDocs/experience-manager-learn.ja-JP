@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 39ed523f-abcd-49b5-978f-b795e109d7f5
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 デジタルエクスペリエンスを最適化するための 3 つの主要な原則（基本の修正、AI の活用、戦略的リーダーの強化）について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462042/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)

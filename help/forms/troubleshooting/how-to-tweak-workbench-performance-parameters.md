@@ -1,24 +1,24 @@
 ---
-title: Workbench パフォーマンスパラメーターの調整方法
-description: Workbench パフォーマンスパラメーターの調整手順
+title: ワークベンチパフォーマンスパラメーターの調整方法
+description: ワークベンチパフォーマンスパラメーターの調整手順
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: Experience Manager 6.5
 feature: Workbench
 topic: Administration
-index: y
+index: true
 exl-id: 6cb41242-18d3-420a-9e33-87091a648703
 duration: 65
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '30'
 ht-degree: 100%
 
 ---
 
-# Workbench パフォーマンスパラメーターの調整方法
+# ワークベンチパフォーマンスパラメーターの調整方法
 
-*このビデオでは、Workbench のパフォーマンスパラメーターを調整するプロセスについて順を追って説明します。*
+*このビデオでは、ワークベンチのパフォーマンスパラメーターを調整するプロセスについて順を追って説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/3417894?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

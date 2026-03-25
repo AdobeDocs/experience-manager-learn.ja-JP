@@ -3,8 +3,8 @@ user-guide-title: AEM Foundation のビデオおよびチュートリアル
 breadcrumb-title: AEM の基盤のチュートリアル
 user-guide-description: Adobe Experience Manager Foundation のビデオやチュートリアルのコレクションです。
 sub-product: Experience Manager
-index: y
-source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
+index: true
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 98%
@@ -51,7 +51,7 @@ ht-degree: 98%
    + [ModSecurity CRS DoS 攻撃保護](./security/modsecurity-crs-dos-attack-protection.md)
    + [プライベート証明書を使用した API への HTTPS 接続](./security/call-internal-apis-having-private-certificate.md)
    + [AEM からの Mutual TLS（mTLS）認証](./security/mutual-tls-authentication.md)
-   + [JWT から OAuth への資格情報の移行](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [JWTからOAuthへの資格情報の移行](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + ワークフロー {#workflow}
    + [ワークフローエディターの使用](./workflow/use-the-workflow-editor.md)
    + [ワークフローを使用](./workflow/use-workflow.md)

@@ -7,8 +7,8 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
-index: y
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+index: true
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 94%
@@ -24,8 +24,8 @@ ht-degree: 94%
       + [概要](./open-api/basic/overview.md)
       + [1 - コンテンツフラグメントモデルの定義](./open-api/basic/1-content-fragment-models.md)
       + [2 - コンテンツフラグメントの作成](./open-api/basic/2-author-content-fragments.md)
-      + [3 - OpenAPI の探索](./open-api/basic/3-explore-openapis.md)
-      + [4 - React アプリの作成](./open-api/basic/4-react-app.md)
+      + [3 - OpenAPI APIの探索](./open-api/basic/3-explore-openapis.md)
+      + [4 - React アプリの構築](./open-api/basic/4-react-app.md)
       + [5 - ユニバーサルエディターの統合](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
    + [AEM ヘッドレス開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja){target=_blank}

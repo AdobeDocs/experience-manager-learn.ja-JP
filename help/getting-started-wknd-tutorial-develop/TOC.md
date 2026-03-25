@@ -7,8 +7,8 @@ sub-product: Experience Manager Sites
 version: Experience Manager as a Cloud Service
 activity: develop
 audience: developer
-index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+index: true
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 92%
@@ -28,7 +28,7 @@ ht-degree: 92%
    + [5 - スタイルシステム](./project-archetype/style-system.md)
    + [6 - カスタムコンポーネント](./project-archetype/custom-component.md)
    + [7 - 単体テスト](./project-archetype/unit-testing.md)
-+ クイックサイト作成 {#site-template}
++ スピーディなサイト作成 {#site-template}
    + [概要](./site-template/overview.md)
    + [1 - サイトの作成](./site-template/create-site.md)
    + [2 - オーサリングとパブリッシングの概要](./site-template/author-content-publish.md)

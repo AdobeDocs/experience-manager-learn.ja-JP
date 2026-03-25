@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 93%
@@ -43,14 +43,15 @@ AEM web サイトのデフォルトの DDoS 保護機能を説明します。
 DDoS 攻撃から web サイトを保護するために、顧客が実行できる追加の推奨対策をいくつか見てみましょう。
 
 - アドビの推奨される[標準トラフィックフィルタールール](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)を実装し、疑わしい動作をログに記録してアラートすることで、潜在的に悪意のあるトラフィックパターンを特定します。
-- Extended Security （旧称WAF-DDoS Protection）または Extended Security for Healthcare （旧称 Enhanced Security）アドオンを使用して、Adobeが推奨する [WAFのトラフィックフィルタールール &#x200B;](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md) を実装し、高度なプロトコルやペイロードベースの手法を使用する攻撃を含む高度な攻撃を防御します。
+- Extended Security （旧称WAF-DDoS Protection）またはExtended Security for Healthcare （旧称Enhanced Security）アドオンを使用し、Adobeが推奨する[WAF Traffic Filter Rules](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)を実装して、高度なプロトコルやペイロードベースのテクニックを使用する攻撃を含む高度な攻撃から保護します。
 - 不要なクエリパラメーターを無視するように[リクエスト変換](./traffic-filter-and-waf-rules/how-to/request-transformation.md)を設定して、キャッシュカバレッジを増やします。
 
 ## 今すぐ始める
 
 攻撃をブロックするアドビの推奨されるルールを設定するには、次のチュートリアルを参照してください。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./traffic-filter-and-waf-rules/setup.md

@@ -1,7 +1,7 @@
 ---
 title: Edge Delivery Services とユニバーサルエディターの開発者向けチュートリアル
 description: AEM ユニバーサルエディターで作成され、Edge Delivery Services を使用して配信される新しい web サイトの開発の基本について説明します。
-short-description: Edge Delivery Servicesを使用した、強力なオーサリング機能とユニバーサルエディターおよび超高速配信を組み合わせたAEM web サイトを構築するための開発者向けチュートリアルです。 新規プロジェクトを作成する方法、ローカル開発環境を設定する方法、カスタムブロックを構築する方法について説明します。
+short-description: ユニバーサルエディターを使用した強力なオーサリング機能と Edge Delivery Services を使用した超高速配信を組み合わせた AEM web サイトを構築する開発者向けチュートリアルです。新規プロジェクトの作成方法、ローカル開発環境の設定方法、カスタムブロックの構築方法について説明します。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 89%
 
 AEM as a Cloud Service でコードプロジェクトを作成し、新しいサイトを設定する方法について説明します。この設定により、ユニバーサルエディターを使用したシームレスな開発が可能になり、コンテンツの作成および Edge Delivery Services を通じた高速コンテンツ配信が実現します。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -88,7 +89,8 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
 ## 開発設定
 
 高速な web サイト開発を可能にするローカル開発環境を設定する方法について説明します。この設定により、ユニバーサルエディターを使用したシームレスなサイト作成と、Edge Delivery Services を通じた効率的なコンテンツ配信が実現し、スムーズで最適化された開発ワークフローが確保されます。
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -101,7 +103,7 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="ローカル開発環境の設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443979/?captions=jpn&format=jpeg&nocache=1753811862249" alt="ローカル開発環境の設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="ローカル開発環境の設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -149,7 +151,8 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
 
 コンテンツモデルを定義し、テストと開発用のサンプルコンテンツを設定して、新しいブロックを作成する方法について説明します。ブロックをレンダリングする 2 つの方法を探索し、AEM および Edge Delivery Services で最適なパフォーマンスと柔軟性を実現するブロックの構成方法を探索します。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./5-new-block.md {image = ./assets/5-new-block/card.png}
 * ./6-author-block.md {image = ./assets/6-author-block/card.png}
@@ -258,7 +261,8 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
 
 このチュートリアルは完了しました。次は、上記の集中的なハウツーで学んだ内容に基づいて作業を進めます。上記のガイドでは、ここで説明したコードと概念を拡張し、役割固有のユースケース、高度なテクニック、Edge Delivery Services とユニバーサルエディターの開発スキルを強化するその他のヒントについて説明します。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./how-to/block-options.md
 * ./how-to/header-and-footer.md
@@ -326,9 +330,9 @@ AEM as a Cloud Service でコードプロジェクトを作成し、新しいサ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" title="ユニバーサルエディター拡張機能のプレビュー"> ユニバーサルエディター拡張機能のプレビュー </a>
+                        <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" title="ユニバーサルエディター拡張機能のプレビュー"> ユニバーサルエディター拡張機能のプレビュー</a>
                     </p>
-                    <p class="is-size-6">開発中にローカルで実行されているユニバーサルエディター拡張機能をプレビューする方法を説明します。</p>
+                    <p class="is-size-6">開発中にローカルで実行されているユニバーサルエディター拡張機能をプレビューする方法について説明します。</p>
                 </div>
                 <a href="./how-to/local-extension-preview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>

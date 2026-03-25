@@ -8,14 +8,14 @@ role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
-index: y
+index: true
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%

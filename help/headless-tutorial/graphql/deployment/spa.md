@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 100%
@@ -94,7 +94,8 @@ AEM と異なるドメインでホストされている場合に、SPA 実稼動
 
 アドビは、React でコード化された単一ページアプリの例を提供しています。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ../example-apps/react-app.md
 

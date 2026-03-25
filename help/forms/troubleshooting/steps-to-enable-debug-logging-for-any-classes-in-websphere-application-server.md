@@ -6,11 +6,11 @@ role: Admin
 level: Intermediate
 version: Experience Manager 6.5
 topic: Administration
-index: y
+index: true
 exl-id: fd7ad4df-4c27-42f2-889f-03e170bac319
 duration: 73
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 100%
 
@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *このビデオでは、WebSphere アプリケーションサーバーで任意のクラスのデバッグログを有効にする手順を説明します。*
 
->[!VIDEO](https://video.tv.adobe.com/v/3418661?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)

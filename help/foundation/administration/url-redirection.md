@@ -8,11 +8,11 @@ role: Developer
 level: Intermediate
 jira: KT-11466
 last-substantial-update: 2024-10-22T00:00:00Z
-index: y
+index: true
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 100%
