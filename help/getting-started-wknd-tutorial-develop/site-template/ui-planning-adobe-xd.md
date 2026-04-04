@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # Adobe XD を使用した UI の計画 {#ui-planning-adobe-xd}
 
-通常、新しい web サイトの計画は、モックアップと静的なデザインから始まります。[Adobe XD](https://www.adobe.com/products/xd.html) は、ユーザーエクスペリエンスを構築するためのクラス最高のデザインツールです。アドビでは、Adobe XD または他のツールを使用した UI モックアップを通じて、Sites の実装を計画することをお勧めします。
+通常、新しい web サイトの計画は、モックアップと静的なデザインから始まります。[Adobe XD](https://www.adobe.com/jp/products/xd.html) は、ユーザーエクスペリエンスを構築するためのクラス最高のデザインツールです。アドビでは、Adobe XD または他のツールを使用した UI モックアップを通じて、Sites の実装を計画することをお勧めします。
 
 ## 前提条件 {#prerequisites}
 

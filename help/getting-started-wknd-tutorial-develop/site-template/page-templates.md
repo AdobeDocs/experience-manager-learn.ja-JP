@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # ページテンプレート {#page-templates}
 
-この章では、ページテンプレートとページの関係を探ります。スタイル設定されていない Magazine Article テンプレートを [AdobeXD](https://www.adobe.com/products/xd.html) のモックアップを基に作成します。テンプレートを作成するプロセスでは、コアコンポーネントと詳細ポリシー設定について説明します。
+この章では、ページテンプレートとページの関係を探ります。スタイル設定されていない Magazine Article テンプレートを [AdobeXD](https://www.adobe.com/jp/products/xd.html) のモックアップを基に作成します。テンプレートを作成するプロセスでは、コアコンポーネントと詳細ポリシー設定について説明します。
 
 ## 前提条件 {#prerequisites}
 

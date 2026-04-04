@@ -76,5 +76,5 @@ InDesign のテンプレートファイルとサポート画像
 
 [InDesign のテンプレートファイルとサポート画像](assets/asset-templates-tutorial-video--supporting-files-1.zip)をダウンロードします。
 
-* [InDesign CC 体験版のダウンロード](https://creative.adobe.com/products/download/indesign)
+* [InDesign CC 体験版のダウンロード](https://creative.adobe.com/jp/products/download/indesign)
 * InDesign Server 体験版は、[アドビプレリリースサイト](https://www.adobeprerelease.com/)からダウンロードできます。または、[CC エンタープライズ版のお客様は、アカウント担当者に連絡して、InDesign Server 体験版ライセンスをリクエストできます](https://www.adobe.com/jp/products/indesignserver/faq.html)。
