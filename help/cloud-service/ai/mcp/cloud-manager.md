@@ -1,6 +1,6 @@
 ---
-title: Cloud Manager MCP サーバー
-description: Cloud Manager MCP サーバーを使用すると、AEMの開発者は、コンテキストを切り替えることなく、パイプラインの実行、エラーのデバッグ、IDE でのCloud Manager ツールへの直接アクセスを行うことができます。
+title: Cloud Manager MCP Server
+description: Cloud Manager MCP Serverを使用すると、AEM開発者はパイプラインを実行し、エラーをデバッグし、Cloud Manager ツールにIDEから直接アクセスできます。コンテキストは切り替わりません。
 version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate, Experienced
@@ -9,19 +9,15 @@ duration: 97
 last-substantial-update: 2026-03-02T00:00:00Z
 jira: KT-20425
 exl-id: 0811742a-7f1b-4659-8ab0-982ef1527483
-source-git-commit: e630a91aa965df4d1222d7949a61dc0fa6f2865b
+source-git-commit: 12f517200fd777390fc17fcc389fb59644299ac9
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
 
-# Cloud Manager MCP サーバー
+# Cloud Manager MCP Server
 
-Cloud Manager MCP サーバーを使用すると、AEMの開発者は、コンテキストを切り替えることなく、パイプラインの実行、エラーのデバッグ、IDE でのCloud Manager ツールへの直接アクセスを行うことができます。
+Cloud Manager MCP Serverを使用すると、AEM開発者はパイプラインを実行し、エラーをデバッグし、Cloud Manager ツールにIDEから直接アクセスできます。コンテキストは切り替わりません。
 
->[!AVAILABILITY]
->
-> Cloud Manager MCP Server は現在ベータ版です。 アクセスを要求するには、ユースケースの説明を添えて [0&rbrace;aemcs-mcp-feedback@adobe.com&rbrace; に電子メールを送信します。](mailto:aemcs-mcp-feedback@adobe.com)
-
->[!VIDEO](https://video.tv.adobe.com/v/3480343/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
