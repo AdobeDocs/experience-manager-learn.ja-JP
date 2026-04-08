@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI アシスタントとAgentic AIを連携させて、顧客の意図をアクションに変える方法をご紹介します。 この動画では、AI アシスタントが、AEMのAgentic AI機能へのゲートウェイとして機能する仕組みを探ります。 また、コンセプトレベルでAgentic AIについて学び、AEMでAgentsを簡単に紹介します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3483212/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3483213/?captions=jpn&learn=on&enablevpops)
