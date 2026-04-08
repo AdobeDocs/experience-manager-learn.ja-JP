@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
+source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
 workflow-type: tm+mt
-source-wordcount: '1500'
-ht-degree: 94%
+source-wordcount: '1505'
+ht-degree: 93%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 94%
       + [AI アシスタントとは？](./ai/ai-assistant/what-is-ai-assistant.md)
       + [AI アシスタントとは？](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [主な機能](./ai/ai-assistant/key-capabilities.md)
+      + [AI アシスタントとAgentic AI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
    + Agents {#agents}
       + [概要](./ai/agents/agents-in-aem.md)
       + [開発エージェントとCI/CDのトラブルシューティング](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
