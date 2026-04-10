@@ -6,16 +6,18 @@ topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 0f9480bb52765daa01c5372a117a441adb03bb9d
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 100%
+source-wordcount: '696'
+ht-degree: 70%
 
 ---
 
 # ページバリアントのキャッシュ
 
-ページのバリアントのキャッシュをサポートするために AEM as a Cloud Service を設定および使用する方法について説明します。
+web体験では、位置情報、パーソナライゼーション、実験など、様々なオーディエンスに合わせてコンテンツを調整する必要があります。 このチュートリアルでは、`x-aem-variant` Cookieを使用して複数のページバリエーションを効率的にキャッシュして提供し、柔軟性と高いパフォーマンスを大規模に実現するように、Adobe Experience Manager（AEM）as a Cloud Serviceを設定する方法について説明します。
+
+大まかに言えば、プロジェクトのコードで訪問者固有の`x-aem-variant` Cookieを設定し（場所に基づいて）、その後CDNのリクエストヘッダーに変換します。 この値は、Dispatcher書き換えルールを介してリクエスト URLに組み込まれ、AEMが正しいバリアントをレンダリングできるようにしながら、CDNとDispatcherが各バリアントのページの別のバージョンをキャッシュできるようにします。
 
 ## 使用例
 
@@ -27,7 +29,7 @@ ht-degree: 100%
 
 + バリアントキーと、そのキーの値の数を指定します。 この例では、米国の州ごとに異なるので、最大数は 50 です。これは、CDN でバリアント制限に関する問題を引き起こさないほど小さい数です。 [バリアント制限](#variant-limitations)の節を確認してください。
 
-+ AEM コードは、最初の HTTP リクエストに対応する HTTP 応答で、Cookie __「x-aem-variant」__ を訪問者の州（例：`Set-Cookie: x-aem-variant=NY`）に設定する必要があります。
++ プロジェクトコードは、cookie __&quot;x-aem-variant&quot;__&#x200B;を訪問者の優先状態（例： `Set-Cookie: x-aem-variant=NY`）を最初のHTTP リクエストの対応するHTTP応答に対して呼び出します。 AEMとAdobeで管理されているCDNは、`x-aem-variant`を自動的に判断または設定しません。 このヘッダー/cookieが存在する場合は、アプリケーションが設定しているためです。 このヘッダーは、カスタムのAEM サーブレットまたはAEM サーブレットフィルターを使用して設定できます（以下のコードサンプルに示すように）。
 
 + 訪問者からの以降のリクエストでは、その Cookie を送信し（例： `"Cookie: x-aem-variant=NY"`）、Cookie は CDN レベルで定義済みのヘッダー（つまり、`x-aem-variant:NY`）に変換され、Dispatcher に渡されます。
 
@@ -55,7 +57,7 @@ ht-degree: 100%
 
 1. AEM の CDN は、`x-aem-variant` Cookie を同じ名前の HTTP ヘッダーに自動的に変換します。
 
-1. `dispatcher` プロジェクトに Apache web サーバー mod_rewrite ルールを追加して、バリアントセレクターを含めるようにリクエストパスを変更します。
+1. バリアント セレクターを含めるようにリクエストパスを変更するApache Web サーバー`mod_rewrite` ルールを`dispatcher` プロジェクトに追加します。
 
 1. Cloud Manager を使用してフィルターおよび書き換えルールをデプロイします。
 
