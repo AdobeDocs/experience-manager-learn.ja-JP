@@ -11,22 +11,22 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '770'
-ht-degree: 100%
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 90%
 
 ---
 
 # メタデータ駆動型の権限{#metadata-driven-permissions}
 
-メタデータ駆動型の権限は、フォルダー構造ではなくアセットのコンテンツまたはメタデータプロパティに基づいて、AEM Assets オーサーに対するアクセス制御の決定を可能にするのに使用される機能です。この機能を使用すると、アセットのステータス、タイプまたは定義したカスタムプロパティなどの属性を評価するアクセス制御ポリシーを定義できます。
+メタデータ駆動型の権限は、フォルダー構造ではなくアセットのコンテンツまたはメタデータプロパティに基づいて、AEM Assets オーサーに対するアクセス制御の決定を可能にするのに使用される機能です。 この機能を使用すると、アセットのステータス、タイプまたは定義したカスタムプロパティなどの属性を評価するアクセス制御ポリシーを定義できます。
 
-例を見てみましょう。クリエイティブは、自分の作品を AEM Assets のキャンペーン関連フォルダーにアップロードします。これは、使用が承認されていない処理中のアセットである可能性があります。マーケターには、このキャンペーンで承認されたアセットのみが表示されていることを確認します。メタデータプロパティを利用すると、アセットが承認され、マーケターが使用できることを示すことができます。
+例を見てみましょう。 クリエイティブは、自分の作品を AEM Assets のキャンペーン関連フォルダーにアップロードします。これは、使用が承認されていない処理中のアセットである可能性があります。 マーケターには、このキャンペーンで承認されたアセットのみが表示されていることを確認します。 メタデータプロパティを利用すると、アセットが承認され、マーケターが使用できることを示すことができます。
 
 ## 仕組み
 
-メタデータ駆動型の権限を有効にするには、「ステータス」や「ブランド」など、アクセス制限を推進するアセットのコンテンツまたはメタデータプロパティを定義する必要があります。これらのプロパティを使用すると、特定のプロパティ値を持つアセットにアクセスできるユーザーグループを指定するアクセス制御エントリを作成できます。
+メタデータ駆動型の権限を有効にするには、「ステータス」や「ブランド」など、アクセス制限を推進するアセットのコンテンツまたはメタデータプロパティを定義する必要があります。 これらのプロパティを使用すると、特定のプロパティ値を持つアセットにアクセスできるユーザーグループを指定するアクセス制御エントリを作成できます。
 
 ## 前提条件
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 メタデータ駆動型の権限を実装するには、開発者は AEM as a Cloud Service に OSGi 設定をデプロイする必要があります。これにより、特定のアセットのコンテンツまたはメタデータプロパティでメタデータ駆動型の権限を強化できます。
 
-1. アクセス制御に使用するアセットのコンテンツまたはメタデータプロパティを決定します。プロパティ名は、アセットの `jcr:content` または `jcr:content/metadata` リソース上の JCR プロパティ名です。ここでは、`status` というプロパティにします。
+1. アクセス制御に使用するアセットのコンテンツまたはメタデータプロパティを決定します。 プロパティ名は、アセットの `jcr:content` または `jcr:content/metadata` リソース上の JCR プロパティ名です。 ここでは、`status` というプロパティにします。
 1. AEM Maven プロジェクト内に OSGi 設定 `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` を作成します。
 1. 次の JSON を作成したファイルに貼り付けます。
 
@@ -46,12 +46,14 @@ ht-degree: 100%
        "status",
        "brand"
      ],
-     "restrictionContentPropertyNames":[],
+     "restrictionContentPropertyNames":[
+       "dam:rightsManaged"
+     ],
      "enabled":true
    }
    ```
 
-1. プロパティ名を必要な値に置き換えます。`restrictionContentPropertyNames` 設定プロパティは、`jcr:content` リソースプロパティに対する権限を有効にする目的で使用され、`restrictionPropertyNames` 設定プロパティは、アセットの `jcr:content/metadata` リソースプロパティに対する権限を有効にします。
+1. プロパティ名を必要な値に置き換えます。  `restrictionContentPropertyNames` 設定プロパティは、`jcr:content` リソースプロパティに対する権限を有効にする目的で使用され、`restrictionPropertyNames` 設定プロパティは、アセットの `jcr:content/metadata` リソースプロパティに対する権限を有効にします。
 
 ## 基本アセット権限のリセット
 
@@ -108,9 +110,8 @@ ht-degree: 100%
 > 次に注意することが重要です。
 > 
 > - プロパティは、__文字列の等価性__（`=`）（より大きい（`>`）または日付プロパティの場合、まだサポートされていない他のデータタイプまたは演算子）を使用して制限に照らして評価されます。
-> - 1 つの制限プロパティに対して複数の値を許可するには、「タイプを選択」ドロップダウンから同じプロパティを選択し、新しい制限値（例：`status=approved`、`status=wip`）を入力し、「+」をクリックして制限をエントリに追加することで、アクセス制御エントリに追加の制限を追加できます。
-> ![複数の値を許可](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - __AND 制限__&#x200B;がサポートされ、異なるプロパティ名（例：`status=approved`、`brand=Adobe`）を持つ単一のアクセス制御エントリ内の複数の制限は、AND 条件として評価されます。つまり、選択したユーザーグループには、`status=approved AND brand=Adobe` のアセットへの読み取りアクセス権が付与されます。
+> - 1 つの制限プロパティに対して複数の値を許可するには、「タイプを選択」ドロップダウンから同じプロパティを選択し、新しい制限値（例：`status=approved`、`status=wip`）を入力し、「+」をクリックして制限をエントリに追加することで、アクセス制御エントリに追加の制限を追加できます。> ![複数の値を許可](./assets/metadata-driven-permissions/allow-multiple-values.png)
+> - __AND制限__&#x200B;はサポートされています。異なるプロパティ名を持つ1つのアクセス制御エントリ内の複数の制限（例：`status=approved`、`brand=Adobe`）は、AND条件として評価されます。つまり、選択したユーザーグループには、次のアセットへの読み取りアクセスが付与されます。 `status=approved AND brand=Adobe`
 > ![複数の制限を許可](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - __OR 制限__&#x200B;は、メタデータプロパティ制限を持つ新しいアクセス制御エントリを追加することでサポートされ、エントリの OR 条件が確立されます。例えば、制限 `status=approved` を持つ単一のエントリと `brand=Adobe` を持つ 1 つのエントリは、`status=approved OR brand=Adobe` として評価されます。
+> - __OR制限__&#x200B;は、メタデータプロパティ制限を持つ新しいアクセス制御エントリを追加することでサポートされます。例えば、制限`status=approved`を持つ単一のエントリと`brand=Adobe`を持つ単一のエントリは、次のように評価されます `status=approved OR brand=Adobe`
 > ![複数の制限を許可](./assets/metadata-driven-permissions/allow-multiple-aces.png)
