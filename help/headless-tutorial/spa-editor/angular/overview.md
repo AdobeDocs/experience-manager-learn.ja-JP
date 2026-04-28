@@ -67,7 +67,7 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 >[!NOTE]
 >
-> **AEM as a Cloud Serviceを初めて使用する場合は、** AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する[次のガイドをご覧ください。
+> **AEM as a Cloud Serviceを初めて使用する場合は、** AEM as a Cloud Service SDK[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する次のガイドをご覧ください。
 >
 > **AEM 6.5の新機能？** ローカル開発環境を設定する方法については、[次のガイドをご覧ください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 

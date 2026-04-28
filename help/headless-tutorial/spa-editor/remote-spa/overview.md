@@ -66,7 +66,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
-> **ローカル開発環境の設定に関するサポートが必要ですか？** AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する[次のガイドをご覧ください。
+> **ローカル開発環境の設定に関するサポートが必要ですか？** AEM as a Cloud Service SDK[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する次のガイドをご覧ください。
 
 ## &#x200B;1. AEM for SPA エディターを設定
 
