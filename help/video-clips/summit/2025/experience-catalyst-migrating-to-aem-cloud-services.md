@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: da9a0a9b-000b-4dd6-895e-8b20ade31664
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Experience Catalyst で AI を活用して WordPress サイトを AEM Cloud Services に簡単に移行する方法をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461977/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)

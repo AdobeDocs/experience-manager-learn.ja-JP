@@ -14,16 +14,16 @@ hide: true
 hidefromtoc: true
 exl-id: 2d4396dc-2346-4561-b040-eba0ab62a96f
 duration: 22
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '106'
 ht-degree: 100%
 
 ---
 
 # 基本的な Next.js アプリ
 
-この [Next.js](https://nextjs.org/) アプリでは、永続クエリを使用して AEM の GraphQL API でコンテンツをクエリする方法を示します。このアプリケーションは、WKND アドベンチャーのフィルタリング可能なものをレンダリングし、アドベンチャーを選択すると、そのアドベンチャーの詳細を表示します。
+この [Next.js](https://nextjs.org/) アプリでは、永続クエリを使用して AEM の GraphQL API でコンテンツをクエリする方法を示します。 このアプリケーションは、WKND アドベンチャーのフィルタリング可能なものをレンダリングし、アドベンチャーを選択すると、そのアドベンチャーの詳細を表示します。
 
 このコードは次を実行します。
 
@@ -32,4 +32,4 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
-> codesandbox.io では、組み込み IDE での Next.js アプリケーションの編集をサポートしていません。このコードサンプルを編集するには、[codesandbox.io で Next.js アプリを直接開きます](https://codesandbox.io/s/wknd-next-js-app-u8x5f8)。
+> codesandbox.io では、組み込み IDE での Next.js アプリケーションの編集をサポートしていません。 このコードサンプルを編集するには、[codesandbox.io で Next.js アプリを直接開きます](https://codesandbox.io/s/wknd-next-js-app-u8x5f8)。

@@ -14,9 +14,9 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: df0a03c1-d278-4c45-afff-bfbdaffe83bd
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '46'
 ht-degree: 100%
 
 ---
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Emily Kellman が、Adobe.com で「バリエーションを生成」を使用して、コンテンツ速度を向上させ、タイムラインを短縮し、コンバージョン率を高める方法を共有します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462692/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)

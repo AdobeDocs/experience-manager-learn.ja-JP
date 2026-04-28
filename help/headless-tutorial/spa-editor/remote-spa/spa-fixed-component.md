@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 97%
+source-wordcount: '543'
+ht-degree: 96%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 97%
 
 ![固定コンポーネント](./assets/spa-fixed-component/intro.png)
 
-この章では、ホームビューのタイトル「Current Adventures」を置き換えます。これは、編集可能な固定タイトルコンポーネントを使用して `Home.js` でハードコード化されたテキストです。固定コンポーネントはタイトルの配置を保証しますが、タイトルのテキストの作成と開発サイクル外での変更は可能です。
+この章では、ホームビューのタイトル「Current Adventures」を置き換えます。これは、編集可能な固定タイトルコンポーネントを使用して `Home.js` でハードコード化されたテキストです。 固定コンポーネントはタイトルの配置を保証しますが、タイトルのテキストの作成と開発サイクル外での変更は可能です。
 
 ## WKND アプリの更新
 
@@ -39,7 +39,7 @@ ht-degree: 97%
 
 ### 編集可能な React タイトルコンポーネントの作成
 
-SPA ホームビューで、ハードコードされたテキスト `<h2>Current Adventures</h2>` をカスタムの編集可能なタイトルコンポーネントに置き換えます。タイトルコンポーネントを使用する前に、次の作業を行う必要があります。
+SPA ホームビューで、ハードコードされたテキスト `<h2>Current Adventures</h2>` をカスタムの編集可能なタイトルコンポーネントに置き換えます。 タイトルコンポーネントを使用する前に、次の作業を行う必要があります。
 
 1. カスタムタイトル React コンポーネントの作成
 1. 編集可能にする `@adobe/aem-react-editable-components` のメソッドを使用し、カスタムタイトルコンポーネントをデコレートします。
@@ -98,7 +98,7 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
 
    実装の詳細については、コードのコメントを参照してください。
 
-1. `react-app/src/components/editable/EditableTitle.js` で React コンポーネントを作成します 
+1. `react-app/src/components/editable/EditableTitle.js` で React コンポーネントを作成
 1. `EditableTitle.js` に次のコードを追加します。
 
    ```javascript
@@ -169,7 +169,7 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
 ## AEM でのタイトルコンポーネントのオーサリング
 
 1. AEM オーサーにログインします。
-1. __サイト／WKND アプリ__&#x200B;に移動します。 
+1. __サイト／WKND アプリ__&#x200B;に移動します。
 1. 「__ホーム__」をタップし、上部のアクションバーの「__編集__」を選択します。
 1. ページエディターの右上にある編集モードセレクターから「__編集__」を選択します。
 1. 青い編集のアウトラインが表示されるまで、WKND ロゴの下、アドベンチャーリストの上にあるデフォルトのタイトルテキストの上にマウスポインターを置きます。
@@ -185,7 +185,7 @@ SPA ホームビューで、ハードコードされたテキスト `<h2>Current
 
 1. 「__完了__」をタップして保存します。
 1. AEM SPA エディターで変更をプレビューします。
-1. [http://localhost:3000](http://localhost:3000) でローカルに実行している WKND アプリを更新し、作成したタイトルの変更が直ちに反映されることを確認します。
+1. [http://localhost:3000](http://localhost:3000)でローカルに実行されているWKND アプリを更新し、作成済みのタイトルの変更をすぐに反映します。
 
    ![SPA のタイトルコンポーネント](./assets/spa-fixed-component/title-final.png)
 

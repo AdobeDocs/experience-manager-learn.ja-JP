@@ -1,6 +1,6 @@
 ---
 title: SPA コンポーネントの AEM コンポーネントへのマッピング | AEM SPA Editor と React の使用の手引き
-description: AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。標準搭載の AEM React コアコンポーネントの使用方法についても説明します。
+description: AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。 標準搭載の AEM React コアコンポーネントの使用方法についても説明します。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
 jira: KT-4854
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '2123'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2357'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 {{spa-editor-deprecation}}
 
-AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。
+AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Experience Manager（AEM）コンポーネントにマッピングする方法について説明します。 コンポーネントマッピングを使用すると、AEM SPA エディター内で、従来の AEM オーサリングと同様に、SPA コンポーネントを動的に更新できます。
 
 この章では、AEM JSON モデル API について詳しく説明し、AEM コンポーネントによって公開された JSON コンテンツを prop として React コンポーネントに自動的に挿入する方法についても説明します。
 
@@ -35,17 +35,17 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 ## 作成する内容
 
-この章では、提供された`Text` SPA コンポーネントが AEM `Text` コンポーネントにどのようにマッピングされるかを調べます。`Image` SPA コンポーネントなどの React コアコンポーネントは、SPA で使用され、AEM でオーサリングされます。**レイアウトコンテナ**&#x200B;および&#x200B;**テンプレートエディター**&#x200B;ポリシーの標準機能を使用して、わずかに外観が異なるビューを作成することもできます。
+この章では、提供された`Text` SPA コンポーネントが AEM `Text` コンポーネントにどのようにマッピングされるかを調べます。 `Image` SPA コンポーネントなどの React コアコンポーネントは、SPA で使用され、AEM でオーサリングされます。 **レイアウトコンテナ**&#x200B;および&#x200B;**テンプレートエディター**&#x200B;ポリシーの標準機能を使用して、わずかに外観が異なるビューを作成することもできます。
 
 ![この章の最終的なオーサリングサンプル](./assets/map-components/final-page.png)
 
 ## 前提条件
 
-[ローカル開発環境](overview.md#local-dev-environment)の設定に必要なツールと手順を確認してください。この章は、[SPA の統合](integrate-spa.md)の章の続きですが、SPA 対応の AEM プロジェクトさえあれば内容についていくことができます。
+[ローカル開発環境](overview.md#local-dev-environment)を設定するために必要なツールや説明を確認してください。 この章は、[SPA の統合](integrate-spa.md)の章の続きですが、SPA 対応の AEM プロジェクトさえあれば内容についていくことができます。
 
 ## マッピングアプローチ
 
-基本的な概念は、SPA コンポーネントを AEM コンポーネントにマッピングすることです。AEM コンポーネントは、サーバーサイドで実行され、JSON モデル API の一部としてコンテンツを書き出します。JSON コンテンツは、ブラウザーでクライアントサイドを実行している SPA によって使用されます。SPA コンポーネントと AEM コンポーネントの間に 1 対 1 のマッピングが作成されます。
+基本的な概念は、SPA コンポーネントを AEM コンポーネントにマッピングすることです。 AEM コンポーネントは、サーバーサイドで実行され、JSON モデル API の一部としてコンテンツを書き出します。 JSON コンテンツは、ブラウザーでクライアントサイドを実行している SPA によって使用されます。 SPA コンポーネントとAEM コンポーネント間の1:1 マッピングが作成されます。
 
 ![AEM コンポーネントと React コンポーネントのマッピングの概要](./assets/map-components/high-level-approach.png)
 
@@ -53,24 +53,24 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 ## テキストコンポーネントを検査する
 
-[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)にマッピングされる `Text` コンポーネントを提供します。これは、AEM から&#x200B;*コンテンツ*&#x200B;をレンダリングするという、**コンテンツ**&#x200B;コンポーネントの例です。
+[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)は、AEM [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)にマッピングされる `Text` コンポーネントを提供します。 これは、AEM から&#x200B;*コンテンツ*&#x200B;をレンダリングするという、**コンテンツ**&#x200B;コンポーネントの例です。
 
 コンポーネントの動作を見てみましょう。
 
 ### JSON モデルを調べる
 
-1. SPA のコードを調べる前に、AEM が提供する JSON モデルを理解しておくことが重要です。 [コアコンポーネントライブラリ](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html)に移動し、テキストコンポーネントのページを表示します。コアコンポーネントライブラリには、すべての AEM コアコンポーネントの例が記載されています。
+1. SPA のコードを調べる前に、AEM が提供する JSON モデルを理解しておくことが重要です。 [コアコンポーネントライブラリ](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html)に移動し、テキストコンポーネントのページを表示します。 コアコンポーネントライブラリには、すべての AEM コアコンポーネントの例が記載されています。
 1. 例の 1 つである **JSON** タブを選択します。
 
    ![テキスト JSON モデル](./assets/map-components/text-json.png)
 
    `text`、`richText`、および `:type` の 3 つのプロパティが表示されます。
 
-   `:type` は、AEM コンポーネントの `sling:resourceType`（またはパス）をリストする予約済みのプロパティです。`:type` の値は、AEM コンポーネントを SPA コンポーネントにマップするために使用されるものです。
+   `:type` は、AEM コンポーネントの `sling:resourceType`（またはパス）をリストする予約済みのプロパティです。 `:type` の値は、AEM コンポーネントを SPA コンポーネントにマップするために使用されるものです。
 
    `text` および `richText` は、SPA コンポーネントに公開される追加のプロパティです。
 
-1. JSON 出力を [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に表示します。次のようなエントリが見つかるはずです。
+1. View the JSON output at [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 次のようなエントリが見つかるはずです。
 
    ```json
    "text": {
@@ -109,9 +109,9 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
    }
    ```
 
-   `Text` は、標準の React コンポーネントです。 コンポーネントは `this.props.richText` を使用して、レンダリングするコンテンツがリッチテキストかプレーンテキストかを判断します。使用される実際の「コンテンツ」は `this.props.text` に由来します。
+   `Text` は、標準の React コンポーネントです。 コンポーネントは `this.props.richText` を使用して、レンダリングするコンテンツがリッチテキストかプレーンテキストかを判断します。 使用される実際の「コンテンツ」は `this.props.text` に由来します。
 
-   潜在的な XSS 攻撃を避けるために、[dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) を使用してコンテンツをレンダリングする前に、リッチテキストは `DOMPurify` を経由してエスケープされます。演習の前半で JSON モデルから取得した `richText` および `text` のプロパティです。
+   潜在的な XSS 攻撃を避けるために、[dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) を使用してコンテンツをレンダリングする前に、リッチテキストは `DOMPurify` を経由してエスケープされます。 演習の前半で JSON モデルから取得した `richText` および `text` のプロパティです。
 
 1. 次に `ui.frontend/src/components/import-components.js` を開き、`TextEditConfig` の 86 行目までを確認します。
 
@@ -133,13 +133,13 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
    export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
-   `MapTo` は、AEM SPA Editor JS SDK（`@adobe/aem-react-editable-components`）によって指定されます。パス `wknd-spa-react/components/text` は、AEM コンポーネントの `sling:resourceType` を表します。このパスは、前に確認した JSON モデルによって公開された `:type` と一致します。`MapTo` は JSON モデルの応答を解析し、正しい値を `props` として SPA コンポーネントに渡します。
+   `MapTo` は、AEM SPA Editor JS SDK（`@adobe/aem-react-editable-components`）によって指定されます。 パス `wknd-spa-react/components/text` は、AEM コンポーネントの `sling:resourceType` を表します。 このパスは、前に確認した JSON モデルによって公開された `:type` と一致します。 `MapTo` は JSON モデルの応答を解析し、正しい値を `props` として SPA コンポーネントに渡します。
 
    AEM `Text` コンポーネントの定義は `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text` にあります。
 
 ## React コアコンポーネントの使用
 
-[AEM WCM コンポーネント - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-base) および [AEM WCM コンポーネント - Spa エディター - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-spa)。これらは、すぐに使用できる AEM コンポーネントのセットにマッピングされる、再利用可能な UI コンポーネントです。 ほとんどのプロジェクトでは、これらのコンポーネントを、独自の実装の出発点として再利用できます。
+[AEM WCM コンポーネント - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-base) および [AEM WCM コンポーネント - Spa エディター - React コア実装](https://github.com/adobe/aem-react-core-wcm-components-spa)。 これらは、すぐに使用できる AEM コンポーネントのセットにマッピングされる、再利用可能な UI コンポーネントです。 ほとんどのプロジェクトでは、これらのコンポーネントを、独自の実装の出発点として再利用できます。
 
 1. プロジェクトコードで、`ui.frontend/src/components` にあるファイル `import-components.js` を開きます。
 このファイルは、AEM コンポーネントにマッピングされているすべての SPA コンポーネントを読み込みます。 SPA エディター実装の動的な特性を考慮すると、作成可能な AEM コンポーネントに関連付けられているすべての SPA コンポーネントを明示的に参照する必要があります。 これにより AEM オーサーは、アプリケーション内の任意の場所におけるコンポーネントの使用を選択することができます。
@@ -152,11 +152,11 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
    import './ExperienceFragment/ExperienceFragment';
    ```
 
-1. `@adobe/aem-core-components-react-spa` と `@adobe/aem-core-components-react-base` から、他のいくつかの `imports` があります。これらは、React コアコンポーネントを読み込んで、現在のプロジェクトで使用できるようにします。これらは前述の `Text` コンポーネントの例と同様に、`MapTo` を使用してプロジェクト固有の AEM コンポーネントにマッピングされます。
+1. `@adobe/aem-core-components-react-spa` と `@adobe/aem-core-components-react-base` から、他のいくつかの `imports` があります。 これらは、React コアコンポーネントを読み込んで、現在のプロジェクトで使用できるようにします。 これらは前述の `Text` コンポーネントの例と同様に、`MapTo` を使用してプロジェクト固有の AEM コンポーネントにマッピングされます。
 
 ### AEM ポリシーの更新
 
-ポリシーは AEM テンプレートの機能であり、開発者やパワーユーザーが、どのコンポーネントを使用できるかを細かく制御できます。React コアコンポーネントは SPA コードに含まれていますが、アプリケーションで使用する前に、ポリシーを介して有効にする必要があります。
+ポリシーは AEM テンプレートの機能であり、開発者やパワーユーザーが、どのコンポーネントを使用できるかを細かく制御できます。 React コアコンポーネントは SPA コードに含まれていますが、アプリケーションで使用する前に、ポリシーを介して有効にする必要があります。
 
 1. AEM 開始画面から、**ツール**／**テンプレート**／**[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)** に移動します。
 
@@ -180,7 +180,7 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 1. **レイアウトコンテナ**&#x200B;内の&#x200B;**テキスト**&#x200B;コンポーネント用の「**ポリシー**」アイコンをクリックします。
 
-   **WKND SPA テキスト**&#x200B;という名前の新しいポリシーを作成します。**プラグイン**／**書式設定**&#x200B;の下にあるすべてのボックスをオンにして、次の追加の書式設定オプションを有効にします。
+   **WKND SPA テキスト**&#x200B;という名前の新しいポリシーを作成します。 **プラグイン**／**書式設定**&#x200B;の下にあるすべてのボックスをオンにして、次の追加の書式設定オプションを有効にします。
 
    ![RTE フォーマットを有効にする](assets/map-components/enable-formatting-rte.png)
 
@@ -192,7 +192,7 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 ### 作成者コンテンツ
 
-1. **ホームページ** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)に移動します。
+1. Navigate to the **Homepage** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
 
 1. これで、ページで追加の&#x200B;**画像**、**ティーザー**、**タイトル**&#x200B;各コンポーネントを使用できるようになります。
 
@@ -208,17 +208,17 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 1. **タイトル**&#x200B;コンポーネントおよび&#x200B;**ティーザー**&#x200B;コンポーネントで実験してください。
 
-1. [AEM Assets](http://localhost:4502/assets.html/content/dam) を介して独自の画像を追加するか、標準の [WKND 参照サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)の完成したコードベースをインストールします。[WKND 参照サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)には、WKND SPAで再利用できる画像が多数含まれています。 パッケージは、[AEM のパッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
+1. [AEM Assets](http://localhost:4502/assets.html/content/dam) を介して独自の画像を追加するか、標準の [WKND 参照サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)の完成したコードベースをインストールします。 [WKND 参照サイト](https://github.com/adobe/aem-guides-wknd/releases/latest)には、WKND SPAで再利用できる画像が多数含まれています。 パッケージは、[AEM のパッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を使用してインストールできます。
 
    ![パッケージマネージャーによる wknd.all のインストール](./assets/map-components/package-manager-wknd-all.png)
 
 ## レイアウトコンテナを調べる
 
-**レイアウトコンテナ**&#x200B;のサポートは、AEM SPA Editor SDK によって自動的に提供されます。 **レイアウトコンテナ**&#x200B;は、その名前が示すように&#x200B;**コンテナ**&#x200B;コンポーネントです。コンテナコンポーネントは、*他の*&#x200B;コンポーネントを表す JSON 構造を受け入れ、それらを動的にインスタンス化するコンポーネントです。
+**レイアウトコンテナ**&#x200B;のサポートは、AEM SPA Editor SDK によって自動的に提供されます。 **レイアウトコンテナ**&#x200B;は、その名前が示すように&#x200B;**コンテナ**&#x200B;コンポーネントです。 コンテナコンポーネントは、*他の*&#x200B;コンポーネントを表す JSON 構造を受け入れ、それらを動的にインスタンス化するコンポーネントです。
 
 ここでは、レイアウトコンテナをさらに詳しく調べます。
 
-1. ブラウザーで、[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) に移動します。
+1. In a browser navigate to [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
    ![JSON モデル API - レスポンシブグリッド](./assets/map-components/responsive-grid-modeljson.png)
 
@@ -226,19 +226,19 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
    [レイアウトモード](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=ja#defining-layouts-layout-mode)を使用してコンポーネントのサイズを変更するのと同じ機能が、SPA エディターで利用できます。
 
-2. [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) に戻ります。さらに&#x200B;**画像**&#x200B;コンポーネントを追加し、**レイアウト**&#x200B;オプションを使用してサイズを変更してみてください。
+2. Return to [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). さらに&#x200B;**画像**&#x200B;コンポーネントを追加し、**レイアウト**&#x200B;オプションを使用してサイズを変更してみてください。
 
    ![レイアウトモードを使用した画像のサイズ変更](./assets/map-components/responsive-grid-layout-change.gif)
 
-3. JSON モデル [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) を再度開いて、 `columnClassNames` が JSON の一部であることを確認してください。
+3. Re-open the JSON model [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) and observe the `columnClassNames` as part of the JSON:
 
    ![列クラス名](./assets/map-components/responsive-grid-classnames.png)
 
-   クラス名 `aem-GridColumn--default--4` は、12 列のグリッドに基づいて幅が 4 列に設定されている必要があることを示します。レスポンシブグリッドについて詳しくは、[こちら](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)をご覧ください。
+   クラス名 `aem-GridColumn--default--4` は、12 列のグリッドに基づいて幅が 4 列に設定されている必要があることを示します。 レスポンシブグリッドについて詳しくは、[こちら](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)をご覧ください。
 
-4. IDE に戻り、`ui.apps` モジュールで、`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid` で定義されたクライアントサイドライブラリがあります。`less/grid.less` ファイルを開きます。
+4. IDE に戻り、`ui.apps` モジュールで、`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid` で定義されたクライアントサイドライブラリがあります。 `less/grid.less` ファイルを開きます。
 
-   このファイルは、**レイアウトコンテナ**&#x200B;で使用されるブレークポイント（`default`、`tablet`、`phone`）を特定します。このファイルは、プロジェクトの仕様に応じてカスタマイズされます。 現在、ブレークポイントは `1200px` および `768px` に設定されています。
+   このファイルは、**レイアウトコンテナ**&#x200B;で使用されるブレークポイント（`default`、`tablet`、`phone`）を特定します。 このファイルは、プロジェクトの仕様に応じてカスタマイズされます。 現在、ブレークポイントは `1200px` および `768px` に設定されています。
 
 5. `Text` コンポーネントのレスポンシブ機能と、更新されたリッチテキストポリシーを使用して、次のようなビューを作成できます。
 
@@ -250,11 +250,11 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 ### 次の手順 {#next-steps}
 
-[ナビゲーションとルーティング](navigation-routing.md) - SPA Editor SDK を使用して AEM ページにマッピングすることで、SPA の複数のビューをサポートする方法について説明します。 動的ナビゲーションは、React Router と React Core Components を使用して実装されています。
+[ナビゲーションとルーティング](navigation-routing.md) - SPA Editor SDK を使用して AEM ページにマッピングすることで、SPA の複数のビューをサポートする方法について説明します。 動的ナビゲーションは、React Router と React コアコンポーネントを使用して実装されています。
 
 ## （ボーナス）ソースコントロールに対する設定の保持 {#bonus-configs}
 
-多くの場合、特に AEM プロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソースコントロールに保持すると便利です。 これにより、すべての開発者が同じセットのコンテンツと設定に対して作業することが保証され、環境間の一貫性がさらに確保できます。プロジェクトが一定の成熟度に達すると、テンプレートの管理作業を特別なパワーユーザーグループに引き継ぐことができます。
+多くの場合、特に AEM プロジェクトの開始時に、テンプレートや関連するコンテンツポリシーなどの設定をソースコントロールに保持すると便利です。 これにより、すべての開発者が同じセットのコンテンツと設定に対して作業することが保証され、環境間の一貫性がさらに確保できます。 プロジェクトが一定の成熟度に達すると、テンプレートの管理作業を特別なパワーユーザーグループに引き継ぐことができます。
 
 次のいくつかの手順は、Visual Studio Code IDE と [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) を使用して行われますが、AEM のローカルインスタンスからコンテンツを&#x200B;**取り込み**&#x200B;または&#x200B;**読み込む**&#x200B;ように設定した任意のツールと IDE を使用して行うことができます。
 
@@ -264,9 +264,9 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
 
 2. プロジェクトエクスプローラー内の **ui.content** モジュールをを展開して、`/conf/wknd-spa-react/settings/wcm/templates` に移動します。
 
-3. `templates` フォルダーを&#x200B;**右クリック**&#x200B;し、**AEM サーバーから読み込み**&#x200B;を選択します。
+3. `templates` フォルダーを&#x200B;**右クリック**&#x200B;し、**AEM サーバーから読み込む**&#x200B;を選択します。
 
-   ![VSCode 読み込みテンプレート](./assets/map-components/import-aem-servervscode.png)
+   ![VSCode インポートテンプレート](./assets/map-components/import-aem-servervscode.png)
 
 4. コンテンツを読み込む手順を繰り返しますが、`/conf/wknd-spa-react/settings/wcm/templates/policies` に置かれた&#x200B;**ポリシー**&#x200B;フォルダーを選択します。
 
@@ -283,13 +283,13 @@ AEM SPA Editor JS SDK を使用して、React コンポーネントを Adobe Exp
     </workspaceFilter>
    ```
 
-   `filter.xml` ファイルは、パッケージと共にインストールされるノードのパスを識別する役割を果たします。各フィルターの `mode="merge"` に注目してください。これは、既存のコンテンツは変更されず、新しいコンテンツのみが追加されることを示しています。コンテンツ作成者がこれらのパスを更新する可能性があるので、コードのデプロイメントでは、コンテンツを上書き&#x200B;**しない**&#x200B;ことが重要です。フィルター要素の操作の詳細については、[FileVault ドキュメント](https://jackrabbit.apache.org/filevault/filter.html)を参照してください。
+   `filter.xml` ファイルは、パッケージと共にインストールされるノードのパスを識別する役割を果たします。 各フィルターの `mode="merge"` に注目してください。これは、既存のコンテンツは変更されず、新しいコンテンツのみが追加されることを示しています。 コンテンツ作成者がこれらのパスを更新する可能性があるので、コードのデプロイメントでは、コンテンツを上書き&#x200B;**しません**。 フィルター要素の操作の詳細については、[FileVault ドキュメント](https://jackrabbit.apache.org/filevault/filter.html)を参照してください。
 
    `ui.content/src/main/content/META-INF/vault/filter.xml` と `ui.apps/src/main/content/META-INF/vault/filter.xml` を比較して、各モジュールによって管理される様々なノードを理解します。
 
 ## （ボーナス）カスタム画像コンポーネントの作成 {#bonus-image}
 
-SPA 画像コンポーネントは、React コアコンポーネントによって既に指定されています。 ただし、追加のプラクティスが必要な場合は、AEM [画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)にマップする独自の React 実装を作成します。この `Image` コンポーネントは、**コンテンツ**&#x200B;コンポーネントのもう一つの例です。
+SPA 画像コンポーネントは、React コアコンポーネントによって既に指定されています。 ただし、追加のプラクティスが必要な場合は、AEM [画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)にマップする独自の React 実装を作成します。 この `Image` コンポーネントは、**コンテンツ**&#x200B;コンポーネントのもう一つの例です。
 
 ### JSO の検査
 
@@ -303,7 +303,7 @@ SPA コードを調べる前に、AEM が指定した JSON モデルを調べま
 
    >[!NOTE]
    >
-   > 公開された他の画像プロパティ（`lazyEnabled`、`widths`）があり、これを使用して開発者は、適応型の遅延読み込みコンポーネントを作成することができます。このチュートリアルで作成されたコンポーネントはシンプルで、これらの詳細なプロパティを使用&#x200B;**しません**。
+   > 公開された他の画像プロパティ（`lazyEnabled`、`widths`）があり、これを使用して開発者は、適応型の遅延読み込みコンポーネントを作成することができます。 このチュートリアルで作成されたコンポーネントはシンプルで、これらの詳細なプロパティを使用&#x200B;**しません**。
 
 ### 画像コンポーネントの実装
 
@@ -414,7 +414,7 @@ SPA コードを調べる前に、AEM が指定した JSON モデルを調べま
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. AEM で SPA を検査します。ページ上のすべての画像コンポーネントは引き続き機能するはずです。レンダリングされた出力を調べると、React コアコンポーネントではなく、カスタム画像コンポーネントのマークアップが表示されます。
+1. AEM で SPA を検査します。 ページ上のすべての画像コンポーネントは引き続き機能するはずです。 レンダリングされた出力を調べると、React コアコンポーネントではなく、カスタム画像コンポーネントのマークアップが表示されます。
 
    *カスタム画像コンポーネントのマークアップ*
 

@@ -13,10 +13,10 @@ exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
 duration: 71
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '417'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 86%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 {{spa-editor-deprecation}}
 
-Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。このチュートリアルでは、架空のライフスタイルブランド WKND の React アプリケーションの実装について順を追って説明します。React アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。このエディターは、React コンポーネントを AEM コンポーネントにマッピングします。AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
+Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランド WKND の React アプリケーションの実装について順を追って説明します。 React アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。このエディターは、React コンポーネントを AEM コンポーネントにマッピングします。 AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
 
 ![SPA の最終的な実装](assets/wknd-spa-implementation.png)
 
@@ -47,11 +47,11 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 * HTML、CSS および JavaScript の基礎知識
 * [React](https://ja.reactjs.org/tutorial/tutorial.html) の基本的な知識
 
-*必須ではありませんが、[従来の AEM Sites コンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)に関する基本的な知識があると役に立ちます。*
+*必須ではありませんが、[従来の AEM Sites コンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)の基礎知識があると役に立ちます。*
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカル開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
+このチュートリアルを完了するには、ローカル開発環境が必要です。 スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。 コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
 
 ### 必要なソフトウェア
 
@@ -62,10 +62,10 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップするためのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を確認してください。
+> **AEM as a Cloud Serviceを初めて使用する場合は、** AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する[次のガイドをご覧ください。
 >
-> **AEM 6.5 を初めて使用する場合は、**[ローカル開発環境のセットアップに関するガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)を参照してください。
+> **AEM 6.5の新機能？** ローカル開発環境を設定する方法については、[次のガイドをご覧ください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 
-## 次の手順 {#next-steps}
+## 次のステップ {#next-steps}
 
-すぐに取りかかりましょう。[プロジェクトの作成](create-project.md)の章に移動してチュートリアルを開始し、AEM プロジェクトアーキタイプを使用して SPA エディター対応のプロジェクトを生成する方法を学びます。
+君は何を待っているんだ？!。 チュートリアルを開始するには、[ プロジェクトを作成](create-project.md)の章に移動し、AEM プロジェクトアーキタイプを使用してSPA エディター対応プロジェクトを作成する方法を説明します。

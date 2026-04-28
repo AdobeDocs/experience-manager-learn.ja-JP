@@ -14,20 +14,20 @@ hide: true
 hidefromtoc: true
 exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
 duration: 17
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '92'
 ht-degree: 100%
 
 ---
 
 # 基本の React アプリ
 
-この [React](https://reactjs.org/) アプリでは、永続化されたクエリを使用して、AEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。  このアプリケーションは、WKND アドベンチャーのフィルタリング可能なものをレンダリングし、アドベンチャーを選択すると、そのアドベンチャーの詳細を表示します。
+この [React](https://reactjs.org/) アプリでは、永続化されたクエリを使用して、AEM GraphQL API でコンテンツに対してクエリを実行する方法を示します。 このアプリケーションは、WKND アドベンチャーのフィルタリング可能なものをレンダリングし、アドベンチャーを選択すると、そのアドベンチャーの詳細を表示します。
 
 このコードは次を実行します。
 
 + AEM パブリッシュサービスに接続し、認証を必要としない
-+ WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug` を使用します。
++ WKND の永続クエリ `wknd-shared/adventures-all` および `wknd-shared/adventures-by-slug` を使用する
 
 この Next.js アプリの構築方法の詳細については、[React アプリのドキュメントの例](../example-apps/react-app.md)をご覧ください。

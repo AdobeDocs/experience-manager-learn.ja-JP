@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '583'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '734'
+ht-degree: 88%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 {{spa-editor-deprecation}}
 
-Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。このチュートリアルでは、架空のライフスタイルブランド WKND の Angular アプリケーションの実装について順を追って説明します。Angular アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。SPA エディターは、Angular コンポーネントを AEM コンポーネントにマッピングします。AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
+Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初めて使用する開発者向けに設計されたマルチパートチュートリアルへようこそ。 このチュートリアルでは、架空のライフスタイルブランド WKND の Angular アプリケーションの実装について順を追って説明します。 Angular アプリは、AEM の SPA エディターを使用してデプロイされるように開発および設計されています。SPA エディターは、Angular コンポーネントを AEM コンポーネントにマッピングします。 AEM にデプロイされた完成した SPA は、AEM の従来のインライン編集ツールを使用して動的にオーサリングすることができます。
 
 ![SPA の最終的な実装](assets/wknd-spa-implementation.png)
 
@@ -31,9 +31,9 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 ## 概要
 
-複数のパートから成るこのチュートリアルの目的は、AEM の SPA エディター機能と連携する Angular アプリケーションを実装する方法をデベロッパー向けに説明することです。現実世界では、開発アクティビティは担当者（多くの場合、**フロントエンド開発者**&#x200B;と&#x200B;**バックエンド開発者**）が分担します。このチュートリアルを修了することは、AEM SPA エディタープロジェクトに関与するすべての開発者にとって有益であると考えています。
+複数のパートから成るこのチュートリアルの目的は、AEM の SPA エディター機能と連携する Angular アプリケーションを実装する方法をデベロッパー向けに説明することです。 現実世界では、開発アクティビティは担当者（多くの場合、**フロントエンド開発者**&#x200B;と&#x200B;**バックエンド開発者**）が分担します。 このチュートリアルを修了することは、AEM SPA エディタープロジェクトに関与するすべての開発者にとって有益であると考えています。
 
-このチュートリアルは、**AEM as a Cloud Service** で動作するように作られており、**AEM 6.5.4 以降**&#x200B;と **AEM 6.4.8 以降**&#x200B;と下位互換性があります。SPA は以下を使用して実装されます。
+このチュートリアルは、**AEM as a Cloud Service** で動作するように作られており、**AEM 6.5.4 以降**&#x200B;と **AEM 6.4.8 以降**&#x200B;と下位互換性があります。 SPA は以下を使用して実装されます。
 
 * [Maven AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)
 * [AEM SPA エディター](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html?lang=ja#content-editing-experience-with-spa)
@@ -63,21 +63,21 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
 
 ## ローカル開発環境 {#local-dev-environment}
 
-このチュートリアルを完了するには、ローカル開発環境が必要です。スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
+このチュートリアルを完了するには、ローカル開発環境が必要です。 スクリーンショットとビデオは、[Visual Studio Code](https://code.visualstudio.com/) を IDE とする Mac OS 環境で動作する AEM as a Cloud Service SDK を使用してキャプチャされています。 コマンドとコードは、特に明記されていない限り、ローカルオペレーティングシステムから独立している必要があります。
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service を初めて使用する場合は、**[AEM as a Cloud Service SDK を使用してローカル開発環境をセットアップするためのガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を確認してください。
+> **AEM as a Cloud Serviceを初めて使用する場合は、** AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=ja)を使用したローカル開発環境の設定に関する[次のガイドをご覧ください。
 >
-> **AEM 6.5 を初めて使用する場合は、**[ローカル開発環境のセットアップに関するガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)を参照してください。
+> **AEM 6.5の新機能？** ローカル開発環境を設定する方法については、[次のガイドをご覧ください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=ja)。
 
-## 次の手順 {#next-steps}
+## 次のステップ {#next-steps}
 
-すぐに取りかかりましょう。[SPA エディタープロジェクト](create-project.md)の章に移動してチュートリアルを開始し、AEM プロジェクトアーキタイプを使用して SPA エディター対応のプロジェクトを生成する方法を学びます。
+君は何を待っているんだ？!。 チュートリアルを開始するには、[SPA Editor Project](create-project.md)章に移動し、AEM プロジェクトアーキタイプを使用してSPA Editor対応プロジェクトを生成する方法を説明します。
 
 ## 下位互換性 {#compatibility}
 
-このチュートリアルのプロジェクトコードは、AEM as a Cloud Service 用に作成されています。プロジェクトコードが **6.5.4 以上**&#x200B;および **6.4.8 以上**&#x200B;との下位互換性を保つように、いくつかの変更が加えられました。
+このチュートリアルのプロジェクトコードは、AEM as a Cloud Service 用に作成されています。 プロジェクトコードが **6.5.4 以上**&#x200B;および **6.4.8 以上**&#x200B;との下位互換性を保つように、いくつかの変更が加えられました。
 
 [UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=ja#what-is-the-uberjar) **v6.4.4** は依存関係として含まれています。
 
@@ -106,7 +106,7 @@ Adobe Experience Manager（AEM）の **SPA エディター**&#x200B;機能を初
     </profile>
 ```
 
-`classic` プロファイルはデフォルトで無効になっています。AEM 6.x を使用してチュートリアルに従う場合は、Maven ビルドの実行を指示されるたびに、`classic` プロファイルを追加してください。
+`classic` プロファイルはデフォルトで無効になっています。 AEM 6.x を使用してチュートリアルに従う場合は、Maven ビルドの実行を指示されるたびに、`classic` プロファイルを追加してください。
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic

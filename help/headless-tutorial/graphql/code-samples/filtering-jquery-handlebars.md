@@ -1,6 +1,6 @@
 ---
 title: jQuery と Handlebars を使用したフィルタリング
-description: WKND Adventures をフィルタリングして表示する、jQuery と Handlebars を使用した JavaScript 実装。.
+description: A JavaScript implementation using jQuery and Handlebars that filters WKND Adventures to display. .
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -14,18 +14,18 @@ hide: true
 hidefromtoc: true
 exl-id: 75ffd84a-62b1-480f-b05f-3664f54bb171
 duration: 26
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 100%
+source-wordcount: '150'
+ht-degree: 91%
 
 ---
 
 # jQuery と Handlebars を使用したフィルタリング
 
- [jQuery](https://jquery.com/) および [Handlebars](https://handlebarsjs.com/) を使用する JavaScript アプリを使用してデータをフィルタリングする AEM Headless GraphQL API 機能について見ていきましょう。このアプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
+[jQuery](https://jquery.com/) および [Handlebars](https://handlebarsjs.com/) を使用する JavaScript アプリを使用してデータをフィルタリングする AEM Headless GraphQL API 機能について見ていきましょう。 このアプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
 
-このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、GraphQL 永続クエリを呼び出す方法を示しています。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
+このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、GraphQL 永続クエリを呼び出す方法を示しています。 このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。 ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
 
 このコードは次を実行します。
 

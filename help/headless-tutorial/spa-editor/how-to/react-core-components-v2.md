@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '525'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 97%
 
 ---
 
@@ -26,19 +26,19 @@ ht-degree: 100%
 AEM は [AEM React 編集可能コンポーネント v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components) を提供しています。これは、React コンポーネントの作成を可能にする Node.js ベースの SDK であり、AEM SPA エディターを使用したコンテキスト内コンポーネント編集をサポートしています。
 
 * [npm モジュール](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [GitHub プロジェクト](https://github.com/adobe/aem-react-editable-components)
-* [アドビのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=ja)
+* [Github プロジェクト](https://github.com/adobe/aem-react-editable-components)
+* [Adobe ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=ja)
 
 
 AEM React 編集可能コンポーネント v2 の詳細とコードサンプルについては、技術ドキュメントを参照してください。
 
-* [AEM ドキュメントとの統合](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
-* [編集可能コンポーネントのドキュメント](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
-* [ヘルパーのドキュメント](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
+* [AEMのドキュメントとの連携](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
+* [編集可能なコンポーネントドキュメント](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
+* [ヘルパードキュメント](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
 
 ## AEM ページ
 
-AEM React 編集可能コンポーネントは、SPA エディターとリモート SPA React アプリの両方で動作します。 React 編集可能コンポーネントに入力するコンテンツは、[SPA ページコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=ja)を拡張した AEM ページを通じて公開する必要があります。編集可能な React コンポーネントにマッピングされる AEM コンポーネントは、AEM の [コンポーネントエクスポーターフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=ja)（[AEM WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)など）を実装する必要があります。
+AEM React 編集可能コンポーネントは、SPA エディターとリモート SPA React アプリの両方で動作します。 React 編集可能コンポーネントに入力するコンテンツは、[SPA ページコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=ja)を拡張した AEM ページを通じて公開する必要があります。 編集可能な React コンポーネントにマッピングされる AEM コンポーネントは、AEM の [コンポーネントエクスポーターフレームワーク](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=ja)（[AEM WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)など）を実装する必要があります。
 
 
 ## 依存関係
@@ -73,7 +73,7 @@ AEM React 編集可能コンポーネント を SPA エディターベースの 
 1. AEM からコンテンツを取得します。
 1. React 編集可能コンポーネントに AEM のコンテンツを入力します。
 
-初期化された ModelManager で React アプリをラップし、React アプリをレンダリングします。 React アプリには、`@adobe/aem-react-editable-components` から書き出された `<Page>` コンポーネントのインスタンスが 1 つ含まれている必要があります。`<Page>` コンポーネントには、AEM から提供される `.model.json` に基づいて React コンポーネントを動的に作成するロジックがあります。
+初期化された ModelManager で React アプリをラップし、React アプリをレンダリングします。 React アプリには、`@adobe/aem-react-editable-components` から書き出された `<Page>` コンポーネントのインスタンスが 1 つ含まれている必要があります。 `<Page>` コンポーネントには、AEM から提供される `.model.json` に基づいて React コンポーネントを動的に作成するロジックがあります。
 
 * `src/index.js`
 
@@ -101,11 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-`<Page>` には、`ModelManager` から提供される `pageModel` を通じて、AEM ページの表現が JSON として渡されます。`<Page>` コンポーネントは、`resourceType` を、`MapTo(..)` を通じてリソースタイプに自分自身を登録する React コンポーネントと照合することにより、`pageModel` 内のオブジェクトの React コンポーネントを動的に作成します。
+`<Page>` には、`ModelManager` から提供される `pageModel` を通じて、AEM ページの表現が JSON として渡されます。 `<Page>` コンポーネントは、`resourceType` を、`MapTo(..)` を通じてリソースタイプに自分自身を登録する React コンポーネントと照合することにより、`pageModel` 内のオブジェクトの React コンポーネントを動的に作成します。
 
 ## 編集可能コンポーネント
 
-`<Page>` には、`ModelManager` を通じて AEM ページの表現が JSON として渡されます。次に `<Page>` コンポーネントは、JS オブジェクトの `resourceType` 値を、コンポーネントの `MapTo(..)` 呼び出しを通じてリソースタイプに自分自身を登録する React コンポーネントと照合することにより、JSON 内のオブジェクトごとに React コンポーネントを動的に作成します。例えば、以下のようにして、インスタンスをインスタンス化します。
+`<Page>` には、`ModelManager` を通じて AEM ページの表現が JSON として渡されます。 次に `<Page>` コンポーネントは、JS オブジェクトの `resourceType` 値を、コンポーネントの `MapTo(..)` 呼び出しを通じてリソースタイプに自分自身を登録する React コンポーネントと照合することにより、JSON 内のオブジェクトごとに React コンポーネントを動的に作成します。 例えば、以下のようにして、インスタンスをインスタンス化します。
 
 * `HTTP GET /content/.../home.model.json`
 
@@ -178,8 +178,8 @@ export default MapTo("wknd-examples/components/example")(EditableExample);
 
 編集可能コンポーネントは再利用でき、相互に埋め込むことができます。 一方の編集可能コンポーネントをもう一方の編集可能コンポーネントに埋め込む際は、考慮すべき重要な事項が次の 2 つあります。
 
-1. 埋め込む側のコンポーネントの JSON コンテンツ（AEM 内）には、埋め込まれる側のコンポーネントを満たすコンテンツが含まれている必要があります。これを実現するには、必要なデータを収集する AEM コンポーネントのダイアログを作成します。
-1. `<EditableComponent>` でラップされた「編集可能」インスタンスではなく、React コンポーネントの「編集不可」インスタンスを埋め込む必要があります。これは、埋め込みコンポーネントに `<EditableComponent>` ラッパーがある場合、SPA エディターは、外側の埋め込みコンポーネントではなく、内側のコンポーネントを編集クロム（青いホバーボックス）で装飾しようとするためです。
+1. 埋め込む側のコンポーネントの JSON コンテンツ（AEM 内）には、埋め込まれる側のコンポーネントを満たすコンテンツが含まれている必要があります。 これを実現するには、必要なデータを収集する AEM コンポーネントのダイアログを作成します。
+1. `<EditableComponent>` でラップされた「編集可能」インスタンスではなく、React コンポーネントの「編集不可」インスタンスを埋め込む必要があります。 これは、埋め込みコンポーネントに `<EditableComponent>` ラッパーがある場合、SPA エディターは、外側の埋め込みコンポーネントではなく、内側のコンポーネントを編集クロム（青いホバーボックス）で装飾しようとするためです。
 
 * `HTTP GET /content/.../home.model.json`
 

@@ -14,18 +14,18 @@ recommendations: noCatalog, noDisplay
 hidefromtoc: true
 exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
 duration: 22
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '124'
 ht-degree: 100%
 
 ---
 
 # SvelteKit アプリのフィルタリング
 
-[SvelteKit](https://kit.svelte.dev/) アプリを使用してデータを一覧表示する、AEM ヘッドレス GraphQL API の機能を調べます。この SvelteKit アプリは、アドベンチャーの詳細を表示するために選択できる、WKND アドベンチャーのリストを作成します。
+[SvelteKit](https://kit.svelte.dev/) アプリを使用してデータを一覧表示する、AEM ヘッドレス GraphQL API の機能を調べます。 この SvelteKit アプリは、アドベンチャーの詳細を表示するために選択できる、WKND アドベンチャーのリストを作成します。
 
-このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、SvelteKit から永続化された GraphQL クエリを呼び出す方法を示しています。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。アドベンチャーの詳細は、`wknd-shared/adventures-by-slug` 永続クエリを介して要求されます。
+このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、SvelteKit から永続化された GraphQL クエリを呼び出す方法を示しています。 このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。 アドベンチャーの詳細は、`wknd-shared/adventures-by-slug` 永続クエリを介して要求されます。
 
 このコードは次を実行します。
 

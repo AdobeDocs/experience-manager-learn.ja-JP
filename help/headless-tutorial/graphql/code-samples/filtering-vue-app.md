@@ -13,18 +13,18 @@ hide: true
 hidefromtoc: true
 exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
 duration: 26
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '141'
 ht-degree: 100%
 
 ---
 
 # Vue アプリケーションのフィルタリング
 
-AEM ヘッドレス GraphQL API の機能を探索し、[Vue](https://vuejs.org/) アプリケーションを使用してデータをフィルタリングします。この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
+AEM ヘッドレス GraphQL API の機能を探索し、[Vue](https://vuejs.org/) アプリケーションを使用してデータをフィルタリングします。 この React アプリは、アクティビティタイプでフィルタリングできる WKND アドベンチャーのリストを作成します。
 
-このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、Vue から GraphQL 永続クエリを呼び出す方法を示しています。このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
+このコードは、アドビの [JavaScript 用 AEM ヘッドレスクライアント](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)を使用して、Vue から GraphQL 永続クエリを呼び出す方法を示しています。 このアプリは、`wknd-shared/adventures-all` 永続クエリを使用してすべてのアドベンチャーを収集し、利用可能なアクティビティタイプのリストを取得します。 ユーザーがアクティビティタイプを選択すると、選択したタイプが `wknd-shared/adventures-by-activity` 持続的なクエリに渡され、指定したアクティビティタイプのアドベンチャーに対してのみ、アドベンチャーの詳細を取得します。
 
 このコードは次を実行します。
 

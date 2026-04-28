@@ -11,10 +11,10 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 88%
+source-wordcount: '950'
+ht-degree: 90%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 88%
 
 _トラバーサルの警告とは_
 
-トラバーサルの警告は、パフォーマンスの低いクエリが AEM パブリッシュサービスで実行されていることを示す __aemerror__ ログステートメントです。トラバーサル警告は通常、AEM で次の 2 つの方法で表示されます。
+トラバーサルの警告は、パフォーマンスの低いクエリが AEM パブリッシュサービスで実行されていることを示す __aemerror__ ログステートメントです。 トラバーサル警告は通常、AEM で次の 2 つの方法で表示されます。
 
 1. インデックスを使用しない&#x200B;__低速クエリ__&#x200B;によって、応答時間が遅くなる。
 1. __失敗したクエリ__&#x200B;が `RuntimeNodeTraversalException` をスローして、エクスペリエンスが損なわれる。
@@ -34,7 +34,7 @@ _トラバーサルの警告とは_
 
 ## トラバーサルの警告を解決する方法
 
-トラバーサル警告の軽減には、分析、調整、検証の 3 つの簡単な手順を使用してアプローチできます。最適な調整を特定する前に、調整と検証を数回繰り返すことを想定してください。
+トラバーサル警告の軽減には、分析、調整、検証の 3 つの簡単な手順を使用してアプローチできます。 最適な調整を特定する前に、調整と検証を数回繰り返すことを想定してください。
 
 <div class="columns is-multiline">
 
@@ -53,7 +53,7 @@ _トラバーサルの警告とは_
                 <p class="headline is-size-5 has-text-weight-bold">問題を分析</p>
                <p class="is-size-6">トラバースしているクエリを特定し、理解します。</p>
                <a href="#analyze" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">分析</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Analyze</span>
                </a>
            </div>
        </div>
@@ -75,7 +75,7 @@ _トラバーサルの警告とは_
                 <p class="headline is-size-5 has-text-weight-bold">コードまたは設定を調整する</p>
                <p class="is-size-6">クエリトラバーサルを避けるために、クエリとインデックスを更新します。</p>
                <a href="#adjust" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">調整</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Adjust</span>
                </a>
            </div>
        </div>
@@ -97,7 +97,7 @@ _トラバーサルの警告とは_
                 <p class="headline is-size-5 has-text-weight-bold">調整が行われたことを確認します</p>                       
                <p class="is-size-6">クエリとインデックスの変更を検証すると、トラバーサルが削除されます。</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">検証</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Verify</span>
                </a>
            </div>
        </div>
@@ -108,11 +108,11 @@ _トラバーサルの警告とは_
 
 ## &#x200B;1. 分析{#analyze}
 
-まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 これを行うには、Cloud Managerから、過去[3日間`aemerror`のすべての環境（開発、ステージ、実稼動）から](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja){target="_blank"} パブリッシュサービスの&#x200B;__ログ__&#x200B;をダウンロードします。
+まず、トラバーサルの警告を表示している AEM パブリッシュサービスを特定します。 To do this, from Cloud Manager, [download Publish services&#39; `aemerror` logs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=ja){target="_blank"} from all environments (Dev, Stage and Production) for the past __three days__.
 
 ![AEM as a Cloud Service ログをダウンロード](./assets/traversals/download-logs.jpg)
 
-ログファイルを開き、Java™クラス `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor` を検索します。トラバーサルの警告を含むログには、次のような一連の文が含まれます。
+ログファイルを開き、Java™クラス `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor` を検索します。 トラバーサルの警告を含むログには、次のような一連の文が含まれます。
 
 ```log
 24.05.2022 14:18:46.146 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -159,24 +159,24 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __クエリを変更__&#x200B;して、既存のインデックス制限に解決する新しいクエリ制限を追加します。 可能であれば、インデックスを変更するよりもクエリを変更することをお勧めします。
 
-+ [&#x200B; クエリのパフォーマンスを調整する方法を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
++ [Learn how to tune query performance](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
 
 ### インデックスの調整
 
 __AEM インデックスを変更（または作成）__&#x200B;して、既存のクエリ制限をインデックスの更新で解決できるようにします。
 
-+ [既存のインデックスを調整する方法について説明します](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
-+ [&#x200B; インデックスの作成方法を学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
++ [Learn how to tune existing indexes](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=ja){target="_blank"}
++ [Learn how to create indexes](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=ja){target="_blank"}
 
-## &#x200B;3. 検証{#verify}
+## &#x200B;3. 確認{#verify}
 
 クエリ、インデックス、またはその両方に対して行われた調整は、トラバーサルの警告を軽減するために検証する必要があります。
 
 ![説明クエリ](./assets/traversals/verify.gif)
 
-クエリ [に対して](#adjust-the-query)調整のみが行われた場合、クエリはDeveloper Consoleの[&#x200B; クエリの説明](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"}を介してAEM as a Cloud Serviceで直接テストできます。 AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
+If only [adjustments to the query](#adjust-the-query) are made, the query can be directly tested on AEM as a Cloud Service via Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"}. AEM オーサーサービスに対して説明クエリを実行しますが、インデックス定義は作成者サービスとパブリッシュサービスで同じなので、AEM オーサーサービスに対してクエリを検証すれば十分です。
 
-[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 インデックス調整をデプロイすると、Developer Consoleの[&#x200B; クエリの説明](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"}を使用して、クエリを実行し、さらに調整できます。
+[インデックスの調整](#adjust-the-index)を行う場合は、インデックスを AEM as a Cloud Service にデプロイする必要があります。 With the index adjustments deployed, Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=ja#queries){target="_blank"} can be used to executed and tune the query further.
 
 最終的に、すべての変更（クエリとコード）は Git にコミットされ、Cloud Manager を使用して AEM as a Cloud Serviceにデプロイされます。 デプロイ後、元のトラバーサル警告に関連付けられたコードパスをテストし、トラバーサル警告が `aemerror` ログに表示されないことを確認します。
 
