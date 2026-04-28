@@ -25,4 +25,4 @@ ht-degree: 100%
 
 BambooHR で AI を使用してバックリンクの破損を特定および修正し、オーガニックトラフィックを 4％増加させた方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461988/?captions=jpn&learn=on&enablevpops)

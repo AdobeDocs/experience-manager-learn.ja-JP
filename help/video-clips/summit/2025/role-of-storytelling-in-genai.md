@@ -25,4 +25,4 @@ ht-degree: 100%
 
 カントリーミュージックのストーリーテリング原則が、デジタルエクスペリエンス用の生成 AI ツールのデザインにどのように関連しているかについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462010/?captions=jpn&learn=on&enablevpops)

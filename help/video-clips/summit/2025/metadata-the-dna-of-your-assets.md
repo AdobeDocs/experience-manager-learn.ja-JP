@@ -25,4 +25,4 @@ ht-degree: 100%
 
 メタデータによってワークフロー、検索、インサイトを推進する方法、および自動化によってメタデータを強化し、ブランド標準に適合させる方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461966/?captions=jpn&learn=on&enablevpops)

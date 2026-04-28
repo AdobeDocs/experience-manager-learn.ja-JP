@@ -25,4 +25,4 @@ ht-degree: 100%
 
 デジタルエクスペリエンスを最適化するための 3 つの主要な原則（基本の修正、AI の活用、戦略的リーダーの強化）について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462042/?captions=jpn&learn=on&enablevpops)
