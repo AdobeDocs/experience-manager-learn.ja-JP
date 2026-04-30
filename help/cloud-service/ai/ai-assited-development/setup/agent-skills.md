@@ -121,7 +121,7 @@ CARDS
 
 ## その他のリソース
 
-- [AI ツールを使用したローカル開発](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [AI ツールを使用したローカル開発](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI コーディングエージェント向けAdobeのスキル](https://github.com/adobe/skills)
 
