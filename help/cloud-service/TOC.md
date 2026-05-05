@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
+source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 93%
+source-wordcount: '1642'
+ht-degree: 92%
 
 ---
 
@@ -44,6 +44,12 @@ ht-degree: 93%
       + [概要](./ai/mcp/overview.md)
       + [MCP ServerでAEMのコンテンツ運用を高速化](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP Server](./ai/mcp/cloud-manager.md)
+   + AIを活用した開発 {#ai-assisted-development}
+      + [概要](./ai/ai-assited-development/overview.md)
+      + セットアップ{#setup}
+         + [エージェントスキル](./ai/ai-assited-development/setup/agent-skills.md)
+      + ユースケース{#use-cases}
+         + [コンポーネント開発](./ai/ai-assited-development/use-cases/component-development.md)
 + Experience Cloud との統合{#integrations}
    + [統合](./integrations/experience-cloud.md)
    + [AEM ヘッドレスと Target](./integrations/target.md)
@@ -55,7 +61,7 @@ ht-degree: 93%
    + [オーサーおよびパブリッシュサービス](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick プラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=ja){target=_blank}
+   + [AEM Assets Sidekickプラグイン](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=ja){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [プログラム](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
@@ -71,7 +77,7 @@ ht-degree: 93%
       + [パイプラインの設定](./cloud-manager/devops/configure-pipelines.md)
       + [継続的統合](./cloud-manager/devops/continuous-integration.md)
       + [テスト結果の分析](./cloud-manager/devops/analyze-test-results.md)
-      + [Dispatcher の設定](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Dispatcher 設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [CDN ログ分析](./cloud-manager/devops/cdn-log-analysis.md)
 + ローカル開発環境の設定 {#local-development-environment-set-up}
    + [概要](./local-development-environment/overview.md)
@@ -343,10 +349,10 @@ ht-degree: 93%
    + インタラクティブコミュニケーションチュートリアル{#interactive-communication-tutorial}
       + [&#x200B;1. はじめに](./forms/interactive-communication-tutorial/introduction.md)
       + [&#x200B;2. FDMの作成](./forms/interactive-communication-tutorial/create-form-data-model.md)
-      + [&#x200B;3. テンプレートの作成](./forms/interactive-communication-tutorial/create-template.md)
-      + [&#x200B;4. フラグメントの作成](./forms/interactive-communication-tutorial/create-fragments.md)
-      + [&#x200B;5. IC ドキュメントの作成](./forms/interactive-communication-tutorial/create-ic-document.md)
-      + [&#x200B;6. IC ドキュメントの生成](./forms/interactive-communication-tutorial/test-document-generation.md)
+      + [&#x200B;3. テンプレートを作成](./forms/interactive-communication-tutorial/create-template.md)
+      + [&#x200B;4. フラグメントを作成](./forms/interactive-communication-tutorial/create-fragments.md)
+      + [&#x200B;5. IC ドキュメントを作成](./forms/interactive-communication-tutorial/create-ic-document.md)
+      + [&#x200B;6. IC ドキュメントを生成](./forms/interactive-communication-tutorial/test-document-generation.md)
    + AEM Forms CS でのドキュメント生成{#doc-gen-formscs}
       + [はじめに](./forms/doc-gen-forms-cs/introduction.md)
       + [サービス資格情報の作成](./forms/doc-gen-forms-cs/service-credentials.md)
@@ -457,10 +463,10 @@ ht-degree: 93%
    + [トラブルシューティング](./asset-compute/troubleshooting.md)
 
 + 複数のステップから成るチュートリアル{#multi-step-tutorials}
-   + [AEM Sites 開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
+   + [AEM Sitesの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja){target=_blank}
    + [SPA エディター（React）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja){target=_blank}
-   + [AEM Sites と Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
+   + [AEM SitesとAdobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=ja){target=_blank}
    + [トークンベースの認証](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=ja){target=_blank}
 + エキスパートリソース {#expert-resources}
    + AEM チャンピオン {#aem-champions}
